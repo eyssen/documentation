@@ -23,5 +23,5 @@ Discover our user guides and configuration tutorials per application.
     applications/marketing
     applications/services
     applications/productivity
-    applications/studio
+    .. applications/studio
     applications/general

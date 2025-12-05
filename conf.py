@@ -16,8 +16,8 @@ _logger = logging.getLogger(__name__)
 #=== General configuration ===#
 
 # General information about the project.
-project = 'Odoo'
-copyright = 'Odoo S.A.'
+project = 'eYssen (Odoo Community Fork)'
+copyright = '2007-2025 eYssen. Based on Odoo S.A. documentation (2004-2023).'
 
 # `version` is the version info for the project being documented, acts as replacement for |version|,
 # also used in various other places throughout the built documents.
@@ -80,7 +80,7 @@ source_read_replace_vals = {
     'CURRENT_VERSION': current_version,
     'CURRENT_MAJOR_BRANCH': current_major_branch,
     'CURRENT_MAJOR_VERSION': current_major_version,
-    'GITHUB_PATH': f'https://github.com/odoo/odoo/blob/{version}',
+    'GITHUB_PATH': f'https://github.com/eyssen/eyssen/blob/{version}',
     'GITHUB_ENT_PATH': f'https://github.com/odoo/enterprise/blob/{version}',
     'GITHUB_TUTO_PATH': f'https://github.com/odoo/tutorials/blob/{current_major_branch}',
     'OWL_PATH': f'https://github.com/odoo/owl/blob/master',
@@ -365,7 +365,7 @@ latex_documents = [
 legal_translations = ['de', 'es', 'fr', 'nl', 'pt_BR']
 
 # The name of an image file (relative to this directory) to place at the top of the title page.
-latex_logo = 'static/img/odoo_logo.png'
+latex_logo = 'static/img/eyssen_logo.png'
 
 # If true, show URL addresses after external links.
 latex_show_urls = 'True'
@@ -513,7 +513,7 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
 
     def build_url(version_=None, lang_=None):
         if app.config.is_remote_build:
-            # Project root like https://www.odoo.com/documentation
+            # Project root like https://www.eyssen.uk/documentation
             root_ = app.config.project_root
         else:
             # Project root like .../documentation/_build/html/14.0/fr

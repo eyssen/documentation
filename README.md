@@ -1,67 +1,70 @@
-# Odoo documentation
+# 🛠️ eYssen Dokumentáció (Odoo Community 18.0 Fork)
 
-## Build the documentation
+Ez a tároló az **eYssen** által fenntartott, **Odoo Community** alapú alkalmazásokhoz készült dokumentáció forrásfájljait tartalmazza.
 
-### Requirements
+Ez a projekt az **eredeti** [odoo/documentation](https://github.com/odoo/documentation) tároló **18.0-ás ágának** (branch) forkja, amelyet a 18.0-ás Community kiadáshoz és az eYssen specifikus modulokhoz szabtunk.
+
+**Licenc:** Mivel ez az eredeti Odoo dokumentáció forkja, továbbra is a **CC-BY-SA-4.0** licenc feltételei vonatkoznak rá.
+
+---
+
+## Dokumentáció Építése (Build the documentation)
+
+A dokumentáció reStructuredText (`.rst`) formátumban íródott, és a Sphinx dokumentáció-generátor segítségével állítható elő HTML formátumban.
+
+### Előfeltételek (Requirements)
 
 - [Git](https://git-scm.com/install)
 - [Python 3.10 to 3.14](https://www.python.org/downloads/).
 - Make
-- Python dependencies from `requirements.txt` (see instructions below)
-- A local copy of the [odoo/odoo](https://github.com/odoo/odoo) repository (optional)
-- A local copy of the [odoo/upgrade-util](https://github.com/odoo/upgrade-util) repository
-  (optional)
+- Python függőségek a `requirements.txt` fájlból (lásd az alábbi utasításokat)
+- A helyi **eYssen alkalmazás forrása** (az Ön [eyssen/eyssen](https://github.com/eyssen/eyssen) tárolójának másolata) (opcionális – a docstringek bevonásához)
+- A helyi [odoo/upgrade-util](https://github.com/odoo/upgrade-util) tároló másolata (opcionális)
 
-### Quick start
+### Gyors Indítás (Quick start)
 
-1. Create and activate a virtual environment.
-   - On Linux and macOS: `python3 -m venv .venv && source .venv/bin/activate`
-   - On Windows (PowerShell): `py3 -m venv .venv; .\.venv\Scripts\Activate.ps1`
-2. Install the Python dependencies: `pip install -r requirements.txt`
-3. Build the documentation: `make html` (see more commands with `make help`)
-4. Open `documentation/_build/html/index.html` in your web browser.
+1.  Hozzon létre és aktiváljon egy virtuális környezetet.
+    - Linux és macOS esetén: `python3 -m venv .venv && source .venv/bin/activate`
+    - Windows esetén (PowerShell): `py3 -m venv .venv; .\.venv\Scripts\Activate.ps1`
+2.  Telepítse a Python függőségeket: `pip install -r requirements.txt`
+3.  Építse fel a dokumentációt: `make html` (további parancsok: `make help`)
+4.  Nyissa meg a `documentation/_build/html/index.html` fájlt a böngészőjében.
 
-### Additional build options
+### További Építési Opciók (Additional build options)
 
-- `make fast` to build the documentation with a shallow menu (faster).
-- `make clean` to delete the build files.
-- `make test` to run the guidelines tests.
-- `make html CURRENT_LANG=fr` to build the documentation only in French.
-- `make html CURRENT_LANG=fr LANGUAGES=en,fr,de` to build the documentation in French and enable the
-  language switcher, with the specified LANGUAGES as available languages. This command must be
-  invoked for each CURRENT_LANG you want to build.
-- `make html VERSIONS=17.0,18.0,saas-18.4,19.0,master` to build the documentation in the **current
-  version** and enable the version switcher, with the specified VERSIONS as available versions. This
-  command must be invoked for each of the VERSIONS you want to build.
+* `make fast`: a dokumentáció gyors felépítése sekély menüvel.
+* `make clean`: a build fájlok törlése.
+* `make test`: a dokumentációs irányelvek tesztjeinek futtatása.
+* `make html CURRENT_LANG=fr`: a dokumentáció felépítése csak francia nyelven.
+* `make html CURRENT_LANG=fr LANGUAGES=en,fr,de`: a dokumentáció felépítése francia nyelven, engedélyezve a nyelvi váltót.
 
-The list of available languages can be found in `conf.py`, in the `languages_names` variable.
+> ℹ️ **Megjegyzés a verziókról:** Ez a tároló az **Odoo 18.0** verzióra összpontosít. Amennyiben a verzióváltóval kapcsolatos parancsokat használja, győződjön meg róla, hogy a `VERSIONS` paraméter csak a releváns verziókat tartalmazza, pl. `VERSIONS=18.0`.
 
-When building the documentation for a specific language or version, the build files are created in
-`documentation/_build/html/<language>/`, `documentation/_build/html/<version>/` or
-`documentation/_build/html/<version>/<language>/`.
+A rendelkezésre álló nyelvek listája a `conf.py` fájlban, a `languages_names` változóban található.
 
-### Using local Odoo sources
+Ha a dokumentációt egy adott nyelvre építi, a build fájlok a `documentation/_build/html/<language>/` mappában jönnek létre.
 
-If you have local checkouts of `odoo/odoo` and/or `odoo/upgrade-util`, place them either:
-- as siblings of this repository (in the parent directory), or
-- inside the `documentation` directory.
+### Helyi eYssen/Odoo Források Használata (Using local eYssen/Odoo sources)
 
-When present in one of these locations, the build will include Python docstrings from those
-repositories if their version matches the documentation's version.
+Ha rendelkezik helyi klónokkal az **eYssen alkalmazás forrásához** (`eyssen/eyssen`) és/vagy az `odoo/upgrade-util`-hoz, helyezze el azokat:
 
-### Troubleshooting
+-   ennek a tárolónak a **testvéreként** (a szülőkönyvtárban), **vagy**
+-   a `documentation` könyvtáron belül.
 
-- Verify your Python version: `python3 --version` (must be 3.10–3.14)
-- Ensure your virtual environment is active and dependencies are installed.
-- If you have made changes to the file structure, try `make clean` before building.
-- If the language or version switchers redirect to a missing file, check that you have built the
-  documentation for all available languages and versions.
-- The "Developer" documentation is only available in English.
+Ha ezeken a helyeken megtalálhatóak, a build folyamat bevonja a Python docstringeket ezekből a tárolókból, amennyiben a verziójuk megegyezik a dokumentáció verziójával.
 
-## Contribute to the documentation
+### Hibaelhárítás (Troubleshooting)
 
-For contributions to the content of the documentation, see the
-[Introduction Guide](https://www.odoo.com/documentation/latest/contributing/documentation.html).
+* Ellenőrizze a Python verzióját: `python3 --version` (3.10–3.14 kell legyen)
+* Győződjön meg róla, hogy a virtuális környezet aktív, és a függőségek telepítve vannak.
+* Ha változtatásokat eszközölt a fájlstruktúrában, próbálja meg a `make clean` parancsot a build előtt.
+* Ha a nyelv- vagy verzióváltók hiányzó fájlra irányítanak, ellenőrizze, hogy az összes szükséges nyelvre és verzióra felépítette-e a dokumentációt.
+* A "Developer" dokumentáció csak angol nyelven érhető el.
 
-To report a content issue, request new content, or ask a question, use the
-[issue tracker](https://github.com/odoo/documentation/issues).
+---
+
+## Hozzájárulás (Contribute)
+
+Jelenleg ez a dokumentáció az **eYssen** saját igényei szerint van karbantartva. Bármilyen javaslatot vagy tartalommal kapcsolatos kérdést feltehet a **[GitHub issue tracker](https://github.com/eyssen/documentation/issues)** segítségével.
+
+Ha az eredeti Odoo dokumentáció tartalmához szeretne hozzájárulni, kérjük, kövesse az [Introduction Guide](https://www.odoo.com/documentation/latest/contributing/documentation.html) útmutatásait és használja az Odoo hivatalos csatornáit.

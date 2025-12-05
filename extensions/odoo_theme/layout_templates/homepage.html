@@ -1,12 +1,13 @@
 <div id="o_content">
     <section class="o_content_fw_banner">
-        <h1 class="text-white">{{ _("Odoo Documentation") }}</h1>
+        <h1 class="text-white">{{ _("eYssen Documentation") }}</h1>
     </section>
     <section>
         <div class="row gx-lg-5">
             <div class="col-lg-6">
                 <h2><a href="{{ pathto('applications') }}">{{ _("User Docs") }}</a></h2>
-                <p class="text-dark">{{ _("Discover our guide to help you use and configure the platform, by applications.") }}</p>
+                <p class="text-dark">{{ _("Discover our guide to help you use and configure the platform, by
+                    applications.") }}</p>
                 <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Top Apps") }}</h5>
                 <ul class="list-unstyled">
                     <li>
@@ -31,9 +32,11 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-6">
-                <h2 class="border-top pt-4 pt-lg-0"><a href="{{ pathto('administration') }}">{{ _("Install and Maintain") }}</a></h2>
-                <p class="text-dark">{{ _("Learn how to install, deploy and upgrade Odoo on premise or on Odoo.sh.") }}</p>
+            <!-- <div class="col-lg-6">
+                <h2 class="border-top pt-4 pt-lg-0"><a href="{{ pathto('administration') }}">{{ _("Install and
+                        Maintain") }}</a></h2>
+                <p class="text-dark">{{ _("Learn how to install, deploy and upgrade Odoo on premise or on Odoo.sh.") }}
+                </p>
                 <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Top Links") }}</h5>
                 <ul class="list-unstyled">
                     <li>
@@ -57,12 +60,13 @@
                         </a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </div>
         <div class="row gx-lg-5">
             <div class="col-lg-6">
                 <h2 class="border-top pt-4"><a href="{{ pathto('developer') }}">{{ _("Developer") }}</a></h2>
-                <p class="text-dark">{{ _("Learn to develop in Odoo with the developer tutorials and framework references.") }}</p>
+                <p class="text-dark">{{ _("Learn to develop in Odoo with the developer tutorials and framework
+                    references.") }}</p>
                 <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Top Links") }}</h5>
                 <ul class="list-unstyled">
                     <li>
@@ -89,7 +93,8 @@
             </div>
             <div class="col-lg-6">
                 <h2 class="border-top pt-4"><a href="{{ pathto('contributing') }}">{{ _("Contributing") }}</a></h2>
-                <p class="text-dark">{{ _("You want to contribute to Odoo but don't know where to start? The tutorials and guidelines are there to help you make Odoo even better.") }}</p>
+                <p class="text-dark">{{ _("You want to contribute to Odoo but don't know where to start? The tutorials
+                    and guidelines are there to help you make Odoo even better.") }}</p>
                 <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Top Links") }}</h5>
                 <ul class="list-unstyled">
                     <li>
@@ -112,6 +117,6 @@
         </div>
     </section>
     {# If changelog exists import it here}
-        {% include "layout_templates/changelog.html" %}
+    {% include "layout_templates/changelog.html" %}
     {#}
 </div>

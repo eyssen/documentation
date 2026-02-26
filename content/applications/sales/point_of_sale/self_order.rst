@@ -194,8 +194,8 @@ Usage guidelines
 
          - Click the provided URL to open the kiosk in a new tab;
          - Click :guilabel:`Install App` to install the kiosk module on your self-ordering kiosk; or
-         - Click :guilabel:`Open on IoT Box` if your kiosk is :doc:`connected to an IoT system
-           <../../general/iot/connect>`
+         - Click :guilabel:`Open on IoT Box` if your kiosk is connected to an **IoT system**
+           (Enterprise)
 
       .. image:: self_order/kiosk-opening-popup.png
          :alt: Popup window to open the kiosk

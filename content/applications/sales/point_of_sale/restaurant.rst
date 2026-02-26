@@ -181,10 +181,9 @@ follow these steps:
 #. Type the printer's name in the :guilabel:`Printers` field and click :guilabel:`Create and edit`.
 #. On the printer setup form, select the :guilabel:`Printer Type`:
 
-   - If the printer is connected to an :doc:`IoT system </applications/general/iot>`, select
-     :guilabel:`Use a printer connected to the IoT`, and choose the relevant :doc:`device
-     </applications/general/iot/devices/printer>`. This process requires the IoT app and an IoT
-     system.
+   - If the printer is connected to an **IoT system** (Enterprise), select
+     :guilabel:`Use a printer connected to the IoT`, and choose the relevant device. This process
+     requires the IoT app and an IoT system.
    - If using an :doc:`Epson printer that does not require an IoT system connection
      <configuration/epos_printers>`, select :guilabel:`Use an Epson printer` and enter the
      :guilabel:`Epson Printer IP Address`.
@@ -211,8 +210,6 @@ The printer is then connected to the point of sale and can print kitchen orders 
 
 .. seealso::
    - :doc:`Connect an IoT system to a POS <configuration/pos_iot>`
-   - :doc:`/applications/general/iot/devices/printer`
-   - :doc:`/applications/general/iot/connect`
    - :doc:`/applications/sales/point_of_sale/preparation`
 
 .. _pos/restaurant/bills:

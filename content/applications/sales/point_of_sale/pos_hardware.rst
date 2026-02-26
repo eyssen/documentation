@@ -45,14 +45,13 @@ To activate the feature, follow these steps:
    - :ref:`Another device <pos_hardware/display_another_device>`: To use a remote device connected
      to the database.
    - :ref:`An IOT-connected screen <pos_hardware/display_iot>`: To use a screen connected via an
-     :doc:`IoT system <../../general/iot>`.
+     **IoT system** (Enterprise).
 
-For displays connected using an :doc:`IoT system <../../general/iot>`:
+For displays connected using an **IoT system** (Enterprise):
 
 #. Enable the :guilabel:`IoT Box` option to activate the IoT system in POS.
 #. Click :guilabel:`Save`, which activates the IoT app in Odoo.
-#. :doc:`Connect and configure an IoT system <../../general/iot/connect>` for a :doc:`display
-   <../../general/iot/devices/screen>`.
+#. Connect and configure an IoT system for a display.
 #. Return to the :ref:`POS settings <configuration/settings>` and select an IoT-connected screen
    using the :guilabel:`Customer Display` field.
 
@@ -117,7 +116,6 @@ To open the customer display onto an IoT-connected screens:
 
 .. seealso::
    - :doc:`configuration/pos_iot`
-   - :doc:`../../general/iot`
 
 .. _pos/scale:
 
@@ -134,9 +132,6 @@ Prerequisite
 
 Connecting a scale requires the use of an **IoT System**.
 
-.. seealso::
-   - :doc:`../../general/iot/connect`
-   - :doc:`../../general/iot/devices/scale`
 
 Configuration
 -------------

@@ -149,50 +149,8 @@ From here, there are several configuration options:
    To have prices that end in 9.99, set the :guilabel:`Rounding Method` to `10` and the
    :guilabel:`Extra Fee` to `-0.01`.
 
-Recurring Prices tab
---------------------
-
-Time-based rules are used specifically with subscription products. Be sure to check out the Odoo
-:doc:`Subscriptions </applications/sales/subscriptions>` documentation for more information.
-
-In the :guilabel:`Recurring Prices` tab, pricelists are configured with the same options as in the
-:guilabel:`Price Rules` tab, with additional columns for :guilabel:`Product Variants` and
-:guilabel:`Recurring Plan`.
-
-:guilabel:`Product Variants` are configured under products that have one or more values, such as
-color, size, etc. Once a product has been selected under the :guilabel:`Products Tab`, if
-applicable, select the desired product variants to be included in the price rule.
-
-Then, select the blank field in the :guilabel:`Recurring Plan` column to reveal a drop-down menu of
-pre-designated recurrence periods (e.g. `Monthly`, `Quarterly`, `Weekly`, etc.).
-
-.. image:: pricing/sales-pricelist-recurringprices.png
-   :alt: The recurring prices tab in a pricelist configuration form.
-
-New recurrence periods can also be created from this column. To do so, type in the name for the new
-:guilabel:`Recurring Plan`, then select :guilabel:`Create` from the resulting drop-down menu to
-create the time period, which can be edited later. Alternatively, select :guilabel:`Create and
-edit...` to reveal a :guilabel:`Create Recurring Plan` pop-up form. From this pop-up form, the new
-recurrence period can be configured, with specific :guilabel:`Details`, :guilabel:`Self-Service`,
-and :guilabel:`Pricing` options. When the configurations are complete, click the :guilabel:`Save &
-Close` button.
-
-.. image:: pricing/time-period-popup.png
-   :align: center
-   :alt: Custom time period pop-up form in Odoo Sales.
-
-Lastly, add the desired price for this recurring price rule in the :guilabel:`Recurring Price`
-column.
-
-.. seealso::
-   :doc:`../../../subscriptions`
-
 Rental rules tab
 ----------------
-
-Price rules can be configured for :doc:`rental products <../../../rental>` under the
-:guilabel:`Rental rules` tab, using the same methodology as the :guilabel:`Price Rules` and
-:guilabel:`Recurring Prices` tabs.
 
 To add a rental rule, click :guilabel:`Add a line`, and select a desired product in the
 :guilabel:`Products` column. Then, select any specific :guilabel:`Variants`, if necessary.

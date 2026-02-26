@@ -203,7 +203,7 @@ field appears. In this field, enter the maximum amount of negative time allowed,
 Payroll section
 ***************
 
-If the time off type should create :doc:`../hr/payroll/work_entries` in the **Payroll** app, select
+If the time off type should create work entries in the **Payroll** app (Enterprise), select
 the :guilabel:`Work Entry Type` from the drop-down list.
 
 Timesheets section

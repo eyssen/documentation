@@ -180,10 +180,6 @@ Now you can add the taxes via :file:`data/template/account.tax-xx.csv` file.  Th
 Tax Report
 ----------
 
-.. raw:: html
-
-   <div><span class="badge" style="background-color:#AD5E99">Enterprise feature</span><div>
-
 The tax report is declared in the :guilabel:`Invoicing` (`account`) app, but the report is only accessible when :guilabel:`Accounting` (`account_accountant`) is installed.
 
 .. seealso::
@@ -258,10 +254,6 @@ Finally, you may add a demo company, so the localization can easily be tested in
 
 Accounting reports
 ==================
-
-.. raw:: html
-
-   <div><span class="badge" style="background-color:#AD5E99">Enterprise feature</span><div>
 
 .. seealso::
   :doc:`/applications/finance/accounting/reporting`

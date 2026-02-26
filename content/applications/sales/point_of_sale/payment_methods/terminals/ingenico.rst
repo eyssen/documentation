@@ -6,7 +6,7 @@ Connecting a payment terminal allows you to offer a fluid payment flow to your c
 the work of your cashiers.
 
 .. important::
-   - Ingenico payment terminals require an :doc:`IoT system </applications/general/iot>`.
+   - Ingenico payment terminals require an **IoT system** (Enterprise).
    - Ingenico is currently only available in Belgium, the Netherlands and Luxembourg.
    - Odoo works with the Ingenico Lane/, Desk/, and Move/ payment terminals as they support the TLV
      communication protocol through TCP/IP.
@@ -18,8 +18,7 @@ Connect an IoT system
 ---------------------
 
 Connecting an Ingenico payment terminal to Odoo is a feature that requires an IoT system. For more
-information on how to connect an IoT system to your database, please refer to the :doc:`IoT
-documentation </applications/general/iot>`.
+information on how to connect an IoT system to your database, please refer to the **IoT documentation** (Enterprise).
 
 Configure the Lane/Desk/Move 5000 terminals for Ingenico BENELUX
 ----------------------------------------------------------------

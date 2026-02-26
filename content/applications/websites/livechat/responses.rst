@@ -143,7 +143,6 @@ end the conversation.
 
 .. seealso::
    - :doc:`/applications/sales/crm/acquire_leads`
-   - :doc:`../../services/helpdesk`
 
 .. _live-chat/canned-responses:
 

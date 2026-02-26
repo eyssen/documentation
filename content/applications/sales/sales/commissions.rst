@@ -133,8 +133,6 @@ Performance can be measured in several ways in performance plans. These are conf
 - :guilabel:`Quantity Sold`: the total number of units sold via |SOs|.
 - :guilabel:`Quantity Invoiced`: the total number of units invoiced.
 - :guilabel:`Margin`: the profit margin (selling price minus cost price).
-- :guilabel:`MRR`: the new *Monthly Recurring Revenue* from subscription sales. this option is
-  **only** available if the :doc:`Subscriptions <../../sales/subscriptions>` app is installed.
 
 .. note::
    Regardless of what the plan is :guilabel:`Based on`, each plan needs both *Achievements* and
@@ -153,5 +151,3 @@ the :guilabel:`Draft` stage into the :guilabel:`Approved` stage.
 After a plan is approved, Odoo automatically tracks performance and calculates commissions based on
 the established parameters.
 
-.. seealso::
-   :doc:`Commissions <../../hr/payroll/commissions>`

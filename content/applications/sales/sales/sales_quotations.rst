@@ -32,10 +32,6 @@ as part of the sales workflow:
 
 - **CRM**: :doc:`Convert opportunities <../crm/acquire_leads/send_quotes>` into quotes to follow up
   on potential deals.
-- **Helpdesk**: :doc:`Generate quotes from tickets <../../services/helpdesk/advanced/after_sales>`
-  when offering paid services or products.
-- **Subscriptions**: :doc:`Offer recurring services <../subscriptions>` before
-  starting an automatic billing cycle.
 
 .. cards::
 
@@ -118,9 +114,8 @@ A well-structured sales quotation comprises the following:
   relevant taxes.
 
 In Odoo's **Sales** app, quotations can include additional details and configurations that add
-more detail and information, such as :doc:`quotation templates <sales_quotations/quote_template>`,
-:doc:`subscription plans <../../sales/subscriptions>`, and :doc:`sales team referrer name
-<sales_quotations/create_quotations>`.
+more detail and information, such as :doc:`quotation templates <sales_quotations/quote_template>`
+and :doc:`sales team referrer name <sales_quotations/create_quotations>`.
 
 .. image:: sales_quotations/sales-quotation.png
    :alt: Unconfirmed sales quotation in Odoo **Sales** app.

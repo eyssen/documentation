@@ -71,7 +71,6 @@ automatically create records may become available. To choose a different action,
 
 - :guilabel:`Apply for a Job` (:doc:`Recruitment </applications/hr/recruitment>`)
 - :guilabel:`Create a Customer` (:doc:`eCommerce <../../ecommerce>`)
-- :guilabel:`Create a Ticket` (:doc:`Helpdesk </applications/services/helpdesk>`)
 - :guilabel:`Create an Opportunity` (:doc:`CRM </applications/sales/crm>`)
 - :guilabel:`Subscribe to Newsletter` (:doc:`Email Marketing </applications/marketing/email_marketing>`)
 - :guilabel:`Create a Task` (:doc:`Project </applications/services/project>`)

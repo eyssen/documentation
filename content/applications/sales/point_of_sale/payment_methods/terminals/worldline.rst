@@ -6,8 +6,7 @@ Worldline
 <../terminals>` to handle customer transactions.
 
 .. important::
-   - Connecting a Worldline payment terminal to Odoo requires an :doc:`IoT system
-     </applications/general/iot/connect>`.
+   - Connecting a Worldline payment terminal to Odoo requires an **IoT system** (Enterprise).
    - Worldline is only available in **Belgium**, **the Netherlands**, and **Luxembourg** with Odoo.
    - Odoo is compatible with Worldline terminals that use the CTEP protocol (e.g., the **Yomani XR**
      and **Yoximo** terminals). Contact the payment provider to confirm the terminal's
@@ -19,8 +18,8 @@ Worldline configuration
 =======================
 
 First, enable the Worldline payment terminal in the :ref:`POS settings <configuration/settings>`
-under :guilabel:`Payment Terminals`. Then :doc:`connect the IoT system to Odoo
-</applications/general/iot/connect>` and follow these steps on the terminal:
+under :guilabel:`Payment Terminals`. Then connect the IoT system to Odoo and follow these steps on
+the terminal:
 
 #. **Configure the ECR protocol**:
 
@@ -40,16 +39,16 @@ under :guilabel:`Payment Terminals`. Then :doc:`connect the IoT system to Odoo
       --> OK --> 19 --> OK --> 4 --> OK --> OK`.
 #. **Set the port number**:
 
-   #. Enter **9001** (if using an :doc:`IoT box </applications/general/iot/iot_box>`) or **9050**
-      (if using a :doc:`Windows virtual IoT </applications/general/iot/windows_iot>`) on the
+   #. Enter **9001** (if using an **IoT box**) or **9050**
+      (if using a **Windows virtual IoT**) on the
       **Network domain name** screen and press **OK** twice.
    #. Press **Stop** three times; the terminal restarts automatically.
 
 The terminal is now active and displays the **Read card** screen.
 
 .. important::
-   The `9050` port must be added as a :ref:`Windows Firewall exception <iot/windows-iot/firewall>`
-   for the :doc:`Windows virtual IoT </applications/general/iot>`.
+   The `9050` port must be added as a Windows Firewall exception for the **Windows virtual IoT**
+   (Enterprise).
 
 .. tip::
    To check the terminal's connection status, open the IoT app and click the :ref:`IoT system's

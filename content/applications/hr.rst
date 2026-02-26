@@ -8,11 +8,11 @@ Human resources
 
    hr/attendances
    hr/employees
-   hr/appraisals
-   hr/frontdesk
+   .. hr/appraisals
+   .. hr/frontdesk
    hr/fleet
-   hr/payroll
+   .. hr/payroll
    hr/time_off
    hr/recruitment
-   hr/referrals
+   .. hr/referrals
    hr/lunch

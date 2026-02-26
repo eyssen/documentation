@@ -6,8 +6,7 @@ Viva.com
 app for :doc:`physical <../terminals>` and virtual terminals.
 
 .. note::
-   - Viva.com payment terminals do not require an :doc:`IoT Box </applications/general/iot>` to
-     operate.
+   - Viva.com payment terminals do not require an **IoT Box** to operate.
    - `Many European countries <https://developer.viva.com/about-viva/>`_ support the use of Viva.com
      payment terminals.
    - The viva.com Terminal app turns a smartphone with an NFC chip into a `payment terminal

@@ -6,7 +6,7 @@ Connecting an **Adyen payment terminal** allows you to offer a fluid payment flo
 and ease the work of your cashiers.
 
 .. important::
-   - Adyen payment terminals do not require an :doc:`IoT Box </applications/general/iot>`.
+   - Adyen payment terminals do not require an **IoT Box**.
    - Adyen terminals can be used in many countries, but not worldwide. Check the `List of countries
      supported by Adyen <https://docs.adyen.com/point-of-sale/what-we-support/supported-languages/>`_.
    - Adyen works only with businesses processing more than **$10 million annually** or invoicing a

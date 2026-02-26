@@ -21,8 +21,8 @@ Prerequisites
 
    .. note::
       This module replaces the **POS Six** module.
-#. Connect an IoT system: :doc:`A Raspberry Pi or a virtual IoT system (for Windows OS only)
-   </applications/general/iot/connect>` is required to connect a SIX payment terminal to Odoo.
+#. Connect an IoT system: A Raspberry Pi or a virtual IoT system (for Windows OS only, Enterprise)
+   is required to connect a SIX payment terminal to Odoo.
 
 .. _six/configure:
 

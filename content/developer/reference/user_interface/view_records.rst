@@ -49,19 +49,6 @@ View types
   Display aggregations as a `pivot table <https://en.wikipedia.org/wiki/Pivot_table>`_.
 :ref:`Calendar <reference/view_architectures/calendar>`
   Display records as events in a daily, weekly, monthly, or yearly calendar.
-:ref:`Cohort <reference/view_architectures/cohort>` |enterprise|
-  Display and understand the way some data changes over a period of time.
-:ref:`Gantt <reference/view_architectures/gantt>` |enterprise|
-  Display records as a Gantt chart.
-:ref:`Grid <reference/view_architectures/grid>` |enterprise|
-  Display computed information in numerical cells; are hardly configurable.
-:ref:`Map <reference/view_architectures/map>` |enterprise|
-  Display records on a map, and the routes between them.
-
-.. |enterprise| raw:: html
-
-   <span class="badge" style="background-color:#714B67">Enterprise feature</span>
-
 .. _reference/view_records/fields:
 
 Fields

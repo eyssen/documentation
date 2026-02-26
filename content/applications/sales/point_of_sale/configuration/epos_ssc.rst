@@ -5,7 +5,7 @@ Self-signed certificate for ePOS printers
 =========================================
 
 To work with Odoo, some printer models that can be used without an
-:doc:`IoT system </applications/general/iot>` may require :doc:`the HTTPS protocol <https>` to
+**IoT system** (Enterprise) may require :doc:`the HTTPS protocol <https>` to
 establish a secure connection between the browser and the printer. However, trying to reach the
 printer's IP address using HTTPS leads to a warning page on most web browsers. In that case, you can
 temporarily :ref:`force the connection <epos_ssc/instructions>`, which allows you to reach the page

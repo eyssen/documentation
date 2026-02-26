@@ -39,10 +39,9 @@ there, click one of the following:
    - :guilabel:`Folded in Kanban`: to hide the task stage and all of the tasks in this stage from
      the Kanban view.
    - :guilabel:`Projects`: to share this task stage between several projects.
-   - :guilabel:`Automations`: to create :doc:`custom rules that trigger automatic actions
-     <../../../studio/automated_actions>` (e.g., creating activities, adding followers, or sending
-     webhook notifications). Note that this will activate Studio in your database, which may impact
-     your pricing plan.
+   - :guilabel:`Automations`: to create custom rules that trigger automatic actions
+     (e.g., creating activities, adding followers, or sending webhook notifications). Note that this
+     requires **Studio** (Enterprise) and may impact your pricing plan.
 
  - :guilabel:`Delete`: to delete this stage.
  - :guilabel:`Archive/Unarchive all`: to archive or unarchive all of the tasks in this stage.

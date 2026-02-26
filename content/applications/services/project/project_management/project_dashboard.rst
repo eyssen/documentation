@@ -44,11 +44,6 @@ The following smart buttons are displayed on the top right of the project dashbo
  - :guilabel:`Timesheets`: the number of hours or days (depending on the **Timesheets** app
    configuration) allocated in the project’s **settings**. This includes all
    :doc:`timesheets </applications/services/timesheets>`, whether or not they have been validated.
- - :guilabel:`Planned`: the number of hours that have been planned for shifts in the **Planning**
-   app. This includes all :doc:`planned shifts </applications/services/planning>`, including past
-   shifts and shifts that have not yet been published.
- - :guilabel:`Documents`: number of :doc:`documents </applications/productivity/documents>` in the
-   project’s workspace.
  - :guilabel:`Burndown Chart`: click the smart button to access a :doc:`report </applications/essentials/reporting>`
    on the status of the project’s tasks over time.
  - :guilabel:`Timesheets and Planning`: click the smart button to access a :doc:`report </applications/essentials/reporting>`

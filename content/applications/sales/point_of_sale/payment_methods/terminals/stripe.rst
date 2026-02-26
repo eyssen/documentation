@@ -6,7 +6,7 @@ Connecting a payment terminal allows you to offer a fluid payment flow to your c
 the work of your cashiers.
 
 .. important::
-   - Stripe payment terminals do not require an :doc:`IoT Box </applications/general/iot>`
+   - Stripe payment terminals do not require an **IoT Box**
    - Stripe terminals can be used in many countries, but not worldwide. Check the `global
      availability for Stripe Terminal <https://support.stripe.com/questions/global-availability-for-stripe-terminal>`_.
    - Stripe's integration works with `Stripe Terminal smart readers <https://docs.stripe.com/terminal/smart-readers>`_

@@ -70,8 +70,6 @@ Revenues
  - :guilabel:`Materials`: total of sales prices of products sold via sales orders linked to the
    project.
  - :guilabel:`Customer invoices`: a total of invoices linked to the project.
- - :guilabel:`Subscriptions`: a total of sales prices of
-   :doc:`subscriptions </applications/sales/subscriptions>` linked to the project.
  - :guilabel:`Down payments`: a total of
    :doc:`down payments </applications/sales/sales/invoicing/down_payment>` linked to the project.
  - :guilabel:`Expenses`: any :doc:`expenses </applications/finance/expenses>` that have been

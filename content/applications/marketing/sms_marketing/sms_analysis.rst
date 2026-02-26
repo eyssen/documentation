@@ -19,21 +19,8 @@ is visualized as different graphs and charts, which can be sorted and grouped in
    :alt: Reporting page in SMS Marketing.
 
 .. tip::
-   SMS messages can be sent using automation rules in Odoo. Odoo *Studio* is required to use
-   automation rules.
-
-   To install Odoo *Studio*, go to the :menuselection:`Apps application`. Then, using the
-   :guilabel:`Search...` bar, search for `studio`.
-
-   If it is not already installed, click :guilabel:`Install`.
-
-   Adding the *Studio* application upgrades the subscription status to *Custom*, which increases the
-   cost. Consult `support <https://www.odoo.com/contactus>`_, or reach out to the database's
-   customer success manager, with any questions on making the change.
-
-   To use automation rules, navigate in :ref:`developer mode <developer-mode>`, to
-   :menuselection:`Settings app --> Technical menu --> Automation section --> Automation Rules`.
-   Then, click :guilabel:`New` to create a new rule.
+   SMS messages can be sent using automation rules in Odoo. Odoo **Studio** (Enterprise) is
+   required to use automation rules.
 
    Enter a name for the automation rule, and select a :guilabel:`Model` to implement this rule on.
 

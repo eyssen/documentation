@@ -92,8 +92,6 @@ using the phone numbers collected from POS orders. To do so,
    If you modify the template's content, you must request for approval again, as its status returns
    to the :guilabel:`Draft` state.
 
-.. seealso::
-   :doc:`WhatsApp configuration <../../productivity/whatsapp>`
 
 Send WhatsApp marketing messages
 --------------------------------
@@ -116,5 +114,3 @@ Doing so opens a WhatsApp message composing form. Select the desired marketing t
      appears. Click :guilabel:`Configure Templates` and complete the :ref:`WhatsApp setup
      <pos_based_marketing/whatsapp_config>` steps.
 
-.. seealso::
-   :doc:`../../productivity/whatsapp`

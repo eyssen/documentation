@@ -16,7 +16,9 @@
             element.addEventListener('click', async event => {
                 if (element.hasAttribute('href')) {
                     const targetUrl = element.getAttribute('href');
-                    if (!targetUrl.startsWith('/')) {  // Don't test for valid URLs if in localhost.
+                    // Only validate absolute HTTP(S) URLs (remote/production builds).
+                    // Relative paths and local file:// paths navigate directly.
+                    if (targetUrl.startsWith('http://') || targetUrl.startsWith('https://')) {
                         event.preventDefault();
                         const fallbackUrls = await _generateFallbackUrls(targetUrl);
                         const fallbackUrl = await _getFirstValidUrl(fallbackUrls) ?? targetUrl;

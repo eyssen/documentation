@@ -513,12 +513,6 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
         context['legal_translations'] = legal_translations
 
     def build_url(version_=None, lang_=None):
-        if app.config.is_remote_build:
-            # Project root like https://www.eyssen.uk/documentation
-            root_ = app.config.project_root
-        else:
-            # Project root like .../documentation/_build/html/14.0/fr
-            root_ = re.sub(rf'(/{app.config.version})?(/{app.config.language})?$', '', app.outdir)
         # If the canonical version is not set, assume that the project has a single version
         canonical_version_ = app.config.canonical_version or app.config.version
         version_ = version_ or app.config.version
@@ -540,12 +534,32 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
                 canonical_page_ = f'{page_.replace("/i18n/", "/")}.html'
 
         if app.config.is_remote_build:
+            # Remote build: use absolute URL with project_root
+            # e.g. https://doc.eyssen.com/hu/applications.html
+            root_ = app.config.project_root
             canonical_page_ = canonical_page_.replace('index.html', '')
+            return f'{root_}' \
+                   f'{f"/{version_}" if app.config.versions else ""}' \
+                   f'{f"/{lang_}" if lang_ != "en" else ""}' \
+                   f'/{canonical_page_}'
+        else:
+            # Local build: generate relative paths so the HTML works both
+            # via file:// locally and when deployed to any server path.
+            html_root = re.sub(rf'(/{app.config.version})?(/{app.config.language})?$', '', app.outdir)
 
-        return f'{root_}' \
-               f'{f"/{version_}" if app.config.versions else ""}' \
-               f'{f"/{lang_}" if lang_ != "en" else ""}' \
-               f'/{canonical_page_}'
+            # Build the absolute target path
+            target_parts = [html_root]
+            if app.config.versions:
+                target_parts.append(version_)
+            if lang_ != 'en':
+                target_parts.append(lang_)
+            target_parts.append(canonical_page_)
+            target_abs = os.path.normpath(os.path.join(*target_parts))
+
+            # Current page's directory in the output
+            current_dir = os.path.dirname(os.path.normpath(os.path.join(app.outdir, canonical_page_)))
+
+            return os.path.relpath(target_abs, current_dir)
 
     canonicalize()
     versionize()

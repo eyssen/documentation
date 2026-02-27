@@ -246,6 +246,7 @@ versions_names = {
 languages_names = {
     'de': 'DE',
     'en': 'EN',
+    'hu': 'HU',
     'es': 'ES',
     'es_419': 'ES (LATAM)',
     'fr': 'FR',

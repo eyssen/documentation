@@ -1,13 +1,13 @@
 :nosearch:
 
 ==================
-eYssen Documentation
+eYssen (Odoo) Documentation
 ==================
 
 
 .. toctree::
 
     applications
-    .. administration
+    administration
     developer
     contributing

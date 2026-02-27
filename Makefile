@@ -13,6 +13,11 @@ ifndef CURRENT_LANG
   CURRENT_LANG = en
 endif
 
+# Default LANGUAGES for the language switcher (always include en and hu)
+ifndef LANGUAGES
+  LANGUAGES = en,hu
+endif
+
 SPHINX_BUILD   = sphinx-build
 CONFIG_DIR     = .
 SPHINXOPTS     = -D project_root=$(ROOT) -D canonical_version=$(CANONICAL_VERSION) \
@@ -52,10 +57,16 @@ clean:
 	rm -rf $(BUILD_DIR)/*
 	@echo "Cleaning finished."
 
-html: $(HTML_BUILD_DIR)/_static/style.css
+html: $(HTML_BUILD_DIR)/_static/style.css compile-mo
 	@echo "Starting build..."
 	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b html $(SPHINXOPTS) $(SOURCE_DIR) $(HTML_BUILD_DIR)
 	@echo "Build finished."
+
+compile-mo:
+	@find locale -name "*.po" | while read po; do \
+		mo="$${po%.po}.mo"; \
+		msgfmt -o "$$mo" "$$po"; \
+	done
 
 # To call *after* `make html`
 # Binary dependencies (Debian): texlive-fonts-recommended texlive-latex-extra

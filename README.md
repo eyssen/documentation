@@ -37,6 +37,16 @@ The documentation is written in reStructuredText (`.rst`) format and can be gene
 * `make test`: runs tests for documentation directives.
 * `make html CURRENT_LANG=fr`: builds the documentation only in French.
 * `make html CURRENT_LANG=fr LANGUAGES=en,fr,de`: builds the documentation in French, enabling the language switcher.
+* `make html CURRENT_LANG=hu`: builds the documentation only in Hungarian. When `CURRENT_LANG` is not `en`, `LANGUAGES` defaults to `en,<CURRENT_LANG>` so the language switcher shows both options.
+
+### Hungarian translation
+
+To work on the Hungarian translation:
+
+1.  Generate or update the translatable POT files: `make gettext`
+2.  Initialize or update the Hungarian PO files: `python3 scripts/init_hu_locale.py`
+3.  Edit the `.po` files in `locale/hu/LC_MESSAGES/` (e.g. with Poedit or a text editor)
+4.  Build the Hungarian documentation: `make html CURRENT_LANG=hu`
 
 > ℹ️ **Note on versions:** This repository focuses on the **Odoo 18.0** version. If you use version-switching related commands, make sure the `VERSIONS` parameter includes only the relevant versions, e.g. `VERSIONS=18.0`.
 
@@ -55,6 +65,7 @@ If found in these locations, the build process will incorporate Python docstring
 
 ### Troubleshooting
 
+* **Language switcher is empty:** Ensure both languages are built. Run `make html` first (English), then `make html CURRENT_LANG=hu` (Hungarian). The switcher links will then work in both directions.
 * Check your Python version: `python3 --version` (should be 3.10–3.14)
 * Make sure your virtual environment is active and dependencies are installed.
 * If you have made changes to the file structure, try running `make clean` before building.

@@ -3,28 +3,29 @@
 //
 /* $enable-responsive-font-sizes:              true; */
 
-// Colors
+// Colors — eYssen brand palette (from eyssen.com)
 $white: #FFFFFF;
-$gray-100: #F8F8F8 !default;
-$gray-200: #F2F2F2 !default;
-$gray-300: #DEE2E6 !default;
+$gray-100: #FAFAF8 !default;      // Page background
+$gray-200: #F7F5F2 !default;      // Warm background
+$gray-300: #E2E0DC !default;      // Borders
 $gray-400: #D5D5D5 !default;
 $gray-500: #ADB5BD !default;
-$gray-600: #888888 !default;
-$gray-700: #707070 !default;
-$gray-800: #343A40 !default;
-$gray-900: #282F33 !default;
+$gray-600: #6B6B7B !default;      // Faint text
+$gray-700: #5A5A6B !default;      // Muted text
+$gray-800: #1A1A2E !default;      // Dark (headings)
+$gray-900: #1A1A2E !default;      // Dark
 
 $blue: #77b5d1;
-$purple: #BF0515;
+$purple: #C8102E;                  // eYssen red (brand)
 $cyan: #0dcaf0;
-$red: #D9534F;
+$red: #C8102E;                     // eYssen red
+$red-hover: #9B0A20;              // eYssen red hover
 $orange: #f39c1e;
-$green: #519161;
-$teal: #6279ac;
+$green: #1B6B3A;                   // eYssen green (from eyssen.com)
+$teal: #1A1A2E;                    // Now using dark as primary structural color
 
-$primary: $teal;
-$secondary: $purple;
+$primary: $red;                    // Primary is now eYssen red
+$secondary: $gray-800;            // Secondary is dark
 $light: $gray-100;
 $dark: $gray-900;
 $success: $green;
@@ -34,7 +35,8 @@ $danger: $red;
 
 // Fonts
 // Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif !default;
+$font-family-sans-serif: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif: "Playfair Display", Georgia, "Times New Roman", Times, serif !default;
 
 // Change scale from Major Third to Major Second (ref: https://type-scale.com/)
 $font-size-base: 1rem;

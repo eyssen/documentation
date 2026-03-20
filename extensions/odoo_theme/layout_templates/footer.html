@@ -1,14 +1,34 @@
-<div class="o_get_help container-fluid d-lg-flex">
-    <div class="col-12 col-lg-10">
-        <h4><i class="i-o-help me-2"></i>{{ _("Get Help") }}</h4>
-        <div>
-            <a href="https://www.eyssen.uk" target="_blank" class="btn btn-outline-secondary mb-2">{{ _("Contact
-                Support") }}</a>
+<div class="o_footer">
+    <div class="o_footer_inner container-fluid">
+        <div class="row">
+            <div class="col-lg-4 o_footer_brand">
+                <div class="o_footer_logo">
+                    <img src="{{ pathto('_static/img/logos/eyssen_logo_grey_red.png', 1) }}" height="18" alt="eYssen" />
+                </div>
+                <p>{{ _("Open-source ERP platform documentation. Built with Sphinx, styled with care.") }}</p>
+                <p class="o_footer_tagline">{{ _("<strong>eYssen</strong> is a fork and enhanced version of Odoo Community, tailored specifically to the practical needs of <strong>small and medium-sized businesses</strong>.") }}</p>
+            </div>
+            <div class="col-6 col-lg-2 o_footer_col">
+                <h4>{{ _("Documentation") }}</h4>
+                <a href="{{ pathto('applications') }}">{{ _("Applications") }}</a>
+                <a href="{{ pathto('administration') }}">{{ _("Administration") }}</a>
+                <a href="{{ pathto('developer') }}">{{ _("Developer") }}</a>
+                <a href="{{ pathto('contributing') }}">{{ _("Contributing") }}</a>
+            </div>
+            <div class="col-6 col-lg-2 o_footer_col">
+                <h4>{{ _("Resources") }}</h4>
+                <a href="{{ pathto('developer/tutorials') }}">{{ _("Tutorials") }}</a>
+                <a href="{{ pathto('developer/reference/external_api') }}">{{ _("External API") }}</a>
+                <a href="{{ pathto('contributing/documentation') }}">{{ _("Changelog") }}</a>
+            </div>
+            <div class="col-6 col-lg-2 o_footer_col">
+                <h4>{{ _("Community") }}</h4>
+                <a href="https://www.eyssen.com" target="_blank">eyssen.com</a>
+                <a href="https://www.eyssen.uk" target="_blank">{{ _("Support") }}</a>
+            </div>
         </div>
     </div>
-    <div class="col-12 col-lg-2 mt-5 mt-lg-0 text-center">
-        <a class="o_logo" href="https://www.eyssen.uk">
-            <img src="{{ pathto('_static/img/logos/eyssen_logo.png', 1) }}" height="20" alt="eYssen" />
-        </a>
+    <div class="o_footer_copy">
+        &copy; {{ copyright }} &mdash; {{ _("Version") }} {{ version }}
     </div>
 </div>

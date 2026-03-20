@@ -1,122 +1,144 @@
-<div id="o_content">
-    <section class="o_content_fw_banner">
-        <h1 class="text-white">{{ _("eYssen (Odoo) Documentation") }}</h1>
+<div id="o_content" class="o_homepage">
+    {# ─── HERO SECTION ─── #}
+    <section class="o_hero">
+        <div class="o_hero_label">{{ _("eYssen Documentation") }}</div>
+        <h1>{{ _("Master") }} <span class="o_hero_accent">{{ _("every") }}</span> {{ _("feature") }}<br>{{ _("of your platform") }}</h1>
+        <p>{{ _("Guides, API references, and tutorials to help you configure, develop, and extend eYssen - Odoo fork.") }}</p>
     </section>
-    <section>
-        <div class="row gx-lg-5">
-            <div class="col-lg-6">
-                <h2><a href="{{ pathto('applications') }}">{{ _("User Docs") }}</a></h2>
-                <p class="text-dark">{{ _("Discover our guide to help you use and configure the platform, by
-                    applications.") }}</p>
-                <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Top Apps") }}</h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="{{ pathto('applications/finance/accounting') }}" class="stretched-link">
-                            {{ _("Accounting") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('applications/inventory_and_mrp/inventory') }}" class="stretched-link">
-                            {{ _("Inventory") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('applications/inventory_and_mrp/manufacturing') }}" class="stretched-link">
-                            {{ _("Manufacturing") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('applications/sales/point_of_sale') }}" class="stretched-link">
-                            {{ _("Point of Sale") }}
-                        </a>
-                    </li>
-                </ul>
+
+    {# ─── RED LINE CONTENT ─── #}
+    <div class="o_redline_wrapper">
+        <div class="o_redline_content">
+
+            {# ─── QUICK START ─── #}
+            <div class="o_section_label">{{ _("Quick Start") }}</div>
+            <div class="o_quick_links">
+                <a href="{{ pathto('administration/deployment/install') }}" class="o_quick_link">
+                    <div class="o_ql_icon">&#9889;</div>
+                    <div>
+                        <div class="o_ql_text">{{ _("Getting Started") }}</div>
+                        <div class="o_ql_desc">{{ _("First-time setup guide") }}</div>
+                    </div>
+                </a>
+                <a href="{{ pathto('administration/deployment/install') }}" class="o_quick_link">
+                    <div class="o_ql_icon">&#128640;</div>
+                    <div>
+                        <div class="o_ql_text">{{ _("Installation") }}</div>
+                        <div class="o_ql_desc">{{ _("Deploy on-premise or cloud") }}</div>
+                    </div>
+                </a>
+                <a href="{{ pathto('developer/reference/external_api') }}" class="o_quick_link">
+                    <div class="o_ql_icon">&#128736;</div>
+                    <div>
+                        <div class="o_ql_text">{{ _("External API") }}</div>
+                        <div class="o_ql_desc">{{ _("REST & XML-RPC reference") }}</div>
+                    </div>
+                </a>
+                <a href="{{ pathto('developer/tutorials') }}" class="o_quick_link">
+                    <div class="o_ql_icon">&#127891;</div>
+                    <div>
+                        <div class="o_ql_text">{{ _("Tutorials") }}</div>
+                        <div class="o_ql_desc">{{ _("Learn step-by-step") }}</div>
+                    </div>
+                </a>
             </div>
-            <div class="col-lg-6">
-                <h2 class="border-top pt-4 pt-lg-0"><a href="{{ pathto('administration') }}">{{ _("Install and
-                        Maintain") }}</a></h2>
-                <p class="text-dark">{{ _("Learn how to install, deploy and upgrade Odoo on premise or on Odoo.sh.") }}
-                </p>
-                <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Top Links") }}</h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href=" {{ pathto('administration/deployment/install') }} " class="stretched-link">
-                            {{ _("Installing Odoo") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('administration/maintain/update') }}" class="stretched-link">
-                            {{ _("Bugfix updates") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('administration/upgrade') }}" class="stretched-link">
-                            {{ _("Upgrading Odoo") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('administration/odoo_sh/overview/introduction') }}" class="stretched-link">
-                            {{ _("Odoo.sh: The Odoo Cloud Platform") }}
-                        </a>
-                    </li>
-                </ul>
+
+            {# ─── BROWSE BY CATEGORY ─── #}
+            <div class="o_section_label">{{ _("Browse by Category") }}</div>
+            <div class="o_cards_grid">
+                <a href="{{ pathto('applications') }}" class="o_doc_card">
+                    <div class="o_doc_card_header">
+                        <div class="o_doc_card_icon o_icon_apps">&#128218;</div>
+                        <h3>{{ _("User Docs") }}</h3>
+                    </div>
+                    <p>{{ _("Configure and use all platform applications. Step-by-step guides organized by module.") }}</p>
+                    <div class="o_doc_card_tags">
+                        <span class="o_doc_tag">{{ _("Accounting") }}</span>
+                        <span class="o_doc_tag">{{ _("Inventory") }}</span>
+                        <span class="o_doc_tag">{{ _("Manufacturing") }}</span>
+                        <span class="o_doc_tag">{{ _("Point of Sale") }}</span>
+                        <span class="o_doc_tag">{{ _("CRM") }}</span>
+                    </div>
+                </a>
+
+                <a href="{{ pathto('administration') }}" class="o_doc_card">
+                    <div class="o_doc_card_header">
+                        <div class="o_doc_card_icon o_icon_admin">&#9881;</div>
+                        <h3>{{ _("Install & Maintain") }}</h3>
+                    </div>
+                    <p>{{ _("Deploy, configure, and upgrade your instance. On-premise, Docker, and cloud options covered.") }}</p>
+                    <div class="o_doc_card_tags">
+                        <span class="o_doc_tag">{{ _("Installing") }}</span>
+                        <span class="o_doc_tag">{{ _("Upgrading") }}</span>
+                        <span class="o_doc_tag">{{ _("Bugfix Updates") }}</span>
+                        <span class="o_doc_tag">{{ _("Cloud Platform") }}</span>
+                    </div>
+                </a>
+
+                <a href="{{ pathto('developer') }}" class="o_doc_card">
+                    <div class="o_doc_card_header">
+                        <div class="o_doc_card_icon o_icon_dev">&#128187;</div>
+                        <h3>{{ _("Developer") }}</h3>
+                    </div>
+                    <p>{{ _("Build modules, extend functionality, and integrate with external systems. Full framework reference.") }}</p>
+                    <div class="o_doc_card_tags">
+                        <span class="o_doc_tag">{{ _("Tutorials") }}</span>
+                        <span class="o_doc_tag">{{ _("How-to Guides") }}</span>
+                        <span class="o_doc_tag">{{ _("Reference") }}</span>
+                        <span class="o_doc_tag">{{ _("External API") }}</span>
+                    </div>
+                </a>
+
+                <a href="{{ pathto('contributing') }}" class="o_doc_card">
+                    <div class="o_doc_card_header">
+                        <div class="o_doc_card_icon o_icon_contrib">&#129309;</div>
+                        <h3>{{ _("Contributing") }}</h3>
+                    </div>
+                    <p>{{ _("Help improve the platform. Follow coding guidelines, documentation standards, and workflows.") }}</p>
+                    <div class="o_doc_card_tags">
+                        <span class="o_doc_tag">{{ _("Coding Guidelines") }}</span>
+                        <span class="o_doc_tag">{{ _("Documentation") }}</span>
+                        <span class="o_doc_tag">{{ _("Content Guidelines") }}</span>
+                    </div>
+                </a>
             </div>
+
+            {# ─── WHAT'S NEW (auto-generated by changelog extension) ─── #}
+            <div class="o_section_label">{{ _("Recent Updates") }}</div>
+            <div class="o_updates_section">
+                <div class="o_updates_header">
+                    <h3>{{ _("What's New") }}</h3>
+                </div>
+                <div id="o_changelog_entries">
+                    {# Populated by the changelog Sphinx extension at build time #}
+                    {%- if changelog_entries is defined %}
+                        {%- for entry in changelog_entries %}
+                        <div class="o_update_item">
+                            <div class="o_update_date">{{ entry.date }}</div>
+                            <div>
+                                <span class="o_update_badge o_badge_{{ entry.type }}">{{ entry.type }}</span>
+                                <div class="o_update_text">{{ entry.message }}</div>
+                            </div>
+                        </div>
+                        {%- endfor %}
+                    {%- else %}
+                        {# Fallback static content until extension is active #}
+                    {%- endif %}
+                </div>
+            </div>
+
+            {# ─── CTA BANNER ─── #}
+            <div class="o_cta_banner">
+                <div class="o_cta_content">
+                    <h3>{{ _("Need help getting started?") }}</h3>
+                    <p>{{ _("Browse our tutorials or reach out to the community for support.") }}</p>
+                </div>
+                <a href="{{ pathto('developer/tutorials') }}" class="o_cta_btn">{{ _("Browse Tutorials") }}</a>
+            </div>
+
         </div>
-        <div class="row gx-lg-5">
-            <div class="col-lg-6">
-                <h2 class="border-top pt-4"><a href="{{ pathto('developer') }}">{{ _("Developer") }}</a></h2>
-                <p class="text-dark">{{ _("Learn to develop in Odoo with the developer tutorials and framework
-                    references.") }}</p>
-                <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Top Links") }}</h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="{{ pathto('developer/tutorials') }}" class="stretched-link">
-                            {{ _("Tutorials") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('developer/howtos') }}" class="stretched-link">
-                            {{ _("How-to guides") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('developer/reference') }}" class="stretched-link">
-                            {{ _("Reference") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('developer/reference/external_api') }}" class="stretched-link">
-                            {{ _("External API") }}
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-6">
-                <h2 class="border-top pt-4"><a href="{{ pathto('contributing') }}">{{ _("Contributing") }}</a></h2>
-                <p class="text-dark">{{ _("You want to contribute to Odoo but don't know where to start? The tutorials
-                    and guidelines are there to help you make Odoo even better.") }}</p>
-                <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Top Links") }}</h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="{{ pathto('contributing/development/coding_guidelines') }}" class="stretched-link">
-                            {{ _("Coding guidelines") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('contributing/documentation') }}" class="stretched-link">
-                            {{ _("Documentation") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('contributing/documentation/content_guidelines') }}" class="stretched-link">
-                            {{ _("Content guidelines") }}
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    {# If changelog exists import it here}
-    {% include "layout_templates/changelog.html" %}
-    {#}
+    </div>
+
+    {# Changelog import #}
+    {% include "layout_templates/changelog.html" ignore missing %}
 </div>

@@ -1,25 +1,27 @@
-<div class="o_main_header border-bottom d-flex align-items-center">
+<div class="o_main_header d-flex align-items-center">
     <div class="o_logo_wrapper">
-        <a href="{{ pathto(master_doc) }}" class="o_logo">
-            <img src="{{ pathto('_static/img/logos/eyssen_logo.png', 1) }}" height="20" alt="eYssen" />
+        <a href="{{ pathto(master_doc) }}" class="o_logo d-flex align-items-center">
+            <img src="{{ pathto('_static/img/logos/eyssen_logo_grey_red.png', 1) }}" height="22" alt="eYssen" class="o_logo_img" />
+            <span class="o_logo_text"><span class="o_logo_docs">Docs</span></span>
         </a>
     </div>
-    <div class="d-flex flex-grow-1">
+    <div class="d-flex flex-grow-1 align-items-center">
         {%- include "layout_templates/searchbox.html" %}
-        <a class="btn btn-outline-secondary mb-2" href="https://www.eyssen.uk">
-            {{ _('Take a look eYssen') }}
-        </a>
+        <div class="o_header_right d-flex align-items-center ms-auto">
+            <span class="o_version_pill">
+                <span class="o_pulse_dot"></span>
+                v{{ version }}
+            </span>
+            {%- include "layout_templates/language_switcher.html" %}
+            {%- include "layout_templates/version_switcher.html" %}
+        </div>
     </div>
 </div>
-<div class="o_subheader border-bottom d-flex">
-    <div class="o_side_nav_toggler_wrapper border-end d-flex d-lg-none">
+<div class="o_subheader d-flex">
+    <div class="o_side_nav_toggler_wrapper d-flex d-lg-none">
         <button class="h-100 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#o_menu"
             aria-label="Toggle navigation">
-            <i class="i-sidepanel"></i>
+            <i class="i-sidepanel" style="color: white;"></i>
         </button>
-    </div>
-    <div class="d-flex justify-content-end ms-auto">
-        {%- include "layout_templates/language_switcher.html" %}
-        {%- include "layout_templates/version_switcher.html" %}
     </div>
 </div>

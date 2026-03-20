@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) Odoo S.A.
-# This file is distributed under the same license as the Odoo package.
+# Copyright (C) 2007-2025 eYssen. Based on Odoo S.A. documentation (2004-2023).
+# This file is distributed under the same license as the eYssen (Odoo Community Fork) package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 18.0\n"
+"Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-18 11:05+0000\n"
+"POT-Creation-Date: 2026-03-19 14:35+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,1542 @@ msgstr ""
 
 #: ../../content/applications/services.rst:5
 msgid "Services"
+msgstr ""
+
+#: ../../content/applications/services/equipment.rst:3
+msgid "Equipment Management"
+msgstr ""
+
+#: ../../content/applications/services/equipment.rst:5
+msgid "**Equipment Management** allows you to manage and track all types of physical equipment — printers, measuring devices, IT infrastructure, forklifts, cranes, and more — from a single centralized hub. It connects equipment to maintenance, invoicing, purchasing, fleet, stock, and project management, giving you a complete overview of each asset's lifecycle."
+msgstr ""
+
+#: ../../content/applications/services/equipment.rst:None
+msgid "Equipment Management list view"
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:3
+msgid "Documents"
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:5
+msgid "Each equipment can have multiple documents attached — manuals, certificates, calibration records, warranty documents, service books, and more."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:None
+msgid "Documents tab on equipment form"
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:12
+msgid "Document types"
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:14
+msgid "Each document has a **type** that categorizes it:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:16
+msgid "**Manual**: User manuals, operating instructions."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:17
+msgid "**Certificate**: Compliance certificates, safety certifications."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:18
+msgid "**Calibration**: Calibration certificates and records."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:19
+msgid "**Warranty**: Warranty documentation."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:20
+msgid "**Service Book**: Service history and maintenance logs."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:21
+msgid "**Other**: Any other document type."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:24
+msgid "Adding documents"
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:26
+msgid "Documents can be added directly on the equipment form in the :guilabel:`Documents` tab:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:28
+msgid "Click :guilabel:`Add a line` in the documents table."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:29
+msgid "Enter a **Name** for the document."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:30
+msgid "Select the **Type**."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:31
+msgid "Set the **Expiry Date** if applicable (especially important for certificates, calibrations, and warranties)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:33
+msgid "Upload the **File**."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:34
+msgid "Optionally add **Notes**."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:36
+msgid "Documents can also be accessed from the :guilabel:`Documents` stat button, which opens the full document list view with advanced filtering and grouping."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:40
+msgid "Expiry tracking"
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:42
+msgid "Documents with an **Expiry Date** are automatically monitored by a daily scheduled job. When a document's expiry date is within the configured warning period (default: 30 days), the system creates an **activity** on the equipment record to alert the assigned user."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:46
+msgid "**How it works:**"
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:48
+msgid "The cron runs daily and checks all documents where the expiry date falls within the warning period."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:50
+msgid "Only equipment in *Active* state is checked."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:51
+msgid "A warning activity is created for each expiring document, assigned to the equipment's first assignee (or the company admin as fallback)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:53
+msgid "Duplicate activities are prevented — if a warning activity already exists for the same document, no new one is created."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:56
+msgid "**Configuring the warning period:**"
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:58
+msgid "Navigate to :menuselection:`Equipment Management --> Settings --> Configuration --> Automation --> Document Expiry Warning` and set the number of days. The default is 30 days."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:62
+msgid "The expiry tracking applies to all document types, not just calibration documents. If you have a warranty expiring in 30 days, you'll receive a notification too."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:66
+msgid "Searching and filtering documents"
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:68
+msgid "The standalone document list view (accessible via the Documents stat button) includes:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:70
+msgid "**Filter: Expiring (30 days)**: Shows documents expiring within the next 30 days."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:71
+msgid "**Filter: Expired**: Shows documents past their expiry date."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:72
+msgid "**Group By: Type**: Groups documents by their type."
+msgstr ""
+
+#: ../../content/applications/services/equipment/documents.rst:73
+msgid "**Group By: Equipment**: Groups documents by their parent equipment."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:3
+msgid "Equipment Form"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:5
+msgid "The equipment form is a **single pane of glass** — a central hub where all Odoo data related to a piece of equipment is visible in one place."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:None
+msgid "Equipment form overview"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:12
+msgid "Header"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:14
+msgid "The form header contains:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:16
+msgid "**Create Ticket** button: Creates a project task linked to this equipment. Only visible when the equipment is *Active* and has at least one project assigned."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:18
+msgid "**Status bar**: Click to change the state (*Draft* → *Active* → *Inactive*)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:21
+#: ../../content/applications/services/equipment/equipment_measuring.rst:150
+#: ../../content/applications/services/equipment/equipment_printer.rst:105
+msgid "Stat buttons"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:23
+msgid "Stat buttons appear at the top of the form, providing quick access to related records:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:25
+msgid "**Maintenance**: Shows open/total maintenance requests. Only visible when a maintenance equipment is linked. Click to view all maintenance requests."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:27
+msgid "**Invoices**: Shows invoice count and total amount. Only visible when invoices exist. Click to view related invoices."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:29
+msgid "**Tickets**: Shows the number of project tasks linked to this equipment. Click to view all tasks."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:30
+msgid "**Purchases**: Shows purchase order count and total amount. Only visible when purchases exist. Click to view related purchase orders."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:32
+msgid "**Documents**: Shows the number of attached documents. Click to view all documents."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:33
+msgid "**Fleet**: Only visible when a fleet vehicle is linked. Click to open the fleet vehicle form."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:36
+msgid "Main fields"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:38
+msgid "The main section contains core equipment data organized in groups:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:40
+msgid "**Left column:**"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:42
+msgid "**Subscription Service**: If the equipment is part of a subscription."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:43
+msgid "**Customer**: The customer using the equipment."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:44
+msgid "**Owner**: The legal owner."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:45
+msgid "**Assignees**: Users responsible for this equipment."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:46
+#: ../../content/applications/services/equipment/getting_started.rst:43
+msgid "**Sales Team**: The responsible sales team."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:47
+msgid "**Projects**: Projects linked to this equipment for ticket management."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:48
+msgid "**Tags**: Categorization tags."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:50
+msgid "**Right column:**"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:52
+msgid "**Type**: General, Printer, Measuring Device, etc."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:53
+msgid "**Manufacturer**: The equipment brand."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:54
+msgid "**Model**: The specific model (filtered by brand and type)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:55
+msgid "**Product**: Automatically set from the model's linked product."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:56
+msgid "**Product Family**: The product family classification."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:57
+msgid "**Production Year**: Year of manufacture."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:58
+msgid "**Warranty Expiration**: Warranty end date."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:60
+msgid "**Location group:**"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:62
+msgid "**Location**: Delivery address of the customer."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:63
+msgid "**Location Name** and **Address**: Auto-filled from the selected location."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:65
+msgid "**Contact group:**"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:67
+msgid "**Contact**: Contact person at the customer site."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:68
+msgid "**Contact Name**, **Email**, **Phone**: Auto-filled from the selected contact."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:71
+msgid "Tabs"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:None
+msgid "Equipment form tabs"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:76
+msgid "The notebook section contains multiple tabs:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:79
+msgid "Subscription tab"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:81
+msgid "Only visible when a subscription service is linked. Shows pricing information and the invoicing period."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:85
+msgid "Description tab"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:87
+msgid "A rich text editor for detailed notes about the equipment. Supports collaborative editing."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:90
+#: ../../content/applications/services/equipment/equipment_form.rst:None
+msgid "Maintenance tab"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:95
+msgid "**Maintenance Equipment**: Link to the corresponding ``maintenance.equipment`` record. If not yet linked, click :guilabel:`Create Maintenance Equipment` to create or link one automatically."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:97
+msgid "**MTBF (days)**: Mean Time Between Failure, computed from maintenance history."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:98
+msgid "**MTTR (days)**: Mean Time To Repair, computed from maintenance history."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:99
+msgid "**Last Failure**: Date of the most recent corrective maintenance."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:100
+msgid "**Est. Next Failure**: Estimated date of the next failure based on MTBF."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:101
+msgid "**Maintenance Requests**: Inline list of all maintenance requests for this equipment."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:104
+#: ../../content/applications/services/equipment/equipment_form.rst:None
+msgid "Finance tab"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:109
+msgid "**Analytic Account**: The dedicated analytic account for this equipment. Can be auto-created when the equipment is activated (see :doc:`settings`)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:111
+msgid "**Invoice Total**: Sum of all customer invoices linked through the analytic account."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:112
+msgid "**Purchase Total**: Sum of all purchase orders linked through the analytic account."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:113
+msgid "**Margin**: Invoice Total minus Purchase Total."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:114
+msgid "**Recent Invoices**: Inline list of invoices with date, amount, and payment status."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:117
+#: ../../content/applications/services/equipment/equipment_form.rst:None
+msgid "Documents tab"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:122
+msgid "An inline editable list of documents attached to the equipment:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:124
+msgid "**Name**: Document title."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:125
+msgid "**Type**: Manual, Certificate, Calibration, Warranty, Service Book, or Other."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:126
+msgid "**Expiry Date**: When the document expires. A daily cron job creates warning activities for documents expiring within the configured number of days (default: 30)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:128
+msgid "**File**: The attached file (upload/download)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:129
+#: ../../content/applications/services/equipment/equipment_measuring.rst:85
+msgid "**Notes**: Additional notes."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:132
+#: ../../content/applications/services/equipment/equipment_form.rst:None
+msgid "Fleet tab"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:137
+msgid "Only visible when a fleet vehicle is linked. Shows:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:139
+msgid "**Fleet Vehicle**: Link to the ``fleet.vehicle`` record."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:140
+msgid "**License Plate**: From the fleet vehicle."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:141
+msgid "**Odometer**: Latest odometer reading."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:142
+msgid "**Last Service Date**: Date of the most recent fleet service."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:143
+msgid "**Contract State**: Current fleet contract status."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:146
+msgid "List and search views"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:None
+msgid "Search and filter options"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:151
+msgid "The list view shows all equipment with optional columns that can be toggled:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:153
+msgid "Production Year, Warranty Expiration, Product Family"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:154
+msgid "Open Maintenance count, Invoice count, Document count"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:155
+msgid "Calibration Status (when Measuring Devices module is installed)"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:157
+msgid "**Search filters:**"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:159
+msgid "**Open Maintenance**: Equipment with open maintenance requests."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:160
+msgid "**Expiring Documents**: Equipment with documents expiring within 30 days."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:161
+msgid "**Calibration Due** / **Calibration Overdue**: Available when the Measuring Devices module is installed."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:164
+msgid "**Group By options:**"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:166
+msgid "Type, State, Customer, Brand, Model, Product, Tag, Project"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_form.rst:167
+msgid "Product Family, Analytic Account"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:3
+msgid "Measuring Devices"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:5
+msgid "The **Measuring Devices** sub-module (``equipment_measuring``) extends Equipment Management with features specific to measuring instruments such as coordinate measuring machines (CMMs), optical measurement systems, and other precision devices. It adds calibration tracking, software and hardware information, and sensor management."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:None
+msgid "Measuring devices list view"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:14
+#: ../../content/applications/services/equipment/equipment_printer.rst:13
+#: ../../content/applications/services/equipment/getting_started.rst:6
+msgid "Installation"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:16
+msgid "Enable the Measuring Devices module from :menuselection:`Equipment Management --> Settings --> Configuration --> Equipment Types --> Measuring Devices`, or install ``equipment_measuring`` from the Apps menu."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:21
+msgid "Dedicated measuring views"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:23
+msgid "Once installed, a **Measuring Devices** menu appears in the Equipment Management navigation:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:25
+msgid ":menuselection:`Equipment Management --> Measuring Devices --> Measuring Devices`: Shows only measuring-type equipment with specific columns (calibration status, next calibration date, product family, serial number)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:28
+msgid ":menuselection:`Equipment Management --> Measuring Devices --> Calibrations`: Lists all calibration records across all measuring devices."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:31
+msgid "Creating an equipment from the Measuring Devices menu automatically sets the type to *Measuring Device*."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:35
+msgid "Measuring tab"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:None
+msgid "Measuring tab on equipment form"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:40
+msgid "When an equipment has type *Measuring Device*, a dedicated :guilabel:`Measuring` tab appears on the form with the following sections:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:44
+msgid "Calibration"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:46
+msgid "**Last Calibration Date**: Automatically computed from the most recent calibration log entry. Cannot be edited directly — add a calibration record instead."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:48
+msgid "**Next Calibration Date**: Computed as Last Calibration Date + Calibration Period. Read-only."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:49
+msgid "**Calibration Period (months)**: How often the equipment must be calibrated. Set manually."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:50
+msgid "**Calibration Status**: Computed status badge:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:52
+msgid "**OK** (green): Next calibration is more than 30 days away."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:53
+msgid "**Warning** (yellow): Next calibration is within 30 days."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:54
+msgid "**Overdue** (red): Calibration date has passed, or no calibration data exists."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:57
+msgid "Software"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:59
+msgid "**Software Modules**: Free-text description of installed software modules."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:60
+msgid "**Software Serial Number**: The license serial number."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:61
+msgid "**Software Version**: The current software version."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:64
+msgid "Hardware"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:66
+msgid "**Hardware Keylock**: The hardware keylock number (dongle/license key)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:69
+msgid "Characteristics"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:71
+msgid "A rich text field for technical specifications, measurement ranges, accuracy specifications, and other characteristics of the measuring device."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:75
+msgid "Sensors"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:None
+msgid "Sensors inline list"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:80
+msgid "An inline editable list of sensors attached to the measuring device:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:82
+msgid "**Name**: Sensor name (e.g., \"Optical Sensor\", \"Touch Probe SP25M\")."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:83
+msgid "**Serial Number**: The sensor's serial number for tracking and warranty purposes."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:84
+msgid "**Type**: Sensor type (free text — e.g., \"Optical\", \"Tactile\", \"Chromatic Focus Point\")."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:87
+msgid "Click the :guilabel:`Sensors` stat button to view sensors in a dedicated list view."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:90
+msgid "Calibration management"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:None
+msgid "Calibration records list view"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:95
+msgid "Calibration records track the complete calibration history of each measuring device."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:98
+msgid "Creating a calibration record"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:None
+msgid "Calibration form"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:103
+msgid "Navigate to :menuselection:`Equipment Management --> Measuring Devices --> Calibrations`."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:104
+#: ../../content/applications/services/equipment/equipment_printer.rst:93
+#: ../../content/applications/services/equipment/getting_started.rst:22
+#: ../../content/applications/services/field_service/creating_tasks.rst:14
+msgid "Click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:105
+#: ../../content/applications/services/equipment/getting_started.rst:23
+msgid "Fill in the required fields:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:107
+msgid "**Equipment**: The measuring device being calibrated."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:108
+msgid "**Calibration Date**: The date the calibration was performed (defaults to today)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:109
+msgid "**Result**: The calibration outcome:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:111
+msgid "**Pass**: Equipment is within specifications."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:112
+msgid "**Fail**: Equipment is out of specification and needs repair/adjustment."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:113
+msgid "**Conditional**: Equipment passes with limitations or notes."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:115
+#: ../../content/applications/services/equipment/getting_started.rst:33
+msgid "Optionally fill in:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:117
+msgid "**Performed By**: Name or organization that performed the calibration."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:118
+msgid "**Certificate**: Upload the calibration certificate (PDF, etc.)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:119
+msgid "**Notes**: Any additional observations."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:121
+#: ../../content/applications/services/equipment/equipment_printer.rst:98
+msgid "Save."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:123
+msgid "The equipment's **Last Calibration Date** and **Next Calibration Date** are automatically updated based on the latest calibration record."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:127
+msgid "You can also create calibration records directly from the equipment form by clicking the :guilabel:`Calibrations` stat button and then :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:131
+msgid "Calibration workflow"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:133
+msgid "A typical calibration workflow:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:135
+msgid "The daily cron job (or the Calibration Status badge on the form) alerts that calibration is due."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:136
+msgid "A technician performs the calibration."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:137
+msgid "A calibration record is created with the result and certificate."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:138
+msgid "The system automatically updates the next calibration date."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:139
+msgid "The Calibration Status returns to *OK*."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:142
+msgid "Search and filtering"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:144
+msgid "The calibration list view includes:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:146
+msgid "**Filters**: Pass, Fail, Conditional results."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:147
+msgid "**Group By**: Equipment, Result, Date (by month)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:152
+msgid "Measuring-type equipment shows additional stat buttons:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:154
+msgid "**Calibrations**: Total number of calibration records. Click to view the full calibration history."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:156
+msgid "**Sensors**: Number of attached sensors. Only visible when sensors exist. Click to view sensors."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:159
+msgid "Dedicated search filters"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:161
+msgid "The measuring devices list view includes specific search capabilities:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:163
+msgid "**Filter: Calibration Due**: Measuring devices with calibration due within 30 days."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:164
+msgid "**Filter: Calibration Overdue**: Measuring devices past their calibration date."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:165
+msgid "**Group By: Product Family**: Group measuring devices by product family."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:166
+msgid "**Group By: Calibration Status**: Group by OK/Warning/Overdue status."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:3
+msgid "Printers"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:5
+msgid "The **Printers** sub-module (``equipment_printer``) extends Equipment Management with printer-specific features: counter tracking, cartridge management, paper format support, and connection type details."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:None
+msgid "Printer list view"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:15
+msgid "Enable the Printers module from :menuselection:`Equipment Management --> Settings --> Configuration --> Equipment Types --> Printers`, or install ``equipment_printer`` from the Apps menu."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:20
+msgid "Dedicated printer views"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:22
+msgid "Once installed, a **Printers** menu appears in the Equipment Management navigation:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:24
+msgid ":menuselection:`Equipment Management --> Printers --> Printers`: Shows only printer-type equipment with printer-specific columns (paper formats, counter date, reporting method)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:26
+msgid ":menuselection:`Equipment Management --> Printers --> Counters`: Lists all printer counter records across all printers."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:29
+msgid "Creating a printer from the Printers menu automatically sets the type to *Printer*."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:32
+msgid "Printer tab"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:None
+msgid "Printer tab on equipment form"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:37
+msgid "When an equipment has type *Printer*, a dedicated :guilabel:`Printer` tab appears on the form with the following sections:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:41
+msgid "Counters section"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:43
+msgid "**Counter Reporting Method**: How counter readings are collected — API (automatic), Email (automatic), SNMP (automatic), Portal (manual), Email (manual), or Call (manual)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:45
+msgid "**Last Counter Date**: Date of the most recent counter reading, with color coding:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:47
+msgid "**Green**: Less than 30 days old."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:48
+msgid "**Yellow**: 30-60 days old."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:49
+msgid "**Red**: More than 60 days old."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:51
+msgid "**Last Counter**: Summary of the latest counter reading values."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:54
+msgid "General section"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:56
+msgid "These fields are inherited from the equipment model and are read-only:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:58
+msgid "**Color**: Black & White or Color (from the model)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:59
+msgid "**Multifunctional**: Whether the printer is multifunctional."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:60
+msgid "**Technology**: Inkjet, Laser, etc."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:61
+msgid "**Paper Formats**: Supported paper sizes."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:62
+msgid "**Double Sided**: Whether duplex printing is supported."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:63
+msgid "**Document Feeder**: Whether the printer has an automatic document feeder."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:66
+msgid "Connection section"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:68
+msgid "**USB**, **Ethernet**, **WiFi**, **Bluetooth**: Connection types supported (from the model)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:71
+msgid "Cartridges section"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:73
+msgid "Lists the compatible cartridges for this printer model, showing name, product, and pages per cartridge."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:77
+msgid "Counter management"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:None
+msgid "Printer counter form"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:82
+msgid "Printer counters track page counts over time. Each counter record contains:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:84
+msgid "**Equipment**: The printer this counter belongs to."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:85
+msgid "**Date**: The date of the reading (one reading per day per printer)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:86
+msgid "**Counter Lines**: One line per paper format and color type (B&W / Color), showing the current counter value and the previous reading for comparison."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:88
+msgid "**Scan Counter**: The scanner counter (for multifunctional printers)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:90
+msgid "**Creating a counter reading:**"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:92
+msgid "Navigate to :menuselection:`Equipment Management --> Printers --> Counters`."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:94
+msgid "Select the **Equipment** (printer)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:95
+msgid "The counter lines are auto-populated based on the printer's paper formats and color capabilities, pre-filled with the last known values."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:97
+msgid "Enter the new counter values."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:101
+msgid "Counter values cannot be lower than the previous reading. This prevents accidental data entry errors. Only the most recent counter record can be deleted."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:107
+msgid "Printer-type equipment shows additional stat buttons:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:109
+msgid "**Counters**: Number of counter records. Click to view the counter history."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:110
+msgid "**Equipments**: Count of task products linked to this printer."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:113
+msgid "Settings menu"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:115
+msgid "The Printers module adds entries to :menuselection:`Equipment Management --> Settings`:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:117
+msgid "**Cartridges**: Manage cartridge definitions (name, product, pages per cartridge)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:118
+msgid "**Paper Formats**: Manage paper format definitions used by printers."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:3
+msgid "Getting Started"
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:8
+msgid "Navigate to :menuselection:`Apps` and search for **Equipment Management**. Click :guilabel:`Install`."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:10
+msgid "The module installs as a standalone application with its own top-level menu item in the main navigation bar."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:14
+msgid "Sub-modules for specific equipment types (Printers, Measuring Devices) can be enabled in :menuselection:`Equipment Management --> Settings --> Configuration` or installed separately from the Apps menu."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:19
+msgid "Creating your first equipment"
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:21
+msgid "Navigate to :menuselection:`Equipment Management --> All Equipment`."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:25
+msgid "**Name**: A descriptive name for the equipment (e.g., \"Werth VideoCheck HA 400x400\")."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:26
+msgid "**Equipment ID**: Auto-generated from the configured sequence (e.g., ``EQ/0001``). You can override this value manually if needed."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:28
+msgid "**Customer**: The customer who owns or uses the equipment."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:29
+msgid "**Owner**: The legal owner of the equipment."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:31
+msgid "Set the **Type** to match the equipment category. The default is *General*. If sub-modules are installed, additional types become available (e.g., *Printer*, *Measuring Device*)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:35
+msgid "**Serial Number**: The manufacturer's serial number. If a matching :doc:`stock lot </applications/inventory_and_mrp/inventory/product_management/product_tracking/lots>` exists, it will be automatically suggested."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:38
+msgid "**Manufacturer** and **Model**: Select from the pre-configured brand/model hierarchy."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:39
+msgid "**Product Family**: The product family this equipment belongs to."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:40
+msgid "**Production Year**: The year the equipment was manufactured."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:41
+msgid "**Warranty Expiration**: The date when the manufacturer's warranty expires."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:42
+msgid "**MAC Address**: For network-connected equipment."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:45
+msgid "Click the :guilabel:`Draft` status bar to change the state to :guilabel:`Active`."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:None
+msgid "Equipment form view with main fields"
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:51
+msgid "Equipment states"
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:53
+msgid "Each equipment record goes through three lifecycle states:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:55
+msgid "**Draft**: Initial state when created. Equipment is being set up."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:56
+msgid "**Active**: Equipment is in service. Activating an equipment can automatically create an analytic account and/or a maintenance equipment record (if configured in Settings)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:58
+msgid "**Inactive**: Equipment is no longer in service but kept for historical reference."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:61
+msgid "Equipment ID sequence"
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:63
+msgid "By default, new equipment records receive an auto-generated ID using the format ``EQ/0001``, ``EQ/0002``, etc. The prefix can be customized in :menuselection:`Equipment Management --> Settings --> Configuration --> Defaults --> Equipment ID Prefix`."
+msgstr ""
+
+#: ../../content/applications/services/equipment/getting_started.rst:67
+msgid "The ID field remains editable — you can override the auto-generated value at any time, for example to match an existing internal numbering system."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:3
+msgid "Integrations"
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:5
+msgid "Equipment Management integrates with several Odoo modules to provide a complete view of each equipment's lifecycle."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:9
+msgid "Maintenance"
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:11
+msgid "Each equipment can be linked to a **maintenance equipment** record from the Maintenance module. This enables:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:14
+msgid "Viewing maintenance requests directly on the equipment form."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:15
+msgid "MTBF/MTTR statistics computed from maintenance history."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:16
+msgid "Preventive maintenance scheduling through the Maintenance module."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:18
+msgid "**Linking maintenance equipment:**"
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:20
+msgid "Open the equipment form."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:21
+msgid "Go to the :guilabel:`Maintenance` tab."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:22
+msgid "Click :guilabel:`Create Maintenance Equipment`."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:23
+msgid "If a maintenance equipment with the same serial number already exists, it will be linked automatically instead of creating a duplicate."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:26
+msgid "When the maintenance equipment link is established, data is synced automatically:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:28
+msgid "Serial number, customer, and assignees are kept in sync."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:29
+msgid "Changes on the equipment form propagate to the maintenance record."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:32
+msgid "Analytic Accounting"
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:34
+msgid "Each equipment can have a dedicated **analytic account** that tracks all financial transactions related to that specific piece of equipment."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:37
+msgid "The analytic account is used to:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:39
+msgid "Link customer invoices to the equipment (visible in the Finance tab)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:40
+msgid "Link purchase orders to the equipment."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:41
+msgid "Calculate revenue, cost, and margin per equipment."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:43
+msgid "When setting the analytic distribution on invoice lines or purchase order lines, select the equipment's analytic account to associate the transaction with the equipment."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:47
+msgid "Enable **Auto-create Analytic Account** in Settings to have analytic accounts created automatically when equipment is activated."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:51
+msgid "Stock / Inventory"
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:53
+msgid "Equipment can be linked to a **stock lot** (serial number tracking in Inventory). When you enter a serial number on the equipment form, the system automatically searches for a matching stock lot:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:56
+msgid "**One match found**: The lot is auto-linked."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:57
+msgid "**Multiple or no matches**: The lot field remains empty for manual selection."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:59
+msgid "This link allows you to trace the equipment's inventory history, warehouse location, and stock movements."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:63
+msgid "Fleet"
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:65
+msgid "For vehicle-type equipment (company cars, delivery trucks, forklifts), a **fleet vehicle** can be linked. The Fleet tab shows:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:68
+msgid "License plate, odometer, last service date, and contract state."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:69
+msgid "Direct link to the fleet vehicle form for full details."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:72
+msgid "Fleet vehicles must be created manually in the Fleet module first, then linked from the equipment form. This is because fleet vehicles have many required fields that cannot be auto-populated."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:77
+msgid "Project / Tickets"
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:79
+msgid "Equipment can be linked to one or more **projects** for ticket management. The :guilabel:`Create Ticket` button on the form creates a project task linked to the equipment."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:82
+msgid "If the equipment has exactly one project, the task is created directly. If multiple projects are linked, a wizard appears to select the target project."
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:86
+msgid "Subscription"
+msgstr ""
+
+#: ../../content/applications/services/equipment/integrations.rst:88
+msgid "Equipment can be linked to a **subscription service** for recurring billing. When a subscription is linked, the Subscription tab shows pricing details and the invoicing period."
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:3
+msgid "Security"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:5
+msgid "Equipment Management uses a three-tier permission model to control access."
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:None
+msgid "Security groups hierarchy"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:11
+msgid "Access groups"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:17
+msgid "Group"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:18
+msgid "Technical Name"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:19
+msgid "Permissions"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:20
+msgid "**Reader**"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:21
+msgid "``equipment_group_reader``"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:22
+msgid "View all equipment, brands, models, tags, and documents. Cannot create, edit, or delete. All internal Odoo users receive this group automatically."
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:24
+msgid "**Officer**"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:25
+msgid "``equipment_group_user``"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:26
+msgid "Everything Reader can do, plus: create and edit equipment, link maintenance/fleet/stock, upload documents, set analytic accounts."
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:28
+msgid "**Manager**"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:29
+msgid "``equipment_group_manager``"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:30
+msgid "Everything Officer can do, plus: delete and archive equipment, delete documents, access Equipment Settings/Configuration."
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:34
+msgid "Assigning groups"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:36
+msgid "Navigate to :menuselection:`Settings --> Users & Companies --> Users`."
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:37
+msgid "Select a user."
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:38
+msgid "In the :guilabel:`Access Rights` tab, find the **Equipment Management** section."
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:39
+msgid "Select the appropriate level: *Reader*, *Officer*, or *Manager*."
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:42
+msgid "All internal users (``base.group_user``) automatically receive **Reader** access. You only need to explicitly assign **Officer** or **Manager** to users who need higher access."
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:46
+msgid "Multi-company rules"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:48
+msgid "Equipment, documents, and sensor records are filtered by company. Users can only see records belonging to their current company (or companies they have access to in multi-company setups)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:51
+msgid "This is enforced through global record rules:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:53
+msgid "Equipment: ``[('company_id', 'in', company_ids)]``"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:54
+msgid "Documents: ``[('equipment_id.company_id', 'in', company_ids)]``"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:55
+msgid "Sensors: ``[('equipment_id.company_id', 'in', company_ids)]``"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:56
+msgid "Calibrations: ``[('equipment_id.company_id', 'in', company_ids)]``"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:59
+msgid "View-level restrictions"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:61
+msgid "Certain fields on the equipment form are only visible to **Officer** and above:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:63
+msgid "Analytic Account"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:64
+msgid "Maintenance Equipment link"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:65
+msgid "Fleet Vehicle link"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:66
+msgid "Stock Lot link"
+msgstr ""
+
+#: ../../content/applications/services/equipment/security.rst:68
+msgid "Reader users see all the data and tabs but cannot see or modify these connection fields."
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:3
+msgid "Settings"
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:5
+msgid "Equipment settings are accessible from :menuselection:`Equipment Management --> Settings --> Configuration` or from :menuselection:`Settings --> Equipment`."
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:None
+msgid "Equipment settings page"
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:12
+msgid "Equipment Types"
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:14
+msgid "Enable or disable equipment type sub-modules:"
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:16
+msgid "**Printers**: Install the ``equipment_printer`` module for printer-specific features including counter tracking, cartridge management, and paper format support. See :doc:`equipment_printer`."
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:18
+msgid "**Measuring Devices**: Install the ``equipment_measuring`` module for measuring device features including calibration tracking, sensor management, and software/hardware info. See :doc:`equipment_measuring`."
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:23
+msgid "Enabling a sub-module will install the corresponding Odoo module. Disabling it will uninstall the module (data is preserved)."
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:27
+msgid "Automation"
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:30
+msgid "Auto-create Analytic Account"
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:32
+msgid "When enabled, activating an equipment (changing state from *Draft* to *Active*) automatically creates a dedicated analytic account for that equipment."
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:35
+msgid "**Analytic Plan**: Select which analytic plan the auto-created accounts should belong to. The default is the *Equipment* plan created during module installation."
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:38
+msgid "This is useful for tracking revenue and costs per equipment without manual setup."
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:41
+msgid "Auto-create Maintenance Equipment"
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:43
+msgid "When enabled, activating an equipment also creates a corresponding ``maintenance.equipment`` record automatically. If a maintenance equipment with the same serial number already exists, it will be linked instead of creating a duplicate."
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:47
+msgid "The :guilabel:`Create Maintenance Equipment` button on the form remains available as a manual alternative when this setting is disabled."
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:51
+msgid "Document Expiry Warning"
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:53
+msgid "Configure how many days before a document's expiry date the system should create a warning activity. The default is **30 days**."
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:56
+msgid "The daily scheduled job checks all active equipment's documents and creates activities for those within the warning period."
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:60
+msgid "Defaults"
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:63
+msgid "Default Project"
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:65
+msgid "Set a default project that is automatically assigned to new equipment records. This is useful when all equipment should be linked to the same ticket/project management system."
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:69
+msgid "Equipment ID Prefix"
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:71
+msgid "Customize the prefix used for auto-generated Equipment IDs. The default is ``EQ/``, producing IDs like ``EQ/0001``, ``EQ/0002``, etc."
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:74
+msgid "Changing the prefix affects only newly created equipment — existing IDs are not modified."
+msgstr ""
+
+#: ../../content/applications/services/equipment/settings.rst:77
+msgid "Each company can have its own sequence and prefix. In multi-company setups, configure the prefix separately for each company."
 msgstr ""
 
 #: ../../content/applications/services/field_service.rst:8
@@ -47,10 +1583,6 @@ msgstr ""
 
 #: ../../content/applications/services/field_service/creating_tasks.rst:13
 msgid "Open the Field service app and go to :menuselection:`Field Service --> All Tasks --> All Tasks`."
-msgstr ""
-
-#: ../../content/applications/services/field_service/creating_tasks.rst:14
-msgid "Click :guilabel:`New`."
 msgstr ""
 
 #: ../../content/applications/services/field_service/creating_tasks.rst:15
@@ -224,7 +1756,7 @@ msgstr ""
 msgid "To set up a default warehouse for a specific user, go to :menuselection:`Settings --> Users --> Manage users`, select a user, then go to the :guilabel:`Preferences` tab. Scroll down to :guilabel:`Inventory`, and select the default warehouse from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/services/field_service/product_management.rst:-1
+#: ../../content/applications/services/field_service/product_management.rst:None
 msgid "Selection of a default warehouse on a user profile."
 msgstr ""
 
@@ -292,7 +1824,7 @@ msgstr ""
 msgid "By default, the :guilabel:`Default Worksheet` template is selected. To define another default worksheet template, click the :guilabel:`➔` (:guilabel:`Internal link`) icon that appears when you hover your mouse over the :guilabel:`Project` field on the task form."
 msgstr ""
 
-#: ../../content/applications/services/field_service/worksheets.rst:-1
+#: ../../content/applications/services/field_service/worksheets.rst:None
 msgid "Mouse on project name to setup default worksheet template"
 msgstr ""
 
@@ -332,7 +1864,7 @@ msgstr ""
 msgid "To view or modify **Helpdesk** teams, go to :menuselection:`Helpdesk app --> Configuration --> Helpdesk Teams`. To create a new team, click the :guilabel:`New` button on the top-left of the dashboard."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:-1
+#: ../../content/applications/services/helpdesk.rst:None
 msgid "View of the Helpdesk teams page in Odoo Helpdesk."
 msgstr ""
 
@@ -408,7 +1940,7 @@ msgstr ""
 msgid "When tickets are received, they need to be assigned to a member of the team. This is done either manually on each individual ticket, or through :guilabel:`Automatic Assignment`. Check the :guilabel:`Automatic Assignment` checkbox to enable this feature for the team."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:-1
+#: ../../content/applications/services/helpdesk.rst:None
 msgid "View of a Helpdesk team settings page emphasizing the automatic assignment features in Odoo\n"
 "Helpdesk."
 msgstr ""
@@ -501,7 +2033,7 @@ msgstr ""
 msgid ":guilabel:`Sales Team`: Specify which :guilabel:`Sales Team` and :guilabel:`Salesperson` this created opportunity is assigned to."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:-1
+#: ../../content/applications/services/helpdesk.rst:None
 msgid "The convert to opportunity pop-up window."
 msgstr ""
 
@@ -585,7 +2117,7 @@ msgstr ""
 msgid "To create a credit note, navigate to a ticket on the :menuselection:`Helpdesk app`, and click the :guilabel:`Refund` button in the top-left corner of the ticket form. This opens a :guilabel:`Refund` pop-up window."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:None
 msgid "View of a refund creation page."
 msgstr ""
 
@@ -638,7 +2170,7 @@ msgstr ""
 msgid "Once the credit note has been posted, a :guilabel:`Credit Notes` smart button is added to the **Helpdesk** ticket."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:None
 msgid "View of smart buttons on a ticket focusing on the credit note button."
 msgstr ""
 
@@ -662,7 +2194,7 @@ msgstr ""
 msgid "To generate a coupon, open a **Helpdesk** ticket and click on the :guilabel:`Coupon` button in the top-left corner. Select an option from the :guilabel:`Coupon Program` drop-down menu in the :guilabel:`Generate a Coupon` pop-up window that appears."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:None
 msgid "View of a coupon generation window."
 msgstr ""
 
@@ -690,7 +2222,7 @@ msgstr ""
 msgid "After a :guilabel:`Coupon Code` has been generated, a :guilabel:`Coupons` smart button is added to the top of the ticket; click the smart button to view the coupon code, expiration date, and additional information."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:None
 msgid "View of the smart buttons on a ticket focusing on the coupon button."
 msgstr ""
 
@@ -710,7 +2242,7 @@ msgstr ""
 msgid "Returns are completed through *reverse transfers*, which generate new warehouse operations for the returning products. Click the :guilabel:`Return` button at the top of a ticket to open the :guilabel:`Return` pop-up window."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:None
 msgid "View of a Helpdesk ticket with the return button highlighted."
 msgstr ""
 
@@ -730,7 +2262,7 @@ msgstr ""
 msgid "Select a :guilabel:`Return Location` where the items should be directed after the return is completed."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:None
 msgid "View of a reverse transfer creation page."
 msgstr ""
 
@@ -746,7 +2278,7 @@ msgstr ""
 msgid "Use the breadcrumbs to return to the helpdesk ticket. A new :guilabel:`Return` smart button can now be accessed at the top of the ticket."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:None
 msgid "View of the return smart button on a helpdesk ticket."
 msgstr ""
 
@@ -766,7 +2298,7 @@ msgstr ""
 msgid "To create a new repair order, open a :menuselection:`Helpdesk` ticket and click on the :guilabel:`Repair` button in the top-left corner. This opens a :guilabel:`Repair Reference` form."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:None
 msgid "View of a repair reference page."
 msgstr ""
 
@@ -814,7 +2346,7 @@ msgstr ""
 msgid "A :guilabel:`Repairs` smart button is then added to the ticket, linking to the repair order."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:None
 msgid "View of smart buttons focusing on repair button."
 msgstr ""
 
@@ -838,7 +2370,7 @@ msgstr ""
 msgid "To create a new **Field Service** task, navigate to a :menuselection:`Helpdesk` ticket. Click :guilabel:`Plan Intervention` to open the :guilabel:`Create a Field Service task` pop-up window."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:None
 msgid "View of a Field Service task creation page."
 msgstr ""
 
@@ -874,7 +2406,7 @@ msgstr ""
 msgid "After the task is created, a :guilabel:`Tasks` smart button is added to the ticket, linking the :guilabel:`Field Service` task to the ticket."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/after_sales.rst:None
 msgid "View of ticket smart buttons focused on task."
 msgstr ""
 
@@ -902,7 +2434,7 @@ msgstr ""
 msgid "To fold a stage, navigate to the :menuselection:`Helpdesk` dashboard and click on a team to open the pipeline. Hover over a stage's heading, and then click the :icon:`fa-gear` :guilabel:`(gear)` icon that appears in the top-right corner of that stage's Kanban column."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/close_tickets.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/close_tickets.rst:None
 msgid "View of stage on Helpdesk pipeline with emphasis on gear icon and edit stage option."
 msgstr ""
 
@@ -1006,7 +2538,7 @@ msgstr ""
 msgid "Start by navigating to :menuselection:`Helpdesk --> Configuration --> Helpdesk Teams` and select a team. On the team's settings page, scroll to the :guilabel:`Self-Service` section and tick the checkbox for :guilabel:`Closure by Customers`."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/close_tickets.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/close_tickets.rst:None
 msgid "Customer closing setting in Odoo Helpdesk."
 msgstr ""
 
@@ -1014,7 +2546,7 @@ msgstr ""
 msgid "After the ticket closing settings are enabled, a :guilabel:`Close Ticket` button is available for customers when they view their ticket through the customer portal."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/close_tickets.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/close_tickets.rst:None
 msgid "Customer view of ticket closing in Odoo Helpdesk."
 msgstr ""
 
@@ -1078,7 +2610,7 @@ msgstr ""
 msgid "To create a new project where the timesheets are recorded, click into the :guilabel:`Project` drop-down menu, type a name for the project, and then click :guilabel:`Create` from the drop-down menu beneath."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:None
 msgid "View of a helpdesk team settings page emphasizing the track and bill time settings."
 msgstr ""
 
@@ -1094,7 +2626,7 @@ msgstr ""
 msgid "Select :guilabel:`Service on Timesheets` from the product page. This reveals the product detail form. The product is configured with the :guilabel:`Product Type` set to :guilabel:`Service` and the :guilabel:`Invoicing Policy` set to :guilabel:`Based on Timesheets`. Make any necessary changes to the product record, such as the :guilabel:`Cost` or :guilabel:`Sales Price`."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:None
 msgid "View of a service product with the invoicing policy set to 'Based on timesheets'."
 msgstr ""
 
@@ -1110,7 +2642,7 @@ msgstr ""
 msgid "On the new product form, add a :guilabel:`Product Name`, and set the :guilabel:`Product Type` to :guilabel:`Service`. Then, set the :guilabel:`Invoicing Policy` to :guilabel:`Prepaid/Fixed Price`. This means an invoice can be generated and payment can be received for this product before any timesheets entries have been recorded for these services."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:None
 msgid "View of a service product with the invoicing policy set to 'prepaid/fixed'."
 msgstr ""
 
@@ -1198,7 +2730,7 @@ msgstr ""
 msgid "As new lines are added to :guilabel:`Timesheets` tab, the :guilabel:`Remaining Hours on SO` field, at the bottom-right of the tab, is automatically updated."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:None
 msgid "View of the timesheets tab on a ticket with an emphasis on the remaining hours on an SO."
 msgstr ""
 
@@ -1274,7 +2806,7 @@ msgstr ""
 msgid "Repeat these steps until all timesheet entries have been recorded."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:None
 msgid "View of the timesheets tab on a helpdesk ticket."
 msgstr ""
 
@@ -1294,7 +2826,7 @@ msgstr ""
 msgid "Before creating the invoice, confirm that the number in the :guilabel:`Delivered` column matches the total number of :guilabel:`Hours Spent` listed in the :guilabel:`Timesheets` tab on the ticket."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:-1
+#: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:None
 msgid "View of a sales order with emphasis on the delivered column."
 msgstr ""
 
@@ -1334,7 +2866,7 @@ msgstr ""
 msgid "Odoo **Helpdesk** integrates with the **Forums**, **eLearning**, and **Knowledge** apps to create the *Help Center*. The *Help Center* is a centralized location where teams and customers can search for and share detailed information about products and services."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/help_center.rst:-1
+#: ../../content/applications/services/helpdesk/overview/help_center.rst:None
 msgid "Overview of the settings page of a team emphasizing the Help Center features."
 msgstr ""
 
@@ -1434,7 +2966,7 @@ msgstr ""
 msgid "Click the :guilabel:`Knowledge (bookmark)` icon, located at the top-right of the page, to open a pop-up search window."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/help_center.rst:-1
+#: ../../content/applications/services/helpdesk/overview/help_center.rst:None
 msgid "View of knowledge search window from a helpdesk ticket."
 msgstr ""
 
@@ -1470,7 +3002,7 @@ msgstr ""
 msgid "To publish an article, navigate to the desired article, by following the above steps, and click the :icon:`fa-share-alt` :guilabel:`Share` icon. This reveals a menu. Slide the toggle button labeled :guilabel:`Share to Web` to read :guilabel:`Article Published`."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/help_center.rst:-1
+#: ../../content/applications/services/helpdesk/overview/help_center.rst:None
 msgid "View of a knowledge article focused on sharing and publishing options."
 msgstr ""
 
@@ -1494,7 +3026,7 @@ msgstr ""
 msgid "Type :kbd:`/` to open the *powerbox*, and view a drop-down list of :ref:`commands <knowledge/articles_editing/commands>`. Select or type :kbd:`clipboard`. A gray block is then added to the page. Add any necessary content to this block."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/help_center.rst:-1
+#: ../../content/applications/services/helpdesk/overview/help_center.rst:None
 msgid "View of a clipboard in knowledge with focus on send and copy options."
 msgstr ""
 
@@ -1582,7 +3114,7 @@ msgstr ""
 msgid "At the top of the ticket detail form, click the :guilabel:`Share on Forum` button."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/help_center.rst:-1
+#: ../../content/applications/services/helpdesk/overview/help_center.rst:None
 msgid "Overview of the Forums page of a website to show the available ones in Odoo Helpdesk."
 msgstr ""
 
@@ -1606,7 +3138,7 @@ msgstr ""
 msgid "To create a ticket, navigate to a forum post, and click the :icon:`fa-ellipsis-h` :guilabel:`(ellipsis)` icon. Then, click :guilabel:`Create Ticket`."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/help_center.rst:-1
+#: ../../content/applications/services/helpdesk/overview/help_center.rst:None
 msgid "A forum post with the create ticket option visible."
 msgstr ""
 
@@ -1686,7 +3218,7 @@ msgstr ""
 msgid "To add content to a course, click the :guilabel:`Content` tab and select :guilabel:`Add Content`. Choose the :guilabel:`Content Type` from the drop-down menu and upload the file, or paste the link, where instructed. Click :guilabel:`Save` when finished. Click :guilabel:`Add Section` to organize the course in sections."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/help_center.rst:-1
+#: ../../content/applications/services/helpdesk/overview/help_center.rst:None
 msgid "View of a course being published for Odoo Helpdesk."
 msgstr ""
 
@@ -1746,7 +3278,7 @@ msgstr ""
 msgid "With all the course content selected, click any of the boxes in the :guilabel:`Is Published` column. This reveals a pop-up window, asking for confirmation that all selected records are intended to be published. Click :guilabel:`Confirm` to automatically publish all course content."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/help_center.rst:-1
+#: ../../content/applications/services/helpdesk/overview/help_center.rst:None
 msgid "View of a course contents being published in Odoo Helpdesk back-end."
 msgstr ""
 
@@ -1766,7 +3298,7 @@ msgstr ""
 msgid "To enable *customer ratings* on a helpdesk team, navigate to :menuselection:`Helpdesk app --> Configuration --> Helpdesk Teams`. Click on a team from the list to open the settings page. Scroll to the :guilabel:`Performance` section, and tick the :guilabel:`Customer Ratings` checkbox."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/ratings.rst:-1
+#: ../../content/applications/services/helpdesk/overview/ratings.rst:None
 msgid "Overview of the settings page of a helpdesk team emphasizing the rating on ticket feature\n"
 "in Odoo Helpdesk."
 msgstr ""
@@ -1807,7 +3339,7 @@ msgstr ""
 msgid "**Dissatisfied** - |frown|"
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/ratings.rst:-1
+#: ../../content/applications/services/helpdesk/overview/ratings.rst:None
 msgid "A preview of the ticket rating request template in Helpdesk."
 msgstr ""
 
@@ -1887,7 +3419,7 @@ msgstr ""
 msgid "Then, scroll to :menuselection:`Channels --> Email Alias`. In the :guilabel:`Alias` field, type the desired name for the team's email alias."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:-1
+#: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:None
 msgid "View of the settings page of a Helpdesk team emphasizing the email alias feature in Odoo\n"
 "Helpdesk."
 msgstr ""
@@ -1937,7 +3469,7 @@ msgid "If a **Helpdesk** team is named `Customer Care`, a **Live Chat** channel 
 msgstr ""
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:0
-#: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:-1
+#: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:None
 msgid "View of the Kanban cards for the available Live Chat channels."
 msgstr ""
 
@@ -1993,7 +3525,7 @@ msgstr ""
 msgid "The :guilabel:`Options` tab contains the visual and text settings for the live chat window."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:-1
+#: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:None
 msgid "View of the options tab of a Live Chat channel's settings."
 msgstr ""
 
@@ -2145,7 +3677,7 @@ msgstr ""
 msgid "Additionally, if a *Help Center* is published, the smart button navigates there first. Simply click the :guilabel:`Contact Us` button, at the bottom of the forum, to navigate to the ticket submission form."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:-1
+#: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:None
 msgid "View of the settings page of a helpdesk team emphasizing the Go to Website button in\n"
 "Odoo Helpdesk."
 msgstr ""
@@ -2206,7 +3738,7 @@ msgstr ""
 msgid ":guilabel:`Animation`: choose whether or not the field should include animation."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:-1
+#: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:None
 msgid "View of the unpublished website form to submit a ticket for Odoo Helpdesk."
 msgstr ""
 
@@ -2222,7 +3754,7 @@ msgstr ""
 msgid "All tickets include a :guilabel:`Priority` field. The highest priority tickets appear at the top of the Kanban and list views."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:-1
+#: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:None
 msgid "View of a team's Kanban view and the prioritized tasks in Odoo Helpdesk."
 msgstr ""
 
@@ -2294,7 +3826,7 @@ msgstr ""
 msgid "This report is useful for identifying where teams are spending the most time, and helps determine if there is an uneven workload distribution among the support staff. The default report counts the number of tickets per team and groups them by stage."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/reports.rst:-1
+#: ../../content/applications/services/helpdesk/overview/reports.rst:None
 msgid "View of Ticket Analysis report default view."
 msgstr ""
 
@@ -2366,7 +3898,7 @@ msgstr ""
 msgid "By default, this report is filtered to show the number of |SLAs| failed, in progress, and the number that have been successful. The results are grouped by teams."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/reports.rst:-1
+#: ../../content/applications/services/helpdesk/overview/reports.rst:None
 msgid "View of Group by options of Ticket Analysis report."
 msgstr ""
 
@@ -2398,7 +3930,7 @@ msgstr ""
 msgid "The *Customer Ratings* report (:menuselection:`Helpdesk app--> Reporting --> Customer Ratings`) displays an overview of the ratings received on individual support tickets, as well as any additional comments submitted with the rating."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/reports.rst:-1
+#: ../../content/applications/services/helpdesk/overview/reports.rst:None
 msgid "View of the Kanban display in the Customer Ratings report."
 msgstr ""
 
@@ -2406,7 +3938,7 @@ msgstr ""
 msgid "Click on an individual rating to see additional details about the rating submitted by the customer, including a link to the original ticket."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/reports.rst:-1
+#: ../../content/applications/services/helpdesk/overview/reports.rst:None
 msgid "View of the details of an individual customer rating."
 msgstr ""
 
@@ -2594,7 +4126,7 @@ msgstr ""
 msgid "The deadline is then added to the ticket, as well as a tag indicating the name of the |SLAs| applied."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/sla.rst:-1
+#: ../../content/applications/services/helpdesk/overview/sla.rst:None
 msgid "View of a ticket's form emphasizing an open SLA deadline on a ticket in Odoo Helpdesk."
 msgstr ""
 
@@ -2602,7 +4134,7 @@ msgstr ""
 msgid "When a ticket satisfies an |SLA| policy, the |SLA| tag turns green, and the deadline disappears from view on the ticket."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/sla.rst:-1
+#: ../../content/applications/services/helpdesk/overview/sla.rst:None
 msgid "View of a ticket's form emphasizing a satisfied SLA in Odoo Helpdesk."
 msgstr ""
 
@@ -2614,7 +4146,7 @@ msgstr ""
 msgid "If the |SLA| deadline passes and the ticket has not moved to the :guilabel:`Reach Stage`, the |SLA| tag turns red. After the |SLA| has failed, the red tag stays on the ticket, even after the ticket is moved to the :guilabel:`Reach Stage`."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/sla.rst:-1
+#: ../../content/applications/services/helpdesk/overview/sla.rst:None
 msgid "View of a ticket's form with a failing and passing SLA in Odoo Helpdesk."
 msgstr ""
 
@@ -2650,7 +4182,7 @@ msgstr ""
 msgid "Whenever a measurement is picked, a :icon:`fa-check` :guilabel:`(check)` icon appears in the drop-down menu to indicate that the measurement is included, and a corresponding new column emerges in the pivot table to show the relevant calculations."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/sla.rst:-1
+#: ../../content/applications/services/helpdesk/overview/sla.rst:None
 msgid "View of the available measures in the SLA status analysis report."
 msgstr ""
 
@@ -2658,7 +4190,7 @@ msgstr ""
 msgid "To add a group to a row or column, click the :icon:`fa-plus-square` :guilabel:`(plus)` icon next to the policy name and then select one of the groups. To remove one, click the :icon:`fa-minus-square-o` :guilabel:`(minus)` icon next to the policy name."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/overview/sla.rst:-1
+#: ../../content/applications/services/helpdesk/overview/sla.rst:None
 msgid "View of the available group by options in the SLA status analysis report."
 msgstr ""
 
@@ -2794,7 +4326,7 @@ msgstr ""
 msgid "To create a property field, switch to the list view from any schedule. From there, click :guilabel:`View` on the shift that you wish to edit. If the :guilabel:`Role` field is empty, fill it in with the desired role, then click the cog icon and select :guilabel:`Add Properties`. :doc:`Configure </applications/essentials/property_fields>` the new field according to your needs."
 msgstr ""
 
-#: ../../content/applications/services/planning.rst:-1
+#: ../../content/applications/services/planning.rst:None
 msgid "Creating a new property field in Planning."
 msgstr ""
 
@@ -2830,7 +4362,7 @@ msgstr ""
 msgid "To adapt the employee's planning settings, go to :menuselection:`Planning --> Configuration --> Employees`, and choose the employee for whom you want to edit the settings. Then, go to the :guilabel:`Work Information` tab."
 msgstr ""
 
-#: ../../content/applications/services/planning.rst:-1
+#: ../../content/applications/services/planning.rst:None
 msgid "Employee profile and the work information tab."
 msgstr ""
 
@@ -2918,7 +4450,7 @@ msgstr ""
 msgid "To create a shift template, click :guilabel:`New` on any schedule, then fill in the :ref:`details of the shift <planning/create-shift>`. In order for the shift to be saved as a template, click :guilabel:`Save Template`."
 msgstr ""
 
-#: ../../content/applications/services/planning.rst:-1
+#: ../../content/applications/services/planning.rst:None
 msgid "Shift form."
 msgstr ""
 
@@ -2962,7 +4494,7 @@ msgstr ""
 msgid "The schedule is displayed in the Gantt view, which allows you to edit (with a drag and drop), resize, split, and duplicate shifts without having to open them."
 msgstr ""
 
-#: ../../content/applications/services/planning.rst:-1
+#: ../../content/applications/services/planning.rst:None
 msgid "A schedule displaying various visual elements."
 msgstr ""
 
@@ -3212,7 +4744,7 @@ msgstr ""
 msgid "You can customize your existing **projects** from the dashboard by clicking the drop-down toggle button (:guilabel:`⋮`) on your project's **card**."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management.rst:-1
+#: ../../content/applications/services/project/project_management.rst:None
 msgid "Project card"
 msgstr ""
 
@@ -3272,7 +4804,7 @@ msgstr ""
 msgid "Additionally, you can mark the project as :guilabel:`Favorite`, allowing you to find it using the :guilabel:`My Favorites` filter on the Kanban view;"
 msgstr ""
 
-#: ../../content/applications/services/project/project_management.rst:-1
+#: ../../content/applications/services/project/project_management.rst:None
 msgid "Project settings"
 msgstr ""
 
@@ -3376,7 +4908,7 @@ msgstr ""
 msgid "You can then click the buttons to access the related records without leaving the Project app. To return to your project tasks' Kanban view, click the :guilabel:`Tasks` button in the top bar."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management.rst:-1
+#: ../../content/applications/services/project/project_management.rst:None
 msgid "Top bar selection menu"
 msgstr ""
 
@@ -3449,90 +4981,82 @@ msgid ":guilabel:`Timesheets`: the number of hours or days (depending on the **T
 msgstr ""
 
 #: ../../content/applications/services/project/project_management/project_dashboard.rst:47
-msgid ":guilabel:`Planned`: the number of hours that have been planned for shifts in the **Planning** app. This includes all :doc:`planned shifts </applications/services/planning>`, including past shifts and shifts that have not yet been published."
-msgstr ""
-
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:50
-msgid ":guilabel:`Documents`: number of :doc:`documents </applications/productivity/documents>` in the project’s workspace."
-msgstr ""
-
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:52
 msgid ":guilabel:`Burndown Chart`: click the smart button to access a :doc:`report </applications/essentials/reporting>` on the status of the project’s tasks over time."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:54
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:49
 msgid ":guilabel:`Timesheets and Planning`: click the smart button to access a :doc:`report </applications/essentials/reporting>` on the project’s timesheets and shifts. This allows you to easily compare planned and effective hours of work on the project."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:57
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:52
 msgid "**Additional fields**, such as :guilabel:`Sales Orders`, :guilabel:`Sales Order Items`, :guilabel:`Purchase Orders`, and more, represent the number of records linked to the project."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:61
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:56
 msgid "Use the project dashboard smart buttons to update the project records easily. Click :guilabel:`Timesheets` to validate timesheets, :guilabel:`Planned` to create project planning, :guilabel:`Documents` to view and validate documents, etc."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:68
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:63
 msgid "Milestones"
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:70
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:65
 msgid "This section is only visible if :doc:`milestones </applications/sales/sales/invoicing/milestone>` have been enabled in the Project’s app settings. Click :guilabel:`Add Milestone` to create a new milestone. Click a milestone in the checklist to edit it, enable its checkbox to mark it as completed, or click the :icon:`fa-trash` (:guilabel:`trash`) icon to remove it."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:75
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:70
 msgid "The milestones are displayed in red if they’re past their deadline, or in green if they are ready to be marked as reached (i.e. tasks linked to the milestone that have been marked with :guilabel:`done` or :guilabel:`canceled` :ref:`status <project/tasks/task_stages_statuses/statuses>`)."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:82
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:77
 msgid "Profitability"
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:84
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:79
 msgid "The :doc:`profitability dashboard </applications/services/project/project_management/project_profitability>` provides a breakdown of project costs and revenues, which are impacted by all records linked to the project and its :doc:`Analytic account </applications/finance/accounting/reporting/analytic_accounting>`."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:89
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:84
 msgid "The profitability report is only displayed for billable projects."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:94
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:89
 msgid "Budgets"
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:96
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:91
 msgid "If a budget has been set for the project, its status and related details are displayed in this section. Click :guilabel:`Add Budget` to create a new budget for the project."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:100
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:95
 msgid ":doc:`Budgets </applications/finance/accounting/reporting/budget>` must be enabled in your database’s **Accounting** application in order for this section to be displayed."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:106
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:101
 msgid "Project updates"
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:108
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:103
 msgid "Project updates allow you to take a snapshot of the project’s overall status at a given point in time, for example, during a periodic (weekly, bi-weekly, or monthly) review. This allows you to compare specific data points, note any aspects of the project that need improvement, and estimate if the project is on or off track."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:113
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:108
 msgid "To create a new project update, go to the project dashboard, click :guilabel:`New`, and fill in the following fields:"
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:116
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:111
 msgid ":guilabel:`Status`: Choose between :guilabel:`On Track`, :guilabel:`At Risk`, :guilabel:`Off Track`, :guilabel:`On Hold`, and :guilabel:`Done`. Once the status is set, a color-coded dot is displayed on the project’s Kanban card, allowing the project manager to easily identify which projects need attention."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:120
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:115
 msgid ":guilabel:`Progress`: Manually input the completion percentage based on the project's progress."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:121
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:116
 msgid ":guilabel:`Date` and :guilabel:`Author`: These fields are automatically filled in with appropriate information based on the user who created the update and the current date."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_dashboard.rst:123
+#: ../../content/applications/services/project/project_management/project_dashboard.rst:118
 msgid ":guilabel:`Description`: Use this rich-text field to gather notes. Depending on the project configuration (e.g., if the project is billable), this field may be pre-filled with current information on aspects such as profitability, budget, milestones, etc."
 msgstr ""
 
@@ -3560,7 +5084,7 @@ msgstr ""
 msgid "The **profitability dashboard** is on the right side of the project dashboard and displays data for all records linked to the project and its :doc:`analytic account </applications/finance/accounting/reporting/analytic_accounting>`. It’s divided into two major sections: :ref:`revenues <project/project-profitability/revenues>`, which displays a breakdown of income generated by the project, and :ref:`costs <project/project-profitability/costs>` accrued by your company. The same record can be displayed in both sections, e.g., the same timesheet is listed under :guilabel:`Revenues` with the amount the customer paid for the work and under :guilabel:`Costs` with the amount of wages paid to the employees."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_profitability.rst:-1
+#: ../../content/applications/services/project/project_management/project_profitability.rst:None
 msgid "Project dashboard."
 msgstr ""
 
@@ -3613,46 +5137,42 @@ msgid ":guilabel:`Customer invoices`: a total of invoices linked to the project.
 msgstr ""
 
 #: ../../content/applications/services/project/project_management/project_profitability.rst:73
-msgid ":guilabel:`Subscriptions`: a total of sales prices of :doc:`subscriptions </applications/sales/subscriptions>` linked to the project."
-msgstr ""
-
-#: ../../content/applications/services/project/project_management/project_profitability.rst:75
 msgid ":guilabel:`Down payments`: a total of :doc:`down payments </applications/sales/sales/invoicing/down_payment>` linked to the project."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_profitability.rst:77
+#: ../../content/applications/services/project/project_management/project_profitability.rst:75
 msgid ":guilabel:`Expenses`: any :doc:`expenses </applications/finance/expenses>` that have been :doc:`reinvoiced to the customer </applications/sales/sales/invoicing/expense>`."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_profitability.rst:83
+#: ../../content/applications/services/project/project_management/project_profitability.rst:81
 msgid "Costs"
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_profitability.rst:85
+#: ../../content/applications/services/project/project_management/project_profitability.rst:83
 msgid ":guilabel:`Timesheets`: total cost of time tracked by employees via :doc:`timesheets </applications/services/timesheets>`, based on the employee's :ref:`HR settings <employees/hr-settings>`."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_profitability.rst:88
+#: ../../content/applications/services/project/project_management/project_profitability.rst:86
 msgid ":guilabel:`Purchase Orders`: total cost of :doc:`purchase orders </applications/inventory_and_mrp/purchase/manage_deals>` linked to the project. Those could cover goods, materials, or even subcontracted services. This entry only appears once the vendor bill is posted."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_profitability.rst:92
+#: ../../content/applications/services/project/project_management/project_profitability.rst:90
 msgid ":guilabel:`Materials`: total cost of products included in :doc:`stock moves </applications/inventory_and_mrp/inventory/shipping_receiving>` (deliveries and receipts) that have been validated for the project. This section is only displayed if :guilabel:`Analytic Costs` have been enabled in :menuselection:`Inventory --> Configuration --> Operations Types` for applicable operations. This ensures that the product's cost is tracked during the stock move."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_profitability.rst:98
+#: ../../content/applications/services/project/project_management/project_profitability.rst:96
 msgid ":guilabel:`Expenses`: total costs of :doc:`expenses </applications/finance/expenses>` linked to the project that have been submitted and approved."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_profitability.rst:100
+#: ../../content/applications/services/project/project_management/project_profitability.rst:98
 msgid ":guilabel:`Vendor bills`: total costs of :doc:`vendor bills </applications/inventory_and_mrp/purchase/manage_deals/manage>` linked to the project's analytic account."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_profitability.rst:103
+#: ../../content/applications/services/project/project_management/project_profitability.rst:101
 msgid ":guilabel:`Manufacturing orders`: total costs of manufacturing orders linked to the project's analytic account."
 msgstr ""
 
-#: ../../content/applications/services/project/project_management/project_profitability.rst:105
+#: ../../content/applications/services/project/project_management/project_profitability.rst:103
 msgid ":guilabel:`Other costs`: any other costs linked to the project's analytic account."
 msgstr ""
 
@@ -3948,7 +5468,7 @@ msgstr ""
 msgid "**Accept Emails From**: refine the senders whose emails will create tasks in the project."
 msgstr ""
 
-#: ../../content/applications/services/project/tasks/task_creation.rst:-1
+#: ../../content/applications/services/project/tasks/task_creation.rst:None
 msgid "View of the email alias chosen on the dashboard view in Odoo Project"
 msgstr ""
 
@@ -4044,7 +5564,7 @@ msgstr ""
 msgid "To create a task dependency from the Gantt view, hover your mouse over the predecessor task, then click one of the dots that appear around it. Drag and drop the dot onto the successor task. An arrow appears, indicating the dependency from the predecessor task to the successor."
 msgstr ""
 
-#: ../../content/applications/services/project/tasks/task_dependencies.rst:-1
+#: ../../content/applications/services/project/tasks/task_dependencies.rst:None
 msgid "Task dependency"
 msgstr ""
 
@@ -4133,50 +5653,50 @@ msgid ":guilabel:`Projects`: to share this task stage between several projects."
 msgstr ""
 
 #: ../../content/applications/services/project/tasks/task_stages_statuses.rst:42
-msgid ":guilabel:`Automations`: to create :doc:`custom rules that trigger automatic actions <../../../studio/automated_actions>` (e.g., creating activities, adding followers, or sending webhook notifications). Note that this will activate Studio in your database, which may impact your pricing plan."
+msgid ":guilabel:`Automations`: to create custom rules that trigger automatic actions (e.g., creating activities, adding followers, or sending webhook notifications). Note that this requires **Studio** (Enterprise) and may impact your pricing plan."
 msgstr ""
 
-#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:47
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:46
 msgid ":guilabel:`Delete`: to delete this stage."
 msgstr ""
 
-#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:48
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:47
 msgid ":guilabel:`Archive/Unarchive all`: to archive or unarchive all of the tasks in this stage."
 msgstr ""
 
-#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:53
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:52
 msgid "Task statuses"
 msgstr ""
 
-#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:55
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:54
 msgid "Task statuses are used to track the status of tasks within the Kanban stage, as well as to close the task when it’s done or canceled. Unlike Kanban stages, they cannot be customized; five task statuses exist in Odoo and are used as follows:"
 msgstr ""
 
-#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:59
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:58
 msgid ":guilabel:`In Progress`: this is the default state of all tasks, meaning that work required for the task to move to the next Kanban stage is ongoing."
 msgstr ""
 
-#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:61
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:60
 msgid ":guilabel:`Changes Requested`: to highlight that changes, either requested by the customer or internally, are needed before the task is moved to the next Kanban stage."
 msgstr ""
 
-#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:63
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:62
 msgid ":guilabel:`Approved`: to highlight that the task is ready to be moved to the next stage."
 msgstr ""
 
-#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:64
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:63
 msgid ":guilabel:`Canceled`: to cancel the task."
 msgstr ""
 
-#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:65
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:64
 msgid ":guilabel:`Done`: to close the task once it's been completed."
 msgstr ""
 
-#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:69
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:68
 msgid "The :guilabel:`Changes Requested` and :guilabel:`Approved` task statuses are cleared as soon as the task is moved to another Kanban stage. The task status reverts to the default :guilabel:`In Progress` status so that :guilabel:`Changes Requested` or :guilabel:`Approved` status can be applied again once the necessary work has been completed in this Kanban stage."
 msgstr ""
 
-#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:73
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:72
 msgid "The :guilabel:`Done` and :guilabel:`Canceled` statuses are independent from the Kanban stage. Once a task is marked as :guilabel:`Done` or :guilabel:`Canceled`, it is closed. If needed, it can be reopened by changing its status."
 msgstr ""
 
@@ -4220,7 +5740,7 @@ msgstr ""
 msgid "Below the billing rate indicators, the total monthly amount of time logged by the user is also displayed."
 msgstr ""
 
-#: ../../content/applications/services/timesheets/billing_rates.rst:-1
+#: ../../content/applications/services/timesheets/billing_rates.rst:None
 msgid "Billing rate indicators."
 msgstr ""
 
@@ -4252,7 +5772,7 @@ msgstr ""
 msgid "Clicking on the area of the top three performers opens the leaderboard for all team members. Use the drop-down menu in the upper left corner to switch between the :guilabel:`Billing Rate Leaderboard` and the :guilabel:`Total Time Leaderboard`, which displays the total time logged by team members across billable and internal projects."
 msgstr ""
 
-#: ../../content/applications/services/timesheets/billing_rates.rst:-1
+#: ../../content/applications/services/timesheets/billing_rates.rst:None
 msgid "Billing rate leaderboard."
 msgstr ""
 
@@ -4280,7 +5800,7 @@ msgstr ""
 msgid "Activate the :ref:`developer mode <developer-mode>`, go to *Timesheets*, and change the *Project* and *Task* set by default, if you like."
 msgstr ""
 
-#: ../../content/applications/services/timesheets/time_off.rst:-1
+#: ../../content/applications/services/timesheets/time_off.rst:None
 msgid "View of Timesheets setting enabling the feature record time off in Odoo Timesheets"
 msgstr ""
 
@@ -4288,7 +5808,7 @@ msgstr ""
 msgid "Go to :menuselection:`Time Off --> Configuration --> Time Off Types`. Select or create the needed type, and decide if you would like the requests to be validated or not."
 msgstr ""
 
-#: ../../content/applications/services/timesheets/time_off.rst:-1
+#: ../../content/applications/services/timesheets/time_off.rst:None
 msgid "View of a time off types form emphasizing the time off requests and timesheets section in\n"
 "Odoo Time Off"
 msgstr ""
@@ -4301,7 +5821,7 @@ msgstr ""
 msgid "On the example below, the user requested *Paid Time off* from July 13th to 15th."
 msgstr ""
 
-#: ../../content/applications/services/timesheets/time_off.rst:-1
+#: ../../content/applications/services/timesheets/time_off.rst:None
 msgid "View of the time off request form in Odoo Time Off"
 msgstr ""
 
@@ -4309,7 +5829,7 @@ msgstr ""
 msgid "Considering that validation is not required, the requested time off is automatically displayed in *Timesheets*. If validation is necessary, the time is automatically allocated after the responsible person for validating does it so."
 msgstr ""
 
-#: ../../content/applications/services/timesheets/time_off.rst:-1
+#: ../../content/applications/services/timesheets/time_off.rst:None
 msgid "Video of timesheets emphasizing the requested time off from the employee in Odoo Timesheets"
 msgstr ""
 
@@ -4317,6 +5837,6 @@ msgstr ""
 msgid "Click on the magnifying glass, hovering over the concerned cell, to access all the aggregated data on that cell (day), and see details regarding the project/task."
 msgstr ""
 
-#: ../../content/applications/services/timesheets/time_off.rst:-1
+#: ../../content/applications/services/timesheets/time_off.rst:None
 msgid "View of the details of a project/task in Odoo Timeheets"
 msgstr ""

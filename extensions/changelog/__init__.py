@@ -18,7 +18,7 @@ _logger = logging.getLogger(__name__)
 MAX_ENTRIES = 10
 
 # Number of days to look back in git history
-LOOKBACK_DAYS = 90
+LOOKBACK_DAYS = 180
 
 
 def _get_git_changelog(source_dir, max_entries=MAX_ENTRIES, lookback_days=LOOKBACK_DAYS):
@@ -59,10 +59,16 @@ def _get_git_changelog(source_dir, max_entries=MAX_ENTRIES, lookback_days=LOOKBA
             message = message.strip()
 
             # Skip noise commits
-            if any(skip in message.lower() for skip in [
+            msg_lower = message.lower()
+            if any(skip in msg_lower for skip in [
                 'merge', 'fix typo', 'minor', 'wip', 'temp', 'todo',
                 'readme', 'gitignore', '.po', '.pot', 'locale/',
+                'translate', 'i18n', 'rebrand', 'copyright',
             ]):
+                continue
+
+            # Skip very short or non-descriptive messages
+            if len(message.strip('- ')) < 15:
                 continue
 
             # Deduplicate similar messages
@@ -103,10 +109,17 @@ def _categorize_commit(message):
 
 def _clean_message(message):
     """Clean up a commit message for display."""
-    # Remove common prefixes
-    for prefix in ['[FIX]', '[IMP]', '[ADD]', '[REF]', '[DOC]']:
-        if message.upper().startswith(prefix):
-            message = message[len(prefix):].strip()
+    import re
+
+    # Remove bracketed prefixes: [FIX], [IMP], [ADD], etc.
+    message = re.sub(r'^\[[\w/]+\]\s*', '', message)
+
+    # Remove conventional commit prefixes: docs(scope):, fix:, feat(x):, etc.
+    message = re.sub(r'^[\w]+(?:\([^)]*\))?:\s*', '', message)
+
+    # Remove leading module path prefixes like "Inventory: ..."
+    # but keep the content after the colon
+    # (Don't strip these - they provide useful context like "Inventory: ...")
 
     # Capitalize first letter
     if message:
@@ -124,8 +137,10 @@ def _inject_changelog(app, pagename, templatename, context, doctree):
     if pagename != app.config.master_doc:
         return
 
-    source_dir = app.srcdir
-    entries = _get_git_changelog(source_dir)
+    # Use confdir (repo root with conf.py) not srcdir (content/ subdir),
+    # so that the 'content/' path filter in git log resolves correctly.
+    repo_dir = app.confdir
+    entries = _get_git_changelog(repo_dir)
     context['changelog_entries'] = entries
 
 

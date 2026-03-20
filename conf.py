@@ -17,7 +17,7 @@ _logger = logging.getLogger(__name__)
 
 # General information about the project.
 project = 'eYssen (Odoo Community Fork)'
-copyright = '1997-2026 eYssen. Based on Odoo S.A. documentation (2004-2023).'
+copyright = '1997-2026 eYssen. Based on Odoo S.A. documentation (2004-2023), licensed under CC-BY-SA-4.0. Modifications by eYssen, shared under the same license.'
 
 # `version` is the version info for the project being documented, acts as replacement for |version|,
 # also used in various other places throughout the built documents.

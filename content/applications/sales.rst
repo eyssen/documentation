@@ -13,3 +13,4 @@ Sales
     .. sales/subscriptions
     .. sales/rental
     sales/members
+    sales/withdrawal

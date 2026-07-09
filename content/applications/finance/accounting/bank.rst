@@ -65,5 +65,6 @@ transactions manually` (at the bottom right), fill out the bank information, and
    bank/reconciliation
    bank/reconciliation_models
    bank/internal_transfers
+   bank/cash_register
    bank/foreign_currency
    bank/loans

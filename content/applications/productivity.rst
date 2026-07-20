@@ -15,6 +15,7 @@ Productivity
     productivity/calendar
     .. productivity/appointments
     productivity/discuss
+    productivity/ai
     .. productivity/data_cleaning
     .. productivity/whatsapp
     .. productivity/voip

@@ -126,9 +126,6 @@ models. Once set, the property is shared by all records that are linked to the s
           - :ref:`Asset model <assets/asset-model>`
 
             :ref:`Journal <cheat_sheet/journals>`
-        * - :guilabel:`Appraisals`
-          - :ref:`Employee Appraisal <appraisals/manual>`
-          - :ref:`Department <employee/create-departments>`
         * - :guilabel:`CRM`
           - :doc:`Lead/Opportunity </applications/sales/crm/acquire_leads/email_manual>`
           - :ref:`Sales team <crm/sales-team-dashboard>`

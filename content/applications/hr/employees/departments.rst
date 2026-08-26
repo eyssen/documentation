@@ -21,15 +21,10 @@ following information on the department form:
   field only appears in a multi-company database.
 - :guilabel:`Color`: select a color for the department. Click the colored box to display all the
   color options. Click on a color to select it.
-- :guilabel:`Appraisal Templates`: using the drop-down menu, select the appraisal form to be used
-  for all employee appraisals within this department. If a new appraisal is desired, enter the name
-  for the appraisal, then click :guilabel:`Create and edit...` to modify the new appraisal form.
-  This field **only** appears if the **Appraisals** app is installed.
-- :guilabel:`Appraisal Survey`: using the drop-down menu, select the default survey to use for the
-  department when requesting feedback from employees within the department. The default options are
-  :guilabel:`Employee Opinion Form`, :guilabel:`360 Feedback`, and :guilabel:`Employee Appraisal Form`.
-  This field **only** appears if the **Appraisals** app is installed, *and* the *360 Feedback*
-  option is enabled in the settings.
+- :guilabel:`Default Review Questionnaire`: using the drop-down menu, select the questionnaire
+  proposed for the performance reviews of this department, unless the employee has one of their
+  own. This field **only** appears if the **Performance** app is installed, and only to users with
+  the :guilabel:`Officer` access level of the **Performance** category.
 
 After the form is completed, click the :icon:`fa-cloud-upload` :guilabel:`(cloud upload)` icon to
 manually save the changes. When saved, a :guilabel:`DEPARTMENT ORGANIZATION` chart appears in the
@@ -45,7 +40,7 @@ top-right of the department card, illustrating where the department lies in the 
    :guilabel:`Departments` dashboard.
 
 .. seealso::
-   :doc:`../appraisals`
+   :doc:`../performance`
 
 Departments dashboard
 =====================
@@ -73,7 +68,6 @@ department card displays the following information, if available:
 - :guilabel:`Manager`: the name and image of the department manager.
 - :guilabel:`Company`: the company the department is part of, including the location icon.
 - :guilabel:`Employees`: the number of employees within the department.
-- :guilabel:`Appraisals`: the number of appraisals scheduled for employees in the department.
 - :guilabel:`Time Off Requests`: the number of unapproved time off requests for employees in the
   department :ref:`awaiting approval <time_off/manage-time-off>` . This **only** appears if there
   are requests to approve.

@@ -188,7 +188,10 @@ Fill out the following fields on the form:
   any open activities associated with it. It is recommended to tick **all** checkboxes that are
   applicable. The available options are:
 
-  - :guilabel:`Appraisals`: cancels all appraisals scheduled after the contract end date.
+  - :guilabel:`Performance Reviews`: cancels the performance reviews of the employee that are
+    still open, drops the feedback they still owe on other people's reviews, and removes them from
+    the review meetings that have not happened yet. This option **only** appears if the
+    **Performance** app is installed.
   - :guilabel:`Contract`: applies an end date for the current contract.
   - :guilabel:`Company Car`: removes the employee as the driver for their current company car, and
     :ref:`assigns the next driver <fleet/new_vehicle/new-driver>`, if applicable.

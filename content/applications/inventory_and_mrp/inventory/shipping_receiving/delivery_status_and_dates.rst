@@ -12,6 +12,12 @@ require an invoice's posting date and its delivery (fulfillment) date to match e
 standard stock/invoicing integration can silently break on corrective invoices. This page documents
 the two eYssen modules that close these gaps.
 
+.. seealso::
+   - :doc:`setup_configuration/gls`
+   - :doc:`setup_configuration/foxpost`
+   - :doc:`setup_configuration/mpl`
+   - :doc:`cash_on_delivery`
+
 .. Screenshot plan:
    .. delivery_status_and_dates-order-form-status.png
       A confirmed sales order form (state = "sale") with a partially delivered order, on the
@@ -180,9 +186,11 @@ The field is populated through the idempotent ``_set_delivered()`` hook, which:
 
 .. note::
    ``eyssen_sale_delivery_status`` only defines the field and this hook; it is the carrier-tracking
-   integrations (e.g. GLS, Foxpost, MPL delivery methods) that call ``_set_delivered()`` once they
-   detect an actual-delivery tracking event, and other eYssen modules (such as the RMA return-window
-   logic) that read the resulting date. Consult those modules' own documentation for details.
+   integrations (e.g. the :doc:`GLS <setup_configuration/gls>`,
+   :doc:`Foxpost <setup_configuration/foxpost>` and :doc:`MPL <setup_configuration/mpl>` delivery
+   methods) that call ``_set_delivered()`` once they detect an actual-delivery tracking event, and
+   other eYssen modules (such as the RMA return-window logic) that read the resulting date. Consult
+   those modules' own documentation for details.
 
 Hungarian invoice fulfillment-date consistency
 ================================================
@@ -265,6 +273,87 @@ Usage
    :guilabel:`Delivery Date` and :guilabel:`Date` aligned with the original invoice automatically —
    no manual date entry is needed on the corrective invoice itself.
 
+Delivery status on the customer portal
+=======================================
+
+The delivery indicators described above live on the sales order form, lists and reporting dashboard
+— back-office screens a webshop customer never sees. The small companion module
+``sale_delivery_status_ws`` publishes the same indicators on the website customer portal, so
+logged-in customers can follow the progress of their own deliveries themselves instead of asking
+support. It is a pure display module: it adds no settings, menus or new fields — installing it from
+:menuselection:`Apps` is the on/off switch — and it requires ``eyssen_sale_delivery_status`` (whose
+fields it displays), ``sale_stock`` and the **Website** app. It is not installed automatically;
+enable it explicitly
+on any database whose webshop customers should see delivery progress.
+
+Orders list
+------------
+
+When a customer signs in on the website and opens :menuselection:`My Account --> Your Orders`, the
+order list gains two extra columns after :guilabel:`Total`:
+
+- :guilabel:`Delivery Status` — a colored pill badge per order. The portal deliberately uses
+  shorter, customer-friendly wording than the backend delivery-status labels:
+
+  .. list-table::
+     :header-rows: 1
+     :widths: 40 30 30
+
+     * - Backend delivery status
+       - Portal badge
+       - Badge color
+     * - :guilabel:`Fully Delivered`
+       - :guilabel:`Delivered`
+       - Green
+     * - :guilabel:`Partially Delivered`
+       - :guilabel:`Partial`
+       - Yellow
+     * - :guilabel:`Started`
+       - :guilabel:`Started`
+       - Blue
+     * - :guilabel:`Not Delivered`
+       - :guilabel:`Pending`
+       - Grey
+     * - :guilabel:`Cancelled`
+       - :guilabel:`Cancelled`
+       - Red
+
+- :guilabel:`Delivery %` — the order's delivery percentage, rounded down to a whole number
+  (currently rendered with a doubled percent sign, e.g. *42%%*, due to a template quirk — see the
+  note under :ref:`the order detail page <delivery_status_and_dates/portal_detail_page>`). It is
+  only shown for orders that have a delivery status at all.
+
+.. note::
+   Both columns are hidden on narrow (phone-width) screens, the same way standard portal lists (for
+   example, the invoices list) already trim secondary columns to stay readable.
+
+.. _delivery_status_and_dates/portal_detail_page:
+
+Order detail page
+------------------
+
+Opening an order from that list, the :guilabel:`Sale Information` table of the order's portal page
+gains up to three extra rows:
+
+- :guilabel:`Delivery Status:` — the same colored badge as in the orders list;
+- :guilabel:`Delivered:` — a green progress bar labelled with the order's delivery percentage;
+- :guilabel:`Last Delivery:` — the date (without time of day) of the most recent completed delivery.
+
+.. note::
+   In the current version of the module, the percentage is rendered with a doubled percent sign
+   (e.g. *42%%*) — both in the orders list's :guilabel:`Delivery %` column and in this bar's label
+   and width. Because ``42%%`` is not a valid CSS width, the bar does not visually fill to the
+   delivery percentage until this template quirk is fixed.
+
+Each row only appears once its underlying value is set: a quotation, or a confirmed order without
+any delivery order yet, shows none of them, and the progress-bar row stays hidden while the
+delivered percentage is still zero.
+
+Because the values come straight from the fields maintained by ``eyssen_sale_delivery_status``, the
+portal always agrees with the back office — portal wording aside. An order manually forced with
+:guilabel:`Fully Delivered` shows the green :guilabel:`Delivered` badge to the customer, and an
+order whose every delivery was cancelled shows the red :guilabel:`Cancelled` badge.
+
 Scope and modules
 ==================
 
@@ -277,3 +366,7 @@ Scope and modules
   :guilabel:`Delivery Date` (fulfillment date) aligned with its original invoice, independent of the
   sale order's stock-driven effective date, so the NAV accounting-date/delivery-date rule enforced by
   ``eyssen_l10n_hu`` keeps holding at :guilabel:`Post` time.
+- ``sale_delivery_status_ws`` — shows the delivery status (in customer-friendly wording) and the
+  delivery percentage to logged-in customers on both the website portal's :guilabel:`Your Orders`
+  list and the order's own portal page, and additionally the last delivery date on the order's own
+  portal page only.

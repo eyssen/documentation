@@ -12,6 +12,7 @@ Shipping and receiving
    shipping_receiving/reservation_methods
    shipping_receiving/picking_methods
    shipping_receiving/removal_strategies
+   shipping_receiving/delivery_payment
    shipping_receiving/payment_gated_delivery
    shipping_receiving/delivery_slips
    shipping_receiving/delivery_status_and_dates

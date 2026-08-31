@@ -88,9 +88,13 @@ the warehouse delivery form. To add or change the delivery method on the deliver
    setup_configuration/third_party_shipper
    setup_configuration/labels
    setup_configuration/bpost
+   setup_configuration/custom
    setup_configuration/dhl_credentials
    setup_configuration/envia_shipping
    setup_configuration/fedex
+   setup_configuration/foxpost
+   setup_configuration/gls
+   setup_configuration/mpl
    setup_configuration/sendcloud_shipping
    setup_configuration/starshipit_shipping
    setup_configuration/ups_credentials

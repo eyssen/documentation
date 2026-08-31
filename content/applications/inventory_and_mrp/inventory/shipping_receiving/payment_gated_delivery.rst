@@ -9,6 +9,10 @@ order is unpaid: it blocks both the stock reservation and the :guilabel:`Validat
 releases automatically the moment every invoice is settled. A privileged user can still override the
 hold and ship early, and the override is fully traced in the chatter.
 
+.. seealso::
+   - :doc:`delivery_payment` — restricting payment methods per delivery method
+   - :doc:`cash_on_delivery` — collecting payment at handover instead of before shipping
+
 .. Screenshot plan:
 .. - payment_gated_delivery-payment-term-toggle.png: Payment Terms form (Accounting/Invoicing app
 ..   --> Configuration --> Payment Terms --> open or create a term), showing the

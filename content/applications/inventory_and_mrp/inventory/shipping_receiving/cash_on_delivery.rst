@@ -51,14 +51,23 @@ Cash on delivery (COD)
 **Cash on delivery (COD)** lets a webshop customer pay for an order in cash
 (or by card) at the moment the parcel is handed over, instead of paying
 online at checkout. Because a single sales order can ship in several
-physical packages — a multi-step warehouse route, an out-of-stock backorder,
-a partial delivery — the amount to collect on *each* package must be
-computed individually, and the risk of an unreliable COD customer must be
-screened *before* the order is confirmed. eYssen covers both problems with
+separate shipments — a multi-step warehouse route, an out-of-stock
+backorder, a partial delivery — the amount to collect on *each* shipment
+must be computed individually, and the risk of an unreliable COD customer
+must be screened *before* the order is confirmed. eYssen covers both problems with
 two focused modules: one computes the correct COD amount per shipment for
 the carrier integrations, the other gates cash-on-delivery-style payment
 methods at checkout against the shared **utanvet-ellenor.hu** fraud
 database.
+
+.. seealso::
+   - :doc:`delivery_payment` — how payment providers are filtered per
+     delivery method, and the COD checkout experience
+   - :doc:`setup_configuration/gls`, :doc:`setup_configuration/foxpost` and
+     :doc:`setup_configuration/mpl` — the carrier integrations that call
+     the COD computation
+   - :doc:`payment_gated_delivery` — holding deliveries until an order is
+     paid
 
 .. image:: cash_on_delivery/cash_on_delivery-checkout-payment-methods.png
    :alt: Website checkout payment step showing the Payment on Delivery option
@@ -66,7 +75,7 @@ database.
 Key features
 ============
 
-- **Dynamic, per-package COD computation.** Each outgoing delivery gets its
+- **Dynamic, per-delivery COD computation.** Each outgoing delivery gets its
   own COD amount, proportionate to the goods it actually contains, so
   partial and multi-step shipments never over- or under-charge the
   customer.
@@ -104,13 +113,13 @@ transaction** is on that carrier's own "Payment on Delivery" provider; for
 any other payment method it returns ``0.0`` and logs a warning. When it does
 apply, the amount is built up as follows:
 
-#. **Goods value of this package** — for every stock move in the picking
+#. **Goods value of this delivery** — for every stock move in the picking
    that is linked to a sale order line, the line's unit price
    (``price_total`` ÷ ``product_uom_qty``, i.e. tax included) is multiplied
    by the quantity actually shipped in this picking.
 #. **Goods value already shipped** — the same calculation is repeated for
    every *other* picking on the same order that already has a
-   ``cod_amount`` set, i.e. packages that shipped earlier.
+   ``cod_amount`` set, i.e. deliveries that shipped earlier.
 #. **Service lines** — order lines that are not stockable/consumable
    products and are not a down payment (for example shipping surcharges)
    are added to the cumulative total in full.
@@ -121,14 +130,14 @@ apply, the amount is built up as follows:
    pickings that already shipped is subtracted from the cumulative target
    to get the amount still owed.
 #. **Order total cap** — the result is capped so the sum of everything
-   collected across all packages of the order never exceeds the order's
+   collected across all deliveries of the order never exceeds the order's
    ``amount_total``.
 
 .. note::
    Because the cumulative target already includes service lines from the
-   first computation onward, and every later package subtracts what earlier
-   packages already collected, in practice the customer only pays for
-   service lines once — together with the first package that ships.
+   first computation onward, and every later delivery subtracts what earlier
+   deliveries already collected, in practice the customer only pays for
+   service lines once — together with the first delivery that ships.
 
 The resulting amount is stored on ``stock.picking.cod_amount`` and shown,
 read-only, on the delivery form right after the :guilabel:`Carrier` field
@@ -296,11 +305,11 @@ Usage
    the fallback policy is set to :guilabel:`Block payment`. Other payment
    methods stay available either way.
 #. The order is confirmed and the warehouse processes the delivery, in one
-   package or several, depending on the route and stock availability.
+   shipment or several, depending on the route and stock availability.
 #. When the carrier module (GLS, Foxpost or MPL) generates the shipping
    label for a picking paid through its own "Payment on Delivery" method,
    it calls ``_compute_dynamic_cod()`` to work out exactly how much to
-   collect on *that* package, and stores it on the picking's
+   collect on *that* delivery, and stores it on the picking's
    :guilabel:`COD Amount` field.
 #. Once the transfer is validated (delivered) or cancelled, a signal is
    queued automatically and sent to Utánvét Ellenőr by the scheduled action
@@ -311,7 +320,7 @@ Usage
 Scope and modules
 =================
 
-- ``eyssen_delivery_cod`` — computes the dynamic, per-package cash-on-delivery
+- ``eyssen_delivery_cod`` — computes the dynamic, per-delivery COD
   amount (partial shipments, service lines, down payments, order-total cap)
   shared by the carrier integrations.
 - ``utanvetellenor`` — integrates the utanvet-ellenor.hu shared fraud

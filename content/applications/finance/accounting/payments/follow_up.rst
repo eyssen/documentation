@@ -21,9 +21,9 @@ Follow-up levels
 ----------------
 
 To configure the escalation ladder, go to :menuselection:`Accounting --> Configuration -->
-Follow-up Levels`. Each record is a **level** that applies once an invoice reaches a given number
-of days past its due date. When several levels qualify, the **highest** one that the oldest
-overdue invoice has already reached is the one that applies.
+Accounting --> Follow-up Levels`. Each record is a **level** that applies once an invoice reaches
+a given number of days past its due date. When several levels qualify, the **highest** one that
+the oldest overdue invoice has already reached is the one that applies.
 
 .. _accounting/follow_up/default_levels:
 
@@ -76,9 +76,9 @@ so reminders can be reviewed and sent without any configuration:
 .. screenshot-pending: follow_up/levels-list.png
    :alt: List of follow-up levels in eYssen ERP.
 
-.. Screenshot: Accounting ▸ Configuration ▸ Follow-up Levels list view, showing the seven default
-   levels (Due Days 0/1/8/15/30/45/60), with the Send Email / Send SMS / Send Letter / Show Interest /
-   Automatic / Final columns visible — the Automatic column unticked on every row.
+.. Screenshot: Accounting ▸ Configuration ▸ Accounting ▸ Follow-up Levels list view, showing the
+   seven default levels (Due Days 0/1/8/15/30/45/60), with the Send Email / Send SMS / Send Letter /
+   Show Interest / Automatic / Final columns visible — the Automatic column unticked on every row.
 
 To modify a level, click the record. From the form view, set the :guilabel:`Level Name` and the
 number of :guilabel:`Due Days` before the reminder is sent, then choose the channels and options:
@@ -109,9 +109,11 @@ number of :guilabel:`Due Days` before the reminder is sent, then choose the chan
    Due Days / Automatic / Final-Legal, right column Send Email + Email Template / Send SMS + SMS
    Template / Send Letter / Attach Overdue Invoices / Show Late-payment Interest.
 
-In the :guilabel:`Activity` section, enable :guilabel:`Schedule Activity` to automatically create an
-:doc:`activity </applications/essentials/activities>` when the level is triggered, then set the
-activity type, responsible user, summary, and note.
+Tick :guilabel:`Schedule Activity`, at the bottom of the form, to automatically create an
+:doc:`activity </applications/essentials/activities>` when the level is triggered. Ticking it
+reveals the :guilabel:`Activity` section, which holds the checkbox itself together with the
+:guilabel:`Activity Type`, :guilabel:`Assign Activity To`, :guilabel:`Activity Summary`, and
+:guilabel:`Activity Note` fields.
 
 .. _accounting/follow_up/interest:
 
@@ -169,8 +171,8 @@ The tab shows:
    :alt: Payment Follow-up tab on the customer form.
 
 .. Screenshot: a customer form open on the "Payment Follow-up" tab, showing Follow-up Status = In
-   Need of Action, Next Reminder, Responsible, Total Overdue / Total Due, the internal note, and the
-   "Send Reminder" button.
+   Need of Action, Next Follow-up Date, Follow-up Responsible, Total Overdue / Total Due, the
+   internal note, and the "Send Reminder" button.
 
 Click :guilabel:`Send Reminder` to open the review window, adjust the :guilabel:`Level` if needed,
 and click :guilabel:`Send`. The reminder covers the customer's **full overdue statement**.
@@ -187,7 +189,7 @@ Follow-ups for several customers
 
 To act on several customers at once, go to :menuselection:`Accounting --> Customers -->
 Customers`, switch to the list view, and select the customers requiring follow-up (filter by
-:guilabel:`With Overdue Invoices` to narrow the list). Then click :icon:`fa-cog` :guilabel:`(Actions)`
+:guilabel:`Overdue Invoices` to narrow the list). Then click :icon:`fa-cog` :guilabel:`(Actions)`
 and select :guilabel:`Send Payment Reminder`. A review window lists one line per customer with the
 resolved :guilabel:`Level`; adjust if needed and click :guilabel:`Send`. Each customer receives
 their full overdue statement. Customers whose overdue balance nets zero or negative are skipped
@@ -247,12 +249,12 @@ Follow-up log
 =============
 
 Every reminder that is sent — and every skipped customer — is written to an append-only audit
-trail. To review it, go to :menuselection:`Accounting --> Payment Follow-up --> Follow-up Log`. Each
-entry records the date, customer, level, channel (email, SMS, letter, portal, activity, or
-*skipped*), the invoices covered, and a note. Log entries cannot be edited or deleted.
+trail. To review it, go to :menuselection:`Accounting --> Reporting --> Payment Follow-up`. Each
+entry records the date, customer, level, channel (email, SMS, letter, activity, or *skipped*), the
+invoices covered, and a note. Log entries cannot be edited or deleted.
 
 .. screenshot-pending: follow_up/log.png
    :alt: Follow-up log.
 
-.. Screenshot: Accounting ▸ Payment Follow-up ▸ Follow-up Log list, several rows showing Date /
+.. Screenshot: Accounting ▸ Reporting ▸ Payment Follow-up list, several rows showing Date /
    Customer / Level / Channel / Invoices / Note.

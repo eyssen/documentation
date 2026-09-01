@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-15 12:58+0200\n"
+"POT-Creation-Date: 2026-09-01 08:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -8905,7 +8905,7 @@ msgid "Follow-up levels"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:23
-msgid "To configure the escalation ladder, go to :menuselection:`Accounting --> Configuration --> Follow-up Levels`. Each record is a **level** that applies once an invoice reaches a given number of days past its due date. When several levels qualify, the **highest** one that the oldest overdue invoice has already reached is the one that applies."
+msgid "To configure the escalation ladder, go to :menuselection:`Accounting --> Configuration --> Accounting --> Follow-up Levels`. Each record is a **level** that applies once an invoice reaches a given number of days past its due date. When several levels qualify, the **highest** one that the oldest overdue invoice has already reached is the one that applies."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:31
@@ -9042,119 +9042,119 @@ msgid "Sending SMS messages or postal letters requires :doc:`In-App Purchase (IA
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:112
-msgid "In the :guilabel:`Activity` section, enable :guilabel:`Schedule Activity` to automatically create an :doc:`activity </applications/essentials/activities>` when the level is triggered, then set the activity type, responsible user, summary, and note."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:119
-msgid "Late-payment interest (informational)"
+msgid "Tick :guilabel:`Schedule Activity`, at the bottom of the form, to automatically create an :doc:`activity </applications/essentials/activities>` when the level is triggered. Ticking it reveals the :guilabel:`Activity` section, which holds the checkbox itself together with the :guilabel:`Activity Type`, :guilabel:`Assign Activity To`, :guilabel:`Activity Summary`, and :guilabel:`Activity Note` fields."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:121
+msgid "Late-payment interest (informational)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:123
 msgid "To display a late-payment interest amount and, for business customers, a fixed collection fee on reminders, go to :menuselection:`Accounting --> Configuration --> Settings` and, in the :guilabel:`Customer Invoices` section, enable :guilabel:`Late-payment Interest on Reminders`:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:125
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:127
 msgid ":guilabel:`Late-payment Interest on Reminders`: turn the block on and set the annual interest rate (in %)."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:127
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:129
 msgid ":guilabel:`Collection fee (B2B)`: optionally add a fixed collection fee, applied only to company (business) customers."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:130
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:132
 msgid "The block is only shown on levels whose :guilabel:`Show Late-payment Interest` option is enabled."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:133
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:135
 msgid "These amounts are **display-only**. They are computed and shown on the reminder for information, but the application **never** creates a journal entry — no interest or fee is posted to accounting."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:145
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:147
 msgid "Follow-up process"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:148
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:150
 msgid "Reconcile all bank transactions before starting the follow-up process to avoid sending reminders for invoices that have already been paid."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:154
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:156
 msgid "Follow-ups for one customer"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:156
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:158
 msgid "For a detailed overview of a customer's follow-up status, go to :menuselection:`Accounting --> Customers --> Customers`, open the customer's form, and click the :guilabel:`Payment Follow-up` tab. The tab shows:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:160
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:162
 msgid ":guilabel:`Follow-up Status`: :guilabel:`No Action Needed`, :guilabel:`In Need of Action`, or :guilabel:`With Overdue Invoices`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:162
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:164
 msgid ":guilabel:`Next Follow-up Date`: the throttle date before which the customer will not be dunned again; set automatically after a reminder is sent and manually adjustable."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:164
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:166
 msgid ":guilabel:`Follow-up Responsible`: the user who handles the follow-up."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:165
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:167
 msgid ":guilabel:`Total Overdue` and :guilabel:`Total Due`: the customer's overdue and total open receivable amounts."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:175
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:177
 msgid "Click :guilabel:`Send Reminder` to open the review window, adjust the :guilabel:`Level` if needed, and click :guilabel:`Send`. The reminder covers the customer's **full overdue statement**."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:179
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:181
 msgid "The contact information on the customer form is used to send the reminder. A customer with no usable contact for the chosen channel is skipped and the skip is recorded."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:181
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:183
 msgid "The chatter keeps a full record of every follow-up action."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:186
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:188
 msgid "Follow-ups for several customers"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:188
-msgid "To act on several customers at once, go to :menuselection:`Accounting --> Customers --> Customers`, switch to the list view, and select the customers requiring follow-up (filter by :guilabel:`With Overdue Invoices` to narrow the list). Then click :icon:`fa-cog` :guilabel:`(Actions)` and select :guilabel:`Send Payment Reminder`. A review window lists one line per customer with the resolved :guilabel:`Level`; adjust if needed and click :guilabel:`Send`. Each customer receives their full overdue statement. Customers whose overdue balance nets zero or negative are skipped automatically."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:199
-msgid "Follow-ups from the overdue invoices list"
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:190
+msgid "To act on several customers at once, go to :menuselection:`Accounting --> Customers --> Customers`, switch to the list view, and select the customers requiring follow-up (filter by :guilabel:`Overdue Invoices` to narrow the list). Then click :icon:`fa-cog` :guilabel:`(Actions)` and select :guilabel:`Send Payment Reminder`. A review window lists one line per customer with the resolved :guilabel:`Level`; adjust if needed and click :guilabel:`Send`. Each customer receives their full overdue statement. Customers whose overdue balance nets zero or negative are skipped automatically."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:201
+msgid "Follow-ups from the overdue invoices list"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:203
 msgid "You can also start reminders from the invoices list. Go to :menuselection:`Accounting --> Customers --> Invoices`, filter on :guilabel:`Overdue`, and select the invoices to dun. Then click :icon:`fa-cog` :guilabel:`(Actions)` and select :guilabel:`Send Payment Reminder`. The selected invoices are grouped by customer in the review window."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:207
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:209
 msgid "Unlike the customer-level entry points, a reminder started from the invoices list is **scoped**: it covers only the **selected** invoices (content, attachments, logged record, and interest), not the customer's full statement."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:220
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:222
 msgid "Automatic follow-ups"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:222
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:224
 msgid "A daily scheduled action (:guilabel:`Payment Follow-up: process overdue partners`) processes overdue customers automatically. By design it is **generate-then-review**: it only sends levels that are explicitly flagged :guilabel:`Automatic`. Levels left non-automatic are never sent by the cron and always require a manual review, so no reminder leaves the system unattended unless you opt a level in."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:231
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:233
 msgid "Follow-up letter"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:233
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:235
 msgid "The reminder document is a plain A4 PDF letter listing the customer's overdue invoices, the totals, the optional :ref:`interest and collection-fee block <accounting/follow_up/interest>`, and — in the email — an online **Pay Now** link to the customer portal. The same content is shared between the PDF letter and the reminder email, so both always show the customer the same figures."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:247
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:249
 msgid "Follow-up log"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:249
-msgid "Every reminder that is sent — and every skipped customer — is written to an append-only audit trail. To review it, go to :menuselection:`Accounting --> Payment Follow-up --> Follow-up Log`. Each entry records the date, customer, level, channel (email, SMS, letter, portal, activity, or *skipped*), the invoices covered, and a note. Log entries cannot be edited or deleted."
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:251
+msgid "Every reminder that is sent — and every skipped customer — is written to an append-only audit trail. To review it, go to :menuselection:`Accounting --> Reporting --> Payment Follow-up`. Each entry records the date, customer, level, channel (email, SMS, letter, activity, or *skipped*), the invoices covered, and a note. Log entries cannot be edited or deleted."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/forecast.rst:3

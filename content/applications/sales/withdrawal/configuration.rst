@@ -8,11 +8,8 @@ the **Sales** settings.
 Settings
 ========
 
-.. image:: withdrawal-settings.png
-   :alt: Withdrawal settings in the Sales configuration
-
-Go to :menuselection:`Sales --> Configuration --> Settings` and find the following options in the
-:guilabel:`Quotations & Orders` section:
+Go to :menuselection:`Sales --> Configuration --> Settings`. Under :guilabel:`Quotations & Orders`
+you will find the following company-level options:
 
 .. list-table::
    :header-rows: 1
@@ -76,6 +73,29 @@ The reasons offered on the portal return form are the :guilabel:`Customer RMA Re
 flagged as available to the portal. Withdrawals do not require a reason — a withdrawal is a no-reason
 right — but the **ordinary return** an agent starts from a withdrawal does, so make sure at least one
 refund-type reason is configured.
+
+What cannot be withdrawn or returned
+====================================
+
+- **Delivery / shipping order lines** (carrier products marked ``is_delivery``) never enter the
+  withdrawable or returnable quantity budgets. They do not appear on the portal withdrawal form or
+  on auto-seeded RMA lines.
+- **Section / note lines** on the sales order are ignored as well.
+
+This keeps elállás / RMA focused on physical goods. Whether shipping fees are refunded remains a
+policy decision when the agent issues the credit note.
+
+Confirmation e-mail template
+============================
+
+The durable-medium e-mail is the ``mail.template`` *Elállási nyilatkozat visszaigazolása*
+(``eyssen_rma.mail_template_withdrawal_confirmation``). It is stored with ``noupdate`` so a module
+upgrade does not overwrite local wording changes.
+
+.. tip::
+   Prefer editing the technical source (or a controlled SQL/XML update) over the visual mail
+   designer. Breaking the QWeb ``t-foreach`` over the declaration lines can hide products from the
+   consumer e-mail even though they remain on the backend record.
 
 .. seealso::
    - :doc:`consumer_portal`

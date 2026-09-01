@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-19 14:35+0100\n"
+"POT-Creation-Date: 2026-07-28 10:16+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -93,6 +93,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:24
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:11
 #: ../../content/applications/sales/subscriptions/closing.rst:9
+#: ../../content/applications/sales/withdrawal/configuration.rst:3
 msgid "Configuration"
 msgstr ""
 
@@ -6754,6 +6755,7 @@ msgid "Technical name"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:30
+#: ../../content/applications/sales/withdrawal/configuration.rst:20
 msgid "Description"
 msgstr ""
 
@@ -10805,6 +10807,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:13
 #: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:10
 #: ../../content/applications/sales/sales/sales_quotations/orders_and_variants.rst:17
+#: ../../content/applications/sales/withdrawal/configuration.rst:9
 msgid "Settings"
 msgstr ""
 
@@ -20050,4 +20053,885 @@ msgstr ""
 
 #: ../../content/applications/sales/subscriptions/upselling.rst:None
 msgid "The related sales order viewable from the Sales History smart button in Odoo Subscriptions."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:3
+msgid "Right of withdrawal"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:5
+msgid "The **Right of withdrawal** feature lets a webshop consumer formally *withdraw from the contract* — the legally binding, no-reason cancellation guaranteed to consumers by EU law — directly from the customer portal, without contacting support and without logging in."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:9
+msgid "It is built on top of the standard eYssen **RMA** (Return Merchandise Authorization) system: the :doc:`backend <withdrawal/backend>` adds a dedicated, non-rejectable *withdrawal declaration* record, while the :doc:`customer portal <withdrawal/consumer_portal>` adds the public, two-step declaration flow and the durable-medium confirmation e-mail."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:15
+msgid "End-to-end flow (summary)"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:17
+msgid "**Consumer** opens the declaration from the order page or from the order e-mail link (:doc:`withdrawal/consumer_portal`)."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:19
+msgid "They choose **product** quantities (shipping lines are never offered), confirm, and receive a durable-medium confirmation e-mail."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:21
+msgid "A **withdrawal declaration** is created in the backend already in :guilabel:`Posted` state under :menuselection:`Sales --> Orders --> Withdrawals`."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:23
+msgid "When goods come back, the **agent** clicks :guilabel:`Start Return / Refund` → works a normal RMA (Post → accept lines → Done → validate receipt → credit note). See :doc:`withdrawal/backend`."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:28
+msgid "Legal background"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:30
+msgid "The feature implements the mandatory online **withdrawal button** required by **Directive (EU) 2023/2673** (which amends the Consumer Rights Directive 2011/83/EU, articles 11a and 11b). For distance and off-premises contracts, the trader must offer consumers an easily accessible electronic withdrawal function and confirm receipt of the withdrawal on a **durable medium** (e.g. e-mail)."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:37
+msgid "The on-screen legal wording (button labels, the declaration text and the confirmation e-mail) is provided as a **draft pending legal review**. Have the texts approved by your legal counsel before going live. The texts live in editable QWeb templates and a :guilabel:`mail.template`, so they can be adjusted without code changes."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:43
+msgid "Key principles"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:45
+msgid "The withdrawal declaration is treated very differently from an ordinary return request:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:47
+msgid "**Legally binding and irrevocable.** A confirmed withdrawal can never be *rejected* — it is a unilateral consumer statement. The backend enforces this with database-level guards."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:49
+msgid "**Immutable proof.** At confirmation time the system stores a frozen snapshot of the declaration (consumer, products, quantities, exact timestamp) and sends a durable-medium confirmation e-mail."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:51
+msgid "**No automatic logistics.** A withdrawal never auto-generates a return picking or a refund. An RMA agent decides how to handle the physical return and the refund manually via :guilabel:`Start Return / Refund` (see :doc:`withdrawal/backend`)."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:54
+msgid "**Stays Posted.** A confirmed declaration remains in :guilabel:`Posted` forever. That is normal — it is *not* stuck. The physical return and refund run on a **separate ordinary RMA**."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:56
+msgid "**Goods only.** Carrier shipping lines (``is_delivery``) cannot be withdrawn or returned as standalone items. Only product lines appear on the portal form."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:58
+msgid "**B2C scope only.** The feature is available only for genuine business-to-consumer webshop orders (see :doc:`withdrawal/consumer_portal`)."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:62
+msgid "Withdrawal vs ordinary RMA (at a glance)"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:68
+msgid "Topic"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:69
+msgid "Withdrawal declaration"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:70
+msgid "Ordinary RMA (return)"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:71
+msgid "Menu"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:72
+msgid ":menuselection:`Sales --> Orders --> Withdrawals`"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:73
+msgid ":menuselection:`Sales --> Orders --> RMAs`"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:74
+msgid "Who creates it"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:75
+msgid "Consumer on the portal (or e-mail link)"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:76
+msgid "Agent (or consumer *Request Return*)"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:77
+msgid "State after creation"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:78
+msgid "Always :guilabel:`Posted` (legal record)"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:79
+msgid ":guilabel:`Draft` → :guilabel:`Posted` → :guilabel:`Done`"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:80
+msgid "Can reject lines?"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:81
+msgid "**No**"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:82
+msgid "Yes (with reason)"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:83
+msgid "Creates stock picking?"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:84
+msgid "**Never** by itself"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:85
+msgid "Yes, when marked :guilabel:`Done`"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:86
+msgid "Agent next step"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:87
+msgid ":guilabel:`Start Return / Refund`"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:88
+msgid ":guilabel:`Post` → accept lines → :guilabel:`Done`"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:91
+msgid "Scope and modules"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:93
+msgid "The feature is delivered by two modules:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:95
+msgid "**RMA** (``eyssen_rma``) — the backend withdrawal declaration, configuration, the :guilabel:`Withdrawals` menu and the confirmation e-mail."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal.rst:97
+msgid "**RMA - Website Portal** (``eyssen_rma_website_sale``) — the public portal pages, the withdrawal button on the order page and the login-free link in the order-confirmation e-mail."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:3
+msgid "Handling withdrawals (backend)"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:5
+msgid "This page describes how an RMA agent works with confirmed withdrawal declarations in the backend, how a withdrawal is turned into a physical return, and the full **RMA approval process** that the derived return then follows."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:10
+msgid "The Withdrawals menu"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:12
+msgid "Confirmed declarations are listed under :menuselection:`Sales --> Orders --> Withdrawals`. This menu is kept **separate** from :menuselection:`Sales --> Orders --> RMAs`: the :guilabel:`RMAs` list shows only ordinary returns, while the :guilabel:`Withdrawals` list shows only withdrawal declarations."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:16
+msgid "The list shows at least the declaration reference (e.g. ``RMA/2026/00034``), the customer, and the :guilabel:`Posted` state. Open a row to work the declaration form."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:19
+msgid "Records arrive here automatically from the portal, already in the :guilabel:`Posted` state."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:22
+msgid "**Posted is the correct final state for a withdrawal.** The declaration is not “stuck in draft” and is not supposed to be marked :guilabel:`Done`. Logistics and refunds always happen on a **separate ordinary RMA** created with :guilabel:`Start Return / Refund` (see below)."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:27
+msgid "The withdrawal declaration form"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:29
+msgid "A withdrawal record looks like an RMA form but the header and sheet are withdrawal-specific:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:31
+msgid "a blue **info banner** that reminds the agent: this is the legal declaration; use :guilabel:`Start Return / Refund` for the physical return;"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:33
+msgid "a **Withdrawal Declaration** group with the read-only :guilabel:`Consumer Name`, :guilabel:`Consumer Email`, :guilabel:`Withdrawal Confirmed On` (the durable-proof timestamp), the :guilabel:`Confirmation Email` state, and — once a return has been started — the :guilabel:`Source Withdrawal` link on the *derived* RMA;"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:37
+msgid "the **order lines** with the withdrawn products and quantities (one line per serial for serial-tracked products); and"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:39
+msgid "two dedicated header buttons: :guilabel:`Start Return / Refund` (Hungarian UI: :guilabel:`Visszáru / visszatérítés indítása`) and :guilabel:`Resend Confirmation`."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:42
+msgid "The :guilabel:`Post`, :guilabel:`Done` and :guilabel:`Delete` buttons that exist on ordinary RMAs are **hidden** for a withdrawal, because a declaration is never processed through that flow."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:46
+msgid "The declaration snapshot"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:48
+msgid "The :guilabel:`Declaration` notebook tab shows the **immutable HTML snapshot** captured at confirmation time: the declaration title, the consumer's name and e-mail, the submission timestamp and the list of products and quantities. This snapshot is the legal record and is never recomputed. It should match the confirmation e-mail content."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:54
+msgid "Non-rejectable guarantees"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:56
+msgid "Because a withdrawal is a legally binding statement, several database-level guards prevent it from being treated like a rejectable RMA:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:59
+msgid "a declaration **line cannot be set to** :guilabel:`Rejected`;"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:60
+msgid "the manual :guilabel:`Post`, mark-as-:guilabel:`Done` and auto-approve actions all **refuse to run** on a withdrawal; and"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:62
+msgid "the *is-withdrawal* flag is set at creation and **cannot be changed** afterwards, so a record can never be flipped between an ordinary RMA and a withdrawal."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:66
+msgid "The confirmation e-mail"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:68
+msgid "The durable-medium confirmation e-mail is sent automatically when the declaration is confirmed. It lists **every product line** on the declaration (reference, consumer, timestamp, and a table of products and quantities). It is **resilient by design** — a mail failure must never invalidate an already-valid withdrawal:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:73
+msgid "the :guilabel:`Confirmation Email` field tracks the state: :guilabel:`Pending`, :guilabel:`Sent` or :guilabel:`Failed`;"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:75
+msgid "if sending fails, the error is logged and a **to-do activity** is scheduled for the agent instead of raising an error; and"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:77
+msgid "the agent can retry at any time with the :guilabel:`Resend Confirmation` button. There is **no automatic retry cron** — recovery is always a deliberate manual action."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:81
+msgid "The e-mail body is a **QWeb** template (``mail.template``). Edit it only as technical/QWeb source (or through a controlled update). The visual HTML editor can break the product table loop so that only the last line (often a shipping product) appears in the e-mail while the backend still shows every line. After any edit, send a test and verify **all** products appear."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:87
+msgid "Starting the physical return and refund"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:89
+msgid "A withdrawal record never moves stock or money on its own. When the consumer ships the goods back (or the agent otherwise decides to process the return), the agent clicks :guilabel:`Start Return / Refund` (:guilabel:`Visszáru / visszatérítés indítása` in Hungarian)."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:94
+msgid "Agent checklist (withdrawal → goods back → refund)"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:96
+msgid "Open the declaration under :menuselection:`Sales --> Orders --> Withdrawals` (not under :guilabel:`RMAs`)."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:98
+msgid "Review the lines and the :guilabel:`Declaration` tab snapshot."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:99
+msgid "Click :guilabel:`Start Return / Refund`. A **new ordinary RMA** opens in :guilabel:`Draft`."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:100
+msgid "On that RMA: set a return reason if needed → :guilabel:`Post` → accept each line (thumbs-up) → :guilabel:`Done`."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:102
+msgid "Validate the **incoming transfer** when the parcel physically arrives (same as any other return)."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:103
+msgid "Create the **credit note / refund** the same way you always did for returns — the withdrawal itself does not change invoicing."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:107
+msgid "What :guilabel:`Start Return / Refund` creates"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:109
+msgid "This creates a **separate, ordinary RMA** from the withdrawal's lines:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:111
+msgid "the new RMA is a normal, *rejectable* return (it is **not** a withdrawal);"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:112
+msgid "it links back to the declaration through the :guilabel:`Source Withdrawal` field; and"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:113
+msgid "the original withdrawal record stays **inert, immutable and non-rejectable** — it is never run through the picking or refund logic itself."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:115
+msgid "**Shipping / delivery lines are skipped.** If an older declaration still lists a carrier line (from before the shipping exclusion), that line is not copied onto the derived RMA. A *shipping-only* withdrawal cannot start a physical return (the system shows an error)."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:120
+msgid "The withdrawn quantities are not double-counted. While the derived return RMA exists, the originating withdrawal is excluded from the open-quantity budget, so the same units are never counted as committed twice."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:124
+msgid "The new RMA then follows the standard RMA approval process described below."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:127
+msgid "When you already handled the return without RMA"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:129
+msgid "If the goods were already taken back with the classic stock return (or the money was already refunded) **before** the agent used :guilabel:`Start Return / Refund`:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:132
+msgid "the **withdrawal declaration can stay as-is** — it remains the legal proof of the consumer's statement;"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:134
+msgid "**do not** start a second return RMA for the same units if stock and money are already settled;"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:135
+msgid "optionally add an internal note on the withdrawal so colleagues know the logistics were closed outside this flow."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:139
+msgid "When the parcel was not collected (non-pickup)"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:141
+msgid "A “customer never took the parcel / carrier brought it back” case is **logistics**, not the same as processing a portal withdrawal through :guilabel:`Done`. Use the ordinary return / non-pickup RMA path (or your existing carrier process). The withdrawal, if the consumer also declared one, still only means “legal statement on file” until you deliberately start a return or cancel the need for one."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:148
+msgid "The RMA approval process"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:150
+msgid "The return RMA — whether created from a withdrawal, from the portal, or manually — moves through a three-state lifecycle: **Draft → Posted → Done**. Each step is gated by a security group."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:154
+msgid "Draft → Posted"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:156
+msgid ":guilabel:`Post` validates and submits the request (requires the **RMA Manager** group):"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:158
+msgid "every line with a positive quantity must have a **return reason**;"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:159
+msgid "the RMA receives its sequence reference; and"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:160
+msgid "the order is tagged on the linked sales order with the *requested* status."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:162
+msgid "The :guilabel:`Apply Reason to Lines` helper can set one reason (and its destination location) on all draft lines at once."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:166
+msgid "Posted → line decisions"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:168
+msgid "Each line is then individually **accepted** or **rejected** (requires the **RMA Approval** group):"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:170
+msgid ":guilabel:`Accept` — the accepted quantity may not exceed the delivered quantity;"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:171
+msgid ":guilabel:`Reject` — a **reason for rejection** is mandatory."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:174
+msgid "Posted → Done"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:176
+msgid ":guilabel:`Mark as Done` finalizes the RMA (requires the **RMA Approval** group). It is only allowed once **every** line has been accepted or rejected. On completion the system **generates the stock pickings**:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:180
+msgid "**incoming** pickings for returned/replaced/refunded and non-pickup lines; and"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:181
+msgid "**outgoing** pickings for replacement and resend lines, respecting the warehouse's multi-step delivery configuration."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:185
+msgid "Returns putaway"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:187
+msgid "Each returned product is routed to a destination resolved in this order:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:189
+msgid "an explicit **destination location** set on the line (or inherited from the reason);"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:190
+msgid "the **shelf** (configured storage category) under the warehouse where the product already has the most stock on hand;"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:192
+msgid "the company's **WEB return location** (when it belongs to that warehouse); otherwise"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:193
+msgid "the warehouse stock location."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:195
+msgid "See :doc:`configuration` for the shelf category and WEB return location settings."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:198
+msgid "Order status feedback"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:200
+msgid "As the return progresses, the linked sales order is automatically tagged with the current RMA status — for example *requested*, *refused*, *being returned*, *taken back* or *closed* — so the sales team always sees the live state. A non-pickup return additionally flags the order as needing a manual refund for the finance team."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:206
+msgid "Withdrawal declarations never receive an order status tag and never appear in the order-status feedback: only the ordinary RMAs do. The withdrawal itself remains a pure legal record."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:210
+msgid "Security groups"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:212
+msgid "The actions above are restricted to the RMA security groups:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:214
+msgid "**RMA User** — create RMAs and start a return from a withdrawal;"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:215
+msgid "**RMA Manager** — post and delete RMAs; and"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:216
+msgid "**RMA Approval** — accept or reject lines and mark an RMA as done."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:219
+msgid "The **Sales / Administrator** (Sales manager) group includes **RMA Approval** by default. Sales managers therefore see the :menuselection:`Sales --> Orders --> RMAs` and :guilabel:`Withdrawals` menus and can process withdrawals out of the box, without any extra per-user configuration. Grant the **RMA Manager** group separately to users who also need to configure return reasons or delete RMAs."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:226
+msgid "The consumer-facing flow: :doc:`consumer_portal`"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/backend.rst:227
+msgid "Periods, deadlines and putaway settings: :doc:`configuration`"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:5
+msgid "The withdrawal period, the receipt estimate and the returns putaway are configured per company in the **Sales** settings."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:11
+msgid "Go to :menuselection:`Sales --> Configuration --> Settings`. Under :guilabel:`Quotations & Orders` you will find the following company-level options:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:18
+msgid "Setting"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:19
+msgid "Default"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:21
+msgid ":guilabel:`Withdrawal Period (days)`"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:22
+msgid "14"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:23
+msgid "The legal consumer withdrawal period. The 14-day minimum is mandated by Directive (EU) 2023/2673 / 2011/83/EU; you may set a **longer** period, but not a shorter one."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:25
+msgid ":guilabel:`Withdrawal Transit Buffer (days)`"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:26
+msgid "3"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:27
+msgid "Days added to the carrier hand-over date to **estimate the consumer receipt date** when no carrier delivered-date is available (see `How the deadline is calculated`_)."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:29
+msgid ":guilabel:`Return Period (days)`"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:30
+msgid "30"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:31
+msgid "The window (from the delivered date) within which an ordinary customer web return is auto-approved. This is **separate** from the legal withdrawal period."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:33
+msgid ":guilabel:`RMA Putaway — Shelf Category`"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:34
+#: ../../content/applications/sales/withdrawal/configuration.rst:38
+msgid "—"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:35
+msgid "The storage category that marks the physical shelves. A return is routed to the shelf where the product already has stock."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:37
+msgid ":guilabel:`RMA Putaway — WEB Return Location`"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:39
+msgid "The fallback destination for returned products that are not yet on any shelf."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:42
+msgid "How the deadline is calculated"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:44
+msgid "The withdrawal deadline is computed **per order line**, based on the **actual receipt date** of the outgoing delivery that shipped that line — not the date the goods were handed to the carrier."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:47
+msgid "The receipt date is determined as follows:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:49
+msgid "if the carrier reports a **delivered-date** for the shipment, that date is used; otherwise"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:50
+msgid "the carrier **hand-over date** plus the :guilabel:`Withdrawal Transit Buffer` is used as an estimate."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:53
+msgid "The per-line **withdrawal deadline** is then the receipt date plus the :guilabel:`Withdrawal Period`."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:56
+msgid "With the defaults, a parcel handed to the carrier on the 1st with no carrier delivered-date gets an estimated receipt date of the 4th (3-day buffer) and a withdrawal deadline of the 18th (14-day period)."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:61
+msgid "A line that has **not shipped yet** has no deadline. The withdrawal button is still available for such lines, because consumers may withdraw before they receive the goods."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:65
+msgid "The 14-day value is a **legal minimum**, not a recommendation to shorten. Configure a longer period if your terms grant one, and have the on-screen legal texts reviewed by your legal counsel before going live (see :doc:`../withdrawal`)."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:70
+msgid "Return reasons"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:72
+msgid "The reasons offered on the portal return form are the :guilabel:`Customer RMA Reason` records flagged as available to the portal. Withdrawals do not require a reason — a withdrawal is a no-reason right — but the **ordinary return** an agent starts from a withdrawal does, so make sure at least one refund-type reason is configured."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:78
+msgid "What cannot be withdrawn or returned"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:80
+msgid "**Delivery / shipping order lines** (carrier products marked ``is_delivery``) never enter the withdrawable or returnable quantity budgets. They do not appear on the portal withdrawal form or on auto-seeded RMA lines."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:83
+msgid "**Section / note lines** on the sales order are ignored as well."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:85
+msgid "This keeps elállás / RMA focused on physical goods. Whether shipping fees are refunded remains a policy decision when the agent issues the credit note."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:89
+msgid "Confirmation e-mail template"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:91
+msgid "The durable-medium e-mail is the ``mail.template`` *Elállási nyilatkozat visszaigazolása* (``eyssen_rma.mail_template_withdrawal_confirmation``). It is stored with ``noupdate`` so a module upgrade does not overwrite local wording changes."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:96
+msgid "Prefer editing the technical source (or a controlled SQL/XML update) over the visual mail designer. Breaking the QWeb ``t-foreach`` over the declaration lines can hide products from the consumer e-mail even though they remain on the backend record."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:101
+msgid ":doc:`consumer_portal`"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:102
+msgid ":doc:`backend`"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:3
+msgid "Withdrawal on the portal"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:5
+msgid "This page describes everything the **consumer** experiences: where the withdrawal button appears, when it is available, the two-step declaration flow, the confirmation, and how withdrawals are listed afterwards."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:10
+msgid "Who can withdraw"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:12
+msgid "The withdrawal function is offered **only to business-to-consumer (B2C) webshop consumers**. An order qualifies when **all** of the following are true:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:15
+msgid "the order originates from a website (it has a :guilabel:`Website`);"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:16
+msgid "the order's commercial partner is a **private person** (:guilabel:`Individual`); and"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:17
+msgid "that partner has **no VAT number**."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:19
+msgid "This *B2C consumer* test is centralized in the backend and re-checked on every step, so a non-B2C order can never reach the withdrawal flow — even by manipulating a URL."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:22
+msgid "In addition, the button is only shown while the order is **confirmed** (:guilabel:`Sales Order` state) and at least one order line is still **withdrawable** — that is, it has remaining withdrawable quantity and its per-line deadline has not passed. Lines that have not shipped yet count as *not expired*, so a consumer may withdraw **before** the parcel is even received."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:28
+msgid "Entry points"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:30
+msgid "A consumer can open the declaration in two ways."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:33
+msgid "From the order page"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:35
+msgid "On the order page (:menuselection:`My Account --> Orders --> (an order)`), the sidebar shows an amber :guilabel:`Elállás a szerződéstől` (\"Withdraw from the contract\") button next to the regular :guilabel:`Request Return` button. The withdrawal button only appears when the order is eligible (see `Who can withdraw`_). :guilabel:`Request Return` is the ordinary commercial return; withdrawal is the legal no-reason cancellation."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:42
+msgid "If a guard redirects back to the order page because the function is no longer available (expired deadline or no withdrawable line), a warning notice is shown explaining why."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:46
+msgid "From the order-confirmation e-mail"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:48
+msgid "For B2C consumer orders, an amber **Right of withdrawal** block is delivered by e-mail at order confirmation. It contains a short 14-day notice and an :guilabel:`Elállás a szerződéstől` button that opens the declaration through a **tokenized, login-free link** (order id + ``access_token`` in the URL). This means even a guest who checked out without an account can exercise the right of withdrawal directly from the e-mail."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:54
+msgid "The block is delivered when the order becomes a confirmed :guilabel:`Sales Order`, because the tokenized link only works from confirmation onward. How it reaches the consumer depends on how the shop confirms orders:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:58
+msgid "**Orders confirmed automatically** (for example, paid online at checkout) — the block rides along in the **standard order-confirmation e-mail**."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:60
+msgid "**Orders confirmed manually** (for example, offline or on-pickup payment, where the order first stays a quotation until staff press :guilabel:`Confirm`) — the standard confirmation e-mail is not sent at that point, so a **dedicated withdrawal e-mail** carrying the same block is sent automatically the moment the order is confirmed. It is sent **once per order** and only to B2C consumers."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:67
+msgid "If the order is still a quotation (not yet confirmed), the withdrawal button is not yet active — the link reports that withdrawal is *unavailable* until the order is confirmed."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:71
+msgid "Step 1 — The declaration form"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:73
+msgid "The first step is a public page titled as the withdrawal declaration. It collects:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:75
+msgid "**Consumer identity** — the :guilabel:`Your name` and :guilabel:`E-mail address` fields are pre-filled from the order's customer and can be adjusted. Both are required. The consumer identity is always taken from the order, never from the logged-in session, so guest declarations are attributed correctly."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:79
+msgid "**Contract reference** — the sales order number is shown as the contract identifier."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:80
+msgid "**Items and quantities** — a table lists every eligible **product** line with its withdrawable quantity:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:83
+msgid "*Untracked* and *lot-tracked* products show a numeric **quantity** input, capped at the withdrawable quantity."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:85
+msgid "*Serial-tracked* products show **one checkbox per shipped serial number**. Selecting concrete serials is **mandatory** — a serial line cannot be withdrawn by quantity alone."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:87
+msgid "**Carrier shipping lines are not listed.** Delivery/shipping products (``is_delivery``) cannot be selected on the form and cannot create a shipping-only withdrawal. Refund of shipping fees is a commercial decision handled by the agent at refund time, not by withdrawing the delivery line."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:91
+msgid "The consumer confirms with the amber :guilabel:`Elállás megerősítése` (\"Confirm withdrawal\") button, or backs out with :guilabel:`Mégse` (\"Cancel\")."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:95
+msgid "Validation"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:97
+msgid "If something is wrong, the form is redisplayed with a message. The form blocks, among others:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:99
+msgid "a quantity greater than the withdrawable amount;"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:100
+msgid "an empty submission (no line chosen);"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:101
+msgid "a missing name or e-mail;"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:102
+msgid "a line whose per-line deadline has already expired; and"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:103
+msgid "a serial-tracked product submitted without any serial selected."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:106
+msgid "Step 2 — Confirmation and proof"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:108
+msgid "On confirmation, the system:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:110
+msgid "records the exact **server timestamp** of the confirmation as durable proof;"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:111
+msgid "stores an **immutable snapshot** of the declaration (consumer, products, quantities, time);"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:112
+msgid "creates the backend **withdrawal declaration** record (already in :guilabel:`Posted` state); and"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:113
+msgid "sends the **durable-medium confirmation e-mail** to the address provided, listing the same products as the snapshot."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:116
+msgid "The consumer then sees a success screen showing the confirmation date-time and the withdrawal reference. Logged-in customers get a :guilabel:`Elállásaim megtekintése` (\"View my withdrawals\") button; guests get a :guilabel:`Vissza a főoldalra` (\"Back to home\") button."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:121
+msgid "After confirmation the consumer's job is done. Returning the goods and getting a refund are handled by the shop's return process (and by the agent with :guilabel:`Start Return / Refund` on the backend). The declaration itself does not change status to :guilabel:`Done`."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:126
+msgid "Two concurrent confirmations cannot create duplicate or over-quantity declarations: the order and its lines are row-locked while the quantities are re-validated, so a double submit is rejected."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:130
+msgid "Tracking withdrawals"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:132
+msgid "Logged-in customers can review their withdrawals under :menuselection:`My Account --> Returns (RMA)`. The page has two sections:"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:135
+msgid "**ordinary return requests** (commercial RMA) at the top; and"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:136
+msgid "a separate :guilabel:`Elállások` (\"Withdrawals\") section below, where each confirmed declaration shows its reference, a green :guilabel:`Visszaigazolva` (\"Confirmed\") status and the submission date."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:140
+msgid "If both sections are empty, the page shows that there are no return requests yet."
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:143
+msgid "How agents process a confirmed withdrawal: :doc:`backend`"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/consumer_portal.rst:144
+msgid "Withdrawal period and deadlines: :doc:`configuration`"
 msgstr ""

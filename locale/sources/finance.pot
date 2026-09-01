@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-19 14:35+0100\n"
+"POT-Creation-Date: 2026-07-15 12:58+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -489,6 +489,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:26
 #: ../../content/applications/finance/accounting/bank/bank_synchronization/ponto.rst:20
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:3
 #: ../../content/applications/finance/accounting/bank/foreign_currency.rst:16
 #: ../../content/applications/finance/accounting/bank/internal_transfers.rst:12
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:27
@@ -506,7 +507,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:22
 #: ../../content/applications/finance/accounting/payments/batch.rst:13
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:26
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:17
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:16
 #: ../../content/applications/finance/accounting/payments/online.rst:17
 #: ../../content/applications/finance/accounting/payments/pay_checks.rst:10
 #: ../../content/applications/finance/accounting/payments/pay_sepa.rst:46
@@ -1020,6 +1021,281 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization/ponto.rst:112
 msgid "Every six months (180 days), the connection between a bank account and Ponto must be re-authorized via the `Ponto website <https://myponto.com>`_. Failure to do so will result in synchronization stopping for those accounts."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:3
+msgid "Cash register"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:5
+msgid "The **Cash register** (*Házipénztár*) turns an Odoo cash journal into a Hungarian strict-accountability (*szigorú számadás*) cash book. It adds gap-free numbered cash-in and cash-out vouchers, serially numbered cash-book statements (*kivonat*), an amount spelled out in words on every voucher, and protection against back-dating."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:10
+msgid "The module builds on standard Odoo :ref:`cash journals <accounting/journals/cash>` and the :guilabel:`Accounting Dashboard`; it does not replace them, it extends them with the controls a serially-numbered, audit-proof cash book requires."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:15
+msgid "Key features"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:17
+msgid "**Four no-gap numbering sequences per cash journal**: one for the journal entries, one for the cash-book statements (``STAT``), and one each for cash-in (``BEF``) and cash-out (``KIF``) vouchers."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:20
+msgid "**Numbered cash vouchers**: every posted cash-in or cash-out movement receives a continuous, per-year number and an amount written out in words (*betűs összeg*)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:22
+msgid "**Cash-book statements**: a cash-book page can be opened and later confirmed (locked); the ``STAT`` number is assigned only on confirmation, so an open page never burns a number."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:24
+msgid "**Back-dating protection**: a voucher cannot be dated earlier than the last already-numbered voucher, keeping the numbering and the dates monotonic."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:26
+msgid "**Cash count on closing**: the drawer can be counted by denomination and closed with an automatic discrepancy check."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:None
+msgid "A cash journal card on the Accounting Dashboard with the cash-register action buttons"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:33
+msgid "The Cash register is an *eYssen* extension for Hungarian localization. Once the cash journals are configured, day-to-day operations (vouchers, statements, closing) are handled from the :guilabel:`Accounting Dashboard`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:6
+#: ../../content/applications/finance/fiscal_localizations/egypt.rst:8
+#: ../../content/applications/finance/fiscal_localizations/india.rst:8
+#: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:8
+msgid "Installation"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:8
+msgid "Navigate to :menuselection:`Apps`, search for **Cash Register**, and click :guilabel:`Install`. The module depends on :guilabel:`Accounting`; on a Hungarian localization database it is usually installed together with the localization."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:13
+msgid "Configuring the numbering sequences is restricted to users in the :guilabel:`Billing Administrator` (*Főkönyvelő*) group. Cashiers do not need access to the configuration to record vouchers."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:18
+msgid "Set up a cash journal"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:20
+msgid "Each physical cash desk is a separate cash journal, one per currency (for example *Cash HUF*, *Cash EUR*). To create one, go to :menuselection:`Accounting --> Configuration --> Journals`, click :guilabel:`New`, and set the :guilabel:`Type` to :guilabel:`Cash`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:24
+msgid "On a cash journal, the :guilabel:`Journal Entries` tab shows an extra **Cash Book Sequences** group where the four numbering sequences and the auto-statement option are assigned."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:None
+msgid "Cash Book Sequences group on the cash journal form"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:31
+msgid "Numbering sequences"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:33
+msgid "The module ships four ready-made :guilabel:`No gap` sequences that you assign on each cash journal. A *no-gap* sequence guarantees a continuous, audit-proof numbering as required by Hungarian strict accountability, and each sequence restarts every year."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:41
+msgid "Field"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:42
+msgid "Prefix"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:43
+msgid "Purpose"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:44
+msgid ":guilabel:`Journal Sequence`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:45
+msgid "``NAPLO/``"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:46
+msgid "Numbers the journal entries of this cash journal."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:47
+msgid ":guilabel:`Statement Sequence`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:48
+msgid "``STAT/``"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:49
+msgid "Assigned to each cash-book statement when it is confirmed (*kivonat sorszám*)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:50
+msgid ":guilabel:`Cash-in Sequence`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:51
+msgid "``BEF/``"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:52
+msgid "Numbers inbound cash vouchers (*befizetés sorszám*)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:53
+msgid ":guilabel:`Cash-out Sequence`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:54
+msgid "``KIF/``"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:55
+msgid "Numbers outbound cash vouchers (*kifizetés sorszám*)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:58
+msgid "You can assign the **same** sequence to :guilabel:`Cash-in Sequence` and :guilabel:`Cash-out Sequence` to keep a single running number across both directions, or assign **two different** sequences to number each direction separately. This choice also widens or narrows the scope of the back-dating check (see :ref:`cash_register/back-dating`)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:63
+msgid "To create your own sequences, duplicate the supplied templates in :menuselection:`Settings --> Technical --> Sequences & Identifiers --> Sequences`, keep the :guilabel:`Implementation` set to :guilabel:`No gap`, and select them on the journal. The running number is never reset by a module upgrade."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:69
+msgid "Auto statement"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:71
+msgid "Enable :guilabel:`Auto Statement` on the journal so that posting a cash voucher automatically opens or attaches a cash-book statement when none is open. Leave it disabled to open the cash-book pages manually."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:78
+msgid "Back-dating protection"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:80
+msgid "By default the cash book is protected against back-dating: a voucher cannot be posted with a date earlier than the last already-numbered voucher in its numbering scope. This keeps the numbering and the dates monotonic, as required for a strict-accountability cash book."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:84
+msgid "An administrator can lift this restriction by setting the system parameter ``eyssen_cashregister.override_sequence_date_constraint`` to ``1`` in :menuselection:`Settings --> Technical --> System Parameters`. The default value ``0`` keeps the protection active."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:3
+msgid "Operations"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:5
+msgid "Day-to-day cash handling is done from the :guilabel:`Accounting Dashboard`. On a cash journal card, the cash-register actions are available next to the standard buttons."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:None
+msgid "New Cash-in, New Cash-out, and Close Cash Register buttons on the cash journal card"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:12
+msgid "Record a cash-in or cash-out voucher"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:14
+msgid "On the cash journal card, click :guilabel:`New Cash-in` for money received, or :guilabel:`New Cash-out` for money paid out. A cash voucher form opens with the journal and the direction already filled in."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:17
+msgid "Select the :guilabel:`Customer` or :guilabel:`Vendor` and enter the :guilabel:`Amount`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:18
+msgid "Fill in the cash-specific fields:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:20
+msgid ":guilabel:`Pretense` (*Jogcím*): the reason for the cash movement. It is editable only while the voucher is a draft."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:22
+msgid ":guilabel:`Date`: the voucher date. It may not be earlier than the last numbered voucher (see :ref:`cash_register/back-dating`)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:25
+msgid "Confirm the voucher. On posting:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:27
+msgid "It receives the next gap-free number from the journal's :guilabel:`Cash-in Sequence` or :guilabel:`Cash-out Sequence` (for example ``BEF/2026/00012`` or ``KIF/2026/00007``), shown in :guilabel:`Voucher Number`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:30
+msgid "The :guilabel:`Amount in Words` (*betűs összeg*) is filled in automatically for the printed voucher."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:None
+msgid "Cash voucher form with pretense, amount in words, and voucher number"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:37
+msgid "A draft voucher that is cancelled never consumes a number, so the numbering stays gap-free. Once a voucher carries a number it can no longer be deleted, which preserves the audit trail."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:41
+msgid "Cash-book statements"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:43
+msgid "A cash-book statement (*pénztárkönyv / kivonat*) is a numbered page that groups a period's cash movements. A statement is **Open** while it accepts entries and **Confirmed** once it is closed and locked."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:None
+msgid "Statement list showing the STAT number and cash-book state, with the Action menu"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:51
+msgid "Confirm a cash book"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:53
+msgid "When a cash-book page is complete, select it in the statement list and choose :menuselection:`Action --> Confirm cash-book`. On confirmation:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:56
+msgid "The statement receives the next gap-free :guilabel:`STAT Number` from the journal's :guilabel:`Statement Sequence` (for example ``STAT/2026/00013``). Because the number is assigned only on confirmation, an open page never burns a ``STAT`` number."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:59
+msgid "The :guilabel:`Cash-book State` changes to :guilabel:`Confirmed`, and the page and its number can no longer be altered."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:63
+msgid "Reopen a cash book"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:65
+msgid "A confirmed cash book can be reopened with :menuselection:`Action --> Reopen cash-book`. This action is restricted to the :guilabel:`Billing Administrator` (*Főkönyvelő*) group. Reopening keeps the existing ``STAT`` number — a cash book is never re-numbered — and is recorded in the chatter."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:70
+msgid "Close and count the cash drawer"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:72
+msgid "To reconcile the physical cash on hand, click :guilabel:`Close Cash Register` on the cash journal card. Count the drawer by denomination; the system compares the counted amount with the journal balance and reports any discrepancy. A controller can review and approve a discrepancy before the count is closed."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:None
+msgid "Cash count form with denominations and the computed discrepancy"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/foreign_currency.rst:3
@@ -2904,7 +3180,6 @@ msgid "Using the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon, make sure 
 msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:80
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:88
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:151
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:237
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1100
@@ -5793,6 +6068,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:95
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:279
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:44
 #: ../../content/applications/finance/fiscal_localizations/france.rst:391
 #: ../../content/applications/finance/fiscal_localizations/france.rst:391
 #: ../../content/applications/finance/fiscal_localizations/india.rst:206
@@ -5816,6 +6092,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:97
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:281
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:283
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:50
 msgid "8"
 msgstr ""
 
@@ -6033,6 +6310,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:244
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:291
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:293
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:47
 #: ../../content/applications/finance/fiscal_localizations/france.rst:393
 #: ../../content/applications/finance/fiscal_localizations/india.rst:190
 #: ../../content/applications/finance/fiscal_localizations/india.rst:194
@@ -7043,6 +7321,7 @@ msgid "Partial payment 2/2"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:178
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:56
 msgid "30"
 msgstr ""
 
@@ -8614,190 +8893,268 @@ msgid "Follow-up on invoices"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:5
-msgid "Follow-up messages can be sent to customers when payments are overdue. Odoo helps identify late payments and allows scheduling and sending the appropriate reminders using **follow-up actions** according to the number of overdue days. Follow-ups can be sent through different methods, including email, post, or SMS."
+msgid "Follow-up messages can be sent to customers when payments are overdue. eYssen ERP helps identify late payments and lets you schedule and send the appropriate reminders using **follow-up levels** according to the number of overdue days. Reminders can be sent through several channels: email, SMS, postal letter, an online **Pay Now** link, and scheduled activities."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:11
-msgid "`Odoo Tutorials: Payment Follow-up <https://www.youtube.com/watch?v=50qy2ygS7eM>`_"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:12
 msgid ":doc:`/applications/finance/accounting/customer_invoices/payment_terms`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:19
-msgid "To configure :guilabel:`Follow-up actions`, go to :menuselection:`Accounting --> Configuration --> Follow-up Levels`. In the :guilabel:`Follow-up Levels` list view, several follow-up levels and actions are configured by default."
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:21
+msgid "Follow-up levels"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:23
-msgid "To modify a follow-up level, click on the record. From the form view, edit the :guilabel:`Description` or adjust the number of days before a reminder is sent. In the :guilabel:`Notification` tab, select :guilabel:`Actions` such as :guilabel:`Send Email`, :ref:`Send a Letter <customer_invoices/snailmail>`, and :ref:`Send SMS Message <pricing/pricing_and_faq>`."
+msgid "To configure the escalation ladder, go to :menuselection:`Accounting --> Configuration --> Follow-up Levels`. Each record is a **level** that applies once an invoice reaches a given number of days past its due date. When several levels qualify, the **highest** one that the oldest overdue invoice has already reached is the one that applies."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:29
-msgid "Sending letters or SMS messages in Odoo requires :doc:`In-App Purchase (IAP) </applications/essentials/in_app_purchase>` credit or tokens."
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:31
+msgid "Default follow-up levels"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:32
-msgid "To use a pre-filled template when sending an email or letter, select a :guilabel:`Content Template`. To modify it, click the :icon:`oi-arrow-right` :guilabel:`(internal link arrow)` icon next to the :guilabel:`Content Template` field. If enabled, SMS messages use a specific :guilabel:`Sms Template` field that can be modified by clicking the :icon:`oi-arrow-right` :guilabel:`(internal link arrow)` icon."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:38
-msgid "Other options can be enabled in the :guilabel:`Options` section within the specific follow-up level:"
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:33
+msgid "A ready-to-use ladder of seven levels is created automatically when the application is installed, so reminders can be reviewed and sent without any configuration:"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:40
-msgid "Automate the reminder with the :guilabel:`Automatic` option."
+msgid "Level"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:41
-msgid ":guilabel:`Attach Invoices` that are overdue in the reminder."
+msgid "Due Days"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:42
-msgid ":guilabel:`Add followers` on the related customer to receive notifications about any email reply made on the reminder's email."
+msgid "Purpose (default channel: email)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:43
+msgid ":guilabel:`Payment Due Today`"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:45
-msgid "In the :guilabel:`Activity` tab, enable the option to automatically schedule :doc:`activities </applications/essentials/activities>` when the follow-up level is triggered. Select the :guilabel:`Responsible` user and the :guilabel:`Activity Type`, and enter a :guilabel:`Summary`."
+msgid "Friendly notice that the amount falls due today. Nothing is overdue yet."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:46
+msgid ":guilabel:`Payment Overdue`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:48
+msgid "The due date has passed and payment has not been received."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:49
-msgid "To add a new :guilabel:`Follow-up Level`, click :guilabel:`New` and fill in the fields."
+msgid ":guilabel:`Payment Reminder`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:51
+msgid "Reminder that the invoice is still unpaid."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:52
-msgid "Set a negative number of days to send a reminder before the invoice due date."
+msgid ":guilabel:`Repeated Reminder`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:53
+#: ../../content/applications/finance/fiscal_localizations/france.rst:244
+msgid "15"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:54
+msgid "Repeated reminder, as the invoice remains unpaid."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:55
+msgid ":guilabel:`Urgent Notice`"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:57
-msgid "Invoice follow-ups"
+msgid "More insistent notice, urging immediate payment."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:58
+msgid ":guilabel:`Warning`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:59
+msgid "45"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:60
-msgid "Reconcile all bank transactions before starting the follow-up process to avoid sending reminders for invoices that have already been paid."
+msgid "Warning before the final step."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:61
+msgid ":guilabel:`Final / Legal Notice`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:62
+msgid "60"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:63
-msgid "To view all overdue invoices, go to :menuselection:`Accounting --> Customers --> Invoices`. In the :guilabel:`Invoices` list view, click into the search bar and filter on :guilabel:`Overdue`."
+msgid "Last step before legal recovery, marked :guilabel:`Final / Legal Level`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:69
-msgid "Follow-ups for one customer"
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:66
+msgid "Every default level ships with :guilabel:`Automatic` switched **off**. Installing the application therefore never sends anything on its own: each reminder is only sent after someone reviews and sends it. Automatic sending starts only once an administrator enables :guilabel:`Automatic` on the individual levels that should be sent unattended (see :ref:`accounting/follow_up/automatic`)."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:71
-msgid "For a detailed overview of a customer's invoice follow-up status, go to :menuselection:`Accounting --> Customers --> Customers`. Open the customer's form and click the :guilabel:`Accounting` tab. In the :guilabel:`Invoice follow-ups` section, click on the different levels to view the :guilabel:`Follow-up Status` of each level. If actions are needed, click :guilabel:`Overdue Invoices` to have a detailed list of the overdue invoices."
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:73
+msgid "The default ladder is safe to edit or delete — an application upgrade will not restore it. On a multi-company database, add one ladder per company."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:77
-msgid "Additional options can be set:"
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:83
+msgid "To modify a level, click the record. From the form view, set the :guilabel:`Level Name` and the number of :guilabel:`Due Days` before the reminder is sent, then choose the channels and options:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:79
-msgid ":guilabel:`Reminders`: These are either :guilabel:`Automatic` or :guilabel:`Manual`."
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:86
+msgid ":guilabel:`Send Email`: send the reminder by email. Select a per-level :guilabel:`Email Template`; when left empty, the application's default reminder template is used."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:80
-msgid ":guilabel:`Next reminder`: The date by which the next follow-up actions should be taken is automatically set when follow-ups are processed, but can be manually adjusted if needed."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:82
-msgid ":guilabel:`Responsible`: The user who handles the follow-up actions."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:84
-msgid "To manually send a payment reminder to a customer, click :guilabel:`Send` and select the actions in the :guilabel:`Send and Print` window:"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:87
-msgid ":guilabel:`Print`"
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:88
+msgid ":guilabel:`Send SMS`: send an SMS text message, using the level's :guilabel:`SMS Template`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:89
-msgid ":guilabel:`Sms`"
+msgid ":guilabel:`Send Letter (Post)`: send the reminder as a postal letter through :ref:`Snailmail <customer_invoices/snailmail>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:90
-msgid ":guilabel:`By post`"
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:91
+msgid ":guilabel:`Attach Overdue Invoices`: attach the customer's overdue invoices to the email and/or letter as separate PDF files."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:92
-msgid "Enable the :guilabel:`Attach Invoices` option and change the :guilabel:`Content Template` if needed. Then, click :guilabel:`Send` or :guilabel:`Send & Print` to send the :ref:`follow-up report <accounting/follow_up/follow-up-report>`."
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:93
+msgid ":guilabel:`Show Late-payment Interest`: display the informational interest and collection-fee block on this level's reminder (see :ref:`accounting/follow_up/interest`)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:95
+msgid ":guilabel:`Automatic`: let the daily scheduled action send this level without manual review (see :ref:`accounting/follow_up/automatic`). When disabled, the level is only ever sent after a human reviews it."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:98
-#: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:19
-#: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:217
-msgid ":doc:`/applications/essentials/in_app_purchase`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:101
-msgid "The contact information on the invoice or the contact form is used to send the reminder."
+msgid ":guilabel:`Final / Legal Level`: flag the last, legal-notice level. This is informational and can be used on the reminder wording."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:102
-msgid "The chatter keeps a full record of all follow-up actions."
+msgid "Sending SMS messages or postal letters requires :doc:`In-App Purchase (IAP) </applications/essentials/in_app_purchase>` credit. Email and the online **Pay Now** link do not."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:107
-msgid "Follow-ups for all customers due for action"
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:112
+msgid "In the :guilabel:`Activity` section, enable :guilabel:`Schedule Activity` to automatically create an :doc:`activity </applications/essentials/activities>` when the level is triggered, then set the activity type, responsible user, summary, and note."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:109
-msgid "After setting up the additional :ref:`follow-up <accounting/follow_up/follow-ups-for-one-customer>` options, review which customers have overdue invoices or require follow-up. To do so, go to :menuselection:`Accounting --> Customers --> Customers`. In the :guilabel:`Customers` kanban view, click the search bar and filter by :guilabel:`Overdue Invoices` or :guilabel:`Requires Follow-up`."
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:119
+msgid "Late-payment interest (informational)"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:115
-msgid "To take follow-up actions for all relevant customers, switch to the list view and select the customers requiring follow-up. Then, click :icon:`fa-cog` :guilabel:`(Actions)` and select :guilabel:`Process Follow-ups` to send them the :ref:`follow-up report <accounting/follow_up/follow-up-report>`."
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:121
+msgid "To display a late-payment interest amount and, for business customers, a fixed collection fee on reminders, go to :menuselection:`Accounting --> Configuration --> Settings` and, in the :guilabel:`Customer Invoices` section, enable :guilabel:`Late-payment Interest on Reminders`:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:123
-#: ../../content/applications/finance/accounting/taxes/avatax/avalara_portal.rst:144
-#: ../../content/applications/finance/accounting/taxes/eu_distance_selling.rst:52
-#: ../../content/applications/finance/fiscal_localizations/argentina.rst:1166
-#: ../../content/applications/finance/fiscal_localizations/australia.rst:237
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:89
-#: ../../content/applications/finance/fiscal_localizations/canada.rst:214
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:23
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:962
-#: ../../content/applications/finance/fiscal_localizations/philippines.rst:59
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:48
-#: ../../content/applications/finance/fiscal_localizations/united_states.rst:270
-msgid "Reports"
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:125
+msgid ":guilabel:`Late-payment Interest on Reminders`: turn the block on and set the annual interest rate (in %)."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:128
-msgid "Customer statement"
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:127
+msgid ":guilabel:`Collection fee (B2B)`: optionally add a fixed collection fee, applied only to company (business) customers."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:130
-msgid "To get a comprehensive overview of a customer's account status, click the :guilabel:`Customer Statement` smart button on the customer's form. This statement corresponds to the :ref:`Partner Ledger <accounting/invoices/partner-ledger>` report's portion specific to that customer."
+msgid "The block is only shown on levels whose :guilabel:`Show Late-payment Interest` option is enabled."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:134
-msgid "To send it to the customer, click :guilabel:`Send`, change the :guilabel:`Email Template` if needed, and click :guilabel:`Print & Send`."
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:133
+msgid "These amounts are **display-only**. They are computed and shown on the reminder for information, but the application **never** creates a journal entry — no interest or fee is posted to accounting."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:137
-msgid "To view the customer statements for multiple customers at once, select the customers from the :guilabel:`Customers` list view, click :icon:`fa-cog` :guilabel:`(Actions)`, and select :guilabel:`Open Customer Statements`."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:141
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:157
-#: ../../content/applications/finance/accounting/vendor_bills.rst:165
-msgid "Click :guilabel:`PDF` or :guilabel:`XLSX` to generate a PDF or XLSX file, respectively."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:146
-msgid "Follow-up report"
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:145
+msgid "Follow-up process"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:148
-msgid "To get a complete overview of a customer's due invoices, separating those that are due from those that are overdue, click the :ref:`Customer Statement <accounting/follow_up/customer-statement>` smart button on the customer's form. Then, click :icon:`fa-book` :guilabel:`Report: Customer Statement` and select :guilabel:`Follow-Up Report`."
+msgid "Reconcile all bank transactions before starting the follow-up process to avoid sending reminders for invoices that have already been paid."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:153
-msgid "To view the follow-up report for all customers at once, go to :menuselection:`Accounting --> Reporting --> Partner Ledger`. Then, click :icon:`fa-book` :guilabel:`Report:` and select :guilabel:`Follow-Up Report`."
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:154
+msgid "Follow-ups for one customer"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:156
+msgid "For a detailed overview of a customer's follow-up status, go to :menuselection:`Accounting --> Customers --> Customers`, open the customer's form, and click the :guilabel:`Payment Follow-up` tab. The tab shows:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:160
+msgid ":guilabel:`Follow-up Status`: :guilabel:`No Action Needed`, :guilabel:`In Need of Action`, or :guilabel:`With Overdue Invoices`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:162
+msgid ":guilabel:`Next Follow-up Date`: the throttle date before which the customer will not be dunned again; set automatically after a reminder is sent and manually adjustable."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:164
+msgid ":guilabel:`Follow-up Responsible`: the user who handles the follow-up."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:165
+msgid ":guilabel:`Total Overdue` and :guilabel:`Total Due`: the customer's overdue and total open receivable amounts."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:175
+msgid "Click :guilabel:`Send Reminder` to open the review window, adjust the :guilabel:`Level` if needed, and click :guilabel:`Send`. The reminder covers the customer's **full overdue statement**."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:179
+msgid "The contact information on the customer form is used to send the reminder. A customer with no usable contact for the chosen channel is skipped and the skip is recorded."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:181
+msgid "The chatter keeps a full record of every follow-up action."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:186
+msgid "Follow-ups for several customers"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:188
+msgid "To act on several customers at once, go to :menuselection:`Accounting --> Customers --> Customers`, switch to the list view, and select the customers requiring follow-up (filter by :guilabel:`With Overdue Invoices` to narrow the list). Then click :icon:`fa-cog` :guilabel:`(Actions)` and select :guilabel:`Send Payment Reminder`. A review window lists one line per customer with the resolved :guilabel:`Level`; adjust if needed and click :guilabel:`Send`. Each customer receives their full overdue statement. Customers whose overdue balance nets zero or negative are skipped automatically."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:199
+msgid "Follow-ups from the overdue invoices list"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:201
+msgid "You can also start reminders from the invoices list. Go to :menuselection:`Accounting --> Customers --> Invoices`, filter on :guilabel:`Overdue`, and select the invoices to dun. Then click :icon:`fa-cog` :guilabel:`(Actions)` and select :guilabel:`Send Payment Reminder`. The selected invoices are grouped by customer in the review window."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:207
+msgid "Unlike the customer-level entry points, a reminder started from the invoices list is **scoped**: it covers only the **selected** invoices (content, attachments, logged record, and interest), not the customer's full statement."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:220
+msgid "Automatic follow-ups"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:222
+msgid "A daily scheduled action (:guilabel:`Payment Follow-up: process overdue partners`) processes overdue customers automatically. By design it is **generate-then-review**: it only sends levels that are explicitly flagged :guilabel:`Automatic`. Levels left non-automatic are never sent by the cron and always require a manual review, so no reminder leaves the system unattended unless you opt a level in."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:231
+msgid "Follow-up letter"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:233
+msgid "The reminder document is a plain A4 PDF letter listing the customer's overdue invoices, the totals, the optional :ref:`interest and collection-fee block <accounting/follow_up/interest>`, and — in the email — an online **Pay Now** link to the customer portal. The same content is shared between the PDF letter and the reminder email, so both always show the customer the same figures."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:247
+msgid "Follow-up log"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:249
+msgid "Every reminder that is sent — and every skipped customer — is written to an append-only audit trail. To review it, go to :menuselection:`Accounting --> Payment Follow-up --> Follow-up Log`. Each entry records the date, customer, level, channel (email, SMS, letter, portal, activity, or *skipped*), the invoices covered, and a note. Log entries cannot be edited or deleted."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/forecast.rst:3
@@ -12569,6 +12926,20 @@ msgstr ""
 msgid "While on the :ref:`avalara/portal-transactions`, click :icon:`fa-download` :guilabel:`Import transactions` or :icon:`fa-upload` :guilabel:`Export transactions` to import or export transactions."
 msgstr ""
 
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_portal.rst:144
+#: ../../content/applications/finance/accounting/taxes/eu_distance_selling.rst:52
+#: ../../content/applications/finance/fiscal_localizations/argentina.rst:1166
+#: ../../content/applications/finance/fiscal_localizations/australia.rst:237
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:89
+#: ../../content/applications/finance/fiscal_localizations/canada.rst:214
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:23
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:962
+#: ../../content/applications/finance/fiscal_localizations/philippines.rst:59
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:48
+#: ../../content/applications/finance/fiscal_localizations/united_states.rst:270
+msgid "Reports"
+msgstr ""
+
 #: ../../content/applications/finance/accounting/taxes/avatax/avalara_portal.rst:146
 msgid "To access reporting, navigate to the :menuselection:`Reports` link in the top menu of the Avalara management console. Next, select from one of the available reporting tabs: :guilabel:`Transactions reports`, :guilabel:`Liability & tax return reports`, or :guilabel:`Exemption reports`."
 msgstr ""
@@ -13485,6 +13856,10 @@ msgstr ""
 msgid "Click the :icon:`fa-caret-right` :guilabel:`(right arrow)` icon next to a vendor to view the details of all their outstanding bills, including the due dates and amounts."
 msgstr ""
 
+#: ../../content/applications/finance/accounting/vendor_bills.rst:165
+msgid "Click :guilabel:`PDF` or :guilabel:`XLSX` to generate a PDF or XLSX file, respectively."
+msgstr ""
+
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:3
 msgid "Non-current assets and fixed assets"
 msgstr ""
@@ -13929,6 +14304,11 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:17
 msgid "`Odoo Tutorials: Vendor Bill Digitization <https://www.odoo.com/slides/slide/vendor-bill-digitization-7065>`_"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:19
+#: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:217
+msgid ":doc:`/applications/essentials/in_app_purchase`"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:26
@@ -24328,12 +24708,6 @@ msgstr ""
 msgid "Egypt"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/egypt.rst:8
-#: ../../content/applications/finance/fiscal_localizations/india.rst:8
-#: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:8
-msgid "Installation"
-msgstr ""
-
 #: ../../content/applications/finance/fiscal_localizations/egypt.rst:10
 msgid ":ref:`Install <general/install>` the following modules to get all the features of the Egyptian localization:"
 msgstr ""
@@ -25204,10 +25578,6 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/france.rst:241
 msgid "`move_line.fec_matching_number`"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/france.rst:244
-msgid "15"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/france.rst:244

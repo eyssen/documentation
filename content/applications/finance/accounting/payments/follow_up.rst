@@ -2,156 +2,257 @@
 Follow-up on invoices
 =====================
 
-Follow-up messages can be sent to customers when payments are overdue. Odoo helps identify late
-payments and allows scheduling and sending the appropriate reminders using **follow-up actions**
-according to the number of overdue days. Follow-ups can be sent through different methods, including
-email, post, or SMS.
+Follow-up messages can be sent to customers when payments are overdue. eYssen ERP helps identify
+late payments and lets you schedule and send the appropriate reminders using **follow-up levels**
+according to the number of overdue days. Reminders can be sent through several channels: email,
+SMS, postal letter, an online **Pay Now** link, and scheduled activities.
 
 .. seealso::
-   - `Odoo Tutorials: Payment Follow-up <https://www.youtube.com/watch?v=50qy2ygS7eM>`_
-   - :doc:`/applications/finance/accounting/customer_invoices/payment_terms`
+   :doc:`/applications/finance/accounting/customer_invoices/payment_terms`
 
 .. _accounting/follow_up/configuration:
 
 Configuration
 =============
 
-To configure :guilabel:`Follow-up actions`, go to :menuselection:`Accounting --> Configuration
---> Follow-up Levels`. In the :guilabel:`Follow-up Levels` list view, several follow-up levels and
-actions are configured by default.
+.. _accounting/follow_up/levels:
 
-To modify a follow-up level, click on the record. From the form view, edit the
-:guilabel:`Description` or adjust the number of days before a reminder is sent. In the
-:guilabel:`Notification` tab, select :guilabel:`Actions` such as :guilabel:`Send Email`, :ref:`Send
-a Letter <customer_invoices/snailmail>`, and :ref:`Send SMS Message <pricing/pricing_and_faq>`.
+Follow-up levels
+----------------
 
-.. note::
-   Sending letters or SMS messages in Odoo requires :doc:`In-App Purchase (IAP)
-   </applications/essentials/in_app_purchase>` credit or tokens.
+To configure the escalation ladder, go to :menuselection:`Accounting --> Configuration -->
+Follow-up Levels`. Each record is a **level** that applies once an invoice reaches a given number
+of days past its due date. When several levels qualify, the **highest** one that the oldest
+overdue invoice has already reached is the one that applies.
 
-To use a pre-filled template when sending an email or letter, select a :guilabel:`Content Template`.
-To modify it, click the :icon:`oi-arrow-right` :guilabel:`(internal link arrow)` icon next to the
-:guilabel:`Content Template` field. If enabled, SMS messages use a specific :guilabel:`Sms Template`
-field that can be modified by clicking the :icon:`oi-arrow-right` :guilabel:`(internal link arrow)`
-icon.
+.. _accounting/follow_up/default_levels:
 
-Other options can be enabled in the :guilabel:`Options` section within the specific follow-up level:
+Default follow-up levels
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Automate the reminder with the :guilabel:`Automatic` option.
-- :guilabel:`Attach Invoices` that are overdue in the reminder.
-- :guilabel:`Add followers` on the related customer to receive notifications about any email reply
-  made on the reminder's email.
+A ready-to-use ladder of seven levels is created automatically when the application is installed,
+so reminders can be reviewed and sent without any configuration:
 
-In the :guilabel:`Activity` tab, enable the option to automatically schedule :doc:`activities
-</applications/essentials/activities>` when the follow-up level is triggered. Select the
-:guilabel:`Responsible` user and the :guilabel:`Activity Type`, and enter a :guilabel:`Summary`.
+.. list-table::
+   :header-rows: 1
+   :widths: 28 12 60
 
-To add a new :guilabel:`Follow-up Level`, click :guilabel:`New` and fill in the fields.
+   * - Level
+     - Due Days
+     - Purpose (default channel: email)
+   * - :guilabel:`Payment Due Today`
+     - 0
+     - Friendly notice that the amount falls due today. Nothing is overdue yet.
+   * - :guilabel:`Payment Overdue`
+     - 1
+     - The due date has passed and payment has not been received.
+   * - :guilabel:`Payment Reminder`
+     - 8
+     - Reminder that the invoice is still unpaid.
+   * - :guilabel:`Repeated Reminder`
+     - 15
+     - Repeated reminder, as the invoice remains unpaid.
+   * - :guilabel:`Urgent Notice`
+     - 30
+     - More insistent notice, urging immediate payment.
+   * - :guilabel:`Warning`
+     - 45
+     - Warning before the final step.
+   * - :guilabel:`Final / Legal Notice`
+     - 60
+     - Last step before legal recovery, marked :guilabel:`Final / Legal Level`.
+
+.. important::
+   Every default level ships with :guilabel:`Automatic` switched **off**. Installing the
+   application therefore never sends anything on its own: each reminder is only sent after someone
+   reviews and sends it. Automatic sending starts only once an administrator enables
+   :guilabel:`Automatic` on the individual levels that should be sent unattended (see
+   :ref:`accounting/follow_up/automatic`).
 
 .. tip::
-   Set a negative number of days to send a reminder before the invoice due date.
+   The default ladder is safe to edit or delete — an application upgrade will not restore it. On a
+   multi-company database, add one ladder per company.
 
-.. _accounting/follow_up/invoice-follow-ups:
+.. screenshot-pending: follow_up/levels-list.png
+   :alt: List of follow-up levels in eYssen ERP.
 
-Invoice follow-ups
-==================
+.. Screenshot: Accounting ▸ Configuration ▸ Follow-up Levels list view, showing the seven default
+   levels (Due Days 0/1/8/15/30/45/60), with the Send Email / Send SMS / Send Letter / Show Interest /
+   Automatic / Final columns visible — the Automatic column unticked on every row.
+
+To modify a level, click the record. From the form view, set the :guilabel:`Level Name` and the
+number of :guilabel:`Due Days` before the reminder is sent, then choose the channels and options:
+
+- :guilabel:`Send Email`: send the reminder by email. Select a per-level :guilabel:`Email Template`;
+  when left empty, the application's default reminder template is used.
+- :guilabel:`Send SMS`: send an SMS text message, using the level's :guilabel:`SMS Template`.
+- :guilabel:`Send Letter (Post)`: send the reminder as a postal letter through
+  :ref:`Snailmail <customer_invoices/snailmail>`.
+- :guilabel:`Attach Overdue Invoices`: attach the customer's overdue invoices to the email and/or
+  letter as separate PDF files.
+- :guilabel:`Show Late-payment Interest`: display the informational interest and collection-fee
+  block on this level's reminder (see :ref:`accounting/follow_up/interest`).
+- :guilabel:`Automatic`: let the daily scheduled action send this level without manual review (see
+  :ref:`accounting/follow_up/automatic`). When disabled, the level is only ever sent after a human
+  reviews it.
+- :guilabel:`Final / Legal Level`: flag the last, legal-notice level. This is informational and can
+  be used on the reminder wording.
 
 .. note::
-   Reconcile all bank transactions before starting the follow-up process to avoid sending reminders
-   for invoices that have already been paid.
+   Sending SMS messages or postal letters requires :doc:`In-App Purchase (IAP)
+   </applications/essentials/in_app_purchase>` credit. Email and the online **Pay Now** link do not.
 
-To view all overdue invoices, go to :menuselection:`Accounting --> Customers --> Invoices`. In the
-:guilabel:`Invoices` list view, click into the search bar and filter on :guilabel:`Overdue`.
+.. screenshot-pending: follow_up/level-form.png
+   :alt: Follow-up level form with channels and options.
 
-.. _accounting/follow_up/follow-ups-for-one-customer:
+.. Screenshot: a single follow-up level form (e.g. "Repeated Reminder"), left column Level Name /
+   Due Days / Automatic / Final-Legal, right column Send Email + Email Template / Send SMS + SMS
+   Template / Send Letter / Attach Overdue Invoices / Show Late-payment Interest.
+
+In the :guilabel:`Activity` section, enable :guilabel:`Schedule Activity` to automatically create an
+:doc:`activity </applications/essentials/activities>` when the level is triggered, then set the
+activity type, responsible user, summary, and note.
+
+.. _accounting/follow_up/interest:
+
+Late-payment interest (informational)
+-------------------------------------
+
+To display a late-payment interest amount and, for business customers, a fixed collection fee on
+reminders, go to :menuselection:`Accounting --> Configuration --> Settings` and, in the
+:guilabel:`Customer Invoices` section, enable :guilabel:`Late-payment Interest on Reminders`:
+
+- :guilabel:`Late-payment Interest on Reminders`: turn the block on and set the annual interest
+  rate (in %).
+- :guilabel:`Collection fee (B2B)`: optionally add a fixed collection fee, applied only to company
+  (business) customers.
+
+The block is only shown on levels whose :guilabel:`Show Late-payment Interest` option is enabled.
+
+.. important::
+   These amounts are **display-only**. They are computed and shown on the reminder for information,
+   but the application **never** creates a journal entry — no interest or fee is posted to accounting.
+
+.. screenshot-pending: follow_up/interest-settings.png
+   :alt: Late-payment interest settings.
+
+.. Screenshot: Accounting ▸ Configuration ▸ Settings, the "Late-payment Interest on Reminders"
+   setting expanded, with the rate % field and the Collection fee (B2B) toggle + amount visible.
+
+.. _accounting/follow_up/process:
+
+Follow-up process
+=================
+
+.. note::
+   Reconcile all bank transactions before starting the follow-up process to avoid sending
+   reminders for invoices that have already been paid.
+
+.. _accounting/follow_up/one-customer:
 
 Follow-ups for one customer
 ---------------------------
 
-For a detailed overview of a customer's invoice follow-up status, go to :menuselection:`Accounting
---> Customers --> Customers`. Open the customer's form and click the :guilabel:`Accounting` tab. In
-the :guilabel:`Invoice follow-ups` section, click on the different levels to view the
-:guilabel:`Follow-up Status` of each level. If actions are needed, click :guilabel:`Overdue
-Invoices` to have a detailed list of the overdue invoices.
+For a detailed overview of a customer's follow-up status, go to :menuselection:`Accounting -->
+Customers --> Customers`, open the customer's form, and click the :guilabel:`Payment Follow-up` tab.
+The tab shows:
 
-Additional options can be set:
+- :guilabel:`Follow-up Status`: :guilabel:`No Action Needed`, :guilabel:`In Need of Action`, or
+  :guilabel:`With Overdue Invoices`.
+- :guilabel:`Next Follow-up Date`: the throttle date before which the customer will not be dunned
+  again; set automatically after a reminder is sent and manually adjustable.
+- :guilabel:`Follow-up Responsible`: the user who handles the follow-up.
+- :guilabel:`Total Overdue` and :guilabel:`Total Due`: the customer's overdue and total open
+  receivable amounts.
 
-- :guilabel:`Reminders`: These are either :guilabel:`Automatic` or :guilabel:`Manual`.
-- :guilabel:`Next reminder`: The date by which the next follow-up actions should be taken is
-  automatically set when follow-ups are processed, but can be manually adjusted if needed.
-- :guilabel:`Responsible`: The user who handles the follow-up actions.
+.. screenshot-pending: follow_up/partner-tab.png
+   :alt: Payment Follow-up tab on the customer form.
 
-To manually send a payment reminder to a customer, click :guilabel:`Send` and select the actions in
-the :guilabel:`Send and Print` window:
+.. Screenshot: a customer form open on the "Payment Follow-up" tab, showing Follow-up Status = In
+   Need of Action, Next Reminder, Responsible, Total Overdue / Total Due, the internal note, and the
+   "Send Reminder" button.
 
-- :guilabel:`Print`
-- :guilabel:`Email`
-- :guilabel:`Sms`
-- :guilabel:`By post`
-
-Enable the :guilabel:`Attach Invoices` option and change the :guilabel:`Content Template` if needed.
-Then, click :guilabel:`Send` or :guilabel:`Send & Print` to send the :ref:`follow-up report
-<accounting/follow_up/follow-up-report>`.
-
-
-.. seealso::
-   :doc:`/applications/essentials/in_app_purchase`
+Click :guilabel:`Send Reminder` to open the review window, adjust the :guilabel:`Level` if needed,
+and click :guilabel:`Send`. The reminder covers the customer's **full overdue statement**.
 
 .. note::
-   - The contact information on the invoice or the contact form is used to send the reminder.
-   - The chatter keeps a full record of all follow-up actions.
+   - The contact information on the customer form is used to send the reminder. A customer with no
+     usable contact for the chosen channel is skipped and the skip is recorded.
+   - The chatter keeps a full record of every follow-up action.
 
-.. _accounting/follow_up/follow-ups-for-all-customers:
+.. _accounting/follow_up/all-customers:
 
-Follow-ups for all customers due for action
--------------------------------------------
+Follow-ups for several customers
+--------------------------------
 
-After setting up the additional :ref:`follow-up
-<accounting/follow_up/follow-ups-for-one-customer>` options, review which customers have
-overdue invoices or require follow-up. To do so, go to :menuselection:`Accounting --> Customers -->
-Customers`. In the :guilabel:`Customers` kanban view, click the search bar and filter by
-:guilabel:`Overdue Invoices` or :guilabel:`Requires Follow-up`.
+To act on several customers at once, go to :menuselection:`Accounting --> Customers -->
+Customers`, switch to the list view, and select the customers requiring follow-up (filter by
+:guilabel:`With Overdue Invoices` to narrow the list). Then click :icon:`fa-cog` :guilabel:`(Actions)`
+and select :guilabel:`Send Payment Reminder`. A review window lists one line per customer with the
+resolved :guilabel:`Level`; adjust if needed and click :guilabel:`Send`. Each customer receives
+their full overdue statement. Customers whose overdue balance nets zero or negative are skipped
+automatically.
 
-To take follow-up actions for all relevant customers, switch to the list view and select the
-customers requiring follow-up. Then, click :icon:`fa-cog` :guilabel:`(Actions)` and select
-:guilabel:`Process Follow-ups` to send them the :ref:`follow-up report
-<accounting/follow_up/follow-up-report>`.
+.. _accounting/follow_up/invoice-bulk:
 
-.. _accounting/follow_up/reports:
+Follow-ups from the overdue invoices list
+-----------------------------------------
 
-Reports
-=======
+You can also start reminders from the invoices list. Go to :menuselection:`Accounting -->
+Customers --> Invoices`, filter on :guilabel:`Overdue`, and select the invoices to dun. Then click
+:icon:`fa-cog` :guilabel:`(Actions)` and select :guilabel:`Send Payment Reminder`. The selected
+invoices are grouped by customer in the review window.
 
-.. _accounting/follow_up/customer-statement:
+.. important::
+   Unlike the customer-level entry points, a reminder started from the invoices list is **scoped**:
+   it covers only the **selected** invoices (content, attachments, logged record, and interest),
+   not the customer's full statement.
 
-Customer statement
-------------------
+.. screenshot-pending: follow_up/invoice-bulk.png
+   :alt: Sending reminders from the overdue invoices list.
 
-To get a comprehensive overview of a customer's account status, click the :guilabel:`Customer
-Statement` smart button on the customer's form. This statement corresponds to the :ref:`Partner
-Ledger <accounting/invoices/partner-ledger>` report's portion specific to that customer.
+.. Screenshot: Accounting ▸ Customers ▸ Invoices list filtered on Overdue, several rows ticked, the
+   Actions (gear) menu open with "Send Payment Reminder" highlighted.
 
-To send it to the customer, click :guilabel:`Send`, change the :guilabel:`Email Template` if needed,
-and click :guilabel:`Print & Send`.
+.. _accounting/follow_up/automatic:
 
-To view the customer statements for multiple customers at once, select the customers from the
-:guilabel:`Customers` list view, click :icon:`fa-cog` :guilabel:`(Actions)`, and select
-:guilabel:`Open Customer Statements`.
+Automatic follow-ups
+--------------------
 
-Click :guilabel:`PDF` or :guilabel:`XLSX` to generate a PDF or XLSX file, respectively.
+A daily scheduled action (:guilabel:`Payment Follow-up: process overdue partners`) processes
+overdue customers automatically. By design it is **generate-then-review**: it only sends levels
+that are explicitly flagged :guilabel:`Automatic`. Levels left non-automatic are never sent by the
+cron and always require a manual review, so no reminder leaves the system unattended unless you
+opt a level in.
 
-.. _accounting/follow_up/follow-up-report:
+.. _accounting/follow_up/report:
 
-Follow-up report
-----------------
+Follow-up letter
+================
 
-To get a complete overview of a customer's due invoices, separating those that are due from those
-that are overdue, click the :ref:`Customer Statement <accounting/follow_up/customer-statement>`
-smart button on the customer's form. Then, click :icon:`fa-book` :guilabel:`Report: Customer
-Statement` and select :guilabel:`Follow-Up Report`.
+The reminder document is a plain A4 PDF letter listing the customer's overdue invoices, the totals,
+the optional :ref:`interest and collection-fee block <accounting/follow_up/interest>`, and — in the
+email — an online **Pay Now** link to the customer portal. The same content is shared between the
+PDF letter and the reminder email, so both always show the customer the same figures.
 
-To view the follow-up report for all customers at once, go to :menuselection:`Accounting -->
-Reporting --> Partner Ledger`. Then, click :icon:`fa-book` :guilabel:`Report:` and select
-:guilabel:`Follow-Up Report`.
+.. screenshot-pending: follow_up/report.png
+   :alt: Follow-up reminder letter PDF.
 
-Click :guilabel:`PDF` or :guilabel:`XLSX` to generate a PDF or XLSX file, respectively.
+.. Screenshot: the generated follow-up letter PDF — header with company details, the overdue
+   invoice table, totals, and (when enabled) the late-payment interest + collection-fee block.
+
+.. _accounting/follow_up/log:
+
+Follow-up log
+=============
+
+Every reminder that is sent — and every skipped customer — is written to an append-only audit
+trail. To review it, go to :menuselection:`Accounting --> Payment Follow-up --> Follow-up Log`. Each
+entry records the date, customer, level, channel (email, SMS, letter, portal, activity, or
+*skipped*), the invoices covered, and a note. Log entries cannot be edited or deleted.
+
+.. screenshot-pending: follow_up/log.png
+   :alt: Follow-up log.
+
+.. Screenshot: Accounting ▸ Payment Follow-up ▸ Follow-up Log list, several rows showing Date /
+   Customer / Level / Channel / Invoices / Note.

@@ -1954,7 +1954,7 @@ msgid ""
 "To access the *Gamification Tools* menu, first enable :ref:`developer-mode`."
 msgstr ""
 "A *Gamifikációs Eszközök* menü eléréséhez először engedélyezze a "
-":ref:`fejlesztői módot`."
+":ref:`fejlesztői módot <developer-mode>`."
 
 #: ../../content/applications/sales/crm/optimize/gamification.rst:29
 msgid ""
@@ -6589,8 +6589,7 @@ msgstr ""
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:0
 msgid "The Add: Salespersons pop-up window on a new sales team."
-msgstr ""
-"Az új értékesítési csapat :guilabel:`Hozzáadás: Értékesítők` felugró ablaka."
+msgstr "A Hozzáadás: Értékesítők felugró ablak egy új értékesítési csapaton."
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:54
 msgid ""
@@ -6607,7 +6606,7 @@ msgstr ""
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:None
 msgid "The Create Sales Team Members pop-up window."
-msgstr "Az :guilabel:`Értékesítési csapattagok létrehozása` felugró ablak."
+msgstr "Az Értékesítési csapattagok létrehozása felugró ablak."
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:62
 msgid ""
@@ -9361,7 +9360,7 @@ msgid ""
 "It is **not** possible to compile a complete report if the sales people are "
 "not using the *Activities* feature in the *chatter*"
 msgstr ""
-"Nem lehetséges teljes jelentést összeállítani, ha az értékesítők nem "
+"**Nem** lehetséges teljes jelentést összeállítani, ha az értékesítők nem "
 "használják az *Aktivitások* funkciót a *chatter*-ben."
 
 #: ../../content/applications/sales/crm/track_leads/unattended_leads_report.rst:47
@@ -10935,8 +10934,8 @@ msgid ""
 msgstr ""
 "A Wi-Fi/Ethernet kapcsolatot használó, az `EPOS SDK Javascript protocol "
 "<https://download4.epson.biz/sec_pubs/pos/reference_en/technology/epson_epos_sdk.html>`_"
-" protokollt követő Epson nyomtatók **IoT-rendszer** nélkül kompatibilisek az"
-" Odoo-val."
+" protokollt követő Epson nyomtatók **anélkül** kompatibilisek az Odoo-val, "
+"hogy **IoT-rendszerre** lenne szükség."
 
 #: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:58
 msgid ""
@@ -10944,7 +10943,7 @@ msgid ""
 "(Enterprise)."
 msgstr ""
 "Az ESC/POS protokollt használó termikus nyomtatók **IoT-rendszerrel** "
-"(Enterprise) kompatibilisek."
+"(Enterprise) **működnek együtt**."
 
 #: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:59
 msgid ""
@@ -10952,7 +10951,7 @@ msgid ""
 "system** (Enterprise)."
 msgstr ""
 "A kizárólag USB-kapcsolatot használó Epson nyomtatók **IoT-rendszerrel** "
-"(Enterprise) kompatibilisek."
+"(Enterprise) **működnek együtt**."
 
 #: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:61
 msgid "Epson printers that connect via Bluetooth are **not compatible**."
@@ -12803,7 +12802,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods.rst:23
 msgid ":doc:`payment_methods/terminals`."
-msgstr ":doc:`fizetési_módok/terminálok`."
+msgstr ":doc:`payment_methods/terminals`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods.rst:25
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:84
@@ -14778,7 +14777,7 @@ msgstr "Adja hozzá a fizetési módot egy POS-hoz"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:58
 msgid "To add a **payment method** to your point of sale:"
-msgstr "Fizetési mód hozzáadása az értékesítési ponthoz:"
+msgstr "**Fizetési mód** hozzáadása az értékesítési ponthoz:"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:61
 msgid "Select the POS in the :guilabel:`Point of Sale` field."
@@ -17603,9 +17602,9 @@ msgid ""
 " Footer` and fill in both fields with the information to be printed on the "
 "receipts."
 msgstr ""
-"A **fejléc** és **lábléc** testreszabásához aktiválja a :guilabel:`Fejléc & "
-"Lábléc` opciót, és töltse ki mindkét mezőt a nyugtákra nyomtatandó "
-"információkkal."
+"A **fejléc** és a **lábléc** **testreszabásához** aktiválja a "
+":guilabel:`Fejléc & Lábléc` opciót, és töltse ki mindkét mezőt a nyugtákra "
+"nyomtatandó információkkal."
 
 #: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:14
 msgid ""
@@ -18830,8 +18829,9 @@ msgid ""
 "codes as the number of available tables. In **shops**, it generates only one"
 " generic QR code."
 msgstr ""
-"Éttermekben a QR kódok nyomtatása vagy letöltése annyi QR kódot generál, "
-"ahány elérhető asztal van. Üzletekben csak egy általános QR kódot generál."
+"**Éttermekben** a QR-kódok nyomtatása vagy letöltése annyi QR-kódot generál,"
+" ahány elérhető asztal van. **Üzletekben** csak egyetlen általános QR-kódot "
+"generál."
 
 #: ../../content/applications/sales/point_of_sale/self_order.rst:41
 msgid "To customize QR codes,"
@@ -19052,7 +19052,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/self_order.rst:117
 msgid ":doc:`payment_methods`"
-msgstr ":doc:`fizetési_módok`"
+msgstr ":doc:`payment_methods`"
 
 #: ../../content/applications/sales/point_of_sale/self_order.rst:119
 msgid "Language"
@@ -19085,7 +19085,7 @@ msgstr "Adja hozzá ezeket a nyelveket az :guilabel:`Elérhető` mezőhöz."
 
 #: ../../content/applications/sales/point_of_sale/self_order.rst:131
 msgid ":doc:`../../general/users/language`"
-msgstr ":doc:`../../általános/felhasználók/nyelv`"
+msgstr ":doc:`../../general/users/language`"
 
 #: ../../content/applications/sales/point_of_sale/self_order.rst:133
 msgid "Splash screens"
@@ -19160,7 +19160,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/self_order.rst:158
 msgid ":doc:`pricing/fiscal_position`"
-msgstr ":doc:`árazás/fiskális_pozíció`"
+msgstr ":doc:`pricing/fiscal_position`"
 
 #: ../../content/applications/sales/point_of_sale/self_order.rst:161
 msgid "Preview"
@@ -19529,7 +19529,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/shop/sales_order.rst:47
 msgid ":doc:`/applications/sales/sales/invoicing/down_payment`"
-msgstr ":doc:`/alkalmazások/értékesítés/értékesítés/számlázás/előleg`"
+msgstr ":doc:`/applications/sales/sales/invoicing/down_payment`"
 
 #: ../../content/applications/sales/point_of_sale/shop/serial_numbers.rst:3
 msgid "Serial numbers and lots"
@@ -19591,7 +19591,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/shop/serial_numbers.rst:37
 msgid ":doc:`../shop/sales_order`"
-msgstr ":doc:`../bolt/értékesítési_rendelés`"
+msgstr ":doc:`../shop/sales_order`"
 
 #: ../../content/applications/sales/point_of_sale/shop/serial_numbers.rst:40
 msgid "Serial numbers and lots creation"
@@ -19638,13 +19638,13 @@ msgstr ""
 msgid ""
 ":doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers`"
 msgstr ""
-":doc:`/alkalmazások/készlet_és_mrp/készlet/termékmenedzsment/termékkövetés/sorozatszámok`"
+":doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers`"
 
 #: ../../content/applications/sales/point_of_sale/shop/serial_numbers.rst:60
 msgid ""
 ":doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots`"
 msgstr ""
-":doc:`/alkalmazások/készlet_és_mrp/készlet/termékmenedzsment/termékkövetés/tételek`"
+":doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots`"
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:3
 msgid "Ship later"
@@ -19711,13 +19711,13 @@ msgstr ""
 msgid ""
 ":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration`"
 msgstr ""
-":doc:`../../../készlet_és_mrp/készlet/szállítás_fogadás/beállítás_konfiguráció`"
+":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration`"
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:29
 msgid ""
 ":doc:`../../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses`"
 msgstr ""
-":doc:`../../../készlet_és_mrp/készlet/raktárak_tárolás/készletmenedzsment/raktárak`"
+":doc:`../../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses`"
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:34
 msgid ":ref:`Open a session <pos/session-start>` and make a sale."
@@ -19946,7 +19946,7 @@ msgstr ""
 
 #: ../../content/applications/sales/rental.rst:78
 msgid ":doc:`rental/manage_deposits`"
-msgstr ":doc:`bérlés/betétek_kezelése`"
+msgstr ":doc:`rental/manage_deposits`"
 
 #: ../../content/applications/sales/rental.rst:83
 msgid "Rental pricing"
@@ -23233,7 +23233,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/invoicing/proforma.rst:71
 #: ../../content/applications/sales/sales/invoicing/time_materials.rst:166
 msgid ":doc:`invoicing_policy`"
-msgstr ":doc:`szamlazasi_politika`"
+msgstr ":doc:`invoicing_policy`"
 
 #: ../../content/applications/sales/sales/invoicing/expense.rst:3
 msgid "Reinvoice expenses to customers"
@@ -26617,9 +26617,9 @@ msgid ""
 msgstr ""
 ":guilabel:`Minimális vásárlás`: Adja meg a minimálisan elköltendő összeget "
 "(pénznemben), :guilabel:`adóval együtt` vagy :guilabel:`adó nélkül`, a "
-"jutalom eléréséhez. Ha mind minimális mennyiség, mind minimális vásárlási "
-"összeg meg van adva, akkor az ügyfél rendelésének mindkét feltételt "
-"teljesítenie kell."
+"jutalom eléréséhez. Ha minimális mennyiség *és* minimális vásárlási összeg "
+"is meg van adva, akkor az ügyfél rendelésének mindkét feltételt teljesítenie"
+" kell."
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:147
 msgid ""
@@ -28503,8 +28503,8 @@ msgid ""
 "In order to import product relations, the records of the related object "
 "**must** be imported *first* from their own list menu."
 msgstr ""
-"A termék kapcsolatok importálásához a kapcsolódó objektum rekordjait "
-"**először** a saját listamenüjükből kell importálni."
+"A termékkapcsolatok importálásához a kapcsolódó objektum rekordjait "
+"*először* a saját listamenüjükből **kell** importálni."
 
 #: ../../content/applications/sales/sales/products_prices/products/import.rst:142
 msgid "Relation fields"
@@ -28600,9 +28600,9 @@ msgid ""
 "dedicated to attributes and values **must** be imported and uploaded before "
 "they can be used for other products."
 msgstr ""
-"Az attribútumok és értékek importálásához külön táblázatot vagy CSV fájlt "
-"kell importálni és feltölteni, mielőtt más termékekhez használhatók "
-"lennének."
+"Az attribútumok és értékek importálásához külön, kifejezetten az "
+"attribútumoknak és értékeknek szánt táblázatot vagy CSV-fájlt **kell** "
+"importálni és feltölteni, mielőtt más termékekhez használhatók lennének."
 
 #: ../../content/applications/sales/sales/products_prices/products/import.rst:176
 msgid ""
@@ -28783,8 +28783,9 @@ msgid ""
 "followed by a space, in the product import template spreadsheet (e.g. "
 "`furniture,couch,home`)."
 msgstr ""
-"Több érték importálásához csak vesszővel válassza el őket, **ne** vesszővel "
-"és szóközzel, a termékimport sablon táblázatban (pl. `bútor,kanapé,otthon`)."
+"Több érték importálásához *csak* vesszővel válassza el őket, **ne** "
+"vesszővel és szóközzel, a termékimport sablon táblázatban (pl. "
+"`bútor,kanapé,otthon`)."
 
 #: ../../content/applications/sales/sales/products_prices/products/import.rst:244
 msgid ""
@@ -28823,7 +28824,7 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/products_prices/products/import.rst:256
 msgid ":doc:`variants`"
-msgstr ":doc:`változatok`"
+msgstr ":doc:`variants`"
 
 #: ../../content/applications/sales/sales/products_prices/products/product_images.rst:3
 msgid "Product images with Google Images"
@@ -31346,7 +31347,7 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:329
 msgid ":doc:`deadline`"
-msgstr ":doc:`határidő`"
+msgstr ":doc:`deadline`"
 
 #: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:330
 #: ../../content/applications/sales/sales/sales_quotations/get_paid_to_validate.rst:90
@@ -34503,8 +34504,8 @@ msgid ""
 "In order to force the synchronization of an order, whose status has **not** "
 "changed since the previous synchronization:"
 msgstr ""
-"Annak érdekében, hogy kényszerítse egy rendelés szinkronizálását, amelynek "
-"állapota az **előző szinkronizálás** óta **nem** változott:"
+"Egy olyan rendelés szinkronizálásának kikényszerítéséhez, amelynek állapota "
+"az előző szinkronizálás óta **nem** változott:"
 
 #: ../../content/applications/sales/sales/shopee_connector/manage.rst:71
 msgid ""
@@ -34848,9 +34849,9 @@ msgid ""
 "**Shopee Open account** prior to completing the configuration."
 msgstr ""
 "Az Odoo lehetővé teszi a felhasználók számára, hogy szinkronizáljanak a "
-"Shopee Eladó fiókkal az adatbázisban, de a felhasználóknak **regisztrált "
-"Shopee Eladó fiókkal** és **Shopee Open fiókkal** kell rendelkezniük a "
-"konfiguráció befejezése előtt."
+"Shopee Eladó fiókkal az adatbázisban, de a felhasználóknak a konfiguráció "
+"befejezése előtt **rendelkezniük kell** egy regisztrált **Shopee Eladó "
+"fiókkal** és egy **Shopee Open fiókkal**."
 
 #: ../../content/applications/sales/sales/shopee_connector/setup.rst:9
 msgid ""
@@ -37056,7 +37057,7 @@ msgid ""
 ":menuselection:`Subscriptions --> Configuration --> Close Reasons`."
 msgstr ""
 "Az ügyfelek *csak* előre konfigurált okot választhatnak az előfizetés "
-"lezárására. Nem adhatnak meg egyedi okot az ügyfélportálon. Ezek a "
+"lezárására. Egyedi okot *nem* adhatnak meg az ügyfélportálon. Ezek a "
 "választások a következő útvonalon módosíthatók: :menuselection:`Előfizetések"
 " --> Konfiguráció --> Lezárási okok`."
 
@@ -39046,8 +39047,8 @@ msgid ""
 "The related sales order viewable from the Sales History smart button in Odoo"
 " Subscriptions."
 msgstr ""
-"A kapcsolódó értékesítési rendelés megtekinthető az Odoo Subscriptions "
-":guilabel:`Sales History` okos gombjából."
+"A kapcsolódó értékesítési rendelés, amely az Odoo Előfizetések Sales History"
+" okos gombjából tekinthető meg."
 
 #: ../../content/applications/sales/withdrawal.rst:3
 msgid "Right of withdrawal"

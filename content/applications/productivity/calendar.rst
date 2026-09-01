@@ -6,7 +6,7 @@ Calendar
 
 Odoo **Calendar** is a scheduling app that allows users to integrate a company's business flow into
 a single management platform. By integrating with the other apps in Odoo's ecosystem, **Calendar**
-allows users to schedule and organize meetings, schedule events, plan employee appraisals,
+allows users to schedule and organize meetings, schedule events, plan performance reviews,
 coordinate projects, and more – all from the same platform.
 
 Upon opening the :menuselection:`Calendar app`, users have an overview of their current meetings.

@@ -153,7 +153,7 @@ Cash on delivery
 The module ships a payment provider named :guilabel:`FoxPost COD, with credit card at parcelmachine
 or at delivery`, letting the customer pay in cash or by card when picking up the parcel. Like every
 payment provider, it installs disabled: enable and publish it under :menuselection:`Website -->
-Configuration --> Payment Providers` to offer it at checkout.
+Configuration --> eCommerce: Payment Providers` to offer it at checkout.
 
 The provider only appears on the payment step when a published Foxpost shipping method serves the
 website and the cart contains physical goods, and its :guilabel:`Maximum Amount` is preset to
@@ -234,7 +234,7 @@ with Foxpost and immediately downloads its label:
 
 Parcel registration on validation requires the method's :guilabel:`Integration Level` to be
 :guilabel:`Get Rate and Create Shipment` and the :guilabel:`Generate Shipping Labels` option to be
-enabled on the operation type (:menuselection:`Inventory app --> Configuration --> Operation
+enabled on the operation type (:menuselection:`Inventory app --> Configuration --> Operations
 Types`); both are the defaults for delivery operations.
 
 If the label download fails (a network hiccup after a successful registration, for example), the
@@ -289,7 +289,7 @@ Summary checklist for a working Foxpost setup:
 
 #. To offer COD, enable and publish the :guilabel:`FoxPost COD, with credit card at
    parcelmachine or at delivery` payment provider under :menuselection:`Website --> Configuration
-   --> Payment Providers`.
+   --> eCommerce: Payment Providers`.
 #. Add the shop's other payment providers (card, wire transfer) to each Foxpost method's
    :guilabel:`Payment Providers` tab, so COD is not the only choice (see
    :doc:`../delivery_payment`).

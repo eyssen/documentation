@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-17 08:58+0000\n"
+"POT-Creation-Date: 2026-07-20 19:20+0200\n"
 "PO-Revision-Date: 2026-02-27 00:00+0000\n"
 "Last-Translator: eYssen\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -15,157 +15,388 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "What are you looking for?"
-msgstr "Mit keres?"
-
-msgid "eYssen (Odoo) Documentation"
-msgstr "eYssen (Odoo) dokumentáció"
-
-msgid "User Docs"
-msgstr "Felhasználói dokumentáció"
-
+#: ../../extensions/odoo_theme/layout_templates/footer.html:8
 msgid ""
-"Discover our guide to help you use and configure the platform, by\n"
-"                    applications."
-msgstr "Fedezze fel útmutatóinkat az alkalmazásokhoz tartozó használati és konfigurációs leírásokhoz."
+"Open-source ERP platform documentation. Built with Sphinx, styled with care."
+msgstr ""
+"Nyílt forráskódú ERP-platform dokumentációja. Sphinxszel készült, gondos "
+"kivitelben."
 
-msgid "Top Apps"
-msgstr "Főbb alkalmazások"
-
-msgid "Accounting"
-msgstr "Könyvelés"
-
-msgid "Inventory"
-msgstr "Készletkezelés"
-
-msgid "Manufacturing"
-msgstr "Gyártás"
-
-msgid "Point of Sale"
-msgstr "Pénztárrendszer"
-
-msgid "Install and\n"
-"                        Maintain"
-msgstr "Telepítés és karbantartás"
-
-msgid "Learn how to install, deploy and upgrade Odoo on premise or on Odoo.sh."
-msgstr "Tanulja meg az Odoo telepítését, üzembe helyezését és frissítését helyszínen vagy Odoo.sh-on."
-
-msgid "Installing Odoo"
-msgstr "Odoo telepítése"
-
-msgid "Bugfix updates"
-msgstr "Hibajavítási frissítések"
-
-msgid "Upgrading Odoo"
-msgstr "Odoo frissítése"
-
-msgid "Odoo.sh: The Odoo Cloud Platform"
-msgstr "Odoo.sh: Az Odoo felhőplatform"
-
-msgid "Developer"
-msgstr "Fejlesztő"
-
+#: ../../extensions/odoo_theme/layout_templates/footer.html:9
 msgid ""
-"Learn to develop in Odoo with the developer tutorials and framework\n"
-"                    references."
-msgstr "Tanulja meg az Odoo fejlesztését fejlesztői oktatóanyagokkal és keretrendszer-referenciákkal."
+"<strong>eYssen</strong> is a fork and enhanced version of Odoo Community, "
+"tailored specifically to the practical needs of <strong>small and medium-"
+"sized businesses</strong>."
+msgstr ""
+"Az <strong>eYssen</strong> az Odoo Community forkja és továbbfejlesztett "
+"változata, kifejezetten a <strong>kis- és középvállalkozások</strong> "
+"gyakorlati igényeire szabva."
 
-msgid "Top Links"
-msgstr "Főbb hivatkozások"
-
-msgid "Tutorials"
-msgstr "Oktatóanyagok"
-
-msgid "How-to guides"
-msgstr "Útmutatók"
-
-msgid "Reference"
-msgstr "Hivatkozás"
-
-msgid "External API"
-msgstr "Külső API"
-
-msgid "Contributing"
-msgstr "Hozzájárulás"
-
-msgid ""
-"You want to contribute to Odoo but don't know where to start? The tutorials\n"
-"                    and guidelines are there to help you make Odoo even better."
-msgstr "Hozzá szeretne járulni az Odoo-hoz, de nem tudja, hol kezdje? Az oktatóanyagok és irányelvek segítenek az Odoo fejlesztésében."
-
-msgid "Coding guidelines"
-msgstr "Kódolási irányelvek"
-
+#: ../../extensions/odoo_theme/layout_templates/footer.html:12
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:100
 msgid "Documentation"
 msgstr "Dokumentáció"
 
-msgid "Content guidelines"
+#: ../../extensions/odoo_theme/layout_templates/footer.html:13
+msgid "Applications"
+msgstr "Alkalmazások"
+
+#: ../../extensions/odoo_theme/layout_templates/footer.html:14
+msgid "Administration"
+msgstr "Adminisztráció"
+
+#: ../../extensions/odoo_theme/layout_templates/footer.html:15
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:81
+msgid "Developer"
+msgstr "Fejlesztő"
+
+#: ../../extensions/odoo_theme/layout_templates/footer.html:16
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:95
+msgid "Contributing"
+msgstr "Hozzájárulás"
+
+#: ../../extensions/odoo_theme/layout_templates/footer.html:19
+msgid "Resources"
+msgstr "Források"
+
+#: ../../extensions/odoo_theme/layout_templates/footer.html:20
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:40
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:85
+msgid "Tutorials"
+msgstr "Oktatóanyagok"
+
+#: ../../extensions/odoo_theme/layout_templates/footer.html:21
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:33
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:88
+msgid "External API"
+msgstr "Külső API"
+
+#: ../../extensions/odoo_theme/layout_templates/footer.html:22
+msgid "Changelog"
+msgstr "Változásnapló"
+
+#: ../../extensions/odoo_theme/layout_templates/footer.html:25
+msgid "Community"
+msgstr "Közösség"
+
+#: ../../extensions/odoo_theme/layout_templates/footer.html:27
+msgid "Support"
+msgstr "Támogatás"
+
+#: ../../extensions/odoo_theme/layout_templates/footer.html:32
+msgid "Version"
+msgstr "Verzió"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:4
+msgid "eYssen Documentation"
+msgstr "eYssen dokumentáció"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:5
+msgid "Master"
+msgstr "Ismerjen meg"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:5
+msgid "every"
+msgstr "minden"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:5
+msgid "feature"
+msgstr "funkciót"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:5
+msgid "of your platform"
+msgstr "a platformján"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:6
+msgid ""
+"Guides, API references, and tutorials to help you configure, develop, and "
+"extend eYssen - Odoo fork."
+msgstr ""
+"Útmutatók, API-referenciák és oktatóanyagok az eYssen (Odoo fork) "
+"beállításához, fejlesztéséhez és bővítéséhez."
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:14
+msgid "Quick Start"
+msgstr "Gyorsindítás"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:19
+msgid "Getting Started"
+msgstr "Első lépések"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:20
+msgid "First-time setup guide"
+msgstr "Útmutató az első beállításhoz"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:26
+msgid "Installation"
+msgstr "Telepítés"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:27
+msgid "Deploy on-premise or cloud"
+msgstr "Üzembe helyezés saját szerveren vagy felhőben"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:34
+msgid "REST & XML-RPC reference"
+msgstr "REST- és XML-RPC-referencia"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:41
+msgid "Learn step-by-step"
+msgstr "Tanuljon lépésről lépésre"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:47
+msgid "Browse by Category"
+msgstr "Böngészés kategóriák szerint"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:52
+msgid "User Docs"
+msgstr "Felhasználói dokumentáció"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:54
+msgid ""
+"Configure and use all platform applications. Step-by-step guides organized "
+"by module."
+msgstr ""
+"Állítsa be és használja a platform összes alkalmazását. Lépésről lépésre "
+"haladó útmutatók modulonként."
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:56
+msgid "Accounting"
+msgstr "Könyvelés"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:57
+msgid "Inventory"
+msgstr "Készletkezelés"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:58
+msgid "Manufacturing"
+msgstr "Gyártás"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:59
+msgid "Point of Sale"
+msgstr "Pénztárrendszer"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:60
+msgid "CRM"
+msgstr "CRM"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:67
+msgid "Install & Maintain"
+msgstr "Telepítés és karbantartás"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:69
+msgid ""
+"Deploy, configure, and upgrade your instance. On-premise, Docker, and cloud "
+"options covered."
+msgstr ""
+"Helyezze üzembe, állítsa be és frissítse a példányát. Saját szerveres, "
+"Dockeres és felhős lehetőségekkel."
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:71
+msgid "Installing"
+msgstr "Telepítés"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:72
+msgid "Upgrading"
+msgstr "Verziófrissítés"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:73
+msgid "Bugfix Updates"
+msgstr "Hibajavítási frissítések"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:74
+msgid "Cloud Platform"
+msgstr "Felhőplatform"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:83
+msgid ""
+"Build modules, extend functionality, and integrate with external systems. "
+"Full framework reference."
+msgstr ""
+"Készítsen modulokat, bővítse a funkciókat, és kapcsolódjon külső "
+"rendszerekhez. Teljes keretrendszer-referencia."
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:86
+msgid "How-to Guides"
+msgstr "Útmutatók"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:87
+msgid "Reference"
+msgstr "Referencia"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:97
+msgid ""
+"Help improve the platform. Follow coding guidelines, documentation "
+"standards, and workflows."
+msgstr ""
+"Segítsen jobbá tenni a platformot. Kövesse a kódolási irányelveket, a "
+"dokumentációs szabványokat és a munkafolyamatokat."
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:99
+msgid "Coding Guidelines"
+msgstr "Kódolási irányelvek"
+
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:101
+msgid "Content Guidelines"
 msgstr "Tartalmi irányelvek"
 
-msgid "On this page"
-msgstr "Ezen az oldalon"
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:107
+msgid "Recent Updates"
+msgstr "Legutóbbi frissítések"
 
-msgid "See also"
-msgstr "Lásd még"
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:110
+msgid "What's New"
+msgstr "Újdonságok"
 
-msgid "Read"
-msgstr "Olvasás"
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:133
+msgid "Need help getting started?"
+msgstr "Segítségre van szüksége a kezdéshez?"
 
-msgid "Get Help"
-msgstr "Segítség kérése"
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:134
+msgid "Browse our tutorials or reach out to the community for support."
+msgstr "Böngéssze oktatóanyagainkat, vagy kérjen segítséget a közösségtől."
 
-msgid "Take a look eYssen"
-msgstr "Nézze meg az eYssen-t"
+#: ../../extensions/odoo_theme/layout_templates/homepage.html:136
+msgid "Browse Tutorials"
+msgstr "Oktatóanyagok böngészése"
 
-msgid "English"
-msgstr "English"
-
+#: ../../extensions/odoo_theme/layout_templates/legal.html:4
 msgid "Legal"
 msgstr "Jogi"
 
+#: ../../extensions/odoo_theme/layout_templates/legal.html:10
+#: ../../extensions/odoo_theme/layout_templates/legal.html:17
 msgid "Licenses"
 msgstr "Licencek"
 
-msgid "Odoo Enterprise Agreement"
-msgstr "Odoo Enterprise Megállapodás"
-
-msgid "Odoo Partnership Agreement"
-msgstr "Odoo Partnerségi Megállapodás"
-
-msgid "Odoo Cloud Acceptable Use Policy"
-msgstr "Odoo Cloud Elfogadható Használati Szabályzat"
-
-msgid "Odoo Cloud Service Level Agreement (SLA)"
-msgstr "Odoo Cloud Szolgáltatási Szint Megállapodás (SLA)"
-
-msgid "Contributor License Agreement"
-msgstr "Közreműködői licencszerződés"
-
-msgid "Odoo SA's Privacy Policy"
-msgstr "Odoo SA adatvédelmi szabályzata"
-
-msgid "Odoo SA's GDPR Compliance Guide"
-msgstr "Odoo SA GDPR megfelelőségi útmutatója"
-
-msgid "German Tax Accounting Standards: Odoo's guide to GoBD Compliance"
-msgstr "Német adókönyvelési szabványok: Odoo útmutatója a GoBD megfelelőséghez"
-
+#: ../../extensions/odoo_theme/layout_templates/legal.html:25
 msgid "Terms and Conditions"
 msgstr "Általános Szerződési Feltételek"
 
+#: ../../extensions/odoo_theme/layout_templates/legal.html:34
+msgid "Odoo Enterprise Agreement"
+msgstr "Odoo Enterprise Megállapodás"
+
+#: ../../extensions/odoo_theme/layout_templates/legal.html:36
+msgid "Applies to self-hosting, Odoo.SH and Odoo Cloud."
+msgstr "Érvényes az önálló üzemeltetésre, az Odoo.SH-ra és az Odoo Cloudra."
+
+#: ../../extensions/odoo_theme/layout_templates/legal.html:40
+#: ../../extensions/odoo_theme/layout_templates/legal.html:42
+#: ../../extensions/odoo_theme/layout_templates/legal.html:59
+#: ../../extensions/odoo_theme/layout_templates/legal.html:61
+#: ../../extensions/odoo_theme/layout_templates/legal.html:78
+#: ../../extensions/odoo_theme/layout_templates/legal.html:80
+msgid "Read"
+msgstr "Olvasás"
+
+#: ../../extensions/odoo_theme/layout_templates/legal.html:43
+#: ../../extensions/odoo_theme/layout_templates/legal.html:62
+#: ../../extensions/odoo_theme/layout_templates/legal.html:81
+msgid "English"
+msgstr "English"
+
+#: ../../extensions/odoo_theme/layout_templates/legal.html:54
+msgid "Odoo Partnership Agreement"
+msgstr "Odoo Partnerségi Megállapodás"
+
+#: ../../extensions/odoo_theme/layout_templates/legal.html:73
 msgid "Terms Of Sale"
 msgstr "Értékesítési feltételek"
 
+#: ../../extensions/odoo_theme/layout_templates/legal.html:90
+msgid "See also"
+msgstr "Lásd még"
+
+#: ../../extensions/odoo_theme/layout_templates/legal.html:93
 msgid "Archive of older agreements"
 msgstr "Régebbi megállapodások archívuma"
 
+#: ../../extensions/odoo_theme/layout_templates/legal.html:99
 msgid "Other legal references"
 msgstr "Egyéb jogi hivatkozások"
 
-msgid "Applies to self-hosting, Odoo.SH and Odoo Cloud."
-msgstr "Érvényes az önálló hosztingra, az Odoo.SH-ra és az Odoo Cloud-ra."
+#: ../../extensions/odoo_theme/layout_templates/legal.html:105
+msgid "Odoo Cloud Service Level Agreement (SLA)"
+msgstr "Odoo Cloud Szolgáltatási Szint Megállapodás (SLA)"
 
-msgid "Contact\n"
-"                Support"
-msgstr "Kapcsolatfelvétel a Támogatással"
+#: ../../extensions/odoo_theme/layout_templates/legal.html:110
+msgid "Odoo Cloud Acceptable Use Policy"
+msgstr "Odoo Cloud Elfogadható Használati Szabályzat"
+
+#: ../../extensions/odoo_theme/layout_templates/legal.html:115
+msgid "Odoo SA’s Privacy Policy"
+msgstr "Odoo SA adatvédelmi szabályzata"
+
+#: ../../extensions/odoo_theme/layout_templates/legal.html:120
+msgid "Odoo SA’s GDPR Compliance Guide"
+msgstr "Odoo SA GDPR-megfelelőségi útmutatója"
+
+#: ../../extensions/odoo_theme/layout_templates/legal.html:126
+msgid "Contributor License Agreement"
+msgstr "Közreműködői licencszerződés"
+
+#: ../../extensions/odoo_theme/layout_templates/legal.html:133
+msgid "German Tax Accounting Standards: Odoo’s guide to GoBD Compliance"
+msgstr ""
+"Német adókönyvelési szabványok: az Odoo útmutatója a GoBD-megfelelőséghez"
+
+#: ../../extensions/odoo_theme/layout_templates/page_toc.html:2
+msgid "On this page"
+msgstr "Ezen az oldalon"
+
+#: ../../extensions/odoo_theme/layout_templates/searchbox.html:4
+msgid "What are you looking for?"
+msgstr "Mit keres?"
+
+#: ../../extensions/odoo_theme/search.html:10
+msgid "Please activate JavaScript to enable the search functionality."
+msgstr "A keresés használatához engedélyezze a JavaScriptet."
+
+#~ msgid ""
+#~ "Discover our guide to help you use and configure the platform, by\n"
+#~ "                    applications."
+#~ msgstr ""
+#~ "Fedezze fel útmutatóinkat az alkalmazásokhoz tartozó használati és "
+#~ "konfigurációs leírásokhoz."
+
+#~ msgid "Top Apps"
+#~ msgstr "Főbb alkalmazások"
+
+#~ msgid ""
+#~ "Install and\n"
+#~ "                        Maintain"
+#~ msgstr "Telepítés és karbantartás"
+
+#~ msgid ""
+#~ "Learn how to install, deploy and upgrade Odoo on premise or on Odoo.sh."
+#~ msgstr ""
+#~ "Tanulja meg az Odoo telepítését, üzembe helyezését és frissítését helyszínen"
+#~ " vagy Odoo.sh-on."
+
+#~ msgid ""
+#~ "Learn to develop in Odoo with the developer tutorials and framework\n"
+#~ "                    references."
+#~ msgstr ""
+#~ "Tanulja meg az Odoo fejlesztését fejlesztői oktatóanyagokkal és "
+#~ "keretrendszer-referenciákkal."
+
+#~ msgid "Top Links"
+#~ msgstr "Főbb hivatkozások"
+
+#~ msgid ""
+#~ "You want to contribute to Odoo but don't know where to start? The tutorials\n"
+#~ "                    and guidelines are there to help you make Odoo even better."
+#~ msgstr ""
+#~ "Hozzá szeretne járulni az Odoo-hoz, de nem tudja, hol kezdje? Az "
+#~ "oktatóanyagok és irányelvek segítenek az Odoo fejlesztésében."
+
+#~ msgid "Get Help"
+#~ msgstr "Segítség kérése"
+
+#~ msgid "Take a look eYssen"
+#~ msgstr "Nézze meg az eYssen-t"
+
+#~ msgid ""
+#~ "Contact\n"
+#~ "                Support"
+#~ msgstr "Kapcsolatfelvétel a Támogatással"

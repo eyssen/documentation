@@ -62,7 +62,35 @@ Open :menuselection:`AI --> Write Proposals` to:
 
 - read the human-readable :guilabel:`Summary`;
 - inspect model, operation, target id and values;
-- **Apply** or **Cancel** while the proposal is still *Pending*.
+- **Apply** or **Cancel** while the proposal is still *Pending*;
+- use :guilabel:`Open record` to jump to the existing target document (write /
+  delete / action on a live id — not available for pure creates).
+
+For **agent** proposals the supervisor also receives a **To-Do** on the target
+business record when possible (e.g. the vendor bill), with a chatter note and a
+fallback activity on the agent task for creates without an id yet. That
+activity is a pointer into the proposal workflow; applying or cancelling the
+proposal closes it. See :ref:`ai/agents/task-write-mode`.
+
+An agent proposal can be refused at apply time even while it still reads
+*Pending*. If the run that proposed it was stopped on request, or closed by the
+stuck-run reaper because its worker died, :guilabel:`Apply` answers *The agent
+run that proposed this write was stopped before it finished, so this proposal
+can no longer be approved.* A run that somebody else declared over may no longer
+authorise a change, so the work has to be re-requested rather than approved —
+see :ref:`ai/agents/cancel`. Usually such a proposal has already been cancelled
+or expired with its run; where the row survives, this is what you meet.
+Proposals from a run that ended on its own stay approvable
+until they expire, and :guilabel:`Cancel` is never refused for this reason.
+
+.. note::
+   Even with Write enabled, the gate refuses fields that also write into a
+   different model — a lead's email address, or a product on an invoice line.
+   The refusal names the model and the field it would not write; for a line
+   inside :guilabel:`Invoice lines` it names that parent field rather than the
+   line's own. It does not say why, so ask an administrator to check
+   :ref:`ai/policy/cross-model`. Such a refusal is a configuration boundary: it
+   records no violation and costs you no strike.
 
 Chat vs agent proposals
 -----------------------
@@ -70,16 +98,34 @@ Chat vs agent proposals
 +---------------------+----------------------------------+----------------------------------+
 |                     | Interactive chat                 | Autonomous agent run             |
 +=====================+==================================+==================================+
-| Controlled by       | :guilabel:`Write mode` setting   | Always confirm (including        |
-|                     |                                  | create)                          |
+| Controlled by       | Global :guilabel:`Write mode` in | The **task's**                   |
+|                     | Settings                         | :guilabel:`Write mode`           |
+|                     |                                  | (default *confirm*; see          |
+|                     |                                  | :ref:`ai/agents/task-write-mode`)|
 +---------------------+----------------------------------+----------------------------------+
-| Approver            | Usually the chatting user        | Agent **supervisor**             |
+| Approver            | Usually the chatting user        | Agent **supervisor** (when the   |
+|                     |                                  | task mode still proposes)        |
 +---------------------+----------------------------------+----------------------------------+
-| Default TTL         | 60 minutes (configurable)        | 1440 minutes (configurable)      |
+| Default TTL         | 60 minutes (configurable)        | 1440 minutes (configurable),     |
+|                     |                                  | only while its run is open       |
 +---------------------+----------------------------------+----------------------------------+
 | Acting identity on  | The chat user                    | The **agent user** (from the     |
 | apply               |                                  | run), not the supervisor         |
 +---------------------+----------------------------------+----------------------------------+
+| Systray nudge       | Chat card / own proposals list   | To-Do on the **business record** |
+|                     |                                  | when possible, else on the task  |
++---------------------+----------------------------------+----------------------------------+
+
+.. note::
+   The agent lifetime applies only while the proposing run is still open. Once
+   that run has ended — :guilabel:`Done`, :guilabel:`Failed` or
+   :guilabel:`Timed out` — the **AI: Expire pending writes** scheduled action
+   expires its remaining proposals on its next pass, at most 15 minutes later,
+   whatever the lifetime says. The case that catches supervisors out is a run
+   that overran its own time limit: it closes as :guilabel:`Timed out` while
+   still holding open proposals. Review proposals from failed and timed-out runs
+   promptly. If you open a :guilabel:`To-Do` for a proposal that no longer
+   exists, mark the activity done: the proposal expired with its run.
 
 .. important::
    Approving an agent proposal means: "I authorise this agent to perform this
@@ -87,10 +133,10 @@ Chat vs agent proposals
    broader rights than necessary to review the summary — execution rights come
    from the agent user + policy at apply time.
 
-Write modes (chat only)
------------------------
+Write modes
+-----------
 
-Configured under :menuselection:`AI --> Configuration --> Settings`:
+**Interactive chat** — under :menuselection:`AI --> Configuration --> Settings`:
 
 - **Apply automatically** — every create/write/delete/file tool runs immediately.
   Highest risk.
@@ -98,7 +144,15 @@ Configured under :menuselection:`AI --> Configuration --> Settings`:
 - **Create automatically, confirm updates** (*hybrid*, default) — only *new*
   records auto-apply; updates, deletes and file attaches wait for confirmation.
 
-TTL of 0 disables expiry for that class of proposals.
+**Agent runs** — same three values, but on the **task** form
+(:guilabel:`Write mode`), defaulting to *Always require confirmation*. The
+Settings value does not apply to agent runs. Use *auto* or *hybrid* only when
+the standing instruction and skills keep risk bounded (draft-only fills, no
+posting, no payments). Details: :ref:`ai/agents/task-write-mode`.
+
+A TTL of 0 disables expiry **by age** for that class of proposals. It does not
+disable the sweep described above: a proposal whose agent run has already ended
+is expired however long you are prepared to wait for an approval.
 
 Navigating the UI
 =================

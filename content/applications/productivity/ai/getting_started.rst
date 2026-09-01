@@ -68,7 +68,11 @@ Out of the box the platform is intentionally cautious:
 | **customize**, **action** |                                               |
 +---------------------------+-----------------------------------------------+
 | Access policy defaults    | read **allow**; create / write / delete       |
-|                           | **deny**                                      |
+|                           | **deny** at model level                       |
++---------------------------+-----------------------------------------------+
+| Field-level write allows  | Nine field-scoped write rules on              |
+|                           | ``account.move`` / ``account.move.line``      |
+|                           | (:doc:`access_policy`)                        |
 +---------------------------+-----------------------------------------------+
 | Chat write mode           | **hybrid** (auto-create; confirm update /     |
 |                           | delete / file attach)                         |
@@ -78,6 +82,17 @@ Out of the box the platform is intentionally cautious:
 | Support Assistant agent   | Present but **inactive** until you link a     |
 |                           | user and open channel audiences               |
 +---------------------------+-----------------------------------------------+
+
+Those nine field-level rules exist so the invoice / vendor-bill flow keeps
+working, and they are seeded only where **Accounting** is installed. Nothing
+writes while the Write capability is off, so they take effect only once you
+enable it.
+
+.. tip::
+   Once Write is on, expect some ordinary fields to be refused anyway, because
+   writing them also writes a second model. The refusal names the model and the
+   fields it would not write, but not the reason — read
+   :ref:`ai/policy/cross-model` before you conclude that policy is broken.
 
 First conversation
 ==================

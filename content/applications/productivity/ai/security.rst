@@ -13,9 +13,10 @@ Security
      under Odoo ACLs — and, by default, the AI access policy allows *read*
      unless you tighten it.
    - **Create, change or delete records** once Write / Delete capabilities and
-     access-policy rules allow it — including through unattended agent runs if
-     a supervisor later approves a proposal, or instantly in chat write mode
-     *Apply automatically*.
+     access-policy rules allow it — including through unattended agent runs
+     (after supervisor approval of a proposal, or immediately if that task's
+     :guilabel:`Write mode` is *hybrid* / *auto*), or instantly in chat write
+     mode *Apply automatically*.
    - **Call business actions** (lifecycle methods) if the Action capability and
      allow-list permit them.
    - **Reach the public web or MCP tools**, which can import untrusted content
@@ -85,10 +86,12 @@ a grant of rights. Attackers still try to:
 
 **Mitigations (built-in):** blocked input patterns; capability ceilings enforced
 at the gate; AI policy + Odoo ACLs; strikes → temporary ban on violations so
-attackers cannot freely iterate; triage layer that may only *subtract*
-authority. None of these make injection "solved" — they reduce impact. Design
-agents so the worst successful injection still cannot read or write more than
-the agent was meant to.
+attackers cannot freely iterate; triage layer that may only *subtract* authority.
+Note what triage covers: **inbound** addressing. A scheduled or :guilabel:`Run
+Now` run of a standing instruction is triaged only when the task opts in with
+:guilabel:`Triage on dispatch` (see :ref:`ai/agents/dispatch-triage`). None of
+these make injection "solved" — they reduce impact. Design agents so the worst
+successful injection still cannot read or write more than the agent was meant to.
 
 Lifecycle / state bypass
 ------------------------
@@ -100,13 +103,48 @@ actions (``call_action``) instead when Action capability is enabled.
 Hard-deny floor (self-protection)
 ---------------------------------
 
-A fixed set of technical models (AI config tables, security-sensitive system
-models, sequences, menus, settings, reports, and similar) is always denied to
-AI tools regardless of access rules. Admins cannot "open" these via
-``ai.access.rule``. This is a floor, not a complete data classification
-policy — business models like ``hr.employee``, ``account.move`` or
-``mail.message`` are **not** all hard-denied by default; you must configure
-them if needed.
+A fixed set of technical models is always denied to AI tools regardless of
+access rules. Admins cannot "open" these via ``ai.access.rule``. The floor
+includes:
+
+- security-sensitive system models (access rights, rules, groups, users and API
+  keys, config parameters, sequences, menus, views, server actions, crons,
+  attachments, mail queue, payment tokens, bank accounts on partners, …);
+- **all** models of the AI application itself (``ai`` and every ``ai.*`` name) —
+  agents cannot reconfigure policy, skills, bans or their own runs through
+  tools;
+- raw ``mail.message``, ``mail.activity`` and ``discuss.channel`` (authorship /
+  evidence integrity — legitimate chatter goes through the owner record's
+  ``message_post``, not generic create tools).
+
+This is a floor, not a complete data classification policy — business models
+like ``hr.employee`` or ``account.move`` are **not** hard-denied by default;
+you must configure them if needed. Because ``mail.activity`` is floored,
+instruct agents **not** to call activity tools to “manage” their queue: platform
+approval nudges are created by the gate for the supervisor, and review To-Dos
+on business documents follow skill/playbook paths that stay within allowed
+operations.
+
+Cross-model side effects
+------------------------
+
+A field can write into a model you never opened: ``crm.lead.email_from`` updates
+the partner's email. The gate refuses such fields, and the two crossings are not
+equally configurable. Where the crossing is static — a *related* field — the
+refusal is absolute and no access rule lifts it. Where it is dynamic — a field
+carrying an *inverse* — it is lifted only by a rule naming that exact field, so a
+model-level grant cannot leak sideways and the audit trail cannot silently
+under-report what a write touched. On the file-fetch path
+(``fetch_file_to_field``) the per-field opt-in does not apply at all: a target
+field carrying an inverse is refused whatever rule you write, because the content
+comes from a URL the model chose.
+
+Nine field-scoped write allows ship enabled on databases with **Accounting**, for
+the invoicing flow. Three are on ``account.move.line``, and on the nested
+one2many path a field-level Allow is resolved before the model tier, so those
+three line fields are writable through :guilabel:`Invoice lines` even when no rule
+allows writing ``account.move.line`` itself. Review them before certifying that
+invoice lines are closed. See :ref:`ai/policy/cross-model`.
 
 Sensitive field stripping
 -------------------------
@@ -123,6 +161,13 @@ identity and current policy. Approving an old proposal after rights were
 revoked should fail closed. Agent proposals rebuild authority from the **run**,
 not from the confirmer's privilege (the confirmer authorises; the agent
 executes).
+
+The run's own liveness is part of that authority. A proposal from a run that was
+stopped on request, or closed by the stuck-run reaper because its worker died, is
+refused at apply time and can be approved by nobody: the reaper cannot tell a dead
+worker from a slow one, so a run somebody else declared over is never allowed to
+have its writes replayed. Proposals left by a run that ended on its own — *Done*,
+*Failed* or *Timed out* — stay approvable until housekeeping expires them.
 
 Security roles and groups
 =========================
@@ -160,7 +205,9 @@ Use all layers; none replaces the others:
 4. **Agent ``capability_ids``** — further ceiling for that agent only.
 5. **Channel rules + audience + scope_mode** — who may trigger the agent and
    whether capability classes are intersected with the requester.
-6. **Write mode / pending writes / supervisor** — human in the loop.
+6. **Write mode / pending writes / supervisor** — human in the loop. Chat uses
+   the global Settings mode; each agent **task** has its own mode (default
+   confirm). See :ref:`ai/agents/task-write-mode`.
 7. **Rate limits, strikes, bans, blocked patterns** — abuse and iteration.
 8. **Logging and retention** — evidence and least retention for step journals.
 
@@ -173,6 +220,8 @@ Recommended production baseline
   and open only needed models), create/write/delete **deny**.
 - Prefer write mode **hybrid** or **confirm** for chat; never *auto* on shared
   production databases without a change-management process.
+- Leave agent task :guilabel:`Write mode` on **confirm** unless the task is
+  explicitly draft-safe (e.g. AP fill that never posts); document the opt-in.
 - One **supervisor** human per agent; supervisors in AI: User.
 - No shared "god" agent for all departments — split by domain and data.
 - Review :menuselection:`AI --> Monitoring --> Violations` weekly at first.

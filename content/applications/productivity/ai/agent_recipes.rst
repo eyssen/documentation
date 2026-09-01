@@ -19,14 +19,20 @@ Recipe checklist (all agents)
 2. Give that user **only** the Odoo groups required for the business objects.
 3. Create an AI access group containing that user; add **deny** rules for
    everything sensitive outside the mission.
-4. Create ``ai.agent``: link user, supervisor, capability_ids, system prompt.
-5. Channel rules: explicit audience; prefer ``intersect``; enable only needed
+4. Check whether the mission needs to write a field that also writes another
+   model — a vendor bill's partner or journal, an invoice line's product, a
+   lead's email. Those need a rule naming the **field**; a model-level Allow
+   deliberately does not open them. See :ref:`ai/policy/cross-model`.
+5. Create ``ai.agent``: link user, supervisor, capability_ids, system prompt.
+6. Channel rules: explicit audience; prefer ``intersect``; enable only needed
    channels.
-6. Leave Write/Delete/Web off unless the recipe needs them; agent writes still
-   need supervisor approval.
-7. Test with a non-admin requester; attempt a forbidden read and confirm
+7. Leave Write/Delete/Web off unless the recipe needs them. Agent writes
+   default to **supervisor confirmation** via the task's :guilabel:`Write
+   mode`; only set *hybrid* / *auto* when the mission is deliberately
+   draft-safe (see :ref:`ai/agents/task-write-mode`).
+8. Test with a non-admin requester; attempt a forbidden read and confirm
    refusal + optional strike.
-8. Document owner, data classes, and review date.
+9. Document owner, data classes, and review date.
 
 ------------------------------------------------------------------------
 
@@ -106,6 +112,7 @@ Create user ``ai_care_bot``:
 - Minimal group set: e.g. helpdesk user **create** rights only if your app
   allows splitting create vs read; otherwise use record rules carefully.
 - Prefer a dedicated group *AI Care Bot* with explicit ACLs:
+
   - ``helpdesk.ticket`` (or ``project.task``): **create** yes, **read/write**
     no (or read only own newly created if ORM requires);
   - ``calendar.event``: create yes; read limited;
@@ -175,20 +182,22 @@ Channels and audience
 Write mode / supervision
 ------------------------
 
-- Agent writes always need supervisor approval — for high-volume ticket spam,
-  either:
+- Keep the task :guilabel:`Write mode` on **confirm** for public-facing bots so
+  every create waits for a supervisor. For high-volume ticket spam, either:
 
-  - auto-create is **not** available for agent runs (by design), so supervisors
-    must batch-approve, **or**
+  - leave *confirm* and batch-approve, **or**
   - use a trusted bridge that creates tickets via normal Odoo code paths, and
     keep the LLM **ask-only**.
+
+Do **not** set this bot's task to *auto* only to absorb volume — that is how
+prompt-injected visitors mint tickets at the agent's full rights.
 
 Many production teams choose: **LLM drafts the ticket fields → human or
 deterministic code creates the record**. That is the safest variant of this
 recipe.
 
-System prompt (sketch)
-----------------------
+System prompt (sketch) — care bot
+---------------------------------
 
 - You are a customer-care assistant for THIS company only.
 - You do not look up other customers' tickets or orders.
@@ -220,16 +229,84 @@ for a sales rep and creates calendar events after confirmation.
 Recipe D — Accounts payable document helper (trusted finance)
 =============================================================
 
-**Goal:** Finance users chat to extract vendor bill lines from PDFs using
-factory skills (e.g. vendor bill from documents).
+**Goal:** Extract and complete vendor bill lines from PDFs / empty drafts using
+the factory skill ``vendor_bill_from_documents`` — either as an interactive
+chat for accountants, or as a **scheduled autonomous agent** that processes a
+queue and leaves drafts for human review.
 
-- Capabilities: ``ask``, ``read``, ``write``, optional ``web`` **off**
-- Agent or chat persona restricted to Accounting groups
+Shared constraints (chat and agent)
+-----------------------------------
+
+- Capabilities: ``ask``, ``read``, ``write``; keep ``web`` / ``delete`` /
+  ``action`` off unless you have a named need (``delete`` only if you accept
+  the skill's empty-duplicate-draft cleanup after a NAV merge — still under
+  policy and ACLs).
 - Access rules: allow read/write on vendor bills / products needed; deny HR and
-  payroll
-- Write mode: **confirm** for chat
-- Prefer human chat persona (no linked user) so actions run as the accountant
-  themselves — often better than a shared bot for SOX-style trails
+  payroll. Model-level write is not enough on its own here: several everyday
+  fields on a bill also write another model, so they need a rule naming the
+  **field**. The ones this flow depends on ship pre-allowed — on
+  ``account.move`` the partner, journal, currency, payment term, delivery date
+  and payment reference, and on ``account.move.line`` the product, account and
+  partner. Anything else that crosses a model boundary still needs a field rule
+  of your own, notably ``account.move.name`` (:guilabel:`Number`) and, on lines,
+  ``debit``, ``credit`` and ``amount_currency``. See
+  :ref:`ai/policy/cross-model`.
+- Those shipped field rules are re-seeded by every upgrade of the AI app, but
+  only for apps that are already installed. If **Accounting** was added *after*
+  the AI app, upgrade the AI app — until you do, this flow refuses invoice-line
+  writes with no other symptom.
+- Skill behaviour (factory playbook — keep it pristine or re-check after edit):
+
+  - **Never posts** vendor bills; filled documents stay **draft** for a human.
+  - Hungarian **NAV twin**: if the supplier invoice already exists from NAV
+    import, reattach the PDF/image to that bill, drop the empty duplicate draft
+    when safe, and do **not** double-book lines — see
+    :ref:`ai/skills/vendor-bill`.
+  - Creates a review To-Do on bills it actually changed.
+
+Variant D1 — Interactive chat (accountant as themselves)
+---------------------------------------------------------
+
+- Prefer a chat persona (no linked agent user) so tools run as the accountant.
+- Global chat :guilabel:`Write mode`: **confirm** or **hybrid** for SOX-style
+  trails; *auto* only in tightly controlled pilot groups.
+- Restrict the persona to Accounting groups via :guilabel:`Restricted to
+  groups` if needed.
+
+Variant D2 — Scheduled autonomous AP agent
+------------------------------------------
+
+**Goal:** Hourly (or similar) standing task: find draft ``in_invoice`` with
+attachments but empty lines (and/or new document inbox items), run
+``vendor_bill_from_documents``, leave draft bills for finance.
+
+1. Dedicated narrow user (Accounting read/write on vendor bills only; no
+   Settings, no AI Administrator, no API keys).
+2. ``ai.agent`` linked to that user; human :guilabel:`Supervisor` (AI: User).
+3. Capabilities: ``ask``, ``read``, ``write`` only.
+4. AI access group + rules as above; deny models outside AP.
+5. Standing task:
+
+   - :guilabel:`Cadence` *On a schedule*, interval e.g. 1 hour;
+   - :guilabel:`Deadline Seconds` well under the worker budget (e.g. 600 if the
+     dispatch tick budget is ~870 — a deadline above the budget skips the run);
+   - :guilabel:`Write mode` **Apply immediately** (*auto*) is acceptable **only
+     because** the skill never posts and the agent never pays — risk stays at
+     “wrong draft lines”, not “posted garbage”. Use *confirm* if you want every
+     line change to wait for the supervisor;
+   - standing instruction: load ``vendor_bill_from_documents``, process the
+     AP queue, summarise filled / NAV-merged / skipped counts, never post,
+     never invent partners/taxes/accounts.
+6. Channel rules only if humans also address the agent; pure cron tasks need no
+   public channel audience.
+7. Supervisor watches :menuselection:`AI --> Agents --> Runs` and Accounting
+   drafts; when *confirm* is used, approval To-Dos land on the **bill** (see
+   :ref:`ai/agents/task-write-mode`).
+
+.. danger::
+   *auto* on an AP task that can **post**, register payment, or change bank
+   data is not the same recipe. Keep posting out of the skill and off the
+   allowed actions list.
 
 ------------------------------------------------------------------------
 
@@ -273,8 +350,8 @@ Anti-patterns
   (empty means nobody — good) vs filling **Everyone** group (bad).
 - Enabling **Web** on a ticket bot (prompt injection via attacker-controlled
   pages).
-- Default read allow + Write enabled + hybrid auto-create on shared admin
-  accounts.
+- Default read allow + Write enabled + chat *auto* or task *auto* on shared
+  admin accounts (or any agent that can post / pay).
 - Using a real human's user account as the agent link (their future password
   reset / API key becomes the bot).
 - Granting ``read`` on ``mail.message`` company-wide for a bot that only needed
@@ -288,8 +365,8 @@ For each recipe, as a normal non-admin user:
 1. Allowed channel action succeeds.
 2. Disallowed channel (e.g. random DM) refuses and records violation.
 3. Tool read on a denied model fails.
-4. Create on an allowed model produces a **proposal** (agent) or respects write
-   mode (chat).
+4. Create on an allowed model respects write mode: chat global mode, or the
+   **task** :guilabel:`Write mode` for agent runs (default proposal).
 5. Supervisor can apply; a non-supervisor cannot apply agent proposals.
 6. Ban the test user; further address is refused without LLM cost.
 

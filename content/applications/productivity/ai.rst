@@ -36,14 +36,17 @@ What you can do
 - **Human-confirmed writes** — create/update/delete proposals in :menuselection:`AI
   --> Write Proposals` instead of silent mutations (configurable).
 - **Autonomous agents** — optional linked ``res.users`` identities with a
-  supervisor, channel allow-lists, capability ceilings and pending-write
-  approval.
+  supervisor, channel allow-lists, capability ceilings, per-task write mode
+  (confirm by default; hybrid/auto only as an explicit opt-in), pending-write
+  approval with a systray nudge on the **business record**, and
+  supervisor-requested cancellation (see :doc:`ai/agents`).
 - **Access policy framework** — per-group / per-model / per-field allow·deny on
-  top of Odoo ACLs (policy can only *narrow*, never grant beyond the user).
+  top of Odoo ACLs (never grants beyond the acting user's own rights).
 - **Skills** — reusable instruction packs (factory + custom) activated always or
   on demand.
 - **Memory** — durable user/agent/company memories with graph and search tools.
-- **Monitoring** — audit logs, violation strikes, temporary bans.
+- **Monitoring** — audit logs, violation strikes, temporary bans, and an agent
+  run ledger in which a run whose worker died is closed automatically.
 - **Optional MCP / web / UI customization** — external tools, web search, and
   admin-only schema/view customization, all capability-gated and off by default
   where risky.
@@ -51,12 +54,17 @@ What you can do
 Who this documentation is for
 =============================
 
-| Role | Typical tasks |
-| --- | --- |
++---------------------------+---------------------------------------------------+
+| Role                      | Typical tasks                                     |
++===========================+===================================================+
 | System / AI administrator | Providers, settings, policies, agents, monitoring |
-| Supervisor of an agent | Approve write proposals, review tasks and runs |
-| Everyday AI user | Chat, confirm own write proposals, use memory |
-| Security / compliance | Threat model, least privilege, audit trail |
++---------------------------+---------------------------------------------------+
+| Supervisor of an agent    | Approve write proposals, review tasks and runs    |
++---------------------------+---------------------------------------------------+
+| Everyday AI user          | Chat, confirm own write proposals, use memory     |
++---------------------------+---------------------------------------------------+
+| Security / compliance     | Threat model, least privilege, audit trail        |
++---------------------------+---------------------------------------------------+
 
 Document map
 ============
@@ -80,25 +88,47 @@ Key design principles
 
 1. **Run as the user (or as the agent user)** — no ``sudo`` on business data.
    Odoo ACLs and record rules always apply.
-2. **AI policy only narrows** — ``ai.access.rule`` cannot grant rights the
-   underlying user does not have.
+2. **AI policy narrows, with one named exception** — ``ai.access.rule`` can never
+   grant a right the underlying user does not already hold in Odoo. Within that
+   ceiling, a rule naming a specific **field** is the one place a rule *opens*
+   something the gate otherwise refuses: a field that also writes into another
+   model. A model-level Allow deliberately never lifts that — see
+   :ref:`ai/policy/cross-model`.
 3. **Capabilities are master switches** — e.g. Write / Delete / Web / MCP /
    Customize ship disabled until an admin turns them on.
 4. **Default-deny channels for agents** — an agent without a matching channel
    rule refuses inbound address (Discuss DM, @mention, activity, assignment).
-5. **Supervisor four-eyes on agent writes** — agent runs always propose writes
-   for the supervisor; they never auto-apply unattended creates either.
+5. **Supervisor four-eyes by default on agent writes** — each agent **task**
+   has its own :guilabel:`Write mode` (default **Always require confirmation**).
+   Unattended runs therefore propose for the supervisor unless that task
+   explicitly opts into *hybrid* or *auto* for trusted, low-risk work (for
+   example filling **draft** vendor bills that the playbook never posts). The
+   global chat write mode does **not** control agent runs — see
+   :ref:`ai/agents/task-write-mode`.
 6. **Customer / email text is work material, not authority** — instructions in
    a ticket body cannot raise the agent's privileges; triage and capability
    ceilings subtract only.
 7. **Grounding** — the assistant must not invent models, fields or stages; it
    uses tools and live environment facts for *this* database.
+8. **Runs are accounted for** — cancellation is cooperative and recorded, never a
+   silent kill: the run stops at its next step boundary and closes as failed with
+   a cancellation reason. A run whose worker died is closed by a scheduled
+   housekeeping job, which rebuilds its ledger row from the dispatch record where
+   one survives.
+9. **A structural refusal is not abuse** — the gate refuses plenty the model
+   merely guessed at (a non-writable field, a field that also writes another
+   model) without recording a violation or spending a strike, so an empty
+   Violations list is not proof that nothing was refused. Strikes are for real
+   boundaries: a secret or privileged field, an explicit policy Deny, a disabled
+   capability.
 
 See also
 ========
 
 - :doc:`../general/users/access_rights` — Odoo groups and record rules (the floor
   under every AI action)
+- :doc:`../general/developer_mode` — needed for the Technical menus where the AI
+  system parameters and scheduled actions live
 - :doc:`discuss` — Discuss DMs used by agent channels
 - :doc:`../services/project` — project tasks and assignment channel (if Project
   docs are available in your build)

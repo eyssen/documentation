@@ -25,37 +25,37 @@ Capability record fields
 Shipped capabilities
 ====================
 
-+-------------+---------------------------+------------------------------------+
-| Code        | Default enabled           | Role                               |
-+=============+===========================+====================================+
-| ``ask``     | Yes                       | Q&A helpers: schema search,        |
-|             |                           | environment, skills, memory, list  |
-|             |                           | actions, present choices           |
-+-------------+---------------------------+------------------------------------+
-| ``read``    | Yes                       | ``search``, ``read``,              |
-|             |                           | ``read_group``, ``get_fields``     |
-+-------------+---------------------------+------------------------------------+
-| ``navigate``| Yes                       | Open UI the user may access        |
-+-------------+---------------------------+------------------------------------+
-| ``write``   | **No**                    | ``create_record``,                 |
-|             |                           | ``update_record``, file attach     |
-|             |                           | (with web)                         |
-+-------------+---------------------------+------------------------------------+
-| ``delete``  | **No**                    | ``delete_record``                  |
-+-------------+---------------------------+------------------------------------+
-| ``web``     | **No**                    | ``web_search``, ``web_fetch``      |
-+-------------+---------------------------+------------------------------------+
-| ``mcp``     | **No**                    | Dynamic tools from MCP servers     |
-+-------------+---------------------------+------------------------------------+
-| ``action``  | **No**                    | ``call_action`` on allow-listed    |
-|             |                           | methods                            |
-+-------------+---------------------------+------------------------------------+
-| ``customize`` | **No** (AI Admin only)| View/field/model customization     |
-|             | by default groups         | tools                              |
-+-------------+---------------------------+------------------------------------+
-| ``setup``   | Yes, **Settings** group   | Guided module install tools        |
-|             | only                      |                                    |
-+-------------+---------------------------+------------------------------------+
++-----------------+---------------------------+------------------------------------+
+| Code            | Default enabled           | Role                               |
++=================+===========================+====================================+
+| ``ask``         | Yes                       | Q&A helpers: schema search,        |
+|                 |                           | environment, skills, memory, list  |
+|                 |                           | actions, present choices           |
++-----------------+---------------------------+------------------------------------+
+| ``read``        | Yes                       | ``search``, ``read``,              |
+|                 |                           | ``read_group``, ``get_fields``     |
++-----------------+---------------------------+------------------------------------+
+| ``navigate``    | Yes                       | Open UI the user may access        |
++-----------------+---------------------------+------------------------------------+
+| ``write``       | **No**                    | ``create_record``,                 |
+|                 |                           | ``update_record``, file attach     |
+|                 |                           | (with web)                         |
++-----------------+---------------------------+------------------------------------+
+| ``delete``      | **No**                    | ``delete_record``                  |
++-----------------+---------------------------+------------------------------------+
+| ``web``         | **No**                    | ``web_search``, ``web_fetch``      |
++-----------------+---------------------------+------------------------------------+
+| ``mcp``         | **No**                    | Dynamic tools from MCP servers     |
++-----------------+---------------------------+------------------------------------+
+| ``action``      | **No**                    | ``call_action`` on allow-listed    |
+|                 |                           | methods                            |
++-----------------+---------------------------+------------------------------------+
+| ``customize``   | **No**; AI Administrator  | View/field/model customization     |
+|                 | group by default          | tools                              |
++-----------------+---------------------------+------------------------------------+
+| ``setup``       | Yes, **Settings** group   | Guided module install tools        |
+|                 | only                      |                                    |
++-----------------+---------------------------+------------------------------------+
 
 Tool catalogue (built-in)
 =========================
@@ -130,5 +130,11 @@ Enabling write safely (pilot pattern)
 3. Enable Write capability with :guilabel:`Restricted to groups` = AI Writers.
 4. Add model-level ``perm_create`` / ``perm_write`` **allow** rules only for the
    models in the pilot (:doc:`access_policy`).
-5. Keep write mode **confirm** or **hybrid**.
-6. Monitor logs and violations for two weeks before widening.
+5. Try the writes the pilot actually needs. Model-level rules are not enough on
+   their own: many everyday fields also write into a second model, and the gate
+   refuses those even under a model-level Allow. Each one needs a rule naming
+   the **field**, with :guilabel:`perm_write` = Allow — see
+   :ref:`ai/policy/cross-model`. Discovering them by trying is safe, because
+   this refusal records no violation and costs no strike.
+6. Keep write mode **confirm** or **hybrid**.
+7. Monitor logs and violations for two weeks before widening.

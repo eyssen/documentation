@@ -61,6 +61,41 @@ applicable.
 - If you edit a factory skill, it becomes factory-modified and is **not**
   auto-overwritten; you can reset to factory when desired.
 
+.. _ai/skills/vendor-bill:
+
+Vendor bill from documents (``vendor_bill_from_documents``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Full AP playbook for Odoo 18: chat PDFs or draft supplier invoices
+(``in_invoice``) that have attachments but empty lines. It is **not** an AR /
+customer-invoice skill.
+
+What it is designed to do:
+
+- Resolve partner flags, reuse product / account / tax / analytic patterns from
+  prior bills for the same vendor.
+- Fill invoice lines on **draft** moves only.
+- Schedule a human **review** To-Do on every bill it actually changed.
+- **Hungarian NAV twin path (before filling lines):** many HU suppliers already
+  exist as NAV-imported bills. If exactly one clear match is found (often already
+  posted), the skill **reattaches** the image/PDF from the empty draft to that
+  existing bill, notes the merge, and **unlinks the empty draft** only when it
+  still has no meaningful lines — it must **not** double-book the same invoice.
+  Non-HU / foreign suppliers skip this path.
+
+Hard stops in the playbook:
+
+- Do **not** post, pay, or write NAV transmission fields.
+- Do **not** invent partners, taxes or accounts when prior-bill reuse fails —
+  leave for the human.
+- Prefer reporting an existing bill over creating a second one with the same
+  partner + reference.
+
+Pair with Recipe D in :doc:`agent_recipes` (chat helper or scheduled agent). For
+unattended runs, task :guilabel:`Write mode` *auto* is only appropriate because
+this skill keeps bills draft; if you customise the skill to post, switch the
+task back to *confirm*.
+
 Writing a good skill
 --------------------
 

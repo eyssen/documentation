@@ -51,8 +51,13 @@ Agent form fields
 +---------------------------+--------------------------------------------------+
 | :guilabel:`Model`         | Optional model override; else main / defaults.   |
 +---------------------------+--------------------------------------------------+
-| :guilabel:`Temperature` / | Sampling overrides for this agent's turns.       |
-| :guilabel:`Max tokens`    |                                                  |
+| :guilabel:`Temperature`   | Sampling override for this agent's own turns,    |
+|                           | withheld from models that do not accept one.     |
++---------------------------+--------------------------------------------------+
+| :guilabel:`Max Tokens     | ``0``, the default, sends no cap at all: the     |
+| (0 = no override)`        | model's own output limit applies. A positive     |
+|                           | value caps this agent's completions instead —    |
+|                           | see the note below.                              |
 +---------------------------+--------------------------------------------------+
 | :guilabel:`System prompt` | Appended after global prompt layers.             |
 +---------------------------+--------------------------------------------------+
@@ -69,6 +74,26 @@ Agent form fields
 +---------------------------+--------------------------------------------------+
 | :guilabel:`Default agent` | Marks the persona used by default in chat.       |
 +---------------------------+--------------------------------------------------+
+
+.. note::
+   A positive :guilabel:`Max Tokens` reaches every provider, each under the
+   parameter name its own API expects — but only where the model record
+   publishes a :guilabel:`Max Output Tokens` of its own
+   (:menuselection:`AI --> Configuration --> Providers --> Models`). On a model
+   whose cap is unknown (``0``) the agent's value is dropped and the model
+   writes to its own limit, so an agent capped at 500 tokens shows no effect and
+   nothing on the form says why. Fill in :guilabel:`Max Output Tokens` on the
+   model if you want a per-agent cap to bite.
+
+   Anthropic is the exception, in the other direction: its API always requires
+   the parameter, so an Anthropic model with no published cap falls back to a
+   conservative built-in value rather than to the model's real limit.
+
+.. note::
+   A cap only takes effect where the model record publishes an output limit of
+   its own, and it behaves differently per provider. Both rules, and what an
+   update does to agents that already carry a value, are described once under
+   :ref:`ai/config/completion-caps`.
 
 Channel rules
 =============
@@ -112,7 +137,8 @@ Inbound flow (simplified)
 5. Optional triage may subtract authority only.
 6. Create task / run under supervisor scope; execute as agent user with
    committed capability ceiling.
-7. Writes become pending proposals for the supervisor.
+7. Writes follow that **task's** :guilabel:`Write mode` (default: pending
+   proposals for the supervisor; see :ref:`ai/agents/task-write-mode`).
 8. Agent posts notes / drafts on the thread as itself — customer text never
    becomes a silent privilege grant.
 
@@ -126,6 +152,183 @@ Operational menus (AI: User, supervisor-scoped):
 
 Supervisors use these to see what the agent attempted, which tools ran, and
 which proposals are waiting.
+
+.. _ai/agents/task-write-mode:
+
+Task write mode (agent runs only)
+---------------------------------
+
+Each task carries :guilabel:`Write mode`. It applies **only** to agent runs
+dispatched for that task — not to interactive chat (chat uses the global
+setting under :menuselection:`AI --> Configuration --> Settings`).
+
++------------------------------------------+-----------------------------------+
+| Value                                    | Effect on that task's runs        |
++==========================================+===================================+
+| **Always require confirmation**          | Every create / write / delete /   |
+| (``confirm``, default)                   | file attach becomes an            |
+|                                          | ``ai.pending.write`` for the      |
+|                                          | supervisor.                       |
++------------------------------------------+-----------------------------------+
+| **Create automatically, confirm updates**| Creates apply immediately;        |
+| (``hybrid``)                             | updates, deletes and file         |
+|                                          | attaches still need approval.     |
++------------------------------------------+-----------------------------------+
+| **Apply immediately** (``auto``)         | Allowed mutations apply at once   |
+|                                          | under the agent user's rights and |
+|                                          | the run's capability ceiling.     |
++------------------------------------------+-----------------------------------+
+
+The global ``ai.write_mode`` parameter never overrides a task: an
+administrator cannot flip every unattended agent to auto with one setting.
+``hybrid`` / ``auto`` are deliberate per-task opt-ins for **trusted, low-risk**
+work — for example an accounts-payable standing task that fills **draft**
+vendor bills and whose skill **never posts** invoices. Prefer ``confirm``
+whenever a run could post, pay, delete, or touch customer-facing data.
+
+When a proposal is created, the platform also places a **To-Do activity** (and
+usually a chatter note) on the **target business record** when one exists
+(e.g. the vendor bill being updated), falling back to the agent task for
+creates that have no id yet. Confirm and Cancel still live on
+:menuselection:`AI --> Write Proposals`; the activity is only a systray nudge
+so the supervisor lands on the invoice or partner, not only on the abstract
+proposal list. The Write Proposals form has :guilabel:`Open record` for the
+same jump. The activity is closed when the proposal is applied, cancelled or
+expired.
+
+.. tip::
+   The hard-deny floor blocks raw AI tools on ``mail.activity`` and all
+   ``ai.*`` platform models. Agents therefore cannot “manage” their own
+   approval queue or AI config via tools — and should not try. Platform
+   nudges and skill-driven review activities on business documents use
+   controlled paths; instruct agents not to invent activity or AI-config
+   tool calls, or they will burn refusals and strikes.
+
+A run's ledger row becomes visible to other users only once the attempt has
+**ended** or **parked for approval**: the row is written and finalised inside the
+worker's own transaction, so nothing is committed while the agent is still
+working. The runs list therefore shows completed work, not a live view of what is
+executing right now.
+
+Failed runs carry a :guilabel:`Failure Type` on the run form that says which kind
+of failure it was — see :doc:`monitoring` for the values worth watching.
+
+.. _ai/agents/cancel:
+
+Stopping a run
+--------------
+
+Open the run and use :guilabel:`Request Cancellation`. The button appears while
+the run is :guilabel:`Running` or :guilabel:`Waiting for approval`, and only the
+agent's supervisor or an AI administrator may request it.
+
+.. important::
+   This button is not a general "stop the agent now" control, because of the
+   ledger behaviour above: a run that is executing normally has no row yet, so
+   there is nothing to open. In practice you use it on a run parked in
+   :guilabel:`Waiting for approval`, or on one left in :guilabel:`Running` by an
+   earlier server incident. To stop unwanted work in advance instead, keep the
+   task's :guilabel:`Deadline Seconds` short enough that a run ends on its own,
+   and clear :guilabel:`Active` on the task so it is not dispatched again.
+
+Cancelling a run parked in :guilabel:`Waiting for approval` withdraws its open
+write proposals, then closes the run: as :guilabel:`Done` if a proposal of that
+run had already been applied, otherwise as :guilabel:`Failed` with
+:guilabel:`Failure Type` ``waiting_approval_empty``, since nothing it proposed
+was approved.
+
+Cancelling a run that is genuinely still executing is **cooperative, never
+immediate**. The request is read at the start of each provider round and again
+before each tool call, so it takes effect only after the round-trip already in
+flight has finished — allow up to about two minutes at the shipped defaults, and
+never in the middle of a provider call. Such a run then closes as
+:guilabel:`Failed` with :guilabel:`Failure Type` ``cancelled``; there is no
+separate *Cancelled* state. The steps it did execute stay on the
+:guilabel:`Steps` tab, the run's answer records the cancellation rather than a
+partial reply, and any write proposals it had already opened are cancelled with
+it, so nothing is left approvable. A cancellation is neutral for the task's
+automatic deactivation: it neither counts as a failure nor clears an existing
+streak.
+
+.. note::
+   If no worker is left to hear the request, the button answers
+   :guilabel:`Nothing in flight to cancel` instead of confirming. Nothing is
+   broken — the run has most likely already finished, or its worker died — but no
+   worker will see the request and the run will not stop on its account. Reload
+   the record to see where it really stands; a dead worker's run is closed by the
+   stuck-run reaper below.
+
+.. _ai/agents/reaper:
+
+Runs whose worker died
+----------------------
+
+If the server process handling a run is killed (restart, out-of-memory, hard
+kill), nobody is left to finish the run. A scheduled action, **AI: reap stuck
+agent runs**, runs every 15 minutes and closes them: the run is recorded as
+:guilabel:`Failed` with :guilabel:`Failure Type` ``reaped_stuck``, a note is
+posted on the task, and any write proposals still waiting on it are expired so
+nothing can be approved on behalf of a dead run. If the crash took the ledger row
+with it, the housekeeping job rebuilds one from the record the dispatch left
+behind — provided that record was written; a kill early enough to prevent even
+that leaves nothing to rebuild from.
+
+Do not expect that closure within 15 minutes. The run has to age past its own
+time limit plus a grace period (10 minutes by default — see
+:doc:`configuration`) before a pass will touch it, and passes are 15 minutes
+apart, so worst case is around half an hour. One pass closes at most 200 runs,
+oldest first; a large backlog after a restart storm drains over the following
+passes.
+
+The same scheduled action also frees runs parked in :guilabel:`Waiting for approval`
+that have no open proposal left — for example when the last proposal expired
+while the supervisor was still confirming it — so such a run is not left holding
+an activity reminder for a proposal that no longer exists.
+
+.. tip::
+   Every dispatch attempt carries a :guilabel:`Dispatch Token`, shown on the run
+   form. It is the key that joins a run to the short-lived record written when
+   the run started, which is what both the reaper and
+   :guilabel:`Request Cancellation` look for — so it is also the value to quote
+   when correlating a run with the server log.
+
+.. _ai/agents/dispatch-triage:
+
+Pre-run instruction check
+-------------------------
+
+Scheduled and :guilabel:`Run Now` runs execute the task's standing instruction
+directly. Tick :guilabel:`Triage on dispatch` on a task to run the same stage-1
+check that an agent addressed from chat receives. The check can only **narrow**
+what the task already grants — it never widens anything.
+
+Consider before enabling it:
+
+- it costs one extra model call per run (time and tokens), and the scheduler
+  reserves about 30 seconds of its own tick budget for that call. A task whose
+  :guilabel:`Deadline Seconds` already sits close to the worker's time limit may
+  therefore be skipped rather than dispatched;
+- the check has its own short deadline of 15 seconds and is fail-closed: a triage
+  model that is slow, unreachable, or answers off-schema counts as a refusal;
+- a refusal means the agent never starts. The run is recorded as
+  :guilabel:`Failed` with :guilabel:`Failure Type` ``triage_denied``, a note is
+  posted on the task, and a :guilabel:`To-Do` activity is created for the
+  supervisor — so no refusal is silent;
+- refusals count towards the task's automatic deactivation. The task is archived
+  once five consecutive runs have failed **and** the streak is more than seven
+  days old, and its supervisor is notified. Because a triage failure is a
+  refusal, a long provider outage can archive a task that was never
+  misconfigured; that is why the option is per task and off by default;
+- what the check decided is recorded on the run as :guilabel:`Triage Verdict`, on
+  the :guilabel:`Snapshot` tab, and is empty on every run of a task that did not
+  opt in. It is telemetry, not a boundary: the narrowing it describes is already
+  committed in the run's :guilabel:`Allowed Caps`, which is what the access gate
+  reads.
+
+The global kill switch for stage-1 triage — inbound addressing and this pre-run
+check alike — is the ``ai.triage_enabled`` system parameter, under
+:menuselection:`Settings --> Technical --> Parameters --> System Parameters`
+(which needs :doc:`developer mode <../../general/developer_mode>`).
 
 AI Ops project stages
 =====================

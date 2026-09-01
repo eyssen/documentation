@@ -57,8 +57,12 @@ Rate and usage limits
 | :guilabel:`Max tool calls`         | Bound on tool invocations per turn loop  |
 |                                    | (default 10).                            |
 +------------------------------------+------------------------------------------+
-| :guilabel:`Write mode`             | Chat only — auto / confirm / hybrid.     |
-|                                    | See :doc:`using_the_assistant`.          |
+| :guilabel:`Write mode`             | **Interactive chat only** — auto /       |
+|                                    | confirm / hybrid. Agent runs use each    |
+|                                    | task's own :guilabel:`Write mode`        |
+|                                    | instead (default confirm). See           |
+|                                    | :doc:`using_the_assistant` and           |
+|                                    | :ref:`ai/agents/task-write-mode`.        |
 +------------------------------------+------------------------------------------+
 | :guilabel:`Chat write-proposal     | Minutes until a chat proposal expires; 0 |
 | lifetime`                          | = never.                                 |
@@ -81,6 +85,10 @@ Model
 
 - :guilabel:`AI Model` — the model used by the interactive assistant. Its
   provider is used automatically.
+
+This setting covers the interactive assistant only. A per-agent completion cap
+is set on the agent itself (:doc:`agents`) and depends on the model record — see
+:ref:`ai/config/completion-caps`.
 
 Access policy defaults
 ----------------------
@@ -131,6 +139,36 @@ Requires the **Web access** capability to be enabled for tools to be offered.
 | :guilabel:`Max file size`        | Bytes (default 10 MiB).                   |
 +----------------------------------+-------------------------------------------+
 
+System parameters and scheduled actions
+=======================================
+
+A few platform switches have no field on the Settings page. They live in the
+Technical menus, which require
+:doc:`developer mode <../../general/developer_mode>`.
+
+System parameters
+-----------------
+
+:menuselection:`Settings --> Technical --> Parameters --> System Parameters`
+
+- ``ai.triage_enabled`` — global off switch for stage-1 triage, covering both
+  the inbound check and a task's :guilabel:`Triage on dispatch` (default
+  ``True``). Set it to ``False`` and every instruction is executed unassessed.
+- ``ai.waiting_approval_ttl_minutes`` — how long a run may sit waiting for a
+  supervisor's answer before it is failed (default ``1440``; ``0`` means never
+  expire by age).
+- ``ai.run_reaper_grace_seconds`` — how long past a task's own time limit the
+  stuck-run reaper waits before it declares a run abandoned (default ``600``,
+  i.e. 10 minutes). This is not a kill switch: to stop reaping altogether,
+  deactivate the scheduled action instead.
+
+Stuck and stranded agent runs
+-----------------------------
+
+The scheduled action **AI: reap stuck agent runs** closes runs whose worker died,
+and also frees runs parked for approval with nothing left to approve. Both jobs,
+their cadence and their batch limit are described in :ref:`ai/agents/reaper`.
+
 LLM providers and models
 ========================
 
@@ -147,9 +185,57 @@ Fields of interest:
 :menuselection:`AI --> Configuration --> Providers --> Models`
 
 - :guilabel:`Model id` — exact vendor id.
-- Context window, max output tokens, tool and temperature support flags.
+- :guilabel:`Context Window`, :guilabel:`Max Output Tokens`, tool and
+  temperature support flags.
 - Prompt / completion unit prices and price source (provider API, curated
   catalog, or manual — manual is not overwritten by refresh).
+
+.. _ai/config/completion-caps:
+
+Completion caps
+---------------
+
+:guilabel:`Max Output Tokens` on the model is what the assistant caps its
+completions at, and it is also the precondition for a per-agent cap. Only
+providers that publish a completion limit fill it in; ``0`` means *unknown*.
+
+An agent's own :guilabel:`Max Tokens (0 = no override)` (:doc:`agents`) reaches
+every provider — OpenAI, OpenRouter, xAI, Google Gemini and Anthropic — each
+under the parameter name its API expects. It is put on the wire **only** for a
+model that publishes a :guilabel:`Max Output Tokens` of its own. Point an agent
+at a model that still reads ``0`` and the agent's value is dropped: the model
+writes to its own limit, and nothing on the agent form says why. Fill in
+:guilabel:`Max Output Tokens` on the model if you want the per-agent cap to bite.
+
+``0`` on the agent — the default — means *no override*: the model's own output
+cap applies, exactly as for a turn with no agent at all. Set a positive value
+only where you deliberately want that agent to be terser or cheaper, and
+remember that on reasoning models the cap counts thinking tokens too, so a low
+value truncates answers.
+
+.. note::
+   Anthropic is the exception, in the other direction: its API always requires
+   the parameter. An Anthropic model whose :guilabel:`Max Output Tokens` is still
+   ``0`` therefore falls back to a conservative built-in value of 1024 tokens,
+   not to the model's real limit.
+
+.. warning::
+   Upgrading from an earlier version changes how agents that are already
+   configured behave.
+
+   - A cap an administrator had already typed on an agent used to reach Anthropic
+     only. It now applies on every provider, so a low value that was inert on
+     OpenAI, OpenRouter, xAI or Gemini starts truncating answers there.
+   - The upgrade resets the old shipped default of ``2048`` to ``0`` on every
+     agent still carrying it, so that no database keeps a cap nobody chose. On
+     an Anthropic model that publishes a cap of its own, that 2048 was genuinely
+     in force: those agents may now write up to the model's full
+     :guilabel:`Max Output Tokens` — more tokens, more cost and more time, and an
+     answer long enough to exhaust the provider's :guilabel:`Call deadline` fails
+     with an error instead of stopping at 2048 tokens.
+
+   Any other value you typed is kept. Re-enter a cap on every agent you meant to
+   limit, including one you had deliberately set to 2048.
 
 Web providers
 =============
@@ -188,6 +274,17 @@ Layered system prompts (core, global, module, …) shape behaviour. Core safety
 layers are not meant for casual editing. Global operational layers may be
 adjusted by AI administrators; migrations may refresh factory content only when
 still pristine.
+
+.. important::
+   A layer's :guilabel:`Body` is **English only** and not translatable. These are
+   the rails the model is steered by, not user-facing text: rails that switched
+   language with the interface would leave the instructions in one language and
+   the tool names in another. The assistant still answers in the language of the
+   conversation — that is decided by the user's messages, never by this text.
+
+   On a database upgraded from an earlier version, each layer keeps its English
+   body and any translated bodies are discarded. Re-check every global and
+   per-module layer whose body you had edited in a translated interface.
 
 Blocked patterns
 ================

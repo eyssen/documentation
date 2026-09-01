@@ -39,7 +39,7 @@ Connect a provider
      Gemini.
    - :guilabel:`API key` — write-only; stored in system parameters, never shown
      again in clear text.
-   - Optional :guilabel:`Base URL` override for compatible gateways.
+   - Optional :guilabel:`Base Url` override for compatible gateways.
    - Timeouts / retries / call deadline as needed for your workers.
 
 3. Use the provider's **Refresh models** (or equivalent) action to import the
@@ -70,7 +70,7 @@ Out of the box the platform is intentionally cautious:
 | Access policy defaults    | read **allow**; create / write / delete       |
 |                           | **deny** at model level                       |
 +---------------------------+-----------------------------------------------+
-| Field-level write allows  | Nine field-scoped write rules on              |
+| Field-level write allows  | Ten field-scoped write rules on               |
 |                           | ``account.move`` / ``account.move.line``      |
 |                           | (:doc:`access_policy`)                        |
 +---------------------------+-----------------------------------------------+
@@ -83,7 +83,7 @@ Out of the box the platform is intentionally cautious:
 |                           | user and open channel audiences               |
 +---------------------------+-----------------------------------------------+
 
-Those nine field-level rules exist so the invoice / vendor-bill flow keeps
+Those ten field-level rules exist so the invoice / vendor-bill flow keeps
 working, and they are seeded only where **Accounting** is installed. Nothing
 writes while the Write capability is off, so they take effect only once you
 enable it.

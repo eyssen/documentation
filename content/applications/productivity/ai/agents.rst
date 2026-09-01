@@ -15,10 +15,10 @@ Example: shipped default **Jarvis**.
 
 - Used when a human opens the AI chat.
 - Runs **as the chatting user** (their ACLs, their AI policy membership).
-- :guilabel:`System prompt`, model overrides and capabilities shape the
+- :guilabel:`System Prompt`, model overrides and capabilities shape the
   session.
 - No supervisor required.
-- :guilabel:`Allowed groups` can restrict who may invoke this persona.
+- :guilabel:`Restricted to groups` can restrict who may invoke this persona.
 
 Autonomous colleague (linked user)
 ----------------------------------
@@ -59,7 +59,7 @@ Agent form fields
 |                           | value caps this agent's completions instead —    |
 |                           | see the note below.                              |
 +---------------------------+--------------------------------------------------+
-| :guilabel:`System prompt` | Appended after global prompt layers.             |
+| :guilabel:`System Prompt` | Appended after global prompt layers.             |
 +---------------------------+--------------------------------------------------+
 | :guilabel:`Capabilities`  | Ceiling of tool classes for this agent.          |
 +---------------------------+--------------------------------------------------+
@@ -70,24 +70,10 @@ Agent form fields
 +---------------------------+--------------------------------------------------+
 | :guilabel:`Supervisor`    | Required if User is set; must be AI: User.       |
 +---------------------------+--------------------------------------------------+
-| :guilabel:`Channel rules` | Default-deny allow-lists per channel.            |
+| :guilabel:`Channel Rules` | Default-deny allow-lists per channel.            |
 +---------------------------+--------------------------------------------------+
 | :guilabel:`Default agent` | Marks the persona used by default in chat.       |
 +---------------------------+--------------------------------------------------+
-
-.. note::
-   A positive :guilabel:`Max Tokens` reaches every provider, each under the
-   parameter name its own API expects — but only where the model record
-   publishes a :guilabel:`Max Output Tokens` of its own
-   (:menuselection:`AI --> Configuration --> Providers --> Models`). On a model
-   whose cap is unknown (``0``) the agent's value is dropped and the model
-   writes to its own limit, so an agent capped at 500 tokens shows no effect and
-   nothing on the form says why. Fill in :guilabel:`Max Output Tokens` on the
-   model if you want a per-agent cap to bite.
-
-   Anthropic is the exception, in the other direction: its API always requires
-   the parameter, so an Anthropic model with no published cap falls back to a
-   conservative built-in value rather than to the model's real limit.
 
 .. note::
    A cap only takes effect where the model record publishes an output limit of
@@ -115,8 +101,8 @@ Rule fields:
 
 - :guilabel:`Allowed groups` / :guilabel:`Allowed users` — audience. **Empty
   audience matches nobody** (not everyone).
-- :guilabel:`May request` — audience may trigger an ad-hoc run.
-- :guilabel:`Scope mode`:
+- :guilabel:`May Request` — audience may trigger an ad-hoc run.
+- :guilabel:`Scope Mode`:
 
   - **Agent rights ∩ requester rights** (``intersect``, default) — capability
     *classes* both hold. Data is still read/written as the **agent**.
@@ -137,7 +123,7 @@ Inbound flow (simplified)
 5. Optional triage may subtract authority only.
 6. Create task / run under supervisor scope; execute as agent user with
    committed capability ceiling.
-7. Writes follow that **task's** :guilabel:`Write mode` (default: pending
+7. Writes follow that **task's** :guilabel:`Write Mode` (default: pending
    proposals for the supervisor; see :ref:`ai/agents/task-write-mode`).
 8. Agent posts notes / drafts on the thread as itself — customer text never
    becomes a silent privilege grant.
@@ -158,7 +144,7 @@ which proposals are waiting.
 Task write mode (agent runs only)
 ---------------------------------
 
-Each task carries :guilabel:`Write mode`. It applies **only** to agent runs
+Each task carries :guilabel:`Write Mode`. It applies **only** to agent runs
 dispatched for that task — not to interactive chat (chat uses the global
 setting under :menuselection:`AI --> Configuration --> Settings`).
 
@@ -197,12 +183,11 @@ same jump. The activity is closed when the proposal is applied, cancelled or
 expired.
 
 .. tip::
-   The hard-deny floor blocks raw AI tools on ``mail.activity`` and all
-   ``ai.*`` platform models. Agents therefore cannot “manage” their own
-   approval queue or AI config via tools — and should not try. Platform
-   nudges and skill-driven review activities on business documents use
-   controlled paths; instruct agents not to invent activity or AI-config
-   tool calls, or they will burn refusals and strikes.
+   The hard-deny floor blocks raw AI tools on every ``ai.*`` platform model.
+   Agents therefore cannot “manage” their own approval queue or AI config via
+   tools — and should not try. Platform nudges and skill-driven review
+   activities on business documents use controlled paths; instruct agents not
+   to invent AI-config tool calls, or they will burn refusals and strikes.
 
 A run's ledger row becomes visible to other users only once the attempt has
 **ended** or **parked for approval**: the row is written and finalised inside the
@@ -298,7 +283,7 @@ Pre-run instruction check
 -------------------------
 
 Scheduled and :guilabel:`Run Now` runs execute the task's standing instruction
-directly. Tick :guilabel:`Triage on dispatch` on a task to run the same stage-1
+directly. Tick :guilabel:`Triage On Dispatch` on a task to run the same stage-1
 check that an agent addressed from chat receives. The check can only **narrow**
 what the task already grants — it never widens anything.
 

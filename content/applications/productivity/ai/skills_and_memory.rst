@@ -92,7 +92,7 @@ Hard stops in the playbook:
   partner + reference.
 
 Pair with Recipe D in :doc:`agent_recipes` (chat helper or scheduled agent). For
-unattended runs, task :guilabel:`Write mode` *auto* is only appropriate because
+unattended runs, task :guilabel:`Write Mode` *auto* is only appropriate because
 this skill keeps bills draft; if you customise the skill to post, switch the
 task back to *confirm*.
 

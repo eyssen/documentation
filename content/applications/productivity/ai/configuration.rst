@@ -25,58 +25,58 @@ Abuse guardrails
 +----------------------------+--------------------------------------------------+
 | Setting                    | Meaning                                          |
 +============================+==================================================+
-| :guilabel:`Max strikes`    | Violations in the window before a temporary ban  |
+| :guilabel:`Ai Max Strikes` | Violations in the window before a temporary ban  |
 |                            | (default 3).                                     |
 +----------------------------+--------------------------------------------------+
-| :guilabel:`Strike window   | Hours over which strikes accumulate (default 24).|
-| (hours)`                   |                                                  |
+| :guilabel:`Ai Strike       | Hours over which strikes accumulate (default 24).|
+| Window Hours`              |                                                  |
 +----------------------------+--------------------------------------------------+
-| :guilabel:`Ban (minutes)`  | How long a ban lasts (default 60).               |
+| :guilabel:`Ai Ban Minutes` | How long a ban lasts (default 60).               |
 +----------------------------+--------------------------------------------------+
 
 Rate and usage limits
 ---------------------
 
-+------------------------------------+------------------------------------------+
-| Setting                            | Meaning                                  |
-+====================================+==========================================+
-| :guilabel:`Rate limit (RPM)`       | Max requests per minute per user         |
-|                                    | (default 20).                            |
-+------------------------------------+------------------------------------------+
-| :guilabel:`Max daily calls`        | 0 = unlimited.                           |
-+------------------------------------+------------------------------------------+
-| :guilabel:`Max daily cost (USD)`   | Soft cost cap using model unit prices; 0 |
-|                                    | = unlimited. Unpriced models may not     |
-|                                    | enforce cost well.                       |
-+------------------------------------+------------------------------------------+
-| :guilabel:`Max conversations / day`| 0 = unlimited.                           |
-+------------------------------------+------------------------------------------+
-| :guilabel:`Max successive calls`   | Bound on chained model turns (default    |
-|                                    | 10).                                     |
-+------------------------------------+------------------------------------------+
-| :guilabel:`Max tool calls`         | Bound on tool invocations per turn loop  |
-|                                    | (default 10).                            |
-+------------------------------------+------------------------------------------+
-| :guilabel:`Write mode`             | **Interactive chat only** — auto /       |
-|                                    | confirm / hybrid. Agent runs use each    |
-|                                    | task's own :guilabel:`Write mode`        |
-|                                    | instead (default confirm). See           |
-|                                    | :doc:`using_the_assistant` and           |
-|                                    | :ref:`ai/agents/task-write-mode`.        |
-+------------------------------------+------------------------------------------+
-| :guilabel:`Chat write-proposal     | Minutes until a chat proposal expires; 0 |
-| lifetime`                          | = never.                                 |
-+------------------------------------+------------------------------------------+
-| :guilabel:`Agent write-proposal    | Minutes until an agent proposal expires  |
-| lifetime`                          | (default 1440); 0 = never.               |
-+------------------------------------+------------------------------------------+
++------------------------------------------+------------------------------------------+
+| Setting                                  | Meaning                                  |
++==========================================+==========================================+
+| :guilabel:`Ai Rate Limit Rpm`            | Max requests per minute per user         |
+|                                          | (default 20).                            |
++------------------------------------------+------------------------------------------+
+| :guilabel:`Ai Max Daily Calls`           | 0 = unlimited.                           |
++------------------------------------------+------------------------------------------+
+| :guilabel:`Ai Max Daily Cost Usd`        | Soft cost cap using model unit prices; 0 |
+|                                          | = unlimited. Unpriced models may not     |
+|                                          | enforce cost well.                       |
++------------------------------------------+------------------------------------------+
+| :guilabel:`Ai Max Conversations Per Day` | 0 = unlimited.                           |
++------------------------------------------+------------------------------------------+
+| :guilabel:`Ai Max Successive Calls`      | Bound on chained model turns (default    |
+|                                          | 10).                                     |
++------------------------------------------+------------------------------------------+
+| :guilabel:`Ai Max Tool Calls`            | Bound on tool invocations per turn loop  |
+|                                          | (default 10).                            |
++------------------------------------------+------------------------------------------+
+| :guilabel:`Ai Write Mode`                | **Interactive chat only** — auto /       |
+|                                          | confirm / hybrid. Agent runs use each    |
+|                                          | task's own :guilabel:`Write Mode`        |
+|                                          | instead (default confirm). See           |
+|                                          | :doc:`using_the_assistant` and           |
+|                                          | :ref:`ai/agents/task-write-mode`.        |
++------------------------------------------+------------------------------------------+
+| :guilabel:`Chat write-proposal           | Minutes until a chat proposal expires; 0 |
+| lifetime (minutes)`                      | = never.                                 |
++------------------------------------------+------------------------------------------+
+| :guilabel:`Agent write-proposal          | Minutes until an agent proposal expires  |
+| lifetime (minutes)`                      | (default 1440); 0 = never.               |
++------------------------------------------+------------------------------------------+
 
 Logging
 -------
 
-- :guilabel:`Log level` — *Metadata only* (default, recommended) or *Full
+- :guilabel:`Ai Log Level` — *Metadata only* (default, recommended) or *Full
   payload* (stores message/tool content; high sensitivity).
-- :guilabel:`Run step retention (days)` — purge horizon for
+- :guilabel:`Run Step Retention (Days)` — purge horizon for
   ``ai.agent.run.step`` journal rows (default 90; 0 disables). Does **not**
   auto-purge ``ai.log`` or run headers.
 
@@ -103,7 +103,7 @@ See :doc:`access_policy` for rules and groups.
 Runtime introspection
 ---------------------
 
-- :guilabel:`Publish installed modules` — whether environment facts may include
+- :guilabel:`Publish Installed Modules` — whether environment facts may include
   the installed module list (still subject to the user's
   ``ir.module.module`` ACL). Denying makes the assistant more cautious, not
   magically more accurate. Version, edition, company and user facts remain.
@@ -116,27 +116,28 @@ Requires the **Web access** capability to be enabled for tools to be offered.
 +----------------------------------+-------------------------------------------+
 | Setting                          | Meaning                                   |
 +==================================+===========================================+
-| :guilabel:`Search backend`       | ``ai.web.provider`` used by               |
+| :guilabel:`Search Backend`       | ``ai.web.provider`` used by               |
 |                                  | ``web_search``. Empty = search off.       |
 +----------------------------------+-------------------------------------------+
-| :guilabel:`Fetch backend`        | Provider for ``web_fetch``; empty falls   |
+| :guilabel:`Fetch Backend`        | Provider for ``web_fetch``; empty falls   |
 |                                  | back to built-in Direct fetch.            |
 +----------------------------------+-------------------------------------------+
-| :guilabel:`Allowed domains`      | Comma-separated allow-list; empty = any   |
+| :guilabel:`Allowed Domains`      | Comma-separated allow-list; empty = any   |
 |                                  | public host (SSRF protections still       |
 |                                  | apply to private ranges).                 |
 +----------------------------------+-------------------------------------------+
-| :guilabel:`Daily limit`          | Max web calls per user per company; 0 =   |
+| :guilabel:`Daily Limit`          | Max web calls per user per company; 0 =   |
 |                                  | unlimited.                                |
 +----------------------------------+-------------------------------------------+
-| :guilabel:`Max page text`        | Characters retained from a fetched page.  |
+| :guilabel:`Max Page Text`        | Characters retained from a fetched page.  |
 +----------------------------------+-------------------------------------------+
-| :guilabel:`Max query length`     | Cap on search query size.                 |
+| :guilabel:`Max Query Length`     | Cap on search query size.                 |
 +----------------------------------+-------------------------------------------+
-| :guilabel:`Allowed image / doc   | MIME allow-lists for ingest.              |
-| types`                           |                                           |
+| :guilabel:`Allowed Image Types`, | MIME allow-lists for ingest.              |
+| :guilabel:`Allowed Document      |                                           |
+| Types`                           |                                           |
 +----------------------------------+-------------------------------------------+
-| :guilabel:`Max file size`        | Bytes (default 10 MiB).                   |
+| :guilabel:`Max File Size`        | Bytes (default 10 MiB).                   |
 +----------------------------------+-------------------------------------------+
 
 System parameters and scheduled actions
@@ -152,7 +153,7 @@ System parameters
 :menuselection:`Settings --> Technical --> Parameters --> System Parameters`
 
 - ``ai.triage_enabled`` — global off switch for stage-1 triage, covering both
-  the inbound check and a task's :guilabel:`Triage on dispatch` (default
+  the inbound check and a task's :guilabel:`Triage On Dispatch` (default
   ``True``). Set it to ``False`` and every instruction is executed unassessed.
 - ``ai.waiting_approval_ttl_minutes`` — how long a run may sit waiting for a
   supervisor's answer before it is failed (default ``1440``; ``0`` means never
@@ -162,12 +163,38 @@ System parameters
   i.e. 10 minutes). This is not a kill switch: to stop reaping altogether,
   deactivate the scheduled action instead.
 
-Stuck and stranded agent runs
------------------------------
+Scheduled actions
+-----------------
 
-The scheduled action **AI: reap stuck agent runs** closes runs whose worker died,
-and also frees runs parked for approval with nothing left to approve. Both jobs,
-their cadence and their batch limit are described in :ref:`ai/agents/reaper`.
+:menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`
+
+The module ships seven scheduled actions, all active after install:
+
+- **AI: Expire user bans** (hourly) — lifts the temporary bans whose end time
+  has passed.
+- **AI: Expire pending writes** (every 15 minutes) — expires write proposals
+  older than their configured lifetime. It first releases the proposals left
+  behind by a run that has already finished, so a lifetime of ``0`` does not
+  also disable that sweep.
+- **AI: dispatch scheduled agent tasks** (every 5 minutes) — starts the agent
+  tasks that are due. This is only how often the dispatcher itself wakes; each
+  task's own interval decides its cadence, so the cron has to wake at least as
+  often as the shortest interval configured on a task.
+- **AI: drain inbound addressing requests** (every minute) — starts the runs
+  queued when somebody addresses an agent through a Discuss message, a chatter
+  mention, an activity or an assignment. It is deliberately more frequent than
+  the dispatcher, because somebody is waiting for the reply.
+- **AI: expire waiting-approval agent runs** (every 15 minutes) — fails the runs
+  that have waited for a supervisor's answer longer than
+  ``ai.waiting_approval_ttl_minutes``, and expires the proposals they were
+  waiting on.
+- **AI: reap stuck agent runs** (every 15 minutes) — closes runs whose worker
+  died, and also frees runs parked for approval with nothing left to approve.
+  Both jobs, their cadence and their batch limit are described in
+  :ref:`ai/agents/reaper`.
+- **AI: memory maintenance** (every 6 hours) — archives working memories past
+  their expiry date, lets the salience of untouched entries decay, and flags
+  high-salience personal entries as promotion candidates for an administrator.
 
 LLM providers and models
 ========================
@@ -177,14 +204,14 @@ LLM providers and models
 Fields of interest:
 
 - Provider type and API key (system parameter storage).
-- :guilabel:`Base URL` — only override when you understand the trust boundary
+- :guilabel:`Base Url` — only override when you understand the trust boundary
   (a writable base URL can be an SSRF risk if pointed at internal services).
-- :guilabel:`Timeout`, :guilabel:`Max retries`, :guilabel:`Call deadline` —
+- :guilabel:`Timeout`, :guilabel:`Max Retries`, :guilabel:`Call Deadline` —
   wall-clock budget for one provider call including retries.
 
 :menuselection:`AI --> Configuration --> Providers --> Models`
 
-- :guilabel:`Model id` — exact vendor id.
+- :guilabel:`Model` — exact vendor id.
 - :guilabel:`Context Window`, :guilabel:`Max Output Tokens`, tool and
   temperature support flags.
 - Prompt / completion unit prices and price source (provider API, curated
@@ -231,7 +258,7 @@ value truncates answers.
      an Anthropic model that publishes a cap of its own, that 2048 was genuinely
      in force: those agents may now write up to the model's full
      :guilabel:`Max Output Tokens` — more tokens, more cost and more time, and an
-     answer long enough to exhaust the provider's :guilabel:`Call deadline` fails
+     answer long enough to exhaust the provider's :guilabel:`Call Deadline` fails
      with an error instead of stopping at 2048 tokens.
 
    Any other value you typed is kept. Re-enter a cap on every agent you meant to

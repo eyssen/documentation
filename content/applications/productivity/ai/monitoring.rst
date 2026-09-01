@@ -64,7 +64,7 @@ User bans
 Temporarily suspends AI use for a user. The gate checks bans **first**, before
 expensive LLM or triage work — this breaks adaptive attack iteration.
 
-- Duration comes from Settings (:guilabel:`Ban minutes`) when auto-issued.
+- Duration comes from Settings (:guilabel:`Ai Ban Minutes`) when auto-issued.
 - Admins may manage bans manually.
 - AI Administrators / Settings are treated as ban-exempt in design (they
   administer the rails themselves) — another reason agent users must never be
@@ -79,7 +79,7 @@ For autonomous work, also monitor:
 - :menuselection:`AI --> Agents --> Runs`
 
 Inspect failed steps, tool errors and pending write linkage. Step journals can
-be purged after :guilabel:`Run step retention` days; keep enough history to
+be purged after :guilabel:`Run Step Retention (Days)`; keep enough history to
 investigate incidents.
 
 Failure types
@@ -132,12 +132,12 @@ surface: a backlog of pending agent proposals means supervisors need capacity,
 or the agent is too aggressive.
 
 .. important::
-   The :guilabel:`Agent write-proposal lifetime` only applies while the proposing
-   run is still open. Once that run has ended — most often a run that overran its
-   time limit and closed as :guilabel:`Timed out` — its pending proposals are
-   expired by the next pass of the **AI: Expire pending writes** scheduled action,
-   every 15 minutes, because nobody is left to carry the result back. That sweep
-   runs whatever the lifetime is set to, ``0`` included.
+   The :guilabel:`Agent write-proposal lifetime (minutes)` only applies while the
+   proposing run is still open. Once that run has ended — most often a run that
+   overran its time limit and closed as :guilabel:`Timed out` — its pending
+   proposals are expired by the next pass of the **AI: Expire pending writes**
+   scheduled action, every 15 minutes, because nobody is left to carry the result
+   back. That sweep runs whatever the lifetime is set to, ``0`` included.
 
    So review the proposals of failed and timed-out runs promptly; do not plan to
    come back to them tomorrow.

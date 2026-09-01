@@ -99,7 +99,7 @@ Key design principles
 4. **Default-deny channels for agents** — an agent without a matching channel
    rule refuses inbound address (Discuss DM, @mention, activity, assignment).
 5. **Supervisor four-eyes by default on agent writes** — each agent **task**
-   has its own :guilabel:`Write mode` (default **Always require confirmation**).
+   has its own :guilabel:`Write Mode` (default **Always require confirmation**).
    Unattended runs therefore propose for the supervisor unless that task
    explicitly opts into *hybrid* or *auto* for trusted, low-risk work (for
    example filling **draft** vendor bills that the playbook never posts). The

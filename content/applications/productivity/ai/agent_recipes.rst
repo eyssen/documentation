@@ -182,7 +182,7 @@ Channels and audience
 Write mode / supervision
 ------------------------
 
-- Keep the task :guilabel:`Write mode` on **confirm** for public-facing bots so
+- Keep the task :guilabel:`Write Mode` on **confirm** for public-facing bots so
   every create waits for a supervisor. For high-volume ticket spam, either:
 
   - leave *confirm* and batch-approve, **or**
@@ -246,11 +246,11 @@ Shared constraints (chat and agent)
   fields on a bill also write another model, so they need a rule naming the
   **field**. The ones this flow depends on ship pre-allowed — on
   ``account.move`` the partner, journal, currency, payment term, delivery date
-  and payment reference, and on ``account.move.line`` the product, account and
-  partner. Anything else that crosses a model boundary still needs a field rule
-  of your own, notably ``account.move.name`` (:guilabel:`Number`) and, on lines,
-  ``debit``, ``credit`` and ``amount_currency``. See
-  :ref:`ai/policy/cross-model`.
+  and payment reference, and on ``account.move.line`` the product, account,
+  analytic distribution and partner. Anything else that crosses a model boundary
+  still needs a field rule of your own, notably ``account.move.name``
+  (:guilabel:`Number`) and, on lines, ``debit``, ``credit`` and
+  ``amount_currency``. See :ref:`ai/policy/cross-model`.
 - Those shipped field rules are re-seeded by every upgrade of the AI app, but
   only for apps that are already installed. If **Accounting** was added *after*
   the AI app, upgrade the AI app — until you do, this flow refuses invoice-line
@@ -268,7 +268,7 @@ Variant D1 — Interactive chat (accountant as themselves)
 ---------------------------------------------------------
 
 - Prefer a chat persona (no linked agent user) so tools run as the accountant.
-- Global chat :guilabel:`Write mode`: **confirm** or **hybrid** for SOX-style
+- Global chat :guilabel:`Ai Write Mode`: **confirm** or **hybrid** for SOX-style
   trails; *auto* only in tightly controlled pilot groups.
 - Restrict the persona to Accounting groups via :guilabel:`Restricted to
   groups` if needed.
@@ -290,7 +290,7 @@ attachments but empty lines (and/or new document inbox items), run
    - :guilabel:`Cadence` *On a schedule*, interval e.g. 1 hour;
    - :guilabel:`Deadline Seconds` well under the worker budget (e.g. 600 if the
      dispatch tick budget is ~870 — a deadline above the budget skips the run);
-   - :guilabel:`Write mode` **Apply immediately** (*auto*) is acceptable **only
+   - :guilabel:`Write Mode` **Apply immediately** (*auto*) is acceptable **only
      because** the skill never posts and the agent never pays — risk stays at
      “wrong draft lines”, not “posted garbage”. Use *confirm* if you want every
      line change to wait for the supervisor;
@@ -366,7 +366,7 @@ For each recipe, as a normal non-admin user:
 2. Disallowed channel (e.g. random DM) refuses and records violation.
 3. Tool read on a denied model fails.
 4. Create on an allowed model respects write mode: chat global mode, or the
-   **task** :guilabel:`Write mode` for agent runs (default proposal).
+   **task** :guilabel:`Write Mode` for agent runs (default proposal).
 5. Supervisor can apply; a non-supervisor cannot apply agent proposals.
 6. Ban the test user; further address is refused without LLM cost.
 

@@ -48,18 +48,21 @@ roughly as:
 
 1. **Hard-deny floor** — technical / self-protection models always deny,
    including every ``ai.*`` platform model and raw ``mail.message`` /
-   ``mail.activity`` / ``discuss.channel`` (see :doc:`security`).
+   ``discuss.channel`` (see :doc:`security`).
 2. **Any explicit Deny**, field-level or model-level. A Deny at either tier is
    absolute and nothing below overrides it.
 3. **Field-level Allow** (read/write only) — decides the field tier and outranks
    the global default for that field. This is the mechanism the shipped rules and
    the whole cross-model opt-in rely on: with write defaulting to Deny, a
    field-scoped Allow is what makes a field writable. It does not replace the
-   model tier, though: a **direct** write to a model must still pass step 4 or 5
+   model tier, though: a **direct** write to a model must still pass step 4 or 6
    for that model. Only a payload nested inside a parent one2many or many2many
    field skips the model check on the child model.
 4. **Model-level Allow** — most specific Allow wins among groups.
-5. **Global defaults** from Settings (default_read / create / write / delete).
+5. **Explicit-allow-only models** — ``ir.attachment`` and ``mail.activity`` stop
+   here. They are off the floor, so a rule can open them, but they never fall
+   through to the global defaults: with no matching Allow they are denied.
+6. **Global defaults** from Settings (default_read / create / write / delete).
 
 Unknown models or operations fail closed. Results are cached and invalidated
 when rules, groups or parameters change.
@@ -148,11 +151,18 @@ Fresh install
 
 - Read: **allow** (minus floor and strips) so the assistant is useful for Q&A.
 - Create / write / delete: **deny** until you open specific models.
-- Nine field-level write allows ship enabled, so the vendor-bill and
+- Ten field-level write allows ship enabled, so the vendor-bill and
   invoice-line flows keep working under the cross-model rail above:
   ``account.move`` (partner, journal, currency, payment term, delivery date,
-  payment reference) and ``account.move.line`` (product, account, partner).
-  Nothing is opened on ``crm.lead``.
+  payment reference) and ``account.move.line`` (product, account, analytic
+  distribution, partner). Nothing is opened on ``crm.lead``.
+
+  ``account.move.line.analytic_distribution`` is the one to read twice. It is a
+  JSON field, so its rule lifts two rails at once: the cross-model rail above and
+  the refusal of JSON-typed values, which no other shipped rule touches. Its
+  inverse also leaves the document — on a **posted** line it deletes the line's
+  ``account.analytic.line`` records and re-creates them — so an analytic write
+  reaches a model no rule ever named and no audit entry names either.
 
   These rows carry **no access group and no company**, so they are global rules:
   they apply to every AI user and every agent, not only to the invoicing flow.
@@ -166,19 +176,27 @@ Fresh install
   until then the vendor-bill flow refuses invoice-line writes with no other
   symptom, so upgrade the AI app after adding Accounting.
 
+- Two model-level allows ship enabled as well, on the two explicit-allow-only
+  models of step 5: ``ir.attachment`` is opened for read and write (PDF and image
+  content for the document and vendor-bill skills, and re-attaching a file to
+  another record), ``mail.activity`` for read, write and create (review To-Dos
+  authored by the AI user). Creating or deleting an attachment and deleting an
+  activity stay closed. Like the field rows they are global, arrive on install and
+  on every upgrade, and survive your edits.
+
 .. warning::
-   On the nested-line path the three ``account.move.line`` rows are real write
+   On the nested-line path the four ``account.move.line`` rows are real write
    permission, not only a lifted rail. A field-level Allow is resolved before the
    model tier and before the global default, so once write is allowed on
-   ``account.move``, the assistant can set product, account and partner on invoice
-   lines through :guilabel:`Invoice lines` even though write on
+   ``account.move``, the assistant can set product, account, analytic distribution
+   and partner on invoice lines through :guilabel:`Invoice lines` even though write on
    ``account.move.line`` itself was never allowed — the create/write default of
    Deny does not hold that line. A *direct* write to ``account.move.line`` is
    still refused; only a payload nested inside a parent field skips the
    model-level check.
 
    Header fields on ``account.move`` are unaffected: writing the document still
-   needs your own model-level Allow. To close the three line fields, add an
+   needs your own model-level Allow. To close the four line fields, add an
    explicit **Deny** — model-level on ``account.move.line``, or on the field — or
    deactivate the shipped rules. A Deny at either tier beats the Allow, and either
    edit survives every upgrade; deleting a shipped rule only brings it back.

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-09 20:00+0200\n"
+"POT-Creation-Date: 2026-09-01 08:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -147,7 +147,7 @@ msgid "**Default-deny channels for agents** — an agent without a matching chan
 msgstr ""
 
 #: ../../content/applications/productivity/ai.rst:101
-msgid "**Supervisor four-eyes by default on agent writes** — each agent **task** has its own :guilabel:`Write mode` (default **Always require confirmation**). Unattended runs therefore propose for the supervisor unless that task explicitly opts into *hybrid* or *auto* for trusted, low-risk work (for example filling **draft** vendor bills that the playbook never posts). The global chat write mode does **not** control agent runs — see :ref:`ai/agents/task-write-mode`."
+msgid "**Supervisor four-eyes by default on agent writes** — each agent **task** has its own :guilabel:`Write Mode` (default **Always require confirmation**). Unattended runs therefore propose for the supervisor unless that task explicitly opts into *hybrid* or *auto* for trusted, low-risk work (for example filling **draft** vendor bills that the playbook never posts). The global chat write mode does **not** control agent runs — see :ref:`ai/agents/task-write-mode`."
 msgstr ""
 
 #: ../../content/applications/productivity/ai.rst:108
@@ -271,7 +271,7 @@ msgid "For a given user, model, operation and optional field, ``ai_can`` resolve
 msgstr ""
 
 #: ../../content/applications/productivity/ai/access_policy.rst:49
-msgid "**Hard-deny floor** — technical / self-protection models always deny, including every ``ai.*`` platform model and raw ``mail.message`` / ``mail.activity`` / ``discuss.channel`` (see :doc:`security`)."
+msgid "**Hard-deny floor** — technical / self-protection models always deny, including every ``ai.*`` platform model and raw ``mail.message`` / ``discuss.channel`` (see :doc:`security`)."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/access_policy.rst:52
@@ -279,7 +279,7 @@ msgid "**Any explicit Deny**, field-level or model-level. A Deny at either tier 
 msgstr ""
 
 #: ../../content/applications/productivity/ai/access_policy.rst:54
-msgid "**Field-level Allow** (read/write only) — decides the field tier and outranks the global default for that field. This is the mechanism the shipped rules and the whole cross-model opt-in rely on: with write defaulting to Deny, a field-scoped Allow is what makes a field writable. It does not replace the model tier, though: a **direct** write to a model must still pass step 4 or 5 for that model. Only a payload nested inside a parent one2many or many2many field skips the model check on the child model."
+msgid "**Field-level Allow** (read/write only) — decides the field tier and outranks the global default for that field. This is the mechanism the shipped rules and the whole cross-model opt-in rely on: with write defaulting to Deny, a field-scoped Allow is what makes a field writable. It does not replace the model tier, though: a **direct** write to a model must still pass step 4 or 6 for that model. Only a payload nested inside a parent one2many or many2many field skips the model check on the child model."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/access_policy.rst:61
@@ -287,242 +287,254 @@ msgid "**Model-level Allow** — most specific Allow wins among groups."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/access_policy.rst:62
+msgid "**Explicit-allow-only models** — ``ir.attachment`` and ``mail.activity`` stop here. They are off the floor, so a rule can open them, but they never fall through to the global defaults: with no matching Allow they are denied."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/access_policy.rst:65
 msgid "**Global defaults** from Settings (default_read / create / write / delete)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:64
+#: ../../content/applications/productivity/ai/access_policy.rst:67
 msgid "Unknown models or operations fail closed. Results are cached and invalidated when rules, groups or parameters change."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:68
+#: ../../content/applications/productivity/ai/access_policy.rst:71
 msgid "Universal sanitiser rails (before/alongside policy)"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:70
+#: ../../content/applications/productivity/ai/access_policy.rst:73
 msgid "Independently of allow rules, the gate refuses or strips the following — with one exception, noted in the list:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:73
+#: ../../content/applications/productivity/ai/access_policy.rst:76
 msgid "magic fields;"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:74
+#: ../../content/applications/productivity/ai/access_policy.rst:77
 msgid "sensitive-looking field names (password, token, api_key, …);"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:75
+#: ../../content/applications/productivity/ai/access_policy.rst:78
 msgid "fields that write into another model — the only rail an Allow rule can lift, and only per field; see :ref:`ai/policy/cross-model`;"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:77
+#: ../../content/applications/productivity/ai/access_policy.rst:80
 msgid "lifecycle ``state`` writes;"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:78
+#: ../../content/applications/productivity/ai/access_policy.rst:81
 msgid "non-writable / complex types that must not be LLM-driven;"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:79
+#: ../../content/applications/productivity/ai/access_policy.rst:82
 msgid "hard-deny models in relational paths / domains."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:84
+#: ../../content/applications/productivity/ai/access_policy.rst:87
 msgid "Cross-model write protection"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:86
+#: ../../content/applications/productivity/ai/access_policy.rst:89
 msgid "Some Odoo fields do not only store a value: writing them also writes into a **different** model. ``crm.lead.email_from``, for example, updates the linked partner's email address. Left unguarded, an assistant allowed to \"edit leads\" could change contact data outside the models you opened, and the audit log would only name the lead."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:92
+#: ../../content/applications/productivity/ai/access_policy.rst:95
 msgid "Odoo has two kinds of such field, and only one of them can be opened."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:94
+#: ../../content/applications/productivity/ai/access_policy.rst:97
 msgid "A **related** field re-routes the write to the other model by definition. The gate refuses it outright, on create and on write, and no access rule of any shape opens it — allow the assistant to write the *target* model instead."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:98
+#: ../../content/applications/productivity/ai/access_policy.rst:101
 msgid "A field carrying an **inverse** runs arbitrary code that may touch anything: ``crm.lead.email_from`` is compute-plus-inverse, and its inverse writes ``res.partner.email``. The gate refuses such a field **unless a field-level rule explicitly allows writing that exact field**. A model-level Allow is deliberately *not* enough: granting write on ``crm.lead`` must not silently open ``res.partner`` as well."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:105
+#: ../../content/applications/productivity/ai/access_policy.rst:108
 msgid "The surface is wider than it looks. Core Odoo carries inverses on everyday fields — a vendor bill's partner, journal, currency and payment term, an invoice line's product and account, a lead's email — so expect to meet this rail on the first real write you enable."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:110
+#: ../../content/applications/productivity/ai/access_policy.rst:113
 msgid "Either refusal is a configuration boundary, not abuse: it records no violation and costs the user no strike."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:114
+#: ../../content/applications/productivity/ai/access_policy.rst:117
 msgid "Opening one of these fields"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:116
+#: ../../content/applications/productivity/ai/access_policy.rst:119
 msgid "Go to :menuselection:`AI --> Configuration --> Security --> Access Rules`."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:117
+#: ../../content/applications/productivity/ai/access_policy.rst:120
 msgid "Create a rule with :guilabel:`Model` **and** :guilabel:`Field` set — the field is what makes it count."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:119
+#: ../../content/applications/productivity/ai/access_policy.rst:122
 msgid "Set :guilabel:`perm_write` = **Allow**."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:122
+#: ../../content/applications/productivity/ai/access_policy.rst:125
 msgid "A rule with :guilabel:`Field` left empty is a model-level rule and will not lift this rail, however permissive it looks. :guilabel:`perm_write` is the permission that counts, and it is also what opens the field inside a *create* payload: :guilabel:`perm_create` is model-level and is ignored on field rules."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:127
+#: ../../content/applications/productivity/ai/access_policy.rst:130
 msgid "The rule lifts the inverse rail and nothing else. A field that is not stored in the database — ``product.template.standard_price`` is computed with an inverse but has no column — and a related field both stay refused however permissive the rule is. So if the refusal survives a correct field-level rule, the field is related or not stored, not an inverse field."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:134
+#: ../../content/applications/productivity/ai/access_policy.rst:137
 msgid "When the refusal happens inside a one2many or many2many payload — an invoice line inside :guilabel:`Invoice lines`, for example — the assistant reports only the **parent** field, ``invoice_line_ids``, because that is the field it tried to write. The nested model and field that were actually refused go to the Odoo **server** log at INFO level; search it for ``AI x2many write refused``. They do not appear under :menuselection:`AI --> Monitoring --> Logs`, and a refusal for a missing field opt-in records no violation either — it is a configuration boundary, not abuse."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:144
+#: ../../content/applications/productivity/ai/access_policy.rst:147
 msgid "Defaults and recommended postures"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:147
+#: ../../content/applications/productivity/ai/access_policy.rst:150
 msgid "Fresh install"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:149
+#: ../../content/applications/productivity/ai/access_policy.rst:152
 msgid "Read: **allow** (minus floor and strips) so the assistant is useful for Q&A."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:150
+#: ../../content/applications/productivity/ai/access_policy.rst:153
 msgid "Create / write / delete: **deny** until you open specific models."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:151
-msgid "Nine field-level write allows ship enabled, so the vendor-bill and invoice-line flows keep working under the cross-model rail above: ``account.move`` (partner, journal, currency, payment term, delivery date, payment reference) and ``account.move.line`` (product, account, partner). Nothing is opened on ``crm.lead``."
+#: ../../content/applications/productivity/ai/access_policy.rst:154
+msgid "Ten field-level write allows ship enabled, so the vendor-bill and invoice-line flows keep working under the cross-model rail above: ``account.move`` (partner, journal, currency, payment term, delivery date, payment reference) and ``account.move.line`` (product, account, analytic distribution, partner). Nothing is opened on ``crm.lead``."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:157
+#: ../../content/applications/productivity/ai/access_policy.rst:160
+msgid "``account.move.line.analytic_distribution`` is the one to read twice. It is a JSON field, so its rule lifts two rails at once: the cross-model rail above and the refusal of JSON-typed values, which no other shipped rule touches. Its inverse also leaves the document — on a **posted** line it deletes the line's ``account.analytic.line`` records and re-creates them — so an analytic write reaches a model no rule ever named and no audit entry names either."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/access_policy.rst:167
 msgid "These rows carry **no access group and no company**, so they are global rules: they apply to every AI user and every agent, not only to the invoicing flow. They arrive on install **and** on every upgrade of the AI app. If you edit or deactivate one, an upgrade will not overwrite your change; if you delete one, it comes back."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:163
+#: ../../content/applications/productivity/ai/access_policy.rst:173
 msgid "They exist only where **Accounting** is installed, and each install or upgrade of the AI app seeds only the apps present at that moment. Install Accounting *after* the AI app and the rows appear only at the next upgrade of the AI app — until then the vendor-bill flow refuses invoice-line writes with no other symptom, so upgrade the AI app after adding Accounting."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:170
-msgid "On the nested-line path the three ``account.move.line`` rows are real write permission, not only a lifted rail. A field-level Allow is resolved before the model tier and before the global default, so once write is allowed on ``account.move``, the assistant can set product, account and partner on invoice lines through :guilabel:`Invoice lines` even though write on ``account.move.line`` itself was never allowed — the create/write default of Deny does not hold that line. A *direct* write to ``account.move.line`` is still refused; only a payload nested inside a parent field skips the model-level check."
+#: ../../content/applications/productivity/ai/access_policy.rst:179
+msgid "Two model-level allows ship enabled as well, on the two explicit-allow-only models of step 5: ``ir.attachment`` is opened for read and write (PDF and image content for the document and vendor-bill skills, and re-attaching a file to another record), ``mail.activity`` for read, write and create (review To-Dos authored by the AI user). Creating or deleting an attachment and deleting an activity stay closed. Like the field rows they are global, arrive on install and on every upgrade, and survive your edits."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:180
-msgid "Header fields on ``account.move`` are unaffected: writing the document still needs your own model-level Allow. To close the three line fields, add an explicit **Deny** — model-level on ``account.move.line``, or on the field — or deactivate the shipped rules. A Deny at either tier beats the Allow, and either edit survives every upgrade; deleting a shipped rule only brings it back."
+#: ../../content/applications/productivity/ai/access_policy.rst:188
+msgid "On the nested-line path the four ``account.move.line`` rows are real write permission, not only a lifted rail. A field-level Allow is resolved before the model tier and before the global default, so once write is allowed on ``account.move``, the assistant can set product, account, analytic distribution and partner on invoice lines through :guilabel:`Invoice lines` even though write on ``account.move.line`` itself was never allowed — the create/write default of Deny does not hold that line. A *direct* write to ``account.move.line`` is still refused; only a payload nested inside a parent field skips the model-level check."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:187
-msgid "Deny-by-default read (stricter)"
-msgstr ""
-
-#: ../../content/applications/productivity/ai/access_policy.rst:189
-msgid "Set default read to **Deny**, then add Allow rules only for models the assistant should see (e.g. ``product.product``, ``res.partner`` with field denies on internal notes, etc.). Safer for regulated databases; requires more setup."
-msgstr ""
-
-#: ../../content/applications/productivity/ai/access_policy.rst:194
-msgid "Examples"
-msgstr ""
-
-#: ../../content/applications/productivity/ai/access_policy.rst:197
-msgid "Deny all AI read on employees"
-msgstr ""
-
-#: ../../content/applications/productivity/ai/access_policy.rst:199
-msgid "Create global rule on model ``hr.employee``."
-msgstr ""
-
-#: ../../content/applications/productivity/ai/access_policy.rst:200
-msgid "Set :guilabel:`perm_read` = **Deny** (other perms inherit/deny as you like)."
-msgstr ""
-
-#: ../../content/applications/productivity/ai/access_policy.rst:203
-msgid "Allow support agent to create helpdesk tickets only"
+#: ../../content/applications/productivity/ai/access_policy.rst:198
+msgid "Header fields on ``account.move`` are unaffected: writing the document still needs your own model-level Allow. To close the four line fields, add an explicit **Deny** — model-level on ``account.move.line``, or on the field — or deactivate the shipped rules. A Deny at either tier beats the Allow, and either edit survives every upgrade; deleting a shipped rule only brings it back."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/access_policy.rst:205
-msgid "Create AI access group *Support bot* with the agent user as member."
-msgstr ""
-
-#: ../../content/applications/productivity/ai/access_policy.rst:206
-msgid "Global defaults already deny create."
+msgid "Deny-by-default read (stricter)"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/access_policy.rst:207
+msgid "Set default read to **Deny**, then add Allow rules only for models the assistant should see (e.g. ``product.product``, ``res.partner`` with field denies on internal notes, etc.). Safer for regulated databases; requires more setup."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/access_policy.rst:212
+msgid "Examples"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/access_policy.rst:215
+msgid "Deny all AI read on employees"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/access_policy.rst:217
+msgid "Create global rule on model ``hr.employee``."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/access_policy.rst:218
+msgid "Set :guilabel:`perm_read` = **Deny** (other perms inherit/deny as you like)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/access_policy.rst:221
+msgid "Allow support agent to create helpdesk tickets only"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/access_policy.rst:223
+msgid "Create AI access group *Support bot* with the agent user as member."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/access_policy.rst:224
+msgid "Global defaults already deny create."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/access_policy.rst:225
 msgid "Rule on ``helpdesk.ticket`` (or ``project.task``) for that group:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:209
+#: ../../content/applications/productivity/ai/access_policy.rst:227
 #: ../../content/applications/productivity/ai/agent_recipes.rst:140
 msgid "``perm_create`` = Allow"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:210
+#: ../../content/applications/productivity/ai/access_policy.rst:228
 msgid "``perm_read`` = Deny (or Allow only safe fields via field rules)"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:211
+#: ../../content/applications/productivity/ai/access_policy.rst:229
 #: ../../content/applications/productivity/ai/agent_recipes.rst:142
 msgid "``perm_write`` = Deny"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:212
+#: ../../content/applications/productivity/ai/access_policy.rst:230
 #: ../../content/applications/productivity/ai/agent_recipes.rst:143
 msgid "``perm_delete`` = Deny"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:214
+#: ../../content/applications/productivity/ai/access_policy.rst:232
 msgid "Field-level: allow write on the few fields set at create time (name, description, partner email, team) if your policy requires write-allow to set values on create."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:217
+#: ../../content/applications/productivity/ai/access_policy.rst:235
 msgid "Ensure the agent **user** has matching Odoo ACLs to create those tickets — policy alone cannot grant create if the user group cannot."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:221
+#: ../../content/applications/productivity/ai/access_policy.rst:239
 msgid "Calendar free/busy without event details"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:223
+#: ../../content/applications/productivity/ai/access_policy.rst:241
 msgid "Goal: agent may create a meeting in free slots but must not dump other people's event subjects and attendees to the LLM."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:226
+#: ../../content/applications/productivity/ai/access_policy.rst:244
 #: ../../content/applications/productivity/ai/agent_recipes.rst:152
 msgid "Model ``calendar.event``:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:228
+#: ../../content/applications/productivity/ai/access_policy.rst:246
 msgid "``perm_read`` = Deny at model level for the bot group, **or**"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:229
+#: ../../content/applications/productivity/ai/access_policy.rst:247
 msgid "``perm_read`` = Allow with field-level **Deny** on ``name``, ``description``, ``partner_ids``, ``videocall_location``, and similar."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:231
+#: ../../content/applications/productivity/ai/access_policy.rst:249
 msgid "Prefer a dedicated free-busy API/action if you add one later; raw event read is a common over-share."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:233
+#: ../../content/applications/productivity/ai/access_policy.rst:251
 msgid "``perm_create`` = Allow with write-allow only on start, stop, name (generic), user_id."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:236
+#: ../../content/applications/productivity/ai/access_policy.rst:254
 msgid "See :doc:`agent_recipes` for end-to-end agent recipes that combine policy, capabilities and channels."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:240
+#: ../../content/applications/productivity/ai/access_policy.rst:258
 msgid "Relation to Odoo record rules"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/access_policy.rst:242
+#: ../../content/applications/productivity/ai/access_policy.rst:260
 msgid "AI policy does **not** replace record rules. Multi-company, follower-only documents, and portal isolation remain enforced by Odoo when the gate runs as the user. When designing \"create but not read\", verify both layers: a create that returns a read snapshot may still fail or strip if read is denied — the assistant should treat tool errors as authoritative."
 msgstr ""
 
@@ -811,7 +823,7 @@ msgid "Write mode / supervision"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:185
-msgid "Keep the task :guilabel:`Write mode` on **confirm** for public-facing bots so every create waits for a supervisor. For high-volume ticket spam, either:"
+msgid "Keep the task :guilabel:`Write Mode` on **confirm** for public-facing bots so every create waits for a supervisor. For high-volume ticket spam, either:"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:188
@@ -903,7 +915,7 @@ msgid "Capabilities: ``ask``, ``read``, ``write``; keep ``web`` / ``delete`` / `
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:244
-msgid "Access rules: allow read/write on vendor bills / products needed; deny HR and payroll. Model-level write is not enough on its own here: several everyday fields on a bill also write another model, so they need a rule naming the **field**. The ones this flow depends on ship pre-allowed — on ``account.move`` the partner, journal, currency, payment term, delivery date and payment reference, and on ``account.move.line`` the product, account and partner. Anything else that crosses a model boundary still needs a field rule of your own, notably ``account.move.name`` (:guilabel:`Number`) and, on lines, ``debit``, ``credit`` and ``amount_currency``. See :ref:`ai/policy/cross-model`."
+msgid "Access rules: allow read/write on vendor bills / products needed; deny HR and payroll. Model-level write is not enough on its own here: several everyday fields on a bill also write another model, so they need a rule naming the **field**. The ones this flow depends on ship pre-allowed — on ``account.move`` the partner, journal, currency, payment term, delivery date and payment reference, and on ``account.move.line`` the product, account, analytic distribution and partner. Anything else that crosses a model boundary still needs a field rule of your own, notably ``account.move.name`` (:guilabel:`Number`) and, on lines, ``debit``, ``credit`` and ``amount_currency``. See :ref:`ai/policy/cross-model`."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:254
@@ -935,7 +947,7 @@ msgid "Prefer a chat persona (no linked agent user) so tools run as the accounta
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:271
-msgid "Global chat :guilabel:`Write mode`: **confirm** or **hybrid** for SOX-style trails; *auto* only in tightly controlled pilot groups."
+msgid "Global chat :guilabel:`Ai Write Mode`: **confirm** or **hybrid** for SOX-style trails; *auto* only in tightly controlled pilot groups."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:273
@@ -979,7 +991,7 @@ msgid ":guilabel:`Deadline Seconds` well under the worker budget (e.g. 600 if th
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:293
-msgid ":guilabel:`Write mode` **Apply immediately** (*auto*) is acceptable **only because** the skill never posts and the agent never pays — risk stays at “wrong draft lines”, not “posted garbage”. Use *confirm* if you want every line change to wait for the supervisor;"
+msgid ":guilabel:`Write Mode` **Apply immediately** (*auto*) is acceptable **only because** the skill never posts and the agent never pays — risk stays at “wrong draft lines”, not “posted garbage”. Use *confirm* if you want every line change to wait for the supervisor;"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:297
@@ -1107,7 +1119,7 @@ msgid "Tool read on a denied model fails."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:368
-msgid "Create on an allowed model respects write mode: chat global mode, or the **task** :guilabel:`Write mode` for agent runs (default proposal)."
+msgid "Create on an allowed model respects write mode: chat global mode, or the **task** :guilabel:`Write Mode` for agent runs (default proposal)."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:370
@@ -1151,7 +1163,7 @@ msgid "Runs **as the chatting user** (their ACLs, their AI policy membership)."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:18
-msgid ":guilabel:`System prompt`, model overrides and capabilities shape the session."
+msgid ":guilabel:`System Prompt`, model overrides and capabilities shape the session."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:20
@@ -1159,7 +1171,7 @@ msgid "No supervisor required."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:21
-msgid ":guilabel:`Allowed groups` can restrict who may invoke this persona."
+msgid ":guilabel:`Restricted to groups` can restrict who may invoke this persona."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:24
@@ -1205,7 +1217,7 @@ msgid "Field"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:46
-#: ../../content/applications/productivity/ai/security.rst:176
+#: ../../content/applications/productivity/ai/security.rst:187
 #: ../../content/applications/productivity/ai/skills_and_memory.rst:17
 msgid "Purpose"
 msgstr ""
@@ -1252,7 +1264,7 @@ msgid "``0``, the default, sends no cap at all: the model's own output limit app
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:62
-msgid ":guilabel:`System prompt`"
+msgid ":guilabel:`System Prompt`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:62
@@ -1292,7 +1304,7 @@ msgid "Required if User is set; must be AI: User."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:73
-msgid ":guilabel:`Channel rules`"
+msgid ":guilabel:`Channel Rules`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:73
@@ -1308,370 +1320,362 @@ msgid "Marks the persona used by default in chat."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:79
-msgid "A positive :guilabel:`Max Tokens` reaches every provider, each under the parameter name its own API expects — but only where the model record publishes a :guilabel:`Max Output Tokens` of its own (:menuselection:`AI --> Configuration --> Providers --> Models`). On a model whose cap is unknown (``0``) the agent's value is dropped and the model writes to its own limit, so an agent capped at 500 tokens shows no effect and nothing on the form says why. Fill in :guilabel:`Max Output Tokens` on the model if you want a per-agent cap to bite."
-msgstr ""
-
-#: ../../content/applications/productivity/ai/agents.rst:88
-msgid "Anthropic is the exception, in the other direction: its API always requires the parameter, so an Anthropic model with no published cap falls back to a conservative built-in value rather than to the model's real limit."
-msgstr ""
-
-#: ../../content/applications/productivity/ai/agents.rst:93
 msgid "A cap only takes effect where the model record publishes an output limit of its own, and it behaves differently per provider. Both rules, and what an update does to agents that already carry a value, are described once under :ref:`ai/config/completion-caps`."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:99
+#: ../../content/applications/productivity/ai/agents.rst:85
 msgid "Channel rules"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:101
+#: ../../content/applications/productivity/ai/agents.rst:87
 msgid ":menuselection:`AI --> Configuration --> Behavior --> Agents` → channel rules (or dedicated channel rule views)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:104
+#: ../../content/applications/productivity/ai/agents.rst:90
 msgid "Channels:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:106
+#: ../../content/applications/productivity/ai/agents.rst:92
 msgid "**Discuss direct message**"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:107
+#: ../../content/applications/productivity/ai/agents.rst:93
 msgid "**Chatter @mention**"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:108
+#: ../../content/applications/productivity/ai/agents.rst:94
 msgid "**Activity** (assigned activity)"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:109
+#: ../../content/applications/productivity/ai/agents.rst:95
 msgid "**Assignment** (e.g. project task assignee) — critical: without this, anyone who can assign a task could not be distinguished from a Discuss gate"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:111
+#: ../../content/applications/productivity/ai/agents.rst:97
 msgid "**Email** / **AI chat panel** — reserved / progressive wiring; default-deny still applies"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:114
+#: ../../content/applications/productivity/ai/agents.rst:100
 msgid "Rule fields:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:116
+#: ../../content/applications/productivity/ai/agents.rst:102
 msgid ":guilabel:`Allowed groups` / :guilabel:`Allowed users` — audience. **Empty audience matches nobody** (not everyone)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:118
-msgid ":guilabel:`May request` — audience may trigger an ad-hoc run."
+#: ../../content/applications/productivity/ai/agents.rst:104
+msgid ":guilabel:`May Request` — audience may trigger an ad-hoc run."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:119
-msgid ":guilabel:`Scope mode`:"
+#: ../../content/applications/productivity/ai/agents.rst:105
+msgid ":guilabel:`Scope Mode`:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:121
+#: ../../content/applications/productivity/ai/agents.rst:107
 msgid "**Agent rights ∩ requester rights** (``intersect``, default) — capability *classes* both hold. Data is still read/written as the **agent**."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:123
+#: ../../content/applications/productivity/ai/agents.rst:109
 msgid "**The agent's full rights** (``agent_full``) — trusted audience only."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:126
+#: ../../content/applications/productivity/ai/agents.rst:112
 msgid "``intersect`` is **not** \"run as the requester\". It only narrows tool classes (read/write/web/…). Record visibility remains the agent's. Only allow-list people you trust with whatever the agent can see."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:131
+#: ../../content/applications/productivity/ai/agents.rst:117
 msgid "Inbound flow (simplified)"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:133
+#: ../../content/applications/productivity/ai/agents.rst:119
 msgid "Message / assignment / activity targets the agent."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:134
+#: ../../content/applications/productivity/ai/agents.rst:120
 msgid "If requester is **banned** → refuse (no LLM)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:135
+#: ../../content/applications/productivity/ai/agents.rst:121
 msgid "Resolve channel rule (default deny) → else refuse + violation / strike."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:136
+#: ../../content/applications/productivity/ai/agents.rst:122
 msgid "Enqueue inbound request; drain cron wakes."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:137
+#: ../../content/applications/productivity/ai/agents.rst:123
 msgid "Optional triage may subtract authority only."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:138
+#: ../../content/applications/productivity/ai/agents.rst:124
 msgid "Create task / run under supervisor scope; execute as agent user with committed capability ceiling."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:140
-msgid "Writes follow that **task's** :guilabel:`Write mode` (default: pending proposals for the supervisor; see :ref:`ai/agents/task-write-mode`)."
+#: ../../content/applications/productivity/ai/agents.rst:126
+msgid "Writes follow that **task's** :guilabel:`Write Mode` (default: pending proposals for the supervisor; see :ref:`ai/agents/task-write-mode`)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:142
+#: ../../content/applications/productivity/ai/agents.rst:128
 msgid "Agent posts notes / drafts on the thread as itself — customer text never becomes a silent privilege grant."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:146
+#: ../../content/applications/productivity/ai/agents.rst:132
 msgid "Tasks and runs"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:148
+#: ../../content/applications/productivity/ai/agents.rst:134
 msgid "Operational menus (AI: User, supervisor-scoped):"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:150
+#: ../../content/applications/productivity/ai/agents.rst:136
 msgid ":menuselection:`AI --> Agents --> Tasks` — work items (registry)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:151
+#: ../../content/applications/productivity/ai/agents.rst:137
 msgid ":menuselection:`AI --> Agents --> Runs` — execution ledger and steps."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:153
+#: ../../content/applications/productivity/ai/agents.rst:139
 msgid "Supervisors use these to see what the agent attempted, which tools ran, and which proposals are waiting."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:159
+#: ../../content/applications/productivity/ai/agents.rst:145
 msgid "Task write mode (agent runs only)"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:161
-msgid "Each task carries :guilabel:`Write mode`. It applies **only** to agent runs dispatched for that task — not to interactive chat (chat uses the global setting under :menuselection:`AI --> Configuration --> Settings`)."
+#: ../../content/applications/productivity/ai/agents.rst:147
+msgid "Each task carries :guilabel:`Write Mode`. It applies **only** to agent runs dispatched for that task — not to interactive chat (chat uses the global setting under :menuselection:`AI --> Configuration --> Settings`)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:166
+#: ../../content/applications/productivity/ai/agents.rst:152
 msgid "Value"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:166
+#: ../../content/applications/productivity/ai/agents.rst:152
 msgid "Effect on that task's runs"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:168
+#: ../../content/applications/productivity/ai/agents.rst:154
 msgid "**Always require confirmation** (``confirm``, default)"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:168
+#: ../../content/applications/productivity/ai/agents.rst:154
 msgid "Every create / write / delete / file attach becomes an ``ai.pending.write`` for the supervisor."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:173
+#: ../../content/applications/productivity/ai/agents.rst:159
 msgid "**Create automatically, confirm updates** (``hybrid``)"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:173
+#: ../../content/applications/productivity/ai/agents.rst:159
 msgid "Creates apply immediately; updates, deletes and file attaches still need approval."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:177
+#: ../../content/applications/productivity/ai/agents.rst:163
 msgid "**Apply immediately** (``auto``)"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:177
+#: ../../content/applications/productivity/ai/agents.rst:163
 msgid "Allowed mutations apply at once under the agent user's rights and the run's capability ceiling."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:182
+#: ../../content/applications/productivity/ai/agents.rst:168
 msgid "The global ``ai.write_mode`` parameter never overrides a task: an administrator cannot flip every unattended agent to auto with one setting. ``hybrid`` / ``auto`` are deliberate per-task opt-ins for **trusted, low-risk** work — for example an accounts-payable standing task that fills **draft** vendor bills and whose skill **never posts** invoices. Prefer ``confirm`` whenever a run could post, pay, delete, or touch customer-facing data."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:189
+#: ../../content/applications/productivity/ai/agents.rst:175
 msgid "When a proposal is created, the platform also places a **To-Do activity** (and usually a chatter note) on the **target business record** when one exists (e.g. the vendor bill being updated), falling back to the agent task for creates that have no id yet. Confirm and Cancel still live on :menuselection:`AI --> Write Proposals`; the activity is only a systray nudge so the supervisor lands on the invoice or partner, not only on the abstract proposal list. The Write Proposals form has :guilabel:`Open record` for the same jump. The activity is closed when the proposal is applied, cancelled or expired."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:200
-msgid "The hard-deny floor blocks raw AI tools on ``mail.activity`` and all ``ai.*`` platform models. Agents therefore cannot “manage” their own approval queue or AI config via tools — and should not try. Platform nudges and skill-driven review activities on business documents use controlled paths; instruct agents not to invent activity or AI-config tool calls, or they will burn refusals and strikes."
+#: ../../content/applications/productivity/ai/agents.rst:186
+msgid "The hard-deny floor blocks raw AI tools on every ``ai.*`` platform model. Agents therefore cannot “manage” their own approval queue or AI config via tools — and should not try. Platform nudges and skill-driven review activities on business documents use controlled paths; instruct agents not to invent AI-config tool calls, or they will burn refusals and strikes."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:207
+#: ../../content/applications/productivity/ai/agents.rst:192
 msgid "A run's ledger row becomes visible to other users only once the attempt has **ended** or **parked for approval**: the row is written and finalised inside the worker's own transaction, so nothing is committed while the agent is still working. The runs list therefore shows completed work, not a live view of what is executing right now."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:213
+#: ../../content/applications/productivity/ai/agents.rst:198
 msgid "Failed runs carry a :guilabel:`Failure Type` on the run form that says which kind of failure it was — see :doc:`monitoring` for the values worth watching."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:219
+#: ../../content/applications/productivity/ai/agents.rst:204
 msgid "Stopping a run"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:221
+#: ../../content/applications/productivity/ai/agents.rst:206
 msgid "Open the run and use :guilabel:`Request Cancellation`. The button appears while the run is :guilabel:`Running` or :guilabel:`Waiting for approval`, and only the agent's supervisor or an AI administrator may request it."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:226
+#: ../../content/applications/productivity/ai/agents.rst:211
 msgid "This button is not a general \"stop the agent now\" control, because of the ledger behaviour above: a run that is executing normally has no row yet, so there is nothing to open. In practice you use it on a run parked in :guilabel:`Waiting for approval`, or on one left in :guilabel:`Running` by an earlier server incident. To stop unwanted work in advance instead, keep the task's :guilabel:`Deadline Seconds` short enough that a run ends on its own, and clear :guilabel:`Active` on the task so it is not dispatched again."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:234
+#: ../../content/applications/productivity/ai/agents.rst:219
 msgid "Cancelling a run parked in :guilabel:`Waiting for approval` withdraws its open write proposals, then closes the run: as :guilabel:`Done` if a proposal of that run had already been applied, otherwise as :guilabel:`Failed` with :guilabel:`Failure Type` ``waiting_approval_empty``, since nothing it proposed was approved."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:240
+#: ../../content/applications/productivity/ai/agents.rst:225
 msgid "Cancelling a run that is genuinely still executing is **cooperative, never immediate**. The request is read at the start of each provider round and again before each tool call, so it takes effect only after the round-trip already in flight has finished — allow up to about two minutes at the shipped defaults, and never in the middle of a provider call. Such a run then closes as :guilabel:`Failed` with :guilabel:`Failure Type` ``cancelled``; there is no separate *Cancelled* state. The steps it did execute stay on the :guilabel:`Steps` tab, the run's answer records the cancellation rather than a partial reply, and any write proposals it had already opened are cancelled with it, so nothing is left approvable. A cancellation is neutral for the task's automatic deactivation: it neither counts as a failure nor clears an existing streak."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:254
+#: ../../content/applications/productivity/ai/agents.rst:239
 msgid "If no worker is left to hear the request, the button answers :guilabel:`Nothing in flight to cancel` instead of confirming. Nothing is broken — the run has most likely already finished, or its worker died — but no worker will see the request and the run will not stop on its account. Reload the record to see where it really stands; a dead worker's run is closed by the stuck-run reaper below."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:264
+#: ../../content/applications/productivity/ai/agents.rst:249
 msgid "Runs whose worker died"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:266
+#: ../../content/applications/productivity/ai/agents.rst:251
 msgid "If the server process handling a run is killed (restart, out-of-memory, hard kill), nobody is left to finish the run. A scheduled action, **AI: reap stuck agent runs**, runs every 15 minutes and closes them: the run is recorded as :guilabel:`Failed` with :guilabel:`Failure Type` ``reaped_stuck``, a note is posted on the task, and any write proposals still waiting on it are expired so nothing can be approved on behalf of a dead run. If the crash took the ledger row with it, the housekeeping job rebuilds one from the record the dispatch left behind — provided that record was written; a kill early enough to prevent even that leaves nothing to rebuild from."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:276
+#: ../../content/applications/productivity/ai/agents.rst:261
 msgid "Do not expect that closure within 15 minutes. The run has to age past its own time limit plus a grace period (10 minutes by default — see :doc:`configuration`) before a pass will touch it, and passes are 15 minutes apart, so worst case is around half an hour. One pass closes at most 200 runs, oldest first; a large backlog after a restart storm drains over the following passes."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:283
+#: ../../content/applications/productivity/ai/agents.rst:268
 msgid "The same scheduled action also frees runs parked in :guilabel:`Waiting for approval` that have no open proposal left — for example when the last proposal expired while the supervisor was still confirming it — so such a run is not left holding an activity reminder for a proposal that no longer exists."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:289
+#: ../../content/applications/productivity/ai/agents.rst:274
 msgid "Every dispatch attempt carries a :guilabel:`Dispatch Token`, shown on the run form. It is the key that joins a run to the short-lived record written when the run started, which is what both the reaper and :guilabel:`Request Cancellation` look for — so it is also the value to quote when correlating a run with the server log."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:298
+#: ../../content/applications/productivity/ai/agents.rst:283
 msgid "Pre-run instruction check"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:300
-msgid "Scheduled and :guilabel:`Run Now` runs execute the task's standing instruction directly. Tick :guilabel:`Triage on dispatch` on a task to run the same stage-1 check that an agent addressed from chat receives. The check can only **narrow** what the task already grants — it never widens anything."
+#: ../../content/applications/productivity/ai/agents.rst:285
+msgid "Scheduled and :guilabel:`Run Now` runs execute the task's standing instruction directly. Tick :guilabel:`Triage On Dispatch` on a task to run the same stage-1 check that an agent addressed from chat receives. The check can only **narrow** what the task already grants — it never widens anything."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:305
+#: ../../content/applications/productivity/ai/agents.rst:290
 msgid "Consider before enabling it:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:307
+#: ../../content/applications/productivity/ai/agents.rst:292
 msgid "it costs one extra model call per run (time and tokens), and the scheduler reserves about 30 seconds of its own tick budget for that call. A task whose :guilabel:`Deadline Seconds` already sits close to the worker's time limit may therefore be skipped rather than dispatched;"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:311
+#: ../../content/applications/productivity/ai/agents.rst:296
 msgid "the check has its own short deadline of 15 seconds and is fail-closed: a triage model that is slow, unreachable, or answers off-schema counts as a refusal;"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:313
+#: ../../content/applications/productivity/ai/agents.rst:298
 msgid "a refusal means the agent never starts. The run is recorded as :guilabel:`Failed` with :guilabel:`Failure Type` ``triage_denied``, a note is posted on the task, and a :guilabel:`To-Do` activity is created for the supervisor — so no refusal is silent;"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:317
+#: ../../content/applications/productivity/ai/agents.rst:302
 msgid "refusals count towards the task's automatic deactivation. The task is archived once five consecutive runs have failed **and** the streak is more than seven days old, and its supervisor is notified. Because a triage failure is a refusal, a long provider outage can archive a task that was never misconfigured; that is why the option is per task and off by default;"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:322
+#: ../../content/applications/productivity/ai/agents.rst:307
 msgid "what the check decided is recorded on the run as :guilabel:`Triage Verdict`, on the :guilabel:`Snapshot` tab, and is empty on every run of a task that did not opt in. It is telemetry, not a boundary: the narrowing it describes is already committed in the run's :guilabel:`Allowed Caps`, which is what the access gate reads."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:328
+#: ../../content/applications/productivity/ai/agents.rst:313
 msgid "The global kill switch for stage-1 triage — inbound addressing and this pre-run check alike — is the ``ai.triage_enabled`` system parameter, under :menuselection:`Settings --> Technical --> Parameters --> System Parameters` (which needs :doc:`developer mode <../../general/developer_mode>`)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:334
+#: ../../content/applications/productivity/ai/agents.rst:319
 msgid "AI Ops project stages"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:336
+#: ../../content/applications/productivity/ai/agents.rst:321
 msgid "The module ships an **AI** project category, an **AI Agent** project template, and a shared stage pack:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:339
+#: ../../content/applications/productivity/ai/agents.rst:324
 msgid "**Inbox → Review → Ready → Doing → Waiting → Done / Cancelled**"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:341
+#: ../../content/applications/productivity/ai/agents.rst:326
 msgid "Suggested use:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:343
+#: ../../content/applications/productivity/ai/agents.rst:328
 msgid "automated audit findings land in **Inbox** without assignee;"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:344
+#: ../../content/applications/productivity/ai/agents.rst:329
 msgid "managers refine in **Review**;"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:345
+#: ../../content/applications/productivity/ai/agents.rst:330
 msgid "assign the agent user only from **Ready**;"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:346
+#: ../../content/applications/productivity/ai/agents.rst:331
 msgid "**Waiting** for human input or approval;"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:347
+#: ../../content/applications/productivity/ai/agents.rst:332
 msgid "never auto-apply skills/policies from an audit without a human."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:350
+#: ../../content/applications/productivity/ai/agents.rst:335
 msgid "Support Assistant pack"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:352
+#: ../../content/applications/productivity/ai/agents.rst:337
 msgid "Shipped inactive **Support Assistant** agent with ask+read capabilities and channel rules whose audiences are empty until you configure them. Activate by:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:355
+#: ../../content/applications/productivity/ai/agents.rst:340
 msgid "Creating a narrow internal user (helpdesk/project read as needed)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:356
+#: ../../content/applications/productivity/ai/agents.rst:341
 msgid "Linking it on the agent; set supervisor."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:357
+#: ../../content/applications/productivity/ai/agents.rst:342
 msgid "Filling channel audiences (groups/users who may DM / assign / @mention)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:358
+#: ../../content/applications/productivity/ai/agents.rst:343
 msgid "Setting :guilabel:`Active`."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:359
+#: ../../content/applications/productivity/ai/agents.rst:344
 msgid "Tuning AI access rules for ticket models."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:362
+#: ../../content/applications/productivity/ai/agents.rst:347
 msgid "Identity constraints (summary)"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:364
+#: ../../content/applications/productivity/ai/agents.rst:349
 msgid "At link time the module rejects agent users that are:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:366
+#: ../../content/applications/productivity/ai/agents.rst:351
 msgid "superuser (uid 1);"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:367
+#: ../../content/applications/productivity/ai/agents.rst:352
 msgid "share/portal;"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:368
+#: ../../content/applications/productivity/ai/agents.rst:353
 msgid "Settings / system administrator;"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:369
+#: ../../content/applications/productivity/ai/agents.rst:354
 msgid "AI Administrator;"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:370
+#: ../../content/applications/productivity/ai/agents.rst:355
 msgid "holding API keys (non-interactive login risk)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:372
+#: ../../content/applications/productivity/ai/agents.rst:357
 msgid "These checks are point-in-time on the agent form — do not \"upgrade\" the user later from the Users menu."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:375
+#: ../../content/applications/productivity/ai/agents.rst:360
 msgid "Next: practical recipes in :doc:`agent_recipes`."
 msgstr ""
 
@@ -2022,7 +2026,7 @@ msgid "Meaning"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:28
-msgid ":guilabel:`Max strikes`"
+msgid ":guilabel:`Ai Max Strikes`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:28
@@ -2030,7 +2034,7 @@ msgid "Violations in the window before a temporary ban (default 3)."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:31
-msgid ":guilabel:`Strike window (hours)`"
+msgid ":guilabel:`Ai Strike Window Hours`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:31
@@ -2038,7 +2042,7 @@ msgid "Hours over which strikes accumulate (default 24)."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:34
-msgid ":guilabel:`Ban (minutes)`"
+msgid ":guilabel:`Ai Ban Minutes`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:34
@@ -2050,7 +2054,7 @@ msgid "Rate and usage limits"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:43
-msgid ":guilabel:`Rate limit (RPM)`"
+msgid ":guilabel:`Ai Rate Limit Rpm`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:43
@@ -2058,7 +2062,7 @@ msgid "Max requests per minute per user (default 20)."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:46
-msgid ":guilabel:`Max daily calls`"
+msgid ":guilabel:`Ai Max Daily Calls`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:46
@@ -2067,7 +2071,7 @@ msgid "0 = unlimited."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:48
-msgid ":guilabel:`Max daily cost (USD)`"
+msgid ":guilabel:`Ai Max Daily Cost Usd`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:48
@@ -2075,11 +2079,11 @@ msgid "Soft cost cap using model unit prices; 0 = unlimited. Unpriced models may
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:52
-msgid ":guilabel:`Max conversations / day`"
+msgid ":guilabel:`Ai Max Conversations Per Day`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:54
-msgid ":guilabel:`Max successive calls`"
+msgid ":guilabel:`Ai Max Successive Calls`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:54
@@ -2087,7 +2091,7 @@ msgid "Bound on chained model turns (default 10)."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:57
-msgid ":guilabel:`Max tool calls`"
+msgid ":guilabel:`Ai Max Tool Calls`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:57
@@ -2095,15 +2099,15 @@ msgid "Bound on tool invocations per turn loop (default 10)."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:60
-msgid ":guilabel:`Write mode`"
+msgid ":guilabel:`Ai Write Mode`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:60
-msgid "**Interactive chat only** — auto / confirm / hybrid. Agent runs use each task's own :guilabel:`Write mode` instead (default confirm). See :doc:`using_the_assistant` and :ref:`ai/agents/task-write-mode`."
+msgid "**Interactive chat only** — auto / confirm / hybrid. Agent runs use each task's own :guilabel:`Write Mode` instead (default confirm). See :doc:`using_the_assistant` and :ref:`ai/agents/task-write-mode`."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:67
-msgid ":guilabel:`Chat write-proposal lifetime`"
+msgid ":guilabel:`Chat write-proposal lifetime (minutes)`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:67
@@ -2111,7 +2115,7 @@ msgid "Minutes until a chat proposal expires; 0 = never."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:70
-msgid ":guilabel:`Agent write-proposal lifetime`"
+msgid ":guilabel:`Agent write-proposal lifetime (minutes)`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:70
@@ -2123,11 +2127,11 @@ msgid "Logging"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:77
-msgid ":guilabel:`Log level` — *Metadata only* (default, recommended) or *Full payload* (stores message/tool content; high sensitivity)."
+msgid ":guilabel:`Ai Log Level` — *Metadata only* (default, recommended) or *Full payload* (stores message/tool content; high sensitivity)."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:79
-msgid ":guilabel:`Run step retention (days)` — purge horizon for ``ai.agent.run.step`` journal rows (default 90; 0 disables). Does **not** auto-purge ``ai.log`` or run headers."
+msgid ":guilabel:`Run Step Retention (Days)` — purge horizon for ``ai.agent.run.step`` journal rows (default 90; 0 disables). Does **not** auto-purge ``ai.log`` or run headers."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:84
@@ -2168,7 +2172,7 @@ msgid "Runtime introspection"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:106
-msgid ":guilabel:`Publish installed modules` — whether environment facts may include the installed module list (still subject to the user's ``ir.module.module`` ACL). Denying makes the assistant more cautious, not magically more accurate. Version, edition, company and user facts remain."
+msgid ":guilabel:`Publish Installed Modules` — whether environment facts may include the installed module list (still subject to the user's ``ir.module.module`` ACL). Denying makes the assistant more cautious, not magically more accurate. Version, edition, company and user facts remain."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:112
@@ -2180,7 +2184,7 @@ msgid "Requires the **Web access** capability to be enabled for tools to be offe
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:119
-msgid ":guilabel:`Search backend`"
+msgid ":guilabel:`Search Backend`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:119
@@ -2188,7 +2192,7 @@ msgid "``ai.web.provider`` used by ``web_search``. Empty = search off."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:122
-msgid ":guilabel:`Fetch backend`"
+msgid ":guilabel:`Fetch Backend`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:122
@@ -2196,7 +2200,7 @@ msgid "Provider for ``web_fetch``; empty falls back to built-in Direct fetch."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:125
-msgid ":guilabel:`Allowed domains`"
+msgid ":guilabel:`Allowed Domains`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:125
@@ -2204,7 +2208,7 @@ msgid "Comma-separated allow-list; empty = any public host (SSRF protections sti
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:129
-msgid ":guilabel:`Daily limit`"
+msgid ":guilabel:`Daily Limit`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:129
@@ -2212,7 +2216,7 @@ msgid "Max web calls per user per company; 0 = unlimited."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:132
-msgid ":guilabel:`Max page text`"
+msgid ":guilabel:`Max Page Text`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:132
@@ -2220,7 +2224,7 @@ msgid "Characters retained from a fetched page."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:134
-msgid ":guilabel:`Max query length`"
+msgid ":guilabel:`Max Query Length`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:134
@@ -2228,246 +2232,278 @@ msgid "Cap on search query size."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:136
-msgid ":guilabel:`Allowed image / doc types`"
+msgid ":guilabel:`Allowed Image Types`, :guilabel:`Allowed Document Types`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:136
 msgid "MIME allow-lists for ingest."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:139
-msgid ":guilabel:`Max file size`"
+#: ../../content/applications/productivity/ai/configuration.rst:140
+msgid ":guilabel:`Max File Size`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:139
+#: ../../content/applications/productivity/ai/configuration.rst:140
 msgid "Bytes (default 10 MiB)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:143
+#: ../../content/applications/productivity/ai/configuration.rst:144
 msgid "System parameters and scheduled actions"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:145
+#: ../../content/applications/productivity/ai/configuration.rst:146
 msgid "A few platform switches have no field on the Settings page. They live in the Technical menus, which require :doc:`developer mode <../../general/developer_mode>`."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:150
+#: ../../content/applications/productivity/ai/configuration.rst:151
 msgid "System parameters"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:152
+#: ../../content/applications/productivity/ai/configuration.rst:153
 msgid ":menuselection:`Settings --> Technical --> Parameters --> System Parameters`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:154
-msgid "``ai.triage_enabled`` — global off switch for stage-1 triage, covering both the inbound check and a task's :guilabel:`Triage on dispatch` (default ``True``). Set it to ``False`` and every instruction is executed unassessed."
+#: ../../content/applications/productivity/ai/configuration.rst:155
+msgid "``ai.triage_enabled`` — global off switch for stage-1 triage, covering both the inbound check and a task's :guilabel:`Triage On Dispatch` (default ``True``). Set it to ``False`` and every instruction is executed unassessed."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:157
+#: ../../content/applications/productivity/ai/configuration.rst:158
 msgid "``ai.waiting_approval_ttl_minutes`` — how long a run may sit waiting for a supervisor's answer before it is failed (default ``1440``; ``0`` means never expire by age)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:160
+#: ../../content/applications/productivity/ai/configuration.rst:161
 msgid "``ai.run_reaper_grace_seconds`` — how long past a task's own time limit the stuck-run reaper waits before it declares a run abandoned (default ``600``, i.e. 10 minutes). This is not a kill switch: to stop reaping altogether, deactivate the scheduled action instead."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:166
-msgid "Stuck and stranded agent runs"
+#: ../../content/applications/productivity/ai/configuration.rst:167
+msgid "Scheduled actions"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:168
-msgid "The scheduled action **AI: reap stuck agent runs** closes runs whose worker died, and also frees runs parked for approval with nothing left to approve. Both jobs, their cadence and their batch limit are described in :ref:`ai/agents/reaper`."
+#: ../../content/applications/productivity/ai/configuration.rst:169
+msgid ":menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:171
+msgid "The module ships seven scheduled actions, all active after install:"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:173
-msgid "LLM providers and models"
+msgid "**AI: Expire user bans** (hourly) — lifts the temporary bans whose end time has passed."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:175
-msgid ":menuselection:`AI --> Configuration --> Providers --> LLM Providers`"
-msgstr ""
-
-#: ../../content/applications/productivity/ai/configuration.rst:177
-msgid "Fields of interest:"
+msgid "**AI: Expire pending writes** (every 15 minutes) — expires write proposals older than their configured lifetime. It first releases the proposals left behind by a run that has already finished, so a lifetime of ``0`` does not also disable that sweep."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:179
-msgid "Provider type and API key (system parameter storage)."
+msgid "**AI: dispatch scheduled agent tasks** (every 5 minutes) — starts the agent tasks that are due. This is only how often the dispatcher itself wakes; each task's own interval decides its cadence, so the cron has to wake at least as often as the shortest interval configured on a task."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:180
-msgid ":guilabel:`Base URL` — only override when you understand the trust boundary (a writable base URL can be an SSRF risk if pointed at internal services)."
-msgstr ""
-
-#: ../../content/applications/productivity/ai/configuration.rst:182
-msgid ":guilabel:`Timeout`, :guilabel:`Max retries`, :guilabel:`Call deadline` — wall-clock budget for one provider call including retries."
-msgstr ""
-
-#: ../../content/applications/productivity/ai/configuration.rst:185
-msgid ":menuselection:`AI --> Configuration --> Providers --> Models`"
+#: ../../content/applications/productivity/ai/configuration.rst:183
+msgid "**AI: drain inbound addressing requests** (every minute) — starts the runs queued when somebody addresses an agent through a Discuss message, a chatter mention, an activity or an assignment. It is deliberately more frequent than the dispatcher, because somebody is waiting for the reply."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:187
-msgid ":guilabel:`Model id` — exact vendor id."
+msgid "**AI: expire waiting-approval agent runs** (every 15 minutes) — fails the runs that have waited for a supervisor's answer longer than ``ai.waiting_approval_ttl_minutes``, and expires the proposals they were waiting on."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:188
-msgid ":guilabel:`Context Window`, :guilabel:`Max Output Tokens`, tool and temperature support flags."
+#: ../../content/applications/productivity/ai/configuration.rst:191
+msgid "**AI: reap stuck agent runs** (every 15 minutes) — closes runs whose worker died, and also frees runs parked for approval with nothing left to approve. Both jobs, their cadence and their batch limit are described in :ref:`ai/agents/reaper`."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:190
-msgid "Prompt / completion unit prices and price source (provider API, curated catalog, or manual — manual is not overwritten by refresh)."
+#: ../../content/applications/productivity/ai/configuration.rst:195
+msgid "**AI: memory maintenance** (every 6 hours) — archives working memories past their expiry date, lets the salience of untouched entries decay, and flags high-salience personal entries as promotion candidates for an administrator."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:196
-msgid "Completion caps"
-msgstr ""
-
-#: ../../content/applications/productivity/ai/configuration.rst:198
-msgid ":guilabel:`Max Output Tokens` on the model is what the assistant caps its completions at, and it is also the precondition for a per-agent cap. Only providers that publish a completion limit fill it in; ``0`` means *unknown*."
+#: ../../content/applications/productivity/ai/configuration.rst:200
+msgid "LLM providers and models"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:202
-msgid "An agent's own :guilabel:`Max Tokens (0 = no override)` (:doc:`agents`) reaches every provider — OpenAI, OpenRouter, xAI, Google Gemini and Anthropic — each under the parameter name its API expects. It is put on the wire **only** for a model that publishes a :guilabel:`Max Output Tokens` of its own. Point an agent at a model that still reads ``0`` and the agent's value is dropped: the model writes to its own limit, and nothing on the agent form says why. Fill in :guilabel:`Max Output Tokens` on the model if you want the per-agent cap to bite."
+msgid ":menuselection:`AI --> Configuration --> Providers --> LLM Providers`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:210
-msgid "``0`` on the agent — the default — means *no override*: the model's own output cap applies, exactly as for a turn with no agent at all. Set a positive value only where you deliberately want that agent to be terser or cheaper, and remember that on reasoning models the cap counts thinking tokens too, so a low value truncates answers."
+#: ../../content/applications/productivity/ai/configuration.rst:204
+msgid "Fields of interest:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:206
+msgid "Provider type and API key (system parameter storage)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:207
+msgid ":guilabel:`Base Url` — only override when you understand the trust boundary (a writable base URL can be an SSRF risk if pointed at internal services)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:209
+msgid ":guilabel:`Timeout`, :guilabel:`Max Retries`, :guilabel:`Call Deadline` — wall-clock budget for one provider call including retries."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:212
+msgid ":menuselection:`AI --> Configuration --> Providers --> Models`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:214
+msgid ":guilabel:`Model` — exact vendor id."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:215
+msgid ":guilabel:`Context Window`, :guilabel:`Max Output Tokens`, tool and temperature support flags."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:217
-msgid "Anthropic is the exception, in the other direction: its API always requires the parameter. An Anthropic model whose :guilabel:`Max Output Tokens` is still ``0`` therefore falls back to a conservative built-in value of 1024 tokens, not to the model's real limit."
+msgid "Prompt / completion unit prices and price source (provider API, curated catalog, or manual — manual is not overwritten by refresh)."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:223
-msgid "Upgrading from an earlier version changes how agents that are already configured behave."
+msgid "Completion caps"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:226
-msgid "A cap an administrator had already typed on an agent used to reach Anthropic only. It now applies on every provider, so a low value that was inert on OpenAI, OpenRouter, xAI or Gemini starts truncating answers there."
+#: ../../content/applications/productivity/ai/configuration.rst:225
+msgid ":guilabel:`Max Output Tokens` on the model is what the assistant caps its completions at, and it is also the precondition for a per-agent cap. Only providers that publish a completion limit fill it in; ``0`` means *unknown*."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:229
-msgid "The upgrade resets the old shipped default of ``2048`` to ``0`` on every agent still carrying it, so that no database keeps a cap nobody chose. On an Anthropic model that publishes a cap of its own, that 2048 was genuinely in force: those agents may now write up to the model's full :guilabel:`Max Output Tokens` — more tokens, more cost and more time, and an answer long enough to exhaust the provider's :guilabel:`Call deadline` fails with an error instead of stopping at 2048 tokens."
+msgid "An agent's own :guilabel:`Max Tokens (0 = no override)` (:doc:`agents`) reaches every provider — OpenAI, OpenRouter, xAI, Google Gemini and Anthropic — each under the parameter name its API expects. It is put on the wire **only** for a model that publishes a :guilabel:`Max Output Tokens` of its own. Point an agent at a model that still reads ``0`` and the agent's value is dropped: the model writes to its own limit, and nothing on the agent form says why. Fill in :guilabel:`Max Output Tokens` on the model if you want the per-agent cap to bite."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:237
-msgid "Any other value you typed is kept. Re-enter a cap on every agent you meant to limit, including one you had deliberately set to 2048."
+msgid "``0`` on the agent — the default — means *no override*: the model's own output cap applies, exactly as for a turn with no agent at all. Set a positive value only where you deliberately want that agent to be terser or cheaper, and remember that on reasoning models the cap counts thinking tokens too, so a low value truncates answers."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:241
-msgid "Web providers"
+#: ../../content/applications/productivity/ai/configuration.rst:244
+msgid "Anthropic is the exception, in the other direction: its API always requires the parameter. An Anthropic model whose :guilabel:`Max Output Tokens` is still ``0`` therefore falls back to a conservative built-in value of 1024 tokens, not to the model's real limit."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:243
-msgid ":menuselection:`AI --> Configuration --> Providers --> Web Providers`"
-msgstr ""
-
-#: ../../content/applications/productivity/ai/configuration.rst:245
-msgid "Configure search/fetch backends (factory rows may ship for common engines). Assign them in Settings as search/fetch backends."
-msgstr ""
-
-#: ../../content/applications/productivity/ai/configuration.rst:249
-msgid "MCP servers"
-msgstr ""
-
-#: ../../content/applications/productivity/ai/configuration.rst:251
-msgid ":menuselection:`AI --> Configuration --> Providers --> MCP Servers`"
+#: ../../content/applications/productivity/ai/configuration.rst:250
+msgid "Upgrading from an earlier version changes how agents that are already configured behave."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:253
-msgid "Model Context Protocol servers expose **external** tools to the assistant when the **MCP tools** capability is enabled. Factory MCP definitions may ship inactive or empty of secrets."
+msgid "A cap an administrator had already typed on an agent used to reach Anthropic only. It now applies on every provider, so a low value that was inert on OpenAI, OpenRouter, xAI or Gemini starts truncating answers there."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:257
-msgid "Per server, typically configure:"
-msgstr ""
-
-#: ../../content/applications/productivity/ai/configuration.rst:259
-msgid "endpoint / transport;"
-msgstr ""
-
-#: ../../content/applications/productivity/ai/configuration.rst:260
-msgid "authentication secrets (never commit them to docs or git);"
-msgstr ""
-
-#: ../../content/applications/productivity/ai/configuration.rst:261
-msgid "which users/groups may use the server's tools;"
-msgstr ""
-
-#: ../../content/applications/productivity/ai/configuration.rst:262
-msgid "enable/disable."
+#: ../../content/applications/productivity/ai/configuration.rst:256
+msgid "The upgrade resets the old shipped default of ``2048`` to ``0`` on every agent still carrying it, so that no database keeps a cap nobody chose. On an Anthropic model that publishes a cap of its own, that 2048 was genuinely in force: those agents may now write up to the model's full :guilabel:`Max Output Tokens` — more tokens, more cost and more time, and an answer long enough to exhaust the provider's :guilabel:`Call Deadline` fails with an error instead of stopping at 2048 tokens."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/configuration.rst:264
+msgid "Any other value you typed is kept. Re-enter a cap on every agent you meant to limit, including one you had deliberately set to 2048."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:268
+msgid "Web providers"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:270
+msgid ":menuselection:`AI --> Configuration --> Providers --> Web Providers`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:272
+msgid "Configure search/fetch backends (factory rows may ship for common engines). Assign them in Settings as search/fetch backends."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:276
+msgid "MCP servers"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:278
+msgid ":menuselection:`AI --> Configuration --> Providers --> MCP Servers`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:280
+msgid "Model Context Protocol servers expose **external** tools to the assistant when the **MCP tools** capability is enabled. Factory MCP definitions may ship inactive or empty of secrets."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:284
+msgid "Per server, typically configure:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:286
+msgid "endpoint / transport;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:287
+msgid "authentication secrets (never commit them to docs or git);"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:288
+msgid "which users/groups may use the server's tools;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:289
+msgid "enable/disable."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/configuration.rst:291
 msgid "Every MCP call still re-checks capability and server audience. Treat MCP like installing untrusted plugins: least privilege, no production secrets in tool responses you do not need."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:269
+#: ../../content/applications/productivity/ai/configuration.rst:296
 msgid "Prompt layers"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:271
+#: ../../content/applications/productivity/ai/configuration.rst:298
 msgid ":menuselection:`AI --> Configuration --> Behavior --> Prompt Layers`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:273
+#: ../../content/applications/productivity/ai/configuration.rst:300
 msgid "Layered system prompts (core, global, module, …) shape behaviour. Core safety layers are not meant for casual editing. Global operational layers may be adjusted by AI administrators; migrations may refresh factory content only when still pristine."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:279
+#: ../../content/applications/productivity/ai/configuration.rst:306
 msgid "A layer's :guilabel:`Body` is **English only** and not translatable. These are the rails the model is steered by, not user-facing text: rails that switched language with the interface would leave the instructions in one language and the tool names in another. The assistant still answers in the language of the conversation — that is decided by the user's messages, never by this text."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:285
+#: ../../content/applications/productivity/ai/configuration.rst:312
 msgid "On a database upgraded from an earlier version, each layer keeps its English body and any translated bodies are discarded. Re-check every global and per-module layer whose body you had edited in a translated interface."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:290
+#: ../../content/applications/productivity/ai/configuration.rst:317
 msgid "Blocked patterns"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:292
+#: ../../content/applications/productivity/ai/configuration.rst:319
 msgid ":menuselection:`AI --> Configuration --> Security --> Blocked Patterns`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:294
+#: ../../content/applications/productivity/ai/configuration.rst:321
 msgid "Regex (or pattern) rules on input/output that raise violations when matched (e.g. classic \"ignore previous instructions\" probes). Extend carefully — over-broad patterns create false positives and strike noise."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:299
+#: ../../content/applications/productivity/ai/configuration.rst:326
 msgid "Allowed actions"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:301
+#: ../../content/applications/productivity/ai/configuration.rst:328
 msgid ":menuselection:`AI --> Configuration --> Security --> Allowed Actions`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:303
+#: ../../content/applications/productivity/ai/configuration.rst:330
 msgid "Allow-list of business methods the **Action** capability may invoke via ``call_action`` (e.g. mark activity done). Methods not listed cannot be called through AI even if Write is on. Prefer allow-listed actions over raw field writes for lifecycle transitions."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:309
+#: ../../content/applications/productivity/ai/configuration.rst:336
 msgid "Customizations ledger"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:311
+#: ../../content/applications/productivity/ai/configuration.rst:338
 msgid ":menuselection:`AI --> Configuration --> Customizations`"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:313
+#: ../../content/applications/productivity/ai/configuration.rst:340
 msgid "When **Customize UI & schema** is used, changes are tracked in a ledger with import/export for recovery. Primary UX is still chat tools for admins; the ledger is the admin recovery path."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:318
+#: ../../content/applications/productivity/ai/configuration.rst:345
 msgid "Setup plans"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:320
+#: ../../content/applications/productivity/ai/configuration.rst:347
 msgid ":menuselection:`AI --> Configuration --> Setup Plans` (Settings users)"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/configuration.rst:322
+#: ../../content/applications/productivity/ai/configuration.rst:349
 msgid "Plans proposed by the guided setup flow for module installation / configuration steps that require explicit confirmation."
 msgstr ""
 
@@ -2540,7 +2576,7 @@ msgid ":guilabel:`API key` — write-only; stored in system parameters, never sh
 msgstr ""
 
 #: ../../content/applications/productivity/ai/getting_started.rst:42
-msgid "Optional :guilabel:`Base URL` override for compatible gateways."
+msgid "Optional :guilabel:`Base Url` override for compatible gateways."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/getting_started.rst:43
@@ -2601,7 +2637,7 @@ msgid "Field-level write allows"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/getting_started.rst:73
-msgid "Nine field-scoped write rules on ``account.move`` / ``account.move.line`` (:doc:`access_policy`)"
+msgid "Ten field-scoped write rules on ``account.move`` / ``account.move.line`` (:doc:`access_policy`)"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/getting_started.rst:77
@@ -2629,7 +2665,7 @@ msgid "Present but **inactive** until you link a user and open channel audiences
 msgstr ""
 
 #: ../../content/applications/productivity/ai/getting_started.rst:86
-msgid "Those nine field-level rules exist so the invoice / vendor-bill flow keeps working, and they are seeded only where **Accounting** is installed. Nothing writes while the Write capability is off, so they take effect only once you enable it."
+msgid "Those ten field-level rules exist so the invoice / vendor-bill flow keeps working, and they are seeded only where **Accounting** is installed. Nothing writes while the Write capability is off, so they take effect only once you enable it."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/getting_started.rst:92
@@ -2777,7 +2813,7 @@ msgid "Temporarily suspends AI use for a user. The gate checks bans **first**, b
 msgstr ""
 
 #: ../../content/applications/productivity/ai/monitoring.rst:67
-msgid "Duration comes from Settings (:guilabel:`Ban minutes`) when auto-issued."
+msgid "Duration comes from Settings (:guilabel:`Ai Ban Minutes`) when auto-issued."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/monitoring.rst:68
@@ -2805,7 +2841,7 @@ msgid ":menuselection:`AI --> Agents --> Runs`"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/monitoring.rst:81
-msgid "Inspect failed steps, tool errors and pending write linkage. Step journals can be purged after :guilabel:`Run step retention` days; keep enough history to investigate incidents."
+msgid "Inspect failed steps, tool errors and pending write linkage. Step journals can be purged after :guilabel:`Run Step Retention (Days)`; keep enough history to investigate incidents."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/monitoring.rst:86
@@ -2845,7 +2881,7 @@ msgid ":menuselection:`AI --> Write Proposals` is both a user tool and a control
 msgstr ""
 
 #: ../../content/applications/productivity/ai/monitoring.rst:135
-msgid "The :guilabel:`Agent write-proposal lifetime` only applies while the proposing run is still open. Once that run has ended — most often a run that overran its time limit and closed as :guilabel:`Timed out` — its pending proposals are expired by the next pass of the **AI: Expire pending writes** scheduled action, every 15 minutes, because nobody is left to carry the result back. That sweep runs whatever the lifetime is set to, ``0`` included."
+msgid "The :guilabel:`Agent write-proposal lifetime (minutes)` only applies while the proposing run is still open. Once that run has ended — most often a run that overran its time limit and closed as :guilabel:`Timed out` — its pending proposals are expired by the next pass of the **AI: Expire pending writes** scheduled action, every 15 minutes, because nobody is left to carry the result back. That sweep runs whatever the lifetime is set to, ``0`` included."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/monitoring.rst:142
@@ -2930,7 +2966,7 @@ msgid "**Read any business data** the acting user (or agent user) can already re
 msgstr ""
 
 #: ../../content/applications/productivity/ai/security.rst:15
-msgid "**Create, change or delete records** once Write / Delete capabilities and access-policy rules allow it — including through unattended agent runs (after supervisor approval of a proposal, or immediately if that task's :guilabel:`Write mode` is *hybrid* / *auto*), or instantly in chat write mode *Apply automatically*."
+msgid "**Create, change or delete records** once Write / Delete capabilities and access-policy rules allow it — including through unattended agent runs (after supervisor approval of a proposal, or immediately if that task's :guilabel:`Write Mode` is *hybrid* / *auto*), or instantly in chat write mode *Apply automatically*."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/security.rst:20
@@ -2982,7 +3018,7 @@ msgid "agent run steps and full-payload logs (if logging is set to full payload)
 msgstr ""
 
 #: ../../content/applications/productivity/ai/security.rst:46
-msgid "**Mitigations:** choose a provider and region you accept contractually; keep :guilabel:`Log level` on *Metadata only* in production unless investigating an incident; deny sensitive models/fields in AI access rules; do not enable Web or MCP for agents that handle confidential tickets; train users not to paste secrets into chat."
+msgid "**Mitigations:** choose a provider and region you accept contractually; keep :guilabel:`Ai Log Level` on *Metadata only* in production unless investigating an incident; deny sensitive models/fields in AI access rules; do not enable Web or MCP for agents that handle confidential tickets; train users not to paste secrets into chat."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/security.rst:53
@@ -3030,7 +3066,7 @@ msgid "iterate after refusals (adaptive attacks)."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/security.rst:87
-msgid "**Mitigations (built-in):** blocked input patterns; capability ceilings enforced at the gate; AI policy + Odoo ACLs; strikes → temporary ban on violations so attackers cannot freely iterate; triage layer that may only *subtract* authority. Note what triage covers: **inbound** addressing. A scheduled or :guilabel:`Run Now` run of a standing instruction is triaged only when the task opts in with :guilabel:`Triage on dispatch` (see :ref:`ai/agents/dispatch-triage`). None of these make injection \"solved\" — they reduce impact. Design agents so the worst successful injection still cannot read or write more than the agent was meant to."
+msgid "**Mitigations (built-in):** blocked input patterns; capability ceilings enforced at the gate; AI policy + Odoo ACLs; strikes → temporary ban on violations so attackers cannot freely iterate; triage layer that may only *subtract* authority. Note what triage covers: **inbound** addressing. A scheduled or :guilabel:`Run Now` run of a standing instruction is triaged only when the task opts in with :guilabel:`Triage On Dispatch` (see :ref:`ai/agents/dispatch-triage`). None of these make injection \"solved\" — they reduce impact. Design agents so the worst successful injection still cannot read or write more than the agent was meant to."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/security.rst:97
@@ -3050,7 +3086,7 @@ msgid "A fixed set of technical models is always denied to AI tools regardless o
 msgstr ""
 
 #: ../../content/applications/productivity/ai/security.rst:110
-msgid "security-sensitive system models (access rights, rules, groups, users and API keys, config parameters, sequences, menus, views, server actions, crons, attachments, mail queue, payment tokens, bank accounts on partners, …);"
+msgid "security-sensitive system models (access rights, rules, groups, users and API keys, config parameters, sequences, menus, views, server actions, crons, mail queue, payment tokens, bank accounts on partners, …);"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/security.rst:113
@@ -3058,178 +3094,182 @@ msgid "**all** models of the AI application itself (``ai`` and every ``ai.*`` na
 msgstr ""
 
 #: ../../content/applications/productivity/ai/security.rst:116
-msgid "raw ``mail.message``, ``mail.activity`` and ``discuss.channel`` (authorship / evidence integrity — legitimate chatter goes through the owner record's ``message_post``, not generic create tools)."
+msgid "raw ``mail.message`` and ``discuss.channel`` (authorship / evidence integrity — legitimate chatter goes through the owner record's ``message_post``, not generic create tools)."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/security.rst:120
-msgid "This is a floor, not a complete data classification policy — business models like ``hr.employee`` or ``account.move`` are **not** hard-denied by default; you must configure them if needed. Because ``mail.activity`` is floored, instruct agents **not** to call activity tools to “manage” their queue: platform approval nudges are created by the gate for the supervisor, and review To-Dos on business documents follow skill/playbook paths that stay within allowed operations."
+msgid "This is a floor, not a complete data classification policy — business models like ``hr.employee`` or ``account.move`` are **not** hard-denied by default; you must configure them if needed."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:129
+#: ../../content/applications/productivity/ai/security.rst:124
+msgid "``ir.attachment`` and ``mail.activity`` sit just outside the floor, in a small **explicit-allow-only** set: no global default ever opens them, but an access rule can, and the module ships one for each — attachments readable and writable, activities readable, writable and creatable — so document and vendor-bill skills can read a PDF and agents can leave a review To-Do under their own name. Creating or deleting an attachment and deleting an activity stay closed, because neither model falls through to the global defaults. Read those two rules as real permissions rather than as part of the floor: an agent may raise an activity on any record it can read, and may re-attach a file to a different record. Narrow or deactivate them if that is more than the deployment needs."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/security.rst:136
 msgid "Cross-model side effects"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:131
+#: ../../content/applications/productivity/ai/security.rst:138
 msgid "A field can write into a model you never opened: ``crm.lead.email_from`` updates the partner's email. The gate refuses such fields, and the two crossings are not equally configurable. Where the crossing is static — a *related* field — the refusal is absolute and no access rule lifts it. Where it is dynamic — a field carrying an *inverse* — it is lifted only by a rule naming that exact field, so a model-level grant cannot leak sideways and the audit trail cannot silently under-report what a write touched. On the file-fetch path (``fetch_file_to_field``) the per-field opt-in does not apply at all: a target field carrying an inverse is refused whatever rule you write, because the content comes from a URL the model chose."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:142
-msgid "Nine field-scoped write allows ship enabled on databases with **Accounting**, for the invoicing flow. Three are on ``account.move.line``, and on the nested one2many path a field-level Allow is resolved before the model tier, so those three line fields are writable through :guilabel:`Invoice lines` even when no rule allows writing ``account.move.line`` itself. Review them before certifying that invoice lines are closed. See :ref:`ai/policy/cross-model`."
+#: ../../content/applications/productivity/ai/security.rst:149
+msgid "Ten field-scoped write allows ship enabled on databases with **Accounting**, for the invoicing flow. Four are on ``account.move.line``, and on the nested one2many path a field-level Allow is resolved before the model tier, so those four line fields are writable through :guilabel:`Invoice lines` even when no rule allows writing ``account.move.line`` itself. Review them before certifying that invoice lines are closed. One of the four, ``analytic_distribution``, needs extra care: it is a JSON field, so its rule lifts the refusal of JSON-typed values as well as the cross-model rail, and its inverse re-writes the analytic entries of a **posted** line — deleting and re-creating ``account.analytic.line`` records on a model no rule named. See :ref:`ai/policy/cross-model`."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:150
+#: ../../content/applications/productivity/ai/security.rst:161
 msgid "Sensitive field stripping"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:152
+#: ../../content/applications/productivity/ai/security.rst:163
 msgid "Fields whose names look like secrets (password, token, api_key, …), magic fields, and certain complex types are stripped or refused on write. This is defense-in-depth, not a substitute for denying whole models (e.g. HR)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:157
+#: ../../content/applications/productivity/ai/security.rst:168
 msgid "Confirmation and re-check"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:159
+#: ../../content/applications/productivity/ai/security.rst:170
 msgid "Pending writes are re-validated at **apply** time under the correct acting identity and current policy. Approving an old proposal after rights were revoked should fail closed. Agent proposals rebuild authority from the **run**, not from the confirmer's privilege (the confirmer authorises; the agent executes)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:165
+#: ../../content/applications/productivity/ai/security.rst:176
 msgid "The run's own liveness is part of that authority. A proposal from a run that was stopped on request, or closed by the stuck-run reaper because its worker died, is refused at apply time and can be approved by nobody: the reaper cannot tell a dead worker from a slow one, so a run somebody else declared over is never allowed to have its writes replayed. Proposals left by a run that ended on its own — *Done*, *Failed* or *Timed out* — stay approvable until housekeeping expires them."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:173
+#: ../../content/applications/productivity/ai/security.rst:184
 msgid "Security roles and groups"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:176
+#: ../../content/applications/productivity/ai/security.rst:187
 msgid "Group"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:178
+#: ../../content/applications/productivity/ai/security.rst:189
 msgid "**AI: User**"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:178
+#: ../../content/applications/productivity/ai/security.rst:189
 msgid "Use chat, own conversations, own write proposals, memory; supervisors need this to approve agent proposals."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:182
+#: ../../content/applications/productivity/ai/security.rst:193
 msgid "**AI: Administrator**"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:182
+#: ../../content/applications/productivity/ai/security.rst:193
 msgid "Configure agents, capabilities, policies, skills, MCP, monitoring. Implies AI: User."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:186
+#: ../../content/applications/productivity/ai/security.rst:197
 msgid "**Settings** (system administration)"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:186
+#: ../../content/applications/productivity/ai/security.rst:197
 msgid "AI Settings app page, guided setup, setup plans."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:191
+#: ../../content/applications/productivity/ai/security.rst:202
 msgid "An **agent user** must never hold Settings or AI Administrator. The module blocks linking such users on the agent form (at write time). Do not grant those groups later on the user form either — that bypasses the agent constraint and removes the ban kill-switch for AI admins."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:197
+#: ../../content/applications/productivity/ai/security.rst:208
 msgid "Layered controls (checklist)"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:199
+#: ../../content/applications/productivity/ai/security.rst:210
 msgid "Use all layers; none replaces the others:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:201
+#: ../../content/applications/productivity/ai/security.rst:212
 msgid "**Odoo groups on the user / agent user** — what they can do without AI."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:202
+#: ../../content/applications/productivity/ai/security.rst:213
 msgid "**AI capabilities** — which tool classes exist (ask, read, write, delete, web, mcp, action, customize, setup, navigate)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:204
+#: ../../content/applications/productivity/ai/security.rst:215
 msgid "**AI access groups + rules** — model/field allow·deny for AI tools."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:205
+#: ../../content/applications/productivity/ai/security.rst:216
 msgid "**Agent ``capability_ids``** — further ceiling for that agent only."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:206
+#: ../../content/applications/productivity/ai/security.rst:217
 msgid "**Channel rules + audience + scope_mode** — who may trigger the agent and whether capability classes are intersected with the requester."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:208
+#: ../../content/applications/productivity/ai/security.rst:219
 msgid "**Write mode / pending writes / supervisor** — human in the loop. Chat uses the global Settings mode; each agent **task** has its own mode (default confirm). See :ref:`ai/agents/task-write-mode`."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:211
+#: ../../content/applications/productivity/ai/security.rst:222
 msgid "**Rate limits, strikes, bans, blocked patterns** — abuse and iteration."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:212
+#: ../../content/applications/productivity/ai/security.rst:223
 msgid "**Logging and retention** — evidence and least retention for step journals."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:215
+#: ../../content/applications/productivity/ai/security.rst:226
 msgid "Recommended production baseline"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:217
+#: ../../content/applications/productivity/ai/security.rst:228
 msgid "Leave **Write**, **Delete**, **Web**, **MCP**, **Customize**, **Action** disabled until a named use case needs each one."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:219
+#: ../../content/applications/productivity/ai/security.rst:230
 msgid "Keep access-policy defaults: read allow (or deny if you prefer deny-by-default and open only needed models), create/write/delete **deny**."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:221
+#: ../../content/applications/productivity/ai/security.rst:232
 msgid "Prefer write mode **hybrid** or **confirm** for chat; never *auto* on shared production databases without a change-management process."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:223
-msgid "Leave agent task :guilabel:`Write mode` on **confirm** unless the task is explicitly draft-safe (e.g. AP fill that never posts); document the opt-in."
-msgstr ""
-
-#: ../../content/applications/productivity/ai/security.rst:225
-msgid "One **supervisor** human per agent; supervisors in AI: User."
-msgstr ""
-
-#: ../../content/applications/productivity/ai/security.rst:226
-msgid "No shared \"god\" agent for all departments — split by domain and data."
-msgstr ""
-
-#: ../../content/applications/productivity/ai/security.rst:227
-msgid "Review :menuselection:`AI --> Monitoring --> Violations` weekly at first."
-msgstr ""
-
-#: ../../content/applications/productivity/ai/security.rst:228
-msgid "Document every agent in your internal runbook (purpose, user groups, rules, data classes allowed)."
-msgstr ""
-
-#: ../../content/applications/productivity/ai/security.rst:232
-msgid "What security does *not* guarantee"
-msgstr ""
-
 #: ../../content/applications/productivity/ai/security.rst:234
-msgid "Perfect resistance to prompt injection."
-msgstr ""
-
-#: ../../content/applications/productivity/ai/security.rst:235
-msgid "Classification of every sensitive business field out of the box."
+msgid "Leave agent task :guilabel:`Write Mode` on **confirm** unless the task is explicitly draft-safe (e.g. AP fill that never posts); document the opt-in."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/security.rst:236
-msgid "That training-data guesses cannot appear in free-text answers (grounding rules reduce but do not eliminate hallucinations — critical actions must go through tools and confirmation)."
+msgid "One **supervisor** human per agent; supervisors in AI: User."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/security.rst:237
+msgid "No shared \"god\" agent for all departments — split by domain and data."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/security.rst:238
+msgid "Review :menuselection:`AI --> Monitoring --> Violations` weekly at first."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/security.rst:239
+msgid "Document every agent in your internal runbook (purpose, user groups, rules, data classes allowed)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/security.rst:243
+msgid "What security does *not* guarantee"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/security.rst:245
+msgid "Perfect resistance to prompt injection."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/security.rst:246
+msgid "Classification of every sensitive business field out of the box."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/security.rst:247
+msgid "That training-data guesses cannot appear in free-text answers (grounding rules reduce but do not eliminate hallucinations — critical actions must go through tools and confirmation)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/security.rst:250
 msgid "GDPR/legal compliance by itself — you still need lawful basis, DPAs with providers, and retention policy for conversations you keep."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/security.rst:242
+#: ../../content/applications/productivity/ai/security.rst:253
 msgid "Continue with :doc:`getting_started` only after this page is understood by the people who will administer the module."
 msgstr ""
 
@@ -3395,7 +3435,7 @@ msgid "Prefer reporting an existing bill over creating a second one with the sam
 msgstr ""
 
 #: ../../content/applications/productivity/ai/skills_and_memory.rst:94
-msgid "Pair with Recipe D in :doc:`agent_recipes` (chat helper or scheduled agent). For unattended runs, task :guilabel:`Write mode` *auto* is only appropriate because this skill keeps bills draft; if you customise the skill to post, switch the task back to *confirm*."
+msgid "Pair with Recipe D in :doc:`agent_recipes` (chat helper or scheduled agent). For unattended runs, task :guilabel:`Write Mode` *auto* is only appropriate because this skill keeps bills draft; if you customise the skill to post, switch the task back to *confirm*."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/skills_and_memory.rst:100
@@ -3669,11 +3709,11 @@ msgid "Controlled by"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:101
-msgid "Global :guilabel:`Write mode` in Settings"
+msgid "Global :guilabel:`Ai Write Mode` in Settings"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:101
-msgid "The **task's** :guilabel:`Write mode` (default *confirm*; see :ref:`ai/agents/task-write-mode`)"
+msgid "The **task's** :guilabel:`Write Mode` (default *confirm*; see :ref:`ai/agents/task-write-mode`)"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:106
@@ -3753,7 +3793,7 @@ msgid "**Create automatically, confirm updates** (*hybrid*, default) — only *n
 msgstr ""
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:147
-msgid "**Agent runs** — same three values, but on the **task** form (:guilabel:`Write mode`), defaulting to *Always require confirmation*. The Settings value does not apply to agent runs. Use *auto* or *hybrid* only when the standing instruction and skills keep risk bounded (draft-only fills, no posting, no payments). Details: :ref:`ai/agents/task-write-mode`."
+msgid "**Agent runs** — same three values, but on the **task** form (:guilabel:`Write Mode`), defaulting to *Always require confirmation*. The Settings value does not apply to agent runs. Use *auto* or *hybrid* only when the standing instruction and skills keep risk bounded (draft-only fills, no posting, no payments). Details: :ref:`ai/agents/task-write-mode`."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:153
@@ -4085,7 +4125,7 @@ msgid "Calendar"
 msgstr ""
 
 #: ../../content/applications/productivity/calendar.rst:7
-msgid "Odoo **Calendar** is a scheduling app that allows users to integrate a company's business flow into a single management platform. By integrating with the other apps in Odoo's ecosystem, **Calendar** allows users to schedule and organize meetings, schedule events, plan employee appraisals, coordinate projects, and more – all from the same platform."
+msgid "Odoo **Calendar** is a scheduling app that allows users to integrate a company's business flow into a single management platform. By integrating with the other apps in Odoo's ecosystem, **Calendar** allows users to schedule and organize meetings, schedule events, plan performance reviews, coordinate projects, and more – all from the same platform."
 msgstr ""
 
 #: ../../content/applications/productivity/calendar.rst:12

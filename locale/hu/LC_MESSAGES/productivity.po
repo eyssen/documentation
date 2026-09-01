@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-09 20:00+0200\n"
+"POT-Creation-Date: 2026-09-01 08:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -265,7 +265,7 @@ msgstr ""
 #: ../../content/applications/productivity/ai.rst:101
 msgid ""
 "**Supervisor four-eyes by default on agent writes** — each agent **task** "
-"has its own :guilabel:`Write mode` (default **Always require "
+"has its own :guilabel:`Write Mode` (default **Always require "
 "confirmation**). Unattended runs therefore propose for the supervisor unless"
 " that task explicitly opts into *hybrid* or *auto* for trusted, low-risk "
 "work (for example filling **draft** vendor bills that the playbook never "
@@ -273,13 +273,13 @@ msgid ""
 ":ref:`ai/agents/task-write-mode`."
 msgstr ""
 "**Négy szem elv az ügynök-írásokra alapértelmezésben** — minden "
-"ügynök-**feladatnak** saját :guilabel:`Írási mód` mezője van (alap: **Mindig"
-" kérjen megerősítést**). A felügyelet nélküli futtatások ezért javaslatot "
-"készítenek a felügyelőnek, kivéve ha az adott feladat tudatosan *hybrid* "
-"vagy *auto* módba van állítva megbízható, alacsony kockázatú munkára "
-"(például **piszkozat** szállítói számlák kitöltése, amelyeket a playbook "
-"soha nem könyvel le). A globális chat írási mód **nem** szabályozza az "
-"ügynök-futtatásokat — lásd :ref:`ai/agents/task-write-mode`."
+"ügynök-**feladatnak** saját :guilabel:`Write Mode` mezője van (alap: "
+"**Mindig kérjen megerősítést**). A felügyelet nélküli futtatások ezért "
+"javaslatot készítenek a felügyelőnek, kivéve ha az adott feladat "
+"kifejezetten *hybrid* vagy *auto* módba van állítva megbízható, alacsony "
+"kockázatú munkára (például **piszkozat** szállítói számlák kitöltésére, "
+"amelyeket a playbook soha nem könyvel le). A globális chat írási mód **nem**"
+" szabályozza az ügynök-futtatásokat — lásd :ref:`ai/agents/task-write-mode`."
 
 #: ../../content/applications/productivity/ai.rst:108
 msgid ""
@@ -490,11 +490,11 @@ msgstr ""
 msgid ""
 "**Hard-deny floor** — technical / self-protection models always deny, "
 "including every ``ai.*`` platform model and raw ``mail.message`` / "
-"``mail.activity`` / ``discuss.channel`` (see :doc:`security`)."
+"``discuss.channel`` (see :doc:`security`)."
 msgstr ""
 "**Hard-deny padló** — a technikai / önvédelmi modellek mindig tiltottak, "
 "beleértve minden ``ai.*`` platformmodellt és a nyers ``mail.message`` / "
-"``mail.activity`` / ``discuss.channel`` modelleket (lásd :doc:`security`)."
+"``discuss.channel`` modellt (lásd :doc:`security`)."
 
 #: ../../content/applications/productivity/ai/access_policy.rst:52
 msgid ""
@@ -511,7 +511,7 @@ msgid ""
 "shipped rules and the whole cross-model opt-in rely on: with write "
 "defaulting to Deny, a field-scoped Allow is what makes a field writable. It "
 "does not replace the model tier, though: a **direct** write to a model must "
-"still pass step 4 or 5 for that model. Only a payload nested inside a parent"
+"still pass step 4 or 6 for that model. Only a payload nested inside a parent"
 " one2many or many2many field skips the model check on the child model."
 msgstr ""
 "**Mező szintű Engedélyezés** (csak olvasás/írás) — ez dönti el a mező "
@@ -520,8 +520,8 @@ msgstr ""
 " szükséges teljes, kifejezett engedélyezés: mivel az írás alapértelmezése "
 "Megtagadás, egy mezőre szabott Engedélyezés az, ami írhatóvá tesz egy mezőt."
 " A modell szintet viszont nem váltja ki: egy modell **közvetlen** írásának "
-"továbbra is át kell mennie az adott modellre a 4. vagy az 5. lépésen. Csak a"
-" szülő one2many vagy many2many mezőbe beágyazott adatcsomag hagyja ki a "
+"továbbra is át kell mennie az adott modellre a 4. vagy a 6. lépésen. Csak a "
+"szülő one2many vagy many2many mezőbe beágyazott adatcsomag hagyja ki a "
 "gyermekmodell modell szintű ellenőrzését."
 
 #: ../../content/applications/productivity/ai/access_policy.rst:61
@@ -532,12 +532,23 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/access_policy.rst:62
 msgid ""
+"**Explicit-allow-only models** — ``ir.attachment`` and ``mail.activity`` "
+"stop here. They are off the floor, so a rule can open them, but they never "
+"fall through to the global defaults: with no matching Allow they are denied."
+msgstr ""
+"**Csak kifejezett engedéllyel nyitható modellek** — az ``ir.attachment`` és "
+"a ``mail.activity`` itt megáll. Ezek nincsenek a padlón, ezért szabállyal "
+"megnyithatók, de soha nem esnek át a globális alapértelmezésekre: illeszkedő"
+" Engedélyezés hiányában tiltottak."
+
+#: ../../content/applications/productivity/ai/access_policy.rst:65
+msgid ""
 "**Global defaults** from Settings (default_read / create / write / delete)."
 msgstr ""
 "**Global defaults** a Beállítások menüből (alapértelmezett_olvasás / "
 "létrehozás / írás / törlés)."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:64
+#: ../../content/applications/productivity/ai/access_policy.rst:67
 msgid ""
 "Unknown models or operations fail closed. Results are cached and invalidated"
 " when rules, groups or parameters change."
@@ -546,11 +557,11 @@ msgstr ""
 "szabályok, csoportok vagy paraméterek változása esetén a gyorsítótárba "
 "kerülnek, és érvénytelenné válnak."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:68
+#: ../../content/applications/productivity/ai/access_policy.rst:71
 msgid "Universal sanitiser rails (before/alongside policy)"
 msgstr "Univerzális szaniter sínek (házirend előtt/mellett)"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:70
+#: ../../content/applications/productivity/ai/access_policy.rst:73
 msgid ""
 "Independently of allow rules, the gate refuses or strips the following — "
 "with one exception, noted in the list:"
@@ -558,15 +569,15 @@ msgstr ""
 "Az engedélyező szabályoktól függetlenül a kapu a következőket elutasítja "
 "vagy eltávolítja — egy kivétellel, amelyet a lista jelöl:"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:73
+#: ../../content/applications/productivity/ai/access_policy.rst:76
 msgid "magic fields;"
 msgstr "varázsmezők;"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:74
+#: ../../content/applications/productivity/ai/access_policy.rst:77
 msgid "sensitive-looking field names (password, token, api_key, …);"
 msgstr "érzékeny kinézetű mezőnevek (jelszó, token, api_key, …);"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:75
+#: ../../content/applications/productivity/ai/access_policy.rst:78
 msgid ""
 "fields that write into another model — the only rail an Allow rule can lift,"
 " and only per field; see :ref:`ai/policy/cross-model`;"
@@ -575,23 +586,23 @@ msgstr ""
 " egy Engedélyezés szabály feloldhat, és csak mezőnként; lásd: "
 ":ref:`ai/policy/cross-model`;"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:77
+#: ../../content/applications/productivity/ai/access_policy.rst:80
 msgid "lifecycle ``state`` writes;"
 msgstr "életciklus ``state`` írások;"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:78
+#: ../../content/applications/productivity/ai/access_policy.rst:81
 msgid "non-writable / complex types that must not be LLM-driven;"
 msgstr "nem írható / összetett típusok, amelyek nem lehetnek LLM-vezéreltek;"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:79
+#: ../../content/applications/productivity/ai/access_policy.rst:82
 msgid "hard-deny models in relational paths / domains."
 msgstr "Megtagadási modellek relációs útvonalakban/tartományokban."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:84
+#: ../../content/applications/productivity/ai/access_policy.rst:87
 msgid "Cross-model write protection"
 msgstr "Modellek közötti írás elleni védelem"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:86
+#: ../../content/applications/productivity/ai/access_policy.rst:89
 msgid ""
 "Some Odoo fields do not only store a value: writing them also writes into a "
 "**different** model. ``crm.lead.email_from``, for example, updates the "
@@ -605,11 +616,11 @@ msgstr ""
 "„szerkesztheti a lead-eket”, a megnyitott modelleken kívüli kapcsolati "
 "adatokat is módosíthatna, az audit-napló pedig csak a lead-et nevezné meg."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:92
+#: ../../content/applications/productivity/ai/access_policy.rst:95
 msgid "Odoo has two kinds of such field, and only one of them can be opened."
 msgstr "Az Odoo-ban kétféle ilyen mező van, és csak az egyik nyitható meg."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:94
+#: ../../content/applications/productivity/ai/access_policy.rst:97
 msgid ""
 "A **related** field re-routes the write to the other model by definition. "
 "The gate refuses it outright, on create and on write, and no access rule of "
@@ -621,7 +632,7 @@ msgstr ""
 "formájú hozzáférési szabály nem nyitja meg — engedélyezze inkább az "
 "asszisztensnek a *célmodell* írását."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:98
+#: ../../content/applications/productivity/ai/access_policy.rst:101
 msgid ""
 "A field carrying an **inverse** runs arbitrary code that may touch anything:"
 " ``crm.lead.email_from`` is compute-plus-inverse, and its inverse writes "
@@ -638,7 +649,7 @@ msgstr ""
 " a ``crm.lead`` írásának megadása nem nyithatja meg csendben a "
 "``res.partner`` modellt is."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:105
+#: ../../content/applications/productivity/ai/access_policy.rst:108
 msgid ""
 "The surface is wider than it looks. Core Odoo carries inverses on everyday "
 "fields — a vendor bill's partner, journal, currency and payment term, an "
@@ -651,7 +662,7 @@ msgstr ""
 " e-mail címe —, ezért számoljon vele, hogy már az első valódi írás "
 "engedélyezésekor beleütközik ebbe a védőkorlátba."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:110
+#: ../../content/applications/productivity/ai/access_policy.rst:113
 msgid ""
 "Either refusal is a configuration boundary, not abuse: it records no "
 "violation and costs the user no strike."
@@ -659,18 +670,18 @@ msgstr ""
 "Mindkét elutasítás konfigurációs határ, nem visszaélés: nem rögzít "
 "szabálysértést, és a felhasználónak nem jár figyelmeztetéssel."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:114
+#: ../../content/applications/productivity/ai/access_policy.rst:117
 msgid "Opening one of these fields"
 msgstr "Egy ilyen mező megnyitása"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:116
+#: ../../content/applications/productivity/ai/access_policy.rst:119
 msgid ""
 "Go to :menuselection:`AI --> Configuration --> Security --> Access Rules`."
 msgstr ""
 "Lépjen az :menuselection:`AI --> Konfiguráció --> Biztonság --> Hozzáférési "
 "szabályok` menüpontra."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:117
+#: ../../content/applications/productivity/ai/access_policy.rst:120
 msgid ""
 "Create a rule with :guilabel:`Model` **and** :guilabel:`Field` set — the "
 "field is what makes it count."
@@ -678,11 +689,11 @@ msgstr ""
 "Hozzon létre egy szabályt, amelyben a :guilabel:`Modell` **és** a "
 ":guilabel:`Mező` is ki van töltve – a mező az, amitől érvényes lesz."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:119
+#: ../../content/applications/productivity/ai/access_policy.rst:122
 msgid "Set :guilabel:`perm_write` = **Allow**."
 msgstr "Állítsa a :guilabel:`perm_write` értékét **Engedélyezés**-re."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:122
+#: ../../content/applications/productivity/ai/access_policy.rst:125
 msgid ""
 "A rule with :guilabel:`Field` left empty is a model-level rule and will not "
 "lift this rail, however permissive it looks. :guilabel:`perm_write` is the "
@@ -697,7 +708,7 @@ msgstr ""
 ":guilabel:`perm_create` modell szintű, és a mezőszabályokon a rendszer "
 "figyelmen kívül hagyja."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:127
+#: ../../content/applications/productivity/ai/access_policy.rst:130
 msgid ""
 "The rule lifts the inverse rail and nothing else. A field that is not stored"
 " in the database — ``product.template.standard_price`` is computed with an "
@@ -712,7 +723,7 @@ msgstr ""
 "szabály ellenére is megmarad, akkor a mező related vagy nem tárolt, nem "
 "pedig inverse-szel rendelkező mező."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:134
+#: ../../content/applications/productivity/ai/access_policy.rst:137
 msgid ""
 "When the refusal happens inside a one2many or many2many payload — an invoice"
 " line inside :guilabel:`Invoice lines`, for example — the assistant reports "
@@ -732,42 +743,62 @@ msgstr ""
 "alatt nem jelennek meg, és a hiányzó mezőengedély miatti elutasítás sem "
 "rögzít szabálysértést — ez konfigurációs határ, nem visszaélés."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:144
+#: ../../content/applications/productivity/ai/access_policy.rst:147
 msgid "Defaults and recommended postures"
 msgstr "Alapértelmezések és ajánlott tartások"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:147
+#: ../../content/applications/productivity/ai/access_policy.rst:150
 msgid "Fresh install"
 msgstr "Friss telepítés"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:149
+#: ../../content/applications/productivity/ai/access_policy.rst:152
 msgid ""
 "Read: **allow** (minus floor and strips) so the assistant is useful for Q&A."
 msgstr ""
 "Olvassa el: **allow** (mínusz a padló és a csíkok), így az asszisztens "
 "hasznos lehet kérdések és válaszok esetén."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:150
+#: ../../content/applications/productivity/ai/access_policy.rst:153
 msgid "Create / write / delete: **deny** until you open specific models."
 msgstr ""
 "Létrehozása / írása / törlése: **deny**, amíg meg nem nyit bizonyos "
 "modelleket."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:151
+#: ../../content/applications/productivity/ai/access_policy.rst:154
 msgid ""
-"Nine field-level write allows ship enabled, so the vendor-bill and invoice-"
+"Ten field-level write allows ship enabled, so the vendor-bill and invoice-"
 "line flows keep working under the cross-model rail above: ``account.move`` "
 "(partner, journal, currency, payment term, delivery date, payment reference)"
-" and ``account.move.line`` (product, account, partner). Nothing is opened on"
-" ``crm.lead``."
+" and ``account.move.line`` (product, account, analytic distribution, "
+"partner). Nothing is opened on ``crm.lead``."
 msgstr ""
-"Kilenc mező szintű írási engedély bekapcsolva érkezik, hogy a bejövő számla "
-"és a számlasor folyamatai a fenti, modellek közötti védőkorlát alatt is "
+"Tíz mező szintű írási engedély érkezik bekapcsolva, hogy a bejövő számla és "
+"a számlasor folyamatai a fenti, modellek közötti védőkorlát alatt is "
 "működjenek: ``account.move`` (partner, napló, pénznem, fizetési feltétel, "
-"szállítási dátum, fizetési referencia) és ``account.move.line`` (termék, "
-"főkönyvi számla, partner). A ``crm.lead`` modellen semmi nincs megnyitva."
+"szállítási dátum, fizetési hivatkozás) és ``account.move.line`` (termék, "
+"főkönyvi számla, analitikus felosztás, partner). A ``crm.lead`` modellen "
+"semmi nincs megnyitva."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:157
+#: ../../content/applications/productivity/ai/access_policy.rst:160
+msgid ""
+"``account.move.line.analytic_distribution`` is the one to read twice. It is "
+"a JSON field, so its rule lifts two rails at once: the cross-model rail "
+"above and the refusal of JSON-typed values, which no other shipped rule "
+"touches. Its inverse also leaves the document — on a **posted** line it "
+"deletes the line's ``account.analytic.line`` records and re-creates them — "
+"so an analytic write reaches a model no rule ever named and no audit entry "
+"names either."
+msgstr ""
+"Az ``account.move.line.analytic_distribution`` az, amit érdemes kétszer "
+"elolvasni. Ez JSON mező, ezért a rá vonatkozó szabály egyszerre két "
+"védőkorlátot old fel: a fenti, modellek közötti védőkorlátot és a JSON "
+"típusú értékek elutasítását, amelyet egyetlen más gyári szabály sem érint. "
+"Az inverze ráadásul kilép a dokumentumból — egy **lekönyvelt** soron törli a"
+" sor ``account.analytic.line`` rekordjait, majd újra létrehozza őket —, így "
+"egy analitikus írás olyan modellhez ér el, amelyet egyetlen szabály sem "
+"nevezett meg, és amelyet egyetlen naplóbejegyzés sem nevez meg."
+
+#: ../../content/applications/productivity/ai/access_policy.rst:167
 msgid ""
 "These rows carry **no access group and no company**, so they are global "
 "rules: they apply to every AI user and every agent, not only to the "
@@ -781,7 +812,7 @@ msgstr ""
 "minden frissítésekor létrejönnek. Ha átír vagy kikapcsol egyet, a frissítés "
 "nem írja felül a módosítását; ha töröl egyet, az újra létrejön."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:163
+#: ../../content/applications/productivity/ai/access_policy.rst:173
 msgid ""
 "They exist only where **Accounting** is installed, and each install or "
 "upgrade of the AI app seeds only the apps present at that moment. Install "
@@ -797,51 +828,72 @@ msgstr ""
 " nélkül elutasítja a számlasorok írását, ezért a Könyvelés hozzáadása után "
 "frissítse az AI alkalmazást."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:170
+#: ../../content/applications/productivity/ai/access_policy.rst:179
 msgid ""
-"On the nested-line path the three ``account.move.line`` rows are real write "
+"Two model-level allows ship enabled as well, on the two explicit-allow-only "
+"models of step 5: ``ir.attachment`` is opened for read and write (PDF and "
+"image content for the document and vendor-bill skills, and re-attaching a "
+"file to another record), ``mail.activity`` for read, write and create "
+"(review To-Dos authored by the AI user). Creating or deleting an attachment "
+"and deleting an activity stay closed. Like the field rows they are global, "
+"arrive on install and on every upgrade, and survive your edits."
+msgstr ""
+"Két modell szintű engedély is bekapcsolva érkezik, az 5. lépés két, csak "
+"kifejezett engedéllyel nyitható modelljére: az ``ir.attachment`` olvasásra "
+"és írásra van megnyitva (PDF- és képtartalom a dokumentum- és a "
+"bejövőszámla-skillekhez, valamint fájl átcsatolása másik rekordra), a "
+"``mail.activity`` pedig olvasásra, írásra és létrehozásra (az AI-felhasználó"
+" nevében készülő ellenőrző Teendők). A csatolmányok létrehozása és törlése, "
+"valamint a tevékenységek törlése zárva marad. A mezőszintű sorokhoz "
+"hasonlóan ezek is globálisak, telepítéskor és minden frissítéskor "
+"létrejönnek, és túlélik az Ön módosításait."
+
+#: ../../content/applications/productivity/ai/access_policy.rst:188
+msgid ""
+"On the nested-line path the four ``account.move.line`` rows are real write "
 "permission, not only a lifted rail. A field-level Allow is resolved before "
 "the model tier and before the global default, so once write is allowed on "
-"``account.move``, the assistant can set product, account and partner on "
-"invoice lines through :guilabel:`Invoice lines` even though write on "
-"``account.move.line`` itself was never allowed — the create/write default of"
-" Deny does not hold that line. A *direct* write to ``account.move.line`` is "
-"still refused; only a payload nested inside a parent field skips the model-"
-"level check."
+"``account.move``, the assistant can set product, account, analytic "
+"distribution and partner on invoice lines through :guilabel:`Invoice lines` "
+"even though write on ``account.move.line`` itself was never allowed — the "
+"create/write default of Deny does not hold that line. A *direct* write to "
+"``account.move.line`` is still refused; only a payload nested inside a "
+"parent field skips the model-level check."
 msgstr ""
-"A beágyazott sorok útvonalán a három ``account.move.line`` sor valódi írási "
+"A beágyazott sorok útvonalán a négy ``account.move.line`` sor valódi írási "
 "jogosultság, nem csupán egy feloldott védőkorlát. A mező szintű Engedélyezés"
-" a modell szint és a globális alapértelmezés előtt kerül feloldásra, ezért "
-"ha az ``account.move`` írása engedélyezett, az asszisztens a "
+" a modell szint és a globális alapértelmezés előtt dől el, ezért ha az "
+"``account.move`` írása engedélyezett, az asszisztens a "
 ":guilabel:`Számlasorok` mezőn keresztül beállíthatja a számlasorok termékét,"
-" főkönyvi számláját és partnerét, még akkor is, ha magának az "
-"``account.move.line`` modellnek az írása soha nem volt engedélyezve — a "
-"létrehozás/írás alapértelmezett Megtagadása itt nem szab gátat. Az "
-"``account.move.line`` *közvetlen* írása továbbra is elutasított; csak a "
-"szülő mezőbe beágyazott adatcsomag hagyja ki a modell szintű ellenőrzést."
+" főkönyvi számláját, analitikus felosztását és partnerét, még akkor is, ha "
+"magának az ``account.move.line`` modellnek az írása soha nem volt "
+"engedélyezve — a létrehozás/írás alapértelmezett Megtagadása itt nem szab "
+"gátat. Az ``account.move.line`` *közvetlen* írása továbbra is elutasított; "
+"csak a szülő mezőbe beágyazott adatcsomag hagyja ki a modell szintű "
+"ellenőrzést."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:180
+#: ../../content/applications/productivity/ai/access_policy.rst:198
 msgid ""
 "Header fields on ``account.move`` are unaffected: writing the document still"
-" needs your own model-level Allow. To close the three line fields, add an "
+" needs your own model-level Allow. To close the four line fields, add an "
 "explicit **Deny** — model-level on ``account.move.line``, or on the field — "
 "or deactivate the shipped rules. A Deny at either tier beats the Allow, and "
 "either edit survives every upgrade; deleting a shipped rule only brings it "
 "back."
 msgstr ""
 "Az ``account.move`` fejlécmezőit ez nem érinti: a dokumentum írásához "
-"továbbra is az Ön saját modell szintű Engedélyezése kell. A három sormező "
+"továbbra is az Ön saját modell szintű Engedélyezése kell. A négy sormező "
 "bezárásához adjon meg kifejezett **Megtagadást** — modell szinten az "
 "``account.move.line`` modellre vagy magára a mezőre —, vagy kapcsolja ki a "
 "gyári szabályokat. A Megtagadás bármelyik szinten legyőzi az Engedélyezést, "
 "és mindkét szerkesztés túlél minden frissítést; egy gyári szabály törlése "
 "csak visszahozza azt."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:187
+#: ../../content/applications/productivity/ai/access_policy.rst:205
 msgid "Deny-by-default read (stricter)"
 msgstr "Alapból tiltott olvasás (szigorúbb)"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:189
+#: ../../content/applications/productivity/ai/access_policy.rst:207
 msgid ""
 "Set default read to **Deny**, then add Allow rules only for models the "
 "assistant should see (e.g. ``product.product``, ``res.partner`` with field "
@@ -854,65 +906,65 @@ msgstr ""
 "mezőmegtagadásokkal a belső megjegyzéseknél stb.). Biztonságosabb a "
 "szabályozott adatbázisokhoz; több beállítást igényel."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:194
+#: ../../content/applications/productivity/ai/access_policy.rst:212
 msgid "Examples"
 msgstr "Példák"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:197
+#: ../../content/applications/productivity/ai/access_policy.rst:215
 msgid "Deny all AI read on employees"
 msgstr "Minden AI olvasás tiltása az alkalmazottakon"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:199
+#: ../../content/applications/productivity/ai/access_policy.rst:217
 msgid "Create global rule on model ``hr.employee``."
 msgstr "Globális szabály létrehozása a ``hr.employee`` modellre."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:200
+#: ../../content/applications/productivity/ai/access_policy.rst:218
 msgid ""
 "Set :guilabel:`perm_read` = **Deny** (other perms inherit/deny as you like)."
 msgstr ""
 "Állítsa be a :guilabel:`perm_read` = **Deny** értéket (más engedélyek "
 "tetszés szerint öröklik/megtagadják)."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:203
+#: ../../content/applications/productivity/ai/access_policy.rst:221
 msgid "Allow support agent to create helpdesk tickets only"
 msgstr "Support ügynök csak helpdesk jegy létrehozására"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:205
+#: ../../content/applications/productivity/ai/access_policy.rst:223
 msgid "Create AI access group *Support bot* with the agent user as member."
 msgstr ""
 "Hozzon létre mesterséges intelligencia hozzáférési csoportot *Support bot*, "
 "amelynek tagja az ügynök felhasználója."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:206
+#: ../../content/applications/productivity/ai/access_policy.rst:224
 msgid "Global defaults already deny create."
 msgstr "A globális alapértelmezések már tiltják a létrehozást."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:207
+#: ../../content/applications/productivity/ai/access_policy.rst:225
 msgid "Rule on ``helpdesk.ticket`` (or ``project.task``) for that group:"
 msgstr "Szabály ``helpdesk.ticket`` (vagy ``project.task``) erre a csoportra:"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:209
+#: ../../content/applications/productivity/ai/access_policy.rst:227
 #: ../../content/applications/productivity/ai/agent_recipes.rst:140
 msgid "``perm_create`` = Allow"
 msgstr "``perm_create`` = Engedélyezés"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:210
+#: ../../content/applications/productivity/ai/access_policy.rst:228
 msgid "``perm_read`` = Deny (or Allow only safe fields via field rules)"
 msgstr ""
 "``perm_read`` = Megtagadás (vagy csak biztonságos mezők engedélyezése "
 "mezőszabályokon keresztül)"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:211
+#: ../../content/applications/productivity/ai/access_policy.rst:229
 #: ../../content/applications/productivity/ai/agent_recipes.rst:142
 msgid "``perm_write`` = Deny"
 msgstr "``perm_write`` = Megtagadás"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:212
+#: ../../content/applications/productivity/ai/access_policy.rst:230
 #: ../../content/applications/productivity/ai/agent_recipes.rst:143
 msgid "``perm_delete`` = Deny"
 msgstr "``perm_delete`` = Megtagadás"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:214
+#: ../../content/applications/productivity/ai/access_policy.rst:232
 msgid ""
 "Field-level: allow write on the few fields set at create time (name, "
 "description, partner email, team) if your policy requires write-allow to set"
@@ -922,7 +974,7 @@ msgstr ""
 "(név, leírás, partner e-mail-cím, csapat), ha a szabályzat megköveteli az "
 "írási engedélyt az értékek beállításához a létrehozáskor."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:217
+#: ../../content/applications/productivity/ai/access_policy.rst:235
 msgid ""
 "Ensure the agent **user** has matching Odoo ACLs to create those tickets — "
 "policy alone cannot grant create if the user group cannot."
@@ -931,11 +983,11 @@ msgstr ""
 "ekkel a jegyek létrehozásához – a házirend önmagában nem engedélyezheti a "
 "létrehozást, ha a felhasználói csoport nem tudja."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:221
+#: ../../content/applications/productivity/ai/access_policy.rst:239
 msgid "Calendar free/busy without event details"
 msgstr "Naptár free/busy eseményrészletek nélkül"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:223
+#: ../../content/applications/productivity/ai/access_policy.rst:241
 msgid ""
 "Goal: agent may create a meeting in free slots but must not dump other "
 "people's event subjects and attendees to the LLM."
@@ -943,16 +995,16 @@ msgstr ""
 "Cél: az ügynök létrehozhat egy értekezletet a szabad helyeken, de nem "
 "hagyhatja mások eseményeinek tárgyait és résztvevőit a LLM-ra."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:226
+#: ../../content/applications/productivity/ai/access_policy.rst:244
 #: ../../content/applications/productivity/ai/agent_recipes.rst:152
 msgid "Model ``calendar.event``:"
 msgstr "``calendar.event`` modell:"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:228
+#: ../../content/applications/productivity/ai/access_policy.rst:246
 msgid "``perm_read`` = Deny at model level for the bot group, **or**"
 msgstr "``perm_read`` = Megtagadás modell szinten a botcsoporthoz, **or**"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:229
+#: ../../content/applications/productivity/ai/access_policy.rst:247
 msgid ""
 "``perm_read`` = Allow with field-level **Deny** on ``name``, "
 "``description``, ``partner_ids``, ``videocall_location``, and similar."
@@ -960,7 +1012,7 @@ msgstr ""
 "``perm_read`` = Engedélyezés az **Deny** mezőszinttel ``name``, "
 "``description``, ``partner_ids``, ``videocall_location`` és hasonlók esetén."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:231
+#: ../../content/applications/productivity/ai/access_policy.rst:249
 msgid ""
 "Prefer a dedicated free-busy API/action if you add one later; raw event read"
 " is a common over-share."
@@ -968,7 +1020,7 @@ msgstr ""
 "Előnyben részesítse a dedikált szabad foglalt API/akciót, ha később hozzáad "
 "egyet; A nyers eseményolvasás gyakori túlzott megosztás."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:233
+#: ../../content/applications/productivity/ai/access_policy.rst:251
 msgid ""
 "``perm_create`` = Allow with write-allow only on start, stop, name "
 "(generic), user_id."
@@ -976,7 +1028,7 @@ msgstr ""
 "``perm_create`` = Engedélyezés csak írási engedéllyel induláskor, "
 "leállításkor, név (általános), user_id."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:236
+#: ../../content/applications/productivity/ai/access_policy.rst:254
 msgid ""
 "See :doc:`agent_recipes` for end-to-end agent recipes that combine policy, "
 "capabilities and channels."
@@ -984,11 +1036,11 @@ msgstr ""
 "Lásd a :doc:`agent_recipes`-t a végpontok közötti ügynökreceptekért, amelyek"
 " egyesítik a szabályzatot, a képességeket és a csatornákat."
 
-#: ../../content/applications/productivity/ai/access_policy.rst:240
+#: ../../content/applications/productivity/ai/access_policy.rst:258
 msgid "Relation to Odoo record rules"
 msgstr "Kapcsolat az Odoo rekordszabályokkal"
 
-#: ../../content/applications/productivity/ai/access_policy.rst:242
+#: ../../content/applications/productivity/ai/access_policy.rst:260
 msgid ""
 "AI policy does **not** replace record rules. Multi-company, follower-only "
 "documents, and portal isolation remain enforced by Odoo when the gate runs "
@@ -1471,12 +1523,12 @@ msgstr "Írási mód / felügyelet"
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:185
 msgid ""
-"Keep the task :guilabel:`Write mode` on **confirm** for public-facing bots "
+"Keep the task :guilabel:`Write Mode` on **confirm** for public-facing bots "
 "so every create waits for a supervisor. For high-volume ticket spam, either:"
 msgstr ""
-"Nyilvános botoknál a feladat :guilabel:`Írási mód` maradjon **confirm**, "
-"hogy minden létrehozás a felügyelőre várjon. Nagy volumenű ticket-spamnél "
-"vagy:"
+"Nyilvános botoknál a feladat :guilabel:`Write Mode` beállítása maradjon "
+"**confirm**, hogy minden létrehozás a felügyelőre várjon. Nagy volumenű "
+"ticket-spam esetén két lehetőség van:"
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:188
 msgid "leave *confirm* and batch-approve, **or**"
@@ -1630,11 +1682,11 @@ msgid ""
 "everyday fields on a bill also write another model, so they need a rule "
 "naming the **field**. The ones this flow depends on ship pre-allowed — on "
 "``account.move`` the partner, journal, currency, payment term, delivery date"
-" and payment reference, and on ``account.move.line`` the product, account "
-"and partner. Anything else that crosses a model boundary still needs a field"
-" rule of your own, notably ``account.move.name`` (:guilabel:`Number`) and, "
-"on lines, ``debit``, ``credit`` and ``amount_currency``. See "
-":ref:`ai/policy/cross-model`."
+" and payment reference, and on ``account.move.line`` the product, account, "
+"analytic distribution and partner. Anything else that crosses a model "
+"boundary still needs a field rule of your own, notably ``account.move.name``"
+" (:guilabel:`Number`) and, on lines, ``debit``, ``credit`` and "
+"``amount_currency``. See :ref:`ai/policy/cross-model`."
 msgstr ""
 "Hozzáférési szabályok: engedélyezze az olvasást/írást a szükséges bejövő "
 "számlákon / termékeken; tagadja meg a HR-t és a bérszámfejtést. A modell "
@@ -1643,11 +1695,11 @@ msgstr ""
 "Azok, amelyekre ez a folyamat épül, előre engedélyezve érkeznek — az "
 "``account.move`` modellen a partner, a napló, a pénznem, a fizetési "
 "feltétel, a szállítási dátum és a fizetési hivatkozás, az "
-"``account.move.line`` modellen pedig a termék, a főkönyvi számla és a "
-"partner. Minden más, ami modellhatárt lép át, továbbra is az Ön saját "
-"mezőszabályát igényli, különösen az ``account.move.name`` "
-"(:guilabel:`Szám`), a sorokon pedig a ``debit``, a ``credit`` és az "
-"``amount_currency``. Lásd: :ref:`ai/policy/cross-model`."
+"``account.move.line`` modellen pedig a termék, a főkönyvi számla, az "
+"analitikus felosztás és a partner. Minden más, ami modellhatárt lép át, "
+"továbbra is az Ön saját mezőszabályát igényli, különösen az "
+"``account.move.name`` (:guilabel:`Szám`), a sorokon pedig a ``debit``, a "
+"``credit`` és az ``amount_currency``. Lásd: :ref:`ai/policy/cross-model`."
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:254
 msgid ""
@@ -1708,11 +1760,12 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:271
 msgid ""
-"Global chat :guilabel:`Write mode`: **confirm** or **hybrid** for SOX-style "
-"trails; *auto* only in tightly controlled pilot groups."
+"Global chat :guilabel:`Ai Write Mode`: **confirm** or **hybrid** for SOX-"
+"style trails; *auto* only in tightly controlled pilot groups."
 msgstr ""
-"Globális chat :guilabel:`Írási mód`: **confirm** vagy **hybrid** SOX-szerű "
-"nyomon követéshez; *auto* csak szorosan kontrollált pilot csoportokban."
+"Globális chat :guilabel:`AI írási mód`: **confirm** vagy **hybrid** SOX-"
+"szerű nyomon követéshez; *auto* csak szorosan kontrollált pilot "
+"csoportokban."
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:273
 msgid ""
@@ -1781,15 +1834,16 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:293
 msgid ""
-":guilabel:`Write mode` **Apply immediately** (*auto*) is acceptable **only "
+":guilabel:`Write Mode` **Apply immediately** (*auto*) is acceptable **only "
 "because** the skill never posts and the agent never pays — risk stays at "
 "“wrong draft lines”, not “posted garbage”. Use *confirm* if you want every "
 "line change to wait for the supervisor;"
 msgstr ""
-":guilabel:`Írási mód` **Azonnali alkalmazás** (*auto*) **csak azért** "
+":guilabel:`Write Mode` **Azonnali alkalmazás** (*auto*) **csak azért** "
 "elfogadható, mert a skill soha nem könyvel le és az ügynök soha nem fizet — "
 "a kockázat „rossz piszkozat-tételek”, nem „lekönyvelt szemét”. Használjon "
-"*confirm*-ot, ha minden tételváltozás a felügyelőre várjon;"
+"*confirm* értéket, ha azt szeretné, hogy minden tételváltozás a felügyelőre "
+"várjon;"
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:297
 msgid ""
@@ -1994,11 +2048,11 @@ msgstr "Az eszköz beolvasása meghiúsult egy letiltott modellen."
 #: ../../content/applications/productivity/ai/agent_recipes.rst:368
 msgid ""
 "Create on an allowed model respects write mode: chat global mode, or the "
-"**task** :guilabel:`Write mode` for agent runs (default proposal)."
+"**task** :guilabel:`Write Mode` for agent runs (default proposal)."
 msgstr ""
-"Engedélyezett modellen a létrehozás tiszteletben tartja az írási módot: chat"
-" globális mód, illetve ügynök-futtatásoknál a **feladat** :guilabel:`Írási "
-"mód` (alap: javaslat)."
+"Engedélyezett modellen a létrehozás tiszteletben tartja az írási módot: a "
+"chat globális módját, ügynök-futtatásoknál pedig a **feladat** "
+":guilabel:`Write Mode` beállítását (alap: javaslat)."
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:370
 msgid "Supervisor can apply; a non-supervisor cannot apply agent proposals."
@@ -2057,21 +2111,22 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:18
 msgid ""
-":guilabel:`System prompt`, model overrides and capabilities shape the "
+":guilabel:`System Prompt`, model overrides and capabilities shape the "
 "session."
 msgstr ""
-":guilabel:`Rendszer prompt`, a modell felülírásai és képességei alakítják a "
-"munkamenetet."
+"A munkamenetet a :guilabel:`Rendszer prompt`, a modell felülírásai és a "
+"képességek alakítják."
 
 #: ../../content/applications/productivity/ai/agents.rst:20
 msgid "No supervisor required."
 msgstr "Nincs szükség felügyelőre."
 
 #: ../../content/applications/productivity/ai/agents.rst:21
-msgid ":guilabel:`Allowed groups` can restrict who may invoke this persona."
+msgid ""
+":guilabel:`Restricted to groups` can restrict who may invoke this persona."
 msgstr ""
-":guilabel:`Engedélyezett csoportok` korlátozhatja, hogy ki hívhatja meg ezt "
-"a személyt."
+"A :guilabel:`Csoportokra korlátozva` mezővel korlátozható, hogy ki hívhatja "
+"meg ezt a personát."
 
 #: ../../content/applications/productivity/ai/agents.rst:24
 msgid "Autonomous colleague (linked user)"
@@ -2134,7 +2189,7 @@ msgid "Field"
 msgstr "Mező"
 
 #: ../../content/applications/productivity/ai/agents.rst:46
-#: ../../content/applications/productivity/ai/security.rst:176
+#: ../../content/applications/productivity/ai/security.rst:187
 #: ../../content/applications/productivity/ai/skills_and_memory.rst:17
 msgid "Purpose"
 msgstr "Cél"
@@ -2191,7 +2246,7 @@ msgstr ""
 "válaszait korlátozza — lásd az alábbi megjegyzést."
 
 #: ../../content/applications/productivity/ai/agents.rst:62
-msgid ":guilabel:`System prompt`"
+msgid ":guilabel:`System Prompt`"
 msgstr ":guilabel:`Rendszer prompt`"
 
 #: ../../content/applications/productivity/ai/agents.rst:62
@@ -2232,8 +2287,8 @@ msgstr ""
 "Kötelező, ha a Felhasználó be van állítva; AI: Felhasználónak kell lennie."
 
 #: ../../content/applications/productivity/ai/agents.rst:73
-msgid ":guilabel:`Channel rules`"
-msgstr ":guilabel:`Channel rules`"
+msgid ":guilabel:`Channel Rules`"
+msgstr ":guilabel:`Csatornaszabályok`"
 
 #: ../../content/applications/productivity/ai/agents.rst:73
 msgid "Default-deny allow-lists per channel."
@@ -2249,37 +2304,6 @@ msgstr "A csevegésben alapértelmezettként használt személyt jelöli meg."
 
 #: ../../content/applications/productivity/ai/agents.rst:79
 msgid ""
-"A positive :guilabel:`Max Tokens` reaches every provider, each under the "
-"parameter name its own API expects — but only where the model record "
-"publishes a :guilabel:`Max Output Tokens` of its own (:menuselection:`AI -->"
-" Configuration --> Providers --> Models`). On a model whose cap is unknown "
-"(``0``) the agent's value is dropped and the model writes to its own limit, "
-"so an agent capped at 500 tokens shows no effect and nothing on the form "
-"says why. Fill in :guilabel:`Max Output Tokens` on the model if you want a "
-"per-agent cap to bite."
-msgstr ""
-"A pozitív :guilabel:`Max. token` érték minden szolgáltatóhoz eljut, "
-"mindegyikhez azon a paraméternéven, amelyet a saját API-ja vár — de csak "
-"ott, ahol a modell rekordja saját :guilabel:`Max. kimeneti tokenek` értéket "
-"közöl (:menuselection:`AI --> Konfiguráció --> Szolgáltatók --> Modellek`). "
-"Olyan modellen, amelynek a korlátja ismeretlen (``0``), az ügynök értéke "
-"elveszik, és a modell a saját korlátjáig ír, így egy 500 tokenre korlátozott"
-" ügynöknél nem látszik hatás, és az űrlapon semmi nem mondja meg, miért. "
-"Töltse ki a modellen a :guilabel:`Max. kimeneti tokenek` mezőt, ha azt "
-"szeretné, hogy az ügynökszintű korlát érvényesüljön."
-
-#: ../../content/applications/productivity/ai/agents.rst:88
-msgid ""
-"Anthropic is the exception, in the other direction: its API always requires "
-"the parameter, so an Anthropic model with no published cap falls back to a "
-"conservative built-in value rather than to the model's real limit."
-msgstr ""
-"Az Anthropic a kivétel, a másik irányban: az API-ja mindig megkívánja a "
-"paramétert, ezért egy közölt korlát nélküli Anthropic-modell nem a modell "
-"valódi korlátjára, hanem egy óvatos, beépített értékre esik vissza."
-
-#: ../../content/applications/productivity/ai/agents.rst:93
-msgid ""
 "A cap only takes effect where the model record publishes an output limit of "
 "its own, and it behaves differently per provider. Both rules, and what an "
 "update does to agents that already carry a value, are described once under "
@@ -2290,11 +2314,11 @@ msgstr ""
 "azt, hogy egy frissítés mit tesz a már értékkel rendelkező ügynökökkel, egy "
 "helyen írjuk le: :ref:`ai/config/completion-caps`."
 
-#: ../../content/applications/productivity/ai/agents.rst:99
+#: ../../content/applications/productivity/ai/agents.rst:85
 msgid "Channel rules"
 msgstr "Csatornaszabályok"
 
-#: ../../content/applications/productivity/ai/agents.rst:101
+#: ../../content/applications/productivity/ai/agents.rst:87
 msgid ""
 ":menuselection:`AI --> Configuration --> Behavior --> Agents` → channel "
 "rules (or dedicated channel rule views)."
@@ -2302,23 +2326,23 @@ msgstr ""
 ":menuselection:`AI --> Konfiguráció --> Viselkedés --> Ügynökök` → "
 "csatornaszabályok (vagy dedikált csatornaszabályok nézetei)."
 
-#: ../../content/applications/productivity/ai/agents.rst:104
+#: ../../content/applications/productivity/ai/agents.rst:90
 msgid "Channels:"
 msgstr "Csatornák:"
 
-#: ../../content/applications/productivity/ai/agents.rst:106
+#: ../../content/applications/productivity/ai/agents.rst:92
 msgid "**Discuss direct message**"
 msgstr "**Discuss közvetlen üzenet**"
 
-#: ../../content/applications/productivity/ai/agents.rst:107
+#: ../../content/applications/productivity/ai/agents.rst:93
 msgid "**Chatter @mention**"
 msgstr "**Üzenetfolyam @említés**"
 
-#: ../../content/applications/productivity/ai/agents.rst:108
+#: ../../content/applications/productivity/ai/agents.rst:94
 msgid "**Activity** (assigned activity)"
 msgstr "**Tevékenység** (hozzárendelt tevékenység)"
 
-#: ../../content/applications/productivity/ai/agents.rst:109
+#: ../../content/applications/productivity/ai/agents.rst:95
 msgid ""
 "**Assignment** (e.g. project task assignee) — critical: without this, anyone"
 " who can assign a task could not be distinguished from a Discuss gate"
@@ -2327,7 +2351,7 @@ msgstr ""
 "senkit, aki tud feladatot kijelölni, nem lehetne megkülönböztetni a Discuss "
 "kaputól"
 
-#: ../../content/applications/productivity/ai/agents.rst:111
+#: ../../content/applications/productivity/ai/agents.rst:97
 msgid ""
 "**Email** / **AI chat panel** — reserved / progressive wiring; default-deny "
 "still applies"
@@ -2335,11 +2359,11 @@ msgstr ""
 "**Email** / **AI csevegőpanel** — fenntartott / progresszív vezetékezés; "
 "default-deny továbbra is érvényes"
 
-#: ../../content/applications/productivity/ai/agents.rst:114
+#: ../../content/applications/productivity/ai/agents.rst:100
 msgid "Rule fields:"
 msgstr "Szabálymezők:"
 
-#: ../../content/applications/productivity/ai/agents.rst:116
+#: ../../content/applications/productivity/ai/agents.rst:102
 msgid ""
 ":guilabel:`Allowed groups` / :guilabel:`Allowed users` — audience. **Empty "
 "audience matches nobody** (not everyone)."
@@ -2347,15 +2371,15 @@ msgstr ""
 ":guilabel:`Engedélyezett csoportok` / :guilabel:`Engedélyezett felhasználók`"
 " — közönség. **Empty audience matches nobody** (nem mindenki)."
 
-#: ../../content/applications/productivity/ai/agents.rst:118
-msgid ":guilabel:`May request` — audience may trigger an ad-hoc run."
-msgstr ":guilabel:`Kérelmezhet` – a közönség ad-hoc futtatást indíthat el."
+#: ../../content/applications/productivity/ai/agents.rst:104
+msgid ":guilabel:`May Request` — audience may trigger an ad-hoc run."
+msgstr ":guilabel:`Kérelmezhet` — a közönség ad-hoc futtatást indíthat el."
 
-#: ../../content/applications/productivity/ai/agents.rst:119
-msgid ":guilabel:`Scope mode`:"
-msgstr ":guilabel:`Scope mode`:"
+#: ../../content/applications/productivity/ai/agents.rst:105
+msgid ":guilabel:`Scope Mode`:"
+msgstr ":guilabel:`Hatókör mód`:"
 
-#: ../../content/applications/productivity/ai/agents.rst:121
+#: ../../content/applications/productivity/ai/agents.rst:107
 msgid ""
 "**Agent rights ∩ requester rights** (``intersect``, default) — capability "
 "*classes* both hold. Data is still read/written as the **agent**."
@@ -2364,12 +2388,12 @@ msgstr ""
 "képesség *osztályai* mindketten érvényesek. Az adatok olvasása/írása "
 "továbbra is **agent**-ként történik."
 
-#: ../../content/applications/productivity/ai/agents.rst:123
+#: ../../content/applications/productivity/ai/agents.rst:109
 msgid "**The agent's full rights** (``agent_full``) — trusted audience only."
 msgstr ""
 "**Az ügynök teljes jogköre** (``agent_full``) – csak megbízható közönség."
 
-#: ../../content/applications/productivity/ai/agents.rst:126
+#: ../../content/applications/productivity/ai/agents.rst:112
 msgid ""
 "``intersect`` is **not** \"run as the requester\". It only narrows tool "
 "classes (read/write/web/…). Record visibility remains the agent's. Only "
@@ -2379,34 +2403,34 @@ msgstr ""
 "szűkíti (olvasás/írás/web/…). A rekord láthatósága az ügynöké marad. Csak "
 "azokat a listákat engedélyezze, akikben megbízik, amit az ügynök láthat."
 
-#: ../../content/applications/productivity/ai/agents.rst:131
+#: ../../content/applications/productivity/ai/agents.rst:117
 msgid "Inbound flow (simplified)"
 msgstr "Bejövő folyamat (egyszerűsítve)"
 
-#: ../../content/applications/productivity/ai/agents.rst:133
+#: ../../content/applications/productivity/ai/agents.rst:119
 msgid "Message / assignment / activity targets the agent."
 msgstr "Az üzenet/megbízás/tevékenység az ügynököt célozza."
 
-#: ../../content/applications/productivity/ai/agents.rst:134
+#: ../../content/applications/productivity/ai/agents.rst:120
 msgid "If requester is **banned** → refuse (no LLM)."
 msgstr "Ha a kérelmező **banned** → elutasítás (nem LLM)."
 
-#: ../../content/applications/productivity/ai/agents.rst:135
+#: ../../content/applications/productivity/ai/agents.rst:121
 msgid ""
 "Resolve channel rule (default deny) → else refuse + violation / strike."
 msgstr ""
 "Csatornaszabály feloldása (alapértelmezett megtagadás) → különben elutasítás"
 " + megsértés / figyelmeztetés."
 
-#: ../../content/applications/productivity/ai/agents.rst:136
+#: ../../content/applications/productivity/ai/agents.rst:122
 msgid "Enqueue inbound request; drain cron wakes."
 msgstr "Bejövő kérés sorba állítása; drain cron felébred."
 
-#: ../../content/applications/productivity/ai/agents.rst:137
+#: ../../content/applications/productivity/ai/agents.rst:123
 msgid "Optional triage may subtract authority only."
 msgstr "Az opcionális osztályozás csak a jogosultságot vonhatja le."
 
-#: ../../content/applications/productivity/ai/agents.rst:138
+#: ../../content/applications/productivity/ai/agents.rst:124
 msgid ""
 "Create task / run under supervisor scope; execute as agent user with "
 "committed capability ceiling."
@@ -2414,16 +2438,16 @@ msgstr ""
 "Feladat létrehozása / futtatása felügyelői hatókörben; végrehajtani ügynök "
 "felhasználóként, lekötött képességplafonnal."
 
-#: ../../content/applications/productivity/ai/agents.rst:140
+#: ../../content/applications/productivity/ai/agents.rst:126
 msgid ""
-"Writes follow that **task's** :guilabel:`Write mode` (default: pending "
+"Writes follow that **task's** :guilabel:`Write Mode` (default: pending "
 "proposals for the supervisor; see :ref:`ai/agents/task-write-mode`)."
 msgstr ""
-"Az írások az adott **feladat** :guilabel:`Írási mód` szerint történnek "
+"Az írások az adott **feladat** :guilabel:`Write Mode` beállítását követik "
 "(alap: függő javaslatok a felügyelőnek; lásd :ref:`ai/agents/task-write-"
 "mode`)."
 
-#: ../../content/applications/productivity/ai/agents.rst:142
+#: ../../content/applications/productivity/ai/agents.rst:128
 msgid ""
 "Agent posts notes / drafts on the thread as itself — customer text never "
 "becomes a silent privilege grant."
@@ -2431,27 +2455,27 @@ msgstr ""
 "Az ügynök saját magaként tesz közzé megjegyzéseket/piszkozatokat a szálon – "
 "az ügyfél szövege soha nem válik csendes kiváltságtá."
 
-#: ../../content/applications/productivity/ai/agents.rst:146
+#: ../../content/applications/productivity/ai/agents.rst:132
 msgid "Tasks and runs"
 msgstr "Feladatok és futtatások"
 
-#: ../../content/applications/productivity/ai/agents.rst:148
+#: ../../content/applications/productivity/ai/agents.rst:134
 msgid "Operational menus (AI: User, supervisor-scoped):"
 msgstr "Működési menük (AI: Felhasználó, felügyelői hatókörű):"
 
-#: ../../content/applications/productivity/ai/agents.rst:150
+#: ../../content/applications/productivity/ai/agents.rst:136
 msgid ":menuselection:`AI --> Agents --> Tasks` — work items (registry)."
 msgstr ""
 ":menuselection:`AI --> Ügynökök --> Feladatok` — munkaelemek "
 "(nyilvántartás)."
 
-#: ../../content/applications/productivity/ai/agents.rst:151
+#: ../../content/applications/productivity/ai/agents.rst:137
 msgid ":menuselection:`AI --> Agents --> Runs` — execution ledger and steps."
 msgstr ""
 ":menuselection:`AI --> Ügynökök --> Futtatások` — végrehajtási főkönyv és "
 "lépések."
 
-#: ../../content/applications/productivity/ai/agents.rst:153
+#: ../../content/applications/productivity/ai/agents.rst:139
 msgid ""
 "Supervisors use these to see what the agent attempted, which tools ran, and "
 "which proposals are waiting."
@@ -2459,34 +2483,34 @@ msgstr ""
 "A felügyelők ezek segítségével látják, mit próbált az ügynök, mely eszközök "
 "futottak, és mely javaslatok várnak."
 
-#: ../../content/applications/productivity/ai/agents.rst:159
+#: ../../content/applications/productivity/ai/agents.rst:145
 msgid "Task write mode (agent runs only)"
 msgstr "Feladat írási mód (csak ügynök-futtatások)"
 
-#: ../../content/applications/productivity/ai/agents.rst:161
+#: ../../content/applications/productivity/ai/agents.rst:147
 msgid ""
-"Each task carries :guilabel:`Write mode`. It applies **only** to agent runs "
+"Each task carries :guilabel:`Write Mode`. It applies **only** to agent runs "
 "dispatched for that task — not to interactive chat (chat uses the global "
 "setting under :menuselection:`AI --> Configuration --> Settings`)."
 msgstr ""
-"Minden feladatnak van :guilabel:`Írási mód` mezője. Ez **csak** az adott "
-"feladathoz indított ügynök-futtatásokra vonatkozik — nem az interaktív "
-"chatre (a chat a :menuselection:`AI --> Konfiguráció --> Beállítások` alatti"
-" globális beállítást használja)."
+"Minden feladatnak van :guilabel:`Write Mode` beállítása. Ez **csak** az "
+"adott feladathoz indított ügynök-futtatásokra vonatkozik — az interaktív "
+"chatre nem (a chat a :menuselection:`AI --> Konfiguráció --> Beállítások` "
+"alatti globális beállítást használja)."
 
-#: ../../content/applications/productivity/ai/agents.rst:166
+#: ../../content/applications/productivity/ai/agents.rst:152
 msgid "Value"
 msgstr "Érték"
 
-#: ../../content/applications/productivity/ai/agents.rst:166
+#: ../../content/applications/productivity/ai/agents.rst:152
 msgid "Effect on that task's runs"
 msgstr "Hatás az adott feladat futtatásaira"
 
-#: ../../content/applications/productivity/ai/agents.rst:168
+#: ../../content/applications/productivity/ai/agents.rst:154
 msgid "**Always require confirmation** (``confirm``, default)"
 msgstr "**Mindig kérjen megerősítést** (``confirm``, alapértelmezett)"
 
-#: ../../content/applications/productivity/ai/agents.rst:168
+#: ../../content/applications/productivity/ai/agents.rst:154
 msgid ""
 "Every create / write / delete / file attach becomes an ``ai.pending.write`` "
 "for the supervisor."
@@ -2494,11 +2518,11 @@ msgstr ""
 "Minden létrehozás / írás / törlés / fájlcsatolás ``ai.pending.write`` "
 "javaslat lesz a felügyelőnek."
 
-#: ../../content/applications/productivity/ai/agents.rst:173
+#: ../../content/applications/productivity/ai/agents.rst:159
 msgid "**Create automatically, confirm updates** (``hybrid``)"
 msgstr "**Automatikus létrehozás, frissítések megerősítéssel** (``hybrid``)"
 
-#: ../../content/applications/productivity/ai/agents.rst:173
+#: ../../content/applications/productivity/ai/agents.rst:159
 msgid ""
 "Creates apply immediately; updates, deletes and file attaches still need "
 "approval."
@@ -2506,11 +2530,11 @@ msgstr ""
 "A létrehozások azonnal érvényesülnek; a frissítések, törlések és "
 "fájlcsatolások továbbra is jóváhagyást igényelnek."
 
-#: ../../content/applications/productivity/ai/agents.rst:177
+#: ../../content/applications/productivity/ai/agents.rst:163
 msgid "**Apply immediately** (``auto``)"
 msgstr "**Azonnali alkalmazás** (``auto``)"
 
-#: ../../content/applications/productivity/ai/agents.rst:177
+#: ../../content/applications/productivity/ai/agents.rst:163
 msgid ""
 "Allowed mutations apply at once under the agent user's rights and the run's "
 "capability ceiling."
@@ -2518,7 +2542,7 @@ msgstr ""
 "Az engedélyezett módosítások azonnal érvényesülnek az ügynök-felhasználó "
 "jogai és a futtatás képességkorlátja alatt."
 
-#: ../../content/applications/productivity/ai/agents.rst:182
+#: ../../content/applications/productivity/ai/agents.rst:168
 msgid ""
 "The global ``ai.write_mode`` parameter never overrides a task: an "
 "administrator cannot flip every unattended agent to auto with one setting. "
@@ -2531,12 +2555,13 @@ msgstr ""
 "A globális ``ai.write_mode`` paraméter soha nem írja felül a feladatot: egy "
 "adminisztrátor nem tud egyetlen beállítással minden felügyelet nélküli "
 "ügynököt auto-ra állítani. A ``hybrid`` / ``auto`` tudatos, feladatonkénti "
-"opt-in **megbízható, alacsony kockázatú** munkára — például szállítói "
-"számlákat kitöltő standing AP feladatra, amelynek skillje **soha nem "
-"könyveli le** a számlákat. Maradjon ``confirm``, ha a futtatás lekönyvelhet,"
-" fizethet, törölhet vagy ügyfél-látható adatot érinthet."
+"opt-in **megbízható, alacsony kockázatú** munkára — például egy olyan "
+"állandó, szállítói kötelezettségeket kezelő feladatra, amely **piszkozat** "
+"szállítói számlákat tölt ki, és amelynek skillje **soha nem könyveli le** a "
+"számlákat. Maradjon ``confirm``, ha a futtatás lekönyvelhet, fizethet, "
+"törölhet vagy ügyfél-látható adatot érinthet."
 
-#: ../../content/applications/productivity/ai/agents.rst:189
+#: ../../content/applications/productivity/ai/agents.rst:175
 msgid ""
 "When a proposal is created, the platform also places a **To-Do activity** "
 "(and usually a chatter note) on the **target business record** when one "
@@ -2558,24 +2583,23 @@ msgstr ""
 ":guilabel:`Rekord megnyitása` ugyanezt a ugrást adja. A tevékenység a "
 "javaslat alkalmazásakor, visszavonásakor vagy lejáratakor lezárul."
 
-#: ../../content/applications/productivity/ai/agents.rst:200
+#: ../../content/applications/productivity/ai/agents.rst:186
 msgid ""
-"The hard-deny floor blocks raw AI tools on ``mail.activity`` and all "
-"``ai.*`` platform models. Agents therefore cannot “manage” their own "
-"approval queue or AI config via tools — and should not try. Platform nudges "
-"and skill-driven review activities on business documents use controlled "
-"paths; instruct agents not to invent activity or AI-config tool calls, or "
-"they will burn refusals and strikes."
+"The hard-deny floor blocks raw AI tools on every ``ai.*`` platform model. "
+"Agents therefore cannot “manage” their own approval queue or AI config via "
+"tools — and should not try. Platform nudges and skill-driven review "
+"activities on business documents use controlled paths; instruct agents not "
+"to invent AI-config tool calls, or they will burn refusals and strikes."
 msgstr ""
-"A hard-deny padló blokkolja a nyers AI eszközöket a ``mail.activity`` és "
-"minden ``ai.*`` platformmodellen. Az ügynökök ezért nem „kezelhetik” saját "
-"jóváhagyási sorukat vagy az AI konfigurációt eszközökkel — és nem is kellene"
-" próbálkozniuk. A platform emlékeztetői és a skill-vezérelt ellenőrző "
-"tevékenységek az üzleti dokumentumokon kontrollált útvonalakon mennek; "
-"utasítsa az ügynököket, hogy ne találjanak ki activity vagy AI-config "
-"eszközhívásokat, különben elutasításokat és strike-okat gyűjtenek."
+"A hard-deny padló minden ``ai.*`` platformmodellen blokkolja a nyers AI-"
+"eszközöket. Az ügynökök ezért nem „kezelhetik” eszközökkel a saját "
+"jóváhagyási sorukat vagy az AI konfigurációját — és ne is próbálkozzanak "
+"vele. A platform emlékeztetői és a skill-vezérelt ellenőrző tevékenységek az"
+" üzleti dokumentumokon kontrollált útvonalakon mennek; utasítsa az "
+"ügynököket, hogy ne találjanak ki AI-konfigurációs eszközhívásokat, különben"
+" elutasításokat és figyelmeztetéseket gyűjtenek."
 
-#: ../../content/applications/productivity/ai/agents.rst:207
+#: ../../content/applications/productivity/ai/agents.rst:192
 msgid ""
 "A run's ledger row becomes visible to other users only once the attempt has "
 "**ended** or **parked for approval**: the row is written and finalised "
@@ -2589,7 +2613,7 @@ msgstr ""
 " semmi nem véglegesül, amíg az ügynök még dolgozik. A futások listája ezért "
 "az elvégzett munkát mutatja, nem élő képet arról, ami éppen fut."
 
-#: ../../content/applications/productivity/ai/agents.rst:213
+#: ../../content/applications/productivity/ai/agents.rst:198
 msgid ""
 "Failed runs carry a :guilabel:`Failure Type` on the run form that says which"
 " kind of failure it was — see :doc:`monitoring` for the values worth "
@@ -2599,11 +2623,11 @@ msgstr ""
 " kapnak, amely megmondja, milyen jellegű volt a hiba — a figyelemre méltó "
 "értékeket lásd: :doc:`monitoring`."
 
-#: ../../content/applications/productivity/ai/agents.rst:219
+#: ../../content/applications/productivity/ai/agents.rst:204
 msgid "Stopping a run"
 msgstr "Futás leállítása"
 
-#: ../../content/applications/productivity/ai/agents.rst:221
+#: ../../content/applications/productivity/ai/agents.rst:206
 msgid ""
 "Open the run and use :guilabel:`Request Cancellation`. The button appears "
 "while the run is :guilabel:`Running` or :guilabel:`Waiting for approval`, "
@@ -2614,7 +2638,7 @@ msgstr ""
 ":guilabel:`Jóváhagyásra vár` állapotban van, és csak az ügynök felügyelője "
 "vagy egy AI-adminisztrátor kérheti."
 
-#: ../../content/applications/productivity/ai/agents.rst:226
+#: ../../content/applications/productivity/ai/agents.rst:211
 msgid ""
 "This button is not a general \"stop the agent now\" control, because of the "
 "ledger behaviour above: a run that is executing normally has no row yet, so "
@@ -2634,7 +2658,7 @@ msgstr ""
 "vegye ki a feladaton az :guilabel:`Aktív` jelölést, hogy ne induljon el "
 "újra."
 
-#: ../../content/applications/productivity/ai/agents.rst:234
+#: ../../content/applications/productivity/ai/agents.rst:219
 msgid ""
 "Cancelling a run parked in :guilabel:`Waiting for approval` withdraws its "
 "open write proposals, then closes the run: as :guilabel:`Done` if a proposal"
@@ -2649,7 +2673,7 @@ msgstr ""
 ":guilabel:`Meghiúsulás típusa` értékkel, mivel az általa javasoltak közül "
 "semmit nem hagytak jóvá."
 
-#: ../../content/applications/productivity/ai/agents.rst:240
+#: ../../content/applications/productivity/ai/agents.rst:225
 msgid ""
 "Cancelling a run that is genuinely still executing is **cooperative, never "
 "immediate**. The request is read at the start of each provider round and "
@@ -2678,7 +2702,7 @@ msgstr ""
 "feladat automatikus deaktiválása szempontjából: nem számít hibának, de a "
 "meglévő sorozatot sem törli."
 
-#: ../../content/applications/productivity/ai/agents.rst:254
+#: ../../content/applications/productivity/ai/agents.rst:239
 msgid ""
 "If no worker is left to hear the request, the button answers "
 ":guilabel:`Nothing in flight to cancel` instead of confirming. Nothing is "
@@ -2695,11 +2719,11 @@ msgstr ""
 "hogy lássa, valójában hol áll; a megszakadt kiszolgálófolyamatú futást az "
 "alább leírt, elakadt futásokat begyűjtő művelet zárja le."
 
-#: ../../content/applications/productivity/ai/agents.rst:264
+#: ../../content/applications/productivity/ai/agents.rst:249
 msgid "Runs whose worker died"
 msgstr "Megszakadt kiszolgálófolyamatú futások"
 
-#: ../../content/applications/productivity/ai/agents.rst:266
+#: ../../content/applications/productivity/ai/agents.rst:251
 msgid ""
 "If the server process handling a run is killed (restart, out-of-memory, hard"
 " kill), nobody is left to finish the run. A scheduled action, **AI: reap "
@@ -2724,7 +2748,7 @@ msgstr ""
 "olyan korai leállítás, amely még ezt is megelőzi, semmit nem hagy, amiből "
 "újra lehetne építeni."
 
-#: ../../content/applications/productivity/ai/agents.rst:276
+#: ../../content/applications/productivity/ai/agents.rst:261
 msgid ""
 "Do not expect that closure within 15 minutes. The run has to age past its "
 "own time limit plus a grace period (10 minutes by default — see "
@@ -2741,7 +2765,7 @@ msgstr ""
 " újraindítási vihar után felgyűlt nagy hátralék a következő lefutások során "
 "ürül ki."
 
-#: ../../content/applications/productivity/ai/agents.rst:283
+#: ../../content/applications/productivity/ai/agents.rst:268
 msgid ""
 "The same scheduled action also frees runs parked in :guilabel:`Waiting for "
 "approval` that have no open proposal left — for example when the last "
@@ -2755,7 +2779,7 @@ msgstr ""
 "még megerősítette volna —, így az ilyen futás nem marad ott egy tevékenység-"
 "emlékeztetővel egy már nem létező javaslathoz."
 
-#: ../../content/applications/productivity/ai/agents.rst:289
+#: ../../content/applications/productivity/ai/agents.rst:274
 msgid ""
 "Every dispatch attempt carries a :guilabel:`Dispatch Token`, shown on the "
 "run form. It is the key that joins a run to the short-lived record written "
@@ -2770,14 +2794,14 @@ msgstr ""
 " érték is, amelyre hivatkozni kell, ha egy futást a kiszolgálónaplóval vet "
 "össze."
 
-#: ../../content/applications/productivity/ai/agents.rst:298
+#: ../../content/applications/productivity/ai/agents.rst:283
 msgid "Pre-run instruction check"
 msgstr "Utasítás ellenőrzése futás előtt"
 
-#: ../../content/applications/productivity/ai/agents.rst:300
+#: ../../content/applications/productivity/ai/agents.rst:285
 msgid ""
 "Scheduled and :guilabel:`Run Now` runs execute the task's standing "
-"instruction directly. Tick :guilabel:`Triage on dispatch` on a task to run "
+"instruction directly. Tick :guilabel:`Triage On Dispatch` on a task to run "
 "the same stage-1 check that an agent addressed from chat receives. The check"
 " can only **narrow** what the task already grants — it never widens "
 "anything."
@@ -2786,13 +2810,13 @@ msgstr ""
 "állandó utasítását hajtják végre. Jelölje be a feladaton a :guilabel:`Triázs"
 " indításkor` beállítást, hogy lefusson ugyanaz az első fázisú ellenőrzés, "
 "amelyet a csevegésből megszólított ügynök is kap. Az ellenőrzés csak "
-"**szűkíteni** tudja azt, amit a feladat már megad – soha nem bővít."
+"**szűkíteni** tudja azt, amit a feladat már megad — soha nem bővít."
 
-#: ../../content/applications/productivity/ai/agents.rst:305
+#: ../../content/applications/productivity/ai/agents.rst:290
 msgid "Consider before enabling it:"
 msgstr "Bekapcsolás előtt vegye figyelembe:"
 
-#: ../../content/applications/productivity/ai/agents.rst:307
+#: ../../content/applications/productivity/ai/agents.rst:292
 msgid ""
 "it costs one extra model call per run (time and tokens), and the scheduler "
 "reserves about 30 seconds of its own tick budget for that call. A task whose"
@@ -2805,7 +2829,7 @@ msgstr ""
 "értéke már közel van a kiszolgálófolyamat időkorlátjához, elindítás helyett "
 "kimaradhat;"
 
-#: ../../content/applications/productivity/ai/agents.rst:311
+#: ../../content/applications/productivity/ai/agents.rst:296
 msgid ""
 "the check has its own short deadline of 15 seconds and is fail-closed: a "
 "triage model that is slow, unreachable, or answers off-schema counts as a "
@@ -2815,7 +2839,7 @@ msgstr ""
 " elutasít (fail-closed): a lassú, elérhetetlen vagy a sémától eltérően "
 "válaszoló triázsmodell elutasításnak számít;"
 
-#: ../../content/applications/productivity/ai/agents.rst:313
+#: ../../content/applications/productivity/ai/agents.rst:298
 msgid ""
 "a refusal means the agent never starts. The run is recorded as "
 ":guilabel:`Failed` with :guilabel:`Failure Type` ``triage_denied``, a note "
@@ -2828,7 +2852,7 @@ msgstr ""
 "kerül, a felügyelő számára pedig :guilabel:`Teendő` tevékenység jön létre — "
 "így egyetlen elutasítás sem csendes;"
 
-#: ../../content/applications/productivity/ai/agents.rst:317
+#: ../../content/applications/productivity/ai/agents.rst:302
 msgid ""
 "refusals count towards the task's automatic deactivation. The task is "
 "archived once five consecutive runs have failed **and** the streak is more "
@@ -2844,7 +2868,7 @@ msgstr ""
 "beállítás feladatonként külön adható meg, és alapértelmezés szerint ki van "
 "kapcsolva;"
 
-#: ../../content/applications/productivity/ai/agents.rst:322
+#: ../../content/applications/productivity/ai/agents.rst:307
 msgid ""
 "what the check decided is recorded on the run as :guilabel:`Triage Verdict`,"
 " on the :guilabel:`Snapshot` tab, and is empty on every run of a task that "
@@ -2858,7 +2882,7 @@ msgstr ""
 "leírt szűkítés már véglegesült a futás :guilabel:`Engedélyezett képességek` "
 "értékében, és a hozzáférési kapu ezt olvassa."
 
-#: ../../content/applications/productivity/ai/agents.rst:328
+#: ../../content/applications/productivity/ai/agents.rst:313
 msgid ""
 "The global kill switch for stage-1 triage — inbound addressing and this pre-"
 "run check alike — is the ``ai.triage_enabled`` system parameter, under "
@@ -2871,11 +2895,11 @@ msgstr ""
 "Paraméterek --> Rendszerparaméterek` menüpont alatt (amihez :doc:`fejlesztői"
 " mód <../../general/developer_mode>` kell)."
 
-#: ../../content/applications/productivity/ai/agents.rst:334
+#: ../../content/applications/productivity/ai/agents.rst:319
 msgid "AI Ops project stages"
 msgstr "AI Ops projekt szakaszok"
 
-#: ../../content/applications/productivity/ai/agents.rst:336
+#: ../../content/applications/productivity/ai/agents.rst:321
 msgid ""
 "The module ships an **AI** project category, an **AI Agent** project "
 "template, and a shared stage pack:"
@@ -2883,43 +2907,43 @@ msgstr ""
 "A modul egy **AI** projektkategóriát, egy **AI ügynök** projektsablont és "
 "egy megosztott szakaszcsomagot szállít:"
 
-#: ../../content/applications/productivity/ai/agents.rst:339
+#: ../../content/applications/productivity/ai/agents.rst:324
 msgid "**Inbox → Review → Ready → Doing → Waiting → Done / Cancelled**"
 msgstr "**Inbox → Review → Ready → Doing → Waiting → Kész / Visszavont**"
 
-#: ../../content/applications/productivity/ai/agents.rst:341
+#: ../../content/applications/productivity/ai/agents.rst:326
 msgid "Suggested use:"
 msgstr "Javasolt felhasználás:"
 
-#: ../../content/applications/productivity/ai/agents.rst:343
+#: ../../content/applications/productivity/ai/agents.rst:328
 msgid "automated audit findings land in **Inbox** without assignee;"
 msgstr ""
 "az automatizált ellenőrzési megállapítások **Inbox**-ben landolnak megbízott"
 " nélkül;"
 
-#: ../../content/applications/productivity/ai/agents.rst:344
+#: ../../content/applications/productivity/ai/agents.rst:329
 msgid "managers refine in **Review**;"
 msgstr "a vezetők finomítanak a **Review** alatt;"
 
-#: ../../content/applications/productivity/ai/agents.rst:345
+#: ../../content/applications/productivity/ai/agents.rst:330
 msgid "assign the agent user only from **Ready**;"
 msgstr "csak **Ready**-ből rendelje hozzá az ügynök felhasználót;"
 
-#: ../../content/applications/productivity/ai/agents.rst:346
+#: ../../content/applications/productivity/ai/agents.rst:331
 msgid "**Waiting** for human input or approval;"
 msgstr "**Waiting** emberi hozzájáruláshoz vagy jóváhagyáshoz;"
 
-#: ../../content/applications/productivity/ai/agents.rst:347
+#: ../../content/applications/productivity/ai/agents.rst:332
 msgid "never auto-apply skills/policies from an audit without a human."
 msgstr ""
 "soha ne alkalmazza automatikusan a készségeket/irányelveket egy audit során "
 "ember nélkül."
 
-#: ../../content/applications/productivity/ai/agents.rst:350
+#: ../../content/applications/productivity/ai/agents.rst:335
 msgid "Support Assistant pack"
 msgstr "Support asszisztens csomag"
 
-#: ../../content/applications/productivity/ai/agents.rst:352
+#: ../../content/applications/productivity/ai/agents.rst:337
 msgid ""
 "Shipped inactive **Support Assistant** agent with ask+read capabilities and "
 "channel rules whose audiences are empty until you configure them. Activate "
@@ -2929,62 +2953,62 @@ msgstr ""
 "képességekkel és csatornaszabályokkal, amelyek közönségei üresek, amíg be "
 "nem állítja őket. Aktiválás:"
 
-#: ../../content/applications/productivity/ai/agents.rst:355
+#: ../../content/applications/productivity/ai/agents.rst:340
 msgid "Creating a narrow internal user (helpdesk/project read as needed)."
 msgstr ""
 "Szűk belső felhasználó létrehozása (a helpdesk/projekt szükség szerint "
 "olvasható)."
 
-#: ../../content/applications/productivity/ai/agents.rst:356
+#: ../../content/applications/productivity/ai/agents.rst:341
 msgid "Linking it on the agent; set supervisor."
 msgstr "Kapcsolás az ügynökhöz; felügyelő beállítása."
 
-#: ../../content/applications/productivity/ai/agents.rst:357
+#: ../../content/applications/productivity/ai/agents.rst:342
 msgid ""
 "Filling channel audiences (groups/users who may DM / assign / @mention)."
 msgstr ""
 "Csatorna közönségeinek kitöltése (csoportok/felhasználók, akik DM-et "
 "küldhetnek / hozzárendelhetnek / @megemlíthetnek)."
 
-#: ../../content/applications/productivity/ai/agents.rst:358
+#: ../../content/applications/productivity/ai/agents.rst:343
 msgid "Setting :guilabel:`Active`."
 msgstr "Beállítás :guilabel:`Aktív`."
 
-#: ../../content/applications/productivity/ai/agents.rst:359
+#: ../../content/applications/productivity/ai/agents.rst:344
 msgid "Tuning AI access rules for ticket models."
 msgstr "Az AI-hozzáférési szabályok hangolása jegymodellekhez."
 
-#: ../../content/applications/productivity/ai/agents.rst:362
+#: ../../content/applications/productivity/ai/agents.rst:347
 msgid "Identity constraints (summary)"
 msgstr "Identitás-korlátok (összefoglaló)"
 
-#: ../../content/applications/productivity/ai/agents.rst:364
+#: ../../content/applications/productivity/ai/agents.rst:349
 msgid "At link time the module rejects agent users that are:"
 msgstr ""
 "A link időpontjában a modul elutasítja a következő ügynökfelhasználókat:"
 
-#: ../../content/applications/productivity/ai/agents.rst:366
+#: ../../content/applications/productivity/ai/agents.rst:351
 msgid "superuser (uid 1);"
 msgstr "szuperfelhasználó (uid 1);"
 
-#: ../../content/applications/productivity/ai/agents.rst:367
+#: ../../content/applications/productivity/ai/agents.rst:352
 msgid "share/portal;"
 msgstr "megosztás/portál;"
 
-#: ../../content/applications/productivity/ai/agents.rst:368
+#: ../../content/applications/productivity/ai/agents.rst:353
 msgid "Settings / system administrator;"
 msgstr "Beállítások / rendszergazda;"
 
-#: ../../content/applications/productivity/ai/agents.rst:369
+#: ../../content/applications/productivity/ai/agents.rst:354
 msgid "AI Administrator;"
 msgstr "AI rendszergazda;"
 
-#: ../../content/applications/productivity/ai/agents.rst:370
+#: ../../content/applications/productivity/ai/agents.rst:355
 msgid "holding API keys (non-interactive login risk)."
 msgstr ""
 "API kulcs lenyomva tartásával (nem interaktív bejelentkezési kockázat)."
 
-#: ../../content/applications/productivity/ai/agents.rst:372
+#: ../../content/applications/productivity/ai/agents.rst:357
 msgid ""
 "These checks are point-in-time on the agent form — do not \"upgrade\" the "
 "user later from the Users menu."
@@ -2992,7 +3016,7 @@ msgstr ""
 "Ezek az ellenőrzések az ügyintézői űrlapon pont-időben történnek – ne "
 "„frissítse” a felhasználót később a Felhasználók menüből."
 
-#: ../../content/applications/productivity/ai/agents.rst:375
+#: ../../content/applications/productivity/ai/agents.rst:360
 msgid "Next: practical recipes in :doc:`agent_recipes`."
 msgstr "Következő: gyakorlati receptek itt: :doc:`agent_recipes`."
 
@@ -3460,7 +3484,7 @@ msgid "Meaning"
 msgstr "Jelentés"
 
 #: ../../content/applications/productivity/ai/configuration.rst:28
-msgid ":guilabel:`Max strikes`"
+msgid ":guilabel:`Ai Max Strikes`"
 msgstr ":guilabel:`AI max. figyelmeztetés`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:28
@@ -3469,7 +3493,7 @@ msgstr ""
 "Szabálysértések az ideiglenes kitiltás előtti ablakban (alapértelmezett 3)."
 
 #: ../../content/applications/productivity/ai/configuration.rst:31
-msgid ":guilabel:`Strike window (hours)`"
+msgid ":guilabel:`Ai Strike Window Hours`"
 msgstr ":guilabel:`AI figyelmeztetési időablak (óra)`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:31
@@ -3479,7 +3503,7 @@ msgstr ""
 " 24)."
 
 #: ../../content/applications/productivity/ai/configuration.rst:34
-msgid ":guilabel:`Ban (minutes)`"
+msgid ":guilabel:`Ai Ban Minutes`"
 msgstr ":guilabel:`AI tiltás (perc)`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:34
@@ -3491,7 +3515,7 @@ msgid "Rate and usage limits"
 msgstr "Sebesség- és használati limitek"
 
 #: ../../content/applications/productivity/ai/configuration.rst:43
-msgid ":guilabel:`Rate limit (RPM)`"
+msgid ":guilabel:`Ai Rate Limit Rpm`"
 msgstr ":guilabel:`AI sebességkorlát (RPM)`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:43
@@ -3500,7 +3524,7 @@ msgstr ""
 "Maximális kérések száma percenként felhasználónként (alapértelmezett 20)."
 
 #: ../../content/applications/productivity/ai/configuration.rst:46
-msgid ":guilabel:`Max daily calls`"
+msgid ":guilabel:`Ai Max Daily Calls`"
 msgstr ":guilabel:`AI napi max. hívás`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:46
@@ -3509,7 +3533,7 @@ msgid "0 = unlimited."
 msgstr "0 = korlátlan."
 
 #: ../../content/applications/productivity/ai/configuration.rst:48
-msgid ":guilabel:`Max daily cost (USD)`"
+msgid ":guilabel:`Ai Max Daily Cost Usd`"
 msgstr ":guilabel:`AI napi max. költség (USD)`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:48
@@ -3521,11 +3545,11 @@ msgstr ""
 "hogy az ár nélküli modellek nem érvényesítik jól a költségeket."
 
 #: ../../content/applications/productivity/ai/configuration.rst:52
-msgid ":guilabel:`Max conversations / day`"
+msgid ":guilabel:`Ai Max Conversations Per Day`"
 msgstr ":guilabel:`AI napi max. beszélgetés`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:54
-msgid ":guilabel:`Max successive calls`"
+msgid ":guilabel:`Ai Max Successive Calls`"
 msgstr ":guilabel:`AI max. egymást követő hívás`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:54
@@ -3533,7 +3557,7 @@ msgid "Bound on chained model turns (default 10)."
 msgstr "Láncos modellfordulatokhoz kötve (alapértelmezett 10)."
 
 #: ../../content/applications/productivity/ai/configuration.rst:57
-msgid ":guilabel:`Max tool calls`"
+msgid ":guilabel:`Ai Max Tool Calls`"
 msgstr ":guilabel:`AI max. eszközhívás`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:57
@@ -3541,31 +3565,31 @@ msgid "Bound on tool invocations per turn loop (default 10)."
 msgstr "Fordulási hurkonkénti szerszámhívásokhoz kötve (alapértelmezett 10)."
 
 #: ../../content/applications/productivity/ai/configuration.rst:60
-msgid ":guilabel:`Write mode`"
+msgid ":guilabel:`Ai Write Mode`"
 msgstr ":guilabel:`AI írási mód`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:60
 msgid ""
 "**Interactive chat only** — auto / confirm / hybrid. Agent runs use each "
-"task's own :guilabel:`Write mode` instead (default confirm). See "
+"task's own :guilabel:`Write Mode` instead (default confirm). See "
 ":doc:`using_the_assistant` and :ref:`ai/agents/task-write-mode`."
 msgstr ""
 "**Csak interaktív chat** — auto / confirm / hybrid. Az ügynök-futtatások "
-"ehelyett minden feladat saját :guilabel:`Írási mód` mezőjét használják "
+"ehelyett minden feladat saját :guilabel:`Write Mode` beállítását használják "
 "(alap: confirm). Lásd :doc:`using_the_assistant` és :ref:`ai/agents/task-"
 "write-mode`."
 
 #: ../../content/applications/productivity/ai/configuration.rst:67
-msgid ":guilabel:`Chat write-proposal lifetime`"
-msgstr ":guilabel:`Csevegés írási javaslat élettartama`"
+msgid ":guilabel:`Chat write-proposal lifetime (minutes)`"
+msgstr ":guilabel:`Csevegés írási javaslat élettartama (perc)`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:67
 msgid "Minutes until a chat proposal expires; 0 = never."
 msgstr "Percek, amíg a csevegési javaslat lejár; 0 = soha."
 
 #: ../../content/applications/productivity/ai/configuration.rst:70
-msgid ":guilabel:`Agent write-proposal lifetime`"
-msgstr ":guilabel:`Ügynök írási javaslat élettartama`"
+msgid ":guilabel:`Agent write-proposal lifetime (minutes)`"
+msgstr ":guilabel:`Ügynök írási javaslat élettartama (perc)`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:70
 msgid "Minutes until an agent proposal expires (default 1440); 0 = never."
@@ -3577,22 +3601,22 @@ msgstr "Naplózás"
 
 #: ../../content/applications/productivity/ai/configuration.rst:77
 msgid ""
-":guilabel:`Log level` — *Metadata only* (default, recommended) or *Full "
+":guilabel:`Ai Log Level` — *Metadata only* (default, recommended) or *Full "
 "payload* (stores message/tool content; high sensitivity)."
 msgstr ""
-":guilabel:`Log level` — *Csak metaadatok* (alapértelmezett, ajánlott) vagy "
-"*Teljes terhelés* (üzenet/eszköz tartalmat tárol; nagy érzékenység)."
+":guilabel:`AI napló szint` — *Csak metaadat* (alapértelmezett, ajánlott) "
+"vagy *Teljes payload* (üzenet- és eszköztartalmat tárol; magas érzékenység)."
 
 #: ../../content/applications/productivity/ai/configuration.rst:79
 msgid ""
-":guilabel:`Run step retention (days)` — purge horizon for "
+":guilabel:`Run Step Retention (Days)` — purge horizon for "
 "``ai.agent.run.step`` journal rows (default 90; 0 disables). Does **not** "
 "auto-purge ``ai.log`` or run headers."
 msgstr ""
-":guilabel:`Futtatási lépések megőrzési ideje (nap) (days)` — "
-"``ai.agent.run.step`` naplósorok tisztítási horizontja (alapértelmezett 90; "
-"0 letiltja). A **not** automatikusan törli az ``ai.log`` fájlt, vagy "
-"futtatja a fejléceket."
+":guilabel:`Futtatási lépések megőrzési ideje (nap)` — az "
+"``ai.agent.run.step`` naplósorok tisztítási horizontja (alapértelmezés 90; a"
+" 0 kikapcsolja). Az ``ai.log`` bejegyzéseket és a futásfejléceket **nem** "
+"törli automatikusan."
 
 #: ../../content/applications/productivity/ai/configuration.rst:84
 msgid "Model"
@@ -3643,16 +3667,16 @@ msgstr "Futásidejű introspekció"
 
 #: ../../content/applications/productivity/ai/configuration.rst:106
 msgid ""
-":guilabel:`Publish installed modules` — whether environment facts may "
+":guilabel:`Publish Installed Modules` — whether environment facts may "
 "include the installed module list (still subject to the user's "
 "``ir.module.module`` ACL). Denying makes the assistant more cautious, not "
 "magically more accurate. Version, edition, company and user facts remain."
 msgstr ""
-":guilabel:`Publish installed modules` — a környezeti tények "
-"tartalmazhatják-e a telepített modulok listáját (a felhasználó "
-"``ir.module.module`` ACL függvényében). A tagadás óvatosabbá teszi az "
-"asszisztenst, nem varázslatosan pontosabbá. A verzió, a kiadás, a cég és a "
-"felhasználói adatok megmaradnak."
+":guilabel:`Telepített modulok közzététele` — a környezeti tények "
+"tartalmazhatják-e a telepített modulok listáját (továbbra is a felhasználó "
+"``ir.module.module`` ACL-jének megfelelően). A megtagadás óvatosabbá teszi "
+"az asszisztenst, nem pedig varázsütésre pontosabbá. A verzióra, a kiadásra, "
+"a cégre és a felhasználóra vonatkozó tények megmaradnak."
 
 #: ../../content/applications/productivity/ai/configuration.rst:112
 msgid "Web access and files"
@@ -3666,8 +3690,8 @@ msgstr ""
 "A kínált eszközökhöz engedélyezni kell a **Webhozzáférés** képességet."
 
 #: ../../content/applications/productivity/ai/configuration.rst:119
-msgid ":guilabel:`Search backend`"
-msgstr ":guilabel:`Search backend`"
+msgid ":guilabel:`Search Backend`"
+msgstr ":guilabel:`Keresési háttér`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:119
 msgid "``ai.web.provider`` used by ``web_search``. Empty = search off."
@@ -3675,8 +3699,8 @@ msgstr ""
 "``ai.web.provider`` használja: ``web_search``. Üres = keresés kikapcsolva."
 
 #: ../../content/applications/productivity/ai/configuration.rst:122
-msgid ":guilabel:`Fetch backend`"
-msgstr ":guilabel:`Fetch backend`"
+msgid ":guilabel:`Fetch Backend`"
+msgstr ":guilabel:`Letöltési háttér`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:122
 msgid "Provider for ``web_fetch``; empty falls back to built-in Direct fetch."
@@ -3685,8 +3709,8 @@ msgstr ""
 "lekérésre."
 
 #: ../../content/applications/productivity/ai/configuration.rst:125
-msgid ":guilabel:`Allowed domains`"
-msgstr ":guilabel:`Allowed domains`"
+msgid ":guilabel:`Allowed Domains`"
+msgstr ":guilabel:`Engedélyezett domainek`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:125
 msgid ""
@@ -3697,8 +3721,8 @@ msgstr ""
 "gazdagép (a SSRF védelme továbbra is érvényes a privát tartományokra)."
 
 #: ../../content/applications/productivity/ai/configuration.rst:129
-msgid ":guilabel:`Daily limit`"
-msgstr ":guilabel:`Daily limit`"
+msgid ":guilabel:`Daily Limit`"
+msgstr ":guilabel:`Napi korlát`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:129
 msgid "Max web calls per user per company; 0 = unlimited."
@@ -3707,42 +3731,44 @@ msgstr ""
 "korlátlan."
 
 #: ../../content/applications/productivity/ai/configuration.rst:132
-msgid ":guilabel:`Max page text`"
-msgstr ":guilabel:`Max page text`"
+msgid ":guilabel:`Max Page Text`"
+msgstr ":guilabel:`Max. oldalszöveg`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:132
 msgid "Characters retained from a fetched page."
 msgstr "A lekért oldalról megőrzött karakterek."
 
 #: ../../content/applications/productivity/ai/configuration.rst:134
-msgid ":guilabel:`Max query length`"
-msgstr ":guilabel:`Max query length`"
+msgid ":guilabel:`Max Query Length`"
+msgstr ":guilabel:`Max. keresési hossz`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:134
 msgid "Cap on search query size."
 msgstr "A keresési lekérdezés méretének korlátozása."
 
 #: ../../content/applications/productivity/ai/configuration.rst:136
-msgid ":guilabel:`Allowed image / doc types`"
-msgstr ":guilabel:`Allowed image / doc types`"
+msgid ":guilabel:`Allowed Image Types`, :guilabel:`Allowed Document Types`"
+msgstr ""
+":guilabel:`Engedélyezett képtípusok`, :guilabel:`Engedélyezett "
+"dokumentumtípusok`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:136
 msgid "MIME allow-lists for ingest."
 msgstr "MIME engedélyezési listák a feldolgozáshoz."
 
-#: ../../content/applications/productivity/ai/configuration.rst:139
-msgid ":guilabel:`Max file size`"
-msgstr ":guilabel:`Max file size`"
+#: ../../content/applications/productivity/ai/configuration.rst:140
+msgid ":guilabel:`Max File Size`"
+msgstr ":guilabel:`Max. fájlméret`"
 
-#: ../../content/applications/productivity/ai/configuration.rst:139
+#: ../../content/applications/productivity/ai/configuration.rst:140
 msgid "Bytes (default 10 MiB)."
 msgstr "Bájtok (alapértelmezett 10 MiB)."
 
-#: ../../content/applications/productivity/ai/configuration.rst:143
+#: ../../content/applications/productivity/ai/configuration.rst:144
 msgid "System parameters and scheduled actions"
 msgstr "Rendszerparaméterek és ütemezett műveletek"
 
-#: ../../content/applications/productivity/ai/configuration.rst:145
+#: ../../content/applications/productivity/ai/configuration.rst:146
 msgid ""
 "A few platform switches have no field on the Settings page. They live in the"
 " Technical menus, which require :doc:`developer mode "
@@ -3752,21 +3778,21 @@ msgstr ""
 "Technikai menükben találhatók, amelyekhez :doc:`fejlesztői mód "
 "<../../general/developer_mode>` szükséges."
 
-#: ../../content/applications/productivity/ai/configuration.rst:150
+#: ../../content/applications/productivity/ai/configuration.rst:151
 msgid "System parameters"
 msgstr "Rendszerparaméterek"
 
-#: ../../content/applications/productivity/ai/configuration.rst:152
+#: ../../content/applications/productivity/ai/configuration.rst:153
 msgid ""
 ":menuselection:`Settings --> Technical --> Parameters --> System Parameters`"
 msgstr ""
 ":menuselection:`Beállítások --> Technikai --> Paraméterek --> "
 "Rendszerparaméterek`"
 
-#: ../../content/applications/productivity/ai/configuration.rst:154
+#: ../../content/applications/productivity/ai/configuration.rst:155
 msgid ""
 "``ai.triage_enabled`` — global off switch for stage-1 triage, covering both "
-"the inbound check and a task's :guilabel:`Triage on dispatch` (default "
+"the inbound check and a task's :guilabel:`Triage On Dispatch` (default "
 "``True``). Set it to ``False`` and every instruction is executed unassessed."
 msgstr ""
 "``ai.triage_enabled`` — az 1. szintű triázs globális kikapcsolója, amely a "
@@ -3774,7 +3800,7 @@ msgstr ""
 "beállítására egyaránt kiterjed (alapértelmezés: ``True``). Ha ``False``-ra "
 "állítja, minden utasítás értékelés nélkül fut le."
 
-#: ../../content/applications/productivity/ai/configuration.rst:157
+#: ../../content/applications/productivity/ai/configuration.rst:158
 msgid ""
 "``ai.waiting_approval_ttl_minutes`` — how long a run may sit waiting for a "
 "supervisor's answer before it is failed (default ``1440``; ``0`` means never"
@@ -3784,7 +3810,7 @@ msgstr ""
 "válaszára, mielőtt sikertelenné válik (alapértelmezés: ``1440``; a ``0`` azt"
 " jelenti, hogy az eltelt idő miatt soha nem jár le)."
 
-#: ../../content/applications/productivity/ai/configuration.rst:160
+#: ../../content/applications/productivity/ai/configuration.rst:161
 msgid ""
 "``ai.run_reaper_grace_seconds`` — how long past a task's own time limit the "
 "stuck-run reaper waits before it declares a run abandoned (default ``600``, "
@@ -3797,67 +3823,148 @@ msgstr ""
 "vészleállító kapcsoló: ha egyáltalán nem szeretne begyűjtést, inkább az "
 "ütemezett műveletet kapcsolja ki."
 
-#: ../../content/applications/productivity/ai/configuration.rst:166
-msgid "Stuck and stranded agent runs"
-msgstr "Elakadt és megrekedt ügynökfutások"
+#: ../../content/applications/productivity/ai/configuration.rst:167
+msgid "Scheduled actions"
+msgstr "Ütemezett műveletek"
 
-#: ../../content/applications/productivity/ai/configuration.rst:168
+#: ../../content/applications/productivity/ai/configuration.rst:169
 msgid ""
-"The scheduled action **AI: reap stuck agent runs** closes runs whose worker "
+":menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`"
+msgstr ""
+":menuselection:`Beállítások --> Technikai --> Automatizálás --> Ütemezett "
+"műveletek`"
+
+#: ../../content/applications/productivity/ai/configuration.rst:171
+msgid "The module ships seven scheduled actions, all active after install:"
+msgstr ""
+"A modul hét ütemezett műveletet szállít, amelyek telepítés után mind "
+"aktívak:"
+
+#: ../../content/applications/productivity/ai/configuration.rst:173
+msgid ""
+"**AI: Expire user bans** (hourly) — lifts the temporary bans whose end time "
+"has passed."
+msgstr ""
+"**AI: Felhasználói tiltások lejáratása** (óránként) — feloldja azokat az "
+"ideiglenes tiltásokat, amelyek lejárati ideje elmúlt."
+
+#: ../../content/applications/productivity/ai/configuration.rst:175
+msgid ""
+"**AI: Expire pending writes** (every 15 minutes) — expires write proposals "
+"older than their configured lifetime. It first releases the proposals left "
+"behind by a run that has already finished, so a lifetime of ``0`` does not "
+"also disable that sweep."
+msgstr ""
+"**AI: Függőben lévő írások lejáratása** (15 percenként) — lejáratja a "
+"beállított élettartamuknál régebbi írási javaslatokat. Először a már "
+"befejeződött futások által hátrahagyott javaslatokat szabadítja fel, így a "
+"``0`` élettartam ezt a takarítást nem kapcsolja ki."
+
+#: ../../content/applications/productivity/ai/configuration.rst:179
+msgid ""
+"**AI: dispatch scheduled agent tasks** (every 5 minutes) — starts the agent "
+"tasks that are due. This is only how often the dispatcher itself wakes; each"
+" task's own interval decides its cadence, so the cron has to wake at least "
+"as often as the shortest interval configured on a task."
+msgstr ""
+"**AI: Ütemezett ügynökfeladatok indítása** (5 percenként) — elindítja az "
+"esedékes ügynökfeladatokat. Ez csak azt szabja meg, milyen gyakran ébred fel"
+" maga az indító; az ütemezést minden feladat saját intervalluma dönti el, "
+"ezért a cronnak legalább olyan gyakran kell felébrednie, mint a feladatokon "
+"beállított legrövidebb intervallum."
+
+#: ../../content/applications/productivity/ai/configuration.rst:183
+msgid ""
+"**AI: drain inbound addressing requests** (every minute) — starts the runs "
+"queued when somebody addresses an agent through a Discuss message, a chatter"
+" mention, an activity or an assignment. It is deliberately more frequent "
+"than the dispatcher, because somebody is waiting for the reply."
+msgstr ""
+"**AI: drain inbound addressing requests** (percenként) — elindítja azokat a "
+"futásokat, amelyek akkor kerültek sorba, amikor valaki Discuss-üzenettel, "
+"chatter-említéssel, tevékenységgel vagy hozzárendeléssel szólított meg egy "
+"ügynököt. Szándékosan gyakoribb az indítónál, mert valaki válaszra vár."
+
+#: ../../content/applications/productivity/ai/configuration.rst:187
+msgid ""
+"**AI: expire waiting-approval agent runs** (every 15 minutes) — fails the "
+"runs that have waited for a supervisor's answer longer than "
+"``ai.waiting_approval_ttl_minutes``, and expires the proposals they were "
+"waiting on."
+msgstr ""
+"**AI: expire waiting-approval agent runs** (15 percenként) — meghiúsultnak "
+"jelöli azokat a futásokat, amelyek az ``ai.waiting_approval_ttl_minutes`` "
+"értéknél tovább vártak a felügyelő válaszára, és lejáratja azokat a "
+"javaslatokat, amelyekre vártak."
+
+#: ../../content/applications/productivity/ai/configuration.rst:191
+msgid ""
+"**AI: reap stuck agent runs** (every 15 minutes) — closes runs whose worker "
 "died, and also frees runs parked for approval with nothing left to approve. "
 "Both jobs, their cadence and their batch limit are described in "
 ":ref:`ai/agents/reaper`."
 msgstr ""
-"Az **AI: elakadt ügynökfutások begyűjtése** ütemezett művelet lezárja azokat"
-" a futásokat, amelyek kiszolgálófolyamata megszakadt, és felszabadítja "
-"azokat is, amelyek jóváhagyásra várnak, de már nincs mit jóváhagyni. Mindkét"
-" feladatot, azok gyakoriságát és kötegkorlátját itt írjuk le: "
-":ref:`ai/agents/reaper`."
+"**AI: elakadt ügynökfutások begyűjtése** (15 percenként) — lezárja azokat a "
+"futásokat, amelyek kiszolgálófolyamata megszakadt, és felszabadítja azokat "
+"is, amelyek jóváhagyásra várnak, de már nincs mit jóváhagyni. Mindkét "
+"feladatot, azok gyakoriságát és kötegkorlátját a :ref:`ai/agents/reaper` "
+"szakasz írja le."
 
-#: ../../content/applications/productivity/ai/configuration.rst:173
+#: ../../content/applications/productivity/ai/configuration.rst:195
+msgid ""
+"**AI: memory maintenance** (every 6 hours) — archives working memories past "
+"their expiry date, lets the salience of untouched entries decay, and flags "
+"high-salience personal entries as promotion candidates for an administrator."
+msgstr ""
+"**AI: memory maintenance** (6 óránként) — archiválja a lejárati dátumukon "
+"túli munkamemóriákat, hagyja csökkenni az érintetlen bejegyzések "
+"relevanciáját, és az adminisztrátor számára előléptetési jelöltként jelöli "
+"meg a nagy relevanciájú személyes bejegyzéseket."
+
+#: ../../content/applications/productivity/ai/configuration.rst:200
 msgid "LLM providers and models"
 msgstr "LLM szolgáltatók és modellek"
 
-#: ../../content/applications/productivity/ai/configuration.rst:175
+#: ../../content/applications/productivity/ai/configuration.rst:202
 msgid ":menuselection:`AI --> Configuration --> Providers --> LLM Providers`"
 msgstr ""
 ":menuselection:`AI --> Konfiguráció --> Szolgáltatók --> LLM szolgáltatók`"
 
-#: ../../content/applications/productivity/ai/configuration.rst:177
+#: ../../content/applications/productivity/ai/configuration.rst:204
 msgid "Fields of interest:"
 msgstr "Érdeklődési területek:"
 
-#: ../../content/applications/productivity/ai/configuration.rst:179
+#: ../../content/applications/productivity/ai/configuration.rst:206
 msgid "Provider type and API key (system parameter storage)."
 msgstr "Szolgáltató típusa és API kulcs (rendszerparaméterek tárolása)."
 
-#: ../../content/applications/productivity/ai/configuration.rst:180
+#: ../../content/applications/productivity/ai/configuration.rst:207
 msgid ""
-":guilabel:`Base URL` — only override when you understand the trust boundary "
+":guilabel:`Base Url` — only override when you understand the trust boundary "
 "(a writable base URL can be an SSRF risk if pointed at internal services)."
 msgstr ""
-":guilabel:`Alap URL` – csak akkor írja felül, ha megérti a megbízhatósági "
-"határt (az írható alap URL SSRF kockázatot jelenthet, ha belső "
+":guilabel:`Alap URL` — csak akkor írja felül, ha érti a megbízhatósági "
+"határt (az írható alap URL SSRF-kockázatot jelenthet, ha belső "
 "szolgáltatásokra mutat)."
 
-#: ../../content/applications/productivity/ai/configuration.rst:182
+#: ../../content/applications/productivity/ai/configuration.rst:209
 msgid ""
-":guilabel:`Timeout`, :guilabel:`Max retries`, :guilabel:`Call deadline` — "
+":guilabel:`Timeout`, :guilabel:`Max Retries`, :guilabel:`Call Deadline` — "
 "wall-clock budget for one provider call including retries."
 msgstr ""
-":guilabel:`Időtúllépés`, :guilabel:`Max retries`, :guilabel:`Call deadline` "
-"— falióra költségkerete egy szolgáltatói híváshoz, beleértve az "
-"újrapróbálkozásokat is."
+":guilabel:`Időtúllépés`, :guilabel:`Max. újrapróbálkozás`, :guilabel:`Hívási"
+" határidő` — egyetlen szolgáltatói hívás falióra szerinti időkerete, az "
+"újrapróbálkozásokkal együtt."
 
-#: ../../content/applications/productivity/ai/configuration.rst:185
+#: ../../content/applications/productivity/ai/configuration.rst:212
 msgid ":menuselection:`AI --> Configuration --> Providers --> Models`"
 msgstr ":menuselection:`AI --> Konfiguráció --> Szolgáltatók --> Modellek`"
 
-#: ../../content/applications/productivity/ai/configuration.rst:187
-msgid ":guilabel:`Model id` — exact vendor id."
-msgstr ":guilabel:`Model id` – pontos szállítóazonosító."
+#: ../../content/applications/productivity/ai/configuration.rst:214
+msgid ":guilabel:`Model` — exact vendor id."
+msgstr ":guilabel:`Modell` — pontos szállítói azonosító."
 
-#: ../../content/applications/productivity/ai/configuration.rst:188
+#: ../../content/applications/productivity/ai/configuration.rst:215
 msgid ""
 ":guilabel:`Context Window`, :guilabel:`Max Output Tokens`, tool and "
 "temperature support flags."
@@ -3865,7 +3972,7 @@ msgstr ""
 ":guilabel:`Kontextus ablak`, :guilabel:`Max. kimeneti tokenek`, eszköz- és "
 "temperature-támogatási jelzők."
 
-#: ../../content/applications/productivity/ai/configuration.rst:190
+#: ../../content/applications/productivity/ai/configuration.rst:217
 msgid ""
 "Prompt / completion unit prices and price source (provider API, curated "
 "catalog, or manual — manual is not overwritten by refresh)."
@@ -3873,11 +3980,11 @@ msgstr ""
 "Ajánlati/kitöltési egységárak és árforrás (szolgáltató API, válogatott "
 "katalógus vagy kézikönyv – a kézikönyvet a frissítés nem írja felül)."
 
-#: ../../content/applications/productivity/ai/configuration.rst:196
+#: ../../content/applications/productivity/ai/configuration.rst:223
 msgid "Completion caps"
 msgstr "Válaszhossz-korlátok"
 
-#: ../../content/applications/productivity/ai/configuration.rst:198
+#: ../../content/applications/productivity/ai/configuration.rst:225
 msgid ""
 ":guilabel:`Max Output Tokens` on the model is what the assistant caps its "
 "completions at, and it is also the precondition for a per-agent cap. Only "
@@ -3888,7 +3995,7 @@ msgstr ""
 "előfeltétele is. Csak azok a szolgáltatók töltik ki, amelyek közzéteszik a "
 "válaszhossz-korlátjukat; a ``0`` jelentése *ismeretlen*."
 
-#: ../../content/applications/productivity/ai/configuration.rst:202
+#: ../../content/applications/productivity/ai/configuration.rst:229
 msgid ""
 "An agent's own :guilabel:`Max Tokens (0 = no override)` (:doc:`agents`) "
 "reaches every provider — OpenAI, OpenRouter, xAI, Google Gemini and "
@@ -3909,7 +4016,7 @@ msgstr ""
 "Töltse ki a modellen a :guilabel:`Max. kimeneti tokenek` mezőt, ha azt "
 "szeretné, hogy az ügynökönkénti korlát érvényesüljön."
 
-#: ../../content/applications/productivity/ai/configuration.rst:210
+#: ../../content/applications/productivity/ai/configuration.rst:237
 msgid ""
 "``0`` on the agent — the default — means *no override*: the model's own "
 "output cap applies, exactly as for a turn with no agent at all. Set a "
@@ -3925,7 +4032,7 @@ msgstr ""
 "a korlát a gondolkodási tokeneket is beleszámolja, így az alacsony érték "
 "csonkolja a válaszokat."
 
-#: ../../content/applications/productivity/ai/configuration.rst:217
+#: ../../content/applications/productivity/ai/configuration.rst:244
 msgid ""
 "Anthropic is the exception, in the other direction: its API always requires "
 "the parameter. An Anthropic model whose :guilabel:`Max Output Tokens` is "
@@ -3937,7 +4044,7 @@ msgstr ""
 ":guilabel:`Max. kimeneti tokenek` értéke még ``0``, egy óvatos, beépített "
 "1024 tokenes értékre esik vissza, nem a modell valódi korlátjára."
 
-#: ../../content/applications/productivity/ai/configuration.rst:223
+#: ../../content/applications/productivity/ai/configuration.rst:250
 msgid ""
 "Upgrading from an earlier version changes how agents that are already "
 "configured behave."
@@ -3945,7 +4052,7 @@ msgstr ""
 "Egy korábbi verzióról való frissítés megváltoztatja a már beállított "
 "ügynökök viselkedését."
 
-#: ../../content/applications/productivity/ai/configuration.rst:226
+#: ../../content/applications/productivity/ai/configuration.rst:253
 msgid ""
 "A cap an administrator had already typed on an agent used to reach Anthropic"
 " only. It now applies on every provider, so a low value that was inert on "
@@ -3956,14 +4063,14 @@ msgstr ""
 "így egy alacsony érték, amely az OpenAI, OpenRouter, xAI vagy Gemini esetén "
 "hatástalan volt, ott is csonkolni kezdi a válaszokat."
 
-#: ../../content/applications/productivity/ai/configuration.rst:229
+#: ../../content/applications/productivity/ai/configuration.rst:256
 msgid ""
 "The upgrade resets the old shipped default of ``2048`` to ``0`` on every "
 "agent still carrying it, so that no database keeps a cap nobody chose. On an"
 " Anthropic model that publishes a cap of its own, that 2048 was genuinely in"
 " force: those agents may now write up to the model's full :guilabel:`Max "
 "Output Tokens` — more tokens, more cost and more time, and an answer long "
-"enough to exhaust the provider's :guilabel:`Call deadline` fails with an "
+"enough to exhaust the provider's :guilabel:`Call Deadline` fails with an "
 "error instead of stopping at 2048 tokens."
 msgstr ""
 "A frissítés a régi, gyári ``2048`` alapértéket ``0``-ra állítja vissza "
@@ -3976,7 +4083,7 @@ msgstr ""
 ":guilabel:`Hívási határidő` beállítását, hibával elszáll, nem pedig 2048 "
 "tokennél áll meg."
 
-#: ../../content/applications/productivity/ai/configuration.rst:237
+#: ../../content/applications/productivity/ai/configuration.rst:264
 msgid ""
 "Any other value you typed is kept. Re-enter a cap on every agent you meant "
 "to limit, including one you had deliberately set to 2048."
@@ -3985,16 +4092,16 @@ msgstr ""
 "ügynökön, amelyet korlátozni szándékozott, azt is beleértve, amelyen "
 "tudatosan 2048-at állított be."
 
-#: ../../content/applications/productivity/ai/configuration.rst:241
+#: ../../content/applications/productivity/ai/configuration.rst:268
 msgid "Web providers"
 msgstr "Webszolgáltatók"
 
-#: ../../content/applications/productivity/ai/configuration.rst:243
+#: ../../content/applications/productivity/ai/configuration.rst:270
 msgid ":menuselection:`AI --> Configuration --> Providers --> Web Providers`"
 msgstr ""
 ":menuselection:`AI --> Konfiguráció --> Szolgáltatók --> Webszolgáltatók`"
 
-#: ../../content/applications/productivity/ai/configuration.rst:245
+#: ../../content/applications/productivity/ai/configuration.rst:272
 msgid ""
 "Configure search/fetch backends (factory rows may ship for common engines). "
 "Assign them in Settings as search/fetch backends."
@@ -4003,16 +4110,16 @@ msgstr ""
 "gyakori motorokhoz szállítjuk). Rendelje hozzá őket a Beállításokban "
 "keresési/lekérési háttérként."
 
-#: ../../content/applications/productivity/ai/configuration.rst:249
+#: ../../content/applications/productivity/ai/configuration.rst:276
 msgid "MCP servers"
 msgstr "MCP szerverek"
 
-#: ../../content/applications/productivity/ai/configuration.rst:251
+#: ../../content/applications/productivity/ai/configuration.rst:278
 msgid ":menuselection:`AI --> Configuration --> Providers --> MCP Servers`"
 msgstr ""
 ":menuselection:`AI --> Konfiguráció --> Szolgáltatók --> MCP szerverek`"
 
-#: ../../content/applications/productivity/ai/configuration.rst:253
+#: ../../content/applications/productivity/ai/configuration.rst:280
 msgid ""
 "Model Context Protocol servers expose **external** tools to the assistant "
 "when the **MCP tools** capability is enabled. Factory MCP definitions may "
@@ -4023,27 +4130,27 @@ msgstr ""
 "engedélyezett. A gyári MCP definíciók inaktívak vagy titkoktól mentesek "
 "lehetnek."
 
-#: ../../content/applications/productivity/ai/configuration.rst:257
+#: ../../content/applications/productivity/ai/configuration.rst:284
 msgid "Per server, typically configure:"
 msgstr "Szerverenként, általában konfigurálja:"
 
-#: ../../content/applications/productivity/ai/configuration.rst:259
+#: ../../content/applications/productivity/ai/configuration.rst:286
 msgid "endpoint / transport;"
 msgstr "végpont / szállítás;"
 
-#: ../../content/applications/productivity/ai/configuration.rst:260
+#: ../../content/applications/productivity/ai/configuration.rst:287
 msgid "authentication secrets (never commit them to docs or git);"
 msgstr "hitelesítési titkok (soha ne tárold őket docs-ban vagy git-ben);"
 
-#: ../../content/applications/productivity/ai/configuration.rst:261
+#: ../../content/applications/productivity/ai/configuration.rst:288
 msgid "which users/groups may use the server's tools;"
 msgstr "mely felhasználók/csoportok használhatják a szerver eszközeit;"
 
-#: ../../content/applications/productivity/ai/configuration.rst:262
+#: ../../content/applications/productivity/ai/configuration.rst:289
 msgid "enable/disable."
 msgstr "engedélyezés/letiltás."
 
-#: ../../content/applications/productivity/ai/configuration.rst:264
+#: ../../content/applications/productivity/ai/configuration.rst:291
 msgid ""
 "Every MCP call still re-checks capability and server audience. Treat MCP "
 "like installing untrusted plugins: least privilege, no production secrets in"
@@ -4054,16 +4161,16 @@ msgstr ""
 "telepítését: a legkevesebb privilégium, nincsenek gyártási titkok az "
 "eszközválaszokban, amelyekre nincs szükség."
 
-#: ../../content/applications/productivity/ai/configuration.rst:269
+#: ../../content/applications/productivity/ai/configuration.rst:296
 msgid "Prompt layers"
 msgstr "Prompt rétegek"
 
-#: ../../content/applications/productivity/ai/configuration.rst:271
+#: ../../content/applications/productivity/ai/configuration.rst:298
 msgid ":menuselection:`AI --> Configuration --> Behavior --> Prompt Layers`"
 msgstr ""
 ":menuselection:`AI --> Konfiguráció --> Viselkedés --> Prompt rétegek`"
 
-#: ../../content/applications/productivity/ai/configuration.rst:273
+#: ../../content/applications/productivity/ai/configuration.rst:300
 msgid ""
 "Layered system prompts (core, global, module, …) shape behaviour. Core "
 "safety layers are not meant for casual editing. Global operational layers "
@@ -4076,7 +4183,7 @@ msgstr ""
 "módosíthatják; a migrációk csak akkor frissíthetik a gyári tartalmat, ha még"
 " érintetlenek."
 
-#: ../../content/applications/productivity/ai/configuration.rst:279
+#: ../../content/applications/productivity/ai/configuration.rst:306
 msgid ""
 "A layer's :guilabel:`Body` is **English only** and not translatable. These "
 "are the rails the model is steered by, not user-facing text: rails that "
@@ -4092,7 +4199,7 @@ msgstr ""
 "asszisztens ettől függetlenül a beszélgetés nyelvén válaszol — ezt a "
 "felhasználó üzenetei döntik el, soha nem ez a szöveg."
 
-#: ../../content/applications/productivity/ai/configuration.rst:285
+#: ../../content/applications/productivity/ai/configuration.rst:312
 msgid ""
 "On a database upgraded from an earlier version, each layer keeps its English"
 " body and any translated bodies are discarded. Re-check every global and "
@@ -4103,17 +4210,17 @@ msgstr ""
 "olyan globális és modulszintű réteget, amelynek a szövegét lefordított "
 "felületen szerkesztette."
 
-#: ../../content/applications/productivity/ai/configuration.rst:290
+#: ../../content/applications/productivity/ai/configuration.rst:317
 msgid "Blocked patterns"
 msgstr "Blokkolt minták"
 
-#: ../../content/applications/productivity/ai/configuration.rst:292
+#: ../../content/applications/productivity/ai/configuration.rst:319
 msgid ""
 ":menuselection:`AI --> Configuration --> Security --> Blocked Patterns`"
 msgstr ""
 ":menuselection:`AI --> Konfiguráció --> Biztonság --> Blokkolt minták`"
 
-#: ../../content/applications/productivity/ai/configuration.rst:294
+#: ../../content/applications/productivity/ai/configuration.rst:321
 msgid ""
 "Regex (or pattern) rules on input/output that raise violations when matched "
 "(e.g. classic \"ignore previous instructions\" probes). Extend carefully — "
@@ -4124,17 +4231,17 @@ msgstr ""
 "utasítások figyelmen kívül hagyása” próbák). Óvatosan terjessze ki – a túl "
 "széles minták téves pozitív eredményt adnak, és zajt keltenek."
 
-#: ../../content/applications/productivity/ai/configuration.rst:299
+#: ../../content/applications/productivity/ai/configuration.rst:326
 msgid "Allowed actions"
 msgstr "Engedélyezett műveletek"
 
-#: ../../content/applications/productivity/ai/configuration.rst:301
+#: ../../content/applications/productivity/ai/configuration.rst:328
 msgid ":menuselection:`AI --> Configuration --> Security --> Allowed Actions`"
 msgstr ""
 ":menuselection:`AI --> Konfiguráció --> Biztonság --> Engedélyezett "
 "műveletek`"
 
-#: ../../content/applications/productivity/ai/configuration.rst:303
+#: ../../content/applications/productivity/ai/configuration.rst:330
 msgid ""
 "Allow-list of business methods the **Action** capability may invoke via "
 "``call_action`` (e.g. mark activity done). Methods not listed cannot be "
@@ -4148,15 +4255,15 @@ msgstr ""
 "részesítse az engedélyezési listás műveleteket a nyers mezőírásokkal "
 "szemben."
 
-#: ../../content/applications/productivity/ai/configuration.rst:309
+#: ../../content/applications/productivity/ai/configuration.rst:336
 msgid "Customizations ledger"
 msgstr "Testreszabások naplója"
 
-#: ../../content/applications/productivity/ai/configuration.rst:311
+#: ../../content/applications/productivity/ai/configuration.rst:338
 msgid ":menuselection:`AI --> Configuration --> Customizations`"
 msgstr ":menuselection:`AI --> Konfiguráció --> Testreszabások`"
 
-#: ../../content/applications/productivity/ai/configuration.rst:313
+#: ../../content/applications/productivity/ai/configuration.rst:340
 msgid ""
 "When **Customize UI & schema** is used, changes are tracked in a ledger with"
 " import/export for recovery. Primary UX is still chat tools for admins; the "
@@ -4167,17 +4274,17 @@ msgstr ""
 "elsődleges UX továbbra is a rendszergazdák csevegőeszközei; a főkönyv az "
 "adminisztrátori helyreállítási útvonal."
 
-#: ../../content/applications/productivity/ai/configuration.rst:318
+#: ../../content/applications/productivity/ai/configuration.rst:345
 msgid "Setup plans"
 msgstr "Beállítási tervek"
 
-#: ../../content/applications/productivity/ai/configuration.rst:320
+#: ../../content/applications/productivity/ai/configuration.rst:347
 msgid ":menuselection:`AI --> Configuration --> Setup Plans` (Settings users)"
 msgstr ""
 ":menuselection:`AI --> Konfiguráció --> Beállítási tervek` (Beállítások "
 "felhasználói)"
 
-#: ../../content/applications/productivity/ai/configuration.rst:322
+#: ../../content/applications/productivity/ai/configuration.rst:349
 msgid ""
 "Plans proposed by the guided setup flow for module installation / "
 "configuration steps that require explicit confirmation."
@@ -4299,7 +4406,7 @@ msgstr ""
 "többé nem jelenik meg tiszta szövegben."
 
 #: ../../content/applications/productivity/ai/getting_started.rst:42
-msgid "Optional :guilabel:`Base URL` override for compatible gateways."
+msgid "Optional :guilabel:`Base Url` override for compatible gateways."
 msgstr "Opcionális :guilabel:`Alap URL` felülírás a kompatibilis átjárókhoz."
 
 #: ../../content/applications/productivity/ai/getting_started.rst:43
@@ -4382,10 +4489,10 @@ msgstr "Mezőszintű írási engedélyek"
 
 #: ../../content/applications/productivity/ai/getting_started.rst:73
 msgid ""
-"Nine field-scoped write rules on ``account.move`` / ``account.move.line`` "
+"Ten field-scoped write rules on ``account.move`` / ``account.move.line`` "
 "(:doc:`access_policy`)"
 msgstr ""
-"Kilenc mezőszintű írási szabály az ``account.move`` / ``account.move.line`` "
+"Tíz mezőszintű írási szabály az ``account.move`` / ``account.move.line`` "
 "modellen (:doc:`access_policy`)"
 
 #: ../../content/applications/productivity/ai/getting_started.rst:77
@@ -4419,15 +4526,15 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/getting_started.rst:86
 msgid ""
-"Those nine field-level rules exist so the invoice / vendor-bill flow keeps "
+"Those ten field-level rules exist so the invoice / vendor-bill flow keeps "
 "working, and they are seeded only where **Accounting** is installed. Nothing"
 " writes while the Write capability is off, so they take effect only once you"
 " enable it."
 msgstr ""
-"Ez a kilenc mezőszintű szabály azért létezik, hogy a kimenő és a bejövő "
-"számlák folyamata továbbra is működjön, és csak ott jön létre, ahol a "
-"**Könyvelés** telepítve van. Amíg az Írás képesség ki van kapcsolva, semmi "
-"nem ír, így ezek is csak akkor lépnek életbe, ha bekapcsolja."
+"Ez a tíz mezőszintű szabály azért létezik, hogy a kimenő és a bejövő számlák"
+" folyamata továbbra is működjön, és csak ott jön létre, ahol a **Könyvelés**"
+" telepítve van. Amíg az Írás képesség ki van kapcsolva, semmi nem ír, így "
+"ezek is csak akkor lépnek életbe, ha bekapcsolja."
 
 #: ../../content/applications/productivity/ai/getting_started.rst:92
 msgid ""
@@ -4682,10 +4789,10 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/monitoring.rst:67
 msgid ""
-"Duration comes from Settings (:guilabel:`Ban minutes`) when auto-issued."
+"Duration comes from Settings (:guilabel:`Ai Ban Minutes`) when auto-issued."
 msgstr ""
-"Az időtartam a Beállításokból (:guilabel:`AI tiltás (perc)`) származik az "
-"automatikus kiadáskor."
+"Az időtartam automatikus kiszabáskor a Beállításokból (:guilabel:`AI tiltás "
+"(perc)`) származik."
 
 #: ../../content/applications/productivity/ai/monitoring.rst:68
 msgid "Admins may manage bans manually."
@@ -4721,13 +4828,13 @@ msgstr ":menuselection:`AI --> Ügynökök --> Futtatások`"
 #: ../../content/applications/productivity/ai/monitoring.rst:81
 msgid ""
 "Inspect failed steps, tool errors and pending write linkage. Step journals "
-"can be purged after :guilabel:`Run step retention` days; keep enough history"
-" to investigate incidents."
+"can be purged after :guilabel:`Run Step Retention (Days)`; keep enough "
+"history to investigate incidents."
 msgstr ""
-"Ellenőrizze a sikertelen lépéseket, a szerszámhibákat és a függőben lévő "
-"írási kapcsolatot. A lépésnaplók :guilabel:`Futtatási lépések megőrzési "
-"ideje (nap)` nap után törölhetők; tartson elegendő előzményt az incidensek "
-"kivizsgálásához."
+"Vizsgálja meg a sikertelen lépéseket, az eszközhibákat és a függőben lévő "
+"írások kapcsolatait. A lépésnaplók a :guilabel:`Futtatási lépések megőrzési "
+"ideje (nap)` letelte után törölhetők; tartson meg annyi előzményt, amennyi "
+"az incidensek kivizsgálásához kell."
 
 #: ../../content/applications/productivity/ai/monitoring.rst:86
 msgid "Failure types"
@@ -4849,16 +4956,16 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/monitoring.rst:135
 msgid ""
-"The :guilabel:`Agent write-proposal lifetime` only applies while the "
-"proposing run is still open. Once that run has ended — most often a run that"
-" overran its time limit and closed as :guilabel:`Timed out` — its pending "
-"proposals are expired by the next pass of the **AI: Expire pending writes** "
-"scheduled action, every 15 minutes, because nobody is left to carry the "
-"result back. That sweep runs whatever the lifetime is set to, ``0`` "
+"The :guilabel:`Agent write-proposal lifetime (minutes)` only applies while "
+"the proposing run is still open. Once that run has ended — most often a run "
+"that overran its time limit and closed as :guilabel:`Timed out` — its "
+"pending proposals are expired by the next pass of the **AI: Expire pending "
+"writes** scheduled action, every 15 minutes, because nobody is left to carry"
+" the result back. That sweep runs whatever the lifetime is set to, ``0`` "
 "included."
 msgstr ""
-"Az :guilabel:`Ügynök írási javaslat élettartama` csak addig érvényes, amíg a"
-" javaslatot tevő futás nyitva van. Ha az a futás már véget ért — "
+"Az :guilabel:`Ügynök írási javaslat élettartama (perc)` csak addig érvényes,"
+" amíg a javaslatot tevő futás nyitva van. Ha az a futás már véget ért — "
 "leggyakrabban olyan futás, amely túllépte az időkorlátját, és "
 ":guilabel:`Időtúllépés` állapotban zárult —, a függőben lévő javaslatait az "
 "**AI: Függőben lévő írások lejáratása** ütemezett művelet következő, 15 "
@@ -4982,14 +5089,14 @@ msgid ""
 "**Create, change or delete records** once Write / Delete capabilities and "
 "access-policy rules allow it — including through unattended agent runs "
 "(after supervisor approval of a proposal, or immediately if that task's "
-":guilabel:`Write mode` is *hybrid* / *auto*), or instantly in chat write "
+":guilabel:`Write Mode` is *hybrid* / *auto*), or instantly in chat write "
 "mode *Apply automatically*."
 msgstr ""
 "**Rekordok létrehozása, módosítása vagy törlése**, ha az Írás / Törlés "
 "képességek és a hozzáférési szabályok engedik — beleértve a felügyelet "
 "nélküli ügynök-futtatásokat is (javaslat felügyelői jóváhagyása után, vagy "
-"azonnal, ha a feladat :guilabel:`Írási mód` értéke *hybrid* / *auto*), "
-"illetve azonnal a chat *Azonnali alkalmazás* írási módjában."
+"azonnal, ha a feladat :guilabel:`Write Mode` értéke *hybrid* / *auto*), "
+"illetve azonnal a chat *Automatikus alkalmazás* írási módjában."
 
 #: ../../content/applications/productivity/ai/security.rst:20
 msgid ""
@@ -5069,18 +5176,18 @@ msgstr ""
 #: ../../content/applications/productivity/ai/security.rst:46
 msgid ""
 "**Mitigations:** choose a provider and region you accept contractually; keep"
-" :guilabel:`Log level` on *Metadata only* in production unless investigating"
-" an incident; deny sensitive models/fields in AI access rules; do not enable"
-" Web or MCP for agents that handle confidential tickets; train users not to "
-"paste secrets into chat."
+" :guilabel:`Ai Log Level` on *Metadata only* in production unless "
+"investigating an incident; deny sensitive models/fields in AI access rules; "
+"do not enable Web or MCP for agents that handle confidential tickets; train "
+"users not to paste secrets into chat."
 msgstr ""
-"**Enyhítések:** válasszon egy szolgáltatót és régiót, amelyet szerződésben "
-"elfogad; tartsa az :guilabel:`Log level` értéket a *Csak metaadatokon* az "
-"éles környezetben, kivéve, ha egy incidens kivizsgálása történik; letiltja "
-"az érzékeny modelleket/mezőket az AI hozzáférési szabályokban; ne "
-"engedélyezze a webet vagy az MCP-t a bizalmas jegyeket kezelő ügynökök "
-"számára; megtanítja a felhasználókat, hogy ne illesszen be titkokat a "
-"chatbe."
+"**Enyhítések:** válasszon olyan szolgáltatót és régiót, amelyet szerződésben"
+" elfogad; éles környezetben hagyja az :guilabel:`AI napló szint` értékét "
+"*Csak metaadat* beállításon, kivéve ha éppen incidenst vizsgál; tagadja meg "
+"az érzékeny modelleket és mezőket az AI hozzáférési szabályokban; ne "
+"engedélyezze a webet vagy az MCP-t olyan ügynököknél, amelyek bizalmas "
+"jegyeket kezelnek; tanítsa meg a felhasználókat, hogy ne illesszenek be "
+"titkokat a chatbe."
 
 #: ../../content/applications/productivity/ai/security.rst:53
 msgid "Over-privileged interactive chat"
@@ -5178,7 +5285,7 @@ msgid ""
 "violations so attackers cannot freely iterate; triage layer that may only "
 "*subtract* authority. Note what triage covers: **inbound** addressing. A "
 "scheduled or :guilabel:`Run Now` run of a standing instruction is triaged "
-"only when the task opts in with :guilabel:`Triage on dispatch` (see "
+"only when the task opts in with :guilabel:`Triage On Dispatch` (see "
 ":ref:`ai/agents/dispatch-triage`). None of these make injection \"solved\" —"
 " they reduce impact. Design agents so the worst successful injection still "
 "cannot read or write more than the agent was meant to."
@@ -5230,12 +5337,12 @@ msgstr ""
 msgid ""
 "security-sensitive system models (access rights, rules, groups, users and "
 "API keys, config parameters, sequences, menus, views, server actions, crons,"
-" attachments, mail queue, payment tokens, bank accounts on partners, …);"
+" mail queue, payment tokens, bank accounts on partners, …);"
 msgstr ""
-"biztonságkritikus rendszer modellek (hozzáférési jogok, szabályok, "
-"csoportok, felhasználók és API kulcsok, config paraméterek, szekvenciák, "
-"menük, nézetek, szerver műveletek, cronok, csatolmányok, mail sor, fizetési "
-"tokenek, partnerek bankszámlái, …);"
+"biztonsági szempontból érzékeny rendszermodellek (hozzáférési jogok, "
+"szabályok, csoportok, felhasználók és API-kulcsok, konfigurációs "
+"paraméterek, szekvenciák, menük, nézetek, szerverműveletek, cronok, "
+"levélsor, fizetési tokenek, partnerek bankszámlái, …);"
 
 #: ../../content/applications/productivity/ai/security.rst:113
 msgid ""
@@ -5249,37 +5356,58 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/security.rst:116
 msgid ""
-"raw ``mail.message``, ``mail.activity`` and ``discuss.channel`` (authorship "
-"/ evidence integrity — legitimate chatter goes through the owner record's "
+"raw ``mail.message`` and ``discuss.channel`` (authorship / evidence "
+"integrity — legitimate chatter goes through the owner record's "
 "``message_post``, not generic create tools)."
 msgstr ""
-"nyers ``mail.message``, ``mail.activity`` és ``discuss.channel`` (szerzőség "
-"/ bizonyítékintegritás — a legitim chatter a tulajdonos rekord "
-"``message_post`` hívásán megy, nem generikus create eszközökön)."
+"nyers ``mail.message`` és ``discuss.channel`` (szerzőség / "
+"bizonyítékintegritás — a legitim chatter a tulajdonos rekord "
+"``message_post`` hívásán megy keresztül, nem generikus create eszközökön)."
 
 #: ../../content/applications/productivity/ai/security.rst:120
 msgid ""
 "This is a floor, not a complete data classification policy — business models"
 " like ``hr.employee`` or ``account.move`` are **not** hard-denied by "
-"default; you must configure them if needed. Because ``mail.activity`` is "
-"floored, instruct agents **not** to call activity tools to “manage” their "
-"queue: platform approval nudges are created by the gate for the supervisor, "
-"and review To-Dos on business documents follow skill/playbook paths that "
-"stay within allowed operations."
+"default; you must configure them if needed."
 msgstr ""
-"Ez padló, nem teljes adatklasszifikációs politika — az üzleti modellek, mint"
-" a ``hr.employee`` vagy az ``account.move``, **nincsenek** alapból hard-deny"
-" alatt; szükség esetén konfigurálni kell őket. Mivel a ``mail.activity`` "
-"padlón van, utasítsa az ügynököket, hogy **ne** hívjanak activity eszközöket"
-" a soruk „kezelésére”: a platform jóváhagyási emlékeztetőit a kapu hozza "
-"létre a felügyelőnek, az üzleti dokumentumokon lévő ellenőrző To-Do-k pedig "
-"a skill/playbook engedélyezett útvonalait követik."
+"Ez egy padló, nem teljes adatosztályozási szabályzat — az üzleti modellek, "
+"mint a ``hr.employee`` vagy az ``account.move``, **nincsenek** alapból hard-"
+"deny alatt; szükség esetén Önnek kell konfigurálnia őket."
 
-#: ../../content/applications/productivity/ai/security.rst:129
+#: ../../content/applications/productivity/ai/security.rst:124
+msgid ""
+"``ir.attachment`` and ``mail.activity`` sit just outside the floor, in a "
+"small **explicit-allow-only** set: no global default ever opens them, but an"
+" access rule can, and the module ships one for each — attachments readable "
+"and writable, activities readable, writable and creatable — so document and "
+"vendor-bill skills can read a PDF and agents can leave a review To-Do under "
+"their own name. Creating or deleting an attachment and deleting an activity "
+"stay closed, because neither model falls through to the global defaults. "
+"Read those two rules as real permissions rather than as part of the floor: "
+"an agent may raise an activity on any record it can read, and may re-attach "
+"a file to a different record. Narrow or deactivate them if that is more than"
+" the deployment needs."
+msgstr ""
+"Az ``ir.attachment`` és a ``mail.activity`` közvetlenül a padlón kívül "
+"helyezkedik el, egy szűk, **csak kifejezett engedéllyel nyitható** "
+"halmazban: egyetlen globális alapértelmezés sem nyitja meg őket, egy "
+"hozzáférési szabály viszont igen, és a modul mindkettőhöz szállít egyet — a "
+"csatolmányok olvashatók és írhatók, a tevékenységek olvashatók, írhatók és "
+"létrehozhatók —, így a dokumentum- és a bejövőszámla-skillek el tudnak "
+"olvasni egy PDF-et, az ügynökök pedig saját nevükben hagyhatnak ellenőrző "
+"Teendőt. A csatolmányok létrehozása és törlése, valamint a tevékenységek "
+"törlése zárva marad, mert egyik modell sem esik át a globális "
+"alapértelmezésekre. Ezt a két szabályt valódi jogosultságként olvassa, ne a "
+"padló részeként: az ügynök bármelyik olvasható rekordon nyithat "
+"tevékenységet, és átcsatolhat egy fájlt egy másik rekordra. Szűkítse vagy "
+"kapcsolja ki őket, ha ez több annál, mint amennyire a telepítésnek szüksége "
+"van."
+
+#: ../../content/applications/productivity/ai/security.rst:136
 msgid "Cross-model side effects"
 msgstr "Modellek közötti mellékhatások"
 
-#: ../../content/applications/productivity/ai/security.rst:131
+#: ../../content/applications/productivity/ai/security.rst:138
 msgid ""
 "A field can write into a model you never opened: ``crm.lead.email_from`` "
 "updates the partner's email. The gate refuses such fields, and the two "
@@ -5305,30 +5433,39 @@ msgstr ""
 " az inverse-t hordozó célmezőt bármilyen szabályt is ír, a rendszer "
 "elutasítja, mert a tartalom a modell által választott URL-ről érkezik."
 
-#: ../../content/applications/productivity/ai/security.rst:142
+#: ../../content/applications/productivity/ai/security.rst:149
 msgid ""
-"Nine field-scoped write allows ship enabled on databases with "
-"**Accounting**, for the invoicing flow. Three are on ``account.move.line``, "
-"and on the nested one2many path a field-level Allow is resolved before the "
-"model tier, so those three line fields are writable through "
-":guilabel:`Invoice lines` even when no rule allows writing "
-"``account.move.line`` itself. Review them before certifying that invoice "
-"lines are closed. See :ref:`ai/policy/cross-model`."
+"Ten field-scoped write allows ship enabled on databases with **Accounting**,"
+" for the invoicing flow. Four are on ``account.move.line``, and on the "
+"nested one2many path a field-level Allow is resolved before the model tier, "
+"so those four line fields are writable through :guilabel:`Invoice lines` "
+"even when no rule allows writing ``account.move.line`` itself. Review them "
+"before certifying that invoice lines are closed. One of the four, "
+"``analytic_distribution``, needs extra care: it is a JSON field, so its rule"
+" lifts the refusal of JSON-typed values as well as the cross-model rail, and"
+" its inverse re-writes the analytic entries of a **posted** line — deleting "
+"and re-creating ``account.analytic.line`` records on a model no rule named. "
+"See :ref:`ai/policy/cross-model`."
 msgstr ""
-"Kilenc mező szintű írási engedély bekapcsolva érkezik azokon az "
-"adatbázisokon, ahol a **Könyvelés** telepítve van, a számlázási folyamat "
-"érdekében. Ezek közül három az ``account.move.line`` modellen van, és a "
-"beágyazott one2many útvonalon a mező szintű Engedélyezés a modellszint előtt"
-" dől el, ezért ez a három sormező a :guilabel:`Számlasorok` mezőn keresztül "
-"írható akkor is, ha egyetlen szabály sem engedélyezi magának az "
-"``account.move.line`` modellnek az írását. Tekintse át őket, mielőtt "
-"lezártnak minősíti a számlasorokat. Lásd: :ref:`ai/policy/cross-model`."
+"Tíz mező szintű írási engedély érkezik bekapcsolva azokon az adatbázisokon, "
+"ahol a **Könyvelés** telepítve van, a számlázási folyamat érdekében. Ezek "
+"közül négy az ``account.move.line`` modellen van, és a beágyazott one2many "
+"útvonalon a mező szintű Engedélyezés a modellszint előtt dől el, ezért ez a "
+"négy sormező a :guilabel:`Számlasorok` mezőn keresztül írható akkor is, ha "
+"egyetlen szabály sem engedélyezi magának az ``account.move.line`` modellnek "
+"az írását. Tekintse át őket, mielőtt lezártnak minősíti a számlasorokat. A "
+"négy közül az egyik, az ``analytic_distribution``, külön figyelmet igényel: "
+"ez JSON mező, ezért a rá vonatkozó szabály a modellek közötti védőkorlát "
+"mellett a JSON típusú értékek elutasítását is feloldja, az inverze pedig egy"
+" **lekönyvelt** sor analitikus tételeit írja újra — törli és újra létrehozza"
+" az ``account.analytic.line`` rekordokat egy olyan modellen, amelyet "
+"egyetlen szabály sem nevezett meg. Lásd: :ref:`ai/policy/cross-model`."
 
-#: ../../content/applications/productivity/ai/security.rst:150
+#: ../../content/applications/productivity/ai/security.rst:161
 msgid "Sensitive field stripping"
 msgstr "Érzékeny mezők szűrése"
 
-#: ../../content/applications/productivity/ai/security.rst:152
+#: ../../content/applications/productivity/ai/security.rst:163
 msgid ""
 "Fields whose names look like secrets (password, token, api_key, …), magic "
 "fields, and certain complex types are stripped or refused on write. This is "
@@ -5339,11 +5476,11 @@ msgstr ""
 "vagy megtagadjuk. Ez a mélyreható védekezés, nem helyettesíti a teljes "
 "modellek (pl. HR) tagadását."
 
-#: ../../content/applications/productivity/ai/security.rst:157
+#: ../../content/applications/productivity/ai/security.rst:168
 msgid "Confirmation and re-check"
 msgstr "Megerősítés és újraellenőrzés"
 
-#: ../../content/applications/productivity/ai/security.rst:159
+#: ../../content/applications/productivity/ai/security.rst:170
 msgid ""
 "Pending writes are re-validated at **apply** time under the correct acting "
 "identity and current policy. Approving an old proposal after rights were "
@@ -5357,7 +5494,7 @@ msgstr ""
 "az **run**-ből építik újra a jogosultságot, nem pedig a megerősítő "
 "jogosultságaiból (a megerősítő engedélyezi; az ügynök hajtja végre)."
 
-#: ../../content/applications/productivity/ai/security.rst:165
+#: ../../content/applications/productivity/ai/security.rst:176
 msgid ""
 "The run's own liveness is part of that authority. A proposal from a run that"
 " was stopped on request, or closed by the stuck-run reaper because its "
@@ -5377,19 +5514,19 @@ msgstr ""
 "futás hagyott hátra — *Kész*, *Sikertelen* vagy *Időtúllépés* —, a "
 "háttértakarítás általi lejáratásukig jóváhagyhatók maradnak."
 
-#: ../../content/applications/productivity/ai/security.rst:173
+#: ../../content/applications/productivity/ai/security.rst:184
 msgid "Security roles and groups"
 msgstr "Biztonsági szerepkörök és csoportok"
 
-#: ../../content/applications/productivity/ai/security.rst:176
+#: ../../content/applications/productivity/ai/security.rst:187
 msgid "Group"
 msgstr "Csoport"
 
-#: ../../content/applications/productivity/ai/security.rst:178
+#: ../../content/applications/productivity/ai/security.rst:189
 msgid "**AI: User**"
 msgstr "**AI: Felhasználó**"
 
-#: ../../content/applications/productivity/ai/security.rst:178
+#: ../../content/applications/productivity/ai/security.rst:189
 msgid ""
 "Use chat, own conversations, own write proposals, memory; supervisors need "
 "this to approve agent proposals."
@@ -5397,11 +5534,11 @@ msgstr ""
 "Csevegés, saját beszélgetések, saját írási javaslatok, memória használata; a"
 " felügyelőknek erre van szükségük az ügynöki javaslatok jóváhagyásához."
 
-#: ../../content/applications/productivity/ai/security.rst:182
+#: ../../content/applications/productivity/ai/security.rst:193
 msgid "**AI: Administrator**"
 msgstr "**AI: Adminisztrátor**"
 
-#: ../../content/applications/productivity/ai/security.rst:182
+#: ../../content/applications/productivity/ai/security.rst:193
 msgid ""
 "Configure agents, capabilities, policies, skills, MCP, monitoring. Implies "
 "AI: User."
@@ -5409,16 +5546,16 @@ msgstr ""
 "Konfigurálja az ügynököket, képességeket, házirendeket, készségeket, MCP, "
 "figyelést. AI: Felhasználó."
 
-#: ../../content/applications/productivity/ai/security.rst:186
+#: ../../content/applications/productivity/ai/security.rst:197
 msgid "**Settings** (system administration)"
 msgstr "**Beállítások** (rendszeradminisztráció)"
 
-#: ../../content/applications/productivity/ai/security.rst:186
+#: ../../content/applications/productivity/ai/security.rst:197
 msgid "AI Settings app page, guided setup, setup plans."
 msgstr ""
 "AI Beállítások alkalmazás oldala, irányított beállítás, beállítási tervek."
 
-#: ../../content/applications/productivity/ai/security.rst:191
+#: ../../content/applications/productivity/ai/security.rst:202
 msgid ""
 "An **agent user** must never hold Settings or AI Administrator. The module "
 "blocks linking such users on the agent form (at write time). Do not grant "
@@ -5431,22 +5568,22 @@ msgstr ""
 " felhasználói űrlapon – ez megkerüli az ügynök megkötését, és eltávolítja a "
 "tiltó tiltó kapcsolót az AI-rendszergazdák számára."
 
-#: ../../content/applications/productivity/ai/security.rst:197
+#: ../../content/applications/productivity/ai/security.rst:208
 msgid "Layered controls (checklist)"
 msgstr "Rétegezett kontrollok (ellenőrzőlista)"
 
-#: ../../content/applications/productivity/ai/security.rst:199
+#: ../../content/applications/productivity/ai/security.rst:210
 msgid "Use all layers; none replaces the others:"
 msgstr "Az összes réteg használata; egyik sem helyettesíti a többit:"
 
-#: ../../content/applications/productivity/ai/security.rst:201
+#: ../../content/applications/productivity/ai/security.rst:212
 msgid ""
 "**Odoo groups on the user / agent user** — what they can do without AI."
 msgstr ""
 "**Odoo groups on the user / agent user** — mire képesek mesterséges "
 "intelligencia nélkül."
 
-#: ../../content/applications/productivity/ai/security.rst:202
+#: ../../content/applications/productivity/ai/security.rst:213
 msgid ""
 "**AI capabilities** — which tool classes exist (ask, read, write, delete, "
 "web, mcp, action, customize, setup, navigate)."
@@ -5454,19 +5591,19 @@ msgstr ""
 "**AI capabilities** — mely eszközosztályok léteznek (kérdezés, olvasás, "
 "írás, törlés, web, mcp, művelet, testreszabás, beállítás, navigáció)."
 
-#: ../../content/applications/productivity/ai/security.rst:204
+#: ../../content/applications/productivity/ai/security.rst:215
 msgid "**AI access groups + rules** — model/field allow·deny for AI tools."
 msgstr ""
 "**AI access groups + rules** – modell/mező engedélyezése·megtagadása az AI-"
 "eszközökhöz."
 
-#: ../../content/applications/productivity/ai/security.rst:205
+#: ../../content/applications/productivity/ai/security.rst:216
 msgid "**Agent ``capability_ids``** — further ceiling for that agent only."
 msgstr ""
 "**Az ügynök ``capability_ids`` mezője** – további felső határ csak az adott "
 "ügynök számára."
 
-#: ../../content/applications/productivity/ai/security.rst:206
+#: ../../content/applications/productivity/ai/security.rst:217
 msgid ""
 "**Channel rules + audience + scope_mode** — who may trigger the agent and "
 "whether capability classes are intersected with the requester."
@@ -5474,7 +5611,7 @@ msgstr ""
 "**Channel rules + audience + scope_mode** — ki indíthatja el az ügynököt, és"
 " hogy a képességosztályok metszik-e a kérelmezőt."
 
-#: ../../content/applications/productivity/ai/security.rst:208
+#: ../../content/applications/productivity/ai/security.rst:219
 msgid ""
 "**Write mode / pending writes / supervisor** — human in the loop. Chat uses "
 "the global Settings mode; each agent **task** has its own mode (default "
@@ -5484,25 +5621,25 @@ msgstr ""
 "globális Beállítások módot használja; minden ügynök-**feladatnak** saját "
 "módja van (alap: confirm). Lásd :ref:`ai/agents/task-write-mode`."
 
-#: ../../content/applications/productivity/ai/security.rst:211
+#: ../../content/applications/productivity/ai/security.rst:222
 msgid ""
 "**Rate limits, strikes, bans, blocked patterns** — abuse and iteration."
 msgstr ""
 "**Sebességkorláts, strikes, bans, blocked patterns** — visszaélés és "
 "ismétlődés."
 
-#: ../../content/applications/productivity/ai/security.rst:212
+#: ../../content/applications/productivity/ai/security.rst:223
 msgid ""
 "**Logging and retention** — evidence and least retention for step journals."
 msgstr ""
 "**Naplózás and retention** — bizonyíték és a legkevesebb megőrzés a "
 "lépésnaplókhoz."
 
-#: ../../content/applications/productivity/ai/security.rst:215
+#: ../../content/applications/productivity/ai/security.rst:226
 msgid "Recommended production baseline"
 msgstr "Ajánlott production alapbeállítás"
 
-#: ../../content/applications/productivity/ai/security.rst:217
+#: ../../content/applications/productivity/ai/security.rst:228
 msgid ""
 "Leave **Write**, **Delete**, **Web**, **MCP**, **Customize**, **Action** "
 "disabled until a named use case needs each one."
@@ -5511,7 +5648,7 @@ msgstr ""
 "**Customize**, **Action**, amíg egy megnevezett használati esetnek szüksége "
 "lesz mindegyikre."
 
-#: ../../content/applications/productivity/ai/security.rst:219
+#: ../../content/applications/productivity/ai/security.rst:230
 msgid ""
 "Keep access-policy defaults: read allow (or deny if you prefer deny-by-"
 "default and open only needed models), create/write/delete **deny**."
@@ -5521,7 +5658,7 @@ msgstr ""
 "választja, és csak a szükséges modelleket nyitja meg), **deny** "
 "létrehozása/írása/törlése."
 
-#: ../../content/applications/productivity/ai/security.rst:221
+#: ../../content/applications/productivity/ai/security.rst:232
 msgid ""
 "Prefer write mode **hybrid** or **confirm** for chat; never *auto* on shared"
 " production databases without a change-management process."
@@ -5530,33 +5667,33 @@ msgstr ""
 "soha *automatikus* megosztott éles adatbázisokon változáskezelési folyamat "
 "nélkül."
 
-#: ../../content/applications/productivity/ai/security.rst:223
+#: ../../content/applications/productivity/ai/security.rst:234
 msgid ""
-"Leave agent task :guilabel:`Write mode` on **confirm** unless the task is "
+"Leave agent task :guilabel:`Write Mode` on **confirm** unless the task is "
 "explicitly draft-safe (e.g. AP fill that never posts); document the opt-in."
 msgstr ""
-"Az ügynök-feladat :guilabel:`Írási mód` maradjon **confirm**, hacsak a "
-"feladat kifejezetten piszkozat-biztonságos (pl. AP kitöltés, amely soha nem "
-"könyvel le); dokumentálja az opt-in-t."
+"Az ügynök-feladat :guilabel:`Write Mode` beállítása maradjon **confirm**, "
+"hacsak a feladat kifejezetten piszkozat-biztos (pl. olyan AP-kitöltés, amely"
+" soha nem könyvel le); dokumentálja a kivételt."
 
-#: ../../content/applications/productivity/ai/security.rst:225
+#: ../../content/applications/productivity/ai/security.rst:236
 msgid "One **supervisor** human per agent; supervisors in AI: User."
 msgstr "Egy **supervisor** ember ügynökenként; felügyelők AI: Felhasználó."
 
-#: ../../content/applications/productivity/ai/security.rst:226
+#: ../../content/applications/productivity/ai/security.rst:237
 msgid "No shared \"god\" agent for all departments — split by domain and data."
 msgstr ""
 "Nincs megosztott \"isten\" ügynök az összes osztály számára – domain és "
 "adatok szerint felosztva."
 
-#: ../../content/applications/productivity/ai/security.rst:227
+#: ../../content/applications/productivity/ai/security.rst:238
 msgid ""
 "Review :menuselection:`AI --> Monitoring --> Violations` weekly at first."
 msgstr ""
 "Eleinte hetente tekintse át a :menuselection:`AI --> Monitoring --> "
 "Szabálysértések`-t."
 
-#: ../../content/applications/productivity/ai/security.rst:228
+#: ../../content/applications/productivity/ai/security.rst:239
 msgid ""
 "Document every agent in your internal runbook (purpose, user groups, rules, "
 "data classes allowed)."
@@ -5564,19 +5701,19 @@ msgstr ""
 "Dokumentáljon minden ügynököt a belső runbookjában (cél, felhasználói "
 "csoportok, szabályok, adatosztályok megengedettek)."
 
-#: ../../content/applications/productivity/ai/security.rst:232
+#: ../../content/applications/productivity/ai/security.rst:243
 msgid "What security does *not* guarantee"
 msgstr "Amit a biztonság *nem* garantál"
 
-#: ../../content/applications/productivity/ai/security.rst:234
+#: ../../content/applications/productivity/ai/security.rst:245
 msgid "Perfect resistance to prompt injection."
 msgstr "Tökéletes ellenállás az azonnali injekcióval szemben."
 
-#: ../../content/applications/productivity/ai/security.rst:235
+#: ../../content/applications/productivity/ai/security.rst:246
 msgid "Classification of every sensitive business field out of the box."
 msgstr "Minden érzékeny üzleti terület besorolása a dobozból."
 
-#: ../../content/applications/productivity/ai/security.rst:236
+#: ../../content/applications/productivity/ai/security.rst:247
 msgid ""
 "That training-data guesses cannot appear in free-text answers (grounding "
 "rules reduce but do not eliminate hallucinations — critical actions must go "
@@ -5586,7 +5723,7 @@ msgstr ""
 "alapszabályok csökkentik, de nem szüntetik meg a hallucinációkat – a "
 "kritikus cselekvéseknek eszközökön és megerősítésen kell keresztülmenniük)."
 
-#: ../../content/applications/productivity/ai/security.rst:239
+#: ../../content/applications/productivity/ai/security.rst:250
 msgid ""
 "GDPR/legal compliance by itself — you still need lawful basis, DPAs with "
 "providers, and retention policy for conversations you keep."
@@ -5595,7 +5732,7 @@ msgstr ""
 " a szolgáltatókkal kötött adatvédelmi hatóságokra és a megőrzött "
 "beszélgetésekre vonatkozó adatmegőrzési szabályzatra."
 
-#: ../../content/applications/productivity/ai/security.rst:242
+#: ../../content/applications/productivity/ai/security.rst:253
 msgid ""
 "Continue with :doc:`getting_started` only after this page is understood by "
 "the people who will administer the module."
@@ -5835,15 +5972,15 @@ msgstr ""
 #: ../../content/applications/productivity/ai/skills_and_memory.rst:94
 msgid ""
 "Pair with Recipe D in :doc:`agent_recipes` (chat helper or scheduled agent)."
-" For unattended runs, task :guilabel:`Write mode` *auto* is only appropriate"
+" For unattended runs, task :guilabel:`Write Mode` *auto* is only appropriate"
 " because this skill keeps bills draft; if you customise the skill to post, "
 "switch the task back to *confirm*."
 msgstr ""
 "Párosítsa a D recepttel a :doc:`agent_recipes` oldalon (chat segéd vagy "
 "ütemezett ügynök). Felügyelet nélküli futtatásoknál a feladat "
-":guilabel:`Írási mód` *auto* csak azért megfelelő, mert ez a skill "
-"piszkozatban tartja a számlákat; ha a skillt lekönyvelésre testreszabja, "
-"állítsa vissza a feladatot *confirm*-ra."
+":guilabel:`Write Mode` *auto* értéke csak azért megfelelő, mert ez a skill "
+"piszkozatban tartja a számlákat; ha a skillt lekönyvelésre szabja testre, "
+"állítsa vissza a feladatot *confirm* értékre."
 
 #: ../../content/applications/productivity/ai/skills_and_memory.rst:100
 msgid "Writing a good skill"
@@ -6254,15 +6391,15 @@ msgid "Controlled by"
 msgstr "Felügyeli:"
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:101
-msgid "Global :guilabel:`Write mode` in Settings"
-msgstr "Globális :guilabel:`Írási mód` a Beállításokban"
+msgid "Global :guilabel:`Ai Write Mode` in Settings"
+msgstr "Globális :guilabel:`AI írási mód` a Beállításokban"
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:101
 msgid ""
-"The **task's** :guilabel:`Write mode` (default *confirm*; see "
+"The **task's** :guilabel:`Write Mode` (default *confirm*; see "
 ":ref:`ai/agents/task-write-mode`)"
 msgstr ""
-"A **feladat** :guilabel:`Írási mód` mezője (alap: *confirm*; lásd "
+"A **feladat** :guilabel:`Write Mode` beállítása (alap: *confirm*; lásd "
 ":ref:`ai/agents/task-write-mode`)"
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:106
@@ -6389,17 +6526,18 @@ msgstr ""
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:147
 msgid ""
 "**Agent runs** — same three values, but on the **task** form "
-"(:guilabel:`Write mode`), defaulting to *Always require confirmation*. The "
+"(:guilabel:`Write Mode`), defaulting to *Always require confirmation*. The "
 "Settings value does not apply to agent runs. Use *auto* or *hybrid* only "
 "when the standing instruction and skills keep risk bounded (draft-only "
 "fills, no posting, no payments). Details: :ref:`ai/agents/task-write-mode`."
 msgstr ""
-"**Ügynök-futtatások** — ugyanaz a három érték, de a **feladat** űrlapon "
-"(:guilabel:`Írási mód`), alapból *Mindig kérjen megerősítést*. A Beállítások"
-" értéke nem vonatkozik az ügynök-futtatásokra. *auto* vagy *hybrid* csak "
-"akkor, ha a standing utasítás és a skillek határolják a kockázatot (csak "
-"piszkozat-kitöltés, nincs lekönyvelés, nincs kifizetés). Részletek: "
-":ref:`ai/agents/task-write-mode`."
+"**Ügynök-futtatások** — ugyanaz a három érték, de a **feladat** űrlapján "
+"(:guilabel:`Write Mode`), alapértelmezés szerint *Mindig kérjen "
+"megerősítést*. A Beállítások értéke nem vonatkozik az ügynök-futtatásokra. "
+"Az *auto* vagy a *hybrid* csak akkor jöhet szóba, ha az állandó utasítás és "
+"a skillek határok között tartják a kockázatot (csak piszkozat-kitöltés, "
+"nincs lekönyvelés, nincs kifizetés). Részletek: :ref:`ai/agents/task-write-"
+"mode`."
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:153
 msgid ""
@@ -7138,7 +7276,7 @@ msgid ""
 "Odoo **Calendar** is a scheduling app that allows users to integrate a "
 "company's business flow into a single management platform. By integrating "
 "with the other apps in Odoo's ecosystem, **Calendar** allows users to "
-"schedule and organize meetings, schedule events, plan employee appraisals, "
+"schedule and organize meetings, schedule events, plan performance reviews, "
 "coordinate projects, and more – all from the same platform."
 msgstr ""
 "Az Odoo **Naptár** egy ütemezési alkalmazás, amely lehetővé teszi a "
@@ -7146,8 +7284,8 @@ msgstr ""
 " platformba integrálják. Az Odoo ökoszisztéma többi alkalmazásával való "
 "integráció révén a **Naptár** lehetővé teszi a felhasználók számára, hogy "
 "találkozókat ütemezzenek és szervezzenek, eseményeket ütemezzenek, "
-"munkavállalói értékeléseket tervezzenek, projekteket koordináljanak és még "
-"sok mást – mindezt ugyanazon a platformon."
+"teljesítményértékeléseket tervezzenek, projekteket koordináljanak és még sok"
+" mást – mindezt ugyanazon a platformon."
 
 #: ../../content/applications/productivity/calendar.rst:12
 msgid ""
@@ -7653,19 +7791,19 @@ msgstr "Opcionálisan konfigurálja a következő füleket:"
 
 #: ../../content/applications/productivity/calendar.rst:194
 msgid ":ref:`calendar/appointment-schedule`"
-msgstr ""
+msgstr ":ref:`calendar/appointment-schedule`"
 
 #: ../../content/applications/productivity/calendar.rst:195
 msgid ":ref:`calendar/appointment-options`"
-msgstr ""
+msgstr ":ref:`calendar/appointment-options`"
 
 #: ../../content/applications/productivity/calendar.rst:196
 msgid ":ref:`calendar/appointment-questions`"
-msgstr ""
+msgstr ":ref:`calendar/appointment-questions`"
 
 #: ../../content/applications/productivity/calendar.rst:197
 msgid ":ref:`calendar/appointment-messages`"
-msgstr ""
+msgstr ":ref:`calendar/appointment-messages`"
 
 #: ../../content/applications/productivity/calendar.rst:199
 msgid ""
@@ -36490,6 +36628,55 @@ msgid ""
 msgstr ""
 "Felhasználói hiba jelenik meg az Odoo-ban, amikor alkalmazotti tokent "
 "generálnak Admin felhasználó helyett."
+
+#~ msgid ""
+#~ "A positive :guilabel:`Max Tokens` reaches every provider, each under the "
+#~ "parameter name its own API expects — but only where the model record "
+#~ "publishes a :guilabel:`Max Output Tokens` of its own (:menuselection:`AI -->"
+#~ " Configuration --> Providers --> Models`). On a model whose cap is unknown "
+#~ "(``0``) the agent's value is dropped and the model writes to its own limit, "
+#~ "so an agent capped at 500 tokens shows no effect and nothing on the form "
+#~ "says why. Fill in :guilabel:`Max Output Tokens` on the model if you want a "
+#~ "per-agent cap to bite."
+#~ msgstr ""
+#~ "A pozitív :guilabel:`Max. token` érték minden szolgáltatóhoz eljut, "
+#~ "mindegyikhez azon a paraméternéven, amelyet a saját API-ja vár — de csak "
+#~ "ott, ahol a modell rekordja saját :guilabel:`Max. kimeneti tokenek` értéket "
+#~ "közöl (:menuselection:`AI --> Konfiguráció --> Szolgáltatók --> Modellek`). "
+#~ "Olyan modellen, amelynek a korlátja ismeretlen (``0``), az ügynök értéke "
+#~ "elveszik, és a modell a saját korlátjáig ír, így egy 500 tokenre korlátozott"
+#~ " ügynöknél nem látszik hatás, és az űrlapon semmi nem mondja meg, miért. "
+#~ "Töltse ki a modellen a :guilabel:`Max. kimeneti tokenek` mezőt, ha azt "
+#~ "szeretné, hogy az ügynökszintű korlát érvényesüljön."
+
+#~ msgid ""
+#~ "Anthropic is the exception, in the other direction: its API always requires "
+#~ "the parameter, so an Anthropic model with no published cap falls back to a "
+#~ "conservative built-in value rather than to the model's real limit."
+#~ msgstr ""
+#~ "Az Anthropic a kivétel, a másik irányban: az API-ja mindig megkívánja a "
+#~ "paramétert, ezért egy közölt korlát nélküli Anthropic-modell nem a modell "
+#~ "valódi korlátjára, hanem egy óvatos, beépített értékre esik vissza."
+
+#~ msgid "Stuck and stranded agent runs"
+#~ msgstr "Elakadt és megrekedt ügynökfutások"
+
+#~ msgid ""
+#~ "This is a floor, not a complete data classification policy — business models"
+#~ " like ``hr.employee`` or ``account.move`` are **not** hard-denied by "
+#~ "default; you must configure them if needed. Because ``mail.activity`` is "
+#~ "floored, instruct agents **not** to call activity tools to “manage” their "
+#~ "queue: platform approval nudges are created by the gate for the supervisor, "
+#~ "and review To-Dos on business documents follow skill/playbook paths that "
+#~ "stay within allowed operations."
+#~ msgstr ""
+#~ "Ez padló, nem teljes adatklasszifikációs politika — az üzleti modellek, mint"
+#~ " a ``hr.employee`` vagy az ``account.move``, **nincsenek** alapból hard-deny"
+#~ " alatt; szükség esetén konfigurálni kell őket. Mivel a ``mail.activity`` "
+#~ "padlón van, utasítsa az ügynököket, hogy **ne** hívjanak activity eszközöket"
+#~ " a soruk „kezelésére”: a platform jóváhagyási emlékeztetőit a kapu hozza "
+#~ "létre a felügyelőnek, az üzleti dokumentumokon lévő ellenőrző To-Do-k pedig "
+#~ "a skill/playbook engedélyezett útvonalait követik."
 
 #~ msgid ""
 #~ "**Supervisor four-eyes on agent writes** — agent runs always propose writes "

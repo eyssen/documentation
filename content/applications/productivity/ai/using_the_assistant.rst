@@ -98,8 +98,8 @@ Chat vs agent proposals
 +---------------------+----------------------------------+----------------------------------+
 |                     | Interactive chat                 | Autonomous agent run             |
 +=====================+==================================+==================================+
-| Controlled by       | Global :guilabel:`Write mode` in | The **task's**                   |
-|                     | Settings                         | :guilabel:`Write mode`           |
+| Controlled by       | Global :guilabel:`Ai Write Mode` | The **task's**                   |
+|                     | in Settings                      | :guilabel:`Write Mode`           |
 |                     |                                  | (default *confirm*; see          |
 |                     |                                  | :ref:`ai/agents/task-write-mode`)|
 +---------------------+----------------------------------+----------------------------------+
@@ -145,7 +145,7 @@ Write modes
   records auto-apply; updates, deletes and file attaches wait for confirmation.
 
 **Agent runs** — same three values, but on the **task** form
-(:guilabel:`Write mode`), defaulting to *Always require confirmation*. The
+(:guilabel:`Write Mode`), defaulting to *Always require confirmation*. The
 Settings value does not apply to agent runs. Use *auto* or *hybrid* only when
 the standing instruction and skills keep risk bounded (draft-only fills, no
 posting, no payments). Details: :ref:`ai/agents/task-write-mode`.

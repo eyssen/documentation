@@ -77,9 +77,8 @@ refund-type reason is configured.
 What cannot be withdrawn or returned
 ====================================
 
-- **Delivery / shipping order lines** (carrier products marked ``is_delivery``) never enter the
-  withdrawable or returnable quantity budgets. They do not appear on the portal withdrawal form or
-  on auto-seeded RMA lines.
+- **Delivery / shipping order lines** never enter the withdrawable or returnable quantity
+  budgets. They do not appear on the portal withdrawal form or on auto-seeded RMA lines.
 - **Section / note lines** on the sales order are ignored as well.
 
 This keeps elállás / RMA focused on physical goods. Whether shipping fees are refunded remains a
@@ -88,14 +87,16 @@ policy decision when the agent issues the credit note.
 Confirmation e-mail template
 ============================
 
-The durable-medium e-mail is the ``mail.template`` *Elállási nyilatkozat visszaigazolása*
-(``eyssen_rma.mail_template_withdrawal_confirmation``). It is stored with ``noupdate`` so a module
-upgrade does not overwrite local wording changes.
+The durable-medium e-mail is sent from the *Elállási nyilatkozat visszaigazolása* e-mail
+template. With the :ref:`developer mode <developer-mode>` active, it can be opened and reworded
+under :menuselection:`Settings --> Technical --> Email --> Email Templates`; a module upgrade does
+not overwrite wording changes made there.
 
 .. tip::
-   Prefer editing the technical source (or a controlled SQL/XML update) over the visual mail
-   designer. Breaking the QWeb ``t-foreach`` over the declaration lines can hide products from the
-   consumer e-mail even though they remain on the backend record.
+   The product table in the template repeats over the lines of the declaration. Keep that table
+   intact when changing the wording: a damaged table can leave products out of the consumer's
+   e-mail even though they remain on the backend record. Send a test message after every change and
+   check that all products appear.
 
 .. seealso::
    - :doc:`consumer_portal`

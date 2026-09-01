@@ -78,10 +78,10 @@ already-valid withdrawal:
   automatic retry cron** — recovery is always a deliberate manual action.
 
 .. warning::
-   The e-mail body is a **QWeb** template (``mail.template``). Edit it only as technical/QWeb source
-   (or through a controlled update). The visual HTML editor can break the product table loop so that
-   only the last line (often a shipping product) appears in the e-mail while the backend still shows
-   every line. After any edit, send a test and verify **all** products appear.
+   The product table in the confirmation e-mail repeats over the lines of the declaration, so the
+   visual HTML editor can break that table and leave products out of the e-mail while the backend
+   still shows every line. After any edit, send a test and verify **all** products appear. See
+   :doc:`configuration` for where the template lives.
 
 Starting the physical return and refund
 =======================================
@@ -109,9 +109,9 @@ What :guilabel:`Start Return / Refund` creates
 This creates a **separate, ordinary RMA** from the withdrawal's lines:
 
 - the new RMA is a normal, *rejectable* return (it is **not** a withdrawal);
-- it links back to the declaration through the :guilabel:`Source Withdrawal` field; and
+- it links back to the declaration through the :guilabel:`Source Withdrawal` field;
 - the original withdrawal record stays **inert, immutable and non-rejectable** — it is never run
-  through the picking or refund logic itself.
+  through the picking or refund logic itself; and
 - **Shipping / delivery lines are skipped.** If an older declaration still lists a carrier line
   (from before the shipping exclusion), that line is not copied onto the derived RMA. A
   *shipping-only* withdrawal cannot start a physical return (the system shows an error).

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-28 10:16+0200\n"
+"POT-Creation-Date: 2026-09-01 08:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20340,7 +20340,7 @@ msgid "the agent can retry at any time with the :guilabel:`Resend Confirmation` 
 msgstr ""
 
 #: ../../content/applications/sales/withdrawal/backend.rst:81
-msgid "The e-mail body is a **QWeb** template (``mail.template``). Edit it only as technical/QWeb source (or through a controlled update). The visual HTML editor can break the product table loop so that only the last line (often a shipping product) appears in the e-mail while the backend still shows every line. After any edit, send a test and verify **all** products appear."
+msgid "The product table in the confirmation e-mail repeats over the lines of the declaration, so the visual HTML editor can break that table and leave products out of the e-mail while the backend still shows every line. After any edit, send a test and verify **all** products appear. See :doc:`configuration` for where the template lives."
 msgstr ""
 
 #: ../../content/applications/sales/withdrawal/backend.rst:87
@@ -20392,11 +20392,11 @@ msgid "the new RMA is a normal, *rejectable* return (it is **not** a withdrawal)
 msgstr ""
 
 #: ../../content/applications/sales/withdrawal/backend.rst:112
-msgid "it links back to the declaration through the :guilabel:`Source Withdrawal` field; and"
+msgid "it links back to the declaration through the :guilabel:`Source Withdrawal` field;"
 msgstr ""
 
 #: ../../content/applications/sales/withdrawal/backend.rst:113
-msgid "the original withdrawal record stays **inert, immutable and non-rejectable** — it is never run through the picking or refund logic itself."
+msgid "the original withdrawal record stays **inert, immutable and non-rejectable** — it is never run through the picking or refund logic itself; and"
 msgstr ""
 
 #: ../../content/applications/sales/withdrawal/backend.rst:115
@@ -20697,34 +20697,34 @@ msgid "What cannot be withdrawn or returned"
 msgstr ""
 
 #: ../../content/applications/sales/withdrawal/configuration.rst:80
-msgid "**Delivery / shipping order lines** (carrier products marked ``is_delivery``) never enter the withdrawable or returnable quantity budgets. They do not appear on the portal withdrawal form or on auto-seeded RMA lines."
+msgid "**Delivery / shipping order lines** never enter the withdrawable or returnable quantity budgets. They do not appear on the portal withdrawal form or on auto-seeded RMA lines."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal/configuration.rst:83
+#: ../../content/applications/sales/withdrawal/configuration.rst:82
 msgid "**Section / note lines** on the sales order are ignored as well."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal/configuration.rst:85
+#: ../../content/applications/sales/withdrawal/configuration.rst:84
 msgid "This keeps elállás / RMA focused on physical goods. Whether shipping fees are refunded remains a policy decision when the agent issues the credit note."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal/configuration.rst:89
+#: ../../content/applications/sales/withdrawal/configuration.rst:88
 msgid "Confirmation e-mail template"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal/configuration.rst:91
-msgid "The durable-medium e-mail is the ``mail.template`` *Elállási nyilatkozat visszaigazolása* (``eyssen_rma.mail_template_withdrawal_confirmation``). It is stored with ``noupdate`` so a module upgrade does not overwrite local wording changes."
+#: ../../content/applications/sales/withdrawal/configuration.rst:90
+msgid "The durable-medium e-mail is sent from the *Elállási nyilatkozat visszaigazolása* e-mail template. With the :ref:`developer mode <developer-mode>` active, it can be opened and reworded under :menuselection:`Settings --> Technical --> Email --> Email Templates`; a module upgrade does not overwrite wording changes made there."
 msgstr ""
 
 #: ../../content/applications/sales/withdrawal/configuration.rst:96
-msgid "Prefer editing the technical source (or a controlled SQL/XML update) over the visual mail designer. Breaking the QWeb ``t-foreach`` over the declaration lines can hide products from the consumer e-mail even though they remain on the backend record."
-msgstr ""
-
-#: ../../content/applications/sales/withdrawal/configuration.rst:101
-msgid ":doc:`consumer_portal`"
+msgid "The product table in the template repeats over the lines of the declaration. Keep that table intact when changing the wording: a damaged table can leave products out of the consumer's e-mail even though they remain on the backend record. Send a test message after every change and check that all products appear."
 msgstr ""
 
 #: ../../content/applications/sales/withdrawal/configuration.rst:102
+msgid ":doc:`consumer_portal`"
+msgstr ""
+
+#: ../../content/applications/sales/withdrawal/configuration.rst:103
 msgid ":doc:`backend`"
 msgstr ""
 

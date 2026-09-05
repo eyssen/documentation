@@ -17669,17 +17669,73 @@ msgstr ""
 "hoz létre könyvelési tételt — semmilyen kamat vagy díj nem kerül "
 "könyvelésre."
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:147
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:145
+msgid "Invoices treated as paid"
+msgstr "Fizetettnek tekintendő számlák"
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:148
+msgid ""
+"Go to :menuselection:`Accounting --> Configuration --> Settings` and, in "
+"the :guilabel:`Customer Invoices` section, set :guilabel:`Invoices treated "
+"as paid`. The choice applies to the daily automatic reminders **and** to "
+"every manual send (from a customer, a customer list, or the invoices list)."
+msgstr ""
+"Lépjen a :menuselection:`Könyvelés --> Konfiguráció --> Beállítások` "
+"menüpontra, és a :guilabel:`Vevői számlák` szakaszban állítsa be a "
+":guilabel:`Fizetettnek tekintendő számlák` opciót. A választás a napi "
+"automatikus emlékeztetőkre **és** minden kézi küldésre vonatkozik (egy "
+"vevőről, vevőlistáról vagy a számlalistáról)."
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:153
+msgid ""
+":guilabel:`Fully Paid` (default): only fully paid invoices are skipped. "
+"Invoices in :guilabel:`In Payment` — a payment was registered but has not "
+"yet been matched on the bank statement — are still included, even when an "
+"open amount remains."
+msgstr ""
+":guilabel:`Teljesen fizetett` (alapértelmezett): csak a teljesen fizetett "
+"számlák maradnak ki. A :guilabel:`Kiegyenlítés alatt` státuszú számlák — "
+"amelyekhez a fizetést már rögzítették, de a bankkivonaton még nem "
+"párosították — továbbra is bekerülnek, akkor is, ha nyitott összeg maradt."
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:157
+msgid ""
+":guilabel:`Fully Paid and In Payment`: also skip invoices in :guilabel:`In "
+"Payment`. Use this when a registered payment should not trigger a reminder "
+"while it waits for bank matching."
+msgstr ""
+":guilabel:`Teljesen fizetett és kiegyenlítés alatt`: a "
+":guilabel:`Kiegyenlítés alatt` státuszú számlákat is kihagyja. Akkor "
+"válassza ezt, ha a rögzített fizetés ne váltson ki emlékeztetőt, amíg a "
+"banki párosításra vár."
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:161
+msgid ""
+"Reversed invoices are always skipped. Unpaid and partially paid invoices "
+"are always included."
+msgstr ""
+"A sztornózott számlák mindig kimaradnak. A nem fizetett és a részben "
+"fizetett számlák mindig bekerülnek."
+
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:175
 msgid "Follow-up process"
 msgstr "Emlékeztetési folyamat"
 
-#: ../../content/applications/finance/accounting/payments/follow_up.rst:150
+#: ../../content/applications/finance/accounting/payments/follow_up.rst:178
 msgid ""
 "Reconcile all bank transactions before starting the follow-up process to "
-"avoid sending reminders for invoices that have already been paid."
+"avoid sending reminders for invoices that have already been paid. To also "
+"skip invoices that are still :guilabel:`In Payment` while they wait for "
+"bank matching, set :guilabel:`Invoices treated as paid` to :guilabel:`Fully "
+"Paid and In Payment` (see :ref:`accounting/follow_up/settled`)."
 msgstr ""
-"A követési folyamat megkezdése előtt egyeztesse az összes banki tranzakciót,"
-" hogy elkerülje az emlékeztetők küldését a már kifizetett számlákhoz."
+"A követési folyamat megkezdése előtt egyeztesse az összes banki "
+"tranzakciót, hogy elkerülje az emlékeztetők küldését a már kifizetett "
+"számlákhoz. Ha a :guilabel:`Kiegyenlítés alatt` státuszú, banki "
+"párosításra váró számlákat is ki szeretné hagyni, állítsa a "
+":guilabel:`Fizetettnek tekintendő számlák` opciót a :guilabel:`Teljesen "
+"fizetett és kiegyenlítés alatt` értékre (lásd "
+":ref:`accounting/follow_up/settled`)."
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:156
 msgid "Follow-ups for one customer"

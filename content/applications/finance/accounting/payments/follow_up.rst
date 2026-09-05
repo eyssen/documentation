@@ -141,14 +141,44 @@ The block is only shown on levels whose :guilabel:`Show Late-payment Interest` o
 .. Screenshot: Accounting ▸ Configuration ▸ Settings, the "Late-payment Interest on Reminders"
    setting expanded, with the rate % field and the Collection fee (B2B) toggle + amount visible.
 
+.. _accounting/follow_up/settled:
+
+Invoices treated as paid
+------------------------
+
+Go to :menuselection:`Accounting --> Configuration --> Settings` and, in the
+:guilabel:`Customer Invoices` section, set :guilabel:`Invoices treated as paid`.
+The choice applies to the daily automatic reminders **and** to every manual send
+(from a customer, a customer list, or the invoices list).
+
+- :guilabel:`Fully Paid` (default): only fully paid invoices are skipped. Invoices
+  in :guilabel:`In Payment` — a payment was registered but has not yet been
+  matched on the bank statement — are still included, even when an open amount
+  remains.
+- :guilabel:`Fully Paid and In Payment`: also skip invoices in
+  :guilabel:`In Payment`. Use this when a registered payment should not trigger
+  a reminder while it waits for bank matching.
+
+Reversed invoices are always skipped. Unpaid and partially paid invoices are
+always included.
+
+.. screenshot-pending: follow_up/settled-settings.png
+   :alt: Invoices treated as paid setting.
+
+.. Screenshot: Accounting ▸ Configuration ▸ Settings, Customer Invoices section,
+   the "Invoices treated as paid" radio with Fully Paid / Fully Paid and In Payment.
+
 .. _accounting/follow_up/process:
 
 Follow-up process
 =================
 
 .. note::
-   Reconcile all bank transactions before starting the follow-up process to avoid sending
-   reminders for invoices that have already been paid.
+   Reconcile all bank transactions before starting the follow-up process to avoid
+   sending reminders for invoices that have already been paid. To also skip
+   invoices that are still :guilabel:`In Payment` while they wait for bank
+   matching, set :guilabel:`Invoices treated as paid` to
+   :guilabel:`Fully Paid and In Payment` (see :ref:`accounting/follow_up/settled`).
 
 .. _accounting/follow_up/one-customer:
 

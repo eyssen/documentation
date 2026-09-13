@@ -281,6 +281,13 @@ autodoc_member_order = 'bysource'
 
 html_theme = 'odoo_theme'
 
+# GA4 measurement ID for https://doc.eyssen.com (stream "eYssen Docs").
+# odoo_theme includes gtag.js from layout_templates/google_analytics.html
+# when this html_context key is set.
+html_context = {
+    'google_analytics_key': 'G-P3YRJDP16Q',
+}
+
 # The name of the Pygments (syntax highlighting) style to use.
 # See extensions/odoo_theme/pygments_override.py
 pygments_style = 'odoo'

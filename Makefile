@@ -44,7 +44,7 @@ endif
 
 #=== Standard rules ===#
 
-.PHONY: all help clean html latexpdf gettext fast static test review
+.PHONY: all help clean html latexpdf gettext fast static test review sitemap
 
 # In first position to build the documentation from scratch by default
 all: html
@@ -53,6 +53,7 @@ help:
 	@echo "Please use 'make <target>' where <target> is one of"
 	@echo "  html         to build the documentation to HTML"
 	@echo "  fast         to build the documentation to HTML with shallow menu (faster)"
+	@echo "  sitemap      to regenerate _build/html/sitemap.xml from the current HTML tree"
 	@echo "  clean        to delete the build files"
 	@echo "  test         to run the guidelines tests"
 
@@ -64,7 +65,17 @@ clean:
 html: $(HTML_BUILD_DIR)/_static/style.css compile-mo
 	@echo "Starting build..."
 	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b html $(SPHINXOPTS) $(SOURCE_DIR) $(HTML_BUILD_DIR)
+	@$(MAKE) --no-print-directory sitemap
 	@echo "Build finished."
+
+# Rebuild the site-wide sitemap from whatever HTML is already on disk.
+# English lives at $(BUILD_DIR)/html/; Hungarian at $(BUILD_DIR)/html/hu/.
+# Running this after each language pass keeps https://doc.eyssen.com/sitemap.xml
+# in sync with both trees.
+sitemap:
+	@echo "Generating sitemap..."
+	python3 scripts/generate_sitemap.py $(BUILD_DIR)/html
+	@echo "Sitemap written to $(BUILD_DIR)/html/sitemap.xml"
 
 compile-mo:
 	@find locale -name "*.po" | while read po; do \

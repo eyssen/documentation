@@ -38,6 +38,13 @@ The documentation is written in reStructuredText (`.rst`) format and can be gene
 * `make html CURRENT_LANG=fr`: builds the documentation only in French.
 * `make html CURRENT_LANG=fr LANGUAGES=en,fr,de`: builds the documentation in French, enabling the language switcher.
 * `make html CURRENT_LANG=hu`: builds the documentation only in Hungarian. When `CURRENT_LANG` is not `en`, `LANGUAGES` defaults to `en,<CURRENT_LANG>` so the language switcher shows both options.
+* `make sitemap`: regenerates `_build/html/sitemap.xml` from the current HTML tree without rebuilding pages.
+
+### Sitemap (`https://doc.eyssen.com/sitemap.xml`)
+
+Each `make html` pass rebuilds a single site-wide sitemap at `_build/html/sitemap.xml`. The generator walks the published HTML tree (English at the root, Hungarian under `hu/`) and writes absolute URLs under `https://doc.eyssen.com/`. Sphinx utility pages (`search.html`, `genindex.html`), `_static` artifacts, and redirect stubs are omitted.
+
+This is a post-build step (`scripts/generate_sitemap.py`) rather than `sphinx-sitemap`: languages are built in separate Makefile passes into different output directories, English is served without an `/en/` prefix, and `locale/` still contains unpublished languages. After `make html` then `make html CURRENT_LANG=hu`, the sitemap contains both `/` and `/hu/` URLs.
 
 ### Hungarian translation
 
@@ -65,7 +72,7 @@ If found in these locations, the build process will incorporate Python docstring
 
 ### Troubleshooting
 
-* **Language switcher is empty:** Ensure both languages are built. Run `make html` first (English), then `make html CURRENT_LANG=hu` (Hungarian). The switcher links will then work in both directions.
+* **Language switcher is empty:** Ensure both languages are built. Run `make html` first (English), then `make html CURRENT_LANG=hu` (Hungarian). The switcher links will then work in both directions. The same two-pass build is what fills `sitemap.xml` with both languages.
 * Check your Python version: `python3 --version` (should be 3.10–3.14)
 * Make sure your virtual environment is active and dependencies are installed.
 * If you have made changes to the file structure, try running `make clean` before building.

@@ -24,10 +24,14 @@ SPHINXOPTS     = -D project_root=$(ROOT) -D canonical_version=$(CANONICAL_VERSIO
                  -D versions=$(VERSIONS) -D languages=$(LANGUAGES) -D language=$(CURRENT_LANG) \
                  -D is_remote_build=$(IS_REMOTE_BUILD) \
                  -T \
-                 -A google_analytics_key=$(GOOGLE_ANALYTICS_KEY) \
                  -A plausible_script=$(PLAUSIBLE_SCRIPT) \
                  -A plausible_domain=$(PLAUSIBLE_DOMAIN) \
 				 -j $(WORKERS)
+# Override conf.py html_context only when the env/Make var is set. Passing
+# -A google_analytics_key= with an empty value would wipe the default ID.
+ifdef GOOGLE_ANALYTICS_KEY
+  SPHINXOPTS += -A google_analytics_key=$(GOOGLE_ANALYTICS_KEY)
+endif
 SOURCE_DIR     = content
 
 HTML_BUILD_DIR = $(BUILD_DIR)/html

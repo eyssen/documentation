@@ -18,6 +18,17 @@ ifndef LANGUAGES
   LANGUAGES = en,hu
 endif
 
+# Absolute canonical host for production HTML. Relative canonicals (the previous
+# default when ROOT/IS_REMOTE_BUILD were empty) let Google pick doc.eyssen.uk as
+# googleCanonical while both hosts return 200. Override with IS_REMOTE_BUILD=
+# (empty) for local file:// browsing.
+ifndef ROOT
+  ROOT = https://doc.eyssen.com
+endif
+ifndef IS_REMOTE_BUILD
+  IS_REMOTE_BUILD = True
+endif
+
 SPHINX_BUILD   = sphinx-build
 CONFIG_DIR     = .
 SPHINXOPTS     = -D project_root=$(ROOT) -D canonical_version=$(CANONICAL_VERSION) \

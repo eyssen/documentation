@@ -543,7 +543,12 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
                 page_ = re.sub("_[a-z]{2}$", "", pagename)
                 canonical_page_ = f'{page_.replace("/i18n/", "/")}.html'
 
-        if app.config.is_remote_build:
+        # Makefile passes -D is_remote_build=True as a string; treat common
+        # falsey spellings as local/relative so overrides stay safe.
+        remote_ = app.config.is_remote_build
+        if isinstance(remote_, str):
+            remote_ = remote_.strip().lower() not in ('', '0', 'false', 'no', 'off')
+        if remote_:
             # Remote build: use absolute URL with project_root
             # e.g. https://doc.eyssen.com/hu/applications.html
             root_ = app.config.project_root

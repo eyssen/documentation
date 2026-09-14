@@ -55,7 +55,7 @@ endif
 
 #=== Standard rules ===#
 
-.PHONY: all help clean html latexpdf gettext fast static test review sitemap
+.PHONY: all help clean html latexpdf gettext fast static test review sitemap robots
 
 # In first position to build the documentation from scratch by default
 all: html
@@ -65,6 +65,7 @@ help:
 	@echo "  html         to build the documentation to HTML"
 	@echo "  fast         to build the documentation to HTML with shallow menu (faster)"
 	@echo "  sitemap      to regenerate _build/html/sitemap.xml from the current HTML tree"
+	@echo "  robots       to copy html_extra/robots.txt into the HTML output root"
 	@echo "  clean        to delete the build files"
 	@echo "  test         to run the guidelines tests"
 
@@ -77,6 +78,7 @@ html: $(HTML_BUILD_DIR)/_static/style.css compile-mo
 	@echo "Starting build..."
 	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b html $(SPHINXOPTS) $(SOURCE_DIR) $(HTML_BUILD_DIR)
 	@$(MAKE) --no-print-directory sitemap
+	@$(MAKE) --no-print-directory robots
 	@echo "Build finished."
 
 # Rebuild the site-wide sitemap from whatever HTML is already on disk.
@@ -87,6 +89,13 @@ sitemap:
 	@echo "Generating sitemap..."
 	python3 scripts/generate_sitemap.py $(BUILD_DIR)/html
 	@echo "Sitemap written to $(BUILD_DIR)/html/sitemap.xml"
+
+# Ensure /robots.txt is present at the HTML root even for --apply without rebuild.
+# Sphinx also copies this via html_extra_path during `make html`.
+robots:
+	@echo "Installing robots.txt..."
+	cp html_extra/robots.txt $(BUILD_DIR)/html/robots.txt
+	@echo "robots.txt written to $(BUILD_DIR)/html/robots.txt"
 
 compile-mo:
 	@find locale -name "*.po" | while read po; do \

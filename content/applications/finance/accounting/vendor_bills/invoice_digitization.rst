@@ -16,7 +16,7 @@ This process is mainly used for vendor bills (or refunds).
    - `Test Odoo's invoice digitization <https://www.odoo.com/app/invoice-automation>`_
    - `Odoo Tutorials: Vendor Bill Digitization
      <https://www.odoo.com/slides/slide/vendor-bill-digitization-7065>`_
-   - :doc:`/applications/essentials/in_app_purchase`
+   - In-App Purchase (IAP)
 
 .. _accounting/bill-digitization/configuration:
 
@@ -201,7 +201,7 @@ Pricing
 The document digitization feature is an In-App Purchase (IAP) service requiring prepaid credits.
 Digitizing one document uses one credit.
 
-To buy credits, :ref:`go to the Settings app <iap/buying_credits>` or :menuselection:`Accounting -->
+To buy credits, go to the Settings app or :menuselection:`Accounting -->
 Configuration --> Settings`, navigate to the :guilabel:`Digitization` section, and click
 :guilabel:`Buy credits`.
 
@@ -214,4 +214,4 @@ Configuration --> Settings`, navigate to the :guilabel:`Digitization` section, a
 
 .. seealso::
    - `Odoo In-App Purchase Privacy Policy <https://iap.odoo.com/privacy#header_6>`_
-   - :doc:`/applications/essentials/in_app_purchase`
+   - In-App Purchase (IAP)

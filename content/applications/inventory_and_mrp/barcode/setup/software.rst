@@ -45,8 +45,7 @@ Settings` and scroll down to the :guilabel:`Barcode` section to tick the box for
 Barcode Database`.
 
 .. note::
-   Databases hosted on **Odoo.sh** or **on-premise**, require :ref:`configuring an API key
-   <barcodelookup/configuration>`.
+   Databases hosted on **Odoo.sh** or **on-premise**, require configuring an API key.
 
 .. _inventory/barcode/set-barcodes:
 
@@ -57,7 +56,7 @@ Barcodes can be assigned to existing products from the *Product Barcodes* config
 any product form in the **Inventory**, **Manufacturing** or **Purchase** apps. The barcode field can
 be populated either by typing or using scanner input.
 
-When adding a new product, the :ref:`barcode lookup feature <barcode/setup/barcodelookup>` can be
+When adding a new product, the barcode lookup feature can be
 used to automatically find information about a product based on its barcode, and new products can be
 added to the database directly from the **Barcode** app by scanning a barcode.
 
@@ -65,8 +64,7 @@ From Barcode app
 ----------------
 
 New products definitions can be added to the database product lists as well as having their on-hand
-inventory tracked from the **Barcode** app, if the :ref:`Barcode Lookup feature
-<barcode/setup/barcodelookup>` is enabled. To create a new receipt for scanning new products, choose
+inventory tracked from the **Barcode** app, if the Barcode Lookup feature is enabled. To create a new receipt for scanning new products, choose
 one of two methods:
 
 #. From the **Barcode** front page, tap :guilabel:`Operations`, tap :guilabel:`Receipts`, and then

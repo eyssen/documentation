@@ -111,8 +111,7 @@ icon above the tree. The following options are available in the menu:
 - :icon:`fa-cog` :guilabel:`Actions on Select`: Define the server actions that are available (as
   buttons) for the files in the folder. Click an action to add or remove it. Click
   :guilabel:`Add Custom Action` to :ref:`create a new one <reference/actions/server>`.
-- :icon:`fa-cog` :guilabel:`Automations`: Create :doc:`automation rules
-  </applications/studio/automated_actions>`.
+- :icon:`fa-cog` :guilabel:`Automations`: Create automation rules.
 
 .. important::
    Setting up custom actions and automation rules may impact your `pricing plan

@@ -32,8 +32,7 @@ This stage involves:
 
 - defining the purpose of the dashboard, in other words, the business questions it needs to answer,
   and deciding what data would answer those questions;
-- determining where to find the relevant Odoo data and deciding which :doc:`type of view
-  <../../studio/views>` (i.e., list, pivot table, or chart) is most suited for the
+- determining where to find the relevant Odoo data and deciding which type of view (i.e., list, pivot table, or chart) is most suited for the
   data analysis needed;
 - preparing the Odoo data by refining the views to focus on the most relevant information, e.g., by
   using :doc:`search filters <../../essentials/search>`, by making only certain list

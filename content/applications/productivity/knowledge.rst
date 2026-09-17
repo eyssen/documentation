@@ -381,7 +381,7 @@ previous versions.
 Access articles from various apps
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Knowledge articles are accessible from the :ref:`form view <studio/views/general/form>` of various
+Knowledge articles are accessible from the form view of various
 apps. Click the :icon:`fa-bookmark` :guilabel:`(Knowledge)` icon in the top right corner to open
 the command palette, then choose one of the following search methods:
 

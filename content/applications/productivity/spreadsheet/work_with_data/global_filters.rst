@@ -33,8 +33,7 @@ sort and temporarily hide data, global filters act on the underlying :ref:`data 
 <spreadsheet/insert/data-sources>`, filtering data *before* it is loaded into the spreadsheet.
 
 When a global filter is created, :ref:`field matching <spreadsheet/global-filters/field-matching>`
-for each data source ensures the filter acts on the correct database :doc:`fields
-</applications/studio/fields>`.
+for each data source ensures the filter acts on the correct database fields.
 
 .. tip::
    - Global filters work by adding extra conditions to the domains of all the data sources in the
@@ -95,8 +94,8 @@ Date
 ----
 
 .. note::
-   A :guilabel:`Date` filter can only match with a :ref:`Date <studio/fields/simple-fields-date>`
-   or :ref:`Date & Time <studio/fields/simple-fields-date-time>` field.
+   A :guilabel:`Date` filter can only match with a Date
+   or Date & Time field.
 
 With the :guilabel:`Filter properties` pane open:
 
@@ -163,10 +162,7 @@ Relation
 --------
 
 .. note::
-   A :guilabel:`Relation` filter can only match with a :ref:`Many2One
-   <studio/fields/relational-fields-many2one>`, :ref:`One2Many
-   <studio/fields/relational-fields-one2many>`, or :ref:`Many2Many
-   <studio/fields/relational-fields-many2many>` field.
+   A :guilabel:`Relation` filter can only match with a Many2One, One2Many, or Many2Many field.
 
 With the :guilabel:`Filter properties` pane open:
 
@@ -213,9 +209,8 @@ Text
 ----
 
 .. note::
-   A :guilabel:`Text` filter can only match with a :ref:`Text (char)
-   <studio/fields/simple-fields-text>`, :ref:`Integer <studio/fields/simple-fields-integer>` or
-   :ref:`Decimal (float) <studio/fields/simple-fields-decimal>` field.
+   A :guilabel:`Text` filter can only match with a Text (char), Integer or
+   Decimal (float) field.
 
 With the :guilabel:`Filter properties` pane open:
 

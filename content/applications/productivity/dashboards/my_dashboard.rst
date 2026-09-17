@@ -2,7 +2,7 @@
 My Dashboard
 ============
 
-**My Dashboard** allows you to centralize the :doc:`Odoo views <../../studio/views>` you consult
+**My Dashboard** allows you to centralize the Odoo views you consult
 most regularly, making it possible to see critical tasks at a glance without having to first
 navigate through multiple apps. Unlike other Odoo dashboards, My Dashboard is not based on **Odoo
 Spreadsheet**.
@@ -21,9 +21,9 @@ Add views
 
 Most Odoo views can be added to My Dashboard, including:
 
-- :ref:`multiple record views <studio/views/multiple-records>` like list, kanban, and map
-- :ref:`timeline views <studio/views/timeline>` like calendar, cohort, and gantt
-- :ref:`reporting views <studio/views/reporting>` like pivot and graph
+- multiple record views like list, kanban, and map
+- timeline views like calendar, cohort, and gantt
+- reporting views like pivot and graph
 
 To add a view to My Dashboard:
 

@@ -88,8 +88,7 @@ of employees, the technology used by the company, the timezone, and direct conta
 Pricing
 =======
 
-Lead mining is an *In-App Purchase* feature, and each generated lead costs one :ref:`credit
-<in_app_purchase/credits>`.
+Lead mining is an *In-App Purchase* feature, and each generated lead costs one credit.
 
 .. important::
    Generating |CC| costs one additional credit for each contact generated. See here for complete
@@ -114,4 +113,4 @@ Services`.
    databases, and one-app-free databases.
 
 .. seealso::
-   :doc:`/applications/essentials/in_app_purchase`
+   In-App Purchase (IAP)

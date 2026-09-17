@@ -69,7 +69,7 @@ that are currently enabled in the database. See :ref:`configuring operations
 .. important::
    Printing barcodes, by default, will either directly download a PDF file of the selected barcodes
    or open a new tab with a downloadable or printable PDF. To turn this into a direct printing
-   operation, :doc:`connect a printer <../../../general/iot/devices/printer>`.
+   operation, connect a printer.
 
 When first opening Barcode
 --------------------------
@@ -106,7 +106,7 @@ operation type required.
 
 Next, click the :icon:`fa-print` :guilabel:`Print` button and select either :guilabel:`Operation
 type (PDF)` to download a PDF with the operation barcodes, or :guilabel:`Operation type (ZPL)` to
-send the print job to a :ref:`ZPL-enabled printer <iot/link-printer>`.
+send the print job to a ZPL-enabled printer.
 
 .. note::
    The :icon:`fa-print` :guilabel:`Print` button does not appear until at least one operation type

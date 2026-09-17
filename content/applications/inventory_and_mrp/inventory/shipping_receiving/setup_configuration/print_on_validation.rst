@@ -169,7 +169,7 @@ details for specific third-party shipping carriers, complete the following setup
 
 #. Tick the :guilabel:`Carrier Labels` checkbox in the :ref:`operation type settings
    <inventory/shipping_receiving/print_setup>`.
-#. :doc:`Connect a printer <../../../../general/iot/devices/printer>` to Odoo's *IoT* app.
+#. Connect a printer to Odoo's *IoT* app.
 #. :ref:`Assign the carrier label to the printer <inventory/shipping_receiving/assign-printer>`.
 #. Configure the shipping method's :ref:`label type <inventory/shipping_receiving/label-type>`.
 
@@ -178,7 +178,7 @@ details for specific third-party shipping carriers, complete the following setup
 Assign printer
 --------------
 
-Refer to the :doc:`Connect a printer <../../../../general/iot/devices/printer>` documentation for
+Refer to the Connect a printer documentation for
 details on connecting a printer to Odoo's *IoT* app. Upon completion, assign the carrier label to
 the printer, by navigating to :menuselection:`IoT app --> Devices`, and selecting the desired
 printer.
@@ -254,7 +254,7 @@ automatically printed in Odoo by following these steps:
 
 #. Tick the :guilabel:`Export Documents` checkbox in the :ref:`operation type settings
    <inventory/shipping_receiving/print_setup>`.
-#. :doc:`Connect a printer <../../../../general/iot/devices/printer>` to Odoo's *IoT* app.
+#. Connect a printer to Odoo's *IoT* app.
 #. Assign the export document to the printer.
 
 Assign printer

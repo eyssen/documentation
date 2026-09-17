@@ -146,7 +146,7 @@ Service & Buy Credits` internal link to purchase credits for résumé digitizati
 services, and their remaining credit balances.
 
 For more information on document digitization and :abbr:`IAP's (in-app purchases)`, refer to the
-:doc:`In-app purchase (IAP) <../essentials/in_app_purchase>` documentation.
+In-app purchase (IAP) documentation.
 
 .. note::
    The :guilabel:`Do not digitize` option may appear redundant but serves a distinct purpose.

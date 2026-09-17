@@ -189,8 +189,8 @@ AvaTax integration
    - Make sure to :ref:`install <general/install>` the :guilabel:`AvaTax Brazil` (`l10n_br_avatax`)
      module.
    - Odoo is a certified partner of Avalara Brazil.
-   - The :doc:`Avalara AvaTax integration <../accounting/taxes/avatax>` uses :doc:`In-App-Purchases
-     (IAPs) <../../essentials/in_app_purchase>` to compute taxes and handle electronic documents
+   - The :doc:`Avalara AvaTax integration <../accounting/taxes/avatax>` uses In-App-Purchases
+     (IAPs) to compute taxes and handle electronic documents
      (e.g., :ref:`NF-e <localizations/brazil/e-invoice-goods>`, :ref:`NFS-e
      <localizations/brazil/e-invoice-services>`). Each action consumes credits from the `IAP credit
      balance <https://iap.odoo.com/iap/in-app-services/819>`_. On creation, new databases receive
@@ -752,8 +752,8 @@ After :ref:`generating and validating the NFC-e <localizations/brazil/generate-n
 :guilabel:`Print` to deliver the invoice.
 
 .. note::
-   The Odoo NFC-e feature is compatible with any thermal printer and does not require an :doc:`Odoo
-   IoT Box <../../general/iot>`.
+   The Odoo NFC-e feature is compatible with any thermal printer and does not require an Odoo
+   IoT Box.
 
 .. _localizations/brazil/order-with-nfc-e-error:
 

@@ -33,7 +33,7 @@ the terminal:
    #. Press :menuselection:`"." --> 3 --> Stop --> 3 --> 0 --> 9`.
    #. Enter the technician password **1235789** and press **OK**.
    #. Press :menuselection:`4 --> 9 --> TCP/IP (ECR physical conf.)` and **OK** twice.
-   #. Enter the :ref:`IoT's IP address <iot/connect/IoT-form>` on the **Hostname** screen by
+   #. Enter the IoT's IP address on the **Hostname** screen by
       confirming each number with **OK** until the colon symbol, then confirm the step with **OK**.
       For example, if the IP address is `10.30.19.4:8069`, press :menuselection:`10 --> OK --> 30
       --> OK --> 19 --> OK --> 4 --> OK --> OK`.
@@ -51,8 +51,8 @@ The terminal is now active and displays the **Read card** screen.
    (Enterprise).
 
 .. tip::
-   To check the terminal's connection status, open the IoT app and click the :ref:`IoT system's
-   card <iot/connect/IoT-form>`.
+   To check the terminal's connection status, open the IoT app and click the IoT system's
+   card.
 
 .. _pos/worldline/odoo-configuration:
 
@@ -76,5 +76,5 @@ To connect the Worldline terminal with Odoo Point of Sale, follow these steps:
 .. tip::
    - If a setup uses separate cashier and customer payment terminals, :ref:`configure
      <pos/worldline/configuration>` the cashier terminal first.
-   - To prevent connection loss, set a fixed IP address on the IoT Box’s router or :ref:`restart
-     the virtual IoT server <iot/windows_iot/restart>`.
+   - To prevent connection loss, set a fixed IP address on the IoT Box’s router or restart
+     the virtual IoT server.

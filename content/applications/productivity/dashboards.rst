@@ -43,7 +43,7 @@ With Odoo Dashboards, users can, depending on their :ref:`access rights
    - Once a spreadsheet has been converted into a dashboard, it can only be accessed via the
      Dashboards app.
    - Unlike other Odoo dashboards, :guilabel:`My Dashboard` is not based on Odoo Spreadsheet, but
-     rather on :doc:`Odoo views <../studio/views>`.
+     rather on Odoo views.
 
 .. _dashboards/consult-dashboards:
 

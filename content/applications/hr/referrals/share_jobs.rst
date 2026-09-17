@@ -93,7 +93,7 @@ message.
 .. note::
    Sending text messages is **not** a default capability with Odoo. To send text messages, credits
    are required, which need to be purchased. For more information on IAP credits and plans, refer to
-   the :doc:`../../essentials/in_app_purchase` documentation.
+   the In-App Purchase (IAP) documentation.
 
 .. _referrals/whatsapp:
 

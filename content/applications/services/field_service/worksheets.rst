@@ -30,13 +30,13 @@ then click :guilabel:`Design Template` to open **Studio** and customize your wor
 
 In Studio, drag and drop the desired fields from the left column into your worksheet on the right.
 To rearrange the fields on the worksheet, drag and drop them in the desired order. Click a field to
-customize its :ref:`properties <studio/fields/properties>`.
+customize its properties.
 
 When your worksheet template is complete, click :guilabel:`Close` in the top right corner of the
 page to leave **Studio**.
 
 .. seealso::
-   :doc:`Fields and widgets in Studio <../../studio/fields>`
+   Fields and widgets in Studio
 
 Add a worksheet template to a field service task
 ================================================

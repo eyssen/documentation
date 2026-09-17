@@ -171,7 +171,7 @@ out.
    first, then the barcode of the lot/serial number.
 
 .. seealso::
-   :ref:`Connect to the Barcode Lookup database <barcode/setup/barcodelookup>` to quickly create new
+   Connect to the Barcode Lookup database to quickly create new
    products by scanning their barcodes during internal transfers.
 
 Create a transfer from scratch

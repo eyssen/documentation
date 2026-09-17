@@ -157,7 +157,7 @@ creation (or adjustment) of the transaction.
 .. important::
    Odoo *Studio* requires a *custom* pricing plan. Consult the database's customer success manager
    for more information on switching plans. Or to see if Odoo *Studio* is included in the database's
-   current pricing plan. See this documentation: :doc:`../../../../studio`.
+   current pricing plan. See this documentation: Studio.
 
 .. seealso::
    - :doc:`../avatax`

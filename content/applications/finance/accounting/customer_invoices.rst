@@ -103,13 +103,13 @@ To set a preferred :guilabel:`Invoice sending` method for a customer, go to
 method in the :guilabel:`Customer Invoices` section.
 
 .. note::
-   Sending letters in Odoo requires :doc:`In-App Purchase (IAP) <../../essentials/in_app_purchase>`
+   Sending letters in Odoo requires In-App Purchase (IAP)
    credit or tokens.
 
 To send the invoice to the customer, navigate back to the invoice record and follow these steps:
 
 #. Click :guilabel:`Send`.
-#. If the :ref:`default invoice layout <studio/pdf-reports/default-layout>` has not been customized
+#. If the default invoice layout has not been customized
    yet, a :guilabel:`Configure your document layout` pop-up window appears. Configure the layout and
    click :guilabel:`Continue`.
 

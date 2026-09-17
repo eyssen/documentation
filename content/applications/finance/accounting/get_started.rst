@@ -144,7 +144,7 @@ and Tax ID or VAT number. These details are then displayed on your documents, su
 Documents Layout
 ----------------
 
-Customize the :ref:`default invoice layout <studio/pdf-reports/default-layout>`.
+Customize the default invoice layout.
 
 .. note::
    You can also change the invoice layout by going to :menuselection:`Settings --> General

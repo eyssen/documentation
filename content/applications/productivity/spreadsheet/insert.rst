@@ -4,9 +4,9 @@ Insert and link to Odoo data
 
 Several elements from your Odoo database can be inserted into an Odoo spreadsheet, namely:
 
-- lists, i.e., data from a :ref:`list view <studio/views/multiple-records/list>`
-- pivot tables, i.e., data from a :ref:`pivot view <studio/views/reporting/pivot>`
-- charts, i.e., data from a :ref:`graph view <studio/views/reporting/graph>`
+- lists, i.e., data from a list view
+- pivot tables, i.e., data from a pivot view
+- charts, i.e., data from a graph view
 
 Each time a list, pivot table, or chart is inserted, a :ref:`data source
 <spreadsheet/insert/data-sources>` is created. This data source connects the spreadsheet to your
@@ -46,8 +46,7 @@ Data sources
 
 Data sources, which are created each time a :ref:`list <spreadsheet/insert/list>`, :ref:`pivot table
 <spreadsheet/insert/pivot-table>` or :ref:`graph <spreadsheet/insert/chart>` is inserted into an
-Odoo spreadsheet, connect the spreadsheet and the relevant :doc:`model
-<../../studio/models_modules_apps>` in your database, keeping the data in the spreadsheet
+Odoo spreadsheet, connect the spreadsheet and the relevant model in your database, keeping the data in the spreadsheet
 up-to-date.
 
 Each data source is defined by properties that can be accessed via the :guilabel:`Data` menu. Data

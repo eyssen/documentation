@@ -116,7 +116,7 @@ My Services`.
    :alt: Buy credits in the Odoo IAP settings.
 
 .. seealso::
-   :doc:`../../../essentials/in_app_purchase`
+   In-App Purchase (IAP)
 
 .. important::
    When collecting a company's contact information, make sure to be aware of the latest EU

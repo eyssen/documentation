@@ -2,9 +2,9 @@
 Property fields
 ===============
 
-Property fields, or properties, enable the customization of a :ref:`form
-<studio/views/general/form>` view by adding various :ref:`field types <property_field/add>`. These
-fields allow information storage and management by adding values.
+Property fields, or properties, enable the customization of a form view by adding various
+:ref:`field types <property_field/add>`. These fields allow information storage and management by
+adding values.
 
 .. admonition:: Property vs. regular fields
 
@@ -20,7 +20,7 @@ fields allow information storage and management by adding values.
 Add property fields
 -------------------
 
-To add a first property field to a :ref:`form view <studio/views/general/form>`, click the
+To add a first property field to a form view, click the
 :icon:`fa-cog` (:guilabel:`Actions`) icon, then select :icon:`fa-cogs` :guilabel:`Add Properties`.
 
 In the popover, enter the property's :guilabel:`Label`, choose a :guilabel:`Field Type`, and then
@@ -33,25 +33,25 @@ configure the field based on the selected type:
    * - Field type
      - Use
      - Options
-   * - :ref:`Text <studio/fields/simple-fields-text>`
+   * - Text
      - Short text on a single line
      - Enter a :guilabel:`Default Value` if desired.
-   * - :ref:`Checkbox <studio/fields/simple-fields-checkbox>`
+   * - Checkbox
      - Checked or unchecked status
      - Choose the :guilabel:`Default State`.
-   * - :ref:`Integer <studio/fields/simple-fields-integer>`
+   * - Integer
      - Integer numbers (:dfn:`positive, negative, or zero, without a decimal`)
      - Enter a :guilabel:`Default Value` if desired.
-   * - :ref:`Decimal <studio/fields/simple-fields-decimal>`
+   * - Decimal
      - Decimal numbers (:dfn:`positive, negative, or zero, with a decimal`)
      - Enter a :guilabel:`Default Value` if desired.
-   * - :ref:`Date <studio/fields/simple-fields-date>`
+   * - Date
      - Selection of a date on a calendar
      - Select a :guilabel:`Default Value` if desired.
-   * - :ref:`Date & Time <studio/fields/simple-fields-date-time>`
+   * - Date & Time
      - Selection of a date on a calendar and a time on a clock
      - Select a :guilabel:`Default Value` if desired.
-   * - :ref:`Selection <studio/fields/simple-fields-selection>`
+   * - Selection
      - Selection of a value from a group of predefined values
      - Add a selectable option by clicking :icon:`fa-plus` :guilabel:`Add a Value` and entering the
        :guilabel:`Option Name`.
@@ -63,18 +63,18 @@ configure the field based on the selected type:
        (:guilabel:`drag handle`) button.
 
        Delete an option by clicking the :icon:`fa-trash-o` (:guilabel:`Remove Property`) button.
-   * - :ref:`Tags <studio/fields/relational-fields-tags>`
+   * - Tags
      - Selection of multiple values in the form of tags
      - Enter a :guilabel:`Tag` name and press `Enter` to save it.
 
        Change a tag's color by clicking it and selecting another one.
-   * - :ref:`Many2one <studio/fields/relational-fields-many2one>`
+   * - Many2one
      - Selection of a single record from another model
      - Enter the :guilabel:`Model` name. Configure its :ref:`Domain <search/custom-filters>` to
        filter records if needed.
 
        Select a :guilabel:`Default Value` if desired.
-   * - :ref:`Many2many <studio/fields/relational-fields-many2many>`
+   * - Many2many
      - Selection of multiple records from another model
      - Enter the :guilabel:`Model` name. Configure its :ref:`Domain <search/custom-filters>` to
        filter records if needed.
@@ -108,7 +108,7 @@ Click outside the popover to save the added property.
 Properties across apps
 ----------------------
 
-Property fields can be defined in the :ref:`form view <studio/views/general/form>` of multiple
+Property fields can be defined in the form view of multiple
 models. Once set, the property is shared by all records that are linked to the same *parent*.
 
   .. list-table::

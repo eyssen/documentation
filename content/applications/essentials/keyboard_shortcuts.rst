@@ -8,9 +8,13 @@ and manage data.
 .. tip::
    Hold :kbd:`Ctrl` to view the keyboard shortcuts assigned to each element on the interface.
 
-   .. image:: keyboard_shortcuts/menu-shortcuts.png
-      :align: center
-      :alt: A selection of keyboard shortcuts in Odoo.
+   .. screenshot:: essentials-shortcuts-overlay
+      :menu: Sales ‣ Orders ‣ Quotations (Ctrl held down)
+      :shows: The backend with the Ctrl key held: the keyboard shortcut badges (e.g., A for New, Q for
+         search) displayed next to the buttons and menus.
+      :highlight: Two or three shortcut badges.
+      :module: web
+      :notes: English UI, 1440px width.
 
 .. important::
    Some keyboard shortcuts may not be available on different versions of Odoo or effective depending
@@ -81,6 +85,10 @@ operating system.
    options. Then, click :kbd:`Ctrl` + :kbd:`Enter` to open the selected app, module, or menu in a
    new tab.
 
-   .. image:: keyboard_shortcuts/command-palete.png
-      :align: center
-      :alt: The command palette in Odoo, with the menu search option selected.
+   .. screenshot:: essentials-shortcuts-command-palette
+      :menu: Any backend page ‣ Ctrl+K, then type "/"
+      :shows: The command palette in menu search mode ("/"), with a search term typed and matching
+         menus listed, one of them selected.
+      :highlight: The selected result.
+      :module: web
+      :notes: English UI, crop to the palette.

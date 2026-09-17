@@ -20,9 +20,13 @@ Navigate to the :menuselection:`Contacts app`, and select the :icon:`oi-view-lis
 (on the far-left) for the contacts that should be merged. Then, click the :icon:`fa-cog`
 :guilabel:`Actions` icon, and select :guilabel:`Merge` from the resulting drop-down menu.
 
-.. image:: merge/merge-menu.png
-   :align: center
-   :alt: The merge contacts option in the Contacts application.
+.. screenshot:: essentials-contacts-merge-action
+   :menu: Contacts ‣ List view
+   :shows: Two duplicate contacts ticked in the list and the gear (Actions) menu open with "Merge".
+   :highlight: The "Merge" entry.
+   :data: Two contacts "Brandon Freeman" with the same email.
+   :module: contacts
+   :notes: English UI, crop to the list header and the menu.
 
 This opens the :guilabel:`Merge` pop-up window. From here, review the details of the contacts before
 confirming they should be merged. If any contacts in the list should **not** be merged, click the
@@ -32,9 +36,14 @@ confirming they should be merged. If any contacts in the list should **not** be 
    Click the individual contact to open the record for that contact, and view additional
    information.
 
-.. image:: merge/merge-window.png
-   :align: center
-   :alt: The merge pop-up window in the Contacts application.
+.. screenshot:: essentials-contacts-merge-dialog
+   :menu: Contacts ‣ List view ‣ Actions ‣ Merge
+   :shows: The Merge dialog: Destination Contact field, the list of contacts to merge with the
+      delete icon on each line, and the "Merge Contacts" button.
+   :highlight: The Destination Contact field.
+   :data: Two contacts "Brandon Freeman" with the same email.
+   :module: contacts
+   :notes: English UI, crop to the dialog.
 
 Click the :guilabel:`Destination Contact` field, and select an option from the drop-down list. This
 field defaults to the contact record that was created first in the system.

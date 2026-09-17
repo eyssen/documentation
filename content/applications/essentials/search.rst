@@ -24,8 +24,13 @@ to apply the search filter.
    :guilabel:`(submenu)` icon next to :guilabel:`Search Salesperson for: Mitch`, and select
    :guilabel:`Mitchell Admin`.
 
-   .. image:: search/search-values.png
-      :alt: Searching for a specific value on the Sales Analysis report
+   .. screenshot:: essentials-search-values
+      :menu: Sales ‣ Reporting ‣ Sales
+      :shows: Search bar with "Mitch" typed; the "Search Salesperson for: Mitch" line is expanded with its submenu showing "Mitchell Admin".
+      :highlight: The submenu caret and "Mitchell Admin".
+      :data: Demo salesperson Mitchell Admin.
+      :module: sale
+      :notes: English UI, crop to the search bar and its dropdown.
 
 .. note::
    Using the search field is equivalent to using the *contains* operator when adding a :ref:`custom
@@ -64,8 +69,12 @@ from the search bar, and selecting one (or several) *preconfigured filters* from
    :icon:`fa-times` :guilabel:`(cancel)`, then select the :menuselection:`Order Date --> 2024`
    filter.
 
-   .. image:: search/preconfigured-filters.png
-      :alt: Using preconfigured filters on the Sales Analysis report
+   .. screenshot:: essentials-search-preconfigured-filters
+      :menu: Sales ‣ Reporting ‣ Sales
+      :shows: Search dropdown open: the Filters column with Order Date expanded and "2024" ticked; the facet "Order Date: 2024" in the search bar.
+      :highlight: The Order Date filter group.
+      :module: sale
+      :notes: English UI, crop to the search bar and its dropdown.
 
 .. note::
    The preconfigured :guilabel:`Filters` are grouped, and each group is separated by a horizontal
@@ -85,8 +94,11 @@ bar, then select :menuselection:`Filters --> Add Custom Filter`.
 The :guilabel:`Add Custom Filter` pop-up window displays the matching option, filter rule, and a
 toggle to :guilabel:`Include archived` records.
 
-.. image:: search/custom-filter.png
-   :alt: The Add Custom Filter pop-up window.
+.. screenshot:: essentials-search-custom-filter-dialog
+   :menu: Sales ‣ Reporting ‣ Sales ‣ search dropdown ‣ Add Custom Filter
+   :shows: Add Custom Filter dialog with the "Match any of the following rules" selector, one rule line, "New Rule" and the "Include archived" toggle.
+   :module: sale
+   :notes: English UI, crop to the dialog.
 
 The default matching configuration is to :guilabel:`Match any of the following rules`, indicating
 that each filter rule is applied independently. To change the matching configuration to
@@ -146,8 +158,12 @@ Once the filter criteria are defined, click :guilabel:`Add` to add the custom fi
       - :guilabel:`Type` :guilabel:`=` :guilabel:`Lead`
       - :guilabel:`Type` :guilabel:`=` :guilabel:`Opportunity`
 
-   .. image:: search/custom-filter-example.png
-      :alt: Adding a custom filter to filter specific records in CRM.
+   .. screenshot:: essentials-search-custom-filter-example
+      :menu: CRM ‣ Sales ‣ My Pipeline ‣ search dropdown ‣ Add Custom Filter
+      :shows: Dialog with "Match all of the following rules" and the example rules from the text (including the nested "any" group with Type = Lead / Type = Opportunity).
+      :highlight: The rule lines.
+      :module: crm
+      :notes: English UI, crop to the dialog.
 
 .. tip::
    Activate :ref:`developer-mode` to reveal each field's technical name and data type, as well as
@@ -169,8 +185,12 @@ then select one of the :guilabel:`Group By` options from the drop-down menu.
    drop-down menu. The view changes to group the records by salesperson, without filtering out any
    records.
 
-   .. image:: search/group.png
-      :alt: Grouping records on the Sales Analysis report
+   .. screenshot:: essentials-search-group-by
+      :menu: Sales ‣ Reporting ‣ Sales (List or Pivot view)
+      :shows: Search dropdown with Salesperson ticked under Group By, and the resulting grouped records behind it.
+      :highlight: The Group By column.
+      :module: sale
+      :notes: English UI, crop to the search bar and its dropdown.
 
 It is possible to *customize groups* by using a field present on the model. To do so, click
 :menuselection:`Add Custom Group`, and select a field from the drop-down menu.
@@ -186,8 +206,7 @@ Comparison
 ==========
 
 Certain reporting dashboards include a :guilabel:`Comparison` section in the drop-down menus of
-their search bars. This includes the :doc:`Overall Equipment Effectiveness
-<../inventory_and_mrp/manufacturing/reporting/oee>` report for the **Manufacturing** app and the
+their search bars. This includes the :guilabel:`Sales Analysis` report of the **Sales** app and the
 :doc:`Purchase <../inventory_and_mrp/purchase/advanced/analyze>` report for the **Purchase** app,
 among others.
 
@@ -206,8 +225,12 @@ Previous Period` and :guilabel:`(Time Filter): Previous Year`.
    another view is enabled, but doing so does **not** change the way data is displayed on the
    report.
 
-.. image:: search/comparison-section.png
-   :alt: The search bar for the production analysis report.
+.. screenshot:: essentials-search-comparison-section
+   :menu: Purchase ‣ Reporting ‣ Purchase
+   :shows: Search dropdown with a period ticked under Filters (Order Date: Q2) and the Comparison section showing "Order Date: Previous Period" and "Order Date: Previous Year".
+   :highlight: The Comparison section.
+   :module: purchase
+   :notes: English UI, crop to the search bar and its dropdown.
 
 To view data using one of the two comparisons, begin by selecting a time period in the
 :guilabel:`Filters` column of the search bar drop-down menu. Then, select either :guilabel:`(Time
@@ -231,20 +254,26 @@ prior. The way the data is displayed depends on the selected view:
   the previous time period.
 
 .. example::
-   In the :guilabel:`Production Analysis` report of the :menuselection:`Manufacturing` app, data for
-   the second quarter of 2024 is compared to data for the second quarter of 2023. :guilabel:`Q2` is
-   selected in the :guilabel:`End Date` filter section of the search bar drop-down
-   menu. In the :guilabel:`Comparison` section, :guilabel:`End Date: Previous Year` is selected.
+   In the :guilabel:`Purchase Analysis` report of the :menuselection:`Purchase` app, data for the
+   second quarter of 2024 is compared to data for the second quarter of 2023, using the
+   :icon:`fa-pie-chart` :guilabel:`(Pie Chart)` graph type. :guilabel:`Q2` is selected in the
+   :guilabel:`Order Date` filter section of the search bar drop-down menu. In the
+   :guilabel:`Comparison` section, :guilabel:`Order Date: Previous Year` is selected.
 
    The current year is 2024, so the larger circle shows data for the second quarter (Q2) of 2024.
    The smaller circle shows data for the second quarter (Q2) of 2023, which is the same time period,
    but one *year* prior.
 
-   If :guilabel:`End Date: Previous Period` is selected instead, the smaller circle shows data for
+   If :guilabel:`Order Date: Previous Period` is selected instead, the smaller circle shows data for
    the first quarter (Q1) of 2024, which is the same time period, but one *period* prior.
 
-   .. image:: search/comparison.png
-      :alt: The comparison view of the Production Analysis report.
+   .. screenshot:: essentials-search-comparison-pie
+      :menu: Purchase ‣ Reporting ‣ Purchase (Graph view, Pie Chart)
+      :shows: Pie chart with an outer circle (Q2 2024) and an inner circle (Q2 2023), facets "Order Date: Q2 2024" and "Order Date: Previous Year" in the search bar.
+      :highlight: The two circles and the legend.
+      :data: Demo purchase orders in both years.
+      :module: purchase
+      :notes: English UI, crop to the chart and the search bar.
 
 .. _search/favorites:
 
@@ -265,9 +294,12 @@ following options:
 
 Once the options are set, click :guilabel:`Save` to save the favorited search.
 
-.. image:: search/favorites.png
-   :alt: Saving a favorite search on the Sales Analysis report.
-   :scale: 80%
+.. screenshot:: essentials-search-favorites-save
+   :menu: Sales ‣ Reporting ‣ Sales
+   :shows: Search dropdown with the "Save current search" section expanded: Filter name, Default filter and Shared checkboxes, and the Save button.
+   :highlight: The "Save current search" section.
+   :module: sale
+   :notes: English UI, crop to the search bar and its dropdown.
 
 Favorited searches are accessed by clicking the :icon:`fa-caret-down` :guilabel:`(dropdown)` icon
 in the search bar, and are shown under :icon:`fa-star` :guilabel:`Favorites`. Searches that are only

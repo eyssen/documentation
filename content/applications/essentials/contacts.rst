@@ -39,8 +39,7 @@ Next, enter the :guilabel:`Address` of the :guilabel:`Company` or :guilabel:`Ind
 .. tip::
    If the :guilabel:`Individual` option is chosen, then the *type of address* can be chosen from a
    drop-down menu. Options for this drop-down menu include: :guilabel:`Contact`, :guilabel:`Invoice
-   Address`, :guilabel:`Delivery Address`, :guilabel:`Other Address`, and :guilabel:`Private
-   Address`.
+   Address`, :guilabel:`Delivery Address`, and :guilabel:`Other Address`.
 
 Additional fields
 -----------------
@@ -48,14 +47,12 @@ Additional fields
 Additional details are included on the initial form. The following fields are available:
 
 - :guilabel:`VAT`: Value Added Tax number.
-- :guilabel:`Citizen Identification`: citizen or government identification number (only available
-  on :guilabel:`Individual`).
 - :guilabel:`Job Position`: list the job position of the :guilabel:`Individual` (only available on
   :guilabel:`Individual`).
-- :guilabel:`Phone`: list phone number (with country code). Make a call, send an SMS, or WhatsApp
-  message by hovering over the field on the saved form, and clicking the desired option.
-- :guilabel:`Mobile`: list mobile phone number (with country code). Make a call, send an SMS, or
-  WhatsApp message by hovering over the field on the saved form, and clicking on the desired option.
+- :guilabel:`Phone`: list phone number (with country code). Make a call or send an SMS by hovering
+  over the field on the saved form, and clicking the desired option.
+- :guilabel:`Mobile`: list mobile phone number (with country code). Make a call or send an SMS by
+  hovering over the field on the saved form, and clicking on the desired option.
 - :guilabel:`Email`: enter the email address with the domain.
 - :guilabel:`Website`: enter the full website address, starting with `http` or `https`.
 - :guilabel:`Title`: select :guilabel:`Doctor`, :guilabel:`Madam`, :guilabel:`Miss`,
@@ -75,9 +72,14 @@ Multiple addresses can be added on both :guilabel:`Individual` and :guilabel:`Co
 do so, click :guilabel:`Add` in the :guilabel:`Contacts & Addresses` tab. Doing so reveals a
 :guilabel:`Create Contact` pop-up form, in which additional addresses can be configured.
 
-.. image:: contacts/contact-form-add-address.png
-   :align: center
-   :alt: Add a contact/address to the contact form.
+.. screenshot:: essentials-contacts-add-address
+   :menu: Contacts ‣ (a company contact) ‣ Contacts & Addresses tab
+   :shows: The Contacts & Addresses tab of a company contact with existing contact cards and the
+      "Add" button.
+   :highlight: The "Add" button.
+   :data: Demo company "Deco Addict" with two contact persons.
+   :module: contacts
+   :notes: English UI, 1440px width, crop to the tab.
 
 On the :guilabel:`Create Contact` pop-up form, start by clicking the default :guilabel:`Other
 Address` field at the top to reveal a drop-down menu of address-related options.
@@ -88,11 +90,15 @@ Select any of the following options:
 - :guilabel:`Invoice Address`: adds a specific invoice address to the existing contact form.
 - :guilabel:`Delivery Address`: adds a specific delivery address to the existing contact form.
 - :guilabel:`Other Address`: adds an alternate address to the existing contact form.
-- :guilabel:`Private Address`: adds a private address to the existing contact form.
 
-.. image:: contacts/create-contact-window.png
-   :align: center
-   :alt: Create a new contact/address on a contact form.
+.. screenshot:: essentials-contacts-create-contact-dialog
+   :menu: Contacts ‣ (a company contact) ‣ Contacts & Addresses ‣ Add
+   :shows: The Create Contact dialog with the address type options (Contact, Invoice Address,
+      Delivery Address, Other Address), name, address, email, phone, mobile and notes fields, and
+      the Save & Close / Save & New buttons.
+   :highlight: The address type selector.
+   :module: contacts
+   :notes: English UI, crop to the dialog.
 
 Once an option is selected, enter the corresponding contact information that should be used for the
 specified address type.
@@ -144,8 +150,8 @@ of a *Loyalty Program*.
 Purchase section
 ~~~~~~~~~~~~~~~~
 
-Specify :guilabel:`Payment Terms`, :guilabel:`1099 Box` information, and a preferred
-:guilabel:`Payment Method` here. A :guilabel:`Receipt Reminder` can be set here, as well.
+Specify the :guilabel:`Payment Terms` and a preferred :guilabel:`Payment Method` here. A
+:guilabel:`Receipt Reminder` can be set here, as well.
 
 Misc section
 ~~~~~~~~~~~~
@@ -156,17 +162,15 @@ multi-company database, select it from the :guilabel:`Company` field drop-down l
 :guilabel:`Website` drop-down menu to restrict the publishing of this contact to one website (if
 working on a database with multiple websites). Select one or more :guilabel:`Website Tags` to assist
 in filtering published customers on the `/customers` website page. Select an :guilabel:`Industry`
-for this contact from the drop-down menu. Use the :guilabel:`SLA Policies` field to assign a
-*Helpdesk* SLA policy to this contact.
+for this contact from the drop-down menu.
 
 Accounting tab
 --------------
 
-The :guilabel:`Accounting` tab appears when the *Accounting* application is installed. Here, a user
-can add any related :guilabel:`Bank Accounts`, or set default :guilabel:`Accounting entries`.
-
-Under the :guilabel:`Miscellaneous` heading, use the :guilabel:`LEI` field to enter a Legal Entity
-Identifier, if necessary.
+The :guilabel:`Accounting` tab (:guilabel:`Invoicing` tab for users without accounting rights)
+appears when the *Invoicing* or *Accounting* application is installed. Here, a user can add any
+related :guilabel:`Bank Accounts`, or set the default :guilabel:`Account Receivable` and
+:guilabel:`Account Payable` of the contact.
 
 Internal Notes tab
 ------------------
@@ -224,14 +228,14 @@ Odoo integrates information from every single app, so there are many smart butto
    If the corresponding applications are installed, their related smart buttons appear
    automatically on a contact form.
 
-A user can see any :guilabel:`Meetings`, :guilabel:`Sales`, :guilabel:`POS Orders`,
-:guilabel:`Subscriptions`, project :guilabel:`Tasks`, and the :guilabel:`More` smart button reveals
-additional options, via a drop-down menu. A user can even quickly access :guilabel:`Purchases`,
-:guilabel:`Helpdesk` tasks, :guilabel:`On-time Rate` for deliveries, :guilabel:`Invoiced`
-information, :guilabel:`Vendor Bills`, and the :guilabel:`Partner Ledger` connected to this contact.
+A user can see any :guilabel:`Meetings`, :guilabel:`Sales`, :guilabel:`POS Orders`, project
+:guilabel:`Tasks`, and the :guilabel:`More` smart button reveals additional options, via a
+drop-down menu. A user can even quickly access :guilabel:`Purchases`, :guilabel:`On-time Rate` for
+deliveries, :guilabel:`Invoiced` information, and :guilabel:`Vendor Bills` connected to this
+contact.
 
-Deliveries, documents, loyalty cards, and direct debits are *also* linked to smart buttons, like
-this, should there be any outstanding/on-file for this contact.
+Deliveries and loyalty cards are *also* linked to smart buttons, like this, should there be any
+outstanding/on-file for this contact.
 
 If the contact is a partner, the user can visit their partner page on the Odoo-built website by
 clicking the :guilabel:`Go to Website` smart button.
@@ -256,8 +260,6 @@ in the main contacts page, but they can still be searched for with the :guilabel
 
 .. seealso::
    - :doc:`Add different addresses in CRM <../sales/sales/sales_quotations/different_addresses>`
-   - `Odoo's eLearning Contacts tutorial
-     <https://www.odoo.com/slides/slide/contacts-2527?fullscreen=1>`_
 
 .. toctree::
    :titlesonly:

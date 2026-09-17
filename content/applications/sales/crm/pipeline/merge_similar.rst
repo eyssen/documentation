@@ -18,9 +18,13 @@ Similar leads and opportunities are identified by comparing the *email address* 
 of the associated contact. If a similar lead/opportunity is found, a *Similar Leads* smart button
 appears at the top of the lead (or opportunity) record.
 
-.. image:: merge_similar/similar-smart-button.png
-   :align: center
-   :alt: An opportunity record with emphasis on the Similar Leads smart button.
+.. screenshot:: sales-crm-merge-similar-button
+   :menu: CRM ‣ Sales ‣ My Pipeline ‣ (an opportunity)
+   :shows: An opportunity form with the "Similar Leads" smart button in the button box.
+   :highlight: The "Similar Leads" smart button (red frame).
+   :data: Opportunity with 2 similar records.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the button box.
 
 Comparing similar leads and opportunities
 -----------------------------------------
@@ -57,9 +61,13 @@ appropriate drop-down menus.
 Below those fields, the leads/opportunities to merge are listed, along with their related
 information. To merge those selected leads/opportunities, click :guilabel:`Merge`.
 
-.. image:: merge_similar/select-merge.png
-   :align: center
-   :alt: List of similar leads and opportunities selected for merge in the CRM app.
+.. screenshot:: sales-crm-merge-select
+   :menu: CRM ‣ Sales ‣ My Pipeline ‣ (an opportunity) ‣ Similar Leads
+   :shows: The list of similar leads and opportunities with two records selected and the gear (Actions) menu open on "Merge".
+   :highlight: The "Merge" item (red frame).
+   :data: Two similar records selected.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the list and the open menu.
 
 .. danger::
    Merging is an irreversible action. Do **not** merge leads/opportunities unless absolutely certain
@@ -112,6 +120,10 @@ to remain independent.
    While this lead is most likely from the same organization, it is from a different contact, and
    should **not** be merged.
 
-   .. image:: merge_similar/contact-info-example.png
-      :align: center
-      :alt: List of similar leads with emphasis on the contact information in the CRM app.
+   .. screenshot:: sales-crm-merge-contact-info
+      :menu: CRM ‣ Sales ‣ My Pipeline ‣ (an opportunity) ‣ Similar Leads
+      :shows: The similar-leads list with the Email and Phone columns showing near-identical but not identical contact details.
+      :highlight: The Email and Phone columns (red frame).
+      :data: Two records with the same email domain and slightly different phone numbers.
+      :module: crm
+      :notes: English UI, light theme, 1440px width, crop to the list.

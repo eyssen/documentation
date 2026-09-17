@@ -6,11 +6,13 @@ Utilize activities for sales teams
 on any page of the database that contains a chatter thread, Kanban view, list view, or activities
 view of an application.
 
-.. figure:: utilize_activities/activities-view.png
-   :align: center
-   :alt: The summary view of activities for leads and opportunities in an Odoo database.
-
-   Planned Activities for Leads and Opportunities.
+.. screenshot:: sales-crm-activities-view
+   :menu: CRM ‣ Sales ‣ My Pipeline
+   :shows: The Activity view of the pipeline: opportunities down the rows, activity types across the columns, with the coloured activity counters in the cells.
+   :highlight: No highlight; the activity grid is the subject.
+   :data: Six opportunities with overdue, today and planned activities.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the grid.
 
 Activity types
 ==============
@@ -62,12 +64,14 @@ after an activity is scheduled.
   planned activity in the chatter.
 - If either :guilabel:`Phonecall` or :guilabel:`Meeting` are selected, users have the option to open
   their calendar to schedule a time for this activity.
-- If :guilabel:`Request Signature` is selected, a link is added to the planned activity in the
-  chatter that opens a signature request pop-up window.
 
-.. image:: utilize_activities/action-field.png
-   :align: center
-   :alt: The Activity settings on a new activity type with emphasis on the Action field.
+.. screenshot:: sales-crm-activity-type-action
+   :menu: Settings ‣ Technical ‣ Activity Types ‣ (an activity type)
+   :shows: An activity-type form with the "Action" field showing its options (None, Upload Document, Phonecall, Meeting).
+   :highlight: The Action field (red frame).
+   :data: Activity type "Call"; developer mode active.
+   :module: mail
+   :notes: English UI, light theme, 1440px width, crop to the field group.
 
 .. note::
    The actions available to select on an activity type vary, depending on the applications currently
@@ -104,9 +108,13 @@ In the :guilabel:`Chaining Type` field, select :guilabel:`Suggest Next Activity`
 field underneath changes to: :guilabel:`Suggest`. Click the :guilabel:`Suggest` field drop-down menu
 to select any activities to recommend as follow-up tasks to this activity type.
 
-.. image:: utilize_activities/next-activity.png
-   :align: center
-   :alt: The Next Activity section on a new activity type form.
+.. screenshot:: sales-crm-activity-type-next
+   :menu: Settings ‣ Technical ‣ Activity Types ‣ (an activity type)
+   :shows: The "Next Activity" section of an activity-type form with the Chaining Type and "Suggest" fields.
+   :highlight: The Chaining Type and Suggest fields (red frame).
+   :data: Activity type "Call" suggesting "Meeting" and "Email".
+   :module: mail
+   :notes: English UI, light theme, 1440px width, crop to the field group.
 
 In the :guilabel:`Schedule` field, choose a default deadline for these activities. To do so,
 configure a desired number of :guilabel:`Days`, :guilabel:`Weeks`, or :guilabel:`Months`. Then,
@@ -122,9 +130,13 @@ When all configurations are complete, click :guilabel:`Save`.
    has activities listed in the :guilabel:`Suggest` field, users are presented with recommendations
    for activities as next steps.
 
-   .. image:: utilize_activities/suggest-next-activity.png
-      :align: center
-      :alt: A schedule activity pop-up with emphasis on the recommended activities.
+   .. screenshot:: sales-crm-activity-suggested
+      :menu: CRM ‣ Sales ‣ My Pipeline ‣ (an opportunity) ‣ Activities ‣ Mark Done
+      :shows: The "Schedule Activity" pop-up shown after marking an activity done, with the suggested follow-up activities offered as buttons.
+      :highlight: The suggested activity buttons (red frame).
+      :data: Suggestions "Meeting" and "Email".
+      :module: mail
+      :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 Trigger next activity
 *********************
@@ -195,9 +207,13 @@ If :guilabel:`Default user` is selected in the :guilabel:`Assignment` field, cho
    Activity plans can feature activities that are assigned to default users and users assigned at
    the plan launch.
 
-  .. image:: utilize_activities/create-activity-plan.png
-     :align: center
-     :alt: A Lead Plan form with scheduled activities.
+  .. screenshot:: sales-crm-activity-plan-form
+     :menu: CRM ‣ Configuration ‣ Activity Plans ‣ (a plan)
+     :shows: An activity-plan form with its steps: activity type, summary, the interval and the assignment of each step.
+     :highlight: The plan steps (red frame).
+     :data: Plan "Lead qualification" with three steps.
+     :module: mail
+     :notes: English UI, light theme, 1440px width, full form.
 
 Next, configure the timeline for the activity. Activities can be scheduled to occur either before
 the plan date or after. Use the :guilabel:`Interval` and :guilabel:`Units` fields to set the
@@ -238,17 +254,25 @@ the intervals configured on the :ref:`activity plan <crm/activity-plans>`.
 Select a user in the :guilabel:`Assigned To` field. This user is assigned to any of the activities
 on the plan were configured with :guilabel:`Ask at launch` in the :guilabel:`Assignment` field.
 
-.. image:: utilize_activities/schedule-activity-plan.png
-   :align: center
-   :alt: The schedule activity pop-up window with an Activity plan selected.
+.. screenshot:: sales-crm-activity-plan-launch
+   :menu: CRM ‣ Sales ‣ My Pipeline ‣ (an opportunity) ‣ Activities ‣ Plan
+   :shows: The schedule-activity pop-up with an activity plan selected and the resulting list of steps shown beneath it.
+   :highlight: The selected plan and its step summary (red frame).
+   :data: Plan "Lead qualification".
+   :module: mail
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 Click :guilabel:`Schedule`.
 
 The details of the plan are added to the chatter, in addition to each of the activities.
 
-.. image:: utilize_activities/activity-plan-chatter.png
-   :align: center
-   :alt: The chatter thread of a CRM opportunity with a launched activity plan.
+.. screenshot:: sales-crm-activity-plan-chatter
+   :menu: CRM ‣ Sales ‣ My Pipeline ‣ (an opportunity)
+   :shows: The chatter of the opportunity after launching the plan, listing the scheduled activities with their due dates and assignees.
+   :highlight: The scheduled activities (red frame).
+   :data: Three activities scheduled by the plan.
+   :module: mail
+   :notes: English UI, light theme, 1440px width, crop to the chatter.
 
 .. seealso::
  - :doc:`Activities </applications/essentials/activities>`

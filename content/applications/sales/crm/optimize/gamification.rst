@@ -16,9 +16,13 @@ Type `CRM Gamification` to search.
 On the :guilabel:`CRM Gamification` module, click :guilabel:`Install`. This module features goals
 and challenges related to the *CRM* and *Sales* applications.
 
-.. image:: gamification/gamification-module-install.png
-   :align: center
-   :alt: View of the gamification module being installed in Odoo.
+.. screenshot:: sales-crm-gamification-install
+   :menu: Apps
+   :shows: The Apps list filtered on "gamification", showing the "CRM Gamification" module card with its Activate button.
+   :highlight: The Activate button (red frame).
+   :data: Demo database; developer mode active.
+   :module: gamification
+   :notes: English UI, light theme, 1440px width, crop to the module card.
 
 .. note::
    If **both** the *CRM* and *Sales* apps are installed, the *CRM Gamification* module is
@@ -28,9 +32,13 @@ To access the *Gamification Tools* menu, first enable :ref:`developer-mode`.
 
 Next, navigate to :menuselection:`Settings app --> Gamification Tools`.
 
-.. image:: gamification/gamification-tools-menu.png
-   :align: center
-   :alt: View if the gamification tools menu in Odoo Settings.
+.. screenshot:: sales-crm-gamification-tools-menu
+   :menu: Settings ‣ Technical ‣ Gamification Tools
+   :shows: The Technical menu of the Settings app open on the "Gamification Tools" entries: Challenges, Goals, Badges.
+   :highlight: The Gamification Tools entries (red frame).
+   :data: Developer mode active.
+   :module: gamification
+   :notes: English UI, light theme, 1440px width, crop to the open menu.
 
 .. _crm/create-rewards:
 
@@ -44,9 +52,13 @@ they accomplish the goal.
 To view the existing badges, or create a new one, navigate to :menuselection:`Settings -->
 Gamification Tools --> Badges`.
 
-.. image:: gamification/badges.png
-   :align: center
-   :alt: View of the badges page in Odoo.
+.. screenshot:: sales-crm-gamification-badges-list
+   :menu: Settings ‣ Technical ‣ Gamification Tools ‣ Badges
+   :shows: The badges Kanban with the default badges and the number of times each has been granted.
+   :highlight: The New button (red frame).
+   :data: Default demo badges.
+   :module: gamification
+   :notes: English UI, light theme, 1440px width, crop to the Kanban.
 
 .. note::
    Some badges can be awarded outside of challenges, as well. Select the Kanban card for the desired
@@ -77,9 +89,13 @@ checkbox. This sets a limit on the number of times a user can grant this badge. 
 :guilabel:`Limitation Number` field, enter the maximum number of times this badge can be sent per
 month, per person.
 
-.. image:: gamification/create-badge.png
-   :align: center
-   :alt: The details page for a new badge.
+.. screenshot:: sales-crm-gamification-badge-form
+   :menu: Settings ‣ Technical ‣ Gamification Tools ‣ Badges ‣ New
+   :shows: A badge form with the name, description, image and the "Allowance to Grant" and "Monthly Limited Sending" fields.
+   :highlight: The "Allowance to Grant" field (red frame).
+   :data: Badge "Best closer".
+   :module: gamification
+   :notes: English UI, light theme, 1440px width, full form.
 
 .. _crm/create-challenge:
 
@@ -108,9 +124,13 @@ necessary, click into the third field to further define the parameter.
    - :guilabel:`is in`
    - `Sales/User: Own Documents Only`
 
-   .. image:: gamification/assignation-rule.png
-     :align: center
-     :alt: View of the assignation rules section of a Challenge form.
+   .. screenshot:: sales-crm-gamification-challenge-assignment
+      :menu: Settings ‣ Technical ‣ Gamification Tools ‣ Challenges ‣ (a challenge)
+      :shows: The assignment section of a challenge form with the Assign Challenge To, Periodicity and "Display Mode" fields.
+      :highlight: The Assign Challenge To field (red frame).
+      :data: Challenge "Monthly sales target", assigned to the sales team.
+      :module: gamification
+      :notes: English UI, light theme, 1440px width, crop to the field group.
 
 In the :guilabel:`Periodicity` field, select a time frame for goals to be automatically assessed.
 
@@ -137,9 +157,13 @@ Enter a :guilabel:`Target` for the goal based on the :guilabel:`Suffix`.
 
 Repeat these steps for each additional goal.
 
-.. image:: gamification/challenge-goals.png
-   :align: center
-   :alt: The goals tab of a challenge form.
+.. screenshot:: sales-crm-gamification-challenge-goals
+   :menu: Settings ‣ Technical ‣ Gamification Tools ‣ Challenges ‣ (a challenge) ‣ Goals
+   :shows: The Goals tab of a challenge with two goal definitions and their target values.
+   :highlight: The goal rows (red frame).
+   :data: Goals "New leads" (20) and "Invoiced amount" (10 000).
+   :module: gamification
+   :notes: English UI, light theme, 1440px width, crop to the notebook.
 
 Add rewards
 -----------

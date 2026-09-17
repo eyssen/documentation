@@ -11,16 +11,24 @@ Configuration
 To activate the *Leads* setting, navigate to :menuselection:`CRM app --> Configuration --> Settings`
 and check the box labeled, :guilabel:`Leads`. Then, click :guilabel:`Save`.
 
-.. image:: convert/convert-leads-leads-setting.png
-   :align: center
-   :alt: Leads setting on CRM configuration page.
+.. screenshot:: sales-crm-convert-leads-setting
+   :menu: CRM ‣ Configuration ‣ Settings
+   :shows: The CRM settings with the "Leads" checkbox enabled in the CRM section.
+   :highlight: The "Leads" setting (red frame).
+   :data: Demo company.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 Activating this feature adds a new menu option, :guilabel:`Leads`, to the header bar, located along
 the top of the screen.
 
-.. image:: convert/convert-leads-leads-menu.png
-   :align: center
-   :alt: Leads menu on CRM application.
+.. screenshot:: sales-crm-convert-leads-menu
+   :menu: CRM ‣ Leads
+   :shows: The CRM menu bar with the Leads menu visible after the setting was enabled.
+   :highlight: The Leads menu (red frame).
+   :data: Demo database.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the menu bar.
 
 Once the *Leads* setting has been activated, it applies to all sales teams by default. To turn off
 leads for a specific team, navigate to :menuselection:`CRM app --> Configuration --> Sales Teams`.
@@ -28,9 +36,13 @@ Then, select a team from the list to open that team's configuration page. Clear 
 :guilabel:`Leads` checkbox, located beneath the :guilabel:`Sales Team` field, then click
 :guilabel:`Save`.
 
-.. image:: convert/convert-leads-leads-button.png
-   :align: center
-   :alt: Leads menu on CRM application.
+.. screenshot:: sales-crm-convert-team-leads-button
+   :menu: CRM ‣ Configuration ‣ Sales Teams ‣ (a team)
+   :shows: A sales-team form with the Leads smart button in the button box.
+   :highlight: The Leads smart button (red frame).
+   :data: Sales team "Europe".
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the button box.
 
 Convert a lead into an opportunity
 ==================================
@@ -43,15 +55,23 @@ on a lead from the list to open it.
    indicates a similar lead or opportunity already exists in the database. Before converting this
    lead, click the smart button to confirm if the lead should be merged.
 
-   .. image:: convert/similar-leads-smart-button.png
-      :align: center
-      :alt: Close up of a lead with emphasis on the Similar Leads smart button.
+   .. screenshot:: sales-crm-convert-similar-leads-button
+      :menu: CRM ‣ Leads ‣ Leads ‣ (a lead)
+      :shows: A lead form with the "Similar Leads" smart button showing the number of matching records.
+      :highlight: The "Similar Leads" smart button (red frame).
+      :data: Lead "Interest in office chairs", 2 similar leads.
+      :module: crm
+      :notes: English UI, light theme, 1440px width, crop to the button box.
 
 Click the :guilabel:`Convert to Opportunity` button, located at the top-left of the page.
 
-.. image:: convert/convert-leads-convert-opp-button.png
-   :align: center
-   :alt: Create opportunity button on a lead record.
+.. screenshot:: sales-crm-convert-button
+   :menu: CRM ‣ Leads ‣ Leads ‣ (a lead)
+   :shows: The header of a lead form with the "Convert to Opportunity" button.
+   :highlight: The "Convert to Opportunity" button (red frame).
+   :data: Same lead.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the header.
 
 This opens a :guilabel:`Convert to opportunity` pop-up modal. Here, in the :guilabel:`Conversion
 Action` field, select the :guilabel:`Convert to opportunity` option.
@@ -74,9 +94,13 @@ assignments.
 If the lead has already been assigned to a salesperson or a team, these fields automatically
 populate with that information.
 
-.. image:: convert/convert-leads-conversion-action.png
-   :align: center
-   :alt: Create opportunity pop-up.
+.. screenshot:: sales-crm-convert-popup
+   :menu: CRM ‣ Leads ‣ Leads ‣ (a lead) ‣ Convert to Opportunity
+   :shows: The "Convert to opportunity" pop-up with the Conversion Action options, the Salesperson and Sales Team fields and the customer options.
+   :highlight: The Conversion Action options (red frame).
+   :data: "Convert to opportunity" selected.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 Under the :guilabel:`Customer` heading, choose from the following options:
 

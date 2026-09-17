@@ -20,9 +20,13 @@ pipeline, and are expected to close within four months. It also shows opportunit
 assigned expected closing date. The opportunities are grouped by month in a :icon:`oi-view-kanban`
 :guilabel:`(Kanban)` view.
 
-.. image:: forecast_report/sample-report.png
-   :align: center
-   :alt: A sample version of the Forecast report in the CRM app.
+.. screenshot:: sales-crm-forecast-report
+   :menu: CRM ‣ Reporting ‣ Forecast
+   :shows: The Forecast report in its default graph view, with the expected revenue stacked per month and the default filters in the search bar.
+   :highlight: No highlight; the report is the subject.
+   :data: Demo pipeline over six months.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the search bar and the chart.
 
 Expected closing date
 ---------------------
@@ -75,9 +79,13 @@ to reflect the change.
    The combined prorated revenue of the opportunities is `$7,920`, which is listed at the top of the
    column for the month.
 
-   .. image:: forecast_report/example-revenue.png
-      :align: center
-      :alt: An example of the prorated revenue for one month of the forecast report.
+   .. screenshot:: sales-crm-forecast-prorated-revenue
+      :menu: CRM ‣ Reporting ‣ Forecast
+      :shows: One month's column of the Forecast report with its tooltip open, showing the prorated revenue value.
+      :highlight: The tooltip value (red frame).
+      :data: One month with two opportunities.
+      :module: crm
+      :notes: English UI, light theme, 1440px width, crop to the column and tooltip.
 
 .. seealso::
    For more information on how probability is assigned to opportunities, see
@@ -91,9 +99,13 @@ the corresponding icon at the top of the report to switch to a :icon:`fa-bar-cha
 chart)`, :icon:`fa-line-chart` :guilabel:`(line chart)`, or :icon:`fa-pie-chart` :guilabel:`(pie
 chart)`.
 
-.. image:: forecast_report/pie-chart-view.png
-   :align: center
-   :alt: A pie chart view of the Forecast report.
+.. screenshot:: sales-crm-forecast-pie-chart
+   :menu: CRM ‣ Reporting ‣ Forecast
+   :shows: The Forecast report displayed as a pie chart, split by sales team.
+   :highlight: The pie-chart view button (red frame).
+   :data: Two sales teams.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the chart and view switcher.
 
 Click the |pivot| to change to the pivot view, or the |list| to change to the list view.
 
@@ -102,9 +114,13 @@ Click the |pivot| to change to the pivot view, or the |list| to change to the li
    in-depth manner. Multiple measures can be selected, and data can be viewed by month, and by
    opportunity stage.
 
-   .. image:: forecast_report/pivot-view.png
-      :align: center
-      :alt: A sample of the forecast report in the pivot view.
+   .. screenshot:: sales-crm-forecast-pivot
+      :menu: CRM ‣ Reporting ‣ Forecast
+      :shows: The Forecast report in pivot view, with months in the columns, sales teams in the rows and the expected revenue as the measure.
+      :highlight: No highlight; the pivot table is the subject.
+      :data: Six months, two sales teams.
+      :module: crm
+      :notes: English UI, light theme, 1440px width, crop to the pivot table.
 
 .. seealso::
    To save this report as a *favorite*, see :ref:`search/favorites`.

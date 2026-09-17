@@ -26,9 +26,13 @@ make more informed decisions when assigning new leads to their team
   has varied, some members of the sales team have received a higher number of quality leads than
   others.
 
-   .. image:: quality_leads_report/example-report.png
-      :align: center
-      :alt: An example of a quality leads report in the Odoo CRM application.
+   .. screenshot:: sales-crm-quality-leads-report
+      :menu: CRM ‣ Reporting ‣ Leads
+      :shows: A quality-leads report in list view, grouped by salesperson, with the custom filter facet in the search bar.
+      :highlight: The custom filter facet (red frame).
+      :data: Two salespeople, several qualified leads.
+      :module: crm
+      :notes: English UI, light theme, 1440px width, crop to the search bar and the list.
 
    Using this information, the sales manager may decide to assign more quality leads to the sales
    people currently on the lower end, to balance out the distribution of quality leads.
@@ -67,11 +71,13 @@ conditions:
 - :ref:`Add rules for quality leads <quality_leads_report/add-quality-rules>`: includes or excludes
   results based on criteria that is specific to a company or sales team.
 
-.. figure:: quality_leads_report/configured-custom-rules.png
-   :align: center
-   :alt: An example of the Custom Filter pop-up window with all of the rules configured.
-
-   An example of the *Custom Filter* pop-up window with all of the default rules configured.
+.. screenshot:: sales-crm-quality-leads-custom-filter
+   :menu: CRM ‣ Reporting ‣ Leads ‣ Filters ‣ Add Custom Filter
+   :shows: The "Add Custom Filter" pop-up with all the rules that define a quality lead configured.
+   :highlight: The rule list (red frame).
+   :data: Rules on Created on, Stage, Salesperson and Activities.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 .. _quality_leads_report/starting-date:
 
@@ -136,9 +142,13 @@ Include archived leads
 Next, in the upper-right corner of the :guilabel:`Add Custom filter` pop-up window, move the
 :guilabel:`Include archived` toggle to active.
 
-.. image:: quality_leads_report/include-archived.png
-   :align: center
-   :alt: The Add Custom Filter pop-up with emphasis on the Include Archived toggle.
+.. screenshot:: sales-crm-quality-leads-include-archived
+   :menu: CRM ‣ Reporting ‣ Leads ‣ Filters ‣ Add Custom Filter
+   :shows: The "Add Custom Filter" pop-up with the "Include archived" toggle switched on.
+   :highlight: The "Include archived" toggle (red frame).
+   :data: Same rule set.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the pop-up footer.
 
 Enabling this feature adds archived (inactive) leads to the report.
 
@@ -182,9 +192,13 @@ quality lead:
    statement above a rule determines whether the search results must match **all** of the rules
    below the statement, or **any** of the rules below the statement.
 
-   .. image:: quality_leads_report/match-all-match-any.png
-     :align: center
-     :alt: Close up of the match rule options on a add custom filter pop-up window.
+   .. screenshot:: sales-crm-quality-leads-match-options
+      :menu: CRM ‣ Reporting ‣ Leads ‣ Filters ‣ Add Custom Filter
+      :shows: The "Match all / any of the following rules" selector at the top of the custom-filter pop-up.
+      :highlight: The match selector (red frame).
+      :data: "all" selected.
+      :module: crm
+      :notes: English UI, light theme, 1440px width, crop to the selector.
 
 View the report
 ===============
@@ -195,9 +209,13 @@ View the report
    **all** of the following filters should be included. Before adding the filters, make sure
    :guilabel:`all` is selected in this field.
 
-   .. image:: quality_leads_report/match-all-rules.png
-     :align: center
-     :alt: Close up on the match all rules option on the add a custom filter pop-up window.
+   .. screenshot:: sales-crm-quality-leads-match-all
+      :menu: CRM ‣ Reporting ‣ Leads ‣ Filters ‣ Add Custom Filter
+      :shows: The custom-filter pop-up set to match all of the configured rules.
+      :highlight: The match selector set to "all" (red frame).
+      :data: Same rule set.
+      :module: crm
+      :notes: English UI, light theme, 1440px width, crop to the selector and the first rule.
 
 After the filters are configured, click :guilabel:`Add`. The default display for the report is a bar
 graph, where the leads are grouped by *stage*.

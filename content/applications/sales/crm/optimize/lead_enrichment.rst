@@ -12,11 +12,6 @@ The information provided by lead enrichment can include general information abou
 :guilabel:`Employees`, :guilabel:`Estimated revenue`, :guilabel:`Phone` number,
 :guilabel:`Timezone`, and :guilabel:`Technologies Used`.
 
-.. note::
-   Enterprise Odoo users with a valid subscription get free credits to test :abbr:`IAP (In-App
-   Purchase)` features before deciding to purchase more credits for the database. This includes
-   demo/training databases, educational databases, and one-app-free databases.
-
 .. important::
    The *leads* feature **must** be activated in the *CRM* settings page in order to use lead
    enrichment. To access the *CRM* settings, navigate to :menuselection:`CRM app --> Configuration
@@ -32,10 +27,13 @@ next to :guilabel:`Lead Enrichment`, and select either :guilabel:`Enrich leads o
 :guilabel:`Enrich all leads automatically`. Click the :guilabel:`Save` button to activate the
 changes.
 
-.. image:: lead_enrichment/lead-enrichment-activate.png
-   :align: center
-   :alt: CRM lead generation settings page, with lead enrichment activation highlighted, and enrich
-         leads on demand only chosen.
+.. screenshot:: sales-crm-lead-enrichment-setting
+   :menu: CRM ‣ Configuration ‣ Settings
+   :shows: The CRM settings with the "Lead Enrichment" checkbox enabled and the "Enrich leads on demand only" option selected.
+   :highlight: The Lead Enrichment setting and its options (red frame).
+   :data: Demo company.
+   :module: crm_iap_enrich
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 Enrich leads
 ============
@@ -61,9 +59,13 @@ remote database is contacted.
 .. example::
    The following is an example of lead enrichment data that has been autocompleted successfully:
 
-   .. image:: lead_enrichment/lead-enrichment-data.png
-      :align: center
-      :alt: Chatter showing lead enrichment data.
+   .. screenshot:: sales-crm-lead-enrichment-chatter
+      :menu: CRM ‣ Leads ‣ Leads ‣ (an enriched lead)
+      :shows: The chatter of an enriched lead with the note listing the data found (sector, employees, estimated revenue, phone, timezone, technologies used).
+      :highlight: The enrichment note (red frame).
+      :data: A lead enriched from its email domain.
+      :module: crm_iap_enrich
+      :notes: English UI, light theme, 1440px width, crop to the chatter.
 
 Manually enrich leads
 ---------------------
@@ -77,9 +79,13 @@ The same information will be retrieved at the same :abbr:`IAP (In-App Puchase)` 
 enrichment). This method of enrichment is useful when every lead does not need to be enriched, or
 cost is an issue.
 
-.. image:: lead_enrichment/manual-enrichment.png
-   :align: center
-   :alt: Manual enrich button feature highlighted on the CRM lead.
+.. screenshot:: sales-crm-lead-enrichment-manual-button
+   :menu: CRM ‣ Leads ‣ Leads ‣ (a lead)
+   :shows: A lead form with the "Enrich" button next to the email field.
+   :highlight: The "Enrich" button (red frame).
+   :data: A lead with a company email address.
+   :module: crm_iap_enrich
+   :notes: English UI, light theme, 1440px width, crop to the field group.
 
 .. tip::
    Manually enrich leads in bulk using the *list* view. First, navigate to :menuselection:`CRM app
@@ -103,17 +109,25 @@ To buy credits, navigate to :menuselection:`CRM app --> Configuration --> Settin
 :guilabel:`Lead Generation` section, under the :guilabel:`Lead Enrichment` feature, click on
 :guilabel:`Buy Credits`.
 
-.. image:: lead_enrichment/buy-lead-enrichment-credits-setting.png
-   :align: center
-   :alt: Buy credits from the lead enrichment settings.
+.. screenshot:: sales-crm-lead-enrichment-buy-credits
+   :menu: CRM ‣ Configuration ‣ Settings
+   :shows: The Lead Enrichment setting block with the "Buy credits" link beneath it.
+   :highlight: The "Buy credits" link (red frame).
+   :data: Demo company.
+   :module: crm_iap_enrich
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 Credits and balances may also be purchased by navigating to the :menuselection:`Settings app`. In
 the :guilabel:`Contacts` section, under the :guilabel:`Odoo IAP` feature, click on :guilabel:`View
 My Services`.
 
-.. image:: lead_enrichment/view-my-services-setting.png
-   :align: center
-   :alt: Buy credits in the Odoo IAP settings.
+.. screenshot:: sales-crm-lead-enrichment-iap-services
+   :menu: Settings ‣ General Settings ‣ Odoo IAP ‣ View My Services
+   :shows: The In-App Purchase services page listing the Lead Enrichment service with its remaining credit balance.
+   :highlight: The Lead Enrichment credit balance (red frame).
+   :data: A throw-away account with a small balance.
+   :module: iap
+   :notes: English UI, light theme, 1440px width, crop to the service row.
 
 .. seealso::
    :doc:`../../../essentials/in_app_purchase`

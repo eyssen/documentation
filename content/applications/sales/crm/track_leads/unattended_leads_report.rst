@@ -18,9 +18,13 @@ proactive behaviors in their salespeople.
    A sales manager starts their day by pulling an unattended leads report, and upon switching to
    list view, they see the following:
 
-   .. image:: unattended_leads_report/unattended-leads-example.png
-      :align: center
-      :alt: List view of a sample Unattended Leads report with the activities emphasized.
+   .. screenshot:: sales-crm-unattended-leads-report
+      :menu: CRM ‣ Leads ‣ Leads
+      :shows: A list of unattended leads with the activity column showing overdue activity icons.
+      :highlight: The overdue activity icons (red frame).
+      :data: Five leads with overdue activities.
+      :module: crm
+      :notes: English UI, light theme, 1440px width, crop to the list.
 
   Their team member, Mitchell, has two leads in the *Proposition* stage with activities that are
   due.
@@ -33,9 +37,13 @@ proactive behaviors in their salespeople.
   chatter. They see that the email was scheduled to be sent two days ago, but Mitchell never marked
   this activity as done.
 
-  .. image:: unattended_leads_report/overdue-activities-email.png
-     :align: center
-     :alt: Example of overdue activities notification in the chatter of a lead.
+  .. screenshot:: sales-crm-unattended-leads-chatter
+     :menu: CRM ‣ Leads ‣ Leads ‣ (a lead)
+     :shows: The chatter of a lead with the overdue activity shown in red at the top of the thread.
+     :highlight: The overdue activity (red frame).
+     :data: An activity due two weeks ago.
+     :module: mail
+     :notes: English UI, light theme, 1440px width, crop to the chatter header.
 
 .. important::
    In order to pull a unattended leads report, sales teams **must** be regularly utilizing activity
@@ -91,9 +99,13 @@ scroll to search through the list to locate it. Then, next to :guilabel:`Activit
 Type `Due Date` in the :guilabel:`Search...` bar, or scroll to search through the list. Click
 :guilabel:`Due Date` to add it to the rule.
 
-  .. image:: unattended_leads_report/activities-due.png
-     :align: center
-     :alt: Custom filter pop-up with emphasis on the options for activities and due date.
+  .. screenshot:: sales-crm-unattended-leads-due-filter
+     :menu: CRM ‣ Leads ‣ Leads ‣ Filters ‣ Add Custom Filter
+     :shows: The custom-filter editor with rules on the activity type and the activity due date.
+     :highlight: The due-date rule (red frame).
+     :data: Next Activity Deadline <= today.
+     :module: crm
+     :notes: English UI, light theme, 1440px width, crop to the rule rows.
 
 Then, click into then next field and select :guilabel:`<=` from the drop-down menu. Selecting this
 operator includes all activities with a due date up to, and including, the date selected in the next
@@ -133,11 +145,13 @@ Lastly, in the third field, select the desired sales team from the drop-down men
 can be added in this field, where each parameter is treated with an "or" (e.g. "any") operator in
 the search logic.
 
-.. figure:: unattended_leads_report/configured-custom-rules.png
-   :align: center
-   :alt: An example of the Custom Filter pop-up window with all of the rules configured.
-
-   An example of the **Add Custom Filter** pop-up window with all of the rules configured.
+.. screenshot:: sales-crm-unattended-leads-custom-filter
+   :menu: CRM ‣ Leads ‣ Leads ‣ Filters ‣ Add Custom Filter
+   :shows: The "Add Custom Filter" pop-up with all the rules of the unattended-leads report configured, including the sales team.
+   :highlight: The rule list (red frame).
+   :data: Rules on activity deadline, sales team and active status.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 .. _unattended_leads_report/view-results:
 
@@ -149,9 +163,13 @@ At the top of the :guilabel:`Add Custom Filter` form, there is an option to matc
 of the following filters should be included. Before adding the filters, make sure :guilabel:`all` is
 selected in this field.
 
-.. image:: unattended_leads_report/all-custom-filter.png
-   :align: center
-   :alt: Example of overdue activities notification in the chatter of a lead.
+.. screenshot:: sales-crm-unattended-leads-filter-facet
+   :menu: CRM ‣ Leads ‣ Leads
+   :shows: The search bar showing the applied custom filter facet of the unattended-leads report.
+   :highlight: The filter facet (red frame).
+   :data: The configured custom filter.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the search bar.
 
 After the filters are configured, click :guilabel:`Add`. The resulting report displays all leads
 assigned to a salesperson where an activity is past due, or is due on the current date. The default
@@ -179,9 +197,13 @@ screen.
    - :guilabel:`Expected Closing`: the estimated date on which the lead will be won.
    - :guilabel:`Probability`: estimated success rate based on the stage.
 
-  .. image:: unattended_leads_report/additional-options.png
-     :align: center
-     :alt: Custom filter pop-up with emphasis on the options for activities and due date.
+  .. screenshot:: sales-crm-unattended-leads-groupings
+     :menu: CRM ‣ Leads ‣ Leads ‣ Group By
+     :shows: The Group By panel of the search options with Salesperson and Sales Team available for grouping the report.
+     :highlight: The selected grouping (red frame).
+     :data: Grouped by Salesperson.
+     :module: crm
+     :notes: English UI, light theme, 1440px width, crop to the search panel.
 
 .. seealso::
    :doc:`Activities <../../../essentials/activities>`

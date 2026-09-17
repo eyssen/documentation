@@ -21,9 +21,13 @@ fields, if necessary.
 
 At the top-left of the form, click the :guilabel:`New Quotation` button.
 
-.. image:: send_quotes/send-quotes-new-button.png
-   :align: center
-   :alt: Qualified lead form with New Quotation button emphasized.
+.. screenshot:: sales-crm-send-quotes-new-quotation-button
+   :menu: CRM ‣ Sales ‣ My Pipeline ‣ (an opportunity)
+   :shows: The header of an opportunity form with the "New Quotation" button.
+   :highlight: The "New Quotation" button (red frame).
+   :data: Opportunity "Office furniture".
+   :module: sale_crm
+   :notes: English UI, light theme, 1440px width, crop to the header.
 
 .. important::
    The **Sales** application **must** be installed for the :guilabel:`New Quotation` button to
@@ -47,8 +51,6 @@ Once this button is clicked, a new quotation form appears. Confirm the informati
 of the form, and update any missing or incorrect fields:
 
 - :guilabel:`Customer`: the company or contact for whom this quotation was created.
-- :guilabel:`Referrer`: if this customer was referred by another customer or contact, select it from
-  the drop-down menu in this field.
 - :guilabel:`Invoice Address`: physical address where the invoice should be sent.
 - :guilabel:`Delivery Address`: physical address where any products should be delivered.
 - :guilabel:`Quotation Template`: if applicable, select a pre-configured :doc:`quotation template
@@ -62,9 +64,13 @@ of the form, and update any missing or incorrect fields:
 - :guilabel:`Pricelist`: select a pricelist to be applied to this order.
 - :guilabel:`Payment Terms`: select any applicable payment terms for this quotation.
 
-.. image:: send_quotes/send-quotes-new-quotation.png
-   :align: center
-   :alt: Qualified lead form with New Quotation button emphasized.
+.. screenshot:: sales-crm-send-quotes-quotation-form
+   :menu: CRM ‣ Sales ‣ My Pipeline ‣ (an opportunity) ‣ New Quotation
+   :shows: The quotation form opened from the opportunity, with the customer and salesperson pre-filled from the opportunity.
+   :highlight: The pre-filled Customer field (red frame).
+   :data: Customer "Deco Addict".
+   :module: sale_crm
+   :notes: English UI, light theme, 1440px width, crop to the top of the form.
 
 .. tip::
    The :guilabel:`Expiration` field automatically populates based on the creation date of the
@@ -105,9 +111,13 @@ Then, click the :icon:`oi-draggable` :guilabel:`(drag)` icon to the left of the 
 move the section to the appropriate location. Move each product using the same method to finish
 organizing the quotation order lines.
 
-.. image:: send_quotes/product-sections.png
-   :align: center
-   :alt: Categories are used to create separate sections on the order lines of a quote.
+.. screenshot:: sales-crm-send-quotes-order-sections
+   :menu: CRM ‣ Sales ‣ My Pipeline ‣ (an opportunity) ‣ New Quotation ‣ Order Lines
+   :shows: The Order Lines tab where products are grouped under two bold section lines.
+   :highlight: The section lines (red frame).
+   :data: Sections "Seating" and "Desks" with two products each.
+   :module: sale
+   :notes: English UI, light theme, 1440px width, crop to the order-lines table.
 
 Product catalog
 ~~~~~~~~~~~~~~~
@@ -118,18 +128,26 @@ product catalog.
 All products in the database are listed as cards and can be sorted in the left panel by
 :guilabel:`Product Category` and :guilabel:`Attributes`.
 
-.. image:: send_quotes/product-catalog.png
-   :align: center
-   :alt: The product catalog displays all products as cards.
+.. screenshot:: sales-crm-send-quotes-catalog
+   :menu: CRM ‣ Sales ‣ My Pipeline ‣ (an opportunity) ‣ New Quotation ‣ Catalog
+   :shows: The product catalog opened from the quotation, showing products as cards with their price and an Add button.
+   :highlight: No highlight; the catalog is the subject.
+   :data: Demo furniture products.
+   :module: sale
+   :notes: English UI, light theme, 1440px width, full page.
 
 To add a product, click the :icon:`fa-shopping-cart` :guilabel:`Add` button on the product card.
 Set the quantity of the item using the :icon:`fa-plus` :guilabel:`(add)` or :icon:`fa-minus`
 :guilabel:`(subtract)` buttons, or type the quantity in the number field between the two buttons.
 To remove an item, click the :icon:`fa-trash` :guilabel:`Remove` button on the product card.
 
-.. image:: send_quotes/set-quantity.png
-   :align: center
-   :alt: The purple add and subtract buttons are used to set the quantity of an item.
+.. screenshot:: sales-crm-send-quotes-catalog-quantity
+   :menu: CRM ‣ Sales ‣ My Pipeline ‣ (an opportunity) ‣ New Quotation ‣ Catalog
+   :shows: A product card in the catalog with the quantity stepper (minus and plus buttons) around the quantity field.
+   :highlight: The quantity stepper (red frame).
+   :data: Product "Conference Chair", quantity 3.
+   :module: sale
+   :notes: English UI, light theme, crop to the single product card.
 
 Once all product quantities are set, click the :guilabel:`Back to Quotation` button to return to the
 quotation. The items selected in the product catalog now appear in the :guilabel:`Order Lines` tab.

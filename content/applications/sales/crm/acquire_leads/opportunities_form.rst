@@ -19,9 +19,13 @@ top-right of the screen to open the web editor. Click on the form building block
 webpage to open the form configuration settings on the right sidebar. The following options are
 available to customize the contact form from the :guilabel:`From` section of the right sidebar:
 
-.. image:: opportunities_form/form-customization.png
-   :align: center
-   :alt: The form configuration settings on an Odoo website.
+.. screenshot:: sales-crm-contact-form-options
+   :menu: Website ‣ Site ‣ Pages ‣ Contact Us ‣ Edit
+   :shows: The website editor's form options panel with the "Action" set to "Create an Opportunity" and the related sales-team and salesperson options.
+   :highlight: The Action option (red frame).
+   :data: Demo website, Contact Us page.
+   :module: website_crm
+   :notes: English UI, light theme, 1440px width, crop to the options panel.
 
 - :guilabel:`Action`: the default action for a contact form is :guilabel:`Send an Email`. Select
   :guilabel:`Create an Opportunity` from the drop-down list to capture the information in the *CRM*
@@ -81,9 +85,13 @@ settings section on the sidebar. The following options are available to customiz
   choose whether to show or hide this field to mobile users.
 - :guilabel:`Animation`: select if this field should have any animation.
 
-.. image:: opportunities_form/field-customization.png
-   :align: center
-   :alt: The field configuration settings on an Odoo website.
+.. screenshot:: sales-crm-contact-form-field-options
+   :menu: Website ‣ Site ‣ Pages ‣ Contact Us ‣ Edit ‣ (a form field)
+   :shows: The website editor's field options panel with the Label, Type, Required and Visibility settings of a selected form field.
+   :highlight: The field options (red frame).
+   :data: The "Subject" field of the contact form.
+   :module: website_crm
+   :notes: English UI, light theme, 1440px width, crop to the options panel.
 
 View opportunities
 ==================

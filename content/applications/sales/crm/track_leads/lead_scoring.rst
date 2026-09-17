@@ -47,8 +47,13 @@ Which variables are considered in this calculation can be :ref:`configured
 The probability of success of each opportunity is displayed on the opportunity form, and it updates
 automatically as the opportunity progresses through the CRM pipeline.
 
-.. image:: lead_scoring/probability-opportunity-form.png
-   :alt: The probability of success displayed on the opportunity form.
+.. screenshot:: sales-crm-lead-scoring-probability
+   :menu: CRM ‣ Sales ‣ My Pipeline ‣ (an opportunity)
+   :shows: An opportunity form with the computed probability of success shown as a percentage next to the expected revenue.
+   :highlight: The probability percentage (red frame).
+   :data: Opportunity with a 32% probability.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the field group.
 
 When an opportunity moves to the next stage, its probability of success automatically increases
 according to the predictive lead scoring algorithm.
@@ -68,8 +73,13 @@ Configuration --> Settings`. Under :guilabel:`Predictive Lead Scoring`, click on
 Then, click on the drop-down menu to choose which variables the predictive lead scoring feature
 takes into account.
 
-.. image:: lead_scoring/update-probabilities.png
-   :alt: The Update Probabilities window in the Predictive Lead Scoring settings.
+.. screenshot:: sales-crm-lead-scoring-update-probabilities
+   :menu: CRM ‣ Configuration ‣ Settings ‣ Update Probabilities
+   :shows: The "Update Probabilities" pop-up with the date from which the historical data is used.
+   :highlight: The date field and the Confirm button (red frame).
+   :data: Date set to the start of the previous year.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 Any number of the following variables can be activated:
 
@@ -105,8 +115,13 @@ the probability number to edit it.
 
 To reactivate automatic probability, click on the gear icon next to the probability percentage.
 
-.. image:: lead_scoring/probability-gear-icon.png
-   :alt: The gear icon used to reactivate automatic probability on an opportunity form.
+.. screenshot:: sales-crm-lead-scoring-gear-icon
+   :menu: CRM ‣ Sales ‣ My Pipeline ‣ (an opportunity)
+   :shows: The probability field of an opportunity after a manual value was entered, with the gear icon that restores the automatic probability.
+   :highlight: The gear icon (red frame).
+   :data: Probability manually set to 50%.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the probability field.
 
 Assign leads based on probability
 =================================
@@ -130,8 +145,13 @@ section. The frequency of this automatic assignment is customized within the :gu
 every` section. Enter a specific number and select a corresponding time period to establish the
 desired interval. Time periods range from :guilabel:`Minutes` to :guilabel:`Weeks`.
 
-.. image:: lead_scoring/rule-based-assignment.png
-   :alt: The Rule-Based Assignment setting in CRM settings.
+.. screenshot:: sales-crm-lead-scoring-rule-based-setting
+   :menu: CRM ‣ Configuration ‣ Settings
+   :shows: The CRM settings with the "Rule-Based Assignment" checkbox enabled and the running-interval field beside it.
+   :highlight: The "Rule-Based Assignment" setting (red frame).
+   :data: Repeat manually.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 If :guilabel:`rule-based assignment` is set to run :guilabel:`Repeatedly`, the assignment can still
 be triggered manually using the circular arrow icon in the :guilabel:`Rule-Based Assignment`
@@ -168,8 +188,13 @@ In the far right space, enter the desired number value of the probability. Final
    To configure an assignment rule such that a sales team receives leads that have a probability of
    success of 20% or greater, create a :guilabel:`Domain` line that reads: `Probability >= 20`.
 
-   .. image:: lead_scoring/probability-domain.png
-      :alt: Sales team domain set to probability greater than or equal to twenty percent.
+   .. screenshot:: sales-crm-lead-scoring-team-domain
+      :menu: CRM ‣ Configuration ‣ Sales Teams ‣ (a team)
+      :shows: The "Leads Assignment" domain of a sales team, set to a probability greater than or equal to 20%.
+      :highlight: The domain rule (red frame).
+      :data: Team "Europe"; Probability >= 20.
+      :module: crm
+      :notes: English UI, light theme, 1440px width, crop to the domain editor.
 
 Separate assignment rules can also be configured for individual team members. From the sales team
 configuration page, click on a team member in the :guilabel:`Members` tab, then edit the

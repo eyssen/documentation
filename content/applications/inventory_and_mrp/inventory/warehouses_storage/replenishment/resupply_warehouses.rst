@@ -25,9 +25,14 @@ The initial configuration for both replenishment strategies is the same. First g
 :menuselection:`Inventory app --> Configuration --> Settings`. In the :guilabel:`Warehouse` section,
 activate :guilabel:`Storage Locations`. Then, click :guilabel:`Save` to apply the setting.
 
-.. image:: resupply_warehouses/storage-locations.png
-   :align: center
-   :alt: Enable Storage Locations in Inventory settings.
+.. screenshot:: inventory-resupply-enable-storage-locations
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to the "Warehouse" section with the "Storage Locations"
+      checkbox enabled.
+   :highlight: The "Storage Locations" checkbox (red frame).
+   :data: Demo company "YourCompany HU".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the "Warehouse" settings block.
 
 Warehouses
 ----------
@@ -56,9 +61,14 @@ resupply this warehouse.
 .. seealso::
    :doc:`../inventory_management/warehouses`
 
-.. image:: resupply_warehouses/warehouse.png
-   :align: center
-   :alt: Supply one warehouse with another in the Warehouse Configuration tab.
+.. screenshot:: inventory-resupply-warehouse-config
+   :menu: Inventory ‣ Configuration ‣ Warehouses ‣ (a warehouse) ‣ Warehouse Configuration tab
+   :shows: The "Warehouse Configuration" tab of a shop warehouse with the "Resupply From" field showing the
+      central warehouse ticked.
+   :highlight: The "Resupply From" checkbox of the central warehouse (red frame).
+   :data: Shop warehouse "Store" resupplied from "Central warehouse".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 Set route on a product
 ----------------------
@@ -94,9 +104,14 @@ warehouse <inventory/warehouses_storage/resupply-workflow>`.
    - :guilabel:`Store: Supply Product from YourCompany`
    - :guilabel:`Replenish on Order (MTO)`
 
-   .. image:: resupply_warehouses/resupply-route.png
-      :align: center
-      :alt: Route setting which enables a product to resupplied from a second warehouse.
+   .. screenshot:: inventory-resupply-mto-routes
+      :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Inventory tab
+      :shows: The "Routes" section of a product form with both "Store: Supply Product from YourCompany" and
+         "Replenish on Order (MTO)" ticked.
+      :highlight: The two ticked routes (red frame).
+      :data: Product sold at the "Store" warehouse, resupplied from "YourCompany".
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the Routes section.
 
 .. _inventory/warehouses_storage/reordering-rule:
 
@@ -124,9 +139,14 @@ Click :guilabel:`New`, and set:
    warehouse is created, with the :guilabel:`Location` set to `SHOP/Stock`, and the
    :guilabel:`Route` set to :guilabel:`Store: Resupply from YourCompany`.
 
-   .. image:: resupply_warehouses/reordering-rule.png
-      :align: center
-      :alt: Show reordering rule configurations.
+   .. screenshot:: inventory-resupply-reordering-rule
+      :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Reordering Rules ‣ New
+      :shows: A reordering rule whose "Location" is the shop's stock location and whose "Route" is the
+         inter-warehouse supply route, with Min and Max quantities set.
+      :highlight: The "Location" and "Route" cells (red frame).
+      :data: Location "SHOP/Stock", route "Store: Supply Product from YourCompany", min 0, max 0.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the line.
 
 .. _inventory/warehouses_storage/resupply-workflow:
 
@@ -140,17 +160,26 @@ After completing the setup, trigger replenishment using one of several methods, 
   Click the :guilabel:`Replenish` button on the top-left of the product page. In the pop-up window,
   set the warehouse to the retail shop, (e.g. `Store`), and click :guilabel:`Confirm`.
 
-  .. image:: resupply_warehouses/replenish.png
-     :align: center
-     :alt: Replenish pop-up window on the product form.
+  .. screenshot:: inventory-resupply-replenish-popup
+     :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Replenish
+     :shows: The "Replenish" pop-up on a product form with the "Warehouse" field set to the retail shop and
+        the "Confirm" button.
+     :highlight: The "Warehouse" field (red frame).
+     :data: Warehouse set to "Store", quantity 10.
+     :module: stock
+     :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 - Create a quotation, and in the :guilabel:`Other Info` tab, set the :guilabel:`Warehouse` to the
   retail shop (e.g. `Store`), when selling the product makes the on-hand quantity of the product go
   below the minimum set on the reordering rule.
 
-  .. image:: resupply_warehouses/warehouse-field.png
-     :align: center
-     :alt: Create a quote at the store.
+  .. screenshot:: inventory-resupply-quotation-warehouse
+     :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Other Info tab
+     :shows: The "Warehouse" field of a quotation set to the retail shop warehouse.
+     :highlight: The "Warehouse" field (red frame).
+     :data: Warehouse "Store"; one order line for the resupplied product.
+     :module: sale_stock
+     :notes: English UI, light theme, 1440px width, crop to the field.
 
 Once triggered, Odoo creates two transfers: One is a *delivery order* from the central, supplying
 warehouse, which contains all the necessary products to the store, and the second is a *receipt* at
@@ -167,6 +196,15 @@ While in transit, the product is located at `Physical Locations/Inter-warehouse 
    The final delivery order is from the shop to the customer's delivery address, and is not
    pertinent to the workflow in this guide.
 
-   .. image:: resupply_warehouses/transfers.png
-      :alt: Show shipments from warehouse to store.
+   .. screenshot:: inventory-resupply-transfers
+      :menu: Inventory ‣ Transfers
+      :shows: The two transfers created by an inter-warehouse replenishment: a delivery order from the
+         central warehouse's stock and a receipt at the shop's warehouse, with the inter-warehouse transit
+         location visible on their source/destination.
+      :highlight: The source and destination locations of the two transfers (red frames).
+      :data: Delivery from WH/Stock to Physical Locations/Inter-warehouse transit, receipt from there to
+         SHOP/Stock.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the two rows. Caption to convey: shipments from
+         the warehouse to the store.
 

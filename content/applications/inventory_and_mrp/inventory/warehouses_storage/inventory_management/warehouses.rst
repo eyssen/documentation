@@ -68,7 +68,13 @@ the warehouse form, which contains the following fields:
 .. seealso::
    :doc:`Use inventory adjustments to add stock to new warehouses <count_products>`
 
-.. image:: warehouses/warehouse-form.png
-   :align: center
-   :alt: Example warehouse form.
+.. screenshot:: inventory-warehouses-form
+   :menu: Inventory ‣ Configuration ‣ Warehouses ‣ (a warehouse)
+   :shows: A warehouse form with the Warehouse name, Short Name, Address and Company fields filled in, and
+      the Shipments section showing Incoming Shipments, Outgoing Shipments, Manufacture, Buy to Resupply and
+      Resupply From.
+   :highlight: The "Short Name" field and the "Shipments" section (red frames).
+   :data: Warehouse "YourCompany HU", short name "WH"; Multi-Step Routes enabled so all options are visible.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, full form.
 

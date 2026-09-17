@@ -106,8 +106,15 @@ the desired fields:
 .. tip::
    Some of these settings may not appear unless first enabled in **Settings** application.
 
-.. image:: aging/stock-valuation-report.png
-   :alt: Stock valuation report.
+.. screenshot:: inventory-aging-valuation-list
+   :menu: Inventory ‣ Reporting ‣ Valuation
+   :shows: The Stock Valuation report in list view with the Date, Reference, Product, Quantity and Total
+      Value columns, and the optional-column selector open showing Lot/Serial Number, Company, Remaining
+      Quantity, Unit Value, Description and Remaining Value.
+   :highlight: The optional-column selector (red frame).
+   :data: Valuation layers of two or three products from receipts and deliveries.
+   :module: stock_account
+   :notes: English UI, light theme, 1440px width, full list view with the selector open.
 
 .. _inventory/warehouses_storage/svl:
 
@@ -132,14 +139,27 @@ pricing. These entries are connected to journal entries in Odoo's **Accounting**
 Below is an example of what the :guilabel:`Stock Valuation` table shows when a few stock moves have
 occurred for a product using standard price accounting.
 
-.. image:: aging/before-val-method-change.png
-   :alt: Stock valuation table in standard price accounting.
+.. screenshot:: inventory-aging-standard-price-layers
+   :menu: Inventory ‣ Reporting ‣ Valuation
+   :shows: The Stock Valuation table for one product under standard-price accounting: each layer valued at
+      the same unit cost.
+   :highlight: The identical unit values (red frame).
+   :data: A product with three moves, all valued at the standard price.
+   :module: stock_account
+   :notes: English UI, light theme, 1440px width, crop to the product's lines.
 
 Conversely, the following image depicts what the *Stock Valuation* Report table might look like
 after a product has switched from standard price to :abbr:`FIFO (First In, First Out)` accounting.
 
-.. image:: aging/after-val-method-change.png
-   :alt: Stock valuation table after switching from standard price to FIFO accounting.
+.. screenshot:: inventory-aging-fifo-revaluation-layers
+   :menu: Inventory ‣ Reporting ‣ Valuation
+   :shows: The Stock Valuation table for the same product after switching from standard price to FIFO: two
+      extra revaluation layers appear, one negative removing the old price and one positive recording the
+      new one.
+   :highlight: The two revaluation lines (red frame).
+   :data: The same product as the previous screenshot, costing method changed to FIFO.
+   :module: stock_account
+   :notes: English UI, light theme, 1440px width, crop to the product's lines.
 
 .. example::
    The :guilabel:`Remaining Value` and :guilabel:`Remaining Quantity` fields are derived from what
@@ -162,8 +182,16 @@ after a product has switched from standard price to :abbr:`FIFO (First In, First
    the :abbr:`SVL (stock move layer)` was a sale, there is no stock left that needs to be valued
    from that transaction.
 
-   .. image:: aging/remaining-val-quant.png
-      :alt: Remaining value and quantity are calculated based on :abbr:`SVLs (stock move layers)`.
+   .. screenshot:: inventory-aging-remaining-quantity
+      :menu: Inventory ‣ Reporting ‣ Valuation
+      :shows: Two Stock Valuation lines of one product where the Remaining Quantity and Remaining Value of
+         the receipt layer dropped after a delivery, while its Total Value stayed unchanged, and the
+         delivery layer's remaining quantity is 0.00.
+      :highlight: The "Remaining Quantity" and "Remaining Value" columns (red frame).
+      :data: 100 sweaters received at 5.00, then 10 delivered: remaining quantity 90, remaining value
+         450.00, total value 500.00.
+      :module: stock_account
+      :notes: English UI, light theme, 1440px width, crop to the two lines with the optional columns shown.
 
 Change the valuation date
 -------------------------
@@ -207,8 +235,14 @@ options include: :guilabel:`Product`, :guilabel:`Lot/Serial Number`, :guilabel:`
 In the table, the :guilabel:`Remaining Qty` column displays the number of on-hand items, and
 :guilabel:`Remaining Value` displays the total cost of purchasing these items.
 
-.. image:: aging/stock-aging-report.png
-   :alt: Stock aging report, showing product row items and day columns.
+.. screenshot:: inventory-aging-pivot
+   :menu: Inventory ‣ Reporting ‣ Valuation ‣ (pivot view)
+   :shows: The Stock Valuation report in pivot view, with product rows and day/month columns, showing the
+      Remaining Qty and Remaining Value measures.
+   :highlight: None.
+   :data: Several products received over two or three different months.
+   :module: stock_account
+   :notes: English UI, light theme, 1440px width, full pivot view.
 
 .. _inventory/warehouses_storage/graph-view:
 

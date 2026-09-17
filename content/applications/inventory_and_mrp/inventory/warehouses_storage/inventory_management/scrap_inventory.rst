@@ -33,9 +33,14 @@ Click the drop-down menu in the :guilabel:`Product` field, and select the produc
 scrapped from inventory. In the :guilabel:`Quantity` field, change the value to the quantity of the
 product that should be scrapped (by default, this value is set to `1.00`).
 
-.. image:: scrap_inventory/scrap-inventory-new-scrap-order.png
-   :align: center
-   :alt: Filled out new scrap order form with product details.
+.. screenshot:: inventory-scrap-new-order
+   :menu: Inventory ‣ Operations ‣ Scrap ‣ New
+   :shows: A filled-in scrap order form with the Product, Quantity, Source Location, Scrap Location (Virtual
+      Locations/Scrap), Source Document, Company and the "Replenish Quantities" checkbox.
+   :highlight: The "Product" and "Quantity" fields (red frame).
+   :data: A damaged storable product, quantity 2, source WH/Stock.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, full form.
 
 The :guilabel:`Source Location` defaults to the location where the product is currently stored. The
 :guilabel:`Scrap Location` defaults to the designated scrap location (:guilabel:`Virtual
@@ -53,9 +58,13 @@ Once ready, click :guilabel:`Validate` to complete the new |SP|. Once validated,
 :guilabel:`Product Moves` smart button appears at the top of the form. Click the smart button to
 view the details of the scrap operation.
 
-.. image:: scrap_inventory/scrap-inventory-product-moves-button.png
-   :align: center
-   :alt: Product Moves smart button on new scrap order form.
+.. screenshot:: inventory-scrap-product-moves
+   :menu: Inventory ‣ Operations ‣ Scrap ‣ (a validated scrap order)
+   :shows: A validated scrap order with the "Product Moves" smart button at the top of the form.
+   :highlight: The "Product Moves" smart button (red frame).
+   :data: The scrap order from the previous screenshot, validated.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the button bar.
 
 .. tip::
    To view the all-time total quantities of scrapped items, navigate to :menuselection:`Inventory
@@ -67,9 +76,15 @@ view the details of the scrap operation.
 
    A list of all scrapped products, and their quantities, is displayed.
 
-   .. image:: scrap_inventory/scrap-inventory-current-stock.png
-      :align: center
-      :alt: Current Stock list of all scrapped products in virtual scrap location.
+   .. screenshot:: inventory-scrap-current-stock
+      :menu: Inventory ‣ Configuration ‣ Locations ‣ Virtual Locations/Scrap ‣ Current Stock
+      :shows: The stock list of the virtual scrap location, listing every scrapped product with its total
+         scrapped quantity.
+      :highlight: None.
+      :data: Three or four scrapped products.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, full list view. Requires removing the "Internal" filter
+         to reach the virtual location.
 
 Scrap from an existing operation
 ================================
@@ -82,9 +97,13 @@ To scrap a product during an operation, navigate to the :menuselection:`Inventor
 :guilabel:`Inventory Overview`, click the :guilabel:`# To Process` button on an operation's task
 card (i.e. the :guilabel:`Receipts` task card).
 
-.. image:: scrap_inventory/scrap-inventory-receipts-task-card.png
-   :align: center
-   :alt: # To Process button on Receipts task card on Inventory Overview page.
+.. screenshot:: inventory-scrap-overview-card
+   :menu: Inventory ‣ Overview
+   :shows: The Inventory Overview page with the "Receipts" task card and its "# To Process" button.
+   :highlight: The "# To Process" button on the Receipts card (red frame).
+   :data: At least two receipts waiting to be processed.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the Receipts card.
 
 Then, select an operation to process from the resulting list of existing orders. Doing so opens that
 operation's form.
@@ -92,9 +111,14 @@ operation's form.
 Click the :icon:`fa-cog` :guilabel:`(cog)` icon, and select :guilabel:`Scrap` from the resulting
 drop-down menu. This opens a :guilabel:`Scrap Products` pop-up window.
 
-.. image:: scrap_inventory/scrap-inventory-popup-window.png
-   :align: center
-   :alt: Scrap Products pop-up window on operation form.
+.. screenshot:: inventory-scrap-popup
+   :menu: Inventory ‣ Receipts ‣ (a receipt) ‣ Actions ‣ Scrap
+   :shows: The "Scrap Products" pop-up opened from a transfer, with the Product, Quantity, Lot/Serial,
+      Source Location, Scrap Location and "Replenish Quantities" fields.
+   :highlight: The "Product" and "Quantity" fields (red frame).
+   :data: A receipt containing a lot-tracked product, of which 1 unit is scrapped.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 From this pop-up window, click the drop-down menu in the :guilabel:`Product` field, and select the
 products from the operation that should be scrapped. Adjust the value in the :guilabel:`Quantity`
@@ -111,6 +135,11 @@ Once ready, click :guilabel:`Scrap Products`. A :guilabel:`Scraps` smart button 
 of the operation form. Click this smart button to view the details of all scrap orders created from
 this specific operation.
 
-.. image:: scrap_inventory/scrap-inventory-scraps-smart-button.png
-   :align: center
-   :alt: Scraps smart button showing all scrap orders from operation.
+.. screenshot:: inventory-scrap-smart-button
+   :menu: Inventory ‣ Receipts ‣ (the same receipt)
+   :shows: The transfer form after scrapping, with the "Scraps" smart button at the top showing the number
+      of scrap orders created from it.
+   :highlight: The "Scraps" smart button (red frame).
+   :data: The receipt from the previous screenshot with one scrap order.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the button bar.

@@ -34,9 +34,14 @@ Depending on the form being configured, this tab may be titled *Order Lines*, *C
 On the first blank line of the tab, click the :guilabel:`Catalog` link to open the catalog in a new
 page.
 
-.. image:: product_catalog/catalog-button.png
-   :align: center
-   :alt: The "Catalog" button on the "Order Lines" tab of a sales quotation.
+.. screenshot:: inventory-product-catalog-button
+   :menu: Sales ‣ Orders ‣ Quotations ‣ New
+   :shows: The "Order Lines" tab of a new quotation with the "Catalog" link next to "Add a product" on the
+      first blank line.
+   :highlight: The "Catalog" link (red frame).
+   :data: An empty quotation for the customer "Deco Addict".
+   :module: sale
+   :notes: English UI, light theme, 1440px width, crop to the order-lines area.
 
 The product catalog displays a card for each product added to Odoo. Each card displays a few key
 details about the corresponding product:
@@ -49,9 +54,14 @@ details about the corresponding product:
 - On-hand quantity
 - Variant attributes (e.g. *Color: White*)
 
-.. image:: product_catalog/product-card.png
-   :align: center
-   :alt: A product card in the product catalog.
+.. screenshot:: inventory-product-catalog-card
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Catalog
+   :shows: A single product card in the catalog showing the product photo, title, price, reference code,
+      on-hand quantity and variant attributes.
+   :highlight: None.
+   :data: A product with an image, a reference such as DESK0005, stock on hand and a colour attribute.
+   :module: sale
+   :notes: English UI, light theme, close crop on one card.
 
 Products can be filtered using the search bar at the top of the page, or the sidebar on the left
 side of the page.
@@ -69,9 +79,14 @@ In the sidebar on the left side of the page, select an option in the :icon:`fa-t
 :guilabel:`PRODUCT CATEGORY` section to filter by product category, or an option in the
 :icon:`fa-th-list` :guilabel:`ATTRIBUTES` section to filter by variant attribute.
 
-.. image:: product_catalog/filter-sidebar.png
-   :align: center
-   :alt: The filter sidebar in the product catalog.
+.. screenshot:: inventory-product-catalog-filters
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Catalog
+   :shows: The catalog page with the left sidebar showing the "PRODUCT CATEGORY" and "ATTRIBUTES" sections,
+      and the search drop-down with the "Products", "Services" and "In the Order" filters.
+   :highlight: The sidebar sections (red frame).
+   :data: Several product categories and at least one variant attribute.
+   :module: sale
+   :notes: English UI, light theme, 1440px width, full page.
 
 To add a product, click on the product's card, or click the :icon:`fa-shopping-cart` :guilabel:`Add`
 button in the bottom-right corner of the card. Doing so adds one unit of the product, which is
@@ -92,13 +107,45 @@ To remove a product from the order or |BoM| entirely, either click the :icon:`fa
 :guilabel:`Remove` button in the bottom-right corner of the product card, or click the
 :icon:`fa-minus` :guilabel:`(minus)` button until the quantity has been reduced to zero.
 
-.. image:: product_catalog/added-product.png
-   :align: center
-   :alt: A product card for a product that has been added.
+.. screenshot:: inventory-product-catalog-added
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Catalog
+   :shows: A product card after being added, showing the quantity field with the minus and plus buttons in
+      the bottom-left corner and the "Remove" button in the bottom-right corner.
+   :highlight: The quantity stepper and the "Remove" button (red frames).
+   :data: One product added with a quantity of 3.
+   :module: sale
+   :notes: English UI, light theme, close crop on one card.
 
 Once the desired quantity of each product has been added, return to the form by clicking the
 :guilabel:`Back to [X]` button at the top of the screen. This button differs depending on the type
 of form being configured (quotation, |BoM|, etc.).
+
+List view in the catalog
+========================
+
+The eYssen *Product Catalog* module (``eyssen_product_catalog``) adds a **list view** to the
+catalog, next to the default card (kanban) view. On long product lists a table is usually faster to
+scan and to fill in than a wall of cards.
+
+Switch to it with the :icon:`oi-view-list` :guilabel:`(list)` view switcher at the top-right of the
+catalog page. The list is sorted by :guilabel:`Internal Reference` and shows, for each product, the
+:guilabel:`Image`, :guilabel:`Internal Reference`, :guilabel:`Name`, :guilabel:`Sales Price` and the
+variant attribute values, together with the same quantity stepper and :guilabel:`Add` /
+:guilabel:`Remove` controls as the cards. Additional columns — :guilabel:`Favorite`,
+:guilabel:`Product Type`, :guilabel:`Product Category` and :guilabel:`Cost` — can be shown from the
+optional-column selector.
+
+Both views act on the same order, so products can be added in one view and adjusted in the other
+before returning to the form.
+
+.. screenshot:: inventory-product-catalog-list-view
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Catalog ‣ (list view)
+   :shows: The product catalog in list view, with the Image, Internal Reference, Name, Sales Price and
+      attribute-value columns and the quantity stepper at the end of each row.
+   :highlight: The list/kanban view switcher and the quantity stepper column (red frames).
+   :data: Ten or more products with internal references and images, two of them already added to the order.
+   :module: eyssen_product_catalog
+   :notes: English UI, light theme, 1440px width, full page.
 
 .. important::
    Products appear in the product catalog, and can be added to orders, even if there

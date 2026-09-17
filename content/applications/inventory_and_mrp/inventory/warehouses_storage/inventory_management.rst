@@ -82,9 +82,14 @@ field, there are:
       correct the quantity, five units are moved from `WH/Stock` to `Virtual Locations/Inventory
       Adjustment`.
 
-      .. image:: inventory_management/inventory-loss.png
-         :align: center
-         :alt: Product ends up in Virtual Locations/Inventory Adjustment.
+      .. screenshot:: inventory-management-inventory-loss
+         :menu: Inventory ‣ Reporting ‣ Moves History
+         :shows: The move line of an inventory adjustment where five units went from WH/Stock to Virtual
+            Locations/Inventory Adjustment.
+         :highlight: The destination location "Virtual Locations/Inventory Adjustment" (red frame).
+         :data: Database shows 65 units in WH/Stock, the count found 60, so 5 units were moved out.
+         :module: stock
+         :notes: English UI, light theme, 1440px width, crop to the move line.
 
 - :guilabel:`Production`: where raw materials are consumed, and :doc:`manufactured products
   <../../manufacturing>` are created.
@@ -93,9 +98,14 @@ field, there are:
   products shipped between different addresses, such as :ref:`Physical Locations/Inter-warehouse
   transit <inventory/warehouses_storage/interwarehouse-transit>`.
 
-.. image:: inventory_management/locations.png
-   :align: center
-   :alt: List of locations in Odoo.
+.. screenshot:: inventory-management-locations-list
+   :menu: Inventory ‣ Configuration ‣ Locations
+   :shows: The Locations list with the "Internal" filter removed, so all location types are shown with their
+      colour coding: internal locations in red, view locations in blue, external locations in black.
+   :highlight: None.
+   :data: A database with the default WH warehouse plus Partner, Virtual and Physical Locations.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, full list view; the colour differences must be visible.
 
 .. note::
    In Odoo, location types are color-coded:

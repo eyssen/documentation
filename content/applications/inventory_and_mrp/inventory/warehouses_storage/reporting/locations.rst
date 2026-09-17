@@ -48,8 +48,14 @@ Click the buttons to the right of each row item to access additional information
      On the :guilabel:`Moves History` page, remove the :icon:`fa-filter` :guilabel:`Done` filter
      from the search bar to reveal filter options, and select the :guilabel:`To Do` filter.
 
-     .. image:: locations/reserved-products.png
-        :alt: Display *Moves History* page of to-do deliveries that reserved the product.
+     .. screenshot:: inventory-locations-reserved-for
+        :menu: Inventory ‣ Reporting ‣ Locations ‣ (History on a line)
+        :shows: The Moves History page opened from a locations line, with the "Done" filter removed and the
+           "To Do" filter applied, so the pending deliveries that reserved the product are listed.
+        :highlight: The "To Do" filter facet in the search bar (red frame).
+        :data: One product reserved by two pending delivery orders.
+        :module: stock
+        :notes: English UI, light theme, 1440px width, show the search bar and the list.
 
 - :icon:`fa-refresh` :guilabel:`Replenishment`: access the :doc:`reordering rules
   <../replenishment/reordering_rules>` page to replenish products at the specific location.
@@ -71,8 +77,14 @@ To view which locations are currently empty, navigate to :menuselection:`Invento
 Empty locations are designated by the checkbox in the :guilabel:`Is Empty` column. To show only
 empty locations, click into the search bar and select the :guilabel:`Empty Locations` filter.
 
-.. image:: locations/empty-locations.png
-   :alt: A list of the empty locations in the Inventory app.
+.. screenshot:: inventory-locations-empty
+   :menu: Inventory ‣ Configuration ‣ Locations
+   :shows: The Locations list with the "Empty Locations" filter applied and the "Is Empty" column ticked on
+      the listed locations.
+   :highlight: The "Is Empty" column and the filter facet (red frames).
+   :data: Three or four empty internal locations.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, show the search bar and the list.
 
 Generate reports
 ================
@@ -102,8 +114,14 @@ The report now displays a list of expired products.
    <inventory/product_management/expiration-alerts>` page, accessed by going to
    :menuselection:`Inventory app --> Products --> Lots/Serial Numbers`.
 
-.. image:: locations/dead-stock.png
-   :alt: Show a list of products whose expiration dates have exceeded today.
+.. screenshot:: inventory-locations-dead-stock
+   :menu: Inventory ‣ Reporting ‣ Locations
+   :shows: The Locations report with the "Internal Locations" and "Expiration Alerts" filters applied,
+      listing the lots whose expiration date has passed.
+   :highlight: The two filter facets in the search bar (red frame).
+   :data: Two or three expired lots of perishable products.
+   :module: stock, product_expiry
+   :notes: English UI, light theme, 1440px width, show the search bar and the list.
 
 .. _inventory/warehouse_storage/stranded:
 
@@ -123,8 +141,14 @@ To get a list of items that might be sitting idly in storage, follow these steps
 #. Select the :guilabel:`Search Location for:` [location name] option from the resulting drop-down
    menu that appears beneath the search bar.
 
-   .. image:: locations/search-input-location.png
-      :alt: Show search result for the location.
+   .. screenshot:: inventory-locations-search-location
+      :menu: Inventory ‣ Reporting ‣ Locations
+      :shows: The search bar of the Locations report with a location name typed in and the "Search Location
+         for:" entry highlighted in the drop-down beneath it.
+      :highlight: The "Search Location for:" entry (red frame).
+      :data: Typing "Input" to search for the WH/Input location.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the search bar and the drop-down.
 
 The report now displays a list of products at the transit location.
 
@@ -135,8 +159,14 @@ The report now displays a list of products at the transit location.
    reception. The stranded inventory report helps identify items that have been idling in
    non-storage locations.
 
-   .. image:: locations/stranded-inventory.png
-      :alt: Show items stored at a specific location.
+   .. screenshot:: inventory-locations-stranded
+      :menu: Inventory ‣ Reporting ‣ Locations
+      :shows: The Locations report filtered on a transit location, listing the products left sitting there
+         instead of in their storage location.
+      :highlight: The large quantity left at the transit location (red frame).
+      :data: 500 units of a perishable product at WH/Input.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the lines.
 
 Inventory discrepancy report
 ----------------------------
@@ -151,11 +181,23 @@ To generate a report of items that have been moved since the last :doc:`inventor
    :guilabel:`Filters` section.
 #. The report now displays items whose quantities have changed since the last cycle count.
 
-   .. image:: locations/discrepancy.png
-      :alt: Show items from the *Conflicts* filter in the report.
+   .. screenshot:: inventory-locations-conflicts
+      :menu: Inventory ‣ Reporting ‣ Locations
+      :shows: The Locations report with the "Internal Locations" and "Conflicts" filters applied, listing
+         the products whose quantity changed since the last cycle count.
+      :highlight: The "Conflicts" filter facet (red frame).
+      :data: Two products moved after their last inventory adjustment.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, show the search bar and the list.
 
 #. Click the :icon:`fa-history` :guilabel:`History` button to view inventory transfers, including
    receipts and deliveries, that have occurred since the inventory adjustment.
 
-   .. image:: locations/history.png
-      :alt: Show *Moves History*, showing a delivery that occurred after an inventory adjustment.
+   .. screenshot:: inventory-locations-conflict-history
+      :menu: Inventory ‣ Reporting ‣ Locations ‣ (History on a conflicting line)
+      :shows: The Moves History of a conflicting product, showing the delivery that took place after the
+         last inventory adjustment.
+      :highlight: The delivery move that follows the adjustment (red frame).
+      :data: An inventory adjustment followed by a validated delivery of the same product.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the two move lines.

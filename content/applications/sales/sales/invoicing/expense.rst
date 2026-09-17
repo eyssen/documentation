@@ -165,8 +165,7 @@ to the manager by the employee.
 
 Once approved, the buttons at the top of the :guilabel:`Expense Report Summary` change once again.
 At this point, the buttons at the top of the :guilabel:`Expense Report Summary` are: :guilabel:`Post
-Journal Entries`, :guilabel:`Report in Next Payslip`, :guilabel:`Refuse`, and :guilabel:`Reset to
-Draft`.
+Journal Entries`, :guilabel:`Refuse`, and :guilabel:`Reset to Draft`.
 
 .. screenshot:: sales-expense-report-post
    :menu: Expenses ‣ Expense Reports ‣ (an approved report)

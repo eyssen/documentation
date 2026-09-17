@@ -255,8 +255,7 @@ report detailing all the expense information that was just entered.
    :module: hr_expense
    :notes: English UI, light theme, 1440px width, crop to the header and lines.
 
-Then, there's the option to :guilabel:`Submit to Manager` for approval. Once approved, the
-:guilabel:`Report in Next Payslip` appears.
+Then, there's the option to :guilabel:`Submit to Manager` for approval.
 
 To showcase a complete flow in this example, select :guilabel:`Submit to Manager`. Then, the manager
 would click :guilabel:`Approve` to approve this expense, and click :guilabel:`Post Journal Entries`

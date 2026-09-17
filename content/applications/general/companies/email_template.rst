@@ -64,14 +64,11 @@ the following options:
 :guilabel:`Media`
 
 - :guilabel:`Image`: Insert an image.
-- :guilabel:`Article`: Link an article.
 
 :guilabel:`Navigation`
 
 - :guilabel:`Link`: Add a link.
 - :guilabel:`Button`: Add a button.
-- :guilabel:`Appointment`: Add a specific appointment.
-- :guilabel:`Calendar`: Schedule an appointment.
 
 :guilabel:`Widgets`
 

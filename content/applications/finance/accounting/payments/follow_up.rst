@@ -99,7 +99,8 @@ number of :guilabel:`Due Days` before the reminder is sent, then choose the chan
   be used on the reminder wording.
 
 .. note::
-   Sending SMS messages or postal letters requires In-App Purchase (IAP) credit. Email and the online **Pay Now** link do not.
+   Sending SMS messages or postal letters requires :doc:`In-App Purchase (IAP)
+   </applications/essentials/in_app_purchase>` credit. Email and the online **Pay Now** link do not.
 
 .. screenshot-pending: follow_up/level-form.png
    :alt: Follow-up level form with channels and options.

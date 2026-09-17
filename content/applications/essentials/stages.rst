@@ -94,7 +94,8 @@ customer.
 
 .. note::
    The :guilabel:`SMS Template` field is available when the *Project - SMS* module (`project_sms`)
-   is installed, and sending text messages requires a working SMS service.
+   is installed. SMS text messaging is an :doc:`In-App Purchase (IAP)
+   </applications/essentials/in_app_purchase>` service that requires prepaid credits to work.
 
 To select an existing email template, select it from the :guilabel:`Email Template` field. After
 choosing a template, click on the :icon:`oi-arrow-right` :guilabel:`(right arrow)` icon to the right

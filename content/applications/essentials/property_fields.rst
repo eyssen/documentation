@@ -119,13 +119,6 @@ models. Once set, the property is shared by all records that are linked to the s
         * - App
           - Model
           - Parent
-        * - :guilabel:`Accounting`
-          - :ref:`Asset/Revenue Recognition <create-assets-entry>`
-
-            :doc:`Loan </applications/finance/accounting/bank/loans>`
-          - :ref:`Asset model <assets/asset-model>`
-
-            :ref:`Journal <cheat_sheet/journals>`
         * - :guilabel:`CRM`
           - :doc:`Lead/Opportunity </applications/sales/crm/acquire_leads/email_manual>`
           - :ref:`Sales team <crm/sales-team-dashboard>`
@@ -138,12 +131,6 @@ models. Once set, the property is shared by all records that are linked to the s
         * - :guilabel:`Fleet`
           - :doc:`Vehicle </applications/hr/fleet/new_vehicle>`
           - :ref:`Vehicle model <fleet/add-model>`
-        * - :guilabel:`Frontdesk`
-          - :ref:`Frontdesk Visitors <frontdesk/list>`
-          - :ref:`Station <frontdesk/stations>`
-        * - :guilabel:`Helpdesk`
-          - :ref:`Ticket <helpdesk/follow>`
-          - :ref:`Helpdesk team <helpdesk/create-team>`
         * - :guilabel:`Inventory`
           - :ref:`Lot/Serial <inventory/product_management/edit-lot>`
 
@@ -156,19 +143,10 @@ models. Once set, the property is shared by all records that are linked to the s
             :ref:`Operation type <inventory/product_management/operation-type-setting>`
 
             :ref:`Operation type <inventory/product_management/operation-type-setting>`
-        * - :guilabel:`Knowledge`
-          - :ref:`Knowledge Article <knowledge/articles_editing/create-article>`
-          - :ref:`Parent article <knowledge/articles_editing/create-article>`
         * - :guilabel:`Maintenance`
           - :ref:`Maintenance Equipment <maintenance/equipment_management/add_new_equipment>`
           - :ref:`Equipment category <maintenance/equipment_management/add_new_equipment>`
-        * - :guilabel:`Meeting Rooms`
-          - Room
-          - Office
-        * - :guilabel:`Planning`
-          - :ref:`Shift <planning/roles>`
-          - :ref:`Role <planning/roles>`
-        * - :guilabel:`Project` / :guilabel:`Field Service`
+        * - :guilabel:`Project`
           - :ref:`Task <task_creation/task-configuration>`
           - :ref:`Project <project_management/configuration>`
         * - :guilabel:`Recruitment`

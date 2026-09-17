@@ -100,54 +100,6 @@ displayed in the :guilabel:`Company` field.
 In a |mcd|, new products and contacts are shared across companies by default. To restrict them to a
 specific company, set the :guilabel:`Company` field on the record's form.
 
-.. _general/multi-company/inter-company-transactions:
-
-Inter-company transactions
-==========================
-
-The :guilabel:`Inter-Company Transactions` feature allows one company in the database to sell or
-purchase goods and services from another company within the same database. Depending on the
-configuration settings, counterpart documents for orders and invoices can be automatically generated
-and synchronized.
-
-.. warning::
-   To handle inter-company transactions correctly, :doc:`general
-   <../../finance/accounting/get_started>` and specific configurations must be set properly,
-   including :doc:`fiscal positions <../../finance/accounting/taxes/fiscal_positions>` and
-   :doc:`localizations <../../finance/fiscal_localizations>`.
-
-To activate inter-company transactions, select the relevant company in the :ref:`company selector
-<general/multi-company/company-selector>`, open the Settings app, navigate to the
-:guilabel:`Companies` section, enable :guilabel:`Inter-Company Transactions`, and :guilabel:`Save`.
-Then, select the option(s) to create a counterpart for the selected company:
-
-- :guilabel:`Generate Bills and Refunds`: Generate a bill/refund when a company confirms an
-  invoice/credit note for the selected company. To generate a validated bill/refund, select
-  :guilabel:`Create and validate`.
-- :guilabel:`Generate Sales Orders`: Generate a quotation (drafted sales order) when a sales order
-  is confirmed for the selected company. To generate a validated sales order instead of a quotation,
-  select :guilabel:`Create and validate`.
-- :guilabel:`Generate Purchase Orders`: Generate a request for quotation (drafted purchase order)
-  using the selected company warehouse in the :guilabel:`Use Warehouse` field when a purchase order
-  is confirmed for the selected company. To generate a validated purchase order instead of a request
-  for quotation, select :guilabel:`Create and validate`.
-
-.. note::
-   For inter-company transactions, the :ref:`products must be shared
-   <general/multi-company/shared-and-unshared-records>` among the involved companies.
-
-.. example::
-   :guilabel:`Generate Bills and Refunds`: when an invoice for :guilabel:`Customer` `JS Store US` is
-   posted on `JS Store Belgium`, a vendor bill is automatically created in `JS Store US`.
-
-   :guilabel:`Generate Sales Orders`: when a sales order for :guilabel:`Customer` `JS
-   Store US` is confirmed on `JS Store Belgium`, a purchase order on `JS Store US` is automatically
-   created (and confirmed if the :guilabel:`Create and validate` option is selected).
-
-.. seealso::
-   - :doc:`Multi-company Guidelines <../../../developer/howtos/company>`
-   - :doc:`../../finance/accounting/get_started/multi_currency`
-
 .. _general/multi-company/use-cases:
 
 Use cases
@@ -164,9 +116,8 @@ USD and CAD.
 Since each country has its own tax laws and regulations, using Odoo’s multi-company feature is
 highly beneficial.
 
-This setup allows for inter-company transactions, which is essential for managing cross-border
-inventory transfers. It also simplifies the sales process by enabling customers transactions in
-their local currency.
+This setup keeps the accounting of each company separate while sharing products and contacts. It
+also simplifies the sales process by enabling customers transactions in their local currency.
 
 .. _general/multi-company/use-cases-seperate-processes:
 

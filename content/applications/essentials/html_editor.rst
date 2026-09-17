@@ -10,7 +10,7 @@ full composer, among others. Start typing or use the :ref:`toolbar <essentials/h
 or :ref:`powerbox <essentials/html_editor/commands>` for formatting and structuring text.
 
 .. tip::
-   Hover over any element in the text (header, table, clipboard, etc.) to reveal the
+   Hover over any element in the text (header, table, banner, etc.) to reveal the
    :icon:`fa-sort` :guilabel:`(drag)` icon. Click and hold the icon to drag and drop the element
    elsewhere in the text.
 
@@ -43,11 +43,16 @@ toolbar and apply any of the following formatting options:
 - :icon:`fa-check-square-o` (:guilabel:`checklist`): Turn the text into a checklist.
 - :icon:`fa-link` (:guilabel:`link`): Insert or edit a URL link to a selected text, and optionally
   upload an image using its file URL.
-- :guilabel:`Translate`: Translate the content in the :doc:`installed languages
-  </applications/general/users/language>`.
+- :guilabel:`Translate`: Translate the selected text with AI into one of the :doc:`installed
+  languages </applications/general/users/language>`.
 - :icon:`fa-magic` :guilabel:`AI` (:guilabel:`ChatGPT`): Get AI-generated suggestions and adjust
   the tone by clicking buttons such as :guilabel:`Correct, Shorten, Lengthen, Friendly,
   Professional`, and :guilabel:`Persuasive`.
+
+.. note::
+   The :guilabel:`Translate` and :guilabel:`AI` options use Odoo SA's AI text generation service
+   (an :doc:`In-App Purchase <in_app_purchase>` service), so they require an internet connection
+   from the server to Odoo SA's services.
 
 .. screenshot:: essentials-html-editor-toolbar
    :menu: Project ‣ (any task) ‣ Description tab
@@ -169,8 +174,6 @@ multiple features to insert tables, images, banners, etc.
          * - :guilabel:`Media`
            - :ref:`Insert an image <insert-media>` or icon: :doc:`Search the Unsplash database
              </applications/general/integrations/unsplash>` or upload images, documents, or icons.
-         * - :guilabel:`Clipboard`
-           - Add a clipboard section to store content and reuse it in other apps.
          * - :guilabel:`Upload a file`
            - Add a download box: share images, recordings, or documents that internal users can
              download.

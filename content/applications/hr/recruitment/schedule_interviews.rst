@@ -193,7 +193,7 @@ the message immediately.
 .. note::
    Sending text messages is **not** a default capability with Odoo. To send text messages, credits
    are required, which need to be purchased. For more information on IAP credits and plans, refer to
-   the In-App Purchase (IAP) documentation.
+   the :doc:`../../essentials/in_app_purchase` documentation.
 
 .. _recruitment/schedule_interviews/applicant-scheduled:
 

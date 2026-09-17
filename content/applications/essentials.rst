@@ -11,5 +11,6 @@ Odoo essentials
    essentials/html_editor
    essentials/contacts
    essentials/export_import_data
+   essentials/in_app_purchase
    essentials/keyboard_shortcuts
    essentials/property_fields

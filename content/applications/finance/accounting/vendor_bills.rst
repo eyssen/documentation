@@ -49,8 +49,8 @@ Vendor bills can be automatically created by sending an email to an :ref:`email 
      completion and :ref:`matched with purchase orders
      <accounting/bill-digitization/vendor-bills-matching-po>` to replace OCR-detected data with the
      existing purchase order's details.
-   - Services such as digitizing scanned or PDF vendor bills in Odoo require In-App
-     Purchase (IAP) credits.
+   - Services such as digitizing scanned or PDF vendor bills in Odoo require :doc:`In-App
+     Purchase (IAP) </applications/essentials/in_app_purchase>` credits.
 
 To automatically post bills from selected vendors, go to :menuselection:`Accounting --> Vendors -->
 Vendors` and select the relevant vendor. In the :guilabel:`Accounting` tab, under the

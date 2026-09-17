@@ -71,4 +71,4 @@ a desired package.
    demo/training databases, educational databases, and one-app-free databases.
 
 .. seealso::
-   In-App Purchase (IAP)
+   :doc:`../../../essentials/in_app_purchase`

@@ -48,10 +48,10 @@ Digest`, and click on the :guilabel:`↗️ (External link)` icon, next to the d
 
 A pop-up window appears, and presents a variety of editable settings, which include:
 
-- :guilabel:`Digest Name`: the name of the digest email.
+- :guilabel:`Digest Title`: the name of the digest email.
 - :guilabel:`Periodicity`: control how often digest emails are sent (:guilabel:`Daily`,
   :guilabel:`Weekly`, :guilabel:`Monthly`, or :guilabel:`Quarterly`).
-- :guilabel:`Next Send Date`: the date on which the digest email will be sent again.
+- :guilabel:`Next Mailing Date`: the date on which the digest email will be sent again.
 - :guilabel:`KPIs` tab: check/uncheck each calculated :abbr:`KPI (key performance indicator)` that
   appears in digest emails. A ticked box indicates an active :abbr:`KPI (key performance indicator)`
   in the digest email. See the section on :ref:`digest-emails/kpis`.
@@ -64,7 +64,7 @@ A pop-up window appears, and presents a variety of editable settings, which incl
 
 .. screenshot:: general-digest-form
    :menu: Settings ‣ General Settings ‣ Statistics ‣ Digest Email ‣ (internal link)
-   :shows: The "Your Odoo Periodic Digest" form: Digest Name, Periodicity, Next Send Date, and the
+   :shows: The "Your Odoo Periodic Digest" form: Digest Title, Periodicity, Next Mailing Date, and the
       KPIs tab with checkboxes grouped by app.
    :highlight: The KPIs tab.
    :module: digest
@@ -79,9 +79,13 @@ To manually deactivate an individual digest email, first navigate to :menuselect
 --> Statistics section`, and click :guilabel:`Configure Digest Emails`. Then, select the desired
 digest email from the list that should be deactivated.
 
-Next, click :guilabel:`DEACTIVATE FOR EVERYONE` to deactivate the digest email for everyone, or
-:guilabel:`UNSUBSCRIBE ME` to remove the logged in user from the mailing list. These buttons are
-located in the top menu, just above the :guilabel:`Digest Name`.
+Next, click :guilabel:`Deactivate` to deactivate the digest email for everyone. A deactivated digest
+can be reactivated with the :guilabel:`Activate` button. Both buttons are located at the top of the
+form, next to the :guilabel:`Send Now` button, which sends the digest immediately.
+
+.. tip::
+   A recipient can stop receiving a digest by clicking the :guilabel:`Unsubscribe` link at the
+   bottom of the digest email.
 
 Manually send digest email
 ==========================
@@ -179,23 +183,23 @@ Create digest emails
 ====================
 
 To create a new digest email, navigate to :menuselection:`Settings app --> Statistics section`, and
-click :guilabel:`Configure Digest Emails`. Then, click :guilabel:`Create` to create a new digest
+click :guilabel:`Configure Digest Emails`. Then, click :guilabel:`New` to create a new digest
 email.
 
 A separate page, with a blank digest email template appears, and presents a variety of editable
 settings, including:
 
-- :guilabel:`Digest Name`: the name of the digest email.
+- :guilabel:`Digest Title`: the name of the digest email.
 - :guilabel:`Periodicity`: control how often digest emails are sent (:guilabel:`Daily`,
   :guilabel:`Weekly`, :guilabel:`Monthly`, or :guilabel:`Quarterly`).
-- :guilabel:`Next Send Date`: the date on which the digest email will be sent again.
+- :guilabel:`Next Mailing Date`: the date on which the digest email will be sent again.
 - :guilabel:`KPIs` tab: check/uncheck each calculated :abbr:`KPI (key performance indicator)` that
   appears in digest emails. A ticked box indicates an active :abbr:`KPI (key performance indicator)`
   in the digest email. See the section on :ref:`digest-emails/kpis`.
 - :guilabel:`Recipients` tab: add/remove users who receive the digest emails. See the section on
   :ref:`digest-emails/recipients`.
 
-From there, give the digest email a :guilabel:`Digest Name`, specify :guilabel:`Periodicity`,
+From there, give the digest email a :guilabel:`Digest Title`, specify :guilabel:`Periodicity`,
 choose the desired :abbr:`KPIs (key performance indicators)`, and add :guilabel:`Recipients`, as
 needed.
 

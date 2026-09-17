@@ -92,7 +92,6 @@ accounting at a time.
 
 .. seealso::
    - :doc:`Multi-company </applications/general/companies/multi_company>`
-   - :ref:`Inter-company transactions <general/multi-company/inter-company-transactions>`
 
 .. _accounting/multi-currency:
 

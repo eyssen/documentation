@@ -1350,10 +1350,6 @@ msgstr "Az adatok frissítésekor rendkívül fontos, hogy a *Külső azonosít�
 msgid "Odoo rich-text editor"
 msgstr "Odoo rich-text szerkesztő"
 
-#: ../../content/applications/essentials/html_editor.rst:13
-msgid "Hover over any element in the text (header, table, clipboard, etc.) to reveal the :icon:`fa-sort` :guilabel:`(drag)` icon. Click and hold the icon to drag and drop the element elsewhere in the text."
-msgstr "Vigye az egérmutatót a szöveg bármely eleme (fejléc, táblázat, vágólap stb.) fölé, hogy megjelenjen a :icon:`fa-sort` :guilabel:`(húzás)` ikon. Kattintson az ikonra, és tartsa lenyomva a szöveg egy másik helyére való húzáshoz."
-
 #: ../../content/applications/essentials/html_editor.rst:20
 msgid "Text editor toolbar"
 msgstr "Szövegszerkesztő eszköztár"
@@ -1418,471 +1414,459 @@ msgstr ":icon:`fa-check-square-o` (:guilabel:`ellenőrzőlista`): A szöveg áta
 msgid ":icon:`fa-link` (:guilabel:`link`): Insert or edit a URL link to a selected text, and optionally upload an image using its file URL."
 msgstr ":icon:`fa-link` (:guilabel:`hivatkozás`): URL-hivatkozás beszúrása vagy szerkesztése a kijelölt szöveghez, valamint opcionálisan kép feltöltése fájl URL segítségével."
 
-#: ../../content/applications/essentials/html_editor.rst:46
-msgid ":guilabel:`Translate`: Translate the content in the :doc:`installed languages </applications/general/users/language>`."
-msgstr ":guilabel:`Fordítás`: A tartalom lefordítása a :doc:`telepített nyelvekre </applications/general/users/language>`."
-
 #: ../../content/applications/essentials/html_editor.rst:48
 msgid ":icon:`fa-magic` :guilabel:`AI` (:guilabel:`ChatGPT`): Get AI-generated suggestions and adjust the tone by clicking buttons such as :guilabel:`Correct, Shorten, Lengthen, Friendly, Professional`, and :guilabel:`Persuasive`."
 msgstr ":icon:`fa-magic` :guilabel:`AI` (:guilabel:`ChatGPT`): AI által generált javaslatok megtekintése és a hangnem módosítása olyan gombokkal, mint a :guilabel:`Javítás, Rövidítés, Bővítés, Barátságos, Professzionális` és :guilabel:`Meggyőző`."
 
-#: ../../content/applications/essentials/html_editor.rst:67
+#: ../../content/applications/essentials/html_editor.rst:72
 msgid "Use the following keyboard shortcuts to apply formatting:"
 msgstr "A formázás alkalmazásához használja az alábbi billentyűparancsokat:"
 
-#: ../../content/applications/essentials/html_editor.rst:65
+#: ../../content/applications/essentials/html_editor.rst:70
 msgid "**Emphasis**: Press `CTRL`/`CMD` + `B`, `CTRL`/`CMD` + `I`, or `CTRL`/`CMD` + `U` to apply the bold, italics, or underlined effect."
 msgstr "**Kiemelés**: Nyomja meg a `CTRL`/`CMD` + `B`, `CTRL`/`CMD` + `I` vagy `CTRL`/`CMD` + `U` billentyűkombinációt a félkövér, dőlt vagy aláhúzott effektus alkalmazásához."
 
-#: ../../content/applications/essentials/html_editor.rst:67
+#: ../../content/applications/essentials/html_editor.rst:72
 msgid "**Numbered list**: Type `1.`, `1)`, `A.`, or `A)` to start a numbered list."
 msgstr "**Számozott lista**: Írja be a `1.`, `1)`, `A.` vagy `A)` karaktereket a számozott lista megkezdéséhez."
 
-#: ../../content/applications/essentials/html_editor.rst:68
+#: ../../content/applications/essentials/html_editor.rst:73
 msgid "**Bulleted list**: Type `*` or `-` to start a bulleted list."
 msgstr "**Felsorolásos lista**: Írja be a `*` vagy `-` karaktert a felsorolásos lista megkezdéséhez."
 
-#: ../../content/applications/essentials/html_editor.rst:73
+#: ../../content/applications/essentials/html_editor.rst:78
 msgid "Powerbox commands"
 msgstr "Powerbox parancsok"
 
-#: ../../content/applications/essentials/html_editor.rst:75
+#: ../../content/applications/essentials/html_editor.rst:80
 msgid "To use a command, type `/` to open the powerbox, then enter the command's name or select from multiple features to insert tables, images, banners, etc."
 msgstr "Parancs használatához írja be a `/` karaktert a powerbox megnyitásához, majd adja meg a parancs nevét, vagy válasszon a lehetőségek közül táblázatok, képek, szalagcímek stb. beszúrásához."
 
-#: ../../content/applications/essentials/html_editor.rst:79
+#: ../../content/applications/essentials/html_editor.rst:84
 msgid "Starting a new paragraph displays a tooltip with command shortcut icons. Click an icon to add the command, or click the :icon:`fa-ellipsis-v` (:guilabel:`ellipsis`) icon to open the powerbox for all commands."
 msgstr "Egy új bekezdés megkezdésekor egy parancsgyorsbillentyű-ikonokat tartalmazó eszköztipp jelenik meg. Kattintson egy ikonra a parancs hozzáadásához, vagy kattintson a :icon:`fa-ellipsis-v` (:guilabel:`három pont`) ikonra az összes parancsot tartalmazó parancsmező megnyitásához."
 
-#: ../../content/applications/essentials/html_editor.rst:84
+#: ../../content/applications/essentials/html_editor.rst:89
 msgid "Commands specific to particular apps are excluded from this description."
 msgstr "Az egyes alkalmazásokra jellemző parancsok nem szerepelnek ebben a leírásban."
 
-#: ../../content/applications/essentials/html_editor.rst:87
+#: ../../content/applications/essentials/html_editor.rst:92
 msgid "Structure"
 msgstr "Struktúra"
 
-#: ../../content/applications/essentials/html_editor.rst:94 ../../content/applications/essentials/html_editor.rst:129 ../../content/applications/essentials/html_editor.rst:147 ../../content/applications/essentials/html_editor.rst:167 ../../content/applications/essentials/html_editor.rst:185 ../../content/applications/essentials/html_editor.rst:205 ../../content/applications/essentials/html_editor.rst:221 ../../content/applications/essentials/html_editor.rst:233
+#: ../../content/applications/essentials/html_editor.rst:99 ../../content/applications/essentials/html_editor.rst:134 ../../content/applications/essentials/html_editor.rst:152 ../../content/applications/essentials/html_editor.rst:172 ../../content/applications/essentials/html_editor.rst:188 ../../content/applications/essentials/html_editor.rst:208 ../../content/applications/essentials/html_editor.rst:224 ../../content/applications/essentials/html_editor.rst:236
 msgid "Command"
 msgstr "Parancs"
 
-#: ../../content/applications/essentials/html_editor.rst:95 ../../content/applications/essentials/html_editor.rst:130 ../../content/applications/essentials/html_editor.rst:148 ../../content/applications/essentials/html_editor.rst:168 ../../content/applications/essentials/html_editor.rst:186 ../../content/applications/essentials/html_editor.rst:206 ../../content/applications/essentials/html_editor.rst:222 ../../content/applications/essentials/html_editor.rst:234 ../../content/applications/essentials/property_fields.rst:33
+#: ../../content/applications/essentials/html_editor.rst:100 ../../content/applications/essentials/html_editor.rst:135 ../../content/applications/essentials/html_editor.rst:153 ../../content/applications/essentials/html_editor.rst:173 ../../content/applications/essentials/html_editor.rst:189 ../../content/applications/essentials/html_editor.rst:209 ../../content/applications/essentials/html_editor.rst:225 ../../content/applications/essentials/html_editor.rst:237 ../../content/applications/essentials/property_fields.rst:34
 msgid "Use"
 msgstr "Felhasználás"
 
-#: ../../content/applications/essentials/html_editor.rst:96 ../../content/applications/essentials/property_fields.rst:82
+#: ../../content/applications/essentials/html_editor.rst:101 ../../content/applications/essentials/property_fields.rst:83
 msgid ":guilabel:`Separator`"
 msgstr ":guilabel:`Elválasztó`"
 
-#: ../../content/applications/essentials/html_editor.rst:97
+#: ../../content/applications/essentials/html_editor.rst:102
 msgid "Insert a horizontal rule separator."
 msgstr "Vízszintes elválasztó vonal beszúrása."
 
-#: ../../content/applications/essentials/html_editor.rst:98
+#: ../../content/applications/essentials/html_editor.rst:103
 msgid ":guilabel:`2 columns`"
 msgstr ":guilabel:`2 oszlop`"
 
-#: ../../content/applications/essentials/html_editor.rst:99
+#: ../../content/applications/essentials/html_editor.rst:104
 msgid "Convert into 2 columns."
 msgstr "Átalakítás 2 oszlopra."
 
-#: ../../content/applications/essentials/html_editor.rst:100
+#: ../../content/applications/essentials/html_editor.rst:105
 msgid ":guilabel:`3 columns`"
 msgstr ":guilabel:`3 oszlop`"
 
-#: ../../content/applications/essentials/html_editor.rst:101
+#: ../../content/applications/essentials/html_editor.rst:106
 msgid "Convert into 3 columns."
 msgstr "Átalakítás 3 oszlopra."
 
-#: ../../content/applications/essentials/html_editor.rst:102
+#: ../../content/applications/essentials/html_editor.rst:107
 msgid ":guilabel:`4 columns`"
 msgstr ":guilabel:`4 oszlop`"
 
-#: ../../content/applications/essentials/html_editor.rst:103
+#: ../../content/applications/essentials/html_editor.rst:108
 msgid "Convert into 4 columns."
 msgstr "Átalakítás 4 oszlopra."
 
-#: ../../content/applications/essentials/html_editor.rst:104
+#: ../../content/applications/essentials/html_editor.rst:109
 msgid ":guilabel:`Table`"
 msgstr ":guilabel:`Táblázat`"
 
-#: ../../content/applications/essentials/html_editor.rst:105
+#: ../../content/applications/essentials/html_editor.rst:110
 msgid "Insert a table."
 msgstr "Táblázat beszúrása."
 
-#: ../../content/applications/essentials/html_editor.rst:106
+#: ../../content/applications/essentials/html_editor.rst:111
 msgid ":guilabel:`Bulleted list`"
 msgstr ":guilabel:`Felsorolásjeles lista`"
 
-#: ../../content/applications/essentials/html_editor.rst:107
+#: ../../content/applications/essentials/html_editor.rst:112
 msgid "Create a bulleted list."
 msgstr "Felsorolásjeles lista létrehozása."
 
-#: ../../content/applications/essentials/html_editor.rst:108
+#: ../../content/applications/essentials/html_editor.rst:113
 msgid ":guilabel:`Numbered list`"
 msgstr ":guilabel:`Számozott lista`"
 
-#: ../../content/applications/essentials/html_editor.rst:109
+#: ../../content/applications/essentials/html_editor.rst:114
 msgid "Create a numbered list."
 msgstr "Számozott lista létrehozása."
 
-#: ../../content/applications/essentials/html_editor.rst:110
+#: ../../content/applications/essentials/html_editor.rst:115
 msgid ":guilabel:`Checklist`"
 msgstr ":guilabel:`Ellenőrzőlista`"
 
-#: ../../content/applications/essentials/html_editor.rst:111
+#: ../../content/applications/essentials/html_editor.rst:116
 msgid "Create a checklist."
 msgstr "Hozzon létre egy ellenőrzőlistát."
 
-#: ../../content/applications/essentials/html_editor.rst:112
+#: ../../content/applications/essentials/html_editor.rst:117
 msgid ":guilabel:`Quote`"
 msgstr ":guilabel:`Idézet`"
 
-#: ../../content/applications/essentials/html_editor.rst:113
+#: ../../content/applications/essentials/html_editor.rst:118
 msgid "Add a blockquote section."
 msgstr "Adjon hozzá egy blokkidézet szakaszt."
 
-#: ../../content/applications/essentials/html_editor.rst:114
+#: ../../content/applications/essentials/html_editor.rst:119
 msgid ":guilabel:`Code`"
 msgstr ":guilabel:`Kód`"
 
-#: ../../content/applications/essentials/html_editor.rst:115
+#: ../../content/applications/essentials/html_editor.rst:120
 msgid "Add a code section."
 msgstr "Adjon hozzá egy kód szakaszt."
 
-#: ../../content/applications/essentials/html_editor.rst:118
+#: ../../content/applications/essentials/html_editor.rst:123
 msgid "To organize a table, hover over a column or row to reveal the table menu. Click the :icon:`fa-ellipsis-h` :guilabel:`(ellipsis)` icon to move, insert, or delete a column or row."
 msgstr "A táblázat rendezéséhez vigye az egeret egy oszlop vagy sor fölé a táblázatmenü megjelenítéséhez. Kattintson a :icon:`fa-ellipsis-h` :guilabel:`(három pont)` ikonra egy oszlop vagy sor áthelyezéséhez, beszúrásához vagy törléséhez."
 
-#: ../../content/applications/essentials/html_editor.rst:122
+#: ../../content/applications/essentials/html_editor.rst:127
 msgid "Banner"
 msgstr "Szalag"
 
-#: ../../content/applications/essentials/html_editor.rst:131
+#: ../../content/applications/essentials/html_editor.rst:136
 msgid ":guilabel:`Banner Info`"
 msgstr ":guilabel:`Információs szalag`"
 
-#: ../../content/applications/essentials/html_editor.rst:132
+#: ../../content/applications/essentials/html_editor.rst:137
 msgid "Insert an info banner."
 msgstr "Szúrjon be egy információs szalagot."
 
-#: ../../content/applications/essentials/html_editor.rst:133
+#: ../../content/applications/essentials/html_editor.rst:138
 msgid ":guilabel:`Banner Success`"
 msgstr ":guilabel:`Sikeres szalag`"
 
-#: ../../content/applications/essentials/html_editor.rst:134
+#: ../../content/applications/essentials/html_editor.rst:139
 msgid "Insert a success banner."
 msgstr "Szúrjon be egy sikeres szalagot."
 
-#: ../../content/applications/essentials/html_editor.rst:135
+#: ../../content/applications/essentials/html_editor.rst:140
 msgid ":guilabel:`Banner Warning`"
 msgstr ":guilabel:`Figyelmeztető szalag`"
 
-#: ../../content/applications/essentials/html_editor.rst:136
+#: ../../content/applications/essentials/html_editor.rst:141
 msgid "Insert a warning banner."
 msgstr "Szúrjon be egy figyelmeztető szalagot."
 
-#: ../../content/applications/essentials/html_editor.rst:137
+#: ../../content/applications/essentials/html_editor.rst:142
 msgid ":guilabel:`Banner Danger`"
 msgstr ":guilabel:`Veszélyes szalag`"
 
-#: ../../content/applications/essentials/html_editor.rst:138
+#: ../../content/applications/essentials/html_editor.rst:143
 msgid "Insert a danger banner."
 msgstr "Szúrjon be egy veszélyes szalagot."
 
-#: ../../content/applications/essentials/html_editor.rst:140
+#: ../../content/applications/essentials/html_editor.rst:145
 msgid "Format"
 msgstr "Formátum"
 
-#: ../../content/applications/essentials/html_editor.rst:149
+#: ../../content/applications/essentials/html_editor.rst:154
 msgid ":guilabel:`Heading 1`"
 msgstr ":guilabel:`1. fejléc`"
 
-#: ../../content/applications/essentials/html_editor.rst:150
+#: ../../content/applications/essentials/html_editor.rst:155
 msgid "Big section heading."
 msgstr "Nagy szakaszcím."
 
-#: ../../content/applications/essentials/html_editor.rst:151
+#: ../../content/applications/essentials/html_editor.rst:156
 msgid ":guilabel:`Heading 2`"
 msgstr ":guilabel:`2. fejléc`"
 
-#: ../../content/applications/essentials/html_editor.rst:152
+#: ../../content/applications/essentials/html_editor.rst:157
 msgid "Medium section heading."
 msgstr "Közepes szakaszcím."
 
-#: ../../content/applications/essentials/html_editor.rst:153
+#: ../../content/applications/essentials/html_editor.rst:158
 msgid ":guilabel:`Heading 3`"
 msgstr ":guilabel:`3. szintű cím`"
 
-#: ../../content/applications/essentials/html_editor.rst:154
+#: ../../content/applications/essentials/html_editor.rst:159
 msgid "Small section heading."
 msgstr "Kis szakaszcím."
 
-#: ../../content/applications/essentials/html_editor.rst:155
+#: ../../content/applications/essentials/html_editor.rst:160
 msgid ":guilabel:`Text`"
 msgstr ":guilabel:`Szöveg`"
 
-#: ../../content/applications/essentials/html_editor.rst:156
+#: ../../content/applications/essentials/html_editor.rst:161
 msgid "Paragraph block: Insert a paragraph."
 msgstr "Bekezdésblokk: Bekezdés beszúrása."
 
-#: ../../content/applications/essentials/html_editor.rst:157
+#: ../../content/applications/essentials/html_editor.rst:162
 msgid ":guilabel:`Switch direction`"
 msgstr ":guilabel:`Irány váltása`"
 
-#: ../../content/applications/essentials/html_editor.rst:158
+#: ../../content/applications/essentials/html_editor.rst:163
 msgid "Switch the text's direction."
 msgstr "A szöveg irányának váltása."
 
-#: ../../content/applications/essentials/html_editor.rst:160
+#: ../../content/applications/essentials/html_editor.rst:165
 msgid "Media"
 msgstr "Média"
 
-#: ../../content/applications/essentials/html_editor.rst:169
+#: ../../content/applications/essentials/html_editor.rst:174
 msgid ":guilabel:`Media`"
 msgstr ":guilabel:`Média`"
 
-#: ../../content/applications/essentials/html_editor.rst:170
+#: ../../content/applications/essentials/html_editor.rst:175
 msgid ":ref:`Insert an image <insert-media>` or icon: :doc:`Search the Unsplash database </applications/general/integrations/unsplash>` or upload images, documents, or icons."
 msgstr ":ref:`Kép beszúrása <insert-media>` vagy ikon: :doc:`Keresés az Unsplash adatbázisban </applications/general/integrations/unsplash>` vagy képek, dokumentumok vagy ikonok feltöltése."
 
-#: ../../content/applications/essentials/html_editor.rst:172
-msgid ":guilabel:`Clipboard`"
-msgstr ":guilabel:`Vágólap`"
-
-#: ../../content/applications/essentials/html_editor.rst:173
-msgid "Add a clipboard section to store content and reuse it in other apps."
-msgstr "Vágólap szakasz hozzáadása tartalom tárolásához és más alkalmazásokban való újrafelhasználásához."
-
-#: ../../content/applications/essentials/html_editor.rst:174
+#: ../../content/applications/essentials/html_editor.rst:177
 msgid ":guilabel:`Upload a file`"
 msgstr ":guilabel:`Fájl feltöltése`"
 
-#: ../../content/applications/essentials/html_editor.rst:175
+#: ../../content/applications/essentials/html_editor.rst:178
 msgid "Add a download box: share images, recordings, or documents that internal users can download."
 msgstr "Letöltési mező hozzáadása: osszon meg képeket, felvételeket vagy dokumentumokat, amelyeket a belső felhasználók letölthetnek."
 
-#: ../../content/applications/essentials/html_editor.rst:178
+#: ../../content/applications/essentials/html_editor.rst:181
 msgid "Navigation"
 msgstr "Navigáció"
 
-#: ../../content/applications/essentials/html_editor.rst:187
+#: ../../content/applications/essentials/html_editor.rst:190
 msgid ":guilabel:`Link`"
 msgstr ":guilabel:`Hivatkozás`"
 
-#: ../../content/applications/essentials/html_editor.rst:188
+#: ../../content/applications/essentials/html_editor.rst:191
 msgid "Add a link: Type the label and enter a URL or upload a file, then click :guilabel:`Apply`."
 msgstr "Hivatkozás hozzáadása: Írja be a feliratot, adjon meg egy URL-t vagy töltsön fel egy fájlt, majd kattintson az :guilabel:`Alkalmaz` gombra."
 
-#: ../../content/applications/essentials/html_editor.rst:190
+#: ../../content/applications/essentials/html_editor.rst:193
 msgid ":guilabel:`Button`"
 msgstr ":guilabel:`Gomb`"
 
-#: ../../content/applications/essentials/html_editor.rst:191
+#: ../../content/applications/essentials/html_editor.rst:194
 msgid "Add a button: Type the label, enter a URL or upload a file, select the button style, type, and size, then click :guilabel:`Apply`."
 msgstr "Gomb hozzáadása: Írja be a feliratot, adjon meg egy URL-t vagy töltsön fel egy fájlt, válassza ki a gomb stílusát, típusát és méretét, majd kattintson az :guilabel:`Alkalmaz` gombra."
 
-#: ../../content/applications/essentials/html_editor.rst:193
+#: ../../content/applications/essentials/html_editor.rst:196
 msgid ":guilabel:`Table Of Content`"
 msgstr ":guilabel:`Tartalomjegyzék`"
 
-#: ../../content/applications/essentials/html_editor.rst:194
+#: ../../content/applications/essentials/html_editor.rst:197
 msgid "Highlight the structure (headings): Create a table of content based on the headings."
 msgstr "Jelölje ki a struktúrát (fejlécek): Hozzon létre tartalomjegyzéket a fejlécek alapján."
 
-#: ../../content/applications/essentials/html_editor.rst:195
+#: ../../content/applications/essentials/html_editor.rst:198
 msgid ":guilabel:`Video Link`"
 msgstr ":guilabel:`Videóhivatkozás`"
 
-#: ../../content/applications/essentials/html_editor.rst:196
+#: ../../content/applications/essentials/html_editor.rst:199
 msgid "Insert a video: Copy-paste the video URL (Youtube, Vimeo, Dailymotion, and Youku only)."
 msgstr "Szúrjon be egy videót: Másolja be a videó URL-jét (csak Youtube, Vimeo, Dailymotion és Youku)."
 
-#: ../../content/applications/essentials/html_editor.rst:198
+#: ../../content/applications/essentials/html_editor.rst:201
 msgid "Widget"
 msgstr "Widget"
 
-#: ../../content/applications/essentials/html_editor.rst:207
+#: ../../content/applications/essentials/html_editor.rst:210
 msgid ":guilabel:`Emoji`"
 msgstr ":guilabel:`Emoji`"
 
-#: ../../content/applications/essentials/html_editor.rst:208
+#: ../../content/applications/essentials/html_editor.rst:211
 msgid "Add an emoji: search for the desired emoji."
 msgstr "Adjon hozzá egy emojit: keresse meg a kívánt emojit."
 
-#: ../../content/applications/essentials/html_editor.rst:209
+#: ../../content/applications/essentials/html_editor.rst:212
 msgid ":guilabel:`3 Stars`"
 msgstr ":guilabel:`3 csillag`"
 
-#: ../../content/applications/essentials/html_editor.rst:210
+#: ../../content/applications/essentials/html_editor.rst:213
 msgid "Insert a rating of up to 3 stars."
 msgstr "Szúrjon be legfeljebb 3 csillagos értékelést."
 
-#: ../../content/applications/essentials/html_editor.rst:211
+#: ../../content/applications/essentials/html_editor.rst:214
 msgid ":guilabel:`5 Stars`"
 msgstr ":guilabel:`5 csillag`"
 
-#: ../../content/applications/essentials/html_editor.rst:212
+#: ../../content/applications/essentials/html_editor.rst:215
 msgid "Insert a rating of up to 5 stars."
 msgstr "Szúrjon be legfeljebb 5 csillagos értékelést."
 
-#: ../../content/applications/essentials/html_editor.rst:214
+#: ../../content/applications/essentials/html_editor.rst:217
 msgid "AI Tools"
 msgstr "AI-eszközök"
 
-#: ../../content/applications/essentials/html_editor.rst:223
+#: ../../content/applications/essentials/html_editor.rst:226
 msgid ":guilabel:`ChatGPT`"
 msgstr ":guilabel:`ChatGPT`"
 
-#: ../../content/applications/essentials/html_editor.rst:224
+#: ../../content/applications/essentials/html_editor.rst:227
 msgid "Generate content with AI."
 msgstr "Tartalom generálása AI segítségével."
 
-#: ../../content/applications/essentials/html_editor.rst:226
+#: ../../content/applications/essentials/html_editor.rst:229
 msgid "Basic Block"
 msgstr "Alapblokk"
 
-#: ../../content/applications/essentials/html_editor.rst:235
+#: ../../content/applications/essentials/html_editor.rst:238
 msgid ":guilabel:`Signature`"
 msgstr ":guilabel:`Aláírás`"
 
-#: ../../content/applications/essentials/html_editor.rst:236
+#: ../../content/applications/essentials/html_editor.rst:239
 msgid "Insert your signature."
 msgstr "Szúrja be az aláírását."
 
-#: ../../content/applications/essentials/html_editor.rst:241
+#: ../../content/applications/essentials/html_editor.rst:244
 msgid "Insert media"
 msgstr "Média beszúrása"
 
-#: ../../content/applications/essentials/html_editor.rst:243
+#: ../../content/applications/essentials/html_editor.rst:246
 msgid "To insert media, type `/Media` or click the :icon:`fa-file-image-o` :guilabel:`(image)` icon in the tooltip, then choose from the following tabs:"
 msgstr "Média beillesztéséhez írja be a `/Media` parancsot, vagy kattintson a :icon:`fa-file-image-o` :guilabel:`(kép)` ikonra az eszköztippben, majd válasszon az alábbi lapok közül:"
 
-#: ../../content/applications/essentials/html_editor.rst:246
+#: ../../content/applications/essentials/html_editor.rst:249
 msgid ":guilabel:`Images`"
 msgstr ":guilabel:`Képek`"
 
-#: ../../content/applications/essentials/html_editor.rst:248
+#: ../../content/applications/essentials/html_editor.rst:251
 msgid "Search the :doc:`Unsplash </applications/general/integrations/unsplash>` database to find a suitable image."
 msgstr "Keressen megfelelő képet az :doc:`Unsplash </applications/general/integrations/unsplash>` adatbázisban."
 
-#: ../../content/applications/essentials/html_editor.rst:250
+#: ../../content/applications/essentials/html_editor.rst:253
 msgid ":guilabel:`Add URL`: Copy-paste the **image address**."
 msgstr ":guilabel:`URL hozzáadása`: Másolja be a **kép URL-jét**."
 
-#: ../../content/applications/essentials/html_editor.rst:251
+#: ../../content/applications/essentials/html_editor.rst:254
 msgid ":guilabel:`Upload an image`: Upload an image into the library."
 msgstr ":guilabel:`Kép feltöltése`: Töltsön fel egy képet a könyvtárba."
 
-#: ../../content/applications/essentials/html_editor.rst:253
+#: ../../content/applications/essentials/html_editor.rst:256
 msgid ":guilabel:`Documents`"
 msgstr ":guilabel:`Dokumentumok`"
 
-#: ../../content/applications/essentials/html_editor.rst:255
+#: ../../content/applications/essentials/html_editor.rst:258
 msgid "Search for a document in the database."
 msgstr "Keressen dokumentumot az adatbázisban."
 
-#: ../../content/applications/essentials/html_editor.rst:256
+#: ../../content/applications/essentials/html_editor.rst:259
 msgid ":guilabel:`Add URL`: Copy-paste a valid URL."
 msgstr ":guilabel:`URL hozzáadása`: Másoljon be egy érvényes URL-t."
 
-#: ../../content/applications/essentials/html_editor.rst:257
+#: ../../content/applications/essentials/html_editor.rst:260
 msgid ":guilabel:`Upload a document`: Upload a document from a local drive."
 msgstr ":guilabel:`Dokumentum feltöltése`: Töltsön fel egy dokumentumot a helyi meghajtóról."
 
-#: ../../content/applications/essentials/html_editor.rst:259
+#: ../../content/applications/essentials/html_editor.rst:262
 msgid ":guilabel:`Icons`: Search an icon from the selection in the database."
 msgstr ":guilabel:`Ikonok`: Keressen ikont az adatbázisban elérhető készletből."
 
-#: ../../content/applications/essentials/html_editor.rst:262
+#: ../../content/applications/essentials/html_editor.rst:265
 msgid "Media editor toolbar"
 msgstr "Média szerkesztő eszköztár"
 
-#: ../../content/applications/essentials/html_editor.rst:264
+#: ../../content/applications/essentials/html_editor.rst:267
 msgid "After :ref:`inserting an image <insert-media>`, click it to display the media editor toolbar, and apply any of the following formatting options:"
 msgstr "Miután :ref:`beillesztett egy képet <insert-media>`, kattintson rá a média szerkesztő eszköztár megjelenítéséhez, majd alkalmazza az alábbi formázási lehetőségek bármelyikét:"
 
-#: ../../content/applications/essentials/html_editor.rst:267
+#: ../../content/applications/essentials/html_editor.rst:270
 msgid ":icon:`fa-search-plus` (:guilabel:`preview`): Preview the image, zoom in or out, print it or download it. Exit the preview by clicking the :icon:`fa-times` :guilabel:`(close)` icon in the top right corner."
 msgstr ":icon:`fa-search-plus` (:guilabel:`előnézet`): Tekintse meg a kép előnézetét, nagyítson vagy kicsinyítsen, nyomtassa ki vagy töltse le. Az előnézet bezárásához kattintson a jobb felső sarokban lévő :icon:`fa-times` :guilabel:`(bezárás)` ikonra."
 
-#: ../../content/applications/essentials/html_editor.rst:270
+#: ../../content/applications/essentials/html_editor.rst:273
 msgid ":guilabel:`Description`: Edit the image description and tooltip, then click :guilabel:`Save`."
 msgstr ":guilabel:`Leírás`: Szerkessze a kép leírását és eszköztippjét, majd kattintson a :guilabel:`Mentés` gombra."
 
-#: ../../content/applications/essentials/html_editor.rst:271
+#: ../../content/applications/essentials/html_editor.rst:274
 msgid ":icon:`fa-square` (:guilabel:`rounded`): Apply a rounded shape to the corners of the image."
 msgstr ":icon:`fa-square` (:guilabel:`lekerekített`): Lekerekített sarkokat alkalmazzon a képen."
 
-#: ../../content/applications/essentials/html_editor.rst:272
+#: ../../content/applications/essentials/html_editor.rst:275
 msgid ":icon:`fa-circle-o` (:guilabel:`circle`): Apply a circular shape to the image."
 msgstr ":icon:`fa-circle-o` (:guilabel:`kör`): Kör alakot alkalmazzon a képen."
 
-#: ../../content/applications/essentials/html_editor.rst:273
+#: ../../content/applications/essentials/html_editor.rst:276
 msgid ":icon:`fa-sun-o` (:guilabel:`shadow`): Apply a shadow effect to the image."
 msgstr ":icon:`fa-sun-o` (:guilabel:`árnyék`): Árnyékhatást alkalmazzon a képen."
 
-#: ../../content/applications/essentials/html_editor.rst:274
+#: ../../content/applications/essentials/html_editor.rst:277
 msgid ":icon:`fa-picture-o` (:guilabel:`image`): Apply a border to the image."
 msgstr ":icon:`fa-picture-o` (:guilabel:`kép`): Keretet alkalmazzon a képen."
 
-#: ../../content/applications/essentials/html_editor.rst:275
+#: ../../content/applications/essentials/html_editor.rst:278
 msgid ":icon:`fa-plus-square-o` (:guilabel:`padding`): Add an image padding and choose from small, medium, large, or extra large sizes."
 msgstr ":icon:`fa-plus-square-o` (:guilabel:`kitöltés`): Adjon belső margót a képhez, és válasszon a kis, közepes, nagy vagy extra nagy méret közül."
 
-#: ../../content/applications/essentials/html_editor.rst:277
+#: ../../content/applications/essentials/html_editor.rst:280
 msgid ":guilabel:`Default`: Restore the image to its default size."
 msgstr ":guilabel:`Alapértelmezett`: Állítsa vissza a képet az alapértelmezett méretére."
 
-#: ../../content/applications/essentials/html_editor.rst:278
+#: ../../content/applications/essentials/html_editor.rst:281
 msgid ":guilabel:`100%`: Set the image to full size."
 msgstr ":guilabel:`100%`: A kép teljes méretűre állítása."
 
-#: ../../content/applications/essentials/html_editor.rst:279
+#: ../../content/applications/essentials/html_editor.rst:282
 msgid ":guilabel:`50%`: Set the image to half its size."
 msgstr ":guilabel:`50%`: A kép felére kicsinyítése."
 
-#: ../../content/applications/essentials/html_editor.rst:280
+#: ../../content/applications/essentials/html_editor.rst:283
 msgid ":guilabel:`25%`: Set the image to a quarter of its size."
 msgstr ":guilabel:`25%`: A kép negyedére kicsinyítése."
 
-#: ../../content/applications/essentials/html_editor.rst:281
+#: ../../content/applications/essentials/html_editor.rst:284
 msgid ":icon:`fa-object-ungroup` (:guilabel:`object`): Resize and rotate the image. Click the :icon:`fa-object-ungroup` :guilabel:`(object)` icon a second time to reset the transformation."
 msgstr ":icon:`fa-object-ungroup` (:guilabel:`objektum`): A kép átméretezése és forgatása. Kattintson a :icon:`fa-object-ungroup` :guilabel:`(objektum)` ikonra másodszor az átalakítás visszaállításához."
 
-#: ../../content/applications/essentials/html_editor.rst:283
+#: ../../content/applications/essentials/html_editor.rst:286
 msgid ":icon:`fa-crop` (:guilabel:`crop`): Crop the image manually or apply the following options:"
 msgstr ":icon:`fa-crop` (:guilabel:`vágás`): A kép manuális vágása vagy a következő beállítások alkalmazása:"
 
-#: ../../content/applications/essentials/html_editor.rst:285
+#: ../../content/applications/essentials/html_editor.rst:288
 msgid "Choose from the `Flexible`, `16:9`, `4:3`, `1:1`, or `2:3` aspect ratios."
 msgstr "Válasszon a `Flexible`, `16:9`, `4:3`, `1:1` vagy `2:3` képarányok közül."
 
-#: ../../content/applications/essentials/html_editor.rst:286
+#: ../../content/applications/essentials/html_editor.rst:289
 msgid "Zoom in or out."
 msgstr "Nagyítás vagy kicsinyítés."
 
-#: ../../content/applications/essentials/html_editor.rst:287
+#: ../../content/applications/essentials/html_editor.rst:290
 msgid "Rotate left or right."
 msgstr "Forgatás balra vagy jobbra."
 
-#: ../../content/applications/essentials/html_editor.rst:288
+#: ../../content/applications/essentials/html_editor.rst:291
 msgid "Flip horizontally or vertically."
 msgstr "Tükrözés vízszintesen vagy függőlegesen."
 
-#: ../../content/applications/essentials/html_editor.rst:289
+#: ../../content/applications/essentials/html_editor.rst:292
 msgid "Reset the image."
 msgstr "A kép visszaállítása."
 
-#: ../../content/applications/essentials/html_editor.rst:291
+#: ../../content/applications/essentials/html_editor.rst:294
 msgid ":guilabel:`Replace`: Replace the image by searching in the :doc:`Unsplash </applications/general/integrations/unsplash>` database, adding a URL, or uploading a different one."
 msgstr ":guilabel:`Csere`: A kép cseréje az :doc:`Unsplash </applications/general/integrations/unsplash>` adatbázisban való kereséssel, URL megadásával vagy másik kép feltöltésével."
 
-#: ../../content/applications/essentials/html_editor.rst:294
+#: ../../content/applications/essentials/html_editor.rst:297
 msgid ":icon:`fa-link` (:guilabel:`link`): Insert a link to the image, type the URL, then click :guilabel:`Apply`. To remove the link, click the :icon:`fa-chain-broken` :guilabel:`(unlink)` icon."
 msgstr ":icon:`fa-link` (:guilabel:`hivatkozás`): Hivatkozás beillesztése a képhez, írja be az URL-t, majd kattintson a :guilabel:`Alkalmaz` gombra. A hivatkozás eltávolításához kattintson a :icon:`fa-chain-broken` :guilabel:`(hivatkozás eltávolítása)` ikonra."
 
-#: ../../content/applications/essentials/html_editor.rst:296
+#: ../../content/applications/essentials/html_editor.rst:299
 msgid ":icon:`fa-trash` (:guilabel:`trash`): Remove the image."
 msgstr ":icon:`fa-trash` (:guilabel:`törlés`): A kép eltávolítása."
 
@@ -2043,62 +2027,34 @@ msgid ":kbd:`Ctrl` + :kbd:`Shift` + :kbd:`T`"
 msgstr ":kbd:`Ctrl` + :kbd:`Shift` + :kbd:`T`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:66
-msgid "Search a Knowledge article"
-msgstr "Tudásbázis-cikk keresése"
-
-#: ../../content/applications/essentials/keyboard_shortcuts.rst:67
-msgid ":kbd:`Alt` + :kbd:`F`"
-msgstr ":kbd:`Alt` + :kbd:`F`"
-
-#: ../../content/applications/essentials/keyboard_shortcuts.rst:68
-msgid ":kbd:`Ctrl` + :kbd:`F`"
-msgstr ":kbd:`Ctrl` + :kbd:`F`"
-
-#: ../../content/applications/essentials/keyboard_shortcuts.rst:69
-msgid "Share a Knowledge article"
-msgstr "Tudásbázis-cikk megosztása"
-
-#: ../../content/applications/essentials/keyboard_shortcuts.rst:70
-msgid ":kbd:`Alt` + :kbd:`Shift` + :kbd:`S`"
-msgstr ":kbd:`Alt` + :kbd:`Shift` + :kbd:`S`"
-
-#: ../../content/applications/essentials/keyboard_shortcuts.rst:71
-msgid ":kbd:`Ctrl` + :kbd:`Shift` + :kbd:`S`"
-msgstr ":kbd:`Ctrl` + :kbd:`Shift` + :kbd:`S`"
-
-#: ../../content/applications/essentials/keyboard_shortcuts.rst:72
 msgid "Open command palette"
 msgstr "Parancspaletta megnyitása"
 
-#: ../../content/applications/essentials/keyboard_shortcuts.rst:73
+#: ../../content/applications/essentials/keyboard_shortcuts.rst:67
 msgid ":kbd:`Ctrl` + :kbd:`K`"
 msgstr ":kbd:`Ctrl` + :kbd:`K`"
 
-#: ../../content/applications/essentials/keyboard_shortcuts.rst:74
+#: ../../content/applications/essentials/keyboard_shortcuts.rst:68
 msgid ":kbd:`Command` + :kbd:`K`"
 msgstr ":kbd:`Command` + :kbd:`K`"
 
-#: ../../content/applications/essentials/keyboard_shortcuts.rst:77
+#: ../../content/applications/essentials/keyboard_shortcuts.rst:71
 msgid "After opening the command palette, search using the following keyboard shortcuts:"
 msgstr "A parancspaletta megnyitása után keressen a következő billentyűparancsok segítségével:"
 
-#: ../../content/applications/essentials/keyboard_shortcuts.rst:79
+#: ../../content/applications/essentials/keyboard_shortcuts.rst:73
 msgid ":kbd:`/`: search for menus, applications, and modules."
 msgstr ":kbd:`/`: menük, alkalmazások és modulok keresése."
 
-#: ../../content/applications/essentials/keyboard_shortcuts.rst:80
+#: ../../content/applications/essentials/keyboard_shortcuts.rst:74
 msgid ":kbd:`@`: search for users."
 msgstr ":kbd:`@`: felhasználók keresése."
 
-#: ../../content/applications/essentials/keyboard_shortcuts.rst:81
+#: ../../content/applications/essentials/keyboard_shortcuts.rst:75
 msgid ":kbd:`#`: search for **Discuss** channels."
 msgstr ":kbd:`#`: **Discuss** csatornák keresése."
 
-#: ../../content/applications/essentials/keyboard_shortcuts.rst:82
-msgid ":kbd:`?`: search for **Knowledge** articles."
-msgstr ":kbd:`?`: **Knowledge** cikkek keresése."
-
-#: ../../content/applications/essentials/keyboard_shortcuts.rst:84
+#: ../../content/applications/essentials/keyboard_shortcuts.rst:77
 msgid "Enter a name (or term) in the search bar, or use the arrow keys to scroll through the available options. Then, click :kbd:`Ctrl` + :kbd:`Enter` to open the selected app, module, or menu in a new tab."
 msgstr "Adjon meg egy nevet (vagy kifejezést) a keresősávban, vagy használja a nyílbillentyűket az elérhető lehetőségek böngészéséhez. Ezután kattintson a :kbd:`Ctrl` + :kbd:`Enter` kombinációra a kiválasztott alkalmazás, modul vagy menü új lapon való megnyitásához."
 
@@ -2106,379 +2062,295 @@ msgstr "Adjon meg egy nevet (vagy kifejezést) a keresősávban, vagy használja
 msgid "Property fields"
 msgstr "Tulajdonságmezők"
 
-#: ../../content/applications/essentials/property_fields.rst:8
+#: ../../content/applications/essentials/property_fields.rst:9
 msgid "Property vs. regular fields"
 msgstr "Tulajdonságok vs. hagyományos mezők"
 
-#: ../../content/applications/essentials/property_fields.rst:10
+#: ../../content/applications/essentials/property_fields.rst:11
 msgid "Properties act as pseudo-fields; they behave like regular fields but are not saved as columns in the database. They also rely on a defined :ref:`parent record <property-fields/properties-apps>`."
 msgstr "A tulajdonságok pszeudó-mezőkként működnek; hasonlóan viselkednek a hagyományos mezőkhöz, de nem kerülnek oszlopként mentésre az adatbázisban. Emellett egy meghatározott :ref:`parent record <property-fields/properties-apps>`-ra is támaszkodnak."
 
-#: ../../content/applications/essentials/property_fields.rst:14
+#: ../../content/applications/essentials/property_fields.rst:15
 msgid "Adding a property to a *task* inserts a field in *all tasks* within the *same project* while other projects' tasks remain unaffected."
 msgstr "Ha egy *feladathoz* tulajdonságot ad hozzá, az egy mezőt szúr be *az összes feladatba* az *adott projekten belül*, míg a többi projekt feladatai változatlanok maradnak."
 
-#: ../../content/applications/essentials/property_fields.rst:20
+#: ../../content/applications/essentials/property_fields.rst:21
 msgid "Add property fields"
 msgstr "Tulajdonságmezők hozzáadása"
 
-#: ../../content/applications/essentials/property_fields.rst:25
+#: ../../content/applications/essentials/property_fields.rst:26
 msgid "In the popover, enter the property's :guilabel:`Label`, choose a :guilabel:`Field Type`, and then configure the field based on the selected type:"
 msgstr "A felugró ablakban adja meg a tulajdonság :guilabel:`Feliratát`, válasszon :guilabel:`Mezőtípust`, majd konfigurálja a mezőt a kiválasztott típus alapján:"
 
-#: ../../content/applications/essentials/property_fields.rst:32
+#: ../../content/applications/essentials/property_fields.rst:33
 msgid "Field type"
 msgstr "Mezőtípus"
 
-#: ../../content/applications/essentials/property_fields.rst:34
+#: ../../content/applications/essentials/property_fields.rst:35
 msgid "Options"
 msgstr "Beállítások"
 
-#: ../../content/applications/essentials/property_fields.rst:36
+#: ../../content/applications/essentials/property_fields.rst:37
 msgid "Short text on a single line"
 msgstr "Rövid szöveg egyetlen sorban"
 
-#: ../../content/applications/essentials/property_fields.rst:37 ../../content/applications/essentials/property_fields.rst:43 ../../content/applications/essentials/property_fields.rst:46
+#: ../../content/applications/essentials/property_fields.rst:38 ../../content/applications/essentials/property_fields.rst:44 ../../content/applications/essentials/property_fields.rst:47
 msgid "Enter a :guilabel:`Default Value` if desired."
 msgstr "Ha kívánja, adjon meg egy :guilabel:`Alapértelmezett érték` értéket."
 
-#: ../../content/applications/essentials/property_fields.rst:39
+#: ../../content/applications/essentials/property_fields.rst:40
 msgid "Checked or unchecked status"
 msgstr "Bejelölt vagy nem bejelölt állapot"
 
-#: ../../content/applications/essentials/property_fields.rst:40
+#: ../../content/applications/essentials/property_fields.rst:41
 msgid "Choose the :guilabel:`Default State`."
 msgstr "Válassza ki az :guilabel:`Alapértelmezett állapot` értékét."
 
-#: ../../content/applications/essentials/property_fields.rst:42
+#: ../../content/applications/essentials/property_fields.rst:43
 msgid "Integer numbers (:dfn:`positive, negative, or zero, without a decimal`)"
 msgstr "Egész számok (:dfn:`pozitív, negatív vagy nulla, tizedes nélkül`)"
 
-#: ../../content/applications/essentials/property_fields.rst:45
+#: ../../content/applications/essentials/property_fields.rst:46
 msgid "Decimal numbers (:dfn:`positive, negative, or zero, with a decimal`)"
 msgstr "Tizedes számok (:dfn:`pozitív, negatív vagy nulla, tizedessel`)"
 
-#: ../../content/applications/essentials/property_fields.rst:48
+#: ../../content/applications/essentials/property_fields.rst:49
 msgid "Selection of a date on a calendar"
 msgstr "Dátum kiválasztása naptárból"
 
-#: ../../content/applications/essentials/property_fields.rst:49 ../../content/applications/essentials/property_fields.rst:52 ../../content/applications/essentials/property_fields.rst:75 ../../content/applications/essentials/property_fields.rst:81
+#: ../../content/applications/essentials/property_fields.rst:50 ../../content/applications/essentials/property_fields.rst:53 ../../content/applications/essentials/property_fields.rst:76 ../../content/applications/essentials/property_fields.rst:82
 msgid "Select a :guilabel:`Default Value` if desired."
 msgstr "Ha kívánja, válasszon :guilabel:`Alapértelmezett értéket`."
 
-#: ../../content/applications/essentials/property_fields.rst:51
+#: ../../content/applications/essentials/property_fields.rst:52
 msgid "Selection of a date on a calendar and a time on a clock"
 msgstr "Dátum kiválasztása naptárból és időpont kiválasztása az óráról"
 
-#: ../../content/applications/essentials/property_fields.rst:54
+#: ../../content/applications/essentials/property_fields.rst:55
 msgid "Selection of a value from a group of predefined values"
 msgstr "Érték kiválasztása előre meghatározott értékek csoportjából"
 
-#: ../../content/applications/essentials/property_fields.rst:55
+#: ../../content/applications/essentials/property_fields.rst:56
 msgid "Add a selectable option by clicking :icon:`fa-plus` :guilabel:`Add a Value` and entering the :guilabel:`Option Name`."
 msgstr "Hozzáadhat egy kiválasztható lehetőséget az :icon:`fa-plus` :guilabel:`Érték hozzáadása` gombra kattintva, majd megadva a :guilabel:`Lehetőség neve` értékét."
 
-#: ../../content/applications/essentials/property_fields.rst:58
+#: ../../content/applications/essentials/property_fields.rst:59
 msgid "If desired, set an option as default by clicking the :icon:`fa-star-o` (:guilabel:`Select Default`) button."
 msgstr "Ha kívánja, állítson be egy lehetőséget alapértelmezettként az :icon:`fa-star-o` (:guilabel:`Alapértelmezett kiválasztása`) gombra kattintva."
 
-#: ../../content/applications/essentials/property_fields.rst:61
+#: ../../content/applications/essentials/property_fields.rst:62
 msgid "Reorder the options by dragging and dropping them using the :icon:`oi-draggable` (:guilabel:`drag handle`) button."
 msgstr "A lehetőségeket az :icon:`oi-draggable` (:guilabel:`fogópont`) gomb segítségével átrendezheti húzással."
 
-#: ../../content/applications/essentials/property_fields.rst:64
+#: ../../content/applications/essentials/property_fields.rst:65
 msgid "Delete an option by clicking the :icon:`fa-trash-o` (:guilabel:`Remove Property`) button."
 msgstr "Töröljön egy lehetőséget az :icon:`fa-trash-o` (:guilabel:`Tulajdonság eltávolítása`) gombra kattintva."
 
-#: ../../content/applications/essentials/property_fields.rst:66
+#: ../../content/applications/essentials/property_fields.rst:67
 msgid "Selection of multiple values in the form of tags"
 msgstr "Több érték kiválasztása címkék formájában"
 
-#: ../../content/applications/essentials/property_fields.rst:67
+#: ../../content/applications/essentials/property_fields.rst:68
 msgid "Enter a :guilabel:`Tag` name and press `Enter` to save it."
 msgstr "Adjon meg egy :guilabel:`Címke` nevet, majd nyomja meg az `Enter` billentyűt a mentéshez."
 
-#: ../../content/applications/essentials/property_fields.rst:69
+#: ../../content/applications/essentials/property_fields.rst:70
 msgid "Change a tag's color by clicking it and selecting another one."
 msgstr "A címke színét a rákattintással és egy másik szín kiválasztásával módosíthatja."
 
-#: ../../content/applications/essentials/property_fields.rst:71
+#: ../../content/applications/essentials/property_fields.rst:72
 msgid "Selection of a single record from another model"
 msgstr "Egyetlen rekord kiválasztása egy másik modellből"
 
-#: ../../content/applications/essentials/property_fields.rst:72 ../../content/applications/essentials/property_fields.rst:78
+#: ../../content/applications/essentials/property_fields.rst:73 ../../content/applications/essentials/property_fields.rst:79
 msgid "Enter the :guilabel:`Model` name. Configure its :ref:`Domain <search/custom-filters>` to filter records if needed."
 msgstr "Adja meg a :guilabel:`Modell` nevét. Szükség esetén állítsa be a :ref:`Tartomány <search/custom-filters>` szűrőt a rekordok szűréséhez."
 
-#: ../../content/applications/essentials/property_fields.rst:77
+#: ../../content/applications/essentials/property_fields.rst:78
 msgid "Selection of multiple records from another model"
 msgstr "Több rekord kiválasztása egy másik modellből"
 
-#: ../../content/applications/essentials/property_fields.rst:83
+#: ../../content/applications/essentials/property_fields.rst:84
 msgid "Group several properties under a foldable label"
 msgstr "Csoportosítson több tulajdonságot egy összecsukható címke alá"
 
-#: ../../content/applications/essentials/property_fields.rst:86
+#: ../../content/applications/essentials/property_fields.rst:87
 msgid "Click outside the popover to save the added property."
 msgstr "Kattintson a felugró ablakon kívülre a hozzáadott tulajdonság mentéséhez."
 
-#: ../../content/applications/essentials/property_fields.rst:89
+#: ../../content/applications/essentials/property_fields.rst:90
 msgid "Select whether to display the property in the Kanban, List, or Calendar views cards for every field with the :guilabel:`Display in Cards` option."
 msgstr "Válassza ki, hogy a tulajdonság a Kanban, a Lista vagy a Naptár nézet kártyáin jelenjen-e meg minden mezőnél a :guilabel:`Megjelenítés a kártyákon` opcióval."
 
-#: ../../content/applications/essentials/property_fields.rst:91
+#: ../../content/applications/essentials/property_fields.rst:92
 msgid "To add another property, click :icon:`fa-plus` :guilabel:`Add a Property` at the bottom of the form while in :icon:`fa-cogs` :guilabel:`Add Properties` mode."
 msgstr "Újabb tulajdonság hozzáadásához kattintson az :icon:`fa-plus` :guilabel:`Tulajdonság hozzáadása` gombra az űrlap alján, amíg az :icon:`fa-cogs` :guilabel:`Tulajdonságok hozzáadása` mód aktív."
 
-#: ../../content/applications/essentials/property_fields.rst:95
+#: ../../content/applications/essentials/property_fields.rst:96
 msgid "To edit an existing property, hover the cursor over the property:"
 msgstr "Meglévő tulajdonság szerkesztéséhez vigye a kurzort a tulajdonság fölé:"
 
-#: ../../content/applications/essentials/property_fields.rst:97
+#: ../../content/applications/essentials/property_fields.rst:98
 msgid "Click the :icon:`fa-pencil` (:guilabel:`pencil`) button to open a popover and modify the property. In the popover, click the :icon:`fa-chevron-up` (up) or :icon:`fa-chevron-down` (down) chevron to move a property upwards or downwards."
 msgstr "Kattintson az :icon:`fa-pencil` (:guilabel:`ceruza`) gombra egy felugró ablak megnyitásához és a tulajdonság módosításához. A felugró ablakban kattintson az :icon:`fa-chevron-up` (fel) vagy az :icon:`fa-chevron-down` (le) nyílra a tulajdonság felfelé vagy lefelé mozgatásához."
 
-#: ../../content/applications/essentials/property_fields.rst:100
+#: ../../content/applications/essentials/property_fields.rst:101
 msgid "Click :icon:`fa-trash` :guilabel:`Delete`, then :guilabel:`Delete` to delete it. Deleting a property is permanent."
 msgstr "Kattintson az :icon:`fa-trash` :guilabel:`Törlés`, majd a :guilabel:`Törlés` gombra a törléshez. A tulajdonság törlése végleges."
 
-#: ../../content/applications/essentials/property_fields.rst:102
+#: ../../content/applications/essentials/property_fields.rst:103
 msgid "Use the :icon:`oi-draggable` (:guilabel:`drag handle`) icon to drag and drop the property to reorder or regroup."
 msgstr "Az :icon:`oi-draggable` (:guilabel:`húzófogantyú`) ikonnal húzza és ejtse a tulajdonságot az átrendezéshez vagy újracsoportosításhoz."
 
-#: ../../content/applications/essentials/property_fields.rst:108
+#: ../../content/applications/essentials/property_fields.rst:109
 msgid "Properties across apps"
 msgstr "Tulajdonságok az alkalmazásokon átívelően"
 
-#: ../../content/applications/essentials/property_fields.rst:118
+#: ../../content/applications/essentials/property_fields.rst:119
 msgid "App"
 msgstr "Alkalmazás"
 
-#: ../../content/applications/essentials/property_fields.rst:119
+#: ../../content/applications/essentials/property_fields.rst:120
 msgid "Model"
 msgstr "Modell"
 
-#: ../../content/applications/essentials/property_fields.rst:120
+#: ../../content/applications/essentials/property_fields.rst:121
 msgid "Parent"
 msgstr "Szülő"
 
-#: ../../content/applications/essentials/property_fields.rst:121
-msgid ":guilabel:`Accounting`"
-msgstr ":guilabel:`Könyvelés`"
-
 #: ../../content/applications/essentials/property_fields.rst:122
-msgid ":ref:`Asset/Revenue Recognition <create-assets-entry>`"
-msgstr ":ref:`Eszköz/Bevételfelismerés <create-assets-entry>`"
-
-#: ../../content/applications/essentials/property_fields.rst:124
-msgid ":doc:`Loan </applications/finance/accounting/bank/loans>`"
-msgstr ":doc:`Kölcsön </applications/finance/accounting/bank/loans>`"
-
-#: ../../content/applications/essentials/property_fields.rst:125
-msgid ":ref:`Asset model <assets/asset-model>`"
-msgstr ":ref:`Eszközmodell <assets/asset-model>`"
-
-#: ../../content/applications/essentials/property_fields.rst:127
-msgid ":ref:`Journal <cheat_sheet/journals>`"
-msgstr ":ref:`Napló <cheat_sheet/journals>`"
-
-#: ../../content/applications/essentials/property_fields.rst:128
 msgid ":guilabel:`CRM`"
 msgstr ":guilabel:`CRM`"
 
-#: ../../content/applications/essentials/property_fields.rst:129
+#: ../../content/applications/essentials/property_fields.rst:123
 msgid ":doc:`Lead/Opportunity </applications/sales/crm/acquire_leads/email_manual>`"
 msgstr ":doc:`Érdeklődő/Lehetőség </applications/sales/crm/acquire_leads/email_manual>`"
 
-#: ../../content/applications/essentials/property_fields.rst:130
+#: ../../content/applications/essentials/property_fields.rst:124
 msgid ":ref:`Sales team <crm/sales-team-dashboard>`"
 msgstr ":ref:`Értékesítési csapat <crm/sales-team-dashboard>`"
 
-#: ../../content/applications/essentials/property_fields.rst:131
+#: ../../content/applications/essentials/property_fields.rst:125
 msgid ":guilabel:`Employees`"
 msgstr ":guilabel:`Alkalmazottak`"
 
-#: ../../content/applications/essentials/property_fields.rst:132
+#: ../../content/applications/essentials/property_fields.rst:126
 msgid ":ref:`Employee <employees/general-info>`"
 msgstr ":ref:`Alkalmazott <employees/general-info>`"
 
-#: ../../content/applications/essentials/property_fields.rst:133
+#: ../../content/applications/essentials/property_fields.rst:127
 msgid ":ref:`Company <employees/general-info>`"
 msgstr ":ref:`Vállalat <employees/general-info>`"
 
-#: ../../content/applications/essentials/property_fields.rst:134
+#: ../../content/applications/essentials/property_fields.rst:128
 msgid ":guilabel:`Events`"
 msgstr ":guilabel:`Események`"
 
-#: ../../content/applications/essentials/property_fields.rst:135
+#: ../../content/applications/essentials/property_fields.rst:129
 msgid ":doc:`Event Registration </applications/marketing/events/registration_desk>`"
 msgstr ":doc:`Eseményregisztráció </applications/marketing/events/registration_desk>`"
 
-#: ../../content/applications/essentials/property_fields.rst:136
+#: ../../content/applications/essentials/property_fields.rst:130
 msgid ":ref:`Event <events/new-event>`"
 msgstr ":ref:`Esemény <events/new-event>`"
 
-#: ../../content/applications/essentials/property_fields.rst:137
+#: ../../content/applications/essentials/property_fields.rst:131
 msgid ":guilabel:`Fleet`"
 msgstr ":guilabel:`Járműpark`"
 
-#: ../../content/applications/essentials/property_fields.rst:138
+#: ../../content/applications/essentials/property_fields.rst:132
 msgid ":doc:`Vehicle </applications/hr/fleet/new_vehicle>`"
 msgstr ":doc:`Jármű </applications/hr/fleet/new_vehicle>`"
 
-#: ../../content/applications/essentials/property_fields.rst:139
+#: ../../content/applications/essentials/property_fields.rst:133
 msgid ":ref:`Vehicle model <fleet/add-model>`"
 msgstr ":ref:`Járműmodell <fleet/add-model>`"
 
-#: ../../content/applications/essentials/property_fields.rst:140
-msgid ":guilabel:`Frontdesk`"
-msgstr ":guilabel:`Recepció`"
-
-#: ../../content/applications/essentials/property_fields.rst:141
-msgid ":ref:`Frontdesk Visitors <frontdesk/list>`"
-msgstr ":ref:`Recepciós látogatók <frontdesk/list>`"
-
-#: ../../content/applications/essentials/property_fields.rst:142
-msgid ":ref:`Station <frontdesk/stations>`"
-msgstr ":ref:`Állomás <frontdesk/stations>`"
-
-#: ../../content/applications/essentials/property_fields.rst:143
-msgid ":guilabel:`Helpdesk`"
-msgstr ":guilabel:`Ügyfélszolgálat`"
-
-#: ../../content/applications/essentials/property_fields.rst:144
-msgid ":ref:`Ticket <helpdesk/follow>`"
-msgstr ":ref:`Jegy <helpdesk/follow>`"
-
-#: ../../content/applications/essentials/property_fields.rst:145
-msgid ":ref:`Helpdesk team <helpdesk/create-team>`"
-msgstr ":ref:`Helpdesk csapat <helpdesk/create-team>`"
-
-#: ../../content/applications/essentials/property_fields.rst:146
+#: ../../content/applications/essentials/property_fields.rst:134
 msgid ":guilabel:`Inventory`"
 msgstr ":guilabel:`Készlet`"
 
-#: ../../content/applications/essentials/property_fields.rst:147
+#: ../../content/applications/essentials/property_fields.rst:135
 msgid ":ref:`Lot/Serial <inventory/product_management/edit-lot>`"
 msgstr ":ref:`Tétel/Sorozatszám <inventory/product_management/edit-lot>`"
 
-#: ../../content/applications/essentials/property_fields.rst:149
+#: ../../content/applications/essentials/property_fields.rst:137
 msgid ":doc:`Transfer </applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave>`"
 msgstr ":doc:`Átvitel </applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave>`"
 
-#: ../../content/applications/essentials/property_fields.rst:152
+#: ../../content/applications/essentials/property_fields.rst:140
 msgid ":ref:`Batch Transfer <inventory/misc/batch_picking>`"
 msgstr ":ref:`Kötegelt átvitel <inventory/misc/batch_picking>`"
 
-#: ../../content/applications/essentials/property_fields.rst:153
+#: ../../content/applications/essentials/property_fields.rst:141
 msgid ":ref:`Product variant <product-variants/add-product-variants>`"
 msgstr ":ref:`Termékvariáns <product-variants/add-product-variants>`"
 
-#: ../../content/applications/essentials/property_fields.rst:155 ../../content/applications/essentials/property_fields.rst:157
+#: ../../content/applications/essentials/property_fields.rst:143 ../../content/applications/essentials/property_fields.rst:145
 msgid ":ref:`Operation type <inventory/product_management/operation-type-setting>`"
 msgstr ":ref:`Művelettípus <inventory/product_management/operation-type-setting>`"
 
-#: ../../content/applications/essentials/property_fields.rst:158
-msgid ":guilabel:`Knowledge`"
-msgstr ":guilabel:`Tudástár`"
-
-#: ../../content/applications/essentials/property_fields.rst:159
-msgid ":ref:`Knowledge Article <knowledge/articles_editing/create-article>`"
-msgstr ":ref:`Tudástár-cikk <knowledge/articles_editing/create-article>`"
-
-#: ../../content/applications/essentials/property_fields.rst:160
-msgid ":ref:`Parent article <knowledge/articles_editing/create-article>`"
-msgstr ":ref:`Szülő cikk <knowledge/articles_editing/create-article>`"
-
-#: ../../content/applications/essentials/property_fields.rst:161
+#: ../../content/applications/essentials/property_fields.rst:146
 msgid ":guilabel:`Maintenance`"
 msgstr ":guilabel:`Karbantartás`"
 
-#: ../../content/applications/essentials/property_fields.rst:162
+#: ../../content/applications/essentials/property_fields.rst:147
 msgid ":ref:`Maintenance Equipment <maintenance/equipment_management/add_new_equipment>`"
 msgstr ":ref:`Karbantartási eszköz <maintenance/equipment_management/add_new_equipment>`"
 
-#: ../../content/applications/essentials/property_fields.rst:163
+#: ../../content/applications/essentials/property_fields.rst:148
 msgid ":ref:`Equipment category <maintenance/equipment_management/add_new_equipment>`"
 msgstr ":ref:`Eszközkategória <maintenance/equipment_management/add_new_equipment>`"
 
-#: ../../content/applications/essentials/property_fields.rst:164
-msgid ":guilabel:`Meeting Rooms`"
-msgstr ":guilabel:`Tárgyalók`"
-
-#: ../../content/applications/essentials/property_fields.rst:165
-msgid "Room"
-msgstr "Terem"
-
-#: ../../content/applications/essentials/property_fields.rst:166
-msgid "Office"
-msgstr "Iroda"
-
-#: ../../content/applications/essentials/property_fields.rst:167
-msgid ":guilabel:`Planning`"
-msgstr ":guilabel:`Tervezés`"
-
-#: ../../content/applications/essentials/property_fields.rst:168
-msgid ":ref:`Shift <planning/roles>`"
-msgstr ":ref:`Műszak <planning/roles>`"
-
-#: ../../content/applications/essentials/property_fields.rst:169
-msgid ":ref:`Role <planning/roles>`"
-msgstr ":ref:`Szerepkör <planning/roles>`"
-
-#: ../../content/applications/essentials/property_fields.rst:170
-msgid ":guilabel:`Project` / :guilabel:`Field Service`"
-msgstr ":guilabel:`Projekt` / :guilabel:`Terepi szolgáltatás`"
-
-#: ../../content/applications/essentials/property_fields.rst:171
+#: ../../content/applications/essentials/property_fields.rst:150
 msgid ":ref:`Task <task_creation/task-configuration>`"
 msgstr ":ref:`Feladat <task_creation/task-configuration>`"
 
-#: ../../content/applications/essentials/property_fields.rst:172
+#: ../../content/applications/essentials/property_fields.rst:151
 msgid ":ref:`Project <project_management/configuration>`"
 msgstr ":ref:`Projekt <project_management/configuration>`"
 
-#: ../../content/applications/essentials/property_fields.rst:173
+#: ../../content/applications/essentials/property_fields.rst:152
 msgid ":guilabel:`Recruitment`"
 msgstr ":guilabel:`Toborzás`"
 
-#: ../../content/applications/essentials/property_fields.rst:174
+#: ../../content/applications/essentials/property_fields.rst:153
 msgid ":ref:`Applicant <recruitment/quick-add-applicant>`"
 msgstr ":ref:`Jelölt <recruitment/quick-add-applicant>`"
 
-#: ../../content/applications/essentials/property_fields.rst:176
+#: ../../content/applications/essentials/property_fields.rst:155
 msgid ":ref:`Job Position <recruitment/new_job_position/edit>`"
 msgstr ":ref:`Munkakör <recruitment/new_job_position/edit>`"
 
-#: ../../content/applications/essentials/property_fields.rst:178
+#: ../../content/applications/essentials/property_fields.rst:157
 msgid "Candidate"
 msgstr "Jelölt"
 
-#: ../../content/applications/essentials/property_fields.rst:179
+#: ../../content/applications/essentials/property_fields.rst:158
 msgid ":ref:`Job position <job-position/create-job-position>`"
 msgstr ":ref:`Munkakör <job-position/create-job-position>`"
 
-#: ../../content/applications/essentials/property_fields.rst:181 ../../content/applications/essentials/property_fields.rst:183 ../../content/applications/essentials/property_fields.rst:186
+#: ../../content/applications/essentials/property_fields.rst:160 ../../content/applications/essentials/property_fields.rst:162 ../../content/applications/essentials/property_fields.rst:165
 msgid ":ref:`Company <general/companies/company>`"
 msgstr ":ref:`Vállalat <general/companies/company>`"
 
-#: ../../content/applications/essentials/property_fields.rst:184
+#: ../../content/applications/essentials/property_fields.rst:163
 msgid ":guilabel:`Repairs`"
 msgstr ":guilabel:`Javítások`"
 
-#: ../../content/applications/essentials/property_fields.rst:185
+#: ../../content/applications/essentials/property_fields.rst:164
 msgid ":ref:`Repair order <repairs/repair_orders/repair>`"
 msgstr ":ref:`Javítási megrendelés <repairs/repair_orders/repair>`"
 
-#: ../../content/applications/essentials/property_fields.rst:187
+#: ../../content/applications/essentials/property_fields.rst:166
 msgid ":guilabel:`Sales` / etc."
 msgstr ":guilabel:`Értékesítés` / stb."
 
-#: ../../content/applications/essentials/property_fields.rst:188
+#: ../../content/applications/essentials/property_fields.rst:167
 msgid "Product"
 msgstr "Termék"
 
-#: ../../content/applications/essentials/property_fields.rst:189
+#: ../../content/applications/essentials/property_fields.rst:168
 msgid "Category"
 msgstr "Kategória"
 
@@ -2906,111 +2778,111 @@ msgstr "Szakaszok"
 msgid "*Stages* are used to organize an app's pipeline and track the progress of configured items, from now on are referred to as cards."
 msgstr "A *szakaszok* egy alkalmazás folyamatának rendszerezésére és a konfigurált elemek – a továbbiakban kártyáknak nevezett – előrehaladásának nyomon követésére szolgálnak."
 
-#: ../../content/applications/essentials/stages.rst:12
+#: ../../content/applications/essentials/stages.rst:13
 msgid "Create or modify stages"
 msgstr "Szakaszok létrehozása vagy módosítása"
 
-#: ../../content/applications/essentials/stages.rst:15
+#: ../../content/applications/essentials/stages.rst:16
 msgid ":ref:`Developer mode <developer-mode>` **must** be activated to access the stages menu. To activate developer mode, go to :menuselection:`Settings app --> General Settings --> Developer Tools`, and click :guilabel:`Activate the developer mode`."
 msgstr "A szakaszok menü eléréséhez :ref:`fejlesztői mód <developer-mode>` **szükséges**. A fejlesztői mód aktiválásához lépjen ide: :menuselection:`Beállítások alkalmazás --> Általános beállítások --> Fejlesztői eszközök`, és kattintson a :guilabel:`Fejlesztői mód aktiválása` gombra."
 
-#: ../../content/applications/essentials/stages.rst:23
+#: ../../content/applications/essentials/stages.rst:24
 msgid "The default list view on the :guilabel:`Stages` page displays the stages currently available in the app. They are listed in the order they appear in the pipeline."
 msgstr "A :guilabel:`Szakaszok` oldalon az alapértelmezett listanézet megjeleníti az alkalmazásban jelenleg elérhető szakaszokat. Ezek a folyamatban való megjelenési sorrendjük szerint vannak felsorolva."
 
-#: ../../content/applications/essentials/stages.rst:26
+#: ../../content/applications/essentials/stages.rst:27
 msgid "To change the order of the stages, click the :icon:`oi-draggable` :guilabel:`(draggable)` icon, to the left of the stage name, and drag it to the desired place on the list."
 msgstr "A szakaszok sorrendjének megváltoztatásához kattintson a szakasz neve bal oldalán lévő :icon:`oi-draggable` :guilabel:`(húzható)` ikonra, és húzza a kívánt helyre a listában."
 
-#: ../../content/applications/essentials/stages.rst:39
+#: ../../content/applications/essentials/stages.rst:40
 msgid "Change the stage order on the Kanban view of a team's pipeline by dragging and dropping individual columns."
 msgstr "A csapat folyamatának Kanban nézetén az egyes oszlopok húzásával és ejtésével módosíthatja a szakaszok sorrendjét."
 
-#: ../../content/applications/essentials/stages.rst:42
+#: ../../content/applications/essentials/stages.rst:43
 msgid "To create a new stage, click the :guilabel:`New` button at the top-left of the stage list. Doing so reveals a blank stage form."
 msgstr "Új szakasz létrehozásához kattintson a szakaszlista bal felső sarkában lévő :guilabel:`Új` gombra. Ezzel megjelenik egy üres szakaszűrlap."
 
-#: ../../content/applications/essentials/stages.rst:45
+#: ../../content/applications/essentials/stages.rst:46
 msgid "Choose a :guilabel:`Name` for the new stage."
 msgstr "Válasszon :guilabel:`Nevet` az új szakasznak."
 
-#: ../../content/applications/essentials/stages.rst:58
+#: ../../content/applications/essentials/stages.rst:59
 msgid "Progress bar"
 msgstr "Folyamatjelző sáv"
 
-#: ../../content/applications/essentials/stages.rst:60
+#: ../../content/applications/essentials/stages.rst:61
 msgid "The progress bar is visible above each stage, displaying the percentage breakdown of every status type for all the cards within that stage. Each status type has an assigned color that appears within the bar."
 msgstr "A folyamatjelző sáv minden szakasz felett látható, és az adott szakaszban lévő összes kártya minden státusztípusának százalékos megoszlását jeleníti meg. Minden státusztípushoz egy hozzárendelt szín tartozik, amely megjelenik a sávban."
 
-#: ../../content/applications/essentials/stages.rst:70
+#: ../../content/applications/essentials/stages.rst:71
 msgid "To see a detailed count, hover over a representative color, which activates a notification detailing the number of cards in the stage of that specific status."
 msgstr "A részletes számláló megtekintéséhez vigye az egérmutatót az adott szín fölé, amely aktivál egy értesítést, amely részletezi az adott státuszú kártyák számát az adott szakaszban."
 
-#: ../../content/applications/essentials/stages.rst:73
+#: ../../content/applications/essentials/stages.rst:74
 msgid "Clicking a status color filters the stage to show only cards with that status. The card count for the selected status appears next to the progress bar."
 msgstr "Egy státuszszínre kattintva a szakasz szűrve jelenik meg, csak az adott státuszú kártyákat mutatva. A kiválasztott státuszhoz tartozó kártyák száma a folyamatjelző sáv mellett jelenik meg."
 
-#: ../../content/applications/essentials/stages.rst:86
+#: ../../content/applications/essentials/stages.rst:87
 msgid "Add email and SMS templates to stages"
 msgstr "E-mail és SMS-sablonok hozzáadása szakaszokhoz"
 
-#: ../../content/applications/essentials/stages.rst:97
+#: ../../content/applications/essentials/stages.rst:100
 msgid "To select an existing email template, select it from the :guilabel:`Email Template` field. After choosing a template, click on the :icon:`oi-arrow-right` :guilabel:`(right arrow)` icon to the right of the field to edit the chosen template."
 msgstr "Meglévő e-mail sablon kiválasztásához válassza ki azt az :guilabel:`E-mail sablon` mezőből. A sablon kiválasztása után kattintson a mező jobb oldalán lévő :icon:`oi-arrow-right` :guilabel:`(jobbra mutató nyíl)` ikonra a kiválasztott sablon szerkesztéséhez."
 
-#: ../../content/applications/essentials/stages.rst:101
+#: ../../content/applications/essentials/stages.rst:104
 msgid "To create a new template from this form, click the field, and enter a title for the new template. Then, select :guilabel:`Create and edit` from the drop-down menu that appears, and complete the form details."
 msgstr "Új sablon létrehozásához ebből az űrlapból kattintson a mezőre, és adjon meg egy címet az új sablonhoz. Ezután válassza a :guilabel:`Létrehozás és szerkesztés` lehetőséget a megjelenő legördülő menüből, és töltse ki az űrlap részleteit."
 
-#: ../../content/applications/essentials/stages.rst:105
+#: ../../content/applications/essentials/stages.rst:108
 msgid "Follow the same steps to select, edit, or create an :guilabel:`SMS Template`."
 msgstr "Kövesse ugyanazokat a lépéseket egy :guilabel:`SMS-sablon` kiválasztásához, szerkesztéséhez vagy létrehozásához."
 
-#: ../../content/applications/essentials/stages.rst:116
+#: ../../content/applications/essentials/stages.rst:119
 msgid ":doc:`/applications/general/companies/email_template`"
 msgstr ":doc:`/applications/general/companies/email_template`"
 
-#: ../../content/applications/essentials/stages.rst:119
+#: ../../content/applications/essentials/stages.rst:122
 msgid "Fold a stage"
 msgstr "Szakasz összecsukása"
 
-#: ../../content/applications/essentials/stages.rst:121
+#: ../../content/applications/essentials/stages.rst:124
 msgid "By default, stages are unfolded in the Kanban view. If there is a Won or Closed stage, it is folded by default."
 msgstr "Alapértelmezés szerint a szakaszok kibontva jelennek meg a Kanban nézetben. Ha van Megnyert vagy Lezárt szakasz, az alapértelmezés szerint össze van csukva."
 
-#: ../../content/applications/essentials/stages.rst:124
+#: ../../content/applications/essentials/stages.rst:127
 msgid "Cards in an unfolded stage are visible in the pipeline under the stage name, and are considered *open*."
 msgstr "A kibontott szakasz kártyái láthatók a folyamatban a szakasz neve alatt, és *nyitottnak* minősülnek."
 
-#: ../../content/applications/essentials/stages.rst:127
+#: ../../content/applications/essentials/stages.rst:130
 msgid "Stages can be configured to be folded in the Kanban view of the pipeline page."
 msgstr "A szakaszok konfigurálhatók úgy, hogy összecsukva jelenjenek meg a folyamat oldal Kanban nézetében."
 
-#: ../../content/applications/essentials/stages.rst:129
+#: ../../content/applications/essentials/stages.rst:132
 msgid "The name of the folded stages are still visible, but the cards in the stage are hidden from view."
 msgstr "Az összecsukott szakaszok neve továbbra is látható, de a szakaszban lévő kártyák el vannak rejtve a nézetből."
 
-#: ../../content/applications/essentials/stages.rst:131
+#: ../../content/applications/essentials/stages.rst:134
 msgid "To fold a stage, tick the :guilabel:`Folded in Kanban` checkbox on the :guilabel:`Stages` form."
 msgstr "Egy szakasz összecsukásához jelölje be a :guilabel:`Összecsukva a Kanbanban` jelölőnégyzetet a :guilabel:`Szakaszok` űrlapon."
 
-#: ../../content/applications/essentials/stages.rst:134
+#: ../../content/applications/essentials/stages.rst:137
 msgid "Cards that reach a *folded* stage are considered *closed*. Closing a card before the work is completed can result in reporting and communication issues. This setting should **only** be enabled for stages that are considered *closing* stages."
 msgstr "Az *összecsukott* szakaszba érkező kártyák *lezártnak* minősülnek. Ha egy kártyát a munka befejezése előtt lezárnak, az jelentési és kommunikációs problémákat okozhat. Ezt a beállítást **csak** olyan szakaszoknál szabad engedélyezni, amelyek *lezáró* szakasznak minősülnek."
 
-#: ../../content/applications/essentials/stages.rst:139
+#: ../../content/applications/essentials/stages.rst:142
 msgid "Temporarily fold a stage"
 msgstr "Szakasz ideiglenes összecsukása"
 
-#: ../../content/applications/essentials/stages.rst:141
+#: ../../content/applications/essentials/stages.rst:144
 msgid "Stages can be temporarily folded in the Kanban view of the pipeline, as well."
 msgstr "A szakaszok a folyamat Kanban nézetében is ideiglenesen összecsukhatók."
 
-#: ../../content/applications/essentials/stages.rst:145
+#: ../../content/applications/essentials/stages.rst:148
 msgid "Hover the cursor at the top of the desired stage to fold temporarily, then click the :icon:`fa-gear` :guilabel:`(gear)` icon that appears, and select :guilabel:`Fold` from the drop-down menu."
 msgstr "Vigye a kurzort az ideiglenesen összecsukni kívánt szakasz tetejére, majd kattintson a megjelenő :icon:`fa-gear` :guilabel:`(fogaskerék)` ikonra, és válassza az :guilabel:`Összecsukás` lehetőséget a legördülő menüből."
 
-#: ../../content/applications/essentials/stages.rst:158
+#: ../../content/applications/essentials/stages.rst:161
 msgid "Manually folding a stage from the Kanban view is temporary and does **not** close the cards in the stage."
 msgstr "A Kanban nézetből manuálisan összecsukott szakasz ideiglenes, és **nem** zárja le a szakaszban lévő kártyákat."
 
@@ -3110,51 +2982,51 @@ msgstr "Az Odoo formázottszöveg-szerkesztője lehetővé teszi formázott tart
 msgid "Property fields, or properties, enable the customization of a form view by adding various :ref:`field types <property_field/add>`. These fields allow information storage and management by adding values."
 msgstr "A tulajdonságmezők (vagy tulajdonságok) lehetővé teszik egy űrlapnézet testreszabását különféle :ref:`mezőtípusok <property_field/add>` hozzáadásával. Ezek a mezők értékek hozzáadásával teszik lehetővé az információk tárolását és kezelését."
 
-#: ../../content/applications/essentials/property_fields.rst:22
+#: ../../content/applications/essentials/property_fields.rst:23
 msgid "To add a first property field to a form view, click the :icon:`fa-cog` (:guilabel:`Actions`) icon, then select :icon:`fa-cogs` :guilabel:`Add Properties`."
 msgstr "Az első tulajdonságmező űrlapnézethez való hozzáadásához kattintson a :icon:`fa-cog` (:guilabel:`Műveletek`) ikonra, majd válassza a :icon:`fa-cogs` :guilabel:`Tulajdonságok hozzáadása` lehetőséget."
 
-#: ../../content/applications/essentials/property_fields.rst:35
+#: ../../content/applications/essentials/property_fields.rst:36
 msgid "Text"
 msgstr "Szöveg"
 
-#: ../../content/applications/essentials/property_fields.rst:38
+#: ../../content/applications/essentials/property_fields.rst:39
 msgid "Checkbox"
 msgstr "Jelölőnégyzet"
 
-#: ../../content/applications/essentials/property_fields.rst:41
+#: ../../content/applications/essentials/property_fields.rst:42
 msgid "Integer"
 msgstr "Egész szám"
 
-#: ../../content/applications/essentials/property_fields.rst:44
+#: ../../content/applications/essentials/property_fields.rst:45
 msgid "Decimal"
 msgstr "Tizedes szám"
 
-#: ../../content/applications/essentials/property_fields.rst:47
+#: ../../content/applications/essentials/property_fields.rst:48
 msgid "Date"
 msgstr "Dátum"
 
-#: ../../content/applications/essentials/property_fields.rst:50
+#: ../../content/applications/essentials/property_fields.rst:51
 msgid "Date & Time"
 msgstr "Dátum és idő"
 
-#: ../../content/applications/essentials/property_fields.rst:53
+#: ../../content/applications/essentials/property_fields.rst:54
 msgid "Selection"
 msgstr "Kiválasztás"
 
-#: ../../content/applications/essentials/property_fields.rst:65
+#: ../../content/applications/essentials/property_fields.rst:66
 msgid "Tags"
 msgstr "Címkék"
 
-#: ../../content/applications/essentials/property_fields.rst:70
+#: ../../content/applications/essentials/property_fields.rst:71
 msgid "Many2one"
 msgstr "Many2one"
 
-#: ../../content/applications/essentials/property_fields.rst:76
+#: ../../content/applications/essentials/property_fields.rst:77
 msgid "Many2many"
 msgstr "Many2many"
 
-#: ../../content/applications/essentials/property_fields.rst:110
+#: ../../content/applications/essentials/property_fields.rst:111
 msgid "Property fields can be defined in the form view of multiple models. Once set, the property is shared by all records that are linked to the same *parent*."
 msgstr "Tulajdonságmezők több modell űrlapnézetében is definiálhatók. A beállított tulajdonság az ugyanahhoz a *szülőhöz* kapcsolódó összes rekordon közös."
 
@@ -3186,38 +3058,262 @@ msgstr "Ha helyette a :guilabel:`Rendelés dátuma: Előző időszak` van kivál
 msgid "In apps these cards represent specific items, for example, in the **Project** app, stages track tasks, and in the **CRM** app, stages track opportunities. Stages are customizable, and can be renamed to fit the needs of each team."
 msgstr "Az alkalmazásokban ezek a kártyák konkrét elemeket jelölnek, például a **Projekt** alkalmazásban a szakaszok a feladatokat, a **CRM** alkalmazásban pedig a lehetőségeket követik. A szakaszok testreszabhatók, és átnevezhetők az egyes csapatok igényei szerint."
 
-#: ../../content/applications/essentials/stages.rst:19
+#: ../../content/applications/essentials/stages.rst:20
 msgid "To view or modify stages, go to the desired app and go to its stage configuration menu, for example :menuselection:`Project --> Configuration --> Task Stages` or :menuselection:`CRM --> Configuration --> Stages`."
 msgstr "A szakaszok megtekintéséhez vagy módosításához nyissa meg a kívánt alkalmazást, majd annak szakaszkonfigurációs menüjét, például: :menuselection:`Projekt --> Konfiguráció --> Feladatszakaszok` vagy :menuselection:`CRM --> Konfiguráció --> Szakaszok`."
 
-#: ../../content/applications/essentials/stages.rst:64
+#: ../../content/applications/essentials/stages.rst:65
 msgid "The specific definition of these statuses changes depending on the app. For example, in the **Project** app, the progress bar of a task stage consists of the :guilabel:`In Progress`, :guilabel:`Changes Requested`, :guilabel:`Approved`, :guilabel:`Waiting`, :guilabel:`Done`, and :guilabel:`Cancelled` task states. In the **CRM** app, the progress bar shows the status of the activities planned on the opportunities."
 msgstr "Az állapotok pontos jelentése alkalmazásonként eltér. Például a **Projekt** alkalmazásban egy feladatszakasz folyamatjelzője a :guilabel:`Folyamatban`, :guilabel:`Módosítás kérve`, :guilabel:`Jóváhagyva`, :guilabel:`Várakozik`, :guilabel:`Kész` és :guilabel:`Törölve` feladatállapotokból áll. A **CRM** alkalmazásban a folyamatjelző a lehetőségeken tervezett tevékenységek állapotát mutatja."
 
-#: ../../content/applications/essentials/stages.rst:88
+#: ../../content/applications/essentials/stages.rst:89
 msgid "When an :guilabel:`Email Template` is added to a stage, a preconfigured email is automatically sent to the customer when a card (e.g., a task) reaches that specific stage in the pipeline. Likewise, adding an :guilabel:`SMS Template` triggers a preconfigured SMS text message to send to the customer."
 msgstr "Ha egy szakaszhoz :guilabel:`E-mail sablon` van hozzárendelve, a rendszer automatikusan elküld egy előre beállított e-mailt az ügyfélnek, amikor egy kártya (pl. egy feladat) eléri a folyamat adott szakaszát. Hasonlóképpen egy :guilabel:`SMS sablon` hozzáadása előre beállított SMS-üzenet küldését indítja el az ügyfélnek."
 
-#: ../../content/applications/essentials/stages.rst:94
-msgid "The :guilabel:`SMS Template` field is available when the *Project - SMS* module (`project_sms`) is installed, and sending text messages requires a working SMS service."
-msgstr "Az :guilabel:`SMS sablon` mező a *Projekt - SMS* modul (`project_sms`) telepítésekor érhető el, és a szöveges üzenetek küldéséhez működő SMS-szolgáltatás szükséges."
-
-#: ../../content/applications/essentials/stages.rst:143
+#: ../../content/applications/essentials/stages.rst:146
 msgid "Open the pipeline in the desired app, e.g., a project's Kanban view in the **Project** app."
 msgstr "Nyissa meg a kívánt alkalmazásban a folyamatot, pl. a **Projekt** alkalmazásban egy projekt Kanban nézetét."
 
-#: ../../content/applications/essentials/stages.rst:162
+#: ../../content/applications/essentials/stages.rst:165
 msgid "Assign stages to projects or teams"
 msgstr "Szakaszok hozzárendelése projektekhez vagy csapatokhoz"
 
-#: ../../content/applications/essentials/stages.rst:164
+#: ../../content/applications/essentials/stages.rst:167
 msgid "Depending on the app, a stage can be limited to specific pipelines:"
 msgstr "Alkalmazástól függően egy szakasz adott folyamatokra korlátozható:"
 
-#: ../../content/applications/essentials/stages.rst:166
+#: ../../content/applications/essentials/stages.rst:169
 msgid "In the **Project** app, make a selection in the :guilabel:`Projects` field on the task stage form. More than one project may be selected, since the same stage can be shared by multiple projects."
 msgstr "A **Projekt** alkalmazásban a feladatszakasz űrlapján válasszon a :guilabel:`Projektek` mezőben. Több projekt is kiválasztható, mivel ugyanaz a szakasz több projektben is használható."
 
-#: ../../content/applications/essentials/stages.rst:168
+#: ../../content/applications/essentials/stages.rst:171
 msgid "In the **CRM** app, select a :guilabel:`Sales Team` on the stage form. If the field is left empty, the stage is available for all sales teams."
 msgstr "A **CRM** alkalmazásban a szakasz űrlapján válasszon :guilabel:`Értékesítési csapat` értéket. Ha a mező üres, a szakasz minden értékesítési csapat számára elérhető."
+
+#: ../../content/applications/essentials/html_editor.rst:13
+msgid "Hover over any element in the text (header, table, banner, etc.) to reveal the :icon:`fa-sort` :guilabel:`(drag)` icon. Click and hold the icon to drag and drop the element elsewhere in the text."
+msgstr "Vigye az egeret a szöveg bármely eleme (címsor, táblázat, kiemelt blokk stb.) fölé, hogy megjelenjen a :icon:`fa-sort` :guilabel:`(húzás)` ikon. Az ikont lenyomva tartva az elem a szöveg más részére húzható."
+
+#: ../../content/applications/essentials/html_editor.rst:46
+msgid ":guilabel:`Translate`: Translate the selected text with AI into one of the :doc:`installed languages </applications/general/users/language>`."
+msgstr ":guilabel:`Fordítás`: a kijelölt szöveg lefordítása MI segítségével valamelyik :doc:`telepített nyelvre </applications/general/users/language>`."
+
+#: ../../content/applications/essentials/html_editor.rst:53
+msgid "The :guilabel:`Translate` and :guilabel:`AI` options use Odoo SA's AI text generation service (an :doc:`In-App Purchase <in_app_purchase>` service), so they require an internet connection from the server to Odoo SA's services."
+msgstr "A :guilabel:`Fordítás` és az :guilabel:`AI` lehetőség az Odoo SA MI-alapú szöveggeneráló szolgáltatását (egy :doc:`alkalmazáson belüli vásárlás <in_app_purchase>` szolgáltatást) használja, ezért a szervernek kapcsolódnia kell az Odoo SA szolgáltatásaihoz."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:3
+msgid "In-app purchases (IAP)"
+msgstr "Alkalmazáson belüli vásárlások (IAP)"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:7
+msgid "In-app purchases (IAP) are optional services that enhance Odoo databases. Each service provides its own specific features and functionality. A full list of services is available on the `Odoo IAP Catalog <https://iap.odoo.com/iap/all-in-app-services>`_."
+msgstr "Az alkalmazáson belüli vásárlások (IAP) opcionális szolgáltatások, amelyek az Odoo adatbázisait bővítik. Minden egyes szolgáltatás saját egyedi funkciókat és képességeket biztosít. A szolgáltatások teljes listája elérhető az `Odoo IAP Catalog <https://iap.odoo.com/iap/all-in-app-services>`_ oldalon."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:18
+msgid "The :guilabel:`SMS` service sends text messages to contacts directly from the database, and the :guilabel:`Snailmail` service sends invoices by post."
+msgstr "Az :guilabel:`SMS` szolgáltatás közvetlenül az adatbázisból küld szöveges üzeneteket a kapcsolatoknak, a :guilabel:`Snailmail` szolgáltatás pedig postán küldi el a számlákat."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:21
+msgid "|IAP| services do **not** need to be configured or set up before use. Odoo users can click on the service in the app to activate it. However, each service requires its own prepaid credits, and when they run out, users **must** :ref:`buy more <iap/buying_credits>` in order to keep using it."
+msgstr "Az |IAP| szolgáltatásokat **nem** szükséges konfigurálni vagy beállítani a használat előtt. Az Odoo-felhasználók az alkalmazásban a szolgáltatásra kattintva aktiválhatják azt. Minden egyes szolgáltatáshoz azonban saját előre fizetett kreditek szükségesek, és ha ezek elfogynak, a felhasználóknak **kötelező** :ref:`további krediteket vásárolni <iap/buying_credits>` a folytatáshoz."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:26
+msgid "IAP services are provided by Odoo SA (or third parties) and are paid separately from the database: the credits are bought on Odoo SA's IAP platform, independently of the hosting of the database."
+msgstr "Az IAP szolgáltatásokat az Odoo SA (vagy harmadik felek) nyújtják, és az adatbázistól függetlenül kell fizetni értük: a krediteket az Odoo SA IAP platformján lehet megvásárolni, függetlenül attól, hol üzemel az adatbázis."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:33
+msgid "IAP services"
+msgstr "IAP-szolgáltatások"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:35
+msgid "|IAP| services are provided by Odoo, as well as third-parties, and have a wide range of uses."
+msgstr "Az |IAP| szolgáltatásokat az Odoo és harmadik felek biztosítják, és széles körű felhasználási lehetőségekkel rendelkeznek."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:37
+msgid "The following |IAP| services are used by Community modules:"
+msgstr "A Community modulok a következő |IAP| szolgáltatásokat használják:"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:39
+msgid ":guilabel:`Partner Autocomplete`: automatically populates contact records with corporate data."
+msgstr ":guilabel:`Partner automatikus kitöltés`: automatikusan feltölti a kapcsolati rekordokat vállalati adatokkal."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:40
+msgid ":guilabel:`SMS`: sends SMS text messages to contacts directly from the database."
+msgstr ":guilabel:`SMS`: SMS szöveges üzeneteket küld a kapcsolatoknak közvetlenül az adatbázisból."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:41
+msgid ":guilabel:`Lead Generation`: generates leads based on a set of criteria, and converts web visitors into quality leads and opportunities."
+msgstr ":guilabel:`Érdeklődő generálás`: meghatározott feltételek alapján érdeklődőket generál, és a weblátogatókat minőségi érdeklődőkké és lehetőségekké alakítja."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:43
+msgid ":guilabel:`Snailmail`: sends customer invoices and follow-up reports by post, worldwide."
+msgstr ":guilabel:`Postai levél`: ügyfélszámlákat és követési jelentéseket küld postai úton, világszerte."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:46
+msgid "Some |IAP| services, such as document digitization (OCR), are only used by Enterprise modules and are therefore not available in this edition."
+msgstr "Egyes |IAP| szolgáltatásokat, például a dokumentumdigitalizálást (OCR), csak Enterprise modulok használják, ezért ebben a kiadásban nem érhetők el."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:49
+msgid "For more information on every service currently available (offered from developers other than Odoo), visit the `Odoo IAP Catalog <https://iap.odoo.com/iap/all-in-app-services>`_."
+msgstr "Az összes jelenleg elérhető szolgáltatással kapcsolatos további információkért (az Odoo-tól eltérő fejlesztők által kínált szolgáltatások) látogasson el az `Odoo IAP katalógusba <https://iap.odoo.com/iap/all-in-app-services>`_."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:53
+msgid "Use IAP services"
+msgstr "IAP szolgáltatások használata"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:55
+msgid "|IAP| services are automatically integrated with Odoo, and do **not** require users to configure any settings. To use a service, interact with it wherever it appears in the database."
+msgstr "Az |IAP| szolgáltatások automatikusan integrálva vannak az Odoo-val, és **nem** igényelnek semmilyen beállítást a felhasználóktól. Egy szolgáltatás használatához lépjen kapcsolatba vele bárhol, ahol az megjelenik az adatbázisban."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:59
+msgid "The following flow focuses on the *SMS* |IAP| service being used from a contact's record."
+msgstr "Az alábbi folyamat az *SMS* |IAP| szolgáltatás egy kapcsolati rekordból történő használatára összpontosít."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:61
+msgid "This can be done by clicking the :icon:`fa-mobile` :guilabel:`SMS` icon within the database."
+msgstr "Ez az adatbázisban található :icon:`fa-mobile` :guilabel:`SMS` ikonra kattintva végezhető el."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:71
+msgid "One way to utilize the *SMS* |IAP| service with Odoo is showcased in the following steps:"
+msgstr "Az *SMS* |IAP| szolgáltatás Odoo-val való használatának egyik módját az alábbi lépések mutatják be:"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:73
+msgid "First, navigate to the :menuselection:`Contacts application`, and click on a contact with a mobile phone number entered in either the :guilabel:`Phone` or :guilabel:`Mobile` field of the contact form."
+msgstr "Először navigáljon a :menuselection:`Kapcsolatok alkalmazásba`, és kattintson egy olyan kapcsolatra, amelynek a kapcsolati adatlapon a :guilabel:`Telefon` vagy :guilabel:`Mobil` mezőjében mobiltelefon-szám van megadva."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:77
+msgid "Next, find the :icon:`fa-mobile` :guilabel:`SMS` icon that appears to the right of the :guilabel:`Phone` or :guilabel:`Mobile` fields. Click the :icon:`fa-mobile` :guilabel:`SMS` icon, and a :guilabel:`Send SMS Text Message` pop-up window appears."
+msgstr "Ezután keresse meg a :guilabel:`Telefon` vagy :guilabel:`Mobil` mezőktől jobbra megjelenő :icon:`fa-mobile` :guilabel:`SMS` ikont. Kattintson a :icon:`fa-mobile` :guilabel:`SMS` ikonra, és megjelenik az :guilabel:`SMS szöveges üzenet küldése` felugró ablak."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:81
+msgid "Type a message in the :guilabel:`Message` field of the pop-up window. Then, click the :guilabel:`Send SMS` button. Odoo then sends the message, via SMS, to the contact, and logs what was sent in the *chatter* of the contact's form."
+msgstr "Írjon üzenetet a felugró ablak :guilabel:`Üzenet` mezőjébe. Ezután kattintson az :guilabel:`SMS küldése` gombra. Az Odoo ekkor SMS-ben elküldi az üzenetet a kapcsolatnak, és naplózza az elküldöttet a kapcsolati adatlap *csevegőjében*."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:85
+msgid "Upon sending the SMS message, the prepaid credits for the *SMS* |IAP| service are automatically deducted from the existing credits. If there are not enough credits to send the message, Odoo prompts the user to purchase more."
+msgstr "Az SMS üzenet elküldésekor az *SMS* |IAP| szolgáltatás előre fizetett kreditjei automatikusan levonásra kerülnek a meglévő kreditekből. Ha nincs elegendő kredit az üzenet elküldéséhez, az Odoo felszólítja a felhasználót, hogy vásároljon többet."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:90
+msgid "For more information on how to use various |IAP| services, and for more in-depth instructions related to SMS functionality in Odoo, review the documentation below:"
+msgstr "A különböző |IAP| szolgáltatások használatával kapcsolatos további információkért, valamint az Odoo SMS funkcionalitásával kapcsolatos részletesebb útmutatásért tekintse meg az alábbi dokumentációt:"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:93
+msgid ":doc:`Lead mining <../sales/crm/acquire_leads/lead_mining>`"
+msgstr ":doc:`Érdeklődők bányászata <../sales/crm/acquire_leads/lead_mining>`"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:94
+msgid ":doc:`Enrich your contacts base with Partner Autocomplete <../sales/crm/optimize/partner_autocomplete>`"
+msgstr ":doc:`Gazdagítsa kapcsolati adatbázisát a Partner Autocomplete funkcióval <../sales/crm/optimize/partner_autocomplete>`"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:96
+msgid ":doc:`SMS Marketing <../marketing/sms_marketing>`"
+msgstr ":doc:`SMS marketing <../marketing/sms_marketing>`"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:101
+msgid "IAP credits"
+msgstr "IAP kreditek"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:103
+msgid "Every time an |IAP| service is used, the prepaid credits for that service are spent. Odoo prompts the purchase of more credits when there are not enough credits left to continue using a service. Email alerts can also be set up for when :ref:`credits are low <in_app_purchase/low-credits>`."
+msgstr "Minden alkalommal, amikor egy |IAP| szolgáltatást használnak, az adott szolgáltatáshoz tartozó előre feltöltött kreditek felhasználásra kerülnek. Az Odoo felkéri a további kreditek vásárlására, ha nincs elegendő kredit a szolgáltatás folytatásához. E-mail értesítések is beállíthatók, amikor a :ref:`kreditek alacsony szintre csökkennek <in_app_purchase/low-credits>`."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:107
+msgid "Credits are purchased in *Packs* from the `Odoo IAP Catalog <https://iap.odoo.com/iap/all-in-app-services>`_, and pricing is specific to each service."
+msgstr "A krediteket *Csomagokban* lehet megvásárolni az `Odoo IAP Katalógusból <https://iap.odoo.com/iap/all-in-app-services>`_, és az árazás szolgáltatásonként eltér."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:111
+msgid "The `SMS service <https://iap.odoo.com/iap/in-app-services/1>`_ has four packs available, in denominations of:"
+msgstr "Az `SMS-szolgáltatás <https://iap.odoo.com/iap/in-app-services/1>`_ négy csomagban érhető el, a következő névértékekben:"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:114
+msgid ":guilabel:`Starter Pack`: 10 credits"
+msgstr ":guilabel:`Starter Pack`: 10 kredit"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:115
+msgid ":guilabel:`Standard Pack`: 100 credits"
+msgstr ":guilabel:`Standard Pack`: 100 kredit"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:116
+msgid ":guilabel:`Advanced Pack`: 500 credits"
+msgstr ":guilabel:`Advanced Pack`: 500 kredit"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:117
+msgid ":guilabel:`Expert Pack`: 1,000 credits"
+msgstr ":guilabel:`Expert Pack`: 1 000 kredit"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:125
+msgid "The number of credits consumed depends on the length of the SMS and the country of destination."
+msgstr "A felhasznált kreditek száma az SMS hosszától és a célállomás országától függ."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:127
+msgid "For more information, refer to the :doc:`SMS Pricing and FAQ <../marketing/sms_marketing/pricing_and_faq>` documentation."
+msgstr "További információkért tekintse meg az :doc:`SMS árazás és GYIK <../marketing/sms_marketing/pricing_and_faq>` dokumentációt."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:133
+msgid "Buy credits"
+msgstr "Kreditek vásárlása"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:135
+msgid "If there are not enough credits to perform a task, the database automatically prompts the purchase of more credits."
+msgstr "Ha nincs elegendő kredit egy feladat elvégzéséhez, az adatbázis automatikusan felkéri a további kreditek vásárlására."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:138
+msgid "Users can check the current balance of credits for each service, and manually purchase more credits, by navigating to the :menuselection:`Settings app --> Contacts section`, and beneath the :guilabel:`Odoo IAP` setting, click :guilabel:`View My Services`."
+msgstr "A felhasználók az egyes szolgáltatások aktuális kredit-egyenlegét ellenőrizhetik, és manuálisan vásárolhatnak további krediteket a :menuselection:`Beállítások alkalmazás --> Névjegyek szakasz` menüpontban; az :guilabel:`Odoo IAP` beállítás alatt kattintsanak a :guilabel:`Saját szolgáltatások megtekintése` gombra."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:142
+msgid "Doing so reveals an :guilabel:`IAP Service` page, listing the various |IAP| services in the database. From here, click an |IAP| service to open its :guilabel:`Account Information` page, where additional credits can be purchased."
+msgstr "Ez megnyitja az :guilabel:`IAP-szolgáltatás` oldalt, amely felsorolja az adatbázisban elérhető különböző |IAP| szolgáltatásokat. Innen kattintson egy |IAP| szolgáltatásra a :guilabel:`Fiókadatok` oldal megnyitásához, ahol további kreditek vásárolhatók."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:147
+msgid "Manually buy credits"
+msgstr "Kreditek manuális vásárlása"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:149
+msgid "To manually buy credits in Odoo, follow these steps:"
+msgstr "A kreditek manuális vásárlásához az Odoo-ban kövesse az alábbi lépéseket:"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:151
+msgid "First, go to the :menuselection:`Settings application` and type `IAP` in the search bar. Alternatively users can scroll down to the :guilabel:`Contacts` section. Under the :guilabel:`Contacts` section, where it says :guilabel:`Odoo IAP`, click :guilabel:`View My Services`."
+msgstr "Először nyissa meg a :menuselection:`Beállítások alkalmazást`, és írja be az `IAP` kifejezést a keresősávba. Alternatívaként a felhasználók legörgethetnek a :guilabel:`Névjegyek` szakaszig. A :guilabel:`Névjegyek` szakaszban, ahol az :guilabel:`Odoo IAP` felirat látható, kattintson a :guilabel:`Szolgáltatásaim megtekintése` gombra."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:163
+msgid "Doing so reveals an :guilabel:`IAP Account` page, listing the various |IAP| services in the database. From here, click an |IAP| service to open its :guilabel:`Account Information` page, where additional credits can be purchased."
+msgstr "Ez megnyitja az :guilabel:`IAP-fiók` oldalt, amelyen az adatbázisban szereplő különböző |IAP| szolgáltatások listája látható. Innen kattintson egy |IAP| szolgáltatásra a :guilabel:`Fiókadatok` oldal megnyitásához, ahol további kreditek vásárolhatók."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:167
+msgid "On the :guilabel:`Account Information` page, click the :guilabel:`Buy Credit` button. Doing so loads a :guilabel:`Buy Credits for (IAP Account)` page in a new tab. From here, click :guilabel:`Buy` on the desired pack of credits. Then, follow the prompts to enter payment details, and confirm the order."
+msgstr "A :guilabel:`Fiókadatok` oldalon kattintson a :guilabel:`Kredit vásárlása` gombra. Ez betölt egy :guilabel:`Kreditek vásárlása (IAP-fiók)` oldalt egy új lapon. Innen kattintson a :guilabel:`Vásárlás` gombra a kívánt kreditcsomaghoz. Ezután kövesse az utasításokat a fizetési adatok megadásához, és erősítse meg a rendelést."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:178
+msgid "Once the transaction is complete, the credits are available for use in the database."
+msgstr "A tranzakció befejezése után a kreditek elérhetővé válnak az adatbázisban való használatra."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:183
+msgid "Low-credit notification"
+msgstr "Alacsony kreditegyenlegről szóló értesítés"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:185
+msgid "It is possible to be notified when credits are low, in order to avoid running out of credits, while using an |IAP| service. To do that, follow this process:"
+msgstr "Lehetőség van értesítést kérni, ha a kreditegyenleg alacsony, hogy elkerülhető legyen a kreditek elfogyása egy |IAP| szolgáltatás használata közben. Ehhez kövesse az alábbi folyamatot:"
+
+#: ../../content/applications/essentials/in_app_purchase.rst:188
+msgid "Go to the :menuselection:`Settings application`, and type `IAP` in the search bar. Under the :guilabel:`Contacts` section, where it says :guilabel:`Odoo IAP`, click :guilabel:`View My Services`."
+msgstr "Nyissa meg a :menuselection:`Beállítások alkalmazást`, és írja be az `IAP` kifejezést a keresősávba. A :guilabel:`Névjegyek` szakaszban, ahol az :guilabel:`Odoo IAP` felirat látható, kattintson a :guilabel:`Szolgáltatásaim megtekintése` gombra."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:192
+msgid "The available |IAP| accounts appear in a list view on the :guilabel:`IAP Account` page. From here, click on the desired |IAP| account to view that service's :guilabel:`Account Information` page."
+msgstr "Az elérhető |IAP|-fiókok listanézetben jelennek meg az :guilabel:`IAP-fiók` oldalon. Innen kattintson a kívánt |IAP|-fiókra az adott szolgáltatás :guilabel:`Fiókadatok` oldalának megtekintéséhez."
+
+#: ../../content/applications/essentials/in_app_purchase.rst:195
+msgid "Set the :guilabel:`Email Alert Threshold` to the credit amount that should trigger a low-credit alert when the balance falls below it. Next, select which user(s) should receive the email notification using the :guilabel:`Email Alert Recipients` field."
+msgstr "Állítsa be az :guilabel:`E-mail értesítési küszöbértéket` arra a kreditmennyiségre, amely alacsony kreditegyenlegre figyelmeztető riasztást vált ki, ha az egyenleg ez alá csökken. Ezután válassza ki, hogy melyik felhasználó(k) kapják az e-mail értesítést az :guilabel:`E-mail értesítés címzettjei` mező segítségével."
+
+#: ../../content/applications/essentials/property_fields.rst:149
+msgid ":guilabel:`Project`"
+msgstr ":guilabel:`Projekt`"
+
+#: ../../content/applications/essentials/stages.rst:96
+msgid "The :guilabel:`SMS Template` field is available when the *Project - SMS* module (`project_sms`) is installed. SMS text messaging is an :doc:`In-App Purchase (IAP) </applications/essentials/in_app_purchase>` service that requires prepaid credits to work."
+msgstr "Az :guilabel:`SMS sablon` mező a *Projekt - SMS* modul (`project_sms`) telepítésekor érhető el. Az SMS szöveges üzenetküldés egy :doc:`alkalmazáson belüli vásárlás (IAP) </applications/essentials/in_app_purchase>` szolgáltatás, amelynek működéséhez előre megvásárolt kredit szükséges."

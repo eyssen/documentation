@@ -63,12 +63,6 @@ operating system.
    * - Create a new To-Do
      - :kbd:`Alt` + :kbd:`Shift` + :kbd:`T`
      - :kbd:`Ctrl` + :kbd:`Shift` + :kbd:`T`
-   * - Search a Knowledge article
-     - :kbd:`Alt` + :kbd:`F`
-     - :kbd:`Ctrl` + :kbd:`F`
-   * - Share a Knowledge article
-     - :kbd:`Alt` + :kbd:`Shift` + :kbd:`S`
-     - :kbd:`Ctrl` + :kbd:`Shift` + :kbd:`S`
    * - Open command palette
      - :kbd:`Ctrl` + :kbd:`K`
      - :kbd:`Command` + :kbd:`K`
@@ -79,7 +73,6 @@ operating system.
    - :kbd:`/`: search for menus, applications, and modules.
    - :kbd:`@`: search for users.
    - :kbd:`#`: search for **Discuss** channels.
-   - :kbd:`?`: search for **Knowledge** articles.
 
    Enter a name (or term) in the search bar, or use the arrow keys to scroll through the available
    options. Then, click :kbd:`Ctrl` + :kbd:`Enter` to open the selected app, module, or menu in a

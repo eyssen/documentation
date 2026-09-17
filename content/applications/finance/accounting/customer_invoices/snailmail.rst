@@ -42,7 +42,7 @@ set. Click :guilabel:`Send`, select :guilabel:`by Post`, then :guilabel:`Send` t
 Pricing
 =======
 
-Snailmail is an In-App Purchase (IAP) service that requires prepaid stamps
+Snailmail is an :doc:`/applications/essentials/in_app_purchase` service that requires prepaid stamps
 (credits) to work. Sending one document consumes one stamp.
 
 To buy stamps, go to :menuselection:`Accounting --> Configuration --> Settings`, scroll down to the

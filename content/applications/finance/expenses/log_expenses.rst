@@ -130,7 +130,7 @@ digitization. Click the :icon:`fa-arrow-right` :guilabel:`View My Services` link
 all current services, and their remaining credit balances.
 
 For more information on document digitization and :abbr:`IAPs (in-app purchases)`, refer to the
-In-app purchase (IAP) documentation.
+:doc:`In-app purchase (IAP) <../../essentials/in_app_purchase>` documentation.
 
 .. note::
    When the :guilabel:`Expense Digitization (OCR)` option is enabled, a necessary module is

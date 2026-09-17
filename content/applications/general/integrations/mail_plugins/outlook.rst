@@ -93,6 +93,10 @@ The right-side panel can now display **Company Insights**. At the bottom, click 
    :module: mail_plugin
    :notes: Outlook web interface; demo mailbox; example database URL.
 
+.. note::
+   Only a limited amount of **Company Insights** (*Lead Enrichment*) requests are available for
+   free. This feature requires :ref:`prepaid credits <mail_plugins/pricing>`.
+
 .. tip::
    If, after a short while, the panel is still empty, it is possible that the browser cookie
    settings prevented it from loading. Note that these settings also change if the browser is in

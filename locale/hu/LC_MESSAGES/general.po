@@ -374,23 +374,15 @@ msgstr "Az alapértelmezett összefoglaló e-mail (*Your Odoo Periodic Digest*) 
 msgid "A pop-up window appears, and presents a variety of editable settings, which include:"
 msgstr "Megjelenik egy felugró ablak, amely számos szerkeszthető beállítást mutat be, többek között:"
 
-#: ../../content/applications/general/companies/digest_emails.rst:51 ../../content/applications/general/companies/digest_emails.rst:188
-msgid ":guilabel:`Digest Name`: the name of the digest email."
-msgstr ":guilabel:`Összefoglaló neve`: az összefoglaló e-mail neve."
-
-#: ../../content/applications/general/companies/digest_emails.rst:52 ../../content/applications/general/companies/digest_emails.rst:189
+#: ../../content/applications/general/companies/digest_emails.rst:52 ../../content/applications/general/companies/digest_emails.rst:193
 msgid ":guilabel:`Periodicity`: control how often digest emails are sent (:guilabel:`Daily`, :guilabel:`Weekly`, :guilabel:`Monthly`, or :guilabel:`Quarterly`)."
-msgstr ":guilabel:`Periodicity`: szabályozza, hogy milyen gyakran kerüljenek kiküldésre az összefoglaló e-mailek (:guilabel:`Napi`, :guilabel:`Heti`, :guilabel:`Havi` vagy :guilabel:`Negyedéves`)."
+msgstr ":guilabel:`Gyakoriság`: szabályozza, hogy milyen gyakran kerüljenek kiküldésre az összefoglaló e-mailek (:guilabel:`Napi`, :guilabel:`Heti`, :guilabel:`Havi` vagy :guilabel:`Negyedéves`)."
 
-#: ../../content/applications/general/companies/digest_emails.rst:54 ../../content/applications/general/companies/digest_emails.rst:191
-msgid ":guilabel:`Next Send Date`: the date on which the digest email will be sent again."
-msgstr ":guilabel:`Next Send Date`: az a dátum, amelyen az összefoglaló e-mailt ismét elküldik."
-
-#: ../../content/applications/general/companies/digest_emails.rst:55 ../../content/applications/general/companies/digest_emails.rst:192
+#: ../../content/applications/general/companies/digest_emails.rst:55 ../../content/applications/general/companies/digest_emails.rst:196
 msgid ":guilabel:`KPIs` tab: check/uncheck each calculated :abbr:`KPI (key performance indicator)` that appears in digest emails. A ticked box indicates an active :abbr:`KPI (key performance indicator)` in the digest email. See the section on :ref:`digest-emails/kpis`."
 msgstr ":guilabel:`KPIs` lap: jelölje be/ki azokat a kiszámított :abbr:`KPI (key performance indicator)` értékeket, amelyek megjelennek az összefoglaló e-mailekben. A bejelölt jelölőnégyzet aktív :abbr:`KPI (key performance indicator)`-t jelöl az összefoglaló e-mailben. Lásd a :ref:`digest-emails/kpis` szakaszt."
 
-#: ../../content/applications/general/companies/digest_emails.rst:58 ../../content/applications/general/companies/digest_emails.rst:195
+#: ../../content/applications/general/companies/digest_emails.rst:58 ../../content/applications/general/companies/digest_emails.rst:199
 msgid ":guilabel:`Recipients` tab: add/remove users who receive the digest emails. See the section on :ref:`digest-emails/recipients`."
 msgstr ":guilabel:`Recipients` lap: felhasználók hozzáadása/eltávolítása, akik megkapják az összefoglaló e-maileket. Lásd a :ref:`digest-emails/recipients` szakaszt."
 
@@ -402,275 +394,263 @@ msgstr "Összefoglaló e-mail kikapcsolása"
 msgid "To manually deactivate an individual digest email, first navigate to :menuselection:`Settings app --> Statistics section`, and click :guilabel:`Configure Digest Emails`. Then, select the desired digest email from the list that should be deactivated."
 msgstr "Egy adott összefoglaló e-mail manuális kikapcsolásához először lépjen a :menuselection:`Beállítások alkalmazás --> Statisztikák szakasz` menüpontra, majd kattintson az :guilabel:`Configure Digest Emails` elemre. Ezután válassza ki a listából a kikapcsolni kívánt összefoglaló e-mailt."
 
-#: ../../content/applications/general/companies/digest_emails.rst:82
-msgid "Next, click :guilabel:`DEACTIVATE FOR EVERYONE` to deactivate the digest email for everyone, or :guilabel:`UNSUBSCRIBE ME` to remove the logged in user from the mailing list. These buttons are located in the top menu, just above the :guilabel:`Digest Name`."
-msgstr "Ezután kattintson a :guilabel:`DEACTIVATE FOR EVERYONE` gombra az összefoglaló e-mail mindenki számára történő kikapcsolásához, vagy az :guilabel:`UNSUBSCRIBE ME` gombra a bejelentkezett felhasználó levelezési listáról való eltávolításához. Ezek a gombok a felső menüben találhatók, közvetlenül a :guilabel:`Digest Name` felett."
-
-#: ../../content/applications/general/companies/digest_emails.rst:87
+#: ../../content/applications/general/companies/digest_emails.rst:91
 msgid "Manually send digest email"
 msgstr "Összefoglaló e-mail manuális küldése"
 
-#: ../../content/applications/general/companies/digest_emails.rst:89
+#: ../../content/applications/general/companies/digest_emails.rst:93
 msgid "To manually send a digest email, first navigate to :menuselection:`Settings app --> Statistics section`, and click :guilabel:`Configure Digest Emails`. Then, select the desired digest email, and click :guilabel:`SEND NOW`. This button is located in the top menu, just above the :guilabel:`Digest Name`."
 msgstr "Összefoglaló e-mail manuális elküldéséhez először lépjen a :menuselection:`Beállítások alkalmazás --> Statisztikák szakasz` menüpontra, majd kattintson az :guilabel:`Configure Digest Emails` elemre. Ezt követően válassza ki a kívánt összefoglaló e-mailt, és kattintson a :guilabel:`SEND NOW` gombra. Ez a gomb a felső menüben található, közvetlenül a :guilabel:`Digest Name` felett."
 
-#: ../../content/applications/general/companies/digest_emails.rst:97
+#: ../../content/applications/general/companies/digest_emails.rst:101
 msgid "KPIs"
 msgstr "KPI-ok"
 
-#: ../../content/applications/general/companies/digest_emails.rst:99
+#: ../../content/applications/general/companies/digest_emails.rst:103
 msgid "Pre-configured :abbr:`KPIs (key performance indicators)` can be added to the digest email from the :guilabel:`KPIs` tab of the digest email template form."
 msgstr "Az előre konfigurált :abbr:`KPIs (key performance indicators)` értékek az összefoglaló e-mail sablonűrlap :guilabel:`KPIs` lapján adhatók hozzá az összefoglaló e-mailhez."
 
-#: ../../content/applications/general/companies/digest_emails.rst:102
+#: ../../content/applications/general/companies/digest_emails.rst:106
 msgid "First, navigate to :menuselection:`Settings app --> Statistics section`, and click :guilabel:`Configure Digest Emails`."
 msgstr "Először lépjen a :menuselection:`Beállítások alkalmazás --> Statisztikák szakasz` menüpontra, majd kattintson az :guilabel:`Configure Digest Emails` elemre."
 
-#: ../../content/applications/general/companies/digest_emails.rst:105
+#: ../../content/applications/general/companies/digest_emails.rst:109
 msgid "Then, select the desired digest email, and open the :guilabel:`KPIs` tab."
 msgstr "Ezután válassza ki a kívánt összefoglaló e-mailt, és nyissa meg a :guilabel:`KPIs` lapot."
 
-#: ../../content/applications/general/companies/digest_emails.rst:107
+#: ../../content/applications/general/companies/digest_emails.rst:111
 msgid "To add a :abbr:`KPI (key performance indicator)` to the digest email, tick the checkbox next to the desired :abbr:`KPI (key performance indicator)`. After all :abbr:`KPIs (key performance indicators)` are added (or deselected), click :guilabel:`Save`."
 msgstr "Egy :abbr:`KPI (key performance indicator)` összefoglaló e-mailhez való hozzáadásához jelölje be a kívánt :abbr:`KPI (key performance indicator)` melletti jelölőnégyzetet. Miután az összes :abbr:`KPIs (key performance indicators)` hozzáadásra kerül (vagy eltávolításra), kattintson a :guilabel:`Save` gombra."
 
-#: ../../content/applications/general/companies/digest_emails.rst:111
+#: ../../content/applications/general/companies/digest_emails.rst:115
 msgid "The following :abbr:`KPIs (key performance indicators)` are available in the :guilabel:`KPIs` tab on a digest email template form out-of-box in Odoo:"
 msgstr "Az alábbi :abbr:`KPIs (key performance indicators)` értékek érhetők el az Odoo alapértelmezett összefoglaló e-mail sablonűrlapjának :guilabel:`KPIs` lapján:"
 
-#: ../../content/applications/general/companies/digest_emails.rst:123
+#: ../../content/applications/general/companies/digest_emails.rst:127
 msgid ":guilabel:`General`"
 msgstr ":guilabel:`Általános`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:122
+#: ../../content/applications/general/companies/digest_emails.rst:126
 msgid ":guilabel:`Connected Users`"
 msgstr ":guilabel:`Csatlakozott felhasználók`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:126
+#: ../../content/applications/general/companies/digest_emails.rst:130
 msgid ":guilabel:`Project`"
 msgstr ":guilabel:`Projekt`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:126
+#: ../../content/applications/general/companies/digest_emails.rst:130
 msgid ":guilabel:`Open Tasks`"
 msgstr ":guilabel:`Nyitott feladatok`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:129
+#: ../../content/applications/general/companies/digest_emails.rst:133
 msgid ":guilabel:`Recruitment`"
 msgstr ":guilabel:`Toborzás`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:133
+#: ../../content/applications/general/companies/digest_emails.rst:137
 msgid ":guilabel:`CRM`"
 msgstr ":guilabel:`CRM`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:133
+#: ../../content/applications/general/companies/digest_emails.rst:137
 msgid ":guilabel:`Opportunities Won`"
 msgstr ":guilabel:`Megnyert lehetőségek`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:137
+#: ../../content/applications/general/companies/digest_emails.rst:141
 msgid ":guilabel:`Sales`"
 msgstr ":guilabel:`Értékesítés`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:136
+#: ../../content/applications/general/companies/digest_emails.rst:140
 msgid ":guilabel:`All Sales`"
 msgstr ":guilabel:`Összes értékesítés`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:137
+#: ../../content/applications/general/companies/digest_emails.rst:141
 msgid ":guilabel:`eCommerce Sales`"
 msgstr ":guilabel:`eCommerce értékesítés`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:140
+#: ../../content/applications/general/companies/digest_emails.rst:144
 msgid ":guilabel:`Point of Sale`"
 msgstr ":guilabel:`Pénztárgép`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:140
+#: ../../content/applications/general/companies/digest_emails.rst:144
 msgid ":guilabel:`POS Sales`"
 msgstr ":guilabel:`POS értékesítés`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:145
+#: ../../content/applications/general/companies/digest_emails.rst:149
 msgid ":guilabel:`Live Chat`"
 msgstr ":guilabel:`Élő chat`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:143
+#: ../../content/applications/general/companies/digest_emails.rst:147
 msgid ":guilabel:`% of Happiness`"
 msgstr ":guilabel:`Elégedettség aránya`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:144
+#: ../../content/applications/general/companies/digest_emails.rst:148
 msgid ":guilabel:`Conversations handled`"
 msgstr ":guilabel:`Kezelt beszélgetések`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:145
+#: ../../content/applications/general/companies/digest_emails.rst:149
 msgid ":guilabel:`Time to answer (sec)`"
 msgstr ":guilabel:`Válaszidő (mp)`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:148
+#: ../../content/applications/general/companies/digest_emails.rst:152
 msgid ":guilabel:`Invoicing`"
 msgstr ":guilabel:`Számlázás`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:148
+#: ../../content/applications/general/companies/digest_emails.rst:152
 msgid ":guilabel:`Revenue`"
 msgstr ":guilabel:`Bevétel`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:156
+#: ../../content/applications/general/companies/digest_emails.rst:160
 msgid "Recipients"
 msgstr "Címzettek"
 
-#: ../../content/applications/general/companies/digest_emails.rst:158
+#: ../../content/applications/general/companies/digest_emails.rst:162
 msgid "Digest email recipients are added from the :guilabel:`Recipients` tab of the digest email template form."
 msgstr "Az összefoglaló e-mail címzettjei az összefoglaló e-mail sablon :guilabel:`Címzettek` fülén adhatók hozzá."
 
-#: ../../content/applications/general/companies/digest_emails.rst:161
+#: ../../content/applications/general/companies/digest_emails.rst:165
 msgid "To add a recipient, navigate to :menuselection:`Settings app --> Statistics section`, and click :guilabel:`Configure Digest Emails`. Then, select the desired digest email, and open the :guilabel:`Recipients` tab."
 msgstr "Címzett hozzáadásához lépjen a :menuselection:`Beállítások alkalmazás --> Statisztikák szakasz` menüpontra, és kattintson a :guilabel:`Összefoglaló e-mailek konfigurálása` lehetőségre. Ezután válassza ki a kívánt összefoglaló e-mailt, és nyissa meg a :guilabel:`Címzettek` fület."
 
-#: ../../content/applications/general/companies/digest_emails.rst:165
+#: ../../content/applications/general/companies/digest_emails.rst:169
 msgid "To add a recipient, click :guilabel:`Add a line`, and an :guilabel:`Add Recipients` pop-up window appears, with all available users to add as recipients."
 msgstr "Címzett hozzáadásához kattintson a :guilabel:`Sor hozzáadása` gombra, majd megjelenik a :guilabel:`Címzettek hozzáadása` felugró ablak, amely felsorolja az összes elérhető felhasználót, akik címzettként adhatók hozzá."
 
-#: ../../content/applications/general/companies/digest_emails.rst:168
+#: ../../content/applications/general/companies/digest_emails.rst:172
 msgid "From the pop-up window, tick the checkbox next to the :guilabel:`Name` of the user(s), and click the :guilabel:`Select` button."
 msgstr "A felugró ablakban jelölje be a felhasználó(k) neve melletti jelölőnégyzetet a :guilabel:`Név` oszlopban, majd kattintson a :guilabel:`Kiválasztás` gombra."
 
-#: ../../content/applications/general/companies/digest_emails.rst:171
+#: ../../content/applications/general/companies/digest_emails.rst:175
 msgid "To remove a user as a recipient, click the :guilabel:`❌ (remove)` icon to the far-right of the user listed in the :guilabel:`Recipients` tab."
 msgstr "Egy felhasználó eltávolításához kattintson a :guilabel:`Címzettek` fülön szereplő felhasználó sorának jobb szélén lévő :guilabel:`❌ (eltávolítás)` ikonra."
 
-#: ../../content/applications/general/companies/digest_emails.rst:174
+#: ../../content/applications/general/companies/digest_emails.rst:178
 msgid "Click :guilabel:`Save` to implement the changes."
 msgstr "A módosítások mentéséhez kattintson a :guilabel:`Mentés` gombra."
 
-#: ../../content/applications/general/companies/digest_emails.rst:179
+#: ../../content/applications/general/companies/digest_emails.rst:183
 msgid "Create digest emails"
 msgstr "Összefoglaló e-mailek létrehozása"
 
-#: ../../content/applications/general/companies/digest_emails.rst:181
-msgid "To create a new digest email, navigate to :menuselection:`Settings app --> Statistics section`, and click :guilabel:`Configure Digest Emails`. Then, click :guilabel:`Create` to create a new digest email."
-msgstr "Új összefoglaló e-mail létrehozásához lépjen a :menuselection:`Beállítások alkalmazás --> Statisztikák szakasz` menüpontra, és kattintson az :guilabel:`Összefoglaló e-mailek konfigurálása` lehetőségre. Ezután kattintson a :guilabel:`Létrehozás` gombra egy új összefoglaló e-mail készítéséhez."
-
-#: ../../content/applications/general/companies/digest_emails.rst:185
+#: ../../content/applications/general/companies/digest_emails.rst:189
 msgid "A separate page, with a blank digest email template appears, and presents a variety of editable settings, including:"
 msgstr "Megjelenik egy külön oldal egy üres összefoglaló e-mail sablonnal, amely számos szerkeszthető beállítást tartalmaz, többek között:"
 
-#: ../../content/applications/general/companies/digest_emails.rst:198
-msgid "From there, give the digest email a :guilabel:`Digest Name`, specify :guilabel:`Periodicity`, choose the desired :abbr:`KPIs (key performance indicators)`, and add :guilabel:`Recipients`, as needed."
-msgstr "Adjon nevet az összefoglaló e-mailnek a :guilabel:`Összefoglaló neve` mezőben, adja meg a :guilabel:`Időszakosság` értékét, válassza ki a kívánt :abbr:`KPI-kat (kulcsteljesítmény-mutatókat)`, és szükség szerint adja meg a :guilabel:`Címzetteket`."
-
-#: ../../content/applications/general/companies/digest_emails.rst:202
+#: ../../content/applications/general/companies/digest_emails.rst:206
 msgid "After clicking :guilabel:`Save`, the new custom digest email is available as a selection in the :guilabel:`Digest Email` field, located in the :menuselection:`Settings app --> Statistics section`."
 msgstr "A :guilabel:`Mentés` gombra kattintás után az új egyéni összefoglaló e-mail elérhető lesz az :guilabel:`Összefoglaló e-mail` mezőben, amely a :menuselection:`Beállítások alkalmazás --> Statisztikák szakasz` területen található."
 
-#: ../../content/applications/general/companies/digest_emails.rst:225
+#: ../../content/applications/general/companies/digest_emails.rst:229
 msgid "Computed values reference table"
 msgstr "Számított értékek referencia táblázata"
 
-#: ../../content/applications/general/companies/digest_emails.rst:228
+#: ../../content/applications/general/companies/digest_emails.rst:232
 msgid "LABEL"
 msgstr "FELIRAT"
 
-#: ../../content/applications/general/companies/digest_emails.rst:228
+#: ../../content/applications/general/companies/digest_emails.rst:232
 msgid "VALUE"
 msgstr "ÉRTÉK"
 
-#: ../../content/applications/general/companies/digest_emails.rst:230
+#: ../../content/applications/general/companies/digest_emails.rst:234
 msgid "Connected Users"
 msgstr "Csatlakoztatott felhasználók"
 
-#: ../../content/applications/general/companies/digest_emails.rst:230
+#: ../../content/applications/general/companies/digest_emails.rst:234
 msgid "`kpi_res_users_connected_value`"
 msgstr "`kpi_res_users_connected_value`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:232
+#: ../../content/applications/general/companies/digest_emails.rst:236
 msgid "Messages Sent"
 msgstr "Elküldött üzenetek"
 
-#: ../../content/applications/general/companies/digest_emails.rst:232
+#: ../../content/applications/general/companies/digest_emails.rst:236
 msgid "`kpi_mail_message_total_value`"
 msgstr "`kpi_mail_message_total_value`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:234
+#: ../../content/applications/general/companies/digest_emails.rst:238
 msgid "New Leads"
 msgstr "Új érdeklődők"
 
-#: ../../content/applications/general/companies/digest_emails.rst:234
+#: ../../content/applications/general/companies/digest_emails.rst:238
 msgid "`kpi_crm_lead_created_value`"
 msgstr "`kpi_crm_lead_created_value`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:236
+#: ../../content/applications/general/companies/digest_emails.rst:240
 msgid "Opportunities Won"
 msgstr "Megnyert lehetőségek"
 
-#: ../../content/applications/general/companies/digest_emails.rst:236
+#: ../../content/applications/general/companies/digest_emails.rst:240
 msgid "`kpi_crm_opportunities_won_value`"
 msgstr "`kpi_crm_opportunities_won_value`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:238
+#: ../../content/applications/general/companies/digest_emails.rst:242
 msgid "Open Tasks"
 msgstr "Nyitott feladatok"
 
-#: ../../content/applications/general/companies/digest_emails.rst:238
+#: ../../content/applications/general/companies/digest_emails.rst:242
 msgid "`kpi_project_task_opened_value`"
 msgstr "`kpi_project_task_opened_value`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:240
+#: ../../content/applications/general/companies/digest_emails.rst:244
 msgid "% of Happiness"
 msgstr "% Elégedettség"
 
-#: ../../content/applications/general/companies/digest_emails.rst:240
+#: ../../content/applications/general/companies/digest_emails.rst:244
 msgid "`kpi_livechat_rating_value`"
 msgstr "`kpi_livechat_rating_value`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:242
+#: ../../content/applications/general/companies/digest_emails.rst:246
 msgid "Conversations handled"
 msgstr "Kezelt beszélgetések"
 
-#: ../../content/applications/general/companies/digest_emails.rst:242
+#: ../../content/applications/general/companies/digest_emails.rst:246
 msgid "`kpi_livechat_conversations_value`"
 msgstr "`kpi_livechat_conversations_value`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:244
+#: ../../content/applications/general/companies/digest_emails.rst:248
 msgid "Time to answer (sec)"
 msgstr "Válaszidő (mp)"
 
-#: ../../content/applications/general/companies/digest_emails.rst:244
+#: ../../content/applications/general/companies/digest_emails.rst:248
 msgid "`kpi_livechat_response_value`"
 msgstr "`kpi_livechat_response_value`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:246
+#: ../../content/applications/general/companies/digest_emails.rst:250
 msgid "All Sales"
 msgstr "Összes értékesítés"
 
-#: ../../content/applications/general/companies/digest_emails.rst:246
+#: ../../content/applications/general/companies/digest_emails.rst:250
 msgid "`kpi_all_sale_total_value`"
 msgstr "`kpi_all_sale_total_value`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:248
+#: ../../content/applications/general/companies/digest_emails.rst:252
 msgid "eCommerce Sales"
 msgstr "eCommerce értékesítés"
 
-#: ../../content/applications/general/companies/digest_emails.rst:248
+#: ../../content/applications/general/companies/digest_emails.rst:252
 msgid "`kpi_website_sale_total_value`"
 msgstr "`kpi_website_sale_total_value`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:250
+#: ../../content/applications/general/companies/digest_emails.rst:254
 msgid "Revenue"
 msgstr "Bevétel"
 
-#: ../../content/applications/general/companies/digest_emails.rst:250
+#: ../../content/applications/general/companies/digest_emails.rst:254
 msgid "`kpi_account_total_revenue_value`"
 msgstr "`kpi_account_total_revenue_value`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:252
+#: ../../content/applications/general/companies/digest_emails.rst:256
 msgid "POS Sales"
 msgstr "POS értékesítés"
 
-#: ../../content/applications/general/companies/digest_emails.rst:252
+#: ../../content/applications/general/companies/digest_emails.rst:256
 msgid "`kpi_pos_total_value`"
 msgstr "`kpi_pos_total_value`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:254
+#: ../../content/applications/general/companies/digest_emails.rst:258
 msgid "New Employees"
 msgstr "Új alkalmazottak"
 
-#: ../../content/applications/general/companies/digest_emails.rst:254
+#: ../../content/applications/general/companies/digest_emails.rst:258
 msgid "`kpi_hr_recruitment_new_colleagues_value`"
 msgstr "`kpi_hr_recruitment_new_colleagues_value`"
 
@@ -790,207 +770,195 @@ msgstr ":guilabel:`Média`"
 msgid ":guilabel:`Image`: Insert an image."
 msgstr ":guilabel:`Kép`: Kép beszúrása."
 
-#: ../../content/applications/general/companies/email_template.rst:67
-msgid ":guilabel:`Article`: Link an article."
-msgstr ":guilabel:`Cikk`: Cikk csatolása."
-
-#: ../../content/applications/general/companies/email_template.rst:69
+#: ../../content/applications/general/companies/email_template.rst:68
 msgid ":guilabel:`Navigation`"
 msgstr ":guilabel:`Navigáció`"
 
-#: ../../content/applications/general/companies/email_template.rst:71
+#: ../../content/applications/general/companies/email_template.rst:70
 msgid ":guilabel:`Link`: Add a link."
 msgstr ":guilabel:`Hivatkozás`: Hivatkozás hozzáadása."
 
-#: ../../content/applications/general/companies/email_template.rst:72
+#: ../../content/applications/general/companies/email_template.rst:71
 msgid ":guilabel:`Button`: Add a button."
 msgstr ":guilabel:`Gomb`: Gomb hozzáadása."
 
 #: ../../content/applications/general/companies/email_template.rst:73
-msgid ":guilabel:`Appointment`: Add a specific appointment."
-msgstr ":guilabel:`Időpont`: Meghatározott időpont hozzáadása."
-
-#: ../../content/applications/general/companies/email_template.rst:74
-msgid ":guilabel:`Calendar`: Schedule an appointment."
-msgstr ":guilabel:`Naptár`: Időpont ütemezése."
-
-#: ../../content/applications/general/companies/email_template.rst:76
 msgid ":guilabel:`Widgets`"
 msgstr ":guilabel:`Widgetek`"
 
-#: ../../content/applications/general/companies/email_template.rst:78
+#: ../../content/applications/general/companies/email_template.rst:75
 msgid ":guilabel:`3 Stars`: Insert a rating over three stars."
 msgstr ":guilabel:`3 csillag`: Értékelés beszúrása három csillagig."
 
-#: ../../content/applications/general/companies/email_template.rst:79
+#: ../../content/applications/general/companies/email_template.rst:76
 msgid ":guilabel:`5 Stars`: Insert a rating over five stars."
 msgstr ":guilabel:`5 csillag`: Értékelés beszúrása öt csillagig."
 
-#: ../../content/applications/general/companies/email_template.rst:81
+#: ../../content/applications/general/companies/email_template.rst:78
 msgid ":guilabel:`Basic Blocks`"
 msgstr ":guilabel:`Alap blokkok`"
 
-#: ../../content/applications/general/companies/email_template.rst:83
+#: ../../content/applications/general/companies/email_template.rst:80
 msgid ":guilabel:`Signature`: Insert your signature."
 msgstr ":guilabel:`Aláírás`: Az aláírás beszúrása."
 
-#: ../../content/applications/general/companies/email_template.rst:85
+#: ../../content/applications/general/companies/email_template.rst:82
 msgid ":guilabel:`Marketing Tools`"
 msgstr ":guilabel:`Marketing eszközök`"
 
-#: ../../content/applications/general/companies/email_template.rst:87
+#: ../../content/applications/general/companies/email_template.rst:84
 msgid ":guilabel:`Dynamic Placeholders`: Insert personalized content."
 msgstr ":guilabel:`Dinamikus helyőrzők`: Személyre szabott tartalom beszúrása."
 
-#: ../../content/applications/general/companies/email_template.rst:90
+#: ../../content/applications/general/companies/email_template.rst:87
 msgid "To use any of these options, click on the desired feature from the powerbox drop-down menu. To format existing text with a text-related option (e.g. :guilabel:`Heading 1`, :guilabel:`Switch direction`, etc.), highlight the text, then type in the activator key (forward slash) `/`, and select the desired option from the drop-down menu."
 msgstr "Ezen lehetőségek bármelyikének használatához kattintson a kívánt funkcióra a powerbox legördülő menüjéből. Meglévő szöveg szöveg-alapú opcióval való formázásához (pl. :guilabel:`1. fejléc`, :guilabel:`Irányváltás` stb.) jelölje ki a szöveget, majd írja be az aktiváló billentyűt (perjel) `/`, és válassza ki a kívánt opciót a legördülő menüből."
 
-#: ../../content/applications/general/companies/email_template.rst:104
+#: ../../content/applications/general/companies/email_template.rst:101
 msgid ":ref:`Using dynamic placeholders <email_template/dynamic-placeholders>`"
 msgstr ":ref:`Dinamikus helyőrzők használata <email_template/dynamic-placeholders>`"
 
-#: ../../content/applications/general/companies/email_template.rst:107
+#: ../../content/applications/general/companies/email_template.rst:104
 msgid "XML/HTML code editor"
 msgstr "XML/HTML kódszerkesztő"
 
-#: ../../content/applications/general/companies/email_template.rst:109
+#: ../../content/applications/general/companies/email_template.rst:106
 msgid "To access the XML/HTML editor for an email template, first enter :ref:`developer mode <developer-mode>`. Then, click the :guilabel:`</>` icon in the upper-right corner of the template, and proceed to edit the XML/HTML. To return to the standard text editor, click the :guilabel:`</>` icon again."
 msgstr "Az e-mail sablon XML/HTML szerkesztőjének eléréséhez először lépjen be a :ref:`developer mode <developer-mode>` módba. Ezután kattintson a sablon jobb felső sarkában található :guilabel:`</>` ikonra, és folytassa az XML/HTML szerkesztésével. A normál szövegszerkesztőhöz való visszatéréshez kattintson ismét a :guilabel:`</>` ikonra."
 
-#: ../../content/applications/general/companies/email_template.rst:123
+#: ../../content/applications/general/companies/email_template.rst:120
 msgid "The XML/HTML editor should be accessed with caution as this is the backend code of the template. Editing the code can cause the email template to break immediately or when upgrading the database."
 msgstr "Az XML/HTML szerkesztőt óvatosan kell használni, mivel ez a sablon háttérkódja. A kód szerkesztése azonnal vagy az adatbázis frissítésekor meghibásodást okozhat az e-mail sablonban."
 
-#: ../../content/applications/general/companies/email_template.rst:130
+#: ../../content/applications/general/companies/email_template.rst:127
 msgid "Dynamic placeholders"
 msgstr "Dinamikus helyőrzők"
 
-#: ../../content/applications/general/companies/email_template.rst:132
+#: ../../content/applications/general/companies/email_template.rst:129
 msgid "*Dynamic placeholders* reference certain fields within the Odoo database to produce unique data in the email template."
 msgstr "*Dinamikus helyőrzők* az Odoo adatbázis bizonyos mezőire hivatkoznak, hogy egyedi adatokat állítsanak elő az e-mail sablonban."
 
-#: ../../content/applications/general/companies/email_template.rst:136
+#: ../../content/applications/general/companies/email_template.rst:133
 msgid "Many companies like to customize their emails with a personalized piece of customer information to grab attention. This can be accomplished in Odoo by referencing a field within a model by inserting a dynamic placeholder. For example, a customer's name can be referenced in the email from the :guilabel:`Customer` field on the :guilabel:`Sales Order` model. The dynamic placeholder for this field is: `{{ object.partner_id }}`."
 msgstr "Sok vállalat szereti személyre szabni e-mailjeit egy személyes ügyfél-információval, hogy felkeltse a figyelmet. Ez Odoo-ban megvalósítható, ha egy modell mezőjére hivatkozunk egy dinamikus helyőrző beillesztésével. Például az ügyfél neve hivatkozható az e-mailben a :guilabel:`Vevő` mező segítségével a :guilabel:`Értékesítési rendelés` modellben. Az ehhez a mezőhöz tartozó dinamikus helyőrző: `{{ object.partner_id }}`."
 
-#: ../../content/applications/general/companies/email_template.rst:142
+#: ../../content/applications/general/companies/email_template.rst:139
 msgid "Dynamic placeholders are encoded to display fields from within the database. Dynamic placeholders can be used in the :guilabel:`Body` (:guilabel:`Content` Tab) of the email template. They can also be used in the fields present in the :guilabel:`Email Configuration` tab, the :guilabel:`Subject` of the email, and the :guilabel:`Language`."
 msgstr "A dinamikus helyőrzők az adatbázisból lekért mezők megjelenítéséhez vannak kódolva. A dinamikus helyőrzők az e-mail sablon :guilabel:`Törzs` (:guilabel:`Tartalom` fül) részében használhatók. Felhasználhatók az :guilabel:`E-mail konfiguráció` fülön található mezőkben, az e-mail :guilabel:`Tárgy` mezőjében és a :guilabel:`Nyelv` mezőben is."
 
-#: ../../content/applications/general/companies/email_template.rst:147
+#: ../../content/applications/general/companies/email_template.rst:144
 msgid "To use the dynamic placeholders in the :guilabel:`Body` of an email open the **powerbox** feature by typing in `/` into the body of the email template under the :guilabel:`Content` tab. Scroll to the bottom of the options list, to :guilabel:`Marketing Tools`. Next, select :guilabel:`Dynamic Placeholder`. Then select the dynamic placeholder from a list of available options and follow the prompts to configure it with the desired corresponding Odoo field. Each dynamic placeholder will vary in configuration."
 msgstr "A dinamikus helyőrzők e-mail :guilabel:`Törzs` részében való használatához nyissa meg a **powerbox** funkciót a `/` beírásával az e-mail sablon törzsrészébe a :guilabel:`Tartalom` fülön. Görgessen az opciók listájának aljára, a :guilabel:`Marketing eszközök` részhez. Ezután válassza a :guilabel:`Dinamikus helyőrző` lehetőséget. Majd válassza ki a dinamikus helyőrzőt az elérhető lehetőségek listájából, és kövesse az utasításokat a konfiguráláshoz a kívánt Odoo-mezővel. Minden dinamikus helyőrző konfigurációja eltérő lehet."
 
-#: ../../content/applications/general/companies/email_template.rst:163
+#: ../../content/applications/general/companies/email_template.rst:160
 msgid "Each unique combination of :guilabel:`Fields`, :guilabel:`Sub-models` and :guilabel:`Sub-fields` creates a different dynamic placeholder. Imagine it as a combination to the field that is being created."
 msgstr "A :guilabel:`Mezők`, :guilabel:`Almodellek` és :guilabel:`Almezők` minden egyedi kombinációja különböző dinamikus helyőrzőt hoz létre. Képzelje el úgy, mint egy kombinációt a létrehozandó mezőhöz."
 
-#: ../../content/applications/general/companies/email_template.rst:167
+#: ../../content/applications/general/companies/email_template.rst:164
 msgid "To search the available fields, simply type in the front-end name (on user-interface) of the field in the search. This will find a result from all of the available fields for the model that the email template is created for."
 msgstr "Az elérhető mezők kereséséhez egyszerűen írja be a mező felhasználói felületen megjelenő nevét a keresőmezőbe. Ez az összes elérhető mező közül találatot ad vissza abban a modellben, amelyhez az e-mail sablon létrehozásra került."
 
-#: ../../content/applications/general/companies/email_template.rst:172
+#: ../../content/applications/general/companies/email_template.rst:169
 msgid "Customizing email templates are out of the scope of Odoo Support."
 msgstr "Az e-mail sablonok testreszabása nem tartozik az Odoo Support hatáskörébe."
 
-#: ../../content/applications/general/companies/email_template.rst:175
+#: ../../content/applications/general/companies/email_template.rst:172
 msgid "Rich text editor"
 msgstr "Rich text szerkesztő"
 
-#: ../../content/applications/general/companies/email_template.rst:177
+#: ../../content/applications/general/companies/email_template.rst:174
 msgid "A rich text editor toolbar can be accessed by highlighting text in the email template. This can be used to change the heading, font size/style, color, add a list type, or a link."
 msgstr "A rich text szerkesztő eszköztára az e-mail sablon szövegének kijelölésével érhető el. Ezzel megváltoztatható a fejléc, a betűméret/stílus, a szín, valamint lista típusa vagy hivatkozás adható hozzá."
 
-#: ../../content/applications/general/companies/email_template.rst:189
+#: ../../content/applications/general/companies/email_template.rst:186
 msgid "Resetting email templates"
 msgstr "E-mail sablonok visszaállítása"
 
-#: ../../content/applications/general/companies/email_template.rst:191
+#: ../../content/applications/general/companies/email_template.rst:188
 msgid "Should the email template not work because the code has been altered it can be reset to restore it back to the out-of-box default template. Simply click on the :guilabel:`Reset Template` button in the upper left-hand of the screen and the template will be reset."
 msgstr "Ha az e-mail sablon nem működik, mert a kód megváltozott, visszaállítható az alapértelmezett sablonra. Egyszerűen kattintson a :guilabel:`Sablon visszaállítása` gombra a képernyő bal felső sarkában, és a sablon visszaáll."
 
-#: ../../content/applications/general/companies/email_template.rst:204
+#: ../../content/applications/general/companies/email_template.rst:201
 msgid "Default reply on email templates"
 msgstr "Alapértelmezett válasz az email sablonokon"
 
-#: ../../content/applications/general/companies/email_template.rst:206
+#: ../../content/applications/general/companies/email_template.rst:203
 msgid "Under the :guilabel:`Email Configuration` tab on an email template, there is a :guilabel:`Reply To` field. In this field, add email addresses to which replies are redirected when sending emails en masse using this template."
 msgstr "Az email sablon :guilabel:`Email Configuration` fülén található egy :guilabel:`Reply To` mező. Ebben a mezőben adja meg azokat az email címeket, amelyekre a válaszok átirányításra kerülnek, amikor tömegesen küld emailt ezzel a sablonnal."
 
-#: ../../content/applications/general/companies/email_template.rst:211
+#: ../../content/applications/general/companies/email_template.rst:208
 msgid "Add multiple email addresses by adding a comma `,` between the addresses or dynamic placeholders."
 msgstr "Több email címet is hozzáadhat, ha vesszővel `,` választja el őket vagy dinamikus helyőrzőket használ."
 
-#: ../../content/applications/general/companies/email_template.rst:222
+#: ../../content/applications/general/companies/email_template.rst:219
 msgid "The :guilabel:`Reply To` field is **only** used for mass mailing (sending emails in bulk). Bulk emails can be sent in almost every Odoo application that has a list view option."
 msgstr "A :guilabel:`Reply To` mező **csak** tömeges levelezéshez (tömeges email küldéshez) használatos. Tömeges emailek szinte minden Odoo alkalmazásban küldhetők, amely rendelkezik lista nézet opcióval."
 
-#: ../../content/applications/general/companies/email_template.rst:225
+#: ../../content/applications/general/companies/email_template.rst:222
 msgid "To send mass mails, while in :guilabel:`list` view, check the boxes next to the desired records where the emails are to be sent, click the :guilabel:`Action` button (represented by a :guilabel:`⚙️ (gear)` icon), and select the desired email option from the :guilabel:`Action` drop-down menu. Email options can vary by the particular list view and application."
 msgstr "Tömeges levelek küldéséhez, miközben :guilabel:`list` nézetben van, jelölje be a kívánt rekordok melletti négyzeteket, amelyekre az emaileket küldeni szeretné, kattintson a :guilabel:`Action` gombra (amit egy :guilabel:`⚙️ (gear)` ikon jelképez), és válassza ki a kívánt email opciót a :guilabel:`Action` legördülő menüből. Az email opciók változhatnak az adott lista nézet és alkalmazás szerint."
 
-#: ../../content/applications/general/companies/email_template.rst:230
+#: ../../content/applications/general/companies/email_template.rst:227
 msgid "If it is possible to send an email, a mail composer pop-up window appears, with values that can be defined and customized. This option will be available on the :guilabel:`Action` button on pages where emails can be sent in bulk---for example, on the :guilabel:`Customers` page of the CRM app. This action occurs throughout the Odoo database."
 msgstr "Ha lehetséges email küldése, egy email szerkesztő felugró ablak jelenik meg, amelyben meghatározhatók és testre szabhatók az értékek. Ez az opció elérhető lesz a :guilabel:`Action` gombon azokon az oldalakon, ahol tömegesen küldhetők emailek---például a CRM alkalmazás :guilabel:`Customers` oldalán. Ez a művelet az egész Odoo adatbázisban előfordul."
 
-#: ../../content/applications/general/companies/email_template.rst:244
+#: ../../content/applications/general/companies/email_template.rst:241
 msgid "Transactional emails and corresponding URLs"
 msgstr "Tranzakciós emailek és a hozzájuk tartozó URL-ek"
 
-#: ../../content/applications/general/companies/email_template.rst:246
+#: ../../content/applications/general/companies/email_template.rst:243
 msgid "In Odoo, multiple events can trigger the sending of automated emails. These emails are known as *transactional emails*, and sometimes contain links redirecting to the Odoo database."
 msgstr "Az Odoo-ban több esemény is kiválthatja az automatikus emailek küldését. Ezeket az emaileket *tranzakciós emaileknek* nevezik, és néha olyan linkeket tartalmaznak, amelyek az Odoo adatbázisra irányítanak."
 
-#: ../../content/applications/general/companies/email_template.rst:249
+#: ../../content/applications/general/companies/email_template.rst:246
 msgid "By default, links generated by the database use the dynamic `web.base.url` key defined in the system parameters. For more information about this, see :ref:`system parameters <domain-name/web-base-url>`."
 msgstr "Alapértelmezés szerint az adatbázis által generált linkek a rendszerparaméterekben meghatározott dinamikus `web.base.url` kulcsot használják. További információért lásd: :ref:`system parameters <domain-name/web-base-url>`."
 
-#: ../../content/applications/general/companies/email_template.rst:253
+#: ../../content/applications/general/companies/email_template.rst:250
 msgid "If the *Website* application is not installed, the `web.base.url` key will always be the default parameter used to generate all the links."
 msgstr "Ha a *Website* alkalmazás nincs telepítve, a `web.base.url` kulcs mindig az alapértelmezett paraméter lesz, amelyet az összes link generálásához használnak."
 
-#: ../../content/applications/general/companies/email_template.rst:257
+#: ../../content/applications/general/companies/email_template.rst:254
 msgid "The `web.base.url` key can only have a single value, meaning that, in a multi-website or multi-company database environment, even if there is a specific domain name for each website, the links generated to share a document (or the links within a transactional email) may remain the same, regardless of which website/company is related to the sending of the email/document."
 msgstr "A `web.base.url` kulcs csak egyetlen értéket vehet fel, ami azt jelenti, hogy egy több weboldalas vagy több vállalatos adatbázis környezetben, még ha minden weboldalhoz van is egyedi domain név, a dokumentum megosztására generált linkek (vagy a tranzakciós e-mailben lévő linkek) ugyanazok maradhatnak, függetlenül attól, hogy melyik weboldal/vállalat kapcsolódik az e-mail/dokumentum küldéséhez."
 
-#: ../../content/applications/general/companies/email_template.rst:263
+#: ../../content/applications/general/companies/email_template.rst:260
 msgid "If the :guilabel:`Value` of the :guilabel:`web.base.url` system parameter is equal to `https://www.mycompany.com` and there are two separate companies in Odoo with different website URLs: `https://www.mycompany2.com` and `https://www.mycompany1.com`, the links created by Odoo to share a document, or send a transactional email, come from the domain: `https://www.mycompany.com`, regardless of which company sends the document or email."
 msgstr "Ha a :guilabel:`Value` a :guilabel:`web.base.url` rendszerparaméternek `https://www.mycompany.com` és az Odoo-ban két különálló vállalat van különböző weboldal URL-ekkel: `https://www.mycompany2.com` és `https://www.mycompany1.com`, az Odoo által létrehozott linkek a dokumentum megosztására vagy tranzakciós e-mail küldésére a következő domainről származnak: `https://www.mycompany.com`, függetlenül attól, hogy melyik vállalat küldi a dokumentumot vagy e-mailt."
 
-#: ../../content/applications/general/companies/email_template.rst:269
+#: ../../content/applications/general/companies/email_template.rst:266
 msgid "This is not always the case, as some Odoo applications (*eCommerce*, for example) have a link established in the database with the *Website* application. In that case, if a specific domain is defined for the website, the URL generated in the email template uses the domain defined on the corresponding website of the company."
 msgstr "Ez nem mindig van így, mivel néhány Odoo alkalmazás (például az *eCommerce*) kapcsolatban áll az adatbázisban a *Website* alkalmazással. Ebben az esetben, ha egy adott domain van meghatározva a weboldalhoz, az e-mail sablonban generált URL a vállalat megfelelő weboldalán meghatározott domaint használja."
 
-#: ../../content/applications/general/companies/email_template.rst:275
+#: ../../content/applications/general/companies/email_template.rst:272
 msgid "When a customer makes a purchase on an Odoo *eCommerce* website, the order has an established link with that website. As a result, the links in the confirmation email sent to the customer use the domain name for that specific website."
 msgstr "Amikor egy ügyfél vásárol egy Odoo *eCommerce* weboldalon, a rendelés kapcsolatban áll azzal a weboldallal. Ennek eredményeként a megerősítő e-mailben az ügyfélnek küldött linkek az adott weboldal domain nevét használják."
 
-#: ../../content/applications/general/companies/email_template.rst:279
+#: ../../content/applications/general/companies/email_template.rst:276
 msgid "For more information about how to configure domains, check out the :doc:`domain name documentation </applications/websites/website/configuration/domain_names>`."
 msgstr "További információért a domainek konfigurálásáról, tekintse meg a :doc:`domain name documentation </applications/websites/website/configuration/domain_names>`."
 
-#: ../../content/applications/general/companies/email_template.rst:283
+#: ../../content/applications/general/companies/email_template.rst:280
 msgid "Updating translations within email templates"
 msgstr "Fordítások frissítése e-mail sablonokban"
 
-#: ../../content/applications/general/companies/email_template.rst:285
+#: ../../content/applications/general/companies/email_template.rst:282
 msgid "In Odoo, email templates are automatically translated for all users in the database for all of the languages installed. Changing the translations shouldn't be necessary. However, if for a specific reason, some of the translations need to be changed, it can be done."
 msgstr "Az Odoo-ban az e-mail sablonok automatikusan le vannak fordítva az adatbázisban lévő összes felhasználó számára minden telepített nyelvre. A fordítások módosítása általában nem szükséges. Azonban ha valamilyen konkrét okból néhány fordítást meg kell változtatni, ez lehetséges."
 
-#: ../../content/applications/general/companies/email_template.rst:290
+#: ../../content/applications/general/companies/email_template.rst:287
 msgid "Like any modification in the code, if translation changes are not done correctly (for example, modifications leading to bad syntax), it can break the template, and as a result, the template will appear blank."
 msgstr "Mint minden kódmódosításnál, ha a fordítási módosítások nem megfelelően történnek (például helytelen szintaxishoz vezető módosítások), az tönkreteheti a sablont, és következésképpen a sablon üresen jelenik meg."
 
-#: ../../content/applications/general/companies/email_template.rst:307
+#: ../../content/applications/general/companies/email_template.rst:304
 msgid "If there aren't multiple languages installed and activated in the database, or if the user does not have administration access rights, the language button will not appear."
 msgstr "Ha nincs több nyelv telepítve és aktiválva az adatbázisban, vagy ha a felhasználónak nincs adminisztrátori hozzáférési joga, a nyelvi gomb nem jelenik meg."
 
-#: ../../content/applications/general/companies/email_template.rst:310
+#: ../../content/applications/general/companies/email_template.rst:307
 msgid "A pop-up window with the different languages installed on the database appears. From this pop-up, editing of translations is possible. When the desired changes have been made, click the :guilabel:`Save` button to save the changes."
 msgstr "Megjelenik egy felugró ablak az adatbázisban telepített különböző nyelvekkel. Ebből a felugró ablakból lehetséges a fordítások szerkesztése. Amikor a kívánt módosításokat elvégezte, kattintson a :guilabel:`Mentés` gombra a módosítások mentéséhez."
 
-#: ../../content/applications/general/companies/email_template.rst:323
+#: ../../content/applications/general/companies/email_template.rst:320
 msgid "When editing the translations, the default language set in the database appears in **bold**."
 msgstr "A fordítások szerkesztésekor az adatbázisban beállított alapértelmezett nyelv **félkövéren** jelenik meg."
 
@@ -1099,82 +1067,30 @@ msgid "In a |mcd|, new products and contacts are shared across companies by defa
 msgstr "Egy |mcd| esetén az új termékek és kapcsolatok alapértelmezés szerint megosztottak a vállalatok között. Ha egy adott vállalatra szeretné korlátozni őket, állítsa be a :guilabel:`Vállalat` mezőt a rekord űrlapján."
 
 #: ../../content/applications/general/companies/multi_company.rst:106
-msgid "Inter-company transactions"
-msgstr "Vállalatközi tranzakciók"
-
-#: ../../content/applications/general/companies/multi_company.rst:108
-msgid "The :guilabel:`Inter-Company Transactions` feature allows one company in the database to sell or purchase goods and services from another company within the same database. Depending on the configuration settings, counterpart documents for orders and invoices can be automatically generated and synchronized."
-msgstr "A :guilabel:`Vállalatközi tranzakciók` funkció lehetővé teszi, hogy az adatbázisban lévő egyik vállalat árukat és szolgáltatásokat adjon el vagy vásároljon ugyanazon adatbázis egy másik vállalatától. A konfigurációs beállításoktól függően a megrendelésekhez és számlákhoz tartozó ellenoldali dokumentumok automatikusan létrehozhatók és szinkronizálhatók."
-
-#: ../../content/applications/general/companies/multi_company.rst:114
-msgid "To handle inter-company transactions correctly, :doc:`general <../../finance/accounting/get_started>` and specific configurations must be set properly, including :doc:`fiscal positions <../../finance/accounting/taxes/fiscal_positions>` and :doc:`localizations <../../finance/fiscal_localizations>`."
-msgstr "A vállalatközi tranzakciók helyes kezeléséhez az :doc:`általános <../../finance/accounting/get_started>` és a specifikus konfigurációkat megfelelően be kell állítani, beleértve a :doc:`pénzügyi pozíciókat <../../finance/accounting/taxes/fiscal_positions>` és a :doc:`lokalizációkat <../../finance/fiscal_localizations>`."
-
-#: ../../content/applications/general/companies/multi_company.rst:119
-msgid "To activate inter-company transactions, select the relevant company in the :ref:`company selector <general/multi-company/company-selector>`, open the Settings app, navigate to the :guilabel:`Companies` section, enable :guilabel:`Inter-Company Transactions`, and :guilabel:`Save`. Then, select the option(s) to create a counterpart for the selected company:"
-msgstr "A vállalatközi tranzakciók aktiválásához válassza ki az érintett vállalatot a :ref:`vállalat-választóban <general/multi-company/company-selector>`, nyissa meg a Beállítások alkalmazást, navigáljon a :guilabel:`Vállalatok` szakaszhoz, engedélyezze a :guilabel:`Vállalatközi tranzakciók` lehetőséget, majd kattintson a :guilabel:`Mentés` gombra. Ezután válassza ki azt a beállítást, amellyel ellenoldali dokumentumot kíván létrehozni a kiválasztott vállalat számára:"
-
-#: ../../content/applications/general/companies/multi_company.rst:124
-msgid ":guilabel:`Generate Bills and Refunds`: Generate a bill/refund when a company confirms an invoice/credit note for the selected company. To generate a validated bill/refund, select :guilabel:`Create and validate`."
-msgstr ":guilabel:`Számlák és jóváírások generálása`: Számlát/jóváírást generál, amikor egy vállalat megerősít egy számlát/helyesbítő számlát a kiválasztott vállalat számára. Érvényesített számla/jóváírás generálásához válassza a :guilabel:`Létrehozás és érvényesítés` lehetőséget."
-
-#: ../../content/applications/general/companies/multi_company.rst:127
-msgid ":guilabel:`Generate Sales Orders`: Generate a quotation (drafted sales order) when a sales order is confirmed for the selected company. To generate a validated sales order instead of a quotation, select :guilabel:`Create and validate`."
-msgstr ":guilabel:`Értékesítési rendelések generálása`: Árajánlatot (tervezett értékesítési rendelést) generál, amikor egy értékesítési rendelést megerősítenek a kiválasztott vállalat számára. Árajánlat helyett érvényesített értékesítési rendelés generálásához válassza a :guilabel:`Létrehozás és érvényesítés` lehetőséget."
-
-#: ../../content/applications/general/companies/multi_company.rst:130
-msgid ":guilabel:`Generate Purchase Orders`: Generate a request for quotation (drafted purchase order) using the selected company warehouse in the :guilabel:`Use Warehouse` field when a purchase order is confirmed for the selected company. To generate a validated purchase order instead of a request for quotation, select :guilabel:`Create and validate`."
-msgstr ":guilabel:`Beszerzési rendelések generálása`: Árajánlatkérést (tervezett beszerzési rendelést) generál a kiválasztott vállalat raktárának felhasználásával a :guilabel:`Raktár használata` mezőben, amikor egy beszerzési rendelést megerősítenek a kiválasztott vállalat számára. Árajánlatkérés helyett érvényesített beszerzési rendelés generálásához válassza a :guilabel:`Létrehozás és érvényesítés` lehetőséget."
-
-#: ../../content/applications/general/companies/multi_company.rst:136
-msgid "For inter-company transactions, the :ref:`products must be shared <general/multi-company/shared-and-unshared-records>` among the involved companies."
-msgstr "Vállalatközi tranzakciók esetén a :ref:`termékeket meg kell osztani <general/multi-company/shared-and-unshared-records>` az érintett vállalatok között."
-
-#: ../../content/applications/general/companies/multi_company.rst:140
-msgid ":guilabel:`Generate Bills and Refunds`: when an invoice for :guilabel:`Customer` `JS Store US` is posted on `JS Store Belgium`, a vendor bill is automatically created in `JS Store US`."
-msgstr ":guilabel:`Számlák és jóváírások generálása`: amikor a `JS Store Belgium` cégnél feladnak egy számlát a :guilabel:`Vevő` `JS Store US` részére, a `JS Store US` cégnél automatikusan létrejön egy szállítói számla."
-
-#: ../../content/applications/general/companies/multi_company.rst:143
-msgid ":guilabel:`Generate Sales Orders`: when a sales order for :guilabel:`Customer` `JS Store US` is confirmed on `JS Store Belgium`, a purchase order on `JS Store US` is automatically created (and confirmed if the :guilabel:`Create and validate` option is selected)."
-msgstr ":guilabel:`Értékesítési rendelések generálása`: amikor a `JS Store Belgium` cégnél megerősítenek egy értékesítési rendelést a :guilabel:`Vevő` `JS Store US` részére, a `JS Store US` cégnél automatikusan létrejön egy beszerzési rendelés (és megerősítésre kerül, ha a :guilabel:`Létrehozás és érvényesítés` lehetőség ki van választva)."
-
-#: ../../content/applications/general/companies/multi_company.rst:148
-msgid ":doc:`Multi-company Guidelines <../../../developer/howtos/company>`"
-msgstr ":doc:`Több vállalatos irányelvek <../../../developer/howtos/company>`"
-
-#: ../../content/applications/general/companies/multi_company.rst:149
-msgid ":doc:`../../finance/accounting/get_started/multi_currency`"
-msgstr ":doc:`../../finance/accounting/get_started/multi_currency`"
-
-#: ../../content/applications/general/companies/multi_company.rst:154
 msgid "Use cases"
 msgstr "Felhasználási esetek"
 
-#: ../../content/applications/general/companies/multi_company.rst:159
+#: ../../content/applications/general/companies/multi_company.rst:111
 msgid "Multinational companies"
 msgstr "Multinacionális vállalatok"
 
-#: ../../content/applications/general/companies/multi_company.rst:161
+#: ../../content/applications/general/companies/multi_company.rst:113
 msgid "A multinational retail chain operating in the United States and Canada must manage transactions in USD and CAD."
 msgstr "Egy multinacionális kiskereskedelmi lánc, amely az Egyesült Államokban és Kanadában működik, USD és CAD devizában kell hogy kezelje a tranzakciókat."
 
-#: ../../content/applications/general/companies/multi_company.rst:164
+#: ../../content/applications/general/companies/multi_company.rst:116
 msgid "Since each country has its own tax laws and regulations, using Odoo’s multi-company feature is highly beneficial."
 msgstr "Mivel mindkét országban eltérő adótörvények és szabályozások érvényesek, az Odoo több vállalatos funkciójának használata rendkívül előnyös."
 
-#: ../../content/applications/general/companies/multi_company.rst:167
-msgid "This setup allows for inter-company transactions, which is essential for managing cross-border inventory transfers. It also simplifies the sales process by enabling customers transactions in their local currency."
-msgstr "Ez a beállítás lehetővé teszi a vállalatközi tranzakciókat, amelyek elengedhetetlenek a határon átnyúló készletmozgások kezeléséhez. Emellett egyszerűsíti az értékesítési folyamatot azáltal, hogy a vevők a saját helyi devizájukban bonyolíthatják le tranzakcióikat."
-
-#: ../../content/applications/general/companies/multi_company.rst:174
+#: ../../content/applications/general/companies/multi_company.rst:125
 msgid "Separate processes"
 msgstr "Elkülönített folyamatok"
 
-#: ../../content/applications/general/companies/multi_company.rst:176
+#: ../../content/applications/general/companies/multi_company.rst:127
 msgid "A small furniture company is launching a new product line that requires separate procurement, inventory, and manufacturing workflows. These new products differ significantly from the existing catalog. To manage this efficiently, the company is considering using the multi-company feature to manage the new line as a separate business entity."
 msgstr "Egy kis méretű bútorgyártó vállalat új termékcsaládot vezet be, amely különálló beszerzési, készletkezelési és gyártási munkafolyamatokat igényel. Ezek az új termékek jelentősen eltérnek a meglévő katalógustól. A hatékony kezelés érdekében a vállalat fontolóra veszi a több vállalatos funkció alkalmazását, hogy az új termékcsaládot önálló üzleti egységként kezelje."
 
-#: ../../content/applications/general/companies/multi_company.rst:181
+#: ../../content/applications/general/companies/multi_company.rst:132
 msgid "However, creating a completely new company might add unnecessary complexity to the database. Instead, the company can leverage existing features such as :doc:`analytic accounting <../../finance/accounting/reporting/analytic_accounting>` and multiple warehouses to manage the new product line without complicating overall operations."
 msgstr "Ugyanakkor egy teljesen új vállalat létrehozása szükségtelen bonyolultságot vihet az adatbázisba. Ehelyett a vállalat kihasználhatja a meglévő funkciókat, mint például az :doc:`analitikus könyvelés <../../finance/accounting/reporting/analytic_accounting>` és a több raktár lehetősége, hogy az új termékcsaládot az általános működés bonyolítása nélkül kezelje."
 
@@ -3490,59 +3406,59 @@ msgstr "Az Outlook most csatlakoztatva lesz az Odoo adatbázishoz. Először nyi
 msgid "The right-side panel can now display **Company Insights**. At the bottom, click on :guilabel:`Login`."
 msgstr "A jobb oldali panel mostantól megjelenítheti a **Vállalati információkat**. Alul kattintson a :guilabel:`Bejelentkezés` gombra."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:97
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:101
 msgid "If, after a short while, the panel is still empty, it is possible that the browser cookie settings prevented it from loading. Note that these settings also change if the browser is in \"Incognito\" mode."
 msgstr "Ha a panel rövid idő elteltével is üres marad, előfordulhat, hogy a böngésző cookie-beállításai megakadályozzák a betöltését. Vegye figyelembe, hogy ezek a beállítások akkor is megváltoznak, ha a böngésző \"Inkognitó\" módban van."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:101
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:105
 msgid "To fix this issue, configure the browser to always allow cookies on Odoo's plugin page."
 msgstr "A probléma megoldásához konfigurálja a böngészőt úgy, hogy mindig engedélyezze a cookie-kat az Odoo bővítményoldalán."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:103
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:107
 msgid "For Google Chrome, change the browser cookie settings by following the guide at: `https://support.google.com/chrome/answer/95647 <https://support.google.com/chrome/answer/95647>`_ and adding `download.odoo.com` to the list of :guilabel:`Sites that can always use cookies`."
 msgstr "Google Chrome esetén módosítsa a böngésző cookie-beállításait a következő útmutató alapján: `https://support.google.com/chrome/answer/95647 <https://support.google.com/chrome/answer/95647>`_, majd adja hozzá a `download.odoo.com` címet a :guilabel:`Mindig használhat cookie-kat` listájához."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:108
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:112
 msgid "Once this is complete, the Outlook panel needs to be opened again."
 msgstr "Miután ez megtörtént, az Outlook panelt újra meg kell nyitni."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:110
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:114
 msgid "Now, enter the Odoo database URL and click on :guilabel:`Login`."
 msgstr "Most adja meg az Odoo adatbázis URL-jét, majd kattintson a :guilabel:`Bejelentkezés` gombra."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:118
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:122
 msgid "Next, click on :guilabel:`Allow` to open the pop-up window."
 msgstr "Ezután kattintson az :guilabel:`Engedélyezés` gombra a felugró ablak megnyitásához."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:126
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:130
 msgid "If the user isn't logged into the database, enter the credentials. Click on :guilabel:`Allow` to let the Outlook Plugin connect to the database."
 msgstr "Ha a felhasználó nincs bejelentkezve az adatbázisba, adja meg a bejelentkezési adatokat. Kattintson az :guilabel:`Engedélyezés` gombra, hogy az Outlook bővítmény csatlakozhasson az adatbázishoz."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:138
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:142
 msgid "Add a shortcut to the plugin"
 msgstr "Parancsikon hozzáadása a bővítményhez"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:140
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:144
 msgid "By default, the Outlook Plugin can be opened from the *More actions* menu. However, to save time, it's possible to add it next to the other default actions."
 msgstr "Alapértelmezés szerint az Outlook bővítmény a *További műveletek* menüből nyitható meg. Időmegtakarítás érdekében azonban lehetőség van arra is, hogy a többi alapértelmezett művelet mellé helyezze el."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:143
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:147
 msgid "In the Outlook mailbox, click on :guilabel:`Settings`, then on :guilabel:`View all Outlook settings`."
 msgstr "Az Outlook postaládában kattintson a :guilabel:`Beállítások` lehetőségre, majd az :guilabel:`Az összes Outlook-beállítás megtekintése` elemre."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:152
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:156
 msgid "Now, select :guilabel:`Customize actions` under :guilabel:`Mail`, click on :guilabel:`Odoo for Outlook`, and then :guilabel:`Save`."
 msgstr "Ezután válassza a :guilabel:`Műveletek testreszabása` lehetőséget a :guilabel:`Levelezés` menüpontban, kattintson az :guilabel:`Odoo for Outlook` elemre, majd a :guilabel:`Mentés` gombra."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:161
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:165
 msgid "Following this step, open any email; the shortcut should be displayed."
 msgstr "E lépés elvégzése után nyisson meg bármilyen e-mailt; a parancsikonnak meg kell jelennie."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:170
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:174
 msgid "Using the plugin"
 msgstr "A bővítmény használata"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:172
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:176
 msgid "Now that the plug-in is installed and operational, all that needs to be done to create a lead is to click on the `O` [Odoo icon] or navigate to :guilabel:`More actions` and click on :guilabel:`Odoo for Outlook`. The side panel will appear on the right-side, and under :guilabel:`Opportunities` click on :guilabel:`New`. A new window with the created opportunity in the Odoo database will populate."
 msgstr "Most, hogy a bővítmény telepítve és működőképes, egy lead létrehozásához elegendő az `O` [Odoo ikon] ikonra kattintani, vagy a :guilabel:`További műveletek` menüre navigálni, majd az :guilabel:`Odoo for Outlook` elemre kattintani. A jobb oldalon megjelenik az oldalpanel, ahol a :guilabel:`Lehetőségek` alatt kattintson az :guilabel:`Új` gombra. Megnyílik egy új ablak az Odoo adatbázisban létrehozott lehetőséggel."
 
@@ -4994,259 +4910,259 @@ msgstr ":guilabel:`Archiváláskor` / :guilabel:`Visszaállításkor`: amikor eg
 msgid ":guilabel:`On UI change`: when a field's value is changed on the Form view, even before the record is saved."
 msgstr ":guilabel:`Felületi változáskor`: amikor egy mező értéke az űrlapnézetben megváltozik, még a rekord mentése előtt."
 
-#: ../../content/applications/general/automation_rules.rst:251
+#: ../../content/applications/general/automation_rules.rst:252
 msgid "For the :guilabel:`On save` and :guilabel:`On UI change` triggers, you **must** then select the field(s) to be used to trigger the automation rule in the :guilabel:`When updating` field."
 msgstr "A :guilabel:`Mentéskor` és a :guilabel:`Felületi változáskor` indítóknál **kötelező** kiválasztani a :guilabel:`Frissítéskor` mezőben azt a mezőt (vagy mezőket), amely a szabályt indítja."
 
-#: ../../content/applications/general/automation_rules.rst:255
+#: ../../content/applications/general/automation_rules.rst:256
 msgid "If no field is selected in the :guilabel:`When updating` field, the automated action may be executed multiple times per record."
 msgstr "Ha a :guilabel:`Frissítéskor` mezőben nincs kiválasztva mező, az automatikus művelet rekordonként többször is lefuthat."
 
-#: ../../content/applications/general/automation_rules.rst:258
+#: ../../content/applications/general/automation_rules.rst:259
 msgid "Optionally, you can also define additional conditions to be met to trigger the automation rule in the :guilabel:`Apply on` field."
 msgstr "Opcionálisan további feltételeket is megadhat a szabály indításához az :guilabel:`Alkalmazás itt` mezőben."
 
-#: ../../content/applications/general/automation_rules.rst:262
+#: ../../content/applications/general/automation_rules.rst:263
 msgid "To trigger an automated action *upon* the creation of a record, e.g., when a new contact is created, select the :ref:`On save <general/automation-rules/trigger-custom>` trigger and use `ID is not set` as the :guilabel:`Before Update Domain` and `ID is set` as the :guilabel:`Apply on` domain. Make sure the correct field is selected in the :guilabel:`When updating` field."
 msgstr "Ha egy automatikus műveletet egy rekord létrehozásakor *szeretne* indítani (pl. új kapcsolat létrehozásakor), válassza a :ref:`Mentéskor <general/automation-rules/trigger-custom>` indítót, és használja az `ID is not set` feltételt a :guilabel:`Tartomány frissítése előtt` mezőben, valamint az `ID is set` feltételt az :guilabel:`Alkalmazás itt` tartományban. Ügyeljen rá, hogy a :guilabel:`Frissítéskor` mezőben a megfelelő mező legyen kiválasztva."
 
-#: ../../content/applications/general/automation_rules.rst:268
+#: ../../content/applications/general/automation_rules.rst:269
 msgid "When a new contact is saved, it is automatically assigned a database ID, thereby triggering the automation rule."
 msgstr "Új kapcsolat mentésekor a rekord automatikusan adatbázis-azonosítót kap, ez indítja el az automatizálási szabályt."
 
-#: ../../content/applications/general/automation_rules.rst:280
+#: ../../content/applications/general/automation_rules.rst:281
 msgid "The :guilabel:`On UI change` trigger can only be used with the :ref:`Execute Code <general/automation-rules/action-execute-code>` action and only works when a modification is made manually. The action is not executed if the field is changed through another automation rule."
 msgstr "A :guilabel:`Felületi változáskor` indító csak a :ref:`Kód végrehajtása <general/automation-rules/action-execute-code>` művelettel használható, és csak kézi módosításkor működik. A művelet nem fut le, ha a mezőt egy másik automatizálási szabály módosítja."
 
-#: ../../content/applications/general/automation_rules.rst:287
+#: ../../content/applications/general/automation_rules.rst:288
 msgid "External"
 msgstr "Külső"
 
-#: ../../content/applications/general/automation_rules.rst:289
+#: ../../content/applications/general/automation_rules.rst:290
 msgid "Trigger automated actions based on a specific event in an external system or application using a :doc:`webhook <automation_rules/webhooks>`."
 msgstr "Automatikus műveletek indítása egy külső rendszerben vagy alkalmazásban bekövetkező esemény alapján, :doc:`webhook <automation_rules/webhooks>` segítségével."
 
-#: ../../content/applications/general/automation_rules.rst:292
+#: ../../content/applications/general/automation_rules.rst:293
 msgid "After the webhook is configured in Odoo, where the webhook's URL is generated and the target record defined, it needs to be implemented in the external system."
 msgstr "Miután a webhookot beállította az Odoo-ban (ahol a webhook URL-je létrejön és a célrekord meg van határozva), azt a külső rendszerben is be kell állítani."
 
-#: ../../content/applications/general/automation_rules.rst:296 ../../content/applications/general/automation_rules/webhooks.rst:6
+#: ../../content/applications/general/automation_rules.rst:297 ../../content/applications/general/automation_rules/webhooks.rst:6
 msgid "It is *highly recommended* to consult with a developer, solution architect, or another technical role when deciding to use webhooks and throughout the implementation process. If not properly configured, webhooks may disrupt the Odoo database and can take time to revert."
 msgstr "*Erősen ajánlott* fejlesztővel, megoldástervezővel vagy más műszaki szakemberrel egyeztetni a webhookok használatáról és a bevezetés teljes folyamata során. Hibás beállítás esetén a webhookok megzavarhatják az Odoo adatbázis működését, és a visszaállítás időigényes lehet."
 
-#: ../../content/applications/general/automation_rules.rst:309
+#: ../../content/applications/general/automation_rules.rst:310
 msgid "It is also possible to set up an automated action that :ref:`sends data to a external system's webhook <general/automation-rules/action-webhook>` when an event occurs in your Odoo database."
 msgstr "Olyan automatikus művelet is beállítható, amely az Odoo adatbázisban bekövetkező eseménykor :ref:`adatokat küld egy külső rendszer webhookjára <general/automation-rules/action-webhook>`."
 
-#: ../../content/applications/general/automation_rules.rst:313
+#: ../../content/applications/general/automation_rules.rst:314
 msgid ":doc:`Webhook documentation <automation_rules/webhooks>`"
 msgstr ":doc:`Webhook documentation <automation_rules/webhooks>`"
 
-#: ../../content/applications/general/automation_rules.rst:318
+#: ../../content/applications/general/automation_rules.rst:319
 msgid "Actions"
 msgstr "Műveletek"
 
-#: ../../content/applications/general/automation_rules.rst:320
+#: ../../content/applications/general/automation_rules.rst:321
 msgid "Once you have defined the automation rule's :ref:`trigger <general/automation-rules/trigger>`, click :guilabel:`Add an action` in the :guilabel:`Actions To Do` tab to define the action to be executed."
 msgstr "Az automatizálási szabály :ref:`indítójának <general/automation-rules/trigger>` megadása után a végrehajtandó művelet meghatározásához kattintson a :guilabel:`Végrehajtandó műveletek` fülön a :guilabel:`Művelet hozzáadása` gombra."
 
-#: ../../content/applications/general/automation_rules.rst:324
+#: ../../content/applications/general/automation_rules.rst:325
 msgid "You can define multiple actions for the same automation rule. By default, actions are executed in the order in which they were defined."
 msgstr "Egy automatizálási szabályhoz több művelet is megadható. A műveletek alapértelmezés szerint a megadásuk sorrendjében futnak le."
 
-#: ../../content/applications/general/automation_rules.rst:327
+#: ../../content/applications/general/automation_rules.rst:328
 msgid "This means, for example, that if you define an :guilabel:`Update record` action and then a :guilabel:`Send email` action where the email references the field that was updated, the email uses the updated values. However, if the :guilabel:`Send email` action is defined before the :guilabel:`Update record` action, the email uses the values set *before* the record is updated."
 msgstr "Ez azt jelenti például, hogy ha előbb egy :guilabel:`Rekord frissítése`, majd egy :guilabel:`E-mail küldése` műveletet ad meg, és az e-mail a frissített mezőre hivatkozik, az e-mail már a frissített értékeket használja. Ha azonban az :guilabel:`E-mail küldése` művelet megelőzi a :guilabel:`Rekord frissítése` műveletet, az e-mail a rekord frissítése *előtti* értékeket tartalmazza."
 
-#: ../../content/applications/general/automation_rules.rst:332
+#: ../../content/applications/general/automation_rules.rst:333
 msgid "To change the order of defined actions, click the :icon:`oi-draggable` :guilabel:`(drag handle)` icon beside an action and drag it to the desired position."
 msgstr "A műveletek sorrendjének módosításához fogja meg a művelet melletti :icon:`oi-draggable` :guilabel:`(fogantyú)` ikont, és húzza a kívánt helyre."
 
-#: ../../content/applications/general/automation_rules.rst:338
+#: ../../content/applications/general/automation_rules.rst:339
 msgid "Update Record"
 msgstr "Rekord frissítése"
 
-#: ../../content/applications/general/automation_rules.rst:340
+#: ../../content/applications/general/automation_rules.rst:341
 msgid "This action updates one of the record's (related) fields. Click the :guilabel:`Update` field and, in the list that opens, select or search for the field to be updated. If needed, click the :icon:`oi-chevron-right` :guilabel:`(right arrow)` next to the field name to access the list of related fields."
 msgstr "Ez a művelet a rekord egyik (kapcsolódó) mezőjét frissíti. Kattintson a :guilabel:`Frissítés` mezőre, és a megnyíló listában válassza ki vagy keresse meg a frissítendő mezőt. Szükség esetén a mező neve melletti :icon:`oi-chevron-right` :guilabel:`(jobbra nyíl)` ikonnal érheti el a kapcsolódó mezők listáját."
 
-#: ../../content/applications/general/automation_rules.rst:345
+#: ../../content/applications/general/automation_rules.rst:346
 msgid "If you selected a many2many field, choose whether the field must be updated by :guilabel:`Adding`, :guilabel:`Removing`, or :guilabel:`Setting it to` the selected value or by :guilabel:`Clearing it`."
 msgstr "Many2many mező kiválasztása esetén adja meg, hogy a mezőt a kiválasztott érték :guilabel:`hozzáadásával`, :guilabel:`eltávolításával`, :guilabel:`erre állításával` vagy a mező :guilabel:`törlésével` kell-e frissíteni."
 
-#: ../../content/applications/general/automation_rules.rst:350
+#: ../../content/applications/general/automation_rules.rst:351
 msgid "If you want the automated action to remove a tag from the customer record, set the :guilabel:`Update` field to :guilabel:`Customer > Tags`, select :guilabel:`by Removing`, then select the tag."
 msgstr "Ha az automatikus műveletnek egy címkét kell eltávolítania az ügyfél rekordjáról, állítsa a :guilabel:`Frissítés` mezőt :guilabel:`Customer > Tags` értékre, válassza a :guilabel:`by Removing` lehetőséget, majd a címkét."
 
-#: ../../content/applications/general/automation_rules.rst:363
+#: ../../content/applications/general/automation_rules.rst:364
 msgid "Alternatively, you can also set a record's field dynamically using Python code. To do so, select :guilabel:`Compute` instead of :guilabel:`Update`, then enter the code to be used for computing the field's value. For example, if you want the automation rule to compute a custom datetime field when a task's priority is set to `High` (by starring the task), you can define the trigger :guilabel:`Priority is set to` to `High` and define the :guilabel:`Update Record` action as follows:"
 msgstr "A rekord egy mezője Python kóddal dinamikusan is beállítható. Ehhez a :guilabel:`Frissítés` helyett válassza a :guilabel:`Kiszámítás` lehetőséget, majd adja meg a mező értékét kiszámító kódot. Ha például azt szeretné, hogy a szabály kiszámítson egy egyedi dátum-idő mezőt, amikor egy feladat prioritása `High` értékre változik (a feladat csillagozásával), állítsa be a :guilabel:`Prioritás beállítva` indítót `High` értékkel, és a :guilabel:`Rekord frissítése` műveletet az alábbiak szerint:"
 
-#: ../../content/applications/general/automation_rules.rst:381
+#: ../../content/applications/general/automation_rules.rst:382
 msgid "Create Activity"
 msgstr "Tevékenység létrehozása"
 
-#: ../../content/applications/general/automation_rules.rst:383
+#: ../../content/applications/general/automation_rules.rst:384
 msgid "This action is used to schedule a new activity linked to the record. Select an :guilabel:`Activity Type`, enter a :guilabel:`Title` and description, then specify when you want the activity to be scheduled in the :guilabel:`Due Date In` field, and select a :guilabel:`User type`:"
 msgstr "Ez a művelet a rekordhoz kapcsolódó új tevékenységet ütemez. Válasszon :guilabel:`Tevékenység típus` értéket, adjon meg :guilabel:`Cím` értéket és leírást, az :guilabel:`Esedékes` mezőben adja meg, mikorra ütemezze a tevékenységet, és válasszon :guilabel:`Felhasználó típus` értéket:"
 
-#: ../../content/applications/general/automation_rules.rst:387
+#: ../../content/applications/general/automation_rules.rst:388
 msgid "To always assign the activity to the same user, select :guilabel:`Specific User`, then add the user in the :guilabel:`Responsible` field;"
 msgstr "Ha a tevékenységet mindig ugyanahhoz a felhasználóhoz szeretné rendelni, válassza a :guilabel:`Megadott felhasználó` lehetőséget, és adja meg a felhasználót a :guilabel:`Felelős` mezőben;"
 
-#: ../../content/applications/general/automation_rules.rst:389
+#: ../../content/applications/general/automation_rules.rst:390
 msgid "To target a user linked to the record dynamically, select :guilabel:`Dynamic User (based on record)` and change the :guilabel:`User Field` if necessary."
 msgstr "Ha a tevékenységet dinamikusan, a rekordhoz kapcsolódó felhasználóhoz szeretné rendelni, válassza a :guilabel:`Dinamikus felhasználó (rekord alapján)` lehetőséget, és szükség esetén módosítsa a :guilabel:`Felhasználó mező` értékét."
 
-#: ../../content/applications/general/automation_rules.rst:393
+#: ../../content/applications/general/automation_rules.rst:394
 msgid "After a lead is turned into an opportunity, you want the automated action to set up a call for the user responsible for the lead. To do so, set the :guilabel:`Activity Type` to :guilabel:`Call` and the :guilabel:`User Type` to :guilabel:`Dynamic User (based on record)`."
 msgstr "Azt szeretné, hogy miután egy érdeklődőből lehetőség lesz, az automatikus művelet hívást ütemezzen az érdeklődőért felelős felhasználónak. Ehhez állítsa a :guilabel:`Tevékenység típus` mezőt :guilabel:`Hívás` értékre, a :guilabel:`Felhasználó típus` mezőt pedig :guilabel:`Dinamikus felhasználó (rekord alapján)` értékre."
 
-#: ../../content/applications/general/automation_rules.rst:408
+#: ../../content/applications/general/automation_rules.rst:409
 msgid "Send Email and Send SMS"
 msgstr "E-mail küldése és SMS küldése"
 
-#: ../../content/applications/general/automation_rules.rst:410
+#: ../../content/applications/general/automation_rules.rst:411
 msgid "These actions are used to send an email or a text message to a contact linked to a specific record. To do so, select or create an :guilabel:`Email Template` or an :guilabel:`SMS Template`, then, in the :guilabel:`Send Email As` or :guilabel:`Send SMS As` field, choose how you want to send the email or text message:"
 msgstr "Ezekkel a műveletekkel e-mail vagy szöveges üzenet küldhető egy adott rekordhoz kapcsolódó kapcsolatnak. Ehhez válasszon ki vagy hozzon létre egy :guilabel:`E-mail sablon` vagy :guilabel:`SMS sablon` rekordot, majd az :guilabel:`E-mail küldése mint` vagy az :guilabel:`SMS küldése mint` mezőben adja meg, hogyan kerüljön elküldésre az e-mail vagy a szöveges üzenet:"
 
-#: ../../content/applications/general/automation_rules.rst:415
+#: ../../content/applications/general/automation_rules.rst:416
 msgid ":guilabel:`Email`: to send the message as an email to the recipients of the :guilabel:`Email Template`."
 msgstr ":guilabel:`Email`: az üzenet e-mailként megy az :guilabel:`E-mail sablon` címzettjeinek."
 
-#: ../../content/applications/general/automation_rules.rst:417
+#: ../../content/applications/general/automation_rules.rst:418
 msgid ":guilabel:`Message`: to post the message on the record and notify the record's followers."
 msgstr ":guilabel:`Üzenet`: az üzenet megjelenik a rekordon, és a rekord követői értesítést kapnak."
 
-#: ../../content/applications/general/automation_rules.rst:418
+#: ../../content/applications/general/automation_rules.rst:419
 msgid ":guilabel:`Note`: to send the message as an internal note visible to internal users in the chatter."
 msgstr ":guilabel:`Megjegyzés`: az üzenet belső megjegyzésként jelenik meg a csevegőben, csak a belső felhasználók számára."
 
-#: ../../content/applications/general/automation_rules.rst:420
+#: ../../content/applications/general/automation_rules.rst:421
 msgid ":guilabel:`SMS (without note)`: to send the message as a text message to the recipients of the :guilabel:`SMS template`."
 msgstr ":guilabel:`SMS (megjegyzés nélkül)`: az üzenet szöveges üzenetként megy az :guilabel:`SMS sablon` címzettjeinek."
 
-#: ../../content/applications/general/automation_rules.rst:422
+#: ../../content/applications/general/automation_rules.rst:423
 msgid ":guilabel:`SMS (with note)`: to send the message as a text message to the recipients of the :guilabel:`SMS template` and post it as an internal note in the chatter."
 msgstr ":guilabel:`SMS (megjegyzéssel)`: az üzenet szöveges üzenetként megy az :guilabel:`SMS sablon` címzettjeinek, és belső megjegyzésként is megjelenik a csevegőben."
 
-#: ../../content/applications/general/automation_rules.rst:424
+#: ../../content/applications/general/automation_rules.rst:425
 msgid ":guilabel:`Note only`: to only post the message as an internal note in the chatter."
 msgstr ":guilabel:`Csak megjegyzés`: az üzenet csak belső megjegyzésként jelenik meg a csevegőben."
 
-#: ../../content/applications/general/automation_rules.rst:429
+#: ../../content/applications/general/automation_rules.rst:430
 msgid "Add Followers and Remove Followers"
 msgstr "Követők hozzáadása és követők eltávolítása"
 
-#: ../../content/applications/general/automation_rules.rst:431
+#: ../../content/applications/general/automation_rules.rst:432
 msgid "This action is used to subscribe/unsubscribe existing contacts to/from the record."
 msgstr "Ezzel a művelettel meglévő kapcsolatok iratkoztathatók fel a rekordra, illetve iratkoztathatók le róla."
 
-#: ../../content/applications/general/automation_rules.rst:436
+#: ../../content/applications/general/automation_rules.rst:437
 msgid "Create Record"
 msgstr "Rekord létrehozása"
 
-#: ../../content/applications/general/automation_rules.rst:438
+#: ../../content/applications/general/automation_rules.rst:439
 msgid "This action is used to create a new record on any model."
 msgstr "Ezzel a művelettel bármely modellben új rekord hozható létre."
 
-#: ../../content/applications/general/automation_rules.rst:440
+#: ../../content/applications/general/automation_rules.rst:441
 msgid "Select the required model in the :guilabel:`Record to Create` field; it contains the current model by default. Specify a :guilabel:`Name` for the record, and then, if you want to create the record on another model, select a field in the :guilabel:`Link Field` field to link the record that triggered the creation of the new record."
 msgstr "Válassza ki a kívánt modellt a :guilabel:`Létrehozandó rekord` mezőben; alapértelmezés szerint ez az aktuális modell. Adjon :guilabel:`Név` értéket a rekordnak, majd ha a rekordot másik modellben hozza létre, válasszon mezőt a :guilabel:`Hivatkozás mező` mezőben, amely összekapcsolja az új rekordot azzal a rekorddal, amely a létrehozását kiváltotta."
 
-#: ../../content/applications/general/automation_rules.rst:446
+#: ../../content/applications/general/automation_rules.rst:447
 msgid "The dropdown list related to the :guilabel:`Link Field` field only contains one2many fields existing on the current model that are linked to a many2one field on the target model."
 msgstr "A :guilabel:`Hivatkozás mező` legördülő listája csak az aktuális modell azon one2many mezőit tartalmazza, amelyek a célmodell egy many2one mezőjéhez kapcsolódnak."
 
-#: ../../content/applications/general/automation_rules.rst:450
+#: ../../content/applications/general/automation_rules.rst:451
 msgid "You can create another automation rule with :ref:`general/automation-rules/action-update-record` actions to update the fields of the new record if necessary. For example, you can use a :guilabel:`Create Record` action to create a new project task and then assign it to a specific user using an :guilabel:`Update Record` action."
 msgstr "Szükség esetén egy másik automatizálási szabállyal, :ref:`general/automation-rules/action-update-record` műveletekkel frissítheti az új rekord mezőit. Például egy :guilabel:`Rekord létrehozása` művelettel új projektfeladatot hozhat létre, majd egy :guilabel:`Rekord frissítése` művelettel egy adott felhasználóhoz rendelheti."
 
-#: ../../content/applications/general/automation_rules.rst:458
+#: ../../content/applications/general/automation_rules.rst:459
 msgid "Execute Code"
 msgstr "Kód végrehajtása"
 
-#: ../../content/applications/general/automation_rules.rst:461
+#: ../../content/applications/general/automation_rules.rst:462
 msgid "Custom code runs with the rights of the automation rule and is not covered by standard upgrades. Have it written and maintained by a developer."
 msgstr "Az egyedi kód az automatizálási szabály jogosultságaival fut, és a szokásos verziófrissítések nem gondoskodnak róla. Az írását és karbantartását bízza fejlesztőre."
 
-#: ../../content/applications/general/automation_rules.rst:464
+#: ../../content/applications/general/automation_rules.rst:465
 msgid "This action is used to execute Python code. You can write your code into the :guilabel:`Code` tab using the following variables:"
 msgstr "Ez a művelet Python kódot hajt végre. A kódot a :guilabel:`Kód` fülön írhatja meg az alábbi változók használatával:"
 
-#: ../../content/applications/general/automation_rules.rst:467
+#: ../../content/applications/general/automation_rules.rst:468
 msgid "`env`: environment on which the action is triggered"
 msgstr "`env`: a környezet, amelyben a művelet indul"
 
-#: ../../content/applications/general/automation_rules.rst:468
+#: ../../content/applications/general/automation_rules.rst:469
 msgid "`model`: model of the record on which the action is triggered; is a void recordset"
 msgstr "`model`: annak a rekordnak a modellje, amelyen a művelet indul; üres rekordhalmaz"
 
-#: ../../content/applications/general/automation_rules.rst:469
+#: ../../content/applications/general/automation_rules.rst:470
 msgid "`record`: record on which the action is triggered; may be void"
 msgstr "`record`: a rekord, amelyen a művelet indul; lehet üres"
 
-#: ../../content/applications/general/automation_rules.rst:470
+#: ../../content/applications/general/automation_rules.rst:471
 msgid "`records`: recordset of all records on which the action is triggered in multi-mode; this may be left empty"
 msgstr "`records`: több rekordos módban az összes érintett rekord halmaza; üres is lehet"
 
-#: ../../content/applications/general/automation_rules.rst:472
+#: ../../content/applications/general/automation_rules.rst:473
 msgid "`time`, `datetime`, `dateutil`, `timezone`: useful Python libraries"
 msgstr "`time`, `datetime`, `dateutil`, `timezone`: hasznos Python könyvtárak"
 
-#: ../../content/applications/general/automation_rules.rst:473
+#: ../../content/applications/general/automation_rules.rst:474
 msgid "`float_compare`: utility function to compare floats based on specific precision"
 msgstr "`float_compare`: segédfüggvény lebegőpontos számok adott pontosságú összehasonlításához"
 
-#: ../../content/applications/general/automation_rules.rst:474
+#: ../../content/applications/general/automation_rules.rst:475
 msgid "`log(message, level='info')`: logging function to record debug information in ir.logging table"
 msgstr "`log(message, level='info')`: naplózó függvény hibakeresési információk ir.logging táblába írásához"
 
-#: ../../content/applications/general/automation_rules.rst:476
+#: ../../content/applications/general/automation_rules.rst:477
 msgid "`_logger.info(message)`: logger to emit messages in server logs"
 msgstr "`_logger.info(message)`: naplózó a szervernaplóba írt üzenetekhez"
 
-#: ../../content/applications/general/automation_rules.rst:477
+#: ../../content/applications/general/automation_rules.rst:478
 msgid "`UserError`: exception class for raising user-facing warning messages"
 msgstr "`UserError`: kivételosztály a felhasználónak megjelenő figyelmeztető üzenetekhez"
 
-#: ../../content/applications/general/automation_rules.rst:478
+#: ../../content/applications/general/automation_rules.rst:479
 msgid "`Command`: x2many commands namespace"
 msgstr "`Command`: x2many parancsok névtere"
 
-#: ../../content/applications/general/automation_rules.rst:479
+#: ../../content/applications/general/automation_rules.rst:480
 msgid "`action = {...}`: to return an action"
 msgstr "`action = {...}`: művelet visszaadásához"
 
-#: ../../content/applications/general/automation_rules.rst:482
+#: ../../content/applications/general/automation_rules.rst:483
 msgid "The available variables are described both in the :guilabel:`Code` and :guilabel:`Help` tabs."
 msgstr "Az elérhető változók leírása a :guilabel:`Kód` és a :guilabel:`Súgó` fülön is megtalálható."
 
-#: ../../content/applications/general/automation_rules.rst:485
+#: ../../content/applications/general/automation_rules.rst:486
 msgid ":doc:`Odoo's ORM capabilities </developer/reference/backend/orm>`"
 msgstr ":doc:`Odoo's ORM capabilities </developer/reference/backend/orm>`"
 
-#: ../../content/applications/general/automation_rules.rst:490
+#: ../../content/applications/general/automation_rules.rst:491
 msgid "Send Webhook Notification"
 msgstr "Webhook értesítés küldése"
 
-#: ../../content/applications/general/automation_rules.rst:492
+#: ../../content/applications/general/automation_rules.rst:493
 msgid "This action is used to send a `POST` API request with the values of the selected :guilabel:`Fields` to the webhook URL specified in the :guilabel:`URL` field."
 msgstr "Ez a művelet `POST` API kérést küld a kiválasztott :guilabel:`Mezők` értékeivel a :guilabel:`Webcím` mezőben megadott webhook URL-re."
 
-#: ../../content/applications/general/automation_rules.rst:495
+#: ../../content/applications/general/automation_rules.rst:496
 msgid "The :guilabel:`Sample Payload` provides a preview of the data included in the request using a random record's data or dummy data if no record is available."
 msgstr "A :guilabel:`Minta adatcsomag` előnézetet mutat a kérésben küldött adatokról egy véletlenszerű rekord adataival, illetve próbaadatokkal, ha nincs elérhető rekord."
 
-#: ../../content/applications/general/automation_rules.rst:499
+#: ../../content/applications/general/automation_rules.rst:500
 msgid "It is also possible to set up an automated action that :doc:`uses a webhook to receive data from an external system <automation_rules/webhooks>` when a predefined event occurs in that system."
 msgstr "Olyan automatikus művelet is beállítható, amely :doc:`webhook segítségével adatokat fogad egy külső rendszerből <automation_rules/webhooks>`, amikor abban egy előre meghatározott esemény bekövetkezik."
 
-#: ../../content/applications/general/automation_rules.rst:505
+#: ../../content/applications/general/automation_rules.rst:506
 msgid "Execute Existing Actions"
 msgstr "Meglévő műveletek végrehajtása"
 
-#: ../../content/applications/general/automation_rules.rst:507
+#: ../../content/applications/general/automation_rules.rst:508
 msgid "The action is used to trigger multiple actions (linked to the current model) at the same time. To do so, click on :guilabel:`Add a line`, then, in the :guilabel:`Add: Child Actions` pop-up, select an existing action or click :guilabel:`New` to create a new one."
 msgstr "Ezzel a művelettel egyszerre több (az aktuális modellhez kapcsolódó) művelet indítható. Ehhez kattintson az :guilabel:`Új sor` gombra, majd a :guilabel:`Hozzáadás: Gyermek műveletek` ablakban válasszon ki egy meglévő műveletet, vagy kattintson az :guilabel:`Új` gombra egy új létrehozásához."
 
@@ -5366,7 +5282,7 @@ msgstr "A Postmanben hozzon létre egy új HTTP kérést, és állítsa a metód
 msgid "Copy the webhook's URL from your Odoo database using the :icon:`fa-link` :guilabel:`(link)` icon and paste it into the URL field in Postman."
 msgstr "Másolja ki a webhook URL-jét az Odoo adatbázisból a :icon:`fa-link` :guilabel:`(hivatkozás)` ikonnal, és illessze be a Postman URL mezőjébe."
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:108 ../../content/applications/general/automation_rules/webhooks.rst:190 ../../content/applications/general/automation_rules/webhooks.rst:265
+#: ../../content/applications/general/automation_rules/webhooks.rst:108 ../../content/applications/general/automation_rules/webhooks.rst:190 ../../content/applications/general/automation_rules/webhooks.rst:266
 msgid "Click the :guilabel:`Body` tab and select :guilabel:`raw`."
 msgstr "Kattintson a :guilabel:`Body` fülre, és válassza a :guilabel:`raw` lehetőséget."
 
@@ -5374,7 +5290,7 @@ msgstr "Kattintson a :guilabel:`Body` fülre, és válassza a :guilabel:`raw` le
 msgid "Set the file type to :guilabel:`JSON`, then copy the code from the test payload and paste it into the code editor."
 msgstr "Állítsa a fájltípust :guilabel:`JSON` értékre, majd másolja ki a tesztadatcsomag kódját, és illessze be a kódszerkesztőbe."
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:111 ../../content/applications/general/automation_rules/webhooks.rst:204 ../../content/applications/general/automation_rules/webhooks.rst:279
+#: ../../content/applications/general/automation_rules/webhooks.rst:111 ../../content/applications/general/automation_rules/webhooks.rst:204 ../../content/applications/general/automation_rules/webhooks.rst:280
 msgid "Click :guilabel:`Send`."
 msgstr "Kattintson a :guilabel:`Send` gombra."
 
@@ -5422,11 +5338,11 @@ msgstr "Ez a webhook `USD`-re állítja egy vevői rendelés pénznemét az **É
 msgid "This could be useful for subsidiaries outside the United States with a mother company located inside the United States or during mergers when consolidating data into one Odoo database."
 msgstr "Ez hasznos lehet például az Egyesült Államokon kívüli leányvállalatoknál, amelyek anyavállalata az Egyesült Államokban van, vagy fúziók esetén, amikor az adatokat egyetlen Odoo adatbázisba vonják össze."
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:157 ../../content/applications/general/automation_rules/webhooks.rst:219
+#: ../../content/applications/general/automation_rules/webhooks.rst:157 ../../content/applications/general/automation_rules/webhooks.rst:220
 msgid "Create the webhook"
 msgstr "A webhook létrehozása"
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:159 ../../content/applications/general/automation_rules/webhooks.rst:221
+#: ../../content/applications/general/automation_rules/webhooks.rst:159 ../../content/applications/general/automation_rules/webhooks.rst:222
 msgid "To create this webhook, proceed as follows:"
 msgstr "A webhook létrehozásához kövesse az alábbi lépéseket:"
 
@@ -5450,7 +5366,7 @@ msgstr "a `payload.get('id')` az adatcsomag `id` kulcsához tartozó értéket a
 msgid "`int` converts the retrieved id to an integer (i.e., a whole number) because the method `browse()` can only be used with an integer."
 msgstr "az `int` egész számmá alakítja a kapott azonosítót, mert a `browse()` metódus csak egész számmal használható."
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:175 ../../content/applications/general/automation_rules/webhooks.rst:229
+#: ../../content/applications/general/automation_rules/webhooks.rst:175 ../../content/applications/general/automation_rules/webhooks.rst:230
 msgid "Click :guilabel:`Add an action`."
 msgstr "Kattintson a :guilabel:`Művelet hozzáadása` gombra."
 
@@ -5462,15 +5378,15 @@ msgstr "A :guilabel:`Típus` szakaszban kattintson a :guilabel:`Rekord frissít�
 msgid "In the :guilabel:`Action details` section, select :guilabel:`Update`, choose the field :guilabel:`Currency`, and select :guilabel:`USD`."
 msgstr "A :guilabel:`Művelet részletei` szakaszban válassza a :guilabel:`Frissítés` lehetőséget, válassza a :guilabel:`Pénznem` mezőt, majd az :guilabel:`USD` értéket."
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:179 ../../content/applications/general/automation_rules/webhooks.rst:254
+#: ../../content/applications/general/automation_rules/webhooks.rst:179 ../../content/applications/general/automation_rules/webhooks.rst:255
 msgid "Click :guilabel:`Save & Close`."
 msgstr "Kattintson a :guilabel:`Mentés és bezárás` gombra."
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:182 ../../content/applications/general/automation_rules/webhooks.rst:257
+#: ../../content/applications/general/automation_rules/webhooks.rst:182 ../../content/applications/general/automation_rules/webhooks.rst:258
 msgid "Test the webhook"
 msgstr "A webhook tesztelése"
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:184 ../../content/applications/general/automation_rules/webhooks.rst:259
+#: ../../content/applications/general/automation_rules/webhooks.rst:184 ../../content/applications/general/automation_rules/webhooks.rst:260
 msgid "To test this webhook, proceed as follows:"
 msgstr "A webhook teszteléséhez kövesse az alábbi lépéseket:"
 
@@ -5478,11 +5394,11 @@ msgstr "A webhook teszteléséhez kövesse az alábbi lépéseket:"
 msgid "With `Postman <https://www.postman.com/>`_ open, create a new HTTP request and set its method to :guilabel:`POST`."
 msgstr "Nyissa meg a `Postman <https://www.postman.com/>`_ alkalmazást, hozzon létre egy új HTTP kérést, és állítsa a metódusát :guilabel:`POST` értékre."
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:188 ../../content/applications/general/automation_rules/webhooks.rst:263
+#: ../../content/applications/general/automation_rules/webhooks.rst:188 ../../content/applications/general/automation_rules/webhooks.rst:264
 msgid "Copy the URL of the Odoo webhook using the :icon:`fa-link` :guilabel:`(link)` icon and paste it into the URL field in Postman."
 msgstr "Másolja ki az Odoo webhook URL-jét a :icon:`fa-link` :guilabel:`(hivatkozás)` ikonnal, és illessze be a Postman URL mezőjébe."
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:191 ../../content/applications/general/automation_rules/webhooks.rst:266
+#: ../../content/applications/general/automation_rules/webhooks.rst:191 ../../content/applications/general/automation_rules/webhooks.rst:267
 msgid "Set the file type to :guilabel:`JSON`, then copy this code, i.e., the payload, and paste it into the code editor:"
 msgstr "Állítsa a fájltípust :guilabel:`JSON` értékre, majd másolja ki ezt a kódot (az adatcsomagot), és illessze be a kódszerkesztőbe:"
 
@@ -5490,39 +5406,39 @@ msgstr "Állítsa a fájltípust :guilabel:`JSON` értékre, majd másolja ki ez
 msgid "In your Odoo database, choose a sales order to test the webhook on. In the pasted code, replace `SALES ORDER NUMBER` with the sales order's number without the `S` or any zeros before the number. For example, a sales order with the number `S00007` should be entered as `7` in Postman."
 msgstr "Az Odoo adatbázisban válasszon ki egy vevői rendelést a webhook teszteléséhez. A beillesztett kódban cserélje ki a `SALES ORDER NUMBER` szöveget a vevői rendelés számára, az `S` előtag és a szám előtti nullák nélkül. Például az `S00007` számú vevői rendelést `7` értékként kell megadni a Postmanben."
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:205 ../../content/applications/general/automation_rules/webhooks.rst:280
+#: ../../content/applications/general/automation_rules/webhooks.rst:205 ../../content/applications/general/automation_rules/webhooks.rst:281
 msgid "Consult the :ref:`Response viewer <general/automation-rules/webhooks/test-webhook-response>` in Postman to determine whether or not the webhook is functioning properly. If a message other than `200 OK` or `status: ok` is returned, the number associated with the message helps to identify the problem."
 msgstr "A Postman :ref:`Response nézetében <general/automation-rules/webhooks/test-webhook-response>` ellenőrizze, hogy a webhook megfelelően működik-e. Ha a válasz nem `200 OK` vagy `status: ok`, az üzenethez tartozó szám segít a hiba azonosításában."
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:212
+#: ../../content/applications/general/automation_rules/webhooks.rst:213
 msgid "Create a new contact"
 msgstr "Új kapcsolat létrehozása"
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:214
+#: ../../content/applications/general/automation_rules/webhooks.rst:215
 msgid "This webhook uses custom code to create a new contact in an Odoo database when the external system sends a `POST` API request to the webhook's URL that includes the contact's information. This could be helpful for automatically creating new vendors or customers."
 msgstr "Ez a webhook egyedi kóddal hoz létre új kapcsolatot az Odoo adatbázisban, amikor a külső rendszer a kapcsolat adatait tartalmazó `POST` API kérést küld a webhook URL-jére. Ez hasznos lehet új szállítók vagy vevők automatikus létrehozásához."
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:223
+#: ../../content/applications/general/automation_rules/webhooks.rst:224
 msgid "Go to :menuselection:`Settings --> Technical --> Automation --> Automation Rules` and click :guilabel:`New`. Select the *Contact* model and set the :guilabel:`Trigger` to :guilabel:`On webhook`."
 msgstr "Lépjen a :menuselection:`Beállítások --> Technikai --> Automatizálás --> Automatizálási szabályok` menüpontra, és kattintson az :guilabel:`Új` gombra. Válassza a *Kapcsolat* modellt, és állítsa az :guilabel:`Indítás` mezőt :guilabel:`Webhook esetén` értékre."
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:226
+#: ../../content/applications/general/automation_rules/webhooks.rst:227
 msgid "Set the :guilabel:`Target Record` to `model.browse([2])`. This is essentially a placeholder as the code in the automated action tells the webhook what needs to be retrieved from the payload and in which model the record needs to be created."
 msgstr "Állítsa a :guilabel:`Célrekord` mezőt `model.browse([2])` értékre. Ez lényegében csak helykitöltő, mivel az automatikus művelet kódja határozza meg, mit kell kiolvasni az adatcsomagból, és melyik modellben kell létrehozni a rekordot."
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:230
+#: ../../content/applications/general/automation_rules/webhooks.rst:231
 msgid "In the :guilabel:`Type` section, click :guilabel:`Execute Code`."
 msgstr "A :guilabel:`Típus` szakaszban kattintson a :guilabel:`Kód végrehajtása` lehetőségre."
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:231
+#: ../../content/applications/general/automation_rules/webhooks.rst:232
 msgid "Copy this code and paste it into the code editor in the :guilabel:`Code` tab of the :guilabel:`Action details` section:"
 msgstr "Másolja ki ezt a kódot, és illessze be a :guilabel:`Művelet részletei` szakasz :guilabel:`Kód` fülének kódszerkesztőjébe:"
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:261
+#: ../../content/applications/general/automation_rules/webhooks.rst:262
 msgid "In `Postman <https://www.postman.com/>`_, create a new HTTP request and set its method to :guilabel:`POST`."
 msgstr "A `Postman <https://www.postman.com/>`_ alkalmazásban hozzon létre egy új HTTP kérést, és állítsa a metódusát :guilabel:`POST` értékre."
 
-#: ../../content/applications/general/automation_rules/webhooks.rst:277
+#: ../../content/applications/general/automation_rules/webhooks.rst:278
 msgid "In the pasted code, replace the `CONTACT NAME`, `CONTACTEMAIL@EMAIL.COM`, and `CONTACT PHONE NUMBER` with a new contact's information."
 msgstr "A beillesztett kódban cserélje ki a `CONTACT NAME`, `CONTACTEMAIL@EMAIL.COM` és `CONTACT PHONE NUMBER` szövegeket az új kapcsolat adataira."
 
@@ -5586,43 +5502,43 @@ msgstr "További :abbr:`KPI-k (kulcs teljesítménymutatók)` hozzáadása (egye
 msgid "Additional :abbr:`KPIs (key performance indicators)` can be added with a custom module. See this section on :ref:`digest-emails/custom-kpi`."
 msgstr "További :abbr:`KPI-k (kulcs teljesítménymutatók)` egyedi modullal adhatók hozzá. Lásd a :ref:`digest-emails/custom-kpi` szakaszt."
 
-#: ../../content/applications/general/companies/digest_emails.rst:123
+#: ../../content/applications/general/companies/digest_emails.rst:127
 msgid ":guilabel:`Messages Sent`"
 msgstr ":guilabel:`Elküldött üzenetek`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:129
+#: ../../content/applications/general/companies/digest_emails.rst:133
 msgid ":guilabel:`New Employees`"
 msgstr ":guilabel:`Új munkavállalók`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:132
+#: ../../content/applications/general/companies/digest_emails.rst:136
 msgid ":guilabel:`New Leads`"
 msgstr ":guilabel:`Új érdeklődők`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:151
+#: ../../content/applications/general/companies/digest_emails.rst:155
 msgid "The KPIs of an app are only available if the app is installed."
 msgstr "Egy alkalmazás KPI-jai csak akkor érhetők el, ha az alkalmazás telepítve van."
 
-#: ../../content/applications/general/companies/digest_emails.rst:208
+#: ../../content/applications/general/companies/digest_emails.rst:212
 msgid "Custom KPIs"
 msgstr "Egyedi KPI-k"
 
-#: ../../content/applications/general/companies/digest_emails.rst:210
+#: ../../content/applications/general/companies/digest_emails.rst:214
 msgid "Additional :abbr:`KPIs (key performance indicators)` can be added to the :guilabel:`KPIs` tab of the digest email template form by a developer, in a custom module. For each new KPI, two fields are needed on the digest model (`digest.digest`):"
 msgstr "Az összefoglaló e-mail sablon űrlapjának :guilabel:`KPI-k` fülére egy fejlesztő egyedi modulban további :abbr:`KPI-kat (kulcs teljesítménymutatókat)` adhat hozzá. Minden új KPI-hoz két mező szükséges az összefoglaló modellen (`digest.digest`):"
 
-#: ../../content/applications/general/companies/digest_emails.rst:214
+#: ../../content/applications/general/companies/digest_emails.rst:218
 msgid "A boolean field, e.g., `kpi_myfield`, displayed in the :guilabel:`KPIs` tab, to enable the KPI."
 msgstr "Egy logikai mező, pl. `kpi_myfield`, amely a :guilabel:`KPI-k` fülön jelenik meg, és a KPI bekapcsolására szolgál."
 
-#: ../../content/applications/general/companies/digest_emails.rst:215
+#: ../../content/applications/general/companies/digest_emails.rst:219
 msgid "A computed field, e.g., `kpi_myfield_value`, that computes the value of the KPI."
 msgstr "Egy számított mező, pl. `kpi_myfield_value`, amely a KPI értékét számítja ki."
 
-#: ../../content/applications/general/companies/digest_emails.rst:217
+#: ../../content/applications/general/companies/digest_emails.rst:221
 msgid "Once the module is installed, the new KPI can be selected in the :guilabel:`KPIs` tab."
 msgstr "A modul telepítése után az új KPI kiválasztható a :guilabel:`KPI-k` fülön."
 
-#: ../../content/applications/general/companies/digest_emails.rst:220
+#: ../../content/applications/general/companies/digest_emails.rst:224
 msgid "The `digest.py` file of the *Digest* module (`digest/models/digest.py`) and the modules that add the standard KPIs (e.g., `crm`, `sale`, `project`) can be used as examples for the computed fields."
 msgstr "A számított mezőkhöz mintaként a *Digest* modul `digest.py` fájlja (`digest/models/digest.py`) és a szabványos KPI-kat hozzáadó modulok (pl. `crm`, `sale`, `project`) használhatók."
 
@@ -6042,10 +5958,6 @@ msgstr "A funkció bekapcsolása után nyisson meg egy kapcsolatot, lépjen a :g
 msgid "Next, the *Cloud Translation API* needs to be installed on this newly-created project. To do that, click :menuselection:`Library` in the left menu. Then, search the term `Cloud Translation API`, and click into the result. This should be a Google API labeled :guilabel:`Cloud Translation API`."
 msgstr "Ezután telepíteni kell a *Cloud Translation API*-t az újonnan létrehozott projektre. Ehhez kattintson a bal oldali menüben a :menuselection:`Library` elemre. Keressen rá a `Cloud Translation API` kifejezésre, és kattintson a találatra. Ennek egy :guilabel:`Cloud Translation API` feliratú Google API-nak kell lennie."
 
-#: ../../content/applications/general/integrations/mail_plugins.rst:31
-msgid "The *Company Insights* (lead enrichment) feature of the plugins relies on Odoo SA's paid *Lead Generation* service and is not covered by this documentation."
-msgstr "A bővítmények *Company Insights* (érdeklődőadat-bővítés) funkciója az Odoo SA fizetős *Lead Generation* szolgáltatására épül, ezért ez a dokumentáció nem tárgyalja."
-
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:9
 msgid "Installation and configuration"
 msgstr "Telepítés és beállítás"
@@ -6242,6 +6154,70 @@ msgstr ":guilabel:`Szabad regisztráció`: az ügyfelek a bejelentkezési oldalo
 msgid "Next, click into the :guilabel:`Email Address` field, and proceed to make any necessary changes to this field. The :guilabel:`Email Address` field is used to log into the Odoo portal."
 msgstr "Ezután kattintson az :guilabel:`E-mail cím` mezőbe, és végezze el a szükséges módosításokat. Az :guilabel:`E-mail cím` mező szolgál a portálra való bejelentkezéshez."
 
-#: ../../content/applications/general/companies/email_template.rst:294
+#: ../../content/applications/general/companies/email_template.rst:291
 msgid "In order to edit translations, first enter :ref:`developer mode <developer-mode>`. Then, open the email template, and click on the language button, represented by the initials of the language currently being used (e.g. :guilabel:`EN` for English)."
 msgstr "A fordítások szerkesztéséhez először lépjen be :ref:`fejlesztői módba <developer-mode>`. Ezután nyissa meg az e-mail sablont, és kattintson a nyelv gombra, amelyet az éppen használt nyelv kezdőbetűi jelölnek (pl. angol esetén :guilabel:`EN`)."
+
+#: ../../content/applications/general/companies/digest_emails.rst:51 ../../content/applications/general/companies/digest_emails.rst:192
+msgid ":guilabel:`Digest Title`: the name of the digest email."
+msgstr ":guilabel:`Összefoglaló címe`: az összefoglaló e-mail neve."
+
+#: ../../content/applications/general/companies/digest_emails.rst:54 ../../content/applications/general/companies/digest_emails.rst:195
+msgid ":guilabel:`Next Mailing Date`: the date on which the digest email will be sent again."
+msgstr ":guilabel:`Következő küldés dátuma`: az a dátum, amikor az összefoglaló e-mail legközelebb elküldésre kerül."
+
+#: ../../content/applications/general/companies/digest_emails.rst:82
+msgid "Next, click :guilabel:`Deactivate` to deactivate the digest email for everyone. A deactivated digest can be reactivated with the :guilabel:`Activate` button. Both buttons are located at the top of the form, next to the :guilabel:`Send Now` button, which sends the digest immediately."
+msgstr "Ezután kattintson a :guilabel:`Deaktiválás` gombra az összefoglaló e-mail mindenki számára történő kikapcsolásához. A kikapcsolt összefoglaló az :guilabel:`Aktiválás` gombbal kapcsolható vissza. Mindkét gomb az űrlap tetején található, a :guilabel:`Küldés most` gomb mellett, amellyel az összefoglaló azonnal elküldhető."
+
+#: ../../content/applications/general/companies/digest_emails.rst:87
+msgid "A recipient can stop receiving a digest by clicking the :guilabel:`Unsubscribe` link at the bottom of the digest email."
+msgstr "A címzettek az összefoglaló e-mail alján található :guilabel:`Leiratkozás` hivatkozással mondhatják le az összefoglaló fogadását."
+
+#: ../../content/applications/general/companies/digest_emails.rst:185
+msgid "To create a new digest email, navigate to :menuselection:`Settings app --> Statistics section`, and click :guilabel:`Configure Digest Emails`. Then, click :guilabel:`New` to create a new digest email."
+msgstr "Új összefoglaló e-mail létrehozásához lépjen a :menuselection:`Beállítások alkalmazás --> Statisztikák szakasz` részre, és kattintson az :guilabel:`Összefoglaló e-mailek konfigurálása` lehetőségre. Ezután kattintson az :guilabel:`Új` gombra."
+
+#: ../../content/applications/general/companies/digest_emails.rst:202
+msgid "From there, give the digest email a :guilabel:`Digest Title`, specify :guilabel:`Periodicity`, choose the desired :abbr:`KPIs (key performance indicators)`, and add :guilabel:`Recipients`, as needed."
+msgstr "Ezután adja meg az összefoglaló e-mail :guilabel:`Összefoglaló címe` mezőjét, a :guilabel:`Gyakoriság` értékét, válassza ki a kívánt :abbr:`KPI-kat (kulcs teljesítménymutatókat)`, és szükség szerint adja hozzá a :guilabel:`Címzettek` listát."
+
+#: ../../content/applications/general/companies/multi_company.rst:119
+msgid "This setup keeps the accounting of each company separate while sharing products and contacts. It also simplifies the sales process by enabling customers transactions in their local currency."
+msgstr "Ez a beállítás elkülönítve tartja az egyes vállalatok könyvelését, miközben a termékek és a kapcsolatok közösek. Emellett egyszerűsíti az értékesítést, mivel az ügyfelek a saját pénznemükben bonyolíthatják a tranzakciókat."
+
+#: ../../content/applications/general/integrations/mail_plugins.rst:30
+msgid "However, they can provide **Lead Enrichment**, which is part of a paid service known as **Lead Generation**."
+msgstr "Ugyanakkor biztosíthatnak **Érdeklődő-gazdagítást**, amely a **Érdeklődő-generálás** nevű fizetős szolgáltatás része."
+
+#: ../../content/applications/general/integrations/mail_plugins.rst:33
+msgid "Mail plugins allow you to test Lead Enrichment for free, whether you connect the plugins to a database or not. After a while, the plugins ask you to buy :doc:`../../essentials/in_app_purchase` credits if you would like to keep using this service."
+msgstr "A levelezési bővítmények lehetővé teszik az Érdeklődő-gazdagítás ingyenes kipróbálását, függetlenül attól, hogy a bővítményeket csatlakoztatja-e egy adatbázishoz. Egy idő után a bővítmények arra kérik, hogy vásároljon :doc:`../../essentials/in_app_purchase` krediteket, ha szeretné tovább használni ezt a szolgáltatást."
+
+#: ../../content/applications/general/integrations/mail_plugins.rst:40
+msgid "Lead Generation IAP service"
+msgstr "Érdeklődő-generálás IAP szolgáltatás"
+
+#: ../../content/applications/general/integrations/mail_plugins.rst:42
+msgid "Lead Enrichment uses the *Lead Generation IAP service*. Each request consumes one *Lead Generation credit*."
+msgstr "Az Érdeklődő-gazdagítás az *Érdeklődő-generálás IAP szolgáltatást* használja. Minden egyes lekérdezés egy *Érdeklődő-generálás kreditet* von le."
+
+#: ../../content/applications/general/integrations/mail_plugins.rst:45
+msgid "To buy credits, go to :menuselection:`Settings --> CRM --> Lead Enrichment --> Buy credits` and select a package."
+msgstr "Kreditek vásárlásához lépjen a :menuselection:`Beállítások --> CRM --> Érdeklődő-gazdagítás --> Kreditek vásárlása` menüpontra, és válasszon egy csomagot."
+
+#: ../../content/applications/general/integrations/mail_plugins.rst:49
+msgid "If you are out of credits, the only information populated when clicking on the suggested company is its website link and logo."
+msgstr "Ha elfogytak a kreditjei, a javasolt vállalatra kattintva csupán a webhelye hivatkozása és logója jelenik meg."
+
+#: ../../content/applications/general/integrations/mail_plugins.rst:51
+msgid "Check out the `Lead Generation IAP service Privacy Policy <https://iap.odoo.com/privacy#header_3>`_."
+msgstr "Tekintse meg az `Érdeklődő-generálás IAP szolgáltatás adatvédelmi szabályzatát <https://iap.odoo.com/privacy#header_3>`_."
+
+#: ../../content/applications/general/integrations/mail_plugins.rst:55
+msgid ":doc:`../../essentials/in_app_purchase`"
+msgstr ":doc:`../../essentials/in_app_purchase`"
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:97
+msgid "Only a limited amount of **Company Insights** (*Lead Enrichment*) requests are available for free. This feature requires :ref:`prepaid credits <mail_plugins/pricing>`."
+msgstr "Csak korlátozott számú **Company Insights** (*Lead Enrichment*) kérés érhető el ingyenesen. A funkcióhoz :ref:`előre megvásárolt kreditek <mail_plugins/pricing>` szükségesek."

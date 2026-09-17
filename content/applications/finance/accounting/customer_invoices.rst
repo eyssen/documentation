@@ -28,7 +28,8 @@ Invoice creation
 ================
 
 Draft invoices can be created directly from documents like sales orders or purchase orders or
-manually from the :guilabel:`Customer Invoices` journal in the :guilabel:`Accounting Dashboard`.
+manually from :menuselection:`Accounting --> Customers --> Invoices`, or from the
+:guilabel:`Customer Invoices` journal card of the accounting dashboard.
 
 An invoice must include the required information to enable the customer to pay promptly for their
 goods and services. Make sure the following fields are appropriately completed:
@@ -58,6 +59,108 @@ To access the product catalog and view all items in an organized display, click 
 </applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/product_catalog>`.
 When the products and quantities are selected, click :guilabel:`Back to Invoice` to return to the
 invoice; the selected catalog items will appear in the invoice lines.
+
+.. _accounting/invoice/line-tools:
+
+Invoice line tools
+------------------
+
+The following eYssen modules add tools above or in the invoice lines of **draft** invoices and
+bills:
+
+- :guilabel:`Add Products from Delivery Notes` (*Invoicing from Stock Picking*,
+  `eyssen_stock_picking_invoice`): loads the not yet invoiced quantities of validated delivery
+  notes or receipts of the partner. See :doc:`customer_invoices/invoice_from_delivery_notes`.
+- :icon:`fa-cubes` :guilabel:`Add Bulk Products` (*Add Bulk Products for Invoice*,
+  `eyssen_product_bulk_add_invoice`): adds several products at once. In the pop-up window, select
+  the :guilabel:`Format` (:guilabel:`Copy/Paste`, :guilabel:`CSV` or :guilabel:`Excel`), whether the
+  file has a header (:guilabel:`Is there a header?`), how the products are identified
+  (:guilabel:`Based On`: :guilabel:`Default Code`, :guilabel:`Barcode` or :guilabel:`Product Name`),
+  whether the rows contain a quantity (:guilabel:`With Quantity`) and a unit price
+  (:guilabel:`With Price`), and what happens if a product is already on the invoice (:guilabel:`If
+  Product Duplication`: :guilabel:`Stop`, :guilabel:`Skip`, :guilabel:`Replace` or
+  :guilabel:`Increase`). An example of the expected format is displayed in the window. Then, paste
+  the rows in the :guilabel:`Products` field or upload the :guilabel:`File`, and click
+  :guilabel:`Add`.
+
+  .. note::
+     - In :guilabel:`Copy/Paste` mode, write one product per line, with the quantity and the price
+       separated by spaces (e.g., `cb 10 99`).
+     - CSV files must use semicolons (`;`) as separators; the columns are: product identifier,
+       quantity, price.
+
+- :icon:`fa-files-o` :guilabel:`Add Previous Items` (*Add Items from Previous Invoice*,
+  `eyssen_add_item_from_previous_invoice`): copies the product lines (product, quantity, unit price)
+  of another invoice of the same type. Select the :guilabel:`Previous Invoice` and the :guilabel:`If
+  Product Duplication` behavior, then click :guilabel:`Add`.
+- Barcode scanning (*eYssen Barcode Invoice*, `eyssen_barcode_invoice`): scanning a product
+  barcode adds the product to the invoice with a quantity of 1; if the product is already on the
+  invoice, its quantity is increased.
+- Copy line values (*Copying Invoice rows values*, `eyssen_copy_invoice_row_value`): enable the
+  :icon:`fa-files-o` toggle above the lines to display copy buttons next to the
+  :guilabel:`Product`, :guilabel:`Account`, :guilabel:`Analytic Distribution`, :guilabel:`Taxes` and
+  :guilabel:`Disc.%` columns. Clicking a copy button on a line sets the same value on all the other
+  product lines of the invoice (after confirmation).
+- Quantity totals (*Add Quantity Total for Invoice*, `eyssen_quantity_total_invoice`): the totals
+  block of the invoice displays the number of product and service types and the total quantity per
+  unit of measure (:guilabel:`Sum Qty (detailed)`). The :guilabel:`Sum Qty` column is also available
+  in the list of invoices.
+
+.. note::
+   Except for the quantity totals and the copy buttons, these tools require the Hungarian
+   localization module (*Magyar számlázás és NAV adatszolgáltatás*, `eyssen_l10n_hu`), which
+   provides the toolbar above the invoice lines.
+
+.. screenshot:: accounting-invoice-line-tools
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (open a draft invoice)
+   :shows: Draft invoice, "Invoice Lines" tab: the toolbar above the lines with the "Add Products from Delivery Notes" button (left) and the barcode, "Add Previous Items" and "Add Bulk Products" icon buttons and the copy toggle (right); the copy buttons are visible next to the Product, Account and Taxes columns; the totals block shows the quantity totals.
+   :highlight: The toolbar buttons and the quantity totals (red frames).
+   :data: Demo company "YourCompany HU"; draft invoice with three product lines.
+   :module: eyssen_l10n_hu, eyssen_stock_picking_invoice, eyssen_product_bulk_add_invoice, eyssen_add_item_from_previous_invoice, eyssen_barcode_invoice, eyssen_copy_invoice_row_value, eyssen_quantity_total_invoice
+   :notes: English UI, light theme, 1440px width.
+
+.. _accounting/invoice/pricelist:
+
+Pricelist on invoices
+---------------------
+
+With the *Account - Pricelist on Invoices* (`account_invoice_pricelist`) module, invoices have a
+:guilabel:`Pricelist` field, filled in with the customer's pricelist. The pricelist is used to
+compute the unit prices of the lines added manually to the invoice. If the pricelist is changed on a
+draft invoice, click :guilabel:`Update Prices` to recompute the prices of the existing lines.
+Invoices can also be grouped by :guilabel:`Pricelist` in the list view.
+
+With the *Account Invoice Pricelist - Sale* (`account_invoice_pricelist_sale`) module, invoices
+created from sales orders use the pricelist of the sales order.
+
+.. note::
+   The :guilabel:`Pricelist` field is only visible if pricelists are enabled in the Sales settings.
+
+.. _accounting/invoice/comments:
+
+Document comments
+-----------------
+
+With the *Account Comments* (`account_comment_template`) module, comments can be printed above or
+below the invoice lines:
+
+#. Go to :menuselection:`Accounting --> Configuration --> Management --> Document Comments` and
+   create a comment template: enter a name, the :guilabel:`Template` text, the :guilabel:`Position
+   on document` (:guilabel:`Top` or :guilabel:`Bottom`), the models (e.g., invoices), and
+   optionally a :guilabel:`Company`, a :guilabel:`Partner`, and a :guilabel:`Filter Domain` to
+   restrict where the template is available.
+#. On the invoice, open the :guilabel:`Comments` tab and add the comment templates to print.
+
+.. tip::
+   The template text can contain dynamic placeholders, such as `{{object.partner_id.name}}`.
+
+.. screenshot:: accounting-invoice-comment-template
+   :menu: Accounting ‣ Configuration ‣ Management ‣ Document Comments ‣ New
+   :shows: Comment template form with a name, the template text, position "Bottom", model "Journal Entry" and an empty domain.
+   :highlight: The "Position on document" field (red frame).
+   :data: Template "Reverse charge notice".
+   :module: account_comment_template, base_comment_template
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    To display the total amount of the invoice in words, go to :menuselection:`Accounting -->
@@ -91,6 +194,41 @@ confirmation, Odoo assigns each invoice a unique number from a defined :doc:`seq
      changes are needed.
    - If required, invoices and other journal entries can be locked once posted using the
      :ref:`Secure posted entries with hash <data-inalterability/restricted>` feature.
+   - If an :doc:`approval rule <customer_invoices/invoice_approval>` applies to the invoice, it must
+     be approved before it can be confirmed.
+
+.. _accounting/invoice/edit-posted:
+
+Correcting posted entries (administrators)
+------------------------------------------
+
+The *Invoice Fixer* (`invoice_fixer`) module adds an :guilabel:`Edit Posted Move` button to posted
+journal entries, visible only to users with the :guilabel:`Administration: Settings` access right.
+The :guilabel:`Edit Posted Move` window allows the administrator to:
+
+- modify the :guilabel:`Debit`, :guilabel:`Credit`, :guilabel:`Quantity` and :guilabel:`Unit
+  Price` of the existing lines (:guilabel:`Lines` tab);
+- change the :guilabel:`Exchange Rate` of a foreign currency document;
+- add new product lines with their :guilabel:`Product`, :guilabel:`Description`,
+  :guilabel:`Quantity`, :guilabel:`Unit Price`, :guilabel:`Taxes` and :guilabel:`Account`
+  (:guilabel:`Add New Lines` tab).
+
+Click :guilabel:`Apply Changes` to save. The document totals are recomputed, and the changes are
+logged in the chatter.
+
+.. danger::
+   The changes are written directly into the database, without resetting the document to draft and
+   bypassing the usual checks (e.g., lock dates, entry hashing, electronic invoicing). Use this tool
+   only to correct technical errors, and preferably with the help of your accountant: legally, a
+   posted invoice must be corrected with a credit note.
+
+.. screenshot:: accounting-invoice-edit-posted-move
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (open a posted invoice) ‣ Edit Posted Move
+   :shows: "Edit Posted Move" dialog with the invoice reference, the "Lines" tab listing the journal items with editable Debit, Credit, Quantity and Unit Price columns, the "Add New Lines" tab, and the "Apply Changes" button.
+   :highlight: The editable columns and the "Apply Changes" button (red frames).
+   :data: Demo company "YourCompany HU"; posted invoice with two lines; administrator user.
+   :module: invoice_fixer
+   :notes: English UI, light theme, crop to the dialog.
 
 .. _accounting/invoice/sending:
 
@@ -99,7 +237,8 @@ Invoice sending
 
 To set a preferred :guilabel:`Invoice sending` method for a customer, go to
 :menuselection:`Accounting --> Customers --> Customers` and select the customer. In the
-:guilabel:`Accounting` tab of the contact form, select the preferred :guilabel:`Invoice sending`
+:guilabel:`Accounting` tab of the contact form (:guilabel:`Invoicing` tab if only the Invoicing app
+is installed), select the preferred :guilabel:`Invoice sending`
 method in the :guilabel:`Customer Invoices` section.
 
 .. note::
@@ -187,7 +326,9 @@ Partner Ledger
 ~~~~~~~~~~~~~~
 
 The :guilabel:`Partner Ledger` report shows the balance of customers and suppliers. To access it,
-go to :menuselection:`Accounting --> Reporting --> Partner Ledger`.
+go to :menuselection:`Accounting --> Accounting --> Ledgers --> Partner Ledger` (PDF report) or
+:menuselection:`Accounting --> Reporting --> Dynamic Reports --> Partner Ledger` (interactive
+report).
 
 .. _accounting/invoices/aging-report:
 
@@ -196,7 +337,8 @@ Aged Receivable
 
 To review outstanding customer invoices and their related due dates, use the :ref:`Aged Receivable
 <accounting/reporting/aged-receivable>` report. To access it, go to :menuselection:`Accounting -->
-Reporting --> Aged Receivable`.
+Reporting --> Dynamic Reports --> Aged Receivable`, or use the :menuselection:`Accounting -->
+Reporting --> Partner Reports --> Aged Partner Balance` PDF report.
 
 .. _accounting/invoices/aged-payable:
 
@@ -205,7 +347,8 @@ Aged Payable
 
 To review outstanding vendor bills and their related due dates, use the :ref:`Aged Payable
 <accounting/reporting/aged-payable>` report. To access it, go to :menuselection:`Accounting -->
-Reporting --> Aged Payable`.
+Reporting --> Dynamic Reports --> Aged Payable`, or use the :menuselection:`Accounting -->
+Reporting --> Partner Reports --> Aged Partner Balance` PDF report.
 
 .. _accounting/invoices/profit-and-loss:
 
@@ -227,6 +370,8 @@ liabilities, and equity at a specific time.
    :titlesonly:
 
    customer_invoices/overview
+   customer_invoices/invoice_approval
+   customer_invoices/invoice_from_delivery_notes
    customer_invoices/customer_addresses
    customer_invoices/payment_terms
    customer_invoices/terms_conditions

@@ -195,16 +195,13 @@ and region-specific tax calculations when items are sold, purchased, and invoice
 
 .. important::
    AvaTax is available for integration with databases/companies that have locations in Canada and/or
-   the United States. Reference the :ref:`accounting/avatax/fiscal_country` documentation for more
+   the United States. Reference the Fiscal country documentation for more
    information.
 
 .. seealso::
    Refer to the documentation articles below to integrate and configure an AvaTax account with an
    Odoo database:
 
-   - :doc:`AvaTax integration <../accounting/taxes/avatax>`
-   - :doc:`Avalara management portal <../accounting/taxes/avatax/avalara_portal>`
-   - :doc:`Calculate taxes with AvaTax <../accounting/taxes/avatax/avatax_use>`
    - Avalara's support documents: `About AvaTax
      <https://community.avalara.com/support/s/document-item?language=en_US&bundleId=dqa1657870670369_dqa1657870670369&topicId=About_AvaTax.html&_LANG=enus>`_
 

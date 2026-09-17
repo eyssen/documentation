@@ -15,8 +15,6 @@ Brazil
      <https://youtube.com/playlist?list=PL1-aSABtP6ADqexw4YNCbKPmpFggajxlX&si=RgmZR3Jco3223Np4>`_.
    - `YouTube playlist - Tutoriais Odoo em Português
      <https://youtube.com/playlist?list=PL1-aSABtP6ACGOW2UREePGjHQ2Bgdy-UZ&si=j6tiI36eB7BoKVQB>`_.
-   - :doc:`Documentation on e-invoicing's legality and compliance in Brazil
-     <../accounting/customer_invoices/electronic_invoicing/brazil>`
 
 .. _localizations/brazil/modules:
 
@@ -189,7 +187,7 @@ AvaTax integration
    - Make sure to :ref:`install <general/install>` the :guilabel:`AvaTax Brazil` (`l10n_br_avatax`)
      module.
    - Odoo is a certified partner of Avalara Brazil.
-   - The :doc:`Avalara AvaTax integration <../accounting/taxes/avatax>` uses :doc:`In-App-Purchases
+   - The Avalara AvaTax integration uses :doc:`In-App-Purchases
      (IAPs) <../../essentials/in_app_purchase>` to compute taxes and handle electronic documents
      (e.g., :ref:`NF-e <localizations/brazil/e-invoice-goods>`, :ref:`NFS-e
      <localizations/brazil/e-invoice-services>`). Each action consumes credits from the `IAP credit
@@ -216,14 +214,14 @@ Configuration
 Credentials
 ~~~~~~~~~~~
 
-:ref:`Activate AvaTax in Odoo <accounting/avatax/credentials>` and, in the :guilabel:`AvaTax Brazil`
+Activate AvaTax in Odoo and, in the :guilabel:`AvaTax Brazil`
 section, add the administrator's email address for the AvaTax portal in the :guilabel:`AvaTax Portal
 Email` field, then click :icon:`fa-plug` :guilabel:`Create account`.
 
 .. warning::
    When **testing** or **creating a production** :guilabel:`AvaTax Portal Email` integration in a
-   sandbox or production database, use a real email address, as it is needed to :ref:`connect to
-   Avalara <accounting/avatax/prerequisites>` and set up the certificates, whether to test or use it
+   sandbox or production database, use a real email address, as it is needed to connect to
+   Avalara and set up the certificates, whether to test or use it
    on production.
 
    There are two different Brazilian Avalara Portals:
@@ -281,8 +279,7 @@ number (CNPJ) in Odoo matches the CNPJ in AvaTax.
 Fiscal positions
 ~~~~~~~~~~~~~~~~
 
-To set up the :guilabel:`Automatic Tax Mapping (Avalara Brazil)` :ref:`fiscal position
-<accounting/avatax/fiscal_positions>`, enable the :guilabel:`Detect Automatically` and
+To set up the :guilabel:`Automatic Tax Mapping (Avalara Brazil)` fiscal position, enable the :guilabel:`Detect Automatically` and
 :guilabel:`Use AvaTax Brazil API` options.
 
 .. seealso::
@@ -411,9 +408,6 @@ E-invoices for services (NFS-e)
 
 Tax computation
 ---------------
-
-.. seealso::
-   :ref:`Tax calculation <accounting/avatax/tax-calculation>`
 
 .. _localizations/brazil/tax-calculations:
 
@@ -666,7 +660,7 @@ Configuration
 -------------
 
 :ref:`Install <general/install>` the :guilabel:`Brazilian Accounting EDI for POS` (`l10nbr_edi_pos`)
-module and make sure to activate :doc:`AvaTax <../accounting/taxes/avatax>`.
+module and make sure to activate AvaTax.
 
 .. _localizations/brazil/pos-csc-details:
 

@@ -9,7 +9,6 @@ Vendor bills can be registered either **manually** or **automatically** in Odoo.
 outstanding bills to help ensure timely payment of the correct amounts.
 
 .. seealso::
-   - Tutorial `Registering a vendor bill <https://www.odoo.com/slides/slide/register-a-vendor-bill-6582>`_
    - :doc:`/applications/inventory_and_mrp/purchase/manage_deals/manage`
    - :doc:`../accounting/customer_invoices/credit_notes`
 
@@ -38,19 +37,16 @@ click :guilabel:`New`.
 Automatically
 -------------
 
-Vendor bills can be automatically created by sending an email to an :ref:`email alias
-<accounting/bill-digitization/email-alias>` associated with the purchase journal, or by
-:ref:`uploading a PDF <accounting/bill-digitization/manual-upload>`.
+Vendor bills can be automatically created by sending an email to the :guilabel:`Email Alias` of
+the purchase journal, or by clicking :guilabel:`Upload` in the list of bills and selecting the
+document.
 
 .. note::
    - Once the bill is uploaded, the PDF document appears on the right side of the screen, making it
      easy to fill in the bill information.
-   - Bills can be :doc:`digitized <vendor_bills/invoice_digitization>` for automatic
-     completion and :ref:`matched with purchase orders
-     <accounting/bill-digitization/vendor-bills-matching-po>` to replace OCR-detected data with the
-     existing purchase order's details.
-   - Services such as digitizing scanned or PDF vendor bills in Odoo require :doc:`In-App
-     Purchase (IAP) </applications/essentials/in_app_purchase>` credits.
+   - If the uploaded file is a structured electronic invoice (e.g., UBL, Factur-X, or a PDF with an
+     embedded XML), the bill is completed automatically from its content. Bills received via
+     :ref:`Peppol <accounting/e-invoicing/receive-vendor-bills>` are also created automatically.
 
 To automatically post bills from selected vendors, go to :menuselection:`Accounting --> Vendors -->
 Vendors` and select the relevant vendor. In the :guilabel:`Accounting` tab, under the
@@ -60,10 +56,6 @@ following options:
 - :guilabel:`Always`
 - :guilabel:`Ask after 3 validations without edits`
 - :guilabel:`Never`
-
-.. seealso::
-   :ref:`Vendor bills matching with purchase orders
-   <accounting/bill-digitization/vendor-bills-matching-po>`
 
 .. _accounting/vendor_bills/bill-completion:
 
@@ -83,12 +75,20 @@ appropriately completed:
 - :guilabel:`Accounting Date`: Update the document's accounting registration date if needed.
 - :guilabel:`Payment Reference`: The :guilabel:`Memo` field automatically includes the payment
   reference once the payment is registered.
-- :guilabel:`Recipient Bank`: Indicates the account number to which the payment will be made. This
-  field is required when paying via batch payment files (such as :ref:`NACHA
-  <l10n_us/ach-electronic-transfers>` and :doc:`SEPA <payments/pay_sepa>`).
+- :guilabel:`Recipient Bank`: Indicates the vendor's account number to which the payment will be
+  made. The account must be :doc:`trusted <payments/trusted_accounts>` to be used for outgoing
+  payments.
 - :guilabel:`Due Date` or :guilabel:`Payment Terms` must be specified for the bill payment.
 - :guilabel:`Journal`: Select which journal should record the bill and in which :doc:`currency
   <get_started/multi_currency>`.
+
+.. screenshot:: accounting-vendor-bills-form
+   :menu: Accounting ‣ Vendors ‣ Bills ‣ Upload
+   :shows: Draft vendor bill created from an uploaded PDF: the bill fields on the left (Vendor, Bill Reference, Auto-Complete, Bill Date, Accounting Date, Payment Reference, Recipient Bank, Due Date, Journal) and the PDF preview on the right.
+   :highlight: The PDF preview (red frame).
+   :data: Demo company "YourCompany HU"; demo vendor bill PDF.
+   :module: account, purchase
+   :notes: English UI, light theme, 1920px width to show the side-by-side preview.
 
 In the :guilabel:`Invoice Lines` tab:
 
@@ -107,6 +107,11 @@ To access the product catalog and view all items in an organized display, click 
 When the products and quantities are selected, click :guilabel:`Back to Bill` to return to the
 vendor bill; the selected catalog items will appear in the vendor bill lines.
 
+The :ref:`invoice line tools <accounting/invoice/line-tools>` (e.g., adding products from receipts,
+bulk adding products, copying line values) are also available on vendor bills. To record the purchase
+of a fixed asset or a prepaid expense, select an :guilabel:`Asset Category` on the bill line (see
+:doc:`vendor_bills/assets` and :doc:`vendor_bills/deferred_expenses`).
+
 .. note::
    Multiple bills for the same purchase order may be issued if the vendor is on back-order and sends
    invoices as products are shipped or if the vendor sends partial bills or requests a deposit. In
@@ -122,8 +127,10 @@ and a journal entry is generated based on the vendor bill information. On confir
 each vendor bill a unique number from a defined :doc:`sequence <vendor_bills/sequence>`.
 
 .. note::
-   Once confirmed, a vendor bill can no longer be updated. Click :guilabel:`Reset to draft` if
-   changes are required.
+   - Once confirmed, a vendor bill can no longer be updated. Click :guilabel:`Reset to draft` if
+     changes are required.
+   - If an :doc:`approval rule <customer_invoices/invoice_approval>` applies to the bill, it must be
+     approved before it can be confirmed.
 
 .. _accounting/vendor_bills/bill-payment:
 
@@ -156,18 +163,16 @@ Aged payable report
 ===================
 
 To get an overview of the open vendor bills and their due dates, go to :menuselection:`Accounting
---> Reporting --> Aged payable`.
+--> Reporting --> Dynamic Reports --> Aged Payable`. The report lists the vendors with their
+outstanding amounts by due period; expand a vendor to view the details of their outstanding bills.
 
-Click the :icon:`fa-caret-right` :guilabel:`(right arrow)` icon next to a vendor to view the details
-of all their outstanding bills, including the due dates and amounts.
-
-.. Note::
-   Click :guilabel:`PDF` or :guilabel:`XLSX` to generate a PDF or XLSX file, respectively.
+.. tip::
+   A printable version is available in :menuselection:`Accounting --> Reporting --> Partner Reports
+   --> Aged Partner Balance` (select the :guilabel:`Payable Accounts`).
 
 .. toctree::
    :titlesonly:
 
-   vendor_bills/invoice_digitization
    vendor_bills/assets
    vendor_bills/deferred_expenses
    vendor_bills/sequence

@@ -50,13 +50,17 @@ Payment terms
 -------------
 
 Cash discounts are defined on :doc:`payment terms <payment_terms>`. Configure them to your liking by
-going to :menuselection:`Accounting --> Configuration --> Payment Terms`, and make sure to fill out
-the discount percentage, discount days, and :ref:`tax reduction <cash-discounts/tax-reductions>`
-fields.
+going to :menuselection:`Accounting --> Configuration --> Invoicing --> Payment Terms`, and make sure to fill out
+discount percentage (:guilabel:`Discount %`), discount days (:guilabel:`Discount Days`), and
+:ref:`tax reduction <cash-discounts/tax-reductions>` fields.
 
-.. image:: cash_discounts/payment-terms.png
-   :alt: Configuration of payment terms named "2/7 Net 30". The field "Description on Invoices"
-         reads: "Payment terms: 30 Days, 2% Early Payment Discount under 7 days".
+.. screenshot:: accounting-cash-discounts-payment-terms
+   :menu: Accounting ‣ Configuration ‣ Invoicing ‣ Payment Terms ‣ (open "2/7 Net 30")
+   :shows: Payment term "2/7 Net 30" with "Early Discount" ticked (2% if paid within 7 days, tax reduction "Always (upon invoice)"), one due term of 100% after 30 days, and the preview text "Payment terms: 30 Days, 2% Early Payment Discount under 7 days".
+   :highlight: The "Early Discount" fields (red frame).
+   :data: Belgian demo company.
+   :module: account
+   :notes: English UI, light theme, 1440px width.
 
 .. _cash-discounts/tax-reductions:
 
@@ -153,18 +157,27 @@ On a customer invoice, apply a cash discount by selecting the :ref:`payment term
 dates, and accounting records.
 
 Under the :guilabel:`Journal Items` tab, you can display the discount details by clicking on the
-"toggle" button and adding the :guilabel:`Discount Date` and :guilabel:`Discount Amount` columns.
+:icon:`oi-settings-adjust` (optional columns) icon and adding the :guilabel:`Discount Date` and
+:guilabel:`Discount Amount` columns.
 
-.. image:: cash_discounts/invoice-journal-entry.png
-   :alt: An invoice of €100.00 with "2/7 Net 30" selected as payment terms. The "Journal Items" tab
-         is open, and the "Discount Date" and "Discount Amount" columns are displayed.
+.. screenshot:: accounting-cash-discounts-invoice-journal-items
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (open the invoice) ‣ Journal Items tab
+   :shows: Invoice of €100.00 with the "2/7 Net 30" payment terms; "Journal Items" tab with the "Discount Date" and "Discount Amount" columns displayed.
+   :highlight: The two discount columns (red frame).
+   :data: Belgian demo company; tax 21%.
+   :module: account
+   :notes: English UI, light theme, 1440px width.
 
 The discount amount and due date are also displayed on the generated invoice report sent to the
 customer if the :guilabel:`Show installment dates` option is checked on the payment terms.
 
-.. image:: cash_discounts/invoice-print.png
-   :alt: An invoice of €100.00 with the following text added to the terms and conditions: "30
-         Days, 2% Early Payment Discount under 7 days. 118.58 € due if paid before 01/08/2023."
+.. screenshot:: accounting-cash-discounts-invoice-report
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (open the invoice) ‣ Print
+   :shows: Invoice PDF with the payment terms text "30 Days, 2% Early Payment Discount under 7 days" and the early payment amount and date.
+   :highlight: The payment terms text (red frame).
+   :data: Belgian demo company; invoice of €100.00 + 21%.
+   :module: account
+   :notes: English UI, crop to the bottom of the invoice.
 
 Payment reconciliation
 ----------------------

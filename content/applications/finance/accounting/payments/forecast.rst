@@ -13,16 +13,15 @@ due dates on invoices. Examples of **Payment Terms** are:
 -  50% within 30 days
 -  50% within 45 days
 
-To create them, go to :menuselection:`Accounting --> Configuration --> Invoicing: Payment Terms` and
-click on :guilabel:`Create` to add new terms or click existing ones to modify them.
+To create them, go to :menuselection:`Accounting --> Configuration --> Invoicing --> Payment Terms`
+and click :guilabel:`New` to add new terms, or click existing ones to modify them.
 
 .. seealso::
-   `Odoo Tutorials: Payment Terms
-   <https://www.odoo.com/slides/slide/payment-terms-terms-and-conditions-6852>`_
+   :doc:`../customer_invoices/payment_terms`
 
 Once **Payment Terms** are defined, you can assign them to your vendor by default. To do so, go to
-:menuselection:`Vendors --> Vendors`, select a vendor, click the :guilabel:`Sales & Purchase` tab,
-and select a specific **Payment Term**. This way, every time you purchase from this vendor, Odoo
+:menuselection:`Accounting --> Vendors --> Vendors`, select a vendor, click the :guilabel:`Sales &
+Purchase` tab, and select a specific **Payment Term** in the :guilabel:`Purchase` section. This way, every time you purchase from this vendor, Odoo
 automatically proposes the chosen Payment Term.
 
 .. note::
@@ -32,7 +31,7 @@ Forecast bills to pay with the aged payable report
 ==================================================
 
 To track amounts to be paid to the vendors, use the **Aged Payable** report. To access it, go to
-:menuselection:`Accounting --> Reporting --> Partner Reports: Aged Payable`. This report gives you a
+:menuselection:`Accounting --> Reporting --> Dynamic Reports --> Aged Payable`. This report gives you a
 summary per vendor of the amounts to pay, compared to their due date (the due date being computed on
 each bill using the terms). This report tells you how much you will have to pay within the following
 months.
@@ -40,9 +39,17 @@ months.
 Select bills to pay
 ===================
 
-You can get a list of all your vendor bills by going to :menuselection:`Vendors --> Bills`. To view
-only the bills that you need to pay, click :menuselection:`Filters --> Bills to Pay`. To view only
-overdue payments, select the :guilabel:`Overdue` filter instead.
+You can get a list of all your vendor bills by going to :menuselection:`Accounting --> Vendors -->
+Bills`. To view only the bills that you need to pay, select the :guilabel:`To pay` filter. To view
+only overdue payments, select the :guilabel:`Overdue` filter instead.
 
 You can also group bills by their due date by clicking :menuselection:`Group By --> Due Date` and
 selecting a time period.
+
+.. screenshot:: accounting-payments-forecast-bills-to-pay
+   :menu: Accounting ‣ Vendors ‣ Bills
+   :shows: List of vendor bills with the "To pay" filter applied and grouped by Due Date: Month, showing the amounts due per month.
+   :highlight: The search bar with the filter and grouping (red frame).
+   :data: Demo company "YourCompany HU" with several open vendor bills.
+   :module: account
+   :notes: English UI, light theme, 1440px width.

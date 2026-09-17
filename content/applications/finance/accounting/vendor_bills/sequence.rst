@@ -21,15 +21,25 @@ Changing the default sequence
 To customize the default sequence, open the last confirmed vendor bill, click :guilabel:`Reset to
 Draft`, and edit the vendor bill's reference number.
 
-.. image:: sequence/sequence-reference-number.png
-   :alt: Editing the reference number of a vendor bill.
+.. screenshot:: accounting-bill-sequence-reference
+   :menu: Accounting ‣ Vendors ‣ Bills ‣ (open the last bill) ‣ Reset to Draft
+   :shows: Draft vendor bill whose number field (e.g., BILL/2025/09/0012) is being edited to a new format.
+   :highlight: The bill number field (red frame).
+   :data: Demo company "YourCompany HU".
+   :module: account
+   :notes: English UI, light theme, 1440px width.
 
 Odoo then explains how the detected format will be applied to all future vendor bills. For example,
 if the current vendor bill's month is withdrawn, the sequence's periodicity will change to every
 year instead of every month.
 
-.. image:: sequence/sequence-dialog.png
-   :alt: Editing the reference number of a vendor bill.
+.. screenshot:: accounting-bill-sequence-periodicity
+   :menu: Accounting ‣ Vendors ‣ Bills ‣ (edited draft bill)
+   :shows: The message below the bill number explaining how the detected format and periodicity will be applied to future bills.
+   :highlight: The message (red frame).
+   :data: Demo company "YourCompany HU".
+   :module: account
+   :notes: English UI, light theme, 1440px width. Crop to the upper part of the form.
 
 .. tip::
    The sequence format can be edited directly when creating the first vendor bill of a given
@@ -60,8 +70,13 @@ Follow these steps to resequence vendor bill numbers:
 #. Set the :guilabel:`First New Sequence`.
 #. :guilabel:`Preview Modifications` and click :guilabel:`Confirm`.
 
-.. image:: sequence/sequence-bill-sequencing.png
-   :alt: Resequence options window
+.. screenshot:: accounting-bill-sequence-resequence
+   :menu: Accounting ‣ Vendors ‣ Bills ‣ (select bills) ‣ Actions ‣ Resequence
+   :shows: "Resequence" dialog with the Ordering option, the First New Sequence field and the preview of the modifications.
+   :highlight: The "First New Sequence" field and the preview (red frame).
+   :data: Several bills selected; developer mode enabled.
+   :module: account
+   :notes: English UI, light theme, crop to the dialog.
 
 .. note::
    - To indicate where the sequence change began, the first vendor bill in the new sequence is

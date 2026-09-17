@@ -116,10 +116,6 @@ foreign trade, and enable the creation of delivery guides.
 .. note::
    In order to electronically sign any documents in Odoo, the Sign application must be installed.
 
-.. seealso::
-   :doc:`Documentation on e-invoicing's legality and compliance in Mexico
-   <../accounting/customer_invoices/electronic_invoicing/mexico>`
-
 .. _l10n/mx/requirements:
 
 Requirements
@@ -1035,7 +1031,6 @@ description of the merchandise sold.
 
 Since January 1, 2018, external trade is a requirement for taxpayers who carry export operations of
 type A1. While the current CFDI is 4.0, the external trade is currently on version 2.0.
-
 
 .. note::
    In order to use this feature, the :guilabel:`EDI for Mexico (Advanced Features)`

@@ -20,15 +20,25 @@ Changing the default sequence
 To customize the default sequence, open the last confirmed invoice, click :guilabel:`Reset to
 Draft`, and edit the invoice's reference number.
 
-.. image:: sequence/reference-number.png
-   :alt: Editing the reference number of an invoice.
+.. screenshot:: accounting-invoice-sequence-reference
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (open the last invoice) ‣ Reset to Draft
+   :shows: Draft invoice whose number field (e.g., INV/2025/00012) is being edited to a new format (e.g., INV/2025/09/0001).
+   :highlight: The invoice number field (red frame).
+   :data: Demo company "YourCompany HU".
+   :module: account
+   :notes: English UI, light theme, 1440px width.
 
 Odoo then explains how the detected format will be applied to all future invoices. For example, if
 the current invoice's month is added, the sequence's periodicity will change to every month instead
 of every year.
 
-.. image:: sequence/sequence-dialog.png
-   :alt: Editing the reference number of an invoice.
+.. screenshot:: accounting-invoice-sequence-periodicity
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (edited draft invoice)
+   :shows: The message below the invoice number explaining that the detected format will be applied to future invoices and that the sequence will restart every month.
+   :highlight: The message (red frame).
+   :data: Demo company "YourCompany HU".
+   :module: account
+   :notes: English UI, light theme, 1440px width. Crop to the upper part of the form.
 
 .. tip::
    The sequence format can be edited directly when creating the first invoice of a given sequence
@@ -49,7 +59,8 @@ continuity for the current year must be maintained without restarting from the b
 Follow these steps to resequence invoice numbers:
 
 #. Activate the :ref:`developer mode <developer-mode>`.
-#. From the :guilabel:`Accounting Dashboard`, open the :guilabel:`Customer Invoices` journal.
+#. From the accounting dashboard (:menuselection:`Accounting --> Dashboard`), open the
+   :guilabel:`Customer Invoices` journal.
 #. Select the invoices that need a new sequence.
 #. Click the :icon:`fa-cog` :guilabel:`Actions` menu and select :guilabel:`Resequence`.
 #. In the :guilabel:`Ordering` field, choose to
@@ -60,8 +71,13 @@ Follow these steps to resequence invoice numbers:
 #. Set the :guilabel:`First New Sequence`.
 #. :guilabel:`Preview Modifications` and click :guilabel:`Confirm`.
 
-.. image:: sequence/invoice-sequencing.png
-   :alt: Resequence options window
+.. screenshot:: accounting-invoice-sequence-resequence
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (select invoices) ‣ Actions ‣ Resequence
+   :shows: "Resequence" dialog with the Ordering option, the First New Sequence field and the preview of the modifications.
+   :highlight: The "First New Sequence" field and the preview (red frame).
+   :data: Several invoices selected; developer mode enabled.
+   :module: account
+   :notes: English UI, light theme, crop to the dialog.
 
 .. note::
    - To indicate where the sequence change began, the first invoice in the new sequence is

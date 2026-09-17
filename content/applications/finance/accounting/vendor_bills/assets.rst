@@ -15,244 +15,200 @@ $ 4,000 are expensed each year as **depreciation expenses**. After five years, t
 Depreciation** amount reported on the balance sheet equals $ 20,000, leaving us with $ 7,000 of
 **Not Depreciable Value**, or Salvage value.
 
-Odoo Accounting handles depreciation by creating all depreciation entries automatically in *draft
-mode*. They are then posted periodically.
+Assets are managed by the *Odoo 18 Assets Management* (`om_account_asset`) module. For each asset,
+Odoo computes a **depreciation board** and creates the depreciation entries periodically.
 
-Odoo supports the following **Depreciation Methods**:
+Odoo supports the following depreciation methods (:guilabel:`Computation Method`):
 
-- Straight Line
-- Declining
-- Declining Then Straight Line
-
-.. note::
-   The server checks once a day if an entry must be posted. It might then take up to 24 hours before
-   you see a change from *draft* to *posted*.
-
-Prerequisites
-=============
-
-Such transactions must be posted on an **Assets Account** rather than on the default
-expense account.
-
-Configure an Assets Account
----------------------------
-
-To configure your account in the **Chart of Accounts**, go to :menuselection:`Accounting -->
-Configuration --> Chart of Accounts`, click on *Create*, and fill out the form.
-
-.. image:: assets/assets01.png
-   :align: center
-   :alt: Configuration of an Assets Account in Odoo Accounting
+- :guilabel:`Linear`: the depreciation amount is the gross value divided by the number of
+  depreciations.
+- :guilabel:`Degressive`: the depreciation amount is the residual value multiplied by the
+  :guilabel:`Degressive Factor`.
 
 .. note::
-   This account's type must be either *Fixed Assets* or *Non-current Assets*.
+   The Hungarian localization (*eYssen Hungarian Asset Localization*, `eyssen_l10n_hu_asset`) adds a
+   :menuselection:`Accounting --> Fixed Assets` menu and Hungarian-specific asset features; see the
+   Hungarian :doc:`fiscal localization <../../fiscal_localizations>` documentation.
 
-Post an expense to the right account
-------------------------------------
+.. _assets/categories:
 
-Select the account on a draft bill
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Asset categories
+================
 
-On a draft bill, select the right account for all the assets you are buying.
+Asset categories define how the assets are recorded and depreciated. To create one, go to
+:menuselection:`Accounting --> Configuration --> Management --> Asset Category` and click
+:guilabel:`New`. Fill in the following fields:
 
-.. image:: assets/assets02.png
-   :align: center
-   :alt: Selection of an Assets Account on a draft bill in Odoo Accounting
+- :guilabel:`Asset Type`: the name of the category (e.g., *Computers*).
+- :guilabel:`Journal Entries` section:
 
-.. _product-assets-account:
+  - :guilabel:`Journal`: the journal in which the depreciation entries are posted.
+  - :guilabel:`Asset Account`: the account used to record the purchase of the asset at its
+    original price.
+  - :guilabel:`Depreciation Entries: Asset Account`: the account used in the depreciation entries
+    to decrease the asset value (e.g., the accumulated depreciation account).
+  - :guilabel:`Depreciation Entries: Expense Account`: the account used in the periodical entries
+    to record a part of the asset as an expense.
+  - :guilabel:`Analytic Account` / :guilabel:`Analytic Distribution`: the analytic distribution of
+    the depreciation entries.
 
-Choose a different Expense Account for specific products
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- :guilabel:`Periodicity` section:
 
-Start editing the product, go to the *Accounting* tab, select the right **Expense Account**, and
-save.
+  - :guilabel:`Time Method Based On`: :guilabel:`Number of Entries` (fixed number of depreciations
+    and time between them) or :guilabel:`Ending Date` (time between depreciations and date after
+    which no depreciation is computed).
+  - :guilabel:`Number of Entries` or :guilabel:`Ending date`.
+  - :guilabel:`One Entry Every`: the number of months between two depreciations.
 
-.. image:: assets/assets03.png
-   :align: center
-   :alt: Change of the Assets Account for a product in Odoo
+- :guilabel:`Additional Options` section:
 
-.. tip::
-   It is possible to :ref:`automate the creation of assets entries <assets-automation>` for these
-   products.
+  - :guilabel:`Auto-Confirm Assets`: automatically confirms the assets created from vendor bills
+    and posts their depreciation entries when they are generated. Otherwise, the depreciation
+    entries are created as drafts.
+  - :guilabel:`Group Journal Entries`: groups the depreciation entries of all the assets of the
+    category into one journal entry per period.
+  - :guilabel:`Depreciation Dates`: :guilabel:`Based on Last Day of Purchase Period` or
+    :guilabel:`Manual (Defaulted on Purchase Date)`.
 
-.. _journal-assets-account:
+- :guilabel:`Depreciation Method` section: the :guilabel:`Computation Method`, the
+  :guilabel:`Degressive Factor`, and the :guilabel:`Prorata Temporis` option.
 
-Change the account of a posted journal item
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. screenshot:: accounting-assets-category-form
+   :menu: Accounting ‣ Configuration ‣ Management ‣ Asset Category ‣ New
+   :shows: Asset category form "Computers": Journal "Miscellaneous Operations", the three accounts, Periodicity (Number of Entries: 36, One Entry Every: 1 month), Additional Options (Auto-Confirm Assets ticked), Depreciation Method "Linear".
+   :highlight: The "Journal Entries" and "Periodicity" sections (red frames).
+   :data: Demo company "YourCompany HU" with the Hungarian chart of accounts.
+   :module: om_account_asset
+   :notes: English UI, light theme, 1440px width.
 
-To do so, open your Purchases Journal by going to :menuselection:`Accounting --> Accounting -->
-Purchases`, select the journal item you want to modify, click on the account, and select the right
-one.
-
-.. image:: assets/assets04.png
-   :align: center
-   :alt: Modification of a posted journal item's account in Odoo Accounting
-
-Assets entries
-==============
-
-.. _create-assets-entry:
-
-Create a new entry
-------------------
-
-An **Asset entry** automatically generates all journal entries in *draft mode*. They are then posted
-one by one at the right time.
-
-To create a new entry, go to :menuselection:`Accounting --> Accounting --> Assets`, click on
-*Create*, and fill out the form.
-
-Click on **select related purchases** to link an existing journal item to this new entry. Some
-fields are then automatically filled out, and the journal item is now listed under the **Related
-Purchase** tab.
-
-.. image:: assets/assets05.png
-   :align: center
-   :alt: Assets entry in Odoo Accounting
-
-Once done, you can click on *Compute Depreciation* (next to the *Confirm* button) to generate all
-the values of the **Depreciation Board**. This board shows you all the entries that Odoo will post
-to depreciate your asset, and at which date.
-
-.. image:: assets/assets06.png
-   :align: center
-   :alt: Depreciation Board in Odoo Accounting
+.. _assets/prorata:
 
 What does "Prorata Temporis" mean?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------
 
-The **Prorata Temporis** feature is useful to depreciate your assets the most accurately possible.
-
-With this feature, the first entry on the Depreciation Board is computed based on the time left
-between the *Prorata Date* and the *First Depreciation Date* rather than the default amount of time
-between depreciations.
-
-For example, the Depreciation Board above has its first depreciation with an amount of $ 241.10
-rather than $ 4,000.00. Consequently, the last entry is also lower and has an amount of $ 3758.90.
-
-What are the different Depreciation Methods
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The **Straight Line Depreciation Method** divides the initial Depreciable Value by the number of
-depreciations planned. All depreciation entries have the same amount.
-
-The **Declining Depreciation Method** multiplies the Depreciable Value by the **Declining Factor**
-for each entry. Each depreciation entry has a lower amount than the previous entry. The last
-depreciation entry doesn't use the declining factor but instead has an amount corresponding to the
-balance of the depreciable value so that it reaches $0 by the end of the specified duration.
-
-The **Declining Then Straight Line Depreciation Method** uses the Declining Method, but with a
-minimum Depreciation equal to the Straight Line Method. This method ensures a fast depreciation
-at the beginning, followed by a constant one afterward.
-
-Assets from the Purchases Journal
----------------------------------
-
-You can create an asset entry from a specific journal item in your **Purchases Journal**.
-
-To do so, open your Purchases Journal by going to :menuselection:`Accounting --> Accounting -->
-Purchases`, and select the journal item you want to record as an asset. Make sure that it is posted
-in the right account (see: :ref:`journal-assets-account`).
-
-Then, click on *Action*, select **Create Asset**, and fill out the form the same way you would do to
-:ref:`create a new entry <create-assets-entry>`.
-
-.. image:: assets/assets07.png
-   :align: center
-   :alt: Create Asset Entry from a journal item in Odoo Accounting
-
-Modification of an Asset
-========================
-
-You can modify the values of an asset to increase or decrease its value.
-
-To do so, open the asset you want to modify, and click on *Modify Depreciation*. Then, fill out the
-form with the new depreciation values and click on *Modify*.
-
-A **decrease in value** posts a new Journal Entry for the **Value Decrease** and modifies all the
-future *unposted* Journal Entries listed in the Depreciation Board.
-
-An **increase in value** requires you to fill out additional fields related to the account movements
-and creates a new Asset entry with the **Value Increase**. The Gross Increase Asset Entry can be
-accessed with a Smart Button.
-
-.. image:: assets/assets08.png
-   :align: center
-   :alt: Gross Increase smart button in Odoo Accounting
-
-Disposal of Fixed Assets
-========================
-
-To **sell** an asset or **dispose** of it implies that it must be removed from the Balance Sheet.
-
-To do so, open the asset you want to dispose of, click on *Sell or Dispose*, and fill out the form.
-
-.. image:: assets/assets09.png
-   :align: center
-   :alt: Disposal of Assets in Odoo Accounting
-
-Odoo Accounting then generates all the journal entries necessary to dispose of the asset, including
-the gain or loss on sale, which is based on the difference between the asset's book value at the
-time of the sale and the amount it is sold for.
+The :guilabel:`Prorata Temporis` option indicates that the first depreciation entry of the asset is
+computed from the purchase date instead of the first day of the period. The first depreciation is
+then reduced proportionally to the number of days remaining in the period.
 
 .. note::
-   To record the sale of an asset, you must first post the related Customer Invoice so you can link
-   the sale of the asset with it.
+   The :guilabel:`Prorata Temporis` option is not available when the time method is based on an
+   ending date.
 
-.. _assets/asset-model:
+.. _assets/from-bills:
 
-Assets Models
-=============
+Assets from vendor bills
+========================
 
-You can create **Assets Models** to create your Asset entries faster. It is particularly useful if
-you recurrently buy the same kind of assets.
+Assets can be created automatically when a vendor bill is confirmed:
 
-To create a model, go to :menuselection:`Accounting --> Configuration --> Assets Models`, click on
-*Create*, and fill out the form the same way you would do to create a new entry.
+- On the product form, in the :guilabel:`Accounting` tab, select an :guilabel:`Asset Type` (asset
+  category). When the product is added to a vendor bill, the category is set on the bill line; or
+- On the vendor bill, select the :guilabel:`Asset Category` directly on the invoice line. The
+  line's account is replaced by the category's :guilabel:`Asset Account`.
+
+When the bill is confirmed, an asset is created for each line with an asset category, with the
+line's untaxed amount (in the company currency) as :guilabel:`Gross Value`. If the category has the
+:guilabel:`Auto-Confirm Assets` option, the asset is confirmed immediately; otherwise, it is created
+in :guilabel:`Draft` status.
+
+.. note::
+   - A vendor bill with a confirmed (running) asset cannot be reset to draft.
+   - If the bill is reset to draft or cancelled, its draft assets are archived.
+
+.. screenshot:: accounting-assets-bill-line
+   :menu: Accounting ‣ Vendors ‣ Bills ‣ (open a draft bill)
+   :shows: Draft vendor bill with one line for a laptop; the "Asset Category" column set to "Computers" and the account replaced by the asset account.
+   :highlight: The "Asset Category" column (red frame).
+   :data: Demo vendor; product "Laptop" (1,200,000 HUF); category "Computers".
+   :module: om_account_asset
+   :notes: English UI, light theme, 1440px width.
+
+.. _assets/create:
+
+Create an asset manually
+========================
+
+To create an asset manually, go to :menuselection:`Accounting --> Configuration --> Management -->
+Assets` and click :guilabel:`New`. Fill in:
+
+- :guilabel:`Asset Name`, :guilabel:`Asset Category`, :guilabel:`Reference`, and :guilabel:`Date`;
+- :guilabel:`Depreciation Dates` (and the :guilabel:`First Depreciation Date` for manual dates);
+- :guilabel:`Gross Value`: the purchase value of the asset;
+- :guilabel:`Salvage Value`: the value that is not depreciated;
+- :guilabel:`Vendor` and :guilabel:`Invoice`, if relevant.
+
+The depreciation parameters are copied from the category and can be modified in the
+:guilabel:`Depreciation Information` tab.
+
+Click :guilabel:`Compute Depreciation` to (re)compute the :guilabel:`Depreciation Board`, then click
+:guilabel:`Confirm` to start the depreciation. The asset status becomes :guilabel:`Running`.
+
+.. screenshot:: accounting-assets-asset-form
+   :menu: Accounting ‣ Configuration ‣ Management ‣ Assets ‣ (open a running asset)
+   :shows: Running asset "Laptop" with the buttons (Compute Depreciation, Sell or Dispose, Set to Draft, Modify Depreciation), the "Items" smart button, Gross Value, Salvage Value, Residual Value, and the "Depreciation Board" tab with the depreciation lines (Depreciation Date, Depreciation, Cumulative Depreciation, Residual) and their posting indicators.
+   :highlight: The "Depreciation Board" tab (red frame).
+   :data: Asset "Laptop", 1,200,000 HUF, 36 monthly depreciations, first three lines posted.
+   :module: om_account_asset
+   :notes: English UI, light theme, 1440px width.
+
+.. _assets/entries:
+
+Depreciation entries
+====================
+
+The depreciation entries are created by a scheduled action once a month for all the running assets,
+for the depreciation lines whose date has passed.
+
+To create them manually, go to :menuselection:`Accounting --> Accounting --> Generate Entries -->
+Generate Assets Entries`, select the :guilabel:`Date` until which the entries must be generated, and
+click :guilabel:`Generate Entries`. A single depreciation line can also be posted from the
+depreciation board.
+
+The entries are posted automatically if the category has the :guilabel:`Auto-Confirm Assets`
+option; otherwise, they are created as drafts and must be posted manually. When the residual value
+of an asset reaches zero, the asset is closed.
+
+Click the :guilabel:`Items` smart button of an asset to see its journal entries.
+
+.. _assets/modify:
+
+Modification of an asset
+========================
+
+To change the depreciation duration of a running asset, click :guilabel:`Modify Depreciation`. In
+the :guilabel:`Modify Asset` window, enter the :guilabel:`Reason`, the new number of depreciations
+(or the new ending date) and the period length, then click :guilabel:`Modify`. The unposted
+depreciation lines are recomputed, and the change is logged in the chatter.
+
+.. _assets/disposal:
+
+Disposal of fixed assets
+========================
+
+To sell or dispose of an asset, open it and click :guilabel:`Sell or Dispose`. The unposted
+depreciation lines are removed and replaced by a single depreciation line of the residual value,
+dated today. The corresponding journal entry is created as a draft: review and post it. Once the
+residual value is zero, the asset is closed.
 
 .. tip::
-   You can also convert a *confirmed Asset entry* into a model by opening it from
-   :menuselection:`Accounting --> Accounting --> Assets` and then, by clicking on the button *Save
-   Model*.
+   Record the sale itself with a customer invoice, as usual.
 
-Apply an Asset Model to a new entry
------------------------------------
+.. _assets/reporting:
 
-When you create a new Asset entry,  fill out the **Fixed Asset Account** with the right asset
-account.
+Assets analysis
+===============
 
-New buttons with all the models linked to that account appear at the top of the form. Clicking on a
-model button fills out the form according to that model.
+To analyze your assets, go to :menuselection:`Accounting --> Reporting --> Management --> Assets`.
+The :guilabel:`Assets Analysis` report is available in pivot and graph views and can be filtered by
+status (e.g., :guilabel:`Draft`) and grouped by category or date.
 
-.. image:: assets/assets10.png
-   :align: center
-   :alt: Assets model button in Odoo Accounting
-
-.. _assets-automation:
-
-Automate the Assets
-===================
-
-When you create or edit an account of which the type is either *Non-current Assets* or *Fixed
-Assets*, you can configure it to create assets for the expenses that are credited on it
-automatically.
-
-You have three choices for the **Automate Assets** field:
-
-#. **No:** this is the default value. Nothing happens.
-#. **Create in draft:** whenever a transaction is posted on the account, a draft *Assets entry* is
-   created, but not validated. You must first fill out the form in :menuselection:`Accounting -->
-   Accounting --> Assets`.
-#. **Create and validate:** you must also select an Asset Model (see: `Assets Models`_). Whenever a
-   transaction is posted on the account, an *Assets entry* is created and immediately validated.
-
-.. image:: assets/assets11.png
-   :align: center
-   :alt: Automate Assets on an account in Odoo Accounting
-
-.. tip::
-   You can, for example, select this account as the default **Expense Account** of a product to
-   fully automate its purchase. (see: :ref:`product-assets-account`).
+.. screenshot:: accounting-assets-analysis
+   :menu: Accounting ‣ Reporting ‣ Management ‣ Assets
+   :shows: "Assets Analysis" pivot view grouped by asset category, with the gross, depreciated and residual amounts.
+   :data: Demo company "YourCompany HU" with several running assets.
+   :module: om_account_asset
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
-  * :doc:`../get_started/chart_of_accounts`
+   - :doc:`deferred_expenses`
+   - :doc:`../get_started/chart_of_accounts`

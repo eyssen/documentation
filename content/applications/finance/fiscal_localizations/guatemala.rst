@@ -29,10 +29,6 @@ The supported documents are:
 The localization requires an `Infile <https://infile.com.gt/>`_ account, which enables users to
 generate electronic documents within Odoo.
 
-.. seealso::
-   :doc:`Documentation on e-invoicing's legality and compliance in Guatemala
-   <../accounting/customer_invoices/electronic_invoicing/guatemala>`
-
 Glossary
 --------
 

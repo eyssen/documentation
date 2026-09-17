@@ -4,177 +4,175 @@
 Get started
 ===========
 
-When you first open your Odoo Accounting app, the :guilabel:`Accounting Dashboard` welcomes you with
-a step-by-step onboarding banner, a wizard that helps you get started. This onboarding banner is
-displayed until you choose to close it.
+When you first open the Accounting app, the accounting dashboard (:menuselection:`Accounting --> Dashboard`) welcomes you with a
+step-by-step onboarding banner that helps you get started. The banner is displayed as long as no
+entry has been recorded in the journals, and until you close it.
 
 The settings visible in the onboarding banner can still be modified later by going to
 :menuselection:`Accounting --> Configuration --> Settings`.
 
 .. note::
-   Odoo Accounting automatically installs the appropriate **Fiscal Localization Package** for your
-   company, according to the country selected at the creation of the database. This way, the right
-   accounts, reports, and taxes are ready-to-go. :ref:`Click here <fiscal_localizations/packages>`
-   for more information about Fiscal Localization Packages.
+   - Odoo automatically installs the appropriate **Fiscal Localization Package** for your company,
+     according to the country selected at the creation of the database. This way, the right
+     accounts, reports, and taxes are ready-to-go. :ref:`Click here <fiscal_localizations/packages>`
+     for more information about Fiscal Localization Packages.
+   - The full accounting features described in this documentation (journals, ledgers, financial
+     reports, assets, budgets, lock dates, etc.) are provided by the *Odoo 18 Accounting Community*
+     (`om_account_accountant`) and *eYssen Accountant* (`eyssen_accountant`) modules. When they are
+     installed, the app is displayed as **Accounting** instead of **Invoicing**.
 
 Accounting onboarding banner
 ============================
 
-The step-by-step Accounting onboarding banner is composed of four steps:
+The step-by-step Accounting onboarding banner is composed of three steps:
 
-.. image:: get_started/accounting-onboarding-banner.png
-   :alt: Step-by-step onboarding banner in Odoo Accounting
-
-#. :ref:`accounting-setup-periods`
-#. :ref:`accounting-setup-bank`
-#. :ref:`accounting-setup-taxes`
-#. :ref:`accounting-setup-chart`
-
-.. _accounting-setup-periods:
-
-Accounting Periods
-------------------
-
-Define the **Fiscal Years**’ opening and closing dates, which are used to generate reports
-automatically, and set your **Tax Return Periodicity**, along with a reminder to never miss a tax
-return deadline.
-
-By default, the opening date is set on the 1st of January and the closing date on the 31st of
-December, as this is the most common use.
-
-.. note::
-   You can also change these settings by going to :menuselection:`Accounting --> Configuration -->
-   Settings --> Fiscal Periods` and updating the values.
-
-.. _accounting-setup-bank:
-
-Bank Account
-------------
-
-Connect your bank account to your database and have your bank statements synced automatically. To do
-so, find your bank in the list, click :guilabel:`Connect`, and follow the instructions on-screen.
-
-.. note::
-   :doc:`Click here <bank/bank_synchronization>` for more information about this feature.
-
-If your Bank Institution can’t be synchronized automatically, or if you prefer not to sync it with
-your database, you can also configure your bank account manually by typing its name, clicking
-:guilabel:`Create your Bank Account`, and filling out the form.
-
-- :guilabel:`Name`: the bank account's name, as displayed in Odoo.
-- :guilabel:`Account Number`: your bank account number (IBAN in Europe).
-- :guilabel:`Bank`: click :guilabel:`Create and edit` to configure the bank's details. Add the
-  bank institution's :guilabel:`Name` and its :guilabel:`Identifier Code` (BIC or SWIFT).
-- :guilabel:`Code`: this code is your Journal's :guilabel:`Short Code`, as displayed in Odoo.
-  By default, Odoo creates a new Journal with this short code.
-- :guilabel:`Journal`: This field is displayed if you have an existing bank journal that is not
-  linked yet to a bank account. If so, then select the :guilabel:`Journal` you want to use to record
-  the financial transactions linked to this bank account or create a new one by clicking
-  :guilabel:`Create and Edit`.
-
-.. note::
-   - You can add as many bank accounts as needed with this tool by going to
-     :menuselection:`Accounting --> Configuration --> Add a Bank Account`.
-   - :doc:`Click here <bank>` for more information about Bank Accounts.
-
-.. _accounting-setup-taxes:
-
-Taxes
------
-
-This menu allows you to create new taxes, (de)activate, or modify existing taxes. Depending on the
-:doc:`localization package <../fiscal_localizations>` installed on your database, taxes required for
-your country are already configured.
-
-.. note::
-   :doc:`Click here <taxes>` for more information about taxes.
-
-.. _accounting-setup-chart:
-
-Chart of Accounts
------------------
-
-With this menu, you can add accounts to your **Chart of Accounts** and indicate their initial
-opening balances.
-
-Basic settings are displayed on this page to help you review your Chart of Accounts. To access all
-the settings of an account, click on the :guilabel:`Setup` button at the end of the line.
-
-.. image:: get_started/setup_chart_of_accounts.png
-   :alt: Setup of the Chart of Accounts and their opening balances in Odoo Accounting
-
-.. note::
-   :doc:`Click here <get_started/chart_of_accounts>` for more information on how to configure your
-   Chart of Accounts.
-
-Invoicing onboarding banner
-===========================
-
-There is another step-by-step onboarding banner that helps you take advantage of your Odoo Invoicing
-and Accounting apps. The Invoicing onboarding banner is the one that welcomes you if you use the
-Invoicing app rather than the Accounting app.
-
-If you have Odoo Accounting installed on your database, you can reach it by going to
-:menuselection:`Accounting --> Customers --> Invoices`.
-
-The Invoicing onboarding banner consists of four main steps:
-
-.. image:: get_started/invoicing-onboarding-banner.png
-   :alt: Step-by-step onboarding banner in Odoo Invoicing
+.. screenshot:: accounting-get-started-onboarding-banner
+   :menu: Accounting ‣ Dashboard
+   :shows: Accounting dashboard of a new database with the onboarding banner and its three steps: "Set Company Data", "Set Periods", "Review Chart of Accounts".
+   :highlight: The onboarding banner (red frame).
+   :data: New demo company "YourCompany HU" without any journal entry.
+   :module: account
+   :notes: English UI, light theme, 1440px width, crop to the banner.
 
 #. :ref:`invoicing-setup-company`
-#. :ref:`invoicing-setup-layout`
-#. :ref:`invoicing-setup-invoice`
-#. :ref:`invoicing-setup-payments`
+#. :ref:`accounting-setup-periods`
+#. :ref:`accounting-setup-chart`
 
 .. _invoicing-setup-company:
 
 Company Data
 ------------
 
-Add your company’s details, such as the name, address, logo, website, phone number, email address,
+Add your company's details, such as the name, address, logo, website, phone number, email address,
 and Tax ID or VAT number. These details are then displayed on your documents, such as invoices.
 
 .. note::
    You can also change the company's details by going to :menuselection:`Settings --> General
    Settings`, scrolling down to the :guilabel:`Companies` section, and :guilabel:`Update Info`.
 
+.. _accounting-setup-periods:
+
+Accounting Periods
+------------------
+
+Define the :guilabel:`Opening Date` of your accounting and the :guilabel:`Fiscal Year End` (last
+day and month of the fiscal year), which are used to generate reports automatically.
+
+By default, the fiscal year ends on the 31st of December, as this is the most common use.
+
+.. note::
+   You can also change the end of the fiscal year by going to :menuselection:`Accounting -->
+   Configuration --> Settings`, in the :guilabel:`Fiscal Year` part of the :guilabel:`Fiscal
+   Periods` section (:guilabel:`Last Day` field).
+
+.. _accounting-setup-fiscal-years:
+
+Fiscal years
+~~~~~~~~~~~~
+
+If a fiscal year is longer or shorter than one calendar year (e.g., the first year of a company),
+enable :guilabel:`Fiscal Years` in the :guilabel:`Fiscal Periods` section of the settings, then go
+to :menuselection:`Accounting --> Configuration --> Fiscal Year` and create the fiscal year with its
+:guilabel:`Start Date` and :guilabel:`End Date`. The reports use these dates to compute the fiscal
+year's results.
+
+.. screenshot:: accounting-get-started-fiscal-periods-settings
+   :menu: Accounting ‣ Configuration ‣ Settings
+   :shows: "Fiscal Periods" section with the "Fiscal Year" block ("Last Day": December 31) and the "Fiscal Years" option enabled with its "Fiscal Years" link button.
+   :highlight: The "Fiscal Periods" section (red frame).
+   :data: Demo company "YourCompany HU".
+   :module: account, om_fiscal_year
+   :notes: English UI, light theme, 1440px width, crop to the section.
+
+.. note::
+   This feature is provided by the *Odoo 18 Fiscal Year & Lock Date* (`om_fiscal_year`) module,
+   which also adds the :menuselection:`Accounting --> Accounting --> Lock Dates` menu.
+
+.. _accounting-setup-chart:
+
+Chart of Accounts
+-----------------
+
+With this step, you can add accounts to your **Chart of Accounts** and indicate their initial
+opening balances (:guilabel:`Opening Debit` and :guilabel:`Opening Credit` columns).
+
+Basic settings are displayed on this page to help you review your Chart of Accounts. To access all
+the settings of an account, open the account line.
+
+.. screenshot:: accounting-get-started-setup-chart-of-accounts
+   :menu: Accounting ‣ Dashboard ‣ onboarding banner ‣ Review Chart of Accounts
+   :shows: Editable list of accounts with the Code, Account Name, Type, Allow Reconciliation, Opening Debit and Opening Credit columns; a few opening balances filled in.
+   :highlight: The "Opening Debit" and "Opening Credit" columns (red frame).
+   :data: Demo company "YourCompany HU" with the Hungarian chart of accounts.
+   :module: account
+   :notes: English UI, light theme, 1440px width.
+
+.. note::
+   :doc:`Click here <get_started/chart_of_accounts>` for more information on how to configure your
+   Chart of Accounts.
+
+Other initial settings
+======================
+
+.. _accounting-setup-bank:
+
+Bank Account
+------------
+
+To add a bank account, go to :menuselection:`Accounting --> Configuration --> Add a Bank Account`
+and fill out the form:
+
+- :guilabel:`Account Number`: your bank account number (IBAN in Europe).
+- :guilabel:`Bank`: select or create the bank institution.
+- :guilabel:`Bank Identifier Code`: the bank's BIC or SWIFT code.
+- :guilabel:`Journal`: this field is displayed if you have an existing bank journal that is not
+  linked yet to a bank account. If so, select the journal you want to use to record the financial
+  transactions linked to this bank account. Leave it empty to create a new bank journal.
+
+.. note::
+   :doc:`Click here <bank>` for more information about bank accounts and the import or
+   synchronization of bank statements.
+
+.. _accounting-setup-taxes:
+
+Taxes
+-----
+
+Go to :menuselection:`Accounting --> Configuration --> Taxes` to create new taxes, (de)activate, or
+modify existing taxes. Depending on the :doc:`localization package <../fiscal_localizations>`
+installed on your database, taxes required for your country are already configured.
+
+.. note::
+   :doc:`Click here <taxes>` for more information about taxes.
+
 .. _invoicing-setup-layout:
 
 Documents Layout
 ----------------
 
-Customize the default invoice layout.
+To customize the default invoice layout, go to :menuselection:`Settings --> General Settings`,
+scroll down to the :guilabel:`Companies` section, and click :guilabel:`Configure Document Layout`.
 
-.. note::
-   You can also change the invoice layout by going to :menuselection:`Settings --> General
-   Settings`, scrolling down to the :guilabel:`Companies` section, and clicking :guilabel:`Configure
-   Document Layout`.
+.. tip::
+   Add your **bank account number** and a link to your **General Terms & Conditions** in the
+   footer. This way, your contacts can find the full content of your GT&C online without having to
+   print them on the invoices you issue.
 
 .. _invoicing-setup-invoice:
 
 Create Invoice
 --------------
 
-Create your first invoice.
-
-.. tip::
-   Add your **bank account number** and a link to your **General Terms & Condition** in the footer.
-   This way, your contacts can find the full content of your GT&C online without having to print
-   them on the invoices you issue.
+Create your first invoice from :menuselection:`Accounting --> Customers --> Invoices`. See
+:doc:`customer_invoices` for more information.
 
 .. _invoicing-setup-payments:
 
 Online Payments
 ---------------
 
-Get started with Stripe and enable secure integrated credit and debit card payments within Odoo.
-
-.. tip::
-   To use other payment providers, go to
-   :guilabel:`Invoicing --> Configuration --> Payment Providers` and
-   :doc:`enable the desired providers <../payment_providers>`.
-
+To let your customers pay their invoices online, go to :menuselection:`Accounting --> Configuration
+--> Online Payments --> Payment Providers` and :doc:`enable the desired providers <../payment_providers>`.
 
 .. seealso::
    * :doc:`bank`
@@ -182,8 +180,6 @@ Get started with Stripe and enable secure integrated credit and debit card payme
    * :doc:`get_started/consolidation`
    * :doc:`bank/bank_synchronization`
    * :doc:`../fiscal_localizations`
-   * `Odoo Tutorials: Accounting and Invoicing - Getting started [video]
-     <https://www.odoo.com/slides/slide/getting-started-7063>`_
 
 .. toctree::
    :titlesonly:
@@ -194,4 +190,3 @@ Get started with Stripe and enable secure integrated credit and debit card payme
    get_started/journals
    get_started/multi_currency
    get_started/avg_price_valuation
-   get_started/tax_units

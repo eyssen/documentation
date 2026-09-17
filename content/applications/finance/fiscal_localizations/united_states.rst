@@ -89,7 +89,7 @@ localization:
      - Export 1099 data for e-filing with a 3rd party.
    * - :ref:`Avatax <l10n_us/taxes-avatax>`
      - `account_avatax`
-     - Module for the :doc:`AvaTax integration <../accounting/taxes/avatax>` with Odoo.
+     - Module for the AvaTax integration with Odoo.
    * - :ref:`United States - Payroll <l10n_us/payroll>`
      - `l10n_us_hr_payroll`
      - Includes the necessary rules for United States payroll, including:
@@ -249,16 +249,13 @@ tax calculations when items are sold, purchased, and invoiced in the database.
 
 .. important::
    AvaTax is available for integration with databases/companies that have locations in the United
-   States and Canada. Reference the :ref:`accounting/avatax/fiscal_country` documentation for more
+   States and Canada. Reference the Fiscal country documentation for more
    information.
 
 .. seealso::
    Refer to the documentation articles below to integrate and configure an AvaTax account with an
    Odoo database:
 
-   - :doc:`AvaTax integration <../accounting/taxes/avatax>`
-   - :doc:`Avalara management portal <../accounting/taxes/avatax/avalara_portal>`
-   - :doc:`Calculate taxes with AvaTax <../accounting/taxes/avatax/avatax_use>`
    - `US Tax Compliance: AvaTax elearning video
      <https://www.odoo.com/slides/slide/us-tax-compliance-avatax-2858?fullscreen=1>`_
    - Avalara's support documents: `About AvaTax
@@ -752,7 +749,3 @@ generated file is listed with the :guilabel:`Generation Date`. Click the :icon:`
 
 If any adjustments need to be made, click the :guilabel:`Re-generate Export File` button to recreate
 a new |NACHA| |ACH| file.
-
-.. seealso::
-   - :doc:`../accounting/payments/batch`
-   - :doc:`Europe's direct debiting <../accounting/payments/batch_sdd>`

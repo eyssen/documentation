@@ -110,7 +110,7 @@ suggested entries appearing first.
 Batch payments
 --------------
 
-:doc:`Batch payments <../payments/batch>` allow you to group different payments to ease
+Batch payments allow you to group different payments to ease
 reconciliation. Use the :guilabel:`Batch Payments` tab to find batch payments for customers and
 vendors. Similarly to the :guilabel:`Match Existing Entries` tab, the :guilabel:`Batch Payments` tab
 has a search bar that allows you to search for specific batch payments.

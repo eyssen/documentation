@@ -8,9 +8,6 @@ return and refunds, warranty, and after-sale services.
 You can add default terms and conditions at the bottom of all customer invoices, sales orders, and
 quotations, either as text or a link to a web page.
 
-.. seealso::
-   `Odoo Tutorial: Terms & Conditions <https://www.odoo.com/slides/slide/terms-conditions-1680>`_
-
 Configuration
 =============
 
@@ -19,8 +16,13 @@ Invoices`, enable :guilabel:`Default Terms & Conditions`. By default, the :guila
 option is selected, and the terms and conditions are displayed at the bottom of the document. Enter
 the terms and conditions in the text box below.
 
-.. image:: terms_conditions/terms-note.png
-   :alt: Example of terms and conditions as a note
+.. screenshot:: accounting-terms-conditions-note
+   :menu: Accounting ‣ Configuration ‣ Settings
+   :shows: "Customer Invoices" section: "Default Terms & Conditions" enabled, "Add a Note" selected, and the terms text box filled in.
+   :highlight: The setting block (red frame).
+   :data: Demo company "YourCompany HU".
+   :module: account
+   :notes: English UI, light theme, 1440px width. Crop to the setting.
 
 .. tip::
    You can also add a PDF version of your terms and conditions as an attachment when sending the
@@ -35,5 +37,9 @@ content, and click :guilabel:`Save`. The link to that page is then added as a no
    </applications/websites/website>` app. If the Website app is activated, the :guilabel:`Edit in
    Website Builder` option then replaces :guilabel:`Update Terms`.
 
-.. image:: terms_conditions/terms-webpage.png
-   :alt: Example of terms and conditions as a web page
+.. screenshot:: accounting-terms-conditions-webpage
+   :menu: (invoice portal) ‣ Terms & Conditions page
+   :shows: The public "Terms & Conditions" web page opened from the link printed on the invoice.
+   :data: Demo company "YourCompany HU".
+   :module: account
+   :notes: English UI, light theme, 1440px width.

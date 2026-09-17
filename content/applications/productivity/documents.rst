@@ -365,6 +365,3 @@ File digitization with AI
 Files available in the Finance folder can be digitized. Select the file, click :guilabel:`Create
 Vendor Bill`, :guilabel:`Create Customer Invoice`, or :guilabel:`Create Customer Credit Note`,
 then click :guilabel:`Send for Digitization`.
-
-.. seealso::
-   :doc:`AI-powered document digitization <../finance/accounting/vendor_bills/invoice_digitization>`

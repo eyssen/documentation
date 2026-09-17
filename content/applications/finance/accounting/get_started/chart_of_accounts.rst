@@ -6,14 +6,20 @@ The **chart of accounts (COA)** is the list of all the accounts used to record f
 transactions in the general ledger of an organization. The chart of accounts can be found under
 :menuselection:`Accounting --> Configuration --> Chart of Accounts`.
 
-When browsing your chart of accounts, you can sort the accounts by :guilabel:`Code`,
-:guilabel:`Account Name`, or :guilabel:`Type`, but other options are available in the drop-down menu
+When browsing your chart of accounts, you can sort the accounts by clicking the column headers
+(e.g., :guilabel:`Code`, :guilabel:`Account Name`, or :guilabel:`Type`), filter them (e.g.,
+:guilabel:`Receivable`, :guilabel:`Payable`, :guilabel:`Account with Entries`), or group them by
+:guilabel:`Account Type`. Additional columns (e.g., :guilabel:`Default Taxes`, :guilabel:`Tags`,
+:guilabel:`Allowed Journals`) can be displayed with the :icon:`oi-settings-adjust` (optional
+columns) icon.
 
-.. image:: chart_of_accounts/drop-down.png
-   :alt: Drop-down toggle button
-
-.. image:: chart_of_accounts/chart-of-accounts-sort.png
-   :alt: Group the accounts by type in Odoo Accounting
+.. screenshot:: accounting-chart-of-accounts-list
+   :menu: Accounting ‣ Configuration ‣ Chart of Accounts
+   :shows: Chart of accounts list grouped by "Account Type", with the Code, Account Name, Type, Allow Reconciliation and Account Currency columns; the optional columns dropdown opened.
+   :highlight: The group headers and the optional columns icon (red frames).
+   :data: Demo company "YourCompany HU" with the Hungarian chart of accounts.
+   :module: account
+   :notes: English UI, light theme, 1440px width.
 
 .. _chart-of-account/create:
 
@@ -26,8 +32,9 @@ default. This package includes a standard chart of accounts already configured a
 country's regulations. You can use it directly or set it according to your company's needs.
 
 To create a new account, go to :menuselection:`Accounting --> Configuration --> Chart of Accounts`,
-click :guilabel:`Create`, and fill in (at the minimum) the required fields
-(:guilabel:`Code, Account Name, Type`).
+click :guilabel:`New`, and fill in (at the minimum) the required fields
+(:guilabel:`Code`, :guilabel:`Account Name`, :guilabel:`Type`). Open an account line to access all
+its settings in the account form.
 
 .. warning::
    It is not possible to modify the **fiscal localization** of a company once a journal entry has
@@ -94,35 +101,41 @@ corresponding type from the following list:
 | Other         | Other       | Off-Balance Sheet       | Transactions not displayed on the balance sheet or profit and loss report                                       |
 +---------------+-------------+-------------------------+-----------------------------------------------------------------------------------------------------------------+
 
-Assets
-~~~~~~
+Non-trade receivables and payables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Some **account types** can **automate** the creation of :ref:`asset <assets-automation>` entries.
-To **automate** entries, click :guilabel:`View` on an account line and go to the
-:guilabel:`Automation` tab.
-
-You have three choices for the :guilabel:`Automation` tab:
-
-#. :guilabel:`No`: this is the default value. Nothing happens.
-#. :guilabel:`Create in draft`: whenever a transaction is posted on the account, a draft entry is
-   created but not validated. You must first fill out the corresponding form.
-#. :guilabel:`Create and validate`: you must also select a :guilabel:`Deferred Expense Model`.
-   Whenever a transaction is posted on the account, an entry is created and immediately validated.
+For :guilabel:`Receivable` and :guilabel:`Payable` accounts, the :guilabel:`Non Trade` option
+(optional column of the chart of accounts) indicates that the account belongs to the non-trade
+receivables or payables in reports and filters.
 
 Default taxes
 -------------
 
-In the :guilabel:`View` menu of an account, select a **default tax** to be applied when this
-account is chosen for a product sale or purchase.
+In the account form, select the :guilabel:`Default Taxes` to be applied when this account is chosen
+on an invoice or bill line.
+
+Allowed journals
+----------------
+
+In the account form, the :guilabel:`Allowed Journals` field restricts the journals in which the
+account can be used. Leave it empty to allow all journals.
+
+Account currency
+----------------
+
+In multi-currency environments, the :guilabel:`Account Currency` field forces all the moves on the
+account to be expressed in this currency.
 
 .. _chart-of-account/tags:
 
 Tags
 ----
 
-Some accounting reports require **tags** to be set on the relevant accounts. To add a tag, under
-:guilabel:`View`, click the :guilabel:`Tags` field and select an existing tag or :guilabel:`Create`
-a new one.
+Some accounting reports require **tags** to be set on the relevant accounts. To add a tag, open the
+account, click the :guilabel:`Tags` field, and select an existing tag or create a new one.
+
+Account tags can be managed from :menuselection:`Accounting --> Configuration --> Account Tags`
+(provided by the *Odoo 18 Accounting Community* module).
 
 Account groups
 --------------
@@ -130,8 +143,8 @@ Account groups
 **Account groups** are useful to list multiple accounts as *sub-accounts* of a bigger account and
 thus consolidate reports such as the **Trial Balance**. By default, groups are handled automatically
 based on the code of the group. For example, a new account `131200` is going to be part of the group
-`131000`. You can attribute a specific group to an account in the :guilabel:`Group` field under
-:guilabel:`View`.
+`131000`. You can attribute a specific group to an account in the :guilabel:`Group` field of the
+account form.
 
 Create account groups manually
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -140,20 +153,21 @@ Create account groups manually
    Regular users should not need to create account groups manually. The following section is only
    intended for rare and advanced use cases.
 
-To create a new account group, activate :ref:`developer mode <developer-mode>` and head to
-:menuselection:`Accounting --> Configuration --> Account Groups`. Here, create a new group and enter
-the :guilabel:`name, code prefix, and company` to which that group account should be available. Note
-that you must enter the same code prefix in both :guilabel:`From` and :guilabel:`to` fields.
+To create a new account group, go to :menuselection:`Accounting --> Configuration --> Account
+Groups`. Here, create a new group and enter the name, the code prefix, and the company to which that
+group account should be available. Note that you must enter the same code prefix in both
+:guilabel:`From` and :guilabel:`to` fields.
 
-.. image:: chart_of_accounts/account-groups.png
-   :alt: Account groups creation.
+.. screenshot:: accounting-chart-of-accounts-account-groups
+   :menu: Accounting ‣ Configuration ‣ Account Groups
+   :shows: Editable list of account groups with the name, code prefix (From / to) and company columns; a new group line being created with the same prefix in both code fields.
+   :highlight: The code prefix columns (red frame).
+   :data: Demo company "YourCompany HU"; group "Tárgyi eszközök" with prefix "12".
+   :module: account, om_account_accountant
+   :notes: English UI, light theme, 1440px width.
 
-To display your **Trial Balance** report with your account groups, go to
-:menuselection:`Accounting --> Reporting --> Trial Balance`, then open the :guilabel:`Options` menu
-and select :guilabel:`Hierarchy and Subtotals`.
-
-.. image:: chart_of_accounts/chart-of-accounts-groups.png
-   :alt: Account Groups in the Trial Balance in Odoo Accounting
+To display your chart of accounts by account group, use the :guilabel:`Group` optional column or
+group the list by :guilabel:`Group` with a custom group.
 
 Allow reconciliation
 --------------------
@@ -162,8 +176,8 @@ To keep the reconciliation process simple, when reconciling a bank, cash, or cre
 with an existing journal item, only journal items that debit or credit accounts with the
 :guilabel:`Allow reconciliation` option enabled are displayed as possible matches.
 
-To enable this option on an account, tick the :guilabel:`Allow Reconciliation` checkbox in the
-account's settings, and :guilabel:`Save`; or enable the button from the chart of accounts view.
+To enable this option on an account, enable the :guilabel:`Allow Reconciliation` toggle on the
+account's line in the chart of accounts.
 
 .. _coa_shared_accounts:
 
@@ -172,7 +186,9 @@ Shared Accounts
 
 The **Shared Accounts** feature allows the creation of a single account for a specific purpose and
 sharing it between multiple companies. It is especially useful for multi-company environments where
-a similar account might be used across different companies.
+a similar account might be used across different companies. To share an account, add the companies
+in the :guilabel:`Companies` field of the account form. A different code can be defined per company
+in the :guilabel:`Mapping` tab.
 
 Deprecated
 ----------
@@ -187,6 +203,3 @@ account's settings, and :guilabel:`Save`.
    * :doc:`../vendor_bills/deferred_expenses`
    * :doc:`../customer_invoices/deferred_revenues`
    * :doc:`../../fiscal_localizations`
-   * `Odoo Tutorials: Chart of accounts <https://www.odoo.com/slides/slide/chart-of-accounts-6834>`_
-   * `Odoo Tutorials: Update your chart of accounts
-     <https://www.odoo.com/slides/slide/update-your-chart-of-accounts-6391>`_

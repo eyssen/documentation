@@ -220,9 +220,6 @@ Configuration
  #. Go to :menuselection:`Accounting --> Configuration --> Settings`. In the
     :guilabel:`Customer Payments` section, enable :guilabel:`Batch Payments`.
 
-.. seealso::
-   :doc:`../../../applications/finance/accounting/payments/batch`
-
 .. _localizations/new_zealand/eft-bank-journal:
 
 Bank journal
@@ -290,10 +287,6 @@ to preview or download it.
    Each bank has its specific format requirements for EFT batch payments. Make sure to choose the
    correct EFT file format. Some banks may also require the completion of additional fields, such
    as :guilabel:`Direct Debit Information` and :guilabel:`Dishonour Account`.
-
-.. seealso::
-   :doc:`Batch paments by bank deposit documentation
-   <../../../applications/finance/accounting/payments/batch>`
 
 .. _localizations/new_zealand/XXXXXX:
 

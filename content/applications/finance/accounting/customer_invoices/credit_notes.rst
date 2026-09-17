@@ -37,7 +37,7 @@ There are two options:
 - Click :guilabel:`Reverse` to open a draft credit note prefilled with the exact details from the
   original invoice. Update the :guilabel:`Product` and :guilabel:`Quantity` and click
   :guilabel:`Confirm`. This option allows for a partial refund or modifications to the credit note.
-- Click :guilabel:`Reverse and Create invoice` to create a credit note, validate it automatically,
+- Click :guilabel:`Reverse and Create Invoice` to create a credit note, validate it automatically,
   reconcile it with the related invoice, and open a new draft invoice prefilled with the exact
   details from the original invoice.
 
@@ -66,6 +66,9 @@ these steps:
 #. In the debit note, update the :guilabel:`Product` and :guilabel:`Quantity` and click
    :guilabel:`Confirm`.
 
+.. note::
+   Debit notes require the *Debit Notes* (`account_debit_note`) module.
+
 .. tip::
    To create a debit note from the invoice form view, click the :icon:`fa-cog` :guilabel:`(gear)`
    icon and select :guilabel:`Debit Note`.
@@ -82,7 +85,7 @@ To record a vendor refund or a vendor credit note directly from the correspondin
 :menuselection:`Accounting --> Vendors --> Bills`, open the relevant vendor bill, and click
 :guilabel:`Credit Note`.
 
-To record it from scratch, go to :menuselection:`Accounting --> Vendors --> Refund`, and click on
+To record it from scratch, go to :menuselection:`Accounting --> Vendors --> Refunds`, and click on
 :guilabel:`New`.
 
 .. _accounting/credit_notes/record-debit-note:
@@ -111,10 +114,31 @@ journal items from the original invoice.
 .. example::
    The journal entry of an invoice:
 
-   .. image:: credit_notes/journal-entries-invoice.png
-      :alt: Invoice journal entry
+   .. screenshot:: accounting-credit-notes-invoice-entry
+      :menu: Accounting ‣ Customers ‣ Invoices ‣ (open the invoice) ‣ Journal Items tab
+      :shows: Journal items of the original invoice: receivable debit, income and tax credits.
+      :highlight: The debit and credit columns (red frame).
+      :data: Invoice of 1,000 + 27%.
+      :module: account
+      :notes: English UI, light theme, 1440px width.
 
    The credit note's journal entry generated to reverse the original invoice above:
 
-   .. image:: credit_notes/journal-entries-credit-note.png
-      :alt: Credit note journal entry reverses the invoice journal entry
+   .. screenshot:: accounting-credit-notes-credit-note-entry
+      :menu: Accounting ‣ Customers ‣ Credit Notes ‣ (open the credit note) ‣ Journal Items tab
+      :shows: Journal items of the credit note reversing the invoice: receivable credit, income and tax debits.
+      :highlight: The debit and credit columns (red frame).
+      :data: Credit note of the invoice above.
+      :module: account
+      :notes: English UI, light theme, 1440px width.
+
+.. _accounting/credit_notes/signed-amounts:
+
+Signed amounts in exports
+=========================
+
+With the *eYssen Account* (`eyssen_account`) module, invoice lines have signed amount fields that
+are negative for credit notes and refunds: :guilabel:`Quantity (signed)`, :guilabel:`Subtotal
+(signed)`, :guilabel:`VAT total (signed)`, and :guilabel:`Total (signed)`. Use these fields when
+exporting invoice lines (e.g., from :menuselection:`Accounting --> Accounting --> Journal Items`) to
+distinguish credit note lines from invoice lines and to get correct totals in mixed exports.

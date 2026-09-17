@@ -78,9 +78,8 @@ Vendor payments with Ponto
 .. important::
    Before managing vendor payments with Ponto, make sure the following steps are completed:
 
-   - :ref:`SEPA Credit Transfer is activated (SCT) <accounting/pay_sepa/activate-sepa>`.
-   - :ref:`The SEPA Credit Transfer payment method has been added to the bank journal
-     <accounting/pay_sepa/activate-sepa-bank-journal>`.
+   - SEPA Credit Transfer is activated (SCT).
+   - The SEPA Credit Transfer payment method has been added to the bank journal.
    - :doc:`The vendor's bank account has been marked as trusted <../../payments/trusted_accounts>`.
    - The :guilabel:`Account Online Payment` (`account_online_payment`) module is :ref:`installed
      <general/install>`.
@@ -88,11 +87,9 @@ Vendor payments with Ponto
 To register a vendor payment using Ponto, follow these steps:
 
 #. Go to :menuselection:`Accounting --> Vendors --> Payments` and create the payment. Fill in the
-   relevant bank :guilabel:`Journal` field, select :ref:`SEPA Credit Transfer
-   <accounting/pay_sepa/registering-payments-sepa>` as the :guilabel:`Payment Method`, and enter the
+   relevant bank :guilabel:`Journal` field, select SEPA Credit Transfer as the :guilabel:`Payment Method`, and enter the
    :guilabel:`Vendor Bank Account`. Then click :guilabel:`Confirm`.
-#. Go to :menuselection:`Accounting --> Vendors --> Batch Payments` and :ref:`create a batch
-   <accounting/batch/creation>`. Select the same bank :guilabel:`Journal` and :guilabel:`Payment
+#. Go to :menuselection:`Accounting --> Vendors --> Batch Payments` and create a batch. Select the same bank :guilabel:`Journal` and :guilabel:`Payment
    Method`, and click :guilabel:`Add a line` to select the payment created in the previous step.
 #. Click :guilabel:`Initiate Payment` to connect to Ponto and follow the steps to sign the payment.
 

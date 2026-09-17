@@ -200,9 +200,6 @@ Export File` if you need a new Bacs file for that batch payment.
 .. image:: united_kingdom/bacs-files.png
    :alt: Vendor Batch Payment view with generated BACS file.
 
-.. seealso::
-   :doc:`../accounting/payments/batch`
-
 .. _localization/united-kingdom/invoice-payments:
 
 Invoice payments

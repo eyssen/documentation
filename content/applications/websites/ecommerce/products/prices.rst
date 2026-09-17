@@ -17,7 +17,6 @@ To add a tax on a product, you can either set a tax in the :guilabel:`Customer T
 
 .. seealso::
    - :doc:`/applications/finance/accounting/taxes`
-   - :doc:`/applications/finance/accounting/taxes/avatax`
 
 .. _ecommerce-price-management-tax-display:
 
@@ -221,7 +220,6 @@ assigned pricelist is linked to a different country group.
 
    .. image:: prices/pricelists-example.png
       :alt: An example of various pricelists assigned to a website.
-
 
 .. _ecommerce/prices/discounts:
 

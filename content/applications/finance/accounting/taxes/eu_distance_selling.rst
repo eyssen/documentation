@@ -18,16 +18,23 @@ Configuration
 
 The **EU Intra-community Distance Selling** feature helps you comply with this regulation by
 creating and configuring new **fiscal positions** and **taxes** based on your company's country. To
-enable it, go to :menuselection:`Accounting --> Configuration --> Settings --> Taxes`, tick
-:guilabel:`EU Intra-community Distance Selling`, and :guilabel:`Save`.
+enable it, go to :menuselection:`Accounting --> Configuration --> Settings`, tick
+:guilabel:`EU Intra-community Distance Selling` in the :guilabel:`Taxes` section, and
+:guilabel:`Save`. This installs the *EU One Stop Shop (OSS)* (`l10n_eu_oss`) module.
 
-.. image:: eu_distance_selling/enable-feature.png
-   :alt: EU intra-community Distance Selling feature in Odoo Accounting settings
+.. screenshot:: accounting-taxes-eu-distance-selling-setting
+   :menu: Accounting ‣ Configuration ‣ Settings
+   :shows: "Taxes" section; "EU Intra-community Distance Selling" setting enabled, with the "Refresh tax mapping" button below it.
+   :highlight: The setting block (red frame).
+   :data: Demo company "YourCompany HU".
+   :module: account, l10n_eu_oss
+   :notes: English UI, light theme, 1440px width, crop to the setting.
 
 .. tip::
    Whenever you add or modify taxes, you can automatically update your fiscal positions. To do so,
-   go to :menuselection:`Accounting/Invoicing --> Settings --> Taxes --> EU Intra-community Distance
-   Selling` and click on the :guilabel:`Refresh tax mapping`.
+   go to :menuselection:`Accounting --> Configuration --> Settings`, and in the :guilabel:`EU
+   Intra-community Distance Selling` setting of the :guilabel:`Taxes` section, click
+   :guilabel:`Refresh tax mapping`.
 
 .. note::
    We highly recommend checking that the proposed mapping is suitable for the products and services
@@ -48,18 +55,8 @@ single online portal to handle VAT obligations for their sales within the EU. Th
 primary schemes**: the **Union OSS** scheme for cross-border services and the **Import OSS** scheme
 for goods valued at or below €150.
 
-Reports
--------
-
-To generate **OSS sales** or **OSS imports** reports and submit them onto the OSS portal, go to
-:menuselection:`Accounting --> Reporting --> Tax Report`, click :guilabel:`Report: Generic Tax
-report`, and select either :guilabel:`OSS Sales` or :guilabel:`OSS Imports`. Once selected, click on
-:guilabel:`PDF`, :guilabel:`XLSX`, or :guilabel:`XML` in the top-left corner. This generates the
-currently-opened report in the selected format. Once generated, log into the platform of your
-competent federal authority to submit it onto the OSS portal.
-
-.. image:: eu_distance_selling/oss-report.png
-   :alt: OSS reports view
+The taxes created by the feature are linked to the **OSS tax grids**, so the OSS amounts can be
+retrieved from the journal items and the tax reports of your country's fiscal localization.
 
 .. seealso::
    - `European Commission: OSS | Taxation and Customs Union <https://ec.europa.eu/taxation_customs/business/vat/oss_en>`_

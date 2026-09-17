@@ -748,7 +748,6 @@ Then, all Payments must be grouped in a **Batch Payment**.
 
 .. seealso::
    - :doc:`Batch Payments <../accounting/payments>`
-   - :doc:`Create a Batch Payment <../accounting/payments/batch>`
 
 Once you press the :guilabel:`Validate` button for the Batch Payment, the :abbr:`Ri.Ba. (Ricevuta
 Bancaria)` file is generated and attached to the Batch Payment, so you can download it and upload it

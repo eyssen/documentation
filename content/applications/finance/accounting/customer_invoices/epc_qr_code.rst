@@ -31,8 +31,13 @@ To do so, go to :menuselection:`Accounting --> Configuration --> Journals`, open
 then fill out the :guilabel:`Account Number` and :guilabel:`Bank` under the :guilabel:`Bank Account
 Number` column.
 
-.. image:: epc_qr_code/bank-journal.png
-   :alt: Bank account number column in the bank journal
+.. screenshot:: accounting-epc-qr-code-bank-journal
+   :menu: Accounting ‣ Configuration ‣ Journals ‣ (open the bank journal)
+   :shows: Bank journal form with the "Account Number" (IBAN) and "Bank" fields filled in.
+   :highlight: The "Account Number" and "Bank" fields (red frame).
+   :data: Belgian demo company; bank journal with an IBAN.
+   :module: account
+   :notes: English UI, light theme, 1440px width.
 
 Issue invoices with EPC QR codes
 ================================
@@ -52,8 +57,13 @@ Before posting it, open the :guilabel:`Other Info` tab. Odoo automatically fills
 
 When the invoice is printed or previewed, the QR code is included at the bottom.
 
-.. image:: epc_qr_code/invoice-qr-code.png
-   :alt: QR code on a customer invoice
+.. screenshot:: accounting-epc-qr-code-invoice
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (open an invoice) ‣ Preview
+   :shows: Invoice PDF with the EPC QR code and the payment communication at the bottom.
+   :highlight: The QR code (red frame).
+   :data: Belgian demo company; invoice in EUR; QR Codes setting enabled.
+   :module: account_qr_code_sepa
+   :notes: English UI, crop to the bottom of the invoice.
 
 .. tip::
    If you want to issue an invoice without an EPC QR code, remove the IBAN indicated in the

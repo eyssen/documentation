@@ -73,12 +73,12 @@ so reminders can be reviewed and sent without any configuration:
    The default ladder is safe to edit or delete — an application upgrade will not restore it. On a
    multi-company database, add one ladder per company.
 
-.. screenshot-pending: follow_up/levels-list.png
-   :alt: List of follow-up levels in eYssen ERP.
-
-.. Screenshot: Accounting ▸ Configuration ▸ Accounting ▸ Follow-up Levels list view, showing the
-   seven default levels (Due Days 0/1/8/15/30/45/60), with the Send Email / Send SMS / Send Letter /
-   Show Interest / Automatic / Final columns visible — the Automatic column unticked on every row.
+.. screenshot:: accounting-follow-up-levels-list
+   :menu: Accounting ‣ Configuration ‣ Accounting ‣ Follow-up Levels
+   :shows: Accounting ▸ Configuration ▸ Accounting ▸ Follow-up Levels list view, showing the seven default levels (Due Days 0/1/8/15/30/45/60), with the Send Email / Send SMS / Send Letter / Show Interest / Automatic / Final columns visible — the Automatic column unticked on every row.
+   :data: Demo company "YourCompany HU" with a few overdue customer invoices.
+   :module: account_payment_followup
+   :notes: English UI, light theme, 1440px width, crop tightly to the relevant panel.
 
 To modify a level, click the record. From the form view, set the :guilabel:`Level Name` and the
 number of :guilabel:`Due Days` before the reminder is sent, then choose the channels and options:
@@ -102,12 +102,12 @@ number of :guilabel:`Due Days` before the reminder is sent, then choose the chan
    Sending SMS messages or postal letters requires :doc:`In-App Purchase (IAP)
    </applications/essentials/in_app_purchase>` credit. Email and the online **Pay Now** link do not.
 
-.. screenshot-pending: follow_up/level-form.png
-   :alt: Follow-up level form with channels and options.
-
-.. Screenshot: a single follow-up level form (e.g. "Repeated Reminder"), left column Level Name /
-   Due Days / Automatic / Final-Legal, right column Send Email + Email Template / Send SMS + SMS
-   Template / Send Letter / Attach Overdue Invoices / Show Late-payment Interest.
+.. screenshot:: accounting-follow-up-level-form
+   :menu: Accounting ‣ Configuration ‣ Accounting ‣ Follow-up Levels ‣ Repeated Reminder
+   :shows: a single follow-up level form (e.g. "Repeated Reminder"), left column Level Name / Due Days / Automatic / Final-Legal, right column Send Email + Email Template / Send SMS + SMS Template / Send Letter / Attach Overdue Invoices / Show Late-payment Interest.
+   :data: Demo company "YourCompany HU" with a few overdue customer invoices.
+   :module: account_payment_followup
+   :notes: English UI, light theme, 1440px width, crop tightly to the relevant panel.
 
 Tick :guilabel:`Schedule Activity`, at the bottom of the form, to automatically create an
 :doc:`activity </applications/essentials/activities>` when the level is triggered. Ticking it
@@ -135,11 +135,12 @@ The block is only shown on levels whose :guilabel:`Show Late-payment Interest` o
    These amounts are **display-only**. They are computed and shown on the reminder for information,
    but the application **never** creates a journal entry — no interest or fee is posted to accounting.
 
-.. screenshot-pending: follow_up/interest-settings.png
-   :alt: Late-payment interest settings.
-
-.. Screenshot: Accounting ▸ Configuration ▸ Settings, the "Late-payment Interest on Reminders"
-   setting expanded, with the rate % field and the Collection fee (B2B) toggle + amount visible.
+.. screenshot:: accounting-follow-up-interest-settings
+   :menu: Accounting ‣ Configuration ‣ Settings
+   :shows: Accounting ▸ Configuration ▸ Settings, the "Late-payment Interest on Reminders" setting expanded, with the rate % field and the Collection fee (B2B) toggle + amount visible.
+   :data: Demo company "YourCompany HU" with a few overdue customer invoices.
+   :module: account_payment_followup
+   :notes: English UI, light theme, 1440px width, crop tightly to the relevant panel.
 
 .. _accounting/follow_up/settled:
 
@@ -162,11 +163,12 @@ The choice applies to the daily automatic reminders **and** to every manual send
 Reversed invoices are always skipped. Unpaid and partially paid invoices are
 always included.
 
-.. screenshot-pending: follow_up/settled-settings.png
-   :alt: Invoices treated as paid setting.
-
-.. Screenshot: Accounting ▸ Configuration ▸ Settings, Customer Invoices section,
-   the "Invoices treated as paid" radio with Fully Paid / Fully Paid and In Payment.
+.. screenshot:: accounting-follow-up-settled-settings
+   :menu: Accounting ‣ Configuration ‣ Settings
+   :shows: Accounting ▸ Configuration ▸ Settings, Customer Invoices section, the "Invoices treated as paid" radio with Fully Paid / Fully Paid and In Payment.
+   :data: Demo company "YourCompany HU" with a few overdue customer invoices.
+   :module: account_payment_followup
+   :notes: English UI, light theme, 1440px width, crop tightly to the relevant panel.
 
 .. _accounting/follow_up/process:
 
@@ -197,12 +199,12 @@ The tab shows:
 - :guilabel:`Total Overdue` and :guilabel:`Total Due`: the customer's overdue and total open
   receivable amounts.
 
-.. screenshot-pending: follow_up/partner-tab.png
-   :alt: Payment Follow-up tab on the customer form.
-
-.. Screenshot: a customer form open on the "Payment Follow-up" tab, showing Follow-up Status = In
-   Need of Action, Next Follow-up Date, Follow-up Responsible, Total Overdue / Total Due, the
-   internal note, and the "Send Reminder" button.
+.. screenshot:: accounting-follow-up-partner-tab
+   :menu: Accounting ‣ Customers ‣ Customers ‣ (open a customer) ‣ Payment Follow-up tab
+   :shows: a customer form open on the "Payment Follow-up" tab, showing Follow-up Status = In Need of Action, Next Follow-up Date, Follow-up Responsible, Total Overdue / Total Due, the internal note, and the "Send Reminder" button.
+   :data: Demo company "YourCompany HU" with a few overdue customer invoices.
+   :module: account_payment_followup
+   :notes: English UI, light theme, 1440px width, crop tightly to the relevant panel.
 
 Click :guilabel:`Send Reminder` to open the review window, adjust the :guilabel:`Level` if needed,
 and click :guilabel:`Send`. The reminder covers the customer's **full overdue statement**.
@@ -240,11 +242,21 @@ invoices are grouped by customer in the review window.
    it covers only the **selected** invoices (content, attachments, logged record, and interest),
    not the customer's full statement.
 
-.. screenshot-pending: follow_up/invoice-bulk.png
-   :alt: Sending reminders from the overdue invoices list.
+.. screenshot:: accounting-follow-up-invoice-bulk
+   :menu: Accounting ‣ Customers ‣ Invoices
+   :shows: Accounting ▸ Customers ▸ Invoices list filtered on Overdue, several rows ticked, the Actions (gear) menu open with "Send Payment Reminder" highlighted.
+   :data: Demo company "YourCompany HU" with a few overdue customer invoices.
+   :module: account_payment_followup
+   :notes: English UI, light theme, 1440px width, crop tightly to the relevant panel.
 
-.. Screenshot: Accounting ▸ Customers ▸ Invoices list filtered on Overdue, several rows ticked, the
-   Actions (gear) menu open with "Send Payment Reminder" highlighted.
+.. _accounting/follow_up/invoice-history:
+
+Reminder history on invoices
+----------------------------
+
+On a customer invoice, the :guilabel:`Reminders` smart button and the :guilabel:`Payment Reminders`
+tab list the reminders that covered the invoice, with their date, channel, level, subject,
+recipient, and the invoices included.
 
 .. _accounting/follow_up/automatic:
 
@@ -267,11 +279,12 @@ the optional :ref:`interest and collection-fee block <accounting/follow_up/inter
 email — an online **Pay Now** link to the customer portal. The same content is shared between the
 PDF letter and the reminder email, so both always show the customer the same figures.
 
-.. screenshot-pending: follow_up/report.png
-   :alt: Follow-up reminder letter PDF.
-
-.. Screenshot: the generated follow-up letter PDF — header with company details, the overdue
-   invoice table, totals, and (when enabled) the late-payment interest + collection-fee block.
+.. screenshot:: accounting-follow-up-report
+   :menu: Accounting ‣ Customers ‣ Customers ‣ (open a customer) ‣ Send Reminder ‣ (generated PDF letter)
+   :shows: the generated follow-up letter PDF — header with company details, the overdue invoice table, totals, and (when enabled) the late-payment interest + collection-fee block.
+   :data: Demo company "YourCompany HU" with a few overdue customer invoices.
+   :module: account_payment_followup
+   :notes: English UI, light theme, 1440px width, crop tightly to the relevant panel.
 
 .. _accounting/follow_up/log:
 
@@ -283,8 +296,9 @@ trail. To review it, go to :menuselection:`Accounting --> Reporting --> Payment 
 entry records the date, customer, level, channel (email, SMS, letter, activity, or *skipped*), the
 invoices covered, and a note. Log entries cannot be edited or deleted.
 
-.. screenshot-pending: follow_up/log.png
-   :alt: Follow-up log.
-
-.. Screenshot: Accounting ▸ Reporting ▸ Payment Follow-up list, several rows showing Date /
-   Customer / Level / Channel / Invoices / Note.
+.. screenshot:: accounting-follow-up-log
+   :menu: Accounting ‣ Reporting ‣ Payment Follow-up
+   :shows: Accounting ▸ Reporting ▸ Payment Follow-up list, several rows showing Date / Customer / Level / Channel / Invoices / Note.
+   :data: Demo company "YourCompany HU" with a few overdue customer invoices.
+   :module: account_payment_followup
+   :notes: English UI, light theme, 1440px width, crop tightly to the relevant panel.

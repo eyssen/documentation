@@ -5,11 +5,17 @@ Trusted accounts (send money)
 To protect users from sending money to scammers, vendor bank account numbers must be marked as
 trusted before you can use them to make an outgoing payment.
 
-To do so, open the vendor bank account and click on the :guilabel:`Send Money` toggle switch button.
+To do so, open the vendor's contact form, go to the :guilabel:`Accounting` tab, and enable the
+:guilabel:`Send Money` option of the bank account in the :guilabel:`Bank Accounts` section (or open
+the bank account and enable the :guilabel:`Send Money` toggle there).
 
-.. image:: trusted_accounts/send-money-toggle.png
-   :align: center
-   :alt: Example of a vendor bank account with the "Send Money" toggle button switched to "trusted."
+.. screenshot:: accounting-trusted-accounts-send-money
+   :menu: Accounting ‣ Vendors ‣ Vendors ‣ (open a vendor) ‣ Accounting tab
+   :shows: "Bank Accounts" section of the vendor with an account number and the "Send Money" toggle enabled.
+   :highlight: The "Send Money" toggle (red frame).
+   :data: Demo vendor with a Hungarian bank account.
+   :module: account
+   :notes: English UI, light theme, 1440px width. Crop to the section.
 
 .. note::
    All accounts are initially marked as untrusted.
@@ -43,7 +49,7 @@ Communication style
   Fraudulent emails and invoices often use a different communication style, such as **different
   wording**, and may include **spelling and grammatical mistakes**. Examine and **compare** them
   with previous ones that you know to be authentic (e.g., payment instructions, language, company
-  logo, etc.).*
+  logo, etc.).
 
 Urgency
   Invoice frauds often use **urgent or threatening language** and change the **payment deadline**.

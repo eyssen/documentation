@@ -39,7 +39,6 @@ payment dates defined beforehand by the seller.
      use, return policies, and other policies surrounding the sale of goods and services.
 
 .. seealso::
-   - `Odoo Tutorials: payment terms <https://www.odoo.com/slides/slide/payment-terms-1679>`_
    - :doc:`cash_discounts`
 
 .. _accounting/payment-terms/configuration:
@@ -49,7 +48,7 @@ Configuration
 
 To create new payment terms, follow these steps:
 
-#. Go to :menuselection:`Accounting --> Configuration --> Payment Terms` and click on
+#. Go to :menuselection:`Accounting --> Configuration --> Invoicing --> Payment Terms` and click on
    :guilabel:`New`.
 #. Enter a name in the :guilabel:`Payment Terms` field. This field is the name displayed both
    internally and on sales orders.
@@ -61,16 +60,19 @@ To create new payment terms, follow these steps:
    is particularly helpful for managing **installment plans** (:dfn:`payment terms with multiple
    terms`).
 
-   To add a term, click on :guilabel:`Add a line`, define the discount's value and type in the
-   :guilabel:`Due` fields, then fill out the :guilabel:`After` fields to determine the due date.
+   To add a term, click on :guilabel:`Add a line`, define the value and type (percentage or fixed
+   amount) in the :guilabel:`Due` fields, then fill out the :guilabel:`After` fields to determine the
+   due date: a number of days and the delay type (:guilabel:`Days after invoice date`,
+   :guilabel:`Days after end of month`, :guilabel:`Days after end of next month`, or
+   :guilabel:`Days end of month on the`).
 
    .. tip::
-      The :guilabel:`Days end of the month on the` option allows you to add a :ref:`buffer period
+      The :guilabel:`Days end of month on the` option allows you to add a :ref:`buffer period
       <accounting/payment-terms/buffer>` so that an invoice registered at the end of the month isn't
       due at the beginning of the month that immediately follows.
 
-#. Enter the text to be displayed on the document (sales order, invoice, etc.) in the gray textbox
-   in the :guilabel:`Preview` column.
+#. Enter the text to be displayed on the document (sales order, invoice, etc.) in the text box of
+   the :guilabel:`Preview` section.
 #. Tick the :guilabel:`Show installment dates` checkbox to display a breakdown of each payment and
    its due date on the invoice report, if desired.
 
@@ -78,8 +80,8 @@ To create new payment terms, follow these steps:
    To instead specify a number of days *before the end of the month*, use a negative value in the
    :guilabel:`After` field.
 
-To test that your payment terms are configured correctly, enter an invoice date on the
-:guilabel:`Example` line to generate the payments that would be due and their due dates
+To test that your payment terms are configured correctly, enter an amount and a date in the
+example of the :guilabel:`Preview` section to generate the payments that would be due and their due dates
 using these payment terms.
 
 .. important::
@@ -89,16 +91,20 @@ using these payment terms.
    In the following example, 30% is due on the day of issuance, and the remaining 70% is due at the
    end of the following month.
 
-   .. image:: payment_terms/configuration.png
-      :alt: Example of Payment Terms. The first line is the 30% due immediately. The second line is
-            the remaining 70% due at the end of the following month.
+   .. screenshot:: accounting-payment-terms-configuration
+      :menu: Accounting ‣ Configuration ‣ Invoicing ‣ Payment Terms ‣ New
+      :shows: Payment term form "30% Advance End of Following Month": Due Terms with two lines (30% after 0 "Days after invoice date"; 70% after 0 "Days after end of next month"), and the Preview section with the text and the example installments.
+      :highlight: The "Due Terms" lines (red frame).
+      :data: Example amount 1,000.
+      :module: account
+      :notes: English UI, light theme, 1440px width.
 
 .. _accounting/payment-terms/buffer:
 
 End of the month buffer
 -----------------------
 
-The :guilabel:`Days end of the month on the` option allows users to add a buffer period so that an
+The :guilabel:`Days end of month on the` option allows users to add a buffer period so that an
 invoice registered at the end of the month isn't due at the beginning of the month that immediately
 follows.
 
@@ -109,7 +115,7 @@ from the :guilabel:`Days on the next month` field.
 .. example::
    For example, take two invoices, one dated 5 March and the other dated 28 March. Both use the same
    payment terms with a single :guilabel:`Due Terms` line for 100% of the due amount, due `5`
-   :guilabel:`Days end of the month on the` `1`.
+   :guilabel:`Days end of month on the` `1`.
 
    For the invoice dated 5 March, the due date is computed as **1 April** with the following
    calculations:
@@ -117,7 +123,6 @@ from the :guilabel:`Days on the next month` field.
    - 5 March + 5 days = 10 March
    - 10 March + end of the month = 31 March
    - 31 March + on the 1 = 1 April
-
 
    For the invoice dated 28 March, the due date is computed as **1 May** with the following
    calculations:
@@ -135,7 +140,8 @@ Payment terms can be defined using the :guilabel:`Payment Terms` field on:
 
 - **Contacts:** To automatically set default payment terms on a contact's new sales orders,
   invoices, and bills. This can be modified in the contact form, under the :guilabel:`Sales &
-  Purchase` tab.
+  Purchase` tab (:guilabel:`Payment Terms` fields of the :guilabel:`Sales` and
+  :guilabel:`Purchase` sections).
 - **Quotations/Sales Orders:** To set specific payment terms automatically on all invoices generated
   from a quotation or sales order.
 
@@ -164,9 +170,13 @@ due date into account, rather than just the balance due date. It also helps to g
 :ref:`aged receivable report <accounting/invoices/aging-report>`.
 
 .. example::
-   .. image:: payment_terms/journal-entry.png
-      :alt: The amount debited to the account receivable is split into two journal items with
-            distinct due dates
+   .. screenshot:: accounting-payment-terms-journal-entry
+      :menu: Accounting ‣ Customers ‣ Invoices ‣ (open the posted invoice) ‣ Journal Items tab
+      :shows: "Journal Items" tab with two "Account Receivable" lines (300 and 700) with different due dates, and the income line of 1,000.
+      :highlight: The two receivable lines and their due dates (red frame).
+      :data: Invoice of 1,000 with the "30% Advance End of Following Month" payment terms.
+      :module: account
+      :notes: English UI, light theme, 1440px width.
 
    In this example, an invoice of $1000 has been issued with the following payment terms: *30% is
    due on the day of issuance, and the remaining 70% is due at the end of the following month.*

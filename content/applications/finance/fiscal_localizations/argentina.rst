@@ -13,8 +13,6 @@ Below you can find videos with a general description of the localization, and ho
 .. seealso::
    - `Smart Tutorial - Localización de Argentina
      <https://www.odoo.com/slides/smart-tutorial-localizacion-de-argentina-130>`_
-   - :doc:`Documentation on e-invoicing's legality and compliance in Argentina
-     <../accounting/customer_invoices/electronic_invoicing/argentina>`
 
 Configuration
 =============
@@ -1027,7 +1025,6 @@ The menu also displays critical information related to these operations, such as
 
 Ecommerce electronic invoicing
 ------------------------------
-
 
 :ref:`Install <general/install>` the *Argentinian eCommerce* (`l10n_ar_website_sale`) module to
 enable the following features and configurations:

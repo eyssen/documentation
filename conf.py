@@ -178,6 +178,9 @@ extensions = [
 
     'custom_admonitions',
 
+    # Screenshot placeholders (.. screenshot::)
+    'screenshot_placeholder',
+
     # Redirection generator
     'redirects',
 

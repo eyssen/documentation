@@ -14,9 +14,6 @@ This document serves as an introduction to the terminology and concepts necessar
 *Inventory*. For specific instructions and examples of how things work, refer to individual
 documentation pages.
 
-.. seealso::
-   `Odoo Tutorials: Warehouses & Locations <https://www.youtube.com/watch?v=zMvudZVLuUo>`_
-
 Warehouses
 ==========
 

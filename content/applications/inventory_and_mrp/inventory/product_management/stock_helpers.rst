@@ -20,6 +20,9 @@ Key features
   reference.
 - **Add products to a transfer from the product catalog**, the same kanban-based picker used
   elsewhere in Odoo for sales and purchase orders.
+- **Scan a product barcode** to add it to a draft transfer.
+- **See the analytic distribution** of each operation line, and find the transfer behind an
+  analytic entry.
 
 Configuration
 =============
@@ -232,6 +235,52 @@ purchase catalogs. Because a transfer is not a priced document, the catalog does
 price on the product tiles, unlike the sales and purchase catalog. Once the transfer leaves the
 :guilabel:`Draft` state, its lines — and therefore the catalog — become read-only.
 
+Scan a barcode onto a transfer
+------------------------------
+
+With the ``eyssen_barcode_stock`` module installed, a draft transfer shows a barcode-scanner button
+in the header of the operations block. Scanning a product's barcode adds that product to the
+transfer with a quantity of one, or increases the quantity by one if the product already has a
+line; the form reloads so the new quantity is visible immediately. Scanning a code that matches no
+product leaves the transfer unchanged.
+
+The button is only shown while the transfer is in the :guilabel:`Draft` state, and it requires the
+eYssen barcode scanning layer (``eyssen_barcode_base``) and the eYssen
+:guilabel:`Inventory` layer (``eyssen_stock``).
+
+.. screenshot:: inventory-stock-helpers-barcode-scanner
+   :menu: Inventory ‣ Transfers ‣ (a draft transfer)
+   :shows: A draft transfer form with the barcode-scanner button in the header of the operations block, and
+      the scanning dialog it opens.
+   :highlight: The barcode-scanner button (red frame).
+   :data: Draft transfer WH/INT/00005 with two scanned product lines.
+   :module: eyssen_barcode_stock
+   :notes: English UI, light theme, 1440px width, crop to the button and the dialog.
+
+Analytic distribution on a transfer
+-----------------------------------
+
+The ``analytic_accounts_on_stock_picking`` module shows an :guilabel:`Analytic` column next to the
+product on a transfer's operation lines, using the standard analytic-distribution widget. The value
+is the analytic distribution of the purchase order line the move came from, so the cost centre a
+receipt belongs to is visible without opening the purchase order.
+
+In the other direction, an analytic item gains a :guilabel:`Transfer Reference` field naming the
+transfer it relates to, which makes analytic reporting traceable back to the warehouse operation.
+
+.. screenshot:: inventory-stock-helpers-analytic-distribution
+   :menu: Inventory ‣ Receipts ‣ (a receipt from a purchase order) ‣ Operations tab
+   :shows: The operations lines of a receipt with the "Analytic" column next to the product, showing the
+      analytic distribution inherited from the purchase order line.
+   :highlight: The "Analytic" column (red frame).
+   :data: A receipt generated from a purchase order whose lines carry an analytic distribution.
+   :module: analytic_accounts_on_stock_picking
+   :notes: English UI, light theme, 1440px width, crop to the operation lines.
+
+.. note::
+   The column is read-only: the distribution is taken from the purchase order line and is empty for
+   moves that come from a sales order or that have no source document.
+
 Scope and modules
 ==================
 
@@ -245,3 +294,7 @@ Scope and modules
   :guilabel:`Stock Pickings` smart button (requires ``process_number``).
 - ``eyssen_stock_catalog`` — the :guilabel:`Catalog` button that opens the product catalog picker
   on a transfer.
+- ``eyssen_barcode_stock`` — the barcode-scanner button that adds scanned products to a draft
+  transfer.
+- ``analytic_accounts_on_stock_picking`` — the :guilabel:`Analytic` column on operation lines and
+  the :guilabel:`Transfer Reference` field on analytic items.

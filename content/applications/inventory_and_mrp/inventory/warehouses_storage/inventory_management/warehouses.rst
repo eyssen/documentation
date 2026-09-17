@@ -31,9 +31,6 @@ the warehouse form, which contains the following fields:
   :icon:`fa-arrow-right` :guilabel:`(right arrow)`.
 - :guilabel:`Company` (*required field*): the company that owns the warehouse; this can be set as
   the company that owns the Odoo database, or the company of a customer or vendor.
-- :guilabel:`Intrastat region`: :doc:`region name
-  <../../../../finance/accounting/reporting/intrastat>` required for companies in the European
-  Union.
 
 .. important::
    The options below are available **only** when the *Multi-Step Routes* feature is enabled in

@@ -2,11 +2,84 @@
 Stock control and availability
 ===============================
 
-eYssen ships a set of small, focused *Stock* modules that tighten up how on-hand quantities are
-guarded and reported: a hard stop on negative stock, a per-warehouse breakdown of on-hand, free and
-forecasted quantities that is precomputed for fast list, kanban and sale-order views, and and a set of
-physical size and load attributes on storage locations. Each one is optional and is switched on
-independently from the eYssen settings screen.
+eYssen ships a set of small, focused *Stock* modules that tighten up how transfers and on-hand
+quantities are guarded and reported: a hold flag and a reservation reset on the transfer itself, a
+hard stop on negative stock, a per-warehouse breakdown of on-hand, free and forecasted quantities
+that is precomputed for fast list, kanban and sale-order views, and a set of physical size and load
+attributes on storage locations. Each one is optional and is switched on independently from the
+eYssen settings screen.
+
+.. _inventory/warehouses_storage/eyssen-stock:
+
+Holding a transfer and clearing quantities
+==========================================
+
+``eyssen_stock`` is the shared eYssen :guilabel:`Inventory` layer the other modules on this page
+build on. On its own it adds three controls that change how a transfer behaves.
+
+Hold
+----
+
+A :guilabel:`Hold` toggle on the transfer form marks a transfer as *not to be processed*. Holding a
+transfer **releases its reservation**, so the stock becomes available for other orders again;
+releasing the hold reserves it back. A red :guilabel:`On Hold` ribbon marks a held transfer, and a
+read-only :guilabel:`Hold Reason` explains why — filled in automatically by whatever put the
+transfer on hold. Both fields are tracked in the chatter.
+
+The toggle is also available as a column on the :guilabel:`Transfers` list, and the search bar
+gains :guilabel:`On Hold` and :guilabel:`Off Hold` filters. A transfer that is
+:guilabel:`Done` or :guilabel:`Cancelled` can no longer be held.
+
+.. screenshot:: inventory-stock-control-hold
+   :menu: Inventory ‣ Transfers ‣ (a ready transfer)
+   :shows: A transfer form with the "Hold" toggle enabled, the read-only "Hold Reason" next to it and the red
+      "On Hold" ribbon in the top-right corner.
+   :highlight: The "Hold" toggle and the "On Hold" ribbon (red frames).
+   :data: Delivery WH/OUT/00003 held with the reason "Waiting for payment".
+   :module: eyssen_stock
+   :notes: English UI, light theme, 1440px width, crop to the header and the ribbon.
+
+Set quantities to zero
+----------------------
+
+A :guilabel:`Set Quantities to Zero` button above the operation lines clears the reserved
+quantities of a :guilabel:`Ready` transfer in one click, which is the quickest way to start a pick
+over. The :guilabel:`Demand` is kept, so the transfer can simply be reserved again; lines that are
+already in a package are left untouched. The button is only available while the transfer is
+:guilabel:`Ready` — on any other state it reports that quantities can only be cleared when the
+transfer is ready.
+
+.. screenshot:: inventory-stock-control-set-quantities-to-zero
+   :menu: Inventory ‣ Transfers ‣ (a ready transfer) ‣ Operations tab
+   :shows: A ready transfer with the "Set Quantities to Zero" button above the operation lines, whose
+      quantities are still filled in.
+   :highlight: The "Set Quantities to Zero" button (red frame).
+   :data: Delivery WH/OUT/00004 with three reserved lines.
+   :module: eyssen_stock
+   :notes: English UI, light theme, 1440px width, crop to the button and the lines.
+
+Reserving from packages
+-----------------------
+
+A :guilabel:`Prevent Reservation from Packages` option on the operation type
+(:menuselection:`Inventory app --> Configuration --> Operations Types`), **enabled by default**,
+keeps automatic reservation away from stock that is already inside a package: only unpackaged stock
+is reserved. Moves for which a package was chosen explicitly are unaffected. Turn the option off on
+operation types that are expected to break open packages.
+
+.. screenshot:: inventory-stock-control-prevent-package-reservation
+   :menu: Inventory ‣ Configuration ‣ Operations Types ‣ (an operation type)
+   :shows: An operation type form showing the "Prevent Reservation from Packages" checkbox next to "Show
+      Entire Packs".
+   :highlight: The "Prevent Reservation from Packages" checkbox (red frame).
+   :data: Operation type "YourCompany: Delivery Orders", option enabled.
+   :module: eyssen_stock
+   :notes: English UI, light theme, 1440px width, crop to the packages options.
+
+.. note::
+   The module also raises the length limit of a warehouse's :guilabel:`Short Name` to 32
+   characters, and shows the forecasted quantity together with the unit of measure on the on-hand
+   badge of the product kanban and list views.
 
 Preventing negative stock
 ==========================

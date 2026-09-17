@@ -12,9 +12,6 @@ To configure an existing product, go to :menuselection:`Inventory app --> Produc
 and select the desired product from the list. Alternatively, from the :guilabel:`Products` menu,
 click :guilabel:`New` to create a new product.
 
-.. seealso::
-   `Odoo Tutorials: Product Type <https://www.youtube.com/watch?v=l6j0ZkP5mLM>`_
-
 .. _inventory/product_management/for-sale-or-purchase:
 
 For sale vs. purchase
@@ -270,8 +267,6 @@ form, according to the *Preferred Route*.
 
 .. seealso::
    :doc:`Replenishment <../../warehouses_storage/replenishment>`
-   `Odoo Tutorials: Replenishment Methods for Manufacturing
-   <https://www.youtube.com/watch?v=vtjeMGcG8aM>`_
 
 .. _inventory/product_management/manufacturing:
 

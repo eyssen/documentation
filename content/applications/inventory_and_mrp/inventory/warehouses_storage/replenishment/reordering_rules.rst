@@ -23,10 +23,6 @@ product uses the *Buy* route, then a *request for quotation* (RFQ) is created wh
 rule is triggered. If a product uses the *Manufacture* route, then a *manufacturing order* (MO) is
 created instead. This is the case regardless of the selected replenishment route.
 
-.. seealso::
-   - `Odoo Tutorials: Automatic Reordering Rules <https://www.youtube.com/watch?v=XEJZrCjoXaU>`_
-   - `Odoo Tutorials: Manual Reordering Rules <https://www.youtube.com/watch?v=deIREJ1FFj4>`_
-
 To set up reordering rules for the first time, refer to:
 
 - :ref:`Reordering rules setup <inventory/warehouses_storage/configure-rr>`

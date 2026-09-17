@@ -87,8 +87,8 @@ On receipts
 
 Assigning new or existing lot numbers to incoming goods can be done directly on receipts.
 
-To begin, go to the :menuselection:`Purchase` app to `create and confirm
-<https://www.youtube.com/watch?v=o_uI718P1Dc>`_ a |PO| for products tracked by lot numbers. Then,
+To begin, go to the :menuselection:`Purchase` app to create and confirm a |PO| for products tracked
+by lot numbers. Then,
 click the :guilabel:`Receipt` smart button that appears at the top of the page to navigate to the
 warehouse receipt form.
 

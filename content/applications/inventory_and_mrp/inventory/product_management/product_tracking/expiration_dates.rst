@@ -61,7 +61,7 @@ edit. Selecting a product reveals the product form for that particular item.
    Unique Serial Number` or :guilabel:`By Lots`.
 
 Then, click the :guilabel:`Inventory` tab, and scroll down to the :guilabel:`Traceability` section.
-Tick the :guilabel:`Expiration Date` checkbox.
+Tick the :guilabel:`Expiration Date` checkbox. Doing so reveals a :guilabel:`Dates` group below it.
 
 .. note::
    If a product has stock on-hand prior to activating tracking by lots or serial numbers, an
@@ -75,32 +75,35 @@ Tick the :guilabel:`Expiration Date` checkbox.
 .. screenshot:: inventory-expiration-dates-product-form
    :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Inventory tab
    :shows: The "Traceability" section of a product form with the "Expiration Date" checkbox ticked, and the
-      "Dates" section below showing the "Expiration Time", "Best Before Time", "Removal Time" and "Alert
-      Time" fields filled in.
+      "Dates" section below showing the "Expiration Date", "Best Before Date", "Removal Date" and "Alert
+      Date" fields filled in.
    :highlight: The "Expiration Date" checkbox and the four "Dates" fields (red frames).
    :data: A perishable lot-tracked product, e.g. expiration 30 days, best before 20, removal 25, alert 15.
    :module: product_expiry
    :notes: English UI, light theme, 1440px width, crop to the Traceability and Dates sections.
 
-Under the :guilabel:`Dates` section, there are four categories of expiration information to
-configure for the product:
+The :guilabel:`Dates` group holds four durations, each expressed as a number of days:
 
-- :guilabel:`Expiration Time`: the number of days after receiving products (either from a vendor or
+- :guilabel:`Expiration Date`: the number of days after receiving products (either from a vendor or
   in stock after production) in which goods may become dangerous and should not be used or consumed.
-- :guilabel:`Best Before Time`: the number of days before the expiration date in which the goods
+- :guilabel:`Best Before Date`: the number of days before the expiration date in which the goods
   start deteriorating, **without** being dangerous yet.
-- :guilabel:`Removal Time`: the number of days before the expiration date in which the goods should
+- :guilabel:`Removal Date`: the number of days before the expiration date in which the goods should
   be removed from stock.
-- :guilabel:`Alert Time`: the number of days before the expiration date in which an alert should be
+- :guilabel:`Alert Date`: the number of days before the expiration date in which an alert should be
   raised on goods in a particular lot or containing a particular serial number.
+
+.. note::
+   These four fields hold a **number of days**, while the fields of the same name on a lot or serial
+   number hold the resulting **dates**, computed from them.
 
 .. note::
    The values entered into these fields automatically compute the expiration date for goods entered
    into stock, whether purchased from a vendor or manufactured in-house.
 
 .. tip::
-   If the :guilabel:`Dates` field is not populated with any values for expiration information, dates
-   (and lots) can be manually assigned upon receipts and deliveries in and out of the warehouse.
+   If the :guilabel:`Dates` group is left empty, dates (and lots) can still be assigned manually on
+   receipts and deliveries in and out of the warehouse.
    Even when assigned, they can still be overwritten and changed manually if needed, as well.
 
 Set expiration dates on receipts with lots & serial numbers
@@ -133,8 +136,8 @@ on the product form. Click the :guilabel:`Lot/Serial Number` field on the approp
 enter the lot or serial number.
 
 .. tip::
-   If the :guilabel:`Dates` field on the product form has not been configured, the
-   :guilabel:`Expiration Date` can be manually entered.
+   If the :guilabel:`Dates` group on the product form has not been filled in, the
+   :guilabel:`Expiration Date` can be entered by hand.
 
 Click :guilabel:`Save` when finished to close the pop-up. Finally, click :guilabel:`Validate`.
 
@@ -212,8 +215,8 @@ Then, click the :guilabel:`Other Info` tab. Under the :guilabel:`Delivery` secti
 the date. Finally, click :guilabel:`Confirm` to confirm the sales order.
 
 .. important::
-   If the products are delivered before the :guilabel:`Alert Date` set on the product form, then no
-   alerts are created.
+   If the products are delivered before the alert date computed for the lot, then no alerts are
+   created.
 
 Next, click the :guilabel:`Delivery` smart button at the top of the sales order to see the warehouse
 receipt form.
@@ -270,8 +273,8 @@ serial number detail form.
    :guilabel:`(adjust settings)` icon at the top of the list of records, then tick the
    :guilabel:`Expiration Date` checkbox.
 
-On the :guilabel:`Lot/Serial Number` detail form, the :guilabel:`Dates` lists all expiration
-information related to the products.
+On the :guilabel:`Lot/Serial Number` detail form, the :guilabel:`Dates` tab lists all expiration
+information of that lot or serial number.
 
 If the expiration date for a lot/serial number has passed, the form displays a red
 :guilabel:`Expiration Alert` at the top of the page to indicate that the products in this lot are
@@ -305,7 +308,7 @@ Select a product configured with lot/serial numbers and expiration date tracking
 :guilabel:`Inventory` tab. Under the :guilabel:`Logistics` section, select a user in the
 :guilabel:`Responsible` field.
 
-When the expiation date passes for a lot/serial number for this product, a notification is sent to
+When the expiration date passes for a lot/serial number for this product, a notification is sent to
 the user in this field.
 
 .. note::
@@ -314,7 +317,7 @@ the user in this field.
 
    To customize these alerts, turn on :ref:`developer mode <developer-mode>`, go to
    :menuselection:`Settings app --> Technical --> Activity Types`, and select the :guilabel:`Alert
-   Date Reached` alert.
+   Date Reached` activity type.
 
    The :guilabel:`Default User` assigned will be notified once the expiration date is reached. If no
    default user is configured, the activity will be assigned to the :guilabel:`Responsible` user

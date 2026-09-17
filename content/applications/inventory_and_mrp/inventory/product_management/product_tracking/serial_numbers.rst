@@ -12,9 +12,6 @@ The goal of assigning serial numbers allows for the tracking of individual produ
 serial numbers can help manufacturers locate products to provide after-sales services or in the
 event of a recall.
 
-.. seealso::
-   `Odoo Tutorials: Serial Numbers <https://www.youtube.com/watch?v=XWJjWc0Vl04>`_
-
 .. _inventory/product_management/enable-lots:
 
 Enable lots & serial numbers

@@ -61,9 +61,6 @@ category line. Then, on the category page that appears, click :guilabel:`Add a l
 unit, such as `Box of 6`, then in the :guilabel:`Type` field, select the appropriate size reference,
 such as :guilabel:`Bigger than the reference Unit of Measure`.
 
-If applicable, enter a :guilabel:`UNSPSC Category`, which is a globally recognized `code managed by
-GS1 <https://www.unspsc.org/>`_, that **must** be purchased in order to use.
-
 In the :guilabel:`Ratio` field, enter how many individual units are in the new |UOM|, such as
 `6.00000` when using the example of the `6-Pack` (since a box of six is six times *bigger* than the
 reference unit, `1.00000`).
@@ -91,6 +88,8 @@ track of the product's inventory and internal transfers.
 
 Edit the :guilabel:`Purchase UoM` field to specify the unit of measure that the product is purchased
 in.
+
+.. _inventory/uom/advanced:
 
 Advanced units of measure
 =========================

@@ -9,42 +9,6 @@ productivity helpers that attach directly to the :guilabel:`Transfer` (``stock.p
 speed up exactly these steps. Each helper is a separate, single-purpose module, so a warehouse can
 install only the ones it needs.
 
-.. Screenshot plan:
-.. stock_helpers-previous-item-button.png: the Transfer form in Draft state, operations tab,
-..   showing the "Add Previous Items" button (files icon) at the top-right of the operations
-..   block. Path: Inventory --> open any draft transfer.
-.. stock_helpers-previous-item-wizard.png: the "Add Previous Items" popup wizard with the
-..   "Previous Stock" field and "If Product Duplication" selection filled in. Path: on a draft
-..   transfer, click the "Add Previous Items" button.
-.. stock_helpers-bulk-add-button.png: the Transfer form in Draft state showing the
-..   "Add Bulk Products" button (cubes icon) next to the "Add Previous Items" button. Path:
-..   Inventory --> open any draft transfer.
-.. stock_helpers-bulk-add-wizard.png: the "Add Bulk Products" wizard with Format set to
-..   "Copy/Paste", Based On "Default Code", "With Quantity" checked, showing the live example
-..   text block and the multi-line paste textarea. Path: on a draft transfer, click "Add Bulk
-..   Products".
-.. stock_helpers-bulk-add-wizard-csv.png: the same wizard with Format switched to "CSV",
-..   showing the "Is there a header?" checkbox and the file upload field. Path: in the "Add Bulk
-..   Products" wizard, change Format to CSV.
-.. stock_helpers-quantity-total.png: the Transfer form, Operations tab, scrolled to the bottom
-..   showing the "Sum Qty (detailed)" box below the operations lines (product type count plus one
-..   line per UoM). Path: open a transfer with several product lines with different UoMs.
-.. stock_helpers-quantity-total-list.png: the Transfers list view showing the compact "Sum Qty"
-..   column (e.g. "3 P, 42 Qty") next to the Status column. Path: Inventory --> Transfers, default
-..   list view.
-.. stock_helpers-process-number-field.png: the Transfer form, Draft state, showing the Process
-..   Number field above the transfer name with the "Create a new process number" link visible
-..   when empty. Path: open a draft transfer that has no process number set yet.
-.. stock_helpers-process-number-form.png: a Process Number form showing the "Stock Pickings"
-..   smart button (truck icon) with a count, and the linked transfers listed under the Stock
-..   Pickings group. Path: Inventory/Sales --> Process Numbers --> open one with linked transfers.
-.. stock_helpers-catalog-button.png: the Transfer form, Operations tab, operations line list with
-..   the "Add a line" control and the "Catalog" link button next to it. Path: open a draft
-..   transfer, Operations tab.
-.. stock_helpers-catalog-kanban.png: the product catalog kanban view opened from a transfer,
-..   showing product tiles with quantity steppers and no price shown, and the "Back to Picking"
-..   button in the top-right. Path: on a draft transfer, Operations tab, click "Catalog".
-
 Key features
 ============
 
@@ -64,8 +28,8 @@ These helpers require no settings screen. Once the relevant module is installed,
 field or column appears automatically on the standard :guilabel:`Transfer` form and/or the
 :guilabel:`Transfers` list view (:menuselection:`Inventory --> Transfers`). Every module builds on
 top of the eYssen :guilabel:`Inventory` layer (``eyssen_stock`` and/or ``eyssen_base``); the
-process-number helper additionally requires the ``eyssen_process_number`` module, which defines
-the shared :guilabel:`Process Number` record.
+process-number helper additionally requires the ``process_number`` module, which defines the
+shared :guilabel:`Process Number` record.
 
 .. note::
    The bulk-add-products wizard reads Excel files with the ``openpyxl`` Python library, listed in
@@ -78,8 +42,14 @@ Usage
 Add items from a previous transfer
 -----------------------------------
 
-.. image:: stock_helpers/stock_helpers-previous-item-button.png
-   :alt: Add Previous Items button on a draft transfer
+.. screenshot:: inventory-stock-helpers-previous-items-button
+   :menu: Inventory ‣ Transfers ‣ (a draft transfer) ‣ Operations tab
+   :shows: A draft transfer form with the "Add Previous Items" button (files icon) at the top-right of the
+      operations block.
+   :highlight: The "Add Previous Items" button (red frame).
+   :data: Draft transfer WH/INT/00001 with no lines yet.
+   :module: eyssen_add_item_from_previous_stock
+   :notes: English UI, light theme, 1440px width, crop to the operations block header.
 
 On a transfer that is still in the :guilabel:`Draft` state, the :guilabel:`Add Previous Items`
 button (files icon, top-right of the operations block) opens a popup where you pick a
@@ -87,8 +57,14 @@ button (files icon, top-right of the operations block) opens a popup where you p
 can be selected, and the picker searches by both the transfer's :guilabel:`Reference` and its
 source document (:guilabel:`Origin`).
 
-.. image:: stock_helpers/stock_helpers-previous-item-wizard.png
-   :alt: Add Previous Items wizard with duplication behavior
+.. screenshot:: inventory-stock-helpers-previous-items-wizard
+   :menu: Inventory ‣ Transfers ‣ (a draft transfer) ‣ Add Previous Items
+   :shows: The "Add Previous Items" pop-up with the "Previous Stock" field set to another transfer and the
+      "If Product Duplication" field showing its four choices (Stop, Skip, Replace, Increase).
+   :highlight: The "Previous Stock" and "If Product Duplication" fields (red frame).
+   :data: Source transfer WH/INT/00001, duplication behaviour "Increase".
+   :module: eyssen_add_item_from_previous_stock
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 Every product line from the selected transfer is copied over, together with its quantity and unit
 price. The :guilabel:`If Product Duplication` field controls what happens when a product from the
@@ -106,15 +82,27 @@ New lines are created on the destination location of the current transfer's oper
 Bulk-add products to a transfer
 --------------------------------
 
-.. image:: stock_helpers/stock_helpers-bulk-add-button.png
-   :alt: Add Bulk Products button on a draft transfer
+.. screenshot:: inventory-stock-helpers-bulk-add-button
+   :menu: Inventory ‣ Transfers ‣ (a draft transfer) ‣ Operations tab
+   :shows: A draft transfer form showing the "Add Bulk Products" button (cubes icon) next to the "Add
+      Previous Items" button.
+   :highlight: The "Add Bulk Products" button (red frame).
+   :data: Draft transfer WH/INT/00002.
+   :module: eyssen_product_bulk_add_stock
+   :notes: English UI, light theme, 1440px width, crop to the operations block header.
 
 The :guilabel:`Add Bulk Products` button (cubes icon), shown next to :guilabel:`Add Previous
 Items` on a draft transfer, opens a wizard for entering many products at once without touching a
 previous transfer.
 
-.. image:: stock_helpers/stock_helpers-bulk-add-wizard.png
-   :alt: Add Bulk Products wizard, Copy/Paste format
+.. screenshot:: inventory-stock-helpers-bulk-add-paste
+   :menu: Inventory ‣ Transfers ‣ (a draft transfer) ‣ Add Bulk Products
+   :shows: The "Add Bulk Products" wizard with Format "Copy/Paste", Based On "Default Code", "With Quantity"
+      ticked, the live Example block and the multi-line paste box filled with three lines.
+   :highlight: The "Format", "Based On" and "With Quantity" fields (red frame).
+   :data: Three pasted lines of internal reference plus quantity.
+   :module: eyssen_product_bulk_add_stock
+   :notes: English UI, light theme, 1440px width, crop to the wizard.
 
 Three input :guilabel:`Format` options are available:
 
@@ -124,8 +112,14 @@ Three input :guilabel:`Format` options are available:
 - :guilabel:`Excel` — an uploaded ``.xlsx`` workbook (first sheet), also with the optional header
   toggle.
 
-.. image:: stock_helpers/stock_helpers-bulk-add-wizard-csv.png
-   :alt: Add Bulk Products wizard, CSV format with header toggle
+.. screenshot:: inventory-stock-helpers-bulk-add-csv
+   :menu: Inventory ‣ Transfers ‣ (a draft transfer) ‣ Add Bulk Products
+   :shows: The same wizard with Format switched to "CSV", showing the "Is there a header?" checkbox and the
+      file upload field.
+   :highlight: The "Is there a header?" checkbox and the upload field (red frame).
+   :data: A semicolon-separated CSV file with a header row.
+   :module: eyssen_product_bulk_add_stock
+   :notes: English UI, light theme, 1440px width, crop to the wizard.
 
 For every format, products are matched with the :guilabel:`Based On` field, which looks products
 up by :guilabel:`Default Code` (internal reference), :guilabel:`Barcode` or :guilabel:`Product
@@ -144,8 +138,14 @@ transfer.
 Total quantity display
 -----------------------
 
-.. image:: stock_helpers/stock_helpers-quantity-total.png
-   :alt: Sum Qty detailed box on the transfer form
+.. screenshot:: inventory-stock-helpers-sum-qty-detailed
+   :menu: Inventory ‣ Transfers ‣ (a transfer) ‣ Operations tab
+   :shows: The bottom of a transfer's Operations tab with the read-only "Sum Qty (detailed)" box below the
+      lines, showing the number of distinct products and one total line per unit of measure.
+   :highlight: The "Sum Qty (detailed)" box (red frame).
+   :data: A transfer with three product lines in two different units of measure (e.g. 3 kg and 12 Units).
+   :module: eyssen_quantity_total_stock
+   :notes: English UI, light theme, 1440px width, crop to the box and the lines above it.
 
 On the :guilabel:`Operations` tab of a transfer, below the product lines, a read-only
 :guilabel:`Sum Qty (detailed)` box shows how many distinct products the transfer contains and the
@@ -153,8 +153,13 @@ total quantity per unit of measure — for example *3 kg* and *12 Units* on sepa
 transfer mixes UoMs. If any line already has recorded (done) quantities, those are used instead of
 the planned quantities.
 
-.. image:: stock_helpers/stock_helpers-quantity-total-list.png
-   :alt: Compact Sum Qty column in the Transfers list view
+.. screenshot:: inventory-stock-helpers-sum-qty-column
+   :menu: Inventory ‣ Transfers
+   :shows: The Transfers list view with the compact "Sum Qty" column shown next to the Status column.
+   :highlight: The "Sum Qty" column (red frame).
+   :data: Five transfers with different numbers of lines; the column shows values like "3 P, 42 Qty".
+   :module: eyssen_quantity_total_stock
+   :notes: English UI, light theme, 1440px width, full list view.
 
 The same information is available in a compact one-line form (:guilabel:`Sum Qty`, e.g. *3 P, 42
 Qty*) as an optional column in the :guilabel:`Transfers` list view, next to the status column, so
@@ -163,18 +168,30 @@ totals can be scanned without opening each transfer.
 Process number on a transfer
 ------------------------------
 
-.. image:: stock_helpers/stock_helpers-process-number-field.png
-   :alt: Process Number field on a draft transfer form
+.. screenshot:: inventory-stock-helpers-process-number-field
+   :menu: Inventory ‣ Transfers ‣ (a draft transfer)
+   :shows: A draft transfer form with the "Process Number" field above the transfer name and the "Create a
+      new process number" link visible because the field is still empty.
+   :highlight: The "Process Number" field and the create link (red frame).
+   :data: Draft transfer WH/INT/00003 with no process number yet.
+   :module: process_number_stock
+   :notes: English UI, light theme, 1440px width, crop to the form header.
 
-When the ``eyssen_process_number_stock`` module is installed, every transfer form shows a
+When the ``process_number_stock`` module is installed, every transfer form shows a
 :guilabel:`Process Number` field above the transfer's name. If it is empty, a :guilabel:`Create a
 new process number` link creates one on the spot; an existing process number can also be selected
 directly. This links the transfer to the shared eYssen :guilabel:`Process Number` record (a
 trackable reference with assignees and a description, used to group related documents across
 modules).
 
-.. image:: stock_helpers/stock_helpers-process-number-form.png
-   :alt: Stock Pickings smart button on a Process Number form
+.. screenshot:: inventory-stock-helpers-process-number-form
+   :menu: Inventory ‣ Process Numbers ‣ (a process number)
+   :shows: A Process Number form with the "Stock Pickings" smart button (truck icon) showing a count, and
+      the linked transfers listed below.
+   :highlight: The "Stock Pickings" smart button (red frame).
+   :data: A process number linked to three transfers.
+   :module: process_number_stock
+   :notes: English UI, light theme, 1440px width, crop to the button box and the linked transfers.
 
 From the :guilabel:`Process Number` form itself, a :guilabel:`Stock Pickings` smart button shows
 how many transfers are linked to it and opens their list, and the transfer list view gains a
@@ -187,15 +204,26 @@ how many transfers are linked to it and opens their list, and the transfer list 
 Stock catalog
 --------------
 
-.. image:: stock_helpers/stock_helpers-catalog-button.png
-   :alt: Catalog button in the operations line list
+.. screenshot:: inventory-stock-helpers-catalog-button
+   :menu: Inventory ‣ Transfers ‣ (a draft transfer) ‣ Operations tab
+   :shows: The operations line list of a draft transfer with the "Catalog" link next to "Add a line".
+   :highlight: The "Catalog" link (red frame).
+   :data: Draft transfer WH/INT/00004 with one line.
+   :module: eyssen_stock_catalog
+   :notes: English UI, light theme, 1440px width, crop to the bottom of the operations list.
 
 On a draft transfer's :guilabel:`Operations` tab, a :guilabel:`Catalog` link next to
 :guilabel:`Add a line` opens the standard Odoo product catalog kanban view scoped to the transfer,
 the same picker used on sales and purchase orders.
 
-.. image:: stock_helpers/stock_helpers-catalog-kanban.png
-   :alt: Product catalog kanban opened from a transfer, no price shown
+.. screenshot:: inventory-stock-helpers-catalog-kanban
+   :menu: Inventory ‣ Transfers ‣ (a draft transfer) ‣ Operations tab ‣ Catalog
+   :shows: The product catalog opened from a transfer, with product cards carrying quantity steppers but no
+      unit price, and the "Back to Picking" button in the top-right.
+   :highlight: The "Back to Picking" button and the absence of a price on the cards (red frames).
+   :data: Six or seven products, two of them already added to the transfer.
+   :module: eyssen_stock_catalog
+   :notes: English UI, light theme, 1440px width, full catalog page.
 
 Selecting a quantity for a product on a catalog tile adds or updates the matching operation line
 on the transfer (removing it entirely if the quantity is set to zero); the button used to return
@@ -213,7 +241,7 @@ Scope and modules
   product lines from pasted text, CSV or Excel.
 - ``eyssen_quantity_total_stock`` — the :guilabel:`Sum Qty (detailed)` / :guilabel:`Sum Qty`
   computed totals on the transfer form and list view.
-- ``eyssen_process_number_stock`` — the :guilabel:`Process Number` field on transfers and the
-  reverse :guilabel:`Stock Pickings` smart button.
+- ``process_number_stock`` — the :guilabel:`Process Number` field on transfers and the reverse
+  :guilabel:`Stock Pickings` smart button (requires ``process_number``).
 - ``eyssen_stock_catalog`` — the :guilabel:`Catalog` button that opens the product catalog picker
   on a transfer.

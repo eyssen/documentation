@@ -5,46 +5,10 @@ Multi-warehouse operations
 Companies that stock the same products in more than one warehouse need three things standard Odoo
 does not fully provide out of the box: a controlled way to move goods *between* warehouses through
 an arbitrary number of pick/pack/ship steps, the ability to source individual sales order lines from
-different warehouses instead of one warehouse per order, and a webshop that pools availability across
-several warehouses instead of a single one. The eYssen multi-warehouse modules add all three, plus
-carrier-specific pickup/delivery address logic for internal transfers shipped through the eYssen
-**Custom** and **GLS** delivery integrations.
-
-.. Screenshot plan:
-.. - multi_warehouse-warehouse-config.png: Warehouse form, "Inter Warehouse Transfer" notebook page,
-..   with "Can be used for internal transit" checked and both an Out Steps and an In Steps list
-..   populated, plus the green/orange validity banner. Path: Inventory --> Configuration -->
-..   Warehouses --> open a warehouse --> Inter Warehouse Transfer tab.
-.. - multi_warehouse-warehouse-steps-list.png: The standalone "Warehouse Steps" list showing rows for
-..   several warehouses with their Direction (In/Out), Operation Type, Source and Destination Location
-..   columns. Path: Inventory --> Configuration --> Warehouse Steps.
-.. - multi_warehouse-picking-type-config.png: An Operation Type form scrolled to the "Package In" /
-..   "Package Out" / "All In Packing" / "Allow Reverse Picking" checkboxes (with Reverse Picking Type
-..   visible once Allow Reverse Picking is checked). Path: Inventory --> Configuration --> Operation
-..   Types --> open one --> scroll near "Show Entire Packs".
-.. - multi_warehouse-transfer-list.png: The Internal Transfers list with a few records in different
-..   states (Draft, Waiting for Source Warehouse, In Transit, Done) so the colored state badges are
-..   visible. Path: Inventory --> Transfers --> Internal Transfers.
-.. - multi_warehouse-transfer-form-draft.png: A draft Internal Transfer form with Source Warehouse,
-..   Destination Warehouse and Carrier filled in, and the "Create Picking" / "Create Orders" / "Start
-..   Transfer" header buttons visible. Path: Internal Transfers --> New.
-.. - multi_warehouse-transfer-pickings-chain.png: A confirmed Internal Transfer form, Pickings tab,
-..   showing several chained pickings (one per step) with different states, ending in a Done picking
-..   at the destination warehouse. Path: open an in-progress Internal Transfer --> Pickings tab.
-.. - multi_warehouse-picking-internal-header.png: A stock.picking form that belongs to an internal
-..   transfer, showing the transfer-specific header (Mark as Todo / Check Availability / Validate /
-..   Print) and the "View Int.Transfer" smart button in the button box. Path: open one of the pickings
-..   from the Pickings tab above.
-.. - multi_warehouse-sale-order-line-warehouse.png: A sales order form (multi-warehouse group enabled)
-..   with the order line list showing the per-line "Warehouse" column, two lines set to two different
-..   warehouses. Path: Sales --> Orders --> New --> add two order lines --> show the Warehouse column.
-.. - multi_warehouse-gls-tracking-package.png: An outgoing picking that belongs to an internal transfer
-..   and is configured for GLS ("Package In" operation type), showing a stock.quant.package with its
-..   GLS tracking status/parcel number. Path: open an internal-transfer outgoing picking with GLS
-..   packaging --> Detailed Operations / package.
-.. - multi_warehouse-website-settings.png: Website --> Configuration --> Settings, scrolled to the
-..   Shop - Products section, showing the "Warehouse" field (core) and the eYssen "More Warehouses"
-..   many2many-tags field underneath it, populated with two or more warehouses.
+different warehouses instead of one warehouse per order, and a webshop whose availability is
+computed from several warehouses (or from explicit stock rules) instead of a single warehouse. The
+eYssen multi-warehouse modules add all three, plus carrier-specific pickup/delivery address logic
+for internal transfers shipped through the eYssen **Custom** and **GLS** delivery integrations.
 
 Key features
 ============
@@ -52,15 +16,22 @@ Key features
 Inter-warehouse transfers
 --------------------------
 
-.. image:: multi_warehouse/multi_warehouse-transfer-form-draft.png
-   :alt: Draft Internal Transfer form with source/destination warehouse and carrier
+.. screenshot:: inventory-multi-warehouse-transfer-draft
+   :menu: Inventory ‣ Transfers ‣ Internal Transfers ‣ New
+   :shows: A draft internal transfer form with the Source Warehouse, Destination Warehouse and Carrier
+      filled in, and the "Create Picking", "Create Orders" and "Start Transfer" buttons in the header.
+   :highlight: The header buttons (red frame).
+   :data: Source "YourCompany HU", destination "Store", carrier "GLS"; transfer reference IT000001.
+   :module: eyssen_stock_multi_warehouse
+   :notes: English UI, light theme, 1440px width, crop to the header and the main fields.
 
-A new ``stock.internal.transfer`` record represents one shipment of goods from a **Source
+An :guilabel:`Internal Transfer` record represents one shipment of goods from a **Source
 Warehouse** to a **Destination Warehouse**, both of which must be flagged as usable for internal
 transit (see :ref:`multi_warehouse/configuration`). The record is automatically classified as an
 :guilabel:`Intracompany transfer` or an :guilabel:`Intercompany transfer` depending on whether the
-two warehouses belong to the same company, and it tracks a **Carrier**, a sequence-based
-**Transfer Reference** (``IT000001``, ...) and a rollup of the transferred quantities.
+two warehouses belong to the same company, and it carries a required :guilabel:`Carrier`, a
+sequence-based transfer reference (``IT000001``, …), an optional :guilabel:`Description` and a
+rollup of the transferred quantities (:guilabel:`Sum Qty`).
 
 An internal transfer moves through the following states: :guilabel:`Draft` →
 :guilabel:`Waiting for Source Warehouse` → :guilabel:`Source Processing` → :guilabel:`In Transit`
@@ -72,22 +43,39 @@ they leave the draft state.
   directly, using the first configured out-step of the source warehouse.
 - For an **intercompany** transfer, :guilabel:`Create Orders` instead creates a linked
   :guilabel:`Source Order` (a sales order on the source company) and a :guilabel:`Destination
-  Order` (a purchase order on the destination company), and finding the right cross-company
-  partner records automatically where possible.
+  Order` (a purchase order on the destination company), resolving the cross-company partner
+  records automatically where possible.
 - :guilabel:`Start Transfer` confirms the first picking and moves the transfer to
   :guilabel:`Waiting for Source Warehouse`.
+
+.. screenshot:: inventory-multi-warehouse-transfer-list
+   :menu: Inventory ‣ Transfers ‣ Internal Transfers
+   :shows: The Internal Transfers list with records in different states (Draft, Waiting for Source Warehouse,
+      In Transit, Done), so the coloured state badges are visible, next to the transfer reference, the source
+      and destination warehouse and the carrier.
+   :highlight: The "State" column (red frame).
+   :data: Four internal transfers, one per state.
+   :module: eyssen_stock_multi_warehouse
+   :notes: English UI, light theme, 1440px width, full list view.
 
 Multi-step routing between warehouses
 --------------------------------------
 
-.. image:: multi_warehouse/multi_warehouse-warehouse-config.png
-   :alt: Warehouse form, Inter Warehouse Transfer tab with In/Out steps and validity banner
+.. screenshot:: inventory-multi-warehouse-warehouse-steps
+   :menu: Inventory ‣ Configuration ‣ Warehouses ‣ (a warehouse) ‣ Inter Warehouse Transfer tab
+   :shows: The "Inter Warehouse Transfer" tab with "Can be used for internal transit" ticked, a populated
+      Out Steps list and In Steps list, and the validity banner below them.
+   :highlight: The two step lists and the validity banner (red frames).
+   :data: Two out steps (Pick, Ship) and two in steps (Receive, Store) on the warehouse "YourCompany HU";
+      the banner reads "Step settings are valid."
+   :module: eyssen_stock_multi_warehouse
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 Each warehouse that can act as a source or destination of an internal transfer defines its own
-chain of **Out Steps** (how goods leave the warehouse toward the transit location) and **In
-Steps** (how goods arrive from the transit location into the warehouse). Every step is a
-``stock.warehouse.step`` record pointing to an :guilabel:`Operation Type`; source and destination
-locations are read from that operation type.
+chain of :guilabel:`Out Steps` (how goods leave the warehouse toward the transit location) and
+:guilabel:`In Steps` (how goods arrive from the transit location into the warehouse). Every step
+points to an :guilabel:`Operation Type`, and the step's source and destination location are read
+from that operation type.
 
 The system automatically renumbers and validates the chain whenever steps are added, edited or
 removed:
@@ -99,38 +87,59 @@ removed:
 - consecutive steps must connect (each step's destination must equal the next step's source), and
   the chain may not contain loops.
 
-The warehouse form shows a live validity banner (:guilabel:`it_settings_valid_msg`) summarizing
-any problem found; :guilabel:`Inter Warehouse Transfer` fields other than the toggle are hidden
-until :guilabel:`Can be used for internal transit` is checked. As an internal transfer's pickings
-are validated one by one, :guilabel:`action_next_step` automatically creates the next picking in
-the chain — carrying over open moves, package levels and move-to-move links — until the goods
-reach the destination warehouse's stock location, at which point the transfer is marked
-:guilabel:`Done` (or :guilabel:`Reconciliation Required` if any quantity was under-delivered along
-the way).
+The warehouse form shows a live validity banner summarizing any problem found; the
+:guilabel:`Inter Warehouse Transfer` fields other than the toggle stay hidden until
+:guilabel:`Can be used for internal transit` is ticked. As the transfer's pickings are validated
+one by one, the next picking in the chain is created automatically — carrying over the open moves
+and the packages — until the goods reach the destination warehouse's stock location, at which point
+the transfer is marked :guilabel:`Done`, or :guilabel:`Reconciliation Required` if any quantity was
+under-delivered along the way.
 
-.. image:: multi_warehouse/multi_warehouse-transfer-pickings-chain.png
-   :alt: Internal Transfer form, Pickings tab with a chain of pickings across steps
+.. screenshot:: inventory-multi-warehouse-pickings-chain
+   :menu: Inventory ‣ Transfers ‣ Internal Transfers ‣ (an in-progress transfer) ‣ Pickings tab
+   :shows: The Pickings tab of a confirmed internal transfer, listing one picking per step with different
+      statuses, ending with a Done picking at the destination warehouse.
+   :highlight: The chain of pickings and their statuses (red frame).
+   :data: Four pickings: two Done at the source, one In Transit, one Ready at the destination.
+   :module: eyssen_stock_multi_warehouse
+   :notes: English UI, light theme, 1440px width, crop to the tab.
+
+.. screenshot:: inventory-multi-warehouse-warehouse-steps-list
+   :menu: Inventory ‣ Configuration ‣ Warehouse Steps
+   :shows: The standalone "Warehouse Steps" list with rows for several warehouses, showing the Warehouse,
+      Direction (In/Out), Operation Type, Source Location and Destination Location columns.
+   :highlight: None.
+   :data: Two warehouses, each with two out steps and two in steps.
+   :module: eyssen_stock_multi_warehouse
+   :notes: English UI, light theme, 1440px width, full list view.
 
 .. note::
-   A ``stock.internal.transfer.template`` model exists to pre-fill a warehouse's step chain from a
-   reusable template, but only the template's :guilabel:`Name` is currently implemented — the
-   template selector on the warehouse form (:guilabel:`Create Steps from Template`) does not yet
-   populate the steps.
+   A step **template** is foreseen for pre-filling a warehouse's step chain from a reusable
+   definition, but only the template's :guilabel:`Name` is implemented so far — the
+   :guilabel:`Create Steps from Template` selector on the warehouse form does not yet populate the
+   steps.
 
 Packaging, unpacking and reverse pickings
 -------------------------------------------
 
-.. image:: multi_warehouse/multi_warehouse-picking-type-config.png
-   :alt: Operation Type form with Package In / Package Out / Allow Reverse Picking options
+.. screenshot:: inventory-multi-warehouse-operation-type-options
+   :menu: Inventory ‣ Configuration ‣ Operations Types ‣ (an operation type)
+   :shows: The operation type form scrolled to the "Package In", "Package Out", "All In Packing" and "Allow
+      Reverse Picking" checkboxes, with the "Reverse Picking Type" field visible because "Allow Reverse
+      Picking" is ticked.
+   :highlight: The four checkboxes and the "Reverse Picking Type" field (red frame).
+   :data: Operation type used as an out step; Package In and Allow Reverse Picking ticked.
+   :module: eyssen_stock_multi_warehouse
+   :notes: English UI, light theme, 1440px width, crop to the option block near "Show Entire Packs".
 
 Each :guilabel:`Operation Type` gains four extra options used by the transfer chain:
 
-- :guilabel:`Package In` — the picking must have every move covered by a package before it can be
-  validated (:guilabel:`button_validate` raises an error otherwise); when this is set on the step
-  the transfer's carrier is copied onto the picking automatically.
+- :guilabel:`Package In` — the picking can only be validated once every move is covered by a
+  package; when this option is set on the step, the transfer's carrier is copied onto the picking
+  automatically.
 - :guilabel:`Package Out` — the picking must be fully unpacked (no remaining package levels)
   before it can be validated.
-- :guilabel:`All In Packing` — reserved flag for packaging rules (no validation logic yet).
+- :guilabel:`All In Packing` — reserved for future packaging rules; it has no effect yet.
 - :guilabel:`Allow Reverse Picking` and :guilabel:`Reverse Picking Type` — when a picking is
   validated with a shortfall (delivered quantity lower than demanded), the shortfall is
   automatically split into a **reverse picking** on the chosen operation type (or the same one if
@@ -141,8 +150,15 @@ Each :guilabel:`Operation Type` gains four extra options used by the transfer ch
 Custom and GLS delivery for internal transfers
 -------------------------------------------------
 
-.. image:: multi_warehouse/multi_warehouse-picking-internal-header.png
-   :alt: Picking form for an internal-transfer leg with the internal-transfer header and smart button
+.. screenshot:: inventory-multi-warehouse-picking-header
+   :menu: Inventory ‣ Transfers ‣ Internal Transfers ‣ (a transfer) ‣ Pickings tab ‣ (a picking)
+   :shows: A picking that belongs to an internal transfer, with the transfer-specific header buttons ("Mark
+      as Todo", "Check Availability", "Validate", "Print") and the "View Int.Transfer" smart button in the
+      button box.
+   :highlight: The header buttons and the "View Int.Transfer" smart button (red frames).
+   :data: One leg of the transfer IT000001.
+   :module: eyssen_stock_multi_warehouse
+   :notes: English UI, light theme, 1440px width, crop to the header and button box.
 
 Pickings that belong to an internal transfer use a dedicated header (:guilabel:`Mark as Todo`,
 :guilabel:`Check Availability`, :guilabel:`Validate`, :guilabel:`Print`) instead of the standard
@@ -153,29 +169,40 @@ When the **Custom** or **GLS** delivery modules build the shipping label for a p
 belongs to an internal transfer, the pickup and delivery addresses are taken from the *transfer's*
 source and destination warehouse partners instead of the sale order's customer:
 
-- ``eyssen_stock_multi_warehouse_delivery_custom`` overrides ``custom_pickupaddress`` /
-  ``custom_deliveryaddress`` on ``stock.picking`` to resolve the source/destination warehouse
-  partner.
-- ``eyssen_stock_multi_warehouse_delivery_gls`` overrides ``gls_pickupaddress`` /
-  ``gls_deliveryaddress`` the same way, additionally prefixing the resulting name with the
-  warehouse's company name (``<Company> - <Partner>``) so the GLS label clearly shows which
-  company location is shipping or receiving.
+- ``eyssen_stock_multi_warehouse_delivery_custom`` resolves the pickup and delivery address from
+  the source and destination warehouse's contact for the eYssen *Custom* carrier.
+- ``eyssen_stock_multi_warehouse_delivery_gls`` does the same for GLS, and additionally prefixes
+  the name with the warehouse's company (``<Company> - <Contact>``) so the GLS label clearly shows
+  which company location is shipping or receiving.
 
-.. image:: multi_warehouse/multi_warehouse-gls-tracking-package.png
-   :alt: Internal-transfer picking with a GLS-tracked package
+.. screenshot:: inventory-multi-warehouse-gls-package
+   :menu: Inventory ‣ Transfers ‣ Internal Transfers ‣ (a transfer) ‣ Pickings tab ‣ (a GLS leg) ‣ (package)
+   :shows: A package of an internal-transfer outgoing picking shipped through GLS, showing its GLS parcel
+      number and tracking status.
+   :highlight: The GLS parcel number and tracking status (red frame).
+   :data: One package with a GLS parcel number; use a throw-away parcel number, not a real one.
+   :module: eyssen_stock_multi_warehouse_delivery_gls
+   :notes: English UI, light theme, 1440px width, crop to the package fields.
 
-For GLS, once every package on a picking reaches GLS tracking status ``05`` (handed over), the
-picking is validated automatically — this lets a multi-step transfer leg complete itself as soon
-as GLS confirms all parcels have moved, without a warehouse user manually clicking
-:guilabel:`Validate`. GLS parcel identifiers (:guilabel:`gls_parcel_id`,
-:guilabel:`gls_parcel_number`) are also carried over onto the repackaged package created for each
-next step, and the transfer list/search can look transfers up by GLS tracking number.
+For GLS, once every package on a picking reaches the *handed over* GLS tracking status, the picking
+is validated automatically — so a multi-step transfer leg completes itself as soon as GLS confirms
+all parcels have moved, without a warehouse user clicking :guilabel:`Validate`. The GLS parcel
+identifiers are carried over onto the repackaged package created for the next step, and an internal
+transfer can be looked up by its :guilabel:`Package Number` or :guilabel:`Tracking Number` in the
+transfer list.
 
 Splitting sales orders across warehouses
 ------------------------------------------
 
-.. image:: multi_warehouse/multi_warehouse-sale-order-line-warehouse.png
-   :alt: Sales order lines with a per-line Warehouse column
+.. screenshot:: inventory-multi-warehouse-so-line-warehouse
+   :menu: Sales ‣ Orders ‣ Quotations ‣ New
+   :shows: A quotation whose order-line list shows the per-line "Warehouse" column, with two lines set to
+      two different warehouses.
+   :highlight: The "Warehouse" column (red frame).
+   :data: Line 1 from "YourCompany HU", line 2 from "Store".
+   :module: eyssen_sale_multiple_warehouse
+   :notes: English UI, light theme, 1440px width, crop to the order lines. The column requires the Multiple
+      Warehouses group.
 
 ``eyssen_sale_multiple_warehouse`` adds a required :guilabel:`Warehouse` field directly on
 **sales order lines**, defaulting to the salesperson's default warehouse. This lets a single
@@ -185,36 +212,79 @@ main warehouse and another from a regional one — instead of forcing the whole 
 
 - changing the order-level :guilabel:`Warehouse` field propagates that warehouse to every existing
   order line;
-- the line-level warehouse is passed into procurement (:guilabel:`_prepare_procurement_values`),
-  so each line generates its delivery from its own warehouse; and
-- the :guilabel:`Make to Order` indicator on a line is computed from that line's own warehouse
-  route, not the order's.
+- each line generates its delivery from its own warehouse; and
+- the :guilabel:`Make to Order` indicator on a line follows that line's own warehouse route, not
+  the order's.
 
-The :guilabel:`Warehouse` column is only shown to users in the **Multiple Warehouses** group
-(``stock.group_stock_multi_warehouses``, enabled automatically by Odoo once a company has more
-than one warehouse) and becomes read-only once the order leaves the :guilabel:`Quotation` /
-:guilabel:`Quotation Sent` stage.
+The :guilabel:`Warehouse` column is only shown to users in the **Multiple Warehouses** group, which
+Odoo enables automatically once a company has more than one warehouse, and becomes read-only once
+the order leaves the :guilabel:`Quotation` / :guilabel:`Quotation Sent` stage.
 
-Webshop stock pooling across warehouses
--------------------------------------------
+Webshop stock availability
+--------------------------
 
-.. image:: multi_warehouse/multi_warehouse-website-settings.png
-   :alt: Website settings with the More Warehouses field under Shop - Products
+``eyssen_website_sale_advanced_stock`` decides what availability the webshop shows, based on the
+pre-aggregated per-warehouse figures of :ref:`Advanced Stock
+<inventory/warehouses_storage/advanced-stock>` (see :doc:`stock_control`). A :guilabel:`Stock Mode` field on the website
+selects between two modes:
 
-``eyssen_website_sale_multiple_warehouse`` lets a website draw stock availability from **several**
-warehouses instead of the single core :guilabel:`Warehouse` field. A website with one or more
-:guilabel:`More Warehouses` selected pools its availability across all of them:
+- :guilabel:`Per Warehouse` — availability is the total across the warehouses listed in the
+  website's :guilabel:`Warehouses` field. This replaces the standard single
+  :guilabel:`Warehouse` of the webshop, and falls back to it when the list is empty.
+- :guilabel:`Rule-based` — availability is computed from explicit stock filters, which makes it
+  possible to distinguish *what can be shipped now* from *what is on its way*.
 
-- on a product page, the displayed :guilabel:`free_qty` (used for the "in stock" / quantity
-  widgets) is the sum of the *forecasted* quantity of the product across every warehouse in
-  :guilabel:`More Warehouses`, read from the pre-aggregated stock figures maintained by
-  ``eyssen_stock_advanced_stock``;
-- in the cart, the same pooled quantity is used to validate that a requested cart quantity does
-  not exceed what is available across those warehouses, instead of only the single website
-  warehouse.
+.. screenshot:: inventory-multi-warehouse-website-stock-mode
+   :menu: Website ‣ Configuration ‣ Settings
+   :shows: The "Shop - Products" section of the website settings with the standard "Warehouse" field, the
+      eYssen "Stock Mode" selector set to "Per Warehouse", and the "Warehouses" tags field below it holding
+      two warehouses.
+   :highlight: The "Stock Mode" selector and the "Warehouses" field (red frames).
+   :data: Website "eYssen Shop"; warehouses "YourCompany HU" and "Store".
+   :module: eyssen_website_sale_advanced_stock
+   :notes: English UI, light theme, 1440px width, crop to the Shop - Products section. The Stock Mode
+      selector is only visible to users in the Multiple Warehouses group.
 
-If a website has no :guilabel:`More Warehouses` configured, availability falls back to the order's
-own :guilabel:`Warehouse`, matching the standard single-warehouse ``website_sale_stock`` behavior.
+Rule-based mode
+~~~~~~~~~~~~~~~
+
+In :guilabel:`Rule-based` mode the website defines up to four availability levels. Each level has
+its own stock filter and its own :guilabel:`Quantity Type` — :guilabel:`Free to Use (On Hand -
+Reserved)`, :guilabel:`On Hand` or :guilabel:`Forecasted`:
+
+- :guilabel:`Available` — always active; this is the quantity the webshop treats as sellable.
+- :guilabel:`Immediate`, :guilabel:`Short Term` and :guilabel:`Long Term` — each switched on
+  separately, for showing longer delivery promises next to the immediately sellable quantity.
+
+A fifth, independent rule covers business customers:
+
+- :guilabel:`B2B Stock` — when enabled, a separate availability is computed from the selected
+  :guilabel:`Storage Categories`, optionally narrowed further by a :guilabel:`Domain Override`.
+
+.. screenshot:: inventory-multi-warehouse-website-stock-rules
+   :menu: Website ‣ Configuration ‣ Settings
+   :shows: The website settings with "Stock Mode" set to "Rule-based", showing the "Available" block with its
+      Quantity Type and filter, the "Immediate", "Short Term" and "Long Term" toggles, the "B2B Stock"
+      toggle with its Storage Categories field, and the "Recompute Stock" button at the bottom.
+   :highlight: The "Available" block and the "Recompute Stock" button (red frames).
+   :data: Available = Free to Use with no extra filter; Immediate enabled with Forecasted; B2B Stock enabled
+      with the storage category "Wholesale".
+   :module: eyssen_website_sale_advanced_stock
+   :notes: English UI, light theme, 1440px width, crop to the rule blocks.
+
+.. important::
+   Changing any of these settings does not recompute the stored figures. A warning banner appears
+   in the settings until the :guilabel:`Recompute Stock` button is used.
+
+.. note::
+   The availability shown on a product page and the check performed when a quantity is added to the
+   cart are both read live from stock, so a reservation made by a confirmed sales order is
+   reflected immediately even between two recomputations.
+
+.. note::
+   Requires ``eyssen_stock_advanced_stock``. The earlier
+   ``eyssen_website_sale_multiple_warehouse`` module, which only pooled forecasted stock across a
+   website's warehouses, is superseded by this one and is no longer shipped.
 
 .. _multi_warehouse/configuration:
 
@@ -225,8 +295,8 @@ Configuration
    creating a second warehouse for a company (:menuselection:`Inventory --> Configuration -->
    Warehouses --> New`) automatically activates the :guilabel:`Storage Locations` setting and
    grants the **Multiple Warehouses** access group to internal users. The per-line
-   :guilabel:`Warehouse` column on sales orders and the website's :guilabel:`More Warehouses`
-   field are only visible to users in this group.
+   :guilabel:`Warehouse` column on sales orders and the website's :guilabel:`Stock Mode` field are
+   only visible to users in this group.
 #. **Flag the warehouses used for internal transfers.** On each source and destination warehouse
    (:menuselection:`Inventory --> Configuration --> Warehouses`), open the
    :guilabel:`Inter Warehouse Transfer` tab and check :guilabel:`Can be used for internal
@@ -251,10 +321,11 @@ Configuration
 #. **Enable per-line warehouses on quotations** by installing ``eyssen_sale_multiple_warehouse`` —
    no extra settings screen is involved; the :guilabel:`Warehouse` order-line column appears as
    soon as the Multiple Warehouses group (step 1) is active.
-#. **Enable webshop stock pooling** by installing ``eyssen_website_sale_multiple_warehouse`` (which
+#. **Configure webshop availability** by installing ``eyssen_website_sale_advanced_stock`` (which
    requires ``eyssen_stock_advanced_stock``), then go to :menuselection:`Website --> Configuration
-   --> Settings`, scroll to the :guilabel:`Shop - Products` section, and fill in
-   :guilabel:`More Warehouses` next to the standard :guilabel:`Warehouse` field.
+   --> Settings`, scroll to the :guilabel:`Shop - Products` section, set :guilabel:`Stock Mode` and
+   either list the website's :guilabel:`Warehouses` or define the availability rules. Finish with
+   :guilabel:`Recompute Stock`.
 
 Usage
 =====
@@ -289,15 +360,14 @@ Selling from multiple warehouses on one order
    quotation.
 #. Confirm the order — each line generates its delivery from its own warehouse.
 
-Selling across pooled warehouses on the webshop
+Selling across several warehouses on the webshop
 ----------------------------------------------------
 
-#. Configure :guilabel:`More Warehouses` on the website as described in
-   :ref:`multi_warehouse/configuration`.
-#. On the shop, the quantity/availability shown for a storable product reflects the sum of
-   forecasted stock across all of those warehouses, not just one.
-#. When a customer adds a quantity to the cart, availability is validated against the same pooled
-   total.
+#. Set the website's :guilabel:`Stock Mode` and its :guilabel:`Warehouses` (or availability rules)
+   as described in :ref:`multi_warehouse/configuration`, then click :guilabel:`Recompute Stock`.
+#. On the shop, the availability shown for a storable product reflects the configured warehouses or
+   rules instead of a single warehouse.
+#. When a customer adds a quantity to the cart, it is validated against the same figure.
 
 Scope and modules
 ==================
@@ -311,5 +381,5 @@ Scope and modules
   GLS-parcel-aware auto-validation and package re-creation along the transfer chain.
 - ``eyssen_sale_multiple_warehouse`` — adds the per-order-line :guilabel:`Warehouse` field on sales
   orders.
-- ``eyssen_website_sale_multiple_warehouse`` — pools webshop stock availability and cart validation
-  across a website's configured :guilabel:`More Warehouses`.
+- ``eyssen_website_sale_advanced_stock`` — webshop availability per warehouse or from explicit
+  stock rules, with four availability levels and a separate B2B rule.

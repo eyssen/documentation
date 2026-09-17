@@ -10,44 +10,20 @@ company-wide, whether preorder and backorder sales are allowed at all. Sales ord
 policy are flagged with an on-screen warning and are blocked from being sent or confirmed until the
 issue is resolved.
 
-.. Screenshot plan:
-   .. out_of_stock_ordering-settings.png — Settings > General Settings, eYssen ERP app tab, "Sale"
-      section, with the "Sale Out of Stock Ordering (Preorder, Backorder)" checkbox enabled and the
-      resulting "Out of Stock Mode", "Preorder Default Policy", "Backorder Default Policy",
-      "Preorder Mixed Policy" and "Backorder Mixed Policy" fields visible.
-      Click path: Settings --> General Settings --> eYssen ERP tab --> Sale section.
-   .. out_of_stock_ordering-product-status-auto.png — Storable product form, General Information tab,
-      "Sale Out of Stock" section, with "Out of Stock Mode" set to Auto: shows the read-only
-      "Sale Stock Status" badge (e.g. red Backorder) plus the "Preorder Policy" and "Backorder Policy"
-      selection fields.
-      Click path: Sales --> Products --> Products --> open a storable product.
-   .. out_of_stock_ordering-product-status-manual.png — Same product form and section, but with
-      "Out of Stock Mode" set to Manual: shows the editable, colored "Sale Stock Status" selection
-      field instead of the computed badge.
-      Click path: Settings --> General Settings, switch "Out of Stock Mode" to Manual and save, then
-      reopen the product from Sales --> Products --> Products.
-   .. out_of_stock_ordering-bulk-update.png — Products list view with several storable products
-      selected, "Actions" (gear icon) menu open on "Bulk Update", showing the "Sale Out of Stock
-      Status" field in the wizard (Manual mode).
-      Click path: Sales --> Products --> Products --> select several products --> Actions --> Bulk
-      Update.
-   .. out_of_stock_ordering-order-warning.png — Quotation form with a red warning banner above the
-      order lines listing which products cannot be sold as Preorder/Backorder, plus the colored
-      "Sale Stock Status" badge column next to the Quantity column in the order lines list.
-      Click path: Sales --> Orders --> New --> add a customer and an out-of-stock product whose
-      Preorder or Backorder Policy is Disabled.
-   .. out_of_stock_ordering-confirm-blocked.png — Error dialog shown after clicking Confirm on the
-      quotation from the previous screenshot, displaying the "You cannot confirm this sale order due
-      to out of stock status." message.
-      Click path: on the quotation from the previous shot, click Confirm.
-
 How stock status is determined
 ===============================
 
-.. image:: out_of_stock_ordering/out_of_stock_ordering-product-status-auto.png
-   :alt: Sale Out of Stock section on a storable product's form, in Auto mode
+.. screenshot:: inventory-out-of-stock-product-auto
+   :menu: Inventory ‣ Products ‣ Products ‣ (a storable product) ‣ General Information tab
+   :shows: The "Sale Out of Stock" section of a product form in Auto mode: the read-only "Sale Stock Status"
+      badge (red "Backorder") next to the "Preorder Policy" and "Backorder Policy" selection fields.
+   :highlight: The "Sale Stock Status" badge (red frame).
+   :data: A storable product with a forecasted quantity of -3 and earlier stock moves, so the status is
+      Backorder.
+   :module: eyssen_sale_out_of_stock
+   :notes: English UI, light theme, 1440px width, crop to the section; the badge colour must be visible.
 
-Every **storable** product (the *Track Inventory* product type) gets a :guilabel:`Sale Stock Status`
+Every **storable** product (:guilabel:`Goods` with :guilabel:`Track Inventory` enabled) gets a :guilabel:`Sale Stock Status`
 of :guilabel:`Order`, :guilabel:`Preorder` or :guilabel:`Backorder`. Products that are not storable
 (services, non-tracked consumables) are never classified — the feature does not apply to them.
 
@@ -68,8 +44,14 @@ and always reflects the latest stock position. How it is calculated depends on t
   :guilabel:`Sale Stock Status` field (:guilabel:`Order`, :guilabel:`Preorder` or
   :guilabel:`Backorder`) that a user sets directly, defaulting to :guilabel:`Order`.
 
-.. image:: out_of_stock_ordering/out_of_stock_ordering-product-status-manual.png
-   :alt: Sale Out of Stock section on a storable product's form, in Manual mode
+.. screenshot:: inventory-out-of-stock-product-manual
+   :menu: Inventory ‣ Products ‣ Products ‣ (a storable product) ‣ General Information tab
+   :shows: The same "Sale Out of Stock" section with the company-wide "Out of Stock Mode" set to Manual, so
+      "Sale Stock Status" is an editable, coloured selection field instead of a computed badge.
+   :highlight: The editable "Sale Stock Status" field (red frame).
+   :data: The same product with the manual status set to "Preorder".
+   :module: eyssen_sale_out_of_stock
+   :notes: English UI, light theme, 1440px width, crop to the section.
 
 .. note::
    :guilabel:`Out of Stock Mode` is a single, company-wide switch. It cannot be set per product —
@@ -108,8 +90,15 @@ statuses in a way the mixed policy forbids, the order is flagged as described in
 Configuration
 ==============
 
-.. image:: out_of_stock_ordering/out_of_stock_ordering-settings.png
-   :alt: Sale Out of Stock Ordering settings section
+.. screenshot:: inventory-out-of-stock-settings
+   :menu: Settings ‣ General Settings ‣ eYssen ERP ‣ Sale
+   :shows: The "Sale" section of the eYssen ERP settings with "Sale Out of Stock Ordering (Preorder,
+      Backorder)" enabled and the "Out of Stock Mode", "Preorder Default Policy", "Backorder Default
+      Policy", "Preorder Mixed Policy" and "Backorder Mixed Policy" fields visible below it.
+   :highlight: The five policy fields (red frame).
+   :data: Mode Auto; both default policies Enabled; both mixed policies Not Allowed.
+   :module: eyssen_sale_out_of_stock
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 #. Go to :menuselection:`Settings --> General Settings`, open the :guilabel:`eYssen ERP` app tab, and
    enable :guilabel:`Sale Out of Stock Ordering (Preorder, Backorder)` in the :guilabel:`Sale`
@@ -130,16 +119,31 @@ per-product :guilabel:`Preorder Policy` / :guilabel:`Backorder Policy` overrides
    --> Products`, open :menuselection:`Actions --> Bulk Update`, and set :guilabel:`Sale Out of Stock
    Status` in the wizard before clicking :guilabel:`Update`.
 
-   .. image:: out_of_stock_ordering/out_of_stock_ordering-bulk-update.png
-      :alt: Bulk Update wizard with the Sale Out of Stock Status field
+   .. screenshot:: inventory-out-of-stock-bulk-update
+      :menu: Inventory ‣ Products ‣ Products ‣ (select several) ‣ Actions ‣ Bulk Update
+      :shows: The "Bulk Update" wizard with the "Sale Out of Stock Status" field set, ready to apply to the
+         selected products.
+      :highlight: The "Sale Out of Stock Status" field (red frame).
+      :data: Four selected storable products; status set to "Preorder"; Out of Stock Mode is Manual.
+      :module: eyssen_sale_out_of_stock, eyssen_product_bulk_update
+      :notes: English UI, light theme, 1440px width, crop to the wizard.
 
 .. _out-of-stock-ordering/usage:
 
 Usage
 ======
 
-.. image:: out_of_stock_ordering/out_of_stock_ordering-order-warning.png
-   :alt: Quotation with an out-of-stock policy warning above the order lines
+.. screenshot:: inventory-out-of-stock-order-warning
+   :menu: Sales ‣ Orders ‣ Quotations ‣ New
+   :shows: A quotation with a red warning banner above the order lines naming the products that cannot be
+      sold as Preorder or Backorder, and the coloured "Sale Stock Status" badge column next to the Quantity
+      column.
+   :highlight: The warning banner and the "Sale Stock Status" column (red frames).
+   :data: Two lines: one in-stock product (green Order) and one backordered product whose Backorder Policy
+      is Disabled.
+   :module: eyssen_sale_out_of_stock
+   :notes: English UI, light theme, 1440px width, crop to the banner and the order lines; the badge colours
+      must be visible.
 
 On a sales order, each order line displays its product's :guilabel:`Sale Stock Status` as a colored
 badge next to the :guilabel:`Quantity` column (green for :guilabel:`Order`, orange for
@@ -158,8 +162,14 @@ While that warning is present:
 both raising a validation error until the order lines no longer violate the policy — for example by
 removing the offending line, changing its quantity, or adjusting the product's policy.
 
-.. image:: out_of_stock_ordering/out_of_stock_ordering-confirm-blocked.png
-   :alt: Validation error raised when confirming an order with a policy violation
+.. screenshot:: inventory-out-of-stock-confirm-blocked
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (the same quotation) ‣ Confirm
+   :shows: The validation error shown when confirming the order: "You cannot confirm this sale order due to
+      out of stock status."
+   :highlight: The error text (red frame).
+   :data: The quotation from the previous screenshot.
+   :module: eyssen_sale_out_of_stock
+   :notes: English UI, light theme, 1440px width, crop to the error dialog.
 
 .. note::
    The warning and the block are purely advisory controls on the sales flow — they do not change

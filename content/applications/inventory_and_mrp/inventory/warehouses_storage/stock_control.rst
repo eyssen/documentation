@@ -4,57 +4,9 @@ Stock control and availability
 
 eYssen ships a set of small, focused *Stock* modules that tighten up how on-hand quantities are
 guarded and reported: a hard stop on negative stock, a per-warehouse breakdown of on-hand, free and
-forecasted quantities that is precomputed for fast list, kanban and sale-order views, and a set of
-physical size and load attributes on storage locations. All four are optional and are switched on
+forecasted quantities that is precomputed for fast list, kanban and sale-order views, and and a set of
+physical size and load attributes on storage locations. Each one is optional and is switched on
 independently from the eYssen settings screen.
-
-.. Screenshot plan:
-..
-.. - stock_control-negative-stock-settings.png
-..   Settings app --> eYssen ERP (left menu) --> Stock section. Capture the "Disallow Negative
-..   Stock" setting row with its help text.
-..
-.. - stock_control-negative-stock-product.png
-..   Open any storable product (Inventory app --> Products --> Products --> pick one), tab
-..   General Information, scroll to the Logistics/weight group. Capture the "Allow Negative Stock"
-..   checkbox next to the product's other logistics fields.
-..
-.. - stock_control-negative-stock-error.png
-..   Trigger the guard: on a product WITHOUT the override enabled, open an inventory adjustment or
-..   a delivery for a location with less stock than requested and validate it. Capture the
-..   resulting "You cannot validate this stock operation..." validation error dialog.
-..
-.. - stock_control-advanced-stock-settings.png
-..   Settings app --> eYssen ERP --> Stock section. Capture the "Advanced Stock" setting row plus,
-..   once enabled, the "Use Background Jobs (queue_job)" checkbox and the "Recompute All" button
-..   underneath it.
-..
-.. - stock_control-warehouse-config.png
-..   Inventory app --> Configuration --> Warehouses --> open a warehouse --> Warehouse
-..   Configuration tab. Capture the "Stock" group: "Calculate WH Stock on Product" and "Visible WH
-..   Stock on Product" checkboxes, and — after toggling one — the red "settings have changed"
-..   banner with the "Update All" button.
-..
-.. - stock_control-product-stock-widget.png
-..   Open a storable product form (General Information tab). Capture the read-only "Stock Data"
-..   widget showing one line per enabled warehouse (On Hand / Free / Forecasted) and the small
-..   refresh icon button next to it.
-..
-.. - stock_control-product-list-columns.png
-..   Inventory app --> Products --> Products, switch to list view, open the optional-columns
-..   (sliders) dropdown on the top-right of the list header. Capture the list with a couple of
-..   "<Warehouse> On Hand / Free / Forecasted" columns enabled, and the dropdown itself showing the
-..   available per-warehouse columns.
-..
-.. - stock_control-sale-order-line-popover.png
-..   Open a sale order with at least one confirmed line, click the delivery/availability icon
-..   next to a line's quantity to open the "Qty at Date" popover. Capture the popover with the
-..   added "All Warehouses" table at the bottom, listing on hand/free/forecasted per warehouse.
-..
-.. - stock_control-location-load.png
-..   Inventory app --> Configuration --> Locations --> open an internal location. Capture the
-..   "Size & Load" group with the length/width/height, dimension UoM, volume, volume UoM, weight
-..   and weight UoM fields.
 
 Preventing negative stock
 ==========================
@@ -65,6 +17,16 @@ module adds a hard validation guard: any stock move or adjustment that would lea
 negative quantity in an **internal** or **transit** location is rejected outright, unless an
 explicit override has been switched on for that product, its product category, or the location
 itself.
+
+.. screenshot:: inventory-stock-control-negative-stock-setting
+   :menu: Settings ‣ eYssen ERP ‣ Stock
+   :shows: The "Stock" block of the eYssen ERP settings page, with the "Disallow Negative Stock" setting row
+      and its help text ("If you turn it on, the system will not allow the stock to go negative by default.
+      Negative stock can be allowed on by stock location or by product.").
+   :highlight: The "Disallow Negative Stock" setting row (red frame).
+   :data: Demo company "YourCompany HU"; the setting enabled.
+   :module: eyssen_base, eyssen_stock_disallow_negative_stock
+   :notes: English UI, light theme, 1440px width, crop to the setting row.
 
 The guard only applies to **storable** products of type :guilabel:`Goods` (``type = 'consu'`` with
 ``is_storable`` set) — services and consumable-but-non-storable products are never checked.
@@ -79,19 +41,35 @@ being enabled is enough to allow negative stock for that combination:
 - the product category's :guilabel:`Logistics` group; and
 - the stock location's form.
 
-.. image:: stock_control/stock_control-negative-stock-product.png
-   :alt: Allow Negative Stock checkbox on a storable product
+.. screenshot:: inventory-stock-control-allow-negative-product
+   :menu: Inventory ‣ Products ‣ Products ‣ (a storable product) ‣ Inventory tab
+   :shows: The "Allow Negative Stock" checkbox on a storable product's Inventory tab, next to the other
+      logistics fields.
+   :highlight: The "Allow Negative Stock" checkbox (red frame).
+   :data: A storable product of type Goods; the checkbox left unticked.
+   :module: eyssen_stock_disallow_negative_stock
+   :notes: English UI, light theme, 1440px width, crop to the field group. The checkbox is only shown for
+      storable goods.
 
 If none of the three overrides is enabled and an operation would push the quantity below zero, Odoo
 blocks the operation with a validation error naming the product, its internal reference and the
 location.
 
-.. image:: stock_control/stock_control-negative-stock-error.png
-   :alt: Validation error raised when an operation would create negative stock
+.. screenshot:: inventory-stock-control-negative-stock-error
+   :menu: Inventory ‣ Delivery Orders ‣ (a delivery) ‣ Validate
+   :shows: The validation error raised when an operation would push a quant negative: "You cannot validate
+      this stock operation because the stock of the <product> (<reference>) at <location> would go
+      negative!"
+   :highlight: The error text (red frame).
+   :data: A product with no override enabled, delivering more than the quantity on hand at WH/Stock.
+   :module: eyssen_stock_disallow_negative_stock
+   :notes: English UI, light theme, 1440px width, crop to the error dialog.
 
 .. note::
    The check only looks at ``internal`` and ``transit`` location usages. Customer, vendor,
    inventory-loss and production locations are not covered by this guard.
+
+.. _inventory/warehouses_storage/advanced-stock:
 
 Per-warehouse stock data (Advanced Stock)
 ==========================================
@@ -102,8 +80,14 @@ result in a dedicated ``product.stock.data`` model (one row per product/warehous
 instead of recalculating it on every page load. This keeps product list, kanban and sale-order
 views fast even on large catalogs, while still reflecting stock changes automatically.
 
-.. image:: stock_control/stock_control-advanced-stock-settings.png
-   :alt: Advanced Stock setting and Recompute All button
+.. screenshot:: inventory-stock-control-advanced-stock-settings
+   :menu: Settings ‣ eYssen ERP ‣ Stock
+   :shows: The "Advanced Stock" setting row, with the "Use Background Jobs (queue_job)" checkbox and the
+      "Recompute All" button that appear underneath it once it is enabled.
+   :highlight: The "Use Background Jobs (queue_job)" checkbox and the "Recompute All" button (red frames).
+   :data: Advanced Stock enabled; queue_job installed.
+   :module: eyssen_stock_advanced_stock
+   :notes: English UI, light theme, 1440px width, crop to the setting rows.
 
 Per-warehouse opt-in
 ---------------------
@@ -117,8 +101,15 @@ Stock data is only computed for warehouses that are explicitly enabled. On each 
   dynamic optional columns and search filters on the product list and search views (only available
   once calculation is enabled).
 
-.. image:: stock_control/stock_control-warehouse-config.png
-   :alt: Warehouse Configuration tab with the Stock group and Update All button
+.. screenshot:: inventory-stock-control-warehouse-config
+   :menu: Inventory ‣ Configuration ‣ Warehouses ‣ (a warehouse) ‣ Warehouse Configuration tab
+   :shows: The "Stock" group of the Warehouse Configuration tab with the "Calculate WH Stock on Product" and
+      "Visible WH Stock on Product" checkboxes, and the red banner with the "Update All" button shown after
+      a switch was toggled.
+   :highlight: The two checkboxes and the "Update All" button (red frames).
+   :data: Warehouse "YourCompany HU" with calculation just enabled, so the banner is visible.
+   :module: eyssen_stock_advanced_stock
+   :notes: English UI, light theme, 1440px width, crop to the Stock group and the banner.
 
 Toggling either switch creates or removes, per warehouse, three read-only technical fields on both
 ``product.template`` and ``product.product`` — ``x_eyssen_wh_pt_<warehouse_id>_onhand`` /
@@ -136,18 +127,37 @@ Information` tab lists on-hand, free and forecasted quantities for every enabled
 small refresh button next to it to force an immediate recompute for that product. The same widget
 is shown in the product kanban and list views (as an optional column).
 
-.. image:: stock_control/stock_control-product-stock-widget.png
-   :alt: Stock Data widget on the product form
+.. screenshot:: inventory-stock-control-stock-data-widget
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ General Information tab
+   :shows: The read-only "Stock Data" widget on a product form, with one line per enabled warehouse showing
+      the On Hand, Free and Forecasted quantity, and the small refresh icon next to it.
+   :highlight: The "Stock Data" widget and its refresh icon (red frames).
+   :data: Two warehouses opted in, both holding stock of the product.
+   :module: eyssen_stock_advanced_stock
+   :notes: English UI, light theme, 1440px width, crop to the widget.
 
-.. image:: stock_control/stock_control-product-list-columns.png
-   :alt: Product list with per-warehouse optional columns enabled
+.. screenshot:: inventory-stock-control-product-list-columns
+   :menu: Inventory ‣ Products ‣ Products
+   :shows: The products list with two per-warehouse columns enabled (e.g. "<Warehouse> On Hand" and
+      "<Warehouse> Free"), and the optional-column drop-down open showing the available per-warehouse
+      columns.
+   :highlight: The open optional-column drop-down (red frame).
+   :data: Two warehouses with "Visible WH Stock on Product" enabled; five or six products.
+   :module: eyssen_stock_advanced_stock
+   :notes: English UI, light theme, 1440px width, full list view with the drop-down open.
 
 On a sale order, opening a confirmed line's :guilabel:`Qty at Date` popover shows an extra
 :guilabel:`All Warehouses` table with the same on-hand/free/forecasted breakdown, in addition to
 the line-level stock widget.
 
-.. image:: stock_control/stock_control-sale-order-line-popover.png
-   :alt: Qty at Date popover extended with the All Warehouses breakdown
+.. screenshot:: inventory-stock-control-qty-at-date-popover
+   :menu: Sales ‣ Orders ‣ Orders ‣ (a confirmed order)
+   :shows: The "Qty at Date" popover of a confirmed sales order line, extended at the bottom with the "All
+      Warehouses" table listing the on-hand, free and forecasted quantity per warehouse.
+   :highlight: The "All Warehouses" table (red frame).
+   :data: A confirmed sales order line for a product stocked in two warehouses.
+   :module: eyssen_stock_advanced_stock
+   :notes: English UI, light theme, 1440px width, crop to the popover.
 
 Automatic recomputation
 -------------------------
@@ -180,26 +190,6 @@ once with the :guilabel:`Recompute All` button in the settings, or with a wareho
 :guilabel:`Update All` button (which delegates to the same full recompute). Use this after bulk
 data changes, or whenever the warning banner asks for it.
 
-Legacy warehouse stock calculation
-=====================================
-
-``eyssen_stock_calculate_wh_stock`` is the earlier implementation of the same idea: the same
-:guilabel:`Calculate WH Stock on Product` / :guilabel:`Visible WH Stock on Product` switches on the
-warehouse form, the same dynamic per-warehouse ``x_eyssen_wh_pt_*`` / ``x_eyssen_wh_pp_*`` fields
-and optional list columns, and the same :guilabel:`Update All` / :guilabel:`Recompute All` actions
-— but it stores the computed figures directly on the product as a stored JSON field
-(``product_wh_stocks``) plus a stored HTML summary (``product_wh_stocks_html``) shown with a plain
-HTML widget, rather than in the searchable ``product.stock.data`` model. Recomputation on stock
-quant changes and purchase order confirm/cancel is per-product and runs in a fresh cursor after
-each transaction, without the shared dirty-set batching or the background-job option that
-``eyssen_stock_advanced_stock`` offers.
-
-.. important::
-   ``eyssen_stock_calculate_wh_stock`` and ``eyssen_stock_advanced_stock`` manage the same
-   dynamically generated per-warehouse field names and the same named list/search view extensions.
-   Only one of the two should be installed on a given database — installing both leads to the two
-   modules overwriting each other's generated fields and views.
-
 Storage location size and load
 =================================
 
@@ -213,8 +203,22 @@ view) with:
 - a :guilabel:`Volume` field with its own volume unit of measure; and
 - a :guilabel:`Weight` field with its own weight unit of measure.
 
-.. image:: stock_control/stock_control-location-load.png
-   :alt: Size and Load group on the stock location form
+.. screenshot:: inventory-stock-control-location-size-load
+   :menu: Inventory ‣ Configuration ‣ Locations ‣ (an internal location)
+   :shows: The "Size & Load" group of a stock location form with the length, width, height/thickness fields
+      and their dimensional unit of measure, the Volume field with its volume unit, and the Weight field
+      with its weight unit.
+   :highlight: The "Size & Load" group (red frame).
+   :data: Location "WH/Stock/Shelf 1" with dimensions filled in and a weight capacity set.
+   :module: eyssen_stock_load
+   :notes: English UI, light theme, 1440px width, crop to the group. The length/width/height labels are
+      currently Hungarian in the source code.
+
+.. note::
+   The unit-of-measure fields of this group filter on the unit-of-measure :guilabel:`Type`
+   introduced by the :doc:`Advanced UoM module
+   <../product_management/configure/uom>` (``eyssen_uom``), so that module must be installed as
+   well for the default units to be found.
 
 .. note::
    The length/width/height fields ship with hard-coded Hungarian labels in the source code
@@ -234,13 +238,13 @@ Each module is switched on independently under :menuselection:`Settings app --> 
 Stock`:
 
 - :guilabel:`Disallow Negative Stock` — installs ``eyssen_stock_disallow_negative_stock``;
-- :guilabel:`Calculate Warehouse Stock` — installs the legacy ``eyssen_stock_calculate_wh_stock``;
 - :guilabel:`Advanced Stock` — installs ``eyssen_stock_advanced_stock``; and
 - :guilabel:`Size & Load Management` — installs ``eyssen_stock_load``.
 
 .. important::
-   Only enable one of :guilabel:`Calculate Warehouse Stock` and :guilabel:`Advanced Stock` — see
-   the warning above.
+   The same settings page still shows a :guilabel:`Calculate Warehouse Stock` switch. It belongs to
+   an earlier implementation of per-warehouse stock data that has been superseded by
+   :guilabel:`Advanced Stock` and is no longer shipped, so **do not enable it**.
 
 Once :guilabel:`Advanced Stock` is enabled, also enable :guilabel:`Use Background Jobs
 (queue_job)` (immediately below it in the settings) if the ``queue_job`` module is available and
@@ -275,8 +279,5 @@ Scope and modules
 - ``eyssen_stock_advanced_stock`` — current per-warehouse on-hand/free/forecasted computation,
   stored in the searchable ``product.stock.data`` model, with dynamic per-warehouse fields, product
   and sale-order-line widgets, and automatic/background recomputation.
-- ``eyssen_stock_calculate_wh_stock`` — earlier per-warehouse stock computation with the same
-  warehouse-level switches, stored as JSON/HTML fields directly on the product; superseded by
-  ``eyssen_stock_advanced_stock``.
 - ``eyssen_stock_load`` — adds length/width/height, volume and weight attributes to stock
   locations.

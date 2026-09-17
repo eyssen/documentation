@@ -30,9 +30,14 @@ To do that, go to the :menuselection:`Inventory app --> Configuration --> Settin
 the :guilabel:`Traceability` section, and click the box next to :guilabel:`Lots & Serial Numbers`.
 Then, click the :guilabel:`Save` button to save changes.
 
-.. image:: product_tracking/differences-enabled-setting.png
-   :align: center
-   :alt: Enabled lots and serial numbers feature in inventory settings.
+.. screenshot:: inventory-product-tracking-enable
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to the "Traceability" section with the "Lots & Serial
+      Numbers" checkbox enabled.
+   :highlight: The "Lots & Serial Numbers" checkbox (red frame).
+   :data: Demo company "YourCompany".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the "Traceability" settings block.
 
 When to use lots
 ================
@@ -42,9 +47,14 @@ or food. Lots and can be used to trace a product back to a group, which is espec
 managing product recalls or expiration dates.
 
 .. example::
-   .. image:: product_tracking/differences-lot.png
-      :align: center
-      :alt: Created lot with quantity of products in it.
+   .. screenshot:: inventory-product-tracking-lot-example
+      :menu: Inventory ‣ Products ‣ Lots/Serial Numbers ‣ (a lot)
+      :shows: A lot form for a product received in a batch, with its lot number and the on-hand quantity of
+         that lot.
+      :highlight: The "Lot/Serial Number" field and the "On Hand Quantity" (red frames).
+      :data: Lot "0000001" of a food or clothing product, on-hand quantity 50.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the form header.
 
 Manufacturers assign lot numbers to groups of products that have common properties; this can lead to
 multiple goods sharing the same lot number. This helps identify a number of products in a single
@@ -59,9 +69,14 @@ identifiable when it travels through the supply chain. This can be especially us
 manufacturers that provide after-sales services related to products they sell and deliver.
 
 .. example::
-   .. image:: product_tracking/differences-serial-numbers.png
-      :align: center
-      :alt: List of serial numbers for product.
+   .. screenshot:: inventory-product-tracking-serial-example
+      :menu: Inventory ‣ Products ‣ Lots/Serial Numbers
+      :shows: The Lots/Serial Numbers list for one product tracked by unique serial number, showing several
+         serial numbers each with an on-hand quantity of 1.
+      :highlight: None.
+      :data: One serialised product with four or five serial numbers.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the list.
 
 Serial numbers can contain many different types of characters: numbers, letters, typographical
 symbols, or a mixture of all three types.
@@ -89,9 +104,14 @@ Doing so reveals all existing lots and serial numbers, and each can be expanded 
 quantities with that assigned number. For unique serial numbers that are *not* reused, there should
 *only* be one product per serial number.
 
-.. image:: product_tracking/differences-tracking.png
-   :align: center
-   :alt: Reporting page with drop-down lists of lots and serial numbers.
+.. screenshot:: inventory-product-tracking-group-by
+   :menu: Inventory ‣ Products ‣ Lots/Serial Numbers
+   :shows: The Lots/Serial Numbers list grouped by "Lot/Serial Number" through "Add Custom Group", with two
+      groups expanded to show the product quantities carrying that number.
+   :highlight: The "Group By" drop-down with "Lot/Serial Number" selected (red frame).
+   :data: A mix of lot-tracked and serial-tracked products.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, show the search panel and the grouped list.
 
 .. tip::
    For additional information regarding an individual lot number or serial number, click the line

@@ -222,5 +222,166 @@ view and filtered to show the cumulative total of all inventory value over time 
 At the top of the report, a :icon:`fa-bar-chart` bar chart or :icon:`fa-pie-chart` pie chart view
 can be selected instead.
 
+.. _inventory/warehouses_storage/valuation-cockpit:
+
+Valuation cockpit, valuation at date and snapshots
+==================================================
+
+Next to the standard :guilabel:`Valuation` report, the eYssen *Stock Accounting* module
+(``eyssen_stock_accountant``) adds four valuation reports for period closing. They are available
+both to inventory managers under :menuselection:`Inventory app --> Reporting` and to accountants
+under :menuselection:`Accounting app --> Reporting`, where their names are prefixed with *Stock*:
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - Report
+     - In Inventory
+     - In Accounting
+   * - :ref:`Valuation cockpit <inventory/warehouses_storage/cockpit>`
+     - :guilabel:`Valuation Cockpit`
+     - :guilabel:`Stock Valuation Cockpit`
+   * - :ref:`Valuation at date <inventory/warehouses_storage/valuation-at-date>`
+     - :guilabel:`Valuation at Date`
+     - :guilabel:`Stock Valuation at Date`
+   * - :ref:`Snapshots <inventory/warehouses_storage/valuation-snapshots>`
+     - :guilabel:`Valuation Snapshots`
+     - :guilabel:`Stock Valuation Snapshots`
+   * - :ref:`Snapshot comparison <inventory/warehouses_storage/valuation-snapshots>`
+     - :guilabel:`Compare Snapshots`
+     - :guilabel:`Compare Stock Valuation Snapshots`
+
+.. note::
+   These reports are restricted to users with the *Inventory / Administrator* or the
+   *Accounting / Billing Administrator* access right.
+
+.. _inventory/warehouses_storage/cockpit:
+
+Valuation cockpit
+-----------------
+
+The :guilabel:`Valuation Cockpit` is a single-screen overview of the inventory value as of a chosen
+date. Change the :guilabel:`As of` date at the top to recompute everything below it.
+
+Four indicators are shown:
+
+- :guilabel:`Total Inventory Value`: the sum of all valuation layers up to the chosen date, in the
+  company currency.
+- :guilabel:`Products`: the number of products carrying a valuation.
+- :guilabel:`Categories`: the number of product categories involved.
+- an anomaly counter for products whose valuation is **negative**, which normally points at stock
+  that was delivered before it was received, or at a missing cost.
+
+Below the indicators, :guilabel:`Value by Category` breaks the total down per product category (the
+smallest categories are collapsed into a single *Other* slice), :guilabel:`Top Products by Value`
+lists the ten most valuable products, and a trend chart shows the cumulative inventory value at the
+end of each of the last twelve months.
+
+.. screenshot:: inventory-aging-valuation-cockpit
+   :menu: Inventory ‣ Reporting ‣ Valuation Cockpit
+   :shows: The Valuation Cockpit with the "As of" date field, the four indicator tiles (Total Inventory
+      Value, Products, Categories, anomaly count), the "Value by Category" chart, the "Top Products by
+      Value" list and the twelve-month value trend chart.
+   :highlight: The "As of" date field and the indicator tiles (red frames).
+   :data: Demo company "YourCompany HU" with valuation layers spread over at least twelve months and
+      several product categories.
+   :module: eyssen_stock_accountant
+   :notes: English UI, light theme, 1440px width, full screen.
+
+.. _inventory/warehouses_storage/valuation-at-date:
+
+Valuation at date
+-----------------
+
+:guilabel:`Valuation at Date` opens a wizard that rebuilds the inventory valuation as it stood at a
+given moment. Fill in:
+
+- :guilabel:`Valuation Date` (required): the cut-off date and time.
+- :guilabel:`Company`.
+- :guilabel:`Product Category`, :guilabel:`Warehouse` and :guilabel:`Product`: optional filters to
+  narrow the report.
+
+Then choose one of the three buttons:
+
+- :guilabel:`Generate Report` computes the result and opens it as a list, which can also be switched
+  to graph or pivot view. Each line shows the :guilabel:`Product`, its :guilabel:`Internal
+  Reference`, :guilabel:`Category`, :guilabel:`Quantity`, :guilabel:`Value`, :guilabel:`Unit Cost`
+  and an :guilabel:`Anomaly` flag.
+- :guilabel:`Export Excel` downloads the same result as an XLSX workbook.
+- :guilabel:`Save Snapshot` freezes the result into a permanent
+  :ref:`snapshot <inventory/warehouses_storage/valuation-snapshots>`.
+
+The :guilabel:`Anomaly` column flags two situations that usually need to be resolved before closing
+a period:
+
+- :guilabel:`Negative Value`: stock on hand carrying a negative valuation.
+- :guilabel:`Zero Value / Positive Qty`: an on-hand quantity with a (near-)zero value.
+
+.. warning::
+   When a :guilabel:`Warehouse` filter is used, revaluation entries are **excluded** from the
+   result, because a revaluation is not tied to a warehouse. The title of the generated report says
+   so explicitly. For a figure that must reconcile with accounting, run the report without a
+   warehouse filter.
+
+.. screenshot:: inventory-aging-valuation-at-date-wizard
+   :menu: Inventory ‣ Reporting ‣ Valuation at Date
+   :shows: The "Stock Valuation at Date" wizard with the Valuation Date, Company, Product Category,
+      Warehouse and Product fields, and the "Generate Report", "Export Excel" and "Save Snapshot" buttons.
+   :highlight: The three action buttons (red frame).
+   :data: Valuation date set to the last day of the previous month, no filters set.
+   :module: eyssen_stock_accountant
+   :notes: English UI, light theme, 1440px width, crop to the wizard.
+
+.. screenshot:: inventory-aging-valuation-at-date-lines
+   :menu: Inventory ‣ Reporting ‣ Valuation at Date ‣ Generate Report
+   :shows: The generated valuation-at-date list with the Product, Internal Reference, Category, Quantity,
+      Value, Unit Cost and Anomaly columns, sorted by value, with at least one flagged anomaly row.
+   :highlight: The "Anomaly" column (red frame).
+   :data: At least one product with a negative valuation so the anomaly flag is visible.
+   :module: eyssen_stock_accountant
+   :notes: English UI, light theme, 1440px width, full list view.
+
+.. _inventory/warehouses_storage/valuation-snapshots:
+
+Snapshots and snapshot comparison
+---------------------------------
+
+A *snapshot* is a stored copy of a valuation-at-date result. Because the product reference and
+category are frozen at the moment the snapshot is taken, the figures stay comparable even if a
+product is later renamed or moved to another category.
+
+Saved snapshots are listed under :guilabel:`Valuation Snapshots`, with their
+:guilabel:`Valuation Date`, the filters used, the number of :guilabel:`Products`, the
+:guilabel:`Total Quantity`, the :guilabel:`Total Value` and the number of
+:guilabel:`Anomalies`. Opening a snapshot gives access to its lines through the
+:guilabel:`Products` and :guilabel:`Anomalies` smart buttons, and a :guilabel:`Note` field is
+available for documenting what the snapshot was taken for.
+
+:guilabel:`Compare Snapshots` puts two snapshots side by side: select
+:guilabel:`Snapshot A` and :guilabel:`Snapshot B`, click :guilabel:`Compare`, and the result lists,
+per product, the quantity and value in both snapshots and the difference
+(:guilabel:`Qty Δ` and :guilabel:`Value Δ`). This is the quickest way to explain why the inventory
+value changed between two closing dates.
+
+.. screenshot:: inventory-aging-snapshot-compare
+   :menu: Inventory ‣ Reporting ‣ Compare Snapshots
+   :shows: The snapshot comparison result with the "Snapshot A" and "Snapshot B" fields at the top and the
+      per-product lines below showing Qty A, Qty B, Qty Δ, Value A, Value B and Value Δ.
+   :highlight: The "Value Δ" column (red frame).
+   :data: Two snapshots taken one month apart, with a handful of products whose value changed.
+   :module: eyssen_stock_accountant
+   :notes: English UI, light theme, 1440px width, full list view.
+
+.. tip::
+   The same module adds an optional :guilabel:`Total Cost` column to the
+   :doc:`Moves History report <moves_history>`, which shows the accounting value of each move line.
+   It is hidden by default; enable it from the list's optional-column selector.
+
+.. note::
+   The module also keeps the stock interim (input/output) accounts out of the bank reconciliation
+   proposals, since those accounts are cleared by inventory postings and never by a bank statement
+   line.
+
 .. seealso::
    :doc:`Odoo reporting essentials <../../../../essentials/reporting>`

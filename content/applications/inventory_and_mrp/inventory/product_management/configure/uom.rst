@@ -24,9 +24,14 @@ To use different units of measure in Odoo, first go to :menuselection:`Inventory
 Configuration --> Settings`, and under the :guilabel:`Products` section, activate the
 :guilabel:`Units of Measure` setting. Then, click :guilabel:`Save`.
 
-.. image:: uom/uom-enable-setting.png
-   :align: center
-   :alt: Enable Units of Measure in the Inventory settings.
+.. screenshot:: inventory-uom-enable-setting
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to the "Products" section, with the "Units of Measure"
+      checkbox enabled.
+   :highlight: The "Units of Measure" checkbox (red frame).
+   :data: Demo company "YourCompany".
+   :module: stock, uom
+   :notes: English UI, light theme, 1440px width, crop to the "Products" settings block.
 
 Units of measure categories
 ===========================
@@ -36,9 +41,14 @@ After enabling the *Units of Measure* setting, view the default units of measure
 unit conversion; Odoo can convert a product's units from one unit to another **only** if both units
 belong to the same category.
 
-.. image:: uom/category.png
-   :align: center
-   :alt: Set units of measure categories.
+.. screenshot:: inventory-uom-categories
+   :menu: Inventory ‣ Configuration ‣ UoM Categories
+   :shows: The "Units of Measure Categories" list with the default categories (Units, Weight, Working Time,
+      Length / Distance, Volume) and their reference unit shown in the "Uom" column.
+   :highlight: The reference unit values in the "Uom" column (they are rendered in blue).
+   :data: Default Odoo unit-of-measure categories, no custom category added yet.
+   :module: uom
+   :notes: English UI, light theme, 1440px width, crop to the list.
 
 Each units of measure category has a reference unit. The reference unit is highlighted in blue in
 the :guilabel:`Uom` column of the :guilabel:`Units of Measure Categories` page. Odoo uses the
@@ -58,9 +68,16 @@ In the :guilabel:`Ratio` field, enter how many individual units are in the new |
 `6.00000` when using the example of the `6-Pack` (since a box of six is six times *bigger* than the
 reference unit, `1.00000`).
 
-.. image:: uom/convert-products-by-unit.png
-   :align: center
-   :alt: Convert products from one unit to another as long as they belong to the same category.
+.. screenshot:: inventory-uom-new-unit
+   :menu: Inventory ‣ Configuration ‣ UoM Categories ‣ Units
+   :shows: The "Units" category form, "Units of Measure" tab, with a new line named "Box of 6", Type "Bigger
+      than the reference Unit of Measure" and Ratio 6.00000 next to the reference unit "Units" (ratio
+      1.00000).
+   :highlight: The newly added "Box of 6" line (red frame).
+   :data: Demo company "YourCompany"; the "Units" category with its default "Units" and "Dozens" units plus
+      the new "Box of 6".
+   :module: uom
+   :notes: English UI, light theme, 1440px width, crop to the units table.
 
 Specify a product's units of measure
 ====================================
@@ -74,6 +91,61 @@ track of the product's inventory and internal transfers.
 
 Edit the :guilabel:`Purchase UoM` field to specify the unit of measure that the product is purchased
 in.
+
+Advanced units of measure
+=========================
+
+The eYssen *Advanced UoM* module (``eyssen_uom``) extends unit-of-measure categories so that derived
+quantities — surfaces, volumes and specific gravity — can be computed from a length or a weight unit
+instead of being maintained by hand.
+
+Category type
+-------------
+
+On every unit-of-measure category (:menuselection:`Inventory app --> Configuration --> UoM
+Categories`), a :guilabel:`Type` field classifies what the category measures:
+:guilabel:`Unit`, :guilabel:`Weight`, :guilabel:`Time`, :guilabel:`Working Time`,
+:guilabel:`Length / Distance`, :guilabel:`Surface`, :guilabel:`Volume` or
+:guilabel:`Specific Gravity`. The type is also shown as a column on the
+:guilabel:`Units of Measure Categories` list, and is inherited (read-only) by every unit in the
+category.
+
+The type decides which reference fields appear on the units inside the category:
+
+- For a :guilabel:`Surface` or :guilabel:`Volume` category, each unit gets a
+  :guilabel:`Reference Length` field — the length unit the surface or volume is derived from (for
+  example `cm` for `cm³`).
+- For a :guilabel:`Specific Gravity` category, each unit gets a :guilabel:`Reference Weight` and a
+  :guilabel:`Reference Volume` field (for example `g` and `cm³` for `g/cm³`).
+
+The module also raises the precision of the :guilabel:`Ratio` column to ten decimals, which is
+needed for conversions between volume and specific-gravity units.
+
+.. note::
+   The module adds the :guilabel:`Specific Gravity` and :guilabel:`Time` categories and the `cm³`,
+   `g/cm³`, `kg/m³`, `Month` and `Year` units, if they are not present yet.
+
+.. screenshot:: inventory-uom-category-type
+   :menu: Inventory ‣ Configuration ‣ UoM Categories ‣ (a category)
+   :shows: A unit-of-measure category form with the eYssen "Type" field set to "Specific Gravity", and the
+      units table below showing the "Reference Weight" and "Reference Volume" columns filled in for the
+      "g/cm³" unit.
+   :highlight: The "Type" field and the "Reference Weight" / "Reference Volume" columns (red frames).
+   :data: Category "Specific Gravity" with the units "g/cm³" (reference) and "kg/m³".
+   :module: eyssen_uom
+   :notes: English UI, light theme, 1440px width, crop to the form and the units table.
+
+UNECE codes
+-----------
+
+With the ``uom_unece`` module installed, every unit of measure carries a :guilabel:`UNECE Code`
+field, holding the code of the unit in the standard nomenclature of the United Nations Economic
+Commission for Europe. The codes are pre-loaded for the standard units and are used by electronic
+document formats that require a standardized unit code.
+
+.. note::
+   The Hungarian e-invoicing and electronic reporting formats expect UNECE unit codes. Keep this
+   field filled in on every unit that appears on customer documents.
 
 .. _inventory/product_replenishment/unit-conversion:
 
@@ -114,18 +186,26 @@ measure, so the :guilabel:`Demand` column of the delivery receipt shows the conv
    measure is `Units`, the |PO| shows the quantity in boxes of six, and the receipt (and other
    internal warehouse documents) shows the quantity in units.
 
-   .. figure:: uom/on-po.png
-      :align: center
-      :alt: Image of a purchase order that is using the purchase unit of measure.
+   .. screenshot:: inventory-uom-purchase-order
+      :menu: Purchase ‣ Orders ‣ Purchase Orders ‣ (a confirmed order)
+      :shows: A confirmed purchase order line for a product whose purchase unit of measure is "Box of 6":
+         Quantity 3 and UoM "Box of 6".
+      :highlight: The "UoM" cell showing "Box of 6" and the "Quantity" cell showing 3 (red frame).
+      :data: Vendor "Azure Interior"; one order line, product with Unit of Measure "Units" and Purchase UoM
+         "Box of 6".
+      :module: purchase, uom
+      :notes: English UI, light theme, 1440px width, crop to the order lines. Caption to convey: an order of
+         three quantities placed in the purchase UoM "Box of 6".
 
-      An order of three quantities is placed using the purchase "UoM": `Box of 6`.
-
-   .. figure:: uom/on-receipt.png
-      :align: center
-      :alt: Image of receipt displaying the unit of measure.
-
-      Upon warehouse receipt, the recorded quantities are in the internal "Unit of Measure":
-      `Units`.
+   .. screenshot:: inventory-uom-receipt
+      :menu: Purchase ‣ Orders ‣ Purchase Orders ‣ (the same order) ‣ Receipt
+      :shows: The receipt generated from the purchase order above, with the Demand column showing 18 Units —
+         the three boxes of six converted into the product's inventory unit of measure.
+      :highlight: The "Demand" quantity and the "Units" unit of measure on the operation line (red frame).
+      :data: The receipt WH/IN/00001 for the same product and vendor as the purchase order screenshot.
+      :module: stock, uom
+      :notes: English UI, light theme, 1440px width, crop to the Operations tab. Caption to convey: on
+         warehouse receipt the recorded quantities are in the internal unit of measure "Units".
 
 .. _inventory/product_replenishment/replenish:
 
@@ -143,9 +223,13 @@ measure can be manually edited in the :guilabel:`Quantity` field, if needed. The
    A |PO| can **only** be automatically generated if at least **one** vendor is listed in the
    product form's :guilabel:`Purchase` tab.
 
-.. image:: uom/replenish.png
-   :align: center
-   :alt: Click Replenish button to manually replenish.
+.. screenshot:: inventory-uom-replenish
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product)
+   :shows: A product form with the "Replenish" button visible in the button box at the top of the form.
+   :highlight: The "Replenish" button (red frame).
+   :data: A storable product that has at least one vendor on its "Purchase" tab.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the top of the product form.
 
 Navigate to the created |PO| by clicking the :guilabel:`Forecasted` smart button on the product
 form. Scroll down to the :guilabel:`Forecasted Inventory` section, and in the :guilabel:`Requests

@@ -35,8 +35,14 @@ to the :guilabel:`Traceability` section, and tick the :guilabel:`Lots & Serial N
 Remember to click the :guilabel:`Save` button to save changes.
 
 
-.. image:: serial_numbers/enabled-setting.png
-   :alt: Enabled Lots & Serial Numbers setting.
+.. screenshot:: inventory-serial-numbers-enable-setting
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to the "Traceability" section with the "Lots & Serial
+      Numbers" checkbox enabled.
+   :highlight: The "Lots & Serial Numbers" checkbox (red frame).
+   :data: Demo company "YourCompany".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the "Traceability" settings block.
 
 .. _inventory/product_management/operation-type-setting:
 
@@ -60,8 +66,14 @@ From the :guilabel:`Operations Types` page, select the desired operation type (e
 :guilabel:`Create New` option in the :guilabel:`Lots/Serial Numbers` section of the operation type's
 configuration page.
 
-.. image:: serial_numbers/create-new-setting.png
-   :alt: Show "Create New" option is selected on the Receipts operation type.
+.. screenshot:: inventory-serial-numbers-create-new
+   :menu: Inventory ‣ Configuration ‣ Operations Types ‣ Receipts
+   :shows: The Receipts operation type form, "Lots/Serial Numbers" section, with the "Create New" checkbox
+      ticked.
+   :highlight: The "Create New" checkbox (red frame).
+   :data: Operation type "YourCompany: Receipts".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the "Lots/Serial Numbers" section.
 
 .. _inventory/product_management/detailed-operations:
 
@@ -77,8 +89,14 @@ In the :guilabel:`General Information` tab on the product form, make sure the bo
 :guilabel:`Save` to save the changes. Now, existing or new serial numbers can now be selected and
 assigned to newly-received or manufactured batches of this product.
 
-.. image:: serial_numbers/product-tracking.png
-   :alt: Enabled serial number tracking on product form.
+.. screenshot:: inventory-serial-numbers-product-form
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ General Information tab
+   :shows: A product form with "Track Inventory" ticked and "By Unique Serial Number" selected in its
+      drop-down.
+   :highlight: The "Track Inventory" field set to "By Unique Serial Number" (red frame).
+   :data: A storable product with no stock on hand yet.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the field.
 
 .. _inventory/product_management/assign-sn:
 
@@ -128,8 +146,16 @@ below.
 
 When all desired configurations are complete, click the :guilabel:`Save` button to save all changes.
 
-.. image:: serial_numbers/new-serial-number.png
-   :alt: New serial number created for existing product stock.
+.. screenshot:: inventory-serial-numbers-new-number
+   :menu: Inventory ‣ Products ‣ Lots/Serial Numbers ‣ New
+   :shows: A saved serial-number form for a product that was already in stock: "Lot/Serial Number",
+      "Product", "On Hand Quantity", "Internal Reference", "Company" and the "Description" tab are filled
+      in.
+   :highlight: The "Lot/Serial Number" and "Internal Reference" fields (red frames).
+   :data: Serial number "SN0001" for a serialised product, on-hand quantity 1, internal reference an
+      SKU-like value.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, full form.
 
 After a new serial number has been created, assigned to the desired product, and saved, navigate
 back to the product form, by going to :menuselection:`Inventory app --> Products --> Products`, and
@@ -163,18 +189,29 @@ Lots/serial number field
 Serial numbers can be entered directly into the :guilabel:`Serial Numbers` field on a receipt or
 delivery order.
 
-.. image:: serial_numbers/enter-in-field.png
-   :alt: Select value for Serial Number field on receipt.
+.. screenshot:: inventory-serial-numbers-field-on-receipt
+   :menu: Inventory ‣ Receipts ‣ (a receipt) ‣ Operations tab
+   :shows: A receipt operation line where a serial number is typed directly into the "Serial Numbers"
+      column.
+   :highlight: The "Serial Numbers" cell (red frame).
+   :data: Receipt WH/IN/00001 for a serialised product, demand 1, serial number "SN0001".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the operation line.
 
 .. tip::
    To make the :guilabel:`Serial Numbers` field visible on a receipt or delivery order, click the
    :icon:`oi-settings-adjust` :guilabel:`(Adjust Settings)` icon, and in the drop-down menu, tick
    the :guilabel:`Serial Numbers` checkbox.
 
-   .. figure:: serial_numbers/field-visible.png
-      :alt: Allow Serial Numbers field to show on a receipt or delivery order.
-
-      Example **Serial Numbers** field on a delivery order.
+   .. screenshot:: inventory-serial-numbers-show-field
+      :menu: Inventory ‣ Delivery Orders ‣ (a delivery order) ‣ Operations tab ‣ (adjust settings icon)
+      :shows: The optional-column drop-down of the Operations tab, opened, with the "Serial Numbers"
+         checkbox ticked so the column is shown on the lines below.
+      :highlight: The "Serial Numbers" entry in the drop-down (red frame).
+      :data: A delivery order with one serialised product line.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the drop-down and the line. Caption to convey:
+         example Serial Numbers field on a delivery order.
 
 .. _inventory/product_management/stock-move:
 
@@ -191,8 +228,14 @@ In the :guilabel:`Open: Stock move` pop-up window, manually enter serial numbers
 :guilabel:`Lot/Serial Number` column. This method is best reserved for adding only one or a few
 serial numbers.
 
-.. image:: serial_numbers/stock-move-add-line.png
-   :alt: Add a line on the stock move pop-up.
+.. screenshot:: inventory-serial-numbers-add-line
+   :menu: Inventory ‣ Receipts ‣ (a receipt) ‣ Operations tab ‣ (list icon)
+   :shows: The "Open: Stock move" pop-up with one manually typed value in the "Lot/Serial Number" column
+      after clicking "Add a line".
+   :highlight: The "Lot/Serial Number" cell (red frame).
+   :data: Receipt WH/IN/00001, serial number "123".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 .. _inventory/product_management/generate-serials:
 
@@ -202,8 +245,14 @@ Generate Serials/Lots
 Assign multiple serial numbers at once by clicking the :guilabel:`Generate Serials/Lots` button in
 the :guilabel:`Open: Stock move` pop-up window.
 
-.. image:: serial_numbers/stock-move-generate-serials.png
-   :alt: Show generate serials pop-up.
+.. screenshot:: inventory-serial-numbers-generate-button
+   :menu: Inventory ‣ Receipts ‣ (a receipt) ‣ Operations tab ‣ (list icon)
+   :shows: The "Open: Stock move" pop-up with the "Generate Serials/Lots" and "Import Serials/Lots" buttons
+      visible above the lines.
+   :highlight: The "Generate Serials/Lots" button (red frame).
+   :data: Receipt WH/IN/00001 for a serialised product, demand 3.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the pop-up header.
 
 Doing so opens a new popup, :guilabel:`Generate Serial numbers`, which contains a few fields:
 
@@ -217,8 +266,14 @@ Doing so opens a new popup, :guilabel:`Generate Serial numbers`, which contains 
      :guilabel:`Demand` value, Odoo still allows the quantity (based on the serial numbers) to be
      delivered or received.
 
-     .. image:: serial_numbers/stock-move-generate-quantity-tip.png
-        :alt: Show how the quantity of serial numbers alters the delivery order quantity.
+     .. screenshot:: inventory-serial-numbers-generate-quantity
+        :menu: Inventory ‣ Receipts ‣ (a receipt) ‣ Operations tab ‣ (list icon) ‣ Generate Serials/Lots
+        :shows: A receipt whose "Quantity" has become larger than its "Demand" because more serial numbers
+           were generated than demanded.
+        :highlight: The "Demand" and "Quantity" values that differ (red frames).
+        :data: Demand 3, five generated serial numbers, quantity 5.
+        :module: stock
+        :notes: English UI, light theme, 1440px width, crop to the operation line.
 
 - :guilabel:`Keep current lines` checkbox: Check this box to keep existing serial numbers that may
   have been previously added. To replace existing serial numbers in the list, leave the box
@@ -252,8 +307,14 @@ overwrite them.
 
 Finally, click :guilabel:`Generate`.
 
-.. image:: serial_numbers/stock-move-import-serials.png
-   :alt: Show import serials pop-up.
+.. screenshot:: inventory-serial-numbers-import-popup
+   :menu: Inventory ‣ Receipts ‣ (a receipt) ‣ Operations tab ‣ (list icon) ‣ Import Serials/Lots
+   :shows: The "Import Serials" pop-up with several serial numbers entered one per line in the "Lots/Serial
+      numbers" text field and the "Keep current lines" checkbox visible.
+   :highlight: The "Lots/Serial numbers" text field (red frame).
+   :data: Serial numbers 124 and 125.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 .. example::
    For a receipt with a :guilabel:`Demand` of `3.00` products, one product has already been assigned
@@ -271,8 +332,14 @@ Finally, click :guilabel:`Generate`.
    The :guilabel:`Keep current lines` option is selected to add these two serial numbers **in
    addition** to the serial number, `123`, that has already been assigned.
 
-   .. image:: serial_numbers/import-serial.png
-      :alt: Show example of correctly inputting serial numbers in the text field.
+   .. screenshot:: inventory-serial-numbers-import-example
+      :menu: Inventory ‣ Receipts ‣ (a receipt) ‣ Operations tab ‣ (list icon) ‣ Import Serials/Lots
+      :shows: The "Import Lots" pop-up of a receipt with demand 3, where serial numbers 124 and 125 are
+         entered and "Keep current lines" is ticked so the already assigned serial number 123 is kept.
+      :highlight: The "Keep current lines" checkbox (red frame).
+      :data: Receipt with demand 3; serial number 123 already assigned, 124 and 125 entered.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 .. _inventory/product_management/moves-button:
 
@@ -291,8 +358,14 @@ To access this page, first :ref:`select a warehouse receipt or delivery order
 In the :guilabel:`Lot/Serial Number` column, manually type (or select from the drop-down menu)
 the desired serial numbers for each individual product.
 
-.. image:: serial_numbers/moves-button.png
-   :alt: Show the detailed Moves page.
+.. screenshot:: inventory-serial-numbers-moves-page
+   :menu: Inventory ‣ Receipts ‣ (a receipt) ‣ Moves
+   :shows: The detailed "Moves" page of a receipt, with a "Lot/Serial Number" column where a serial number
+      is set per line, next to the source and destination location and the quantity.
+   :highlight: The "Lot/Serial Number" column (red frame).
+   :data: Three serialised move lines with serial numbers 123, 124 and 125.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, full list view.
 
 When finished, click the receipt/delivery order's breadcrumbs, and the assigned serial numbers are
 automatically saved.
@@ -331,8 +404,27 @@ At the top of the order's form, click the :icon:`fa-cog` :guilabel:`(Actions)` b
 slip using the device's browser or file manager. Serial numbers are listed next to their respective
 products in the :guilabel:`Lot/Serial Number` column.
 
-.. image:: serial_numbers/delivery-slip.png
-   :alt: The order lines section of a delivery slip, showing a product and its serial number.
+.. screenshot:: inventory-serial-numbers-delivery-slip
+   :menu: Inventory ‣ Delivery Orders ‣ (a validated delivery) ‣ Actions ‣ Print ‣ Delivery Slip
+   :shows: The order-lines table of a printed delivery slip PDF, where the serial number of the delivered
+      product appears in the "Lot/Serial Number" column.
+   :highlight: The "Lot/Serial Number" column (red frame).
+   :data: One serialised product with serial number "SN0001".
+   :module: stock
+   :notes: English UI, light theme; crop of the PDF page to the order-lines table. Requires "Display Lots &
+      Serial Numbers on Delivery Slips" to be enabled.
+
+Print serial number labels
+==========================
+
+Labels carrying the serial number and its barcode can be printed from a transfer: click the
+:icon:`fa-cog` :guilabel:`(Actions)` button, select :menuselection:`Print --> Labels`, then choose
+:guilabel:`Lot/SN Labels`. Setting :guilabel:`Quantity to print` to :guilabel:`One per unit` prints
+one label per serialised item.
+
+.. seealso::
+   - :ref:`Print lot labels <inventory/product_management/lot-labels>`
+   - :doc:`Custom product labels <../labels>`
 
 Traceability & reporting
 ========================
@@ -364,8 +456,14 @@ Doing so reveals all existing serial numbers and lots. Each row can be expanded 
 quantities of product assigned to that serial/lot number. For unique serial numbers that are not
 reused, there should be just one product per serial number.
 
-.. image:: serial_numbers/serial-numbers-dashboard.png
-   :alt: Serial numbers reporting page with drop-down lists.
+.. screenshot:: inventory-serial-numbers-dashboard
+   :menu: Inventory ‣ Products ‣ Lots/Serial Numbers
+   :shows: The Lots/Serial Numbers list with the default filters removed and a custom group by "Lot/Serial
+      Number" applied, so every serial number forms its own group with a single product quantity.
+   :highlight: The applied "Lot/Serial Number" group in the search bar (red frame).
+   :data: One serialised product with four or five serial numbers.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, show the search bar and the grouped list.
 
 .. tip::
    For additional information regarding an individual serial (or lot) number, click the line

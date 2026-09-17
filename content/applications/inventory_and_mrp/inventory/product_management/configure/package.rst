@@ -41,9 +41,14 @@ To use packages, first go to :menuselection:`Inventory app --> Configuration -->
 the :guilabel:`Operations` heading, activate the :guilabel:`Packages` feature. Then, click
 :guilabel:`Save`.
 
-.. image:: package/enable-pack.png
-   :align: center
-   :alt: Activate the *Packages* setting in Inventory > Configuration > Settings.
+.. screenshot:: inventory-package-enable
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to the "Operations" section with the "Packages" checkbox
+      enabled.
+   :highlight: The "Packages" checkbox (red frame).
+   :data: Demo company "YourCompany".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the "Operations" settings block.
 
 .. _inventory/product_management/move-entire-pack:
 
@@ -76,9 +81,14 @@ Detailed operations
 On any warehouse transfer (e.g. receipt, delivery order), add a product to a package by clicking the
 :guilabel:`⦙≣ (bulleted list)` icon in the :guilabel:`Operations` tab.
 
-.. image:: package/detailed-operations.png
-   :align: center
-   :alt: Show "Detailed Operations" icon in the product line.
+.. screenshot:: inventory-package-detailed-operations-icon
+   :menu: Inventory ‣ Transfers ‣ (a delivery order)
+   :shows: The Operations tab of a transfer, with the bulleted-list (detailed operations) icon at the end of
+      a product line.
+   :highlight: The bulleted-list icon on the product line (red frame).
+   :data: Delivery order WH/OUT/00001 with one line for "Acoustic Bloc Screen".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the operation line.
 
 Doing so opens the :guilabel:`Detailed Operations` pop-up window for the :guilabel:`Product`.
 
@@ -86,11 +96,15 @@ To put the :guilabel:`Product` in a package, click :guilabel:`Add a line`, and a
 a :guilabel:`Destination Package`. Select an existing package, or create a new one by typing the
 name of the new package, then select :guilabel:`Create...`.
 
-.. figure:: package/destination-package.png
-   :align: center
-   :alt: Assign a package to "Destination Package" field.
-
-   Twelve units of `Acoustic Bloc Screen` are placed in `PACK0000001`.
+.. screenshot:: inventory-package-destination-package
+   :menu: Inventory ‣ Transfers ‣ (a delivery order) ‣ (detailed operations icon)
+   :shows: The "Detailed Operations" pop-up for a product, with one line whose "Destination Package" is set
+      to PACK0000001 and "Done" quantity is 12.
+   :highlight: The "Destination Package" cell (red frame).
+   :data: Twelve units of "Acoustic Bloc Screen" assigned to package PACK0000001.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the pop-up. Caption to convey: twelve units of
+      Acoustic Bloc Screen are placed in PACK0000001.
 
 Then, specify the quantity of items to go into the package in the :guilabel:`Done` column. Repeat
 the above steps to place the :guilabel:`Product` in different packages. Once finished, click
@@ -113,12 +127,15 @@ new package, and place all the items in the transfer in that newly-created packa
    with the *Packages* feature enabled in :menuselection:`Inventory app --> Configuration -->
    Settings`.
 
-.. figure:: package/put-in-pack.png
-   :align: center
-   :alt: Image of the "Put in Pack" button being clicked.
-
-   In batch transfer `BATCH/00003`, the :guilabel:`Put in Pack` button was clicked to create a new
-   package, `PACK0000002`, and assign all items to it in the :guilabel:`Destination Package` field.
+.. screenshot:: inventory-package-put-in-pack
+   :menu: Inventory ‣ Transfers ‣ (a transfer)
+   :shows: A transfer after the "Put in Pack" button was clicked: a new package was created and set as the
+      "Destination Package" of every operation line.
+   :highlight: The "Put in Pack" button and the "Destination Package" column (red frames).
+   :data: Batch transfer BATCH/00003; the created package is PACK0000002.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the button and the operation lines. Caption to
+      convey: Put in Pack created PACK0000002 and assigned all items to it.
 
 .. _inventory/warehouses_storage/package-type:
 
@@ -153,9 +170,14 @@ fields of the form are as follows:
 - :guilabel:`Carrier`: specify the intended shipping carrier for this package type.
 - :guilabel:`Carrier Code`: define a code that is linked to the package type.
 
-.. image:: package/package-type.png
-   :align: center
-   :alt: Package type for FedEx's 25 kilogram box.
+.. screenshot:: inventory-package-package-type-form
+   :menu: Inventory ‣ Configuration ‣ Package Types ‣ (a package type)
+   :shows: A package type form with Package Type name, Size (Length/Width/Height in mm), Weight, Max Weight,
+      Barcode, Company, Carrier and Carrier Code filled in.
+   :highlight: The "Size", "Weight" and "Max Weight" fields (red frame).
+   :data: A package type for a 25 kg carrier box; use a generic carrier name, not a real carrier brand.
+   :module: stock, delivery
+   :notes: English UI, light theme, 1440px width, crop to the form.
 
 .. _inventory/warehouses_storage/cluster-pack:
 
@@ -167,9 +189,14 @@ Settings`, and activate the :guilabel:`Batch Transfers` feature, located in the
 :guilabel:`Operations` section. Doing so makes the *Package Use* field become visible on a package
 form.
 
-.. image:: package/enable-batch.png
-   :align: center
-   :alt: Activate the *Batch Transfers* feature in Inventory > Configuration > Settings.
+.. screenshot:: inventory-package-enable-batch
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to the "Operations" section with the "Batch Transfers"
+      checkbox enabled.
+   :highlight: The "Batch Transfers" checkbox (red frame).
+   :data: Demo company "YourCompany"; the "Packages" checkbox is enabled as well.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the "Operations" settings block.
 
 Add new packages by going to :menuselection:`Inventory app --> Products --> Packages`. Then, click
 :guilabel:`New`, or select an existing package. Doing so opens the package form, which contains the
@@ -191,9 +218,15 @@ following fields:
 - :guilabel:`Package Use`: choose :guilabel:`Reusable` for packages used for moving products within
   the warehouse; :guilabel:`Disposable` for packages used to ship products to customers.
 
-.. image:: package/package.png
-   :align: center
-   :alt: Display package form to create a cluster pack.
+.. screenshot:: inventory-package-form
+   :menu: Inventory ‣ Products ‣ Packages ‣ New
+   :shows: A package form with Package Reference, Package Type, Shipping Weight, Company, Location, Pack
+      Date and the "Package Use" field set to "Reusable Box".
+   :highlight: The "Package Use" field (red frame).
+   :data: Package PACK0000003 at location WH/Stock, no package type set.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the form. "Package Use" only appears when Batch
+      Transfers is enabled.
 
 .. seealso::
    :doc:`Using cluster packages <../../shipping_receiving/picking_methods/cluster>`
@@ -207,7 +240,11 @@ packages are shown in Kanban view, in their current storage location.
 .. tip::
    Drag-and-drop packages to move them between internal locations.
 
-.. image:: package/packages-kanban.png
-   :align: center
-   :alt: Packages dashboard.
+.. screenshot:: inventory-package-kanban
+   :menu: Inventory ‣ Products ‣ Packages
+   :shows: The Packages kanban view with packages grouped in columns by their current storage location.
+   :highlight: None.
+   :data: Three or four packages spread over the locations WH/Stock and WH/Packing Zone.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, full kanban view.
 

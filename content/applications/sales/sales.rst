@@ -10,9 +10,6 @@ Sales
 **Odoo Sales** is the application to run your sales process (from quotation to sales order) and
 deliver and invoice what has been sold.
 
-.. seealso::
-   - `Odoo Tutorials: Sales Tutorials <https://www.odoo.com/slides/sales-17>`_
-
 .. toctree::
    :titlesonly:
 
@@ -20,6 +17,8 @@ deliver and invoice what has been sold.
    sales/invoicing
    sales/products_prices
    sales/commissions
-   sales/amazon_connector
-   sales/shopee_connector
+   sales/order_extensions
+   sales/blanket_orders
+   sales/sales_targets
+   sales/service_credits
    sales/gelato

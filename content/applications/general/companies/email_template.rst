@@ -24,7 +24,7 @@ Editing email templates
 
 The *powerbox* feature can be used when working with email templates. This feature provides the
 ability to directly edit the formatting and text in an email template, as well as the ability to add
-links, buttons, appointment options, or images.
+links, buttons, or images.
 
 Additionally, the XML/HTML code of the email template can be edited directly, via the
 :guilabel:`</>` icon. Dynamic placeholders (referencing fields within Odoo) are also available for
@@ -92,9 +92,13 @@ the following options:
    direction`, etc.), highlight the text, then type in the activator key (forward slash) `/`, and
    select the desired option from the drop-down menu.
 
-   .. image:: email_template/powerbox-feature.png
-      :align: center
-      :alt: Powerbox feature in the email template.
+   .. screenshot:: general-email-template-powerbox
+      :menu: Settings ‣ Technical ‣ Email ‣ Email Templates ‣ (a template)
+      :shows: Body of an email template with "/" typed and the powerbox command list open (Structure, Format, Media, Navigation, …).
+      :highlight: The powerbox list.
+      :data: Template "Sales: Send Quotation".
+      :module: mail
+      :notes: English UI, developer mode active, crop to the relevant area.
 
 .. seealso::
    :ref:`Using dynamic placeholders <email_template/dynamic-placeholders>`
@@ -107,9 +111,13 @@ To access the XML/HTML editor for an email template, first enter :ref:`developer
 and proceed to edit the XML/HTML. To return to the standard text editor, click the :guilabel:`</>`
 icon again.
 
-.. image:: email_template/html-code-editor.png
-   :align: center
-   :alt: HTML editor in the email template.
+.. screenshot:: general-email-template-code-editor
+   :menu: Settings ‣ Technical ‣ Email ‣ Email Templates ‣ (a template)
+   :shows: The Content tab of the template in code view (after clicking the </> icon), showing the XML/HTML source of the body.
+   :highlight: The </> icon.
+   :data: Template "Sales: Send Quotation".
+   :module: mail
+   :notes: English UI, developer mode active, crop to the relevant area.
 
 .. warning::
    The XML/HTML editor should be accessed with caution as this is the backend code of the template.
@@ -143,9 +151,13 @@ Placeholder`. Then select the dynamic placeholder from a list of available optio
 prompts to configure it with the desired corresponding Odoo field. Each dynamic placeholder will
 vary in configuration.
 
-.. image:: email_template/dynamic-placeholders.png
-   :align: center
-   :alt: Using dynamic placeholders in an email template.
+.. screenshot:: general-email-template-dynamic-placeholder
+   :menu: Settings ‣ Technical ‣ Email ‣ Email Templates ‣ (a template)
+   :shows: Body of a template with "/field" typed; the dynamic placeholder popover lets the user choose a field (e.g., Customer > Name) and a default value.
+   :highlight: The dynamic placeholder popover.
+   :data: Template "Sales: Send Quotation".
+   :module: mail
+   :notes: English UI, developer mode active, crop to the relevant area.
 
 .. note::
    Each unique combination of :guilabel:`Fields`, :guilabel:`Sub-models` and :guilabel:`Sub-fields`
@@ -165,9 +177,13 @@ Rich text editor
 A rich text editor toolbar can be accessed by highlighting text in the email template. This can be
 used to change the heading, font size/style, color, add a list type, or a link.
 
-.. image:: email_template/rich-text-editor.png
-   :align: center
-   :alt: Rich text editor in the email template.
+.. screenshot:: general-email-template-toolbar
+   :menu: Settings ‣ Technical ‣ Email ‣ Email Templates ‣ (a template)
+   :shows: Text selected in the template body with the rich text editor toolbar displayed above it.
+   :highlight: The toolbar.
+   :data: Template "Sales: Send Quotation".
+   :module: mail
+   :notes: English UI, developer mode active, crop to the relevant area.
 
 Resetting email templates
 -------------------------
@@ -176,9 +192,13 @@ Should the email template not work because the code has been altered it can be r
 back to the out-of-box default template. Simply click on the :guilabel:`Reset Template` button in
 the upper left-hand of the screen and the template will be reset.
 
-.. image:: email_template/reset.png
-   :align: center
-   :alt: Resetting the email template.
+.. screenshot:: general-email-template-reset
+   :menu: Settings ‣ Technical ‣ Email ‣ Email Templates ‣ (a template)
+   :shows: Top of an email template form with the "Reset Template" button.
+   :highlight: The "Reset Template" button.
+   :data: Template "Sales: Send Quotation".
+   :module: mail
+   :notes: English UI, developer mode active, crop to the relevant area.
 
 Default reply on email templates
 --------------------------------
@@ -191,9 +211,13 @@ masse using this template.
    Add multiple email addresses by adding a comma `,` between the addresses or dynamic
    placeholders.
 
-.. image:: email_template/reply-to-template-sales.png
-   :align: center
-   :alt: Reply-to field on template.
+.. screenshot:: general-email-template-reply-to
+   :menu: Settings ‣ Technical ‣ Email ‣ Email Templates ‣ (a template)
+   :shows: The Email Configuration tab of a sales template with the "Reply To" field filled with an address.
+   :highlight: The "Reply To" field.
+   :data: Template "Sales: Send Quotation".
+   :module: mail
+   :notes: English UI, developer mode active, crop to the relevant area.
 
 The :guilabel:`Reply To` field is **only** used for mass mailing (sending emails in bulk). Bulk
 emails can be sent in almost every Odoo application that has a list view option.
@@ -208,9 +232,13 @@ defined and customized. This option will be available on the :guilabel:`Action` 
 where emails can be sent in bulk---for example, on the :guilabel:`Customers` page of the CRM app.
 This action occurs throughout the Odoo database.
 
-.. image:: email_template/composer-mass-mailing.png
-   :align: center
-   :alt: Email composer in mass mailing mode with reply-to highlighted.
+.. screenshot:: general-email-template-composer-mass
+   :menu: Contacts ‣ List view ‣ select records ‣ Actions ‣ Send email
+   :shows: Email composer opened from a list with several records selected (mass mailing mode), showing the "Replies" option and the "Reply-to" address.
+   :highlight: The reply-to options.
+   :data: Three demo customers selected.
+   :module: mail
+   :notes: English UI, developer mode active, crop to the relevant area.
 
 Transactional emails and corresponding URLs
 ===========================================
@@ -248,12 +276,6 @@ parameter used to generate all the links.
       link with that website. As a result, the links in the confirmation email sent to the customer
       use the domain name for that specific website.
 
-.. note::
-   A document shared using the *Documents* application will **always** use the `web.base.url` key,
-   as the document shared is not associated with any particular website. This means that the URL
-   will always be the same (the `web.base.url` key value), no matter what company it's shared from.
-   This is a known limitation.
-
 For more information about how to configure domains, check out the :doc:`domain name documentation
 </applications/websites/website/configuration/domain_names>`.
 
@@ -269,13 +291,17 @@ reason, some of the translations need to be changed, it can be done.
    modifications leading to bad syntax), it can break the template, and as a result, the template
    will appear blank.
 
-In order to edit translations, first enter :ref:`developer mode <developer-mode>`. Then, on the
-email template, click on the :guilabel:`Edit` button, and then click on the language button,
+In order to edit translations, first enter :ref:`developer mode <developer-mode>`. Then, open the
+email template, and click on the language button,
 represented by the initials of the language currently being used (e.g. :guilabel:`EN` for English).
 
-.. image:: email_template/edit-language-template.png
-   :align: center
-   :alt: Edit the language of a template.
+.. screenshot:: general-email-template-language-button
+   :menu: Settings ‣ Technical ‣ Email ‣ Email Templates ‣ (a template)
+   :shows: Template form with the language button (e.g., "EN") of the Subject or body field clicked.
+   :highlight: The language button.
+   :data: Template "Sales: Send Quotation".
+   :module: mail
+   :notes: English UI, developer mode active, crop to the relevant area.
 
 .. note::
    If there aren't multiple languages installed and activated in the database, or if the user does
@@ -285,9 +311,13 @@ A pop-up window with the different languages installed on the database appears. 
 editing of translations is possible. When the desired changes have been made, click the
 :guilabel:`Save` button to save the changes.
 
-.. image:: email_template/translation-body.png
-  :align: center
-  :alt: Translation of the body of the Appointment Booked template.
+.. screenshot:: general-email-template-translation-dialog
+   :menu: Settings ‣ Technical ‣ Email ‣ Email Templates ‣ (a template)
+   :shows: The translation dialog of a template body listing the installed languages with their translated values; the default language is in bold.
+   :highlight: The default language line.
+   :data: Languages English and Hungarian installed.
+   :module: mail
+   :notes: English UI, developer mode active, crop to the relevant area.
 
 .. note::
    When editing the translations, the default language set in the database appears in **bold**.

@@ -8,9 +8,13 @@ high-level information about how the business is performing.
 To start sending digest emails, begin by navigating to :menuselection:`Settings app --> Statistics
 section`, activate the :guilabel:`Digest Emails` feature, and click :guilabel:`Save`.
 
-.. image:: digest_emails/digest-email-settings.png
-   :align: center
-   :alt: Digest Emails section inside General Settings.
+.. screenshot:: general-digest-settings
+   :menu: Settings ‣ General Settings ‣ Statistics
+   :shows: The Statistics section with the "Digest Emails" checkbox ticked, the Digest Email field
+      set to "Your Odoo Periodic Digest", and the "Configure Digest Emails" link.
+   :highlight: The Digest Emails setting.
+   :module: digest
+   :notes: English UI, crop to the section.
 
 A variety of settings can be configured for digest emails, such as:
 
@@ -18,7 +22,7 @@ A variety of settings can be configured for digest emails, such as:
 - Determining how often digest emails are sent
 - Choosing who in the organization receives digest emails
 - Creating custom digest email templates
-- Adding additional :abbr:`KPIs (key performance indicators)` (*Studio* app required)
+- Adding additional :abbr:`KPIs (key performance indicators)` (custom development required)
 
 .. note::
    By default, the :guilabel:`Digest Email` feature is enabled. :guilabel:`Your Odoo Periodic
@@ -55,13 +59,16 @@ A pop-up window appears, and presents a variety of editable settings, which incl
   :ref:`digest-emails/recipients`.
 
 .. note::
-   The :abbr:`KPIs (key performance indicators)` can be customized using Odoo *Studio*. Additional
-   costs to the database subscription are incurred should *Studio* need to be installed. See this
+   Additional :abbr:`KPIs (key performance indicators)` can be added with a custom module. See this
    section on :ref:`digest-emails/custom-kpi`.
 
-.. image:: digest_emails/periodic-digest.png
-   :align: center
-   :alt: Customize default Digest Email settings and custom KPIs.
+.. screenshot:: general-digest-form
+   :menu: Settings ‣ General Settings ‣ Statistics ‣ Digest Email ‣ (internal link)
+   :shows: The "Your Odoo Periodic Digest" form: Digest Name, Periodicity, Next Send Date, and the
+      KPIs tab with checkboxes grouped by app.
+   :highlight: The KPIs tab.
+   :module: digest
+   :notes: English UI, crop to the form sheet.
 
 .. _digest-emails/deactivate:
 
@@ -104,22 +111,25 @@ are added (or deselected), click :guilabel:`Save`.
 The following :abbr:`KPIs (key performance indicators)` are available in the :guilabel:`KPIs` tab on
 a digest email template form out-of-box in Odoo:
 
-.. image:: digest_emails/oob-kpis.png
-   :align: right
-   :alt: KPIs listed in the out-of-box digest email.
+.. screenshot:: general-digest-kpis
+   :menu: Settings ‣ Statistics ‣ Configure Digest Emails ‣ (digest)
+   :shows: The KPIs tab of a digest listing the available KPIs grouped under General, Project,
+      Recruitment, CRM, Sales, Point of Sale, Live Chat and Invoicing.
+   :module: digest
+   :notes: English UI, crop to the KPIs tab; displayed on the right of the list.
 
 :guilabel:`General`
    - :guilabel:`Connected Users`
-   - :guilabel:`Messages`
+   - :guilabel:`Messages Sent`
 
 :guilabel:`Project`
    - :guilabel:`Open Tasks`
 
 :guilabel:`Recruitment`
-   - :guilabel:`Employees`
+   - :guilabel:`New Employees`
 
 :guilabel:`CRM`
-   - :guilabel:`New Leads/Opportunities`
+   - :guilabel:`New Leads`
    - :guilabel:`Opportunities Won`
 
 :guilabel:`Sales`
@@ -134,12 +144,11 @@ a digest email template form out-of-box in Odoo:
    - :guilabel:`Conversations handled`
    - :guilabel:`Time to answer (sec)`
 
-:guilabel:`Helpdesk`
-   - :guilabel:`Tickets Closed`
-
 :guilabel:`Invoicing`
    - :guilabel:`Revenue`
-   - :guilabel:`Banks and Cash Moves`
+
+.. note::
+   The KPIs of an app are only available if the app is installed.
 
 .. _digest-emails/recipients:
 
@@ -195,35 +204,22 @@ After clicking :guilabel:`Save`, the new custom digest email is available as a s
 
 .. _digest-emails/custom-kpi:
 
-Custom KPIs with Odoo Studio
-============================
+Custom KPIs
+===========
 
-The :abbr:`KPIs (key performance indicators)` on a digest email template form, in the
-:guilabel:`KPIs` tab, can be customized using Odoo *Studio*.
+Additional :abbr:`KPIs (key performance indicators)` can be added to the :guilabel:`KPIs` tab of the
+digest email template form by a developer, in a custom module. For each new KPI, two fields are
+needed on the digest model (`digest.digest`):
 
-.. warning::
-   Additional costs to the database subscription are incurred, should Odoo *Studio* need to be
-   installed.
+#. A boolean field, e.g., `kpi_myfield`, displayed in the :guilabel:`KPIs` tab, to enable the KPI.
+#. A computed field, e.g., `kpi_myfield_value`, that computes the value of the KPI.
 
-To begin, click the :guilabel:`🛠️ (tools)` icon in the top-right of the screen. This is the link to
-the Odoo *Studio* application.
-
-In order to create additional fields, create two fields on the digest object:
-
-#. Create a boolean field called `kpi_myfield`, and display it in the :guilabel:`KPIs` tab.
-#. Create a computed field called `kpi_myfield_value` that computes the customized :abbr:`KPI (key
-   performance indicator)`.
-#. Select the :abbr:`KPIs (key performance indicators)` in the :guilabel:`KPIs` tab.
+Once the module is installed, the new KPI can be selected in the :guilabel:`KPIs` tab.
 
 .. tip::
-   Here is the `source code
-   <https://github.com/odoo/odoo/blob/15.0/addons/digest/models/digest.py>`_ for the `digest.py`
-   file, which guides the programmer in the coding of the computed field.
-
-.. seealso::
-   Users can also click the :guilabel:`Recipients` tab, and then the vertical three-dot
-   :guilabel:`(kebab)` menu to edit this view. Either click :guilabel:`EDIT LIST VIEW` or
-   :guilabel:`EDIT FORM VIEW` to modify this tab.
+   The `digest.py` file of the *Digest* module (`digest/models/digest.py`) and the modules that add
+   the standard KPIs (e.g., `crm`, `sale`, `project`) can be used as examples for the computed
+   fields.
 
 Computed values reference table
 -------------------------------
@@ -241,8 +237,6 @@ Computed values reference table
 +-----------------------+-------------------------------------------+
 | Open Tasks            | `kpi_project_task_opened_value`           |
 +-----------------------+-------------------------------------------+
-| Tickets Closed        | `kpi_helpdesk_tickets_closed_value`       |
-+-----------------------+-------------------------------------------+
 | % of Happiness        | `kpi_livechat_rating_value`               |
 +-----------------------+-------------------------------------------+
 | Conversations handled | `kpi_livechat_conversations_value`        |
@@ -254,8 +248,6 @@ Computed values reference table
 | eCommerce Sales       | `kpi_website_sale_total_value`            |
 +-----------------------+-------------------------------------------+
 | Revenue               | `kpi_account_total_revenue_value`         |
-+-----------------------+-------------------------------------------+
-| Bank & Cash Moves     | `kpi_account_bank_cash_value`             |
 +-----------------------+-------------------------------------------+
 | POS Sales             | `kpi_pos_total_value`                     |
 +-----------------------+-------------------------------------------+

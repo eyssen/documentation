@@ -61,9 +61,12 @@ In the search bar, search for the following :guilabel:`Delegated permissions` an
 .. note::
    The :guilabel:`User.Read` permission will be added by default.
 
-.. image:: azure_oauth/permissions.png
-   :align: center
-   :alt: API permissions needed for Odoo integration are listed under the Microsoft Graph.
+.. screenshot:: general-email-azure-api-permissions
+   :menu: (Microsoft Entra admin center / Azure portal) ‣ App registrations ‣ (app) ‣ API permissions
+   :shows: The API permissions list under Microsoft Graph: offline_access, User.Read, IMAP.AccessAsUser.All and SMTP.Send (delegated).
+   :highlight: The permission list.
+   :module: microsoft_outlook
+   :notes: Microsoft website; blur tenant data.
 
 Assign users and groups
 =======================
@@ -75,10 +78,12 @@ Now, add users to this application. Under the :guilabel:`Essentials` overview ta
 link labeled :guilabel:`Managed Application in Local Directory`, or the last option on the bottom
 right-hand side of the table.
 
-.. image:: azure_oauth/managed-application.png
-   :align: center
-   :alt: Add users/groups by clicking the Managed application in local directory link for the
-         created application.
+.. screenshot:: general-email-azure-managed-app
+   :menu: (Microsoft Entra admin center / Azure portal) ‣ App registrations ‣ (app) ‣ Overview
+   :shows: The app overview with the "Managed application in local directory" link.
+   :highlight: The link.
+   :module: microsoft_outlook
+   :notes: Microsoft website; blur IDs.
 
 In the left sidebar menu, select :guilabel:`Users and Groups`. Next, click on :guilabel:`(+) Add
 User/Group`. Depending on the account, either a :guilabel:`Group` and a :guilabel:`User` can be
@@ -99,9 +104,12 @@ These include the :guilabel:`Client ID` and :guilabel:`Client Secret`. To start,
 :guilabel:`Client ID` or :guilabel:`Application ID` is located under the :guilabel:`Display Name`
 in the :guilabel:`Essentials` overview of the app.
 
-.. image:: azure_oauth/application-id.png
-   :align: center
-   :alt: Application/Client ID located in the Overview of the app.
+.. screenshot:: general-email-azure-client-id
+   :menu: (Microsoft Entra admin center / Azure portal) ‣ App registrations ‣ (app) ‣ Overview
+   :shows: The Essentials panel with the Application (client) ID.
+   :highlight: The Application (client) ID.
+   :module: microsoft_outlook
+   :notes: Microsoft website; blur IDs.
 
 Next, the :guilabel:`Client Secret Value` needs to be retrieved. To get this value, click on
 :guilabel:`Certificates & Secrets` in the left sidebar menu. Then, a :guilabel:`Client Secret`
@@ -121,9 +129,12 @@ and :guilabel:`Secret ID` will be created. It is important to copy the :guilabel
 :guilabel:`Client Secret Value` into a notepad as it will become encrypted after leaving this page.
 The :guilabel:`Secret ID` is not needed.
 
-.. image:: azure_oauth/secretvalue.png
-   :align: center
-   :alt: Client Secret Value or Value in the app's credentials.
+.. screenshot:: general-email-azure-client-secret
+   :menu: (Microsoft Entra admin center / Azure portal) ‣ App registrations ‣ (app) ‣ Certificates & secrets
+   :shows: The client secrets list with the Value column (to copy) and the Secret ID column.
+   :highlight: The Value column.
+   :module: microsoft_outlook
+   :notes: Microsoft website; blur secrets.
 
 After these steps, the following items should be ready to be set up in Odoo:
 
@@ -151,9 +162,12 @@ a new option for :guilabel:`Outlook Credentials`.
 Then, copy and paste the :guilabel:`Client ID` (Application ID) and :guilabel:`Client Secret
 (Client Secret Value)` into the respective fields and :guilabel:`Save` the settings.
 
-.. image:: azure_oauth/outlookcreds.png
-   :align: center
-   :alt: Outlook Credentials in Odoo General Settings.
+.. screenshot:: general-email-azure-odoo-credentials
+   :menu: Settings ‣ General Settings ‣ Emails
+   :shows: The "Use Custom Email Servers" setting with the Outlook Credentials: Client ID and Client Secret fields filled.
+   :highlight: The Outlook Credentials fields.
+   :module: microsoft_outlook
+   :notes: English UI, crop to the section; blur the values.
 
 Configure outgoing email server
 -------------------------------
@@ -172,18 +186,23 @@ Then, click on :guilabel:`Connect your Outlook account`.
 A new window from Microsoft opens to complete the :guilabel:`authorization process`. Select the
 appropriate email address that is being configured in Odoo.
 
-.. image:: azure_oauth/verify-outlook.png
-   :align: center
-   :alt: Permission page to grant access between newly created app and Odoo.
+.. screenshot:: general-email-azure-consent
+   :menu: (Microsoft sign-in page)
+   :shows: The Microsoft permission request page for the registered app, with the Yes/Accept button.
+   :module: microsoft_outlook
+   :notes: Microsoft website; use a demo account.
 
 Then, allow Odoo to access the Microsoft account by clicking on :guilabel:`Yes`. After this, the
 page will navigate back to the newly configured :guilabel:`Outgoing Mail Server` in Odoo. The
 configuration automatically loads the :guilabel:`token` in Odoo, and a tag stating
 :guilabel:`Outlook Token Valid` appears in green.
 
-.. image:: azure_oauth/outlook-token.png
-   :align: center
-   :alt: Valid Outlook Token indicator.
+.. screenshot:: general-email-azure-token-valid
+   :menu: Settings ‣ Technical ‣ Email ‣ Outgoing Mail Servers ‣ (Outlook server)
+   :shows: Outgoing mail server with "Authenticate with" set to "Outlook OAuth Authentication" and the green "Outlook Token Valid" indicator.
+   :highlight: The token indicator.
+   :module: microsoft_outlook
+   :notes: English UI, crop to the form.
 
 Finally, click :guilabel:`Test Connection`. A confirmation message should appear. The Odoo database
 can now send safe, secure emails through Microsoft Outlook using OAuth authentication.
@@ -214,9 +233,11 @@ When using this configuration, every email that is sent from the database will u
 the configured `notification` mailbox. However it should be noted that the name of the sender will
 appear but their email address will change:
 
-.. image:: azure_oauth/from-name-remain.png
-   :align: center
-   :alt: Name from real sender with static email.
+.. screenshot:: general-email-azure-from-name
+   :menu: (email client)
+   :shows: A received email whose sender shows the real user's name with the shared (static) email address.
+   :module: microsoft_outlook
+   :notes: Any email client; example addresses.
 
 .. example::
    Single outgoing mail server configuration:

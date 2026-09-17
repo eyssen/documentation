@@ -7,8 +7,8 @@ Webhooks
   role when deciding to use webhooks and throughout the implementation process. If not properly
   configured, webhooks may disrupt the Odoo database and can take time to revert.
 
-Webhooks, which can be created in **Odoo Studio**, allow you to automate an action in your Odoo
-database when a specific event occurs in another, external system.
+Webhooks, which are automation rules with the :guilabel:`On webhook` trigger, allow you to automate
+an action in your Odoo database when a specific event occurs in another, external system.
 
 In practice, this works as follows: when the event occurs in the external system, a data file (the
 "payload") is sent to the Odoo webhook's URL via a `POST` API request, and a predefined action is
@@ -20,27 +20,27 @@ example, you can set up a webhook to have your Odoo inventory data updated autom
 sales order is confirmed in an external point-of-sale system.
 
 Setting up a webhook in Odoo requires no coding when connecting two Odoo databases, but
-:ref:`testing a webhook <studio/webhooks/test-webhook>` requires an external tool.
-:ref:`Custom target records or actions <studio/webhooks/webhook-example>` may require programming
-skills.
+:ref:`testing a webhook <general/automation-rules/webhooks/test-webhook>` requires an external tool.
+:ref:`Custom target records or actions <general/automation-rules/webhooks/webhook-example>` may
+require programming skills.
 
 .. note::
    This article covers creating a webhook that *receives* data from an external source. However,
    it is also possible to create an automated action that :ref:`sends data to an external webhook
-   <studio/automated-actions/action-webhook>` when a change occurs in your Odoo database.
+   <general/automation-rules/action-webhook>` when a change occurs in your Odoo database.
 
-.. _studio/webhooks/create-webhook:
+.. _general/automation-rules/webhooks/create-webhook:
 
 Create a webhook in Odoo
 ========================
 
 .. important::
-   Before implementing a webhook in a live database, configure and test it using a :ref:`duplicate
-   database <odoo-online/duplicate>` to ensure the webhook performs as intended.
+   Before implementing a webhook in a live database, configure and test it using a duplicate (test)
+   database to ensure the webhook performs as intended.
 
 .. tip::
    :ref:`Activating developer mode <developer-mode>` before creating up a webhook gives greater
-   flexibility in selecting the :doc:`model <../models_modules_apps>` the automation rule
+   flexibility in selecting the model the automation rule
    targets. It also allows you to find the technical name of the model and fields, which may be
    needed to configure the payload.
 
@@ -49,13 +49,13 @@ Create a webhook in Odoo
    the :guilabel:`Model` field. For example, a sales order webhook uses the *Sales
    Order* model, but the technical name `sale.order` is used in the payload.
 
-To create a webhook in **Studio**, proceed as follows:
+To create a webhook, proceed as follows:
 
-#. :ref:`Open Studio <studio/access>` and click :guilabel:`Webhooks`, then :guilabel:`New`.
+#. With :ref:`developer mode activated <developer-mode>`, go to :menuselection:`Settings -->
+   Technical --> Automation --> Automation Rules`, then click :guilabel:`New`.
 #. Give the webhook a clear, meaningful name that identifies its purpose.
-#. If needed, and provided developer mode is activated, select the appropriate :guilabel:`Model`
-   from the dropdown. If developer mode is not activated, the automation rule targets the current
-   model by default.
+#. Select the appropriate :guilabel:`Model` from the dropdown.
+#. Set the :guilabel:`Trigger` to :guilabel:`On webhook`.
 
 #. The webhook's URL is automatically generated, but can be changed if needed by clicking
    :guilabel:`Rotate Secret`. This is the URL that should be used when implementing the webhook in
@@ -78,19 +78,17 @@ To create a webhook in **Studio**, proceed as follows:
    `model.search(i)` instead of the default :guilabel:`Target Record` format.
 
 #. Click :guilabel:`Add an action` in the :guilabel:`Actions To Do` tab to define the :ref:`actions
-   <studio/automated-actions/action>` to be executed.
+   <general/automation-rules/action>` to be executed.
 #. Before implementing the webhook in the external system, :ref:`test
-   <studio/webhooks/test-webhook>` it to ensure it works as intended.
+   <general/automation-rules/webhooks/test-webhook>` it to ensure it works as intended.
 
 .. tip::
-   - Webhooks can also be created via the :guilabel:`Automations` menu in **Studio** by selecting
-     the trigger :guilabel:`On webhook`.
    - To access the history of API requests if :guilabel:`Log Calls` has been enabled, click the
      :guilabel:`Logs` smart button at the top of the :guilabel:`Automation rules` form.
    - If the purpose of the webhook is anything other than to update an existing record, e.g., to
      create a new record, the :guilabel:`Execute Code` action must be chosen.
 
-.. _studio/webhooks/test-webhook:
+.. _general/automation-rules/webhooks/test-webhook:
 
 Test a webhook
 ==============
@@ -100,8 +98,8 @@ Testing a webhook requires a test payload and an external tool or system, like
 presents the steps to test a webhook in Postman.
 
 .. tip::
-   - See the :ref:`webhook use cases section <studio/webhooks/webhook-examples>` for step-by-step
-     explanations of how to test webhooks using test payloads.
+   - See the :ref:`webhook use cases section <general/automation-rules/webhooks/webhook-examples>`
+     for step-by-step explanations of how to test webhooks using test payloads.
    - To get specific help with testing a webhook with Postman, contact their support team.
 
 #. In Postman, create a new HTTP request and set its method to :guilabel:`POST`.
@@ -112,7 +110,7 @@ presents the steps to test a webhook in Postman.
    the code editor.
 #. Click :guilabel:`Send`.
 
-.. _studio/webhooks/test-webhook-response:
+.. _general/automation-rules/webhooks/test-webhook-response:
 
 In the :guilabel:`Response` viewer at the bottom of the screen in Postman, details, including a HTTP
 response code, indicate whether or not the webhook is functioning correctly.
@@ -136,7 +134,7 @@ Implement a webhook in an external system
 When the webhook has been successfully created in Odoo and tested, implement it in the system that
 sends data to the Odoo database, making sure the `POST` API requests are sent to the webhook's URL.
 
-.. _studio/webhooks/webhook-examples:
+.. _general/automation-rules/webhooks/webhook-examples:
 
 Webhook use cases
 =================
@@ -160,9 +158,9 @@ Create the webhook
 
 To create this webhook, proceed as follows:
 
-#. Open the **Sales** app, then :ref:`open Studio <studio/access>` and click :guilabel:`Webhooks`.
-   The *Sales Order* model is selected by default.
-#. Click :guilabel:`New`. The :guilabel:`Trigger` is set to :guilabel:`On webhook` by default.
+#. Go to :menuselection:`Settings --> Technical --> Automation --> Automation Rules` and click
+   :guilabel:`New`. Select the *Sales Order* model and set the :guilabel:`Trigger` to
+   :guilabel:`On webhook`.
 #. Set the :guilabel:`Target Record` to
    `model.env[payload.get('model')].browse(int(payload.get('id')))`, where:
 
@@ -204,11 +202,12 @@ To test this webhook, proceed as follows:
    `SALES ORDER NUMBER` with the sales order's number without the `S` or any zeros before the
    number. For example, a sales order with the number `S00007` should be entered as `7` in Postman.
 #. Click :guilabel:`Send`.
-#. Consult the :ref:`Response viewer <studio/webhooks/test-webhook-response>` in Postman to
-   determine whether or not the webhook is functioning properly. If a message other than `200 OK` or
-   `status: ok` is returned, the number associated with the message helps to identify the problem.
+#. Consult the :ref:`Response viewer <general/automation-rules/webhooks/test-webhook-response>` in
+   Postman to determine whether or not the webhook is functioning properly. If a message other than
+   `200 OK` or `status: ok` is returned, the number associated with the message helps to identify
+   the problem.
 
-.. _studio/webhooks/webhook-example:
+.. _general/automation-rules/webhooks/webhook-example:
 
 Create a new contact
 --------------------
@@ -222,9 +221,9 @@ Create the webhook
 
 To create this webhook, proceed as follows:
 
-#. Open the **Contacts** app, then :ref:`open Studio <studio/access>` and click :guilabel:`Webhooks`.
-   The *Contact* model is selected by default.
-#. Click :guilabel:`New`. The :guilabel:`Trigger` is set to :guilabel:`On webhook` by default.
+#. Go to :menuselection:`Settings --> Technical --> Automation --> Automation Rules` and click
+   :guilabel:`New`. Select the *Contact* model and set the :guilabel:`Trigger` to
+   :guilabel:`On webhook`.
 #. Set the :guilabel:`Target Record` to `model.browse([2])`. This is essentially a placeholder as
    the code in the automated action tells the webhook what needs to be retrieved from the payload
    and in which model the record needs to be created.
@@ -279,6 +278,7 @@ To test this webhook, proceed as follows:
 #. In the pasted code, replace the `CONTACT NAME`, `CONTACTEMAIL@EMAIL.COM`, and `CONTACT PHONE
    NUMBER` with a new contact's information.
 #. Click :guilabel:`Send`.
-#. Consult the :ref:`Response viewer <studio/webhooks/test-webhook-response>` in Postman to
-   determine whether or not the webhook is functioning properly. If a message other than `200 OK` or
-   `status: ok` is returned, the number associated with the message helps to identify the problem.
+#. Consult the :ref:`Response viewer <general/automation-rules/webhooks/test-webhook-response>` in
+   Postman to determine whether or not the webhook is functioning properly. If a message other than
+   `200 OK` or `status: ok` is returned, the number associated with the message helps to identify
+   the problem.

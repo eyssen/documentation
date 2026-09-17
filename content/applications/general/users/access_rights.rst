@@ -38,8 +38,12 @@ to the database, but they can be adjusted at any point in the user's profile.
 
 To make changes to a user's rights, click on the desired user to edit their profile.
 
-.. image:: access_rights/navigate-to-users-menu.png
-   :alt: Users menu in the Users & Companies section of the Settings app of Odoo.
+.. screenshot:: general-access-rights-users-menu
+   :menu: Settings ‣ Users & Companies
+   :shows: The "Users & Companies" menu of the Settings app open, with "Users" highlighted.
+   :highlight: The "Users" menu item.
+   :module: base
+   :notes: English UI, crop to the relevant area.
 
 On the user's profile page, in the :guilabel:`Access Rights` tab, scroll down to view the current
 permissions.
@@ -51,8 +55,13 @@ Documents`, :guilabel:`User: All Documents`, or :guilabel:`Administrator`.
 The :guilabel:`Administration` field in the :guilabel:`Access Rights` tab has the following options:
 :guilabel:`Settings` or :guilabel:`Access Rights`.
 
-.. image:: access_rights/user-permissions-dropdown-menu.png
-   :alt: The Sales apps drop-down menu to set the user's level of permissions.
+.. screenshot:: general-access-rights-app-dropdown
+   :menu: Settings ‣ Users & Companies ‣ Users ‣ (a user) ‣ Access Rights tab
+   :shows: The Access Rights tab with the Sales access dropdown open ("User: Own Documents Only", "User: All Documents", "Administrator").
+   :highlight: The Sales dropdown.
+   :data: Demo user "Marc Demo".
+   :module: base, sale
+   :notes: English UI, crop to the relevant area.
 
 .. _access-rights/groups:
 
@@ -66,8 +75,12 @@ define rules for models within an application.
 To access groups, first activate Odoo's :ref:`developer mode <developer-mode>`, then go to
 :menuselection:`Settings app --> Users & Companies --> Groups`.
 
-.. image:: access_rights/click-users-and-companies.png
-   :alt: Groups menu in the Users & Companies section of the Settings app of Odoo.
+.. screenshot:: general-access-rights-groups-menu
+   :menu: Settings ‣ Users & Companies (developer mode)
+   :shows: The "Users & Companies" menu open with "Groups" highlighted.
+   :highlight: The "Groups" menu item.
+   :module: base
+   :notes: English UI, developer mode active, crop to the menu.
 
 To create a new group from the :guilabel:`Groups` page, click :guilabel:`Create`. Then, from the
 blank group form, select an :guilabel:`Application`, and complete the group form (detailed below).
@@ -85,8 +98,13 @@ The group form contains multiple tabs for managing all elements of the group. In
 :guilabel:`Add a line` to add a new row for users or rules, and click the :icon:`fa-times`
 :guilabel:`(cancel)` icon to remove a row.
 
-.. image:: access_rights/groups-form.png
-   :alt: Tabs in the Groups form to modify the settings of the group.
+.. screenshot:: general-access-rights-group-form
+   :menu: Settings ‣ Users & Companies ‣ Groups ‣ (a group)
+   :shows: Group form with Application and Name, and the tabs Users, Inherited, Menus, Views, Access Rights, Record Rules, Notes.
+   :highlight: The tab row.
+   :data: Group "Sales / Administrator".
+   :module: base
+   :notes: English UI, developer mode active, crop to the form sheet.
 
 - :guilabel:`Users` tab: lists the current users in the group. Users listed in black have
   administrative rights. Users without administrative access appear in blue. Click :guilabel:`Add a
@@ -124,8 +142,12 @@ The group form contains multiple tabs for managing all elements of the group. In
      named `res.partner.purchase.manager`. This consists of the technical name of the model,
      followed by a name identifying the group of users in question.
 
-     .. image:: access_rights/name-field.png
-        :alt: Name of access rights to a model.
+     .. screenshot:: general-access-rights-access-name
+        :menu: Settings ‣ Users & Companies ‣ Groups ‣ (a group) ‣ Access Rights tab
+        :shows: A new access rights line with Name "res.partner.purchase.manager", Model "Contact" and the Read/Write/Create/Delete checkboxes.
+        :highlight: The Name field.
+        :module: base
+        :notes: English UI, developer mode active, crop to the tab.
 
      To find the model's technical name from the current view, first enter a placeholder text
      in the :guilabel:`Name` field, then click the :guilabel:`Model` name, then the
@@ -175,8 +197,8 @@ Finally, towards the bottom of the menu, click :guilabel:`Become Superuser`.
    made. This can cause *impotent admin*, or an administrator without the ability to change access
    rights/settings.
 
-   In this case contact Odoo Support here: `new help ticket <https://www.odoo.com/help>`_. The
-   support team is able to restore access using a support login.
+   In this case, contact your system administrator or hosting provider, who can restore access
+   from the server.
 
 To leave *Superuser mode*, log out of the account, by navigating to the upper-right corner, and
 clicking on the :guilabel:`OdooBot` username. Then, select the :guilabel:`Log out` option.

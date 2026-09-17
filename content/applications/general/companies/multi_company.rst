@@ -15,18 +15,6 @@ simultaneously and set their specific warehouses, customers, equipment, and cont
 generates reports of aggregated figures without switching interfaces, facilitating daily tasks and
 enhancing the overall management process.
 
-.. warning::
-   Enabling multi-company functionality in an Odoo database on a *Standard* plan automatically
-   triggers an upsell to the *Custom* plan. This does not apply to databases on the *One-App Free*
-   plan.
-
-   - **For yearly or multi-year contracts**: An upsell order is created with a 30-day limit.
-   - **For monthly contracts**: The subscription automatically switches to the *Custom* plan and
-     the new rate is applied when the next bill is generated.
-
-   For more information, refer to `Odoo's pricing page <https://www.odoo.com/pricing-plan>`_ or
-   contact your account manager.
-
 .. _general/multi-company/configuration:
 
 Configuration
@@ -84,8 +72,14 @@ To switch between (or select) multiple companies, follow these steps:
    In the example below, the user can access six companies, two of which are selected. The current
    active company is *My Company (San Francisco)*.
 
-   .. image:: multi_company/multi-companies-menu-dashboard.png
-      :alt: View of the companies menu through the main dashboard in Odoo.
+   .. screenshot:: general-multi-company-selector
+      :menu: Top menu bar ‣ company selector
+      :shows: The company selector dropdown with six companies, two of them ticked, and the active
+         company "My Company (San Francisco)" highlighted.
+      :highlight: The ticked companies and the active company.
+      :data: Six demo companies, including "My Company (San Francisco)" and "My Company (Chicago)".
+      :module: base
+      :notes: English UI, crop to the top bar and dropdown.
 
 .. _general/multi-company/shared-and-unshared-records:
 

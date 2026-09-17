@@ -16,7 +16,7 @@ Email aliases
 Model specific aliases
 ----------------------
 
-Some applications have their specific aliases (sales teams, helpdesk teams, projects, etc.). These
+Some applications have their specific aliases (sales teams, projects, etc.). These
 aliases are used to:
 
 - Create a record when an email is sent directly to the alias,
@@ -24,13 +24,18 @@ aliases are used to:
 
 .. example::
 
-   .. image:: email_servers_inbound/sales-team-alias-config.png
-      :alt: The local-part "info" is used for the alias of the sales team.
+   .. screenshot:: general-email-inbound-sales-team-alias
+      :menu: CRM ‣ Configuration ‣ Sales Teams ‣ (a team)
+      :shows: Sales team form with the Email Alias field set to "info" @ "company-name.com".
+      :highlight: The Email Alias field.
+      :data: Sales team "Europe".
+      :module: crm, mail
+      :notes: English UI, crop to the relevant area.
 
-   In the example displayed above, sending an email to `info@company-name.odoo.com` will create a
+   In the example displayed above, sending an email to `info@company-name.com` will create a
    new opportunity or a new lead automatically assigned to the corresponding sales team. If an email
    is sent from the chatter of an existing opportunity, the *reply-to* will be
-   `info@company-name.odoo.com`. The reply will be posted in the right chatter, according to the
+   `info@company-name.com`. The reply will be posted in the right chatter, according to the
    *message-id* header.
 
 .. _email-inbound-aliases-catchall:
@@ -48,8 +53,11 @@ By default, the local-part *catchall* will be used. Enable :ref:`developer-mode`
 An email to the catchall always needs to be a reply to a previous email sent from the database. If
 an email is sent directly to the catchall, the sender will receive the following message:
 
-.. image:: email_servers_inbound/direct-mail-to-catchall.png
-   :alt: Bounce email from "MAILER-DEAMON" explaining how to contact the database.
+.. screenshot:: general-email-inbound-catchall-bounce
+   :menu: (email client)
+   :shows: The automatic bounce email received after writing directly to the catchall address, explaining that the address is only for replies and giving the company email address.
+   :module: mail
+   :notes: Any email client; English; example domain.
 
 .. note::
    The email address `info@company-name.com` displayed in the screenshot above is the email address
@@ -61,9 +69,9 @@ an email is sent directly to the catchall, the sender will receive the following
 
 .. example::
    An alias can be configured on a sales team in the CRM app. When a customer replies to an email
-   coming from the CRM app, the *reply-to* is `info@company-name.odoo.com`.
+   coming from the CRM app, the *reply-to* is `info@company-name.com`.
 
-   When an email is sent from the Contact app, the reply address is `catchall@company-name.odoo.com`
+   When an email is sent from the Contact app, the reply address is `catchall@company-name.com`
    because there is no alias on the contact model.
 
 .. note::
@@ -83,58 +91,39 @@ the recipient and an error is returned to the sender.
 By default the name *bounce* will be used. Enable :ref:`developer-mode` and go to
 :menuselection:`Settings --> Technical --> Emails: Alias Domains` to access the configuration.
 
-.. note::
-   On Odoo Online, when using the default outgoing email server, the return-path address is forced
-   to the value `bounce@company-name.odoo.com` independently of the value set as bounce alias.
-
 When an error occurs, a notification is received and displayed in a red envelope in the chatter. In
 some cases, the red envelope can just contain a `no error` message, meaning there is an error that
 could not be handled by Odoo.
 
 A notification will also be displayed in the Discuss icon on the navigation bar.
 
-.. image:: email_servers_inbound/mail-error-notif-navbar.png
-   :alt: An email sent to a contact had an issue and the error is reported on the navbar.
+.. screenshot:: general-email-inbound-failure-navbar
+   :menu: Top menu bar ‣ Discuss (messaging) icon
+   :shows: The messaging dropdown with a "Delivery failure" notification for an email sent to a contact.
+   :highlight: The failure notification.
+   :module: mail
+   :notes: English UI, crop to the relevant area.
 
 .. example::
    If the email address of the recipient is incorrect, by clicking on the red envelope in the
    chatter an error message containing the reason for the failure will be given.
 
-   .. image:: email_servers_inbound/red-envelope-info.png
-      :alt: An email sent to a wrong domain generates a bounce displayed as a red envelope.
+   .. screenshot:: general-email-inbound-red-envelope
+      :menu: Contacts ‣ (a contact) ‣ chatter
+      :shows: A sent message in the chatter with the red envelope icon clicked, showing the failure reason (e.g., invalid domain).
+      :highlight: The red envelope and the error popover.
+      :module: mail
+      :notes: English UI, crop to the relevant area.
 
 .. _email-inbound-default:
 
-Receive emails with Odoo's default configuration
-================================================
+Receiving emails
+================
 
-On **Odoo Online** and **Odoo.sh**, the email alias, reply, and bounce addresses are pre-configured.
-These addresses use the alias domain automatically added to a standard database.
-
-.. example::
-   Assuming the database URL is `https://mydatabase.odoo.com`, the alias domain
-   `mydatabase.odoo.com` is automatically created. Catchall and bounce can be used and their address
-   is respectively `catchall@mydatabase.odoo.com`, and `bounce@mydatabase.odoo.com`.
-
-   If the CRM app is installed, and a sales team with the alias `info` is created, the
-   `info@mydatabase.odoo.com` address can be used immediately. The same goes for any other alias
-   created in other applications.
-
-The database domain is ready to be used to receive emails without any additional configuration.
-
-.. _email-inbound-multiple-subdomains:
-
-Use multiple Odoo subdomains
-============================
-
-On **Odoo Online**, the only Odoo subdomain is the one defined at the database creation.
-
-On **Odoo.sh**, it is possible to use several Odoo subdomains. In the settings of the branch,
-additional Odoo subdomains can be added as long as they are not used yet in another branch. These
-domains must then be added to the alias domains to be used by a company.
-
-.. image:: email_servers_inbound/custom-subdomain-sh.png
-   :alt: Setting up an Odoo subdomain on a branch.
+Odoo does not receive emails by itself: the emails sent to the aliases, the catchall, and the bounce
+address of the :ref:`alias domain <email-outbound-alias-domain>` are delivered to the mail server
+of that domain, and must then be brought into the database with one of the methods described
+below. On hosted databases, this is usually set up by the hosting provider.
 
 .. _email-inbound-custom-domain:
 
@@ -144,25 +133,33 @@ Use a custom domain for inbound messages
 The :ref:`alias domain <email-outbound-alias-domain>` must be selected in the general
 settings. If you have multiple companies, each one must be configured.
 
-.. image:: email_servers_inbound/alias-domain-settings.png
-   :alt: The alias domain in the general settings.
+.. screenshot:: general-email-inbound-alias-domain-setting
+   :menu: Settings ‣ General Settings ‣ Emails
+   :shows: The "Alias Domain" setting with the company's custom domain selected.
+   :highlight: The Alias Domain field.
+   :data: Alias domain "company-name.com".
+   :module: mail
+   :notes: English UI, crop to the relevant area.
 
 All the aliases will use this custom domain. Replies on models for which an alias is configured
 are done to `[alias]@my-custom-domain.com`. Replies to other models are sent to the catchall through
 `catchall@my-custom-domain.com`.
 
-.. image:: email_servers_inbound/diagram-mail-custom-domain.png
-   :alt: Technical schema of mailing route when using a custom domain in Odoo.
+.. screenshot:: general-email-inbound-custom-domain-diagram
+   :menu: (diagram)
+   :shows: Diagram of the inbound route with a custom domain: replies and alias emails go to [alias]@my-custom-domain.com, reach the domain's mail server (MX), and are brought into Odoo by redirection, incoming mail server, or MX record to the Odoo mail gateway.
+   :module: mail
+   :notes: Simple schematic drawing, not a UI screenshot.
 
 .. important::
-   If emails are sent using Odoo's email servers while using a custom domain, follow the
-   :ref:`"Using a custom domain with Odoo’s email server" instructions
+   If emails are sent using the default mail server while using a custom domain, follow the
+   :ref:`"Using a custom domain with the default mail server" instructions
    <email-outbound-custom-domain-odoo-server>`.
 
-Since this custom domain is used, all emails using an alias (replies, bounces and direct
-sends) are sent to an address of the domain. They are thus delivered to the email server linked to the domain (MX record). To
-display them in the chatter or to create new records, it is necessary to retrieve these incoming
-emails in the Odoo database.
+Since this custom domain is used, all emails using an alias (replies, bounces and direct sends) are
+sent to an address of the domain. They are thus delivered to the email server linked to the domain
+(MX record). To display them in the chatter or to create new records, it is necessary to retrieve
+these incoming emails in the Odoo database.
 
 .. list-table::
    :header-rows: 1
@@ -185,8 +182,9 @@ emails in the Odoo database.
        Requires advanced technical knowledge.
 
 .. important::
-   For **on-premise databases**, the redirection and the MX record methods also require configuring
-   the :doc:`mail gateway script <../../../../administration/on_premise/email_gateway>`. Going
+   The redirection and the MX record methods require a mail server that passes the emails to the
+   Odoo database through the :doc:`mail gateway script
+   </administration/on_premise/email_gateway>`. Going
    through this script requires **advanced technical and infrastructure knowledge**.
 
 .. important::
@@ -198,18 +196,21 @@ emails in the Odoo database.
 Redirections
 ------------
 
-If the database is hosted on **Odoo Online** or **Odoo.sh**, using redirections is recommended. They
-allow messages to be received without delay in the database.
+Redirections allow messages to be received without delay in the database. The mailboxes of the
+custom domain are redirected to the addresses on which the database receives emails through the
+mail gateway (e.g., a dedicated subdomain provided by the hosting provider or the system
+administrator).
 
-It is mandatory to redirect the catchall and bounce address to the Odoo subdomain of the database.
-Every other alias used must be redirected as well.
+It is mandatory to redirect the catchall and bounce address. Every other alias used must be
+redirected as well.
 
 .. example::
-   With one sales team, the following redirections are required:
+   With one sales team, and a receiving domain `odoo.company-name.com`, the following redirections
+   are required:
 
-   - `catchall@company-name.com` → `catchall@company-name.odoo.com`
-   - `bounce@company-name.com` → `bounce@company-name.odoo.com`
-   - `info@company-name.com` → `info@company-name.odoo.com`
+   - `catchall@company-name.com` → `catchall@odoo.company-name.com`
+   - `bounce@company-name.com` → `bounce@odoo.company-name.com`
+   - `info@company-name.com` → `info@odoo.company-name.com`
 
 .. important::
    Some providers ask to validate the redirection by sending a link to the target email address.
@@ -243,14 +244,30 @@ database, in order to fetch all incoming emails.
 .. warning::
    Odoo's *Incoming Mail Servers* feature is designed for shared inboxes (e.g.,
    `sales@yourcompany.com` or `support@yourcompany.com`) to route messages to team pipelines,
-   tickets, or documents.
+   tasks, or other documents.
 
    Using personal email addresses (e.g., `mitchell.admin@yourcompany.com`) as incoming mail servers
    is **not** recommended. Doing so can lead to increased security risks, unintended message
    routing, privacy issues, and difficulties syncing replies correctly.
 
 Incoming mail servers are created by going to :menuselection:`Settings --> Technical --> Emails:
-Incoming Mail Servers`.
+Incoming Mail Servers`, or, after enabling :guilabel:`Use Custom Email Servers` in the
+:guilabel:`Emails` section of the :menuselection:`Settings` app, by clicking :guilabel:`Incoming
+Email Servers`.
+
+The incoming mail server form contains the following fields:
+
+- :guilabel:`Name` and :guilabel:`Server Type` (:guilabel:`IMAP Server`, :guilabel:`POP Server`,
+  :guilabel:`Local Server`, or, depending on the installed modules, Gmail or Outlook OAuth).
+- :guilabel:`Server Information`: the server name, port, and :guilabel:`SSL/TLS` option.
+- :guilabel:`Login Information`: the username and password of the mailbox.
+- :guilabel:`Create a New Record`: the model in which new records are created for emails that are
+  not replies to an existing conversation.
+- :guilabel:`Keep Attachments` and :guilabel:`Keep Original` (in the :guilabel:`Advanced` tab):
+  whether attachments and a full copy of the original email are kept.
+
+Click :guilabel:`Test & Confirm` to validate the connection, and :guilabel:`Fetch Now` to retrieve
+the emails immediately.
 
 .. important::
    We recommend using the IMAP protocol over the POP protocol, as IMAP fetches all unread emails,
@@ -267,11 +284,16 @@ Additionally, using an incoming mail server in Odoo gives the opportunity to cre
 specified model. Each incoming mail server can create records in a different model.
 
 .. example::
-   Emails received on `task@company-name.com` are fetched by the Odoo database. All fetched emails will
-   create a new project task in the database.
+   Emails received on `task@company-name.com` are fetched by the Odoo database. All fetched emails
+   will create a new project task in the database.
 
-   .. image:: email_servers_inbound/incoming-mail-server.png
-      :alt: Technical schema of mailing route when using a custom domain in Odoo.
+   .. screenshot:: general-email-inbound-server-form
+      :menu: Settings ‣ Technical ‣ Email ‣ Incoming Mail Servers ‣ New
+      :shows: Incoming mail server form: Name, Server Type "IMAP Server", server, port, SSL/TLS, username, password, and "Create a New Record" set to Task.
+      :highlight: The "Create a New Record" field.
+      :data: Server "Tasks mailbox", imap.company-name.com, user task@company-name.com.
+      :module: mail
+      :notes: English UI, developer mode active, crop to the form; blur the password.
 
 .. _email-inbound-custom-domain-mx:
 
@@ -282,25 +304,9 @@ A third option is to create a MX record in your DNS zone which specifies the mai
 emails sent to your domain. **Advanced technical knowledge is required.**
 
 .. important::
-   This configuration only works with a subdomain on the Odoo Online or Odoo.sh infrastructure
-   (e.g., `@mail.mydomain.com`)
-
-Below are presented some specifications depending on the hosting type:
-
-.. tabs::
-
-   .. group-tab:: Odoo Online
-
-      The custom subdomain must be added to your :doc:`Odoo Portal
-      <../../websites/website/configuration/domain_names>`.
-
-   .. group-tab:: Odoo.sh
-
-      The custom subdomain must be added to the :doc:`settings of the project
-      <../../../administration/odoo_sh/getting_started/settings>`:
-
-      .. image:: email_servers_inbound/custom-subdomain-sh.png
-         :alt: Adding a custom subdomain for mail to Odoo.sh project settings.
+   This configuration requires a dedicated subdomain (e.g., `@mail.mydomain.com`) whose MX record
+   points to a mail server that passes all received emails to the Odoo database through the mail
+   gateway. Ask your hosting provider or system administrator for the value of the MX record.
 
 .. _email-inbound-loops:
 
@@ -314,8 +320,11 @@ alias in a specific time span.
 By default, an email address can send up to 20 emails in 120 minutes. If more emails are sent, they
 are blocked and the sender receives the following message:
 
-.. image:: email_servers_inbound/bounce-mail-loop.png
-   :alt: Bounce email received after attempting contact too many times an alias.
+.. screenshot:: general-email-inbound-loop-bounce
+   :menu: (email client)
+   :shows: The automatic reply received after sending too many emails to an alias in a short time, explaining that the message was blocked.
+   :module: mail
+   :notes: Any email client; English; example domain.
 
 To change the default behavior, enable :ref:`developer-mode`, then go to :menuselection:`Settings
 --> Technical --> Parameters: System Parameters` to add two parameters.
@@ -334,7 +343,7 @@ Then, go to :menuselection:`Settings app --> Technical --> Aliases`.
 
 The following system parameter, `mail.catchall.domain.allowed`, set with allowed alias domain
 values, separated by commas, filters out correctly addressed emails to aliases. Setting the domains
-for which the alias can create a ticket, lead, opportunity, etc., eliminates false positives where
+for which the alias can create a task, lead, opportunity, etc., eliminates false positives where
 email addresses with only the prefix alias, not the domain, are present.
 
 In some instances, matches have been made in the Odoo database when an email is received with the
@@ -345,7 +354,7 @@ recipient, and :abbr:`CC (Carbon Copy)` email addresses of an incoming email.
    When Odoo receives emails with the `commercial` prefix alias in the sender, recipient, or
    :abbr:`CC (Carbon Copy)` email addresses (e.g. commercial\@example.com), the database falsely
    treats the email as the full `commercial` alias, with a different domain, and therefore, creates
-   a ticket/lead/opportunity/etc.
+   a task/lead/opportunity/etc.
 
 To add the `mail.catchall.domain.allowed` system parameter, first, activate the :ref:`developer mode
 <developer-mode>`. Then, go to :menuselection:`Settings app --> Technical --> System Parameters`.
@@ -354,8 +363,12 @@ Click :guilabel:`New`. Then, type in `mail.catchall.domain.allowed` for the :gui
 Next, for the :guilabel:`Value` field, add the domains separated by commas. Manually
 :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system parameter takes immediate effect.
 
-.. image:: email_servers_inbound/allowed-domain.png
-   :alt: mail.catchall.domain.allowed system parameter set.
+.. screenshot:: general-email-inbound-allowed-domain
+   :menu: Settings ‣ Technical ‣ Parameters ‣ System Parameters ‣ New
+   :shows: System parameter form with Key "mail.catchall.domain.allowed" and Value "company-name.com,company-name.hu".
+   :highlight: Key and Value.
+   :module: base, mail
+   :notes: English UI, developer mode active, crop to the form.
 
 Local-part based incoming detection
 ===================================

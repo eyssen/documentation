@@ -17,9 +17,6 @@ of the following in Odoo:
 - projects
 - tasks
 - timesheets
-- tickets
-- signatures
-- subscriptions
 
 .. note::
    Portal users only have read/view access, and will not be able to edit any documents in the
@@ -31,42 +28,65 @@ Provide portal access to customers
 ==================================
 
 From the main Odoo dashboard, select the :guilabel:`Contacts` application. If the contact is not yet
-created in the database, click on the :guilabel:`Create` button, enter the details of the contact,
-and then click :guilabel:`Save`. Otherwise, choose an existing contact, and then click on the
-:guilabel:`Action` drop-down menu located at the top-center of the interface.
+created in the database, click :guilabel:`New`, enter the details of the contact,
+and then save it. Otherwise, choose an existing contact, and then click the :icon:`fa-cog`
+:guilabel:`(Actions)` icon located at the top of the form.
 
-.. image:: portal/grant-portal-access.png
-   :align: center
-   :alt: Use the Contacts application to give portal access to users.
+.. screenshot:: general-portal-grant-action
+   :menu: Contacts ‣ (a contact)
+   :shows: Contact form with the gear (Actions) menu open, showing "Grant portal access".
+   :highlight: The "Grant portal access" entry.
+   :data: Demo contact "Azure Interior".
+   :module: portal, contacts
+   :notes: English UI, crop to the relevant area.
 
-Then select :guilabel:`Grant portal access`. A pop-up window appears, listing three fields:
+Then select :guilabel:`Grant portal access`. A pop-up window appears, with an optional
+:guilabel:`Invitation Message` and the list of contacts, with the following columns:
 
-- :guilabel:`Contact`: the recorded name of the contact in the Odoo database
-- :guilabel:`Email`: the contact's email address that they will use to log into the portal
-- :guilabel:`In Portal`: whether or not the user has portal access
+- :guilabel:`Contact`: the recorded name of the contact in the Odoo database.
+- :guilabel:`Email`: the contact's email address that they will use to log into the portal. An icon
+  next to the address shows whether it is valid, invalid, or already used by another user. The
+  address can be corrected directly in the list.
+- :guilabel:`Latest Authentication`: the last time the contact logged into the portal.
 
-To grant portal access, first enter the contact's :guilabel:`Email` they will use to log into the
-portal. Then, check the box under the :guilabel:`In Portal` column. Optionally, add text to the
-invitation message the contact will receive. Then click :guilabel:`Apply` to finish.
+To grant portal access, make sure the contact's :guilabel:`Email` is valid, optionally add text to
+the :guilabel:`Invitation Message`, then click :guilabel:`Grant Access` on the contact's line.
+Click :guilabel:`Close` when finished.
 
-.. image:: portal/add-contact-to-portal.png
-   :align: center
-   :alt: An email address and corresponding checkbox for the contact need to be filled in before
-         sending a portal invitation.
+.. screenshot:: general-portal-grant-dialog
+   :menu: Contacts ‣ (a contact) ‣ Actions ‣ Grant portal access
+   :shows: The portal access wizard listing the contact(s) with Email and the In Portal checkbox / Grant Access buttons.
+   :highlight: The Email and In Portal columns.
+   :data: Demo company "Azure Interior" and its contacts.
+   :module: portal
+   :notes: English UI, crop to the dialog.
 
 An email will be sent to the specified email address, indicating that the contact is now a portal
 user for that Odoo database.
 
 .. tip::
    To grant portal access to multiple users at once, navigate to a company contact, then click
-   :menuselection:`Action --> Grant portal access` to view a list of all of the company's related
-   contacts. Check the box under the :guilabel:`In Portal` column for all the contacts that need
-   portal access, then click :guilabel:`Apply`.
+   :menuselection:`Actions --> Grant portal access` to view a list of all of the company's related
+   contacts, and click :guilabel:`Grant Access` for each contact that needs portal access. The same
+   wizard can be opened for several contacts selected in the list view.
 
 .. note::
    At any time, portal access can be revoked by navigating to the contact, clicking
-   :menuselection:`Action --> Grant portal access`, and then unselecting the checkbox under the
-   :guilabel:`In Portal` column and clicking :guilabel:`Apply`.
+   :menuselection:`Actions --> Grant portal access`, and then clicking :guilabel:`Revoke Access`.
+   Click :guilabel:`Re-Invite` to send the invitation email again to an existing portal user.
+
+.. _portal/signup:
+
+Customer account sign-up
+------------------------
+
+The :guilabel:`Customer Account` setting, in the :guilabel:`Permissions` section of the
+:menuselection:`Settings` app, defines how customers get a portal account:
+
+- :guilabel:`On invitation`: customers can only log in after being granted portal access, as
+  described above.
+- :guilabel:`Free sign up`: customers can also create an account themselves from the login page.
+  Click :guilabel:`Default Access Rights` to define the template used for the new portal users.
 
 .. _portal/login:
 
@@ -86,7 +106,7 @@ First, navigate to :menuselection:`Settings app --> Users`. Then, under :guilabe
 configuration :guilabel:`Groups` > :guilabel:`contains` > `portal`. After making this selection,
 search for (and open) the portal user that needs to be edited.
 
-Next, click :guilabel:`Edit` (if necessary), click into the :guilabel:`Email Address` field, and
+Next, click into the :guilabel:`Email Address` field, and
 proceed to make any necessary changes to this field. The :guilabel:`Email Address` field is used to
 log into the Odoo portal.
 
@@ -136,10 +156,6 @@ password. Lastly, click on :guilabel:`Change Password` to complete the password 
 .. note::
    If a customer would like to change the login, as documented above, contact the Odoo database
    point-of-contact. :ref:`See above documentation on changing the portal username <portal/login>`.
-
-.. note::
-   Passwords for portal users and Odoo.com users remain separate, even if the same email address is
-   used.
 
 Add two-factor authentication
 -----------------------------

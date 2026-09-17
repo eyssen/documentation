@@ -125,9 +125,13 @@ requires it.
    In this case, Odoo would auto-populate the Sales Order Reference in the :guilabel:`name` dynamic
    text field, and the Customer Name in the :guilabel:`partner_id_name` field.
 
-   .. image:: pdf_quote_builder/pdf-quote-builder-sample.png
-      :align: center
-      :alt: PDF quote being built using common dynamic placeholders.
+   .. screenshot:: sales-pdf-quote-builder-dynamic-values
+      :menu: Sales ‣ Configuration ‣ Headers/Footers ‣ (a header)
+      :shows: A page of a header PDF where the dynamic placeholders (customer name, salesperson, order total) have been filled in on the generated quotation.
+      :highlight: Three filled-in placeholder values (red frames).
+      :data: Quotation S00021 for "Deco Addict", salesperson "Mitchell Admin".
+      :module: sale_pdf_quote_builder
+      :notes: English UI, light theme, crop to the PDF page.
 
 Once the PDF file(s) are complete, save them to the computer's hard drive, and proceed to upload
 them to Odoo via :menuselection:`Sales app --> Configuration --> Headers/Footers`.
@@ -166,8 +170,13 @@ On the product page, click the :guilabel:`Documents` smart button at the top of 
 to a :guilabel:`Documents` page for that product, where files related to that product can be
 uploaded. From this page, either click :guilabel:`New` or :guilabel:`Upload`.
 
-.. image:: pdf_quote_builder/documents-smart-button.png
-   :alt: The Documents smart button on a product form in Odoo Sales.
+.. screenshot:: sales-pdf-quote-builder-product-documents-button
+   :menu: Sales ‣ Products ‣ Products ‣ (a product)
+   :shows: A product form with the "Documents" smart button in the button box showing the number of attached documents.
+   :highlight: The "Documents" smart button (red frame).
+   :data: Product "Conference Chair", 1 document.
+   :module: sale_pdf_quote_builder
+   :notes: English UI, light theme, 1440px width, crop to the button box.
 
 Clicking :guilabel:`Upload` opens the computer's local file directory. An uploaded document can be
 further configured on the document card, or by clicking the :icon:`fa-ellipsis-v`
@@ -181,8 +190,13 @@ field.
 PDF form configuration
 ----------------------
 
-.. image:: pdf_quote_builder/blank-document-form.png
-   :alt: A standard document form with various fields for a specific product in Odoo Sales.
+.. screenshot:: sales-pdf-quote-builder-document-form-empty
+   :menu: Sales ‣ Products ‣ Products ‣ (a product) ‣ Documents ‣ New
+   :shows: An empty product-document form with the Name, File Content, Visibility and "Attached To" fields.
+   :highlight: No highlight; the empty form is the subject.
+   :data: New, unsaved document.
+   :module: sale_pdf_quote_builder
+   :notes: English UI, light theme, 1440px width, full form.
 
 The first field on the documents form is for the :guilabel:`Name` of the document, and it is
 grayed-out (not clickable) until a document is uploaded. Once a PDF has been uploaded, the
@@ -191,8 +205,13 @@ grayed-out (not clickable) until a document is uploaded. Once a PDF has been upl
 Prior to uploading a document, there's the option to designate whether the document is a
 :guilabel:`File` or :guilabel:`URL` from the :guilabel:`Type` drop-down field menu.
 
-.. image:: pdf_quote_builder/document-form-uploaded-pdf.png
-   :alt: A standard document form with an uploaded pdf in Odoo Sales.
+.. screenshot:: sales-pdf-quote-builder-document-form-filled
+   :menu: Sales ‣ Products ‣ Products ‣ (a product) ‣ Documents ‣ (a document)
+   :shows: The same document form after a PDF was uploaded, with "Attached To" set to "Quotation".
+   :highlight: The uploaded file and the "Attached To" field (red frame).
+   :data: Document "Chair datasheet.pdf" on "Conference Chair".
+   :module: sale_pdf_quote_builder
+   :notes: English UI, light theme, 1440px width, full form.
 
 .. note::
     If a PDF is uploaded, the :guilabel:`Type` field is auto-populated to :guilabel:`File`, and it
@@ -215,8 +234,13 @@ menu, and select either: :guilabel:`On quotation`, :guilabel:`On confirmed order
    custom PDF file, `Corner Desk.pdf` is uploaded, the PDF is visible on the quotation in the
    *customer portal* under the :guilabel:`Documents` field.
 
-    .. image:: pdf_quote_builder/pdf-on-quote-sample.png
-       :alt: Sample of an uploaded pdf with the on quote option chosen in Odoo Sales.
+    .. screenshot:: sales-pdf-quote-builder-pdf-in-quotation
+       :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Print ‣ Quotation
+       :shows: The printed quotation PDF with the product document appended as an extra page.
+       :highlight: The appended document page (red frame).
+       :data: Quotation S00021 containing "Conference Chair".
+       :module: sale_pdf_quote_builder
+       :notes: English UI, light theme, crop to the PDF pages.
 
 Beside the :guilabel:`File Content` field, you have the possibility to
 :guilabel:`Configure dynamic fields`. When doing so, remember that the starting model is the
@@ -233,8 +257,13 @@ Lastly, in the :guilabel:`E-Commerce` section, decide whether or not to
    It appears beneath a :guilabel:`Documents` heading, with a link showcasing the name of the
    uploaded document.
 
-    .. image:: pdf_quote_builder/show-product-page.png
-       :alt: Showing a link to an uploaded document on a product page using Odoo Sales.
+    .. screenshot:: sales-pdf-quote-builder-portal-link
+       :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Preview
+       :shows: The customer portal view of a quotation with a download link to the attached product document under the order line.
+       :highlight: The document download link (red frame).
+       :data: Quotation S00021.
+       :module: sale_pdf_quote_builder
+       :notes: English UI, light theme, 1440px width, crop to the order line.
 
 PDF quote
 =========
@@ -243,8 +272,13 @@ On a sales order, in the :guilabel:`Quote Builder` tab, select additional docume
 into the final PDF. If a selected document has custom fields, they appear as editable text boxes to
 be filled in.
 
-.. image:: pdf_quote_builder/quote-builder-headers.png
-   :alt: Selectable quotation headers and footers under the Quote Builder section in a quotation.
+.. screenshot:: sales-pdf-quote-builder-header-footer-fields
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Other Info
+   :shows: The "Quote Builder" section of a quotation form, with the Header and Footer drop-down fields filled in.
+   :highlight: The Header and Footer fields (red frame).
+   :data: Header "Company presentation", Footer "Terms & conditions".
+   :module: sale_pdf_quote_builder
+   :notes: English UI, light theme, 1440px width, crop to the Quote Builder group.
 
 Once a quote with a pre-configured PDF has been confirmed, Odoo provides the option to print the
 confirmed quote to check for errors, or to keep for records.
@@ -253,8 +287,13 @@ To print the PDF quote, navigate to the confirmed quote, and click the :guilabel
 reveal a drop-down menu. From this drop-down menu, select :guilabel:`Print`, then select
 :guilabel:`PDF Quote`.
 
-.. image:: pdf_quote_builder/drop-down-print-pdf.png
-   :alt: Print pdf quote option on drop-down menu located on confirmed sales order in Odoo Sales.
+.. screenshot:: sales-pdf-quote-builder-print-menu
+   :menu: Sales ‣ Orders ‣ Orders ‣ (a confirmed order) ‣ Print
+   :shows: The Print drop-down menu of a confirmed sales order, open on the PDF quote entry.
+   :highlight: The PDF quote menu item (red frame).
+   :data: Order S00021.
+   :module: sale_pdf_quote_builder
+   :notes: English UI, light theme, 1440px width, crop to the open menu.
 
 Doing so instantly downloads the PDF quote. When opened, the PDF quote, along with the configured
 product PDF that was set to be visible inside the quote, can be viewed and printed.

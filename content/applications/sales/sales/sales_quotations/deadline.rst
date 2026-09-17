@@ -18,17 +18,25 @@ desired quotation, or create a new one by clicking :guilabel:`New`.
 On the quotation form, click the :guilabel:`Expiration` field to reveal a pop-up calendar. From this
 pop-up calendar, select the desired month and date as the expiration date for the quotation.
 
-.. image:: deadline/quotation-deadlines-expiration-field.png
-   :align: center
-   :alt: The expiration field on a standard quotation form in Odoo Sales.
+.. screenshot:: sales-deadline-expiration-field
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation)
+   :shows: A quotation form with the Expiration field filled in and its date picker open.
+   :highlight: The Expiration field and the open calendar pop-up (red frame).
+   :data: Demo quotation S00021 for "Deco Addict"; expiration one month ahead.
+   :module: sale
+   :notes: English UI, light theme, 1440px width, crop to the top of the quotation form.
 
 .. tip::
    By clicking the :guilabel:`Preview` button on a quotation, Odoo clearly displays when that
    specific offer expires.
 
-   .. image:: deadline/quotation-deadlines-preview.png
-      :align: center
-      :alt: How customers will see deadlines on Odoo Sales.
+   .. screenshot:: sales-deadline-customer-preview
+      :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Preview
+      :shows: The customer portal preview of a quotation, showing the "Expires" date next to the quotation number.
+      :highlight: The expiration date shown to the customer (red frame).
+      :data: Same demo quotation S00021.
+      :module: sale
+      :notes: English UI, light theme, 1440px width, crop to the portal header.
 
 Quotation template expiration
 =============================
@@ -44,9 +52,13 @@ On the quotation template form, add a specific number of days to the :guilabel:`
 after` field, located beneath the quotation template name. The number of days represents how long
 the quotation will be valid for, before it expires.
 
-.. image:: deadline/quotation-deadlines-expires-after.png
-   :align: center
-   :alt: The quotation expires after field on a quotation template form in Odoo Sales.
+.. screenshot:: sales-deadline-template-expires-after
+   :menu: Sales ‣ Configuration ‣ Quotation Templates ‣ (a template)
+   :shows: A quotation template form with the "Quotation expires after" field set to a number of days.
+   :highlight: The "Quotation expires after" field (red frame).
+   :data: Template "Basic Furniture", 30 days.
+   :module: sale_management
+   :notes: English UI, light theme, 1440px width, crop to the top of the template form.
 
 Then, whenever that specific quotation template is used in a quote, an expiration date is
 automatically calculated, based on the number of days designated above. However, this date can be

@@ -18,8 +18,13 @@ To enable pricelists in the Odoo **Sales** app, first navigate to :menuselection
 Configuration --> Settings`. In the :guilabel:`Pricing` section, tick the checkbox next to the
 :guilabel:`Pricelists` feature, and click :guilabel:`Save` to save all changes.
 
-.. image:: pricing/pricelist-feature-setting.png
-   :alt: How the pricelist feature setting looks in Odoo Sales.
+.. screenshot:: sales-pricing-setting
+   :menu: Sales ‣ Configuration ‣ Settings
+   :shows: The Settings page scrolled to the "Pricing" section with the "Pricelists" checkbox enabled and the "Pricelists" link beside it.
+   :highlight: The "Pricelists" setting (red frame).
+   :data: Demo company.
+   :module: product
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 After activating and saving the :guilabel:`Pricelists` feature, the :guilabel:`Settings` page
 reloads. From here, either select the :icon:`oi-arrow-right` :guilabel:`Pricelists` link (beneath
@@ -29,8 +34,13 @@ the :guilabel:`Pricelists` feature on the :guilabel:`Settings` page), or navigat
 Either option reveals the :guilabel:`Pricelists` page, in which pricelists can be created and/or
 modified at any time.
 
-.. image:: pricing/18-sales-pricelist-page.png
-   :alt: How the pricelists page looks in Odoo Sales.
+.. screenshot:: sales-pricing-pricelists-list
+   :menu: Sales ‣ Products ‣ Pricelists
+   :shows: The pricelists list with the Pricelist Name, Currency, Company and Website columns.
+   :highlight: The New button (red frame).
+   :data: Pricelists "Public Pricing" and "Wholesale".
+   :module: product
+   :notes: English UI, light theme, 1440px width, crop to the list.
 
 .. important::
    If there is no specific pricelist configured on a sales quotation, the :guilabel:`Default`
@@ -57,8 +67,13 @@ From the :guilabel:`Pricelists` page, either select the pricelist to edit, or cl
 to create a new pricelist, which reveals a blank pricelist form that can be configured in a number
 of different ways.
 
-.. image:: pricing/18-sales-new-pricelist-form.png
-   :alt: How the pricelist detail form looks in Odoo Sales.
+.. screenshot:: sales-pricing-pricelist-form
+   :menu: Sales ‣ Products ‣ Pricelists ‣ (a pricelist)
+   :shows: A pricelist form with the Currency and Company fields and the Price Rules tab.
+   :highlight: No highlight; the whole form is the subject.
+   :data: Pricelist "Wholesale", currency EUR.
+   :module: product
+   :notes: English UI, light theme, 1440px width, full form.
 
 When creating a new pricelist, start by adding a name for the pricelist at the blank field at top of
 the form. Next, select which :guilabel:`Currency` should be used.
@@ -97,11 +112,21 @@ From here, there are several configuration options:
        If a pricelist is applied to a sales quotation with the discount :guilabel:`Price Type` set
        as :guilabel:`Discount`, the discount will visible to the customer.
 
-       .. image:: pricing/sales-pricelist-pricerule-discount.png
-          :alt: A pricelist rule using Price Type: Discount to create a discount.
+       .. screenshot:: sales-pricing-rule-discount
+          :menu: Sales ‣ Products ‣ Pricelists ‣ (a pricelist) ‣ Price Rules
+          :shows: A price rule with Price Type "Discount" and a percentage entered, applied to one product.
+          :highlight: The Price Type and discount fields (red frame).
+          :data: 20% discount on "Conference Chair".
+          :module: product
+          :notes: English UI, light theme, 1440px width, crop to the price-rules table.
 
-       .. image:: pricing/sales-pricelist-pricerule-discount-customer.png
-          :alt: How a pricelist rule using Price Type: Discount appears on customer preview.
+       .. screenshot:: sales-pricing-rule-discount-portal
+          :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Preview
+          :shows: The customer portal view of a quotation where the discounted unit price is shown with the original price struck through.
+          :highlight: The struck-through original price (red frame).
+          :data: "Conference Chair" with a 20% discount.
+          :module: product
+          :notes: English UI, light theme, 1440px width, crop to the order line.
 
   - :guilabel:`Formula`: Calculate the pricelist rules based the following configuration:
 
@@ -134,33 +159,30 @@ From here, there are several configuration options:
    the :guilabel:`Based price` field to :guilabel:`Sales Price` and the :guilabel:`Discount` to
    `-100`. This is often seen in retail situations.
 
-   .. image:: pricing/formula-markup-cost-example.png
-      :alt: How it looks to formulate a markup cost with 5 dollar minimum margin in Odoo Sales.
+   .. screenshot:: sales-pricing-rule-formula-markup
+      :menu: Sales ‣ Products ‣ Pricelists ‣ (a pricelist) ‣ Price Rules ‣ (a rule)
+      :shows: A price rule using the Formula price type: Based on "Cost", a markup percentage, and a minimum margin.
+      :highlight: The Margins fields (red frame).
+      :data: Cost + 30%, minimum margin 5.00.
+      :module: product
+      :notes: English UI, light theme, 1440px width, crop to the rule form.
 
 .. example::
    To apply 20% discounts, with prices rounded up to 9.99, set the :guilabel:`Based on` field to
    :guilabel:`Sales Price`, the :guilabel:`Discount` field to `20`, the :guilabel:`Extra Fee` field
    to `-0.01`, and the :guilabel:`Rounding Method` field to `10`.
 
-   .. image:: pricing/formula-discount-example.png
-      :alt: Example of a 20% discount with prices rounded to 9.99 in Odoo Sales.
+   .. screenshot:: sales-pricing-rule-formula-rounding
+      :menu: Sales ‣ Products ‣ Pricelists ‣ (a pricelist) ‣ Price Rules ‣ (a rule)
+      :shows: A price rule using the Formula price type with a 20% discount and a rounding method that ends prices in .99.
+      :highlight: The Rounding Method and Extra Fee fields (red frame).
+      :data: 20% discount, rounding 10.00, extra fee -0.01.
+      :module: product
+      :notes: English UI, light theme, 1440px width, crop to the rule form.
 
 .. tip::
    To have prices that end in 9.99, set the :guilabel:`Rounding Method` to `10` and the
    :guilabel:`Extra Fee` to `-0.01`.
-
-Rental rules tab
-----------------
-
-To add a rental rule, click :guilabel:`Add a line`, and select a desired product in the
-:guilabel:`Products` column. Then, select any specific :guilabel:`Variants`, if necessary.
-
-Next, designate a :guilabel:`Period` of time for the rental rule (e.g. `Daily`, `Hourly`, etc.).
-
-Lastly, configure a :guilabel:`Price` for the rental rule in the respective column.
-
-.. image:: pricing/sales-pricelist-rental.png
-   :alt: The rental tab in a pricelist configuration form.
 
 .. seealso::
    :doc:`Ecommerce price configuration </applications/websites/ecommerce/products/prices>`
@@ -177,17 +199,25 @@ To do that, open the desired customer's contact form, either by navigating to :m
 app --> Orders --> Customers` and selecting the customer from the main :guilabel:`Customers` page,
 or by clicking on the customer's name on a sales order.
 
-.. image:: pricing/customer-detail-form.png
-   :align: center
-   :alt: Sample customer detail form in Odoo Sales.
+.. screenshot:: sales-pricing-customer-form
+   :menu: Sales ‣ Orders ‣ Customers ‣ (a customer)
+   :shows: A customer form with its address and contact details, before opening the Sales & Purchase tab.
+   :highlight: No highlight; the customer form is the subject.
+   :data: Customer "Deco Addict".
+   :module: base
+   :notes: English UI, light theme, 1440px width, full form.
 
 On the desired customer's contact form, under the :guilabel:`Sales & Purchase` tab, in the
 :guilabel:`Sales` section, designate what pricelist should be applied to this specific customer from
 the drop-down menu in the :guilabel:`Pricelist` field.
 
-.. image:: pricing/customer-form-pricelist-field.png
-   :align: center
-   :alt: The pricelist field in a customer detail form in Odoo Sales.
+.. screenshot:: sales-pricing-customer-pricelist-field
+   :menu: Sales ‣ Orders ‣ Customers ‣ (a customer) ‣ Sales & Purchase
+   :shows: The Sales & Purchase tab of a customer form with the Pricelist field set.
+   :highlight: The Pricelist field (red frame).
+   :data: Customer "Deco Addict", pricelist "Wholesale".
+   :module: product
+   :notes: English UI, light theme, 1440px width, crop to the Sales group.
 
 .. note::
    When a customer is added to the database, the default pricelist is automatically applied to them.

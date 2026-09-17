@@ -18,15 +18,23 @@ To start a return before invoicing, navigate to the :menuselection:`Sales` app, 
 sales order, and click on the :guilabel:`Delivery` smart button to open the associated delivery
 order.
 
-.. image:: returns/sales-order-delivery-smart-button.png
-   :align: center
-   :alt: A typical sales order with a highlighted delivery smart button in Odoo Sales.
+.. screenshot:: sales-returns-delivery-smart-button
+   :menu: Sales ‣ Orders ‣ Orders ‣ (a confirmed order)
+   :shows: The button box of a confirmed sales order with the Delivery smart button.
+   :highlight: The Delivery smart button (red frame).
+   :data: Order S00042, 1 delivery.
+   :module: sale_stock
+   :notes: English UI, light theme, 1440px width, crop to the button box.
 
 On the validated delivery order, click :guilabel:`Return`.
 
-.. image:: returns/validated-delivery-order-return-button.png
-   :align: center
-   :alt: A validated delivery order with a highlighted Return button in Odoo Sales.
+.. screenshot:: sales-returns-delivery-return-button
+   :menu: Inventory ‣ Deliveries ‣ (a validated delivery)
+   :shows: A validated delivery order in the Done state with the Return button in the header.
+   :highlight: The Return button (red frame).
+   :data: Delivery WH/OUT/00015 of order S00042.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the header.
 
 This opens a :guilabel:`Reverse Transfer` pop-up window.
 
@@ -34,24 +42,36 @@ By default, the :guilabel:`Quantity` matches the validated quantities from the d
 Update the quantities, if necessary. Click on the :guilabel:`🗑️ (trash)` icon next to a line item
 to remove it from the return.
 
-.. image:: returns/reverse-transfer-popup.png
-   :align: center
-   :alt: The "Reverse Transfer" pop-up window, to make a return before invoicing the customer.
+.. screenshot:: sales-returns-reverse-transfer-popup
+   :menu: Inventory ‣ Deliveries ‣ (a validated delivery) ‣ Return
+   :shows: The "Reverse Transfer" pop-up window listing the delivered products with an editable return quantity.
+   :highlight: The return quantity field (red frame).
+   :data: 1 of 5 units returned.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 Next, click :guilabel:`Return` to confirm the return. This generates a new warehouse operation for
 the incoming returned product(s).
 
-.. image:: returns/warehouse-operation-confirmed-return.png
-   :align: center
-   :alt: Warehouse operation after a return has been confirmed in Odoo Sales.
+.. screenshot:: sales-returns-return-operation
+   :menu: Inventory ‣ Returns ‣ (the return)
+   :shows: The generated return operation, ready to be validated, with the returned quantity on its line.
+   :highlight: The Validate button (red frame).
+   :data: Return of 1 unit from WH/OUT/00015.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the header and lines.
 
 Upon receiving the return, the warehouse team validates the warehouse operation by clicking
 :guilabel:`Validate`. Then, on the original sales order, the :guilabel:`Delivered` quantity updates
 to reflect the difference between the initial validated quantities and the returned quantities.
 
-.. image:: returns/updated-sales-quantities.png
-   :align: center
-   :alt: The updated "Delivered" quantity on the sales order after the reverse transfer.
+.. screenshot:: sales-returns-updated-delivered-qty
+   :menu: Sales ‣ Orders ‣ Orders ‣ (a confirmed order) ‣ Order Lines
+   :shows: The Order Lines tab where the Delivered quantity has been reduced by the returned quantity.
+   :highlight: The Delivered column (red frame).
+   :data: Order S00042: 5 ordered, 4 delivered.
+   :module: sale_stock
+   :notes: English UI, light theme, 1440px width, crop to the order-lines table.
 
 When an invoice is created, the customer receives an invoice **only** for the products they are
 keeping, if any.
@@ -73,9 +93,13 @@ If there is a payment registered on the sales order, the payment details appear 
 the invoice (accessible through the :guilabel:`Invoices` smart button) has a green :guilabel:`In
 Payment` banner.
 
-.. image:: returns/green-in-payment-banner.png
-   :align: center
-   :alt: Sample of a green in payment banner in Odoo Sales.
+.. screenshot:: sales-returns-invoice-in-payment
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (a paid invoice)
+   :shows: A posted customer invoice with the green "In Payment" ribbon in the upper-right corner.
+   :highlight: The "In Payment" ribbon (red frame).
+   :data: Invoice of order S00042.
+   :module: account
+   :notes: English UI, light theme, 1440px width, crop to the top of the invoice.
 
 From the sales order, click on the :guilabel:`Delivery` smart button to view the validated delivery
 order. Then, click :guilabel:`Return` to open the :guilabel:`Reverse Transfer` pop-up window.
@@ -92,15 +116,23 @@ To process a refund, navigate to the relevant invoice (from the sales order, cli
 :guilabel:`Invoices` smart button). Then, click the :guilabel:`Credit Note` button at the top of the
 validated invoice.
 
-.. image:: returns/credit-note-button.png
-   :align: center
-   :alt: A typical customer invoice with a Credit Note button highlighted in Odoo Sales.
+.. screenshot:: sales-returns-credit-note-button
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (a posted invoice)
+   :shows: A posted customer invoice with the "Credit Note" button in the header.
+   :highlight: The "Credit Note" button (red frame).
+   :data: Invoice of order S00042.
+   :module: account
+   :notes: English UI, light theme, 1440px width, crop to the header.
 
 Doing so reveals a :guilabel:`Credit Note` pop-up form.
 
-.. image:: returns/credit-note-pop-up-form.png
-   :align: center
-   :alt: Typical credit note pop-up form that appears in Odoo Sales.
+.. screenshot:: sales-returns-credit-note-popup
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (a posted invoice) ‣ Credit Note
+   :shows: The credit-note pop-up window with the Reason, Journal and Reversal Date fields.
+   :highlight: The Reason field (red frame).
+   :data: Reason "Returned goods".
+   :module: account
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 Start by entering a :guilabel:`Reason displayed on Credit Note` and a specific :guilabel:`Journal`
 to process the credit. Then, select a specific :guilabel:`Reversal Date`.

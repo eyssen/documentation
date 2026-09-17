@@ -13,9 +13,13 @@ Quotation settings
 To access these setting options, navigate to :menuselection:`Sales app --> Configuration -->
 Settings`, and scroll to the :guilabel:`Quotations & Orders` section.
 
-.. image:: create_quotations/quotations-orders-section.png
-   :align: center
-   :alt: The Quotations and Orders section on the Odoo Sales app Settings page.
+.. screenshot:: sales-create-quotations-settings
+   :menu: Sales ‣ Configuration ‣ Settings
+   :shows: The Settings page scrolled to the "Quotations & Orders" section, showing the Online Signature, Online Payment, Default Quotation Validity, Quotation Templates, Sale Warnings, PDF Quote builder, Lock Confirmed Sales and Pro-Forma Invoice settings.
+   :highlight: No highlight; the whole section is the subject.
+   :data: Demo company; Online Signature, Online Payment and Quotation Templates enabled.
+   :module: sale, sale_management
+   :notes: English UI, light theme, 1440px width, crop to the section. Only the settings listed above are shown.
 
 - :guilabel:`Quotation Templates`: Enable this option to create quotation templates featuring
   standard product offers, which are then selectable on quotation forms. When this checkbox is
@@ -28,8 +32,6 @@ Settings`, and scroll to the :guilabel:`Quotations & Orders` section.
   Providers` page.
 - :guilabel:`Default Quotation Validity`: Determine a set amount (in :guilabel:`days`) that
   quotations can remain valid for.
-- :guilabel:`Default Recurrence`: Select a default period from the drop-down menu to use as a
-  recurrence period for a new quotation.
 - :guilabel:`Sale Warnings`: Get warning messages about orders that include specific products or
   customers.
 - :guilabel:`PDF Quote builder`: Customize the look of quotations with header pages, product
@@ -49,9 +51,13 @@ By default, the :guilabel:`Quotations` dashboard displays all quotations in the 
 the current user, as indicated by the default :guilabel:`My Quotations` filter present in the search
 bar.
 
-.. image:: create_quotations/quotations-dashboard.png
-   :align: center
-   :alt: The Quotations dashboard present in the Odoo Sales application.
+.. screenshot:: sales-create-quotations-dashboard
+   :menu: Sales ‣ Orders ‣ Quotations
+   :shows: The Quotations list view with the "My Quotations" filter active in the search bar and the view switcher in the upper-right corner.
+   :highlight: The "My Quotations" filter facet (red frame).
+   :data: Six demo quotations in different states.
+   :module: sale
+   :notes: English UI, light theme, 1440px width, crop to the search bar and the list.
 
 .. note::
    To view *all* quotations in the database, remove the :guilabel:`My Quotations` filter from the
@@ -79,9 +85,13 @@ located in the upper-left corner of the main :guilabel:`Quotations` dashboard.
 Clicking the :guilabel:`New` button reveals a blank quotation form, with various fields and tabs to
 configure.
 
-.. image:: create_quotations/quotation-form.png
-   :align: center
-   :alt: A typical quotation form in the Odoo Sales application.
+.. screenshot:: sales-create-quotations-blank-form
+   :menu: Sales ‣ Orders ‣ Quotations ‣ New
+   :shows: A blank quotation form: Customer, Invoice Address, Delivery Address, Quotation Template, Expiration, Pricelist and Payment Terms fields, and the Order Lines / Optional Products / Other Info / Notes tabs.
+   :highlight: No highlight; the empty form is the subject.
+   :data: New, unsaved quotation.
+   :module: sale
+   :notes: English UI, light theme, 1440px width, full form.
 
 Begin by entering the customer's name in the :guilabel:`Customer` field at the top of the form. This
 is a **required** field.
@@ -90,13 +100,6 @@ If the customer's information is already in the database, the :guilabel:`Invoice
 :guilabel:`Delivery Address` fields auto-populate with the saved information for those respective
 fields, based on the data from that customer's contact record (found in the **Contacts**
 application).
-
-If the customer was referred by another customer or contact, enter their name in the
-:guilabel:`Referrer` field.
-
-If a :guilabel:`Referrer` is selected, a new field, :guilabel:`Commission Plan` appears, in which a
-commission can be selected from the drop-down menu. This commission is rewarded to the contact
-selected in the :guilabel:`Referrer` field.
 
 Next, if they have not already been auto-populated with the customer's information, enter the
 appropriate addresses in the :guilabel:`Invoice Address` and :guilabel:`Delivery Address` fields.
@@ -113,9 +116,6 @@ in the :ref:`Default Quotation Validity setting <sales/quotation-settings>` (in
 .. tip::
    When using a quotation template, the date in the :guilabel:`Expiration` field is based off the
    :guilabel:`Quotation Validity` figure on the template form.
-
-If the quotation is for a recurring product or subscription, select the desired :guilabel:`Recurring
-Plan` from that specific drop-down menu.
 
 If desired, select a specific :guilabel:`Pricelist` to be applied to this quotation.
 
@@ -137,9 +137,13 @@ Or, click :guilabel:`Catalog` to reveal a separate page, showcasing every item (
 product variant) in an organized catalog display, with items organizable by :guilabel:`Product
 Category` and :guilabel:`Attributes`.
 
-.. image:: create_quotations/product-catalog.png
-   :align: center
-   :alt: A product catalog accessible via a quotation in the Odoo Sales application.
+.. screenshot:: sales-create-quotations-product-catalog
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Catalog
+   :shows: The product catalog opened from a quotation: product cards with Add buttons and quantity steppers, the Product Category side panel, and the "Back to Quotation" button.
+   :highlight: The "Back to Quotation" button and one card with a quantity set (red frames).
+   :data: Demo furniture products; "Conference Chair" quantity 2.
+   :module: sale
+   :notes: English UI, light theme, 1440px width, full page.
 
 From here, simply locate the desired items, click the :icon:`fa-shopping-cart` :guilabel:`Add`
 button on the product card, and adjust the quantity, if needed. When complete, click the
@@ -191,9 +195,13 @@ Sales section
 In the :guilabel:`Sales` section of the :guilabel:`Other Info` tab, there are sales specific fields
 that can be configured.
 
-.. image:: create_quotations/other-info-sales.png
-   :align: center
-   :alt: The Sales section of the Other Info tab of a quotation form in Odoo Sales.
+.. screenshot:: sales-create-quotations-other-info-sales
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Other Info
+   :shows: The Sales section of the Other Info tab: Salesperson, Sales Team, Online signature, Online payment, Customer Reference and Tags.
+   :highlight: No highlight; the whole group is the subject.
+   :data: Quotation S00021; salesperson "Mitchell Admin", sales team "Europe".
+   :module: sale
+   :notes: English UI, light theme, 1440px width, crop to the Sales group.
 
 - :guilabel:`Salesperson`: Assign a salesperson from the drop-down menu to be associated with this
   quotation. The user who originally created the quotation is selected in this field, by default.
@@ -211,6 +219,10 @@ that can be configured.
   reference ID can contain letters, numbers, or a mix of both.
 - :guilabel:`Tags`: Add specific tags to the quotation for added organization and enhanced
   searchability in the Odoo **Sales** application. Multiple tags can be added, if necessary.
+- :guilabel:`Deal Salesperson`: The salesperson who earns the commission on this order. It follows
+  the :guilabel:`Salesperson` field while the order is still a quotation, and is frozen on
+  confirmation. This field only appears if the *Commissions* module is installed. See
+  :ref:`sales/commissions/deal-salesperson`.
 
 Delivery section
 ~~~~~~~~~~~~~~~~
@@ -218,9 +230,13 @@ Delivery section
 In the :guilabel:`Delivery` section of the :guilabel:`Other Info` tab, there are delivery-specific
 fields that can be configured.
 
-.. image:: create_quotations/other-info-delivery.png
-   :align: center
-   :alt: The Delivery section of the Other Info tab of a quotation form in Odoo Sales.
+.. screenshot:: sales-create-quotations-other-info-delivery
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Other Info
+   :shows: The Delivery section of the Other Info tab: Shipping Weight, Incoterm, Incoterm Location, Shipping Policy and Delivery Date with the Expected date beside it.
+   :highlight: No highlight; the whole group is the subject.
+   :data: Quotation S00021; Shipping Policy "As soon as possible".
+   :module: sale_stock
+   :notes: English UI, light theme, 1440px width, crop to the Delivery group.
 
 - :guilabel:`Shipping Weight`: Displays the weight of the items being shipped. This field is not
   modifiable. Product weight is configured on individual product forms.
@@ -242,9 +258,13 @@ Invoicing section
 In the :guilabel:`Invoicing` section of the :guilabel:`Other Info` tab, there are invoicing specific
 fields that can be configured.
 
-.. image:: create_quotations/other-info-invoicing.png
-   :align: center
-   :alt: The Invoicing section of the Other Info tab of a quotation form in Odoo Sales.
+.. screenshot:: sales-create-quotations-other-info-invoicing
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Other Info
+   :shows: The Invoicing section of the Other Info tab: Fiscal Position with the "Update Taxes" link, Payment Terms and Analytic Account.
+   :highlight: The "Update Taxes" link (red frame).
+   :data: Quotation S00021 with a fiscal position selected.
+   :module: sale
+   :notes: English UI, light theme, 1440px width, crop to the Invoicing group.
 
 - :guilabel:`Fiscal Position`: Select a fiscal position to be used to adapt taxes and accounts for
   particular customers or sales orders/invoices. The default value comes from the customer. If a
@@ -259,9 +279,13 @@ Tracking section
 In the :guilabel:`Tracking` section of the :guilabel:`Other Info` tab, there are tracking specific
 fields that can be configured.
 
-.. image:: create_quotations/other-info-tracking.png
-   :align: center
-   :alt: The Tracking section of the Other Info tab of a quotation form in Odoo Sales.
+.. screenshot:: sales-create-quotations-other-info-tracking
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Other Info
+   :shows: The Tracking section of the Other Info tab: Source Document, Opportunity, Campaign, Medium and Source.
+   :highlight: No highlight; the whole group is the subject.
+   :data: Quotation S00021 created from an opportunity.
+   :module: sale, sale_crm
+   :notes: English UI, light theme, 1440px width, crop to the Tracking group.
 
 - :guilabel:`Source Document`: Enter the reference of the document that generated the
   quotation/sales order, if applicable.

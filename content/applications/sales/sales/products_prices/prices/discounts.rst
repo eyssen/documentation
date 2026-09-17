@@ -26,8 +26,13 @@ discount for each product line and the new price is automatically calculated in 
    :menuselection:`Sales app --> Orders --> Orders`, click the desired sales order, and add the
    discount to :guilabel:`Disc.%` field as described above.
 
-.. image:: discounts/discount-on-sales-order.png
-   :alt: The Dis.% heading will now appear in Order Lines.
+.. screenshot:: sales-discounts-order-line-column
+   :menu: Sales ‣ Orders ‣ Orders ‣ (an order) ‣ Order Lines
+   :shows: The Order Lines tab with the "Disc.%" column visible and a percentage entered on one line.
+   :highlight: The "Disc.%" column (red frame).
+   :data: One line with a 10% discount.
+   :module: sale
+   :notes: English UI, light theme, 1440px width, crop to the order-lines table.
 
 .. note::
    Positive values for :guilabel:`Disc.%` will apply a *discount*, while negative values can be
@@ -46,8 +51,13 @@ Discount button
 With the *Discounts* settings enabled, a :guilabel:`Discount` button appears at the bottom of sales
 orders.
 
-.. image:: discounts/discount-button-sales-order.png
-   :alt: The discount button located at the bottom of a sales order form in the Odoo Sales app.
+.. screenshot:: sales-discounts-discount-button
+   :menu: Sales ‣ Orders ‣ Orders ‣ (an order) ‣ Order Lines
+   :shows: The buttons under the order lines, including the Discount button.
+   :highlight: The Discount button (red frame).
+   :data: Order S00042 with three lines.
+   :module: sale_loyalty
+   :notes: English UI, light theme, 1440px width, crop to the area under the order lines.
 
 Clicking the :guilabel:`Discount` button on a sales order opens a pop-up window, where the
 :guilabel:`Discount` percentage, and options are configured:
@@ -61,8 +71,13 @@ Clicking the :guilabel:`Discount` button on a sales order opens a pop-up window,
      A global discount of 10% is added in the last line of a sales order with a subtotal of $4,200
      by adding a discount line with a -$420 value (which is 10% of $4,200).
 
-     .. image:: discounts/global-discount-option.png
-        :alt: The sales order with the applied global discount option in the Odoo Sales application.
+     .. screenshot:: sales-discounts-global-percentage
+        :menu: Sales ‣ Orders ‣ Orders ‣ (an order) ‣ Discount
+        :shows: The order lines after applying a global percentage discount: a separate discount line added at the bottom.
+        :highlight: The generated discount line (red frame).
+        :data: 10% global discount on order S00042.
+        :module: sale_loyalty
+        :notes: English UI, light theme, 1440px width, crop to the order-lines table.
 
   .. important::
      Any product added (or removed) *after* the global discount line is added does **not** affect
@@ -76,8 +91,13 @@ Clicking the :guilabel:`Discount` button on a sales order opens a pop-up window,
   .. example::
      A fixed discount of $20 appears as a product line, with a negative :guilabel:`Unit Price`.
 
-     .. image:: discounts/fixed-discount-on-sales-order.png
-        :alt: The sales order with the applied fixed discount option in the Odoo Sales application.
+     .. screenshot:: sales-discounts-fixed-amount
+        :menu: Sales ‣ Orders ‣ Orders ‣ (an order) ‣ Discount
+        :shows: The order lines after applying a fixed-amount discount, shown as a single negative line.
+        :highlight: The fixed discount line (red frame).
+        :data: Fixed discount of 50.00 on order S00042.
+        :module: sale_loyalty
+        :notes: English UI, light theme, 1440px width, crop to the order-lines table.
 
 .. note::
    It is more beneficial to add a :guilabel:`Fixed Amount` discount after **all** desired products

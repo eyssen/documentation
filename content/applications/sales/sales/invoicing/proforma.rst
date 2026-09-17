@@ -19,9 +19,13 @@ To enable this feature, navigate to :menuselection:`Sales app --> Configuration 
 in the :guilabel:`Quotations \& Orders` section, click the checkbox next to :guilabel:`Pro-Forma
 Invoice`. Then, click :guilabel:`Save` to save all changes.
 
-.. image:: proforma/pro-forma-setting.png
-   :align: center
-   :alt: The Pro-Forma Invoice feature setting in the Odoo Sales application.
+.. screenshot:: sales-proforma-setting
+   :menu: Sales ‣ Configuration ‣ Settings
+   :shows: The Settings page scrolled to the "Quotations & Orders" section with the "Pro-Forma Invoice" checkbox enabled.
+   :highlight: The "Pro-Forma Invoice" setting (red frame).
+   :data: Demo company.
+   :module: sale
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 Send pro-forma invoice
 ======================
@@ -29,9 +33,13 @@ Send pro-forma invoice
 With the :guilabel:`Pro-Forma Invoice` feature activated, the option to send a pro-forma invoice is
 now available on any quotation or sales order, via the :guilabel:`Send Pro-Forma Invoice` button.
 
-.. image:: proforma/send-pro-forma-invoice-button.png
-   :align: center
-   :alt: The Send Pro-Forma Invoice button on a typical sales order in Odoo Sales.
+.. screenshot:: sales-proforma-send-button
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation)
+   :shows: The button row at the top of a quotation, including the "Send PRO-FORMA Invoice" button.
+   :highlight: The "Send PRO-FORMA Invoice" button (red frame).
+   :data: Quotation S00021.
+   :module: sale
+   :notes: English UI, light theme, 1440px width, crop to the header.
 
 .. note::
    Pro-forma invoices can **not** be sent for a sales order or quotation if an invoice for a down
@@ -54,18 +62,26 @@ The pro-forma invoice is automatically added as an attachment to the email.
 When ready, click :guilabel:`Send`, and Odoo instantly sends the email, with the attached pro-forma
 invoice, to the customer.
 
-.. image:: proforma/pro-forma-email-message-pop-up.png
-   :align: center
-   :alt: The email pop-up window that appears with pro-forma invoice attached in Odoo Sales.
+.. screenshot:: sales-proforma-email-popup
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Send PRO-FORMA Invoice
+   :shows: The email composer pop-up with the recipient, subject and body pre-filled and the pro-forma invoice PDF attached.
+   :highlight: The attached pro-forma PDF (red frame).
+   :data: Quotation S00021 for "Deco Addict".
+   :module: sale
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 .. tip::
    To preview what the pro-forma invoice looks like, click on the PDF at the bottom of the email
    pop-up window *before* clicking :guilabel:`Send`. When clicked, the pro-forma invoice is
    downloaded instantly. Open that PDF to view (and review) the pro-forma invoice.
 
-   .. image:: proforma/pro-forma-pdf.png
-      :align: center
-      :alt: Sample pro-forma invoice PDF from Odoo Sales.
+   .. screenshot:: sales-proforma-pdf
+      :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Send PRO-FORMA Invoice
+      :shows: The generated pro-forma invoice PDF, headed "PRO-FORMA INVOICE", with the customer block, the order lines and the totals.
+      :highlight: The "PRO-FORMA INVOICE" title (red frame).
+      :data: Quotation S00021.
+      :module: sale
+      :notes: English UI, light theme, crop to the PDF page.
 
 .. seealso::
    :doc:`invoicing_policy`

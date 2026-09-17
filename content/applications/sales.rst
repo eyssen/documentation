@@ -10,7 +10,6 @@ Sales
     sales/crm
     sales/sales
     sales/point_of_sale
-    .. sales/subscriptions
-    .. sales/rental
+    sales/subscriptions
     sales/members
     sales/withdrawal

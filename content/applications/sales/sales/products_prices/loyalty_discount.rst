@@ -29,9 +29,13 @@ a new program from scratch.
 
 Or, if there are already existing programs, select an existing program to edit it.
 
-.. image:: loyalty_discount/price-discount-loyalty.png
-   :align: center
-   :alt: Discount and loyalty program template cards.
+.. screenshot:: sales-loyalty-program-templates
+   :menu: Sales ‣ Products ‣ Discount & Loyalty ‣ New
+   :shows: The program template cards shown on a new discount & loyalty program: Coupons, Next Order Coupons, Loyalty Cards, Promotions, Discount Code, Buy X Get Y.
+   :highlight: The template cards row (red frame).
+   :data: Demo database, no program created yet.
+   :module: loyalty
+   :notes: English UI, light theme, 1440px width, crop to the template cards.
 
 .. note::
    Templates **only** appear when no programs have been created, and they disappear once the first
@@ -39,9 +43,13 @@ Or, if there are already existing programs, select an existing program to edit i
 
 Creating or editing a program opens the program form.
 
-.. image:: loyalty_discount/price-programs.png
-   :align: center
-   :alt: Program options on the loyalty program form.
+.. screenshot:: sales-loyalty-program-form
+   :menu: Sales ‣ Products ‣ Discount & Loyalty ‣ (a program)
+   :shows: A loyalty program form with the Program Name, Program Type, Currency, Points Unit, Validity, Limit Usage and Company fields.
+   :highlight: The Program Type field (red frame).
+   :data: Program "Loyalty Cards", points unit "Loyalty Points".
+   :module: loyalty
+   :notes: English UI, light theme, 1440px width, crop to the field group.
 
 The program form contains the following fields:
 
@@ -80,17 +88,25 @@ The program form contains the following fields:
 All of the existing cards, codes, coupons, etc. that have been generated for the program are
 accessible through the smart button located at the top of the form.
 
-.. image:: loyalty_discount/price-programs-items.png
-   :align: center
-   :alt: Program items smart button on the loyalty program form.
+.. screenshot:: sales-loyalty-program-items-button
+   :menu: Sales ‣ Products ‣ Discount & Loyalty ‣ (a program)
+   :shows: The button box of a loyalty program with the Items smart button showing the number of generated coupons or cards.
+   :highlight: The Items smart button (red frame).
+   :data: Program "Loyalty Cards", 12 items.
+   :module: loyalty
+   :notes: English UI, light theme, 1440px width, crop to the button box.
 
 .. note::
    In Odoo 17 (and later), when a loyalty card or coupon is associated with a contact in the
    database, a :guilabel:`Loyalty Cards` smart button conditionally appears on the contact form.
 
-   .. image:: loyalty_discount/loyalty-cards-smart-button.png
-      :align: center
-      :alt: The Loyalty Card smart button as it appears on a contact form in Odoo 17.
+   .. screenshot:: sales-loyalty-contact-cards-button
+      :menu: Sales ‣ Orders ‣ Customers ‣ (a customer)
+      :shows: The button box of a contact form with the "Loyalty Cards" smart button.
+      :highlight: The "Loyalty Cards" smart button (red frame).
+      :data: Customer "Deco Addict", 1 loyalty card.
+      :module: loyalty
+      :notes: English UI, light theme, 1440px width, crop to the button box.
 
    This smart button **only** appears if a loyalty card or coupon is associated with the contact.
 
@@ -124,9 +140,13 @@ In the :guilabel:`Rules & Rewards` tab, click :guilabel:`Add` next to :guilabel:
 to add *conditions* to the program. This reveals a :guilabel:`Create Conditional rules` pop-up
 window.
 
-.. image:: loyalty_discount/price-conditional-rewards.png
-   :align: center
-   :alt: Rules & Rewards tab of the loyalty program form.
+.. screenshot:: sales-loyalty-rules-rewards-tab
+   :menu: Sales ‣ Products ‣ Discount & Loyalty ‣ (a program) ‣ Rules & Rewards
+   :shows: The "Rules & Rewards" tab of a loyalty program with one conditional rule and one reward listed.
+   :highlight: The "Add" links for rules and rewards (red frame).
+   :data: Rule: 1 point per 1.00 spent; reward: 10% discount for 50 points.
+   :module: loyalty
+   :notes: English UI, light theme, 1440px width, crop to the notebook.
 
 .. note::
    The options for :guilabel:`Conditional rules` vary depending on the selected :ref:`Program Type
@@ -153,9 +173,13 @@ The following options are available for configuring conditional rules:
   :guilabel:`per currency spent`, or :guilabel:`per unit paid` (for the :guilabel:`Loyalty Cards`
   and :guilabel:`Buy X Get Y` programs).
 
-.. image:: loyalty_discount/price-conditions.png
-   :align: center
-   :alt: Conditional rules configuration window for a discount or loyalty program.
+.. screenshot:: sales-loyalty-rule-popup
+   :menu: Sales ‣ Products ‣ Discount & Loyalty ‣ (a program) ‣ Rules & Rewards ‣ (a rule)
+   :shows: The conditional-rule pop-up with the Discount Code, Minimum Quantity, Minimum Purchase, Products/Categories and "Grant" fields.
+   :highlight: The Grant fields (red frame).
+   :data: Minimum purchase 100.00, grant 1 point per 1.00.
+   :module: loyalty
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 Click :guilabel:`Save & Close` to save the rule and close the pop-up window, or click
 :guilabel:`Save & New` to save the rule and immediately create a new one.
@@ -204,6 +228,10 @@ The following options are available for configuring rewards:
 - :guilabel:`Description on order`: Enter the description of the reward, which is displayed to the
   customer upon checkout.
 
-.. image:: loyalty_discount/price-rewards.png
-   :align: center
-   :alt: Rewards configuration window for a discount or loyalty program.
+.. screenshot:: sales-loyalty-reward-popup
+   :menu: Sales ‣ Products ‣ Discount & Loyalty ‣ (a program) ‣ Rules & Rewards ‣ (a reward)
+   :shows: The reward pop-up with the Reward Type (Free Product, Discount, Free Shipping), the discount value and the cost in points.
+   :highlight: The Reward Type field (red frame).
+   :data: Discount of 10% on the order, 50 points.
+   :module: loyalty
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.

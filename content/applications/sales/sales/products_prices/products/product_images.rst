@@ -35,29 +35,45 @@ Google API dashboard
 #. With the :guilabel:`Credentials` option selected in the left sidebar, click :guilabel:`Create
    Credentials`, and select :guilabel:`API key` from the drop-down menu.
 
-   .. image:: product_images/credentials-api-key.png
-      :align: center
-      :alt: API & Services page on Google Cloud Platform.
+   .. screenshot:: sales-product-images-gcp-credentials
+      :menu: (Google Cloud console) ‣ APIs & Services ‣ Credentials
+      :shows: The Credentials page of a Google Cloud project with the "Create credentials" menu open on "API key".
+      :highlight: The "API key" menu item (red frame).
+      :data: A throw-away Google Cloud project.
+      :module: product_images
+      :notes: English UI, light theme, crop to the header and menu.
 
 #. Doing so reveals an :guilabel:`API key created` pop-up window, containing a custom :guilabel:`API
    key`. Copy and save :guilabel:`Your API key` in the pop-up window -- it will be used later. Once
    the key is copied (and saved for later use), click :guilabel:`Close` to remove the pop-up window.
 
-   .. image:: product_images/api-key-pop-up.png
-      :align: center
-      :alt: The API key created pop-up window that appears.
+   .. screenshot:: sales-product-images-gcp-api-key
+      :menu: (Google Cloud console) ‣ APIs & Services ‣ Credentials ‣ Create credentials ‣ API key
+      :shows: The "API key created" dialog showing the generated key and the copy button.
+      :highlight: The copy button (red frame).
+      :data: A throw-away key; blur or replace the key value.
+      :module: product_images
+      :notes: English UI, light theme, crop to the dialog. Use a throw-away secret and mask it.
 
 #. On this page, search for `Custom Search API`, and select it.
 
-   .. image:: product_images/custom-search-api-search-bar.png
-      :align: center
-      :alt: Search bar containing "Custom Search API" on Google Cloud Platform.
+   .. screenshot:: sales-product-images-gcp-search-api
+      :menu: (Google Cloud console) ‣ API Library
+      :shows: The API library search box with "Custom Search API" typed in and the matching result listed.
+      :highlight: The "Custom Search API" result (red frame).
+      :data: A throw-away Google Cloud project.
+      :module: product_images
+      :notes: English UI, light theme, crop to the search box and result.
 
 #. From the :guilabel:`Custom Search API` page, enable the API by clicking :guilabel:`Enable`.
 
-   .. image:: product_images/gcp-custom-search-api-page.png
-      :align: center
-      :alt: "Custom Search API" page with Enable button highlighted on Google Cloud Platform.
+   .. screenshot:: sales-product-images-gcp-enable-api
+      :menu: (Google Cloud console) ‣ API Library ‣ Custom Search API
+      :shows: The Custom Search API page with the Enable button.
+      :highlight: The Enable button (red frame).
+      :data: A throw-away Google Cloud project.
+      :module: product_images
+      :notes: English UI, light theme, crop to the header.
 
 .. _product_images/google-pse-dashboard:
 
@@ -68,33 +84,49 @@ Google Programmable Search dashboard
    and click either of the :guilabel:`Get started` buttons. Log in with a Google account, if not
    already logged in.
 
-   .. image:: product_images/google-pse-get-started.png
-      :align: center
-      :alt: Google Programmable Search Engine page with the Get Started buttons.
+   .. screenshot:: sales-product-images-pse-start
+      :menu: (Google Programmable Search Engine)
+      :shows: The Programmable Search Engine landing page with the "Get started" button.
+      :highlight: The "Get started" button (red frame).
+      :data: Signed in with a throw-away account.
+      :module: product_images
+      :notes: English UI, light theme, crop to the header.
 
 #. On the :guilabel:`Create a new search engine` form, fill out the name of the search engine, along
    with what the engine should search, and be sure to enable :guilabel:`Image Search` and
    :guilabel:`SafeSearch`.
 
-   .. image:: product_images/create-new-search.png
-      :align: center
-      :alt: Create new search engine form that appears with search engine configurations.
+   .. screenshot:: sales-product-images-pse-create
+      :menu: (Google Programmable Search Engine) ‣ Add
+      :shows: The "Create a new search engine" form with the name, the "Search the entire web" option and the "Image search" toggle enabled.
+      :highlight: The "Image search" toggle (red frame).
+      :data: Search engine name "Odoo product images".
+      :module: product_images
+      :notes: English UI, light theme, crop to the form.
 
 #. Validate the form by clicking :guilabel:`Create`.
 #. Doing so reveals a new page with the heading: :guilabel:`Your new search engine has been
    created`.
 
-   .. image:: product_images/new-search-engine-has-been-created.png
-      :align: center
-      :alt: The Your New Search Engine Has Been Created page that appears with copy code.
+   .. screenshot:: sales-product-images-pse-created
+      :menu: (Google Programmable Search Engine) ‣ Add ‣ Create
+      :shows: The confirmation page shown after the search engine is created, with the embed code containing the search engine ID.
+      :highlight: The search engine ID inside the code snippet (red frame).
+      :data: A throw-away search engine; mask the ID.
+      :module: product_images
+      :notes: English UI, light theme, crop to the code block. Use a throw-away secret and mask it.
 
 #. From this page, click :guilabel:`Customize` to open the :menuselection:`Overview --> Basic` page.
    Then, copy the ID in the :guilabel:`Search engine ID` field. This ID is needed for the Odoo
    configuration.
 
-   .. image:: product_images/basic-overview-search-engine-id.png
-      :align: center
-      :alt: Basic overview page with search engine ID field.
+   .. screenshot:: sales-product-images-pse-id
+      :menu: (Google Programmable Search Engine) ‣ Overview ‣ Basic
+      :shows: The Basic section of the search engine overview, showing the "Search engine ID" field with its copy button.
+      :highlight: The "Search engine ID" field (red frame).
+      :data: A throw-away search engine; mask the ID.
+      :module: product_images
+      :notes: English UI, light theme, crop to the field. Use a throw-away secret and mask it.
 
 .. _product_images/setup-in-odoo:
 
@@ -105,9 +137,13 @@ Odoo
    :guilabel:`Integrations` section. From here, check the box beside :guilabel:`Google Images`.
    Then, click :guilabel:`Save`.
 
-   .. image:: product_images/google-images-setting.png
-      :align: center
-      :alt: The Google Images setting in the Odoo Settings app page.
+   .. screenshot:: sales-product-images-odoo-setting
+      :menu: Settings ‣ General Settings
+      :shows: The Integrations section of the general settings with the "Google Images" checkbox enabled and the API Key and Search Engine ID fields beneath it.
+      :highlight: The API Key and Search Engine ID fields (red frame).
+      :data: Throw-away credentials; mask both values.
+      :module: product_images
+      :notes: English UI, light theme, 1440px width, crop to the setting block. Use throw-away secrets and mask them.
 
 #. Next, return to the :menuselection:`Settings app`, and scroll to the :guilabel:`Integrations`
    section. Then, enter the :guilabel:`API Key` and :guilabel:`Search Engine ID` in the fields
@@ -140,15 +176,23 @@ images to products in Odoo using the Odoo *Sales* application:
 #. Click the :guilabel:`Action ⚙️ (gear)` icon on the product page, and select :guilabel:`Get
    Pictures from Google Images` from the menu that pops up.
 
-   .. image:: product_images/get-pictures-from-google-action.png
-      :align: center
-      :alt: The Get Pictures from Google Images option from the Action drop-down menu in Odoo.
+   .. screenshot:: sales-product-images-action-menu
+      :menu: Sales ‣ Products ‣ Product Variants
+      :shows: The product-variants list with several records selected and the gear (Actions) menu open on "Get Pictures from Google Images".
+      :highlight: The "Get Pictures from Google Images" item (red frame).
+      :data: Three product variants selected.
+      :module: product_images
+      :notes: English UI, light theme, 1440px width, crop to the open menu.
 
 #. On the pop-up window that appears, click :guilabel:`Get Pictures`.
 
-   .. image:: product_images/click-get-picture-from-pop-up.png
-      :align: center
-      :alt: The pop-up that appears in which the user should click Get Picture in Odoo Sales.
+   .. screenshot:: sales-product-images-confirm-popup
+      :menu: Sales ‣ Products ‣ Product Variants ‣ Get Pictures from Google Images
+      :shows: The confirmation pop-up with the "Get Pictures" button.
+      :highlight: The "Get Pictures" button (red frame).
+      :data: Three variants selected.
+      :module: product_images
+      :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 #. Once clicked, the image(s) will appear incrementally.
 

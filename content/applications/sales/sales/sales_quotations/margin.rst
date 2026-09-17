@@ -15,8 +15,13 @@ To activate the *Margins* feature, go to the :menuselection:`Sales app --> Confi
 Settings`. In the :guilabel:`Pricing` section, tick the :guilabel:`Margins` checkbox. Then click
 :guilabel:`Save`.
 
-.. image:: margin/margins-checkbox.png
-   :alt: Margins checkbox.
+.. screenshot:: sales-margin-setting
+   :menu: Sales ‣ Configuration ‣ Settings
+   :shows: The Settings page scrolled to the "Pricing" section with the "Margins" checkbox enabled.
+   :highlight: The "Margins" setting (red frame).
+   :data: Demo company.
+   :module: sale_margin
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 .. _sales_quotations/margin/configure-price-and-cost:
 
@@ -37,8 +42,13 @@ The margin percentage is calculated by:
 .. math::
    \frac{Sales~Price - Cost~Price}{Sales~Price} \times 100
 
-.. image:: margin/product-view.png
-   :alt: Cable Management box product page.
+.. screenshot:: sales-margin-product-cost-price
+   :menu: Sales ‣ Products ‣ Products ‣ (a product) ‣ General Information
+   :shows: A product form showing the Sales Price and the Cost fields filled in.
+   :highlight: The Sales Price and Cost fields (red frame).
+   :data: Product "Cable Management Box"; Sales Price 100.00, Cost 70.00.
+   :module: product
+   :notes: English UI, light theme, 1440px width, crop to the General Information tab.
 
 Compute margins on sales orders
 ===============================
@@ -49,8 +59,13 @@ to the quotation, a new field, :guilabel:`Margin`, automatically appears at the 
 document. This field displays the order's total margin in the configured currency as well as the
 percentage.
 
-.. image:: margin/so-with-margin-field.png
-   :alt: Sales order with Margin field on the bottom.
+.. screenshot:: sales-margin-order-total
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation)
+   :shows: The totals block at the bottom of a quotation, with the Margin amount displayed under the total.
+   :highlight: The Margin line (red frame).
+   :data: Quotation with one line: "Cable Management Box", 10 units at 100.00; margin 300.00.
+   :module: sale_margin
+   :notes: English UI, light theme, 1440px width, crop to the totals block.
 
 To display a product's margin and the margin percentage per line item, click the
 :icon:`oi-settings-adjust` :guilabel:`(settings adjust)` icon in the :guilabel:`Order Lines` tab.
@@ -63,8 +78,13 @@ The margin for one unit is multiplied by the quantity to determine the margin fo
 The :guilabel:`Margin` and :guilabel:`Margin(%)` columns are not displayed by default, but once
 enabled, the columns appear on all new and existing quotations and :abbr:`SOs (sales orders)`.
 
-.. image:: margin/so-with-margins-checkboxes.png
-   :alt: Sales order with Margin and Margin(%) columns displayed.
+.. screenshot:: sales-margin-order-line-columns
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Order Lines
+   :shows: The Order Lines tab with the optional "Margin" and "Margin (%)" columns switched on through the column-options toggle.
+   :highlight: The optional-columns drop-down and the two margin columns (red frame).
+   :data: Two order lines with different margins.
+   :module: sale_margin
+   :notes: English UI, light theme, 1440px width, crop to the order-lines table.
 
 .. note::
    The :guilabel:`Margin` and :guilabel:`Margin (%)` columns are not editable since they are
@@ -91,21 +111,36 @@ product. Follow these steps:
    in an order and is valid only from October to the end of December, the pricelist rule should look
    like this:
 
-   .. image:: margin/pricelist-configuration.png
-      :alt: Pricelist Rules pop-up window.
+   .. screenshot:: sales-margin-pricelist-rule
+      :menu: Sales ‣ Products ‣ Pricelists ‣ (a pricelist) ‣ Price Rules
+      :shows: A pricelist rule line with a percentage discount applied to a product.
+      :highlight: The discount rule row (red frame).
+      :data: Pricelist "Wholesale"; 20% discount on "Cable Management Box".
+      :module: product
+      :notes: English UI, light theme, 1440px width, crop to the price-rules list.
 
    After saving the pricelist, go to the desired :abbr:`SO (sales order)` and select the newly
    created pricelist, and adjust the quantity according to the pricelist's rule.
 
-   .. image:: margin/so-with-pricelist.png
-      :alt: Sales order with a new pricelist selected.
+   .. screenshot:: sales-margin-order-pricelist-field
+      :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation)
+      :shows: A quotation with the Pricelist field set to the discount pricelist, before the prices are updated.
+      :highlight: The Pricelist field (red frame).
+      :data: Quotation with pricelist "Wholesale" selected.
+      :module: sale
+      :notes: English UI, light theme, 1440px width, crop to the customer block.
 
    After the changes are made, click :icon:`fa-refresh` :guilabel:`Update Prices` to update the
    :guilabel:`Margin`, :guilabel:`Margin (%)`, and :guilabel:`Amount`. The margin is recalculated
    based on the pricelist-adjusted product's sales price and cost.
 
-   .. image:: margin/so-with-applied-pricelist.png
-      :alt: Sales order with margins recalculated based on the price-list adjustment.
+   .. screenshot:: sales-margin-order-recalculated
+      :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Order Lines
+      :shows: The order lines after the pricelist was applied: reduced unit prices and correspondingly smaller Margin and Margin (%) values.
+      :highlight: The recalculated Margin column (red frame).
+      :data: Same quotation after applying the "Wholesale" pricelist.
+      :module: sale_margin
+      :notes: English UI, light theme, 1440px width, crop to the order-lines table and totals.
 
 .. tip::
    Another way to visualize the impact of margins on sales orders is to go to :menuselection:`Sales

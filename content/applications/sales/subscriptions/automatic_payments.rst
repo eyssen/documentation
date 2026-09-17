@@ -1,90 +1,76 @@
-====================================
-Subscriptions and automatic payments
-====================================
+==============================
+Automatic payments and dunning
+==============================
 
-By default, the **Subscriptions** app will automatically generate quotations and invoices for
-customers, but it can also support automatic payments. Setting up automatic payments requires
-additional configuration, including choosing an automatic payment provider and either setting up a
-customer portal or an **eCommerce** website. Here's an overview of how to get started.
+A contract can charge its recurring invoices automatically against a stored payment method, and
+retry on a fixed schedule when a charge is declined.
 
-Setting up a payment processor that supports automatic payments
-===============================================================
+Setting up automatic charging
+=============================
 
-Setting up automatic recurring payments requires using a payment provider that supports
-tokenization. Tokenization lets customers save their payment details, such as credit card or banking
-account information, for automatic billing. The following payment providers support tokenization:
+#. Configure and enable a payment provider that supports saving payment methods
+   (:doc:`../../finance/payment_providers`).
+#. Let the customer save a payment method — a card or a SEPA mandate — for example from the
+   :doc:`customer portal <portal>`.
+#. Open the contract and select that method in the :guilabel:`Payment Token` field. Only tokens
+   belonging to the contract's customer are offered.
+#. Set :guilabel:`Invoice Posting` to :guilabel:`Post automatically`.
 
-- :doc:`Adyen <../../finance/payment_providers/adyen>`
-- :doc:`Authorize.net <../../finance/payment_providers/authorize>`
-- :doc:`Flutterwave <../../finance/payment_providers/flutterwave>`
-- :doc:`Razorpay <../../finance/payment_providers/razorpay>`
-- :doc:`Stripe <../../finance/payment_providers/stripe>`
-- :doc:`Xendit <../../finance/payment_providers/xendit>`
-
-Here are the steps to setting up automatic payments.
-
-#. Choose a payment provider that supports tokenization.
-#. Follow the provider's own setup guide to create an account and begin configuring their API
-   credentials in Odoo.
-#. :ref:`Enable <payment_providers/add_new>` the payment provider.
-#. :ref:`Configure the payment methods <payment_providers/payment_methods>` for the chosen payment
-   provider.
-#. :ref:`Configure the tokenization <payment_providers/tokenization>` for the chosen payment
-   provider.
-
-How customers can set up automatic payments
-===========================================
-
-Once these steps are complete, payment providers will be able to create tokens with customers' saved
-payment details during the checkout process. Saved payment details can then be used for future
-online or recurring subscription charges. Customers will also be able to log into their
-:doc:`customer portal <../../general/users/portal>` and enter their payment information there.
-
-Some payment providers will automatically save customers' payment information as part of the
-checkout process. Others will give them the option to save their information for future payments. If
-customers choose not to save their payment information, they will not be able to make automatic
-payments.
+From then on, every recurring invoice generated for that contract is posted and charged
+off-session.
 
 .. important::
-   Building an **eCommerce** website requires the :doc:`Website <../../websites/website>` app.
+   A charge is only treated as successful when the payment transaction actually reports
+   :guilabel:`Authorized` or :guilabel:`Done`. A provider that declines an off-session payment does
+   not raise an error, so the absence of an error is never taken as a payment.
 
-What happens if an automatic payment fails?
-===========================================
+Dunning
+=======
 
-When an automatic payment fails, the sales order is updated with:
+Every charge attempt is recorded as a **dunning attempt** on the contract's :guilabel:`Dunning
+Attempts` tab, with its attempt number, timestamp, state, decline code and reason.
 
-- a :guilabel:`Payment Failure` tag
-- the :guilabel:`Contract in exception` checkbox ticked (in the :guilabel:`Subscription` section of
-  the :guilabel:`Other Info` tab).
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
 
-Being marked :guilabel:`Contract in exception` prevents scheduled actions from running, which keeps
-the system from accidentally double-charging the customer if the automatic payment actually went
-through. Because the status of the payment failed to register with the system, users must manually
-check if the payment has been made before automatic payments and other scheduled actions can resume.
+   * - Attempt state
+     - Meaning
+   * - :guilabel:`Pending`
+     - The charge is under way, or the provider has not answered yet.
+   * - :guilabel:`Success`
+     - The invoice was paid.
+   * - :guilabel:`Soft Decline (retry)`
+     - The charge failed and a retry is scheduled at :guilabel:`Next Retry At`.
+   * - :guilabel:`Hard Decline (stop)`
+     - No further retry is made.
 
-To do this, navigate to :menuselection:`Subscriptions app --> Subscriptions --> Quotations`. Click
-into the desired subscription, then check the Chatter to see if the payment was made.
+The retry cadence is fixed: after the first failure the charge is retried after **1, 3, 7 and 14
+days**. When those four retries are exhausted, the attempt becomes a :guilabel:`Hard Decline`.
 
-If the payment *was not* made, first enter :doc:`developer mode <../../general/developer_mode>`.
-Then, click the :guilabel:`Other Info` tab, and untick the checkbox next to :guilabel:`Contract in
-exception`. Reload the sales order and confirm that the :guilabel:`Payment Failure` tag is gone.
+The contract's :guilabel:`Dunning State` summarises where it stands: :guilabel:`OK`,
+:guilabel:`Retry pending` or :guilabel:`Hard decline`. The :guilabel:`Payment Issue` filter on the
+contract list finds the contracts that need attention.
 
-If the payment *was* made, a new invoice must be made and posted manually. This automatically
-updates the next invoice date of the subscription. Once the invoice is created, enter
-:doc:`developer mode <../../general/developer_mode>` and navigate to the new sales order. Click the
-:guilabel:`Other Info` tab, and untick the checkbox next to :guilabel:`Contract in exception`.
-Reload the sales order and confirm that the :guilabel:`Payment Failure` tag is gone.
+.. screenshot:: sales-subscriptions-dunning-attempts
+   :menu: Subscriptions ‣ Contracts ‣ (a contract) ‣ Dunning Attempts
+   :shows: The Dunning Attempts tab of a contract with three attempts: attempt number, attempted-at timestamp, state badge, decline reason and next retry date.
+   :highlight: The state badges and the Next Retry At column (red frame).
+   :data: Contract SUB/2026/0012; one success, one soft decline with a retry scheduled.
+   :module: subscription
+   :notes: English UI, light theme, 1440px width, crop to the notebook. Use throw-away payment data.
 
-.. figure:: renewals/contract-in-exception.png
-   :alt: The contract in exception option selected with the payment failure tag shown.
+Scheduled actions
+=================
 
-The :guilabel:`Contract in exception` option selected with the :guilabel:`Payment Failure` tag
-shown.
+Two scheduled actions support automatic payments. Both are delivered inactive and must be enabled
+in :menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`:
 
-In both cases, once the :guilabel:`Contract in exception` checkbox is no longer ticked, Odoo handles
-renewals automatically again. If the subscription remains in :guilabel:`Payment Failure`, it is
-ignored by Odoo until the sales order is closed.
+- :guilabel:`Subscription: Dunning Retry` — every 4 hours; re-attempts the charges whose retry date
+  has passed.
+- :guilabel:`Subscription: Emit Alerts` — daily; raises a to-do activity for the salesperson when a
+  trial ends within three days, and a high-priority activity for the accountant on a hard decline.
 
 .. seealso::
-  - :doc:`../../finance/payment_providers`
-  - :doc:`../../general/users/portal`
+   - :doc:`billing`
+   - :doc:`../../finance/payment_providers`

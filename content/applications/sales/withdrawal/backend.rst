@@ -18,6 +18,14 @@ The list shows at least the declaration reference (e.g. ``RMA/2026/00034``), the
 
 Records arrive here automatically from the portal, already in the :guilabel:`Posted` state.
 
+.. screenshot:: sales-withdrawal-backend-list
+   :menu: Sales ‣ Orders ‣ Withdrawals
+   :shows: The Withdrawals list with three declarations, each showing its reference, customer, date and the "Posted" state badge.
+   :highlight: The Withdrawals menu entry and the Posted badges (red frames).
+   :data: Demo webshop orders; references RMA/2026/00034–00036.
+   :module: eyssen_rma
+   :notes: English UI, light theme, 1440px width, crop to the list.
+
 .. important::
    **Posted is the correct final state for a withdrawal.** The declaration is not “stuck in draft”
    and is not supposed to be marked :guilabel:`Done`. Logistics and refunds always happen on a
@@ -42,6 +50,14 @@ A withdrawal record looks like an RMA form but the header and sheet are withdraw
 The :guilabel:`Post`, :guilabel:`Done` and :guilabel:`Delete` buttons that exist on ordinary RMAs are
 **hidden** for a withdrawal, because a declaration is never processed through that flow.
 
+.. screenshot:: sales-withdrawal-backend-form
+   :menu: Sales ‣ Orders ‣ Withdrawals ‣ (a declaration)
+   :shows: A withdrawal declaration form: the blue info banner, the "Start Return / Refund" and "Resend Confirmation" header buttons, the Withdrawal Declaration group (Consumer Name, Consumer Email, Withdrawal Confirmed On, Confirmation Email) and the withdrawn order lines.
+   :highlight: The info banner and the two header buttons (red frames).
+   :data: Declaration RMA/2026/00034 for a demo consumer, two withdrawn lines.
+   :module: eyssen_rma
+   :notes: English UI, light theme, 1440px width, full form.
+
 The declaration snapshot
 ------------------------
 
@@ -49,6 +65,14 @@ The :guilabel:`Declaration` notebook tab shows the **immutable HTML snapshot** c
 confirmation time: the declaration title, the consumer's name and e-mail, the submission timestamp
 and the list of products and quantities. This snapshot is the legal record and is never recomputed.
 It should match the confirmation e-mail content.
+
+.. screenshot:: sales-withdrawal-backend-declaration-tab
+   :menu: Sales ‣ Orders ‣ Withdrawals ‣ (a declaration) ‣ Declaration
+   :shows: The Declaration notebook tab with the immutable HTML snapshot: declaration title, consumer name and e-mail, submission timestamp and the list of products and quantities.
+   :highlight: The submission timestamp (red frame).
+   :data: Same declaration RMA/2026/00034.
+   :module: eyssen_rma
+   :notes: English UI, light theme, 1440px width, crop to the notebook.
 
 Non-rejectable guarantees
 =========================

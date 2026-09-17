@@ -22,12 +22,15 @@ Duration`.
    status <sales/membership-status>`. Membership products can be sold *before* their active start
    date.
 
-.. image:: members/membership-product.png
-   :align: center
-   :alt: A new membership product in the members app.
+.. screenshot:: sales-members-product-form
+   :menu: Members ‣ Configuration ‣ Membership Products ‣ (a product)
+   :shows: A membership product form with the Product Type, Membership dates (From / To) and the Membership Fee fields.
+   :highlight: The membership date range and the fee (red frame).
+   :data: Product "Gold Membership", 01/01/2026 – 12/31/2026, fee 180.00.
+   :module: membership
+   :notes: English UI, light theme, 1440px width, crop to the field group.
 
-Membership products can be added to a sales order, and invoiced as regular products or
-subscriptions.
+Membership products can be added to a sales order, and invoiced as regular products.
 
 Activate a membership
 =====================
@@ -70,9 +73,13 @@ To publish a list of active members on the website, the *Online Members Director
 first be :ref:`installed <general/install>`. After installing the module, add the `/members` page to
 the website's menu by :doc:`editing the website menu <../websites/website/structure/header_footer>`.
 
-.. image:: members/membership-directory-app.png
-   :align: center
-   :alt: The Online Members directory module in Odoo.
+.. screenshot:: sales-members-directory-module
+   :menu: Apps
+   :shows: The Apps list filtered on "members", showing the "Online Members Directory" module card with its Activate button.
+   :highlight: The Activate button (red frame).
+   :data: Demo database.
+   :module: website_membership
+   :notes: English UI, light theme, 1440px width, crop to the module card.
 
 Publish individual members
 --------------------------

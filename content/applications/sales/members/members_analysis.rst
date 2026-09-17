@@ -18,9 +18,13 @@ The default *Members Analysis* report displays a bar chart, measuring the :guila
 memberships against the amount of :guilabel:`Revenue Done`. The data is grouped by the assigned
 salesperson, then by the month the membership begins.
 
-.. image:: members_analysis/example-report.png
-   :align: center
-   :alt: A sample of the members analysis report.
+.. screenshot:: sales-members-analysis-report
+   :menu: Members ‣ Reporting ‣ Members
+   :shows: The Members Analysis report in graph view, grouped by membership product, with the search bar showing the default filters.
+   :highlight: No highlight; the report is the subject.
+   :data: Two membership products with several members each.
+   :module: membership
+   :notes: English UI, light theme, 1440px width, crop to the search bar and the chart.
 
 Additional :ref:`Group By <search/group>` options include the following:
 

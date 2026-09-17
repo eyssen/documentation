@@ -254,7 +254,7 @@ within the :guilabel:`MyInvois` tab.
    from MyInvois.
 
 .. note::
-   Odoo :doc:`automatically checks and updates <../../sales/subscriptions/scheduled_actions>` the
+   Odoo automatically checks and updates the
    status every hour. To update it manually at any time, click :guilabel:`Update MyInvois Status`.
 
 .. _malaysia/myinvois/workflow/cancellation:

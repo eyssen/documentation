@@ -325,8 +325,94 @@ To set the product's website availability, navigate to the :ref:`product form
 available on. Leave the field blank to make the product available on *all* websites.
 
 .. note::
-   You can make a product available on either *one* website or *all* websites, but selecting only
-   *some* websites is not possible.
+   The standard :guilabel:`Website` field allows either *one* website or *all* websites. To publish
+   a product on a chosen subset of websites, install the *Product Multi Website* module
+   (`eyssen_website_sale_product_multi_website`), which replaces the single field with a
+   :guilabel:`Websites` field where several websites can be selected. Leaving it empty keeps the
+   product available on all websites.
+
+.. _ecommerce/products/hide-variants:
+
+Hiding products and variants
+----------------------------
+
+The *Disable Variants in Website* module (`website_hide_variants`) adds a :guilabel:`Hide on
+Website` checkbox on the product and on each product variant. A hidden variant is not offered in the
+variant selection on the product page and cannot be ordered, while the other variants of the same
+product stay available. Use it for variants that are sold only offline or that are temporarily out
+of the range, without archiving them.
+
+.. screenshot:: ecommerce-products-hide-on-website
+   :menu: Sales ‣ Products ‣ Product Variants ‣ (variant)
+   :shows: A product variant form with the Hide on Website checkbox enabled.
+   :highlight: The Hide on Website checkbox (red frame).
+   :data: Product "T-shirt", variant "Red / XXL" hidden.
+   :module: website_hide_variants
+   :notes: English UI, light theme, 1440px width.
+
+.. _ecommerce/products/size-charts:
+
+Size charts
+-----------
+
+The *Website Product Size Chart* module (`website_product_size_chart`) displays a size chart in a
+modal window on the product page. Create the charts under :menuselection:`Website --> eCommerce -->
+Size Charts`:
+
+- :guilabel:`Name`: the title of the modal, and the label of the button on the product page. It is
+  translatable.
+- :guilabel:`Content`: the chart itself, as formatted content (usually a table).
+- :guilabel:`Website`: limits the chart to one website.
+- :guilabel:`Preview`: opens the chart as the customer sees it.
+
+A chart is bound to products either *rule-based* — through :guilabel:`Product Categories` (the
+eCommerce categories) or :guilabel:`Attribute Values` (e.g., all products having the attribute
+value `Unisex`) — or manually, through :guilabel:`Manual products`. The button appears on every
+product page matched by at least one of these.
+
+.. screenshot:: ecommerce-products-size-chart-form
+   :menu: Website ‣ eCommerce ‣ Size Charts ‣ New
+   :shows: A size chart form with the Name and Content fields, the Targeting section with the category and attribute-value rules, the Manual products list and the Preview button.
+   :highlight: The Targeting section (red frame).
+   :data: Chart "Men's shirts", bound to the category "Clothing" and to the attribute value "Men".
+   :module: website_product_size_chart
+   :notes: English UI, light theme, 1440px width.
+
+.. screenshot:: ecommerce-products-size-chart-modal
+   :menu: (website) ‣ Shop ‣ (product)
+   :shows: A product page with the size chart button next to the variant selection, and the size chart modal opened over the page with its table.
+   :highlight: The size chart button (red frame).
+   :data: Product "Men's shirt" with the chart "Men's shirts".
+   :module: website_product_size_chart
+   :notes: English UI, light theme, 1440px width.
+
+.. _ecommerce/products/argep:
+
+Árgép product feed
+------------------
+
+The *Árgép* module (`eyssen_website_sale_argep`) publishes the webshop catalog as an XML feed at
+`/argep.xml`, in the format expected by the Hungarian price comparison site Árgép.
+
+The feed is configured under :menuselection:`Website --> Configuration --> Settings`, in the
+:guilabel:`Árgép` section:
+
+- :guilabel:`Árgép price source`: whether the prices come from the website's own pricelist or from a
+  dedicated one.
+- :guilabel:`Árgép pricelist`: the pricelist used when a dedicated one is selected.
+- :guilabel:`Árgép gross prices`: export tax-included prices.
+- :guilabel:`Include zero-price products`: keep products without a price in the feed.
+
+Each product has an :guilabel:`Appearance in Árgép XML` checkbox (:guilabel:`Sales` tab), enabled by
+default, to exclude individual products from the feed.
+
+.. screenshot:: ecommerce-products-argep-settings
+   :menu: Website ‣ Configuration ‣ Settings
+   :shows: The Website settings page scrolled to the Árgép block, with the price source, pricelist, gross price and zero-price options.
+   :highlight: The Árgép block (red frame).
+   :data: Price source set to a dedicated pricelist, gross prices enabled.
+   :module: eyssen_website_sale_argep
+   :notes: English UI, light theme, 1440px width, crop to the Árgép block.
 
 .. _ecommerce/products/stock-management:
 

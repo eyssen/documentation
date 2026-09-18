@@ -291,6 +291,36 @@ a product's image.
 - :icon:`fa-heart-o` (:guilabel:`Wishlist`): adds a button to :ref:`wishlist
   <ecommerce/products/wishlists>` the product.
 
+.. _ecommerce/catalog/smart-search:
+
+Smart search
+============
+
+The *Smart Search (Theme Prime)* module (`eyssen_website_search_tp`) replaces the standard shop
+search with a fuzzy search based on PostgreSQL trigram matching, so that visitors also find products
+when they make a typo, use a different word order, or type only part of a product name. Special
+characters in the search term (e.g., `BUS+`) are taken into account for the ranking, and the
+"did you mean" suggestion is only offered when the search itself returns nothing.
+
+Enable it in the theme's product search configuration, with the :guilabel:`Smart search` option;
+the :guilabel:`Search in description` option extends the search to the product descriptions.
+
+What visitors searched for is recorded in the theme's search report. The module adds the searched
+term itself to that report's search bar as the default search field and as a :guilabel:`Search Term`
+group-by, so the most frequent searches — and those returning no result — can be reviewed directly.
+
+.. screenshot:: ecommerce-catalog-smart-search-report
+   :menu: (Theme Prime) Search Report
+   :shows: The theme's search report grouped by Search Term, with the number of searches per term.
+   :highlight: The Search Term group-by in the search panel (red frame).
+   :data: About twenty recorded searches over two weeks.
+   :module: eyssen_website_search_tp
+   :notes: Requires the Theme Prime theme; check the report's exact menu path in the installed theme. English UI, light theme, 1440px width.
+
+.. note::
+   This module requires the **Theme Prime** theme and its search widget; it has no effect on other
+   themes. The trigram search needs the PostgreSQL `pg_trgm` extension to be available in the
+   database — ask your hosting provider or system administrator if the option has no effect.
 
 .. seealso::
    :doc:`Products <../products>`

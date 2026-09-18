@@ -21,9 +21,12 @@ Navigate to :menuselection:`Email Marketing app --> Configuration --> Settings`,
 checkbox next to the :guilabel:`Blacklist Option when Unsubscribing` feature. Then, click
 :guilabel:`Save` in the upper-left corner of the :guilabel:`Settings` page.
 
-.. image:: unsubscriptions/blacklist-feature.png
-   :align: center
-   :alt: View of the blacklist feature in the Settings page of the Odoo Email Marketing app.
+.. screenshot:: email_marketing-unsubscriptions-blacklist-feature
+   :menu: Email Marketing ‣ Configuration ‣ Settings
+   :shows: The Email Marketing settings page with the Blacklist Options when Unsubscribing checkbox enabled.
+   :highlight: The Blacklist Options when Unsubscribing setting (red frame).
+   :module: mass_mailing
+   :notes: English UI, light theme, 1440px width.
 
 Unsubscribe
 -----------
@@ -41,9 +44,13 @@ mailing list, presents them with a :guilabel:`Mailing Subscriptions` page where 
 manage their subscriptions, and informs them that they've been :guilabel:`Successfully
 Unsubscribed`.
 
-.. image:: unsubscriptions/mailing-subscriptions-page.png
-   :align: center
-   :alt: The Mailng Subscriptions page that appears when 'Unsubscribe' link in mailing is clicked.
+.. screenshot:: email_marketing-unsubscriptions-mailing-subscriptions-page
+   :menu: (unsubscribe link in a mailing)
+   :shows: The Mailing Subscriptions page a recipient reaches from the unsubscribe link, listing the mailing lists with their checkboxes and the Update my subscriptions button.
+   :highlight: The mailing list checkboxes (red frame).
+   :data: Two public mailing lists.
+   :module: mass_mailing
+   :notes: English UI, light theme, 1440px width.
 
 Beneath that, Odoo asks the former subscriber to :guilabel:`Please let us know why you updated your
 subscription`, and the user can proceed to choose the appropriate opt-out reason from a series of
@@ -67,9 +74,12 @@ unsubscription process, on the :guilabel:`Mailing Subscriptions` page, they must
 Upon clicking :guilabel:`Exclude Me`, Odoo informs the recipient they have been successfully
 blacklisted, with a message reading: :guilabel:`✔️ Email added to our blocklist`.
 
-.. image:: unsubscriptions/mailing-subscriptions-blocklist-question.png
-   :align: center
-   :alt: The blocklist question on the Mailing Subscriptions page that recipients see.
+.. screenshot:: email_marketing-unsubscriptions-mailing-subscriptions-blocklist-question
+   :menu: (unsubscribe link in a mailing)
+   :shows: The blocklist question shown under the mailing lists on the Mailing Subscriptions page, with the reason field and the confirmation button.
+   :highlight: The blocklist question block (red frame).
+   :module: mass_mailing
+   :notes: English UI, light theme, 1440px width.
 
 Beneath that, Odoo asks the former subscriber to :guilabel:`Please let us know why you want to be
 added to our blocklist`, and the user can proceed to choose the appropriate reason from a series of
@@ -85,17 +95,24 @@ Blacklisted email addresses
 To view a complete list of all blacklisted email addresses, navigate to :menuselection:`Email
 Marketing app --> Configuration --> Blacklisted Email Addresses`.
 
-.. image:: unsubscriptions/blacklisted-email-addresses.png
-   :align: center
-   :alt: View of the blacklisted email addresses page in Odoo Email Marketing.
+.. screenshot:: email_marketing-unsubscriptions-blacklisted-email-addresses
+   :menu: Email Marketing ‣ Configuration ‣ Blacklisted Email Addresses
+   :shows: The Blacklisted Email Addresses list with the Email, Reason and Active columns.
+   :data: Three blacklisted addresses.
+   :module: mass_mailing
+   :notes: English UI, light theme, 1440px width.
 
 When a blacklisted record is selected from this list, Odoo reveals a separate page with the
 recipient's contact information, along with the provided :guilabel:`Reason` why they chose to
 blacklist themselves.
 
-.. image:: unsubscriptions/blacklisted-contact-form.png
-   :align: center
-   :alt: View of a blacklisted contact detail form in Odoo Email Marketing.
+.. screenshot:: email_marketing-unsubscriptions-blacklisted-contact-form
+   :menu: Email Marketing ‣ Configuration ‣ Blacklisted Email Addresses ‣ (record)
+   :shows: A blacklist record with the Email field, the Unblacklist button and the chatter showing when and why it was blacklisted.
+   :highlight: The Unblacklist button (red frame).
+   :data: One blacklisted address.
+   :module: mass_mailing
+   :notes: English UI, light theme, 1440px width.
 
 In the *chatter* of the blacklisted record page, there's a time-stamped message, informing the user
 when the recipient blacklisted themselves (via a :guilabel:`Mail Blacklist created` log note).
@@ -118,9 +135,12 @@ In this pop-up window, the email address of the selected blacklisted record is s
 :guilabel:`Reason` field, in which a reason can be entered, explaining why this particular contact
 was removed from the blacklist.
 
-.. image:: unsubscriptions/unblacklist-popup.png
-   :align: center
-   :alt: View of the unblacklist pop-up window in the Odoo Email Marketing application.
+.. screenshot:: email_marketing-unsubscriptions-unblacklist-popup
+   :menu: Email Marketing ‣ Configuration ‣ Blacklisted Email Addresses ‣ (record) ‣ Unblacklist
+   :shows: The Unblacklist pop-up window with the reason field and the Confirm button.
+   :highlight: The reason field (red frame).
+   :module: mass_mailing
+   :notes: English UI, light theme, 1440px width.
 
 After filling in the fields, click :guilabel:`Confirm` to officially remove that particular contact
 from the blacklist.

@@ -24,9 +24,12 @@ results for that mailing. Click on one of the mailings in the list to open the r
 
 At the top of the record, detailed metrics are displayed as smart buttons.
 
-.. image:: analyze_metrics/metric-smart-buttons.png
-   :align: center
-   :alt: The smart buttons on a mass mailing, displaying the results of the message.
+.. screenshot:: email_marketing-analyze_metrics-metric-smart-buttons
+   :menu: Email Marketing ‣ Mailings ‣ (sent mailing)
+   :shows: The smart button row at the top of a sent mailing: Sent, Opened, Replied, Clicked, Received, Bounced.
+   :highlight: The smart button row (red frame).
+   :module: mass_mailing
+   :notes: English UI, light theme, 1440px width.
 
 Opened rate
 -----------
@@ -136,9 +139,12 @@ can be used with or without filters.
 .. example::
    A monthly newsletter has been sent out, and 6.9% of the sent emails were bounced.
 
-   .. image:: analyze_metrics/newsletter-metrics.png
-      :align: center
-      :alt: The metrics smart buttons of the newsletter.
+   .. screenshot:: email_marketing-analyze_metrics-newsletter-metrics
+      :menu: Email Marketing ‣ Mailings ‣ (sent mailing)
+      :shows: The smart buttons of the Newsletter mailing with their percentages, used as the basis of the comparison in this section.
+      :data: Mailing 'Newsletter' with about 500 recipients.
+      :module: mass_mailing
+      :notes: English UI, light theme, 1440px width.
 
    To see what these bounced recipients have in common, the records are grouped using a custom group
    targeting :guilabel:`Mailing Lists`, which groups all records by the mailing lists they are on.
@@ -146,18 +152,26 @@ can be used with or without filters.
    00:00:00`, to filter by when the mailing list was last checked. This filter only includes
    recipients that have been created on, or after, July 1st, 2024, in the report.
 
-   .. image:: analyze_metrics/metrics-filter.png
-      :align: center
-      :alt: The custom filter creation form.
+   .. screenshot:: email_marketing-analyze_metrics-metrics-filter
+      :menu: Email Marketing ‣ Mailings ‣ (gear) ‣ Add Custom Filter
+      :shows: The Add Custom Filter dialog with a rule on the Sent Date field and the 'Match all of the following rules' statement.
+      :highlight: The rule line (red frame).
+      :data: One rule: Sent Date is in the last 30 days.
+      :module: mass_mailing
+      :notes: English UI, light theme, 1440px width.
 
    Using these configurations, it is evident that all the recipients with bounced emails were added
    after the list was last checked. Looking closer at the domains, it is evident that each
    recipient has a malformed email domain (i.e: @yaoo.com instead of @yahoo.com), likely due to a
    manual entry error while updating the database.
 
-   .. image:: analyze_metrics/malformed-addresses.png
-      :align: center
-      :alt: A list of bounced email addresses with malformed email domains.
+   .. screenshot:: email_marketing-analyze_metrics-malformed-addresses
+      :menu: Email Marketing ‣ Mailings ‣ (sent mailing) ‣ Bounced
+      :shows: The list of bounced recipients showing malformed email addresses.
+      :highlight: The malformed addresses in the Email column (red frame).
+      :data: Five bounced addresses, two with an invalid domain.
+      :module: mass_mailing
+      :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    View :doc:`../../essentials/search` for more information about making custom groups and
@@ -185,16 +199,24 @@ menu.
    capture readers' attention, the subject line of each mass mailing can be a good place to begin
    looking.
 
-   .. image:: analyze_metrics/mma-opened.png
-      :align: center
-      :alt: A bar chart displaying the different opened rate between two mass mailing campaigns.
+   .. screenshot:: email_marketing-analyze_metrics-mma-opened
+      :menu: Email Marketing ‣ Reporting ‣ Mailing Analysis
+      :shows: A bar chart comparing the opened rate of two mass mailings.
+      :highlight: The two bars (red frame).
+      :data: Mailings 'Newsletter' (opened 25 %) and 'Product launch' (opened 45 %).
+      :module: mass_mailing
+      :notes: English UI, light theme, 1440px width.
 
    Comparing the two subject lines, it is clear the newsletter's subject line was less engaging,
    which may have led to the lower opened rate, when compared to the other mass mailing.
 
-   .. image:: analyze_metrics/mailing-comparison.png
-      :align: center
-      :alt: alt text
+   .. screenshot:: email_marketing-analyze_metrics-mailing-comparison
+      :menu: Email Marketing ‣ Mailings
+      :shows: The Mailings list view showing the two compared mailings side by side with their Subject, Sent, Opened, Clicked and Replied columns.
+      :highlight: The Subject column of the two mailings (red frame).
+      :data: Mailings 'Newsletter' and 'Product launch'.
+      :module: mass_mailing
+      :notes: English UI, light theme, 1440px width.
 
 Deliverability issues
 =====================

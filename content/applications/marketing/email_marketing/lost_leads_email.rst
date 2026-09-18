@@ -24,9 +24,13 @@ different groups for A/B testing, or saved as a template for later.
    - :guilabel:`Lost Reason` *is in* `Not enough stock`
    - and either :guilabel:`Active` *is* `set` or `not set`
 
-   .. image:: lost_leads_email/example.png
-      :align: center
-      :alt: A lost leads reactivation filter list excluding lost reasons like Too Expensive.
+   .. screenshot:: email_marketing-lost_leads_email-example
+      :menu: Email Marketing ‣ Mailings ‣ New
+      :shows: The Recipients filter rules of a lost-leads mailing, excluding certain lost reasons.
+      :highlight: The lost reason rules (red frame).
+      :data: CRM demo leads with the lost reasons 'Too expensive' and 'Out of stock'.
+      :module: mass_mailing, mass_mailing_crm
+      :notes: English UI, light theme, 1440px width.
 
 .. tip::
    As filters are added and removed, pay attention to the :guilabel:`# record(s)` value below the
@@ -35,9 +39,13 @@ different groups for A/B testing, or saved as a template for later.
 
    To view a list of all matching records, click the :guilabel:`# record(s)` text.
 
-   .. image:: lost_leads_email/records.png
-      :align: center
-      :alt: The # record(s) text is located below the list of Recipient filters.
+   .. screenshot:: email_marketing-lost_leads_email-records
+      :menu: Email Marketing ‣ Mailings ‣ New
+      :shows: The record counter shown below the list of Recipients filter rules.
+      :highlight: The record counter (red frame).
+      :data: About 30 matching leads.
+      :module: mass_mailing, mass_mailing_crm
+      :notes: English UI, light theme, 1440px width.
 
 Minimum requirements
 ====================
@@ -96,9 +104,13 @@ selection chosen in the third field.
 In the third field, use the calendar popover window to select dates, and click :guilabel:`Apply` to
 lock in the time range.
 
-.. image:: lost_leads_email/created-on.png
-   :align: center
-   :alt: A custom filter rule setting the time period to be anything before today's date.
+.. screenshot:: email_marketing-lost_leads_email-created-on
+   :menu: Email Marketing ‣ Mailings ‣ New
+   :shows: A filter rule on the Created on field using the <= operator with a date value.
+   :highlight: The Created on rule (red frame).
+   :data: Created on <= 01/01/2026.
+   :module: mass_mailing, mass_mailing_crm
+   :notes: English UI, light theme, 1440px width.
 
 .. important::
    When there is more than one rule applied, make sure the statement at the top of the
@@ -106,9 +118,12 @@ lock in the time range.
    does not, click on the statement, and select :guilabel:`all` from the drop-down menu (as opposed
    to :guilabel:`any`).
 
-   .. image:: lost_leads_email/match-all.png
-      :align: center
-      :alt: The statement at the top of the filters list, with the drop-down menu open.
+   .. screenshot:: email_marketing-lost_leads_email-match-all
+      :menu: Email Marketing ‣ Mailings ‣ New
+      :shows: The 'Match all of the following rules' statement above the rule list with its drop-down menu open on 'any of'.
+      :highlight: The drop-down menu (red frame).
+      :module: mass_mailing, mass_mailing_crm
+      :notes: English UI, light theme, 1440px width.
 
 .. _email_marketing/stage_filter:
 
@@ -131,9 +146,13 @@ rule's parameters.
 When the rule is added in this way, the logic in the third field renders as :code:`OR` (`|`)
 statements.
 
-.. image:: lost_leads_email/stage-is-in.png
-   :align: center
-   :alt: Include multiple Stages in the filtering rule, using the "is in" operator.
+.. screenshot:: email_marketing-lost_leads_email-stage-is-in
+   :menu: Email Marketing ‣ Mailings ‣ New
+   :shows: A single filter rule on Stage using the 'is not in' operator with several stages selected.
+   :highlight: The operator and value of the Stage rule (red frame).
+   :data: Stages 'New', 'Qualified' and 'Won' selected.
+   :module: mass_mailing, mass_mailing_crm
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    Another way to add *Stage* rules, is to do so on a one-rule-per-row basis using the
@@ -141,9 +160,12 @@ statements.
    defining characters in each stage name. This method, however, only allows for one selection at a
    time, which can be useful for quickly turning on/off filters in the :guilabel:`Search...` bar.
 
-   .. image:: lost_leads_email/stages.png
-      :align: center
-      :alt: Three filter rules requiring that the Stage does not contain New, Qualified, or Won.
+   .. screenshot:: email_marketing-lost_leads_email-stages
+      :menu: Email Marketing ‣ Mailings ‣ New
+      :shows: Three separate filter rules requiring that Stage does not contain New, Qualified or Won.
+      :highlight: The three Stage rules (red frame).
+      :module: mass_mailing, mass_mailing_crm
+      :notes: English UI, light theme, 1440px width.
 
 .. _email_marketing/lost_reason_filter:
 
@@ -165,9 +187,13 @@ lost reasons, as needed, where each lost reason occupies one rule row at a time.
 For more information, refer to the section below outlining how to :ref:`select appropriate lost
 reasons <email_marketing/select_lost_reasons>`.
 
-.. image:: lost_leads_email/reasons.png
-   :align: center
-   :alt: A list of filter rules that exclude all lost reasons other than the desired reason.
+.. screenshot:: email_marketing-lost_leads_email-reasons
+   :menu: Email Marketing ‣ Mailings ‣ New
+   :shows: A group of filter rules that exclude every lost reason except the targeted one.
+   :highlight: The lost reason rules (red frame).
+   :data: Lost reasons 'Too expensive', 'Out of stock', 'Not enough stock'.
+   :module: mass_mailing, mass_mailing_crm
+   :notes: English UI, light theme, 1440px width.
 
 .. _email_marketing/active_filter:
 
@@ -193,9 +219,12 @@ For the first field of the bottom rule of the branch, select :guilabel:`Active` 
 menu again. However, this time, select :guilabel:`is not` from the operator drop-down menu in the
 second field. The rule should then read: :guilabel:`Active` *is not* `set`.
 
-.. image:: lost_leads_email/active.png
-   :align: center
-   :alt: A pair of Match Any Of filter rules that include both active and inactive leads.
+.. screenshot:: email_marketing-lost_leads_email-active
+   :menu: Email Marketing ‣ Mailings ‣ New
+   :shows: A pair of 'any of' filter rules on the Active field, so that both active and archived (lost) leads are included.
+   :highlight: The two Active rules and the 'any of' statement (red frame).
+   :module: mass_mailing, mass_mailing_crm
+   :notes: English UI, light theme, 1440px width.
 
 Add body content
 ================
@@ -209,9 +238,13 @@ using any of the premade stylized templates, or choose between the :guilabel:`Pl
    To save the set of filters for later use, click :guilabel:`Save as Favorite Filter 💾 (floppy
    disk)`, enter a name (such as `Lost Leads`), and click :guilabel:`Add`.
 
-   .. image:: lost_leads_email/favorite-filter.png
-      :align: center
-      :alt: The Save as Favorite Filter pop-up can save the lost leads criteria for later.
+   .. screenshot:: email_marketing-lost_leads_email-favorite-filter
+      :menu: Email Marketing ‣ Mailings ‣ New
+      :shows: The Save as Favorite Filter pop-up window with a name entered for the lost-leads criteria.
+      :highlight: The name field (red frame).
+      :data: Filter name 'Lost leads'.
+      :module: mass_mailing, mass_mailing_crm
+      :notes: English UI, light theme, 1440px width.
 
 Send or schedule
 ================
@@ -232,9 +265,13 @@ Once all the components of the email campaign are complete, either:
    :guilabel:`Allow A/B Testing`. Then, adjust the parameters as needed, and click :guilabel:`Create
    an Alternative Version`.
 
-   .. image:: lost_leads_email/ab-testing.png
-      :align: center
-      :alt: The A/B Tests tab with the Allow A/B Testing box checked to create an alternate version.
+   .. screenshot:: email_marketing-lost_leads_email-ab-testing
+      :menu: Email Marketing ‣ Mailings ‣ New ‣ A/B Tests tab
+      :shows: The A/B Tests tab with Allow A/B Testing enabled, the percentage of recipients and the winner selection criteria.
+      :highlight: The Allow A/B Testing checkbox (red frame).
+      :data: 20 % of recipients, winner selected on highest open rate.
+      :module: mass_mailing, mass_mailing_crm
+      :notes: English UI, light theme, 1440px width.
 
 .. _email_marketing/select_lost_reasons:
 
@@ -267,16 +304,22 @@ the relevant one(s).
    If the email advertises a selection of previously-limited merchandise that is now back in stock,
    it makes sense to target leads with the lost reason: *not enough stock*.
 
-   .. image:: lost_leads_email/out-of-stock.png
-      :align: center
-      :alt: A list of filter rules that exclude all lost reasons except for Out of Stock.
+   .. screenshot:: email_marketing-lost_leads_email-out-of-stock
+      :menu: Email Marketing ‣ Mailings ‣ New
+      :shows: A set of filter rules that exclude every lost reason except 'Out of stock'.
+      :highlight: The lost reason rules (red frame).
+      :module: mass_mailing, mass_mailing_crm
+      :notes: English UI, light theme, 1440px width.
 
    If the email advertises a price reduction, it makes sense to target leads with the lost reason:
    *too expensive*.
 
-   .. image:: lost_leads_email/too-expensive.png
-      :align: center
-      :alt: A list of filter rules that exclude all lost reasons except for Too Expensive.
+   .. screenshot:: email_marketing-lost_leads_email-too-expensive
+      :menu: Email Marketing ‣ Mailings ‣ New
+      :shows: A set of filter rules that exclude every lost reason except 'Too expensive'.
+      :highlight: The lost reason rules (red frame).
+      :module: mass_mailing, mass_mailing_crm
+      :notes: English UI, light theme, 1440px width.
 
 Analyze the results
 ===================
@@ -287,9 +330,13 @@ top of the email to analyze the results, and determine follow-up actions.
 Clicking on any of the smart buttons opens a list of records matching that button's specific
 criteria.
 
-.. image:: lost_leads_email/smart-buttons.png
-   :align: center
-   :alt: The Mailing page of a sent email showing the smart buttons along the top of the page.
+.. screenshot:: email_marketing-lost_leads_email-smart-buttons
+   :menu: Email Marketing ‣ Mailings ‣ (sent mailing)
+   :shows: A sent lost-leads mailing with its smart buttons and, next to them, the CRM smart buttons for the leads it revived.
+   :highlight: The smart button row (red frame).
+   :data: Mailing sent to about 30 lost leads.
+   :module: mass_mailing, mass_mailing_crm
+   :notes: English UI, light theme, 1440px width.
 
 The smart buttons include:
 

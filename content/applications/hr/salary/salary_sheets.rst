@@ -47,6 +47,10 @@ Shows the :guilabel:`External Total` returned by the payroll provider, the :guil
 and the :guilabel:`Deviation (%)`, and the :guilabel:`Reconciliation` status. See
 :doc:`reconciliation`.
 
+Lines whose figure differs from the provider's by more than the tolerance carry the
+:icon:`fa-check` :guilabel:`(accept)` and :icon:`fa-ban` :guilabel:`(waive)` buttons at the end of
+the row on the :guilabel:`Lines` tab, so a month can be reconciled without leaving the sheet.
+
 .. screenshot:: hr-salary-sheet-form
    :menu: Salary ‣ Salary ‣ Salary Sheets ‣ (open a sheet)
    :shows: A confirmed salary sheet with the totals in the header, and the Lines tab showing the base salary, a bonus, a deduction and the day counters.

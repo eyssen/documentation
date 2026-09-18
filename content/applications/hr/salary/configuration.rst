@@ -112,10 +112,37 @@ Two settings connect :doc:`Time Off <../time_off>` to the salary sheet. Open a t
 Company settings
 ================
 
-The reconciliation defaults are kept on the company record: the :guilabel:`Payroll Mode` and
-:guilabel:`Payroll Provider`, the default :guilabel:`Deviation Tolerance (Amount)` and
-:guilabel:`Deviation Tolerance (%)` used when a component sets none, and
-:guilabel:`Closing Requires No Blocking Deviation`, which is enabled by default.
+The defaults that apply to the whole company are set in :menuselection:`Salary app -->
+Configuration --> Settings`, which opens the :guilabel:`Salary` section of the general settings.
+
+:guilabel:`Payroll Calculation`
+
+- :guilabel:`Payroll Mode`: where the payroll calculation itself happens —
+  :guilabel:`External Provider` or :guilabel:`Internal`. The application never calculates payroll;
+  the mode only sets the default of new :doc:`salary periods <salary_periods>`.
+- :guilabel:`Payroll Provider`: the name of the external provider, shown when the mode is
+  :guilabel:`External Provider`.
+
+:guilabel:`Reconciliation`
+
+- :guilabel:`Deviation Tolerance`: the difference from the external payroll figures that is still
+  accepted, :guilabel:`in amount` and :guilabel:`in %`. A salary component that sets a tolerance of
+  its own overrides these.
+- :guilabel:`Closing Requires No Blocking Deviation`: refuse to close a salary period while any of
+  its sheets still carries a blocking deviation. Enabled by default.
+
+.. screenshot:: hr-salary-settings
+   :menu: Salary ‣ Configuration ‣ Settings
+   :shows: The Salary section of the settings with the Payroll Calculation and Reconciliation blocks, the payroll mode and provider, the two tolerance fields and the closing rule.
+   :highlight: The Deviation Tolerance fields (red frame).
+   :data: Mode "External Provider", provider "Bérszámfejtő Kft.", tolerance 100 HUF and 0.5%.
+   :module: hr_salary_sheet
+   :notes: English UI, light theme, 1440px width.
+
+.. note::
+   These settings are per company and are only visible to users with the
+   :guilabel:`Salary Manager` right; the :guilabel:`Settings` menu itself needs administrator
+   rights.
 
 .. seealso::
    - :doc:`hungary`

@@ -50,7 +50,7 @@ Types`, in the legally fixed order of application. Each type carries its
 :guilabel:`Requires Dependants`.
 
 Record the reliefs an employee actually claims on the employee form, in the
-:guilabel:`Dependants & Emergency` tab:
+:guilabel:`Tax Reliefs` tab:
 
 - :guilabel:`Relief Type`: the statutory relief claimed.
 - :guilabel:`Monthly Amount`: the monthly amount of the relief.
@@ -63,11 +63,11 @@ The :guilabel:`Status` of a claim is :guilabel:`Future`, :guilabel:`Active`, or
 :guilabel:`Expired`, derived from its validity dates.
 
 .. screenshot:: hr-salary-hu-tax-reliefs
-   :menu: Employees ‣ Employees ‣ (open an employee) ‣ Dependants & Emergency
-   :shows: The Dependants & Emergency tab with the dependants list and, below it, the Tax Reliefs list showing a family relief claim with its validity dates and status.
-   :highlight: The Tax Reliefs list (red frame).
-   :data: Employee "Anita Kovács" with two dependants and a family relief valid from 2026-01-01, status Active.
-   :module: l10n_hu_hr, hr_employee_extra
+   :menu: Employees ‣ Employees ‣ (open an employee) ‣ Tax Reliefs
+   :shows: The Tax Reliefs tab listing a family relief claim with its relief type, monthly amount, validity dates, the dependants it is based on and its status.
+   :highlight: The Dependants column and the Status column (red frame).
+   :data: Employee "Anita Kovács" with a family relief valid from 2026-01-01 based on two dependants, status Active.
+   :module: l10n_hu_hr
    :notes: English UI, light theme, 1440px width. Use invented personal data.
 
 Employment state

@@ -71,15 +71,26 @@ Once external amounts are posted, every sheet line compares its own amount with 
   :guilabel:`Not Imported`, or exists :guilabel:`Only External` — a figure the provider reports that
   has no counterpart in Odoo.
 
-Every deviating line starts with the :guilabel:`Deviation Status` :guilabel:`Open`. Open the line
-from :menuselection:`Salary app --> Reporting --> Salary Analysis` and set the status in the
-:guilabel:`Reconciliation` group:
+Every deviating line starts with the :guilabel:`Deviation Status` :guilabel:`Open`, and the lines
+that are waiting for a decision carry two buttons — on the :guilabel:`Lines` tab of the
+:doc:`salary sheet <salary_sheets>` and in :menuselection:`Salary app --> Reporting --> Salary
+Analysis`:
 
-- :guilabel:`Accepted`: the provider's figure is the correct one.
-- :guilabel:`Waived`: the difference is known and does not need to be followed up.
+- :icon:`fa-check` :guilabel:`(Accept the external figure)`: the provider's figure is the correct
+  one, and the status becomes :guilabel:`Accepted`.
+- :icon:`fa-ban` :guilabel:`(Waive the deviation)`: the difference is known and does not need to be
+  followed up; the status becomes :guilabel:`Waived`.
 
-Enter a :guilabel:`Deviation Note` explaining the decision; the handling user is recorded in
-:guilabel:`Deviation Handled By`.
+A line whose deviation stays inside the tolerance shows no buttons, so what is left on screen is
+what genuinely needs a decision. Use :icon:`fa-undo` :guilabel:`(Reopen the deviation)` to put a
+decision back to :guilabel:`Open`.
+
+Open the line itself to enter a :guilabel:`Deviation Note` explaining the decision; the handling
+user is recorded in :guilabel:`Deviation Handled By`.
+
+.. important::
+   A :guilabel:`Blocking` deviation may only be waived by a user with the
+   :guilabel:`Salary Approver` right.
 
 The sheet's :guilabel:`Reconciliation` status summarizes the result:
 :guilabel:`Not Imported`, :guilabel:`Matched`, :guilabel:`Deviation`, or :guilabel:`Waived`. The
@@ -88,8 +99,8 @@ deviation cannot be closed.
 
 .. screenshot:: hr-salary-reconciliation-deviations
    :menu: Salary ‣ Reporting ‣ Salary Analysis
-   :shows: The salary line list filtered to lines with a deviation, showing Employee, Component, Amount, External Amount, Deviation and the deviation status.
-   :highlight: The Deviation column and the deviation status of a blocking line (red frame).
+   :shows: The salary line list filtered to lines with a deviation, showing Employee, Component, Amount, External Amount, Deviation, the deviation status and the accept, waive and reopen buttons at the end of the row.
+   :highlight: The accept and waive buttons on an open deviation (red frame).
    :data: Period "2026-03"; two deviating lines, one accepted and one still open.
    :module: hr_salary_sheet
    :notes: English UI, light theme, 1440px width.

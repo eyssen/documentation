@@ -596,6 +596,11 @@ Click :guilabel:`Add a line` in the :guilabel:`Emergency Contacts` list and fill
    This tab comes from the *Employee Extra Personal Data* (`hr_employee_extra`) module, and is only
    visible to users with the :guilabel:`Employee Manager` access right.
 
+.. tip::
+   With the Hungarian localization installed, the personal income tax reliefs claimed on these
+   dependants are recorded on the next tab. See :ref:`Personal income tax reliefs
+   <salary/hu/tax-reliefs>`.
+
 .. _employees/hr-settings:
 
 Settings tab

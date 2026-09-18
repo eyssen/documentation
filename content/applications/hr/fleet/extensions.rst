@@ -57,16 +57,18 @@ that the parts and tyres held for a vehicle are visible in the **Inventory** app
 Configure it in :menuselection:`Fleet app --> Configuration --> Settings`, in the
 :guilabel:`Stock Management` block:
 
-- :guilabel:`Stocking Method`: :guilabel:`Location` creates one internal stock location per vehicle.
+- :guilabel:`Stocking Method`: :guilabel:`Location` creates one internal stock location per
+  vehicle.
 - :guilabel:`Stocking Location`: the parent location the per-vehicle locations are created under.
+  This field is **required**.
 
 Once configured, the :guilabel:`Stock` tab of a vehicle shows its :guilabel:`Stock Location`. The
 location is named after the licence plate and the model, and is renamed automatically when either
 changes.
 
-.. important::
-   Only the :guilabel:`Location` stocking method is implemented. Selecting :guilabel:`Warehouse`
-   raises an error when a vehicle is saved.
+.. note::
+   As long as the stocking location is not set, no per-vehicle location is created and the
+   :guilabel:`Stock Location` of the existing vehicles is left as it is.
 
 .. _fleet/parts:
 

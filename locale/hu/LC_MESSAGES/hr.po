@@ -2150,83 +2150,83 @@ msgstr ":guilabel:`Work Permit Expiration Date`: a naptárválasztó segítség�
 msgid ":guilabel:`Work Permit`: click :guilabel:`Upload your file`, then navigate to the work permit file in the file explorer, and click :guilabel:`Select` to add the permit."
 msgstr ":guilabel:`Work Permit`: kattintson a :guilabel:`Fájl feltöltése` gombra, majd navigáljon a munkavállalási engedély fájljához a fájlkezelőben, és kattintson a :guilabel:`Kiválasztás` gombra az engedély hozzáadásához."
 
-#: ../../content/applications/hr/employees/new_employee.rst:602
+#: ../../content/applications/hr/employees/new_employee.rst:607
 msgid "Settings tab"
 msgstr "Beállítások lap"
 
-#: ../../content/applications/hr/employees/new_employee.rst:604
+#: ../../content/applications/hr/employees/new_employee.rst:609
 msgid "This tab provides various fields for different applications within the database. Depending on what applications are installed, different fields may appear in this tab."
 msgstr "Ez a lap különböző mezőket tartalmaz az adatbázison belüli különböző alkalmazásokhoz. A telepített alkalmazásoktól függően ezen a lapon eltérő mezők jelenhetnek meg."
 
-#: ../../content/applications/hr/employees/new_employee.rst:608
+#: ../../content/applications/hr/employees/new_employee.rst:613
 msgid "STATUS"
 msgstr "ÁLLAPOT"
 
-#: ../../content/applications/hr/employees/new_employee.rst:610
+#: ../../content/applications/hr/employees/new_employee.rst:615
 msgid ":guilabel:`Employee Type`: using the drop-down menu, select the *type* of employee. The default options are :guilabel:`Employee`, :guilabel:`Worker`, :guilabel:`Student`, :guilabel:`Trainee`, :guilabel:`Contractor`, and :guilabel:`Freelancer`."
 msgstr ":guilabel:`Alkalmazott típusa`: a legördülő menü segítségével válassza ki az alkalmazott *típusát*. Az alapértelmezett lehetőségek: :guilabel:`Alkalmazott`, :guilabel:`Munkás`, :guilabel:`Diák`, :guilabel:`Gyakornok`, :guilabel:`Vállalkozó` és :guilabel:`Szabadúszó`."
 
-#: ../../content/applications/hr/employees/new_employee.rst:613
+#: ../../content/applications/hr/employees/new_employee.rst:618
 msgid ":guilabel:`Related User`: using the drop-down menu, select a user in the database to link to this employee."
 msgstr ":guilabel:`Kapcsolódó felhasználó`: a legördülő menü segítségével válasszon ki egy felhasználót az adatbázisban, akit ehhez az alkalmazotthoz szeretne kapcsolni."
 
-#: ../../content/applications/hr/employees/new_employee.rst:617
+#: ../../content/applications/hr/employees/new_employee.rst:622
 msgid "Employees do **not** need to be users of the database."
 msgstr "Az alkalmazottaknak **nem** kell az adatbázis felhasználóinak lenniük."
 
-#: ../../content/applications/hr/employees/new_employee.rst:619
+#: ../../content/applications/hr/employees/new_employee.rst:624
 msgid "*Employees* do **not** count towards the Odoo subscription billing, while *Users* **do** count towards billing. If the new employee should also be a user, the user **must** be created."
 msgstr "Az *Alkalmazottak* **nem** számítanak bele az Odoo előfizetési díjszámlázásba, míg a *Felhasználók* **beleszámítanak** a számlázásba. Ha az új alkalmazottnak felhasználónak is kell lennie, a felhasználót **kötelezően** létre kell hozni."
 
-#: ../../content/applications/hr/employees/new_employee.rst:622
+#: ../../content/applications/hr/employees/new_employee.rst:627
 msgid "After the employee is created, click :guilabel:`Create User` at the end of the :guilabel:`Related User` line. A :guilabel:`Create User` form appears."
 msgstr "Az alkalmazott létrehozása után kattintson a :guilabel:`Felhasználó létrehozása` gombra a :guilabel:`Kapcsolódó felhasználó` sor végén. Megjelenik egy :guilabel:`Felhasználó létrehozása` űrlap."
 
-#: ../../content/applications/hr/employees/new_employee.rst:625
+#: ../../content/applications/hr/employees/new_employee.rst:630
 msgid "The employee name populates the :guilabel:`Name` field by default. If the :guilabel:`Email Address`, :guilabel:`Phone`, :guilabel:`Mobile`, and :guilabel:`photo` are populated on the employee form, the corresponding fields are auto-populated on the :guilabel:`Create User` form."
 msgstr "Az alkalmazott neve alapértelmezés szerint kitölti a :guilabel:`Név` mezőt. Ha az alkalmazott űrlapon az :guilabel:`E-mail cím`, a :guilabel:`Telefon`, a :guilabel:`Mobil` és a :guilabel:`fénykép` mezők ki vannak töltve, a :guilabel:`Felhasználó létrehozása` űrlap megfelelő mezői automatikusan kitöltésre kerülnek."
 
-#: ../../content/applications/hr/employees/new_employee.rst:629
+#: ../../content/applications/hr/employees/new_employee.rst:634
 msgid "Once the form is completed, click the :guilabel:`Save` button. The user is created, and populates the :guilabel:`Related User` field."
 msgstr "Ha az űrlap kitöltése befejeződött, kattintson a :guilabel:`Mentés` gombra. A felhasználó létrejön, és kitölti a :guilabel:`Kapcsolódó felhasználó` mezőt."
 
-#: ../../content/applications/hr/employees/new_employee.rst:632
+#: ../../content/applications/hr/employees/new_employee.rst:637
 msgid "Users can also be created manually. For more information on how to manually add a user, refer to the :doc:`../../general/users/` document."
 msgstr "A felhasználók manuálisan is létrehozhatók. A felhasználók manuális hozzáadásával kapcsolatos további információkért tekintse meg a :doc:`../../general/users/` dokumentumot."
 
-#: ../../content/applications/hr/employees/new_employee.rst:636
+#: ../../content/applications/hr/employees/new_employee.rst:641
 msgid "APPLICATION SETTINGS"
 msgstr "ALKALMAZÁSBEÁLLÍTÁSOK"
 
-#: ../../content/applications/hr/employees/new_employee.rst:638
+#: ../../content/applications/hr/employees/new_employee.rst:643
 msgid "This section affects the **Fleet** and **Manufacturing** apps. Enter the following information in this section."
 msgstr "Ez a szakasz a **Fleet** és a **Manufacturing** alkalmazásokat érinti. Adja meg a következő információkat ebben a szakaszban."
 
-#: ../../content/applications/hr/employees/new_employee.rst:641
+#: ../../content/applications/hr/employees/new_employee.rst:646
 msgid ":guilabel:`Hourly Cost`: enter the hourly cost for the employee, in a XX.XX format. This cost is factored in when the employee is working at a :doc:`work center <../../inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers>`."
 msgstr ":guilabel:`Óradíj`: adja meg az alkalmazott óradíját XX.XX formátumban. Ez a költség akkor kerül figyelembevételre, amikor az alkalmazott egy :doc:`munkaközponton <../../inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers>` dolgozik."
 
-#: ../../content/applications/hr/employees/new_employee.rst:646
+#: ../../content/applications/hr/employees/new_employee.rst:651
 msgid "Manufacturing costs are added to the costs for producing a product, if the value of the manufactured product is **not** a fixed amount. This cost does **not** affect the **Payroll** application."
 msgstr "A gyártási költségek hozzáadódnak a termék előállítási költségeihez, ha a gyártott termék értéke **nem** fix összeg. Ez a költség **nem** érinti a **Payroll** alkalmazást."
 
-#: ../../content/applications/hr/employees/new_employee.rst:650
+#: ../../content/applications/hr/employees/new_employee.rst:655
 msgid ":guilabel:`Fleet Mobility Card`: if applicable, enter the :guilabel:`Fleet Mobility Card` number"
 msgstr ":guilabel:`Fleet mobilitási kártya`: ha alkalmazható, adja meg a :guilabel:`Fleet mobilitási kártya` számát"
 
-#: ../../content/applications/hr/employees/new_employee.rst:653
+#: ../../content/applications/hr/employees/new_employee.rst:658
 msgid "ATTENDANCE/POINT OF SALE"
 msgstr "JELENLÉT/ÉRTÉKESÍTÉSI PONT"
 
-#: ../../content/applications/hr/employees/new_employee.rst:655
+#: ../../content/applications/hr/employees/new_employee.rst:660
 msgid "This section determines how employees sign in to either the **Attendances** or **Point Of Sale** apps, and only appear if either of these apps is installed."
 msgstr "Ez a szakasz határozza meg, hogy az alkalmazottak hogyan jelentkeznek be az **Attendances** vagy a **Point Of Sale** alkalmazásba, és csak akkor jelenik meg, ha valamelyik alkalmazás telepítve van."
 
-#: ../../content/applications/hr/employees/new_employee.rst:658
+#: ../../content/applications/hr/employees/new_employee.rst:663
 msgid ":guilabel:`PIN Code`: enter the employee's pin number in this field. This code is used to sign in and out of **Attendances** app kiosks, and a :abbr:`POS (Point Of Sale)` system."
 msgstr ":guilabel:`PIN-kód`: adja meg az alkalmazott PIN-számát ebben a mezőben. Ez a kód az **Attendances** alkalmazás kioszkjain való be- és kijelentkezéshez, valamint a :abbr:`POS (Point Of Sale)` rendszerben való belépéshez használatos."
 
-#: ../../content/applications/hr/employees/new_employee.rst:660
+#: ../../content/applications/hr/employees/new_employee.rst:665
 msgid ":guilabel:`Badge ID`: click :guilabel:`Generate` at the end of the :guilabel:`Badge ID` line to create a badge number. Once generated, the badge number populates the :guilabel:`Badge ID` field, and :guilabel:`Generate` changes to :guilabel:`Print Badge`. Click :guilabel:`Print Badge` to create a PDF file of the employee's badge. The badge can be printed and used to log into a :abbr:`POS (point of sale)` system or :ref:`check-in <attendances/kiosk-mode-entry>` on an **Attendances** app kiosk."
 msgstr ":guilabel:`Jelvényazonosító`: kattintson a :guilabel:`Generálás` gombra a :guilabel:`Jelvényazonosító` sor végén a jelvényszám létrehozásához. A generálás után a jelvényszám kitölti a :guilabel:`Jelvényazonosító` mezőt, és a :guilabel:`Generálás` :guilabel:`Jelvény nyomtatása` lehetőségre változik. A :guilabel:`Jelvény nyomtatása` gombra kattintva PDF-fájlt hozhat létre az alkalmazott jelvényéről. A jelvény kinyomtatható és felhasználható :abbr:`POS (point of sale)` rendszerbe való belépéshez, vagy az **Attendances** alkalmazás kioszkján való :ref:`bejelentkezéshez <attendances/kiosk-mode-entry>`."
 
@@ -3610,7 +3610,7 @@ msgstr ":guilabel:`Stage`: a szolgáltatás vagy javítás állapota. A lehetsé
 msgid "At the bottom of the :guilabel:`Cost` column, the total cost of all services and repairs are listed."
 msgstr "A :guilabel:`Cost` oszlop alján az összes szolgáltatás és javítás összesített költsége látható."
 
-#: ../../content/applications/hr/performance/reporting.rst:3 ../../content/applications/hr/salary/reconciliation.rst:98 ../../content/applications/hr/time_off/reporting.rst:3
+#: ../../content/applications/hr/performance/reporting.rst:3 ../../content/applications/hr/salary/reconciliation.rst:109 ../../content/applications/hr/time_off/reporting.rst:3
 msgid "Reporting"
 msgstr "Jelentések"
 
@@ -10954,67 +10954,59 @@ msgstr "A beállítás a :menuselection:`Flotta alkalmazás --> Konfiguráció -
 msgid ":guilabel:`Stocking Method`: :guilabel:`Location` creates one internal stock location per vehicle."
 msgstr ":guilabel:`Készletezési mód`: a :guilabel:`Készlethely` beállítás járművenként egy belső készlethelyet hoz létre."
 
-#: ../../content/applications/hr/fleet/extensions.rst:61
-msgid ":guilabel:`Stocking Location`: the parent location the per-vehicle locations are created under."
-msgstr ":guilabel:`Készletezési hely`: az a szülő készlethely, amely alatt a járművenkénti helyek létrejönnek."
-
-#: ../../content/applications/hr/fleet/extensions.rst:63
+#: ../../content/applications/hr/fleet/extensions.rst:65
 msgid "Once configured, the :guilabel:`Stock` tab of a vehicle shows its :guilabel:`Stock Location`. The location is named after the licence plate and the model, and is renamed automatically when either changes."
 msgstr "A beállítás után a jármű :guilabel:`Készlet` fülén megjelenik a :guilabel:`Készlethely`. A hely neve a rendszámból és a modellből áll össze, és automatikusan átnevezésre kerül, ha ezek bármelyike megváltozik."
 
-#: ../../content/applications/hr/fleet/extensions.rst:68
-msgid "Only the :guilabel:`Location` stocking method is implemented. Selecting :guilabel:`Warehouse` raises an error when a vehicle is saved."
-msgstr "Csak a :guilabel:`Készlethely` készletezési mód van megvalósítva. A :guilabel:`Raktár` kiválasztása esetén a jármű mentésekor hibaüzenet jelenik meg."
-
-#: ../../content/applications/hr/fleet/extensions.rst:74
+#: ../../content/applications/hr/fleet/extensions.rst:76
 msgid "Spare parts and tyres"
 msgstr "Pótalkatrészek és gumiabroncsok"
 
-#: ../../content/applications/hr/fleet/extensions.rst:76
+#: ../../content/applications/hr/fleet/extensions.rst:78
 msgid "The *Fleet Parts Management* (`fleet_parts`) module identifies which products are fleet parts and which vehicle each individual part is currently fitted to."
 msgstr "A *Fleet Parts Management* (`fleet_parts`) modul jelöli, mely termékek számítanak flottaalkatrésznek, és azt is, hogy az egyes alkatrészek éppen melyik járműbe vannak beszerelve."
 
-#: ../../content/applications/hr/fleet/extensions.rst:80
+#: ../../content/applications/hr/fleet/extensions.rst:82
 msgid "This module requires the *Fleet Stock Management* and *Fleet More Features* modules, and the **Inventory** application with lot and serial number tracking."
 msgstr "Ehhez a modulhoz szükség van a *Fleet Stock Management* és a *Fleet More Features* modulra, valamint a **Készlet** alkalmazásra, bekapcsolt tétel- és sorozatszám-követéssel."
 
-#: ../../content/applications/hr/fleet/extensions.rst:84
+#: ../../content/applications/hr/fleet/extensions.rst:86
 msgid "Mark a product as a fleet part"
 msgstr "Termék megjelölése flottaalkatrészként"
 
-#: ../../content/applications/hr/fleet/extensions.rst:86
+#: ../../content/applications/hr/fleet/extensions.rst:88
 msgid "Open a storable product in :menuselection:`Inventory app --> Products --> Products` and tick :guilabel:`Fleet Parts`. Then select the :guilabel:`Fleet Parts Type`:"
 msgstr "Nyisson meg egy raktározható terméket a :menuselection:`Készlet alkalmazás --> Termékek --> Termékek` menüpontban, és jelölje be a :guilabel:`Flottaalkatrész` jelölőnégyzetet. Ezután válassza ki a :guilabel:`Flottaalkatrész típusát`:"
 
-#: ../../content/applications/hr/fleet/extensions.rst:89
+#: ../../content/applications/hr/fleet/extensions.rst:91
 msgid ":guilabel:`Tire`: a :guilabel:`Season` (:guilabel:`Summer`, :guilabel:`Summer (M+S)`, :guilabel:`Winter`, :guilabel:`Winter (M+S)`, :guilabel:`Winter (Studded)`, :guilabel:`All-Season`, :guilabel:`Space-saver Spare Wheel` or :guilabel:`Other`) and a :guilabel:`Wheel Size` can be entered."
 msgstr ":guilabel:`Gumiabroncs`: megadható hozzá :guilabel:`Évszak` (:guilabel:`Nyári`, :guilabel:`Nyári (M+S)`, :guilabel:`Téli`, :guilabel:`Téli (M+S)`, :guilabel:`Téli (szöges)`, :guilabel:`Négyévszakos`, :guilabel:`Szükségpótkerék` vagy :guilabel:`Egyéb`) és :guilabel:`Keréktárcsa-méret`."
 
-#: ../../content/applications/hr/fleet/extensions.rst:93
+#: ../../content/applications/hr/fleet/extensions.rst:95
 msgid ":guilabel:`Rim`: a :guilabel:`Material` (:guilabel:`Steel`, :guilabel:`Aluminium` or :guilabel:`Other`), a :guilabel:`Wheel Size`, a :guilabel:`Bolt Pattern`, a :guilabel:`Wheel Hub Diameter` and a :guilabel:`TPMS Sensor` indication."
 msgstr ":guilabel:`Keréktárcsa`: megadható hozzá :guilabel:`Anyag` (:guilabel:`Acél`, :guilabel:`Alumínium` vagy :guilabel:`Egyéb`), :guilabel:`Keréktárcsa-méret`, :guilabel:`Osztókör`, :guilabel:`Agyfurat átmérője` és :guilabel:`TPMS-érzékelő` jelölés."
 
-#: ../../content/applications/hr/fleet/extensions.rst:96
+#: ../../content/applications/hr/fleet/extensions.rst:98
 msgid ":guilabel:`Other`: any other part."
 msgstr ":guilabel:`Egyéb`: bármilyen más alkatrész."
 
-#: ../../content/applications/hr/fleet/extensions.rst:107
+#: ../../content/applications/hr/fleet/extensions.rst:109
 msgid "Assign a part to a vehicle"
 msgstr "Alkatrész hozzárendelése járműhöz"
 
-#: ../../content/applications/hr/fleet/extensions.rst:109
+#: ../../content/applications/hr/fleet/extensions.rst:111
 msgid "Each physical part is a lot or serial number. Open it in :menuselection:`Inventory app --> Products --> Lots/Serial Numbers` and set the :guilabel:`Vehicle` it is fitted to. For tyres, record the :guilabel:`DOT` code and the :guilabel:`Quality` as well."
 msgstr "Minden fizikai alkatrész egy tétel- vagy sorozatszám. Nyissa meg a :menuselection:`Készlet alkalmazás --> Termékek --> Tétel-/sorozatszámok` menüpontban, és állítsa be a :guilabel:`Jármű` mezőt, amelybe be van szerelve. Gumiabroncsoknál rögzítse a :guilabel:`DOT` kódot és a :guilabel:`Minőséget` is."
 
-#: ../../content/applications/hr/fleet/extensions.rst:113
+#: ../../content/applications/hr/fleet/extensions.rst:115
 msgid "The :guilabel:`All Parts` group in the :guilabel:`Stock` tab of a vehicle then lists every part assigned to it, with its location, lot number, product, quantity, DOT code, quality and part type."
 msgstr "A jármű :guilabel:`Készlet` fülén lévő :guilabel:`Összes alkatrész` csoport ezután felsorolja a hozzá rendelt összes alkatrészt, a készlethellyel, a tételszámmal, a termékkel, a mennyiséggel, a DOT-kóddal, a minőséggel és az alkatrésztípussal együtt."
 
-#: ../../content/applications/hr/fleet/extensions.rst:125
+#: ../../content/applications/hr/fleet/extensions.rst:127
 msgid ":doc:`new_vehicle`"
 msgstr ":doc:`new_vehicle`"
 
-#: ../../content/applications/hr/fleet/extensions.rst:126
+#: ../../content/applications/hr/fleet/extensions.rst:128
 msgid ":doc:`service`"
 msgstr ":doc:`service`"
 
@@ -11438,15 +11430,11 @@ msgstr ":guilabel:`Bérelem`: az a bérelem, amely alatt a távollét a bérlapo
 msgid "A time off type with no :guilabel:`Salary Component` does not appear on the salary sheet at all. Check the mapping of every type in use after installing a localization."
 msgstr "A :guilabel:`Bérelem` nélküli szabadságtípus egyáltalán nem jelenik meg a bérlapon. A lokalizáció telepítése után ellenőrizze minden használt típus megfeleltetését."
 
-#: ../../content/applications/hr/salary/configuration.rst:115
-msgid "The reconciliation defaults are kept on the company record: the :guilabel:`Payroll Mode` and :guilabel:`Payroll Provider`, the default :guilabel:`Deviation Tolerance (Amount)` and :guilabel:`Deviation Tolerance (%)` used when a component sets none, and :guilabel:`Closing Requires No Blocking Deviation`, which is enabled by default."
-msgstr "Az egyeztetés alapértelmezéseit a vállalat adatlapja tartalmazza: a :guilabel:`Bérszámfejtési mód` és a :guilabel:`Bérszámfejtő szolgáltató`, az alapértelmezett :guilabel:`Eltérési tűréshatár (összeg)` és :guilabel:`Eltérési tűréshatár (%)`, amelyet a rendszer akkor használ, ha a bérelem nem ad meg sajátot, valamint a :guilabel:`Lezáráshoz nem lehet blokkoló eltérés` beállítás, amely alapértelmezés szerint be van kapcsolva."
-
-#: ../../content/applications/hr/salary/configuration.rst:121
+#: ../../content/applications/hr/salary/configuration.rst:148
 msgid ":doc:`hungary`"
 msgstr ":doc:`hungary`"
 
-#: ../../content/applications/hr/salary/configuration.rst:122
+#: ../../content/applications/hr/salary/configuration.rst:149
 msgid ":doc:`engagements`"
 msgstr ":doc:`engagements`"
 
@@ -11574,11 +11562,11 @@ msgstr "Szerződések és a megállapodott bér"
 msgid "With **Salary** installed, the :guilabel:`Salary Information` tab of a :doc:`contract <../employees/contracts>` also shows the :guilabel:`Engagement` and the :guilabel:`Salary Term` that apply. If the contract's :guilabel:`Wage` no longer matches the amount of the current term, a :guilabel:`Take the wage from the salary term` button appears for salary managers, which copies the agreed amount onto the contract."
 msgstr "Ha a **Bérek** alkalmazás telepítve van, a :doc:`szerződés <../employees/contracts>` :guilabel:`Bérezési adatok` fülén megjelenik az érvényes :guilabel:`Jogviszony` és :guilabel:`Bérmegállapodás` is. Ha a szerződés :guilabel:`Bére` már nem egyezik az aktuális bérmegállapodás összegével, a bérügyi vezetők számára megjelenik a :guilabel:`Bér átvétele a bérmegállapodásból` gomb, amely a megállapodott összeget a szerződésre másolja."
 
-#: ../../content/applications/hr/salary/engagements.rst:108 ../../content/applications/hr/salary/reconciliation.rst:106 ../../content/applications/hr/salary/salary_sheets.rst:89
+#: ../../content/applications/hr/salary/engagements.rst:108 ../../content/applications/hr/salary/reconciliation.rst:117 ../../content/applications/hr/salary/salary_sheets.rst:93
 msgid ":doc:`salary_periods`"
 msgstr ":doc:`salary_periods`"
 
-#: ../../content/applications/hr/salary/engagements.rst:109 ../../content/applications/hr/salary/hungary.rst:146 ../../content/applications/hr/salary/reconciliation.rst:107
+#: ../../content/applications/hr/salary/engagements.rst:109 ../../content/applications/hr/salary/hungary.rst:146 ../../content/applications/hr/salary/reconciliation.rst:118
 msgid ":doc:`configuration`"
 msgstr ":doc:`configuration`"
 
@@ -11622,10 +11610,6 @@ msgstr "A munkakör alapértelmezett kódját a munkakör :guilabel:`FEOR-08 kó
 msgid "Identifier validation"
 msgstr "Azonosítók ellenőrzése"
 
-#: ../../content/applications/hr/salary/hungary.rst:37
-msgid "The standard :guilabel:`Identification No` and :guilabel:`SSN No` fields of employees and of their :ref:`dependants <employees/hu-dependants>` are validated as the Hungarian tax identification code (*adóazonosító jel*) and social security number (*TAJ*), check digit included. Spaces and dashes are removed automatically, so a value typed with separators is accepted rather than rejected."
-msgstr "A munkavállalók és :ref:`eltartottjaik <employees/dependants-emergency>` szabványos :guilabel:`Adóazonosító jel` és :guilabel:`TAJ-szám` mezőit a rendszer magyar adóazonosító jelként és társadalombiztosítási azonosító jelként (TAJ) ellenőrzi, a CDV ellenőrző számjeggyel együtt. A szóközöket és kötőjeleket automatikusan eltávolítja, így az elválasztójelekkel begépelt érték nem hibát okoz, hanem elfogadásra kerül."
-
 #: ../../content/applications/hr/salary/hungary.rst:45
 msgid "Personal income tax reliefs"
 msgstr "Személyi jövedelemadó-kedvezmények"
@@ -11633,10 +11617,6 @@ msgstr "Személyi jövedelemadó-kedvezmények"
 #: ../../content/applications/hr/salary/hungary.rst:47
 msgid "The statutory relief catalogue is in :menuselection:`Employees app --> Configuration --> Tax Relief Types`, in the legally fixed order of application. Each type carries its :guilabel:`Maximum Duration (Months)`, its :guilabel:`Age Limit`, and whether it :guilabel:`Requires Dependants`."
 msgstr "A jogszabályi kedvezménykatalógus a :menuselection:`Munkavállalók alkalmazás --> Konfiguráció --> Adókedvezmény-típusok` menüpontban található, a törvényben rögzített érvényesítési sorrendben. Minden típushoz tartozik :guilabel:`Maximális időtartam (hónap)`, :guilabel:`Életkori határ`, valamint az, hogy :guilabel:`Eltartottat igényel`-e."
-
-#: ../../content/applications/hr/salary/hungary.rst:52
-msgid "Record the reliefs an employee actually claims on the employee form, in the :guilabel:`Dependants & Emergency` tab:"
-msgstr "A munkavállaló által ténylegesen érvényesített kedvezményeket a munkavállalói űrlap :guilabel:`Eltartottak és vészhelyzet` fülén rögzítse:"
 
 #: ../../content/applications/hr/salary/hungary.rst:55
 msgid ":guilabel:`Relief Type`: the statutory relief claimed."
@@ -11822,27 +11802,11 @@ msgstr "A tűréshatáron kívüli sor a bérelem :guilabel:`Eltérés súlyoss�
 msgid ":guilabel:`External State` says whether the line was :guilabel:`Matched`, is :guilabel:`Not Imported`, or exists :guilabel:`Only External` — a figure the provider reports that has no counterpart in Odoo."
 msgstr "A :guilabel:`Külső állapot` megmutatja, hogy a sor :guilabel:`Párosítva` van-e, :guilabel:`Nincs importálva`, vagy :guilabel:`Csak külső` – olyan adat, amelyet a szolgáltató jelent, de amelynek nincs megfelelője az Odoo-ban."
 
-#: ../../content/applications/hr/salary/reconciliation.rst:74
-msgid "Every deviating line starts with the :guilabel:`Deviation Status` :guilabel:`Open`. Open the line from :menuselection:`Salary app --> Reporting --> Salary Analysis` and set the status in the :guilabel:`Reconciliation` group:"
-msgstr "Minden eltérő sor :guilabel:`Nyitott` :guilabel:`Eltérés állapottal` indul. Nyissa meg a sort a :menuselection:`Bérek alkalmazás --> Kimutatások --> Bérelemzés` menüpontból, és állítsa be az állapotot az :guilabel:`Egyeztetés` csoportban:"
-
-#: ../../content/applications/hr/salary/reconciliation.rst:78
-msgid ":guilabel:`Accepted`: the provider's figure is the correct one."
-msgstr ":guilabel:`Elfogadva`: a szolgáltató adata a helyes."
-
-#: ../../content/applications/hr/salary/reconciliation.rst:79
-msgid ":guilabel:`Waived`: the difference is known and does not need to be followed up."
-msgstr ":guilabel:`Elengedve`: a különbség ismert, és nem igényel további intézkedést."
-
-#: ../../content/applications/hr/salary/reconciliation.rst:81
-msgid "Enter a :guilabel:`Deviation Note` explaining the decision; the handling user is recorded in :guilabel:`Deviation Handled By`."
-msgstr "Adjon meg :guilabel:`Eltérési megjegyzést`, amely megindokolja a döntést; az intézkedő felhasználót a rendszer az :guilabel:`Eltérést kezelte` mezőben rögzíti."
-
-#: ../../content/applications/hr/salary/reconciliation.rst:84
+#: ../../content/applications/hr/salary/reconciliation.rst:95
 msgid "The sheet's :guilabel:`Reconciliation` status summarizes the result: :guilabel:`Not Imported`, :guilabel:`Matched`, :guilabel:`Deviation`, or :guilabel:`Waived`. The period shows the number of :guilabel:`Open Deviations`, and by default a period with a blocking deviation cannot be closed."
 msgstr "A bérlap :guilabel:`Egyeztetés` állapota összegzi az eredményt: :guilabel:`Nincs importálva`, :guilabel:`Párosítva`, :guilabel:`Eltérés` vagy :guilabel:`Elengedve`. Az időszak mutatja a :guilabel:`Nyitott eltérések` számát, és alapértelmezés szerint a blokkoló eltérést tartalmazó időszak nem zárható le."
 
-#: ../../content/applications/hr/salary/reconciliation.rst:100
+#: ../../content/applications/hr/salary/reconciliation.rst:111
 msgid ":menuselection:`Salary app --> Reporting --> Salary Analysis` opens all salary sheet lines, which can be grouped and pivoted by period, employee, component and nature, with the :guilabel:`With a Deviation`, :guilabel:`Open Deviation` and :guilabel:`Only in the External File` filters, in list, pivot and graph view."
 msgstr "A :menuselection:`Bérek alkalmazás --> Kimutatások --> Bérelemzés` menüpont az összes bérlapsort megnyitja, amelyek időszak, munkavállaló, bérelem és jelleg szerint csoportosíthatók és pivotálhatók, a :guilabel:`Eltéréssel`, :guilabel:`Nyitott eltérés` és :guilabel:`Csak a külső fájlban` szűrőkkel, lista, pivot és grafikon nézetben."
 
@@ -11958,7 +11922,7 @@ msgstr "Lezárt időszakot csak a :guilabel:`Bérügyi jóváhagyó` joggal rend
 msgid ":doc:`salary_sheets`"
 msgstr ":doc:`salary_sheets`"
 
-#: ../../content/applications/hr/salary/salary_periods.rst:86 ../../content/applications/hr/salary/salary_sheets.rst:90
+#: ../../content/applications/hr/salary/salary_periods.rst:86 ../../content/applications/hr/salary/salary_sheets.rst:94
 msgid ":doc:`reconciliation`"
 msgstr ":doc:`reconciliation`"
 
@@ -12022,39 +11986,39 @@ msgstr "Egyeztetés fül"
 msgid "Shows the :guilabel:`External Total` returned by the payroll provider, the :guilabel:`Deviation` and the :guilabel:`Deviation (%)`, and the :guilabel:`Reconciliation` status. See :doc:`reconciliation`."
 msgstr "A bérszámfejtő által visszaadott :guilabel:`Külső összeget`, az :guilabel:`Eltérést` és az :guilabel:`Eltérést (%)`, valamint az :guilabel:`Egyeztetés` állapotát mutatja. Lásd: :doc:`reconciliation`."
 
-#: ../../content/applications/hr/salary/salary_sheets.rst:59
+#: ../../content/applications/hr/salary/salary_sheets.rst:63
 msgid "Statuses"
 msgstr "Állapotok"
 
-#: ../../content/applications/hr/salary/salary_sheets.rst:61
+#: ../../content/applications/hr/salary/salary_sheets.rst:65
 msgid ":guilabel:`Draft`: the sheet is being filled in."
 msgstr ":guilabel:`Tervezet`: a bérlap kitöltés alatt áll."
 
-#: ../../content/applications/hr/salary/salary_sheets.rst:62
+#: ../../content/applications/hr/salary/salary_sheets.rst:66
 msgid ":guilabel:`Confirmed`: the figures are ready to be handed over to the payroll provider. Click :guilabel:`Confirm`."
 msgstr ":guilabel:`Megerősítve`: az adatok átadhatók a bérszámfejtőnek. Kattintson a :guilabel:`Megerősítés` gombra."
 
-#: ../../content/applications/hr/salary/salary_sheets.rst:64
+#: ../../content/applications/hr/salary/salary_sheets.rst:68
 msgid ":guilabel:`Closed`: the sheet is final. Sheets are closed together with their period, or individually with :guilabel:`Close`. A closed sheet keeps a snapshot, a hash, and the user and time of closing on the :guilabel:`Closing` tab."
 msgstr ":guilabel:`Lezárt`: a bérlap végleges. A bérlapok az időszakukkal együtt zárulnak le, vagy egyenként a :guilabel:`Lezárás` gombbal. A lezárt bérlap a :guilabel:`Lezárás` fülön megőrzi a pillanatképet, a hasht, valamint a lezárás felhasználóját és időpontját."
 
-#: ../../content/applications/hr/salary/salary_sheets.rst:67
+#: ../../content/applications/hr/salary/salary_sheets.rst:71
 msgid ":guilabel:`Cancelled`: the sheet does not apply, for example because the engagement did not start."
 msgstr ":guilabel:`Törölt`: a bérlap nem érvényes, például mert a jogviszony nem indult el."
 
-#: ../../content/applications/hr/salary/salary_sheets.rst:69
+#: ../../content/applications/hr/salary/salary_sheets.rst:73
 msgid ":guilabel:`Reset to Draft` returns a confirmed sheet to :guilabel:`Draft`. Reopening a *closed* sheet requires the :guilabel:`Salary Approver` right."
 msgstr "A :guilabel:`Visszaállítás tervezetté` gomb a megerősített bérlapot :guilabel:`Tervezet` állapotba viszi vissza. A *lezárt* bérlap újranyitásához :guilabel:`Bérügyi jóváhagyó` jog szükséges."
 
-#: ../../content/applications/hr/salary/salary_sheets.rst:75
+#: ../../content/applications/hr/salary/salary_sheets.rst:79
 msgid "Corrections"
 msgstr "Javítások"
 
-#: ../../content/applications/hr/salary/salary_sheets.rst:77
+#: ../../content/applications/hr/salary/salary_sheets.rst:81
 msgid "A month that has already been reported is not edited. Open the closed sheet and click :guilabel:`Create Correction`: a new sheet of the :guilabel:`Correction` type is created, linked to the original through :guilabel:`Corrected Sheet`, and numbered with a :guilabel:`Correction Sequence`. Enter the difference on the correction sheet and process it with the current period."
 msgstr "A már lejelentett hónapot nem szerkesztjük. Nyissa meg a lezárt bérlapot, és kattintson a :guilabel:`Javítás létrehozása` gombra: létrejön egy :guilabel:`Javítás` típusú új bérlap, amely a :guilabel:`Javított bérlap` mezőn keresztül kapcsolódik az eredetihez, és :guilabel:`Javítási sorszámot` kap. A különbözetet a javító bérlapon rögzítse, és az aktuális időszakkal együtt dolgozza fel."
 
-#: ../../content/applications/hr/salary/salary_sheets.rst:84
+#: ../../content/applications/hr/salary/salary_sheets.rst:88
 msgid "Time off entered or changed after a month is closed does **not** change that month's sheet. The change has to be handled with a correction sheet, which is what keeps the reported figures and the Odoo figures in agreement."
 msgstr "A hónap lezárása után rögzített vagy módosított szabadság **nem** változtatja meg az adott hónap bérlapját. A változást javító bérlappal kell kezelni, és éppen ez tartja összhangban a lejelentett adatokat az Odoo adataival."
 
@@ -12081,6 +12045,113 @@ msgstr ":guilabel:`Kezdő dátum`: a dátum- és időválasztóval válassza ki 
 #: ../../content/applications/hr/time_off.rst:481
 msgid ":guilabel:`End Date`: Using the date and time picker, select the date and time the holiday ends, then click :icon:`fa-check` :guilabel:`Apply`. By default, this field is configured for the current date, and the time is set to the end time for the company (according to the :doc:`working schedules <employees/working_schedules>`). If the user's computer is set to a different time zone, the start time is adjusted accordingly, compared to the company's time zone."
 msgstr ":guilabel:`Záró dátum`: a dátum- és időválasztóval válassza ki az ünnepnap végének dátumát és időpontját, majd kattintson az :icon:`fa-check` :guilabel:`Alkalmaz` gombra. Alapértelmezés szerint ez a mező az aktuális dátumra van beállítva, az időpont pedig a vállalat befejezési időpontja (a :doc:`munkarendek <employees/working_schedules>` alapján). Ha a felhasználó számítógépe más időzónára van állítva, a kezdési időpont ehhez igazodik a vállalat időzónájához képest."
+
+#: ../../content/applications/hr/employees/new_employee.rst:600
+msgid "With the Hungarian localization installed, the personal income tax reliefs claimed on these dependants are recorded on the next tab. See :ref:`Personal income tax reliefs <salary/hu/tax-reliefs>`."
+msgstr "Ha a magyar lokalizáció telepítve van, az ezekre az eltartottakra érvényesített személyi jövedelemadó-kedvezmények a következő fülön szerepelnek. Lásd: :ref:`Személyi jövedelemadó-kedvezmények <salary/hu/tax-reliefs>`."
+
+#: ../../content/applications/hr/fleet/extensions.rst:62
+msgid ":guilabel:`Stocking Location`: the parent location the per-vehicle locations are created under. This field is **required**."
+msgstr ":guilabel:`Készletezési hely`: az a szülő készlethely, amely alatt a járművenkénti helyek létrejönnek. Ez a mező **kötelező**."
+
+#: ../../content/applications/hr/fleet/extensions.rst:70
+msgid "As long as the stocking location is not set, no per-vehicle location is created and the :guilabel:`Stock Location` of the existing vehicles is left as it is."
+msgstr "Amíg a készletezési hely nincs beállítva, a rendszer nem hoz létre járművenkénti helyet, és a meglévő járművek :guilabel:`Készlethelyét` változatlanul hagyja."
+
+#: ../../content/applications/hr/salary/configuration.rst:115
+msgid "The defaults that apply to the whole company are set in :menuselection:`Salary app --> Configuration --> Settings`, which opens the :guilabel:`Salary` section of the general settings."
+msgstr "A teljes vállalatra érvényes alapértelmezéseket a :menuselection:`Bérek alkalmazás --> Konfiguráció --> Beállítások` menüpontban lehet megadni, amely az általános beállítások :guilabel:`Bérek` szakaszát nyitja meg."
+
+#: ../../content/applications/hr/salary/configuration.rst:118
+msgid ":guilabel:`Payroll Calculation`"
+msgstr ":guilabel:`Bérszámfejtés`"
+
+#: ../../content/applications/hr/salary/configuration.rst:120
+msgid ":guilabel:`Payroll Mode`: where the payroll calculation itself happens — :guilabel:`External Provider` or :guilabel:`Internal`. The application never calculates payroll; the mode only sets the default of new :doc:`salary periods <salary_periods>`."
+msgstr ":guilabel:`Bérszámfejtési mód`: hol történik maga a bérszámfejtés – :guilabel:`Külső szolgáltató` vagy :guilabel:`Belső`. Az alkalmazás soha nem számfejt; a mód csak az új :doc:`bérügyi időszakok <salary_periods>` alapértelmezését adja meg."
+
+#: ../../content/applications/hr/salary/configuration.rst:123
+msgid ":guilabel:`Payroll Provider`: the name of the external provider, shown when the mode is :guilabel:`External Provider`."
+msgstr ":guilabel:`Bérszámfejtő szolgáltató`: a külső szolgáltató neve; akkor jelenik meg, ha a mód :guilabel:`Külső szolgáltató`."
+
+#: ../../content/applications/hr/salary/configuration.rst:126
+msgid ":guilabel:`Reconciliation`"
+msgstr ":guilabel:`Egyeztetés`"
+
+#: ../../content/applications/hr/salary/configuration.rst:128
+msgid ":guilabel:`Deviation Tolerance`: the difference from the external payroll figures that is still accepted, :guilabel:`in amount` and :guilabel:`in %`. A salary component that sets a tolerance of its own overrides these."
+msgstr ":guilabel:`Eltérési tűréshatár`: a külső bérszámfejtési adatoktól való, még elfogadott eltérés :guilabel:`összegben` és :guilabel:`százalékban`. Az a bérelem, amely saját tűréshatárt ad meg, felülírja ezeket."
+
+#: ../../content/applications/hr/salary/configuration.rst:131
+msgid ":guilabel:`Closing Requires No Blocking Deviation`: refuse to close a salary period while any of its sheets still carries a blocking deviation. Enabled by default."
+msgstr ":guilabel:`Lezáráshoz nem lehet blokkoló eltérés`: ne engedje lezárni a bérügyi időszakot, amíg bármelyik bérlapján blokkoló eltérés van. Alapértelmezés szerint bekapcsolva."
+
+#: ../../content/applications/hr/salary/configuration.rst:143
+msgid "These settings are per company and are only visible to users with the :guilabel:`Salary Manager` right; the :guilabel:`Settings` menu itself needs administrator rights."
+msgstr "Ezek a beállítások vállalatonként érvényesek, és csak a :guilabel:`Bérügyi vezető` joggal rendelkező felhasználók számára láthatók; magához a :guilabel:`Beállítások` menüponthoz adminisztrátori jog szükséges."
+
+#: ../../content/applications/hr/salary/hungary.rst:37
+msgid "The standard :guilabel:`Identification No` and :guilabel:`SSN No` fields of employees and of their :ref:`dependants <employees/dependants-emergency>` are validated as the Hungarian tax identification code (*adóazonosító jel*) and social security number (*TAJ*), check digit included. Spaces and dashes are removed automatically, so a value typed with separators is accepted rather than rejected."
+msgstr "A munkavállalók és :ref:`eltartottjaik <employees/dependants-emergency>` szabványos :guilabel:`Adóazonosító jel` és :guilabel:`TAJ-szám` mezőit a rendszer magyar adóazonosító jelként és társadalombiztosítási azonosító jelként (TAJ) ellenőrzi, a CDV ellenőrző számjeggyel együtt. A szóközöket és kötőjeleket automatikusan eltávolítja, így az elválasztójelekkel begépelt érték nem hibát okoz, hanem elfogadásra kerül."
+
+#: ../../content/applications/hr/salary/hungary.rst:52
+msgid "Record the reliefs an employee actually claims on the employee form, in the :guilabel:`Tax Reliefs` tab:"
+msgstr "A munkavállaló által ténylegesen érvényesített kedvezményeket a munkavállalói űrlap :guilabel:`Adókedvezmények` fülén rögzítse:"
+
+#: ../../content/applications/hr/salary/reconciliation.rst:74
+msgid "Every deviating line starts with the :guilabel:`Deviation Status` :guilabel:`Open`, and the lines that are waiting for a decision carry two buttons — on the :guilabel:`Lines` tab of the :doc:`salary sheet <salary_sheets>` and in :menuselection:`Salary app --> Reporting --> Salary Analysis`:"
+msgstr "Minden eltérő sor :guilabel:`Nyitott` :guilabel:`Eltérés állapottal` indul, és azokon a sorokon, amelyek döntésre várnak, két gomb jelenik meg – a :doc:`bérlap <salary_sheets>` :guilabel:`Sorok` fülén és a :menuselection:`Bérek alkalmazás --> Kimutatások --> Bérelemzés` menüpontban:"
+
+#: ../../content/applications/hr/salary/reconciliation.rst:79
+msgid ":icon:`fa-check` :guilabel:`(Accept the external figure)`: the provider's figure is the correct one, and the status becomes :guilabel:`Accepted`."
+msgstr ":icon:`fa-check` :guilabel:`(A külső adat elfogadása)`: a szolgáltató adata a helyes, az állapot :guilabel:`Elfogadva` lesz."
+
+#: ../../content/applications/hr/salary/reconciliation.rst:81
+msgid ":icon:`fa-ban` :guilabel:`(Waive the deviation)`: the difference is known and does not need to be followed up; the status becomes :guilabel:`Waived`."
+msgstr ":icon:`fa-ban` :guilabel:`(Az eltérés elengedése)`: a különbség ismert, és nem igényel további intézkedést; az állapot :guilabel:`Elengedve` lesz."
+
+#: ../../content/applications/hr/salary/reconciliation.rst:84
+msgid "A line whose deviation stays inside the tolerance shows no buttons, so what is left on screen is what genuinely needs a decision. Use :icon:`fa-undo` :guilabel:`(Reopen the deviation)` to put a decision back to :guilabel:`Open`."
+msgstr "Azon a soron, amelynek eltérése a tűréshatáron belül marad, nem jelenik meg gomb, így a képernyőn csak az marad, ami valóban döntést igényel. A döntés visszavonásához – azaz az állapot :guilabel:`Nyitott` értékre állításához – használja az :icon:`fa-undo` :guilabel:`(Az eltérés újranyitása)` gombot."
+
+#: ../../content/applications/hr/salary/reconciliation.rst:88
+msgid "Open the line itself to enter a :guilabel:`Deviation Note` explaining the decision; the handling user is recorded in :guilabel:`Deviation Handled By`."
+msgstr "Nyissa meg magát a sort, és adjon meg :guilabel:`Eltérési megjegyzést`, amely megindokolja a döntést; az intézkedő felhasználót a rendszer az :guilabel:`Eltérést kezelte` mezőben rögzíti."
+
+#: ../../content/applications/hr/salary/reconciliation.rst:92
+msgid "A :guilabel:`Blocking` deviation may only be waived by a user with the :guilabel:`Salary Approver` right."
+msgstr "A :guilabel:`Blokkoló` eltérést csak a :guilabel:`Bérügyi jóváhagyó` joggal rendelkező felhasználó engedheti el."
+
+#: ../../content/applications/hr/salary/salary_sheets.rst:50
+msgid "Lines whose figure differs from the provider's by more than the tolerance carry the :icon:`fa-check` :guilabel:`(accept)` and :icon:`fa-ban` :guilabel:`(waive)` buttons at the end of the row on the :guilabel:`Lines` tab, so a month can be reconciled without leaving the sheet."
+msgstr "Azokon a sorokon, amelyek értéke a tűréshatárnál jobban eltér a szolgáltató adatától, a :guilabel:`Sorok` fülön a sor végén megjelenik az :icon:`fa-check` :guilabel:`(elfogadás)` és az :icon:`fa-ban` :guilabel:`(elengedés)` gomb, így a hónap a bérlap elhagyása nélkül egyeztethető."
+
+#~ msgid ":guilabel:`Stocking Location`: the parent location the per-vehicle locations are created under."
+#~ msgstr ":guilabel:`Készletezési hely`: az a szülő készlethely, amely alatt a járművenkénti helyek létrejönnek."
+
+#~ msgid "Only the :guilabel:`Location` stocking method is implemented. Selecting :guilabel:`Warehouse` raises an error when a vehicle is saved."
+#~ msgstr "Csak a :guilabel:`Készlethely` készletezési mód van megvalósítva. A :guilabel:`Raktár` kiválasztása esetén a jármű mentésekor hibaüzenet jelenik meg."
+
+#~ msgid "The reconciliation defaults are kept on the company record: the :guilabel:`Payroll Mode` and :guilabel:`Payroll Provider`, the default :guilabel:`Deviation Tolerance (Amount)` and :guilabel:`Deviation Tolerance (%)` used when a component sets none, and :guilabel:`Closing Requires No Blocking Deviation`, which is enabled by default."
+#~ msgstr "Az egyeztetés alapértelmezéseit a vállalat adatlapja tartalmazza: a :guilabel:`Bérszámfejtési mód` és a :guilabel:`Bérszámfejtő szolgáltató`, az alapértelmezett :guilabel:`Eltérési tűréshatár (összeg)` és :guilabel:`Eltérési tűréshatár (%)`, amelyet a rendszer akkor használ, ha a bérelem nem ad meg sajátot, valamint a :guilabel:`Lezáráshoz nem lehet blokkoló eltérés` beállítás, amely alapértelmezés szerint be van kapcsolva."
+
+#~ msgid "The standard :guilabel:`Identification No` and :guilabel:`SSN No` fields of employees and of their :ref:`dependants <employees/hu-dependants>` are validated as the Hungarian tax identification code (*adóazonosító jel*) and social security number (*TAJ*), check digit included. Spaces and dashes are removed automatically, so a value typed with separators is accepted rather than rejected."
+#~ msgstr "A munkavállalók és :ref:`eltartottjaik <employees/dependants-emergency>` szabványos :guilabel:`Adóazonosító jel` és :guilabel:`TAJ-szám` mezőit a rendszer magyar adóazonosító jelként és társadalombiztosítási azonosító jelként (TAJ) ellenőrzi, a CDV ellenőrző számjeggyel együtt. A szóközöket és kötőjeleket automatikusan eltávolítja, így az elválasztójelekkel begépelt érték nem hibát okoz, hanem elfogadásra kerül."
+
+#~ msgid "Record the reliefs an employee actually claims on the employee form, in the :guilabel:`Dependants & Emergency` tab:"
+#~ msgstr "A munkavállaló által ténylegesen érvényesített kedvezményeket a munkavállalói űrlap :guilabel:`Eltartottak és vészhelyzet` fülén rögzítse:"
+
+#~ msgid "Every deviating line starts with the :guilabel:`Deviation Status` :guilabel:`Open`. Open the line from :menuselection:`Salary app --> Reporting --> Salary Analysis` and set the status in the :guilabel:`Reconciliation` group:"
+#~ msgstr "Minden eltérő sor :guilabel:`Nyitott` :guilabel:`Eltérés állapottal` indul. Nyissa meg a sort a :menuselection:`Bérek alkalmazás --> Kimutatások --> Bérelemzés` menüpontból, és állítsa be az állapotot az :guilabel:`Egyeztetés` csoportban:"
+
+#~ msgid ":guilabel:`Accepted`: the provider's figure is the correct one."
+#~ msgstr ":guilabel:`Elfogadva`: a szolgáltató adata a helyes."
+
+#~ msgid ":guilabel:`Waived`: the difference is known and does not need to be followed up."
+#~ msgstr ":guilabel:`Elengedve`: a különbség ismert, és nem igényel további intézkedést."
+
+#~ msgid "Enter a :guilabel:`Deviation Note` explaining the decision; the handling user is recorded in :guilabel:`Deviation Handled By`."
+#~ msgstr "Adjon meg :guilabel:`Eltérési megjegyzést`, amely megindokolja a döntést; az intézkedő felhasználót a rendszer az :guilabel:`Eltérést kezelte` mezőben rögzíti."
 
 #~ msgid ""
 #~ "The overview dashboard presenting the information for the week, with the current day\n"

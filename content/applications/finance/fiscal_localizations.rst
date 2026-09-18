@@ -9,9 +9,6 @@ fiscal requirements. Most of these modules are related to the Accounting app, bu
 necessary for other apps such as Point of Sale, eCommerce, etc., depending on a country's fiscal
 requirements.
 
-.. seealso::
-   :doc:`../hr/payroll/payroll_localizations` are documented separately.
-
 .. _fiscal_localizations/packages:
 
 Configuration

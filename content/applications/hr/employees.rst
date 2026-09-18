@@ -5,7 +5,7 @@ Employees
 =========
 
 Odoo **Employees** centralizes :doc:`personnel files <employees/new_employee>`, employment
-:doc:`contracts <payroll/contracts>`, and :doc:`departmental hierarchies <employees/departments>` in
+:doc:`contracts <employees/contracts>`, and :doc:`departmental hierarchies <employees/departments>` in
 one system. Properly configuring its settings ensures the dashboard shows each employee's real-time
 attendance and work location—data that drives payroll accuracy, capacity planning, and compliance
 reporting.
@@ -23,7 +23,7 @@ reporting.
       Create and manage the departments employees are a part of.
 
    .. card:: Contracts
-      :target: payroll/contracts
+      :target: employees/contracts
 
       Manage and create employee contracts.
 
@@ -36,6 +36,11 @@ reporting.
       :target: employees/badges
 
       Grant badges to employees for performance and achievements.
+
+   .. card:: Working schedules
+      :target: employees/working_schedules
+
+      Define the hours employees are expected to work.
 
    .. card:: Equipment
       :target: employees/equipment
@@ -108,8 +113,7 @@ are :guilabel:`Standard 40 hours/week`, :guilabel:`Appointment Resource Default 
 :guilabel:`Standard 32 hours/week (4 work days, Friday free)`.
 
 The available working hours listed are the same as the configured :doc:`working schedules
-<payroll/working_schedules>` in the **Payroll** app. Working hours can be created and modified from
-both the **Payroll** and **Employees** apps.
+<employees/working_schedules>` configured for the company.
 
 Employee update rights
 ----------------------
@@ -123,6 +127,8 @@ employee record.
    employees/new_employee
    employees/onboarding
    employees/departments
+   employees/contracts
+   employees/working_schedules
    employees/certifications
    employees/badges
    employees/equipment

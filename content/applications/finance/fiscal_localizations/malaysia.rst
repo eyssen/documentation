@@ -323,8 +323,7 @@ To download the PDF from an invoice or bill:
 Employment Hero payroll
 =======================
 
-If your business is already up and running with :doc:`Employment Hero
-<../../hr/payroll/payroll_localizations/employment_hero>`, you can use our connector as an
+If your business is already up and running with Employment Hero, you can use our connector as an
 alternative payroll solution.
 
 .. important::

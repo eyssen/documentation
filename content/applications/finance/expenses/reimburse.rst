@@ -60,10 +60,6 @@ stating `Expense report (expense report name) will be added to the next payslip.
 expense report remains :guilabel:`Approved`. The status only changes to :guilabel:`Posted` (and then
 :guilabel:`Done`), when the related payslip is processed.
 
-.. seealso::
-   Refer to the :doc:`Payslips <../../hr/payroll/payslips>` documentation for more information about
-   processing paychecks.
-
 .. _expenses/reimburse-single:
 
 Reimburse individually

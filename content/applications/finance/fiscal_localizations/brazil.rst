@@ -87,7 +87,6 @@ local fiscal and accounting regulations:
   to Brazilian accounting standards
 - :ref:`Taxes <localizations/brazil/taxes>`: pre-configured tax rates, including standard VAT,
   zero-rated, and exempt options.
-- :doc:`Payroll </applications/hr/payroll>`
 - :doc:`Reporting <../accounting/reporting>`
 
 .. _localizations/brazil/chart-of-accounts:

@@ -27,9 +27,9 @@ lunch accounts are replenished.
    Some examples of how money can be organized and transferred within a company:
 
    - Cash is handed to the **Lunch** app manager, who then updates the user's account.
-   - Money is automatically deducted from the user's paychecks, then the **Lunch** app manager
-     updates the account when paychecks are issued. This requires :ref:`adding a salary attachment
-     <payroll/worked-days-inputs>` for the user's payslip in the *Payroll* app.
+   - Money is deducted from the user's salary, then the **Lunch** app manager updates the account
+     when the salary is paid. Record the deduction as a line on the user's :doc:`salary sheet
+     <../salary/salary_sheets>`.
    - Companies can sell "lunch tickets" at a set price (for example, one ticket costs $5.00). Users
      can purchase tickets from a **Lunch** app manager, who then updates the user's account.
 

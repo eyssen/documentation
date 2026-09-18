@@ -159,8 +159,7 @@ Sourcing section
 ~~~~~~~~~~~~~~~~
 
 This section houses the details regarding the way the applicant applied for the job position. This
-information is necessary for :doc:`employee referrals <../referrals>`, and allows for reporting on
-the channels with the highest applicant generation.
+information allows for reporting on the channels with the highest applicant generation.
 
 - :guilabel:`Source`: Using the drop-down menu, select where the applicant learned about the job
   position. The following options come preconfigured in Odoo: :guilabel:`Search engine`,

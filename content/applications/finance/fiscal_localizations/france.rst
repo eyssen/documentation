@@ -60,7 +60,6 @@ fiscal and accounting regulations:
   supplier registration status
 - :doc:`Taxes <../accounting/taxes>`: pre-configured tax rates, including standard VAT,
   zero-rated, and exempt options
-- :doc:`Payroll </applications/hr/payroll>`
 - :ref:`Reporting <localizations/france/reporting>`
 
 .. _localizations/france/reporting:

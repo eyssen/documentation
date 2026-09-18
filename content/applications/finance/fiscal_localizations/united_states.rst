@@ -461,8 +461,7 @@ relevant data, so the data can be uploaded into the payroll provider, who then i
 paychecks or directly deposits the funds into an employee's bank account.
 
 In order to export the payroll data, the work entries must first be validated and correct. Refer to
-the :doc:`work entries <../../hr/payroll/work_entries>` documentation for more information
-regarding validating work entries.
+the work entries documentation for more information regarding validating work entries.
 
 Once work entries are validated, the information can be :ref:`exported to ADP <l10n_us/adp>`.
 
@@ -587,7 +586,7 @@ six-digit number.
 Export data
 ~~~~~~~~~~~
 
-Once :doc:`work entries <../../hr/payroll/work_entries>` have been verified, the information can be
+Once work entries have been verified, the information can be
 exported to a CSV file, which can then be uploaded into ADP.
 
 To export the data, navigate to :menuselection:`Payroll app --> Reporting --> United States: ADP

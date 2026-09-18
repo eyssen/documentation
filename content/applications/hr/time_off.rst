@@ -453,12 +453,12 @@ Enter the following information on that new line:
 - :guilabel:`Start Date`: Using the date and time picker, select the date and time the holiday
   starts, then click :icon:`fa-check` :guilabel:`Apply`. By default, this field is configured for
   the current date. The start time is set according to the start time for the company (according to
-  the :doc:`working schedules <payroll/working_schedules>`). If the user's computer is set to a
+  the :doc:`working schedules <employees/working_schedules>`). If the user's computer is set to a
   different time zone, the start time is adjusted accordingly, compared to the company's time zone.
 - :guilabel:`End Date`: Using the date and time picker, select the date and time the holiday ends,
   then click :icon:`fa-check` :guilabel:`Apply`. By default, this field is configured for the
   current date, and the time is set to the end time for the company (according to the :doc:`working
-  schedules <payroll/working_schedules>`). If the user's computer is set to a different time zone,
+  schedules <employees/working_schedules>`). If the user's computer is set to a different time zone,
   the start time is adjusted accordingly, compared to the company's time zone.
 
   .. example::
@@ -475,9 +475,6 @@ Enter the following information on that new line:
 - :guilabel:`Working Hours`: If the holiday should only apply to employees who have a specific set
   of working hours, select the working hours from the drop-down menu. If left blank, the holiday
   applies to all employees.
-- :guilabel:`Work Entry Type`: If using the **Payroll** app, this field defines how the :doc:`work
-  entries <payroll/work_entries>` for the holiday appear. Select the work entry type from the
-  drop-down menu.
 
 .. image:: time_off/holidays.png
    :alt: The list of public holidays in the configuration menu.

@@ -29,9 +29,6 @@ The following modules are installed automatically with the Jordanian localizatio
    modules may not be installed automatically. Any missing modules can be manually :ref:`installed
    <general/install>`.
 
-.. seealso::
-   :doc:`Jordan Payroll localization documentation <../../hr/payroll/payroll_localizations/jordan>`
-
 .. _localizations/jordan/specifics:
 
 Localization overview

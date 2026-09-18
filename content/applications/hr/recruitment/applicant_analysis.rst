@@ -47,8 +47,7 @@ progress.
 Use case: applicants with referrals
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To get a better understanding of how effective the company's :doc:`referral program <../referrals>`
-is, the :guilabel:`Applicant Analysis` report can be modified to show how many applicants were
+To get a better understanding of how effective referrals by current employees are, the :guilabel:`Applicant Analysis` report can be modified to show how many applicants were
 referred by current employees.
 
 From the :icon:`oi-view-pivot` :guilabel:`(Pivot)` view of the :guilabel:`Applicant Analysis`

@@ -88,8 +88,7 @@ if meeting a specific requirement for the business.
        information for employees.
    * - :guilabel:`Mexico - Payroll with Accounting`
      - `l10n_mx_hr_payroll_account`
-     - Adds the required rules and parameters to manage local payroll calculation with the
-       :doc:`Payroll <../../hr/payroll>` app.
+     - Adds the required rules and parameters to manage local payroll calculation.
 
 .. _l10n/mx/video-tutorials:
 

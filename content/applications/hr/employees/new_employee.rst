@@ -6,7 +6,7 @@ When a new employee is hired, the first step is to create a new employee record.
 centralized place where all important information about the employee is stored, including
 :ref:`general information <employees/general-info>`, :ref:`job history and skills
 <employees/resume>`, :ref:`various work information <employees/work-info-tab>`, :ref:`personal
-details <employees/private-info>`, :ref:`payroll-related information <employees/payroll>`, and
+details <employees/private-info>`, and
 various :ref:`settings <employees/hr-settings>` that affect integrations with other apps in the
 database.
 
@@ -361,11 +361,8 @@ This section defines when the employee is expected to work.
      If an employee's working hours are not configured as a working schedule for the company, new
      working schedules can be added, or existing working schedules can be modified.
 
-     Working hours can be modified in the **Payroll** application, where they are referred to as
-     :guilabel:`Working Schedules`.
-
-     For more information on how to create or modify :guilabel:`Working Schedules` in the
-     **Payroll** application, refer to the :doc:`../../hr/payroll` documentation.
+     For more information on how to create or modify working schedules, refer to the
+     :doc:`working schedules <working_schedules>` documentation.
 
      After the new working time is created, or an existing one is modified, the :guilabel:`Working
      Hours` can be selected on the employee form.
@@ -515,27 +512,6 @@ section may be left blank if they do not require any work permits for employment
   employee's work permit expires.
 - :guilabel:`Work Permit`: click :guilabel:`Upload your file`, then navigate to the work permit file
   in the file explorer, and click :guilabel:`Select` to add the permit.
-
-.. _employees/payroll:
-
-Payroll tab
-===========
-
-Depending on the installed :doc:`localization <../payroll/payroll_localizations>`, the sections and
-fields in this tab may vary considerably. Due to the specific nature of localizations and the
-variety of information that may be requested in this tab, it is recommended to check with the
-accounting department to fill out this section correctly.
-
-The following fields are universal for all localizations:
-
-- :guilabel:`Legal Name`: enter the legal name for the employee. This is the name that typically is
-  used for filing taxes.
-- :guilabel:`Payslip Language`: enter the desired language to be used when printing payslips for
-  this employee.
-- :guilabel:`Registration Number of the Employee`: enter the employees registration number.
-
-.. seealso::
-   :doc:`Payroll localizations <../payroll/payroll_localizations>`
 
 .. _employees/hr-settings:
 

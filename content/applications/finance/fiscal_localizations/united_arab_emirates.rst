@@ -34,10 +34,6 @@ Emirates** localization:
    :align: center
    :alt: Select the modules to install.
 
-.. seealso::
-   :doc:`United Arab Emirates Payroll localization documentation
-   <../../hr/payroll/payroll_localizations/united_arab_emirates>`
-
 Chart of accounts
 =================
 

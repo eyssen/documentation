@@ -42,8 +42,11 @@ Configure the payment method
       <razorpay/credentials>`.
    #. Set the :guilabel:`Razorpay Allowed Payment Modes` according to your needs.
 
-   .. image:: razorpay/create-method-razorpay.png
-      :alt: Razorpay connection form
+   .. screenshot:: pos-razorpay-payment-method
+      :menu: Point of Sale ‣ Configuration ‣ Payment Methods ‣ New
+      :shows: A payment method form with "Integration" set to "Terminal", "Payment Terminal" set to "Razorpay", and the Razorpay username, API key and device serial number filled in.
+      :module: point_of_sale, pos_razorpay
+      :notes: English UI, light theme, 1440px width; use throw-away credentials.
 
    .. note::
       You can enable the :guilabel:`Razorpay Test Mode` field while testing or keep it unchecked for

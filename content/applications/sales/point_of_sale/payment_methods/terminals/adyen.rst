@@ -79,7 +79,11 @@ Enable the payment terminal :ref:`in the application settings <configuration/set
 Finally, fill in the mandatory fields with your :ref:`Adyen API key <adyen/api>`, :ref:`Adyen
 Terminal Identifier <adyen/identifier>`, and :guilabel:`Adyen Merchant Account`.
 
-.. image:: adyen/payment-method.png
+.. screenshot:: pos-adyen-payment-method
+   :menu: Point of Sale ‣ Configuration ‣ Payment Methods ‣ New
+   :shows: A payment method form with "Integration" set to "Terminal", "Payment Terminal" set to "Adyen", and the Adyen API key, merchant account and terminal identifier fields filled in.
+   :module: point_of_sale, pos_adyen
+   :notes: English UI, light theme, 1440px width; use throw-away credentials, mask the API key.
 
 Once the payment method is created, you can select it in your POS settings. To do so, go to the
 :ref:`POS' settings <configuration/settings>`, click :guilabel:`Edit`, and add the payment method

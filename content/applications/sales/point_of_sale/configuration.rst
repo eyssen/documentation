@@ -14,8 +14,13 @@ To access the general POS settings, go to :menuselection:`Point of Sale --> Conf
 Settings`. Then, open the dropdown menu in the :guilabel:`Point of Sale` field and select the POS to
 configure.
 
-.. image:: configuration/select-pos-dropdown.png
-   :alt: Dropdown menu to select the POS in the app settings
+.. screenshot:: pos-configuration-select-pos
+   :menu: Point of Sale ‣ Configuration ‣ Settings
+   :shows: The top of the POS settings page with the "Point of Sale" dropdown open, listing the available points of sale.
+   :highlight: The "Point of Sale" dropdown (red frame).
+   :data: Two POS configurations: "Shop" and "Restaurant".
+   :module: point_of_sale
+   :notes: English UI, light theme, 1440px width, crop to the top of the settings page.
 
 .. note::
    These settings are available to users with the :doc:`access rights </applications/general/users>`
@@ -27,8 +32,11 @@ You can also configure some settings from the dashboard by clicking the vertical
 - :doc:`Enable multiple employees to log in. <employee_login>`
 - :doc:`Connect and set up an ePOS printer. <configuration/epos_ssc>`
 
-.. image:: configuration/toggle-settings.png
-   :alt: popup window to access quick settings in POS
+.. screenshot:: pos-configuration-quick-settings
+   :menu: Point of Sale ‣ Dashboard ‣ (POS card) ‣ ⋮
+   :shows: The quick settings popup opened from the vertical ellipsis button on a POS card, with the toggles for multi-employee login and the ePOS printer.
+   :module: point_of_sale
+   :notes: English UI, light theme, crop to the popup window.
 
 .. note::
    These settings are available to users with the :doc:`access rights </applications/general/users>`
@@ -43,8 +51,12 @@ To make products available for sale,
 #. Select a product to open the product form.
 #. Tick the :guilabel:`Point of Sale` checkbox at the top of the form.
 
-.. image:: configuration/pos-available.png
-   :alt: Making a product available in your POS.
+.. screenshot:: pos-configuration-product-available
+   :menu: Point of Sale ‣ Products ‣ Products ‣ (a product)
+   :shows: A product form with the "Point of Sale" checkbox at the top of the form ticked.
+   :highlight: The "Point of Sale" checkbox (red frame).
+   :module: point_of_sale
+   :notes: English UI, light theme, 1440px width, crop to the top of the product form.
 
 PoS product categories
 ======================
@@ -63,8 +75,12 @@ To associate a category with a parent category, fill in the :guilabel:`Parent Ca
 parent category groups one or more child categories.
 
 .. example::
-   .. image:: configuration/parent-categories.png
-      :alt: The PoS product categories grouped by parent categories
+   .. screenshot:: pos-configuration-parent-categories
+      :menu: Point of Sale ‣ Configuration ‣ PoS Product Categories
+      :shows: The list of PoS product categories, showing child categories grouped under their parent categories.
+      :data: Parent category "Drinks" with child categories "Soft drinks" and "Hot drinks".
+      :module: point_of_sale
+      :notes: English UI, light theme, 1440px width, crop to the list.
 
 Assign PoS product categories
 -----------------------------
@@ -73,8 +89,12 @@ Go to :menuselection:`Point of Sale --> Products --> Products` and open a produc
 the :guilabel:`Point of Sale` tab and fill in the :guilabel:`Category` field under the
 :guilabel:`Point of Sale` section with one or multiple PoS categories.
 
-.. image:: configuration/form-pos-category.png
-   :alt: Point of Sale tab of a product form to add a PoS product category
+.. screenshot:: pos-configuration-product-category
+   :menu: Point of Sale ‣ Products ‣ Products ‣ (a product) ‣ Point of Sale
+   :shows: The "Point of Sale" tab of a product form with two PoS categories selected in the "Category" field.
+   :highlight: The "Category" field (red frame).
+   :module: point_of_sale
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 Restrict categories
 -------------------
@@ -83,13 +103,16 @@ You can limit the categories displayed on your POS interface. To achieve this, g
 settings <configuration/settings>` and choose the specific categories to display in the
 :guilabel:`Restrict Categories` field within the :guilabel:`Product & PoS categories` section.
 
-.. image:: configuration/restrict-category.png
-   :alt: Setting to set up the restrict category feature
+.. screenshot:: pos-configuration-restrict-categories
+   :menu: Point of Sale ‣ Configuration ‣ Settings
+   :shows: The "Product & PoS categories" section of the POS settings with two categories selected in the "Restrict Categories" field.
+   :highlight: The "Restrict Categories" setting block (red frame).
+   :module: point_of_sale
+   :notes: English UI, light theme, 1440px width, crop to the settings block.
 
 .. toctree::
    :titlesonly:
 
-   .. configuration/pos_iot
    configuration/epos_printers
    configuration/https
    configuration/epos_ssc

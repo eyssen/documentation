@@ -12,9 +12,12 @@ Configuration
 :ref:`Go to the POS settings <configuration/settings>`, scroll down to the :guilabel:`Inventory`
 section, and enable :guilabel:`Allow Ship Later`.
 
-.. image:: ship_later/settings.png
-   :scale: 85%
-   :alt: settings to enable and configure the ship later feature
+.. screenshot:: pos-ship-later-settings
+   :menu: Point of Sale ‣ Configuration ‣ Settings
+   :shows: The "Inventory" section of the POS settings with "Allow Ship Later" enabled, and the warehouse, specific route and shipping policy fields below it.
+   :highlight: The "Allow Ship Later" setting block (red frame).
+   :module: point_of_sale
+   :notes: English UI, light theme, 1440px width; scale down to about 85 % of the page width.
 
 Once activated, you can:
 
@@ -35,9 +38,12 @@ Practical application
 #. On the payment screen, set a customer and select :guilabel:`Ship Later`.
 #. On the popup window, set a shipping date and click :guilabel:`Confirm` to proceed to payment.
 
-.. image:: ship_later/payment.png
-   :scale: 75%
-   :alt: selecting ship later at checkout.
+.. screenshot:: pos-ship-later-payment
+   :menu: (POS interface) ‣ Payment screen
+   :shows: The POS payment screen with the "Ship Later" button enabled and the popup asking for the shipping date.
+   :highlight: The "Ship Later" button (red frame).
+   :module: point_of_sale
+   :notes: English UI, light theme; scale down to about 75 % of the page width.
 
 The system instantly creates a delivery order from the warehouse to the shipping address.
 

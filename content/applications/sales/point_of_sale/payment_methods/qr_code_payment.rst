@@ -74,9 +74,13 @@ Create the payment method
      (SEPA).
    - Select :guilabel:`EMV Merchant-Presented QR-code` for other QR code types.
 
-.. image:: qr_code_payment/qr-payment-methods-setting.png
-   :alt: QR code payment method configuration
-   :scale: 85 %
+.. screenshot:: pos-qr-payment-method-form
+   :menu: Point of Sale ‣ Configuration ‣ Payment Methods ‣ New
+   :shows: A payment method form with a bank journal selected, "Integration" set to "Bank App (QR Code)" and a "QR Code Format" chosen.
+   :highlight: The "Integration" and "QR Code Format" fields (red frame).
+   :data: Payment method "Bank App", bank journal "Bank", format "SEPA Credit Transfer QR".
+   :module: point_of_sale, account_qr_code_sepa
+   :notes: English UI, light theme, 1440px width; scale down to about 85 % of the page width.
 
 .. important::
    At least one bank account must be defined in the journal to allow QR code payments to be
@@ -85,9 +89,12 @@ Create the payment method
 Once the payment method is created, go to the :ref:`POS' settings <configuration/settings>` and add
 the payment method to your POS under the :guilabel:`Payment` section.
 
-.. image:: qr_code_payment/qr-configuration-setting.png
-   :alt: Enable QR code payment method
-   :scale: 85 %
+.. screenshot:: pos-qr-payment-enable
+   :menu: Point of Sale ‣ Configuration ‣ Settings
+   :shows: The "Payment" section of the POS settings with the QR code payment method added to the "Payment Methods" field.
+   :highlight: The "Payment Methods" field (red frame).
+   :module: point_of_sale
+   :notes: English UI, light theme, 1440px width; scale down to about 85 % of the page width.
 
 Register payments using QR codes
 ================================
@@ -95,9 +102,11 @@ Register payments using QR codes
 When processing a payment, select the payment method for QR code payments. A QR code is generated
 and displayed on the screen for the customer to scan and pay with their mobile banking app.
 
-.. image:: qr_code_payment/qr-payment-example.png
-   :alt: QR code payment example
-   :scale: 75 %
+.. screenshot:: pos-qr-payment-screen
+   :menu: (POS interface) ‣ Payment screen
+   :shows: The POS payment screen with the QR code payment method selected and the generated QR code displayed for the customer, with the "Confirm Payment" button below.
+   :module: point_of_sale
+   :notes: English UI, light theme; scale down to about 75 % of the page width; use a throw-away bank account.
 
 Hit :guilabel:`Confirm Payment` to validate the transaction.
 

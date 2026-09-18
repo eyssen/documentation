@@ -13,9 +13,12 @@ To use a barcode scanner, you must enable the feature in the Inventory app. Go t
 :menuselection:`Inventory --> Configuration --> Settings`, in the :guilabel:`Barcode` section, tick
 :guilabel:`Barcode Scanner` and save.
 
-.. image:: barcode/barcode-inventory.png
-   :align: center
-   :alt: barcode setting in the Inventory application
+.. screenshot:: pos-barcode-inventory-setting
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The "Barcode" section of the Inventory settings with the "Barcode Scanner" option enabled.
+   :highlight: The "Barcode Scanner" setting (red frame).
+   :module: stock, barcodes
+   :notes: English UI, light theme, 1440px width, centered, crop to the settings block.
 
 
 Once enabled in **Inventory**, you can use the barcode feature in **Point of Sale** with products

@@ -19,8 +19,12 @@ simple fixed price rules per product. Select :ref:`Advanced price rules (discoun
 <pricelists/advanced>` to apply price rules to multiple products at once and to compute prices
 dynamically using percentage discounts or more complex formulas in addition to setting fixed prices.
 
-.. image:: pricelists/settings.png
-   :alt: Enabling pricelists in the general P0S settings
+.. screenshot:: pos-pricelists-setting
+   :menu: Point of Sale ‣ Configuration ‣ Settings
+   :shows: The "Pricing" section of the POS settings with the "Pricelists" option enabled and "Advanced price rules" selected.
+   :highlight: The "Pricelists" setting block (red frame).
+   :module: point_of_sale, product
+   :notes: English UI, light theme, 1440px width, crop to the settings block.
 
 .. note::
    The selected pricelist type applies to the entire database, including the :doc:`Sales
@@ -54,8 +58,12 @@ necessary, on one or several conditions. To add a new price rule to a pricelist:
 
 #. Add the :guilabel:`Price` to be applied when the conditions are met (if any).
 
-.. image:: pricelists/multiple-prices.png
-   :alt: Setup form of a multiple prices pricelist
+.. screenshot:: pos-pricelists-multiple-prices
+   :menu: Point of Sale ‣ Products ‣ Pricelists ‣ New
+   :shows: A pricelist form in "Multiple prices per product" mode, with three price rules applied to products and a product category.
+   :data: Pricelist "Wholesale" with rules on "Desk Organizer", "Cabinet with Doors" and the "Office Furniture" category.
+   :module: product
+   :notes: English UI, light theme, 1440px width.
 
 .. _pricelists/advanced:
 
@@ -100,8 +108,11 @@ prices. To add a new price rule to a pricelist, click :guilabel:`Add a line`. In
    :guilabel:`Min. Quantity` field or a specific period during which the pricelist should be
    applied by using the :guilabel:`Validity` fields.
 
-.. image:: pricelists/price-rules.png
-   :alt: Setup form to configure an advanced pricelist
+.. screenshot:: pos-pricelists-advanced-rule
+   :menu: Point of Sale ‣ Products ‣ Pricelists ‣ (a pricelist) ‣ (a price rule)
+   :shows: An advanced price rule form with the computation set to a percentage discount, a minimum quantity, rounding and margin fields, and the validity dates.
+   :module: product
+   :notes: English UI, light theme, 1440px width.
 
 Select pricelists
 -----------------
@@ -113,8 +124,12 @@ pricelists in the :guilabel:`Available` field. Then, set its **default pricelist
 When you :ref:`open a POS session <pos/session-start>`, click the **pricelists** button, and select
 the desired pricelist from the list.
 
-.. image:: pricelists/pricelist-button.png
-   :alt: Button to select a pricelist on the POS frontend
+.. screenshot:: pos-pricelists-frontend-button
+   :menu: (POS interface) ‣ Register screen
+   :shows: The POS register screen with the pricelist button in the button bar and the list of available pricelists open.
+   :highlight: The pricelist button (red frame).
+   :module: point_of_sale, product
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    - Multiple pricelists must be selected for the **pricelist button** to be displayed.

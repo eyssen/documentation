@@ -33,9 +33,11 @@ Then, create the payment method:
 - Enter your payment terminal serial number in the :guilabel:`Stripe Serial Number` field;
 - Click :guilabel:`Don't forget to complete Stripe connect before using this payment method.`
 
-.. image:: stripe/create-method-stripe.png
-   :align: center
-   :alt: payment method creation form
+.. screenshot:: pos-stripe-payment-method
+   :menu: Point of Sale ‣ Configuration ‣ Payment Methods ‣ New
+   :shows: A payment method form with "Integration" set to "Terminal", "Payment Terminal" set to "Stripe", and the "Connect Stripe" button visible.
+   :module: point_of_sale, pos_stripe
+   :notes: English UI, light theme, 1440px width, centered.
 
 .. note::
    - Click :guilabel:`Identify Customer` to allow this payment method **exclusively** for identified
@@ -56,9 +58,11 @@ completed, the API keys (:guilabel:`Publishable Key` and :guilabel:`Secret Key`)
 click the keys to copy them, and paste them into the corresponding fields in Odoo. Your terminal is
 ready to be configured in a POS.
 
-.. image:: stripe/stripe-connect.png
-   :align: center
-   :alt: stripe connection form
+.. screenshot:: pos-stripe-connect-form
+   :menu: Point of Sale ‣ Configuration ‣ Payment Methods ‣ (Stripe method) ‣ Connect Stripe
+   :shows: The Stripe connection form with the secret and publishable keys entered and the terminal serial number field below them.
+   :module: point_of_sale, pos_stripe
+   :notes: English UI, light theme, 1440px width, centered; use throw-away secrets.
 
 .. note::
    - When you use **Stripe** exclusively in Point of Sale, you only need the **Secret Key** to use

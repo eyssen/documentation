@@ -25,8 +25,12 @@ You can choose from:
       menu or product catalog by scanning a QR code on their personal device. The latter also
       allows them to place an order and make a payment.
 
-      .. image:: self_order/qr-activation.png
-         :alt: QR menu and kiosk setting activation
+      .. screenshot:: pos-self-order-qr-activation
+         :menu: Point of Sale ‣ Configuration ‣ Settings
+         :shows: The "Self Ordering" section of the POS settings with the QR menu self-ordering mode selected and the "Print QR Codes" button below it.
+         :highlight: The self-ordering mode selector (red frame).
+         :module: point_of_sale, pos_self_order
+         :notes: English UI, light theme, 1440px width, crop to the settings block.
 
       - Click :icon:`fa-arrow-right` :guilabel:`Print QR Codes` to download a .pdf document with the
         generated QR codes.
@@ -49,8 +53,12 @@ You can choose from:
       When :guilabel:`Kiosk` is selected, customers can access the menu or product catalog, place
       orders, and pay from a self-ordering kiosk.
 
-      .. image:: self_order/kiosk-activation.png
-         :alt: QR menu and kiosk setting activation
+      .. screenshot:: pos-self-order-kiosk-activation
+         :menu: Point of Sale ‣ Configuration ‣ Settings
+         :shows: The "Self Ordering" section of the POS settings with the kiosk self-ordering mode selected.
+         :highlight: The "Kiosk" option (red frame).
+         :module: point_of_sale, pos_self_order
+         :notes: English UI, light theme, 1440px width, crop to the settings block.
 
 Once a self-ordering type is selected, the :ref:`additional settings <pos/self_order/add-settings>`
 update to fit the selected type's needs.
@@ -193,12 +201,13 @@ Usage guidelines
       #. Open the provided URL on the self-ordering kiosk(s).
 
          - Click the provided URL to open the kiosk in a new tab;
-         - Click :guilabel:`Install App` to install the kiosk module on your self-ordering kiosk; or
-         - Click :guilabel:`Open on IoT Box` if your kiosk is connected to an **IoT system**
-           (Enterprise)
+         - Click :guilabel:`Install App` to install the kiosk module on your self-ordering kiosk.
 
-      .. image:: self_order/kiosk-opening-popup.png
-         :alt: Popup window to open the kiosk
+      .. screenshot:: pos-self-order-kiosk-popup
+         :menu: Point of Sale ‣ Dashboard ‣ (POS card) ‣ Start Kiosk
+         :shows: The popup window showing the kiosk URL, with the link to open the kiosk in a new tab and the "Install App" button.
+         :module: point_of_sale, pos_self_order
+         :notes: English UI, light theme, crop to the popup window.
 
       .. note::
          - Once a session is open, :guilabel:`Start Kiosk` switches to :guilabel:`Open Kiosk` on the
@@ -213,11 +222,13 @@ Usage guidelines
       #. Select the items and click :guilabel:`Order` to place an order.
       #. Follow the instructions on-screen to assign a table and pay for the order.
 
-      .. image:: self_order/kiosk-endscreen.png
-         :alt: kiosk end-screen for customers
-         :scale: 65 %
+      .. screenshot:: pos-self-order-kiosk-endscreen
+         :menu: (Kiosk interface) ‣ End screen
+         :shows: The customer-facing kiosk end screen confirming that the order was placed, with the order number displayed.
+         :module: point_of_sale, pos_self_order
+         :notes: English UI, light theme; scale down to about 65 % of the page width.
 
 .. important::
    - A POS session must be open for customers to place an order.
-   - Once an order is placed, it is automatically sent to :doc:`the preparation screen
-     <preparation>` and added to the list of POS orders.
+   - Once an order is placed, it is added to the list of POS orders and, if :ref:`preparation
+     printers <pos/restaurant/orders-printing>` are configured, sent to the kitchen or bar printer.

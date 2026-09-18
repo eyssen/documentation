@@ -65,8 +65,11 @@ Then, copy and paste them into Odoo when creating the payment method.
    `https://mycompany.odoo.com`) followed by `/pos_mercado_pago/notification` (e.g.,
    `https://mycompany.odoo.com/pos_mercado_pago/notification`).
 
-   .. image:: mercado_pago/webhooks.png
-      :alt: Webhooks configuration on Mercado Pago.
+   .. screenshot:: pos-mercado-pago-webhooks
+      :menu: (Mercado Pago developer portal) ‣ Your integrations ‣ Webhooks
+      :shows: The webhook configuration page of the Mercado Pago developer portal with the production notification URL entered and the "Point of Integration" event selected.
+      :module: pos_mercado_pago
+      :notes: External website, English UI; use a throw-away URL and mask the application ID.
 
 .. _pos-mercado-pago-method:
 
@@ -88,8 +91,11 @@ Payment method
      the back of your terminal.
    - Click the :guilabel:`Force PDV` button to activate the Point of Sale mode.
 
-.. image:: mercado_pago/payment-method.png
-   :alt: Form to create a new payment method.
+.. screenshot:: pos-mercado-pago-payment-method
+   :menu: Point of Sale ‣ Configuration ‣ Payment Methods ‣ New
+   :shows: A payment method form with "Integration" set to "Terminal", "Payment Terminal" set to "Mercado Pago", and the production user token and point of sale serial number filled in.
+   :module: point_of_sale, pos_mercado_pago
+   :notes: English UI, light theme, 1440px width; use a throw-away token.
 
 Select the payment method by going to the :ref:`POS' settings <configuration/settings>` and adding
 it to the payment method under the :guilabel:`Payment Methods` field of the :guilabel:`Payment`

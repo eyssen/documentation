@@ -13,46 +13,34 @@ ease the work of your cashiers.
 Configuration
 =============
 
-Prerequisites
--------------
-
-#. Install the POS IoT Six module: :doc:`Activate the POS IoT Six module module
-   <../../../../general/apps_modules>` to enable the payment terminal.
-
-   .. note::
-      This module replaces the **POS Six** module.
-#. Connect an IoT system: A Raspberry Pi or a virtual IoT system (for Windows OS only, Enterprise)
-   is required to connect a SIX payment terminal to Odoo.
-
 .. _six/configure:
 
 Configure the payment method
 ----------------------------
 
-#. Enable the payment terminal :ref:`in the application settings <configuration/settings>` and
-   :doc:`create a payment method for SIX terminals <../../payment_methods>`.
+#. Go to the :ref:`POS settings <configuration/settings>`, scroll down to the :guilabel:`Payment
+   Terminals` section, enable :guilabel:`Six`, and click :guilabel:`Save`. This installs the
+   **POS Six** module.
+#. :doc:`Create a payment method <../../payment_methods>` for the SIX terminal.
 #. Set the journal type as :guilabel:`Bank`.
 #. Fill in the :guilabel:`Outstanding Account` field.
 #. Select :guilabel:`Terminal` in the :guilabel:`Integration` field.
-#. Select :guilabel:`SIX IOT` in the :guilabel:`Integrate with` field.
-#. Click :guilabel:`Setup Six Terminal`.
+#. Select :guilabel:`SIX` in the :guilabel:`Payment Terminal` field.
+#. Enter the terminal's IP address in the :guilabel:`Six Terminal IP` field.
+#. Click :guilabel:`Save`.
 
-.. image:: six/new-payment-method.png
-   :alt: Creating a new payment method for the SIX payment terminal
-   :scale: 45 %
-
-In the modal window,
-
-#. Click the :guilabel:`IoT Box` field and select the IoT system from the dropdown menu.
-#. Enter the :guilabel:`Six Terminal ID (TID)` provided by SIX.
-#. Select the :guilabel:`Terminal Device` from dropdown menu.
-#. Finally, click :guilabel:`Add Terminal`.
-
-.. image:: six/terminal-wizard.png
-   :alt: Configuring the Terminal ID for the SIX payment terminal
+.. screenshot:: pos-six-payment-method
+   :menu: Point of Sale ‣ Configuration ‣ Payment Methods ‣ New
+   :shows: A payment method form with "Integration" set to "Terminal", "Payment Terminal" set to
+      "SIX", and the "Six Terminal IP" field filled in with a local IP address.
+   :highlight: The "Payment Terminal" and "Six Terminal IP" fields (red frame).
+   :data: Payment method named "SIX", bank journal "Bank", Six Terminal IP 192.168.1.42.
+   :module: point_of_sale, pos_six
+   :notes: English UI, light theme, 1440px width; scale down to about 45 % of the page width.
 
 .. note::
-   Ensure the SIX terminal is online and connected to the same network as the IoT system.
+   Ensure the SIX terminal is switched on and connected to the same local network as the POS
+   device.
 
 Link the payment method to a POS
 --------------------------------

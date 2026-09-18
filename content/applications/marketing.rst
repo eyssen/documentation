@@ -11,3 +11,4 @@ Marketing
    marketing/sms_marketing
    marketing/events
    marketing/surveys
+   marketing/google_ad_manager

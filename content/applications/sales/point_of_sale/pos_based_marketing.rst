@@ -65,9 +65,9 @@ Doing so opens an email composing form. Fill it in and hit :guilabel:`Send`.
      select your template under the :guilabel:`Insert Template` section.
    - You can also save your content as template for later use. Click the vertical ellipsis button
      and select :guilabel:`Save as Template`.
-   - The :doc:`Email CC and BCC </applications/general/companies/email_cc_bcc>` module adds
-     :guilabel:`CC` and :guilabel:`BCC` fields to this composer, so a copy of the message can be
-     sent to additional recipients.
+   - If the *Email CC and BCC* module (`mail_composer_cc_bcc`) is installed, the composer also
+     offers :guilabel:`CC` and :guilabel:`BCC` fields, so a copy of the message can be sent to
+     additional recipients.
 
 .. note::
    - Fill in the :guilabel:`Mass Mailing Name` field to create a mass mailing and track its results

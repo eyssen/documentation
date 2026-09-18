@@ -24,8 +24,6 @@ Three main buttons in the POS register allow for navigating between the :ref:`Fl
   :ref:`Floor plan <pos/restaurant/floors>` view.
 
 .. note::
-   - When :guilabel:`Table Booking` is enabled in the :ref:`POS settings <configuration/settings>`,
-     a :guilabel:`Booking` button appears on the main interface for viewing and managing bookings.
    - Entering a number through the :guilabel:`Table` button that does not match an existing table
      number creates a direct sales order.
 

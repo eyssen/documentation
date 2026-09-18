@@ -32,15 +32,47 @@ search bar, and change the default :guilabel:`All active orders` filter to :guil
 select the corresponding order and click :guilabel:`Print Receipt`.
 
 .. screenshot:: pos-receipts-reprint
-   :menu: Point of Sale ‣ Orders ‣ Orders ‣ (an order)
-   :shows: A POS order form in the backend with the "Print Receipt" button in the button bar.
+   :menu: (POS interface) ‣ Orders
+   :shows: The order list inside the POS filtered on "Paid", with a paid order selected and the
+      "Print Receipt" button visible.
    :highlight: The "Print Receipt" button (red frame).
    :module: point_of_sale
-   :notes: English UI, light theme, 1440px width, crop to the top of the order form.
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    You can filter the list of orders using the search bar. Type in your reference and click
    :guilabel:`Receipt Number`, :guilabel:`Date`, or :guilabel:`Customer`.
+
+.. _receipts-invoices/receipt-designs:
+
+Receipt designs
+---------------
+
+The *POS Receipt Design* module (`custom_receipts_for_pos`) replaces the standard receipt layout
+with a custom one, so the receipt can be adapted to the shop's branding or to local requirements
+without touching the source code.
+
+To manage the available layouts, go to :menuselection:`Point of Sale --> Configuration --> Receipt
+Designs`. Each record holds a :guilabel:`Name` and the :guilabel:`Receipt XML` field containing the
+QWeb template of the receipt. Two ready-made designs are installed with the module and can be
+duplicated as a starting point.
+
+To apply a design to a point of sale, go to :menuselection:`Point of Sale --> Configuration -->
+Point of Sale`, open the POS, enable :guilabel:`Custom Receipt` in the :guilabel:`Bills & Receipts`
+section, and select the layout in the :guilabel:`Receipt Design` field.
+
+.. screenshot:: pos-receipts-custom-design
+   :menu: Point of Sale ‣ Configuration ‣ Receipt Designs ‣ (a design)
+   :shows: A receipt design form with its name and the "Receipt XML" field showing the QWeb
+      template in the code editor.
+   :data: Design "Compact receipt".
+   :module: custom_receipts_for_pos
+   :notes: English UI, light theme, 1440px width.
+
+.. important::
+   The :guilabel:`Receipt XML` field expects a valid QWeb template. An invalid template prevents
+   the receipt from being rendered, so test a new design on a test point of sale before using it in
+   the shop.
 
 .. _receipts-invoices/invoices:
 
@@ -125,3 +157,34 @@ To use this feature, you have to enable QR codes on receipts by going to :menuse
 Sale --> Configuration --> Settings`. Then, select the POS in the :guilabel:`Point of Sale` field,
 scroll down to the :guilabel:`Bills & Receipts` section and enable :guilabel:`Use QR code on
 ticket`.
+
+.. _receipts-invoices/payment-terms:
+
+Payment terms on POS invoices
+-----------------------------
+
+By default, an invoice issued from the POS carries no payment term, which is inconvenient when the
+POS is also used for deferred-payment sales. The *PoS Invoice* module (`eyssen_pos_invoice`) links a
+payment term to each :doc:`payment method <payment_methods>`.
+
+To set it, go to :menuselection:`Point of Sale --> Configuration --> Payment Methods`, open a
+payment method, and fill in the :guilabel:`Payment Term` field. The field is required; it defaults to
+a payment term due immediately. When an order paid with that payment method is invoiced, the invoice
+is created with the payment term of the method.
+
+The module also checks the customer's invoicing address while the order is being registered: if the
+street, city, ZIP code or country is missing — or, for a Hungarian company, a valid VAT number — the
+missing fields are listed next to the customer in the POS customer list, so the cashier can complete
+them before issuing the invoice.
+
+.. screenshot:: pos-invoice-payment-term
+   :menu: Point of Sale ‣ Configuration ‣ Payment Methods ‣ (a payment method)
+   :shows: A payment method form with the "Payment Term" field filled in.
+   :highlight: The "Payment Term" field (red frame).
+   :data: Payment method "Bank transfer" with payment term "30 Days".
+   :module: eyssen_pos_invoice
+   :notes: English UI, light theme, 1440px width, crop to the form.
+
+.. note::
+   This module requires the *eYssen Hungarian localization* module (`eyssen_l10n_hu`), which
+   provides the Hungarian VAT number validation used by the address check.

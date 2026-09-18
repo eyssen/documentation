@@ -6,8 +6,8 @@ Working with **serial numbers** and **lots** allows tracking your products' move
 are tracked, the system identifies their location based on their last movement.
 
 To enable traceability, go to :menuselection:`Point of Sale --> Products --> Products`. Then,
-select a product and check the :guilabel:`Tracking By Unique Serial Number` or the
-:guilabel:`Tracking By Lots` box in the :guilabel:`Inventory` tab.
+select a product, go to the :guilabel:`Inventory` tab, enable :guilabel:`Track Inventory`, and set
+the tracking method to :guilabel:`By Unique Serial Number` or :guilabel:`By Lots`.
 
 .. screenshot:: pos-serial-numbers-product-tracking
    :menu: Point of Sale ‣ Products ‣ Products ‣ (a product) ‣ Inventory
@@ -24,7 +24,7 @@ You can import serial numbers in Point of Sale. To do so, select a **sales order
 to the :abbr:`SO (sales order)`.
 
 .. screenshot:: pos-serial-numbers-import-popup
-   :menu: (POS interface) ‣ Quotations/Orders ‣ (a sales order)
+   :menu: (POS interface) ‣ Quotation/Order ‣ (a sales order)
    :shows: The popup asking whether to import the serial or lot numbers recorded on the sales order into the POS order.
    :module: point_of_sale, pos_sale
    :notes: English UI, light theme, centered, 480px wide.

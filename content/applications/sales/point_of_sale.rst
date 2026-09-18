@@ -52,7 +52,9 @@ Once an order is completed, proceed to checkout by clicking :guilabel:`Payment`.
 
 .. note::
    The system can only load a limited number of products for effective opening. Click
-   :guilabel:`Search more` if the desired product is not loaded automatically.
+   :guilabel:`Search more` if the desired product is not loaded automatically. The number of
+   products and customers loaded at the start of a session can be tuned per point of sale; see
+   :ref:`pos/configuration/performance`.
 
 .. _pos/customers:
 

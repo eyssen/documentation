@@ -116,7 +116,7 @@ the employee's profile in the **Employees** module:
 #. Navigate to the **Employees** module.
 #. Open the form view of the specific employee.
 #. Go to the :guilabel:`Settings` tab.
-#. The :guilabel:`Attendance/Point of Sale/Manufacturing` category offers two options:
+#. The :guilabel:`Attendance/Point of Sale` section offers two options:
 
    - Manually enter any badge ID in the :guilabel:`Badge ID` field.
    - Click :guilabel:`Generate` to create a unique badge ID automatically.
@@ -138,7 +138,7 @@ session. To set up a PIN code for an employee:
 #. Open the form view of the relevant employee.
 #. Go to the :guilabel:`Settings` tab.
 #. Enter a desired numerical code in the :guilabel:`PIN Code` field of the
-   :guilabel:`Attendance/Point of Sale/Manufacturing` category.
+   :guilabel:`Attendance/Point of Sale` section.
 
 .. note::
    The PIN code must consist of a sequence of digits only.

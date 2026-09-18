@@ -25,15 +25,15 @@ Configure the payment method
 #. Set the journal type as :guilabel:`Bank`.
 #. Fill in the :guilabel:`Outstanding Account` field.
 #. Select :guilabel:`Terminal` in the :guilabel:`Integration` field.
-#. Select :guilabel:`SIX` in the :guilabel:`Payment Terminal` field.
+#. Select :guilabel:`SIX` in the :guilabel:`Use a Payment Terminal` field.
 #. Enter the terminal's IP address in the :guilabel:`Six Terminal IP` field.
 #. Click :guilabel:`Save`.
 
 .. screenshot:: pos-six-payment-method
    :menu: Point of Sale ‣ Configuration ‣ Payment Methods ‣ New
-   :shows: A payment method form with "Integration" set to "Terminal", "Payment Terminal" set to
+   :shows: A payment method form with "Integration" set to "Terminal", "Use a Payment Terminal" set to
       "SIX", and the "Six Terminal IP" field filled in with a local IP address.
-   :highlight: The "Payment Terminal" and "Six Terminal IP" fields (red frame).
+   :highlight: The "Use a Payment Terminal" and "Six Terminal IP" fields (red frame).
    :data: Payment method named "SIX", bank journal "Bank", Six Terminal IP 192.168.1.42.
    :module: point_of_sale, pos_six
    :notes: English UI, light theme, 1440px width; scale down to about 45 % of the page width.

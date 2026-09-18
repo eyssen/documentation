@@ -14,20 +14,19 @@ Configuration
 Navigate to the :ref:`general POS app settings <configuration/settings>` and ensure
 :guilabel:`Flexible Pricelists` are enabled under the :guilabel:`Pricing` section.
 
-:ref:`Multiple prices per product <pricelists/simple>` is the default pricelist option for setting
-simple fixed price rules per product. Select :ref:`Advanced price rules (discounts, formulas)
-<pricelists/advanced>` to apply price rules to multiple products at once and to compute prices
-dynamically using percentage discounts or more complex formulas in addition to setting fixed prices.
+Once enabled, select the pricelists that the cashiers may pick from in the :guilabel:`Available`
+field, and the one applied by default in the :guilabel:`Default` field.
 
 .. screenshot:: pos-pricelists-setting
    :menu: Point of Sale ‣ Configuration ‣ Settings
-   :shows: The "Pricing" section of the POS settings with the "Pricelists" option enabled and "Advanced price rules" selected.
+   :shows: The "Pricing" section of the POS settings with the "Flexible Pricelists" option
+      enabled, two pricelists in the "Available" field and one in the "Default" field.
    :highlight: The "Pricelists" setting block (red frame).
    :module: point_of_sale, product
    :notes: English UI, light theme, 1440px width, crop to the settings block.
 
 .. note::
-   The selected pricelist type applies to the entire database, including the :doc:`Sales
+   Pricelists are shared with the rest of the database, including the :doc:`Sales
    <../../sales/products_prices/prices/pricing>` and :ref:`eCommerce <ecommerce/prices/pricelists>`
    apps.
 
@@ -37,17 +36,17 @@ Create pricelists
 -----------------
 
 Go to :menuselection:`Point of Sale --> Products --> Pricelists` and click :guilabel:`New` or
-select an existing pricelist. The pricelist setup differs depending on the :ref:`selected pricelist
-option <pricelists/configuration>`.
+select an existing pricelist. Name the pricelist, set its :guilabel:`Currency` and, if the pricelist
+is reserved for one company, its :guilabel:`Company`. Then add the price rules on the
+:guilabel:`Price Rules` tab.
 
 .. _pricelists/simple:
 
-Multiple prices per product
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Fixed prices
+~~~~~~~~~~~~
 
-When pricelists are configured to use the :guilabel:`Multiple prices per product` option, it is
-possible to use multiple fixed prices for different products or their variants depending, if
-necessary, on one or several conditions. To add a new price rule to a pricelist:
+The simplest rule sets a fixed price for a product or one of its variants, optionally under
+conditions. To add one:
 
 #. Click :guilabel:`Add a line`, and select a **product** and its **variant** if needed.
 #. Add the condition(s):
@@ -60,7 +59,8 @@ necessary, on one or several conditions. To add a new price rule to a pricelist:
 
 .. screenshot:: pos-pricelists-multiple-prices
    :menu: Point of Sale ‣ Products ‣ Pricelists ‣ New
-   :shows: A pricelist form in "Multiple prices per product" mode, with three price rules applied to products and a product category.
+   :shows: A pricelist form with three fixed-price rules applied to two products and a product
+      category.
    :data: Pricelist "Wholesale" with rules on "Desk Organizer", "Cabinet with Doors" and the "Office Furniture" category.
    :module: product
    :notes: English UI, light theme, 1440px width.
@@ -70,14 +70,13 @@ necessary, on one or several conditions. To add a new price rule to a pricelist:
 Advanced price rules
 ~~~~~~~~~~~~~~~~~~~~
 
-When pricelists are configured to use the :guilabel:`Advanced price rules (discounts, formulas)`
-option, it is possible to use percentage discounts/mark-ups and formulas in addition to using fixed
-prices. To add a new price rule to a pricelist, click :guilabel:`Add a line`. In the pop-up windows:
+Beside fixed prices, a price rule can compute the price with a percentage discount or mark-up, or
+with a formula. Open a price rule (or click :guilabel:`Add a line` and then the rule's internal
+link) to reach the full rule form:
 
-#. Select a :guilabel:`Computation` method:
+#. Select a :guilabel:`Compute Price` method:
 
-   - :guilabel:`Fixed Price` to set a new fixed price (similarly to the :guilabel:`Multiple prices
-     per product` option).
+   - :guilabel:`Fixed Price` to set a new fixed price.
    - :guilabel:`Discount` to compute a percentage discount (e.g., `10.00` %) or mark-up (e.g.,
      `-10.00` %).
    - :guilabel:`Formula` to compute the price according to a formula. It is required to define what
@@ -144,3 +143,21 @@ the desired pricelist from the list.
 .. seealso::
    - :doc:`../../sales/products_prices/prices/pricing`
    - :ref:`How to use pricelists in an ecommerce environment <ecommerce/prices/pricelists>`
+
+.. _pos/pricelists/tags:
+
+Pricelist rules based on product tags
+=====================================
+
+The *Price List Validation by Tags for POS* module (`eyssen_pos_product_pricelist_tag`) makes the
+pricelist rules that are :doc:`applied on a pricelist tag
+<../../../inventory_and_mrp/inventory/product_management/pricing_extensions>` work in the POS as
+well: the tags of the products and the tag of each price rule are loaded into the session, so the
+discount is computed on the register exactly as it is in the back end.
+
+No POS-side configuration is needed beyond selecting the pricelist as usual; the tags and the rules
+are maintained on the products and the pricelists.
+
+.. note::
+   This module requires the *Price List Validation by Tags* module
+   (`eyssen_product_pricelist_tag`).

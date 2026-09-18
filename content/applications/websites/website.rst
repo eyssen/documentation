@@ -43,6 +43,16 @@ with other Odoo apps to expand your website's functionality.
       Configure mail groups to allow website visitors to participate in public discussions via
       email.
 
+   .. card:: Store locator
+      :target: website/store_locator
+
+      Publish your physical stores with their address and opening hours.
+
+   .. card:: Online appointments
+      :target: website/appointments
+
+      Let visitors book an appointment on the website and pay for it online.
+
 .. note::
    :doc:`Map your own domain name <website/configuration/domain_names>` to the database so that
    visitors can access the website with an address such as `www.example.com`.
@@ -58,3 +68,5 @@ with other Odoo apps to expand your website's functionality.
    website/configuration
    website/reporting
    website/mail_groups
+   website/store_locator
+   website/appointments

@@ -172,6 +172,62 @@ editor, then, in the :guilabel:`Mega Menu` section:
 
 To finalize changes, click on :guilabel:`Save`.
 
+.. _website/header_footer/auto-mega-menus:
+
+Automatic category mega menus
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Keeping a mega menu in sync with a large eCommerce category tree by hand is tedious. The *Auto
+Category Mega Menu* module (`website_sale_megamenu_category`) generates the content of a mega menu
+from the :doc:`eCommerce categories <../../ecommerce/products/catalog>`.
+
+On a mega menu item in the :guilabel:`Menu Editor`, enable :guilabel:`Auto-generate mega menu` and
+set:
+
+- :guilabel:`Starting category`: the category whose children are listed. Leave it empty to start
+  from the top of the tree.
+- :guilabel:`Depth`: how many levels of sub-categories are included, two by default.
+- :guilabel:`Mega-menu template`: the layout used to render the generated menu.
+
+The menu is regenerated when the category tree changes. Three buttons control it:
+
+- :guilabel:`Regenerate`: rebuilds the menu content from the categories;
+- :guilabel:`Force regenerate (discard edits)`: rebuilds it even if the menu was edited by hand,
+  discarding those edits;
+- :guilabel:`Detach / make manual`: stops the automatic generation and keeps the current content as
+  an ordinary, hand-edited mega menu.
+
+.. screenshot:: website-header_footer-auto-mega-menu
+   :menu: Website ‣ Site ‣ Menu Editor ‣ (mega menu item)
+   :shows: A mega menu item with Auto-generate mega menu enabled, the Starting category, Depth and Mega-menu template fields, and the Regenerate / Force regenerate / Detach buttons.
+   :highlight: The Auto-generate mega menu checkbox and the Starting category field (red frame).
+   :data: Starting category "Shop", depth 2, template "Columns".
+   :module: website_sale_megamenu_category
+   :notes: English UI, light theme, 1440px width.
+
+Which categories appear in the menu is controlled on the category itself. Each eCommerce category
+has a :guilabel:`Show in mega menu` state and an :guilabel:`Auto-manage menu visibility` option:
+while the latter is enabled, a scheduled job hides categories that currently have no available
+product and shows them again when they do, so that the menu never leads to an empty page. Turn the
+option off on a category to set its visibility by hand.
+
+The layouts themselves are managed under :menuselection:`Website --> Configuration --> Mega Menu
+Templates`, where each template holds its own :guilabel:`XML`, :guilabel:`CSS` and :guilabel:`JS`,
+together with a revision :guilabel:`History` that can be compared and restored.
+
+.. screenshot:: website-header_footer-mega-menu-templates
+   :menu: Website ‣ Configuration ‣ Mega Menu Templates ‣ (template)
+   :shows: A mega menu template with its XML, CSS and JS tabs and the History section listing previous revisions with the Compare and Restore buttons.
+   :highlight: The History section (red frame).
+   :data: Template "Columns" with three revisions.
+   :module: website_sale_megamenu_category
+   :notes: English UI, light theme, 1440px width.
+
+.. note::
+   The generated menus are listed under :menuselection:`Website --> Configuration --> Auto Mega
+   Menus`, which gives an overview of every automatically managed mega menu and of the ones whose
+   content no longer matches the category tree.
+
 Hide a dynamic menu item for non-logged in users
 ------------------------------------------------
 

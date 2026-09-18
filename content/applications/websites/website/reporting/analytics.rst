@@ -172,6 +172,21 @@ To configure GTM, proceed as follows:
       :module: website_google_analytics
       :notes: English UI, light theme, 1440px width.
 
+.. tip::
+   With the *Odoo Google Tag Manager* module (`website_google_tag`) installed, the container script
+   does not have to be injected by hand. Go to :menuselection:`Website --> Configuration -->
+   Settings`, enable :guilabel:`Google Tag Manager` under the Google Analytics setting, and enter
+   the :guilabel:`Container ID` (e.g., `GTM-XXXXXXX`). The tag is then inserted on every page of
+   that website, and the setting is per website, so each website can use its own container.
+
+   .. screenshot:: website-analytics-gtm-container-id
+      :menu: Website ‣ Configuration ‣ Settings
+      :shows: The Website settings page with the Google Tag Manager setting enabled and the Container ID field filled in, right below the Google Analytics setting.
+      :highlight: The Google Tag Manager setting and its Container ID field (red frame).
+      :data: Use a throw-away container ID.
+      :module: website_google_tag
+      :notes: English UI, light theme, 1440px width, crop to the setting.
+
 .. note::
    The data is collected in the marketing tools used to monitor the website (e.g., Google Analytics,
    Plausible, Facebook Pixel), not in Odoo.

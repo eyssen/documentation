@@ -189,6 +189,21 @@ click :guilabel:`Edit`. Replace the placeholder code with your custom embed code
    :module: website
    :notes: English UI, light theme, 1440px width.
 
+.. tip::
+   With the *Website Code Editor — Insert Media* module (`website_code_editor_media`) installed, a
+   :guilabel:`Media` button is available in the code editor of the :guilabel:`Embed Code` block —
+   and in the website's HTML/CSS/JS resource editor. It opens the usual media dialog and inserts the
+   URL of the selected image or document at the cursor, so that an image from the media library can
+   be referenced in hand-written code without looking up its address.
+
+   .. screenshot:: website-building_blocks-code-editor-insert-media
+      :menu: Website ‣ Edit ‣ (Embed Code block) ‣ Edit
+      :shows: The embedded code editor with the Media button above the code area, and the media dialog opened over it.
+      :highlight: The Media button (red frame).
+      :data: One image selected in the media library.
+      :module: website_code_editor_media
+      :notes: English UI, light theme, 1440px width.
+
 .. warning::
    Do not copy/paste code you do not understand, as it could put your data at risk.
 

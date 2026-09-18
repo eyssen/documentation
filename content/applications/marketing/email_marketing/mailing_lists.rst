@@ -6,9 +6,8 @@ Mailing lists in Odoo are used for both pre and post sales communications in the
 application. They provide sales teams with qualified lead lists, focus group participants, or
 current customers that fulfill specific criteria.
 
-Mailing lists can be generated in Odoo, and exported as a downloadable file, or into the
-*Knowledge*, *Dashboards*, or *Spreadsheets* applications, or imported via copy/paste or file
-upload.
+Mailing lists can be generated in Odoo and exported as a downloadable file, or built by importing
+contacts via copy/paste or file upload.
 
 Create mailing lists
 ====================

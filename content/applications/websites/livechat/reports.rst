@@ -54,19 +54,15 @@ If the visitor left a rating, it is included at the end of the transcript.
 Export sessions history
 -----------------------
 
-The information in this report can be exported, or inserted into a spreadsheet.
+The information in this report can be exported to a file.
 
 On the *Sessions History* report, click the :icon:`oi-view-list` :guilabel:`(List)` icon to switch
 to list view. Next, click the :icon:`fa-cog` :guilabel:`(gear)` icon to the right of the
-:guilabel:`History` page title to reveal a drop-down menu.
-
-From the drop-down menu, click :guilabel:`Export All` to export all sessions to a spreadsheet, or
-:guilabel:`Insert list in spreadsheet` to insert the information in a new, or existing, spreadsheet.
+:guilabel:`History` page title, and click :guilabel:`Export All` to export every session.
 
 To only export select sessions, first select the desired sessions to be exported from the list, by
 clicking the checkbox to the left of each individual session. With the sessions selected, click the
-:icon:`fa-cog` :guilabel:`Actions` icon at the top of the page, and click :guilabel:`Export` or
-:guilabel:`Insert list in spreadsheet`.
+:icon:`fa-cog` :guilabel:`Actions` icon at the top of the page, and click :guilabel:`Export`.
 
 .. _livechat/session-statistics:
 

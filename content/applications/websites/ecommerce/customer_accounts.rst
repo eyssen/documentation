@@ -40,6 +40,11 @@ of the following options:
 - :guilabel:`Free sign up`: Every website visitor can create an account and sign in. They will
   get access to the :doc:`portal <../../general/users/portal>` by default.
 
+.. tip::
+   With :guilabel:`Free sign up` selected, the :guilabel:`Default Access Rights` link below it opens
+   the template user, whose groups are copied to every self-registered account. Adjust it to control
+   what new customers may see, instead of changing the rights of each account afterwards.
+
 .. _ecommerce/customer_accounts/grant-access:
 
 To send an email invitation to a customer:

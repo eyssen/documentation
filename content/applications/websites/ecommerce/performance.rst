@@ -28,8 +28,8 @@ By clicking :guilabel:`Measures`, you can select the type of measurement used, s
 - :guilabel:`Volume`;
 - ...
 
-Other options include **multiple views (Pivot, etc.), comparison** by periods or years, and directly
-:guilabel:`insert in spreadsheet`, etc.
+Other options include **multiple views (Pivot, etc.)**, **comparison** by periods or years, and the
+export of the report to a file.
 
 Analytics
 =========

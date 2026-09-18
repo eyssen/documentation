@@ -191,6 +191,56 @@ easily track, manage, and analyze all event attendees.
 The :guilabel:`Barcode Nomenclature` field, beneath the :guilabel:`Use Event Barcode` setting, is
 set to :guilabel:`Default Nomenclature`, by default, but can be changed at any time.
 
+.. _events/stages:
+
+Event stages
+============
+
+The events on the dashboard are organized in stages, which describe where each event stands in its
+preparation. The default stages are :guilabel:`New`, :guilabel:`Booked`, :guilabel:`Announced`,
+:guilabel:`Ended` and :guilabel:`Cancelled`; they can be renamed, reordered and completed under
+:menuselection:`Events app --> Configuration --> Event Stages`.
+
+A stage has:
+
+- :guilabel:`Stage Name` and :guilabel:`Stage description`;
+- :guilabel:`Folded in Kanban`: the stage's column is collapsed on the dashboard, which keeps
+  finished or cancelled events out of the way;
+- :guilabel:`End Stage`: events are moved into this stage automatically once they are over;
+- the three kanban state labels (:guilabel:`Red`, :guilabel:`Green` and :guilabel:`Grey Kanban
+  Label`), which rename the status a user can set on an event card, for example to mark an event as
+  blocked.
+
+.. screenshot:: events-events-event-stages
+   :menu: Events ‣ Configuration ‣ Event Stages
+   :shows: The Event Stages list with the default stages, their sequence and the Folded in Kanban and End Stage columns.
+   :highlight: The End Stage column (red frame).
+   :data: The five default event stages.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
+
+.. _events/tags:
+
+Event tags
+==========
+
+Events are categorized with tags, and the tags themselves are grouped into categories
+(:menuselection:`Events app --> Configuration --> Event Tags Categories`). A category — for example
+*Format* or *Audience* — holds its own tags, and the order of both the categories and their tags is
+set by their sequence.
+
+A tag's :guilabel:`Color Index` decides whether it is public: a tag without a color is only visible
+internally, while a colored tag is also displayed on the event website, where visitors can filter
+the events by it.
+
+.. screenshot:: events-events-event-tag-categories
+   :menu: Events ‣ Configuration ‣ Event Tags Categories ‣ (category)
+   :shows: An event tag category with its name, sequence and the list of its tags with their colors.
+   :highlight: The tag list with the colors (red frame).
+   :data: Category "Format" with the tags "Online", "On site" and an uncolored internal tag.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
+
 Create events
 =============
 

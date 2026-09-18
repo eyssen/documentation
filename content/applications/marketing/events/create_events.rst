@@ -89,7 +89,7 @@ The following are fields found on an event form:
 
   .. tip::
      Tags can be displayed on events that are listed on the website by enabling the *Show on
-     Website* checkbox from :menuselection:`Events app --> Configuration --> Event Tag Categories`.
+     Website* checkbox from :menuselection:`Events app --> Configuration --> Event Tags Categories`.
 
 - :guilabel:`Organizer`: designate the organizer of the event (a company, contact, or employee).
 - :guilabel:`Responsible`: designate a user in the database to be responsible for this event.

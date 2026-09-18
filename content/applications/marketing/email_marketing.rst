@@ -804,6 +804,12 @@ When the *Mailing Campaigns* feature is activated, a new *Campaigns* option appe
 the *Email Marketing* application. Campaigns can be created directly on the *Campaigns* page in the
 *Email Marketing* app.
 
+.. note::
+   The campaigns on that page are organized in stages, which can be renamed, reordered and completed
+   under :menuselection:`Email Marketing app --> Configuration --> Campaign Stages`. Marking a stage
+   as :guilabel:`Folded in Kanban` collapses its column, which keeps finished campaigns out of the
+   way.
+
 To do that, navigate to :menuselection:`Email Marketing app --> Campaigns --> New`.
 
 Kanban view

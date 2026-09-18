@@ -327,6 +327,31 @@ The :guilabel:`Participations` page can also be viewed in a Kanban layout, as we
    :module: survey
    :notes: English UI, light theme, 1440px width.
 
+.. _surveys/analysis/detailed-answers:
+
+Detailed answers
+================
+
+To work with the individual answers across all surveys — for instance to export them, or to look for
+a specific answer given to a question — go to :menuselection:`Surveys app --> Questions & Answers
+--> Detailed Answers`. Each line is one answer of one participant to one question, with the survey,
+the question, the participant and the value given, so the list can be filtered and grouped like any
+other Odoo report.
+
+The same menu also holds:
+
+- :guilabel:`Questions`: every question of every survey, which makes it easy to find where a
+  question is used;
+- :guilabel:`Suggested Values`: the answer options offered by the choice and matrix questions.
+
+.. screenshot:: surveys-analysis-detailed-answers
+   :menu: Surveys ‣ Questions & Answers ‣ Detailed Answers
+   :shows: The Detailed Answers list with the survey, question, participant and answer value columns.
+   :highlight: The answer value column (red frame).
+   :data: About thirty answers from two surveys.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
+
 .. seealso::
    - :doc:`create`
    - :doc:`scoring`

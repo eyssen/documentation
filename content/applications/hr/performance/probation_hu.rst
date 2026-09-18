@@ -64,6 +64,14 @@ The decision is a record of its own, not a field on the review. It has its own d
 own lock and its own audit trail, because it is the thing that gets handed to a person and may
 have to be produced years later.
 
+.. screenshot:: hr-performance-probation-decision
+   :menu: Performance ‣ Reviews ‣ (open a probation review) ‣ Probation Decision
+   :shows: A probation decision record with the employment start, the decision, the decision date and who decided.
+   :highlight: The Decision field (red frame).
+   :data: Employee "Anita Kovács", employment start 2026-01-06, decision taken on 2026-03-25.
+   :module: l10n_hu_hr_review
+   :notes: English UI, light theme, 1440px width.
+
 Reach it from the :guilabel:`Probation Decision` button, or the page of the same name, on a
 probation review — both visible to an officer — or from
 :menuselection:`Performance --> Reviews --> Probation Decisions`.
@@ -194,6 +202,19 @@ Four released questionnaires, all in Hungarian:
 Each was written from Hungarian HR practice and from the obligations of the Labour Code. They
 are ordinary questionnaires: use them as they are, or use :guilabel:`New Version` to make them
 yours.
+
+The competency starter set
+--------------------------
+
+With the **Review Competencies** module installed as well, the *Hungary - Review Competencies*
+(``l10n_hu_hr_review_competency``) module installs itself and adds a Hungarian competency starter
+set: the *Munkahelyi kompetenciák* skill type with a four-step ladder (*Kezdő*, *Gyakorlott*,
+*Önálló*, *Szakértő*), six workplace competencies — *Szakmai tudás*, *Munka minősége*, *Önállóság
+és felelősségvállalás*, *Együttműködés*, *Kommunikáció* and *Problémamegoldás* — and a
+:ref:`behavioural anchor <performance/competencies/anchors>` for every competency at every step.
+
+It carries data only. Every record is ordinary configuration: rename it, extend it, or archive the
+skill type and write your own.
 
 Company defaults
 ----------------

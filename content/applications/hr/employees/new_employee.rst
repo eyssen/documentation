@@ -455,6 +455,11 @@ PRIVATE CONTACT
   miles (:guilabel:`mi`) using the drop-down menu. This field is only necessary if the employee is
   receiving any type of commuter benefits or tax deductions based on commute distances.
 - :guilabel:`Private Car Plate`: enter the license plate for the employee's personal car.
+- :guilabel:`Holds a Driving Licence`: tick this checkbox when the employee holds a driving licence.
+- :guilabel:`Mailing Address Matches Private Address`: leave this ticked when post is sent to the
+  private address. Untick it to enter a separate :guilabel:`Mailing Street`,
+  :guilabel:`Mailing City`, :guilabel:`Mailing Zip`, :guilabel:`Mailing State` and
+  :guilabel:`Mailing Country`.
 
 EMERGENCY
 ---------
@@ -465,11 +470,15 @@ This section details the person to contact in the event of an emergency.
 - :guilabel:`Contact Phone`: enter the emergency contact's phone number. It is recommended to enter
   a phone number that the person has the most access to, typically a mobile phone.
 
+.. note::
+   When more than one emergency contact has to be kept, record them in the
+   :ref:`Dependants & Emergency <employees/dependants-emergency>` tab instead. These two fields then
+   show the first contact of that list and can no longer be edited here.
+
 FAMILY STATUS
 -------------
 
-This section is used for tax purposes, and affects the **Payroll** app. Enter the following
-information in the fields.
+This section is used for tax purposes. Enter the following information in the fields.
 
 - :guilabel:`Marital Status`: select the marital status for the employee using the drop-down menu.
   The default options are :guilabel:`Single`, :guilabel:`Married`, :guilabel:`Legal Cohabitant`,
@@ -481,6 +490,9 @@ information in the fields.
 - :guilabel:`Number of Dependent Children`: enter the number of dependent children. This number is
   the same number used for calculating tax deductions, and should follow all tax regulations
   regarding applicable dependents.
+- :guilabel:`Dependants Count`: the number of dependants actually registered in the
+  :ref:`Dependants & Emergency <employees/dependants-emergency>` tab. A warning appears when it
+  differs from :guilabel:`Number of Dependent Children`.
 
 CITIZENSHIP
 -----------
@@ -500,6 +512,9 @@ Information for all fields may not be available.
 - :guilabel:`Date of Birth`: using the calendar selector, select the birthday of the employee.
 - :guilabel:`Place of Birth`: enter the city or town the employee was born.
 - :guilabel:`Country of Birth`: using the drop-down menu, select the country the employee was born.
+- :guilabel:`Birth Name`: the employee's name at birth, when it differs from the current name.
+- :guilabel:`Mother's Name`: the mother's maiden name, which several national employment
+  registrations require.
 
 EDUCATION
 ---------
@@ -528,6 +543,58 @@ section may be left blank if they do not require any work permits for employment
   employee's work permit expires.
 - :guilabel:`Work Permit`: click :guilabel:`Upload your file`, then navigate to the work permit file
   in the file explorer, and click :guilabel:`Select` to add the permit.
+
+.. _employees/dependants-emergency:
+
+Dependants & Emergency tab
+==========================
+
+This tab records the people around the employee that the employer has to know about: the dependants
+the employee is entitled to claim, and everyone who may be contacted in an emergency. It replaces
+the single emergency contact of the :ref:`Private Information <employees/private-info>` tab.
+
+Dependants
+----------
+
+Click :guilabel:`Add a line` in the :guilabel:`Dependants` list and fill in:
+
+- :guilabel:`Name`: the dependant's name. This field is **required**.
+- :guilabel:`Relationship`: :guilabel:`Child`, :guilabel:`Spouse`, :guilabel:`Parent`, or
+  :guilabel:`Other`.
+- :guilabel:`Date of Birth`, :guilabel:`Place of Birth` and :guilabel:`Country of Birth`.
+- :guilabel:`Mother's Name`: the dependant's mother's maiden name, which some national
+  registrations require.
+- :guilabel:`Identification No` and :guilabel:`SSN No`: the dependant's tax and social security
+  identifiers.
+- :guilabel:`Counts as Dependant`: untick this when the person is registered for reference only and
+  must not be counted, for example an adult child.
+- :guilabel:`Valid From` and :guilabel:`Valid To`: the period during which the person qualifies as a
+  dependant. Leave the end date empty while it is open-ended.
+
+The number of registered dependants is shown as :guilabel:`Dependants Count` in the
+:ref:`Family Status <employees/private-info>` section, and a warning appears there when it differs
+from the :guilabel:`Number of Dependent Children`.
+
+Emergency contacts
+------------------
+
+Click :guilabel:`Add a line` in the :guilabel:`Emergency Contacts` list and fill in the
+:guilabel:`Contact Name`, the :guilabel:`Contact Phone`, the :guilabel:`Relation to Employee`
+(spouse, parent, friend, and so on) and any :guilabel:`Note`. Order the contacts by dragging the
+:icon:`oi-draggable` :guilabel:`(drag)` handle; the first one fills the emergency fields of the
+:ref:`Private Information <employees/private-info>` tab.
+
+.. screenshot:: hr-employees-dependants-emergency
+   :menu: Employees ‣ Employees ‣ (open an employee) ‣ Dependants & Emergency
+   :shows: The Dependants & Emergency tab with two dependants and two emergency contacts listed.
+   :highlight: The Counts as Dependant column and the first emergency contact line (red frame).
+   :data: Employee "Anita Kovács" with two children and two emergency contacts; use invented personal data.
+   :module: hr_employee_extra
+   :notes: English UI, light theme, 1440px width.
+
+.. note::
+   This tab comes from the *Employee Extra Personal Data* (`hr_employee_extra`) module, and is only
+   visible to users with the :guilabel:`Employee Manager` access right.
 
 .. _employees/hr-settings:
 

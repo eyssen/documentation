@@ -70,6 +70,14 @@ Scores and rating analysis
 list, graph and pivot: the proposed rating, the final rating, the self, manager and composite
 scores, the potential and the flight risk.
 
+.. screenshot:: hr-performance-reporting-scores
+   :menu: Performance ‣ Reporting ‣ Rating Analysis
+   :shows: The rating analysis in pivot view, with the rating distribution per department next to the advisory target share of each level.
+   :highlight: The target share column (red frame).
+   :data: Cycle "2026 annual review", four departments.
+   :module: hr_review
+   :notes: English UI, light theme, 1440px width.
+
 Use it for the questions a single review cannot answer:
 
 - **Distribution.** How many people ended at each level, per department and per reviewer. Set

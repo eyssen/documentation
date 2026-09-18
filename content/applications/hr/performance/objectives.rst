@@ -59,6 +59,14 @@ Creating an objective
 
 .. _performance/objectives/metrics:
 
+.. screenshot:: hr-performance-objective-form
+   :menu: Performance ‣ Objectives ‣ My Objectives ‣ New
+   :shows: An objective form with its kind, owner, period, measurement, start and target value, confidence and alignment.
+   :highlight: The Measurement group with the start and target values (red frame).
+   :data: Objective "Reduce warehouse picking errors", start 4.2%, target 1.5%.
+   :module: hr_objective
+   :notes: English UI, light theme, 1440px width.
+
 Measuring an objective
 ======================
 
@@ -144,6 +152,14 @@ Check-ins
 
 A check-in states where an objective stands on a given date, how confident its owner is, and
 why. It is what turns a percentage into something the next review can actually talk about.
+
+.. screenshot:: hr-performance-objective-checkin
+   :menu: Performance ‣ Objectives ‣ My Objectives ‣ (open an objective) ‣ Check-ins
+   :shows: The check-in list of an objective with the dates, the recorded values, the confidence and the "What happened" notes.
+   :highlight: The confidence column (red frame).
+   :data: Four monthly check-ins with a falling error rate.
+   :module: hr_objective
+   :notes: English UI, light theme, 1440px width.
 
 #. Open the objective and click :guilabel:`Check In`.
 #. Enter the :guilabel:`Date`, the :guilabel:`New Value` the objective reached, and your

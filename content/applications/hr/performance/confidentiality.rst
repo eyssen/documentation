@@ -161,6 +161,14 @@ Running a purge
    point.
 #. If you are satisfied, click :guilabel:`Anonymise the Listed Reviews` and confirm.
 
+.. screenshot:: hr-performance-purge-wizard
+   :menu: Performance ‣ Configuration ‣ Retention and Purge
+   :shows: The purge wizard in Dry Run mode, listing the reviews past their retention date and the ones refused under legal hold.
+   :highlight: The refused-under-legal-hold lines (red frame).
+   :data: Eight reviews past retention, one under legal hold.
+   :module: hr_review
+   :notes: English UI, light theme, 1440px width.
+
 .. important::
    A purge **anonymises**; it does not delete. Each review keeps its row, its dates, the rating
    that was released and the sign-off, and is archived. What is removed is the free text and the

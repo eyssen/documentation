@@ -17,6 +17,14 @@ Behavioural anchors
 A rater who reads *Expert (90%)* learns nothing. A rater who reads what somebody at that level
 actually does in this job rates the same way as their colleague two aisles down.
 
+.. screenshot:: hr-performance-competency-anchors
+   :menu: Performance ‣ Configuration ‣ Behavioural Anchors
+   :shows: The behavioural anchor list with the competency, the level and the description of what somebody at that level actually does.
+   :highlight: The description column (red frame).
+   :data: Competency "Kommunikáció" with its four levels described.
+   :module: hr_review_competency, l10n_hu_hr_review_competency
+   :notes: English UI, light theme, 1440px width.
+
 Go to :menuselection:`Performance --> Configuration --> Behavioural Anchors` and write one
 description per skill level:
 
@@ -54,6 +62,14 @@ Competencies in a review
 
 For a questionnaire to assess competencies, give it a section whose :guilabel:`Kind` is
 *Competencies* — see :doc:`configuration`.
+
+.. screenshot:: hr-performance-competency-gap
+   :menu: Performance ‣ Reviews ‣ My Reviews ‣ (open a review) ‣ Competencies
+   :shows: The competency lines of a review with the required level, the previous level, the agreed level and the below-the-requirement marker.
+   :highlight: The Below the Requirement column (red frame).
+   :data: Six competencies, two of them below the requirement of the job.
+   :module: hr_review_competency
+   :notes: English UI, light theme, 1440px width.
 
 When the review is opened, one line is created for each of the employee's current skills
 **plus** each skill their job requires that they do not have yet. The second half matters: a

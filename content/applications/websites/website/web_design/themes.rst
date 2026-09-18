@@ -59,9 +59,13 @@ If you want to modify them, click on :guilabel:`Color Presets` and click on a pr
 further. Each color preset contains colors for your building block’s background, text, headings,
 links, primary buttons, and secondary buttons.
 
-.. image:: themes/color-presets.png
-   :scale: 80%
-   :alt: Color presets
+.. screenshot:: website-themes-color-presets
+   :menu: Website ‣ Edit ‣ Theme ‣ Colors
+   :shows: The Theme tab of the editor sidebar showing the five color presets with their color combinations.
+   :highlight: The color presets (red frame).
+   :data: Demo website 'My Website' in the website editor.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 To apply a color preset to a building block on your site, select the building block, go to the
 :guilabel:`Customize` tab, click the color dot located next to :guilabel:`Background`, and choose a
@@ -82,11 +86,21 @@ users and website visitors. To customize your website's :guilabel:`Status Colors
 the :guilabel:`Advanced` section and click on the dots to change their color.
 
 .. example::
-   .. image:: themes/advanced.png
-      :alt: Status color selection
+   .. screenshot:: website-themes-advanced
+      :menu: Website ‣ Edit ‣ Theme ‣ Colors ‣ Advanced
+      :shows: The advanced color settings with the status colors (Success, Info, Warning, Error) and their color pickers.
+      :highlight: The status colors (red frame).
+      :data: Demo website 'My Website' in the website editor.
+      :module: website
+      :notes: English UI, light theme, 1440px width.
 
-   .. image:: themes/success.png
-      :alt: Success pop-up
+   .. screenshot:: website-themes-success
+      :menu: (website)
+      :shows: A published page showing a success pop-up message rendered in the theme's Success color.
+      :highlight: The success pop-up (red frame).
+      :data: Demo website 'My Website' in the website editor.
+      :module: website
+      :notes: English UI, light theme, 1440px width.
 
 .. _website/themes/page-layouts:
 
@@ -152,17 +166,26 @@ To customize the style of your website's primary and secondary buttons, navigate
 - Customize the buttons' border radius using the :guilabel:`Round Corners` option.
 - Add an animation when a button is clicked in the :guilabel:`On Click Effect` dropdown menu.
 
-.. image:: themes/buttons.png
-   :alt: Primary and secondary buttons
+.. screenshot:: website-themes-buttons
+   :menu: Website ‣ Edit ‣ Theme ‣ Buttons
+   :shows: A page showing a primary and a secondary button side by side as rendered by the current theme.
+   :highlight: The two buttons (red frame).
+   :data: Demo website 'My Website' in the website editor.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    You can define custom :guilabel:`Small` and :guilabel:`Large` sizes for the buttons'
    :guilabel:`Padding`, :guilabel:`Font Size`, and :guilabel:`Round Corners`: Click on the
    :icon:`fa-caret-right` (arrow) icon and use the related fields.
 
-   .. image:: themes/button-settings.png
-      :scale: 80%
-      :alt: Button padding, font size and round corners settings
+   .. screenshot:: website-themes-button-settings
+      :menu: Website ‣ Edit ‣ Theme ‣ Buttons
+      :shows: The button settings in the Theme tab with the padding, font size and rounded corners options.
+      :highlight: The padding, font size and corner options (red frame).
+      :data: Demo website 'My Website' in the website editor.
+      :module: website
+      :notes: English UI, light theme, 1440px width.
 
 Link style
 ==========

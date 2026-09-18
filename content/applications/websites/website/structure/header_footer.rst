@@ -65,15 +65,25 @@ you can:
 - **create a regular drop-down menu** by dragging and dropping the sub-menu items to the right,
   underneath their parent menu.
 
-.. image:: header_footer/menu-editor.png
-   :alt: Menu editor with sub-menus
+.. screenshot:: website-header_footer-menu-editor
+   :menu: Website ‣ Site ‣ Menu Editor
+   :shows: The Menu Editor pop-up window with the menu entries and their indented sub-menus, plus the Add Menu Item button.
+   :highlight: The sub-menu entries (red frame).
+   :data: Menu with the entries Home, Shop, Services (with two sub-items) and Contact us.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    You can also access the menu editor by clicking :guilabel:`Edit`, selecting any menu item, and
    clicking the :guilabel:`Edit Menu` icon.
 
-  .. image:: header_footer/edit-menu-icon.png
-     :alt: Access the Menu editor while in Edit mode.
+  .. screenshot:: website-header_footer-edit-menu-icon
+     :menu: Website ‣ Edit ‣ (header)
+     :shows: The website header in edit mode with the Edit Menu (pencil) icon that opens the Menu Editor.
+     :highlight: The Edit Menu icon (red frame).
+     :data: Demo website 'My Website'.
+     :module: website
+     :notes: English UI, light theme, 1440px width.
 
 .. _website/header_footer/menu-items:
 
@@ -121,8 +131,13 @@ amounts of content or :doc:`e-commerce websites <../../ecommerce>`, as they can 
 your web pages or :doc:`e-commerce categories <../../ecommerce/products/catalog>` in the menu while
 still making all menu items visible at once.
 
-.. image:: header_footer/mega-menu.png
-   :alt: Mega menu in the navigation bar.
+.. screenshot:: website-header_footer-mega-menu
+   :menu: (website)
+   :shows: The website navigation bar with a mega menu dropped down over the page, showing its columns of links and images.
+   :highlight: The opened mega menu (red frame).
+   :data: Mega menu 'Services' with three columns.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 To create a mega menu, go to :menuselection:`Website --> Site --> Menu Editor` and click
 :guilabel:`Add Mega Menu Item`. Enter the :guilabel:`Name` of the mega menu in the pop-up, click
@@ -137,8 +152,13 @@ each component individually. For example:
   in the small preview pop-up. Type `/` to search for a page on your website, or `#` to search for
   an existing custom anchor.
 
-  .. image:: header_footer/mega-menu-option.png
-     :alt: Edit a mega menu option.
+  .. screenshot:: website-header_footer-mega-menu-option
+     :menu: Website ‣ Edit ‣ (mega menu)
+     :shows: The editor's right sidebar for a selected mega menu with the Template and Size options.
+     :highlight: The Template option (red frame).
+     :data: Demo website 'My Website'.
+     :module: website
+     :notes: English UI, light theme, 1440px width.
 
 - Move a menu item by dragging and dropping the related block to the desired position in the mega
   menu.

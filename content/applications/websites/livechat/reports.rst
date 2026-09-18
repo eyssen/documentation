@@ -31,8 +31,12 @@ provides access to the complete transcripts of live chat sessions.
 To access this report, navigate to :menuselection:`Live Chat app --> Report --> Sessions History`.
 Each live chat session is represented by a Kanban card.
 
-.. image:: reports/sessions-history.png
-   :alt: Example of the Sessions History report from the Live Chat application.
+.. screenshot:: livechat-reports-sessions-history
+   :menu: Live Chat ‣ Reports ‣ Sessions History
+   :shows: The Sessions History list with the Attendees, Channel, Start Date, Duration, Messages, Rating and Status columns.
+   :data: About ten finished live chat sessions.
+   :module: im_livechat
+   :notes: English UI, light theme, 1440px width.
 
 To view the transcript from a specific session, click the Kanban card. This opens the *Discuss*
 thread for the conversation.
@@ -40,8 +44,12 @@ thread for the conversation.
 In the *Discuss* thread, the conversation view displays the entire transcript of the conversation.
 If the visitor left a rating, it is included at the end of the transcript.
 
-.. image:: reports/chat-transcript.png
-   :alt: View of the chat transcript in the Discuss application.
+.. screenshot:: livechat-reports-chat-transcript
+   :menu: Live Chat ‣ Reports ‣ Sessions History ‣ (session)
+   :shows: The full transcript of one live chat session opened in Discuss.
+   :data: One session with about a dozen messages.
+   :module: im_livechat
+   :notes: English UI, light theme, 1440px width.
 
 Export sessions history
 -----------------------
@@ -71,11 +79,13 @@ view for this report displays sessions grouped by the date of creation.
 To access this report, navigate to :menuselection:`Live Chat app --> Reports --> Session
 Statistics`.
 
-.. figure:: reports/sessions-statistics.png
-   :alt: Example of the Sessions Statistics report from the Live Chat application.
-
-   The stacked bar graph view of the *Session Statistics* report, with results grouped by Creation
-   Date (hour), then by rating.
+.. screenshot:: livechat-reports-sessions-statistics
+   :menu: Live Chat ‣ Reports ‣ Session Statistics
+   :shows: The Session Statistics report as a stacked bar chart grouped by Creation Date (hour) and by rating.
+   :highlight: The Measures menu and the group-by breadcrumbs (red frame).
+   :data: Sessions of one week.
+   :module: im_livechat
+   :notes: English UI, light theme, 1440px width.
 
 To view a different measure, click the :guilabel:`Measures` drop-down menu at the top-left of the
 report. The measures available for this report include:
@@ -120,5 +130,9 @@ report. The measures available for this report include:
   request, in seconds.
 - :guilabel:`Count`: the total number of sessions.
 
-.. image:: reports/operator-analysis.png
-   :alt: Example of the Operator Analysis report from the Live Chat application.
+.. screenshot:: livechat-reports-operator-analysis
+   :menu: Live Chat ‣ Reports ‣ Operator Analysis
+   :shows: The Operator Analysis report as a pivot table with the operators in rows and the measures (sessions, average rating, average duration) in columns.
+   :data: Two operators over one month.
+   :module: im_livechat
+   :notes: English UI, light theme, 1440px width.

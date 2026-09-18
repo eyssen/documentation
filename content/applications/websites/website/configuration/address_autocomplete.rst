@@ -7,8 +7,13 @@ exist and are understood by the carrier. The Google Places API allows developers
 information about places using HTTP requests. The autocompletion predicts a list of places when the
 user starts typing the address.
 
-.. image:: address_autocomplete/address-autocomplete-example.png
-   :alt: Address autocomplete example
+.. screenshot:: website-address_autocomplete-address-autocomplete-example
+   :menu: (website) ‣ Checkout
+   :shows: The address form of the checkout with the Google Places suggestions dropped down under the Address field as the visitor types.
+   :highlight: The suggestion list (red frame).
+   :data: Demo website 'My Website'.
+   :module: website, base_geolocalize
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - `Google Maps Platform <https://mapsplatform.google.com/maps-products>`_
@@ -18,8 +23,13 @@ user starts typing the address.
 To do so, go to :menuselection:`Website --> Configuration --> Settings` and enable
 :guilabel:`Address Autocomplete` in the :guilabel:`SEO` section.
 
-.. image:: address_autocomplete/enable-address-autocomplete.png
-   :alt: Enable address autocomplete
+.. screenshot:: website-address_autocomplete-enable-address-autocomplete
+   :menu: Website ‣ Configuration ‣ Settings
+   :shows: The Website settings page with the Address Autocomplete checkbox enabled and the Google Places API Key field filled in.
+   :highlight: The Address Autocomplete setting and the API key field (red frame).
+   :data: API key shown; use a throw-away key.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 Insert your :guilabel:`Google Places API key` in the :guilabel:`API Key` field. If you don't have
 one, create yours on the `Google Cloud Console <https://console.cloud.google.com/getting-started>`_

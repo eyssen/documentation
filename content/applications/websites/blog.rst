@@ -55,8 +55,13 @@ You can add and create tags directly from posts by clicking :menuselection:`Edit
 select the post's cover. Under :guilabel:`Tags`, click :guilabel:`Choose a record...`, and select
 or create a tag.
 
-.. image:: blog/create-tag.png
-   :alt: Adding a tag to a blog post
+.. screenshot:: blog-blog-create-tag
+   :menu: Website ‣ Blog ‣ (post) ‣ Edit
+   :shows: The blog post editing panel with the Tags field and a tag being added from its drop-down menu.
+   :highlight: The Tags field (red frame).
+   :data: Blog 'News', post 'Product launch', tag 'Release'.
+   :module: website_blog
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    To manage tag categories, go to :menuselection:`Website --> Configuration --> Blogs: Tag

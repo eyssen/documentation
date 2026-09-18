@@ -27,8 +27,13 @@ To enable **optional products**, go to :menuselection:`Website --> eCommerce -->
 product, go to the :guilabel:`Sales` tab, and enter the products you wish to feature in the
 :guilabel:`Optional Products` field.
 
-.. image:: cross_upselling/add-to-cart.png
-   :alt: Optional products cross-selling
+.. screenshot:: ecommerce-cross_upselling-add-to-cart
+   :menu: (website) ‣ Shop ‣ (product) ‣ Add to Cart
+   :shows: The Add to Cart pop-up window showing the optional products suggested with the product.
+   :highlight: The optional products (red frame).
+   :data: One product with two optional products.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 .. _ecommerce/cross_upselling/accessory:
 
@@ -42,8 +47,13 @@ To enable **accessory products**, go to :menuselection:`Website --> eCommerce --
 a product, go to the :guilabel:`Sales` tab, and enter the products you wish to feature in the
 :guilabel:`Accessory Products` field.
 
-.. image:: cross_upselling/accessory-products.png
-   :alt: Suggested accessories at checkout during cart review
+.. screenshot:: ecommerce-cross_upselling-accessory-products
+   :menu: (website) ‣ Cart
+   :shows: The cart review page with the suggested accessory products listed under the cart lines.
+   :highlight: The suggested accessories (red frame).
+   :data: One product with two accessories.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 .. _ecommerce/cross_upselling/alternative:
 
@@ -54,8 +64,13 @@ You can display **alternative products** at the bottom of the product page as an
 technique, encouraging customers to consider a more expensive variant or product than their
 initial choice by presenting appealing alternatives.
 
-.. image:: cross_upselling/cross_upselling-alternative.png
-   :alt: Alternative products on the product page
+.. screenshot:: ecommerce-cross_upselling-cross-upselling-alternative
+   :menu: (website) ‣ Shop ‣ (product)
+   :shows: A product page with the alternative products carousel shown below the product description.
+   :highlight: The alternative products carousel (red frame).
+   :data: One product with three alternatives.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 To enable alternative products, navigate to :menuselection:`Website --> eCommerce --> Products`,
 select the desired product, and go to the :guilabel:`Sales` tab. In the

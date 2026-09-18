@@ -31,8 +31,13 @@ to the database as follows:
    (:guilabel:`ellipsis`) icon next to the website and select :icon:`fa-cog` :guilabel:`Settings`
    from the drop-down menu.
 
-   .. image:: analytics/plausible-gear-icon-settings.png
-      :alt: Click the gear icon in the list of websites.
+   .. screenshot:: website-analytics-plausible-gear-icon-settings
+      :menu: (Plausible.io) ‣ Sites
+      :shows: The Plausible.io site list with the three-dot menu of a site open on the Settings entry.
+      :highlight: The Settings entry (red frame).
+      :data: Site `example.com`.
+      :module: website
+      :notes: English UI, light theme, 1440px width.
 
 #. In the sidebar, select :guilabel:`Visibility`, then click :guilabel:`Add Shared link`.
 #. Enter a :guilabel:`Name`, leave the :guilabel:`Password (optional)` field empty, as the Plausible
@@ -41,8 +46,13 @@ to the database as follows:
 
 #. Copy the shared link.
 
-   .. image:: analytics/plausible-copy-shared-link.png
-      :alt: Copy the shared link URL from Plausible.io
+   .. screenshot:: website-analytics-plausible-copy-shared-link
+      :menu: (Plausible.io) ‣ Site settings ‣ Visibility
+      :shows: The Plausible.io Visibility settings with the created shared link and its copy button.
+      :highlight: The shared link (red frame).
+      :data: Use a throw-away shared link.
+      :module: website
+      :notes: English UI, light theme, 1440px width.
 
 #. In Odoo, go to :menuselection:`Website --> Configuration --> Settings`.
 #. In the :guilabel:`SEO` section, enable :guilabel:`Plausible Analytics`, then paste the
@@ -79,15 +89,25 @@ To follow your Odoo website's traffic with Google Analytics:
    business details and business objectives.
 #. When you reach the **Data collection** step, choose the :guilabel:`Web` platform.
 
-   .. image:: analytics/GA-platform.png
-      :alt: Choose a platform for your Google Analytics property.
+   .. screenshot:: website-analytics-ga-platform
+      :menu: (Google Analytics) ‣ Admin ‣ Data streams
+      :shows: The Google Analytics platform selection when creating a data stream, with the Web option.
+      :highlight: The Web option (red frame).
+      :data: Domain `example.com`.
+      :module: website_google_analytics
+      :notes: English UI, light theme, 1440px width.
 
 #. Set up your data stream: Specify your :guilabel:`Website URL` and a :guilabel:`Stream name`, then
    click :guilabel:`Create & continue`.
 #. Copy the :guilabel:`Measurement ID`.
 
-   .. image:: analytics/GA-measurement-id.png
-      :alt: Measurement ID in Google Analytics.
+   .. screenshot:: website-analytics-ga-measurement-id
+      :menu: (Google Analytics) ‣ Admin ‣ Data streams ‣ (stream)
+      :shows: The Google Analytics web stream details showing the Measurement ID to copy.
+      :highlight: The Measurement ID (red frame).
+      :data: Use a throw-away measurement ID.
+      :module: website_google_analytics
+      :notes: English UI, light theme, 1440px width.
 
 #. In Odoo, go to :menuselection:`Website --> Configuration --> Settings`.
 #. In the :guilabel:`SEO` section, enable :guilabel:`Google Analytics`, then paste the
@@ -144,8 +164,13 @@ To configure GTM, proceed as follows:
    :guilabel:`Advanced` section, then click :guilabel:`<head>` and :guilabel:`</body>` next to
    :guilabel:`Code Injection` to paste the codes.
 
-   .. image:: analytics/gtm-codes.png
-      :alt: Install Google Tag Manager
+   .. screenshot:: website-analytics-gtm-codes
+      :menu: (Google Tag Manager)
+      :shows: The Google Tag Manager install instructions showing the two code snippets to copy into the website's <head> and <body>.
+      :highlight: The two code snippets (red frame).
+      :data: Use a throw-away container ID.
+      :module: website_google_analytics
+      :notes: English UI, light theme, 1440px width.
 
 .. note::
    The data is collected in the marketing tools used to monitor the website (e.g., Google Analytics,

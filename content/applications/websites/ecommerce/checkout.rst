@@ -56,8 +56,13 @@ redirects users to the default contact form.
 To display the :guilabel:`Contact Us` button and a note saying `Not Available For Sale` , you need
 to :ref:`hide your prices <ecommerce/prices/hide-prices>` on your product page.
 
-.. image:: checkout/cart-contact-us.png
-   :alt: Contact us button on product page
+.. screenshot:: ecommerce-checkout-cart-contact-us
+   :menu: (website) ‣ Shop ‣ (product)
+   :shows: A product page where the Add to Cart button is replaced by a Contact Us button.
+   :highlight: The Contact Us button (red frame).
+   :data: Demo website 'My Website' with the eCommerce demo products.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    The :guilabel:`Contact Us` button label, URL, and the *Not Available For Sale* text beneath the
@@ -106,8 +111,13 @@ Process` section, tick the :guilabel:`Buy Now` feature.
    and, in the :guilabel:`Customize` tab, clicking the :icon:`fa-bolt` :guilabel:`Buy Now` button
    next to the :guilabel:`Cart` options.
 
-.. image:: checkout/cart-buy-now.png
-   :alt: Buy now button
+.. screenshot:: ecommerce-checkout-cart-buy-now
+   :menu: (website) ‣ Shop ‣ (product)
+   :shows: A product page with both the Add to Cart and the Buy Now buttons.
+   :highlight: The Buy Now button (red frame).
+   :data: Demo website 'My Website' with the eCommerce demo products.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 .. _ecommerce/checkout/re-order:
 
@@ -119,8 +129,13 @@ You can let customers re-order items from previous sales orders from their custo
 Settings`. Under the :guilabel:`Shop - Checkout Process` section, tick the :guilabel:`Re-order From
 Portal` feature.
 
-.. image:: checkout/order-again-button.png
-   :alt: Re-order button
+.. screenshot:: ecommerce-checkout-order-again-button
+   :menu: (website) ‣ My Account ‣ Orders ‣ (order)
+   :shows: A confirmed order in the customer portal with the Order Again button.
+   :highlight: The Order Again button (red frame).
+   :data: One confirmed order with three lines.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 .. _ecommerce/checkout/steps:
 

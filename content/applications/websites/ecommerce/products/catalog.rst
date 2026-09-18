@@ -95,8 +95,13 @@ or on the :guilabel:`Top`, i.e., in the :ref:`top bar <ecommerce/catalog/top-bar
 If you select the :guilabel:`Left` category, the option :guilabel:`Collapsible Category Recursive`
 appears, allowing you to collapse the category in the side panel.
 
-.. image:: catalog/catalog-panel-categories.png
-   :alt: Categories options for your eCommerce website
+.. screenshot:: ecommerce-catalog-catalog-panel-categories
+   :menu: Website ‣ eCommerce ‣ Products ‣ (shop page) ‣ Edit
+   :shows: The website editor's side panel of the shop page with the category options (Categories, Collapse Categories, Filters).
+   :highlight: The category options (red frame).
+   :data: Three eCommerce categories.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    :doc:`../products`
@@ -114,8 +119,13 @@ variants are the different combinations of attributes. To configure attributes a
 .. seealso::
    :doc:`../../../sales/sales/products_prices/products/variants`
 
-.. image:: catalog/catalog-attributes.png
-   :alt: Attributes and variants of your product
+.. screenshot:: ecommerce-catalog-catalog-attributes
+   :menu: Website ‣ eCommerce ‣ Products ‣ (product) ‣ Attributes & Variants tab
+   :shows: A product form's Attributes & Variants tab with two attributes and their values, and the eCommerce filter visibility option.
+   :highlight: The attribute lines (red frame).
+   :data: Attributes 'Color' and 'Size'.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 To enable attribute filtering, go to your main shop page, then open the website editor, and set
 the :guilabel:`Attributes` field to :guilabel:`Left` (:ref:`side panel
@@ -197,16 +207,26 @@ can choose the size of the product image by clicking the grid, and you can also 
 :guilabel:`Ribbon`. This displays a banner across the product's image, such as :guilabel:`Sale`,
 :guilabel:`Sold out`, :guilabel:`Out of stock` or :guilabel:`New!`.
 
-.. image:: catalog/catalog-product-highlighting.png
-   :alt: Ribbon highlight
+.. screenshot:: ecommerce-catalog-catalog-product-highlighting
+   :menu: (website) ‣ Shop
+   :shows: The shop page with a ribbon displayed on a product card.
+   :highlight: The ribbon (red frame).
+   :data: Ribbon 'Sale' on one product.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 To create a new ribbon, click the green :icon:`fa-plus` (:guilabel:`Create`) icon next to the
 :guilabel:`Ribbon` field. Then add a :guilabel:`Ribbon name`, define its :guilabel:`Position`,
 and choose a :guilabel:`Background` and a :guilabel:`Text` label. To edit the ribbon, click the
 :icon:`fa-pencil-square-o` (:guilabel:`Edit`) icon next to the :guilabel:`Ribbon` label.
 
-.. image:: catalog/catalog-ribbons.png
-   :alt: Create a new ribbon.
+.. screenshot:: ecommerce-catalog-catalog-ribbons
+   :menu: Website ‣ eCommerce ‣ Product Ribbons ‣ New
+   :shows: A product ribbon form with the Name, Position, Text Color and Background Color fields.
+   :highlight: The Position and colour fields (red frame).
+   :data: Ribbon 'Sale' in red.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 The ribbon is now available for all the eCommerce products.
 
@@ -238,8 +258,13 @@ category. To do so, move the block to the far top or bottom section to display i
 shop page or to the area below the category's name at the top or beneath the product list to
 display it only when filtering by that specific category.
 
- .. image:: catalog/catalog-header-footer.png
-    :alt: Place building block in the header or footer.
+ .. screenshot:: ecommerce-catalog-catalog-header-footer
+    :menu: Website ‣ eCommerce ‣ Products ‣ (shop page) ‣ Edit
+    :shows: The shop page in the editor with a building block being dropped into the area above the product grid.
+    :highlight: The drop target above the product grid (red frame).
+    :data: Demo website 'My Website' with the eCommerce demo products.
+    :module: website_sale
+    :notes: English UI, light theme, 1440px width.
 
 .. tip::
    - Adding content to an eCommerce category page helps improve the :doc:`SEO

@@ -235,8 +235,13 @@ Add the :guilabel:`Rank Name`, the :guilabel:`Required Karma` points to reach it
 :guilabel:`Description`, a :guilabel:`Motivational` message to encourage users to reach it, and an
 image.
 
-.. image:: forum/ranks.png
-   :alt: Default forum ranks
+.. screenshot:: forum-forum-ranks
+   :menu: Forum ‣ Configuration ‣ Ranks
+   :shows: The Ranks list with the default forum ranks, their required karma and their motivational messages.
+   :highlight: The Required Karma column (red frame).
+   :data: The default forum ranks.
+   :module: website_forum
+   :notes: English UI, light theme, 1440px width.
 
 .. _forum/badges:
 
@@ -276,8 +281,12 @@ Next, determine how the badge should be granted by clicking :guilabel:`Add` unde
    It is possible to give the badge a :guilabel:`Forum Badge Level` (:guilabel:`Bronze`,
    :guilabel:`Silver`, :guilabel:`Gold`) to give it more or less importance.
 
-.. image:: forum/badges.png
-   :alt: Default forum badges
+.. screenshot:: forum-forum-badges
+   :menu: Forum ‣ Configuration ‣ Badges
+   :shows: The Badges list with the default forum badges and their allowance and granting conditions.
+   :data: The default forum badges.
+   :module: website_forum
+   :notes: English UI, light theme, 1440px width.
 
 .. _forum/tags:
 
@@ -345,8 +354,13 @@ Click the ellipsis button (:guilabel:`...`) to:
   - :guilabel:`Flag` a question or answer as offensive.
   - :guilabel:`Convert` a comment into an answer.
 
-.. image:: forum/post-actions.png
-   :alt: Posts actions
+.. screenshot:: forum-forum-post-actions
+   :menu: (website) ‣ Forum ‣ (post)
+   :shows: A forum post on the website with its action links (Edit, Close, Delete, Convert as a comment, Flag) below it.
+   :highlight: The action links (red frame).
+   :data: Forum 'Help' with one question and two answers.
+   :module: website_forum
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    By default, 150 karma points are required to view another user's profile. This value can be
@@ -360,14 +374,24 @@ Moderate a forum
 On the forum's front end, the sidebar's :guilabel:`Moderation tools` section gathers the essential
 moderator functionalities.
 
-.. image:: forum/moderation-tools.png
-   :alt: Forum sidebar moderation tools
+.. screenshot:: forum-forum-moderation-tools
+   :menu: (website) ‣ Forum
+   :shows: The forum sidebar with the moderation tools (To Validate, Flagged, Closed posts) and their counters.
+   :highlight: The moderation tools (red frame).
+   :data: Two posts to validate, one flagged.
+   :module: website_forum
+   :notes: English UI, light theme, 1440px width.
 
 :guilabel:`To Validate`: access all questions and answers waiting for validation before being
 displayed to non-moderator users.
 
-.. image:: forum/to-validate.png
-   :alt: Question to validate
+.. screenshot:: forum-forum-to-validate
+   :menu: (website) ‣ Forum ‣ To Validate
+   :shows: A question awaiting validation with the Validate and Refuse buttons.
+   :highlight: The Validate and Refuse buttons (red frame).
+   :data: One question awaiting validation.
+   :module: website_forum
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    A question is pending if a user does not have the required karma. The user is not able to post
@@ -379,8 +403,13 @@ displayed to non-moderator users.
 a reason and click :guilabel:`Mark as offensive`. The post is then hidden from users without
 moderation rights, and 100 karma points are deducted from the offending user's tally.
 
-.. image:: forum/offensive-reason.png
-   :alt: Offensive reason selection
+.. screenshot:: forum-forum-offensive-reason
+   :menu: (website) ‣ Forum ‣ Flagged ‣ (post)
+   :shows: The offensive reason selection dialog shown when marking a flagged post as offensive.
+   :highlight: The reason selection (red frame).
+   :data: One flagged post.
+   :module: website_forum
+   :notes: English UI, light theme, 1440px width.
 
 :guilabel:`Closed`: access all questions that have been closed. It is possible to :guilabel:`Delete`
 or :guilabel:`Reopen` them. To close a question, open it, click the ellipsis button

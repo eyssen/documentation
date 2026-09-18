@@ -29,9 +29,13 @@ Locator)`.
    actual name of the database. A custom :abbr:`URL (Uniform Resource Locator)` can be used, as
    well, in place of the Odoo subdomain that was provided to the database.
 
-.. image:: cdn/keycdn-zone.png
-   :align: center
-   :alt: KeyCDN's Zone configuration page.
+.. screenshot:: website-cdn-keycdn-zone
+   :menu: (KeyCDN dashboard) ‣ Zones ‣ Add Zone
+   :shows: The KeyCDN zone configuration page with the Zone Name, Zone Status and Zone Type (Pull) fields and the Origin URL.
+   :highlight: The Zone Type and Origin URL fields (red frame).
+   :data: Zone name 'odoo-website', origin `https://www.example.com`.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 Under the :guilabel:`General Settings` heading below the zone form, click the :guilabel:`Show all
 settings` button to expand the zone options. This should be the last option on the page. After
@@ -41,9 +45,13 @@ expanding the :guilabel:`General Settings` ensure that the :guilabel:`CORS` opti
 Next, scroll to the bottom of the zone configuration page and :guilabel:`Save` the changes. KeyCDN
 will indicate that the new zone will be deployed. This can take about 10 minutes.
 
-.. image:: cdn/zone-url.png
-   :align: center
-   :alt: KeyCDN deploying the new Zone.
+.. screenshot:: website-cdn-zone-url
+   :menu: (KeyCDN dashboard) ‣ Zones
+   :shows: The KeyCDN zone list after deployment, showing the generated Zone URL of the new pull zone.
+   :highlight: The Zone URL (red frame).
+   :data: Zone 'odoo-website' in status 'active'.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    A new :guilabel:`Zone URL` has been generated for your Zone, in this example it is
@@ -65,9 +73,13 @@ configurable when the :ref:`developer mode <developer-mode>` is activated.
 
 :guilabel:`Save` the settings when complete.
 
-.. image:: cdn/cdn-base-url.png
-   :align: center
-   :alt: Activate the CDN setting in Odoo.
+.. screenshot:: website-cdn-cdn-base-url
+   :menu: Website ‣ Configuration ‣ Settings
+   :shows: The Website settings page with the Content Delivery Network (CDN) checkbox enabled and the CDN Base URL and CDN filters fields filled in.
+   :highlight: The CDN Base URL field (red frame).
+   :data: CDN base URL of the KeyCDN pull zone.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 Now the website is using the CDN for the resources matching the :guilabel:`CDN filters` regular
 expressions.
@@ -77,9 +89,13 @@ as working properly by checking the :abbr:`URL (Uniform Resource Locators)` of i
 URL* value can be seen by using your web browser's :guilabel:`Inspect` feature on the Odoo website.
 Look for it's record by searching within the :guilabel:`Network` tab inside of devtools.
 
-.. image:: cdn/test-pull.png
-   :align: center
-   :alt: The CDN Base URL can be seen using the inspect function on the Odoo website.
+.. screenshot:: website-cdn-test-pull
+   :menu: (website) ‣ (browser developer tools)
+   :shows: The browser's developer tools network tab on a website page, showing static resources loaded from the CDN base URL instead of the database address.
+   :highlight: One resource URL starting with the CDN base URL (red frame).
+   :data: Demo website 'My Website'.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 Prevent security issues by activating cross-origin resource sharing (CORS)
 --------------------------------------------------------------------------
@@ -99,9 +115,13 @@ below will appear in the web browser's developer console:
 Cross-Origin Resource Sharing policy: No 'Access-Control-Allow-Origin' header is present on the
 requested resource. Origin 'http://yourdatabase.example.com' is therefore not allowed access.``
 
-.. image:: cdn/odoo-security-message.png
-   :align: center
-   :alt: Error message populated in the browser console.
+.. screenshot:: website-cdn-odoo-security-message
+   :menu: (website) ‣ (browser developer tools)
+   :shows: The browser console showing the CORS error message reported when the CDN zone does not allow cross-origin requests.
+   :highlight: The error message (red frame).
+   :data: Demo website 'My Website'.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 Enabling the :abbr:`CORS (Cross-Origin Resource Sharing)` option in the :abbr:`CDN (Content Delivery
 Network)` settings fixes this issue.

@@ -51,8 +51,13 @@ History
 If an operator types `/history` in the chat window, it generates a list of the most recent pages the
 visitor has viewed on the website (up to 15).
 
-.. image:: responses/responses-history.png
-   :alt: View of the results from a /history command in a Live Chat conversation.
+.. screenshot:: livechat-responses-responses-history
+   :menu: Discuss
+   :shows: An operator's live chat window after typing `/history`, showing the list of the visitor's recently viewed pages.
+   :highlight: The generated page list (red frame).
+   :data: A visitor who viewed three shop pages.
+   :module: im_livechat, mail, crm_livechat
+   :notes: English UI, light theme, 1440px width.
 
 .. _live-chat/lead:
 
@@ -61,8 +66,13 @@ Lead
 
 By typing `/lead` in the chat window, an operator can create a *lead* in the **CRM** application.
 
-.. image:: responses/responses-lead.png
-   :alt: View of the results from a /lead command in a Live Chat conversation.
+.. screenshot:: livechat-responses-responses-lead
+   :menu: Discuss
+   :shows: An operator's live chat window after typing `/lead` and a title, showing the link to the newly created lead.
+   :highlight: The link to the new lead (red frame).
+   :data: Lead 'Website inquiry'.
+   :module: im_livechat, mail, crm_livechat
+   :notes: English UI, light theme, 1440px width.
 
 .. important::
    The `/lead` command can only be used if the **CRM** app has been installed.
@@ -131,5 +141,10 @@ shortcut, then click the :icon:`fa-paper-plane` :guilabel:`(send)` icon or hit :
    Typing `::` into a chat window on its own generates a list of available canned responses.
    Responses can be manually selected from the list, in addition to the use of shortcuts.
 
-   .. image:: responses/response-list.png
-      :alt: View of a chat window and the list of available canned responses.
+   .. screenshot:: livechat-responses-response-list
+      :menu: Discuss
+      :shows: An operator's live chat window with the list of available canned responses open after typing `::`.
+      :highlight: The canned response list (red frame).
+      :data: Three canned responses.
+      :module: im_livechat, mail, crm_livechat
+      :notes: English UI, light theme, 1440px width.

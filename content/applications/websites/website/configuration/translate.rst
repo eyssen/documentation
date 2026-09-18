@@ -55,8 +55,13 @@ the :guilabel:`Copyright` section at the bottom of the page. To edit the languag
 #. Set the :guilabel:`Language Selector` field to either :guilabel:`Dropdown` or :guilabel:`Inline`.
    Click :guilabel:`None` if you do not want to display the  :guilabel:`Language selector`;
 
-     .. image:: translate/language-selector.png
-        :alt: Add a language selector menu.
+     .. screenshot:: website-translate-language-selector
+        :menu: (website)
+        :shows: The website header with the language selector drop-down menu open, listing the installed website languages.
+        :highlight: The language selector (red frame).
+        :data: Languages English and Hungarian installed.
+        :module: website
+        :notes: English UI, light theme, 1440px width.
 
 #. Click :guilabel:`Save`.
 
@@ -77,8 +82,13 @@ translation mode so that you can translate what has not been translated automati
 Translated text strings are highlighted in green; text strings that were not translated
 automatically are highlighted in yellow.
 
-.. image:: translate/translated-text.png
-  :alt: Entering the translation mode
+.. screenshot:: website-translate-translated-text
+   :menu: (website) ‣ Edit ‣ Translate
+   :shows: The website editor in translation mode, where the translatable texts are highlighted and the second language is selected in the top bar.
+   :highlight: A highlighted translatable text block (red frame).
+   :data: Translating a page into Hungarian.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 In this mode, you can only translate text. To change the page's structure, you must edit the master
 page, i.e., the page in the original language of the database. Any changes made to the master page

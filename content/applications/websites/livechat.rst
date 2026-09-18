@@ -19,8 +19,13 @@ The **Live Chat** application can be installed multiple ways:
   the :guilabel:`Email & Marketing` section, check the box next to :guilabel:`Livechat`, and click
   :guilabel:`Save`.
 
-  .. image:: livechat/enable-setting.png
-     :alt: View of the settings page and the live chat feature for Odoo Live Chat.
+  .. screenshot:: livechat-livechat-enable-setting
+     :menu: Website ‣ Configuration ‣ Settings
+     :shows: The Website settings page scrolled to the Email & Marketing section with the Livechat checkbox enabled.
+     :highlight: The Livechat setting (red frame).
+     :data: Website 'My Website'.
+     :module: website_livechat
+     :notes: English UI, light theme, 1440px width.
 
 .. note::
    After the **Live Chat** application is installed, a live chat *Channel* is created, by default.
@@ -36,8 +41,13 @@ To configure the remaining tabs on the channel detail form (:ref:`Operators
 <livechat/operators-tab>`, :ref:`Options <livechat/options-tab>`, :ref:`Channel Rules
 <livechat/channel-rules-tab>`, and :ref:`Widget <livechat/widget-tab>`), follow the steps below.
 
-.. image:: livechat/open-channel.png
-   :alt: View of a live chat channel form for Odoo Live Chat.
+.. screenshot:: livechat-livechat-open-channel
+   :menu: Live Chat ‣ Configuration ‣ Live Chat Channels ‣ New
+   :shows: A live chat channel form with the Channel Name field and the Operators, Options, Channel Rules and Widget tabs.
+   :highlight: The Channel Name field and the tab row (red frame).
+   :data: Channel 'YourCompany'.
+   :module: im_livechat
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    The channel detail form for any channel can be accessed by navigating back to the
@@ -55,8 +65,13 @@ Operators tab
 user is added as an operator in a live chat channel, they can receive chats from website visitors
 wherever they are in the database. Chat windows open in the bottom-right corner of the screen.
 
-.. image:: livechat/pop-up.png
-   :alt: A live chat pop-up window in an Odoo database.
+.. screenshot:: livechat-livechat-pop-up
+   :menu: Live Chat ‣ Configuration ‣ Live Chat Channels ‣ (channel) ‣ Operators tab
+   :shows: The operator pop-up window opened from an operator's avatar in the Operators tab, showing the operator's name, email and live chat settings.
+   :highlight: The operator pop-up window (red frame).
+   :data: Operator 'Mitchell Admin'.
+   :module: im_livechat
+   :notes: English UI, light theme, 1440px width.
 
 On the channel detail form, click the :guilabel:`Operators` tab. The user who originally created the
 live chat channel has been added as an operator by default.
@@ -118,8 +133,13 @@ colors to the default selection.
    - :guilabel:`Notification text`: "Have a Question? Chat with us."
    - :guilabel:`Livechat Button Color`: set to purple
 
-   .. image:: livechat/chat-button.png
-      :alt: View of an Odoo website emphasizing the livechat button.
+   .. screenshot:: livechat-livechat-chat-button
+      :menu: (website)
+      :shows: A published website page with the live chat button in the lower-right corner.
+      :highlight: The live chat button (red frame).
+      :data: Website 'My Website', channel 'YourCompany'.
+      :module: website_livechat
+      :notes: English UI, light theme, 1440px width.
 
 Livechat window
 ~~~~~~~~~~~~~~~
@@ -138,11 +158,13 @@ The *Channel Header* is the colored bar at the top of the chat window. The :guil
 Color` can be changed following the same steps as the :ref:`Livechat button
 <livechat/livechat-button>`.
 
-.. figure:: livechat/chat-window.png
-   :alt: The live chat window with a purple channel header and placeholder text.
-
-   The live chat window with a purple channel header and placeholder text that reads, "Say
-   Something..."
+.. screenshot:: livechat-livechat-chat-window
+   :menu: (website)
+   :shows: The opened live chat window on the website with the channel header, the welcome message and the message input with its placeholder text.
+   :highlight: The channel header and the message input (red frame).
+   :data: Channel header in the channel's colour, placeholder text 'Say Something...'.
+   :module: im_livechat
+   :notes: English UI, light theme, 1440px width.
 
 .. _livechat/channel-rules-tab:
 
@@ -155,8 +177,13 @@ Rules` tab on the live chat channel detail form.
 To create a new channel rule, click :guilabel:`Add a line`. This opens the :guilabel:`Create Rules`
 pop-up window.
 
-.. image:: livechat/create-rules.png
-   :alt: View of a channel's rules form for Odoo Live Chat.
+.. screenshot:: livechat-livechat-create-rules
+   :menu: Live Chat ‣ Configuration ‣ Live Chat Channels ‣ (channel) ‣ Channel Rules tab
+   :shows: A channel rule form with the Live Chat Button, Chatbot, URL Regex, Open automatically timer and Country fields.
+   :highlight: The Live Chat Button and URL Regex fields (red frame).
+   :data: Rule for the URL `/contactus`, button set to 'Show'.
+   :module: im_livechat
+   :notes: English UI, light theme, 1440px width.
 
 Create new rules
 ~~~~~~~~~~~~~~~~
@@ -240,8 +267,13 @@ Likewise, to send a live chat session to a customer, click the second :icon:`fa-
 :guilabel:`(copy)` icon on the :guilabel:`Widget` tab. This link can be sent directly to a customer.
 When they click the link, they are redirected to a new chat window.
 
-.. image:: livechat/widget-code.png
-   :alt: View of the widget tab for Odoo Live Chat.
+.. screenshot:: livechat-livechat-widget-code
+   :menu: Live Chat ‣ Configuration ‣ Live Chat Channels ‣ (channel) ‣ Widget tab
+   :shows: The Widget tab with the embeddable code snippet and the Copy button, plus the direct chat URL.
+   :highlight: The code snippet and the Copy button (red frame).
+   :data: Channel 'YourCompany'.
+   :module: im_livechat
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`../productivity/discuss`

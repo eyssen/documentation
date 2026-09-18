@@ -32,9 +32,13 @@ Checkout payment options
 Once activated, customers can choose the payment provider of their choice during the **checkout
 process**, at the :guilabel:`Confirm Order` step.
 
-.. image:: payments/payments-checkout.png
-   :align: center
-   :alt: Payment provider selection at checkout
+.. screenshot:: ecommerce-payments-payments-checkout
+   :menu: (website) ‣ Checkout ‣ Payment
+   :shows: The payment step of the checkout with the enabled payment providers and payment methods listed as options.
+   :highlight: The provider list (red frame).
+   :data: Two enabled providers.
+   :module: website_sale, payment
+   :notes: English UI, light theme, 1440px width.
 
 eWallets and gift cards
 =======================
@@ -46,9 +50,13 @@ section, enable :menuselection:`Discounts, Loyalty & Gift Card`.
 Once enabled, customers can enter their gift card **code** or pay with their eWallet at the checkout
 step.
 
-.. image:: payments/payments-ewallets-giftcards.png
-   :align: center
-   :alt: Enter gift card code to process checkout
+.. screenshot:: ecommerce-payments-payments-ewallets-giftcards
+   :menu: (website) ‣ Checkout ‣ Payment
+   :shows: The payment step of the checkout with the gift card / promo code field where the code is entered.
+   :highlight: The gift card code field (red frame).
+   :data: One gift card of EUR 50.
+   :module: website_sale_loyalty
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    :doc:`/applications/sales/sales/products_prices/ewallets_giftcards`

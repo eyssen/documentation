@@ -193,8 +193,13 @@ Products block
 The :guilabel:`Products` :doc:`building block <../website/web_design/building_blocks>` is used to
 display a selection of products sold on your website.
 
-.. image:: products/products-block.png
-   :alt: Example of a products block
+.. screenshot:: ecommerce-products-products-block
+   :menu: Website ‣ Edit ‣ Blocks ‣ Dynamic Content ‣ Products
+   :shows: A page with a Products block placed in it, showing a selection of products as cards.
+   :highlight: The Products block (red frame).
+   :data: Four products displayed.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 By default, the block displays the :guilabel:`Newest Products`. To change which products are shown,
 go to the :guilabel:`Customize` tab's :guilabel:`Products` section and set the :guilabel:`Filter`
@@ -271,8 +276,13 @@ Digital files available before payment
 To make the file available on the product page (before payment), leave the :guilabel:`Visibility`
 field blank and toggle the :guilabel:`Show on product page` switch.
 
-.. image:: products/digital-files.png
-   :alt: digital file available before payment on the  product page
+.. screenshot:: ecommerce-products-digital-files
+   :menu: (website) ‣ Shop ‣ (product)
+   :shows: A product page showing a digital file that is available for download before payment.
+   :highlight: The download link (red frame).
+   :data: One product with an attached digital file.
+   :module: website_sale_digital
+   :notes: English UI, light theme, 1440px width.
 
 .. _ecommerce-products-digital-files-after-payment:
 
@@ -359,8 +369,13 @@ shop page when customers hover their mouse over it. To compare products, custome
 :icon:`fa-exchange` :guilabel:`Compare` in the pop-up window at the bottom of the page to reach the
 comparison summary.
 
-.. image:: products/products-compare.png
-   :alt: Product comparison window
+.. screenshot:: ecommerce-products-products-compare
+   :menu: (website) ‣ Shop ‣ Compare
+   :shows: The product comparison window with the compared products side by side and their attribute rows.
+   :highlight: The comparison table (red frame).
+   :data: Two compared products.
+   :module: website_sale_comparison
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    - The :guilabel:`Product Comparison Tool` is only available for products with
@@ -379,8 +394,13 @@ Configuration --> Settings`, scroll down to the :guilabel:`Shop - Products` sect
 :guilabel:`Wishlists`. The button is available on each product page and can be disabled in the
 :ref:`website editor <ecommerce/products/product-page>` if needed.
 
-.. image:: products/products-add-to-wishlist.png
-   :alt: Add to wishlist button
+.. screenshot:: ecommerce-products-products-add-to-wishlist
+   :menu: (website) ‣ Shop ‣ (product)
+   :shows: A product page with the Add to Wishlist button next to the Add to Cart button.
+   :highlight: The Add to Wishlist button (red frame).
+   :data: Demo website 'My Website' with the eCommerce demo products.
+   :module: website_sale_wishlist
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    - You can also display a :icon:`fa-heart-o` (:guilabel:`Wishlist`) button when hovering the mouse

@@ -13,8 +13,13 @@ by clicking their username in the top-right corner of the screen and selecting :
 Account`. From there, they can view all their documents in one place, such as quotations, orders,
 invoices, and more.
 
-.. image:: customer_accounts/account-log.png
-   :alt: Customer account access
+.. screenshot:: ecommerce-customer_accounts-account-log
+   :menu: (website)
+   :shows: The website header with the account drop-down menu open, showing My Account, My Cart and Logout.
+   :highlight: The account drop-down menu (red frame).
+   :data: Logged-in portal user 'Anna Kovács'.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    The customer account page can be customized with building blocks and other features through

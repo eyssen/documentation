@@ -26,8 +26,13 @@ To create a new website, proceed as follows:
 #. Go to :menuselection:`Website --> Configuration --> Settings`.
 #. Click :guilabel:`+ New Website`.
 
-   .. image:: multi_website/create-website.png
-      :alt: New website button
+   .. screenshot:: website-multi_website-create-website
+      :menu: Website ‣ Configuration ‣ Settings
+      :shows: The Website settings page with the website selector at the top and the +New Website button next to it.
+      :highlight: The +New Website button (red frame).
+      :data: Demo website 'My Website'.
+      :module: website
+      :notes: English UI, light theme, 1440px width.
 
 #. Specify the :guilabel:`Website Name` and :guilabel:`Website domain`. Each website must be
    published under its own :doc:`domain <domain_names>`.
@@ -48,8 +53,13 @@ Switching websites
 To switch from one website to another, click the menu next to the :guilabel:`+New` button in the
 top right corner and select the website you want to switch to.
 
-.. image:: multi_website/switch-websites.png
-   :alt: Website selector
+.. screenshot:: website-multi_website-switch-websites
+   :menu: Website ‣ Configuration ‣ Settings
+   :shows: The website selector drop-down menu opened at the top of the settings page, listing the websites of the database.
+   :highlight: The website selector (red frame).
+   :data: Two websites: 'My Website' and 'My Second Website'.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    When you switch websites, you are redirected to the homepage of the other website.
@@ -84,8 +94,13 @@ products, go to :menuselection:`eCommerce --> Products`, then select the product
 :guilabel:`Sales` tab. For forums, go to :menuselection:`Configuration --> Forums`, then select the
 forum.
 
-.. image:: multi_website/forum-multi-website.png
-   :alt: Website field in Forum form
+.. screenshot:: website-multi_website-forum-multi-website
+   :menu: Forum ‣ Configuration ‣ Forums ‣ (forum)
+   :shows: A forum form with the Website field set, limiting the forum to one website.
+   :highlight: The Website field (red frame).
+   :data: Forum 'Help' assigned to 'My Website'.
+   :module: website_forum
+   :notes: English UI, light theme, 1440px width.
 
 .. _website_field:
 
@@ -104,8 +119,13 @@ To modify the website on which a page is to be published, proceed as follows:
 #. Go to :menuselection:`Website --> Site --> Pages`.
 #. Open the search panel and select the website on which the page is currently published.
 
-   .. image:: multi_website/pages-switch-websites.png
-      :alt: Display pages per website
+   .. screenshot:: website-multi_website-pages-switch-websites
+      :menu: Website ‣ Site ‣ Pages
+      :shows: The Pages list with the Website column, showing which pages belong to which website.
+      :highlight: The Website column (red frame).
+      :data: Two websites, about ten pages.
+      :module: website
+      :notes: English UI, light theme, 1440px width.
 
 #. Tick the check box next to the page(s) you want to change.
 #. Click the :guilabel:`Website` field and select the website, or empty it to publish the page on
@@ -149,8 +169,13 @@ Analytics
 Each website has its own :ref:`analytics <analytics/plausible>`. To switch between websites, click
 the buttons in the upper right corner.
 
-.. image:: multi_website/analytics-switch-websites.png
-   :alt: Switch websites in analytics
+.. screenshot:: website-multi_website-analytics-switch-websites
+   :menu: Website ‣ Reporting ‣ Analytics
+   :shows: The analytics page with the website selector at the top used to switch the analyzed website.
+   :highlight: The website selector (red frame).
+   :data: Two websites.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 Other reporting data
 --------------------

@@ -25,8 +25,13 @@ Content optimization
 To optimize a webpage's SEO, access the page, then go to :menuselection:`Website --> Site -->
 Optimize SEO`.
 
-.. image:: seo/optimize-seo.png
-   :alt: Optimize SEO
+.. screenshot:: website-seo-optimize-seo
+   :menu: Website ‣ (page) ‣ Optimize SEO
+   :shows: The Optimize SEO dialog with the Title, Description, Keywords and the search result preview.
+   :highlight: The Title and Description fields (red frame).
+   :data: Page 'About us' with a filled-in title and description.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    If you change the title of a blog post or the name of a product, the link to the related webpage
@@ -227,8 +232,13 @@ Every sitemap entry has three attributes that are computed automatically:
    To prevent pages from appearing in a sitemap, go to :menuselection:`Site --> Properties`, and
    toggle off the :guilabel:`Indexed` feature.
 
-     .. image:: seo/page-properties.png
-        :alt: toggle off the “Indexed” field
+     .. screenshot:: website-seo-page-properties
+        :menu: Website ‣ Site ‣ Pages ‣ (page) ‣ Properties
+        :shows: The page properties dialog with the Indexed option toggled off, so the page is excluded from the sitemap.
+        :highlight: The Indexed option (red frame).
+        :data: Page 'Thank you' excluded from the sitemap.
+        :module: website
+        :notes: English UI, light theme, 1440px width.
 
 robots.txt
 ==========
@@ -285,8 +295,13 @@ content and display it in a relevant way. Odoo implements microdata as defined i
 contact addresses. This allows your product pages to be displayed in Google using extra information
 like the price and rating of a product:
 
-.. image:: seo/rich-snippet.png
-   :alt: snippets in search engine results
+.. screenshot:: website-seo-rich-snippet
+   :menu: (search engine results page)
+   :shows: A search engine result page showing an enriched result (rich snippet) with rating stars and a price under the page link.
+   :highlight: The rich snippet (red frame).
+   :data: A product page result.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 Hreflang HTML tags
 ------------------

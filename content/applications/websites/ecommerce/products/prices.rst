@@ -60,14 +60,24 @@ price on the product page, follow these steps:
 .. example::
    Imagine you want to sell a 2-liter bucket of paint for $60, i.e., $30 per liter.
 
-   .. image:: prices/prices-per-unit.png
-      :alt: Cost per unit pricing on the product form.
+   .. screenshot:: ecommerce-prices-prices-per-unit
+      :menu: Sales ‣ Products ‣ Products ‣ (product) ‣ Sales tab
+      :shows: A product form with the Base Unit Count and Base Unit of Measure fields filled in for the price-per-unit display.
+      :highlight: The Base Unit Count and Base Unit of Measure fields (red frame).
+      :data: Product with 0.5 kg content, base unit 'kg'.
+      :module: website_sale
+      :notes: English UI, light theme, 1440px width.
 
    The price per units, in this case per liter, is shown next to the sales price on the
    product page.
 
-   .. image:: prices/price-cost-per-unit-page.png
-      :alt: Unit pricing on the product page.
+   .. screenshot:: ecommerce-prices-price-cost-per-unit-page
+      :menu: (website) ‣ Shop ‣ (product)
+      :shows: A product page showing the price per base unit under the sales price.
+      :highlight: The price per unit (red frame).
+      :data: Product priced EUR 5 with 0.5 kg content.
+      :module: website_sale
+      :notes: English UI, light theme, 1440px width.
 
 .. note::
    The price per unit may be mandatory in some countries.
@@ -123,8 +133,13 @@ Selectable pricelists are useful, for example, when selling products in :doc:`mu
 choose a pricelist using the catalog's pricelist selector located next to the :ref:`search bar
 <ecommerce/catalog/top-bar>`.
 
-.. image:: prices/pricelist-selector.png
-   :alt: Pricelist selector on the ecommerce.
+.. screenshot:: ecommerce-prices-pricelist-selector
+   :menu: (website) ‣ Shop
+   :shows: The shop page header with the pricelist selector drop-down open, listing the selectable pricelists.
+   :highlight: The pricelist selector (red frame).
+   :data: Pricelists 'Public (HUF)' and 'Wholesale (EUR)'.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 To make a pricelist selectable, enable :guilabel:`Selectable`.
 
@@ -170,8 +185,13 @@ Use :ref:`Custom filters <search/custom-filters>` if needed.
 
    `Country Group` + `is not in` + `European Union`
 
-   .. image:: prices/pricelist-country-groups.png
-      :alt: Filter for country group creation.
+   .. screenshot:: ecommerce-prices-pricelist-country-groups
+      :menu: Settings ‣ Technical ‣ Country Groups ‣ New
+      :shows: A country group form with its name and the list of countries it contains.
+      :highlight: The country list (red frame).
+      :data: Country group 'Eurozone' with a few countries.
+      :module: website_sale
+      :notes: English UI, light theme, 1440px width.
 
 .. important::
    - When using GeoIP to determine the appropriate pricelist, **all** pricelists used on the
@@ -218,8 +238,13 @@ assigned pricelist is linked to a different country group.
    pricelist assigned in their contact form. This assignment takes precedence over the country
    group assignation, so the :guilabel:`Loyal Customer Discount` is applied.
 
-   .. image:: prices/pricelists-example.png
-      :alt: An example of various pricelists assigned to a website.
+   .. screenshot:: ecommerce-prices-pricelists-example
+      :menu: Website ‣ eCommerce ‣ Pricelists
+      :shows: The eCommerce pricelist list showing which pricelists are available on the website, with their Selectable, Website and Country Groups columns.
+      :highlight: The Selectable and Country Groups columns (red frame).
+      :data: Three pricelists.
+      :module: website_sale
+      :notes: English UI, light theme, 1440px width.
 
 .. _ecommerce/prices/discounts:
 
@@ -247,8 +272,13 @@ If the price of a specific product has been permanently reduced, the strikethrou
 commonly used. This involves showing the new discounted price, with the original price crossed out
 alongside it.
 
-.. image:: prices/price-strikethrough.png
-   :alt: Price strikethrough.
+.. screenshot:: ecommerce-prices-price-strikethrough
+   :menu: (website) ‣ Shop ‣ (product)
+   :shows: A product page where the original price is struck through next to the discounted price.
+   :highlight: The struck-through price (red frame).
+   :data: Product discounted from EUR 100 to EUR 80.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 To display a permanently discounted price, navigate to :menuselection:`Website --> Configuration
 --> Settings`, scroll down to the :guilabel:`Shop - Products`, enable the :guilabel:`Comparison

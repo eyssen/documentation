@@ -25,8 +25,13 @@ that is designated on their profile page.
    his last name in a live chat conversation for privacy reasons. He would then set his
    :guilabel:`Online Chat Name` to include only his first name, Mitchell.
 
-   .. image:: participate/online-chat-name.png
-      :alt: View of user profile in Odoo, emphasizing the Online Chat name field.
+   .. screenshot:: livechat-participate-online-chat-name
+      :menu: Settings ‣ Users & Companies ‣ Users ‣ (user) ‣ Preferences tab
+      :shows: A user's Preferences tab with the Online Chat Name field filled in.
+      :highlight: The Online Chat Name field (red frame).
+      :data: User 'Mitchell Admin' with the online chat name 'Mitchell'.
+      :module: im_livechat
+      :notes: English UI, light theme, 1440px width.
 
 Set online chat languages
 -------------------------
@@ -58,8 +63,13 @@ To join a live chat channel, go to the :menuselection:`Live Chat app --> Channel
 Any channel where the user is currently active shows a :guilabel:`Leave` button. Click this button
 to disconnect from the channel.
 
-.. image:: participate/leave-channel.png
-   :alt: View of a channel form and the option to join a channel for Odoo Live Chat.
+.. screenshot:: livechat-participate-leave-channel
+   :menu: Live Chat ‣ Configuration ‣ Live Chat Channels ‣ (channel)
+   :shows: A live chat channel form with the Join Channel / Leave Channel button and the Operators tab below.
+   :highlight: The Join Channel / Leave Channel button (red frame).
+   :data: Channel 'YourCompany' with two operators.
+   :module: im_livechat
+   :notes: English UI, light theme, 1440px width.
 
 .. important::
    Operators that do not show any activity in Odoo for more than thirty minutes are considered
@@ -75,8 +85,13 @@ still participating in the conversation.
 Live chat conversations can also be viewed by navigating to the :menuselection:`Discuss app`. New
 conversations appear in bold under the channel name, located along the left panel.
 
-.. image:: participate/managing-chat-responses.png
-   :alt: View of the discuss application with a message sent through live chat in Odoo.
+.. screenshot:: livechat-participate-managing-chat-responses
+   :menu: Discuss
+   :shows: The Discuss app with a live chat conversation open in the Livechat section of the sidebar.
+   :highlight: The Livechat section of the sidebar (red frame).
+   :data: One ongoing live chat conversation.
+   :module: im_livechat
+   :notes: English UI, light theme, 1440px width.
 
 Click on a conversation in the left panel to open it. From this view, an operator can participate in
 the chat the same as they would in the normal chat window.
@@ -85,8 +100,13 @@ the chat the same as they would in the normal chat window.
    Conversations can also be accessed by clicking the :icon:`fa-comments` :guilabel:`(messages)`
    icon in the menu bar.
 
-   .. image:: participate/menu-bar.png
-      :alt: View of the menu bar in Odoo emphasizing the comments icon.
+   .. screenshot:: livechat-participate-menu-bar
+      :menu: (any app)
+      :shows: The Odoo top menu bar with the messages (speech bubble) icon showing the live chat counter.
+      :highlight: The messages icon and its counter (red frame).
+      :data: Two unread live chat requests.
+      :module: im_livechat
+      :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`../../productivity/discuss`

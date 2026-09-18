@@ -23,9 +23,13 @@ orders can automatically be assigned to a specific sales team by going to :menus
 --> Configuration --> Settings`. In the **Shop - Checkout Process** section, select a
 :guilabel:`Sales Team` or :guilabel:`Salesperson` to handle eCommerce orders.
 
-.. image:: order_handling/handling-salesteam.png
-   :align: center
-   :alt: Assignment of online orders to a sales team or salesperson
+.. screenshot:: ecommerce-order_handling-handling-salesteam
+   :menu: Website ‣ Configuration ‣ Settings
+   :shows: The Website settings page with the Sales Team and Salesperson fields of the website filled in.
+   :highlight: The Sales Team and Salesperson fields (red frame).
+   :data: Demo website 'My Website' with the eCommerce demo products.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 Orders can be found under :menuselection:`Website --> eCommerce --> Orders/Unpaid Orders`. Each
 order goes through a different status:
@@ -37,9 +41,13 @@ order goes through a different status:
 - **Order**: the customer has gone through the checkout process, confirmed the order, and the
   payment is received.
 
-.. image:: order_handling/handling-status.png
-   :align: center
-   :alt: Statuses of eCommerce orders
+.. screenshot:: ecommerce-order_handling-handling-status
+   :menu: Website ‣ eCommerce ‣ Orders
+   :shows: The eCommerce orders list with the Order, Customer, Date, Total and Status columns, showing both quotations (abandoned carts) and confirmed orders.
+   :highlight: The Status column (red frame).
+   :data: Five orders in different statuses.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 Abandoned cart
 --------------

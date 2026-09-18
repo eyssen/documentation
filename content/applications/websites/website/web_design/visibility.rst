@@ -43,8 +43,13 @@ option under the element's customization option.
 .. example::
    The selected image is hidden on mobile devices.
 
-   .. image:: visibility/element-visibility.png
-      :alt: Example of an column element hidden on mobile devices
+   .. screenshot:: website-visibility-element-visibility
+      :menu: Website ‣ Edit ‣ (column) ‣ Visibility
+      :shows: A column with its Visibility option set to hide it on mobile devices, shown with the mobile preview next to it.
+      :highlight: The Visibility option (red frame).
+      :data: Demo website 'My Website' in the website editor.
+      :module: website
+      :notes: English UI, light theme, 1440px width.
 
 .. _website/visibility/conditions:
 
@@ -87,8 +92,13 @@ Click :guilabel:`Save` to apply the changes.
    address, for which the website is displayed in French, unless they visit the page using the
    `Sales` campaign tracked URL.
 
-   .. image:: visibility/visibility-conditions.png
-      :alt: Example of a block configured with several visibility conditions
+   .. screenshot:: website-visibility-visibility-conditions
+      :menu: Website ‣ Edit ‣ (building block) ‣ Visibility ‣ Conditionally
+      :shows: A building block with Conditionally visibility set, showing several visibility conditions (language, UTM campaign, visitor type).
+      :highlight: The condition lines (red frame).
+      :data: Two conditions: language Hungarian and a UTM campaign.
+      :module: website
+      :notes: English UI, light theme, 1440px width.
 
 .. _website/visibility/invisible-elements:
 
@@ -100,5 +110,10 @@ sidebar. You can preview how the page would look like by clicking the :icon:`fa-
 (:guilabel:`visible`) button to hide a block or element, or the :icon:`fa-eye-slash`
 (:guilabel:`hidden`) to show it in the website editor.
 
-.. image:: visibility/invisible-elements.png
-   :alt: Blocks and elements with custom visibility settings displayed at the bottom of the editor
+.. screenshot:: website-visibility-invisible-elements
+   :menu: Website ‣ Edit
+   :shows: The Invisible Elements list at the bottom of the editor sidebar, listing the blocks and elements with custom visibility settings.
+   :highlight: The Invisible Elements list (red frame).
+   :data: Two hidden elements.
+   :module: website
+   :notes: English UI, light theme, 1440px width.

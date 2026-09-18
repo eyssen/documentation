@@ -344,8 +344,10 @@ Field types, including their tip, placeholder, and the partner field used for
 :ref:`auto-fill <sign/auto-fill>`, are part of the app's configuration data and are maintained by
 the administrator.
 
+.. _sign/auto-fill:
+
 Auto-fill from partner data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Each field type can be configured with an :guilabel:`Auto-fill Partner Field` that automatically
 populates the field with data from the signer's contact record (``res.partner``). For example,

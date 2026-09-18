@@ -8,6 +8,7 @@ Unlike the standard dashboards, custom dashboards are built record by record: ea
 the database.
 
 .. |KPIs| replace:: :abbr:`KPIs (Key Performance Indicators)`
+.. |KPI| replace:: :abbr:`KPI (Key Performance Indicator)`
 
 .. note::
    This documentation describes the *Dashboard* (``dashboard``) module. The standard, pre-configured

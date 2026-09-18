@@ -16138,59 +16138,51 @@ msgstr "Az :menuselection:`Értékesítési Pont --> Kimutatások --> Rendelése
 msgid "Sales details"
 msgstr "Értékesítési részletek"
 
-#: ../../content/applications/sales/point_of_sale/reporting.rst:27
-msgid ":menuselection:`Point of Sale --> Reporting --> Sales Details` opens a wizard in which you select a :guilabel:`Start Date`, an :guilabel:`End Date`, and one or more points of sale, then click :guilabel:`Generate Report` to print a PDF summary of the sales, the taxes, and the payments of that period."
-msgstr "Az :menuselection:`Értékesítési Pont --> Kimutatások --> Értékesítési részletek` menüpont egy varázslót nyit meg, amelyben megadhatja a :guilabel:`Kezdő dátum` és :guilabel:`Befejező dátum` értékeket, valamint egy vagy több értékesítési pontot, majd a :guilabel:`Jelentés készítése` gombra kattintva PDF összesítőt nyomtathat az adott időszak értékesítéseiről, adóiról és fizetéseiről."
-
 #: ../../content/applications/sales/point_of_sale/reporting.rst:33
 msgid "Session report"
 msgstr "Munkamenet-jelentés"
 
-#: ../../content/applications/sales/point_of_sale/reporting.rst:35
-msgid ":menuselection:`Point of Sale --> Reporting --> Session Report` prints the daily sales report of a closed session: the opening and closing balances, the takings per payment method, and the cash difference recorded at the :ref:`closing control <pos/session-close>`."
-msgstr "Az :menuselection:`Értékesítési Pont --> Kimutatások --> Munkamenet-jelentés` menüpont egy lezárt munkamenet napi értékesítési jelentését nyomtatja ki: a nyitó és záró egyenlegeket, a fizetési módonkénti bevételeket, valamint a :ref:`zárási ellenőrzéskor <pos/session-close>` rögzített készpénzeltérést."
-
-#: ../../content/applications/sales/point_of_sale/reporting.rst:42
+#: ../../content/applications/sales/point_of_sale/reporting.rst:43
 msgid "Product sales"
 msgstr "Termékértékesítés"
 
-#: ../../content/applications/sales/point_of_sale/reporting.rst:44
+#: ../../content/applications/sales/point_of_sale/reporting.rst:45
 msgid "The *POS Product Sales Report* module (`eyssen_pos_sales_report`) adds :menuselection:`Point of Sale --> Reporting --> Product Sales`: a per-product profitability analysis of the POS orders, which the standard order analysis does not provide."
 msgstr "A *POS Product Sales Report* modul (`eyssen_pos_sales_report`) hozzáadja az :menuselection:`Értékesítési Pont --> Kimutatások --> Termékértékesítés` menüpontot: a POS rendelések termékenkénti jövedelmezőségi elemzését, amelyet a szabványos rendeléselemzés nem nyújt."
 
-#: ../../content/applications/sales/point_of_sale/reporting.rst:48
+#: ../../content/applications/sales/point_of_sale/reporting.rst:49
 msgid "Each line shows, for one product in one point of sale:"
 msgstr "Minden sor egy termék adatait mutatja egy értékesítési pontra vonatkozóan:"
 
-#: ../../content/applications/sales/point_of_sale/reporting.rst:50
+#: ../../content/applications/sales/point_of_sale/reporting.rst:51
 msgid ":guilabel:`Product Code` and :guilabel:`Product`;"
 msgstr ":guilabel:`Termékkód` és :guilabel:`Termék`;"
 
-#: ../../content/applications/sales/point_of_sale/reporting.rst:51
+#: ../../content/applications/sales/point_of_sale/reporting.rst:52
 msgid ":guilabel:`Quantity` sold;"
 msgstr "eladott :guilabel:`Mennyiség`;"
 
-#: ../../content/applications/sales/point_of_sale/reporting.rst:52
+#: ../../content/applications/sales/point_of_sale/reporting.rst:53
 msgid ":guilabel:`Net Revenue` (the untaxed subtotal);"
 msgstr ":guilabel:`Nettó árbevétel` (a nettó részösszeg);"
 
-#: ../../content/applications/sales/point_of_sale/reporting.rst:53
+#: ../../content/applications/sales/point_of_sale/reporting.rst:54
 msgid ":guilabel:`COGS`, the cost of the goods sold;"
 msgstr ":guilabel:`ELÁBÉ`, az eladott áruk beszerzési értéke;"
 
-#: ../../content/applications/sales/point_of_sale/reporting.rst:54
+#: ../../content/applications/sales/point_of_sale/reporting.rst:55
 msgid ":guilabel:`Net Margin` and :guilabel:`Margin %`."
 msgstr ":guilabel:`Nettó árrés` és :guilabel:`Árrés %`."
 
-#: ../../content/applications/sales/point_of_sale/reporting.rst:56
+#: ../../content/applications/sales/point_of_sale/reporting.rst:57
 msgid "The quantity and the three amount columns are summed, so the totals of any selection are displayed at the bottom of the list."
 msgstr "A mennyiség és a három összegoszlop összegződik, így a kiválasztott tételek végösszegei a lista alján jelennek meg."
 
-#: ../../content/applications/sales/point_of_sale/reporting.rst:59
+#: ../../content/applications/sales/point_of_sale/reporting.rst:60
 msgid "The report opens grouped by product and filtered on the current year. Use the search panel to change the period (:guilabel:`This Month`, :guilabel:`Last Month`, :guilabel:`This Quarter`, :guilabel:`This Year`, :guilabel:`Last Year`), to filter by :guilabel:`Product Code`, :guilabel:`Product`, :guilabel:`Category` or :guilabel:`Point of Sale`, and to group by product, category, point of sale, or month. The list, pivot, and graph views are all available, and the list view can be exported to a spreadsheet."
 msgstr "A kimutatás termék szerint csoportosítva, az aktuális évre szűrve nyílik meg. A kereső panelen módosíthatja az időszakot (:guilabel:`Aktuális hónap`, :guilabel:`Előző hónap`, :guilabel:`Aktuális negyedév`, :guilabel:`Aktuális év`, :guilabel:`Előző év`), szűrhet :guilabel:`Termékkód`, :guilabel:`Termék`, :guilabel:`Kategória` vagy :guilabel:`Értékesítési Pont` szerint, és csoportosíthat termék, kategória, értékesítési pont vagy hónap szerint. A lista-, kimutatás- és grafikonnézet mind elérhető, a listanézet pedig táblázatba exportálható."
 
-#: ../../content/applications/sales/point_of_sale/reporting.rst:75
+#: ../../content/applications/sales/point_of_sale/reporting.rst:76
 msgid "The margin is computed from the cost recorded on the POS order lines. Products without a cost price are reported with a COGS of zero and therefore with a margin equal to their revenue."
 msgstr "Az árrés a POS rendelési sorokon rögzített bekerülési érték alapján számítódik. A beszerzési ár nélküli termékeknél az ELÁBÉ nulla, így az árrésük megegyezik az árbevételükkel."
 
@@ -16217,6 +16209,20 @@ msgstr "A megfelelő vevői rendelés könnyebb megtalálásához szűrheti a li
 #: ../../content/applications/sales/point_of_sale/shop/serial_numbers.rst:8
 msgid "To enable traceability, go to :menuselection:`Point of Sale --> Products --> Products`. Then, select a product, go to the :guilabel:`Inventory` tab, enable :guilabel:`Track Inventory`, and set the tracking method to :guilabel:`By Unique Serial Number` or :guilabel:`By Lots`."
 msgstr "A nyomon követhetőség engedélyezéséhez lépjen az :menuselection:`Értékesítési Pont --> Termékek --> Termékek` menüpontra. Ezután válasszon ki egy terméket, lépjen a :guilabel:`Készlet` fülre, kapcsolja be a :guilabel:`Készlet nyomon követése` beállítást, és állítsa a nyomon követés módját :guilabel:`Egyedi sorozatszám szerint` vagy :guilabel:`Tételszám szerint` értékre."
+
+#: ../../content/applications/sales/point_of_sale/reporting.rst:27
+msgid ":menuselection:`Point of Sale --> Reporting --> Sales Details` opens a wizard in which you select a :guilabel:`Start Date`, an :guilabel:`End Date`, and one or more points of sale, then click :guilabel:`Print` to produce a PDF summary of the sales, the taxes, and the payments of that period."
+msgstr "Az :menuselection:`Értékesítési Pont --> Kimutatások --> Értékesítési részletek` menüpont egy varázslót nyit meg, amelyben megadhatja a :guilabel:`Kezdő dátum` és :guilabel:`Befejező dátum` értékeket, valamint egy vagy több értékesítési pontot, majd a :guilabel:`Nyomtatás` gombra kattintva PDF összesítőt készíthet az adott időszak értékesítéseiről, adóiról és fizetéseiről."
+
+#: ../../content/applications/sales/point_of_sale/reporting.rst:35
+msgid ":menuselection:`Point of Sale --> Reporting --> Session Report` opens a wizard in which you select a session and click :guilabel:`Print` to produce its daily sales report: the opening and closing balances, the takings per payment method, and the cash difference recorded at the :ref:`closing control <pos/session-close>`."
+msgstr "Az :menuselection:`Értékesítési Pont --> Kimutatások --> Munkamenet-jelentés` menüpont egy varázslót nyit meg, amelyben kiválaszthat egy munkamenetet, majd a :guilabel:`Nyomtatás` gombra kattintva elkészítheti a napi értékesítési jelentését: a nyitó és záró egyenlegeket, a fizetési módonkénti bevételeket, valamint a :ref:`zárási ellenőrzéskor <pos/session-close>` rögzített készpénzeltérést."
+
+#~ msgid ":menuselection:`Point of Sale --> Reporting --> Sales Details` opens a wizard in which you select a :guilabel:`Start Date`, an :guilabel:`End Date`, and one or more points of sale, then click :guilabel:`Generate Report` to print a PDF summary of the sales, the taxes, and the payments of that period."
+#~ msgstr "Az :menuselection:`Értékesítési Pont --> Kimutatások --> Értékesítési részletek` menüpont egy varázslót nyit meg, amelyben megadhatja a :guilabel:`Kezdő dátum` és :guilabel:`Befejező dátum` értékeket, valamint egy vagy több értékesítési pontot, majd a :guilabel:`Jelentés készítése` gombra kattintva PDF összesítőt nyomtathat az adott időszak értékesítéseiről, adóiról és fizetéseiről."
+
+#~ msgid ":menuselection:`Point of Sale --> Reporting --> Session Report` prints the daily sales report of a closed session: the opening and closing balances, the takings per payment method, and the cash difference recorded at the :ref:`closing control <pos/session-close>`."
+#~ msgstr "Az :menuselection:`Értékesítési Pont --> Kimutatások --> Munkamenet-jelentés` menüpont egy lezárt munkamenet napi értékesítési jelentését nyomtatja ki: a nyitó és záró egyenlegeket, a fizetési módonkénti bevételeket, valamint a :ref:`zárási ellenőrzéskor <pos/session-close>` rögzített készpénzeltérést."
 
 #~ msgid "`Odoo Tutorials: Point of Sale Tutorials <https://www.odoo.com/slides/point-of-sale-28>`_"
 #~ msgstr "`Odoo Oktatóanyagok: Értékesítési Pont Oktatóanyagok <https://www.odoo.com/slides/point-of-sale-28>`_"

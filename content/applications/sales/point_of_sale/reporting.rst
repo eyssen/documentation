@@ -26,15 +26,16 @@ Sales details
 
 :menuselection:`Point of Sale --> Reporting --> Sales Details` opens a wizard in which you select a
 :guilabel:`Start Date`, an :guilabel:`End Date`, and one or more points of sale, then click
-:guilabel:`Generate Report` to print a PDF summary of the sales, the taxes, and the payments of that
+:guilabel:`Print` to produce a PDF summary of the sales, the taxes, and the payments of that
 period.
 
 Session report
 ==============
 
-:menuselection:`Point of Sale --> Reporting --> Session Report` prints the daily sales report of a
-closed session: the opening and closing balances, the takings per payment method, and the cash
-difference recorded at the :ref:`closing control <pos/session-close>`.
+:menuselection:`Point of Sale --> Reporting --> Session Report` opens a wizard in which you select a
+session and click :guilabel:`Print` to produce its daily sales report: the opening and closing
+balances, the takings per payment method, and the cash difference recorded at the :ref:`closing
+control <pos/session-close>`.
 
 .. _pos/reporting/product-sales:
 

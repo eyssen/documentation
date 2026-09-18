@@ -5,8 +5,13 @@ Documents
 Each equipment can have multiple documents attached — manuals, certificates, calibration records,
 warranty documents, service books, and more.
 
-.. image:: equipment-documents-tab.png
-   :alt: Documents tab on equipment form
+.. screenshot:: services-equipment-documents-tab
+   :menu: Equipment Management ‣ Equipment ‣ (open an equipment) ‣ Documents
+   :shows: The Documents tab of an equipment with four document lines of different types (Manual, Certificate, Calibration, Warranty), each with an expiry date and an attached file.
+   :highlight: The Type and Expiry Date columns (red frame).
+   :data: Equipment "Zeiss Contura CMM"; documents "User manual", "CE certificate", "Calibration 2026", "Warranty".
+   :module: equipment
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 Document types
 ==============

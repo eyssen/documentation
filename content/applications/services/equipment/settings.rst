@@ -5,8 +5,13 @@ Settings
 Equipment settings are accessible from :menuselection:`Equipment Management --> Settings -->
 Configuration` or from :menuselection:`Settings --> Equipment`.
 
-.. image:: equipment-settings.png
-   :alt: Equipment settings page
+.. screenshot:: services-equipment-settings
+   :menu: Equipment Management ‣ Settings ‣ Configuration
+   :shows: The Equipment settings page with the Equipment Types blocks (Printers, Measuring Devices) and the other configuration options.
+   :highlight: The Equipment Types block (red frame).
+   :data: Both equipment type sub-modules enabled.
+   :module: equipment, equipment_printer, equipment_measuring
+   :notes: English UI, light theme, 1440px width, crop to the settings blocks.
 
 Equipment Types
 ===============

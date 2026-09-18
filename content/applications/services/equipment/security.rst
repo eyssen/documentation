@@ -4,8 +4,13 @@ Security
 
 Equipment Management uses a three-tier permission model to control access.
 
-.. image:: equipment-security-groups.png
-   :alt: Security groups hierarchy
+.. screenshot:: services-equipment-security-groups
+   :menu: Settings ‣ Users & Companies ‣ Users ‣ (open a user) ‣ Access Rights
+   :shows: The Equipment Management access-rights selector on a user form, with the three levels available in the dropdown.
+   :highlight: The Equipment Management access-rights field (red frame).
+   :data: User "Mitchell Admin".
+   :module: equipment
+   :notes: English UI, light theme, 1440px width, crop to the access-rights block.
 
 Access groups
 =============

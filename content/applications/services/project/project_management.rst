@@ -23,9 +23,13 @@ Open the **Project** app and click :guilabel:`Create` to start a new project. En
 You can customize your existing **projects** from the dashboard by clicking the drop-down toggle
 button (:guilabel:`⋮`) on your project's **card**.
 
-.. image:: project_management/project-settings.png
-   :align: center
-   :alt: Project card
+.. screenshot:: services-project-card-menu
+   :menu: Project ‣ Projects
+   :shows: A project card on the Kanban dashboard with its vertical-ellipsis menu open, showing the View, Settings, Reporting and colour sections.
+   :highlight: The open card menu (red frame).
+   :data: Project "Boiler maintenance 2026".
+   :module: project
+   :notes: English UI, light theme, 1440px width, crop to the card and its open menu.
 
 This enables a new menu divided into four parts:
 
@@ -51,13 +55,13 @@ This enables a new menu divided into four parts:
 Additionally, you can mark the project as :guilabel:`Favorite`, allowing you to find it using the
 :guilabel:`My Favorites` filter on the Kanban view;
 
-.. image:: project_management/project-settings-opened.png
-   :align: center
-   :alt: Project settings
-
-.. seealso::
-   `Odoo Tutorials: Customize projects
-   <https://www.odoo.com/slides/slide/customize-projects-3615?fullscreen=1>`_
+.. screenshot:: services-project-settings-form
+   :menu: Project ‣ Projects ‣ (open a project) ‣ Settings
+   :shows: The project settings form with the project name, the customer, the company, the project manager, the planned date and the allocated hours, and the Favorite star.
+   :highlight: The Project Manager, Planned Date and Allocated Hours fields (red frame).
+   :data: Project "Boiler maintenance 2026", manager "Mitchell Admin", 120 allocated hours.
+   :module: project
+   :notes: English UI, light theme, 1440px width, crop to the top of the form.
 
 Further settings are available under the :guilabel:`Settings` tab. Most of them are *only* available
 depending on the activated apps.
@@ -137,8 +141,13 @@ you want to display, such as timesheets, sales orders, invoices, documents, dash
 You can then click the buttons to access the related records without leaving the Project app. To
 return to your project tasks' Kanban view, click the :guilabel:`Tasks` button in the top bar.
 
-.. image:: project_management/top-bar.png
-   :alt: Top bar selection menu
+.. screenshot:: services-project-top-bar
+   :menu: Project ‣ Projects ‣ (open a project)
+   :shows: The top bar above the task Kanban view, with the sliders button clicked and the selection menu of the records to display open.
+   :highlight: The open selection menu (red frame).
+   :data: Project "Boiler maintenance 2026" with timesheets and sales orders available.
+   :module: project
+   :notes: English UI, light theme, 1440px width, crop to the top bar and the open menu.
 
 Custom top bar buttons
 ----------------------
@@ -151,6 +160,70 @@ You can also create your own buttons to access more specific views:
    :guilabel:`Save View`.
 #. Edit the default button name if necessary, then enable :guilabel:`Shared` if you want to share
    the button with other users.
+
+.. _project_management/settings:
+
+Application settings
+====================
+
+Go to :menuselection:`Project --> Configuration --> Settings` to switch on the optional features of
+the app:
+
+:guilabel:`Tasks Management`
+   - :guilabel:`Recurring Tasks` – auto-generate the tasks of regular activities. See
+     :doc:`tasks/recurring_tasks`.
+   - :guilabel:`Task Dependencies` – determine the order in which tasks must be performed. See
+     :doc:`tasks/task_dependencies`.
+   - :guilabel:`Project Stages` – track the progress of the projects themselves, not only of their
+     tasks.
+   - :guilabel:`Milestones` – track the major progress points that must be reached.
+
+:guilabel:`Time Management`
+   - :guilabel:`Timesheets` – log the time spent on projects and tasks. See :doc:`../timesheets`.
+
+:guilabel:`Analytics`
+   - :guilabel:`Customer Ratings` – ask customers to rate the work done on their tasks.
+
+.. screenshot:: services-project-settings-page
+   :menu: Project ‣ Configuration ‣ Settings
+   :shows: The Project settings page with the Tasks Management, Time Management and Analytics blocks and their options.
+   :highlight: The Tasks Management block (red frame).
+   :data: Recurring Tasks, Task Dependencies, Project Stages, Milestones, Timesheets and Customer Ratings all enabled.
+   :module: project, hr_timesheet
+   :notes: English UI, light theme, 1440px width, crop to the settings blocks.
+
+The :guilabel:`Configuration` menu also holds the lists that these features rely on:
+:guilabel:`Project Stages`, :guilabel:`Task Stages`, :guilabel:`Tags`, :guilabel:`Activity Types`,
+and :guilabel:`Activity Plans`.
+
+.. _project_management/ratings:
+
+Customer ratings
+================
+
+Once :guilabel:`Customer Ratings` are enabled, open a project, go to the :guilabel:`Settings` tab,
+and tick :guilabel:`Customer Ratings`. Then choose when the rating request is sent:
+
+- :guilabel:`Rating when reaching a stage` – the request is sent as soon as the task reaches a
+  stage on which a rating email template is defined;
+- :guilabel:`Periodical rating` – requests are sent at the chosen :guilabel:`Frequency` for as long
+  as the task stays in such a stage.
+
+The rating email template is set on the task stage. The ratings received are shown on the task, on
+the project card, and in :menuselection:`Project --> Reporting --> Customer Ratings`.
+
+.. _project_management/reporting:
+
+Reporting
+=========
+
+:menuselection:`Project --> Reporting` offers:
+
+- :guilabel:`Tasks Analysis` – the tasks of all your projects in list, pivot, and graph views, to
+  compare volumes, allocated hours, and lead times across projects, assignees, stages, and
+  customers;
+- :guilabel:`Customer Ratings` – the ratings received, when the feature is enabled;
+- :guilabel:`SLA Analysis` – see :doc:`sla`.
 
 .. toctree::
    :titlesonly:

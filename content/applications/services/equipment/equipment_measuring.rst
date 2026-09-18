@@ -7,8 +7,13 @@ features specific to measuring instruments such as coordinate measuring machines
 measurement systems, and other precision devices. It adds calibration tracking, software and
 hardware information, and sensor management.
 
-.. image:: equipment_measuring/measuring-list-view.png
-   :alt: Measuring devices list view
+.. screenshot:: services-equipment-measuring-list
+   :menu: Equipment Management ‣ Measuring Devices ‣ Measuring Devices
+   :shows: The list of measuring devices with their serial numbers, customers and calibration status column.
+   :highlight: The Calibration Status column (red frame).
+   :data: Four measuring devices with mixed calibration statuses (valid, expiring, expired).
+   :module: equipment_measuring
+   :notes: English UI, light theme, 1440px width, crop to the list.
 
 Installation
 ============
@@ -34,8 +39,13 @@ Creating an equipment from the Measuring Devices menu automatically sets the typ
 Measuring tab
 =============
 
-.. image:: equipment_measuring/measuring-form-tab.png
-   :alt: Measuring tab on equipment form
+.. screenshot:: services-equipment-measuring-tab
+   :menu: Equipment Management ‣ Measuring Devices ‣ (open a device) ‣ Measuring
+   :shows: The Measuring tab of an equipment with the calibration section, the software and hardware information, and the technical description.
+   :highlight: The Calibration section (red frame).
+   :data: Equipment "Zeiss Contura CMM" with a valid calibration.
+   :module: equipment_measuring
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 When an equipment has type *Measuring Device*, a dedicated :guilabel:`Measuring` tab appears on
 the form with the following sections:
@@ -74,8 +84,13 @@ other characteristics of the measuring device.
 Sensors
 -------
 
-.. image:: equipment_measuring/measuring-sensors.png
-   :alt: Sensors inline list
+.. screenshot:: services-equipment-measuring-sensors
+   :menu: Equipment Management ‣ Measuring Devices ‣ (open a device) ‣ Measuring
+   :shows: The Sensors inline list of the Measuring tab with three sensor lines showing name, serial number and type.
+   :highlight: None.
+   :data: Sensors "Touch Probe SP25M", "Optical Sensor", "Chromatic Focus Point".
+   :module: equipment_measuring
+   :notes: English UI, light theme, 1440px width, crop to the sensor list.
 
 An inline editable list of sensors attached to the measuring device:
 
@@ -89,16 +104,26 @@ Click the :guilabel:`Sensors` stat button to view sensors in a dedicated list vi
 Calibration management
 ======================
 
-.. image:: equipment_measuring/measuring-calibration-list.png
-   :alt: Calibration records list view
+.. screenshot:: services-equipment-calibration-list
+   :menu: Equipment Management ‣ Measuring Devices ‣ Calibrations
+   :shows: The list of calibration records with the equipment, the calibration date, the next calibration date and the status.
+   :highlight: None.
+   :data: Six calibration records across three measuring devices.
+   :module: equipment_measuring
+   :notes: English UI, light theme, 1440px width, crop to the list.
 
 Calibration records track the complete calibration history of each measuring device.
 
 Creating a calibration record
 -----------------------------
 
-.. image:: equipment_measuring/measuring-calibration-form.png
-   :alt: Calibration form
+.. screenshot:: services-equipment-calibration-form
+   :menu: Equipment Management ‣ Measuring Devices ‣ Calibrations ‣ New
+   :shows: A calibration record form with the equipment, the calibration and next calibration dates, the certificate reference and the attached certificate.
+   :highlight: The next calibration date (red frame).
+   :data: Equipment "Zeiss Contura CMM"; certificate "CAL/2026/0012".
+   :module: equipment_measuring
+   :notes: English UI, light theme, 1440px width, crop to the form sheet.
 
 #. Navigate to :menuselection:`Equipment Management --> Measuring Devices --> Calibrations`.
 #. Click :guilabel:`New`.

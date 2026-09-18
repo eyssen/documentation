@@ -59,9 +59,9 @@ Followers can add themselves, or can be added by another user.
 .. note::
    If a user creates, or is assigned to a record, they are automatically added as a follower.
 
-To follow a record, navigate to any record with a chatter thread. For example, to open a *Helpdesk*
-ticket, navigate to :menuselection:`Helpdesk app --> Tickets --> All Tickets`, and select a ticket
-from the list to open it.
+To follow a record, navigate to any record with a chatter thread. For example, to open a *CRM*
+opportunity, navigate to :menuselection:`CRM app --> Sales --> My Pipeline`, and select an
+opportunity from the list to open it.
 
 At the top-right, above the chatter composer, click :guilabel:`Follow`. Doing this changes the
 button to read :guilabel:`Following`. Click it again to :guilabel:`Unfollow`.
@@ -91,7 +91,7 @@ follower in the list, then click the :icon:`fa-pencil` :guilabel:`(pencil)` icon
 :guilabel:`Edit Subscription` pop-up window for the follower.
 
 The list of available subscription settings varies depending on the record type. For example, a
-follower of a *Helpdesk* ticket may be informed when the ticket is rated. This option would not be
+follower of a *Project* task may be informed when the task's stage changes. This option would not be
 available for the followers of a *CRM* opportunity.
 
 Tick the checkbox for any updates the follower should receive, and clear the checkbox for any
@@ -449,6 +449,76 @@ preferences <../../general/users/language/>`.
 .. important::
    Using the *Google Translate* API **requires** a current billing account with `Google
    <https://myaccount.google.com/>`_.
+
+.. _discuss/chatter-extensions:
+
+Chatter extensions
+==================
+
+Several modules extend the standard chatter.
+
+Chatter position
+----------------
+
+Each user can choose where the chatter is displayed on form views. In
+:menuselection:`Preferences`, set :guilabel:`Chatter Position` to :guilabel:`Side` (next to the
+form) or :guilabel:`Bottom` (under the form).
+
+.. note::
+   Requires the *MuK Chatter* (``muk_web_chatter``) module.
+
+Email delivery tracking
+-----------------------
+
+When an email is sent from the chatter, its delivery status is tracked and displayed next to the
+message: :guilabel:`Sent`, :guilabel:`Delivered`, :guilabel:`Opened`, :guilabel:`Deferred`,
+:guilabel:`Bounced`, :guilabel:`Soft bounced`, :guilabel:`Rejected`, :guilabel:`Spam`,
+:guilabel:`Unsubscribed`, or :guilabel:`Error`. Click the status to see the tracking events of that
+email, including the reported error.
+
+The complete list is available to administrators in :menuselection:`Settings --> Technical -->
+Email --> Tracking emails` and :guilabel:`Tracking events`. In :menuselection:`Settings --> General
+Settings --> Discuss`, the retention of these records can be limited with the maximum age in days.
+
+.. note::
+   Requires the *Email tracking* (``mail_tracking``) module.
+
+Reply to a specific message
+---------------------------
+
+Click :guilabel:`Reply` on a chatter message to open the composer with the original message quoted,
+so that the answer keeps its context.
+
+.. note::
+   Requires the *Mail Message Reply* (``mail_quoted_reply``) module.
+
+Preview email attachments
+-------------------------
+
+Emails attached to a record as `.eml` files open directly in the file viewer, like a PDF, instead of
+being downloaded: the header block and the body are displayed, with the embedded images.
+
+.. note::
+   Requires the *Mail Attachment EML Preview* (``mail_attachment_eml_preview``) module.
+
+Notify followers or not
+-----------------------
+
+In the full composer, the :guilabel:`Notify Followers` checkbox decides whether the message is also
+sent to the followers of the record, or only to the recipients explicitly listed. The same option is
+available when sending an invoice from the :guilabel:`Send` window of the Invoicing app.
+
+.. note::
+   Requires the *Mail Follower Notification* (``eyssen_mail_follower_notification``) module, and,
+   for invoices, *Mail Follower Notification - Invoicing*
+   (``eyssen_mail_follower_notification_account``).
+
+.. screenshot:: productivity-chatter-notify-followers
+   :menu: (any record with a chatter)
+   :shows: The full composer with the "Notify Followers" checkbox next to the recipients.
+   :highlight: The "Notify Followers" checkbox (red frame).
+   :module: eyssen_mail_follower_notification
+   :notes: English UI, light theme, crop to the composer.
 
 .. seealso::
    - :doc:`Discuss <../discuss>`

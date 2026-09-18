@@ -14,7 +14,9 @@ Productivity
     productivity/calendar
     productivity/appointments
     productivity/discuss
+    productivity/activities
     productivity/ai
     productivity/data_cleaning
     productivity/whatsapp
     productivity/to_do
+    productivity/utilities

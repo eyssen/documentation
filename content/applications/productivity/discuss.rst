@@ -74,6 +74,27 @@ name, and choose to add a description in the adjacent :guilabel:`Add a descripti
    The :guilabel:`Add a description` field is **only** available for group messages with more than
    two participants.
 
+Composer tools
+--------------
+
+The composer of a direct message or a channel offers several tools, to the right of the input field:
+
+- :guilabel:`Attach files`: add one or more files to the message;
+- :guilabel:`Add Emojis`: insert an emoji;
+- :guilabel:`Add a GIF`: search and insert an animated image;
+- :guilabel:`Voice Message`: record and send a voice message, limited to one minute;
+- :guilabel:`Mention a User` (`@`) and channel mentions (`#`): notify a colleague, or link a
+  channel in the message.
+
+Typing `:` followed by a shortcut inserts a :doc:`canned response <discuss/canned_responses>`.
+
+.. screenshot:: productivity-discuss-composer-tools
+   :menu: Discuss
+   :shows: The Discuss composer with the attach, emoji, GIF and voice message icons to the right of the input field.
+   :highlight: The composer tool icons (red frame).
+   :module: mail
+   :notes: English UI, light theme, crop to the composer.
+
 User status
 -----------
 
@@ -177,6 +198,7 @@ upper-right corner of the database header.
    :notes: English UI, light theme, 1440px width.
 
 .. seealso::
+   - :doc:`discuss/mailbox`
    - :doc:`discuss/team_communication`
    - :doc:`/applications/essentials/activities`
    - :doc:`discuss/ice_servers`
@@ -189,3 +211,4 @@ upper-right corner of the database header.
    discuss/ice_servers
    discuss/chatter
    discuss/canned_responses
+   discuss/mailbox

@@ -76,6 +76,7 @@ Agent tasks and runs
 For autonomous work, also monitor:
 
 - :menuselection:`AI --> Agents --> Tasks`
+- :menuselection:`AI --> Agents --> Work Items`
 - :menuselection:`AI --> Agents --> Runs`
 
 Inspect failed steps, tool errors and pending write linkage. Step journals can

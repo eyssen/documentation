@@ -83,6 +83,10 @@ Write / delete
 
 - ``create_record`` / ``update_record`` / ``delete_record`` — always via gate;
   may become pending writes.
+- ``queue_work_items`` — enqueue record ids for isolated child runs of the
+  **current standing task** (max 200 ids per call). Not available from chat
+  without a task run, from inbox runs, or from a child. See
+  :ref:`ai/agents/work-items`.
 - ``fetch_file_to_field`` — requires **web** *and* **write**.
 
 Web

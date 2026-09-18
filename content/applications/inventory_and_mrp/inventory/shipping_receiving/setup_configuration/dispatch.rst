@@ -238,7 +238,8 @@ the resulting drop-down menu, click :guilabel:`Prepare batch`.
    The :guilabel:`Transport Management` drop-down menu contains other tools for fleet management:
 
    - :guilabel:`Manage Batches`: open list of batches
-   - :guilabel:`Dock Dispatching`: open weekly calendar view of scheduled batch operations
+   - :guilabel:`Dock Dispatching`: open weekly Gantt view of scheduled batch operations; it
+     requires a Gantt view type, provided by the *Web Gantt* module
    - :guilabel:`Batches by Route`: Kanban view of batches grouped by fulfillment route
    - :guilabel:`Calendar`: open hourly calendar view of scheduled operations
    - :guilabel:`Statistics`: open pivot table of the batch transfers
@@ -277,28 +278,3 @@ On the batch transfer form, fill the following fields out accordingly:
       :highlight: The capacity indicators (red frame).
       :module: stock_fleet
       :notes: English UI, light theme, 1440px width.
-
-Prepare delivery route
-~~~~~~~~~~~~~~~~~~~~~~
-
-To help the driver prepare, click the :guilabel:`Map` button at the top of the batch or wave form to
-view delivery destinations on a map. Selecting an individual delivery order pinpoints its location.
-
-.. note::
-   The :guilabel:`Map` button is only visible for transfers with the :guilabel:`In progress` status.
-
-.. screenshot:: setup-configuration-dispatch-map
-   :menu: Inventory ‣ Operations ‣ Batch Transfers
-   :shows: The map view of a batch in progress, with a pin for each delivery destination and the details of the selected delivery order.
-   :module: web_map
-   :notes: English UI, light theme, 1440px width.
-
-Additionally, use the :guilabel:`View in Google Maps` button to generate a route from the warehouse
-to the delivery points.
-
-.. screenshot:: setup-configuration-dispatch-google-map
-   :menu: (Google Maps)
-   :shows: A Google Maps route generated from the batch, starting at the warehouse and passing each delivery address.
-   :module: stock_fleet
-   :notes: External website, crop to the route panel; use throw-away addresses.
-

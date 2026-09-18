@@ -109,7 +109,7 @@ configurations such as:
 - Manage default locations per product.
 - Define routes within the stock warehouse according to business needs, such as quality control,
   after-sales services, or supplier returns.
-- Help rental management by generating automated return moves for rented products.
+- Generate automated return moves, for example for reusable packaging or loaned equipment.
 
 To configure a route for a product, first, open the :guilabel:`Inventory` application and go to
 :menuselection:`Configuration --> Settings`. Then, in the :guilabel:`Warehouse` section, enable the

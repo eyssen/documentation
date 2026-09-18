@@ -130,7 +130,8 @@ The :guilabel:`Shipping Method` page contains details about the provider, includ
 - :guilabel:`Free if order amount is above`: enables free shipping for orders surpassing a specified
   amount entered in the corresponding :guilabel:`Amount` field.
 - :guilabel:`Insurance Percentage`: specify a percentage amount of the shipping costs reimbursed to
-  the senders if the package is lost or stolen in transit.
+  the senders if the package is lost or stolen in transit. The field is only shown for connectors
+  that support shipping insurance.
 
 .. screenshot:: setup-configuration-third-party-shipper-carrier-form
    :menu: Inventory ‣ Configuration ‣ Shipping Methods

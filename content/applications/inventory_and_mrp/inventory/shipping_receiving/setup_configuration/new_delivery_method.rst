@@ -40,8 +40,8 @@ a form to provide details about the shipping provider, including:
 - :guilabel:`Website`: configure shipping methods for an **eCommerce** page. Select the applicable
   website from the drop-down menu, or leave it blank to apply the method to all web pages. This
   field only appears when the **eCommerce** app is enabled.
-- :guilabel:`Provider` (*Required field*): choose the delivery service, like FedEx, if using a
-  :ref:`third-party carrier <inventory/shipping/third_party>`. Ensure the integration with the
+- :guilabel:`Provider` (*Required field*): choose the delivery service, like GLS, if using a
+  :ref:`carrier connector <inventory/shipping/third_party>`. Ensure the integration with the
   shipping carrier is properly installed and select the provider from the drop-down menu. For more
   details on configuring custom shipping methods, such as :ref:`fixed price
   <inventory/shipping/fixed>` or :ref:`based on rules <inventory/shipping/rules>` options, refer to
@@ -60,6 +60,9 @@ a form to provide details about the shipping provider, including:
 - :guilabel:`Tracking Link`: This option adds a link to the portal so the customer can track their
   delivery. When a custom carrier is added in a delivery order, the tracking button is enabled, and
   the link directs to the tracking portal with that URL.
+- :guilabel:`Carrier Description`: a free text shown to the customer on the sales order and in the
+  sales confirmation e-mail, for instance delivery instructions the customer should follow. It is
+  translatable, so each customer sees it in their own language.
 
 .. example::
    To set up `$200` flate-rate shipping, fill in the following fields:

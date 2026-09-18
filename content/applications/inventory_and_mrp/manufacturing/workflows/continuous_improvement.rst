@@ -55,11 +55,11 @@ Helpdesk
 
 The *Helpdesk* app is useful for receiving feedback from outside of the organization, like from
 clients or customers. This is accomplished by implementing one (or more) of the methods for
-:doc:`receiving tickets <../../../services/helpdesk/overview/receiving_tickets>`, including email
+receiving tickets, including email
 aliases, live chat conversations, and website forms.
 
 Using these methods, customers can submit feedback about problems, which is then reviewed by a
-member of a :doc:`helpdesk team <../../../services/helpdesk>`. Depending on the outcome of the
+member of a helpdesk team. Depending on the outcome of the
 review, the team member may decide to take further action to ensure the issue is addressed. This can
 include creating a :doc:`quality alert <../../quality/quality_management/quality_alerts>`.
 

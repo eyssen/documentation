@@ -20,9 +20,6 @@ operations and employee benefits:
 
 - :ref:`End Date Contract Alert <fleet/end-contract>` — emails the contract's *Responsible* person a
   set number of days before the vehicle agreement expires, so renewals or returns aren't missed.
-- :ref:`New Vehicle Request <fleet/request>` — (Belgian Payroll localization only) blocks employees
-  from requesting a new company car through the salary configurator, once the available vehicles
-  already exceeds the defined limit, helping control benefits costs.
 
 To access the settings menu, go to :menuselection:`Fleet app --> Configuration --> Settings`.
 
@@ -63,32 +60,6 @@ An individual contract can also be opened from a specific vehicle by navigating 
 form, click the :guilabel:`Contracts` smart button at the top of the page. Only contracts associated
 with the vehicle appear in the list. Click on an individual contract to open it. The
 :guilabel:`Responsible` person is listed on the contract.
-
-.. _fleet/request:
-
-New Vehicle Request (Belgian Payroll - Fleet)
----------------------------------------------
-
-Enter the maximum fleet size that may be reached through the salary-configurator flow. When the
-total number of available vehicles (vehicles without an assigned driver) is equal to or below this
-limit, employees can request a new company car. Once the available vehicles exceeds the limit, the
-request option is hidden.
-
-.. example::
-   If the :guilabel:`New Vehicle Request` limit is set to 20 vehicles, and there are 25 vehicles
-   available, employees cannot request a new car and must select from the 25 already available. If
-   there are only 10 cars available, then the employee would be able to request a new vehicle.
-
-.. note::
-   This settings option **only** appears if the :guilabel:`Belgian-Payroll-Fleet` module is
-   installed for the Belgian localization.
-
-Add a vehicle
-=============
-
-To add a new vehicle to the fleet from the :guilabel:`Vehicles` dashboard, click the :guilabel:`New`
-button in the top-left corner, and a blank vehicle form loads. Then, proceed to enter the vehicle
-information on the vehicle form.
 
 .. _fleet/new_vehicle/vehicle-form:
 
@@ -238,9 +209,6 @@ Fiscality
 - :guilabel:`Horsepower Taxation`: Enter the amount that is taxed based on the size of the vehicle's
   engine. This is determined by local taxes and regulations, and varies depending on the location.
   It is recommended to check with the accounting department to ensure this value is correct.
-- :guilabel:`Disallowed Expenses Rate`: Configure the dates and percentages of the vehicle-related
-  costs (fuel, maintenance, depreciation, etc.) that **cannot** be deducted from the company's
-  taxable income.
 
 Contract
 ~~~~~~~~

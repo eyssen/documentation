@@ -2,13 +2,9 @@
 Schedule interviews
 ===================
 
-An in-person, virtual, or phone interview can be scheduled in one of two ways through the
-**Recruitment** app, either by the :ref:`recruitment team
-<recruitment/schedule_interviews/recruitment-scheduled>`, or by the :ref:`applicant
-<recruitment/schedule_interviews/applicant-scheduled>`.
-
-With one drag-and-drop, Odoo emails the candidate with a self-service link, the candidate books the
-time slot, and sends the meeting to everyone's calendar. No more back-and-forth emails or calls.
+An in-person, virtual, or phone interview is scheduled by the recruitment team from the applicant's
+card. The meeting lands in the calendars of everyone invited, and can be sent to the applicant by
+email or text message.
 
 .. _recruitment/schedule_interviews/recruitment-scheduled:
 
@@ -214,92 +210,3 @@ the message immediately.
    Sending text messages is **not** a default capability with Odoo. To send text messages, credits
    are required, which need to be purchased. For more information on IAP credits and plans, refer to
    the :doc:`../../essentials/in_app_purchase` documentation.
-
-.. _recruitment/schedule_interviews/applicant-scheduled:
-
-Applicant scheduled interviews
-==============================
-
-Coordinating interview times typically requires several email exchanges and can slow the recruitment
-process. Enabling Odoo's self-service scheduling removes that bottleneck: when an applicant is moved
-to an interview stage, the system automatically sends a scheduling link, records the selected slot,
-and updates all relevant calendars.
-
-This automation is turned off by default. To activate it, assign the :guilabel:`Recruitment:
-Schedule Interview` email template to either the :guilabel:`First Interview` or :guilabel:`Second
-Interview` stage (see :ref:`recruitment/schedule_interviews/modify-stage`).
-
-.. _recruitment/schedule_interviews/modify-stage:
-
-Modify stage
-------------
-
-:ref:`Modify <recruitment/modify-stages>` either the :guilabel:`First Interview` or
-:guilabel:`Second Interview` stage so the stage's :guilabel:`Email Template` field is set to
-:guilabel:`Recruitment: Schedule interview`.
-
-.. screenshot:: hr-recruitment-interview-stage-template
-   :menu: Recruitment ‣ (job position) ‣ (stage gear icon) ‣ Edit
-   :shows: A recruitment stage form with the Recruitment: Schedule Interview template selected in the Email Template field.
-   :highlight: The Email Template field (red frame).
-   :data: Stage "First Interview".
-   :module: hr_recruitment
-   :notes: English UI, light theme, 1440px width.
-
-Send email
-----------
-
-After configuring the :guilabel:`First Interview` or :guilabel:`Second Interview` stages to
-:ref:`send emails <recruitment/schedule_interviews/modify-stage>`, drag-and-drop the applicant card
-into one of these stages to send the email.
-
-Self-scheduled interview
-------------------------
-
-When the applicant received the email, they click the :guilabel:`Schedule my interview` button at
-the bottom of the email. This navigates the applicant to a private online scheduling page, which is
-**only** accessible through the emailed link.
-
-This page displays the :guilabel:`MEETING DETAILS` on the right side of the screen. This includes
-the format and length of the meeting. In this example. the interview is virtual
-(:icon:`fa-video-camera` :guilabel:`Online`) and the duration is a half hour (:icon:`fa-clock-o`
-:guilabel:`30 minutes`).
-
-Then the applicant clicks on an available day on the calendar, signified by purple text. Once a day
-is selected, they click on one of the available times to select that date and time.
-
-.. screenshot:: hr-recruitment-self-schedule-calendar
-   :menu: (applicant-facing page) ‣ Schedule your interview
-   :shows: The self-scheduling page shown to the applicant, with the available days and time slots.
-   :highlight: An available time slot (red frame).
-   :data: Two weeks of availability, working hours only.
-   :module: hr_recruitment, appointment
-   :notes: English UI, light theme, 1440px width. Front-end page, not the back end.
-
-.. tip::
-   Be sure to check the :guilabel:`Timezone` field, beneath the calendar, to ensure it is set to the
-   correct time zone. Changing the time zone may alter the available times presented.
-
-Once the date and time are selected, the applicant is navigated to an :guilabel:`Add more details
-about you` page. This page asks the applicant to enter their :guilabel:`Full name`,
-:guilabel:`Email`, and :guilabel:`Phone number`. The contact information entered on this form is how
-the applicant is contacted to remind them about the scheduled interview.
-
-When everything is entered on the :guilabel:`Add more details about you` page, the applicant clicks
-the :guilabel:`Confirm Appointment` button, and the interview is scheduled.
-
-.. screenshot:: hr-recruitment-self-schedule-confirmation
-   :menu: (applicant-facing page) ‣ Schedule your interview
-   :shows: The confirmation page the applicant sees after booking, with the date, time, duration and the videocall link.
-   :highlight: The booked date and time (red frame).
-   :data: Interview booked for 2026-04-23 10:00.
-   :module: hr_recruitment, appointment
-   :notes: English UI, light theme, 1440px width. Front-end page, not the back end.
-
-After confirming the interview, the applicant is taken to a confirmation page, where all the details
-of the interview are displayed. The option to add the meeting to the applicant's personal calendars
-is available, through the :guilabel:`Add to iCal/Outlook` and :guilabel:`Add to Google Agenda`
-buttons, beneath the interview details.
-
-The applicant is also able to cancel or reschedule the interview, if necessary, with the
-:guilabel:`Cancel your appointment` link at the bottom of the confirmation.

@@ -100,10 +100,6 @@ The fields can be filled out as follows:
 - :guilabel:`Working Schedule`: Select the working schedule for the job position. Odoo provides one
   working schedule by default, :guilabel:`Standard 40 hours/week`, but all working schedules in the
   database are available.
-- :guilabel:`Salary Range`: Enter both the minimum and maximum salaries offered for the position in
-  the two fields. Then, set the last field to the time-frame for the salary range. The default
-  options are :guilabel:`Hour`, :guilabel:`Day`, :guilabel:`Week`, :guilabel:`Bi-Week`,
-  :guilabel:`Month`, and :guilabel:`Year`.
 - :guilabel:`Expected Skills`: Select all the desired skills for the job position, using the
   drop-down menu. The skills presented are :ref:`configured in the Employees app
   <employees/skills>`.
@@ -118,12 +114,10 @@ The fields can be filled out as follows:
   selected.
 - :guilabel:`Interview Form`: select an :ref:`Interview form <recruitment/interview>` that
   applicants fill out prior to their interview.
-- :guilabel:`Contract Template`: Select a contract template to be used when offering the job to a
-  candidate.
 
 .. screenshot:: hr-recruitment-job-position-recruitment-tab
    :menu: Recruitment ‣ Applications ‣ By Job Position ‣ (open a job position) ‣ Recruitment
-   :shows: The Recruitment tab of a job position with the recruiter, the interviewers, the interview form, the contract template and the email alias.
+   :shows: The Recruitment tab of a job position with the recruiter, the interviewers, the interview form and the email alias.
    :highlight: The Recruiter and Interviewers fields (red frame).
    :data: Recruiter "Anita Kovács", one interviewer, interview form "Warehouse screening".
    :module: hr_recruitment, hr_recruitment_survey
@@ -163,9 +157,9 @@ of the business:
 
 .. screenshot:: hr-recruitment-job-position-application-info
    :menu: Recruitment ‣ Applications ‣ By Job Position ‣ (open a job position) ‣ Application Info
-   :shows: The Application Info tab with the job location, the employment type, the expected salary range and the requirements.
-   :highlight: The salary range fields (red frame).
-   :data: Location "Marbella office", employment type "Permanent", salary 550 000-650 000 HUF.
+   :shows: The Application Info tab with the job location, the employment type, the working schedule and the expected skills.
+   :highlight: The Expected Skills field (red frame).
+   :data: Location "Marbella office", employment type "Permanent", schedule "Standard 40 hours/week".
    :module: hr_recruitment
    :notes: English UI, light theme, 1440px width.
 

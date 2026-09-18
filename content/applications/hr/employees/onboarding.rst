@@ -30,8 +30,7 @@ The plan form displays the following information:
 
   - :guilabel:`Activity Type`: the specific activity for the step. The default options are
     :guilabel:`Email`, :guilabel:`Call`, :guilabel:`Meeting`, :guilabel:`To-Do`, or
-    :guilabel:`Upload Document`. If the **Sign** app is installed, a :guilabel:`Request Signature`
-    option is available.
+    :guilabel:`Upload Document`.
   - :guilabel:`Summary`: a one line description of the step.
   - :guilabel:`Assignment`: chooses who completes the activity, relative to the new hire:
 
@@ -48,7 +47,6 @@ The plan form displays the following information:
   - :guilabel:`Assigned to`: this field remains blank, unless :guilabel:`Default user` is selected
     for the :guilabel:`Assignment` field. If :guilabel:`Default user` is selected, this field is
     populated with the selected user.
-  - :guilabel:`Document to sign`: the corresponding document requiring a signature.
   - :guilabel:`Interval`: the time when the activity is active.
   - :guilabel:`Unit`: the set time interval, either :guilabel:`days`, :guilabel:`weeks`, or
     :guilabel:`months`.

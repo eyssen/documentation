@@ -91,33 +91,6 @@ Model
 - :guilabel:`Model Year`: Enter the year the vehicle was manufactured.
 - :guilabel:`Trailer Hitch`: Tick this checkbox if the vehicle has a trailer hitch installed.
 
-Salary
-~~~~~~
-
-The :guilabel:`Salary` section **only** appears if the company has their localization setting set to
-Belgium. The cost values are all *monthly*, with the exception of the :guilabel:`Catalog Value (VAT
-Incl.)`.
-
-- :guilabel:`Can be requested`: Tick this checkbox if employees can request this model vehicle, if a
-  vehicle is part of their employee contract.
-- :guilabel:`Catalog Value (VAT Incl.)`: enter the :abbr:`MSRP (Manufacturer's Suggested Retail
-  Price)` for the vehicle at the time of purchase or lease.
-- :guilabel:`C02 fee`: Represents the carbon dioxide emission fee paid to the Belgian government.
-  This value is automatically calculated, based on Belgian laws and regulations, and **cannot** be
-  modified. The value is based on the figure entered in the :guilabel:`CO2 Emissions` field (in the
-  :guilabel:`Engine` section of the :guilabel:`Information` tab) on the vehicle form.
-
-.. important::
-   Modifying the :guilabel:`CO2 Emissions` field adjusts the value in the :guilabel:`CO2 fee` field.
-
-- :guilabel:`Cost (Depreciated)`: Enter the monthly vehicle cost, which appears in the salary
-  configurator for future employees. This value impacts the gross and net salary of the employee
-  assigned to the vehicle. This figure is depreciated over time, according to local tax laws. The
-  :guilabel:`Cost (Depreciated)` does **not** depreciate automatically on the *vehicle model*, it
-  only depreciates based on the *contract* linked to a specific vehicle.
-- :guilabel:`Total Cost (Depreciated)`: This value is the combination of the :guilabel:`Cost
-  (Depreciated)` and the :guilabel:`C02 fee` fields. It also depreciated over time.
-
 Engine
 ~~~~~~
 
@@ -149,8 +122,6 @@ Engine
   specifications. The number is dependent on the local tax laws, therefore it is recommended to
   check with the accounting department to ensure the correct taxation amount is entered. This field
   only appears if the :guilabel:`Power` field is set to :guilabel:`Horsepower`.
-- :guilabel:`Tax Deduction`: The percentage that can be deducted from taxes is populated based on
-  the localization, and **cannot** be modified. This field only appears for certain localizations.
 
 Vendors tab
 -----------

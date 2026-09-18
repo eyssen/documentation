@@ -52,11 +52,6 @@ reporting.
 
       Take care of employee records when collaboration ends.
 
-   .. card:: Employee retention report
-      :target: employees/retention_report
-
-      Gain insight to the retention rate for a company.
-
 .. _employees/settings:
 
 Settings
@@ -138,4 +133,3 @@ employee record.
    employees/badges
    employees/equipment
    employees/offboarding
-   employees/retention_report

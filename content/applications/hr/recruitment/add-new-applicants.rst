@@ -182,9 +182,6 @@ information allows for reporting on the channels with the highest applicant gene
   :guilabel:`SMS`, :guilabel:`Television`, :guilabel:`Website`, :guilabel:`X` (formerly "Twitter"),
   or :guilabel:`[Push Notifications] (website name)`. To add a new :guilabel:`Medium`, type in the
   medium, then click :guilabel:`Create "(new medium)"`.
-- :guilabel:`Referred By User`: If referral points are to be earned for this job position in the
-  **Referrals** application, select the user who referred the applicant from the drop-down menu. The
-  **Referrals** application **must** be installed for this field to appear.
 
 .. screenshot:: hr-recruitment-applicant-sourcing
    :menu: Recruitment ‣ (job position) ‣ New ‣ Edit

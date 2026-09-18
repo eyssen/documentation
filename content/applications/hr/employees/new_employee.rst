@@ -25,8 +25,7 @@ Proceed to fill out the required information, along with any additional details.
 
 .. note::
    The current company phone number and name are populated in the :guilabel:`Work Phone` and
-   :guilabel:`Company` fields. If the **Appraisals** application is installed, the :guilabel:`Next
-   Appraisal Date` field is populated with a date six months from the current date.
+   :guilabel:`Company` fields.
 
 .. _employees/general-info:
 
@@ -84,10 +83,6 @@ Fill out the following employee details.
   to reflect the currently selected job position, but is still editable.
 - :guilabel:`Manager`: select the employee's manager from the drop-down menu.
 - :guilabel:`Coach`: select the employee's coach from the drop-down menu.
-- :guilabel:`Next Appraisal Date`: this field is **only** visible if the **Appraisals** application
-  is installed. The date automatically populates with a date that is computed according to the
-  settings configured in the **Appraisals** application. This date can be modified using the
-  calendar selector.
 
 .. note::
    After a :guilabel:`Department` is selected, the department's configured manager and coach
@@ -399,19 +394,6 @@ This section defines when the employee is expected to work.
 
 - :guilabel:`Timezone`: using the drop-down menu, select the timezone for the employee.
 
-PLANNING
---------
-
-This section is **only** visible if the **Planning** app is installed, as this section affects what
-the employee can be assigned in the **Planning** app.
-
-- :guilabel:`Roles`: using the drop-down menu, select all the roles the employee can perform. There
-  are no preconfigured roles available, so all roles must be :ref:`configured in the Planning app
-  <planning/roles>`. There is no limit to the number of roles assigned to an employee.
-- :guilabel:`Default Role`: using the drop-down menu, select the default role the employee will
-  typically perform. If the :guilabel:`Default Role` is selected before the :guilabel:`Roles` field
-  is configured, the selected role is automatically added to the list of :guilabel:`Roles`.
-
 .. _employees/private-info:
 
 Private information tab
@@ -518,7 +500,6 @@ Information for all fields may not be available.
 - :guilabel:`Date of Birth`: using the calendar selector, select the birthday of the employee.
 - :guilabel:`Place of Birth`: enter the city or town the employee was born.
 - :guilabel:`Country of Birth`: using the drop-down menu, select the country the employee was born.
-- :guilabel:`Non-resident`: tick this checkbox if the employee lives in a foreign country.
 
 EDUCATION
 ---------

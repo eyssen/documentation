@@ -178,14 +178,9 @@ the :guilabel:`First Interview` stage on the status bar at the top of the indivi
 card.
 
 .. tip::
-   The :guilabel:`First Interview` stage can be modified, so when the applicant's card moves to the
-   :guilabel:`First Interview` stage, an email can be automatically sent to the applicant, stating
-   an interview is requested. In this preconfigured email template, a link to the recruiting team's
-   calendar appears, allowing the applicant to schedule their interview.
-
-   :ref:`Edit <recruitment/edit-stage>` the :guilabel:`First Interview` stage, and select the
-   :guilabel:`Recruitment: Schedule Interview` option in the :guilabel:`Email Template` field, to
-   automate this action.
+   The :guilabel:`First Interview` stage can be modified so that an email is sent to the applicant
+   automatically when their card reaches it. :ref:`Edit <recruitment/edit-stage>` the stage and
+   select the email template to send in the :guilabel:`Email Template` field.
 
 .. _recruitment/second-interview:
 

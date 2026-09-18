@@ -124,41 +124,6 @@ feature requires credits to use. Click the :icon:`fa-arrow-right` :guilabel:`Man
 Credits` internal link, and follow the steps to :doc:`purchase credits
 <../marketing/sms_marketing/pricing_and_faq>`.
 
-.. _recruitment/cv-ocr:
-
-Résumé digitization (OCR)
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-When an application is submitted using any of the available methods, such as an online application
-submission, emailing a resume to the job position alias, or creating an applicant record directly
-from the database, it is possible to have Odoo extract the applicant's name, phone number, and email
-address from the résumé and populate the applicant's form. To do so, enable the :guilabel:`Résumé
-Digitization (OCR)` option.
-
-When enabled, additional options appear. Click on the corresponding radio button to select one of
-the following options:
-
-- :guilabel:`Do not digitize`: this option turns off résumé digitization.
-- :guilabel:`Digitize on demand only`: this option only digitizes resumes when requested. A
-  :guilabel:`Digitize document` buttons appears on applicant cards. When clicked, the résumé is
-  scanned and the applicant's card is updated.
-- :guilabel:`Digitize automatically`: this option automatically digitizes all résumés when they are
-  submitted.
-
-Beneath these options are two additional links. Click the :icon:`fa-arrow-right` :guilabel:`Manage
-Service & Buy Credits` internal link to purchase credits for résumé digitization. Click the
-:icon:`fa-arrow-right` :guilabel:`View My Services` internal link to view a list of all current
-services, and their remaining credit balances.
-
-For more information on document digitization and :abbr:`IAP's (in-app purchases)`, refer to the
-:doc:`In-app purchase (IAP) <../essentials/in_app_purchase>` documentation.
-
-.. note::
-   The :guilabel:`Do not digitize` option may appear redundant but serves a distinct purpose.
-   Disabling the :guilabel:`Résumé Digitization (OCR)` option uninstalls the module, while
-   :guilabel:`Do not digitize` keeps the module installed but inactive—allowing the user to
-   re-enable digitization later without reinstalling the module.
-
 Kanban view
 ===========
 
@@ -287,13 +252,6 @@ The fields to be populated or modified are:
   applicant.
 - :guilabel:`Job Specific`: If the stage only applies to specific job positions, select the job
   positions from the drop-down menu. Multiple job positions can be selected.
-- :guilabel:`Show in Referrals`: Check the box if this stage should be seen in the *Referrals*
-  application, and allow the referrer to accrue points when a referral of theirs reaches this stage.
-  If this is active, a :guilabel:`Points` field appears. Enter the amount of referral points the
-  employee receives when an applicant enters this stage. The **Referrals** app must be installed in
-  order to use this option.
-- :guilabel:`Points`: If :guilabel:`Show in Referrals` is enabled, this field appears. Enter the
-  number of points the employee earns when an applicant moves to this stage.
 - :guilabel:`Tooltips` section: There are three preconfigured status labels (colored circles) for
   each applicant's card, indicating its status. These colors are displayed at the top of each stage
   to reflect the statuses of the applicants in the stage. The *names* for the label can be modified,
@@ -322,7 +280,7 @@ Email templates
 To communicate with the applicant, Odoo has several preconfigured email templates that can be used.
 The preconfigured email templates and when to use them are as follows:
 
-- :guilabel:`Recruitment: Applicant Acknowledgement`: this template is used to let the applicant
+- :guilabel:`Recruitment: Application Acknowledgement`: this template is used to let the applicant
   know that their application was received. This email is automatically sent out once the applicant
   is in the :guilabel:`New` stage.
 - :guilabel:`Recruitment: Interest`: this template is used to let the applicant know that their
@@ -333,10 +291,6 @@ The preconfigured email templates and when to use them are as follows:
   and consideration.
 - :guilabel:`Recruitment: Refuse`: this template is used when an applicant is no longer being
   considered for the position.
-- :guilabel:`Recruitment: Schedule Interview`: this template is used to let the applicant know that
-  they have passed the :guilabel:`Initial Qualification` stage, and they will soon be contacted to
-  set up an interview with the recruiter. This email is automatically sent out once the applicant is
-  in the :guilabel:`Initial Qualification` stage.
 
 .. note::
    Email templates can be created, modified, and deleted to suit the needs of a business. For more
@@ -405,10 +359,6 @@ appears in the chatter.
    - :doc:`recruitment/schedule_interviews`
    - :doc:`recruitment/offer_job_positions`
    - :doc:`recruitment/refuse_applicant`
-   - :doc:`recruitment/applicant_analysis`
-   - :doc:`recruitment/source_analysis`
-   - :doc:`recruitment/velocity_analysis`
-   - :doc:`recruitment/team_performance`
 
 .. toctree::
    :titlesonly:
@@ -420,7 +370,3 @@ appears in the chatter.
    recruitment/schedule_interviews
    recruitment/offer_job_positions
    recruitment/refuse_applicant
-   recruitment/applicant_analysis
-   recruitment/source_analysis
-   recruitment/velocity_analysis
-   recruitment/team_performance

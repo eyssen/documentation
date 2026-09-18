@@ -262,3 +262,29 @@ Enter any notes for the vehicle in this section.
    - :doc:`../fleet/models`
    - :doc:`../fleet/service`
    - :doc:`../fleet/accidents`
+
+.. _fleet/status:
+
+Vehicle status and tags
+=======================
+
+The :guilabel:`Status` of a vehicle follows it from the request to the road. The statuses shipped
+by default are :guilabel:`New Request`, :guilabel:`To Order`, :guilabel:`Registered` and
+:guilabel:`Downgraded`; a vehicle in kanban view sits in the column of its status and is moved by
+dragging its card.
+
+Add, rename or reorder the statuses in :menuselection:`Fleet app --> Configuration --> Vehicle -->
+Vehicle Status`. Each status has a :guilabel:`Name` and a :guilabel:`Sequence`, which sets the order
+of the columns.
+
+:guilabel:`Tags` classify vehicles across statuses — `pool car`, `long-term lease`, `to be sold` —
+and are managed in :menuselection:`Fleet app --> Configuration --> Vehicle --> Tags`. Tags are
+selected on the vehicle form and can be used to filter and group anywhere in the application.
+
+.. screenshot:: hr-fleet-vehicle-status-kanban
+   :menu: Fleet ‣ Fleet ‣ Fleet
+   :shows: The vehicle kanban grouped by status, with the New Request, To Order and Registered columns and the tags visible on the cards.
+   :highlight: The status columns (red frame).
+   :data: Demo company "YourCompany HU"; six vehicles spread across the statuses, two tagged "pool car".
+   :module: fleet
+   :notes: English UI, light theme, 1440px width.

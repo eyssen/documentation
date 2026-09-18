@@ -121,6 +121,30 @@ Employee update rights
 Enable the :guilabel:`Employee Editing` option to allow employees to edit their own data on their
 employee record.
 
+.. _employees/directory:
+
+Directory and org chart
+=======================
+
+Two menus give a read-only view of the company's people:
+
+- :menuselection:`Employees app --> Directory` lists every employee with the information that is
+  public to all users of the database — the work contact details, the job position, the department
+  and the manager — without the private data that only the HR officers see. This is the page
+  employees use to look each other up.
+- :menuselection:`Employees app --> Employees --> Org Chart` shows the reporting lines: each
+  employee with their manager above them and their direct reports below. The same chart appears in
+  the :guilabel:`Work Information` tab of an employee form, where it can be navigated by clicking a
+  name.
+
+.. screenshot:: hr-employees-org-chart
+   :menu: Employees ‣ Employees ‣ Org Chart
+   :shows: The org chart of one employee, with the manager above and three direct reports below, each card showing the job position.
+   :highlight: The employee in the middle of the chart (red frame).
+   :data: Employee "Anita Kovács" reporting to the operations manager, with three direct reports.
+   :module: hr_org_chart
+   :notes: English UI, light theme, 1440px width. Use invented personal data.
+
 .. toctree::
    :titlesonly:
 

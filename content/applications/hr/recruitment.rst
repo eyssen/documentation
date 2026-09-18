@@ -359,6 +359,7 @@ appears in the chatter.
    - :doc:`recruitment/schedule_interviews`
    - :doc:`recruitment/offer_job_positions`
    - :doc:`recruitment/refuse_applicant`
+   - :doc:`recruitment/recruitment_analysis`
 
 .. toctree::
    :titlesonly:
@@ -370,3 +371,4 @@ appears in the chatter.
    recruitment/schedule_interviews
    recruitment/offer_job_positions
    recruitment/refuse_applicant
+   recruitment/recruitment_analysis

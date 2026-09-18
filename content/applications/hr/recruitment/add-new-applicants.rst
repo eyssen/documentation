@@ -196,3 +196,32 @@ Skills tab
 
 Skills can be added to the applicant's card. For details on adding skills, refer to the :ref:`Create
 new employees <employees/skills>` document.
+
+.. _recruitment/candidates:
+
+Candidates
+==========
+
+A *candidate* is the person; an *applicant* is one application that person made for one job
+position. When the same person applies again — for another position, or for the same one a year
+later — the new applicant record is linked to the existing candidate, so their history is in one
+place.
+
+To see the people rather than the applications, go to :menuselection:`Recruitment app -->
+Applications --> Candidates`. A candidate record holds the contact details, the
+:guilabel:`Degree`, the :guilabel:`Availability`, the :guilabel:`Tags`, the
+:guilabel:`Manager` responsible and, once hired, the linked :guilabel:`Employee`. An
+:guilabel:`Applications` smart button opens every application the candidate ever made.
+
+.. tip::
+   Odoo warns on an applicant form when the email address or the phone number matches another
+   candidate, which is how duplicate applications are caught before two recruiters work the same
+   person in parallel.
+
+.. screenshot:: hr-recruitment-candidate-form
+   :menu: Recruitment ‣ Applications ‣ Candidates ‣ (open a candidate)
+   :shows: A candidate form with the contact details, the degree, the availability and the Applications smart button showing two applications.
+   :highlight: The Applications smart button (red frame).
+   :data: Candidate "János Tóth" with two applications; use invented contact data.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.

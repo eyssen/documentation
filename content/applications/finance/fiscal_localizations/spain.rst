@@ -33,71 +33,78 @@ You can reach the **Chart of Accounts** by going to :menuselection:`Accounting -
 Accounting: Chart of Accounts`.
 
 .. tip::
-    When you create a new Odoo Online database, **Spain - SMEs (2008)** is installed by default.
+    When a new database is created for a Spanish company, **Spain - SMEs (2008)** is installed by
+    default.
 
 Taxes
 =====
 
 Default Spain-specific taxes are created automatically when the
-:guilabel:`Spanish - Accounting (PGCE 2008) (l10n_es)` module is installed, and tax reports are
-available when installing the module :guilabel:`Spain - Accounting (PGCE 2008) (l10n_es_reports)`.
-Each tax impacts the Spain-specific **tax reports (Modelo)**, available by going to
-:menuselection:`Accounting --> Reporting --> Statements Reports: Tax Report`.
+:guilabel:`Spanish - Accounting (PGCE 2008) (l10n_es)` module is installed. Each tax is mapped to
+the boxes of the Spanish **Modelo 303** VAT return, which can be reviewed in the :doc:`tax report
+<../accounting/reporting/dynamic_reports>`.
 
-Reports
-=======
+.. note::
+   The Spain-specific statement reports (Balance Sheet (ES), Profit & Loss (ES), EC Sales List,
+   and the Modelo 111 / 115 / 130 / 303 / 347 / 349 / 390 tax reports with their AEAT export) are
+   **not** available in this edition; use the generic :doc:`financial reports
+   <../accounting/reporting>` and the tax grids instead.
 
-Here is the list of Spanish-specific statement reports available:
 
-- Balance Sheet;
-- Profit & Loss;
-- EC Sales List;
-- Tax Report (Modelo 111);
-- Tax Report (Modelo 115);
-- Tax Report (Modelo 130);
-- Tax Report (Modelo 303);
-- Tax Report (Modelo 347);
-- Tax Report (Modelo 349);
-- Tax Report (Modelo 390).
+.. _localizations/spain/sii:
 
-You can access Spain-specific tax reports by clicking on the **book** icon when on a report and
-selecting its Spain-specific version: :guilabel:`(ES)`.
+SII (Suministro Inmediato de Información)
+=========================================
 
-.. image:: spain/modelo-reports.png
-   :alt: Spain-specific tax reports.
+The *Spain - SII EDI Suministro de Libros* (`l10n_es_edi_sii`) module sends the VAT information of
+customer invoices and vendor bills to the SII (*Llevanza de libros registro*) of the AEAT or of the
+regional tax agencies. It is mandatory for companies with a turnover above 6 M€ and optional for
+the others.
 
-Modelo 130
-----------
+Configuration
+-------------
 
-Change the percentage
-~~~~~~~~~~~~~~~~~~~~~
+#. :ref:`Install <general/install>` the :guilabel:`Spain - SII EDI Suministro de Libros
+   (l10n_es_edi_sii)` module.
+#. Go to :menuselection:`Accounting --> Configuration --> Settings`, scroll to the
+   :guilabel:`Registro de Libros connection SII` setting and select the :guilabel:`Tax Agency for
+   SII` (:guilabel:`Agencia Tributaria española`, :guilabel:`Hacienda Foral de Gipuzkoa`,
+   :guilabel:`Hacienda Foral de Bizkaia`, or :guilabel:`Hacienda Foral de Navarra`).
+#. Click the :guilabel:`Certificate (SII)` link to upload the company's digital certificate (file
+   and password) used to sign the requests.
+#. Keep :guilabel:`SII Test Mode` enabled while testing; disable it to send the data to the
+   production web service.
+#. On each sales and purchase journal that must report to the SII, enable the :guilabel:`SII IVA
+   Llevanza de libros registro (ES)` format in the :guilabel:`Electronic invoicing` field of the
+   :guilabel:`Advanced Settings` tab.
 
-If you wish to change the percentage computation of the box :guilabel:`[04]` under the :guilabel:`I`
-section and/or of the box :guilabel:`[09]` under the :guilabel:`II` section:
+.. screenshot:: finance-fl-spain-sii-settings
+   :menu: Accounting ‣ Configuration ‣ Settings ‣ Registro de Libros connection SII
+   :shows: The "Registro de Libros connection SII" setting with the "Certificate (SII)" link, the "Tax Agency for SII" drop-down set to "Agencia Tributaria española" and the "SII Test Mode" checkbox enabled.
+   :highlight: The "Tax Agency for SII" field.
+   :data: Demo company "YourCompany ES", Spanish localization installed; test certificate.
+   :module: l10n_es_edi_sii
+   :notes: English UI, light theme, 1440px width; use a throw-away certificate.
 
-#. Activate the :ref:`developer mode <developer-mode>`, go to :menuselection:`Accounting -->
-   Reporting --> Tax Report`, and select the report :guilabel:`Tax report (Modelo 130)`.
-#. Click the :icon:`fa-cogs` (:guilabel:`cogs`) icon to the right of :guilabel:`Report: Tax Report
-   (Mod 130) (ES)`.
-#. Click the box you wish to change, and in the pop-up window, click on the :guilabel:`percentage`
-   line. In the new pop-up window, change the value in the :guilabel:`Formula` field to the
-   percentage you wish to apply.
-   Repeat this action if you wish to modify the other box as well.
+Taxes
+-----
 
-Report agriculture activity
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The Spanish taxes carry a :guilabel:`Tax Type (Spain)` (:guilabel:`Sujeto`, :guilabel:`Exento`,
+:guilabel:`Sujeto ISP`, :guilabel:`No Sujeto`, :guilabel:`Retencion`, :guilabel:`Recargo de
+Equivalencia`, :guilabel:`DUA`, …), an :guilabel:`Exempt Reason (Spain)` for exempt taxes (E1 … E6) and
+the :guilabel:`Bien de Inversion` flag, which determine how the amounts are reported to the SII.
+The default taxes are configured; check these fields when creating new taxes.
 
-If you wish to have any amount input in the :guilabel:`II` section (from boxes :guilabel:`[08]` to
-:guilabel:`[11]`), you must change the **industry** of the corresponding contact to
-:guilabel:`Agriculture`:
+Sending documents
+-----------------
 
-#. Go to the contact form (:menuselection:`Accounting --> Customers --> Customers`
-   or :menuselection:`Accounting --> Vendors --> Vendors`, for example), and select a contact.
-#. In the :guilabel:`Sales & Purchase` tab, set the :guilabel:`Industry` field to
-   :guilabel:`Agriculture`.
-
-Repeat this operation for all contacts related to the **agriculture** industry.
-
+Once a customer invoice or vendor bill is posted in a journal with the SII format enabled, it is
+sent to the SII by the scheduled action of the electronic invoicing (or immediately with the
+:guilabel:`Process now` link of the blue banner). The status is shown in the
+:guilabel:`Electronic invoicing` field; the CSV return code and the acceptance message (or the
+errors reported by the agency) are logged in the chatter. The :guilabel:`Registration Date` field
+of the document (Other Info tab) is the date reported as *fecha de registro contable* for vendor
+bills.
 
 .. _localizations/spain/veri-factu:
 
@@ -105,8 +112,9 @@ Veri*Factu
 ==========
 
 .. note::
-   Producers of Veri*Factu billing systems must self-certify their compliance with the regulations.
-   :download:`Download Odoo's "declaración responsable"<spain/declaracion_responsable.pdf>`
+   Producers of Veri*Factu billing systems must self-certify their compliance with the regulations
+   (*declaración responsable*). Ask your support provider for the declaration that applies to your
+   installation.
 
 **Veri*Factu** is an e-Invoicing system used by the Spanish Tax Agency. It is mandatory for most
 taxpayers in Spain, except for those who use the SII system or are under a regional tax regime
@@ -226,8 +234,13 @@ Use case
 Once an invoice has been :doc:`created <../../finance/accounting/customer_invoices>` and confirmed,
 a TicketBAI **banner** appears at the top.
 
-.. image:: spain/ticketbai-invoice.png
-   :alt: TicketBAI banner at the top of the invoice once sent.
+.. screenshot:: finance-fl-spain-ticketbai-invoice
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (a sent invoice)
+   :shows: A posted invoice of a Basque company with the blue TicketBAI banner at the top stating that the invoice was sent to the tax agency, and the TicketBAI status.
+   :highlight: The TicketBAI banner.
+   :data: Demo company "YourCompany ES" (Bizkaia), TicketBAI test mode.
+   :module: l10n_es_edi_tbai
+   :notes: English UI, light theme, 1440px width.
 
 Odoo sends invoices through TicketBAI automatically every **24 hours**. However, you can click
 :guilabel:`Process now` to send the invoice immediately.
@@ -240,8 +253,13 @@ the invoice (e.g., if the invoice should also be sent through the **SII**, it wi
 .. note::
    The TBAI **QR code** is displayed on the invoice PDF.
 
-   .. image:: spain/qr-code.png
-      :alt: QR code of the TicketBAI on the invoice.
+   .. screenshot:: finance-fl-spain-qr-code
+      :menu: Accounting ‣ Customers ‣ Invoices ‣ (a sent invoice) ‣ Print
+      :shows: The printed invoice PDF with the TicketBAI QR code and TBAI identifier in the footer.
+      :highlight: The QR code.
+      :data: Demo company "YourCompany ES" (Bizkaia).
+      :module: l10n_es_edi_tbai
+      :notes: English UI, light theme, 1440px width.
 
 FACe
 ====
@@ -296,8 +314,13 @@ Select :guilabel:`FACe Center` as the **type**, assign one or more **role(s)** t
 - Unidad tramitadora: :guilabel:`Pagador` (Payer);
 - Oficina contable: :guilabel:`Fiscal` (Fiscal).
 
-.. image:: spain/administrative-center.png
-   :alt: Administrative center contact form for public entities.
+.. screenshot:: finance-fl-spain-administrative-center
+   :menu: Contacts ‣ (a public entity) ‣ Administrative Centers
+   :shows: The contact form of a public administration with the "Administrative Centers" section: a center with its "Center Code" (DIR3), role (Órgano gestor / Unidad tramitadora / Oficina contable) and address.
+   :highlight: The administrative center lines.
+   :data: Public entity "Ayuntamiento de Ejemplo", 3 DIR3 codes.
+   :module: l10n_es_edi_facturae
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    - If administrative centers need different :guilabel:`Codes` per role, you *must* create

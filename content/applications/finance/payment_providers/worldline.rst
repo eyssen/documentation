@@ -50,7 +50,7 @@ Worldline must now be configured to accept payments from Odoo.
    save them for :ref:`later <wordline/odoo-configuration>`.
 #. | Click :guilabel:`Add webhook endpoint`, enter your Odoo database's URL followed by
      `/payment/worldline/webhook` in the :guilabel:`Endpoint url` field, and :guilabel:`Confirm`.
-   | For example: `https://example.odoo.com/payment/worldline/webhook`.
+   | For example: `https://example.com/payment/worldline/webhook`.
 
 .. _wordline/odoo-configuration:
 

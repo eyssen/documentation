@@ -27,8 +27,13 @@ depending on the chosen type.
    - You could also include the invoice number in the QR code by checking the :guilabel:`Include
      Reference` checkbox.
 
-.. image:: singapore/sg-paynow-bank-setting.png
-   :alt: PayNow bank account configuration
+.. screenshot:: finance-fl-singapore-sg-paynow-bank-setting
+   :menu: Contacts ‣ Configuration ‣ Bank Accounts ‣ (the bank account)
+   :shows: A bank account form with "Proxy Type" set to a PayNow type (e.g. "UEN") and the "Proxy Value" filled in, "Include Reference" ticked.
+   :highlight: The "Proxy Type" and "Proxy Value" fields.
+   :data: Demo company "YourCompany SG", Singapore localization installed.
+   :module: l10n_sg, account_qr_code_emv
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    :doc:`../accounting/bank`
@@ -39,8 +44,13 @@ Bank journal configuration
 Go to :menuselection:`Accounting --> Configuration --> Journals`, open the bank journal, then fill
 out the :guilabel:`Account Number` and :guilabel:`Bank` under the :guilabel:`Journal Entries` tab.
 
-.. image:: singapore/sg-bank-account-journal-setting.png
-   :alt: Bank Account's journal configuration
+.. screenshot:: finance-fl-singapore-sg-bank-account-journal-setting
+   :menu: Accounting ‣ Configuration ‣ Journals ‣ Bank ‣ Journal Entries tab
+   :shows: The Journal Entries tab of the Bank journal with the "Account Number" and "Bank" fields filled in.
+   :highlight: The "Account Number" and "Bank" fields.
+   :data: Demo company "YourCompany SG".
+   :module: account
+   :notes: English UI, light theme, 1440px width.
 
 Issue invoices with PayNow QR codes
 -----------------------------------
@@ -48,21 +58,14 @@ Issue invoices with PayNow QR codes
 When creating a new invoice, open the :guilabel:`Other Info` tab and set the :guilabel:`Payment
 QR-code` option to *EMV Merchant-Presented QR-code*.
 
-.. image:: singapore/sg-qr-code-invoice-setting.png
-   :alt: Select EMV Merchant-Presented QR-code option
+.. screenshot:: finance-fl-singapore-sg-qr-code-invoice-setting
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (an invoice) ‣ Other Info tab
+   :shows: The Other Info tab of a customer invoice with the "Payment QR-code" drop-down set to "EMV Merchant-Presented QR-code".
+   :highlight: The "Payment QR-code" field.
+   :data: Demo company "YourCompany SG".
+   :module: account_qr_code_emv
+   :notes: English UI, light theme, 1440px width.
 
 Ensure that the :guilabel:`Recipient Bank` is the one you configured, as Odoo uses this field to
 generate the PayNow QR code.
-
-.. _singapore/employment-hero:
-
-Employment Hero payroll
-=======================
-
-If your business is already up and running with Employment Hero, you can use our connector as an
-alternative payroll solution.
-
-.. important::
-   To :ref:`configure the Employment Hero API <employment_hero/configuration>` for **Singapore**,
-   use the following value as :guilabel:`Payroll URL`: `HTTPS://apisg.yourpayroll.io/`.
 

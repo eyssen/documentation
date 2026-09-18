@@ -48,16 +48,24 @@ these codes to :ref:`configure your Odoo Accounting app <egypt/e-invoicing-confi
 
 Access your company profile on the ETA portal by clicking on :guilabel:`View Taxpayer Profile`.
 
-.. image:: egypt/taxpayer-profile.png
-   :align: center
-   :alt: Clicking on "View Taxpayer Profile" on an ETA invoicing portal
+.. screenshot:: finance-fl-egypt-taxpayer-profile
+   :menu: (ETA invoicing portal) ‣ home
+   :shows: The Egyptian Tax Authority invoicing portal home page with the "View Taxpayer Profile" link/button.
+   :highlight: The "View Taxpayer Profile" button.
+   :data: Preproduction portal, test taxpayer.
+   :module: l10n_eg_edi_eta
+   :notes: English UI, light theme, 1440px width.
 
 Next, go to the :guilabel:`Representatives` section and then click on :guilabel:`Register ERP`.
 Fill out the :guilabel:`ERP Name` (e.g., ``Odoo``) and leave the other fields empty.
 
-.. image:: egypt/add-erp-system.png
-   :align: center
-   :alt: Filling out of the form to register an ERP system on the ETA portal.
+.. screenshot:: finance-fl-egypt-add-erp-system
+   :menu: (ETA invoicing portal) ‣ Taxpayer Profile ‣ Representatives ‣ Register ERP
+   :shows: The "Register ERP" form of the ETA portal with "ERP Name" filled in as "Odoo" and the other fields empty.
+   :highlight: The "ERP Name" field.
+   :data: Preproduction portal.
+   :module: l10n_eg_edi_eta
+   :notes: English UI, light theme, 1440px width.
 
 Once successfully registered, the website displays your API credentials:
 
@@ -80,9 +88,13 @@ Configuration --> Settings --> ETA E-Invoicing Settings`, and set the :guilabel:
 :guilabel:`ETA Secret` that you retrieved when you :ref:`registered Odoo on your ETA portal
 <egypt/e-invoicing-eta-portal>`. Set an invoicing threshold if needed.
 
-.. image:: egypt/eta-api-integration.png
-   :align: center
-   :alt: Configuration of the ETA E-Invoicing credentials in Odoo Accounting
+.. screenshot:: finance-fl-egypt-eta-api-integration
+   :menu: Accounting ‣ Configuration ‣ Settings ‣ Egyptian Localization
+   :shows: The "ETA API Integration" settings block (Egyptian Localization) with the "ETA Client ID", "ETA Secret" and "Invoicing Threshold" fields, and the "In Production Environment" checkbox unticked.
+   :highlight: The "ETA Client ID" and "ETA Secret" fields.
+   :data: Demo company "YourCompany EG", Egyptian localization installed; ETA preproduction portal. Use throw-away credentials.
+   :module: l10n_eg_edi_eta
+   :notes: English UI, light theme, 1440px width; use a throw-away secret.
 
 .. important::
    - **Test on your preproduction portal** before starting to issue real invoices on the production
@@ -142,9 +154,13 @@ Name the journal according to your company's branch and set the :guilabel:`Type`
 - Set the :guilabel:`ETA Activity Code`.
 - Set the :guilabel:`ETA Branch ID` (use ``0`` if you have one branch only).
 
-.. image:: egypt/branch-journal.png
-   :align: center
-   :alt: Sales journal configuration of an Egyptian company's branch
+.. screenshot:: finance-fl-egypt-branch-journal
+   :menu: Accounting ‣ Configuration ‣ Journals ‣ (a sales journal) ‣ Advanced Settings tab
+   :shows: The Advanced Settings tab of a sales journal with the "Electronic invoicing" section: the "Branch" contact, "ETA Activity Code" and "ETA Branch ID" (0) fields.
+   :highlight: The "Branch", "ETA Activity Code" and "ETA Branch ID" fields.
+   :data: Demo company "YourCompany EG", Egyptian localization installed; ETA preproduction portal.
+   :module: l10n_eg_edi_eta
+   :notes: English UI, light theme, 1440px width.
 
 .. important::
    The contact selected in the :guilabel:`Branch` field must be set as a :guilabel:`Company`
@@ -207,9 +223,13 @@ installation on your computer.
 
 Select :guilabel:`Odoo IoT` as the type of install.
 
-.. image:: egypt/install-odoo-local-proxy.png
-   :align: center
-   :alt: Selection of "Odoo IoT" during the installation of Odoo Community.
+.. screenshot:: finance-fl-egypt-install-odoo-local-proxy
+   :menu: (Odoo Community Windows installer)
+   :shows: The "Select Components / type of install" step of the Odoo Community Windows installer with "Odoo IoT" selected instead of "Odoo Server".
+   :highlight: The "Odoo IoT" option.
+   :data: Windows installer of the same Odoo version as the database.
+   :module: l10n_eg_edi_eta
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    This installation of Odoo only works as a server and does not install any Odoo apps on your
@@ -236,6 +256,10 @@ Once the local proxy server is installed on your computer, you can link it with 
    installation <egypt/e-invoicing-local-proxy>`, then click on :guilabel:`Save`.
 #. Click on :guilabel:`Get certificate`.
 
-.. image:: egypt/thumb-drive.png
-   :align: center
-   :alt: Creating a new thumb drive for the e-invoicing of an egyptian company.
+.. screenshot:: finance-fl-egypt-thumb-drive
+   :menu: Accounting ‣ Configuration ‣ Thumb Drive ‣ New
+   :shows: The "Thumb Drive" form: Company, "ETA USB Pin" and "Access Token" fields filled in, with the "Get certificate" button in the header.
+   :highlight: The "Get certificate" button.
+   :data: Demo company "YourCompany EG", Egyptian localization installed; ETA preproduction portal. Use a throw-away PIN and token.
+   :module: l10n_eg_edi_eta
+   :notes: English UI, light theme, 1440px width; use a throw-away secret.

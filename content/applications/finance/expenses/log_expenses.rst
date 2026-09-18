@@ -84,8 +84,13 @@ loads:
 - :guilabel:`Notes...`: If any notes are needed to clarify the expense, enter them in the notes
   field.
 
-.. image:: log_expenses/expense-filled-in.png
-   :alt: A filled in expense form for a client lunch.
+.. screenshot:: finance-expenses-log-expenses-expense-filled-in
+   :menu: Expenses ‣ My Expenses ‣ My Expenses ‣ New
+   :shows: A filled-in expense form for a client lunch: Description "Client lunch", Category "Meals", Total, Included taxes, Employee, Paid By "Employee (to reimburse)", Expense Date, Account, Customer to Reinvoice, Analytic Distribution, Company and Notes.
+   :highlight: The "Paid By" and "Total" fields.
+   :data: Description "Client lunch with Deco Addict", Category Meals, Total 84.00, Paid By Employee (to reimburse).
+   :module: hr_expense
+   :notes: English UI, light theme, 1440px width.
 
 Attach receipts
 ---------------
@@ -103,43 +108,15 @@ individual expense record, as needed.
 Upload expenses
 ===============
 
-It is possible to have expense records created automatically by :ref:`uploading a PDF receipt
-<expenses/upload>`. To utilize this feature, a setting must be enabled, and :abbr:`IAP (in-app
-purchases)` credits must be purchased.
-
-.. _expenses/digitalization:
-
-Digitalization settings
------------------------
-
-To enable receipt scanning, navigate to :menuselection:`Expenses app --> Configuration -->
-Settings`, and tick the checkbox beside the :guilabel:`Expense Digitization (OCR)` option. Then,
-click :guilabel:`Save`. When enabled, additional options appear. Click on the corresponding radio
-button to select one of the following options:
-
-- :guilabel:`Do not digitize`: Disables receipt digitization but does *not* uninstall the related
-  digitization module.
-- :guilabel:`Digitize on demand only`: Only digitizes receipts when requested. A :guilabel:`Digitize
-  document` button appears on expense records. When clicked, the receipt is scanned and the expense
-  record is updated.
-- :guilabel:`Digitize automatically`: Automatically digitizes all receipts when they are uploaded.
-
-Beneath these options are two additional links. Click the :icon:`fa-arrow-right` :guilabel:`Manage
-Service & Buy Credits` link to view account details and settings, and purchase credits for receipt
-digitization. Click the :icon:`fa-arrow-right` :guilabel:`View My Services` link to view a list of
-all current services, and their remaining credit balances.
-
-For more information on document digitization and :abbr:`IAPs (in-app purchases)`, refer to the
-:doc:`In-app purchase (IAP) <../../essentials/in_app_purchase>` documentation.
+Expense records can also be created directly from receipt files (PDF or image), without typing the
+expense first: each uploaded file becomes a new expense with the receipt attached.
 
 .. note::
-   When the :guilabel:`Expense Digitization (OCR)` option is enabled, a necessary module is
-   installed, so receipts can be scanned. Disabling this option uninstalls the module.
-
-   If, at some point, there is a desire to temporarily stop digitizing receipts, select the
-   :guilabel:`Do not digitize` option. The reason this option is available is so the module is not
-   uninstalled, allowing for digitization to be enabled in the future by selecting one of the other
-   two options.
+   Receipt digitization (OCR) is **not** available: the uploaded file is attached to the expense,
+   but the amount, date, and category are *not* read from it. Fill in these fields manually after
+   the upload. The :guilabel:`Expense Digitalization (OCR)` and :guilabel:`Reimburse in Payslip`
+   options shown on the :menuselection:`Expenses app --> Configuration --> Settings` page are not
+   supported and should be left disabled.
 
 .. _expenses/upload:
 
@@ -147,24 +124,40 @@ Upload receipts
 ---------------
 
 Open the :guilabel:`Expenses app`, and from the :guilabel:`My Expenses` dashboard, click
-:guilabel:`Upload`, and a file explorer appears. Navigate to the desired receipt, select it, then
-click :guilabel:`Open`.
+:guilabel:`Upload`, and a file explorer appears. Navigate to the desired receipt(s), select them,
+then click :guilabel:`Open`.
 
-The receipt is scanned, and a new expense record is created. The :guilabel:`Expense Date` field is
-populated with today's date, along with any other fields based on the scanned data, such as the
-:guilabel:`Total`.
+One expense record is created per file. The :guilabel:`Description` is the file name (without its
+extension), the :guilabel:`Expense Date` is today's date, the :guilabel:`Total` is zero, and the
+:guilabel:`Category` is the expense category with the internal reference `EXP_GEN` (or, if there
+is no such category, the first category that can be expensed). The new records open in the
+:guilabel:`Generate Expenses` list.
 
-Click on the new entry to open the individual expense form, and make any changes, if needed. The
-scanned receipt appears in the *chatter*.
+.. note::
+   At least one expense category (a product with the :guilabel:`Expenses` checkbox enabled) must exist,
+   otherwise the upload is refused with an error.
+
+Click on a new entry to open the individual expense form, and complete the :guilabel:`Total`,
+:guilabel:`Category`, and any other fields from the receipt. The uploaded receipt appears in the
+*chatter* and in the attachment preview on the right side of the form.
+
+.. screenshot:: finance-expenses-log-upload-generate-expenses
+   :menu: Expenses ‣ My Expenses ‣ My Expenses ‣ Upload
+   :shows: The "Generate Expenses" list opened right after uploading two receipt files; each line has the file name as Description, today's date, the EXP_GEN category and a 0.00 total.
+   :highlight: The "Upload" button in the control panel and the Description column.
+   :data: Demo employee "Mitchell Admin"; receipts "taxi-2025-03-04.pdf" and "hotel-brussels.pdf".
+   :module: hr_expense
+   :notes: English UI, light theme, 1440px width.
 
 .. _expenses/drag_and_drop:
 
 Drag and drop an expense
 ========================
 
-If :ref:`digitalization is enabled <expenses/digitalization>`, drag and drop a receipt onto the
-**Expenses** app dashboard. The receipt is scanned and appears by itself on the :guilabel:`Generate
-Expenses` dashboard.
+Receipt files can also be dragged and dropped onto the :guilabel:`My Expenses` list or onto the
+expense kanban view. A drop zone appears while a file is dragged over the view; releasing the file
+creates the expense record(s) exactly as with the :guilabel:`Upload` button, and the new records
+appear in the :guilabel:`Generate Expenses` list.
 
 Click on the expense record, and modify the details as needed. After changes are made, return to the
 :guilabel:`My Expenses` dashboard, and the expense now appears in the list.
@@ -182,8 +175,13 @@ created by sending an email to an email alias.
    expense from an email. To confirm an authenticated employee email address, go to the employee
    card in the :menuselection:`Employees app`, and refer to the :guilabel:`Work Email` field.
 
-   .. image:: log_expenses/authenticated-email-address.png
-      :alt: Create the domain alias by clicking the link.
+   .. screenshot:: finance-expenses-log-expenses-authenticated-email-address
+      :menu: Employees ‣ (an employee) ‣ Work Information
+      :shows: The employee form with the "Work Email" field filled in under the Work Information section; this address is the one accepted for e-mailed expenses.
+      :highlight: The "Work Email" field.
+      :data: Employee Mitchell Admin, work e-mail admin@yourcompany.com.
+      :module: hr_expense
+      :notes: English UI, light theme, 1440px width.
 
 To do so, an email alias must first be configured. Navigate to :menuselection:`Expenses app -->
 Configuration --> Settings`. Ensure the checkbox beside :guilabel:`Incoming Emails` is ticked. The
@@ -217,8 +215,13 @@ with the receipt.
   To add a reference code to an expense category, click on the category to open the expense category
   form. Enter the reference code in the :guilabel:`Reference` field.
 
-  .. image:: log_expenses/ref.png
-     :alt: Reference categories displayed in the main Expense Categories view.
+  .. screenshot:: finance-expenses-log-expenses-ref
+     :menu: Expenses ‣ Configuration ‣ Expense Categories
+     :shows: The Expense Categories list with the "Internal Reference" column visible, showing the reference codes (e.g. FOOD, MIL, TRAVEL) used as the first word of the e-mail subject.
+     :highlight: The "Internal Reference" column.
+     :data: Default demo categories.
+     :module: hr_expense
+     :notes: English UI, light theme, 1440px width.
 
 .. example::
    If submitting an expense, via email, for a $25.00 meal during a work trip, the email subject

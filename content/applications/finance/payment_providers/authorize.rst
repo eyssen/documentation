@@ -91,14 +91,23 @@ Export from Authorize.Net
   :guilabel:`Report 1 Download` sheet of the :ref:`Excel import template
   <authorize-import-template>`.
 
-.. image:: authorize/authorize-report1.png
-   :alt: Selecting Authorize.Net transactions to import
+.. screenshot:: finance-payment-providers-authorize-authorize-report1
+   :menu: (Authorize.Net merchant interface) ‣ Account ‣ Statements ‣ eCheck.Net Settlement Statement
+   :shows: The Authorize.Net settlement statement transaction list with all transactions of the selected batch range selected, ready to be copied into the "Report 1 Download" sheet.
+   :highlight: The selected transaction rows.
+   :data: Sandbox merchant, a few test transactions.
+   :module: payment_authorize
+   :notes: English UI, light theme, 1440px width.
 
 .. example::
 
-   .. image:: authorize/authorize-settlement-batch.png
-      :align: center
-      :alt: Settlement batch of an Authorize.Net statement
+   .. screenshot:: finance-payment-providers-authorize-authorize-settlement-batch
+      :menu: (Authorize.Net merchant interface) ‣ Account ‣ Statements ‣ eCheck.Net Settlement Statement
+      :shows: The settlement batch list of Authorize.Net showing that the first batch of the year (01/01/2021) belongs to the settlement of 12/31/2020.
+      :highlight: The 01/01/2021 batch row.
+      :data: Sandbox merchant.
+      :module: payment_authorize
+      :notes: English UI, light theme, 1440px width.
 
    In this case, the first batch (01/01/2021) of the year belongs to the settlement of 12/31/2020,
    so the **opening** settlement is from 12/31/2020.
@@ -146,8 +155,13 @@ To import the data into Odoo:
 
 .. example::
 
-   .. image:: authorize/authorize-chargeback-desc.png
-      :alt: Chargeback description
+   .. screenshot:: finance-payment-providers-authorize-authorize-chargeback-desc
+      :menu: (Authorize.Net merchant interface) ‣ Transaction Search ‣ (a chargeback transaction)
+      :shows: The transaction detail of a chargeback in Authorize.Net with its description, which is copied into the "Label" column of the import template.
+      :highlight: The description text.
+      :data: Sandbox merchant.
+      :module: payment_authorize
+      :notes: English UI, light theme, 1440px width.
 
 - Next, delete *zero transaction* and *void transaction* line items, and change the format
   of the :guilabel:`Amount` column in the :guilabel:`Odoo Import to CSV` sheet to *Number*.

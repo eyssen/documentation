@@ -9,15 +9,6 @@ Canada
 The Odoo Canada localization package provides tailored features and configurations for Canadian
 businesses.
 
-A series of videos on the subject of Accounting are available through Odoo's eLearning platform.
-These videos cover how to start from scratch, set up configurations, complete common workflows, and
-provide in-depth looks at some specific use cases.
-
-.. seealso::
-   - `Odoo Tutorials: Accounting & Invoicing
-     <https://www.odoo.com/slides/accounting-and-invoicing-19>`_
-   - `Odoo SmartClass: Accounting <https://www.odoo.com/slides/smartclass-accounting-121>`_
-
 Configuration
 =============
 
@@ -39,21 +30,12 @@ localization:
    * - :guilabel:`Canada - Accounting`
      - `l10n_ca`
      - Base accounting module for Canadian localization.
-   * - :guilabel:`Canada - Accounting Reports`
-     - `l10n_ca_reports`
-     - Adds Canadian accounting reports.
-   * - :guilabel:`Canadian Checks Layout`
-     - `l10n_ca_check_printing`
-     - Enables the printing of payments on pre-printed check paper. Supports the three most common
-       check formats and works natively with the linked checks from `checkdepot.net
-       <https://checkdepot.net/collections/computer-checks/Odoo>`_.
 
-       - `Check on top: Quicken / QuickBooks standard
-         <https://checkdepot.net/collections/computer-checks/odoo+top-check>`_
-       - `Check on middle: Peachtree standard
-         <https://checkdepot.net/collections/computer-checks/odoo+middle-check>`_
-       - `Check on bottom: ADP standard
-         <https://checkdepot.net/collections/computer-checks/odoo+Bottom-Check>`_
+.. note::
+   The Canadian versions of the financial reports (Balance sheet (CA), Profit and loss (CA)), the
+   Canadian check layouts and the AvaTax integration are **not** available in this edition. The
+   generic :doc:`financial reports <../accounting/reporting>` and the generic :doc:`check printing
+   <../accounting/payments/pay_checks>` layouts can be used instead.
 
 .. _l10n_ca/coa:
 
@@ -153,8 +135,12 @@ The following fiscal positions are available by default:
 - :guilabel:`Yukon (YT)`
 - :guilabel:`International (INTL)`
 
-.. image:: canada/l10n-ca-fiscal-positions.png
-   :alt: The default fiscal positions for the Canada localization in Odoo Accounting.
+.. screenshot:: finance-fl-canada-fiscal-positions
+   :menu: Accounting ‣ Configuration ‣ Fiscal Positions
+   :shows: The Fiscal Positions list of the Canadian localization with the 13 provincial/territorial positions (Alberta (AB) … Yukon (YT)) and "International (INTL)".
+   :data: Demo company "YourCompany CA", Canadian localization installed.
+   :module: l10n_ca
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    When considering what taxes to be applied, it is the province where the delivery occurs that
@@ -184,70 +170,6 @@ and *Purchases* taxes are created automatically when the Odoo **Accounting** app
 installed. To manage existing or configure additional taxes, navigate to :menuselection:`Accounting
 --> Configuration --> Taxes`.
 
-.. _l10n_ca/taxes-avatax:
-
-AvaTax
-------
-
-**Avalara AvaTax** is a cloud-based tax calculation and compliance software that integrates with
-Odoo for several localizations, including Canada. Integrating AvaTax with Odoo provides real-time
-and region-specific tax calculations when items are sold, purchased, and invoiced in the database.
-
-.. important::
-   AvaTax is available for integration with databases/companies that have locations in Canada and/or
-   the United States. Reference the Fiscal country documentation for more
-   information.
-
-.. seealso::
-   Refer to the documentation articles below to integrate and configure an AvaTax account with an
-   Odoo database:
-
-   - Avalara's support documents: `About AvaTax
-     <https://community.avalara.com/support/s/document-item?language=en_US&bundleId=dqa1657870670369_dqa1657870670369&topicId=About_AvaTax.html&_LANG=enus>`_
-
-.. _l10n_ca/reports:
-
-Reports
-=======
-
-A number of :doc:`report selections <../accounting/reporting>` are readily available for the
-Canadian localization, under the :menuselection:`Accounting app --> Reporting` drop-down menu:
-
-- :ref:`Balance Sheet <accounting/reporting/balance-sheet>`: a "snapshot" of a company's financial
-  position at a specific point in time, which contains an overview of a company's assets,
-  liabilities, and equity.
-
-  Be sure to select the :menuselection:`Balance sheet (CA)` option from the :icon:`fa-book`
-  :guilabel:`Report` filter.
-
-  .. image:: canada/l10n-ca-balance-sheet.png
-     :alt: Balance sheet report selection for CA localization in Odoo.
-
-- :ref:`Profit & Loss <accounting/reporting/balance-sheet>`: otherwise known as a *P&L statement* or
-  *income statement*, provides a summary of a company's revenues, expenses, and profits/losses over
-  a given period of time.
-
-  Be sure to select the :menuselection:`Profit and loss (CA)` option from the :icon:`fa-book`
-  :guilabel:`Report` filter.
-
-  .. image:: canada/l10n-ca-profit-loss.png
-     :alt: Profit and loss report selection for CA localization in Odoo.
-
-- :guilabel:`Cash Flow Statement`: shows how much cash and cash equivalents a company has received
-  and spent in a given period.
-- :ref:`Executive Summary <accounting/reporting/executive-summary>`: an overview report that covers
-  the key performance indicators of a company's financial position, such as revenue, profit, and
-  debt.
-- :ref:`Tax Report <accounting/reporting/tax-report>`: an official form filed for a tax authority
-  that reports income, expenses, and other pertinent tax information. Tax reports allow taxpayers to
-  calculate their tax liability, schedule tax payments, or request refunds for the overpayment of
-  taxes. In Odoo, the tax report can be made monthly, every two months, quarterly, every 4 months,
-  semi-annually, and annually.
-
-.. seealso::
-   - :doc:`Accounting reporting <../accounting/reporting>`
-   - :doc:`../../essentials/search`
-
 .. _l10n_ca/cash-discount:
 
 Cash discount
@@ -258,37 +180,3 @@ payment term can be set up with a cash discount and reduced tax.
 
 .. seealso::
    :doc:`../accounting/customer_invoices/cash_discounts`
-
-Writing checks
-==============
-
-The Canadian localization allows users to print checks for vendor payments. Be sure the *Canadian
-Checks Layout* (`l10n_ca_check_printing`) module for the CA localization is :ref:`installed
-<general/install>`.
-
-To enable check printing from Odoo, navigate to :menuselection:`Accounting --> Configuration -->
-Settings` and find the :guilabel:`Vendor Payments` section. From here, tick the :guilabel:`Checks`
-checkbox to reveal several fields for check configuration.
-
-Select a :guilabel:`Check Layout` from the drop-down menu:
-
-- :guilabel:`Print Check (Top) - CA`
-- :guilabel:`Print Check (Middle) - CA`
-- :guilabel:`Print Check (Bottom) - CA`
-
-Next, choose whether or not to enable the :guilabel:`Multi-Pages Check Stub` checkbox.
-
-Optionally set a :guilabel:`Check Top Margin`, :guilabel:`Check Left Margin`, or :guilabel:`Check
-Right Margin` if required.
-
-Tick the :guilabel:`Print Date Label` checkbox if a date label is required.
-
-Once all check configurations are complete, :guilabel:`Save` the settings.
-
-.. tip::
-   Some of the check formats may require pre-printed paper from a third party vendor.
-   `Pre-printed checks from checkdepot.net <https://checkdepot.net/collections/odoo-checks>`_ are
-   recommended.
-
-.. seealso::
-   :doc:`../accounting/payments/pay_checks`

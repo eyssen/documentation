@@ -24,7 +24,7 @@ Configuration on AsiaPay Dashboard
      :guilabel:`Return Value Link (Datefeed)`;
    | Enter your Odoo database URL followed by `/payment/asiapay/webhook` in the
      :guilabel:`Return Value Link (Datefeed)` text field. For example:
-     `https://yourcompany.odoo.com/payment/asiapay/webhook`;
+     `https://yourcompany.com/payment/asiapay/webhook`;
    | Click on :guilabel:`Test` to check if the webhook is working correctly.
 #. Click on :guilabel:`Update` to finalize the configuration.
 

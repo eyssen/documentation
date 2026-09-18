@@ -4,61 +4,49 @@ Reimburse employees
 
 After an expense report is :doc:`posted to an accounting journal <../expenses/post_expenses>`, the
 next step is to reimburse the employee. Employees can be reimbursed via cash, check, or direct
-deposit in three ways:
+deposit in two ways:
 
 - :ref:`Individually <expenses/reimburse-single>`: Each individual expense report is reimbursed
   separately.
 - :ref:`In bulk <expenses/reimburse-bulk>`: Multiple expense reports are reimbursed in a single
   payment.
-- :ref:`In the employee's payslip <expenses/reimburse-payslip>`: Expense reports are reimbursed
-  directly in the employee's payslip.
+
+.. note::
+   Reimbursing expenses through the employee's payslip is **not** available; the
+   :guilabel:`Reimburse in Payslip` option on the settings page should be left disabled. Expenses
+   are always paid with a regular payment registered in the **Accounting** app.
 
 .. _expenses/reimburse-settings:
 
 Reimbursement settings
 ======================
 
-Reimbursements can be paid via a paycheck, check, cash, or bank transfer (usually referred to as
-direct deposit). To set up payment options, first configure the various settings by navigating to
+Reimbursements can be paid via check, cash, or bank transfer (usually referred to as direct
+deposit). To set up payment options, first configure the various settings by navigating to
 :menuselection:`Expenses app --> Configuration --> Settings`.
 
-To reimburse employees for expenses :ref:`in their paychecks <expenses/reimburse-payslip>`, tick the
-checkbox beside the :guilabel:`Reimburse in Payslip` option in the :guilabel:`Expenses` section.
-
-Next, set how payments are made in the :guilabel:`Accounting` section. Click the drop-down menu
-under :guilabel:`Payment Methods`, and select the desired payment option. The default options
-include paying by :guilabel:`Manual Payment (Cash)`, :guilabel:`Manual Payment (Bank)`,
-:guilabel:`Batch Deposit (Bank)`, and :guilabel:`Checks (Bank)`.
+Set how payments are made in the :guilabel:`Accounting` section. Click the drop-down menu
+under :guilabel:`Payment methods`, and select the desired payment option(s). The available options
+are the outgoing payment method lines of the bank and cash journals, for example
+:guilabel:`Manual (Bank)`, :guilabel:`Manual (Cash)`, and, when the *Checks* payment method is
+enabled on a bank journal, :guilabel:`Checks (Bank)`. This setting only restricts the payment methods
+for expenses **paid by the company**.
 
 Leaving this field blank allows for **all** available payment options to be used.
 
+The same section also holds the :guilabel:`Employee Expense Journal` (the default journal used when
+posting reports paid by employees) and the :guilabel:`Expense Outstanding Account` (the default
+outstanding account for expenses paid by the company).
+
+.. screenshot:: finance-expenses-reimburse-settings
+   :menu: Expenses ‣ Configuration ‣ Settings
+   :shows: The "Accounting" block of the Expenses settings with the "Employee Expense Journal", "Expense Outstanding Account" and "Payment methods" settings.
+   :highlight: The "Payment methods" many2many field (red frame).
+   :data: Demo company; Employee Expense Journal "Expenses", Payment methods "Manual (Bank)".
+   :module: hr_expense
+   :notes: English UI, light theme, 1440px width, crop to the Accounting block.
+
 When all desired configurations are complete, click :guilabel:`Save` to activate the settings.
-
-.. _expenses/reimburse-payslip:
-
-Reimburse in payslips
-=====================
-
-If the  *Reimburse in Payslip* option is activated on the :ref:`settings
-<expenses/reimburse-settings>` page, payments can be added to the employee's next payslip, instead
-of issuing separate payments.
-
-.. important::
-   Reimbursing expenses on payslips can **only** be done individually for an *approved* expense
-   report. Once an expense report has a status of *Posted*, the option to reimburse in the following
-   payslip **is not available**.
-
-Navigate to :menuselection:`Expenses app --> Expense Reports`, and click on the individual expense
-report to reimburse on the following paycheck. Click the :guilabel:`Report in Next Payslip` button,
-and the expenses are added to the next payslip issued for that employee.
-
-.. image:: reimburse/pay-via-payslip.png
-   :alt: The Report in Next Payslip button, visible with an expense report status of Approved.
-
-Once the expense report is added to the following payslip, a message is logged in the chatter
-stating `Expense report (expense report name) will be added to the next payslip.` The status for the
-expense report remains :guilabel:`Approved`. The status only changes to :guilabel:`Posted` (and then
-:guilabel:`Done`), when the related payslip is processed.
 
 .. _expenses/reimburse-single:
 
@@ -71,7 +59,7 @@ report being reimbursed to view the report details.
 
 .. important::
    **Only** expense reports with a status of :guilabel:`Posted` can be reimbursed directly to the
-   employee (not :ref:`via a payslip <expenses/reimburse-payslip>`).
+   employee.
 
 Click the :guilabel:`Pay` button in the top-left corner of the expense report, and a :guilabel:`Pay`
 pop-up window loads. Enter the following information in the pop-up window:
@@ -92,9 +80,13 @@ pop-up window loads. Enter the following information in the pop-up window:
 - :guilabel:`Memo`: The text entered in the :doc:`Expense Report Summary
   <../expenses/expense_reports>` field of the expense report populates this field, by default.
 
-.. image:: reimburse/payment.png
-   :alt: The Register Payment pop-up window filled out for an individual expense report
-         reimbursement.
+.. screenshot:: finance-expenses-reimburse-payment
+   :menu: Expenses ‣ Expense Reports ‣ (a posted report) ‣ Register Payment
+   :shows: The "Register Payment" pop-up for one expense report: Journal "Bank", Payment Method "Manual", Recipient Bank Account, Amount, Payment Date and Memo fields, and the "Create Payment" button.
+   :highlight: The "Journal" and "Payment Method" fields.
+   :data: Report "Trip to Brussels", amount 210.00, journal Bank.
+   :module: hr_expense
+   :notes: English UI, light theme, 1440px width.
 
 When the fields of the pop-up window are completed, click the :guilabel:`Create Payment` button to
 register the payment, and reimburse the employee. A green :guilabel:`In Payment` banner now appears
@@ -111,7 +103,7 @@ reimbursed.
 
 .. important::
    **Only** expense reports with a status of :guilabel:`Posted` can be reimbursed directly to the
-   employee (not :ref:`via a payslip <expenses/reimburse-payslip>`).
+   employee.
 
 .. tip::
    Adjust the :guilabel:`STATUS` filter on the left side to only show :guilabel:`Posted` expense
@@ -138,5 +130,10 @@ window:
 When the fields on the :guilabel:`Pay` pop-up window are completed, click the :guilabel:`Create
 Payments` button to register the payments, and reimburse the employees.
 
-.. image:: reimburse/repay-multiple.png
-   :alt: The pay pop-up window filled out for multiple reimbursements via checks.
+.. screenshot:: finance-expenses-reimburse-repay-multiple
+   :menu: Expenses ‣ Expense Reports ‣ (several posted reports selected) ‣ Register Payment
+   :shows: The "Register Payment" pop-up opened for several posted expense reports at once: Journal, Payment Method, Group Payments checkbox, Payment Date and the "Create Payment" button.
+   :highlight: The "Group Payments" checkbox.
+   :data: Two posted reports of the same employee.
+   :module: hr_expense
+   :notes: English UI, light theme, 1440px width.

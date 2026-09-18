@@ -10,164 +10,119 @@ localization.
 
 .. list-table::
    :header-rows: 1
+   :widths: 25 25 50
 
    * - Name
      - Technical name
      - Description
    * - :guilabel:`Romania - Accounting`
      - `l10n_ro`
-     - Default :ref:`fiscal localization package <fiscal_localizations/packages>`.
-   * - :guilabel:`Romanian SAF-T Export`
-     - `l10n_ro_saft`
-     - Module to generate the **D.406 declaration** in the SAF-T format.
+     - Default :ref:`fiscal localization package <fiscal_localizations/packages>`: chart of
+       accounts, taxes and the :guilabel:`NRC` (trade register number) field on contacts.
+   * - :guilabel:`Romania - E-invoicing`
+     - `l10n_ro_edi`
+     - Sends customer invoices in the CIUS-RO (UBL) format to the ANAF *SPV* platform (E-Factura).
+       Installed automatically for Romanian companies.
+   * - :guilabel:`Romania - Synchronize E-Factura`
+     - `l10n_ro_efactura_synchronize`
+     - Imports the vendor bills received in the SPV into a purchase journal.
+   * - :guilabel:`Romania - E-Transport`
+     - `l10n_ro_edi_stock`
+     - Declares transports of goods to the ANAF e-Transport system from delivery orders and
+       receipts (UIT code).
+   * - :guilabel:`Romania - CPV Code`
+     - `l10n_ro_cpv_code`
+     - Adds the CPV (Common Procurement Vocabulary) code to products, required on some E-Factura
+       lines.
 
-.. image:: romania/romania-modules.png
-   :alt: Modules for the Romanian localization
+.. note::
+   The Romanian SAF-T export (**D.406 declaration**) is **not** available in this edition.
 
 .. seealso::
    :doc:`Documentation on e-invoicing’s legality and compliance in Romania
    <../accounting/customer_invoices/electronic_invoicing/romania>`
 
-D.406 declaration
-=================
-
-Starting January 1, 2023, companies registered for tax purposes in Romania must report their
-accounting data to the Romanian Tax Agency monthly or quarterly in the D.406 declaration.
-
-Odoo provides all you need to export the data of this declaration in the SAF-T XML format, which you
-can validate and sign using the software provided by the Romanian Tax Agency.
-
-.. note::
-   Currently, Odoo only supports the generation of the monthly/quarterly D.406 declaration
-   (containing journal entries, invoices, vendor bills, and payments). The yearly declaration
-   (including assets) and the on-demand declaration (including inventory) are not yet supported.
-
-Configuration
--------------
-
 Company
-~~~~~~~
+-------
 
-- Under :guilabel:`Settings --> General Settings`, in the **Companies** section, click
-  :guilabel:`Update Info` and fill in the company's :guilabel:`Country`, :guilabel:`City`, and
-  :guilabel:`Telephone Number`.
-- Provide your company's :abbr:`CUI (Codul Unic de Inregistrare)` number or :abbr:`CIF (*Codul de
-  identificare fiscală*)` number (for foreign companies) in the :guilabel:`Company ID` field,
-  without the `RO` prefix (e.g., `18547290`).
-- If your company is **registered** for VAT in Romania, fill in the :guilabel:`Tax ID` field number,
-  including the `RO` prefix (e.g., `RO18547290`). If the company is **not** registered for
-  VAT in Romania, you **must not** fill in the :guilabel:`Tax ID` field.
-- Open the **Contacts** app and search for your company. Open your company's profile, and in the
-  :guilabel:`Accounting` tab, click :guilabel:`Add a line` and add your **bank account number** if
-  not informed already. Make sure the profile is set as :guilabel:`Company` above the **name**.
+In :menuselection:`Settings --> General Settings --> Companies --> Update Info`, fill in the
+company's :guilabel:`Tax ID` (CUI, with the `RO` prefix for VAT-registered companies) and, in the
+company's contact form, the :guilabel:`NRC` (*Număr de ordine în Registrul Comerțului*).
 
-  - You must have at least one **contact person** linked to your company in the **Contacts** app.
-    If no **contact person** is linked, create a new one by clicking :guilabel:`New`, set it
-    as :guilabel:`Individual`, and select your company in the :guilabel:`Company name` field.
+E-Factura
+=========
 
-Chart of accounts
-~~~~~~~~~~~~~~~~~
+Connection to the SPV
+---------------------
 
-To generate a file receivable by the Romanian Tax Agency, the chart of accounts must not deviate
-from an official chart of accounts, such as:
+Odoo sends the invoices to the ANAF *Spațiul Privat Virtual* (SPV) with the company's own OAuth
+credentials. In :menuselection:`Accounting --> Configuration --> Settings --> Romanian E-Factura`:
 
-- the chart of accounts for commercial companies (*PlanConturiBalSocCom*), which is installed
-  by default when creating a company with the Romanian localization or;
-- the chart of accounts for companies following `IFRS <https://www.ifrs.org/>`_ (*PlanConturiIFRS*).
+#. Register an application on the ANAF developer portal with the :guilabel:`Callback URL` shown in
+   the settings block, and copy the resulting :guilabel:`Client ID` and :guilabel:`Client Secret`
+   into the corresponding fields.
+#. Keep :guilabel:`Use Test Environment` enabled while testing; disable it for production.
+#. Click :guilabel:`Generate Token` and log in with the company's ANAF certificate. The
+   :guilabel:`Access Token` and :guilabel:`Refresh Token` and their expiry dates are then filled in
+   automatically; the token is refreshed by a scheduled action before it expires.
 
-Under :guilabel:`Settings --> Accounting`, in the **Romanian localization** section, set the
-:guilabel:`Tax Accounting Basis` to reflect the accounting regulations and Chart of Accounts used
-by the company.
+.. screenshot:: finance-fl-romania-efactura-settings
+   :menu: Accounting ‣ Configuration ‣ Settings ‣ Romanian E-Factura
+   :shows: The "Romanian E-Factura" settings block with the Callback URL, "Client ID", "Client Secret", the "Generate Token" button, the access/refresh token expiry dates and the "Use Test Environment" checkbox.
+   :highlight: The "Generate Token" button.
+   :data: Demo company "YourCompany RO", Romanian localization installed; test environment, throw-away credentials.
+   :module: l10n_ro_edi
+   :notes: English UI, light theme, 1440px width; use a throw-away secret.
 
-.. seealso::
-   :doc:`../accounting/get_started/chart_of_accounts`
+Sending invoices
+----------------
 
-Customer and supplier
-~~~~~~~~~~~~~~~~~~~~~
+Once an invoice is posted, open :guilabel:`Send & Print` and keep the :guilabel:`Send E-Factura to
+SPV` option enabled: the CIUS-RO XML is generated, attached to the invoice and uploaded to the SPV. The
+:guilabel:`E-Factura Status` field of the invoice then shows :guilabel:`Sent`; click
+:guilabel:`Fetch status` (or wait for the scheduled action) to retrieve the ANAF answer, which
+sets the status to :guilabel:`Validated` or :guilabel:`Error`. The validated document (signed XML
+and ZIP) can be downloaded from the :guilabel:`E-Factura` tab of the invoice, and errors are
+logged in the chatter.
 
-Fill in the :guilabel:`Country`, :guilabel:`City`, and :guilabel:`Zip Code` of each partner that
-appears in your invoices, vendor bills, or payments through the **Contacts** app.
+.. screenshot:: finance-fl-romania-efactura-invoice
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (a sent invoice) ‣ E-Factura tab
+   :shows: A posted customer invoice with the "E-Factura Status" field showing "Validated", the "Fetch status" button and the E-Factura tab listing the sent document with its index and the "Download" button.
+   :highlight: The "E-Factura Status" field.
+   :data: Demo company "YourCompany RO", invoice INV/2025/00003 validated in the test SPV.
+   :module: l10n_ro_edi
+   :notes: English UI, light theme, 1440px width.
 
-For partners that are companies, you must fill in the VAT number (including the country  prefix) in
-the :guilabel:`Tax ID` field. If the partner is a company based in Romania, you may instead fill in
-the CUI number (without the 'RO' prefix) in the :guilabel:`Company ID` field.
+Receiving vendor bills
+----------------------
 
-Tax
-~~~
+With the *Romania - Synchronize E-Factura* module, select the purchase journal in
+:guilabel:`Import Vendor Bills in` in the same settings block. The scheduled action
+:guilabel:`E-Factura: Synchronize with ANAF` then downloads the invoices addressed to the company in
+the SPV and creates draft vendor bills from them in that journal.
 
-You must indicate the :guilabel:`Romanian SAF-T Tax Type` (3-digit number) and :guilabel:`Romanian
-SAF-T Tax Code` (6-digit number) on each of the taxes you use. This is already done for the taxes
-that exist by default in Odoo. To do so, go to :menuselection:`Accounting --> Configuration -->
-Taxes`, select the tax you wish to modify, click the :guilabel:`Advanced Options` tab, and fill in
-the **tax type** and **tax code** fields.
+E-Transport
+===========
 
-.. note::
-   The **tax type** and **tax code** are codes defined by the Romanian Tax Agency for the **D.406
-   declaration**. These can be found in the Excel spreadsheet published as guidance for completing
-   the declaration, which you can find on the `website of the Romanian Tax Agency <https://www.anaf.ro/anaf/internet/ANAF/despre_anaf/strategii_anaf/proiecte_digitalizare/saf_t/>`_.
+The *Romania - E-Transport* module declares the transport of goods to the ANAF e-Transport system
+directly from the transfer. On a delivery order or receipt, the :guilabel:`Transport` tab holds the
+required data: operation type and scope, :guilabel:`Vehicle Number` (and trailers), the start and
+end location types, border crossing point or customs office where applicable, and the carrier's
+partner set on the delivery method. Click :guilabel:`Send eTransport` to obtain the :guilabel:`UIT`
+code, :guilabel:`Fetch Status` to update the :guilabel:`eTransport Status`, and :guilabel:`Amend
+eTransport` to send a correction. The UIT is printed on the delivery slip.
 
-.. seealso::
-   :doc:`../accounting/taxes`
+.. screenshot:: finance-fl-romania-etransport-picking
+   :menu: Inventory ‣ Operations ‣ Deliveries ‣ (a delivery order) ‣ Transport tab
+   :shows: A validated delivery order with the "Send eTransport" and "Fetch Status" buttons in the header and the Transport tab: operation type, vehicle number, start/end location types and the returned "UIT" code with the "eTransport Status" = Validated.
+   :highlight: The "UIT" field.
+   :data: Demo company "YourCompany RO", delivery WH/OUT/00012, vehicle B123ABC.
+   :module: l10n_ro_edi_stock
+   :notes: English UI, light theme, 1440px width.
 
-Product
-~~~~~~~
+CPV codes
+=========
 
-For some types of goods transactions, the :guilabel:`Intrastat Code` (Cod NC) must be configured
-on the product, as it is required by Romanian law:
-
-- import / export transactions;
-- acquisitions / supplies of food products subjected to reduced VAT rate;
-- intra-community movements subjected to intrastat reporting;
-- acquisitions / supplies subjected to local reversed VAT charge (depending on Cod NC); and
-- transactions with excisable products for which excise duties are determined based on the Cod NC.
-
-If the Intrastat Code is not specified on a non-service product, the default code '0' will be used.
-
-To configure the :guilabel:`Intrastat Codes`, go to
-:menuselection:`Accounting --> Customers --> Products`, select a product, and in the
-:guilabel:`Accounting` tab, set a :guilabel:`Commodity Code`.
-
-.. seealso::
-   :doc:`../accounting/reporting/intrastat`
-
-Vendor bill
-~~~~~~~~~~~
-
-You must check the :guilabel:`Is self-invoice (RO)?` checkbox in the :guilabel:`Other Info` tab for
-any vendor bill that is a self-invoice (i.e. a vendor bill that you issued yourself in the absence
-of an invoice document received from a supplier).
-
-Generating the declaration
---------------------------
-
-Exporting your data
-~~~~~~~~~~~~~~~~~~~
-
-To export the XML for the D.406 declaration, go to :menuselection:`Accounting --> Reports -->
-General Ledger` and click on :guilabel:`SAF-T`.
-
-.. image:: romania/romania-saft-button.png
-   :align: center
-   :alt: Click on the 'SAF-T' button to export the D.406 XML declaration.
-
-You can then validate and sign the XML file using the Romanian Tax Agency's validation software,
-*DUKIntegrator*.
-
-Signing the report
-~~~~~~~~~~~~~~~~~~
-
-Download and install the *DUKIntegrator* validation software found on the `website of the Romanian
-Tax Agency <https://www.anaf.ro/anaf/internet/ANAF/despre_anaf/strategii_anaf/proiecte_digitalizare/saf_t/>`_.
-
-Once you have generated the XML, open 'DUKIntegrator' and select the file you have just generated.
-
-Click on :guilabel:`Validare + creare PDF` to create an **unsigned** PDF containing your report, or
-:guilabel:`Validare + creare PDF semnat` to create a **signed** PDF containing your report.
-
-.. image:: romania/romania-dukintegrator.png
-   :align: center
-   :alt: The DUKIntegrator validation software.
-
-If the *DUKIntegrator* validator detects errors or inconsistencies in your data, it generates a file
-that explains the errors. In this case, you need to correct those inconsistencies in your data
-before you can submit the report to the Romanian Tax Agency.
+The *Romania - CPV Code* module adds a :guilabel:`CPV Code` field to the product form (General
+Information tab). Set it on the products sold to public institutions, so that the code is included
+in the E-Factura lines when required.

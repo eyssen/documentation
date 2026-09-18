@@ -16,16 +16,16 @@ Configuration on APS Dashboard
    :guilabel:`Merchant Identifier`, :guilabel:`Access Code`, :guilabel:`SHA Request Phrase` and
    :guilabel:`SHA Response Phrase` fields, and save them for later.
 #. Enter your Odoo database URL in the :guilabel:`Origin URL`, for example:
-   `https://yourcompany.odoo.com/`. Then, click on :guilabel:`Save Changes`.
+   `https://yourcompany.com/`. Then, click on :guilabel:`Save Changes`.
 #. Navigate to :menuselection:`Integration Settings --> Technical Settings` and click on
    :guilabel:`Redirection`. Make sure :guilabel:`Status` is set to `Active` and select your
    preferred payment methods underneath in :guilabel:`Payment Options`.
 #. | Set :guilabel:`Send Response Parameters` to :guilabel:`Yes` and enter your database URL
      followed by `/payment/aps/return` in the :guilabel:`Redirection URL`.
-   | For example `https://yourcompany.odoo.com/payment/aps/return`.
+   | For example `https://yourcompany.com/payment/aps/return`.
    | Enter your database URL followed by `/payment/aps/webhook` in the
      :guilabel:`Direct Transaction Feedback` and :guilabel:`Notification URL` fields.
-   | For example `https://yourcompany.odoo.com/payment/aps/webhook`.
+   | For example `https://yourcompany.com/payment/aps/webhook`.
    | Click on :guilabel:`Save Changes`.
 #. Under :menuselection:`Integration Settings --> Payment Page Template` you can customize the
    look and feel of the Amazon Payment Services payment page (where customers fill out their

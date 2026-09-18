@@ -38,7 +38,7 @@ Configuration on the Xendit Dashboard
 #. Under :guilabel:`Webhook verification token`, click :guilabel:`View Webhook Verification Token`,
    then confirm your password to display the token. Save it for later.
 #. In the :guilabel:`Webhook URL` section, enter your Odoo database's URL, followed by
-   `/payment/xendit/webhook` (e.g., `https://example.odoo.com/payment/xendit/webhook`) in the field
+   `/payment/xendit/webhook` (e.g., `https://example.com/payment/xendit/webhook`) in the field
    :guilabel:`Invoices paid` and click the :guilabel:`Test and save` button next to it.
 #. To allow recurring payments for credit cards, go to :menuselection:`Configuration: Payment
    Channels` in the left part of the application page. Then, hover your mouse over the

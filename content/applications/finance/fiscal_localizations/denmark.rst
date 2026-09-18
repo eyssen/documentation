@@ -2,111 +2,93 @@
 Denmark
 =======
 
-Compliance with Danish bookkeeping requirements: data retention and integrity
-=============================================================================
+Modules
+=======
 
-This page outlines how Odoo complies with the Danish Bookkeeping Act,
-specifically regarding the storage and integrity of financial transactions and receipts.
-Odoo recognizes the importance of adhering to Danish regulations and has implemented robust
-measures to ensure clients' data is secure and compliant.
+The following modules are installed automatically for Danish companies:
 
-.. important::
-   Odoo’s registration as a digital bookkeeping system has been confirmed by the Danish Business
-   Authority under registration numbers `fob585505` and `fob441967`. Customers must meet certain
-   conditions to benefit from it, as outlined below.
+.. list-table::
+   :header-rows: 1
+   :widths: 25 25 50
 
+   * - Name
+     - Technical name
+     - Description
+   * - :guilabel:`Denmark - Accounting`
+     - `l10n_dk`
+     - Default :ref:`fiscal localization package <fiscal_localizations/packages>`: Danish chart of
+       accounts, taxes and tax grids.
+   * - :guilabel:`Denmark - FIK Number`
+     - `l10n_dk_fik`
+     - Uses a FIK payment reference (+71 or +75) as the payment communication on customer invoices.
+   * - :guilabel:`Denmark - E-invoicing`
+     - `l10n_dk_oioubl`
+     - Adds the OIOUBL 2.1 electronic invoice format.
+   * - :guilabel:`Denmark EDI - Nemhandel`
+     - `l10n_dk_nemhandel`
+     - Sends and receives OIOUBL documents through the Nemhandel network (with the *Nemhandel
+       Business Response* module for the business-level responses).
 
-Key requirements of the Danish Bookkeeping Act
-----------------------------------------------
+FIK payment reference
+=====================
 
-The Danish Bookkeeping Act (DBA) outlines the `requirements for digital bookkeping systems
-<https://danishbusinessauthority.dk/requirements-digital-bookkeeping-systems>`_:
+The Danish FIK (*Fælles Indbetalingskort*) reference lets the customer's bank match a payment to
+the invoice automatically. To use it, open the sales journal (:menuselection:`Accounting -->
+Configuration --> Journals`), go to the :guilabel:`Advanced Settings` tab and set the
+:guilabel:`Communication Standard` to :guilabel:`Denmark FIK Number (+71)` or :guilabel:`Denmark
+FIK Number (+75)`. The :guilabel:`FIK Creditor Number` is filled in automatically from the
+company's first bank account number and can be edited.
 
-- **Retain transactional data and receipts:** Store all recorded transactions and receipts
-  covered by § 3 for a minimum of five years from the end of the financial year to which they pertain.
-
-- **Ensure data integrity:** Prevent the customer from changing, backdating, or deleting recorded transactions.
-
-- **Maintain data accessibility:** Store all recorded transactions in a structured and machine-readable format
-  for the required five-year period, regardless of customer relationship status, bankruptcy, or dissolution.
-
-- **Provide decryption capabilities:** Ensure that encrypted bookkeeping data and receipts can be decrypted
-  into a structured and readable format.
-
-Odoo Compliance
----------------
-
-Odoo's registration as digital standard bookkeeping systems with the Danish Business Authority
-confirms that Odoo meets the applicable criteria for digital bookkeeping systems in Denmark,
-in accordance with the requirements of the :abbr:`DBA (Danish Bookkeeping Act)`.
-
-However, to benefit from all the required guarantees for digital bookkeeping systems in Denmark,
-customers must meet a few conditions.
-
-Conditions for full DBA compliance
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- The customer uses Odoo Accounting on the Odoo SaaS platform (Odoo Online);
-- The customer has an active Odoo subscription (e.g., Standard or Custom Plan), or their database is
-  managed by an officially registered `Odoo Accounting Firm <https://www.odoo.com/accounting-firms>`_;
-- The customer refrains from customizations or actions intended to undermine the system’s immutability,
-  traceability, or security controls.
+Every invoice posted in that journal gets a *Payment Reference* of the form
+`+71<invoice number with check digit>+<creditor number>`, printed on the invoice.
 
 .. note::
-  Customers using Odoo products outside these conditions are responsible for ensuring their own
-  compliance with the DBA.
+   The FIK +71 reference supports invoice numbers of up to 14 digits, and +75 up to 15 digits;
+   longer invoice numbers raise an error when the reference is generated.
 
-When the above conditions are met, the requirements of the DBA are fulfilled through features and
-processes described in the following sections.
+.. screenshot:: finance-fl-denmark-fik-journal
+   :menu: Accounting ‣ Configuration ‣ Journals ‣ Customer Invoices ‣ Advanced Settings tab
+   :shows: The Advanced Settings tab of the Customer Invoices journal with "Communication Standard" set to "Denmark FIK Number (+71)" and the computed "FIK Creditor Number" field below it.
+   :highlight: The "Communication Standard" and "FIK Creditor Number" fields.
+   :data: Demo company "YourCompany DK", bank account DK50 0040 0440 1162 43.
+   :module: l10n_dk_fik
+   :notes: English UI, light theme, 1440px width.
 
-Immutable transaction records
------------------------------
+Nemhandel e-invoicing
+=====================
 
-- Once transactions are recorded, they cannot be deleted through the user interface.
-- All modifications are logged, providing a complete audit trail.
-- While historically dated entries can be made, Odoo records the creation date and time of the entry.
+Danish companies exchange electronic invoices in the OIOUBL format over the Nemhandel network. In
+:menuselection:`Accounting --> Configuration --> Settings`, the :guilabel:`Nemhandel E-Delivery`
+block lets you register the company on the network: click :guilabel:`Start sending via Nemhandel`,
+choose the :guilabel:`EDI mode` (:guilabel:`Demo`, :guilabel:`Test`, or :guilabel:`Live`), enter
+the :guilabel:`Identifier Type` / :guilabel:`Identifier Value` (e.g., the CVR number), the contact
+:guilabel:`Email` and :guilabel:`Phone`, and confirm the code received by SMS. Once the
+:guilabel:`Nemhandel status` is *active*, invoices sent to partners whose :guilabel:`Nemhandel
+Endpoint` is verified are delivered electronically from the :guilabel:`Send & Print` window, and
+incoming documents are created in the :guilabel:`Incoming Invoices Journal` set in the same block.
 
-Secure document storage
------------------------
+.. note::
+   The Nemhandel connection goes through an access-point service operated by Odoo S.A.; the
+   registration requires a public URL for the database. Use the :guilabel:`Demo` mode to test the
+   flow without sending anything to the network.
 
-- Receipts and digital vouchers are stored as attachments and integrated into the database, ensuring they
-  are included in backups.
-- Posted documents cannot be deleted.
-- We fully support the storage of mandatory digital vouchers as defined by Danish regulations.
+.. screenshot:: finance-fl-denmark-nemhandel-settings
+   :menu: Accounting ‣ Configuration ‣ Settings ‣ Nemhandel E-Delivery
+   :shows: The "Nemhandel E-Delivery" settings block of a Danish company: Nemhandel status "Active", the Nemhandel Address (CVR), Contact Email, Incoming Invoices Journal, and the "Update contact details" / "Deregister" buttons.
+   :highlight: The "Nemhandel status" line.
+   :data: Demo company "YourCompany DK" registered in Demo mode.
+   :module: l10n_dk_nemhandel
+   :notes: English UI, light theme, 1440px width; use a test/demo registration.
 
-Continuous data availability
-----------------------------
+Bookkeeping Act compliance
+==========================
 
-- Clients with active subscriptions can access all transactions and digital vouchers through Odoo.
-- Regardless of customer relations, bankruptcy, or dissolution, Odoo can provide access to transaction
-  and digital voucher details to former clients for six years (see :ref:`localizations/denmark/data-lifecycle`).
-
-Automated data export and secure storage
-----------------------------------------
-
-- Odoo Accounting implements no automatic deletion or archival of recorded transactions, so if a customer has
-  been recording transactions for six years, the six years of history are preserved in the Odoo Accounting database.
-- As described in the `Odoo Cloud Hosting SLA <https://www.odoo.com/cloud-sla>`_ and
-  `Odoo Privacy Policy <https://www.odoo.com/privacy>`_, the Odoo Cloud relies on immutable daily snapshot
-  backups, which cannot be individually altered or deleted, even at the customer's request, ensuring their integrity.
-- All documents and receipts stored in a database backup are available as a standard ZIP archive accompanying
-  the SQL dump.
-
-.. _localizations/denmark/data-lifecycle:
-
-Data lifecycle management
--------------------------
-
-- Odoo database backups are available in standard SQL dump formats at all times and include all recorded
-  transactions.
-- The `Odoo Cloud Hosting SLA <https://www.odoo.com/cloud-sla>`_ guarantees three months of backup history to all
-  active customers. As a special guarantee for Danish customers subject to the DBA and meeting the conditions
-  highlighted above the last Odoo Cloud backup retention gets increased to six years as soon as they decide to
-  terminate their Odoo Cloud subscription, in order to comply with the requirements of Annex 1, 4 of Executive Order 97.
-
-Decryption
-----------
-
-Odoo Accounting customer data on the Odoo Cloud is always stored in encrypted form (encryption at rest at
-storage level). When backups are retrieved, they are automatically decrypted and provided in decrypted form in
-standard formats for the user: SQL dumps + ZIP archive of all attached documents (file store).
+The Danish Bookkeeping Act requires a digital bookkeeping system to retain transactions and
+receipts for five years, to prevent the deletion or backdating of recorded transactions, to keep
+the data accessible in a machine-readable format, and to be able to deliver it in decrypted form.
+Odoo's accounting supports these requirements through immutable posted entries (posted documents
+cannot be deleted, all changes are logged in the chatter), receipts stored as attachments in the
+database, and standard database backups (SQL dump + ZIP archive of the attachments). The
+registration of the system with the Danish Business Authority and the backup retention guarantees
+are, however, the responsibility of your hosting provider; check with them which guarantees apply to
+your database.

@@ -28,8 +28,12 @@ categories, the general expenses category, :guilabel:`EXP_GEN`, is used. If a co
 expenses it commonly reimburses, and wants to track them separately, :ref:`new expense categories
 can be made <expenses/new-category>` or existing expense categories can be modified.
 
-.. image:: expense_categories/default-categories.png
-   :alt: Set expense costs on products.
+.. screenshot:: finance-expenses-expense-categories-default-categories
+   :menu: Expenses ‣ Configuration ‣ Expense Categories
+   :shows: The Expense Categories list (Internal Reference, Name, Cost, Sales Price, Unit of Measure columns) with the default demo categories such as Communication, Gifts, Meals, Mileage, Travel & Accommodation.
+   :data: Default demo categories; Mileage has a cost per km.
+   :module: hr_expense
+   :notes: English UI, light theme, 1440px width.
 
 .. _expenses/new-category:
 
@@ -82,7 +86,7 @@ Enter the following fields on the form:
   .. note::
      The :guilabel:`Cost` field is always visible on the expense category form, but the
      :guilabel:`Sales Price` field is *only* visible if the :guilabel:`Sales Price` is selected
-     under the :guilabel:`Re-Invoice Expenses` section. Otherwise, the :guilabel:`Sales Price` field
+     under the :guilabel:`Re-Invoice Costs` section. Otherwise, the :guilabel:`Sales Price` field
      is hidden.
 
 - :guilabel:`Reference`: Enter a short reference for the expense, such as `FOOD` or `TRAVEL`. This
@@ -118,8 +122,13 @@ Enter the following fields on the form:
      It is considered good practice to use a tax that is configured with :ref:`Tax Included in Price
      <taxes/included-in-price>`. Taxes are automatically configured if these are set.
 
-.. image:: expense_categories/new-expense-category.png
-   :alt: A new expense category for tools.
+.. screenshot:: finance-expenses-expense-categories-new-expense-category
+   :menu: Expenses ‣ Configuration ‣ Expense Categories ‣ New
+   :shows: A new expense category form for "Tools" with the General Information tab: Cost 0.00, Unit of Measure "Units", Internal Reference "TOOL", Vendor Taxes and Expense Account fields.
+   :highlight: The "Cost" and "Internal Reference" fields.
+   :data: Category "Tools", reference TOOL.
+   :module: hr_expense
+   :notes: English UI, light theme, 1440px width.
 
 .. _expenses/invoicing:
 
@@ -149,5 +158,10 @@ If the expense **cannot** be reinvoiced, enable the :guilabel:`No` option. If th
    To configure this expense, the :guilabel:`Sales Price` is set to `1.50` and the :guilabel:`Cost`
    is set to `1.00`.
 
-  .. image:: expense_categories/reimbursement-category.png
-     :alt: An expense category to reinvoice customers and pay technicians.
+  .. screenshot:: finance-expenses-expense-categories-reimbursement-category
+     :menu: Expenses ‣ Configuration ‣ Expense Categories ‣ (a category)
+     :shows: The Accounting tab of an expense category with the "Re-Invoice Costs" field set to "Sales price" and an expense account selected.
+     :highlight: The "Re-Invoice Costs" field.
+     :data: Category "Consultancy (hourly)", Re-Invoice Costs = Sales price.
+     :module: hr_expense
+     :notes: English UI, light theme, 1440px width.

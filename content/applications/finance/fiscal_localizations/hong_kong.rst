@@ -17,17 +17,9 @@ localization:
    * - :guilabel:`Hong Kong - Accounting`
      - `l10n_hk`
      - The base module to manage chart of accounting and localization for Hong Kong.
-   * - :guilabel:`Hong Kong - Payroll`
-     - `l10n_hk_hr_payroll`
-     - Enables :ref:`payroll <payroll/l10n_hk/payroll>` specific localization features for Odoo *Payroll*
-       app. This module also installs :guilabel:`Hong Kong - Payroll with Accounting` and
-       :guilabel:`Documents - Hong Kong Payroll`.
-   * - :guilabel:`Hong Kong - Payroll with Accounting`
-     - `l10n_hk_hr_payroll_account`
-     - Installs the link between Hong Kong payroll and accounting.
-   * - :guilabel:`Documents - Hong Kong Payroll`
-     - `documents_l10n_hk_hr_payroll`
-     - Integrates employee ir56 forms in the Odoo *Documents* app.
+
+.. note::
+   The Hong Kong payroll (including the IR56 forms) is **not** available in this edition.
 
 FPS QR codes on invoices
 ========================
@@ -53,9 +45,13 @@ in the :guilabel:`Proxy Value` field, depending on the type chosen.
 Remember to include the invoice number in the QR code, by ticking the :guilabel:`Include Reference`
 checkbox.
 
-.. image:: hong_kong/hk-fps-bank-setting.png
-   :align: center
-   :alt: FPS bank account configuration.
+.. screenshot:: finance-fl-hong-kong-hk-fps-bank-setting
+   :menu: Contacts ‣ Configuration ‣ Bank Accounts ‣ (the FPS bank account)
+   :shows: A bank account form with the "Proxy Type" field set to an FPS type (e.g. "FPS ID") and the "Proxy Value" filled in, plus the "Include Reference" checkbox ticked.
+   :highlight: The "Proxy Type", "Proxy Value" and "Include Reference" fields.
+   :data: Demo company "YourCompany HK", Hong Kong localization installed. Account holder in Hong Kong.
+   :module: l10n_hk, account_qr_code_emv
+   :notes: English UI, light theme, 1440px width.
 
 .. important::
    - The account holder's country must be set to `Hong Kong` on its contact form.
@@ -73,9 +69,13 @@ Go to :menuselection:`Accounting app --> Configuration --> Journals` and open th
 Then, fill out the :guilabel:`Account Number` and :guilabel:`Bank` fields, located in the
 :guilabel:`Journal Entries` tab.
 
-.. image:: hong_kong/hk-bank-account-journal-setting.png
-   :align: center
-   :alt: Bank Account's journal configuration.
+.. screenshot:: finance-fl-hong-kong-hk-bank-account-journal-setting
+   :menu: Accounting ‣ Configuration ‣ Journals ‣ Bank ‣ Journal Entries tab
+   :shows: The Journal Entries tab of the Bank journal with the "Account Number" and "Bank" fields filled in.
+   :highlight: The "Account Number" and "Bank" fields.
+   :data: Demo company "YourCompany HK", Hong Kong localization installed.
+   :module: account
+   :notes: English UI, light theme, 1440px width.
 
 Issue invoices with FPS QR codes
 --------------------------------
@@ -83,9 +83,13 @@ Issue invoices with FPS QR codes
 When creating a new invoice, open the :guilabel:`Other Info` tab and set the :guilabel:`Payment
 QR-code` option to :guilabel:`EMV Merchant-Presented QR-code`.
 
-.. image:: hong_kong/hk-qr-code-invoice-setting.png
-   :align: center
-   :alt: Select EMV Merchant-Presented QR-code option.
+.. screenshot:: finance-fl-hong-kong-hk-qr-code-invoice-setting
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (an invoice) ‣ Other Info tab
+   :shows: The Other Info tab of a customer invoice with the "Payment QR-code" drop-down set to "EMV Merchant-Presented QR-code".
+   :highlight: The "Payment QR-code" field.
+   :data: Demo company "YourCompany HK", Hong Kong localization installed.
+   :module: account_qr_code_emv
+   :notes: English UI, light theme, 1440px width.
 
 Ensure that the :guilabel:`Recipient Bank` is configured, as Odoo uses this field to generate the
 FPS QR code.

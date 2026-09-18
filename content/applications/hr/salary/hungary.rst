@@ -35,7 +35,7 @@ Identifier validation
 ---------------------
 
 The standard :guilabel:`Identification No` and :guilabel:`SSN No` fields of employees and of their
-:ref:`dependants <employees/hu-dependants>` are validated as the Hungarian tax identification code
+:ref:`dependants <employees/dependants-emergency>` are validated as the Hungarian tax identification code
 (*adóazonosító jel*) and social security number (*TAJ*), check digit included. Spaces and dashes are
 removed automatically, so a value typed with separators is accepted rather than rejected.
 

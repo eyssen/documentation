@@ -28,8 +28,13 @@ Each Kanban card displays the equipment's name and model on the first line, foll
 number (if available), and lastly, the employee's name. Any current maintenance requests appear at
 the bottom of the card in a red box.
 
-.. image:: equipment/equipment.png
-   :alt: A Kanban view of all equipment for an employee.
+.. screenshot:: hr-employees-equipment-employee
+   :menu: Employees ‣ Employees ‣ (open an employee) ‣ Equipment
+   :shows: The equipment assigned to one employee in kanban view, one card per item.
+   :highlight: The Equipment smart button and the cards (red frame).
+   :data: Employee "Anita Kovács" with a laptop and a mobile phone.
+   :module: hr_maintenance
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    A serial number is **not** required when logging equipment.
@@ -55,8 +60,13 @@ In the Kanban view displaying all employee equipment records, equipment can be r
 clicking and dragging an equipment card to the desired employee. This changes ownership of the
 equipment.
 
-.. image:: equipment/all-equipment.png
-   :alt: A Kanban view of all equipment for all employees.
+.. screenshot:: hr-employees-equipment-all
+   :menu: Maintenance ‣ Equipment
+   :shows: All company equipment in kanban view, grouped by category, with the assigned employee on each card.
+   :highlight: The assigned employee on the cards (red frame).
+   :data: Demo company "YourCompany HU"; laptops, monitors and phones across three employees.
+   :module: hr_maintenance
+   :notes: English UI, light theme, 1440px width.
 
 Add equipment to an employee record
 ===================================
@@ -85,5 +95,10 @@ employee's equipment.
    Enter the :guilabel:`Serial Number` on the form, and make any other necessary changes, such as
    the assigned :guilabel:`Employee`.
 
-   .. image:: equipment/equipment-form.png
-      :alt: A duplicate equipment form with all the information filled out except the serial number.
+   .. screenshot:: hr-employees-equipment-form
+      :menu: Maintenance ‣ Equipment ‣ New
+      :shows: An equipment form filled in with the name, category, assigned employee, assignment date and the empty serial number field.
+      :highlight: The Used By and Serial Number fields (red frame).
+      :data: Equipment "Dell Latitude 5450", used by "Anita Kovács"; use a throw-away serial number.
+      :module: hr_maintenance
+      :notes: English UI, light theme, 1440px width.

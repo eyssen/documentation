@@ -22,8 +22,13 @@ This presents the data for the :icon:`fa-filter` :guilabel:`Last 365 Days Applic
 
 Hover the cursor over any column to view the specific numbers fort that column.
 
-.. image:: source_analysis/source-analysis.png
-   :alt: The default bar chart of the source analysis information.
+.. screenshot:: hr-recruitment-source-analysis-default
+   :menu: Recruitment ‣ Reporting ‣ Source Analysis
+   :shows: The default Source Analysis report as a bar chart, one bar per source.
+   :highlight: The tallest bar (red frame).
+   :data: Applications from four sources over six months.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Source effectiveness report
 ===========================
@@ -48,8 +53,13 @@ This information, as presented, makes it difficult to view the specific numbers 
 Click the :icon:`fa-exchange` :guilabel:`(Flip axis)` icon, to swap the information. After that, the
 rows represent the source, and the columns represent the job positions, further divided by stage.
 
-.. image:: source_analysis/source-pivot.png
-   :alt: The axes flipped in the source analysis report, in pivot table view.
+.. screenshot:: hr-recruitment-source-analysis-pivot
+   :menu: Recruitment ‣ Reporting ‣ Source Analysis
+   :shows: The Source Analysis report in pivot view with the axes flipped, the sources in rows and the job positions in columns.
+   :highlight: The flip axis button (red frame).
+   :data: The same applications.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 In this view, the total number of applicants, hired employees, and refused applicants, are displayed
 for each source, as well as for each stage by job position.
@@ -70,8 +80,13 @@ presents the specific mediums, relevant to that specific source.
 Once :guilabel:`Medium` is selected for one source, clicking into another row automatically reveals
 the specific metrics for the mediums for that source.
 
-.. image:: source_analysis/medium.png
-   :alt: The sources rows, expanded to also show the medium for each source.
+.. screenshot:: hr-recruitment-source-analysis-medium
+   :menu: Recruitment ‣ Reporting ‣ Source Analysis
+   :shows: The Source Analysis pivot with the source rows expanded to show the medium of each source.
+   :highlight: An expanded source row (red frame).
+   :data: Source "Job board" expanded into LinkedIn and Indeed.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    The only mediums that appear for a source, are mediums that have been set on an applicant's form.

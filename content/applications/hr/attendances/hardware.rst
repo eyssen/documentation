@@ -53,8 +53,13 @@ that can be scanned at a kiosk to check in and out.
 
 Badges can be printed for employees using any thermal or inkjet printer.
 
-.. image:: hardware/badge.png
-   :alt: A badge for an employee that is created from the Employees app.
+.. screenshot:: hr-attendances-employee-badge
+   :menu: Employees ‣ Employees ‣ (open an employee) ‣ HR Settings
+   :shows: A printed employee badge with the employee name, the company name and the badge barcode.
+   :highlight: The barcode (red frame).
+   :data: Employee "Anita Kovács", demo company "YourCompany HU".
+   :module: hr_attendance, hr
+   :notes: English UI, light theme, 1440px width. Crop to the badge.
 
 .. note::
    Badges are **not** required, as employees can manually identify themselves on the kiosk.

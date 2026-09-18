@@ -36,8 +36,13 @@ contract an alert should be sent. The :ref:`responsible parties <fleet/responsib
 email informing them that a vehicle contract is about to expire in the number of days defined in
 this field.
 
-.. image:: new_vehicle/fleet-settings.png
-   :alt: Settings available for the Fleet application.
+.. screenshot:: hr-fleet-settings
+   :menu: Fleet ‣ Configuration ‣ Settings
+   :shows: The Fleet settings page with the End Date Contract Alert option and its notice period in days.
+   :highlight: The End Date Contract Alert setting (red frame).
+   :data: Alert set to 30 days.
+   :module: fleet
+   :notes: English UI, light theme, 1440px width.
 
 .. _fleet/responsible:
 
@@ -98,8 +103,13 @@ Vehicle form fields
 - :guilabel:`Tags`: Select any tags from the drop-down menu, or type in a new tag. There is no limit
   on the amount of tags that can be selected.
 
-.. image:: new_vehicle/model.png
-   :alt: The new vehicle form, showing the model section.
+.. screenshot:: hr-fleet-vehicle-model-section
+   :menu: Fleet ‣ Fleet ‣ Fleet ‣ New
+   :shows: The top of a new vehicle form with the model, the licence plate, the tags and the driver filled in.
+   :highlight: The Model and Licence Plate fields (red frame).
+   :data: Model "Skoda Octavia", licence plate "ABC-123", driver "Anita Kovács".
+   :module: fleet
+   :notes: English UI, light theme, 1440px width. Use an invented licence plate.
 
 .. note::
    The :guilabel:`Model` is the *only* required field on the new vehicle form. When a model is
@@ -205,8 +215,13 @@ Fill in the following fields on the form:
   `Building 2 Parking Lot`. This is crucial information for companies with many locations where
   vehicles are stored.
 
-.. image:: new_vehicle/new-vehicle-type.png
-   :alt: The new vehicle form, showing the vehicle tax section.
+.. screenshot:: hr-fleet-vehicle-information-tab
+   :menu: Fleet ‣ Fleet ‣ Fleet ‣ New
+   :shows: The Information tab of the vehicle form with the fiscality, the contract and the engine fields.
+   :highlight: The Fiscality group (red frame).
+   :data: The same Skoda Octavia.
+   :module: fleet
+   :notes: English UI, light theme, 1440px width.
 
 Tax Info tab
 ------------
@@ -242,8 +257,13 @@ Contract
    The values listed above affect the accounting department. It is recommended to check with the
    accounting department for more information and/or assistance with these values.
 
-.. image:: new_vehicle/new-vehicle-tax.png
-   :alt: The new vehicle form, showing the vehicle tax section.
+.. screenshot:: hr-fleet-vehicle-tax-section
+   :menu: Fleet ‣ Fleet ‣ Fleet ‣ New
+   :shows: The tax fields of the vehicle form, with the horsepower taxation and the deductible rate filled in.
+   :highlight: The tax fields (red frame).
+   :data: The same Skoda Octavia.
+   :module: fleet
+   :notes: English UI, light theme, 1440px width. Crop to the tax fields.
 
 Model tab
 ---------
@@ -262,8 +282,13 @@ Note tab
 
 Enter any notes for the vehicle in this section.
 
-.. image:: new_vehicle/model-tab.png
-   :alt: The new vehicle form, showing the vehicle tax section.
+.. screenshot:: hr-fleet-vehicle-note-tab
+   :menu: Fleet ‣ Fleet ‣ Fleet ‣ New
+   :shows: The Note tab of the vehicle form with free-text notes about the vehicle.
+   :highlight: The Note tab (red frame).
+   :data: Note "Winter tyres stored at the Marbella depot".
+   :module: fleet
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`../fleet/models`

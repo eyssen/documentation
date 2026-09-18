@@ -21,8 +21,13 @@ models. Remove the default filter to view *all* manufacturers.
 Manufacturers re listed alphabetically, and each card shows how many specific :ref:`models
 <fleet/models>` are configured for each particular manufacturer.
 
-.. image:: models/manufacturer.png
-   :alt: Manufacturer card with the amount of models listed.
+.. screenshot:: hr-fleet-manufacturers
+   :menu: Fleet ‣ Configuration ‣ Manufacturers
+   :shows: The Manufacturers page in kanban view, each card with the manufacturer logo and the number of its models.
+   :highlight: The model counters on the cards (red frame).
+   :data: Manufacturers Skoda, Volkswagen and Toyota with a few models each.
+   :module: fleet
+   :notes: English UI, light theme, 1440px width.
 
 .. _fleet/add-manufacturers:
 
@@ -164,8 +169,13 @@ bottom-left of the :guilabel:`Add: Vendors` pop-up window. In the :guilabel:`Cre
 that appears, enter the necessary information, then click :guilabel:`Save & Close` to add the
 vendor, or click :guilabel:`Save & New` to add the current vendor and create another new vendor.
 
-.. image:: models/vendor.png
-   :alt: Vendor form to fill out when adding a new vendor.
+.. screenshot:: hr-fleet-model-vendor
+   :menu: Fleet ‣ Configuration ‣ Models ‣ (open a model) ‣ Vendors
+   :shows: The Vendors tab of a vehicle model with the vendor selection dialog open.
+   :highlight: The Vendors tab and the Add button (red frame).
+   :data: Model "Skoda Octavia", vendor "Porsche Hungaria".
+   :module: fleet
+   :notes: English UI, light theme, 1440px width.
 
 .. _fleet/categories:
 

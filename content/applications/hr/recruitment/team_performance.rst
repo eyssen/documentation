@@ -23,8 +23,13 @@ filter, as displayed in the search bar.
 Hover the cursor over any column to view a popover window, displaying the specific details for that
 column.
 
-.. image:: team_performance/team-performance.png
-   :alt: The default bar chart of the team performance report.
+.. screenshot:: hr-recruitment-team-performance-default
+   :menu: Recruitment ‣ Reporting ‣ Team Performance
+   :shows: The default Team Performance report as a bar chart, one bar per recruiter.
+   :highlight: The tallest bar (red frame).
+   :data: Three recruiters over the current quarter.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Pivot table view
 ----------------
@@ -50,8 +55,13 @@ This job position has one of the highest number of total applicants (tied with t
 This pivot table also shows that the :guilabel:`Quality Control Inspector` position is the hardest
 to fill, as it has the fewest total applicants.
 
-.. image:: team_performance/team-perf-pivot.png
-   :alt: The detailed pivot table view.
+.. screenshot:: hr-recruitment-team-performance-pivot
+   :menu: Recruitment ‣ Reporting ‣ Team Performance
+   :shows: The Team Performance report in pivot view with the job positions in rows and the measures in columns.
+   :highlight: The measures columns (red frame).
+   :data: The same quarter.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Use case: recruiter performance over time
 =========================================
@@ -65,8 +75,13 @@ drop-down menu. Click :guilabel:`Add Custom Group` :icon:`fa-caret-down` at the 
 :icon:`oi-group` :guilabel:`Group By` column, then click :guilabel:`Recruiter`. Click away from the
 drop-down menu to close it. Now, each row on the table represents a recruiter.
 
-.. image:: team_performance/by-recruiter.png
-   :alt: The pivot table now displaying the recruiters in the rows.
+.. screenshot:: hr-recruitment-team-performance-by-recruiter
+   :menu: Recruitment ‣ Reporting ‣ Team Performance
+   :shows: The Team Performance pivot regrouped with the recruiters in the rows.
+   :highlight: The recruiter rows (red frame).
+   :data: Three recruiters.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 To compare the team's performance over different time periods, click the :icon:`fa-caret-down`
 :guilabel:`(down arrow)` in the search bar. Click :guilabel:`Application Date` :icon:`fa-caret-down`
@@ -80,8 +95,13 @@ After making this selection, a :icon:`fa-adjust` :guilabel:`Comparison` column a
 :guilabel:`Start Date: Previous Period` to compare the third quarter with the second quarter, for
 the various recruiters.
 
-.. image:: team_performance/compare.png
-   :alt: A comparison table of recruiter totals of Q2 and Q3.
+.. screenshot:: hr-recruitment-team-performance-comparison
+   :menu: Recruitment ‣ Reporting ‣ Team Performance
+   :shows: The Team Performance pivot comparing two quarters per recruiter, with the variation column.
+   :highlight: The variation column (red frame).
+   :data: Q2 and Q3 of the same year.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 From this report, some things can be extrapolated: the total number of applicants, the number of
 hired applicants, the number of refused applicants, and the number of applicants still in the

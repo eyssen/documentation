@@ -29,8 +29,13 @@ Each attendance record displays the following information:
 - :guilabel:`Overtime Status`: the status of the attendance record. All attendance records that
   appear on this dashboard have a status of :guilabel:`To Approve`.
 
-.. image:: management/management-dashboard.png
-   :alt: The Attendances app Management dashboard, displaying entries needing approval.
+.. screenshot:: hr-attendances-management-list
+   :menu: Attendances ‣ Management ‣ Attendances
+   :shows: The Attendances list with the check in, check out, worked hours and extra hours columns, filtered to the entries that still need approval.
+   :highlight: The Extra Hours column and the To Approve filter (red frame).
+   :data: Demo company "YourCompany HU"; three entries with unapproved extra hours.
+   :module: hr_attendance
+   :notes: English UI, light theme, 1440px width.
 
 .. _attendances/approve-refuse:
 
@@ -69,8 +74,13 @@ Hours` field.
 
 Once overtime hours are partially approved, the status changes to :guilabel:`Approved`.
 
-.. image:: management/record.png
-   :alt: A detailed attendance record.
+.. screenshot:: hr-attendances-record-detail
+   :menu: Attendances ‣ Management ‣ Attendances ‣ (open a record)
+   :shows: One attendance record with the check in and check out times, worked hours, extra hours and the approval button.
+   :highlight: The extra hours and the approval button (red frame).
+   :data: Employee "Anita Kovács", 1.5 extra hours pending approval.
+   :module: hr_attendance
+   :notes: English UI, light theme, 1440px width.
 
 .. important::
    Once partial overtime is approved, it is still possible to deny overtime by clicking
@@ -122,5 +132,10 @@ the following information on the form:
    it is possible to manually refuse them, as explained in the :ref:`Approvals and Refusals
    <attendances/approve-refuse>` section.
 
-.. image:: management/new-record.png
-   :alt: An Attendances app record form, filled out for Doris Cole for April 23, 2025.
+.. screenshot:: hr-attendances-new-record
+   :menu: Attendances ‣ Management ‣ Attendances ‣ New
+   :shows: A new attendance record form filled in with an employee, a check in and a check out time.
+   :highlight: The Check In and Check Out fields (red frame).
+   :data: Employee "Anita Kovács", 2026-04-23, 08:00-16:00.
+   :module: hr_attendance
+   :notes: English UI, light theme, 1440px width.

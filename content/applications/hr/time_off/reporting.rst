@@ -35,8 +35,13 @@ The information shown in the list includes: the :guilabel:`Employee` name, :guil
 Days` off requested, the :guilabel:`Start Date`, :guilabel:`End Date`, :guilabel:`Status`, and
 :guilabel:`Description`.
 
-.. image:: reporting/employee-report.png
-   :alt: Report of time off, shown by each employee in a list view.
+.. screenshot:: hr-time-off-report-by-employee
+   :menu: Time Off ‣ Reporting ‣ by Employee
+   :shows: The time off report in list view, one line per employee with the days taken per time off type.
+   :highlight: The days columns (red frame).
+   :data: Five employees, current year.
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.
 
 The report can be displayed in other ways, as well. Click the corresponding button option in the
 top-right corner of the page to view the data in that specific way. The various options are a
@@ -61,9 +66,13 @@ app --> Reporting --> by Type`. This shows all time off requests in a default ba
 
 Hover over a bar to view the :guilabel:`Duration (Days)` of that specific time off type.
 
-.. image:: reporting/bar-chart.png
-   :alt: The various time off types, and how many days requested, in a bar chart. Details are
-         highlighted in a red box.
+.. screenshot:: hr-time-off-report-by-type
+   :menu: Time Off ‣ Reporting ‣ by Employee
+   :shows: The time off report as a bar chart, one bar per time off type with the number of days requested.
+   :highlight: The tallest bar (red frame).
+   :data: Three time off types, current year.
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.
 
 Click on a bar to go to a detailed list view of all the time off requests for that time off type.
 
@@ -97,5 +106,10 @@ by how many days and hours are :guilabel:`Left` and :guilabel:`Planned`, navigat
 This shows all time off balances in a default pivot table. The employees populate the rows, while
 the various time off types and balances populate the columns.
 
-.. image:: reporting/balance.png
-   :alt: The various time off balances, in a pivot table.
+.. screenshot:: hr-time-off-report-balance
+   :menu: Time Off ‣ Reporting ‣ Balance
+   :shows: The balance report in pivot view with the employees in rows and the time off types in columns, showing the remaining days.
+   :highlight: The remaining days column (red frame).
+   :data: Five employees, three time off types.
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.

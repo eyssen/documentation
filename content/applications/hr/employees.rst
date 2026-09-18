@@ -102,8 +102,13 @@ Employees
      The *color* of the icon indicates the employee's status, with green indicating present, yellow
      indicating absent, and gray indicating it is outside of the employee's working hours.
 
-     .. image:: employees/presence.png
-        :alt: Two employee Kanban cards displaying their working location and status.
+     .. screenshot:: hr-employees-presence-cards
+        :menu: Employees ‣ Employees
+        :shows: Two employee kanban cards, one with a green home icon and one with a building icon, showing the work location and the presence colour.
+        :highlight: The location icons in the upper-right corner of the cards (red frame).
+        :data: Demo company "YourCompany HU"; one employee working from home, one at the office.
+        :module: hr, hr_homeworking
+        :notes: English UI, light theme, 1440px width. Crop to the two cards.
 
 Work organization
 -----------------

@@ -21,8 +21,13 @@ If the attendance widget circle is red, this indicates the user is not currently
 the :icon:`fa-circle` :guilabel:`(red circle)`, and the attendance widget appears, displaying a
 green :guilabel:`Check in` :icon:`fa-sign-in` button.
 
-.. image:: check_in_check_out/check-in.png
-   :alt: Top right main menu with check in button highlighted.
+.. screenshot:: hr-attendances-systray-check-in
+   :menu: (any screen) ‣ systray
+   :shows: The systray at the top right of the database with the attendance icon and the Check in button open.
+   :highlight: The Check in button (red frame).
+   :data: Logged in as an employee who is not checked in.
+   :module: hr_attendance
+   :notes: English UI, light theme, 1440px width. Crop to the systray area.
 
 When the user checks in from the database, the **Attendances** app logs the location details for the
 user, including the IP Address and GPS coordinates.
@@ -72,8 +77,13 @@ while the yellow :guilabel:`Check out` :icon:`fa-sign-out` button changes to a g
 When the user checks out from the database, the **Attendances** app logs the location details for
 the user. This information is logged **only** if the user grants permission.
 
-.. image:: check_in_check_out/check-in-database-message.png
-   :alt: The pop-up that appears when an employee checks in inside the database.
+.. screenshot:: hr-attendances-systray-checked-in
+   :menu: (any screen) ‣ systray
+   :shows: The confirmation shown after checking in, with the check in time and the running timer.
+   :highlight: The running timer (red frame).
+   :data: Employee checked in at 08:02.
+   :module: hr_attendance
+   :notes: English UI, light theme, 1440px width. Crop to the systray area.
 
 .. tip::
    The number of times a user can check in and check out is unlimited. Users can check in and out

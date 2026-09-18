@@ -22,8 +22,13 @@ Three separate color-coded metrics are presented: :guilabel:`In Progress`, :guil
 Hover the cursor over a month of the chart, and a pop-up window appears, displaying the specific
 numbers for that month.
 
-.. image:: applicant_analysis/line-chart.png
-   :alt: The default Applicant Analysis report.
+.. screenshot:: hr-recruitment-applicant-analysis-default
+   :menu: Recruitment ‣ Reporting ‣ Applicant Analysis
+   :shows: The default Applicant Analysis report as a line chart over the last months.
+   :highlight: The measures menu (red frame).
+   :data: Six months of applications for three job positions.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Pivot table view
 ----------------
@@ -41,8 +46,13 @@ refused, and ten are still in the recruitment pipeline. The :guilabel:`Experienc
 position has six total applicants, three of which were hired, one refused, and two still in
 progress.
 
-.. image:: applicant_analysis/pivot-view.png
-   :alt: The detailed pivot table view.
+.. screenshot:: hr-recruitment-applicant-analysis-pivot
+   :menu: Recruitment ‣ Reporting ‣ Applicant Analysis
+   :shows: The Applicant Analysis report in pivot view with the job positions in rows and the months in columns.
+   :highlight: The totals column (red frame).
+   :data: The same six months of applications.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Use case: applicants with referrals
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,8 +70,13 @@ deactivate those default measures.
 Now, the column displays the number of applicants that came from a referral in the :guilabel:`Has
 Referrer` column, and the total number of applicants in the :guilabel:`Count` column.
 
-.. image:: applicant_analysis/referral.png
-   :alt: The detailed pivot table view displaying the number of referrals and the total applicants.
+.. screenshot:: hr-recruitment-applicant-analysis-source
+   :menu: Recruitment ‣ Reporting ‣ Applicant Analysis
+   :shows: The Applicant Analysis pivot with the applicants broken down by source, next to the total number of applicants.
+   :highlight: The source column (red frame).
+   :data: Applications from several sources, including employee referrals.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 In this example, the :guilabel:`Experienced Developer` and :guilabel:`Interior Designer` job
 positions both have applicants from referrals, while the rest do not have any referrals.
@@ -83,8 +98,13 @@ in.
 To expand the other rows, and display the various states, click on the :icon:`fa-plus-square`
 :guilabel:`[job position]` button.
 
-.. image:: applicant_analysis/state.png
-   :alt: The detailed pivot table view displaying applicants hired through referrals.
+.. screenshot:: hr-recruitment-applicant-analysis-hired
+   :menu: Recruitment ‣ Reporting ‣ Applicant Analysis
+   :shows: The Applicant Analysis pivot filtered to hired applicants, broken down by source and job position.
+   :highlight: The hired counts per job position (red frame).
+   :data: Hired applicants of the last two quarters.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Both the :guilabel:`Experienced Developer` and :guilabel:`Interior Designer` roles yielded one
 referral hire each, confirming that developers and designers generate the highest-success referrals.

@@ -40,8 +40,13 @@ The main section, beneath the user's information, displays all the products in a
 view. Each product card displays the name, cost, vendor, photo, and description of the product. If
 the product is configured as new, it also displays a :guilabel:`New` tag.
 
-.. image:: orders/dashboard.png
-   :alt: The Lunch app dashboard.
+.. screenshot:: hr-lunch-order-dashboard
+   :menu: Lunch ‣ My Lunch ‣ New Order
+   :shows: The Lunch order dashboard with the product cards, the category and vendor filters on the left and the account balance at the top.
+   :highlight: The account balance and the filters (red frame).
+   :data: Demo company "YourCompany HU"; three vendors and a dozen products.
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    Anywhere a vendor's name is listed in the **Lunch** app, such as on Kanban product cards, their
@@ -79,8 +84,13 @@ is then sent to the vendor regarding the order, such as any special requests or 
 When all selections for the product have been made, click the :guilabel:`Add To Cart` button in the
 lower-left of the pop-up window. To cancel the order, click the :guilabel:`Discard` button.
 
-.. image:: orders/pizza.png
-   :alt: The pop-up window for a personal pizza, with all the extras selected.
+.. screenshot:: hr-lunch-product-popup
+   :menu: Lunch ‣ My Lunch ‣ New Order ‣ (click a product)
+   :shows: The product dialog of a pizza with the extras selected, the quantity, the note field and the resulting price.
+   :highlight: The extras and the resulting price (red frame).
+   :data: Product "Pizza 23 cm" with two toppings selected.
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.
 
 Errors
 ~~~~~~
@@ -103,9 +113,13 @@ changes to the :guilabel:`Configure Your Order` pop-up window.
    If a selection is **not** made, an error occurs. The message that appears is `You have to order
    one and only one Free Beverage with Purchase`.
 
-   .. image:: orders/error.png
-      :alt: The :guilabel:`Validation Error` pop-up window with the specific error for the free
-            beverage displayed.
+   .. screenshot:: hr-lunch-order-error
+      :menu: Lunch ‣ My Lunch ‣ New Order ‣ (click a product)
+      :shows: The Validation Error dialog explaining that the mandatory extra of the product has not been selected.
+      :highlight: The error text (red frame).
+      :data: Product with a mandatory free beverage extra, nothing selected.
+      :module: lunch
+      :notes: English UI, light theme, 1440px width.
 
 Your Order summary
 ------------------
@@ -138,8 +152,13 @@ field indicates how much has been paid that day towards the :guilabel:`Total` am
 :guilabel:`To Pay` field displays how much of the remaining :guilabel:`Total` amount must be paid,
 in order to place the currently configured order.
 
-.. image:: orders/your-order.png
-   :alt: The 'Your Orders' section of the dashboard, with purchasing information.
+.. screenshot:: hr-lunch-your-order
+   :menu: Lunch ‣ My Lunch ‣ New Order
+   :shows: The Your Order panel with the selected products, their prices, the total and the Order Now button.
+   :highlight: The total and the Order Now button (red frame).
+   :data: Two products in the order.
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    Users can place multiple orders throughout the day, and are not restricted to only placing one
@@ -202,8 +221,13 @@ appears. Click :guilabel:`Re-order` to instantly reorder that same product, with
 applicable. The new order appears in the list, under the current date, and the product is paid for,
 with money deducted from the user's account.
 
-.. image:: orders/my-orders.png
-   :alt: The list view that appears when navigating to the My Orders dashboard.
+.. screenshot:: hr-lunch-my-orders
+   :menu: Lunch ‣ My Lunch ‣ My Order History
+   :shows: The My Orders list with the date, vendor, product, quantity, price and status of the user's past orders.
+   :highlight: The Status column (red frame).
+   :data: Two weeks of the user's own orders.
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.
 
 My Account
 ==========
@@ -221,5 +245,10 @@ in the **Lunch** app. These appear in a `$-XX.XX` format.
 Entries with a positive balance either represent funds added to the user's lunch account, or
 cancelled orders that were eventually refunded to the user. These appear in a `$XX.XX` format.
 
-.. image:: orders/my-account.png
-   :alt: The 'My Account' dashboard with the entry for adding funds to the user's lunch account.
+.. screenshot:: hr-lunch-my-account
+   :menu: Lunch ‣ My Lunch ‣ My Account History
+   :shows: The My Account list with the cash moves of the user, the descriptions and the amounts, and the resulting balance.
+   :highlight: The balance (red frame).
+   :data: A few payments and order deductions.
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.

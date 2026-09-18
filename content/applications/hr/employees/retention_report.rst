@@ -8,9 +8,13 @@ First, navigate to :menuselection:`Employees app --> Reporting --> Contracts` to
 :guilabel:`Employee Analysis` report. This report shows the number of all employees for the
 :guilabel:`Last 365 Days`, in a default :icon:`fa-line-chart` :guilabel:`Line Chart`.
 
-.. image:: retention_report/employees-analysis.png
-   :align: center
-   :alt: The default Employees Analysis report.
+.. screenshot:: hr-employees-retention-default
+   :menu: Employees ‣ Reporting ‣ Employees
+   :shows: The default Employees Analysis report in pivot view, with the employee count by department.
+   :highlight: The measures and the department rows (red frame).
+   :data: Demo company "YourCompany HU"; four departments.
+   :module: hr
+   :notes: English UI, light theme, 1440px width.
 
 Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the upper-left corner,
 revealing a drop-down menu. Click :guilabel:`# Departure Employee` in the list, then click away from
@@ -25,9 +29,13 @@ totals: the monthly :guilabel:`Wage`, the :guilabel:`Fuel Card` budget, total :g
 Employee Budget` (also referred to as the *annual salary*), the number of :guilabel:`New Employees`,
 as well as the number of :guilabel:`Departure Employees` (employees who left).
 
-.. image:: retention_report/pivot-departures.png
-   :align: center
-   :alt: The Employees Analysis report, modified to show departed employees only.
+.. screenshot:: hr-employees-retention-departures
+   :menu: Employees ‣ Reporting ‣ Employees
+   :shows: The Employees Analysis report filtered to departed employees only, grouped by departure reason.
+   :highlight: The filter in the search bar (red frame).
+   :data: A handful of departed employees with different departure reasons.
+   :module: hr
+   :notes: English UI, light theme, 1440px width.
 
 Employee retention rate comparison report
 =========================================
@@ -82,9 +90,13 @@ for both years, including the difference, in a percentage.
    employees who left in 2024 as compared to 2023. Additionally, there was a :guilabel:`143.37%`
    increase in the total number of employees in 2024 as compared to 2023.
 
-   .. image:: retention_report/comparison-years.png
-      :align: center
-      :alt: The report modified to show the difference between two years of employees who left.
+   .. screenshot:: hr-employees-retention-comparison
+      :menu: Employees ‣ Reporting ‣ Employees
+      :shows: The report comparing two years of departures, with the variation column between them.
+      :highlight: The comparison columns and the variation (red frame).
+      :data: Departures of 2025 and 2026.
+      :module: hr
+      :notes: English UI, light theme, 1440px width.
 
 To view more detailed rates for each department, click :icon:`fa-plus-square` :guilabel:`Total` in
 the single row, revealing a drop-down menu, and click :guilabel:`Department`. Click away from the
@@ -98,6 +110,10 @@ drop-down to close it, and now the pivot table displays the total number of empl
    :guilabel:`-100%`. Additionally, it can be determined that the :guilabel:`Management / Research &
    Development` department had the most turnover, with a :guilabel:`Variation` of :guilabel:`300%`.
 
-   .. image:: retention_report/department-totals.png
-     :align: center
-     :alt: The expanded employee retention report by department.
+   .. screenshot:: hr-employees-retention-by-department
+      :menu: Employees ‣ Reporting ‣ Employees
+      :shows: The retention report expanded by department, with the totals per department for both compared years.
+      :highlight: The department rows and their totals (red frame).
+      :data: Four departments with departures in both years.
+      :module: hr
+      :notes: English UI, light theme, 1440px width.

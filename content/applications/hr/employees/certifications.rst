@@ -32,8 +32,13 @@ The entries are also color-coded. Current certifications that are still valid ap
 expired certifications appear in red, and certifications that are going to expire within the next 90
 days appear in orange.
 
-.. image:: certifications/certifications.png
-   :alt: The list of employee certifications.
+.. screenshot:: hr-employees-certifications-list
+   :menu: Employees ‣ Reporting ‣ Certifications
+   :shows: The Certifications list with the employee, certification name, validity dates and expiration status columns.
+   :highlight: The validity date columns (red frame).
+   :data: Demo company "YourCompany HU"; four certifications, one of them expiring soon.
+   :module: hr_skills
+   :notes: English UI, light theme, 1440px width.
 
 .. important::
    **Only** certification records with the *Display Type* set to *Certification* on their
@@ -60,8 +65,13 @@ and lastly, certifications that are still :guilabel:`Valid`.
 Filter certifications by expiration status to identify certifications expiring soon, and identify
 employees who must renew.
 
-.. image:: certifications/status.png
-   :alt: The list of employee certifications, grouped by status.
+.. screenshot:: hr-employees-certifications-by-status
+   :menu: Employees ‣ Reporting ‣ Certifications
+   :shows: The Certifications list grouped by expiration status, with the Expired, Expiring Soon and Valid groups.
+   :highlight: The group headers with their counts (red frame).
+   :data: At least one certification in each status group.
+   :module: hr_skills
+   :notes: English UI, light theme, 1440px width.
 
 .. _employees/certifications-form:
 
@@ -121,8 +131,13 @@ information on the form:
   the start and end dates for the certification validity period. When the correct dates are
   selected, click :icon:`fa-check` :guilabel:`Apply`, and both fields are populated.
 
-.. image:: certifications/cybersecurity.png
-   :alt: A certification form filled out for an OSHA certificate for construction.
+.. screenshot:: hr-employees-certification-form
+   :menu: Employees ‣ Reporting ‣ Certifications ‣ New
+   :shows: A certification form filled in with the employee, the certification name, the issuing organisation and the validity dates.
+   :highlight: The Valid From and Valid Until fields (red frame).
+   :data: Employee "Anita Kovács", certification "Information security awareness", valid 2026-01-01 to 2028-01-01.
+   :module: hr_skills
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    Once a certification is logged for an employee, a new certification of the *same type* (i.e.

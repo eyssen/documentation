@@ -15,8 +15,13 @@ upper-left corner. Doing so reveals a blank employee form.
 
 Proceed to fill out the required information, along with any additional details.
 
-.. image:: new_employee/new-employee-form.png
-   :alt: Create a new employee form with all fields filled out.
+.. screenshot:: hr-employees-new-employee-form
+   :menu: Employees ‣ Employees ‣ New
+   :shows: A new employee form filled in with the name, job position, department, manager, work address, work email and work phone.
+   :highlight: The general information block above the tabs (red frame).
+   :data: Employee "Anita Kovács", job position "Warehouse Coordinator", department "Warehouse", demo company "YourCompany HU".
+   :module: hr
+   :notes: English UI, light theme, 1440px width. Use invented personal data.
 
 .. note::
    The current company phone number and name are populated in the :guilabel:`Work Phone` and
@@ -53,8 +58,13 @@ Fill out the following employee details.
      position can be more specific, such as `Sales Representative - Subscriptions` if the employee
      is focused solely on subscription sales.
 
-     .. image:: new_employee/job-description-fields.png
-        :alt: Both job position fields entered but with different information.
+     .. screenshot:: hr-employees-job-position-vs-title
+        :menu: Employees ‣ Employees ‣ New
+        :shows: The Job Position field and the free-text job title below the employee name, filled in with different wording.
+        :highlight: Both fields (red frame).
+        :data: Job Position "Warehouse Coordinator", job title "Warehouse coordinator, night shift".
+        :module: hr
+        :notes: English UI, light theme, 1440px width. Crop to the two fields.
 
 - :guilabel:`Photo`: in the top-right image box of the employee form, click on the :icon:`fa-pencil`
   :guilabel:`(Edit)` icon, then select a photo to upload.
@@ -122,8 +132,13 @@ Once all the information is entered, click the :guilabel:`Save & Close` button i
 entry to add, or click the :guilabel:`Save & New` button to save the current entry and create
 another resumé line.
 
-.. image:: new_employee/resume-lines.png
-   :alt: A resumé entry form with all the information populated.
+.. screenshot:: hr-employees-resume-line
+   :menu: Employees ‣ Employees ‣ (open an employee) ‣ Resumé ‣ Create a new entry
+   :shows: A resumé line dialog filled in with the title, the employee, the type, the dates and the description.
+   :highlight: The Type and date fields (red frame).
+   :data: Entry "Warehouse Coordinator", type "Experience", 2023-2026.
+   :module: hr_skills
+   :notes: English UI, light theme, 1440px width. Use invented data.
 
 .. note::
    After the new employee form is saved, the current position and company is automatically added to
@@ -169,8 +184,13 @@ Click the :guilabel:`Save & Close` button if there is only one skill to add, or 
 At any point, a new line can be added by clicking the :guilabel:`ADD` button next to the
 corresponding section.
 
-.. image:: new_employee/select-skills.png
-   :alt: A skill form with the information filled out.
+.. screenshot:: hr-employees-select-skill
+   :menu: Employees ‣ Employees ‣ (open an employee) ‣ Resumé ‣ Pick a skill from the list
+   :shows: The skill dialog with the skill type, the skill and the skill level selected, and the progress bar of the level.
+   :highlight: The Skill Level field and its progress (red frame).
+   :data: Skill type "Languages", skill "English", level "Fluent".
+   :module: hr_skills
+   :notes: English UI, light theme, 1440px width.
 
 .. important::
    Only users with :guilabel:`Officer: Manage all employees` or :guilabel:`Administrator` rights for
@@ -214,8 +234,13 @@ types.
      Default` on the `Beginner` line to set this as the default skill level. Last, click the colored
      box next to :guilabel:`Color`, and select yellow.
 
-     .. image:: new_employee/math-skills.png
-        :alt: A skill form for a Math skill type, with all the information entered.
+     .. screenshot:: hr-employees-skill-type-form
+        :menu: Employees ‣ Configuration ‣ Skill Types ‣ New
+        :shows: A skill type form with its skills and its levels, each level with a progress percentage and one marked as the default.
+        :highlight: The Levels list with the default level (red frame).
+        :data: Skill type "Languages" with the levels Basic 25%, Intermediate 50%, Advanced 75%, Fluent 100%.
+        :module: hr_skills
+        :notes: English UI, light theme, 1440px width.
 
 .. tip::
    Once the form is completely filled out, click the :icon:`fa-cloud-upload` :guilabel:`(Save
@@ -332,8 +357,13 @@ Leave the field blank (:guilabel:`Unspecified`) for non-working days, such as Sa
      current company populates this field, by default. This field **only** appears in a
      multi-company database.
 
-   .. image:: new_employee/location.png
-      :alt: A new work location form with all fields filled out.
+   .. screenshot:: hr-employees-work-location-form
+      :menu: Employees ‣ Configuration ‣ Work Locations ‣ New
+      :shows: A work location form filled in with the name, the work address, the cover image and the location number.
+      :highlight: The Work Address field (red frame).
+      :data: Location "Marbella office", demo company "YourCompany HU".
+      :module: hr
+      :notes: English UI, light theme, 1440px width.
 
 .. _employees/schedule:
 
@@ -425,8 +455,13 @@ PRIVATE CONTACT
   Finally, click the :guilabel:`Send Money` toggle. This changes the toggle color to green, and the
   status changes from :guilabel:`Untrusted` in black text, to :guilabel:`Trusted` in green text.
 
-  .. image:: new_employee/bank.png
-     :alt: The Create Bank Account form with all the information filled out.
+  .. screenshot:: hr-employees-bank-account
+     :menu: Employees ‣ Employees ‣ (open an employee) ‣ HR Settings ‣ Save a new bank account
+     :shows: The bank account dialog with the account number, the bank and the account holder filled in.
+     :highlight: The Account Number field (red frame).
+     :data: Employee "Anita Kovács"; use a throw-away account number.
+     :module: hr
+     :notes: English UI, light theme, 1440px width. Use a throw-away account number, never a real one.
 
   .. important::
      **All** bank accounts must be marked as :guilabel:`Trusted`, if not payments cannot be

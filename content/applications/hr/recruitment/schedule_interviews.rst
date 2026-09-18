@@ -42,8 +42,13 @@ events for the currently signed-in user, as well as the employees who are listed
 To change the currently loaded meetings and events being displayed, uncheck an attendee whose
 calendar events are to be hidden. Only the checked attendees are visible on the calendar.
 
-.. image:: schedule_interviews/calendar.png
-   :alt: The calendar view, highlighting how to change the displayed meetings.
+.. screenshot:: hr-recruitment-interviews-calendar
+   :menu: Recruitment ‣ Applications ‣ (calendar view)
+   :shows: The interview calendar in week view, with the attendee filters on the right used to choose whose meetings are displayed.
+   :highlight: The attendee filter panel (red frame).
+   :data: Two recruiters with interviews across the week.
+   :module: hr_recruitment, calendar
+   :notes: English UI, light theme, 1440px width.
 
 To add a meeting to the calendar when in the *Day* or *Week* view, click on the start time of the
 meeting and drag down to the end time. Doing so selects the date, time, and the length of the
@@ -147,8 +152,13 @@ window. Enter any of the following additional fields:
   meeting participants of the meeting, via the selected option at the specified time. Multiple
   reminders can be selected in this field.
 
-.. image:: schedule_interviews/new-event.png
-   :alt: A new meeting card with all the details populated, and ready to save.
+.. screenshot:: hr-recruitment-interview-event
+   :menu: Recruitment ‣ (job position) ‣ (open an applicant) ‣ Meeting
+   :shows: A meeting form for an interview with the title, the attendees, the date and time, the duration and the videocall link.
+   :highlight: The attendees and the date and time (red frame).
+   :data: Interview with applicant "János Tóth", 2026-04-23 10:00, 1 hour.
+   :module: hr_recruitment, calendar
+   :notes: English UI, light theme, 1440px width.
 
 Send meeting to attendees
 -------------------------
@@ -167,8 +177,13 @@ using the default :guilabel:`Calendar: Event Update` email template, populates t
 The applicant, followers of the job application, as well as the user who created the meeting, are
 added to the :guilabel:`To` by default. Make any desired changes to the email.
 
-.. image:: schedule_interviews/email-event.png
-   :alt: Enter the information to send the event via email.
+.. screenshot:: hr-recruitment-interview-email
+   :menu: Recruitment ‣ (job position) ‣ (open an applicant) ‣ Meeting ‣ Email
+   :shows: The email dialog for sending the meeting details to the attendees, with the recipients and the message body.
+   :highlight: The recipients (red frame).
+   :data: Interview with applicant "János Tóth"; use invented addresses.
+   :module: calendar
+   :notes: English UI, light theme, 1440px width.
 
 To send the meeting via text message, click the :icon:`fa-mobile` :guilabel:`SMS` button next to the
 :guilabel:`Attendees` field on the expanded meeting form. A :guilabel:`Send SMS` pop-up window
@@ -187,8 +202,13 @@ GSM7 criteria) appears beneath the :guilabel:`Message` field. Click :guilabel:`P
 the text sent later, after any other messages are scheduled, or click :guilabel:`Send Now` to send
 the message immediately.
 
-.. image:: schedule_interviews/send-sms.png
-   :alt: Send a text message to the attendees of the meeting.
+.. screenshot:: hr-recruitment-interview-sms
+   :menu: Recruitment ‣ (job position) ‣ (open an applicant) ‣ Meeting ‣ SMS
+   :shows: The SMS dialog for sending the meeting details to the attendees, with the recipients, the message and the credit count.
+   :highlight: The message body (red frame).
+   :data: Interview with applicant "János Tóth"; use an invented phone number.
+   :module: sms
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    Sending text messages is **not** a default capability with Odoo. To send text messages, credits
@@ -218,8 +238,13 @@ Modify stage
 :guilabel:`Second Interview` stage so the stage's :guilabel:`Email Template` field is set to
 :guilabel:`Recruitment: Schedule interview`.
 
-.. image:: schedule_interviews/interview-template.png
-   :alt: The Recruitment: Schedule Interview email template populating the Email Template field.
+.. screenshot:: hr-recruitment-interview-stage-template
+   :menu: Recruitment ‣ (job position) ‣ (stage gear icon) ‣ Edit
+   :shows: A recruitment stage form with the Recruitment: Schedule Interview template selected in the Email Template field.
+   :highlight: The Email Template field (red frame).
+   :data: Stage "First Interview".
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Send email
 ----------
@@ -243,8 +268,13 @@ the format and length of the meeting. In this example. the interview is virtual
 Then the applicant clicks on an available day on the calendar, signified by purple text. Once a day
 is selected, they click on one of the available times to select that date and time.
 
-.. image:: schedule_interviews/select-date-time.png
-   :alt: The calendar screen with dates and times to schedule an interview.
+.. screenshot:: hr-recruitment-self-schedule-calendar
+   :menu: (applicant-facing page) ‣ Schedule your interview
+   :shows: The self-scheduling page shown to the applicant, with the available days and time slots.
+   :highlight: An available time slot (red frame).
+   :data: Two weeks of availability, working hours only.
+   :module: hr_recruitment, appointment
+   :notes: English UI, light theme, 1440px width. Front-end page, not the back end.
 
 .. tip::
    Be sure to check the :guilabel:`Timezone` field, beneath the calendar, to ensure it is set to the
@@ -258,8 +288,13 @@ the applicant is contacted to remind them about the scheduled interview.
 When everything is entered on the :guilabel:`Add more details about you` page, the applicant clicks
 the :guilabel:`Confirm Appointment` button, and the interview is scheduled.
 
-.. image:: schedule_interviews/confirmation.png
-   :alt: The confirmation page with all the details for the interview displayed.
+.. screenshot:: hr-recruitment-self-schedule-confirmation
+   :menu: (applicant-facing page) ‣ Schedule your interview
+   :shows: The confirmation page the applicant sees after booking, with the date, time, duration and the videocall link.
+   :highlight: The booked date and time (red frame).
+   :data: Interview booked for 2026-04-23 10:00.
+   :module: hr_recruitment, appointment
+   :notes: English UI, light theme, 1440px width. Front-end page, not the back end.
 
 After confirming the interview, the applicant is taken to a confirmation page, where all the details
 of the interview are displayed. The option to add the meeting to the applicant's personal calendars

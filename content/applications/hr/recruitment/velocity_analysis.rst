@@ -33,8 +33,13 @@ In this view, it is easier to visualize the differences between the job position
 long applicants stay in each stage. From this view, recruiters can determine which job positions
 have delays or bottlenecks at certain stages.
 
-.. image:: velocity_analysis/bar-chart.png
-   :alt: The bar chart view of the Velocity Analysis report.
+.. screenshot:: hr-recruitment-velocity-default
+   :menu: Recruitment ‣ Reporting ‣ Velocity Analysis
+   :shows: The default Velocity Analysis report as a bar chart, showing the average time applicants spend in each stage.
+   :highlight: The longest bar (red frame).
+   :data: Six months of applications across the default stages.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Use case: comparing times by month
 ----------------------------------
@@ -51,8 +56,13 @@ the various boxes.
    If a field is empty, it indicates no applicant has been in that stage. Instead, all applicants
    moved from a previous stage without being placed in the stage with an empty field.
 
-.. image:: velocity_analysis/time-pivot.png
-   :alt: The pivot table view of the Velocity Analysis report.
+.. screenshot:: hr-recruitment-velocity-pivot
+   :menu: Recruitment ‣ Reporting ‣ Velocity Analysis
+   :shows: The Velocity Analysis report in pivot view with the stages in columns and the time measures in the cells.
+   :highlight: The measures menu (red frame).
+   :data: The same six months.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Click :icon:`fa-minus-square-o` :guilabel:`Total` above the job position rows to collapse the
 information. Next, click :icon:`fa-plus-square` :guilabel:`Total` again, revealing a drop-down menu.
@@ -62,8 +72,13 @@ further grouping options. Click :guilabel:`Start Date` from the expanded list.
 After doing so, the data presented is grouped with the various months from the previous 365 days for
 the rows, leaving the :guilabel:`Days In Stage` as the columns.
 
-.. image:: velocity_analysis/time-dates.png
-   :alt: The pivot table showing the months averages for times in stage.
+.. screenshot:: hr-recruitment-velocity-by-month
+   :menu: Recruitment ‣ Reporting ‣ Velocity Analysis
+   :shows: The Velocity Analysis pivot grouped by month, showing the monthly averages of the time spent in each stage.
+   :highlight: The monthly rows (red frame).
+   :data: Six months of applications.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 In this example, :guilabel:`July 2024` had the longest time that applicants spent in each stage, on
 average. In addition, the :guilabel:`Contract Proposal` stage had the longest wait time in July,

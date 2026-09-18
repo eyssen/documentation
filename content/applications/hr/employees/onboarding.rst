@@ -65,8 +65,13 @@ The plan form displays the following information:
        :guilabel:`Abby Jones`. The :guilabel:`Interval` is :guilabel:`1`, and the :guilabel:`Unit`
        is set to :guilabel:`days`. The :guilabel:`Trigger` is :guilabel:`Before Plan Date`.
 
-       .. image:: onboarding/activity-plan.png
-          :alt: An activity configured to assign a laoptop the day before an employee starts work.
+       .. screenshot:: hr-employees-onboarding-step
+          :menu: Employees ‣ Configuration ‣ Activity Planning ‣ (open a plan) ‣ (open a step)
+          :shows: One activity plan step configured to assign a laptop one day before the employee starts, with the activity type, the assignment and the due date offset.
+          :highlight: The due date offset and the Assigned to field (red frame).
+          :data: Step "Prepare laptop", one day before the start date, assigned to the IT manager.
+          :module: hr
+          :notes: English UI, light theme, 1440px width.
 
 Onboarding plan steps
 ---------------------
@@ -79,8 +84,13 @@ The default :guilabel:`Onboarding` plan includes three default steps. All steps 
 - :guilabel:`Plan Training`: the manager must plan the training for the new employee.
 - :guilabel:`Training`: the new employee must complete the training planned by the manager.
 
-.. image:: onboarding/onboarding.png
-   :alt: The three default steps in the Onboarding plan.
+.. screenshot:: hr-employees-onboarding-plan
+   :menu: Employees ‣ Configuration ‣ Activity Planning
+   :shows: The default Onboarding plan with its steps, each showing the activity type, the summary and the assignment.
+   :highlight: The list of steps (red frame).
+   :data: The Onboarding plan shipped with the Employees app.
+   :module: hr
+   :notes: English UI, light theme, 1440px width.
 
 .. _employees/modify-plan:
 
@@ -127,8 +137,13 @@ steps <employees/modify-plan>`.
    employees uniform and safety gear, assigning a safety course, emailing their team about the new
    hire, going over benefits, and more.
 
-   .. image:: onboarding/factory-onboarding.png
-      :alt: An onboarding plan configured for factory workers.
+   .. screenshot:: hr-employees-onboarding-plan-custom
+      :menu: Employees ‣ Configuration ‣ Activity Planning ‣ New
+      :shows: A custom onboarding plan for one department, with its own steps and assignments.
+      :highlight: The department field and the steps (red frame).
+      :data: Plan "Warehouse onboarding" for the Warehouse department, four steps.
+      :module: hr
+      :notes: English UI, light theme, 1440px width.
 
 .. _employees/launch-plan:
 
@@ -160,5 +175,10 @@ the user's with assignments relating to the plan.
    to` field appears on the :guilabel:`Launch Plan` pop-up window. Using the drop-down menu, select
    the user responsible for all the unassigned activities.
 
-.. image:: onboarding/onboarding-chatter.png
-   :alt: All onboarding tasks scheduled in the chatter.
+.. screenshot:: hr-employees-onboarding-activities
+   :menu: Employees ‣ Employees ‣ (open an employee)
+   :shows: The chatter of an employee after the onboarding plan was launched, with the scheduled activities and their due dates.
+   :highlight: The scheduled activities (red frame).
+   :data: Employee "Anita Kovács" with four scheduled onboarding activities.
+   :module: hr
+   :notes: English UI, light theme, 1440px width. Crop to the chatter.

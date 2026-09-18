@@ -40,8 +40,13 @@ offboarding plan is launched (:guilabel:`0 days Before Plan Date`).
   department requires. It is recommended to check with the HR department to ensure everything
   required for this step is completed.
 
-.. image:: offboarding/offboarding.png
-   :alt: The three default steps in the Offboarding plan.
+.. screenshot:: hr-employees-offboarding-plan
+   :menu: Employees ‣ Configuration ‣ Activity Planning
+   :shows: The default Offboarding plan with its steps, each step showing the activity type, the summary and the assignment.
+   :highlight: The list of steps (red frame).
+   :data: The Offboarding plan shipped with the Employees app.
+   :module: hr
+   :notes: English UI, light theme, 1440px width.
 
 Modify offboarding plan
 =======================
@@ -126,8 +131,13 @@ no other steps to add, or click :guilabel:`Save & New` to add more steps, as nee
    are catalogued and returned, all student feedback forms are turned in, and all access badges and
    keys for the various locations are returned.
 
-   .. image:: offboarding/offboarding-teachers.png
-      :alt: An offboarding plan configured for art teachers.
+   .. screenshot:: hr-employees-offboarding-plan-custom
+      :menu: Employees ‣ Configuration ‣ Activity Planning ‣ New
+      :shows: A custom offboarding plan with department-specific steps, each with an activity type, an assignment and a due date offset.
+      :highlight: The department field and the steps (red frame).
+      :data: Plan "Warehouse offboarding" for the Warehouse department, three steps.
+      :module: hr
+      :notes: English UI, light theme, 1440px width.
 
 Launch offboarding plan
 =======================
@@ -137,8 +147,13 @@ terminate the working relationship with the employee, the offboarding plan shoul
 Navigate to the :menuselection:`Employees app` and click on the departing employee profile. Click
 the :guilabel:`Launch Plan` button, and a blank :guilabel:`Launch Plan` pop-up window loads.
 
-.. image:: offboarding/launch-plan-button.png
-   :alt: The Launch Plan button on the employee profile.
+.. screenshot:: hr-employees-launch-plan-button
+   :menu: Employees ‣ Employees ‣ (open an employee)
+   :shows: The employee form with the Launch Plan button above the chatter.
+   :highlight: The Launch Plan button (red frame).
+   :data: Employee "Anita Kovács".
+   :module: hr
+   :notes: English UI, light theme, 1440px width. Crop to the button area.
 
 Using the drop-down menu, select the desired offboarding plan in the :guilabel:`Plan` field. Then,
 using the calendar selector, set a date in the :guilabel:`Plan Date` field. This is typically the
@@ -209,8 +224,13 @@ selected), and a red :guilabel:`Archived` banner appears in the top-right corner
 form. The chatter logs the :guilabel:`Departure Date` and :guilabel:`Departure Reason`, and if an
 access link was emailed.
 
-.. image:: offboarding/termination.png
-   :alt: The employee termination form with all fields filled out.
+.. screenshot:: hr-employees-departure-form
+   :menu: Employees ‣ Employees ‣ (open an employee) ‣ Archive
+   :shows: The employee departure dialog with the departure reason, the departure date and the departure description filled in.
+   :highlight: The Departure Reason and Departure Date fields (red frame).
+   :data: Employee "Anita Kovács", reason "Resigned", date 2026-06-30.
+   :module: hr
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    While attempting to send the HR documents access link, an :guilabel:`Invalid Operation` pop-up

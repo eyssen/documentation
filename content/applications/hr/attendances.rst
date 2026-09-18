@@ -154,9 +154,13 @@ is automatically highlighted in yellow for real-time attendance records, while t
 :icon:`fa-crosshairs` :guilabel:`(Focus Today)` button instantly returns the dashboard to the
 present date.
 
-.. image:: attendances/overview.png
-   :alt: The overview dashboard presenting the information for the week, with the current day
-         highlighted.
+.. screenshot:: hr-attendances-overview
+   :menu: Attendances ‣ Overview
+   :shows: The Overview dashboard in Gantt view for the current week, with one bar per employee per day and the total hours of the week.
+   :highlight: The current day column (red frame).
+   :data: Demo company "YourCompany HU"; five employees with attendances on every weekday.
+   :module: hr_attendance
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    Any entries that have errors appear in red, indicating they need to be resolved by a user with
@@ -263,8 +267,13 @@ sections.
   beneath the :guilabel:`GPS Coordinates`. This opens a map in a new browser tab, with the specific
   location pointed out.
 
-.. image:: attendances/details.png
-   :alt: The detailed information for an attendance entry.
+.. screenshot:: hr-attendances-entry-details
+   :menu: Attendances ‣ Overview
+   :shows: The detail pop-up of one attendance entry, with the employee, check in and check out times, worked hours and extra hours.
+   :highlight: The Worked Hours and Extra Hours fields (red frame).
+   :data: Employee "Anita Kovács", check in 08:02, check out 17:05.
+   :module: hr_attendance
+   :notes: English UI, light theme, 1440px width.
 
 Attendance errors
 =================

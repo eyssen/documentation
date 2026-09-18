@@ -29,8 +29,13 @@ The columns presented are:
 To present different information, adjust the :ref:`filters and groups <attendances/filters-groups>`
 in the same way as in the :guilabel:`Overview` dashboard.
 
-.. image:: attendance_ reporting/reporting.png
-   :alt: The default report view, with all the optional view buttons highlighted.
+.. screenshot:: hr-attendances-reporting-default
+   :menu: Attendances ‣ Reporting
+   :shows: The default Attendances report in pivot view, with the view type buttons in the upper-right corner.
+   :highlight: The view type buttons (red frame).
+   :data: Demo company "YourCompany HU"; attendances of the last three months.
+   :module: hr_attendance
+   :notes: English UI, light theme, 1440px width.
 
 .. _attendances/overtime:
 
@@ -61,8 +66,13 @@ overtime. The highest positive number is the most overtime logged for that month
    of April. :guilabel:`Michael Williams` has the most overtime, with 10 hours and 25 minutes
    logged. Of that overtime, only 25 minutes was unapproved, for a total of ten paid overtime hours.
 
-   .. image:: attendance_ reporting/overtime.png
-      :alt: The attendances report, showing only overtime for the month of April.
+   .. screenshot:: hr-attendances-reporting-overtime
+      :menu: Attendances ‣ Reporting
+      :shows: The Attendances report with only the Extra Hours measure selected, grouped by employee for one month.
+      :highlight: The Measures button and the Extra Hours column (red frame).
+      :data: One month of attendances with overtime for two of five employees.
+      :module: hr_attendance
+      :notes: English UI, light theme, 1440px width.
 
 .. _attendances/absent:
 
@@ -92,5 +102,10 @@ the employee to view the detailed individual attendance records.
    From this report, it is determined that :guilabel:`Abigail Peterson` worked the least amount of
    hours over the past two months, working 25 hours less than was expected.
 
-   .. image:: attendance_ reporting/absentee.png
-      :alt: The attendance report showing the highest absences for the last two months.
+   .. screenshot:: hr-attendances-reporting-absentee
+      :menu: Attendances ‣ Reporting
+      :shows: The Attendances report in graph view, sorted descending, showing the employees with the most absences over two months.
+      :highlight: The highest bar (red frame).
+      :data: Two months of attendances; one employee with clearly more absences.
+      :module: hr_attendance
+      :notes: English UI, light theme, 1440px width.

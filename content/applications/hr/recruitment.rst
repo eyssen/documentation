@@ -98,8 +98,13 @@ applicant's card.
    full-screen), then the résumé does not appear on the right-side. Instead, the résumé appears in
    the :guilabel:`Files` section of the chatter, below the applicant's card.
 
-.. image:: recruitment/cv-display.png
-   :alt: The résumé on an applicant's card, appearing on the right side.
+.. screenshot:: hr-recruitment-cv-display
+   :menu: Recruitment ‣ (job position) ‣ (open an applicant)
+   :shows: An applicant form with the attached CV displayed in the side panel on the right.
+   :highlight: The CV side panel (red frame).
+   :data: Applicant "János Tóth" with a PDF CV attached; use an invented CV.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 In-App Purchases
 ----------------
@@ -162,8 +167,13 @@ dashboard, which is the default view when opening the application. All job posit
 main dashboard. Click the :guilabel:`(#) New Applications` smart button on a job position card to
 navigate to the Kanban view for all the applicants for that particular job position.
 
-.. image:: recruitment/new-applicants-button.png
-   :alt: Main dashboard view of job position card, showing new applications button.
+.. screenshot:: hr-recruitment-job-position-card
+   :menu: Recruitment ‣ Applications ‣ By Job Position
+   :shows: A job position card on the Recruitment dashboard with the New Applications button and the recruiter avatar.
+   :highlight: The New Applications button (red frame).
+   :data: Job position "Warehouse Coordinator" with 4 new applications.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width. Crop to the card.
 
 Inside the job application, the Kanban stages appear, with all the applicants populated in their
 respective columns, indicating what stage they are currently in. In Odoo, six default stages are
@@ -181,8 +191,13 @@ the applicants in it are hidden from view. To expand the folded stage and view t
 for that column, click anywhere on the thin gray column that says the stage name and the column
 expands, revealing the applicants.
 
-.. image:: recruitment/stages.png
-   :alt: Expand a folded column by clicking on it in the Kanban view.
+.. screenshot:: hr-recruitment-folded-stage
+   :menu: Recruitment ‣ (job position)
+   :shows: The applicant kanban with a folded stage column being expanded by clicking on it.
+   :highlight: The folded column (red frame).
+   :data: Job position "Warehouse Coordinator" with the Contract Signed stage folded.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Each stage has a color-coded bar beneath the stage name, providing status information for the
 applicant's in that specific stage. The status colors are:
@@ -196,8 +211,13 @@ The status for each card is set manually. To set the status, click on the small 
 lower-left of the applicant card. A status pop-up window appears. Click on the desired status for
 the applicant. The status dot on the applicant card as well as the status bar updates.
 
-.. image:: recruitment/status-dots.png
-   :alt: The applicant card statuses, and status bar.
+.. screenshot:: hr-recruitment-kanban-status
+   :menu: Recruitment ‣ (job position)
+   :shows: Applicant kanban cards with their status dots, and the status bar on an open applicant form.
+   :highlight: The status dots on the cards (red frame).
+   :data: Three applicants with different kanban statuses.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    The names for the three status colors (`In Progress`, `Ready for Next Stage`, and `Blocked`)
@@ -218,8 +238,13 @@ the title for the new stage in the :guilabel:`Stage title` field, then click :gu
 new column appears, and another new stage is available to create. If no new stages are needed, click
 anywhere on the screen to exit the new stage creation.
 
-.. image:: recruitment/add-column.png
-   :alt: The plus sign to click to add a new column to the Kanban stages.
+.. screenshot:: hr-recruitment-add-stage
+   :menu: Recruitment ‣ (job position)
+   :shows: The applicant kanban with the plus sign at the right of the stage columns used to add a new stage.
+   :highlight: The plus sign (red frame).
+   :data: Job position "Warehouse Coordinator".
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 .. _recruitment/modify-stages:
 
@@ -232,9 +257,13 @@ To modify the settings of a stage, hover over the name of the stage, and a :icon
 option. An :guilabel:`Edit: (Stage)` form appears. Make any desired modifications to the form, then
 click :guilabel:`Save & Close` when done.
 
-.. image:: recruitment/gear.png
-   :alt: The gear icon that appears when a column name is moused over, and the drop-down menu it
-         displays when clicked.
+.. screenshot:: hr-recruitment-stage-menu
+   :menu: Recruitment ‣ (job position)
+   :shows: The gear icon on a stage column header with its drop-down menu open, showing the edit, fold and delete options.
+   :highlight: The open drop-down menu (red frame).
+   :data: The First Interview stage.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 .. _recruitment/edit-stage:
 
@@ -316,8 +345,13 @@ The preconfigured email templates and when to use them are as follows:
 To manually send an email, click :guilabel:`Send message` in the chatter. A text box appears, as
 well as the applicant's email address.
 
-.. image:: recruitment/full-composer.png
-   :alt: Send an email from the chatter.
+.. screenshot:: hr-recruitment-send-email
+   :menu: Recruitment ‣ (job position) ‣ (open an applicant)
+   :shows: The full email composer opened from the chatter of an applicant, with the recipient, the subject, the body and the template selector.
+   :highlight: The template selector (red frame).
+   :data: Applicant "János Tóth"; use an invented email address.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Click the :icon:`fa-expand` :guilabel:`(Full composer)` icon in the bottom right corner of the
 :guilabel:`Send Message` tab in the chatter. A :guilabel:`Compose Email` pop-up window loads, with
@@ -356,9 +390,13 @@ window loads. Enter a name for the template in the :guilabel:`Template Name` fie
 To send the email, click :guilabel:`Send` and the email is sent to the applicant. The email then
 appears in the chatter.
 
-.. image:: recruitment/send-survey.png
-   :alt: Send a custom survey, also referred to as an interview form, to an applicant using a
-         preconfigured template.
+.. screenshot:: hr-recruitment-send-interview
+   :menu: Recruitment ‣ (job position) ‣ (open an applicant) ‣ Send Interview
+   :shows: The Send Interview dialog with the recipient, the interview form and the preconfigured email template.
+   :highlight: The interview form field (red frame).
+   :data: Applicant "János Tóth", interview form "Warehouse screening".
+   :module: hr_recruitment_survey
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`recruitment/new_job`

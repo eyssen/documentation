@@ -196,15 +196,24 @@ field appears. In this field, enter the maximum amount of negative time allowed,
    These settings allow Sara to submit a request for five days of the `Vacation` time off type. If
    approved, her `Vacation` time off balance will be negative two (-2) days.
 
-.. image:: time_off/time-off-type-form-top.png
-   :alt: The top half of the time off type form, with all the information filled out for sick time
-         off.
+.. screenshot:: hr-time-off-type-form-top
+   :menu: Time Off ‣ Configuration ‣ Time Off Types ‣ New
+   :shows: The upper half of a time off type form filled in for sick time off, with the approval mode, the allocation requirement and the negative cap.
+   :highlight: The Allow Negative Cap setting (red frame).
+   :data: Time off type "Sick Time Off", approved by Time Off Officer, no allocation needed.
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.
 
-Payroll section
-***************
+Salary section
+**************
 
-If the time off type should create work entries in the **Payroll** app (Enterprise), select
-the :guilabel:`Work Entry Type` from the drop-down list.
+If the **Salary** application is installed, two fields decide how absences of this type reach the
+:doc:`salary sheet <salary/salary_sheets>`:
+
+- :guilabel:`Suspends the Engagement`: a validated time off of this type suspends the employment
+  relationship while it lasts.
+- :guilabel:`Salary Component`: the day component the absence is counted under. Its day type decides
+  which day bucket of the salary sheet — worked, paid leave, sick or unpaid — the days are added to.
 
 Timesheets section
 ******************
@@ -226,9 +235,13 @@ Display option section
 - :guilabel:`Color`: Select a color to be used in the **Time Off** app dashboard.
 - :guilabel:`Cover Image`: Select an icon to be used in the **Time Off** app dashboard.
 
-.. image:: time_off/time-off-type-form-bottom.png
-   :alt: The lower half of the time off type form, with all the information filled out for sick time
-         off.
+.. screenshot:: hr-time-off-type-form-bottom
+   :menu: Time Off ‣ Configuration ‣ Time Off Types ‣ New
+   :shows: The lower half of the same time off type form, with the display colour, the cover image and the notified time off officer.
+   :highlight: The colour and cover image options (red frame).
+   :data: Time off type "Sick Time Off".
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.
 
 .. _time_off/accrual-plans:
 
@@ -293,8 +306,13 @@ Enter the following information on the form:
   menu, select the company the accrual plan applies to. If left blank, the accrual plan is available
   for all companies.
 
-.. image:: time_off/accrual-plan-form.png
-   :alt: An accrual plan form with all the entries filled out.
+.. screenshot:: hr-time-off-accrual-plan
+   :menu: Time Off ‣ Configuration ‣ Accrual Plans ‣ New
+   :shows: An accrual plan form with its name, the accrued gain time, the carry-over settings and its milestone rules.
+   :highlight: The rules list (red frame).
+   :data: Plan "Annual leave accrual", one rule granting 1.75 days per month.
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.
 
 .. _time_off/rules:
 
@@ -408,8 +426,13 @@ milestone. Add as many milestones as desired.
    Note that due to the :guilabel:`Capped accrued time` of 120 days, the employee cannot carry over
    any time off that exceeds 120 days in total.
 
-   .. image:: time_off/milestone.png
-      :alt: A milestone form with all the entries filled out.
+   .. screenshot:: hr-time-off-accrual-milestone
+      :menu: Time Off ‣ Configuration ‣ Accrual Plans ‣ (open a plan) ‣ (open a rule)
+      :shows: An accrual rule dialog with the frequency, the accrued amount, the cap and the milestone start.
+      :highlight: The frequency and the accrued amount (red frame).
+      :data: Rule: 1.75 days per month, starting after 12 months of employment.
+      :module: hr_holidays
+      :notes: English UI, light theme, 1440px width.
 
 .. _time_off/public-holidays:
 
@@ -476,8 +499,13 @@ Enter the following information on that new line:
   of working hours, select the working hours from the drop-down menu. If left blank, the holiday
   applies to all employees.
 
-.. image:: time_off/holidays.png
-   :alt: The list of public holidays in the configuration menu.
+.. screenshot:: hr-time-off-public-holidays
+   :menu: Time Off ‣ Configuration ‣ Public Holidays
+   :shows: The Public Holidays list with the name, the start and end dates, the company and the working hours columns.
+   :highlight: The date columns (red frame).
+   :data: Hungarian public holidays of 2026 for the demo company "YourCompany HU".
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.
 
 Mandatory days
 --------------
@@ -519,8 +547,13 @@ Enter the following information on that new line:
   desired, select the `No color` option, represented by a white box with. The selected color appears
   on the main **Time Off** app dashboard, in both the calendar and in the legend.
 
-.. image:: time_off/mandatory.png
-   :alt: The Mandatory Days section with three configured days.
+.. screenshot:: hr-time-off-mandatory-days
+   :menu: Time Off ‣ Configuration ‣ Mandatory Days
+   :shows: The Mandatory Days list with three configured days, their dates, companies and departments.
+   :highlight: The date columns (red frame).
+   :data: Three mandatory days around the year-end stock count.
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.
 
 Overview
 ========
@@ -562,8 +595,13 @@ Click on a time off entry to view the details for the specific time off entry. T
 hours or days are listed, along with the start and end time of the time off. To view the details of
 the time off request in a modal, click the :guilabel:`View` button.
 
-.. image:: time_off/overview.png
-   :alt: Overview of the user's team, with time off requests shown.
+.. screenshot:: hr-time-off-overview
+   :menu: Time Off ‣ Overview
+   :shows: The Time Off overview in Gantt view for one month, one row per team member, with the approved and the requested absences in different colours.
+   :highlight: A pending request (red frame).
+   :data: Five team members with a mix of approved and pending time off.
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`time_off/allocations`

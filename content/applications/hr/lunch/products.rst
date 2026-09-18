@@ -28,8 +28,13 @@ Enter the following information on the form:
   :icon:`fa-pencil` :guilabel:`(pencil)` icon that appears. A file explorer pop-up window appears.
   Navigate to the image, then click :guilabel:`Open`.
 
-.. image:: products/product.png
-   :alt: A product form filled out for a nine inch pizza.
+.. screenshot:: hr-lunch-product-form
+   :menu: Lunch ‣ Configuration ‣ Products ‣ New
+   :shows: A lunch product form with the product name, the category, the vendor, the price, the description and the product image.
+   :highlight: The Vendor and Price fields (red frame).
+   :data: Product "Pizza 23 cm", vendor "Pizza Marbella", price 2 500 HUF.
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.
 
 .. _lunch/product-categories:
 
@@ -55,5 +60,10 @@ If desired, add a photo for the category. Hover over the image box in the top-ri
 :icon:`fa-pencil` :guilabel:`(pencil)` icon that appears. This opens a file explorer pop-up window.
 Navigate to the image, then click :guilabel:`Open`.
 
-.. image:: products/category.png
-   :alt: The category form, with the fields filled out for a Soup category.
+.. screenshot:: hr-lunch-product-category
+   :menu: Lunch ‣ Configuration ‣ Product Categories ‣ New
+   :shows: A product category form with the category name, the company and the category image.
+   :highlight: The Product Category field (red frame).
+   :data: Category "Soups".
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.

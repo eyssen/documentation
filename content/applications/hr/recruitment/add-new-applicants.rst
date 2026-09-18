@@ -47,8 +47,13 @@ If preferred, after entering the :guilabel:`Candidate` in the Kanban card that a
 When doing a quick add, clicking away from an empty card, or clicking the :icon:`fa-trash-o`
 (:guilabel:`trash`) icon, discards the applicant.
 
-.. image:: add-new-applicants/quick-add.png
-   :alt: All the fields for a new applicant form entered when using the Quick Add option.
+.. screenshot:: hr-recruitment-quick-add
+   :menu: Recruitment ‣ (job position) ‣ New
+   :shows: The quick-add card in the applicant kanban, with the subject, the applicant name, the email and the expected salary filled in.
+   :highlight: The quick-add card (red frame).
+   :data: Applicant "János Tóth"; use invented contact data.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 .. _recruitment/create-new-applicant:
 
@@ -96,8 +101,13 @@ Candidate section
   not exist, type in the tag name, then click :guilabel:`Create "new tag"` from the resulting
   drop-down menu.
 
-.. image:: add-new-applicants/new-applicant.png
-   :alt: All the fields of the Candidate section for a new applicant form entered.
+.. screenshot:: hr-recruitment-applicant-candidate
+   :menu: Recruitment ‣ (job position) ‣ New ‣ Edit
+   :shows: The Candidate section of a new applicant form with the name, email, phone, LinkedIn profile, degree and availability filled in.
+   :highlight: The Candidate section (red frame).
+   :data: Applicant "János Tóth"; use invented contact data.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Notes tab
 ---------
@@ -176,8 +186,13 @@ information allows for reporting on the channels with the highest applicant gene
   **Referrals** application, select the user who referred the applicant from the drop-down menu. The
   **Referrals** application **must** be installed for this field to appear.
 
-.. image:: add-new-applicants/details-tab.png
-   :alt: All the fields of the Details tab for a new applicant form entered.
+.. screenshot:: hr-recruitment-applicant-sourcing
+   :menu: Recruitment ‣ (job position) ‣ New ‣ Edit
+   :shows: The sourcing fields of an applicant form with the source, the medium and the tags filled in.
+   :highlight: The Source and Medium fields (red frame).
+   :data: Source "Job board", medium "LinkedIn".
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Skills tab
 ----------

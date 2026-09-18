@@ -61,9 +61,13 @@ information:
 - :guilabel:`Add a reason...`: If any description or note is necessary to explain the time off
   allocation, enter it in this field at the bottom of the form.
 
-.. image:: allocations/new-allocation.png
-   :alt: A new allocation form with all the fields filled out for the annual two week vacation
-         granted to all employees.
+.. screenshot:: hr-time-off-new-allocation
+   :menu: Time Off ‣ Management ‣ Allocations ‣ New
+   :shows: An allocation form filled in with the time off type, the allocation type, the validity dates, the number of days and the employees it applies to.
+   :highlight: The Allocation and number of days fields (red frame).
+   :data: Time off type "Paid Time Off", regular allocation of 10 days for all employees.
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.
 
 Accrual start date behavior
 ---------------------------
@@ -147,8 +151,13 @@ Fill out the remainder of the :ref:`Multiple Requests form <time_off/allocation-
    The :guilabel:`Allocation` is set to :guilabel:`1.00 Days`, and `A bonus vacation day won at the
    annual Company Picnic.` appears in the details at the bottom.
 
-   .. image:: allocations/multiple-requests.png
-      :alt: An allocation request form filled out for a bonus vacation day for raffle winners.
+   .. screenshot:: hr-time-off-allocation-multiple
+      :menu: Time Off ‣ Management ‣ Allocations ‣ New
+      :shows: An allocation form addressed to several employees at once, with the mode set to multiple employees.
+      :highlight: The employee selection (red frame).
+      :data: One bonus day for three employees.
+      :module: hr_holidays
+      :notes: English UI, light theme, 1440px width.
 
 .. _time_off/request-allocation:
 
@@ -191,6 +200,10 @@ on the :guilabel:`New Allocation` pop-up window to save the information and subm
 If the form was completed from the :guilabel:`My Allocations` list view, the information is
 automatically saved as it is entered.
 
-.. image:: allocations/allocation-request.png
-   :alt: An allocation request form filled out for an employee requesting an additional week of
-         sick time.
+.. screenshot:: hr-time-off-allocation-request
+   :menu: Time Off ‣ My Time ‣ My Allocations ‣ New
+   :shows: An allocation request submitted by an employee, with the time off type, the number of days and the reason.
+   :highlight: The reason field (red frame).
+   :data: Employee requesting five extra sick days.
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.

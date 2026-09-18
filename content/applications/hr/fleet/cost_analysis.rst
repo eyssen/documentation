@@ -21,8 +21,13 @@ by month.
    $14,000 dollars in contract and repair costs, while January had the lowest costs, with less than
    $2,000 of contract costs and no repairs.
 
-   .. image:: cost_analysis/cost-analysis.png
-      :alt: The default cost analysis report showing contract and service costs.
+   .. screenshot:: hr-fleet-cost-analysis-default
+      :menu: Fleet ‣ Reporting ‣ Costs
+      :shows: The default Cost Analysis report with the contract costs and the service costs of the year.
+      :highlight: The measures selected in the Measures menu (red frame).
+      :data: Demo company "YourCompany HU"; five vehicles, one year of costs.
+      :module: fleet
+      :notes: English UI, light theme, 1440px width.
 
 .. _fleet/by-vehicle:
 
@@ -42,8 +47,13 @@ column.
    cost the most, with almost $14,000 in costs for the year. Additionally, the both `Nissan Micro`
    vehicles and the `Ford Focus` cost the least, with under $5,000 in total costs each.
 
-   .. image:: cost_analysis/by-vehicle.png
-      :alt: The cost analysis report showing annual costs by vehicle.
+   .. screenshot:: hr-fleet-cost-analysis-by-vehicle
+      :menu: Fleet ‣ Reporting ‣ Costs
+      :shows: The Cost Analysis report grouped by vehicle, showing the annual cost of each vehicle.
+      :highlight: The vehicle rows (red frame).
+      :data: The same five vehicles.
+      :module: fleet
+      :notes: English UI, light theme, 1440px width.
 
 .. _fleet/by-driver:
 
@@ -66,8 +76,13 @@ driver in the database. This allows fleet managers to see which drivers incur th
    service records <fleet/view-services>` for those two drivers, to determine why there were such
    high costs for the year.
 
-   .. image:: cost_analysis/by-driver.png
-      :alt: The cost analysis report showing costs by driver in a pivot table.
+   .. screenshot:: hr-fleet-cost-analysis-by-driver
+      :menu: Fleet ‣ Reporting ‣ Costs
+      :shows: The Cost Analysis report in pivot view grouped by driver.
+      :highlight: The driver rows (red frame).
+      :data: Four drivers with vehicles assigned.
+      :module: fleet
+      :notes: English UI, light theme, 1440px width.
 
 Detailed comparison
 ===================
@@ -90,7 +105,12 @@ quarter of the current year.
    license plate of `DEF-456` was the only vehicle with an overall increase in total costs, with an
    increase of 41.78%.
 
-   .. image:: cost_analysis/detailed-costs.png
-      :alt: A pivot table with a detailed cost comparison between the current and previous year.
+   .. screenshot:: hr-fleet-cost-analysis-comparison
+      :menu: Fleet ‣ Reporting ‣ Costs
+      :shows: The Cost Analysis pivot comparing the current and the previous year, with the variation column.
+      :highlight: The variation column (red frame).
+      :data: Costs of 2025 and 2026.
+      :module: fleet
+      :notes: English UI, light theme, 1440px width.
 
 

@@ -62,8 +62,13 @@ The fields on the form are:
 - :guilabel:`NOTES`: Enter any notes for the repair at the bottom of the service form. For example,
   this can include estimate details or parts being replaced.
 
-.. image:: service/new-service.png
-   :alt: Enter the information for a new service. The required fields are Service Type and Vehicle.
+.. screenshot:: hr-fleet-new-service
+   :menu: Fleet ‣ Fleet ‣ Services ‣ New
+   :shows: A new service record with the description, the required Service Type and Vehicle fields, the date, the cost and the vendor.
+   :highlight: The Service Type and Vehicle fields (red frame).
+   :data: Vehicle "Skoda Octavia / ABC-123", service type "Oil change", cost 35 000 HUF.
+   :module: fleet
+   :notes: English UI, light theme, 1440px width.
 
 .. _fleet/new-type:
 
@@ -136,5 +141,10 @@ Each service listed displays the following information:
 
 At the bottom of the :guilabel:`Cost` column, the total cost of all services and repairs are listed.
 
-.. image:: service/services.png
-   :alt: The full list of services in the Odoo database.
+.. screenshot:: hr-fleet-services-list
+   :menu: Fleet ‣ Fleet ‣ Services
+   :shows: The Services list with the date, description, service type, vehicle, vendor, cost and stage columns.
+   :highlight: The Stage column (red frame).
+   :data: Demo company "YourCompany HU"; a dozen services across five vehicles.
+   :module: fleet
+   :notes: English UI, light theme, 1440px width.

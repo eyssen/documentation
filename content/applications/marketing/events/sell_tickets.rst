@@ -35,9 +35,13 @@ To activate a setting, tick the checkbox beside the desired feature's label, and
    If these options are *not* enabled, a default :guilabel:`Register` button becomes available for
    visitors to interact with and procure free registrations to the event.
 
-.. image:: sell_tickets/events-settings-tickets.png
-   :align: center
-   :alt: View of the settings page for Odoo Events.
+.. screenshot:: events-sell_tickets-events-settings-tickets
+   :menu: Events ‣ Configuration ‣ Settings
+   :shows: The Events settings page with the Tickets and Online Ticketing checkboxes enabled in the Registration section.
+   :highlight: The Tickets and Online Ticketing settings (red frame).
+   :data: Demo event 'Technical Training' (event), 'YourCompany' demo data.
+   :module: event_sale, website_event_sale
+   :notes: English UI, light theme, 1440px width.
 
 With those settings enabled, Odoo automatically creates a new *Product Type* called, *Event Ticket*,
 which is accessible on every product form. Odoo also creates three event registration products (with
@@ -48,18 +52,26 @@ the *Product Type* set to *Event Ticket*) that can be used or modified for event
    Ticket* on the product form, in order for it to be selected in the *Product* column under the
    *Tickets* tab on an event form.
 
-   .. image:: sell_tickets/events-tickets-registration-product.png
-      :align: center
-      :alt: View of an event form highlighting the column product under the tickets tab in Odoo.
+   .. screenshot:: events-sell_tickets-events-tickets-registration-product
+      :menu: Events ‣ Events ‣ (event) ‣ Tickets tab
+      :shows: The Tickets tab of an event form with the Product column visible on the ticket lines.
+      :highlight: The Product column (red frame).
+      :data: Ticket 'Standard' with the product 'Event Registration'.
+      :module: event_sale, website_event_sale
+      :notes: English UI, light theme, 1440px width.
 
 .. note::
    Any event with paid tickets sold, features a :icon:`fa-dollar` :guilabel:`Sales` smart button at
    the top of the event form, where the respective sales orders attributed to those ticket sales
    become available.
 
-   .. image:: sell_tickets/events-sales-smartbutton.png
-      :align: center
-      :alt: View of an event's form and the sales smart button in Odoo Events.
+   .. screenshot:: events-sell_tickets-events-sales-smartbutton
+      :menu: Events ‣ Events ‣ (event)
+      :shows: An event form showing the Sales smart button at the top with the total amount sold.
+      :highlight: The Sales smart button (red frame).
+      :data: One confirmed sales order of EUR 350.
+      :module: event_sale, website_event_sale
+      :notes: English UI, light theme, 1440px width.
 
    Clicking the :icon:`fa-dollar` :guilabel:`Sales` smart button reveals a separate page, showcasing
    all the sales orders (standard and/or online) related to tickets that have been sold for that
@@ -79,9 +91,13 @@ Type` set to :guilabel:`Event Ticket` on its product form.
 Once an event registration product is selected, a :guilabel:`Configure an event` pop-up window
 appears.
 
-.. image:: sell_tickets/configure-event-popup.png
-   :align: center
-   :alt: Standard 'Configure an event' pop-up window that appears on an event ticket sales order.
+.. screenshot:: events-sell_tickets-configure-event-popup
+   :menu: Sales ‣ Orders ‣ Quotations ‣ New
+   :shows: The Configure an event pop-up window on a sales order line, with the Event and Event Ticket fields.
+   :highlight: The Event and Event Ticket fields (red frame).
+   :data: Event 'Technical Training', ticket 'Standard'.
+   :module: event_sale, website_event_sale
+   :notes: English UI, light theme, 1440px width.
 
 From the :guilabel:`Configure an event` pop-up window, select to which event this ticket purchase is
 related to in the :guilabel:`Event` field drop-down menu. Then, in the :guilabel:`Event Ticket`
@@ -111,9 +127,13 @@ When a visitor arrives on the register page of the event website, they can click
 If different ticket tiers are configured for the event, the visitor is presented with a
 :guilabel:`Tickets` pop-up window.
 
-.. image:: sell_tickets/tickets-popup.png
-   :align: center
-   :alt: The tickets pop-up window that appears on the event's website when 'Register' is clicked.
+.. screenshot:: events-sell_tickets-tickets-popup
+   :menu: (event website) ‣ Register
+   :shows: The ticket selection pop-up window on the event website with the ticket types, prices and quantity selectors.
+   :highlight: The quantity selectors (red frame).
+   :data: Two ticket types: 'Standard' (EUR 100) and 'VIP' (EUR 250).
+   :module: event_sale, website_event_sale
+   :notes: English UI, light theme, 1440px width.
 
 From here, visitors select which ticket tier they would like to purchase, along with a quantity,
 using the numerical drop-down menu available to the right of their desired ticket. Once the desired
@@ -122,9 +142,13 @@ selections have been entered, the visitor then clicks the :guilabel:`Register` b
 Then, an :guilabel:`Attendees` pop-up window appears, containing all the questions that have been
 configured in the *Questions* tab of the event form for this particular event.
 
-.. image:: sell_tickets/attendees-popup.png
-   :align: center
-   :alt: The attendees pop-up window that appears on the event's website when 'Ok' is clicked.
+.. screenshot:: events-sell_tickets-attendees-popup
+   :menu: (event website) ‣ Register
+   :shows: The attendee details pop-up window on the event website asking for each attendee's name, email and phone.
+   :highlight: The attendee question fields (red frame).
+   :data: One attendee being registered.
+   :module: event_sale, website_event_sale
+   :notes: English UI, light theme, 1440px width.
 
 If multiple tickets are being purchased at once, there are numbered sections for each individual
 ticket registrant, each containing the same questions. However, if any question has been configured

@@ -16,9 +16,12 @@ Then, the audience of participants submit their answer, either via their compute
 and once the responses have been gathered, the host reveals all the participant's responses, in real
 time, with each answer's results displayed as a bar graph.
 
-.. image:: live_session/live-session-concept-sample.png
-   :align: center
-   :alt: Rendered concept of how a Live Session question and answer result appears in Odoo Surveys.
+.. screenshot:: surveys-live_session-live-session-concept-sample
+   :menu: (diagram)
+   :shows: A schematic of a live session: the host screen showing a question and the aggregated answer bar chart, and a participant's phone showing the answer options.
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: Simple schematic drawing, not an Odoo screen. English UI, light theme, 1440px width.
 
 Create Live Session survey
 ==========================
@@ -49,9 +52,13 @@ When the :guilabel:`Question Time Limit` option is enabled, a new field appears 
 the user **must** enter the desired amount of time (in seconds) the participant gets to answer the
 question.
 
-.. image:: live_session/question-time-limit-option.png
-   :align: center
-   :alt: The Live Session question time limit option for questions in the Odoo Surveys application.
+.. screenshot:: surveys-live_session-question-time-limit-option
+   :menu: Surveys ‣ Surveys ‣ New ‣ Questions tab ‣ (question) ‣ Options tab
+   :shows: The Live Sessions section of a question's Options tab with Question Time Limit enabled and the number of seconds set.
+   :highlight: The Question Time Limit field (red frame).
+   :data: Time limit of 30 seconds.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 Options tab
 -----------

@@ -21,9 +21,12 @@ Lists`. When clicked, a sub-menu is revealed with options for :guilabel:`Mailing
 Click :menuselection:`Mailing Lists --> Mailing Lists` to see an overview of all mailing lists in
 the database.
 
-.. image:: mailing_lists_blacklists/mailing-list-main-page.png
-   :align: center
-   :alt: View of the main SMS mailing list page on the Odoo SMS Marketing application.
+.. screenshot:: sms-mailing_lists_blacklists-mailing-list-main-page
+   :menu: SMS Marketing ‣ Mailing Lists ‣ Mailing Lists
+   :shows: The Mailing Lists kanban with cards showing the number of recipients and the mailings sent to each list.
+   :data: Two lists: 'Newsletter (HU)' and 'Webshop customers'.
+   :module: mass_mailing_sms
+   :notes: English UI, light theme, 1440px width.
 
 To edit any existing list, select the desired list from the :guilabel:`Mailing Lists` page, and
 proceed to modify it in a number of ways.
@@ -31,9 +34,13 @@ proceed to modify it in a number of ways.
 To create a new mailing list, click :guilabel:`Create` in the upper left corner of the
 :guilabel:`Mailing Lists` page. Doing so, will reveal a blank mailing list template form.
 
-.. image:: mailing_lists_blacklists/sms-mailing-list-popup.png
-   :align: center
-   :alt: View of the mailing list pop-up window in Odoo SMS Marketing.
+.. screenshot:: sms-mailing_lists_blacklists-sms-mailing-list-popup
+   :menu: SMS Marketing ‣ Mailing Lists ‣ Mailing Lists ‣ New
+   :shows: The New Mailing List pop-up window with the Mailing List name entered and the Show In Preferences checkbox.
+   :highlight: The Show In Preferences checkbox (red frame).
+   :data: New list 'Spring campaign'.
+   :module: mass_mailing_sms
+   :notes: English UI, light theme, 1440px width.
 
 First, choose a name for the :guilabel:`Mailing List`, and activate the option :guilabel:`Is
 Public`, to make the mailing list accessible to recipients on the :guilabel:`Subscription Management
@@ -59,9 +66,13 @@ with in-depth data associated with the mailing list.
 To make changes to the mailing list itself, click the :guilabel:`Edit` button in the upper-left
 corner of the mailing list detail form.
 
-.. image:: mailing_lists_blacklists/sms-mailing-list.png
-   :align: center
-   :alt: View of the mailing list template form in Odoo SMS Marketing.
+.. screenshot:: sms-mailing_lists_blacklists-sms-mailing-list
+   :menu: SMS Marketing ‣ Mailing Lists ‣ Mailing Lists
+   :shows: An opened mailing list with its Recipients, Mailings and Subscribers smart buttons.
+   :highlight: The smart button row (red frame).
+   :data: List 'Newsletter (HU)' with about 120 recipients.
+   :module: mass_mailing_sms
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    Don't forget to hit the :guilabel:`Save` button once changes have been made.
@@ -73,9 +84,12 @@ Access contacts information from one or more mailing lists navigate to :menusele
 --> Mailing List Contacts` to reveal a dashboard with with all the contacts associated with one or
 more of the configured mailing lists in the database.
 
-.. image:: mailing_lists_blacklists/mailing-list-contacts-page.png
-   :align: center
-   :alt: View of the mailing lists contact page in the Odoo SMS Marketing application.
+.. screenshot:: sms-mailing_lists_blacklists-mailing-list-contacts-page
+   :menu: SMS Marketing ‣ Mailing Lists ‣ Mailing List Contacts
+   :shows: The Mailing List Contacts list view with the Name, Mobile, Mailing Lists and Blacklist columns.
+   :data: About ten demo contacts with mobile numbers.
+   :module: mass_mailing_sms
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    By default, Odoo reveals the :guilabel:`Mailing List Contacts` page with the :guilabel:`Exclude
@@ -94,9 +108,13 @@ of interactions with contacts and prospects.
 For example, sales representatives can use the chatter to quickly find out which :abbr:`SMS (Short
 Message Service)` mailing promotions a certain customer has received (or not received).
 
-.. image:: mailing_lists_blacklists/sms-marketing-chatter.png
-   :align: center
-   :alt: View of what the chatter looks like in the Odoo Contacts app.
+.. screenshot:: sms-mailing_lists_blacklists-sms-marketing-chatter
+   :menu: Contacts
+   :shows: A contact form's chatter showing the logged SMS messages sent to that contact.
+   :highlight: The logged SMS entries in the chatter (red frame).
+   :data: Contact 'Anna Kovács' with two sent SMS messages.
+   :module: mass_mailing_sms
+   :notes: English UI, light theme, 1440px width.
 
 Blacklist
 =========
@@ -113,17 +131,24 @@ To see a complete collection of blacklisted numbers, navigate to the :menuselect
 app --> Configuration --> Blacklisted Phone Numbers` to reveal a dashboard containing every
 blacklisted phone number in the database.
 
-.. image:: mailing_lists_blacklists/sms-blacklist-menu.png
-   :align: center
-   :alt: SMS Blacklist menu in the application.
+.. screenshot:: sms-mailing_lists_blacklists-sms-blacklist-menu
+   :menu: SMS Marketing ‣ Configuration ‣ Blacklisted Phone Numbers
+   :shows: The Blacklisted Phone Numbers list with the Phone, Reason and Active columns.
+   :data: Two blacklisted numbers.
+   :module: mass_mailing_sms
+   :notes: English UI, light theme, 1440px width.
 
 To manually add a number to a blacklist, click the :guilabel:`Create` button in the upper-left
 corner of the dashboard and enter the phone number on the next page's form. There's also a
 checkbox to indicate whether that particular phone numnber is :guilabel:`Active` (or not).
 
-.. image:: mailing_lists_blacklists/sms-blacklist-create.png
-   :align: center
-   :alt: SMS Blacklist menu in the application.
+.. screenshot:: sms-mailing_lists_blacklists-sms-blacklist-create
+   :menu: SMS Marketing ‣ Configuration ‣ Blacklisted Phone Numbers ‣ New
+   :shows: A new blacklist record with the Phone Number field filled in.
+   :highlight: The Phone Number field (red frame).
+   :data: Number '+36 30 123 4567'.
+   :module: mass_mailing_sms
+   :notes: English UI, light theme, 1440px width.
 
 Once the form is completed, click :guilabel:`Save` to add it to the :guilabel:`Blacklisted Phone
 Numbers` list. To remove any number from the blacklist, select the desired number on the dashboard,
@@ -140,6 +165,10 @@ To do that, navigate to :menuselection:`SMS Marketing app --> Configuration --> 
 Numbers`, and then select the :guilabel:`Favorites` drop-down menu (beneath the search bar), and
 click :guilabel:`Import records`.
 
-.. image:: mailing_lists_blacklists/import-blacklist.png
-   :align: center
-   :alt: View of how to import a blacklist in Odoo SMS Marketing.
+.. screenshot:: sms-mailing_lists_blacklists-import-blacklist
+   :menu: SMS Marketing ‣ Configuration ‣ Blacklisted Phone Numbers ‣ (gear) ‣ Import records
+   :shows: The import screen for blacklisted phone numbers with the Phone column mapped.
+   :highlight: The column mapping row (red frame).
+   :data: A CSV file with three phone numbers.
+   :module: mass_mailing_sms
+   :notes: English UI, light theme, 1440px width.

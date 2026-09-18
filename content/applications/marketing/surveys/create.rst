@@ -12,9 +12,13 @@ New` to reveal a blank survey form.
 Survey form
 ===========
 
-.. image:: create/blank-survey-form.png
-   :align: center
-   :alt: How a blank survey form looks in the Odoo Surveys application.
+.. screenshot:: surveys-create-blank-survey-form
+   :menu: Surveys ‣ Surveys ‣ New
+   :shows: A new blank survey form with the Survey Title field, the Questions, Description, End Message and Options tabs, and the Test, Start Live Session, Share and See results buttons.
+   :highlight: The Survey Title field and the tab row (red frame).
+   :data: Empty new survey form.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 At the top of the survey form are four radio buttons, each representing a survey style. The radio
 button options are:
@@ -63,9 +67,13 @@ Indicate whether questions require a mandatory answer by clicking the :guilabel:
 icon to the far-right of the column titles. Then, select :guilabel:`Mandatory Answer` from the
 drop-down menu to reveal the :guilabel:`Mandatory Answer` column in the :guilabel:`Questions` tab.
 
-.. image:: create/mandatory-answer-dropdown.png
-   :align: center
-   :alt: The slider drop-down menu with the Mandatory Answer option selected in Odoo Surveys.
+.. screenshot:: surveys-create-mandatory-answer-dropdown
+   :menu: Surveys ‣ Surveys ‣ New
+   :shows: A question line in the Questions tab with the optional-columns drop-down menu open on the Mandatory Answer entry.
+   :highlight: The Mandatory Answer entry in the drop-down (red frame).
+   :data: A survey with three questions.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 Add a question
 ~~~~~~~~~~~~~~
@@ -122,9 +130,13 @@ likely because the selected survey type does not offer it.
 Questions section
 ~~~~~~~~~~~~~~~~~
 
-.. image:: create/questions-section-options-tab.png
-   :align: center
-   :alt: The Questions section of the Options tab on a survey form in Odoo Surveys.
+.. screenshot:: surveys-create-questions-section-options-tab
+   :menu: Surveys ‣ Surveys ‣ New ‣ Options tab
+   :shows: The Questions section of the Options tab with the Pagination, Display Progress as, Question Selection and Roaming options.
+   :highlight: The Questions section (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 The first field in the :guilabel:`Questions` section revolves around the :guilabel:`Pagination`,
 or overall layout, of the survey.
@@ -156,9 +168,13 @@ navigate back to previous pages in the survey.
 Time & Scoring section
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: create/time-scoring-section-options-tab.png
-   :align: center
-   :alt: The Time and Scoring section of the Options tab on a survey form in Odoo Surveys.
+.. screenshot:: surveys-create-time-scoring-section-options-tab
+   :menu: Surveys ‣ Surveys ‣ New ‣ Options tab
+   :shows: The Time & Scoring section of the Options tab with the Survey Time Limit, Scoring, Required Score and Is a Certification options.
+   :highlight: The Time & Scoring section (red frame).
+   :data: Scoring 'Scoring with answers at the end', required score 70 %.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 The first option in the :guilabel:`Time & Scoring` section is the :guilabel:`Survey Time Limit`
 option. If enabled, proceed to enter in an amount of time (in :guilabel:`minutes`) to be set as the
@@ -197,9 +213,13 @@ the contact page for that certified survey participant.
 Participants section
 ~~~~~~~~~~~~~~~~~~~~
 
-.. image:: create/participants-section-options-tab.png
-   :align: center
-   :alt: The Participants section of the Options tab on a survey form in Odoo Surveys.
+.. screenshot:: surveys-create-participants-section-options-tab
+   :menu: Surveys ‣ Surveys ‣ New ‣ Options tab
+   :shows: The Participants section of the Options tab with the Access Mode, Require Login and Limit Attempts options.
+   :highlight: The Participants section (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 The first available option in the :guilabel:`Participants` section is the :guilabel:`Access Mode`
 field. This is where users can determine who has access to the survey. Users can select either:
@@ -214,9 +234,13 @@ beside it, in which users can determine how many times users can attempt this su
 Live Session section
 ~~~~~~~~~~~~~~~~~~~~
 
-.. image:: create/live-session-section-options-tab.png
-   :align: center
-   :alt: The Live Session section of the Options tab on a survey form in Odoo Surveys.
+.. screenshot:: surveys-create-live-session-section-options-tab
+   :menu: Surveys ‣ Surveys ‣ New ‣ Options tab
+   :shows: The Live Session section of the Options tab with the Session Code, Session Link and Reward quick answers options.
+   :highlight: The Live Session section (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    The :guilabel:`Live Session` section in the :guilabel:`Options` tab of the survey form **only**
@@ -273,9 +297,13 @@ Survey form buttons
 Once the survey has been configured properly, and questions have been added, the user can utilize
 any of the available buttons in the upper-left corner of the survey form.
 
-.. image:: create/survey-form-buttons.png
-   :align: center
-   :alt: The various buttons on a survey form in Odoo Surveys.
+.. screenshot:: surveys-create-survey-form-buttons
+   :menu: Surveys ‣ Surveys ‣ (survey)
+   :shows: The button row at the top of a saved survey form: Test, Start Live Session, Share, See results and Create Live Session Code.
+   :highlight: The button row (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 Those buttons are the following:
 
@@ -283,18 +311,26 @@ Those buttons are the following:
   invite potential participants to the survey — complete with a :guilabel:`Survey Link` that can be
   copied and sent to potential participants, and a :guilabel:`Send by Email` toggle switch.
 
-  .. image:: create/share-survey-popup.png
-     :align: center
-     :alt: The 'Share a Survey' pop-up window that appears in the Odoo Surveys application.
+  .. screenshot:: surveys-create-share-survey-popup
+     :menu: Surveys ‣ Surveys ‣ (survey) ‣ Share
+     :shows: The Share a Survey pop-up window with the survey link and the Send by Email toggle switched off.
+     :highlight: The survey link field (red frame).
+     :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+     :module: survey
+     :notes: English UI, light theme, 1440px width.
 
   When the :guilabel:`Send by Email` toggle is in the 'on' position, indicated by a green switch,
   additional fields appear, in which :guilabel:`Recipients` and a :guilabel:`Subject` can be added
   to the email. Below that, a dynamic email template, complete with a :guilabel:`Start
   Certification` button appears, which can also be modified.
 
-  .. image:: create/share-survey-popup-email-toggle.png
-     :align: center
-     :alt: The 'Share a Survey' pop-up window in Odoo Surveys with the Send by Email toggled on.
+  .. screenshot:: surveys-create-share-survey-popup-email-toggle
+     :menu: Surveys ‣ Surveys ‣ (survey) ‣ Share
+     :shows: The Share a Survey pop-up window with Send by Email toggled on, showing the Recipients, Additional Emails, Subject and message fields.
+     :highlight: The Send by Email toggle and the Recipients field (red frame).
+     :data: Two recipients selected.
+     :module: survey
+     :notes: English UI, light theme, 1440px width.
 
   Once modifications are complete, click :guilabel:`Send` to send that email invite to all the email
   addresses/contacts listed in the :guilabel:`Recipients` field.

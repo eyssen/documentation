@@ -60,9 +60,12 @@ can be viewed in a number of different ways. Those different view options are ac
 By default, the :guilabel:`Events` dashboard is displayed in the :icon:`oi-view-kanban`
 :guilabel:`Kanban` view, which is populated with a variety of pipeline stages.
 
-.. image:: events/kanban-dashboard.png
-   :align: center
-   :alt: Overview of events setting with the kanban view in Odoo Events.
+.. screenshot:: events-events-kanban-dashboard
+   :menu: Events ‣ Events
+   :shows: The Events kanban dashboard with one card per event showing the dates, the number of registered attendees and the progress bar.
+   :data: Three demo events in different stages.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 This view showcases all the events in the database in their respective stages. By default, the
 stages are: :guilabel:`New`, :guilabel:`Booked`, :guilabel:`Announced`, :guilabel:`Ended`, and
@@ -79,9 +82,13 @@ of the event, and the person responsible for the event.
 To quickly add a new event to a pipeline, click the :icon:`fa-plus` :guilabel:`(plus)` icon at the
 top of the stage to which the event should be added to reveal a blank Kanban card to fill out.
 
-.. image:: events/blank-kanban-card.png
-   :align: center
-   :alt: Typical blank kanban card to fill out in the Odoo Events application.
+.. screenshot:: events-events-blank-kanban-card
+   :menu: Events ‣ Events ‣ New
+   :shows: The inline quick-create card on the Events kanban with the Event Name, Start Date, End Date and Template fields.
+   :highlight: The quick-create card (red frame).
+   :data: Empty quick-create card.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 In this blank Kanban card, enter the name of :guilabel:`Event`, along with the start and end
 :guilabel:`Date` and time.
@@ -105,9 +112,13 @@ Events section
 In the :guilabel:`Events` section of the :guilabel:`Settings` page, there are selectable features
 that can be enabled to add various elements to events created with the Odoo **Events** application.
 
-.. image:: events/settings-events-section.png
-   :align: center
-   :alt: The Events section on the Odoo Events settings page in the Odoo Events application.
+.. screenshot:: events-events-settings-events-section
+   :menu: Events ‣ Configuration ‣ Settings
+   :shows: The Events section of the Events settings page with the Schedule & Tracks, Online Exhibitors, Jitsi Server Domain, Community Chat Rooms and Booth Management options.
+   :highlight: The Events section (red frame).
+   :data: Demo company 'YourCompany'.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 The :guilabel:`Schedule & Tracks` feature allows users to manage and publish a schedule with tracks
 for events. *Tracks* is a catch-all term that refers to talks, lectures, demonstrations,
@@ -145,9 +156,13 @@ Registration section
 The :guilabel:`Registration` section of the :guilabel:`Settings` page provides selectable settings
 that are directly related to event registration.
 
-.. image:: events/settings-registration-section.png
-   :align: center
-   :alt: The Registration section in the Odoo Events settings page in the Odoo Events application.
+.. screenshot:: events-events-settings-registration-section
+   :menu: Events ‣ Configuration ‣ Settings
+   :shows: The Registration section of the Events settings page with the Tickets and Online Ticketing options.
+   :highlight: The Registration section (red frame).
+   :data: Demo company 'YourCompany'.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 The :guilabel:`Tickets` setting allows users to sell event tickets, via standard sales orders.
 
@@ -161,9 +176,13 @@ Attendance section
 In the :guilabel:`Attendance` section of the :guilabel:`Settings` page, there is a selectable
 setting that is directly related to how attendees can attend/enter the event.
 
-.. image:: events/settings-attendance-section.png
-   :align: center
-   :alt: The Attendance section in the Odoo Events Settings page in the Odoo Events application.
+.. screenshot:: events-events-settings-attendance-section
+   :menu: Events ‣ Configuration ‣ Settings
+   :shows: The Attendance section of the Events settings page with the Barcode / Badge option.
+   :highlight: The Attendance section (red frame).
+   :data: Demo company 'YourCompany'.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 The :guilabel:`Use Event Barcode` setting, when activated, enables barcode (and QR code) scanning
 for attendees to enter the event. This provides attendees with quick access, and helps Odoo users

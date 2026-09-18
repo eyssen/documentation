@@ -45,9 +45,12 @@ Dashboard
 Upon opening the *Surveys* application, Odoo presents the main dashboard of the *Surveys*
 application, otherwise known as the :guilabel:`Surveys` page.
 
-.. image:: surveys/surveys-dashboard.png
-   :align: center
-   :alt: The Odoo Surveys application dashboard in the default Kanban view.
+.. screenshot:: surveys-surveys-surveys-dashboard
+   :menu: Surveys ‣ Surveys
+   :shows: The Surveys dashboard in the default kanban view, each card showing the survey title, the questions/average duration/registered/completed counters and the See results button.
+   :data: Three demo surveys, one of them a certification.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    The *Surveys* dashboard can be accessed at any time throughout the application by clicking
@@ -108,9 +111,13 @@ Those buttons are as follows:
   Once modifications are complete, click :guilabel:`Send` to send that email invite to all the email
   addresses/contacts listed in the :guilabel:`Recipients` field.
 
-  .. image:: surveys/share-survey-popup-email-toggle.png
-     :align: center
-     :alt: The 'Share a Survey' pop-up window in Odoo Surveys with the Send by Email toggled on.
+  .. screenshot:: surveys-surveys-share-survey-popup-email-toggle
+     :menu: Surveys ‣ Surveys ‣ (survey) ‣ Share
+     :shows: The Share a Survey pop-up window with Send by Email toggled on, showing the Recipients, Additional Emails, Subject and message fields.
+     :highlight: The Send by Email toggle (red frame).
+     :data: Two recipients selected.
+     :module: survey
+     :notes: English UI, light theme, 1440px width.
 
   .. tip::
      The default :guilabel:`Mail Template` for survey invites can be edited by navigating to
@@ -153,17 +160,23 @@ The options are:
 - :guilabel:`Color`: users can opt to choose a color to add to the survey line on the dashboard for
   added organizational purposes, if needed.
 
-.. image:: surveys/three-dot-dropdown.png
-   :align: center
-   :alt: The three-dot drop-down menu of options that appears on the Odoo Surveys dashboard.
+.. screenshot:: surveys-surveys-three-dot-dropdown
+   :menu: Surveys ‣ Surveys
+   :shows: A survey kanban card with its three-dot drop-down menu open, showing the Edit, Share, Test, Duplicate, Close and Delete options.
+   :highlight: The three-dot drop-down menu (red frame).
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 Beneath the buttons that are located to the far-right of the survey lines, there is an *Activities*
 button, represented by a :guilabel:`🕘 (clock)` icon. When clicked, a mini pop-up window appears,
 from which activities related to that particular survey can be scheduled and customized.
 
-.. image:: surveys/schedule-activities-dropdown.png
-   :align: center
-   :alt: The Schedule Activities drop-down menu that appears on the Odoo Surveys dashboard.
+.. screenshot:: surveys-surveys-schedule-activities-dropdown
+   :menu: Surveys ‣ Surveys
+   :shows: A survey kanban card with the activity clock icon clicked, showing the Schedule an activity drop-down.
+   :highlight: The activity drop-down (red frame).
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 List view
 ---------
@@ -173,9 +186,12 @@ option available in the upper-right corner, represented by a :guilabel:`≣ (bar
 
 When the :guilabel:`≣ (bars)` icon is clicked, the survey related data is displayed in a list view.
 
-.. image:: surveys/list-view.png
-   :align: center
-   :alt: The list view option located on the Odoo Surveys application dashboard.
+.. screenshot:: surveys-surveys-list-view
+   :menu: Surveys ‣ Surveys
+   :shows: The Surveys list view with the Survey Title, Responsible, Average Duration, Registered, Completed and Success Ratio columns.
+   :data: Three demo surveys.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 The columns shown on the *Surveys* app dashboard, while in list view, are as follows:
 
@@ -198,9 +214,12 @@ To have the *Surveys* application dashboard display nothing but the activities a
 surveys in the database, click the :guilabel:`🕘 (clock)` icon to the far-right of the other view
 options, located in the upper-right corner.
 
-.. image:: surveys/activities-view.png
-   :align: center
-   :alt: The activities view option located on the Odoo Surveys dashboard.
+.. screenshot:: surveys-surveys-activities-view
+   :menu: Surveys ‣ Surveys
+   :shows: The Surveys activity view with one row per survey and one column per activity type.
+   :data: Three demo surveys, two scheduled activities.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 Doing so reveals a table with rows and columns. The rows show the different surveys in the database,
 and the columns depict the various activity types.

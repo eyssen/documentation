@@ -23,9 +23,13 @@ alternatively from the :icon:`fa-calendar` :guilabel:`Calendar` or :icon:`oi-vie
 :guilabel:`List` views, click the :guilabel:`New` button in the upper-left corner of the dashboard to open up a new
 event form.
 
-.. image:: create_events/blank-event-template.png
-   :align: center
-   :alt: Typical event template in the Odoo Events application.
+.. screenshot:: events-create_events-blank-event-template
+   :menu: Events ‣ Events ‣ New
+   :shows: A new blank event form showing the Event Name, Date, Display Timezone, Language, Template, Tags, Organizer, Responsible, Company and Website fields.
+   :highlight: The Event Name and Date fields (red frame).
+   :data: Empty new event form.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    If certain fields do not readily appear on the event form, that means an additional application
@@ -124,9 +128,13 @@ Tickets tab
 
 Create custom tickets (and ticket tiers) for events in the :guilabel:`Tickets` tab of an event form.
 
-.. image:: create_events/tickets-tab.png
-   :align: center
-   :alt: A typical tickets tab on an event form in the Odoo Events application.
+.. screenshot:: events-create_events-tickets-tab
+   :menu: Events ‣ Events ‣ New
+   :shows: The Tickets tab of an event form with two ticket lines, showing the Name, Product, Price, Sales Start/End, Maximum and Taken columns.
+   :highlight: The ticket lines (red frame).
+   :data: Tickets 'Standard' (EUR 100) and 'VIP' (EUR 250).
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 To create a ticket, click :guilabel:`Add a line` in the :guilabel:`Tickets` tab. Then, enter a name
 for the ticket (e.g. `Basic Ticket` or `VIP`) in the :guilabel:`Name` field.
@@ -187,9 +195,13 @@ Communication tab
 In the :guilabel:`Communication` tab of an event form, create various marketing communications that
 can be scheduled to be sent at specific intervals leading up to, and following, the event.
 
-.. image:: create_events/communication-tab.png
-   :align: center
-   :alt: Typical communication tab on an event form in the Odoo Events application.
+.. screenshot:: events-create_events-communication-tab
+   :menu: Events ‣ Events ‣ New
+   :shows: The Communication tab of an event form with the default scheduled communications, showing the Send, Template, Interval, Unit, Trigger and Sent columns.
+   :highlight: The Send column with the Mail and SMS options (red frame).
+   :data: The three default communications of a new event.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    By default, Odoo provides three separate pre-configured communications on every new event form.
@@ -263,9 +275,13 @@ their preferences, expectations, and other things of that nature. This informati
 to create more detailed reporting metrics, in addition to being utilized to create specific lead
 generation rules.
 
-.. image:: create_events/questions-tab.png
-   :align: center
-   :alt: Typical questions tab on an event form in the Odoo Events application.
+.. screenshot:: events-create_events-questions-tab
+   :menu: Events ‣ Events ‣ New
+   :shows: The Questions tab of an event form with the three default questions (Name, Email, Phone) and their Mandatory Answer and Ask once per order checkboxes.
+   :highlight: The Mandatory Answer and Ask once per order columns (red frame).
+   :data: The three default questions of a new event.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    By default, Odoo provides three questions in the :guilabel:`Questions` tab for every event form.
@@ -280,9 +296,13 @@ generation rules.
 To add a question in the :guilabel:`Questions` tab, click :guilabel:`Add a line`. Doing so reveals a
 :guilabel:`Create Question` pop-up window. From here, users can create and configure their question.
 
-.. image:: create_events/create-question-popup.png
-   :align: center
-   :alt: The Create Question pop-up window that appears in the Odoo Events application.
+.. screenshot:: events-create_events-create-question-popup
+   :menu: Events ‣ Events ‣ New
+   :shows: The Create Question pop-up window with the question text, Question Type, Mandatory Answer and Ask once per order options, and the Answers list for a selection question.
+   :highlight: The Question Type field (red frame).
+   :data: Question 'Which workshop do you attend?' with two answers.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 First, enter the question in the field at the top of the form. Then, decide if the question should
 require a :guilabel:`Mandatory Answer` and/or if Odoo should :guilabel:`Ask once per order`, by
@@ -339,9 +359,13 @@ Notes tab
 In the :guilabel:`Notes` tab of an event form, users can leave detailed internal notes and/or
 event-related instructions/information for attendees.
 
-.. image:: create_events/notes-tab.png
-   :align: center
-   :alt: Typical notes tab on an event form in the Odoo Events application.
+.. screenshot:: events-create_events-notes-tab
+   :menu: Events ‣ Events ‣ New
+   :shows: The Notes tab of an event form with the Note and Ticket Instructions rich-text fields filled in.
+   :highlight: The Ticket Instructions field (red frame).
+   :data: Short internal note and ticket instructions text.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 In the :guilabel:`Note` field of the :guilabel:`Notes` tab, users can leave internal notes for other
 event employees, like "to-do" lists, contact information, instructions, and so on.

@@ -30,17 +30,24 @@ There are also elements showing the percentage of how many participants :guilabe
 On the :guilabel:`Surveys` dashboard, to the far-right of each survey line displayed in the default
 list view, there is a :guilabel:`See results` button.
 
-.. image:: analysis/see-results-button.png
-   :align: center
-   :alt: The 'See Results' button present on the main dashboard of the Odoo Surveys application.
+.. screenshot:: surveys-analysis-see-results-button
+   :menu: Surveys ‣ Surveys
+   :shows: A survey kanban card with the See results button visible on it.
+   :highlight: The See results button (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 When the :guilabel:`See results` button is clicked, a new browser tab opens, revealing a separate
 page filled with all of that particular survey's results and responses, with an informative
 :guilabel:`Results Overview` and some filtering drop-down menus at the top.
 
-.. image:: analysis/results-page.png
-   :align: center
-   :alt: Typical survey results page when 'See results' is clicked from the Odoo Surveys dashboard.
+.. screenshot:: surveys-analysis-results-page
+   :menu: Surveys ‣ Surveys ‣ See results
+   :shows: The survey results page in the browser with the Results Overview block and the per-question results below it.
+   :data: Survey 'Product Feedback' with about 20 completed participations.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 At the top of the page, there is an :guilabel:`Edit Survey` link, in the middle of a blue header
 banner. When clicked, Odoo returns the user to the survey form for that particular survey.
@@ -57,9 +64,13 @@ have been fully completed or not.
 
 When that drop-down menu is clicked open, another option, :guilabel:`Completed surveys`, appears.
 
-.. image:: analysis/all-surveys-dropdown.png
-   :align: center
-   :alt: The 'All surveys' drop-down menu opened on the 'See results' page of the Odoo Surveys app.
+.. screenshot:: surveys-analysis-all-surveys-dropdown
+   :menu: Surveys ‣ Surveys ‣ See results
+   :shows: The All surveys drop-down menu on the results page, listing the other surveys to switch to.
+   :highlight: The All surveys drop-down menu (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 With that drop-down menu open, the number corresponding to each filter option appears to the right
 of each option.
@@ -78,9 +89,13 @@ survey.
 When that second drop-down menu of filter options is clicked open, two additional options appear:
 :guilabel:`Passed only` and :guilabel:`Failed only`.
 
-.. image:: analysis/passed-failed-dropdown.png
-   :align: center
-   :alt: The 'Passed and Failed' drop-down menu on the 'See results' page of the Odoo Surveys app.
+.. screenshot:: surveys-analysis-passed-failed-dropdown
+   :menu: Surveys ‣ Surveys ‣ See results
+   :shows: The Passed and Failed drop-down menu on the results page of a scored survey.
+   :highlight: The Passed and Failed drop-down menu (red frame).
+   :data: Certification survey 'Odoo 18 Basics' with passed and failed participations.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 Each option would filter the results below to only show responses from participants who have passed
 the survey, or who have failed the survey, respectively.
@@ -91,9 +106,13 @@ results page can be printed.
 The :guilabel:`Results Overview` section is below the survey title, filter option drop-down menus,
 and :guilabel:`Print` button.
 
-.. image:: analysis/results-overview.png
-   :align: center
-   :alt: The 'Results Overview' section on the 'See results' page in the Odoo Surveys application.
+.. screenshot:: surveys-analysis-results-overview
+   :menu: Surveys ‣ Surveys ‣ See results
+   :shows: The Results Overview block showing the number of registered, completed and average duration values.
+   :highlight: The Results Overview block (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 This section of the results page provides a summarized collection of useful survey-related data and
 metrics for quick analysis.
@@ -119,17 +138,25 @@ responses. When clicked again, that question's visual and data-related results r
 To the far-right of the question, there are indicators to see how many participants
 :guilabel:`Responded` and how many :guilabel:`Skipped` the question.
 
-.. image:: analysis/responded-skipped-indicators.png
-   :align: center
-   :alt: The Responded and Skipped indicators on the 'See results' page in Odoo Surveys.
+.. screenshot:: surveys-analysis-responded-skipped-indicators
+   :menu: Surveys ‣ Surveys ‣ See results
+   :shows: A question block on the results page with the Responded and Skipped counters above the answers.
+   :highlight: The Responded and Skipped counters (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 If the question required the participant to enter in their own answer, without any options to choose
 from, like entering a specific number or date, for example, there is also an indicator to showcase
 how many users answered the question :guilabel:`Correct`.
 
-.. image:: analysis/correct-indicator.png
-   :align: center
-   :alt: Sample of a 'correct' indicator on the 'See results' page in the Odoo Surveys application.
+.. screenshot:: surveys-analysis-correct-indicator
+   :menu: Surveys ‣ Surveys ‣ See results
+   :shows: A scored question on the results page where the correct answer is marked with a green Correct label.
+   :highlight: The Correct label (red frame).
+   :data: Certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    Even if there is no configured *correct* response for question of this nature, the
@@ -142,16 +169,22 @@ If there is only one correct response to a multiple choice question, those resul
 represented by a :guilabel:`Pie Graph`. The correct answer is indicated by a :guilabel:`✔️
 (checkmark)` icon next to the correct answer option, in the legend above the graph.
 
-.. image:: analysis/pie-graph-results.png
-   :align: center
-   :alt: Typical pie graph results on the 'See results' page in the Odoo Surveys application.
+.. screenshot:: surveys-analysis-pie-graph-results
+   :menu: Surveys ‣ Surveys ‣ See results
+   :shows: The results of a single-choice question shown as a pie chart with the answer legend.
+   :data: Question with three answer options.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 If there are multiple correct answer options (or no correct answers at all) for a multiple choice
 question, those results and responses are represented by a :guilabel:`Bar Graph`.
 
-.. image:: analysis/bar-graph-results.png
-   :align: center
-   :alt: Typical bar graph results on the 'See results' page in the Odoo Surveys application.
+.. screenshot:: surveys-analysis-bar-graph-results
+   :menu: Surveys ‣ Surveys ‣ See results
+   :shows: The results of a multiple-choice question shown as a bar chart with one bar per answer option.
+   :data: Question with four answer options.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 Each multiple choice question has a :guilabel:`Graph` tab and an :guilabel:`Data` tab. The
 graph-related tab is shown by default.
@@ -160,9 +193,13 @@ The :guilabel:`Data` tab shows all the provided :guilabel:`Answer` options for t
 :guilabel:`User Choice` (with percentages and votes) along with the :guilabel:`Score` of each
 option.
 
-.. image:: analysis/data-tab.png
-   :align: center
-   :alt: Typical 'Data' tab on the 'See results' page in the Odoo Surveys application.
+.. screenshot:: surveys-analysis-data-tab
+   :menu: Surveys ‣ Surveys ‣ See results
+   :shows: The Data tab of a question's results, listing the answers with their user counts and percentages.
+   :highlight: The Data tab (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 Other question types, wherein there were no answer options for the participant to choose from, there
 is a :guilabel:`Most Common` tab and an :guilabel:`All Data` tab.
@@ -170,40 +207,60 @@ is a :guilabel:`Most Common` tab and an :guilabel:`All Data` tab.
 The :guilabel:`Most Common` tab shows the :guilabel:`User Responses`, the :guilabel:`Occurrence`,
 and the :guilabel:`Score` (if applicable).
 
-.. image:: analysis/most-common-tab.png
-   :align: center
-   :alt: Typical 'Most Common' tab on the 'See results' page in the Odoo Surveys application.
+.. screenshot:: surveys-analysis-most-common-tab
+   :menu: Surveys ‣ Surveys ‣ See results
+   :shows: The Most Common tab of a free-text question's results, listing the most frequent answers.
+   :highlight: The Most Common tab (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 The :guilabel:`All Data` tab shows a list of all the submitted responses to that particular
 question.
 
-.. image:: analysis/all-data-tab.png
-   :align: center
-   :alt: Typical 'All Data' tab on the 'See results' page in the Odoo Surveys application.
+.. screenshot:: surveys-analysis-all-data-tab
+   :menu: Surveys ‣ Surveys ‣ See results
+   :shows: The All Data tab of a free-text question's results, listing every individual answer.
+   :highlight: The All Data tab (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 If a question is looking for participants to enter a numerical value as a response,
 :guilabel:`Maximum`, :guilabel:`Minimum`, and :guilabel:`Average` indicators appear to the far-right
 of the results tabs.
 
-.. image:: analysis/max-min-avg-indicator.png
-   :align: center
-   :alt: The Maximum, Minimum, and Average indicators on the 'See results' page in Odoo Surveys.
+.. screenshot:: surveys-analysis-max-min-avg-indicator
+   :menu: Surveys ‣ Surveys ‣ See results
+   :shows: A numerical question's results with the Maximum, Minimum and Average indicators above the answer list.
+   :highlight: The Maximum, Minimum and Average indicators (red frame).
+   :data: Numerical question with about 20 answers.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 A :guilabel:`filter` icon is also present either to the right of the :guilabel:`User Choice` column
 in a :guilabel:`Data` tab, or to the far-right of a :guilabel:`User Response` line in an
 :guilabel:`All Data` tab.
 
-.. image:: analysis/filter-icon.png
-   :align: center
-   :alt: Typical 'Filter' icon on the 'See results' page in the Odoo Surveys application.
+.. screenshot:: surveys-analysis-filter-icon
+   :menu: Surveys ‣ Surveys ‣ See results
+   :shows: An answer line on the results page with the filter icon that appears when hovering over it.
+   :highlight: The filter icon next to the answer (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 When that :guilabel:`filter` icon is clicked, Odoo returns the user to the top of the results page,
 with that chosen filter applied, showing the results of each question for participants who submitted
 that particular answer for that specific question.
 
-.. image:: analysis/applied-filter.png
-   :align: center
-   :alt: The applied filter on the 'See results' page in the Odoo Surveys application.
+.. screenshot:: surveys-analysis-applied-filter
+   :menu: Surveys ‣ Surveys ‣ See results
+   :shows: The results page with a filter applied, shown as a removable chip above the Results Overview block.
+   :highlight: The applied filter chip (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 Therefore, showcasing the remaining results for participants who answered that specific question in
 the same way. To remove that filter, and reveal all the results once again, click :guilabel:`Remove
@@ -216,42 +273,59 @@ To view a consolidated list of participation results for a specific survey, navi
 :menuselection:`Surveys app`, select the desired survey from the list, and click the
 :guilabel:`Participations` smart button at the top of the survey form.
 
-.. image:: analysis/participations-smart-button.png
-   :align: center
-   :alt: The Participations smart button at the top of a survey form in Odoo Surveys.
+.. screenshot:: surveys-analysis-participations-smart-button
+   :menu: Surveys ‣ Surveys ‣ (survey)
+   :shows: A survey form with the Participations smart button at the top showing the number of participations.
+   :highlight: The Participations smart button (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 Doing so reveals a separate :guilabel:`Participations` page, showcasing the participants for that
 specific survey, along with a collection of pertinent information related to each one.
 
-.. image:: analysis/participations-page-singular-survey.png
-   :align: center
-   :alt: The Participations page for a singular survey in the Odoo Surveys application.
+.. screenshot:: surveys-analysis-participations-page-singular-survey
+   :menu: Surveys ‣ Surveys ‣ (survey) ‣ Participations
+   :shows: The participation list of one survey with the Participant, Status, Score and Date columns.
+   :data: About 20 participations of 'Product Feedback'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 Here, users can view information related to individual participants who took that specific survey.
 If they desire to see a more detailed breakdown of their various answers and responses, they can
 click on any participant, and Odoo reveals a separate page showing that participant's survey
 details, along with their submitted answers.
 
-.. image:: analysis/individual-participant-page.png
-   :align: center
-   :alt: An individual participant's detail form in the Odoo Surveys application.
+.. screenshot:: surveys-analysis-individual-participant-page
+   :menu: Surveys ‣ Participations ‣ (participation)
+   :shows: One participation's form with the Survey, Contact, Email, Status, Score and the answers given.
+   :highlight: The Status and Score fields (red frame).
+   :data: One completed participation.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 To view a consolidated list of all participants of every survey in the database, navigate to
 :menuselection:`Surveys app --> Participations`. Here, every survey in the database is shown in a
 default nested list. Beside each survey title has the number of participants in parenthesis.
 
-.. image:: analysis/participations-page-all-surveys.png
-   :align: center
-   :alt: The Participations page for all surveys in the Odoo Surveys application.
+.. screenshot:: surveys-analysis-participations-page-all-surveys
+   :menu: Surveys ‣ Participations
+   :shows: The Participations list of all surveys, grouped by survey.
+   :data: Participations of two surveys.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 When a survey is un-nested from this list, by clicking the survey title, the corresponding
 participants, along with their response-related data for that survey, appear on the page.
 
 The :guilabel:`Participations` page can also be viewed in a Kanban layout, as well.
 
-.. image:: analysis/participations-page-kanban-view.png
-   :align: center
-   :alt: The Participations page in the Kanban view in the Odoo Surveys application.
+.. screenshot:: surveys-analysis-participations-page-kanban-view
+   :menu: Surveys ‣ Participations
+   :shows: The Participations kanban grouped by survey, each card showing the participant and the status.
+   :data: Participations of two surveys.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`create`

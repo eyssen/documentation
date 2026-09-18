@@ -21,9 +21,13 @@ With the *Schedule & Tracks* setting enabled in the Odoo *Events* app, the follo
 automatically added to the subheader menu, located on the event website: :guilabel:`Talks`,
 :guilabel:`Talk Proposals`, and :guilabel:`Agenda`.
 
-.. image:: track_manage_talks/track-submenu-options.png
-   :align: center
-   :alt: The track-related event submenu options on an event website built with Odoo Events.
+.. screenshot:: events-track_manage_talks-track-submenu-options
+   :menu: (event website)
+   :shows: The event website's top menu with the track-related submenu entries Talks, Agenda and Talk Proposals.
+   :highlight: The track-related submenu entries (red frame).
+   :data: Demo event with tracks enabled.
+   :module: website_event_track
+   :notes: English UI, light theme, 1440px width.
 
 To enable the :guilabel:`Schedule & Tracks` setting, navigate to :menuselection:`Events app -->
 Configuration --> Settings`, tick the checkbox beside :guilabel:`Schedule & Tracks`, and click
@@ -35,9 +39,13 @@ Talks page
 The :guilabel:`Talks` link takes the attendee to a page filled with all the planned tracks for the
 event.
 
-.. image:: track_manage_talks/talks-page.png
-   :align: center
-   :alt: The Talks page on an event website built through the Odoo Events application.
+.. screenshot:: events-track_manage_talks-talks-page
+   :menu: (event website) ‣ Talks
+   :shows: The Talks page of the event website listing the published tracks with the tag and date filter menus.
+   :highlight: The filter menus (red frame).
+   :data: Four published talks with two tags.
+   :module: website_event_track
+   :notes: English UI, light theme, 1440px width.
 
 At the top of :guilabel:`Talks` page, there are drop-down filter menus beside a :guilabel:`Search
 a talk...` search bar.
@@ -65,9 +73,13 @@ tag categories) created for event tracks in the backend.
 
    Doing so reveals a :guilabel:`Create Tags` pop-up form.
 
-   .. image:: track_manage_talks/create-tags-popup.png
-      :align: center
-      :alt: The Create Tags pop-up form that coincides with drop-down filter menus on Talks page.
+   .. screenshot:: events-track_manage_talks-create-tags-popup
+      :menu: Events ‣ Configuration ‣ Track Tags ‣ New
+      :shows: The Create Tags pop-up window with the Tag Name, Category and Color fields used for the website filter menus.
+      :highlight: The Category field (red frame).
+      :data: Tag 'Beginner' in the category 'Level'.
+      :module: website_event_track
+      :notes: English UI, light theme, 1440px width.
 
    From here, users see the recently added tag in the :guilabel:`Tag Name` field. Beneath that,
    there is an option to add a specific :guilabel:`Color Index` to the tag for added organization.
@@ -94,9 +106,13 @@ Talk Proposals page
 The :guilabel:`Talk Proposals` link takes attendees to a page on the event website, wherein they can
 formerly submit a proposal for a talk (:dfn:`track`) for the event, via a custom online form.
 
-.. image:: track_manage_talks/talk-proposals-page.png
-   :align: center
-   :alt: The Talk Proposals page on the event website built with the Odoo Events application.
+.. screenshot:: events-track_manage_talks-talk-proposals-page
+   :menu: (event website) ‣ Talk Proposals
+   :shows: The Talk Proposals page of the event website with the proposal form (title, speaker, biography, description).
+   :highlight: The proposal form fields (red frame).
+   :data: Empty proposal form.
+   :module: website_event_track
+   :notes: English UI, light theme, 1440px width.
 
 In addition to the form, an introduction to the page, along with any other pertinent information
 related to the types of talks the event will feature can be added, if needed.
@@ -131,9 +147,13 @@ Agenda page
 The :guilabel:`Agenda` link takes attendees to a page on the event website, showcasing an event
 calendar, depicting when (and where) events are taking place for that specific event.
 
-.. image:: track_manage_talks/event-agenda-page.png
-   :align: center
-   :alt: The event Agenda page on the event website built with the Odoo Events application.
+.. screenshot:: events-track_manage_talks-event-agenda-page
+   :menu: (event website) ‣ Agenda
+   :shows: The Agenda page of the event website showing the tracks in a time grid by day and location.
+   :highlight: The time grid (red frame).
+   :data: Four tracks over one day and two locations.
+   :module: website_event_track
+   :notes: English UI, light theme, 1440px width.
 
 Clicking any track on the calendar takes the attendee to that specific track's detail page on the
 event website.

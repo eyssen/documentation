@@ -13,7 +13,10 @@ hold and ship early, and the override is fully traced in the chatter.
    - :doc:`delivery_payment` — restricting payment methods per delivery method
    - :doc:`cash_on_delivery` — collecting payment at handover instead of before shipping
 
-   :shows: Sale order banner warning that delivery is held until payment.
+.. screenshot:: payment-gated-delivery-order-banner
+   :menu: Sales ‣ Orders ‣ Orders
+   :shows: A confirmed sales order with the banner warning that the delivery is held until the order is paid.
+   :highlight: The banner (red frame).
    :module: sale_stock_payment_gate
    :notes: English UI, light theme, 1440px width.
 

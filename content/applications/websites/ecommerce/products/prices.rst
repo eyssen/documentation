@@ -296,40 +296,6 @@ Price` option, and :guilabel:`Save`. Then, :ref:`go to the product form
    use the :guilabel:`Compare to price` with another discount, configure a pricelist with a
    :ref:`promotional code <ecommerce/prices/promotional-code>`.
 
-.. _ecommerce/prices/omnibus:
-
-Lowest price of the last 30 days (Omnibus)
-------------------------------------------
-
-The EU Omnibus Directive requires that, when a price reduction is advertised, the *prior price* is
-also displayed: the lowest price applied during the 30 days before the reduction. The *Website Sale
-Omnibus Price* module (`website_sale_omnibus_price`) computes this price from the product's price
-history and uses it as the strikethrough price on the webshop instead of the
-:guilabel:`Compare to Price`.
-
-To enable it, go to :menuselection:`Website --> Configuration --> Settings`, and in the
-:guilabel:`Omnibus Price Display` block:
-
-- :guilabel:`Show 30-day lowest price`: enables the display for this website.
-- :guilabel:`Lookback period (days)`: the length of the period examined, 30 days by default.
-
-.. screenshot:: ecommerce-prices-omnibus-settings
-   :menu: Website ‣ Configuration ‣ Settings
-   :shows: The Website settings page scrolled to the Omnibus Price Display block, with "Show 30-day lowest price" enabled and the lookback period set to 30 days.
-   :highlight: The Omnibus Price Display block (red frame).
-   :data: Website "My Website".
-   :module: website_sale_omnibus_price
-   :notes: English UI, light theme, 1440px width, crop to the block.
-
-When a product is on sale, the strikethrough price shown is the lowest price of the lookback period
-*before* the current reduction, so that successive reductions do not lower the reference price. If
-the product has no usable price history, the standard strikethrough price is kept.
-
-.. note::
-   The price history comes from the *Product Price History* module (`product_price_history`), which
-   records every sales price change. See :doc:`the price history documentation
-   </applications/inventory_and_mrp/inventory/product_management/pricing_extensions>`.
-
 Discounted pricelists
 ---------------------
 

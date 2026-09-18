@@ -251,51 +251,6 @@ You can require customers to agree to your :doc:`terms and conditions
    providers and payment methods, which helps diagnose potential availability issues on the payment
    form.
 
-.. _ecommerce/checkout/customer-type:
-
-Private person or company
--------------------------
-
-The *Website Sale Partner Type* module (`website_sale_partner_type`) adds a :guilabel:`Private
-Person` / :guilabel:`Company` choice at the top of the address step for visitors who are not logged
-in. The choice sets the contact's :guilabel:`Company Type`, and the address form adapts to it: the
-company name and tax ID fields are only required for companies.
-
-Together with the Hungarian localization, the form also switches between the international
-:guilabel:`VAT` field and the Hungarian tax number field depending on the selected
-:guilabel:`Country`, and the B2B fields are always shown.
-
-.. screenshot:: ecommerce-checkout-customer-type
-   :menu: (website) ‣ Checkout ‣ Address
-   :shows: The checkout address form of an anonymous visitor with the Private Person / Company radio buttons above the name field, and the company and tax number fields shown for the Company choice.
-   :highlight: The Private Person / Company radio buttons (red frame).
-   :data: Company selected, country Hungary, Hungarian tax number field visible.
-   :module: website_sale_partner_type
-   :notes: English UI, light theme, 1440px width, crop to the top of the address form.
-
-When the visitor fills in a company name, the *Website Sale Company* module
-(`website_sale_company`) automatically creates the company contact and links the ordering person to
-it as a child contact, so that the order is placed on behalf of the company.
-
-.. _ecommerce/checkout/order-signature:
-
-Signing the order
------------------
-
-The *Website Sale Order Sign* module (`website_sale_order_sign`) requires customers to accept and
-sign the order before they can pay. At the :guilabel:`Payment` step, an :guilabel:`Accept & Sign`
-button is displayed instead of the payment button; clicking it opens a dialog with the order summary
-and the signature field. Once the order is signed, the payment button appears and the signature and
-signing date are stored on the sales order.
-
-.. screenshot:: ecommerce-checkout-accept-and-sign
-   :menu: (website) ‣ Checkout ‣ Payment
-   :shows: The payment step of the checkout with the Accept & Sign button in place of the payment button, and the signature dialog opened over it.
-   :highlight: The Accept & Sign button and the signature field (red frame).
-   :data: One cart of about EUR 150.
-   :module: website_sale_order_sign
-   :notes: English UI, light theme, 1440px width.
-
 .. _ecommerce/checkout/order_confirmation:
 
 Order confirmation

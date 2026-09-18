@@ -19,9 +19,11 @@ To understand *location sequence* in the closest removal strategy, consider the 
    A product is stored in the following locations: `Shelf A/Pallet`, `Shelf A/Rack 1`, and `Shelf
    A/Rack 2`.
 
-   .. image:: closest_location/locations.png
-      :align: center
-      :alt: Show a mockup of real storage location in a warehouse.
+   .. screenshot:: removal-strategies-closest-location-locations
+      :menu: (diagram)
+      :shows: A schematic floor plan of a warehouse aisle with shelves named WH/Stock/Shelf 1 to Shelf 4, showing which shelf is closest to the output door.
+      :module: stock
+      :notes: Simple schematic drawing, no Odoo UI.
 
    The sublocation, `Pallet`, is on the ground level. Products stored here are easier to retrieve,
    compared to requiring a forklift to reach `Rack 1` and `Rack 2`. The storage locations were
@@ -74,9 +76,12 @@ Fifteen, five, and thirty units are in stock at each respective location.
    To check the on-hand stock at each storage location, navigate to the product form, and click the
    :guilabel:`On Hand` smart button.
 
-   .. image:: closest_location/on-hand-stock.png
-      :align: center
-      :alt: Show on-hand stock at all locations.
+   .. screenshot:: removal-strategies-closest-location-on-hand-stock
+      :menu: Inventory ‣ Products ‣ Products
+      :shows: The "On Hand" (Update Quantity) list of a product, grouped by location, showing the same product stored in several shelf locations.
+      :data: Product "iPhone charger"; quantities in WH/Stock/Shelf 1, Shelf 2 and Shelf 3.
+      :module: stock
+      :notes: English UI, light theme, 1440px width.
 
 Create a :ref:`delivery order <inventory/delivery/one-step>` for eighteen units of the `iPhone
 charger` by navigating to the :menuselection:`Sales app` and creating a new quotation.
@@ -93,6 +98,10 @@ the quantities to fulfill the :guilabel:`Demand` are picked. All fifteen of the 
 closest location, `WH/Stock/Shelf 1`, are picked first. The remaining three units are then selected
 from the second closest location, `WH/Stock/Shelf 2`.
 
-.. image:: closest_location/stock-move-window.png
-   :align: center
-   :alt: Display *Pick From* quantities for the order for iPhone chargers.
+.. screenshot:: removal-strategies-closest-location-stock-move-window
+   :menu: Inventory ‣ Delivery Orders
+   :shows: The detailed operations of a delivery order line, with the "Pick From" column showing the location the closest-location strategy selected.
+   :highlight: The "Pick From" column (red frame).
+   :data: Delivery order for 10 units of "iPhone charger".
+   :module: stock
+   :notes: English UI, light theme, 1440px width.

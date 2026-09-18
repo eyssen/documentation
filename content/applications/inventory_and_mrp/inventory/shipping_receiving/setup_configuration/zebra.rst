@@ -34,9 +34,11 @@ window, choose :guilabel:`Settings / Technical / Reporting / Reports` to open th
    To manually navigate to the :guilabel:`Reports` page, go to :menuselection:`Settings app -->
    Technical --> Reporting: Reports`.
 
-.. image:: zebra/search.png
-   :align: center
-   :alt: Show global search result for "Reports".
+.. screenshot:: setup-configuration-zebra-search
+   :menu: Settings ‣ Technical ‣ Reporting ‣ Reports
+   :shows: The global search pop-up with "Reports" typed in, showing the "Settings / Technical / Reporting / Reports" result.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, developer mode on.
 
 On the :guilabel:`Reports` page, in the :guilabel:`Search...` bar, type `ZPL`, and hit :kbd:`Enter`.
 Upon doing so, Odoo presents a list of available Zebra labels in Odoo. Select the desired Zebra
@@ -55,11 +57,14 @@ label from the list to modify it on a separate page.
 Next, click the :icon:`fa-code` :guilabel:`Qweb Views` smart button, and choose the desired label
 :doc:`view <../../../../../developer/reference/user_interface/view_records>`.
 
-.. figure:: zebra/qweb-views.png
-   :align: center
-   :alt: Show Qweb smart button on the Lot and Serial Number (ZPL) report.
+.. screenshot:: setup-configuration-zebra-qweb-views
+   :menu: Settings ‣ Technical ‣ Reporting ‣ Reports
+   :shows: The "Lot and Serial Number (ZPL)" report form with the Qweb Views smart button at the top.
+   :highlight: The Qweb Views smart button (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width, developer mode on.
 
-   **Lot and Serial Number (ZPL)** report, highlighting the Qweb smart button.
+The **Lot and Serial Number (ZPL)** report, with the Qweb Views smart button.
 
 On the resulting view form, go to the :guilabel:`Architecture` tab to view the |ZPL| code.
 
@@ -70,9 +75,11 @@ On the resulting view form, go to the :guilabel:`Architecture` tab to view the |
    ensure the :guilabel:`No Update` field is set to :guilabel:`true (change)`. Click :guilabel:`Ok`
    to exit the :guilabel:`View Metadata` pop-up window.
 
-.. image:: zebra/architecture.png
-   :align: center
-   :alt: Architecture tab in the view.
+.. screenshot:: setup-configuration-zebra-architecture
+   :menu: Settings ‣ Technical ‣ User Interface ‣ Views
+   :shows: The Architecture tab of a ZPL report view, showing the editable ZPL code.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, developer mode on.
 
 .. _inventory/shipping_receiving/margin:
 
@@ -101,9 +108,11 @@ pixels for printers`) from the left and top margins.
 
    .. tab:: Default
 
-      .. image:: zebra/default-margin.png
-         :align: center
-         :alt: Example barcode label with the product name cut off.
+      .. screenshot:: setup-configuration-zebra-default-margin
+         :menu: (printed label)
+         :shows: A printed Zebra barcode label where the product name is cut off at the left edge.
+         :module: stock
+         :notes: Photo or scan of a printed label; use demo product data.
 
       **Code**:
 
@@ -116,9 +125,11 @@ pixels for printers`) from the left and top margins.
 
    .. tab:: Modified
 
-      .. image:: zebra/fixed-margin.png
-         :align: center
-         :alt: Example barcode label with the product name margin adjusted to the left.
+      .. screenshot:: setup-configuration-zebra-fixed-margin
+         :menu: (printed label)
+         :shows: The same Zebra barcode label after adjusting the margin, with the whole product name visible.
+         :module: stock
+         :notes: Photo or scan of a printed label; use demo product data.
 
       **Code**:
 
@@ -149,9 +160,11 @@ width to three dots, a typical size that is easy for barcode scanners to read.
 
    .. tab:: Default
 
-      .. image:: zebra/normal-barcode.png
-         :align: center
-         :alt: Example barcode label.
+      .. screenshot:: setup-configuration-zebra-normal-barcode
+         :menu: (printed label)
+         :shows: A printed Zebra label with the barcode at its default size.
+         :module: stock
+         :notes: Photo or scan of a printed label; use demo product data.
 
       **Code**:
 
@@ -165,9 +178,11 @@ width to three dots, a typical size that is easy for barcode scanners to read.
 
    .. tab:: Modified
 
-      .. image:: zebra/shrink-barcode.png
-         :align: center
-         :alt: Example barcode label with the barcode size reduced.
+      .. screenshot:: setup-configuration-zebra-shrink-barcode
+         :menu: (printed label)
+         :shows: The same Zebra label with the barcode reduced in size.
+         :module: stock
+         :notes: Photo or scan of a printed label; use demo product data.
 
       **Code**:
 
@@ -202,9 +217,11 @@ defines the rotation of an item, which can be:
 
    .. tab:: Default
 
-      .. image:: zebra/lot.png
-         :align: center
-         :alt: Example barcode label.
+      .. screenshot:: setup-configuration-zebra-lot
+         :menu: (printed label)
+         :shows: A printed Zebra lot label with the barcode in its default horizontal orientation.
+         :module: stock
+         :notes: Photo or scan of a printed label; use demo product data.
 
       **Code**:
 
@@ -218,9 +235,11 @@ defines the rotation of an item, which can be:
 
    .. tab:: Modified
 
-      .. image:: zebra/rotate.png
-         :align: center
-         :alt: Example barcode label with the barcode rotated.
+      .. screenshot:: setup-configuration-zebra-rotate
+         :menu: (printed label)
+         :shows: The same Zebra lot label with the barcode rotated by 90 degrees.
+         :module: stock
+         :notes: Photo or scan of a printed label; use demo product data.
 
       **Code**:
 

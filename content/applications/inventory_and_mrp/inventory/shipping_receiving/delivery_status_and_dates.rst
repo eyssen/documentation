@@ -18,53 +18,15 @@ the two eYssen modules that close these gaps.
    - :doc:`setup_configuration/mpl`
    - :doc:`cash_on_delivery`
 
-.. Screenshot plan:
-   .. delivery_status_and_dates-order-form-status.png
-      A confirmed sales order form (state = "sale") with a partially delivered order, on the
-      "Other Info" tab, "Delivery" group. Shows the Delivery Status badge/field, the Delivery %
-      progress bar and the Last Delivery Date field together.
-      Click path: Sales --> Orders --> open a confirmed order that has been partially delivered
-      --> Other Info tab.
-   .. delivery_status_and_dates-force-full-delivery-button.png
-      The same order form, zoomed on the header, showing the "Fully Delivered" button next to the
-      status bar (order not yet fully/cancelled delivered).
-      Click path: Sales --> Orders --> open a confirmed, not-fully-delivered order --> header.
-   .. delivery_status_and_dates-reset-button.png
-      An order where "Fully Delivered" has already been forced, showing the "Reset Delivery
-      Status" header button and the chatter message logged by the override.
-      Click path: same order as above, after clicking "Fully Delivered" --> header + chatter.
-   .. delivery_status_and_dates-order-list-badges.png
-      The Sales --> Orders list view with the Delivery Status column showing colored badges
-      (green/orange/blue/red) and the Delivery % and Last Delivery Date optional columns enabled
-      via the column-picker.
-      Click path: Sales --> Orders --> click the column-picker (sliders icon) at the top-right of
-      the list and enable "Delivery %" and "Last Delivery Date".
-   .. delivery_status_and_dates-search-filters.png
-      The search panel's Filters dropdown open on the Orders list, showing "Not Delivered",
-      "Delivery Started", "Partially Delivered", "Fully Delivered", "Delivery Cancelled" and the
-      "Group By: Delivery Status" option.
-      Click path: Sales --> Orders --> click into the search bar --> Filters tab.
-   .. delivery_status_and_dates-dashboard-list.png
-      The "Delivery Status" reporting list view, showing Order, Partner, Order Date, Commitment
-      Date, Expected, First Delivery, Last Delivery, Delivery Status badge, Delivery % bar and
-      Total columns.
-      Click path: Sales --> Reporting --> Delivery Status.
-   .. delivery_status_and_dates-dashboard-pivot.png
-      The same reporting action switched to the Pivot view, delivery status as columns and order
-      month as rows, with Delivery % and Total as measures.
-      Click path: Sales --> Reporting --> Delivery Status --> Pivot view button.
-   .. delivery_status_and_dates-invoice-delivery-date.png
-      A Hungarian customer invoice form, "Other Info" tab, showing the Delivery Date field next to
-      the accounting Date field, both holding the same value; ideally a corrective invoice so the
-      "Origin/Corrected invoice" link is also visible.
-      Click path: Accounting --> Customers --> Invoices --> open a HU corrective invoice --> Other
-      Info tab.
 
 Delivery status on the sales order
 ===================================
 
-.. image:: delivery_status_and_dates/delivery_status_and_dates-order-form-status.png
-   :alt: Sales order form showing the Delivery Status, Delivery % and Last Delivery Date fields
+.. screenshot:: delivery-status-and-dates-order-form-status
+   :menu: Sales ‣ Orders ‣ open a confirmed order that has been partially delivered ‣ Other Info tab
+   :shows: A confirmed sales order form (state = "sale") with a partially delivered order, on the "Other Info" tab, "Delivery" group. Shows the Delivery Status badge/field, the Delivery % progress bar and the Last Delivery Date field together.
+   :module: eyssen_sale_delivery_status, sale_delivery_status_ws, eyssen_l10n_hu_sale_stock_delivery_date
+   :notes: English UI, light theme, 1440px width.
 
 On a confirmed order, the :guilabel:`Delivery` group of the :guilabel:`Other Info` tab shows three
 complementary indicators, right after the standard :guilabel:`Delivery Status` field:
@@ -98,8 +60,11 @@ is shown as :guilabel:`Cancelled` instead.
 Manual "Fully Delivered" override
 ==================================
 
-.. image:: delivery_status_and_dates/delivery_status_and_dates-force-full-delivery-button.png
-   :alt: Confirmed order header with the "Fully Delivered" override button
+.. screenshot:: delivery-status-and-dates-force-full-delivery-button
+   :menu: Sales ‣ Orders ‣ open a confirmed, not-fully-delivered order ‣ header
+   :shows: The same order form, zoomed on the header, showing the "Fully Delivered" button next to the status bar (order not yet fully/cancelled delivered).
+   :module: eyssen_sale_delivery_status, sale_delivery_status_ws, eyssen_l10n_hu_sale_stock_delivery_date
+   :notes: English UI, light theme, 1440px width.
 
 For bulk or liquid goods, the delivered quantity almost never matches the ordered quantity to the
 last decimal, so the computed status stays :guilabel:`Partially Delivered` forever even though the
@@ -116,8 +81,11 @@ a user override this manually on a confirmed order:
    override and lets the status recompute from the real delivered quantities again, also logging a
    chatter message.
 
-.. image:: delivery_status_and_dates/delivery_status_and_dates-reset-button.png
-   :alt: Order header after the override, showing the Reset Delivery Status button
+.. screenshot:: delivery-status-and-dates-reset-button
+   :menu: same order as above, after clicking "Fully Delivered" ‣ header + chatter
+   :shows: An order where "Fully Delivered" has already been forced, showing the "Reset Delivery Status" header button and the chatter message logged by the override.
+   :module: eyssen_sale_delivery_status, sale_delivery_status_ws, eyssen_l10n_hu_sale_stock_delivery_date
+   :notes: English UI, light theme, 1440px width.
 
 .. important::
    The override never touches stock: no picking, move or backorder is created, cancelled or
@@ -129,8 +97,11 @@ a user override this manually on a confirmed order:
 Delivery status in list and search views
 =========================================
 
-.. image:: delivery_status_and_dates/delivery_status_and_dates-order-list-badges.png
-   :alt: Orders list view with color-coded Delivery Status badges and optional columns
+.. screenshot:: delivery-status-and-dates-order-list-badges
+   :menu: Sales ‣ Orders ‣ click the column-picker (sliders icon) at the top-right of the list and enable "Delivery %" and "Last Delivery Date"
+   :shows: The Sales --> Orders list view with the Delivery Status column showing colored badges (green/orange/blue/red) and the Delivery % and Last Delivery Date optional columns enabled via the column-picker.
+   :module: eyssen_sale_delivery_status, sale_delivery_status_ws, eyssen_l10n_hu_sale_stock_delivery_date
+   :notes: English UI, light theme, 1440px width.
 
 The :guilabel:`Delivery Status` column is enabled by default (colored badge: green for
 :guilabel:`Fully Delivered`, orange for :guilabel:`Partially Delivered`, blue for :guilabel:`Not
@@ -139,8 +110,11 @@ Delivered`/:guilabel:`Started`, red for :guilabel:`Cancelled`) on both the
 and :guilabel:`Last Delivery Date` are added to both lists as optional (hidden by default) columns,
 toggled from the column-picker.
 
-.. image:: delivery_status_and_dates/delivery_status_and_dates-search-filters.png
-   :alt: Search panel Filters showing the five delivery-status filters and the Group By option
+.. screenshot:: delivery-status-and-dates-search-filters
+   :menu: Sales ‣ Orders ‣ click into the search bar ‣ Filters tab
+   :shows: The search panel's Filters dropdown open on the Orders list, showing "Not Delivered", "Delivery Started", "Partially Delivered", "Fully Delivered", "Delivery Cancelled" and the "Group By: Delivery Status" option.
+   :module: eyssen_sale_delivery_status, sale_delivery_status_ws, eyssen_l10n_hu_sale_stock_delivery_date
+   :notes: English UI, light theme, 1440px width.
 
 The order search panel gains one filter per delivery status — :guilabel:`Not Delivered`,
 :guilabel:`Delivery Started`, :guilabel:`Partially Delivered`, :guilabel:`Fully Delivered` and
@@ -150,8 +124,11 @@ The order search panel gains one filter per delivery status — :guilabel:`Not D
 Delivery-status dashboard
 ==========================
 
-.. image:: delivery_status_and_dates/delivery_status_and_dates-dashboard-list.png
-   :alt: Delivery Status reporting list view
+.. screenshot:: delivery-status-and-dates-dashboard-list
+   :menu: Sales ‣ Reporting ‣ Delivery Status
+   :shows: The "Delivery Status" reporting list view, showing Order, Partner, Order Date, Commitment Date, Expected, First Delivery, Last Delivery, Delivery Status badge, Delivery % bar and Total columns.
+   :module: eyssen_sale_delivery_status, sale_delivery_status_ws, eyssen_l10n_hu_sale_stock_delivery_date
+   :notes: English UI, light theme, 1440px width.
 
 A dedicated reporting menu, :menuselection:`Sales --> Reporting --> Delivery Status`, gives a
 cross-order view limited to confirmed orders (``state = 'sale'``). Its list view combines the order
@@ -160,8 +137,11 @@ reference, customer, order date, :guilabel:`Commitment Date`, :guilabel:`Expecte
 :guilabel:`Last Delivery` (``last_delivery_date``), the :guilabel:`Delivery Status` badge, the
 :guilabel:`Delivery %` progress bar, the order total and the salesperson.
 
-.. image:: delivery_status_and_dates/delivery_status_and_dates-dashboard-pivot.png
-   :alt: Delivery Status reporting pivot view
+.. screenshot:: delivery-status-and-dates-dashboard-pivot
+   :menu: Sales ‣ Reporting ‣ Delivery Status ‣ Pivot view button
+   :shows: The same reporting action switched to the Pivot view, delivery status as columns and order month as rows, with Delivery % and Total as measures.
+   :module: eyssen_sale_delivery_status, sale_delivery_status_ws, eyssen_l10n_hu_sale_stock_delivery_date
+   :notes: English UI, light theme, 1440px width.
 
 The same action also offers :guilabel:`Pivot` and :guilabel:`Graph` views: the pivot breaks down
 :guilabel:`Delivery %` and the order total by delivery status (columns) and order month (rows); the
@@ -195,8 +175,11 @@ The field is populated through the idempotent ``_set_delivered()`` hook, which:
 Hungarian invoice fulfillment-date consistency
 ================================================
 
-.. image:: delivery_status_and_dates/delivery_status_and_dates-invoice-delivery-date.png
-   :alt: Hungarian customer invoice showing the Delivery Date field aligned with the Date field
+.. screenshot:: delivery-status-and-dates-invoice-delivery-date
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ open a HU corrective invoice ‣ Other Info tab
+   :shows: A Hungarian customer invoice form, "Other Info" tab, showing the Delivery Date field next to the accounting Date field, both holding the same value; ideally a corrective invoice so the "Origin/Corrected invoice" link is also visible.
+   :module: eyssen_sale_delivery_status, sale_delivery_status_ws, eyssen_l10n_hu_sale_stock_delivery_date
+   :notes: English UI, light theme, 1440px width.
 
 Odoo's core accounting keeps a :guilabel:`Delivery Date` field (``delivery_date``) on every invoice.
 When the **Inventory** app is installed, ``sale_stock`` automatically syncs that field to the linked

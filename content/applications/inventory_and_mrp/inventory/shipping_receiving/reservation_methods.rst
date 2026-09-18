@@ -42,9 +42,12 @@ operation type. Or, create a new one by clicking :guilabel:`New`.
 In the :guilabel:`General` tab of the operation type form, locate the :guilabel:`Reservation Method`
 option, and choose which method should be used for this type of operation.
 
-.. image:: reservation_methods/reservation-methods-operations-type-field.png
-   :align: center
-   :alt: Reservation method field on delivery order operation type form.
+.. screenshot:: reservation-methods-operations-type-field
+   :menu: Inventory app ‣ Configuration ‣ Operations Types
+   :shows: An operation type form for delivery orders, showing the "Reservation Method" radio buttons: At Confirmation, Manually, Before scheduled date.
+   :highlight: The "Reservation Method" field (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    If the :guilabel:`Before scheduled date` reservation method is selected, a new
@@ -58,9 +61,12 @@ option, and choose which method should be used for this type of operation.
    Changing the :guilabel:`days before when starred` value changes the maximum number of days before
    a scheduled date that starred (favorited) transfers for products should be reserved.
 
-   .. image:: reservation_methods/reservation-methods-before-scheduled-date.png
-      :align: center
-      :alt: Reserve before scheduled date fields with before scheduled date method chosen.
+   .. screenshot:: reservation-methods-before-scheduled-date
+      :menu: Inventory app ‣ Configuration ‣ Operations Types
+      :shows: An operation type form with "Before scheduled date" selected as the reservation method, showing the extra "Reserve before scheduled date" day fields.
+      :highlight: The "Reserve before scheduled date" fields (red frame).
+      :module: stock
+      :notes: English UI, light theme, 1440px width.
 
 Required applications
 =====================
@@ -94,9 +100,12 @@ Operations Types`, and then clicking on a specific operations type.
    When the :guilabel:`Type of Operation` is changed to :guilabel:`Receipt` on an
    :guilabel:`Operations Type` form, reservation methods are **not** available.
 
-.. image:: reservation_methods/reservation-methods-operations-type-menu.png
-   :align: center
-   :alt: Operations Types highlighted from the Configurations submenu in the Inventory app.
+.. screenshot:: reservation-methods-operations-type-menu
+   :menu: Inventory ‣ Configuration
+   :shows: The Inventory app Configuration drop-down menu opened, with the "Operations Types" item visible.
+   :highlight: The "Operations Types" menu item (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`reservation_methods/at_confirmation`

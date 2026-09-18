@@ -85,6 +85,14 @@ Foxpost or MPL) is installed. For flagged providers, checkout behaves differentl
   confirmed. Please pay upon delivery."* (in Hungarian: *"Rendelésed visszaigazolásra került.
   Kérjük, fizess átvételkor."*).
 
+
+.. screenshot:: delivery-payment-cod-confirmation-card
+   :menu: (webshop) Checkout ‣ place the order with a Payment on Delivery provider
+   :shows: The webshop order confirmation page after placing a cash-on-delivery order, with the green success card showing the provider's pending message instead of the blue "waiting for payment" card.
+   :highlight: The green confirmation card (red frame).
+   :module: eyssen_delivery_payment
+   :notes: English UI, light theme, 1440px width.
+
 Each carrier integration ships its own COD provider:
 
 .. list-table::

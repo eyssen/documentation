@@ -12,8 +12,7 @@ receipt, picking, delivery orders, quality checks):
 #. :ref:`Return slip <inventory/shipping_receiving/return-slip>`
 #. :ref:`Product labels of items in the order <inventory/shipping_receiving/product-labels>`
 #. :ref:`Lot and serial number labels <inventory/shipping_receiving/lot-sn-labels>`
-#. :ref:`Carrier labels <inventory/shipping_receiving/carrier-labels>`
-#. :ref:`Export documents <inventory/shipping_receiving/export-doc>`
+#. :ref:`Reception report and its labels <inventory/shipping_receiving/reception-report>`
 #. :ref:`Package content <inventory/shipping_receiving/package-content>`
 #. :ref:`Package label <inventory/shipping_receiving/package-label>`
 
@@ -27,9 +26,13 @@ on Validation` section to download the PDF of those selected documents automatic
 validating the :guilabel:`Operation Type`. For details on what each of the checkbox options do, jump
 to the related section.
 
-.. image:: print_on_validation/print-on-validation.png
-   :align: center
-   :alt: Show the *Print on Validation* option in the "Pick" *Operation Type*.
+.. screenshot:: setup-configuration-print-on-validation
+   :menu: Inventory ‣ Configuration ‣ Operations Types
+   :shows: The Hardware tab of an operation type, showing the "Print on Validation" checkboxes: Delivery Slip, Return Slip, Product Labels, Lot/SN Labels, Reception Report, Package Content.
+   :highlight: The "Print on Validation" group (red frame).
+   :data: Operation type "Pick" of the main warehouse.
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. _inventory/shipping_receiving/delivery-slip:
 
@@ -49,9 +52,11 @@ operation type downloads a PDF of the delivery slip.
 The delivery slip shows products, quantities, the delivery order reference number, and the total
 order weight.
 
-.. image:: print_on_validation/delivery-slip.png
-   :align: center
-   :alt: Example delivery slip.
+.. screenshot:: setup-configuration-print-on-validation-delivery-slip
+   :menu: (document)
+   :shows: A printed delivery slip PDF listing the products, quantities, the delivery order reference and the total order weight.
+   :module: stock
+   :notes: PDF document, use demo data.
 
 .. _inventory/shipping_receiving/return-slip:
 
@@ -69,9 +74,11 @@ operation type downloads a PDF of the return slip.
 The return slip displays the company's return address, along with barcodes for both the order and
 the return operation.
 
-.. image:: print_on_validation/return-slip.png
-   :align: center
-   :alt: Example return slip.
+.. screenshot:: setup-configuration-print-on-validation-return-slip
+   :menu: (document)
+   :shows: A printed return slip PDF with the company return address and the barcodes of the order and the return operation.
+   :module: stock
+   :notes: PDF document, use demo data.
 
 .. _inventory/shipping_receiving/product-labels:
 
@@ -92,27 +99,33 @@ be printed as:
 
   .. spoiler:: Example 2 x 7
 
-     .. image:: print_on_validation/two-seven.png
-        :align: center
-        :alt: Example 2 x 7 with price.
+     .. screenshot:: setup-configuration-print-on-validation-two-seven
+        :menu: (document)
+        :shows: A sheet of 2 x 7 product labels with the product name, barcode and price.
+        :module: stock
+        :notes: PDF document, use demo data.
 
 - :guilabel:`4 x 7 with price`: displays product name, barcode, and price, fitting four rows and
   seven columns of product labels per page.
 
   .. spoiler:: Example 4 x 7
 
-     .. image:: print_on_validation/four-seven.png
-        :align: center
-        :alt: Example 4 x 7 with price.
+     .. screenshot:: setup-configuration-print-on-validation-four-seven
+        :menu: (document)
+        :shows: A sheet of 4 x 7 product labels with the product name, barcode and price.
+        :module: stock
+        :notes: PDF document, use demo data.
 
 - :guilabel:`4 x 12`: displays product name and barcode. Fits four rows and twelve columns of
   product labels per page.
 
   .. spoiler:: Example 4 x 12
 
-     .. image:: print_on_validation/four-twelve.png
-        :align: center
-        :alt: Example 4 x 12.
+     .. screenshot:: setup-configuration-print-on-validation-four-twelve
+        :menu: (document)
+        :shows: A sheet of 4 x 12 product labels with the product name and barcode, without price.
+        :module: stock
+        :notes: PDF document, use demo data.
 
 - :guilabel:`4 x 12 with price`: displays product name, barcode, and price. Fits four rows and
   twelve columns of product labels per page.
@@ -146,11 +159,13 @@ be printed as:
 
   .. spoiler:: Example 4 x 12 - One per lot/SN
 
-     .. figure:: print_on_validation/four-twelve-lots.png
-        :align: center
-        :alt: Order with only one unique set of lot/serial numbers.
+     .. screenshot:: setup-configuration-print-on-validation-four-twelve-lots
+        :menu: (document)
+        :shows: A sheet of lot/serial number labels for an order that contains a single set of lot numbers, showing the product name, lot number and barcode.
+        :module: stock
+        :notes: PDF document, use demo data.
 
-        Labels for an order with only one unique set of lot/serial numbers.
+     Labels for an order with only one unique set of lot/serial numbers.
 
 - :guilabel:`4 x 12 - One per unit`: PDF with labels matching the quantity of items, displaying the
   product name, lot/serial number, and barcode. Fits four rows and twelve columns per page.
@@ -159,122 +174,35 @@ be printed as:
 - :guilabel:`ZPL Labels - One per unit`: prints labels with the quantity of items in :abbr:`ZPL
   (Zebra Programming Language)`, containing the product name, lot/serial number, and barcode.
 
-.. _inventory/shipping_receiving/carrier-labels:
+.. _inventory/shipping_receiving/reception-report:
 
-Carrier labels
-==============
+Reception report
+================
 
-To automatically print a *carrier label* with the recipient address, tracking number, and carrier
-details for specific third-party shipping carriers, complete the following setup:
+The *reception report* shows, for a validated receipt, which incoming quantities can be allocated to
+the sales orders, manufacturing orders, or transfers that are waiting for them. Its labels can be
+printed and attached to the goods so that warehouse staff know where each item is headed.
 
-#. Tick the :guilabel:`Carrier Labels` checkbox in the :ref:`operation type settings
-   <inventory/shipping_receiving/print_setup>`.
-#. Connect a printer to Odoo's *IoT* app.
-#. :ref:`Assign the carrier label to the printer <inventory/shipping_receiving/assign-printer>`.
-#. Configure the shipping method's :ref:`label type <inventory/shipping_receiving/label-type>`.
+To make the report available, go to :menuselection:`Inventory app --> Configuration --> Settings`,
+tick the :guilabel:`Reception Report` checkbox in the :guilabel:`Operations` section, and click
+:guilabel:`Save`.
 
-.. _inventory/shipping_receiving/assign-printer:
+Then, go to :menuselection:`Inventory app --> Configuration --> Operations Types`, select a receipt
+or internal operation type, and in the :guilabel:`Hardware` tab tick:
 
-Assign printer
---------------
-
-Refer to the Connect a printer documentation for
-details on connecting a printer to Odoo's *IoT* app. Upon completion, assign the carrier label to
-the printer, by navigating to :menuselection:`IoT app --> Devices`, and selecting the desired
-printer.
-
-.. image:: print_on_validation/select-printer.png
-   :align: center
-   :alt: Show a list of IoT devices.
-
-In the printer configuration form, go to the :guilabel:`Printer Reports` tab to configure the types
-of documents the printer automatically prints. Click :guilabel:`Add a line` to open the
-:guilabel:`Add: Reports` pop-up window. In the :guilabel:`Search...` bar, type `Shipping`, and
-select :guilabel:`Shipping Labels`.
+- :guilabel:`Reception Report`: prints the report of the picking on validation, provided the picking
+  has assigned moves.
+- :guilabel:`Reception Report Labels`: prints one label per allocated line.
 
 .. note::
-   The :guilabel:`Shipping Documents` report is for :ref:`export documents
-   <inventory/shipping_receiving/export-doc>`.
+   Both options are only available on incoming and internal operation types, not on delivery orders.
 
-.. image:: print_on_validation/printer-report.png
-   :align: center
-   :alt: Show carrier label report added to the *Printer Reports*.
-
-After adding the :guilabel:`Shipping Labels` report in the :guilabel:`Printer Reports` tab, ensure
-the :guilabel:`Report Type` matches the IoT-connected printer's type.
-
-- For laser printers, set the :guilabel:`Report Type` to :guilabel:`PDF`.
-- For Zebra printers, set the :guilabel:`Report Type` to :guilabel:`Text`.
-
-.. _inventory/shipping_receiving/label-type:
-
-Shipping carrier label type
----------------------------
-
-Next, complete the setup for the :doc:`third-party shipping connector
-<../setup_configuration/third_party_shipper>`. After that, go to :menuselection:`Inventory app -->
-Configuration --> Shipping Methods`, and select the desired shipping method.
-
-On the shipping method configuration form, in the :guilabel:`[carrier name] Configuration` tab,
-ensure the :guilabel:`Label Format` matches the :ref:`report type assigned earlier
-<inventory/shipping_receiving/assign-printer>`:
-
-- For laser printers, set the :guilabel:`Label Format` to :guilabel:`PDF`.
-- For Zebra printers, set the :guilabel:`Label Format` to :guilabel:`ZPL2`.
-
-.. image:: print_on_validation/label-type.png
-   :align: center
-   :alt: Show the *Label Type* field on FedEx's shipping method configuration page.
-
-Example carrier label
----------------------
-
-After validating the operation, the carrier label is generated in the chatter, and printed using the
-IoT-connected printer.
-
-.. spoiler:: Example carrier label
-
-     .. figure:: print_on_validation/fedex-carrier-label.png
-        :align: center
-        :alt: Show an example carrier label for FedEx.
-
-        Carrier label for FedEx, containing the recipient address, tracking number, barcode, and
-        other shipping information.
-
-.. seealso::
-   :doc:`Print carrier labels <../setup_configuration/labels>`
-
-.. _inventory/shipping_receiving/export-doc:
-
-Export document
-===============
-
-An *export document*, required by customs to ship packages from one country to another, can be
-automatically printed in Odoo by following these steps:
-
-#. Tick the :guilabel:`Export Documents` checkbox in the :ref:`operation type settings
-   <inventory/shipping_receiving/print_setup>`.
-#. Connect a printer to Odoo's *IoT* app.
-#. Assign the export document to the printer.
-
-Assign printer
---------------
-
-Similar to the :ref:`printer assignment instructions for carrier labels
-<inventory/shipping_receiving/assign-printer>`, after connecting a compatible printer to the Odoo
-*IoT* app, go to :menuselection:`IoT app --> Devices`, and select the desired printer.
-
-In the printer configuration form, go to the :guilabel:`Printer Reports` tab, and click
-:guilabel:`Add a line`. In the :guilabel:`Add: Reports` pop-up window that appears, add the
-:guilabel:`Shipping Documents` report to assign the export document to the printer.
-
-.. spoiler:: Example export document
-
-   .. figure:: print_on_validation/export-doc.png
-      :align: center
-      :alt: Export document for a shipment from the USA to Belgium.
-
-      Export document for a shipment from the USA to Belgium.
+.. screenshot:: setup-configuration-print-on-validation-reception-report
+   :menu: Inventory ‣ Configuration ‣ Operations Types
+   :shows: The Hardware tab of a receipt operation type, with the "Reception Report" and "Reception Report Labels" checkboxes ticked in the "Print on Validation" section.
+   :highlight: The two reception report checkboxes (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. _inventory/shipping_receiving/package-content:
 
@@ -299,11 +227,13 @@ the package contents.
 
 .. spoiler:: Example package content PDF
 
-   .. figure:: print_on_validation/package-content.png
-      :align: center
-      :alt: Package contents form showing the package contents, barcode, and pack date.
+   .. screenshot:: setup-configuration-print-on-validation-package-content
+      :menu: (document)
+      :shows: A printed package content PDF with the package barcode, the packed date and the list of products and quantities inside.
+      :module: stock
+      :notes: PDF document, use demo data.
 
-      Package contents showing the package contents, barcode, and pack date.
+   Package contents showing the package contents, barcode, and pack date.
 
 .. _inventory/shipping_receiving/package-label:
 
@@ -329,7 +259,9 @@ as` field.
 
 .. spoiler:: Example of package barcode
 
-   .. image:: print_on_validation/package-barcode.png
-      :align: center
-      :alt: PDF of package barcode and package date.
+   .. screenshot:: setup-configuration-print-on-validation-package-barcode
+      :menu: (document)
+      :shows: A printed package label PDF with the package barcode and the packed date.
+      :module: stock
+      :notes: PDF document, use demo data.
 

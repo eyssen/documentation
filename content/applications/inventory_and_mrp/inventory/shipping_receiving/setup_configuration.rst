@@ -27,8 +27,12 @@ installed. To do so, navigate to the :menuselection:`Apps` application from the 
 Then, remove the :guilabel:`Apps` filter, and type in `Delivery Costs` in the search bar. After
 finding the :guilabel:`Delivery Costs` module, click :guilabel:`Install` to install it.
 
-.. image:: setup_configuration/install-module.png
-   :alt: Install the Delivery Costs module.
+.. screenshot:: setup-configuration-install-module
+   :menu: Apps
+   :shows: The Apps list with the Apps filter removed and "Delivery Costs" typed in the search bar, showing the module card with its Install button.
+   :highlight: The Install button (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.
 
 .. _inventory/shipping/sales-order:
 
@@ -64,8 +68,13 @@ The shipping cost is added as a line item in the :guilabel:`Order Lines` tab as 
    This delivery method is defined as `Furniture Delivery (Manual)` and has a cost of `$200`. The
    sales order contains two line items: one for the desk, and another for the delivery method.
 
-     .. image:: setup_configuration/delivery-product.png
-        :alt: Show delivery order on the sales order line.
+     .. screenshot:: setup-configuration-delivery-product
+        :menu: Sales ‣ Orders ‣ Orders
+        :shows: The Order Lines tab of a sales order with two lines: the ordered product and the delivery product added by the shipping method.
+        :highlight: The delivery product line (red frame).
+        :data: Delivery method "Furniture Delivery (Manual)", cost 200.
+        :module: delivery
+        :notes: English UI, light theme, 1440px width.
 
 Delivery order
 --------------
@@ -76,8 +85,12 @@ appears at the top of the page. Click the :icon:`fa-truck` :guilabel:`Delivery` 
 the warehouse delivery form. To add or change the delivery method on the delivery itself, open the
 :guilabel:`Additional Info` tab and modify the :guilabel:`Carrier` field.
 
-.. image:: setup_configuration/delivery-order.png
-   :alt: Shipping carrier information on the delivery form.
+.. screenshot:: setup-configuration-delivery-order
+   :menu: Inventory ‣ Delivery Orders
+   :shows: The "Additional Info" tab of a delivery order, showing the "Carrier" field filled in from the sales order.
+   :highlight: The "Carrier" field (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.
 
 .. toctree::
    :titlesonly:

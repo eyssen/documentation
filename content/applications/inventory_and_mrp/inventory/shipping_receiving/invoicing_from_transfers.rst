@@ -12,45 +12,15 @@ This feature adds an :guilabel:`Invoicing` action directly on stock transfers, a
 indicator per transfer, and a permanent two-way link between pickings and the invoices/vendor bills
 generated from them.
 
-.. Screenshot plan:
-   .. invoicing_from_transfers-picking-list-status.png — Inventory app, Deliveries list view, with
-      the "Invoice Status" column visible (badges: Not invoiced / To Invoice / Fully Invoiced / Over
-      Invoiced) and the "To be Invoice" filter applied. Path: Inventory --> Deliveries --> Filters -->
-      To be Invoice.
-   .. invoicing_from_transfers-picking-form-button.png — A validated (Done) outgoing delivery form,
-      showing the "Számlázás" header button, the "Invoice Status" field next to Source Document, and
-      the "Invoiced" quantity column on the operations list. Path: Inventory --> Deliveries --> open a
-      Done transfer.
-   .. invoicing_from_transfers-bulk-invoice-action.png — Deliveries list view with several Done rows
-      for the same customer selected via checkboxes, and the gear/Actions menu open showing the
-      "Számlázás" action. Path: Inventory --> Deliveries --> select rows --> Actions (gear icon).
-   .. invoicing_from_transfers-no-need-to-invoice.png — Picking form, "Other Info" tab, "Számlázás"
-      group, with "No need to invoice" checked and a "Reason" filled in. Path: open a transfer -->
-      Other Info tab --> scroll to the Számlázás group.
-   .. invoicing_from_transfers-add-from-deliveries.png — A draft customer invoice (or vendor bill)
-      form with a customer set, showing the "Add Products from Delivery Notes" button above the
-      invoice lines table. Path: Accounting --> Customer Invoices --> New --> set Customer.
-   .. invoicing_from_transfers-select-deliveries-wizard.png — The "Selection of Delivery Notes"
-      popup wizard, listing candidate Done/unbilled transfers for the invoice's partner, with one or
-      more rows selected and the "Loading Items" button visible. Path: from the invoice form, click
-      "Add Products from Delivery Notes".
-   .. invoicing_from_transfers-invoice-lines-detail.png — The resulting invoice's Invoice Lines tab,
-      with the "Delivery Note" column and the green/red truck "fully delivered" icon column visible
-      next to the product lines. Path: invoice form --> Invoice Lines tab, after loading lines from
-      the wizard.
-   .. invoicing_from_transfers-invoice-picking-smart-buttons.png — Two linked records side by side (or
-      two crops): the picking form with the "Invoices" smart button (pencil-square icon) in the
-      button box, and the invoice form with the "Pickings" smart button (truck icon) in its button
-      box. Path: open an already-invoiced transfer, and the invoice created from it.
-   .. invoicing_from_transfers-purchase-bill-link.png — A posted vendor bill created from a confirmed
-      purchase order, with the "Pickings" smart button in the button box. Path: Purchase --> a
-      confirmed order --> Create Bill --> post the bill --> open the bill form.
 
 Invoice status on stock transfers
 ==================================
 
-.. image:: invoicing_from_transfers/invoicing_from_transfers-picking-list-status.png
-   :alt: Deliveries list view with the Invoice Status column and filter
+.. screenshot:: invoicing-from-transfers-picking-list-status
+   :menu: Inventory ‣ Deliveries ‣ Filters ‣ To be Invoice
+   :shows: Inventory app, Deliveries list view, with the "Invoice Status" column visible (badges: Not invoiced / To Invoice / Fully Invoiced / Over Invoiced) and the "To be Invoice" filter applied.
+   :module: eyssen_stock_picking_invoice_link, eyssen_purchase_stock_picking_invoice_link
+   :notes: English UI, light theme, 1440px width.
 
 Every :guilabel:`stock.picking` (delivery, receipt or internal transfer) gets an
 :guilabel:`Invoice Status` field with five possible values: :guilabel:`Not invoiced`,
@@ -71,16 +41,22 @@ invoiced yet, blue when it is partially invoiced, and red when it is over-invoic
 Creating an invoice directly from one or more transfers
 ==========================================================
 
-.. image:: invoicing_from_transfers/invoicing_from_transfers-picking-form-button.png
-   :alt: Delivery form with the Invoicing header button
+.. screenshot:: invoicing-from-transfers-picking-form-button
+   :menu: Inventory ‣ Deliveries ‣ open a Done transfer
+   :shows: A validated (Done) outgoing delivery form, showing the "Számlázás" header button, the "Invoice Status" field next to Source Document, and the "Invoiced" quantity column on the operations list.
+   :module: eyssen_stock_picking_invoice_link, eyssen_purchase_stock_picking_invoice_link
+   :notes: English UI, light theme, 1440px width.
 
 A completed transfer whose :guilabel:`Invoice Status` is :guilabel:`Not invoiced` or
 :guilabel:`To Invoice` shows an :guilabel:`Invoicing` header button (labeled ``Számlázás`` in the
 current UI). The same action is also available as a bulk action from the transfers list, so several
 transfers can be selected and invoiced together in one click.
 
-.. image:: invoicing_from_transfers/invoicing_from_transfers-bulk-invoice-action.png
-   :alt: Deliveries list with several rows selected and the Invoicing bulk action
+.. screenshot:: invoicing-from-transfers-bulk-invoice-action
+   :menu: Inventory ‣ Deliveries ‣ select rows ‣ Actions (gear icon)
+   :shows: Deliveries list view with several Done rows for the same customer selected via checkboxes, and the gear/Actions menu open showing the "Számlázás" action.
+   :module: eyssen_stock_picking_invoice_link, eyssen_purchase_stock_picking_invoice_link
+   :notes: English UI, light theme, 1440px width.
 
 When triggered — on one picking or on a multi-selection — the action:
 
@@ -106,16 +82,22 @@ When triggered — on one picking or on a multi-selection — the action:
 Adding delivery-note lines to an existing invoice
 =====================================================
 
-.. image:: invoicing_from_transfers/invoicing_from_transfers-add-from-deliveries.png
-   :alt: Draft invoice with the Add Products from Delivery Notes button
+.. screenshot:: invoicing-from-transfers-add-from-deliveries
+   :menu: Accounting ‣ Customer Invoices ‣ New ‣ set Customer
+   :shows: A draft customer invoice (or vendor bill) form with a customer set, showing the "Add Products from Delivery Notes" button above the invoice lines table.
+   :module: eyssen_stock_picking_invoice_link, eyssen_purchase_stock_picking_invoice_link
+   :notes: English UI, light theme, 1440px width.
 
 Invoices do not have to originate from a transfer. Any draft invoice or vendor bill that already has
 a :guilabel:`Customer`/:guilabel:`Vendor` set shows an :guilabel:`Add Products from Delivery Notes`
 button above the invoice lines. It opens a :guilabel:`Selection of Delivery Notes` wizard prefiltered
 to that partner's **Done** transfers that are not yet fully invoiced (excluding internal transfers).
 
-.. image:: invoicing_from_transfers/invoicing_from_transfers-select-deliveries-wizard.png
-   :alt: Selection of Delivery Notes wizard
+.. screenshot:: invoicing-from-transfers-select-deliveries-wizard
+   :menu: from the invoice form, click "Add Products from Delivery Notes"
+   :shows: The "Selection of Delivery Notes" popup wizard, listing candidate Done/unbilled transfers for the invoice's partner, with one or more rows selected and the "Loading Items" button visible.
+   :module: eyssen_stock_picking_invoice_link, eyssen_purchase_stock_picking_invoice_link
+   :notes: English UI, light theme, 1440px width.
 
 After picking one or more transfers and clicking :guilabel:`Loading Items`, the wizard adds one
 invoice line per remaining-to-invoice stock move, carrying over the product, the unbilled quantity,
@@ -130,8 +112,11 @@ the contributing sale orders are appended to the invoice's :guilabel:`Origin`.
 Picking–invoice traceability
 ================================
 
-.. image:: invoicing_from_transfers/invoicing_from_transfers-invoice-lines-detail.png
-   :alt: Invoice lines with the Delivery Note column and fully-delivered indicator
+.. screenshot:: invoicing-from-transfers-invoice-lines-detail
+   :menu: invoice form ‣ Invoice Lines tab, after loading lines from the wizard
+   :shows: The resulting invoice's Invoice Lines tab, with the "Delivery Note" column and the green/red truck "fully delivered" icon column visible next to the product lines.
+   :module: eyssen_stock_picking_invoice_link, eyssen_purchase_stock_picking_invoice_link
+   :notes: English UI, light theme, 1440px width.
 
 Every invoice line created from a transfer — whether through the :guilabel:`Invoicing` button above,
 the :guilabel:`Add Products from Delivery Notes` wizard, or Odoo's own sale/purchase order invoicing
@@ -147,8 +132,11 @@ the :guilabel:`Add Products from Delivery Notes` wizard, or Odoo's own sale/purc
   matching :guilabel:`Pickings` smart button — both open the linked record(s) directly, as a form when
   there is only one, or as a filtered list when there are several;
 
-.. image:: invoicing_from_transfers/invoicing_from_transfers-invoice-picking-smart-buttons.png
-   :alt: Invoices smart button on a picking and Pickings smart button on an invoice
+.. screenshot:: invoicing-from-transfers-invoice-picking-smart-buttons
+   :menu: open an already-invoiced transfer, and the invoice created from it
+   :shows: Two linked records side by side (or two crops): the picking form with the "Invoices" smart button (pencil-square icon) in the button box, and the invoice form with the "Pickings" smart button (truck icon) in its button box.
+   :module: eyssen_stock_picking_invoice_link, eyssen_purchase_stock_picking_invoice_link
+   :notes: English UI, light theme, 1440px width.
 
 - once a stock move is done and has an invoice line linked to it, its quantity can no longer be
   edited — Odoo refuses the change with an error, so an already-invoiced movement cannot silently
@@ -163,8 +151,11 @@ sales order rather than from a transfer.
 Purchase order invoicing
 ============================
 
-.. image:: invoicing_from_transfers/invoicing_from_transfers-purchase-bill-link.png
-   :alt: Vendor bill with the Pickings smart button
+.. screenshot:: invoicing-from-transfers-purchase-bill-link
+   :menu: Purchase ‣ a confirmed order ‣ Create Bill ‣ post the bill ‣ open the bill form
+   :shows: A posted vendor bill created from a confirmed purchase order, with the "Pickings" smart button in the button box.
+   :module: eyssen_stock_picking_invoice_link, eyssen_purchase_stock_picking_invoice_link
+   :notes: English UI, light theme, 1440px width.
 
 The same traceability applies on the purchase side: creating a vendor bill from a purchase order
 links each bill line to the receiving stock move(s) that cover its quantity, respecting the product's
@@ -181,8 +172,11 @@ even when invoicing happens ahead of the physical receipt.
 Excluding a transfer from invoicing
 =======================================
 
-.. image:: invoicing_from_transfers/invoicing_from_transfers-no-need-to-invoice.png
-   :alt: Other Info tab with the No need to invoice checkbox
+.. screenshot:: invoicing-from-transfers-no-need-to-invoice
+   :menu: open a transfer ‣ Other Info tab ‣ scroll to the Számlázás group
+   :shows: Picking form, "Other Info" tab, "Számlázás" group, with "No need to invoice" checked and a "Reason" filled in.
+   :module: eyssen_stock_picking_invoice_link, eyssen_purchase_stock_picking_invoice_link
+   :notes: English UI, light theme, 1440px width.
 
 A transfer that will never be billed — a sample shipment, an internal correction, and so on — can be
 flagged :guilabel:`No need to invoice` on its :guilabel:`Other Info` tab, with a mandatory

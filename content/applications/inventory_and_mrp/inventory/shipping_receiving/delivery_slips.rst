@@ -9,49 +9,16 @@ dropshipped receipt, pricing information on the transfer itself, and the option 
 "remaining quantities not yet delivered" backorder table. Each feature is delivered by its own,
 independently installable module, so a company only enables the pieces it needs.
 
-.. Screenshot plan:
-.. - delivery_slips-picking-form-fields.png: Inventory app -> open any outgoing delivery in "Waiting"
-..   or "Ready" state -> the transfer Form view, header area, showing the "Address for sending an
-..   Invoice" field next to the customer and, further down, the "Partner Delivery Note Number",
-..   "Transport Vehicle" and "EKÁER" fields next to Source Document. Click path: Inventory -> Deliveries
-..   -> open a delivery order.
-.. - delivery_slips-product-category-note.png: Inventory -> Configuration -> Product Categories -> open
-..   a category -> Logistics section, showing the "Note on the Delivery Note" rich-text field filled in.
-..   Click path: Inventory -> Configuration -> Product Categories -> open/create a category.
-.. - delivery_slips-report-pdf.png: the printed Delivery Slip PDF for a delivery whose product category
-..   has a note set and whose partner has a follow-up (invoicing) contact, showing the "Delivery Note"
-..   title, the "Address for sending an Invoice" block, the Partner Delivery Note Number / Transport
-..   vehicle / EKÁER fields, the category note, and (for a Hungarian company) the
-..   Consignor/Consignee acknowledgment block at the bottom. Click path: open a delivery order -> Print
-..   -> Delivery Slip.
-.. - delivery_slips-so-info-tab.png: a receipt (incoming transfer) generated from a purchase order that
-..   was itself created from a dropshipped sales order -> Form view -> the "Rendelés információk" /
-..   Order information notebook tab, showing the linked sale order name and its product/quantity lines,
-..   and the "Frissítés" (refresh) button. Click path: Purchase -> open the vendor's RFQ/PO -> Receipt
-..   smart button -> open the receipt -> the last notebook tab.
-.. - delivery_slips-priced-picking-form.png: an outgoing delivery created from a sales order -> Form
-..   view, Operations tab, showing the "Currency" field, the "Unit Price" column added to the move
-..   lines list, and the "Untaxed Amount (Demand)" / "Untaxed Amount (Completed)" totals in the
-..   bottom-right pricing box. Click path: Inventory -> Deliveries -> open a delivery -> Operations tab.
-.. - delivery_slips-invoice-price-warning.png: a customer invoice created from a delivery, with one
-..   invoice line's unit price manually changed so it no longer matches the delivery's recorded price
-..   -> Form view showing the orange warning banner above the invoice lines listing the mismatched
-..   line(s). Click path: Accounting -> Customers -> Invoices -> open an invoice created from a
-..   delivery -> edit a line's price.
-.. - delivery_slips-report-no-backorder-section.png: the printed Delivery Slip PDF for a partially
-..   delivered transfer that has an open backorder, showing that the "Remaining quantities not yet
-..   delivered" table is absent (compare against the stock backorder table normally shown by Odoo).
-..   Click path: create a partial delivery that generates a backorder -> open the original delivery ->
-..   Print -> Delivery Slip.
-
 Key features
 ============
 
 Extra fields on the slip
 -------------------------
 
-.. image:: delivery_slips/delivery_slips-picking-form-fields.png
-   :alt: Delivery order form showing the follow-up address, partner document number, vehicle and EKÁER fields
+.. screenshot:: delivery-slips-picking-form-fields
+   :shows: Delivery order form showing the follow-up address, partner document number, vehicle and EKÁER fields
+   :module: eyssen_stock_deliveryslip, eyssen_stock_deliveryslip_so_info, eyssen_stock_priced_delivery_note, eyssen_stock_disable_remaining_quantities_on_ds
+   :notes: English UI, light theme, 1440px width.
 
 The base extension adds several fields to every stock transfer (:guilabel:`stock.picking`) and prints
 them on the :guilabel:`Delivery Slip` report:
@@ -80,8 +47,10 @@ with the transfer reference shown as a subtitle.
 Per-category note on the delivery note
 ----------------------------------------
 
-.. image:: delivery_slips/delivery_slips-product-category-note.png
-   :alt: Product category form with the Note on the Delivery Note field filled in
+.. screenshot:: delivery-slips-product-category-note
+   :shows: Product category form with the Note on the Delivery Note field filled in
+   :module: eyssen_stock_deliveryslip, eyssen_stock_deliveryslip_so_info, eyssen_stock_priced_delivery_note, eyssen_stock_disable_remaining_quantities_on_ds
+   :notes: English UI, light theme, 1440px width.
 
 A rich-text :guilabel:`Note on the Delivery Note` field is added to :guilabel:`Product Categories`
 (:menuselection:`Inventory --> Configuration --> Product Categories`, in the :guilabel:`Logistics`
@@ -96,14 +65,18 @@ or legal wording that only applies to certain product families.
    lines, followed by the free-text :guilabel:`Note` field of the transfer itself if it is filled in.
    The standard Odoo electronic-signature block is removed and replaced by this printed acknowledgment.
 
-.. image:: delivery_slips/delivery_slips-report-pdf.png
-   :alt: Printed Delivery Note PDF showing the header fields, the category note and the acknowledgment block
+.. screenshot:: delivery-slips-report-pdf
+   :shows: Printed Delivery Note PDF showing the header fields, the category note and the acknowledgment block
+   :module: eyssen_stock_deliveryslip, eyssen_stock_deliveryslip_so_info, eyssen_stock_priced_delivery_note, eyssen_stock_disable_remaining_quantities_on_ds
+   :notes: English UI, light theme, 1440px width.
 
 Sales order info on dropshipped receipts
 -------------------------------------------
 
-.. image:: delivery_slips/delivery_slips-so-info-tab.png
-   :alt: Receipt form showing the Order information tab with the linked sale order and quantities
+.. screenshot:: delivery-slips-so-info-tab
+   :shows: Receipt form showing the Order information tab with the linked sale order and quantities
+   :module: eyssen_stock_deliveryslip, eyssen_stock_deliveryslip_so_info, eyssen_stock_priced_delivery_note, eyssen_stock_disable_remaining_quantities_on_ds
+   :notes: English UI, light theme, 1440px width.
 
 For warehouses that dropship, a receipt or delivery is often only linked to a *purchase* order, while
 the sales order that triggered it is one step removed. This feature adds an :guilabel:`Order
@@ -121,8 +94,10 @@ the underlying orders changed after the transfer was created.
 Priced transfers
 -----------------
 
-.. image:: delivery_slips/delivery_slips-priced-picking-form.png
-   :alt: Delivery order Operations tab showing the currency, unit price column and untaxed totals
+.. screenshot:: delivery-slips-priced-picking-form
+   :shows: Delivery order Operations tab showing the currency, unit price column and untaxed totals
+   :module: eyssen_stock_deliveryslip, eyssen_stock_deliveryslip_so_info, eyssen_stock_priced_delivery_note, eyssen_stock_disable_remaining_quantities_on_ds
+   :notes: English UI, light theme, 1440px width.
 
 This feature adds price and currency information directly to the transfer, so warehouse and finance
 users can see the monetary value of what is being moved without leaving the transfer:
@@ -148,8 +123,10 @@ users can see the monetary value of what is being moved without leaving the tran
 Invoice price consistency check
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: delivery_slips/delivery_slips-invoice-price-warning.png
-   :alt: Customer invoice form showing the price mismatch warning banner above the invoice lines
+.. screenshot:: delivery-slips-invoice-price-warning
+   :shows: Customer invoice form showing the price mismatch warning banner above the invoice lines
+   :module: eyssen_stock_deliveryslip, eyssen_stock_deliveryslip_so_info, eyssen_stock_priced_delivery_note, eyssen_stock_disable_remaining_quantities_on_ds
+   :notes: English UI, light theme, 1440px width.
 
 On the customer invoice form, a warning banner is shown above the invoice lines whenever an invoice
 line's unit price differs from the :guilabel:`Unit Price` recorded on the stock move(s) it was
@@ -159,8 +136,10 @@ were already shipped at a different price.
 Hiding the "remaining quantities" section
 --------------------------------------------
 
-.. image:: delivery_slips/delivery_slips-report-no-backorder-section.png
-   :alt: Printed Delivery Slip for a partial delivery with the remaining-quantities table hidden
+.. screenshot:: delivery-slips-report-no-backorder-section
+   :shows: Printed Delivery Slip for a partial delivery with the remaining-quantities table hidden
+   :module: eyssen_stock_deliveryslip, eyssen_stock_deliveryslip_so_info, eyssen_stock_priced_delivery_note, eyssen_stock_disable_remaining_quantities_on_ds
+   :notes: English UI, light theme, 1440px width.
 
 By default, when a delivery is only partially fulfilled and a backorder remains, Odoo's
 :guilabel:`Delivery Slip` prints an extra :guilabel:`Remaining quantities not yet delivered:` table

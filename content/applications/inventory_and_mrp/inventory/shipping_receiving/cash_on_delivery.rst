@@ -2,52 +2,6 @@
 Cash on delivery (COD)
 ======================
 
-.. Screenshot plan:
-..
-.. cash_on_delivery-checkout-payment-methods.png
-..   What: the website checkout payment step for a logged-in customer whose
-..   reputation is above the configured threshold, showing the "Payment on
-..   Delivery" option next to the other payment methods.
-..   Click path: Website app --> open the shop --> add a product to the
-..   cart --> proceed to checkout --> reach the Payment step.
-..
-.. cash_on_delivery-provider-check-toggle.png
-..   What: a "Payment on Delivery" payment.provider form (e.g. the one
-..   created by eyssen_delivery_gls) with the Configuration tab open on the
-..   Availability group, showing the "Utánvét Ellenőr Check" checkbox.
-..   Click path: Website app --> Configuration --> Payment Providers -->
-..   open "Payment on Delivery" --> Configuration tab --> Availability
-..   group.
-..
-.. cash_on_delivery-settings.png
-..   What: the Website Settings page scrolled to the "Shop - Checkout
-..   Process" block, with the "Utánvét Ellenőr" collapsible setting expanded
-..   showing Mode, key fields, Reputation Threshold, Fallback on API Error,
-..   API Timeout and Chatter Verbosity.
-..   Click path: Website app --> Configuration --> Settings --> Shop -
-..   Checkout Process section --> Utánvét Ellenőr.
-..
-.. cash_on_delivery-partner-chatter-log.png
-..   What: a res.partner (Contacts) form with the chatter open, showing an
-..   internal note logged by the module after a blocked or errored check
-..   (Mode, Threshold, HTTP status, Good/Bad, Reputation, Blocked, Reason
-..   lines).
-..   Click path: Contacts app --> open a customer that has placed a webshop
-..   order paid by a guarded provider --> chatter / Log note history.
-..
-.. cash_on_delivery-signal-queue-list.png
-..   What: the Utánvét Ellenőr signals list view with a few rows in
-..   different states, showing the green/red/grey state decorations and the
-..   Retry button on a failed row.
-..   Click path: Website app --> Configuration --> Utánvét Ellenőr signals.
-..
-.. cash_on_delivery-picking-cod-amount.png
-..   What: an outgoing delivery transfer form for an order paid through a
-..   carrier's "Payment on Delivery" method, with the read-only COD Amount
-..   field visible next to the Carrier field.
-..   Click path: Inventory app --> Transfers --> open the outgoing delivery
-..   for a COD sale order (after it has produced a shipping label).
-
 **Cash on delivery (COD)** lets a webshop customer pay for an order in cash
 (or by card) at the moment the parcel is handed over, instead of paying
 online at checkout. Because a single sales order can ship in several
@@ -69,8 +23,11 @@ database.
    - :doc:`payment_gated_delivery` — holding deliveries until an order is
      paid
 
-.. image:: cash_on_delivery/cash_on_delivery-checkout-payment-methods.png
-   :alt: Website checkout payment step showing the Payment on Delivery option
+.. screenshot:: cash-on-delivery-checkout-payment-methods
+   :menu: Website app ‣ open the shop ‣ add a product to the cart ‣ proceed to checkout ‣ reach the Payment step
+   :shows: The website checkout payment step for a logged-in customer whose reputation is above the configured threshold, showing the "Payment on Delivery" option next to the other payment methods.
+   :module: eyssen_delivery_cod, utanvetellenor
+   :notes: English UI, light theme, 1440px width.
 
 Key features
 ============
@@ -105,8 +62,11 @@ depend on ``eyssen_delivery_cod`` and call the method with their own
 "Payment on Delivery" provider's XML ID when they build the shipping label
 request for a picking.
 
-.. image:: cash_on_delivery/cash_on_delivery-picking-cod-amount.png
-   :alt: Outgoing delivery form showing the read-only COD Amount field
+.. screenshot:: cash-on-delivery-picking-cod-amount
+   :menu: Inventory app ‣ Transfers ‣ open the outgoing delivery for a COD sale order (after it has produced a shipping label)
+   :shows: An outgoing delivery transfer form for an order paid through a carrier's "Payment on Delivery" method, with the read-only COD Amount field visible next to the Carrier field.
+   :module: eyssen_delivery_cod, utanvetellenor
+   :notes: English UI, light theme, 1440px width.
 
 The method only computes an amount when the sales order's **last payment
 transaction** is on that carrier's own "Payment on Delivery" provider; for
@@ -169,8 +129,11 @@ that any :guilabel:`Payment Provider` with :guilabel:`Utánvét Ellenőr Check`
 enabled is only offered to customers whose reputation clears the configured
 threshold.
 
-.. image:: cash_on_delivery/cash_on_delivery-provider-check-toggle.png
-   :alt: Payment provider form with the Utánvét Ellenőr Check option
+.. screenshot:: cash-on-delivery-provider-check-toggle
+   :menu: Website app ‣ Configuration ‣ Payment Providers ‣ open "Payment on Delivery" ‣ Configuration tab ‣ Availability group
+   :shows: A "Payment on Delivery" payment.provider form (e.g. the one created by eyssen_delivery_gls) with the Configuration tab open on the Availability group, showing the "Utánvét Ellenőr Check" checkbox.
+   :module: eyssen_delivery_cod, utanvetellenor
+   :notes: English UI, light theme, 1440px width.
 
 - If **no** enabled provider has the check turned on, the module does
   nothing — there is no performance cost for shops that don't use it.
@@ -207,8 +170,11 @@ Every API call that results in a block or an error can be logged as an
 internal note on the customer, controlled by the :guilabel:`Chatter
 Verbosity` setting:
 
-.. image:: cash_on_delivery/cash_on_delivery-partner-chatter-log.png
-   :alt: Customer chatter with an Utánvét Ellenőr request log entry
+.. screenshot:: cash-on-delivery-partner-chatter-log
+   :menu: Contacts app ‣ open a customer that has placed a webshop order paid by a guarded provider ‣ chatter / Log note history
+   :shows: A res.partner (Contacts) form with the chatter open, showing an internal note logged by the module after a blocked or errored check (Mode, Threshold, HTTP status, Good/Bad, Reputation, Blocked, Reason lines).
+   :module: eyssen_delivery_cod, utanvetellenor
+   :notes: English UI, light theme, 1440px width.
 
 The note records the mode, threshold, HTTP status, the API's good/bad
 counts, the numeric reputation and the verbatim reason — never the API
@@ -233,8 +199,11 @@ guarantees at most one row per picking and outcome, and a re-validated
 picking can never queue a contradictory outcome once one has already been
 sent.
 
-.. image:: cash_on_delivery/cash_on_delivery-signal-queue-list.png
-   :alt: Utánvét Ellenőr signals list with pending, sent and failed rows
+.. screenshot:: cash-on-delivery-signal-queue-list
+   :menu: Website app ‣ Configuration ‣ Utánvét Ellenőr signals
+   :shows: The Utánvét Ellenőr signals list view with a few rows in different states, showing the green/red/grey state decorations and the Retry button on a failed row.
+   :module: eyssen_delivery_cod, utanvetellenor
+   :notes: English UI, light theme, 1440px width.
 
 The queued rows are visible under :menuselection:`Website --> Configuration
 --> Utánvét Ellenőr signals`, colour-coded by :guilabel:`State`
@@ -270,8 +239,11 @@ To configure the Utánvét Ellenőr check:
      :guilabel:`Blocked customers and errors only` (default) or
      :guilabel:`Errors only`.
 
-   .. image:: cash_on_delivery/cash_on_delivery-settings.png
-      :alt: Utánvét Ellenőr settings under Shop - Checkout Process
+   .. screenshot:: cash-on-delivery-settings
+      :menu: Website app ‣ Configuration ‣ Settings ‣ Shop - Checkout Process section ‣ Utánvét Ellenőr
+      :shows: The Website Settings page scrolled to the "Shop - Checkout Process" block, with the "Utánvét Ellenőr" collapsible setting expanded showing Mode, key fields, Reputation Threshold, Fallback on API Error, API Timeout and Chatter Verbosity.
+      :module: eyssen_delivery_cod, utanvetellenor
+      :notes: English UI, light theme, 1440px width.
 
 #. On each payment provider that should be gated (typically a
    cash-on-delivery or bank-transfer method), open the

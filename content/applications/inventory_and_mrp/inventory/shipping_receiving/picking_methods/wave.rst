@@ -39,8 +39,12 @@ To enable wave picking, begin by navigating to :menuselection:`Inventory --> Con
 Settings`. In the :guilabel:`Operations` section, tick the :guilabel:`Batch, Wave & Cluster
 Transfers` checkbox to enable the setting.
 
-.. image:: wave/wave-transfers-setting.png
-   :alt: View of Odoo Inventory app settings to enable the wave transfers option.
+.. screenshot:: picking-methods-wave-transfers-setting
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to "Operations", with the "Batch Transfers" checkbox enabled (wave transfers are part of the same feature).
+   :highlight: The "Batch Transfers" checkbox (red frame).
+   :module: stock_picking_batch
+   :notes: English UI, light theme, 1440px width.
 
 Next, the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` options, under the
 :guilabel:`Warehouse` heading, must also be checked on this settings page.
@@ -59,8 +63,12 @@ all the transfers and product lines in a specific operation, navigate to the
 :guilabel:`(vertical ellipsis)` icon to open the options menu. Under :guilabel:`New`, click
 :guilabel:`Prepare Wave`.
 
-.. image:: wave/list-of-operations.png
-   :alt: How to get an operation type's list of operations.
+.. screenshot:: picking-methods-wave-list-of-operations
+   :menu: Inventory
+   :shows: The Inventory overview with an operation-type card menu open, showing the option that opens the list of operations.
+   :highlight: The menu item that opens the operations list (red frame).
+   :module: stock_picking_batch
+   :notes: English UI, light theme, 1440px width.
 
 Create a new wave
 -----------------
@@ -68,8 +76,12 @@ Create a new wave
 On the :guilabel:`Prepare Wave` pop-up, stock moves lines are grouped by source location. Select the
 checkboxes for the product lines that should be added. Then, click :guilabel:`Add to Wave`.
 
-.. image:: wave/select-lines.png
-   :alt: Select lines to add to the wave.
+.. screenshot:: picking-methods-wave-select-lines
+   :menu: Inventory ‣ Operations ‣ Transfers
+   :shows: The move-lines list view with several product lines from different transfers selected, and the "Add to wave" action in the gear menu.
+   :highlight: The "Add to wave" action (red frame).
+   :module: stock_picking_batch
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    Use the :guilabel:`Filters` in the search bar to group lines with the same product, location,
@@ -133,5 +145,9 @@ Automatic waves can be created based on the following criteria:
 - :guilabel:`Product Category`: Split transfers by product category, then group transfers that have
   the same product category.
 
-.. image:: wave/auto-wave-grouping.png
-   :alt: The Automatic batches feature with the wave grouping option for product category selected.
+.. screenshot:: picking-methods-wave-auto-grouping
+   :menu: Inventory ‣ Configuration ‣ Operations Types
+   :shows: An operation type form with "Automatic Batches" enabled and wave grouping set by product category.
+   :highlight: The wave grouping criterion (red frame).
+   :module: stock_picking_batch
+   :notes: English UI, light theme, 1440px width.

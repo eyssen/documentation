@@ -41,9 +41,12 @@ Settings`. Under the :guilabel:`Warehouse` section, tick the checkbox next to :g
 Routes`, and click :guilabel:`Save`. Doing so also activates the :guilabel:`Storage Locations`
 feature.
 
-.. image:: receipts_delivery_two_steps/receipts-delivery-two-steps-settings.png
-   :align: center
-   :alt: Enabled Multi-Step Routes feature in Inventory app settings.
+.. screenshot:: daily-operations-receipts-delivery-two-steps-settings
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to "Warehouse", with the "Multi-Step Routes" checkbox enabled.
+   :highlight: The "Multi-Step Routes" checkbox (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Next, configure a warehouse for two-step receipts and deliveries. Navigate to
 :menuselection:`Inventory app --> Configuration --> Warehouses`, and select a warehouse to edit.
@@ -52,9 +55,12 @@ Under the :guilabel:`Warehouse Configuration` tab, set :guilabel:`Incoming Shipm
 :guilabel:`Receive goods in input and then stock (2 steps)`, and set :guilabel:`Outgoing Shipments`
 to :guilabel:`Send goods in output and then deliver (2 steps)`.
 
-.. image:: receipts_delivery_two_steps/receipts-delivery-two-steps-shipments.png
-   :align: center
-   :alt: Incoming and outgoing shipments set to two-step on warehouse form.
+.. screenshot:: daily-operations-receipts-delivery-two-steps-shipments
+   :menu: Inventory app ‣ Configuration ‣ Warehouses
+   :shows: A warehouse form with "Incoming Shipments" and "Outgoing Shipments" both set to the two-step option.
+   :highlight: The two shipment options (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    Selecting two-step receipts and deliveries automatically creates new *Input* and *Output*
@@ -82,9 +88,11 @@ opens a blank :guilabel:`Request for Quotation` (RfQ) form.
 Add a vendor in the :guilabel:`Vendor` field. Then, fill out the various fields on the |RfQ|, as
 necessary.
 
-.. image:: receipts_delivery_two_steps/receipts-delivery-two-steps-new-rfq.png
-   :align: center
-   :alt: Filled out new Request for Quotation from vendor.
+.. screenshot:: daily-operations-receipts-delivery-two-steps-new-rfq
+   :menu: Purchase ‣ Orders ‣ Requests for Quotation
+   :shows: A filled-in request for quotation with a vendor and one product line.
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Under the :guilabel:`Products` tab, click :guilabel:`Add a product`, and select a product to add to
 the |RfQ|.
@@ -95,9 +103,12 @@ stage.
 Once the |PO| is confirmed, a :guilabel:`Receipt` smart button appears at the top of the form.
 Clicking the smart button opens the warehouse receipt (WH/IN) form.
 
-.. image:: receipts_delivery_two_steps/receipts-delivery-two-steps-smart-button.png
-   :align: center
-   :alt: Delivery smart button for validated purchase order.
+.. screenshot:: daily-operations-receipts-delivery-two-steps-smart-button
+   :menu: Purchase ‣ Orders ‣ Purchase Orders
+   :shows: A confirmed purchase order with the Receipt smart button showing two transfers.
+   :highlight: The Receipt smart button (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    For businesses with multiple warehouses that have different step configurations, the
@@ -114,9 +125,11 @@ From the warehouse receipt form, the products ordered can be received into the w
 the products, click :guilabel:`Validate`. Once validated, the receipt moves to the :guilabel:`Done`
 stage, and the products move to the :guilabel:`WH/Input` location.
 
-.. image:: receipts_delivery_two_steps/receipts-delivery-two-steps-receipt-form.png
-   :align: center
-   :alt: Receipt form for products ordered from vendor.
+.. screenshot:: daily-operations-receipts-delivery-two-steps-receipt-form
+   :menu: Inventory ‣ Receipts
+   :shows: The receipt form of the purchase order, moving goods from the vendor location to WH/Input.
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Click back to the |PO| (via the breadcrumbs, at the top of the form) to view the |PO| form. On the
 product line, the quantity in the :guilabel:`Received` column now matches the ordered
@@ -139,9 +152,12 @@ Once ready, click :guilabel:`Validate` to complete the transfer, and move the pr
 Once the transfer is validated, the products enter inventory, and are available for customer
 deliveries or manufacturing orders.
 
-.. image:: receipts_delivery_two_steps/receipts-delivery-two-steps-internal-transfer.png
-   :align: center
-   :alt: Internal transfer form for products ordered from vendor.
+.. screenshot:: daily-operations-receipts-delivery-two-steps-internal-transfer
+   :menu: Inventory ‣ Operations ‣ Transfers
+   :shows: The internal transfer that moves the received goods from WH/Input to WH/Stock.
+   :highlight: The source and destination locations (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. _inventory/shipping_receiving/two-step-delivery:
 
@@ -161,9 +177,11 @@ opens a blank sales quotation form.
 Add a customer in the :guilabel:`Customer` field. Then, fill out the various fields on the sales
 quotation form, as necessary.
 
-.. image:: receipts_delivery_two_steps/receipts-delivery-two-steps-new-sales-order.png
-   :align: center
-   :alt: Filled out new sales order form.
+.. screenshot:: daily-operations-receipts-delivery-two-steps-new-sales-order
+   :menu: Sales ‣ Orders ‣ Quotations
+   :shows: A filled-in quotation with a customer and one product line.
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Under the :guilabel:`Order Lines` tab, click :guilabel:`Add a product`, and select a product to add
 to the sales order quotation.
@@ -174,9 +192,11 @@ stage.
 Once the |SO| is confirmed, a :guilabel:`Delivery` smart button appears at the top of the form.
 Clicking the smart button opens the warehouse delivery (WH/OUT) form.
 
-.. image:: receipts_delivery_two_steps/receipts-delivery-two-steps-delivery-button.png
-   :align: center
-   :alt: Delivery smart button on validated sales order form.
+.. screenshot:: daily-operations-receipts-delivery-two-steps-button
+   :menu: Sales app
+   :shows: Delivery smart button on validated sales order form.
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Process picking
 ---------------
@@ -193,9 +213,11 @@ From the :guilabel:`Inventory Overview` page, click the :guilabel:`# To Process`
 Click on the picking (WH/PICK) operation associated with the sales order to reveal the picking
 order.
 
-.. image:: receipts_delivery_two_steps/receipts-delivery-two-steps-picking-form.png
-   :align: center
-   :alt: Picking order form for products included in sales order.
+.. screenshot:: daily-operations-receipts-delivery-two-steps-picking-form
+   :menu: Inventory ‣ Operations ‣ Transfers
+   :shows: The pick transfer that moves the ordered goods from WH/Stock to WH/Output.
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Manually set the quantity by changing the value in the :guilabel:`Quantity` column, to match the
 value in the :guilabel:`Demand` column.
@@ -215,9 +237,11 @@ via the breadcrumbs, and locate the :guilabel:`Delivery Orders` task card.
 Click the :guilabel:`# To Process` button on the task card to reveal a list of all delivery orders
 to process, and select the order associated with the previously validated picking.
 
-.. image:: receipts_delivery_two_steps/receipts-delivery-two-steps-delivery-order.png
-   :align: center
-   :alt: Delivery order form for products ordered by customer.
+.. screenshot:: daily-operations-receipts-delivery-two-steps-order
+   :menu: Sales app
+   :shows: Delivery order form for products ordered by customer.
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 To deliver the products, change the value in the :guilabel:`Quantity` field to match the ordered
 quantity in the :guilabel:`Demand` field.

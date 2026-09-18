@@ -9,9 +9,6 @@ Integrate Odoo with a :doc:`shipping carrier connector <../setup_configuration/t
 to automatically generate shipping labels that include prices, destination addresses, tracking
 numbers, and barcodes.
 
-.. seealso::
-   :ref:`Automatically print shipping carrier labels <inventory/shipping_receiving/carrier-labels>`
-
 Configuration
 =============
 
@@ -26,9 +23,12 @@ labels. Finally, provide the company's :ref:`source address
 .. seealso::
    :doc:`../setup_configuration/third_party_shipper`
 
-.. image:: labels/integration-level.png
-   :align: center
-   :alt: Set the "Get Rate and Create Shipment" option.
+.. screenshot:: setup-configuration-labels-integration-level
+   :menu: Inventory ‣ Configuration ‣ Shipping Methods
+   :shows: A delivery method form with "Integration Level" set to "Get Rate and Create Shipment".
+   :highlight: The "Integration Level" field (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.
 
 .. _inventory/shipping_receiving/picking-config:
 
@@ -50,9 +50,12 @@ operation.
    picking instead of delivery. Odoo allows users to enable the :guilabel:`Print Label` feature on
    the `Pick` operation itself to achieve this flexibility.
 
-   .. image:: labels/pick-print-label.png
-      :align: center
-      :alt: Enable the "Print Label" feature.
+   .. screenshot:: setup-configuration-labels-pick-print-label
+      :menu: Inventory ‣ Configuration ‣ Operations Types
+      :shows: An operation type form with the "Print Label" checkbox ticked in the Hardware tab.
+      :highlight: The "Print Label" checkbox (red frame).
+      :module: stock
+      :notes: English UI, light theme, 1440px width.
 
 Print tracking labels
 =====================
@@ -85,9 +88,12 @@ To generate a tracking label for an order, begin by creating a quotation in :men
 app --> Orders --> Quotations`, clicking :guilabel:`New`, and filling out the quotation form. Then,
 click the :guilabel:`Add Shipping` button in the bottom-right corner of the quotation.
 
-.. image:: labels/add-shipping-button.png
-   :align: center
-   :alt: Show the "Add Shipping" button on the quotation.
+.. screenshot:: setup-configuration-labels-add-shipping-button
+   :menu: Sales ‣ Orders ‣ Quotations
+   :shows: A quotation with the "Add Shipping" button in the bottom-right corner of the Order Lines tab.
+   :highlight: The "Add Shipping" button (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.
 
 In the resulting pop-up window, select the intended carrier from the :guilabel:`Shipping Method`
 drop-down menu. The :guilabel:`Total Order Weight` field is automatically populated, based on the
@@ -107,18 +113,24 @@ delivery product <inventory/shipping_receiving/delivery-product>`. Finally, clic
 :guilabel:`Confirm` on the quotation, and click the :guilabel:`Delivery` smart button to access the
 |DO|.
 
-.. image:: labels/get-rate.png
-   :align: center
-   :alt: Show "Get rate" pop-up window.
+.. screenshot:: setup-configuration-labels-get-rate
+   :menu: Sales ‣ Orders ‣ Quotations
+   :shows: The "Add a shipping method" pop-up window with the Shipping Method, Total Order Weight and Cost fields, and the "Get Rate" button.
+   :highlight: The "Get Rate" button (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    For users who do not have the *Sales* app installed, specify the :guilabel:`Carrier` by going to
    the :menuselection:`Inventory` app, navigating to the |DO|, and going to the
    :guilabel:`Additional Info` tab.
 
-   .. image:: labels/additional-info-tab.png
-      :align: center
-      :alt: Show the "Additional Info" tab of a delivery order.
+   .. screenshot:: setup-configuration-labels-additional-info-tab
+      :menu: Inventory ‣ Delivery Orders
+      :shows: The "Additional Info" tab of a delivery order with the "Carrier" field set manually.
+      :highlight: The "Carrier" field (red frame).
+      :module: delivery
+      :notes: English UI, light theme, 1440px width.
 
 .. _inventory/shipping_receiving/validate-print-label:
 
@@ -145,19 +157,24 @@ shipping carrier's website.
 
 The tracking label is found in PDF format in the chatter.
 
-.. image:: labels/shipping-label.png
-   :align: center
-   :alt: Show generated shipping label in the chatter.
+.. screenshot:: setup-configuration-labels-shipping-label
+   :menu: Inventory ‣ Delivery Orders
+   :shows: The chatter of a validated delivery order with the generated shipping label attached as a PDF.
+   :highlight: The label attachment in the chatter (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    For multi-package shipping, one label is generated per package. Each label appears in the
    chatter.
 
-.. figure:: labels/sample-label.png
-   :align: center
-   :alt: Sample label generated from a carrier connector.
+.. screenshot:: setup-configuration-labels-sample-label
+   :menu: (document)
+   :shows: A printed shipping label as generated by a carrier connector: recipient address, sender address, barcode and tracking number.
+   :module: delivery
+   :notes: Use a throw-away address and tracking number.
 
-   Sample label generated from a carrier connector.
+Sample label generated from a carrier connector.
 
 .. seealso::
    - :doc:`invoicing`

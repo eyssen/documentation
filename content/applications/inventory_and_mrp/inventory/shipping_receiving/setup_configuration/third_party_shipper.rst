@@ -132,11 +132,14 @@ The :guilabel:`Shipping Method` page contains details about the provider, includ
 - :guilabel:`Insurance Percentage`: specify a percentage amount of the shipping costs reimbursed to
   the senders if the package is lost or stolen in transit.
 
-.. figure:: third_party_shipper/fedex.png
-   :align: center
-   :alt: Screenshot of a FedEx shipping method.
+.. screenshot:: setup-configuration-third-party-shipper-carrier-form
+   :menu: Inventory ‣ Configuration ‣ Shipping Methods
+   :shows: A delivery method form of a carrier connector, showing the Provider, Integration Level, Delivery Product, Invoicing Policy and Margin on Rate fields.
+   :data: Delivery method "GLS Home Delivery", provider GLS.
+   :module: eyssen_delivery_gls
+   :notes: English UI, light theme, 1440px width.
 
-   **Shipping Method** configuration page for `FedEx US`.
+**Shipping Method** configuration page for `GLS Home Delivery`.
 
 In the :guilabel:`Configuration` tab, fill out the API credential fields (e.g. API key, password,
 account number, etc.). Depending on the carrier chosen in the :guilabel:`Provider` field, the
@@ -162,9 +165,12 @@ set it to :guilabel:`Production Environment`.
    carrier account may be charged **before** the customer is charged for shipping. Verify all
    configurations are correct before switching the delivery method to :guilabel:`Production`.
 
-.. image:: third_party_shipper/production.png
-   :align: center
-   :alt: Show the "Test Environment" smart button.
+.. screenshot:: setup-configuration-third-party-shipper-production
+   :menu: Inventory app ‣ Configuration ‣ Shipping Methods
+   :shows: A delivery method form with the "Test Environment" smart button at the top, used to switch to the production environment.
+   :highlight: The "Test Environment" smart button (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.
 
 .. _inventory/shipping_receiving/configure-source-address:
 
@@ -178,16 +184,22 @@ Warehouses`, and select the desired warehouse.
 On the warehouse configuration page, open the warehouse contact page by clicking the
 :guilabel:`Company` field.
 
-.. image:: third_party_shipper/internal-link.png
-   :align: center
-   :alt: Highlight the "Company" field.
+.. screenshot:: setup-configuration-third-party-shipper-internal-link
+   :menu: Inventory ‣ Configuration ‣ Warehouses
+   :shows: A warehouse form with the "Company" field and its internal-link arrow, which opens the company contact.
+   :highlight: The "Company" field (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.
 
 Verify that the :guilabel:`Address` and :guilabel:`Phone` number are correct, as they are required
 for the shipping connector to work properly.
 
-.. image:: third_party_shipper/company.png
-   :align: center
-   :alt: Show company address and phone number.
+.. screenshot:: setup-configuration-third-party-shipper-company
+   :menu: Settings ‣ Users & Companies ‣ Companies
+   :shows: A company form showing the full Address (with ZIP code) and the Phone number filled in.
+   :highlight: The Address and Phone fields (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.
 
 .. _inventory/shipping_receiving/configure-weight:
 
@@ -200,9 +212,12 @@ For the carrier integration to work properly, specify the weight of products by 
 Then, switch to the :guilabel:`Inventory` tab, and define the :guilabel:`Weight` of the product in
 the :guilabel:`Logistics` section.
 
-.. image:: third_party_shipper/product-weight.png
-   :align: center
-   :alt: Display the "Weight" field in the Inventory tab of the product form.
+.. screenshot:: setup-configuration-third-party-shipper-product-weight
+   :menu: Inventory app ‣ Products ‣ Products
+   :shows: The Inventory tab of a product form, with the "Weight" field filled in under Logistics.
+   :highlight: The "Weight" field (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. _inventory/shipping_receiving/apply-third-party-carrier:
 
@@ -225,9 +240,12 @@ To assign a shipping carrier, and get an estimated cost of shipping, begin by go
 add the cost of shipping through a carrier connector to a quotation, by clicking the
 :guilabel:`Add Shipping` button in the bottom-right corner of the :guilabel:`Order Lines` tab.
 
-.. image:: third_party_shipper/add-shipping.png
-   :align: center
-   :alt: Show the "Add shipping" button at the bottom of a quotation.
+.. screenshot:: setup-configuration-third-party-shipper-add-shipping
+   :menu: Sales app ‣ Orders ‣ Quotations
+   :shows: A quotation with the "Add Shipping" button in the bottom-right corner of the Order Lines tab.
+   :highlight: The "Add Shipping" button (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.
 
 In the resulting :guilabel:`Add a shipping method` pop-up window, select the intended carrier from
 the :guilabel:`Shipping Method` drop-down menu. The :guilabel:`Cost` field is automatically filled
@@ -267,9 +285,12 @@ provided.
 .. seealso::
    :doc:`Generate shipping labels <labels>`
 
-.. image:: third_party_shipper/delivery-info.png
-   :align: center
-   :alt: Show the delivery order's "Additional info" tab.
+.. screenshot:: setup-configuration-third-party-shipper-delivery-info
+   :menu: Inventory ‣ Delivery Orders
+   :shows: The "Additional info" tab of a delivery order, with the Carrier and Tracking Reference fields filled in.
+   :highlight: The "Carrier" and "Tracking Reference" fields (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.
 
 .. _inventory/shipping_receiving/third-party-troubles:
 
@@ -305,9 +326,12 @@ method's configuration page (:menuselection:`Inventory app --> Configuration -->
 Method`), and select the desired shipping method. Click the :guilabel:`No Debugging` smart button to
 activate :guilabel:`Debug Requests`.
 
-.. image:: third_party_shipper/no-debug.png
-   :align: center
-   :alt: Show the "No Debug" smart button.
+.. screenshot:: setup-configuration-third-party-shipper-no-debug
+   :menu: Inventory ‣ Configuration ‣ Shipping Methods
+   :shows: A delivery method form with the "No Debugging" smart button at the top.
+   :highlight: The "No Debugging" smart button (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.
 
 With :guilabel:`Debug Requests` activated, each time the shipping connector is used to estimate the
 cost of shipping, records are saved in the :guilabel:`Logging` report. To access the report, turn on
@@ -320,14 +344,19 @@ Database Structure section --> Logging`.
    and invoices, **and** when a customer adds the shipping carrier to their order through the
    *Website* app.
 
-.. image:: third_party_shipper/log.png
-   :align: center
-   :alt: Show how to find the "Logging" option from the "Technical" menu.
+.. screenshot:: setup-configuration-third-party-shipper-log
+   :menu: Settings ‣ Technical
+   :shows: The Settings Technical menu opened, with the "Logging" item under Database Structure.
+   :highlight: The "Logging" menu item (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width, developer mode on.
 
 Click the *HTTP request* line item to open a detailed page, and verify the correct information is
 sent from Odoo to the shipping carrier. In the *HTTP response*, verify that the same information is
 received.
 
-.. image:: third_party_shipper/logging.png
-   :align: center
-   :alt: Show debug request history in Settings > Technical > Logging.
+.. screenshot:: setup-configuration-third-party-shipper-logging
+   :menu: Settings ‣ Technical ‣ Logging
+   :shows: The Logging list showing HTTP request and response records created by the carrier connector.
+   :module: delivery
+   :notes: English UI, light theme, 1440px width, developer mode on.

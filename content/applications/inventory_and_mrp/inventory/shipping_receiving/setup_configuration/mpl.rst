@@ -58,6 +58,14 @@ For the generic fields shared by every carrier — such as :guilabel:`Delivery P
    also be created manually at any time with the :guilabel:`Print MPL Label` button on the
    transfer.
 
+.. screenshot:: setup-configuration-mpl-configuration-tab
+   :menu: Inventory ‣ Configuration ‣ Delivery Methods ‣ MPL Home delivery
+   :shows: An MPL shipping method form with Provider set to "MPL" and the "MPL Configuration" tab open, showing the Test and Production Client ID/Secret pairs, the Accounting Code and the Agreement Number.
+   :highlight: The "MPL Configuration" tab (red frame).
+   :data: Shipping method "MPL Home delivery"; use throw-away credentials.
+   :module: eyssen_delivery_mpl
+   :notes: English UI, light theme, 1440px width.
+
 Credentials
 -----------
 

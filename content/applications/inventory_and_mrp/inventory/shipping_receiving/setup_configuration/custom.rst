@@ -132,6 +132,13 @@ The label PDF is generated in two ways:
 In both cases the PDF is also attached to the delivery order's chatter (message *Shipment
 created*), named after the transfer reference, so it can be reprinted at any time.
 
+.. screenshot:: setup-configuration-custom-print-label-button
+   :menu: Inventory ‣ Delivery Orders
+   :shows: A delivery order whose carrier is a Custom method, showing the "Print Custom Label" button next to the Carrier field, and the "Custom label" field below it.
+   :highlight: The "Print Custom Label" button (red frame).
+   :module: eyssen_delivery_custom
+   :notes: English UI, light theme, 1440px width.
+
 Each label shows:
 
 - the **delivery order reference**, as text and as a barcode — this is also the tracking reference

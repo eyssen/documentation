@@ -4,8 +4,8 @@ SMS analysis
 
 On the :guilabel:`Reporting` page (accessible via the :menuselection:`Reporting` option in the
 header menu), there are options to apply different combinations of :guilabel:`Filters` and
-:guilabel:`Measures` to view metrics in a number of different layouts (e.g. :guilabel:`Graph`,
-:guilabel:`List`, and :guilabel:`Cohort` views.)
+:guilabel:`Measures` to view metrics in a number of different layouts (e.g. :guilabel:`Graph`
+and :guilabel:`List` views).
 
 Each :guilabel:`Reporting` metric view option allows for more extensive performance analysis of
 :abbr:`SMS (Short Message Service)` mailings.
@@ -19,8 +19,10 @@ is visualized as different graphs and charts, which can be sorted and grouped in
    :alt: Reporting page in SMS Marketing.
 
 .. tip::
-   SMS messages can be sent using automation rules in Odoo. Odoo **Studio** (Enterprise) is
-   required to use automation rules.
+   SMS messages can be sent using :doc:`automation rules
+   </applications/general/automation_rules>`. To create one, activate the :ref:`developer mode
+   <developer-mode>`, open the model's list or form view, and select :menuselection:`(gear icon) -->
+   Automations`.
 
    Enter a name for the automation rule, and select a :guilabel:`Model` to implement this rule on.
 

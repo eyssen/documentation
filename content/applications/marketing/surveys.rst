@@ -12,9 +12,6 @@ so much more. These can be used to collect feedback, evaluate the success of a r
 measure the satisfaction of customers and/or employees. This process yields valuable insights into
 shifting market trends.
 
-.. seealso::
-   `Odoo Tutorials: Surveys <https://www.odoo.com/slides/surveys-62>`_
-
 .. cards::
 
    .. card:: Create surveys

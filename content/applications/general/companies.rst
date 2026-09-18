@@ -153,9 +153,8 @@ To create branches from a branch and create a multi-level architecture, click :g
 in the new branch's :guilabel:`Branches` tab.
 
 .. tip::
-   Activate the :ref:`developer mode <developer-mode>` to set :doc:`social media accounts
-   <../marketing/social_marketing>` and company-specific :doc:`email <email_communication>` system
-   parameters.
+   Activate the :ref:`developer mode <developer-mode>` to set social media accounts and
+   company-specific :doc:`email <email_communication>` system parameters.
 
 .. warning::
    Adding a branch to a company enables :doc:`multi-company <companies/multi_company>` functions.

@@ -44,13 +44,10 @@ with other Odoo apps to expand your website's functionality.
       email.
 
 .. note::
-   Odoo offers a :ref:`free custom domain name <domain-name/register>` to all Odoo Online databases
-   for one year. Visitors can then access your website with an address such as `www.example.com`
-   rather than the default `example.odoo.com`.
+   :doc:`Map your own domain name <website/configuration/domain_names>` to the database so that
+   visitors can access the website with an address such as `www.example.com`.
 
 .. seealso::
-   - `Odoo Tutorials: Website <https://www.odoo.com/slides/website-25>`_
-   - `Odoo Tutorials: eCommerce <https://www.odoo.com/slides/ecommerce-26>`_
    - :doc:`../general/integrations/unsplash`
 
 .. toctree::

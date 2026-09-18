@@ -354,4 +354,3 @@ lead responded the previous week.
 .. seealso::
    - :doc:`../email_marketing`
    - :doc:`unsubscriptions`
-   - :doc:`../marketing_automation`

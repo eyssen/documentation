@@ -243,7 +243,7 @@ access. Its primary purpose is to:
    (text) of specific pages.
 
 When indexing your website, search engines first look at the robots.txt file. Odoo automatically
-creates one robot.txt file available on `mydatabase.odoo.com/robots.txt`.
+creates one robot.txt file available on `mydatabase.example.com/robots.txt`.
 
 .. note::
    Reputable bots adhere to robots.txt; others may require blocking via

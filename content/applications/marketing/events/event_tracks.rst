@@ -66,9 +66,8 @@ there are any.
 
 The tracks are presented in a default :icon:`oi-view-kanban` :guilabel:`(Kanban)` view, but there is
 also the option to view these tracks in a :icon:`oi-view-list` :guilabel:`(List)`,
-:icon:`oi-view-cohort` :guilabel:`(Gantt)` chart, :icon:`fa-calendar-check-o`
-:guilabel:`(Calendar)`, :icon:`fa-area-chart` :guilabel:`(Graph)`, or :icon:`fa-clock-o`
-:guilabel:`(Activity)` view. All of which are accessible in the upper-right corner of the
+:icon:`fa-calendar-check-o` :guilabel:`(Calendar)`, :icon:`fa-area-chart` :guilabel:`(Graph)`, or
+:icon:`fa-clock-o` :guilabel:`(Activity)` view. All of which are accessible in the upper-right corner of the
 :guilabel:`Tracks` page.
 
 In the default :icon:`oi-view-kanban` :guilabel:`(Kanban)` view, the tracks are categorized into

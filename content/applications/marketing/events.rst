@@ -8,9 +8,6 @@ Explore the various aspects of the Odoo **Events** detailed dashboard, and usefu
 be utilized to generate and gather valuable data about events (and their attendees), which can then
 be used to improve decision-making and event-planning.
 
-.. seealso::
-   `Odoo Tutorials: Events <https://www.odoo.com/slides/surveys-63>`_
-
 .. cards::
 
    .. card:: Create events

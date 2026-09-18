@@ -24,12 +24,9 @@ view of the chat.
 
 .. example::
    During a conversation with a customer, a live chat operator executes the command to :ref:`create
-   a ticket <live-chat/ticket>`. After entering the command, `/ticket`, the system automatically
-   creates a ticket with the information from the conversation. It also includes a link to the new
-   ticket, so the operator can go there directly to add any additional information, if necessary.
-
-   .. image:: responses/responses-ticket-link.png
-      :alt: View of the chat window with a helpdesk ticket created in Odoo Live Chat.
+   a lead <live-chat/lead>`. After entering the command, `/lead`, followed by a title, the system
+   creates a lead from the conversation and posts a link to it in the chat window, so the operator
+   can go there directly to add any additional information, if necessary.
 
 More information about each available command can be found below.
 
@@ -48,59 +45,6 @@ entry types an operator can make is displayed.
    - :doc:`/applications/productivity/discuss`
    - :doc:`/applications/productivity/discuss/team_communication`
 
-Ticket & search tickets
------------------------
-
-The `/ticket` and `/search_tickets` commands allow operators to create helpdesk tickets directly
-from a conversation, and search through existing tickets by keyword or ticket number.
-
-.. important::
-   The `/ticket` and `/search_tickets` commands can **only** be used if the **Helpdesk** app has
-   been installed, and *Live Chat* has been activated on a *Helpdesk* team. To activate *Live Chat*,
-   go to :menuselection:`Helpdesk app --> Configuration --> Helpdesk Teams`, and select a team.
-   Scroll to the :guilabel:`Channels` section, and check the box labeled, :guilabel:`Live Chat`.
-
-.. _live-chat/ticket:
-
-Create a ticket from a live chat
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If an operator types `/ticket` in the chat window, the conversation is used to create a *Helpdesk*
-ticket.
-
-After entering the `/ticket` command, type a title for the ticket into the chat window, then press
-`Enter`.
-
-.. image:: responses/helpdesk.png
-   :alt: View of the results from a helpdesk search in a Live Chat conversation.
-
-The newly created ticket will be added to the *Helpdesk* team that has live chat enabled. If more
-than one team has live chat enabled, the ticket will automatically be assigned based on the team's
-priority.
-
-The transcript from the conversation will be added to the new ticket, under the
-:guilabel:`Description` tab.
-
-To access the new ticket, click on the link in the chat window, or go to the
-:menuselection:`Helpdesk app` and click the :guilabel:`Tickets` button on the Kanban card for the
-appropriate team.
-
-Search for a ticket from a live chat
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If an operator types `/search_tickets` in the chat window, they can search through *Helpdesk*
-tickets, either by ticket number or keyword.
-
-After entering the `/search_tickets` command, type a keyword or ticket number, then press
-:kbd:`Enter`. If one or more related tickets are found, a list of links is generated in the
-conversation window.
-
-.. image:: responses/helpdesk-search.png
-   :alt: View of the results from a helpdesk search in a Live Chat conversation.
-
-.. note::
-   Results from the search command will only be seen by the operator, not the customer.
-
 History
 -------
 
@@ -109,6 +53,8 @@ visitor has viewed on the website (up to 15).
 
 .. image:: responses/responses-history.png
    :alt: View of the results from a /history command in a Live Chat conversation.
+
+.. _live-chat/lead:
 
 Lead
 ----

@@ -60,9 +60,6 @@ The side panel provides advanced filtering tools to organize your product catego
 To further :ref:`categorize <ecommerce/catalog/categories>` the shop page, you can activate
 various filters, such as the :ref:`attribute <ecommerce/catalog/attributes>` filter.
 
-You can also add a :guilabel:`Datepicker` option to display a date range calendar to check
-the availability of rental products over a specific period. The **Rental** app (Enterprise)
-must be installed to use this feature.
 
 It is also possible to toggle the :guilabel:`Collapsible sidebar` switch to make the side panel
 manually collapsible.

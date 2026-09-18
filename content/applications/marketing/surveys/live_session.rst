@@ -135,11 +135,11 @@ simplified, and ends with the :guilabel:`Session Code`, preceded by `/s/`.
 
 .. example::
    If `1212` has been entered as the :guilabel:`Session Code`, the URL in the :guilabel:`Session
-   Link` field begins with the basic URL of the database (e.g. `sample-database.odoo.com`), followed
+   Link` field begins with the basic URL of the database (e.g. `sample-database.example.com`), followed
    by: `/s/1212`.
 
    So, collectively, that sample :guilabel:`Session Link` would be:
-   `sample-database.odoo.com/s/1212`.
+   `sample-database.example.com/s/1212`.
 
 .. tip::
    If a user sends out the :guilabel:`Session Link` URL in its complete form - :guilabel:`Session

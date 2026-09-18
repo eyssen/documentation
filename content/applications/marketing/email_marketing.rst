@@ -8,11 +8,6 @@ The Odoo *Email Marketing* app provides drag-and-drop design tools, pre-built te
 interactive features to create engaging email campaigns. The *Email Marketing* app also provides
 detailed reporting metrics to track the campaigns' overall effectiveness.
 
-.. seealso::
-   - `Odoo Tutorial: Email Marketing
-     <https://www.odoo.com/slides/slide/email-marketing-essentials-989?fullscreen=1>`_
-   - `Magic Sheet - Email Marketing strategy [PDF]
-     <https://drive.google.com/drive/folders/1TqZfYCF-56yhUSDVyfFjkmB23RWaRBP7>`_
 
 .. cards::
 
@@ -180,13 +175,9 @@ clicked, different filter options become available to further customize the grap
 Those :guilabel:`Measures` options are: :guilabel:`A/B Testing percentage` and :guilabel:`Count`
 (default).
 
-To the right of the :guilabel:`Measures` drop-down menu is an :guilabel:`Insert in Spreadsheet`
-button, if the *Documents* application is installed. When clicked, a pop-up window appears, in which
-the ability to add the graph to a spreadsheet or dashboard becomes available.
-
-Beside the :guilabel:`Measures` drop-down menu and :guilabel:`Insert in Spreadsheet` button are
-different graph view options. From left-to-right, those graph view options are: :guilabel:`(bar
-chart)` (default), :guilabel:`(line chart)`, and :guilabel:`(pie chart)`.
+Beside the :guilabel:`Measures` drop-down menu are different graph view options. From
+left-to-right, those graph view options are: :guilabel:`(bar chart)` (default), :guilabel:`(line
+chart)`, and :guilabel:`(pie chart)`.
 
 .. note::
    Each graph view option provides its own series of additional view options, which appear to the
@@ -778,8 +769,7 @@ At the top of the form, various smart buttons can be seen that showcase specific
 to the campaign. Those smart buttons are: :guilabel:`Revenues`, :guilabel:`Quotations`,
 :guilabel:`Opportunities`, and :guilabel:`Clicks`.
 
-There are also buttons to :guilabel:`Send Mailing`, :guilabel:`Send SMS`, :guilabel:`Add Post`, and
-:guilabel:`Add Push` (push notification).
+There are also buttons to :guilabel:`Send Mailing` and :guilabel:`Send SMS`.
 
 .. note::
    If the :guilabel:`Send Mailing` and :guilabel:`Send SMS` buttons are not readily available, enter
@@ -814,8 +804,6 @@ Select :guilabel:`Create and Edit...` to add this new mailing campaign to the da
 
 Here, the new mailing campaign can be further customized. Users can adjust the :guilabel:`Campaign
 Name`, assign a :guilabel:`Responsible`, and add :guilabel:`Tags`.
-
-Buttons to :guilabel:`Add Post` or :guilabel:`Send Push` (push notifications) are also available.
 
 There is also a status located in the upper-right corner of the :guilabel:`Create Campaign` pop-up
 window.

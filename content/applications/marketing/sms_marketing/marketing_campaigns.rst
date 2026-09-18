@@ -89,17 +89,17 @@ edit its campaign template form.
    :align: center
    :alt: View of an SMS campaign template in Odoo SMS marketing.
 
-With each campaign, the options to :guilabel:`Send New Mailing`, :guilabel:`Send SMS`,
-:guilabel:`Send Social Post`, and :guilabel:`Push Notifications` are available above the template
-form.
+With each campaign, the options to :guilabel:`Send Mailing` and :guilabel:`Send SMS` are available
+above the template form.
 
 Whenever one of those communication options is added to the campaign, Odoo will create a new
 corresponding tab on the template form, where those types of messages can be reviewed or edited,
 along with various data sets related to each specific mailing.
 
 At the top of the template, there are various analytical smart buttons. When clicked, Odoo reveals
-in-depth metrics related to that specific topic (e.g. :guilabel:`Engagement`,
-:guilabel:`Opportunities`, etc.) on a separate page.
+in-depth metrics related to that specific topic (e.g. :guilabel:`Mailings`, :guilabel:`SMS`,
+:guilabel:`Clicks`, :guilabel:`Opportunities`, :guilabel:`Quotations`, or :guilabel:`Revenues`) on a
+separate page.
 
 Beneath the smart buttons, are fields for :guilabel:`Campaign Name` and :guilabel:`Responsible`.
 Odoo also allows for various :guilabel:`Tags` to be added, as well (if necessary).

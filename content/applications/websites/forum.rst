@@ -344,7 +344,6 @@ Click the ellipsis button (:guilabel:`...`) to:
     questions afterward.
   - :guilabel:`Flag` a question or answer as offensive.
   - :guilabel:`Convert` a comment into an answer.
-  - :guilabel:`View` the related :ref:`Helpdesk ticket <helpdesk/forum>`, if any.
 
 .. image:: forum/post-actions.png
    :alt: Posts actions

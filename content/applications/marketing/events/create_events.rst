@@ -19,8 +19,8 @@ New event
 
 To create a new event, begin by navigating to the :menuselection:`Events app` to land on the default
 :guilabel:`Events` dashboard, in the :icon:`oi-view-kanban` :guilabel:`Kanban` view. From there, or
-alternatively from the :icon:`oi-view-list` :guilabel:`List` or :icon:`fa-tasks` :guilabel:`Gantt`
-views, click the :guilabel:`New` button in the upper-left corner of the dashboard to open up a new
+alternatively from the :icon:`fa-calendar` :guilabel:`Calendar` or :icon:`oi-view-list`
+:guilabel:`List` views, click the :guilabel:`New` button in the upper-left corner of the dashboard to open up a new
 event form.
 
 .. image:: create_events/blank-event-template.png
@@ -31,8 +31,7 @@ event form.
    If certain fields do not readily appear on the event form, that means an additional application
    needs to be installed, or the database is not operating in a multi-company environment.
 
-   For example, the :guilabel:`Twitter Wall` field **only** appears if the *Social Marketing* app is
-   installed, and the :guilabel:`Company` field **only** appears if the database is working in a
+   For example, the :guilabel:`Company` field **only** appears if the database is working in a
    multi-company environment.
 
    These are just *additional* elements that can be used for an event. They are **not** required to
@@ -71,41 +70,6 @@ The following are fields found on an event form:
 - :guilabel:`Language`: designate a specific language for all event communications to be translated
   into, if necessary. This field is blank, by default, so if event-related communications are being
   sent to recipients who speak a different language, be sure to configure this field properly.
-- :guilabel:`Twitter Wall`: creates a separate page on the event website to feature specific social
-  posts on X (formerly Twitter) that contain pre-determined desired elements.
-
-  .. tip::
-     To create and customize a :guilabel:`Twitter Wall`, type the name of the desired wall into the
-     field, and select :guilabel:`Create and edit...` from the resulting drop-down menu.
-
-     Doing so reveals :guilabel:`Create Twitter Wall` pop-up window.
-
-     .. image:: create_events/twitter-wall-popup.png
-        :align: center
-        :alt: The Twitter Wall pop-up window in the Odoo Events application.
-
-     From this window, enter a :guilabel:`Wall Name`. Then, select a certain word or hashtag for
-     Odoo to search for on X, like `#WoodWorkingExpo24`, for example.
-
-     Next, determine the :guilabel:`Type of tweets` Odoo should showcase with that predetermined
-     criteria. The choices in this field are: :guilabel:`Recent`, :guilabel:`Popular`, or
-     :guilabel:`Mixed`.
-
-     Users also have the option to add a brief :guilabel:`Description` to the wall, as well.
-
-     Lastly, the greyed-out, non-modifiable :guilabel:`Website URL` field will autopopulate with the
-     full URL needed to access the document through the event website.
-
-     An image can also be added to the wall by clicking the :icon:`fa-pencil` :guilabel:`(pencil)`
-     icon that appears when the cursor hovers over the :guilabel:`(camera)` placeholder image in the
-     upper-right corner of the pop-up window.
-
-     Then, from the resulting file explorer window, select the desired image to be added to the
-     wall.
-
-     This :guilabel:`Twitter Wall` field **only** appears on the event form if the *Social
-     Marketing* app is installed, and an X account has been added as a stream on the application. To
-     learn more, check out the :doc:`Social Marketing <../social_marketing>` documentation.
 
 - :guilabel:`Template`: choose a pre-configured event template from the resulting drop-down menu.
 
@@ -235,7 +199,7 @@ can be scheduled to be sent at specific intervals leading up to, and following, 
 
 To add a communication in the :guilabel:`Communication` tab, click :guilabel:`Add a line`. Then,
 select the desired type of communication in the :guilabel:`Send` field. The options are:
-:guilabel:`Mail`, :guilabel:`SMS`, :guilabel:`Social Post`, or :guilabel:`WhatsApp`.
+:guilabel:`Mail` or :guilabel:`SMS`.
 
 There is no limit to the number of communications that can be added in the :guilabel:`Communication`
 tab of an event form.
@@ -244,13 +208,8 @@ To delete a communication from the :guilabel:`Communication` tab, click the :ico
 :guilabel:`(trash can)` icon on the corresponding communication line. Doing so removes the
 communication from the event entirely.
 
-.. important::
-   The :guilabel:`Social Post` option **only** appears if the *Social Marketing* application is
-   installed. The :guilabel:`WhatsApp` option **only** appears if the *WhatsApp Integration* module
-   is installed.
-
-   :doc:`WhatsApp <../../productivity/whatsapp>` templates **cannot** be edited during active
-   configuration. A separate approval from *Meta* is required.
+.. note::
+   The :guilabel:`SMS` option **only** appears if the *SMS Marketing* application is installed.
 
 Mail
 ~~~~

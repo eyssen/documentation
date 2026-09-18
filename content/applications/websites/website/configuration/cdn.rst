@@ -25,7 +25,7 @@ Status` to :guilabel:`active` to engage the zone. For the :guilabel:`Zone Type` 
 Locator)`.
 
 .. example::
-   Use ``https://yourdatabase.odoo.com`` and replace the *yourdatabase* subdomain prefix with the
+   Use ``https://yourdatabase.example.com`` and replace the *yourdatabase* subdomain prefix with the
    actual name of the database. A custom :abbr:`URL (Uniform Resource Locator)` can be used, as
    well, in place of the Odoo subdomain that was provided to the database.
 
@@ -97,7 +97,7 @@ below will appear in the web browser's developer console:
 
 ``Font from origin 'http://pulltest-xxxxx.kxcdn.com' has been blocked from loading /shop:1 by
 Cross-Origin Resource Sharing policy: No 'Access-Control-Allow-Origin' header is present on the
-requested resource. Origin 'http://yourdatabase.odoo.com' is therefore not allowed access.``
+requested resource. Origin 'http://yourdatabase.example.com' is therefore not allowed access.``
 
 .. image:: cdn/odoo-security-message.png
    :align: center

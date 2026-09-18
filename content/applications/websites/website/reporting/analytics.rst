@@ -17,45 +17,13 @@ via :menuselection:`Website --> Reporting --> Analytics`.
 Plausible.io
 ============
 
-Odoo hosts its own Plausible.io server and provides a free and ready-to-use Plausible.io
-solution for **Odoo Online** databases that use the odoo.com domain. Odoo automatically creates and
-sets up your account. Start using it by going to :menuselection:`Website --> Reporting -->
-Analytics`.
-
-.. note::
-   - If you use a custom :doc:`domain name <../configuration/domain_names>` (e.g., `example.com`),
-     you need to create your own Plausible.io account and subscription.
-   - **If you already have a Plausible.io account** and you want to connect it to your Odoo Online
-     database, you must create two `ir.config.parameters` to use Plausible.io's servers. To do so,
-     enable the :ref:`developer mode <developer-mode>` and go to :menuselection:`General Settings -->
-     Technical --> System Parameters`. Click :guilabel:`New` and fill in the following
-     :guilabel:`Key` and :guilabel:`Value` fields:
-
-     .. list-table::
-        :header-rows: 1
-
-        * - Key
-          - Value
-        * - `website.plausible_script`
-          - `https://plausible.io/js/plausible.js`
-        * - `website.plausible_server`
-          - `https://plausible.io`
-
-   Then, follow the steps below to connect your existing account with Plausible.io servers.
-
-   .. warning::
-      Deactivating the free Plausible.io account linked to your **Odoo Online** database
-      will also remove the existing keys. As a result, new keys will be generated, while all
-      historical data will remain associated with the old keys. If you plan to deactivate the
-      account, it is recommended to save the existing keys to preserve access to that data.
-
-If your database is hosted on **Odoo.sh** or **On-premise**, or if you wish to use your own
-Plausible.io account, proceed as follows:
+To use Plausible.io, create your own Plausible.io account (or use an existing one), then connect it
+to the database as follows:
 
 #. Create or sign in to a Plausible.io account using the following link: `<https://plausible.io/register>`_.
 #. If you are creating a new account, go through the registration and activation steps.
    On the :guilabel:`Add website info` page, add the :guilabel:`Domain` of your website without
-   including `www` (e.g., `example.odoo.com`) and change the :guilabel:`Reporting Timezone`,
+   including `www` (e.g., `example.com`) and change the :guilabel:`Reporting Timezone`,
    if necessary. Click :guilabel:`Install Plausible` to proceed to the next step. Ignore the
    :guilabel:`Manual installation` instructions and click :guilabel:`Start collecting data`.
 #. Once done, click the Plausible.io logo in the upper-left part of the page to access your `list of

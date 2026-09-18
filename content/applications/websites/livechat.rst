@@ -15,9 +15,6 @@ Enable Live Chat
 The **Live Chat** application can be installed multiple ways:
 
 - Go to the :menuselection:`Apps application`, search `Live Chat`, and click :guilabel:`Install`.
-- Go to the :menuselection:`Helpdesk app --> Configuration --> Helpdesk Teams` list view, select a
-  team, and on the team's settings page, click the checkbox next to :guilabel:`Live Chat`, under the
-  :guilabel:`Channels` section.
 - In the :menuselection:`Website` app, go to :menuselection:`Configuration --> Settings`, scroll to
   the :guilabel:`Email & Marketing` section, check the box next to :guilabel:`Livechat`, and click
   :guilabel:`Save`.
@@ -197,7 +194,7 @@ Fill out the fields on the :guilabel:`Create Rules` pop-up window as instructed 
       :guilabel:`URL Regex` field, input the relative URL of the page where the chat button should
       appear.
 
-      For example, to apply the rule to the URL, `https://mydatabse.odoo.com/shop`, enter `/shop` to
+      For example, to apply the rule to the URL, `https://mycompany.example.com/shop`, enter `/shop` to
       the :guilabel:`URL Regex` field.
 
       To apply the rule to *all* pages on the database, enter `/` in the :guilabel:`URL Regex`
@@ -217,8 +214,8 @@ Fill out the fields on the :guilabel:`Create Rules` pop-up window as instructed 
 
 .. note::
    In order to track the geographical location of visitors, *GeoIP* **must** be installed on the
-   database. While this feature is installed by default on *Odoo Online* databases, *On-Premise*
-   databases require additional :doc:`setup steps </administration/on_premise/geo_ip>`.
+   database. If the feature is not available, contact your hosting provider or system
+   administrator.
 
 .. _livechat/widget-tab:
 

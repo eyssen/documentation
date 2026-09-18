@@ -152,16 +152,6 @@ Team` drop-down field that appears to assign the created lead to a specific team
 .. note::
    This step is only available if the **CRM** application is installed on the database.
 
-Create Ticket
-~~~~~~~~~~~~~
-
-This step creates a ticket in the **Helpdesk** application (Enterprise). Select an option from the
-:guilabel:`Helpdesk Team` drop-down field that appears to assign the created ticket to a specific
-team.
-
-.. note::
-   This step is only available if the **Helpdesk** application is installed on the database.
-
 .. _livechat/chatbots/only-if:
 
 Only if

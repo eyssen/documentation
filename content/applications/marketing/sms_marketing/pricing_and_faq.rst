@@ -58,9 +58,6 @@ Or go to :menuselection:`Settings --> View my Services`.
    :align: center
    :alt: Using Odoo IAP to recharge credits for SMS Marketing in Odoo settings.
 
-.. tip::
-   If Odoo Online (Saas) is being used, along with the Enterprise version, free trial credits are
-   available to test the feature.
 
 More common questions
 =====================
@@ -111,6 +108,6 @@ More common questions
    | Please find our `Privacy Policy here <https://iap.odoo.com/privacy#sms>`__.
 
 #. | **Can I use my own SMS provider?**
-   | Yes, but it is not possible out-of-the-box. Odoo experts can help customize a database to allow
-     for the use of a personal SMS provider. Please check our success packs `here
-     <https://www.odoo.com/pricing-packs>`_.
+   | Yes, but it is not possible out-of-the-box: it requires a custom development. A Twilio
+     integration is available out of the box; see :doc:`twilio`. For other providers, contact your
+     support provider.

@@ -8,9 +8,6 @@ You can design your website by :ref:`dragging and dropping building blocks
 <website/building_blocks/add>`, then :ref:`editing them <website/building_blocks/edit>` to fit your
 content and layout needs.
 
-.. seealso::
-   `Odoo Tutorial: Design your website: text and colors <https://www.odoo.com/slides/slide/design-your-website-text-and-colors-6930?fullscreen=1>`_
-
 .. _website/building_blocks/add:
 
 Add a building block

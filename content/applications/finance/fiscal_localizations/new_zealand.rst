@@ -295,16 +295,6 @@ Industry-specific features
 
 .. _localizations/new_zealand/starshipit:
 
-Starshipit shipping
--------------------
-
-`Starshipit <https://starshipit.com/>`_ is a shipping service operator that facilitates the
-integration of Australasian shipping couriers with Odoo.
-
-.. seealso::
-   - `Starshipit webinar recording <https://www.youtube.com/watch?v=TcDWnoYLXWg>`_
-   - :doc:`Starshipit shipping <../../../applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping>`
-
 .. _localizations/new_zealand/buynow-paylater:
 
 Buy Now, Pay Later solutions

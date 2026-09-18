@@ -475,17 +475,6 @@ payment** made in Odoo.
 Industry-specific features
 ==========================
 
-Starshipit shipping
--------------------
-
-Starshipit is a shipping service operator that facilitates the integration of Australasian shipping
-couriers with Odoo. Refer to the :doc:`Starshipit documentation
-<../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping>` for
-detailed information.
-
-.. seealso::
-   `Starshipit Odoo webinar recording <https://www.youtube.com/watch?v=TcDWnoYLXWg>`_
-
 .. _australia/buynow_paylater:
 
 Buy Now, Pay Later solutions

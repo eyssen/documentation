@@ -24,8 +24,12 @@ If you choose to :guilabel:`Edit` a to-do, you have the option to add :guilabel:
    tool** with the keyboard shortcut ´ctrl+k´ and clicking :guilabel:`Add a To-Do`, or by clicking
    the clock button and then :guilabel:`Add a To-Do`.
 
-   .. image:: to_do/add-on-the-fly.png
-      :alt: Adding a to-do on the fly
+   .. screenshot:: productivity-to-do-add-on-the-fly
+      :menu: (any backend view)
+      :shows: The systray to-do input used to add a to-do without leaving the current screen.
+      :highlight: The to-do input (red frame).
+      :module: project_todo
+      :notes: English UI, light theme, 1440px width.
 
 Converting to-dos into project tasks
 ------------------------------------
@@ -36,8 +40,13 @@ To do so, open a to-do and click the gear button (:guilabel:`⚙`), then :guilab
 Next, select the :guilabel:`Project`, :guilabel:`Assignees`, and :guilabel:`Tags`, then click
 :guilabel:`Convert to Task`. The to-do is now a project task and appears in the selected project.
 
-.. image:: to_do/convert-task-button.png
-   :alt: Converting a to-do into a task
+.. screenshot:: productivity-to-do-convert
+   :menu: To-do
+   :shows: A to-do form with the "Convert to Task" button in the header.
+   :highlight: The "Convert to Task" button (red frame).
+   :data: To-do "Prepare quarterly report".
+   :module: project_todo
+   :notes: English UI, light theme, 1440px width.
 
 Managing the to-do pipeline
 ===========================
@@ -45,8 +54,12 @@ Managing the to-do pipeline
 Your assigned **to-dos** are displayed on the app dashboard. You can drag and drop a to-do to move
 it from one stage to another.
 
-.. image:: to_do/to-do-pipeline.png
-   :alt: Example of a to-do pipeline
+.. screenshot:: productivity-to-do-pipeline
+   :menu: To-do
+   :shows: The To-do kanban pipeline with the personal stages and several to-dos.
+   :data: Stages "Today", "This week", "Later" with two cards each.
+   :module: project_todo
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    - Click the :guilabel:`+ Personal Stage` button on the left of the pipeline to create a new
@@ -54,8 +67,12 @@ it from one stage to another.
    - Click the gear button (:guilabel:`⚙`) next to a stage to :guilabel:`Fold`, :guilabel:`Edit`,
      or :guilabel:`Delete` it.
 
-    .. image:: to_do/stage-options.png
-       :alt: Stage settings button
+    .. screenshot:: productivity-to-do-stage-options
+       :menu: To-do
+       :shows: The settings menu of a personal stage with its rename, fold and delete options.
+       :highlight: The stage settings menu (red frame).
+       :module: project_todo
+       :notes: English UI, light theme, 1440px width.
 
 Scheduling activities
 ---------------------
@@ -63,8 +80,12 @@ Scheduling activities
 To schedule an activity on a to-do, click the clock button on the app dashboard, then the
 :guilabel:`+ Schedule an activity` button.
 
-.. image:: to_do/schedule-activity.png
-   :alt: Scheduling an activity from the To-do dashboard
+.. screenshot:: productivity-to-do-schedule-activity
+   :menu: To-do
+   :shows: The "Schedule Activity" window opened from a to-do, with the activity type, due date, assignee and summary.
+   :data: Activity "To Do" due today.
+   :module: project_todo
+   :notes: English UI, light theme, 1440px width.
 
 To create the activity:
 
@@ -85,8 +106,12 @@ Viewing to-dos in the Project app
 If you use the :doc:`Project app <../services/project>`, your to-dos also appear as private tasks
 under the :guilabel:`My Tasks` view.
 
-.. image:: to_do/my-task-pipeline.png
-   :alt: Example of a "My Tasks" pipeline in the Project app
+.. screenshot:: productivity-to-do-my-tasks
+   :menu: Project ‣ My Tasks
+   :shows: The "My Tasks" pipeline in the Project app, with a padlock icon on the private tasks.
+   :highlight: The padlock icon (red frame).
+   :module: project_todo
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    A padlock icon is visible on your private tasks to quickly identify them among your project

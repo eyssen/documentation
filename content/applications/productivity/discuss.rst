@@ -62,8 +62,12 @@ conversation, or click :icon:`fa-phone` :guilabel:`Start a Call` to begin a meet
 At the top of the direct message window, click the name of the direct message to change the group
 name, and choose to add a description in the adjacent :guilabel:`Add a description` field.
 
-.. image:: discuss/conversation-actions.png
-   :alt: View of the conversation actions.
+.. screenshot:: productivity-discuss-conversation-actions
+   :menu: Discuss
+   :shows: A conversation in the Discuss app with the message actions (react, reply, mark as todo, expand) shown on a hovered message.
+   :highlight: The message actions (red frame).
+   :module: mail
+   :notes: English UI, light theme, 1440px width.
 
 
 .. note::
@@ -105,8 +109,13 @@ dashboard, click :guilabel:`Start a meeting` in the top-left corner, and select 
 meeting, via the :guilabel:`Invite People` drop-down window that appears. To start a meeting from a
 direct message, click the :icon:`fa-phone` :guilabel:`Start a Call` icon in the top-right corner.
 
-.. image:: discuss/meeting.png
-   :alt: View of a Meeting in Odoo Discuss.
+.. screenshot:: productivity-discuss-meeting
+   :menu: Discuss
+   :shows: An ongoing meeting in Discuss with the video area and the call control buttons below it.
+   :highlight: The call control buttons (red frame).
+   :data: Two participants.
+   :module: mail
+   :notes: English UI, light theme, 1440px width.
 
 Once a meeting has been started, the following buttons can be used:
 
@@ -138,8 +147,12 @@ User-specific notification preferences
 Access user-specific preferences for the **Discuss** app by navigating to :menuselection:`Settings
 app --> Manage Users`, select a user, then click the :guilabel:`Preferences` tab.
 
-.. image:: discuss/preferences-user.png
-   :alt: View of the Preferences tab for Odoo Discuss.
+.. screenshot:: productivity-discuss-preferences
+   :menu: Preferences
+   :shows: The Preferences tab of a user with the Notification field and the other Discuss-related preferences.
+   :highlight: The "Notification" field (red frame).
+   :module: mail
+   :notes: English UI, light theme, 1440px width.
 
 By default, the :guilabel:`Notification` field is set as :guilabel:`Handle by Emails`. With this
 setting enabled, a notification email is sent by Odoo every time a message is sent from the chatter
@@ -156,8 +169,12 @@ The **Discuss** application enables communication across all of Odoo's applicati
 and channels, or start a new message, select the speech bubbles that are consistently present in the
 upper-right corner of the database header.
 
-.. image:: discuss/discuss-in-other-apps.png
-   :alt: Use Discuss across other applications by clicking the speech bubbles.
+.. screenshot:: productivity-discuss-other-apps
+   :menu: (any backend view)
+   :shows: The systray speech-bubble icon that opens Discuss conversations from any app.
+   :highlight: The speech-bubble icon (red frame).
+   :module: mail
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`discuss/team_communication`

@@ -9,11 +9,6 @@ to reorganize products and load another truck.
 .. image:: cross_dock/cross1.png
    :align: center
 
-.. note::
-   For more information on how to organize your warehouse, read our blog: `What is cross-docking and
-   is it for me?
-   <https://www.odoo.com/blog/business-hacks-1/post/what-is-cross-docking-and-is-it-for-me-270>`_
-
 Configuration
 =============
 

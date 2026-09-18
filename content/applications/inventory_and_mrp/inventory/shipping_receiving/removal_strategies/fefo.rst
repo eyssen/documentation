@@ -80,7 +80,6 @@ Strategy` is set to :guilabel:`First Expired, First Out (FEFO)`.
 .. seealso::
    - :ref:`Set up force removal strategy <inventory/warehouses_storage/removal-config>`
    - :ref:`Enable lots tracking <inventory/warehouses_storage/lots-setup>`
-   - `Odoo Tutorials: Perishable Products <https://www.odoo.com/slides/slide/5324/share>`_
 
 .. list-table::
    :header-rows: 1

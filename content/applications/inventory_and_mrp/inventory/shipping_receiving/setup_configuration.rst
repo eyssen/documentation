@@ -12,13 +12,11 @@ delivery timeframe.
 When activated in Odoo, the *Delivery Methods* setting adds the option of calculating the cost of
 shipping on sales orders and e-commerce shopping carts.
 
-When integrated with a :ref:`third-party carrier <inventory/shipping/third_party>`, shipping prices
-are calculated based on the carrier's pricing information.
+When integrated with a :ref:`carrier connector <inventory/shipping/third_party>`, shipping prices are
+calculated based on the carrier's own pricing information.
 
 .. seealso::
-   - :ref:`Third-party shipping carrier setup <inventory/shipping/third_party>`
-   - `Odoo Tutorials: Delivery Prices
-     <https://www.odoo.com/slides/slide/delivery-prices-613?fullscreen=1>`_
+   :ref:`Shipping carrier connectors <inventory/shipping/third_party>`
 
 Configuration
 =============
@@ -87,21 +85,13 @@ the warehouse delivery form. To add or change the delivery method on the deliver
    setup_configuration/new_delivery_method
    setup_configuration/third_party_shipper
    setup_configuration/labels
-   setup_configuration/bpost
    setup_configuration/custom
-   setup_configuration/dhl_credentials
-   setup_configuration/envia_shipping
-   setup_configuration/fedex
    setup_configuration/foxpost
    setup_configuration/gls
    setup_configuration/mpl
-   setup_configuration/sendcloud_shipping
-   setup_configuration/starshipit_shipping
-   setup_configuration/ups_credentials
    setup_configuration/zebra
    setup_configuration/cancel
    setup_configuration/invoicing
-   setup_configuration/label_type
    setup_configuration/multipack
    setup_configuration/print_on_validation
    setup_configuration/dispatch

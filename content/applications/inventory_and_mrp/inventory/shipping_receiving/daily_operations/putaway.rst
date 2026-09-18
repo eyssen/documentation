@@ -14,9 +14,6 @@ In warehouses that process specific kinds of products, putaway rules can also pr
 substances from being stored in close proximity, by directing them to different locations determined
 by the warehouse manager.
 
-.. seealso::
-   `Odoo Tutorials: Putaway Rules <https://www.youtube.com/watch?v=nCQMf6sj_w8>`_
-
 Configuration
 =============
 

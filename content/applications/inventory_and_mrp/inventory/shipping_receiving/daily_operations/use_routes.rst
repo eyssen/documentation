@@ -7,8 +7,7 @@ external, using push and pull rules. Once set up, these rules help automate the 
 movement based on specific conditions.
 
 .. seealso::
-   - `Odoo Tutorials: Routes <https://www.youtube.com/watch?v=qkhDUezyZuc>`_
-   - :doc:`Standard routes in Odoo <../daily_operations>`
+   :doc:`Standard routes in Odoo <../daily_operations>`
 
 .. note::
    Routes are applicable on products, product categories, shipping methods, :ref:`packagings

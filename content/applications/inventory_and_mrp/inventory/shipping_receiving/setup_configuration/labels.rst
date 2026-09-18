@@ -5,9 +5,9 @@ Print shipping labels
 .. |DO| replace:: :abbr:`DO (Delivery Order)`
 .. |SO| replace:: :abbr:`SO (Sales Order)`
 
-Integrate Odoo with :doc:`third-party shipping carriers
-<../setup_configuration/third_party_shipper>` to automatically generate shipping labels that
-includes prices, destination addresses, tracking numbers, and barcodes.
+Integrate Odoo with a :doc:`shipping carrier connector <../setup_configuration/third_party_shipper>`
+to automatically generate shipping labels that include prices, destination addresses, tracking
+numbers, and barcodes.
 
 .. seealso::
    :ref:`Automatically print shipping carrier labels <inventory/shipping_receiving/carrier-labels>`
@@ -15,8 +15,8 @@ includes prices, destination addresses, tracking numbers, and barcodes.
 Configuration
 =============
 
-To generate labels for a third-party shipping carrier, first :doc:`install the third-party shipping
-connector <../setup_configuration/third_party_shipper>`. Then, configure and activate the
+To generate labels for a shipping carrier, first :doc:`install the carrier connector
+<../setup_configuration/third_party_shipper>`. Then, configure and activate the
 :ref:`delivery method <inventory/shipping_receiving/configure-delivery-method>`, being sure to set
 the :guilabel:`Integration Level` to :guilabel:`Get Rate and Create Shipment` to generate shipping
 labels. Finally, provide the company's :ref:`source address
@@ -41,7 +41,7 @@ validating the picking or packing operation. To do that, go to :menuselection:`I
 Configuration --> Operations Types`, and choose the desired operation.
 
 On the :guilabel:`Operation Type` configuration page, tick the :guilabel:`Print Label` checkbox.
-Enabling this feature ensures that the third-party shipping label is printed upon validating this
+Enabling this feature ensures that the carrier's shipping label is printed upon validating this
 operation.
 
 .. example::
@@ -72,7 +72,7 @@ or another operation type when using multi-step delivery — to validate the ope
 label.
 
 If only the *Inventory* app is installed, create :abbr:`DOs (Delivery Orders)` directly in the
-:menuselection:`Inventory` app, :ref:`add the third-party carrier
+:menuselection:`Inventory` app, :ref:`add the carrier
 <inventory/shipping_receiving/validate-print-label>` in the :guilabel:`Carrier` field, and validate
 the |DO|.
 
@@ -94,8 +94,8 @@ drop-down menu. The :guilabel:`Total Order Weight` field is automatically popula
 :ref:`weight of products in the order <inventory/shipping_receiving/configure-weight>`. Modify this
 field to overwrite the predicted weight, and use this weight to estimate the cost of shipping.
 
-Next, click :guilabel:`Get Rate` to display the shipping cost for the customer, via the third-party
-carrier in the :guilabel:`Cost` field.
+Next, click :guilabel:`Get Rate` to display the shipping cost for the customer, as returned by the
+carrier, in the :guilabel:`Cost` field.
 
 .. important::
    If clicking :guilabel:`Get Rate` results in an error, ensure the :ref:`warehouse's address
@@ -125,11 +125,11 @@ delivery product <inventory/shipping_receiving/delivery-product>`. Finally, clic
 Validate delivery order
 -----------------------
 
-On a delivery order form, navigate to the :guilabel:`Additional Info` tab to ensure the third-party
-shipping carrier has been added to the :guilabel:`Carrier` field.
+On a delivery order form, navigate to the :guilabel:`Additional Info` tab to ensure the shipping
+carrier has been added to the :guilabel:`Carrier` field.
 
 .. important::
-   If the *Sales* app is not installed, the third-party carrier is set in the :guilabel:`Carrier`
+   If the *Sales* app is not installed, the carrier is set directly in the :guilabel:`Carrier`
    field.
 
 After the items in the order have been packed, click :guilabel:`Validate` to get the shipping
@@ -155,9 +155,9 @@ The tracking label is found in PDF format in the chatter.
 
 .. figure:: labels/sample-label.png
    :align: center
-   :alt: Sample label generated from Odoo's shipping connector with FedEx.
+   :alt: Sample label generated from a carrier connector.
 
-   Sample label generated from Odoo's shipping connector with FedEx.
+   Sample label generated from a carrier connector.
 
 .. seealso::
    - :doc:`invoicing`

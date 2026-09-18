@@ -6,8 +6,7 @@ The *Least Packages* removal strategy fulfills an order by opening the fewest nu
 which is ideal for maintaining organized stock without needing to open multiple boxes.
 
 .. seealso::
-   - :doc:`About removal strategies <../removal_strategies>`
-   - `Odoo Tutorials: Least Packages <https://www.odoo.com/slides/slide/5477/share>`_
+   :doc:`About removal strategies <../removal_strategies>`
 
 To understand how the removal strategy works, consider the following example, featuring a warehouse
 that stores packages of flour in bulk packages of `100 kg`.

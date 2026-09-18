@@ -1,64 +1,54 @@
-=============================
-Third-party shipping carriers
-=============================
+===========================
+Shipping carrier connectors
+===========================
 
 .. |SO| replace:: :abbr:`SO (Sales Order)`
 .. |DO| replace:: :abbr:`DO (Delivery Order)`
 
 .. _inventory/shipping/third_party:
 
-Users can link third-party shipping carriers to Odoo databases, in order to verify carriers'
-delivery to specific addresses, :doc:`automatically calculate shipping costs
-<../setup_configuration>`, and :doc:`generate shipping labels <labels>`.
+A *shipping carrier connector* links Odoo to a carrier's own system, so that Odoo can verify whether
+the carrier delivers to a given address, :doc:`automatically calculate shipping costs
+<../setup_configuration>`, :doc:`generate shipping labels <labels>`, and receive tracking numbers.
 
-In Odoo, shipping carriers can be applied to a sales order (SO), invoice, or delivery order. For
-tips on resolving common issues when configuring shipping connectors, skip to the
-:ref:`Troubleshooting <inventory/shipping_receiving/third-party-troubles>` section.
+Carrier connectors can be applied to a sales order (SO), invoice, or delivery order. For tips on
+resolving common issues when configuring a connector, skip to the :ref:`Troubleshooting
+<inventory/shipping_receiving/third-party-troubles>` section.
 
-.. seealso::
-   - :doc:`dhl_credentials`
-   - :doc:`sendcloud_shipping`
-   - :doc:`ups_credentials`
-
-The following is a list of available shipping connectors in Odoo:
+The following carrier connectors are available:
 
 .. list-table::
    :header-rows: 1
    :stub-columns: 1
 
    * - Carrier
+     - Module
      - Region availability
-   * - :doc:`DHL Express <dhl_credentials>`
-     - All
-   * - :doc:`Envia.com <envia_shipping>`
-     - All
-   * - :doc:`FedEx <fedex>`
-     - All
-   * - :doc:`UPS <ups_credentials>`
-     - All
-   * - US Postal Service
-     - United States of America
-   * - :doc:`Sendcloud <sendcloud_shipping>`
-     - Some European countries (see details below)
-   * - :doc:`Bpost <bpost>`
-     - Belgium
-   * - Easypost
-     - North America
-   * - Shiprocket
-     - India
-   * - :doc:`Starshipit <starshipit_shipping>`
-     - Australia and New Zealand
+   * - :doc:`GLS <gls>`
+     - *Delivery GLS* (`eyssen_delivery_gls`)
+     - Hungary and GLS parcel-shop countries
+   * - :doc:`MPL <mpl>` (Magyar Posta)
+     - *Delivery MPL* (`eyssen_delivery_mpl`)
+     - Hungary
+   * - :doc:`Foxpost <foxpost>`
+     - *Delivery Foxpost* (`eyssen_delivery_foxpost`)
+     - Hungary
+   * - :doc:`Custom carrier <custom>`
+     - *Delivery Custom* (`eyssen_delivery_custom`)
+     - Any carrier that accepts a printed label
+   * - Mondial Relay
+     - *Mondial Relay* (`delivery_mondialrelay`)
+     - France and neighboring countries
 
-.. important::
-   Other services from DHL are **not** supported.
-
-   Sendcloud currently supports shipping **from** Austria, Belgium, France, Germany, Italy, the
-   Netherlands, Spain, and the United Kingdom, and **to** any European country.
+.. note::
+   Carriers without a connector are still usable: configure them as a :ref:`Fixed Price
+   <inventory/shipping/fixed>` or :ref:`Based on Rules <inventory/shipping/rules>` delivery method,
+   or use the :doc:`custom carrier <custom>` module to print a label with the carrier's own layout.
 
 Configuration
 =============
 
-To ensure proper setup of a third-party shipping carrier with Odoo, follow these steps:
+To set up a carrier connector, follow these steps:
 
 #. :ref:`Install the shipping connector <inventory/shipping_receiving/shipping-connector>`.
 #. :ref:`Set up delivery method <inventory/shipping_receiving/configure-delivery-method>`.
@@ -71,20 +61,18 @@ To ensure proper setup of a third-party shipping carrier with Odoo, follow these
 Install shipping connector
 --------------------------
 
-To install shipping connectors, go to :menuselection:`Inventory app --> Configuration --> Settings`.
-
-Under the :guilabel:`Shipping Connectors` section, tick the third-party shipping carrier's checkbox
-to install it. Multiple third-party shipping connectors can be selected at once. Then, click
-:guilabel:`Save`.
+Each carrier connector is a separate module. To install one, :ref:`install the module
+<general/install>` listed in the table above from the :menuselection:`Apps` application (for example,
+`Delivery GLS`). Installing a connector also installs the *Delivery Costs* module it depends on.
 
 .. note::
-   :doc:`Delivery methods <../setup_configuration>` can also be integrated with operations in the
-   *Sales*, *eCommerce*, and *Website* apps. To install, refer to the :ref:`install apps and modules
-   <general/install>` documentation.
+   The :guilabel:`Shipping Connectors` block on the :menuselection:`Inventory app --> Configuration
+   --> Settings` page lists connectors that are not part of this database; install the connector
+   modules from :menuselection:`Apps` instead.
 
-.. image:: third_party_shipper/shipping-connectors.png
-   :align: center
-   :alt: Options of available shipping connectors in Odoo.
+.. note::
+   :doc:`Delivery methods <../setup_configuration>` are also used by the *Sales*, *eCommerce*, and
+   *Website* apps.
 
 .. _inventory/shipping_receiving/configure-delivery-method:
 
@@ -115,13 +103,13 @@ delivery method.
 
 The :guilabel:`Shipping Method` page contains details about the provider, including:
 
-- :guilabel:`Shipping Method` (*Required field*): the name of the delivery method (e.g. `FedEx US`,
-  `FedEx EU`, etc.).
+- :guilabel:`Shipping Method` (*Required field*): the name of the delivery method (e.g. `GLS Home
+  Delivery`, `GLS ParcelShop`, etc.).
 - :guilabel:`Website`: configure shipping methods for an *eCommerce* page that is connected to a
   specific website in the database. Select the applicable website from the drop-down menu, or leave
   it blank to apply the method to all web pages.
-- :guilabel:`Provider` (*Required field*): choose the third-party delivery service, like FedEx. Upon
-  choosing a provider, the :guilabel:`Integration Level`, :guilabel:`Invoicing Policy` and
+- :guilabel:`Provider` (*Required field*): choose the delivery service, like GLS. Upon choosing a
+  provider, the :guilabel:`Integration Level`, :guilabel:`Invoicing Policy` and
   :guilabel:`Insurance Percentage` fields become available.
 - :guilabel:`Integration Level`: choose :guilabel:`Get Rate` to simply get an :ref:`estimated
   shipment cost <inventory/shipping_receiving/third-party-so>` on an |SO| or invoice.
@@ -151,15 +139,15 @@ The :guilabel:`Shipping Method` page contains details about the provider, includ
    **Shipping Method** configuration page for `FedEx US`.
 
 In the :guilabel:`Configuration` tab, fill out the API credential fields (e.g. API key, password,
-account number, etc.). Depending on the third-party shipping carrier chosen in the
-:guilabel:`Provider` field, the :guilabel:`Configuration` tab will contain different required
-fields. For more details about configuring specific carriers' credentials, refer to the following
-documents:
+account number, etc.). Depending on the carrier chosen in the :guilabel:`Provider` field, the
+:guilabel:`Configuration` tab contains different required fields. For details about configuring a
+specific carrier's credentials, refer to the following documents:
 
 .. seealso::
-   - :doc:`DHL credentials <dhl_credentials>`
-   - :doc:`Sendcloud credentials <sendcloud_shipping>`
-   - :doc:`UPS credentials <ups_credentials>`
+   - :doc:`GLS configuration <gls>`
+   - :doc:`MPL configuration <mpl>`
+   - :doc:`Foxpost configuration <foxpost>`
+   - :doc:`Custom carrier <custom>`
 
 .. _inventory/shipping_receiving/production-env:
 
@@ -170,10 +158,9 @@ With the delivery method details configured, click the :guilabel:`Test Environme
 set it to :guilabel:`Production Environment`.
 
 .. warning::
-   Setting the delivery method to :guilabel:`Production` creates **real** shipping labels, and users
-   are at risk of being charged through their carrier account (e.g. UPS, FedEx, etc.) **before**
-   users charge customers for shipping. Verify all configurations are correct before launching the
-   delivery method to :guilabel:`Production`.
+   Setting the delivery method to :guilabel:`Production` creates **real** shipping labels, and the
+   carrier account may be charged **before** the customer is charged for shipping. Verify all
+   configurations are correct before switching the delivery method to :guilabel:`Production`.
 
 .. image:: third_party_shipper/production.png
    :align: center
@@ -219,12 +206,12 @@ the :guilabel:`Logistics` section.
 
 .. _inventory/shipping_receiving/apply-third-party-carrier:
 
-Apply third-party shipping carrier
-==================================
+Apply a shipping carrier
+========================
 
 Shipping carriers can be applied on a :abbr:`SO (Sales Order)`, invoice, or delivery order.
 
-After configuring the third-party carrier's :ref:`delivery method
+After configuring the carrier's :ref:`delivery method
 <inventory/shipping_receiving/configure-delivery-method>` in Odoo, create or navigate to a quotation
 by going to :menuselection:`Sales app --> Orders --> Quotations`.
 
@@ -233,9 +220,9 @@ by going to :menuselection:`Sales app --> Orders --> Quotations`.
 Sales order
 -----------
 
-To assign a third-party shipping carrier, and get an estimated cost of shipping, begin by going to
+To assign a shipping carrier, and get an estimated cost of shipping, begin by going to
 :menuselection:`Sales app --> Orders --> Quotations`. Create or select an existing quotation, and
-add the cost of shipping through a third-party carrier to a quotation, by clicking the
+add the cost of shipping through a carrier connector to a quotation, by clicking the
 :guilabel:`Add Shipping` button in the bottom-right corner of the :guilabel:`Order Lines` tab.
 
 .. image:: third_party_shipper/add-shipping.png
@@ -253,7 +240,7 @@ based on:
 
 .. _inventory/shipping_receiving/third-party-rate:
 
-After selecting a third-party provider in the :guilabel:`Shipping Method` field, click
+After selecting a connected provider in the :guilabel:`Shipping Method` field, click
 :guilabel:`Get Rate` in the :guilabel:`Add a shipping method` pop-up window to get the estimated
 cost through the shipping connector. Then, click the :guilabel:`Add` button to add the delivery
 charge to the |SO| or invoice.
@@ -272,8 +259,8 @@ delivery order, by first going to the :menuselection:`Inventory` app. Then, from
 choose the desired delivery order that is not already marked as :guilabel:`Done` or
 :guilabel:`Cancelled`.
 
-In the :guilabel:`Additional info` tab, set the :guilabel:`Carrier` field to the desired third-party
-shipping carrier. When the delivery method is set to :ref:`production mode
+In the :guilabel:`Additional info` tab, set the :guilabel:`Carrier` field to the desired shipping
+carrier. When the delivery method is set to :ref:`production mode
 <inventory/shipping_receiving/configure-delivery-method>`, a :guilabel:`Tracking Reference` is
 provided.
 
@@ -307,8 +294,8 @@ things are not working as expected:
 
    .. example::
       When checking for a price mismatch in the debug logs, if the request says the package weighs
-      six kilograms, but the response from FedEx says the package weights seven kilograms, it
-      concludes that the issue is on FedEx's side.
+      six kilograms, but the carrier's response says the package weighs seven kilograms, the issue
+      is on the carrier's side.
 
 Debug log
 ---------

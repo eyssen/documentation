@@ -1,289 +1,228 @@
-:show-content:
-
-====================
+=====================
 Bank synchronization
-====================
+=====================
 
-Odoo synchronizes directly with your bank institution to automatically import all bank transactions
-into the database. It supports over 26,000 financial institutions worldwide and relies on multiple
-:ref:`third-party providers <accounting/bank-synchronization/third-party-providers>` to connect with
-banks.
+Odoo can fetch your bank transactions automatically instead of having you upload a statement file
+every day. The *Online Bank Sync* modules connect a bank or payment account to an Odoo journal,
+poll the provider at a fixed interval, and create the matching bank statement lines, ready for
+:doc:`reconciliation <reconciliation>`.
+
+The feature is split in two layers:
+
+- **Online Bank Sync** (``account_bank_sync``) provides the connections, the remote accounts, the
+  journal mapping, the scheduled import, and the secure storage of the provider credentials.
+- A **provider module** implements one specific institution or aggregator. Two are available:
+
+  - **Nyíltbankolás Partner** (``account_bank_sync_bankszamlakivonat``) — a multi-bank aggregator
+    covering the Hungarian banks through the `bankszamlakivonat.hu` service.
+  - **Wise** (``account_bank_sync_wise``) — the Wise (formerly TransferWise) multi-currency
+    balances, including outbound payouts.
 
 .. note::
-   To use this service, a valid Odoo Enterprise subscription is required.
+   Online synchronization requires at least one provider module. If your bank is not covered by a
+   provider, :doc:`import the statement files <statement_import>` instead.
 
-.. tip::
-   To check if your bank is compatible with Odoo, go to `Odoo Accounting Features
-   <https://www.odoo.com/app/accounting-features#part_5>`_, and click :guilabel:`See list of
-   supported institutions` in the :guilabel:`Bank & Cash` section.
+.. _accounting/bank-sync/access-rights:
 
-.. seealso::
-   :doc:`transactions`
-
-.. _accounting/bank-synchronization/configuration:
-
-Configuration
+Access rights
 =============
 
-.. _accounting/bank-synchronization/first-synchronization:
+Synchronization introduces its own access groups, which you assign under :menuselection:`Settings
+--> Users & Companies --> Users` in the :guilabel:`Online Bank Sync` category:
 
-First synchronization
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
+
+   * - Group
+     - Rights
+   * - :guilabel:`Bank Sync / User`
+     - Read the synchronization status and results. No access to credentials.
+   * - :guilabel:`Bank Sync / Manager`
+     - Configure connections, accounts, and the journal mapping. Required to see the
+       :guilabel:`Bank Sync` menu.
+   * - :guilabel:`Bank Sync / Payment Approver`
+     - Approve and send outbound payouts.
+   * - :guilabel:`Bank Sync / Admin`
+     - Read and write the provider credentials and secrets.
+
+.. _accounting/bank-sync/connection:
+
+Create a connection
+===================
+
+Go to :menuselection:`Accounting --> Bank Sync --> Connections` and click :guilabel:`New`. Fill out:
+
+- :guilabel:`Name`: a label of your choice, e.g. the name of the bank.
+- :guilabel:`Provider`: the provider module handling this institution.
+- :guilabel:`Environment`: :guilabel:`Sandbox` for testing, :guilabel:`Production` for live data.
+- The :guilabel:`Credentials` section, whose fields depend on the selected provider. Credentials are
+  only visible to the :guilabel:`Bank Sync / Admin` group.
+
+The :guilabel:`Capabilities` section is filled in by the provider module and tells you what the
+connection supports: :guilabel:`Supports statement pull`, :guilabel:`Supports FX rates`,
+:guilabel:`Supports webhooks`, and :guilabel:`Supports payouts`.
+
+Click :guilabel:`Test connection` to verify the credentials. The :guilabel:`Status` bar moves from
+:guilabel:`Draft` to :guilabel:`Connected`; if the provider refuses the credentials, the status
+becomes :guilabel:`Error` and the reason is shown in :guilabel:`Last error`. A connection whose
+authorization has run out is set to :guilabel:`Expired` and must be renewed with the provider.
+
+.. screenshot:: accounting-bank-sync-connection
+   :menu: Accounting ‣ Bank Sync ‣ Connections ‣ (open a connection)
+   :shows: A connection form in state "Connected", with the Name, Provider, Environment, Last
+      refresh fields, a filled Credentials section and the four Capabilities checkboxes.
+   :highlight: The status bar and the "Test connection" / "Discover accounts" buttons.
+   :data: Connection "OTP – Nyíltbankolás", provider "Nyíltbankolás Partner", environment
+      "Production".
+   :module: account_bank_sync, account_bank_sync_bankszamlakivonat
+   :notes: English UI, light theme, 1440px width; use a throw-away API key.
+
+.. _accounting/bank-sync/nyiltbankolas:
+
+Nyíltbankolás Partner
 ---------------------
 
-To synchronize the database with a bank, go to the Accounting Dashboard, click the
-:icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon of the :guilabel:`Bank` journal, and
-:guilabel:`Connect bank`. In the :guilabel:`Search for an institution` window, select the relevant
-bank and click :guilabel:`Connect`.
+The aggregator connects to the Hungarian banks on your behalf. Enter the :guilabel:`Entity id` and
+the :guilabel:`API key` you received from the service, then click :guilabel:`Get connection code`.
+Odoo requests a connection code, which is displayed in the :guilabel:`Connection code` field: use it
+on the provider's site to authorize your bank accounts. Once the authorization is done, click
+:guilabel:`Refresh / discover` to pull the list of authorized accounts into Odoo.
 
-.. tip::
-   - Alternatively, go to :menuselection:`Accounting --> Configuration --> Add a Bank Account` or
-     click :guilabel:`Search over 26000 banks` in the Accounting dashboard.
-   - Depending on your bank and country, you can select the :guilabel:`Type of account` and/or
-     choose another :ref:`third-party provider <accounting/bank-synchronization/third-party-providers>`
-     to connect with the bank if needed before clicking :guilabel:`Connect`.
-   - If your bank is not listed in the :guilabel:`Search for an institution` window, scroll down the
-     list and click :icon:`fa-plus` :guilabel:`Add new bank` to create a bank account manually. Fill
-     in the :guilabel:`Account Number`, :guilabel:`Bank`, and :guilabel:`SWIFT Code` and click
-     :guilabel:`Connect`. A bank journal is then created and named using the account number. Note
-     that in this case, the bank is not synchronized.
-   - If issues occur during the first synchronization, check that no firewall or proxy is blocking
-     the address https://production.odoofin.com/. Make sure your web browser allows pop-ups and that
-     any ad-blocker is disabled.
+.. _accounting/bank-sync/wise:
+
+Wise
+----
+
+Enter the :guilabel:`Wise profile id` and the :guilabel:`API token`. For payouts, Wise also requires
+a :guilabel:`Private key` used to sign strong-customer-authentication challenges, and for webhook
+delivery the :guilabel:`Webhook public key` published by Wise for the chosen environment. Use
+:guilabel:`Subscribe webhooks` to register Odoo with Wise so that new transactions trigger an
+immediate refresh, and :guilabel:`Unsubscribe webhooks` to stop them.
 
 .. important::
-   When setting up bank synchronization, accounting transactions are automatically recorded from the
-   date of the last transaction +1 day (e.g., if the last transaction date is 31/12/2025, the
-   recording starts on 01/01/2026). If the journal contains no transactions, all available past
-   transactions are retrieved. To limit the retrieval period, go to :menuselection:`Accounting -->
-   Accounting --> Lock Dates`, and set a date in the :guilabel:`Lock Everything` field.
+   Webhook events are delivered to `/bank_sync/webhook/<provider>` on your database. Signature
+   verification fails closed: an event that cannot be verified is rejected. Ask your system
+   administrator to make sure this address is reachable from the internet.
 
-.. note::
-   - Some banks are in a :guilabel:`Beta` status, meaning they're not yet fully supported by
-     third-party providers. This may lead to bugs or other issues. Although they can be used, Odoo
-     does not provide technical support in this case.
-   - The :ref:`third-party provider <accounting/bank-synchronization/third-party-providers>` may
-     request more information to connect with a bank. This information is not stored on Odoo's
-     servers.
-   - To view all past synchronizations, activate the :ref:`developer mode <developer-mode>` and go to
-     :menuselection:`Accounting --> Configuration --> Online Synchronization`.
+.. _accounting/bank-sync/accounts:
 
-.. _accounting/bank-synchronization/manual-synchronization:
+Map the remote accounts to journals
+===================================
 
-Manual synchronization
-----------------------
+On a connected connection, click :guilabel:`Discover accounts`. Odoo queries the provider and
+creates one :guilabel:`Bank Sync Account` record per remote account or balance. Open
+:menuselection:`Accounting --> Bank Sync --> Accounts` and set, for each of them:
 
-After the :ref:`first synchronization <accounting/bank-synchronization/first-synchronization>`, bank
-journals are synchronized by default every twelve hours. To manually trigger synchronization, go to
-the Accounting dashboard and click :guilabel:`Fetch Transactions` on the relevant bank journal.
+- :guilabel:`Journal`: the bank journal in which the transactions are booked. **Nothing is imported
+  until a journal is set.**
+- :guilabel:`Sync enabled`: activates the scheduled import for this account.
+- :guilabel:`Sync every`: the polling interval (for example, 1 hour).
 
-.. tip::
-   Alternatively, activate the :ref:`developer mode <developer-mode>`, go to
-   :menuselection:`Accounting --> Configuration --> Online Synchronization`, select the relevant
-   bank, and click :guilabel:`Fetch transactions`.
+The list view shows :guilabel:`Last successful run` and a colored :guilabel:`Last state` badge
+(:guilabel:`Ok`, :guilabel:`Error`, :guilabel:`Stale`), so you can spot an account that has stopped
+importing at a glance.
 
-.. note::
-   - Some banks do not support automatic transaction fetching. For these institutions, an error
-     message appears during the automatic account synchronization, prompting the user to disable the
-     automatic synchronization. This message is also logged in the chatter of the online
-     synchronization. In such cases, disable the :guilabel:`Automatic synchronization` option in the
-     corresponding bank's :guilabel:`Online Synchronization` and make sure to perform manual
-     synchronizations by clicking :guilabel:`Fetch Transactions` on the relevant bank journal.
-   - For some bank institutions, transactions can only be fetched up to three months in the past. If
-     older transactions are needed, they can be :ref:`imported <transactions/import>`.
+.. screenshot:: accounting-bank-sync-accounts
+   :menu: Accounting ‣ Bank Sync ‣ Accounts
+   :shows: The Accounts list with three rows: connection, account name, currency, mapped journal,
+      the "Sync enabled" toggle, the last successful run and the colored state badges (one "Ok",
+      one "Error").
+   :highlight: The "Last state" column (red frame).
+   :data: Two HUF accounts mapped to "Bank" and "Bank (OTP)", one EUR Wise balance.
+   :module: account_bank_sync
+   :notes: English UI, light theme, 1440px width.
 
-.. _accounting/bank-synchronization/update-credentials:
+.. _accounting/bank-sync/run:
 
-Update synchronization credentials
-----------------------------------
+Run a synchronization
+=====================
 
-To update bank credentials, activate the :ref:`developer mode <developer-mode>`, and go to
-:menuselection:`Accounting --> Configuration --> Online Synchronization`. Open the connection that
-needs to be updated, click :guilabel:`Update Credentials`, and follow the steps.
+There are three ways a synchronization runs:
 
-.. note::
-   - The steps may vary depending on the third-party provider, as each provider follows its own
-     process.
-   - When updating bank credentials, make sure all accounts are selected for synchronization,
-     including those from other banking institutions if applicable.
+- **Scheduled**: the *Online Bank Sync: pull statements* scheduled action checks every 15 minutes
+  which accounts are due and imports them. This scheduled action is **disabled by default**; ask
+  your system administrator to enable it once the mapping is in place.
+- **Manual**: click :guilabel:`Sync now` on the account form, or on the journal card of the
+  :guilabel:`Accounting Dashboard`.
+- **Webhook-triggered**: for providers supporting webhooks, an incoming event flags the account and
+  the next scheduled run imports it immediately, even when periodic polling is off.
 
-.. _accounting/bank-synchronization/third-party-providers:
+Each run fetches the transactions since the last successful run, with a 48-hour overlap so that
+transactions the bank posts late are not missed. Importing is **idempotent**: a transaction already
+present in the journal is skipped, so running a synchronization twice never creates duplicates.
 
-Third-party providers
----------------------
+If a run fails, the account is set to :guilabel:`Error` and the message is stored in
+:guilabel:`Last error`; the other accounts are not affected. Credentials and tokens are removed from
+the stored messages.
 
-Odoo relies on third-party providers to securely connect to your bank accounts and automatically
-import transactions and financial data into the database. The following providers are used:
+.. _accounting/bank-sync/payouts:
 
-- `Plaid <https://plaid.com/discover-apps/>`_ (supported in the `United States of America and Canada
-  <https://plaid.com/docs/institutions/>`_)
-- `Yodlee <https://www.yodlee.com/>`_ (supported in Europe)
-- `Salt Edge <https://www.saltedge.com/>`_ (supported `worldwide
-  <https://www.saltedge.com/products/account_information/coverage>`_)
-- :doc:`Ponto <bank_synchronization/ponto>` (supported in Europe)
-- `Enable Banking <https://enablebanking.com/>`_ (supported in `Scandinavian countries
-  <https://enablebanking.com/open-banking-apis>`_)
+Outbound payouts
+================
 
-.. tip::
-   When :ref:`connecting a bank to Odoo <accounting/bank-synchronization/first-synchronization>`:
+Providers that support payouts (currently Wise) can also send money out of Odoo. Because this moves
+real funds, payouts are protected by a maker–checker workflow.
 
-   - Depending on your bank and country, change the default third-party provider when selecting the
-     bank, if necessary.
-   - Make sure to check the consent checkbox to allow information to be shared with Odoo.
-   - Select all accounts that need access and synchronization, including those from other banking
-     institutions.
+Configuration
+-------------
 
-.. seealso::
-   - :ref:`Bank synchronization troubleshooting <accounting/bank-synchronization/troubleshooting>`
-   - :ref:`Salt Edge bank synchronization troubleshooting
-     <accounting/bank-synchronization/troubleshooting-saltedge>`
-   - :ref:`Ponto bank synchronization troubleshooting
-     <accounting/bank-synchronization/ponto/troubleshooting>`
+On the connection form, in the :guilabel:`Payout controls` section:
 
-.. _accounting/bank-synchronization/duplicate-transactions:
+- :guilabel:`Payout enabled`: the feature flag, editable by the :guilabel:`Bank Sync / Admin` group
+  only. Payouts remain impossible while it is off, even if the provider supports them.
+- :guilabel:`Payout dual control threshold`: above this amount, a second person must approve. Set it
+  to 0 to always require a separate approver.
+- :guilabel:`Payout per tx limit`: the largest single payout allowed. 0 means no limit.
+- :guilabel:`Payout daily limit`: the largest total that may be approved per day (UTC). 0 means no
+  limit.
 
-Duplicate transactions
-======================
-
-When importing transactions, some may appear duplicated due to the same online transaction
-identifier or the same currency, amount, account number, and date.
-
-To search for duplicate transactions, access the :ref:`bank reconciliation view
-<accounting/reconciliation/access>`, then follow these steps:
-
-#. Click the :icon:`fa-cog` :guilabel:`(gear)` icon, and select :guilabel:`Find Duplicate
-   Transactions`.
-#. All duplicate transactions from the starting date are displayed in the :guilabel:`Transactions`
-   tab. Update the :guilabel:`Starting Date` if needed.
-#. To delete a transaction, select it, click :guilabel:`Delete Selected`, and confirm.
-
-.. note::
-   Journal entries can only be deleted if they have not been reconciled.
-
-.. _accounting/bank-synchronization/missing-transactions:
-
-Missing transactions
-====================
-
-Missing or pending transactions are entries that the bank has not yet validated.
-
-To find missing and pending transactions, access the :ref:`bank reconciliation view
-<accounting/reconciliation/access>`, click the :icon:`fa-cog` :guilabel:`(gear)` icon, and select
-:guilabel:`Find Missing Transactions`.
-
-To import a posted missing transaction, select it and click :guilabel:`Import Transactions`.
-
-.. note::
-   - Make sure the connection with the bank is active to find missing transactions.
-   - :guilabel:`Pending` transactions cannot be imported.
-
-.. _accounting/bank-synchronization/troubleshooting:
-
-Troubleshooting
-===============
-
-.. seealso::
-   :ref:`Bank synchronization troubleshooting - Ponto
-   <accounting/bank-synchronization/ponto/troubleshooting>`
-
-.. _accounting/bank-synchronization/troubleshooting/synchronization:
-
-Synchronization errors or disconnections
-----------------------------------------
-
-To report a connection error to `Odoo support <https://www.odoo.com/help>`_, activate the
-:ref:`developer mode <developer-mode>`, go to :menuselection:`Accounting --> Configuration -->
-Online Synchronization`, select the failed connection, and copy the error description and the
-reference.
-
-If the connection with the proxy is lost and reconnection using the :guilabel:`Reconnect` option
-isn't successful, contact `support <https://www.odoo.com/help>`_ directly. Provide the client ID or
-the error reference from the chatter.
-
-.. _accounting/bank-synchronization/troubleshooting/real-time:
-
-Why is the synchronization not working in real-time?
-----------------------------------------------------
-
-Synchronization is not designed to work in real time, as third-party providers synchronize accounts
-at different intervals. To manually trigger synchronization and retrieve bank transactions, go to
-the :guilabel:`Accounting Dashboard`, and click :guilabel:`Fetch Transactions`.
-
-Alternatively, to synchronize and fetch transactions, activate the :ref:`developer mode
-<developer-mode>` and go to :menuselection:`Accounting --> Configuration --> Online
-Synchronization`.
-
-Some providers restrict refreshes to once per day. If transactions have already been fetched,
-clicking :guilabel:`Fetch Transactions` again may not retrieve the latest data.
-
-Transactions may appear on a bank account, but cannot be fetched if they have a :guilabel:`Pending`
-status; only transactions with a :guilabel:`Posted` status are retrieved.
-
-.. _accounting/bank-synchronization/troubleshooting/refresh-manually:
-
-Why do my transactions only synchronize when I refresh manually?
-----------------------------------------------------------------
-
-Some banks implement additional security measures and require extra steps, such as an SMS or email
-authentication code, or another type of :abbr:`MFA (multi-factor authentication)`. As a result,
-the third-party provider cannot retrieve transactions until the security code is provided.
-
-.. _accounting/bank-synchronization/troubleshooting/visible-transactions:
-
-Why are no transactions visible?
---------------------------------
-
-There are a few possible reasons for this issue:
-
-- No bank accounts were synchronized during the :ref:`first synchronization
-  <accounting/bank-synchronization/first-synchronization>`.
-- There may be no new transactions available to fetch.
-
-If the bank account is correctly linked to a journal, but posted transactions still aren't visible
-in the database, contact `support <https://www.odoo.com/help>`_.
-
-.. _accounting/bank-synchronization/troubleshooting/no-account-appearing:
-
-Why are no accounts shown after synchronization?
-------------------------------------------------
-
-During the synchronization process, a bank institution was selected, but no bank accounts from this
-institution were authorized during the :ref:`first synchronization
-<accounting/bank-synchronization/first-synchronization>`.
-
-.. _accounting/bank-synchronization/troubleshooting-saltedge:
-
-Saltedge troubleshooting
+Create and send a payout
 ------------------------
 
-.. _accounting/bank-synchronization/troubleshooting/saltedge/deleting-error:
+Go to :menuselection:`Accounting --> Bank Sync --> Payouts` and click :guilabel:`New`. Set the
+:guilabel:`Payee`, the :guilabel:`Recipient bank account`, the :guilabel:`Amount` and currency, and
+a :guilabel:`Payment reference` (35 characters maximum, as required by SEPA). Then use the buttons
+in the header:
 
-Why is there an error when deleting a synchronization in Odoo?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#. :guilabel:`Quote` asks the provider for the exchange rate and the fee, shown in the
+   :guilabel:`Quote` section together with an expiry time.
+#. :guilabel:`Request` submits the payout for approval. Whether dual control applies is frozen at
+   this moment, so raising the threshold afterwards cannot weaken it.
+#. :guilabel:`Approve` is done by a user with the :guilabel:`Bank Sync / Payment Approver` group.
+   When dual control applies, the approver must be a different person from the one who requested it.
+#. :guilabel:`Send via Wise` transmits the payout to the provider.
 
-Odoo can't permanently delete the connection established with the banking institution. However,
-it revokes consent, which prevents Odoo from accessing the account. The error message indicates that
-the consent has been revoked, but the record could not be deleted as it remains in Salt Edge.
+The status bar follows the payout through :guilabel:`Draft`, :guilabel:`Pending checker`,
+:guilabel:`Approved`, :guilabel:`Submitted`, :guilabel:`Executed` and :guilabel:`Reconciled`, with
+:guilabel:`Failed` and :guilabel:`Cancelled` as the alternative outcomes. :guilabel:`Cancel` is
+available until the payout has been executed. Once the provider confirms the transfer, the payout
+receipt can be fetched and stored on the record.
 
-To delete the connection, connect to the `Salt Edge account <https://www.saltedge.com/dashboard>`_
-and manually remove the synchronization. Once this is done, the record can be deleted in Odoo.
+.. note::
+   Each payout carries an idempotency key, so a network problem during sending can never result in
+   the money being transferred twice.
 
-.. _accounting/bank-synchronization/troubleshooting/saltedge/account-already-synchronized:
+Payout batches
+--------------
 
-I have an error saying that this account has already been synchronized
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+To pay several recipients at once, use :menuselection:`Accounting --> Bank Sync --> Payout Batches`.
+A batch holds its payouts in the :guilabel:`Members` tab and offers the same steps at batch level:
+:guilabel:`Quote all`, :guilabel:`Request`, :guilabel:`Approve`, :guilabel:`Send`,
+:guilabel:`Refund` and :guilabel:`Cancel`. The limits and the dual-control rule of the connection
+apply to the batch total.
 
-The bank account has already been synchronized with Salt Edge. Access the Salt Edge `dashboard
-<https://www.saltedge.com/dashboard>`_ to check if a connection with the same credentials exists.
-There are two options:
+.. screenshot:: accounting-bank-sync-payout
+   :menu: Accounting ‣ Bank Sync ‣ Payouts ‣ (open a payout)
+   :shows: A payout form in state "Pending checker" with the header buttons Quote / Request /
+      Approve / Send via Wise / Cancel, the Payee, amount and payment reference, and the Quote
+      section showing the rate, the fee and the expiry.
+   :highlight: The status bar and the Approval section (requester and approver).
+   :data: Payee "Deco Addict", amount 1,250.00 EUR, reference "INV/2026/0042".
+   :module: account_bank_sync, account_bank_sync_wise
+   :notes: English UI, light theme, 1440px width.
 
-- If a connection with the same credentials exists in Salt Edge but has not been synchronized with
-  Odoo, delete the existing connection and create a new one from the Odoo database.
-- If a connection with the same credentials exists in Salt Edge and has already been synchronized
-  with Odoo, :ref:`update the synchronization credentials
-  <accounting/bank-synchronization/update-credentials>` to reactivate the connection.
-
-
-.. toctree::
-   :titlesonly:
-
-   bank_synchronization/ponto
+.. seealso::
+   - :doc:`statement_import`
+   - :doc:`transactions`
+   - :doc:`reconciliation`

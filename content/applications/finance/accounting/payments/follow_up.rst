@@ -302,3 +302,45 @@ invoices covered, and a note. Log entries cannot be edited or deleted.
    :data: Demo company "YourCompany HU" with a few overdue customer invoices.
    :module: account_payment_followup
    :notes: English UI, light theme, 1440px width, crop tightly to the relevant panel.
+
+.. _accounting/follow_up/payment_warning:
+
+Payment risk banner on invoices
+===============================
+
+With the *Payment Warning* module installed, a colored banner is displayed at the top of every
+customer invoice and credit note, summarizing how the customer has been paying. It appears
+automatically; there is nothing to configure.
+
+The banner states the customer's **average payment delay** over the last twelve months (for example,
+*This customer pays on average 12 days after the due date*) and lists the customer's **open overdue
+invoices** with their date and remaining amount. The figures are computed on the commercial partner,
+so a contact and its parent company are evaluated together, and the invoice being edited is not
+counted against itself.
+
+Its color reflects the risk:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 80
+
+   * - Level
+     - Shown when
+   * - :guilabel:`Info` (blue)
+     - No open overdue invoice, and the average payment delay is 8 days or less (including customers
+       who pay early or on time).
+   * - :guilabel:`Warning` (orange)
+     - There is at least one open overdue invoice, or the average payment delay is more than 8 days.
+   * - :guilabel:`Danger` (red)
+     - An invoice is more than 30 days past due, or the average payment delay is more than 30 days.
+
+When there is no payment history and no overdue invoice, no banner is displayed.
+
+.. screenshot:: accounting-follow-up-payment-warning
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (an invoice of a late-paying customer)
+   :shows: A customer invoice with the red payment-risk banner above the invoice number, stating the
+      average payment delay and listing two overdue invoices with their dates and residual amounts.
+   :highlight: The banner (red frame).
+   :data: Customer "Deco Addict" with two overdue invoices and an average delay of 35 days.
+   :module: account_payment_warning
+   :notes: English UI, light theme, crop to the top of the invoice.

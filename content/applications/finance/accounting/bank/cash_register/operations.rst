@@ -5,8 +5,14 @@ Operations
 Day-to-day cash handling is done from the :guilabel:`Accounting Dashboard`. On a cash journal card,
 the cash-register actions are available next to the standard buttons.
 
-.. image:: cash-register-actions.png
-   :alt: New Cash-in, New Cash-out, and Close Cash Register buttons on the cash journal card
+.. screenshot:: accounting-cash-register-actions
+   :menu: Accounting ‣ Dashboard
+   :shows: The cash journal card with the :guilabel:`New Cash-in`, :guilabel:`New Cash-out` and
+      :guilabel:`Close Cash Register` buttons.
+   :highlight: The :guilabel:`New Cash-in` and :guilabel:`New Cash-out` buttons (red frame).
+   :data: Cash journal "Cash (HUF)".
+   :module: eyssen_cashregister
+   :notes: English UI, light theme, crop to the card.
 
 Record a cash-in or cash-out voucher
 ====================================
@@ -30,8 +36,14 @@ Record a cash-in or cash-out voucher
    - The :guilabel:`Amount in Words` (*betűs összeg*) is filled in automatically for the printed
      voucher.
 
-.. image:: cash-voucher-form.png
-   :alt: Cash voucher form with pretense, amount in words, and voucher number
+.. screenshot:: accounting-cash-register-voucher
+   :menu: Accounting ‣ Dashboard ‣ (cash journal) ‣ New Cash-in
+   :shows: A posted cash-in voucher with the customer, the amount, the :guilabel:`Pretense` field,
+      the assigned :guilabel:`Voucher Number` and the :guilabel:`Amount in Words`.
+   :highlight: The :guilabel:`Voucher Number` and :guilabel:`Amount in Words` fields (red frame).
+   :data: Customer "Deco Addict", amount 25,000 HUF, voucher BEF/2026/00012.
+   :module: eyssen_cashregister
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    A draft voucher that is cancelled never consumes a number, so the numbering stays gap-free. Once
@@ -44,8 +56,15 @@ A cash-book statement (*pénztárkönyv / kivonat*) is a numbered page that grou
 movements. A statement is **Open** while it accepts entries and **Confirmed** once it is closed and
 locked.
 
-.. image:: cashbook-statement-actions.png
-   :alt: Statement list showing the STAT number and cash-book state, with the Action menu
+.. screenshot:: accounting-cash-register-cashbook-list
+   :menu: Accounting ‣ Dashboard ‣ (cash journal ellipsis) ‣ Cash Registers
+   :shows: The cash-book statement list with the :guilabel:`STAT Number` and
+      :guilabel:`Cash-book State` columns, one row selected and the :guilabel:`Action` menu open
+      showing :guilabel:`Confirm cash-book` and :guilabel:`Reopen cash-book`.
+   :highlight: The open :guilabel:`Action` menu (red frame).
+   :data: Two statements, one Open and one Confirmed (STAT/2026/00013).
+   :module: eyssen_cashregister
+   :notes: English UI, light theme, 1440px width.
 
 Confirm a cash book
 -------------------
@@ -74,5 +93,23 @@ card. Count the drawer by denomination; the system compares the counted amount w
 balance and reports any discrepancy. A controller can review and approve a discrepancy before the
 count is closed.
 
-.. image:: cash-register-close.png
-   :alt: Cash count form with denominations and the computed discrepancy
+.. screenshot:: accounting-cash-register-closure
+   :menu: Accounting ‣ Dashboard ‣ (cash journal) ‣ Close Cash Register
+   :shows: The cash register closure form with the denomination lines (value, number of
+      coins/bills, subtotal), the :guilabel:`Cash Balance in Journal`, the :guilabel:`Counted
+      Balance`, the :guilabel:`Discrepancy` and the :guilabel:`Controller` field.
+   :highlight: The :guilabel:`Discrepancy` block (red frame).
+   :data: HUF denominations, counted balance 1,000 HUF short of the journal balance.
+   :module: eyssen_cashregister
+   :notes: English UI, light theme, 1440px width.
+
+Fill in the number of coins and bills per :guilabel:`Denomination`; the :guilabel:`Counted Balance`
+and the :guilabel:`Discrepancy` against the :guilabel:`Cash Balance in Journal` are computed as you
+type. If there is no difference, click :guilabel:`Close`. If there is one, enter the
+:guilabel:`Reason for Discrepancy`, appoint a :guilabel:`Controller` (it cannot be yourself) and
+click :guilabel:`Close with Discrepancy`; the closure then waits for that controller's approval.
+:guilabel:`Print` produces the cash count sheet.
+
+Past closures are listed under :menuselection:`Accounting --> Reporting --> Cash Register Closures`,
+where they can be filtered by state (:guilabel:`Draft`, :guilabel:`Waiting for Approval`,
+:guilabel:`Closed`) and grouped by cash register, user or controller.

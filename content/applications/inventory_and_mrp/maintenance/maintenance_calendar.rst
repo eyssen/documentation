@@ -2,15 +2,12 @@
 Maintenance calendar
 ====================
 
-.. |MO| replace:: :abbr:`MO (Manufacturing Order)`
-
-Avoiding equipment breakdowns, and blocks in warehouse work centers, requires constant equipment
-maintenance. Timely corrective maintenance for machines and tools that break unexpectedly, as well
-as preventive maintenance to ensure that such issues are avoided, are key to keeping warehouse
-operations running smoothly.
+Avoiding equipment breakdowns requires constant equipment maintenance. Timely corrective
+maintenance for machines and tools that break unexpectedly, as well as preventive maintenance to
+ensure that such issues are avoided, are key to keeping operations running smoothly.
 
 In Odoo *Maintenance*, users can access the *Maintenance Calendar* to create, schedule, and edit
-both corrective and preventive maintenance requests, to stay on top of equipment and work centers.
+both corrective and preventive maintenance requests, to stay on top of equipment maintenance.
 
 Create maintenance request
 ==========================
@@ -21,9 +18,12 @@ calendar, navigate to :menuselection:`Maintenance app --> Maintenance --> Mainte
 To create a new request, click anywhere on the calendar. Doing so opens a :guilabel:`New Event`
 pop-up window. In the :guilabel:`Name:` field, assign a title to the new request.
 
-.. image:: maintenance_calendar/maintenance-calendar-new-event-popup.png
-   :align: center
-   :alt: New event creation pop-up window.
+.. screenshot:: maintenance-calendar-new-event-popup
+   :menu: Maintenance ‣ Maintenance Calendar ‣ (click on the calendar)
+   :shows: The "New Event" quick-create pop-up window with a "Name:" field and "Create" and
+     "Cancel" buttons, plus an "Edit" link.
+   :module: maintenance
+   :notes: English UI, light theme, 1440px width, crop to the pop-up window.
 
 Clicking :guilabel:`Create` on the pop-up window saves the new request with no additional details.
 If the request's creation should be cancelled, click :guilabel:`Cancel`.
@@ -40,32 +40,15 @@ In the :guilabel:`Request` field, assign a title to the new request. In the :gui
 field, from the drop-down menu, select which user the request was created by. By default, this field
 populates with the user actually creating the request.
 
-.. image:: maintenance_calendar/maintenance-calendar-new-request-form.png
-   :align: center
-   :alt: New maintenance request form creation.
+.. screenshot:: maintenance-calendar-new-request-form
+   :menu: Maintenance ‣ Maintenance Calendar ‣ (click on the calendar) ‣ Edit
+   :shows: A blank maintenance request form with the "Request" and "Created By" fields filled out.
+   :module: maintenance
+   :notes: English UI, light theme, 1440px width.
 
-In the :guilabel:`For` field, from the drop-down menu, select if this request is being created for a
-piece of :guilabel:`Equipment`, or a :guilabel:`Work Center`.
-
-.. note::
-   If :guilabel:`Work Center` is selected in the :guilabel:`For` field's drop-down menu, two
-   additional fields appear on the form: :guilabel:`Work Center` and :guilabel:`Block Workcenter`.
-
-   In the :guilabel:`Work Center` field, select which work center in the warehouse this maintenance
-   request applies to.
-
-   If the :guilabel:`Block Workcenter` option's checkbox is ticked, it is not possible to plan work
-   orders, or other maintenance requests, in this work center during the time that this request is
-   being performed.
-
-If :guilabel:`Equipment` is selected in the :guilabel:`For` field, which it is by default, select
-which machine or tool requires maintenance from the :guilabel:`Equipment` field. Once a specific
-piece of equipment is selected, a greyed-out :guilabel:`Category` field appears, listing the
-*Equipment Category* to which the equipment belongs.
-
-In the :guilabel:`Worksheet Template` field, if necessary, click the drop-down menu to select a
-worksheet template. These templates are custom templates that can be filled out by the employee
-performing the maintenance.
+Select which machine or tool requires maintenance from the :guilabel:`Equipment` field. Once a
+specific piece of equipment is selected, a greyed-out :guilabel:`Category` field appears, listing
+the *Equipment Category* to which the equipment belongs.
 
 Under the :guilabel:`Category` field, the :guilabel:`Request Date` field displays the date requested
 for the maintenance to happen.
@@ -77,22 +60,29 @@ The :guilabel:`Maintenance Type` field provides two selectable radio button opti
 equipment, while :guilabel:`Preventive` maintenance is for planned requests, to avoid breakdowns in
 the future.
 
-If this request is tied to a specific |MO|, select that |MO| from the :guilabel:`Manufacturing
-Order` field.
-
 From the drop-down menu for the :guilabel:`Team` field, select the desired maintenance team who will
 perform the maintenance. In the :guilabel:`Responsible` field, select the technician responsible for
 the request.
 
-.. image:: maintenance_calendar/maintenance-calendar-filled-out-form.png
-   :align: center
-   :alt: Filled-out details of maintenance request form.
+.. screenshot:: maintenance-calendar-filled-out-form
+   :menu: Maintenance ‣ Maintenance Calendar ‣ (click on the calendar) ‣ Edit
+   :shows: A maintenance request form filled out with "Equipment", "Category", "Request Date",
+     "Maintenance Type" set to "Corrective", "Team", and "Responsible" fields.
+   :module: maintenance
+   :notes: English UI, light theme, 1440px width.
 
 In the :guilabel:`Scheduled Date` field, click the date to open a calendar popover. From this
 popover, select the planned date of the maintenance, and click :guilabel:`Apply` to save the date.
 
 In the :guilabel:`Duration` field, enter the the amount of hours (in a `00:00` format) that the
 maintenance is planned to take.
+
+.. tip::
+   Ticking the :guilabel:`Recurrent` checkbox, only available for :guilabel:`Preventive`
+   maintenance, reveals a :guilabel:`Repeat Every` field, and a :guilabel:`Until` field set to
+   :guilabel:`Forever` by default. Use these fields to have Odoo automatically create the next
+   occurrence of the request (in a new stage) once the current one is marked as done. Select
+   :guilabel:`Until` and pick an :guilabel:`End Date` to stop the recurrence after a specific date.
 
 In the :guilabel:`Priority` field, choose a priority between one and three :guilabel:`⭐⭐⭐ (stars)`.
 This indicates the importance of the maintenance request.
@@ -109,9 +99,12 @@ In the :guilabel:`Instructions` tab, if necessary, select one of the three radio
 provide maintenance instructions to the assigned team or technician. The available methods for
 providing instructions are via :guilabel:`PDF`, :guilabel:`Google Slide`, or :guilabel:`Text`.
 
-.. image:: maintenance_calendar/maintenance-calendar-instructions-tab.png
-   :align: center
-   :alt: Instructions tab options on maintenance request form.
+.. screenshot:: maintenance-calendar-instructions-tab
+   :menu: Maintenance ‣ Maintenance Calendar ‣ (request) ‣ Instructions
+   :shows: The "Instructions" tab with the "PDF", "Google Slide", and "Text" radio button options,
+     and the "Text" option selected with a text-entry field below it.
+   :module: maintenance
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 Calendar elements
 =================
@@ -145,9 +138,12 @@ are displayed.
 The right-hand side of the drop-down menu lists the :guilabel:`Favorites`, or any searches that have
 been saved as a favorite to be revisited at a later date.
 
-.. image:: maintenance_calendar/maintenance-calendar-favorites-popover.png
-   :align: center
-   :alt: Favorites section of filters drop-down menu.
+.. screenshot:: maintenance-calendar-favorites-popover
+   :menu: Maintenance ‣ Maintenance Calendar ‣ 🔻 (filters icon)
+   :shows: The filters drop-down menu with the "Filters" column on the left ("To Do" and "Active"
+     ticked) and the "Favorites" column on the right.
+   :module: maintenance
+   :notes: English UI, light theme, 1440px width, crop to the drop-down menu.
 
 To save a new :guilabel:`Favorite` search, select the desired :guilabel:`Filters`. Then, click
 :guilabel:`Save current search`. In the field directly below :guilabel:`Save current search`, assign
@@ -172,9 +168,12 @@ The :guilabel:`Maintenance Calendar` is available in six different views: :guila
 (default), :guilabel:`Kanban`, :guilabel:`List`, :guilabel:`Pivot`, :guilabel:`Graph`, and
 :guilabel:`Activity`.
 
-.. image:: maintenance_calendar/maintenance-calendar-view-type-icons.png
-   :align: center
-   :alt: Different view type icons for maintenance calendar.
+.. screenshot:: maintenance-calendar-view-type-icons
+   :menu: Maintenance ‣ Maintenance Calendar
+   :shows: The row of view-switcher icons in the top-right corner: Calendar, Kanban, List, Pivot,
+     Graph, and Activity.
+   :module: maintenance
+   :notes: English UI, light theme, 1440px width, crop to the icon row.
 
 Calendar view
 ~~~~~~~~~~~~~
@@ -189,9 +188,12 @@ viewed: :guilabel:`Day`, :guilabel:`Month`, and :guilabel:`Year`. There is also 
 :guilabel:`Show weekends`, selected by default. If unselected, weekends are not shown on the
 calendar.
 
-.. image:: maintenance_calendar/maintenance-calendar-period-dropdown.png
-   :align: center
-   :alt: Calendar period drop-down menu options.
+.. screenshot:: maintenance-calendar-period-dropdown
+   :menu: Maintenance ‣ Maintenance Calendar ‣ Week (dropdown)
+   :shows: The period drop-down menu with "Day", "Week", "Month", "Year" options, and a "Show
+     weekends" checkbox, ticked.
+   :module: maintenance
+   :notes: English UI, light theme, 1440px width, crop to the drop-down menu.
 
 To the left of this menu, there is a :guilabel:`⬅️ (left arrow)` icon and a :guilabel:`➡️ (right
 arrow)` icon. Clicking these arrows moves the calendar backward or forward in time, respectively.
@@ -223,9 +225,12 @@ Each column has a name (i.e. :guilabel:`In Progress`). Hovering at the top of a 
 :guilabel:`⚙️ (gear)` icon. Clicking the :guilabel:`⚙️ (gear)` icon reveals a list of options for
 that column: :guilabel:`Fold`, :guilabel:`Edit`, :guilabel:`Automations`, and :guilabel:`Delete`.
 
-.. image:: maintenance_calendar/maintenance-calendar-kanban-column.png
-   :align: center
-   :alt: Column options for stage in Kanban view.
+.. screenshot:: maintenance-calendar-kanban-column
+   :menu: Maintenance ‣ Maintenance Calendar ‣ Kanban view
+   :shows: The gear-icon menu on a Kanban column, with "Fold", "Edit", "Automations", and "Delete"
+     options.
+   :module: maintenance
+   :notes: English UI, light theme, 1440px width, crop to the column and its menu.
 
 Clicking :guilabel:`Fold` folds the column to hide its contents.
 
@@ -233,18 +238,16 @@ Clicking :guilabel:`Edit` opens an :guilabel:`Edit: (stage name)` pop-up window,
 corresponding stage name, wherein the column's details can be edited. The following are the column
 options that can be edited:
 
-.. image:: maintenance_calendar/maintenance-calendar-edit-stage-popup.png
-   :align: center
-   :alt: Edit In Progress pop-up window.
+.. screenshot:: maintenance-calendar-edit-stage-popup
+   :menu: Maintenance ‣ Maintenance Calendar ‣ Kanban view ‣ (column) ‣ ⚙️ ‣ Edit
+   :shows: The "Edit: In Progress" pop-up window with "Name", "Folded in Maintenance Pipe",
+     "Sequence", and "Request Done" fields.
+   :module: maintenance
+   :notes: English UI, light theme, 1440px width, crop to the pop-up window.
 
 - :guilabel:`Name`: the name of the stage in the Kanban pipeline.
 - :guilabel:`Folded in Maintenance Pipe`: when checked, this stage's column is folded by default in
   the :guilabel:`Kanban` view type.
-- :guilabel:`Request Confirmed`: when this box is not ticked, and the maintenance request type is
-  set to *Work Center*, no leave is created for the respective work center when a maintenance
-  request is created. If the box *is* ticked, the work center is automatically blocked for the
-  listed duration, either at the specified date, or as soon as possible, if the work center is
-  unavailable.
 - :guilabel:`Sequence`: the order in the maintenance process, in which this stage appears.
 - :guilabel:`Request Done`: if ticked, this box indicates this stage is the final step of the
   maintenance process. Requests moved to this stage are closed.
@@ -261,12 +264,14 @@ information about each request listed in its respective row.
 The columns of information displayed in this view type are the following:
 
 - :guilabel:`Subjects`: the name assigned to the maintenance request.
-- :guilabel:`Employee`: the employee who originally created the maintenance request.
+- :guilabel:`Created by User`: the user who originally created the maintenance request.
 - :guilabel:`Technician`: the technician responsible for the maintenance request.
 - :guilabel:`Category`: the category the equipment being repaired belongs to.
 - :guilabel:`Stage`: the stage of the maintenance process the request is currently in.
 - :guilabel:`Company`: if in a multi-company environment, the company in the database the request is
   assigned to.
+
+.. _maintenance/maintenance_calendar/pivot:
 
 Pivot view
 ~~~~~~~~~~
@@ -276,37 +281,36 @@ can be customized to show different data metrics.
 
 To add more data to the pivot table, click the :guilabel:`Measures` button to reveal a drop-down
 menu. By default, :guilabel:`Count` is selected. Additional options to add to the table are
-:guilabel:`Additional Leaves to Plan Ahead`, :guilabel:`Duration`, and :guilabel:`Repeat Every`.
+:guilabel:`Duration` and :guilabel:`Repeat Every`.
 
-.. image:: maintenance_calendar/maintenance-calendar-measures-menu.png
-   :align: center
-   :alt: Measures options on Pivot view page.
+.. screenshot:: maintenance-calendar-measures-menu
+   :menu: Maintenance ‣ Maintenance Calendar ‣ Pivot view ‣ Measures
+   :shows: The "Measures" drop-down menu, with "Count" ticked, and "Duration" and "Repeat Every"
+     also listed.
+   :module: maintenance
+   :notes: English UI, light theme, 1440px width, crop to the drop-down menu.
 
-To the right of the :guilabel:`Measures` button is the :guilabel:`Insert in Spreadsheet` button.
-Clicking this button opens a pop-up window titled :guilabel:`Select a spreadsheet to insert your
-pivot.`.
-
-There are two tabs in this pop-up window: :guilabel:`Spreadsheets` and :guilabel:`Dashboards`. Click
-into one of these tabs, and select a spreadsheet or dashboard in the database to add this pivot
-table to. Once ready, click :guilabel:`Confirm`. If this table shouldn't be added to a spreadsheet
-or dashboard, click :guilabel:`Cancel`, or click the :guilabel:`X` icon to close the pop-up window.
-
-To the right of the :guilabel:`Insert in Spreadsheet` button are three buttons:
+To the right of the :guilabel:`Measures` button are three buttons:
 
 - :guilabel:`Flip axis`: the x and y axis of the pivot data table flip.
 - :guilabel:`Expand all`: all the available rows and columns of the pivot data table expand fully.
 - :guilabel:`Download xlsx`: the pivot data table is downloaded as an .xlsx file.
+
+.. _maintenance/maintenance_calendar/graph:
 
 Graph view
 ~~~~~~~~~~
 
 With the graph view selected, the following options appear between the search bar and visual
 representation of the data. These graph-specific options are located to the right of the
-:guilabel:`Measures` and :guilabel:`Insert in Spreadsheet` buttons.
+:guilabel:`Measures` button.
 
-.. image:: maintenance_calendar/maintenance-calendar-graph-view-icons.png
-   :align: center
-   :alt: Graph type icons on Graph view page.
+.. screenshot:: maintenance-calendar-graph-view-icons
+   :menu: Maintenance ‣ Maintenance Calendar ‣ Graph view
+   :shows: The graph type icons (Bar Chart, Line Chart, Pie Chart) and formatting options (Stacked,
+     Descending, Ascending) above the chart.
+   :module: maintenance
+   :notes: English UI, light theme, 1440px width, crop to the icon row.
 
 There are three different types of graphs available to users to view the data:
 
@@ -338,9 +342,12 @@ Activity view
 With the :guilabel:`Activity` view selected, all open maintenance requests are listed in their own
 row, with the ability to schedule activities related to those requests.
 
-.. image:: maintenance_calendar/maintenance-calendar-activity-view-type.png
-   :align: center
-   :alt: Maintenance requests on Activity view.
+.. screenshot:: maintenance-calendar-activity-view-type
+   :menu: Maintenance ‣ Maintenance Calendar ‣ Activity view
+   :shows: Maintenance requests listed in rows under the Activity view, with activity columns
+     across the top and a "+ Schedule an activity" icon on one row.
+   :module: maintenance
+   :notes: English UI, light theme, 1440px width.
 
 Maintenance requests are listed in the :guilabel:`Maintenance Request` column as activities.
 Clicking a request opens a :guilabel:`Maintenance Request` popover that indicates the status of the
@@ -351,9 +358,12 @@ From the pop-up window, choose the :guilabel:`Activity Type`, provide a :guilabe
 schedule a :guilabel:`Due Date`, and choose the responsible user in the :guilabel:`Assigned to`
 field.
 
-.. image:: maintenance_calendar/maintenance-calendar-schedule-activity-popover.png
-   :align: center
-   :alt: Schedule Activity pop-up window.
+.. screenshot:: maintenance-calendar-schedule-activity-popover
+   :menu: Maintenance ‣ Maintenance Calendar ‣ Activity view ‣ (request) ‣ Schedule an activity
+   :shows: The "Schedule Activity" pop-up window with "Activity Type", "Summary", "Due Date", and
+     "Assigned to" fields.
+   :module: maintenance
+   :notes: English UI, light theme, 1440px width, crop to the pop-up window.
 
 Type any additional notes for the new activity in the blank space under the greyed-out
 :guilabel:`Log a note...` field. When clicked, this changes to :guilabel:`Type "/" for commands`.
@@ -363,17 +373,20 @@ Once ready, click :guilabel:`Schedule` to schedule the activity. Alternatively, 
 close the activity and open a new one, or click :guilabel:`Cancel` to cancel the activity.
 
 With the :guilabel:`Activity` view selected, each activity type available when scheduling an
-activity is listed as its own column. These columns are :guilabel:`Email`, :guilabel:`Call`,
-:guilabel:`Meeting`, :guilabel:`Maintenance Request`, :guilabel:`To-Do`, :guilabel:`Upload
-Document`, :guilabel:`Request Signature`, and :guilabel:`Grant Approval`.
+activity is listed as its own column. These columns include, by default, :guilabel:`Email`,
+:guilabel:`Call`, :guilabel:`Meeting`, :guilabel:`Maintenance Request`, :guilabel:`To-Do`, and
+:guilabel:`Upload Document`.
 
 To schedule an activity with that specific activity type, click into any blank box on the
 corresponding row for the desired maintenance request, and click the :guilabel:`➕ (plus)` icon. This
 opens an :guilabel:`Odoo` pop-up window, wherein the activity can be scheduled.
 
-.. image:: maintenance_calendar/maintenance-calendar-odoo-activity-popup.png
-   :align: center
-   :alt: Odoo pop-up schedule activity window.
+.. screenshot:: maintenance-calendar-odoo-activity-popup
+   :menu: Maintenance ‣ Maintenance Calendar ‣ Activity view ‣ (blank activity cell) ‣ ➕
+   :shows: The "Odoo" pop-up window used to quickly schedule an activity of a given type from the
+     Activity view.
+   :module: maintenance
+   :notes: English UI, light theme, 1440px width, crop to the pop-up window.
 
 .. seealso::
    - :doc:`maintenance_requests`

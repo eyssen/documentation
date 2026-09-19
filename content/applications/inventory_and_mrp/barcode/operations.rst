@@ -8,12 +8,10 @@ Daily operations
    :titlesonly:
    :glob:
 
-   operations/adjustments
+   operations/product_lookup
+   operations/inventory_adjustment
    operations/receipts_deliveries
-   operations/process_transfers
-   operations/transfers_scratch
+   operations/scan_on_orders
    operations/barcode_nomenclature
    operations/gs1_nomenclature
    operations/gs1_usage
-   operations/scan_rfid
-   operations/retrieve_epcs

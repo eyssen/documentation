@@ -2,15 +2,12 @@
 Maintenance requests
 ====================
 
-.. |MO| replace:: :abbr:`MO (Manufacturing Order)`
-
-In order to keep equipment and work centers functioning properly, it is often necessary to perform
-maintenance on them. This can include preventive maintenance, intended to prevent equipment from
-breaking down, or corrective maintenance, which is used to fix equipment that is broken or otherwise
-unusable.
+In order to keep equipment functioning properly, it is often necessary to perform maintenance on
+it. This can include preventive maintenance, intended to prevent equipment from breaking down, or
+corrective maintenance, which is used to fix equipment that is broken or otherwise unusable.
 
 In Odoo *Maintenance*, users can create *maintenance requests* to schedule and track the progress of
-equipment and work center maintenance.
+equipment maintenance.
 
 Create maintenance request
 ==========================
@@ -24,18 +21,9 @@ Begin filling out the form by entering a descriptive title in the :guilabel:`Req
 The :guilabel:`Created By` field auto-populates with the user creating the request, but a different
 user can be selected by clicking on the drop-down menu.
 
-In the :guilabel:`For` drop-down menu, select :guilabel:`Equipment` if the maintenance request is
-being created for a piece of equipment, or :guilabel:`Work Center` if it is being created for a work
-center.
-
-Depending on the option selected in the :guilabel:`For` field, the next field is titled either
-:guilabel:`Equipment` or :guilabel:`Work Center`. Using the drop-down menu for either field, select
-a piece of equipment or a work center.
-
-If the *Custom Maintenance Worksheets* setting is enabled in the *Maintenance* app's settings, a
-:guilabel:`Worksheet Template` field appears below the :guilabel:`Equipment` or :guilabel:`Work
-Center` field. If necessary, use this field to select a worksheet to be filled out by the employee
-performing the maintenance.
+Using the drop-down menu for the :guilabel:`Equipment` field, select the piece of equipment that
+requires maintenance. Once a piece of equipment is selected, a greyed-out :guilabel:`Category` field
+appears below it, listing the *Equipment Category* that the equipment belongs to.
 
 The next field is titled :guilabel:`Request Date`, and is set by default to the date on which the
 maintenance request is created. This date cannot be changed by the user.
@@ -43,12 +31,6 @@ maintenance request is created. This date cannot be changed by the user.
 In the :guilabel:`Maintenance Type` field, select the :guilabel:`Corrective` option if the request
 is intended to fix an existing issue, or the :guilabel:`Preventive` option if the request is
 intended to prevent issues from occurring in the future.
-
-If the request is being created to address an issue that arose during a specific manufacturing order
-(MO), select it in the :guilabel:`Manufacturing Order` field.
-
-If an |MO| was selected in the :guilabel:`Manufacturing Order` field, a :guilabel:`Work Order` field
-appears below it. If the issue arose during a specific work order, specify it in this field.
 
 In the :guilabel:`Team` field, select the maintenance team that is responsible for managing the
 request. If a specific team member is responsible, select them in the :guilabel:`Responsible` field.
@@ -61,10 +43,11 @@ below the calendar, and click :guilabel:`Apply` to save the date and time.
 The :guilabel:`Duration` field is used to specify the time it takes to complete the maintenance
 request. Use the text-entry field to enter the time in a `00:00` format.
 
-If :guilabel:`Work Center` was selected in the :guilabel:`For` field, a :guilabel:`Block Workcenter`
-checkbox appears below the :guilabel:`Duration` field. Enable the checkbox to prevent work orders or
-other maintenance from being scheduled at the specified work center while the maintenance request is
-being processed.
+.. tip::
+   For a :guilabel:`Preventive` request, ticking the :guilabel:`Recurrent` checkbox reveals a
+   :guilabel:`Repeat Every` field, and an end-date option set to :guilabel:`Forever` by default.
+   Configure how often, and for how long, the request should recur: once the current occurrence is
+   marked as done, Odoo automatically creates the next one on the calculated date.
 
 The :guilabel:`Priority` field is used to communicate the importance (or urgency) of the maintenance
 request. Assign the request a priority between zero and three :guilabel:`⭐⭐⭐ (stars)`, by clicking
@@ -84,23 +67,43 @@ performed. Select one of the three options, and then include the instructions as
 - :guilabel:`Text`: enter the instructions in the text-entry field that appears after the option is
   selected.
 
-.. image:: maintenance_requests/request-form.png
-   :align: center
-   :alt: A maintenance request form filled out for a piece of equipment.
+.. screenshot:: maintenance-requests-request-form
+   :menu: Maintenance ‣ Maintenance ‣ Maintenance Requests ‣ New
+   :shows: A maintenance request form filled out for a piece of equipment, with "Request", "Created
+     By", "Equipment", "Category", "Request Date", "Maintenance Type" set to "Corrective", "Team",
+     "Responsible", "Scheduled Date", "Duration", and "Priority" fields.
+   :module: maintenance
+   :notes: English UI, light theme, 1440px width.
 
 Process maintenance request
 ===========================
 
-Once a maintenance request has been created, it appears in the *New Request* stage of the
+Once a maintenance request has been created, it appears in the :guilabel:`New Request` stage of the
 *Maintenance Requests* page, which can be accessed by navigating to :menuselection:`Maintenance app
 --> Maintenance --> Maintenance Requests`.
 
-Maintenance requests can be moved to different stages by dragging and dropping them. They can also
-be moved by clicking on a request to open it in a new page, and then selecting the desired stage
-from the stage indicator bar, located above the top-right corner of the request's form.
+Maintenance requests can be moved to different stages by dragging and dropping them on the Kanban
+board. They can also be moved by clicking on a request to open it in a new page, and then selecting
+the desired stage from the stage indicator bar, located above the top-right corner of the request's
+form.
+
+A newly-created database typically has four default stages: :guilabel:`New Request`,
+:guilabel:`In Progress`, :guilabel:`Repaired`, and :guilabel:`Scrap`.
 
 Successful maintenance requests should be moved to the :guilabel:`Repaired` stage, indicating that
-the specified piece of equipment or work center is repaired.
+the specified piece of equipment is repaired.
 
 Failed maintenance requests should be moved to the :guilabel:`Scrap` stage, indicating the specified
-piece of equipment, or work center, could not be repaired, and must instead be scrapped.
+piece of equipment could not be repaired, and must instead be scrapped.
+
+.. tip::
+   While a request is being worked on, its :guilabel:`Kanban State` (the small circle at the top of
+   the form) can be set to :guilabel:`In Progress`, :guilabel:`Blocked`, or :guilabel:`Ready for
+   next stage`, to communicate the request's status independently of its stage.
+
+   To cancel a request without deleting it, click :guilabel:`Cancel`, at the top of the request's
+   form. This archives the request, and replaces the stage indicator bar with a :guilabel:`Cancelled`
+   tag. Click :guilabel:`Reopen Request` to unarchive it, and put it back in its original stage.
+
+.. seealso::
+   :doc:`maintenance_calendar`

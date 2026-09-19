@@ -8,9 +8,6 @@ Setup
    :titlesonly:
    :glob:
 
-   setup/device_troubleshooting
    setup/hardware
+   setup/device_troubleshooting
    setup/software
-   setup/serial_numbers_lots
-   setup/operation_types
-   setup/rfid

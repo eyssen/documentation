@@ -60,9 +60,14 @@ quarter. :guilabel:`Previous Year` compares the same time period from the previo
    While multiple time-based filters can be added at once, only one comparison can be selected at a
    time.
 
-.. image:: vendor_costs_report/filters-groups.png
-   :align: center
-   :alt: The drop-down menu of filters, group by and comparison options for the vendor costs report.
+.. screenshot:: purchase-vendor-costs-filters-groups
+   :menu: Purchase ‣ Reporting ‣ Purchase
+   :shows: The drop-down menu with the Filters, Group By, and Comparison columns, with Vendor and
+           Product selected under Group By.
+   :highlight: The Group By column (red frame).
+   :data: Demo company "YourCompany".
+   :module: purchase
+   :notes: English UI, light theme, 1440px width.
 
 Add measures
 ------------
@@ -85,17 +90,19 @@ View results
 ============
 
 After all of the :ref:`filters and measures have been selected
-<purchase/vender-cost-report-filters>`, the report generates in the pivot view. Click
-:guilabel:`Insert in Spreadsheet` to add the pivot view into an editable spreadsheet format within
-the *Documents* app.
+<purchase/vender-cost-report-filters>`, the report generates in the pivot view.
 
-.. important::
-   The :guilabel:`Insert in Spreadsheet` option is only available if the *Documents Spreadsheet*
-   module is installed.
+.. screenshot:: purchase-vendor-costs-sample-report
+   :menu: Purchase ‣ Reporting ‣ Purchase
+   :shows: A pivot table vendor costs report, grouped by Vendor then Product, with the Total and
+           Average Cost measures.
+   :highlight: The Average Cost column (red frame).
+   :data: Demo company "YourCompany"; two vendors, a few products each.
+   :module: purchase
+   :notes: English UI, light theme, 1440px width.
 
-.. image:: vendor_costs_report/sample-vendor-report.png
-   :align: center
-   :alt: A sample of a vendor costs report with the measures set as total and average costs.
+To keep a copy of the results outside the pivot view, click the :icon:`fa-download`
+:guilabel:`(download)` icon at the top of the pivot table to download it as an XLSX spreadsheet.
 
 .. note::
    The vendor costs report is also available in *graph* view. Click the :icon:`fa-area-chart`

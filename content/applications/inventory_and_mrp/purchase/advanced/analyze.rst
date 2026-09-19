@@ -93,9 +93,14 @@ about which vendors they want to purchase from.
    Based on these findings, David makes the decision to reduce the quantity of products purchased
    from Bike Friends.
 
-   .. image:: analyze/dtr.png
-      :align: center
-      :alt: The Purchase report, showing the average days to receive products from vendors.
+   .. screenshot:: purchase-analyze-dtr
+      :menu: Purchase ‣ Reporting ‣ Purchase
+      :shows: A bar chart with one bar per vendor, measuring "Days to Receive", filtered to 2024
+              confirmation dates.
+      :highlight: The "Bike Friends" bar, noticeably taller than the others.
+      :data: Demo company "YourCompany"; vendors "Bike Friends" (4.5 days) and two others (~1 day).
+      :module: purchase
+      :notes: English UI, light theme, 1440px width.
 
 Use case: compare vendor POs for two time periods
 =================================================
@@ -141,6 +146,11 @@ purchases from the vendor have increased or decreased.
    Friends during June. Using this report, David is able to see that Bike Haus has spent much less
    money on products purchased from Bike Friends, compared to the previous month.
 
-   .. image:: analyze/comparison.png
-      :align: center
-      :alt: The Purchase report, comparing the amount spent at a vendor.
+   .. screenshot:: purchase-analyze-comparison
+      :menu: Purchase ‣ Reporting ‣ Purchase
+      :shows: A pivot table comparing June to May totals per product for vendor "Bike Friends", with
+              a percentage variation column.
+      :highlight: The variation percentage column (red frame).
+      :data: Demo company "YourCompany"; vendor "Bike Friends", 3-4 products.
+      :module: purchase
+      :notes: English UI, light theme, 1440px width.

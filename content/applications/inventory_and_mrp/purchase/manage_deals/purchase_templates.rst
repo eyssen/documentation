@@ -23,8 +23,14 @@ First, navigate to :menuselection:`Purchase app --> Configuration --> Settings`.
 :guilabel:`Orders` section, tick the :guilabel:`Purchase Agreements` checkbox. Click
 :guilabel:`Save` to save the changes.
 
-.. image:: purchase_templates/purchase-agreements-setting.png
-   :alt: The Purchase agreements setting in the Purchase app.
+.. screenshot:: purchase-purchase-templates-agreements-setting
+   :menu: Purchase ‣ Configuration ‣ Settings
+   :shows: Settings page scrolled to the "Orders" section, with the "Purchase Agreements" checkbox
+           enabled.
+   :highlight: The "Purchase Agreements" setting (red frame).
+   :data: Demo company "YourCompany".
+   :module: purchase_requisition
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 Create a new template
 ---------------------
@@ -76,5 +82,11 @@ click :guilabel:`Confirm Order` to confirm the purchase order.
 After confirming the order, return to the |pt| via the breadcrumbs. The :icon:`fa-list-alt`
 :guilabel:`RFQs/Orders` smart button has been updated to list the confirmed order.
 
-.. image:: purchase_templates/rfq-smart-button.png
-   :alt: The RFQ smart button on a purchase template.
+.. screenshot:: purchase-purchase-templates-rfq-smart-button
+   :menu: Purchase ‣ Orders ‣ Purchase Agreements ‣ (open a template)
+   :shows: A confirmed purchase template form with the "RFQs/Orders" smart button showing a count
+           of 1.
+   :highlight: The "RFQs/Orders" smart button (red frame).
+   :data: Demo company "YourCompany"; purchase template with one confirmed order.
+   :module: purchase_requisition
+   :notes: English UI, light theme, 1440px width.

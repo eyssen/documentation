@@ -31,28 +31,31 @@ information, such as |GTIN|, lot number, quantity information, and more.
 Set up barcode nomenclature
 ===========================
 
-To use GS1 nomenclature, navigate to the :menuselection:`Inventory app --> Configuration -->
-Settings`. Then under the :guilabel:`Barcode` section, check the :guilabel:`Barcode Scanner` box.
-Next, select :menuselection:`Barcode Nomenclature --> Default GS1 Nomenclature` from the default
-barcode nomenclature options.
+The list of GS1 *rules* and *barcode patterns* Odoo supports by default ships as the
+:guilabel:`Default GS1 Nomenclature` record and is always available; it does not need to be
+installed or enabled separately. To inspect or edit its rules, enable :ref:`developer mode
+<developer-mode>`, then navigate to :menuselection:`Inventory app --> Configuration --> Barcode
+Nomenclatures` and select :guilabel:`Default GS1 Nomenclature`.
 
-.. image:: gs1_nomenclature/setup-gs1-nomenclature.png
-   :align: center
-   :alt: Choose GS1 from dropdown and click the external link to see the list of GS1 rules.
+.. screenshot:: barcode-gs1-nomenclature-setup
+   :menu: Inventory ‣ Configuration ‣ Barcode Nomenclatures ‣ Default GS1 Nomenclature
+   :shows: The "Default GS1 Nomenclature" record's rule table, listing GS1 rule names, types,
+      encodings, and barcode patterns.
+   :highlight: n/a
+   :data: n/a
+   :module: barcodes_gs1_nomenclature
+   :notes: English UI, light theme, 1440px width, requires developer mode enabled.
 
-The list of GS1 *rules* and *barcode patterns* Odoo supports by default is accessible by clicking
-the :guilabel:`➡️ (arrow)` icon to the right of the :guilabel:`Barcode Nomenclature` selection.
+In the rule table, view and edit the GS1 :guilabel:`Rule Names` available in Odoo. The table
+contains all the information that can be condensed with a GS1 barcode, along with the corresponding
+:guilabel:`Barcode Pattern`.
 
-In the :guilabel:`Open: Nomenclature` pop-up table, view and edit the GS1 :guilabel:`Rule Names`
-available in Odoo. The table contains all the information that can be condensed with a GS1 barcode,
-along with the corresponding :guilabel:`Barcode Pattern`.
-
-.. tip::
-   After setting GS1 as the barcode nomenclature, the :menuselection:`Barcode Nomenclatures`
-   settings can also be accessed by a hidden menu that's discoverable after enabling :ref:`developer
-   mode <developer-mode>`. Once enabled, navigate to the :menuselection:`Inventory app -->
-   Configuration --> Barcode Nomenclatures` menu and finally, select :guilabel:`Default GS1
-   Nomenclature`.
+.. important::
+   Having the :guilabel:`Default GS1 Nomenclature` record available does not, by itself, make it
+   the *active* nomenclature for the company (the one new scans are matched against). If the *Point
+   of Sale* app is installed, the active nomenclature can be switched to it from
+   :menuselection:`Point of Sale app --> Configuration --> Settings --> Barcode Nomenclature`. See
+   :doc:`barcode_nomenclature` for background on nomenclatures in general.
 
 .. _barcode/operations/create-GS1-barcode:
 
@@ -225,3 +228,30 @@ expressions. Only the first three rules require a `check digit
 | Packaging type                          | Packaging   | (91)                         | Alpha-numeric name | Package type          |
 |                                         | Type        | ([!"%-/0-9:-?A-Z_a-z]{0,90}) |                    |                       |
 +-----------------------------------------+-------------+------------------------------+--------------------+-----------------------+
+
+.. _barcode/operations/gs1-print-lots:
+
+Print GS1 barcodes for lots and serial numbers
+===============================================
+
+Labels for lots and serial numbers can be printed as plain barcodes, or as GS1-encoded barcodes
+that also carry the |GTIN| of the product. To enable the GS1 format, go to
+:menuselection:`Inventory app --> Configuration --> Settings`, and in the :guilabel:`Traceability`
+section under :guilabel:`Lots & Serial Numbers`, tick the box for :guilabel:`Print GS1 Barcodes for
+Lots & Serial Numbers`.
+
+.. screenshot:: barcode-gs1-nomenclature-print-lots-setting
+   :menu: Inventory ‣ Configuration ‣ Settings ‣ Traceability ‣ Lots & Serial Numbers
+   :shows: The "Print GS1 Barcodes for Lots & Serial Numbers" checkbox, ticked.
+   :highlight: The checkbox (red frame).
+   :data: Demo company "YourCompany" with Lots & Serial Numbers enabled.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the Lots & Serial Numbers block.
+
+.. warning::
+   GS1 lot and serial number barcodes require a 2D-capable scanner to be scanned. See
+   :doc:`../setup/hardware` to ensure the equipment in use supports 2D barcodes.
+
+.. seealso::
+   :doc:`../../inventory/product_management/product_tracking/serial_numbers` for printing the
+   lot/serial number labels themselves.

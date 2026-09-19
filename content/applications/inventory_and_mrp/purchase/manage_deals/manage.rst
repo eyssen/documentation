@@ -32,9 +32,14 @@ The policy selected acts as the default for any new product created. Each policy
 - :guilabel:`Received quantities`: a bill is only created **after** all (or part) of the total order
   has been received. The products and quantities received are used to generate a draft bill.
 
-.. image:: manage/manage-configuration-settings.png
-   :align: center
-   :alt: Bill control policies in purchase app settings.
+.. screenshot:: purchase-manage-configuration-settings
+   :menu: Purchase ‣ Configuration ‣ Settings
+   :shows: Settings page scrolled to the "Invoicing" section, with the "Bill Control" field set to
+           "Ordered quantities".
+   :highlight: The "Bill Control" setting (red frame).
+   :data: Demo company "YourCompany".
+   :module: purchase
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 Once a policy is selected, click :guilabel:`Save` to save the changes.
 
@@ -43,24 +48,17 @@ Once a policy is selected, click :guilabel:`Save` to save the changes.
    that product's control policy can be overridden by going to the :guilabel:`Purchase` tab on a
    product form, and selecting the desired policy in the :guilabel:`Control Policy` field.
 
-   .. image:: manage/manage-product-form.png
-      :align: center
-      :alt: Control policy field on product form.
+   .. screenshot:: purchase-manage-product-form-control-policy
+      :menu: Purchase ‣ Products ‣ Products ‣ (open a product) ‣ Purchase
+      :shows: The Purchase tab of a product form, with the "Control Policy" field set to "Received
+              quantities".
+      :highlight: The "Control Policy" field (red frame).
+      :data: Demo company "YourCompany"; product "Office Chair Black".
+      :module: purchase
+      :notes: English UI, light theme, 1440px width, crop to the field.
 
-3-way matching
---------------
-
-The *3-way matching* policy ensures vendor bills are only paid once all (or some) products in a
-purchase order (PO) have been received.
-
-To activate 3-way matching, navigate to :menuselection:`Purchase app --> Configuration -->
-Settings`, and scroll to the :guilabel:`Invoicing` section.
-
-Tick the checkbox next to :guilabel:`3-way matching`, and click :guilabel:`Save`.
-
-.. important::
-   The :guilabel:`3-way matching` feature is **only** intended to work with the :guilabel:`Bill
-   Control` policy set to :guilabel:`Received quantities`.
+.. seealso::
+   :doc:`control_bills`
 
 Create and manage vendor bills on receipts
 ==========================================
@@ -110,9 +108,14 @@ Additionally, the bill :guilabel:`Amount`, :guilabel:`Payment Date`, and :guilab
 Once ready, click :guilabel:`Create Payment` to finish creating the :guilabel:`Vendor Bill`. Doing
 so displays a green :guilabel:`Paid` banner on the |RfQ| form.
 
-.. image:: manage/manage-draft-vendor-bill.png
-   :align: center
-   :alt: Vendor bill form for ordered quantities control policy.
+.. screenshot:: purchase-manage-draft-vendor-bill
+   :menu: Purchase ‣ Orders ‣ Purchase Orders ‣ (open a PO) ‣ Create Bill
+   :shows: A draft Vendor Bill form created from a PO with the "Ordered quantities" bill control
+           policy, with the Bill Date field filled in.
+   :highlight: The Bill Date field and the Confirm button.
+   :data: Demo company "YourCompany"; vendor bill for PO00012.
+   :module: purchase
+   :notes: English UI, light theme, 1440px width.
 
 Received quantities
 -------------------
@@ -135,9 +138,14 @@ Once ready, click :guilabel:`Confirm Order` to confirm the |RfQ| into a |PO|.
    Odoo requires at least partial quantities of the items included in the |PO| to be received in
    order to create a vendor bill.
 
-   .. image:: manage/manage-user-error-popup.png
-      :align: center
-      :alt: User error pop-up for received quantities control policy.
+   .. screenshot:: purchase-manage-user-error-popup
+      :menu: Purchase ‣ Orders ‣ Purchase Orders ‣ (open a PO) ‣ Create Bill
+      :shows: The "Invalid Operation" error pop-up shown when clicking Create Bill on a PO with the
+              "Received quantities" policy before any product has been received.
+      :highlight: The error message text.
+      :data: Demo company "YourCompany"; a PO with 0 received quantities.
+      :module: purchase
+      :notes: English UI, light theme, 1440px width.
 
 On the |PO|, click the :guilabel:`Receipt` smart button to view the warehouse receipt form.
 
@@ -195,9 +203,14 @@ the :guilabel:`Vendor Bill`.
 
    The bill auto-populates with the information from the chosen |PO|.
 
-   .. image:: manage/manage-auto-complete.png
-      :align: center
-      :alt: Auto-complete drop-down list on draft vendor bill.
+   .. screenshot:: purchase-manage-auto-complete
+      :menu: Accounting ‣ Vendors ‣ Bills ‣ New
+      :shows: A draft Vendor Bill form with the "Auto-Complete" drop-down open, listing existing
+              purchase orders.
+      :highlight: The "Auto-Complete" field (red frame).
+      :data: Demo company "YourCompany"; POs PO00010, PO00011 listed.
+      :module: purchase
+      :notes: English UI, light theme, 1440px width.
 
 Batch billing
 =============
@@ -232,9 +245,14 @@ appears if the *Batch Payments* feature is enabled in the settings of the
 Once ready, click the :guilabel:`Create Payment` button. This creates a list of journal entries on a
 separate page. The journal entries on this list are all tied to their corresponding vendor bills.
 
-.. image:: manage/manage-batch-billing.png
-   :align: center
-   :alt: Batch billing register payment pop-up window.
+.. screenshot:: purchase-manage-batch-billing
+   :menu: Accounting ‣ Vendors ‣ Bills ‣ (select several) ‣ Register Payment
+   :shows: The Register Payment pop-up window for several selected vendor bills, with the Journal,
+           Payment Date, and Group Payments fields visible.
+   :highlight: The "Group Payments" checkbox (red frame).
+   :data: Demo company "YourCompany"; three selected vendor bills.
+   :module: purchase
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    :doc:`control_bills`

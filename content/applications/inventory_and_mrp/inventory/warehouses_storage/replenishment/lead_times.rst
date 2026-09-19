@@ -389,7 +389,6 @@ consider weekends, holidays, or *work center capacity* (:dfn:`the number of oper
 performed at the work center simultaneously`).
 
 .. seealso::
-   - :doc:`Manufacturing planning <../../../manufacturing/workflows/use_mps>`
    - :doc:`Schedule MOs with reordering rules <reordering_rules>`
 
 .. example::

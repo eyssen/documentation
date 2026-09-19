@@ -33,11 +33,6 @@ manufacturing order (MO), with the best choice depending on the business process
 
       Automatically generate POs or MOs when sales orders are confirmed.
 
-   .. card:: MPS
-      :target: ../../manufacturing/workflows/use_mps
-
-      Manage long-term replenishment based on inputted sales forecasts, via a dashboard.
-
 Replenishment strategies
 ========================
 
@@ -96,17 +91,6 @@ products that have no stock kept on-hand.
 
 Master production schedule
 --------------------------
-
-The :abbr:`MPS (Master Production Schedule)` is a dashboard where products and their forecasted
-quantities are entered. Based on confirmed manufacturing and purchase orders, the dashboard
-recommends amounts to order or produce.
-
-This a useful **manual** tool for keeping track of quantities. The :abbr:`MPS (Master Production
-Schedule)` **should absolutely not** be used alongside reordering rules, as the automated workflow
-disrupts its manual replenishment method.
-
-.. seealso::
-   :doc:`../../manufacturing/workflows/use_mps`
 
 .. toctree::
    :titlesonly:

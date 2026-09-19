@@ -188,8 +188,6 @@ setup. The list below are only some of the configuration pieces that could be in
 - **Manufacturing Steps**: Consider how many manufacturing steps are taken (one-, two-, or
   three-step manufacturing).
 - **Work Centers**: Decide if any :doc:`work centers <using_work_centers>` need to be configured.
-- **Master Production Schedule**: If manually planned manufacturing orders are needed (e.g., to
-  handle seasonal demand), make a :doc:`master production schedule <../workflows/use_mps>` (MPS).
 
 .. tip::
    Manufacturing operations is an art and a science, so configuring an established flow into Odoo is

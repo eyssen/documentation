@@ -17,7 +17,7 @@ There are 2 types: GSM7 and UNICODE.
 **GSM7** is the standard format, with a limit of 160 characters per message, that includes the
 following characters:
 
-.. screenshot:: sms-pricing_and_faq-faq1
+.. screenshot:: sms-pricing-and-faq-faq1
    :menu: (diagram)
    :shows: The GSM7 character set table listing the characters that can be encoded in a standard SMS.
    :module: mass_mailing_sms
@@ -41,7 +41,7 @@ message. To see the **price per country, please consult**: `Odoo SMS - FAQ
 
 The number of SMSs a message represents will always be available in the database.
 
-.. screenshot:: sms-pricing_and_faq-faq2
+.. screenshot:: sms-pricing-and-faq-faq2
    :menu: (diagram)
    :shows: A comparison showing how many characters fit in one SMS with GSM7 (160) and with UNICODE (70) encoding.
    :module: mass_mailing_sms
@@ -52,7 +52,7 @@ How to buy credits
 
 Go to :menuselection:`Settings --> Buy Credits`.
 
-.. screenshot:: sms-pricing_and_faq-faq3
+.. screenshot:: sms-pricing-and-faq-faq3
    :menu: Settings ‣ General Settings ‣ SMS
    :shows: The SMS section of the General Settings with the remaining SMS credits and the Buy Credits button.
    :highlight: The Buy Credits button (red frame).
@@ -62,7 +62,7 @@ Go to :menuselection:`Settings --> Buy Credits`.
 
 Or go to :menuselection:`Settings --> View my Services`.
 
-.. screenshot:: sms-pricing_and_faq-faq4
+.. screenshot:: sms-pricing-and-faq-faq4
    :menu: Settings ‣ General Settings ‣ SMS ‣ View My Services
    :shows: The In-App Purchase services page listing the SMS service with its remaining credits.
    :highlight: The SMS service line (red frame).

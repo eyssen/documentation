@@ -16,7 +16,7 @@ To enable :abbr:`SMS (Short Message Service)` campaigns in Odoo, make sure the *
 feature is activated by going to :menuselection:`Email Marketing --> Configuration --> Settings`,
 and then enable :guilabel:`Mailing Campaigns` and :guilabel:`Save` the changes.
 
-.. screenshot:: sms-marketing_campaigns-sms-mailing-campaigns
+.. screenshot:: sms-marketing-campaigns-sms-mailing-campaigns
    :menu: SMS Marketing ‣ Configuration ‣ Settings
    :shows: The SMS Marketing settings page with the Mailing Campaigns checkbox enabled.
    :highlight: The Mailing Campaigns setting (red frame).
@@ -43,7 +43,7 @@ initially, there's only a single checkbox labeled: :guilabel:`Allow A/B Testing.
 
 When clicked, a series of other options appear.
 
-.. screenshot:: sms-marketing_campaigns-ab-tests-sms
+.. screenshot:: sms-marketing-campaigns-ab-tests-sms
    :menu: SMS Marketing ‣ Mailings ‣ New
    :shows: The A/B Tests tab of an SMS mailing with Allow A/B Testing enabled, the percentage of recipients and the winner selection criteria.
    :highlight: The A/B Tests tab (red frame).
@@ -81,7 +81,7 @@ To create, edit, or analyze any campaign, click :menuselection:`Campaigns` in th
 information related to the mailings associated with that campaign (e.g. number of emails, social
 posts, SMSs, and push notifications).
 
-.. screenshot:: sms-marketing_campaigns-campaigns-page
+.. screenshot:: sms-marketing-campaigns-campaigns-page
    :menu: SMS Marketing ‣ Campaigns
    :shows: The Campaigns kanban grouped by stage, each card showing the campaign name, responsible and its mailings.
    :data: Three campaigns in the stages 'New', 'Running' and 'Done'.
@@ -95,7 +95,7 @@ Click :guilabel:`Create` to create a new campaign, and Odoo reveals a blank camp
 to fill out. Alternatively, select any previously-made campaign in order to duplicate, review, or
 edit its campaign template form.
 
-.. screenshot:: sms-marketing_campaigns-sms-campaign-template
+.. screenshot:: sms-marketing-campaigns-sms-campaign-template
    :menu: SMS Marketing ‣ Campaigns ‣ New
    :shows: A campaign form with the Send Mailing and Send SMS buttons above it and the analytical smart buttons at the top.
    :highlight: The Send Mailing and Send SMS buttons (red frame).
@@ -128,7 +128,7 @@ In order to send an :abbr:`SMS (Short Message Service)` in this fashion, navigat
 :menuselection:`Contacts` app, select the desired contact in the database, and click on the
 :guilabel:`SMS` icon on the contact form (next to the :guilabel:`Phone Number` field).
 
-.. screenshot:: sms-marketing_campaigns-sms-contact-form
+.. screenshot:: sms-marketing-campaigns-sms-contact-form
    :menu: Contacts
    :shows: A contact form where the SMS icon next to the Mobile field is visible.
    :highlight: The SMS icon next to the Mobile field (red frame).
@@ -140,7 +140,7 @@ To send a message to multiple contacts at once, navigate to the main :menuselect
 main dashboard, choose the :guilabel:`List View`, and select all the desired contacts to whom the
 message should be sent. Then, under :guilabel:`Action`, select :guilabel:`Send SMS`.
 
-.. screenshot:: sms-marketing_campaigns-sms-contacts-action-send-message
+.. screenshot:: sms-marketing-campaigns-sms-contacts-action-send-message
    :menu: Contacts
    :shows: The Contacts list view with several contacts selected and the (gear) Actions menu open on 'Send SMS Text Message'.
    :highlight: The 'Send SMS Text Message' action (red frame).
@@ -164,7 +164,7 @@ Next return to the :menuselection:`Settings app` and, in the now-visible header 
 choose :menuselection:`Technical --> SMS Templates` to begin setting up :abbr:`SMS (Short Message
 Service)` templates for future marketing campaigns.
 
-.. screenshot:: sms-marketing_campaigns-sms-template-setting
+.. screenshot:: sms-marketing-campaigns-sms-template-setting
    :menu: Settings ‣ Technical ‣ SMS Templates
    :shows: The Technical menu of the Settings app opened, with the SMS Templates entry under the Email section.
    :highlight: The SMS Templates menu entry (red frame).
@@ -178,7 +178,7 @@ to which recipients it applies.
 
 On this page, :abbr:`SMS (Short Message Service)` templates can be edited or created from scratch.
 
-.. screenshot:: sms-marketing_campaigns-sms-template
+.. screenshot:: sms-marketing-campaigns-sms-template
    :menu: Settings ‣ Technical ‣ SMS Templates
    :shows: The SMS Templates list with the Name, Applies to and Body columns.
    :data: Three demo SMS templates.

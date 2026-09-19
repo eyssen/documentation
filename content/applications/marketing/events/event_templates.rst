@@ -18,7 +18,7 @@ To begin, navigate to :menuselection:`Events app --> Configuration --> Event Tem
 reveals the :guilabel:`Event Templates` page. Here, find all the existing event templates in the
 database.
 
-.. screenshot:: events-event_templates-event-templates-page
+.. screenshot:: events-event-templates-event-templates-page
    :menu: Events ‣ Configuration ‣ Event Templates
    :shows: The Event Templates list with the template names.
    :data: Two templates: 'Exhibition' and 'Training'.
@@ -63,7 +63,7 @@ Event template form
 All the fields on a standard :guilabel:`Event Template` form are *also* on the *Create Template*
 pop-up window, accessible via the *Template* field on an event form.
 
-.. screenshot:: events-event_templates-event-template-form
+.. screenshot:: events-event-templates-event-template-form
    :menu: Events ‣ Configuration ‣ Event Templates ‣ New
    :shows: An event template form with the Template Name, Website, Booths, Tickets, Communication and Questions tabs and the Website Submenu / Tracks / Booths options.
    :highlight: The Website submenu options (red frame).
@@ -145,7 +145,7 @@ more information about those tabs, refer to the :doc:`create_events` documentati
 To add a booth from the :guilabel:`Booths` tab of an event template form, click :guilabel:`Add a
 line`. Doing so reveals a blank :guilabel:`Create Booths` pop-up window.
 
-.. screenshot:: events-event_templates-create-booths-popup
+.. screenshot:: events-event-templates-create-booths-popup
    :menu: Events ‣ Configuration ‣ Event Templates ‣ New
    :shows: The Create Booths pop-up window with the Booth Name and Booth Category fields.
    :highlight: The Booth Category field (red frame).
@@ -171,7 +171,7 @@ Categories`.
    a later date. Clicking :guilabel:`Create and edit...` reveals a new :guilabel:`Create Booth
    Category` pop-up window, from which the category can be configured in a number of different ways.
 
-   .. screenshot:: events-event_templates-create-booth-category-popup
+   .. screenshot:: events-event-templates-create-booth-category-popup
       :menu: Events ‣ Configuration ‣ Event Templates ‣ New
       :shows: The Create Booth Category pop-up window with the name, Product, Price and Sponsor fields.
       :highlight: The Product and Price fields (red frame).

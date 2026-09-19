@@ -13,7 +13,7 @@ by clicking their username in the top-right corner of the screen and selecting :
 Account`. From there, they can view all their documents in one place, such as quotations, orders,
 invoices, and more.
 
-.. screenshot:: ecommerce-customer_accounts-account-log
+.. screenshot:: ecommerce-customer-accounts-account-log
    :menu: (website)
    :shows: The website header with the account drop-down menu open, showing My Account, My Cart and Logout.
    :highlight: The account drop-down menu (red frame).

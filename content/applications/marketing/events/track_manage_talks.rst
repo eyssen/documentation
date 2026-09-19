@@ -21,7 +21,7 @@ With the *Schedule & Tracks* setting enabled in the Odoo *Events* app, the follo
 automatically added to the subheader menu, located on the event website: :guilabel:`Talks`,
 :guilabel:`Talk Proposals`, and :guilabel:`Agenda`.
 
-.. screenshot:: events-track_manage_talks-track-submenu-options
+.. screenshot:: events-track-manage-talks-track-submenu-options
    :menu: (event website)
    :shows: The event website's top menu with the track-related submenu entries Talks, Agenda and Talk Proposals.
    :highlight: The track-related submenu entries (red frame).
@@ -39,7 +39,7 @@ Talks page
 The :guilabel:`Talks` link takes the attendee to a page filled with all the planned tracks for the
 event.
 
-.. screenshot:: events-track_manage_talks-talks-page
+.. screenshot:: events-track-manage-talks-talks-page
    :menu: (event website) ‣ Talks
    :shows: The Talks page of the event website listing the published tracks with the tag and date filter menus.
    :highlight: The filter menus (red frame).
@@ -73,7 +73,7 @@ tag categories) created for event tracks in the backend.
 
    Doing so reveals a :guilabel:`Create Tags` pop-up form.
 
-   .. screenshot:: events-track_manage_talks-create-tags-popup
+   .. screenshot:: events-track-manage-talks-create-tags-popup
       :menu: Events ‣ Configuration ‣ Track Tags ‣ New
       :shows: The Create Tags pop-up window with the Tag Name, Category and Color fields used for the website filter menus.
       :highlight: The Category field (red frame).
@@ -106,7 +106,7 @@ Talk Proposals page
 The :guilabel:`Talk Proposals` link takes attendees to a page on the event website, wherein they can
 formerly submit a proposal for a talk (:dfn:`track`) for the event, via a custom online form.
 
-.. screenshot:: events-track_manage_talks-talk-proposals-page
+.. screenshot:: events-track-manage-talks-talk-proposals-page
    :menu: (event website) ‣ Talk Proposals
    :shows: The Talk Proposals page of the event website with the proposal form (title, speaker, biography, description).
    :highlight: The proposal form fields (red frame).
@@ -147,7 +147,7 @@ Agenda page
 The :guilabel:`Agenda` link takes attendees to a page on the event website, showcasing an event
 calendar, depicting when (and where) events are taking place for that specific event.
 
-.. screenshot:: events-track_manage_talks-event-agenda-page
+.. screenshot:: events-track-manage-talks-event-agenda-page
    :menu: (event website) ‣ Agenda
    :shows: The Agenda page of the event website showing the tracks in a time grid by day and location.
    :highlight: The time grid (red frame).

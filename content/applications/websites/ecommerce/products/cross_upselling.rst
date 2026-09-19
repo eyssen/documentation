@@ -27,7 +27,7 @@ To enable **optional products**, go to :menuselection:`Website --> eCommerce -->
 product, go to the :guilabel:`Sales` tab, and enter the products you wish to feature in the
 :guilabel:`Optional Products` field.
 
-.. screenshot:: ecommerce-cross_upselling-add-to-cart
+.. screenshot:: ecommerce-cross-upselling-add-to-cart
    :menu: (website) ‣ Shop ‣ (product) ‣ Add to Cart
    :shows: The Add to Cart pop-up window showing the optional products suggested with the product.
    :highlight: The optional products (red frame).
@@ -47,7 +47,7 @@ To enable **accessory products**, go to :menuselection:`Website --> eCommerce --
 a product, go to the :guilabel:`Sales` tab, and enter the products you wish to feature in the
 :guilabel:`Accessory Products` field.
 
-.. screenshot:: ecommerce-cross_upselling-accessory-products
+.. screenshot:: ecommerce-cross-upselling-accessory-products
    :menu: (website) ‣ Cart
    :shows: The cart review page with the suggested accessory products listed under the cart lines.
    :highlight: The suggested accessories (red frame).
@@ -64,7 +64,7 @@ You can display **alternative products** at the bottom of the product page as an
 technique, encouraging customers to consider a more expensive variant or product than their
 initial choice by presenting appealing alternatives.
 
-.. screenshot:: ecommerce-cross_upselling-cross-upselling-alternative
+.. screenshot:: ecommerce-cross-upselling-cross-upselling-alternative
    :menu: (website) ‣ Shop ‣ (product)
    :shows: A product page with the alternative products carousel shown below the product description.
    :highlight: The alternative products carousel (red frame).

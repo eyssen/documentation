@@ -32,7 +32,7 @@ Fill in the following information and click :guilabel:`Get tracked link` to gene
 #. :guilabel:`Source`: The source identifies the precise platform or website that referred the
    visitor, such as a search engine, a newsletter, or a website.
 
-.. screenshot:: website-link_tracker-create-link-tracker
+.. screenshot:: website-link-tracker-create-link-tracker
    :menu: Website ‣ Site ‣ Link Tracker
    :shows: The Link Tracker page with the URL, Campaign, Medium and Source fields filled in and the generated tracked link below.
    :highlight: The generated tracked link (red frame).
@@ -53,7 +53,7 @@ Tracked links overview
 To get an overview of your tracked links, go to :menuselection:`Website --> Site --> Link Tracker`
 and scroll down to :guilabel:`Your tracked links` section.
 
-.. screenshot:: website-link_tracker-your-tracked-links
+.. screenshot:: website-link-tracker-your-tracked-links
    :menu: Website ‣ Site ‣ Link Tracker ‣ Stats
    :shows: The overview of all tracked links with their Short URL, Campaign, Medium, Source and number of clicks.
    :data: Three tracked links.
@@ -65,7 +65,7 @@ Statistics
 
 To measure the performance of tracked links, click the :guilabel:`Stats` button.
 
-.. screenshot:: website-link_tracker-statistics
+.. screenshot:: website-link-tracker-statistics
    :menu: Website ‣ Site ‣ Link Tracker ‣ Stats ‣ (link)
    :shows: The statistics of one tracked link, showing the clicks over time and their breakdown by country.
    :highlight: The click chart (red frame).

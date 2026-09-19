@@ -39,7 +39,7 @@ On Cloudflare
   - The :guilabel:`Managed` mode is **recommended**, as visitors can be prompted to check a box
     confirming they are human if deemed necessary by Turnstile.
 
-    .. screenshot:: website-spam_protection-turnstile-human
+    .. screenshot:: website-spam-protection-turnstile-human
        :menu: (website) ‣ Contact us
        :shows: A website form with the Cloudflare Turnstile widget showing the successful human verification.
        :highlight: The Turnstile widget (red frame).
@@ -55,7 +55,7 @@ On Cloudflare
        If the Turnstile check fails, visitors are not able to submit the form, and the following
        error message is displayed:
 
-       .. screenshot:: website-spam_protection-turnstile-error
+       .. screenshot:: website-spam-protection-turnstile-error
           :menu: (website) ‣ Contact us
           :shows: A website form with the Cloudflare Turnstile widget showing its verification error message.
           :highlight: The error message (red frame).
@@ -65,7 +65,7 @@ On Cloudflare
 
 - Click :guilabel:`Create`.
 
-.. screenshot:: website-spam_protection-turnstile-configuration
+.. screenshot:: website-spam-protection-turnstile-configuration
    :menu: (Cloudflare dashboard) ‣ Turnstile ‣ Add site
    :shows: The Cloudflare Turnstile site configuration form with the site name, domain, widget mode and the generated site key and secret key.
    :highlight: The site key and secret key (red frame).
@@ -117,7 +117,7 @@ On the website registration page:
 - Agree to the terms of service.
 - Click :guilabel:`Submit`.
 
-.. screenshot:: website-spam_protection-recaptcha-google-configuration
+.. screenshot:: website-spam-protection-recaptcha-google-configuration
    :menu: (Google reCAPTCHA admin console) ‣ Create
    :shows: The reCAPTCHA website registration form with the label, reCAPTCHA type v3 and the domain filled in.
    :highlight: The reCAPTCHA type and Domains fields (red frame).
@@ -156,7 +156,7 @@ navigate to the form. Then, click somewhere on the form, and on the right sideba
 :guilabel:`Customize` tab, toggle :guilabel:`Show reCAPTCHA Policy` found under the :guilabel:`Form`
 section.
 
-.. screenshot:: website-spam_protection-recaptcha-policy
+.. screenshot:: website-spam-protection-recaptcha-policy
    :menu: (website) ‣ Contact us
    :shows: A website form showing the reCAPTCHA policy message under the submit button.
    :highlight: The policy message (red frame).
@@ -167,7 +167,7 @@ section.
 .. note::
    If the reCAPTCHA check fails, the following error message is displayed:
 
-   .. screenshot:: website-spam_protection-recaptcha-error
+   .. screenshot:: website-spam-protection-recaptcha-error
       :menu: (website) ‣ Contact us
       :shows: A website form showing the reCAPTCHA verification error message after a failed check.
       :highlight: The error message (red frame).

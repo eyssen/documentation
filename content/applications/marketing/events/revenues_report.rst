@@ -13,7 +13,7 @@ Revenues reporting page
 To access the *Attendees* reporting page, navigate to :menuselection:`Events app --> Reporting -->
 Revenues`.
 
-.. screenshot:: events-revenues_report-default-view
+.. screenshot:: events-revenues-report-default-view
    :menu: Events ‣ Reporting ‣ Revenues
    :shows: The Revenues reporting page in the default graph view with the Non-free tickets and Registration Date filters applied.
    :highlight: The active filters in the search bar (red frame).
@@ -136,7 +136,7 @@ The following is an example of how various filters and grouping options can crea
 graph report related to event revenues. In this case, the configurations present data about sold or
 free tickets to published events, with the metrics separated by ticket type and event.
 
-.. screenshot:: events-revenues_report-event-ticket-analysis
+.. screenshot:: events-revenues-report-event-ticket-analysis
    :menu: Events ‣ Reporting ‣ Revenues
    :shows: The Revenues report as a bar chart grouped by Event and Ticket, with the Revenues measure selected.
    :highlight: The Measures menu and the group-by breadcrumbs (red frame).
@@ -177,7 +177,7 @@ pivot table report related to event revenues. In this case, the configurations p
 how much revenue different event types have generated, in order to gauge which events are the most
 profitable.
 
-.. screenshot:: events-revenues_report-event-type-analysis
+.. screenshot:: events-revenues-report-event-type-analysis
    :menu: Events ‣ Reporting ‣ Revenues
    :shows: The Revenues report as a pivot table grouped by Event Type in rows and Registration Date in columns.
    :highlight: The pivot header rows (red frame).

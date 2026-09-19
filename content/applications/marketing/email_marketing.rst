@@ -37,7 +37,7 @@ Email marketing dashboard
 After installing the application, click the :menuselection:`Email Marketing` app icon from the main
 Odoo dashboard. Doing so reveals the main :guilabel:`Mailings` dashboard in the default list view.
 
-.. screenshot:: email_marketing-email_marketing-mailings-dashboard
+.. screenshot:: email-marketing-email-marketing-mailings-dashboard
    :menu: Email Marketing ‣ Mailings
    :shows: The Mailings dashboard in list view with the Subject, Recipients, Sent, Delivered, Opened, Clicked, Replied and Status columns.
    :data: Demo mailings 'Newsletter' and 'Product launch'; mailing lists 'Newsletter (HU)' and 'Webshop customers'.
@@ -93,7 +93,7 @@ Kanban view
 The Kanban view, represented by the :guilabel:`(inverted bar graph)` icon, can be accessed in the
 upper-right corner of the :guilabel:`Mailings` dashboard in the :guilabel:`Email Marketing` app.
 
-.. screenshot:: email_marketing-email_marketing-kanban-view
+.. screenshot:: email-marketing-email-marketing-kanban-view
    :menu: Email Marketing ‣ Mailings
    :shows: The Mailings kanban grouped by status, each card showing the subject, the recipients and the result percentages.
    :data: Demo mailings 'Newsletter' and 'Product launch'; mailing lists 'Newsletter (HU)' and 'Webshop customers'.
@@ -120,7 +120,7 @@ vertical dots)` icon appears. When clicked, a mini drop-down menu reveals the op
 the email, :guilabel:`Delete` the email, or :guilabel:`Archive` the message for potential future
 use.
 
-.. screenshot:: email_marketing-email_marketing-three-dot-dropdown
+.. screenshot:: email-marketing-email-marketing-three-dot-dropdown
    :menu: Email Marketing ‣ Mailings
    :shows: A mailing kanban card with its three-dot drop-down menu open, showing Edit, Duplicate, Send, Test and Delete.
    :highlight: The three-dot drop-down menu (red frame).
@@ -139,7 +139,7 @@ upper-right corner of the :guilabel:`Mailings` dashboard in the :guilabel:`Email
 While in calendar view, a monthly calendar (by default), shows when the mailings have been sent or
 are scheduled to be sent.
 
-.. screenshot:: email_marketing-email_marketing-calendar-view
+.. screenshot:: email-marketing-email-marketing-calendar-view
    :menu: Email Marketing ‣ Mailings
    :shows: The Mailings calendar view with the mailings placed on their scheduled sending date.
    :data: Two scheduled mailings in the current month.
@@ -178,7 +178,7 @@ corner of the :guilabel:`Mailings` dashboard in the :guilabel:`Email Marketing` 
 While in graph view, the status of the emails on the :guilabel:`Mailings` page is represented in a
 bar graph, but other graph view options can be implemented, if needed.
 
-.. screenshot:: email_marketing-email_marketing-graph-view
+.. screenshot:: email-marketing-email-marketing-graph-view
    :menu: Email Marketing ‣ Mailings
    :shows: The Mailings graph view as a bar chart with the Measures drop-down menu next to it.
    :highlight: The Measures drop-down menu (red frame).
@@ -210,7 +210,7 @@ always available to further customize the information being displayed.
 To access those options, click the :guilabel:`(downward arrow)` icon, located to the right of the
 search bar. Doing so reveals a drop-down mega menu featuring those filtering and grouping options.
 
-.. screenshot:: email_marketing-email_marketing-search-mega-menu
+.. screenshot:: email-marketing-email-marketing-search-mega-menu
    :menu: Email Marketing ‣ Mailings
    :shows: The search bar's drop-down mega menu with the Filters, Group By and Favorites columns side by side.
    :highlight: The three columns of the mega menu (red frame).
@@ -228,7 +228,7 @@ These options provide various ways to specify and organize the information seen 
       This section of the drop-down mega menu provides different ways to filter email results being
       shown on the :guilabel:`Mailings` dashboard in the :guilabel:`Email Marketing` app.
 
-      .. screenshot:: email_marketing-email_marketing-filters-dropdown
+      .. screenshot:: email-marketing-email-marketing-filters-dropdown
          :menu: Email Marketing ‣ Mailings
          :shows: The Filters column of the search mega menu, listing My Mailings, Sent Date, Archived and Add Custom Filter.
          :highlight: The Filters column (red frame).
@@ -243,7 +243,7 @@ These options provide various ways to specify and organize the information seen 
       customizable fields to fill in, in order to create custom filter rules for Odoo to use to
       retrieve results that fit more specific criteria.
 
-      .. screenshot:: email_marketing-email_marketing-add-custom-filter-popup
+      .. screenshot:: email-marketing-email-marketing-add-custom-filter-popup
          :menu: Email Marketing ‣ Mailings
          :shows: The Add Custom Filter pop-up window with an editable rule and the Add / Discard buttons.
          :highlight: The rule line (red frame).
@@ -256,7 +256,7 @@ These options provide various ways to specify and organize the information seen 
       This section of the drop-down mega menu provides different ways to group email results being
       shown on the :guilabel:`Mailings` dashboard in the :guilabel:`Email Marketing` app.
 
-      .. screenshot:: email_marketing-email_marketing-group-by-dropdown
+      .. screenshot:: email-marketing-email-marketing-group-by-dropdown
          :menu: Email Marketing ‣ Mailings
          :shows: The Group By column of the search mega menu, listing Status, Campaign, Sent Period and Add Custom Group.
          :highlight: The Group By column (red frame).
@@ -282,7 +282,7 @@ These options provide various ways to specify and organize the information seen 
       To utilize this section, click the :guilabel:`Save current search` field, which reveals
       additional fields.
 
-      .. screenshot:: email_marketing-email_marketing-favorites-dropdown
+      .. screenshot:: email-marketing-email-marketing-favorites-dropdown
          :menu: Email Marketing ‣ Mailings
          :shows: The Favorites column of the search mega menu with the Save current search entry expanded.
          :highlight: The Favorites column (red frame).
@@ -306,7 +306,7 @@ Settings
 To view and modify the *Email Marketing* settings, navigate to :menuselection:`Email Marketing app
 --> Configuration --> Settings`.
 
-.. screenshot:: email_marketing-email_marketing-configuration-settings
+.. screenshot:: email-marketing-email-marketing-configuration-settings
    :menu: Email Marketing ‣ Configuration ‣ Settings
    :shows: The Configuration menu of the Email Marketing app opened on the Settings entry.
    :highlight: The Settings menu entry (red frame).
@@ -316,7 +316,7 @@ To view and modify the *Email Marketing* settings, navigate to :menuselection:`E
 
 On the :guilabel:`Settings` page, there are four features available.
 
-.. screenshot:: email_marketing-email_marketing-settings
+.. screenshot:: email-marketing-email-marketing-settings
    :menu: Email Marketing ‣ Configuration ‣ Settings
    :shows: The Email Marketing settings page with the Mailing Campaigns, Blacklist Options when Unsubscribing and Dedicated Server options.
    :highlight: The setting checkboxes (red frame).
@@ -345,7 +345,7 @@ To create an email, open the :menuselection:`Email Marketing` application, and c
 
 Clicking :guilabel:`New` reveals a blank email form.
 
-.. screenshot:: email_marketing-email_marketing-blank-email-detail-form
+.. screenshot:: email-marketing-email-marketing-blank-email-detail-form
    :menu: Email Marketing ‣ Mailings ‣ New
    :shows: A new blank mailing form with the Subject field, the Recipients field, and the Mail Body, A/B Tests and Settings tabs.
    :highlight: The Subject and Recipients fields (red frame).
@@ -403,7 +403,7 @@ Odoo then sends the email to contacts on that specific mailing list(s).
 When the :guilabel:`Recipients` field is clicked, a drop-down menu of other options is revealed.
 Each option provides different ways Odoo can create a target audience for the email.
 
-.. screenshot:: email_marketing-email_marketing-recipients-dropdown
+.. screenshot:: email-marketing-email-marketing-recipients-dropdown
    :menu: Email Marketing ‣ Mailings ‣ New
    :shows: The Recipients drop-down menu of a mailing, listing the available target models (Mailing List, Contact, Lead/Opportunity, Sales Order, Event Registration, …).
    :highlight: The Recipients drop-down menu (red frame).
@@ -455,7 +455,7 @@ targeting criteria, which can be added on top of those seed sources.
    :guilabel:`Stages`, :guilabel:`Tags`, :guilabel:`Lost Reasons`, :guilabel:`Sales Teams`,
    :guilabel:`Active` statuses, :guilabel:`Country`, and so much more.
 
-   .. screenshot:: email_marketing-email_marketing-detailed-filter-records
+   .. screenshot:: email-marketing-email-marketing-detailed-filter-records
       :menu: Email Marketing ‣ Mailings ‣ New
       :shows: The Recipients field set to a model other than Mailing List, with the expanded rule builder showing several filter rules.
       :highlight: The rule builder (red frame).
@@ -469,7 +469,7 @@ selections, until the preferred configuration has been achieved.
 The number of :guilabel:`records` in the database that match the configured rule(s) are indicated
 beneath the configured filter rule(s), in green.
 
-.. screenshot:: email_marketing-email_marketing-filter-records
+.. screenshot:: email-marketing-email-marketing-filter-records
    :menu: Email Marketing ‣ Mailings ‣ New
    :shows: The Recipients field with a single filter rule and the record counter below it.
    :highlight: The record counter (red frame).
@@ -498,7 +498,7 @@ Mail Body tab
 In the :guilabel:`Mail Body` tab, there are a number of pre-configured message templates to choose
 from.
 
-.. screenshot:: email_marketing-email_marketing-mail-body-templates
+.. screenshot:: email-marketing-email-marketing-mail-body-templates
    :menu: Email Marketing ‣ Mailings ‣ New ‣ Mail Body tab
    :shows: The Mail Body tab showing the gallery of email design templates to start from.
    :highlight: The template gallery (red frame).
@@ -509,7 +509,7 @@ from.
 Select the desired template, and proceed to modify every element of its design details with Odoo's
 drag-and-drop building blocks, which appear on the right sidebar when a template is chosen.
 
-.. screenshot:: email_marketing-email_marketing-template-building-blocks
+.. screenshot:: email-marketing-email-marketing-template-building-blocks
    :menu: Email Marketing ‣ Mailings ‣ New ‣ Mail Body tab
    :shows: The Mail Body tab with a template chosen and the building-block panel open on the right.
    :highlight: The building-block panel (red frame).
@@ -534,7 +534,7 @@ various aspects of the building block can be customized.
    template, a drop-down menu of various design elements appears, which can be used to create the
    desired email design.
 
-   .. screenshot:: email_marketing-email_marketing-template-blank-slash
+   .. screenshot:: email-marketing-email-marketing-template-blank-slash
       :menu: Email Marketing ‣ Mailings ‣ New ‣ Mail Body tab
       :shows: The Start From Scratch template with the powerbox drop-down menu opened by typing a forward slash in the body.
       :highlight: The powerbox drop-down menu (red frame).
@@ -591,7 +591,7 @@ The :guilabel:`Send Final On` field allows users to choose a date that is used t
 should determine the "winning" email, and subsequently, send that version of the email to the
 remaining recipients.
 
-.. screenshot:: email_marketing-email_marketing-ab-test-tab
+.. screenshot:: email-marketing-email-marketing-ab-test-tab
    :menu: Email Marketing ‣ Mailings ‣ New ‣ A/B Tests tab
    :shows: The A/B Tests tab with Allow A/B Testing enabled, the percentage of recipients, the winner selection criteria and the Create an Alternative Version button.
    :highlight: The Allow A/B Testing checkbox and the winner criteria (red frame).
@@ -620,7 +620,7 @@ Without the *Mailing Campaigns* feature activated, the :guilabel:`Settings` tab 
 only contains the :guilabel:`Preview Text`, :guilabel:`Send From`, :guilabel:`Reply To`,
 :guilabel:`Attachments`, and :guilabel:`Responsible` fields.
 
-.. screenshot:: email_marketing-email_marketing-settings-without-features
+.. screenshot:: email-marketing-email-marketing-settings-without-features
    :menu: Email Marketing ‣ Mailings ‣ New ‣ Settings tab
    :shows: The Settings tab of a mailing without the Mailing Campaigns setting enabled: Mail Subject, Preview Text, Send From, Reply To and Attach a file.
    :highlight: The Settings tab (red frame).
@@ -652,7 +652,7 @@ Tracking
    If the *Mailing Campaign* feature *is* activated, an additional :guilabel:`Campaign` field
    appears in the :guilabel:`Tracking` section of the :guilabel:`Settings` tab.
 
-   .. screenshot:: email_marketing-email_marketing-settings-tab-with-campaign
+   .. screenshot:: email-marketing-email-marketing-settings-tab-with-campaign
       :menu: Email Marketing ‣ Mailings ‣ New ‣ Settings tab
       :shows: The Settings tab of a mailing with the Mailing Campaigns setting enabled, showing the additional Campaign and Tracking (Medium, Source) fields.
       :highlight: The Campaign field (red frame).
@@ -683,7 +683,7 @@ Send
 
 The :guilabel:`Send` button reveals a :guilabel:`Ready to unleash emails?` pop-up window.
 
-.. screenshot:: email_marketing-email_marketing-send-popup
+.. screenshot:: email-marketing-email-marketing-send-popup
    :menu: Email Marketing ‣ Mailings ‣ New ‣ Send
    :shows: The Ready to unleash emails? confirmation pop-up window with the recipient count and the Send to all button.
    :highlight: The Send to all button (red frame).
@@ -702,7 +702,7 @@ Schedule
 The :guilabel:`Schedule` button reveals a :guilabel:`When do you want to send your mailing?` pop-up
 window.
 
-.. screenshot:: email_marketing-email_marketing-schedule-popup
+.. screenshot:: email-marketing-email-marketing-schedule-popup
    :menu: Email Marketing ‣ Mailings ‣ New ‣ Schedule
    :shows: The schedule pop-up window with the date/time field for the planned sending.
    :highlight: The date/time field (red frame).
@@ -712,7 +712,7 @@ window.
 
 In this pop-up window, click the :guilabel:`Send on` field to reveal a calendar pop-up window.
 
-.. screenshot:: email_marketing-email_marketing-schedule-popup-calendar
+.. screenshot:: email-marketing-email-marketing-schedule-popup-calendar
    :menu: Email Marketing ‣ Mailings ‣ New ‣ Schedule
    :shows: The schedule pop-up window with the calendar picker opened on the sending date.
    :highlight: The calendar picker (red frame).
@@ -731,7 +731,7 @@ Test
 
 The :guilabel:`Test` button reveals a :guilabel:`Test Mailing` pop-up window.
 
-.. screenshot:: email_marketing-email_marketing-test-popup
+.. screenshot:: email-marketing-email-marketing-test-popup
    :menu: Email Marketing ‣ Mailings ‣ New ‣ Test
    :shows: The Test Mailing pop-up window with the recipient email field and the Send Test button.
    :highlight: The recipient email field (red frame).
@@ -764,7 +764,7 @@ activated in the *Settings* page of the *Email Marketing* application. To do tha
 :menuselection:`Email Marketing app --> Configuration --> Settings`, tick the box beside
 :guilabel:`Mailing Campaigns`, and click the :guilabel:`Save` button.
 
-.. screenshot:: email_marketing-email_marketing-campaigns-feature
+.. screenshot:: email-marketing-email-marketing-campaigns-feature
    :menu: Email Marketing ‣ Configuration ‣ Settings
    :shows: The Email Marketing settings page with the Mailing Campaigns checkbox enabled.
    :highlight: The Mailing Campaigns setting (red frame).
@@ -778,7 +778,7 @@ appears in the header.
 When that is clicked, Odoo reveals a separate :guilabel:`Campaigns` page, displaying all the mailing
 campaigns in the database, and the current stage they are in, showcased in a default Kanban view.
 
-.. screenshot:: email_marketing-email_marketing-campaigns-page
+.. screenshot:: email-marketing-email-marketing-campaigns-page
    :menu: Email Marketing ‣ Campaigns
    :shows: The Campaigns kanban grouped by stage, each card showing the campaign name, the responsible and the mailings it contains.
    :data: Three campaigns in different stages.
@@ -818,7 +818,7 @@ Kanban view
 When the :guilabel:`New` button is clicked in the default Kanban view on the :guilabel:`Campaigns`
 page, a Kanban card appears in the :guilabel:`New` stage.
 
-.. screenshot:: email_marketing-email_marketing-campaigns-kanban-popup
+.. screenshot:: email-marketing-email-marketing-campaigns-kanban-popup
    :menu: Email Marketing ‣ Campaigns ‣ New
    :shows: The inline quick-create card on the Campaigns kanban with the Campaign Name, Responsible and Tags fields.
    :highlight: The quick-create card (red frame).
@@ -849,7 +849,7 @@ List view
 To enter the list view on the :guilabel:`Campaigns` page, click the :guilabel:`☰ (horizontal lines)`
 icon in the upper-right corner. Doing so reveals all campaign information in a list format.
 
-.. screenshot:: email_marketing-email_marketing-campaign-page-list-view
+.. screenshot:: email-marketing-email-marketing-campaign-page-list-view
    :menu: Email Marketing ‣ Campaigns
    :shows: The Campaigns list view with the Campaign Name, Responsible, Revenues, Quotations, Opportunities and Clicks columns.
    :data: Three campaigns.
@@ -859,7 +859,7 @@ icon in the upper-right corner. Doing so reveals all campaign information in a l
 To create a campaign from the :guilabel:`Campaigns` page while in list view, click the
 :guilabel:`New` button. Doing so reveals a blank campaign form.
 
-.. screenshot:: email_marketing-email_marketing-blank-campaign-form
+.. screenshot:: email-marketing-email-marketing-blank-campaign-form
    :menu: Email Marketing ‣ Campaigns ‣ New
    :shows: A new blank campaign form with the Campaign Name, Responsible and Tags fields.
    :highlight: The Campaign Name field (red frame).
@@ -886,7 +886,7 @@ Campaign form
 On the campaign form (after clicking :guilabel:`Edit` from the Kanban card, or selecting an existing
 campaign from the :guilabel:`Campaigns` page) there are additional options and metrics available.
 
-.. screenshot:: email_marketing-email_marketing-campaign-form
+.. screenshot:: email-marketing-email-marketing-campaign-form
    :menu: Email Marketing ‣ Campaigns ‣ (campaign)
    :shows: A saved campaign form with the Revenues, Quotations, Opportunities and Clicks smart buttons and the Send Mailing and Send SMS buttons.
    :highlight: The smart button row and the Send Mailing / Send SMS buttons (red frame).
@@ -917,7 +917,7 @@ To create a new campaign from the :guilabel:`Settings` tab of a mailing form, cl
 :guilabel:`Create "[Campaign Name]"` or :guilabel:`Create and edit...` from the drop-down menu that
 appears.
 
-.. screenshot:: email_marketing-email_marketing-mailing-campaign-settings
+.. screenshot:: email-marketing-email-marketing-mailing-campaign-settings
    :menu: Email Marketing ‣ Mailings ‣ New ‣ Settings tab
    :shows: The Campaign field of a mailing's Settings tab with a new campaign name typed in and the Create "…" / Create and edit… options shown.
    :highlight: The Campaign field drop-down (red frame).
@@ -931,7 +931,7 @@ in the future.
 Select :guilabel:`Create and Edit...` to add this new mailing campaign to the database, and reveal a
 :guilabel:`Create Campaign` pop-up window.
 
-.. screenshot:: email_marketing-email_marketing-mailing-campaign-popup
+.. screenshot:: email-marketing-email-marketing-mailing-campaign-popup
    :menu: Email Marketing ‣ Mailings ‣ New ‣ Settings tab ‣ Create and edit…
    :shows: The Create Campaign pop-up window with the Campaign Name, Responsible, Tags and status, and the Save & Close / Discard buttons.
    :highlight: The Campaign Name and Responsible fields (red frame).

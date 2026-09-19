@@ -21,7 +21,7 @@ Lists`. When clicked, a sub-menu is revealed with options for :guilabel:`Mailing
 Click :menuselection:`Mailing Lists --> Mailing Lists` to see an overview of all mailing lists in
 the database.
 
-.. screenshot:: sms-mailing_lists_blacklists-mailing-list-main-page
+.. screenshot:: sms-mailing-lists-blacklists-mailing-list-main-page
    :menu: SMS Marketing ‣ Mailing Lists ‣ Mailing Lists
    :shows: The Mailing Lists kanban with cards showing the number of recipients and the mailings sent to each list.
    :data: Two lists: 'Newsletter (HU)' and 'Webshop customers'.
@@ -34,7 +34,7 @@ proceed to modify it in a number of ways.
 To create a new mailing list, click :guilabel:`Create` in the upper left corner of the
 :guilabel:`Mailing Lists` page. Doing so, will reveal a blank mailing list template form.
 
-.. screenshot:: sms-mailing_lists_blacklists-sms-mailing-list-popup
+.. screenshot:: sms-mailing-lists-blacklists-sms-mailing-list-popup
    :menu: SMS Marketing ‣ Mailing Lists ‣ Mailing Lists ‣ New
    :shows: The New Mailing List pop-up window with the Mailing List name entered and the Show In Preferences checkbox.
    :highlight: The Show In Preferences checkbox (red frame).
@@ -66,7 +66,7 @@ with in-depth data associated with the mailing list.
 To make changes to the mailing list itself, click the :guilabel:`Edit` button in the upper-left
 corner of the mailing list detail form.
 
-.. screenshot:: sms-mailing_lists_blacklists-sms-mailing-list
+.. screenshot:: sms-mailing-lists-blacklists-sms-mailing-list
    :menu: SMS Marketing ‣ Mailing Lists ‣ Mailing Lists
    :shows: An opened mailing list with its Recipients, Mailings and Subscribers smart buttons.
    :highlight: The smart button row (red frame).
@@ -84,7 +84,7 @@ Access contacts information from one or more mailing lists navigate to :menusele
 --> Mailing List Contacts` to reveal a dashboard with with all the contacts associated with one or
 more of the configured mailing lists in the database.
 
-.. screenshot:: sms-mailing_lists_blacklists-mailing-list-contacts-page
+.. screenshot:: sms-mailing-lists-blacklists-mailing-list-contacts-page
    :menu: SMS Marketing ‣ Mailing Lists ‣ Mailing List Contacts
    :shows: The Mailing List Contacts list view with the Name, Mobile, Mailing Lists and Blacklist columns.
    :data: About ten demo contacts with mobile numbers.
@@ -108,7 +108,7 @@ of interactions with contacts and prospects.
 For example, sales representatives can use the chatter to quickly find out which :abbr:`SMS (Short
 Message Service)` mailing promotions a certain customer has received (or not received).
 
-.. screenshot:: sms-mailing_lists_blacklists-sms-marketing-chatter
+.. screenshot:: sms-mailing-lists-blacklists-sms-marketing-chatter
    :menu: Contacts
    :shows: A contact form's chatter showing the logged SMS messages sent to that contact.
    :highlight: The logged SMS entries in the chatter (red frame).
@@ -131,7 +131,7 @@ To see a complete collection of blacklisted numbers, navigate to the :menuselect
 app --> Configuration --> Blacklisted Phone Numbers` to reveal a dashboard containing every
 blacklisted phone number in the database.
 
-.. screenshot:: sms-mailing_lists_blacklists-sms-blacklist-menu
+.. screenshot:: sms-mailing-lists-blacklists-sms-blacklist-menu
    :menu: SMS Marketing ‣ Configuration ‣ Blacklisted Phone Numbers
    :shows: The Blacklisted Phone Numbers list with the Phone, Reason and Active columns.
    :data: Two blacklisted numbers.
@@ -142,7 +142,7 @@ To manually add a number to a blacklist, click the :guilabel:`Create` button in 
 corner of the dashboard and enter the phone number on the next page's form. There's also a
 checkbox to indicate whether that particular phone numnber is :guilabel:`Active` (or not).
 
-.. screenshot:: sms-mailing_lists_blacklists-sms-blacklist-create
+.. screenshot:: sms-mailing-lists-blacklists-sms-blacklist-create
    :menu: SMS Marketing ‣ Configuration ‣ Blacklisted Phone Numbers ‣ New
    :shows: A new blacklist record with the Phone Number field filled in.
    :highlight: The Phone Number field (red frame).
@@ -165,7 +165,7 @@ To do that, navigate to :menuselection:`SMS Marketing app --> Configuration --> 
 Numbers`, and then select the :guilabel:`Favorites` drop-down menu (beneath the search bar), and
 click :guilabel:`Import records`.
 
-.. screenshot:: sms-mailing_lists_blacklists-import-blacklist
+.. screenshot:: sms-mailing-lists-blacklists-import-blacklist
    :menu: SMS Marketing ‣ Configuration ‣ Blacklisted Phone Numbers ‣ (gear) ‣ Import records
    :shows: The import screen for blacklisted phone numbers with the Phone column mapped.
    :highlight: The column mapping row (red frame).

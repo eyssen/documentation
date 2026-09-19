@@ -21,7 +21,7 @@ and publish an event schedule with various tracks.
 Also, when that setting checkbox is ticked, two additional setting options appear beneath it:
 :guilabel:`Live Broadcast` and :guilabel:`Event Gamification`.
 
-.. screenshot:: events-event_tracks-track-settings
+.. screenshot:: events-event-tracks-track-settings
    :menu: Events ‣ Configuration ‣ Settings
    :shows: The Events settings page with the Schedule & Tracks checkbox enabled and its Live Broadcast and Tracks on Website sub-options.
    :highlight: The Schedule & Tracks setting block (red frame).
@@ -64,7 +64,7 @@ Clicking the :guilabel:`Tracks` smart button reveals the :guilabel:`Event Tracks
 particular event, which presents all the tracks (both scheduled and proposed) for the event, if
 there are any.
 
-.. screenshot:: events-event_tracks-event-tracks-page
+.. screenshot:: events-event-tracks-event-tracks-page
    :menu: Events ‣ Events ‣ (event) ‣ Tracks
    :shows: The Tracks kanban grouped by stage (Proposal, Confirmed, Announced, Published).
    :data: Four tracks spread over the first three stages.
@@ -95,7 +95,7 @@ Create event track
 From the :guilabel:`Event Tracks` page, click :guilabel:`New` in the upper-left corner to reveal a
 blank event track form to create an event track.
 
-.. screenshot:: events-event_tracks-event-track-form
+.. screenshot:: events-event-tracks-event-track-form
    :menu: Events ‣ Events ‣ (event) ‣ Tracks ‣ New
    :shows: A new event track form with the Track Title, Track Date, Duration, Location, Tags, Speaker, Description, Interactivity and Quiz elements.
    :highlight: The Track Date, Duration and Location fields (red frame).
@@ -149,7 +149,7 @@ Speaker tab
 The :guilabel:`Speaker` tab on an event track form is filled with various fields related to the
 specific speaker who is planning to conduct/host the track.
 
-.. screenshot:: events-event_tracks-speaker-tab
+.. screenshot:: events-event-tracks-speaker-tab
    :menu: Events ‣ Events ‣ (event) ‣ Tracks ‣ New
    :shows: The Speaker tab of a track form with the Contact, Contact Email, Contact Phone, Speaker Bio and Speaker Name/Email/Phone fields.
    :highlight: The Contact field (red frame).
@@ -215,7 +215,7 @@ Interactivity tab
 The :guilabel:`Interactivity` tab on an event track form features a single option at first:
 :guilabel:`Magic Button`.
 
-.. screenshot:: events-event_tracks-interactivity-tab
+.. screenshot:: events-event-tracks-interactivity-tab
    :menu: Events ‣ Events ‣ (event) ‣ Tracks ‣ New
    :shows: The Interactivity tab of a track form with the Magic Button enabled and its Button Title, Button Target URL and Show Button fields.
    :highlight: The Magic Button block (red frame).
@@ -249,7 +249,7 @@ setting is enabled in the Odoo *Events* settings.
 To add a quiz to the event track, click the :guilabel:`Add Quiz` button. Doing so reveals a separate
 page where an event track quiz can be created and configured.
 
-.. screenshot:: events-event_tracks-add-quiz
+.. screenshot:: events-event-tracks-add-quiz
    :menu: Events ‣ Events ‣ (event) ‣ Tracks ‣ Add Quiz
    :shows: The quiz page of a track with the Quiz name, the reward points fields and the list of questions.
    :highlight: The reward points fields (red frame).
@@ -267,7 +267,7 @@ corresponding event and track this quiz is associated with.
 To add questions to the quiz, click :guilabel:`Add a line` beneath the :guilabel:`Question` column.
 Doing so reveals a :guilabel:`Create Questions` pop-up window.
 
-.. screenshot:: events-event_tracks-create-questions
+.. screenshot:: events-event-tracks-create-questions
    :menu: Events ‣ Events ‣ (event) ‣ Tracks ‣ Add Quiz
    :shows: The Create Questions pop-up window with the question text and its answers, each with its Correct and Comment fields.
    :highlight: The Correct checkbox of the right answer (red frame).
@@ -327,7 +327,7 @@ accessible) for event attendees, toggle the :icon:`fa-toggle-off` :guilabel:`Unp
 the top of the page to :icon:`fa-toggle-on` :guilabel:`Published`; thus turning it from red to
 green, and making it accessible for attendees.
 
-.. screenshot:: events-event_tracks-published-toggle
+.. screenshot:: events-event-tracks-published-toggle
    :menu: (event website) ‣ Talks
    :shows: A published track page on the event website with the Unpublished/Published toggle in the website editor's top bar.
    :highlight: The Published toggle (red frame).

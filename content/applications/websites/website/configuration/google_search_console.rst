@@ -11,7 +11,7 @@ To enable Google Search Console for your website, go to `Google Search Console
 <https://search.google.com/search-console/welcome>`_. Then, select the property type
 :ref:`GSC-Domain` or :ref:`GSC-URL prefix`.
 
-.. screenshot:: website-google_search_console-add-domain-or-url-prefix
+.. screenshot:: website-google-search-console-add-domain-or-url-prefix
    :menu: (Google Search Console)
    :shows: The Google Search Console property selection screen with the Domain and URL prefix options side by side.
    :highlight: The URL prefix option (red frame).
@@ -83,7 +83,7 @@ have to put in your Odoo's Website Settings. Google verifies ownership by checki
 #. Once you added your website URL under the URL prefix option and clicked :guilabel:`continue`,
    expand the HTML file section where you find a download :icon:`fa-download` button.
 
-   .. screenshot:: website-google_search_console-html-file-download
+   .. screenshot:: website-google-search-console-html-file-download
       :menu: (Google Search Console) ‣ Ownership verification ‣ HTML file
       :shows: The HTML file verification method of Google Search Console with the Download button for the verification file.
       :highlight: The Download button (red frame).
@@ -93,7 +93,7 @@ have to put in your Odoo's Website Settings. Google verifies ownership by checki
 
 #. Download your HTML verification file and copy the verification code (e.g., `google123abc.html`).
 
-   .. screenshot:: website-google_search_console-open-copy-html-file
+   .. screenshot:: website-google-search-console-open-copy-html-file
       :menu: (text editor)
       :shows: The downloaded Google verification HTML file opened in a text editor, with its verification string selected.
       :highlight: The verification string (red frame).
@@ -105,7 +105,7 @@ have to put in your Odoo's Website Settings. Google verifies ownership by checki
    and enable :guilabel:`Google Search Console` in the :guilabel:`SEO` section. Paste the
    verification code (e.g., `google123abc.html`) in the dedicated field.
 
-   .. screenshot:: website-google_search_console-paste-html-code-settings
+   .. screenshot:: website-google-search-console-paste-html-code-settings
       :menu: Website ‣ Configuration ‣ Settings
       :shows: The SEO section of the Website settings page with the Google Search Console field filled in with the verification string.
       :highlight: The Google Search Console field (red frame).
@@ -126,7 +126,7 @@ To verify your site ownership using an HTML tag, follow these instructions:
 
 #. Expand the HTML tag section.
 
-   .. screenshot:: website-google_search_console-gsc-html-tag
+   .. screenshot:: website-google-search-console-gsc-html-tag
       :menu: (Google Search Console) ‣ Ownership verification ‣ HTML tag
       :shows: The HTML tag verification method of Google Search Console showing the meta tag to copy.
       :highlight: The meta tag (red frame).
@@ -140,7 +140,7 @@ To verify your site ownership using an HTML tag, follow these instructions:
    click :guilabel:`<head> and </body>` next to :guilabel:`Code Injection`.
    Paste the copied tag into the first field (:guilabel:`<head>`), and click :guilabel:`Save`.
 
-   .. screenshot:: website-google_search_console-gsc-paste-tag
+   .. screenshot:: website-google-search-console-gsc-paste-tag
       :menu: Website ‣ Site ‣ Pages ‣ (page) ‣ Edit ‣ (page properties)
       :shows: The page properties panel with the meta tag pasted into the <head> field.
       :highlight: The <head> field (red frame).

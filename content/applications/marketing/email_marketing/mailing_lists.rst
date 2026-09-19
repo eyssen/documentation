@@ -17,7 +17,7 @@ Marketing app --> Mailing Lists --> Mailing Lists --> New`.
 
 Clicking :guilabel:`New` reveals a blank mailing list form.
 
-.. screenshot:: email_marketing-mailing_lists-new-mailing-list-form
+.. screenshot:: email-marketing-mailing-lists-new-mailing-list-form
    :menu: Email Marketing ‣ Mailing Lists ‣ Mailing Lists ‣ New
    :shows: A new mailing list form with the Mailing List name, the Show In Preferences option and the Recipients / Mailings smart buttons.
    :highlight: The Show In Preferences option (red frame).
@@ -84,7 +84,7 @@ list, where contacts can be created or imported, and then added to the specific 
 Contacts can also be directly imported to a specific mailing list from the :guilabel:`Mailing Lists`
 page, by clicking :guilabel:`Import Contacts` to the far-right of the desired mailing list.
 
-.. screenshot:: email_marketing-mailing_lists-import-contacts-button
+.. screenshot:: email-marketing-mailing-lists-import-contacts-button
    :menu: Email Marketing ‣ Mailing Lists ‣ Mailing Lists
    :shows: A mailing list line in the list view with the Import Contacts button visible at its end.
    :highlight: The Import Contacts button (red frame).
@@ -94,7 +94,7 @@ page, by clicking :guilabel:`Import Contacts` to the far-right of the desired ma
 
 Doing so reveals an :guilabel:`Import Mailing Contacts` pop-up form.
 
-.. screenshot:: email_marketing-mailing_lists-import-mailing-contacts-popup
+.. screenshot:: email-marketing-mailing-lists-import-mailing-contacts-popup
    :menu: Email Marketing ‣ Mailing Lists ‣ Mailing Lists ‣ Import Contacts
    :shows: The Import Mailing Contacts pop-up window with the free-text field for the addresses and the target mailing list.
    :highlight: The address field (red frame).
@@ -115,7 +115,7 @@ database, navigate to :menuselection:`Email Marketing app --> Mailing Lists --> 
 Contacts`. Doing so reveals the :guilabel:`Mailing List Contacts` page, featuring a list of all
 contacts associated with every mailing list.
 
-.. screenshot:: email_marketing-mailing_lists-mailing-list-page
+.. screenshot:: email-marketing-mailing-lists-mailing-list-page
    :menu: Email Marketing ‣ Mailing Lists ‣ Mailing Lists
    :shows: The Mailing Lists list view with the Mailing List, Number of Recipients, Mailings and Created on columns.
    :data: Two mailing lists.
@@ -133,7 +133,7 @@ To add an existing contact to a mailing list, select the desired contact from th
 At the bottom of their contact form, click :guilabel:`Add a line` under the :guilabel:`Mailing List`
 column, locate the desired mailing list from the drop-down menu, and select it.
 
-.. screenshot:: email_marketing-mailing_lists-contact-form-mailing-list-add
+.. screenshot:: email-marketing-mailing-lists-contact-form-mailing-list-add
    :menu: Contacts ‣ (contact)
    :shows: A contact form with the Mailing Lists section and the Add a line link used to subscribe the contact to a list.
    :highlight: The Add a line link (red frame).
@@ -184,7 +184,7 @@ Next, in the search bar of the right-sidebar, search for `Newsletter`. The :guil
 selection of building blocks is used to add subscription fields for any mailing list onto the
 website.
 
-.. screenshot:: email_marketing-mailing_lists-newsletter-block-search
+.. screenshot:: email-marketing-mailing-lists-newsletter-block-search
    :menu: Website ‣ Edit ‣ Blocks
    :shows: The website editor's block panel with 'newsletter' typed in the search field, showing the Newsletter and Newsletter Popup blocks.
    :highlight: The search field and the found blocks (red frame).
@@ -199,7 +199,7 @@ subscription fields for a mailing list onto the website.
 The :guilabel:`Newsletter Block` option places a customizable block onto the body of the website
 where a visitor to enter their email and click a button to subscribe to a designated mailing list.
 
-.. screenshot:: email_marketing-mailing_lists-newsletter-block-sample
+.. screenshot:: email-marketing-mailing-lists-newsletter-block-sample
    :menu: (website)
    :shows: A published page showing the Newsletter block with its email field and Subscribe button.
    :highlight: The Newsletter block (red frame).
@@ -212,7 +212,7 @@ visitor scrolls to the specific section of the webpage on which the building blo
 the visitor reaches the designated section, a pop-up window appears, in which a visitor can enter
 their email address, click a button, and subscribe to that predetermined mailing list.
 
-.. screenshot:: email_marketing-mailing_lists-newsletter-popup-sample
+.. screenshot:: email-marketing-mailing-lists-newsletter-popup-sample
    :menu: (website)
    :shows: A published page showing the Newsletter Popup block opened over the page content.
    :highlight: The pop-up (red frame).
@@ -227,7 +227,7 @@ the mailing list.
 It is covertly designed in this fashion to be cleanly implemented into the content of the webpage
 and/or footer.
 
-.. screenshot:: email_marketing-mailing_lists-newsletter-sample
+.. screenshot:: email-marketing-mailing-lists-newsletter-sample
    :menu: (website)
    :shows: A published page showing the Newsletter block placed in the page body after being dragged in from the block panel.
    :highlight: The Newsletter block (red frame).
@@ -242,7 +242,7 @@ on the right-sidebar.
 From there, open the :guilabel:`Newsletter` drop-down menu, and select the specific mailing list
 that should be applied to the block.
 
-.. screenshot:: email_marketing-mailing_lists-newsletter-dropdown-customize-sidebar
+.. screenshot:: email-marketing-mailing-lists-newsletter-dropdown-customize-sidebar
    :menu: Website ‣ Edit ‣ (Newsletter block)
    :shows: The website editor's right sidebar for a selected Newsletter block, with the Newsletter drop-down menu open on the mailing lists.
    :highlight: The Newsletter drop-down menu (red frame).

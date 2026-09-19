@@ -7,7 +7,7 @@ exist and are understood by the carrier. The Google Places API allows developers
 information about places using HTTP requests. The autocompletion predicts a list of places when the
 user starts typing the address.
 
-.. screenshot:: website-address_autocomplete-address-autocomplete-example
+.. screenshot:: website-address-autocomplete-address-autocomplete-example
    :menu: (website) ‣ Checkout
    :shows: The address form of the checkout with the Google Places suggestions dropped down under the Address field as the visitor types.
    :highlight: The suggestion list (red frame).
@@ -23,7 +23,7 @@ user starts typing the address.
 To do so, go to :menuselection:`Website --> Configuration --> Settings` and enable
 :guilabel:`Address Autocomplete` in the :guilabel:`SEO` section.
 
-.. screenshot:: website-address_autocomplete-enable-address-autocomplete
+.. screenshot:: website-address-autocomplete-enable-address-autocomplete
    :menu: Website ‣ Configuration ‣ Settings
    :shows: The Website settings page with the Address Autocomplete checkbox enabled and the Google Places API Key field filled in.
    :highlight: The Address Autocomplete setting and the API key field (red frame).

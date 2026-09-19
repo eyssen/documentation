@@ -29,7 +29,7 @@ Go to :menuselection:`Ad Manager --> Configuration --> Connections` and create a
 currency, time zone and root ad unit, which are read from Google and cannot be edited in Odoo.
 :guilabel:`Sync Now` starts a synchronization immediately.
 
-.. screenshot:: marketing-google_ad_manager-connection
+.. screenshot:: marketing-google-ad-manager-connection
    :menu: Ad Manager ‣ Configuration ‣ Connections ‣ New
    :shows: A Google Ad Manager connection form with the name, company, network code, service account key and application name fields, the synchronization options, the read-only network information, and the Test Connection and Sync Now buttons.
    :highlight: The Network Code field and the Test Connection button (red frame).
@@ -49,7 +49,7 @@ its start and end time, its status, the number of records pulled from Google, pu
 skipped, and in error, and the full log. This is the place to look when a record does not appear, or
 when a change made in Odoo did not reach Google.
 
-.. screenshot:: marketing-google_ad_manager-sync-runs
+.. screenshot:: marketing-google-ad-manager-sync-runs
    :menu: Ad Manager ‣ Reporting ‣ Sync Runs
    :shows: The Sync Runs list with the connection, start and end time, status and the pulled, pushed, skipped and error counters.
    :highlight: The status and counter columns (red frame).
@@ -93,7 +93,7 @@ actually delivered:
   back from Google;
 - :guilabel:`Environment`: where the ad is served, for example in a browser.
 
-.. screenshot:: marketing-google_ad_manager-line-item
+.. screenshot:: marketing-google-ad-manager-line-item
    :menu: Ad Manager ‣ Line Items ‣ (line item)
    :shows: A line item form with its order, type, status, cost type and rate, the start and end dates, the environment, the inventory targeting and the associated creatives.
    :highlight: The cost type and rate fields (red frame).

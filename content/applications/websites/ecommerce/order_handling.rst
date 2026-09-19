@@ -23,7 +23,7 @@ orders can automatically be assigned to a specific sales team by going to :menus
 --> Configuration --> Settings`. In the **Shop - Checkout Process** section, select a
 :guilabel:`Sales Team` or :guilabel:`Salesperson` to handle eCommerce orders.
 
-.. screenshot:: ecommerce-order_handling-handling-salesteam
+.. screenshot:: ecommerce-order-handling-handling-salesteam
    :menu: Website ‣ Configuration ‣ Settings
    :shows: The Website settings page with the Sales Team and Salesperson fields of the website filled in.
    :highlight: The Sales Team and Salesperson fields (red frame).
@@ -41,7 +41,7 @@ order goes through a different status:
 - **Order**: the customer has gone through the checkout process, confirmed the order, and the
   payment is received.
 
-.. screenshot:: ecommerce-order_handling-handling-status
+.. screenshot:: ecommerce-order-handling-handling-status
    :menu: Website ‣ eCommerce ‣ Orders
    :shows: The eCommerce orders list with the Order, Customer, Date, Total and Status columns, showing both quotations (abandoned carts) and confirmed orders.
    :highlight: The Status column (red frame).
@@ -128,7 +128,7 @@ line, the customer selects the quantity, picks a :guilabel:`Reason` from the rea
 the portal, and — for tracked products — selects the serial or lot numbers actually delivered to
 them. Only the delivered quantity that has not been returned or requested yet can be selected.
 
-.. screenshot:: ecommerce-order_handling-portal-request-rma
+.. screenshot:: ecommerce-order-handling-portal-request-rma
    :menu: (website) ‣ My Account ‣ Orders ‣ (order) ‣ Request RMA
    :shows: The portal return request form with the returnable order lines, the quantity selectors, the Reason drop-down menus and the serial/lot selection on a tracked line.
    :highlight: The Reason column and the quantity selectors (red frame).
@@ -141,7 +141,7 @@ customer follows its status under :menuselection:`My Account --> Returns (RMA)`,
 return requests together with the :doc:`withdrawal declarations
 </applications/sales/withdrawal/consumer_portal>`.
 
-.. screenshot:: ecommerce-order_handling-portal-rma-list
+.. screenshot:: ecommerce-order-handling-portal-rma-list
    :menu: (website) ‣ My Account ‣ Returns (RMA)
    :shows: The portal list of return requests with their reference, date, status and the related order.
    :highlight: The status column (red frame).
@@ -182,7 +182,7 @@ With several webshops in the same database, each website can invoice in its own 
 (:menuselection:`Website --> Configuration --> Settings`). Orders placed on that website get the
 journal filled in automatically, and their invoices inherit it through the standard flow.
 
-.. screenshot:: ecommerce-order_handling-website-invoicing-journal
+.. screenshot:: ecommerce-order-handling-website-invoicing-journal
    :menu: Website ‣ Configuration ‣ Settings
    :shows: The Website settings page with the Invoicing Journal field of the website set to a sales journal.
    :highlight: The Invoicing Journal field (red frame).

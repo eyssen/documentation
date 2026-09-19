@@ -24,7 +24,7 @@ different groups for A/B testing, or saved as a template for later.
    - :guilabel:`Lost Reason` *is in* `Not enough stock`
    - and either :guilabel:`Active` *is* `set` or `not set`
 
-   .. screenshot:: email_marketing-lost_leads_email-example
+   .. screenshot:: email-marketing-lost-leads-email-example
       :menu: Email Marketing ‣ Mailings ‣ New
       :shows: The Recipients filter rules of a lost-leads mailing, excluding certain lost reasons.
       :highlight: The lost reason rules (red frame).
@@ -39,7 +39,7 @@ different groups for A/B testing, or saved as a template for later.
 
    To view a list of all matching records, click the :guilabel:`# record(s)` text.
 
-   .. screenshot:: email_marketing-lost_leads_email-records
+   .. screenshot:: email-marketing-lost-leads-email-records
       :menu: Email Marketing ‣ Mailings ‣ New
       :shows: The record counter shown below the list of Recipients filter rules.
       :highlight: The record counter (red frame).
@@ -104,7 +104,7 @@ selection chosen in the third field.
 In the third field, use the calendar popover window to select dates, and click :guilabel:`Apply` to
 lock in the time range.
 
-.. screenshot:: email_marketing-lost_leads_email-created-on
+.. screenshot:: email-marketing-lost-leads-email-created-on
    :menu: Email Marketing ‣ Mailings ‣ New
    :shows: A filter rule on the Created on field using the <= operator with a date value.
    :highlight: The Created on rule (red frame).
@@ -118,7 +118,7 @@ lock in the time range.
    does not, click on the statement, and select :guilabel:`all` from the drop-down menu (as opposed
    to :guilabel:`any`).
 
-   .. screenshot:: email_marketing-lost_leads_email-match-all
+   .. screenshot:: email-marketing-lost-leads-email-match-all
       :menu: Email Marketing ‣ Mailings ‣ New
       :shows: The 'Match all of the following rules' statement above the rule list with its drop-down menu open on 'any of'.
       :highlight: The drop-down menu (red frame).
@@ -146,7 +146,7 @@ rule's parameters.
 When the rule is added in this way, the logic in the third field renders as :code:`OR` (`|`)
 statements.
 
-.. screenshot:: email_marketing-lost_leads_email-stage-is-in
+.. screenshot:: email-marketing-lost-leads-email-stage-is-in
    :menu: Email Marketing ‣ Mailings ‣ New
    :shows: A single filter rule on Stage using the 'is not in' operator with several stages selected.
    :highlight: The operator and value of the Stage rule (red frame).
@@ -160,7 +160,7 @@ statements.
    defining characters in each stage name. This method, however, only allows for one selection at a
    time, which can be useful for quickly turning on/off filters in the :guilabel:`Search...` bar.
 
-   .. screenshot:: email_marketing-lost_leads_email-stages
+   .. screenshot:: email-marketing-lost-leads-email-stages
       :menu: Email Marketing ‣ Mailings ‣ New
       :shows: Three separate filter rules requiring that Stage does not contain New, Qualified or Won.
       :highlight: The three Stage rules (red frame).
@@ -187,7 +187,7 @@ lost reasons, as needed, where each lost reason occupies one rule row at a time.
 For more information, refer to the section below outlining how to :ref:`select appropriate lost
 reasons <email_marketing/select_lost_reasons>`.
 
-.. screenshot:: email_marketing-lost_leads_email-reasons
+.. screenshot:: email-marketing-lost-leads-email-reasons
    :menu: Email Marketing ‣ Mailings ‣ New
    :shows: A group of filter rules that exclude every lost reason except the targeted one.
    :highlight: The lost reason rules (red frame).
@@ -219,7 +219,7 @@ For the first field of the bottom rule of the branch, select :guilabel:`Active` 
 menu again. However, this time, select :guilabel:`is not` from the operator drop-down menu in the
 second field. The rule should then read: :guilabel:`Active` *is not* `set`.
 
-.. screenshot:: email_marketing-lost_leads_email-active
+.. screenshot:: email-marketing-lost-leads-email-active
    :menu: Email Marketing ‣ Mailings ‣ New
    :shows: A pair of 'any of' filter rules on the Active field, so that both active and archived (lost) leads are included.
    :highlight: The two Active rules and the 'any of' statement (red frame).
@@ -238,7 +238,7 @@ using any of the premade stylized templates, or choose between the :guilabel:`Pl
    To save the set of filters for later use, click :guilabel:`Save as Favorite Filter 💾 (floppy
    disk)`, enter a name (such as `Lost Leads`), and click :guilabel:`Add`.
 
-   .. screenshot:: email_marketing-lost_leads_email-favorite-filter
+   .. screenshot:: email-marketing-lost-leads-email-favorite-filter
       :menu: Email Marketing ‣ Mailings ‣ New
       :shows: The Save as Favorite Filter pop-up window with a name entered for the lost-leads criteria.
       :highlight: The name field (red frame).
@@ -265,7 +265,7 @@ Once all the components of the email campaign are complete, either:
    :guilabel:`Allow A/B Testing`. Then, adjust the parameters as needed, and click :guilabel:`Create
    an Alternative Version`.
 
-   .. screenshot:: email_marketing-lost_leads_email-ab-testing
+   .. screenshot:: email-marketing-lost-leads-email-ab-testing
       :menu: Email Marketing ‣ Mailings ‣ New ‣ A/B Tests tab
       :shows: The A/B Tests tab with Allow A/B Testing enabled, the percentage of recipients and the winner selection criteria.
       :highlight: The Allow A/B Testing checkbox (red frame).
@@ -304,7 +304,7 @@ the relevant one(s).
    If the email advertises a selection of previously-limited merchandise that is now back in stock,
    it makes sense to target leads with the lost reason: *not enough stock*.
 
-   .. screenshot:: email_marketing-lost_leads_email-out-of-stock
+   .. screenshot:: email-marketing-lost-leads-email-out-of-stock
       :menu: Email Marketing ‣ Mailings ‣ New
       :shows: A set of filter rules that exclude every lost reason except 'Out of stock'.
       :highlight: The lost reason rules (red frame).
@@ -314,7 +314,7 @@ the relevant one(s).
    If the email advertises a price reduction, it makes sense to target leads with the lost reason:
    *too expensive*.
 
-   .. screenshot:: email_marketing-lost_leads_email-too-expensive
+   .. screenshot:: email-marketing-lost-leads-email-too-expensive
       :menu: Email Marketing ‣ Mailings ‣ New
       :shows: A set of filter rules that exclude every lost reason except 'Too expensive'.
       :highlight: The lost reason rules (red frame).
@@ -330,7 +330,7 @@ top of the email to analyze the results, and determine follow-up actions.
 Clicking on any of the smart buttons opens a list of records matching that button's specific
 criteria.
 
-.. screenshot:: email_marketing-lost_leads_email-smart-buttons
+.. screenshot:: email-marketing-lost-leads-email-smart-buttons
    :menu: Email Marketing ‣ Mailings ‣ (sent mailing)
    :shows: A sent lost-leads mailing with its smart buttons and, next to them, the CRM smart buttons for the leads it revived.
    :highlight: The smart button row (red frame).

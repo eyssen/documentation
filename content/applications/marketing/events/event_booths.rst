@@ -14,7 +14,7 @@ activated.
 To do that, navigate to :menuselection:`Events app --> Configuration --> Settings`, and tick the
 :guilabel:`Booth Management` checkbox. Then, click :guilabel:`Save`.
 
-.. screenshot:: events-event_booths-booth-management-setting
+.. screenshot:: events-event-booths-booth-management-setting
    :menu: Events ‣ Configuration ‣ Settings
    :shows: The Events settings page with the Booth Management checkbox enabled in the Events section.
    :highlight: The Booth Management setting (red frame).
@@ -40,7 +40,7 @@ appears in the :guilabel:`Configuration` menu.
 To access the :guilabel:`Booth Category` dashboard, go to :menuselection:`Events app -->
 Configuration --> Booth Categories`, which reveals a list of all created booth categories.
 
-.. screenshot:: events-event_booths-booth-category-page
+.. screenshot:: events-event-booths-booth-category-page
    :menu: Events ‣ Configuration ‣ Booth Categories
    :shows: The Booth Categories list with the Name, Product and Price columns.
    :data: Two categories: 'Standard' and 'Premium'.
@@ -69,7 +69,7 @@ Create booth category
 To create a booth category from the :guilabel:`Booth Category` page, click the :guilabel:`New`
 button in the upper-left corner to reveal a blank booth category form.
 
-.. screenshot:: events-event_booths-booth-category-form
+.. screenshot:: events-event-booths-booth-category-form
    :menu: Events ‣ Configuration ‣ Booth Categories ‣ New
    :shows: A booth category form with the Booth Category name, Product, Price, Sponsor Level, Sponsor Type and the Description tab.
    :highlight: The Product and Price fields (red frame).
@@ -123,7 +123,7 @@ clicking :guilabel:`Create and edit...` from the resulting drop-down menu.
 
 Doing so reveals a :guilabel:`Create Sponsor Level` pop-up window.
 
-.. screenshot:: events-event_booths-create-sponsor-level-popup
+.. screenshot:: events-event-booths-create-sponsor-level-popup
    :menu: Events ‣ Configuration ‣ Booth Categories ‣ New
    :shows: The Create Sponsor Level pop-up window with the Sponsor Level name and Ribbon Style fields.
    :highlight: The Ribbon Style field (red frame).
@@ -177,7 +177,7 @@ Booth form
 The booth form in Odoo *Events* lets users customize and configure event booths in a number of
 different ways.
 
-.. screenshot:: events-event_booths-booth-form
+.. screenshot:: events-event-booths-booth-form
    :menu: Events ‣ Events ‣ (event) ‣ Booths
    :shows: A booth form with the Booth Name, Booth Category, Renter, Renter Name, Renter Email and Renter Phone fields.
    :highlight: The Booth Category and Renter fields (red frame).
@@ -252,7 +252,7 @@ From there, click the :guilabel:`Get A Booth` event subheader menu option. Doing
 :guilabel:`Get A Booth` page, showcasing all the configured event booths that were created on the
 event form.
 
-.. screenshot:: events-event_booths-get-a-booth-page
+.. screenshot:: events-event-booths-get-a-booth-page
    :menu: (event website) ‣ Get A Booth
    :shows: The event website's Get A Booth page with the available booths of each category and the contact form below.
    :highlight: The booth selection area (red frame).

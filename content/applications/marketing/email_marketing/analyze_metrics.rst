@@ -24,7 +24,7 @@ results for that mailing. Click on one of the mailings in the list to open the r
 
 At the top of the record, detailed metrics are displayed as smart buttons.
 
-.. screenshot:: email_marketing-analyze_metrics-metric-smart-buttons
+.. screenshot:: email-marketing-analyze-metrics-metric-smart-buttons
    :menu: Email Marketing ‣ Mailings ‣ (sent mailing)
    :shows: The smart button row at the top of a sent mailing: Sent, Opened, Replied, Clicked, Received, Bounced.
    :highlight: The smart button row (red frame).
@@ -139,7 +139,7 @@ can be used with or without filters.
 .. example::
    A monthly newsletter has been sent out, and 6.9% of the sent emails were bounced.
 
-   .. screenshot:: email_marketing-analyze_metrics-newsletter-metrics
+   .. screenshot:: email-marketing-analyze-metrics-newsletter-metrics
       :menu: Email Marketing ‣ Mailings ‣ (sent mailing)
       :shows: The smart buttons of the Newsletter mailing with their percentages, used as the basis of the comparison in this section.
       :data: Mailing 'Newsletter' with about 500 recipients.
@@ -152,7 +152,7 @@ can be used with or without filters.
    00:00:00`, to filter by when the mailing list was last checked. This filter only includes
    recipients that have been created on, or after, July 1st, 2024, in the report.
 
-   .. screenshot:: email_marketing-analyze_metrics-metrics-filter
+   .. screenshot:: email-marketing-analyze-metrics-metrics-filter
       :menu: Email Marketing ‣ Mailings ‣ (gear) ‣ Add Custom Filter
       :shows: The Add Custom Filter dialog with a rule on the Sent Date field and the 'Match all of the following rules' statement.
       :highlight: The rule line (red frame).
@@ -165,7 +165,7 @@ can be used with or without filters.
    recipient has a malformed email domain (i.e: @yaoo.com instead of @yahoo.com), likely due to a
    manual entry error while updating the database.
 
-   .. screenshot:: email_marketing-analyze_metrics-malformed-addresses
+   .. screenshot:: email-marketing-analyze-metrics-malformed-addresses
       :menu: Email Marketing ‣ Mailings ‣ (sent mailing) ‣ Bounced
       :shows: The list of bounced recipients showing malformed email addresses.
       :highlight: The malformed addresses in the Email column (red frame).
@@ -199,7 +199,7 @@ menu.
    capture readers' attention, the subject line of each mass mailing can be a good place to begin
    looking.
 
-   .. screenshot:: email_marketing-analyze_metrics-mma-opened
+   .. screenshot:: email-marketing-analyze-metrics-mma-opened
       :menu: Email Marketing ‣ Reporting ‣ Mailing Analysis
       :shows: A bar chart comparing the opened rate of two mass mailings.
       :highlight: The two bars (red frame).
@@ -210,7 +210,7 @@ menu.
    Comparing the two subject lines, it is clear the newsletter's subject line was less engaging,
    which may have led to the lower opened rate, when compared to the other mass mailing.
 
-   .. screenshot:: email_marketing-analyze_metrics-mailing-comparison
+   .. screenshot:: email-marketing-analyze-metrics-mailing-comparison
       :menu: Email Marketing ‣ Mailings
       :shows: The Mailings list view showing the two compared mailings side by side with their Subject, Sent, Opened, Clicked and Replied columns.
       :highlight: The Subject column of the two mailings (red frame).

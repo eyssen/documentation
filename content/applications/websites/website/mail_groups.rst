@@ -52,7 +52,7 @@ Subscribing/unsubscribing
 Based on the :ref:`configuration of the mail group <website/mailing_lists/configure_groups>`,
 users can subscribe to and unsubscribe from mail groups from the website page (`/groups` by default).
 
-.. screenshot:: website-mail_groups-mail-group-page
+.. screenshot:: website-mail-groups-mail-group-page
    :menu: (website) ‣ Groups
    :shows: The mail group page on the website with the group's description, the subscribe form and the list of recent messages.
    :highlight: The subscribe form (red frame).
@@ -78,7 +78,7 @@ fields and click :guilabel:`Send`.
    - Group members can also unsubscribe from the group, access the mail group page, and send emails
      to the group using the URLs in the footer of any group email they have received.
 
-     .. screenshot:: website-mail_groups-mail-group-urls
+     .. screenshot:: website-mail-groups-mail-group-urls
         :menu: (group email)
         :shows: The footer of a group email showing the unsubscribe and 'view group' URLs.
         :highlight: The URLs (red frame).
@@ -100,7 +100,7 @@ mail group, and click the :guilabel:`To review` smart button. You can moderate m
 buttons at the end of the message line or select a message to view its content and moderate it
 accordingly.
 
-   .. screenshot:: website-mail_groups-mail-group-moderation
+   .. screenshot:: website-mail-groups-mail-group-moderation
       :menu: Website ‣ Configuration ‣ Mailing Lists ‣ (group) ‣ Messages
       :shows: A message line awaiting moderation with the Accept, Reject, Whitelist and Ban buttons.
       :highlight: The moderation buttons (red frame).

@@ -35,7 +35,7 @@ To activate a setting, tick the checkbox beside the desired feature's label, and
    If these options are *not* enabled, a default :guilabel:`Register` button becomes available for
    visitors to interact with and procure free registrations to the event.
 
-.. screenshot:: events-sell_tickets-events-settings-tickets
+.. screenshot:: events-sell-tickets-events-settings-tickets
    :menu: Events ‣ Configuration ‣ Settings
    :shows: The Events settings page with the Tickets and Online Ticketing checkboxes enabled in the Registration section.
    :highlight: The Tickets and Online Ticketing settings (red frame).
@@ -52,7 +52,7 @@ the *Product Type* set to *Event Ticket*) that can be used or modified for event
    Ticket* on the product form, in order for it to be selected in the *Product* column under the
    *Tickets* tab on an event form.
 
-   .. screenshot:: events-sell_tickets-events-tickets-registration-product
+   .. screenshot:: events-sell-tickets-events-tickets-registration-product
       :menu: Events ‣ Events ‣ (event) ‣ Tickets tab
       :shows: The Tickets tab of an event form with the Product column visible on the ticket lines.
       :highlight: The Product column (red frame).
@@ -65,7 +65,7 @@ the *Product Type* set to *Event Ticket*) that can be used or modified for event
    the top of the event form, where the respective sales orders attributed to those ticket sales
    become available.
 
-   .. screenshot:: events-sell_tickets-events-sales-smartbutton
+   .. screenshot:: events-sell-tickets-events-sales-smartbutton
       :menu: Events ‣ Events ‣ (event)
       :shows: An event form showing the Sales smart button at the top with the total amount sold.
       :highlight: The Sales smart button (red frame).
@@ -91,7 +91,7 @@ Type` set to :guilabel:`Event Ticket` on its product form.
 Once an event registration product is selected, a :guilabel:`Configure an event` pop-up window
 appears.
 
-.. screenshot:: events-sell_tickets-configure-event-popup
+.. screenshot:: events-sell-tickets-configure-event-popup
    :menu: Sales ‣ Orders ‣ Quotations ‣ New
    :shows: The Configure an event pop-up window on a sales order line, with the Event and Event Ticket fields.
    :highlight: The Event and Event Ticket fields (red frame).
@@ -127,7 +127,7 @@ When a visitor arrives on the register page of the event website, they can click
 If different ticket tiers are configured for the event, the visitor is presented with a
 :guilabel:`Tickets` pop-up window.
 
-.. screenshot:: events-sell_tickets-tickets-popup
+.. screenshot:: events-sell-tickets-tickets-popup
    :menu: (event website) ‣ Register
    :shows: The ticket selection pop-up window on the event website with the ticket types, prices and quantity selectors.
    :highlight: The quantity selectors (red frame).
@@ -142,7 +142,7 @@ selections have been entered, the visitor then clicks the :guilabel:`Register` b
 Then, an :guilabel:`Attendees` pop-up window appears, containing all the questions that have been
 configured in the *Questions* tab of the event form for this particular event.
 
-.. screenshot:: events-sell_tickets-attendees-popup
+.. screenshot:: events-sell-tickets-attendees-popup
    :menu: (event website) ‣ Register
    :shows: The attendee details pop-up window on the event website asking for each attendee's name, email and phone.
    :highlight: The attendee question fields (red frame).

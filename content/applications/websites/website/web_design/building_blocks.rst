@@ -25,7 +25,7 @@ templates for each category.
    You can also search for a specific block in the :guilabel:`Insert a block` popup using the
    search bar.
 
-  .. screenshot:: website-building_blocks-insert-a-block
+  .. screenshot:: website-building-blocks-insert-a-block
      :menu: Website ‣ Edit ‣ Blocks
      :shows: The website editor's block panel open on the left, with the block categories (Structure, Features, Dynamic Content, Inner content) and their previews.
      :highlight: The block panel (red frame).
@@ -45,7 +45,7 @@ social media buttons, etc., into pre-existing category blocks.
    Add all your social media accounts in one place with the inner content :guilabel:`Social Media`
    block. Toggle the switch on or off next to the desired platform and copy/paste your account URL.
 
-   .. screenshot:: website-building_blocks-social-media-inner-content
+   .. screenshot:: website-building-blocks-social-media-inner-content
       :menu: Website ‣ Edit ‣ Blocks ‣ Inner content
       :shows: A Social Media inner-content block placed in a page, showing the social network icons.
       :highlight: The Social Media block (red frame).
@@ -62,7 +62,7 @@ The :guilabel:`Form` block is used to collect information from website visitors 
 in your database, if applicable. To add a form to a website page, drag and drop the
 :guilabel:`Contact & Forms` category, then select the :guilabel:`Form block`.
 
-.. screenshot:: website-building_blocks-form-block
+.. screenshot:: website-building-blocks-form-block
    :menu: Website ‣ Edit ‣ Blocks ‣ Features
    :shows: A Form block placed in a page, with its default fields (Your Name, Email, Subject, Your Question) and the Send button.
    :highlight: The Form block (red frame).
@@ -87,7 +87,7 @@ automatically create records may become available. To choose a different action,
 - :guilabel:`Subscribe to Newsletter` (:doc:`Email Marketing </applications/marketing/email_marketing>`)
 - :guilabel:`Create a Task` (:doc:`Project </applications/services/project>`)
 
-.. screenshot:: website-building_blocks-inner-content-edit-form
+.. screenshot:: website-building-blocks-inner-content-edit-form
    :menu: Website ‣ Edit ‣ (Form block)
    :shows: The website editor's right sidebar for a selected Form block, with the Action drop-down menu open on the available actions (Send an Email, Create a Lead, Apply for a Job, Create a Task, …).
    :highlight: The Action drop-down menu (red frame).
@@ -117,7 +117,7 @@ new (or any other) field on the form, select the field, then use the options ava
 
   .. spoiler:: Click here to preview all field types.
 
-     .. screenshot:: website-building_blocks-all-types-of-field
+     .. screenshot:: website-building-blocks-all-types-of-field
         :menu: Website ‣ Edit ‣ (Form block) ‣ (field)
         :shows: The field option panel of a form field showing the available field types (Text, Long Text, Number, Email, Telephone, Date, Selection, Checkboxes, Radio buttons, File Upload).
         :highlight: The field type list (red frame).
@@ -181,7 +181,7 @@ from YouTube, maps from Google Maps, social media posts from Instagram, etc.
 After adding the block to a page, click the block, then go to the :guilabel:`Customize` tab and
 click :guilabel:`Edit`. Replace the placeholder code with your custom embed code.
 
-.. screenshot:: website-building_blocks-embed-code-pop-up
+.. screenshot:: website-building-blocks-embed-code-pop-up
    :menu: Website ‣ Edit ‣ Blocks ‣ Inner content ‣ Embed Code
    :shows: The Embed Code pop-up window with the HTML code field where the external code is pasted.
    :highlight: The code field (red frame).
@@ -196,7 +196,7 @@ click :guilabel:`Edit`. Replace the placeholder code with your custom embed code
    URL of the selected image or document at the cursor, so that an image from the media library can
    be referenced in hand-written code without looking up its address.
 
-   .. screenshot:: website-building_blocks-code-editor-insert-media
+   .. screenshot:: website-building-blocks-code-editor-insert-media
       :menu: Website ‣ Edit ‣ (Embed Code block) ‣ Edit
       :shows: The embedded code editor with the Media button above the code area, and the media dialog opened over it.
       :highlight: The Media button (red frame).
@@ -223,7 +223,7 @@ Change the block order by clicking :icon:`fa-chevron-up` (:guilabel:`chevron up`
 
 To delete a block, click :icon:`fa-trash` (:guilabel:`trash`).
 
-   .. screenshot:: website-building_blocks-padding-building-block
+   .. screenshot:: website-building-blocks-padding-building-block
       :menu: Website ‣ Edit ‣ (building block)
       :shows: A selected building block in the editor with its padding handles visible at the top and bottom.
       :highlight: The padding handles (red frame).
@@ -258,7 +258,7 @@ allow you to customize the shape.
    - Position an element (image, text, etc.) behind or in front of another one by using the
      :guilabel:`Send to back` or :guilabel:`Bring to front` icons.
 
-     .. screenshot:: website-building_blocks-change-block-position
+     .. screenshot:: website-building-blocks-change-block-position
         :menu: Website ‣ Edit ‣ (building block)
         :shows: The toolbar of a selected building block with the move up / move down arrows used to change its position on the page.
         :highlight: The move arrows (red frame).
@@ -268,7 +268,7 @@ allow you to customize the shape.
 
    - To resize a block, click and drag the dots around its edges to adjust it as needed.
 
-     .. screenshot:: website-building_blocks-adapt-block-size
+     .. screenshot:: website-building-blocks-adapt-block-size
         :menu: Website ‣ Edit ‣ (building block)
         :shows: A selected building block with its bottom resize handle being dragged to change the block height.
         :highlight: The resize handle (red frame).
@@ -296,7 +296,7 @@ The :guilabel:`Grid` layout allows you to reposition and resize elements, such a
 dragging and dropping them. When :guilabel:`Grid` is selected, additional options are available to
 :guilabel:`Add Elements` by clicking :guilabel:`Image`, :guilabel:`Text`, or :guilabel:`Button`.
 
-.. screenshot:: website-building_blocks-grid-layout
+.. screenshot:: website-building-blocks-grid-layout
    :menu: Website ‣ Edit ‣ (building block)
    :shows: A building block switched to the Grid layout in the right sidebar, with an image being dragged onto a grid cell.
    :highlight: The Grid layout option in the sidebar (red frame).

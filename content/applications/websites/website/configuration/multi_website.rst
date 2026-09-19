@@ -26,7 +26,7 @@ To create a new website, proceed as follows:
 #. Go to :menuselection:`Website --> Configuration --> Settings`.
 #. Click :guilabel:`+ New Website`.
 
-   .. screenshot:: website-multi_website-create-website
+   .. screenshot:: website-multi-website-create-website
       :menu: Website ‣ Configuration ‣ Settings
       :shows: The Website settings page with the website selector at the top and the +New Website button next to it.
       :highlight: The +New Website button (red frame).
@@ -53,7 +53,7 @@ Switching websites
 To switch from one website to another, click the menu next to the :guilabel:`+New` button in the
 top right corner and select the website you want to switch to.
 
-.. screenshot:: website-multi_website-switch-websites
+.. screenshot:: website-multi-website-switch-websites
    :menu: Website ‣ Configuration ‣ Settings
    :shows: The website selector drop-down menu opened at the top of the settings page, listing the websites of the database.
    :highlight: The website selector (red frame).
@@ -94,7 +94,7 @@ products, go to :menuselection:`eCommerce --> Products`, then select the product
 :guilabel:`Sales` tab. For forums, go to :menuselection:`Configuration --> Forums`, then select the
 forum.
 
-.. screenshot:: website-multi_website-forum-multi-website
+.. screenshot:: website-multi-website-forum-multi-website
    :menu: Forum ‣ Configuration ‣ Forums ‣ (forum)
    :shows: A forum form with the Website field set, limiting the forum to one website.
    :highlight: The Website field (red frame).
@@ -119,7 +119,7 @@ To modify the website on which a page is to be published, proceed as follows:
 #. Go to :menuselection:`Website --> Site --> Pages`.
 #. Open the search panel and select the website on which the page is currently published.
 
-   .. screenshot:: website-multi_website-pages-switch-websites
+   .. screenshot:: website-multi-website-pages-switch-websites
       :menu: Website ‣ Site ‣ Pages
       :shows: The Pages list with the Website column, showing which pages belong to which website.
       :highlight: The Website column (red frame).
@@ -169,7 +169,7 @@ Analytics
 Each website has its own :ref:`analytics <analytics/plausible>`. To switch between websites, click
 the buttons in the upper right corner.
 
-.. screenshot:: website-multi_website-analytics-switch-websites
+.. screenshot:: website-multi-website-analytics-switch-websites
    :menu: Website ‣ Reporting ‣ Analytics
    :shows: The analytics page with the website selector at the top used to switch the analyzed website.
    :highlight: The website selector (red frame).

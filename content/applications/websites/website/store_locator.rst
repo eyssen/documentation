@@ -22,7 +22,7 @@ Configuration --> Warehouses`, open the warehouse, and set:
   services offered at that location.
 - :guilabel:`Opening Hours`: the working schedule describing when the store is open.
 
-.. screenshot:: website-store_locator-warehouse-store
+.. screenshot:: website-store-locator-warehouse-store
    :menu: Inventory ‣ Configuration ‣ Warehouses ‣ (warehouse)
    :shows: A warehouse form with the Physical Store and Visible on Website checkboxes enabled, the Store Image, the Store Description and the Opening Hours field.
    :highlight: The Physical Store and Visible on Website checkboxes (red frame).
@@ -47,7 +47,7 @@ Create one schedule per store — or one shared schedule for stores that open at
 enter the opening periods as its working hours. Exceptional closures (public holidays, stocktaking
 days) are entered as time off on the schedule and are taken into account on the public page.
 
-.. screenshot:: website-store_locator-opening-hours
+.. screenshot:: website-store-locator-opening-hours
    :menu: Settings ‣ Technical ‣ Working Schedules ‣ (schedule)
    :shows: A working schedule marked as Store Opening Hours, with its weekly opening periods and a time-off line for a public holiday.
    :highlight: The Store Opening Hours checkbox (red frame).
@@ -63,7 +63,7 @@ details, description and opening hours. The page has an editable area above and 
 an introduction, a map or a call-to-action block can be added with the :doc:`website editor
 <web_design>`.
 
-.. screenshot:: website-store_locator-page
+.. screenshot:: website-store-locator-page
    :menu: (website) ‣ /stores
    :shows: The public store locator page with the store cards, each showing the store image, name, address, opening hours and description.
    :highlight: One store card (red frame).

@@ -65,7 +65,7 @@ you can:
 - **create a regular drop-down menu** by dragging and dropping the sub-menu items to the right,
   underneath their parent menu.
 
-.. screenshot:: website-header_footer-menu-editor
+.. screenshot:: website-header-footer-menu-editor
    :menu: Website ‣ Site ‣ Menu Editor
    :shows: The Menu Editor pop-up window with the menu entries and their indented sub-menus, plus the Add Menu Item button.
    :highlight: The sub-menu entries (red frame).
@@ -77,7 +77,7 @@ you can:
    You can also access the menu editor by clicking :guilabel:`Edit`, selecting any menu item, and
    clicking the :guilabel:`Edit Menu` icon.
 
-  .. screenshot:: website-header_footer-edit-menu-icon
+  .. screenshot:: website-header-footer-edit-menu-icon
      :menu: Website ‣ Edit ‣ (header)
      :shows: The website header in edit mode with the Edit Menu (pencil) icon that opens the Menu Editor.
      :highlight: The Edit Menu icon (red frame).
@@ -131,7 +131,7 @@ amounts of content or :doc:`e-commerce websites <../../ecommerce>`, as they can 
 your web pages or :doc:`e-commerce categories <../../ecommerce/products/catalog>` in the menu while
 still making all menu items visible at once.
 
-.. screenshot:: website-header_footer-mega-menu
+.. screenshot:: website-header-footer-mega-menu
    :menu: (website)
    :shows: The website navigation bar with a mega menu dropped down over the page, showing its columns of links and images.
    :highlight: The opened mega menu (red frame).
@@ -152,7 +152,7 @@ each component individually. For example:
   in the small preview pop-up. Type `/` to search for a page on your website, or `#` to search for
   an existing custom anchor.
 
-  .. screenshot:: website-header_footer-mega-menu-option
+  .. screenshot:: website-header-footer-mega-menu-option
      :menu: Website ‣ Edit ‣ (mega menu)
      :shows: The editor's right sidebar for a selected mega menu with the Template and Size options.
      :highlight: The Template option (red frame).
@@ -197,7 +197,7 @@ The menu is regenerated when the category tree changes. Three buttons control it
 - :guilabel:`Detach / make manual`: stops the automatic generation and keeps the current content as
   an ordinary, hand-edited mega menu.
 
-.. screenshot:: website-header_footer-auto-mega-menu
+.. screenshot:: website-header-footer-auto-mega-menu
    :menu: Website ‣ Site ‣ Menu Editor ‣ (mega menu item)
    :shows: A mega menu item with Auto-generate mega menu enabled, the Starting category, Depth and Mega-menu template fields, and the Regenerate / Force regenerate / Detach buttons.
    :highlight: The Auto-generate mega menu checkbox and the Starting category field (red frame).
@@ -215,7 +215,7 @@ The layouts themselves are managed under :menuselection:`Website --> Configurati
 Templates`, where each template holds its own :guilabel:`XML`, :guilabel:`CSS` and :guilabel:`JS`,
 together with a revision :guilabel:`History` that can be compared and restored.
 
-.. screenshot:: website-header_footer-mega-menu-templates
+.. screenshot:: website-header-footer-mega-menu-templates
    :menu: Website ‣ Configuration ‣ Mega Menu Templates ‣ (template)
    :shows: A mega menu template with its XML, CSS and JS tabs and the History section listing previous revisions with the Compare and Restore buttons.
    :highlight: The History section (red frame).

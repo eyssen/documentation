@@ -23,7 +23,7 @@ alternatively from the :icon:`fa-calendar` :guilabel:`Calendar` or :icon:`oi-vie
 :guilabel:`List` views, click the :guilabel:`New` button in the upper-left corner of the dashboard to open up a new
 event form.
 
-.. screenshot:: events-create_events-blank-event-template
+.. screenshot:: events-create-events-blank-event-template
    :menu: Events ‣ Events ‣ New
    :shows: A new blank event form showing the Event Name, Date, Display Timezone, Language, Template, Tags, Organizer, Responsible, Company and Website fields.
    :highlight: The Event Name and Date fields (red frame).
@@ -128,7 +128,7 @@ Tickets tab
 
 Create custom tickets (and ticket tiers) for events in the :guilabel:`Tickets` tab of an event form.
 
-.. screenshot:: events-create_events-tickets-tab
+.. screenshot:: events-create-events-tickets-tab
    :menu: Events ‣ Events ‣ New
    :shows: The Tickets tab of an event form with two ticket lines, showing the Name, Product, Price, Sales Start/End, Maximum and Taken columns.
    :highlight: The ticket lines (red frame).
@@ -195,7 +195,7 @@ Communication tab
 In the :guilabel:`Communication` tab of an event form, create various marketing communications that
 can be scheduled to be sent at specific intervals leading up to, and following, the event.
 
-.. screenshot:: events-create_events-communication-tab
+.. screenshot:: events-create-events-communication-tab
    :menu: Events ‣ Events ‣ New
    :shows: The Communication tab of an event form with the default scheduled communications, showing the Send, Template, Interval, Unit, Trigger and Sent columns.
    :highlight: The Send column with the Mail and SMS options (red frame).
@@ -275,7 +275,7 @@ their preferences, expectations, and other things of that nature. This informati
 to create more detailed reporting metrics, in addition to being utilized to create specific lead
 generation rules.
 
-.. screenshot:: events-create_events-questions-tab
+.. screenshot:: events-create-events-questions-tab
    :menu: Events ‣ Events ‣ New
    :shows: The Questions tab of an event form with the three default questions (Name, Email, Phone) and their Mandatory Answer and Ask once per order checkboxes.
    :highlight: The Mandatory Answer and Ask once per order columns (red frame).
@@ -296,7 +296,7 @@ generation rules.
 To add a question in the :guilabel:`Questions` tab, click :guilabel:`Add a line`. Doing so reveals a
 :guilabel:`Create Question` pop-up window. From here, users can create and configure their question.
 
-.. screenshot:: events-create_events-create-question-popup
+.. screenshot:: events-create-events-create-question-popup
    :menu: Events ‣ Events ‣ New
    :shows: The Create Question pop-up window with the question text, Question Type, Mandatory Answer and Ask once per order options, and the Answers list for a selection question.
    :highlight: The Question Type field (red frame).
@@ -359,7 +359,7 @@ Notes tab
 In the :guilabel:`Notes` tab of an event form, users can leave detailed internal notes and/or
 event-related instructions/information for attendees.
 
-.. screenshot:: events-create_events-notes-tab
+.. screenshot:: events-create-events-notes-tab
    :menu: Events ‣ Events ‣ New
    :shows: The Notes tab of an event form with the Note and Ticket Instructions rich-text fields filled in.
    :highlight: The Ticket Instructions field (red frame).

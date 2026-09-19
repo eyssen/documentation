@@ -10182,7 +10182,7 @@ msgstr "A :guilabel:`Megjelenik foxpost.hu oldalon` mező (:guilabel:`Megjelenik
 msgid "The recipient phone number is mandatory for every Foxpost shipment: the mobile number is used when set, the landline otherwise, and validating a delivery for a contact without any phone number fails with a blocking message. Foxpost uses it to notify the customer about the parcel."
 msgstr "A címzett telefonszáma minden Foxpost-küldeménynél kötelező: ha meg van adva, a mobilszám kerül felhasználásra, egyébként a vezetékes szám; telefonszám nélküli kapcsolat esetén pedig a szállítás érvényesítése blokkoló üzenettel meghiúsul. A Foxpost ezen a számon értesíti a vevőt a csomagról."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/foxpost.rst:132 ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/gls.rst:130 ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/mpl.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:114 ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/foxpost.rst:132 ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/gls.rst:130 ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/mpl.rst:127
 msgid "Pricing"
 msgstr "Árképzés"
 
@@ -21406,7 +21406,7 @@ msgstr "Minden/néhány termék megérkezett; piszkozat számla készült"
 msgid "Draft bill created"
 msgstr "Piszkozat számla készült"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:97 ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:325
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:97 ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:326
 msgid ":doc:`manage`"
 msgstr ":doc:`manage`"
 
@@ -21814,119 +21814,119 @@ msgstr "Új |RFQ| létrehozása"
 msgid "To create a new |RFQ|, click the :guilabel:`New` button on the top-left corner of the :guilabel:`Requests for Quotation` dashboard to reveal a new |PO| form."
 msgstr "Új |RFQ| létrehozásához kattintson a :guilabel:`Új` gombra a :guilabel:`Árajánlatkérések` irányítópult bal felső sarkában, hogy megjelenjen egy új |PO| űrlap."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:174
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:175
 msgid "Start by assigning a :guilabel:`Vendor`."
 msgstr "Kezdje a :guilabel:`Szállító` hozzárendelésével."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:176
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:177
 msgid "The :guilabel:`Vendor Reference` field points to the sales and delivery order numbers sent by the vendor. This comes in handy once products are received, and the |PO| needs to be matched to the delivery order."
 msgstr "A :guilabel:`Szállítói hivatkozás` mező a szállító által küldött értékesítési és szállítási rendelési számokra mutat. Ez hasznos, amikor a termékek megérkeznek, és a |PO|-t össze kell egyeztetni a szállítási rendeléssel."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:180
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:181
 msgid "With the :doc:`Purchase Agreements feature <blanket_orders>` activated, the :guilabel:`Blanket Order` field appears, referring to long-term purchase agreements on recurring orders with set pricing. To view and configure blanket orders, head to :menuselection:`Purchase app --> Orders --> Purchase agreements`."
 msgstr "A :doc:`Beszerzési megállapodások funkció <blanket_orders>` aktiválásával megjelenik a :guilabel:`Keretmegállapodás` mező, amely a visszatérő rendelések hosszú távú beszerzési megállapodásaira utal rögzített árazással. A keretmegállapodások megtekintéséhez és konfigurálásához lépjen a következő helyre: :menuselection:`Beszerzési alkalmazás --> Rendelések --> Beszerzési megállapodások`."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:186
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:187
 msgid "The :guilabel:`Purchase agreements` view only appears if the :guilabel:`Blanket Order` setting is enabled. To do so, navigate to :menuselection:`Purchase app --> Configuration --> Settings`, then tick the :guilabel:`Blanket Orders` checkbox."
 msgstr "A :guilabel:`Beszerzési megállapodások` nézet csak akkor jelenik meg, ha a :guilabel:`Keretmegállapodás` beállítás engedélyezve van. Ehhez navigáljon a következő helyre: :menuselection:`Beszerzési alkalmazás --> Konfiguráció --> Beállítások`, majd jelölje be a :guilabel:`Keretmegállapodások` jelölőnégyzetet."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:190
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:191
 msgid "Next, configure an :guilabel:`Order Deadline`, which is the date by which the vendor must confirm their agreement to supply the products."
 msgstr "Ezután konfigurálja a :guilabel:`Rendelési határidőt`, amely az a dátum, ameddig a szállítónak meg kell erősítenie a termékek szállítására vonatkozó megállapodását."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:194
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:195
 msgid "After the :guilabel:`Order Deadline` is exceeded, the |RFQ| is marked as late, but the products can still be ordered."
 msgstr "A :guilabel:`Rendelési határidő` túllépése után az |RFQ| későinek minősül, de a termékek még mindig megrendelhetők."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:197
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:198
 msgid ":guilabel:`Expected Arrival` is automatically calculated based on the :guilabel:`Order Deadline` and vendor lead time. Tick the checkbox for :guilabel:`Ask confirmation` to ask the vendor to confirm the shipping date by email."
 msgstr "A :guilabel:`Várható érkezés` automatikusan kiszámításra kerül a :guilabel:`Rendelési határidő` és a szállítói átfutási idő alapján. Jelölje be a :guilabel:`Megerősítés kérése` jelölőnégyzetet, hogy e-mailben kérje a szállítótól a szállítási dátum megerősítését."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:209
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:210
 msgid "With the :doc:`Storage Locations feature <../../inventory/warehouses_storage/inventory_management/use_locations>` activated, the :guilabel:`Deliver to` field appears, which specifies which warehouse operation (set in the **Inventory** app) is used to receive the shipment."
 msgstr "A :doc:`Tárolási helyek funkció <../../inventory/warehouses_storage/inventory_management/use_locations>` aktiválásával megjelenik a :guilabel:`Szállítási cím` mező, amely meghatározza, hogy melyik raktári műveletet (beállítva az **Készlet** alkalmazásban) használják a szállítmány fogadására."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:214
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:215
 msgid "Select the receiving warehouse address here, or select :guilabel:`Dropship` to indicate that this order is to be shipped directly to the end customer. When :guilabel:`Dropship` is selected, the :guilabel:`Dropship address` field is enabled. Contact names auto-populate here from the **Contacts** app."
 msgstr "Válassza ki a fogadó raktár címét itt, vagy válassza a :guilabel:`Közvetlen szállítás` lehetőséget, hogy jelezze, hogy ezt a rendelést közvetlenül a végfelhasználónak kell szállítani. Amikor a :guilabel:`Közvetlen szállítás` van kiválasztva, a :guilabel:`Közvetlen szállítási cím` mező engedélyezett. A kapcsolattartó nevek automatikusan kitöltődnek az **Kapcsolatok** alkalmazásból."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:220
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:221
 msgid "The :guilabel:`Dropship` options only appear if the :guilabel:`Dropshipping` setting is enabled in the **Inventory** app. To do so, navigate to :menuselection:`Inventory app --> Configuration --> Settings`, then tick the :guilabel:`Dropshipping` checkbox."
 msgstr "A :guilabel:`Közvetlen szállítás` opciók csak akkor jelennek meg, ha a :guilabel:`Közvetlen szállítás` beállítás engedélyezve van az **Készlet** alkalmazásban. Ehhez navigáljon ide: :menuselection:`Készlet alkalmazás --> Konfiguráció --> Beállítások`, majd jelölje be a :guilabel:`Közvetlen szállítás` jelölőnégyzetet."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:225
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:226
 msgid "To create |RFQs| using different currencies, each currency needs to be enabled in the **Invoicing** app settings. See :doc:`../../../sales/sales/products_prices/prices/currencies` to learn more."
 msgstr "Különböző valuták használatával történő |RFQ|-k létrehozásához minden valutát engedélyezni kell az **Számlázás** alkalmazás beállításaiban. További információért lásd: :doc:`../../../sales/sales/products_prices/prices/currencies`."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:230
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:231
 msgid "Products tab"
 msgstr "Termékek fül"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:232
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:233
 msgid "In the :guilabel:`Products` tab, add the products to be ordered. Click :guilabel:`Add a product`, and type in the product name, or select the item from the drop-down menu."
 msgstr "A :guilabel:`Termékek` fülön adja hozzá a megrendelni kívánt termékeket. Kattintson a :guilabel:`Termék hozzáadása` gombra, és írja be a termék nevét, vagy válassza ki az elemet a legördülő menüből."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:235
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:236
 msgid "To create a new product and add it, type the new product name in the :guilabel:`Product` column, select :guilabel:`Create [product name]` from the resulting drop-down menu and manually add the unit price. Alternatively, select :guilabel:`Create and edit...` to be taken to the product form for that new item."
 msgstr "Új termék létrehozásához és hozzáadásához írja be az új termék nevét a :guilabel:`Termék` oszlopba, válassza a :guilabel:`[termék neve] létrehozása` lehetőséget a megjelenő legördülő menüből, és manuálisan adja meg az egységárat. Alternatív megoldásként válassza a :guilabel:`Létrehozás és szerkesztés...` lehetőséget, hogy az új elem termék űrlapjára kerüljön."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:240
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:241
 msgid ":guilabel:`Catalog` can also be selected to navigate to a product menu from the chosen vendor. From here, products can be added to the cart."
 msgstr "A :guilabel:`Katalógus` is kiválasztható, hogy a kiválasztott szállító termék menüjéhez navigáljon. Innen termékeket lehet hozzáadni a kosárhoz."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:244
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:245
 msgid "To make adjustments to products and prices, access the product form by clicking the :icon:`oi-arrow-right` :guilabel:`(right arrow)` icon that becomes available upon hovering over the :guilabel:`Product` name."
 msgstr "A termékek és árak módosításához lépjen be a termék űrlapra az :icon:`oi-arrow-right` :guilabel:`(jobb nyíl)` ikonra kattintva, amely elérhetővé válik, amikor az egérmutatót a :guilabel:`Termék` név fölé viszi."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:281
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:282
 msgid "Send the |RFQ|"
 msgstr "Küldje el a |RFQ|-t"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:283
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:284
 msgid "Clicking :guilabel:`Send by Email` reveals a :guilabel:`Compose Email` pop-up window, with a :guilabel:`Purchase: Request for Quotation` template loaded, ready to send to the vendor's email address (configured in the **Contacts** app)."
 msgstr "A :guilabel:`Küldés e-mailben` gombra kattintva megjelenik egy :guilabel:`E-mail írása` felugró ablak, amelyben egy :guilabel:`Beszerzés: Árajánlatkérés` sablon van betöltve, készen arra, hogy elküldje a szállító e-mail címére (konfigurálva a **Kapcsolatok** alkalmazásban)."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:287
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:288
 msgid "After crafting the desired message, click :guilabel:`Send`. Once sent, the |RFQ| moves to the :guilabel:`RFQ Sent` stage."
 msgstr "A kívánt üzenet megírása után kattintson a :guilabel:`Küldés` gombra. Miután elküldte, a |RFQ| a :guilabel:`RFQ elküldve` szakaszba kerül."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:290
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:291
 msgid "Clicking :guilabel:`Print RFQ` downloads a PDF of the |RFQ|."
 msgstr "A :guilabel:`RFQ nyomtatása` gombra kattintva letölthető a |RFQ| PDF formátumban."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:293
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:294
 msgid ":doc:`../../../essentials/contacts`"
 msgstr ":doc:`../../../essentials/contacts`"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:298
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:299
 msgid "Confirm order"
 msgstr "Rendelés megerősítése"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:300
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:301
 msgid "Clicking :guilabel:`Confirm Order` directly transforms the |RFQ| into an active |PO|."
 msgstr "A :guilabel:`Rendelés megerősítése` gombra kattintva a |RFQ| közvetlenül aktív |PO|-vá alakul."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:303
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:304
 msgid "Odoo tracks communications on each order through the chatter of the |PO| form. This shows the emails sent between the user and the contact, as well as any internal notes and activities. Messages, notes, and activities can also be logged on the chatter."
 msgstr "Az Odoo nyomon követi a kommunikációkat minden rendelésnél a |PO| űrlap csevegőjében. Ez megmutatja a felhasználó és a kapcsolat között küldött e-maileket, valamint bármilyen belső jegyzetet és tevékenységet. Üzenetek, jegyzetek és tevékenységek is rögzíthetők a csevegőben."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:307
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:308
 msgid "Once an |RFQ| is confirmed, it creates a |PO|."
 msgstr "Miután egy |RFQ| megerősítésre kerül, létrehoz egy |PO|-t."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:309
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:310
 msgid "On the new |PO|, the :guilabel:`Order Deadline` field changes to :guilabel:`Confirmation Date`, which displays the date and time the user confirmed the order."
 msgstr "Az új |PO|-n a :guilabel:`Rendelési határidő` mező :guilabel:`Megerősítés dátuma`-ra változik, amely megjeleníti a dátumot és időt, amikor a felhasználó megerősítette a rendelést."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:312
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:313
 msgid "Depending on the user's chosen configuration in the **Purchase** app settings, a *vendor bill* is created once products have been ordered or received. For more information, refer to the documentation on :doc:`managing vendor bills <manage>`."
 msgstr "A felhasználó által a **Beszerzés** alkalmazás beállításaiban választott konfigurációtól függően egy *szállítói számla* jön létre, amint a termékeket megrendelték vagy átvették. További információért lásd a :doc:`szállítói számlák kezelése <manage>` dokumentációt."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:317
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:318
 msgid "After an order is placed, clicking :guilabel:`Receive Products` records the reception of new products into the database."
 msgstr "Miután egy rendelés leadásra került, a :guilabel:`Termékek átvétele` gombra kattintva rögzíthető az új termékek átvétele az adatbázisba."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:321
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:322
 msgid "With the **Inventory** app installed, confirming a |PO| automatically creates a receipt document, with the product information and expected arrival dates automatically populated."
 msgstr "A **Készlet** alkalmazás telepítése esetén egy |PO| megerősítése automatikusan létrehoz egy átvételi dokumentumot, amely automatikusan kitölti a termékinformációkat és a várható érkezési dátumokat."
 
@@ -24414,7 +24414,7 @@ msgstr "A :guilabel:`Valuation at Date` olyan varázslót nyit meg, amely egy ad
 msgid ":guilabel:`Valuation Date` (required): the cut-off date and time."
 msgstr ":guilabel:`Valuation Date` (kötelező): a fordulónap dátuma és időpontja."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:335
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:106 ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:335
 msgid ":guilabel:`Company`."
 msgstr ":guilabel:`Vállalat`."
 
@@ -24834,7 +24834,7 @@ msgstr "A fuvarozói kapcsolatok értékesítési rendelésen (SO), számlán é
 msgid "The following carrier connectors are available:"
 msgstr "A következő fuvarozói kapcsolatok érhetők el:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:25
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:15 ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:25
 msgid "Module"
 msgstr "Modul"
 
@@ -25654,119 +25654,115 @@ msgstr ":guilabel:`Warning` (Figyelmeztetés): egy felugró ablak értesíti a f
 msgid ":guilabel:`Blocking Message`: a pop-up displays the message, and the vendor (or product) is removed from the order."
 msgstr ":guilabel:`Blocking Message` (Blokkoló üzenet): egy felugró ablak megjeleníti az üzenetet, és a szállító (vagy termék) eltávolításra kerül a rendelésből."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:168
-msgid "With the *Process Number - Purchase* module (`process_number_purchase`) installed, a :guilabel:`Process Number` field appears above the |RFQ| form, with a :guilabel:`Create a new process number` link. See :doc:`../../../services/project/process_numbers` for the concept of a process number. To have a process number created automatically for every new |RFQ|, enable :guilabel:`Create Automatically` under :menuselection:`Settings --> eYssen --> Process Number`."
-msgstr "A *Process Number - Purchase* modul (`process_number_purchase`) telepítése esetén egy :guilabel:`Process Number` (Folyamatszám) mező jelenik meg az |RFQ| űrlap felett, egy :guilabel:`Create a new process number` (Új folyamatszám létrehozása) hivatkozással. A folyamatszám fogalmáról lásd: :doc:`../../../services/project/process_numbers`. Ahhoz, hogy minden új |RFQ|-hoz automatikusan létrejöjjön egy folyamatszám, engedélyezze a :guilabel:`Create Automatically` (Automatikus létrehozás) beállítást a :menuselection:`Settings --> eYssen --> Process Number` (Beállítások --> eYssen --> Folyamatszám) alatt."
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:202
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:203
 msgid ":guilabel:`Ask confirmation` only appears if the :guilabel:`Receipt Reminder` setting is enabled, under :menuselection:`Purchase app --> Configuration --> Settings`. When enabled, Odoo automatically emails a reminder to the vendor a set number of days before the expected receipt, for any |PO| where :guilabel:`Ask confirmation` was ticked and the vendor has not yet confirmed. The number of days is set per vendor, on the :guilabel:`Sales & Purchase` tab of their contact form, in the :guilabel:`Days Before Receipt` field."
 msgstr ":guilabel:`Ask confirmation` (Megerősítés kérése) csak akkor jelenik meg, ha a :guilabel:`Receipt Reminder` (Nyugta emlékeztető) beállítás engedélyezve van a :menuselection:`Beszerzés alkalmazás --> Konfiguráció --> Beállítások` alatt. Ha engedélyezve van, az Odoo automatikusan emlékeztető e-mailt küld a szállítónak a várható átvétel előtt meghatározott számú nappal, minden olyan |PO| esetén, ahol az :guilabel:`Ask confirmation` be van jelölve, és a szállító még nem erősítette meg. A napok száma szállítónként állítható be, a kapcsolat űrlap :guilabel:`Sales & Purchase` fülén, a :guilabel:`Days Before Receipt` (Napok az átvétel előtt) mezőben."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:249
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:250
 msgid "With the :guilabel:`Variant Grid Entry` setting enabled, under :menuselection:`Purchase app --> Configuration --> Settings`, in the :guilabel:`Products` section, products with several variants (size, color, etc.) can be added to the |RFQ| through a grid, instead of one variant at a time. This mirrors the *Sales* app feature described in :doc:`the Sales documentation <../../../sales/sales/sales_quotations/orders_and_variants>`; on a purchase order the setting is named :guilabel:`Variant Grid Entry` rather than :guilabel:`Order Grid Entry`."
 msgstr "Ha a :guilabel:`Variant Grid Entry` (Termékvariáció táblázat) beállítás engedélyezve van a :menuselection:`Beszerzés alkalmazás --> Konfiguráció --> Beállítások` alatt, a :guilabel:`Products` (Termékek) szakaszban, a több variációval (méret, szín stb.) rendelkező termékek egy táblázaton keresztül adhatók hozzá az |RFQ|-hoz, ahelyett hogy egyesével kellene hozzáadni őket. Ez megegyezik az *Értékesítés* alkalmazás :doc:`az Értékesítés dokumentációjában <../../../sales/sales/sales_quotations/orders_and_variants>` ismertetett funkciójával; egy beszerzési rendelésen a beállítás neve :guilabel:`Variant Grid Entry`, nem pedig :guilabel:`Order Grid Entry`."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:257
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:258
 msgid "Add items from a previous purchase order"
 msgstr "Tételek hozzáadása egy korábbi beszerzési rendelésből"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:259
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:260
 msgid "On a draft |RFQ|, click the :icon:`fa-files-o` :guilabel:`(add previous items)` button, above the :guilabel:`Products` tab, to copy the product lines of an earlier purchase order into the current one."
 msgstr "Egy piszkozat |RFQ|-n kattintson a :guilabel:`Products` (Termékek) fül felett található :icon:`fa-files-o` :guilabel:`(korábbi tételek hozzáadása)` gombra, hogy egy korábbi beszerzési rendelés termék sorait átmásolja a jelenlegibe."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:263
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:264
 msgid "In the :guilabel:`Add Previous Items` pop-up window, select the :guilabel:`Previous Purchase` to copy lines from, and choose what should happen :guilabel:`If Product Duplication` occurs (i.e., the current |RFQ| already has a line for one of the copied products):"
 msgstr "A :guilabel:`Add Previous Items` (Korábbi tételek hozzáadása) felugró ablakban válassza ki a :guilabel:`Previous Purchase` (Korábbi beszerzés) mezőben, honnan másolja a sorokat, majd válassza ki, mi történjen :guilabel:`If Product Duplication` (termék duplikáció) esetén (azaz, ha a jelenlegi |RFQ|-n már szerepel sor az egyik átmásolt termékhez):"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:267
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:268
 msgid ":guilabel:`Stop`: cancels the whole operation with an error message."
 msgstr ":guilabel:`Stop` (Leállítás): hibaüzenettel megszakítja a teljes műveletet."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:268
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:269
 msgid ":guilabel:`Skip`: leaves the existing line untouched, and copies over the remaining lines."
 msgstr ":guilabel:`Skip` (Kihagyás): érintetlenül hagyja a meglévő sort, és átmásolja a fennmaradó sorokat."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:269
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:270
 msgid ":guilabel:`Replace`: overwrites the existing line's quantity and price with the copied values."
 msgstr ":guilabel:`Replace` (Csere): felülírja a meglévő sor mennyiségét és árát az átmásolt értékekkel."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:270
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:271
 msgid ":guilabel:`Increase`: adds the copied quantity to the existing line's quantity, and applies the copied price."
 msgstr ":guilabel:`Increase` (Növelés): hozzáadja az átmásolt mennyiséget a meglévő sor mennyiségéhez, és alkalmazza az átmásolt árat."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:273
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:274
 msgid "Click :guilabel:`Add` to copy the lines onto the current |RFQ|."
 msgstr "Kattintson a :guilabel:`Add` (Hozzáadás) gombra a sorok átmásolásához a jelenlegi |RFQ|-ra."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:276
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:277
 msgid "This feature is provided by the *Add Items from Previous Purchase* module (`eyssen_add_item_from_previous_purchase`), and is only available while the |RFQ| is in the :guilabel:`RFQ` (draft) stage."
 msgstr "Ezt a funkciót az *Add Items from Previous Purchase* modul (`eyssen_add_item_from_previous_purchase`) biztosítja, és csak addig érhető el, amíg az |RFQ| a :guilabel:`RFQ` (piszkozat) szakaszban van."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:330
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:331
 msgid "Purchase order approval"
 msgstr "Beszerzési rendelés jóváhagyása"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:332
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:333
 msgid "To require a manager's approval before a purchase order over a certain amount can be confirmed, navigate to :menuselection:`Purchase app --> Configuration --> Settings`, and under the :guilabel:`Orders` section, tick the :guilabel:`Purchase Order Approval` checkbox. Then, in the :guilabel:`Minimum Amount` field that appears, enter the threshold amount, and click :guilabel:`Save`."
 msgstr "Ahhoz, hogy egy bizonyos összeg feletti beszerzési rendelés jóváhagyása előtt vezetői jóváhagyás legyen szükséges, navigáljon a :menuselection:`Beszerzés alkalmazás --> Konfiguráció --> Beállítások` menübe, és a :guilabel:`Orders` (Rendelések) szakaszban jelölje be a :guilabel:`Purchase Order Approval` (Beszerzési rendelés jóváhagyás) jelölőnégyzetet. Ezután a megjelenő :guilabel:`Minimum Amount` (Minimum mennyiség) mezőben adja meg a küszöbösszeget, és kattintson a :guilabel:`Save` (Mentés) gombra."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:338
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:339
 msgid "Once this setting is enabled, confirming an |RFQ| whose total is above the minimum amount moves it to the :guilabel:`To Approve` stage, instead of directly to :guilabel:`Purchase Order`. A user with the *Purchase Manager* role can then click :guilabel:`Approve Order` to confirm it."
 msgstr "Ha ez a beállítás engedélyezve van, egy olyan |RFQ| jóváhagyása, amelynek összege meghaladja a minimum összeget, a :guilabel:`To Approve` (Jóváhagyásra vár) szakaszba kerül, közvetlenül a :guilabel:`Purchase Order` (Beszerzési rendelés) helyett. Ekkor egy *Beszerzési vezető* szerepkörű felhasználó kattinthat a :guilabel:`Approve Order` (Rendelés jóváhagyása) gombra a jóváhagyáshoz."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:343
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:344
 msgid "Lock confirmed orders"
 msgstr "Jóváhagyott rendelések zárolása"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:345
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:346
 msgid "To prevent confirmed purchase orders from being edited, navigate to :menuselection:`Purchase app --> Configuration --> Settings`, and under the :guilabel:`Orders` section, tick the :guilabel:`Lock Confirmed Orders` checkbox, then click :guilabel:`Save`."
 msgstr "Ahhoz, hogy a jóváhagyott beszerzési rendelések ne legyenek szerkeszthetők, navigáljon a :menuselection:`Beszerzés alkalmazás --> Konfiguráció --> Beállítások` menübe, és a :guilabel:`Orders` (Rendelések) szakaszban jelölje be a :guilabel:`Lock Confirmed Orders` (Jóváhagyott rendelések zárolása) jelölőnégyzetet, majd kattintson a :guilabel:`Save` (Mentés) gombra."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:349
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:350
 msgid "With this setting enabled, every |PO| is automatically set to the :guilabel:`Locked` status once confirmed. To manually lock (or unlock) an individual order regardless of the setting, click the :guilabel:`Lock` (or :guilabel:`Unlock`) button on the |PO| form; unlocking requires the *Purchase Manager* role."
 msgstr "Ha ez a beállítás engedélyezve van, minden |PO| automatikusan :guilabel:`Locked` (zárolt) állapotba kerül a jóváhagyás után. Ahhoz, hogy egy adott rendelést a beállítástól függetlenül manuálisan zároljon (vagy feloldjon), kattintson a :guilabel:`Lock` (vagy :guilabel:`Unlock`) gombra a |PO| űrlapon; a feloldáshoz *Beszerzési vezető* szerepkör szükséges."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:355
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:356
 msgid "Purchase order status"
 msgstr "Beszerzési rendelés állapota"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:357
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:358
 msgid "Throughout its lifecycle, a purchase order moves through the following statuses, shown at the top of the form:"
 msgstr "Élettartama során egy beszerzési rendelés a következő állapotokon megy keresztül, amelyek az űrlap tetején jelennek meg:"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:360
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:361
 msgid ":guilabel:`RFQ`: the initial, unconfirmed, draft state."
 msgstr ":guilabel:`RFQ`: a kezdeti, még nem jóváhagyott, piszkozat állapot."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:361
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:362
 msgid ":guilabel:`RFQ Sent`: the request for quotation has been emailed to the vendor."
 msgstr ":guilabel:`RFQ Sent` (Árajánlatkérés elküldve): az árajánlatkérést e-mailben elküldték a szállítónak."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:362
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:363
 msgid ":guilabel:`To Approve`: the order total is above the :ref:`approval threshold <purchase/manage_deals/po-approval>`, and is waiting for a manager to approve it."
 msgstr ":guilabel:`To Approve` (Jóváhagyásra vár): a rendelés összege meghaladja a :ref:`jóváhagyási küszöböt <purchase/manage_deals/po-approval>`, és egy vezető jóváhagyására vár."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:364
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:365
 msgid ":guilabel:`Purchase Order`: the order has been confirmed (or approved)."
 msgstr ":guilabel:`Purchase Order` (Beszerzési rendelés): a rendelést jóváhagyták (vagy engedélyezték)."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:365
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:366
 msgid ":guilabel:`Locked`: the confirmed order can no longer be edited."
 msgstr ":guilabel:`Locked` (Zárolva): a jóváhagyott rendelés már nem szerkeszthető."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:366
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:367
 msgid ":guilabel:`Cancelled`: the order was cancelled."
 msgstr ":guilabel:`Cancelled` (Törölve): a rendelést törölték."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:369
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:370
 msgid "Order quantity totals"
 msgstr "Rendelés mennyiségi összesítései"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:371
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:372
 msgid "On the |PO| form, next to the tax totals under the :guilabel:`Products` tab, a :guilabel:`Sum Qty` block lists the total ordered quantity of each unit of measure used on the order (for example, `12 Units` and `3 kg`), together with the number of distinct storable products and services on the order. A shorter version of this total, such as `2 P, 15 Qty`, is also available as an optional column (:guilabel:`Sum Qty`) on the :guilabel:`Requests for Quotation` and purchase order lists."
 msgstr "A |PO| űrlapon, a :guilabel:`Products` (Termékek) fül alatti adóösszesítők mellett, egy :guilabel:`Sum Qty` (Összes mennyiség) blokk felsorolja a rendelésen használt egyes mértékegységek teljes megrendelt mennyiségét (például `12 Units` és `3 kg`), valamint a rendelésen szereplő különböző raktárkészletezett termékek és szolgáltatások számát. Ennek az összesítésnek egy rövidebb változata, például `2 P, 15 Qty`, opcionális oszlopként (:guilabel:`Sum Qty`) is elérhető a :guilabel:`Requests for Quotation` (Árajánlatkérések) és a beszerzési rendelés listákon."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:378
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:379
 msgid "This feature is provided by the *Add Quantity Total for Purchase* module (`eyssen_quantity_total_purchase`)."
 msgstr "Ezt a funkciót az *Add Quantity Total for Purchase* modul (`eyssen_quantity_total_purchase`) biztosítja."
 
@@ -26445,6 +26441,473 @@ msgstr ":guilabel:`Összetevők` fül: felsorolja a művelethez szükséges öss
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_orders.rst:141
 msgid ":guilabel:`Work Instruction` tab: displayed only if the operation's routing step includes a PDF file, a Google Slides link, or a text note, configured as instructions for how to carry out the operation."
 msgstr ":guilabel:`Munkautasítás` fül: csak akkor jelenik meg, ha a művelet műveletsor-lépése tartalmaz PDF-fájlt, Google Slides hivatkozást vagy szöveges megjegyzést, amely a művelet elvégzésének útmutatójaként van beállítva."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:221
+msgid ":doc:`Stock valuation audit (Data Audit) <../../../../general/data_audit>`"
+msgstr ":doc:`Készletérték-audit (Data Audit) <../../../../general/data_audit>`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:3
+msgid "Supplier catalog connectors"
+msgstr "Beszállítói katalóguscsatlakozók"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:5
+msgid "The supplier catalog connectors import the product catalog, the purchase prices, and the stock levels of a wholesaler into Odoo, and keep them up to date automatically. They are plug-ins of the :doc:`Supplier Product Management (SPM) <supplier_products>` module: every connector feeds the same supplier stock, vendor lines, and order warnings described on that page."
+msgstr "A beszállítói katalóguscsatlakozók egy nagykereskedő termékkatalógusát, beszerzési árait és készletszintjeit importálják az Odoo-ba, és automatikusan naprakészen tartják azokat. A :doc:`Supplier Product Management (SPM) <supplier_products>` modul beépülő moduljai: minden csatlakozó ugyanazt a beszállítói készletet, ugyanazokat a beszállítói sorokat és rendelési figyelmeztetéseket táplálja, amelyeket az említett oldal ismertet."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:14
+msgid "Connector"
+msgstr "Csatlakozó"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:16
+msgid "Source"
+msgstr "Forrás"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:17
+msgid ":guilabel:`Hurtel`"
+msgstr ":guilabel:`Hurtel`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:18
+msgid "`spm_hurtel_api`"
+msgstr "`spm_hurtel_api`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:19
+msgid "Two XML feeds (IdoSell IOF format): a *full* feed with the master data, and a *light* feed with the stock levels"
+msgstr "Két XML-feed (IdoSell IOF formátum): egy *teljes* (full) feed a törzsadatokkal és egy *könnyű* (light) feed a készletszintekkel"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:21
+msgid ":guilabel:`Partner Telekom`"
+msgstr ":guilabel:`Partner Telekom`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:22
+msgid "`spm_partner_telekom_api`"
+msgstr "`spm_partner_telekom_api`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:23
+msgid "One XML feed, downloaded from a URL or read from a local file"
+msgstr "Egy XML-feed, URL-ről letöltve vagy helyi fájlból beolvasva"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:24
+msgid ":guilabel:`DRO`"
+msgstr ":guilabel:`DRO`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:25
+msgid "`spm_dro_api`"
+msgstr "`spm_dro_api`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:26
+msgid "One combined XML feed (master data, prices, and stock), fetched from an FTP/FTPS server or read from a local file"
+msgstr "Egy összevont XML-feed (törzsadatok, árak és készlet), FTP/FTPS-kiszolgálóról letöltve vagy helyi fájlból beolvasva"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:28
+msgid ":guilabel:`Thomax`"
+msgstr ":guilabel:`Thomax`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:29
+msgid "`spm_thomax_api`"
+msgstr "`spm_thomax_api`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:30
+msgid "Two CSV feeds: a master/price feed and a stock feed"
+msgstr "Két CSV-feed: egy törzsadat-/árfeed és egy készletfeed"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:31
+msgid ":guilabel:`Vision Software`"
+msgstr ":guilabel:`Vision Software`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:32
+msgid "`spm_vision_software_api`"
+msgstr "`spm_vision_software_api`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:33
+msgid "The SOAP web service of the supplier's *Vision Software (Octopus)* ERP"
+msgstr "A beszállító *Vision Software (Octopus)* vállalatirányítási rendszerének SOAP-webszolgáltatása"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:36
+msgid "Install the connectors from the :doc:`Apps <../../../general/apps_modules>` dashboard. They require the *Purchase*, *Inventory*, and *eCommerce* apps."
+msgstr "A csatlakozókat az :doc:`Alkalmazások <../../../general/apps_modules>` irányítópultról telepítse. Szükséges hozzájuk a *Beszerzés*, a *Készlet* és az *e-kereskedelem* alkalmazás."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:38
+msgid "Each connector adds its own menu under :menuselection:`Purchase --> SPM`. Purchase users can consult the data; only users with the :guilabel:`Purchase: Administrator` access right can configure the connectors and launch synchronizations."
+msgstr "Minden csatlakozó saját menüt ad a :menuselection:`Beszerzés --> SPM` alá. A beszerzési felhasználók megtekinthetik az adatokat; a csatlakozókat beállítani és szinkronizálást indítani csak a :guilabel:`Beszerzés: Adminisztrátor` hozzáférési joggal rendelkező felhasználók tudnak."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:41
+msgid "A feed or an API access is granted by the supplier. Ask the supplier for the address of the feed and the credentials before configuring a connector."
+msgstr "A feedhez vagy az API-hoz a hozzáférést a beszállító adja. A csatlakozó beállítása előtt kérje el a beszállítótól a feed címét és a hitelesítő adatokat."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:47
+msgid "How a synchronization works"
+msgstr "Hogyan működik a szinkronizálás"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:49
+msgid "All connectors work in the same way, in up to three stages:"
+msgstr "Minden csatlakozó azonos módon, legfeljebb három fázisban működik:"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:51
+msgid "**Stage 1 – staging.** The feed is downloaded and copied, as is, into staging tables (:menuselection:`Purchase --> SPM --> (connector) --> Products (Staging)`). Nothing is changed on the products at this point. A staging product is :guilabel:`Present`, :guilabel:`Vanished` (it disappeared from the feed), or in :guilabel:`Error`."
+msgstr "**1. fázis – staging.** A rendszer letölti a feedet, és változatlan formában átmeneti (staging) táblákba másolja (:menuselection:`Beszerzés --> SPM --> (csatlakozó) --> Termékek (staging)`). Ekkor a termékeken még semmi sem változik. Egy staging termék állapota :guilabel:`Jelen van`, :guilabel:`Eltűnt` (eltűnt a feedből) vagy :guilabel:`Hiba` lehet."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:55
+msgid "**Stage 2 – products.** The staging products are turned into Odoo products:"
+msgstr "**2. fázis – termékek.** A staging termékekből Odoo-termékek lesznek:"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:57
+msgid "a staging product that was imported before is matched with its product through the supplier's identifier, and the product is **updated**;"
+msgstr "a korábban már importált staging terméket a rendszer a beszállítói azonosító alapján párosítja a termékével, és a terméket **frissíti**;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:59
+msgid "otherwise, if the feed contains a valid :ref:`GTIN barcode <supplier-connectors/barcode>` that already exists on a product imported by **another** connector, that product is reused: the connector only adds its own vendor line and supplier stock to it, without changing its name, price, or category. The same article sold by several wholesalers is therefore a single product with several vendors;"
+msgstr "egyébként, ha a feed olyan érvényes :ref:`GTIN-vonalkódot <supplier-connectors/barcode>` tartalmaz, amely már létezik egy **másik** csatlakozó által importált terméken, a rendszer azt a terméket használja fel újra: a csatlakozó csak a saját beszállítói sorát és beszállítói készletét adja hozzá, a nevét, árát és kategóriáját nem módosítja. A több nagykereskedő által is forgalmazott cikk így egyetlen termék, több beszállítóval;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:64
+msgid "otherwise, a new storable product is **created**, available for sales and purchases."
+msgstr "egyébként új, készletezhető termék **jön létre**, amely értékesíthető és beszerezhető."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:66
+msgid "**Stage 3 – images.** The pictures referenced by the feed are downloaded in the background, by small batches, into the main image and the extra images of the product."
+msgstr "**3. fázis – képek.** A feedben hivatkozott képeket a rendszer a háttérben, kis kötegekben tölti le a termék fő képébe és további képeibe."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:69
+msgid "The following data is maintained on the products by stage 2:"
+msgstr "A 2. fázis a következő adatokat tartja karban a termékeken:"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:71
+msgid "the :guilabel:`Internal Reference`, the :guilabel:`Barcode` or the :guilabel:`Manufacturer Part Number`, the weight (when provided), the eCommerce description, the :guilabel:`Sales Price`, and the :guilabel:`Cost`;"
+msgstr "a :guilabel:`Belső hivatkozás`, a :guilabel:`Vonalkód` vagy a :guilabel:`Gyártói cikkszám`, a súly (ha rendelkezésre áll), az e-kereskedelmi leírás, az :guilabel:`Eladási ár` és a :guilabel:`Költség`;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:74
+msgid "the eCommerce category, according to the :ref:`category mapping <supplier-connectors/categories>`;"
+msgstr "az e-kereskedelmi kategória, a :ref:`kategória-hozzárendelés <supplier-connectors/categories>` szerint;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:76
+msgid "the brand and the other attributes provided by the feed, as attributes that do not create variants;"
+msgstr "a márka és a feed által megadott egyéb attribútumok, változatot nem létrehozó attribútumként;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:78
+msgid "the **vendor line** of the supplier (:guilabel:`Purchase` tab), with the supplier's product code and the :guilabel:`Supplier Lead Time (days)` of the connector;"
+msgstr "a beszállító **beszállítói sora** (:guilabel:`Beszerzés` fül), a beszállító termékkódjával és a csatlakozón megadott :guilabel:`Beszállítói átfutási idő (nap)` értékkel;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:80
+msgid "the **supplier stock** at the :guilabel:`Default Supplier Location` of the connector."
+msgstr "a **beszállítói készlet** a csatlakozó :guilabel:`Alapértelmezett beszállítói hely` mezőjében megadott helyen."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:83
+msgid "Only the fields listed above are overwritten at each synchronization. Any other field of the product, including its **name** after the creation, its product category, and its sales description, can be modified manually without being reverted. A price of zero coming from the feed never overwrites an existing price."
+msgstr "Minden szinkronizáláskor csak a fent felsorolt mezők íródnak felül. A termék bármely más mezője – beleértve a létrehozás utáni **nevét**, a termékkategóriáját és az értékesítési leírását – kézzel módosítható anélkül, hogy a rendszer visszaállítaná. A feedből érkező nulla ár soha nem ír felül meglévő árat."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:88
+msgid "Products that vanish from the feed are **not** archived automatically: their supplier stock is removed at the next full synchronization, and the product itself is left to the user. They can be archived in bulk with the :ref:`Full Upgrade Wizard <supplier-connectors/full-upgrade>`."
+msgstr "A feedből eltűnő termékek **nem** archiválódnak automatikusan: beszállítói készletük a következő teljes szinkronizáláskor eltávolításra kerül, maga a termék sorsáról pedig a felhasználó dönt. Tömegesen a :ref:`Teljes frissítés varázslóval <supplier-connectors/full-upgrade>` archiválhatók."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:95
+msgid "Configure a connector"
+msgstr "Csatlakozó beállítása"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:97
+msgid "Go to :menuselection:`Purchase --> SPM --> (connector) --> Settings`, and click :guilabel:`New`. Several settings records can exist for one connector, e.g., one per company."
+msgstr "Lépjen a :menuselection:`Beszerzés --> SPM --> (csatlakozó) --> Beállítások` menüpontra, és kattintson az :guilabel:`Új` gombra. Egy csatlakozóhoz több beállításrekord is létezhet, pl. vállalatonként egy."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:101
+msgid "Base settings"
+msgstr "Alapbeállítások"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:103
+msgid ":guilabel:`Supplier`: the contact of the wholesaler. It is used on the vendor lines."
+msgstr ":guilabel:`Beszállító`: a nagykereskedő kapcsolata. Ez kerül a beszállítói sorokra."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:104
+msgid ":guilabel:`Default Supplier Location`: the :doc:`supplier location <supplier_products>` that receives the supplier stock. It is required: without it, no supplier stock is recorded."
+msgstr ":guilabel:`Alapértelmezett beszállítói hely`: az a :doc:`beszállítói hely <supplier_products>`, amely a beszállítói készletet fogadja. Kötelező: nélküle nem rögzül beszállítói készlet."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:107
+msgid ":guilabel:`Category Review User`: the user who gets an activity each time the synchronization discovers a new category in the feed. Leave empty to disable these activities."
+msgstr ":guilabel:`Kategória felülvizsgáló felhasználó`: az a felhasználó, aki tevékenységet kap minden alkalommal, amikor a szinkronizálás új kategóriát fedez fel a feedben. Hagyja üresen e tevékenységek kikapcsolásához."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:109
+msgid ":guilabel:`Sync Lock Timeout (hours)`: a running synchronization locks the connector, so that two runs never overlap. After this delay, a lock left behind by an interrupted run is released automatically."
+msgstr ":guilabel:`Szinkron zárolás időkorlátja (óra)`: a futó szinkronizálás zárolja a csatlakozót, így két futás soha nem fedi át egymást. Ennyi idő elteltével a megszakadt futás után visszamaradt zárolás automatikusan feloldódik."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:116
+msgid "The :guilabel:`Pricing` tab defines how the sales price is derived from the supplier's price:"
+msgstr "Az :guilabel:`Árazás` fül határozza meg, hogyan képződik az eladási ár a beszállító árából:"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:118
+msgid ":guilabel:`Cost Currency`: the currency of the prices of the feed;"
+msgstr ":guilabel:`Beszerzési pénznem`: a feedben szereplő árak pénzneme;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:119
+msgid ":guilabel:`List Currency`: the currency of the sales prices, usually the company currency. The supplier's price is converted with the exchange rate of the day of the synchronization;"
+msgstr ":guilabel:`Listaár pénznem`: az eladási árak pénzneme, általában a vállalat pénzneme. A beszállító ára a szinkronizálás napi árfolyamán kerül átváltásra;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:121
+msgid ":guilabel:`Pricing Tiers`: the markup rules, by price band. Each tier has an :guilabel:`Up To` limit (exclusive, in list currency), a :guilabel:`Markup Type` (:guilabel:`Fixed amount` or :guilabel:`Percent`), and a :guilabel:`Markup Value` (e.g., `45` for +45%). The tiers are evaluated in ascending order of their limit, and the first tier whose limit is higher than the converted price applies. Use `0` as limit on exactly one tier to mark the open-ended top band. No tier is delivered with the modules;"
+msgstr ":guilabel:`Árazási sávok`: a felárazási szabályok, ársávonként. Minden sávnak van egy :guilabel:`Up To` felső határa (nem beleértve, listaár-pénznemben), egy típusa (:guilabel:`Árrés típusa`: :guilabel:`Fix összeg` vagy :guilabel:`Százalék`) és egy értéke (:guilabel:`Árrés értéke`, pl. `45` a +45%-hoz). A sávok kiértékelése a határuk szerinti növekvő sorrendben történik, és az az első sáv érvényes, amelynek határa magasabb az átváltott árnál. Pontosan egy sávon adjon meg `0` határt a felülről nyitott legfelső sáv jelölésére. A modulok nem tartalmaznak előre megadott sávokat;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:127
+msgid ":guilabel:`Price Rounding Strategy`: :guilabel:`No rounding`, or :guilabel:`Ceil to next X90`, which rounds the marked-up price up to the next amount ending in 90 (e.g., 1,181 → 1,190; 1,191 → 1,290);"
+msgstr ":guilabel:`Árkerekítési stratégia`: :guilabel:`Nincs kerekítés` vagy :guilabel:`Felfelé kerekítés a következő X90-re`, amely a felárazott árat a következő, 90-re végződő összegre kerekíti fel (pl. 1181 → 1190; 1191 → 1290);"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:130
+msgid ":guilabel:`Require Pricing Tier`: when enabled, a product whose price matches no tier is reported as an error instead of being sold at its cost;"
+msgstr ":guilabel:`Árazási sáv kötelező`: ha be van kapcsolva, az a termék, amelynek ára egyik sávba sem esik, hibaként jelenik meg, ahelyett hogy a bekerülési árán kerülne értékesítésre;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:132
+msgid ":guilabel:`Supplier Lead Time (days)`: written on the vendor line of every product of the connector. Changing it here updates all the vendor lines at the next synchronization;"
+msgstr ":guilabel:`Beszállítói átfutási idő (nap)`: a csatlakozó minden termékének beszállítói sorára rákerül. Ha itt módosítja, a következő szinkronizáláskor az összes beszállítói sor frissül;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:134
+msgid "*Készlettel rendelkező termékek létrehozása* (create products that are in stock only): when enabled, new products are only created for articles that the supplier has in stock. The stock of the existing products is always updated, including when it drops to zero."
+msgstr "*Készlettel rendelkező termékek létrehozása*: ha be van kapcsolva, új termék csak olyan cikkekhez jön létre, amelyek a beszállítónál készleten vannak. A meglévő termékek készlete mindig frissül, akkor is, ha nullára csökken."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:138
+msgid "The :guilabel:`Cost` of the product is the converted supplier price, without markup or rounding."
+msgstr "A termék :guilabel:`Költség` mezője az átváltott beszállítói ár, felárazás és kerekítés nélkül."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:141
+msgid "With the tiers *up to 5,000: fixed 1,500*, *up to 50,000: 35%*, and *0 (open-ended): 20%*, and the :guilabel:`Ceil to next X90` rounding, a product bought for the equivalent of 12,000 gets a sales price of 12,000 × 1.35 = 16,200 → **16,290**."
+msgstr "Az *5000-ig: fix 1500*, *50 000-ig: 35%* és *0 (felülről nyitott): 20%* sávokkal, valamint a :guilabel:`Felfelé kerekítés a következő X90-re` kerekítéssel egy 12 000-nek megfelelő áron beszerzett termék eladási ára 12 000 × 1,35 = 16 200 → **16 290**."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:154
+msgid "Source and schedule"
+msgstr "Forrás és ütemezés"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:156
+msgid "The source of the data, and the frequency of the automatic synchronization, are set in the tab(s) specific to each connector (see :ref:`supplier-connectors/specifics`). In all connectors:"
+msgstr "Az adatok forrása és az automatikus szinkronizálás gyakorisága az egyes csatlakozókra jellemző fül(ek)ön állítható be (lásd: :ref:`supplier-connectors/specifics`). Minden csatlakozóra igaz:"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:159
+msgid "a **source** is a URL, a file on the server, or an API address, with its credentials. For the feeds downloaded over HTTP, the :guilabel:`Authentication` tab supports :guilabel:`No Auth`, :guilabel:`HTTP Basic`, :guilabel:`URL Query Parameter`, and :guilabel:`Custom HTTP Header`, plus optional :guilabel:`Extra Headers (JSON)`;"
+msgstr "a **forrás** egy URL, egy kiszolgálón lévő fájl vagy egy API-cím, a hozzá tartozó hitelesítő adatokkal. A HTTP-n letöltött feedeknél a :guilabel:`Hitelesítés` fül a :guilabel:`Nincs hitelesítés`, a :guilabel:`HTTP Basic`, az :guilabel:`URL lekérdezési paraméter` és az :guilabel:`Egyedi HTTP fejléc` módot támogatja, valamint opcionálisan :guilabel:`További fejlécek (JSON)` is megadhatók;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:163
+msgid "the automatic synchronization is **disabled by default**. Tick the *Cron Active* checkbox of the feed, and set the interval (and, where available, the hour and minute of the day). The :guilabel:`Open Cron Record` button opens the corresponding scheduled action;"
+msgstr "az automatikus szinkronizálás **alapértelmezés szerint ki van kapcsolva**. Jelölje be a feed *Cron Active* jelölőnégyzetét, és állítsa be az időközt (valamint, ahol elérhető, a nap óráját és percét). Az :guilabel:`Ütemezés rekord megnyitása` gomb megnyitja a megfelelő ütemezett műveletet;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:166
+msgid "the download of the images has its own switch in the :guilabel:`Image Download` tab: :guilabel:`Image Download Cron Active`, with the :guilabel:`Image Download Batch Size` (number of products per run, every 15 minutes). The :guilabel:`Pending Images` and :guilabel:`Failed Images` counters show the progress. An image is tried up to five times."
+msgstr "a képek letöltésének saját kapcsolója van a :guilabel:`Képletöltés` fülön: :guilabel:`Képletöltés ütemezés aktív`, a :guilabel:`Képletöltési köteg mérete` mezővel (a futásonként feldolgozott termékek száma, 15 percenként). A :guilabel:`Függőben lévő képek` és a :guilabel:`Sikertelen képek` számláló mutatja az előrehaladást. Egy kép letöltését a rendszer legfeljebb ötször kísérli meg."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:174
+msgid "Run a synchronization manually"
+msgstr "Szinkronizálás kézi indítása"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:176
+msgid "The header of the settings form contains the manual actions:"
+msgstr "A beállítási űrlap fejléce tartalmazza a kézi műveleteket:"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:178
+msgid ":guilabel:`Sync Now` (or :guilabel:`Sync Full Now` / :guilabel:`Sync Light Now` for Hurtel, :guilabel:`Sync Master` / :guilabel:`Sync Stock` for Thomax): queues a complete run, which starts within about a minute in the background;"
+msgstr ":guilabel:`Szinkronizálás most` (Hurtel esetén :guilabel:`Teljes szinkron most` / :guilabel:`Light szinkron most`, Thomax esetén :guilabel:`Master szinkron` / :guilabel:`Készlet szinkron`): sorba állít egy teljes futást, amely körülbelül egy percen belül elindul a háttérben;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:181
+msgid ":guilabel:`Sync to Products`: runs stage 2 only, on the data already in staging, e.g., after correcting the pricing tiers or the category mapping;"
+msgstr ":guilabel:`Szinkron a termékekbe`: csak a 2. fázist futtatja a már stagingben lévő adatokon, pl. az árazási sávok vagy a kategória-hozzárendelés javítása után;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:183
+msgid ":guilabel:`Stock Only` (Hurtel): refreshes the supplier stock only;"
+msgstr ":guilabel:`Csak készlet` (Hurtel): csak a beszállítói készletet frissíti;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:184
+msgid ":guilabel:`Full Upgrade Wizard`: see :ref:`below <supplier-connectors/full-upgrade>`;"
+msgstr ":guilabel:`Teljes frissítés varázsló`: lásd :ref:`lent <supplier-connectors/full-upgrade>`;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:185
+msgid ":guilabel:`Force Unlock`: releases the lock of a synchronization that was interrupted. It is reserved for users with the :guilabel:`Administration: Settings` access right; use it only when no synchronization is actually running."
+msgstr ":guilabel:`Zárolás feloldása`: feloldja egy megszakadt szinkronizálás zárolását. Csak az :guilabel:`Adminisztráció: Beállítások` hozzáférési joggal rendelkező felhasználók használhatják; csak akkor alkalmazza, ha ténylegesen nem fut szinkronizálás."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:189
+msgid "While a run is in progress, the :guilabel:`Sync in Progress` toggle is on, and the form shows which feed is being processed and until when the lock is held."
+msgstr "Amíg egy futás folyamatban van, a :guilabel:`Szinkron folyamatban` kapcsoló be van kapcsolva, az űrlap pedig megmutatja, melyik feed feldolgozása zajlik, és meddig áll fenn a zárolás."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:195
+msgid "Import log"
+msgstr "Import napló"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:197
+msgid "Every run, manual or scheduled, creates an entry in :menuselection:`Purchase --> SPM --> (connector) --> Import Log`, with its feed, its trigger (:guilabel:`Cron` or :guilabel:`Manual`), its status, its duration, and detailed counters: staging products created, updated, skipped because unchanged, and failed; products created, updated, and failed in stage 2; supplier stock lines created, updated, and archived; etc. The errors of individual products are listed in the lines of the log."
+msgstr "Minden – kézi vagy ütemezett – futás bejegyzést hoz létre a :menuselection:`Beszerzés --> SPM --> (csatlakozó) --> Import napló` menüpontban, a feeddel, az indítás módjával (:guilabel:`Cron` vagy :guilabel:`Manuális`), az állapottal, az időtartammal és részletes számlálókkal: létrehozott, frissített, változatlanság miatt kihagyott és sikertelen staging termékek; a 2. fázisban létrehozott, frissített és sikertelen termékek; létrehozott, frissített és archivált beszállítói készletsorok stb. Az egyes termékek hibái a napló soraiban láthatók."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:214
+msgid "Category mapping"
+msgstr "Kategória-hozzárendelés"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:216
+msgid "The categories of the feed are listed in :menuselection:`Purchase --> SPM --> (connector) --> Categories`. The first time a category is met, an eCommerce category with the same name (and, for hierarchical feeds, the same parents) is created automatically, and the products of the category are published in it."
+msgstr "A feed kategóriái a :menuselection:`Beszerzés --> SPM --> (csatlakozó) --> Kategóriák` menüpontban láthatók. Amikor a rendszer először találkozik egy kategóriával, automatikusan létrehoz egy azonos nevű e-kereskedelmi kategóriát (hierarchikus feedek esetén azonos szülőkkel), és a kategória termékei ebben jelennek meg."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:221
+msgid "To place the products of a feed category in an eCommerce category of your own instead, open the feed category and select it in :guilabel:`Manual Mapping`. The :guilabel:`Webshop Category` field shows the category actually in use, and the :guilabel:`Mapping Status` whether it is a :guilabel:`Manual override`, :guilabel:`Auto-created`, or missing (:guilabel:`No webshop category`). The new mapping is applied to the products at the next stage 2. The eCommerce categories added manually to a product are left untouched."
+msgstr "Ha egy feedkategória termékeit inkább egy saját e-kereskedelmi kategóriába szeretné helyezni, nyissa meg a feedkategóriát, és válassza ki azt a :guilabel:`Kézi hozzárendelés` mezőben. A :guilabel:`Webshop kategória` mező a ténylegesen használt kategóriát mutatja, a :guilabel:`Hozzárendelés állapota` pedig azt, hogy ez :guilabel:`Kézi felülírás`, :guilabel:`Automatikusan létrehozott` vagy hiányzik (:guilabel:`Nincs webshop kategória`). Az új hozzárendelés a következő 2. fázisban kerül a termékekre. A termékhez kézzel hozzáadott e-kereskedelmi kategóriák érintetlenek maradnak."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:228
+msgid "Use the :guilabel:`Awaiting Review`, :guilabel:`Auto-mapped`, :guilabel:`Manual Override`, and :guilabel:`No Webshop Category` filters to work through the new categories. If a :guilabel:`Category Review User` is set on the connector, this user gets an activity for every new category."
+msgstr "Az új kategóriák feldolgozásához használja az :guilabel:`Awaiting Review`, az :guilabel:`Auto-mapped`, a :guilabel:`Manual Override` és a :guilabel:`No Webshop Category` szűrőt. Ha a csatlakozón be van állítva :guilabel:`Kategória felülvizsgáló felhasználó`, ez a felhasználó minden új kategóriáról tevékenységet kap."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:234
+msgid "The Vision Software connector maps the supplier's product groups through the :guilabel:`VS API Name` field of the eCommerce categories and of the attribute values, and assigns the :guilabel:`Product Category` and the :guilabel:`Brand Attribute` selected in its settings."
+msgstr "A Vision Software csatlakozó a beszállító cikkcsoportjait az e-kereskedelmi kategóriák és az attribútumértékek :guilabel:`VS API név` mezőjén keresztül rendeli hozzá, és a beállításaiban kiválasztott :guilabel:`Product Category` termékkategóriát és :guilabel:`Márka attribútum` attribútumot alkalmazza."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:241
+msgid "Full Upgrade Wizard"
+msgstr "Teljes frissítés varázsló"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:243
+msgid "A normal synchronization protects what was changed manually, and skips the articles that did not change in the feed. The :guilabel:`Full Upgrade Wizard` (Hurtel, Partner Telekom, DRO, and Vision Software) forces the refresh of selected components on the existing products, e.g., after a change of the pricing tiers, or to reset the names to those of the supplier."
+msgstr "A normál szinkronizálás megvédi a kézi módosításokat, és kihagyja azokat a cikkeket, amelyek a feedben nem változtak. A :guilabel:`Teljes frissítés varázsló` (Hurtel, Partner Telekom, DRO és Vision Software) kikényszeríti a kiválasztott összetevők frissítését a meglévő termékeken, pl. az árazási sávok módosítása után, vagy a nevek visszaállításához a beszállító által megadottakra."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:248
+msgid "Click :guilabel:`Full Upgrade Wizard` on the settings form, and tick the components to refresh:"
+msgstr "Kattintson a beállítási űrlapon a :guilabel:`Teljes frissítés varázsló` gombra, és jelölje be a frissítendő összetevőket:"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:250
+msgid ":guilabel:`Identity`: :guilabel:`Name`, :guilabel:`Description`, :guilabel:`Default Code (SKU)`, :guilabel:`Barcode (EAN)`;"
+msgstr ":guilabel:`Azonosság`: :guilabel:`Név`, :guilabel:`Leírás`, :guilabel:`Cikkszám (SKU)`, :guilabel:`Vonalkód (EAN)`;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:252
+msgid ":guilabel:`Classification`: :guilabel:`Webshop Categories`, and, for Hurtel, :guilabel:`Brand Attribute` and :guilabel:`Other Attributes (Parameters)`;"
+msgstr ":guilabel:`Besorolás`: :guilabel:`Webshop kategóriák`, Hurtel esetén ezenkívül :guilabel:`Márka attribútum` és :guilabel:`Egyéb attribútumok (paraméterek)`;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:254
+msgid ":guilabel:`Commerce`: :guilabel:`List Price`, :guilabel:`Standard Price (Cost)`;"
+msgstr ":guilabel:`Kereskedelem`: :guilabel:`Listaár`, :guilabel:`Beszerzési ár (önköltség)`;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:255
+msgid ":guilabel:`Stock`: :guilabel:`Supplier Quants (Stock)`, :guilabel:`Supplier Info`;"
+msgstr ":guilabel:`Készlet`: :guilabel:`Beszállítói készletek`, :guilabel:`Supplier Info`;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:256
+msgid ":guilabel:`Media`: :guilabel:`Images`;"
+msgstr ":guilabel:`Média`: :guilabel:`Képek`;"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:257
+msgid ":guilabel:`Lifecycle`: :guilabel:`Create New Products`, :guilabel:`Archive Vanished Products`."
+msgstr ":guilabel:`Életciklus`: :guilabel:`Új termékek létrehozása`, :guilabel:`Eltűnt termékek archiválása`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:259
+msgid "The :guilabel:`Full Refresh`, :guilabel:`Stock + Price`, and :guilabel:`Names + Descriptions` buttons tick a predefined set, and :guilabel:`Reset` clears the selection. Then, choose the :guilabel:`Scope`: all the products of the connector, only the articles changed in the feed since the :guilabel:`Changed Since` date, or, for Hurtel, a :guilabel:`Specific Brand only`. Click :guilabel:`Run Upgrade`: the upgrade runs in the background, and its import log opens to follow the progress."
+msgstr "A :guilabel:`Teljes frissítés`, a :guilabel:`Készlet + ár` és a :guilabel:`Nevek + leírások` gomb előre meghatározott készletet jelöl be, a :guilabel:`Visszaállítás` pedig törli a kijelölést. Ezután válassza ki a :guilabel:`Hatókör` értékét: a csatlakozó összes terméke, csak a feedben a :guilabel:`Módosítva ezután` dátum óta megváltozott cikkek, vagy – Hurtel esetén – :guilabel:`Csak adott márka`. Kattintson a :guilabel:`Frissítés futtatása` gombra: a frissítés a háttérben fut, és megnyílik az import naplója, ahol követhető az előrehaladás."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:267
+msgid "Refreshing the :guilabel:`Name`, the :guilabel:`Description`, or the prices overwrites the manual corrections made on the products of the chosen scope. :guilabel:`Archive Vanished Products` archives every product that is no longer in the feed."
+msgstr "A :guilabel:`Név`, a :guilabel:`Leírás` vagy az árak frissítése felülírja a kiválasztott hatókör termékein végzett kézi javításokat. Az :guilabel:`Eltűnt termékek archiválása` minden olyan terméket archivál, amely már nem szerepel a feedben."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:281
+msgid "Barcodes"
+msgstr "Vonalkódok"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:283
+msgid "A code of the feed is only written in the :guilabel:`Barcode` field of the product, and only used to recognize a product already imported from another wholesaler, when it is a valid GTIN. Any other code is stored as :guilabel:`Manufacturer Part Number`. See :doc:`supplier_products`."
+msgstr "A feed egy kódja csak akkor kerül a termék :guilabel:`Vonalkód` mezőjébe, és csak akkor szolgál egy másik nagykereskedőtől már importált termék felismerésére, ha érvényes GTIN. Minden más kód :guilabel:`Gyártói cikkszám` mezőként tárolódik. Lásd: :doc:`supplier_products`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:290
+msgid "Connector specifics"
+msgstr "A csatlakozók sajátosságai"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:293
+msgid "Hurtel"
+msgstr "Hurtel"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:295
+msgid ":guilabel:`Full Feed` tab: the source of the full XML feed, synchronized weekly by default. The full run updates the master data, the prices, and the stock, and flags the vanished articles."
+msgstr ":guilabel:`Teljes feed` fül: a teljes XML-feed forrása, amely alapértelmezés szerint hetente szinkronizálódik. A teljes futás frissíti a törzsadatokat, az árakat és a készletet, és megjelöli az eltűnt cikkeket."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:297
+msgid ":guilabel:`Light Feed` tab: the source of the light feed, synchronized daily by default. The light run only refreshes the supplier stock of the existing products; new articles wait for the next full run."
+msgstr ":guilabel:`Light feed` fül: a könnyű feed forrása, amely alapértelmezés szerint naponta szinkronizálódik. A könnyű futás csak a meglévő termékek beszállítói készletét frissíti; az új cikkek a következő teljes futásra várnak."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:300
+msgid ":guilabel:`Warehouse Stock ID`: which stock of the feed is imported: `0` for the aggregated total, `1` (default) for the supplier's main warehouse, `2` and above for secondary warehouses."
+msgstr ":guilabel:`Raktár Stock ID`: a feed melyik készlete kerül importálásra: `0` az összesített készlethez, `1` (alapértelmezett) a beszállító fő raktárához, `2` és afölött a másodlagos raktárakhoz."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:302
+msgid ":guilabel:`Default Language` and :guilabel:`Translation Languages`: the language of the feed used for the name and the description of the products, and the additional languages for which the translations are imported. The languages must be installed in the database and present in the feed."
+msgstr ":guilabel:`Default Language` és :guilabel:`Fordítási nyelvek`: a feednek az a nyelve, amelyet a rendszer a termékek nevéhez és leírásához használ, valamint azok a további nyelvek, amelyekre a fordítások importálásra kerülnek. A nyelveknek telepítve kell lenniük az adatbázisban, és szerepelniük kell a feedben."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:306
+msgid ":guilabel:`Auto-run Stage 2 after Stage 1`: untick it to stop after the staging, review the new categories and attributes, and then click :guilabel:`Sync to Products (Full)` manually."
+msgstr ":guilabel:`2. fázis automatikus futtatása az 1. fázis után`: törölje a jelölését, ha a staging után meg szeretne állni, át szeretné nézni az új kategóriákat és attribútumokat, majd kézzel szeretne a :guilabel:`Szinkronizálás termékekre (teljes)` gombra kattintani."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:310
+msgid "Partner Telekom"
+msgstr "Partner Telekom"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:312
+msgid ":guilabel:`Feed` tab: :guilabel:`Source Type` (:guilabel:`URL` or :guilabel:`Local File`), :guilabel:`Source Path`, and the schedule, daily by default."
+msgstr ":guilabel:`Feed` fül: :guilabel:`Source Type` (:guilabel:`URL` vagy :guilabel:`Local File`), :guilabel:`Source Path`, valamint az ütemezés, amely alapértelmezés szerint napi."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:316
+msgid "DRO"
+msgstr "DRO"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:318
+msgid ":guilabel:`Feed` tab: :guilabel:`Source Type` :guilabel:`FTP` (default) or :guilabel:`Local File`, the :guilabel:`Source Path` of the file, and the :guilabel:`FTP Connection`: :guilabel:`FTP Host`, :guilabel:`FTP Port`, :guilabel:`FTP User`, :guilabel:`FTP Password`, and :guilabel:`Use FTPS (TLS)`, enabled by default."
+msgstr ":guilabel:`Forrás` fül: a :guilabel:`Forrás típusa` :guilabel:`FTP` (alapértelmezett) vagy :guilabel:`Helyi fájl`, a fájl :guilabel:`Forrás elérési út` mezője, valamint az :guilabel:`FTP kapcsolat`: :guilabel:`FTP kiszolgáló`, :guilabel:`FTP port`, :guilabel:`FTP felhasználó`, :guilabel:`FTP jelszó` és az alapértelmezés szerint bekapcsolt :guilabel:`FTPS (TLS) használata`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:322
+msgid "The feed does not detail the stock per warehouse: all the supplier stock goes to the :guilabel:`Default Supplier Location`."
+msgstr "A feed nem részletezi raktáranként a készletet: a teljes beszállítói készlet az :guilabel:`Alapértelmezett beszállítói hely` mezőben megadott helyre kerül."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:326
+msgid "Thomax"
+msgstr "Thomax"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:328
+msgid ":guilabel:`Feeds` tab: the :guilabel:`Master / Price Feed` (:guilabel:`Master Source Path`, :guilabel:`Master Encoding`, UTF-8 by default; daily by default) and the :guilabel:`Stock Feed` (:guilabel:`Stock Source Path`, :guilabel:`Stock Encoding`, `cp1250` by default; every two hours by default), with a common :guilabel:`CSV Delimiter` (`;`). Each feed has its own :guilabel:`Sync Master` / :guilabel:`Sync Stock` button and schedule."
+msgstr ":guilabel:`Feedek` fül: a :guilabel:`Master / ár feed` (:guilabel:`Master forrás útvonal`, :guilabel:`Master kódolás`, alapértelmezés szerint UTF-8; alapértelmezés szerint napi) és a :guilabel:`Készlet feed` (:guilabel:`Készlet forrás útvonal`, :guilabel:`Készlet kódolás`, alapértelmezés szerint `cp1250`; alapértelmezés szerint kétóránként), közös :guilabel:`CSV elválasztó` (`;`) beállítással. Mindkét feednek saját :guilabel:`Master szinkron` / :guilabel:`Készlet szinkron` gombja és ütemezése van."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:333
+msgid ":guilabel:`Verify SSL Certificate`: keep it enabled, unless the supplier's server presents an incomplete certificate chain that makes the download fail, and you accept the reduced security."
+msgstr ":guilabel:`SSL-tanúsítvány ellenőrzése`: hagyja bekapcsolva, kivéve, ha a beszállító kiszolgálója hiányos tanúsítványláncot ad, amely miatt a letöltés meghiúsul, és Ön elfogadja a csökkentett biztonságot."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:335
+msgid "The technical attributes of the master feed are imported as product attributes."
+msgstr "A törzsadatfeed műszaki attribútumai termékattribútumként kerülnek importálásra."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:336
+msgid "This connector has no Full Upgrade Wizard."
+msgstr "Ennek a csatlakozónak nincs Teljes frissítés varázslója."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:339
+msgid "Vision Software"
+msgstr "Vision Software"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:341
+msgid ":guilabel:`Authentication` tab: the :guilabel:`API URL` of the supplier's web service, and the :guilabel:`API Key (authcode)`."
+msgstr ":guilabel:`Authentication` fül: a beszállító webszolgáltatásának címe (:guilabel:`API URL`) és az :guilabel:`API Key (authcode)`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:343
+msgid ":guilabel:`Sync & Endpoints` tab: the schedule (every 12 hours by default), and one switch per service of the API. Only the product list (:guilabel:`Enable Cikklista (GetCikkekAuth)`) and stage 2 (:guilabel:`Enable Stage 2 (staging -> products)`) are enabled by default; the product groups, barcodes, price list, price changes, stock, stock changes, invoices, attribute values, images, and sales prices per payment class can be enabled one by one. The supplier limits the number of calls per day of each service; the limit is indicated in the tooltip of each switch, and the time of the last call is displayed in :guilabel:`Last Call Per Endpoint`."
+msgstr ":guilabel:`Sync & Endpoints` fül: az ütemezés (alapértelmezés szerint 12 óránként), valamint az API minden szolgáltatásához egy-egy kapcsoló. Alapértelmezés szerint csak a cikklista (:guilabel:`Enable Cikklista (GetCikkekAuth)`) és a 2. fázis (:guilabel:`Enable Stage 2 (staging -> products)`) van bekapcsolva; a cikkcsoportok, vonalkódok, árlista, árváltozások, készlet, készletváltozások, számlák, attribútumértékek, képek és a fizetési osztályonkénti eladási árak egyenként kapcsolhatók be. A beszállító korlátozza az egyes szolgáltatások napi hívásainak számát; a korlát az egyes kapcsolók súgószövegében olvasható, az utolsó hívás időpontja pedig a :guilabel:`Last Call Per Endpoint` csoportban látható."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:350
+msgid ":guilabel:`Vision Partner ID (PID)` or :guilabel:`Vision Partner Code`: your customer identifier at the supplier, required by the price services."
+msgstr ":guilabel:`Vision Partner ID (PID)` vagy :guilabel:`Vision Partner Code`: az Ön ügyfélazonosítója a beszállítónál, amelyet az árszolgáltatások igényelnek."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:352
+msgid "The product list is requested incrementally: only the articles changed since the last successful call, minus a safety margin of :guilabel:`GetCikkek Changed-Since Margin (days)`."
+msgstr "A cikklista lekérése növekményes: csak az utolsó sikeres hívás óta megváltozott cikkek érkeznek, a :guilabel:`GetCikkek változás-dátum margó (nap)` mezőben megadott biztonsági ráhagyással csökkentett időponttól."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:354
+msgid "The raw answers of the optional services can be consulted under :menuselection:`Purchase --> SPM --> Vision Software --> Cache` (prices, stock, barcodes, images, invoices, product groups, and attribute values). Some of these menus and field labels are displayed in Hungarian, the language of the supplier's API."
+msgstr "Az opcionális szolgáltatások nyers válaszai a :menuselection:`Beszerzés --> SPM --> Vision Software --> Cache` menüpont alatt tekinthetők meg (árak, készlet, vonalkódok, képek, számlák, cikkcsoportok és attribútumértékek). E menük és mezőfeliratok egy része magyarul jelenik meg, a beszállító API-jának nyelvén."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:358
+msgid "The serial number management of the supplier's articles is taken over as the tracking of the product (no tracking, by lots, or by unique serial number)."
+msgstr "A beszállító cikkeinek sorozatszám-kezelése a termék nyomon követéseként kerül átvételre (nincs nyomon követés, tételszámonként vagy egyedi sorozatszámonként)."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:362
+msgid ":doc:`supplier_products`"
+msgstr ":doc:`supplier_products`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_connectors.rst:363
+msgid ":doc:`../../../websites/ecommerce/products`"
+msgstr ":doc:`../../../websites/ecommerce/products`"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:168
+msgid "With the *Process Number - Purchase* module (`process_number_purchase`) installed, a :guilabel:`Process Number` field appears above the |RFQ| form, with a :guilabel:`Create a new process number` link. See :doc:`../../../general/process_numbers` for the concept of a process number. To have a process number created automatically for every new |RFQ|, enable :guilabel:`Create Automatically` in the :guilabel:`Process Number` section of :menuselection:`Settings --> eYssen ERP`."
+msgstr "A *Process Number - Purchase* modul (`process_number_purchase`) telepítése esetén egy :guilabel:`Process Number` (folyamatszám) mező jelenik meg az |RFQ| űrlap felett, egy :guilabel:`Create a new process number` hivatkozással. A folyamatszám fogalmáról lásd: :doc:`../../../general/process_numbers`. Ahhoz, hogy minden új |RFQ|-hoz automatikusan létrejöjjön egy folyamatszám, kapcsolja be a :guilabel:`Create Automatically` beállítást a :menuselection:`Beállítások --> eYssen ERP` menüpont :guilabel:`Process Number` szakaszában."
+
+#~ msgid "With the *Process Number - Purchase* module (`process_number_purchase`) installed, a :guilabel:`Process Number` field appears above the |RFQ| form, with a :guilabel:`Create a new process number` link. See :doc:`../../../services/project/process_numbers` for the concept of a process number. To have a process number created automatically for every new |RFQ|, enable :guilabel:`Create Automatically` under :menuselection:`Settings --> eYssen --> Process Number`."
+#~ msgstr "A *Process Number - Purchase* modul (`process_number_purchase`) telepítése esetén egy :guilabel:`Process Number` (Folyamatszám) mező jelenik meg az |RFQ| űrlap felett, egy :guilabel:`Create a new process number` (Új folyamatszám létrehozása) hivatkozással. A folyamatszám fogalmáról lásd: :doc:`../../../services/project/process_numbers`. Ahhoz, hogy minden új |RFQ|-hoz automatikusan létrejöjjön egy folyamatszám, engedélyezze a :guilabel:`Create Automatically` (Automatikus létrehozás) beállítást a :menuselection:`Settings --> eYssen --> Process Number` (Beállítások --> eYssen --> Folyamatszám) alatt."
 
 #~ msgid "**Odoo Manufacturing** helps manufacturers schedule, plan, and process manufacturing orders. With the work center control panel, put tablets on the shop floor to control work orders in real-time and allow workers to trigger maintenance operations, feedback loops, quality issues, etc."
 #~ msgstr "**Odoo Gyártás** segíti a gyártókat a gyártási rendelések ütemezésében, tervezésében és feldolgozásában. A munkaközpont vezérlőpultjával helyezzen el táblagépeket a gyártósoron, hogy valós időben irányítsa a munkarendeléseket, és lehetővé tegye a dolgozók számára a karbantartási műveletek, visszacsatolási hurkok, minőségi problémák stb. indítását."

@@ -790,559 +790,559 @@ msgstr "Visszatérő jelentéseknél hasznos lehet az exportálási beállítás
 msgid "It is helpful to know the field's external identifier. For example, :guilabel:`Related Company` in the export user interface is equal to *parent_id* (external identifier). This is helpful because then, the only data exported is what should be modified and re-imported."
 msgstr "Hasznos ismerni a mező külső azonosítóját. Például az export felhasználói felületén megjelenő :guilabel:`Kapcsolódó vállalat` mező a *parent_id* külső azonosítónak felel meg. Ez azért hasznos, mert így csak azok az adatok kerülnek exportálásra, amelyeket módosítani és újra importálni kell."
 
-#: ../../content/applications/essentials/export_import_data.rst:79
+#: ../../content/applications/essentials/export_import_data.rst:84
 msgid "Import data into Odoo"
 msgstr "Adatok importálása az Odoo rendszerbe"
 
-#: ../../content/applications/essentials/export_import_data.rst:81
+#: ../../content/applications/essentials/export_import_data.rst:86
 msgid "Importing data into Odoo is extremely helpful during implementation, or in times where data needs to be :ref:`updated in bulk <essentials/update-data>`. The following documentation covers how to import data into an Odoo database."
 msgstr "Az adatok Odoo rendszerbe történő importálása rendkívül hasznos a bevezetés során, illetve akkor, amikor az adatokat :ref:`tömeges frissítéssel <essentials/update-data>` kell módosítani. Az alábbi dokumentáció bemutatja, hogyan lehet adatokat importálni egy Odoo adatbázisba."
 
-#: ../../content/applications/essentials/export_import_data.rst:86
+#: ../../content/applications/essentials/export_import_data.rst:91
 msgid "Imports are permanent and **cannot** be undone. However, it is possible to use filters (`created on` or `last modified`) to identify records changed or created by the import."
 msgstr "Az importálás végleges, és **nem** vonható vissza. Ugyanakkor lehetséges szűrők (`létrehozás dátuma` vagy `utolsó módosítás`) használata az importálás által módosított vagy létrehozott rekordok azonosítására."
 
-#: ../../content/applications/essentials/export_import_data.rst:90
+#: ../../content/applications/essentials/export_import_data.rst:95
 msgid "Activating :ref:`developer mode <developer-mode>` changes the visible import settings in the left menu. Doing so reveals an :menuselection:`Advanced` menu. Included in this advanced menu are two options: :guilabel:`Track history during import` and :guilabel:`Allow matching with subfields`."
 msgstr "A :ref:`fejlesztői mód <developer-mode>` aktiválása megváltoztatja a bal oldali menüben látható importálási beállításokat. Ennek hatására megjelenik egy :menuselection:`Speciális` menü. Ez a speciális menü két lehetőséget tartalmaz: :guilabel:`Előzmények követése importálás közben` és :guilabel:`Almezőkkel való egyeztetés engedélyezése`."
 
-#: ../../content/applications/essentials/export_import_data.rst:101
+#: ../../content/applications/essentials/export_import_data.rst:106
 msgid "If the model uses openchatter, the :guilabel:`Track history during import` option sets up subscriptions and sends notifications during the import, but leads to a slower import."
 msgstr "Ha a modell OpenChatter funkciót használ, az :guilabel:`Előzmények követése importálás közben` beállítás feliratkozásokat hoz létre és értesítéseket küld az importálás során, de ez lassabb importálást eredményez."
 
-#: ../../content/applications/essentials/export_import_data.rst:104
+#: ../../content/applications/essentials/export_import_data.rst:109
 msgid "Should the :guilabel:`Allow matching with subfields` option be selected, then all subfields within a field are used to match under the :guilabel:`Odoo Field` while importing."
 msgstr "Ha az :guilabel:`Almezőkkel való egyeztetés engedélyezése` beállítás be van jelölve, akkor egy mezőn belül az összes almező felhasználásra kerül az egyeztetéshez az :guilabel:`Odoo mező` oszlopban, importálás közben."
 
-#: ../../content/applications/essentials/export_import_data.rst:110
+#: ../../content/applications/essentials/export_import_data.rst:115
 msgid "Get started"
 msgstr "Első lépések"
 
-#: ../../content/applications/essentials/export_import_data.rst:112
+#: ../../content/applications/essentials/export_import_data.rst:117
 msgid "Data can be imported on any Odoo business object using either Excel (`.xlsx`) or :abbr:`CSV (Comma-separated Values)` (`.csv`) formats. This includes: contacts, products, bank statements, journal entries, and orders."
 msgstr "Az adatok bármely Odoo üzleti objektumba importálhatók Excel (`.xlsx`) vagy :abbr:`CSV (Comma-separated Values)` (`.csv`) formátumban. Ez magában foglalja: a kapcsolatokat, termékeket, banki kivonatokat, naplóbejegyzéseket és rendeléseket."
 
-#: ../../content/applications/essentials/export_import_data.rst:116
+#: ../../content/applications/essentials/export_import_data.rst:121
 msgid "Open the view of the object to which the data should be imported/populated, click on :icon:`fa-cog` :guilabel:`(Action)` icon, and in the drop-down menu select :icon:`fa-upload` :guilabel:`(Import records)`."
 msgstr "Nyissa meg annak az objektumnak a nézetét, amelybe az adatokat importálni szeretné, kattintson az :icon:`fa-cog` :guilabel:`(Művelet)` ikonra, majd a legördülő menüből válassza az :icon:`fa-upload` :guilabel:`(Rekordok importálása)` lehetőséget."
 
-#: ../../content/applications/essentials/export_import_data.rst:127
+#: ../../content/applications/essentials/export_import_data.rst:132
 msgid "Click :icon:`fa-upload`:guilabel:`Import Template for Customers` at the center of the page to download a :ref:`template <essentials/export_import_data/adapt-a-template>` and populate it with the company's own data. Such templates can be imported in one click since the data mapping is already preconfigured."
 msgstr "Kattintson az oldal közepén található :icon:`fa-upload`:guilabel:`Importálási sablon ügyfelekhez` hivatkozásra a :ref:`sablon <essentials/export_import_data/adapt-a-template>` letöltéséhez, majd töltse fel a vállalat saját adataival. Az ilyen sablonok egyetlen kattintással importálhatók, mivel az adatleképezés már előre be van állítva."
 
-#: ../../content/applications/essentials/export_import_data.rst:132
+#: ../../content/applications/essentials/export_import_data.rst:137
 msgid "To upload the downloaded template or an existing file, follow the next steps:"
 msgstr "A letöltött sablon vagy egy meglévő fájl feltöltéséhez kövesse az alábbi lépéseket:"
 
-#: ../../content/applications/essentials/export_import_data.rst:134
+#: ../../content/applications/essentials/export_import_data.rst:139
 msgid "Click :guilabel:`Upload Data File` and select the desired file."
 msgstr "Kattintson az :guilabel:`Adatfájl feltöltése` gombra, és válassza ki a kívánt fájlt."
 
-#: ../../content/applications/essentials/export_import_data.rst:135
+#: ../../content/applications/essentials/export_import_data.rst:140
 msgid "Adjust the :guilabel:`Formatting` options as needed (for CSV files only)."
 msgstr "Szükség szerint módosítsa a :guilabel:`Formázás` beállításait (csak CSV fájlok esetén)."
 
-#: ../../content/applications/essentials/export_import_data.rst:136
+#: ../../content/applications/essentials/export_import_data.rst:141
 msgid "Ensure all data in the :guilabel:`File Column` is correctly mapped to the appropriate :guilabel:`Odoo Field` and free of errors."
 msgstr "Győződjön meg arról, hogy a :guilabel:`Fájl oszlop` összes adata helyesen van leképezve a megfelelő :guilabel:`Odoo mezőre`, és mentes a hibáktól."
 
-#: ../../content/applications/essentials/export_import_data.rst:138
+#: ../../content/applications/essentials/export_import_data.rst:143
 msgid "(Optional) Click :guilabel:`Load Data File` to reload the same file or upload a different one."
 msgstr "(Opcionális) Kattintson az :guilabel:`Adatfájl betöltése` gombra ugyanazon fájl újratöltéséhez vagy egy másik fájl feltöltéséhez."
 
-#: ../../content/applications/essentials/export_import_data.rst:139
+#: ../../content/applications/essentials/export_import_data.rst:144
 msgid "Click :guilabel:`Test` to verify that the data is valid."
 msgstr "Kattintson a :guilabel:`Teszt` gombra az adatok érvényességének ellenőrzéséhez."
 
-#: ../../content/applications/essentials/export_import_data.rst:140
+#: ../../content/applications/essentials/export_import_data.rst:145
 msgid "Click :guilabel:`Import`."
 msgstr "Kattintson az :guilabel:`Importálás` gombra."
 
-#: ../../content/applications/essentials/export_import_data.rst:143
+#: ../../content/applications/essentials/export_import_data.rst:148
 msgid "The :guilabel:`Formatting` options do **not** appear when importing the proprietary Excel file type (i.e., `.xls` or `.xlsx`)."
 msgstr "A :guilabel:`Formázás` beállítások **nem** jelennek meg a saját fejlesztésű Excel fájltípus (azaz `.xls` vagy `.xlsx`) importálásakor."
 
-#: ../../content/applications/essentials/export_import_data.rst:149
+#: ../../content/applications/essentials/export_import_data.rst:154
 msgid "Adapt a template"
 msgstr "Sablon testreszabása"
 
-#: ../../content/applications/essentials/export_import_data.rst:151
+#: ../../content/applications/essentials/export_import_data.rst:156
 msgid "Import templates are provided in the import tool of the most common data to import (contacts, products, bank statements, etc.). Open them with any spreadsheet software (*Microsoft Office*, *OpenOffice*, *Google Drive*, etc.)."
 msgstr "Az importálási eszközben sablonok állnak rendelkezésre a leggyakrabban importált adatokhoz (kapcsolatok, termékek, banki kivonatok stb.). Nyissa meg őket tetszőleges táblázatkezelő szoftverrel (*Microsoft Office*, *OpenOffice*, *Google Drive* stb.)."
 
-#: ../../content/applications/essentials/export_import_data.rst:155
+#: ../../content/applications/essentials/export_import_data.rst:160
 msgid "Once the template is downloaded, proceed to follow these steps:"
 msgstr "A sablon letöltése után kövesse az alábbi lépéseket:"
 
-#: ../../content/applications/essentials/export_import_data.rst:157
+#: ../../content/applications/essentials/export_import_data.rst:162
 msgid "Add, remove, and sort columns to best fit the data structure."
 msgstr "Adjon hozzá, távolítson el és rendezze át az oszlopokat az adatstruktúrának megfelelően."
 
-#: ../../content/applications/essentials/export_import_data.rst:158
+#: ../../content/applications/essentials/export_import_data.rst:163
 msgid "It is strongly advised to **not** remove the :guilabel:`External ID` (ID) column (see why in the next section)."
 msgstr "Erősen ajánlott **nem** eltávolítani a :guilabel:`Külső azonosító` (ID) oszlopot (a következő szakaszban olvashat erről bővebben)."
 
-#: ../../content/applications/essentials/export_import_data.rst:160
+#: ../../content/applications/essentials/export_import_data.rst:165
 msgid "Set a unique ID to every record by dragging down the ID sequencing in the :guilabel:`External ID` (ID) column."
 msgstr "Rendeljen egyedi azonosítót minden rekordhoz a :guilabel:`Külső azonosító` (ID) oszlopban az azonosítószekvencia lehúzásával."
 
-#: ../../content/applications/essentials/export_import_data.rst:170
+#: ../../content/applications/essentials/export_import_data.rst:175
 msgid "When a new column is added, Odoo may not be able to map it automatically, if its label does not fit any field within Odoo. However, new columns can be mapped manually when the import is tested. Search the drop-down menu for the corresponding field."
 msgstr "Amikor új oszlopot ad hozzá, előfordulhat, hogy az Odoo nem tudja automatikusan leképezni, ha a felirata nem egyezik meg egyetlen Odoo-mezővel sem. Az új oszlopok azonban manuálisan is leképezhetők az importálás tesztelésekor. Keresse meg a megfelelő mezőt a legördülő menüben."
 
-#: ../../content/applications/essentials/export_import_data.rst:181
+#: ../../content/applications/essentials/export_import_data.rst:186
 msgid "Then, use this field's label in the import file to ensure future imports are successful."
 msgstr "Ezután ezt a mező-feliratot használja az importfájlban a jövőbeli sikeres importálások biztosítása érdekében."
 
-#: ../../content/applications/essentials/export_import_data.rst:184
+#: ../../content/applications/essentials/export_import_data.rst:189
 msgid "Another useful way to find out the proper column names to import is to export a sample file using the fields to be imported. This way, if there is not a sample import template, the names are accurate."
 msgstr "A megfelelő importálandó oszlopnevek megtalálásának egy másik hasznos módja, ha egy mintafájlt exportál az importálni kívánt mezőkkel. Így, ha nincs mintaimport-sablon, a nevek pontosak lesznek."
 
-#: ../../content/applications/essentials/export_import_data.rst:192
+#: ../../content/applications/essentials/export_import_data.rst:197
 msgid "Import from another application"
 msgstr "Importálás másik alkalmazásból"
 
-#: ../../content/applications/essentials/export_import_data.rst:194
+#: ../../content/applications/essentials/export_import_data.rst:199
 msgid "The :guilabel:`External ID` (ID) is a unique identifier for a line item. It is possible to use an :guilabel:`External ID` (ID) from previous software to facilitate the transition to Odoo."
 msgstr "A :guilabel:`Külső azonosító` (ID) egy sortétel egyedi azonosítója. Lehetséges korábbi szoftverek :guilabel:`Külső azonosítójának` (ID) használata az Odoo-ra való átállás megkönnyítése érdekében."
 
-#: ../../content/applications/essentials/export_import_data.rst:197
+#: ../../content/applications/essentials/export_import_data.rst:202
 msgid "Setting an ID is not mandatory when importing, but it helps in many cases:"
 msgstr "Az azonosító beállítása importáláskor nem kötelező, de sok esetben hasznos:"
 
-#: ../../content/applications/essentials/export_import_data.rst:199
+#: ../../content/applications/essentials/export_import_data.rst:204
 msgid ":ref:`Update imports <essentials/update-data>`: import the same file several times without creating duplicates."
 msgstr ":ref:`Importálások frissítése <essentials/update-data>`: ugyanazt a fájlt többször importálhatja duplikátumok létrehozása nélkül."
 
-#: ../../content/applications/essentials/export_import_data.rst:201
+#: ../../content/applications/essentials/export_import_data.rst:206
 msgid ":ref:`Import relation fields <export_import_data/relation-fields>`."
 msgstr ":ref:`Kapcsolati mezők importálása <export_import_data/relation-fields>`."
 
-#: ../../content/applications/essentials/export_import_data.rst:203
+#: ../../content/applications/essentials/export_import_data.rst:208
 msgid "To recreate relationships between different records, the unique identifier from the original application should be used to map it to the :guilabel:`External ID` (ID) column in Odoo."
 msgstr "A különböző rekordok közötti kapcsolatok újraépítéséhez az eredeti alkalmazás egyedi azonosítóját kell használni, és azt az Odoo :guilabel:`Külső azonosító` (ID) oszlopára kell leképezni."
 
-#: ../../content/applications/essentials/export_import_data.rst:206
+#: ../../content/applications/essentials/export_import_data.rst:211
 msgid "When another record is imported that links to the first one, use **XXX/ID** (XXX/External ID) for the original unique identifier. This record can also be found using its name."
 msgstr "Ha egy másik rekordot importál, amely az első rekordra hivatkozik, az eredeti egyedi azonosítóhoz használja a **XXX/ID** (XXX/Külső azonosító) jelölést. Ez a rekord a neve alapján is megtalálható."
 
-#: ../../content/applications/essentials/export_import_data.rst:210
+#: ../../content/applications/essentials/export_import_data.rst:215
 msgid "It should be noted that conflicts occur if two (or more) records have the same *External ID*."
 msgstr "Megjegyzendő, hogy ütközések keletkeznek, ha két (vagy több) rekordnak ugyanaz az *Külső azonosítója*."
 
-#: ../../content/applications/essentials/export_import_data.rst:213
+#: ../../content/applications/essentials/export_import_data.rst:218
 msgid "Field missing to map column"
 msgstr "Hiányzó mező az oszlop leképezéséhez"
 
-#: ../../content/applications/essentials/export_import_data.rst:215
+#: ../../content/applications/essentials/export_import_data.rst:220
 msgid "Odoo heuristically tries to find the type of field for each column inside the imported file, based on the first ten lines of the files."
 msgstr "Az Odoo heurisztikusan próbálja meghatározni az egyes oszlopok mezőtípusát az importált fájlban, a fájlok első tíz sora alapján."
 
-#: ../../content/applications/essentials/export_import_data.rst:218
+#: ../../content/applications/essentials/export_import_data.rst:223
 msgid "For example, if there is a column only containing numbers, only the fields with the *integer* type are presented as options."
 msgstr "Ha például egy oszlop kizárólag számokat tartalmaz, csak az *egész szám* típusú mezők jelennek meg lehetőségként."
 
-#: ../../content/applications/essentials/export_import_data.rst:221
+#: ../../content/applications/essentials/export_import_data.rst:226
 msgid "While this behavior might be beneficial in most cases, it is also possible that it could fail, or the column may be mapped to a field that is not proposed by default."
 msgstr "Bár ez a viselkedés a legtöbb esetben előnyös, előfordulhat, hogy nem működik megfelelően, vagy az oszlop olyan mezőre kerül leképezésre, amelyet az alapértelmezett javaslat nem tartalmaz."
 
-#: ../../content/applications/essentials/export_import_data.rst:224
+#: ../../content/applications/essentials/export_import_data.rst:229
 msgid "If this happens, check the :guilabel:`Show fields of relation fields (advanced) option`, then a complete list of fields becomes available for each column."
 msgstr "Ha ez történik, jelölje be a :guilabel:`Kapcsolati mezők mezőinek megjelenítése (speciális) opciót`, ekkor minden oszlophoz elérhető lesz a mezők teljes listája."
 
-#: ../../content/applications/essentials/export_import_data.rst:235
+#: ../../content/applications/essentials/export_import_data.rst:240
 msgid "Change data import format"
 msgstr "Adatimportálási formátum módosítása"
 
-#: ../../content/applications/essentials/export_import_data.rst:238
+#: ../../content/applications/essentials/export_import_data.rst:243
 msgid "Odoo can automatically detect if a column is a date, and tries to guess the date format from a set of most commonly used date formats. While this process can work for many date formats, some date formats are not recognizable. This can cause confusion, due to day-month inversions; it is difficult to guess which part of a date format is the day, and which part is the month, in a date, such as `01-03-2016`."
 msgstr "Az Odoo automatikusan felismeri, ha egy oszlop dátumot tartalmaz, és megpróbálja kitalálni a dátumformátumot a leggyakrabban használt dátumformátumok készlete alapján. Bár ez a folyamat sok dátumformátumnál működhet, egyes dátumformátumok nem ismerhetők fel. Ez zavart okozhat a nap-hónap felcserélése miatt; nehéz megállapítani, hogy egy dátum melyik része a nap és melyik a hónap, például a `01-03-2016` esetén."
 
-#: ../../content/applications/essentials/export_import_data.rst:244
+#: ../../content/applications/essentials/export_import_data.rst:249
 msgid "When importing a :abbr:`CSV (Comma-separated Values)` file, Odoo provides :guilabel:`Formatting` options."
 msgstr "Egy :abbr:`CSV (Comma-separated Values)` fájl importálásakor az Odoo :guilabel:`Formázás` lehetőségeket biztosít."
 
-#: ../../content/applications/essentials/export_import_data.rst:247
+#: ../../content/applications/essentials/export_import_data.rst:252
 msgid "To view which date format Odoo has found from the file, check the :guilabel:`Date Format` that is shown when clicking on options under the file selector. If this format is incorrect, change it to the preferred format using *ISO 8601* to define the format."
 msgstr "Annak megtekintéséhez, hogy az Odoo milyen dátumformátumot ismert fel a fájlból, ellenőrizze a :guilabel:`Dátumformátum` mezőt, amely a fájlválasztó alatti beállításokra kattintva jelenik meg. Ha ez a formátum helytelen, módosítsa a kívánt formátumra az *ISO 8601* szabvány alkalmazásával."
 
-#: ../../content/applications/essentials/export_import_data.rst:252
+#: ../../content/applications/essentials/export_import_data.rst:257
 msgid "*ISO 8601* is an international standard, covering the worldwide exchange, along with the communication of date and time-related data. For example, the date format should be `YYYY-MM-DD`. In the case of July 24th 1981, it should be written as `1981-07-24`."
 msgstr "*ISO 8601* egy nemzetközi szabvány, amely a dátum- és időadatok világszintű cseréjét és kommunikációját szabályozza. A dátumformátumnak például `YYYY-MM-DD` alakúnak kell lennie. 1981. július 24-e esetén ezt `1981-07-24` formában kell megadni."
 
-#: ../../content/applications/essentials/export_import_data.rst:257
+#: ../../content/applications/essentials/export_import_data.rst:262
 msgid "When importing Excel files (`.xls`, `.xlsx`), consider using *date cells* to store dates. This maintains locale date formats for display, regardless of how the date is formatted in Odoo. When importing a :abbr:`CSV (Comma-separated Values)` file, use Odoo's :guilabel:`Formatting` section to select the date format columns to import."
 msgstr "Excel fájlok (`.xls`, `.xlsx`) importálásakor érdemes *dátumcellákat* használni a dátumok tárolásához. Ez megőrzi a területi dátumformátumokat a megjelenítéshez, függetlenül attól, hogyan van formázva a dátum az Odoo-ban. :abbr:`CSV (Comma-separated Values)` fájl importálásakor az Odoo :guilabel:`Formázás` szakaszával válassza ki az importálandó dátumformátum oszlopokat."
 
-#: ../../content/applications/essentials/export_import_data.rst:263
+#: ../../content/applications/essentials/export_import_data.rst:268
 msgid "Import numbers with currency signs"
 msgstr "Valutajeleket tartalmazó számok importálása"
 
-#: ../../content/applications/essentials/export_import_data.rst:265
+#: ../../content/applications/essentials/export_import_data.rst:270
 msgid "Odoo fully supports numbers with parenthesis to represent negative signs, as well as numbers with currency signs attached to them. Odoo also automatically detects which thousand/decimal separator is used. If a currency symbol unknown to Odoo is used, it might not be recognized as a number, and the import crashes."
 msgstr "Az Odoo teljes mértékben támogatja a negatív előjelként zárójelbe tett számokat, valamint a hozzájuk kapcsolt valutajeleket tartalmazó számokat. Az Odoo automatikusan felismeri a használt ezres- és tizedeselválasztót is. Ha az Odoo által ismeretlen valutaszimbólum szerepel, előfordulhat, hogy a rendszer nem ismeri fel számként, és az importálás hibával leáll."
 
-#: ../../content/applications/essentials/export_import_data.rst:271
+#: ../../content/applications/essentials/export_import_data.rst:276
 msgid "When importing a :abbr:`CSV (Comma-separated Values)` file, the :guilabel:`Formatting` menu appears on the left-hand column. Under these options, the :guilabel:`Thousands Separator` can be changed."
 msgstr "Egy :abbr:`CSV (Comma-separated Values)` fájl importálásakor a :guilabel:`Formatting` menü megjelenik a bal oldali oszlopban. Ezen beállítások alatt az :guilabel:`Thousands Separator` módosítható."
 
-#: ../../content/applications/essentials/export_import_data.rst:275
+#: ../../content/applications/essentials/export_import_data.rst:280
 msgid "Examples of supported numbers (using 'thirty-two thousand' as the figure):"
 msgstr "Támogatott számformátumok példái (a 'harminckettőezer' számot használva):"
 
-#: ../../content/applications/essentials/export_import_data.rst:277
+#: ../../content/applications/essentials/export_import_data.rst:282
 msgid "32.000,00"
 msgstr "32 000,00"
 
-#: ../../content/applications/essentials/export_import_data.rst:278
+#: ../../content/applications/essentials/export_import_data.rst:283
 msgid "32000,00"
 msgstr "32 000,00"
 
-#: ../../content/applications/essentials/export_import_data.rst:279
+#: ../../content/applications/essentials/export_import_data.rst:284
 msgid "32,000.00"
 msgstr "32 000,00"
 
-#: ../../content/applications/essentials/export_import_data.rst:280
+#: ../../content/applications/essentials/export_import_data.rst:285
 msgid "-32000.00"
 msgstr "-32 000,00"
 
-#: ../../content/applications/essentials/export_import_data.rst:281
+#: ../../content/applications/essentials/export_import_data.rst:286
 msgid "(32000.00)"
 msgstr "(32000,00)"
 
-#: ../../content/applications/essentials/export_import_data.rst:282
+#: ../../content/applications/essentials/export_import_data.rst:287
 msgid "$ 32.000,00"
 msgstr "32.000,00 $"
 
-#: ../../content/applications/essentials/export_import_data.rst:283
+#: ../../content/applications/essentials/export_import_data.rst:288
 msgid "(32000.00 €)"
 msgstr "(32000,00 €)"
 
-#: ../../content/applications/essentials/export_import_data.rst:285
+#: ../../content/applications/essentials/export_import_data.rst:290
 msgid "Example that will not work:"
 msgstr "Példa, amely nem fog működni:"
 
-#: ../../content/applications/essentials/export_import_data.rst:287
+#: ../../content/applications/essentials/export_import_data.rst:292
 msgid "ABC 32.000,00"
 msgstr "ABC 32 000,00"
 
-#: ../../content/applications/essentials/export_import_data.rst:288
+#: ../../content/applications/essentials/export_import_data.rst:293
 msgid "$ (32.000,00)"
 msgstr "(32.000,00) $"
 
-#: ../../content/applications/essentials/export_import_data.rst:291
+#: ../../content/applications/essentials/export_import_data.rst:296
 msgid "A :guilabel:`() (parenthesis)` around the number indicates that the number is a negative value. The currency symbol **must** be placed within the parenthesis for Odoo to recognize it as a negative currency value."
 msgstr "A szám körüli :guilabel:`() (parenthesis)` azt jelzi, hogy a szám negatív értéket képvisel. A pénznemszimbólumot **kötelező** a zárójelbe helyezni, hogy az Odoo negatív pénznemértékként ismerje fel."
 
-#: ../../content/applications/essentials/export_import_data.rst:296
+#: ../../content/applications/essentials/export_import_data.rst:301
 msgid "Import preview table not displayed correctly"
 msgstr "Az importálási előnézeti táblázat nem jelenik meg megfelelően"
 
-#: ../../content/applications/essentials/export_import_data.rst:298
+#: ../../content/applications/essentials/export_import_data.rst:303
 msgid "By default, the import preview is set on commas as field separators, and quotation marks as text delimiters. If the :abbr:`CSV (Comma-separated Values)` file does not have these settings, modify the :guilabel:`Formatting` options (displayed under the :guilabel:`Import` :abbr:`CSV (Comma-separated Values)` file bar after selecting the :abbr:`CSV (Comma-separated Values)` file)."
 msgstr "Alapértelmezés szerint az importálási előnézet vesszőt használ mezőelválasztóként, és idézőjeleket szövegelhatárolóként. Ha a :abbr:`CSV (Comma-separated Values)` fájl nem ezekkel a beállításokkal rendelkezik, módosítsa a :guilabel:`Formatting` beállításokat (amelyek az :guilabel:`Import` :abbr:`CSV (Comma-separated Values)` fájlsáv alatt jelennek meg a :abbr:`CSV (Comma-separated Values)` fájl kiválasztása után)."
 
-#: ../../content/applications/essentials/export_import_data.rst:304
+#: ../../content/applications/essentials/export_import_data.rst:309
 msgid "If the :abbr:`CSV (Comma-separated Values)` file has a tabulation as a separator, Odoo does **not** detect the separations. The file format options need to be modified in the spreadsheet application. See the following :ref:`Change CSV file format <export_import_data/change-csv>` section."
 msgstr "Ha a :abbr:`CSV (Comma-separated Values)` fájlban tabulátor szerepel elválasztóként, az Odoo **nem** ismeri fel az elválasztásokat. A fájlformátum beállításait a táblázatkezelő alkalmazásban kell módosítani. Lásd a következő :ref:`CSV-fájlformátum módosítása <export_import_data/change-csv>` részt."
 
-#: ../../content/applications/essentials/export_import_data.rst:312
+#: ../../content/applications/essentials/export_import_data.rst:317
 msgid "Change CSV file format in spreadsheet application"
 msgstr "CSV-fájlformátum módosítása táblázatkezelő alkalmazásban"
 
-#: ../../content/applications/essentials/export_import_data.rst:314
+#: ../../content/applications/essentials/export_import_data.rst:319
 msgid "When editing and saving :abbr:`CSV (Comma-separated Values)` files in spreadsheet applications, the computer's regional settings are applied for the separator and delimiter. Odoo suggests using *OpenOffice* or *LibreOffice*, as both applications allow modifications of all three options (from *LibreOffice* application, go to :menuselection:`'Save As' dialog box --> Check the box 'Edit filter settings' --> Save`)."
 msgstr ":abbr:`CSV (Comma-separated Values)` fájlok táblázatkezelő alkalmazásban történő szerkesztésekor és mentésekor a számítógép területi beállításai kerülnek alkalmazásra az elválasztóra és az elhatárolóra. Az Odoo az *OpenOffice* vagy a *LibreOffice* használatát javasolja, mivel mindkét alkalmazás lehetővé teszi mindhárom beállítás módosítását (a *LibreOffice* alkalmazásból: :menuselection:`'Mentés másként' párbeszédpanel --> Jelölje be a 'Szűrőbeállítások szerkesztése' jelölőnégyzetet --> Mentés`)."
 
-#: ../../content/applications/essentials/export_import_data.rst:320
+#: ../../content/applications/essentials/export_import_data.rst:325
 msgid "Microsoft Excel can modify the encoding when saving (:menuselection:`'Save As' dialog box --> 'Tools' drop-down menu --> Encoding tab`)."
 msgstr "A Microsoft Excel a mentéskor módosíthatja a kódolást (:menuselection:`'Mentés másként' párbeszédpanel --> 'Eszközök' legördülő menü --> Kódolás lap`)."
 
-#: ../../content/applications/essentials/export_import_data.rst:324
+#: ../../content/applications/essentials/export_import_data.rst:329
 msgid "Difference between Database ID and External ID"
 msgstr "Az adatbázis-azonosító és a külső azonosító közötti különbség"
 
-#: ../../content/applications/essentials/export_import_data.rst:326
+#: ../../content/applications/essentials/export_import_data.rst:331
 msgid "Some fields define a relationship with another object. For example, the country of a contact is a link to a record of the 'Country' object. When such fields are imported, Odoo has to recreate links between the different records. To help import such fields, Odoo provides three mechanisms."
 msgstr "Egyes mezők kapcsolatot határoznak meg egy másik objektummal. Például egy kapcsolattartó országa hivatkozás az 'Ország' objektum egyik rekordjára. Az ilyen mezők importálásakor az Odoo-nak újra kell teremtenie a különböző rekordok közötti kapcsolatokat. Az ilyen mezők importálásának megkönnyítéséhez az Odoo három mechanizmust biztosít."
 
-#: ../../content/applications/essentials/export_import_data.rst:331
+#: ../../content/applications/essentials/export_import_data.rst:336
 msgid "**Only one** mechanism should be used per field that is imported."
 msgstr "Importálásonként mezőnként **csak egy** mechanizmust szabad használni."
 
-#: ../../content/applications/essentials/export_import_data.rst:333
+#: ../../content/applications/essentials/export_import_data.rst:338
 msgid "For example, to reference the country of a contact, Odoo proposes three different fields to import:"
 msgstr "Például egy kapcsolattartó országa hivatkozásához az Odoo három különböző mezőt kínál importálásra:"
 
-#: ../../content/applications/essentials/export_import_data.rst:335
+#: ../../content/applications/essentials/export_import_data.rst:340
 msgid ":guilabel:`Country`: the name or code of the country"
 msgstr ":guilabel:`Ország`: az ország neve vagy kódja"
 
-#: ../../content/applications/essentials/export_import_data.rst:336
+#: ../../content/applications/essentials/export_import_data.rst:341
 msgid ":guilabel:`Country/Database ID`: the unique Odoo ID for a record, defined by the ID PostgreSQL column"
 msgstr ":guilabel:`Ország/Adatbázis-azonosító`: a rekord egyedi Odoo-azonosítója, amelyet a PostgreSQL ID oszlopa határoz meg"
 
-#: ../../content/applications/essentials/export_import_data.rst:338
+#: ../../content/applications/essentials/export_import_data.rst:343
 msgid ":guilabel:`Country/External ID`: the ID of this record referenced in another application (or the `.XML` file that imported it)"
 msgstr ":guilabel:`Ország/Külső azonosító`: a rekordnak egy másik alkalmazásban (vagy az importáló `.XML` fájlban) hivatkozott azonosítója"
 
-#: ../../content/applications/essentials/export_import_data.rst:341
+#: ../../content/applications/essentials/export_import_data.rst:346
 msgid "For the country of Belgium, for example, use one of these three ways to import:"
 msgstr "Belgium esetén például az alábbi három módszer egyikét használja az importáláshoz:"
 
-#: ../../content/applications/essentials/export_import_data.rst:343
+#: ../../content/applications/essentials/export_import_data.rst:348
 msgid ":guilabel:`Country`: `Belgium`"
 msgstr ":guilabel:`Ország`: `Belgium`"
 
-#: ../../content/applications/essentials/export_import_data.rst:344
+#: ../../content/applications/essentials/export_import_data.rst:349
 msgid ":guilabel:`Country/Database ID`: `21`"
 msgstr ":guilabel:`Ország/Adatbázis-azonosító`: `21`"
 
-#: ../../content/applications/essentials/export_import_data.rst:345
+#: ../../content/applications/essentials/export_import_data.rst:350
 msgid ":guilabel:`Country/External ID`: `base.be`"
 msgstr ":guilabel:`Ország/Külső azonosító`: `base.be`"
 
-#: ../../content/applications/essentials/export_import_data.rst:347
+#: ../../content/applications/essentials/export_import_data.rst:352
 msgid "According to the company's need, use one of these three ways to reference records in relations. Here is an example when one or the other should be used, according to the need:"
 msgstr "A vállalat igényeitől függően az alábbi három módszer egyikét használja a kapcsolatokban lévő rekordokra való hivatkozáshoz. Az alábbiakban látható egy-egy példa arra, mikor melyiket érdemes alkalmazni:"
 
-#: ../../content/applications/essentials/export_import_data.rst:350
+#: ../../content/applications/essentials/export_import_data.rst:355
 msgid "Use :guilabel:`Country`: this is the easiest way when data comes from :abbr:`CSV (Comma-separated Values)` files that have been created manually."
 msgstr ":guilabel:`Ország` használata: ez a legegyszerűbb módszer, ha az adatok kézzel létrehozott :abbr:`CSV (Comma-separated Values)` fájlokból származnak."
 
-#: ../../content/applications/essentials/export_import_data.rst:352
+#: ../../content/applications/essentials/export_import_data.rst:357
 msgid "Use :guilabel:`Country/Database ID`: this should rarely be used. It is mostly used by developers as the main advantage is to never have conflicts (there may be several records with the same name, but they always have a unique Database ID)"
 msgstr ":guilabel:`Ország/Adatbázis-azonosító` használata: ezt ritkán kell alkalmazni. Főként fejlesztők használják, mivel fő előnye, hogy soha nem okoz ütközést (előfordulhat több azonos nevű rekord, de mindegyiknek egyedi Adatbázis-azonosítója van)"
 
-#: ../../content/applications/essentials/export_import_data.rst:355
+#: ../../content/applications/essentials/export_import_data.rst:360
 msgid "Use :guilabel:`Country/External ID`: use *External ID* when importing data from a third-party application."
 msgstr ":guilabel:`Ország/Külső azonosító` használata: a *Külső azonosítót* akkor használja, ha harmadik féltől származó alkalmazásból importál adatokat."
 
-#: ../../content/applications/essentials/export_import_data.rst:358
+#: ../../content/applications/essentials/export_import_data.rst:363
 msgid "When *External IDs* are used, import :abbr:`CSV (Comma-separated Values)` files with the :guilabel:`External ID` (ID) column defining the *External ID* of each record that is imported. Then, a reference can be made to that record with columns, like `Field/External ID`. The following two :abbr:`CSV (Comma-separated Values)` files provide an example for products and their categories."
 msgstr "Ha *Külső azonosítókat* használnak, importálja a :abbr:`CSV (Comma-separated Values)` fájlokat a :guilabel:`Külső azonosító` (ID) oszloppal, amely meghatározza az importált minden egyes rekord *Külső azonosítóját*. Ezután hivatkozás készíthető erre a rekordra olyan oszlopokkal, mint például: `Field/External ID`. Az alábbi két :abbr:`CSV (Comma-separated Values)` fájl példát mutat be a termékekre és azok kategóriáira."
 
-#: ../../content/applications/essentials/export_import_data.rst:363
+#: ../../content/applications/essentials/export_import_data.rst:368
 msgid ":download:`CSV file for categories <export_import_data/External_id_3rd_party_application_product_categories.csv>`"
 msgstr ":download:`CSV fájl a kategóriákhoz <export_import_data/External_id_3rd_party_application_product_categories.csv>`"
 
-#: ../../content/applications/essentials/export_import_data.rst:365
+#: ../../content/applications/essentials/export_import_data.rst:370
 msgid ":download:`CSV file for Products <export_import_data/External_id_3rd_party_application_products.csv>`"
 msgstr ":download:`CSV fájl a termékekhez <export_import_data/External_id_3rd_party_application_products.csv>`"
 
-#: ../../content/applications/essentials/export_import_data.rst:371
+#: ../../content/applications/essentials/export_import_data.rst:376
 msgid "Import relation fields"
 msgstr "Kapcsolati mezők importálása"
 
-#: ../../content/applications/essentials/export_import_data.rst:373
+#: ../../content/applications/essentials/export_import_data.rst:378
 msgid "An Odoo object is always related to many other objects (e.g. a product is linked to product categories, attributes, vendors, etc.). To import those relations, the records of the related object need to be imported first, from their own list menu."
 msgstr "Egy Odoo objektum mindig sok más objektumhoz kapcsolódik (pl. egy termék termékkategóriákhoz, attribútumokhoz, szállítókhoz stb.). A kapcsolatok importálásához a kapcsolódó objektum rekordjait előbb importálni kell, a saját listamenüjükből."
 
-#: ../../content/applications/essentials/export_import_data.rst:377
+#: ../../content/applications/essentials/export_import_data.rst:382
 msgid "This can be achieved by using either the name of the related record, or its ID, depending on the circumstances. The ID is expected when two records have the same name. In such a case add `/ ID` at the end of the column title (e.g. for product attributes: `Product Attributes / Attribute / ID`)."
 msgstr "Ez elvégezhető a kapcsolódó rekord nevének vagy azonosítójának megadásával, a körülményektől függően. Az azonosítóra akkor van szükség, ha két rekordnak azonos neve van. Ebben az esetben adja hozzá a `/ ID` részt az oszlop fejlécének végéhez (pl. terméktulajdonságoknál: `Product Attributes / Attribute / ID`)."
 
-#: ../../content/applications/essentials/export_import_data.rst:382
+#: ../../content/applications/essentials/export_import_data.rst:387
 msgid "Options for multiple matches on fields"
 msgstr "Több egyezési lehetőség a mezőknél"
 
-#: ../../content/applications/essentials/export_import_data.rst:384
+#: ../../content/applications/essentials/export_import_data.rst:389
 msgid "If, for example, there are two product categories with the child name `Sellable` (e.g. `Misc. Products/Sellable` & `Other Products/Sellable`), the validation is halted, but the data may still be imported. However, Odoo recommends that the data is not imported because it will all be linked to the first `Sellable` category found in the *Product Category* list (`Misc. Products/Sellable`). Odoo, instead, recommends modifying one of the duplicate's values, or the product category hierarchy."
 msgstr "Ha például két termékategória létezik ugyanolyan gyermek névvel: `Sellable` (pl. `Misc. Products/Sellable` és `Other Products/Sellable`), az érvényesítés leáll, de az adatok mégis importálhatók. Az Odoo azonban nem javasolja az adatok importálását, mivel azok mindegyike az *Product Category* listában elsőként talált `Sellable` kategóriához (`Misc. Products/Sellable`) lesz kapcsolva. Az Odoo ehelyett az egyik duplikált értékének módosítását, illetve a termékategória-hierarchia megváltoztatását javasolja."
 
-#: ../../content/applications/essentials/export_import_data.rst:391
+#: ../../content/applications/essentials/export_import_data.rst:396
 msgid "However, if the company does not wish to change the configuration of product categories, Odoo recommends making use of the *External ID* for this field, 'Category'."
 msgstr "Ha azonban a vállalat nem kívánja módosítani a termékategóriák konfigurációját, az Odoo azt javasolja, hogy ehhez a 'Kategória' mezőhöz a *External ID* azonosítót alkalmazza."
 
-#: ../../content/applications/essentials/export_import_data.rst:395
+#: ../../content/applications/essentials/export_import_data.rst:400
 msgid "Import many2many relationship fields"
 msgstr "Many2many kapcsolatmezők importálása"
 
-#: ../../content/applications/essentials/export_import_data.rst:397
+#: ../../content/applications/essentials/export_import_data.rst:402
 msgid "The tags should be separated by a comma, without any spacing. For example, if a customer needs to be linked to both tags: `Manufacturer` and `Retailer` then 'Manufacturer,Retailer' needs to be encoded in the same column of the :abbr:`CSV (Comma-separated Values)` file."
 msgstr "A címkéket vesszővel kell elválasztani, szóközök nélkül. Ha például egy ügyfelet mindkét következő címkéhez kell kapcsolni: `Manufacturer` és `Retailer`, akkor a 'Manufacturer,Retailer' értéket kell rögzíteni a :abbr:`CSV (Comma-separated Values)` fájl ugyanazon oszlopában."
 
-#: ../../content/applications/essentials/export_import_data.rst:401
+#: ../../content/applications/essentials/export_import_data.rst:406
 msgid ":download:`CSV file for Manufacturer, Retailer <export_import_data/m2m-customers-tags.csv>`"
 msgstr ":download:`CSV fájl a Manufacturer, Retailer értékekhez <export_import_data/m2m-customers-tags.csv>`"
 
-#: ../../content/applications/essentials/export_import_data.rst:404
+#: ../../content/applications/essentials/export_import_data.rst:409
 msgid "Import one2many relationships"
 msgstr "One2many kapcsolatok importálása"
 
-#: ../../content/applications/essentials/export_import_data.rst:406
+#: ../../content/applications/essentials/export_import_data.rst:411
 msgid "If a company wants to import a sales order with several order lines, a specific row **must** be reserved in the :abbr:`CSV (Comma-separated Values)` file for each order line. The first order line is imported on the same row as the information relative to order. Any additional lines need an additional row that does not have any information in the fields relative to the order."
 msgstr "Ha egy vállalat több rendelési sorral rendelkező értékesítési rendelést kíván importálni, minden rendelési sorhoz külön sort **kell** fenntartani a :abbr:`CSV (Comma-separated Values)` fájlban. Az első rendelési sor a rendelésre vonatkozó információkkal azonos sorban kerül importálásra. Minden további sorhoz egy kiegészítő sorra van szükség, amely nem tartalmaz rendelésre vonatkozó mezőadatokat."
 
-#: ../../content/applications/essentials/export_import_data.rst:412
+#: ../../content/applications/essentials/export_import_data.rst:417
 msgid "A company imports quotations using a :abbr:`CSV (Comma-separated Values)` file, based on demo data:"
 msgstr "Egy vállalat árajánlatokat importál egy :abbr:`CSV (Comma-separated Values)` fájl segítségével, bemutató adatok alapján:"
 
-#: ../../content/applications/essentials/export_import_data.rst:415
+#: ../../content/applications/essentials/export_import_data.rst:420
 msgid ":download:`File for some quotations <export_import_data/o2m-quotations-order-lines.csv>`"
 msgstr ":download:`Fájl néhány árajánlathoz <export_import_data/o2m-quotations-order-lines.csv>`"
 
-#: ../../content/applications/essentials/export_import_data.rst:417
+#: ../../content/applications/essentials/export_import_data.rst:422
 msgid "A company imports purchase orders with their respective purchase order lines using a :abbr:`CSV (Comma-separated Values)` file:"
 msgstr "Egy vállalat beszerzési rendeléseket importál a hozzájuk tartozó rendelési sorokkal egy :abbr:`CSV (Comma-separated Values)` fájl segítségével:"
 
-#: ../../content/applications/essentials/export_import_data.rst:420
+#: ../../content/applications/essentials/export_import_data.rst:425
 msgid ":download:`Purchase orders with their respective purchase order lines <export_import_data/o2m-purchase-order-lines.csv>`"
 msgstr ":download:`Beszerzési rendelések a hozzájuk tartozó rendelési sorokkal <export_import_data/o2m-purchase-order-lines.csv>`"
 
-#: ../../content/applications/essentials/export_import_data.rst:423
+#: ../../content/applications/essentials/export_import_data.rst:428
 msgid "A company imports customers and their respective contacts using a :abbr:`CSV (Comma-separated Values)` file:"
 msgstr "Egy vállalat ügyfeleket és a hozzájuk tartozó kapcsolattartókat importál egy :abbr:`CSV (Comma-separated Values)` fájl segítségével:"
 
-#: ../../content/applications/essentials/export_import_data.rst:426
+#: ../../content/applications/essentials/export_import_data.rst:431
 msgid ":download:`Customers and their respective contacts <export_import_data/o2m-customers-contacts.csv>`"
 msgstr ":download:`Ügyfelek és a hozzájuk tartozó kapcsolattartók <export_import_data/o2m-customers-contacts.csv>`"
 
-#: ../../content/applications/essentials/export_import_data.rst:431
+#: ../../content/applications/essentials/export_import_data.rst:436
 msgid "Import image files"
 msgstr "Képfájlok importálása"
 
-#: ../../content/applications/essentials/export_import_data.rst:433
+#: ../../content/applications/essentials/export_import_data.rst:438
 msgid "To import image files along with the :ref:`uploaded <essentials/export_import_data/get-started>` CSV or Excel file, follow the next steps:"
 msgstr "A képfájlok :ref:`feltöltött <essentials/export_import_data/get-started>` CSV- vagy Excel-fájllal együtt történő importálásához kövesse az alábbi lépéseket:"
 
-#: ../../content/applications/essentials/export_import_data.rst:436
+#: ../../content/applications/essentials/export_import_data.rst:441
 msgid "Add the image file names to the relevant :guilabel:`Image` column in the data file."
 msgstr "Adja hozzá a képfájlok nevét az adatfájl megfelelő :guilabel:`Kép` oszlopához."
 
-#: ../../content/applications/essentials/export_import_data.rst:437
+#: ../../content/applications/essentials/export_import_data.rst:442
 msgid ":ref:`Upload the data file <essentials/export_import_data/get-started>` or reload it by clicking :guilabel:`Load Data File`."
 msgstr ":ref:`Töltse fel az adatfájlt <essentials/export_import_data/get-started>`, vagy töltse be újra a :guilabel:`Adatfájl betöltése` gombra kattintva."
 
-#: ../../content/applications/essentials/export_import_data.rst:439
+#: ../../content/applications/essentials/export_import_data.rst:444
 msgid "Click :guilabel:`Upload your files` under the :guilabel:`Files to import` section."
 msgstr "Kattintson a :guilabel:`Fájlok feltöltése` elemre az :guilabel:`Importálandó fájlok` szakasz alatt."
 
-#: ../../content/applications/essentials/export_import_data.rst:440
+#: ../../content/applications/essentials/export_import_data.rst:445
 msgid "Select the relevant image files. The number of files selected appears next to the button."
 msgstr "Válassza ki a megfelelő képfájlokat. A kiválasztott fájlok száma a gomb mellett jelenik meg."
 
-#: ../../content/applications/essentials/export_import_data.rst:441
+#: ../../content/applications/essentials/export_import_data.rst:446
 msgid "Click :guilabel:`Test` to verify that all data is valid."
 msgstr "Kattintson a :guilabel:`Test` gombra az összes adat érvényességének ellenőrzéséhez."
 
-#: ../../content/applications/essentials/export_import_data.rst:442
+#: ../../content/applications/essentials/export_import_data.rst:447
 msgid "Click :guilabel:`Import`. During the import process, Odoo performs a file check to automatically link the uploaded images to the imported data file. If there is no match, the data file is imported without any image."
 msgstr "Kattintson a :guilabel:`Import` gombra. Az importálás során az Odoo fájlellenőrzést végez, hogy automatikusan összekapcsolja a feltöltött képeket az importált adatfájllal. Ha nincs egyezés, az adatfájl képek nélkül kerül importálásra."
 
-#: ../../content/applications/essentials/export_import_data.rst:448
+#: ../../content/applications/essentials/export_import_data.rst:453
 msgid "The :guilabel:`Files to import` section is enabled if the product template has an :guilabel:`Image` column with all fields populated."
 msgstr "A :guilabel:`Files to import` szakasz akkor aktív, ha a terméksablon tartalmaz egy :guilabel:`Image` oszlopot, amelynek minden mezője ki van töltve."
 
-#: ../../content/applications/essentials/export_import_data.rst:450
+#: ../../content/applications/essentials/export_import_data.rst:455
 msgid "The image file names in the data file must correspond to the uploaded image files."
 msgstr "Az adatfájlban szereplő képfájlneveknek meg kell egyezniük a feltöltött képfájlok neveivel."
 
-#: ../../content/applications/essentials/export_import_data.rst:457
+#: ../../content/applications/essentials/export_import_data.rst:462
 msgid "Import records several times"
 msgstr "Rekordok többszöri importálása"
 
-#: ../../content/applications/essentials/export_import_data.rst:459
+#: ../../content/applications/essentials/export_import_data.rst:464
 msgid "If an imported file contains one of the columns: :guilabel:`External ID` or :guilabel:`Database ID`, records that have already been imported are modified, instead of being created. This is extremely useful as it allows users to import the same :abbr:`CSV (Comma-separated Values)` file several times, while having made some changes in between two imports."
 msgstr "Ha az importált fájl tartalmazza valamelyik oszlopot: :guilabel:`External ID` vagy :guilabel:`Database ID`, akkor a már korábban importált rekordok módosításra kerülnek az újak létrehozása helyett. Ez rendkívül hasznos, mivel lehetővé teszi, hogy a felhasználók ugyanazt a :abbr:`CSV (Comma-separated Values)` fájlt többször importálják, miközben a két importálás között módosításokat hajtottak végre."
 
-#: ../../content/applications/essentials/export_import_data.rst:464
+#: ../../content/applications/essentials/export_import_data.rst:469
 msgid "Odoo takes care of creating or modifying each record, depending if it is new or not."
 msgstr "Az Odoo elvégzi az egyes rekordok létrehozását vagy módosítását attól függően, hogy azok újak-e vagy sem."
 
-#: ../../content/applications/essentials/export_import_data.rst:466
+#: ../../content/applications/essentials/export_import_data.rst:471
 msgid "This feature allows a company to use the *Import/Export tool* in Odoo to modify a batch of records in a spreadsheet application."
 msgstr "Ez a funkció lehetővé teszi, hogy egy vállalat az Odoo *Importálás/Exportálás eszközét* használja rekordok kötegelt módosítására egy táblázatkezelő alkalmazásban."
 
-#: ../../content/applications/essentials/export_import_data.rst:470
+#: ../../content/applications/essentials/export_import_data.rst:475
 msgid "Value not provided for a specific field"
 msgstr "Egy adott mezőhöz nem adtak meg értéket"
 
-#: ../../content/applications/essentials/export_import_data.rst:472
+#: ../../content/applications/essentials/export_import_data.rst:477
 msgid "If all fields are not set in the CSV file, Odoo assigns the default value for every non-defined field. However, if fields are set with empty values in the :abbr:`CSV (Comma-separated Values)` file, Odoo sets the empty value in the field, instead of assigning the default value."
 msgstr "Ha nem minden mező van kitöltve a CSV fájlban, az Odoo alapértelmezett értéket rendel minden meg nem adott mezőhöz. Ha azonban a mezők üres értékkel szerepelnek a :abbr:`CSV (Comma-separated Values)` fájlban, az Odoo az üres értéket állítja be a mezőbe az alapértelmezett érték hozzárendelése helyett."
 
-#: ../../content/applications/essentials/export_import_data.rst:477
+#: ../../content/applications/essentials/export_import_data.rst:482
 msgid "Export/import different tables from an SQL application to Odoo"
 msgstr "Különböző táblák exportálása/importálása SQL alkalmazásból az Odoo-ba"
 
-#: ../../content/applications/essentials/export_import_data.rst:479
+#: ../../content/applications/essentials/export_import_data.rst:484
 msgid "If data needs to be imported from different tables, relations need to be recreated between records belonging to different tables. For instance, if companies and people are imported, the link between each person and the company they work for needs to be recreated."
 msgstr "Ha az adatokat különböző táblákból kell importálni, a különböző táblákhoz tartozó rekordok közötti kapcsolatokat újra létre kell hozni. Ha például vállalatokat és személyeket importálnak, akkor minden egyes személy és az általa dolgozó vállalat közötti kapcsolatot újra kell létrehozni."
 
-#: ../../content/applications/essentials/export_import_data.rst:483
+#: ../../content/applications/essentials/export_import_data.rst:488
 msgid "To manage relations between tables, use the `External ID` facilities of Odoo. The `External ID` of a record is the unique identifier of this record in another application. The `External ID` must be unique across all records of all objects. It is a good practice to prefix this `External ID` with the name of the application or table. (like, 'company_1', 'person_1' - instead of '1')"
 msgstr "A táblák közötti kapcsolatok kezeléséhez használja az Odoo `External ID` funkcióit. Egy rekord `External ID`-ja az adott rekord egyedi azonosítója egy másik alkalmazásban. Az `External ID`-nak egyedinek kell lennie az összes objektum összes rekordján belül. Ajánlott gyakorlat az `External ID`-t az alkalmazás vagy tábla nevével előtagozni (például: 'company_1', 'person_1' – az egyszerű '1' helyett)."
 
-#: ../../content/applications/essentials/export_import_data.rst:488
+#: ../../content/applications/essentials/export_import_data.rst:493
 msgid "As an example, suppose there is an SQL database with two tables that are to be imported: companies and people. Each person belongs to one company, so the link between a person and the company they work for must be recreated."
 msgstr "Például tegyük fel, hogy van egy SQL adatbázis két táblával, amelyeket importálni kell: vállalatok és személyek. Minden személy egy vállalathoz tartozik, ezért a személy és az általa dolgozó vállalat közötti kapcsolatot újra létre kell hozni."
 
-#: ../../content/applications/essentials/export_import_data.rst:492
+#: ../../content/applications/essentials/export_import_data.rst:497
 msgid "Test this example, with a :download:`sample of a PostgreSQL database <export_import_data/database_import_test.sql>`."
 msgstr "Tesztelje ezt a példát egy :download:`PostgreSQL adatbázis mintájával <export_import_data/database_import_test.sql>`."
 
-#: ../../content/applications/essentials/export_import_data.rst:495
+#: ../../content/applications/essentials/export_import_data.rst:500
 msgid "First, export all companies and their *External ID*. In PSQL, write the following command:"
 msgstr "Először exportálja az összes vállalatot és azok *External ID*-ját. A PSQL-ben írja be a következő parancsot:"
 
-#: ../../content/applications/essentials/export_import_data.rst:501
+#: ../../content/applications/essentials/export_import_data.rst:506
 msgid "This SQL command creates the following :abbr:`CSV (Comma-separated Values)` file:"
 msgstr "Ez az SQL parancs a következő :abbr:`CSV (Comma-separated Values)` fájlt hozza létre:"
 
-#: ../../content/applications/essentials/export_import_data.rst:510
+#: ../../content/applications/essentials/export_import_data.rst:515
 msgid "To create the :abbr:`CSV (Comma-separated Values)` file for people linked to companies, use the following SQL command in PSQL:"
 msgstr "A vállalatokhoz kapcsolódó személyek :abbr:`CSV (Comma-separated Values)` fájljának létrehozásához használja a következő SQL parancsot a PSQL-ben:"
 
-#: ../../content/applications/essentials/export_import_data.rst:517
+#: ../../content/applications/essentials/export_import_data.rst:522
 msgid "It produces the following :abbr:`CSV (Comma-separated Values)` file:"
 msgstr "Ez a következő :abbr:`CSV (Comma-separated Values)` fájlt állítja elő:"
 
-#: ../../content/applications/essentials/export_import_data.rst:527
+#: ../../content/applications/essentials/export_import_data.rst:532
 msgid "In this file, Fabien and Laurence are working for the Bigees company (`company_1`), and Eric is working for the Organi company. The relation between people and companies is done using the *External ID* of the companies. The *External ID* is prefixed by the name of the table to avoid a conflict of ID between people and companies (`person_1` and `company_1`, who shared the same ID 1 in the original database)."
 msgstr "Ebben a fájlban Fabien és Laurence a Bigees vállalatnál (`company_1`) dolgoznak, Eric pedig az Organi vállalatnál. A személyek és vállalatok közötti kapcsolat a vállalatok *Külső azonosítója* segítségével jön létre. A *Külső azonosító* az adattábla nevével van előtagolva, hogy elkerüljük az azonosítók ütközését a személyek és vállalatok között (`person_1` és `company_1`, amelyek az eredeti adatbázisban azonos 1-es azonosítóval rendelkeztek)."
 
-#: ../../content/applications/essentials/export_import_data.rst:533
+#: ../../content/applications/essentials/export_import_data.rst:538
 msgid "The two files produced are ready to be imported in Odoo without any modifications. After having imported these two :abbr:`CSV (Comma-separated Values)` files, there are four contacts and three companies (the first two contacts are linked to the first company). Keep in mind to first import the companies, and then the people."
 msgstr "A két előállított fájl módosítás nélkül importálható az Odoo-ba. A két :abbr:`CSV (Comma-separated Values)` fájl importálása után négy kapcsolat és három vállalat jelenik meg (az első két kapcsolat az első vállalathoz van rendelve). Ne felejtsük el, hogy először a vállalatokat, majd a személyeket kell importálni."
 
-#: ../../content/applications/essentials/export_import_data.rst:541
+#: ../../content/applications/essentials/export_import_data.rst:546
 msgid "Update data in Odoo"
 msgstr "Adatok frissítése az Odoo-ban"
 
-#: ../../content/applications/essentials/export_import_data.rst:543
+#: ../../content/applications/essentials/export_import_data.rst:548
 msgid "Existing data can be updated in bulk through a data import, as long as the :ref:`External ID <essentials/external-id>` remains consistent."
 msgstr "A meglévő adatok tömeges frissítése elvégezhető adatimportáláson keresztül, amennyiben a :ref:`Külső azonosító <essentials/external-id>` következetes marad."
 
-#: ../../content/applications/essentials/export_import_data.rst:547
+#: ../../content/applications/essentials/export_import_data.rst:552
 msgid "Prepare data export"
 msgstr "Adatexport előkészítése"
 
-#: ../../content/applications/essentials/export_import_data.rst:549
+#: ../../content/applications/essentials/export_import_data.rst:554
 msgid "To update data through an import, first navigate to the data to be updated, and select the :icon:`oi-view-list` :guilabel:`(List)` icon to activate list view. On the far-left side of the list, tick the checkbox for any record to be updated. Then, click :guilabel:`Actions` button, and select :icon:`fa-upload` :guilabel:`Export` from the drop-down menu."
 msgstr "Az adatok importáláson keresztüli frissítéséhez először navigáljon a frissítendő adatokhoz, és válassza a :icon:`oi-view-list` :guilabel:`(Lista)` ikont a listanézet aktiválásához. A lista bal szélén jelölje be a frissítendő rekordok jelölőnégyzetét. Ezután kattintson a :guilabel:`Műveletek` gombra, és válassza a :icon:`fa-upload` :guilabel:`Exportálás` lehetőséget a legördülő menüből."
 
-#: ../../content/applications/essentials/export_import_data.rst:554
+#: ../../content/applications/essentials/export_import_data.rst:559
 msgid "On the resulting :guilabel:`Export Data` pop-up window, tick the checkbox labeled, :guilabel:`I want to update data (import-compatible export)`. This automatically includes the *External ID* in the export. Additionally, it limits the :guilabel:`Fields to export` list to **only** include fields that are able to be imported."
 msgstr "A megjelenő :guilabel:`Adatok exportálása` felugró ablakban jelölje be az :guilabel:`Adatokat szeretnék frissíteni (importálással kompatibilis exportálás)` jelölőnégyzetet. Ez automatikusan belefoglalja a *Külső azonosítót* az exportálásba. Emellett az :guilabel:`Exportálandó mezők` listáját **csak** az importálható mezőkre korlátozza."
 
-#: ../../content/applications/essentials/export_import_data.rst:560
+#: ../../content/applications/essentials/export_import_data.rst:565
 msgid "The :guilabel:`External ID` field does **not** appear in the :guilabel:`Fields to export` list unless it is manually added, but it is still included in the export. However, if the :guilabel:`I want to update data (import-compatible export)` checkbox is ticked, it is included in the export."
 msgstr "A :guilabel:`Külső azonosító` mező **nem** jelenik meg az :guilabel:`Exportálandó mezők` listájában, hacsak nem adják hozzá manuálisan, de az exportálásban mégis szerepel. Ha azonban az :guilabel:`Adatokat szeretnék frissíteni (importálással kompatibilis exportálás)` jelölőnégyzet be van jelölve, akkor az exportálásba bekerül."
 
-#: ../../content/applications/essentials/export_import_data.rst:564
+#: ../../content/applications/essentials/export_import_data.rst:569
 msgid "Select the required fields to be included in the export using the :ref:`options <essentials/export_import_data/export-data>` on the pop-up window, then click :guilabel:`Export`."
 msgstr "A szükséges exportálandó mezőket a felugró ablak :ref:`beállításaival <essentials/export_import_data/export-data>` lehet kiválasztani, majd kattintson az :guilabel:`Exportálás` gombra."
 
-#: ../../content/applications/essentials/export_import_data.rst:568
+#: ../../content/applications/essentials/export_import_data.rst:573
 msgid "Import updated data"
 msgstr "Frissített adatok importálása"
 
-#: ../../content/applications/essentials/export_import_data.rst:570
+#: ../../content/applications/essentials/export_import_data.rst:575
 msgid "After exporting, make any necessary changes to the data file. When the file is ready, it can be :ref:`imported <essentials/export_import_data/import-data>` by following the same process as a normal data import."
 msgstr "Az exportálás után végezze el a szükséges módosításokat az adatfájlban. Ha a fájl készen áll, :ref:`importálható <essentials/export_import_data/import-data>` a normál adatimportálással megegyező folyamat követésével."
 
-#: ../../content/applications/essentials/export_import_data.rst:575
+#: ../../content/applications/essentials/export_import_data.rst:580
 msgid "When updating data, it is extremely important that the *External ID* remain consistent, as this is how the system identifies a record. If an ID is altered, or removed, the system may add a duplicate record, instead of updating the existing one."
 msgstr "Az adatok frissítésekor rendkívül fontos, hogy a *Külső azonosító* következetes maradjon, mivel a rendszer ezen azonosítja a rekordokat. Ha egy azonosítót módosítanak vagy eltávolítanak, a rendszer esetleg duplikált rekordot vesz fel a meglévő frissítése helyett."
 
@@ -2970,7 +2970,7 @@ msgstr "A felhasználó láthatja a :guilabel:`Megbeszélések`, :guilabel:`Ért
 msgid "Deliveries and loyalty cards are *also* linked to smart buttons, like this, should there be any outstanding/on-file for this contact."
 msgstr "A szállítások és a hűségkártyák *szintén* ilyen intelligens gombokhoz kapcsolódnak, ha a kapcsolattartóhoz tartozik ilyen nyitott vagy nyilvántartott tétel."
 
-#: ../../content/applications/essentials/export_import_data.rst:451
+#: ../../content/applications/essentials/export_import_data.rst:456
 msgid "When importing a large number of images, specify the maximum batch size in megabytes and set a delay to prevent the system from becoming overloaded. To do so, :doc:`enable the developer mode <../general/developer_mode>` and fill in the :guilabel:`Max size per batch` and the :guilabel:`Delay after each batch` fields in the :guilabel:`Files to import` section."
 msgstr "Nagy mennyiségű kép importálásakor adja meg a kötegek maximális méretét megabájtban, és állítson be késleltetést, hogy a rendszer ne terhelődjön túl. Ehhez :doc:`kapcsolja be a fejlesztői módot <../general/developer_mode>`, és töltse ki a :guilabel:`Max. méret kötegenként` és a :guilabel:`Késleltetés kötegenként` mezőt a :guilabel:`Importálandó fájlok` szakaszban."
 
@@ -3317,3 +3317,167 @@ msgstr ":guilabel:`Projekt`"
 #: ../../content/applications/essentials/stages.rst:96
 msgid "The :guilabel:`SMS Template` field is available when the *Project - SMS* module (`project_sms`) is installed. SMS text messaging is an :doc:`In-App Purchase (IAP) </applications/essentials/in_app_purchase>` service that requires prepaid credits to work."
 msgstr "Az :guilabel:`SMS sablon` mező a *Projekt - SMS* modul (`project_sms`) telepítésekor érhető el. Az SMS szöveges üzenetküldés egy :doc:`alkalmazáson belüli vásárlás (IAP) </applications/essentials/in_app_purchase>` szolgáltatás, amelynek működéséhez előre megvásárolt kredit szükséges."
+
+#: ../../content/applications/essentials/background_jobs.rst:3
+msgid "Background printing and export"
+msgstr "Nyomtatás és exportálás a háttérben"
+
+#: ../../content/applications/essentials/background_jobs.rst:5
+msgid "Printing hundreds of invoices in one go, or exporting tens of thousands of lines, can take longer than a web page is allowed to wait: the browser then shows an error although the server is still working. To avoid this, large print and export requests are executed **in the background**: the user keeps working, and is notified when the file is ready to download."
+msgstr "Több száz számla egyszerre történő nyomtatása vagy több tízezer sor exportálása tovább tarthat, mint amennyit egy weboldal várakozhat: a böngésző ilyenkor hibát jelez, holott a kiszolgáló még dolgozik. Ennek elkerülésére a nagy nyomtatási és exportálási kérések **a háttérben** futnak: a felhasználó tovább dolgozhat, és értesítést kap, amikor a fájl letölthető."
+
+#: ../../content/applications/essentials/background_jobs.rst:10
+msgid "Two modules provide this behavior:"
+msgstr "Ezt a működést két modul biztosítja:"
+
+#: ../../content/applications/essentials/background_jobs.rst:12
+msgid "*Asynchronous Report Printing* (`report_async_print`), for PDF reports;"
+msgstr "*Asynchronous Report Printing* (`report_async_print`) a PDF-riportokhoz;"
+
+#: ../../content/applications/essentials/background_jobs.rst:13
+msgid "*Asynchronous List Export* (`export_async`), for the exports of list views."
+msgstr "*Asynchronous List Export* (`export_async`) a listanézetek exportjaihoz."
+
+#: ../../content/applications/essentials/background_jobs.rst:15
+msgid "Both rely on the *Job Queue* module (`queue_job`) to execute the jobs."
+msgstr "A feladatok végrehajtásához mindkettő a *Job Queue* modulra (`queue_job`) támaszkodik."
+
+#: ../../content/applications/essentials/background_jobs.rst:20
+msgid "Background printing"
+msgstr "Nyomtatás a háttérben"
+
+#: ../../content/applications/essentials/background_jobs.rst:22
+msgid "Select the records in a list view, and print a report from the :icon:`fa-print` :guilabel:`Print` menu, as usual. When the number of selected records reaches the :ref:`threshold <background-jobs/print-settings>` (20 by default), the report is not downloaded directly. Instead:"
+msgstr "A szokott módon jelölje ki a rekordokat egy listanézetben, és nyomtasson riportot a :icon:`fa-print` :guilabel:`Nyomtatás` menüből. Ha a kijelölt rekordok száma eléri a :ref:`küszöbértéket <background-jobs/print-settings>` (alapértelmezés szerint 20), a riport nem töltődik le közvetlenül. Ehelyett:"
+
+#: ../../content/applications/essentials/background_jobs.rst:26
+msgid "a notification confirms that the documents are being prepared in the background;"
+msgstr "egy értesítés megerősíti, hogy a dokumentumok a háttérben készülnek;"
+
+#: ../../content/applications/essentials/background_jobs.rst:27
+msgid "once the PDF is ready, a sticky notification with a :guilabel:`Download` button is displayed, and a *Report ready* message with a link to the file is sent to the user's :doc:`inbox <../productivity/discuss>`. If the generation failed, the notification and the message contain the error instead."
+msgstr "amint a PDF elkészült, egy rögzített értesítés jelenik meg :guilabel:`Letöltés` gombbal, a felhasználó :doc:`beérkező üzenetei <../productivity/discuss>` közé pedig egy *Report ready* üzenet érkezik a fájlra mutató hivatkozással. Ha a generálás sikertelen volt, az értesítés és az üzenet a hibát tartalmazza."
+
+#: ../../content/applications/essentials/background_jobs.rst:32
+msgid "The file can also be downloaded later from :menuselection:`Print Jobs --> My Print Jobs`, where each job shows the report, the model, the number of records, and its :guilabel:`Status` (:guilabel:`Queued`, :guilabel:`Processing`, :guilabel:`Done`, or :guilabel:`Failed`). Click :guilabel:`Download` on a done job to get the file."
+msgstr "A fájl később is letölthető a :menuselection:`Nyomtatási feladatok --> Nyomtatási feladataim` menüpontból, ahol minden feladatnál látható a riport, a modell, a rekordok száma és az állapot (:guilabel:`Státusz`: :guilabel:`Sorban áll`, :guilabel:`Feldolgozás alatt`, :guilabel:`Kész` vagy :guilabel:`Sikertelen`). Egy kész feladaton kattintson a :guilabel:`Letöltés` gombra a fájl letöltéséhez."
+
+#: ../../content/applications/essentials/background_jobs.rst:38
+msgid "Only PDF reports are concerned. Smaller selections, and other report types, are downloaded directly as before."
+msgstr "Ez csak a PDF-riportokat érinti. A kisebb kijelölések és a más típusú riportok a korábbiakhoz hasonlóan közvetlenül töltődnek le."
+
+#: ../../content/applications/essentials/background_jobs.rst:40
+msgid "The report is generated with the access rights of the user who requested it."
+msgstr "A riport annak a felhasználónak a hozzáférési jogaival készül, aki kérte."
+
+#: ../../content/applications/essentials/background_jobs.rst:41
+msgid "Users only see their own jobs; administrators (:guilabel:`Administration: Settings`) see the jobs of all users."
+msgstr "A felhasználók csak a saját feladataikat látják; az adminisztrátorok (:guilabel:`Adminisztráció: Beállítások`) minden felhasználó feladatait látják."
+
+#: ../../content/applications/essentials/background_jobs.rst:43
+msgid "Jobs and their files are deleted automatically after seven days. Download the file again, or print again, if needed later."
+msgstr "A feladatok és fájljaik hét nap elteltével automatikusan törlődnek. Ha később is szükség van a fájlra, töltse le újra, vagy nyomtasson ismét."
+
+#: ../../content/applications/essentials/background_jobs.rst:57 ../../content/applications/essentials/background_jobs.rst:106
+msgid "Configuration"
+msgstr "Konfiguráció"
+
+#: ../../content/applications/essentials/background_jobs.rst:59
+msgid "Go to :menuselection:`Settings --> General Settings`, and scroll down to the :guilabel:`Background Printing` section. In :guilabel:`Bulk print threshold`, enter the number of records from which printing runs in the background. Enter `0` to disable background printing."
+msgstr "Lépjen a :menuselection:`Beállítások --> Általános beállítások` menüpontra, és görgessen le a :guilabel:`Háttérben történő nyomtatás` szakaszhoz. A :guilabel:`Tömeges nyomtatás küszöbértéke` mezőben adja meg azt a rekordszámot, amelytől a nyomtatás a háttérben fut. A háttérnyomtatás kikapcsolásához írjon be `0` értéket."
+
+#: ../../content/applications/essentials/background_jobs.rst:63
+msgid "The threshold can be overridden report by report: in :ref:`developer mode <developer-mode>`, go to :menuselection:`Settings --> Technical --> Actions --> Reports`, open the report, and set the :guilabel:`Async Print Threshold` field:"
+msgstr "A küszöbérték riportonként felülbírálható: :ref:`fejlesztői módban <developer-mode>` lépjen a :menuselection:`Beállítások --> Technikai --> Akciók --> Kimutatások` menüpontra, nyissa meg a riportot, és állítsa be az :guilabel:`Aszinkron nyomtatási küszöbérték` mezőt:"
+
+#: ../../content/applications/essentials/background_jobs.rst:67
+msgid "`0`: use the global threshold;"
+msgstr "`0`: a globális küszöbérték használata;"
+
+#: ../../content/applications/essentials/background_jobs.rst:68
+msgid "a positive number: use this threshold for this report, e.g., a lower one for a report that is slow to generate;"
+msgstr "pozitív szám: ennél a riportnál ez a küszöbérték érvényes, pl. alacsonyabb érték egy lassan elkészülő riporthoz;"
+
+#: ../../content/applications/essentials/background_jobs.rst:70
+msgid "`-1`: never print this report in the background."
+msgstr "`-1`: ez a riport soha ne nyomtatódjon a háttérben."
+
+#: ../../content/applications/essentials/background_jobs.rst:73
+msgid "The global threshold is read by the browser when the page is loaded. After changing it, the users have to reload the page for the new value to be taken into account."
+msgstr "A globális küszöbértéket a böngésző az oldal betöltésekor olvassa be. Módosítása után a felhasználóknak újra kell tölteniük az oldalt, hogy az új érték érvénybe lépjen."
+
+#: ../../content/applications/essentials/background_jobs.rst:79
+msgid "Background export"
+msgstr "Exportálás a háttérben"
+
+#: ../../content/applications/essentials/background_jobs.rst:81
+msgid ":ref:`Export <essentials/export_import_data/export-data>` the records of a list view as usual: select the records (or all the records of the search), click :menuselection:`Action --> Export`, choose the fields and the format, and click :guilabel:`Export`. When the number of records reaches the :ref:`threshold <background-jobs/export-settings>` (2,000 by default), the export runs in the background:"
+msgstr "A szokott módon :ref:`exportálja <essentials/export_import_data/export-data>` egy listanézet rekordjait: jelölje ki a rekordokat (vagy a keresés összes rekordját), kattintson a :menuselection:`Művelet --> Exportálás` menüpontra, válassza ki a mezőket és a formátumot, majd kattintson az :guilabel:`Exportálás` gombra. Ha a rekordok száma eléri a :ref:`küszöbértéket <background-jobs/export-settings>` (alapértelmezés szerint 2000), az export a háttérben fut:"
+
+#: ../../content/applications/essentials/background_jobs.rst:86
+msgid "a notification confirms that the export is being prepared;"
+msgstr "egy értesítés megerősíti, hogy az export készül;"
+
+#: ../../content/applications/essentials/background_jobs.rst:87
+msgid "the records are exported in successive batches. When the file is complete, a sticky notification with a :guilabel:`Download` button is displayed, and an *Export ready* message with a link to the file is sent to the user's inbox."
+msgstr "a rekordok egymást követő kötegekben kerülnek exportálásra. Amikor a fájl elkészült, egy rögzített értesítés jelenik meg :guilabel:`Letöltés` gombbal, a felhasználó beérkező üzenetei közé pedig egy *Export ready* üzenet érkezik a fájlra mutató hivatkozással."
+
+#: ../../content/applications/essentials/background_jobs.rst:91
+msgid "The progress of an export can be followed in :menuselection:`Export Jobs --> My Export Jobs`: the :guilabel:`Progress Offset` column shows how many of the :guilabel:`Records` have been exported so far. Click :guilabel:`Download` on a done job to get the file."
+msgstr "Az export előrehaladása az :menuselection:`Exportok --> Exportjaim` menüpontban követhető: a :guilabel:`Feldolgozott rekordok` oszlop mutatja, hogy a :guilabel:`Rekordok` közül eddig mennyi került exportálásra. Egy kész feladaton kattintson a :guilabel:`Letöltés` gombra a fájl letöltéséhez."
+
+#: ../../content/applications/essentials/background_jobs.rst:96
+msgid "Both the XLSX and the CSV formats are supported, as well as the :guilabel:`I want to update data (import-compatible export)` option."
+msgstr "Az XLSX és a CSV formátum egyaránt támogatott, csakúgy, mint az :guilabel:`Adatokat szeretnék frissíteni (importálással kompatibilis exportálás)` lehetőség."
+
+#: ../../content/applications/essentials/background_jobs.rst:98
+msgid "The export of a **grouped** list always runs directly, whatever the number of records, unless the import-compatible option is ticked."
+msgstr "A **csoportosított** lista exportja a rekordok számától függetlenül mindig közvetlenül fut, kivéve, ha az import-kompatibilis lehetőség be van jelölve."
+
+#: ../../content/applications/essentials/background_jobs.rst:100
+msgid "The visibility of the jobs and their automatic deletion after seven days follow the same rules as for the print jobs."
+msgstr "A feladatok láthatóságára és hét nap utáni automatikus törlésére ugyanazok a szabályok vonatkoznak, mint a nyomtatási feladatoknál."
+
+#: ../../content/applications/essentials/background_jobs.rst:108
+msgid "Go to :menuselection:`Settings --> General Settings`, and scroll down to the :guilabel:`Background Export` section:"
+msgstr "Lépjen a :menuselection:`Beállítások --> Általános beállítások` menüpontra, és görgessen le a :guilabel:`Háttér-export` szakaszhoz:"
+
+#: ../../content/applications/essentials/background_jobs.rst:111
+msgid ":guilabel:`Bulk export threshold`: the number of records from which an export runs in the background (2,000 by default). Enter `0` to disable background export;"
+msgstr ":guilabel:`Tömeges export küszöb`: az a rekordszám, amelytől az export a háttérben fut (alapértelmezés szerint 2000). A háttérexport kikapcsolásához írjon be `0` értéket;"
+
+#: ../../content/applications/essentials/background_jobs.rst:113
+msgid ":guilabel:`Chunk batch size`: the number of records processed per batch (200 by default). Lower it if exports containing heavy computed columns, such as price list prices, fail or take too long."
+msgstr ":guilabel:`Chunk batch méret`: a kötegenként feldolgozott rekordok száma (alapértelmezés szerint 200). Csökkentse, ha a nagy számítási igényű oszlopokat (például árlistaárakat) tartalmazó exportok meghiúsulnak vagy túl sokáig tartanak."
+
+#: ../../content/applications/essentials/background_jobs.rst:116
+msgid "As for printing, the users have to reload the page after a change of the threshold."
+msgstr "A nyomtatáshoz hasonlóan a küszöbérték módosítása után a felhasználóknak újra kell tölteniük az oldalt."
+
+#: ../../content/applications/essentials/background_jobs.rst:121
+msgid "Job queue"
+msgstr "Feladatsor"
+
+#: ../../content/applications/essentials/background_jobs.rst:123
+msgid "Background jobs are executed by the *Job Queue* module (`queue_job`), a technical module that is also used by other features to defer long operations."
+msgstr "A háttérfeladatokat a *Job Queue* modul (`queue_job`) hajtja végre; ez egy technikai modul, amelyet más funkciók is használnak a hosszú műveletek késleltetett végrehajtására."
+
+#: ../../content/applications/essentials/background_jobs.rst:126
+msgid "Users who belong to the :guilabel:`Job Queue Manager` group have access to the :menuselection:`Job Queue --> Queue --> Jobs` menu, which lists all the jobs of the database with their state, their execution time, and, for a failed job, the error. From a job, the :guilabel:`Requeue Job`, :guilabel:`Set to 'Done'`, and :guilabel:`Cancel job` buttons allow to run a failed job again, or to discard it."
+msgstr "A :guilabel:`Job Queue Manager` csoportba tartozó felhasználók hozzáférnek a :menuselection:`Job Queue --> Queue --> Jobs` menühöz, amely az adatbázis összes feladatát felsorolja az állapotukkal, a végrehajtási idejükkel és – sikertelen feladat esetén – a hibával együtt. Egy feladaton a :guilabel:`Requeue Job`, a :guilabel:`Set to 'Done'` és a :guilabel:`Cancel job` gombbal lehet a sikertelen feladatot újra futtatni, illetve elvetni."
+
+#: ../../content/applications/essentials/background_jobs.rst:133
+msgid "The jobs are only executed if the job runner is enabled in the configuration of the server. If the print or export jobs stay in the :guilabel:`Queued` status, contact your system administrator or your hosting provider."
+msgstr "A feladatok csak akkor hajtódnak végre, ha a feladatfuttató (job runner) engedélyezve van a kiszolgáló konfigurációjában. Ha a nyomtatási vagy exportálási feladatok :guilabel:`Sorban áll` állapotban maradnak, forduljon a rendszergazdához vagy a tárhelyszolgáltatóhoz."
+
+#: ../../content/applications/essentials/background_jobs.rst:138
+msgid ":doc:`export_import_data`"
+msgstr ":doc:`export_import_data`"
+
+#: ../../content/applications/essentials/background_jobs.rst:139
+msgid ":doc:`reporting`"
+msgstr ":doc:`reporting`"
+
+#: ../../content/applications/essentials/export_import_data.rst:77
+msgid "With the *Asynchronous List Export* module (`export_async`), large exports (2,000 records or more by default) are prepared in the background, and a notification with a download link is sent when the file is ready. See :ref:`background-jobs/export`."
+msgstr "Az *Asynchronous List Export* modullal (`export_async`) a nagy exportok (alapértelmezés szerint 2000 vagy több rekord) a háttérben készülnek el, és amikor a fájl kész, értesítés érkezik a letöltési hivatkozással. Lásd: :ref:`background-jobs/export`."

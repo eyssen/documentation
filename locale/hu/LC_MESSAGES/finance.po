@@ -106,7 +106,7 @@ msgstr "A :doc:`Pénzügyi lokalizáció <fiscal_localizations>` csomag az anyav
 msgid "Adding a branch to a company enables :doc:`multi-company functions <../general/companies/multi_company>`."
 msgstr "Ha egy fiókot hozzáad egy vállalathoz, azzal engedélyezi a :doc:`többvállalatos funkciókat <../general/companies/multi_company>`."
 
-#: ../../content/applications/finance/accounting.rst:138 ../../content/applications/finance/accounting.rst:182 ../../content/applications/finance/accounting/customer_invoices.rst:316 ../../content/applications/finance/accounting/reporting.rst:5 ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:77 ../../content/applications/finance/fiscal_localizations/new_zealand.rst:110
+#: ../../content/applications/finance/accounting.rst:138 ../../content/applications/finance/accounting.rst:182 ../../content/applications/finance/accounting/customer_invoices.rst:331 ../../content/applications/finance/accounting/reporting.rst:5 ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:77 ../../content/applications/finance/fiscal_localizations/new_zealand.rst:110
 msgid "Reporting"
 msgstr "Jelentések"
 
@@ -150,7 +150,7 @@ msgstr "Pénzügyi jelentések"
 msgid "Statement"
 msgstr "Kimutatás"
 
-#: ../../content/applications/finance/accounting.rst:190 ../../content/applications/finance/accounting/customer_invoices.rst:364
+#: ../../content/applications/finance/accounting.rst:190 ../../content/applications/finance/accounting/customer_invoices.rst:379
 msgid "Balance sheet"
 msgstr "Mérleg"
 
@@ -1006,143 +1006,143 @@ msgstr ":doc:`Adók <taxes>` (ha alkalmazandó)"
 msgid "To access the product catalog and view all items in an organized display, click :doc:`Catalog </applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/product_catalog>`. When the products and quantities are selected, click :guilabel:`Back to Invoice` to return to the invoice; the selected catalog items will appear in the invoice lines."
 msgstr "A termékkatalógus eléréséhez és az összes tétel rendezett megjelenítéséhez kattintson a :doc:`Katalógus </applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/product_catalog>` gombra. A termékek és mennyiségek kiválasztása után kattintson a :guilabel:`Vissza a számlához` gombra a számlára való visszatéréshez; a kiválasztott katalógustételek megjelennek a számlasorokban."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:166
+#: ../../content/applications/finance/accounting/customer_invoices.rst:181
 msgid "To display the total amount of the invoice in words, go to :menuselection:`Accounting --> Configuration --> Settings` and activate the :guilabel:`Total amount of invoice in letters` option."
 msgstr "A számla végösszegének szöveges megjelenítéséhez lépjen a :menuselection:`Könyvelés --> Konfiguráció --> Beállítások` menüpontba, és aktiválja a :guilabel:`A számla végösszege betűkkel` opciót."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:170
+#: ../../content/applications/finance/accounting/customer_invoices.rst:185
 msgid "The :guilabel:`Journal Items` tab displays the accounting entries created. Additional invoice information such as the :guilabel:`Customer Reference`, :guilabel:`Payment Reference`, :doc:`Fiscal Positions <taxes/fiscal_positions>`, :doc:`Incoterms <customer_invoices/incoterms>`, and more can be added or modified in the :guilabel:`Other Info` tab."
 msgstr "A :guilabel:`Naplótételek` fül a létrehozott könyvelési tételeket jeleníti meg. További számlaadatok, például az :guilabel:`Ügyfélhivatkozás`, :guilabel:`Fizetési hivatkozás`, :doc:`Fiskális pozíciók <taxes/fiscal_positions>`, :doc:`Incoterm-ek <customer_invoices/incoterms>` és egyebek az :guilabel:`Egyéb info` fülön adhatók hozzá vagy módosíthatók."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:176
+#: ../../content/applications/finance/accounting/customer_invoices.rst:191
 msgid "Odoo initially creates invoices in :guilabel:`Draft` status. Draft invoices have no accounting impact until they are :ref:`confirmed <accounting/invoice/confirmation>`."
 msgstr "Az Odoo kezdetben :guilabel:`Piszkozat` állapotban hozza létre a számlákat. A piszkozat számláknak nincs könyvelési hatásuk mindaddig, amíg :ref:`vissza nem igazolják <accounting/invoice/confirmation>` őket."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:180 ../../content/applications/finance/accounting/customer_invoices/overview.rst:47
+#: ../../content/applications/finance/accounting/customer_invoices.rst:195 ../../content/applications/finance/accounting/customer_invoices/overview.rst:47
 msgid ":doc:`/applications/sales/sales/invoicing/proforma`"
 msgstr ":doc:`/applications/sales/sales/invoicing/proforma`"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:185
+#: ../../content/applications/finance/accounting/customer_invoices.rst:200
 msgid "Invoice confirmation"
 msgstr "Számla visszaigazolása"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:187
+#: ../../content/applications/finance/accounting/customer_invoices.rst:202
 msgid "Click :guilabel:`Confirm` when the invoice is completed. The invoice's status changes to :guilabel:`Posted`, and a journal entry is generated based on the invoice configuration. On confirmation, Odoo assigns each invoice a unique number from a defined :doc:`sequence <customer_invoices/sequence>`."
 msgstr "Kattintson a :guilabel:`Visszaigazolás` gombra, ha a számla elkészült. A számla állapota :guilabel:`Feladott` értékre változik, és a számla konfigurációja alapján egy naplóbejegyzés jön létre. Visszaigazoláskor az Odoo minden számlához egyedi számot rendel egy meghatározott :doc:`sorrend <customer_invoices/sequence>` alapján."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:193
+#: ../../content/applications/finance/accounting/customer_invoices.rst:208
 msgid "Once confirmed, an invoice can no longer be updated. Click :guilabel:`Reset to draft` if changes are needed."
 msgstr "A visszaigazolás után a számla már nem módosítható. Kattintson a :guilabel:`Visszaállítás piszkozatba` gombra, ha módosításokra van szükség."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:195
+#: ../../content/applications/finance/accounting/customer_invoices.rst:210
 msgid "If required, invoices and other journal entries can be locked once posted using the :ref:`Secure posted entries with hash <data-inalterability/restricted>` feature."
 msgstr "Ha szükséges, a számlák és egyéb naplóbejegyzések feladás után zárolhatók a :ref:`Feladott bejegyzések védelme kivonattal <data-inalterability/restricted>` funkcióval."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:236
+#: ../../content/applications/finance/accounting/customer_invoices.rst:251
 msgid "Invoice sending"
 msgstr "Számla küldése"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:245
+#: ../../content/applications/finance/accounting/customer_invoices.rst:260
 msgid "Sending letters in Odoo requires :doc:`In-App Purchase (IAP) <../../essentials/in_app_purchase>` credit or tokens."
 msgstr "Levelek küldéséhez az Odoo-ban :doc:`alkalmazáson belüli vásárlás (IAP) <../../essentials/in_app_purchase>` kredit vagy token szükséges."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:248
+#: ../../content/applications/finance/accounting/customer_invoices.rst:263
 msgid "To send the invoice to the customer, navigate back to the invoice record and follow these steps:"
 msgstr "A számla ügyfélnek történő elküldéséhez lépjen vissza a számla rekordhoz, és kövesse az alábbi lépéseket:"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:250 ../../content/applications/finance/fiscal_localizations/france.rst:137 ../../content/applications/finance/fiscal_localizations/jordan.rst:177
+#: ../../content/applications/finance/accounting/customer_invoices.rst:265 ../../content/applications/finance/fiscal_localizations/france.rst:137 ../../content/applications/finance/fiscal_localizations/jordan.rst:177
 msgid "Click :guilabel:`Send`."
 msgstr "Kattintson a :guilabel:`Küldés` gombra."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:256
+#: ../../content/applications/finance/accounting/customer_invoices.rst:271
 msgid "The document layout can be changed at any time in the general settings."
 msgstr "A dokumentumelrendezés bármikor módosítható az általános beállításokban."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:257
+#: ../../content/applications/finance/accounting/customer_invoices.rst:272
 msgid "To add a QR code for banking app payments to the invoice, enable the :guilabel:`QR Code` option in the :guilabel:`Configure Your Document Layout` window. To modify this option, go to :menuselection:`Accounting --> Configuration --> Settings`, scroll down to the :guilabel:`Customer Payments` section, and enable/disable the :guilabel:`QR Codes` option."
 msgstr "Ha QR-kódot szeretne hozzáadni a számlához banki alkalmazásos fizetésekhez, engedélyezze a :guilabel:`QR-kód` opciót a :guilabel:`Dokumentumelrendezés konfigurálása` ablakban. Az opció módosításához lépjen a :menuselection:`Könyvelés --> Konfiguráció --> Beállítások` menübe, görgessen le a :guilabel:`Vevői kifizetések` részhez, és engedélyezze/tiltsa le a :guilabel:`QR-kódok` opciót."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:262
+#: ../../content/applications/finance/accounting/customer_invoices.rst:277
 msgid "In the :guilabel:`Send` window:"
 msgstr "A :guilabel:`Küldés` ablakban:"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:264
+#: ../../content/applications/finance/accounting/customer_invoices.rst:279
 msgid "If a preferred :guilabel:`Invoice sending` method was set in the contact form, it is selected by default. Select another one if needed."
 msgstr "Ha a kapcsolattartó lapon be van állítva preferált :guilabel:`Számla küldési` módszer, az alapértelmezés szerint ki van választva. Szükség esetén válasszon másikat."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:266
+#: ../../content/applications/finance/accounting/customer_invoices.rst:281
 msgid "If no preferred :guilabel:`Invoice sending` method was set in the contact form, select the method to use for sending the invoice to the customer."
 msgstr "Ha a kapcsolattartó lapon nincs beállítva preferált :guilabel:`Számla küldési` módszer, válassza ki a számla ügyfélnek történő elküldéséhez használni kívánt módszert."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:269
+#: ../../content/applications/finance/accounting/customer_invoices.rst:284
 msgid "Click :guilabel:`Send` if the :guilabel:`by Email` option is selected, or click :guilabel:`Download`."
 msgstr "Kattintson a :guilabel:`Küldés` gombra, ha az :guilabel:`E-mailben` opció van kiválasztva, vagy kattintson a :guilabel:`Letöltés` gombra."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:275
+#: ../../content/applications/finance/accounting/customer_invoices.rst:290
 msgid "Sending multiple invoices"
 msgstr "Több számla küldése"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:277
+#: ../../content/applications/finance/accounting/customer_invoices.rst:292
 msgid "To send and print multiple invoices, go to :menuselection:`Accounting --> Customers --> Invoices`, select them in the :guilabel:`Invoices` list view and click :guilabel:`Send`. The :guilabel:`Send` window displays the selected invoice sending methods based on the preferred method set."
 msgstr "Több számla küldéséhez és nyomtatásához lépjen a :menuselection:`Könyvelés --> Vevők --> Számlák` menübe, válassza ki azokat a :guilabel:`Számlák` listanézetben, majd kattintson a :guilabel:`Küldés` gombra. A :guilabel:`Küldés` ablak a beállított preferált módszer alapján jeleníti meg a kiválasztott számlaküldési módszereket."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:282
+#: ../../content/applications/finance/accounting/customer_invoices.rst:297
 msgid "A banner is added to the selected invoices to indicate they are part of an ongoing send and print batch. This helps prevent the process from being triggered manually again, as it may take some time to complete for exceptionally large batches."
 msgstr "A kiválasztott számlákhoz szalag kerül, jelezve, hogy egy folyamatban lévő küldési és nyomtatási köteg részei. Ez segít megakadályozni, hogy a folyamat manuálisan újra elinduljon, mivel kivételesen nagy kötegek esetén a befejezés időbe telhet."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:286
+#: ../../content/applications/finance/accounting/customer_invoices.rst:301
 msgid "To check all invoices that have not yet been sent, go to :menuselection:`Accounting --> Customers --> Invoices`. In the :guilabel:`Invoices` list view, click into the search bar and filter on :guilabel:`Not Sent`."
 msgstr "A még el nem küldött összes számla ellenőrzéséhez lépjen a :menuselection:`Könyvelés --> Vevők --> Számlák` menübe. A :guilabel:`Számlák` listanézetben kattintson a keresősávba, és szűrjön a :guilabel:`Nem elküldött` feltételre."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:293 ../../content/applications/finance/accounting/vendor_bills.rst:138
+#: ../../content/applications/finance/accounting/customer_invoices.rst:308 ../../content/applications/finance/accounting/vendor_bills.rst:138
 msgid "Payment and reconciliation"
 msgstr "Kifizetés és egyeztetés"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:295
+#: ../../content/applications/finance/accounting/customer_invoices.rst:310
 msgid "In Odoo, an invoice is considered :guilabel:`Paid` when the associated accounting entry has been reconciled with a corresponding bank transaction."
 msgstr "Az Odoo-ban egy számla :guilabel:`Fizetett` állapotúnak minősül, ha a kapcsolódó könyvelési bejegyzést egyeztették egy megfelelő banki tranzakcióval."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:299 ../../content/applications/finance/accounting/vendor_bills.rst:157
+#: ../../content/applications/finance/accounting/customer_invoices.rst:314 ../../content/applications/finance/accounting/vendor_bills.rst:157
 msgid ":doc:`payments`"
 msgstr ":doc:`payments`"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:300 ../../content/applications/finance/accounting/payments.rst:19 ../../content/applications/finance/accounting/vendor_bills.rst:158
+#: ../../content/applications/finance/accounting/customer_invoices.rst:315 ../../content/applications/finance/accounting/payments.rst:19 ../../content/applications/finance/accounting/vendor_bills.rst:158
 msgid ":doc:`bank/reconciliation`"
 msgstr ":doc:`bank/reconciliation`"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:305
+#: ../../content/applications/finance/accounting/customer_invoices.rst:320
 msgid "Payment follow-up"
 msgstr "Kifizetési emlékeztető"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:307
+#: ../../content/applications/finance/accounting/customer_invoices.rst:322
 msgid "Odoo's :doc:`follow-up actions <payments/follow_up>` help companies follow up on customer invoices. Different actions can be set up to remind customers to pay their outstanding invoices, depending on how much the customer is overdue. These actions are bundled into follow-up levels that trigger when an invoice is overdue by a certain number of days. If there are multiple overdue invoices for the same customer, the actions are performed on the most overdue invoice."
 msgstr "Az Odoo :doc:`fizetési felszólítási műveletei <payments/follow_up>` segítik a vállalatokat a vevői számlák nyomon követésében. Különböző műveletek állíthatók be, amelyek emlékeztetik a vevőket a fennálló számlák kiegyenlítésére, attól függően, hogy mennyivel késik a vevő. Ezek a műveletek fizetési felszólítási szintekbe vannak csoportosítva, amelyek akkor lépnek életbe, ha egy számla egy bizonyos napszámmal lejárt. Ha ugyanahhoz a vevőhöz több lejárt számla tartozik, a műveleteket a legregebbóta lejárt számlán kell végrehajtani."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:321
+#: ../../content/applications/finance/accounting/customer_invoices.rst:336
 msgid "Partner reports"
 msgstr "Partnerjelentések"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:326 ../../content/applications/finance/accounting/reporting.rst:120
+#: ../../content/applications/finance/accounting/customer_invoices.rst:341 ../../content/applications/finance/accounting/reporting.rst:120
 msgid "Partner Ledger"
 msgstr "Partnerkönyv"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:336 ../../content/applications/finance/accounting/reporting.rst:129
+#: ../../content/applications/finance/accounting/customer_invoices.rst:351 ../../content/applications/finance/accounting/reporting.rst:129
 msgid "Aged Receivable"
 msgstr "Korosított követelések"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:346 ../../content/applications/finance/accounting/reporting.rst:137
+#: ../../content/applications/finance/accounting/customer_invoices.rst:361 ../../content/applications/finance/accounting/reporting.rst:137
 msgid "Aged Payable"
 msgstr "Korosított kötelezettségek"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:356
+#: ../../content/applications/finance/accounting/customer_invoices.rst:371
 msgid "Profit and Loss"
 msgstr "Eredménykimutatás"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:358
+#: ../../content/applications/finance/accounting/customer_invoices.rst:373
 msgid "The :ref:`Profit and Loss <accounting/reporting/profit-and-loss>` statement shows details of income and expenses."
 msgstr "A :ref:`Eredménykimutatás <accounting/reporting/profit-and-loss>` a bevételek és kiadások részleteit mutatja."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:366
+#: ../../content/applications/finance/accounting/customer_invoices.rst:381
 msgid "The :ref:`Balance Sheet <accounting/reporting/balance-sheet>` summarizes the company's assets, liabilities, and equity at a specific time."
 msgstr "A :ref:`Mérleg <accounting/reporting/balance-sheet>` egy adott időpontban összefoglalja a vállalat eszközeit, kötelezettségeit és saját tőkéjét."
 
@@ -17742,59 +17742,59 @@ msgstr "Lépjen a :menuselection:`Könyvelés --> Konfiguráció --> Kezelés --
 msgid "On the invoice, open the :guilabel:`Comments` tab and add the comment templates to print."
 msgstr "A számlán nyissa meg a :guilabel:`Megjegyzések` fület, és adja hozzá a nyomtatandó megjegyzéssablonokat."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:155
+#: ../../content/applications/finance/accounting/customer_invoices.rst:170
 msgid "The template text can contain dynamic placeholders, such as `{{object.partner_id.name}}`."
 msgstr "A sablon szövege dinamikus helyőrzőket is tartalmazhat, például `{{object.partner_id.name}}`."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:197
+#: ../../content/applications/finance/accounting/customer_invoices.rst:212
 msgid "If an :doc:`approval rule <customer_invoices/invoice_approval>` applies to the invoice, it must be approved before it can be confirmed."
 msgstr "Ha a számlára :doc:`jóváhagyási szabály <customer_invoices/invoice_approval>` vonatkozik, a számlát a megerősítés előtt jóvá kell hagyni."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:203
+#: ../../content/applications/finance/accounting/customer_invoices.rst:218
 msgid "Correcting posted entries (administrators)"
 msgstr "Könyvelt tételek javítása (rendszergazdáknak)"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:205
+#: ../../content/applications/finance/accounting/customer_invoices.rst:220
 msgid "The *Invoice Fixer* (`invoice_fixer`) module adds an :guilabel:`Edit Posted Move` button to posted journal entries, visible only to users with the :guilabel:`Administration: Settings` access right. The :guilabel:`Edit Posted Move` window allows the administrator to:"
 msgstr "Az *Invoice Fixer* (`invoice_fixer`) modul egy :guilabel:`Könyvelt tétel szerkesztése` gombot ad a könyvelt naplóbejegyzésekhez, amely csak az :guilabel:`Adminisztráció: Beállítások` hozzáférési joggal rendelkező felhasználók számára látható. A :guilabel:`Könyvelt tétel szerkesztése` ablakban a rendszergazda:"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:209
+#: ../../content/applications/finance/accounting/customer_invoices.rst:224
 msgid "modify the :guilabel:`Debit`, :guilabel:`Credit`, :guilabel:`Quantity` and :guilabel:`Unit Price` of the existing lines (:guilabel:`Lines` tab);"
 msgstr "módosíthatja a meglévő sorok :guilabel:`Tartozik`, :guilabel:`Követel`, :guilabel:`Mennyiség` és :guilabel:`Egységár` értékét (:guilabel:`Sorok` fül);"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:211
+#: ../../content/applications/finance/accounting/customer_invoices.rst:226
 msgid "change the :guilabel:`Exchange Rate` of a foreign currency document;"
 msgstr "módosíthatja egy devizás dokumentum :guilabel:`Árfolyamát`;"
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:212
+#: ../../content/applications/finance/accounting/customer_invoices.rst:227
 msgid "add new product lines with their :guilabel:`Product`, :guilabel:`Description`, :guilabel:`Quantity`, :guilabel:`Unit Price`, :guilabel:`Taxes` and :guilabel:`Account` (:guilabel:`Add New Lines` tab)."
 msgstr "új terméksorokat adhat hozzá a :guilabel:`Termék`, :guilabel:`Leírás`, :guilabel:`Mennyiség`, :guilabel:`Egységár`, :guilabel:`Adók` és :guilabel:`Főkönyvi számla` megadásával (:guilabel:`Új sorok hozzáadása` fül)."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:216
+#: ../../content/applications/finance/accounting/customer_invoices.rst:231
 msgid "Click :guilabel:`Apply Changes` to save. The document totals are recomputed, and the changes are logged in the chatter."
 msgstr "A mentéshez kattintson a :guilabel:`Módosítások alkalmazása` gombra. A rendszer újraszámítja a dokumentum végösszegeit, és a módosításokat naplózza a csevegőben."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:220
+#: ../../content/applications/finance/accounting/customer_invoices.rst:235
 msgid "The changes are written directly into the database, without resetting the document to draft and bypassing the usual checks (e.g., lock dates, entry hashing, electronic invoicing). Use this tool only to correct technical errors, and preferably with the help of your accountant: legally, a posted invoice must be corrected with a credit note."
 msgstr "A módosítások közvetlenül az adatbázisba íródnak, a dokumentum tervezet állapotba állítása nélkül, a szokásos ellenőrzések (pl. zárolási dátumok, tételek hash-elése, elektronikus számlázás) megkerülésével. Ezt az eszközt csak technikai hibák javítására használja, lehetőleg könyvelője segítségével: jogszabály szerint a könyvelt számlát jóváíró számlával kell helyesbíteni."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:238
+#: ../../content/applications/finance/accounting/customer_invoices.rst:253
 msgid "To set a preferred :guilabel:`Invoice sending` method for a customer, go to :menuselection:`Accounting --> Customers --> Customers` and select the customer. In the :guilabel:`Accounting` tab of the contact form (:guilabel:`Invoicing` tab if only the Invoicing app is installed), select the preferred :guilabel:`Invoice sending` method in the :guilabel:`Customer Invoices` section."
 msgstr "Egy vevő előnyben részesített :guilabel:`Számlaküldési` módjának beállításához lépjen a :menuselection:`Könyvelés --> Vevők --> Vevők` menüpontra, és válassza ki a vevőt. A partnerűrlap :guilabel:`Könyvelés` fülén (ha csak a Számlázás alkalmazás van telepítve, a :guilabel:`Számlázás` fülön) válassza ki az előnyben részesített :guilabel:`Számlaküldési` módot a :guilabel:`Vevői számlák` szakaszban."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:251
+#: ../../content/applications/finance/accounting/customer_invoices.rst:266
 msgid "If the default invoice layout has not been customized yet, a :guilabel:`Configure your document layout` pop-up window appears. Configure the layout and click :guilabel:`Continue`."
 msgstr "Ha az alapértelmezett számlaelrendezést még nem szabta testre, megjelenik a :guilabel:`Dokumentumelrendezés beállítása` felugró ablak. Állítsa be az elrendezést, majd kattintson a :guilabel:`Folytatás` gombra."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:328
+#: ../../content/applications/finance/accounting/customer_invoices.rst:343
 msgid "The :guilabel:`Partner Ledger` report shows the balance of customers and suppliers. To access it, go to :menuselection:`Accounting --> Accounting --> Ledgers --> Partner Ledger` (PDF report) or :menuselection:`Accounting --> Reporting --> Dynamic Reports --> Partner Ledger` (interactive report)."
 msgstr "A :guilabel:`Partnerfőkönyv` jelentés a vevők és szállítók egyenlegét mutatja. Megnyitásához lépjen a :menuselection:`Könyvelés --> Könyvelés --> Főkönyvek --> Partnerfőkönyv` (PDF-jelentés) vagy a :menuselection:`Könyvelés --> Jelentések --> Dinamikus jelentések --> Partnerfőkönyv` (interaktív jelentés) menüpontra."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:338
+#: ../../content/applications/finance/accounting/customer_invoices.rst:353
 msgid "To review outstanding customer invoices and their related due dates, use the :ref:`Aged Receivable <accounting/reporting/aged-receivable>` report. To access it, go to :menuselection:`Accounting --> Reporting --> Dynamic Reports --> Aged Receivable`, or use the :menuselection:`Accounting --> Reporting --> Partner Reports --> Aged Partner Balance` PDF report."
 msgstr "A nyitott vevői számlák és esedékességük áttekintéséhez használja a :ref:`Korosított követelések <accounting/reporting/aged-receivable>` jelentést. Megnyitásához lépjen a :menuselection:`Könyvelés --> Jelentések --> Dinamikus jelentések --> Korosított követelések` menüpontra, vagy használja a :menuselection:`Könyvelés --> Jelentések --> Partnerjelentések --> Korosított partneregyenleg` PDF-jelentést."
 
-#: ../../content/applications/finance/accounting/customer_invoices.rst:348
+#: ../../content/applications/finance/accounting/customer_invoices.rst:363
 msgid "To review outstanding vendor bills and their related due dates, use the :ref:`Aged Payable <accounting/reporting/aged-payable>` report. To access it, go to :menuselection:`Accounting --> Reporting --> Dynamic Reports --> Aged Payable`, or use the :menuselection:`Accounting --> Reporting --> Partner Reports --> Aged Partner Balance` PDF report."
 msgstr "A nyitott szállítói számlák és esedékességük áttekintéséhez használja a :ref:`Korosított kötelezettségek <accounting/reporting/aged-payable>` jelentést. Megnyitásához lépjen a :menuselection:`Könyvelés --> Jelentések --> Dinamikus jelentések --> Korosított kötelezettségek` menüpontra, vagy használja a :menuselection:`Könyvelés --> Jelentések --> Partnerjelentések --> Korosított partneregyenleg` PDF-jelentést."
 
@@ -24393,6 +24393,26 @@ msgstr "Áfaanalitika"
 #: ../../content/applications/finance/fiscal_localizations/hungary/vat_return.rst:149
 msgid ":menuselection:`Accounting --> Reporting --> Statement Reports --> Áfa analítika` lists the VAT content of the posted invoices, credit notes and miscellaneous entries of a period by document and tax, as a supporting schedule of the VAT return. Set :guilabel:`Kezdete` (start) and :guilabel:`Vége` (end) and click :guilabel:`Print` for a PDF or :guilabel:`Excel` for a spreadsheet with the sheets *Összesítő* (summary), *Fizetendő áfa* (payable VAT) and *Levonható|visszaigényelhető áfa* (deductible VAT). Documents are selected by accounting date; cash-basis taxes are included when their cash-basis entry is created."
 msgstr "A :menuselection:`Könyvelés --> Kimutatás --> Kimutatási jelentések --> Áfa analítika` menüpont egy időszak könyvelt számláinak, sztornó számláinak és vegyes tételeinek áfatartalmát listázza bizonylatonként és adónként, az áfabevallás alátámasztó analitikájaként. Adja meg a :guilabel:`Kezdete` és a :guilabel:`Vége` dátumot, majd kattintson a :guilabel:`Nyomtatás` gombra a PDF-hez, vagy az :guilabel:`Excel` gombra az *Összesítő*, *Fizetendő áfa* és *Levonható|visszaigényelhető áfa* munkalapot tartalmazó táblázathoz. A bizonylatok kiválasztása könyvelési dátum szerint történik; a pénzforgalmi elszámolású adók akkor szerepelnek, amikor a pénzforgalmi tételük létrejön."
+
+#: ../../content/applications/finance/accounting/customer_invoices.rst:154
+msgid "The templates are provided by the *Base Comments Templates* module (`base_comment_template`), which is shared by all the documents that support comments (invoices, sales orders, etc.). It determines which templates are proposed **automatically** on a new document:"
+msgstr "A sablonokat a *Base Comments Templates* modul (`base_comment_template`) biztosítja, amelyet a megjegyzéseket támogató összes bizonylat (számlák, értékesítési rendelések stb.) közösen használ. Ez határozza meg, hogy egy új bizonylaton mely sablonok jelennek meg **automatikusan**:"
+
+#: ../../content/applications/finance/accounting/customer_invoices.rst:158
+msgid "a template with :guilabel:`Global Template` ticked applies to the documents of all partners;"
+msgstr "az a sablon, amelyen be van jelölve a :guilabel:`Global Template` mező, minden partner bizonylataira érvényes;"
+
+#: ../../content/applications/finance/accounting/customer_invoices.rst:159
+msgid "the other templates only apply to the partners they are linked to. They can be linked from the :guilabel:`Partner` field of the template, or from the :guilabel:`Comment Templates` tab of the contact form;"
+msgstr "a többi sablon csak azokra a partnerekre érvényes, amelyekhez kapcsolva van. A kapcsolás a sablon :guilabel:`Partner` mezőjében vagy a kapcsolat űrlapjának :guilabel:`Comment Templates` fülén végezhető el;"
+
+#: ../../content/applications/finance/accounting/customer_invoices.rst:162
+msgid "in both cases, the document must belong to one of the models of the template and match its :guilabel:`Filter Domain`."
+msgstr "a bizonylatnak mindkét esetben a sablon valamelyik modelljéhez kell tartoznia, és meg kell felelnie a sablon szűrési tartományának (:guilabel:`Szűrési tartomány`)."
+
+#: ../../content/applications/finance/accounting/customer_invoices.rst:165
+msgid "Drag the templates in the list to order them. The full list of templates, for all models, is also available in :ref:`developer mode <developer-mode>` under :menuselection:`Settings --> Technical --> Reporting --> Comment Templates`."
+msgstr "A sablonok sorrendje a listában húzással módosítható. Az összes modell sablonjainak teljes listája :ref:`fejlesztői módban <developer-mode>` a :menuselection:`Beállítások --> Technikai --> Kimutatás --> Comment Templates` menüpont alatt is elérhető."
 
 #~ msgid "The real-time invoice reporting to the NAV Online Invoice System is provided by the *Magyar számlázás és NAV adatszolgáltatás* (`eyssen_l10n_hu`) module, described in the Hungarian :doc:`fiscal localization <../../../fiscal_localizations>` documentation."
 #~ msgstr "A NAV Online Számla rendszer felé történő valós idejű adatszolgáltatást a *Magyar számlázás és NAV adatszolgáltatás* (`eyssen_l10n_hu`) modul biztosítja, amelynek leírása a magyar :doc:`lokalizációs <../../../fiscal_localizations>` dokumentációban található."

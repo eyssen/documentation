@@ -5175,7 +5175,7 @@ msgstr "Egy adott csoport felhasználóinak listájának megtekintéséhez elős
 
 #: ../../content/applications/productivity/discuss/canned_responses.rst:105
 msgid "After determining what groups should have access to a response, they **must** :ref:`be added <discuss/created-canned-response>` to the :guilabel:`Authorized Groups` field for each canned response."
-msgstr "Miután meghatározta, mely csoportoknak kell hozzáférniük egy válaszhoz, **hozzá kell adni** őket a :guilabel:`Engedélyezett csoportok` mezőhöz minden előre elkészített válasz esetében."
+msgstr "Miután meghatározta, mely csoportoknak kell hozzáférniük egy válaszhoz, azokat **kötelező** :ref:`hozzáadni <discuss/created-canned-response>` az :guilabel:`Engedélyezett csoportok` mezőhöz minden előre elkészített válasz esetében."
 
 #: ../../content/applications/productivity/discuss/canned_responses.rst:110
 msgid "The user who created the response can use it, even if they are not a member of one of the *Authorized Groups*."
@@ -5205,7 +5205,7 @@ msgstr "Az elérhető válaszok listájának kereséséhez írjon be egy `:`, ma
 msgid ":doc:`Chatter <chatter>`"
 msgstr ":doc:`Chatter <chatter>`"
 
-#: ../../content/applications/productivity/discuss/canned_responses.rst:143 ../../content/applications/productivity/discuss/chatter.rst:524
+#: ../../content/applications/productivity/discuss/canned_responses.rst:143 ../../content/applications/productivity/discuss/chatter.rst:578
 msgid ":doc:`Discuss <../discuss>`"
 msgstr ":doc:`Megbeszélés <../discuss>`"
 
@@ -5585,11 +5585,11 @@ msgstr "Egy felhasználó szövegének más nyelvről való fordításához katt
 msgid "Using the *Google Translate* API **requires** a current billing account with `Google <https://myaccount.google.com/>`_."
 msgstr "A *Google Translate* API használata **megköveteli** egy aktuális számlázási fiók meglétét a `Google <https://myaccount.google.com/>`_ oldalon."
 
-#: ../../content/applications/productivity/discuss/chatter.rst:525
+#: ../../content/applications/productivity/discuss/chatter.rst:579
 msgid ":doc:`Discuss Channels <../discuss/team_communication/>`"
 msgstr ":doc:`Megbeszélési csatornák <../discuss/team_communication/>`"
 
-#: ../../content/applications/productivity/discuss/chatter.rst:526
+#: ../../content/applications/productivity/discuss/chatter.rst:580
 msgid ":doc:`Activities <../../essentials/activities>`"
 msgstr ":doc:`Tevékenységek <../../essentials/activities>`"
 
@@ -7453,63 +7453,63 @@ msgstr "A fejlécben lévő gombokkal hagyhatja :guilabel:`Jóvá` a foglalást,
 msgid "An approved booking creates the calendar event of its providers, and the customer receives the confirmation email with a link to their booking."
 msgstr "A jóváhagyott foglalás létrehozza a szolgáltatók naptárbejegyzését, az ügyfél pedig megkapja a megerősítő e-mailt a foglalására mutató hivatkozással."
 
-#: ../../content/applications/productivity/appointments.rst:176
+#: ../../content/applications/productivity/appointments.rst:206
 msgid "Provider unavailability"
 msgstr "Szolgáltatók elérhetetlensége"
 
-#: ../../content/applications/productivity/appointments.rst:178
+#: ../../content/applications/productivity/appointments.rst:208
 msgid "Providers can be made unavailable for a period of time with an **appointment leave**, which has a :guilabel:`User`, a start and an end, a :guilabel:`Reason`, and a state (:guilabel:`Draft`, :guilabel:`Approved`, :guilabel:`Cancelled`). Only approved leaves block the slots."
 msgstr "A szolgáltatók egy időszakra **időpontfoglalási távolléttel** tehetők elérhetetlenné; ennek van :guilabel:`Felhasználó` mezője, kezdete és vége, :guilabel:`Oka` és állapota (:guilabel:`Tervezet`, :guilabel:`Jóváhagyott`, :guilabel:`Visszavont`). Csak a jóváhagyott távollétek zárják ki az idősávokat."
 
-#: ../../content/applications/productivity/appointments.rst:183
+#: ../../content/applications/productivity/appointments.rst:213
 msgid "With the *Appointment (HR Holidays)* (``appointment_hr``) module, validated time off of the employees linked to the providers also blocks the corresponding slots, so time off does not have to be entered twice."
 msgstr "Az *Appointment (HR Holidays)* (``appointment_hr``) modullal a szolgáltatókhoz tartozó alkalmazottak jóváhagyott szabadsága is kizárja a megfelelő idősávokat, így a távollétet nem kell kétszer rögzíteni."
 
-#: ../../content/applications/productivity/appointments.rst:188
+#: ../../content/applications/productivity/appointments.rst:218
 msgid "Passes"
 msgstr "Bérletek"
 
-#: ../../content/applications/productivity/appointments.rst:190
+#: ../../content/applications/productivity/appointments.rst:220
 msgid "The *Appointment (Passes)* (``appointment_pass``) module sells packages of appointments. In :menuselection:`Appointments --> Passes --> Pass Products`, define a pass with a :guilabel:`Name`, a :guilabel:`Mode` (a number of :guilabel:`Occurrences` or a balance of minutes), the :guilabel:`Validity (days)`, and the :guilabel:`Price`."
 msgstr "Az *Appointment (Passes)* (``appointment_pass``) modul időpontcsomagokat értékesít. Az :menuselection:`Időpontfoglalás --> Bérletek --> Bérlettermékek` menüpontban adja meg a bérlet :guilabel:`Név` mezőjét, a :guilabel:`Mód`-ot (:guilabel:`Alkalmak` száma vagy percegyenleg), az :guilabel:`Érvényesség (nap)` és az :guilabel:`Ár` mezőt."
 
-#: ../../content/applications/productivity/appointments.rst:195
+#: ../../content/applications/productivity/appointments.rst:225
 msgid ":menuselection:`Appointments --> Passes --> Pass Holders` lists the passes owned by customers, with their :guilabel:`Occurrences Remaining` or :guilabel:`Minutes Remaining` and the :guilabel:`Valid Until` date. When a customer with a valid pass books an appointment, the booking is redeemed against the pass instead of being paid."
 msgstr "Az :menuselection:`Időpontfoglalás --> Bérletek --> Bérlettulajdonosok` menüpont sorolja fel az ügyfelek bérleteit a :guilabel:`Fennmaradó alkalmak` vagy :guilabel:`Fennmaradó percek` és az :guilabel:`Érvényes eddig` dátummal. Ha egy érvényes bérlettel rendelkező ügyfél időpontot foglal, a foglalást a bérlet terhére számolja el a rendszer fizetés helyett."
 
-#: ../../content/applications/productivity/appointments.rst:201
+#: ../../content/applications/productivity/appointments.rst:231
 msgid "Coupons and gift cards"
 msgstr "Kuponok és ajándékkártyák"
 
-#: ../../content/applications/productivity/appointments.rst:203
+#: ../../content/applications/productivity/appointments.rst:233
 msgid "The *Appointment (Payment)* (``appointment_payment``) module adds discounts to the booking flow:"
 msgstr "Az *Appointment (Payment)* (``appointment_payment``) modul kedvezményekkel egészíti ki a foglalási folyamatot:"
 
-#: ../../content/applications/productivity/appointments.rst:205
+#: ../../content/applications/productivity/appointments.rst:235
 msgid ":menuselection:`Appointments --> Configuration --> Payments & Discounts --> Coupons`: a coupon has a :guilabel:`Code`, a :guilabel:`Discount Type` (percentage or fixed amount), an :guilabel:`Amount`, a validity period, and a :guilabel:`Max Uses` limit (`0` = unlimited)."
 msgstr ":menuselection:`Időpontfoglalás --> Konfiguráció --> Fizetések és kedvezmények --> Kuponok`: a kuponnak van :guilabel:`Kód`, :guilabel:`Kedvezmény típusa` (százalék vagy fix összeg), :guilabel:`Összeg`, érvényességi időszak és :guilabel:`Felhasználások maximuma` korlát (`0` = korlátlan)."
 
-#: ../../content/applications/productivity/appointments.rst:208
+#: ../../content/applications/productivity/appointments.rst:238
 msgid ":menuselection:`Appointments --> Configuration --> Payments & Discounts --> Gift Cards`: a gift card has a :guilabel:`Code`, a :guilabel:`Balance`, and an expiry date. The balance is deducted from the amount due of the booking."
 msgstr ":menuselection:`Időpontfoglalás --> Konfiguráció --> Fizetések és kedvezmények --> Ajándékkártyák`: az ajándékkártyának van :guilabel:`Kód`, :guilabel:`Egyenleg` és lejárati dátuma. Az egyenleget a rendszer levonja a foglalás fizetendő összegéből."
 
-#: ../../content/applications/productivity/appointments.rst:212
+#: ../../content/applications/productivity/appointments.rst:242
 msgid "The remaining :guilabel:`Amount Due` is then paid with one of the configured :doc:`payment providers <../finance/payment_providers>`."
 msgstr "A fennmaradó :guilabel:`Fizetendő összeg` ezután a beállított :doc:`fizetési szolgáltatók <../finance/payment_providers>` egyikével fizethető ki."
 
-#: ../../content/applications/productivity/appointments.rst:216
+#: ../../content/applications/productivity/appointments.rst:246
 msgid "Other integrations"
 msgstr "További integrációk"
 
-#: ../../content/applications/productivity/appointments.rst:218
+#: ../../content/applications/productivity/appointments.rst:248
 msgid "**Project**: with the *Appointment (Project Tasks)* (``appointment_project``) module, select a :guilabel:`Target Project` on the appointment type to create a task there when a booking is approved."
 msgstr "**Projekt**: az *Appointment (Project Tasks)* (``appointment_project``) modullal az időponttípuson kiválasztható egy :guilabel:`Célprojekt`, amelyben a foglalás jóváhagyásakor feladat jön létre."
 
-#: ../../content/applications/productivity/appointments.rst:221
+#: ../../content/applications/productivity/appointments.rst:251
 msgid "**eLearning**: with the *Appointment (eLearning)* (``appointment_elearning``) module, select a :guilabel:`Course to Enroll` on the appointment type to enroll the customer in that course when the booking is approved."
 msgstr "**E-learning**: az *Appointment (eLearning)* (``appointment_elearning``) modullal az időponttípuson kiválasztható egy :guilabel:`Beiratkozási kurzus`, amelyre a foglalás jóváhagyásakor beiratkozik az ügyfél."
 
-#: ../../content/applications/productivity/appointments.rst:224
+#: ../../content/applications/productivity/appointments.rst:254
 msgid "**CRM**: see :doc:`appointments/create-opps`."
 msgstr "**CRM**: lásd: :doc:`appointments/create-opps`."
 
@@ -8708,6 +8708,78 @@ msgstr "Rendszertálca-parancsikonok"
 #: ../../content/applications/productivity/whatsapp.rst:89
 msgid "Two icons are added to the top-right systray area: one opens the :guilabel:`Compose Whatsapp Message` window for any number, the other opens a blank email composition form."
 msgstr "A jobb felső rendszertálca-területre két ikon kerül: az egyik a :guilabel:`Whatsapp-üzenet írása` ablakot nyitja meg tetszőleges számhoz, a másik egy üres e-mail-szerkesztő űrlapot."
+
+#: ../../content/applications/productivity/appointments.rst:176
+msgid "Export bookings"
+msgstr "Foglalások exportálása"
+
+#: ../../content/applications/productivity/appointments.rst:178
+msgid "With the *eYssen Appointment (Reports & Export)* module (`appointment_reports`), appointment managers can download the bookings from the :guilabel:`Export` menu of the application:"
+msgstr "Az *eYssen Appointment (Reports & Export)* modullal (`appointment_reports`) az időpontfoglalás menedzserei az alkalmazás :guilabel:`Exportálás` menüjéből tölthetik le a foglalásokat:"
+
+#: ../../content/applications/productivity/appointments.rst:181
+msgid ":menuselection:`Appointments --> Export --> Export Bookings (CSV, max 10,000)` downloads the `appointments.csv` file, with one row per booking: name, type, start, end, duration in minutes, customer (or the visitor's name for a public booking), amount, status, and attendance;"
+msgstr "Az :menuselection:`Időpontfoglalás --> Exportálás --> Foglalások exportálása (CSV, legfeljebb 10 000)` menüpont az `appointments.csv` fájlt tölti le, foglalásonként egy sorral: név, típus, kezdés, befejezés, időtartam percben, ügyfél (nyilvános foglalásnál a látogató neve), összeg, állapot és megjelenés;"
+
+#: ../../content/applications/productivity/appointments.rst:184
+msgid ":menuselection:`Appointments --> Export --> Export Bookings (iCal, max 10,000)` downloads the `appointments.ics` calendar file, which can be imported in any calendar application. Each booking is an event titled with the appointment type and the booking name, with its location and description; approved bookings are marked as confirmed, the others as tentative."
+msgstr "Az :menuselection:`Időpontfoglalás --> Exportálás --> Foglalások exportálása (iCal, legfeljebb 10 000)` menüpont az `appointments.ics` naptárfájlt tölti le, amely bármely naptáralkalmazásba importálható. Minden foglalás egy esemény, amelynek címe az időponttípusból és a foglalás nevéből áll, a helyszínnel és a leírással együtt; a jóváhagyott foglalások megerősítettként, a többi feltételesként szerepel."
+
+#: ../../content/applications/productivity/appointments.rst:189
+msgid "Both files contain the 10,000 most recent bookings at most, of all statuses. The dates and times are expressed in UTC."
+msgstr "Mindkét fájl legfeljebb a 10 000 legutóbbi foglalást tartalmazza, állapottól függetlenül. A dátumok és időpontok UTC szerint szerepelnek."
+
+#: ../../content/applications/productivity/appointments.rst:193
+msgid "The export can be narrowed by adding parameters to the address of the download, e.g., `/appointment/export/csv?state=approved&date_from=2026-01-01&date_to=2026-03-31`. The available parameters are `type_id` (the ID of an appointment type), `state` (`requested`, `approved`, `rejected`, or `cancelled`), `date_from`, and `date_to` (`YYYY-MM-DD`)."
+msgstr "Az export szűkíthető, ha a letöltés címéhez paramétereket ad, pl. `/appointment/export/csv?state=approved&date_from=2026-01-01&date_to=2026-03-31`. Az elérhető paraméterek: `type_id` (egy időponttípus azonosítója), `state` (`requested`, `approved`, `rejected` vagy `cancelled`), `date_from` és `date_to` (`YYYY-MM-DD`)."
+
+#: ../../content/applications/productivity/appointments.rst:199
+msgid "To install the module, enable :guilabel:`Reports` under :guilabel:`Appointment` in :menuselection:`Settings --> eYssen ERP`. The menu and the downloads are reserved for the users with the :guilabel:`Manager` access level of the Appointments app."
+msgstr "A modul telepítéséhez a :menuselection:`Beállítások --> eYssen ERP` menüpontban, az :guilabel:`Appointment` alatt kapcsolja be a :guilabel:`Reports` beállítást. A menüt és a letöltéseket csak az Időpontfoglalás alkalmazás :guilabel:`Menedzser` hozzáférési szintjével rendelkező felhasználók használhatják."
+
+#: ../../content/applications/productivity/discuss/chatter.rst:526
+msgid "Cc and Bcc recipients"
+msgstr "Másolatot (Cc) és titkos másolatot (Bcc) kapó címzettek"
+
+#: ../../content/applications/productivity/discuss/chatter.rst:528
+msgid "In the standard full composer, all recipients are entered in a single :guilabel:`Recipients` field. With the *Email CC and BCC* module (`mail_composer_cc_bcc`), the full composer has two additional fields, :guilabel:`Cc` and :guilabel:`Bcc`, in which contacts can be selected (or created on the fly from an email address):"
+msgstr "A szabványos teljes szerkesztőben minden címzett egyetlen :guilabel:`Címzettek` mezőbe kerül. Az *Email CC and BCC* modullal (`mail_composer_cc_bcc`) a teljes szerkesztőben két további mező jelenik meg, a :guilabel:`Cc` és a :guilabel:`Bcc`, amelyekben kapcsolatok választhatók ki (vagy hozhatók létre menet közben egy e-mail-címből):"
+
+#: ../../content/applications/productivity/discuss/chatter.rst:533
+msgid "the :guilabel:`Recipients` and the :guilabel:`Cc` contacts appear as such, in the *To* and *Cc* headers, in the email received by every recipient;"
+msgstr "a :guilabel:`Címzettek` és a :guilabel:`Cc` kapcsolatai ekként – a *Címzett* és a *Másolat* fejlécben – jelennek meg minden címzett e-mailjében;"
+
+#: ../../content/applications/productivity/discuss/chatter.rst:535
+msgid "the :guilabel:`Bcc` contacts receive a copy of the email, but their address is not disclosed to the other recipients."
+msgstr "a :guilabel:`Bcc` kapcsolatai másolatot kapnak az e-mailről, de címük nem jelenik meg a többi címzett előtt."
+
+#: ../../content/applications/productivity/discuss/chatter.rst:538
+msgid "The two fields are available when sending a message from the chatter of any record, and in the composers based on it (e.g., sending a quotation). They are not displayed when logging an internal note."
+msgstr "A két mező akkor érhető el, amikor bármely rekord üzenetfaláról üzenetet küld, valamint az erre épülő szerkesztőkben (pl. árajánlat küldésekor). Belső megjegyzés naplózásakor nem jelennek meg."
+
+#: ../../content/applications/productivity/discuss/chatter.rst:542
+msgid "Default values can be prepared in two places:"
+msgstr "Alapértelmezett értékek két helyen készíthetők elő:"
+
+#: ../../content/applications/productivity/discuss/chatter.rst:544
+msgid "on the company: go to :menuselection:`Settings --> Users & Companies --> Companies`, open the company, and select contacts in the :guilabel:`Default Cc` and :guilabel:`Default Bcc` fields, under :guilabel:`Email`. These contacts are pre-filled in every email composed for that company, e.g., to archive all outgoing emails in a dedicated mailbox with a default Bcc contact;"
+msgstr "a vállalaton: lépjen a :menuselection:`Beállítások --> Felhasználók és vállalatok --> Vállalatok` menüpontra, nyissa meg a vállalatot, és az :guilabel:`Email` mező alatt, a :guilabel:`Default Cc` és a :guilabel:`Default Bcc` mezőben válassza ki a kapcsolatokat. Ezek a kapcsolatok előre kitöltve jelennek meg az adott vállalat minden e-mailjében, így például egy alapértelmezett Bcc kapcsolattal minden kimenő e-mail archiválható egy erre szolgáló postafiókban;"
+
+#: ../../content/applications/productivity/discuss/chatter.rst:548
+msgid "on an :doc:`email template <../../general/companies/email_template>`: in addition to the standard :guilabel:`Cc` field, a :guilabel:`Bcc` field is available in the :guilabel:`Email Configuration` tab. When the template is selected in the composer, the addresses of these two fields are matched with the existing contacts, which are then added to the :guilabel:`Cc` and :guilabel:`Bcc` fields of the composer."
+msgstr "egy :doc:`e-mail sablonon <../../general/companies/email_template>`: a szabványos :guilabel:`Másolat` mező mellett az :guilabel:`E-mail beállítás` fülön egy :guilabel:`Bcc` mező is elérhető. Amikor a sablont kiválasztja a szerkesztőben, a rendszer e két mező címeit párosítja a meglévő kapcsolatokkal, amelyeket azután hozzáad a szerkesztő :guilabel:`Cc` és :guilabel:`Bcc` mezőjéhez."
+
+#: ../../content/applications/productivity/discuss/chatter.rst:563
+msgid "Archive and restore log"
+msgstr "Archiválás és visszaállítás naplózása"
+
+#: ../../content/applications/productivity/discuss/chatter.rst:565
+msgid "When a record is archived or restored, the standard chatter only keeps a trace if the :guilabel:`Active` field of the model is tracked, which is rarely the case. With the *Chatter: Log Archive/Restore* module (`eyssen_chatter_log_all_state_chnage`), a note such as *“Deco Addict” was archived.* or *“Deco Addict” was restored.* is logged in the chatter of every record that has one, with the user and the date of the operation. Models that already track the field are left unchanged, so that the operation is not logged twice."
+msgstr "Amikor egy rekordot archiválnak vagy visszaállítanak, a szabványos üzenetfal csak akkor őrzi meg ennek nyomát, ha a modell :guilabel:`Aktív` mezője követett, ami ritkán fordul elő. A *Chatter: Log Archive/Restore* modullal (`eyssen_chatter_log_all_state_chnage`) minden üzenetfallal rendelkező rekord üzenetfalára megjegyzés kerül – például *„Deco Addict” archiválásra került.* vagy *„Deco Addict” visszaállításra került.* –, a műveletet végző felhasználóval és a dátummal együtt. Azok a modellek, amelyek már követik a mezőt, változatlanok maradnak, így a művelet nem naplózódik kétszer."
+
+#: ../../content/applications/productivity/discuss/chatter.rst:573
+msgid "To install the module, go to :menuselection:`Settings --> eYssen ERP`, and, in the :guilabel:`General Modules` section, enable :guilabel:`Chatter: Log Archive/Restore (no duplicate with tracking)`."
+msgstr "A modul telepítéséhez lépjen a :menuselection:`Beállítások --> eYssen ERP` menüpontra, és a :guilabel:`General Modules` szakaszban kapcsolja be a :guilabel:`Chatter: Log Archive/Restore (no duplicate with tracking)` beállítást."
 
 #~ msgid "Odoo's **Appointments** app is a self-service scheduling app that simplifies the process of booking meetings, consultations, or services. Integrated with Odoo's suite of business apps, it allows companies to automate appointment scheduling, reduce manual coordination, and provide a seamless experience for clients. Appointments can be linked to calendars, **CRM** opportunities, employee schedules, and more, making it an ideal tool for service-based businesses seeking efficiency and organization."
 #~ msgstr "Az Odoo **Appointments** alkalmazása egy önkiszolgáló ütemezési alkalmazás, amely leegyszerűsíti a találkozók, konzultációk vagy szolgáltatások foglalásának folyamatát. Az Odoo üzleti alkalmazáscsomagjával integrálva lehetővé teszi a vállalatok számára az időpontfoglalás automatizálását, a manuális koordináció csökkentését, és zökkenőmentes élményt nyújt az ügyfelek számára. Az időpontok összekapcsolhatók naptárakkal, **CRM** lehetőségekkel, munkavállalói ütemezésekkel és még sok mással, így ideális eszköz a hatékonyságra és szervezettségre törekvő szolgáltatásalapú vállalkozások számára."

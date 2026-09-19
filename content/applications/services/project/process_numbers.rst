@@ -14,8 +14,12 @@ Configuration
 =============
 
 To have a process number created automatically for every new project, go to
-:menuselection:`Settings --> eYssen --> Process Number` and enable :guilabel:`Create
-Automatically`. The setting is per company.
+:menuselection:`Settings --> eYssen ERP`, and, in the :guilabel:`Process Number` section, enable
+:guilabel:`Create Automatically` under the :guilabel:`Project` option. The setting is per company.
+
+.. seealso::
+   :doc:`../../general/process_numbers` for the process number records themselves, and their use
+   in the other applications.
 
 .. _project/process-number-mode:
 

@@ -20,5 +20,6 @@ deliver and invoice what has been sold.
    sales/order_extensions
    sales/blanket_orders
    sales/sales_targets
+   sales/product_sales_reports
    sales/service_credits
    sales/gelato

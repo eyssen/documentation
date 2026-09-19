@@ -218,3 +218,4 @@ moved in and out of the warehouse.
 .. seealso::
    - :doc:`Stock valuation dashboard <../../warehouses_storage/reporting/aging>`
    - :ref:`Valuation cockpit and valuation snapshots <inventory/warehouses_storage/valuation-cockpit>`
+   - :doc:`Stock valuation audit (Data Audit) <../../../../general/data_audit>`

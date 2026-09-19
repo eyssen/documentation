@@ -151,6 +151,21 @@ below the invoice lines:
    restrict where the template is available.
 #. On the invoice, open the :guilabel:`Comments` tab and add the comment templates to print.
 
+The templates are provided by the *Base Comments Templates* module (`base_comment_template`), which
+is shared by all the documents that support comments (invoices, sales orders, etc.). It determines
+which templates are proposed **automatically** on a new document:
+
+- a template with :guilabel:`Global Template` ticked applies to the documents of all partners;
+- the other templates only apply to the partners they are linked to. They can be linked from the
+  :guilabel:`Partner` field of the template, or from the :guilabel:`Comment Templates` tab of the
+  contact form;
+- in both cases, the document must belong to one of the models of the template and match its
+  :guilabel:`Filter Domain`.
+
+Drag the templates in the list to order them. The full list of templates, for all models, is also
+available in :ref:`developer mode <developer-mode>` under :menuselection:`Settings --> Technical
+--> Reporting --> Comment Templates`.
+
 .. tip::
    The template text can contain dynamic placeholders, such as `{{object.partner_id.name}}`.
 

@@ -20,6 +20,11 @@ Receipt Printing` setting.
    :module: point_of_sale
    :notes: English UI, light theme; scale down to about 75 % of the page width.
 
+.. note::
+   With the *PoS Hungarian* module (`eyssen_l10n_hu_pos`), the line *Nem adóügyi bizonylat!* (“Not a
+   fiscal receipt!”) is printed in the header of every receipt, in Hungarian, whatever the language
+   of the point of sale. See :doc:`../../finance/fiscal_localizations/hungary`.
+
 .. seealso::
    - :ref:`pos/restaurant/bills`
    - :doc:`configuration/epos_printers`

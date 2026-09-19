@@ -237,6 +237,19 @@ This action occurs throughout the Odoo database.
    :module: mail
    :notes: English UI, developer mode active, crop to the relevant area.
 
+Cc and Bcc on email templates
+=============================
+
+In the :guilabel:`Email Configuration` tab of an email template, the :guilabel:`Cc` field contains
+the comma-separated addresses that receive a carbon copy of the emails sent with the template.
+
+With the *Email CC and BCC* module (`mail_composer_cc_bcc`), a :guilabel:`Bcc` field is added under
+it, for blind carbon copy recipients, and default Cc and Bcc contacts can be set on the company. See
+:ref:`discuss/chatter-cc-bcc`.
+
+.. note::
+   Both fields are hidden when :guilabel:`Default recipients` is enabled on the template.
+
 Transactional emails and corresponding URLs
 ===========================================
 

@@ -170,6 +170,36 @@ confirmation email with a link to their booking.
    :module: appointment
    :notes: English UI, light theme, 1440px width.
 
+.. _appointments/export:
+
+Export bookings
+---------------
+
+With the *eYssen Appointment (Reports & Export)* module (`appointment_reports`), appointment
+managers can download the bookings from the :guilabel:`Export` menu of the application:
+
+- :menuselection:`Appointments --> Export --> Export Bookings (CSV, max 10,000)` downloads the
+  `appointments.csv` file, with one row per booking: name, type, start, end, duration in minutes,
+  customer (or the visitor's name for a public booking), amount, status, and attendance;
+- :menuselection:`Appointments --> Export --> Export Bookings (iCal, max 10,000)` downloads the
+  `appointments.ics` calendar file, which can be imported in any calendar application. Each booking
+  is an event titled with the appointment type and the booking name, with its location and
+  description; approved bookings are marked as confirmed, the others as tentative.
+
+Both files contain the 10,000 most recent bookings at most, of all statuses. The dates and times
+are expressed in UTC.
+
+.. tip::
+   The export can be narrowed by adding parameters to the address of the download, e.g.,
+   `/appointment/export/csv?state=approved&date_from=2026-01-01&date_to=2026-03-31`. The available
+   parameters are `type_id` (the ID of an appointment type), `state` (`requested`, `approved`,
+   `rejected`, or `cancelled`), `date_from`, and `date_to` (`YYYY-MM-DD`).
+
+.. note::
+   To install the module, enable :guilabel:`Reports` under :guilabel:`Appointment` in
+   :menuselection:`Settings --> eYssen ERP`. The menu and the downloads are reserved for the users
+   with the :guilabel:`Manager` access level of the Appointments app.
+
 .. _appointments/leaves:
 
 Provider unavailability

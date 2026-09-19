@@ -73,6 +73,11 @@ appears, with several options for the data to export:
    in the export user interface is equal to *parent_id* (external identifier). This is helpful
    because then, the only data exported is what should be modified and re-imported.
 
+.. note::
+   With the *Asynchronous List Export* module (`export_async`), large exports (2,000 records or
+   more by default) are prepared in the background, and a notification with a download link is sent
+   when the file is ready. See :ref:`background-jobs/export`.
+
 .. _essentials/export_import_data/import-data:
 
 Import data into Odoo

@@ -288,6 +288,7 @@ company.
    users/language
    users/2fa
    users/access_rights
+   users/access_management
    users/portal
    users/facebook
    users/google

@@ -520,6 +520,60 @@ available when sending an invoice from the :guilabel:`Send` window of the Invoic
    :module: eyssen_mail_follower_notification
    :notes: English UI, light theme, crop to the composer.
 
+.. _discuss/chatter-cc-bcc:
+
+Cc and Bcc recipients
+---------------------
+
+In the standard full composer, all recipients are entered in a single :guilabel:`Recipients` field.
+With the *Email CC and BCC* module (`mail_composer_cc_bcc`), the full composer has two additional
+fields, :guilabel:`Cc` and :guilabel:`Bcc`, in which contacts can be selected (or created on the
+fly from an email address):
+
+- the :guilabel:`Recipients` and the :guilabel:`Cc` contacts appear as such, in the *To* and *Cc*
+  headers, in the email received by every recipient;
+- the :guilabel:`Bcc` contacts receive a copy of the email, but their address is not disclosed to
+  the other recipients.
+
+The two fields are available when sending a message from the chatter of any record, and in the
+composers based on it (e.g., sending a quotation). They are not displayed when logging an internal
+note.
+
+Default values can be prepared in two places:
+
+- on the company: go to :menuselection:`Settings --> Users & Companies --> Companies`, open the
+  company, and select contacts in the :guilabel:`Default Cc` and :guilabel:`Default Bcc` fields,
+  under :guilabel:`Email`. These contacts are pre-filled in every email composed for that company,
+  e.g., to archive all outgoing emails in a dedicated mailbox with a default Bcc contact;
+- on an :doc:`email template <../../general/companies/email_template>`: in addition to the standard
+  :guilabel:`Cc` field, a :guilabel:`Bcc` field is available in the :guilabel:`Email Configuration`
+  tab. When the template is selected in the composer, the addresses of these two fields are matched
+  with the existing contacts, which are then added to the :guilabel:`Cc` and :guilabel:`Bcc`
+  fields of the composer.
+
+.. screenshot:: productivity-chatter-cc-bcc
+   :menu: (any record with a chatter) ‣ Send message ‣ Expand full composer
+   :shows: The full composer with the Recipients field followed by the "Cc" and "Bcc" tag fields, each containing one contact with its email address.
+   :highlight: The "Cc" and "Bcc" fields (red frame).
+   :data: Recipient "Deco Addict"; Cc "Douglas Fletcher"; Bcc "Archive mailbox <archive@yourcompany.example>".
+   :module: mail_composer_cc_bcc
+   :notes: English UI, light theme, crop to the composer.
+
+Archive and restore log
+-----------------------
+
+When a record is archived or restored, the standard chatter only keeps a trace if the
+:guilabel:`Active` field of the model is tracked, which is rarely the case. With the *Chatter: Log
+Archive/Restore* module (`eyssen_chatter_log_all_state_chnage`), a note such as *“Deco Addict” was
+archived.* or *“Deco Addict” was restored.* is logged in the chatter of every record that has one,
+with the user and the date of the operation. Models that already track the field are left
+unchanged, so that the operation is not logged twice.
+
+.. note::
+   To install the module, go to :menuselection:`Settings --> eYssen ERP`, and, in the
+   :guilabel:`General Modules` section, enable :guilabel:`Chatter: Log Archive/Restore (no duplicate
+   with tracking)`.
+
 .. seealso::
    - :doc:`Discuss <../discuss>`
    - :doc:`Discuss Channels <../discuss/team_communication/>`

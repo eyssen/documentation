@@ -167,9 +167,10 @@ To create a new |RFQ|, click the :guilabel:`New` button on the top-left corner o
 .. note::
    With the *Process Number - Purchase* module (`process_number_purchase`) installed, a
    :guilabel:`Process Number` field appears above the |RFQ| form, with a :guilabel:`Create a new
-   process number` link. See :doc:`../../../services/project/process_numbers` for the concept of a
+   process number` link. See :doc:`../../../general/process_numbers` for the concept of a
    process number. To have a process number created automatically for every new |RFQ|, enable
-   :guilabel:`Create Automatically` under :menuselection:`Settings --> eYssen --> Process Number`.
+   :guilabel:`Create Automatically` in the :guilabel:`Process Number` section of
+   :menuselection:`Settings --> eYssen ERP`.
 
 Start by assigning a :guilabel:`Vendor`.
 

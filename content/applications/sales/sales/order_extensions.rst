@@ -246,3 +246,32 @@ A sales order line that breaks one of these rules is refused with an explanatory
    (``eyssen_sale_quantity_limit_ws``) applies the same rules to the online store: the quantity
    selector on the product page and in the cart respects the minimum, the maximum and the
    multiplier.
+
+.. _sales/order-extensions/team-logo:
+
+Report logo per sales team
+==========================
+
+*Conditional Report Logo* (``report_conditional_logo``) prints the logo of the **sales team**
+instead of the company logo in the header of the PDF documents, which is useful when several brands
+or business units sell under the same company.
+
+Go to :menuselection:`Sales --> Configuration --> Sales Teams`, open a team, and upload its image in
+the :guilabel:`Report Logo` group at the bottom of the form.
+
+From then on, every document that has a :guilabel:`Sales Team` field (quotations, sales orders, and
+customer invoices) is printed with the logo of its team, in all the document layouts. Documents whose team has no logo, and documents without a sales team (e.g.,
+purchase orders or delivery slips), keep the company logo.
+
+The feature can be switched off without removing the logos: go to :menuselection:`Sales -->
+Configuration --> Conditional Report Logos`, and turn off the :guilabel:`Active` toggle of the
+:guilabel:`Sales Team` source. A source can also be limited to one :guilabel:`Company`. The menu is
+reserved for the users with the :guilabel:`Sales: Administrator` access right.
+
+.. screenshot:: sales-order-extensions-team-logo
+   :menu: Sales ‣ Configuration ‣ Sales Teams ‣ (a team)
+   :shows: The bottom of a sales team form with the "Report Logo" group and an uploaded logo image.
+   :highlight: The "Report Logo" group (red frame).
+   :data: Sales team "Website" with a brand logo different from the company logo.
+   :module: report_conditional_logo
+   :notes: English UI, light theme, 1440px width, crop to the lower part of the form.

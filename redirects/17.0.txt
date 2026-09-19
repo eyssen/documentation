@@ -31,18 +31,10 @@ developer/tutorials/getting_started/16_final_word.rst developer/tutorials/server
 # applications/general
 
 applications/general/email_communication/email_servers.rst applications/general/email_communication.rst
-applications/general/iot/config.rst applications/general/iot.rst
-applications/general/iot/config/connect.rst applications/general/iot/connect.rst
-applications/general/iot/config/https_certificate_iot.rst applications/general/iot/iot_advanced/https_certificate_iot.rst
-applications/general/iot/config/updating_iot.rst applications/general/iot/iot_advanced/updating_iot.rst
-applications/general/iot/config/troubleshooting.rst applications/general/iot.rst
-applications/general/iot/config/windows_iot.rst applications/general/iot/windows_iot.rst
-applications/general/iot/config/ssh_connect.rst applications/general/iot/iot_advanced/ssh_connect.rst
 applications/general/multi_company.rst applications/general/companies/multi_company.rst
 
 # applications/hr
 
-applications/hr/appraisals/reporting.rst applications/hr/appraisals/appraisal_analysis.rst                                                                                                               # appraisals/reporting --> appraisals/appraisal_analysis
 
 # applications/inventory_and_mrp
 
@@ -50,7 +42,6 @@ applications/inventory_and_mrp/inventory/product_management/product_tracking/typ
 applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst        # integrating_landed_costs --> landed costs
 applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/batch_transfer.rst applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst                   # advanced_operations_warehouse/batch_transfer --> shipping_receiving/picking_methods/batch
 applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/storage_category.rst applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst     # advanced_operations_warehouse/storage_category --> shipping_receiving/daily_operations/storage_category
-applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/removal.rst applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies.rst                             # advanced_operations_warehouse/removal --> warehouses_storage/removal_strategies
 applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/closest_location.rst applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/closest_location.rst   # advanced_operations_warehouse/* --> removal_strategies/*
 applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/closest_location.rst applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst    # warehouses_storage/removal_strategies/* --> shipping_receiving/removal_strategies/*
 applications/inventory_and_mrp/inventory/warehouses_storage/advanced_operations_warehouse/fefo.rst applications/inventory_and_mrp/inventory/warehouses_storage/removal_strategies/fefo.rst                           # advanced_operations_warehouse/* --> removal_strategies/*
@@ -78,7 +69,6 @@ applications/inventory_and_mrp/manufacturing/management/subcontracting.rst appli
 applications/inventory_and_mrp/manufacturing/management/three_step_manufacturing.rst applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst                  # management/* --> basic_setup/*
 applications/inventory_and_mrp/manufacturing/management/two_step_manufacturing.rst applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst                      # management/* --> basic_setup/*
 applications/inventory_and_mrp/manufacturing/management/unbuild_orders.rst applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst                                        # management/* --> workflows/*
-applications/inventory_and_mrp/manufacturing/management/use_mps.rst applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst                                                      # management/* --> workflows/*
 applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst                   # management/* --> advanced_configuration/*
 applications/inventory_and_mrp/manufacturing/management/work_center_time_off.rst applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst                            # management/* --> workflows/*
 applications/inventory_and_mrp/manufacturing/management/work_order_dependencies.rst applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst         # management/* --> advanced_configuration/*
@@ -88,7 +78,6 @@ applications/inventory_and_mrp/manufacturing/workflows/subcontracting_dropship.r
 applications/inventory_and_mrp/manufacturing/workflows/subcontracting_resupply.rst applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst        # workflows/* --> subcontracting/*
 applications/inventory_and_mrp/manufacturing/workflows/allocation.rst applications/inventory_and_mrp/manufacturing/reporting/allocation.rst
 applications/inventory_and_mrp/manufacturing/workflows/oee.rst applications/inventory_and_mrp/manufacturing/reporting/oee.rst
-applications/inventory_and_mrp/manufacturing/workflows/production_analysis.rst applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst
 
 # applications/marketing
 
@@ -112,7 +101,6 @@ applications/sales/subscriptions/plans.rst applications/sales/subscriptions.rst	
 
 # applications/services
 
-applications/services/helpdesk/overview/getting_started.rst applications/services/helpdesk.rst                                                            #helpdesk/overview/getting_started --> helpdesk
 applications/services/project/tasks/email_alias.rst applications/services/project/tasks/task_creation.rst                                                 #project/tasks/email_alias --> task_creation
 applications/services/field_service/default_warehouse.rst applications/services/field_service/product_management.rst                                                 #project/tasks/email_alias --> task_creation
 applications/services/field_service/onsite_interventions.rst applications/services/field_service/creating_tasks.rst
@@ -121,7 +109,6 @@ applications/services/field_service/onsite_interventions.rst applications/servic
 
 applications/websites/ecommerce/managing_products/products.rst applications/websites/ecommerce/products.rst
 applications/websites/ecommerce/managing_products/catalog.rst applications/websites/ecommerce/products/catalog.rst
-applications/websites/ecommerce/managing_products/variants.rst applications/websites/ecommerce/products/variants.rst
 applications/websites/ecommerce/managing_products/price_management.rst applications/websites/ecommerce/products/price_management.rst
 applications/websites/ecommerce/managing_products/cross_upselling.rst applications/websites/ecommerce/products/cross_upselling.rst
 applications/websites/ecommerce/ecommerce_management/order_handling.rst applications/websites/ecommerce/order_handling.rst
@@ -136,7 +123,6 @@ applications/websites/ecommerce/ecommerce_management.rst applications/websites/e
 
 # applications/finance
 
-applications/finance/accounting/get_started/vat_units.rst applications/finance/accounting/get_started/tax_units.rst                                        # vat_units --> tax_units
 applications/finance/accounting/taxes/taxcloud.rst applications/finance/accounting/taxes.rst                                                               # taxcloud --> taxes
 applications/finance/accounting/payments/online/install_portal_patch.rst applications/finance/accounting/payments/online.rst                               # deleted; no longer necessary
 

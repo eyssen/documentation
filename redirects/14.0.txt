@@ -51,14 +51,10 @@ applications/general/users/delete_account.rst applications/general/users/odoo_ac
 
 # applications/hr
 
-applications/hr/payroll/configuration.rst applications/hr/payroll.rst  # applications/hr/payroll/configuration.rst --> applications/hr/payroll.rst
 
 # applications/inventory
 
 applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst applications/inventory_and_mrp/inventory/shipping/operation/dropshipping.rst                                                  # /inventory/management/incoming/* --> /shipping/operation/*
-applications/inventory_and_mrp/inventory/management/incoming/handle_receipts.rst applications/inventory_and_mrp/inventory/management/shipments_deliveries/inventory_flow.rst                                # /inventory/management/incoming/* --> /management/shipments_deliveries/*
-applications/inventory_and_mrp/inventory/management/delivery/inventory_flow.rst applications/inventory_and_mrp/inventory/management/shipments_deliveries/inventory_flow.rst                                 # /inventory/management/delivery/* --> /management/shipments_deliveries/*
-applications/inventory_and_mrp/inventory/management/delivery/label_type.rst applications/inventory_and_mrp/inventory/shipping/operation/label_type.rst                                                      # /inventory/management/delivery/* --> /shipping/operation/*
 applications/inventory_and_mrp/inventory/management/delivery/one_step.rst applications/inventory_and_mrp/inventory/management/shipments_deliveries/receipts_delivery_one_step.rst                           # /inventory/management/delivery/* --> /management/shipments_deliveries/*
 applications/inventory_and_mrp/inventory/management/incoming/one_step.rst applications/inventory_and_mrp/inventory/management/shipments_deliveries/receipts_delivery_one_step.rst                           # /inventory/management/incoming/* --> /management/shipments_deliveries/*
 applications/inventory_and_mrp/inventory/management/delivery/three_steps.rst applications/inventory_and_mrp/inventory/management/shipments_deliveries/delivery_three_steps.rst                              # /inventory/management/delivery/* --> /management/shipments_deliveries/*

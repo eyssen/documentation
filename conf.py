@@ -227,6 +227,13 @@ github_user = 'odoo'
 github_project = 'documentation'
 
 locale_dirs = ['../locale/']
+
+# Docutils ships no Hungarian module for the *names of reST directives and roles* (they stay English in
+# the sources anyway). Without this alias every `hu` build logs
+# "rST localisation for language "hu" not found". Falling back to English is what docutils does in
+# that case, so registering the English module under the `hu` name changes nothing but the warning.
+import docutils.parsers.rst.languages.en as _rst_lang_en  # noqa: E402
+sys.modules.setdefault('docutils.parsers.rst.languages.hu', _rst_lang_en)
 templates_path = ['../extensions']
 
 # custom docname_to_domain to divide the translations of applications in subdirectories

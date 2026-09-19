@@ -32,7 +32,7 @@ expression** that will be executed in an environment that has access to the foll
   relational fields are given as a list of IDs;
 - The ID of the current record;
 - `parent`: the record that refers to the container; only inside sub-views of :ref:`relational
-  fields <studio/fields/relational-fields>`;
+  fields <reference/fields/relational>`;
 - `context (dict)`: the current view's context;
 - `uid (int)`: the id of the current user;
 - `today (str)`: the current local date in the `YYYY-MM-DD` format;
@@ -313,7 +313,7 @@ The `field` element can have the following attributes:
    :default: `False`
 
 .. note::
-   :ref:`Relational fields <studio/fields/relational-fields>` nodes can contain specific subviews.
+   :ref:`Relational fields <reference/fields/relational>` nodes can contain specific subviews.
 
    .. example::
       .. code-block:: xml

@@ -31,9 +31,6 @@ Domain names
 :doc:`Configure a custom domain name <../applications/websites/website/configuration/domain_names>`
 by selecting a database and clicking :icon:`fa-globe` :guilabel:`Domain Names`.
 
-.. tip::
-   :ref:`Register a domain name for free <domain-name/register>`.
-
 .. _odoo-online/tags:
 
 Tags

@@ -8,4 +8,3 @@ Reporting
    reporting/delayed
    reporting/allocation
    reporting/oee
-   reporting/production_analysis

@@ -53,9 +53,14 @@ subcontractor in the :guilabel:`Vendor` field.
 Once the subcontractor has been added, enter the number of days it takes them to manufacture and
 deliver the product, in the :guilabel:`Delivery Lead Time` column.
 
-.. image:: resupply_subcontracting_lead_times/delivery-lead-time.png
-   :align: center
-   :alt: The Delivery Lead Time field for a subcontractor, on the Purchase tab of a product page.
+.. screenshot:: manufacturing-subcontracting-lead-times-resupply-delivery
+   :menu: Inventory app --> Products --> Products (open a subcontracted product) --> Purchase tab
+   :shows: The Purchase tab of a product form, vendor line for the subcontractor with the
+      "Delivery Lead Time" column filled in.
+   :highlight: The "Delivery Lead Time" column.
+   :data: Demo company "YourCompany"; subcontractor "Bike Friends", delivery lead time 5 days.
+   :module: mrp_subcontracting, purchase
+   :notes: English UI, light theme, 1440px width, crop to the Purchase tab.
 
 Product manufacturing lead time
 -------------------------------
@@ -67,9 +72,14 @@ On the |BoM|, select the :guilabel:`Miscellaneous` tab. In the :guilabel:`Manuf.
 enter the same number of days that was entered in the :guilabel:`Delivery Lead Time` field of the
 |BoM|'s product.
 
-.. image:: resupply_subcontracting_lead_times/manufacturing-lead-time.png
-   :align: center
-   :alt: The Manuf. Lead Time field on a product's BoM.
+.. screenshot:: manufacturing-subcontracting-lead-times-resupply-manuf
+   :menu: Manufacturing app --> Products --> Bills of Materials (open the BoM) --> Miscellaneous
+      tab
+   :shows: The Miscellaneous tab of a BoM, "Manuf. Lead Time" field filled in.
+   :highlight: The "Manuf. Lead Time" field.
+   :data: Demo company "YourCompany"; BoM for "Unicycle", manuf. lead time 5 days.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the Miscellaneous tab.
 
 While not all of these days are actually used for manufacturing by the subcontractor, setting the
 same number of days in each field tells Odoo that the subcontractor must receive the components and
@@ -152,9 +162,15 @@ delivering it to the contracting company.
    It takes Mike's Bikes two days to deliver the components, so they update the *Scheduled Date*
    field on the resupply subcontractor order to May 23rd, two days before the Deadline.
 
-   .. image:: resupply_subcontracting_lead_times/scheduled-deadline.png
-      :align: center
-      :alt: The Scheduled Date and Deadline fields on a resupply subcontractor order.
+   .. screenshot:: manufacturing-subcontracting-lead-times-resupply-scheduled
+      :menu: Purchase app --> Orders --> Purchase Orders (open the PO) --> Resupply smart button
+      :shows: The resupply subcontractor order, "Deadline" of May 25th and "Scheduled Date" of
+         May 23rd.
+      :highlight: The "Scheduled Date" and "Deadline" fields.
+      :data: Demo company "YourCompany"; resupply order to "Bike Friends" for "Unicycle"
+         components.
+      :module: mrp_subcontracting, stock
+      :notes: English UI, light theme, 1440px width, crop to the header.
 
    Mike's Bikes ships the components to Bike Friends on the scheduled date of May 23rd, and they
    arrive on the deadline of May 25th. This gives Bike Friends enough time to manufacture the

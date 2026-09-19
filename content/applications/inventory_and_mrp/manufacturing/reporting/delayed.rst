@@ -9,11 +9,17 @@ Delays
 .. |RfQ| replace:: :abbr:`RfQ (request for quotation)`
 
 Odoo's *Manufacturing* app displays *delays* in manufacturing orders through the :guilabel:`Delayed
-Productions` filter. If the |MO|'s end date exceeds its deadline, the deadline is highlighted in red
-to draw attention to the delay.
+Productions` filter. If the |MO| is delayed, it is highlighted in red on the list view of
+manufacturing orders, to draw attention to the delay.
 
-.. image:: delayed/delayed-filter.png
-   :alt: The delayed production filter in Odoo.
+.. screenshot:: manufacturing-delayed-filter
+   :menu: Manufacturing app --> Operations --> Manufacturing Orders
+   :shows: The list view of manufacturing orders, "Delayed Productions" filter applied in the
+      "Search..." bar, one MO shown with its deadline/end date highlighted in red.
+   :highlight: The red-highlighted deadline column of the delayed MO.
+   :data: Demo company "YourCompany"; one manufacturing order past its deadline.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width.
 
 Deadline calculation
 ====================
@@ -37,14 +43,19 @@ The |MO| deadline depends on how the |MO| was created, and is calculated as foll
 Filters
 =======
 
-Several additional filters are available to help track delays:
+Several additional filters are available in the :guilabel:`Search...` bar, on the list of
+manufacturing orders, to help track delays:
 
-- :guilabel:`Delayed Productions`: the |MO|'s *scheduled start date* is later than the deadline.
-- :guilabel:`Late`: the |MO|'s *scheduled end date* exceeds the deadline, highlighted in red.
+- :guilabel:`Delayed Productions`: the |MO| is either late (see below), or has one or more
+  components with a delayed delivery.
 - :guilabel:`Late Availability`: one or more required components are not available before the
   deadline. For example, a confirmed purchase order or manufacturing order for components is
   scheduled to end *after* the |MO| deadline.
 - :guilabel:`Components Available`: all components are available to begin production.
+
+An |MO| is considered *late* when it is confirmed or in progress, and its deadline has already
+passed, or its computed end date falls after the deadline. Late |MOs| are highlighted in red on
+list views.
 
 Use case
 ========
@@ -55,11 +66,17 @@ Consider an |MO| with a deadline of **September 17th**:
   Productions` filter.
 - If required components are scheduled to arrive after September 17th, the |MO| appears in the
   :guilabel:`Late Availability` filter.
-- If the |MO| has a scheduled end date after September 17th, it appears in the :guilabel:`Late`
-  filter.
+- If the |MO| has a scheduled end date after September 17th, it is considered late, and its
+  deadline is highlighted in red.
 
-.. image:: delayed/deadline.png
-   :alt: An MO with the deadline emphasized.
+.. screenshot:: manufacturing-delayed-deadline
+   :menu: Manufacturing app --> Operations --> Manufacturing Orders (open a manufacturing order)
+   :shows: The manufacturing order form, "Scheduled Date"/deadline field emphasized to show it is
+      in the past.
+   :highlight: The deadline field, shown in red.
+   :data: Demo company "YourCompany"; one late manufacturing order.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the header of the form.
 
 By combining these indicators, planners can quickly identify where production is at risk of missing
 delivery commitments.

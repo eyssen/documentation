@@ -45,9 +45,14 @@ subcontractor in the :guilabel:`Vendor` column.
 Once the subcontractor has been added, enter the number of days it takes them to manufacture and
 deliver the product, in the :guilabel:`Delivery Lead Time` column.
 
-.. image:: basic_subcontracting_lead_times/delivery-lead-time.png
-   :align: center
-   :alt: The Delivery Lead Time field for a subcontractor, on the Purchase tab of a product page.
+.. screenshot:: manufacturing-subcontracting-lead-times-basic-delivery
+   :menu: Inventory app --> Products --> Products (open a subcontracted product) --> Purchase tab
+   :shows: The Purchase tab of a product form, vendor line for the subcontractor with the
+      "Delivery Lead Time" column filled in.
+   :highlight: The "Delivery Lead Time" column.
+   :data: Demo company "YourCompany"; subcontractor "Bike Friends", delivery lead time 5 days.
+   :module: mrp_subcontracting, purchase
+   :notes: English UI, light theme, 1440px width, crop to the Purchase tab.
 
 .. note::
    Multiple subcontractors can be added to the :guilabel:`Purchase` tab on a product's page, and a
@@ -90,9 +95,14 @@ contracting company.
    The :guilabel:`Expected Arrival` date listed on the |PO| is May 8th, five days after the
    :guilabel:`Confirmation Date`.
 
-   .. image:: basic_subcontracting_lead_times/expected-arrival.png
-      :align: center
-      :alt: The Expected Arrival date on a PO for a subcontracted product.
+   .. screenshot:: manufacturing-subcontracting-lead-times-basic-arrival
+      :menu: Purchase app --> Orders --> Purchase Orders (open the confirmed PO)
+      :shows: The confirmed PO header, "Confirmation Date" of May 3rd and "Expected Arrival" of
+         May 8th.
+      :highlight: The "Expected Arrival" field.
+      :data: Demo company "YourCompany"; PO to "Bike Friends" for one "Tricycle".
+      :module: mrp_subcontracting, purchase
+      :notes: English UI, light theme, 1440px width, crop to the header.
 
    Bike Friends begins manufacturing the tricycle on May 3rd — the day that the |PO| is confirmed —
    and finishes on May 6th, three days later.

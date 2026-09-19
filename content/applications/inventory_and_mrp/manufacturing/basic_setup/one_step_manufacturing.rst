@@ -23,9 +23,13 @@ them to and from inventory is not tracked.
    components and then manufacture (2 steps)`, or :guilabel:`Pick components, manufacture and then
    store products (3 steps)`.
 
-   .. image:: one_step_manufacturing/manufacturing-type.png
-      :align: center
-      :alt: The Manufacture radio input field on a warehouse configuration page.
+   .. screenshot:: manufacturing-one-step-warehouse-type
+      :menu: Inventory ‣ Configuration ‣ Warehouses ‣ (warehouse)
+      :shows: Warehouse configuration page, "Warehouse Configuration" tab, with the "Manufacture" radio field showing its three options and "Manufacture (1 step)" selected.
+      :highlight: The "Manufacture" radio input field.
+      :data: Demo company "YourCompany"; warehouse "YourCompany".
+      :module: mrp
+      :notes: English UI, light theme, 1440px width, crop to the "Manufacture" field.
 
 .. important::
    Products must be properly configured before they can be manufactured in Odoo. For details on how
@@ -57,7 +61,8 @@ Process manufacturing order
 ===========================
 
 An |MO| is processed by completing all of the work orders listed under its :guilabel:`Work Orders`
-tab. This can be done on the |MO| itself, or from the work order tablet view.
+tab. This can be done on the |MO| itself, or from the :guilabel:`Work Orders` list (see
+:doc:`../workflows/work_orders`).
 
 Basic workflow
 --------------
@@ -69,89 +74,29 @@ On the |MO| page, select the :guilabel:`Work Orders` tab. Once work begins on th
 that needs to be completed, click the :guilabel:`Start` button for that work order. Odoo
 *Manufacturing* then starts a timer that keeps track of how long the work order takes to complete.
 
-.. image:: one_step_manufacturing/start-button.png
-   :align: center
-   :alt: The Start button for an operation on a manufacturing order.
+.. screenshot:: manufacturing-one-step-start-button
+   :menu: Manufacturing ‣ Operations ‣ Manufacturing Orders ‣ (MO) ‣ Work Orders tab
+   :shows: The Work Orders tab of a confirmed MO with a work order line and its green "Start" button.
+   :highlight: The "Start" button (red frame).
+   :data: MO "WH/MO/00001" for product "Chair"; work order "Assembly" on work center "Assembly Line 1".
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the work order line.
 
 When the work order is completed, click the :guilabel:`Done` button for that work order. Repeat the
 same process for each work order listed on the :guilabel:`Work Orders` tab.
 
-.. image:: one_step_manufacturing/done-button.png
-   :align: center
-   :alt: The Done button for an operation on a manufacturing order.
+.. screenshot:: manufacturing-one-step-done-button
+   :menu: Manufacturing ‣ Operations ‣ Manufacturing Orders ‣ (MO) ‣ Work Orders tab
+   :shows: The Work Orders tab of an MO with a running work order and its "Done" button.
+   :highlight: The "Done" button (red frame).
+   :data: MO "WH/MO/00001" for product "Chair"; work order "Assembly" in progress.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the work order line.
 
 After completing all of the work orders, click :guilabel:`Produce All` at the top of the screen to
 mark the |MO| as :guilabel:`Done`, and register the manufactured product(s) into inventory.
 
-Shop Floor workflow
--------------------
-
-To complete the work orders for an |MO| using the *Shop Floor* module, begin by navigating to
-:menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, and then select an |MO|.
-
-On the |MO|, click on the :guilabel:`Work Orders` tab, and then select the :guilabel:`↗️ (square
-with arrow coming out of it)` button on the line of the first work order to be processed. Doing so
-opens a :guilabel:`Work Orders` pop-up window, with details and processing options for the work
-order.
-
-On the pop-up window, select the :guilabel:`Open Shop Floor` button at the top-left of the window to
-open the *Shop Floor* module.
-
-.. image:: one_step_manufacturing/shop-floor-button.png
-   :align: center
-   :alt: The Open Shop Floor button for a work order on a manufacturing order.
-
-When accessed directly from a specific work order within an |MO|, *Shop Floor* defaults to the page
-for the work center where the work order is configured to be carried out. The page shows a card for
-the work order that displays the |MO| number, the product and number of units to be produced, and
-the steps required to complete the work order.
-
-.. image:: one_step_manufacturing/work-order-card.png
-   :align: center
-   :alt: A work order card on a work center page in the Shop Floor module.
-
-A work order is processed by completing each step listed on its card. This can be done by clicking
-on a step and following the instructions listed on the pop-up window that appears. Once the step is
-completed, click :guilabel:`Next` to move on to the next step, if any are required.
-
-Alternatively, work order steps can be completed by clicking the checkbox that appears on the right
-side of the step's line on the work order card. When using this method, the step is automatically
-marked as completed, without a pop-up window appearing.
-
-The final step on a work order card is titled *Register Production*. This step is used to register
-the number of product units that were produced. If the number produced is equal to the number that
-the |MO| was created for, click the :guilabel:`# Units` button on the right side of the line to
-automatically register that number as the quantity produced.
-
-If a different number must be entered, click the :guilabel:`Register Production` step to open a
-pop-up window. Enter the number of units produced in the :guilabel:`Units` field, and then click
-:guilabel:`Validate` to register that number.
-
-.. note::
-   The *Register Production* step appears on every work order card. It must be completed for the
-   first work order that is processed. After doing so, the step appears as already completed for
-   each remaining work order in the |MO|.
-
-After completing all of the steps for a work order, a button appears on the footer of the work order
-card. If any other work orders must be completed before the |MO| can be closed, the button is titled
-:guilabel:`Mark as Done`. If there are no additional work orders to complete, the button is titled
-:guilabel:`Close Production`.
-
-Clicking :guilabel:`Mark as Done` causes the work order card to fade away. Once it disappears
-completely, the work order's status is marked as *Finished* on the |MO|, and the next work order
-appears in the *Shop Floor* module, on the page of the work center where it is configured to be
-carried out. Any additional work orders can be processed using the instructions detailed in this
-section.
-
-Clicking :guilabel:`Close Production` causes the work order card to fade away. Once it disappears,
-the |MO| is marked as *Done*, and the units of the product that were produced are entered into
-inventory.
-
-After clicking :guilabel:`Mark as Done` or :guilabel:`Close Production`, each button is replaced by
-an :guilabel:`Undo` button. Click the :guilabel:`Undo` button before the work order card fades away
-to keep the work order open.
-
 .. tip::
-   This section details the basic workflow for processing an |MO| in the *Shop Floor* module. For a
-   more in-depth explanation of the module and all of its features, please see the :ref:`Shop Floor
-   overview <manufacturing/shop_floor/shop_floor_overview>` documentation.
+   For more information on processing work orders from the :guilabel:`Work Orders` list, including
+   how to pause a work order, block a work center, and how time is tracked, see
+   :doc:`../workflows/work_orders`.

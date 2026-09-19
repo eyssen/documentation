@@ -30,8 +30,7 @@ Cost configuration
 
 Odoo computes |MO| costs based on the configuration of the |BoM| used to manufacture a product. This
 calculation includes the cost and quantity of components and operations listed on the |BoM|, in
-addition to the operating costs of the work centers where those operations are carried out, and the
-amount paid to each employee who works on an operation.
+addition to the operating costs of the work centers where those operations are carried out.
 
 Component cost
 --------------
@@ -56,44 +55,23 @@ To set the operating cost for a specific work center, navigate to :menuselection
 
 To set the cost of operating the work center for one hour, enter a value in the :guilabel:`per
 workcenter` field, located beside the :guilabel:`Cost per hour` section on the work center's
-:guilabel:`General Information` tab.
+:guilabel:`General Information` tab. This is the hourly rate used for both the |MO| cost (the
+estimated cost) and the real cost (the actual cost) of every operation performed at that work
+center; Odoo does not track a hourly cost per individual employee.
 
-To set the hourly cost of each employee that operates the work center, enter a value in the
-:guilabel:`per employee` field, located beside the :guilabel:`Cost per hour` section on the work
-center's :guilabel:`General Information` tab. For example, if `25.00` is entered in the
-:guilabel:`per employee` field, it costs $25.00 per hour for *each* employee working at the work
-center.
+.. screenshot:: manufacturing-mo-costs-workcenter-cost
+   :menu: Manufacturing ‣ Configuration ‣ Work Centers ‣ (work center) ‣ General Information tab
+   :shows: The General Information tab of a work center form, "Cost per hour" section, with the "per workcenter" field filled in.
+   :highlight: The "per workcenter" field.
+   :data: Work center "Assembly Line 1", cost $30.00 per hour.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the "Cost per hour" section.
 
-.. important::
-   The value entered in the :guilabel:`per employee` field is only used to calculate the |MO| cost,
-   which is the estimated cost of completing the |MO|.
-
-   The actual cost of completing the |MO| is represented by the real cost. Instead of using the
-   value entered in the :guilabel:`per employee` field, the real cost is calculated using the hourly
-   cost specific to each employee.
-
-   For example, if the :guilabel:`per employee` cost of a work center is '$50.00', and an employee
-   with an hourly cost of '$60.00' completes a work order there, the |MO| cost (estimated) is
-   calculated using the $50/hr cost, while the real cost is calculated using the $60/hr cost.
-
-   See the :ref:`employee cost section <manufacturing/mo-costs/employee-cost>` below for information
-   on how to set the cost for specific employees.
-
-.. _manufacturing/mo-costs/employee-cost:
-
-Employee cost
--------------
-
-To set the hourly cost for a specific employee, navigate to the :menuselection:`Employees` app, and
-select an employee. On the employee's form, select the :guilabel:`Settings` tab, and enter the
-employee's rate in the :guilabel:`Hourly Cost` field of the :guilabel:`Application Settings`
-section.
-
-.. important::
-   As detailed in the :ref:`work center cost section <manufacturing/mo-costs/work-center-cost>`
-   above, the value entered in the :guilabel:`Hourly Cost` field on the employee's form is used to
-   calculate the real cost of an |MO|. The estimated cost of an |MO|, referred to as the |MO| cost,
-   uses the per employee cost set on each work center's form.
+.. tip::
+   With the accounting features of the *Manufacturing* app enabled, an :guilabel:`Expense Account`
+   field also becomes available on the work center's form, under the :guilabel:`Costing` section.
+   This is the account the work center's operating cost is posted to when the |MO| is marked as
+   *Done*. If left blank, the expense account of the finished product is used instead.
 
 |BoM| configuration
 -------------------
@@ -154,16 +132,28 @@ same costs. This is the *estimated* cost of completing the |MO|.
 
 However, once work commences, the values in the :guilabel:`Real Cost` column may begin to diverge
 from the values in the :guilabel:`MO Cost` column. This happens if a different component quantity is
-used than was listed on the |MO|, the duration of a work order is different than expected, or the
-hourly cost of the employee performing a work order differs from the employee cost set on the work
-center.
+used than was listed on the |MO|, or if the duration of a work order is different than expected.
 
-Once the |MO| has been completed by clicking :guilabel:`Produce All`, the values in the
-:guilabel:`MO Cost` column update to match those displayed in the :guilabel:`Real Cost` column.
+Once the |MO| has been completed by clicking :guilabel:`Produce All`, the component rows of the
+:guilabel:`MO Cost` column update to reflect the quantities actually consumed, matching the
+:guilabel:`Real Cost` column. The operation rows, however, keep using each operation's *expected*
+duration for the :guilabel:`MO Cost` column, while :guilabel:`Real Cost` reflects the time actually
+logged; the two therefore keep diverging whenever an operation takes more or less time than
+expected.
 
-.. image:: mo_costs/overview.png
-   :align: center
-   :alt: The MO Overview page.
+.. screenshot:: manufacturing-mo-costs-overview
+   :menu: Manufacturing ‣ Operations ‣ Manufacturing Orders ‣ (MO) ‣ Overview
+   :shows: The MO Overview page listing component and operation rows with their MO Cost, BoM Cost and Real Cost columns, and the totals row.
+   :data: MO "WH/MO/00001" for a manufactured product.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width.
+
+.. tip::
+   Manufacturing orders in progress or awaiting closing can also be posted to accounting as
+   work-in-progress. Select one or more |MOs| from the :guilabel:`Manufacturing Orders` list, then
+   use :menuselection:`⚙️ Actions --> Post WIP Accounting Entry` to create the corresponding journal
+   entry. Requires the *Inventory Valuation* accounting group, and the *Invoicing* or *Accounting*
+   app.
 
 Average manufacturing cost
 ==========================
@@ -175,6 +165,12 @@ navigate to :menuselection:`Inventory app --> Products --> Products`, and select
 The manufacturing cost of the product is displayed per unit of measure in the :guilabel:`Cost`
 field, located in the :guilabel:`General Information` tab. The value continues to update as the
 costs of additional |MOs| are factored into the average cost.
+
+.. important::
+   The :guilabel:`Cost` field only updates automatically for products using the :guilabel:`Average
+   Cost (AVCO)` or :guilabel:`First In First Out (FIFO)` costing method (set on the product
+   category). For products using the :guilabel:`Standard Price` method, the cost must be updated
+   manually.
 
 To the right of the :guilabel:`Cost` field is a :guilabel:`Compute Price from BoM` button, which
 only appears for products with at least one |BoM|. Click this button to reset the cost of the
@@ -215,21 +211,30 @@ the |BoM|.
    overview lists a cost of `$65.00` in both the :guilabel:`MO Cost` and :guilabel:`Real Cost`
    fields.
 
-   .. image:: mo_costs/overview-before.png
-      :align: center
-      :alt: The MO Overview page for one putting green, before production starts.
+   .. screenshot:: manufacturing-mo-costs-example-before
+      :menu: Manufacturing ‣ Operations ‣ Manufacturing Orders ‣ (MO) ‣ Overview
+      :shows: The MO Overview page for one putting green before production starts; MO Cost and Real Cost both $65.00.
+      :data: MO for product "Putting Green", quantity 1, not yet started.
+      :module: mrp
+      :notes: English UI, light theme, 1440px width.
 
    Manufacturing begins, and the operations take ten minutes longer than expected, for a total
    manufacturing time of 40 minutes. This deviation from the |BoM| is reflected on the |MO|
-   overview, which now lists a :guilabel:`Real Cost` of `$70.00`.
+   overview, which now lists a :guilabel:`Real Cost` of `$70.00` for the operations, while
+   :guilabel:`MO Cost` still shows the expected `$65.00`.
 
-   .. image:: mo_costs/overview-during.png
-      :align: center
-      :alt: The MO Overview page for one putting green, during production.
+   .. screenshot:: manufacturing-mo-costs-example-during
+      :menu: Manufacturing ‣ Operations ‣ Manufacturing Orders ‣ (MO) ‣ Overview
+      :shows: The MO Overview page for one putting green during production; MO Cost $65.00, Real Cost $70.00.
+      :data: MO for product "Putting Green", quantity 1, in progress.
+      :module: mrp
+      :notes: English UI, light theme, 1440px width.
 
-   Once manufacturing is finished, and the |MO| is marked as *Done*, the |MO| overview updates
-   again, so the values in the :guilabel:`MO Cost` and :guilabel:`Real Cost` columns match, each
-   displaying a value of `$70.00`.
+   Once manufacturing is finished, and the |MO| is marked as *Done*, the components' rows update to
+   the quantities actually consumed (unchanged here), but the operations keep using their *expected*
+   duration for the :guilabel:`MO Cost` column. The |MO| overview therefore keeps showing an
+   :guilabel:`MO Cost` of `$65.00` and a :guilabel:`Real Cost` of `$70.00`.
 
    On the putting green's product page, the :guilabel:`Cost` field now displays a cost of `$67.50`,
-   the average of the original cost of $65.00 and the real cost of $70.00 from the |MO|.
+   the average of the original cost of $65.00 and the *real* cost of $70.00 from the |MO| (only for
+   a product using the *Average Cost (AVCO)* or *FIFO* costing method).

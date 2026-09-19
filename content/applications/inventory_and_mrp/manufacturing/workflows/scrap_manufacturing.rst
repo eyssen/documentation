@@ -32,20 +32,11 @@ without affecting real stock levels.
 Navigate to the scrap window
 ============================
 
-Scrapping can be done in either the **Manufacturing** app or the **Shop Floor** module, depending on
-the task.
+Scrapping can be done directly from a manufacturing order in the **Manufacturing** app:
 
-**Manufacturing** app allows:
-
-- Scrapping finished products (only if the |MO| is in the *Done* stage).
-- Scrapping components (while the |MO| is in the *Draft* or *Confirmed* stage).
-
-**Shop Floor** allows:
-
-- Scrapping only components.
-
-Manufacturing app
------------------
+- Components can be scrapped as long as the |MO| has not been fully produced (:guilabel:`Draft`,
+  :guilabel:`Confirmed`, or :guilabel:`In Progress` stage).
+- Finished products can be scrapped once the |MO| is in the *Done* stage.
 
 To scrap a product from the **Manufacturing** app, go to :menuselection:`Manufacturing -->
 Operations --> Manufacturing Orders` and select the desired |MO|.
@@ -53,25 +44,20 @@ Operations --> Manufacturing Orders` and select the desired |MO|.
 On the |MO|, click the :icon:`fa-cog` :guilabel:`(Actions)` icon, then choose :guilabel:`Scrap` from
 the drop-down menu.
 
-.. image:: scrap_manufacturing/cog.png
-   :alt: MO with the cog's drop-down menu revealed, to show the Scrap option.
-
-Shop Floor
-----------
-
-In **Shop Floor**, only components can be scrapped. Navigate to the desired |MO| card, and then tap
-the :icon:`fa-cog` :guilabel:`(Actions)` icon and in the :guilabel:`What do you want to do?` pop-up
-window, select :guilabel:`Scrap`.
-
-.. image:: scrap_manufacturing/shop-floor.png
-   :alt: Scrap pop-up window in the Shop Floor app.
+.. screenshot:: manufacturing-scrap-cog-menu
+   :menu: Manufacturing app --> Operations --> Manufacturing Orders (open an MO)
+   :shows: The MO form, cog/"Actions" drop-down menu open, "Scrap" option visible in the list.
+   :highlight: The "Scrap" menu option.
+   :data: Demo company "YourCompany"; confirmed MO.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width.
 
 Scrap pop-up window
 ===================
 
-After opening the :guilabel:`Scrap Products` pop-up window using one of the methods :ref:`detailed
-above <manufacturing/management/scrap-window>`, select the component or finished product being
-scrapped, from the :guilabel:`Product` drop-down menu.
+After opening the :guilabel:`Scrap Products` pop-up window as :ref:`detailed above
+<manufacturing/management/scrap-window>`, select the component or finished product being scrapped,
+from the :guilabel:`Product` drop-down menu.
 
 In the :guilabel:`Quantity` field, enter the quantity being scrapped.
 
@@ -87,8 +73,15 @@ enabled for warehouses with :doc:`two-step <../basic_setup/two_step_manufacturin
 are not picked as part of the :doc:`one-step <../basic_setup/one_step_manufacturing>` manufacturing
 process.
 
-.. image:: scrap_manufacturing/scrap-window.png
-   :alt: The Scrap pop-up window.
+.. screenshot:: manufacturing-scrap-window
+   :menu: Manufacturing app --> Operations --> Manufacturing Orders (open an MO) --> Actions -->
+      Scrap
+   :shows: The "Scrap Products" pop-up window with "Product", "Quantity", "Source Location",
+      "Scrap Location" fields filled in, and the "Replenish Scrapped Quantities" checkbox visible.
+   :highlight: The "Replenish Scrapped Quantities" checkbox.
+   :data: Demo company "YourCompany"; component scrapped from a two-step manufacturing MO.
+   :module: mrp, stock
+   :notes: English UI, light theme, 1440px width.
 
 After filling out the :guilabel:`Scrap Products` pop-up window, click the :guilabel:`Scrap Products`
 button. After one or more scrap orders have been created, a :guilabel:`Scraps` smart button appears

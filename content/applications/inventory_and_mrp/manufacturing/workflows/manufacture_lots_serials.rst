@@ -55,8 +55,14 @@ generates a lot, using the next available number, and enters it in the field.
 Alternatively, click on the :guilabel:`Lot/Serial Number` field and select an existing lot number,
 or manually enter a new lot number and click :guilabel:`Create "#"` in the drop-down menu.
 
-.. image:: manufacture_lots_serials/lot-sn-field.png
-   :alt: The "Lot/Serial Number" field on an MO.
+.. screenshot:: manufacturing-lots-lot-field
+   :menu: Manufacturing app --> Operations --> Manufacturing Orders (open a confirmed MO)
+   :shows: The top of a confirmed MO for a lot-tracked product, "Lot/Serial Number" field with the
+      generate (plus) icon next to it.
+   :highlight: The "Lot/Serial Number" field and its plus icon.
+   :data: Demo company "YourCompany"; product tracked "By Lots".
+   :module: mrp, stock
+   :notes: English UI, light theme, 1440px width, crop to the header.
 
 Either of these methods assign the product(s) in the |MO| a lot number before production is
 finished. It is also possible to complete production and close the |MO| by clicking
@@ -90,8 +96,15 @@ To assign a serial number without closing the |MO|, enter a number manually in t
 :icon:`fa-plus-square-o` :guilabel:`(plus)` icon to the right of the field to auto-fill it with the
 next available number.
 
-.. image:: manufacture_lots_serials/lot-sn-field.png
-   :alt: The "Lot/Serial Number" field on an MO.
+.. screenshot:: manufacturing-serials-sn-field
+   :menu: Manufacturing app --> Operations --> Manufacturing Orders (open a confirmed MO for one
+      unit)
+   :shows: The top of a confirmed MO for a serial-tracked product, "Lot/Serial Number" field with
+      the generate (plus) icon next to it.
+   :highlight: The "Lot/Serial Number" field and its plus icon.
+   :data: Demo company "YourCompany"; product tracked "By Unique Serial Number", quantity 1.
+   :module: mrp, stock
+   :notes: English UI, light theme, 1440px width, crop to the header.
 
 Manufacture multiple units
 --------------------------
@@ -129,8 +142,16 @@ To assign serial numbers and complete production, click the :guilabel:`Produce` 
 splits the |MO| into individual |MOs|, one for each unit in the original |MO|. All of the |MOs| are
 closed, since production is complete.
 
-.. image:: manufacture_lots_serials/batch-production.png
-   :alt: The "Batch Production" pop-up window, from which serial numbers can be assigned.
+.. screenshot:: manufacturing-serials-batch-production
+   :menu: Manufacturing app --> Operations --> Manufacturing Orders (open an MO for multiple
+      serial-tracked units) --> Produce All
+   :shows: The "Batch Production" pop-up window, "First Lot/SN" and "Number of SN" fields filled
+      in, "Generate" button, generated serial numbers listed in the text box, "Prepare MO" and
+      "Produce" buttons.
+   :highlight: The "Generate" button and the generated serial-number list.
+   :data: Demo company "YourCompany"; MO WH/MO/00109 for 2 units of "Chair".
+   :module: mrp, stock
+   :notes: English UI, light theme, 1440px width.
 
 After clicking :guilabel:`Prepare MO` or :guilabel:`Produce`, the :menuselection:`Manufacturing` app
 automatically shows the first of the split |MOs| (ex. `WH/MO/00109-001`). To view and access the

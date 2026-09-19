@@ -69,9 +69,14 @@ and select the |BoM| for the subcontracted product.
 In the :guilabel:`BoM Type` field, select the :guilabel:`Subcontracting` option. Then, add one or
 more subcontractors in the :guilabel:`Subcontractors` field that appears below.
 
-.. image:: subcontracting_basic/bom-type.png
-   :align: center
-   :alt: The "BoM Type" field on a BoM, configured to manufacture the product using subcontracting.
+.. screenshot:: manufacturing-subcontracting-basic-bom-type
+   :menu: Manufacturing app --> Products --> Bills of Materials (open a BoM)
+   :shows: The BoM form, "BoM Type" field set to "Subcontracting", "Subcontractors" field below it
+      filled in with one vendor.
+   :highlight: The "BoM Type" and "Subcontractors" fields.
+   :data: Demo company "YourCompany"; BoM subcontracted to vendor "Bolt Subcontracting".
+   :module: mrp_subcontracting
+   :notes: English UI, light theme, 1440px width.
 
 Finally, click on the :guilabel:`Miscellaneous` tab. In the :guilabel:`Manuf. Lead Time` field,
 enter the number of days it takes the subcontractor to manufacture the product. This number is
@@ -154,11 +159,14 @@ When a |PO| is confirmed for a product manufactured using basic subcontracting, 
 dropship order is automatically created, and can be accessed from the corresponding
 :guilabel:`Receipt` or :guilabel:`Dropship` smart button that appears at the top of the |PO|.
 
-.. figure:: subcontracting_basic/subcontractor-po.png
-   :align: center
-   :alt: A PO for a basic subcontracting product, with a Receipt smart button at the top of the page.
-
-   PO for a basic subcontracting product, with a Receipt smart button at the top of the page.
+.. screenshot:: manufacturing-subcontracting-basic-po
+   :menu: Purchase app --> Orders --> Purchase Orders (open the confirmed PO)
+   :shows: A confirmed PO for a basic-subcontracting product, "Receipt" smart button visible at the
+      top of the page.
+   :highlight: The "Receipt" smart button.
+   :data: Demo company "YourCompany"; PO to subcontractor "Bolt Subcontracting".
+   :module: mrp_subcontracting, purchase
+   :notes: English UI, light theme, 1440px width, crop to the header.
 
 Process receipt or dropship order
 ---------------------------------

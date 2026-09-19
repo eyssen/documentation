@@ -24,9 +24,14 @@ reference number appears with a :guilabel:`⚙️ (settings)` button next to it.
 Click the :guilabel:`⚙️ (settings)` button to open the general settings for the manufacturing order,
 then select :guilabel:`Split`.
 
-.. image:: split_merge/settings-split.png
-   :align: center
-   :alt: The Settings and Split buttons on a manufacturing order.
+.. screenshot:: manufacturing-split-settings-button
+   :menu: Manufacturing app --> Operations --> Manufacturing Orders (open an MO)
+   :shows: The top of an MO form, settings (gear) button next to the reference number, drop-down
+      menu open showing the "Split" option.
+   :highlight: The "Split" menu option.
+   :data: Demo company "YourCompany"; MO for 6 units of a product.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the header.
 
 After selecting :guilabel:`Split`, a :guilabel:`Split production` pop-up window appears. In the
 :guilabel:`Split #` field, enter the number of manufacturing orders that the original order should
@@ -35,9 +40,15 @@ manufacturing order that will be created by the split. In the :guilabel:`Quantit
 column, enter the number of units that will be assigned to each new manufacturing order. Finally,
 click :guilabel:`Split` to split the manufacturing order.
 
-.. image:: split_merge/split-production-window.png
-   :align: center
-   :alt: The Split production pop-up window for a manufacturing order.
+.. screenshot:: manufacturing-split-production-window
+   :menu: Manufacturing app --> Operations --> Manufacturing Orders (open the MO) --> Settings -->
+      Split
+   :shows: The "Split production" pop-up window, "Split #" field set to 3, table below with one
+      line per new MO and its "Quantity To Produce" value.
+   :highlight: The "Split #" field and the "Quantity To Produce" column.
+   :data: Demo company "YourCompany"; MO WH/MO/00012 for 6 units, split into 3 orders of 2 units.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width.
 
 After clicking :guilabel:`Split`, the original manufacturing order is split into the number of
 orders that was specified in the :guilabel:`Split #` field. The reference numbers for the new
@@ -55,16 +66,26 @@ To merge two or more manufacturing orders into a single order, begin by navigati
 :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`. Select the manufacturing
 orders that will be merged by activating the checkbox to the left of the name of each order.
 
-.. image:: split_merge/select-orders.png
-   :align: center
-   :alt: Select manufacturing orders that will be merged by clicking the checkbox for each.
+.. screenshot:: manufacturing-merge-select-orders
+   :menu: Manufacturing app --> Operations --> Manufacturing Orders
+   :shows: The list view of manufacturing orders, checkboxes ticked next to two or more MOs for the
+      same product/BoM.
+   :highlight: The ticked checkboxes.
+   :data: Demo company "YourCompany"; two MOs WH/MO/00008 and WH/MO/00009 for the same product.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width.
 
 Once all manufacturing orders have been selected, click the :guilabel:`Actions` button at the top of
 the page, then select :guilabel:`Merge` from the drop-down menu.
 
-.. image:: split_merge/actions-merge.png
-   :align: center
-   :alt: The Actions and Merge buttons on the Manufacturing Orders page.
+.. screenshot:: manufacturing-merge-actions-menu
+   :menu: Manufacturing app --> Operations --> Manufacturing Orders (select 2+ MOs)
+   :shows: The list view of manufacturing orders, "Actions" drop-down menu open, "Merge" option
+      visible.
+   :highlight: The "Merge" menu option.
+   :data: Demo company "YourCompany"; two MOs selected for the same product.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width.
 
 The selected manufacturing orders are merged into a single order. The reference number for the new
 manufacturing order is the next sequential number that has *not* already been assigned to an order.

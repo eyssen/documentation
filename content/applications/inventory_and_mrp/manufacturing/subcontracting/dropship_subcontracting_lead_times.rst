@@ -63,9 +63,14 @@ subcontractor in the :guilabel:`Vendor` column.
 Once the subcontractor has been added, enter the number of days it takes them to manufacture and
 deliver the product, in the :guilabel:`Delivery Lead Time` column.
 
-.. image:: dropship_subcontracting_lead_times/delivery-lead-time.png
-   :align: center
-   :alt: The Delivery Lead Time field for a subcontractor, on the Purchase tab of a product page.
+.. screenshot:: manufacturing-subcontracting-lead-times-dropship-delivery
+   :menu: Inventory app --> Products --> Products (open a subcontracted product) --> Purchase tab
+   :shows: The Purchase tab of a product form, vendor line for the subcontractor with the
+      "Delivery Lead Time" column filled in.
+   :highlight: The "Delivery Lead Time" column.
+   :data: Demo company "YourCompany"; subcontractor "Bike Friends", delivery lead time 5 days.
+   :module: mrp_subcontracting, purchase
+   :notes: English UI, light theme, 1440px width, crop to the Purchase tab.
 
 Product manufacturing lead time
 -------------------------------
@@ -77,9 +82,14 @@ On the |BoM|, select the :guilabel:`Miscellaneous` tab. In the :guilabel:`Manuf.
 enter the same number of days that was entered in the :guilabel:`Delivery Lead Time` field of the
 |BoM|'s product.
 
-.. image:: dropship_subcontracting_lead_times/manufacturing-lead-time.png
-   :align: center
-   :alt: The Manuf. Lead Time field on a product's BoM.
+.. screenshot:: manufacturing-subcontracting-lead-times-dropship-manuf
+   :menu: Manufacturing app --> Products --> Bills of Materials (open the BoM) --> Miscellaneous
+      tab
+   :shows: The Miscellaneous tab of a BoM, "Manuf. Lead Time" field filled in.
+   :highlight: The "Manuf. Lead Time" field.
+   :data: Demo company "YourCompany"; BoM for "Bicycle", manuf. lead time 5 days.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the Miscellaneous tab.
 
 While not all of these days are actually used for manufacturing by the subcontractor, setting the
 same number of days in each field tells Odoo that the subcontractor must receive the components and
@@ -183,9 +193,14 @@ delivering it to the contracting company.
    Arrival date, giving them enough time to deliver the finished bicycle to Mike's Bikes by May
    17th.
 
-   .. image:: dropship_subcontracting_lead_times/deadline-arrival.png
-      :align: center
-      :alt: The Order Deadline and Expected Arrival dates on a dropship order.
+   .. screenshot:: manufacturing-subcontracting-lead-times-dropship-deadline
+      :menu: Purchase app --> Orders --> Requests for Quotation (open the RfQ to the dropshipper)
+      :shows: The RfQ header, "Order Deadline" of May 10th and "Expected Arrival" of May 12th.
+      :highlight: The "Order Deadline" and "Expected Arrival" fields.
+      :data: Demo company "YourCompany"; RfQ to "Bike World" for "Bicycle" components, dropshipped
+         to "Bike Friends".
+      :module: mrp_subcontracting, purchase
+      :notes: English UI, light theme, 1440px width, crop to the header.
 
    Mike's Bikes confirms the |RfQ| on May 10th, and Bike World delivers the components to Bike
    Friends on May 12th. Bike Friends manufactures the bicycle, and delivers it to Mike's Bikes on

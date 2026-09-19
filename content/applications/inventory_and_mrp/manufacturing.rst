@@ -6,14 +6,9 @@
 Manufacturing
 =============
 
-**Odoo Manufacturing** helps manufacturers schedule, plan, and process manufacturing orders. With
-the work center control panel, put tablets on the shop floor to control work orders in real-time and
-allow workers to trigger maintenance operations, feedback loops, quality issues, etc.
-
-.. seealso::
-   - `Odoo Tutorials: MRP <https://www.odoo.com/slides/mrp-29>`_
-   - `Odoo Tutorials: Barcode Scanner <https://www.odoo.com/slides/barcode-30>`_
-   - IoT Boxes (MES)
+**Odoo Manufacturing** helps manufacturers schedule, plan, and process manufacturing orders, from a
+product's bill of materials and routing, through the work orders carried out at each work center, to
+the reports used to track manufacturing costs, delays, and efficiency.
 
 .. toctree::
    :titlesonly:

@@ -85,9 +85,13 @@ and select the |BoM| for the subcontracted product.
 In the :guilabel:`BoM Type` field, select the :guilabel:`Subcontracting` option. Then, add one or
 more subcontractors in the :guilabel:`Subcontractors` field that appears below.
 
-.. image:: subcontracting_dropship/bom-type.png
-   :align: center
-   :alt: The "BoM Type" field on a BoM, configured to manufacture the product using subcontracting.
+.. screenshot:: manufacturing-subcontracting-dropship-bom-type
+   :menu: Manufacturing app --> Products --> Bills of Materials (open a BoM)
+   :shows: The BoM form, "BoM Type" field set to "Subcontracting", "Subcontractors" field filled in.
+   :highlight: The "BoM Type" and "Subcontractors" fields.
+   :data: Demo company "YourCompany"; BoM subcontracted to vendor "Bolt Subcontracting".
+   :module: mrp_subcontracting
+   :notes: English UI, light theme, 1440px width.
 
 Finally, make sure that all necessary components are specified on the :guilabel:`Components` tab. To
 add a new component, click :guilabel:`Add a line`, select the component in the :guilabel:`Component`
@@ -190,10 +194,14 @@ When a |PO| is confirmed for a product that requires dropshipping components to 
 receipt or dropship order is automatically created, and can be accessed from the corresponding
 :guilabel:`Receipt` or :guilabel:`Dropship` smart button that appears at the top of the |PO|.
 
-.. image:: subcontracting_dropship/subcontractor-po.png
-   :align: center
-   :alt: A subcontractor PO for a *Dropship Subcontractor on Order* product, with a Receipt smart
-         button at the top of the page.
+.. screenshot:: manufacturing-subcontracting-dropship-subcontractor-po
+   :menu: Purchase app --> Orders --> Purchase Orders (open the confirmed subcontractor PO)
+   :shows: A confirmed subcontractor PO for a dropship-subcontracting product, "Receipt" smart
+      button visible at the top of the page.
+   :highlight: The "Receipt" smart button.
+   :data: Demo company "YourCompany"; PO to subcontractor "Bolt Subcontracting".
+   :module: mrp_subcontracting, purchase
+   :notes: English UI, light theme, 1440px width, crop to the header.
 
 In addition, an |RfQ| is created for the components that are purchased from the vendor and sent to
 the subcontractor. However, the |RfQ| **IS NOT** automatically linked to the *subcontractor* |PO|.
@@ -218,10 +226,15 @@ components from the vendor. After doing so, a :guilabel:`Dropship` smart button 
 of the *vendor* |PO|, and a :guilabel:`Resupply` smart button appears at the top of the
 *subcontractor* |PO|.
 
-.. image:: subcontracting_dropship/vendor-po.png
-   :align: center
-   :alt: A vendor PO for the components of a *Dropship Subcontractor on Order* product, with a
-         Dropship smart button at the top of the page.
+.. screenshot:: manufacturing-subcontracting-dropship-vendor-po
+   :menu: Purchase app --> Orders --> Purchase Orders (open the confirmed vendor PO)
+   :shows: A confirmed vendor PO for the components of a dropship-subcontracting product,
+      "Dropship" smart button visible at the top of the page.
+   :highlight: The "Dropship" smart button.
+   :data: Demo company "YourCompany"; PO to component vendor, dropshipped to "Bolt
+      Subcontracting".
+   :module: mrp_subcontracting, purchase
+   :notes: English UI, light theme, 1440px width, crop to the header.
 
 Process Dropship Subcontractor order
 ------------------------------------

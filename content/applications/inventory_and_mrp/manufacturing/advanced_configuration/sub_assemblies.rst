@@ -52,8 +52,12 @@ If starting from scratch, build the |BOMs| from the bottom up. Start with the lo
 :doc:`Learn how to build a simple bill of materials <../basic_setup/bill_configuration>`. For the
 PCB, this would include the transistors, resistors, and other components.
 
-.. image:: sub_assemblies/sublevel-bom.png
-   :alt: A bill of materials for a PCB.
+.. screenshot:: manufacturing-sub-assemblies-sublevel-bom
+   :menu: Manufacturing ‣ Products ‣ Bills of Materials ‣ (sublevel BoM)
+   :shows: The Components tab of a BoM for a subassembly product "PCB", listing several electronic components.
+   :data: BoM for product "PCB"; components "Transistor", "Resistor", "Capacitor".
+   :module: mrp
+   :notes: English UI, light theme, 1440px width.
 
 After the sublevel products (like the PCB, key caps, and keyboard plate) are fully configured,
 create the top-level product by navigating to :menuselection:`Manufacturing app --> Products -->
@@ -64,8 +68,12 @@ Once the top-level product (the keyboard) is configured, click the :guilabel:`Bi
 smart button on the product form, and then select :guilabel:`New` to make a |BOM| for the top-level
 product. Add the sublevel products to this |BOM|, along with any other necessary components.
 
-.. image:: sub_assemblies/top-level-bom.png
-   :alt: A bill of materials for a keyboard, containing a bill of materials for a PCB.
+.. screenshot:: manufacturing-sub-assemblies-top-level-bom
+   :menu: Manufacturing ‣ Products ‣ Bills of Materials ‣ (top-level BoM)
+   :shows: The Components tab of a BoM for "Custom Keyboard", listing "Key Caps", "Switches", "PCB" and "Keyboard Plate" as components.
+   :data: BoM for product "Custom Keyboard"; component "PCB" (a sublevel BoM product).
+   :module: mrp
+   :notes: English UI, light theme, 1440px width.
 
 Manage production planning
 ==========================
@@ -112,8 +120,8 @@ the recommended approach for managing a multilevel |BOM|. This setup uses the **
 .. important::
    This is only one example of how to set up a multilevel |BOM| in Odoo. Consider any unique
    circumstances that need to be addressed during the configuration, and make sure they are included
-   in the setup. If any specific help is needed during setup, consider purchasing a `success pack
-   <https://www.odoo.com/pricing-packs>`_.
+   in the setup. If any specific help is needed during setup, consider consulting a support
+   provider.
 
 Create the BoMs
 ---------------

@@ -88,8 +88,8 @@ provider of each rate is displayed in the :guilabel:`Exchange Provider` column o
    :notes: English UI, light theme, 1440px width, crop to the section. The setting labels may appear in Hungarian in the current module version.
 
 .. note::
-   The *MNB* rate provider for Hungarian companies is described in the Hungarian
-   :doc:`fiscal localization <../../fiscal_localizations>` documentation.
+   The *MNB* rate provider for Hungarian companies is described in the Hungarian fiscal
+   localization documentation: :ref:`localizations/hungary/mnb`.
 
 .. _multi-currency/config-exch-diff:
 

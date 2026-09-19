@@ -27,8 +27,8 @@ Odoo supports the following depreciation methods (:guilabel:`Computation Method`
 
 .. note::
    The Hungarian localization (*eYssen Hungarian Asset Localization*, `eyssen_l10n_hu_asset`) adds a
-   :menuselection:`Accounting --> Fixed Assets` menu and Hungarian-specific asset features; see the
-   Hungarian :doc:`fiscal localization <../../fiscal_localizations>` documentation.
+   :menuselection:`Accounting --> Fixed Assets` menu and Hungarian-specific asset features; see
+   :doc:`../../fiscal_localizations/hungary/assets`.
 
 .. _assets/categories:
 

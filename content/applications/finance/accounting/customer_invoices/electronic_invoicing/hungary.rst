@@ -39,8 +39,9 @@ requirements. Here is how Odoo ensures compliance:
 
 .. note::
    The real-time invoice reporting to the NAV Online Invoice System is provided by the
-   *Magyar számlázás és NAV adatszolgáltatás* (`eyssen_l10n_hu`) module, described in the Hungarian
-   :doc:`fiscal localization <../../../fiscal_localizations>` documentation.
+   *Magyar számlázás és NAV adatszolgáltatás* (`eyssen_l10n_hu`) module; see :doc:`NAV Online Számla
+   reporting <../../../fiscal_localizations/hungary/nav_online_invoice>` in the Hungarian
+   :doc:`fiscal localization <../../../fiscal_localizations/hungary>` documentation.
 
 .. admonition:: Disclaimer
 

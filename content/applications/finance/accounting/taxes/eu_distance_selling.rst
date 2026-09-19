@@ -58,5 +58,10 @@ for goods valued at or below €150.
 The taxes created by the feature are linked to the **OSS tax grids**, so the OSS amounts can be
 retrieved from the journal items and the tax reports of your country's fiscal localization.
 
+.. note::
+   For Hungarian companies, the *Hungary - EU OSS Bridge* (`l10n_hu_oss`) module adds a dedicated
+   OSS journal, excludes OSS invoices from the NAV Online Számla reporting and provides a quarterly
+   OSS report; see :doc:`../../fiscal_localizations/hungary/oss`.
+
 .. seealso::
    - `European Commission: OSS | Taxation and Customs Union <https://ec.europa.eu/taxation_customs/business/vat/oss_en>`_

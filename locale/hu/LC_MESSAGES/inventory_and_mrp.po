@@ -4572,7 +4572,7 @@ msgstr "**Az átmozgatás teljes mennyiségének megtekintése** mértékegység
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:19
 msgid "**Link a transfer to an internal process number** to group related transfers under one reference."
-msgstr "**Egy átmozgatás összekapcsolása egy belső folyamatszámmal**, hogy az összetartozó átmozgatások egy hivatkozás alá kerüljenek csoportosításra."
+msgstr "**Egy átmozgatás összekapcsolása egy belső ügyszámmal**, hogy az összetartozó átmozgatások egy hivatkozás alá kerüljenek csoportosításra."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:21
 msgid "**Add products to a transfer from the product catalog**, the same kanban-based picker used elsewhere in Odoo for sales and purchase orders."
@@ -4660,15 +4660,15 @@ msgstr "Ugyanez az információ elérhető tömör, egysoros formában (:guilabe
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:172
 msgid "Process number on a transfer"
-msgstr "Folyamatszám az átvezetésen"
+msgstr "Ügyszám az átvezetésen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:199
 msgid "From the :guilabel:`Process Number` form itself, a :guilabel:`Stock Pickings` smart button shows how many transfers are linked to it and opens their list, and the transfer list view gains a :guilabel:`Process Number` column so linked transfers can be spotted at a glance."
-msgstr "Magáról a :guilabel:`Folyamatszám` űrlapról egy :guilabel:`Készletmozgások` gyorsgomb mutatja, hány átmozgatás kapcsolódik hozzá, és megnyitja azok listáját; az átmozgatások listanézete pedig egy :guilabel:`Folyamatszám` oszloppal bővül, így a kapcsolódó átmozgatások egy pillantással felismerhetők."
+msgstr "Magáról a :guilabel:`Process Number` űrlapról egy :guilabel:`Stock Pickings` gyorsgomb mutatja, hány átmozgatás kapcsolódik hozzá, és megnyitja azok listáját; az átmozgatások listanézete pedig egy :guilabel:`Process Number` oszloppal bővül, így a kapcsolódó átmozgatások egy pillantással felismerhetők."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:204
 msgid "Changes to the :guilabel:`Process Number` field on a transfer are tracked in the chatter, which is useful for auditing when a transfer was reassigned to a different work order or job number."
-msgstr "Az átmozgatáson lévő :guilabel:`Folyamatszám` mező módosításai a chatterben nyomon követhetők, ami hasznos annak ellenőrzéséhez, hogy egy átmozgatást mikor rendeltek át egy másik munkarendeléshez vagy munkaszámhoz."
+msgstr "Az átmozgatáson lévő :guilabel:`Process Number` mező módosításai a chatterben nyomon követhetők, ami hasznos annak ellenőrzéséhez, hogy egy átmozgatást mikor rendeltek át egy másik munkarendeléshez vagy munkaszámhoz."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:208
 msgid "Stock catalog"
@@ -23868,11 +23868,11 @@ msgstr "**Az egyes művelet-sorok analitikus felosztásának megtekintése**, va
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:30
 msgid "These helpers require no settings screen. Once the relevant module is installed, its button, field or column appears automatically on the standard :guilabel:`Transfer` form and/or the :guilabel:`Transfers` list view (:menuselection:`Inventory --> Transfers`). Every module builds on top of the eYssen :guilabel:`Inventory` layer (``eyssen_stock`` and/or ``eyssen_base``); the process-number helper additionally requires the ``process_number`` module, which defines the shared :guilabel:`Process Number` record."
-msgstr "Ezekhez a segédekhez nincs beállítóképernyő. Az adott modul telepítése után a hozzá tartozó gomb, mező vagy oszlop automatikusan megjelenik a szabványos :guilabel:`Átvezetés` űrlapon és/vagy az :guilabel:`Átvezetések` listanézetben (:menuselection:`Készlet --> Átvezetések`). Minden modul az eYssen :guilabel:`Készlet` rétegére épül (``eyssen_stock`` és/vagy ``eyssen_base``); a folyamatszám-segédhez ezen kívül a ``process_number`` modul is szükséges, amely a közös :guilabel:`Folyamatszám` rekordot definiálja."
+msgstr "Ezekhez a segédekhez nincs beállítóképernyő. Az adott modul telepítése után a hozzá tartozó gomb, mező vagy oszlop automatikusan megjelenik a szabványos :guilabel:`Átvezetés` űrlapon és/vagy az :guilabel:`Átvezetések` listanézetben (:menuselection:`Készlet --> Átvezetések`). Minden modul az eYssen :guilabel:`Készlet` rétegére épül (``eyssen_stock`` és/vagy ``eyssen_base``); az ügyszám-segédhez ezen kívül a ``process_number`` modul is szükséges, amely a közös :guilabel:`Process Number` rekordot definiálja."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:183
 msgid "When the ``process_number_stock`` module is installed, every transfer form shows a :guilabel:`Process Number` field above the transfer's name. If it is empty, a :guilabel:`Create a new process number` link creates one on the spot; an existing process number can also be selected directly. This links the transfer to the shared eYssen :guilabel:`Process Number` record (a trackable reference with assignees and a description, used to group related documents across modules)."
-msgstr "Ha a ``process_number_stock`` modul telepítve van, minden átvezetés űrlapján megjelenik egy :guilabel:`Folyamatszám` mező az átvezetés neve fölött. Ha üres, egy :guilabel:`Create a new process number` hivatkozás azonnal létrehoz egyet; de meglévő folyamatszám is közvetlenül kiválasztható. Ez az átvezetést a közös eYssen :guilabel:`Folyamatszám` rekordhoz kapcsolja (követhető hivatkozás felelősökkel és leírással, amellyel modulokon átnyúlóan csoportosíthatók az összetartozó bizonylatok)."
+msgstr "Ha a ``process_number_stock`` modul telepítve van, minden átvezetés űrlapján megjelenik egy :guilabel:`Process Number` mező az átvezetés neve fölött. Ha üres, egy :guilabel:`Create a new process number` hivatkozás azonnal létrehoz egyet; de meglévő ügyszám is közvetlenül kiválasztható. Ez az átvezetést a közös eYssen :guilabel:`Process Number` rekordhoz kapcsolja (követhető hivatkozás felelősökkel és leírással, amellyel modulokon átnyúlóan csoportosíthatók az összetartozó bizonylatok)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:239
 msgid "Scan a barcode onto a transfer"
@@ -23904,7 +23904,7 @@ msgstr "Az oszlop csak olvasható: a felosztás a beszerzési megrendelési sorb
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:293
 msgid "``process_number_stock`` — the :guilabel:`Process Number` field on transfers and the reverse :guilabel:`Stock Pickings` smart button (requires ``process_number``)."
-msgstr "``process_number_stock`` — a :guilabel:`Folyamatszám` mező az átvezetéseken és a visszairányú :guilabel:`Stock Pickings` gyorsgomb (szükséges hozzá a ``process_number``)."
+msgstr "``process_number_stock`` — a :guilabel:`Process Number` mező az átvezetéseken és a visszairányú :guilabel:`Stock Pickings` gyorsgomb (szükséges hozzá a ``process_number``)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:297
 msgid "``eyssen_barcode_stock`` — the barcode-scanner button that adds scanned products to a draft transfer."
@@ -26076,7 +26076,7 @@ msgstr "Teljesítménymutatók beállítása"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:110
 msgid ":guilabel:`Cost per hour`: the operating expense of operating this workstation."
-msgstr ":guilabel:`Költség óránként`: a munkaállomás üzemeltetésének költsége."
+msgstr ":guilabel:`Költség óránként`: a munkaközpont üzemeltetésének költsége."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:134
 msgid "For general equipment maintenance tracking (not tied to a specific work center), see :doc:`../../maintenance/add_new_equipment`."
@@ -26252,7 +26252,7 @@ msgstr "Ha az |MO| ütemezett befejezési dátuma szeptember 17. utánra esik, k
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:83
 msgid "To set the |OEE| target for a work center, navigate to :menuselection:`Manufacturing app --> Configuration --> Work Centers`, and select a work center. On the :guilabel:`General Information` tab, enter a numerical value of `100.00` or less in the :guilabel:`OEE Target` field."
-msgstr "Egy munkaközpont |OEE| célértékének beállításához lépjen a :menuselection:`Gyártás alkalmazás --> Konfiguráció --> Munkaállomások` menüpontra, és válasszon ki egy munkaközpontot. Az :guilabel:`Általános információk` fülön adjon meg egy legfeljebb `100,00` értékű számot a :guilabel:`TEH cél` mezőben."
+msgstr "Egy munkaközpont |OEE| célértékének beállításához lépjen a :menuselection:`Gyártás alkalmazás --> Konfiguráció --> Munkaközpontok` menüpontra, és válasszon ki egy munkaközpontot. Az :guilabel:`Általános információk` fülön adjon meg egy legfeljebb `100,00` értékű számot a :guilabel:`TEH cél` mezőben."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting.rst:133
 msgid "Subcontractor portal access"
@@ -26412,15 +26412,15 @@ msgstr "Ha egy munkaközpont átmenetileg használhatatlanná válik – példá
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_orders.rst:105
 msgid "To block a work center from the :guilabel:`Work Orders` page, click the status drop-down menu on one of its work orders, and select :guilabel:`Block`. Alternatively, navigate to :menuselection:`Manufacturing app --> Configuration --> Work Centers`, and click the colored status indicator on the work center's kanban card."
-msgstr "Ha a :guilabel:`Munkarendelések` oldalról szeretne blokkolni egy munkaközpontot, kattintson valamelyik munkarendelésének állapot-legördülőjére, és válassza a :guilabel:`Blokkolás` lehetőséget. Másik lehetőségként lépjen a :menuselection:`Gyártás alkalmazás --> Konfiguráció --> Munkaállomások` menüpontra, és kattintson a munkaközpont kanban-kártyáján lévő színes állapotjelzőre."
+msgstr "Ha a :guilabel:`Munkarendelések` oldalról szeretne blokkolni egy munkaközpontot, kattintson valamelyik munkarendelésének állapot-legördülőjére, és válassza a :guilabel:`Blokkolás` lehetőséget. Másik lehetőségként lépjen a :menuselection:`Gyártás alkalmazás --> Konfiguráció --> Munkaközpontok` menüpontra, és kattintson a munkaközpont kanban-kártyáján lévő színes állapotjelzőre."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_orders.rst:110
 msgid "In the :guilabel:`Block Workcenter` pop-up window that appears, select a :guilabel:`Reason` for the blockage, from options including :guilabel:`Material Availability`, :guilabel:`Equipment Failure`, :guilabel:`Setup and Adjustments`, :guilabel:`Process Defect`, and :guilabel:`Reduced Yield`. Optionally, enter additional details in the :guilabel:`Description` field. Then, click :guilabel:`Block` to confirm."
-msgstr "A megjelenő :guilabel:`Munkaállomás blokkolása` felugró ablakban válassza ki a blokkolás :guilabel:`Okát` a lehetőségek közül, például :guilabel:`Anyag elérhetősége`, :guilabel:`Berendezés meghibásodása`, :guilabel:`Beállítás és beszabályozás`, :guilabel:`Folyamathiba` vagy :guilabel:`Csökkent hozam`. Igény szerint adjon meg további részleteket a :guilabel:`Leírás` mezőben. Ezután a megerősítéshez kattintson a :guilabel:`Blokkolás` gombra."
+msgstr "A megjelenő :guilabel:`Munkaközpont blokkolása` felugró ablakban válassza ki a blokkolás :guilabel:`Okát` a lehetőségek közül, például :guilabel:`Anyag elérhetősége`, :guilabel:`Berendezés meghibásodása`, :guilabel:`Beállítás és beszabályozás`, :guilabel:`Folyamathiba` vagy :guilabel:`Csökkent hozam`. Igény szerint adjon meg további részleteket a :guilabel:`Leírás` mezőben. Ezután a megerősítéshez kattintson a :guilabel:`Blokkolás` gombra."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_orders.rst:125
 msgid "These blocking reasons are also used to compute the :doc:`Overall Equipment Effectiveness (OEE) <../reporting/oee>` of each work center. To unblock a work center, select :guilabel:`Unblock` from the same status drop-down menu, or click its status indicator again on the :guilabel:`Work Centers` kanban view."
-msgstr "Ezeket a blokkolási okokat használja a rendszer az egyes munkaközpontok :doc:`összesített berendezés-hatékonyságának (OEE) <../reporting/oee>` kiszámításához is. A munkaközpont blokkolásának feloldásához válassza a :guilabel:`Feloldás` lehetőséget ugyanabból az állapot-legördülőből, vagy kattintson ismét az állapotjelzőjére a :guilabel:`Munkaállomások` kanban-nézetében."
+msgstr "Ezeket a blokkolási okokat használja a rendszer az egyes munkaközpontok :doc:`összesített berendezés-hatékonyságának (OEE) <../reporting/oee>` kiszámításához is. A munkaközpont blokkolásának feloldásához válassza a :guilabel:`Feloldás` lehetőséget ugyanabból az állapot-legördülőből, vagy kattintson ismét az állapotjelzőjére a :guilabel:`Munkaközpontok` kanban-nézetében."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_orders.rst:131
 msgid "Work order details"
@@ -26904,7 +26904,7 @@ msgstr ":doc:`../../../websites/ecommerce/products`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:168
 msgid "With the *Process Number - Purchase* module (`process_number_purchase`) installed, a :guilabel:`Process Number` field appears above the |RFQ| form, with a :guilabel:`Create a new process number` link. See :doc:`../../../general/process_numbers` for the concept of a process number. To have a process number created automatically for every new |RFQ|, enable :guilabel:`Create Automatically` in the :guilabel:`Process Number` section of :menuselection:`Settings --> eYssen ERP`."
-msgstr "A *Process Number - Purchase* modul (`process_number_purchase`) telepítése esetén egy :guilabel:`Process Number` (folyamatszám) mező jelenik meg az |RFQ| űrlap felett, egy :guilabel:`Create a new process number` hivatkozással. A folyamatszám fogalmáról lásd: :doc:`../../../general/process_numbers`. Ahhoz, hogy minden új |RFQ|-hoz automatikusan létrejöjjön egy folyamatszám, kapcsolja be a :guilabel:`Create Automatically` beállítást a :menuselection:`Beállítások --> eYssen ERP` menüpont :guilabel:`Process Number` szakaszában."
+msgstr "A *Process Number - Purchase* modul (`process_number_purchase`) telepítése esetén egy :guilabel:`Process Number` (ügyszám) mező jelenik meg az |RFQ| űrlap felett, egy :guilabel:`Create a new process number` hivatkozással. Az ügyszám fogalmáról lásd: :doc:`../../../general/process_numbers`. Ahhoz, hogy minden új |RFQ|-hoz automatikusan létrejöjjön egy ügyszám, kapcsolja be a :guilabel:`Create Automatically` beállítást a :menuselection:`Beállítások --> eYssen ERP` menüpont :guilabel:`Process Number` szakaszában."
 
 #~ msgid "With the *Process Number - Purchase* module (`process_number_purchase`) installed, a :guilabel:`Process Number` field appears above the |RFQ| form, with a :guilabel:`Create a new process number` link. See :doc:`../../../services/project/process_numbers` for the concept of a process number. To have a process number created automatically for every new |RFQ|, enable :guilabel:`Create Automatically` under :menuselection:`Settings --> eYssen --> Process Number`."
 #~ msgstr "A *Process Number - Purchase* modul (`process_number_purchase`) telepítése esetén egy :guilabel:`Process Number` (Folyamatszám) mező jelenik meg az |RFQ| űrlap felett, egy :guilabel:`Create a new process number` (Új folyamatszám létrehozása) hivatkozással. A folyamatszám fogalmáról lásd: :doc:`../../../services/project/process_numbers`. Ahhoz, hogy minden új |RFQ|-hoz automatikusan létrejöjjön egy folyamatszám, engedélyezze a :guilabel:`Create Automatically` (Automatikus létrehozás) beállítást a :menuselection:`Settings --> eYssen --> Process Number` (Beállítások --> eYssen --> Folyamatszám) alatt."

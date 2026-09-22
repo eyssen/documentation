@@ -196,8 +196,6 @@ extensions = [
     # Strange html domain logic used in memento pages
     'html_domain',
 
-    # Git-based changelog for homepage "What's New" section
-    'changelog',
 ]
 
 if odoo_dir_in_path:

@@ -18,6 +18,17 @@ ifndef LANGUAGES
   LANGUAGES = en,hu
 endif
 
+# Absolute canonical host for production HTML. Relative canonicals (the previous
+# default when ROOT/IS_REMOTE_BUILD were empty) let Google pick doc.eyssen.uk as
+# googleCanonical while both hosts return 200. Override with IS_REMOTE_BUILD=
+# (empty) for local file:// browsing.
+ifndef ROOT
+  ROOT = https://doc.eyssen.com
+endif
+ifndef IS_REMOTE_BUILD
+  IS_REMOTE_BUILD = True
+endif
+
 SPHINX_BUILD   = sphinx-build
 CONFIG_DIR     = .
 SPHINXOPTS     = -D project_root=$(ROOT) -D canonical_version=$(CANONICAL_VERSION) \
@@ -44,7 +55,7 @@ endif
 
 #=== Standard rules ===#
 
-.PHONY: all help clean html latexpdf gettext fast static test review
+.PHONY: all help clean html latexpdf gettext fast static test review sitemap robots
 
 # In first position to build the documentation from scratch by default
 all: html
@@ -53,6 +64,8 @@ help:
 	@echo "Please use 'make <target>' where <target> is one of"
 	@echo "  html         to build the documentation to HTML"
 	@echo "  fast         to build the documentation to HTML with shallow menu (faster)"
+	@echo "  sitemap      to regenerate _build/html/sitemap.xml from the current HTML tree"
+	@echo "  robots       to copy html_extra/robots.txt into the HTML output root"
 	@echo "  clean        to delete the build files"
 	@echo "  test         to run the guidelines tests"
 
@@ -64,7 +77,25 @@ clean:
 html: $(HTML_BUILD_DIR)/_static/style.css compile-mo
 	@echo "Starting build..."
 	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b html $(SPHINXOPTS) $(SOURCE_DIR) $(HTML_BUILD_DIR)
+	@$(MAKE) --no-print-directory sitemap
+	@$(MAKE) --no-print-directory robots
 	@echo "Build finished."
+
+# Rebuild the site-wide sitemap from whatever HTML is already on disk.
+# English lives at $(BUILD_DIR)/html/; Hungarian at $(BUILD_DIR)/html/hu/.
+# Running this after each language pass keeps https://doc.eyssen.com/sitemap.xml
+# in sync with both trees.
+sitemap:
+	@echo "Generating sitemap..."
+	python3 scripts/generate_sitemap.py $(BUILD_DIR)/html
+	@echo "Sitemap written to $(BUILD_DIR)/html/sitemap.xml"
+
+# Ensure /robots.txt is present at the HTML root even for --apply without rebuild.
+# Sphinx also copies this via html_extra_path during `make html`.
+robots:
+	@echo "Installing robots.txt..."
+	cp html_extra/robots.txt $(BUILD_DIR)/html/robots.txt
+	@echo "robots.txt written to $(BUILD_DIR)/html/robots.txt"
 
 compile-mo:
 	@find locale -name "*.po" | while read po; do \

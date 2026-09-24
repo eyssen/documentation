@@ -303,6 +303,11 @@ html_favicon = os.path.join(html_theme_path[0], html_theme, 'static', 'img', 'fa
 # They are copied after the builtin static files, so a file named "default.css" will overwrite the
 # builtin "default.css".
 html_static_path = ['static']
+
+# Extra files copied to the HTML output root (not under _static/).
+# robots.txt must be at /robots.txt for crawlers; Cloudflare may still
+# inject content-signal comments at the edge when present.
+html_extra_path = ['html_extra']
 html_permalinks = True
 
 # Additional JS & CSS files that can be imported with the 'custom-js' and 'custom-css' metadata.
@@ -543,7 +548,12 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
                 page_ = re.sub("_[a-z]{2}$", "", pagename)
                 canonical_page_ = f'{page_.replace("/i18n/", "/")}.html'
 
-        if app.config.is_remote_build:
+        # Makefile passes -D is_remote_build=True as a string; treat common
+        # falsey spellings as local/relative so overrides stay safe.
+        remote_ = app.config.is_remote_build
+        if isinstance(remote_, str):
+            remote_ = remote_.strip().lower() not in ('', '0', 'false', 'no', 'off')
+        if remote_:
             # Remote build: use absolute URL with project_root
             # e.g. https://doc.eyssen.com/hu/applications.html
             root_ = app.config.project_root

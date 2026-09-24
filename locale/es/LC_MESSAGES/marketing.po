@@ -4563,139 +4563,139 @@ msgstr "Agregue cualquier nota necesaria en la pestaña :guilabel:`Notas`. Por �
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:4
 msgid "SMS via Twilio"
-msgstr ""
+msgstr "SMS a través de Twilio"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:7
 msgid "What is Twilio"
-msgstr ""
+msgstr "Qué es Twilio"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:9
 msgid "Twilio is a third-party provider that enables you to send SMS messages to your clients. Odoo provides an easy way to use this service within your Odoo apps."
-msgstr ""
+msgstr "Twilio es un proveedor externo que le permite enviar mensajes SMS a sus clientes. Odoo ofrece una forma sencilla de utilizar este servicio en sus aplicaciones de Odoo."
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:13
 msgid "Why would I need it?"
-msgstr ""
+msgstr "¿Por qué lo necesitaría?"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:15
 msgid "Although Odoo already comes with an out-of-the-box (IAP) solution for SMS messages, it might not work in some countries with stricter legal requirements. Currently, Odoo registers itself when possible to avoid extra setup for its customers, however in some countries that is not enough and the client itself must do it. This can be done through Twilio."
-msgstr ""
+msgstr "Aunque Odoo ya incluye de forma predeterminada una solución (IAP) para mensajes SMS, es posible que no funcione en algunos países con requisitos legales más estrictos. Actualmente, Odoo se registra automáticamente cuando es posible para evitarles una configuración adicional a sus clientes; sin embargo, en algunos países esto no es suficiente y el propio cliente debe hacerlo. Esto se puede hacer a través de Twilio."
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:21
 msgid "Setup your Twilio account"
-msgstr ""
+msgstr "Configure su cuenta de Twilio"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:23
 msgid "By creating a Twilio account, you will be able to create a virtual phone number from which you will be able to send SMS messages. These cost credits that are to be bought on Twilio, not Odoo."
-msgstr ""
+msgstr "Al crear una cuenta de Twilio, podrá crear un número de teléfono virtual desde el cual podrá enviar mensajes SMS. Estos consumen créditos que deben comprarse en Twilio, no en Odoo."
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:26
 msgid "Go to `Twilio <https://www.twilio.com>`_"
-msgstr ""
+msgstr "Vaya a `Twilio <https://www.twilio.com>`_"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:27
 msgid "Sign up and create a Twilio account"
-msgstr ""
+msgstr "Regístrese y cree una cuenta de Twilio"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:28
 msgid "Within your Twilio account, you can create multiple accounts (e.g. one for testing, one for each sub-company, etc.)"
-msgstr ""
+msgstr "Dentro de su cuenta de Twilio, puede crear varias cuentas (por ejemplo, una para pruebas, una para cada subempresa, etc.)"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:30
 msgid "Create a new account"
-msgstr ""
+msgstr "Cree una nueva cuenta"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:32
 msgid "Enter the name, and select :guilabel:`Twilio` for the type"
-msgstr ""
+msgstr "Ingrese el nombre y seleccione :guilabel:`Twilio` como tipo"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:33
 msgid "Select your :guilabel:`Billing Country` and click :guilabel:`Create new account`"
-msgstr ""
+msgstr "Seleccione su :guilabel:`País de facturación` y haga clic en :guilabel:`Crear nueva cuenta`"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:34
 msgid "Select the different options that match your needs"
-msgstr ""
+msgstr "Seleccione las diferentes opciones que se ajusten a sus necesidades"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:36
 msgid "For the :guilabel:`Twilio product`, select :guilabel:`SMS`"
-msgstr ""
+msgstr "Para :guilabel:`Producto de Twilio`, seleccione :guilabel:`SMS`"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:37
 msgid "For :guilabel:`How to build with Twilio`, select :guilabel:`With no code at all`"
-msgstr ""
+msgstr "Para :guilabel:`Cómo desarrollar con Twilio`, seleccione :guilabel:`Sin código`"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:38
 msgid "For your :guilabel:`goal`, select :guilabel:`3rd party integrations`"
-msgstr ""
+msgstr "Para su :guilabel:`objetivo`, seleccione :guilabel:`Integraciones de terceros`"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:39
 msgid "Click on :guilabel:`Get Started with Twilio`"
-msgstr ""
+msgstr "Haga clic en :guilabel:`Comenzar con Twilio`"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:40
 msgid "You account is now created, and you should arrive on your :guilabel:`Dashboard`"
-msgstr ""
+msgstr "Su cuenta ya está creada y debería llegar a su :guilabel:`Panel`"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:41
 msgid "Go to :menuselection:`Phone Numbers --> Manage --> Buy a number`"
-msgstr ""
+msgstr "Vaya a :menuselection:`Números de teléfono --> Administrar --> Comprar un número`"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:42
 msgid "Buy a number (it is a paying service, but you should have received some credits to start with)"
-msgstr ""
+msgstr "Compre un número (es un servicio de pago, pero debería haber recibido algunos créditos para empezar)"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:43
 msgid "Go back to bottom of the :guilabel:`Dashboard` page"
-msgstr ""
+msgstr "Regrese a la parte inferior de la página :guilabel:`Panel`"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:44
 msgid "Copy the :guilabel:`Account SID` and :guilabel:`Auth Token`"
-msgstr ""
+msgstr "Copie el :guilabel:`Account SID` y el :guilabel:`Auth Token`"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:47
 msgid "In case of a testing account, you will only be able to send SMS to phones that you have verified within `Twilio's console <https://console.twilio.com>`_."
-msgstr ""
+msgstr "En el caso de una cuenta de prueba, solo podrá enviar SMS a los teléfonos que haya verificado en `la consola de Twilio <https://console.twilio.com>`_."
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:51
 msgid "Sending SMS to some countries (such as the US or Canada) might require a registration. This can only be done by you, and not by Odoo. Please check out `Twilio's Help Center <https://help.twilio.com>`_."
-msgstr ""
+msgstr "El envío de SMS a algunos países (como Estados Unidos o Canadá) puede requerir un registro. Esto solo puede hacerlo usted, no Odoo. Consulte el `Centro de ayuda de Twilio <https://help.twilio.com>`_."
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:57
 msgid "Setup Odoo to use Twilio"
-msgstr ""
+msgstr "Configure Odoo para usar Twilio"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:59
 msgid ":ref:`Install <general/install>` the :guilabel:`Twilio SMS` module (`sms_twilio`)"
-msgstr ""
+msgstr ":ref:`Instale <general/install>` el módulo :guilabel:`Twilio SMS` (`sms_twilio`)"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:60
 msgid "In Odoo, go to :menuselection:`Settings --> General Settings --> Contacts --> Send SMS`, select :guilabel:`Send via Twilio` option, and save your change."
-msgstr ""
+msgstr "En Odoo, vaya a :menuselection:`Ajustes --> Ajustes generales --> Contactos --> Enviar SMS`, seleccione la opción :guilabel:`Enviar mediante Twilio` y guarde el cambio."
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:62
 msgid "Go back to that option, and click :guilabel:`Configure Twilio Account`"
-msgstr ""
+msgstr "Regrese a esa opción y haga clic en :guilabel:`Configurar cuenta de Twilio`"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:63
 msgid "Paste the copied credentials accordingly"
-msgstr ""
+msgstr "Pegue las credenciales copiadas en los campos correspondientes"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:64
 msgid "Click on :guilabel:`Reload numbers`"
-msgstr ""
+msgstr "Haga clic en :guilabel:`Recargar números`"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:65
 msgid "Your newly bought phone number should appear in the list"
-msgstr ""
+msgstr "Su número de teléfono recién comprado debería aparecer en la lista"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:66
 msgid "You can use the :guilabel:`Test Number` field to send an SMS"
-msgstr ""
+msgstr "Puede usar el campo :guilabel:`Número de prueba` para enviar un SMS"
 
 #: ../../content/applications/marketing/sms_marketing/twilio.rst:68
 msgid "You can have multiple numbers (for instance once per country, or one per campaign), in that case, you can reorder the numbers. By default, when sending an SMS to a client, Odoo will select the number whose country is the same as the client. If none matches, Odoo will use the first number available from the list respecting the order you have chosen."
-msgstr ""
+msgstr "Puede tener varios números (por ejemplo, uno por país o uno por campaña); en ese caso, puede reordenarlos. De forma predeterminada, al enviar un SMS a un cliente, Odoo seleccionará el número cuyo país coincida con el del cliente. Si ninguno coincide, Odoo utilizará el primer número disponible de la lista respetando el orden que haya elegido."
 
 #: ../../content/applications/marketing/surveys.rst:5
 msgid "Surveys"
@@ -6051,287 +6051,287 @@ msgstr "Las insignias se muestran en la sección de eLearning del portal del usu
 
 #: ../../content/applications/marketing/email_marketing.rst:195
 msgid "Beside the :guilabel:`Measures` drop-down menu are different graph view options. From left-to-right, those graph view options are: :guilabel:`(bar chart)` (default), :guilabel:`(line chart)`, and :guilabel:`(pie chart)`."
-msgstr ""
+msgstr "Junto al menú desplegable :guilabel:`Medidas` se encuentran las diferentes opciones de vista de gráfico. De izquierda a derecha, estas opciones son: :guilabel:`(gráfico de barras)` (predeterminado), :guilabel:`(gráfico de líneas)` y :guilabel:`(gráfico circular)`."
 
 #: ../../content/applications/marketing/email_marketing.rst:808
 msgid "The campaigns on that page are organized in stages, which can be renamed, reordered and completed under :menuselection:`Email Marketing app --> Configuration --> Campaign Stages`. Marking a stage as :guilabel:`Folded in Kanban` collapses its column, which keeps finished campaigns out of the way."
-msgstr ""
+msgstr "Las campañas de esa página están organizadas en etapas, que se pueden renombrar, reordenar y marcar como completadas en :menuselection:`Marketing por correo electrónico --> Configuración --> Etapas de campaña`. Al marcar una etapa como :guilabel:`Plegada en kanban` se contrae su columna, lo que mantiene las campañas finalizadas fuera de la vista."
 
 #: ../../content/applications/marketing/email_marketing.rst:901
 msgid "There are also buttons to :guilabel:`Send Mailing` and :guilabel:`Send SMS`."
-msgstr ""
+msgstr "También hay botones para :guilabel:`Enviar correo` y :guilabel:`Enviar SMS`."
 
 #: ../../content/applications/marketing/email_marketing/mailing_lists.rst:9
 msgid "Mailing lists can be generated in Odoo and exported as a downloadable file, or built by importing contacts via copy/paste or file upload."
-msgstr ""
+msgstr "Las listas de correo se pueden generar en Odoo y exportar como un archivo descargable, o crear importando contactos mediante copiar y pegar o la carga de un archivo."
 
 #: ../../content/applications/marketing/events.rst:197
 msgid "Event stages"
-msgstr ""
+msgstr "Etapas de eventos"
 
 #: ../../content/applications/marketing/events.rst:199
 msgid "The events on the dashboard are organized in stages, which describe where each event stands in its preparation. The default stages are :guilabel:`New`, :guilabel:`Booked`, :guilabel:`Announced`, :guilabel:`Ended` and :guilabel:`Cancelled`; they can be renamed, reordered and completed under :menuselection:`Events app --> Configuration --> Event Stages`."
-msgstr ""
+msgstr "Los eventos del tablero están organizados en etapas, que describen en qué punto de su preparación se encuentra cada evento. Las etapas predeterminadas son :guilabel:`Nuevo`, :guilabel:`Reservado`, :guilabel:`Anunciado`, :guilabel:`Finalizado` y :guilabel:`Cancelado`; se pueden renombrar, reordenar y marcar como completadas en :menuselection:`Eventos --> Configuración --> Etapas de eventos`."
 
 #: ../../content/applications/marketing/events.rst:204
 msgid "A stage has:"
-msgstr ""
+msgstr "Una etapa tiene:"
 
 #: ../../content/applications/marketing/events.rst:206
 msgid ":guilabel:`Stage Name` and :guilabel:`Stage description`;"
-msgstr ""
+msgstr ":guilabel:`Nombre de la etapa` y :guilabel:`Descripción de la etapa`;"
 
 #: ../../content/applications/marketing/events.rst:207
 msgid ":guilabel:`Folded in Kanban`: the stage's column is collapsed on the dashboard, which keeps finished or cancelled events out of the way;"
-msgstr ""
+msgstr ":guilabel:`Plegada en kanban`: la columna de la etapa aparece contraída en el tablero, lo que mantiene los eventos finalizados o cancelados fuera de la vista;"
 
 #: ../../content/applications/marketing/events.rst:209
 msgid ":guilabel:`End Stage`: events are moved into this stage automatically once they are over;"
-msgstr ""
+msgstr ":guilabel:`Etapa final`: los eventos se trasladan automáticamente a esta etapa una vez que finalizan;"
 
 #: ../../content/applications/marketing/events.rst:210
 msgid "the three kanban state labels (:guilabel:`Red`, :guilabel:`Green` and :guilabel:`Grey Kanban Label`), which rename the status a user can set on an event card, for example to mark an event as blocked."
-msgstr ""
+msgstr "las tres etiquetas de estado kanban (:guilabel:`Rojo`, :guilabel:`Verde` y :guilabel:`Etiqueta kanban gris`), que renombran el estado que un usuario puede establecer en una tarjeta de evento, por ejemplo, para marcar un evento como bloqueado."
 
 #: ../../content/applications/marketing/events.rst:225
 msgid "Event tags"
-msgstr ""
+msgstr "Etiquetas de eventos"
 
 #: ../../content/applications/marketing/events.rst:227
 msgid "Events are categorized with tags, and the tags themselves are grouped into categories (:menuselection:`Events app --> Configuration --> Event Tags Categories`). A category — for example *Format* or *Audience* — holds its own tags, and the order of both the categories and their tags is set by their sequence."
-msgstr ""
+msgstr "Los eventos se clasifican con etiquetas, y estas a su vez se agrupan en categorías (:menuselection:`Eventos --> Configuración --> Categorías de etiquetas de eventos`). Una categoría, por ejemplo *Formato* o *Público*, contiene sus propias etiquetas, y el orden tanto de las categorías como de sus etiquetas se establece según su secuencia."
 
 #: ../../content/applications/marketing/events.rst:232
 msgid "A tag's :guilabel:`Color Index` decides whether it is public: a tag without a color is only visible internally, while a colored tag is also displayed on the event website, where visitors can filter the events by it."
-msgstr ""
+msgstr "El :guilabel:`Índice de color` de una etiqueta determina si esta es pública: una etiqueta sin color solo es visible internamente, mientras que una etiqueta con color también se muestra en el sitio web del evento, donde los visitantes pueden filtrar los eventos por ella."
 
 #: ../../content/applications/marketing/events/create_events.rst:20
 msgid "To create a new event, begin by navigating to the :menuselection:`Events app` to land on the default :guilabel:`Events` dashboard, in the :icon:`oi-view-kanban` :guilabel:`Kanban` view. From there, or alternatively from the :icon:`fa-calendar` :guilabel:`Calendar` or :icon:`oi-view-list` :guilabel:`List` views, click the :guilabel:`New` button in the upper-left corner of the dashboard to open up a new event form."
-msgstr ""
+msgstr "Para crear un nuevo evento, comience navegando a la aplicación :menuselection:`Eventos` para llegar al tablero predeterminado de :guilabel:`Eventos`, en la vista :icon:`oi-view-kanban` :guilabel:`Kanban`. Desde ahí, o alternativamente desde las vistas :icon:`fa-calendar` :guilabel:`Calendario` o :icon:`oi-view-list` :guilabel:`Lista`, haga clic en el botón :guilabel:`Nuevo` en la esquina superior izquierda del tablero para abrir un nuevo formulario de evento."
 
 #: ../../content/applications/marketing/events/create_events.rst:38
 msgid "For example, the :guilabel:`Company` field **only** appears if the database is working in a multi-company environment."
-msgstr ""
+msgstr "Por ejemplo, el campo :guilabel:`Empresa` **solo** aparece si la base de datos funciona en un entorno multiempresa."
 
 #: ../../content/applications/marketing/events/create_events.rst:91
 msgid "Tags can be displayed on events that are listed on the website by enabling the *Show on Website* checkbox from :menuselection:`Events app --> Configuration --> Event Tags Categories`."
-msgstr ""
+msgstr "Las etiquetas se pueden mostrar en los eventos que aparecen en el sitio web al habilitar la casilla *Mostrar en el sitio web* desde :menuselection:`Eventos --> Configuración --> Categorías de etiquetas de eventos`."
 
 #: ../../content/applications/marketing/events/create_events.rst:212
 msgid "To add a communication in the :guilabel:`Communication` tab, click :guilabel:`Add a line`. Then, select the desired type of communication in the :guilabel:`Send` field. The options are: :guilabel:`Mail` or :guilabel:`SMS`."
-msgstr ""
+msgstr "Para añadir una comunicación en la pestaña :guilabel:`Comunicación`, haga clic en :guilabel:`Añadir una línea`. Luego, seleccione el tipo de comunicación deseado en el campo :guilabel:`Enviar`. Las opciones son: :guilabel:`Correo` o :guilabel:`SMS`."
 
 #: ../../content/applications/marketing/events/create_events.rst:224
 msgid "The :guilabel:`SMS` option **only** appears if the *SMS Marketing* application is installed."
-msgstr ""
+msgstr "La opción :guilabel:`SMS` **solo** aparece si la aplicación *SMS Marketing* está instalada."
 
 #: ../../content/applications/marketing/events/event_tracks.rst:74
 msgid "The tracks are presented in a default :icon:`oi-view-kanban` :guilabel:`(Kanban)` view, but there is also the option to view these tracks in a :icon:`oi-view-list` :guilabel:`(List)`, :icon:`fa-calendar-check-o` :guilabel:`(Calendar)`, :icon:`fa-area-chart` :guilabel:`(Graph)`, or :icon:`fa-clock-o` :guilabel:`(Activity)` view. All of which are accessible in the upper-right corner of the :guilabel:`Tracks` page."
-msgstr ""
+msgstr "Las sesiones se presentan de forma predeterminada en una vista :icon:`oi-view-kanban` :guilabel:`(Kanban)`, pero también existe la opción de verlas en una vista :icon:`oi-view-list` :guilabel:`(Lista)`, :icon:`fa-calendar-check-o` :guilabel:`(Calendario)`, :icon:`fa-area-chart` :guilabel:`(Gráfico)` o :icon:`fa-clock-o` :guilabel:`(Actividad)`. Todas ellas están disponibles en la esquina superior derecha de la página :guilabel:`Sesiones`."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:5
 msgid "Google Ad Manager"
-msgstr ""
+msgstr "Google Ad Manager"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:7
 msgid "The *Google Ad Manager* module (`google_ad_manager`) brings the ad trafficking objects of a Google Ad Manager network into Odoo and keeps them in sync in both directions. Sales orders, line items, creatives and the ad inventory can be reviewed — and, where Google allows it, maintained — from Odoo, next to the advertisers that are already contacts in the database."
-msgstr ""
+msgstr "El módulo *Google Ad Manager* (`google_ad_manager`) trae a Odoo los objetos de gestión publicitaria de una red de Google Ad Manager y los mantiene sincronizados en ambas direcciones. Las órdenes de venta, elementos de línea, creatividades y el inventario publicitario se pueden consultar (y, cuando Google lo permite, gestionar) desde Odoo, junto a los anunciantes que ya son contactos en la base de datos."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:16
 msgid "Connection"
-msgstr ""
+msgstr "Conexión"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:18
 msgid "Go to :menuselection:`Ad Manager --> Configuration --> Connections` and create a connection:"
-msgstr ""
+msgstr "Vaya a :menuselection:`Ad Manager --> Configuración --> Conexiones` y cree una conexión:"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:20
 msgid ":guilabel:`Name`: a name for this connection."
-msgstr ""
+msgstr ":guilabel:`Nombre`: un nombre para esta conexión."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:21
 msgid ":guilabel:`Company`: the Odoo company the connection belongs to."
-msgstr ""
+msgstr ":guilabel:`Empresa`: la empresa de Odoo a la que pertenece la conexión."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:22
 msgid ":guilabel:`Network Code`: the code of the Google Ad Manager network."
-msgstr ""
+msgstr ":guilabel:`Código de red`: el código de la red de Google Ad Manager."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:23
 msgid "the **service account key** of the Google service account authorized on that network."
-msgstr ""
+msgstr "la **clave de la cuenta de servicio** de la cuenta de servicio de Google autorizada en esa red."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:24
 msgid ":guilabel:`Application Name`: the name reported to Google, `eYssen Odoo` by default."
-msgstr ""
+msgstr ":guilabel:`Nombre de la aplicación`: el nombre que se informa a Google, `eYssen Odoo` de forma predeterminada."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:25
 msgid ":guilabel:`Synchronization enabled` and :guilabel:`Sync Interval (min)`: whether the scheduled synchronization runs for this connection, and how often."
-msgstr ""
+msgstr ":guilabel:`Sincronización habilitada` y :guilabel:`Intervalo de sincronización (min)`: si la sincronización programada se ejecuta para esta conexión y con qué frecuencia."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:28
 msgid ":guilabel:`Test Connection` verifies the credentials and fills in the network's display name, currency, time zone and root ad unit, which are read from Google and cannot be edited in Odoo. :guilabel:`Sync Now` starts a synchronization immediately."
-msgstr ""
+msgstr ":guilabel:`Probar conexión` verifica las credenciales y completa el nombre para mostrar de la red, la moneda, la zona horaria y la unidad de anuncios raíz, que se obtienen de Google y no se pueden editar en Odoo. :guilabel:`Sincronizar ahora` inicia una sincronización de inmediato."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:41
 msgid "The service account key gives full access to the ad network. Treat it as a password: only users who administer the connection should be allowed to open it."
-msgstr ""
+msgstr "La clave de la cuenta de servicio otorga acceso completo a la red publicitaria. Trátela como una contraseña: solo los usuarios que administran la conexión deberían poder abrirla."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:45
 msgid "Synchronization"
-msgstr ""
+msgstr "Sincronización"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:47
 msgid "Each synchronization is recorded under :menuselection:`Ad Manager --> Reporting --> Sync Runs`, with its start and end time, its status, the number of records pulled from Google, pushed to Google, skipped, and in error, and the full log. This is the place to look when a record does not appear, or when a change made in Odoo did not reach Google."
-msgstr ""
+msgstr "Cada sincronización se registra en :menuselection:`Ad Manager --> Reportes --> Ejecuciones de sincronización`, con su hora de inicio y fin, su estado, el número de registros obtenidos de Google, enviados a Google, omitidos y con error, además del registro completo. Este es el lugar donde buscar cuando un registro no aparece o cuando un cambio realizado en Odoo no llegó a Google."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:60
 msgid "Every synchronized record carries its own state, shown on the record itself:"
-msgstr ""
+msgstr "Cada registro sincronizado tiene su propio estado, que se muestra en el mismo registro:"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:62
 msgid ":guilabel:`New local`: created in Odoo, not sent to Google yet;"
-msgstr ""
+msgstr ":guilabel:`Nuevo local`: creado en Odoo, aún no enviado a Google;"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:63
 msgid ":guilabel:`Dirty local`: changed in Odoo since the last synchronization;"
-msgstr ""
+msgstr ":guilabel:`Modificado local`: cambiado en Odoo desde la última sincronización;"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:64
 msgid ":guilabel:`Synced`: identical on both sides;"
-msgstr ""
+msgstr ":guilabel:`Sincronizado`: idéntico en ambos lados;"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:65
 msgid ":guilabel:`Error`: the last synchronization of this record failed; the reason is shown on the record;"
-msgstr ""
+msgstr ":guilabel:`Error`: la última sincronización de este registro falló; el motivo se muestra en el registro;"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:67
 msgid ":guilabel:`Pending archive` and :guilabel:`Archived`: the record is being, or has been, archived."
-msgstr ""
+msgstr ":guilabel:`Archivado pendiente` y :guilabel:`Archivado`: el registro se está archivando o ya ha sido archivado."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:69
 msgid "A single record can be synchronized on its own with the :guilabel:`Sync` button on its form, which is useful after fixing the cause of an error."
-msgstr ""
+msgstr "Un solo registro se puede sincronizar de forma individual con el botón :guilabel:`Sincronizar` de su formulario, lo cual es útil después de corregir la causa de un error."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:73
 msgid "Advertisers and agencies"
-msgstr ""
+msgstr "Anunciantes y agencias"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:75
 msgid ":menuselection:`Ad Manager --> Companies` lists the advertisers and agencies of the network, with their :guilabel:`Type` and contact email. Each of them can be linked to an Odoo :guilabel:`Contact`, so that the ad orders of a customer can be related to the rest of their file."
-msgstr ""
+msgstr ":menuselection:`Ad Manager --> Empresas` muestra los anunciantes y agencias de la red, con su :guilabel:`Tipo` y correo electrónico de contacto. Cada uno de ellos se puede vincular a un :guilabel:`Contacto` de Odoo, de modo que las órdenes publicitarias de un cliente puedan relacionarse con el resto de su expediente."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:80
 msgid "Orders and line items"
-msgstr ""
+msgstr "Órdenes y elementos de línea"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:82
 msgid ":menuselection:`Ad Manager --> Orders` lists the ad orders, each with its :guilabel:`Advertiser`, :guilabel:`Agency`, :guilabel:`Status`, :guilabel:`Trafficker`, :guilabel:`Salesperson`, the period it runs, and its currency and notes."
-msgstr ""
+msgstr ":menuselection:`Ad Manager --> Órdenes` muestra las órdenes publicitarias, cada una con su :guilabel:`Anunciante`, :guilabel:`Agencia`, :guilabel:`Estado`, :guilabel:`Gestor de tráfico`, :guilabel:`Comercial`, el período en que se ejecuta, su moneda y sus notas."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:86
 msgid "An order's :guilabel:`Line Items` (:menuselection:`Ad Manager --> Line Items`) describe what is actually delivered:"
-msgstr ""
+msgstr "Los :guilabel:`Elementos de línea` de una orden (:menuselection:`Ad Manager --> Elementos de línea`) describen lo que realmente se entrega:"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:89
 msgid ":guilabel:`Type` and :guilabel:`Priority`: the kind of line item and its priority in ad serving;"
-msgstr ""
+msgstr ":guilabel:`Tipo` y :guilabel:`Prioridad`: el tipo de elemento de línea y su prioridad en la entrega de anuncios;"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:90
 msgid ":guilabel:`Cost Type` and :guilabel:`Rate`: how the line item is charged (e.g., CPM) and at which rate, in the order's currency;"
-msgstr ""
+msgstr ":guilabel:`Tipo de costo` y :guilabel:`Tarifa`: cómo se cobra el elemento de línea (por ejemplo, CPM) y a qué tarifa, en la moneda de la orden;"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:92
 msgid ":guilabel:`Start` and :guilabel:`Target End`: the booked period, the effective end date coming back from Google;"
-msgstr ""
+msgstr ":guilabel:`Inicio` y :guilabel:`Fin previsto`: el período reservado, la fecha de finalización efectiva que devuelve Google;"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:94
 msgid ":guilabel:`Environment`: where the ad is served, for example in a browser."
-msgstr ""
+msgstr ":guilabel:`Entorno`: dónde se entrega el anuncio, por ejemplo, en un navegador."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:105
 msgid "Inventory"
-msgstr ""
+msgstr "Inventario"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:107
 msgid ":menuselection:`Ad Manager --> Inventory` holds the ad space of the network:"
-msgstr ""
+msgstr ":menuselection:`Ad Manager --> Inventario` contiene el espacio publicitario de la red:"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:109
 msgid ":guilabel:`Ad Units`: the ad slots, organized as a tree under the network's root ad unit, with their code, status and the accepted sizes;"
-msgstr ""
+msgstr ":guilabel:`Unidades de anuncios`: los espacios publicitarios, organizados en árbol bajo la unidad de anuncios raíz de la red, con su código, estado y los tamaños aceptados;"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:111
 msgid ":guilabel:`Placements`: named groups of ad units that can be targeted as one."
-msgstr ""
+msgstr ":guilabel:`Ubicaciones`: grupos con nombre de unidades de anuncios que se pueden segmentar como una sola."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:113
 msgid "Line items are targeted at ad units and placements, so the inventory determines where each line item can be served."
-msgstr ""
+msgstr "Los elementos de línea se segmentan hacia unidades de anuncios y ubicaciones, por lo que el inventario determina dónde se puede entregar cada elemento de línea."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:117
 msgid "Creatives"
-msgstr ""
+msgstr "Creatividades"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:119
 msgid ":menuselection:`Ad Manager --> Creatives` lists the creatives with their type, size, advertiser, destination URL and — depending on the creative — the uploaded asset or the code snippet. A preview link opens the creative as Google renders it."
-msgstr ""
+msgstr ":menuselection:`Ad Manager --> Creatividades` muestra las creatividades con su tipo, tamaño, anunciante, URL de destino y, según la creatividad, el archivo cargado o el fragmento de código. Un enlace de vista previa abre la creatividad tal como la renderiza Google."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:123
 msgid "A creative is shown for a line item through a **creative association** (:menuselection:`Ad Manager --> Creatives --> Creative Associations`), which links one creative to one line item for a given period and set of sizes."
-msgstr ""
+msgstr "Una creatividad se muestra para un elemento de línea mediante una **asociación de creatividad** (:menuselection:`Ad Manager --> Creatividades --> Asociaciones de creatividades`), que vincula una creatividad con un elemento de línea para un período y un conjunto de tamaños determinados."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:128
 msgid "`Google Ad Manager help <https://support.google.com/admanager>`_"
-msgstr ""
+msgstr "`Ayuda de Google Ad Manager <https://support.google.com/admanager>`_"
 
 #: ../../content/applications/marketing/sms_marketing/marketing_campaigns.rst:106
 msgid "With each campaign, the options to :guilabel:`Send Mailing` and :guilabel:`Send SMS` are available above the template form."
-msgstr ""
+msgstr "En cada campaña, las opciones :guilabel:`Enviar correo` y :guilabel:`Enviar SMS` están disponibles encima del formulario de la plantilla."
 
 #: ../../content/applications/marketing/sms_marketing/marketing_campaigns.rst:113
 msgid "At the top of the template, there are various analytical smart buttons. When clicked, Odoo reveals in-depth metrics related to that specific topic (e.g. :guilabel:`Mailings`, :guilabel:`SMS`, :guilabel:`Clicks`, :guilabel:`Opportunities`, :guilabel:`Quotations`, or :guilabel:`Revenues`) on a separate page."
-msgstr ""
+msgstr "En la parte superior de la plantilla hay varios botones inteligentes de análisis. Al hacer clic en ellos, Odoo muestra métricas detalladas relacionadas con ese tema específico (por ejemplo, :guilabel:`Correos`, :guilabel:`SMS`, :guilabel:`Clics`, :guilabel:`Oportunidades`, :guilabel:`Presupuestos` o :guilabel:`Ingresos`) en una página aparte."
 
 #: ../../content/applications/marketing/sms_marketing/pricing_and_faq.rst:0
 msgid "Yes, but it is not possible out-of-the-box: it requires a custom development. A Twilio integration is available out of the box; see :doc:`twilio`. For other providers, contact your support provider."
-msgstr ""
+msgstr "Sí, pero no es posible de forma predeterminada: requiere un desarrollo personalizado. Hay una integración con Twilio disponible de forma predeterminada; consulte :doc:`twilio`. Para otros proveedores, póngase en contacto con su proveedor de soporte."
 
 #: ../../content/applications/marketing/sms_marketing/sms_analysis.rst:5
 msgid "On the :guilabel:`Reporting` page (accessible via the :menuselection:`Reporting` option in the header menu), there are options to apply different combinations of :guilabel:`Filters` and :guilabel:`Measures` to view metrics in a number of different layouts (e.g. :guilabel:`Graph` and :guilabel:`List` views)."
-msgstr ""
+msgstr "En la página :guilabel:`Reportes` (a la que se accede mediante la opción :menuselection:`Reportes` del menú superior), hay opciones para aplicar diferentes combinaciones de :guilabel:`Filtros` y :guilabel:`Medidas` con el fin de ver las métricas en varios formatos distintos (por ejemplo, las vistas :guilabel:`Gráfico` y :guilabel:`Lista`)."
 
 #: ../../content/applications/marketing/sms_marketing/sms_analysis.rst:26
 msgid "SMS messages can be sent using :doc:`automation rules </applications/general/automation_rules>`. To create one, activate the :ref:`developer mode <developer-mode>`, open the model's list or form view, and select :menuselection:`(gear icon) --> Automations`."
-msgstr ""
+msgstr "Los mensajes SMS se pueden enviar mediante :doc:`reglas de automatización </applications/general/automation_rules>`. Para crear una, active el :ref:`modo desarrollador <developer-mode>`, abra la vista de lista o de formulario del modelo y seleccione :menuselection:`(icono de engranaje) --> Automatizaciones`."
 
 #: ../../content/applications/marketing/surveys/analysis.rst:333
 msgid "Detailed answers"
-msgstr ""
+msgstr "Respuestas detalladas"
 
 #: ../../content/applications/marketing/surveys/analysis.rst:335
 msgid "To work with the individual answers across all surveys — for instance to export them, or to look for a specific answer given to a question — go to :menuselection:`Surveys app --> Questions & Answers --> Detailed Answers`. Each line is one answer of one participant to one question, with the survey, the question, the participant and the value given, so the list can be filtered and grouped like any other Odoo report."
-msgstr ""
+msgstr "Para trabajar con las respuestas individuales de todas las encuestas (por ejemplo, para exportarlas o buscar una respuesta específica dada a una pregunta), vaya a :menuselection:`Encuestas --> Preguntas y respuestas --> Respuestas detalladas`. Cada línea es una respuesta de un participante a una pregunta, con la encuesta, la pregunta, el participante y el valor indicado, por lo que la lista se puede filtrar y agrupar como cualquier otro reporte de Odoo."
 
 #: ../../content/applications/marketing/surveys/analysis.rst:341
 msgid "The same menu also holds:"
-msgstr ""
+msgstr "El mismo menú también contiene:"
 
 #: ../../content/applications/marketing/surveys/analysis.rst:343
 msgid ":guilabel:`Questions`: every question of every survey, which makes it easy to find where a question is used;"
-msgstr ""
+msgstr ":guilabel:`Preguntas`: todas las preguntas de todas las encuestas, lo que facilita encontrar dónde se utiliza una pregunta;"
 
 #: ../../content/applications/marketing/surveys/analysis.rst:345
 msgid ":guilabel:`Suggested Values`: the answer options offered by the choice and matrix questions."
-msgstr ""
+msgstr ":guilabel:`Valores sugeridos`: las opciones de respuesta que ofrecen las preguntas de opción y de matriz."
 
 #: ../../content/applications/marketing/surveys/live_session.rst:144
 msgid "If `1212` has been entered as the :guilabel:`Session Code`, the URL in the :guilabel:`Session Link` field begins with the basic URL of the database (e.g. `sample-database.example.com`), followed by: `/s/1212`."
-msgstr ""
+msgstr "Si se ingresó `1212` como :guilabel:`Código de sesión`, la URL en el campo :guilabel:`Enlace de sesión` comienza con la URL base de la base de datos (por ejemplo, `sample-database.example.com`), seguida de: `/s/1212`."
 
 #: ../../content/applications/marketing/surveys/live_session.rst:148
 msgid "So, collectively, that sample :guilabel:`Session Link` would be: `sample-database.example.com/s/1212`."
-msgstr ""
+msgstr "Entonces, en conjunto, ese :guilabel:`Enlace de sesión` de ejemplo sería: `sample-database.example.com/s/1212`."
 
 #~ msgid "`Odoo Tutorial: Email Marketing <https://www.odoo.com/slides/slide/email-marketing-essentials-989?fullscreen=1>`_"
 #~ msgstr "`Tutoriales de Odoo: Marketing por correo electrónico <https://www.odoo.com/slides/slide/email-marketing-essentials-989?fullscreen=1>`_"

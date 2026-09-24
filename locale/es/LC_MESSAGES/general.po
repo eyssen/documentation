@@ -1463,7 +1463,7 @@ msgstr "Visite la :ref:`documentación sobre el filtro de <email-outbound-differ
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:229 ../../content/applications/general/email_communication/azure_oauth.rst:277
 msgid "The :guilabel:`System Parameters` can be accessed by activating :ref:`developer-mode` in the :menuselection:`Settings --> Technical --> Parameters --> System Parameters` menu."
-msgstr "Puede acceder a los :guilabel:`Parámetros del sistema` activando el :ref:`modo desarrollador` en :menuselection:`Ajustes --> Técnico--> Parámetros--> Parámetros del sistema`.  "
+msgstr "Puede acceder a los :guilabel:`Parámetros del sistema` activando el :ref:`modo desarrollador <developer-mode>` en :menuselection:`Ajustes --> Técnico--> Parámetros--> Parámetros del sistema`.  "
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:232
 msgid "When using this configuration, every email that is sent from the database will use the address of the configured `notification` mailbox. However it should be noted that the name of the sender will appear but their email address will change:"
@@ -1479,7 +1479,7 @@ msgstr "*Nombre de usuario* (inicio de sesión) del servidor de correo electrón
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:246
 msgid "Outgoing mail server :guilabel:`FROM Filtering` = `notifications@example.com`"
-msgstr "Servidor de correo electrónico de salida :guilabel:`FROM Filtering = `notificaciones@ejemplo.com`"
+msgstr "Servidor de correo electrónico de salida :guilabel:`FROM Filtering` = `notificaciones@ejemplo.com`"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:247 ../../content/applications/general/email_communication/azure_oauth.rst:302
 msgid "`mail.catchall.domain` in system parameters = `example.com`"
@@ -2447,7 +2447,7 @@ msgstr "¿Es un problema genérico o es específico de un caso de uso? Si es esp
 
 #: ../../content/applications/general/email_communication/faq.rst:346
 msgid "Is it working as expected? In case the email is sent using Odoo, the bounce email should reach the Odoo database and display the :ref:`red envelope <email-issues-outgoing-delivery-failure>`."
-msgstr "¿Funciona como debería? En caso de que utilice Odoo para enviar el correo, el correo devuelto debe llegar a la base de datos de Odoo y aparecer con un :guilabel:`sobre rojo <email-issues-outgoing-delivery-failure>`."
+msgstr "¿Funciona como debería? En caso de que utilice Odoo para enviar el correo, el correo devuelto debe llegar a la base de datos de Odoo y aparecer con un :ref:`sobre rojo <email-issues-outgoing-delivery-failure>`."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:3
 msgid "Connect Gmail to Odoo using Google OAuth"
@@ -2803,7 +2803,7 @@ msgstr "Configuración en Odoo"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:191
 msgid "To complete the setup, navigate to the Odoo database and go to the :guilabel:`Settings`. With :ref:`developer-mode` turned on, go to the :menuselection:`Technical Menu --> Email --> Outgoing Mail Servers`. Then, create a new outgoing server configuration by clicking on the :guilabel:`Create` button."
-msgstr "Para completar la configuración, vaya a la base de datos de Odoo y luego a los :guilabel:`Ajustes`. Active el :ref:`modo de desarrollador`, vaya a :menuselection:`Menú técnico --> Correo electrónico --> Servidores de correo saliente`. Posteriormente, cree una nueva configuración de servidor saliente al hacer clic en el botón de :guilabel:`Crear`."
+msgstr "Para completar la configuración, vaya a la base de datos de Odoo y luego a los :guilabel:`Ajustes`. Active el :ref:`modo de desarrollador <developer-mode>`, vaya a :menuselection:`Menú técnico --> Correo electrónico --> Servidores de correo saliente`. Posteriormente, cree una nueva configuración de servidor saliente al hacer clic en el botón de :guilabel:`Crear`."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:196
 msgid "Next, input the `SMTP server` (in-v3.mailjet.com), `port number` (587 or 465), and `Security (SSL/TLS)` that was copied earlier from the Mailjet account. They can also be found `here <https://app.mailjet.com/account/setup>`_. It is recommended to use :abbr:`SSL (Secure Sockets Layer)`/:abbr:`TLS (Transport Layer Security)` even though Mailjet may not require it."
@@ -4423,7 +4423,7 @@ msgstr "Para vincular su cuenta de Google con el perfil de Odoo, haga clic en :g
 
 #: ../../content/applications/general/users/google.rst:179
 msgid "Existing users must :ref:`reset their password <users/reset-password>` to access the :menuselection:`Reset Password` page, while new users can directly click on :guilabel:`Log in with Google`, instead of choosing a new password."
-msgstr "Los usuarios existentes deben :ref:`restablecer su contraseña <usuarios/restablecer contraseña>` para ir a la página de :menuselection:`Restablcer contraseña`. Los usuarios nuevos puede hacer clic en :guilabel:`Acceder con Google` en lugar de elegir una nueva contraseña."
+msgstr "Los usuarios existentes deben :ref:`restablecer su contraseña <users/reset-password>` para ir a la página de :menuselection:`Restablcer contraseña`. Los usuarios nuevos puede hacer clic en :guilabel:`Acceder con Google` en lugar de elegir una nueva contraseña."
 
 #: ../../content/applications/general/users/google.rst:184
 msgid "`Google Cloud Platform Console Help - Setting up OAuth 2.0 <https://support.google.com/cloud/answer/6158849>`_"

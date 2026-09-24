@@ -74,7 +74,7 @@ msgstr "Por ejemplo, en un :doc:`punto de venta <../../../sales/point_of_sale>` 
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:26
 msgid "To use |UPC| and |EAN| barcodes for uniquely identifying products across the entire supply chain, they **must** be `purchased from GS1 <https://www.gs1.org/standards/get-barcodes>`_."
-msgstr "Si desea utilizar códigos de barras UPC y EAN para identificar de manera única los productos en la cadena de suministro **debe* `comprarlos a través de GS1 <https://www.gs1.org/standards/get-barcodes>`_."
+msgstr "Si desea utilizar códigos de barras UPC y EAN para identificar de manera única los productos en la cadena de suministro **debe** `comprarlos a través de GS1 <https://www.gs1.org/standards/get-barcodes>`_."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:29
 msgid "In Odoo, custom barcode patterns can be defined to recognize barcodes specific to the company. Barcodes do not need to be purchased if used only within the company, such as in the :ref:`example <barcode/operations/product-weight>` where the barcode is written in the |EAN| format."
@@ -1706,7 +1706,7 @@ msgstr ":guilabel:`Uso del paquete`: seleccione :guilabel:`Caja reutilizable` si
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:232
 msgid ":doc:`Using cluster packages <../../shipping_receiving/picking_methods/cluster>`"
-msgstr ":doc:` Usar paquetes para preparar varias órdenes <../../shipping_receiving/picking_methods/cluster>`"
+msgstr ":doc:`Usar paquetes para preparar varias órdenes <../../shipping_receiving/picking_methods/cluster>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:235
 msgid "View packages"
@@ -1990,7 +1990,7 @@ msgstr "Bienes rastreados y no rastreados"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:104
 msgid "The :guilabel:`Track Inventory` field on the product form determines a lot of Odoo's **Inventory** operations."
-msgstr "El campo :guilabel:`Rastrear inventario` del formulario del producto determina muchas de las operaciones de *Inventario** en Odoo."
+msgstr "El campo :guilabel:`Rastrear inventario` del formulario del producto determina muchas de las operaciones de **Inventario** en Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:107
 msgid "*Tracked* products are those for which stock and inventory are maintained. Examples include finished goods and, often, the raw materials or components needed to make them."
@@ -2206,7 +2206,7 @@ msgstr "Puede crear traslados para productos no rastreados, pero no se rastrear�
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:313
 msgid "Both tracked and untracked (non-inventory), products can be placed in :doc:`packages <package>`."
-msgstr "Tanto los productos rastreados como los no rastreados (no inventariados) se pueden incluir en :doc:`paquetes`. <package>`."
+msgstr "Tanto los productos rastreados como los no rastreados (no inventariados) se pueden incluir en :doc:`paquetes <package>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:315
 msgid "However, for non-inventory products, the quantity is not tracked, and the product is not listed in the package's :guilabel:`Contents` (which can be accessed by going to :menuselection:`Inventory app --> Products --> Packages`, and selecting the desired package)."
@@ -2766,7 +2766,7 @@ msgstr "En la contabilidad *Continental* el coste de un bien se reporta tan pron
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:372
 msgid "Refer to the :ref:`Expense <inventory/warehouses_storage/expense-account>` and :ref:`Stock input/output <inventory/warehouses_storage/stock-account>` sections for details on configuring each account type."
-msgstr "Vea las secciones :ref:`Gasto <nventory/warehouses_storage/expense-account>` y :ref:`Entrada y salida de existencias <nventory/warehouses_storage/stock-account>` para detalles sobre la configuración de cada tipo de cuenta."
+msgstr "Vea las secciones :ref:`Gasto <inventory/warehouses_storage/expense-account>` y :ref:`Entrada y salida de existencias <inventory/warehouses_storage/stock-account>` para detalles sobre la configuración de cada tipo de cuenta."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:379
 msgid "Expense account"
@@ -4014,7 +4014,7 @@ msgstr "Aquí se enlistarán en automático todos los productos a los que se les
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:493
 msgid "To group by lots, begin by removing any filters in the :guilabel:`Search...` bar. Then, click the :icon:`fa-caret-down` :guilabel:`(caret down)` icon to open a drop-down menu of :guilabel:`Filters`, :guilabel:`Group By` options, and :guilabel:`Favorites`. Under the :guilabel:`Group By` section, click the :guilabel:`Add Custom Group` option, and select :guilabel:`Lot/Serial Number` from the drop-down menu."
-msgstr "Antes de agrupar por lotes es necesario que elimine los filtros en la :guilabel:`barra de búsqueda. Después, haga clic en el icono :icon:`fa-caret-down` :guilabel:`(flecha hacia abajo)` para abrir el menú desplegable con las opciones :guilabel:`Filtros`, :guilabel:`Agrupar por` y :guilabel:`Favoritos`. En la sección :guilabel:`Agrupar por`, haga clic en :guilabel:`Agregar grupo personalizado` y elija la opción correspondiente en el menú desplegable."
+msgstr "Antes de agrupar por lotes es necesario que elimine los filtros en la barra :guilabel:`Buscar...`. Después, haga clic en el icono :icon:`fa-caret-down` :guilabel:`(flecha hacia abajo)` para abrir el menú desplegable con las opciones :guilabel:`Filtros`, :guilabel:`Agrupar por` y :guilabel:`Favoritos`. En la sección :guilabel:`Agrupar por`, haga clic en :guilabel:`Agregar grupo personalizado` y elija la opción correspondiente en el menú desplegable."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:499
 msgid "Doing so reorganizes all the records on the page to display all existing lots and serial numbers, and can be expanded to show all quantities of products with that assigned number."
@@ -4150,7 +4150,7 @@ msgstr "Configurar seguimiento por número de serie en cada producto"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:80
 msgid "Once the :ref:`Lots & Serial Numbers setting <inventory/product_management/traceability-setting>` has been activated, individual products can now be tracked using serial numbers. To track a product, go to :menuselection:`Inventory app --> Products --> Products`, and select the desired product."
-msgstr "Una vez que haya activado los :guilabel:`números de serie y lote <inventory/product_management/traceability-setting>`, podrá rastrear los productos con sus números de serie. Para rastrear un producto vaya a :menuselection:`Inventario --> Productos --> Productos` y seleccione el producto correspondiente."
+msgstr "Una vez que haya activado los :ref:`números de serie y lote <inventory/product_management/traceability-setting>`, podrá rastrear los productos con sus números de serie. Para rastrear un producto vaya a :menuselection:`Inventario --> Productos --> Productos` y seleccione el producto correspondiente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:84
 msgid "In the :guilabel:`General Information` tab on the product form, make sure the box next to :guilabel:`Track Inventory` is checked. Then, select :guilabel:`By Unique Serial Number`, and click :guilabel:`Save` to save the changes. Now, existing or new serial numbers can now be selected and assigned to newly-received or manufactured batches of this product."
@@ -9306,7 +9306,7 @@ msgstr "Las *ubicaciones de contactos* agrupan las ubicaciones de clientes y pro
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:138
 msgid "*Virtual locations* are locations that do **not** exist physically, but it is where items that are not in inventory can be placed. These can be items that are no longer in inventory due to loss, or other factors."
-msgstr "Las *ubicaciones virtuales* son ubicaciones que **n**o existen de forma física, pero allí se pueden colocar los artículos que no están en el inventario. Estos pueden ser artículos que no forman parte de las existencias debido a pérdidas u otros factores."
+msgstr "Las *ubicaciones virtuales* son ubicaciones que **no** existen de forma física, pero allí se pueden colocar los artículos que no están en el inventario. Estos pueden ser artículos que no forman parte de las existencias debido a pérdidas u otros factores."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:3
 msgid "Inventory adjustments"
@@ -9978,7 +9978,7 @@ msgstr "Habilite la función *Ubicaciones de almacenamiento* desde :menuselectio
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:15
 msgid "Typically, the :guilabel:`Storage Locations` feature is used with :doc:`Multi-Step Routes <../../shipping_receiving/daily_operations/use_routes>`, which controls how products move between locations."
-msgstr "Es común utilizar la función :doc:`Rutas multietapa <../../shipping_receiving/daily_operations/use_routes` con las :guilabel:`ubicaciones de almacenamiento`. Estas controlan cómo se mueven los productos entre ubicaciones."
+msgstr "Es común utilizar la función :doc:`Rutas multietapa <../../shipping_receiving/daily_operations/use_routes>` con las :guilabel:`ubicaciones de almacenamiento`. Estas controlan cómo se mueven los productos entre ubicaciones."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:29
 msgid "Create new location"
@@ -10246,15 +10246,15 @@ msgstr "Una estrategia de reabastecimiento sobre pedido (MTO) implica que la adq
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:76
 msgid "Unlike products replenished using reordering rules, Odoo automatically links the sales order to the |PO| or |MO| generated by the |MTO| route."
-msgstr "A diferencia de los productos reabastecidos mediante reglas de reabastecimiento, Odoo vincula automáticamente la orden de venta a la |orden de compra| u |orden de fabricación| generada por la ruta |MTO|."
+msgstr "A diferencia de los productos reabastecidos mediante reglas de reabastecimiento, Odoo vincula automáticamente la orden de venta a la |PO| u |MO| generada por la ruta |MTO|."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:79
 msgid "Another difference between reordering rules and |MTO| is, with |MTO|, Odoo generates a draft |PO| or |MO| immediately after the |SO| is confirmed. With reordering rules, Odoo generates a draft |PO| or |MO| when the product's forecasted stock falls below the set minimum quantity."
-msgstr "Otra diferencia entre las reglas de reabastecimiento y |MTO| es que con |MTO| Odoo genera un borrador de |orden de compra| u |orden de fabricación| inmediatamente después de que se confirme una |orden de compra|. Mientras que con las reglas de reabastecimiento, Odoo genera un borrador de |orden de compra| o |MO| cuando las existencias pronosticadas del producto están por debajo de la cantidad mínima establecida."
+msgstr "Otra diferencia entre las reglas de reabastecimiento y |MTO| es que con |MTO| Odoo genera un borrador de |PO| u |MO| inmediatamente después de que se confirme una |SO|. Mientras que con las reglas de reabastecimiento, Odoo genera un borrador de |PO| o |MO| cuando las existencias pronosticadas del producto están por debajo de la cantidad mínima establecida."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:83
 msgid "In addition, Odoo automatically adds quantities to the |PO| or |MO| as the forecast changes, so long as the |PO| or |MO| is not confirmed."
-msgstr "Además, Odoo añade automáticamente cantidades a la |orden de compra| u |orden de fabricación| cuando cambia el pronóstico, siempre que la |orden de compra| u |orden de fabricación| no esté confirmada."
+msgstr "Además, Odoo añade automáticamente cantidades a la |PO| u |MO| cuando cambia el pronóstico, siempre que la |PO| u |MO| no esté confirmada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:86
 msgid "The |MTO| route is the best replenishment strategy for products that are customized, and/or for products that have no stock kept on-hand."
@@ -14474,11 +14474,11 @@ msgstr "Crear una orden de fabricación"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:42 ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:41 ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:42
 msgid "To manufacture a product in Odoo *Manufacturing*, begin by navigating to :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, and then click :guilabel:`New` to create a new |MO|."
-msgstr "Si desea fabricar un producto en la aplicación de Odoo *Fabricación*, vaya a :menuselection:`Fabricación --> Operaciones --> Órdenes de fabricación`, y haga clic en :guilabel:`Nuevo` para crear una nueva |orden de fabricación|."
+msgstr "Si desea fabricar un producto en la aplicación de Odoo *Fabricación*, vaya a :menuselection:`Fabricación --> Operaciones --> Órdenes de fabricación`, y haga clic en :guilabel:`Nuevo` para crear una nueva |MO|."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:46
 msgid "On the new |MO|, select the product to be produced from the :guilabel:`Product` drop-down menu. The :guilabel:`Bill of Material` field auto-populates with the associated bill of materials (BoM)."
-msgstr "Desde la nueva |orden de fabricación|, seleccione el producto a fabricar del menú desplegable :guilabel:`Producto`. El campo :guilabel:`lista de materiales` se completa de forma automática con la lista de materiales asociada."
+msgstr "Desde la nueva |MO|, seleccione el producto a fabricar del menú desplegable :guilabel:`Producto`. El campo :guilabel:`lista de materiales` se completa de forma automática con la lista de materiales asociada."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:49 ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:48 ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:49
 msgid "If a product has more than one |BOM| configured for it, the specific |BOM| can be selected in the :guilabel:`Bill of Material` field, and the :guilabel:`Product` field auto-populates with the associated product."
@@ -26146,11 +26146,11 @@ msgstr ":guilabel:`Disponibilidad de fabricación`: al elegir :guilabel:`Cuando 
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:226
 msgid "Specify which operation consumes each component on the |BoM| in the :ref:`Highlight Consumption field <manufacturing/basic_setup/consumed-in-operation>`."
-msgstr "Especifique qué operación consume cada componente en la |LdM| en el campo :ref:`Resaltar consumo <manufacturing/basic_setup/consumed-in-operation>`."
+msgstr "Especifique qué operación consume cada componente en la |BoM| en el campo :ref:`Resaltar consumo <manufacturing/basic_setup/consumed-in-operation>`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:237
 msgid ":guilabel:`Flexible Consumption`: specifies if components used can deviate from the quantity defined on the |BoM|. Choose :guilabel:`Blocked` if operators **must** adhere strictly to the |BoM| quantity. Otherwise, choose :guilabel:`Allowed` or :guilabel:`Allowed with warning`."
-msgstr ":guilabel:`Consumo flexible`: especifica si los componentes usados pueden diferir de la cantidad definida en la |LdM|. Elija :guilabel:`Bloqueado` si los operadores **deben** apegarse estrictamente a la cantidad de la |LdM|. De lo contrario, elija :guilabel:`Permitido` o :guilabel:`Permitido con advertencia`."
+msgstr ":guilabel:`Consumo flexible`: especifica si los componentes usados pueden diferir de la cantidad definida en la |BoM|. Elija :guilabel:`Bloqueado` si los operadores **deben** apegarse estrictamente a la cantidad de la |BoM|. De lo contrario, elija :guilabel:`Permitido` o :guilabel:`Permitido con advertencia`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:243
 msgid ":guilabel:`Operation Dependencies`: enables sequencing rules between the |BOM|'s operations. See :doc:`../advanced_configuration/work_order_dependencies` for details."
@@ -26190,7 +26190,7 @@ msgstr "Al hacerlo se activa el campo :guilabel:`Número de lote/serie` en una o
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:31
 msgid "Odoo computes |MO| costs based on the configuration of the |BoM| used to manufacture a product. This calculation includes the cost and quantity of components and operations listed on the |BoM|, in addition to the operating costs of the work centers where those operations are carried out."
-msgstr "Odoo calcula los costos de la |MO| según la configuración de la |LdM| usada para fabricar un producto. Este cálculo incluye el costo y la cantidad de los componentes y operaciones enumerados en la |LdM|, además de los costos operativos de los centros de trabajo donde se realizan esas operaciones."
+msgstr "Odoo calcula los costos de la |MO| según la configuración de la |BoM| usada para fabricar un producto. Este cálculo incluye el costo y la cantidad de los componentes y operaciones enumerados en la |BoM|, además de los costos operativos de los centros de trabajo donde se realizan esas operaciones."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:56
 msgid "To set the cost of operating the work center for one hour, enter a value in the :guilabel:`per workcenter` field, located beside the :guilabel:`Cost per hour` section on the work center's :guilabel:`General Information` tab. This is the hourly rate used for both the |MO| cost (the estimated cost) and the real cost (the actual cost) of every operation performed at that work center; Odoo does not track a hourly cost per individual employee."
@@ -26218,7 +26218,7 @@ msgstr "El campo :guilabel:`Costo` solo se actualiza automáticamente para produ
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:221
 msgid "Manufacturing begins, and the operations take ten minutes longer than expected, for a total manufacturing time of 40 minutes. This deviation from the |BoM| is reflected on the |MO| overview, which now lists a :guilabel:`Real Cost` of `$70.00` for the operations, while :guilabel:`MO Cost` still shows the expected `$65.00`."
-msgstr "La fabricación comienza, y las operaciones tardan diez minutos más de lo esperado, para un tiempo total de fabricación de 40 minutos. Esta desviación respecto a la |LdM| se refleja en el resumen de la |MO|, que ahora muestra un :guilabel:`Costo real` de `70,00 $` para las operaciones, mientras que el :guilabel:`Costo de la MO` sigue mostrando los `65,00 $` esperados."
+msgstr "La fabricación comienza, y las operaciones tardan diez minutos más de lo esperado, para un tiempo total de fabricación de 40 minutos. Esta desviación respecto a la |BoM| se refleja en el resumen de la |MO|, que ahora muestra un :guilabel:`Costo real` de `70,00 $` para las operaciones, mientras que el :guilabel:`Costo de la MO` sigue mostrando los `65,00 $` esperados."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:233
 msgid "Once manufacturing is finished, and the |MO| is marked as *Done*, the components' rows update to the quantities actually consumed (unchanged here), but the operations keep using their *expected* duration for the :guilabel:`MO Cost` column. The |MO| overview therefore keeps showing an :guilabel:`MO Cost` of `$65.00` and a :guilabel:`Real Cost` of `$70.00`."
@@ -26274,7 +26274,7 @@ msgstr "Al seleccionar una producción se abre una vista integrada de la orden d
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:54
 msgid "In the :guilabel:`Cost Share (%)` field, optionally enter the percentage of the finished product's manufacturing cost that should be attributed to the by-product, instead of to the main product. This is useful for by-products that have their own resale value. The total :guilabel:`Cost Share (%)` of all by-products on a |BoM| cannot exceed 100%."
-msgstr "En el campo :guilabel:`Repartir costo (%)`, introduzca de forma opcional el porcentaje del costo de fabricación del producto terminado que debe atribuirse al subproducto, en lugar de al producto principal. Esto resulta útil para subproductos que tienen su propio valor de reventa. El total del :guilabel:`Repartir costo (%)` de todos los subproductos de una |LdM| no puede superar el 100 %."
+msgstr "En el campo :guilabel:`Repartir costo (%)`, introduzca de forma opcional el porcentaje del costo de fabricación del producto terminado que debe atribuirse al subproducto, en lugar de al producto principal. Esto resulta útil para subproductos que tienen su propio valor de reventa. El total del :guilabel:`Repartir costo (%)` de todos los subproductos de una |BoM| no puede superar el 100 %."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/manufacturing_backorders.rst:79
 msgid "For manufacturing orders that use routings, the operations must be completed on their :doc:`work orders <work_orders>` before the |MO| can be validated and a backorder created for it, as described above."
@@ -26314,7 +26314,7 @@ msgstr "Procesar órdenes de trabajo"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_orders.rst:10
 msgid "When a product's |BoM| includes one or more operations (via a routing), confirming a manufacturing order (|MO|) for that product generates a *work order* for each operation. Work orders let employees track, at each work center, exactly how much time is spent working on a specific step of the manufacturing process."
-msgstr "Cuando la |LdM| de un producto incluye una o más operaciones (mediante una ruta), al confirmar una orden de fabricación (|MO|) para ese producto se genera una *orden de trabajo* para cada operación. Las órdenes de trabajo permiten a los empleados llevar el control, en cada centro de trabajo, del tiempo exacto dedicado a trabajar en un paso específico del proceso de fabricación."
+msgstr "Cuando la |BoM| de un producto incluye una o más operaciones (mediante una ruta), al confirmar una orden de fabricación (|MO|) para ese producto se genera una *orden de trabajo* para cada operación. Las órdenes de trabajo permiten a los empleados llevar el control, en cada centro de trabajo, del tiempo exacto dedicado a trabajar en un paso específico del proceso de fabricación."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_orders.rst:16
 msgid "Work orders require the :guilabel:`Work Orders` setting to be enabled. To do so, navigate to :menuselection:`Manufacturing app --> Configuration --> Settings`, tick the checkbox next to :guilabel:`Work Orders`, under the :guilabel:`Operations` heading, and click :guilabel:`Save`."
@@ -26362,7 +26362,7 @@ msgstr ":guilabel:`Cancelada`: la orden de trabajo se canceló, normalmente porq
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_orders.rst:52
 msgid "By default, work orders are only sequenced according to their operation's order on the |BoM|. To have Odoo enforce that a work order cannot start before another, specific one is finished (e.g., *paint* cannot start before *sand* is done, even on a different work center), enable the :guilabel:`Work Order Dependencies` checkbox, located below the :guilabel:`Work Orders` setting. Doing so adds a :guilabel:`Blocked By` tab to each work order, used to select its dependencies."
-msgstr "De forma predeterminada, las órdenes de trabajo solo se secuencian según el orden de su operación en la |LdM|. Para que Odoo obligue a que una orden de trabajo no pueda iniciarse antes de que otra, específica, esté terminada (por ejemplo, *pintar* no puede empezar antes de que *lijar* esté hecho, incluso en un centro de trabajo distinto), active la casilla :guilabel:`Dependencias de órdenes de trabajo`, ubicada debajo del ajuste :guilabel:`Órdenes de trabajo`. Al hacerlo se añade una pestaña :guilabel:`Bloqueado por` a cada orden de trabajo, usada para seleccionar sus dependencias."
+msgstr "De forma predeterminada, las órdenes de trabajo solo se secuencian según el orden de su operación en la |BoM|. Para que Odoo obligue a que una orden de trabajo no pueda iniciarse antes de que otra, específica, esté terminada (por ejemplo, *pintar* no puede empezar antes de que *lijar* esté hecho, incluso en un centro de trabajo distinto), active la casilla :guilabel:`Dependencias de órdenes de trabajo`, ubicada debajo del ajuste :guilabel:`Órdenes de trabajo`. Al hacerlo se añade una pestaña :guilabel:`Bloqueado por` a cada orden de trabajo, usada para seleccionar sus dependencias."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_orders.rst:59
 msgid "Start, pause, and complete a work order"

@@ -365,7 +365,7 @@ msgstr "Hay un :ref:`diario bancario <accounting/journals/bank>` predeterminado 
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:227 ../../content/applications/finance/accounting/bank/reconciliation.rst:17 ../../content/applications/finance/accounting/bank/statement_import.rst:87
 msgid ":doc:`transactions`"
-msgstr ":doc:`transacciones`"
+msgstr ":doc:`transacciones <transactions>`"
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:168 ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:3 ../../content/applications/finance/accounting/bank/foreign_currency.rst:13 ../../content/applications/finance/accounting/bank/internal_transfers.rst:12 ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:27 ../../content/applications/finance/accounting/customer_invoices/cash_rounding.rst:14 ../../content/applications/finance/accounting/customer_invoices/customer_addresses.rst:13 ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:23 ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:20 ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:47 ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:12 ../../content/applications/finance/accounting/customer_invoices/terms_conditions.rst:12 ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:38 ../../content/applications/finance/accounting/get_started/journals.rst:121 ../../content/applications/finance/accounting/get_started/multi_currency.rst:15 ../../content/applications/finance/accounting/payments/follow_up.rst:16 ../../content/applications/finance/accounting/payments/online.rst:21 ../../content/applications/finance/accounting/payments/pay_checks.rst:10 ../../content/applications/finance/accounting/taxes.rst:78 ../../content/applications/finance/accounting/taxes/B2B_B2C.rst:52 ../../content/applications/finance/accounting/taxes/cash_basis.rst:14 ../../content/applications/finance/accounting/taxes/eu_distance_selling.rst:17 ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:20 ../../content/applications/finance/accounting/taxes/retention.rst:11 ../../content/applications/finance/fiscal_localizations.rst:15 ../../content/applications/finance/fiscal_localizations/argentina.rst:6 ../../content/applications/finance/fiscal_localizations/argentina.rst:549 ../../content/applications/finance/fiscal_localizations/argentina.rst:928 ../../content/applications/finance/fiscal_localizations/australia.rst:177 ../../content/applications/finance/fiscal_localizations/austria.rst:6 ../../content/applications/finance/fiscal_localizations/belgium.rst:8 ../../content/applications/finance/fiscal_localizations/canada.rst:13 ../../content/applications/finance/fiscal_localizations/colombia.rst:14 ../../content/applications/finance/fiscal_localizations/france.rst:87 ../../content/applications/finance/fiscal_localizations/guatemala.rst:35 ../../content/applications/finance/fiscal_localizations/hong_kong.rst:6 ../../content/applications/finance/fiscal_localizations/hungary/cashbook.rst:18 ../../content/applications/finance/fiscal_localizations/hungary/evat.rst:23 ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:17 ../../content/applications/finance/fiscal_localizations/hungary/mkvk.rst:18 ../../content/applications/finance/fiscal_localizations/hungary/nav_online_invoice.rst:14 ../../content/applications/finance/fiscal_localizations/hungary/oss.rst:18 ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:19 ../../content/applications/finance/fiscal_localizations/india.rst:507 ../../content/applications/finance/fiscal_localizations/indonesia.rst:32 ../../content/applications/finance/fiscal_localizations/italy.rst:8 ../../content/applications/finance/fiscal_localizations/jordan.rst:101 ../../content/applications/finance/fiscal_localizations/kenya.rst:8 ../../content/applications/finance/fiscal_localizations/malaysia.rst:10 ../../content/applications/finance/fiscal_localizations/peru.rst:43 ../../content/applications/finance/fiscal_localizations/philippines.rst:6 ../../content/applications/finance/fiscal_localizations/romania.rst:6 ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:6 ../../content/applications/finance/fiscal_localizations/spain.rst:6 ../../content/applications/finance/fiscal_localizations/spain.rst:65 ../../content/applications/finance/fiscal_localizations/spain.rst:129 ../../content/applications/finance/fiscal_localizations/switzerland.rst:6 ../../content/applications/finance/fiscal_localizations/thailand.rst:6 ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:8 ../../content/applications/finance/fiscal_localizations/united_states.rst:25 ../../content/applications/finance/fiscal_localizations/uruguay.rst:30 ../../content/applications/finance/fiscal_localizations/vietnam.rst:61 ../../content/applications/finance/fiscal_localizations/vietnam.rst:240 ../../content/applications/finance/payment_providers/authorize.rst:9 ../../content/applications/finance/payment_providers/authorize.rst:62 ../../content/applications/finance/payment_providers/demo.rst:9 ../../content/applications/finance/payment_providers/wire_transfer.rst:31
 msgid "Configuration"
@@ -1261,7 +1261,7 @@ msgstr "Es normal que las empresas tengan más de una oficina, por lo que tambi�
 
 #: ../../content/applications/finance/accounting/customer_invoices/customer_addresses.rst:10
 msgid ":doc:`overview`"
-msgstr ":doc:`resumen`"
+msgstr ":doc:`resumen <overview>`"
 
 #: ../../content/applications/finance/accounting/customer_invoices/customer_addresses.rst:15
 msgid "To specify a sales order's invoice and delivery addresses, first go to :menuselection:`Accounting --> Configuration --> Settings`. In the :guilabel:`Customer Invoices` section, enable :guilabel:`Customer Addresses` and click :guilabel:`Save`."
@@ -3621,7 +3621,7 @@ msgstr "Resumen"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:314
 msgid "At product reception, Odoo ensures companies can pay for goods that were purchased by preemptively moving an amount matching the price of received goods into the :doc:`liability account </applications/finance/accounting/get_started/cheat_sheet>`, **Stock Input**. Then, once the bill has been received, the amount in the holding account is transferred to *Accounts Payable*. Transfers into this account means the bill has been paid. **Stock Input** is reconciled once the vendor bill is received."
-msgstr "Al recibir los productos, Odoo se asegura de que las empresas puedan pagar los bienes que compraron y mueve, de forma preventiva, un importe que coincide con el precio de los bienes recibidos a la :doc:`cuenta de pasivo </applications/finance/accounting/get_started/cheat_sheet>, **Entrada de existencias**. Una vez que reciben la factura, el importe en la cuenta de retención se transfiere a *cuentas por pagar*. Las transferencias a esta cuenta significan que ya se pagó la factura. **Entrada de existencias** se concilia al recibir la factura del proveedor."
+msgstr "Al recibir los productos, Odoo se asegura de que las empresas puedan pagar los bienes que compraron y mueve, de forma preventiva, un importe que coincide con el precio de los bienes recibidos a la :doc:`cuenta de pasivo </applications/finance/accounting/get_started/cheat_sheet>`, **Entrada de existencias**. Una vez que reciben la factura, el importe en la cuenta de retención se transfiere a *cuentas por pagar*. Las transferencias a esta cuenta significan que ya se pagó la factura. **Entrada de existencias** se concilia al recibir la factura del proveedor."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:321
 msgid "Inventory valuation is a method of calculating how much each in-stock product is worth internally. Since there is a difference between the price the product is **valuated at** and the price the product was actually **purchased for**, the **Inventory Valuation** account is unrelated to the crediting and debiting operations of the **Stock Input** account."
@@ -5013,7 +5013,7 @@ msgstr "Para registrar pagos en varias facturas/notas de crédito o facturas de 
 
 #: ../../content/applications/finance/accounting/payments.rst:270
 msgid "Go to :menuselection:`Accounting --> Customers --> Invoices/Credit Notes` or :menuselection:`Accounting --> Vendors --> Bills/Refunds`."
-msgstr "Vaya a :menuselection:`Contabilidad --> clientes --> facturas/notas de crédito' o :menuselection:`Contabilidad --> proveedores --> facturas/reembolsos`."
+msgstr "Vaya a :menuselection:`Contabilidad --> clientes --> facturas/notas de crédito` o :menuselection:`Contabilidad --> proveedores --> facturas/reembolsos`."
 
 #: ../../content/applications/finance/accounting/payments.rst:272
 msgid "In the list view, click into the search bar, group by :guilabel:`Payment Method`, select the relevant invoices/credit notes or bills/refunds and click :guilabel:`Pay`."
@@ -5813,7 +5813,7 @@ msgstr "Aunque se sigue utilizando el sistema Intrastat, el término Intrastat n
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:20
 msgid "`Eurostat Statistics Explained - Glossary: Intrastat <https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Intrastat>`_"
-msgstr "Explicación de las estadísticas de Eurostat - Glosario: Intrastat <https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Intrastat>`_"
+msgstr "`Explicación de las estadísticas de Eurostat - Glosario: Intrastat <https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Intrastat>`_"
 
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:31
 msgid "General configuration"
@@ -5865,7 +5865,7 @@ msgstr "Configuración de contacto"
 
 #: ../../content/applications/finance/accounting/reporting/tax_returns.rst:3
 msgid "Tax return (VAT declaration)"
-msgstr " Declaración de impuestos"
+msgstr "Declaración de impuestos"
 
 #: ../../content/applications/finance/accounting/reporting/tax_returns.rst:5
 msgid "Companies with a registered :abbr:`VAT (Value Added Tax)` number must submit a **tax return** on a monthly or quarterly basis, depending on their turnover and the registration regulation. A tax return - or VAT return - gives the tax authorities information about the taxable transactions made by the company. The **output tax** is charged on the number of goods and services sold by a business, while the **input tax** is the tax added to the price when goods or services are purchased. Based on these values, the company can calculate the tax amount they have to pay or be refunded."
@@ -6325,7 +6325,7 @@ msgstr "El método para calcular estos impuestos depende del país. Le recomenda
 
 #: ../../content/applications/finance/accounting/taxes.rst:395
 msgid "To compute an extra tax in Odoo, :ref:`create a tax <taxes/configuration>`, enter a tax name, select a :ref:`Tax Computation <taxes/configuration>`, set an :guilabel:`Amount`, and in the :guilabel:`Advanced Options` tab, check :guilabel:`Affect Base of Subsequent Taxes`. Then, drag and drop the taxes in the :ref:`order they should be computed <taxes/base-subsequent>`."
-msgstr "Para calcular un impuesto adicional en Odoo :ref:`cree un impuesto <taxes/configuration>`, ingrese el nombre del impuesto, seleccione un :ref:`cálculo de impuestos <taxes/configuration>`, configure una :guilabel:`Cantidad` y en la pestaña :guilabel:`opciones avanzadas` seleccione :guilabel:`Afecta la base de los impuestos subsecuentes `. Después, arrastre y suelte los impuestos en el :ref:`orden en el que se tienen que calcular <taxes/base-subsequent>`."
+msgstr "Para calcular un impuesto adicional en Odoo :ref:`cree un impuesto <taxes/configuration>`, ingrese el nombre del impuesto, seleccione un :ref:`cálculo de impuestos <taxes/configuration>`, configure una :guilabel:`Cantidad` y en la pestaña :guilabel:`opciones avanzadas` seleccione :guilabel:`Afecta la base de los impuestos subsecuentes`. Después, arrastre y suelte los impuestos en el :ref:`orden en el que se tienen que calcular <taxes/base-subsequent>`."
 
 #: ../../content/applications/finance/accounting/taxes.rst:401
 msgid "In Belgium, the formula to compute an environmental tax is: `(product price + environmental tax) x sales tax`. Therefore, our environmental tax has to come *before* the sales tax in the computation sequence."
@@ -12589,7 +12589,7 @@ msgstr "Integración de impuestos"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:371
 msgid "When you receive a vendor bill, either from :abbr:`SdI (Sistema di Interscambio)`, from paper or from an imported XML file, the Tax Agency might request that you send some tax information integration back to the :abbr:`SdI (Sistema di Interscambio)`. It happens when a transaction that was tax exempt becomes taxable for any reason."
-msgstr "Cuando reciba una factura de proveedor ya sea del :abbr:`SdI (Sistema di Interscambio), en papel o de un archivo XML importado, la agencia fiscal le puede pedir que envíe información de la integración fiscal al :abbr:`SdI (Sistema di Interscambio)`. Esto pasa cuando una transacción era exenta de ingresos pero se vuelve gravable por algún motivo."
+msgstr "Cuando reciba una factura de proveedor ya sea del :abbr:`SdI (Sistema di Interscambio)`, en papel o de un archivo XML importado, la agencia fiscal le puede pedir que envíe información de la integración fiscal al :abbr:`SdI (Sistema di Interscambio)`. Esto pasa cuando una transacción era exenta de ingresos pero se vuelve gravable por algún motivo."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:377
 msgid "Here is a non-exhaustive list:"
@@ -13281,7 +13281,7 @@ msgstr "Kenia"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:10
 msgid "Install the 🇰🇪 **Kenyan** :ref:`fiscal localization package <fiscal_localizations/packages>` to get all the features of the Kenyan localization."
-msgstr "Instale el :doc:`paquete de localización fiscal <fiscal_localizations/packages>` de **Kenia** 🇰🇪 para obtener todas las funciones contables predeterminadas de la localización de kenia."
+msgstr "Instale el :ref:`paquete de localización fiscal <fiscal_localizations/packages>` de **Kenia** 🇰🇪 para obtener todas las funciones contables predeterminadas de la localización de kenia."
 
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:89 ../../content/applications/finance/fiscal_localizations/new_zealand.rst:97 ../../content/applications/finance/fiscal_localizations/new_zealand.rst:101 ../../content/applications/finance/fiscal_localizations/new_zealand.rst:105
 msgid "Purchases"
@@ -14809,7 +14809,7 @@ msgstr "Para editar impuestos existentes o para :guilabel:`Crear` un impuesto nu
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:63
 msgid ":doc:`taxes <../accounting/taxes>`"
-msgstr ":doc:`Impuestos <../accounting/taxation/taxes>`"
+msgstr ":doc:`Impuestos <../accounting/taxes>`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:15
 msgid "The Odoo fiscal localization package for the United States follows the Generally Acceptable Accounting Principles (GAAP) accounting standards and rules used to prepare financial statements, as outlined by the Financial Accounting Standards Board (FASB) and adopted by the Securities and Exchange Commission (SEC)."
@@ -14853,7 +14853,7 @@ msgstr "Módulo de contabilidad básico para la contabilidad de los Estados Unid
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:77
 msgid "The :doc:`chart of accounts (COA) <../accounting/get_started/chart_of_accounts>` for the United States localization, in Odoo, follows the standard |GAAP| structure, with accounts grouped into seven main categories, with corresponding numeric values that prefix individual journal entries:"
-msgstr "El :doc:`plan de cuentas (COA) <../accounting/get_started/chart_of_accounts> para la localización contable de los Estados Unidos, en Odoo, sigue la estructura estándar de las reglas |GAAP|. Las cuentas se agrupan en siete categorías principales con sus valores numéricos correspondientes como prefijos en cada asiento contable:"
+msgstr "El :doc:`plan de cuentas (COA) <../accounting/get_started/chart_of_accounts>` para la localización contable de los Estados Unidos, en Odoo, sigue la estructura estándar de las reglas |GAAP|. Las cuentas se agrupan en siete categorías principales con sus valores numéricos correspondientes como prefijos en cada asiento contable:"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:104
 msgid "Predefined accounts are included in Odoo, as part of the |CoA| that's installed with the US localization package. The accounts listed below are preconfigured to perform certain operations within Odoo. It is recommended to **not** delete these accounts; however, if changes are needed, rename the accounts instead."
@@ -16013,7 +16013,7 @@ msgstr "Exportar desde Authorize.Net"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:84
 msgid ":download:`Download the Excel import template. <authorize/authorize-net-magic-sheet.xlsx>`"
-msgstr ":d ownload:`Descargue la plantilla de importación de Excel. <autorizar/authorize-net-magic-sheet.xlsx>`"
+msgstr ":download:`Descargue la plantilla de importación de Excel. <authorize/authorize-net-magic-sheet.xlsx>`"
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:86
 msgid "Log in to Authorize.Net."
@@ -38567,7 +38567,7 @@ msgstr "En la sección :guilabel:`Webhook URL`, introduzca la URL de su base de 
 #~ msgstr ""
 
 #~ msgid "Before generating the |PLE| 12.1 or |PLE| 13.1 reports, make sure the :guilabel:`Peru - Stock Reports` (`l10n_pe_reports_stock`) module is installed, then update the fields for:"
-#~ msgstr "Antes de generar los informes |PLE| 12.1 y |PLE| 13.1, asegúrese de que el módulo :guilabel:`Perú - Informes de stock ` (`l10n_pe_reports_stock`) y actualice los campos en:"
+#~ msgstr "Antes de generar los informes |PLE| 12.1 y |PLE| 13.1, asegúrese de que el módulo :guilabel:`Perú - Informes de stock` (`l10n_pe_reports_stock`) y actualice los campos en:"
 
 #~ msgid ":ref:`Products <peru/reports-ple-products>`"
 #~ msgstr ""

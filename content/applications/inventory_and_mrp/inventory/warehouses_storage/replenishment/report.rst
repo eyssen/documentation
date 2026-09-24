@@ -42,8 +42,14 @@ the set period, hiding the entry from the replenishment dashboard, when it is su
    :icon:`oi-settings-adjust` :guilabel:`(adjust settings)` icon and select :guilabel:`Vendor` from
    the drop-down list to view the field on the report.
 
-.. image:: report/replenishment-dashboard.png
-   :alt: Replenishment report that displays recommended quantities to order.
+.. screenshot:: inventory-replenishment-dashboard
+   :menu: Inventory ‣ Operations ‣ Replenishment
+   :shows: The replenishment report listing products that need restocking, with the Product, Location, On
+      Hand, Forecast, Min, Max and "To Order" columns and the "Order" and "Snooze" buttons on the lines.
+   :highlight: The "To Order" column and the "Order" button (red frames).
+   :data: Three or four manual reordering rules whose forecast is below the minimum.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, full list view including the left search panel.
 
 Order to max
 ------------
@@ -54,63 +60,19 @@ product needs to be replenished even if it is not deemed *necessary*, such as wh
 be maximized to obtain better discounts, or to save on delivery costs.
 
 First, select one or more products by ticking the appropriate checkbox. Then, click the
-:guilabel:`Replenish` button and select :guilabel:`Order to Max`. Doing so creates a request for
+:guilabel:`Replenish` button and select :guilabel:`Order To Max`. Doing so creates a request for
 quotation (RFQ) for the first possible replenishment date for each product for the maximum specified
 in the reordering rule.
 
-.. image:: report/order-to-max.png
-   :alt: The Order to Max option on the replenishment dashboard.
+.. screenshot:: inventory-replenishment-order-to-max
+   :menu: Inventory ‣ Operations ‣ Replenishment
+   :shows: The replenishment report with one line selected and the "Replenish" drop-down open, showing the
+      "Order" and "Order To Max" entries.
+   :highlight: The "Order To Max" entry (red frame).
+   :data: One selected reordering rule whose forecast is above its minimum.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the selection bar and the open drop-down.
 
-.. _inventory/warehouses_storage/horizon-days:
-
-Horizon days
-------------
-
-*Horizon days* determine how many days ahead Odoo checks if the forecasted quantity will drop below
-reordering rule's minimum. The feature is meant to help users plan replenishment in advance, by
-increasing the :ref:`forecasted date <inventory/warehouses_storage/forecasted-date>` on the
-:doc:`replenishment report <report>`.
-
-.. example::
-   Setting horizon days to `7` ensures all manual reordering rules set to trigger within the next
-   seven days appear on the replenishment report, allowing users to review and decide which products
-   to order in advance.
-
-To set horizon days, go to :menuselection:`Inventory app --> Operations --> Replenishment`, and
-click :icon:`fa-angle-double-right` :icon:`fa-folder` :guilabel:`Manual` in the left sidebar. In the
-menu that appears, set the number of :guilabel:`Horizon` days.
-
-Both horizon days and :ref:`visibility days <inventory/warehouses_storage/visibility-days>` allow
-Odoo to anticipate future demand, but they work differently:
-
-- **Visibility days**: only checks future demand if a replenishment would have been triggered today.
-- **Horizon days**: looks ahead a specified number of days and triggers reordering rules as soon as
-  the forecasted quantity falls below the minimum within that window — even if no replenishment is
-  needed today.
-
-.. example::
-   - Current date: Feb 18
-   - On hand quantity: 10
-   - Reordering rule: Min: 5, Max 10
-   - Vendor lead time: 1 day
-
-   8 units are needed for an |SO| on Feb 23. That means, on Feb 23, there will only be 2 units in
-   stock.
-
-   **Without horizon days**
-
-   - The demand appears on the replenishment report only on Feb 22, one day before the delivery
-     date.
-   - Forecasted date: Feb 19 (current date + vendor lead time)
-
-   **With horizon days (4 or more days)**
-
-   - Odoo considers demand up to Feb 23 as relevant today (Feb 18)
-   - The need for 8 more units appears immediately in the replenishment report
-   - Forecasted date: Feb 23 (current date + vendor lead time + horizon days)
-
-   .. image:: report/horizon-days.png
-      :alt: Show forecasted date brought forward.
 
 Replenishment information
 =========================
@@ -131,11 +93,18 @@ If a warehouse's replenishment method is :doc:`resupply from another warehouse
 listed under the :guilabel:`Warehouses` tab, and the :guilabel:`Available Quantity` shows the
 on-hand stock in each warehouse.
 
-After selecting a sourcing warehouse, click :guilabel:`Select Route` :guilabel:`Order` button is
-clicked, the reordering rule will revert to its preferred route (Buy or Manufacture).
+After selecting a sourcing warehouse, click :guilabel:`Select Route` to use that warehouse for this
+replenishment. If the :guilabel:`Order` button is clicked without selecting a route, the reordering
+rule reverts to its preferred route (*Buy* or *Manufacture*).
 
-.. image:: report/select-warehouse.png
-   :alt: The warehouse tab on the Replenishment Information pop-up window.
+.. screenshot:: inventory-replenishment-select-warehouse
+   :menu: Inventory ‣ Operations ‣ Replenishment ‣ (info icon on a line)
+   :shows: The "Replenishment Information" pop-up with the "Warehouses" tab selected, listing the warehouses
+      that can resupply the stock with their "Available Quantity" and the "Select Route" button.
+   :highlight: The "Available Quantity" column and the "Select Route" button (red frames).
+   :data: Two warehouses, one of which holds stock of the product.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 .. seealso::
    :ref:`Temporary Reordering Rules <purchase/check-replenishment>`

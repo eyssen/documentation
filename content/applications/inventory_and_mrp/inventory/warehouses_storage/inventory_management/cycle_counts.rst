@@ -21,9 +21,14 @@ To enable this feature, navigate to :menuselection:`Inventory app --> Configurat
 and scroll down to the :guilabel:`Warehouse` section. Then, tick the checkbox next to
 :guilabel:`Storage Locations`, and click :guilabel:`Save`.
 
-.. image:: cycle_counts/cycle-counts-enabled-setting.png
-   :align: center
-   :alt: Enabled Storage Locations setting in inventory settings.
+.. screenshot:: inventory-cycle-counts-enable
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to the "Warehouse" section with the "Storage Locations"
+      checkbox enabled.
+   :highlight: The "Storage Locations" checkbox (red frame).
+   :data: Demo company "YourCompany HU".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the "Warehouse" settings block.
 
 Change inventory count frequency by location
 ============================================
@@ -42,9 +47,14 @@ Under the :guilabel:`Cyclic Counting` section, locate the :guilabel:`Inventory F
 field, which should be set to `0` by default (if this location has not been edited previously). In
 this field, change the value to any number of days desired for the frequency of counts.
 
-.. image:: cycle_counts/cycle-counts-frequency-value.png
-   :align: center
-   :alt: Location frequency setting on location.
+.. screenshot:: inventory-cycle-counts-frequency
+   :menu: Inventory ‣ Configuration ‣ Locations ‣ (a location)
+   :shows: The "Cyclic Counting" section of a location form with "Inventory Frequency (Days)" changed from 0
+      to 30.
+   :highlight: The "Inventory Frequency (Days)" field (red frame).
+   :data: Location "WH/Stock/Shelf 1".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the section.
 
 .. example::
    A location that needs an inventory count every 30 days should have the :guilabel:`Inventory
@@ -69,9 +79,14 @@ To select a specific location, and view all products within that location, click
 (down arrow)` icon, to the right of the :guilabel:`Search...` bar. Then, in the :guilabel:`Group By`
 column, click :guilabel:`Add Custom Group` to reveal a new drop-down menu.
 
-.. image:: cycle_counts/cycle-counts-filter-menu.png
-   :align: center
-   :alt: Filters and Group By menu on Inventory Adjustments page.
+.. screenshot:: inventory-cycle-counts-group-by-location
+   :menu: Inventory ‣ Operations ‣ Physical Inventory
+   :shows: The search drop-down of the Inventory Adjustments page open, with the "Filters", "Group By" and
+      "Favorites" columns and "Add Custom Group" visible in the Group By column.
+   :highlight: The "Add Custom Group" entry (red frame).
+   :data: An Inventory Adjustments page with products in several locations.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the open search drop-down.
 
 Click :guilabel:`Location` from the drop-down menu. Doing so sorts products into their storage
 locations on the :guilabel:`Inventory Adjustments` page, and a cycle count can be performed for all
@@ -91,9 +106,14 @@ products in that location.
 
    Click :guilabel:`Add` for that location to appear on the page.
 
-   .. image:: cycle_counts/cycle-counts-add-custom-filter.png
-      :align: center
-      :alt: Add Custom Filter pop-up window with location values entered.
+   .. screenshot:: inventory-cycle-counts-custom-filter
+      :menu: Inventory ‣ Operations ‣ Physical Inventory ‣ Filters ‣ Add Custom Filter
+      :shows: The "Add Custom Filter" pop-up with the three fields filled in: "Location", "contains" and the
+         name of the searched location.
+      :highlight: The three filter fields (red frame).
+      :data: Searching for the location "Shelf 1".
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 Change full inventory count frequency
 =====================================
@@ -107,9 +127,14 @@ Settings`. Then, in the :guilabel:`Operations` section, locate the :guilabel:`An
 and Month` setting field, which includes a drop-down field that is set to `31` :guilabel:`December`,
 by default.
 
-.. image:: cycle_counts/cycle-counts-frequency-calendar.png
-   :align: center
-   :alt: Frequency field in inventory app settings.
+.. screenshot:: inventory-cycle-counts-annual-day
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to the "Operations" section, showing the "Annual Inventory
+      Day and Month" setting with its default value 31 December.
+   :highlight: The "Annual Inventory Day and Month" field (red frame).
+   :data: Demo company "YourCompany HU".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the setting.
 
 To change the day, click the `31`, and change it to a day within the range `1-31`, depending on the
 desired month of the year.

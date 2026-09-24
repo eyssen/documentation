@@ -49,7 +49,7 @@ Razorpay configuration
    settings`, select `Webhooks <https://dashboard.razorpay.com/app/website-app-settings/webhooks>`_.
 #. | Click :guilabel:`Add New Webhook`, then enter your Odoo database URL followed by
      `/payment/razorpay/webhook` in the :guilabel:`Webhook URL` field.
-   | For example: `https://example.odoo.com/payment/razorpay/webhook`.
+   | For example: `https://example.com/payment/razorpay/webhook`.
 #. Fill the :guilabel:`Secret` field with a password of your choice and save it for later.
 #. Enable the following events: :guilabel:`payment.authorized`, :guilabel:`payment.captured`,
    :guilabel:`payment.failed`, :guilabel:`refund.failed`, and :guilabel:`refund.processed`.

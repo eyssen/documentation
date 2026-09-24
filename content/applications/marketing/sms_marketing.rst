@@ -13,9 +13,6 @@ such as event registrations, free trials, purchases, etc., since text and mobile
 channels typically yield higher :abbr:`CTOR (click-to-open rate)` and :abbr:`CTR (click-through
 rate)` outcomes.
 
-.. seealso::
-   `Odoo Tutorials: Marketing <https://www.odoo.com/slides/marketing-27>`_
-
 .. cards::
 
    .. card:: Create SMS messages

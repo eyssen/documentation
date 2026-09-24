@@ -13,9 +13,13 @@ To properly utilize multiple addresses in Odoo, go to :menuselection:`Accounting
 Configuration --> Settings`, and scroll down to the :guilabel:`Customer Invoices` heading. Then,
 tick the checkbox.
 
-.. image:: different_addresses/customer-addresses-setting.png
-   :align: center
-   :alt: Activate the Customer Addresses setting.
+.. screenshot:: sales-different-addresses-setting
+   :menu: Sales ‣ Configuration ‣ Settings
+   :shows: The Settings page scrolled to the "Quotations & Orders" section with the "Customer Addresses" checkbox enabled.
+   :highlight: The "Customer Addresses" setting (red frame).
+   :data: Demo company.
+   :module: sale
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 .. _sales/send_quotations/contact-form-config:
 
@@ -33,9 +37,13 @@ From the contact form, click :guilabel:`Edit`, and then select :guilabel:`Add`, 
 under the :guilabel:`Contacts & Addresses` tab. Doing so reveals a :guilabel:`Create Contact` pop-up
 form, in which additional addresses can be configured.
 
-.. image:: different_addresses/contact-form-add-address.png
-   :align: center
-   :alt: Add a contact/address to the contact form.
+.. screenshot:: sales-different-addresses-contact-tab
+   :menu: Sales ‣ Orders ‣ Customers ‣ (a customer) ‣ Contacts & Addresses
+   :shows: The "Contacts & Addresses" tab of a contact form with the "Add" link visible and one existing address card.
+   :highlight: The "Add" link in the Contacts & Addresses tab (red frame).
+   :data: Customer "Deco Addict" with one existing delivery address.
+   :module: base
+   :notes: English UI, light theme, 1440px width, crop to the notebook.
 
 On the :guilabel:`Create Contact` pop-up form, start by clicking the default :guilabel:`Other
 Address` field to reveal a drop-down menu of address-related options.
@@ -51,9 +59,13 @@ Select any of the following options:
 Once an option is selected, proceed to enter the corresponding contact information that should be
 used for the specified address type.
 
-.. image:: different_addresses/create-contact-window.png
-   :align: center
-   :alt: Create a new contact/address on a contact form.
+.. screenshot:: sales-different-addresses-create-contact-popup
+   :menu: Sales ‣ Orders ‣ Customers ‣ (a customer) ‣ Contacts & Addresses ‣ Add
+   :shows: The "Create Contact" pop-up window with the address-type radio buttons (Contact, Invoice Address, Delivery Address, Other Address) and the address fields.
+   :highlight: The address-type radio buttons (red frame).
+   :data: "Delivery Address" selected; name and street filled in.
+   :module: base
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 Then, click :guilabel:`Save & Close` to save the address and close the :guilabel:`Create Contact`
 window. Or, click :guilabel:`Save & New` to save the address and immediately input another one.
@@ -65,9 +77,13 @@ When a customer is added to a quotation, the :guilabel:`Invoice Address` and :gu
 Address` fields autopopulate with the corresponding addresses specified on the customer's contact
 form.
 
-.. image:: different_addresses/quotation-address-autopopulate.png
-   :align: center
-   :alt: Invoice and Delivery Addresses autopopulate on a quotation.
+.. screenshot:: sales-different-addresses-quotation-fields
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation)
+   :shows: The top of a quotation form where the Invoice Address and Delivery Address fields are filled automatically after selecting the customer.
+   :highlight: The Invoice Address and Delivery Address fields (red frame).
+   :data: Customer "Deco Addict" with different invoice and delivery addresses.
+   :module: sale
+   :notes: English UI, light theme, 1440px width, crop to the customer block.
 
 The :guilabel:`Invoice Address` and :guilabel:`Delivery Address` can also be edited directly from
 the quotation by clicking the :guilabel:`Edit` button, and then clicking the :guilabel:`➡️ (right

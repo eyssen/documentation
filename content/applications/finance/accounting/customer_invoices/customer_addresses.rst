@@ -25,7 +25,6 @@ address, by default, but any contact's address can be used instead.
    For more information, refer to the documentation on :ref:`Contact Form Configuration
    <sales/send_quotations/contact-form-config>`.
 
-
 Invoice and deliver to different addresses
 ==========================================
 
@@ -38,7 +37,5 @@ email, as usual, but the invoice is sent to the email of the address set as the
 :guilabel:`Invoice Address` on the sales order.
 
 .. note::
-   - Reports, such as the delivery slip and invoice report, can be :doc:`customized using Studio
-     </applications/studio/pdf_reports>`.
-   - If :doc:`Send by Post <snailmail>` is checked when you click :guilabel:`Send & Print`, the
-     invoice will be mailed to the invoice address.
+   - If :doc:`by Post <snailmail>` is selected when you click :guilabel:`Send`, the invoice will be
+     mailed to the invoice address.

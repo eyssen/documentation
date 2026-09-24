@@ -34,7 +34,6 @@ To create a company, open the Settings app, navigate to the :guilabel:`Companies
 - :guilabel:`Company Name`
 - :guilabel:`Address`
 - :guilabel:`Tax ID`: tax identification number.
-- :guilabel:`LEI`: legal entity identifier.
 - :guilabel:`Company ID`: company's registry number, if different from :guilabel:`Tax ID`
 - :ref:`Currency <multi-currency/config-main-currency>`
 - :guilabel:`Phone` and :guilabel:`Mobile`
@@ -67,7 +66,45 @@ After setting up a company, add :doc:`users <users>` and configure their :ref:`a
 Document layout
 ---------------
 
-Configure the :ref:`default layout <studio/pdf-reports/default-layout>` for all company documents.
+Configure the default layout of the company's printed and PDF documents (quotations, invoices,
+delivery slips, etc.). Go to :menuselection:`Settings`, then, in the :guilabel:`Companies` section,
+click :guilabel:`Configure Document Layout`. Layout settings are company-specific, but apply to all
+reports of that company.
+
+.. tip::
+   The preview on the right side of the :guilabel:`Configure your document layout` window shows how
+   the settings affect the documents.
+
+The following settings are available:
+
+- :guilabel:`Layout`: :guilabel:`Light`, :guilabel:`Boxed`, :guilabel:`Bold`, :guilabel:`Striped`,
+  :guilabel:`Bubble`, :guilabel:`Wave`, or :guilabel:`Folder`.
+- :guilabel:`Background`: :guilabel:`Blank`, :guilabel:`Demo logo`, or :guilabel:`Custom`, to
+  upload a custom background image.
+- :guilabel:`Text`: the font used in the documents: Lato, Roboto, Open Sans, Montserrat, Oswald,
+  Raleway, Tajawal (which supports Arabic and Latin scripts), or Fira Mono.
+- :guilabel:`Logo`: upload or change the company logo. The logo is also saved on the company record.
+- :guilabel:`Colors`: the primary and secondary colors used to structure the documents. By default,
+  they are generated from the colors of the logo.
+- :guilabel:`Address`: the company details displayed in the header of the documents. Multiple lines
+  of text can be added.
+- :guilabel:`Tagline`: displayed in the header (Light, Striped, Bubble, Wave, and Folder layouts) or
+  in the footer (Boxed and Bold layouts) of the documents.
+- :guilabel:`Footer`: the text displayed at the bottom of the documents, e.g., bank account details.
+- :guilabel:`Paper format`: the default paper size, e.g., :guilabel:`A4` or :guilabel:`US Letter`.
+  Other paper formats may be available depending on the installed apps, e.g., label sheets.
+
+Click :guilabel:`Continue` to save the settings.
+
+.. screenshot:: general-companies-document-layout
+   :menu: Settings ‣ General Settings ‣ Companies ‣ Configure Document Layout
+   :shows: The "Configure your document layout" dialog: Layout, Background, Text, Logo,
+      Colors, Address, Tagline, Footer and Paper format settings on the left, and the live document
+      preview on the right.
+   :highlight: The Layout selector and the preview.
+   :data: Company "YourCompany HU" with logo; layout "Light"; A4 paper format.
+   :module: web, base_setup
+   :notes: English UI, 1440px width, crop to the dialog.
 
 .. _general/companies/branches:
 
@@ -116,9 +153,8 @@ To create branches from a branch and create a multi-level architecture, click :g
 in the new branch's :guilabel:`Branches` tab.
 
 .. tip::
-   Activate the :ref:`developer mode <developer-mode>` to set :doc:`social media accounts
-   <../marketing/social_marketing>` and company-specific :doc:`email <email_communication>` system
-   parameters.
+   Activate the :ref:`developer mode <developer-mode>` to set social media accounts and
+   company-specific :doc:`email <email_communication>` system parameters.
 
 .. warning::
    Adding a branch to a company enables :doc:`multi-company <companies/multi_company>` functions.

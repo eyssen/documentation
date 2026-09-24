@@ -10,9 +10,13 @@ Analysis* page to gain insight into the effectiveness of the pipeline and its us
 
 To access the *Pipeline Analysis* page, go to :menuselection:`CRM app --> Reporting --> Pipeline`.
 
-.. image:: win_loss/reporting-tab-and-pipeline-view.png
-   :align: center
-   :alt: Open the CRM app and click on the Reporting tab along the top, then click Pipeline.
+.. screenshot:: sales-crm-win-loss-reporting-menu
+   :menu: CRM ‣ Reporting ‣ Pipeline
+   :shows: The CRM Reporting menu open on the Pipeline entry.
+   :highlight: The Pipeline entry (red frame).
+   :data: Demo database.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the open menu.
 
 .. _win_loss/pipeline:
 
@@ -23,24 +27,21 @@ Upon accessing the :guilabel:`Pipeline Analysis` page, a bar graph showcasing th
 past year automatically populates. The bars represent the number of leads in each stage of the sales
 pipeline, color-coded to show the month the lead reached that stage.
 
-.. image:: win_loss/pipeline-analysis-page.png
-   :align: center
-   :alt: The default state of the Pipeline Analysis page is a graph, with many options to change it.
+.. screenshot:: sales-crm-win-loss-default-page
+   :menu: CRM ‣ Reporting ‣ Pipeline
+   :shows: The Pipeline Analysis page in its default state: a stacked bar chart of the past year's leads per stage, with the search bar, the Measures button and the view switcher.
+   :highlight: No highlight; the whole page is the subject.
+   :data: Demo pipeline over twelve months.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, full page.
 
 The interactive elements of the :guilabel:`Pipeline Analysis` page manipulate the graph to report
 different metrics in several views. From left-to-right, top-to-bottom, the elements include:
 
 - :guilabel:`Actions`: represented by the :guilabel:`⚙️ (gear)` icon, located next to the
-  :guilabel:`Pipeline Analysis` page title. When clicked, a drop-down menu appears with three
-  options, each with their own sub-menu: :guilabel:`Knowledge`, :guilabel:`Dashboard`,
-  :guilabel:`Spreadsheet`. (See :ref:`Save and share reports <win_loss/save_reports>` for more
-  information)
-
-  - The :guilabel:`Knowledge` option is for linking to or inserting the graph in a *Knowledge* app
-    article.
-  - The :guilabel:`Dashboard` option is for adding the graph to a dashboard in the *Dashboards* app.
-  - The :guilabel:`Spreadsheet` option is for linking the graph in a spreadsheet in the *Documents*
-    app.
+  :guilabel:`Pipeline Analysis` page title. When clicked, a drop-down menu appears with the
+  :guilabel:`Dashboard` option, which adds the current graph to a dashboard in the *Dashboards*
+  app. (See :ref:`Save and share reports <win_loss/save_reports>` for more information)
 - :guilabel:`Search...` bar: shows the filters and groupings currently being applied to the graph.
   To add new filters/groups, type them into the search bar, or click the :guilabel:`⬇️ (down arrow)`
   icon, at the end of the bar, to open a drop-down menu of options. (See :ref:`Search Options
@@ -51,19 +52,14 @@ Options <win_loss/view>` for more information)
 
 - :guilabel:`Graph` view: displays the data in a bar graph. This is the default view.
 - :guilabel:`Pivot` view: displays the data in a customizable, categorized metrics table.
-- :guilabel:`Cohort` view: displays and organizes the data, based on their :guilabel:`Created on`
-  and :guilabel:`Closed Date` week (default), day, month, or year.
 - :guilabel:`List` view: displays the data in a list.
 
 Located on the far-left side of the page, beneath the :guilabel:`Pipeline Analysis` page title,
 there are more configurable filter and view options.
 
 - :guilabel:`Measures`: opens a drop-down menu of different measurement options that can be seen in
-  the graph, pivot, or cohort view. The :guilabel:`Measure` drop-down menu is not available in the
+  the graph or pivot view. The :guilabel:`Measure` drop-down menu is not available in the
   list view. (See :ref:`Measurement Options <win_loss/measure>` for more information)
-- :guilabel:`Insert in Spreadsheet`: opens a pop-up window with options for adding a graph or pivot
-  table to a spreadsheet in the *Documents* app or a dashboard in the *Dashboards* app. This option
-  is not available in the cohort or list view.
 
 With the graph view selected, the following options are available:
 
@@ -97,9 +93,13 @@ To add new search criteria, type the desired criteria into the search bar, or cl
 :guilabel:`⬇️ (down arrow)` icon, next to the search bar, to open a drop-down menu of all options.
 See the sections below for more information on what each option does.
 
-.. image:: win_loss/search-panel-filters-and-group-by-options.png
-   :align: center
-   :alt: Clicking on the down arrow next to the search bar opens a menu of filters for the analysis.
+.. screenshot:: sales-crm-win-loss-search-panel
+   :menu: CRM ‣ Reporting ‣ Pipeline ‣ Filters
+   :shows: The open search panel of the Pipeline Analysis page with the Filters, Group By and Favorites columns.
+   :highlight: No highlight; the panel is the subject.
+   :data: Demo database.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the search panel.
 
 .. tabs::
 
@@ -226,9 +226,13 @@ display the information in a more organized fashion.
    - **To create more complex rules:** click the :guilabel:`Add branch` icon to the right of the
      rule. This adds another modifier below the rule for adding an "all of" or "any of" statement.
 
-.. image:: win_loss/custom-filter-add-branch.png
-   :align: center
-   :alt: The add branch feature allows the creation of more complex all or any statements for rules.
+.. screenshot:: sales-crm-win-loss-add-branch
+   :menu: CRM ‣ Reporting ‣ Pipeline ‣ Filters ‣ Add Custom Filter
+   :shows: The custom-filter editor with a nested branch, showing how "all" and "any" conditions can be combined.
+   :highlight: The branch and its "any" selector (red frame).
+   :data: Two rules in a nested branch.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the rule editor.
 
 8. Once all rules have been added, click :guilabel:`Add` to add the custom filter to the search
    criteria.
@@ -261,10 +265,6 @@ page, and select one of the following options from the drop-down menu:
   creation.
 - :guilabel:`Days to Close`: measures the number of days it took a lead to be closed (marked
   **Won**).
-- :guilabel:`Days to Convert`: measures the number of days it took a lead to be converted to an
-  opportunity.
-- :guilabel:`Exceeded Closing Days`: measures the number of days by which a lead exceeded its
-  Expected Closing date.
 - :guilabel:`Expected MRR`: measures the Expected Recurring Revenue of a lead.
 - :guilabel:`Expected Revenue`: measures the Expected Revenue of a lead.
 - :guilabel:`Prorated MRR`: measures the Prorated Monthly Recurring Revenue of a lead.
@@ -280,9 +280,9 @@ View options
 
 After configuring filters, groupings, and measurements, the :guilabel:`Pipeline Analysis` page can
 display the data in a variety of ways. By default, the page uses the graph view, but can be changed
-to a pivot view, cohort view, or list view.
+to a pivot view or a list view.
 
-To change the pipeline to a different view, click one of the four view icons, located in the
+To change the pipeline to a different view, click one of the view icons, located in the
 top-right of the :guilabel:`Pipeline Analysis` page.
 
 .. tabs::
@@ -300,9 +300,13 @@ top-right of the :guilabel:`Pipeline Analysis` page.
       changed by clicking the :guilabel:`Measures` button, and :ref:`selecting another option
       <win_loss/measure>` from the resulting drop-down menu.
 
-      .. image:: win_loss/graph-view.png
-         :align: center
-         :alt: The Graph View displays the analysis as a Bar Chart, Line Chart, or Pie Chart.
+      .. screenshot:: sales-crm-win-loss-graph-view
+         :menu: CRM ‣ Reporting ‣ Pipeline
+         :shows: The Pipeline Analysis page in graph view with the bar, line and pie chart buttons above the chart.
+         :highlight: The chart-type buttons (red frame).
+         :data: Demo pipeline, count per stage.
+         :module: crm
+         :notes: English UI, light theme, 1440px width, crop to the chart and its button row.
 
       .. tip::
          When using a bar chart in this view, consider deselecting the :guilabel:`Stacked` option,
@@ -314,12 +318,16 @@ top-right of the :guilabel:`Pipeline Analysis` page.
       the results by the stages of the sales pipeline, and measures :guilabel:`Expected Revenue`.
 
       The pivot view is useful for analyzing more detailed numbers than the graph view can handle,
-      or for adding the data to a spreadsheet, where custom formulas can be set up, like in an Excel
-      file.
+      or for downloading the data to a spreadsheet, where custom formulas can be set up, like in an
+      Excel file.
 
-      .. image:: win_loss/pivot-view.png
-         :align: center
-         :alt: The Pivot View displays the analysis as a table.
+      .. screenshot:: sales-crm-win-loss-pivot-view
+         :menu: CRM ‣ Reporting ‣ Pipeline
+         :shows: The Pipeline Analysis page in pivot view, with the Flip Axis, Expand All and Download xlsx buttons above the table.
+         :highlight: The three buttons above the table (red frame).
+         :data: Stages in the rows, expected revenue as measure.
+         :module: crm
+         :notes: English UI, light theme, 1440px width, crop to the table and its button row.
 
       The three icons at the top-left of the page perform the following functions:
 
@@ -332,34 +340,6 @@ top-right of the :guilabel:`Pipeline Analysis` page.
          The :guilabel:`Stage` grouping cannot be removed, but the measurement can be changed by
          clicking the :guilabel:`Measures` button, and selecting another option.
 
-   .. tab:: Cohort View
-
-      The cohort view displays the analysis as periods of time (cohorts) that can be set to days,
-      weeks, months, or years. By default, :guilabel:`Week` is selected.
-
-      This view option is useful specifically for comparing how long it has taken to close leads.
-
-      .. image:: win_loss/cohort-view.png
-         :align: center
-         :alt: The Cohort View displays the analysis as individual weeks of the year.
-
-      From left-to-right, top-to-bottom, the columns in the chart represent the following:
-
-      - :guilabel:`Created On`: rows in this column represent the weeks of the year, in which
-        records matching the search criteria exist.
-
-        - When set to :guilabel:`Week`, a row with the label :guilabel:`W52 2023` means the results
-          occurred in: Week 52 of the Year 2023.
-      - :guilabel:`Measures`: the second column in the chart is the measurement of the results. By
-        default, it is set to :guilabel:`Count`, but can be changed by clicking the
-        :guilabel:`Measures` button, and selecting an option from the drop-down menu.
-      - :guilabel:`Closed Date - By Day/Week/Month/Year`: this column looks at what percentage of
-        the measured results were closed in subsequent days/weeks/months/years.
-      - :guilabel:`Average`: this row provides the average of all other rows in the column.
-
-      The cohort view can also be downloaded as an Excel file, by clicking the :guilabel:`Download`
-      icon in the top-left of the page.
-
    .. tab:: List View
 
       The list view displays a single list of all leads matching the search criteria. Clicking a
@@ -369,9 +349,13 @@ top-right of the :guilabel:`Pipeline Analysis` page.
 
       This view option is useful for reviewing many records at once.
 
-      .. image:: win_loss/list-view.png
-         :align: center
-         :alt: The List View displays a single list of all records matching the search criteria.
+      .. screenshot:: sales-crm-win-loss-list-view
+         :menu: CRM ‣ Reporting ‣ Pipeline
+         :shows: The Pipeline Analysis page in list view, showing all leads matching the search criteria with the optional-columns toggle at the right of the header.
+         :highlight: The optional-columns toggle (red frame).
+         :data: Demo leads list.
+         :module: crm
+         :notes: English UI, light theme, 1440px width, crop to the list.
 
       Clicking the :guilabel:`⚙️ (gear)` icon opens the Actions drop-down menu, with options for the
       following:
@@ -379,11 +363,7 @@ top-right of the :guilabel:`Pipeline Analysis` page.
       - :guilabel:`Import records`: opens a page for uploading a spreadsheet of data, as well as a
         template spreadsheet to easily format that data.
       - :guilabel:`Export All`: downloads the list as an xlsx file for Excel.
-      - :guilabel:`Knowledge`: inserts a view of, or link to, the list in an article in the
-        *Knowledge* app.
       - :guilabel:`Dashboard`: adds the list to *My Dashboard* in the *Dashboards* app.
-      - :guilabel:`Spreadsheet`: links to, or inserts, the list in a spreadsheet in the *Documents*
-        app.
 
       .. note::
          On the list view, clicking :guilabel:`New` closes the list, and opens the *New Quotation*
@@ -399,8 +379,8 @@ After understanding how to :ref:`navigate the pipeline analysis page <win_loss/p
 :guilabel:`Pipeline Analysis` page can be used to create and share different reports. Between the
 pre-made options and custom filter and groupings, almost any combination is possible.
 
-Once created, reports can be :ref:`saved to favorites, shared with other users, and/or added to
-dashboards and spreadsheets <win_loss/save_reports>`.
+Once created, reports can be :ref:`saved to favorites, shared with other users, and/or added to a
+dashboard <win_loss/save_reports>`.
 
 A few common reports that can be created using the :guilabel:`Pipeline Analysis` page are detailed
 below.
@@ -425,9 +405,13 @@ A win/loss report filters the leads from the past year, whether won or lost, and
 by their stage in the pipeline. Creating this report requires a custom filter, and grouping the
 results by :guilabel:`Stage`.
 
-.. image:: win_loss/search-criteria-for-basic-win-loss.png
-   :align: center
-   :alt: The search criteria for win/loss reports is Created On, Stage, and Active is in true false.
+.. screenshot:: sales-crm-win-loss-search-criteria
+   :menu: CRM ‣ Reporting ‣ Pipeline
+   :shows: The search bar of the win/loss report showing the Created on, Stage and Active facets.
+   :highlight: The three facets (red frame).
+   :data: Created on: last 12 months; grouped by Stage; Active is set or not set.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the search bar.
 
 Follow the steps below to create a win/loss report:
 
@@ -435,9 +419,13 @@ Follow the steps below to create a win/loss report:
 2. On the :guilabel:`Pipeline Analysis` page, click the :guilabel:`⬇️ (down arrow)` icon, next to
    the search bar, to open a drop-down menu of filters and groupings.
 
-   .. image:: win_loss/filters-for-basic-win-loss-report.png
-      :align: center
-      :alt: The Search menu containing the filters for a basic win/loss report.
+   .. screenshot:: sales-crm-win-loss-filters-panel
+      :menu: CRM ‣ Reporting ‣ Pipeline ‣ Filters
+      :shows: The open search panel with the filters needed for a basic win/loss report selected.
+      :highlight: The selected filters (red frame).
+      :data: "Won" and "Lost" filters selected.
+      :module: crm
+      :notes: English UI, light theme, 1440px width, crop to the search panel.
 
 3. In drop-down menu that appears, under the :guilabel:`Group By` heading, click :guilabel:`Stage`.
 4. Under the :guilabel:`Filters` heading, click :guilabel:`Add Custom Filter` to open another pop-up
@@ -457,17 +445,25 @@ Follow the steps below to create a win/loss report:
    :guilabel:`not set`. In total, the rule reads :guilabel:`Active is not set`.
 8. Click :guilabel:`Add`.
 
-.. image:: win_loss/add-custom-active-filter.png
-   :align: center
-   :alt: The Add Custom Filter menu showing two rules: (1) Active is set, and (2) Active is not set.
+.. screenshot:: sales-crm-win-loss-active-custom-filter
+   :menu: CRM ‣ Reporting ‣ Pipeline ‣ Filters ‣ Add Custom Filter
+   :shows: The "Add Custom Filter" pop-up with two rules matched with "any": Active is set, and Active is not set.
+   :highlight: The two Active rules (red frame).
+   :data: Match any of: Active is set / Active is not set.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 The report now displays the total :guilabel:`Count` of leads, whether "Won" or "Lost," grouped by
 their stage in the CRM pipeline. Hover over a section of the report to see the number of leads in
 that stage.
 
-.. image:: win_loss/basic-win-loss-report.png
-   :align: center
-   :alt: A basic win/loss report showing all leads whether won or lost grouped by stage.
+.. screenshot:: sales-crm-win-loss-basic-report
+   :menu: CRM ‣ Reporting ‣ Pipeline
+   :shows: A basic win/loss report: a bar chart of won and lost leads grouped by pipeline stage.
+   :highlight: No highlight; the chart is the subject.
+   :data: Demo pipeline, won and lost leads of the past year.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the chart.
 
 Customize win/loss reports
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -505,9 +501,13 @@ customize the report for different needs.
         - Adding :guilabel:`Medium` or :guilabel:`Source` can reveal what marketing avenues generate
           more sales.
 
-      .. image:: win_loss/search-panel-filters-and-group-by-options.png
-         :align: center
-         :alt: The Search menu open and the Won and Lost filters highlighted.
+      .. screenshot:: sales-crm-win-loss-won-lost-filters
+         :menu: CRM ‣ Reporting ‣ Pipeline ‣ Filters
+         :shows: The open search panel with the Won and Lost filters highlighted among the available filters.
+         :highlight: The Won and Lost filters (red frame).
+         :data: Demo database.
+         :module: crm
+         :notes: English UI, light theme, 1440px width, crop to the search panel.
 
    .. tab:: Pivot View
 
@@ -525,9 +525,13 @@ customize the report for different needs.
          - Other useful measures for pivot view include :guilabel:`Days to Assign` and
            :guilabel:`Days to Close`.
 
-      .. image:: win_loss/win-loss-pivot-view.png
-         :align: center
-         :alt: A win/loss report in Pivot View displays the data in table form.
+      .. screenshot:: sales-crm-win-loss-pivot-report
+         :menu: CRM ‣ Reporting ‣ Pipeline
+         :shows: A win/loss report in pivot view, with the stages in the rows and the won/lost split in the columns.
+         :highlight: No highlight; the table is the subject.
+         :data: Demo pipeline, count measure.
+         :module: crm
+         :notes: English UI, light theme, 1440px width, crop to the table.
 
       .. important::
          In pivot view, the :guilabel:`Insert In Spreadsheet` button may be greyed out due to the
@@ -552,9 +556,13 @@ customize the report for different needs.
            Website, etc.) that originated each lead.
          - **Source**: Shows the source of each lead (Newsletter, Lead Recall, Search Engine, etc.).
 
-      .. image:: win_loss/win-loss-list-view.png
-         :align: center
-         :alt: A win/loss report in List View displays all leads in an easy-to-read list.
+      .. screenshot:: sales-crm-win-loss-list-report
+         :menu: CRM ‣ Reporting ‣ Pipeline
+         :shows: A win/loss report in list view, listing every won and lost lead with its stage and expected revenue.
+         :highlight: No highlight; the list is the subject.
+         :data: Demo pipeline, won and lost leads.
+         :module: crm
+         :notes: English UI, light theme, 1440px width, crop to the list.
 
 .. _win_loss/save_reports:
 
@@ -565,8 +573,7 @@ After :ref:`creating a report <win_loss/reports>`, the search criteria can be sa
 does not need to be created again in the future. Saved searches automatically update their results
 every time the report is opened.
 
-Additionally, reports can be shared with others, or added to spreadsheets/dashboards for greater
-customization and easier access.
+Additionally, reports can be shared with others, or added to a dashboard for easier access.
 
 .. tabs::
 
@@ -587,44 +594,24 @@ customization and easier access.
       4. Finally, click :guilabel:`Save`. The report is now saved under the :guilabel:`Favorites`
          heading.
 
-      .. image:: win_loss/save-to-favorites.png
-         :align: center
-         :alt: Under the Favorites heading, click Save current search and save the report for later.
+      .. screenshot:: sales-crm-win-loss-save-favorite
+         :menu: CRM ‣ Reporting ‣ Pipeline ‣ Favorites
+         :shows: The Favorites section of the search panel with "Save current search" expanded, showing the name field and the "Default filter" and "Shared" checkboxes.
+         :highlight: The name field and the two checkboxes (red frame).
+         :data: Report name "Win/Loss 2026".
+         :module: crm
+         :notes: English UI, light theme, 1440px width, crop to the Favorites column.
 
-   .. tab:: Add to a Spreadsheet
+   .. tab:: Download as a Spreadsheet File
 
-      Inserting a report into a spreadsheet not only saves a copy of the report, it allows users to
-      add charts and formulas like in an Excel file.
+      A report can be downloaded and opened in an external spreadsheet program, where charts and
+      formulas can be added as in any Excel file.
 
-      To save a report as a spreadsheet:
-
-      - **In Graph or Pivot View**:
-
-        1. Click the :guilabel:`Insert in spreadsheet` button.
-        2. In the pop-up menu that appears, click :guilabel:`Confirm`.
-
-      - **In Cohort or List View**:
-
-        1. Click the :guilabel:`⚙️ (gear)` icon.
-        2. In the drop-down menu that appears, hover over :guilabel:`Spreadsheet`.
-        3. In the next drop-down menu, click either :guilabel:`Insert in spreadsheet` or
-           :guilabel:`Link in spreadsheet`.
-
-      Saved reports are viewable in the *Documents* app.
-
-        .. image:: win_loss/pivot-view-in-spreadsheet.png
-           :align: center
-           :alt: Pivot View reports especially benefit from being inserted in spreadsheets.
-
-      .. tip::
-         After modifying a spreadsheet and adding additional formulas, consider then adding the
-         entire spreadsheet to a dashboard. Using this method, the spreadsheet can be added to a
-         public dashboard instead of only :guilabel:`My Dashboard`.
-
-         1. Click :menuselection:`File --> Add to dashboard`.
-         2. In the pop-up menu that appears, name the spreadsheet and select a :guilabel:`Dashboard
-            Section` to house the report.
-         3. Click :guilabel:`Create`.
+      - **In Pivot View**: click the :guilabel:`Download xlsx` :icon:`fa-download`
+        :guilabel:`(download)` icon at the top-left of the table.
+      - **In List View**: click the :guilabel:`⚙️ (gear)` icon and select :guilabel:`Export All`.
+        In the :guilabel:`Export Data` pop-up window, choose the :guilabel:`XLSX` or
+        :guilabel:`CSV` format, pick the fields to export, and click :guilabel:`Export`.
 
    .. tab:: Add to a Dashboard
 
@@ -644,9 +631,13 @@ customization and easier access.
       1. Return to the main apps page, and navigate to :menuselection:`Dashboards app --> My
          Dashboard`.
 
-      .. image:: win_loss/add-to-dashboard.png
-         :align: center
-         :alt: To access the saved report, open the Dashboard app and click My Dashboard.
+      .. screenshot:: sales-crm-win-loss-my-dashboard
+         :menu: Dashboards ‣ My Dashboard
+         :shows: The My Dashboard page with the saved pipeline report added as a tile.
+         :highlight: The added report tile (red frame).
+         :data: One saved report named "Pipeline".
+         :module: board
+         :notes: English UI, light theme, 1440px width, crop to the dashboard.
 
 .. seealso::
    - :doc:`../acquire_leads/convert`

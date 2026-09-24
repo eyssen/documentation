@@ -34,8 +34,14 @@ set the :guilabel:`Product Type` to :guilabel:`Goods`. Finally, tick the checkbo
 :guilabel:`Track Inventory`, and select an :doc:`option
 <../../inventory/product_management/product_tracking>` from the drop-down.
 
-.. image:: reordering/product-configured-for-reordering.png
-   :alt: Configure a product for reordering in Odoo.
+.. screenshot:: purchase-reordering-product-configured
+   :menu: Purchase ‣ Products ‣ Products ‣ (open a product)
+   :shows: A product form with the "Purchase" checkbox ticked, Product Type set to "Goods", and
+           "Track Inventory" enabled with a tracking option selected.
+   :highlight: The Purchase checkbox and Track Inventory field (red frame).
+   :data: Demo company "YourCompany"; product "Office Chair Black".
+   :module: purchase, stock
+   :notes: English UI, light theme, 1440px width.
 
 Add a reordering rule to a product
 ==================================
@@ -74,9 +80,19 @@ defining the following fields:
 - :guilabel:`Unit` specifies the unit of measurement by which the quantity is to be ordered. For
   discrete products, this should be set to `Units`. However, it can also be set to units of
   measurement like `Volume` or `Weight` for non-discrete products like water or bricks.
+- :guilabel:`Trigger` determines how the rule generates purchase orders: :guilabel:`Auto` creates
+  the purchase order automatically as soon as the stock falls below the minimum quantity, while
+  :guilabel:`Manual` only lists the need on the :guilabel:`Replenishment` dashboard, to be ordered
+  by clicking :guilabel:`Order Once`.
 
-.. image:: reordering/reordering-rule-configuration.png
-   :alt: Configure the reordering rule in Odoo.
+.. screenshot:: purchase-reordering-rule-configuration
+   :menu: Purchase ‣ Products ‣ Products ‣ (open a product) ‣ Reordering Rules ‣ Create
+   :shows: A new reordering rule form with the Location, Min Quantity, Max Quantity, Multiple
+           Quantity, Unit, and Trigger fields filled in.
+   :highlight: The Min Quantity and Max Quantity fields (red frame).
+   :data: Demo company "YourCompany"; Min Quantity 5, Max Quantity 25, Trigger "Auto".
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    :doc:`../../inventory/warehouses_storage/replenishment/reordering_rules`

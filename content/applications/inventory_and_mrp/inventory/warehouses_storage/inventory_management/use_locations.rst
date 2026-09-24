@@ -16,9 +16,14 @@ section, tick the :guilabel:`Storage Locations` checkbox. Then, click :guilabel:
    <../../shipping_receiving/daily_operations/use_routes>`, which controls how products move between
    locations.
 
-.. image:: use_locations/enable-location.png
-   :align: center
-   :alt: Show Storage Locations feature.
+.. screenshot:: inventory-locations-enable
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to the "Warehouses" section with the "Storage Locations"
+      checkbox enabled.
+   :highlight: The "Storage Locations" checkbox (red frame).
+   :data: Demo company "YourCompany HU".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the "Warehouses" settings block.
 
 Create new location
 ===================
@@ -26,9 +31,14 @@ Create new location
 After enabling *Storage Locations*, go to :menuselection:`Inventory app --> Configuration -->
 Locations`.
 
-.. image:: use_locations/locations.png
-   :align: center
-   :alt: List of internal locations.
+.. screenshot:: inventory-locations-list
+   :menu: Inventory ‣ Configuration ‣ Locations
+   :shows: The Locations list with the default "Internal" filter, showing the location hierarchy (e.g.
+      WH/Stock, WH/Stock/Shelf 1).
+   :highlight: None.
+   :data: A warehouse with two or three internal sub-locations.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, full list view.
 
 On this page, click :guilabel:`New`. The new location form can then be configured as follows:
 
@@ -68,9 +78,15 @@ location serves its intended purpose in the database:
   a destination for receiving products from *Buy*, *Manufacture*, or other procurement routes,
   ensuring products are correctly supplied to the warehouse.
 
-.. image:: use_locations/new-location.png
-   :align: center
-   :alt: Additional Information section of new location creation form.
+.. screenshot:: inventory-locations-new-form
+   :menu: Inventory ‣ Configuration ‣ Locations ‣ New
+   :shows: A new location form with the Location Name and Parent Location filled in, and the "Additional
+      Information" section showing Location Type, Storage Category, Company, "Is a Scrap Location?", "Is a
+      Return Location?", Barcode and "Replenish Location".
+   :highlight: The "Additional Information" section (red frame).
+   :data: Location "Shelf 1" under parent "WH/Stock", type "Internal Location".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the form and the Additional Information section.
 
 Configure the remaining fields in the :guilabel:`Additional Information` section as follows:
 
@@ -87,9 +103,14 @@ Configure the remaining fields in the :guilabel:`Additional Information` section
 In the :guilabel:`Cyclic Counting` section, change the value in the :guilabel:`Inventory Frequency
 (Days)` field from the default `0`, if necessary.
 
-.. image:: use_locations/use-locations-cyclic-counting.png
-   :align: center
-   :alt: Cyclic Counting section of new location creation form.
+.. screenshot:: inventory-locations-cyclic-counting
+   :menu: Inventory ‣ Configuration ‣ Locations ‣ (a location)
+   :shows: The "Cyclic Counting" section of a location form with the "Inventory Frequency (Days)" field at
+      its default value 0.
+   :highlight: The "Inventory Frequency (Days)" field (red frame).
+   :data: Location "WH/Stock/Shelf 1", no count performed yet.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the section.
 
 When different than `0`, the inventory count dates for products stored at this location are
 automatically set at the defined frequency.
@@ -117,9 +138,14 @@ Inventory` field displays the date of the next inventory count.
    With inventory counts scheduled to occur every `30` days, and the :guilabel:`Last Effective
    Inventory` count occurring on July 16, the :guilabel:`Next Expected Inventory` is August 15.
 
-   .. image:: use_locations/scheduled-count.png
-      :align: center
-      :alt: Show Cyclic Count section of the locations form.
+   .. screenshot:: inventory-locations-scheduled-count
+      :menu: Inventory ‣ Configuration ‣ Locations ‣ (a location)
+      :shows: The "Cyclic Counting" section of a location form with "Inventory Frequency (Days)" set to 30,
+         "Last Effective Inventory" on 16 July and "Next Expected Inventory" on 15 August.
+      :highlight: The "Last Effective Inventory" and "Next Expected Inventory" fields (red frame).
+      :data: Location "WH/Stock/Shelf 1" with one applied inventory adjustment.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the section.
 
 Logistics section
 -----------------
@@ -144,6 +170,11 @@ location.
 .. example::
    A list of current stock at `Shelf 1` consists of `266` cabinets and `39` desks.
 
-   .. image:: use_locations/current-stock.png
-      :align: center
-      :alt: Show stock at Shelf 1.
+   .. screenshot:: inventory-locations-current-stock
+      :menu: Inventory ‣ Configuration ‣ Locations ‣ (a location) ‣ Current Stock
+      :shows: The stock list of a single location, listing each product stored there with its on-hand
+         quantity.
+      :highlight: None.
+      :data: Location "Shelf 1" with 266 cabinets and 39 desks.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, full list view.

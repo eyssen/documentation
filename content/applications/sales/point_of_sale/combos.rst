@@ -26,8 +26,12 @@ First, you need to create combination choices. To do so:
    As a reference, the selected product's original price is displayed in the :guilabel:`Original
    Price` column.
 
-.. image:: combos/combo-form.png
-   :scale: 75%
+.. screenshot:: pos-combos-choice-form
+   :menu: Point of Sale ‣ Products ‣ Combo Choices ‣ New
+   :shows: A combo choice form named "Main Course" listing three products, one of them with an extra price in the "Extra Price" column.
+   :data: Combo choice "Main Course" with "Burger", "Pasta" and "Steak (+3.00)".
+   :module: point_of_sale
+   :notes: English UI, light theme, 1440px width; scale down to about 75 % of the page width.
 
 Second, you need to create a specific product to gather combo choices. To do this:
 
@@ -44,8 +48,13 @@ Second, you need to create a specific product to gather combo choices. To do thi
    combinations to add. You can also create a new combination at this step by clicking
    :guilabel:`New` on the popup window.
 
-.. image:: combos/combo-product-form.png
-   :scale: 75%
+.. screenshot:: pos-combos-product-form
+   :menu: Point of Sale ‣ Products ‣ Products ‣ New
+   :shows: A product form with "Product Type" set to "Combo" and the "Combo Choices" tab listing the combo choices that make up the menu.
+   :highlight: The "Combo Choices" tab (red frame).
+   :data: Product "Lunch Menu" with the combo choices "Starter", "Main Course" and "Dessert".
+   :module: point_of_sale
+   :notes: English UI, light theme, 1440px width; scale down to about 75 % of the page width.
 
 Once you have created and added the combo choices into a product, you can sell combos in your retail
 store or restaurant.
@@ -56,5 +65,8 @@ Practical application
 :ref:`Open a POS session <pos/session-start>` and select the combo product. Choose the options and
 click :guilabel:`Add to order`. As a reminder, the extra price appears under the related choices.
 
-.. image:: combos/combo-select.png
-   :scale: 75%
+.. screenshot:: pos-combos-selection-popup
+   :menu: (POS interface) ‣ (a combo product)
+   :shows: The combo selection popup in the POS, with one product picked per choice and the extra price shown under the related choice.
+   :module: point_of_sale
+   :notes: English UI, light theme; scale down to about 75 % of the page width.

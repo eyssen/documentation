@@ -20,9 +20,6 @@ operations and employee benefits:
 
 - :ref:`End Date Contract Alert <fleet/end-contract>` — emails the contract's *Responsible* person a
   set number of days before the vehicle agreement expires, so renewals or returns aren't missed.
-- :ref:`New Vehicle Request <fleet/request>` — (Belgian Payroll localization only) blocks employees
-  from requesting a new company car through the salary configurator, once the available vehicles
-  already exceeds the defined limit, helping control benefits costs.
 
 To access the settings menu, go to :menuselection:`Fleet app --> Configuration --> Settings`.
 
@@ -36,8 +33,13 @@ contract an alert should be sent. The :ref:`responsible parties <fleet/responsib
 email informing them that a vehicle contract is about to expire in the number of days defined in
 this field.
 
-.. image:: new_vehicle/fleet-settings.png
-   :alt: Settings available for the Fleet application.
+.. screenshot:: hr-fleet-settings
+   :menu: Fleet ‣ Configuration ‣ Settings
+   :shows: The Fleet settings page with the End Date Contract Alert option and its notice period in days.
+   :highlight: The End Date Contract Alert setting (red frame).
+   :data: Alert set to 30 days.
+   :module: fleet
+   :notes: English UI, light theme, 1440px width.
 
 .. _fleet/responsible:
 
@@ -59,32 +61,6 @@ form, click the :guilabel:`Contracts` smart button at the top of the page. Only 
 with the vehicle appear in the list. Click on an individual contract to open it. The
 :guilabel:`Responsible` person is listed on the contract.
 
-.. _fleet/request:
-
-New Vehicle Request (Belgian Payroll - Fleet)
----------------------------------------------
-
-Enter the maximum fleet size that may be reached through the salary-configurator flow. When the
-total number of available vehicles (vehicles without an assigned driver) is equal to or below this
-limit, employees can request a new company car. Once the available vehicles exceeds the limit, the
-request option is hidden.
-
-.. example::
-   If the :guilabel:`New Vehicle Request` limit is set to 20 vehicles, and there are 25 vehicles
-   available, employees cannot request a new car and must select from the 25 already available. If
-   there are only 10 cars available, then the employee would be able to request a new vehicle.
-
-.. note::
-   This settings option **only** appears if the :guilabel:`Belgian-Payroll-Fleet` module is
-   installed for the Belgian localization.
-
-Add a vehicle
-=============
-
-To add a new vehicle to the fleet from the :guilabel:`Vehicles` dashboard, click the :guilabel:`New`
-button in the top-left corner, and a blank vehicle form loads. Then, proceed to enter the vehicle
-information on the vehicle form.
-
 .. _fleet/new_vehicle/vehicle-form:
 
 Vehicle form fields
@@ -98,8 +74,13 @@ Vehicle form fields
 - :guilabel:`Tags`: Select any tags from the drop-down menu, or type in a new tag. There is no limit
   on the amount of tags that can be selected.
 
-.. image:: new_vehicle/model.png
-   :alt: The new vehicle form, showing the model section.
+.. screenshot:: hr-fleet-vehicle-model-section
+   :menu: Fleet ‣ Fleet ‣ Fleet ‣ New
+   :shows: The top of a new vehicle form with the model, the licence plate, the tags and the driver filled in.
+   :highlight: The Model and Licence Plate fields (red frame).
+   :data: Model "Skoda Octavia", licence plate "ABC-123", driver "Anita Kovács".
+   :module: fleet
+   :notes: English UI, light theme, 1440px width. Use an invented licence plate.
 
 .. note::
    The :guilabel:`Model` is the *only* required field on the new vehicle form. When a model is
@@ -205,8 +186,13 @@ Fill in the following fields on the form:
   `Building 2 Parking Lot`. This is crucial information for companies with many locations where
   vehicles are stored.
 
-.. image:: new_vehicle/new-vehicle-type.png
-   :alt: The new vehicle form, showing the vehicle tax section.
+.. screenshot:: hr-fleet-vehicle-information-tab
+   :menu: Fleet ‣ Fleet ‣ Fleet ‣ New
+   :shows: The Information tab of the vehicle form with the fiscality, the contract and the engine fields.
+   :highlight: The Fiscality group (red frame).
+   :data: The same Skoda Octavia.
+   :module: fleet
+   :notes: English UI, light theme, 1440px width.
 
 Tax Info tab
 ------------
@@ -223,9 +209,6 @@ Fiscality
 - :guilabel:`Horsepower Taxation`: Enter the amount that is taxed based on the size of the vehicle's
   engine. This is determined by local taxes and regulations, and varies depending on the location.
   It is recommended to check with the accounting department to ensure this value is correct.
-- :guilabel:`Disallowed Expenses Rate`: Configure the dates and percentages of the vehicle-related
-  costs (fuel, maintenance, depreciation, etc.) that **cannot** be deducted from the company's
-  taxable income.
 
 Contract
 ~~~~~~~~
@@ -242,8 +225,13 @@ Contract
    The values listed above affect the accounting department. It is recommended to check with the
    accounting department for more information and/or assistance with these values.
 
-.. image:: new_vehicle/new-vehicle-tax.png
-   :alt: The new vehicle form, showing the vehicle tax section.
+.. screenshot:: hr-fleet-vehicle-tax-section
+   :menu: Fleet ‣ Fleet ‣ Fleet ‣ New
+   :shows: The tax fields of the vehicle form, with the horsepower taxation and the deductible rate filled in.
+   :highlight: The tax fields (red frame).
+   :data: The same Skoda Octavia.
+   :module: fleet
+   :notes: English UI, light theme, 1440px width. Crop to the tax fields.
 
 Model tab
 ---------
@@ -262,10 +250,41 @@ Note tab
 
 Enter any notes for the vehicle in this section.
 
-.. image:: new_vehicle/model-tab.png
-   :alt: The new vehicle form, showing the vehicle tax section.
+.. screenshot:: hr-fleet-vehicle-note-tab
+   :menu: Fleet ‣ Fleet ‣ Fleet ‣ New
+   :shows: The Note tab of the vehicle form with free-text notes about the vehicle.
+   :highlight: The Note tab (red frame).
+   :data: Note "Winter tyres stored at the Marbella depot".
+   :module: fleet
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`../fleet/models`
    - :doc:`../fleet/service`
    - :doc:`../fleet/accidents`
+
+.. _fleet/status:
+
+Vehicle status and tags
+=======================
+
+The :guilabel:`Status` of a vehicle follows it from the request to the road. The statuses shipped
+by default are :guilabel:`New Request`, :guilabel:`To Order`, :guilabel:`Registered` and
+:guilabel:`Downgraded`; a vehicle in kanban view sits in the column of its status and is moved by
+dragging its card.
+
+Add, rename or reorder the statuses in :menuselection:`Fleet app --> Configuration --> Vehicle -->
+Vehicle Status`. Each status has a :guilabel:`Name` and a :guilabel:`Sequence`, which sets the order
+of the columns.
+
+:guilabel:`Tags` classify vehicles across statuses — `pool car`, `long-term lease`, `to be sold` —
+and are managed in :menuselection:`Fleet app --> Configuration --> Vehicle --> Tags`. Tags are
+selected on the vehicle form and can be used to filter and group anywhere in the application.
+
+.. screenshot:: hr-fleet-vehicle-status-kanban
+   :menu: Fleet ‣ Fleet ‣ Fleet
+   :shows: The vehicle kanban grouped by status, with the New Request, To Order and Registered columns and the tags visible on the cards.
+   :highlight: The status columns (red frame).
+   :data: Demo company "YourCompany HU"; six vehicles spread across the statuses, two tagged "pool car".
+   :module: fleet
+   :notes: English UI, light theme, 1440px width.

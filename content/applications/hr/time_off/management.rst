@@ -64,8 +64,13 @@ click the :icon:`fa-check` :guilabel:`Validate` button at the end of the line.
 To refuse a request, click the :icon:`fa-times` :guilabel:`Refuse` button at the far end of the
 line.
 
-.. image:: management/time-off-requests.png
-   :alt: Time off requests with the filter, groupings, and status sections highlighted.
+.. screenshot:: hr-time-off-manage-requests
+   :menu: Time Off ‣ Management ‣ Time Off
+   :shows: The time off requests list with the search filters, the grouping and the status column, and the approve and refuse buttons on the lines.
+   :highlight: The status column and the approve and refuse buttons (red frame).
+   :data: Six requests, three of them to approve.
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.
 
 For more details, click anywhere on the time off request line (except for the :icon:`fa-thumbs-up`
 :guilabel:`Approve`, :icon:`fa-check` :guilabel:`Validate` icon, and :icon:`fa-times`
@@ -130,8 +135,13 @@ green, and the :guilabel:`Refused` requests are highlighted in gray.
 To approve an allocation request, click the :icon:`fa-thumbs-up` :guilabel:`Approve` button at the
 end of the line. To refuse a request, click the :icon:`fa-times` :guilabel:`Refuse` button.
 
-.. image:: management/allocations.png
-   :alt: Allocations with the filter, groupings, and status sections highlighted.
+.. screenshot:: hr-time-off-manage-allocations
+   :menu: Time Off ‣ Management ‣ Allocations
+   :shows: The allocations list with the search filters, the grouping and the status column.
+   :highlight: The status column (red frame).
+   :data: Allocations of the current year, some still to approve.
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.
 
 If more details are needed, click anywhere on the allocation request line (except for the
 :icon:`fa-thumbs-up` :guilabel:`Approve` or :icon:`fa-times` :guilabel:`Refuse` buttons) to view the

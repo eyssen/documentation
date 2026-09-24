@@ -20,13 +20,13 @@ The following modules related to the New Zealand localization are available:
      - `l10n_nz`
      - Installed by default when the accounting fiscal localization package is set to New Zealand.
        This module also installs the remittance advice report module.
-   * - :guilabel:`Employment Hero NZ Payroll`
-     - `l10n_employment_hero`
-     - This module synchronizes all pay runs from Employment Hero with Odoo's journal entries.
-   * - :guilabel:`EFT Batch Payment`
-     - `l10n_nz_eft`
-     - This module allows businesses to streamline bulk payments like payroll and vendor payments.
-       Each bank has its specific format for these transactions.
+   * - :guilabel:`Australia & New Zealand - UBL PINT`
+     - `l10n_anz_ubl_pint`
+     - Adds the PINT A-NZ (Peppol) electronic invoice format.
+
+.. note::
+   The Employment Hero payroll connector and the EFT batch payment files are **not** available in
+   this edition.
 
 .. note::
    The localization’s core modules are installed automatically with the localization. The rest can
@@ -49,15 +49,14 @@ Localization overview
 Taxes and GST
 -------------
 
-The default taxes impact the
-:doc:`GST report<../../../applications/finance/accounting/reporting/tax_returns>`, which can be
-accessed through :menuselection:`Accounting --> Reporting --> Tax Return`
+The default taxes impact the :ref:`GST report <localizations/new_zealand/gst-report>` (the
+:doc:`tax report <../accounting/reporting/dynamic_reports>` with the GST return boxes).
 
 The standard **Goods and Service Tax** (GST) rate is 15%, but different rates and exemptions exist
 for specific categories of goods and services.
 
 .. seealso::
-   :doc:`GST report<../../../applications/finance/accounting/reporting/tax_returns>`
+   :doc:`Taxes <../accounting/taxes>`
 
 .. _localizations/new_zealand/tax-mapping:
 
@@ -119,49 +118,28 @@ The **Goods and Services Tax (GST) report** is a critical tax reporting requirem
 registered for GST. The GST return is used to report and remit GST to the **Inland Revenue
 Department (IRD)**.
 
-.. image:: new_zealand/GST_report.png
-   :alt: GST Report.
+The base and tax amounts are collected from the **GST** taxes, which are pre-configured in Odoo to
+align with GST Return requirements (Boxes 1-15) through their tax grids. The **GST** taxes can also
+be manually configured for special use cases, such as specific GST treatments (e.g., zero-rating
+for exported agricultural goods). Once the **GST** setup for each tax is complete, Odoo
+automatically categorizes journal items into the appropriate boxes, which are shown in the
+:doc:`tax report <../accounting/reporting/dynamic_reports>`.
 
-The base and tax amounts are collected from the **GST**, which is pre-configured in Odoo to align
-with GST Return requirements (Boxes 1-15). The **GST** can also be manually configured for special
-use cases, such as specific GST treatments (e.g., zero-rating for exported agricultural goods).
-Once the **GST** setup for each account is complete, Odoo automatically categorizes journal items
-into the appropriate boxes. This ensures the **GST** return is accurate and fully reflects the
-business's financial activities.
-
-.. seealso::
-   :doc:`Taxes documentation <../../../applications/finance/accounting/taxes>`
-
-.. _localizations/new_zealand/gst-closing:
-
-Closing the GST report
-**********************
-
-The :ref:`tax return periodicity <tax-returns/periodicity>` must be set up before submitting the
-:ref:`tax return <tax-returns/report>` (**GST report**) to the **IRD**.
-
-.. seealso::
-   :doc:`Year-end closing documentation
-   <../../../applications/finance/accounting/reporting/year_end>`
-
-Before closing the entry for the first time, enable the :doc:`developer mode
-<../../../applications/general/developer_mode>` and go to :menuselection:`Accounting -->
-Configuration --> Tax Groups` to set the default **GST payable account** and **GST receivable
-account**.
-
-Once the **GST payable** and **GST receivable** accounts are set up, the **Tax Return** report
-generates an accurate journal closing entry automatically, balancing the GST balance with the GST
-clearing account.
-
-The balance between **GST receivable** and **payable** is set against the tax clearing account
-defined on the tax group. The amount to be paid to or received from **IRD** can then be reconciled
-with a bank transaction.
+.. screenshot:: finance-fl-new-zealand-gst-report
+   :menu: Accounting ‣ Reporting ‣ Dynamic Reports ‣ Tax Report
+   :shows: The tax report of a New Zealand company listing the GST return boxes (Box 5 Total sales and income, Box 6 Zero-rated supplies, … Box 15 GST to pay/refund) with their base and tax amounts.
+   :data: Demo company "YourCompany NZ", New Zealand localization installed.
+   :module: l10n_nz, account_dynamic_reports
+   :notes: English UI, light theme, 1440px width.
 
 .. important::
    The **GST** report is not submitted directly to the **IRD**. Instead, Odoo
    automatically calculates the required values for each section, providing options to audit
-   and review the data for a clearer understanding of its history. Businesses can then
-   submit these values to the `IRD portal <https://myir.ird.govt.nz/_/>`_.
+   and review the data. Businesses can then submit these values to the `IRD portal
+   <https://myir.ird.govt.nz/_/>`_.
+
+.. seealso::
+   :doc:`Taxes documentation <../../../applications/finance/accounting/taxes>`
 
 .. _localizations/new_zealand/remittance-advice:
 
@@ -172,8 +150,12 @@ A remittance advice is a document used as proof of payment to a business. To acc
 :menuselection:`Accounting --> Vendors --> Payments` and select the payment(s). Then click
 :icon:`fa-print` :guilabel:`Print` and select :guilabel:`Payment Receipt`.
 
-.. image:: new_zealand/remitance_advice_new.png
-   :alt: Remittance Advice.
+.. screenshot:: finance-fl-new-zealand-remitance-advice-new
+   :menu: Accounting ‣ Vendors ‣ Payments ‣ (a payment) ‣ Print ‣ Payment Receipt
+   :shows: The printed "Payment Receipt" PDF of a vendor payment used as remittance advice: company header, vendor, payment date, amount and the list of paid bills.
+   :data: Vendor payment of 1,500.00 NZD to "Azure Interior".
+   :module: account
+   :notes: English UI, light theme, 1440px width.
 
 .. _localizations/new_zealand/accounting:
 
@@ -188,8 +170,13 @@ E-invoicing
 Odoo allows :ref:`electronic invoicing <accounting/e-invoicing/configuration>` settings to be
 configured per contact.
 
-.. image:: new_zealand/peppol_contact_new.png
-   :alt: Peppol Contact.
+.. screenshot:: finance-fl-new-zealand-peppol-contact-new
+   :menu: Accounting ‣ Customers ‣ Customers ‣ (a customer) ‣ Accounting tab
+   :shows: The Accounting tab of a partner with the "Electronic Invoicing" section: "eInvoice Format" set to "PINT A-NZ (Peppol)" and the Peppol endpoint fields (Peppol e-address (EAS) = NZBN, Peppol Endpoint).
+   :highlight: The "Electronic Invoicing" section.
+   :data: Customer "Kiwi Customer Ltd", NZBN 9429041234567.
+   :module: account_peppol, l10n_anz_ubl_pint
+   :notes: English UI, light theme, 1440px width.
 
 .. important::
    Validating an invoice or credit note for a contact on the PEPPOL network will download a
@@ -199,118 +186,12 @@ configured per contact.
 .. seealso::
    `PEPPOL requirements <https://peppol.org/learn-more/country-profiles/new-zealand/>`_
 
-.. _localizations/new_zealand/eft-batch-payments:
-
-EFT batch payments
-------------------
-
-An :abbr:`EFT (electronic funds transfer)` batch file is a digital format used to facilitate bulk
-payment processing for businesses. It allows companies to consolidate multiple inbound and outbound
-payments into a single electronic file. This process is commonly used by businesses handling
-multiple payments at once, such as payroll or payments to multiple suppliers.
-
-.. _localizations/new_zealand/eft-configuration:
-
-Configuration
-~~~~~~~~~~~~~
-
-.. _localizations/new_zealand/eft-settings:
-
- #. :ref:`Install <general/install>` the :guilabel:`EFT Batch Payment` module (`l10n_nz_eft`).
- #. Go to :menuselection:`Accounting --> Configuration --> Settings`. In the
-    :guilabel:`Customer Payments` section, enable :guilabel:`Batch Payments`.
-
-.. seealso::
-   :doc:`../../../applications/finance/accounting/payments/batch`
-
-.. _localizations/new_zealand/eft-bank-journal:
-
-Bank journal
-************
-
-Go to :menuselection:`Accounting --> Configuration --> Journals` to configure the bank **journal**.
-In the :guilabel:`Journal Entries` tab, enter the :guilabel:`Account Number` and click
-:guilabel:`Create and edit...`. In the :guilabel:`Create Account Number` window, fill in the
-:guilabel:`Bank` and enable :guilabel:`Send Money` to set the bank account as trusted. The
-:guilabel:`Currency` field is optional.
-
-.. _localizations/new_zealand/eft-contacts:
-
-Contacts' bank accounts
-***********************
-
-To add banking information for a contact, navigate to
-:menuselection:`Accounting --> Customers --> Customers`,
-:menuselection:`Accounting --> Vendors --> Vendors`, or access the contact directly through the
-**Contacts** app. Select the relevant contact, then open the :guilabel:`Accounting` tab. Under the
-:guilabel:`Bank Accounts` section, click :guilabel:`Add a line` to enter the required details.
-
-- :guilabel:`Account Number`
-- :guilabel:`Bank`
-- :guilabel:`Account Holder` (it will automatically be selected for that contact)
-- :guilabel:`Send Money` must be **enabled**.
-
-.. _localizations/new_zealand/eft-generate:
-
-Generate an EFT file
-~~~~~~~~~~~~~~~~~~~~
-
-Go to :menuselection:`Accounting --> Customers --> Invoices`
-or :menuselection:`Accounting --> Vendors --> Bills`. Select the invoices/bills to be paid from the
-list and click :guilabel:`Pay`. In the :guilabel:`Payment Method` field, select
-:guilabel:`New Zealand EFT` and click :guilabel:`Create Payment`.
-
-.. note::
-   The :guilabel:`Group Payment` checkbox is optional. This option appears only if there are
-   multiple invoices or bills from the same contact.
-
-In the payments window, the required EFT information for each payment, such as
-:guilabel:`Particulars` and :guilabel:`Analysis Code`, can be entered as needed.
-
-.. note::
-   The same payment information can be found under :menuselection:`Accounting --> Customers -->
-   Payments` or :menuselection:`Accounting --> Vendors --> Payments`.
-
-Then, return to the **payments** list view, select the payments needing to be batched, and click
-:guilabel:`Create Batch`.
-
-In the **batch payment** window, fill in the following fields:
-
-- :guilabel:`EFT file format`
-- :guilabel:`Payment Reference`
-- :guilabel:`Payment Particulars`
-
-.. image:: new_zealand/batch_payment_view.png
-   :alt: Batch Payement.
-
-Then, click :guilabel:`Validate`. Odoo will generate the EFT file in the chatter. Click on the file
-to preview or download it.
-
-.. important::
-   Each bank has its specific format requirements for EFT batch payments. Make sure to choose the
-   correct EFT file format. Some banks may also require the completion of additional fields, such
-   as :guilabel:`Direct Debit Information` and :guilabel:`Dishonour Account`.
-
-.. seealso::
-   :doc:`Batch paments by bank deposit documentation
-   <../../../applications/finance/accounting/payments/batch>`
-
 .. _localizations/new_zealand/XXXXXX:
 
 Industry-specific features
 ==========================
 
 .. _localizations/new_zealand/starshipit:
-
-Starshipit shipping
--------------------
-
-`Starshipit <https://starshipit.com/>`_ is a shipping service operator that facilitates the
-integration of Australasian shipping couriers with Odoo.
-
-.. seealso::
-   - `Starshipit webinar recording <https://www.youtube.com/watch?v=TcDWnoYLXWg>`_
-   - :doc:`Starshipit shipping <../../../applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping>`
 
 .. _localizations/new_zealand/buynow-paylater:
 
@@ -343,24 +224,3 @@ supports the **EFTPOS** payment solution.
    - :doc:`Stripe Payment Provider documentation <../../../applications/finance/payment_providers/stripe>`
    - `Stripe.com Dashboard <https://dashboard.stripe.com/login?redirect=%2Fdashboard>`_
    - `Stripe.com Docs: Terminal <https://docs.stripe.com/terminal>`_
-
-.. _new-zealand/payroll:
-
-Payroll
-=======
-
-.. _new-zealand/employment-hero:
-
-Employment Hero integration
----------------------------
-
-If your business is already up and running with `Employment Hero <https://employmenthero.com/>`_,
-the connector can be used as an alternative payroll solution.
-
-The Employment Hero module automatically synchronises payslip accounting entries (e.g., expenses,
-social charges, liabilities, taxes) from **Employment Hero** to Odoo. Payroll administration is
-still done in **Employment Hero**; only the **journal entries** are recorded in Odoo.
-
-.. important::
-   To :ref:`configure the Employment Hero API <employment_hero/configuration>` for **New Zealand**,
-   use the following value as :guilabel:`Payroll URL`: `https://api.nzpayroll.co.nz/`.

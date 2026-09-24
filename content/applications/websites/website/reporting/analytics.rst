@@ -17,45 +17,13 @@ via :menuselection:`Website --> Reporting --> Analytics`.
 Plausible.io
 ============
 
-Odoo hosts its own Plausible.io server and provides a free and ready-to-use Plausible.io
-solution for **Odoo Online** databases that use the odoo.com domain. Odoo automatically creates and
-sets up your account. Start using it by going to :menuselection:`Website --> Reporting -->
-Analytics`.
-
-.. note::
-   - If you use a custom :doc:`domain name <../configuration/domain_names>` (e.g., `example.com`),
-     you need to create your own Plausible.io account and subscription.
-   - **If you already have a Plausible.io account** and you want to connect it to your Odoo Online
-     database, you must create two `ir.config.parameters` to use Plausible.io's servers. To do so,
-     enable the :ref:`developer mode <developer-mode>` and go to :menuselection:`General Settings -->
-     Technical --> System Parameters`. Click :guilabel:`New` and fill in the following
-     :guilabel:`Key` and :guilabel:`Value` fields:
-
-     .. list-table::
-        :header-rows: 1
-
-        * - Key
-          - Value
-        * - `website.plausible_script`
-          - `https://plausible.io/js/plausible.js`
-        * - `website.plausible_server`
-          - `https://plausible.io`
-
-   Then, follow the steps below to connect your existing account with Plausible.io servers.
-
-   .. warning::
-      Deactivating the free Plausible.io account linked to your **Odoo Online** database
-      will also remove the existing keys. As a result, new keys will be generated, while all
-      historical data will remain associated with the old keys. If you plan to deactivate the
-      account, it is recommended to save the existing keys to preserve access to that data.
-
-If your database is hosted on **Odoo.sh** or **On-premise**, or if you wish to use your own
-Plausible.io account, proceed as follows:
+To use Plausible.io, create your own Plausible.io account (or use an existing one), then connect it
+to the database as follows:
 
 #. Create or sign in to a Plausible.io account using the following link: `<https://plausible.io/register>`_.
 #. If you are creating a new account, go through the registration and activation steps.
    On the :guilabel:`Add website info` page, add the :guilabel:`Domain` of your website without
-   including `www` (e.g., `example.odoo.com`) and change the :guilabel:`Reporting Timezone`,
+   including `www` (e.g., `example.com`) and change the :guilabel:`Reporting Timezone`,
    if necessary. Click :guilabel:`Install Plausible` to proceed to the next step. Ignore the
    :guilabel:`Manual installation` instructions and click :guilabel:`Start collecting data`.
 #. Once done, click the Plausible.io logo in the upper-left part of the page to access your `list of
@@ -63,8 +31,13 @@ Plausible.io account, proceed as follows:
    (:guilabel:`ellipsis`) icon next to the website and select :icon:`fa-cog` :guilabel:`Settings`
    from the drop-down menu.
 
-   .. image:: analytics/plausible-gear-icon-settings.png
-      :alt: Click the gear icon in the list of websites.
+   .. screenshot:: website-analytics-plausible-gear-icon-settings
+      :menu: (Plausible.io) ‣ Sites
+      :shows: The Plausible.io site list with the three-dot menu of a site open on the Settings entry.
+      :highlight: The Settings entry (red frame).
+      :data: Site `example.com`.
+      :module: website
+      :notes: English UI, light theme, 1440px width.
 
 #. In the sidebar, select :guilabel:`Visibility`, then click :guilabel:`Add Shared link`.
 #. Enter a :guilabel:`Name`, leave the :guilabel:`Password (optional)` field empty, as the Plausible
@@ -73,8 +46,13 @@ Plausible.io account, proceed as follows:
 
 #. Copy the shared link.
 
-   .. image:: analytics/plausible-copy-shared-link.png
-      :alt: Copy the shared link URL from Plausible.io
+   .. screenshot:: website-analytics-plausible-copy-shared-link
+      :menu: (Plausible.io) ‣ Site settings ‣ Visibility
+      :shows: The Plausible.io Visibility settings with the created shared link and its copy button.
+      :highlight: The shared link (red frame).
+      :data: Use a throw-away shared link.
+      :module: website
+      :notes: English UI, light theme, 1440px width.
 
 #. In Odoo, go to :menuselection:`Website --> Configuration --> Settings`.
 #. In the :guilabel:`SEO` section, enable :guilabel:`Plausible Analytics`, then paste the
@@ -111,15 +89,25 @@ To follow your Odoo website's traffic with Google Analytics:
    business details and business objectives.
 #. When you reach the **Data collection** step, choose the :guilabel:`Web` platform.
 
-   .. image:: analytics/GA-platform.png
-      :alt: Choose a platform for your Google Analytics property.
+   .. screenshot:: website-analytics-ga-platform
+      :menu: (Google Analytics) ‣ Admin ‣ Data streams
+      :shows: The Google Analytics platform selection when creating a data stream, with the Web option.
+      :highlight: The Web option (red frame).
+      :data: Domain `example.com`.
+      :module: website_google_analytics
+      :notes: English UI, light theme, 1440px width.
 
 #. Set up your data stream: Specify your :guilabel:`Website URL` and a :guilabel:`Stream name`, then
    click :guilabel:`Create & continue`.
 #. Copy the :guilabel:`Measurement ID`.
 
-   .. image:: analytics/GA-measurement-id.png
-      :alt: Measurement ID in Google Analytics.
+   .. screenshot:: website-analytics-ga-measurement-id
+      :menu: (Google Analytics) ‣ Admin ‣ Data streams ‣ (stream)
+      :shows: The Google Analytics web stream details showing the Measurement ID to copy.
+      :highlight: The Measurement ID (red frame).
+      :data: Use a throw-away measurement ID.
+      :module: website_google_analytics
+      :notes: English UI, light theme, 1440px width.
 
 #. In Odoo, go to :menuselection:`Website --> Configuration --> Settings`.
 #. In the :guilabel:`SEO` section, enable :guilabel:`Google Analytics`, then paste the
@@ -176,8 +164,28 @@ To configure GTM, proceed as follows:
    :guilabel:`Advanced` section, then click :guilabel:`<head>` and :guilabel:`</body>` next to
    :guilabel:`Code Injection` to paste the codes.
 
-   .. image:: analytics/gtm-codes.png
-      :alt: Install Google Tag Manager
+   .. screenshot:: website-analytics-gtm-codes
+      :menu: (Google Tag Manager)
+      :shows: The Google Tag Manager install instructions showing the two code snippets to copy into the website's <head> and <body>.
+      :highlight: The two code snippets (red frame).
+      :data: Use a throw-away container ID.
+      :module: website_google_analytics
+      :notes: English UI, light theme, 1440px width.
+
+.. tip::
+   With the *Odoo Google Tag Manager* module (`website_google_tag`) installed, the container script
+   does not have to be injected by hand. Go to :menuselection:`Website --> Configuration -->
+   Settings`, enable :guilabel:`Google Tag Manager` under the Google Analytics setting, and enter
+   the :guilabel:`Container ID` (e.g., `GTM-XXXXXXX`). The tag is then inserted on every page of
+   that website, and the setting is per website, so each website can use its own container.
+
+   .. screenshot:: website-analytics-gtm-container-id
+      :menu: Website ‣ Configuration ‣ Settings
+      :shows: The Website settings page with the Google Tag Manager setting enabled and the Container ID field filled in, right below the Google Analytics setting.
+      :highlight: The Google Tag Manager setting and its Container ID field (red frame).
+      :data: Use a throw-away container ID.
+      :module: website_google_tag
+      :notes: English UI, light theme, 1440px width, crop to the setting.
 
 .. note::
    The data is collected in the marketing tools used to monitor the website (e.g., Google Analytics,

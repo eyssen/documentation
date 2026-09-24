@@ -16,7 +16,7 @@ Configuration on Buckaroo Plaza
    section.
 #. Enter the URL of your Odoo database, followed by `/payment/buckaroo/webhook` in both the
    :guilabel:`Push URI Success/Pending` and :guilabel:`Push URI Failure` text fields. For example:
-   `https://yourcompany.odoo.com/payment/buckaroo/webhook`.
+   `https://yourcompany.com/payment/buckaroo/webhook`.
 #. Leave the other fields as they are and click :guilabel:`Save`.
 #. In the :guilabel:`General` tab, copy the website :guilabel:`Key` (i.e., the key used to uniquely
    identify your website with Buckaroo) and save it for later.

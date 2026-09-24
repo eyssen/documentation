@@ -60,6 +60,9 @@ the quantities to fulfill the :guilabel:`Demand` are picked from. Since the orde
 cinder blocks, the newest cinder blocks from `LOT3` are selected, using the :abbr:`LIFO (Last In,
 First Out)` removal strategy.
 
-.. image:: lifo/cinder-block-picking.png
-   :align: center
-   :alt: The detailed operations shows which lots are being selected for the picking.
+.. screenshot:: removal-strategies-lifo-cinder-block-picking
+   :menu: Inventory ‣ Delivery Orders
+   :shows: The detailed operations of a delivery order line, with the "Pick From" column showing the most recently received lot selected first.
+   :data: Product "Cinder block" with lots received on different dates.
+   :module: stock
+   :notes: English UI, light theme, 1440px width.

@@ -14,8 +14,12 @@ To view the default *Expenses Analysis* report, navigate to :menuselection:`Expe
 Reporting --> Expenses Analysis`. The :guilabel:`Expenses Analysis` report displays all expenses for
 the current year, in a stacked bar chart, grouped by month.
 
-.. image:: expenses_analysis/default-report.png
-   :alt: The default stacked bar chart for annual expenses, grouped by month.
+.. screenshot:: finance-expenses-expenses-analysis-default-report
+   :menu: Expenses ‣ Reporting ‣ Expenses Analysis
+   :shows: The default Expenses Analysis graph: stacked bar chart of the current year, one bar per month, stacked by expense category, with the "Category" group-by.
+   :data: Demo expenses across several months.
+   :module: hr_expense
+   :notes: English UI, light theme, 1440px width.
 
 View expenses by employee
 =========================
@@ -40,8 +44,13 @@ first.
    expenses, totaling :guilabel:`4,216.44`. This is almost seven times higher than :guilabel:`Ronnie
    Hart`, who has the second highest expenses, with a total of :guilabel:`644.74`.
 
-   .. image:: expenses_analysis/by-employee.png
-      :alt: A pivot table with the information shown by employee, in descending order.
+   .. screenshot:: finance-expenses-expenses-analysis-by-employee
+      :menu: Expenses ‣ Reporting ‣ Expenses Analysis ‣ (pivot view)
+      :shows: The Expenses Analysis pivot view grouped by Employee in rows, Total column, sorted descending by clicking the Total header.
+      :highlight: The "Total" column header with the sort arrow.
+      :data: Demo employees.
+      :module: hr_expense
+      :notes: English UI, light theme, 1440px width.
 
 View expenses by category
 =========================
@@ -71,5 +80,10 @@ first.
    :guilabel:`2,940.00` of expenses for the year. The company reimbursed mileage the least, with
    only :guilabel:`229.69` in :guilabel:`[MIL] Mileage` expenses.
 
-   .. image:: expenses_analysis/by-category.png
-      :alt: A pivot table with the information shown by catrgory in descending order.
+   .. screenshot:: finance-expenses-expenses-analysis-by-category
+      :menu: Expenses ‣ Reporting ‣ Expenses Analysis ‣ (pivot view)
+      :shows: The Expenses Analysis pivot view grouped by Category in rows and Employee in columns, sorted descending on the Total column.
+      :highlight: The row header "Category".
+      :data: Demo expenses.
+      :module: hr_expense
+      :notes: English UI, light theme, 1440px width.

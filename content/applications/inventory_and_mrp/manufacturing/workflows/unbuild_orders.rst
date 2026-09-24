@@ -50,9 +50,14 @@ unbuilt.
 Finally, once the product has been unbuilt, click the :guilabel:`Unbuild` button at the top of the
 order to confirm that it has been completed.
 
-.. image:: unbuild_orders/unbuild-order.png
-   :align: center
-   :alt: A filled-out unbuild order.
+.. screenshot:: manufacturing-unbuild-order-form
+   :menu: Manufacturing app --> Operations --> Unbuild Orders --> New
+   :shows: A filled-out unbuild order form: "Product", "Bill of Material", "Quantity",
+      "Manufacturing Order", "Source Location", "Destination Location" fields set.
+   :highlight: The "Unbuild" button at the top of the form.
+   :data: Demo company "YourCompany"; product "Coat Rack", quantity 1.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width.
 
 .. warning::
    While it is possible to create unbuild orders for products that have zero (or fewer) units
@@ -65,10 +70,13 @@ order to confirm that it has been completed.
    bottom of the pop-up window. To return to the unconfirmed unbuild order, click
    :guilabel:`Discard`, instead.
 
-   .. image:: unbuild_orders/insufficient-quantity.png
-      :align: center
-      :alt: The insufficient quantity pop-up that appears after trying to confirm an unbuild order
-            for a product with zero or fewer units on hand.
+   .. screenshot:: manufacturing-unbuild-insufficient-quantity
+      :menu: Manufacturing app --> Operations --> Unbuild Orders (open an unbuild order) --> Unbuild
+      :shows: The insufficient-quantity warning pop-up, "Confirm" and "Discard" buttons.
+      :highlight: The "Confirm" button.
+      :data: Demo company "YourCompany"; unbuild order for a product with 0 units on-hand.
+      :module: mrp
+      :notes: English UI, light theme, 1440px width.
 
 After completing an unbuild order, inventory counts automatically update, based on the quantity of
 products unbuilt, and the quantity of components reclaimed.

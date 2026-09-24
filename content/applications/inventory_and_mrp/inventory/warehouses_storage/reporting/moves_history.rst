@@ -13,9 +13,15 @@ inventory turnover, and identifying any discrepancies in inventory.
 
 To access the stock report, go to :menuselection:`Inventory app --> Reporting --> Moves History`.
 
-.. image:: moves_history/moves-history.png
-   :align: center
-   :alt: Display Moves History report.
+.. screenshot:: inventory-moves-history-report
+   :menu: Inventory ‣ Reporting ‣ Moves History
+   :shows: The Moves History report with the Date, Reference, Product, Lot/Serial Number, From, To,
+      Quantity, Unit and Status columns.
+   :highlight: None.
+   :data: Move lines from a receipt, a delivery and an inventory adjustment, with at least one lot-tracked
+      product.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, full list view.
 
 .. _inventory/warehouses_storage/moves-history-report:
 
@@ -37,6 +43,18 @@ In the report, the columns represent:
 - :guilabel:`Status`: indicates the move status, which can be :guilabel:`Done`,
   :guilabel:`Available` (ready for action), or :guilabel:`Partially Available` (insufficient
   quantities to complete the operation).
+
+With the ``eyssen_stock_accountant`` module installed, one more column is available:
+
+- :guilabel:`Total Cost`: the accounting value of the move line, derived from the stock valuation
+  layers of its move and split across the lines by quantity. The column is hidden by default; show
+  it from the optional-column selector (:icon:`oi-settings-adjust` :guilabel:`(adjust)` icon at the
+  far right of the column titles). Because the value is stored, it can be summed in group headers
+  and in the list footer, and used as a :guilabel:`Group By` dimension.
+
+.. seealso::
+   :ref:`Valuation cockpit, valuation at date and snapshots
+   <inventory/warehouses_storage/valuation-cockpit>`
 
 Search options
 --------------

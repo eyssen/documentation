@@ -47,7 +47,7 @@ Click the task to open it. The task form includes the following fields that you 
    - You can also create new tasks by switching to the list or Gantt view and clicking
      :guilabel:`New`.
    - The following fields can also be edited directly from the Kanban view without opening the
-     individual task: :icon:`fa-star-o` (**priority**), :guilabel:`Allocated hours`,
+     individual task: :guilabel:`Priority`, :guilabel:`Allocated hours`,
      :guilabel:`Assignees`, and **task status**. You can also **color code** or :guilabel:`Set a
      Cover image` to your task by clicking the :icon:`fa-ellipsis-v` (**vertical ellipsis**).
    - You can use the following keyboard shortcuts in the task title to configure new tasks (modify
@@ -56,17 +56,23 @@ Click the task to open it. The task form includes the following fields that you 
      - **30h**: to allocate 30 hours to the task.
      - **#tags**: to add tags to the task.
      - **@user**: to assign the task to a user.
-     - **!**: to star the task as high priority.
+     - **!**: to raise the :ref:`priority <project/tasks/priorities>` of the task one level above
+       the lowest one, i.e. to :guilabel:`Medium`.
 
      Along with using the correct format, follow this order: the task's name, followed by the
      allocated time, the tags, the assignee, and then the priority.
 
      For example, if you want to create a task named "Prepare workshop", allocate 5h hours to it,
-     add the "School" tag, assign it to Audrey and set its priority to :guilabel:`High`, enter the
-     following task title: Prepare workshop 5h #school @Audrey !
+     add the "School" tag, assign it to Audrey and set its priority to :guilabel:`Medium`, enter
+     the following task title: Prepare workshop 5h #school @Audrey !
 
-     .. image:: task_creation/task-shortcuts.png
-        :alt: Using keyboard shortcuts to create a task in Project.
+     .. screenshot:: services-project-task-shortcuts
+        :menu: Project ‣ Projects ‣ (open a project) ‣ New
+        :shows: A new Kanban task being typed with the shortcut syntax "Prepare workshop 5h #school @Audrey !" in the title field.
+        :highlight: The task title being typed (red frame).
+        :data: Project "Boiler maintenance 2026"; existing tag "School"; user "Audrey".
+        :module: project, eyssen_project_task_priority
+        :notes: English UI, light theme, 1440px width, crop to the Kanban column and the new card.
 
 .. _task_creation/email_alias:
 
@@ -88,8 +94,13 @@ Fill in the :guilabel:`Create tasks by sending an email to` field as follows:
    <../../../general/email_communication>`.
  - **Accept Emails From**: refine the senders whose emails will create tasks in the project.
 
-.. image:: task_creation/email-configuration.png
-   :alt: View of the email alias chosen on the dashboard view in Odoo Project
+.. screenshot:: services-project-task-email-alias
+   :menu: Project ‣ Projects ‣ (open a project) ‣ Settings
+   :shows: The "Create tasks by sending an email to" setting of a project, with the alias name, the domain and the "Accept Emails From" option filled in.
+   :highlight: The email alias fields (red frame).
+   :data: Project "Boiler maintenance 2026"; alias "service@company-name.com"; Accept Emails From "Authenticated Partners".
+   :module: project
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 Once configured, the email alias can be seen under the name of your project on the Kanban dashboard.
 

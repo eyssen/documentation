@@ -19,8 +19,13 @@ Create expense reports
 First, select the desired expense to be added to the report on the :guilabel:`My Expenses` dashboard
 by ticking the checkbox next to each entry.
 
-.. image:: expense_reports/create-report.png
-   :alt: Select the expenses to submit, then create the report.
+.. screenshot:: finance-expenses-expense-reports-create-report
+   :menu: Expenses ‣ My Expenses ‣ My Expenses
+   :shows: The My Expenses list with two "To Report" expenses ticked and the "Create Report" button in the control panel.
+   :highlight: The ticked expenses and the "Create Report" button.
+   :data: Expenses "Client lunch" and "Taxi to airport".
+   :module: hr_expense
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    Any expense can be selected from the :guilabel:`My Expenses` list, except for expenses with a
@@ -62,8 +67,13 @@ information listed on the individual expenses.
 Next, select a :guilabel:`Manager` from the drop-down menu to assign a manager to review the report.
 If needed, update the :guilabel:`Journal` field using the drop-down menu.
 
-.. image:: expense_reports/expense-report-summary.png
-   :alt: Enter a short description and select a manager for the report.
+.. screenshot:: finance-expenses-expense-reports-expense-report-summary
+   :menu: Expenses ‣ My Expenses ‣ My Reports ‣ (a draft report)
+   :shows: A new expense report form in Draft: "Expense Report Summary" filled in, Employee, Paid By, Manager and Journal fields, the Expense tab listing the two expenses.
+   :highlight: The "Expense Report Summary" and "Manager" fields.
+   :data: Summary "Brussels client visit", manager Mitchell Admin.
+   :module: hr_expense
+   :notes: English UI, light theme, 1440px width.
 
 If some expenses are missing from the report, they can still be added from this report form. To do
 so, click :guilabel:`Add a line` at the bottom of the :guilabel:`Expense` tab.
@@ -102,8 +112,13 @@ If the list is large, grouping the results by status may be helpful, since only 
 :guilabel:`Submitted` status do not. The :guilabel:`To Submit` expenses are identifiable by the
 :guilabel:`To Submit` status, and by the blue text, while all other expense text appears in black.
 
-.. image:: expense_reports/submit-report.png
-   :alt: Submit the report to the manager.
+.. screenshot:: finance-expenses-expense-reports-submit-report
+   :menu: Expenses ‣ My Expenses ‣ My Reports ‣ (a draft report)
+   :shows: The draft expense report form with the "Submit to Manager" button in the header and the status bar showing "Draft".
+   :highlight: The "Submit to Manager" button (red frame).
+   :data: Report "Brussels client visit".
+   :module: hr_expense
+   :notes: English UI, light theme, 1440px width.
 
 Click on a report to open it, then click :guilabel:`Submit To Manager`. After submitting a report,
 the next step is for management to review and :doc:`approve it <approve_expenses>`.

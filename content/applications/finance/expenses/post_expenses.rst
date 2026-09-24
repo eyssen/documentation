@@ -17,8 +17,13 @@ expense reports, navigate to :menuselection:`Expenses app --> Expense Reports`. 
 **only** approved expense reports that need to be posted, adjust the filters on the left side so
 only the :guilabel:`Approved` checkbox is ticked.
 
-.. image:: post_expenses/approved-expenses.png
-   :alt: View reports to post by clicking on expense reports, then reports to post.
+.. screenshot:: finance-expenses-post-expenses-approved-expenses
+   :menu: Expenses ‣ Expense Reports
+   :shows: The Expense Reports list filtered with "Approved", showing reports ready to be posted with their employee, total and status.
+   :highlight: The "Approved" filter chip in the search bar.
+   :data: 3 approved reports.
+   :module: hr_expense
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    The default :guilabel:`All Reports` dashboard displays all expense reports that are not
@@ -35,7 +40,7 @@ Post individual reports
 To post an individual report, navigate to :menuselection:`Expenses app --> Expense Reports`, and
 click on an individual report with a :guilabel:`Status` of :guilabel:`Approved`, to view the report
 form. In this view, several options are presented: :guilabel:`Post Journal Entries`,
-:guilabel:`Report In Next Payslip`, :guilabel:`Refuse`, or :guilabel:`Reset to Draft`.
+:guilabel:`Refuse`, or :guilabel:`Reset to Draft`.
 
 Click :guilabel:`Post Journal Entries` to post the report. The accounting journal the expenses are
 posted to is listed in the :guilabel:`Journal` field of the expense report.
@@ -44,8 +49,13 @@ After posting the expenses to an accounting journal, a :guilabel:`Journal Entry`
 appears at the top of the screen. Click the :guilabel:`Journal Entry` smart button, and the details
 for the journal entry appear, with a status of :guilabel:`Posted`.
 
-.. image:: post_expenses/post-one.png
-   :alt: A single expense report to be approved.
+.. screenshot:: finance-expenses-post-expenses-post-one
+   :menu: Expenses ‣ Expense Reports ‣ (an approved report)
+   :shows: An approved expense report form with the "Post Journal Entries", "Refuse" and "Reset to Draft" buttons in the header and the "Approved" status in the status bar.
+   :highlight: The "Post Journal Entries" button (red frame).
+   :data: Report "Trip to Brussels".
+   :module: hr_expense
+   :notes: English UI, light theme, 1440px width.
 
 .. _expenses/post-multiple:
 
@@ -70,5 +80,10 @@ checkbox next to each report being approved.
 
 Next, click the :guilabel:`Post Entries` button.
 
-.. image:: post_expenses/post-entries.png
-   :alt: Post multiple reports at a time from the Expense Reports view, with the Approved filter.
+.. screenshot:: finance-expenses-post-expenses-post-entries
+   :menu: Expenses ‣ Expense Reports
+   :shows: The Expense Reports list with the "Approved" filter, several reports ticked and the "Post Entries" button in the control panel.
+   :highlight: The "Post Entries" button.
+   :data: 3 approved reports selected.
+   :module: hr_expense
+   :notes: English UI, light theme, 1440px width.

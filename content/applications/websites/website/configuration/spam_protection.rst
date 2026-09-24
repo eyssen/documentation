@@ -39,8 +39,13 @@ On Cloudflare
   - The :guilabel:`Managed` mode is **recommended**, as visitors can be prompted to check a box
     confirming they are human if deemed necessary by Turnstile.
 
-    .. image:: spam_protection/turnstile-human.png
-       :alt: Cloudflare Turnstile human verification widget
+    .. screenshot:: website-spam-protection-turnstile-human
+       :menu: (website) ‣ Contact us
+       :shows: A website form with the Cloudflare Turnstile widget showing the successful human verification.
+       :highlight: The Turnstile widget (red frame).
+       :data: Demo website 'My Website'.
+       :module: website_cf_turnstile
+       :notes: English UI, light theme, 1440px width.
 
   - For the :guilabel:`Non-interactive` and :guilabel:`Invisible` modes, visitors are never
     prompted to interact. In :guilabel:`Non-interactive` mode, a loading widget can be displayed to
@@ -50,13 +55,23 @@ On Cloudflare
        If the Turnstile check fails, visitors are not able to submit the form, and the following
        error message is displayed:
 
-       .. image:: spam_protection/turnstile-error.png
-          :alt: Cloudflare Turnstile verification error message
+       .. screenshot:: website-spam-protection-turnstile-error
+          :menu: (website) ‣ Contact us
+          :shows: A website form with the Cloudflare Turnstile widget showing its verification error message.
+          :highlight: The error message (red frame).
+          :data: Demo website 'My Website'.
+          :module: website_cf_turnstile
+          :notes: English UI, light theme, 1440px width.
 
 - Click :guilabel:`Create`.
 
-.. image:: spam_protection/turnstile-configuration.png
-   :alt: Adding a website to Cloudflare Turnstile
+.. screenshot:: website-spam-protection-turnstile-configuration
+   :menu: (Cloudflare dashboard) ‣ Turnstile ‣ Add site
+   :shows: The Cloudflare Turnstile site configuration form with the site name, domain, widget mode and the generated site key and secret key.
+   :highlight: The site key and secret key (red frame).
+   :data: Use throw-away keys.
+   :module: website_cf_turnstile
+   :notes: English UI, light theme, 1440px width.
 
 The generated keys are then displayed. Leave the page open for convenience, as copying the keys in
 Odoo is required next.
@@ -102,8 +117,13 @@ On the website registration page:
 - Agree to the terms of service.
 - Click :guilabel:`Submit`.
 
-.. image:: spam_protection/recaptcha-google-configuration.png
-   :alt: reCAPTCHA website registration example
+.. screenshot:: website-spam-protection-recaptcha-google-configuration
+   :menu: (Google reCAPTCHA admin console) ‣ Create
+   :shows: The reCAPTCHA website registration form with the label, reCAPTCHA type v3 and the domain filled in.
+   :highlight: The reCAPTCHA type and Domains fields (red frame).
+   :data: Domain `example.com`.
+   :module: google_recaptcha
+   :notes: English UI, light theme, 1440px width.
 
 A new page with the generated keys is then displayed. Leave it open for convenience, as copying the
 keys to Odoo is required next.
@@ -136,14 +156,24 @@ navigate to the form. Then, click somewhere on the form, and on the right sideba
 :guilabel:`Customize` tab, toggle :guilabel:`Show reCAPTCHA Policy` found under the :guilabel:`Form`
 section.
 
-.. image:: spam_protection/recaptcha-policy.png
-   :alt: reCAPTCHA policy message displayed on a form
+.. screenshot:: website-spam-protection-recaptcha-policy
+   :menu: (website) ‣ Contact us
+   :shows: A website form showing the reCAPTCHA policy message under the submit button.
+   :highlight: The policy message (red frame).
+   :data: Demo website 'My Website'.
+   :module: google_recaptcha
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    If the reCAPTCHA check fails, the following error message is displayed:
 
-   .. image:: spam_protection/recaptcha-error.png
-      :alt: Google reCAPTCHA verification error message
+   .. screenshot:: website-spam-protection-recaptcha-error
+      :menu: (website) ‣ Contact us
+      :shows: A website form showing the reCAPTCHA verification error message after a failed check.
+      :highlight: The error message (red frame).
+      :data: Demo website 'My Website'.
+      :module: google_recaptcha
+      :notes: English UI, light theme, 1440px width.
 
 .. tip::
    Analytics and additional settings are available on `Google's reCAPTCHA administration page

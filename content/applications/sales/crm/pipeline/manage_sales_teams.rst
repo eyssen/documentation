@@ -25,9 +25,13 @@ Select a :guilabel:`Company` from the drop-down menu to assign this team to.
 .. note::
    The :guilabel:`Company` field is only visible in multi-company databases, and is not required.
 
-.. image:: manage_sales_teams/sales-team-creation.png
-   :align: center
-   :alt: The settings page for a new sales team.
+.. screenshot:: sales-crm-team-form
+   :menu: CRM ‣ Configuration ‣ Sales Teams ‣ New
+   :shows: A new sales-team form with the Sales Team name, Team Leader, Email Alias and Invoicing Target fields and the Members tab.
+   :highlight: No highlight; the empty form is the subject.
+   :data: New, unsaved sales team.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, full form.
 
 .. note::
    If the *Sales* app is installed on the database, an :guilabel:`Invoicing Target` field appears on
@@ -47,17 +51,25 @@ team's configuration page. This opens a :guilabel:`Create Sales Team Members` po
    :guilabel:`Add: Salespersons` pop-up window. Tick the checkbox to the far-left of the
    salesperson to be added to the team, then click :guilabel:`Select`.
 
-   .. image:: manage_sales_teams/add-salespersons.png
-      :align: center
-      :alt: The Add: Salespersons pop-up window on a new sales team.
+   .. screenshot:: sales-crm-team-add-salespersons
+      :menu: CRM ‣ Configuration ‣ Sales Teams ‣ (a team) ‣ Members ‣ Add
+      :shows: The "Add: Salespersons" pop-up listing the available users with checkboxes.
+      :highlight: Two selected users (red frame).
+      :data: Demo users.
+      :module: crm
+      :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 Select a user from the :guilabel:`Salesperson` drop-down list to add them to the team. To prevent
 this salesperson from being automatically assigned leads, tick the :guilabel:`Skip auto assignment`
 checkbox. If this feature is activated, the salesperson can still be assigned leads manually.
 
-.. image:: manage_sales_teams/create-sales-team-members.png
-   :align: center
-   :alt: The Create Sales Team Members pop-up window.
+.. screenshot:: sales-crm-team-member-popup
+   :menu: CRM ‣ Configuration ‣ Sales Teams ‣ (a team) ‣ Members ‣ (a member)
+   :shows: The sales-team-member pop-up with the Salesperson, Leads Assignment domain and "Leads (30 days)" fields.
+   :highlight: The Leads Assignment fields (red frame).
+   :data: Salesperson "Marc Demo", 30 leads per month.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 The :guilabel:`Leads (30 days)` field tracks how many leads the salesperson has been assigned in the
 past thirty days for this team, and the maximum number of leads they should be assigned. To edit the
@@ -78,9 +90,13 @@ be enabled. First, navigate to :menuselection:`CRM app --> Configuration --> Set
 :guilabel:`CRM` section, tick the checkbox labeled :guilabel:`Multi Teams`. Then, click
 :guilabel:`Save` at the top-left of the page.
 
-.. image:: manage_sales_teams/enable-multi-teams.png
-   :align: center
-   :alt: The settings page of the CRM app with the Multi Teams setting enabled.
+.. screenshot:: sales-crm-multi-teams-setting
+   :menu: CRM ‣ Configuration ‣ Settings
+   :shows: The CRM settings with the "Multi Teams" checkbox enabled.
+   :highlight: The "Multi Teams" setting (red frame).
+   :data: Demo company; developer mode active.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 .. _crm/sales-team-dashboard:
 
@@ -90,9 +106,13 @@ Sales team dashboard
 To view the sales team dashboard, go to :menuselection:`CRM app --> Sales --> Teams`. Any team the
 user is a member of appears in the dashboard.
 
-.. image:: manage_sales_teams/sales-teams-dashboard.png
-   :align: center
-   :alt: The sales team dashboard in the CRM app.
+.. screenshot:: sales-crm-teams-overview
+   :menu: CRM ‣ Sales ‣ Teams
+   :shows: The sales-teams overview Kanban with one card per team showing the open opportunities, the expected revenue and the invoicing target progress bar.
+   :highlight: No highlight; the team cards are the subject.
+   :data: Two demo teams with different targets.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the Kanban.
 
 Each Kanban card gives an overview of the sales team's open opportunities, quotations, sales orders,
 and expected revenue, as well as a bar graph of new opportunities per week, and an invoicing

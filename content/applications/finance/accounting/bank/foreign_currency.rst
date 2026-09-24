@@ -9,36 +9,17 @@ transaction, Odoo stores two values:
 -  The debit/credit in the currency of the *company*;
 -  The debit/credit in the currency of the *bank account*.
 
-Currency rates are updated automatically using the web services of a banking institution. By
-default, Odoo uses the European Central Bank's web services but other options are available.
-
 Configuration
 =============
 
 Activate multi-currencies
 -------------------------
 
-To work with multiple currencies, go to :menuselection:`Accounting --> Configuration --> Settings
---> Currencies` and tick :guilabel:`Multi-Currencies`. Under :guilabel:`Post Exchange difference
-entries in:`, provide a :guilabel:`Journal`, a :guilabel:`Gain Account`, a :guilabel:`Loss Account`,
-and then click on :guilabel:`Save`.
+To work with multiple currencies, activate the currencies you need and, if required, the automatic
+update of their rates.
 
-Configure currencies
---------------------
-
-Once Odoo is configured to support multiple currencies, they are all created by default, but not
-necessarily active. To activate the new currencies, click on :guilabel:`Activate Other Currencies`
-under the :guilabel:`Multi-Currencies` setting or go to :menuselection:`Accounting --> Configuration
---> Accounting: Currencies`.
-
-When the currencies are activated, you can choose to **automate** the currency rate update, or leave
-it on **manual**. To configure the rate update, go back to :menuselection:`Accounting -->
-Configuration --> Settings --> Currencies`, check :guilabel:`Automatic Currency Rates`, set
-:guilabel:`Interval` to your desired frequency, and then click on :guilabel:`Save`. You also have
-the option to choose the :guilabel:`Service` you wish to obtain currency rates from.
-
-Click on the Update now button (:guilabel:`🗘`) besides the :guilabel:`Next Run` field to update
-the currency rates manually.
+.. seealso::
+   :doc:`../get_started/multi_currency`
 
 Create a new bank account
 -------------------------
@@ -52,9 +33,14 @@ and save. When you are back on the **journal**, click on the :guilabel:`Account 
 in the pop-up window, fill out the :guilabel:`Account Number`, :guilabel:`Bank` of your account, and
 save.
 
-.. image:: foreign_currency/foreign-journal.png
-   :align: center
-   :alt: Example of a created bank journal.
+.. screenshot:: accounting-foreign-currency-journal
+   :menu: Accounting ‣ Configuration ‣ Journals ‣ (a foreign-currency bank journal)
+   :shows: A bank journal form with the Journal Entries tab open, showing the short code, the
+      foreign Currency, the Bank Account and the Account Number.
+   :highlight: The :guilabel:`Currency` field (red frame).
+   :data: Journal "Bank EUR", currency EUR, company currency HUF.
+   :module: account
+   :notes: English UI, light theme, 1440px width.
 
 Upon creation of the journal, Odoo automatically links the bank account to the journal. It can be
 found under :menuselection:`Accounting --> Configuration --> Accounting: Chart of Accounts`.
@@ -66,52 +52,28 @@ To pay a bill in a foreign currency, simply select the currency next to the :gui
 field and register the payment. Odoo automatically creates and posts the foreign **exchange gain or
 loss** as a new journal entry.
 
-.. image:: foreign_currency/foreign-bill-currency.png
-   :align: center
-   :alt: How to set a bill currency.
+.. screenshot:: accounting-foreign-currency-bill
+   :menu: Accounting ‣ Vendors ‣ Bills ‣ (a bill)
+   :shows: A vendor bill header with the Currency field set to a foreign currency next to the
+      Journal field, and the bill total displayed in that currency.
+   :highlight: The :guilabel:`Currency` field (red frame).
+   :data: Bill of 1,200.00 EUR in a HUF company.
+   :module: account
+   :notes: English UI, light theme, crop to the header.
 
 .. note::
    Note that you can pay a foreign bill with another currency. In that case, Odoo automatically
    converts between the two currencies.
 
-Unrealized Currency Gains/Losses Report
-=======================================
+Exchange differences
+====================
 
-This report gives an overview of all unrealized amounts in a foreign currency on your balance sheet,
-and allows you to adjust an entry or manually set an exchange rate. To access this report, go to
-:menuselection:`Reporting --> Management: Unrealized Currency Gains/Losses`. From here, you have
-access to all open entries in your **balance sheet**.
+The exchange gain or loss realized when a foreign-currency invoice or bill is paid is posted
+automatically in the journal and on the accounts configured for it.
 
-.. image:: foreign_currency/foreign-gains-losses.png
-   :align: center
-   :alt: View of the Unrealized Gains/Losses journal.
+.. seealso::
+   :ref:`Exchange difference entries <multi-currency/config-exch-diff>`
 
-If you wish to use a different currency rate than the one set in :menuselection:`Accounting -->
-Configuration --> Settings --> Currencies`, click the :guilabel:`Exchange Rates` button and change
-the rate of the foreign currencies in the report.
-
-.. image:: foreign_currency/foreign-exchange-rates.png
-   :align: center
-   :alt: Menu to manually change exchange rates.
-
-When manually changing **exchange rates**, a yellow banner appears allowing you to reset back to
-Odoo's rate. To do so, simply click on :guilabel:`Reset to Odoo's Rate`.
-
-.. image:: foreign_currency/foreign-reset-rates.png
-   :align: center
-   :alt: Banner to reset back to Odoo's rates.
-
-In order to update your **balance sheet** with the amount of the :guilabel:`adjustment` column,
-click on the :guilabel:`Adjustment Entry` button. In the pop-up window, select a
-:guilabel:`Journal`, :guilabel:`Expense Account` and :guilabel:`Income Account` to calculate and
-process the **unrealized gains and losses**.
-
-You can set the date of the report in the :guilabel:`Date` field. Odoo automatically reverses the
-booking entry to the date set in :guilabel:`Reversal Date`.
-
-Once posted, the :guilabel:`adjustment` column should indicate `0.00`, meaning all **unrealized
-gains/losses** have been adjusted.
-
-.. image:: foreign_currency/foreign-adjustment.png
-   :align: center
-   :alt: Unrealized Currency Gains/Losses report once adjusted.
+To review the foreign-currency balances of your accounts at a given date, use the
+:ref:`Trial Balance <accounting/reporting/trial-balance>` or the :ref:`General Ledger
+<accounting/reporting/general-ledger>` with the :guilabel:`Currency Translation` filter.

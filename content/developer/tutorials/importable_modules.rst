@@ -12,7 +12,7 @@ allow the deployment of custom Python code like the `Odoo.com <https://www.odoo.
 platform.
 
 However, the flexible nature of Odoo is meant to allow customizations out of the box. Whilst
-a lot is possible with :doc:`Studio </applications/studio>`, it is also possible to define
+a lot is possible through the user interface, it is also possible to define
 models, fields and logic in :doc:`XML Data Files <define_module_data>`. This makes it easier
 to develop, maintain and deploy these customizations.
 
@@ -752,7 +752,7 @@ properly, as one needs to ensure that the automation will only run at the proper
 setting up specific fields to watch, etc.
 
 **Documentation**: a more complete documentation related to this topic can be found in
-:doc:`/applications/studio/automated_actions`.
+:doc:`/applications/general/automation_rules`.
 
 .. note::
    Automation Rules are not part of the ``base`` module; they come with the ``base_automation``

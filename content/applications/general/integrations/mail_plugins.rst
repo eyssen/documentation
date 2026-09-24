@@ -15,7 +15,6 @@ interact with your Odoo database directly from your mailbox by:
 
 - Creating leads and centralizing prospects' emails into the CRM app.
 - Generating tasks in any Odoo project.
-- Creating tickets in the Helpdesk app.
 - Searching and storing insights on your contacts.
 
 Mail Plugins are available for :doc:`Outlook <mail_plugins/outlook>` and :doc:`Gmail
@@ -54,4 +53,3 @@ select a package.
 
 .. seealso::
    - :doc:`../../essentials/in_app_purchase`
-   - `Odoo Tutorials: Lead Enrichment <https://www.odoo.com/r/p73>`_

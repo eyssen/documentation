@@ -114,8 +114,14 @@ In the :guilabel:`Analytic` window, select the desired :guilabel:`Analytic Accou
 different :guilabel:`Analytic Plans` displayed in columns. Then, split the costs between the
 accounts by modifying the percentage.
 
-.. image:: analytic_accounting/analytic-distribution.png
-   :alt: create a distribution template
+.. screenshot:: accounting-analytic-distribution
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (an invoice) ‣ Analytic Distribution
+   :shows: The Analytic window opened from an invoice line, with one column per analytic plan, the
+      selected analytic accounts and the percentage split between them.
+   :highlight: The percentage column (red frame).
+   :data: Two plans ("Departments", "Projects"), split 60% / 40% between two accounts.
+   :module: analytic, account
+   :notes: English UI, light theme, dialog only.
 
 .. _accounting/analytic_accounting/distribution-mass:
 

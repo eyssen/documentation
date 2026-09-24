@@ -56,8 +56,13 @@ redirects users to the default contact form.
 To display the :guilabel:`Contact Us` button and a note saying `Not Available For Sale` , you need
 to :ref:`hide your prices <ecommerce/prices/hide-prices>` on your product page.
 
-.. image:: checkout/cart-contact-us.png
-   :alt: Contact us button on product page
+.. screenshot:: ecommerce-checkout-cart-contact-us
+   :menu: (website) ‣ Shop ‣ (product)
+   :shows: A product page where the Add to Cart button is replaced by a Contact Us button.
+   :highlight: The Contact Us button (red frame).
+   :data: Demo website 'My Website' with the eCommerce demo products.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    The :guilabel:`Contact Us` button label, URL, and the *Not Available For Sale* text beneath the
@@ -106,8 +111,13 @@ Process` section, tick the :guilabel:`Buy Now` feature.
    and, in the :guilabel:`Customize` tab, clicking the :icon:`fa-bolt` :guilabel:`Buy Now` button
    next to the :guilabel:`Cart` options.
 
-.. image:: checkout/cart-buy-now.png
-   :alt: Buy now button
+.. screenshot:: ecommerce-checkout-cart-buy-now
+   :menu: (website) ‣ Shop ‣ (product)
+   :shows: A product page with both the Add to Cart and the Buy Now buttons.
+   :highlight: The Buy Now button (red frame).
+   :data: Demo website 'My Website' with the eCommerce demo products.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 .. _ecommerce/checkout/re-order:
 
@@ -119,8 +129,13 @@ You can let customers re-order items from previous sales orders from their custo
 Settings`. Under the :guilabel:`Shop - Checkout Process` section, tick the :guilabel:`Re-order From
 Portal` feature.
 
-.. image:: checkout/order-again-button.png
-   :alt: Re-order button
+.. screenshot:: ecommerce-checkout-order-again-button
+   :menu: (website) ‣ My Account ‣ Orders ‣ (order)
+   :shows: A confirmed order in the customer portal with the Order Again button.
+   :highlight: The Order Again button (red frame).
+   :data: One confirmed order with three lines.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 .. _ecommerce/checkout/steps:
 
@@ -235,6 +250,51 @@ You can require customers to agree to your :doc:`terms and conditions
    icon to display an :ref:`availability <payment_providers/availability>` report for payment
    providers and payment methods, which helps diagnose potential availability issues on the payment
    form.
+
+.. _ecommerce/checkout/customer-type:
+
+Private person or company
+-------------------------
+
+The *Website Sale Partner Type* module (`website_sale_partner_type`) adds a :guilabel:`Private
+Person` / :guilabel:`Company` choice at the top of the address step for visitors who are not logged
+in. The choice sets the contact's :guilabel:`Company Type`, and the address form adapts to it: the
+company name and tax ID fields are only required for companies.
+
+Together with the Hungarian localization, the form also switches between the international
+:guilabel:`VAT` field and the Hungarian tax number field depending on the selected
+:guilabel:`Country`, and the B2B fields are always shown.
+
+.. screenshot:: ecommerce-checkout-customer-type
+   :menu: (website) ‣ Checkout ‣ Address
+   :shows: The checkout address form of an anonymous visitor with the Private Person / Company radio buttons above the name field, and the company and tax number fields shown for the Company choice.
+   :highlight: The Private Person / Company radio buttons (red frame).
+   :data: Company selected, country Hungary, Hungarian tax number field visible.
+   :module: website_sale_partner_type
+   :notes: English UI, light theme, 1440px width, crop to the top of the address form.
+
+When the visitor fills in a company name, the *Website Sale Company* module
+(`website_sale_company`) automatically creates the company contact and links the ordering person to
+it as a child contact, so that the order is placed on behalf of the company.
+
+.. _ecommerce/checkout/order-signature:
+
+Signing the order
+-----------------
+
+The *Website Sale Order Sign* module (`website_sale_order_sign`) requires customers to accept and
+sign the order before they can pay. At the :guilabel:`Payment` step, an :guilabel:`Accept & Sign`
+button is displayed instead of the payment button; clicking it opens a dialog with the order summary
+and the signature field. Once the order is signed, the payment button appears and the signature and
+signing date are stored on the sales order.
+
+.. screenshot:: ecommerce-checkout-accept-and-sign
+   :menu: (website) ‣ Checkout ‣ Payment
+   :shows: The payment step of the checkout with the Accept & Sign button in place of the payment button, and the signature dialog opened over it.
+   :highlight: The Accept & Sign button and the signature field (red frame).
+   :data: One cart of about EUR 150.
+   :module: website_sale_order_sign
+   :notes: English UI, light theme, 1440px width.
 
 .. _ecommerce/checkout/order_confirmation:
 

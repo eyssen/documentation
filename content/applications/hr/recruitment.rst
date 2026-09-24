@@ -98,8 +98,13 @@ applicant's card.
    full-screen), then the résumé does not appear on the right-side. Instead, the résumé appears in
    the :guilabel:`Files` section of the chatter, below the applicant's card.
 
-.. image:: recruitment/cv-display.png
-   :alt: The résumé on an applicant's card, appearing on the right side.
+.. screenshot:: hr-recruitment-cv-display
+   :menu: Recruitment ‣ (job position) ‣ (open an applicant)
+   :shows: An applicant form with the attached CV displayed in the side panel on the right.
+   :highlight: The CV side panel (red frame).
+   :data: Applicant "János Tóth" with a PDF CV attached; use an invented CV.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 In-App Purchases
 ----------------
@@ -119,41 +124,6 @@ feature requires credits to use. Click the :icon:`fa-arrow-right` :guilabel:`Man
 Credits` internal link, and follow the steps to :doc:`purchase credits
 <../marketing/sms_marketing/pricing_and_faq>`.
 
-.. _recruitment/cv-ocr:
-
-Résumé digitization (OCR)
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-When an application is submitted using any of the available methods, such as an online application
-submission, emailing a resume to the job position alias, or creating an applicant record directly
-from the database, it is possible to have Odoo extract the applicant's name, phone number, and email
-address from the résumé and populate the applicant's form. To do so, enable the :guilabel:`Résumé
-Digitization (OCR)` option.
-
-When enabled, additional options appear. Click on the corresponding radio button to select one of
-the following options:
-
-- :guilabel:`Do not digitize`: this option turns off résumé digitization.
-- :guilabel:`Digitize on demand only`: this option only digitizes resumes when requested. A
-  :guilabel:`Digitize document` buttons appears on applicant cards. When clicked, the résumé is
-  scanned and the applicant's card is updated.
-- :guilabel:`Digitize automatically`: this option automatically digitizes all résumés when they are
-  submitted.
-
-Beneath these options are two additional links. Click the :icon:`fa-arrow-right` :guilabel:`Manage
-Service & Buy Credits` internal link to purchase credits for résumé digitization. Click the
-:icon:`fa-arrow-right` :guilabel:`View My Services` internal link to view a list of all current
-services, and their remaining credit balances.
-
-For more information on document digitization and :abbr:`IAP's (in-app purchases)`, refer to the
-:doc:`In-app purchase (IAP) <../essentials/in_app_purchase>` documentation.
-
-.. note::
-   The :guilabel:`Do not digitize` option may appear redundant but serves a distinct purpose.
-   Disabling the :guilabel:`Résumé Digitization (OCR)` option uninstalls the module, while
-   :guilabel:`Do not digitize` keeps the module installed but inactive—allowing the user to
-   re-enable digitization later without reinstalling the module.
-
 Kanban view
 ===========
 
@@ -162,8 +132,13 @@ dashboard, which is the default view when opening the application. All job posit
 main dashboard. Click the :guilabel:`(#) New Applications` smart button on a job position card to
 navigate to the Kanban view for all the applicants for that particular job position.
 
-.. image:: recruitment/new-applicants-button.png
-   :alt: Main dashboard view of job position card, showing new applications button.
+.. screenshot:: hr-recruitment-job-position-card
+   :menu: Recruitment ‣ Applications ‣ By Job Position
+   :shows: A job position card on the Recruitment dashboard with the New Applications button and the recruiter avatar.
+   :highlight: The New Applications button (red frame).
+   :data: Job position "Warehouse Coordinator" with 4 new applications.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width. Crop to the card.
 
 Inside the job application, the Kanban stages appear, with all the applicants populated in their
 respective columns, indicating what stage they are currently in. In Odoo, six default stages are
@@ -181,8 +156,13 @@ the applicants in it are hidden from view. To expand the folded stage and view t
 for that column, click anywhere on the thin gray column that says the stage name and the column
 expands, revealing the applicants.
 
-.. image:: recruitment/stages.png
-   :alt: Expand a folded column by clicking on it in the Kanban view.
+.. screenshot:: hr-recruitment-folded-stage
+   :menu: Recruitment ‣ (job position)
+   :shows: The applicant kanban with a folded stage column being expanded by clicking on it.
+   :highlight: The folded column (red frame).
+   :data: Job position "Warehouse Coordinator" with the Contract Signed stage folded.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Each stage has a color-coded bar beneath the stage name, providing status information for the
 applicant's in that specific stage. The status colors are:
@@ -196,8 +176,13 @@ The status for each card is set manually. To set the status, click on the small 
 lower-left of the applicant card. A status pop-up window appears. Click on the desired status for
 the applicant. The status dot on the applicant card as well as the status bar updates.
 
-.. image:: recruitment/status-dots.png
-   :alt: The applicant card statuses, and status bar.
+.. screenshot:: hr-recruitment-kanban-status
+   :menu: Recruitment ‣ (job position)
+   :shows: Applicant kanban cards with their status dots, and the status bar on an open applicant form.
+   :highlight: The status dots on the cards (red frame).
+   :data: Three applicants with different kanban statuses.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    The names for the three status colors (`In Progress`, `Ready for Next Stage`, and `Blocked`)
@@ -218,8 +203,13 @@ the title for the new stage in the :guilabel:`Stage title` field, then click :gu
 new column appears, and another new stage is available to create. If no new stages are needed, click
 anywhere on the screen to exit the new stage creation.
 
-.. image:: recruitment/add-column.png
-   :alt: The plus sign to click to add a new column to the Kanban stages.
+.. screenshot:: hr-recruitment-add-stage
+   :menu: Recruitment ‣ (job position)
+   :shows: The applicant kanban with the plus sign at the right of the stage columns used to add a new stage.
+   :highlight: The plus sign (red frame).
+   :data: Job position "Warehouse Coordinator".
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 .. _recruitment/modify-stages:
 
@@ -232,9 +222,13 @@ To modify the settings of a stage, hover over the name of the stage, and a :icon
 option. An :guilabel:`Edit: (Stage)` form appears. Make any desired modifications to the form, then
 click :guilabel:`Save & Close` when done.
 
-.. image:: recruitment/gear.png
-   :alt: The gear icon that appears when a column name is moused over, and the drop-down menu it
-         displays when clicked.
+.. screenshot:: hr-recruitment-stage-menu
+   :menu: Recruitment ‣ (job position)
+   :shows: The gear icon on a stage column header with its drop-down menu open, showing the edit, fold and delete options.
+   :highlight: The open drop-down menu (red frame).
+   :data: The First Interview stage.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 .. _recruitment/edit-stage:
 
@@ -258,13 +252,6 @@ The fields to be populated or modified are:
   applicant.
 - :guilabel:`Job Specific`: If the stage only applies to specific job positions, select the job
   positions from the drop-down menu. Multiple job positions can be selected.
-- :guilabel:`Show in Referrals`: Check the box if this stage should be seen in the *Referrals*
-  application, and allow the referrer to accrue points when a referral of theirs reaches this stage.
-  If this is active, a :guilabel:`Points` field appears. Enter the amount of referral points the
-  employee receives when an applicant enters this stage. The **Referrals** app must be installed in
-  order to use this option.
-- :guilabel:`Points`: If :guilabel:`Show in Referrals` is enabled, this field appears. Enter the
-  number of points the employee earns when an applicant moves to this stage.
 - :guilabel:`Tooltips` section: There are three preconfigured status labels (colored circles) for
   each applicant's card, indicating its status. These colors are displayed at the top of each stage
   to reflect the statuses of the applicants in the stage. The *names* for the label can be modified,
@@ -293,7 +280,7 @@ Email templates
 To communicate with the applicant, Odoo has several preconfigured email templates that can be used.
 The preconfigured email templates and when to use them are as follows:
 
-- :guilabel:`Recruitment: Applicant Acknowledgement`: this template is used to let the applicant
+- :guilabel:`Recruitment: Application Acknowledgement`: this template is used to let the applicant
   know that their application was received. This email is automatically sent out once the applicant
   is in the :guilabel:`New` stage.
 - :guilabel:`Recruitment: Interest`: this template is used to let the applicant know that their
@@ -304,10 +291,6 @@ The preconfigured email templates and when to use them are as follows:
   and consideration.
 - :guilabel:`Recruitment: Refuse`: this template is used when an applicant is no longer being
   considered for the position.
-- :guilabel:`Recruitment: Schedule Interview`: this template is used to let the applicant know that
-  they have passed the :guilabel:`Initial Qualification` stage, and they will soon be contacted to
-  set up an interview with the recruiter. This email is automatically sent out once the applicant is
-  in the :guilabel:`Initial Qualification` stage.
 
 .. note::
    Email templates can be created, modified, and deleted to suit the needs of a business. For more
@@ -316,8 +299,13 @@ The preconfigured email templates and when to use them are as follows:
 To manually send an email, click :guilabel:`Send message` in the chatter. A text box appears, as
 well as the applicant's email address.
 
-.. image:: recruitment/full-composer.png
-   :alt: Send an email from the chatter.
+.. screenshot:: hr-recruitment-send-email
+   :menu: Recruitment ‣ (job position) ‣ (open an applicant)
+   :shows: The full email composer opened from the chatter of an applicant, with the recipient, the subject, the body and the template selector.
+   :highlight: The template selector (red frame).
+   :data: Applicant "János Tóth"; use an invented email address.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Click the :icon:`fa-expand` :guilabel:`(Full composer)` icon in the bottom right corner of the
 :guilabel:`Send Message` tab in the chatter. A :guilabel:`Compose Email` pop-up window loads, with
@@ -356,9 +344,13 @@ window loads. Enter a name for the template in the :guilabel:`Template Name` fie
 To send the email, click :guilabel:`Send` and the email is sent to the applicant. The email then
 appears in the chatter.
 
-.. image:: recruitment/send-survey.png
-   :alt: Send a custom survey, also referred to as an interview form, to an applicant using a
-         preconfigured template.
+.. screenshot:: hr-recruitment-send-interview
+   :menu: Recruitment ‣ (job position) ‣ (open an applicant) ‣ Send Interview
+   :shows: The Send Interview dialog with the recipient, the interview form and the preconfigured email template.
+   :highlight: The interview form field (red frame).
+   :data: Applicant "János Tóth", interview form "Warehouse screening".
+   :module: hr_recruitment_survey
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`recruitment/new_job`
@@ -367,10 +359,7 @@ appears in the chatter.
    - :doc:`recruitment/schedule_interviews`
    - :doc:`recruitment/offer_job_positions`
    - :doc:`recruitment/refuse_applicant`
-   - :doc:`recruitment/applicant_analysis`
-   - :doc:`recruitment/source_analysis`
-   - :doc:`recruitment/velocity_analysis`
-   - :doc:`recruitment/team_performance`
+   - :doc:`recruitment/recruitment_analysis`
 
 .. toctree::
    :titlesonly:
@@ -382,7 +371,4 @@ appears in the chatter.
    recruitment/schedule_interviews
    recruitment/offer_job_positions
    recruitment/refuse_applicant
-   recruitment/applicant_analysis
-   recruitment/source_analysis
-   recruitment/velocity_analysis
-   recruitment/team_performance
+   recruitment/recruitment_analysis

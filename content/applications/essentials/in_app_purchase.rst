@@ -8,22 +8,24 @@ In-app purchases (IAP) are optional services that enhance Odoo databases. Each s
 own specific features and functionality. A full list of services is available on the `Odoo IAP
 Catalog <https://iap.odoo.com/iap/all-in-app-services>`_.
 
-.. image:: in_app_purchase/iap.png
-   :alt: The IAP catalog with various services available on IAP.Odoo.com.
+.. screenshot:: essentials-iap-catalog
+   :menu: (Odoo IAP Catalog website) iap.odoo.com
+   :shows: The IAP catalog page listing the available in-app services.
+   :module: iap
+   :notes: Odoo SA website; crop to the service list.
 
 .. example::
    The :guilabel:`SMS` service sends text messages to contacts directly from the database, and the
-   :guilabel:`Documents Digitization` service digitizes scanned or PDF vendor bills, expenses, and
-   resumes with optical character recognition (OCR) and artificial intelligence (AI).
+   :guilabel:`Snailmail` service sends invoices by post.
 
 |IAP| services do **not** need to be configured or set up before use. Odoo users can click on
 the service in the app to activate it. However, each service requires its own prepaid credits, and
 when they run out, users **must** :ref:`buy more <iap/buying_credits>` in order to keep using it.
 
 .. note::
-   Enterprise Odoo users with a valid subscription get free credits to test IAP features before
-   deciding to purchase more credits for the database. This includes demo/training databases,
-   educational databases, and one-app-free databases.
+   IAP services are provided by Odoo SA (or third parties) and are paid separately from the
+   database: the credits are bought on Odoo SA's IAP platform, independently of the hosting of the
+   database.
 
 .. _in_app_purchase/portal:
 
@@ -32,18 +34,17 @@ IAP services
 
 |IAP| services are provided by Odoo, as well as third-parties, and have a wide range of uses.
 
-The following |IAP| services are offered by Odoo:
+The following |IAP| services are used by Community modules:
 
-- :guilabel:`Documents Digitization`: digitizes scanned or PDF vendor bills, expenses, and resumes
-  with OCR and AI.
 - :guilabel:`Partner Autocomplete`: automatically populates contact records with corporate data.
 - :guilabel:`SMS`: sends SMS text messages to contacts directly from the database.
 - :guilabel:`Lead Generation`: generates leads based on a set of criteria, and converts web visitors
   into quality leads and opportunities.
 - :guilabel:`Snailmail`: sends customer invoices and follow-up reports by post, worldwide.
-- :guilabel:`Signer identification with itsme®`: Ask document signatories in
-  Odoo **Sign** to provide their identity using the *itsme* :icon:`fa-registered` identity platform,
-  which is available in Belgium and the Netherlands.
+
+.. note::
+   Some |IAP| services, such as document digitization (OCR), are only used by Enterprise modules and
+   are therefore not available in this edition.
 
 For more information on every service currently available (offered from developers other than Odoo),
 visit the `Odoo IAP Catalog <https://iap.odoo.com/iap/all-in-app-services>`_.
@@ -59,8 +60,13 @@ settings. To use a service, interact with it wherever it appears in the database
 
    This can be done by clicking the :icon:`fa-mobile` :guilabel:`SMS` icon within the database.
 
-   .. image:: in_app_purchase/sms-icon.png
-      :alt: The SMS icon on a typical contact information form located within an Odoo database.
+   .. screenshot:: essentials-iap-sms-icon
+      :menu: Contacts ‣ (a contact)
+      :shows: Contact form with the mouse over the Mobile field, showing the SMS icon next to the number.
+      :highlight: The SMS icon.
+      :data: Demo contact with a mobile number.
+      :module: sms, contacts
+      :notes: English UI, crop to the phone fields.
 
    One way to utilize the *SMS* |IAP| service with Odoo is showcased in the following steps:
 
@@ -110,8 +116,11 @@ Credits are purchased in *Packs* from the `Odoo IAP Catalog
    - :guilabel:`Advanced Pack`: 500 credits
    - :guilabel:`Expert Pack`: 1,000 credits
 
-   .. image:: in_app_purchase/packs.png
-      :alt: Four different packs of credits for the SMS IAP service.
+   .. screenshot:: essentials-iap-sms-packs
+      :menu: (Odoo IAP website) SMS service page
+      :shows: The four credit packs of the SMS service (Starter, Standard, Advanced, Expert).
+      :module: sms
+      :notes: Odoo SA website; crop to the packs.
 
    The number of credits consumed depends on the length of the SMS and the country of destination.
 
@@ -144,8 +153,12 @@ Alternatively users can scroll down to the :guilabel:`Contacts` section. Under t
 :guilabel:`Contacts` section, where it says :guilabel:`Odoo IAP`, click :guilabel:`View My
 Services`.
 
-.. image:: in_app_purchase/view-services.png
-   :alt: The Settings app showing the Odoo IAP heading and View My Services button.
+.. screenshot:: essentials-iap-view-services
+   :menu: Settings ‣ General Settings ‣ Contacts
+   :shows: The Contacts section with the "Odoo IAP" setting and its "View My Services" link.
+   :highlight: "View My Services".
+   :module: iap
+   :notes: English UI, crop to the section.
 
 Doing so reveals an :guilabel:`IAP Account` page, listing the various |IAP| services in the
 database. From here, click an |IAP| service to open its :guilabel:`Account Information` page, where
@@ -156,8 +169,11 @@ a :guilabel:`Buy Credits for (IAP Account)` page in a new tab. From here, click 
 the desired pack of credits. Then, follow the prompts to enter payment details, and confirm the
 order.
 
-.. image:: in_app_purchase/buy-pack.png
-   :alt: The SMS service page on IAP.Odoo.com with four packs of credits available for purchase.
+.. screenshot:: essentials-iap-buy-pack
+   :menu: (Odoo IAP website) Buy Credits page
+   :shows: The "Buy Credits" page of the SMS service with the four packs and their Buy buttons.
+   :module: iap, sms
+   :notes: Odoo SA website; crop to the packs.
 
 Once the transaction is complete, the credits are available for use in the database.
 

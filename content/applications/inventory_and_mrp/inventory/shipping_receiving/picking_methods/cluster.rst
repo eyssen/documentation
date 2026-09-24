@@ -41,8 +41,11 @@ process can lead to bottlenecks.
    With the packages for all three |SOS| packed, the picker pushes the cart to the output location,
    where the packages are sealed and prepared for shipment.
 
-   .. image:: cluster/cluster-example.png
-      :alt: Show example of fulfilling sales orders 2 and 3 at once.
+   .. screenshot:: picking-methods-cluster-example
+      :menu: (diagram)
+      :shows: A schematic drawing of a picker walking one route with a trolley of two packages, picking items for two sales orders at the same time.
+      :module: stock_picking_batch
+      :notes: Simple schematic drawing, no Odoo UI.
 
 Configuration
 =============
@@ -51,8 +54,12 @@ To enable cluster picking, begin by navigating to :menuselection:`Inventory app 
 --> Settings`. Under the :guilabel:`Operations` heading, activate the :guilabel:`Packages` and
 :guilabel:`Batch, Wave & Cluster Transfers` options.
 
-.. image:: cluster/configs.png
-   :alt: Activate *Packages* and *Batch Transfers* features in the settings.
+.. screenshot:: picking-methods-cluster-configs
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to "Operations", with the "Packages" and "Batch Transfers" checkboxes enabled.
+   :highlight: Both checkboxes (red frame).
+   :module: stock_picking_batch
+   :notes: English UI, light theme, 1440px width.
 
 Since batch picking is used to optimize the *pick* operation in Odoo, the :guilabel:`Storage
 Locations` and :guilabel:`Multi-Step Routes` options, under the :guilabel:`Warehouse` heading, must
@@ -63,8 +70,12 @@ also be checked on this settings page.
 
 When finished, click :guilabel:`Save`.
 
-.. image:: cluster/locations-routes-checkbox.png
-   :alt: Enable *Storage Locations* and *Multi-Step Routes* Inventory > Configuration > Settings.
+.. screenshot:: picking-methods-cluster-locations-routes-checkbox
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to "Warehouse", with the "Storage Locations" and "Multi-Step Routes" checkboxes enabled.
+   :highlight: Both checkboxes (red frame).
+   :module: stock_picking_batch
+   :notes: English UI, light theme, 1440px width.
 
 .. _inventory/misc/create-package:
 
@@ -89,8 +100,12 @@ Set the :guilabel:`Package Use` field to :guilabel:`Reusable Box`.
    this workflow, the products are directly packed using their intended shipping boxes, so
    :guilabel:`Package Use` is set to :guilabel:`Reusable Box`.
 
-   .. image:: cluster/cluster-package.png
-      :alt: Create new package form.
+   .. screenshot:: picking-methods-cluster-package
+      :menu: Inventory app ‣ Products ‣ Packages
+      :shows: A new package form with the Package Reference filled in and the Package Use field set.
+      :data: Package "CLUSTER-PACK-1".
+      :module: stock_picking_batch
+      :notes: English UI, light theme, 1440px width.
 
 Create cluster batch
 ====================
@@ -120,8 +135,12 @@ the :guilabel:`Add to batch` option from the resulting drop-down menu.
    - `WH/PICK/00008`: linked to |SO| 89 for one apple and banana.
    - `WH/PICK/00009`: linked to |SO| 90 for one apple, orange, and banana.
 
-   .. image:: cluster/select-picks.png
-      :alt: Use *Add to batch* button, from the *Action* button's list.
+   .. screenshot:: picking-methods-cluster-select-picks
+      :menu: Inventory ‣ Operations ‣ Transfers
+      :shows: The transfers list with several delivery orders selected and the gear (Actions) menu open, showing "Add to batch".
+      :highlight: The "Add to batch" action (red frame).
+      :module: stock_picking_batch
+      :notes: English UI, light theme, 1440px width.
 
 Doing so opens an :guilabel:`Add to batch` pop-up window, wherein the employee
 :guilabel:`Responsible` for the picking can be assigned.
@@ -140,8 +159,12 @@ checkbox.
 
 Conclude the process by clicking :guilabel:`Confirm`.
 
-.. image:: cluster/add-to-batch-window.png
-   :alt: Show *Add to batch* window to create a batch transfer.
+.. screenshot:: picking-methods-cluster-add-to-batch-window
+   :menu: Inventory ‣ Operations ‣ Transfers
+   :shows: The "Add to batch" pop-up window with the Responsible field filled in.
+   :highlight: The "a new batch transfer" option (red frame).
+   :module: stock_picking_batch
+   :notes: English UI, light theme, 1440px width.
 
 Process batches
 ===============
@@ -163,5 +186,10 @@ Set the :guilabel:`Destination Package` to the package dedicated to that particu
    Record this in Odoo using the :guilabel:`Destination Package` field in the :guilabel:`Detailed
    Operations` tab.
 
-   .. image:: cluster/cluster-batch-example.png
-      :alt: Example of processing cluster pickings in *Inventory*.
+   .. screenshot:: picking-methods-cluster-batch-example
+      :menu: Inventory ‣ Operations ‣ Batch Transfers
+      :shows: A batch transfer being processed, with the Operations tab showing a different destination package per sales order.
+      :highlight: The "Destination Package" column (red frame).
+      :data: Two sales orders picked into packages CLUSTER-PACK-1 and CLUSTER-PACK-2.
+      :module: stock_picking_batch
+      :notes: English UI, light theme, 1440px width.

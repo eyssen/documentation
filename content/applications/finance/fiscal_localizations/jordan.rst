@@ -29,9 +29,6 @@ The following modules are installed automatically with the Jordanian localizatio
    modules may not be installed automatically. Any missing modules can be manually :ref:`installed
    <general/install>`.
 
-.. seealso::
-   :doc:`Jordan Payroll localization documentation <../../hr/payroll/payroll_localizations/jordan>`
-
 .. _localizations/jordan/specifics:
 
 Localization overview
@@ -72,10 +69,10 @@ localization package:
 Tax reporting
 -------------
 
-The :doc:`VAT summary <../accounting/reporting/tax_returns>` provides a detailed breakdown of
-taxable, zero-rated, and exempt transactions. Like other :doc:`financial reports
-<../accounting/reporting>`, the VAT summary can be filtered by period, compared against other
-periods, and exported in Excel and PDF formats, ensuring compliance with Jordanian tax laws.
+The :doc:`tax report <../accounting/reporting/dynamic_reports>` provides a detailed breakdown of
+taxable, zero-rated, and exempt transactions using the grids of the Jordanian VAT return. Like other
+:doc:`financial reports <../accounting/reporting>`, it can be filtered by period and exported in
+Excel and PDF formats.
 
 .. _localizations/jordan/jofotara:
 

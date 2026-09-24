@@ -17,7 +17,6 @@ administration/upgrade/on_premise.rst administration/upgrade.rst
 # applications/accounting
 
 applications/finance/accounting/bank/feeds/bank_statements.rst content/applications/finance/accounting/bank/bank_statements.rst                    # feeds/* --> /*
-applications/finance/accounting/bank/feeds/ponto.rst applications/finance/accounting/bank/bank_synchronization/ponto.rst                           # feeds/* --> bank_synchronization/*
 applications/finance/accounting/bank/feeds/saltedge.rst applications/finance/accounting/bank/bank_synchronization/saltedge.rst                     # feeds/* --> bank_synchronization/*
 applications/finance/accounting/bank/misc/interbank.rst applications/finance/accounting/bank/interbank.rst                                         # misc/interbank --> interbank
 applications/finance/accounting/fiscal_localizations.rst applications/finance/fiscal_localizations.rst                                             # /accounting/ --> /
@@ -52,14 +51,10 @@ applications/general/users/delete_account.rst applications/general/users/odoo_ac
 
 # applications/hr
 
-applications/hr/payroll/configuration.rst applications/hr/payroll.rst  # applications/hr/payroll/configuration.rst --> applications/hr/payroll.rst
 
 # applications/inventory
 
 applications/inventory_and_mrp/inventory/management/delivery/dropshipping.rst applications/inventory_and_mrp/inventory/shipping/operation/dropshipping.rst                                                  # /inventory/management/incoming/* --> /shipping/operation/*
-applications/inventory_and_mrp/inventory/management/incoming/handle_receipts.rst applications/inventory_and_mrp/inventory/management/shipments_deliveries/inventory_flow.rst                                # /inventory/management/incoming/* --> /management/shipments_deliveries/*
-applications/inventory_and_mrp/inventory/management/delivery/inventory_flow.rst applications/inventory_and_mrp/inventory/management/shipments_deliveries/inventory_flow.rst                                 # /inventory/management/delivery/* --> /management/shipments_deliveries/*
-applications/inventory_and_mrp/inventory/management/delivery/label_type.rst applications/inventory_and_mrp/inventory/shipping/operation/label_type.rst                                                      # /inventory/management/delivery/* --> /shipping/operation/*
 applications/inventory_and_mrp/inventory/management/delivery/one_step.rst applications/inventory_and_mrp/inventory/management/shipments_deliveries/receipts_delivery_one_step.rst                           # /inventory/management/delivery/* --> /management/shipments_deliveries/*
 applications/inventory_and_mrp/inventory/management/incoming/one_step.rst applications/inventory_and_mrp/inventory/management/shipments_deliveries/receipts_delivery_one_step.rst                           # /inventory/management/incoming/* --> /management/shipments_deliveries/*
 applications/inventory_and_mrp/inventory/management/delivery/three_steps.rst applications/inventory_and_mrp/inventory/management/shipments_deliveries/delivery_three_steps.rst                              # /inventory/management/delivery/* --> /management/shipments_deliveries/*
@@ -71,9 +66,6 @@ applications/inventory_and_mrp/inventory/routes/concepts/inter_warehouse.rst app
 
 # applications/marketing
 
-applications/marketing/social_marketing/overview/livechat.rst applications/marketing/social_marketing/essentials/sms_essentials.rst
-applications/marketing/social_marketing/overview/push_notifications.rst applications/marketing/social_marketing/essentials/sms_essentials.rst
-applications/marketing/social_marketing/overview/create_posts.rst applications/marketing/social_marketing/essentials/sms_essentials.rst
 
 # applications/sales
 
@@ -89,7 +81,6 @@ applications/sales/point_of_sale/overview/epos_ssc.rst applications/sales/point_
 applications/sales/point_of_sale/overview/https.rst applications/sales/point_of_sale/configuration/https.rst                             # /overview/* -> /configuration/*
 applications/sales/point_of_sale/overview/register.rst applications/sales/point_of_sale.rst                                              # point_of_sale/overview/register -> point_of_sale
 applications/sales/point_of_sale/payment/adyen.rst applications/sales/point_of_sale/payment_methods/terminals/adyen.rst                  # /payment/* -> /payment_methods/terminals/*
-applications/sales/point_of_sale/payment/ingenico.rst applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst            # /payment/* -> /payment_methods/terminals/*
 applications/sales/point_of_sale/payment/six.rst applications/sales/point_of_sale/payment_methods/terminals/six.rst                      # /payment/* -> /payment_methods/terminals/*
 applications/sales/point_of_sale/payment/vantiv.rst applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst                # /payment/* -> /payment_methods/terminals/*
 applications/sales/point_of_sale/restaurant/fiscal_position.rst applications/sales/point_of_sale/pricing/fiscal_position.rst             # /restaurant/* -> /pricing/*

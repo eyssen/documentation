@@ -6,8 +6,13 @@ The **Printers** sub-module (``equipment_printer``) extends Equipment Management
 printer-specific features: counter tracking, cartridge management, paper format support, and
 connection type details.
 
-.. image:: equipment_printer/printer-list-view.png
-   :alt: Printer list view
+.. screenshot:: services-equipment-printer-list
+   :menu: Equipment Management ‣ Printers ‣ Printers
+   :shows: The list of printers with their serial numbers, customers and the latest counter values.
+   :highlight: None.
+   :data: Five printers at three customers.
+   :module: equipment_printer
+   :notes: English UI, light theme, 1440px width, crop to the list.
 
 Installation
 ============
@@ -31,8 +36,13 @@ Creating a printer from the Printers menu automatically sets the type to *Printe
 Printer tab
 ===========
 
-.. image:: equipment_printer/printer-form-tab.png
-   :alt: Printer tab on equipment form
+.. screenshot:: services-equipment-printer-tab
+   :menu: Equipment Management ‣ Printers ‣ (open a printer) ‣ Printer
+   :shows: The Printer tab of an equipment with the counters section, the connection type, the supported paper formats and the compatible cartridges list.
+   :highlight: The Counters section (red frame).
+   :data: Printer "Canon iR-ADV C5535"; cartridges for black and the three colors.
+   :module: equipment_printer
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 When an equipment has type *Printer*, a dedicated :guilabel:`Printer` tab appears on the form
 with the following sections:
@@ -76,8 +86,13 @@ cartridge.
 Counter management
 ==================
 
-.. image:: equipment_printer/printer-counter-form.png
-   :alt: Printer counter form
+.. screenshot:: services-equipment-printer-counter-form
+   :menu: Equipment Management ‣ Printers ‣ Counters ‣ New
+   :shows: A printer counter record with the printer, the reading date, and counter lines per paper format and colour type with their current values.
+   :highlight: The counter lines (red frame).
+   :data: Printer "Canon iR-ADV C5535"; lines for A4 B&W, A4 Colour and A3 B&W.
+   :module: equipment_printer
+   :notes: English UI, light theme, 1440px width, crop to the form sheet.
 
 Printer counters track page counts over time. Each counter record contains:
 

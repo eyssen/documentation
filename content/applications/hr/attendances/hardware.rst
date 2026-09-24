@@ -40,7 +40,7 @@ kiosk's camera to identify the employee.
 To generate a badge, first navigate to the :menuselection:`Employees app`. Next, click on the
 desired employee card to open the employee's form, then click the :guilabel:`Settings` tab.
 
-Under the :guilabel:`ATTENDANCE/POINT OF SALE/MANUFACTURING` section, there is a :guilabel:`Badge
+Under the :guilabel:`Attendance/Point of Sale` section, there is a :guilabel:`Badge
 ID` field. If this field is blank, click :guilabel:`Generate` at the end of the :guilabel:`Badge ID`
 line, and the field is automatically populated with a new badge ID number. Then, click
 :guilabel:`Print Badge` at the end of the badge ID number to create a PDF file of the badge.
@@ -53,8 +53,13 @@ that can be scanned at a kiosk to check in and out.
 
 Badges can be printed for employees using any thermal or inkjet printer.
 
-.. image:: hardware/badge.png
-   :alt: A badge for an employee that is created from the Employees app.
+.. screenshot:: hr-attendances-employee-badge
+   :menu: Employees ‣ Employees ‣ (open an employee) ‣ HR Settings
+   :shows: A printed employee badge with the employee name, the company name and the badge barcode.
+   :highlight: The barcode (red frame).
+   :data: Employee "Anita Kovács", demo company "YourCompany HU".
+   :module: hr_attendance, hr
+   :notes: English UI, light theme, 1440px width. Crop to the badge.
 
 .. note::
    Badges are **not** required, as employees can manually identify themselves on the kiosk.

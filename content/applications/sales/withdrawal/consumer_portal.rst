@@ -91,6 +91,14 @@ The first step is a public page titled as the withdrawal declaration. It collect
 The consumer confirms with the amber :guilabel:`Elállás megerősítése` ("Confirm withdrawal") button,
 or backs out with :guilabel:`Mégse` ("Cancel").
 
+.. screenshot:: sales-withdrawal-portal-declaration-form
+   :menu: (customer portal) ‣ My Orders ‣ (an order) ‣ Withdraw from the contract
+   :shows: The public withdrawal declaration page: the name and e-mail fields pre-filled from the order, the order number as contract reference, the line table with a quantity input on an untracked line and serial checkboxes on a serial-tracked line, and the amber confirm button.
+   :highlight: The line table and the confirm button (red frames).
+   :data: A demo webshop order with one untracked and one serial-tracked product; no shipping line listed.
+   :module: eyssen_rma_website_sale
+   :notes: Hungarian portal UI (the on-screen legal wording is Hungarian), light theme, 1440px width, crop to the form. Use throw-away consumer data.
+
 Validation
 ----------
 
@@ -116,6 +124,14 @@ On confirmation, the system:
 The consumer then sees a success screen showing the confirmation date-time and the withdrawal
 reference. Logged-in customers get a :guilabel:`Elállásaim megtekintése` ("View my withdrawals")
 button; guests get a :guilabel:`Vissza a főoldalra` ("Back to home") button.
+
+.. screenshot:: sales-withdrawal-portal-confirmation
+   :menu: (customer portal) ‣ My Orders ‣ (an order) ‣ Withdraw from the contract ‣ Confirm withdrawal
+   :shows: The success screen after confirming a withdrawal, showing the confirmation date and time, the withdrawal reference and the "View my withdrawals" button.
+   :highlight: The confirmation timestamp and reference (red frame).
+   :data: Reference RMA/2026/00034; a logged-in demo customer.
+   :module: eyssen_rma_website_sale
+   :notes: Hungarian portal UI, light theme, 1440px width, crop to the success block. Use throw-away consumer data.
 
 .. note::
    After confirmation the consumer's job is done. Returning the goods and getting a refund are

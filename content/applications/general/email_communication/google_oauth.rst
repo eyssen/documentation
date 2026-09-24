@@ -35,9 +35,11 @@ browse for the :guilabel:`Location`. Set the :guilabel:`Location` as the *Google
 organization*. If you are using a personal Gmail account, then leave the :guilabel:`Location` as
 :guilabel:`No Organization`.
 
-.. image:: google_oauth/new-project.png
-   :align: center
-   :alt: Project Name and Location for Google OAuth.
+.. screenshot:: general-email-google-new-project
+   :menu: (Google Cloud console) ‣ New Project
+   :shows: The New Project form with Project name and Location.
+   :module: google_gmail
+   :notes: Google website.
 
 Click on :guilabel:`Create` to finish this step.
 
@@ -69,7 +71,7 @@ On the :guilabel:`OAuth consent screen` step, under the :guilabel:`App informati
 :guilabel:`User support` email field.
 
 Next, under :menuselection:`App Domain --> Authorized domains`, click on :guilabel:`Add Domain` and
-enter `odoo.com`.
+enter the domain of the Odoo database (e.g., `company-name.com`).
 
 After that, under the :guilabel:`Developer contact information` section, enter the organization's
 email address. Google uses this email address to notify the organization about any changes to your
@@ -97,15 +99,17 @@ from the dropdown menu.
 - Under :guilabel:`Application Type`, select :guilabel:`Web Application` from the dropdown menu.
 - In the :guilabel:`Name` field, enter `Odoo`.
 - Under the :guilabel:`Authorized redirect URIs` label, click the button :guilabel:`ADD URI`, and
-  then input `https://yourdbname.odoo.com/google_gmail/confirm` in the :guilabel:`URIs 1` field.
-  Be sure to replace the *yourdbname* part of the URL with the actual Odoo database name.
+  then input `https://<odoo base url>/google_gmail/confirm` in the :guilabel:`URIs 1` field.
 - Next, click on :guilabel:`Create` to generate an OAuth :guilabel:`Client ID` and :guilabel:`Client
   Secret`. Finally, copy each generated value for later use when configuring in Odoo, and then
   navigate to the Odoo database.
 
-.. image:: google_oauth/client-credentials.png
-   :align: center
-   :alt: Client ID and Client Secret for Google OAuth.
+.. screenshot:: general-email-google-client-credentials
+   :menu: (Google Cloud console) ‣ Credentials
+   :shows: The "OAuth client created" dialog with Client ID and Client Secret.
+   :highlight: Client ID and Client Secret.
+   :module: google_gmail
+   :notes: Google website; blur IDs and secrets.
 
 Setup in Odoo
 =============
@@ -129,11 +133,14 @@ Configure outgoing email server
 To configure the external Gmail account, return to the top of the :guilabel:`Custom Email Servers`
 setting and then click the :guilabel:`Outgoing Email Servers` link.
 
-.. image:: google_oauth/outgoing-servers.png
-   :align: center
-   :alt: Configure Outgoing Email Servers in Odoo.
+.. screenshot:: general-email-google-outgoing-servers-link
+   :menu: Settings ‣ General Settings ‣ Emails
+   :shows: The "Use Custom Email Servers" setting with the Gmail Credentials fields and the "Outgoing Email Servers" link.
+   :highlight: The "Outgoing Email Servers" link.
+   :module: google_gmail
+   :notes: English UI, crop to the section; blur the values.
 
-Then, click on :guilabel:`New` or :guilabel:`Create` to create a new email server, and fill in the
+Then, click :guilabel:`New` to create a new email server, and fill in the
 :guilabel:`Name`, :guilabel:`Description`, and the email :guilabel:`Username` (if required).
 
 Next, click on :guilabel:`Gmail OAuth Authentication` or :guilabel:`Gmail` (under the
@@ -151,9 +158,12 @@ Then, allow Odoo to access the Google account by clicking on :guilabel:`Continue
 server in Odoo. The configuration automatically loads the token in Odoo, and a tag stating
 :guilabel:`Gmail Token Valid` appears in green.
 
-.. image:: google_oauth/green-token.png
-   :align: center
-   :alt: Configure Outgoing Email Servers in Odoo.
+.. screenshot:: general-email-google-token-valid
+   :menu: Settings ‣ Technical ‣ Email ‣ Outgoing Mail Servers ‣ (Gmail server)
+   :shows: Outgoing mail server with "Authenticate with" set to "Gmail OAuth Authentication" and the green "Gmail Token Valid" indicator.
+   :highlight: The token indicator.
+   :module: google_gmail
+   :notes: English UI, crop to the form.
 
 Finally, :guilabel:`Test the Connection`. A confirmation message should appear. The Odoo database
 can now send safe, secure emails through Google using OAuth authentication.
@@ -167,9 +177,11 @@ Production VS Testing Publishing Status
 Choosing :guilabel:`Production` as the :guilabel:`Publishing Status` (instead of
 :guilabel:`Testing`) will display the following warning message:
 
-.. image:: google_oauth/published-status.png
-   :align: center
-   :alt: OAuth is Limited to 100 Sensitive Scope Logins.
+.. screenshot:: general-email-google-testing-warning
+   :menu: (Google sign-in page)
+   :shows: The Google warning that the app is in testing and limited to 100 sensitive scope logins.
+   :module: google_gmail
+   :notes: Google website.
 
 To correct this warning, navigate to the `Google API Platform
 <https://console.cloud.google.com/apis/credentials/consent>`_. If the :guilabel:`Publishing status`
@@ -181,9 +193,11 @@ No Test Users Added
 If no test users are added to the OAuth consent screen, then a 403 access denied error will
 populate.
 
-.. image:: google_oauth/403-error.png
-   :align: center
-   :alt: 403 Access Denied Error.
+.. screenshot:: general-email-google-403
+   :menu: (Google sign-in page)
+   :shows: The "Error 403: access_denied" page shown when the user is not a test user of the app.
+   :module: google_gmail
+   :notes: Google website.
 
 To correct this error, return to the :guilabel:`OAuth consent screen` under :guilabel:`APIs &
 Services` and add test user(s) to the app. Add the email that you are configuring in Odoo.
@@ -194,9 +208,11 @@ Gmail Module not updated
 If the *Google Gmail* module in Odoo has not been updated to the latest version, then a
 :guilabel:`Forbidden` error message populates.
 
-.. image:: google_oauth/forbidden-error.png
-   :align: center
-   :alt: Forbidden you don't have the permission to access the requested resource.
+.. screenshot:: general-email-google-forbidden
+   :menu: (browser)
+   :shows: The "Forbidden – You don't have the permission to access the requested resource" error page displayed after the Google authorization.
+   :module: google_gmail
+   :notes: Browser window; example domain in the URL.
 
 To correct this error, go to the :menuselection:`Apps` module and clear out the search terms. Then,
 search for `Gmail` or `Google` and upgrade the :guilabel:`Google Gmail` module. Finally, click
@@ -208,12 +224,14 @@ Application Type
 When creating the credentials (OAuth *Client ID* and *Client Secret*), if :guilabel:`Desktop App` is
 selected for the :guilabel:`Application Type`, an :guilabel:`Authorization Error` appears.
 
-.. image:: google_oauth/error-400.png
-   :align: center
-   :alt: Error 400 Redirect URI Mismatch.
+.. screenshot:: general-email-google-400
+   :menu: (Google sign-in page)
+   :shows: The "Error 400: redirect_uri_mismatch" authorization error.
+   :module: google_gmail
+   :notes: Google website.
 
 To correct this error, delete the credentials already created and create new credentials, selecting
 :guilabel:`Web Application` for the :guilabel:`Application Type`. Then, under :guilabel:`Authorized
 redirect URIs`, click :guilabel:`ADD URI` and type:
-`https://yourdbname.odoo.com/google_gmail/confirm` in the field, being sure to replace *yourdbname*
-in the URL with the Odoo database name.
+`https://<odoo base url>/google_gmail/confirm` in the field, replacing `<odoo base url>` with the
+URL of the Odoo database (e.g., `https://erp.company-name.com`).

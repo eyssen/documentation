@@ -59,8 +59,12 @@ really delivered. If you do back orders (deliver partially and the rest
 later), the customer will receive two invoices, one for each delivery
 order.
 
+With the *Invoicing from Stock Picking* module, validated delivery orders can also be invoiced
+directly from the transfers, grouping several delivery notes of the same customer on one invoice.
+
 .. seealso::
    - :doc:`/applications/sales/sales/invoicing/invoicing_policy`
+   - :doc:`invoice_from_delivery_notes`
 
 eCommerce Order ‣ Invoice
 -------------------------
@@ -149,16 +153,3 @@ It remains possible to resequence the invoices but with some restrictions:
 #. The order of the invoice remains unchanged.
 #. It is useful for people who use a numbering from another software and who want to continue the
    current year without starting over from the beginning.
-
-Invoice digitization with optical character recognition (OCR)
--------------------------------------------------------------
-
-**Invoice digitization** is the process of automatically encoding traditional paper invoices into
-invoices forms in your accounting.
-
-Odoo uses OCR and artificial intelligence technologies to recognize the content of the documents.
-Vendor bills and customer invoices forms are automatically created and populated based on scanned
-invoices.
-
-.. seealso::
-   - :doc:`/applications/finance/accounting/vendor_bills/invoice_digitization`

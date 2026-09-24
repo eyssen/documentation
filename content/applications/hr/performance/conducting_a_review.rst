@@ -82,6 +82,14 @@ What is on a review
 |                            | employee's own comment.                      |                    |
 +----------------------------+----------------------------------------------+--------------------+
 
+.. screenshot:: hr-performance-review-packet
+   :menu: Performance ‣ Reviews ‣ My Reviews ‣ (open a review)
+   :shows: A review packet with the status bar, the employee and reviewer, the questionnaire answers, the objectives and the development plan tabs.
+   :highlight: The status bar and the self-assessment progress (red frame).
+   :data: Review of "Anita Kovács" in the 2026 annual cycle, self-assessment submitted.
+   :module: hr_review
+   :notes: English UI, light theme, 1440px width.
+
 A row of smart buttons sits above them: :guilabel:`My Answers` opens the part of the
 questionnaire you personally have to fill in, :guilabel:`Objectives` the employee's objectives,
 :guilabel:`Development Actions` the plan, :guilabel:`Meeting` the review conversation once one
@@ -249,6 +257,14 @@ The development plan
 
 The development plan is what a review is actually for, and it is the part designed to outlive
 the review that created it.
+
+.. screenshot:: hr-performance-development-plan
+   :menu: Performance ‣ Reviews ‣ My Reviews ‣ (open a review) ‣ Development Plan
+   :shows: The development plan of a review with its development actions, what was agreed and what came of it.
+   :highlight: The "What we agreed" and "What came of it" columns (red frame).
+   :data: Three development actions carried over from the previous plan.
+   :module: hr_review
+   :notes: English UI, light theme, 1440px width.
 
 Add one line per action on the :guilabel:`Development Plan` page: a :guilabel:`Name`, a
 :guilabel:`Type` (*Training*, *Mentoring*, *Coaching*, *Stretch Assignment*, *Rotation*,

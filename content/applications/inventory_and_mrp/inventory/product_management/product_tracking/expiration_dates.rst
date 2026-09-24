@@ -29,8 +29,14 @@ enable the :guilabel:`Lots & Serial Numbers` feature.
 Once that feature is activated, a new option will appear to enable :guilabel:`Expiration Dates`.
 Click that checkbox to enable the feature, and be sure to :guilabel:`Save` changes.
 
-.. image:: expiration_dates/expiration-dates-enabled-settings.png
-   :alt: Enabled lots and serial numbers and expiration dates settings.
+.. screenshot:: inventory-expiration-dates-enable
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to the "Traceability" section with both the "Lots & Serial
+      Numbers" and the "Expiration Dates" checkboxes enabled.
+   :highlight: The "Expiration Dates" checkbox (red frame).
+   :data: Demo company "YourCompany".
+   :module: stock, product_expiry
+   :notes: English UI, light theme, 1440px width, crop to the "Traceability" settings block.
 
 .. tip::
    Once the :guilabel:`Lots & Serial Numbers` feature is activated, an additional feature appears to
@@ -55,7 +61,7 @@ edit. Selecting a product reveals the product form for that particular item.
    Unique Serial Number` or :guilabel:`By Lots`.
 
 Then, click the :guilabel:`Inventory` tab, and scroll down to the :guilabel:`Traceability` section.
-Tick the :guilabel:`Expiration Date` checkbox.
+Tick the :guilabel:`Expiration Date` checkbox. Doing so reveals a :guilabel:`Dates` group below it.
 
 .. note::
    If a product has stock on-hand prior to activating tracking by lots or serial numbers, an
@@ -66,28 +72,38 @@ Tick the :guilabel:`Expiration Date` checkbox.
    For processing large quantities of products on receipts or deliveries, it is recommended to track
    using lots, so multiple products can be traced back to the same lot, if any issues arise.
 
-.. image:: expiration_dates/expiration-dates-product-configuration.png
-   :alt: Expiration dates configuration on the product form.
+.. screenshot:: inventory-expiration-dates-product-form
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Inventory tab
+   :shows: The "Traceability" section of a product form with the "Expiration Date" checkbox ticked, and the
+      "Dates" section below showing the "Expiration Date", "Best Before Date", "Removal Date" and "Alert
+      Date" fields filled in.
+   :highlight: The "Expiration Date" checkbox and the four "Dates" fields (red frames).
+   :data: A perishable lot-tracked product, e.g. expiration 30 days, best before 20, removal 25, alert 15.
+   :module: product_expiry
+   :notes: English UI, light theme, 1440px width, crop to the Traceability and Dates sections.
 
-Under the :guilabel:`Dates` section, there are four categories of expiration information to
-configure for the product:
+The :guilabel:`Dates` group holds four durations, each expressed as a number of days:
 
-- :guilabel:`Expiration Time`: the number of days after receiving products (either from a vendor or
+- :guilabel:`Expiration Date`: the number of days after receiving products (either from a vendor or
   in stock after production) in which goods may become dangerous and should not be used or consumed.
-- :guilabel:`Best Before Time`: the number of days before the expiration date in which the goods
+- :guilabel:`Best Before Date`: the number of days before the expiration date in which the goods
   start deteriorating, **without** being dangerous yet.
-- :guilabel:`Removal Time`: the number of days before the expiration date in which the goods should
+- :guilabel:`Removal Date`: the number of days before the expiration date in which the goods should
   be removed from stock.
-- :guilabel:`Alert Time`: the number of days before the expiration date in which an alert should be
+- :guilabel:`Alert Date`: the number of days before the expiration date in which an alert should be
   raised on goods in a particular lot or containing a particular serial number.
+
+.. note::
+   These four fields hold a **number of days**, while the fields of the same name on a lot or serial
+   number hold the resulting **dates**, computed from them.
 
 .. note::
    The values entered into these fields automatically compute the expiration date for goods entered
    into stock, whether purchased from a vendor or manufactured in-house.
 
 .. tip::
-   If the :guilabel:`Dates` field is not populated with any values for expiration information, dates
-   (and lots) can be manually assigned upon receipts and deliveries in and out of the warehouse.
+   If the :guilabel:`Dates` group is left empty, dates (and lots) can still be assigned manually on
+   receipts and deliveries in and out of the warehouse.
    Even when assigned, they can still be overwritten and changed manually if needed, as well.
 
 Set expiration dates on receipts with lots & serial numbers
@@ -103,8 +119,14 @@ open the :guilabel:`Receipt` record.
    number for the ordered products. The receipt cannot be validated without an assigned lot or
    serial number.
 
-   .. image:: expiration_dates/expiration-dates-user-error-popup.png
-      :alt: User error popup when validating an order with no lot number.
+   .. screenshot:: inventory-expiration-dates-validate-error
+      :menu: Inventory ‣ Receipts ‣ (a receipt) ‣ Validate
+      :shows: The user-error pop-up shown when a receipt for a lot- or serial-tracked product is validated
+         before any lot or serial number was entered.
+      :highlight: The error text (red frame).
+      :data: Receipt WH/IN/00001 for a perishable lot-tracked product.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 From here, click the :icon:`fa-list` :guilabel:`(Details)` icon located on the of the product line.
 When clicked, a :guilabel:`Detailed Operations` pop-up will appear.
@@ -114,13 +136,19 @@ on the product form. Click the :guilabel:`Lot/Serial Number` field on the approp
 enter the lot or serial number.
 
 .. tip::
-   If the :guilabel:`Dates` field on the product form has not been configured, the
-   :guilabel:`Expiration Date` can be manually entered.
+   If the :guilabel:`Dates` group on the product form has not been filled in, the
+   :guilabel:`Expiration Date` can be entered by hand.
 
 Click :guilabel:`Save` when finished to close the pop-up. Finally, click :guilabel:`Validate`.
 
-.. image:: expiration_dates/expiration-dates-detailed-operations-popup.png
-   :alt: Detailed operations popup showing expiration dates for ordered products.
+.. screenshot:: inventory-expiration-dates-on-receipt
+   :menu: Inventory ‣ Receipts ‣ (a receipt) ‣ Operations tab ‣ (details icon)
+   :shows: The detailed-operations pop-up of a receipt line, with the "Lot/Serial Number" entered and the
+      "Expiration Date" column pre-filled from the product's date settings.
+   :highlight: The "Expiration Date" cell (red frame).
+   :data: Lot "LOT0001" of a perishable product with a 30-day expiration time.
+   :module: product_expiry
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 A :guilabel:`Traceability` smart button will appear upon validating the receipt. Click the
 :guilabel:`Traceability` smart button to see the updated :guilabel:`Traceability Report`, which
@@ -137,8 +165,14 @@ To create a :abbr:`MO (manufacturing order)`, go to :menuselection:`Manufacturin
 --> Manufacturing Orders`, and click :guilabel:`New`. Choose a product to manufacture from the
 :guilabel:`Product` field drop-down menu, then select the :guilabel:`Quantity` to produce.
 
-.. image:: expiration_dates/expiration-dates-manufacturing-order.png
-   :alt: Manufacturing order for product with expiration date.
+.. screenshot:: inventory-expiration-dates-manufacturing-order
+   :menu: Manufacturing ‣ Operations ‣ Manufacturing Orders ‣ New
+   :shows: A manufacturing order for a perishable, lot-tracked product, with the product, the quantity to
+      produce and the component lines to consume.
+   :highlight: The "Product" and "Quantity" fields (red frame).
+   :data: One manufactured perishable product with two components.
+   :module: mrp, product_expiry
+   :notes: English UI, light theme, 1440px width, crop to the top of the manufacturing order form.
 
 .. note::
    To manufacture a product, there must be materials to consume in the lines in the
@@ -153,8 +187,16 @@ Click the :icon:`fa-list` :guilabel:`(Details)` icon to reveal additional inform
 specific numbers. On that pop-up, all expiration information that was previously configured for the
 product is displayed.
 
-.. image:: expiration_dates/components-popup.png
-   :alt: Components pop-up with expiration information for specific lot number.
+.. screenshot:: inventory-expiration-dates-mo-lot-details
+   :menu: Manufacturing ‣ Operations ‣ Manufacturing Orders ‣ (a confirmed order) ‣ (details icon next to
+      Lot/Serial Number)
+   :shows: The pop-up opened from the "Lot/Serial Number" field of a confirmed manufacturing order, listing
+      the generated lot number with all its expiration information (expiration, best before, removal and
+      alert date).
+   :highlight: The date columns (red frame).
+   :data: The lot generated for the manufactured perishable product.
+   :module: mrp, product_expiry
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 Sell products with expiration dates
 ===================================
@@ -173,8 +215,8 @@ Then, click the :guilabel:`Other Info` tab. Under the :guilabel:`Delivery` secti
 the date. Finally, click :guilabel:`Confirm` to confirm the sales order.
 
 .. important::
-   If the products are delivered before the :guilabel:`Alert Date` set on the product form, then no
-   alerts are created.
+   If the products are delivered before the alert date computed for the lot, then no alerts are
+   created.
 
 Next, click the :guilabel:`Delivery` smart button at the top of the sales order to see the warehouse
 receipt form.
@@ -204,8 +246,14 @@ choose :guilabel:`Add Custom Group`, and select the :guilabel:`Expiration Date` 
 drop-down menu. Doing so breaks down all perishable products, their expiration dates, and the
 assigned lot number.
 
-.. image:: expiration_dates/expiration-dates-group-by-dates.png
-   :alt: Group by expiration dates on lots and serial numbers page.
+.. screenshot:: inventory-expiration-dates-group-by
+   :menu: Inventory ‣ Products ‣ Lots/Serial Numbers
+   :shows: The Lots/Serial Numbers list with the default filters removed and a custom group by "Expiration
+      Date" applied, so perishable products are listed per expiration date with their lot numbers.
+   :highlight: The applied "Expiration Date" group in the search bar (red frame).
+   :data: Several lots of perishable products with different expiration dates.
+   :module: product_expiry
+   :notes: English UI, light theme, 1440px width, show the search bar and the grouped list.
 
 .. tip::
    Customers can also view the expiration date alert in their customer portal.
@@ -225,8 +273,8 @@ serial number detail form.
    :guilabel:`(adjust settings)` icon at the top of the list of records, then tick the
    :guilabel:`Expiration Date` checkbox.
 
-On the :guilabel:`Lot/Serial Number` detail form, the :guilabel:`Dates` lists all expiration
-information related to the products.
+On the :guilabel:`Lot/Serial Number` detail form, the :guilabel:`Dates` tab lists all expiration
+information of that lot or serial number.
 
 If the expiration date for a lot/serial number has passed, the form displays a red
 :guilabel:`Expiration Alert` at the top of the page to indicate that the products in this lot are
@@ -240,8 +288,14 @@ all of the search filters from the search bar on the :guilabel:`Lots/Serial Numb
 
 Then, click :guilabel:`Filters`, and choose :guilabel:`Expiration Alerts`.
 
-.. image:: expiration_dates/expiration-dates-expiration-alert.png
-   :alt: Expiration alert for product past the expiration date.
+.. screenshot:: inventory-expiration-dates-alert-filter
+   :menu: Inventory ‣ Products ‣ Lots/Serial Numbers ‣ Filters ‣ Expiration Alerts
+   :shows: The Lots/Serial Numbers list filtered with "Expiration Alerts", listing the lots whose expiration
+      date has passed or is close, with their expiration date column shown.
+   :highlight: The "Expiration Alerts" filter facet in the search bar (red frame).
+   :data: At least one expired lot and one lot inside its alert period.
+   :module: product_expiry
+   :notes: English UI, light theme, 1440px width, show the search bar and the list.
 
 Expiration notifications
 ------------------------
@@ -254,7 +308,7 @@ Select a product configured with lot/serial numbers and expiration date tracking
 :guilabel:`Inventory` tab. Under the :guilabel:`Logistics` section, select a user in the
 :guilabel:`Responsible` field.
 
-When the expiation date passes for a lot/serial number for this product, a notification is sent to
+When the expiration date passes for a lot/serial number for this product, a notification is sent to
 the user in this field.
 
 .. note::
@@ -263,7 +317,7 @@ the user in this field.
 
    To customize these alerts, turn on :ref:`developer mode <developer-mode>`, go to
    :menuselection:`Settings app --> Technical --> Activity Types`, and select the :guilabel:`Alert
-   Date Reached` alert.
+   Date Reached` activity type.
 
    The :guilabel:`Default User` assigned will be notified once the expiration date is reached. If no
    default user is configured, the activity will be assigned to the :guilabel:`Responsible` user

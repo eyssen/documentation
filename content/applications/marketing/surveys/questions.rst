@@ -33,9 +33,13 @@ To reveal the :guilabel:`Mandatory Answer` column on the :guilabel:`Questions` t
 if questions require a mandatory answer or not, click the :guilabel:`(optional columns)` icon
 located to the far-right of the column titles.
 
-.. image:: questions/slider-dropdown-mandatory-answer.png
-   :align: center
-   :alt: The slider drop-down menu showing the Mandatory Answer option in Odoo Surveys.
+.. screenshot:: surveys-questions-slider-dropdown-mandatory-answer
+   :menu: Surveys ‣ Surveys ‣ New ‣ Questions tab
+   :shows: The optional-columns drop-down menu of the Questions tab, opened on the Mandatory Answer entry.
+   :highlight: The Mandatory Answer entry (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 Create sections
 ---------------
@@ -83,9 +87,13 @@ Click :guilabel:`Discard` to discard the question entirely.
 Create Sections and Questions pop-up window
 -------------------------------------------
 
-.. image:: questions/create-sections-questions-popup.png
-   :align: center
-   :alt: The Create Sections and Questions pop-up form in Odoo Surveys.
+.. screenshot:: surveys-questions-create-sections-questions-popup
+   :menu: Surveys ‣ Surveys ‣ New ‣ Questions tab ‣ Add a question
+   :shows: The Create Sections and Questions pop-up window with the question text, Question Type field and the Answers, Description and Options tabs.
+   :highlight: The Question Type field (red frame).
+   :data: Question 'How did you hear about us?'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 In the :guilabel:`Create Sections and Questions` pop-up window, start by typing the question into
 the :guilabel:`Question` field, located at the top of the pop-up window.
@@ -141,9 +149,13 @@ If the :guilabel:`Single Line Text Box` is selected as the :guilabel:`Question T
 :guilabel:`Answers` tab remains, although it only provides two checkbox options: :guilabel:`Input
 must be an email` and :guilabel:`Save as user nickname`.
 
-.. image:: questions/single-line-answer-tab.png
-   :align: center
-   :alt: The Single Line Text box question type answers tab in Odoo Surveys.
+.. screenshot:: surveys-questions-single-line-answer-tab
+   :menu: Surveys ‣ Surveys ‣ New ‣ Questions tab ‣ Add a question
+   :shows: The Answers tab of a Single Line Text Box question with its Placeholder field.
+   :highlight: The Placeholder field (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 If the :guilabel:`Input must be an email` option is enabled, a new field, :guilabel:`Save as user
 email` appears. If that box is ticked, Odoo saves the participant's answer to that specific question
@@ -155,9 +167,13 @@ its nickname.
 For all other applicable :guilabel:`Question Type` options that provide answer options to the
 participant, the :guilabel:`Answers` tab appears the same.
 
-.. image:: questions/multiple-choice-answer-options.png
-   :align: center
-   :alt: The answer tab with a multiple choice answer option selected in Odoo Surveys.
+.. screenshot:: surveys-questions-multiple-choice-answer-options
+   :menu: Surveys ‣ Surveys ‣ New ‣ Questions tab ‣ Add a question
+   :shows: The Answers tab of a Multiple choice question with the answer lines and their Is a correct answer and Answer Score columns.
+   :highlight: The answer lines (red frame).
+   :data: Four answer options, one marked correct.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 From here, users can add answer options by clicking :guilabel:`Add a line`, and typing in the
 various answer options for that question. Then, either press :kbd:`Enter` to lock in that answer
@@ -190,9 +206,13 @@ Type`. If that's chosen, the :guilabel:`Answers` tab remains, but below the typi
 :guilabel:`Choices` section, there is a :guilabel:`Rows` section. That's because the
 :guilabel:`Matrix` option provides an answer table for participants to fill out.
 
-.. image:: questions/matrix-answer-tab.png
-   :align: center
-   :alt: The answer tab with a matrix question type selected in Odoo Surveys.
+.. screenshot:: surveys-questions-matrix-answer-tab
+   :menu: Surveys ‣ Surveys ‣ New ‣ Questions tab ‣ Add a question
+   :shows: The Answers tab of a Matrix question with the Matrix Type field and the separate Rows and Choices lists.
+   :highlight: The Rows and Choices lists (red frame).
+   :data: Three rows and four choices.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 Description tab
 ~~~~~~~~~~~~~~~
@@ -228,9 +248,13 @@ present in the :guilabel:`Answers` section.
 When enabled, two additional fields appear: :guilabel:`Comment Message` and :guilabel:`Comment is an
 answer`.
 
-.. image:: questions/multiple-choice-options-tab.png
-   :align: center
-   :alt: The answers section of the options tab when a multiple choice question type is selected.
+.. screenshot:: surveys-questions-multiple-choice-options-tab
+   :menu: Surveys ‣ Surveys ‣ New ‣ Questions tab ‣ Add a question ‣ Options tab
+   :shows: The Answers section of the Options tab for a multiple choice question, with the Show Comments Field option and its comment settings.
+   :highlight: The Show Comments Field option (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 In the :guilabel:`Comment Message` field, type in a guiding message to help participants know what
 is expected of them (e.g. `If other, please specify`).
@@ -246,9 +270,13 @@ If the selected :guilabel:`Question Type` is :guilabel:`Multiple Lines Text Box`
 :guilabel:`Placeholder` field appears in the :guilabel:`Answers` section of the :guilabel:`Options`
 tab.
 
-.. image:: questions/multiple-lines-placeholder.png
-   :align: center
-   :alt: The placeholder field when a multiple lines text box option is chosen in Odoo Surveys.
+.. screenshot:: surveys-questions-multiple-lines-placeholder
+   :menu: Surveys ‣ Surveys ‣ New ‣ Questions tab ‣ Add a question ‣ Options tab
+   :shows: The Answers section of the Options tab for a Multiple Lines Text Box question, showing the Placeholder field.
+   :highlight: The Placeholder field (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 In the :guilabel:`Placeholder` field, enter a guiding direction to help participants know what they
 should write in the :guilabel:`Multiple Lines Text Box` presented to them.
@@ -263,9 +291,13 @@ section of the :guilabel:`Options` tab: :guilabel:`Validate Entry` and :guilabel
 If the :guilabel:`Validate Entry` option is enabled, two additional fields appear beneath:
 :guilabel:`Min/Max Limits` and :guilabel:`Validation Error`.
 
-.. image:: questions/single-line-validate-entry.png
-   :align: center
-   :alt: The answers section of the option tab when a single line text box question type is chosen.
+.. screenshot:: surveys-questions-single-line-validate-entry
+   :menu: Surveys ‣ Surveys ‣ New ‣ Questions tab ‣ Add a question ‣ Options tab
+   :shows: The Answers section of the Options tab with Validate entry enabled and the resulting minimum/maximum and error message fields.
+   :highlight: The Validate entry option and its fields (red frame).
+   :data: Minimum 1, maximum 10.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 In the :guilabel:`Min/Max Limits` field, designate the minimum and maximum allowed quantities for
 that specific question.
@@ -282,9 +314,13 @@ Constraints section
 The :guilabel:`Constraints` section in the :guilabel:`Options` tab is the same, regardless of the
 selected :guilabel:`Question Type`.
 
-.. image:: questions/constraints-section.png
-   :align: center
-   :alt: The Constraints section in the options tab in Odoo Surveys.
+.. screenshot:: surveys-questions-constraints-section
+   :menu: Surveys ‣ Surveys ‣ New ‣ Questions tab ‣ Add a question ‣ Options tab
+   :shows: The Constraints section of a question's Options tab with the Mandatory Answer option and its error message field.
+   :highlight: The Constraints section (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 In the :guilabel:`Constraints` section, there is one option available: :guilabel:`Mandatory Answer`.
 
@@ -308,9 +344,13 @@ answer(s) (i.e. :guilabel:`Triggering Answers`) has been selected in a previous 
 There is only one field in the :guilabel:`Conditional Display` section: :guilabel:`Triggering
 Answers`.
 
-.. image:: questions/conditional-display-section.png
-   :align: center
-   :alt: The Conditional Display section of the options tab in the Odoo Surveys application.
+.. screenshot:: surveys-questions-conditional-display-section
+   :menu: Surveys ‣ Surveys ‣ New ‣ Questions tab ‣ Add a question ‣ Options tab
+   :shows: The Conditional Display section with Conditional Display enabled and the Triggering Answers field filled in.
+   :highlight: The Triggering Answers field (red frame).
+   :data: Triggered by the answer 'Yes' of a previous question.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 In the :guilabel:`Triggering Answers` field, select specific responses from previous questions that
 would trigger this question. More than one answer can be selected. Leave the field empty if the
@@ -325,9 +365,13 @@ supported by *Live Session* surveys.
 There is only one option available in the :guilabel:`Live Sessions` section: :guilabel:`Question
 Time Limit`.
 
-.. image:: questions/live-sessions-section.png
-   :align: center
-   :alt: The Live Sessions section of the Option tab in the Odoo Surveys application.
+.. screenshot:: surveys-questions-live-sessions-section
+   :menu: Surveys ‣ Surveys ‣ New ‣ Questions tab ‣ Add a question ‣ Options tab
+   :shows: The Live Sessions section of a question's Options tab with the Question Time Limit and Speed Rating options.
+   :highlight: The Live Sessions section (red frame).
+   :data: Demo survey 'Product Feedback' with about 20 participations; certification survey 'Odoo 18 Basics'.
+   :module: survey
+   :notes: English UI, light theme, 1440px width.
 
 When the :guilabel:`Question Time Limit` option is enabled, designate how much time (in
 :guilabel:`seconds`) participants have to answer the question during a *Live Session* survey.

@@ -65,8 +65,13 @@ Pages need to be published to make them visible to website visitors. To publish 
 page, access it and toggle the switch in the upper-right corner from :guilabel:`Unpublished`
 to :guilabel:`Published`, or vice versa.
 
-.. image:: pages/un-published_toggle.png
-   :alt: Unpublished/Published toggle
+.. screenshot:: website-pages-un-published-toggle
+   :menu: Website ‣ (page)
+   :shows: The website top bar of a page with the Unpublished / Published toggle.
+   :highlight: The Unpublished / Published toggle (red frame).
+   :data: Page 'About us'.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    It is also possible to:
@@ -98,8 +103,13 @@ properties:
     - :guilabel:`301 Moved permanently`: to redirect the page permanently.
     - :guilabel:`302 Moved temporarily`: to redirect the page temporarily.
 
-   .. image:: pages/page-properties.png
-      :alt: Redirect old URL
+   .. screenshot:: website-pages-page-properties
+      :menu: Website ‣ Site ‣ Pages ‣ (page) ‣ Properties
+      :shows: The page properties dialog with the Page Name, URL, Publishing, Visibility and the URL redirect options.
+      :highlight: The URL and redirect options (red frame).
+      :data: Page 'About us' with a redirect from the old URL.
+      :module: website
+      :notes: English UI, light theme, 1440px width.
 
  - :guilabel:`In Menu`: Disable if you don't want the page to appear in the menu.
  - :guilabel:`Is Homepage`: Enable if you want the page to be the homepage of your website.

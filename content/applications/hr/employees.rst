@@ -5,7 +5,7 @@ Employees
 =========
 
 Odoo **Employees** centralizes :doc:`personnel files <employees/new_employee>`, employment
-:doc:`contracts <payroll/contracts>`, and :doc:`departmental hierarchies <employees/departments>` in
+:doc:`contracts <employees/contracts>`, and :doc:`departmental hierarchies <employees/departments>` in
 one system. Properly configuring its settings ensures the dashboard shows each employee's real-time
 attendance and work location—data that drives payroll accuracy, capacity planning, and compliance
 reporting.
@@ -23,7 +23,7 @@ reporting.
       Create and manage the departments employees are a part of.
 
    .. card:: Contracts
-      :target: payroll/contracts
+      :target: employees/contracts
 
       Manage and create employee contracts.
 
@@ -37,6 +37,11 @@ reporting.
 
       Grant badges to employees for performance and achievements.
 
+   .. card:: Working schedules
+      :target: employees/working_schedules
+
+      Define the hours employees are expected to work.
+
    .. card:: Equipment
       :target: employees/equipment
 
@@ -46,11 +51,6 @@ reporting.
       :target: employees/offboarding
 
       Take care of employee records when collaboration ends.
-
-   .. card:: Employee retention report
-      :target: employees/retention_report
-
-      Gain insight to the retention rate for a company.
 
 .. _employees/settings:
 
@@ -97,8 +97,13 @@ Employees
      The *color* of the icon indicates the employee's status, with green indicating present, yellow
      indicating absent, and gray indicating it is outside of the employee's working hours.
 
-     .. image:: employees/presence.png
-        :alt: Two employee Kanban cards displaying their working location and status.
+     .. screenshot:: hr-employees-presence-cards
+        :menu: Employees ‣ Employees
+        :shows: Two employee kanban cards, one with a green home icon and one with a building icon, showing the work location and the presence colour.
+        :highlight: The location icons in the upper-right corner of the cards (red frame).
+        :data: Demo company "YourCompany HU"; one employee working from home, one at the office.
+        :module: hr, hr_homeworking
+        :notes: English UI, light theme, 1440px width. Crop to the two cards.
 
 Work organization
 -----------------
@@ -108,8 +113,7 @@ are :guilabel:`Standard 40 hours/week`, :guilabel:`Appointment Resource Default 
 :guilabel:`Standard 32 hours/week (4 work days, Friday free)`.
 
 The available working hours listed are the same as the configured :doc:`working schedules
-<payroll/working_schedules>` in the **Payroll** app. Working hours can be created and modified from
-both the **Payroll** and **Employees** apps.
+<employees/working_schedules>` configured for the company.
 
 Employee update rights
 ----------------------
@@ -117,14 +121,39 @@ Employee update rights
 Enable the :guilabel:`Employee Editing` option to allow employees to edit their own data on their
 employee record.
 
+.. _employees/directory:
+
+Directory and org chart
+=======================
+
+Two menus give a read-only view of the company's people:
+
+- :menuselection:`Employees app --> Directory` lists every employee with the information that is
+  public to all users of the database — the work contact details, the job position, the department
+  and the manager — without the private data that only the HR officers see. This is the page
+  employees use to look each other up.
+- :menuselection:`Employees app --> Employees --> Org Chart` shows the reporting lines: each
+  employee with their manager above them and their direct reports below. The same chart appears in
+  the :guilabel:`Work Information` tab of an employee form, where it can be navigated by clicking a
+  name.
+
+.. screenshot:: hr-employees-org-chart
+   :menu: Employees ‣ Employees ‣ Org Chart
+   :shows: The org chart of one employee, with the manager above and three direct reports below, each card showing the job position.
+   :highlight: The employee in the middle of the chart (red frame).
+   :data: Employee "Anita Kovács" reporting to the operations manager, with three direct reports.
+   :module: hr_org_chart
+   :notes: English UI, light theme, 1440px width. Use invented personal data.
+
 .. toctree::
    :titlesonly:
 
    employees/new_employee
    employees/onboarding
    employees/departments
+   employees/contracts
+   employees/working_schedules
    employees/certifications
    employees/badges
    employees/equipment
    employees/offboarding
-   employees/retention_report

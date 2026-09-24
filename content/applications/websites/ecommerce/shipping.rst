@@ -3,11 +3,9 @@ Delivery
 ========
 
 Odoo eCommerce allows you to configure various delivery methods, enabling customers to choose
-their preferred option at :doc:`checkout <checkout>`. These methods include :ref:`external providers
+their preferred option at :doc:`checkout <checkout>`. These methods include :ref:`carrier connectors
 <ecommerce/shipping/external-provider>`, :ref:`custom options <ecommerce/shipping/custom-method>`
-such as flat-rate or free shipping, local carriers via
-:doc:`Sendcloud </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`
-or :ref:`Based on Rules <inventory/shipping/rules>`, and
+such as flat-rate or free shipping, shipping :ref:`Based on Rules <inventory/shipping/rules>`, and
 :ref:`in-store pickup <ecommerce/shipping/instore-pickup>`.
 
 .. _ecommerce/shipping/external-provider:
@@ -15,12 +13,12 @@ or :ref:`Based on Rules <inventory/shipping/rules>`, and
 External provider integration
 =============================
 
-To handle product delivery, you can connect your database to :doc:`third-party shipping carriers
+To handle product delivery, you can connect your database to :doc:`shipping carrier connectors
 </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper>`
-like :doc:`FedEx </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex>`,
-:doc:`UPS </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials>`,
-or :doc:`DHL </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials>`.
-A shipping connector links to these providers, automating :doc:`tracking labels
+such as :doc:`GLS </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/gls>`,
+:doc:`MPL </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/mpl>`, or
+:doc:`Foxpost </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/foxpost>`.
+A shipping connector links to these carriers, automating :doc:`tracking labels
 </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels>` and shipping
 processes.
 
@@ -67,8 +65,8 @@ Custom delivery method
 
 Custom delivery methods must be created, for example:
 
-- to integrate delivery carriers through :doc:`Sendcloud
-  </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`;
+- to integrate a delivery carrier that has no connector, through a :doc:`custom carrier
+  </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/custom>`;
 - to configure specific rules (e.g., to offer free shipping for orders above a specific amount) for
   a specific provider;
 - to configure :ref:`Fixed Price <inventory/shipping/fixed>` shipping, or shipping :ref:`Based on

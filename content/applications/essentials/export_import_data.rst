@@ -25,14 +25,23 @@ records that should be exported. To select a record, tick the checkbox next to t
 record. Finally, click the :guilabel:`Action` button, and select :icon:`fa-upload`
 :guilabel:`Export`.
 
-.. image:: export_import_data/list-view-export.png
-   :alt: View of the different things to enable/click to export data.
+.. screenshot:: essentials-export-list-action
+   :menu: Contacts ‣ List view
+   :shows: List view with several records ticked and the gear (Actions) menu open, showing "Export".
+   :highlight: The record checkboxes and the "Export" entry.
+   :data: Demo contacts.
+   :module: web, contacts
+   :notes: English UI, crop to the relevant area.
 
 When clicking on :icon:`fa-upload` :guilabel:`Export`, a :guilabel:`Export Data` pop-over window
 appears, with several options for the data to export:
 
-.. image:: export_import_data/export-data-overview.png
-   :alt: Overview of options to consider when exporting data in Odoo.
+.. screenshot:: essentials-export-dialog
+   :menu: Contacts ‣ List view ‣ Actions ‣ Export
+   :shows: The Export Data dialog with numbered callouts 1–7 matching the list below: "I want to update data (import-compatible export)" checkbox, format choice (CSV / XLSX), available fields tree with the sub-field chevron and search, the add-field (+) icon, the sort handle and the remove icon in "Fields to export", and the export template dropdown.
+   :highlight: Numbered callouts 1–7.
+   :module: web, contacts
+   :notes: English UI, crop to the dialog; add the numbered callouts in the image.
 
 #. With the :guilabel:`I want to update data (import-compatable export)` option ticked, the system
    only shows the fields that can be imported. This is helpful in the case where the :ref:`existing
@@ -64,6 +73,11 @@ appears, with several options for the data to export:
    in the export user interface is equal to *parent_id* (external identifier). This is helpful
    because then, the only data exported is what should be modified and re-imported.
 
+.. note::
+   With the *Asynchronous List Export* module (`export_async`), large exports (2,000 records or
+   more by default) are prepared in the background, and a notification with a download link is sent
+   when the file is ready. See :ref:`background-jobs/export`.
+
 .. _essentials/export_import_data/import-data:
 
 Import data into Odoo
@@ -82,8 +96,12 @@ data into an Odoo database.
    menu. Doing so reveals an :menuselection:`Advanced` menu. Included in this advanced menu are two
    options: :guilabel:`Track history during import` and :guilabel:`Allow matching with subfields`.
 
-   .. image:: export_import_data/advanced-import.png
-      :alt: Advanced import options when developer mode is activated.
+   .. screenshot:: essentials-import-advanced-options
+      :menu: Contacts ‣ Actions ‣ Import records (developer mode)
+      :shows: Import screen left panel with the Advanced section: "Track history during import" and "Allow matching with subfields".
+      :highlight: The Advanced section.
+      :module: base_import
+      :notes: English UI, developer mode active, crop to the left panel.
 
    If the model uses openchatter, the :guilabel:`Track history during import` option sets up
    subscriptions and sends notifications during the import, but leads to a slower import.
@@ -104,8 +122,12 @@ Open the view of the object to which the data should be imported/populated, clic
 :guilabel:`(Action)` icon, and in the drop-down menu select :icon:`fa-upload` :guilabel:`(Import
 records)`.
 
-.. image:: export_import_data/import-button.png
-   :alt:  Action menu revealed with the import records option highlighted.
+.. screenshot:: essentials-import-action-menu
+   :menu: Contacts ‣ List view
+   :shows: The gear (Actions) menu of the control panel open with "Import records".
+   :highlight: The "Import records" entry.
+   :module: base_import, contacts
+   :notes: English UI, crop to the relevant area.
 
 Click :icon:`fa-upload`:guilabel:`Import Template for Customers` at the center of the page to
 download a :ref:`template <essentials/export_import_data/adapt-a-template>` and populate it with the
@@ -143,16 +165,23 @@ Once the template is downloaded, proceed to follow these steps:
 - Set a unique ID to every record by dragging down the ID sequencing in the :guilabel:`External ID`
   (ID) column.
 
-.. image:: export_import_data/dragdown.gif
-   :alt: An animation of the mouse dragging down the ID column, so each record has a unique ID.
+.. screenshot:: essentials-import-template-dragdown
+   :menu: (spreadsheet application) – import template for customers
+   :shows: Animated capture: the fill handle is dragged down the External ID column so each row gets a unique sequential ID.
+   :module: base_import
+   :notes: GIF or short animation; any spreadsheet application; English column headers.
 
 .. note::
    When a new column is added, Odoo may not be able to map it automatically, if its label does not
    fit any field within Odoo. However, new columns can be mapped manually when the import is tested.
    Search the drop-down menu for the corresponding field.
 
-   .. image:: export_import_data/field-list.png
-      :alt: Drop-down menu expanded in the initial import screen on Odoo.
+   .. screenshot:: essentials-import-field-mapping
+      :menu: Contacts ‣ Actions ‣ Import records ‣ (file loaded)
+      :shows: Import mapping table with the "Odoo Field" dropdown of one column expanded and a search term typed to find the matching field.
+      :highlight: The expanded dropdown.
+      :module: base_import
+      :notes: English UI, crop to the mapping table.
 
    Then, use this field's label in the import file to ensure future imports are successful.
 
@@ -200,8 +229,12 @@ the column may be mapped to a field that is not proposed by default.
 If this happens, check the :guilabel:`Show fields of relation fields (advanced) option`, then a
 complete list of fields becomes available for each column.
 
-.. image:: export_import_data/field-list.png
-   :alt: Searching for the field to match the tax column.
+.. screenshot:: essentials-import-relation-fields
+   :menu: Accounting/Invoicing ‣ Configuration ‣ Chart of Accounts ‣ Actions ‣ Import records (file loaded)
+   :shows: Import mapping table with "Show fields of relation fields (advanced)" enabled and the dropdown of the tax column searching for the tax field.
+   :highlight: The dropdown with relation sub-fields.
+   :module: base_import, account
+   :notes: English UI, crop to the mapping table.
 
 Change data import format
 -------------------------
@@ -423,9 +456,7 @@ or Excel file, follow the next steps:
    - When importing a large number of images, specify the maximum batch size in megabytes and set a
      delay to prevent the system from becoming overloaded. To do so, :doc:`enable the developer mode
      <../general/developer_mode>` and fill in the :guilabel:`Max size per batch` and the
-     :guilabel:`Delay after each batch` fields in the :guilabel:`Files to import` section. By
-     default, the delay meets the RPC/API call limit defined in the `Odoo Cloud - Acceptable Use
-     Policy <https://www.odoo.com/acceptable-use>`_.
+     :guilabel:`Delay after each batch` fields in the :guilabel:`Files to import` section.
 
 Import records several times
 ----------------------------

@@ -44,8 +44,13 @@ Creating your first equipment
 
 #. Click the :guilabel:`Draft` status bar to change the state to :guilabel:`Active`.
 
-.. image:: equipment-form-overview.png
-   :alt: Equipment form view with main fields
+.. screenshot:: services-equipment-new-form
+   :menu: Equipment Management ‣ Equipment ‣ New
+   :shows: A newly filled equipment form with the name, serial number, type, customer, product family, production year and warranty expiration, with the status bar switched from Draft to Active.
+   :highlight: The Draft/Active status bar (red frame).
+   :data: Equipment "Canon iR-ADV C5535", serial "CN-2024-0187", customer "Deco Addict".
+   :module: equipment
+   :notes: English UI, light theme, 1440px width, crop to the form sheet.
 
 Equipment states
 ================

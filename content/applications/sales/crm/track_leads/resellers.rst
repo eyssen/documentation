@@ -12,17 +12,20 @@ To utilize the reseller features, the *Resellers* module first needs to be insta
 the :menuselection:`Apps application`, and remove the :guilabel:`Apps` filter from the
 :guilabel:`Search...` bar. Then, search for `Resellers`.
 
-.. image:: resellers/resellers-module.png
-   :align: center
-   :alt: The resellers module in Odoo.
+.. screenshot:: sales-crm-resellers-module
+   :menu: Apps
+   :shows: The Apps list filtered on "resellers", showing the Resellers module card with its Activate button.
+   :highlight: The Activate button (red frame).
+   :data: Demo database.
+   :module: website_crm_partner_assign
+   :notes: English UI, light theme, 1440px width, crop to the module card.
 
 Click :guilabel:`Activate` on the :guilabel:`Resellers` module card that appears. Doing so installs
 the module, and returns to the main Odoo dashboard.
 
 After the module is installed, navigate to the :menuselection:`CRM app`. Under the
-:menuselection:`Configuration` menu is a new section, titled :guilabel:`Resellers`, with three
-options beneath it: :guilabel:`Partner Levels`, :guilabel:`Partner Activations`, and
-:guilabel:`Commission Plans`.
+:menuselection:`Configuration` menu is a new section, titled :guilabel:`Resellers`, with two
+options beneath it: :guilabel:`Partner Levels` and :guilabel:`Partner Activations`.
 
 .. _crm/partner-levels:
 
@@ -80,12 +83,13 @@ the :guilabel:`Name` field of a desired level, and enter a new name.
 To change the active status of an activation, slide the toggle in the :guilabel:`Active` column of
 the desired activation to the *inactive* position.
 
-.. figure:: resellers/activations-toggle.png
-   :align: center
-   :alt: The list of default partner activations in the CRM app.
-
-   The list of default Partner Activations in the CRM app. The toggle for First Contact is in the
-   inactive position, while the rest are active.
+.. screenshot:: sales-crm-resellers-activations
+   :menu: CRM ‣ Configuration ‣ Partner Activations
+   :shows: The list of partner activations with the active toggle of each row.
+   :highlight: The toggle column (red frame).
+   :data: Default activations; "First Contact" inactive, the others active.
+   :module: website_crm_partner_assign
+   :notes: English UI, light theme, 1440px width, crop to the list.
 
 Partner assignments
 ===================
@@ -125,6 +129,10 @@ slide the :guilabel:`Unpublished` toggle to the active, :guilabel:`Published` po
 
 Repeat these steps for all partners.
 
-.. image:: resellers/partners-webpage.png
-   :align: center
-   :alt: An example of the partners webpage, displaying available partners by level and location.
+.. screenshot:: sales-crm-resellers-webpage
+   :menu: (website) ‣ /partners
+   :shows: The public partners page of the website, listing the published partners grouped by level with the country filter in the sidebar.
+   :highlight: No highlight; the partner list is the subject.
+   :data: Three demo partners at two levels.
+   :module: website_crm_partner_assign
+   :notes: English UI, light theme, 1440px width, crop to the page.

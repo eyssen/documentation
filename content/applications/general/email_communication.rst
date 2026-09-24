@@ -8,7 +8,7 @@ Communication in Odoo related to records such as CRM opportunities, sales orders
 have a discussion thread called **chatter**, often displayed on the right side of the record.
 
 On the chatter, you can send direct emails or Odoo notifications to the followers of a document
-(depending on their notification preferences), log internal notes, send WhatsApp messages or SMSes,
+(depending on their notification preferences), log internal notes, send SMSes,
 and schedule activities.
 
 If a follower replies to a message, the reply updates the chatter, and Odoo relays it to the
@@ -16,34 +16,30 @@ followers as a notification. All emails - outgoing and incoming - appear in the 
 
 .. _email-online-sh:
 
-Odoo Online and Odoo.sh users
-=============================
+Hosted databases
+================
 
-On Odoo Online and Odoo.sh, outgoing and incoming emails work out of the box, **nothing needs to be
-done**. Everything is already configured on your subdomain.
-
-By default, outgoing emails use the following :ref:`notification email address
-<email-outbound-notifications>` `notifications@company-name.odoo.com`.
+If the database is hosted by a service provider, outgoing and incoming emails are usually
+preconfigured by the provider. Check with the provider which domain is used by default, and whether
+a :ref:`custom domain <email-outbound-custom-domain>` can be used.
 
 .. _email-online-sh-domain:
 
-Using another domain
---------------------
+Using your own domain
+---------------------
 
-If you prefer not to have outgoing emails sent from Odoo's subdomain `@company-name.odoo.com` but
-instead :ref:`from your own domain <email-outbound-custom-domain>`, **additional configuration will
-be necessary** on the domain and within Odoo. This introduces an extra layer of complexity and
-necessitates technical knowledge (mainly regarding DNS and mail protocols).
+To send emails :ref:`from your own domain <email-outbound-custom-domain>`, **additional
+configuration is necessary** on the domain and within Odoo. This requires technical knowledge
+(mainly regarding DNS and mail protocols).
 
 By adding a domain and configuring the administration access rights, you can also access the
-:ref:`new domain alias <email-outbound-alias-domain>` page to configure the alias of your companies.
+:ref:`alias domain <email-outbound-alias-domain>` page to configure the alias of your companies.
 If only one domain is configured, this domain will be shared by all companies on the database.
 
-If you want to keep using Odoo's mail server, you will have to :ref:`configure the SPF and DKIM
-<email-domain-spf>`.
-
-If :ref:`you want to use your own mail server <email-outbound-custom-domain-smtp-server>`, you will
-have to follow the mail server provider's specific documentation.
+The :ref:`SPF and DKIM <email-domain-spf>` records of the domain must authorize the mail server that
+sends the emails. If :ref:`you want to use your own mail server
+<email-outbound-custom-domain-smtp-server>`, follow the mail server provider's specific
+documentation.
 
 For incoming emails, after adding your own domain, :ref:`replies from customers will come back to
 your domain <email-inbound-custom-domain>`, and you will need to use one of the three possible ways
@@ -74,8 +70,8 @@ Using a third-party provider's mail server
 ==========================================
 
 Odoo's documentation also covers several popular mail servers. As they require specific
-authorizations and configuration, they add a layer of complexity. For this reason, using Odoo's
-outgoing mail server is recommended.
+authorizations and configuration, they add a layer of complexity. Research the requirements of
+the chosen provider before configuring it.
 
 - :doc:`Outlook documentation <email_communication/azure_oauth>`
 - :doc:`Gmail documentation <email_communication/google_oauth>`
@@ -92,7 +88,6 @@ outgoing mail server is recommended.
    - :doc:`Email Marketing app <../marketing/email_marketing>`
    - :doc:`Email templates <companies/email_template>`
    - :ref:`Expense creation using an email alias <expenses/email_expense>`
-   - :ref:`Helpdesk ticket creation using an email alias <helpdesk/receiving_tickets/email-alias>`
    - :ref:`Lead creation using an email alias <crm/configure_email_alias>`
    - :ref:`Project task creation using an email alias <task_creation/email_alias>`
    - :doc:`Technical mail gateway for on-premise users

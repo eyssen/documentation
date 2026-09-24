@@ -42,6 +42,14 @@ Configuring a round
 Multi-rater settings live on the cycle. Tick :guilabel:`Multi-rater Round` and open the
 :guilabel:`Raters` page.
 
+.. screenshot:: hr-performance-360-round
+   :menu: Performance ‣ Cycles ‣ Review Cycles ‣ (open a cycle) ‣ Multi-rater Round
+   :shows: The multi-rater configuration of a cycle with the rater roles, their minimum and maximum counts and the per-role anonymity flags.
+   :highlight: The anonymity flags (red frame).
+   :data: Peers 3-5, direct reports at least 3, outside contacts asked.
+   :module: hr_review_360
+   :notes: English UI, light theme, 1440px width.
+
 Set a :guilabel:`Nomination Deadline` — the date by which employees are expected to have
 proposed their raters — and then, per role:
 

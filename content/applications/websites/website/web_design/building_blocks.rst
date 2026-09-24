@@ -8,9 +8,6 @@ You can design your website by :ref:`dragging and dropping building blocks
 <website/building_blocks/add>`, then :ref:`editing them <website/building_blocks/edit>` to fit your
 content and layout needs.
 
-.. seealso::
-   `Odoo Tutorial: Design your website: text and colors <https://www.odoo.com/slides/slide/design-your-website-text-and-colors-6930?fullscreen=1>`_
-
 .. _website/building_blocks/add:
 
 Add a building block
@@ -28,8 +25,13 @@ templates for each category.
    You can also search for a specific block in the :guilabel:`Insert a block` popup using the
    search bar.
 
-  .. image:: building_blocks/insert-a-block.png
-      :alt: Pop-up block selection
+  .. screenshot:: website-building-blocks-insert-a-block
+     :menu: Website ‣ Edit ‣ Blocks
+     :shows: The website editor's block panel open on the left, with the block categories (Structure, Features, Dynamic Content, Inner content) and their previews.
+     :highlight: The block panel (red frame).
+     :data: Demo website 'My Website' in the website editor.
+     :module: website
+     :notes: English UI, light theme, 1440px width.
 
 Once the category block is placed, you can drag and drop :guilabel:`Inner content` blocks
 within it. The :guilabel:`Inner content` blocks allow you to add elements, such as videos, images,
@@ -43,8 +45,13 @@ social media buttons, etc., into pre-existing category blocks.
    Add all your social media accounts in one place with the inner content :guilabel:`Social Media`
    block. Toggle the switch on or off next to the desired platform and copy/paste your account URL.
 
-   .. image:: building_blocks/social-media-inner-content.png
-      :alt: Social Media inner content block
+   .. screenshot:: website-building-blocks-social-media-inner-content
+      :menu: Website ‣ Edit ‣ Blocks ‣ Inner content
+      :shows: A Social Media inner-content block placed in a page, showing the social network icons.
+      :highlight: The Social Media block (red frame).
+      :data: Facebook, LinkedIn and YouTube links set on the company.
+      :module: website
+      :notes: English UI, light theme, 1440px width.
 
 .. _website/building_blocks/form:
 
@@ -55,8 +62,13 @@ The :guilabel:`Form` block is used to collect information from website visitors 
 in your database, if applicable. To add a form to a website page, drag and drop the
 :guilabel:`Contact & Forms` category, then select the :guilabel:`Form block`.
 
-.. image:: building_blocks/form-block.png
-   :alt: Example of a form block
+.. screenshot:: website-building-blocks-form-block
+   :menu: Website ‣ Edit ‣ Blocks ‣ Features
+   :shows: A Form block placed in a page, with its default fields (Your Name, Email, Subject, Your Question) and the Send button.
+   :highlight: The Form block (red frame).
+   :data: Demo website 'My Website' in the website editor.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 .. _website/building_blocks/action:
 
@@ -75,8 +87,13 @@ automatically create records may become available. To choose a different action,
 - :guilabel:`Subscribe to Newsletter` (:doc:`Email Marketing </applications/marketing/email_marketing>`)
 - :guilabel:`Create a Task` (:doc:`Project </applications/services/project>`)
 
-.. image:: building_blocks/inner-content-edit-form.png
-   :alt: Editing a form to change its action
+.. screenshot:: website-building-blocks-inner-content-edit-form
+   :menu: Website ‣ Edit ‣ (Form block)
+   :shows: The website editor's right sidebar for a selected Form block, with the Action drop-down menu open on the available actions (Send an Email, Create a Lead, Apply for a Job, Create a Task, …).
+   :highlight: The Action drop-down menu (red frame).
+   :data: Demo website 'My Website' in the website editor.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 By default, submitting the form redirects visitors to a *Thank you* page. Use the :guilabel:`URL`
 field to send them to a different page. Alternatively, you can choose not to redirect and keep
@@ -100,8 +117,13 @@ new (or any other) field on the form, select the field, then use the options ava
 
   .. spoiler:: Click here to preview all field types.
 
-     .. image:: building_blocks/all-types-of-field.png
-        :alt: All types of form fields
+     .. screenshot:: website-building-blocks-all-types-of-field
+        :menu: Website ‣ Edit ‣ (Form block) ‣ (field)
+        :shows: The field option panel of a form field showing the available field types (Text, Long Text, Number, Email, Telephone, Date, Selection, Checkboxes, Radio buttons, File Upload).
+        :highlight: The field type list (red frame).
+        :data: Demo website 'My Website' in the website editor.
+        :module: website
+        :notes: English UI, light theme, 1440px width.
 
      Some fields are visually similar, but the data entered must follow a specific format.
 
@@ -159,8 +181,28 @@ from YouTube, maps from Google Maps, social media posts from Instagram, etc.
 After adding the block to a page, click the block, then go to the :guilabel:`Customize` tab and
 click :guilabel:`Edit`. Replace the placeholder code with your custom embed code.
 
-.. image:: building_blocks/embed-code-pop-up.png
-   :alt: Add the link to the embedded code you want to point to
+.. screenshot:: website-building-blocks-embed-code-pop-up
+   :menu: Website ‣ Edit ‣ Blocks ‣ Inner content ‣ Embed Code
+   :shows: The Embed Code pop-up window with the HTML code field where the external code is pasted.
+   :highlight: The code field (red frame).
+   :data: A short sample iframe snippet.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
+
+.. tip::
+   With the *Website Code Editor — Insert Media* module (`website_code_editor_media`) installed, a
+   :guilabel:`Media` button is available in the code editor of the :guilabel:`Embed Code` block —
+   and in the website's HTML/CSS/JS resource editor. It opens the usual media dialog and inserts the
+   URL of the selected image or document at the cursor, so that an image from the media library can
+   be referenced in hand-written code without looking up its address.
+
+   .. screenshot:: website-building-blocks-code-editor-insert-media
+      :menu: Website ‣ Edit ‣ (Embed Code block) ‣ Edit
+      :shows: The embedded code editor with the Media button above the code area, and the media dialog opened over it.
+      :highlight: The Media button (red frame).
+      :data: One image selected in the media library.
+      :module: website_code_editor_media
+      :notes: English UI, light theme, 1440px width.
 
 .. warning::
    Do not copy/paste code you do not understand, as it could put your data at risk.
@@ -181,8 +223,13 @@ Change the block order by clicking :icon:`fa-chevron-up` (:guilabel:`chevron up`
 
 To delete a block, click :icon:`fa-trash` (:guilabel:`trash`).
 
-   .. image:: building_blocks/padding-building-block.png
-      :alt: Extend margins on building block
+   .. screenshot:: website-building-blocks-padding-building-block
+      :menu: Website ‣ Edit ‣ (building block)
+      :shows: A selected building block in the editor with its padding handles visible at the top and bottom.
+      :highlight: The padding handles (red frame).
+      :data: Demo website 'My Website' in the website editor.
+      :module: website
+      :notes: English UI, light theme, 1440px width.
 
 .. tip::
    Quickly change the block category by clicking :icon:`fa-exchange` (:guilabel:`exchange`).
@@ -211,13 +258,23 @@ allow you to customize the shape.
    - Position an element (image, text, etc.) behind or in front of another one by using the
      :guilabel:`Send to back` or :guilabel:`Bring to front` icons.
 
-     .. image:: building_blocks/change-block-position.png
-        :alt: Change block position
+     .. screenshot:: website-building-blocks-change-block-position
+        :menu: Website ‣ Edit ‣ (building block)
+        :shows: The toolbar of a selected building block with the move up / move down arrows used to change its position on the page.
+        :highlight: The move arrows (red frame).
+        :data: Demo website 'My Website' in the website editor.
+        :module: website
+        :notes: English UI, light theme, 1440px width.
 
    - To resize a block, click and drag the dots around its edges to adjust it as needed.
 
-     .. image:: building_blocks/adapt-block-size.png
-       :alt: Adapt block size
+     .. screenshot:: website-building-blocks-adapt-block-size
+        :menu: Website ‣ Edit ‣ (building block)
+        :shows: A selected building block with its bottom resize handle being dragged to change the block height.
+        :highlight: The resize handle (red frame).
+        :data: Demo website 'My Website' in the website editor.
+        :module: website
+        :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    :doc:`General theme <themes>`
@@ -239,8 +296,13 @@ The :guilabel:`Grid` layout allows you to reposition and resize elements, such a
 dragging and dropping them. When :guilabel:`Grid` is selected, additional options are available to
 :guilabel:`Add Elements` by clicking :guilabel:`Image`, :guilabel:`Text`, or :guilabel:`Button`.
 
-.. image:: building_blocks/grid-layout.png
-   :alt: When the grid layout is selected, choose an image and drag and drop it where needed.
+.. screenshot:: website-building-blocks-grid-layout
+   :menu: Website ‣ Edit ‣ (building block)
+   :shows: A building block switched to the Grid layout in the right sidebar, with an image being dragged onto a grid cell.
+   :highlight: The Grid layout option in the sidebar (red frame).
+   :data: Demo website 'My Website' in the website editor.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 .. _website/building_blocks/cols:
 

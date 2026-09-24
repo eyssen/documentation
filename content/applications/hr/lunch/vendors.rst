@@ -52,8 +52,13 @@ Vendor information
   from the drop-down menu. If this field is left blank, the vendor's items are available to **all**
   companies. This field **only** appears in a multi-company database.
 
-.. image:: vendors/vendor-info.png
-   :alt: The top portion of the vendor form filled out.
+.. screenshot:: hr-lunch-vendor-info
+   :menu: Lunch ‣ Configuration ‣ Vendors ‣ New
+   :shows: The top of a vendor form with the vendor name, the address, the email and the phone number filled in.
+   :highlight: The address and contact fields (red frame).
+   :data: Vendor "Pizza Marbella"; use invented contact data.
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.
 
 .. _lunch/availability:
 
@@ -66,8 +71,13 @@ week the vendor is available.
 
 By default, Monday through Friday are ticked.
 
-.. image:: vendors/availability.png
-   :alt: The default view of the availability section, with Mon-Fri enabled.
+.. screenshot:: hr-lunch-vendor-availability
+   :menu: Lunch ‣ Configuration ‣ Vendors ‣ New
+   :shows: The availability section of a vendor form with Monday to Friday ticked and the delivery locations selected.
+   :highlight: The days of the week (red frame).
+   :data: Vendor available Monday to Friday, location "Marbella office".
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.
 
 .. _lunch/orders:
 
@@ -94,8 +104,13 @@ for, in addition to how and when orders are placed and received.
   accepted. Enter the time in the following format: `HH:MM`. Then select either :guilabel:`AM` or
   :guilabel:`PM` from the drop-down menu, next to the time field.
 
-.. image:: vendors/orders.png
-   :alt: The orders section of a vendor form, with all fields filled out.
+.. screenshot:: hr-lunch-vendor-orders
+   :menu: Lunch ‣ Configuration ‣ Vendors ‣ New
+   :shows: The orders section of a vendor form with the order deadline, the delivery method and the responsible person filled in.
+   :highlight: The order deadline (red frame).
+   :data: Deadline 11:30, delivery by the vendor.
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.
 
 .. _lunch/extras:
 
@@ -149,12 +164,22 @@ or condiments.
    is set to `Toppings`, and the :guilabel:`Extra 1 Quantity` is set to :guilabel:`None or More`.
    The various toppings are then added, with their corresponding costs.
 
-   .. image:: vendors/extras.png
-      :alt: The first of the extras configured for pizza toppings.
+   .. screenshot:: hr-lunch-vendor-extra-toppings
+      :menu: Lunch ‣ Configuration ‣ Vendors ‣ New
+      :shows: The first extras block of a vendor form configured for pizza toppings, with the label, the quantity rule and the priced options.
+      :highlight: The quantity rule and the options (red frame).
+      :data: Extra "Toppings", multiple choice, four options with prices.
+      :module: lunch
+      :notes: English UI, light theme, 1440px width.
 
    The pizzeria also offers a free beverage with any purchase. To set this up, the :guilabel:`Extra
    2 Label` is set to `Beverages`, and the :guilabel:`Extra 2 Quantity` is set to :guilabel:`Only
    One`. The various beverage choices are added, and the cost for each remains zero.
 
-   .. image:: vendors/beverages.png
-      :alt: The second of the extras configured for a free beverage with purchase.
+   .. screenshot:: hr-lunch-vendor-extra-beverage
+      :menu: Lunch ‣ Configuration ‣ Vendors ‣ New
+      :shows: The second extras block of a vendor form configured for one free beverage, with the quantity rule set so that exactly one option must be chosen.
+      :highlight: The quantity rule (red frame).
+      :data: Extra "Free beverage", one required choice, three options at zero price.
+      :module: lunch
+      :notes: English UI, light theme, 1440px width.

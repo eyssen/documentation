@@ -22,9 +22,12 @@ configure, or create a new one by clicking :guilabel:`New`.
 In the :guilabel:`General` tab on the operation type form, locate the :guilabel:`Reservation Method`
 field, and select :guilabel:`At Confirmation`.
 
-.. image:: at_confirmation/at-confirmation-operations-type.png
-   :align: center
-   :alt: Reservation method field on delivery order operation type form.
+.. screenshot:: reservation-methods-at-confirmation-operations-type
+   :menu: Inventory ‣ Configuration ‣ Operations Types
+   :shows: An operation type form for delivery orders with "At Confirmation" selected as the reservation method.
+   :highlight: The "At Confirmation" option (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Workflow
 ========
@@ -49,9 +52,12 @@ order.
    Instead of revealing the reserved number of units for the order, the :guilabel:`Availability`
    tooltip reads :guilabel:`Available`, and reveals the available number of units (e.g., `0 Units`).
 
-.. image:: at_confirmation/at-confirmation-availability-tooltip.png
-   :align: center
-   :alt: Confirmed sales order with product availability tooltip selected.
+.. screenshot:: reservation-methods-at-confirmation-availability-tooltip
+   :menu: Sales app ‣ New
+   :shows: A confirmed sales order line with the availability tooltip open, showing the reserved quantity for the product.
+   :data: Sales order for 10 units of a storable product with 5 on hand.
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. admonition:: Forecasted Report
 
@@ -67,9 +73,11 @@ order.
    the :guilabel:`On Hand` and :guilabel:`Incoming` quantity, and subtracting the
    :guilabel:`Outgoing` quantity, as shown below:
 
-   .. image:: at_confirmation/at-confirmation-forecasted-equation.png
-      :align: center
-      :alt: Forecasted quantity equation from the Forecasted Report page.
+   .. screenshot:: reservation-methods-at-confirmation-forecasted-equation
+      :menu: Inventory ‣ Reporting ‣ Forecasted Inventory
+      :shows: The Forecasted Report page of a product, showing the forecasted quantity equation (on hand, incoming, outgoing).
+      :module: stock
+      :notes: English UI, light theme, 1440px width.
 
    If one order should be prioritized over another order, click the :guilabel:`Unreserve` button on
    the corresponding order line in the :guilabel:`Replenishment` column.
@@ -79,9 +87,11 @@ form. To confirm that the reservation worked properly, ensure that the :guilabel
 Availability` field reads `Available` (in green text), and the numbers in the :guilabel:`Demand` and
 :guilabel:`Quantity` columns match (in this case, both should read `100.00`).
 
-.. image:: at_confirmation/at-confirmation-delivery-order.png
-   :align: center
-   :alt: Delivery order for product included in sales order with at confirmation reservation.
+.. screenshot:: reservation-methods-at-confirmation-delivery-order
+   :menu: Inventory ‣ Delivery Orders
+   :shows: A delivery order created from a confirmed sales order, showing the Quantity and Reserved columns already filled in on the Operations tab.
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Once ready, click :guilabel:`Validate`.
 

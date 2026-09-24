@@ -30,8 +30,13 @@ After the form is completed, click the :icon:`fa-cloud-upload` :guilabel:`(cloud
 manually save the changes. When saved, a :guilabel:`DEPARTMENT ORGANIZATION` chart appears in the
 top-right of the department card, illustrating where the department lies in the organization.
 
-.. image:: departments/department-form.png
-   :alt: The department for with all fields filled out.
+.. screenshot:: hr-employees-department-form
+   :menu: Employees ‣ Departments ‣ New
+   :shows: A department form filled in with the department name, the manager, the parent department and the company.
+   :highlight: The Manager and Parent Department fields (red frame).
+   :data: Department "Warehouse", manager "Anita Kovács", parent department "Operations".
+   :module: hr
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    The form auto-saves while data is entered, however the :guilabel:`Department Organization` chart
@@ -53,8 +58,13 @@ The default view for the :guilabel:`Departments` dashboard is a :ref:`Kanban vie
 :ref:`list view <employees/department-list>` and a :ref:`hierarchy view
 <employees/department-hierarchy>`.
 
-.. image:: departments/departments.png
-   :alt: The departments dashboard view with all the department cards in a Kanban view.
+.. screenshot:: hr-employees-departments-kanban
+   :menu: Employees ‣ Departments
+   :shows: The Departments page in kanban view, one card per department with its employee count and smart buttons.
+   :highlight: The employee counts on the cards (red frame).
+   :data: Demo company "YourCompany HU"; four departments.
+   :module: hr
+   :notes: English UI, light theme, 1440px width.
 
 .. _employees/department-kanban:
 
@@ -99,8 +109,13 @@ in the top-right corner. The departments appear in a list view, which displays t
 
 The departments are sorted alphabetically by :guilabel:`Department Name`, by default.
 
-.. image:: departments/list.png
-   :alt: The departments presented in a list view.
+.. screenshot:: hr-employees-departments-list
+   :menu: Employees ‣ Departments
+   :shows: The Departments page in list view with the department, manager, company and employee count columns.
+   :highlight: The view switcher with the list view selected (red frame).
+   :data: The same four departments.
+   :module: hr
+   :notes: English UI, light theme, 1440px width.
 
 .. _employees/department-hierarchy:
 
@@ -124,5 +139,10 @@ the :guilabel:`Fold` button. Only **one** department *per row* can be unfolded a
 Click anywhere on a department card to open the department form. Click the :guilabel:`(#) Employees`
 smart button to view a list of all the employees in that department.
 
-.. image:: departments/hierarchy.png
-   :alt: The departments presented in a hierarchy view.
+.. screenshot:: hr-employees-departments-hierarchy
+   :menu: Employees ‣ Departments
+   :shows: The Departments page in hierarchy view, showing the parent and child departments as a tree.
+   :highlight: The parent department node and its children (red frame).
+   :data: "Operations" with the child departments "Warehouse" and "Production".
+   :module: hr
+   :notes: English UI, light theme, 1440px width.

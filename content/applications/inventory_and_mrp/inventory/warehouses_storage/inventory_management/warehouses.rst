@@ -31,9 +31,6 @@ the warehouse form, which contains the following fields:
   :icon:`fa-arrow-right` :guilabel:`(right arrow)`.
 - :guilabel:`Company` (*required field*): the company that owns the warehouse; this can be set as
   the company that owns the Odoo database, or the company of a customer or vendor.
-- :guilabel:`Intrastat region`: :doc:`region name
-  <../../../../finance/accounting/reporting/intrastat>` required for companies in the European
-  Union.
 
 .. important::
    The options below are available **only** when the *Multi-Step Routes* feature is enabled in
@@ -68,7 +65,13 @@ the warehouse form, which contains the following fields:
 .. seealso::
    :doc:`Use inventory adjustments to add stock to new warehouses <count_products>`
 
-.. image:: warehouses/warehouse-form.png
-   :align: center
-   :alt: Example warehouse form.
+.. screenshot:: inventory-warehouses-form
+   :menu: Inventory ‣ Configuration ‣ Warehouses ‣ (a warehouse)
+   :shows: A warehouse form with the Warehouse name, Short Name, Address and Company fields filled in, and
+      the Shipments section showing Incoming Shipments, Outgoing Shipments, Manufacture, Buy to Resupply and
+      Resupply From.
+   :highlight: The "Short Name" field and the "Shipments" section (red frames).
+   :data: Warehouse "YourCompany HU", short name "WH"; Multi-Step Routes enabled so all options are visible.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, full form.
 

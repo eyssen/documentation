@@ -17,9 +17,11 @@ There are 2 types: GSM7 and UNICODE.
 **GSM7** is the standard format, with a limit of 160 characters per message, that includes the
 following characters:
 
-.. image:: pricing_and_faq/faq1.png
-   :align: center
-   :alt: GSM7 characters available in Odoo SMS Marketing.
+.. screenshot:: sms-pricing-and-faq-faq1
+   :menu: (diagram)
+   :shows: The GSM7 character set table listing the characters that can be encoded in a standard SMS.
+   :module: mass_mailing_sms
+   :notes: Simple schematic drawing / character table, not an Odoo screen. English UI, light theme, 1440px width.
 
 **UNICODE** is the format applied if a special character, that *is not* in the GSM7 list, is used.
 Limit per SMS: 70 characters.
@@ -39,28 +41,34 @@ message. To see the **price per country, please consult**: `Odoo SMS - FAQ
 
 The number of SMSs a message represents will always be available in the database.
 
-.. image:: pricing_and_faq/faq2.png
-   :align: center
-   :alt: Number of GSM7 characters that fit in an SMS message in Odoo SMS Marketing.
+.. screenshot:: sms-pricing-and-faq-faq2
+   :menu: (diagram)
+   :shows: A comparison showing how many characters fit in one SMS with GSM7 (160) and with UNICODE (70) encoding.
+   :module: mass_mailing_sms
+   :notes: Simple schematic drawing, not an Odoo screen. English UI, light theme, 1440px width.
 
 How to buy credits
 ==================
 
 Go to :menuselection:`Settings --> Buy Credits`.
 
-.. image:: pricing_and_faq/faq3.png
-   :align: center
-   :alt: Buying credits for SMS Marketing in Odoo settings.
+.. screenshot:: sms-pricing-and-faq-faq3
+   :menu: Settings ‣ General Settings ‣ SMS
+   :shows: The SMS section of the General Settings with the remaining SMS credits and the Buy Credits button.
+   :highlight: The Buy Credits button (red frame).
+   :data: A balance of a few hundred credits.
+   :module: mass_mailing_sms
+   :notes: English UI, light theme, 1440px width.
 
 Or go to :menuselection:`Settings --> View my Services`.
 
-.. image:: pricing_and_faq/faq4.png
-   :align: center
-   :alt: Using Odoo IAP to recharge credits for SMS Marketing in Odoo settings.
+.. screenshot:: sms-pricing-and-faq-faq4
+   :menu: Settings ‣ General Settings ‣ SMS ‣ View My Services
+   :shows: The In-App Purchase services page listing the SMS service with its remaining credits.
+   :highlight: The SMS service line (red frame).
+   :module: mass_mailing_sms
+   :notes: English UI, light theme, 1440px width.
 
-.. tip::
-   If Odoo Online (Saas) is being used, along with the Enterprise version, free trial credits are
-   available to test the feature.
 
 More common questions
 =====================
@@ -111,6 +119,6 @@ More common questions
    | Please find our `Privacy Policy here <https://iap.odoo.com/privacy#sms>`__.
 
 #. | **Can I use my own SMS provider?**
-   | Yes, but it is not possible out-of-the-box. Odoo experts can help customize a database to allow
-     for the use of a personal SMS provider. Please check our success packs `here
-     <https://www.odoo.com/pricing-packs>`_.
+   | Yes, but it is not possible out-of-the-box: it requires a custom development. A Twilio
+     integration is available out of the box; see :doc:`twilio`. For other providers, contact your
+     support provider.

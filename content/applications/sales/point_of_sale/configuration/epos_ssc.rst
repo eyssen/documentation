@@ -4,9 +4,8 @@
 Self-signed certificate for ePOS printers
 =========================================
 
-To work with Odoo, some printer models that can be used without an
-**IoT system** (Enterprise) may require :doc:`the HTTPS protocol <https>` to
-establish a secure connection between the browser and the printer. However, trying to reach the
+To work with Odoo, some :doc:`ePOS printer <epos_printers>` models may require :doc:`the HTTPS
+protocol <https>` to establish a secure connection between the browser and the printer. However, trying to reach the
 printer's IP address using HTTPS leads to a warning page on most web browsers. In that case, you can
 temporarily :ref:`force the connection <epos_ssc/instructions>`, which allows you to reach the page
 in HTTPS and use the ePOS printer in Odoo as long as the browser window stays open.
@@ -40,11 +39,13 @@ it into your browser.
             connection by clicking :guilabel:`Advanced` and :guilabel:`Proceed to [IP address]
             (unsafe)`.
 
-            .. figure:: epos_ssc/browser-https-insecure.png
-               :scale: 75%
-               :alt: warning page about the connection privacy on Google Chrome
+            .. screenshot:: pos-epos-ssc-chrome-warning-win
+               :menu: (Google Chrome) ‣ https://<printer IP address>
+               :shows: The Google Chrome "Your connection is not private" warning page for the printer's IP address, with the "Advanced" button expanded and the "Proceed to ... (unsafe)" link visible.
+               :module: pos_epson_printer
+               :notes: External web browser, Google Chrome on Windows 10, English UI; scale down to about 75 % of the page width.
 
-               Warning page on Google Chrome, Windows 10
+            Warning page on Google Chrome, Windows 10
 
             Then, sign in using your printer credentials to access the ePOS printer settings. To
             sign in, enter `epson` in the :guilabel:`ID` field and your printer serial number in the
@@ -73,8 +74,12 @@ it into your browser.
             #. click :guilabel:`Not secure` next to the search bar, and :guilabel:`Certificate is
                not valid`;
 
-               .. image:: epos_ssc/browser-warning.png
-                  :alt: Connection to the printer not secure button in Google Chrome browser.
+               .. screenshot:: pos-epos-ssc-chrome-not-secure-win
+                  :menu: (Google Chrome) ‣ address bar
+                  :shows: The Google Chrome address bar with the "Not secure" badge clicked, showing the connection details popup.
+                  :highlight: The "Not secure" badge (red frame).
+                  :module: pos_epson_printer
+                  :notes: External web browser, Google Chrome, English UI; crop to the address bar and popup.
 
             #. go to the :guilabel:`Details` tab and click :guilabel:`Export`;
             #. add `.crt` at the end of the file name to ensure it has the correct extension;
@@ -92,8 +97,12 @@ it into your browser.
             #. go to :menuselection:`Connection not secure --> More information --> Security tab
                --> View certificate`;
 
-            .. image:: epos_ssc/mozilla-not-secure.png
-               :alt: Connection is not secure button in Mozilla Firefox browser
+            .. screenshot:: pos-epos-ssc-firefox-not-secure-win
+               :menu: (Mozilla Firefox) ‣ address bar
+               :shows: The Mozilla Firefox address bar with the "Connection is not secure" panel open.
+               :highlight: The padlock / warning icon in the address bar (red frame).
+               :module: pos_epson_printer
+               :notes: External web browser, Mozilla Firefox, English UI; crop to the address bar and panel.
 
             #. scroll down to the :guilabel:`Miscellaneous` section;
             #. click :guilabel:`PEM (cert)` in the :guilabel:`Download` section;
@@ -121,7 +130,11 @@ it into your browser.
                      the following store`, click :guilabel:`Browse...`, and select
                      :guilabel:`Trusted Root Certification Authorities`;
 
-                     .. image:: epos_ssc/win-cert-wizard-store.png
+                     .. screenshot:: pos-epos-ssc-win-cert-store
+                        :menu: (Windows) ‣ Certificate Import Wizard ‣ Certificate Store
+                        :shows: The Windows Certificate Import Wizard on the "Certificate Store" step, with "Place all certificates in the following store" selected and "Trusted Root Certification Authorities" chosen.
+                        :module: pos_epson_printer
+                        :notes: Windows 10 dialog, English UI; crop to the wizard window.
 
                   #. click :guilabel:`Finish`, accept the pop-up security window;
                   #. restart the computer to make sure that the changes are applied.
@@ -169,11 +182,13 @@ it into your browser.
             connection by clicking :guilabel:`Advanced` and :guilabel:`Proceed to [IP address]
             (unsafe)`.
 
-            .. figure:: epos_ssc/browser-https-insecure.png
-               :scale: 75%
-               :alt: Warning page about the connection privacy on Google Chrome
+            .. screenshot:: pos-epos-ssc-chrome-warning-mac
+               :menu: (Google Chrome) ‣ https://<printer IP address>
+               :shows: The Google Chrome "Your connection is not private" warning page for the printer's IP address, with the "Advanced" button expanded and the "Proceed to ... (unsafe)" link visible.
+               :module: pos_epson_printer
+               :notes: External web browser, Google Chrome on macOS, English UI; scale down to about 75 % of the page width.
 
-               Warning page on Google Chrome, Windows 10
+            Warning page on Google Chrome
 
             Then, sign in using your printer credentials to access the ePOS printer settings. To
             sign in, enter `epson` in the :guilabel:`ID` field and your printer serial number in the
@@ -202,8 +217,12 @@ it into your browser.
             #. click :guilabel:`Not secure` next to the search bar, and :guilabel:`Certificate is
                not valid`;
 
-               .. image:: epos_ssc/browser-warning.png
-                  :alt: Connection to the printer not secure button in Google Chrome
+               .. screenshot:: pos-epos-ssc-chrome-not-secure-mac
+                  :menu: (Google Chrome) ‣ address bar
+                  :shows: The Google Chrome address bar with the "Not secure" badge clicked, showing the connection details popup.
+                  :highlight: The "Not secure" badge (red frame).
+                  :module: pos_epson_printer
+                  :notes: External web browser, Google Chrome on macOS, English UI; crop to the address bar and popup.
 
             #. go to the :guilabel:`Details` tab and click :guilabel:`Export`;
             #. add `.crt` at the end of the file name to ensure it has the correct extension;
@@ -221,8 +240,12 @@ it into your browser.
             #. go to :menuselection:`Connection not secure --> More information --> Security tab
                --> View certificate`;
 
-               .. image:: epos_ssc/mozilla-not-secure.png
-                  :alt: Connection is not secure button in Mozilla Firefox
+               .. screenshot:: pos-epos-ssc-firefox-not-secure-mac
+                  :menu: (Mozilla Firefox) ‣ address bar
+                  :shows: The Mozilla Firefox address bar with the "Connection is not secure" panel open.
+                  :highlight: The padlock / warning icon in the address bar (red frame).
+                  :module: pos_epson_printer
+                  :notes: External web browser, Mozilla Firefox on macOS, English UI; crop to the address bar and panel.
 
             #. scroll down to the :guilabel:`Miscellaneous` section;
             #. click :guilabel:`PEM (cert)` in the :guilabel:`Download` section;
@@ -260,7 +283,11 @@ it into your browser.
          window;
       #. click :guilabel:`Done`.
 
-      .. image:: epos_ssc/ssl-ios-verified.png
+      .. screenshot:: pos-epos-ssc-ios-profile-installed
+         :menu: (iOS) ‣ Settings ‣ Profile Downloaded
+         :shows: The iOS profile installation screen showing the printer certificate profile as verified after installation.
+         :module: pos_epson_printer
+         :notes: iOS device screenshot, English UI; use a throw-away certificate, hide any serial number.
 
       The certificate is installed, but it still needs to be authenticated. To do so,
 

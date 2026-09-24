@@ -11,9 +11,12 @@ Registration Desk page
 On a mobile device (on the Odoo app or in a browser), open the :menuselection:`Events app`, and
 click the :guilabel:`Registration Desk` to view the :guilabel:`Registration Desk` page.
 
-.. image:: registration_desk/registration-desk-page.png
-   :align: center
-   :alt: The Registration Desk page in the Odoo Events application.
+.. screenshot:: events-registration-desk-registration-desk-page
+   :menu: Events ‣ Registration Desk
+   :shows: The Registration Desk page with the Scan a badge and Select Attendee options.
+   :data: No event-specific data needed.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 At the bottom of the :guilabel:`Registration Desk` box, there are options to either :guilabel:`Scan
 a badge` or :guilabel:`Select Attendee`.
@@ -32,9 +35,13 @@ Once Odoo has access to the camera, a :guilabel:`Barcode Scanner` pop-up window 
 camera's point-of-view. There is also a specified view finder box present, whose size can be
 manually modified, accordingly, using the :icon:`fa-crop` :guilabel:`(crop)` icon.
 
-.. image:: registration_desk/barcode-scanner-window.png
-   :align: center
-   :alt: The Barcode Scanner window of the Registration Desk in the Odoo Events application.
+.. screenshot:: events-registration-desk-barcode-scanner-window
+   :menu: Events ‣ Registration Desk ‣ Scan a badge
+   :shows: The barcode scanner window waiting for an attendee badge to be scanned.
+   :highlight: The scanner input area (red frame).
+   :data: No event-specific data needed.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 When the badge code is in the middle of the view finder box, the code is scanned, the
 :guilabel:`Barcode Scanner` pop-up window disappears, and the attendee is granted access to the
@@ -51,9 +58,13 @@ Registration Desk`, and selecting the :guilabel:`Select Attendee` option.
 Odoo reveals an :guilabel:`Attendees` page, with all the attendees for every event in the database,
 in a default :icon:`oi-view-kanban` :guilabel:`Kanban` view.
 
-.. image:: registration_desk/attendees-page.png
-   :align: center
-   :alt: The Attendees page, via the Registration Desk, located in the Odoo Events application.
+.. screenshot:: events-registration-desk-attendees-page
+   :menu: Events ‣ Registration Desk ‣ Select Attendee
+   :shows: The Attendees list with the Attendee Name, Event, Ticket, Registration Date and Status columns, and the Register and Attended buttons.
+   :highlight: The Register / Attended buttons (red frame).
+   :data: Five registered attendees of the demo event.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 On the :guilabel:`Attendees` page, each attendee card displays that person's name, which event they
 are registered to attend, their associated company (if applicable), what ticket tier they purchased

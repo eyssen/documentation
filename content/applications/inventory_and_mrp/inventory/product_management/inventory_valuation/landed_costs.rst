@@ -30,8 +30,14 @@ Costs` feature in the :guilabel:`Valuation` section.
 Click the :guilabel:`Default Journal` drop-down menu to reveal a list of accounting journals. Select
 a journal for which all accounting entries related to landed costs should be recorded.
 
-.. image:: landed_costs/integrating-landed-costs-enabled-setting.png
-   :alt: Landed Costs feature and resulting Default Journal field in the Inventory settings.
+.. screenshot:: inventory-landed-costs-enable
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to the "Valuation" section, with the "Landed Costs" checkbox
+      enabled and the "Default Journal" field that appears below it filled in.
+   :highlight: The "Landed Costs" checkbox and the "Default Journal" field (red frames).
+   :data: Demo company "YourCompany HU"; default journal "Miscellaneous Operations".
+   :module: stock_landed_costs
+   :notes: English UI, light theme, 1440px width, crop to the "Valuation" settings block.
 
 Create landed cost product
 ==========================
@@ -62,8 +68,14 @@ appears below it, prompting a selection. Clicking that drop-down menu reveals th
 - :guilabel:`By Weight`: splits the cost, according to the weight of the products in the receipt.
 - :guilabel:`By Volume`: splits the cost, according to the volume of the products in the receipt.
 
-.. image:: landed_costs/integrating-landed-costs-landed-cost-product.png
-   :alt: Is a Landed Cost checkbox and Default Split Method on service type product form.
+.. screenshot:: inventory-landed-costs-product
+   :menu: Inventory ‣ Products ‣ Products ‣ (a service product) ‣ Purchase tab
+   :shows: A service product form, "Purchase" tab, "Vendor Bills" section, with "Is a Landed Cost" ticked
+      and the "Default Split Method" field showing its options.
+   :highlight: The "Is a Landed Cost" checkbox and the "Default Split Method" field (red frame).
+   :data: Service product "International Shipping", split method "By Weight".
+   :module: stock_landed_costs
+   :notes: English UI, light theme, 1440px width, crop to the "Vendor Bills" section.
 
 When creating new vendor bills, this product can be added as an invoice line as a landed cost.
 
@@ -101,8 +113,14 @@ menu in the :guilabel:`Product` column to select the previously-created landed c
 the :icon:`fa-cloud-upload` :guilabel:`(cloud with arrow)` icon to manually save and update the
 draft bill.
 
-.. image:: landed_costs/integrating-landed-costs-checkboxes.png
-   :alt: Landed Costs column checkboxes for product and landed cost.
+.. screenshot:: inventory-landed-costs-bill-lines
+   :menu: Purchase ‣ Orders ‣ Purchase Orders ‣ (an order) ‣ Create Bill
+   :shows: The "Invoice Lines" tab of a draft vendor bill with two lines: the ordered product with an
+      unticked "Landed Costs" checkbox, and the landed cost service product with a ticked one.
+   :highlight: The "Landed Costs" column (red frame).
+   :data: One storable product line and the "International Shipping" line.
+   :module: stock_landed_costs
+   :notes: English UI, light theme, 1440px width, crop to the invoice lines.
 
 In the :guilabel:`Landed Costs` column, the product ordered from the vendor does **not** have its
 checkbox ticked, while the landed cost product's checkbox **is** ticked. This differentiates landed
@@ -110,8 +128,13 @@ costs from all other costs displayed on the bill.
 
 Additionally, at the top of the form, a :guilabel:`Create Landed Costs` button appears.
 
-.. image:: landed_costs/integrating-landed-costs-create-button.png
-   :alt: Create Landed Costs button on vendor bill.
+.. screenshot:: inventory-landed-costs-create-button
+   :menu: Accounting ‣ Vendors ‣ Bills ‣ (a draft bill with a landed cost line)
+   :shows: The top of a draft vendor bill where the "Create Landed Costs" button has appeared.
+   :highlight: The "Create Landed Costs" button (red frame).
+   :data: The same bill as the previous screenshot.
+   :module: stock_landed_costs
+   :notes: English UI, light theme, 1440px width, crop to the button bar.
 
 Add landed cost
 ===============
@@ -125,8 +148,14 @@ product line in the :guilabel:`Additional Costs` tab.
 From the :guilabel:`Landed Cost` form, click the :guilabel:`Transfers` drop-down menu, and select
 which transfer the landed cost belongs to.
 
-.. image:: landed_costs/integrating-landed-costs-transfers-menu.png
-   :alt: Landed cost form with selected receipt transfer.
+.. screenshot:: inventory-landed-costs-form
+   :menu: Inventory ‣ Operations ‣ Landed Costs ‣ (a landed cost)
+   :shows: A landed cost form with the "Transfers" field set to the receipt the cost belongs to, the
+      "Additional Costs" tab holding the landed cost product line, and the "Compute" button below the total.
+   :highlight: The "Transfers" field (red frame).
+   :data: Landed cost from the vendor bill above, linked to receipt WH/IN/00014.
+   :module: stock_landed_costs
+   :notes: English UI, light theme, 1440px width, full form.
 
 .. tip::
    In addition to creating landed costs directly from a vendor bill, landed cost records can *also*
@@ -148,8 +177,9 @@ This causes a :guilabel:`Valuation` smart button to appear at the top of the for
 updated valuation listed.
 
 .. note::
-   For a :guilabel:`Valuation` smart button to appear upon validation, the product's
-   :guilabel:`Product Type` **must** be set to :guilabel:`Storable`.
+   For a :guilabel:`Valuation` smart button to appear upon validation, the products in the receipt
+   **must** have their :guilabel:`Product Type` set to :guilabel:`Goods` with :guilabel:`Track
+   Inventory` enabled.
 
 To view the valuation of *every* product, including landed costs, navigate to
 :menuselection:`Inventory app --> Reporting --> Valuation`.
@@ -159,10 +189,17 @@ To view the valuation of *every* product, including landed costs, navigate to
    app.
 
    To locate these journal entries, navigate to :menuselection:`Accounting app --> Accounting -->
-   Journal Entries`, and locate the correct entry, by number (i.e. `PBNK1/2024/XXXXX`).
+   Journal Entries`, and locate the correct entry by its number. The journal used is the one set in
+   the :guilabel:`Default Journal` field of the :guilabel:`Landed Costs` setting.
 
    Click into the journal entry to view the :guilabel:`Journal Items`, and other information about
    the entry.
 
-   .. image:: landed_costs/integrating-landed-costs-journal-entry.png
-      :alt: Journal Entry form for landed cost created from vendor bill.
+   .. screenshot:: inventory-landed-costs-journal-entry
+      :menu: Accounting ‣ Accounting ‣ Journal Entries ‣ (the landed cost entry)
+      :shows: The journal entry created when the landed cost was validated, with its journal items debiting
+         the stock valuation account and crediting the landed cost account.
+      :highlight: The journal items (red frame).
+      :data: The entry generated by the validated landed cost.
+      :module: stock_landed_costs, account
+      :notes: English UI, light theme, 1440px width, crop to the journal items table.

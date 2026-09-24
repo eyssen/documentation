@@ -23,13 +23,12 @@ project's :ref:`top bar <project/project-management/top-bar>`.
 The left side of the dashboard displays a list of existing :ref:`project updates <project/project-dashboard/updates>`,
 and the right side provides :ref:`detailed information about records linked to the project
 <project/project-dashboard/smart-buttons>`, as well as :ref:`milestones <project/project-dashboard/milestones>`,
-:ref:`profitability <project/project-dashboard/profitability>`, and :ref:`budgets
-<project/project-dashboard/budgets>`.
+:ref:`profitability <project/project-dashboard/profitability>`.
 
 .. note::
    The information displayed on the project dashboard varies depending on the applications installed
-   on your database. For example, you will not see information about **Timesheets**, **Planning**,
-   or **Purchase Orders** if the corresponding applications are not installed.
+   on your database. For example, you will not see information about **Timesheets** or **Purchase
+   Orders** if the corresponding applications are not installed.
 
 .. _project/project-dashboard/smart-buttons:
 
@@ -46,16 +45,12 @@ The following smart buttons are displayed on the top right of the project dashbo
    :doc:`timesheets </applications/services/timesheets>`, whether or not they have been validated.
  - :guilabel:`Burndown Chart`: click the smart button to access a :doc:`report </applications/essentials/reporting>`
    on the status of the project’s tasks over time.
- - :guilabel:`Timesheets and Planning`: click the smart button to access a :doc:`report </applications/essentials/reporting>`
-   on the project’s timesheets and shifts. This allows you to easily compare planned and effective
-   hours of work on the project.
  - **Additional fields**, such as :guilabel:`Sales Orders`, :guilabel:`Sales Order Items`,
    :guilabel:`Purchase Orders`, and more, represent the number of records linked to the project.
 
 .. tip::
-   Use the project dashboard smart buttons to update the project records easily. Click
-   :guilabel:`Timesheets` to validate timesheets, :guilabel:`Planned` to create project planning,
-   :guilabel:`Documents` to view and validate documents, etc.
+   Use the project dashboard smart buttons to update the project records easily, for example click
+   :guilabel:`Timesheets` to review the time logged on the project.
 
 .. _project/project-dashboard/milestones:
 
@@ -82,18 +77,6 @@ project and its :doc:`Analytic account </applications/finance/accounting/reporti
 
 .. note::
    The profitability report is only displayed for billable projects.
-
-.. _project/project-dashboard/budgets:
-
-Budgets
--------
-
-If a budget has been set for the project, its status and related details are displayed in this
-section. Click :guilabel:`Add Budget` to create a new budget for the project.
-
-.. note::
-   :doc:`Budgets </applications/finance/accounting/reporting/budget>` must be enabled in your
-   database’s **Accounting** application in order for this section to be displayed.
 
 .. _project/project-dashboard/updates:
 

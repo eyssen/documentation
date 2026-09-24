@@ -23,10 +23,6 @@ product uses the *Buy* route, then a *request for quotation* (RFQ) is created wh
 rule is triggered. If a product uses the *Manufacture* route, then a *manufacturing order* (MO) is
 created instead. This is the case regardless of the selected replenishment route.
 
-.. seealso::
-   - `Odoo Tutorials: Automatic Reordering Rules <https://www.youtube.com/watch?v=XEJZrCjoXaU>`_
-   - `Odoo Tutorials: Manual Reordering Rules <https://www.youtube.com/watch?v=deIREJ1FFj4>`_
-
 To set up reordering rules for the first time, refer to:
 
 - :ref:`Reordering rules setup <inventory/warehouses_storage/configure-rr>`
@@ -37,7 +33,6 @@ To understand and optimize replenishment using advanced features, see:
 
 - :ref:`Just-in-time logic <inventory/warehouses_storage/just-in-time>`
 - :ref:`Visibility days <inventory/warehouses_storage/visibility-days>`
-- :ref:`Horizon days <inventory/warehouses_storage/horizon-days>`
 
 .. _inventory/warehouses_storage/configure-rr:
 
@@ -63,8 +58,13 @@ On the product form, under the :guilabel:`General Information` tab, set the :gui
 to :guilabel:`Goods`, and make sure the :guilabel:`Track Inventory` checkbox is ticked. This is
 necessary for Odoo to track the product's stock levels and trigger reordering rules.
 
-.. image:: reordering_rules/product-type.png
-   :alt: Product Type and Track Inventory configurations.
+.. screenshot:: inventory-reordering-rules-product-type
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ General Information tab
+   :shows: A product form with "Product Type" set to "Goods" and the "Track Inventory" checkbox ticked.
+   :highlight: The "Product Type" and "Track Inventory" fields (red frame).
+   :data: A storable product to be replenished.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the fields.
 
 .. _inventory/warehouses_storage/set-method:
 
@@ -116,10 +116,15 @@ rule line item:
   number that should be ordered. For example, if the :guilabel:`Multiple Quantity` is set to `5`,
   and only 3 are needed, 5 products are replenished.
 
-.. figure:: reordering_rules/reordering-rule-form.png
-   :alt: The form for creating a new reordering rule.
-
-   The form for creating a new reordering rule.
+.. screenshot:: inventory-reordering-rules-new-line
+   :menu: Inventory ‣ Operations ‣ Replenishment ‣ New
+   :shows: A new reordering rule line with the Product, Location, Min, Max and "Multiple Quantity" fields
+      filled in.
+   :highlight: The "Min" and "Max" fields (red frame).
+   :data: Min 5, Max 25, Multiple Quantity 5 for a storable product at WH/Stock.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the line. Caption to convey: the form for creating
+      a new reordering rule.
 
 .. tip::
    Reordering rules can also be created from the :guilabel:`Reordering Rules` smart button on the
@@ -184,8 +189,14 @@ example, if the product should be purchased from a vendor, select the :guilabel:
 In the :guilabel:`Min` field and :guilabel:`Max` field, leave the values set to `0.00`. In the
 :guilabel:`To Order` field, enter a value of `1.00`.
 
-.. image:: reordering_rules/001-rule.png
-   :alt: A 0/0/1 reordering rule.
+.. screenshot:: inventory-reordering-rules-zero-zero-one
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Reordering Rules ‣ New
+   :shows: A reordering rule with Min 0.00, Max 0.00 and "To Order" 1.00, and the "Route" field set to
+      "Buy".
+   :highlight: The Min, Max and "To Order" values (red frame).
+   :data: Location WH/Stock, route Buy, for a product kept at zero stock.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the line.
 
 With the reordering rule configured using these values, each time an |SO| causes the forecasted
 quantity of the product to fall below the :guilabel:`Min` of `0.00`, the selected :guilabel:`Route`
@@ -259,8 +270,14 @@ tab of the product form.
    quantity falls below the :guilabel:`Min Quantity` of `5.00`. Since the current
    :guilabel:`Forecast` is `55.00`, the reordering rule is **not** triggered.
 
-   .. image:: reordering_rules/auto.png
-      :alt: Show automatic reordering rule from the Reordering Rule page.
+   .. screenshot:: inventory-reordering-rules-auto-trigger
+      :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Reordering Rules
+      :shows: A reordering rule with the "Trigger" column set to "Auto", a Min of 5.00 and a Forecast of
+         55.00, so the rule is not triggered.
+      :highlight: The "Trigger" column and the "Forecast" value (red frames).
+      :data: Product "Office Lamp", min 5.00, forecast 55.00.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the line; the Trigger column must be enabled.
 
 .. _inventory/warehouses_storage/manual-rr:
 
@@ -280,8 +297,14 @@ filter.
 When a product appears on the replenishment dashboard, clicking the :guilabel:`Order` button
 generates the purchase or manufacturing order with the specified amounts :guilabel:`To Order`.
 
-.. image:: reordering_rules/manual.png
-   :alt: Click the Order button on the replenishment dashboard to replenish stock.
+.. screenshot:: inventory-reordering-rules-manual-order
+   :menu: Inventory ‣ Operations ‣ Replenishment
+   :shows: A manual reordering rule listed on the replenishment dashboard with its "To Order" quantity and
+      the "Order" button on the line.
+   :highlight: The "Order" button (red frame).
+   :data: One manual reordering rule whose forecast fell below the minimum.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the line.
 
 .. _inventory/warehouses_storage/route:
 
@@ -309,8 +332,15 @@ far-right of the column titles, and ticking :guilabel:`Route` from the drop-down
 Click inside of the column on the row of a reordering rule, and a drop-down menu shows all available
 routes for that rule. Select one to set it as the preferred route.
 
-.. image:: reordering_rules/select-preferred-route.png
-   :alt: Select a preferred route from the drop-down.
+.. screenshot:: inventory-reordering-rules-preferred-route
+   :menu: Inventory ‣ Operations ‣ Replenishment
+   :shows: The "Route" column of a reordering rule with its drop-down open, listing the routes available for
+      that rule (e.g. Buy, Manufacture).
+   :highlight: The open "Route" drop-down (red frame).
+   :data: A product with both the Buy and the Manufacture route enabled.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the line and the open drop-down. The Route column
+      must be enabled.
 
 .. important::
    If multiple routes are enabled for a product but no preferred route is set for its reordering
@@ -345,11 +375,15 @@ advanced configurations of reordering rules. Consider the following:
      Procurement groups link replenishment methods to demand, making smart buttons to appear —
      similar to how smart buttons appear when using the :doc:`MTO route <mto>`.
 
-     .. figure:: reordering_rules/po-smartbutton.png
-        :alt: Showing smart button to PO.
-
-        Sales order (demand) with a smart button linking to the related purchase order
-        (replenishment method).
+     .. screenshot:: inventory-reordering-rules-procurement-group
+        :menu: Sales ‣ Orders ‣ Orders ‣ (a confirmed order)
+        :shows: A confirmed sales order with a "Purchase" smart button at the top, linking to the purchase
+           order created by the reordering rule that shares its procurement group.
+        :highlight: The "Purchase" smart button (red frame).
+        :data: Sales order SO35 and the purchase order generated for it.
+        :module: stock, purchase_stock
+        :notes: English UI, light theme, 1440px width, crop to the button bar. Caption to convey: the sales
+           order (demand) with a smart button linking to the related purchase order (replenishment method).
 
   In the context of reordering rules:
 
@@ -442,8 +476,15 @@ pop-up window displays the :guilabel:`Forecasted Date` and various lead times.
    report. Odoo only displays quantities to replenish when they fall within the forecasted date
    window, ensuring orders are placed precisely when needed.
 
-   .. image:: reordering_rules/replenishment-info.png
-      :alt: Show forecasted date in Odoo.
+   .. screenshot:: inventory-reordering-rules-replenishment-info
+      :menu: Inventory ‣ Operations ‣ Replenishment ‣ (info icon on a line)
+      :shows: The "Replenishment Information" pop-up showing the "Forecasted Date" and the individual lead
+         times that add up to it (vendor lead time, purchase security lead time, days to purchase).
+      :highlight: The "Forecasted Date" (red frame).
+      :data: Vendor lead time 4 days, purchase security lead time 1 day, days to purchase 2 days; today 26
+         November, forecasted date 3 December.
+      :module: stock, purchase_stock
+      :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 The *just-in-time* logic ensures replenishment happens only when it's necessary for the forecasted
 date's demand, helping avoid overstocking.
@@ -472,16 +513,26 @@ the **long-term forecasted quantity**.
 
 .. example::
 
-   .. figure:: reordering_rules/zero-forecast.png
-      :alt: Forecast and To Order quantities is zero.
+   .. screenshot:: inventory-reordering-rules-zero-forecast
+      :menu: Inventory ‣ Operations ‣ Replenishment
+      :shows: A reordering rule line whose "Forecast" and "To Order" quantities are both zero, because the
+         sales order deadline falls after the forecasted date.
+      :highlight: The zero "Forecast" and "To Order" values (red frame).
+      :data: Continuing the example: the sales order deadline moved to 4 December, forecasted date 3
+         December.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the line. Caption to convey: with the deadline
+         moved to 4 December the Forecast and To Order quantities are zero.
 
-      Continuing the above example, when the sales order's deadline is adjusted to December 4th, the
-      :guilabel:`Forecast` and :guilabel:`To Order` quantities are zero.
-
-   .. figure:: reordering_rules/five-forecast.png
-      :alt: Show forecasted report.
-
-      Opening the :guilabel:`Forecasted Report` shows the :guilabel:`Forecasted` units is `5.00`.
+   .. screenshot:: inventory-reordering-rules-forecasted-report
+      :menu: Inventory ‣ Operations ‣ Replenishment ‣ (graph icon on a line)
+      :shows: The Forecasted Report opened from a reordering rule, where the long-term forecasted quantity
+         is 5.00 even though the reordering rule shows zero.
+      :highlight: The "Forecasted" quantity 5.00 (red frame).
+      :data: The same example: one sales order for 5 units due after the forecasted date.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the forecast figure. Caption to convey: the
+         Forecasted Report shows 5.00 forecasted units.
 
 .. _inventory/warehouses_storage/visibility-days:
 
@@ -523,8 +574,15 @@ tariffs).
 
 Ordering separately for these sales orders totals $300 in shipping costs.
 
-.. image:: reordering_rules/forecasted-date.png
-   :alt: Show forecasted date visualization.
+.. screenshot:: inventory-reordering-rules-visibility-days-diagram
+   :menu: (diagram)
+   :shows: A timeline showing the current date (4 November), the forecasted date 30 days later (4 December),
+      and three sales orders due on 4, 19 and 25 December, with a 20-day visibility window from 4 December
+      to 24 December grouping the first two orders.
+   :highlight: The 20-day visibility window.
+   :data: Vendor lead time 30 days, shipping cost 100 per order.
+   :module: stock
+   :notes: Simple schematic drawing, no UI. Light theme, readable at 1440px.
 
 Setting :guilabel:`Visibility Days` to `20.0` allows Odoo to "look ahead" 20 days from December 4
 (|SO| 1's forecasted date) to December 24.
@@ -545,21 +603,12 @@ Considering the example above, if |SO| 1 does not exist, then:
 This shows that visibility days complement just-in-time logic by optimizing it to balance
 replenishment costs more effectively.
 
-.. image:: reordering_rules/counterexample.png
-   :alt: Example where the visibility days does not trigger.
-
-Horizon days
-============
-
-*Horizon days* determine how many days ahead Odoo checks if the forecasted quantity will drop below
-reordering rule's minimum. The feature is meant to help users plan replenishment in advance, by
-increasing the :ref:`forecasted date <inventory/warehouses_storage/forecasted-date>`.
-
-.. math::
-   :class: overflow-scroll
-
-   \text{Forecasted date} = \text{Current date} + \text{Vendor Lead Time} + \text{Horizon Days}
-
-
-Since horizon days are only meant to be used with manual reordering rules, find details about the
-feature in the :doc:`Replenishment report article <report>`.
+.. screenshot:: inventory-reordering-rules-visibility-days-counterexample
+   :menu: (diagram)
+   :shows: A timeline showing that without a first sales order the forecasted date simply moves forward day
+      by day, so the second sales order (due 19 December) only triggers a replenishment on 19 November and
+      the visibility window never groups anything.
+   :highlight: The forecasted date shifting forward one day at a time.
+   :data: Same figures as the previous diagram, with the first sales order removed.
+   :module: stock
+   :notes: Simple schematic drawing, no UI. Light theme, readable at 1440px.

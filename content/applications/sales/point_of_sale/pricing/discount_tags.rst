@@ -2,51 +2,49 @@
 Discount tags (barcode scanner)
 ===============================
 
-If you want to sell your products with a discount, for a product getting
-close to its expiration date for example, you can use discount tags.
-They allow you to scan discount barcodes.
+To sell a product at a reduced price — for example, an item close to its expiration date — you can
+print and scan **discount tags**. A discount tag is a barcode that encodes both the discount
+percentage and the product's own barcode.
 
 .. note::
-   To use discount tags you will need to use a barcode scanner.
+   Using discount tags requires a :doc:`barcode scanner <../shop/barcode>`.
 
-Barcode Nomenclature
+Barcode nomenclature
 ====================
 
-To use discounts tags, we need to learn about barcode nomenclature.
+Discount tags rely on the *Discounted Product* rule of the barcode nomenclature. In the
+:guilabel:`Default Nomenclature`, that rule matches barcodes that start with `22`, followed by two
+digits for the discount percentage, followed by the product's barcode.
 
-Let's say you want to have a discount for the product with the following
-barcode:
+To review the rule, :doc:`enable the developer mode </applications/general/developer_mode>`, go to
+:menuselection:`Inventory --> Configuration --> Barcode Nomenclatures`, open
+:guilabel:`Default Nomenclature`, and look up the :guilabel:`Discounted Product` line.
 
-.. image:: discount_tags/discount_tags01.png
-   :align: center
+.. screenshot:: pos-discount-tags-nomenclature
+   :menu: Inventory ‣ Configuration ‣ Barcode Nomenclatures ‣ Default Nomenclature
+   :shows: The "Default Nomenclature" form with the barcode rules list, the "Discounted Product"
+      rule visible with its barcode pattern.
+   :highlight: The "Discounted Product" rule line (red frame).
+   :module: barcodes, point_of_sale
+   :notes: English UI, light theme, 1440px width, developer mode on, crop to the rules list.
 
-You can find the *Default Nomenclature* under the settings of your PoS
-interface.
+.. example::
+   To grant a 50 % discount on a product whose barcode is `2100002000003`, the discount tag's
+   barcode is `22` (discount rule) + `50` (percentage) + `2100002000003` (product barcode).
 
-.. image:: discount_tags/discount_tags02.png
-   :align: center
+Scan the product and the tag
+============================
 
-.. image:: discount_tags/discount_tags03.png
-   :align: center
+#. :ref:`Open a POS session <pos/session-start>`.
+#. Scan the product's own barcode to add it to the cart.
+#. Scan the discount tag. The discount is applied to that order line, and the transaction can be
+   finished as usual.
 
-Let's say you want 50% discount on a product you have to start your
-barcode with 22 (for the discount barcode nomenclature) and then 50 (for
-the %) before adding the product barcode. In our example, the barcode would
-be:
-
-.. image:: discount_tags/discount_tags04.png
-   :align: center
-
-Scan the products & tags
-========================
-
-You first have to scan the desired product (in our case, a lemon).
-
-.. image:: discount_tags/discount_tags05.png
-   :align: center
-
-And then scan the discount tag. The discount will be applied and you can
-finish the transaction.
-
-.. image:: discount_tags/discount_tags06.png
-   :align: center
+.. screenshot:: pos-discount-tags-applied
+   :menu: (POS interface) ‣ Register screen
+   :shows: The POS cart with one product line showing the original price struck through and the
+      discounted price, after scanning a 50 % discount tag.
+   :highlight: The discounted order line (red frame).
+   :data: Product "Lemon" with a 50 % discount tag.
+   :module: point_of_sale, barcodes
+   :notes: English UI, light theme, 1440px width, crop to the cart pane.

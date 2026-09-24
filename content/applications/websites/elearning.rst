@@ -12,9 +12,6 @@ learning experience enhances their attentiveness and fosters heightened producti
    additional options and allows collaboration. This documentation focuses on using the back end to
    create your content.
 
-.. seealso::
-   `Odoo Tutorials: eLearning <https://www.odoo.com/slides/elearning-56>`_
-
 .. _elearning/courses:
 
 Courses
@@ -40,8 +37,13 @@ Four tabs allow you to edit your course further: :ref:`Content <elearning/conten
 :ref:`Description <elearning/description>`, :ref:`Options <elearning/options>`, and
 :ref:`Karma <elearning/karma>`.
 
-.. image:: elearning/elearning-course-creation.png
-   :alt: Create your elearning course.
+.. screenshot:: elearning-elearning-elearning-course-creation
+   :menu: eLearning ‣ Courses ‣ Courses ‣ New
+   :shows: A new course form with the Course Title, Tags and Responsible fields and the Content, Description, Options and Karma tabs.
+   :highlight: The Course Title field and the tab row (red frame).
+   :data: Course 'Odoo 18 basics'.
+   :module: website_slides
+   :notes: English UI, light theme, 1440px width.
 
 .. _elearning/content:
 
@@ -62,8 +64,13 @@ Description tab
 You can add a short description or information related to the course in the :guilabel:`Description`
 tab. It appears under the course title on your website.
 
-.. image:: elearning/course-description.png
-   :alt: Add a description to your course.
+.. screenshot:: elearning-elearning-course-description
+   :menu: eLearning ‣ Courses ‣ Courses ‣ (course) ‣ Description tab
+   :shows: The Description tab of a course with the rich-text description shown on the course page.
+   :highlight: The description field (red frame).
+   :data: Course 'Odoo 18 basics'.
+   :module: website_slides
+   :notes: English UI, light theme, 1440px width.
 
 .. _elearning/options:
 
@@ -75,8 +82,13 @@ In the :guilabel:`Options` tab, different configurations are available:
 :ref:`Access rights <elearning/options-access-rights>`, and :ref:`Display
 <elearning/options-display>`.
 
-.. image:: elearning/options-tab.png
-   :alt: Overview of the Options tab
+.. screenshot:: elearning-elearning-options-tab
+   :menu: eLearning ‣ Courses ‣ Courses ‣ (course) ‣ Options tab
+   :shows: The Options tab of a course with the Enroll Policy, Visibility, Show Course To, Allow Reviews, Forum and Certification options.
+   :highlight: The Enroll Policy and Visibility fields (red frame).
+   :data: Course 'Odoo 18 basics', enroll policy 'Public'.
+   :module: website_slides
+   :notes: English UI, light theme, 1440px width.
 
 .. _elearning/options-course:
 
@@ -193,8 +205,13 @@ To manage course content, go to :menuselection:`eLearning --> Courses --> Conten
 :guilabel:`New` to create a content item. Add the :guilabel:`Content Title` and any desired
 :ref:`Tags <elearning/content-tags>`, then fill in the required information in the different tabs.
 
-.. image:: elearning/elearning-content-tab.png
-   :alt: Create your content.
+.. screenshot:: elearning-elearning-elearning-content-tab
+   :menu: eLearning ‣ Courses ‣ Courses ‣ (course) ‣ Content tab
+   :shows: The Content tab of a course with its sections and content lines (video, document, quiz) and the Add Section / Add Content links.
+   :highlight: The content lines (red frame).
+   :data: Course with two sections and four contents.
+   :module: website_slides
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    You can also create new content from within a course. Go to :menuselection:`eLearning --> Courses
@@ -226,8 +243,13 @@ Two read-only fields provide data about how often the content item is viewed:
 - :guilabel:`# Total Views`: displays the total number of views (non-enrolled and enrolled
   participants).
 
-.. image:: elearning/elearning-document-tab.png
-   :alt: Provide information about the content.
+.. screenshot:: elearning-elearning-elearning-document-tab
+   :menu: eLearning ‣ Courses ‣ Contents ‣ New
+   :shows: A course content form with the Content Title, Course, Content Type, the uploaded file and the Description tab.
+   :highlight: The Content Type field (red frame).
+   :data: Content 'Getting started' of type Document.
+   :module: website_slides
+   :notes: English UI, light theme, 1440px width.
 
 .. _elearning/content-type:
 
@@ -276,8 +298,13 @@ Additional Resources tab
 Click :guilabel:`Add a line` to add a link or a file that supports your participants' learning.
 The resource appears in the course content on your website.
 
-.. image:: elearning/additional-content.png
-  :alt: Additional ressources
+.. screenshot:: elearning-elearning-additional-content
+   :menu: eLearning ‣ Courses ‣ Contents ‣ (content) ‣ Additional Resources tab
+   :shows: The Additional Resources tab of a content with two resource lines (a link and a downloadable file).
+   :highlight: The resource lines (red frame).
+   :data: Two additional resources.
+   :module: website_slides
+   :notes: English UI, light theme, 1440px width.
 
 .. _elearning/content-quiz:
 
@@ -319,8 +346,13 @@ A course and its content items are published separately:
 - To publish individual content items, click on an item to open it, then toggle the switch
   from :guilabel:`Unpublished` to :guilabel:`Published`.
 
-.. image:: elearning/elearning-publish-button.png
-  :alt: Publish your content.
+.. screenshot:: elearning-elearning-elearning-publish-button
+   :menu: (website) ‣ Courses ‣ (course)
+   :shows: A course page on the website with the Unpublished / Published toggle in the top bar.
+   :highlight: The Unpublished / Published toggle (red frame).
+   :data: Course 'Odoo 18 basics'.
+   :module: website_slides
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    When publishing a new course, publish the individual content items before publishing the course

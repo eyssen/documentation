@@ -29,15 +29,23 @@ record. The note includes details of the change, and a time stamp.
    - The email address as it was previously listed.
    - The updated email address.
 
-   .. image:: chatter/chatter-thread-email-update.png
-      :alt: A close up of a chatter thread with an update to a contact record.
+   .. screenshot:: productivity-chatter-thread-update
+      :menu: (any record with a chatter)
+      :shows: A chatter thread showing a logged note and a tracked field change on a contact record.
+      :data: Contact "Deco Addict" with one tracked change.
+      :module: mail
+      :notes: English UI, light theme, crop to the chatter.
 
 If a record was created, or edited, via an imported file, or was otherwise updated through an
 intervention by the system, the chatter thread creates a log note, and credits the change to
 OdooBot.
 
-.. image:: chatter/odoo-bot-created.png
-   :alt: A close up of a chatter thread of an OdooBot created contact record.
+.. screenshot:: productivity-chatter-creation-message
+   :menu: (any record with a chatter)
+   :shows: The first chatter message of a newly created record, logged automatically.
+   :data: New contact record.
+   :module: mail
+   :notes: English UI, light theme, crop to the chatter.
 
 .. _discuss/add-followers:
 
@@ -51,9 +59,9 @@ Followers can add themselves, or can be added by another user.
 .. note::
    If a user creates, or is assigned to a record, they are automatically added as a follower.
 
-To follow a record, navigate to any record with a chatter thread. For example, to open a *Helpdesk*
-ticket, navigate to :menuselection:`Helpdesk app --> Tickets --> All Tickets`, and select a ticket
-from the list to open it.
+To follow a record, navigate to any record with a chatter thread. For example, to open a *CRM*
+opportunity, navigate to :menuselection:`CRM app --> Sales --> My Pipeline`, and select an
+opportunity from the list to open it.
 
 At the top-right, above the chatter composer, click :guilabel:`Follow`. Doing this changes the
 button to read :guilabel:`Following`. Click it again to :guilabel:`Unfollow`.
@@ -83,17 +91,19 @@ follower in the list, then click the :icon:`fa-pencil` :guilabel:`(pencil)` icon
 :guilabel:`Edit Subscription` pop-up window for the follower.
 
 The list of available subscription settings varies depending on the record type. For example, a
-follower of a *Helpdesk* ticket may be informed when the ticket is rated. This option would not be
+follower of a *Project* task may be informed when the task's stage changes. This option would not be
 available for the followers of a *CRM* opportunity.
 
 Tick the checkbox for any updates the follower should receive, and clear the checkbox for any
 updates they should **not** receive. Click :guilabel:`Apply` when finished.
 
-.. figure:: chatter/chatter-edit-subscription.png
-   :alt: The Edit Subscription window on a Helpdesk ticket.
-
-   The Edit Subscription options vary depending on the record type. These are the options for a
-   Helpdesk ticket.
+.. screenshot:: productivity-chatter-edit-subscription
+   :menu: (any record with a chatter)
+   :shows: The "Edit Subscription" window of a follower, listing the subscription types that can be checked or unchecked.
+   :highlight: The subscription checkboxes (red frame).
+   :data: Follower of a sales order.
+   :module: mail
+   :notes: English UI, light theme, crop to the chatter.
 
 .. _discuss/log-notes:
 
@@ -148,9 +158,13 @@ recipients of the message.
    automatically. If a follower should **not** receive a message, they must be removed as a follower
    before the message is sent, or a note is logged.
 
-.. image:: chatter/send-message-followers.png
-   :alt: A chatter composer preparing to send a message to the followers of a CRM opportunity and
-         the customer listed on the opportunity record.
+.. screenshot:: productivity-chatter-send-message
+   :menu: CRM ‣ Sales ‣ My Pipeline
+   :shows: The chatter composer of an opportunity in "Send message" mode, with the recipients (followers and the customer) listed above the composer.
+   :highlight: The recipient list (red frame).
+   :data: Opportunity of customer "Deco Addict".
+   :module: mail
+   :notes: English UI, light theme, crop to the chatter.
 
 Expand full composer
 --------------------
@@ -161,10 +175,12 @@ customizations.
 To open the full composer, click the :icon:`fa-expand` :guilabel:`(expand)` icon in the bottom-right
 corner of the composer window.
 
-.. figure:: chatter/chatter-expand-icon.png
-   :alt: A chatter composer with emphasis on the expand icon.
-
-   The expand icon in a chatter composer.
+.. screenshot:: productivity-chatter-expand-icon
+   :menu: (any record with a chatter)
+   :shows: A chatter composer with the expand icon that opens the full composer.
+   :highlight: The expand icon (red frame).
+   :module: mail
+   :notes: English UI, light theme, crop to the chatter.
 
 Doing this opens a :guilabel:`Compose Email` pop-up window. Confirm or edit the intended
 :guilabel:`Recipients` of the message, or add additional recipients. The :guilabel:`Subject` field
@@ -180,8 +196,12 @@ deleted from this menu.
 Click :icon:`fa-paperclip` :guilabel:`(paperclip)` icon to add any files to the message, then click
 :guilabel:`Send`.
 
-.. image:: chatter/chatter-full-composer.png
-   :alt: The expanded full chatter composer in the CRM application.
+.. screenshot:: productivity-chatter-full-composer
+   :menu: CRM ‣ Sales ‣ My Pipeline
+   :shows: The expanded full composer with the subject, the rich-text body, the attachment button and the email template selector.
+   :data: Opportunity of customer "Deco Addict".
+   :module: mail
+   :notes: English UI, light theme, crop to the chatter.
 
 Generate text with AI
 ~~~~~~~~~~~~~~~~~~~~~
@@ -192,8 +212,12 @@ a :guilabel:`Generate Text with AI` pop-up.
 Enter a prompt in the :guilabel:`Send a message` field to instruct the AI on the type of content
 needed, then press enter, or click the :icon:`fa-paper-plane` :guilabel:`(paper plane)` icon.
 
-.. image:: chatter/chatter-generate-text-with-ai.png
-   :alt: The generate text with AI popup.
+.. screenshot:: productivity-chatter-ai-prompt
+   :menu: (any record with a chatter)
+   :shows: The "Generate Text with AI" pop-up with a prompt typed in the message field.
+   :data: Prompt asking for a short follow-up email.
+   :module: mail
+   :notes: English UI, light theme, crop to the chatter.
 
 After the text is generated, click :guilabel:`Insert` to insert the text into the message composer.
 
@@ -201,8 +225,11 @@ After the text is generated, click :guilabel:`Insert` to insert the text into th
    Before sending the final message, be sure to edit any commentary from the AI, or any text in
    brackets.
 
-   .. image:: chatter/chatter-ai-draft-email.png
-      :alt: A draft of an email with text generated by AI.
+   .. screenshot:: productivity-chatter-ai-draft
+      :menu: (any record with a chatter)
+      :shows: The composer filled with the text generated by the AI, before it is edited and sent.
+      :module: mail
+      :notes: English UI, light theme, crop to the chatter.
 
 Edit sent messages
 ------------------
@@ -217,8 +244,12 @@ information.
 To edit a sent message, click the |ve| menu to the right of the message. Then, select
 :guilabel:`Edit`. Make any necessary adjustments to the message.
 
-.. image:: chatter/chatter-edit.png
-   :alt: The edit message option in a chatter thread.
+.. screenshot:: productivity-chatter-edit-message
+   :menu: (any record with a chatter)
+   :shows: The dropdown menu of a sent chatter message with the "Edit" option.
+   :highlight: The "Edit" option (red frame).
+   :module: mail
+   :notes: English UI, light theme, crop to the chatter.
 
 To save the changes, press :command:`Ctrl + Enter`. To discard the changes, press :command:`Escape`.
 
@@ -249,11 +280,12 @@ To be taken directly to a particular message in the chatter thread, hover over t
 corner of the result to reveal a :guilabel:`Jump` button. Click this button to be directed to that
 message's location in the thread.
 
-.. figure:: chatter/chatter-search.png
-   :alt: Search results in a chatter thread emphasising the search icon and the jump button.
-
-   Search results in a chatter thread. Hover over the upper-right corner of a result to see the
-   **Jump** option. Click it to be taken directly to that message in the chatter thread.
+.. screenshot:: productivity-chatter-search
+   :menu: (any record with a chatter)
+   :shows: Search results in a chatter thread, with the search icon in the top bar and the "Jump" option on a hovered result.
+   :highlight: The search icon and the "Jump" option (red frame).
+   :module: mail
+   :notes: English UI, light theme, crop to the chatter.
 
 .. _discuss/schedule-activities:
 
@@ -303,15 +335,23 @@ and are color-coded based on their due date.
 - **Yellow** icons indicate an activity with a due date scheduled for the current date.
 - **Green** icons indicate an activity with a due date scheduled in the future.
 
-.. image:: chatter/chatter-activity-icons.png
-   :alt: A chatter thread with planned activities with varying due dates.
+.. screenshot:: productivity-chatter-activity-icons
+   :menu: CRM ‣ Sales ‣ My Pipeline
+   :shows: A chatter thread with several planned activities, showing the colored due-date icons.
+   :data: Three activities: overdue, due today and planned.
+   :module: mail
+   :notes: English UI, light theme, crop to the chatter.
 
 .. tip::
    Click the :icon:`fa-info-circle` :guilabel:`(info)` icon next to a planned activity to see
    additional details.
 
-   .. image:: chatter/planned-activity-details.png
-      :alt: A detailed view of a planned activity.
+   .. screenshot:: productivity-chatter-activity-details
+      :menu: CRM ‣ Sales ‣ My Pipeline
+      :shows: The detail popover of a planned activity with its type, due date, assignee and note.
+      :data: Activity "Call" due today.
+      :module: mail
+      :notes: English UI, light theme, crop to the chatter.
 
 After completing an activity, click :guilabel:`Mark Done` under the activity entry in the chatter.
 This opens a :guilabel:`Mark Done` pop-up window, where additional notes about the activity can be
@@ -321,8 +361,11 @@ entered. After adding any comments to the pop-up window, click: :guilabel:`Done 
 After the activity is marked complete, an entry with the activity type, title, and any other details
 that were included in the pop-up window are listed in the chatter.
 
-.. image:: chatter/chatter-completed-activity.png
-   :alt: A chatter thread with a completed activity, included additional details.
+.. screenshot:: productivity-chatter-completed-activity
+   :menu: CRM ‣ Sales ‣ My Pipeline
+   :shows: A chatter thread with a completed activity and the feedback logged with it.
+   :module: mail
+   :notes: English UI, light theme, crop to the chatter.
 
 .. _discuss/attach-files:
 
@@ -357,47 +400,24 @@ heading.
    longer opens a file explorer pop-up window. Instead, clicking the |paperclip| toggles the
    :guilabel:`Files` section from visible to invisible in the chatter thread.
 
-   .. image:: chatter/chatter-attach-files.png
-      :alt: A chatter thread with a file attached and the Attach files button added.
+   .. screenshot:: productivity-chatter-attach-files
+      :menu: (any record with a chatter)
+      :shows: A chatter thread with the "Files" section visible, one attached file and the paperclip button in the top bar.
+      :highlight: The paperclip button and the Files section (red frame).
+      :module: mail
+      :notes: English UI, light theme, crop to the chatter.
 
 .. _discuss/integrations:
 
 Integrations
 ============
 
-Beyond the standard features, additional integrations can be enabled to work with the chatter
-feature, specifically *WhatsApp* and *Google Translate*.
+Beyond the standard features, the *Google Translate* integration can be enabled to translate the
+messages of the chatter.
 
 .. important::
-   Before the *WhatsApp* and *Google Translate* integrations can be used with the chatter, they
-   **must** be configured. Step-by-step instructions on how to set-up each of these features can be
-   found in the documentation below:
-
-   - :doc:`WhatsApp <../whatsapp>`
-   - :doc:`Google Translate <../../general/integrations/google_translate>`
-
-WhatsApp
---------
-
-*WhatsApp* is an instant messaging and voice-over-IP app that allows users to send and receive
-messages, as well as share content.
-
-.. warning::
-   *WhatsApp* is an Odoo Enterprise-only application that does **not** work in the Odoo Community
-   edition. To sign up for an Odoo Enterprise edition, click here: `Odoo Free Trial
-   <https://www.odoo.com/trial>`_.
-
-After *WhatsApp* has been configured and enabled within a database, a :guilabel:`WhatsApp` button is
-added above the chatter composer on any applicable record. If one or more approved *WhatsApp*
-templates are found for that model, clicking this button opens a :guilabel:`Send WhatsApp Message`
-pop-up window.
-
-.. important::
-   *WhatsApp* templates **must** be approved before they can be used. See :ref:`WhatsApp templates
-   <productivity/whatsapp/templates>` for more information.
-
-.. image:: chatter/whats-app-message.png
-   :alt: A send WhatsApp message pop-up window.
+   Before it can be used, the integration **must** be configured. Step-by-step instructions can be
+   found in :doc:`../../general/integrations/google_translate`.
 
 Google Translate
 ----------------
@@ -419,15 +439,142 @@ To translate a user's text from another language, click the |ve| menu to the rig
 Then, select :guilabel:`Translate`. The content translates to the language set in the :doc:`user's
 preferences <../../general/users/language/>`.
 
-.. image:: chatter/chatter-translate-message.png
-   :alt: alt text
+.. screenshot:: productivity-chatter-translate
+   :menu: (any record with a chatter)
+   :shows: The dropdown menu of a chatter message with the "Translate" option, and the translated text below the original message.
+   :highlight: The "Translate" option (red frame).
+   :module: mail
+   :notes: English UI, light theme, crop to the chatter.
 
 .. important::
    Using the *Google Translate* API **requires** a current billing account with `Google
    <https://myaccount.google.com/>`_.
 
+.. _discuss/chatter-extensions:
+
+Chatter extensions
+==================
+
+Several modules extend the standard chatter.
+
+Chatter position
+----------------
+
+Each user can choose where the chatter is displayed on form views. In
+:menuselection:`Preferences`, set :guilabel:`Chatter Position` to :guilabel:`Side` (next to the
+form) or :guilabel:`Bottom` (under the form).
+
+.. note::
+   Requires the *MuK Chatter* (``muk_web_chatter``) module.
+
+Email delivery tracking
+-----------------------
+
+When an email is sent from the chatter, its delivery status is tracked and displayed next to the
+message: :guilabel:`Sent`, :guilabel:`Delivered`, :guilabel:`Opened`, :guilabel:`Deferred`,
+:guilabel:`Bounced`, :guilabel:`Soft bounced`, :guilabel:`Rejected`, :guilabel:`Spam`,
+:guilabel:`Unsubscribed`, or :guilabel:`Error`. Click the status to see the tracking events of that
+email, including the reported error.
+
+The complete list is available to administrators in :menuselection:`Settings --> Technical -->
+Email --> Tracking emails` and :guilabel:`Tracking events`. In :menuselection:`Settings --> General
+Settings --> Discuss`, the retention of these records can be limited with the maximum age in days.
+
+.. note::
+   Requires the *Email tracking* (``mail_tracking``) module.
+
+Reply to a specific message
+---------------------------
+
+Click :guilabel:`Reply` on a chatter message to open the composer with the original message quoted,
+so that the answer keeps its context.
+
+.. note::
+   Requires the *Mail Message Reply* (``mail_quoted_reply``) module.
+
+Preview email attachments
+-------------------------
+
+Emails attached to a record as `.eml` files open directly in the file viewer, like a PDF, instead of
+being downloaded: the header block and the body are displayed, with the embedded images.
+
+.. note::
+   Requires the *Mail Attachment EML Preview* (``mail_attachment_eml_preview``) module.
+
+Notify followers or not
+-----------------------
+
+In the full composer, the :guilabel:`Notify Followers` checkbox decides whether the message is also
+sent to the followers of the record, or only to the recipients explicitly listed. The same option is
+available when sending an invoice from the :guilabel:`Send` window of the Invoicing app.
+
+.. note::
+   Requires the *Mail Follower Notification* (``eyssen_mail_follower_notification``) module, and,
+   for invoices, *Mail Follower Notification - Invoicing*
+   (``eyssen_mail_follower_notification_account``).
+
+.. screenshot:: productivity-chatter-notify-followers
+   :menu: (any record with a chatter)
+   :shows: The full composer with the "Notify Followers" checkbox next to the recipients.
+   :highlight: The "Notify Followers" checkbox (red frame).
+   :module: eyssen_mail_follower_notification
+   :notes: English UI, light theme, crop to the composer.
+
+.. _discuss/chatter-cc-bcc:
+
+Cc and Bcc recipients
+---------------------
+
+In the standard full composer, all recipients are entered in a single :guilabel:`Recipients` field.
+With the *Email CC and BCC* module (`mail_composer_cc_bcc`), the full composer has two additional
+fields, :guilabel:`Cc` and :guilabel:`Bcc`, in which contacts can be selected (or created on the
+fly from an email address):
+
+- the :guilabel:`Recipients` and the :guilabel:`Cc` contacts appear as such, in the *To* and *Cc*
+  headers, in the email received by every recipient;
+- the :guilabel:`Bcc` contacts receive a copy of the email, but their address is not disclosed to
+  the other recipients.
+
+The two fields are available when sending a message from the chatter of any record, and in the
+composers based on it (e.g., sending a quotation). They are not displayed when logging an internal
+note.
+
+Default values can be prepared in two places:
+
+- on the company: go to :menuselection:`Settings --> Users & Companies --> Companies`, open the
+  company, and select contacts in the :guilabel:`Default Cc` and :guilabel:`Default Bcc` fields,
+  under :guilabel:`Email`. These contacts are pre-filled in every email composed for that company,
+  e.g., to archive all outgoing emails in a dedicated mailbox with a default Bcc contact;
+- on an :doc:`email template <../../general/companies/email_template>`: in addition to the standard
+  :guilabel:`Cc` field, a :guilabel:`Bcc` field is available in the :guilabel:`Email Configuration`
+  tab. When the template is selected in the composer, the addresses of these two fields are matched
+  with the existing contacts, which are then added to the :guilabel:`Cc` and :guilabel:`Bcc`
+  fields of the composer.
+
+.. screenshot:: productivity-chatter-cc-bcc
+   :menu: (any record with a chatter) ‣ Send message ‣ Expand full composer
+   :shows: The full composer with the Recipients field followed by the "Cc" and "Bcc" tag fields, each containing one contact with its email address.
+   :highlight: The "Cc" and "Bcc" fields (red frame).
+   :data: Recipient "Deco Addict"; Cc "Douglas Fletcher"; Bcc "Archive mailbox <archive@yourcompany.example>".
+   :module: mail_composer_cc_bcc
+   :notes: English UI, light theme, crop to the composer.
+
+Archive and restore log
+-----------------------
+
+When a record is archived or restored, the standard chatter only keeps a trace if the
+:guilabel:`Active` field of the model is tracked, which is rarely the case. With the *Chatter: Log
+Archive/Restore* module (`eyssen_chatter_log_all_state_chnage`), a note such as *“Deco Addict” was
+archived.* or *“Deco Addict” was restored.* is logged in the chatter of every record that has one,
+with the user and the date of the operation. Models that already track the field are left
+unchanged, so that the operation is not logged twice.
+
+.. note::
+   To install the module, go to :menuselection:`Settings --> eYssen ERP`, and, in the
+   :guilabel:`General Modules` section, enable :guilabel:`Chatter: Log Archive/Restore (no duplicate
+   with tracking)`.
+
 .. seealso::
    - :doc:`Discuss <../discuss>`
    - :doc:`Discuss Channels <../discuss/team_communication/>`
    - :doc:`Activities <../../essentials/activities>`
-   - :doc:`WhatsApp <../whatsapp>`

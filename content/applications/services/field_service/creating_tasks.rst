@@ -2,29 +2,51 @@
 Creating field service tasks
 ============================
 
-Tasks in Odoo Field Service can be created manually or automatically, including from sales orders or
-helpdesk tickets.
+An intervention is an ordinary :doc:`project task <../project/tasks/task_creation>` that belongs to
+a project with a :ref:`field service category <field_service/category>`. It can be created manually
+or automatically from a sales order.
 
 Manual task creation
 ====================
 
-To create a new field service task:
+#. Open the **Project** app and go to the field service project.
+#. Click :guilabel:`New`, or use the list view of :menuselection:`Project --> My Tasks`.
+#. Fill in the task title, the :guilabel:`Customer`, and the :guilabel:`Location`.
+#. Add the planned date, the assignees, and the :guilabel:`Allocated Hours`, then save.
 
-#. Open the Field service app and go to :menuselection:`Field Service --> All Tasks --> All Tasks`.
-#. Click :guilabel:`New`.
-#. Fill in the task title, :guilabel:`Customer` and any other :ref:`optional field <task_creation/task-configuration>`,
-   then save manually.
+.. _field_service/location:
+
+Intervention location
+=====================
+
+The :guilabel:`Location` field holds the address where the work is performed. It is **required** on
+tasks of a field service project.
+
+The selectable values are the customer chosen in the :guilabel:`Customer` field and that customer's
+child contacts. This makes it possible to keep the invoicing partner in :guilabel:`Customer` and
+still point the technician at the right site, shop, or building of that customer.
+
+.. tip::
+   Create the sites of a customer as child contacts of type :guilabel:`Address` on the customer
+   form. They then become available in the :guilabel:`Location` field of every intervention for
+   that customer.
+
+.. screenshot:: services-field-service-task-location
+   :menu: Project ‣ (field service project) ‣ (open a task)
+   :shows: A field service task form; the Customer field holds a company and the Location field one of its child addresses.
+   :highlight: The Location field (red frame).
+   :data: Customer "Deco Addict" with child address "Deco Addict, Warehouse Budapest".
+   :module: eyssen_project_fsm
+   :notes: English UI, light theme, 1440px width, crop to the task header fields.
 
 Task creation from a sales order
 ================================
 
-This feature allows for field service tasks to be automatically created from a sales order. When you
-create a quotation with the :ref:`service product <sales/invoicing/configured-service-product>`
-and confirm it, a task is automatically created in your Field Service project. Click the
-:guilabel:`Tasks` smart button to access it from the sales order.
+When a quotation containing a :ref:`service product <sales/invoicing/configured-service-product>`
+configured to create a task is confirmed, the task is created in the project set on the product.
+Point that product at your field service project to have interventions created directly by the
+sales team. Click the :guilabel:`Tasks` smart button on the sales order to open them.
 
-Task creation from a helpdesk ticket
-====================================
-
-If you have the Helpdesk app installed, you can :ref:`create field service tasks from a helpdesk
-ticket <helpdesk/field>`.
+.. seealso::
+   - :doc:`../project/tasks/task_creation`
+   - :doc:`worksheets`

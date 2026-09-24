@@ -14,8 +14,13 @@ To create a new channel, navigate to the :menuselection:`Discuss` app, and then 
 :icon:`fa-plus` :guilabel:`(plus)` icon next to the :guilabel:`Channels` heading in the left-side
 menu.
 
-.. image:: team_communication/create-new-channel.png
-   :alt: View of discuss's sidebar and a channel being created in Odoo Discuss.
+.. screenshot:: productivity-discuss-create-channel
+   :menu: Discuss
+   :shows: The Discuss sidebar with the Channels section and a new channel being created.
+   :highlight: The channel creation field (red frame).
+   :data: Channel "sales-team".
+   :module: mail
+   :notes: English UI, light theme, 1440px width.
 
 The channel's :guilabel:`Group Name`, :guilabel:`Description`, and :guilabel:`Privacy` settings can
 be modified by clicking on the channel's settings, represented by a :icon:`fa-cog`
@@ -27,8 +32,13 @@ Privacy tab
 To control which users can join a channel, open the channel's setting page and navigate to the
 :guilabel:`Privacy` tab.
 
-.. image:: team_communication/channel-settings.png
-   :alt: View of a channel's settings form in Odoo Discuss.
+.. screenshot:: productivity-discuss-channel-settings
+   :menu: Discuss
+   :shows: A channel settings form with the Group Name, Description, Privacy and Authorized Group fields.
+   :highlight: The "Privacy" and "Authorized Group" fields (red frame).
+   :data: Channel "sales-team".
+   :module: mail
+   :notes: English UI, light theme, 1440px width.
 
 To limit access of the channel to a specific group, select an option from the :guilabel:`Authorized
 Group` drop-down menu.
@@ -56,8 +66,12 @@ channel, clicking the :icon:`fa-user-plus` :guilabel:`(add user)` icon in the to
 the dashboard, and finally clicking :guilabel:`Invite to Channel` once all the users have been
 added.
 
-.. image:: team_communication/invite-channel.png
-   :alt: View of Discuss' option to invite members in Odoo Discuss.
+.. screenshot:: productivity-discuss-invite-members
+   :menu: Discuss
+   :shows: The invite window of a channel, with the member search field and the invite button.
+   :data: Channel "sales-team".
+   :module: mail
+   :notes: English UI, light theme, 1440px width.
 
 Quick search bar
 ================
@@ -66,8 +80,12 @@ Once at least 20 channels, direct messages, or live chat conversations are pinne
 :guilabel:`Quick search…` bar is displayed. This feature is a convenient way to filter conversations
 and find relevant communications.
 
-.. image:: team_communication/quick-search.png
-   :alt: View of the Discuss' sidebar emphasizing the quick search bar in Odoo Discuss.
+.. screenshot:: productivity-discuss-quick-search
+   :menu: Discuss
+   :shows: The Discuss sidebar with the quick search bar filtering the channel list.
+   :highlight: The quick search bar (red frame).
+   :module: mail
+   :notes: English UI, light theme, 1440px width.
 
 Finding channels
 ----------------
@@ -92,8 +110,12 @@ up in the lower right corner of the screen.
 Users are able to contribute to this group channel by typing messages in window and pressing
 *enter*.
 
-.. image:: team_communication/chatter-channel.png
-   :alt: Channel linked in chatter.
+.. screenshot:: productivity-discuss-channel-in-chatter
+   :menu: (any record with a chatter)
+   :shows: A chatter message in which a channel is mentioned and rendered as a link.
+   :highlight: The channel link (red frame).
+   :module: mail
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`../discuss`

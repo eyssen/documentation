@@ -21,9 +21,13 @@ Upon checkout or when paying a bill online, you can choose the payment outcome w
 payment provider. To do so, click on the :guilabel:`Payment Status` drop-down menu and select the
 desired outcome.
 
-.. image:: demo/demo-payment-outcome.png
-   :align: center
-   :alt: Payment status outcomes.
+.. screenshot:: finance-payment-providers-demo-demo-payment-outcome
+   :menu: (eCommerce checkout or customer portal) ‣ Payment ‣ Demo
+   :shows: The checkout payment step with the "Demo" payment method selected and its "Payment Status" drop-down open, listing the possible outcomes (Success, Pending, Cancelled, Error).
+   :highlight: The "Payment Status" drop-down.
+   :data: Demo provider in Test Mode.
+   :module: payment_demo
+   :notes: English UI, light theme, 1440px width.
 
 Transaction state
 =================
@@ -34,6 +38,10 @@ transaction straight from its form view. To access a transaction's form view, ac
 Configuration --> Payment Transactions`. Then, change the status of a transaction by clicking on the
 state bar (:guilabel:`Draft, Pending, Authorized, Confirmed, Cancelled, Error`).
 
-.. image:: demo/demo-view-form.png
-   :align: center
-   :alt: Transaction's status bar.
+.. screenshot:: finance-payment-providers-demo-demo-view-form
+   :menu: Accounting ‣ Configuration ‣ Payment Transactions ‣ (a demo transaction)
+   :shows: A payment transaction form (developer mode) of the Demo provider in "Pending" state with the clickable status bar Draft / Pending / Authorized / Confirmed / Cancelled / Error.
+   :highlight: The status bar.
+   :data: Transaction reference S00042-1, provider Demo.
+   :module: payment_demo
+   :notes: English UI, light theme, 1440px width.

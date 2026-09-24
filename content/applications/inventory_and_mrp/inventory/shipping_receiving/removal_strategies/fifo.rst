@@ -16,9 +16,11 @@ retention of specific styles.
    strategy prioritizes lots that have been in stock the longest. So, products received on August
    1st are selected first for picking.
 
-   .. image:: fifo/fifo-example.png
-      :align: center
-      :alt: Illustration of FIFO selecting the oldest products in stock.
+   .. screenshot:: removal-strategies-fifo-example
+      :menu: (diagram)
+      :shows: A schematic drawing of a shelf of identical boxes labeled with arrival dates, with an arrow showing the oldest box leaving first.
+      :module: stock
+      :notes: Simple schematic drawing, no Odoo UI.
 
 .. seealso::
    :ref:`Lot/serial number setup details <inventory/warehouses_storage/lots-setup>`
@@ -39,9 +41,12 @@ On` field shows the lot/serial number creation date, which is, essentially, the 
    Serial number `00000000500` of the product, `Cabinet with Doors`, arrived on December 29th, as
    displayed in the :guilabel:`Created On` field.
 
-   .. image:: fifo/created-on.png
-      :align: center
-      :alt: Display arrival date of a lot for an item.
+   .. screenshot:: removal-strategies-fifo-created-on
+      :menu: Inventory app ‣ Products ‣ Lots/Serial Numbers
+      :shows: The Lots/Serial Numbers list with the "Created On" column shown, so the arrival date of each lot of the same product is visible.
+      :highlight: The "Created On" column (red frame).
+      :module: stock
+      :notes: English UI, light theme, 1440px width.
 
 Workflow
 ========
@@ -92,6 +97,9 @@ In the :guilabel:`Open: Stock move` pop-up window, the :guilabel:`Pick from` fie
 the quantities to fulfill the :guilabel:`Demand` are picked from. Since the order demanded six
 shirts, all five shirts from `LOT1`, and one shirt from `LOT2`, are selected.
 
-.. image:: fifo/white-shirt-picking.png
-   :align: center
-   :alt: Two lots being reserved for a sales order with the FIFO strategy.
+.. screenshot:: removal-strategies-fifo-white-shirt-picking
+   :menu: Inventory ‣ Delivery Orders
+   :shows: The detailed operations of a delivery order line, with the "Pick From" column showing two lots reserved, the oldest first.
+   :data: Product "White shirt", lots 000001 and 000002.
+   :module: stock
+   :notes: English UI, light theme, 1440px width.

@@ -44,9 +44,12 @@ The removal date takes this expiration date, and subtracts the number of days sp
    - :guilabel:`Expiration Date`: `30` days after receipt
    - :guilabel:`Removal Date`: `15` days before expiration date
 
-   .. image:: fefo/user-set-date.png
-      :align: center
-      :alt: Display expiration and removal dates set on the product form.
+   .. screenshot:: removal-strategies-fefo-user-set-date
+      :menu: Inventory ‣ Products ‣ Lots/Serial Numbers
+      :shows: A lot form with the "Dates" tab open, showing the Expiration Date and Removal Date fields filled in.
+      :highlight: The "Removal Date" field (red frame).
+      :module: product_expiry
+      :notes: English UI, light theme, 1440px width.
 
    A shipment of Eggs arrive at the warehouse on January 1st. So, the expiration date of the Eggs is
    **January 31st** (Jan 1st + 30). By extension, the removal date is **January 16th** (Jan 31 -
@@ -60,10 +63,11 @@ To view the expiration dates of items in stock, navigate to the product form, an
 Next, click the additional options icon, located on the far-right, and select the columns:
 :guilabel:`Expiration Date` and :guilabel:`Removal Date`.
 
-.. image:: fefo/removal-date.png
-   :align: center
-   :alt: Show expiration dates from the inventory adjustments model accessed from the *On Hand*
-         smart button from the product form.
+.. screenshot:: removal-strategies-fefo-date
+   :menu: Inventory ‣ Products ‣ Products
+   :shows: The inventory adjustment list opened from a product's "On Hand" smart button, with the Expiration Date column shown for each lot.
+   :module: product_expiry
+   :notes: English UI, light theme, 1440px width.
 
 Workflow
 ========
@@ -80,7 +84,6 @@ Strategy` is set to :guilabel:`First Expired, First Out (FEFO)`.
 .. seealso::
    - :ref:`Set up force removal strategy <inventory/warehouses_storage/removal-config>`
    - :ref:`Enable lots tracking <inventory/warehouses_storage/lots-setup>`
-   - `Odoo Tutorials: Perishable Products <https://www.odoo.com/slides/slide/5324/share>`_
 
 .. list-table::
    :header-rows: 1
@@ -121,6 +124,10 @@ Since the order demanded six Cartons of eggs, using the :abbr:`FEFO (First Expir
 removal strategy, all five Cartons from `LOT1`, with the removal date of February 26th, are picked.
 The remaining Carton is selected from `LOT2`, which has a removal date of March 4th.
 
-.. image:: fefo/eggs-picking.png
-   :align: center
-   :alt: The stock moves window that shows the lots to be removed using FEFO.
+.. screenshot:: removal-strategies-fefo-eggs-picking
+   :menu: Inventory ‣ Delivery Orders
+   :shows: The detailed operations of a delivery order line, with the "Pick From" column showing the lots with the earliest removal dates first.
+   :highlight: The "Pick From" column (red frame).
+   :data: Product "Egg" with three lots of different expiration dates.
+   :module: product_expiry
+   :notes: English UI, light theme, 1440px width.

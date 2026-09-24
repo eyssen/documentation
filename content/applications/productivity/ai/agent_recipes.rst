@@ -231,8 +231,9 @@ Recipe D — Accounts payable document helper (trusted finance)
 
 **Goal:** Extract and complete vendor bill lines from PDFs / empty drafts using
 the factory skill ``vendor_bill_from_documents`` — either as an interactive
-chat for accountants, or as a **scheduled autonomous agent** that processes a
-queue and leaves drafts for human review.
+chat for accountants, or as a **scheduled autonomous agent** that scouts
+candidate ids and processes each bill in its own child run, leaving drafts
+for human review.
 
 Shared constraints (chat and agent)
 -----------------------------------
@@ -276,9 +277,10 @@ Variant D1 — Interactive chat (accountant as themselves)
 Variant D2 — Scheduled autonomous AP agent
 ------------------------------------------
 
-**Goal:** Hourly (or similar) standing task: find draft ``in_invoice`` with
-attachments but empty lines (and/or new document inbox items), run
-``vendor_bill_from_documents``, leave draft bills for finance.
+**Goal:** Hourly (or similar) standing task: find draft ``in_invoice``
+candidates (attachment + empty lines, and/or wrong currency), **queue**
+their ids, and let isolated child runs apply
+``vendor_bill_from_documents`` to one bill each. Leave drafts for finance.
 
 1. Dedicated narrow user (Accounting read/write on vendor bills only; no
    Settings, no AI Administrator, no API keys).
@@ -294,13 +296,19 @@ attachments but empty lines (and/or new document inbox items), run
      because** the skill never posts and the agent never pays — risk stays at
      “wrong draft lines”, not “posted garbage”. Use *confirm* if you want every
      line change to wait for the supervisor;
-   - standing instruction: load ``vendor_bill_from_documents``, process the
-     AP queue, summarise filled / NAV-merged / skipped counts, never post,
-     never invent partners/taxes/accounts.
+   - standing :guilabel:`Instruction` (scout): search candidate integer
+     ids only — do not read PDFs — call ``queue_work_items``
+     (``account.move``, batches of 200), report queued/skipped counts,
+     stop, never post;
+   - :guilabel:`Work Item Instruction` (child): the AP playbook for
+     ``{model}`` id ``{id}`` only — never ``queue_work_items``, never
+     post, never invent partners/taxes/accounts. See
+     :ref:`ai/agents/work-items`.
 6. Channel rules only if humans also address the agent; pure cron tasks need no
    public channel audience.
-7. Supervisor watches :menuselection:`AI --> Agents --> Runs` and Accounting
-   drafts; when *confirm* is used, approval To-Dos land on the **bill** (see
+7. Supervisor watches :menuselection:`AI --> Agents --> Work Items` and
+   :menuselection:`AI --> Agents --> Runs`, plus Accounting drafts; when
+   *confirm* is used, approval To-Dos land on the **bill** (see
    :ref:`ai/agents/task-write-mode`).
 
 .. danger::

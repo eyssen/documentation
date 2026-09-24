@@ -23,8 +23,12 @@ Methods`.
    #. Scroll to the :guilabel:`Shipping` section and enable the :guilabel:`Delivery Methods` feature
       by checking the corresponding checkbox.
 
-   .. image:: new_delivery_method/enable-delivery.png
-      :alt: The Delivery Methods feature enabled in the settings.
+   .. screenshot:: setup-configuration-new-delivery-method-enable
+      :menu: Inventory ‣ Configuration ‣ Settings
+      :shows: The Inventory settings page scrolled to "Shipping", with the "Delivery Methods" checkbox enabled.
+      :highlight: The "Delivery Methods" checkbox (red frame).
+      :module: delivery
+      :notes: English UI, light theme, 1440px width.
 
 .. _inventory/shipping_receiving/delivery-product:
 
@@ -36,8 +40,8 @@ a form to provide details about the shipping provider, including:
 - :guilabel:`Website`: configure shipping methods for an **eCommerce** page. Select the applicable
   website from the drop-down menu, or leave it blank to apply the method to all web pages. This
   field only appears when the **eCommerce** app is enabled.
-- :guilabel:`Provider` (*Required field*): choose the delivery service, like FedEx, if using a
-  :ref:`third-party carrier <inventory/shipping/third_party>`. Ensure the integration with the
+- :guilabel:`Provider` (*Required field*): choose the delivery service, like GLS, if using a
+  :ref:`carrier connector <inventory/shipping/third_party>`. Ensure the integration with the
   shipping carrier is properly installed and select the provider from the drop-down menu. For more
   details on configuring custom shipping methods, such as :ref:`fixed price
   <inventory/shipping/fixed>` or :ref:`based on rules <inventory/shipping/rules>` options, refer to
@@ -56,6 +60,9 @@ a form to provide details about the shipping provider, including:
 - :guilabel:`Tracking Link`: This option adds a link to the portal so the customer can track their
   delivery. When a custom carrier is added in a delivery order, the tracking button is enabled, and
   the link directs to the tracking portal with that URL.
+- :guilabel:`Carrier Description`: a free text shown to the customer on the sales order and in the
+  sales confirmation e-mail, for instance delivery instructions the customer should follow. It is
+  translatable, so each customer sees it in their own language.
 
 .. example::
    To set up `$200` flate-rate shipping, fill in the following fields:
@@ -65,8 +72,12 @@ a form to provide details about the shipping provider, including:
    - :guilabel:`Fixed Price`: `200`
    - :guilabel:`Delivery Product`: :guilabel:`Furniture Delivery (manual)`
 
-   .. image:: new_delivery_method/sample-delivery-method.png
-      :alt: Set up a delivery method with a fixed price of 200.
+   .. screenshot:: setup-configuration-new-delivery-method-sample
+      :menu: Inventory ‣ Configuration ‣ Delivery Methods
+      :shows: A delivery method form with Provider set to "Fixed Price" and a fixed price entered.
+      :data: Delivery method "Furniture Delivery (Manual)", fixed price 200.
+      :module: delivery
+      :notes: English UI, light theme, 1440px width.
 
 .. _inventory/shipping_receiving/availability:
 
@@ -109,8 +120,11 @@ To enable free shipping if the amount of the order exceeds a specified amount, c
    - :guilabel:`Free if order amount is above`: `$100.00`
    - :guilabel:`Delivery Product`: `[SHIP] Flat`
 
-   .. image:: new_delivery_method/new-shipping-method.png
-      :alt: Example of filling out a shipping method.
+   .. screenshot:: setup-configuration-new-delivery-method-shipping
+      :menu: Inventory ‣ Configuration ‣ Delivery Methods
+      :shows: A filled-in delivery method form showing the Shipping Method name, Provider, Company, Delivery Product and Margin on Rate fields.
+      :module: delivery
+      :notes: English UI, light theme, 1440px width.
 
 .. _inventory/shipping/rules:
 
@@ -135,8 +149,12 @@ Once finished, click either :guilabel:`Save & New` to add another rule, or :guil
    To charge customers $20 in shipping for orders with five or fewer products, set the
    :guilabel:`Condition` to `Quantity <= 5.00`, and the :guilabel:`Delivery Cost` to `$20`.
 
-   .. image:: new_delivery_method/pricing-rule.png
-      :alt: Display window to add a pricing rule. Set a condition and delivery cost.
+   .. screenshot:: setup-configuration-new-delivery-method-pricing-rule
+      :menu: Inventory ‣ Configuration ‣ Delivery Methods
+      :shows: The "Create Pricing Rules" pop-up window of a "Based on Rules" delivery method, with a condition and a delivery cost entered.
+      :highlight: The condition and cost fields (red frame).
+      :module: delivery
+      :notes: English UI, light theme, 1440px width.
 
 To restrict shipping to specific destinations on the **eCommerce** website, in the shipping method
 form, navigate to the :guilabel:`Destination Availability` tab and define the :guilabel:`Countries`,
@@ -160,8 +178,12 @@ Shipping cost is the :guilabel:`Delivery cost` specified in the rule that satisf
 
    :guilabel:`Margin on Rate` is `10%` and :guilabel:`Additional margin` is `$9.00`.
 
-   .. image:: new_delivery_method/delivery-cost-example.png
-      :alt: Show example of "Based on rules" shipping method with margins configured.
+   .. screenshot:: setup-configuration-new-delivery-method-cost-example
+      :menu: Inventory ‣ Configuration ‣ Delivery Methods
+      :shows: A "Based on Rules" delivery method with its pricing rules listed and the margin fields filled in.
+      :highlight: The margin fields (red frame).
+      :module: delivery
+      :notes: English UI, light theme, 1440px width.
 
    When the first rule is applied, the delivery cost is $31 (20 + (0.1 * 20) + 9). When the second
    rule is applied, the delivery cost is $64 (50 + (0.1 * 50) + 9).
@@ -192,10 +214,12 @@ To set up routes, go to :menuselection:`Inventory app --> Configuration --> Rout
 On the route form, in the :guilabel:`Applicable On` section, tick the :guilabel:`Shipping Methods`
 checkbox.
 
-.. figure:: new_delivery_method/shipping-route.png
-   :alt: Routes form with the Shipping Methods checkbox selected.
-
-   Routes form with the :guilabel:`Shipping Method` checkbox ticked.
+.. screenshot:: setup-configuration-new-delivery-method-shipping-route
+   :menu: Inventory app ‣ Configuration ‣ Routes
+   :shows: A route form with the "Shipping Methods" checkbox ticked under "Applicable On".
+   :highlight: The "Shipping Methods" checkbox (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.
 
 Then, go to :menuselection:`Inventory app --> Configuration --> Delivery Methods`, and select the
 desired shipping method.
@@ -207,5 +231,9 @@ routes from the drop-down menu.
    If the desired route is not selectable, check that the *Shipping Methods* option is enabled in
    the route's *Applicable On* section.
 
-.. image:: new_delivery_method/set-routes.png
-   :alt: Show set routes on shipping method form.
+.. screenshot:: setup-configuration-new-delivery-method-set-routes
+   :menu: Inventory app ‣ Configuration ‣ Delivery Methods
+   :shows: A delivery method form with one or more routes selected in the "Routes" field.
+   :highlight: The "Routes" field (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.

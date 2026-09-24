@@ -5,14 +5,12 @@ Odoo rich-text editor
 =====================
 
 The Odoo rich-text editor allows creating and editing rich-text content in HTML fields, such as the
-:guilabel:`Internal Notes` and :guilabel:`Description` fields, as well as in the :ref:`Knowledge
-articles <knowledge/articles_editing/edit-article>` and the :ref:`Studio report
-editor <studio/pdf-reports/report-editor>`, among others. Start typing or use the
-:ref:`toolbar <essentials/html_editor/toolbar>` or :ref:`powerbox
-<essentials/html_editor/commands>` for formatting and structuring text.
+:guilabel:`Internal Notes` and :guilabel:`Description` fields, email templates, and the chatter's
+full composer, among others. Start typing or use the :ref:`toolbar <essentials/html_editor/toolbar>`
+or :ref:`powerbox <essentials/html_editor/commands>` for formatting and structuring text.
 
 .. tip::
-   Hover over any element in the text (header, table, clipboard, etc.) to reveal the
+   Hover over any element in the text (header, table, banner, etc.) to reveal the
    :icon:`fa-sort` :guilabel:`(drag)` icon. Click and hold the icon to drag and drop the element
    elsewhere in the text.
 
@@ -45,14 +43,26 @@ toolbar and apply any of the following formatting options:
 - :icon:`fa-check-square-o` (:guilabel:`checklist`): Turn the text into a checklist.
 - :icon:`fa-link` (:guilabel:`link`): Insert or edit a URL link to a selected text, and optionally
   upload an image using its file URL.
-- :guilabel:`Translate`: Translate the content in the :doc:`installed languages
-  </applications/general/users/language>`.
+- :guilabel:`Translate`: Translate the selected text with AI into one of the :doc:`installed
+  languages </applications/general/users/language>`.
 - :icon:`fa-magic` :guilabel:`AI` (:guilabel:`ChatGPT`): Get AI-generated suggestions and adjust
   the tone by clicking buttons such as :guilabel:`Correct, Shorten, Lengthen, Friendly,
   Professional`, and :guilabel:`Persuasive`.
 
-.. image:: html_editor/style-and-colors.png
-   :alt: Text editor's toolbox
+.. note::
+   The :guilabel:`Translate` and :guilabel:`AI` options use Odoo SA's AI text generation service
+   (an :doc:`In-App Purchase <in_app_purchase>` service), so they require an internet connection
+   from the server to Odoo SA's services.
+
+.. screenshot:: essentials-html-editor-toolbar
+   :menu: Project ‣ (any task) ‣ Description tab
+   :shows: A selected sentence in the Description field with the floating text editor toolbar
+      (font style, B, I, U, S, font color, background color, font size, lists, checklist, link,
+      translate, AI) above it.
+   :highlight: The toolbar.
+   :data: Demo task with a two-paragraph description.
+   :module: html_editor, project
+   :notes: English UI, crop to the field and the toolbar.
 
 
 .. tip::
@@ -164,8 +174,6 @@ multiple features to insert tables, images, banners, etc.
          * - :guilabel:`Media`
            - :ref:`Insert an image <insert-media>` or icon: :doc:`Search the Unsplash database
              </applications/general/integrations/unsplash>` or upload images, documents, or icons.
-         * - :guilabel:`Clipboard`
-           - Add a clipboard section to store content and reuse it in other apps.
          * - :guilabel:`Upload a file`
            - Add a download box: share images, recordings, or documents that internal users can
              download.
@@ -185,11 +193,6 @@ multiple features to insert tables, images, banners, etc.
          * - :guilabel:`Button`
            - Add a button: Type the label, enter a URL or upload a file, select the button style,
              type, and size, then click :guilabel:`Apply`.
-         * - :guilabel:`Article`
-           - Insert a shortcut to a :doc:`Knowledge article </applications/productivity/knowledge>`.
-         * - :guilabel:`Appointment`
-           - Add a specific appointment: Select one or several appointment type(s) to assign to
-             relevant users, then click :guilabel:`Insert a link`.
          * - :guilabel:`Table Of Content`
            - Highlight the structure (headings): Create a table of content based on the headings.
          * - :guilabel:`Video Link`

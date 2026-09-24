@@ -1,3 +1,6 @@
+:show-content:
+:show-toc:
+
 =============
 Cash register
 =============
@@ -26,8 +29,15 @@ Key features
 - **Cash count on closing**: the drawer can be counted by denomination and closed with an automatic
   discrepancy check.
 
-.. image:: cash_register/cash-register-overview.png
-   :alt: A cash journal card on the Accounting Dashboard with the cash-register action buttons
+.. screenshot:: accounting-cash-register-dashboard-card
+   :menu: Accounting ‣ Dashboard
+   :shows: A cash journal card on the Accounting Dashboard with the :guilabel:`Close Cash Register`,
+      :guilabel:`New Cash-in` and :guilabel:`New Cash-out` buttons next to the standard
+      :guilabel:`Transactions` button.
+   :highlight: The three cash-register buttons (red frame).
+   :data: Demo company "YourCompany HU"; cash journal "Cash (HUF)" with a non-zero balance.
+   :module: eyssen_cashregister, eyssen_accountant
+   :notes: English UI, light theme, 1440px width, crop to the card.
 
 .. note::
    The Cash register is an *eYssen* extension for Hungarian localization. Once the cash journals are

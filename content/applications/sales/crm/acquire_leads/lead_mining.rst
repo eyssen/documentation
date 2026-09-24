@@ -15,9 +15,13 @@ Configuration
 To get started, go to :menuselection:`CRM app --> Configuration --> Settings`, and tick the
 :guilabel:`Lead Mining` checkbox to activate the feature. Then, click :guilabel:`Save`.
 
-.. image:: lead_mining/activate-lead-mining.png
-   :align: center
-   :alt: Activate lead mining in Odoo CRM settings.
+.. screenshot:: sales-crm-lead-mining-setting
+   :menu: CRM ‣ Configuration ‣ Settings
+   :shows: The CRM settings with the "Lead Mining" checkbox enabled in the Lead Generation section.
+   :highlight: The "Lead Mining" setting (red frame).
+   :data: Demo company.
+   :module: crm_iap_mine
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 Generate leads
 ==============
@@ -30,16 +34,24 @@ Lead mining requests are also available through :menuselection:`CRM app --> Conf
 Mining Requests`, or through :menuselection:`CRM app --> Leads --> Leads`, where the
 :guilabel:`Generate Leads` button is also available.
 
-.. image:: lead_mining/generate-leads-button.png
-   :align: center
-   :alt: The Generate Leads button to use the lead mining feature.
+.. screenshot:: sales-crm-lead-mining-button
+   :menu: CRM ‣ Leads ‣ Leads
+   :shows: The Leads list with the "Generate Leads" button next to the New button.
+   :highlight: The "Generate Leads" button (red frame).
+   :data: Demo lead list.
+   :module: crm_iap_mine
+   :notes: English UI, light theme, 1440px width, crop to the button row.
 
 Click the :guilabel:`Generate Leads` button, and a pop-up window appears, offering a variety of
 criteria by which to generate leads.
 
-.. image:: lead_mining/generate-leads-popup.png
-   :align: center
-   :alt: The pop-up window with the selection criteria in order to generate leads in Odoo.
+.. screenshot:: sales-crm-lead-mining-popup
+   :menu: CRM ‣ Leads ‣ Leads ‣ Generate Leads
+   :shows: The "Generate Leads" pop-up with the number of leads, the Companies/Companies and their Contacts choice, the filtering criteria (country, size, industry) and the assignment fields.
+   :highlight: The filtering criteria (red frame).
+   :data: 3 leads, Belgium, 10–50 employees.
+   :module: crm_iap_mine
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 Choose to generate leads for :guilabel:`Companies` to get company information only, or choose
 |CC| to get company information and individual employee contact information.
@@ -74,9 +86,13 @@ additional information regarding the lead, select one from the list, and click t
 In the chatter thread for the lead, additional information is provided. This can include the number
 of employees, the technology used by the company, the timezone, and direct contact information.
 
-.. image:: lead_mining/generated-lead.png
-   :align: center
-   :alt: The chatter thread of a newly generated lead.
+.. screenshot:: sales-crm-lead-mining-generated-lead
+   :menu: CRM ‣ Leads ‣ Leads ‣ (a generated lead)
+   :shows: A generated lead with the company data filled in and the chatter note recording how it was created.
+   :highlight: The chatter note (red frame).
+   :data: A mined lead with company name, address and website.
+   :module: crm_iap_mine
+   :notes: English UI, light theme, 1440px width, crop to the form and chatter.
 
 .. note::
    If :guilabel:`Leads` are **not** enabled for the database, then leads are generated as
@@ -104,14 +120,13 @@ Credits may also be purchased by navigating to the :menuselection:`Settings app`
 :guilabel:`Contacts` section, under the :guilabel:`Odoo IAP` feature, click :guilabel:`View My
 Services`.
 
-.. image:: lead_mining/view-my-services-setting.png
-   :align: center
-   :alt: Buy credits in the Odoo IAP settings.
-
-.. note::
-   Enterprise Odoo users with a valid subscription get free credits to test |IAP| features before
-   purchasing more credits for the database. This includes demo/training databases, educational
-   databases, and one-app-free databases.
+.. screenshot:: sales-crm-lead-mining-iap-credits
+   :menu: Settings ‣ General Settings ‣ Odoo IAP ‣ View My Services
+   :shows: The In-App Purchase services page listing the Lead Generation service with its remaining credit balance and the Buy Credits button.
+   :highlight: The Lead Generation credit balance (red frame).
+   :data: A throw-away account with a small balance.
+   :module: iap
+   :notes: English UI, light theme, 1440px width, crop to the service row.
 
 .. seealso::
    :doc:`/applications/essentials/in_app_purchase`

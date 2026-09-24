@@ -9,10 +9,6 @@ With **Odoo Point of Sale**, run your shops and restaurants easily. The app work
 a web browser, even if you are temporarily offline. Product moves are automatically registered in
 your stock, you get real-time statistics, and your data is consolidated across all shops.
 
-.. seealso::
-   - `Odoo Tutorials: Point of Sale Tutorials <https://www.odoo.com/slides/point-of-sale-28>`_
-   - :doc:`IoT Boxes Documentations </applications/general/iot>`
-
 .. _pos/session-start:
 
 Start a session
@@ -39,8 +35,12 @@ Once an order is completed, proceed to checkout by clicking :guilabel:`Payment`.
 **payment method**, enter the received amount, and click :guilabel:`Validate`. Click
 :guilabel:`New Order` to move on to the next customer.
 
-.. image:: point_of_sale/pos-interface.png
-   :alt: POS session interface.
+.. screenshot:: pos-overview-session-interface
+   :menu: (POS interface) ‣ Register screen
+   :shows: The POS register screen during a sale: the product catalog on the right, three products in the cart on the left with quantities and prices, the total at the bottom, and the "Payment" button.
+   :data: Demo company "YourCompany"; products "Desk Organizer", "Cabinet with Doors", "Conference Chair".
+   :module: point_of_sale
+   :notes: English UI, light theme, 1440px width, full POS screen.
 
 .. tip::
    - You can use both `,` and `.` on your keyboard as decimal separators.
@@ -48,7 +48,9 @@ Once an order is completed, proceed to checkout by clicking :guilabel:`Payment`.
 
 .. note::
    The system can only load a limited number of products for effective opening. Click
-   :guilabel:`Search more` if the desired product is not loaded automatically.
+   :guilabel:`Search more` if the desired product is not loaded automatically. The number of
+   products and customers loaded at the start of a session can be tuned per point of sale; see
+   :ref:`pos/configuration/performance`.
 
 .. _pos/customers:
 
@@ -85,14 +87,21 @@ window in which you can add or modify content for the note.
    Product notes from an :doc:`imported SO <point_of_sale/shop/sales_order>` are displayed
    identically in the cart.
 
-.. image:: point_of_sale/customer-notes.png
-   :alt: Customer note button and notes (SO and POS session) on products in the cart
+.. screenshot:: pos-overview-customer-notes-cart
+   :menu: (POS interface) ‣ Register screen
+   :shows: The cart with two order lines, each showing a customer note underneath the product name; one note comes from an imported sales order, the other was added with the "Customer Note" button.
+   :highlight: The "Customer Note" button and the two notes in the cart (red frame).
+   :module: point_of_sale, pos_sale
+   :notes: English UI, light theme, 1440px width, crop to the cart pane.
 
 Customer notes appear on customers' receipts and invoices similarly to how they appear in the cart,
 under the related product.
 
-.. image:: point_of_sale/notes-receipt.png
-   :alt: Customer receipt with notes from an SO and from the customer note feature
+.. screenshot:: pos-overview-customer-notes-receipt
+   :menu: (POS interface) ‣ Receipt screen
+   :shows: A printed receipt preview where each product line is followed by its customer note.
+   :module: point_of_sale, pos_sale
+   :notes: English UI, light theme, crop to the receipt.
 
 .. _pos/refund:
 
@@ -132,9 +141,12 @@ Manage the cash register
 To add or take out cash from the register, click the **menu icon** in the upper right corner of your
 screen and :guilabel:`Cash In/Out`.
 
-.. image:: point_of_sale/menu-button.png
-   :alt: Dropdown menu to close a POS session, reach the backend, add or take cash out or check
-         orders
+.. screenshot:: pos-overview-hamburger-menu
+   :menu: (POS interface) ‣ hamburger menu
+   :shows: The dropdown opened from the menu icon in the upper right corner, listing "Cash In/Out", "Orders", "Backend" and "Close Session".
+   :highlight: The "Cash In/Out" entry (red frame).
+   :module: point_of_sale
+   :notes: English UI, light theme, crop to the open dropdown.
 
 Doing so opens a pop-up window on which you can select :guilabel:`Cash In` or :guilabel:`Cash Out`,
 enter the amount and the reason, and click :guilabel:`Confirm`.
@@ -159,8 +171,12 @@ and added manually. Then, click :guilabel:`Confirm` or :guilabel:`Discard` to cl
 computed amount is set in the :guilabel:`Counted` column, and the :guilabel:`Money Details` are
 specified in the **Notes** section.
 
-.. image:: point_of_sale/closing-control.png
-   :alt: How to close a POS session.
+.. screenshot:: pos-overview-closing-control
+   :menu: (POS interface) ‣ hamburger menu ‣ Close Session
+   :shows: The closing control window listing each payment method with its expected and counted amount, the cash difference, and the "Close Session" button.
+   :data: One cash and one bank payment method; a small cash difference so the "Money Details" note is visible.
+   :module: point_of_sale
+   :notes: English UI, light theme, 1440px width, crop to the closing control window.
 
 Once you are done controlling the amounts, click :guilabel:`Close Session` to close and go back to
 the **POS dashboard**.
@@ -215,7 +231,6 @@ To get an overview of all orders, regardless of the session, click the vertical 
    point_of_sale/pos_hardware
    point_of_sale/employee_login
    point_of_sale/receipts_invoices
-   point_of_sale/preparation
    point_of_sale/self_order
    point_of_sale/combos
    point_of_sale/shop
@@ -223,5 +238,4 @@ To get an overview of all orders, regardless of the session, click the vertical 
    point_of_sale/pricing
    point_of_sale/payment_methods
    point_of_sale/pos_based_marketing
-   point_of_sale/online_food_delivery
    point_of_sale/reporting

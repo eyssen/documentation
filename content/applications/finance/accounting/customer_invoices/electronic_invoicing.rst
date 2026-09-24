@@ -53,7 +53,8 @@ and enables electronic invoicing transactions without the need to send invoices 
 post.
 
 .. note::
-   - Peppol registration is **free** and available in Odoo Community.
+   - Peppol registration is **free**. The Peppol connection uses the access point service of Odoo
+     S.A. (through the *Odoo Proxy* connection of the `account_peppol` module).
    - Supported formats for sending documents include **BIS Billing 3.0, XRechnung CIUS, and
      NLCIUS**.
    - | The following **countries** are eligible for **Peppol registration in Odoo**:
@@ -87,9 +88,7 @@ to the :guilabel:`PEPPOL Electronic Invoicing` section. Then, follow these steps
       (open the "Participant Identifier Schemes" as HTML page)
 
 #. Select another purchase journal in the :guilabel:`Incoming Invoices Journal` field if necessary,
-   or a folder name in the :ref:`Document Workspace
-   <accounting/e-invoicing/receive-vendor-bills-multiple-journals>` field if multiple purchase
-   journals are used, and :guilabel:`Save`.
+   and :guilabel:`Save`.
 #. The registration should be automatically activated within a day.
 
 All invoices and vendor bills can then be sent directly using Peppol.
@@ -131,11 +130,16 @@ participant. To do so, follow these steps:
      customer's endpoint identifier, usually a Company Registry or VAT number.
 
 #. To verify the contact, enable :ref:`developer mode <developer-mode>` and click
-   :guilabel:`Verify`. Its :guilabel:`Peppol endpoint verification` is marked as :guilabel:`Valid`
-   if the contact is found on the Peppol network.
+   :guilabel:`Verify`. Its :guilabel:`Peppol status` is marked as :guilabel:`Valid` if the contact is
+   found on the Peppol network.
 
-.. image:: electronic_invoicing/customer-form.png
-   :alt: verify contact registration
+.. screenshot:: accounting-e-invoicing-peppol-contact
+   :menu: Accounting ‣ Customers ‣ Customers ‣ (open a customer) ‣ Accounting tab
+   :shows: "Customer Invoices" section with the "eInvoice format" (BIS Billing 3.0), the Peppol endpoint scheme and identifier, the "Verify" button and the "Peppol status" = Valid.
+   :highlight: The Peppol endpoint fields and the "Peppol status" (red frame).
+   :data: Belgian demo customer registered on Peppol; developer mode enabled.
+   :module: account_peppol
+   :notes: English UI, light theme, 1440px width. Use demo mode (Odoo Demo ID).
 
 .. important::
    While Odoo prefills the endpoint number based on the information available for a contact,
@@ -152,8 +156,8 @@ Posted invoices to be sent via Peppol are marked as :guilabel:`Ready to send` in
 .. note::
    All invoices that are ready to be sent via Peppol can be viewed in the following ways:
 
-   - In the :guilabel:`Invoices` list view, use the :icon:`oi-settings-adjust` (:guilabel:`adjust
-     settings`) button to add the :guilabel:`Peppol status` column or apply the :guilabel:`Peppol
+   - In the :guilabel:`Invoices` list view, use the :icon:`oi-settings-adjust` (optional columns)
+     button to add the :guilabel:`Peppol status` column or apply the :guilabel:`Peppol
      Ready` filter in the search bar.
    - In the Accounting dashboard, click :guilabel:`Peppol ready invoices` on the relevant sales
      journal.
@@ -177,8 +181,13 @@ contact's access point.
    Accounting dashboard and click :guilabel:`Fetch Peppol invoice status` on the corresponding sales
    journal.
 
-   .. image:: electronic_invoicing/peppol-fetch-message-status.png
-      :alt: Fetch invoice Peppol status
+   .. screenshot:: accounting-e-invoicing-peppol-fetch-status
+      :menu: Accounting ‣ Dashboard
+      :shows: Sales journal card with the "Peppol ready invoices" link and the dropdown menu containing "Fetch Peppol invoice status".
+      :highlight: "Fetch Peppol invoice status" (red frame).
+      :data: Belgian demo company registered on Peppol (demo mode).
+      :module: account_peppol
+      :notes: English UI, light theme, crop to the journal card.
 
 .. _accounting/e-invoicing/receive-vendor-bills:
 
@@ -194,32 +203,13 @@ view.
    To manually trigger the scheduled action to retrieve incoming Peppol documents, go to the
    Accounting dashboard and click :guilabel:`Fetch from Peppol` on the main Peppol purchase journal.
 
-   .. image:: electronic_invoicing/peppol-fetch-bills.png
-      :alt: Fetch bills from Peppol
-
-.. _accounting/e-invoicing/receive-vendor-bills-multiple-journals:
-
-Multiple purchase journals
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. note::
-   Make sure the :guilabel:`Documents - Import from Peppol` (`documents_account_peppol`) module is
-   :ref:`installed <general/install>`.
-
-When using multiple purchase journals, new vendor bills can be received via the :doc:`Documents app
-<../../../productivity/documents>`. To do so, follow these steps:
-
-#. In the Documents app, create a specific :ref:`folder <documents/folders>` or enable :ref:`file
-   centralization <documents/file-centralization>` for :guilabel:`Accounting` documents.
-#. Open the Accounting app, go to :menuselection:`Accounting --> Configuration --> Settings`, and
-   scroll to the :guilabel:`PEPPOL Electronic Invoicing` section.
-#. In the :guilabel:`Document Workspace` field, choose the relevant folder.
-#. Use the :guilabel:`Document Tags` field to add tags to incoming Peppol documents for easy
-   identification.
-#. Click :guilabel:`Save`.
-
-Then, open the Document app, navigate to the appropriate folder, select the relevant vendor bills,
-and click :guilabel:`Create Vendor Bill`. The corresponding vendor bill is then created.
+   .. screenshot:: accounting-e-invoicing-peppol-fetch-bills
+      :menu: Accounting ‣ Dashboard
+      :shows: Purchase journal card with the "Fetch from Peppol" link.
+      :highlight: "Fetch from Peppol" (red frame).
+      :data: Belgian demo company registered on Peppol (demo mode).
+      :module: account_peppol
+      :notes: English UI, light theme, crop to the journal card.
 
 .. _accounting/e-invoicing/peppol-deregister:
 
@@ -242,28 +232,19 @@ Country-specific e-invoicing details
 
 Refer to the following pages for detailed, country-specific information:
 
-- :doc:`Argentina <electronic_invoicing/argentina>`
 - :doc:`Austria <electronic_invoicing/austria>`
 - :doc:`Belgium <electronic_invoicing/belgium>`
-- :doc:`Brazil <electronic_invoicing/brazil>`
-- :doc:`Chile <electronic_invoicing/chile>`
-- :doc:`Colombia <electronic_invoicing/colombia>`
 - :doc:`Croatia <electronic_invoicing/croatia>`
-- :doc:`Ecuador <electronic_invoicing/ecuador>`
 - :doc:`Estonia <electronic_invoicing/estonia>`
 - :doc:`Finland <electronic_invoicing/finland>`
-- :doc:`Guatemala <electronic_invoicing/guatemala>`
 - :doc:`Hungary <electronic_invoicing/hungary>`
 - :doc:`Ireland <electronic_invoicing/ireland>`
 - :doc:`Italy <electronic_invoicing/italy>`
 - :doc:`Latvia <electronic_invoicing/latvia>`
 - :doc:`Lithuania <electronic_invoicing/lithuania>`
 - :doc:`Luxembourg <electronic_invoicing/luxembourg>`
-- :doc:`Mexico <electronic_invoicing/mexico>`
 - :doc:`Netherlands <electronic_invoicing/netherlands>`
 - :doc:`Norway <electronic_invoicing/norway>`
-- :doc:`Peru <electronic_invoicing/peru>`
 - :doc:`Romania <electronic_invoicing/romania>`
 - :doc:`Spain <electronic_invoicing/spain>`
 - :doc:`Spain - Basque Country <electronic_invoicing/basque_country>`
-- :doc:`Uruguay <electronic_invoicing/uruguay>`

@@ -6,7 +6,6 @@ Connecting an **Adyen payment terminal** allows you to offer a fluid payment flo
 and ease the work of your cashiers.
 
 .. important::
-   - Adyen payment terminals do not require an **IoT Box**.
    - Adyen terminals can be used in many countries, but not worldwide. Check the `List of countries
      supported by Adyen <https://docs.adyen.com/point-of-sale/what-we-support/supported-languages/>`_.
    - Adyen works only with businesses processing more than **$10 million annually** or invoicing a
@@ -79,7 +78,11 @@ Enable the payment terminal :ref:`in the application settings <configuration/set
 Finally, fill in the mandatory fields with your :ref:`Adyen API key <adyen/api>`, :ref:`Adyen
 Terminal Identifier <adyen/identifier>`, and :guilabel:`Adyen Merchant Account`.
 
-.. image:: adyen/payment-method.png
+.. screenshot:: pos-adyen-payment-method
+   :menu: Point of Sale ‣ Configuration ‣ Payment Methods ‣ New
+   :shows: A payment method form with "Integration" set to "Terminal", "Payment Terminal" set to "Adyen", and the Adyen API key, merchant account and terminal identifier fields filled in.
+   :module: point_of_sale, pos_adyen
+   :notes: English UI, light theme, 1440px width; use throw-away credentials, mask the API key.
 
 Once the payment method is created, you can select it in your POS settings. To do so, go to the
 :ref:`POS' settings <configuration/settings>`, click :guilabel:`Edit`, and add the payment method

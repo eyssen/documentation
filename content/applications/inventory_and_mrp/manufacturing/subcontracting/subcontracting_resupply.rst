@@ -95,9 +95,14 @@ and select the |BoM| for the subcontracted product.
 In the :guilabel:`BoM Type` field, select the :guilabel:`Subcontracting` option. Then, add one or
 more subcontractors in the :guilabel:`Subcontractors` field that appears below.
 
-.. image:: subcontracting_resupply/bom-type.png
-   :align: center
-   :alt: The "BoM Type" field on a BoM, configured to manufacture the product using subcontracting.
+.. screenshot:: manufacturing-subcontracting-resupply-bom-type
+   :menu: Manufacturing app --> Products --> Bills of Materials (open a BoM)
+   :shows: The BoM form, "BoM Type" field set to "Subcontracting", "Subcontractors" field filled in,
+      "Components" tab listing the components to resupply.
+   :highlight: The "BoM Type" and "Subcontractors" fields.
+   :data: Demo company "YourCompany"; BoM subcontracted to vendor "Bolt Subcontracting".
+   :module: mrp_subcontracting
+   :notes: English UI, light theme, 1440px width.
 
 Finally, make sure that all necessary components are specified on the :guilabel:`Components` tab. To
 add a new component, click :guilabel:`Add a line`, select the component in the :guilabel:`Component`
@@ -215,13 +220,14 @@ In addition, a *Resupply Subcontractor* order is created to ship the required co
 subcontractor. This order can also be accessed from the |PO|, by clicking the :guilabel:`Resupply`
 smart button at the top of the page.
 
-.. figure:: subcontracting_resupply/subcontractor-po.png
-   :align: center
-   :alt: A PO for a *Resupply Subcontractor on Order* product, with Resupply and Receipt smart
-         buttons at the top of the page.
-
-   A PO for a *Resupply Subcontractor on Order* product, with Resupply and Receipt smart buttons at
-   the top of the page.
+.. screenshot:: manufacturing-subcontracting-resupply-po
+   :menu: Purchase app --> Orders --> Purchase Orders (open the confirmed PO)
+   :shows: A confirmed PO for a resupply-subcontracting product, "Resupply" and "Receipt" smart
+      buttons visible at the top of the page.
+   :highlight: The "Resupply" smart button.
+   :data: Demo company "YourCompany"; PO to subcontractor "Bolt Subcontracting".
+   :module: mrp_subcontracting, purchase
+   :notes: English UI, light theme, 1440px width, crop to the header.
 
 Process Resupply Subcontractor order
 ------------------------------------

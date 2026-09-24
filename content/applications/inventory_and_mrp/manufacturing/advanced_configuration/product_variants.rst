@@ -17,9 +17,12 @@ setting.
 For more information on configuring product variants, refer to the :doc:`product variants
 <../../../sales/sales/products_prices/products/variants>` documentation.
 
-.. image:: product_variants/product-variants-variants-settings.png
-   :align: center
-   :alt: Selecting "Variants" from Inventory app settings.
+.. screenshot:: manufacturing-product-variants-settings
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Settings page scrolled to "Products"; the "Variants" checkbox ticked.
+   :highlight: The "Variants" checkbox.
+   :module: product
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 Create custom product attributes
 ================================
@@ -31,10 +34,8 @@ The :guilabel:`Attributes` page is accessible either from :menuselection:`Invent
 Configuration --> Settings` by clicking the :guilabel:`Attributes` button, or by clicking
 :menuselection:`Inventory app --> Configuration --> Attributes`.
 
-Once on the :guilabel:`Attributes` page, either click into an existing attribute, or click
-:guilabel:`Create` to create a new one. Clicking :guilabel:`Create` reveals a new, blank form for
-customizing an attribute. For an existing attribute, click :guilabel:`Edit` on its form to make
-changes.
+Once on the :guilabel:`Attributes` page, either click into an existing attribute to edit it, or
+click :guilabel:`New` to create a new one, which opens a blank form for customizing an attribute.
 
 Assign an :guilabel:`Attribute Name`, and choose a category from the :guilabel:`Category` field's
 drop-down menu. Then, select the desired options next to the :guilabel:`Display Type` and
@@ -47,9 +48,12 @@ drop-down menu. Then, select the desired options next to the :guilabel:`Display 
    customization requests upon ordering a custom variant of a product.
 
 .. example::
-   .. image:: product_variants/product-variants-attribute.png
-      :align: center
-      :alt: Product variant attribute configuration screen.
+   .. screenshot:: manufacturing-product-variants-attribute
+      :menu: Inventory ‣ Configuration ‣ Attributes ‣ (attribute)
+      :shows: An attribute form named "Color", Display Type "Color", with three Attribute Values: "Red", "Blue", "Green".
+      :data: Attribute "Color"; values "Red", "Blue", "Green".
+      :module: product
+      :notes: English UI, light theme, 1440px width.
 
 Once all desired :guilabel:`Values` have been added, click :guilabel:`Save` to save the new
 attribute.
@@ -61,8 +65,7 @@ Add product variants on the product form
 
 Created attributes can be applied on specific variants for particular products. To add product
 variants to a product, navigate to the product form by going to :menuselection:`Inventory app -->
-Products --> Products`. To make changes to the product, click :guilabel:`Edit`. Then, click the
-:guilabel:`Variants` tab.
+Products --> Products`, then click the :guilabel:`Variants` tab.
 
 Under the :guilabel:`Attribute` header, click :guilabel:`Add a line` to add a new attribute, and
 select one to add from the drop-down menu.
@@ -73,9 +76,12 @@ attributes that should be added to the product.
 
 Once finished, click :guilabel:`Save` to save changes.
 
-.. image:: product_variants/product-variants-product-form.png
-   :align: center
-   :alt: Product form variants tab with values and attributes.
+.. screenshot:: manufacturing-product-variants-product-form
+   :menu: Inventory ‣ Products ‣ Products ‣ (product) ‣ Variants tab
+   :shows: The Variants tab of a product form with an "Color" attribute line and its values "Red" and "Blue" selected.
+   :data: Product "T-Shirt"; attribute "Color" with values "Red", "Blue".
+   :module: product
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 .. tip::
    :abbr:`BoM (bill of materials)` products with multiple variants that are manufactured in-house
@@ -85,9 +91,9 @@ Once finished, click :guilabel:`Save` to save changes.
 Apply BoM components to product variants
 ========================================
 
-Next, create a new :abbr:`BoM (bill of materials)`. Or, edit an existing one, by going to
-:menuselection:`Manufacturing app --> Products --> Bills of Materials`. Then, click
-:guilabel:`Create` to open a new :guilabel:`Bills of Materials` form to configure from scratch.
+Next, create a new :abbr:`BoM (bill of materials)`, or edit an existing one, by going to
+:menuselection:`Manufacturing app --> Products --> Bills of Materials`. Then, click :guilabel:`New`
+to open a blank :guilabel:`Bills of Materials` form to configure from scratch.
 
 Add a product to the :abbr:`BoM (bill of materials)` by clicking the drop-down menu in the
 :guilabel:`Product` field and selecting the desired product.
@@ -105,9 +111,13 @@ columns. Then, choose the desired values in the :guilabel:`Apply on Variants` co
    not immediately visible, activate it from the additional options menu (three-dots icon, to the
    right of the header row).
 
-.. image:: product_variants/product-variants-apply-on-variants.png
-   :align: center
-   :alt: "Apply on Variants" option on the additional options menu.
+.. screenshot:: manufacturing-product-variants-apply-on-variants
+   :menu: Manufacturing ‣ Products ‣ Bills of Materials ‣ (BoM) ‣ Components tab ‣ settings
+   :shows: The Components tab with the "Apply on Variants" column enabled, a component line restricted to the "Red" variant.
+   :highlight: The "Apply on Variants" column.
+   :data: BoM for "T-Shirt"; component "Red Fabric" applied on variant "Red".
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 Each component can be assigned to multiple variants. Components with no variants specified are used
 in every variant of the product. The same principle applies when configuring operations and
@@ -131,7 +141,8 @@ Sell and manufacture variants of BoM products
 =============================================
 
 To sell and manufacture variants of :abbr:`BoM (bill of materials)` products to order, navigate to
-:menuselection:`Sales app --> Create` to create a new quotation.
+:menuselection:`Sales app --> Orders --> Quotations` and click :guilabel:`New` to create a new
+quotation.
 
 Sell variant of BoM product
 ---------------------------
@@ -147,9 +158,12 @@ From the pop-up window, click the desired attribute options to configure the cor
 product to manufacture. Then, click the green :guilabel:`+` or :guilabel:`-` icons next to the `1`
 to change the quantity to sell and manufacture, if desired.
 
-.. image:: product_variants/product-variants-variant-popup.png
-   :align: center
-   :alt: Configure a product pop-up for choosing variant attributes.
+.. screenshot:: manufacturing-product-variants-variant-popup
+   :menu: Sales ‣ Orders ‣ Quotations ‣ New ‣ Order Lines ‣ Add a product
+   :shows: The "Configure a product" pop-up with attribute options selected (e.g. Color: Red) and a quantity of 1.
+   :data: Product "T-Shirt"; variant "Red".
+   :module: sale, product
+   :notes: English UI, light theme, 1440px width, crop to the dialog.
 
 Once all the specifications have been chosen, click :guilabel:`Add`. This will change the pop-up to
 a second :guilabel:`Configure` pop-up, where available optional products will appear, if they have
@@ -169,20 +183,19 @@ open the :guilabel:`Manufacturing Order` form.
 
 On this form, under the :guilabel:`Components` tab, the appropriate components for the chosen
 variant are listed. And, depending on the variant, different components will be listed. To see any
-mandatory or optional :guilabel:`Operation` steps, click the :guilabel:`Work Orders` tab.
+mandatory or optional operations, click the :guilabel:`Work Orders` tab.
 
-To enter the tablet view work order screen, click the :guilabel:`tablet icon` to the right of the
-row for the desired operation to be completed.
+Process each work order by clicking its :guilabel:`Start` button, then its :guilabel:`Done` button
+once finished (see :doc:`the basic manufacturing workflow <../basic_setup/one_step_manufacturing>`
+for details). Once every work order is done, click :guilabel:`Produce All` at the top of the
+manufacturing order form to complete the order.
 
-From the tablet view, click :guilabel:`Mark as Done` as the operation progresses to complete the
-operation steps.
-
-Alternatively, click the :guilabel:`Mark as Done` button at the top of the manufacturing order form
-to complete the order.
-
-.. image:: product_variants/product-variants-manufacturing-order.png
-   :align: center
-   :alt: Manufacturing order for variant of BoM product.
+.. screenshot:: manufacturing-product-variants-mo
+   :menu: Manufacturing ‣ Operations ‣ Manufacturing Orders ‣ (MO)
+   :shows: A manufacturing order for a specific variant, Components tab listing the variant-specific components.
+   :data: MO for "T-Shirt" variant "Red".
+   :module: mrp
+   :notes: English UI, light theme, 1440px width.
 
 Then, navigate back to the :abbr:`SO (sales order)` via the breadcrumbs at the top of the page.
 

@@ -11,36 +11,52 @@ owned by the company that uses the Odoo database, or by a third party, such as a
 of equipment rentals.
 
 Using Odoo *Maintenance*, it is possible to track individual pieces of equipment, along with
-information about their maintenance requirements. To add a new piece of equipment, navigate to the
-:guilabel:`Maintenance` module, select :menuselection:`Equipments --> Machines & Tools --> Create`,
-and configure the equipment as follows:
+information about their maintenance requirements. To add a new piece of equipment, navigate to
+:menuselection:`Maintenance app --> Equipment`, click :guilabel:`New`, and configure the equipment
+as follows:
 
 - :guilabel:`Equipment Name`: the product name of the piece of equipment
 - :guilabel:`Equipment Category`: the category that the equipment belongs to; for example,
   computers, machinery, tools, etc.; new categories can be created by navigating to
-  :menuselection:`Configuration --> Equipment Categories` and clicking :guilabel:`Create`
+  :menuselection:`Configuration --> Equipment Categories` and clicking :guilabel:`New`
 - :guilabel:`Company`: the company that owns the equipment; again, this can be the company that uses
   the Odoo database, or a third-party company
-- :guilabel:`Used By`: specify if the equipment is used by a specific employee, department, or both;
-  select :guilabel:`Other` to specify both an employee and a department
+- :guilabel:`Owner`: the user considered responsible for the equipment; this field is set
+  automatically once :guilabel:`Used By` is filled out below
+- :guilabel:`Used By`: specify if the equipment is used by a specific :guilabel:`Employee`,
+  :guilabel:`Department`, or :guilabel:`Other`; select :guilabel:`Other` to specify both an employee
+  and a department
 - :guilabel:`Maintenance Team`: the team responsible for servicing the equipment; new teams can be
   created by navigating to :menuselection:`Configuration --> Maintenance Teams` and
-  selecting :guilabel:`Create`; the members of each team can also be assigned from this page
+  selecting :guilabel:`New`; the members of each team can also be assigned from this page
 - :guilabel:`Technician`: the person responsible for servicing the equipment; this can be used to
   assign a specific individual in the event that no maintenance team is assigned or when a specific
-  member of the assigned team should always be responsible for the equipment; any person added to
-  Odoo as a user can be assigned as a technician
+  member of the assigned team should always be responsible for the equipment; any internal user can
+  be assigned as a technician
 - :guilabel:`Used in location`: the location where the equipment is used; this is a simple text
-  field that can be used to specify locations that are not work centers, like an office, for
-  example
-- :guilabel:`Work Center`: if the equipment is used at a work center, specify it here; equipment can
-  also be assigned to a work center by navigating to :menuselection:`Maintenance --> Equipments -->
-  Work Centers`, selecting a work center or creating a new one using the :guilabel:`Create` button,
-  and clicking the :guilabel:`Equipment` tab on the work center form
+  field, useful for equipment that is not tied to a specific piece of machinery, like a laptop or an
+  office
 
-.. image:: add_new_equipment/new-equipment-form.png
-   :align: center
-   :alt: An example of a fully configured new equipment form.
+.. screenshot:: maintenance-add-equipment-form
+   :menu: Maintenance ‣ Equipment ‣ (equipment)
+   :shows: The top part of an equipment form filled out with an "Equipment Name", "Equipment
+     Category", "Company", "Owner", "Used By" set to "Employee" with an "Employee" field shown,
+     "Maintenance Team", "Technician", and "Used in location".
+   :highlight: The "Used By" radio buttons and the "Employee" field that appears below them (red
+     frame).
+   :data: Demo company "YourCompany"; equipment "Full-size vans" in category "Vans", used by
+     employee "Mitchell Admin".
+   :module: maintenance, hr_maintenance
+   :notes: English UI, light theme, 1440px width.
+
+.. tip::
+   Custom fields can be added to an equipment category via the :guilabel:`Properties` widget at the
+   top of the equipment form. Properties are defined per category, from the category form, and only
+   appear on equipment that belongs to that category.
+
+If a serial number is entered on the equipment (see below) that matches an existing lot or serial
+number in the *Inventory* app, a smart button showing that serial number appears at the top of the
+equipment form. Clicking it opens the corresponding lot/serial number record.
 
 Include additional product information
 --------------------------------------
@@ -57,9 +73,12 @@ details about the piece of equipment:
 - :guilabel:`Cost`: the amount the equipment was purchased for
 - :guilabel:`Warranty Expiration Date`: the date on which the equipment's warranty will expire
 
-.. image:: add_new_equipment/new-equipment-product-information.png
-   :align: center
-   :alt: The product information tab for the new piece of equipment.
+.. screenshot:: maintenance-add-equipment-product-info
+   :menu: Maintenance ‣ Equipment ‣ (equipment) ‣ Product Information
+   :shows: The "Product Information" tab with "Vendor", "Vendor Reference", "Model", "Serial
+     Number", "Effective Date", "Cost", and "Warranty Expiration Date" fields filled out.
+   :module: maintenance
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 Add maintenance details
 -----------------------
@@ -83,10 +102,21 @@ frequency of the piece of equipment:
   number is calculated automatically based on the duration of previous maintenance requests, and
   cannot be configured manually.
 
-.. image:: add_new_equipment/new-equipment-maintenance.png
-   :align: center
-   :alt: The maintenance tab for a piece of equipment.
+.. screenshot:: maintenance-add-equipment-metrics
+   :menu: Maintenance ‣ Equipment ‣ (equipment) ‣ Maintenance
+   :shows: The "Maintenance" tab of an equipment form, with the "Expected Mean Time Between
+     Failure", "Mean Time Between Failure", "Estimated Next Failure", "Latest Failure", and "Mean
+     Time To Repair" fields; only "Expected Mean Time Between Failure" is editable, the rest are
+     greyed out.
+   :module: maintenance
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 .. tip::
    To see any open maintenance requests for a piece of equipment, go to the page for the equipment,
    and click the :guilabel:`Maintenance` smart button at the top of the page.
+
+.. seealso::
+   - :doc:`../../services/equipment`
+     for the eYssen *Equipment Management* app (product-facing equipment, measuring devices and
+     printers), which can be linked to a maintenance equipment record from this module: see
+     :doc:`../../services/equipment/integrations`.

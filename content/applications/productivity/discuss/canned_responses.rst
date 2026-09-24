@@ -12,8 +12,12 @@ Canned responses consist of two main components: the *shortcut* and the *substit
 is the keyword or key phrase that is to be replaced. The substitution is the longer message that
 replaces the shortcut.
 
-.. image:: canned_responses/canned-response-sample.png
-   :alt: A live chat conversation using a canned response.
+.. screenshot:: productivity-canned-responses-sample
+   :menu: (live chat conversation)
+   :shows: A conversation in which a canned response has been inserted, replacing the typed shortcut.
+   :data: Shortcut ":greeting".
+   :module: mail
+   :notes: English UI, light theme, 1440px width.
 
 Canned responses are available :ref:`to use <discuss/use-cases>` in **Live Chat** conversations, the
 **Discuss** app, and the *Chatter* composer. This includes direct message conversations, channel
@@ -34,8 +38,13 @@ reveals a new blank line in the list.
 Canned responses consist of two main components, a *shortcut* the user enters, and the
 *substitution* that replaces the shortcut.
 
-.. image:: canned_responses/shortcut-substitution.png
-   :alt: A list of canned responses emphasizing the shortcut and substitution fields.
+.. screenshot:: productivity-canned-responses-list
+   :menu: Discuss ‣ Configuration ‣ Canned Responses
+   :shows: The canned responses list with the Shortcut and Substitution columns filled in for a few entries.
+   :highlight: The "Shortcut" and "Substitution" columns (red frame).
+   :data: Responses ":greeting", ":hours", ":bye".
+   :module: mail
+   :notes: English UI, light theme, 1440px width.
 
 Type a shortcut command in the :guilabel:`Shortcut` field. Next, click on the
 :guilabel:`Substitution` field, and type the message that will replace the shortcut.
@@ -122,8 +131,12 @@ response can still be edited before it is sent.
    To search through the list of available responses, type `:`, followed by the first few letters of
    the shortcut.
 
-   .. image:: canned_responses/canned-responses-using.png
-      :alt: A live chat window with a list of all available canned responses.
+   .. screenshot:: productivity-canned-responses-using
+      :menu: (live chat conversation)
+      :shows: A composer showing the drop-down list of available canned responses after typing a colon.
+      :highlight: The suggestion list (red frame).
+      :module: mail
+      :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`Chatter <chatter>`

@@ -11,9 +11,14 @@ reserved, purchased and in transit, as well as those delivered to customers.
 
 To access the stock report, go to :menuselection:`Inventory app --> Reporting --> Stock`.
 
-.. image:: stock/stock-report.png
-   :align: center
-   :alt: Show the stock report, accessible by going to Inventory > Reporting > Stock.
+.. screenshot:: inventory-stock-report
+   :menu: Inventory ‣ Reporting ‣ Stock
+   :shows: The Stock report with the left search panel (Warehouses, Category) and the Product, Unit Cost,
+      Total Value, On Hand, Free to Use, Incoming and Outgoing columns.
+   :highlight: None.
+   :data: Six or seven storable products, at least one with incoming and outgoing quantities.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, full list view including the search panel.
 
 Navigate the stock report
 =========================
@@ -80,26 +85,22 @@ Search options
         was ticked in the :guilabel:`Point of Sale` section of a product form's :guilabel:`Sales`
         tab. The option is only available when the :guilabel:`Available in POS` checkbox is ticked.
 
-        .. image:: stock/available-in-self-order.png
-           :align: center
-           :alt: In the Sales tab of a product form, showing *Available in Self Order* setting.
+        .. screenshot:: inventory-stock-report-available-in-self
+           :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Sales tab
+           :shows: The "Point of Sale" section of a product form with "Available in POS" ticked and the
+              "Available in Self Order" checkbox that appears below it.
+           :highlight: The "Available in Self Order" checkbox (red frame).
+           :data: A product sold in the Point of Sale.
+           :module: point_of_sale, pos_self_order
+           :notes: English UI, light theme, 1440px width, crop to the "Point of Sale" section.
 
       - :guilabel:`Not available in Self`: display products available in *PoS*, but not available in
         self order.
-
-      .. seealso::
-         `Configure PoS products <https://youtu.be/REbA3TBhFa4>`_
 
       - :guilabel:`Can be Sold`: display products that can be sold to customers. Appears in the
         search because the :guilabel:`Can be Sold` checkbox is ticked on the product form.
       - :guilabel:`Can be Purchased`: display products that can be bought from vendors. Appears in
         the search because the :guilabel:`Can be Purchased` checkbox is ticked on the product form.
-      - :guilabel:`Can be Recurring`: show subscription products, indicated by ticking the
-        :guilabel:`Recurring` checkbox on the product form. Only available with the *Subscription*
-        app activated.
-      - :guilabel:`Can be Rented`: show products that can be loaned to customers for a certain time.
-        Appears in the search because the :guilabel:`Can be Rented` checkbox was ticked on the
-        product form. Only available with the *Rental* app installed.
       - :guilabel:`Can be Subcontracted`: display products that can be produced by a
         third-party manufacturer. Available only with the *Manufacturing* app installed.
       - :guilabel:`Can be Expensed`: show items that can be expensed. Only available with the

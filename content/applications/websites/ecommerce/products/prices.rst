@@ -17,7 +17,6 @@ To add a tax on a product, you can either set a tax in the :guilabel:`Customer T
 
 .. seealso::
    - :doc:`/applications/finance/accounting/taxes`
-   - :doc:`/applications/finance/accounting/taxes/avatax`
 
 .. _ecommerce-price-management-tax-display:
 
@@ -61,14 +60,24 @@ price on the product page, follow these steps:
 .. example::
    Imagine you want to sell a 2-liter bucket of paint for $60, i.e., $30 per liter.
 
-   .. image:: prices/prices-per-unit.png
-      :alt: Cost per unit pricing on the product form.
+   .. screenshot:: ecommerce-prices-prices-per-unit
+      :menu: Sales ‣ Products ‣ Products ‣ (product) ‣ Sales tab
+      :shows: A product form with the Base Unit Count and Base Unit of Measure fields filled in for the price-per-unit display.
+      :highlight: The Base Unit Count and Base Unit of Measure fields (red frame).
+      :data: Product with 0.5 kg content, base unit 'kg'.
+      :module: website_sale
+      :notes: English UI, light theme, 1440px width.
 
    The price per units, in this case per liter, is shown next to the sales price on the
    product page.
 
-   .. image:: prices/price-cost-per-unit-page.png
-      :alt: Unit pricing on the product page.
+   .. screenshot:: ecommerce-prices-price-cost-per-unit-page
+      :menu: (website) ‣ Shop ‣ (product)
+      :shows: A product page showing the price per base unit under the sales price.
+      :highlight: The price per unit (red frame).
+      :data: Product priced EUR 5 with 0.5 kg content.
+      :module: website_sale
+      :notes: English UI, light theme, 1440px width.
 
 .. note::
    The price per unit may be mandatory in some countries.
@@ -124,8 +133,13 @@ Selectable pricelists are useful, for example, when selling products in :doc:`mu
 choose a pricelist using the catalog's pricelist selector located next to the :ref:`search bar
 <ecommerce/catalog/top-bar>`.
 
-.. image:: prices/pricelist-selector.png
-   :alt: Pricelist selector on the ecommerce.
+.. screenshot:: ecommerce-prices-pricelist-selector
+   :menu: (website) ‣ Shop
+   :shows: The shop page header with the pricelist selector drop-down open, listing the selectable pricelists.
+   :highlight: The pricelist selector (red frame).
+   :data: Pricelists 'Public (HUF)' and 'Wholesale (EUR)'.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 To make a pricelist selectable, enable :guilabel:`Selectable`.
 
@@ -171,8 +185,13 @@ Use :ref:`Custom filters <search/custom-filters>` if needed.
 
    `Country Group` + `is not in` + `European Union`
 
-   .. image:: prices/pricelist-country-groups.png
-      :alt: Filter for country group creation.
+   .. screenshot:: ecommerce-prices-pricelist-country-groups
+      :menu: Settings ‣ Technical ‣ Country Groups ‣ New
+      :shows: A country group form with its name and the list of countries it contains.
+      :highlight: The country list (red frame).
+      :data: Country group 'Eurozone' with a few countries.
+      :module: website_sale
+      :notes: English UI, light theme, 1440px width.
 
 .. important::
    - When using GeoIP to determine the appropriate pricelist, **all** pricelists used on the
@@ -219,9 +238,13 @@ assigned pricelist is linked to a different country group.
    pricelist assigned in their contact form. This assignment takes precedence over the country
    group assignation, so the :guilabel:`Loyal Customer Discount` is applied.
 
-   .. image:: prices/pricelists-example.png
-      :alt: An example of various pricelists assigned to a website.
-
+   .. screenshot:: ecommerce-prices-pricelists-example
+      :menu: Website ‣ eCommerce ‣ Pricelists
+      :shows: The eCommerce pricelist list showing which pricelists are available on the website, with their Selectable, Website and Country Groups columns.
+      :highlight: The Selectable and Country Groups columns (red frame).
+      :data: Three pricelists.
+      :module: website_sale
+      :notes: English UI, light theme, 1440px width.
 
 .. _ecommerce/prices/discounts:
 
@@ -249,8 +272,13 @@ If the price of a specific product has been permanently reduced, the strikethrou
 commonly used. This involves showing the new discounted price, with the original price crossed out
 alongside it.
 
-.. image:: prices/price-strikethrough.png
-   :alt: Price strikethrough.
+.. screenshot:: ecommerce-prices-price-strikethrough
+   :menu: (website) ‣ Shop ‣ (product)
+   :shows: A product page where the original price is struck through next to the discounted price.
+   :highlight: The struck-through price (red frame).
+   :data: Product discounted from EUR 100 to EUR 80.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 To display a permanently discounted price, navigate to :menuselection:`Website --> Configuration
 --> Settings`, scroll down to the :guilabel:`Shop - Products`, enable the :guilabel:`Comparison
@@ -267,6 +295,40 @@ Price` option, and :guilabel:`Save`. Then, :ref:`go to the product form
    The :guilabel:`Compare to Price` is not displayed if discounted pricelists apply. If you want to
    use the :guilabel:`Compare to price` with another discount, configure a pricelist with a
    :ref:`promotional code <ecommerce/prices/promotional-code>`.
+
+.. _ecommerce/prices/omnibus:
+
+Lowest price of the last 30 days (Omnibus)
+------------------------------------------
+
+The EU Omnibus Directive requires that, when a price reduction is advertised, the *prior price* is
+also displayed: the lowest price applied during the 30 days before the reduction. The *Website Sale
+Omnibus Price* module (`website_sale_omnibus_price`) computes this price from the product's price
+history and uses it as the strikethrough price on the webshop instead of the
+:guilabel:`Compare to Price`.
+
+To enable it, go to :menuselection:`Website --> Configuration --> Settings`, and in the
+:guilabel:`Omnibus Price Display` block:
+
+- :guilabel:`Show 30-day lowest price`: enables the display for this website.
+- :guilabel:`Lookback period (days)`: the length of the period examined, 30 days by default.
+
+.. screenshot:: ecommerce-prices-omnibus-settings
+   :menu: Website ‣ Configuration ‣ Settings
+   :shows: The Website settings page scrolled to the Omnibus Price Display block, with "Show 30-day lowest price" enabled and the lookback period set to 30 days.
+   :highlight: The Omnibus Price Display block (red frame).
+   :data: Website "My Website".
+   :module: website_sale_omnibus_price
+   :notes: English UI, light theme, 1440px width, crop to the block.
+
+When a product is on sale, the strikethrough price shown is the lowest price of the lookback period
+*before* the current reduction, so that successive reductions do not lower the reference price. If
+the product has no usable price history, the standard strikethrough price is kept.
+
+.. note::
+   The price history comes from the *Product Price History* module (`product_price_history`), which
+   records every sales price change. See :doc:`the price history documentation
+   </applications/inventory_and_mrp/inventory/product_management/pricing_extensions>`.
 
 Discounted pricelists
 ---------------------

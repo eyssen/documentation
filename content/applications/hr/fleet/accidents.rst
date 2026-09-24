@@ -90,8 +90,13 @@ the desired record, and click :guilabel:`Open` to upload the file.
      To attach more records, click :icon:`fa-plus-square` :guilabel:`Attach files` to add more
      documents.
 
-.. image:: accidents/service-form.png
-   :alt: Enter the information for an accident repair.
+.. screenshot:: hr-fleet-accident-service-form
+   :menu: Fleet ‣ Fleet ‣ Services ‣ New
+   :shows: A service record filled in for an accident repair, with the description, the Accident service type, the vehicle, the date, the cost and the vendor.
+   :highlight: The Service Type and Cost fields (red frame).
+   :data: Vehicle "Skoda Octavia / ABC-123", service type "Accident", cost 185 000 HUF.
+   :module: fleet
+   :notes: English UI, light theme, 1440px width.
 
 Service stages
 ==============
@@ -132,8 +137,13 @@ Open the main *Services* dashboard, by navigating to :menuselection:`Fleet app -
 Services`. Next, click on the individual service record to open the detailed service form. Click the
 desired stage in the top-right corner, above the service form, to change the status.
 
-.. image:: accidents/running.png
-   :alt: The stages as seen from the service form.
+.. screenshot:: hr-fleet-service-stages
+   :menu: Fleet ‣ Fleet ‣ Services ‣ (open a service)
+   :shows: The status bar of a service record with the New, Running, Done and Cancelled stages, Running selected.
+   :highlight: The status bar (red frame).
+   :data: An accident repair in the Running stage.
+   :module: fleet
+   :notes: English UI, light theme, 1440px width. Crop to the status bar.
 
 .. _fleet/Kanban:
 
@@ -149,8 +159,13 @@ services appear in a Kanban view, organized by their respective :guilabel:`Statu
 
 Drag-and-drop the service record to the desired stage.
 
-.. image:: accidents/drag-n-drop.png
-   :alt: The Kanban view of stages, with a card being dragged and dropped to the Running stage.
+.. screenshot:: hr-fleet-services-kanban-drag
+   :menu: Fleet ‣ Fleet ‣ Services
+   :shows: The Services kanban grouped by stage, with a card being dragged from New into Running.
+   :highlight: The dragged card and the Running column (red frame).
+   :data: Four accident repairs spread across the stages.
+   :module: fleet
+   :notes: English UI, light theme, 1440px width.
 
 Accident reporting
 ==================
@@ -187,8 +202,13 @@ beneath each grouping title.
    accident has no cost associated with it, since the repair has not been completed, and no estimate
    exists yet.
 
-   .. image:: accidents/group-accidents.png
-      :alt: Accident services, with the total costs highlighted.
+   .. screenshot:: hr-fleet-services-accident-totals
+      :menu: Fleet ‣ Fleet ‣ Services
+      :shows: The Services list filtered to accident repairs and grouped by vehicle, with the cost total per group.
+      :highlight: The cost totals of the groups (red frame).
+      :data: Three vehicles with accident repairs.
+      :module: fleet
+      :notes: English UI, light theme, 1440px width.
 
 .. note::
    The total :guilabel:`Cost` calculates **all** costs on the repair form, including estimated
@@ -215,17 +235,26 @@ vehicle lease cost) and all service costs, including all accidents. Hover over a
 data popover window, which displays the vehicle name and the total cost. This allows for a more
 complete view of the vehicle cost.
 
-.. image:: accidents/total-costs.png
-   :alt: The Cost Analysis report, displaying total costs by vehicle.
+.. screenshot:: hr-fleet-accidents-cost-by-vehicle
+   :menu: Fleet ‣ Reporting ‣ Costs
+   :shows: The Cost Analysis report in graph view showing the total cost per vehicle.
+   :highlight: The highest bar (red frame).
+   :data: Five vehicles with contract and service costs of one year.
+   :module: fleet
+   :notes: English UI, light theme, 1440px width.
 
 To view the individual cost details for both contract costs and repairs, click the
 :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the top-right corner of the :guilabel:`Cost
 Analysis` dashboard. This displays each vehicle on a separate line, and displays the
 :guilabel:`Contract` cost and :guilabel:`Service` cost, as well as the :guilabel:`Total` cost.
 
-.. image:: accidents/fleet-pivot.png
-   :alt: The Cost Analysis report, displaying the contract and service costs separately, as well as
-         the total.
+.. screenshot:: hr-fleet-accidents-cost-pivot
+   :menu: Fleet ‣ Reporting ‣ Costs
+   :shows: The Cost Analysis report in pivot view with the contract costs and the service costs in separate columns and the total.
+   :highlight: The total column (red frame).
+   :data: The same five vehicles, one year of costs.
+   :module: fleet
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    The :icon:`oi-view-pivot` :guilabel:`(Pivot)` view organizes the data by vehicle, by default,
@@ -261,8 +290,13 @@ the other fields as-is.
 
 Click the :guilabel:`Add` button at the bottom to add the new custom filter.
 
-.. image:: accidents/custom-filters.png
-   :alt: The filter settings to be added to only display new and running services.
+.. screenshot:: hr-fleet-services-custom-filter
+   :menu: Fleet ‣ Fleet ‣ Services ‣ Filters ‣ Add Custom Filter
+   :shows: The Add Custom Filter dialog with a rule matching services whose stage is New or Running.
+   :highlight: The rule lines and the any/all selector (red frame).
+   :data: Rule: Stage is in New, Running.
+   :module: fleet
+   :notes: English UI, light theme, 1440px width.
 
 This slight modification only presents services in the :guilabel:`New` and :guilabel:`Running`
 stages. This is a helpful report for a company managing a high number of repairs at any given time.

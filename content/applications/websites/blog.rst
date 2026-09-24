@@ -55,8 +55,13 @@ You can add and create tags directly from posts by clicking :menuselection:`Edit
 select the post's cover. Under :guilabel:`Tags`, click :guilabel:`Choose a record...`, and select
 or create a tag.
 
-.. image:: blog/create-tag.png
-   :alt: Adding a tag to a blog post
+.. screenshot:: blog-blog-create-tag
+   :menu: Website ‣ Blog ‣ (post) ‣ Edit
+   :shows: The blog post editing panel with the Tags field and a tag being added from its drop-down menu.
+   :highlight: The Tags field (red frame).
+   :data: Blog 'News', post 'Product launch', tag 'Release'.
+   :module: website_blog
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    To manage tag categories, go to :menuselection:`Website --> Configuration --> Blogs: Tag
@@ -127,3 +132,48 @@ Customize posts by opening a blog post and clicking :menuselection:`Edit --> Cus
 
 .. tip::
    Use :ref:`Plausible <analytics/plausible>` to keep track of the traffic on your blog.
+
+.. _blog/contents-landing:
+
+Contents landing page
+=====================
+
+By default, a blog's landing page lists the posts in reverse chronological order, which suits news
+but not reference content such as a handbook or a knowledge base. The *Blog Contents Landing* module
+(`website_blog_contents`) replaces that list with a generated table of contents.
+
+Enable it per blog under :menuselection:`Website --> Configuration --> Blog --> Blogs`, with the
+:guilabel:`Contents Landing` option. The blog
+header designed in the website editor stays above the generated tree. The other options are:
+
+- :guilabel:`Contents Sort` and :guilabel:`Contents Sort Direction`: the order of the posts within
+  a section — by :guilabel:`Title`, :guilabel:`Publishing date`, :guilabel:`Created on`,
+  :guilabel:`Last Updated on`, :guilabel:`Published Date` or by internal :guilabel:`ID`, ascending
+  or descending.
+- :guilabel:`Show Teaser`: shows each post's teaser or subtitle under its title.
+- :guilabel:`Grouping Levels`: the tag categories used as nested grouping levels, in order. With
+  the category *Chapter* as the first level and *Section* as the second, the contents page is
+  grouped into chapters and, inside them, into sections. Leave it empty to simply list every
+  published post in the sort order.
+- :guilabel:`Section Order`: the order of the sections on the page, set by dragging. This writes
+  the sequence of the corresponding tags.
+
+.. screenshot:: blog-blog-contents-landing-settings
+   :menu: Website ‣ Configuration ‣ Blog ‣ Blogs ‣ (blog)
+   :shows: A blog record with the Contents Landing option enabled, the Contents Sort and sort direction fields, the Show Teaser option, the Grouping Levels list and the Section Order list.
+   :highlight: The Contents Landing option and the Grouping Levels list (red frame).
+   :data: Blog "Handbook" grouped by the tag categories "Chapter" and "Section".
+   :module: website_blog_contents
+   :notes: English UI, light theme, 1440px width.
+
+.. screenshot:: blog-blog-contents-landing-page
+   :menu: (website) ‣ Blog
+   :shows: The generated contents landing page of a blog, with the chapters as headings, the sections under them and the post titles as links.
+   :highlight: One chapter with its sections (red frame).
+   :data: Blog "Handbook" with three chapters and about a dozen posts.
+   :module: website_blog_contents
+   :notes: English UI, light theme, 1440px width.
+
+.. note::
+   Only published posts appear on the contents page, and posts scheduled for a future date are left
+   out until their publishing date.

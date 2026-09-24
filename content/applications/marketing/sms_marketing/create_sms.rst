@@ -5,9 +5,13 @@ Create SMS messages
 To start, click :guilabel:`Create` on the main :guilabel:`SMS Marketing` dashboard, and Odoo reveals
 a blank SMS template form, which can be configured in a number of different ways.
 
-.. image:: create_sms/sms-create.png
-   :align: center
-   :alt: Creating an SMS marketing template.
+.. screenshot:: sms-create-sms-sms-create
+   :menu: SMS Marketing ‣ Mailings ‣ New
+   :shows: A new SMS mailing form with the Subject field filled in, a mailing list selected in Recipients and the message typed in the SMS Content tab.
+   :highlight: The SMS Content tab with the message body (red frame).
+   :data: Mailing 'Spring sale', mailing list 'Newsletter (HU)'.
+   :module: mass_mailing_sms
+   :notes: English UI, light theme, 1440px width.
 
 First, give the mailing a :guilabel:`Subject`, which describes what the mailing is about.
 
@@ -23,9 +27,13 @@ will be sent. By default, Odoo has :guilabel:`Mailing List` selected. If this is
 
    To learn more about mailing lists and contacts, check out :doc:`mailing_lists_blacklists`.
 
-.. image:: create_sms/sms-mailing-list.png
-   :align: center
-   :alt: View of the mailing list page in the SMS marketing application.
+.. screenshot:: sms-create-sms-sms-mailing-list
+   :menu: SMS Marketing ‣ Mailings ‣ New
+   :shows: The Recipients field of an SMS mailing set to Mailing List, with the Select Mailing List drop-down open.
+   :highlight: The Recipients and Select Mailing List fields (red frame).
+   :data: Two mailing lists: 'Newsletter (HU)', 'Webshop customers'.
+   :module: mass_mailing_sms
+   :notes: English UI, light theme, 1440px width.
 
 To reveal all the possible options in the :guilabel:`Recipients` field, click the field to see all
 the choices Odoo makes available.
@@ -50,9 +58,13 @@ whatever criteria is configured in those fields. Multiple rules can be added.
    the United States (e.g. `Country` > `Country Name` equals `United States`), and they haven't
    blacklisted themselves from any mailings (e.g. `Blacklist` > `is` > `not set`).
 
-   .. image:: create_sms/contact-recipient.png
-      :align: center
-      :alt: Contact recipients on SMS marketing.
+   .. screenshot:: sms-create-sms-contact-recipient
+      :menu: SMS Marketing ‣ Mailings ‣ New
+      :shows: The Recipients field set to Contact, showing the filter rule builder used to narrow the recipients.
+      :highlight: The rule builder line under Recipients (red frame).
+      :data: One rule: Country is in 'Hungary'.
+      :module: mass_mailing_sms
+      :notes: English UI, light theme, 1440px width.
 
 Writing SMS messages
 --------------------
@@ -66,9 +78,13 @@ Service)` mailings it will take to deliver the complete message.
    To check the price of sending an :abbr:`SMS (Short Message Service)` for a country, click on the
    :guilabel:`Information` icon.
 
-.. image:: create_sms/sms-price-check.png
-   :align: center
-   :alt: SMS price check icon.
+.. screenshot:: sms-create-sms-sms-price-check
+   :menu: SMS Marketing ‣ Mailings ‣ New
+   :shows: The SMS Content tab of a mailing with the character counter and the estimated price/credit information shown under the message field.
+   :highlight: The counter line under the message field (red frame).
+   :data: A message of about 170 characters.
+   :module: mass_mailing_sms
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    Credits must be purchased from Odoo in order to take advantage of the *SMS Marketing* app;
@@ -84,9 +100,13 @@ When links are used in :abbr:`SMS (Short Message Service)` messages, Odoo automa
 link trackers to gather analytical data and metrics related to those specific links, which can be
 found by going to :menuselection:`Configuration --> Link Tracker`.
 
-.. image:: create_sms/sms-link-tracker.png
-   :align: center
-   :alt: SMS Link Tracker page.
+.. screenshot:: sms-create-sms-sms-link-tracker
+   :menu: SMS Marketing ‣ Configuration ‣ Link Tracker
+   :shows: The Link Tracker list with tracked links and their Clicks, Campaign, Medium and Source columns.
+   :highlight: The Clicks column (red frame).
+   :data: Two tracked links from a sent SMS mailing.
+   :module: mass_mailing_sms
+   :notes: English UI, light theme, 1440px width.
 
 Adjust SMS settings
 ===================
@@ -98,9 +118,13 @@ avoiding all future mailings.
 An employee can be designated as the :guilabel:`Responsible` in the :guilabel:`Tracking` section of
 the :guilabel:`Settings` tab, as well.
 
-.. image:: create_sms/sms-settings-tab.png
-   :align: center
-   :alt: SMS Settings tab.
+.. screenshot:: sms-create-sms-sms-settings-tab
+   :menu: SMS Marketing ‣ Mailings ‣ New
+   :shows: The Settings tab of an SMS mailing form showing the Blacklist, Opt-out, Campaign, Send Date and Responsible fields.
+   :highlight: The whole Settings tab (red frame).
+   :data: Campaign 'Spring sale'.
+   :module: mass_mailing_sms
+   :notes: English UI, light theme, 1440px width.
 
 Send SMS messages
 =================

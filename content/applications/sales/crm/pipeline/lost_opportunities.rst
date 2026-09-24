@@ -19,8 +19,13 @@ opportunity's detail form.
 
 Then, click :guilabel:`Lost`, located at the top of the opportunity's detail form.
 
-.. image:: lost_opportunities/lost-opps-lost-button.png
-   :alt: Buttons from the top of an opportunity record with the lost button emphasized.
+.. screenshot:: sales-crm-lost-button
+   :menu: CRM ‣ Sales ‣ My Pipeline ‣ (an opportunity)
+   :shows: The header of an opportunity form with the Lost button next to New Quotation and Won.
+   :highlight: The Lost button (red frame).
+   :data: Opportunity "Office furniture".
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the header.
 
 This opens the :guilabel:`Mark Lost` pop-up window. From the :guilabel:`Lost Reason` drop-down menu,
 choose an existing lost reason. If no applicable reason is available, then create a new one by
@@ -37,14 +42,24 @@ Additional notes and comments can be added below the lost reason in the designat
 When all the desired information has been entered in the :guilabel:`Mark Lost` pop-up window, click
 :guilabel:`Mark as Lost`.
 
-.. image:: lost_opportunities/lost-opps-lost-reason.png
-   :alt: Lost reasons popup with sample reasons.
+.. screenshot:: sales-crm-lost-reason-popup
+   :menu: CRM ‣ Sales ‣ My Pipeline ‣ (an opportunity) ‣ Lost
+   :shows: The "Mark Lost" pop-up with the Lost Reason drop-down and the Closing Note field.
+   :highlight: The Lost Reason drop-down (red frame).
+   :data: Reasons "Too expensive", "Not enough stock".
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 After clicking :guilabel:`Mark as Lost`, a red :guilabel:`Lost` banner is added to the upper-right
 corner of the opportunity.
 
-.. image:: lost_opportunities/lost-banner.png
-   :alt: A lost opportunity with the lost banner added.
+.. screenshot:: sales-crm-lost-banner
+   :menu: CRM ‣ Sales ‣ My Pipeline ‣ (a lost opportunity)
+   :shows: A lost opportunity with the red "Lost" ribbon and the lost reason shown on the form.
+   :highlight: The "Lost" ribbon (red frame).
+   :data: Opportunity marked lost for "Too expensive".
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the top of the form.
 
 .. note::
    To mark an *inactive* (archived) opportunity as lost, set the :guilabel:`Probability` field to
@@ -70,8 +85,13 @@ View lost opportunities
 To retrieve lost opportunities, go :menuselection:`CRM app --> Sales --> My Pipeline`, then click on
 the search bar at the top of the page, and then remove all of the default filters.
 
-.. image:: lost_opportunities/lost-opps-lost-filter.png
-   :alt: Search bar with lost filter emphasized.
+.. screenshot:: sales-crm-lost-filter
+   :menu: CRM ‣ Sales ‣ My Pipeline
+   :shows: The pipeline search bar with the "Lost" filter applied and the resulting records.
+   :highlight: The "Lost" filter facet (red frame).
+   :data: Three lost opportunities.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the search bar and the first rows.
 
 Open the :guilabel:`Filters` drop-down menu by clicking the :icon:`fa-caret-down`
 :guilabel:`(dropdown)` icon to the right of the search bar to open the drop-down menu containing
@@ -94,16 +114,26 @@ in the search bar, or scroll to search through the list to locate it. Then, clic
 field, and select :guilabel:`=` from the drop-down menu. Click into the third field, and then select
 a lost reason from the drop-down menu. Finally, click :guilabel:`Add`.
 
-.. image:: lost_opportunities/lost-opps-lost-custom-filter.png
-   :alt: Search bar with custom filter added for lost reason.
+.. screenshot:: sales-crm-lost-custom-filter
+   :menu: CRM ‣ Sales ‣ My Pipeline ‣ Filters ‣ Add Custom Filter
+   :shows: The search bar with a custom filter on the Lost Reason field applied alongside the Lost filter.
+   :highlight: The custom filter facet (red frame).
+   :data: Lost Reason = "Too expensive".
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the search bar.
 
 .. tip::
    To view results for more than one lost reason, select the operator :guilabel:`is in` in the
    second field of the custom filter in the :guilabel:`Add Custom Filter` pop-up window. Choosing
    this operator makes it possible to choose multiple lost reasons in the third field.
 
-   .. image:: lost_opportunities/multiple-lost-reasons.png
-      :alt: Add Custom Filter pop-up with multiple lost reasons selected.
+   .. screenshot:: sales-crm-lost-custom-filter-popup
+      :menu: CRM ‣ Sales ‣ My Pipeline ‣ Filters ‣ Add Custom Filter
+      :shows: The "Add Custom Filter" pop-up with a Lost Reason condition and several reasons selected in the value field.
+      :highlight: The selected lost reasons (red frame).
+      :data: Two lost reasons selected.
+      :module: crm
+      :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 Restore lost opportunities
 ==========================
@@ -125,8 +155,13 @@ From the lost opportunity's detail form, click :guilabel:`Restore` in the upper-
 so removes the red :guilabel:`Lost` banner from the opportunity form, signifying the opportunity has
 been restored.
 
-.. image:: lost_opportunities/lost-opps-restore.png
-   :alt: Lost opportunity with emphasis on the Restore button.
+.. screenshot:: sales-crm-lost-restore-button
+   :menu: CRM ‣ Sales ‣ My Pipeline ‣ (a lost opportunity)
+   :shows: A lost opportunity with the Restore button in the header.
+   :highlight: The Restore button (red frame).
+   :data: A lost opportunity.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the header.
 
 Restore multiple opportunities at once
 --------------------------------------
@@ -148,8 +183,13 @@ Doing so removes those selected opportunities from the :guilabel:`Pipeline` page
 longer fit the :guilabel:`Lost` filter criteria. Delete the :guilabel:`Lost` filter from the search
 bar to reveal these newly-restored opportunities.
 
-.. image:: lost_opportunities/lost-opps-unarchive.png
-   :alt: Action button from list view with the Unarchive option emphasized.
+.. screenshot:: sales-crm-lost-unarchive-action
+   :menu: CRM ‣ Sales ‣ My Pipeline
+   :shows: The pipeline list view with several lost records selected and the gear (Actions) menu open on "Unarchive".
+   :highlight: The "Unarchive" item (red frame).
+   :data: Three lost opportunities selected.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the open menu.
 
 Manage lost leads
 =================

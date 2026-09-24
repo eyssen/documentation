@@ -8,9 +8,13 @@ and manage data.
 .. tip::
    Hold :kbd:`Ctrl` to view the keyboard shortcuts assigned to each element on the interface.
 
-   .. image:: keyboard_shortcuts/menu-shortcuts.png
-      :align: center
-      :alt: A selection of keyboard shortcuts in Odoo.
+   .. screenshot:: essentials-shortcuts-overlay
+      :menu: Sales ‣ Orders ‣ Quotations (Ctrl held down)
+      :shows: The backend with the Ctrl key held: the keyboard shortcut badges (e.g., A for New, Q for
+         search) displayed next to the buttons and menus.
+      :highlight: Two or three shortcut badges.
+      :module: web
+      :notes: English UI, 1440px width.
 
 .. important::
    Some keyboard shortcuts may not be available on different versions of Odoo or effective depending
@@ -59,12 +63,6 @@ operating system.
    * - Create a new To-Do
      - :kbd:`Alt` + :kbd:`Shift` + :kbd:`T`
      - :kbd:`Ctrl` + :kbd:`Shift` + :kbd:`T`
-   * - Search a Knowledge article
-     - :kbd:`Alt` + :kbd:`F`
-     - :kbd:`Ctrl` + :kbd:`F`
-   * - Share a Knowledge article
-     - :kbd:`Alt` + :kbd:`Shift` + :kbd:`S`
-     - :kbd:`Ctrl` + :kbd:`Shift` + :kbd:`S`
    * - Open command palette
      - :kbd:`Ctrl` + :kbd:`K`
      - :kbd:`Command` + :kbd:`K`
@@ -75,12 +73,15 @@ operating system.
    - :kbd:`/`: search for menus, applications, and modules.
    - :kbd:`@`: search for users.
    - :kbd:`#`: search for **Discuss** channels.
-   - :kbd:`?`: search for **Knowledge** articles.
 
    Enter a name (or term) in the search bar, or use the arrow keys to scroll through the available
    options. Then, click :kbd:`Ctrl` + :kbd:`Enter` to open the selected app, module, or menu in a
    new tab.
 
-   .. image:: keyboard_shortcuts/command-palete.png
-      :align: center
-      :alt: The command palette in Odoo, with the menu search option selected.
+   .. screenshot:: essentials-shortcuts-command-palette
+      :menu: Any backend page ‣ Ctrl+K, then type "/"
+      :shows: The command palette in menu search mode ("/"), with a search term typed and matching
+         menus listed, one of them selected.
+      :highlight: The selected result.
+      :module: web
+      :notes: English UI, crop to the palette.

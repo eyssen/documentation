@@ -26,9 +26,13 @@ Begin by navigating to the :guilabel:`Leads Analysis` dashboard by going to :men
    - :doc:`Convert leads into opportunities <../acquire_leads/convert>`
    - :doc:`Create leads <../acquire_leads/email_manual>`
 
-.. image:: marketing_attribution/reporting-tab-and-leads.png
-   :align: center
-   :alt: Open the CRM app and click on the Reporting tab at the top of the page, then click Leads.
+.. screenshot:: sales-crm-attribution-reporting-menu
+   :menu: CRM ‣ Reporting ‣ Leads
+   :shows: The CRM Reporting menu open on the Leads entry.
+   :highlight: The Leads entry (red frame).
+   :data: Demo database.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the open menu.
 
 The :icon:`fa-area-chart` :guilabel:`(graph)` view is shown, by default, with :guilabel:`Active or
 Inactive` and :guilabel:`Created on: [current year]` filters active in the :guilabel:`Search...`
@@ -39,9 +43,13 @@ Switch the view to the :icon:`oi-view-list` :guilabel:`(list)` option, by clicki
 icon located at the top-right of the dashboard. This allows leads to easily be displayed in the
 grouping set by the *Group By* parameters.
 
-.. image:: marketing_attribution/list-view-button.png
-   :align: center
-   :alt: Click the button with four horizontal lines on the top right of the Leads Analysis page.
+.. screenshot:: sales-crm-attribution-list-view-button
+   :menu: CRM ‣ Reporting ‣ Leads
+   :shows: The view switcher of the Leads Analysis page with the list-view button.
+   :highlight: The list-view button (red frame).
+   :data: Demo database.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the view switcher.
 
 Add UTM parameters
 ==================
@@ -85,9 +93,13 @@ have been won in the attribution report.
 :guilabel:`Group By`, found in the middle column, is used to organize the results into groups, and
 can be used with or without filters.
 
-.. image:: marketing_attribution/search-results-multiple-options.png
-   :align: center
-   :alt: Select any number of filters and groups in the search options.
+.. screenshot:: sales-crm-attribution-search-panel
+   :menu: CRM ‣ Reporting ‣ Leads ‣ Filters
+   :shows: The open search panel of Leads Analysis with several filters and group-by options selected.
+   :highlight: The selected filters and groupings (red frame).
+   :data: Filters "Active" and "Created on: this year"; grouped by Source and Country.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the search panel.
 
 .. tip::
     Setting multiple :guilabel:`Group By` options creates nested groups, according to which option
@@ -98,9 +110,13 @@ can be used with or without filters.
     This can be verified by looking at the direction, and order, of the selections in the group tile
     that appears in the :guilabel:`Search...` bar.
 
-    .. image:: marketing_attribution/group-by.png
-       :align: center
-       :alt: The text in the tile is `Country > City`, showing that city is a subgroup of country.
+    .. screenshot:: sales-crm-attribution-nested-groups
+       :menu: CRM ‣ Reporting ‣ Leads ‣ Group By
+       :shows: The search-bar facet showing a nested grouping, with City as a subgroup of Country.
+       :highlight: The grouping facet (red frame).
+       :data: Country > City.
+       :module: crm
+       :notes: English UI, light theme, 1440px width, crop to the search bar.
 
 .. example::
     For a useful first report:
@@ -111,9 +127,13 @@ can be used with or without filters.
     followed by the :guilabel:`City` or :guilabel:`Country`, depending on which grouping is more
     relevant.
 
-    .. image:: marketing_attribution/campaign-and-country-groups.png
-       :align: center
-       :alt: Each lead is now sorted by source, followed by city or country.
+    .. screenshot:: sales-crm-attribution-grouped-results
+       :menu: CRM ‣ Reporting ‣ Leads
+       :shows: The Leads Analysis list grouped by source and then by country, with the record counts per group.
+       :highlight: No highlight; the grouped list is the subject.
+       :data: Three sources with two countries each.
+       :module: crm
+       :notes: English UI, light theme, 1440px width, crop to the list.
 
     This report contains all active leads, grouped first by the source of the lead, then by the
     city or country each lead is from. This is useful to see the density of active opportunities
@@ -140,22 +160,8 @@ To quickly export the data in a list, as a .xlsx file, navigate to the :icon:`oi
 located to the right of :guilabel:`Lead Analysis` in the top-left of the page, and click
 :icon:`fa-upload` :guilabel:`Export All`. The report downloads automatically as a .xlsx file.
 
-For more export options, the report can be exported to the Odoo *Documents* app. From the
-:icon:`oi-view-list` :guilabel:`(list view)` of :guilabel:`Leads Analysis` page, begin by clicking
-the :guilabel:`Actions` :icon:`fa-cog` :guilabel:`(gear)` icon again. Now, navigate to
-:icon:`fa-table` :guilabel:`Spreadsheet`, and click :icon:`oi-view-list` :guilabel:`Insert list in
-spreadsheet`. A pop-up window titled, :guilabel:`Select a spreadsheet to insert your list.` appears.
-
-The report can be renamed using the `Name of the list` field, if desired. The number of items on the
-report can be set with the field labeled: `Insert the first _ records of the list`. Next, select
-either a new :guilabel:`Blank spreadsheet`, or export into an existing spreadsheet. Finally, click
-the :guilabel:`Confirm` button.
-
-.. image:: marketing_attribution/documents-export.png
-   :align: center
-   :alt: Set the name, number of records, and location of the export in the option menu.
-
-To export the report as a .xlsx file, for use in an external spreadsheets program, click the
-:guilabel:`Actions` :icon:`fa-cog` :guilabel:`(gear)` icon, and select the :icon:`fa-upload`
-:guilabel:`Export All` option. If prompted, choose a file location, name the file, then click
-:guilabel:`Save`.
+To choose exactly which fields are exported, click the :guilabel:`Actions` :icon:`fa-cog`
+:guilabel:`(gear)` icon, and select the :icon:`fa-upload` :guilabel:`Export All` option. In the
+:guilabel:`Export Data` pop-up window, pick the file format (:guilabel:`XLSX` or :guilabel:`CSV`),
+move the desired fields to the :guilabel:`Fields to export` list, and click :guilabel:`Export`. An
+export template can be saved for later reuse with the :guilabel:`Save fields list` option.

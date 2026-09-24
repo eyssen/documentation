@@ -26,13 +26,21 @@ How to cancel a shipping request?
     still cancel the request.
     Simply click on the **Cancel** button next to the **Carrier Tracking Ref**:
 
-.. image:: cancel/cancel01.png
-   :align: center
+.. screenshot:: setup-configuration-cancel-cancel01
+   :menu: Inventory ‣ Delivery Orders
+   :shows: A validated delivery order with a Carrier Tracking Ref, showing the "Cancel" button next to it.
+   :highlight: The "Cancel" button next to "Carrier Tracking Ref" (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.
 
 You will now see that the shipment has been cancelled.
 
-.. image:: cancel/cancel02.png
-   :align: center
+.. screenshot:: setup-configuration-cancel-cancel02
+   :menu: Inventory ‣ Delivery Orders
+   :shows: The same delivery order after cancelling the shipping request: the tracking reference is cleared and the "Send to Shipper" button is available again.
+   :highlight: The cleared tracking reference (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.
 
 You can now change the carrier if you wish.
 
@@ -43,8 +51,12 @@ After cancelling the shipping request, you can change the carrier you
 want to use. Confirm it by clicking on the **Send to shipper** button. You
 will get a new tracking number and a new label.
 
-.. image:: cancel/cancel03.png
-   :align: center
+.. screenshot:: setup-configuration-cancel-cancel03
+   :menu: Inventory ‣ Delivery Orders
+   :shows: The delivery order after choosing another carrier, with the "Send to Shipper" button that requests a new label and tracking number.
+   :highlight: The "Send to Shipper" button (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
     * :doc:`invoicing`

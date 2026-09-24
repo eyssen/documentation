@@ -46,9 +46,13 @@ The following information appears in the list:
 - :guilabel:`Company`: the company under which the order was placed. This only appears in a
   multi-company database.
 
-.. image:: management/today.png
-   :alt: The list that appears in the Today's Orders dashboard, with the filters and top column
-         names highlighted.
+.. screenshot:: hr-lunch-today-orders
+   :menu: Lunch ‣ Manager ‣ Today's Orders
+   :shows: The Today's Orders list with the order date, employee, vendor, product, quantity, price and status columns, and the default filters in the search bar.
+   :highlight: The search bar filters and the Status column (red frame).
+   :data: Demo company "YourCompany HU"; six orders for today, in different statuses.
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.
 
 .. _lunch/cancel:
 
@@ -66,8 +70,13 @@ at the far-right of each product line that can be cancelled. Click the :icon:`fa
 .. note::
    Only products with a red :guilabel:`Status` tag of :guilabel:`Ordered` can be cancelled.
 
-.. image:: management/cancel.png
-   :alt: Order lines with the cancel button highlighted.
+.. screenshot:: hr-lunch-cancel-order
+   :menu: Lunch ‣ Manager ‣ Today's Orders
+   :shows: Order lines in the Today's Orders list with the Cancel button of a line visible.
+   :highlight: The Cancel button (red frame).
+   :data: Two order lines, one ordered and one confirmed.
+   :module: lunch
+   :notes: English UI, light theme, 1440px width. Crop to the order lines.
 
 .. _lunch/send-orders:
 
@@ -87,8 +96,13 @@ the :guilabel:`Status` column is updated from red :guilabel:`Ordered` tags to bl
 tags, indicating the order has been sent to the vendor. Users who have placed orders in the
 **Lunch** app rely on the :guilabel:`Status` tags to track their orders.
 
-.. image:: management/send.png
-   :alt: A vendor's order with the X Cancel and Send Orders buttons highlighted.
+.. screenshot:: hr-lunch-send-orders
+   :menu: Lunch ‣ Manager ‣ Today's Orders
+   :shows: The orders of one vendor grouped together, with the Cancel and Send Orders buttons above them.
+   :highlight: The Send Orders button (red frame).
+   :data: Vendor "Pizza Marbella" with four orders.
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.
 
 .. _lunch/confirm-orders:
 
@@ -113,8 +127,13 @@ can be confirmed one at a time. To confirm an individual product, click the :ico
 :guilabel:`Confirm` button at the end of the individual product line. When confirming individual
 products with this method, the :guilabel:`Confirm Orders` button remains on the vendor line.
 
-.. image:: management/confirm.png
-   :alt: The Today's Orders dashboard, with the two different ways to confirm an order highlighted.
+.. screenshot:: hr-lunch-confirm-orders
+   :menu: Lunch ‣ Manager ‣ Today's Orders
+   :shows: The Today's Orders list showing both ways of confirming an order: the Confirm button on a line and the Confirm Orders button above the list.
+   :highlight: Both Confirm buttons (red frame).
+   :data: Several sent orders awaiting confirmation.
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.
 
 .. example::
    A vendor receives an order for three pizzas, and an order of garlic knots. When the delivery is
@@ -173,8 +192,13 @@ Orders can be :ref:`cancelled <lunch/cancel>`, :ref:`sent to the vendor <lunch/s
 <lunch/notify>` using the same method as on the :ref:`Today's Orders <lunch/todays-orders>`
 dashboard.
 
-.. image:: management/control.png
-   :alt: A list view of all the orders as seen in the Control Vendors dashboard.
+.. screenshot:: hr-lunch-control-vendors
+   :menu: Lunch ‣ Manager ‣ Control Vendors
+   :shows: The Control Vendors list with all orders grouped by vendor, with the quantities and the amounts due per vendor.
+   :highlight: The vendor totals (red frame).
+   :data: Three vendors with orders of the current week.
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    The difference between the :ref:`Today's Orders <lunch/todays-orders>` dashboard and the

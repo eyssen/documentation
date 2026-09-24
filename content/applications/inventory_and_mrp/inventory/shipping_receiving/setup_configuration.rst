@@ -12,13 +12,11 @@ delivery timeframe.
 When activated in Odoo, the *Delivery Methods* setting adds the option of calculating the cost of
 shipping on sales orders and e-commerce shopping carts.
 
-When integrated with a :ref:`third-party carrier <inventory/shipping/third_party>`, shipping prices
-are calculated based on the carrier's pricing information.
+When integrated with a :ref:`carrier connector <inventory/shipping/third_party>`, shipping prices are
+calculated based on the carrier's own pricing information.
 
 .. seealso::
-   - :ref:`Third-party shipping carrier setup <inventory/shipping/third_party>`
-   - `Odoo Tutorials: Delivery Prices
-     <https://www.odoo.com/slides/slide/delivery-prices-613?fullscreen=1>`_
+   :ref:`Shipping carrier connectors <inventory/shipping/third_party>`
 
 Configuration
 =============
@@ -29,8 +27,12 @@ installed. To do so, navigate to the :menuselection:`Apps` application from the 
 Then, remove the :guilabel:`Apps` filter, and type in `Delivery Costs` in the search bar. After
 finding the :guilabel:`Delivery Costs` module, click :guilabel:`Install` to install it.
 
-.. image:: setup_configuration/install-module.png
-   :alt: Install the Delivery Costs module.
+.. screenshot:: setup-configuration-install-module
+   :menu: Apps
+   :shows: The Apps list with the Apps filter removed and "Delivery Costs" typed in the search bar, showing the module card with its Install button.
+   :highlight: The Install button (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.
 
 .. _inventory/shipping/sales-order:
 
@@ -66,8 +68,13 @@ The shipping cost is added as a line item in the :guilabel:`Order Lines` tab as 
    This delivery method is defined as `Furniture Delivery (Manual)` and has a cost of `$200`. The
    sales order contains two line items: one for the desk, and another for the delivery method.
 
-     .. image:: setup_configuration/delivery-product.png
-        :alt: Show delivery order on the sales order line.
+     .. screenshot:: setup-configuration-delivery-product
+        :menu: Sales ‣ Orders ‣ Orders
+        :shows: The Order Lines tab of a sales order with two lines: the ordered product and the delivery product added by the shipping method.
+        :highlight: The delivery product line (red frame).
+        :data: Delivery method "Furniture Delivery (Manual)", cost 200.
+        :module: delivery
+        :notes: English UI, light theme, 1440px width.
 
 Delivery order
 --------------
@@ -78,8 +85,12 @@ appears at the top of the page. Click the :icon:`fa-truck` :guilabel:`Delivery` 
 the warehouse delivery form. To add or change the delivery method on the delivery itself, open the
 :guilabel:`Additional Info` tab and modify the :guilabel:`Carrier` field.
 
-.. image:: setup_configuration/delivery-order.png
-   :alt: Shipping carrier information on the delivery form.
+.. screenshot:: setup-configuration-delivery-order
+   :menu: Inventory ‣ Delivery Orders
+   :shows: The "Additional Info" tab of a delivery order, showing the "Carrier" field filled in from the sales order.
+   :highlight: The "Carrier" field (red frame).
+   :module: delivery
+   :notes: English UI, light theme, 1440px width.
 
 .. toctree::
    :titlesonly:
@@ -87,21 +98,13 @@ the warehouse delivery form. To add or change the delivery method on the deliver
    setup_configuration/new_delivery_method
    setup_configuration/third_party_shipper
    setup_configuration/labels
-   setup_configuration/bpost
    setup_configuration/custom
-   setup_configuration/dhl_credentials
-   setup_configuration/envia_shipping
-   setup_configuration/fedex
    setup_configuration/foxpost
    setup_configuration/gls
    setup_configuration/mpl
-   setup_configuration/sendcloud_shipping
-   setup_configuration/starshipit_shipping
-   setup_configuration/ups_credentials
    setup_configuration/zebra
    setup_configuration/cancel
    setup_configuration/invoicing
-   setup_configuration/label_type
    setup_configuration/multipack
    setup_configuration/print_on_validation
    setup_configuration/dispatch

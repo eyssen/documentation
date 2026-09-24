@@ -6,9 +6,6 @@ When handling a project, the same task often needs to be performed several times
 weekly meetings or status reports. The **recurring tasks** feature allows you to automate the
 creation of those tasks.
 
-.. seealso::
-   `Odoo Tutorials: Recurring tasks <https://www.odoo.com/slides/slide/recurring-tasks-6958>`_
-
 Configuration
 =============
 

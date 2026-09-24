@@ -27,9 +27,6 @@ localization:
      - `l10n_my`
      - This module includes the default
        :ref:`fiscal localization package <fiscal_localizations/packages>`.
-   * - :guilabel:`Malaysia - Accounting Reports`
-     - `l10n_my_reports`
-     - This module includes the accounting reports for Malaysia.
    * - :guilabel:`Malaysia - UBL PINT`
      - `l10n_my_ubl_pint`
      - This module includes the features required to export invoices in PINT format.
@@ -41,6 +38,10 @@ localization:
      - This module improves the MyInvois E-invoicing feature by adding proper support for self
        billing, rendering the MyInvois QR code in the invoice PDF file and allows better management
        of foreign customer TIN.
+
+.. note::
+   The Malaysian accounting reports and the Employment Hero payroll connector are **not** available
+   in this edition.
 
 .. _malaysia/configuration/company:
 
@@ -100,8 +101,13 @@ portal to grant Odoo the **right to invoice** as an intermediary for your compan
 #. In the :guilabel:`Representatives` section, click :guilabel:`Add Intermediary` in the top-right
    corner.
 
-   .. image:: malaysia/myinvois-add-intermediary.png
-      :alt: MyInvois add intermediary
+   .. screenshot:: finance-fl-malaysia-myinvois-add-intermediary
+      :menu: (MyTax / MyInvois portal) ‣ View Taxpayer Profile ‣ Representatives ‣ Add Intermediary
+      :shows: The "Add Intermediary" form of the MyInvois portal with TIN, BRN and Name filled in for ODOO S.A. and the permission toggles (Representation From, Document - Submit, Document - Cancel, Document - Request Rejection).
+      :highlight: The permission toggles.
+      :data: Pre-production portal.
+      :module: l10n_my_edi
+      :notes: English UI, light theme, 1440px width.
 
 #. Add `ODOO S.A.` as an intermediary using the following information:
 
@@ -127,8 +133,13 @@ portal to grant Odoo the **right to invoice** as an intermediary for your compan
 
 #. Click :guilabel:`Save`. The status for `ODOO S.A.` is then :guilabel:`Active`.
 
-   .. image:: malaysia/myinvois-intermediary-active.png
-      :alt: MyInvois status active
+   .. screenshot:: finance-fl-malaysia-myinvois-intermediary-active
+      :menu: (MyTax / MyInvois portal) ‣ View Taxpayer Profile ‣ Representatives
+      :shows: The Representatives list of the MyInvois portal showing ODOO S.A. as intermediary with the status "Active".
+      :highlight: The "Active" status.
+      :data: Pre-production portal.
+      :module: l10n_my_edi
+      :notes: English UI, light theme, 1440px width.
 
 .. _malaysia/myinvois/setup/odoo:
 
@@ -209,8 +220,13 @@ When an invoice or bill includes a tax with the :guilabel:`Malaysian Tax Type` s
 **Tax Exempt**, a :guilabel:`Tax Exemption Reason` must be specified in the :guilabel:`MyInvois`
 tab before the document is sent.
 
-.. image:: malaysia/myinvois-tax-exemption-reason.png
-      :alt: MyInvois tax exemption reason
+.. screenshot:: finance-fl-malaysia-myinvois-tax-exemption-reason
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (an invoice with a tax-exempt tax) ‣ MyInvois tab
+   :shows: The MyInvois tab of a customer invoice with the "Tax Exemption Reason" field filled in, required because a line uses a tax whose Malaysian Tax Type is "Tax Exempt".
+   :highlight: The "Tax Exemption Reason" field.
+   :data: Demo company "YourCompany MY", Malaysian localization installed; MyInvois pre-production.
+   :module: l10n_my_edi
+   :notes: English UI, light theme, 1440px width.
 
 .. _malaysia/myinvois/workflow:
 
@@ -254,7 +270,7 @@ within the :guilabel:`MyInvois` tab.
    from MyInvois.
 
 .. note::
-   Odoo :doc:`automatically checks and updates <../../sales/subscriptions/scheduled_actions>` the
+   Odoo automatically checks and updates the
    status every hour. To update it manually at any time, click :guilabel:`Update MyInvois Status`.
 
 .. _malaysia/myinvois/workflow/cancellation:
@@ -315,18 +331,10 @@ To download the PDF from an invoice or bill:
 #. Select :guilabel:`Download`
 #. Choose either :guilabel:`PDF` or :guilabel:`PDF without Payment`
 
-.. image:: malaysia/myinvois-qr-code.png
-   :alt: MyInvois QR code
-
-.. _malaysia/employment-hero:
-
-Employment Hero payroll
-=======================
-
-If your business is already up and running with :doc:`Employment Hero
-<../../hr/payroll/payroll_localizations/employment_hero>`, you can use our connector as an
-alternative payroll solution.
-
-.. important::
-   To :ref:`configure the Employment Hero API <employment_hero/configuration>` for **Malaysia**, use
-   the following value as :guilabel:`Payroll URL`: `https://apimy.yourpayroll.io/`.
+.. screenshot:: finance-fl-malaysia-myinvois-qr-code
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (a validated invoice) ‣ Download ‣ PDF
+   :shows: The PDF of an invoice submitted to MyInvois with the MyInvois validation QR code printed in the header.
+   :highlight: The QR code.
+   :data: Demo company "YourCompany MY", Malaysian localization installed; MyInvois pre-production.
+   :module: l10n_my_edi_extended
+   :notes: English UI, light theme, 1440px width.

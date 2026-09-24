@@ -73,6 +73,14 @@ Setting a cycle up
 
 .. _performance/cycles/population:
 
+.. screenshot:: hr-performance-cycle-form
+   :menu: Performance ‣ Cycles ‣ Review Cycles ‣ New
+   :shows: A review cycle form with the period, the questionnaire, the rating scale, the release mode, the population filter and the anonymity threshold.
+   :highlight: The Population and Population Filter fields (red frame).
+   :data: Cycle "2026 annual review", period 2026-01-01 to 2026-12-31.
+   :module: hr_review
+   :notes: English UI, light theme, 1440px width.
+
 The population, and what the launch tells you first
 ===================================================
 
@@ -225,6 +233,14 @@ Tracking a cycle
 The cycle form carries a :guilabel:`Reviews` smart button and a :guilabel:`Completed` one, a
 completion percentage on the list view, and a :guilabel:`Reviews` page listing every review
 with its employee, reviewers, due date, status and sign-off state.
+
+.. screenshot:: hr-performance-cycle-dashboard
+   :menu: Performance ‣ Cycles ‣ Cycle Dashboard
+   :shows: The cycle dashboard with the reviews grouped by stage and the completion counters per stage.
+   :highlight: The completion counters (red frame).
+   :data: Cycle "2026 annual review" with 24 reviews spread across the stages.
+   :module: hr_review
+   :notes: English UI, light theme, 1440px width.
 
 For the wider picture, :menuselection:`Performance --> Cycles --> Cycle Dashboard` opens the
 completion analysis grouped by cycle and status. See :doc:`reporting`.

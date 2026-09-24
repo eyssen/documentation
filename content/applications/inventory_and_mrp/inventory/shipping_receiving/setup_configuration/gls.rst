@@ -54,6 +54,14 @@ For the generic fields shared by all carriers — :guilabel:`Delivery Product`, 
 countries, publishing the method on the website — refer to :doc:`third_party_shipper`. Remember to
 **publish** each method that should be offered in the webshop.
 
+.. screenshot:: setup-configuration-gls-configuration-tab
+   :menu: Inventory ‣ Configuration ‣ Delivery Methods ‣ GLS Home delivery
+   :shows: A GLS shipping method form with Provider set to "GLS" and the "GLS Configuration" tab open, showing the API User, API Password, Test API User, Test API Password and Client number fields, plus the Delivery type selection.
+   :highlight: The "GLS Configuration" tab (red frame).
+   :data: Shipping method "GLS Home delivery".
+   :module: eyssen_delivery_gls
+   :notes: English UI, light theme, 1440px width.
+
 Credentials
 -----------
 
@@ -110,6 +118,13 @@ happens to the order's shipping address once a shop is chosen:
   chooser and cleaned up automatically when they are no longer used by any order.
 - **Disabled** (default): the shipping address stays the customer's own; only the parcel shop
   identifier is stored on the order and sent to GLS with the label.
+
+.. screenshot:: setup-configuration-gls-delivery-type
+   :menu: Inventory ‣ Configuration ‣ Delivery Methods ‣ GLS Parcel Shop
+   :shows: The "GLS Configuration" tab of a parcel-shop method, showing the "Delivery type" field set to "Parcel Shop" and the "Create Delivery Address for PS" option below it.
+   :highlight: The "Delivery type" and "Create Delivery Address for PS" fields (red frame).
+   :module: eyssen_delivery_gls
+   :notes: English UI, light theme, 1440px width.
 
 Pricing
 -------
@@ -182,6 +197,13 @@ switched to the auto-created shop address or left untouched.
 Switching to another delivery method reverts the shipping address to the customer's own address
 and removes the now-unused shop address; selecting a different shop replaces the previous one the
 same way.
+
+.. screenshot:: setup-configuration-gls-checkout-map
+   :menu: (webshop) Checkout ‣ Delivery step ‣ GLS Parcel Shop
+   :shows: The official GLS parcel-shop map opened in a dialog over the webshop checkout, with the shop search field and map pins, before a shop is picked.
+   :highlight: The selected parcel shop pin (red frame).
+   :module: eyssen_delivery_gls
+   :notes: English UI, light theme, 1440px width.
 
 .. important::
    Choosing a shop is **not enforced** at checkout: a shopper can close the map without picking

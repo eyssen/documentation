@@ -21,9 +21,13 @@ and publish an event schedule with various tracks.
 Also, when that setting checkbox is ticked, two additional setting options appear beneath it:
 :guilabel:`Live Broadcast` and :guilabel:`Event Gamification`.
 
-.. image:: event_tracks/track-settings.png
-   :align: center
-   :alt: The Schedule and Tracks setting in the Odoo Events app, along with corresponding options.
+.. screenshot:: events-event-tracks-track-settings
+   :menu: Events ‣ Configuration ‣ Settings
+   :shows: The Events settings page with the Schedule & Tracks checkbox enabled and its Live Broadcast and Tracks on Website sub-options.
+   :highlight: The Schedule & Tracks setting block (red frame).
+   :data: Demo event 'Technical Training' (event), 'YourCompany' demo data.
+   :module: website_event_track
+   :notes: English UI, light theme, 1440px width.
 
 The :guilabel:`Live Broadcast` option provides the ability to air tracks online through a *YouTube*
 integration.
@@ -60,15 +64,17 @@ Clicking the :guilabel:`Tracks` smart button reveals the :guilabel:`Event Tracks
 particular event, which presents all the tracks (both scheduled and proposed) for the event, if
 there are any.
 
-.. image:: event_tracks/event-tracks-page.png
-   :align: center
-   :alt: Typical event tracks page for an event in the Odoo Events application.
+.. screenshot:: events-event-tracks-event-tracks-page
+   :menu: Events ‣ Events ‣ (event) ‣ Tracks
+   :shows: The Tracks kanban grouped by stage (Proposal, Confirmed, Announced, Published).
+   :data: Four tracks spread over the first three stages.
+   :module: website_event_track
+   :notes: English UI, light theme, 1440px width.
 
 The tracks are presented in a default :icon:`oi-view-kanban` :guilabel:`(Kanban)` view, but there is
 also the option to view these tracks in a :icon:`oi-view-list` :guilabel:`(List)`,
-:icon:`oi-view-cohort` :guilabel:`(Gantt)` chart, :icon:`fa-calendar-check-o`
-:guilabel:`(Calendar)`, :icon:`fa-area-chart` :guilabel:`(Graph)`, or :icon:`fa-clock-o`
-:guilabel:`(Activity)` view. All of which are accessible in the upper-right corner of the
+:icon:`fa-calendar-check-o` :guilabel:`(Calendar)`, :icon:`fa-area-chart` :guilabel:`(Graph)`, or
+:icon:`fa-clock-o` :guilabel:`(Activity)` view. All of which are accessible in the upper-right corner of the
 :guilabel:`Tracks` page.
 
 In the default :icon:`oi-view-kanban` :guilabel:`(Kanban)` view, the tracks are categorized into
@@ -89,9 +95,13 @@ Create event track
 From the :guilabel:`Event Tracks` page, click :guilabel:`New` in the upper-left corner to reveal a
 blank event track form to create an event track.
 
-.. image:: event_tracks/event-track-form.png
-   :align: center
-   :alt: Typical event track form in the Odoo Events application.
+.. screenshot:: events-event-tracks-event-track-form
+   :menu: Events ‣ Events ‣ (event) ‣ Tracks ‣ New
+   :shows: A new event track form with the Track Title, Track Date, Duration, Location, Tags, Speaker, Description, Interactivity and Quiz elements.
+   :highlight: The Track Date, Duration and Location fields (red frame).
+   :data: Track 'Odoo 18 news', 45 minutes, room 'Main hall'.
+   :module: website_event_track
+   :notes: English UI, light theme, 1440px width.
 
 Start by giving this track a :guilabel:`Title`. This field is **required** by Odoo.
 
@@ -139,9 +149,13 @@ Speaker tab
 The :guilabel:`Speaker` tab on an event track form is filled with various fields related to the
 specific speaker who is planning to conduct/host the track.
 
-.. image:: event_tracks/speaker-tab.png
-   :align: center
-   :alt: The Speaker tab on an event track form in the Odoo Events application.
+.. screenshot:: events-event-tracks-speaker-tab
+   :menu: Events ‣ Events ‣ (event) ‣ Tracks ‣ New
+   :shows: The Speaker tab of a track form with the Contact, Contact Email, Contact Phone, Speaker Bio and Speaker Name/Email/Phone fields.
+   :highlight: The Contact field (red frame).
+   :data: Speaker 'Anna Kovács'.
+   :module: website_event_track
+   :notes: English UI, light theme, 1440px width.
 
 Contact Details section
 ***********************
@@ -201,9 +215,13 @@ Interactivity tab
 The :guilabel:`Interactivity` tab on an event track form features a single option at first:
 :guilabel:`Magic Button`.
 
-.. image:: event_tracks/interactivity-tab.png
-   :align: center
-   :alt: The Interactivity tab on an event track form in the Odoo Events application.
+.. screenshot:: events-event-tracks-interactivity-tab
+   :menu: Events ‣ Events ‣ (event) ‣ Tracks ‣ New
+   :shows: The Interactivity tab of a track form with the Magic Button enabled and its Button Title, Button Target URL and Show Button fields.
+   :highlight: The Magic Button block (red frame).
+   :data: Button 'Join the workshop' pointing to a page of the event website.
+   :module: website_event_track
+   :notes: English UI, light theme, 1440px width.
 
 When the checkbox beside :guilabel:`Magic Button` is ticked, Odoo displays a *call to action* button
 to attendees on the track sidebar, while the track is taking place.
@@ -231,9 +249,13 @@ setting is enabled in the Odoo *Events* settings.
 To add a quiz to the event track, click the :guilabel:`Add Quiz` button. Doing so reveals a separate
 page where an event track quiz can be created and configured.
 
-.. image:: event_tracks/add-quiz.png
-   :align: center
-   :alt: The Add Quiz page in the Odoo Events application for an event track.
+.. screenshot:: events-event-tracks-add-quiz
+   :menu: Events ‣ Events ‣ (event) ‣ Tracks ‣ Add Quiz
+   :shows: The quiz page of a track with the Quiz name, the reward points fields and the list of questions.
+   :highlight: The reward points fields (red frame).
+   :data: Quiz with two questions.
+   :module: website_event_track
+   :notes: English UI, light theme, 1440px width.
 
 Start by entering a title for the quiz in the blank field at the top of the page. Then, if
 participants should be allowed to try the quiz multiple times, tick the checkbox beside
@@ -245,9 +267,13 @@ corresponding event and track this quiz is associated with.
 To add questions to the quiz, click :guilabel:`Add a line` beneath the :guilabel:`Question` column.
 Doing so reveals a :guilabel:`Create Questions` pop-up window.
 
-.. image:: event_tracks/create-questions.png
-   :align: center
-   :alt: The Create Questions pop-up window on an event-specific track quiz in the Odoo Events app.
+.. screenshot:: events-event-tracks-create-questions
+   :menu: Events ‣ Events ‣ (event) ‣ Tracks ‣ Add Quiz
+   :shows: The Create Questions pop-up window with the question text and its answers, each with its Correct and Comment fields.
+   :highlight: The Correct checkbox of the right answer (red frame).
+   :data: Question with three answers, one correct.
+   :module: website_event_track
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    **All** track quiz questions are multiple choice.
@@ -301,9 +327,13 @@ accessible) for event attendees, toggle the :icon:`fa-toggle-off` :guilabel:`Unp
 the top of the page to :icon:`fa-toggle-on` :guilabel:`Published`; thus turning it from red to
 green, and making it accessible for attendees.
 
-.. image:: event_tracks/published-toggle.png
-   :align: center
-   :alt: The track-related event submenu options on an event website built with Odoo Events.
+.. screenshot:: events-event-tracks-published-toggle
+   :menu: (event website) ‣ Talks
+   :shows: A published track page on the event website with the Unpublished/Published toggle in the website editor's top bar.
+   :highlight: The Published toggle (red frame).
+   :data: Track 'Odoo 18 news'.
+   :module: website_event_track
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`create_events`

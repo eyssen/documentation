@@ -94,22 +94,34 @@ To secure entries, select a date up to which all entries should be secured and p
 Report download
 ===============
 
-To download the data inalterability check report, go to :menuselection:`Accounting --> Configuration
---> Settings --> Reporting` and click on :guilabel:`Download the Data Inalterability Check Report`.
+To produce the data inalterability check report, activate the :ref:`developer mode
+<developer-mode>`, go to :menuselection:`Settings --> Technical --> Actions: Server Actions`, and
+run :guilabel:`Data Inalterability Check`. The report is generated as a PDF for the current
+company.
 
 The report's first section is an overview of all journal sequence prefixes containing hashed entries.
 In the :guilabel:`Restricted` column, you can see whether or not a journal has the :ref:`secure
 posted entries with hash <data-inalterability/restricted>` option (V) activated or not (X). The
 :guilabel:`Check` column tells you whether all entries are correctly hashed.
 
-.. image:: data_inalterability/journal-overview.png
-   :align: center
-   :alt: Configuration report for two journals
+.. screenshot:: accounting-data-inalterability-overview
+   :menu: (report) Data Inalterability Check, first section
+   :shows: The overview table of the data inalterability check report, listing the journal sequence
+      prefixes with the "Restricted" and "Check" columns.
+   :highlight: The "Restricted" and "Check" columns (red frame).
+   :data: Two journals, one restricted and correctly hashed, one not restricted.
+   :module: account
+   :notes: PDF output, crop to the table.
 
 The second section gives a more detailed result of the data consistency check for each hashed
 journal sequence prefix. You can view the first hashed entry and its corresponding hash,
 as well as the last hashed entry and its corresponding hash.
 
-.. image:: data_inalterability/data-consistency-check.png
-   :align: center
-   :alt: Data consistency check report for a journal
+.. screenshot:: accounting-data-inalterability-consistency
+   :menu: (report) Data Inalterability Check, second section
+   :shows: The detailed consistency result for one hashed journal sequence prefix, with the first
+      and last hashed entries and their hashes.
+   :highlight: The first and last entry rows (red frame).
+   :data: Journal prefix INV/2026/ with a verified hash chain.
+   :module: account
+   :notes: PDF output, crop to the section.

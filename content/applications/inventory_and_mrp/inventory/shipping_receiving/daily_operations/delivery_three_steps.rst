@@ -20,18 +20,24 @@ sure the *Multi-Step Routes* option is enabled in :menuselection:`Inventory app 
 --> Settings --> Warehouse`. Note that activating :guilabel:`Multi-Step Routes` will also activate
 *Storage Locations*.
 
-.. image:: delivery_three_steps/delivery-three-steps-multi-step-routes.png
-   :align: center
-   :alt: Activate multi-step routes and storage locations in inventory settings.
+.. screenshot:: daily-operations-delivery-three-steps-multi-step-routes
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to "Warehouse", with the "Storage Locations" and "Multi-Step Routes" checkboxes enabled.
+   :highlight: Both checkboxes (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Next, the warehouse needs to be configured for three step deliveries. To do this, go to
 :menuselection:`Inventory app --> Configuration --> Warehouses`, and click on the
 :guilabel:`warehouse` to edit. Then, select :guilabel:`Pack goods, send goods in output and then
 deliver (3 steps)` for :guilabel:`Outgoing Shipments`.
 
-.. image:: delivery_three_steps/delivery-three-steps-outgoing-shipments.png
-   :align: center
-   :alt: Set outgoing shipment option to deliver in three steps.
+.. screenshot:: daily-operations-delivery-three-steps-outgoing-shipments
+   :menu: Inventory app ‣ Configuration ‣ Warehouses
+   :shows: A warehouse form with "Outgoing Shipments" set to the three-step option (pick, pack, ship).
+   :highlight: The "Outgoing Shipments" option (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Activating three-step receipts and deliveries creates two new internal locations: a *Packing Zone*
 (WH/Packing Zone), and *Output* (WH/Output). To rename these locations, go to
@@ -51,10 +57,12 @@ form. On the blank quotation form, select a :guilabel:`Customer`, add a storable
 A :guilabel:`Delivery` smart button appears in the top right of the quotation form. Clicking it
 opens the picking order to move the ordered product from `WH/Stock` to `WH/Packing Zone`.
 
-.. image:: delivery_three_steps/delivery-three-steps-smart-button.png
-   :align: center
-   :alt: After confirming the sales order, the Delivery smart button appears showing three items
-         associated with it.
+.. screenshot:: daily-operations-delivery-three-steps-smart-button
+   :menu: Sales ‣ Orders ‣ Orders
+   :shows: A confirmed sales order with the Delivery smart button showing three transfers.
+   :highlight: The Delivery smart button (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Process a picking
 -----------------
@@ -70,9 +78,12 @@ Click on the picking to process. If the product is in stock, Odoo will automatic
 product. Click :guilabel:`Validate` to mark the picking as done, and complete the transfer to the
 :guilabel:`Packing Zone`.
 
-.. image:: delivery_three_steps/delivery-three-steps-picking-order.png
-   :align: center
-   :alt: Picking order operation showing source location and destination location.
+.. screenshot:: daily-operations-delivery-three-steps-picking-order
+   :menu: Inventory ‣ Operations ‣ Transfers
+   :shows: The pick transfer, moving the goods from WH/Stock to the packing zone.
+   :highlight: The source and destination locations (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Process a packing
 -----------------
@@ -86,9 +97,12 @@ packing order generated from the previously confirmed sales order.
 Click on the packing order associated with the sales order, then click on :guilabel:`Validate` to
 complete the packing.
 
-.. image:: delivery_three_steps/delivery-three-steps-packing-order.png
-   :align: center
-   :alt: Packing order operation showing source location and destination location.
+.. screenshot:: daily-operations-delivery-three-steps-packing-order
+   :menu: Inventory ‣ Operations ‣ Transfers
+   :shows: The pack transfer, moving the goods from the packing zone to WH/Output.
+   :highlight: The source and destination locations (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Once the packing order is validated, the product leaves the :guilabel:`WH/Packing Zone` location and
 moves to the :guilabel:`WH/Output` location. Then, the status of the document will change to
@@ -111,10 +125,11 @@ the packing, and the delivery.
 
 Click the delivery (WH/OUT) transfer to open the delivery order. Then, click :guilabel:`Validate`.
 
-.. image:: delivery_three_steps/delivery-three-steps-delivery-order.png
-   :align: center
-   :alt: Click Validate on the delivery order to transfer the product from the output location to
-         the customer location.
+.. screenshot:: daily-operations-delivery-three-steps-order
+   :menu: Sales app
+   :shows: Click Validate on the delivery order to transfer the product from the output location to
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Once the delivery order is validated, the product leaves the :guilabel:`WH/Output` location and
 moves to the :guilabel:`Partners/Customers` location. Then, the status of the document will change

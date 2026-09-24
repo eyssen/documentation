@@ -17,7 +17,7 @@ View available badges
 =====================
 
 To view the available badges that are configured by default, navigate to :menuselection:`Employees
-app --> Configuration --> Badges`.
+app --> Configuration --> Challenges --> Badges`.
 
 All badges appear in a default Kanban view, with the badge's :guilabel:`Name` and image displayed.
 Additionally, the number of users awarded the badge for both the current month, and in total,
@@ -26,8 +26,13 @@ appears, along with the badge description, and the avatar for each user who rece
 Each badge has a :guilabel:`Grant` button to :ref:`award the badge <employees/grant_badge>` from the
 :guilabel:`Badges` dashboard.
 
-.. image:: badges/badges.png
-   :alt: All the available badges, on the Badges dashboard.
+.. screenshot:: hr-employees-badges-list
+   :menu: Employees ‣ Configuration ‣ Challenges ‣ Badges
+   :shows: The Badges page in kanban view with the available badges and the number of times each has been granted.
+   :highlight: The grant counters on the badge cards (red frame).
+   :data: Demo company "YourCompany HU"; the default badges of the Employees app.
+   :module: hr_gamification
+   :notes: English UI, light theme, 1440px width.
 
 Create badges
 =============
@@ -36,7 +41,8 @@ Badges can be created in the database when the default badges are not sufficient
 from the :guilabel:`Badges` dashboard in the **Employees** app, or from the **CRM** app.
 
 To add a badge in the **Employees** app, first navigate to :menuselection:`Employees app -->
-Configuration --> Badges`, then click the :guilabel:`New` button in the upper-left corner.
+Configuration --> Challenges --> Badges`, then click the :guilabel:`New` button in the
+upper-left corner.
 
 Fill out the badge form as outlined in the :ref:`CRM documentation <crm/create-rewards>`.
 
@@ -81,5 +87,10 @@ Next, enter a brief summary of why the badge is being granted in the field displ
 .. note::
    Users cannot grant themselves badges. An error message appears if attempted.
 
-.. image:: badges/badge.png
-   :alt: The 'Reward Employee' field populated.
+.. screenshot:: hr-employees-grant-badge
+   :menu: Employees ‣ Configuration ‣ Challenges ‣ Badges ‣ (open a badge) ‣ Grant
+   :shows: The Grant Badge dialog with the employee selected in the Who would you like to reward? field and a reason typed below it.
+   :highlight: The employee field and the reason (red frame).
+   :data: Employee "Anita Kovács"; reason "Excellent work on the year-end stock count".
+   :module: hr_gamification
+   :notes: English UI, light theme, 1440px width.

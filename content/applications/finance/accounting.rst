@@ -5,12 +5,10 @@ Accounting and Invoicing
 ========================
 
 Odoo Invoicing is a standalone app designed to create invoices, send them to customers, and manage
-payments. It also handles flows involving vendor bills. On the other hand, the Accounting app is a
-comprehensive accounting solution that allows the same actions and includes additional features such
-as standard financial reports, bank reconciliation, budgets, asset management, and more.
-
-.. seealso::
-   `Odoo Tutorials: Accounting <https://www.odoo.com/slides/accounting-19>`_
+payments. It also handles flows involving vendor bills. With the eYssen accounting modules (*Odoo 18
+Accounting Community*, *eYssen Accountant* and their dependencies), the app becomes **Accounting**,
+a comprehensive accounting solution that allows the same actions and includes additional features
+such as financial reports, bank reconciliation, budgets, asset management, lock dates, and more.
 
 .. cards::
 
@@ -33,7 +31,7 @@ as standard financial reports, bank reconciliation, budgets, asset management, a
    .. card:: Vendor bills
       :target: accounting/vendor_bills
 
-      Vendor bills, assets, and invoice digitization (OCR)
+      Vendor bills, assets, and deferred expenses
 
    .. card:: Payments
       :target: accounting/payments
@@ -43,7 +41,7 @@ as standard financial reports, bank reconciliation, budgets, asset management, a
    .. card:: Bank and cash accounts
       :target: accounting/bank
 
-      Bank synchronization, reconciliation, and cash registers
+      Bank statements, reconciliation, and cash registers
 
    .. card:: Reporting
       :target: accounting/reporting
@@ -92,7 +90,6 @@ accounting at a time.
 
 .. seealso::
    - :doc:`Multi-company </applications/general/companies/multi_company>`
-   - :ref:`Inter-company transactions <general/multi-company/inter-company-transactions>`
 
 .. _accounting/multi-currency:
 
@@ -122,7 +119,7 @@ accounting and reporting rules, including the following:
   apply to all branches.
 - Branches can manage their own dedicated journals and related records.
 - The parent company manages a common :ref:`fiscal period <year-end/fiscal-years>`, so its
-  :ref:`lock and closing dates <year-end/lock-everything-date>` apply across all branches. However,
+  :ref:`lock and closing dates <year-end/lock-dates>` apply across all branches. However,
   branches may set earlier lock dates if needed.
 - The parent company can access all :doc:`reports <accounting/reporting>`, :doc:`invoices
   <accounting/customer_invoices>`, :doc:`bills <accounting/vendor_bills>`, etc., from its branches,
@@ -131,12 +128,9 @@ accounting and reporting rules, including the following:
 .. note::
    The :doc:`Fiscal localization <fiscal_localizations>` package is set on the parent company.
 
-.. warning::
+.. note::
    Adding a branch to a company enables :doc:`multi-company functions
    <../general/companies/multi_company>`.
-
-   For more information, refer to `Odoo's pricing page <https://www.odoo.com/pricing-plan>`_ or
-   contact your Odoo account manager.
 
 .. _accounting/branch/reporting:
 
@@ -179,7 +173,8 @@ payable entries. As transactions are linked to **contacts**, it is possible to r
 customer, vendor, or supplier.
 
 The **Partner Ledger** report displays the balance of customers and suppliers. To access it, go to
-:menuselection:`Accounting --> Reporting --> Partner Ledger`.
+:menuselection:`Accounting --> Reporting --> Dynamic Reports --> Partner Ledger` or
+:menuselection:`Accounting --> Accounting --> Ledgers --> Partner Ledger`.
 
 .. _accounting/reporting:
 
@@ -187,7 +182,7 @@ Reporting
 =========
 
 The following financial :doc:`reports <accounting/reporting>` are available and updated in
-real-time:
+real-time (:menuselection:`Accounting --> Reporting --> Dynamic Reports`):
 
 +-----------------------------------------------+
 |               Financial reports               |
@@ -200,7 +195,7 @@ real-time:
 |            +----------------------------------+
 |            | Executive summary                |
 |            +----------------------------------+
-|            | Tax return                       |
+|            | Tax report                       |
 |            +----------------------------------+
 |            | EC sales list                    |
 +------------+----------------------------------+
@@ -210,9 +205,7 @@ real-time:
 |            +----------------------------------+
 |            | Journal audit                    |
 |            +----------------------------------+
-|            | Intrastat report                 |
-|            +----------------------------------+
-|            | Check register                   |
+|            | Bank reconciliation              |
 +------------+----------------------------------+
 | Partner    | Partner ledger                   |
 |            +----------------------------------+
@@ -220,33 +213,14 @@ real-time:
 |            +----------------------------------+
 |            | Aged payable                     |
 +------------+----------------------------------+
-| Management | Invoice analysis                 |
-|            +----------------------------------+
-|            | Analytic report                  |
-|            +----------------------------------+
-|            | Audit trail                      |
-|            +----------------------------------+
-|            | Budget report                    |
-|            +----------------------------------+
-|            | Unrealized currency gains/losses |
-|            +----------------------------------+
-|            | Deferred revenue                 |
+| Management | Deferred revenue                 |
 |            +----------------------------------+
 |            | Deferred expense                 |
-|            +----------------------------------+
-|            | Depreciation schedule            |
-|            +----------------------------------+
-|            | Disallowed expenses              |
-|            +----------------------------------+
-|            | Loans analysis                   |
-|            +----------------------------------+
-|            | Product margins                  |
-|            +----------------------------------+
-|            | 1099 report                      |
 +------------+----------------------------------+
 
-.. tip::
-   :doc:`Create and customize reports <accounting/reporting/customize>` with Odoo's report engine.
+Printable (PDF) versions of the main reports, as well as the invoice analysis, analytic report,
+audit trail, assets, budgets, and daily reports (cash book, bank book, day book), are available in
+the other sections of the :menuselection:`Accounting --> Reporting` menu.
 
 .. _accounting/tax-report:
 
@@ -301,7 +275,7 @@ and loss balance is automatically reported on the balance sheet report.
 Fiduciaries
 ===========
 
-The :guilabel:`Accounting Firms` mode can be activated by going to :menuselection:`Accounting -->
+The :guilabel:`Accounting Firms mode` can be activated by going to :menuselection:`Accounting -->
 Configuration --> Settings`. When enabled:
 
 - The document's sequence becomes editable on all documents;
@@ -320,16 +294,9 @@ To grant access to the company's accountant, :ref:`add the accountant as a new u
 <../general/users/access_rights>` in the :guilabel:`Accounting` section to enable access to the
 company's financial data:
 
-- :guilabel:`Accounting`: Select :guilabel:`Accountant`.
-- :guilabel:`Bank`: Allow bank account validation.
-
-.. Note::
-   Adding an accountant as a new user in :doc:`Odoo Online <../../administration/odoo_online>` is
-   free if the accountant has an Odoo account registered with the same email address as the one
-   listed for the company user. However, :doc:`Odoo.sh <../../administration/odoo_sh>` and
-   :doc:`Odoo On-premise <../../administration/on_premise>` may involve extra charges for each
-   additional user. For more pricing information, see
-   `Odoo's pricing <https://www.odoo.com/pricing-plan>`_.
+- :guilabel:`Accounting`: Select :guilabel:`Accountant` (daily accounting), :guilabel:`Advisor`
+  (full access, including configuration), or :guilabel:`Auditor` (read-only access).
+- :guilabel:`Bank`: Select :guilabel:`Validate bank account` to allow bank account validation.
 
 For a multi-company environment, set the appropriate :ref:`access <users/multi-companies>`.
 

@@ -23,8 +23,13 @@ A list of all expense reports with a status of either :guilabel:`To Submit`, :gu
 :guilabel:`Approved`, :guilabel:`Posted`, or :guilabel:`Done` appears. Expense reports with a status
 of :guilabel:`Refused` are hidden, by default.
 
-.. image:: approve_expenses/expense-reports-list.png
-   :alt: Reports to validate are found on the Reports to Approve page.
+.. screenshot:: finance-expenses-approve-expenses-expense-reports-list
+   :menu: Expenses ‣ Expense Reports
+   :shows: The "Expense Reports" list with the "To Approve" filter active; several submitted reports with employee, total and the "Submitted" status.
+   :highlight: The "To Approve" filter chip in the search bar.
+   :data: Demo employees; 3 reports in Submitted state.
+   :module: hr_expense
+   :notes: English UI, light theme, 1440px width.
 
 Approve expense reports
 =======================
@@ -52,8 +57,13 @@ click on an individual report to view the detailed report form.
 From here, several options are presented: :guilabel:`Approve`,  :guilabel:`Refuse`, and
 :guilabel:`Reset to draft`. Click :guilabel:`Approve` to approve the report.
 
-   .. image:: approve_expenses/approve-individual.png
-      :alt: An individual expense report that can be approved or refused.
+   .. screenshot:: finance-expenses-approve-expenses-approve-individual
+      :menu: Expenses ‣ Expense Reports ‣ (a submitted report)
+      :shows: An expense report form in "Submitted" status with the "Approve", "Refuse" and "Reset to Draft" buttons in the header.
+      :highlight: The "Approve" and "Refuse" buttons (red frame).
+      :data: Report "Trip to Brussels", employee Mitchell Admin, 2 expense lines.
+      :module: hr_expense
+      :notes: English UI, light theme, 1440px width.
 
 .. _expenses/multiple:
 
@@ -67,8 +77,13 @@ the checkbox next to each report being approved, or tick the checkbox next to th
 
 Next, click the :guilabel:`Approve Report` button.
 
-   .. image:: approve_expenses/approve-multiple.png
-      :alt: Select multiple expense reports at once.
+   .. screenshot:: finance-expenses-approve-expenses-approve-multiple
+      :menu: Expenses ‣ Expense Reports
+      :shows: The Expense Reports list with three "Submitted" reports ticked; the "Approve Report" button visible in the control panel next to the "Actions" gear.
+      :highlight: The selection checkboxes and the "Approve Report" button.
+      :data: Demo employees, 3 selected submitted reports.
+      :module: hr_expense
+      :notes: English UI, light theme, 1440px width.
 
 .. tip::
    Team managers can view all the expense reports for their team members only. While on the
@@ -99,15 +114,25 @@ in the chatter, and the tagged people are notified via email.
    who is a follower, click the :icon:`fa-user-o` :guilabel:`(Show Followers)` icon to display the
    followers of the expense report.
 
-   .. image:: approve_expenses/chatter.png
-      :alt: Send messages in the chatter.
+   .. screenshot:: finance-expenses-approve-expenses-chatter
+      :menu: Expenses ‣ Expense Reports ‣ (a submitted report)
+      :shows: The chatter of an expense report with the "Send message" composer open and a short message to the employee asking for a missing receipt.
+      :highlight: The "Send message" tab of the chatter.
+      :data: Report "Trip to Brussels".
+      :module: hr_expense
+      :notes: English UI, light theme, 1440px width.
 
 To refuse an expense report, click :guilabel:`Refuse`, and a :guilabel:`Refuse Expense` pop-up
 window loads. Enter a brief explanation for the refusal on the :guilabel:`Reason` line, then click
 :guilabel:`Refuse`.
 
-.. image:: approve_expenses/refuse-expense.png
-   :alt: Send messages in the chatter.
+.. screenshot:: finance-expenses-approve-expenses-refuse-expense
+   :menu: Expenses ‣ Expense Reports ‣ (a submitted report) ‣ Refuse
+   :shows: The "Refuse Expense" pop-up window with the "Reason" text field filled in and the "Refuse" button.
+   :highlight: The "Reason" field.
+   :data: Reason: "Receipt missing for the taxi expense".
+   :module: hr_expense
+   :notes: English UI, light theme, 1440px width.
 
 Once the expense report is refused, the status changes to :guilabel:`Refused`, and the only button
 that appears is :guilabel:`Reset to Draft`.

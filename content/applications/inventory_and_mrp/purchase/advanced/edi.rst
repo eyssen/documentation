@@ -66,8 +66,14 @@ Set the :guilabel:`Vendor` to the portal user representing the seller, and :guil
 .. example::
    |PO| from the buyer's database. The :guilabel:`Vendor` is the seller's portal user account, Joel.
 
-   .. image:: edi/po-database-view.png
-      :alt: Example PO. The Vendor is the seller's portal user account, Joel.
+   .. screenshot:: purchase-edi-po-database-view
+      :menu: Purchase ‣ Orders ‣ Purchase Orders ‣ (open a PO)
+      :shows: A confirmed PO in the buyer's database, with the Vendor field set to the seller's
+              portal user, "Joel".
+      :highlight: The Vendor field (red frame).
+      :data: Demo company "YourCompany"; vendor/portal user "Joel".
+      :module: purchase_edi_ubl_bis3
+      :notes: English UI, light theme, 1440px width.
 
 Seller's process
 ----------------
@@ -92,11 +98,21 @@ file.
    software!` button, and the second image displays a pop-up window with the :guilabel:`Copy`
    button.
 
-.. image:: edi/po-portal-view.png
-   :alt: Portal view of the PO, with "Connect your software!" button.
+.. screenshot:: purchase-edi-po-portal-view
+   :menu: (customer portal) ‣ Our Orders ‣ (open a PO)
+   :shows: The portal view of a confirmed PO, with the "Connect with your software!" button.
+   :highlight: The "Connect with your software!" button (red frame).
+   :data: Demo company "YourCompany"; portal user "Joel"; PO PO00017.
+   :module: purchase_edi_ubl_bis3
+   :notes: English UI, light theme, 1440px width.
 
-.. image:: edi/pop-up.png
-   :alt: Pop-up to copy link.
+.. screenshot:: purchase-edi-pop-up
+   :menu: (customer portal) ‣ Our Orders ‣ (open a PO) ‣ Connect with your software!
+   :shows: The pop-up window with the download URL and the "Copy" button.
+   :highlight: The Copy button (red frame).
+   :data: Demo company "YourCompany"; PO PO00017.
+   :module: purchase_edi_ubl_bis3
+   :notes: English UI, light theme, 1440px width, use a throw-away/sample URL.
 
 .. example::
    :download:`XML file <edi/P00017.xml>` for PO00017
@@ -114,11 +130,14 @@ Doing so automatically generates a sales order with the customer populated as th
 product lines, quantities, and prices pre-filled. This process ensures efficient and accurate data
 exchange between the two databases.
 
-.. figure:: edi/so.png
-   :alt: Uploaded SO in the seller's database.
-
-   Uploaded SO in the seller's database.
+.. screenshot:: purchase-edi-so
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (uploaded SO)
+   :shows: The sales order automatically generated in the seller's database from the uploaded XML
+           file, with the customer and product lines pre-filled.
+   :highlight: The Order Lines tab (red frame).
+   :data: Demo company "YourCompany"; SO generated from PO00017's XML.
+   :module: purchase_edi_ubl_bis3
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    :doc:`../../../sales/sales/sales_quotations/create_quotations`
-

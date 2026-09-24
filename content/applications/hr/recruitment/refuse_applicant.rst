@@ -103,8 +103,13 @@ After clicking the :guilabel:`Refuse` button on an applicant form, a :ref:`Refus
 Then, two fields appear below the selected refusal reason: :guilabel:`Send Email` and
 :guilabel:`Email Template`.
 
-.. image:: refuse_applicant/refuse-pop-up.png
-   :alt: The Refuse Reason pop-up window that appears when refusing an applicant.
+.. screenshot:: hr-recruitment-refuse-dialog
+   :menu: Recruitment ‣ Applications ‣ All Applications ‣ (open an applicant) ‣ Refuse
+   :shows: The Refuse Reason dialog with the reason selected, the email template loaded and the Send button.
+   :highlight: The Refuse Reason field (red frame).
+   :data: Reason "Does not fit the job requirements"; use an invented applicant.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 The applicant's email address automatically populates the :guilabel:`Send Email` field; additional
 email recipients **cannot** be added.
@@ -120,8 +125,13 @@ then click :guilabel:`Refuse` at the bottom of the :guilabel:`Refuse Reason` pop
 refusal email is sent to the applicant, and a red :guilabel:`Refused` banner appears on the
 applicant's card in the top-right corner.
 
-.. image:: refuse_applicant/refuse.png
-   :alt: An applicant's card with the refused banner appearing in the top-right corner in red.
+.. screenshot:: hr-recruitment-refused-banner
+   :menu: Recruitment ‣ Applications ‣ All Applications ‣ (open an applicant)
+   :shows: A refused applicant form with the red REFUSED banner in the upper-right corner.
+   :highlight: The REFUSED banner (red frame).
+   :data: Applicant "János Tóth", refused.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 View refused applicants
 =======================

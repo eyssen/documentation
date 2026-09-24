@@ -24,15 +24,23 @@ To activate the batch picking option, begin by going to :menuselection:`Inventor
 Configuration --> Settings`. Under the :guilabel:`Operations` section, check the :guilabel:`Batch,
 Wave & Cluster Transfers` box.
 
-.. image:: batch/batch-transfer-checkbox.png
-   :alt: Enable the *Batch Transfers* in Inventory > Configuration > Settings.
+.. screenshot:: picking-methods-batch-transfer-checkbox
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to "Operations", with the "Batch Transfers" checkbox enabled.
+   :highlight: The "Batch Transfers" checkbox (red frame).
+   :module: stock_picking_batch
+   :notes: English UI, light theme, 1440px width.
 
 Since batch picking is a method to optimize the *pick* operation in Odoo, the :guilabel:`Storage
 Locations` and :guilabel:`Multi-Step Routes` options under the :guilabel:`Warehouse` heading must
 also be checked on this settings page. When finished, click :guilabel:`Save`.
 
-.. image:: batch/locations-routes-checkbox.png
-   :alt: Enable *Storage Locations* and *Multi-Step Routes* Inventory > Configuration > Settings.
+.. screenshot:: picking-methods-batch-locations-routes-checkbox
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to "Warehouse", with the "Storage Locations" and "Multi-Step Routes" checkboxes enabled.
+   :highlight: Both checkboxes (red frame).
+   :module: stock_picking_batch
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`Delivery in two steps <../daily_operations/receipts_delivery_two_steps>`
@@ -46,8 +54,12 @@ desired operation type from the :guilabel:`Inventory Overview` menu (e.g. the :g
 Kanban card), click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon, then select
 :guilabel:`Prepare Batch`.
 
-.. image:: batch/prepare-batch.png
-   :alt: The Inventory dashboard with the Prepare Batch option highlighted.
+.. screenshot:: picking-methods-batch-prepare
+   :menu: Inventory
+   :shows: The Inventory overview with the operation-type card menu open, showing the "Prepare Batch" option.
+   :highlight: The "Prepare Batch" option (red frame).
+   :module: stock_picking_batch
+   :notes: English UI, light theme, 1440px width.
 
 On the batch transfer form, fill the following fields out accordingly:
 
@@ -77,8 +89,11 @@ Once the transfer records are selected, click :guilabel:`Confirm` to confirm the
    A new batch transfer is assigned to the :guilabel:`Responsible`, `Joel Willis`, for the `Pick`
    :guilabel:`Operation Type`. The :guilabel:`Scheduled Date` is set to `August 11`.
 
-   .. image:: batch/batch-transfer-form.png
-      :alt: View of *Batch Transfers* form.
+   .. screenshot:: picking-methods-batch-transfer-form
+      :menu: Inventory ‣ Operations ‣ Batch Transfers ‣ New
+      :shows: An empty batch transfer form with the Responsible, Operation Type and Scheduled Date fields, and the Transfers tab below.
+      :module: stock_picking_batch
+      :notes: English UI, light theme, 1440px width.
 
    Clicking the :guilabel:`Add a line` button opens the :guilabel:`Add:Transfers` window,
    displaying only pickings. This is because the :guilabel:`Operation Type` was set to `Pick` on the
@@ -88,8 +103,12 @@ Once the transfer records are selected, click :guilabel:`Confirm` to confirm the
    them in the new transfer. Then, click the :guilabel:`Select` button to close the
    :guilabel:`Add:Transfers` window.
 
-   .. image:: batch/add-transfers-window.png
-      :alt: Select multiple transfers from the *Add:Transfers* window.
+   .. screenshot:: picking-methods-batch-add-transfers-window
+      :menu: Inventory ‣ Operations ‣ Batch Transfers ‣ New
+      :shows: The "Add: Transfers" pop-up window with several delivery orders selected by checkbox.
+      :data: Three delivery orders of the same operation type.
+      :module: stock_picking_batch
+      :notes: English UI, light theme, 1440px width.
 
 .. _inventory/warehouses_storage/add-batch-transfers:
 
@@ -100,16 +119,23 @@ Another method of creating batch transfers is available using the :guilabel:`Add
 a list. Navigate to the :menuselection:`Inventory app --> Operations` drop-down menu, and select any
 of the :guilabel:`Transfers` to open a filtered list of transfers.
 
-.. image:: batch/transfers-drop-down.png
-   :alt: Show all transfer types in a drop-down menu: Receipts, Deliveries, Internal Transfers,
-         Manufacturings, Batch Transfers, Dropships.
+.. screenshot:: picking-methods-batch-transfers-drop-down
+   :menu: Inventory app ‣ Operations
+   :shows: The Inventory app Operations drop-down menu opened, listing Transfers, Batch Transfers, Replenishment, Procurement, Scrap and Landed Costs.
+   :highlight: The "Batch Transfers" menu item (red frame).
+   :module: stock_picking_batch
+   :notes: English UI, light theme, 1440px width.
 
 On the transfers list, select the checkbox to the left of the selected transfers to add in a batch.
 Next, navigate to the :icon:`fa-cog` :guilabel:`Actions` button, and click :guilabel:`Add to batch`
 from the resulting drop-down menu.
 
-.. image:: batch/add-to-batch.png
-   :alt: Use *Add to batch* button, from the *Action* button's list.
+.. screenshot:: picking-methods-batch-add-to
+   :menu: Inventory ‣ Operations ‣ Transfers
+   :shows: The transfers list with several rows selected and the gear (Actions) menu open, showing "Add to batch".
+   :highlight: The "Add to batch" action (red frame).
+   :module: stock_picking_batch
+   :notes: English UI, light theme, 1440px width.
 
 Doing so opens an :guilabel:`Add to batch` pop-up window, wherein the employee
 :guilabel:`Responsible` for the picking can be assigned.
@@ -127,8 +153,12 @@ To create a batch to be processed at a later time, select the :guilabel:`Draft` 
 
 Conclude the process by clicking :guilabel:`Confirm`.
 
-.. image:: batch/add-to-batch-window.png
-   :alt: Show *Add to batch* window to create a batch transfer.
+.. screenshot:: picking-methods-batch-add-to-window
+   :menu: Inventory ‣ Operations ‣ Transfers
+   :shows: The "Add to batch" pop-up window, with the "a new batch transfer" option and the Responsible field.
+   :highlight: The "a new batch transfer" option (red frame).
+   :module: stock_picking_batch
+   :notes: English UI, light theme, 1440px width.
 
 Automatic batches
 -----------------
@@ -153,8 +183,12 @@ Batches can be automatically generated based on the following criteria:
 - :guilabel:`Source Location`
 - :guilabel:`Destination Location`
 
-.. image:: batch/auto-batch-grouping.png
-   :alt: The Batch and Wave Transfers settings page with the Auto batch grouping criteria visible.
+.. screenshot:: picking-methods-batch-auto-grouping
+   :menu: Inventory ‣ Configuration ‣ Operations Types
+   :shows: An operation type form with the "Automatic Batches" option enabled and the grouping criteria checkboxes (Contact, Destination Country, Carrier, Source Location, Destination Location) visible.
+   :highlight: The grouping criteria block (red frame).
+   :module: stock_picking_batch
+   :notes: English UI, light theme, 1440px width.
 
 Process batch transfer
 ======================
@@ -179,8 +213,12 @@ Finally, select :guilabel:`Validate` to complete the picking.
    because the :guilabel:`Done` column matches the value in the :guilabel:`Reserved` column.
    However, `0.00` quantities have been picked for the other product, `Cable Management Box`.
 
-   .. image:: batch/process-batch-transfer.png
-      :alt: Show batch transfer of products from two pickings in the *Detailed Operations* tab.
+   .. screenshot:: picking-methods-batch-process-transfer
+      :menu: Inventory ‣ Operations ‣ Batch Transfers
+      :shows: A batch transfer form with the Operations tab open, listing the products of two different pickings with their source locations.
+      :data: Batch of two delivery orders.
+      :module: stock_picking_batch
+      :notes: English UI, light theme, 1440px width.
 
 Only in-stock products are visible in the :guilabel:`Detailed Operations` tab.
 
@@ -196,8 +234,12 @@ the products that have been picked, and are ready for the next step.
 
    Click the :guilabel:`Check Availability` button to search the stock again for available products.
 
-   .. image:: batch/operations-tab.png
-      :alt: Show unavailable reserved quantities in the *Operations* tab.
+   .. screenshot:: picking-methods-batch-operations-tab
+      :menu: Inventory ‣ Operations ‣ Batch Transfers
+      :shows: The Operations tab of a batch transfer where the quantity of one line could not be reserved in full.
+      :highlight: The line with the missing reserved quantity (red frame).
+      :module: stock_picking_batch
+      :notes: English UI, light theme, 1440px width.
 
 Create backorder
 ----------------
@@ -217,5 +259,9 @@ Click :guilabel:`No Backorder` to finish the picking *without* creating another 
 
 Click :guilabel:`Discard` to cancel the validation, and return to the batch transfer form.
 
-.. image:: batch/create-backorder.png
-   :alt: Show the *Create Backorder* pop-up.
+.. screenshot:: picking-methods-batch-create-backorder
+   :menu: Inventory ‣ Operations ‣ Batch Transfers
+   :shows: The "Create Backorder?" pop-up window shown after validating a partially picked batch transfer.
+   :highlight: The "Create Backorder" button (red frame).
+   :module: stock_picking_batch
+   :notes: English UI, light theme, 1440px width.

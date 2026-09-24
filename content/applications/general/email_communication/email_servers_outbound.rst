@@ -4,22 +4,25 @@ Manage outbound messages
 
 .. _email-outbound-default:
 
-Sending emails with Odoo's default configuration
-================================================
+Sending emails with the default configuration
+=============================================
 
-On **Odoo Online** and **Odoo.sh**, sending and receiving emails works out of the box. No
-configuration is required.
+If no outgoing mail server is configured in the database, Odoo sends emails through the SMTP server
+defined in the server's configuration file or command-line options (`smtp_server`, `smtp_port`,
+etc.). This default server is set up by the system administrator or the hosting provider.
 
-When a database is created, the subdomain `company-name.odoo.com` is used to send and receive
-emails. The deliverability is optimized for this subdomain as it uses Odoo’s DNS configuration.
+The sender addresses are built from the company's :ref:`alias domain
+<email-outbound-alias-domain>`.
 
 .. example::
-   If the database subdomain is `company-name.odoo.com` and all mailing configurations are the
-   default ones, all emails will be sent from `notifications@company-name.odoo.com`.
+   If the alias domain is `company-name.com` and all mailing configurations are the default ones,
+   all emails will be sent from `notifications@company-name.com`.
 
 .. _email-outbound-default-from-filtering:
 
-This configuration is handled by the system parameter `mail.default.from_filter`.
+The addresses the default server may send from are defined by the system parameter
+`mail.default.from_filter` (or, if it is not set, by the `from_filter` option of the server
+configuration).
 In case where the sender's domain do not match the value of this parameter, the notification address
 is used instead. Multiple values can be defined in this system parameter: comma-separated, domains
 or full email addresses are all allowed. Once an :ref:`outgoing mail server is configured
@@ -27,11 +30,14 @@ or full email addresses are all allowed. Once an :ref:`outgoing mail server is c
 and the value used is the :ref:`FROM filtering
 <email-outbound-different-servers-personalized-from-filtering>` of the mail server.
 
-.. image:: email_servers_outbound/diagram-inbound-mailing-method.png
-   :alt: Odoo’s default outbound messages configuration.
+.. screenshot:: general-email-outbound-default-diagram
+   :menu: (diagram)
+   :shows: Diagram of the default outbound flow: Odoo sends from notifications@<alias domain> through the default SMTP server; replies go to catchall@<alias domain>; delivery errors to bounce@<alias domain>.
+   :module: mail
+   :notes: Simple schematic drawing, not a UI screenshot; use example.com-style domains.
 
-Emails are sent with `catchall@company-name.odoo.com` as the *reply-to* address. In addition,
-delivery errors are sent to `bounce@company-name.odoo.com`.
+Emails are sent with `catchall@company-name.com` as the *reply-to* address. In addition,
+delivery errors are sent to `bounce@company-name.com`.
 
 .. note::
    The catchall, bounce, and notification addresses do not work like other aliases. They do not have
@@ -47,29 +53,24 @@ The database can be configured to use a custom domain, in which case all default
 built using the custom domain. If the custom domain is `company-name.com`, the sender address will
 be `notifications@company-name.com`, the *reply-to* address `catchall@company-name.com`, and the
 *bounce* address `bounce@company-name.com`. The custom domain can be utilized when sending emails
-either with Odoo’s email servers or an external one.
+either with the default mail server or an external one.
 
 This section assumes ownership of a custom domain. If not, a custom domain must be purchased from a
 domain registrar such as GoDaddy, Namecheap, or any alternative provider.
 
-.. seealso::
-   `Magic Sheet - Email domain name configuration [PDF]
-   <https://drive.google.com/drive/folders/1cW3watvBO4h190rz-a08AshUepVzDeg5>`_
-
 .. _email-outbound-custom-domain-odoo-server:
 
-Using a custom domain with Odoo’s email server
-----------------------------------------------
+Using a custom domain with the default mail server
+--------------------------------------------------
 
-On **Odoo Online** or **Odoo.sh**, some configurations are mandatory in the custom domain's DNS to
-ensure good deliverability.
+Some configurations are mandatory in the custom domain's DNS to ensure good deliverability.
 
 .. warning::
    Most of the configuration will be done on the domain provider’s side, and it might require some
    configuration on the mail server itself. **Some technical knowledge is required.**
 
 The first step is to configure the :ref:`SPF <email-domain-spf>` and :ref:`DKIM <email-domain-dkim>`
-to be compliant with Odoo’s mail server.
+records so that the mail server sending the emails is authorized for the domain.
 
 Next, the custom domain must be set as the alias domain of a company. Select the company, open the
 :guilabel:`Settings`, and add the custom domain under the :guilabel:`Alias Domain` field.
@@ -88,11 +89,14 @@ modify the default aliases if desired:
    company, the alias domain automatically set is the one with the lowest priority (ad displayed on
    the alias domain list in :ref:`developer-mode`).
 
-All email aliases (e.g., related to CRM or Helpdesk teams) must have their corresponding mailbox in
+All email aliases (e.g., related to CRM teams or projects) must have their corresponding mailbox in
 the custom domain mail server.
 
-.. image:: email_servers_outbound/diagram-owned-domain-odoo-server.png
-   :alt: Technical schema of external mail server configuration with Odoo.
+.. screenshot:: general-email-outbound-custom-domain-diagram
+   :menu: (diagram)
+   :shows: Diagram: Odoo sends emails for company-name.com through the default mail server; the domain's DNS holds SPF/DKIM records for that server; replies arrive at the company-name.com mail server and are brought back to Odoo by redirection, incoming mail server or MX record.
+   :module: mail
+   :notes: Simple schematic drawing, not a UI screenshot.
 
 To receive emails in the Odoo database within the corresponding chatter (CRM, invoices, sales
 orders, etc.), one of these three methods must be used:
@@ -110,8 +114,7 @@ Sending emails with an external SMTP server
 -------------------------------------------
 
 .. note::
-   If utilizing your own outgoing mail server, it must be paired with your own domain, as updating
-   the DNS of an Odoo subdomain is not feasible.
+   An external outgoing mail server must be paired with a domain whose DNS records you can manage.
 
 To add an external SMTP server in Odoo, open :guilabel:`Settings`, and enable the :guilabel:`Use
 Custom Email Servers` option found under the :guilabel:`Emails` section. Then, click
@@ -120,6 +123,29 @@ Custom Email Servers` option found under the :guilabel:`Emails` section. Then, c
 Returning to the :guilabel:`Emails` section, click :guilabel:`Outgoing Email Servers`, then `New` to
 create an outgoing mail server record. Most fields are the common parameters used to set up a
 connection to an SMTP server; use the values provided by your email provider.
+
+The main fields are:
+
+- :guilabel:`SMTP Server` and :guilabel:`SMTP Port`: the host name (or IP address) and port of the
+  SMTP server.
+- :guilabel:`Connection Encryption`: :guilabel:`None`, :guilabel:`TLS (STARTTLS)`, or
+  :guilabel:`SSL/TLS`, as required by the provider.
+- :guilabel:`Authenticate with`: :guilabel:`Username` (with :guilabel:`Username` and
+  :guilabel:`Password`), :guilabel:`SSL Certificate`, or :guilabel:`Command Line Interface` (uses
+  the SMTP settings of the server configuration). Depending on the installed modules, OAuth
+  options such as Gmail or Outlook are also available.
+- :guilabel:`FROM Filtering`: see :ref:`email-outbound-different-servers-personalized-from-filtering`.
+- :guilabel:`Priority`: the server with the lowest value is used first.
+
+.. screenshot:: general-email-outbound-server-form
+   :menu: Settings ‣ General Settings ‣ Emails ‣ Outgoing Email Servers ‣ New
+   :shows: The outgoing mail server form with Name, FROM Filtering, Priority, SMTP Server, SMTP Port,
+      Connection Encryption, Authenticate with, Username and Password, and the "Test Connection"
+      button.
+   :highlight: The "Test Connection" button.
+   :data: Server "Company SMTP", smtp.example.com, port 587, TLS (STARTTLS), FROM filtering "example.com".
+   :module: base, mail
+   :notes: English UI, crop to the form; blur the password.
 
 Once completed, click :guilabel:`Test Connection`. Note that a successful test connection does not
 confirm that the email will go out as some restriction might remain on the provider side, thus, it
@@ -135,8 +161,8 @@ might be required to whitelist them in your mail server:
 
 - The Alias Domain Bounce Alias (default value = `bounce`),
 - The Alias Domain Default From (default value = `notifications`),
-- The default admin address `admin@company-name.odoo.com` or, if changed, the new value),
-- The default Odoobot address `odoobot@company-name.odoo.com` or, if changed, the new value),
+- The default admin address (`admin@company-name.com` or, if changed, the new value),
+- The default Odoobot address (`odoobot@company-name.com` or, if changed, the new value),
 - The specific FROM defined on an email marketing campaign,
 - The specific FROM that can be defined in an email template.
 
@@ -157,7 +183,7 @@ Personalized mail servers
 Transactional emails and mass mailings can be sent using separate email servers in Odoo. Doing so
 means day-to-day emails, quotations, or invoices sent to clients will be handled as *transactional
 emails*. *Mass mailing emails*, including the sending of batches of invoices or quotations, will be
-managed by the Marketing Automation or Email Marketing application.
+managed by the Email Marketing application.
 
 .. example::
    You can use services like Gmail, Amazon SES, or Brevo for transactional emails, and services like
@@ -169,15 +195,24 @@ transactional emails server and one for the mass mailings server. Enter a lower 
 value for the transactional server (e.g., `1`) over the mass mailings server (e.g., `2`) so
 transactional emails are given priority.
 
-.. image:: email_servers_outbound/split-transaction-massmail-mail-servers.png
-   :alt: Example of split between transaction and mass mailing mail servers.
+.. screenshot:: general-email-outbound-two-servers
+   :menu: Settings ‣ Technical ‣ Email ‣ Outgoing Mail Servers
+   :shows: List of two outgoing mail servers: a transactional server with priority 1 and a mass mailing server with priority 2.
+   :highlight: The Priority column.
+   :data: Servers "Transactional (smtp.example.com)" and "Mass mailing (smtp.mailing.example.net)".
+   :module: base
+   :notes: English UI, developer mode active, crop to the list.
 
 Now, go to :menuselection:`Email Marketing --> Configuration --> Settings`, enable
 :guilabel:`Dedicated Server`, and select the appropriate email server. Odoo uses the server with the
 lowest priority value for transactional emails, and the server selected here for mass mailings.
 
-.. image:: email_servers_outbound/dedicated-mass-mail-server.png
-   :alt: Dedicated mail server on Email Marketing app settings.
+.. screenshot:: general-email-outbound-dedicated-server
+   :menu: Email Marketing ‣ Configuration ‣ Settings
+   :shows: The "Dedicated Server" setting enabled with the mass mailing server selected.
+   :highlight: The Dedicated Server setting.
+   :module: mass_mailing
+   :notes: English UI, crop to the setting.
 
 .. _email-outbound-different-servers-personalized-from-filtering:
 
@@ -222,44 +257,38 @@ When an email is sent from Odoo, the following sequence is used to choose the ou
 - If there is no mail server, Odoo relies on the :ref:`system parameter
   <email-outbound-default-from-filtering>` value.
 
-It is also possible to use Odoo's mail server for transactional emails in addition to mass mailings.
+It is also possible to combine an outgoing mail server record with the default mail server of the
+server configuration.
 
 .. _email-outbound-different-servers-external-odoo:
 
-Using an external email server and Odoo’s default server
---------------------------------------------------------
+Using an external email server and the default server
+-----------------------------------------------------
 
-On Odoo Online and Odoo.sh, databases are started with Odoo's SMTP server. If no outgoing mail
-server is set, the default Odoo's SMTP server will be used.
+If no outgoing mail server is set in the database, the default SMTP server of the server
+configuration is used. The same server can also be added as an outgoing mail server record, by
+selecting :guilabel:`Command Line Interface` in the :guilabel:`Authenticate with` field, e.g., to
+give it a priority and a FROM filter.
 
-.. image:: email_servers_outbound/command-line-interface-option-mail-server.png
-   :alt: Adding a mail server using the Odoo's mail server with the CLI authentication.
+.. screenshot:: general-email-outbound-cli-server
+   :menu: Settings ‣ Technical ‣ Email ‣ Outgoing Mail Servers ‣ New
+   :shows: Outgoing mail server form with "Authenticate with" set to "Command Line Interface" and the
+      information text explaining that the server configuration's SMTP settings are used.
+   :highlight: The "Authenticate with" field.
+   :module: base
+   :notes: English UI, developer mode active, crop to the form.
 
 .. example::
-   If an outgoing mail server is used simultaneously with Odoo’s default server (CLI), the FROM
-   filter of the outgoing mail server must contain a custom domain, and the FROM filter of the CLI
-   must contain Odoo’s subdomain. If there is no FROM filtering, the email will go out using the
-   notification address.
+   If an outgoing mail server is used simultaneously with the default server (CLI), the FROM
+   filter of each server must contain the domain (or addresses) that server is allowed to send
+   from. If there is no FROM filtering, the email will go out using the notification address.
 
-.. image:: email_servers_outbound/split-mail-servers.png
-   :alt: Splitting of Odoo mail server for transactional emails and Mail server for Mass mailing.
-
-.. note::
-   On Odoo Online, the command line interface is equivalent to the default Odoo mail server, using
-   the same limit as if there was no outgoing mail server in place.
-
-.. tip::
-   On Odoo Online, the page also shows your daily email usage and your daily limit. On Odoo.sh, you
-   need to check on the monitor page the number of outgoing emails that were sent.
-
-.. note::
-   On Odoo.sh, to use the command-line interface, an outgoing mail server can be configured on the
-   configuration file.
-
-.. warning::
-   Odoo’s mail server is meant for transactional emails and small-scale marketing campaigns. The
-   :ref:`daily limit <email-issues-outgoing-delivery-failure-messages-limit>` depends on the
-   database type and the applications used.
+.. screenshot:: general-email-outbound-split-servers
+   :menu: Settings ‣ Technical ‣ Email ‣ Outgoing Mail Servers
+   :shows: List with a "Command Line Interface" server used for transactional emails and an
+      external SMTP server used for mass mailing, each with its own FROM filtering and priority.
+   :module: base
+   :notes: English UI, developer mode active, crop to the list.
 
 .. _email-outbound-custom-domain-external-server:
 
@@ -273,27 +302,25 @@ records (SPF, DKIM, and DMARC). A list of the :ref:`most common providers is ava
 <email-domain-providers-documentation>`.
 
 .. note::
-   DNS configuration is required when you use your own domain. If an external outgoing mail server
-   is used, configuring the records as described in the :doc:`Odoo DNS configuration for our mail
-   servers documentation <email_domain>` **will not have the desired effect**, as it is independent
-   of Odoo when using a custom email server. Odoo does not allow the configuration of Odoo's
-   subdomain.
+   DNS configuration is required when you use your own domain. The SPF and DKIM records must
+   authorize the mail server that actually sends the emails; see :doc:`email_domain`.
 
 .. _email-outbound-port-restriction:
 
 Port restriction
 ================
 
-Port 25 is blocked for security reasons on Odoo Online and Odoo.sh. Try using port 465, 587, or 2525
-instead.
+Port 25 is often blocked by hosting and cloud providers for security reasons. If the connection
+fails on port 25, try using port 465, 587, or 2525 instead.
 
 .. _email-outbound-alias-domain:
 
 Alias domain
 ============
 
-The catchall domain is company-specific. By default, all companies share Odoo’s subdomain (e.g.,
-`company-name.odoo.com`), but each company may have its own custom email domain.
+The catchall domain is company-specific. By default, all companies share the same alias domain, but
+each company may have its own custom email domain, selected in the :guilabel:`Alias Domain` field
+of the :menuselection:`Settings` app.
 
 When the :ref:`developer-mode` is activated, the alias domain options are available by going to
 :menuselection:`Settings --> Technical --> Email: Alias Domains`.
@@ -327,13 +354,12 @@ to send them a notification by email, or in the Odoo inbox, depending on the use
 
    As Mary’s domain does not belong to the alias domain, Odoo overrides the email address and uses
    the notification email address to notify the followers. This override depends on the
-   configuration done in the database. By default, on Odoo Online and Odoo.sh, the email `FROM`
-   address will be overridden with the value `notifications@company-name.odoo.com` instead of
-   `mary@customer.example.com`.
+   configuration done in the database. By default, the email `FROM` address will be overridden with
+   the value `notifications@company-name.com` instead of `mary@customer.example.com`.
 
    The address is constructed using the name of the sender and
    `{alias domain, default from alias}`@`{alias domain, domain name}`, by default,
-   `notifications@company-name.odoo.com`.
+   `notifications@company-name.com`.
 
 .. _email-outbound-unique-address:
 

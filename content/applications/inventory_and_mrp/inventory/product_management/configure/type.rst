@@ -12,9 +12,6 @@ To configure an existing product, go to :menuselection:`Inventory app --> Produc
 and select the desired product from the list. Alternatively, from the :guilabel:`Products` menu,
 click :guilabel:`New` to create a new product.
 
-.. seealso::
-   `Odoo Tutorials: Product Type <https://www.youtube.com/watch?v=l6j0ZkP5mLM>`_
-
 .. _inventory/product_management/for-sale-or-purchase:
 
 For sale vs. purchase
@@ -75,8 +72,15 @@ a few fields and tabs in the product form:
   ticked. In general, most smart buttons on a product form link to :ref:`inventory operations
   <inventory/product_management/inventory-ops-by-product-type>`.
 
-.. image:: type/product-form.png
-   :alt: Designate a product as a good or service.
+.. screenshot:: inventory-type-product-form
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product)
+   :shows: A product form, "General Information" tab, with the "Product Type" field set to "Goods", the
+      "Sales" and "Purchase" checkboxes, the "Invoicing Policy" field and the "Track Inventory" checkbox all
+      visible.
+   :highlight: The "Product Type" field (red frame).
+   :data: Storable product "Desk Organizer", Sales and Purchase both ticked.
+   :module: product, stock, sale
+   :notes: English UI, light theme, 1440px width, crop to the General Information tab.
 
 .. _inventory/product_management/invoicing-policy:
 
@@ -107,8 +111,14 @@ When :guilabel:`Track Inventory` is ticked, a drop-down menu appears, offering f
 tracked one of three ways: :guilabel:`By Unique Serial Number`, :guilabel:`By Lots`, or
 :guilabel:`By Quantity`.
 
-.. image:: type/tracked.png
-   :alt: Configure a tracked good.
+.. screenshot:: inventory-type-track-inventory
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product)
+   :shows: A product form with "Track Inventory" ticked and its drop-down open, showing the three options
+      "By Unique Serial Number", "By Lots" and "By Quantity".
+   :highlight: The "Track Inventory" checkbox and its drop-down (red frame).
+   :data: Storable product "Desk Organizer", tracking set to "By Quantity".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the field and the open drop-down.
 
 *Untracked* products (sometimes referred to as *non-inventory* products) are typically consumed in a
 short period of time, meaning that stock/inventory does *not* need to be maintained. Non-inventory
@@ -257,8 +267,6 @@ form, according to the *Preferred Route*.
 
 .. seealso::
    :doc:`Replenishment <../../warehouses_storage/replenishment>`
-   `Odoo Tutorials: Replenishment Methods for Manufacturing
-   <https://www.youtube.com/watch?v=vtjeMGcG8aM>`_
 
 .. _inventory/product_management/manufacturing:
 
@@ -308,10 +316,15 @@ However, for non-inventory products, the quantity is not tracked, and the produc
 the package's :guilabel:`Contents` (which can be accessed by going to :menuselection:`Inventory app
 --> Products --> Packages`, and selecting the desired package).
 
-.. figure:: type/package-content.png
-   :alt: Show Packages page, containing the package contents list.
-
-   An untracked product was placed in the package, but the **Content** section does not list it.
+.. screenshot:: inventory-type-package-content
+   :menu: Inventory ‣ Products ‣ Packages ‣ (a package)
+   :shows: A package form whose "Content" section is empty even though an untracked (non-inventory) good was
+      put in the package.
+   :highlight: The empty "Content" list (red frame).
+   :data: Package PACK0000001 at location WH/Stock; one untracked good was added to it in a transfer.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the Content section. Caption to convey: an
+      untracked product was placed in the package, but the Content section does not list it.
 
 Additionally, if the *Move Entire Packages* feature is enabled, moving a package updates the
 location of the contained tracked products but not the contained untracked products. To enable this

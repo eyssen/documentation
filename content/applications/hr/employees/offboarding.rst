@@ -10,8 +10,8 @@ specific departments or divisions, that have different requirements and steps fr
 offboarding plan.
 
 In addition to an offboarding plan, the employee record must be :ref:`updated to reflect their
-departure <employees/archive>`, log the reason why they left, close any open activities associated
-with the employee, and :ref:`provide them with any important documents <employees/send-link>`.
+departure <employees/archive>`, log the reason why they left, and close any open activities
+associated with the employee.
 
 .. _employees/offboarding:
 
@@ -40,8 +40,13 @@ offboarding plan is launched (:guilabel:`0 days Before Plan Date`).
   department requires. It is recommended to check with the HR department to ensure everything
   required for this step is completed.
 
-.. image:: offboarding/offboarding.png
-   :alt: The three default steps in the Offboarding plan.
+.. screenshot:: hr-employees-offboarding-plan
+   :menu: Employees ‣ Configuration ‣ Activity Planning
+   :shows: The default Offboarding plan with its steps, each step showing the activity type, the summary and the assignment.
+   :highlight: The list of steps (red frame).
+   :data: The Offboarding plan shipped with the Employees app.
+   :module: hr
+   :notes: English UI, light theme, 1440px width.
 
 Modify offboarding plan
 =======================
@@ -94,8 +99,7 @@ Enter the following information in the pop-up window:
 
 - :guilabel:`Activity Type`: Using the drop-down menu, select the specific activity to be scheduled.
   The default options are :guilabel:`Email`, :guilabel:`Call`, :guilabel:`Meeting`,
-  :guilabel:`To-Do`, or :guilabel:`Upload Document`. If the **Sign** app is installed, a
-  :guilabel:`Request Signature` option is available.
+  :guilabel:`To-Do`, or :guilabel:`Upload Document`.
 - :guilabel:`Summary`: Enter a short description for the step.
 - :guilabel:`Assignment`: Using the drop-down menu, select the person assigned to perform the
   activity. The default options are: :guilabel:`Ask at launch`, :guilabel:`Default user`,
@@ -126,8 +130,13 @@ no other steps to add, or click :guilabel:`Save & New` to add more steps, as nee
    are catalogued and returned, all student feedback forms are turned in, and all access badges and
    keys for the various locations are returned.
 
-   .. image:: offboarding/offboarding-teachers.png
-      :alt: An offboarding plan configured for art teachers.
+   .. screenshot:: hr-employees-offboarding-plan-custom
+      :menu: Employees ‣ Configuration ‣ Activity Planning ‣ New
+      :shows: A custom offboarding plan with department-specific steps, each with an activity type, an assignment and a due date offset.
+      :highlight: The department field and the steps (red frame).
+      :data: Plan "Warehouse offboarding" for the Warehouse department, three steps.
+      :module: hr
+      :notes: English UI, light theme, 1440px width.
 
 Launch offboarding plan
 =======================
@@ -137,8 +146,13 @@ terminate the working relationship with the employee, the offboarding plan shoul
 Navigate to the :menuselection:`Employees app` and click on the departing employee profile. Click
 the :guilabel:`Launch Plan` button, and a blank :guilabel:`Launch Plan` pop-up window loads.
 
-.. image:: offboarding/launch-plan-button.png
-   :alt: The Launch Plan button on the employee profile.
+.. screenshot:: hr-employees-launch-plan-button
+   :menu: Employees ‣ Employees ‣ (open an employee)
+   :shows: The employee form with the Launch Plan button above the chatter.
+   :highlight: The Launch Plan button (red frame).
+   :data: Employee "Anita Kovács".
+   :module: hr
+   :notes: English UI, light theme, 1440px width. Crop to the button area.
 
 Using the drop-down menu, select the desired offboarding plan in the :guilabel:`Plan` field. Then,
 using the calendar selector, set a date in the :guilabel:`Plan Date` field. This is typically the
@@ -175,11 +189,10 @@ Fill out the following fields on the form:
     given notice.
   - :guilabel:`Resigned`: Select this option when the employee no longer wishes to be employed, and
     the employee has given notice.
-  - :guilabel:`Resigned: Retired`: Select this option when the employee is retiring.
-  - :guilabel:`Became Freelance`: Select this option when the employee is no longer working for the
-    company, but is becoming a freelance worker instead.
-  - :guilabel:`Mutual Agreement`: Select this option when both parties have agreed to terminate
-    their working relationship.
+  - :guilabel:`Retired`: Select this option when the employee is retiring.
+
+  Further reasons can be added in :menuselection:`Employees app --> Configuration --> Departure
+  Reasons`.
 
 - :guilabel:`Contract End Date`: Using the calendar selector, select the last day the employee is
   working for the company.
@@ -197,60 +210,15 @@ Fill out the following fields on the form:
     :ref:`assigns the next driver <fleet/new_vehicle/new-driver>`, if applicable.
   - :guilabel:`Equipment`: unassigns the employee from any assigned equipment.
 
-- :guilabel:`HR Info`: Tick the checkbox next to :guilabel:`Send Access Link` to send a download
-  link to the employee's personal email address, containing all their personal HR files.
-- :guilabel:`Private Email`: This field appears if the :guilabel:`HR Info` checkbox is ticked. If
-  there is a private email listed on the employee profile, this field is automatically populated. If
-  no private email address is on their record, enter the private email address for the employee.
 
-When the form is complete, click :guilabel:`Apply`. The employee record is archived, an email with a
-download link to their personal documents is sent to the employee's private email address (if
-selected), and a red :guilabel:`Archived` banner appears in the top-right corner of the employee
-form. The chatter logs the :guilabel:`Departure Date` and :guilabel:`Departure Reason`, and if an
-access link was emailed.
+When the form is complete, click :guilabel:`Apply`. The employee record is archived and a red
+:guilabel:`Archived` banner appears in the upper-right corner of the employee form. The chatter logs
+the :guilabel:`Departure Date` and the :guilabel:`Departure Reason`.
 
-.. image:: offboarding/termination.png
-   :alt: The employee termination form with all fields filled out.
-
-.. note::
-   While attempting to send the HR documents access link, an :guilabel:`Invalid Operation` pop-up
-   window may appear, displaying the following error message:
-
-   :guilabel:`Employee's related user and private email must be set to use "Send Access Link"
-   function: (Employee Name)`
-
-   If this error appears, click :guilabel:`Close` to close the pop-up window, then tick the
-   :guilabel:`Send Access Link` checkbox to deselect it on the :guilabel:`Employee Termination`
-   pop-up window.
-
-   Click :guilabel:`Apply` to archive the employee and close the selected activities on the
-   :guilabel:`Employee Termination` pop-up window, returning to the employee form.
-
-   Once the employee form, ensure the following fields are populated:
-
-   - :guilabel:`Private Information` tab: Ensure an email address is entered in the
-     :guilabel:`Email` field.
-   - :guilabel:`HR Settings` tab: Ensure a :guilabel:`Related User` is selected in the corresponding
-     field.
-
-   After the necessary information is entered, :ref:`resend the HR documents access link
-   <employees/send-link>`
-
-.. _employees/send-link:
-
-Send HR documents access link
------------------------------
-
-If the access link was not sent when first archiving the employee on the *Employee Termination*
-form, it can be sent after the employee is archived at any point.
-
-After an employee is archived, they are no longer visible on the main **Employees** app dashboard.
-To view the archived employees, navigate to the :menuselection:`Employees app` dashboard, and click
-the :icon:`fa-caret-down` :guilabel:`(down arrow)` in the search bar to reveal a drop-down menu.
-Select :guilabel:`Archived`, towards the bottom of the :icon:`fa-filter` :guilabel:`Filters` column,
-then click away from the drop-down window to close it.
-
-Now, only archived employees appear on the dashboard. Click on the desired employee to open their
-employee form. On this form, click the :icon:`fa-gear` :guilabel:`(gear)` icon in the top-left
-corner, then click :guilabel:`Send HR Documents Access Link` from the resulting drop-down menu. The
-chatter logs that the link was sent.
+.. screenshot:: hr-employees-departure-form
+   :menu: Employees ‣ Employees ‣ (open an employee) ‣ Archive
+   :shows: The employee departure dialog with the departure reason, the departure date and the departure description filled in.
+   :highlight: The Departure Reason and Departure Date fields (red frame).
+   :data: Employee "Anita Kovács", reason "Resigned", date 2026-06-30.
+   :module: hr
+   :notes: English UI, light theme, 1440px width.

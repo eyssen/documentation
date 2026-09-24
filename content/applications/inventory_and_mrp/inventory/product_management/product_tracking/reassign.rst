@@ -7,9 +7,14 @@ Odoo without them, can lead to inconsistent records. Follow this documentation t
 an inventory adjustment to assign lot or serial numbers to products that were not originally
 assigned lots.
 
-.. image:: reassign/warning.png
-   :align: center
-   :alt: Warning message: products in stock have no lot/serial number.
+.. screenshot:: inventory-reassign-warning
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Inventory tab
+   :shows: The warning shown on a product form after switching "Tracking" to lots or serial numbers while
+      units are still in stock without a lot/serial number.
+   :highlight: The warning message (red frame).
+   :data: A storable product with 10 units on hand and no lot/serial number.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the warning.
 
 .. note::
    This document outlines the process of using two inventory adjustments: one to remove incorrect
@@ -32,9 +37,14 @@ page. In the :guilabel:`On Hand Quantity` column, change the value to zero.
    If the product is stored in multiple locations, make sure the **total** on hand quantity at
    **all** locations is zero.
 
-.. image:: reassign/remove-quant.png
-   :align: center
-   :alt: Show the Inventory Adjustments model, highlighting the "On Hand Quantity" field.
+.. screenshot:: inventory-reassign-zero-quantity
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ On Hand
+   :shows: The "Update Quantity" page of a product with the "On Hand Quantity" of the single stock line set
+      to zero.
+   :highlight: The "On Hand Quantity" cell (red frame).
+   :data: One quant at location WH/Stock, quantity changed from 10 to 0.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the quant line.
 
 Change traceability setting
 ===========================
@@ -47,9 +57,14 @@ Unique Serial Number`.
 .. seealso::
    :doc:`expiration_dates`
 
-.. image:: reassign/tracking.png
-   :align: center
-   :alt: Enable lots and serial numbers.
+.. screenshot:: inventory-reassign-tracking-field
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Inventory tab
+   :shows: The "Traceability" section of a product form with "Tracking" changed from "No Tracking" to "By
+      Lots".
+   :highlight: The "Tracking" field (red frame).
+   :data: The same product as the previous screenshot, now with zero on hand.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the Traceability section.
 
 Restore on-hand quantity
 ========================
@@ -67,9 +82,14 @@ Number` field, and adjust the :guilabel:`On Hand Quantity` to its original value
 .. seealso::
    :doc:`../../warehouses_storage/inventory_management/count_products`
 
-.. image:: reassign/update-quantity.png
-   :align: center
-   :alt: Fill in the "Lot/Serial Number" and "On Hand Quantity" field.
+.. screenshot:: inventory-reassign-restore-quantity
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ On Hand ‣ New
+   :shows: A new line on the "Update Quantity" page with the "Lot/Serial Number" field filled in and the "On
+      Hand Quantity" set back to the original value; the "No Stock On Hand" warning is visible above.
+   :highlight: The "Lot/Serial Number" and "On Hand Quantity" cells (red frames).
+   :data: Lot "LOT0001", on-hand quantity 10, location WH/Stock.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the new line and the warning.
 
 .. tip::
    To find the original quantity, and adjust the :guilabel:`On Hand Quantity` accordingly, after
@@ -77,13 +97,24 @@ Number` field, and adjust the :guilabel:`On Hand Quantity` to its original value
    the :guilabel:`On Hand Quantity` column. Then, click the :icon:`fa-history` :guilabel:`History`
    button on the far-right.
 
-   .. image:: reassign/adjustment.png
-      :align: center
-      :alt: Show the "History" button on the Inventory Adjustments page.
+   .. screenshot:: inventory-reassign-history-button
+      :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ On Hand ‣ (pencil icon in the On Hand Quantity
+         column)
+      :shows: The inventory-adjustment line being edited, with the clock-shaped "History" button visible at
+         the far right of the row.
+      :highlight: The "History" button (red frame).
+      :data: The same product and quant as the previous screenshots.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the row.
 
    The inventory adjustment that changed the on-hand quantity to zero is displayed in the
    :guilabel:`Quantity` field.
 
-    .. image:: reassign/history.png
-       :align: center
-       :alt: Show the history entry.
+    .. screenshot:: inventory-reassign-history-entry
+       :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ On Hand ‣ History
+       :shows: The move-history list of the quant, showing the earlier inventory adjustment that set the
+          on-hand quantity to zero, with its quantity value.
+       :highlight: The "Quantity" value of the adjustment entry (red frame).
+       :data: One inventory-adjustment move of -10 units.
+       :module: stock
+       :notes: English UI, light theme, 1440px width, crop to the history list.

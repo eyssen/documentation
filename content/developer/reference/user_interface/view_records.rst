@@ -49,6 +49,7 @@ View types
   Display aggregations as a `pivot table <https://en.wikipedia.org/wiki/Pivot_table>`_.
 :ref:`Calendar <reference/view_architectures/calendar>`
   Display records as events in a daily, weekly, monthly, or yearly calendar.
+
 .. _reference/view_records/fields:
 
 Fields

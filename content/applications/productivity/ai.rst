@@ -1,3 +1,6 @@
+:show-content:
+:show-toc:
+
 ===
 AI
 ===

@@ -24,15 +24,13 @@ To activate a payment terminal and allow processing payments with it, follow the
    complete the terminal-specific configuration:
 
    - :doc:`Adyen <terminals/adyen>`
-   - :doc:`Ingenico <terminals/ingenico>`
    - :doc:`Mercado Pago <terminals/mercado_pago>`
+   - :doc:`PayTM <terminals/paytm>`
    - :doc:`Pine Labs <terminals/pine_labs>`
    - :doc:`Razorpay <terminals/razorpay>`
    - :doc:`SIX <terminals/six>`
    - :doc:`Stripe <terminals/stripe>`
-   - :doc:`Tyro <terminals/tyro>`
    - :doc:`Viva.com <terminals/viva_com>`
-   - :doc:`Worldline <terminals/worldline>`
 #. Go to :menuselection:`Point of Sale --> Configuration --> Settings` and add the payment method
    to the :guilabel:`Payment Methods` list to make it available in the POS interface.
 
@@ -56,12 +54,10 @@ Once the transaction is successful, the payment is automatically validated in Po
    :titlesonly:
 
    terminals/adyen
-   terminals/ingenico
    terminals/mercado_pago
+   terminals/paytm
    terminals/pine_labs
    terminals/razorpay
    terminals/six
    terminals/stripe
-   terminals/tyro
    terminals/viva_com
-   terminals/worldline

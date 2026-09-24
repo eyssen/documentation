@@ -41,9 +41,13 @@ To do that, go to :menuselection:`Sales app --> Configuration --> Settings`, and
 
 In that section, check the box to enable the :guilabel:`Variants` feature.
 
-.. image:: variants/activating-variants-setting.png
-   :align: center
-   :alt: Activating product variants on the Settings page of the Odoo Sales application.
+.. screenshot:: sales-variants-setting
+   :menu: Sales ‣ Configuration ‣ Settings
+   :shows: The Settings page scrolled to the "Product Catalog" section with the "Variants" checkbox enabled and the "Attributes" link beside it.
+   :highlight: The "Variants" setting (red frame).
+   :data: Demo company.
+   :module: product
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 Then, click :guilabel:`Save` at the top of the :guilabel:`Settings` page.
 
@@ -60,9 +64,13 @@ attributes, navigate to :menuselection:`Sales app --> Configuration --> Attribut
 To create a new attribute from the :guilabel:`Attributes` page, click :guilabel:`New`. Doing so
 reveals a blank attributes form that can be customized and configured in a number of ways.
 
-.. image:: variants/attribute-creation.png
-   :align: center
-   :alt: A blank attribute creation form in the Odoo Sales application.
+.. screenshot:: sales-variants-attribute-form
+   :menu: Sales ‣ Configuration ‣ Attributes ‣ New
+   :shows: A blank attribute form with the Attribute Name, Display Type, Variant Creation Mode, eCommerce Filter Visibility and Category fields, and the empty values list.
+   :highlight: No highlight; the empty form is the subject.
+   :data: New, unsaved attribute.
+   :module: product
+   :notes: English UI, light theme, 1440px width, full form.
 
 First, create an :guilabel:`Attribute Name`, such as `Color` or `Size`.
 
@@ -80,9 +88,13 @@ The :guilabel:`Display Type` options are:
 - :guilabel:`Multi-checkbox (option)`: options appear as selectable checkboxes on the product page
   of the online store.
 
-.. image:: variants/display-types.png
-   :align: center
-   :alt: Display Types on Product Configurator on the online store in Odoo.
+.. screenshot:: sales-variants-display-types
+   :menu: (eCommerce product page)
+   :shows: The same attribute rendered on the online store with each Display Type: Radio, Pills, Select, Color and Multi-checkbox.
+   :highlight: Each display type labelled (red frames).
+   :data: Attribute "Size" with three values.
+   :module: website_sale
+   :notes: English UI, light theme, crop to the product-configurator block.
 
 The :guilabel:`Variant Creation Mode` field informs Odoo when to automatically create a new variant
 once an attribute is added to a product.
@@ -116,9 +128,13 @@ menu to group similar attributes under the same section for added specificity an
    :guilabel:`eCommerce Category` field, once an option has been selected. Doing so reveals that
    attribute category's detail form.
 
-   .. image:: variants/attribute-category-internal-link.png
-      :align: center
-      :alt: A standard attribute category detail page accessible via its internal link arrow icon.
+   .. screenshot:: sales-variants-attribute-category
+      :menu: Sales ‣ Configuration ‣ Attributes ‣ (an attribute) ‣ Category
+      :shows: An attribute-category form opened from the internal-link arrow next to the Category field, listing the attributes it groups.
+      :highlight: The Category name field (red frame).
+      :data: Category "Dimensions".
+      :module: product
+      :notes: English UI, light theme, 1440px width, full form.
 
    Here, the :guilabel:`Category Name` and :guilabel:`Sequence` is displayed at the top. Followed by
    :guilabel:`Related Attributes` associated with the category. These attributes can be
@@ -153,14 +169,24 @@ Colors
 Next to :guilabel:`Display Type`, select the :guilabel:`Color` option. Go to the
 :guilabel:`Attribute Values` tab to modify the value settings.
 
-.. image:: variants/attribute-value-add-image.png
-   :alt: Add an image of the pattern to an attribute.
+.. screenshot:: sales-variants-value-image
+   :menu: Sales ‣ Configuration ‣ Attributes ‣ (a color attribute) ‣ (a value)
+   :shows: An attribute-value form where an image is uploaded to represent a pattern instead of a plain color.
+   :highlight: The uploaded image (red frame).
+   :data: Attribute "Color", value "Pattern".
+   :module: product
+   :notes: English UI, light theme, 1440px width, crop to the value form.
 
 To choose a color, click the blank circle in the :guilabel:`Color` column, which reveals an HTML
 color selector pop-up window.
 
-.. image:: variants/picking-a-color.png
-   :alt: Selecting a color from the HTML color pop-up window that appears on attribute form.
+.. screenshot:: sales-variants-color-picker
+   :menu: Sales ‣ Configuration ‣ Attributes ‣ (a color attribute) ‣ (a value) ‣ Color
+   :shows: The colour-picker pop-up used to set the colour of an attribute value.
+   :highlight: The selected colour swatch (red frame).
+   :data: Attribute "Color", value "White".
+   :module: product
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 In this pop-up window, select a specific color by dragging the color slider to a particular hue,
 and clicking on the color portion directly on the color gradient window.
@@ -173,8 +199,13 @@ pattern of the product. To do so, click the :icon:`fa-camera` :guilabel:`(camera
 then click the :icon:`fa-pencil` :guilabel:`(pencil)` icon and select an image from your local
 drive. This pattern will appear as a color option on the ecommerce product page.
 
-.. image:: variants/ecommerce-pattern-option.png
-   :alt: Pattern as color option on the ecommerce page.
+.. screenshot:: sales-variants-pattern-on-shop
+   :menu: (eCommerce product page)
+   :shows: The online store product page where the pattern image is shown as one of the selectable colour options.
+   :highlight: The pattern swatch (red frame).
+   :data: Product "Conference Chair" with a pattern colour value.
+   :module: website_sale
+   :notes: English UI, light theme, crop to the colour selector.
 
 .. tip::
    Attributes can also be created directly from the product template by adding a new line and
@@ -195,9 +226,13 @@ product variant can be added.
 On the product form, click the :guilabel:`Attributes \& Variants` tab to view, manage, and modify
 attributes and values for the product.
 
-.. image:: variants/attributes-values-tab.png
-   :align: center
-   :alt: The attributes and values tab on a typical product form in Odoo Sales.
+.. screenshot:: sales-variants-product-attributes-tab
+   :menu: Sales ‣ Products ‣ Products ‣ (a product) ‣ Attributes & Variants
+   :shows: The "Attributes & Variants" tab of a product form with two attributes and their selected values.
+   :highlight: The attribute rows (red frame).
+   :data: Product "Conference Chair"; Legs and Color.
+   :module: product
+   :notes: English UI, light theme, 1440px width, crop to the notebook.
 
 To add an attribute to a product, and subsequent attribute values, click :guilabel:`Add a line` in
 the :guilabel:`Attributes \& Variants` tab. Then, choose the desired attribute from the drop-down
@@ -232,9 +267,13 @@ Configure variants
 To the far-right of the attribute line is a :guilabel:`Configure` button. When clicked, Odoo reveals
 a separate page showcasing those specific :guilabel:`Product Variant Values`.
 
-.. image:: variants/product-variant-values.png
-   :align: center
-   :alt: The Product Variant Values page accessible via the Configure button on a product form.
+.. screenshot:: sales-variants-configure-page
+   :menu: Sales ‣ Products ‣ Products ‣ (a product) ‣ Attributes & Variants ‣ Configure
+   :shows: The "Product Variant Values" page listing every value of the product's attributes with its extra price.
+   :highlight: The "Value Price Extra" column (red frame).
+   :data: Values of Legs and Color, one with an extra price.
+   :module: product
+   :notes: English UI, light theme, 1440px width, crop to the list.
 
 Here, the specific :guilabel:`Value` name, :guilabel:`HTML Color Index` (if applicable), and
 :guilabel:`Value Price Extra` are viewable.
@@ -246,9 +285,13 @@ Here, the specific :guilabel:`Value` name, :guilabel:`HTML Color Index` (if appl
 When a value is clicked on the :guilabel:`Product Variant Values` page, Odoo reveals a separate
 page, detailing that value's related details.
 
-.. image:: variants/product-variant-value-page.png
-   :align: center
-   :alt: A Product Variant Values page accessible via the Product Variants Values general page.
+.. screenshot:: sales-variants-value-detail
+   :menu: Sales ‣ Products ‣ Products ‣ (a product) ‣ Attributes & Variants ‣ Configure ‣ (a value)
+   :shows: A single product-variant-value form with the Value, Attribute, Product and "Value Price Extra" fields.
+   :highlight: The "Value Price Extra" field (red frame).
+   :data: Value "Aluminium", extra price 50.00.
+   :module: product
+   :notes: English UI, light theme, 1440px width, full form.
 
 On the specific product variant detail page, the :guilabel:`Value` and :guilabel:`Value Price Extra`
 fields can be found, along with an :guilabel:`Exclude for` field.
@@ -264,16 +307,24 @@ When a product has attributes and variants configured in its :guilabel:`Attribut
 a :guilabel:`Variants` smart button appears at the top of the product form. The :guilabel:`Variants`
 smart button indicates how many variants are currently configured for that specific product.
 
-.. image:: variants/variants-smart-button.png
-   :align: center
-   :alt: The variants smart button at the top of the product form in Odoo Sales.
+.. screenshot:: sales-variants-smart-button
+   :menu: Sales ‣ Products ‣ Products ‣ (a product)
+   :shows: The button box of a product form with the Variants smart button showing the number of generated variants.
+   :highlight: The Variants smart button (red frame).
+   :data: Product "Conference Chair", 4 variants.
+   :module: product
+   :notes: English UI, light theme, 1440px width, crop to the button box.
 
 When the :guilabel:`Variants` smart button is clicked, Odoo reveals a separate page showcasing all
 the specific product variant combinations configured for that specific product.
 
-.. image:: variants/variants-page.png
-   :align: center
-   :alt: The variants page accessible via the variants smart button on the product form in Odoo.
+.. screenshot:: sales-variants-list
+   :menu: Sales ‣ Products ‣ Products ‣ (a product) ‣ Variants
+   :shows: The product-variants list of one product, showing each attribute combination with its internal reference and sales price.
+   :highlight: No highlight; the variant list is the subject.
+   :data: Four "Conference Chair" variants.
+   :module: product
+   :notes: English UI, light theme, 1440px width, crop to the list.
 
 Impact of variants
 ==================

@@ -39,18 +39,26 @@ If the :guilabel:`Login Required` setting is enabled, two new options appear: th
 the survey, and the option to :guilabel:`Give Badge`, located beneath the :guilabel:`Certification`
 options in the :guilabel:`Scoring` section.
 
-.. image:: scoring/required-score-login.png
-   :align: center
-   :alt: Setting the Required Score (percentage), login required, and certification template.
+.. screenshot:: surveys-scoring-required-score-login
+   :menu: Surveys ‣ Surveys ‣ New ‣ Options tab
+   :shows: The Time & Scoring and Participants sections with Scoring set, a Required Score entered, Is a Certification enabled with a certification template, and Require Login enabled.
+   :highlight: The Required Score, Is a Certification and Require Login fields (red frame).
+   :data: Required score 85 %, certification template 'Certification: Success'.
+   :module: survey, website_slides
+   :notes: English UI, light theme, 1440px width.
 
 Badges are displayed on the eLearning portion of a given user's portal, and are a way to set
 milestones and reward participants for passing surveys or gaining points. Besides the awardee,
 website visitors who access the :guilabel:`Courses` page will also be able to see the granted
 badges.
 
-.. image:: scoring/frontend-badges.png
-   :align: center
-   :alt: Example of how a badge looks on the eLearning portion of the website.
+.. screenshot:: surveys-scoring-frontend-badges
+   :menu: (website) ‣ eLearning ‣ (course)
+   :shows: A course page on the eLearning part of the website showing the certification badge earned by a participant.
+   :highlight: The badge (red frame).
+   :data: One published certification badge.
+   :module: survey, website_slides
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    :doc:`questions`

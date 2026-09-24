@@ -15,18 +15,6 @@ simultaneously and set their specific warehouses, customers, equipment, and cont
 generates reports of aggregated figures without switching interfaces, facilitating daily tasks and
 enhancing the overall management process.
 
-.. warning::
-   Enabling multi-company functionality in an Odoo database on a *Standard* plan automatically
-   triggers an upsell to the *Custom* plan. This does not apply to databases on the *One-App Free*
-   plan.
-
-   - **For yearly or multi-year contracts**: An upsell order is created with a 30-day limit.
-   - **For monthly contracts**: The subscription automatically switches to the *Custom* plan and
-     the new rate is applied when the next bill is generated.
-
-   For more information, refer to `Odoo's pricing page <https://www.odoo.com/pricing-plan>`_ or
-   contact your account manager.
-
 .. _general/multi-company/configuration:
 
 Configuration
@@ -84,8 +72,14 @@ To switch between (or select) multiple companies, follow these steps:
    In the example below, the user can access six companies, two of which are selected. The current
    active company is *My Company (San Francisco)*.
 
-   .. image:: multi_company/multi-companies-menu-dashboard.png
-      :alt: View of the companies menu through the main dashboard in Odoo.
+   .. screenshot:: general-multi-company-selector
+      :menu: Top menu bar ‣ company selector
+      :shows: The company selector dropdown with six companies, two of them ticked, and the active
+         company "My Company (San Francisco)" highlighted.
+      :highlight: The ticked companies and the active company.
+      :data: Six demo companies, including "My Company (San Francisco)" and "My Company (Chicago)".
+      :module: base
+      :notes: English UI, crop to the top bar and dropdown.
 
 .. _general/multi-company/shared-and-unshared-records:
 
@@ -106,54 +100,6 @@ displayed in the :guilabel:`Company` field.
 In a |mcd|, new products and contacts are shared across companies by default. To restrict them to a
 specific company, set the :guilabel:`Company` field on the record's form.
 
-.. _general/multi-company/inter-company-transactions:
-
-Inter-company transactions
-==========================
-
-The :guilabel:`Inter-Company Transactions` feature allows one company in the database to sell or
-purchase goods and services from another company within the same database. Depending on the
-configuration settings, counterpart documents for orders and invoices can be automatically generated
-and synchronized.
-
-.. warning::
-   To handle inter-company transactions correctly, :doc:`general
-   <../../finance/accounting/get_started>` and specific configurations must be set properly,
-   including :doc:`fiscal positions <../../finance/accounting/taxes/fiscal_positions>` and
-   :doc:`localizations <../../finance/fiscal_localizations>`.
-
-To activate inter-company transactions, select the relevant company in the :ref:`company selector
-<general/multi-company/company-selector>`, open the Settings app, navigate to the
-:guilabel:`Companies` section, enable :guilabel:`Inter-Company Transactions`, and :guilabel:`Save`.
-Then, select the option(s) to create a counterpart for the selected company:
-
-- :guilabel:`Generate Bills and Refunds`: Generate a bill/refund when a company confirms an
-  invoice/credit note for the selected company. To generate a validated bill/refund, select
-  :guilabel:`Create and validate`.
-- :guilabel:`Generate Sales Orders`: Generate a quotation (drafted sales order) when a sales order
-  is confirmed for the selected company. To generate a validated sales order instead of a quotation,
-  select :guilabel:`Create and validate`.
-- :guilabel:`Generate Purchase Orders`: Generate a request for quotation (drafted purchase order)
-  using the selected company warehouse in the :guilabel:`Use Warehouse` field when a purchase order
-  is confirmed for the selected company. To generate a validated purchase order instead of a request
-  for quotation, select :guilabel:`Create and validate`.
-
-.. note::
-   For inter-company transactions, the :ref:`products must be shared
-   <general/multi-company/shared-and-unshared-records>` among the involved companies.
-
-.. example::
-   :guilabel:`Generate Bills and Refunds`: when an invoice for :guilabel:`Customer` `JS Store US` is
-   posted on `JS Store Belgium`, a vendor bill is automatically created in `JS Store US`.
-
-   :guilabel:`Generate Sales Orders`: when a sales order for :guilabel:`Customer` `JS
-   Store US` is confirmed on `JS Store Belgium`, a purchase order on `JS Store US` is automatically
-   created (and confirmed if the :guilabel:`Create and validate` option is selected).
-
-.. seealso::
-   - :doc:`Multi-company Guidelines <../../../developer/howtos/company>`
-   - :doc:`../../finance/accounting/get_started/multi_currency`
-
 .. _general/multi-company/use-cases:
 
 Use cases
@@ -170,9 +116,8 @@ USD and CAD.
 Since each country has its own tax laws and regulations, using Odoo’s multi-company feature is
 highly beneficial.
 
-This setup allows for inter-company transactions, which is essential for managing cross-border
-inventory transfers. It also simplifies the sales process by enabling customers transactions in
-their local currency.
+This setup keeps the accounting of each company separate while sharing products and contacts. It
+also simplifies the sales process by enabling customers transactions in their local currency.
 
 .. _general/multi-company/use-cases-seperate-processes:
 

@@ -46,9 +46,13 @@ Configuration
 
 Removal strategies are set on either the product category or storage location.
 
-.. image:: removal_strategies/navigate-location-category.png
-   :align: center
-   :alt: Change the Force Removal Strategy for either the Product Categories or Locations.
+.. screenshot:: removal-strategies-navigate-location-category
+   :menu: Inventory ‣ Configuration ‣ Product Categories / Locations
+   :shows: A product category form and a location form side by side, both scrolled to the "Logistics" section with the "Force Removal Strategy" field visible.
+   :highlight: The "Force Removal Strategy" field on both forms (red frame).
+   :data: Product category "All / Saleable"; location "WH/Stock/Shelf 1".
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Configure removal strategies on the location by going to :menuselection:`Inventory --> Configuration
 --> Locations`, and selecting the desired location. On the location form, choose a removal strategy
@@ -108,9 +112,12 @@ expiration dates. To enable this feature, navigate to :menuselection:`Inventory 
 --> Settings`. Under the :guilabel:`Traceability` heading, check the box beside :guilabel:`Lots &
 Serial Numbers` to enable the feature.
 
-.. image:: removal_strategies/enable-lots.png
-   :align: center
-   :alt: Enable lots and serial numbers.
+.. screenshot:: removal-strategies-enable-lots
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to "Traceability", with the "Lots & Serial Numbers" checkbox enabled.
+   :highlight: The "Lots & Serial Numbers" checkbox (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Next, ensure the intended product is tracked by lots or serial numbers by navigating to the product
 form through :menuselection:`Inventory --> Products --> Products`, and selecting the desired
@@ -133,9 +140,12 @@ To activate these features, navigate to :menuselection:`Inventory --> Configurat
 Under the :guilabel:`Warehouse` heading, enable the :guilabel:`Storage Location` and
 :guilabel:`Multi-Step Routes` features.
 
-.. image:: removal_strategies/enable-location.png
-   :align: center
-   :alt: Enable the locations and route features.
+.. screenshot:: removal-strategies-enable-location
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to "Warehouse", with the "Storage Locations" and "Multi-Step Routes" checkboxes enabled.
+   :highlight: The "Storage Locations" and "Multi-Step Routes" checkboxes (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. _inventory/warehouses_storage/exp-setup:
 
@@ -149,9 +159,12 @@ Configuration --> Settings`.
 Under the :guilabel:`Traceability` heading, ensure the :guilabel:`Lots & Serial Numbers` feature is
 selected, and then select the check box for :guilabel:`Expiration Dates` to enable the feature.
 
-.. image:: removal_strategies/enable-expiration.png
-   :align: center
-   :alt: Enable expiration dates feature for FEFO.
+.. screenshot:: removal-strategies-enable-expiration
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to "Traceability", with the "Expiration Dates" checkbox enabled under "Lots & Serial Numbers".
+   :highlight: The "Expiration Dates" checkbox (red frame).
+   :module: product_expiry
+   :notes: English UI, light theme, 1440px width.
 
 .. _inventory/warehouses_storage/pack-setup:
 
@@ -164,9 +177,12 @@ removal strategy.
 Navigate to :menuselection:`Inventory --> Configuration --> Settings` and select the check box for
 the :guilabel:`Packages` feature.
 
-.. image:: removal_strategies/enable-pack.png
-   :align: center
-   :alt: Enable the packages feature.
+.. screenshot:: removal-strategies-enable-pack
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to "Operations", with the "Packages" checkbox enabled.
+   :highlight: The "Packages" checkbox (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`Packages <../product_management/configure/package>`

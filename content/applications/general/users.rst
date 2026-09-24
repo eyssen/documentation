@@ -1,5 +1,7 @@
 :show-content:
 
+.. |2fa| replace:: :abbr:`2FA (two-factor authentication)`
+
 =====
 Users
 =====
@@ -22,31 +24,42 @@ Add individual users
 To add new users, navigate to :menuselection:`Settings app --> Users section --> Manage Users`, and
 click on :guilabel:`New`.
 
-.. image:: users/manage-users.png
-   :alt: View of the settings page emphasizing the manage users field in Odoo.
+.. screenshot:: general-users-manage-users
+   :menu: Settings ‣ General Settings ‣ Users
+   :shows: The Users section of the settings with the number of active users, the "Invite New Users" field and the "Manage Users" link.
+   :highlight: The "Manage Users" link.
+   :module: base_setup
+   :notes: English UI, crop to the relevant area.
 
 Fill in the form with all the required information. Under the :doc:`Access Rights
 <users/access_rights>` tab, choose the group within each application the user can have access to.
 
 The list of applications shown is based on the applications installed on the database.
 
-.. image:: users/new-user.png
-   :alt: View of a user's form emphasizing the access rights tab in Odoo.
+.. screenshot:: general-users-new-user-form
+   :menu: Settings ‣ Users & Companies ‣ Users ‣ New
+   :shows: User form with Name, Email Address, the Access Rights tab (application access dropdowns per app) and the Preferences tab.
+   :highlight: The Access Rights tab.
+   :data: New user "Anita Oliver", Sales: "User: Own Documents Only".
+   :module: base
+   :notes: English UI, 1440px width, crop to the form sheet.
 
 After filling out all the necessary fields on the page, :icon:`fa-cloud-upload` :guilabel:`(Save
 manually)`. An invitation email is automatically sent to the user, using the email in the
 :guilabel:`Email Address` field. The user must click on the link included in the email to accept the
 invitation, and to create a database login.
 
-.. image:: users/invitation-email.png
-   :alt: View of a user's form with a notification that the invitation email has been sent in Odoo.
+.. screenshot:: general-users-invitation-sent
+   :menu: Settings ‣ Users & Companies ‣ Users ‣ (new user)
+   :shows: Saved user form with the notification/banner that the invitation email has been sent and the "Send an Invitation Email" button.
+   :highlight: The banner.
+   :module: auth_signup
+   :notes: English UI, crop to the relevant area.
 
-.. warning::
-   If the company is on a monthly subscription plan, the database automatically updates to reflect
-   the added users. If the company is on a yearly or multi-year plan, an expiration banner appears
-   in the database. An upsell quotation can be created by clicking the banner to update the
-   subscription. Alternatively, `send a support ticket <https://www.odoo.com/help>`_ to resolve the
-   issue.
+.. tip::
+   Users can also be invited quickly by entering their email addresses in the :guilabel:`Invite New
+   Users` field of the :guilabel:`Users` section in the :menuselection:`Settings` app, then clicking
+   :guilabel:`Invite`.
 
 User type
 ---------
@@ -79,36 +92,8 @@ from the :guilabel:`Confirmation` pop-up window that appears.
 .. danger::
    **Never** deactivate the main/administrator user (admin). Making changes to admin users can have
    a detrimental impact on the database. This includes *impotent admin*, which means that no user in
-   the database can make changes to the access rights. For this reason, Odoo recommends contacting
-   an Odoo Business Analyst, or our Support Team, before making changes.
-
-Error: too many users
----------------------
-
-If there are more users in an Odoo database than provisioned in the Odoo Enterprise subscription,
-the following message is displayed.
-
-.. image:: users/add-more-users.png
-   :alt: Too many users on a database error message.
-
-When the message appears, the database administrator has 30 days to act before the database expires.
-The countdown is updated every day.
-
-To resolve the issue, either:
-
-- Add more users to the subscription by clicking the :guilabel:`Upgrade your subscription` link
-  displayed in the message to validate the upsell quotation, and pay for the extra users.
-- :ref:`Deactivate users <users/deactivate>`, and reject the upsell quotation.
-
-.. warning::
-   If the company is on a monthly subscription plan, the database automatically updates to reflect
-   the added users. If the company is on a yearly or multi-year plan, an expiration banner appears
-   in the database. An upsell quotation can be created by clicking the banner to update the
-   subscription. Alternatively, users can `send a support ticket <https://www.odoo.com/help>`_ to
-   resolve the issue.
-
-Once the database has the correct number of users, the expiration message disappears automatically
-after a few days, when the next verification occurs.
+   the database can make changes to the access rights. For this reason, contact your Odoo partner or
+   system administrator before making changes.
 
 .. _users/passwords-management:
 
@@ -123,8 +108,12 @@ times. Odoo offers a few different methods to reset a user's password.
    navigating to :menuselection:`Settings app --> Permissions` section, and entering the desired
    password length in the :guilabel:`Minimum Password Length` field. By default the value is `8`.
 
-.. image:: users/minimum-password-length.png
-   :alt: Minimum Password Length highlighted in the Permissions section of General Settings.
+.. screenshot:: general-users-min-password-length
+   :menu: Settings ‣ General Settings ‣ Permissions
+   :shows: The Permissions section with the "Minimum Password Length" field (value 8).
+   :highlight: The "Minimum Password Length" field.
+   :module: auth_password_policy
+   :notes: English UI, crop to the relevant area.
 
 .. _users/reset-password:
 
@@ -146,8 +135,12 @@ completed by the individual user, and this setting is enabled by default.
 To change this setting, go to :menuselection:`Settings app --> Permissions` section, activate
 :guilabel:`Password Reset`, and then click :guilabel:`Save`.
 
-.. image:: users/password-reset-login.png
-   :alt: Enabling Password Reset in Odoo Settings.
+.. screenshot:: general-users-password-reset-setting
+   :menu: Settings ‣ General Settings ‣ Permissions
+   :shows: The Permissions section with the "Password Reset" checkbox enabled.
+   :highlight: The "Password Reset" setting.
+   :module: auth_signup
+   :notes: English UI, crop to the relevant area.
 
 On the login page, click :guilabel:`Reset Password` to initiate the password reset process, and have
 a reset-token sent to the email on file.
@@ -169,8 +162,11 @@ automatically sent to them with password reset instructions.
 This email contains all the instructions needed to reset the password, along with a link redirecting
 the user to an Odoo login page.
 
-.. image:: users/password-reset-email.png
-   :alt: Example of an email with a password reset link for an Odoo account.
+.. screenshot:: general-users-password-reset-email
+   :menu: (email client)
+   :shows: The password reset email received by the user, with the "Change password" button.
+   :module: auth_signup
+   :notes: Any email client; blur personal data.
 
 .. _users/change-password:
 
@@ -183,19 +179,73 @@ from the resulting drop-down menu. Enter a new password in the :guilabel:`New Pa
 the :guilabel:`Change Password` pop-up window that appears, and confirm the change by clicking
 :guilabel:`Change Password`.
 
-.. image:: users/change-password.png
-   :alt: Change a user's password on Odoo.
+.. screenshot:: general-users-change-password
+   :menu: Settings ‣ Users & Companies ‣ Users ‣ (a user) ‣ Actions ‣ Change Password
+   :shows: The Change Password dialog listing the user with the "New Password" column, and the "Change Password" button.
+   :highlight: The "New Password" cell.
+   :module: base
+   :notes: English UI, crop to the relevant area.
 
 .. note::
-   This operation only modifies the password of the users locally, and does **not** affect their
-   Odoo account.
-
-   If the Odoo password needs to be changed, use the :ref:`send the password reset
-   <users/reset-password-email>`. Odoo.com passwords grant access to the *My Databases* page, and
-   other portal features.
+   This operation only modifies the password of the users in this database. Alternatively, the
+   user can set the password themselves by using the :ref:`password reset email
+   <users/reset-password-email>`.
 
 After clicking :guilabel:`Change Password`, the page is redirected to an Odoo login page where the
 database can be re-accessed using the new password.
+
+.. _users/default-access-rights:
+
+Default access rights
+=====================
+
+By default, new users get the highest access rights for all installed apps. To define the access
+rights given to new users instead, go to :menuselection:`Settings app --> Permissions` section,
+enable :guilabel:`Default Access Rights`, click :guilabel:`Save`, then click the :guilabel:`Default
+Access Rights` link. The form that opens is a template user: set its :guilabel:`Access Rights` as
+needed. If the setting is disabled, new users only get basic employee access.
+
+.. screenshot:: general-users-default-access-rights
+   :menu: Settings ‣ General Settings ‣ Permissions
+   :shows: The Permissions section with the "Customer Account" options (On invitation / Free sign
+      up), the "Default Access Rights" setting enabled with its link, "Password Reset", and "API
+      Keys" with the "Manage API Keys" link.
+   :highlight: The "Default Access Rights" setting.
+   :module: base_setup, auth_signup
+   :notes: English UI, crop to the Permissions section.
+
+.. _users/security:
+
+Account security
+================
+
+Each user can manage the security of their account from their preferences: click the avatar in the
+upper-right corner, select :guilabel:`My Profile`, and open the :guilabel:`Account Security` tab.
+The following options are available:
+
+- :guilabel:`Change password`: set a new password after confirming the current one.
+- :doc:`Two-factor Authentication <users/2fa>`: enable or disable |2fa|.
+- :guilabel:`Log out from all devices`: close all the other sessions of the user, e.g., after
+  losing a device. The active sessions are listed in the :guilabel:`Devices` tab.
+- :guilabel:`API Keys`: API keys are used to connect to Odoo from external tools (e.g., scripts or
+  integrations) without a password or two-factor authentication. Click :guilabel:`New API Key`,
+  enter a description, select a :guilabel:`Duration` (from :guilabel:`1 Day` to :guilabel:`1 Year`;
+  administrators can also choose :guilabel:`Persistent Key` or :guilabel:`Custom Date`), confirm the
+  password, and click :guilabel:`Generate key`. Copy the key immediately: it cannot be displayed
+  again. Existing keys can be deleted with the :icon:`fa-trash` :guilabel:`(delete)` icon.
+
+.. note::
+   Administrators can view and revoke the API keys of all users by clicking :guilabel:`Manage API
+   Keys` in the :guilabel:`Permissions` section of the :menuselection:`Settings` app.
+
+.. screenshot:: general-users-account-security
+   :menu: Avatar ‣ My Profile ‣ Account Security tab
+   :shows: The Account Security tab: "Change password", the Two-factor Authentication toggle,
+      "Log out from all devices", and the API Keys list with one key and the "New API Key" button.
+   :highlight: The API Keys block.
+   :data: API key "Reporting script", scope rpc, expiration in 3 months.
+   :module: base, auth_totp
+   :notes: English UI, crop to the tab.
 
 .. _users/multi-companies:
 
@@ -219,10 +269,15 @@ company.
    If multi-company access is not configured correctly, it could lead to inconsistent multi-company
    behaviors. Because of this, only experienced Odoo users should make access rights changes to
    users for databases with a multi-company configuration. For technical explanations, refer to the
-   developer documentation on :doc:`../../../developer/howtos/company`.
+   developer documentation on :doc:`/developer/howtos/company`.
 
-.. image:: users/multi-companies.png
-   :alt: View of a user's form emphasizing the multi companies field in Odoo.
+.. screenshot:: general-users-multi-companies
+   :menu: Settings ‣ Users & Companies ‣ Users ‣ (a user)
+   :shows: User form with the "Allowed Companies" and "Default Company" fields in a multi-company database.
+   :highlight: The two company fields.
+   :data: Two companies "YourCompany HU" and "YourCompany ES".
+   :module: base
+   :notes: English UI, crop to the relevant area.
 
 .. seealso::
    :doc:`companies`
@@ -233,6 +288,7 @@ company.
    users/language
    users/2fa
    users/access_rights
+   users/access_management
    users/portal
    users/facebook
    users/google

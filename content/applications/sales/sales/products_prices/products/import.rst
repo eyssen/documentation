@@ -21,16 +21,24 @@ corner. Doing so reveals a drop-down menu.
 
 From this drop-down menu, select the :guilabel:`Import records` option.
 
-.. image:: import/gear-import-records-option.png
-   :align: center
-   :alt: The Import records option selectable from the gear icon on the Products page in Odoo Sales.
+.. screenshot:: sales-products-import-gear-menu
+   :menu: Sales ‣ Products ‣ Products
+   :shows: The gear (Actions) drop-down of the Products list, open on the "Import records" item.
+   :highlight: The "Import records" item (red frame).
+   :data: Demo product list.
+   :module: base_import
+   :notes: English UI, light theme, 1440px width, crop to the open menu.
 
 Selecting :guilabel:`Import records` reveals a separate page with a link to download the
 :guilabel:`Import Template for Products`. Click that link to download the template.
 
-.. image:: import/import-template-products.png
-   :align: center
-   :alt: The Import records option selectable from the gear icon on the Products page in Odoo Sales.
+.. screenshot:: sales-products-import-template-link
+   :menu: Sales ‣ Products ‣ Products ‣ Import records
+   :shows: The import page with the "Import Template for Products" download link and the Upload File button.
+   :highlight: The import-template download link (red frame).
+   :data: No file uploaded yet.
+   :module: base_import
+   :notes: English UI, light theme, 1440px width, crop to the upload area.
 
 Once the template download is complete, open the spreadsheet file to customize it.
 
@@ -63,9 +71,13 @@ before any changes are made, there are a few elements to keep in mind during the
   menu next to the :guilabel:`File Column` that needs a manual adjustment, and select the
   appropriate field from that drop-down menu.
 
-  .. image:: import/odoo-field-dropdown-menu.png
-     :align: center
-     :alt: The Odoo Field drop-down menu next to a Field Column that needs to be manually adjusted.
+  .. screenshot:: sales-products-import-field-mapping
+     :menu: Sales ‣ Products ‣ Products ‣ Import records
+     :shows: The column-mapping table after uploading a file, with the "Odoo Field" drop-down open on one row.
+     :highlight: The open "Odoo Field" drop-down (red frame).
+     :data: A file column that could not be matched automatically.
+     :module: base_import
+     :notes: English UI, light theme, 1440px width, crop to the mapping table.
 
 Import product template spreadsheet
 ===================================
@@ -74,9 +86,13 @@ After customizing the product template spreadsheet, return to the Odoo product i
 the template download link is found, and click the :guilabel:`Upload File` button in the upper-left
 corner.
 
-.. image:: import/upload-file-button.png
-   :align: center
-   :alt: The upload file button on the import products template download page in Odoo Sales.
+.. screenshot:: sales-products-import-upload-button
+   :menu: Sales ‣ Products ‣ Products ‣ Import records
+   :shows: The "Upload File" button on the import page.
+   :highlight: The "Upload File" button (red frame).
+   :data: No file uploaded yet.
+   :module: base_import
+   :notes: English UI, light theme, 1440px width, crop to the button.
 
 Then, a pop-up window appears, in which the completed product template spreadsheet file should be
 selected and uploaded to Odoo.
@@ -84,9 +100,13 @@ selected and uploaded to Odoo.
 After that, Odoo reveals a page showcasing all the elements of the newly-configured product template
 spreadsheet, separated by :guilabel:`File Column`, :guilabel:`Odoo Field`, and :guilabel:`Comments`.
 
-.. image:: import/import-a-file-page.png
-   :align: center
-   :alt: The import a file page in Odoo Sales after a product template has been uploaded.
+.. screenshot:: sales-products-import-file-page
+   :menu: Sales ‣ Products ‣ Products ‣ Import records
+   :shows: The import page after a product template spreadsheet has been uploaded, showing the file columns matched to Odoo fields and a preview of the first rows.
+   :highlight: No highlight; the mapping page is the subject.
+   :data: A filled-in product import template.
+   :module: base_import
+   :notes: English UI, light theme, 1440px width, full page.
 
 From here, the :guilabel:`File Column` can be manually assigned to an :guilabel:`Odoo Field`, if
 necessary.
@@ -97,16 +117,24 @@ click the :guilabel:`Test` button in the upper-left corner.
 If everything is lined up and applied correctly, Odoo reveals a blue banner at the top of the page,
 informing the user that :guilabel:`Everything seems valid`.
 
-.. image:: import/everything-seems-valid-message.png
-   :align: center
-   :alt: The everything seems valid message that appears if file columns are entered correctly.
+.. screenshot:: sales-products-import-valid-message
+   :menu: Sales ‣ Products ‣ Products ‣ Import records ‣ Test
+   :shows: The green "Everything seems valid" message shown after testing the import.
+   :highlight: The message (red frame).
+   :data: A valid product import file.
+   :module: base_import
+   :notes: English UI, light theme, 1440px width, crop to the message.
 
 If there are any errors, Odoo reveals a red banner at the top of the page, with instructions of
 where to locate the specific issues, and how to fix them.
 
-.. image:: import/import-error-message.png
-   :align: center
-   :alt: The import error message that appears if file columns don't match an Odoo Field.
+.. screenshot:: sales-products-import-error-message
+   :menu: Sales ‣ Products ‣ Products ‣ Import records ‣ Test
+   :shows: The red error message shown when a file column cannot be matched to an Odoo field.
+   :highlight: The error message (red frame).
+   :data: A file with an unmatched column.
+   :module: base_import
+   :notes: English UI, light theme, 1440px width, crop to the message.
 
 Once those errors are fixed, click :guilabel:`Test` again to ensure all necessary issues have been
 remedied appropriately.
@@ -120,9 +148,13 @@ When clicked, Odoo instantly imports those products, and reveals the main :guila
 with a pop-up message in the upper-right corner. This pop-up message informs the user how many
 products were successfully imported.
 
-.. image:: import/successful-import-popup.png
-   :align: center
-   :alt: The pop-up window that appears after a successful product import process in Odoo Sales.
+.. screenshot:: sales-products-import-success
+   :menu: Sales ‣ Products ‣ Products ‣ Import records ‣ Import
+   :shows: The confirmation shown after a successful import, stating how many records were created.
+   :highlight: The confirmation message (red frame).
+   :data: 12 products imported.
+   :module: base_import
+   :notes: English UI, light theme, 1440px width, crop to the message.
 
 At this point, all the newly-imported products are accessible and editable via the
 :guilabel:`Products` page.
@@ -177,9 +209,13 @@ The column names/titles of the attributes and values spreadsheet should be as fo
 :guilabel:`Attribute`, :guilabel:`Display Type`, :guilabel:`Variant Creation Mode`, and
 :guilabel:`Values / Value`.
 
-.. image:: import/attributes-and-values-spreadsheet.png
-   :align: center
-   :alt: An attributes and values spreadsheet template for imports.
+.. screenshot:: sales-products-import-attributes-sheet
+   :menu: (spreadsheet)
+   :shows: A spreadsheet prepared for importing product attributes and their values, with one row per value.
+   :highlight: The attribute and value columns (red frame).
+   :data: Attribute "Color" with values White, Black, Red.
+   :module: product
+   :notes: Spreadsheet screenshot, light theme, crop to the first rows and the header.
 
 - :guilabel:`Attribute`: name of the attribute (e.g. `Size`).
 - :guilabel:`Display Type`: display type used in the product configurator. There are three display
@@ -229,9 +265,13 @@ Attributes / Values`, and :guilabel:`Name` columns.
 There can be other columns, as well, but these columns are **required** in order to properly import
 products with specific variants.
 
-.. image:: import/product-attribute-spreadsheet-import.png
-   :align: center
-   :alt: Product variants spreadsheet with product attributes and variants for import purposes.
+.. screenshot:: sales-products-import-variants-sheet
+   :menu: (spreadsheet)
+   :shows: A spreadsheet prepared for importing products with their attributes and variant values in the attribute columns.
+   :highlight: The attribute-value columns (red frame).
+   :data: Three products with Color and Size values.
+   :module: product
+   :notes: Spreadsheet screenshot, light theme, crop to the first rows and the header.
 
 - :guilabel:`Name`: product name
 - :guilabel:`Product Attributes / Attribute`: name of attribute

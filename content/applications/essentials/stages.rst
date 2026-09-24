@@ -5,8 +5,9 @@ Stages
 *Stages* are used to organize an app's pipeline and track the progress of configured items, from now
 on are referred to as cards.
 
-In apps these cards represent specific items, for example, in the **Helpdesk** app, stages track
-tickets. Stages are customizable, and can be renamed to fit the needs of each team.
+In apps these cards represent specific items, for example, in the **Project** app, stages track
+tasks, and in the **CRM** app, stages track opportunities. Stages are customizable, and can be
+renamed to fit the needs of each team.
 
 Create or modify stages
 =======================
@@ -16,7 +17,9 @@ Create or modify stages
    activate developer mode, go to :menuselection:`Settings app --> General Settings --> Developer
    Tools`, and click :guilabel:`Activate the developer mode`.
 
-To view or modify stages, go to the desired app and go to :menuselection:`Configuration --> Stages`.
+To view or modify stages, go to the desired app and go to its stage configuration menu, for example
+:menuselection:`Project --> Configuration --> Task Stages` or :menuselection:`CRM --> Configuration
+--> Stages`.
 
 The default list view on the :guilabel:`Stages` page displays the stages currently available in the
 app. They are listed in the order they appear in the pipeline.
@@ -24,9 +27,14 @@ app. They are listed in the order they appear in the pipeline.
 To change the order of the stages, click the :icon:`oi-draggable` :guilabel:`(draggable)` icon, to
 the left of the stage name, and drag it to the desired place on the list.
 
-.. image:: stages/stages-list-buttons.png
-   :alt: View of the stage list page emphasizing the buttons used to change the order the stages
-         appear in the list.
+.. screenshot:: essentials-stages-list
+   :menu: Project ‣ Configuration ‣ Task Stages
+   :shows: List view of task stages in pipeline order, with the drag handle to the left of each
+      stage name and the New button at the top left.
+   :highlight: The drag handle column.
+   :data: Demo task stages "New", "In Progress", "Done", "Cancelled".
+   :module: project
+   :notes: English UI, developer mode active, 1440px width, crop to the list.
 
 .. tip::
    Change the stage order on the Kanban view of a team's pipeline by dragging and dropping
@@ -37,8 +45,15 @@ reveals a blank stage form.
 
 Choose a :guilabel:`Name` for the new stage.
 
-.. image:: stages/new-stage-details.png
-   :alt: View of a stage's settings page in Odoo Helpdesk.
+.. screenshot:: essentials-stages-form
+   :menu: Project ‣ Configuration ‣ Task Stages ‣ New
+   :shows: Task stage form with Name, Email Template, SMS Template, Rating Email Template, Folded in
+      Kanban and
+      Projects fields.
+   :highlight: The Name field.
+   :data: New stage "Review".
+   :module: project, project_sms
+   :notes: English UI, developer mode active, crop to the form sheet.
 
 Progress bar
 ============
@@ -48,8 +63,10 @@ type for all the cards within that stage. Each status type has an assigned color
 the bar.
 
 The specific definition of these statuses changes depending on the app. For example, in the
-**Helpdesk** app, the progress bar for a stage consists of the :guilabel:`In progress`,
-:guilabel:`Ready`, and :guilabel:`Blocked` statuses by default.
+**Project** app, the progress bar of a task stage consists of the :guilabel:`In Progress`,
+:guilabel:`Changes Requested`, :guilabel:`Approved`, :guilabel:`Waiting`, :guilabel:`Done`, and
+:guilabel:`Cancelled` task states. In the **CRM** app, the progress bar shows the status of the
+activities planned on the opportunities.
 
 To see a detailed count, hover over a representative color, which activates a notification detailing
 the number of cards in the stage of that specific status.
@@ -57,20 +74,28 @@ the number of cards in the stage of that specific status.
 Clicking a status color filters the stage to show only cards with that status. The card count for
 the selected status appears next to the progress bar.
 
-.. image:: stages/stage-progress-bar-highlight.png
-   :alt: View of a stage's progress highlighting the activities that are due today.
+.. screenshot:: essentials-stages-progress-bar
+   :menu: Project ‣ (any project) kanban view
+   :shows: Kanban column header with its colored progress bar; one color is clicked, so the column
+      is filtered and the count for that state is displayed next to the bar.
+   :highlight: The progress bar and the filtered count.
+   :data: Demo project "Office Design", stage "In Progress" with tasks in several states.
+   :module: project
+   :notes: English UI, crop to one or two kanban columns.
 
 Add email and SMS templates to stages
 =====================================
 
 When an :guilabel:`Email Template` is added to a stage, a preconfigured email is automatically sent
-to the customer when a ticket reaches that specific stage in the pipeline. Likewise, adding an
-:guilabel:`SMS Template` triggers a preconfigured SMS text message to send to the customer.
+to the customer when a card (e.g., a task) reaches that specific stage in the pipeline. Likewise,
+adding an :guilabel:`SMS Template` triggers a preconfigured SMS text message to send to the
+customer.
 
-.. important::
-   SMS text messaging is an :doc:`In-App Purchase (IAP) </applications/essentials/in_app_purchase/>`
-   service that requires prepaid credits to work. Refer to `SMS Pricing FAQ
-   <https://iap-services.odoo.com/iap/sms/pricing>`_ for additional information.
+
+.. note::
+   The :guilabel:`SMS Template` field is available when the *Project - SMS* module (`project_sms`)
+   is installed. SMS text messaging is an :doc:`In-App Purchase (IAP)
+   </applications/essentials/in_app_purchase>` service that requires prepaid credits to work.
 
 To select an existing email template, select it from the :guilabel:`Email Template` field. After
 choosing a template, click on the :icon:`oi-arrow-right` :guilabel:`(right arrow)` icon to the right
@@ -82,8 +107,13 @@ details.
 
 Follow the same steps to select, edit, or create an :guilabel:`SMS Template`.
 
-.. image:: stages/sms-template.png
-   :alt: View of an SMS template setup page in Odoo Helpdesk.
+.. screenshot:: essentials-stages-sms-template
+   :menu: Project ‣ Configuration ‣ Task Stages ‣ (stage) ‣ SMS Template ‣ Create and edit
+   :shows: SMS template form opened from the stage: Name, Applies to "Task", and the message body.
+   :highlight: The message body.
+   :data: Template "Task in review"; body using the task name placeholder.
+   :module: project_sms, sms
+   :notes: English UI, crop to the dialog.
 
 .. seealso::
    :doc:`/applications/general/companies/email_template`
@@ -113,21 +143,30 @@ Temporarily fold a stage
 
 Stages can be temporarily folded in the Kanban view of the pipeline, as well.
 
-View a specific team's pipeline by navigating to the desired app, and clicking the team's Kanban
-card.
+Open the pipeline in the desired app, e.g., a project's Kanban view in the **Project** app.
 
 Hover the cursor at the top of the desired stage to fold temporarily, then click the :icon:`fa-gear`
 :guilabel:`(gear)` icon that appears, and select :guilabel:`Fold` from the drop-down menu.
 
-.. image:: stages/fold-stage-kanban.png
-   :alt: Kanban view of a Helpdesk stage, with the temporary fold option emphasized.
+.. screenshot:: essentials-stages-fold-kanban
+   :menu: Project ‣ (any project) kanban view
+   :shows: Kanban column header with the gear icon clicked and its dropdown open (Fold, Edit,
+      Automations, Archive All, Unarchive All, Delete).
+   :highlight: The "Fold" entry.
+   :data: Demo project "Office Design".
+   :module: project
+   :notes: English UI, crop to the column header and dropdown.
 
 .. important::
    Manually folding a stage from the Kanban view is temporary and does **not** close the cards in
    the stage.
 
-Assign stages to a team
-=======================
+Assign stages to projects or teams
+==================================
 
-Make a selection in the :guilabel:`Teams` field on the :guilabel:`Stages` form. More than one team
-may be selected, since the same stage can be assigned to multiple teams.
+Depending on the app, a stage can be limited to specific pipelines:
+
+- In the **Project** app, make a selection in the :guilabel:`Projects` field on the task stage form.
+  More than one project may be selected, since the same stage can be shared by multiple projects.
+- In the **CRM** app, select a :guilabel:`Sales Team` on the stage form. If the field is left empty,
+  the stage is available for all sales teams.

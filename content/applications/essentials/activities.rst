@@ -17,7 +17,6 @@ The icon used to display activities varies, depending on the :ref:`activity type
 - :icon:`fa-check` :guilabel:`(check)` icon: a "to-do" is scheduled.
 - :icon:`fa-users` :guilabel:`(people)` icon: a meeting is scheduled.
 - :icon:`fa-upload` :guilabel:`(upload)` icon: a document is scheduled to be uploaded.
-- :icon:`fa-pencil-square-o` :guilabel:`(request signature)` icon: a signature request is scheduled.
 
 Schedule activities
 ===================
@@ -37,9 +36,14 @@ To schedule a new activity, click the :guilabel:`Activities` button, located at 
 chatter. In the :guilabel:`Schedule Activity` pop-up window that appears, :ref:`fill out the
 Schedule Activity form <activities/form>`.
 
-.. image:: activities/chatter.png
-   :align: center
-   :alt: New activity type form.
+.. screenshot:: essentials-activities-chatter
+   :menu: CRM ‣ (any opportunity) ‣ chatter
+   :shows: Top of the chatter with the "Activities" button, and the Schedule Activity dialog opened
+      from it.
+   :highlight: The "Activities" button.
+   :data: Demo opportunity "Office Design Project".
+   :module: mail, crm
+   :notes: English UI, 1440px width, crop to the chatter and the dialog.
 
 .. _activities/kanban:
 
@@ -53,9 +57,14 @@ To do so, click on the |clock| located at the bottom of an individual record.
 Click :guilabel:`+ Schedule An Activity`, then proceed to :ref:`fill out the Schedule Activity form
 <activities/form>`.
 
-.. image:: activities/schedule-kanban-activity.png
-   :align: center
-   :alt: Kanban view of the CRM pipeline and the option to schedule an activity.
+.. screenshot:: essentials-activities-kanban
+   :menu: CRM ‣ Sales ‣ My Pipeline (Kanban view)
+   :shows: Kanban card with the clock icon clicked; the popover lists planned activities and shows
+      "+ Schedule An Activity".
+   :highlight: The clock icon and "+ Schedule An Activity".
+   :data: Demo pipeline.
+   :module: mail, crm
+   :notes: English UI, crop to one column and the popover.
 
 .. note::
    If a record already has a scheduled activity, the |clock| is replaced by the icon that represents
@@ -79,9 +88,14 @@ appears.
    If a record already has a scheduled activity, the |clock| is replaced by the icon that represents
    the existing scheduled activity. Click on the activity type's icon to schedule another activity.
 
-.. image:: activities/schedule-list-activity.png
-   :align: center
-   :alt: List view of the CRM pipeline and the option to schedule an activity.
+.. screenshot:: essentials-activities-list
+   :menu: CRM ‣ Sales ‣ My Pipeline (List view)
+   :shows: List view with the Activities column; the clock icon of one row is clicked and the
+      popover with "+ Schedule An Activity" is open.
+   :highlight: The Activities column.
+   :data: Demo pipeline.
+   :module: mail, crm
+   :notes: English UI, crop to the list and the popover.
 
 .. _activities/activity:
 
@@ -93,9 +107,13 @@ the top-right corner of the main menu bar, amongst the other view option icons.
 
 To open the activity view, click the |clock|.
 
-.. image:: activities/activities.png
-   :align: center
-   :alt: Top-right menu with the Activities icon called out.
+.. screenshot:: essentials-activities-view-switcher
+   :menu: CRM ‣ Sales ‣ My Pipeline
+   :shows: View switcher in the top-right corner of the control panel (Kanban, List, Calendar,
+      Pivot, Graph, Map/other, Activity icons).
+   :highlight: The Activity view (clock) icon.
+   :module: mail, crm
+   :notes: English UI, crop tightly to the view switcher.
 
 In this view, all the available activities are listed in the columns, while the horizontal entries
 represent all the individual records.
@@ -117,9 +135,14 @@ To schedule an activity for a record, hover over the corresponding field. Click 
 :guilabel:`(plus)` icon that appears, and then :ref:`fill out the Schedule Activity form
 <activities/form>`.
 
-.. image:: activities/activity-view.png
-   :align: center
-   :alt: Activity view of the CRM pipeline and the option to schedule an activity.
+.. screenshot:: essentials-activities-activity-view
+   :menu: CRM ‣ Sales ‣ My Pipeline ‣ Activity view
+   :shows: Activity view grid: activity types as columns, records as rows, colored cells for late /
+      today / planned activities; the mouse hovers an empty cell showing the plus icon.
+   :highlight: The plus icon in the hovered cell.
+   :data: Demo pipeline with several activities.
+   :module: mail, crm
+   :notes: English UI, 1440px width.
 
 .. _activities/form:
 
@@ -133,6 +156,11 @@ view <activities/activity>`.
 
 Enter the following information on the form:
 
+- :guilabel:`Plan`: optionally, select an :ref:`activity plan <activities/plans>` to schedule
+  several predefined activities at once instead of a single activity. When a plan is selected, set
+  the :guilabel:`Plan Date` the activities' deadlines are computed from and, if the plan requires
+  it, the user to assign them to. This field only appears if at least one activity plan exists for
+  the record's model.
 - :guilabel:`Activity Type`: select the type of activity from the drop-down menu. The default
   options are: :guilabel:`Email`, :guilabel:`Call`, :guilabel:`Meeting`, or :guilabel:`To-Do`.
   Depending on what other applications are installed, additional options may be available.
@@ -168,9 +196,15 @@ buttons:
   :guilabel:`Schedule Activity` pop-up window appears.
 - :guilabel:`Cancel`: discards any changes made on the :guilabel:`Schedule Activity` pop-up window.
 
-.. image:: activities/schedule-pop-up.png
-   :align: center
-   :alt: View of CRM leads and the option to schedule an activity.
+.. screenshot:: essentials-activities-schedule-form
+   :menu: CRM ‣ (any opportunity) ‣ Activities ‣ Schedule Activity
+   :shows: Schedule Activity dialog with Plan, Activity Type, Summary, Due Date, Assigned to and
+      the note editor; buttons Schedule, Schedule & Mark as Done, Done & Schedule Next, Open
+      Calendar (Activity Type "Meeting"), Cancel.
+   :highlight: The button row.
+   :data: Activity Type "Meeting", Summary "Discuss proposal".
+   :module: mail, calendar, crm
+   :notes: English UI, crop to the dialog.
 
 .. _activities/all:
 
@@ -195,14 +229,14 @@ activities that are :guilabel:`Late`, due :guilabel:`Today`, and scheduled in th
    These requests appear in two separate lists in the all activities drop-down menu: one labeled
    `Time Off` and one labeled `Time Off Allocation`.
 
-   .. image:: activities/activities-menu.png
-      :align: center
-      :alt: The list of activities that is accessed from the main menu bar. Two entries for the Time
-            Off application are highlighted.
-
-.. tip::
-   The option to :ref:`Request a Document <documents/request>` is available at the bottom of the
-   list of all scheduled activities.
+   .. screenshot:: essentials-activities-systray
+      :menu: Top menu bar ‣ clock icon
+      :shows: The activities dropdown of the top menu bar, with the counters per model and the Late /
+         Today / Future counts; the "Time Off" and "Time Off Allocation" entries are visible.
+      :highlight: The two Time Off entries.
+      :data: One time off request and six allocation requests waiting for approval.
+      :module: mail, hr_holidays
+      :notes: English UI, crop to the dropdown.
 
 .. _activities/types:
 
@@ -212,9 +246,13 @@ Activity types
 To view the currently configured types of activities in the database, navigate to
 :menuselection:`Settings app --> Discuss section --> Activities setting --> Activity Types`.
 
-.. image:: activities/settings-activities-types.png
-   :align: center
-   :alt: Activity Types button in the Settings application under the Discuss section.
+.. screenshot:: essentials-activities-settings
+   :menu: Settings ‣ General Settings ‣ Discuss
+   :shows: The Discuss section of the settings with the "Activities" setting and its "Activity
+      Types" link.
+   :highlight: The "Activity Types" link.
+   :module: mail
+   :notes: English UI, crop to the Discuss section.
 
 Doing so reveals the :guilabel:`Activity Types` page, where the existing activity types are found.
 
@@ -223,9 +261,11 @@ Doing so reveals the :guilabel:`Activity Types` page, where the existing activit
    example, to view and edit the activities available for the *CRM* application, go to
    :menuselection:`CRM app --> Configuration --> Activity Types`.
 
-.. image:: activities/activity-list.png
-   :align: center
-   :alt: The list of activity types already configured and available.
+.. screenshot:: essentials-activities-types-list
+   :menu: Settings ‣ General Settings ‣ Discuss ‣ Activity Types
+   :shows: List of the existing activity types (Email, Call, Meeting, To-Do, Upload Document, …).
+   :module: mail
+   :notes: English UI, crop to the list.
 
 Edit activity types
 -------------------
@@ -253,19 +293,16 @@ Activity Settings section
   type. Some actions trigger specific behaviors after an activity is scheduled, such as:
 
   - :guilabel:`Upload Document`: If selected, a link to upload a document is automatically added to
-    the planned activity in the chatter.
-  - :guilabel:`Call` or :guilabel:`Meeting`: If selected, users have the option to open their
-    calendar to select a date and time for the activity.
-  - :guilabel:`Request Signature`: If selected, a link to open a signature request pop-up window is
-    automatically added to the planned activity in the chatter. This requires the Odoo *Sign*
-    application to be installed.
+    the planned activity in the chatter. Uploading the document marks the activity as done.
+  - :guilabel:`Phonecall` or :guilabel:`Meeting`: If selected, users have the option to open their
+    calendar to select a date and time for the activity. The :guilabel:`Meeting` action requires
+    the **Calendar** app.
 
   .. note::
      Available activity types vary based on the installed applications in the database.
 
-- :guilabel:`Folder`: Select a specific :ref:`folder <documents/folders>` to save a document to.
-  This field **only** appears if :guilabel:`Upload Document` is selected for the :guilabel:`Action`.
-
+- :guilabel:`Model`: optionally, restrict the activity type to a specific model, e.g.,
+  :guilabel:`Lead/Opportunity`. If left empty, the activity type is available on all records.
 - :guilabel:`Default User`: Select a user from the drop-down menu to automatically assign this
   activity to the selected user when this activity type is scheduled. If this field is left blank,
   the activity is assigned to the user who creates the activity.
@@ -279,6 +316,8 @@ Activity Settings section
 - :guilabel:`Keep Done`: Tick this checkbox to keep activities that have been marked as `Done`
   visible in the :ref:`activity view <activities/activity>`.
 - :guilabel:`Default Note`: enter any notes to appear with the activity.
+- :guilabel:`Email templates`: select the email templates that can be used with this activity type.
+  They are proposed as quick actions on the planned activity in the chatter.
 
 Next Activity section
 ~~~~~~~~~~~~~~~~~~~~~
@@ -308,9 +347,51 @@ It is possible to have another activity either suggested or triggered. To do so,
   Lastly, using the drop-down menu, select whether the activity is scheduled or triggered either
   :guilabel:`after previous activity deadline` or :guilabel:`after completion date`.
 
-.. image:: activities/new-activity.png
-   :align: center
-   :alt: A new Activity form with all the fields filled out.
+.. screenshot:: essentials-activities-type-form
+   :menu: Settings ‣ General Settings ‣ Discuss ‣ Activity Types ‣ New
+   :shows: Completed activity type form: Name, Action, Default User, Default Summary, Keep Done,
+      Default Note, and the Next Activity section with Chaining Type, Trigger and Schedule.
+   :data: Activity type "Follow-up call", Action "Phonecall", triggers "Email" 2 days after
+      completion date.
+   :module: mail
+   :notes: English UI, crop to the form sheet.
+
+.. _activities/plans:
+
+Activity plans
+==============
+
+*Activity plans* are predefined sets of activities that can be scheduled on a record in one go,
+e.g., an onboarding checklist, or the standard follow-up steps of a new opportunity.
+
+To manage activity plans, go to the :guilabel:`Configuration` menu of an app that supports them,
+e.g., :menuselection:`CRM --> Configuration --> Activity Plans`, :menuselection:`Sales -->
+Configuration --> Activity Plans`, or :menuselection:`Project --> Configuration --> Activity
+Plans`. With :ref:`developer mode <developer-mode>` activated, all plans are also available under
+:menuselection:`Settings --> Technical --> Activities --> Activity Plans`.
+
+Click :guilabel:`New`, enter the :guilabel:`Plan Name`, select the :guilabel:`Model` the plan
+applies to (if the field is displayed), then add one line per activity in the :guilabel:`Activities
+To Create` tab:
+
+- :guilabel:`Activity Type` and :guilabel:`Summary`: the activity to create.
+- :guilabel:`Assignment`: :guilabel:`Ask at launch` to choose the responsible user when the plan is
+  scheduled, or :guilabel:`Default user` to always assign the activity to the user selected in the
+  :guilabel:`Assigned to` field.
+- :guilabel:`Interval`, :guilabel:`Unit`, and :guilabel:`Trigger`: when the activity's deadline is
+  set, relative to the plan date (:guilabel:`Before Plan Date` or :guilabel:`After Plan Date`).
+
+To launch a plan, open the :ref:`Schedule Activity form <activities/form>` on a record, select the
+plan in the :guilabel:`Plan` field, set the :guilabel:`Plan Date`, and click :guilabel:`Schedule`.
+A summary of the activities to be created is displayed in the form before scheduling.
+
+.. screenshot:: essentials-activities-plan-form
+   :menu: CRM ‣ Configuration ‣ Activity Plans ‣ New
+   :shows: Activity plan form with Plan Name and the "Activities To Create" tab listing three lines
+      (activity type, summary, assignment, interval, unit, trigger).
+   :data: Plan "New opportunity follow-up": Call after 1 day, Email after 3 days, Meeting after 7 days.
+   :module: mail, crm
+   :notes: English UI, crop to the form sheet.
 
 .. seealso::
    - :doc:`../productivity/discuss`

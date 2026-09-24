@@ -33,13 +33,21 @@ product form.
 - To map to another tax or account, fill out the right column (:guilabel:`Tax to Apply`/
   :guilabel:`Account to Use Instead`).
 
-.. image:: fiscal_positions/fiscal-positions-tax-mapping.png
-   :align: center
-   :alt: Example of a fiscal position's tax mapping
+.. screenshot:: accounting-fiscal-positions-tax-mapping
+   :menu: Accounting ‣ Configuration ‣ Fiscal Positions ‣ (open a fiscal position) ‣ Tax Mapping tab
+   :shows: "Tax Mapping" tab with "Tax on Product" → "Tax to Apply" lines (e.g., "27%" → "0% EU G").
+   :highlight: The mapping lines (red frame).
+   :data: Demo company "YourCompany HU"; fiscal position "EU (intra-community)".
+   :module: account
+   :notes: English UI, light theme, 1440px width.
 
-.. image:: fiscal_positions/fiscal-positions-account-mapping.png
-   :align: center
-   :alt: Example of a fiscal position's account mapping
+.. screenshot:: accounting-fiscal-positions-account-mapping
+   :menu: Accounting ‣ Configuration ‣ Fiscal Positions ‣ (open a fiscal position) ‣ Account Mapping tab
+   :shows: "Account Mapping" tab with "Account on Product" → "Account to Use Instead" lines.
+   :highlight: The mapping lines (red frame).
+   :data: Demo company "YourCompany HU"; fiscal position "EU (intra-community)".
+   :module: account
+   :notes: English UI, light theme, 1440px width.
 
 - To remove a tax, leave the field :guilabel:`Tax to Apply` empty.
 - To replace a tax with several other taxes, add multiple lines using the same :guilabel:`Tax on
@@ -66,10 +74,22 @@ From there, several conditions can be activated:
 - :guilabel:`VAT Required`: the customer's VAT number must be present on their contact form.
 - :guilabel:`Country Group` and :guilabel:`Country`: the fiscal position is only applied to the
   selected country or country group.
+- :guilabel:`Federal States` and :guilabel:`Zip Range`: when a country is selected, the fiscal
+  position can be further restricted to some states or to a range of zip codes.
 
-.. image:: fiscal_positions/fiscal-positions-automatic.png
-   :align: center
-   :alt: Example of a fiscal position automatic application settings
+Other fields of the fiscal position form:
+
+- :guilabel:`Foreign Tax ID`: your company's tax ID in the region mapped by the fiscal position
+  (e.g., when you are registered for VAT in another country).
+- :guilabel:`Notes`: legal mentions printed on the invoices that use the fiscal position.
+
+.. screenshot:: accounting-fiscal-positions-automatic
+   :menu: Accounting ‣ Configuration ‣ Fiscal Positions ‣ (open a fiscal position)
+   :shows: Upper part of the fiscal position form: "Detect Automatically" enabled, "VAT required" enabled, "Country Group" set to "Europe".
+   :highlight: The "Detect Automatically", "VAT required" and "Country Group" fields (red frame).
+   :data: Demo company "YourCompany HU"; fiscal position "EU (intra-community)".
+   :module: account
+   :notes: English UI, light theme, 1440px width, crop to the upper part of the form.
 
 .. note::
    - If the :doc:`Verify VAT Numbers <vat_verification>` feature is enabled, any fiscal positions
@@ -95,9 +115,13 @@ To manually select a fiscal position, open a sales order, invoice, or bill, go t
 :guilabel:`Other Info` tab and select the desired :guilabel:`Fiscal Position` before adding product
 lines.
 
-.. image:: fiscal_positions/fiscal-positions-manual.png
-   :align: center
-   :alt: Selection of a fiscal position on a sales order, invoice, or bill
+.. screenshot:: accounting-fiscal-positions-manual
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (open a draft invoice) ‣ Other Info tab
+   :shows: "Other Info" tab of a draft invoice with the "Fiscal Position" field selected.
+   :highlight: The "Fiscal Position" field (red frame).
+   :data: Demo customer invoice.
+   :module: account
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 .. _fiscal_positions/partner:
 
@@ -108,9 +132,13 @@ To define which fiscal position must be used by default for a specific partner, 
 :menuselection:`Accounting --> Customers --> Customers`, select the partner, open the
 :guilabel:`Sales & Purchase` tab, and select the :guilabel:`Fiscal Position`.
 
-.. image:: fiscal_positions/fiscal-positions-customer.png
-   :align: center
-   :alt: Selection of a fiscal position on a customer
+.. screenshot:: accounting-fiscal-positions-customer
+   :menu: Accounting ‣ Customers ‣ Customers ‣ (open a customer) ‣ Sales & Purchase tab
+   :shows: "Sales & Purchase" tab of a company contact; "Fiscal Information" section with the "Fiscal Position" field.
+   :highlight: The "Fiscal Position" field (red frame).
+   :data: Demo customer company from another EU country.
+   :module: account
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 .. seealso::
 

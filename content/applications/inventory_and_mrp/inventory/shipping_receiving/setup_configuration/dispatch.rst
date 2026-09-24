@@ -40,15 +40,23 @@ truck`). Then, enter the vehicle capacity in the :guilabel:`Max Weight` (in kilo
 :guilabel:`Max Volume` (in cubic meters) fields.
 
 
-.. image:: dispatch/categories.png
-   :alt: Vehicle categories with defined weight and volume.
+.. screenshot:: setup-configuration-dispatch-categories
+   :menu: Fleet ‣ Configuration ‣ Models ‣ Categories
+   :shows: The vehicle category list with the Maximum Weight and Maximum Volume columns filled in.
+   :data: Categories "Small truck" and "Van" with different capacities.
+   :module: fleet
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    The units of measurement for vehicle capacity are assigned at the global level in the
    **Settings** app, in the :guilabel:`Units of Measure` section.
 
-   .. image:: dispatch/settings.png
-      :alt: Show units of measure settings.
+   .. screenshot:: setup-configuration-dispatch-settings
+      :menu: Settings ‣ General Settings
+      :shows: The units of measure settings, showing the weight and volume units used for vehicle capacity.
+      :highlight: The weight and volume unit settings (red frame).
+      :module: stock_fleet
+      :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    :ref:`Vehicle category <fleet/categories>`
@@ -118,10 +126,14 @@ Next, set a :guilabel:`Delivery Product`, which is the product that shows up as 
 Optionally, in the :guilabel:`Availability` tab, set the :guilabel:`Countries`, :guilabel:`States`,
 or :guilabel:`Zip Prefixes` to limit the range of local delivery.
 
-.. figure:: dispatch/delivery-method.png
-   :alt: Delivery method form.
+.. screenshot:: setup-configuration-dispatch-delivery-method
+   :menu: Inventory ‣ Configuration ‣ Delivery Methods
+   :shows: A delivery method form created for a vehicle, with the "Zip Prefixes" field filled in to limit it to a delivery zone.
+   :highlight: The "Zip Prefixes" field (red frame).
+   :module: stock_fleet
+   :notes: English UI, light theme, 1440px width.
 
-   Example delivery method, with the :guilabel:`Zip Prefixes` set to San Francisco's zip code.
+Example delivery method, with the :guilabel:`Zip Prefixes` set to the delivery zone's postal codes.
 
 .. _inventory/shipping_receiving/docks:
 
@@ -134,10 +146,14 @@ Each loading dock must have a dedicated location. To create or configure dock lo
 Click the desired location, which opens the :guilabel:`Location` form. In the :guilabel:`Additional
 Information` section, tick the :guilabel:`Is a Dock Location` checkbox.
 
-.. figure:: dispatch/dock-location.png
-   :alt: Location configuration.
+.. screenshot:: setup-configuration-dispatch-dock-location
+   :menu: Inventory app ‣ Configuration ‣ Locations
+   :shows: A location form with the "Is a Dock Location" checkbox ticked.
+   :highlight: The "Is a Dock Location" checkbox (red frame).
+   :module: stock_fleet
+   :notes: English UI, light theme, 1440px width.
 
-   Location configuration page with :guilabel:`Is a Dock Location` checkbox ticked.
+Location configuration page with the :guilabel:`Is a Dock Location` checkbox ticked.
 
 Build loads
 ===========
@@ -178,10 +194,14 @@ line's :guilabel:`Carrier` fields. In the resulting drop-down menu, choose the d
 :guilabel:`Confirmation` pop-up window appears, indicating the number of orders being added to the
 batch. Click :guilabel:`Confirm`, and the carrier is updated for all the selected records.
 
-.. figure:: dispatch/set-carrier.png
-   :alt: Set carrier.
+.. screenshot:: setup-configuration-dispatch-set-carrier
+   :menu: Inventory ‣ Delivery Orders
+   :shows: The delivery orders list with the "Carrier" column showing the same vehicle delivery method set on two orders.
+   :highlight: The "Carrier" column (red frame).
+   :module: stock_fleet
+   :notes: English UI, light theme, 1440px width.
 
-   The delivery method `Truck 1-MER-001` is set as the :guilabel:`Carrier` for two delivery orders.
+The delivery method `Truck 1` is set as the :guilabel:`Carrier` for two delivery orders.
 
 .. _inventory/shipping_receiving/create-batch:
 
@@ -198,10 +218,14 @@ Then, click the :icon:`fa-cog` :guilabel:`Actions` button, and click either :gui
 or :guilabel:`Add to wave`. In the pop-up window, ensure :guilabel:`Add to` is set to :guilabel:`a
 new [batch/wave] transfer`, then click :guilabel:`Confirm`.
 
-.. figure:: dispatch/add-to-wave.png
-   :alt: Example wave.
+.. screenshot:: setup-configuration-dispatch-add-to-wave
+   :menu: Inventory ‣ Delivery Orders
+   :shows: Several delivery orders selected in the list, with the "Add to wave" action in the gear menu.
+   :highlight: The "Add to wave" action (red frame).
+   :module: stock_fleet
+   :notes: English UI, light theme, 1440px width.
 
-   Delivery orders are selected to be grouped into a wave transfer.
+Delivery orders are selected to be grouped into a wave transfer.
 
 Alternative batch creation method
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -214,13 +238,18 @@ the resulting drop-down menu, click :guilabel:`Prepare batch`.
    The :guilabel:`Transport Management` drop-down menu contains other tools for fleet management:
 
    - :guilabel:`Manage Batches`: open list of batches
-   - :guilabel:`Dock Dispatching`: open weekly calendar view of scheduled batch operations
+   - :guilabel:`Dock Dispatching`: open weekly Gantt view of scheduled batch operations; it
+     requires a Gantt view type, provided by the *Web Gantt* module
    - :guilabel:`Batches by Route`: Kanban view of batches grouped by fulfillment route
    - :guilabel:`Calendar`: open hourly calendar view of scheduled operations
    - :guilabel:`Statistics`: open pivot table of the batch transfers
 
-.. image:: dispatch/prepare-batch.png
-   :alt: Show prepare batch option from the Transport Management drop-down menu.
+.. screenshot:: setup-configuration-dispatch-prepare-batch
+   :menu: Inventory
+   :shows: The Inventory overview with the Transport Management drop-down menu open on an operation-type card, showing the "Prepare Batch" option.
+   :highlight: The "Prepare Batch" option (red frame).
+   :module: stock_fleet
+   :notes: English UI, light theme, 1440px width.
 
 .. _inventory/shipping_receiving/batch-form:
 
@@ -243,24 +272,9 @@ On the batch transfer form, fill the following fields out accordingly:
 .. example::
    The :guilabel:`Volume` bar is grayed out because the capacity has been reached.
 
-   .. image:: dispatch/batch-form.png
-      :alt: Show batch form.
-
-Prepare delivery route
-~~~~~~~~~~~~~~~~~~~~~~
-
-To help the driver prepare, click the :guilabel:`Map` button at the top of the batch or wave form to
-view delivery destinations on a map. Selecting an individual delivery order pinpoints its location.
-
-.. note::
-   The :guilabel:`Map` button is only visible for transfers with the :guilabel:`In progress` status.
-
-.. image:: dispatch/map.png
-   :alt: Show map in Odoo, with information of the delivery orders.
-
-Additionally, use the :guilabel:`View in Google Maps` button to generate a route from the warehouse
-to the delivery points.
-
-.. image:: dispatch/google-map.png
-   :alt: Show Google Map route.
-
+   .. screenshot:: setup-configuration-dispatch-batch-form
+      :menu: Inventory ‣ Operations ‣ Batch Transfers
+      :shows: A batch transfer form with the vehicle set as carrier, the dock location, and the weight and volume totals against the vehicle capacity.
+      :highlight: The capacity indicators (red frame).
+      :module: stock_fleet
+      :notes: English UI, light theme, 1440px width.

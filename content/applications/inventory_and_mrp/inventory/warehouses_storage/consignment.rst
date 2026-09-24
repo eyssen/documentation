@@ -14,54 +14,26 @@ each sale order line, and drives periodic **settlement** (what got sold), **retu
 back unsold) and **verification** (physical stock check) cycles through a single
 :guilabel:`Consignment` document.
 
-.. Screenshot plan:
-.. - consignment-partner-form.png: res.partner form, "Sales & Purchase" tab, "Customer Consignment"
-..   group with "Can Buy on Consignment" enabled, showing the consignment stock location and stock
-..   count, plus the header "Settlement Report" button. Path: Contacts app -> open a customer that
-..   already has consignment enabled -> Sales & Purchase tab -> scroll to "Customer Consignment".
-.. - consignment-sale-order.png: sale order form with "Consignment Order" checked next to the
-..   payment terms, and the order lines list showing the "Cons. Remaining Quantity" column. Path:
-..   Sales app -> Orders -> open a confirmed consignment order.
-.. - consignment-warning.png: the red "cannot be sold/picked on consignment" alert banner shown
-..   above the order lines / picking lines when a product's consignment sale policy is Disabled.
-..   Path: Sales app -> Orders -> a consignment quotation that includes a product whose Sale Policy
-..   (Sales tab) is set to Disabled.
-.. - consignment-delivery-picking.png: the outgoing delivery (stock.picking) form for a consignment
-..   order, showing the "Consignment Order" checkbox next to the Owner field. Path: Inventory app ->
-..   Transfers -> open the outgoing delivery generated from a consignment sale order.
-.. - consignment-menu.png: the Sales -> Orders -> Consignment list view showing settlement-report
-..   records with their Draft/Done/Cancelled state badges. Path: Sales app -> Orders -> Consignment.
-.. - consignment-settlement-report-form.png: a draft Sales Settlement Report form with the line list
-..   (Product, Cons. Quantity, Settled Quantity) and the "Add Bulk Products" / "Set All" / "Set Null"
-..   / "Confirm" buttons visible. Path: Consignment menu -> open a draft report of Type "Sales
-..   Settlement Report" (or trigger one from a customer's "Settlement Report" button).
-.. - consignment-return-report.png: a draft Returns Submission report (Type = "Returns Submission")
-..   with settled/return quantities filled in, ready to Confirm. Path: Consignment menu -> New ->
-..   set Type to "Returns Submission".
-.. - consignment-bulk-product-wizard.png: the "Add Bulk Products" dialog (Format, Based On, example
-..   text, paste/CSV/Excel input). Path: on a draft settlement report, click the cubes-icon "Add Bulk
-..   Products" button.
-.. - consignment-product-policy.png: the product template form, Sales tab, "Consignment" group
-..   showing the "Sale Policy" field, and the "Consignment Stock" smart button in the button box.
-..   Path: Sales/Inventory app -> Products -> open a product -> Sales tab.
-.. - consignment-settings.png: Inventory -> Configuration -> Settings, "Traceability" section,
-..   showing "Customer Consignment Stock Location", "Customer Consignment Report Operation Type" and
-..   "Consignment Sale Product Policy" fields right below "Set owner on stored products". Path:
-..   Inventory app -> Configuration -> Settings.
-
 How consignment stock works
 ============================
 
 Per-customer consignment location
 ----------------------------------
 
-.. image:: consignment/consignment-partner-form.png
-   :alt: Customer form with Can Buy on Consignment enabled and the consignment stock location
+.. screenshot:: inventory-consignment-customer-form
+   :menu: Contacts ‣ (a customer) ‣ Sales & Purchase tab
+   :shows: The "Customer Consignment" group of a customer form with "Can Buy on Consignment" enabled, the
+      consignment stock location, the "Consignment Stock Count" and, in the header, the "Settlement Report"
+      button.
+   :highlight: The "Can Buy on Consignment" checkbox and the "Settlement Report" button (red frames).
+   :data: Customer "Deco Addict" with a consignment location holding a few products.
+   :module: eyssen_consignment
+   :notes: English UI, light theme, 1440px width, crop to the group and the header button.
 
-Every consignment customer gets its own dedicated :guilabel:`stock.location`. On the customer's
+Every consignment customer gets its own dedicated stock location. On the customer's
 form (:menuselection:`Contacts --> a customer --> Sales & Purchase tab --> Customer Consignment`),
 enabling :guilabel:`Can Buy on Consignment` automatically creates a location flagged as a
-**Customer Consignment Place** (usage ``customer``, linked back to the partner) as a child of the
+**Customer Consignment Location**, of the *Customer Location* type and linked back to the partner, as a child of the
 company's configured :guilabel:`Customer Consignment Stock Location`. Renaming the customer later
 renames the location to match.
 
@@ -83,8 +55,14 @@ renames the location to match.
 Consignment sale orders and deliveries
 ----------------------------------------
 
-.. image:: consignment/consignment-sale-order.png
-   :alt: Sale order with the Consignment Order flag and consignment quantity columns
+.. screenshot:: inventory-consignment-sale-order
+   :menu: Sales ‣ Orders ‣ Orders ‣ (a confirmed consignment order)
+   :shows: A confirmed sales order with the "Consignment Order" checkbox ticked next to the payment terms,
+      and the order-line list showing the "Cons. Remaining Quantity" column.
+   :highlight: The "Consignment Order" checkbox and the "Cons. Remaining Quantity" column (red frames).
+   :data: Two order lines; 10 delivered, 4 settled, 0 returned, so 6 remaining on the first line.
+   :module: eyssen_consignment
+   :notes: English UI, light theme, 1440px width, crop to the header fields and the order lines.
 
 A sale order exposes a :guilabel:`Consignment Order` checkbox next to the payment terms (only
 visible if the customer :guilabel:`Can Buy on Consignment`, and pre-checked automatically when the
@@ -92,8 +70,14 @@ customer has :guilabel:`Buy on Consignment by Default`). Deliveries generated fr
 order automatically inherit the same flag, and a delivery's :guilabel:`Consignment Order` flag can
 also be set directly if a picking is created outside the normal sale flow.
 
-.. image:: consignment/consignment-warning.png
-   :alt: Warning banner listing products that cannot be sold or picked on consignment
+.. screenshot:: inventory-consignment-policy-warning
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a consignment quotation)
+   :shows: The red alert banner above the order lines listing the products that cannot be sold on
+      consignment because their "Sale Policy" resolves to "Disabled".
+   :highlight: The alert banner (red frame).
+   :data: One order line whose product has Sale Policy "Disabled".
+   :module: eyssen_consignment
+   :notes: English UI, light theme, 1440px width, crop to the banner and the offending line.
 
 Per-product control — every product can be restricted from consignment sales individually with its
 :guilabel:`Sale Policy` (see :ref:`consignment/configuration`). If a consignment order or delivery
@@ -102,8 +86,15 @@ allowed to buy on consignment at all — a red warning banner lists the offendin
 sending the quotation, confirming the order, or validating the delivery is blocked until the issue
 is resolved.
 
-.. image:: consignment/consignment-delivery-picking.png
-   :alt: Consignment delivery picking with the forced Owner field
+.. screenshot:: inventory-consignment-delivery
+   :menu: Inventory ‣ Delivery Orders ‣ (a delivery from a consignment order)
+   :shows: The outgoing delivery of a consignment order with the "Consignment Order" checkbox next to the
+      read-only "Owner" field, and the destination set to the customer's consignment location.
+   :highlight: The "Consignment Order" checkbox, the "Owner" field and the destination location (red
+      frames).
+   :data: Delivery WH/OUT/00002 to "Deco Addict"'s consignment location; owner is the company.
+   :module: eyssen_consignment
+   :notes: English UI, light theme, 1440px width, crop to the header fields.
 
 On the outgoing delivery itself, the destination location is automatically forced to the
 customer's consignment location (overriding any other destination set on the transfer), and the
@@ -136,12 +127,20 @@ columns on the order line list:
 Consignment Settlement Reports
 =================================
 
-.. image:: consignment/consignment-menu.png
-   :alt: Consignment menu listing settlement reports with Draft, Done and Cancelled states
+.. screenshot:: inventory-consignment-report-list
+   :menu: Sales ‣ Orders ‣ Consignment
+   :shows: The consignment settlement report list with records of all three types and their Draft, Done and
+      Cancelled state badges, next to the reference, customer and date.
+   :highlight: The "State" column (red frame).
+   :data: Four reports: two Sales Settlement Reports (one draft, one done), one Returns Submission and one
+      cancelled.
+   :module: eyssen_consignment
+   :notes: English UI, light theme, 1440px width, full list view.
 
-All settlement, return and verification cycles are handled through the ``consignment.settlement.report``
-document, listed under :menuselection:`Sales --> Orders --> Consignment`. Each report has
-a sequence reference (``CSR/<year>/#####``), belongs to one customer, and has a :guilabel:`Type`:
+All settlement, return and verification cycles are handled through a single
+:guilabel:`Consignment Settlement Report` document, listed under
+:menuselection:`Sales --> Orders --> Consignment`. Each report has a sequence reference
+(``CSR/<year>/#####``), belongs to one customer, and has a :guilabel:`Type`:
 
 - :guilabel:`Sales Settlement Report` — records what the customer actually sold/consumed.
 - :guilabel:`Returns Submission` — records what the customer is sending back unsold.
@@ -157,8 +156,14 @@ a sequence reference (``CSR/<year>/#####``), belongs to one customer, and has a 
 Syncing lines with physical stock
 ------------------------------------
 
-.. image:: consignment/consignment-settlement-report-form.png
-   :alt: Draft settlement report with Cons. Quantity and Settled Quantity per product
+.. screenshot:: inventory-consignment-settlement-form
+   :menu: Sales ‣ Orders ‣ Consignment ‣ (a draft Sales Settlement Report)
+   :shows: A draft settlement report with its line list (Product, Cons. Quantity, Settled Quantity) and the
+      "Add Bulk Products", "Set All", "Set Null" and "Confirm" buttons.
+   :highlight: The "Settled Quantity" column and the "Set All" / "Set Null" header buttons (red frames).
+   :data: Customer "Deco Addict"; four product lines, two of them partly settled.
+   :module: eyssen_consignment
+   :notes: English UI, light theme, 1440px width, crop to the header buttons and the lines.
 
 Refreshing a draft report (automatically when opened via the customer button, or explicitly when
 :guilabel:`Set to Draft` is used) recomputes one line per product, with :guilabel:`Cons. Quantity`
@@ -175,8 +180,14 @@ For each line, the agent enters (or edits) the :guilabel:`Settled Quantity` — 
 and :guilabel:`Cons. Quantity` — either row by row, with the header :guilabel:`Set All` /
 :guilabel:`Set Null` shortcuts, or in bulk:
 
-.. image:: consignment/consignment-bulk-product-wizard.png
-   :alt: Add Bulk Products dialog with copy/paste, CSV and Excel import
+.. screenshot:: inventory-consignment-bulk-products
+   :menu: Sales ‣ Orders ‣ Consignment ‣ (a draft report) ‣ Add Bulk Products
+   :shows: The "Add Bulk Products" dialog with the Format and "Based On" fields, the live example text and
+      the paste/CSV/Excel input.
+   :highlight: The "Format" and "Based On" fields (red frame).
+   :data: Format "Copy/Paste", Based On "Default Code", three pasted lines.
+   :module: eyssen_consignment
+   :notes: English UI, light theme, 1440px width, crop to the dialog.
 
 :guilabel:`Add Bulk Products` opens a wizard that resets every line to unsettled and then applies
 quantities pasted as text, or uploaded as a CSV/Excel file, matching each row to a product by
@@ -210,8 +221,15 @@ consignment sale order lines (oldest order first), then:
 
 **Returns Submission** — FIFO-matches the same way, then:
 
-.. image:: consignment/consignment-return-report.png
-   :alt: Returns Submission report ready to confirm
+.. screenshot:: inventory-consignment-return-report
+   :menu: Sales ‣ Orders ‣ Consignment ‣ New (Type = Returns Submission)
+   :shows: A draft Returns Submission report with the return quantities filled in on its lines, ready to be
+      confirmed.
+   :highlight: The "Type" field set to "Returns Submission" and the filled-in "Settled Quantity" column (red
+      frames).
+   :data: Customer "Deco Addict"; two products being sent back unsold.
+   :module: eyssen_consignment
+   :notes: English UI, light theme, 1440px width, crop to the header fields and the lines.
 
 - creates a **Consignment Return** :doc:`RMA <../../../sales/withdrawal/backend>` sourced from the
   customer's consignment location, one line per matched sale order line;
@@ -237,8 +255,16 @@ consignment sale order lines (oldest order first), then:
 Configuration
 ================
 
-.. image:: consignment/consignment-settings.png
-   :alt: Inventory settings with the three consignment configuration fields
+.. screenshot:: inventory-consignment-settings
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The "Traceability" section of the Inventory settings showing, right below "Set owner on stored
+      products", the "Customer Consignment Stock Location", "Customer Consignment Report Operation Type" and
+      "Consignment Sale Product Policy" fields.
+   :highlight: The three consignment fields (red frame).
+   :data: Location "Partner Locations/Consignment", operation type "Consignment settlement", policy
+      "Enabled".
+   :module: eyssen_consignment
+   :notes: English UI, light theme, 1440px width, crop to the Traceability settings block.
 
 Company-wide settings, at :menuselection:`Inventory --> Configuration --> Settings`, in the
 **Traceability** section right below :guilabel:`Set owner on stored products`:
@@ -252,8 +278,14 @@ Company-wide settings, at :menuselection:`Inventory --> Configuration --> Settin
   :guilabel:`Disabled`) applied to products whose own :guilabel:`Sale Policy` is left on
   :guilabel:`Use default`.
 
-.. image:: consignment/consignment-product-policy.png
-   :alt: Product Sales tab with the consignment Sale Policy field and stock smart button
+.. screenshot:: inventory-consignment-product-policy
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Sales tab
+   :shows: The "Consignment" group of a product's Sales tab with the "Sale Policy" field (Use default /
+      Enabled / Disabled), and the "Consignment Stock" smart button in the button box above.
+   :highlight: The "Sale Policy" field and the "Consignment Stock" smart button (red frames).
+   :data: A product with Sale Policy "Use default" and stock at one customer's consignment location.
+   :module: eyssen_consignment
+   :notes: English UI, light theme, 1440px width, crop to the tab and the button box.
 
 Per product, on the product's :guilabel:`Sales` tab, the :guilabel:`Sale Policy` field
 (:guilabel:`Use default` / :guilabel:`Enabled` / :guilabel:`Disabled`) overrides the company policy
@@ -261,9 +293,8 @@ for that product specifically. The :guilabel:`Consignment Stock` smart button (a
 the product list and kanban views) opens the quants currently held for that product across every
 customer's consignment location.
 
-Access rights are limited to the **Sales / User** group (``sales_team.group_sale_salesman``), which
-can create and edit settlement reports and their lines but never delete them, preserving the audit
-trail. An additional admin-only recovery action (restricted to the **Inventory / Administrator**
+Access rights are limited to the **Sales / User** group, which can create and edit settlement
+reports and their lines but never delete them, preserving the audit trail. An additional admin-only recovery action (restricted to the **Inventory / Administrator**
 group) is available on a cancelled report to clear leftover audit data if a cancellation was
 interrupted.
 

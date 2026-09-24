@@ -1,202 +1,123 @@
-=============================================
-Process receipts and deliveries with barcodes
-=============================================
+=====================================================
+Scan receipts, deliveries, and internal transfers
+=====================================================
 
-.. _barcode/operations/intro:
+The ``eyssen_barcode_app`` module's :guilabel:`Warehouse Operations` flow replaces Odoo's official
+*Barcode* application (module ``stock_barcode``, not installed in this database): it lets a
+warehouse user browse transfers by operation type and process them (receipts, delivery orders,
+internal transfers, and any other configured operation type) by scanning products and packages.
 
-The *Barcode* app can be used to process receipts, deliveries, and other types of operations in real
-time using a barcode scanner or the Odoo mobile app.
+Browse operation types
+========================
 
-This makes it possible to process operations on the warehouse floor when they happen, instead of
-having to wait to validate transfers from a computer. Processing operations this way can help to
-properly attribute barcodes to the appropriate products, pickings, locations, and more.
+Go to the main apps menu and open the :menuselection:`Barcode` app, then click the
+:guilabel:`Warehouse Operations` tile.
 
-Enable Barcode app
-==================
+.. screenshot:: barcode-warehouse-operations-home
+   :menu: Barcode ‣ Warehouse Operations
+   :shows: The Warehouse Operations screen, listing operation types as cards with their
+      ready-to-process picking count.
+   :highlight: One operation-type card and its count badge (red frame).
+   :data: Operation types Receipts, Delivery Orders, and Internal Transfers, each with a few ready
+      pickings.
+   :module: eyssen_barcode_app
+   :notes: English UI, light theme, 1440px width.
 
-To use the *Barcode* app to process transfers, it must be installed by enabling the feature from the
-settings of the *Inventory* app.
+Optionally filter the list by typing part of a :guilabel:`Warehouse` name, and choose whether the
+cards are sorted by :guilabel:`Picking Count Order` (most pickings ready first, the default) or
+:guilabel:`Name Order` using the two buttons above the list. Tap an operation type card to open its
+pickings.
 
-To do so, go to the :menuselection:`Inventory app --> Configuration --> Settings`. Then, scroll down
-to the :guilabel:`Barcode` section, and click the checkbox next to the :guilabel:`Barcode Scanner`
-feature.
-
-Once the checkbox is ticked, click :guilabel:`Save` at the top of the page to save changes.
-
-Once the page has refreshed, new options will be displayed under the :guilabel:`Barcode Scanner`
-feature: :guilabel:`Barcode Nomenclature` (with a corresponding drop-down menu), where either
-:guilabel:`Default Nomenclature` or :guilabel:`Default GS1 Nomenclature` can be selected.
-
-There is also a :guilabel:`Configure Product Barcodes` internal link arrow, and a set of
-:guilabel:`Print` buttons for printing barcode commands and a barcode demo sheet.
-
-.. image:: receipts_deliveries/receipts-deliveries-barcode-setting.png
-   :align: center
-   :alt: Enabled Barcode feature in Inventory app settings.
-
-For more on setting up and configuring the :guilabel:`Barcode` app, refer to the :doc:`Set up your
-barcode scanner <../setup/hardware>` and :doc:`Activate the Barcodes in Odoo <../setup/software>`
-documentation pages.
-
-.. _barcode/operations/scan-received-products:
-
-Scan barcodes for receipts
+List and filter pickings
 ==========================
 
-To process warehouse receipts for incoming products, there first needs to be a purchase order (PO)
-created, and a receipt operation to process.
+The :guilabel:`Picking Operations` screen lists the transfers of the selected operation type that
+are not yet done (or cancelled), each shown as a card with its priority star, reference, status,
+source document, and any scheduling information.
 
-To create a :abbr:`PO (purchase order)`, navigate to the :menuselection:`Purchase app --> Create` to
-create a new request for quotation (RFQ).
+.. screenshot:: barcode-warehouse-operations-picking-list
+   :menu: Barcode ‣ Warehouse Operations ‣ (an operation type)
+   :shows: The Picking Operations screen for one operation type, with the scan field, the "Show
+      done" toggle, and a list of pickings below it.
+   :highlight: The scan field and the picking list (red frame).
+   :data: Operation type "Receipts" with three open transfers.
+   :module: eyssen_barcode_app
+   :notes: English UI, light theme, 1440px width.
 
-From the blank :abbr:`RFQ (request for quotation)` form, click the drop-down menu next to the
-:guilabel:`Vendor` field to add a vendor. Then, on the :guilabel:`Product` line under the
-:guilabel:`Products` tab, click :guilabel:`Add a product`, and select the desired product(s) to add
-to the quotation.
+Scan or type into the field to narrow the list down to the picking that matches:
 
-Once ready, click :guilabel:`Save` at the top of the form, then click :guilabel:`Confirm Order` to
-confirm the :abbr:`RFQ (request for quotation)` to a :abbr:`PO (purchase order)`.
+- a **product's barcode** — only pickings with a not-yet-fully-scanned line for that product remain;
+- a **picking's own reference** (e.g. `WH/IN/00023`) — jumps straight to that picking;
+- a **package's barcode**, including a GLS parcel number — only pickings whose destination packages
+  include that package remain.
 
-.. image:: receipts_deliveries/receipts-deliveries-purchase-order.png
-   :align: center
-   :alt: Completed purchase order for barcode product.
+Toggle :guilabel:`Show done` to also include already-validated and cancelled transfers in the list.
+Tap a picking card to open it for scanning.
 
-To process and scan barcodes for warehouse receipts, navigate to the :menuselection:`Barcode app`.
+Scan a transfer
+================
 
-Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` screen displaying different
-options is presented. To process receipts, click on the :guilabel:`Operations` button at the bottom
-of the screen. This navigates to an :menuselection:`Operations` overview page.
+The scanning screen shows the transfer's reference and state, a scan field, the product lines on
+the left, and any packages on the right.
 
-.. image:: receipts_deliveries/receipts-deliveries-barcode-scanner.png
-   :align: center
-   :alt: Barcode app start screen with scanner.
+.. screenshot:: barcode-warehouse-operations-scan-screen
+   :menu: Barcode ‣ Warehouse Operations ‣ (an operation type) ‣ (a picking)
+   :shows: The scanning screen for one transfer, with the scan field, the product-lines column on
+      the left (color-coded by scanned quantity), and the packages column on the right.
+   :highlight: The scan field and the product-lines column (red frame).
+   :data: A receipt with three product lines, one fully scanned (green), one partially scanned
+      (yellow), and one not started (red).
+   :module: eyssen_barcode_app
+   :notes: English UI, light theme, 1440px width.
 
-From this page, locate the :guilabel:`Receipts` card, and click the :guilabel:`# To Process` button
-to view all outstanding receipts. Then, select the desired receipt operation to process. This
-navigates to the barcode transfer screen.
+Scanning a product's barcode increases its scanned quantity by one; each line can also be adjusted
+with its :guilabel:`+`/:guilabel:`-` buttons, or filled to the full expected quantity in one click
+with its :guilabel:`Set` button. Lines are colored red (nothing scanned yet), yellow (partially
+scanned), or green (fully scanned), and not-yet-started lines are kept in the middle of the list
+while completed ones sink to the bottom.
 
 .. note::
-   If *only* using a barcode scanner or the Odoo mobile app, the barcodes for each transfer of a
-   corresponding operation type can be scanned to be processed easily. Once scanned, the products
-   that are part of an existing transfer can be scanned, and new products can be added to the
-   transfer, as well. Once all products have been scanned, validate the transfer to proceed with the
-   stock moves.
+   Whether the scan field looks for a product or for a package barcode depends on the transfer: it
+   scans products while any product line is not yet assigned to a package, and switches to
+   scanning packages once every line has been placed into one (unless :guilabel:`Force Unpacking`
+   is enabled on the operation type, in which case it always scans products).
 
-From this screen, an overview of all receipts to process within that transfer (**WH/IN/000XX**) is
-shown. At the bottom of the screen, there are options to :guilabel:`Add Product` or
-:guilabel:`Validate`, depending on if products need to be added to the operation, or if the whole
-operation should be validated at once.
+Working with packages
+------------------------
 
-.. image:: receipts_deliveries/receipts-deliveries-scanner-overview.png
-   :align: center
-   :alt: Overview of receipts in transfer to scan.
+If the operation type has :guilabel:`Force Packaging` enabled (see
+:doc:`../../inventory/warehouses_storage/multi_warehouse`), a :guilabel:`Create New Package` toggle
+appears above the product lines; turning it on and then scanning a product creates a new package and
+puts that product inside it. A banner (in Hungarian: :guilabel:`Új csomag létrehozáshoz scannelje be
+az első terméket`, "To create a new package, scan the first product") is shown while this mode is
+active. If :guilabel:`All In Packing` is enabled instead, an :guilabel:`All In` button offers to put
+everything remaining into a single package at once.
 
-To process and scan each product individually, choose a specific product line. The :guilabel:`+#`
-button (in this case, :guilabel:`+10`) can be clicked to indicate receipt of that product, or the
-:guilabel:`pencil` icon can be clicked to open a new screen to edit that product line.
+Each package on the right can be opened or closed with its folder icon, and — while
+:guilabel:`Force Unpacking` is enabled — unpacked again with its :guilabel:`Unpack` button. Tapping
+a package selects it, after which scanned products are added to that package instead of to a new
+one.
 
-From this screen, the product that's being received is listed. Under the product name, the
-:guilabel:`Quantity` line can be edited. Either change the `0` in the line to the desired quantity,
-or click the :guilabel:`/# Units` button (in this case, :guilabel:`/10 Units`) to automatically fill
-the quantity ordered from the :abbr:`PO (purchase order)`.
+Finish the transfer
+======================
 
-.. example::
-   In the reception operation `WH/IN/00019`, `10 Units` of the `Barcode Product` is expected to be
-   received. `[BARCODE_PROD]` is the :guilabel:`Internal Reference` set on the product form. Scan
-   the barcode of the `Barcode Product` to receive one unit. Afterwards, click the
-   :guilabel:`pencil` icon to manually enter the received quantities.
+Once the relevant quantities have been scanned, click :guilabel:`Finish Scan` to validate the
+transfer using the scanned quantities (unscanned quantities on a line are left unreserved). If the
+operation type has :guilabel:`Allow Reverse Picking` enabled and not everything was scanned, the
+button instead reads :guilabel:`Finish Scan - create reverse` and asks for confirmation (in
+Hungarian: :guilabel:`Biztos, hogy lezárod a szállítólevelet? A nem scannelt mennyiség visszakerül
+készletre!`, "Are you sure you want to close the delivery note? The unscanned quantity will be
+returned to stock!") before creating the automatic reverse transfer described in
+:doc:`../../inventory/warehouses_storage/multi_warehouse`.
 
-   .. image:: receipts_deliveries/receipts-deliveries-product-line-editor.png
-      :align: center
-      :alt: Product line editor for individual transfer in Barcode app.
+Once a transfer is :guilabel:`Done`, any shipping label already generated for it (GLS, Foxpost, MPL,
+or a custom carrier — see :doc:`../../inventory/shipping_receiving/setup_configuration/gls`,
+:doc:`../../inventory/shipping_receiving/setup_configuration/foxpost`,
+:doc:`../../inventory/shipping_receiving/setup_configuration/mpl`, and
+:doc:`../../inventory/shipping_receiving/setup_configuration/custom`) can be printed directly from
+this screen, and a :guilabel:`Vissza` ("Back") button returns to the picking list.
 
-Additionally, the :guilabel:`+1` and :guilabel:`-1` buttons can be clicked to add or subtract
-quantity of the product, and the :guilabel:`number keys` can be used to add quantity, as well.
-
-Below the :guilabel:`number keys` is the :guilabel:`location` line, which reads `WH/Stock` by
-default, unless another *location* is listed on the product itself. Click this line to reveal a
-drop-down menu of additional locations to choose from.
-
-Once ready, click :guilabel:`Confirm` to confirm the changes made to the product line.
-
-Then, from the overview page with all receipts to process within that transfer (**WH/IN/000XX**),
-click the :guilabel:`+#` button on the product line for the products being received, and click
-:guilabel:`Validate`. The receipt has now been processed, and the :guilabel:`Barcode app` can be
-closed out.
-
-.. image:: receipts_deliveries/receipts-deliveries-validate-transfer.png
-   :align: center
-   :alt: Overview of receipts in transfer to validate.
-
-Scan barcodes for delivery orders
-=================================
-
-To process warehouse deliveries for outgoing products, there first needs to be a sales order (SO)
-created, and a delivery operation to process.
-
-To create a :abbr:`SO (sales order)`, navigate to the :menuselection:`Sales app --> Create` to
-create a new quotation.
-
-From the blank quotation form, click the drop-down menu next to the :guilabel:`Customer` field to
-add a customer. Then, on the :guilabel:`Product` line under the :guilabel:`Order Lines` tab, click
-:guilabel:`Add a product`, and select the desired product(s) to add to the quotation.
-
-Once ready, click :guilabel:`Save` at the top of the form, and click :guilabel:`Confirm Order` to
-confirm the quotation to a :abbr:`SO (sales order)`.
-
-.. image:: receipts_deliveries/receipts-deliveries-sales-order.png
-   :align: center
-   :alt: Completed sales order for barcode product.
-
-To process and scan barcodes for warehouse deliveries, navigate to the :menuselection:`Barcode app`.
-
-Once inside the :guilabel:`Barcode app`, a :guilabel:`Barcode Scanning` screen displaying different
-options is presented. To process deliveries, click on the :guilabel:`Operations` button at the
-bottom of the screen. This navigates to an :guilabel:`Operations` overview page.
-
-From this page, locate the :guilabel:`Delivery Orders` card, and click the :guilabel:`# To Process`
-button to view all outstanding deliveries. Then, select the desired delivery order to process. This
-navigates to the barcode transfer screen.
-
-.. image:: receipts_deliveries/receipts-deliveries-operations-page.png
-   :align: center
-   :alt: Operations overview page in Barcode app dashboard.
-
-From this screen, an overview of all deliveries to process within that transfer (**WH/OUT/000XX**)
-is shown. At the bottom of the screen, there are options to :guilabel:`Add Product` or
-:guilabel:`Validate`, depending on if products need to be added to the operation, or if the whole
-operation should be validated at once.
-
-To process and scan each product individually, choose a specific product line. The :guilabel:`+1`
-button can be clicked to indicate delivery of that product, or the :guilabel:`pencil icon` can be
-clicked to open a new screen to edit that product line.
-
-From this screen, the product that's being delivered is listed. Under the product name, the
-:guilabel:`Quantity` line can be edited. Either change the `0` in the line to the desired quantity,
-or click the :guilabel:`/# Units` button (in this case, :guilabel:`/10 Units`) to automatically fill
-the quantity ordered from the :abbr:`SO (sales order)`.
-
-Additionally, the :guilabel:`+1` and :guilabel:`-1` buttons can be clicked to add or subtract
-quantity of the product, and the :guilabel:`number keys` can be used to add quantity, as well.
-
-Below the :guilabel:`number keys` is the :guilabel:`location` line, which reads `WH/Stock` by
-default, unless another location is listed on the product itself.
-
-This is the location that the product is being pulled from for delivery. Click this line to reveal a
-drop-down menu of additional locations to choose from (if this product is stored in multiple
-locations in the warehouse).
-
-.. tip::
-   For warehouses that have multiple different storage locations, putaway rules, and removal
-   strategies, additional steps can be added for various operation types, while using the *Barcode*
-   app.
-
-Once ready, click :guilabel:`Confirm` to confirm the changes made to the product line.
-
-Then, from the overview page with all receipts to process within that transfer (**WH/OUT/000XX**),
-click the :guilabel:`+#` button on the product line for the products being received, and click
-:guilabel:`Validate`. The delivery has now been processed, and the *Barcode* app can be closed out.
-
-.. image:: receipts_deliveries/receipts-deliveries-validate-delivery.png
-   :align: center
-   :alt: Overview of deliveries in transfer to validate.
+.. important::
+   The operation type setting :guilabel:`Show Next Picking Button` is meant to add a
+   :guilabel:`Következő` ("Next") button here to jump straight to the next ready transfer, but the
+   button does not currently work in this version of the module.

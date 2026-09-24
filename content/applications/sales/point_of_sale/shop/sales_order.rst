@@ -10,26 +10,31 @@ Select a sales order
 ====================
 
 From the **Point of Sale** application, open a new session. Then, click on
-:guilabel:`Quotations/Orders` to get the complete list of quotations and sales orders created on the
+:guilabel:`Quotation/Order` to get the complete list of quotations and sales orders created on the
 sales application.
 
-.. image:: sales_order/pos-interface.png
-   :align: center
-   :alt: Quotations and sales order button on the Point of Sale interface
+.. screenshot:: pos-sales-order-button
+   :menu: (POS interface) ‣ Register screen
+   :shows: The POS register screen with the "Quotation/Order" button in the top bar.
+   :highlight: The "Quotation/Order" button (red frame).
+   :module: point_of_sale, pos_sale
+   :notes: English UI, light theme, 1440px width, centered, crop to the top bar.
 
 .. note::
    To ease finding the right sales order, you can filter that list on the **customer** or on the
    **order reference**. You can also set the customer before clicking on
-   :guilabel:`Quotations/Orders` to reduce the list to one particular customer.
+   :guilabel:`Quotation/Order` to reduce the list to one particular customer.
 
 Apply a down payment or settle the order
 ========================================
 
 From the list of sales order, select one to make a payment.
 
-.. image:: sales_order/list-of-so.png
-   :align: center
-   :alt: list view of sales orders and quotations
+.. screenshot:: pos-sales-order-list
+   :menu: (POS interface) ‣ Quotation/Order
+   :shows: The list of quotations and sales orders inside the POS, with the customer, date and total of each order.
+   :module: point_of_sale, pos_sale
+   :notes: English UI, light theme, 1440px width, centered.
 
 You can either:
 

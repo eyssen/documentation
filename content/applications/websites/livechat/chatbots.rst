@@ -11,8 +11,13 @@ Chatbots can be customized to fill various roles, from customer support, to crea
 collecting contact information. The goal of each chatbot can vary based on several criteria,
 including the webpage where it is located, and the information it captures.
 
-.. image:: chatbots/chatbot-visitor-view.png
-   :alt: View of the chat window with a helpdesk ticket created in Odoo Live Chat.
+.. screenshot:: livechat-chatbots-chatbot-visitor-view
+   :menu: (website)
+   :shows: The live chat window on the website from a visitor's side, with the chatbot asking its first scripted question and the visitor's answer below it.
+   :highlight: The chat window (red frame).
+   :data: Demo website 'My Website' with the live chat widget enabled; channel 'YourCompany'.
+   :module: im_livechat
+   :notes: English UI, light theme, 1440px width.
 
 Build a chatbot
 ===============
@@ -33,8 +38,13 @@ Chat app --> Configuration --> Chatbots`.
 
    *Welcome Bot* can be deleted or archived, if necessary.
 
-   .. image:: chatbots/chatbot-welcome-bot.png
-      :alt: View of the Welcome Bot script in Odoo Live Chat.
+   .. screenshot:: livechat-chatbots-chatbot-welcome-bot
+      :menu: Live Chat ‣ Configuration ‣ Chatbots ‣ Welcome Bot
+      :shows: The Welcome Bot chatbot script with its steps listed in the Script tab (Message, Question, Email, Forward to Operator) and their step types.
+      :highlight: The Script tab (red frame).
+      :data: The default Welcome Bot script.
+      :module: im_livechat
+      :notes: English UI, light theme, 1440px width.
 
 To create a new chatbot, navigate to the :guilabel:`Chatbot` page (:menuselection:`Live Chat app -->
 Configuration --> Chatbots`) and click :guilabel:`New` to open a blank chatbot details page.
@@ -103,8 +113,13 @@ The only accepted inputs for this step type are email addresses that are in a va
 visitor attempts to enter anything other than a valid email address, the chatbot responds with a
 message stating it does not recognize the information submitted.
 
-.. image:: chatbots/chatbot-invalid-email.png
-   :alt: View of a chatbot responding to an invalid email.
+.. screenshot:: livechat-chatbots-chatbot-invalid-email
+   :menu: (website)
+   :shows: The live chat window where the visitor entered an invalid email address and the chatbot asks again with its validation message.
+   :highlight: The chatbot's validation message (red frame).
+   :data: Demo website 'My Website' with the live chat widget enabled; channel 'YourCompany'.
+   :module: im_livechat
+   :notes: English UI, light theme, 1440px width.
 
 Phone
 ~~~~~
@@ -131,8 +146,13 @@ qualify conversations before they reach live operators.
    available operators (e.g. `Uh-oh, it looks like none of our operators are available`) and
    continue the conversation (e.g. `Would you like to leave your email address?`).
 
-   .. image:: chatbots/chatbot-no-operator.png
-      :alt: View of a chatbot follow up messages when no live chat operator is available.
+   .. screenshot:: livechat-chatbots-chatbot-no-operator
+      :menu: (website)
+      :shows: The live chat window with the chatbot's follow-up messages after a Forward to Operator step when no operator is available.
+      :highlight: The follow-up messages (red frame).
+      :data: Demo website 'My Website' with the live chat widget enabled; channel 'YourCompany'.
+      :module: im_livechat
+      :notes: English UI, light theme, 1440px width.
 
 Free Input/Multi-Line
 ~~~~~~~~~~~~~~~~~~~~~
@@ -151,16 +171,6 @@ Team` drop-down field that appears to assign the created lead to a specific team
 
 .. note::
    This step is only available if the **CRM** application is installed on the database.
-
-Create Ticket
-~~~~~~~~~~~~~
-
-This step creates a ticket in the **Helpdesk** application (Enterprise). Select an option from the
-:guilabel:`Helpdesk Team` drop-down field that appears to assign the created ticket to a specific
-team.
-
-.. note::
-   This step is only available if the **Helpdesk** application is installed on the database.
 
 .. _livechat/chatbots/only-if:
 
@@ -200,8 +210,13 @@ responses, those responses **must** be added to this field.
    been selected in the :guilabel:`Only If` field. As such, this step is only shown in conversations
    where that response has been selected.
 
-   .. image:: chatbots/chatbot-only-if.png
-      :alt: View of the new message form emphasizing the Only If field.
+   .. screenshot:: livechat-chatbots-chatbot-only-if
+      :menu: Live Chat ‣ Configuration ‣ Chatbots ‣ (chatbot)
+      :shows: The Create Script Steps form of a chatbot step with the Only If field filled in with a previous answer.
+      :highlight: The Only If field (red frame).
+      :data: Step shown only after the answer 'Pricing'.
+      :module: im_livechat
+      :notes: English UI, light theme, 1440px width.
 
 Script testing
 ==============
@@ -216,11 +231,13 @@ and to understand what the visitor sees when they interact with the chatbot.
    they must restart the conversation by refreshing the chat window, or their browser. They may also
    click on the :icon:`fa-refresh` :guilabel:`(refresh)` icon at the top of the message window.
 
-   .. figure:: chatbots/refresh-button.png
-      :alt: The refresh button at the top of the message window.
-
-      The :icon:`fa-refresh` (refresh) icon only appears when the chatbot script has reached a
-      dead-end.
+   .. screenshot:: livechat-chatbots-refresh-button
+      :menu: (website)
+      :shows: The live chat window at the end of a chatbot script with the refresh icon at the top of the message window.
+      :highlight: The refresh icon (red frame).
+      :data: Demo website 'My Website' with the live chat widget enabled; channel 'YourCompany'.
+      :module: im_livechat
+      :notes: English UI, light theme, 1440px width.
 
 To test the performance of a chatbot, first click on the :guilabel:`Test` button at the top-left of
 the chatbot script page. Then, upon being redirected to the testing screen, answer the chatbot
@@ -254,8 +271,13 @@ On the :guilabel:`Create Rules` pop-up window, choose the appropriate chatbot in
 If the chatbot should only be active if there are no live chat operators available, check the box
 labeled :guilabel:`Enabled only if no operator`.
 
-.. image:: chatbots/chatbot-add-to-channel.png
-   :alt: View of the channel rules emphasizing the chatbot field.
+.. screenshot:: livechat-chatbots-chatbot-add-to-channel
+   :menu: Live Chat ‣ Configuration ‣ Live Chat Channels ‣ (channel) ‣ Channel Rules tab
+   :shows: A channel rule line with the Chatbot field filled in, next to the URL Regex, Country and Live Chat Button fields.
+   :highlight: The Chatbot field (red frame).
+   :data: Rule for the URL `/contactus` with the Welcome Bot chatbot.
+   :module: im_livechat
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    :doc:`Live chat channel rules </applications/websites/livechat>`

@@ -41,10 +41,15 @@ Lots` or :guilabel:`By Unique Serial Number` from the resulting drop-down menu.
 Doing so makes the :guilabel:`Valuation by Lot/Serial number` checkbox appear below it. Tick that
 checkbox, and the configuration to track valuation by lot or serial numbers is complete.
 
-.. figure:: valuation_by_lots/product-form.png
-   :alt: Product form showing the Valuation by Lot or Serial Number feature.
-
-   Product form showing the Valuation by Lot or Serial Number feature
+.. screenshot:: inventory-valuation-by-lots-product-form
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ General Information tab
+   :shows: A product form with "Track Inventory" ticked and set to "By Lots", and the "Valuation by
+      Lot/Serial number" checkbox that appears below it also ticked.
+   :highlight: The "Valuation by Lot/Serial number" checkbox (red frame).
+   :data: A lot-tracked product in a category whose costing method is FIFO or AVCO.
+   :module: stock_account
+   :notes: English UI, light theme, 1440px width, crop to the fields. Caption to convey: the product form
+      showing the Valuation by Lot or Serial Number feature.
 
 Valuation layers
 ================
@@ -97,10 +102,15 @@ Consider how purchasing products affect the inventory valuation, in the table be
      - :math:`\frac{10+20}{2}`
      - $15
 
-.. figure:: valuation_by_lots/lip-gloss.png
-   :alt: Show Cost on the product form.
-
-   As a result, the product form displays an average cost of $15 in the **Cost** field.
+.. screenshot:: inventory-valuation-by-lots-average-cost
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ General Information tab
+   :shows: The "Cost" field of a product form showing the average cost 15.00 after two units were received
+      at 10.00 and 20.00 in two different lots.
+   :highlight: The "Cost" field (red frame).
+   :data: A lot-valuated product with LOT 1 at 10.00 and LOT 2 at 20.00.
+   :module: stock_account
+   :notes: English UI, light theme, 1440px width, crop to the field. Caption to convey: the product form
+      displays an average cost of 15.00 in the Cost field.
 
 .. _inventory/product_management/valuation-cost-new:
 
@@ -125,8 +135,14 @@ To view the valuation layer, go to :menuselection:`Inventory app --> Reporting -
    Continuing the example in the table above, when the product cost is `$15`, the valuation for a
    newly-created `LOT3` is also be `$15`.
 
-   .. image:: valuation_by_lots/create-new.png
-      :alt: Show inventory adjustment valuation.
+   .. screenshot:: inventory-valuation-by-lots-new-lot
+      :menu: Inventory ‣ Reporting ‣ Valuation
+      :shows: The Stock Valuation report line of an inventory adjustment that created a new lot, whose total
+         value per unit equals the average cost on the product form.
+      :highlight: The "Total Value" of the adjustment line (red frame).
+      :data: New lot "LOT3" valued at 15.00, the product cost at that moment.
+      :module: stock_account
+      :notes: English UI, light theme, 1440px width, crop to the valuation lines.
 
 .. _inventory/product_management/valuation-cost-existing:
 
@@ -142,10 +158,15 @@ valuation layer for that specific lot/serial number.
    So, when the quantity is updated from `1.00` to `2.00`, the additional quantity is also valued at
    `$10`, reflecting the latest valuation layer for `LOT 1`.
 
-   .. figure:: valuation_by_lots/existing.png
-      :alt: Show valuation of LOT 1 getting updated.
-
-      The inventory adjustment (top line) is valued the same as LOT 1 (bottom line).
+   .. screenshot:: inventory-valuation-by-lots-existing-lot
+      :menu: Inventory ‣ Reporting ‣ Valuation
+      :shows: Two Stock Valuation lines: the inventory adjustment that raised the quantity of an existing
+         lot, valued the same as the earlier layer of that lot.
+      :highlight: The two lines and their identical unit value (red frame).
+      :data: LOT 1: an original receipt of 1 unit at 10.00 and an adjustment of 1 unit, also at 10.00.
+      :module: stock_account
+      :notes: English UI, light theme, 1440px width, crop to the two lines. Caption to convey: the inventory
+         adjustment (top line) is valued the same as LOT 1 (bottom line).
 
 .. _inventory/product_management/view-valuation:
 
@@ -162,10 +183,15 @@ Both the :guilabel:`Cost` and :guilabel:`Average Cost` fields show a unit's aver
    Ensure the costing method is set to *First In First Out (FIFO)* or *Average Cost (AVCO)* to
    display the cost on this page.
 
-.. figure:: valuation_by_lots/lot.png
-   :alt: Show cost of the lot/serial number.
-
-   Lot form, displaying **Cost** field. The **Valuation** smart button is in the top-right.
+.. screenshot:: inventory-valuation-by-lots-lot-form
+   :menu: Inventory ‣ Products ‣ Lots/Serial Numbers ‣ (a lot)
+   :shows: A lot form of a lot-valuated product showing the "Cost", "Average Cost" and "Total Value" fields,
+      with the "Valuation" smart button in the top-right button box.
+   :highlight: The "Cost" field and the "Valuation" smart button (red frames).
+   :data: Lot "LOT 1", cost 10.00, on-hand quantity 1.
+   :module: stock_account
+   :notes: English UI, light theme, 1440px width, full form. Caption to convey: the lot form displaying the
+      Cost field, with the Valuation smart button in the top-right.
 
 Valuation layers of a lot/serial number can be viewed through the :ref:`valuation report
 <inventory/product_management/valuation-report>`, or by clicking the lot/serial number's
@@ -191,8 +217,14 @@ On the resulting :guilabel:`Stock Valuation` report, click the search bar, and i
    This is useful for adjusting individual lot prices when a purchase order or bill includes
    multiple lots/serial numbers, as initial prices are identical upon reception.
 
-.. image:: valuation_by_lots/stock-valuation.png
-   :alt: Show valuation report, by lots.
+.. screenshot:: inventory-valuation-by-lots-report-grouped
+   :menu: Inventory ‣ Reporting ‣ Valuation ‣ Group By ‣ Lot/Serial number
+   :shows: The Stock Valuation report grouped by lot/serial number, with the groups collapsed and the plus
+      icon for manual revaluation visible at the right of a group row.
+   :highlight: The group rows and the plus icon (red frames).
+   :data: Three lots of one lot-valuated product.
+   :module: stock_account
+   :notes: English UI, light theme, 1440px width, show the search bar and the grouped list.
 
 Valuation smart button
 ----------------------
@@ -202,7 +234,12 @@ To access a filtered part of the *Stock Valuation* report, specific to a lot or 
 
 On the :guilabel:`Lot/Serial Numbers` page, click the :guilabel:`Valuation` smart button.
 
-.. figure:: valuation_by_lots/lot-stock-valuation.png
-   :alt: All stock moves relating to `LOT 1`.
-
-   All stock moves that affect the valuation of `LOT 1`.
+.. screenshot:: inventory-valuation-by-lots-smart-button
+   :menu: Inventory ‣ Products ‣ Lots/Serial Numbers ‣ (a lot) ‣ Valuation
+   :shows: The Stock Valuation report filtered on one lot, listing every stock move that affected the
+      valuation of that lot.
+   :highlight: None.
+   :data: LOT 1 with a receipt and an inventory adjustment layer.
+   :module: stock_account
+   :notes: English UI, light theme, 1440px width, full list view. Caption to convey: all stock moves that
+      affect the valuation of LOT 1.

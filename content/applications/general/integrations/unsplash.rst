@@ -4,10 +4,7 @@ Unsplash
 
 **Unsplash** is a recognized stock photography library integrated with Odoo.
 
-If your database is hosted on **Odoo Online**, you can access Unsplash pictures without
-configuration.
-
-If your database is hosted on **Odoo.sh or on-premise**, proceed as follows:
+To use Unsplash pictures, an Unsplash access key is required. Proceed as follows:
 
 #. To **generate an Unsplash access key**, create or sign in to an `Unsplash account
    <https://unsplash.com>`_.
@@ -25,6 +22,13 @@ If your database is hosted on **Odoo.sh or on-premise**, proceed as follows:
 #. In Odoo, go to :menuselection:`General Settings` and enable the :guilabel:`Unsplash Image
    Library` feature. Then, enter the Unsplash :guilabel:`Access Key` and :guilabel:`Application ID`.
 
+.. screenshot:: general-unsplash-setting
+   :menu: Settings ‣ General Settings ‣ Integrations
+   :shows: The "Unsplash Image Library" setting enabled with the Access Key and Application ID fields.
+   :highlight: The two key fields.
+   :module: web_unsplash
+   :notes: English UI, crop to the setting; blur the keys.
+
 .. warning::
-   As a non-Odoo Online user, you are limited to a test key with a maximum of 50 Unsplash requests
-   per hour.
+   New Unsplash applications are in *demo* mode, limited to 50 Unsplash requests per hour, until
+   they are approved for production by Unsplash.

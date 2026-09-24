@@ -53,9 +53,6 @@ Fields
 
 In a model, we will centralize fields (field names we need to target in our code).
 
-.. seealso::
-   :doc:`/applications/studio/fields`
-
 .. _website_themes/setup/databases/fields/classic :
 
 Classic fields

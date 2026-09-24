@@ -60,9 +60,6 @@ The side panel provides advanced filtering tools to organize your product catego
 To further :ref:`categorize <ecommerce/catalog/categories>` the shop page, you can activate
 various filters, such as the :ref:`attribute <ecommerce/catalog/attributes>` filter.
 
-You can also add a :guilabel:`Datepicker` option to display a date range calendar to check
-the availability of rental products over a specific period. The **Rental** app (Enterprise)
-must be installed to use this feature.
 
 It is also possible to toggle the :guilabel:`Collapsible sidebar` switch to make the side panel
 manually collapsible.
@@ -98,8 +95,13 @@ or on the :guilabel:`Top`, i.e., in the :ref:`top bar <ecommerce/catalog/top-bar
 If you select the :guilabel:`Left` category, the option :guilabel:`Collapsible Category Recursive`
 appears, allowing you to collapse the category in the side panel.
 
-.. image:: catalog/catalog-panel-categories.png
-   :alt: Categories options for your eCommerce website
+.. screenshot:: ecommerce-catalog-catalog-panel-categories
+   :menu: Website ‣ eCommerce ‣ Products ‣ (shop page) ‣ Edit
+   :shows: The website editor's side panel of the shop page with the category options (Categories, Collapse Categories, Filters).
+   :highlight: The category options (red frame).
+   :data: Three eCommerce categories.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    :doc:`../products`
@@ -117,8 +119,13 @@ variants are the different combinations of attributes. To configure attributes a
 .. seealso::
    :doc:`../../../sales/sales/products_prices/products/variants`
 
-.. image:: catalog/catalog-attributes.png
-   :alt: Attributes and variants of your product
+.. screenshot:: ecommerce-catalog-catalog-attributes
+   :menu: Website ‣ eCommerce ‣ Products ‣ (product) ‣ Attributes & Variants tab
+   :shows: A product form's Attributes & Variants tab with two attributes and their values, and the eCommerce filter visibility option.
+   :highlight: The attribute lines (red frame).
+   :data: Attributes 'Color' and 'Size'.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 To enable attribute filtering, go to your main shop page, then open the website editor, and set
 the :guilabel:`Attributes` field to :guilabel:`Left` (:ref:`side panel
@@ -200,16 +207,26 @@ can choose the size of the product image by clicking the grid, and you can also 
 :guilabel:`Ribbon`. This displays a banner across the product's image, such as :guilabel:`Sale`,
 :guilabel:`Sold out`, :guilabel:`Out of stock` or :guilabel:`New!`.
 
-.. image:: catalog/catalog-product-highlighting.png
-   :alt: Ribbon highlight
+.. screenshot:: ecommerce-catalog-catalog-product-highlighting
+   :menu: (website) ‣ Shop
+   :shows: The shop page with a ribbon displayed on a product card.
+   :highlight: The ribbon (red frame).
+   :data: Ribbon 'Sale' on one product.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 To create a new ribbon, click the green :icon:`fa-plus` (:guilabel:`Create`) icon next to the
 :guilabel:`Ribbon` field. Then add a :guilabel:`Ribbon name`, define its :guilabel:`Position`,
 and choose a :guilabel:`Background` and a :guilabel:`Text` label. To edit the ribbon, click the
 :icon:`fa-pencil-square-o` (:guilabel:`Edit`) icon next to the :guilabel:`Ribbon` label.
 
-.. image:: catalog/catalog-ribbons.png
-   :alt: Create a new ribbon.
+.. screenshot:: ecommerce-catalog-catalog-ribbons
+   :menu: Website ‣ eCommerce ‣ Product Ribbons ‣ New
+   :shows: A product ribbon form with the Name, Position, Text Color and Background Color fields.
+   :highlight: The Position and colour fields (red frame).
+   :data: Ribbon 'Sale' in red.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 The ribbon is now available for all the eCommerce products.
 
@@ -241,8 +258,13 @@ category. To do so, move the block to the far top or bottom section to display i
 shop page or to the area below the category's name at the top or beneath the product list to
 display it only when filtering by that specific category.
 
- .. image:: catalog/catalog-header-footer.png
-    :alt: Place building block in the header or footer.
+ .. screenshot:: ecommerce-catalog-catalog-header-footer
+    :menu: Website ‣ eCommerce ‣ Products ‣ (shop page) ‣ Edit
+    :shows: The shop page in the editor with a building block being dropped into the area above the product grid.
+    :highlight: The drop target above the product grid (red frame).
+    :data: Demo website 'My Website' with the eCommerce demo products.
+    :module: website_sale
+    :notes: English UI, light theme, 1440px width.
 
 .. tip::
    - Adding content to an eCommerce category page helps improve the :doc:`SEO
@@ -269,6 +291,36 @@ a product's image.
 - :icon:`fa-heart-o` (:guilabel:`Wishlist`): adds a button to :ref:`wishlist
   <ecommerce/products/wishlists>` the product.
 
+.. _ecommerce/catalog/smart-search:
+
+Smart search
+============
+
+The *Smart Search (Theme Prime)* module (`eyssen_website_search_tp`) replaces the standard shop
+search with a fuzzy search based on PostgreSQL trigram matching, so that visitors also find products
+when they make a typo, use a different word order, or type only part of a product name. Special
+characters in the search term (e.g., `BUS+`) are taken into account for the ranking, and the
+"did you mean" suggestion is only offered when the search itself returns nothing.
+
+Enable it in the theme's product search configuration, with the :guilabel:`Smart search` option;
+the :guilabel:`Search in description` option extends the search to the product descriptions.
+
+What visitors searched for is recorded in the theme's search report. The module adds the searched
+term itself to that report's search bar as the default search field and as a :guilabel:`Search Term`
+group-by, so the most frequent searches — and those returning no result — can be reviewed directly.
+
+.. screenshot:: ecommerce-catalog-smart-search-report
+   :menu: (Theme Prime) Search Report
+   :shows: The theme's search report grouped by Search Term, with the number of searches per term.
+   :highlight: The Search Term group-by in the search panel (red frame).
+   :data: About twenty recorded searches over two weeks.
+   :module: eyssen_website_search_tp
+   :notes: Requires the Theme Prime theme; check the report's exact menu path in the installed theme. English UI, light theme, 1440px width.
+
+.. note::
+   This module requires the **Theme Prime** theme and its search widget; it has no effect on other
+   themes. The trigram search needs the PostgreSQL `pg_trgm` extension to be available in the
+   database — ask your hosting provider or system administrator if the option has no effect.
 
 .. seealso::
    :doc:`Products <../products>`

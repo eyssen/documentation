@@ -52,9 +52,13 @@ Configure the following:
 
    Enter the text that should appear for each language, then click :guilabel:`Save`.
 
-  .. image:: lunch/translation.png
-     :alt: The translation text box, with the current language highlighted, and the Arabic
-           translation field highlighted.
+  .. screenshot:: hr-lunch-settings-translation
+     :menu: Lunch ‣ Configuration ‣ Settings
+     :shows: The Lunch settings page with the lunch overdraft, the reminder time and the translation field of the notification text open in the language selector.
+     :highlight: The translation field of the notification text (red frame).
+     :data: Demo company "YourCompany HU"; English and Hungarian installed.
+     :module: lunch
+     :notes: English UI, light theme, 1440px width.
 
 .. _lunch/locations:
 
@@ -74,8 +78,13 @@ address field.
 
 Repeat this for all locations that need to be added.
 
-.. image:: lunch/locations.png
-   :alt: A list view of the locations with the new button highlighted.
+.. screenshot:: hr-lunch-locations
+   :menu: Lunch ‣ Configuration ‣ Locations
+   :shows: The Locations list with the location names and addresses, and the New button above it.
+   :highlight: The New button (red frame).
+   :data: Locations "Marbella office" and "Warehouse".
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.
 
 Alerts
 ======
@@ -114,9 +123,13 @@ lunch alert form loads. Enter the following information on the form:
   if the time is either :guilabel:`AM` or :guilabel:`PM` using the drop-down menu to the right of
   the :guilabel:`Time` field.
 
-.. image:: lunch/alert.png
-   :alt: An alert form with all of the information filled out for a chat alert sent at 10:30 AM,
-         asking employees to submit orders by 11:30 AM.
+.. screenshot:: hr-lunch-alert-form
+   :menu: Lunch ‣ Configuration ‣ Alerts ‣ New
+   :shows: An alert form configured to send a chat message at 10:30 asking employees to place their orders by 11:30, with the recurring days and the locations selected.
+   :highlight: The Show Alert time and the days of the week (red frame).
+   :data: Alert "Order your lunch", weekdays, location "Marbella office".
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`lunch/vendors`

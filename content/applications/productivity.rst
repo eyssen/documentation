@@ -7,16 +7,16 @@ Productivity
 
 .. toctree::
 
-    .. productivity/documents
-    .. productivity/sign
-    productivity/spreadsheet
+    productivity/documents
+    productivity/sign
+    productivity/knowledge
     productivity/dashboards
-    .. productivity/knowledge
     productivity/calendar
-    .. productivity/appointments
+    productivity/appointments
     productivity/discuss
+    productivity/activities
     productivity/ai
-    .. productivity/data_cleaning
-    .. productivity/whatsapp
-    .. productivity/voip
+    productivity/data_cleaning
+    productivity/whatsapp
     productivity/to_do
+    productivity/utilities

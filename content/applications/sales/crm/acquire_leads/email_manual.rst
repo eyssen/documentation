@@ -25,9 +25,13 @@ message.
 To create or update a sales teams' email alias, navigate to :menuselection:`CRM app -->
 Configuration --> Sales Teams`. Click on a team from the list to open the team's details page.
 
-.. image:: email_manual/email-alias.png
-   :align: center
-   :alt: The sales team details page, focused on the email alias section.
+.. screenshot:: sales-crm-email-alias-team
+   :menu: CRM ‣ Configuration ‣ Sales Teams ‣ (a team)
+   :shows: A sales-team form with the Email Alias field and its "Accept Emails From" option filled in.
+   :highlight: The Email Alias field (red frame).
+   :data: Team "Europe", alias "sales".
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the alias group.
 
 In the :guilabel:`Email Alias` field, enter a name for the email alias, or edit the existing name.
 In the :guilabel:`Accept Emails From` field, use the drop-down menu to choose who is allowed to send
@@ -51,9 +55,13 @@ The email received by the alias is added to the *chatter* thread for the lead. T
 the message is added to the title field, and the :guilabel:`Email` field is updated with the
 contact's email address.
 
-.. image:: email_manual/chatter-message.png
-   :align: center
-   :alt: The chatter thread of a newly created lead in the CRM app.
+.. screenshot:: sales-crm-email-lead-chatter
+   :menu: CRM ‣ Leads ‣ Leads ‣ (a lead created from email)
+   :shows: The chatter of a lead created from an incoming email, showing the original message with its sender and body.
+   :highlight: The incoming message (red frame).
+   :data: Lead created from an email to the sales alias.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the chatter.
 
 .. note::
    If the *leads* feature is **not** enabled on the database, messages to the email alias are added
@@ -95,9 +103,13 @@ opportunity.
    In the example below, the opportunity is named `5 VP Chairs`. This identifies the product the
    customer is interested in, as well as the potential number of products.
 
-   .. image:: email_manual/opportunity-example.png
-      :align: center
-      :alt: An example of an opportunity in the CRM pipeline.
+   .. screenshot:: sales-crm-email-opportunity-form
+      :menu: CRM ‣ Sales ‣ My Pipeline ‣ (an opportunity)
+      :shows: An opportunity form with the Expected Revenue, Probability, Customer, Email and Phone fields and the pipeline status bar.
+      :highlight: No highlight; the opportunity form is the subject.
+      :data: Opportunity "Office furniture" for "Deco Addict".
+      :module: crm
+      :notes: English UI, light theme, 1440px width, full form.
 
 Enter the contact information for the opportunity in the :guilabel:`Email` and :guilabel:`Phone`
 fields.
@@ -123,6 +135,10 @@ Then, use the |st-o| :guilabel:`(star)` icons to assign a priority.
 
 Once all the necessary information has been entered, click :guilabel:`Add`.
 
-.. image:: email_manual/create-opportunities.png
-   :align: center
-   :alt: The CRM pipeline with a newly created opportunity.
+.. screenshot:: sales-crm-email-pipeline-kanban
+   :menu: CRM ‣ Sales ‣ My Pipeline
+   :shows: The pipeline Kanban with the newly created opportunity card in the first stage.
+   :highlight: The new opportunity card (red frame).
+   :data: Four stages, one new card in "New".
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the Kanban.

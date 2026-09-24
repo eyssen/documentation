@@ -27,8 +27,13 @@ field is populated *and* its country is different from your company's country, O
 automatically checks or unchecks the :guilabel:`Intra-Community Valid` checkbox depending on the
 validity of the VAT number.
 
-.. image:: vat_verification/intra-community-valid.png
-   :alt: Intra-community valid checkbox on the contact record
+.. screenshot:: accounting-taxes-vies-intra-community-valid
+   :menu: Contacts ‣ (open a company contact from another EU country)
+   :shows: Contact form with the "Tax ID" field filled in and the "Intra-Community Valid" checkbox checked next to it.
+   :highlight: The "Intra-Community Valid" checkbox (red frame).
+   :data: Demo company contact from Belgium with a valid VAT number; "Verify VAT Numbers" enabled.
+   :module: base_vat
+   :notes: English UI, light theme, 1440px width, crop to the upper part of the form.
 
 .. important::
    It is possible to manually override the :guilabel:`Intra-Community Valid` field on a contact in

@@ -24,8 +24,15 @@ Each physical cash desk is a separate cash journal, one per currency (for exampl
 On a cash journal, the :guilabel:`Journal Entries` tab shows an extra **Cash Book Sequences** group
 where the four numbering sequences and the auto-statement option are assigned.
 
-.. image:: cash-journal-config.png
-   :alt: Cash Book Sequences group on the cash journal form
+.. screenshot:: accounting-cash-register-journal-config
+   :menu: Accounting ‣ Configuration ‣ Journals ‣ (a cash journal) ‣ Journal Entries
+   :shows: The "Cash Book Sequences" group on the cash journal form with the Journal Sequence,
+      Statement Sequence, Cash-in Sequence and Cash-out Sequence fields and the automatic statement
+      option.
+   :highlight: The "Cash Book Sequences" group (red frame).
+   :data: Cash journal "Cash (HUF)" with the NAPLO/, STAT/, BEF/ and KIF/ sequences assigned.
+   :module: eyssen_cashregister
+   :notes: English UI, light theme, crop to the group.
 
 Numbering sequences
 ===================

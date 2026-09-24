@@ -13,28 +13,32 @@ the payment is made in cash.
 Configuration
 =============
 
-Go to :menuselection:`Accounting --> Configuration --> Settings`
-and enable *Cash Rounding*, then click on *Save*.
+Go to :menuselection:`Accounting --> Configuration --> Settings`, enable :guilabel:`Cash Rounding`
+in the :guilabel:`Customer Invoices` section, then click :guilabel:`Save`.
 
-.. image:: cash_rounding/cash_rounding01.png
-    :align: center
+.. screenshot:: accounting-cash-rounding-setting
+   :menu: Accounting ‣ Configuration ‣ Settings
+   :shows: "Customer Invoices" section with the "Cash Rounding" setting enabled and its "Cash Roundings" link button.
+   :highlight: The setting block (red frame).
+   :data: Demo company "YourCompany HU".
+   :module: account
+   :notes: English UI, light theme, 1440px width. Crop to the setting.
 
-Go to :menuselection:`Accounting --> Configuration --> Cash Roundings`,
-and click on *Create*.
+Go to :menuselection:`Accounting --> Configuration --> Management --> Cash Roundings`, and click
+:guilabel:`New`.
 
-Define here your *Rounding Precision*, *Rounding Strategy*, and
-*Rounding Method*.
+Define here your :guilabel:`Rounding Precision`, :guilabel:`Rounding Strategy`, and
+:guilabel:`Rounding Method` (:guilabel:`Up`, :guilabel:`Down`, or :guilabel:`Nearest`).
 
 Odoo supports two **rounding strategies**:
 
-1. **Add a rounding line**: a *rounding* line is added on the invoice.
-   You have to define which account records the cash roundings.
+1. :guilabel:`Add a rounding line`: a *rounding* line is added on the invoice. You have to define
+   which accounts record the cash rounding profits and losses.
 
-2. **Modify tax amount**: the rounding is applied in the taxes section.
+2. :guilabel:`Modify tax amount`: the rounding is applied in the taxes section.
 
 Apply roundings
 ===============
 
-When editing a draft invoice, open the *Other Info* tab, go to the
-*Accounting Information* section, and select the appropriate *Cash
-Rounding Method*.
+When editing a draft invoice, open the :guilabel:`Other Info` tab and select the appropriate
+:guilabel:`Cash Rounding Method`.

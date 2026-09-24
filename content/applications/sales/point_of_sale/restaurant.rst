@@ -24,8 +24,6 @@ Three main buttons in the POS register allow for navigating between the :ref:`Fl
   :ref:`Floor plan <pos/restaurant/floors>` view.
 
 .. note::
-   - When :guilabel:`Table Booking` is enabled in the :ref:`POS settings <configuration/settings>`,
-     a :guilabel:`Booking` button appears on the main interface for viewing and managing bookings.
    - Entering a number through the :guilabel:`Table` button that does not match an existing table
      number creates a direct sales order.
 
@@ -44,9 +42,12 @@ The :guilabel:`Floor plan` view is the first screen displayed when :ref:`accessi
 table status in real time (occupancy, reservations, and kitchen orders).
 
 .. example::
-   .. image:: restaurant/plan-understand.png
-      :alt: example of a floor plan view with visual keys to understand it.
-      :scale: 90 %
+   .. screenshot:: pos-restaurant-floor-plan
+      :menu: (POS interface) ‣ Floor plan
+      :shows: A restaurant floor plan in the POS with tables of different shapes and colors: a free table, an occupied table with an order in progress, and a table whose order is ready to be paid.
+      :data: Floor "Main Room" with tables 101 to 105.
+      :module: point_of_sale, pos_restaurant
+      :notes: English UI, light theme, 1440px width; scale down to about 90 % of the page width.
 
    - Table 101: The table is currently available but booked for 15:00.
    - Table 102: The table is booked, and an order is sent to the kitchen.
@@ -86,8 +87,6 @@ plan`:
 #. Save.
 
 .. note::
-   - Enable the :guilabel:`Table Booking` setting to assign an :guilabel:`Appointment resource` and
-     make a table bookable.
    - Click the :icon:`fa-trash-o` (:guilabel:`trash`) icon to delete a table.
 
 .. tip::
@@ -179,14 +178,9 @@ follow these steps:
 #. Scroll down to the :guilabel:`Preparation` section and enable the :guilabel:`Preparation
    Printers` setting.
 #. Type the printer's name in the :guilabel:`Printers` field and click :guilabel:`Create and edit`.
-#. On the printer setup form, select the :guilabel:`Printer Type`:
-
-   - If the printer is connected to an **IoT system** (Enterprise), select
-     :guilabel:`Use a printer connected to the IoT`, and choose the relevant device. This process
-     requires the IoT app and an IoT system.
-   - If using an :doc:`Epson printer that does not require an IoT system connection
-     <configuration/epos_printers>`, select :guilabel:`Use an Epson printer` and enter the
-     :guilabel:`Epson Printer IP Address`.
+#. On the printer setup form, set the :guilabel:`Printer Type` to :guilabel:`Use an Epson printer`
+   and enter the :guilabel:`Epson Printer IP Address`. See :doc:`ePOS printers
+   <configuration/epos_printers>` for the list of compatible models.
 #. Define the product categories to be printed by clicking :guilabel:`Add a line` in the
    :guilabel:`Printed Product Categories` field and selecting the preferred category from the
    popover.
@@ -207,10 +201,6 @@ The printer is then connected to the point of sale and can print kitchen orders 
    down to the :guilabel:`Preparation` section, and click :icon:`oi-arrow-right`
    :guilabel:`Printers`. Alternatively, go to :menuselection:`Point of Sale --> Orders -->
    Preparations Printers`.
-
-.. seealso::
-   - :doc:`Connect an IoT system to a POS <configuration/pos_iot>`
-   - :doc:`/applications/sales/point_of_sale/preparation`
 
 .. _pos/restaurant/bills:
 

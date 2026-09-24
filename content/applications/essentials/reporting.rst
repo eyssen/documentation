@@ -24,8 +24,12 @@ identify patterns and trends. The view is often found under the :guilabel:`Repor
 but can be found elsewhere. Click the **graph view button** located at the top right to access
 it.
 
-.. image:: reporting/graph-button.png
-   :alt: Selecting the graph view
+.. screenshot:: essentials-reporting-graph-button
+   :menu: Sales ‣ Reporting ‣ Sales
+   :shows: View switcher at the top right of the control panel with the Graph view button.
+   :highlight: The Graph view button.
+   :module: sale
+   :notes: English UI, crop tightly to the view switcher.
 
 .. _reporting/views/pivot:
 
@@ -36,8 +40,12 @@ The :ref:`pivot view <reporting/using-pivot>` is used to aggregate your records'
 down for analysis. The view is often found under the :guilabel:`Reporting` menu of apps but can be
 found elsewhere. Click the **pivot view button** located at the top right to access it.
 
-.. image:: reporting/pivot-button.png
-   :alt: Selecting the pivot view
+.. screenshot:: essentials-reporting-pivot-button
+   :menu: Sales ‣ Reporting ‣ Sales
+   :shows: View switcher at the top right of the control panel with the Pivot view button.
+   :highlight: The Pivot view button.
+   :module: sale
+   :notes: English UI, crop tightly to the view switcher.
 
 .. _reporting/choosing-measures:
 
@@ -50,10 +58,8 @@ edit it, click :guilabel:`Measures` and choose one or, only for pivots, multiple
 
 .. note::
    When you select a measure, Odoo aggregates the values recorded on that field for the filtered
-   records. Only numerical fields (:ref:`integer <studio/fields/simple-fields-integer>`,
-   :ref:`decimal <studio/fields/simple-fields-decimal>`, :ref:`monetary
-   <studio/fields/simple-fields-monetary>`) can be measured. In addition, the :guilabel:`Count`
-   option is used to count the total number of filtered records.
+   records. Only numerical fields (integer, decimal, monetary) can be measured. In addition, the
+   :guilabel:`Count` option is used to count the total number of filtered records.
 
 After choosing what you want to measure, you can define how the data should be :ref:`grouped
 <search/group>` depending on the dimension you want to analyze. By default, the data is often
@@ -62,8 +68,12 @@ grouped by *Date > Month*, which is used to analyze the evolution of a measure o
 .. tip::
    When you filter a single time period, the option to compare it against another one appears.
 
-   .. image:: reporting/comparison.png
-      :alt: Using the comparison option
+   .. screenshot:: essentials-reporting-comparison
+      :menu: Sales ‣ Reporting ‣ Sales
+      :shows: Search panel dropdown with a single period selected under Filters and the "Comparison" section offering "Previous Period" and "Previous Year".
+      :highlight: The Comparison section.
+      :module: sale
+      :notes: English UI, crop to the relevant area.
 
 .. example::
 
@@ -75,16 +85,25 @@ grouped by *Date > Month*, which is used to analyze the evolution of a measure o
          to the Sales Analysis report. By default, the :guilabel:`Untaxed Amount` measure is
          selected.
 
-         .. image:: reporting/measures.png
-            :alt: Selecting different measures on the Sales Analysis report
+         .. screenshot:: essentials-reporting-measures
+            :menu: Sales ‣ Reporting ‣ Sales (Pivot view)
+            :shows: The Measures dropdown open with several measures ticked (e.g., Untaxed Amount, Qty Ordered) and Count at the bottom.
+            :highlight: The Measures dropdown.
+            :data: Demo sales orders.
+            :module: sale
+            :notes: English UI, crop to the relevant area.
 
       .. tab:: Group measures
 
          You could group the measures by :guilabel:`Product Category` at the level of rows on the
          previous Sales Analysis report example.
 
-         .. image:: reporting/single-group.png
-            :alt: Adding a group on the Sales Analysis report
+         .. screenshot:: essentials-reporting-single-group
+            :menu: Sales ‣ Reporting ‣ Sales (Pivot view)
+            :shows: Pivot with rows grouped by Product Category and the measures as columns.
+            :data: Demo sales orders.
+            :module: sale
+            :notes: English UI, crop to the relevant area.
 
 .. _reporting/using-pivot:
 
@@ -105,12 +124,20 @@ subgroups.
    :guilabel:`Salesperson` group at the level of columns and by the :guilabel:`Order Date > Month`
    group on the :guilabel:`All / Saleable / Office Furniture` product category.
 
-   .. image:: reporting/multiple-groups.png
-      :alt: Adding multiple groups on the Sales Analysis report
+   .. screenshot:: essentials-reporting-multiple-groups
+      :menu: Sales ‣ Reporting ‣ Sales (Pivot view)
+      :shows: Pivot with Salesperson groups as columns, product categories as rows, and the "All / Saleable / Office Furniture" row expanded by Order Date > Month.
+      :highlight: The expanded row and the column headers.
+      :data: Demo sales orders.
+      :module: sale
+      :notes: English UI, crop to the relevant area.
 
 .. tip::
    - Switch the rows and columns' groups by clicking the flip axis button (:guilabel:`⇄`).
    - Click on a measure's label to sort the values by ascending (⏶) or descending (⏷) order.
+   - Click the :guilabel:`Expand all` button to open all groups defined in the search. Click an
+     expanded header, e.g., :guilabel:`Total`, to collapse it.
+   - Click a cell to open the list of the records it aggregates.
    - Download a `.xlsx` version of the pivot by clicking the download button (:guilabel:`⭳`).
 
 .. _reporting/using-graph:
@@ -132,18 +159,33 @@ when they form a meaningful whole.
 
    .. tab:: Bar chart
 
-      .. image:: reporting/bar.png
-         :alt: Viewing the Sales Analysis report as a bar chart
+      .. screenshot:: essentials-reporting-graph-bar
+         :menu: Sales ‣ Reporting ‣ Sales (Graph view)
+         :shows: The Sales Analysis report displayed as a bar chart, with the chart type buttons in the toolbar.
+         :highlight: The bar chart button.
+         :data: Demo sales orders grouped by Order Date > Month.
+         :module: sale
+         :notes: English UI, crop to the relevant area.
 
    .. tab:: Line chart
 
-      .. image:: reporting/line.png
-         :alt: Viewing the Sales Analysis report as a line chart
+      .. screenshot:: essentials-reporting-graph-line
+         :menu: Sales ‣ Reporting ‣ Sales (Graph view)
+         :shows: The Sales Analysis report displayed as a line chart, with the chart type buttons in the toolbar.
+         :highlight: The line chart button.
+         :data: Demo sales orders grouped by Order Date > Month.
+         :module: sale
+         :notes: English UI, crop to the relevant area.
 
    .. tab:: Pie chart
 
-      .. image:: reporting/pie.png
-         :alt: Viewing the Sales Analysis report as a pie chart
+      .. screenshot:: essentials-reporting-graph-pie
+         :menu: Sales ‣ Reporting ‣ Sales (Graph view)
+         :shows: The Sales Analysis report displayed as a pie chart, with the chart type buttons in the toolbar.
+         :highlight: The pie chart button.
+         :data: Demo sales orders grouped by Order Date > Month.
+         :module: sale
+         :notes: English UI, crop to the relevant area.
 
 .. tip::
    For **bar** and **line** charts, you can use the stacked option when you have at least two
@@ -153,23 +195,43 @@ when they form a meaningful whole.
 
       .. tab:: Stacked bar chart
 
-         .. image:: reporting/stacked-bar.png
-            :alt: Stacked bar chart example
+         .. screenshot:: essentials-reporting-graph-stacked-bar
+            :menu: Sales ‣ Reporting ‣ Sales (Graph view)
+            :shows: The Sales Analysis report as a stacked bar chart grouped by month and salesperson (Stacked option enabled).
+            :highlight: The Stacked / Cumulative toggle in the toolbar.
+            :data: Demo sales orders.
+            :module: sale
+            :notes: English UI, crop to the relevant area.
 
       .. tab:: Regular bar chart
 
-         .. image:: reporting/non-stacked-bar.png
-            :alt: Non-stacked bar chart example
+         .. screenshot:: essentials-reporting-graph-non-stacked-bar
+            :menu: Sales ‣ Reporting ‣ Sales (Graph view)
+            :shows: The Sales Analysis report as a bar chart grouped by month and salesperson with the Stacked option disabled (bars side by side).
+            :highlight: The Stacked / Cumulative toggle in the toolbar.
+            :data: Demo sales orders.
+            :module: sale
+            :notes: English UI, crop to the relevant area.
 
       .. tab:: Stacked line chart
 
-         .. image:: reporting/stacked-line.png
-            :alt: Stacked line chart example
+         .. screenshot:: essentials-reporting-graph-stacked-line
+            :menu: Sales ‣ Reporting ‣ Sales (Graph view)
+            :shows: The Sales Analysis report as a stacked line chart grouped by month and salesperson (Stacked option enabled).
+            :highlight: The Stacked / Cumulative toggle in the toolbar.
+            :data: Demo sales orders.
+            :module: sale
+            :notes: English UI, crop to the relevant area.
 
       .. tab:: Regular line chart
 
-         .. image:: reporting/non-stacked-line.png
-            :alt: Non-stacked line chart example
+         .. screenshot:: essentials-reporting-graph-non-stacked-line
+            :menu: Sales ‣ Reporting ‣ Sales (Graph view)
+            :shows: The Sales Analysis report as a line chart grouped by month and salesperson with the Stacked option disabled.
+            :highlight: The Stacked / Cumulative toggle in the toolbar.
+            :data: Demo sales orders.
+            :module: sale
+            :notes: English UI, crop to the relevant area.
 
    For **line** charts, you can use the cumulative option to sum values, which is especially useful
    to show the change in growth over a time period.
@@ -178,10 +240,20 @@ when they form a meaningful whole.
 
       .. tab:: Cumulative line chart
 
-         .. image:: reporting/cumulative.png
-            :alt: Cumulative line chart example
+         .. screenshot:: essentials-reporting-graph-cumulative
+            :menu: Sales ‣ Reporting ‣ Sales (Graph view)
+            :shows: The Sales Analysis report as a line chart with the Cumulative option enabled.
+            :highlight: The Stacked / Cumulative toggle in the toolbar.
+            :data: Demo sales orders.
+            :module: sale
+            :notes: English UI, crop to the relevant area.
 
       .. tab:: Regular line chart
 
-         .. image:: reporting/non-cumulative.png
-            :alt: Regular line chart example
+         .. screenshot:: essentials-reporting-graph-non-cumulative
+            :menu: Sales ‣ Reporting ‣ Sales (Graph view)
+            :shows: The Sales Analysis report as a line chart with the Cumulative option disabled.
+            :highlight: The Stacked / Cumulative toggle in the toolbar.
+            :data: Demo sales orders.
+            :module: sale
+            :notes: English UI, crop to the relevant area.

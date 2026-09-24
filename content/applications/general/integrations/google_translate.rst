@@ -32,9 +32,11 @@ browse for the :guilabel:`Location`. Set the :guilabel:`Location` as the *Google
 organization*. If a personal Gmail account is being used, leave the :guilabel:`Location` as
 :guilabel:`No Organization`.
 
-.. image:: google_translate/new-project.png
-   :align: center
-   :alt: Project Name and Location for Google OAuth.
+.. screenshot:: general-google-translate-new-project
+   :menu: (Google Cloud console) ‣ New Project
+   :shows: The New Project form with Project name and Location.
+   :module: mail
+   :notes: Google website.
 
 Click on :guilabel:`Create` to finish this step.
 
@@ -43,7 +45,7 @@ API library
 
 Next, the *Cloud Translation API* needs to be installed on this newly-created project. To do that,
 click :menuselection:`Library` in the left menu. Then, search the term `Cloud Translation API`, and
-click into the result. This should be a *Google Enterprise API* labeled :guilabel:`Cloud Translation
+click into the result. This should be a Google API labeled :guilabel:`Cloud Translation
 API`.
 
 Click :guilabel:`Enable` to install the library on this project.
@@ -66,9 +68,12 @@ To begin this process, click :menuselection:`Credentials` in the left sidebar me
 Then, click :guilabel:`Create Credentials` in the top menu, and select :guilabel:`API key` from the
 drop-down menu.
 
-.. image:: google_translate/api-key.png
-   :align: center
-   :alt: Create an API key in the Google API console.
+.. screenshot:: general-google-translate-api-key
+   :menu: (Google Cloud console) ‣ Credentials ‣ Create credentials
+   :shows: The "Create credentials" dropdown with "API key", and the created API key dialog.
+   :highlight: The API key.
+   :module: mail
+   :notes: Google website; blur the key.
 
 Copy the :guilabel:`API key` for use in the next section.
 
@@ -104,9 +109,12 @@ section`. Enter the API key into the field labeled :guilabel:`Message Translatio
 :guilabel:`Save` the settings, and *Google Translate* can be used in any chatter throughout the
 database.
 
-.. image:: google_translate/odoo-config.png
-   :align: center
-   :alt: Odoo configuration of the API key from the *Google API Console*.
+.. screenshot:: general-google-translate-odoo-setting
+   :menu: Settings ‣ General Settings ‣ Discuss
+   :shows: The "Message Translation" setting with the API Key field filled.
+   :highlight: The API Key field.
+   :module: mail
+   :notes: English UI, crop to the setting; blur the key.
 
 Translate chatter
 =================
@@ -115,9 +123,13 @@ To translate a user's text from another language, click the :guilabel:`... (thre
 the right of the chatter. Then, select :guilabel:`Translate`. The content translates to the
 *language* set on the user's preferences.
 
-.. image:: google_translate/google-translate.png
-   :align: center
-   :alt: Google Translate present in an Odoo database's chatter.
+.. screenshot:: general-google-translate-chatter
+   :menu: CRM ‣ (an opportunity) ‣ chatter
+   :shows: A received message in a foreign language with its "Translate" action and the translated text displayed below it.
+   :highlight: The Translate action.
+   :data: Message in German on a demo opportunity; user language English.
+   :module: mail
+   :notes: English UI, crop to the message.
 
 .. seealso::
    :ref:`language/install`

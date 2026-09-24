@@ -8,9 +8,13 @@ usually the end of the current month.
 An *expected revenue report* compiles all active leads in a sales pipeline that have a set expected
 closing date, and compares how sales teams are performing in a given time frame.
 
-.. image:: expected_revenue_report/expected-revenue-closing.png
-   :align: center
-   :alt: Close up of the expected closing date on a lead in the CRM app.
+.. screenshot:: sales-crm-expected-revenue-fields
+   :menu: CRM ‣ Sales ‣ My Pipeline ‣ (an opportunity)
+   :shows: The Expected Revenue and Expected Closing fields of an opportunity form.
+   :highlight: The Expected Closing field (red frame).
+   :data: Opportunity with 15 000 expected revenue and a closing date next month.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the field group.
 
 By pulling a monthly expected revenue report, sales managers can see which team members are reaching
 their goals, and who may need additional assistance to close valuable deals.
@@ -107,10 +111,13 @@ find and select it as a parameter.
    Multiple teams can be added to the `Sales Team` rule, where each parameter is treated with an
    "or" (e.g. "any") operator in the search logic.
 
-.. image:: expected_revenue_report/custom-filters.png
-   :align: center
-   :alt: Add Custom Filters pop-up window with custom filters configured for expected revenue
-         report.
+.. screenshot:: sales-crm-expected-revenue-custom-filter
+   :menu: CRM ‣ Reporting ‣ Pipeline ‣ Filters ‣ Add Custom Filter
+   :shows: The "Add Custom Filter" pop-up with the rules of the expected-revenue report configured, including the sales-team rule.
+   :highlight: The rule list (red frame).
+   :data: Rules on Expected Closing, Expected Revenue and Sales Team.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 .. _expected_revenue_report/view-results:
 
@@ -122,9 +129,13 @@ At the top of the :guilabel:`Add Custom Filter` form, there is an option to matc
 of the following filters should be included. Before adding the filters, make sure :guilabel:`all` is
 selected in this field.
 
-.. image:: expected_revenue_report/match-all-filters.png
-   :align: center
-   :alt: Emphasis on the match all filters option on the Add Custom Filter pop-up window.
+.. screenshot:: sales-crm-expected-revenue-match-all
+   :menu: CRM ‣ Reporting ‣ Pipeline ‣ Filters ‣ Add Custom Filter
+   :shows: The "Match all of the following rules" selector at the top of the custom-filter pop-up.
+   :highlight: The match selector (red frame).
+   :data: "all" selected.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the selector.
 
 At the bottom of the :guilabel:`Add Custom Filter` form, click :guilabel:`Add`.
 
@@ -155,11 +166,13 @@ and pivot view provide more detail on specific deals.
       different graph view, click one of the icons at the top-left of the report. While both the
       line chart and bar chart are available in stacked view, the pie chart is not.
 
-      .. figure:: expected_revenue_report/graph-view-icons.png
-         :align: center
-         :alt: Close up view of the graph icons on the Pipeline analysis report in the CRM app.
-
-         Graph view icons in order: bar chart, line chart, pie chart, stacked.
+      .. screenshot:: sales-crm-expected-revenue-graph-icons
+         :menu: CRM ‣ Reporting ‣ Pipeline
+         :shows: The graph-view buttons of the Pipeline Analysis report: bar chart, line chart, pie chart, and the stacked option.
+         :highlight: No highlight; the button row is the subject.
+         :data: Demo report.
+         :module: crm
+         :notes: English UI, light theme, crop to the button row.
 
    .. tab:: List view
 
@@ -170,18 +183,24 @@ and pivot view provide more detail on specific deals.
       To switch to the list view, click the :guilabel:`≣ (list)` icon at the top-right of the
       report.
 
-      .. image:: expected_revenue_report/list-icon.png
-         :align: center
-         :alt: Close up of the list view icon in the CRM app.
+      .. screenshot:: sales-crm-expected-revenue-list-icon
+         :menu: CRM ‣ Reporting ‣ Pipeline
+         :shows: The list-view button in the view switcher of the report.
+         :highlight: The list-view button (red frame).
+         :data: Demo report.
+         :module: crm
+         :notes: English UI, light theme, crop to the view switcher.
 
       To add additional metrics to the report, click the *additional options menu* indicated by the
       :guilabel:`toggle` icon at the top-right of the list.
 
-      .. figure:: expected_revenue_report/toggle-icon.png
-         :align: center
-         :alt: Close up of the toggle icon in the CRM app.
-
-         Clicking the toggle icon in *list view* opens the *additional options menu*.
+      .. screenshot:: sales-crm-expected-revenue-toggle-icon
+         :menu: CRM ‣ Reporting ‣ Pipeline
+         :shows: The optional-columns toggle at the right end of the list header, which opens the additional-options menu.
+         :highlight: The toggle icon (red frame).
+         :data: Demo report in list view.
+         :module: crm
+         :notes: English UI, light theme, crop to the list header.
 
       Select any additional metrics from the drop-down menu to add them to the list view. Some
       options that may be useful are :guilabel:`Expected Closing` and :guilabel:`Probability`.
@@ -193,9 +212,13 @@ and pivot view provide more detail on specific deals.
 
       To switch to the pivot view, click the :guilabel:`Pivot` icon at the top-right of the report.
 
-      .. image:: expected_revenue_report/pivot-view-icon.png
-         :align: center
-         :alt: Close up of the pivot view icon in the CRM app.
+      .. screenshot:: sales-crm-expected-revenue-pivot-icon
+         :menu: CRM ‣ Reporting ‣ Pipeline
+         :shows: The pivot-view button in the view switcher of the report.
+         :highlight: The pivot-view button (red frame).
+         :data: Demo report.
+         :module: crm
+         :notes: English UI, light theme, crop to the view switcher.
 
       When the pivot view is selected for this report, the X-axis lists the stages in
       the pipeline, while the Y-axis defaults to group the results by their creation date. To switch
@@ -208,6 +231,5 @@ and pivot view provide more detail on specific deals.
       to :guilabel:`Total`, and then select one of the groups. To remove one, click the
       :guilabel:`➖ (minus sign)` and de-select the appropriate option.
 
-      Click :guilabel:`Insert in Spreadsheet` to add the pivot view into an editable spreadsheet
-      format within the *Dashboards* app. If the Odoo *Documents* app is installed, the report can
-      be inserted into a blank or existing spreadsheet, and exported.
+      To export the pivot table, click the :guilabel:`Download xlsx` :icon:`fa-download`
+      :guilabel:`(download)` icon at the top of the report.

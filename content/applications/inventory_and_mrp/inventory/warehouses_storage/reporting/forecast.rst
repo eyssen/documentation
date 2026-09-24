@@ -29,8 +29,14 @@ product form. Alternatively, the report can be accessed from a sales order (SO) 
 (PO) by clicking on the :icon:`fa-area-chart` :guilabel:`(Graph)` icon next to the product, then
 selecting :icon:`oi-arrow-right` :guilabel:`View Forecast`.
 
-.. image:: forecast/so-forecast.png
-   :alt: A sales order with the forecast report icon highlighted.
+.. screenshot:: inventory-forecast-open-from-so
+   :menu: Sales ‣ Orders ‣ Orders ‣ (a confirmed order)
+   :shows: A sales order line with the graph icon next to the product and the "View Forecast" entry it
+      opens.
+   :highlight: The graph icon and the "View Forecast" entry (red frame).
+   :data: A confirmed sales order for a storable product.
+   :module: sale_stock
+   :notes: English UI, light theme, 1440px width, crop to the order line.
 
 The forecasted report consists of a graph and a table. The graph visually represents stock movements
 over time. The following information is displayed:
@@ -40,8 +46,14 @@ over time. The following information is displayed:
 - :guilabel:`Outgoing`: quantities reserved for sales orders or other outgoing operations.
 - :guilabel:`Forecasted`: projected stock levels based on confirmed and planned operations.
 
-.. image:: forecast/forecast-chart.png
-   :alt: An example of the chart on a forecast report.
+.. screenshot:: inventory-forecast-chart
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Forecasted
+   :shows: The chart part of the forecasted report, with the On Hand, Incoming, Outgoing and Forecasted
+      series plotted over time.
+   :highlight: None.
+   :data: A storable product with stock on hand, one confirmed purchase order and one confirmed sales order.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the chart.
 
 The table provides detailed metrics regarding operations, including:
 
@@ -60,8 +72,15 @@ Reserve and unreserve products
 Users can reserve or unreserve products directly from the forecasted report, ensuring stock
 allocation aligns with operational needs.
 
-.. image:: forecast/forecast-table.png
-   :alt: The detailed section on a forecast report showing the replenishment and reserved stock.
+.. screenshot:: inventory-forecast-table
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Forecasted
+   :shows: The table part of the forecasted report with the Replenishment, Receipt, Units, Used by,
+      Delivery, Forecasted Inventory and "Forecasted with Pending" columns, and the reserve/unreserve
+      control on a line.
+   :highlight: The "Replenishment" column and the reserve control (red frames).
+   :data: One incoming receipt allocated to an outgoing delivery.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the table.
 
 .. seealso::
    :doc:`../../shipping_receiving/reservation_methods`
@@ -84,8 +103,14 @@ to be consumed for upcoming manufacturing orders.
 The manufacturing forecast identifies component shortages before they can impact manufacturing
 timelines, and helps to align manufacturing activities with sales demands.
 
-.. image:: forecast/manufacturing-forecast.png
-   :alt: An example of the manufacturing forecast report.
+.. screenshot:: inventory-forecast-manufacturing
+   :menu: Inventory ‣ Products ‣ Products ‣ (a manufactured product) ‣ Forecasted ‣ Manufacturing Forecast
+   :shows: The manufacturing forecast, showing the forecasted stock levels of the raw materials expected to
+      be consumed by upcoming manufacturing orders.
+   :highlight: A component whose forecast goes negative (red frame).
+   :data: A manufactured product with a two-component bill of materials and one planned manufacturing order.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, full report view.
 
 Update quantity
 ---------------
@@ -139,8 +164,14 @@ early warning, allowing business to take preventative action. This can include:
 - Adjusting procurement strategies to expedite purchase orders.
 - Manage customer expectations by proactively communicating the possibility for delays.
 
-.. image:: forecast/neg-quantity.png
-   :alt: An example of the forecast report with a negative quantity.
+.. screenshot:: inventory-forecast-negative-quantity
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Forecasted
+   :shows: A forecasted report whose forecasted quantity is negative, because the confirmed demand exceeds
+      the available and incoming stock.
+   :highlight: The negative forecasted figure (red frame).
+   :data: On hand 0, one confirmed sales order for 5 units, no incoming receipt yet.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the figure and the chart.
 
 Split orders
 ------------
@@ -151,8 +182,15 @@ fulfill the multiple sales orders. The current stock has been reserved for a shi
 expected with `WH/IN/00004`. Once received, they are the separated out to cover the remaining
 orders.
 
-.. image:: forecast/forecast-use-case.png
-   :alt: An example of the forecast report chart showing the split delivery for an order.
+.. screenshot:: inventory-forecast-split-orders
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Forecasted
+   :shows: A forecasted report where the on-hand stock is reserved for one delivery and the remainder is
+      split between two other sales orders, with the incoming receipt covering the rest.
+   :highlight: The split allocation lines (red frame).
+   :data: Product "Cabinet with Doors"; delivery WH/OUT/00011 reserved, receipt WH/IN/00004 incoming, two
+      further sales orders waiting.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the replenishment table.
 
 Late receipt
 ------------

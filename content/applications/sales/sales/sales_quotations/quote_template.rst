@@ -17,8 +17,13 @@ Under the heading, tick the :guilabel:`Quotation Templates` checkbox. Doing so r
 :guilabel:`Default Template` field, in which a default quotation template can be chosen from the
 drop-down menu.
 
-.. image:: quote_template/quotations-templates-setting.png
-   :alt: How to enable quotation templates on Odoo Sales.
+.. screenshot:: sales-quote-template-setting
+   :menu: Sales ‣ Configuration ‣ Settings
+   :shows: The Settings page scrolled to the "Quotations & Orders" section with the "Quotation Templates" checkbox enabled and the "Default Template" field below it.
+   :highlight: The "Quotation Templates" setting (red frame).
+   :data: Demo company.
+   :module: sale_management
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 Upon activating the :guilabel:`Quotation Template` feature, an internal :icon:`fa-arrow-right`
 :guilabel:`Quotation Templates` link appears beneath the :guilabel:`Default Template` field.
@@ -39,14 +44,24 @@ To create a quotation template, click the :guilabel:`Quotation Templates` link o
 :menuselection:`Sales app --> Configuration --> Quotation Templates`. Both options reveal the
 :guilabel:`Quotation Templates` page, where quotation templates can be created, viewed, and edited.
 
-.. image:: quote_template/quotation-templates-page.png
-   :alt: Quotation templates page in the Odoo Sales application.
+.. screenshot:: sales-quote-template-list
+   :menu: Sales ‣ Configuration ‣ Quotation Templates
+   :shows: The quotation-templates list with several templates and their validity in days.
+   :highlight: The New button (red frame).
+   :data: Three demo templates.
+   :module: sale_management
+   :notes: English UI, light theme, 1440px width, crop to the list.
 
 To create a new quotation template, click the :guilabel:`New` button, located in the upper-left
 corner. Doing so reveals a blank quotation template form that can be customized.
 
-.. image:: quote_template/blank-quotation-form.png
-   :alt: Create a new quotation template on Odoo Sales.
+.. screenshot:: sales-quote-template-form
+   :menu: Sales ‣ Configuration ‣ Quotation Templates ‣ New
+   :shows: An empty quotation-template form: name, "Quotation expires after" and signature/payment options, with the Lines and Optional Products tabs.
+   :highlight: No highlight; the whole empty form is the subject.
+   :data: New, unsaved template.
+   :module: sale_management
+   :notes: English UI, light theme, 1440px width, full form.
 
 Start by entering a name for the template in the :guilabel:`Quotation Template` field.
 
@@ -68,8 +83,13 @@ preconfigured email template to be sent to customers upon confirmation of an ord
    Confirmation Mail` pop-up window appears, in which the email template can be customized and
    configured immediately.
 
-   .. image:: quote_template/create-confirmation-mail-popup.png
-      :alt: Create confirmation mail pop-up window from the quotation template form in Odoo Sales.
+   .. screenshot:: sales-quote-template-confirmation-mail
+      :menu: Sales ‣ Configuration ‣ Quotation Templates ‣ (a template) ‣ Confirmation Mail ‣ Create and edit
+      :shows: The "Create Confirmation Mail" pop-up window with the email-template fields (name, subject, body).
+      :highlight: The Subject field (red frame).
+      :data: Template name "Order confirmation – furniture".
+      :module: sale_management
+      :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
    When all modifications are complete, click :guilabel:`Save & Close` to save the email template
    and return to the quotation form.
@@ -158,8 +178,13 @@ in an increased sale.
 Optional products appear as a section on the bottom of sales orders and eCommerce pages. Customers
 can immediately add them to their online sales orders themselves, if desired.
 
-.. image:: quote_template/optional-products-on-sales-order.png
-   :alt: Optional products appearing on a typical sales order with Odoo Sales.
+.. screenshot:: sales-quote-template-optional-on-order
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Optional Products
+   :shows: The Optional Products tab of a quotation, pre-filled from the quotation template.
+   :highlight: The optional product lines (red frame).
+   :data: Quotation created from template "Basic Furniture"; two optional products.
+   :module: sale_management
+   :notes: English UI, light theme, 1440px width, crop to the notebook.
 
 In the :guilabel:`Optional Products` tab, :guilabel:`Add a line` for each cross-selling product
 related to the original items in the :guilabel:`Lines` tab, if applicable.
@@ -202,8 +227,13 @@ To view what the customer will see, click the :guilabel:`Preview` button at the 
 see how the quotation template appears on the front-end of the website through Odoo's customer
 portal.
 
-.. image:: quote_template/quotations-templates-preview.png
-   :alt: Customer preview of a quotation template in Odoo Sales.
+.. screenshot:: sales-quote-template-portal-preview
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Preview
+   :shows: The customer portal preview of a quotation built from a template, showing the template's header text, the order lines and the Accept & Sign / Pay buttons.
+   :highlight: The Accept & Sign and Pay buttons (red frame).
+   :data: Quotation from template "Basic Furniture".
+   :module: sale_management
+   :notes: English UI, light theme, 1440px width, crop to the portal page.
 
 When all blocks and customizations are complete, click the :guilabel:`Save` button to save the
 configuration.
@@ -229,8 +259,13 @@ drop-down menu.
 
 From this drop-down menu, select :guilabel:`Cancel quotations`.
 
-.. image:: quote_template/cancel-quotations.png
-   :alt: The Cancel quotations option on the Actions drop-down menu in the Odoo Sales application.
+.. screenshot:: sales-quote-template-mass-cancel
+   :menu: Sales ‣ Orders ‣ Quotations
+   :shows: The quotations list with several records selected and the gear (Actions) drop-down open on the "Cancel quotations" item.
+   :highlight: The "Cancel quotations" menu item (red frame).
+   :data: Three quotations selected.
+   :module: sale
+   :notes: English UI, light theme, 1440px width, crop to the list header and the open menu.
 
 .. note::
    This action can be performed for quotations in *any* stage, even if it is confirmed as a sales

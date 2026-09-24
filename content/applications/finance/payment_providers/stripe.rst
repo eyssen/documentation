@@ -19,28 +19,22 @@ Create your Stripe account with Odoo
 
 To create a new Stripe account and link it to your Odoo database, make sure the company's
 :guilabel:`Email` is configured in the :ref:`company's settings <general/companies/company>`, then
-follow the steps below according to your hosting type:
+follow the steps below:
 
-.. tabs::
-   .. group-tab:: Odoo Online
+#. :ref:`Navigate to the payment provider Stripe <payment_providers/supported_providers>` and
+   click :guilabel:`Connect Stripe`.
+#. Go through the setup process and confirm your email address when Stripe sends you a
+   confirmation email.
+#. At the end of the process, click :guilabel:`Agree and submit`; you are then redirected to
+   the payment provider **Stripe** in Odoo.
+#. :ref:`Fill in your credentials <payment_providers/stripe/manual_input>`.
+#. Set the :guilabel:`State` field to :guilabel:`Enabled`.
 
-      #. :ref:`Navigate to the payment provider Stripe <payment_providers/supported_providers>` and
-         click :guilabel:`Connect Stripe`.
-      #. Go through the setup process and confirm your email address when Stripe sends you a
-         confirmation email.
-      #. At the end of the process, click :guilabel:`Agree and submit`. If all requested information
-         has been submitted, you are then redirected to Odoo, and your payment provider is enabled.
-
-   .. group-tab:: Odoo.sh or On-premise
-
-      #. :ref:`Navigate to the payment provider Stripe <payment_providers/supported_providers>` and
-         click :guilabel:`Connect Stripe`.
-      #. Go through the setup process and confirm your email address when Stripe sends you a
-         confirmation email.
-      #. At the end of the process, click :guilabel:`Agree and submit`; you are then redirected to
-         the payment provider **Stripe** in Odoo.
-      #. :ref:`Fill in your credentials <payment_providers/stripe/manual_input>`.
-      #. Set the :guilabel:`State` field to :guilabel:`Enabled`.
+.. note::
+   The :guilabel:`Connect Stripe` button is only available if the company's country is supported
+   by Stripe Connect; the onboarding link is generated through a connector service operated by
+   Odoo S.A. The credentials of the newly created account are **not** filled in automatically on a
+   self-hosted database, hence the manual credential step.
 
 .. tip::
    If you have created an account instead of :ref:`linking an existing one
@@ -54,7 +48,7 @@ Manual credential input
 =======================
 
 Manual credential input is needed, for example, when linking an existing Stripe account to your
-Odoo database, when using an account :ref:`created on Odoo.sh or On-premise
+Odoo database, when using an account :ref:`created with the Connect Stripe button
 <payment_providers/stripe/create_account>`, or when :ref:`testing Stripe without affecting live
 transactions <payment_providers/test-mode>`.
 

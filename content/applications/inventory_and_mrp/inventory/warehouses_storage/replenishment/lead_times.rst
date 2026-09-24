@@ -19,8 +19,15 @@ Lead time types
 Different lead times for different operations can impact various stages of the order fulfillment
 process. Here's a summary of the types of lead times in Odoo:
 
-.. image:: lead_times/all-lead-times.png
-   :alt: Show graphic of all lead times working together.
+.. screenshot:: inventory-lead-times-overview-diagram
+   :menu: (diagram)
+   :shows: A timeline of an order showing where each lead time applies: purchase (vendor lead time, purchase
+      security lead time, days to purchase), manufacturing (manufacturing lead time, manufacturing security
+      lead time) and sales (customer lead time, sales security lead time).
+   :highlight: The relation between the lead times and the resulting scheduled dates.
+   :data: None (generic schematic).
+   :module: stock
+   :notes: Simple schematic drawing, no UI. Light theme, readable at 1440px.
 
 - :ref:`Customer lead time <inventory/warehouses_storage/customer-lt>`: default time frame for
   fulfilling customer orders. The customer lead time is the number of days from the date the sales
@@ -80,8 +87,14 @@ not be feasible to fulfill the order by that time, which would impact other ware
    product has a customer lead time of 14 days, and the business uses a sales security lead time of
    1 day. Based on the lead time inputs, Odoo suggests a delivery date in 15 days, on July 26th.
 
-   .. image:: lead_times/scheduled-date.png
-      :alt: Set *Delivery Date* in a sales order. Enables delivery lead times feature.
+   .. screenshot:: inventory-lead-times-sales-delivery-date
+      :menu: Sales ‣ Orders ‣ Orders ‣ (a confirmed order) ‣ Other Info tab
+      :shows: The "Delivery Date" of a confirmed sales order, computed 15 days after confirmation from a
+         14-day customer lead time plus a 1-day sales security lead time.
+      :highlight: The "Delivery Date" field (red frame).
+      :data: Product "Coconut-scented candle", order confirmed 11 July, delivery date 26 July.
+      :module: sale_stock
+      :notes: English UI, light theme, 1440px width, crop to the field.
 
 The following sections demonstrate how to automatically compute expected delivery dates.
 
@@ -98,8 +111,13 @@ in the number of calendar days required to fulfill the delivery order from start
    form. Then, in the :guilabel:`Inventory` tab, type `14.00` days into the :guilabel:`Customer Lead
    Time` field.
 
-   .. image:: lead_times/customer.png
-      :alt: Set *Customer Lead Time* on the product form.
+   .. screenshot:: inventory-lead-times-customer-lead-time
+      :menu: Sales ‣ Products ‣ Products ‣ (a product) ‣ Inventory tab
+      :shows: The "Customer Lead Time" field of a product form set to 14.00 days.
+      :highlight: The "Customer Lead Time" field (red frame).
+      :data: Product "Coconut-scented candle".
+      :module: sale_stock
+      :notes: English UI, light theme, 1440px width, crop to the field.
 
 .. _inventory/warehouses_storage/sales-security-lt:
 
@@ -121,8 +139,14 @@ team to prepare for outgoing shipments earlier than the scheduled date.
    product is initially scheduled for delivery on April 6th, but with a one-day security lead time,
    the new scheduled date for the delivery order would be April 5th.
 
-   .. image:: lead_times/sales-security.png
-      :alt: View of the security lead time for sales configuration from the sales settings.
+   .. screenshot:: inventory-lead-times-sales-security
+      :menu: Inventory ‣ Configuration ‣ Settings
+      :shows: The Inventory settings page scrolled to the "Advanced Scheduling" section, with "Security Lead
+         Time for Sales" enabled and set to 1.00 day.
+      :highlight: The "Security Lead Time for Sales" setting (red frame).
+      :data: Demo company "YourCompany HU".
+      :module: sale_stock
+      :notes: English UI, light theme, 1440px width, crop to the "Advanced Scheduling" settings block.
 
 Deliver several products
 ------------------------
@@ -139,8 +163,14 @@ and set the :guilabel:`Shipping Policy` to:
    :guilabel:`Scheduled Date` of the :abbr:`DO (Delivery Order)` is determined by adding today's
    date to the longest lead time among the products in the order.
 
-.. image:: lead_times/shipping-policy.png
-   :alt: Show *Shipping Policy* field in the *Other Info* tab of a quotation.
+.. screenshot:: inventory-lead-times-shipping-policy
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation) ‣ Other Info tab
+   :shows: The "Shipping Policy" field of a quotation with its two choices "As soon as possible" and "When
+      all products are ready".
+   :highlight: The "Shipping Policy" field (red frame).
+   :data: A quotation with two products whose lead times are 8 and 5 days.
+   :module: sale_stock
+   :notes: English UI, light theme, 1440px width, crop to the field.
 
 .. example::
    In a quotation containing 2 products, `Yoga mat` and `Resistance band,` the products have a lead
@@ -194,8 +224,15 @@ lead times affect **only** replenishment methods that use :doc:`pull rules
      - None on the |RFQ|/|PO|; adds buffer days in the :ref:`JIT forecast window
        <inventory/warehouses_storage/forecasted-date>`.
 
-.. image:: lead_times/vendor-lead-times.png
-   :alt: Visualization of PO deadline and receipt date used with vendor lead times.
+.. screenshot:: inventory-lead-times-purchase-diagram
+   :menu: (diagram)
+   :shows: A timeline showing how the Order Deadline and the Expected Arrival of a purchase order are
+      derived from the vendor lead time, and how the purchase security lead time and days to purchase widen
+      the just-in-time forecast window without moving those two dates.
+   :highlight: The Order Deadline and the Expected Arrival.
+   :data: None (generic schematic).
+   :module: purchase_stock
+   :notes: Simple schematic drawing, no UI. Light theme, readable at 1440px.
 
 .. example::
    To tie all the purchase lead times together, consider this:
@@ -209,18 +246,30 @@ lead times affect **only** replenishment methods that use :doc:`pull rules
 
    Forecasted date = April 28
 
-   .. figure:: lead_times/forecasted-date-purchase.png
-      :alt: Forecasted date calculation on the lead times pop-up.
-
-      Example of the :abbr:`JIT (just-in-time)` forecast window, which is April 21-28.
+   .. screenshot:: inventory-lead-times-forecasted-date-popup
+      :menu: Inventory ‣ Operations ‣ Replenishment ‣ (info icon on a line)
+      :shows: The lead-times pop-up of a reordering rule showing how the forecasted date is computed: vendor
+         lead time 1 day, purchase security lead time 4 days and days to purchase 2 days, giving 28 April
+         from 21 April.
+      :highlight: The computed "Forecasted Date" (red frame).
+      :data: The figures from the surrounding example.
+      :module: purchase_stock
+      :notes: English UI, light theme, 1440px width, crop to the pop-up. Caption to convey: the just-in-time
+         forecast window, 21–28 April.
 
    If an |RFQ| is created today, the following fields show:
 
    - :guilabel:`Order Deadline`: April 23 (:math:`\text{Today} + 2`)
    - :guilabel:`Expected Arrival`: April 24 (:math:`\text{Order Deadline} + 1`)
 
-   .. image:: lead_times/order-deadline.png
-      :alt: Order deadline displaying Apr 23 and Expected Arrival Apr 24.
+   .. screenshot:: inventory-lead-times-order-deadline
+      :menu: Purchase ‣ Orders ‣ Requests for Quotation ‣ (an RFQ)
+      :shows: A request for quotation whose "Order Deadline" is 23 April and "Expected Arrival" is 24 April.
+      :highlight: The "Order Deadline" and "Expected Arrival" fields (red frame).
+      :data: The figures from the surrounding example (created on 21 April, days to purchase 2, vendor lead
+         time 1).
+      :module: purchase
+      :notes: English UI, light theme, 1440px width, crop to the two fields.
 
 .. _inventory/warehouses_storage/purchase-lt:
 
@@ -247,8 +296,13 @@ pricelist, click the :guilabel:`Add a line` button to add vendor details, such a
    On the vendor pricelist of the product form, the :guilabel:`Delivery Lead Time` for the selected
    vendor is set to `10 days.`
 
-   .. image:: lead_times/set-vendor.png
-      :alt: Add delivery lead times to vendor pricelist on a product.
+   .. screenshot:: inventory-lead-times-vendor-lead-time
+      :menu: Purchase ‣ Products ‣ Products ‣ (a product) ‣ Purchase tab
+      :shows: The vendor pricelist of a product form with one line whose "Delivery Lead Time" is 10 days.
+      :highlight: The "Delivery Lead Time" cell (red frame).
+      :data: Vendor "Azure Interior", price and a 10-day lead time.
+      :module: purchase
+      :notes: English UI, light theme, 1440px width, crop to the vendor pricelist.
 
 .. _inventory/warehouses_storage/purchase-security-lt:
 
@@ -285,8 +339,15 @@ The |MO| deadline, which is the deadline to begin the manufacturing process to c
 by the scheduled delivery date, can be determined by configuring the manufacturing lead times and
 manufacturing security lead times.
 
-.. image:: lead_times/manuf-lead-times.png
-   :alt: Visualization of the determination of planned MO date manufacturing lead times.
+.. screenshot:: inventory-lead-times-manufacturing-diagram
+   :menu: (diagram)
+   :shows: A timeline showing how the planned date of a manufacturing order is derived from the delivery
+      scheduled date by subtracting the manufacturing lead time and the manufacturing security lead time,
+      and how "Days to prepare Manufacturing Order" places the component procurement before it.
+   :highlight: The resulting manufacturing order scheduled date.
+   :data: None (generic schematic).
+   :module: mrp
+   :notes: Simple schematic drawing, no UI. Light theme, readable at 1440px.
 
 Manufacturing lead time
 -----------------------
@@ -299,8 +360,14 @@ of Materials`, and select the desired |BoM| to edit.
 On the |BoM| form, click the :guilabel:`Miscellaneous` tab. Change the value (in days) in the
 :guilabel:`Manuf. Lead Time` field to specify the calendar days needed to manufacture the product.
 
-.. image:: lead_times/set-manufacturing.png
-   :alt: Manuf. Lead Time value specified on a product's Bill of Material form.
+.. screenshot:: inventory-lead-times-manuf-lead-time
+   :menu: Manufacturing ‣ Products ‣ Bills of Materials ‣ (a BoM) ‣ Miscellaneous tab
+   :shows: The "Miscellaneous" tab of a bill of materials with the "Manuf. Lead Time" field filled in, and
+      the "Days to prepare Manufacturing Order" field with its "Compute" button next to it.
+   :highlight: The "Manuf. Lead Time" field (red frame).
+   :data: A bill of materials with a 14-day manufacturing lead time and two components.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the Miscellaneous tab.
 
 .. note::
    If the selected |BoM| is a multi-level |BoM|, the manufacturing lead times of the components are
@@ -322,7 +389,6 @@ consider weekends, holidays, or *work center capacity* (:dfn:`the number of oper
 performed at the work center simultaneously`).
 
 .. seealso::
-   - :doc:`Manufacturing planning <../../../manufacturing/workflows/use_mps>`
    - :doc:`Schedule MOs with reordering rules <reordering_rules>`
 
 .. example::
@@ -368,8 +434,14 @@ app --> Configuration --> Settings`. Under the :guilabel:`Planning` heading, tic
 Next, enter the desired number of calendar days. By configuring the security lead time, a buffer is
 set to account for potential delays in the manufacturing process. Then, click :guilabel:`Save`.
 
-.. image:: lead_times/manuf-security.png
-   :alt: View of the security lead time for manufacturing from the manufacturing app settings.
+.. screenshot:: inventory-lead-times-manuf-security
+   :menu: Manufacturing ‣ Configuration ‣ Settings
+   :shows: The Manufacturing settings page, "Planning" section, with the "Security Lead Time" checkbox
+      enabled and set to 3.00 days.
+   :highlight: The "Security Lead Time" setting (red frame).
+   :data: Demo company "YourCompany HU".
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the "Planning" settings block.
 
 .. example::
    A product has a scheduled shipment date on the :abbr:`DO (Delivery Order)` set for August 15th.
@@ -393,8 +465,17 @@ The customer places an order for a manufactured product on September 1st, and th
 date from the warehouse is on September 20th. Odoo uses lead times and automated reordering rules to
 schedule the necessary operations, based on the outgoing shipment delivery date, September 20th:
 
-.. image:: lead_times/global-example.png
-   :alt: Show timeline of how lead times work together to schedule warehouse operations.
+.. screenshot:: inventory-lead-times-global-example-diagram
+   :menu: (diagram)
+   :shows: A timeline from 1 September to 20 September showing, in order: the sales order confirmation, the
+      component order deadline (9 September), the component receipt (13 September), the manufacturing start
+      (14 September) and the outgoing delivery (20 September), with each lead time labelled between the
+      milestones.
+   :highlight: The five dated milestones.
+   :data: Sales security 1 day, manufacturing security 2 days, manufacturing 3 days, purchase security 1
+      day, vendor 4 days.
+   :module: stock, mrp, purchase_stock
+   :notes: Simple schematic drawing, no UI. Light theme, readable at 1440px.
 
 - **September 1st**: Sales order created, confirmed by salesperson.
 

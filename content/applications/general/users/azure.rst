@@ -8,11 +8,9 @@ in to their database with their Microsoft Azure account.
 This is particularly helpful if the organization uses Azure Workspace, and wants employees within
 the organization to connect to Odoo using their Microsoft Accounts.
 
-.. warning::
-   Databases hosted on Odoo.com should not use OAuth login for the owner or administrator of the
-   database as it would unlink the database from their Odoo.com account. If OAuth is set up for that
-   user, the database will no longer be able to be duplicated, renamed, or otherwise managed from
-   the Odoo.com portal.
+.. tip::
+   Keep at least one administrator account that logs in with a password, so the database remains
+   accessible if the OAuth provider is unavailable.
 
 .. seealso::
    - :doc:`../../productivity/calendar/outlook`
@@ -70,8 +68,8 @@ organizational directory only (Default Directory only - Single tenant)`.
 
 Under the :guilabel:`Redirect URL` section, select :guilabel:`Web` as the platform, and then input
 `https://<odoo base url>/auth_oauth/signin` in the :guilabel:`URL` field. The Odoo base :abbr:`URL
-(Uniform Resource Locator)` is the canonical domain at which your Odoo instance can be reached (e.g.
-*mydatabase.odoo.com* if you are hosted on Odoo.com) in the :guilabel:`URL` field. Then, click
+(Uniform Resource Locator)` is the canonical domain at which your Odoo instance can be reached (e.g.,
+*erp.example.com*). Then, click
 :guilabel:`Register`, and the application is created.
 
 Authentication
@@ -88,9 +86,12 @@ issued by the authorization endpoint by scrolling down the screen and check the 
 :guilabel:`Access tokens (used for implicit flows)` and :guilabel:`ID tokens (used for implicit and
 hybrid flows)`.
 
-.. image:: azure/authentication-tokens.png
-   :align: center
-   :alt: Authentication settings and endpoint tokens.
+.. screenshot:: general-azure-authentication-tokens
+   :menu: (Microsoft Entra admin center / Azure portal) ‣ App registrations ‣ (app) ‣ Authentication
+   :shows: The Authentication page with the Web redirect URI and the "Access tokens" and "ID tokens" checkboxes ticked under implicit grant and hybrid flows.
+   :highlight: The two token checkboxes.
+   :module: auth_oauth
+   :notes: Microsoft website; blur IDs.
 
 Click :guilabel:`Save` to ensure these settings are saved.
 
@@ -106,9 +107,12 @@ After finishing this step, click on :guilabel:`Endpoints` on the top menu and cl
 next to :guilabel:`OAuth 2.0 authorization endpoint (v2)` field. Paste this value in the clipboard /
 notepad.
 
-.. image:: azure/overview-azure-app.png
-   :align: center
-   :alt: Application ID and OAuth 2.0 authorization endpoint (v2) credentials.
+.. screenshot:: general-azure-app-overview
+   :menu: (Microsoft Entra admin center / Azure portal) ‣ App registrations ‣ (app) ‣ Overview
+   :shows: The app Overview with the Application (client) ID and the Endpoints panel showing the OAuth 2.0 authorization endpoint (v2).
+   :highlight: The client ID and the authorization endpoint.
+   :module: auth_oauth
+   :notes: Microsoft website; blur IDs.
 
 Odoo setup
 ----------
@@ -137,9 +141,12 @@ Check the box next to the :guilabel:`Allowed` field to enable the OAuth provider
 `Microsoft Azure` to the :guilabel:`Login button label` field. This text will appear next to the
 Windows logo on the login page.
 
-.. image:: azure/odoo-provider-settings.png
-   :align: center
-   :alt: Odoo provider setup in the Settings application.
+.. screenshot:: general-azure-odoo-provider
+   :menu: Settings ‣ Users & Companies ‣ OAuth Providers ‣ New
+   :shows: OAuth provider form for Azure: Provider name, Client ID, Allowed, Login button label, Authorization URL, Scope, UserInfo URL and Data Endpoint filled.
+   :highlight: The URL and scope fields.
+   :module: auth_oauth
+   :notes: English UI, developer mode active; blur the Client ID.
 
 :guilabel:`Save` the changes to complete the OAuth authentication setup in Odoo.
 
@@ -161,22 +168,30 @@ To sign in to Odoo for the first time using the Microsoft Azure OAuth provider, 
 page should appear. Then, click on the option labeled :guilabel:`Microsoft Azure`. The page will
 redirect to the Microsoft login page.
 
-.. image:: azure/odoo-login.png
-   :align: center
-   :alt: Microsoft Outlook login page.
+.. screenshot:: general-azure-login-button
+   :menu: (Odoo login page)
+   :shows: The Odoo login page with the Microsoft sign-in button below the password form.
+   :highlight: The Microsoft button.
+   :module: auth_oauth
+   :notes: English UI, crop to the login box.
 
 Enter the :guilabel:`Microsoft Email Address` and click :guilabel:`Next`. Follow the process to sign
 in to the account. Should :abbr:`2FA (Two Factor Authentication)` be turned on, then an extra step
 may be required.
 
-.. image:: azure/login-next.png
-   :align: center
-   :alt: Enter Microsoft login credentials.
+.. screenshot:: general-azure-microsoft-login
+   :menu: (Microsoft sign-in page)
+   :shows: The Microsoft sign-in page asking for the email address, with the Next button.
+   :module: auth_oauth
+   :notes: Microsoft website; use a demo account.
 
 Finally, after logging in to the account, the page will redirect to a permissions page where the
 user will be prompted to :guilabel:`Accept` the conditions that the Odoo application will access
 their Microsoft information.
 
-.. image:: azure/accept-access.png
-   :align: center
-   :alt: Accept Microsoft conditions for permission access to your account information.
+.. screenshot:: general-azure-permissions
+   :menu: (Microsoft sign-in page)
+   :shows: The Microsoft "Permissions requested" page for the app with the Accept button.
+   :highlight: The Accept button.
+   :module: auth_oauth
+   :notes: Microsoft website; use a demo account.

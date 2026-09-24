@@ -15,13 +15,18 @@ Configuration on Flutterwave Dashboard
    :guilabel:`Secret Key` fields and save them for later.
 #. | Go to :menuselection:`Settings --> Webhooks` and enter your Odoo database URL followed by
      `/payment/flutterwave/webhook` in the :guilabel:`URL` text field.
-   | For example: `https://yourcompany.odoo.com/payment/flutterwave/webhook`.
+   | For example: `https://yourcompany.com/payment/flutterwave/webhook`.
 #. Fill the :guilabel:`Secret hash` with a password that you generate and save its value for later.
 #. Make sure *all* the remaining checkboxes are ticked.
 #. Click on **Save** to finalize the configuration.
 
-.. image:: flutterwave/flutterwave-settings.png
-   :alt: Flutterwave settings
+.. screenshot:: finance-payment-providers-flutterwave-flutterwave-settings
+   :menu: (Flutterwave Dashboard) ‣ Settings ‣ Webhooks
+   :shows: The Flutterwave webhook settings page: the "URL" field with the database URL followed by /payment/flutterwave/webhook, the "Secret hash" field, and all notification checkboxes ticked.
+   :highlight: The "URL" and "Secret hash" fields.
+   :data: Test-mode dashboard; use a throw-away secret hash.
+   :module: payment_flutterwave
+   :notes: English UI, light theme, 1440px width; use a throw-away secret.
 
 .. _payment_providers/flutterwave/configure_odoo:
 

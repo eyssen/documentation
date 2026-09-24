@@ -18,7 +18,7 @@ records:
    each for a unique bank account, or two separate sales journals to track :abbr:`B2B (business to
    business)` versus :abbr:`B2C (business to customer)` income.
 
-Each card on the :guilabel:`Accounting Dashboard` represents a journal. To edit the configuration of
+Each card on the accounting dashboard (:menuselection:`Accounting --> Dashboard`) represents a journal. To edit the configuration of
 a journal, click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` on the journal card, then
 click :guilabel:`Configuration`. Alternatively, go to :menuselection:`Accounting --> Configuration
 --> Journals` to select and edit an existing journal or to create a new one.
@@ -36,9 +36,9 @@ The :guilabel:`Advanced Settings` tab contains more technical options:
 
 - :guilabel:`Allowed accounts`: Limit which accounts are available when recording journal entries in
   this journal. Leave this field blank to allow all accounts.
-- :guilabel:`Email Alias`: Set an email address to create journal entries by digitizing PDFs sent
-  to this address. This is most commonly used to create :ref:`customer invoices and vendor bills
-  <accounting/bill-digitization/email-alias>`.
+- :guilabel:`Email Alias`: Set an email address to create draft documents from the emails sent to
+  this address, with the email's attachments. This is most commonly used to create vendor bills
+  (e.g., from electronic invoice files such as UBL or Factur-X).
 - :guilabel:`Secure Posted Entries with Hash`: Restrict the :doc:`alterability
   <../reporting/data_inalterability>` of this journal's entries to comply with tax authorities in
   certain countries.
@@ -93,7 +93,6 @@ available depending on the journal type. If desired, set :ref:`outstanding accou
    - :doc:`../bank`
    - :doc:`multi_currency`
    - :doc:`../bank/transactions`
-   - `Bank configuration <https://www.youtube.com/watch?v=tVhhXw-VnGE>`_
 
 .. _accounting/journals/outstanding-accounts:
 
@@ -146,8 +145,7 @@ fields are specific to bank journals:
 - :guilabel:`Bank Account`: This :guilabel:`Bank and Cash` type account is the default account for
   this bank journal.
 - :guilabel:`Account Number`: The bank account's number is used when registering payments and is
-  required for generating outgoing payment files, such as :doc:`SEPA <../payments/pay_sepa>` or
-  :ref:`NACHA <l10n_us/nacha>`. To edit the bank account details, click on the
+  required for generating outgoing payment files. To edit the bank account details, click on the
   :icon:`oi-arrow-right` :guilabel:`(Internal link)` button next to the :guilabel:`Account Number`
   and update the account information accordingly.
 - :guilabel:`Bank`: The bank name is used when registering payments and is required for generating
@@ -155,12 +153,10 @@ fields are specific to bank journals:
   :guilabel:`(Internal link)` button next to the :guilabel:`Bank` name and update the account
   information accordingly.
 - :guilabel:`Bank Feeds`: Define the method of creating bank :doc:`transactions
-  <../bank/transactions>`, whether :guilabel:`Manual` or via :doc:`Online Synchronization
-  <../bank/bank_synchronization>`.
-- :guilabel:`Split Transactions`: Split collective payments for CODA files.
+  <../bank/transactions>`. The available options depend on the installed bank statement import and
+  :doc:`synchronization <../bank/bank_synchronization>` modules.
 
-Multiple payment methods are available for bank journals, as are configurations for generating
-outgoing payment files, such as :doc:`SEPA <../payments/pay_sepa>` or :ref:`NACHA <l10n_us/nacha>`.
+Multiple payment methods are available for bank journals.
 
 .. _accounting/journals/cash:
 
@@ -189,8 +185,7 @@ fields are specific to credit card journals:
 
 - :guilabel:`Journal Account`: This :guilabel:`Credit Card` type account is the default account for
   this credit card journal.
-- :guilabel:`Bank Feeds`: Define the method of creating credit card transactions, whether manual or
-  via :doc:`Online Synchronization <../bank/bank_synchronization>`.
+- :guilabel:`Bank Feeds`: Define the method of creating credit card transactions.
 
 Only manual payment methods are available for credit card journals.
 
@@ -215,8 +210,9 @@ invoice journals:
   reference of credit notes that increments separately from the main invoice sequence and adds an
   `R` to the reference before the journal's short code.
 - :guilabel:`Dedicated Debit Note Sequence`: Check this box to use a separate sequence for the
-  reference of credit notes that increments separately from the main invoice sequence and adds a `D`
-  before the journal's short code.
+  reference of debit notes that increments separately from the main invoice sequence and adds a `D`
+  before the journal's short code. This field requires the *Debit Notes* (`account_debit_note`)
+  module.
 
 Sales journals have additional fields in the :guilabel:`Advanced Settings` tab that allow you to set
 the default communication format that will appear on customer invoices so that the customer can
@@ -238,14 +234,12 @@ Purchase journals are used to record journal entries related to :doc:`vendor bil
 - :guilabel:`Default Expense Account`: Vendor bills in this journal use this :guilabel:`Expense`
   type account unless overwritten by another expense account set on the product category, product,
   or expense.
-- :guilabel:`Private Part Account`: Select the account to be used to register the private part of
-  mixed expenses.
 - :guilabel:`Dedicated Credit Note Sequence`: Check this box to use a separate sequence for the
   reference of credit notes that increments separately from the main vendor bill sequence and adds
   an `R` to the reference before the journal's short code.
 - :guilabel:`Dedicated Debit Note Sequence`: Check this box to use a separate sequence for the
-  reference of credit notes that increments separately from the main invoice sequence and adds a `D`
-  before the journal's short code.
+  reference of debit notes that increments separately from the main vendor bill sequence and adds a
+  `D` before the journal's short code.
 
 .. _accounting/journals/misc:
 
@@ -256,6 +250,5 @@ Miscellaneous journals are used to record journal entries that are not related t
 journal types such as tax closing journal entries.
 
 .. seealso::
-   - `Tax return eLearning <https://www.odoo.com/slides/slide/tax-return-10564>`_
    - :doc:`../reporting/tax_returns`
    - :doc:`../taxes`

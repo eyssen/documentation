@@ -31,15 +31,22 @@ localization:
    * - :guilabel:`Indian - Check GST Number Status`
      - `l10n_in_gstin_status`
      - :ref:`Indian Check GST Number Status <india/gstin_status>`
-   * - :guilabel:`Indian - GSTR India eFiling`
-     - `l10n_in_reports_gstr`
-     - :ref:`Indian GST Return filing <india/gstr>`
-   * - :guilabel:`Indian - Accounting Reports`
-     - `l10n_in_reports`
-     - :ref:`Indian tax reports <india/gstr_reports>`
+   * - :guilabel:`Indian TDS and TCS`
+     - `l10n_in_withholding`
+     - :ref:`TDS/TCS threshold alerts and TDS entries <india/tds-tcs>`
 
-.. image:: india/india-modules.png
-   :alt: Indian localization modules
+.. note::
+   The GST return filing (GSTR-1 / GSTR-2B / GSTR-3 exchange with the GST portal) and the Indian
+   tax reports (GSTR-1, GSTR-3, Profit and Loss (IN)) are **not** available in this edition. The GST
+   grids of the Indian taxes can be reviewed in the :doc:`tax report
+   <../accounting/reporting/dynamic_reports>`.
+
+.. screenshot:: finance-fl-india-modules
+   :menu: Apps
+   :shows: The Apps list filtered on "India", showing the installed Indian localization modules (Indian - Accounting, Indian E-invoicing, Indian E-waybill, Indian E-waybill Stock, Indian - Check GST Number Status, Indian TDS and TCS).
+   :data: Demo company "YourCompany IN".
+   :module: l10n_in
+   :notes: English UI, light theme, 1440px width.
 
 .. _india/e-invoicing:
 
@@ -73,8 +80,13 @@ You must register on the :abbr:`NIC (National Informatics Centre)` e-Invoice por
    .. note::
       If you are already registered on the NIC portal, you can use the same login credentials.
 
-   .. image:: india/e-invoice-system-login.png
-      :alt: Register Odoo ERP system on e-invoice web portal
+   .. screenshot:: finance-fl-india-e-invoice-system-login
+      :menu: (NIC e-Invoice portal einvoice1.gst.gov.in) ‣ Login
+      :shows: The login page of the NIC e-Invoice portal with the Username and Password fields.
+      :highlight: The "Login" button.
+      :data: Sandbox portal.
+      :module: l10n_in_edi
+      :notes: English UI, light theme, 1440px width; use throw-away test credentials.
 
 #. From the dashboard, go to :menuselection:`API Registration --> User Credentials --> Create API
    User`;
@@ -84,8 +96,13 @@ You must register on the :abbr:`NIC (National Informatics Centre)` e-Invoice por
    GSP, and type in a :guilabel:`Username` and :guilabel:`Password` for your API. Once it is done,
    click :guilabel:`Submit`.
 
-   .. image:: india/submit-api-registration-details.png
-      :alt: Submit API specific Username and Password
+   .. screenshot:: finance-fl-india-submit-api-registration-details
+      :menu: (NIC e-Invoice portal) ‣ API Registration ‣ User Credentials ‣ Create API User
+      :shows: The "Create API User" form with "Through GSP" selected, GSP "Tera Software Limited", and the API Username / Password fields, with the "Submit" button.
+      :highlight: The GSP selection and the credentials fields.
+      :data: Sandbox portal.
+      :module: l10n_in_edi
+      :notes: English UI, light theme, 1440px width; use throw-away test credentials.
 
 .. _india/e-invoicing-configuration:
 
@@ -96,8 +113,13 @@ To enable the e-Invoice service in Odoo, go to :menuselection:`Accounting --> Co
 Settings --> Indian Electronic Invoicing`, and enter the :guilabel:`Username` and
 :guilabel:`Password` previously set for the API.
 
-.. image:: india/e-invoice-setup.png
-   :alt: Setup e-invoice service
+.. screenshot:: finance-fl-india-e-invoice-setup
+   :menu: Accounting ‣ Configuration ‣ Settings ‣ Indian Electronic Invoicing
+   :shows: The "Indian Electronic Invoicing" settings block with the "Username" and "Password" fields for the NIC API and the "Test environment" checkbox.
+   :highlight: The credential fields.
+   :data: Demo company "YourCompany IN" (GSTIN 24AAGCC7144L6ZE), Indian localization installed; NIC sandbox credentials.
+   :module: l10n_in_edi
+   :notes: English UI, light theme, 1440px width; use throw-away test credentials.
 
 .. _india/e-invoicing-journals:
 
@@ -123,8 +145,13 @@ Once an invoice is validated, a confirmation message is displayed at the top. Od
 uploads the JSON-signed file of validated invoices to the NIC e-Invoice portal after some time. If
 you want to process the invoice immediately, click :guilabel:`Process now`.
 
-.. image:: india/e-invoice-process.png
-   :alt: Indian e-invoicing confirmation message
+.. screenshot:: finance-fl-india-e-invoice-process
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (a posted invoice)
+   :shows: A posted customer invoice with the blue banner at the top "The invoice will be processed asynchronously by the following E-invoicing service : Indian Electronic Invoicing" and the "Process now" link.
+   :highlight: The banner and the "Process now" link.
+   :data: Demo company "YourCompany IN" (GSTIN 24AAGCC7144L6ZE), Indian localization installed; NIC sandbox credentials.
+   :module: l10n_in_edi
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    - You can find the JSON-signed file in the attached files in the chatter.
@@ -141,8 +168,13 @@ includes the :abbr:`IRN (Invoice Reference Number)`, :guilabel:`Ack. No` (acknow
 :guilabel:`Ack. Date` (acknowledgment date), and QR code. These certify that the invoice is a valid
 fiscal document.
 
-.. image:: india/invoice-report.png
-   :alt: IRN and QR code
+.. screenshot:: finance-fl-india-invoice-report
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (an e-invoiced invoice) ‣ Print
+   :shows: The printed invoice PDF header showing the IRN, "Ack. No", "Ack. Date" and the e-invoice QR code.
+   :highlight: The IRN/QR block.
+   :data: Demo company "YourCompany IN" (GSTIN 24AAGCC7144L6ZE), Indian localization installed; NIC sandbox credentials.
+   :module: l10n_in_edi
+   :notes: English UI, light theme, 1440px width.
 
 .. _india/edi-cancellation:
 
@@ -158,8 +190,13 @@ Cancel`.
    Doing so cancels both the :ref:`e-Invoice <india/e-invoicing>` and the :ref:`E-Way bill
    <india/e-waybill>`.
 
-.. image:: india/e-invoice-cancellation.png
-   :alt: cancel reason and remarks
+.. screenshot:: finance-fl-india-e-invoice-cancellation
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (an e-invoiced invoice) ‣ Other Info tab
+   :shows: The Other Info tab with the "Cancel reason" drop-down and "Cancel remarks" field filled in, and the "Request EDI cancellation" button in the header.
+   :highlight: The "Cancel reason" and "Cancel remarks" fields.
+   :data: Demo company "YourCompany IN" (GSTIN 24AAGCC7144L6ZE), Indian localization installed; NIC sandbox credentials.
+   :module: l10n_in_edi
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    - If you want to abort the cancellation before processing the invoice, then click :guilabel:`Call
@@ -224,13 +261,23 @@ website itself.
    :menuselection:`Search --> Verify Signed Invoice`;
 #. Select the JSON file and submit it;
 
-   .. image:: india/verify-invoice.png
-      :alt: select the JSON file for verify invoice
+   .. screenshot:: finance-fl-india-verify-invoice
+      :menu: (NIC e-Invoice portal) ‣ Search ‣ Verify Signed Invoice
+      :shows: The "Verify Signed Invoice" page of the NIC portal with the file selector for the JSON file and the "Verify" button.
+      :highlight: The file selector.
+      :data: Sandbox portal.
+      :module: l10n_in_edi
+      :notes: English UI, light theme, 1440px width.
 
    If the file is signed, a confirmation message is displayed.
 
-   .. image:: india/signed-invoice.png
-      :alt: verified e-invoice
+   .. screenshot:: finance-fl-india-signed-invoice
+      :menu: (NIC e-Invoice portal) ‣ Search ‣ Verify Signed Invoice
+      :shows: The confirmation message of the NIC portal stating that the uploaded JSON is a valid signed invoice, with the IRN details.
+      :highlight: The confirmation message.
+      :data: Sandbox portal.
+      :module: l10n_in_edi
+      :notes: English UI, light theme, 1440px width.
 
 .. _india/e-waybill:
 
@@ -261,14 +308,24 @@ You must register on the :abbr:`NIC (National Informatics Centre)` E-Way bill po
 #. Check if :guilabel:`Tera Software Limited` is already on the registered GSP/ERP list. If so, use
    the username and password used to log in to the NIC portal. Otherwise, follow the next steps;
 
-   .. image:: india/e-waybill-gsp-list.png
-      :alt: E-Way bill list of registered GSP/ERP
+   .. screenshot:: finance-fl-india-e-waybill-gsp-list
+      :menu: (NIC E-Way bill portal ewaybillgst.gov.in) ‣ Registration ‣ For GSP
+      :shows: The "For GSP" registration page listing the registered GSP/ERP entries with the "Add/New" button.
+      :highlight: The "Add/New" button.
+      :data: Sandbox portal.
+      :module: l10n_in_edi_ewaybill
+      :notes: English UI, light theme, 1440px width; use throw-away test credentials.
 
 #. Select :guilabel:`Add/New`, select :guilabel:`Tera Software Limited` as your GSP Name, create a
    :guilabel:`Username` and a :guilabel:`Password` for your API, and click :guilabel:`Add`.
 
-   .. image:: india/e-waybill-registration-details.png
-      :alt: Submit GSP API registration details
+   .. screenshot:: finance-fl-india-e-waybill-registration-details
+      :menu: (NIC E-Way bill portal) ‣ Registration ‣ For GSP ‣ Add/New
+      :shows: The GSP registration form with "Tera Software Limited" selected as GSP and the API Username / Password fields, with the "Add" button.
+      :highlight: The GSP name and credentials fields.
+      :data: Sandbox portal.
+      :module: l10n_in_edi_ewaybill
+      :notes: English UI, light theme, 1440px width; use throw-away test credentials.
 
 .. _india/e-waybill-configuration:
 
@@ -279,8 +336,13 @@ To set up the E-Way bill service, go to :menuselection:`Accounting --> Configura
 --> Indian Electronic WayBill --> Setup E-Way bill`, and enter your :guilabel:`Username` and
 :guilabel:`Password`.
 
-.. image:: india/e-waybill-configuration.png
-   :alt: E-way bill setup odoo
+.. screenshot:: finance-fl-india-e-waybill-configuration
+   :menu: Accounting ‣ Configuration ‣ Settings ‣ Indian Electronic WayBill
+   :shows: The "Indian Electronic WayBill" settings block with "Setup E-Way bill" enabled and the "Username" / "Password" fields.
+   :highlight: The credential fields.
+   :data: Demo company "YourCompany IN" (GSTIN 24AAGCC7144L6ZE), Indian localization installed; NIC sandbox credentials.
+   :module: l10n_in_edi_ewaybill
+   :notes: English UI, light theme, 1440px width; use throw-away test credentials.
 
 .. _india/e-waybill-workflow:
 
@@ -295,8 +357,13 @@ Send an E-Way bill
 To send an E-Way bill, confirm the customer invoice/vendor bill and click :guilabel:`Send E-Way
 bill`.
 
-.. image:: india/e-waybill-send-button.png
-   :alt: Send E-waybill button on invoices
+.. screenshot:: finance-fl-india-e-waybill-send-button
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (a posted invoice)
+   :shows: A posted customer invoice with the "Send E-Way bill" button in the header.
+   :highlight: The "Send E-Way bill" button.
+   :data: Demo company "YourCompany IN" (GSTIN 24AAGCC7144L6ZE), Indian localization installed; NIC sandbox credentials.
+   :module: l10n_in_edi_ewaybill
+   :notes: English UI, light theme, 1440px width.
 
 .. _india/invoice-validation-e-way:
 
@@ -306,8 +373,13 @@ Invoice validation
 Once an invoice/bill has been issued and sent via :guilabel:`Send E-Way bill`, a confirmation
 message is displayed.
 
-.. image:: india/e-waybill-process.png
-   :alt: Indian e-Way bill confirmation message
+.. screenshot:: finance-fl-india-e-waybill-process
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (a posted invoice) after "Send E-Way bill"
+   :shows: The invoice with the banner "The invoice will be processed asynchronously by the following E-invoicing service : Indian Electronic Way Bill" and the "Process now" link.
+   :highlight: The banner.
+   :data: Demo company "YourCompany IN" (GSTIN 24AAGCC7144L6ZE), Indian localization installed; NIC sandbox credentials.
+   :module: l10n_in_edi_ewaybill
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    - You can find the JSON-signed file in the attached files in the chatter.
@@ -320,8 +392,13 @@ Invoice PDF report
 You can print the invoice PDF report once you have submitted the E-Way bill. The report includes the
 **E-Way bill number** and the **E-Way bill validity date**.
 
-.. image:: india/e-waybill-invoice-report.png
-   :alt: E-way bill acknowledgment number and date
+.. screenshot:: finance-fl-india-e-waybill-invoice-report
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (an invoice with E-Way bill) ‣ Print
+   :shows: The printed invoice PDF showing the E-Way bill number ("Ewaybill No") and date in the header.
+   :highlight: The E-Way bill number.
+   :data: Demo company "YourCompany IN" (GSTIN 24AAGCC7144L6ZE), Indian localization installed; NIC sandbox credentials.
+   :module: l10n_in_edi_ewaybill
+   :notes: English UI, light theme, 1440px width.
 
 .. _india/e-waybill-cancellation:
 
@@ -336,8 +413,13 @@ click :guilabel:`Request EDI Cancellation`.
    Doing so cancels both the :ref:`e-Invoice <india/e-invoicing>` (if applicable) and the
    :ref:`E-Way bill <india/e-waybill>`.
 
-.. image:: india/e-waybill-cancellation.png
-   :alt: Cancel reason and remarks
+.. screenshot:: finance-fl-india-e-waybill-cancellation
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (an invoice with E-Way bill) ‣ Other Info tab
+   :shows: The Other Info tab with the E-Way bill "Cancel reason" and "Cancel remarks" fields and the "Request EDI cancellation" button.
+   :highlight: The "Cancel reason" and "Cancel remarks" fields.
+   :data: Demo company "YourCompany IN" (GSTIN 24AAGCC7144L6ZE), Indian localization installed; NIC sandbox credentials.
+   :module: l10n_in_edi_ewaybill
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    - If you want to abort the cancellation before processing the invoice, click :guilabel:`Call Off
@@ -394,254 +476,20 @@ To verify the status of a contact's GST number, access the customer's/vendor's f
 To verify the status of a GST number entered on an invoice/bill, access the invoice/bill and click
 the :icon:`fa-refresh` (:guilabel:`refresh`) button next to the :guilabel:`GST Status` field.
 
-.. image:: india/gstin-status-invoice.png
-   :alt: Check GSTIN status of an invoice
+.. screenshot:: finance-fl-india-gstin-status-invoice
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (an invoice)
+   :shows: A customer invoice form with the "GST Status" field next to the customer, showing the verified status (e.g. "Active") and the refresh button.
+   :highlight: The "GST Status" field and its refresh button.
+   :data: Demo company "YourCompany IN" (GSTIN 24AAGCC7144L6ZE), Indian localization installed; NIC sandbox credentials.
+   :module: l10n_in_gstin_status
+   :notes: English UI, light theme, 1440px width.
 
 A notification is displayed to confirm the status update and the GSTIN status and verification date
 are logged in the contact's chatter.
 
-.. _india/gstr:
-
-Indian GST Return filing
-========================
-
-.. _india/gstr_api:
-
-Enable API access
------------------
-
-To file GST Returns in Odoo, you must first enable API access on the GST portal.
-
-#. Log into the `GST portal <https://services.gst.gov.in/services/login>`_ by entering your
-   :guilabel:`Username` and :guilabel:`Password`, and go to :guilabel:`My Profile` on your **profile
-   menu**;
-
-   .. image:: india/gst-portal-my-profile.png
-      :alt: Click On the My Profile from profile
-
-#. Select :guilabel:`Manage API Access`, and click :guilabel:`Yes` to enable API access;
-
-   .. image:: india/gst-portal-api-yes.png
-      :alt: Click Yes
-
-.. note::
-   It is recommended to set the :guilabel:`Duration` to :guilabel:`30 days` to avoid the need for
-   frequent token reauthentication.
-
-#. Doing so enables a :guilabel:`Duration` drop-down menu. Select the :guilabel:`Duration` of your
-   preference, and click :guilabel:`Confirm`.
-
-.. _india/gstr_configuration:
-
-Indian GST Service In Odoo
---------------------------
-
-Once you have enabled the :ref:`API access <india/gstr_api>` on the GST portal, you can set up the
-:guilabel:`Indian GST Service` in Odoo.
-
-Go to :menuselection:`Accounting --> Configuration --> Settings --> Indian GST Service` and enter
-the :guilabel:`GST Username`. Click :guilabel:`Send OTP`, enter the code, and finally,
-:guilabel:`Validate`.
-
-   .. image:: india/gst-setup.png
-      :alt: Please enter your GST portal Username as Username
-
-.. _india/gstr_workflow:
-
-File-in GST Return
-------------------
-
-When the :guilabel:`Indian GST Service` is configured, you can file your GST return. Go to
-:menuselection:`Accounting --> Reporting --> India --> GST Return periods` and create a new **GST
-Return Period** if it does not exist. GST Return file-in is done in **three steps** in Odoo:
-
-.. note::
-   **Tax Return Periodicity** can be
-   :doc:`configured <../accounting/reporting/tax_returns>` according to the user's
-   needs.
-
-.. _india/gstr-1:
-
-Send GSTR-1
-~~~~~~~~~~~
-
-#. Click :guilabel:`GSTR-1 Report` to verify the :ref:`GSTR-1 <india/gstr-1_report>` report before
-   uploading it to the **GST portal**.
-
-   .. image:: india/gst-gstr-1-verify.png
-      :alt: GSTR-1 verify
-
-   .. note::
-      The system performs basic validations to ensure compliance with the GST portal's requirements.
-      Possible issues include:
-
-      - **Incorrect Tax Application:** The tax type does not match the :guilabel:`Fiscal Position`
-        (:guilabel:`CGST/SGST` applied instead of :guilabel:`IGST` for interstate transactions, or
-        :guilabel:`IGST` applied instead of :guilabel:`CGST/SGST` for intrastate transactions).
-      - **Missing HSN Code:** No HSN Code is defined for the product.
-      - **Invalid HSN Code for Services:** The HSN Code for a service does not start with "99" or is
-        incorrect.
-      - **Non-compliant UQC:** The Unit Quantity Code (UQC) does not meet Indian GST standards.
-
-      If any validation fails, the system alerts users with a warning, highlighting the
-      discrepancies and providing a direct link to the affected lines.
-
-      .. image:: india/gst-gstr-1-validation.png
-         :alt: GSTR-1 validation warning
-
-#. Click :guilabel:`Generate` to view the report in **Spreadsheet view**.
-
-   .. image:: india/gst-gstr-1-generate.png
-      :alt: GSTR-1 generate
-
-   .. image:: india/gst-gstr-1-spreadsheet-view.png
-      :alt: GSTR-1 Spreadsheet View
-
-#. If the **GSTR-1** report is correct, then click :guilabel:`Push to GSTN` to send it to the **GST
-   portal**. The status of the :guilabel:`GSTR-1` report changes to :guilabel:`Sending`.
-
-   .. image:: india/gst-gstr-1-sending.png
-      :alt: GSTR-1 in the Sending Status
-
-#. After a few seconds, the status of the **GSTR-1** report changes to :guilabel:`Waiting for
-   Status`. It means that the **GSTR-1** report has been sent to the :guilabel:`GST Portal` and is
-   being verified on the :guilabel:`GST Portal`;
-
-   .. image:: india/gst-gstr-1-waiting.png
-      :alt: GSTR-1 in the Waiting for Status
-
-#. Once more, after a few seconds, the status either changes to :guilabel:`Sent` or :guilabel:`Error
-   in Invoice`. The status :guilabel:`Error in Invoice` indicates that some of the invoices are not
-   correctly filled out to be validated by the **GST portal**;
-
-   - If the state of the **GSTR-1** is :guilabel:`Sent`, it means your **GSTR-1** report is ready to
-     be filed on the **GST portal**.
-
-     .. image:: india/gst-gstr-1-sent.png
-        :alt: GSTR-1 Sent
-
-   - If the state of the **GSTR-1** is :guilabel:`Error in Invoice`, invoices can be checked for
-     errors in the chatter. Once issues have been resolved, the user can click
-     :guilabel:`Push to GSTN` to submit the file again on the **GST portal**.
-
-     .. image:: india/gst-gstr-1-error.png
-        :alt: GSTR-1 Error in Invoice
-
-#. Click :guilabel:`Mark as Filed` after filing the **GSTR-1** report on the **GST portal**. The
-   status of the report changes to :guilabel:`Filed` in **Odoo**.
-
-   .. image:: india/gst-gstr-1-filed.png
-      :alt: GSTR-1 in the Filed Status
-
-.. _india/gstr-2B:
-
-Receive GSTR-2B
-~~~~~~~~~~~~~~~
-
-Users can retrieve the **GSTR-2B Report** from the **GST portal**. This automatically reconciles
-the **GSTR-2B** report with your Odoo bills;
-
-#. Click :guilabel:`Fetch GSTR-2B Summary` to retrieve the **GSTR-2B** summary. After a few seconds,
-   the status of the report changes to :guilabel:`Waiting for Reception`. This means Odoo is trying
-   to receive the **GSTR-2B** report from the **GST portal**;
-
-   .. image:: india/gst-gstr-2b-waiting.png
-      :alt: GSTR-2B in Waiting for Reception
-
-#. Once more, after a few seconds, the status of the **GSTR-2B** changes to the :guilabel:`Being
-   Processed`. It means Odoo is reconciling the **GSTR-2B** report with your Odoo bills;
-
-   .. image:: india/gst-gstr-2b-processed.png
-      :alt: GSTR-2B in Waiting for Reception
-
-#. Once it is done, the status of the **GSTR-2B** report changes to either :guilabel:`Matched` or
-   :guilabel:`Partially Matched`;
-
-   - If the status is :guilabel:`Matched`:
-
-      .. image:: india/gst-gstr-2b-matched.png
-         :alt: GSTR-2B Matched
-
-   - If the status is :guilabel:`Partially Matched`, you can review and modify the bills by
-     clicking :guilabel:`View Reconciled Bills`. This will display categorized discrepancies, such
-     as bills missing in Odoo or GSTR-2. After making the necessary corrections, click
-     :guilabel:`re-match` to update the reconciliation and ensure accuracy before finalizing the
-     report.
-
-      .. image:: india/gst-gstr-2b-partially.png
-         :alt: GSTR-2B Partially Matched
-
-.. _india/gstr-3:
-
-GSTR-3 report
-~~~~~~~~~~~~~
-
-The :ref:`GSTR-3 <india/gstr-3_report>` report is a monthly summary of **sales** and **purchases**.
-This return is auto-generated by extracting information from **GSTR-1** and **GSTR-2**.
-
-#. Users can compare the **GSTR-3** report with the **GSTR-3** report available on the
-   **GST portal** to verify if they match by clicking :guilabel:`GSTR-3 Report`;
-
-#. Once the **GSTR-3** report has been verified by the user and the tax amount on the **GST portal**
-   has been paid. Once paid, the report can be **closed** by clicking :guilabel:`Closing Entry`;
-
-   .. image:: india/gst-gstr-3-not_filed.png
-      :alt: GSTR-3
-
-#. In :guilabel:`Closing Entry`, add the tax amount paid on the **GST portal** using challan, and
-   click :guilabel:`POST` to post the :guilabel:`Closing Entry`;
-
-   .. image:: india/gst-gstr-3-post.png
-      :alt: GSTR-3 Post Entry
-
-#. Once posted, the **GSTR-3** report status changes to :guilabel:`Filed`.
-
-   .. image:: india/gst-gstr-3-filed.png
-      :alt: GSTR-3 Filed
-
-.. _india/gstr_reports:
-
-Tax reports
-===========
-
-.. _india/gstr-1_report:
-
-GSTR-1 report
--------------
-
-The :guilabel:`GSTR-1` report is divided into sections. It displays the :guilabel:`Base` amount,
-:abbr:`CGST (Central Goods and Services Tax)`, :abbr:`SGST (State Goods and Service Tax)`,
-:abbr:`IGST (Integrated Goods and Services Tax)`, and :guilabel:`CESS` for each section.
-
-   .. image:: india/gst-gstr-1-sale-report.png
-      :alt: GSTR-1 Report
-
-.. _india/gstr-3_report:
-
-GSTR-3 report
--------------
-
-The :guilabel:`GSTR-3` report contains different sections:
-
-- Details of inward and outward supply subject to a **reverse charge**;
-- Eligible :abbr:`ITC (Income Tax Credit)`;
-- Values of **exempt**, **Nil-rated**, and **non-GST** inward supply;
-- Details of inter-state supplies made to **unregistered** persons.
-
-   .. image:: india/gst-gstr-3-report.png
-      :alt: GSTR-3 Report
-
-Profit and Loss (IN) report
----------------------------
-
-This is a :guilabel:`Profit and Loss` report that displays the balances for **Opening Stock** and
-**Closing Stock**. It helps users using Continental accounting to accurately determine the cost of
-goods (i.e :guilabel:`Opening Stock` + purchases during the period - :guilabel:`Closing Stock`).
-
-   .. image:: india/profit-and-loss-report.png
-      :alt: Profit and Loss report
-
 .. _india/tds-tcs-threshold:
+
+.. _india/tds-tcs:
 
 TDS/TCS threshold alert
 =======================
@@ -669,8 +517,13 @@ Configuration
    Options` tab, click on the  :icon:`fa-arrow-right` :guilabel:`(internal link)` icon of the
    :guilabel:`Section` field.
 
-   .. image:: india/tds-tcs-section-modify.png
-      :alt: TDS/TCS section modify
+   .. screenshot:: finance-fl-india-tds-tcs-section-modify
+      :menu: Accounting ‣ Configuration ‣ Taxes ‣ (a TDS tax) ‣ Advanced Options tab
+      :shows: A TDS tax form, Advanced Options tab, with the "Section" field and its internal-link arrow; the opened "Section Alert" form shows the section code and the threshold amounts.
+      :highlight: The "Section" field and the internal link icon.
+      :data: Demo company "YourCompany IN" (GSTIN 24AAGCC7144L6ZE), Indian localization installed; NIC sandbox credentials.
+      :module: l10n_in_withholding
+      :notes: English UI, light theme, 1440px width.
 
 Applying TCS/TDS on invoices and bills
 --------------------------------------
@@ -680,15 +533,25 @@ limit. If the limit specified in the :guilabel:`TCS/TDS Section` of the account 
 displays an alert that suggests applying the appropriate TCS/TDS. The alert will disappear once the
 TCS/TDS is applied.
 
-.. image:: india/tcs-warning.png
-   :alt: TCS advice
+.. screenshot:: finance-fl-india-tcs-warning
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (an invoice above the threshold)
+   :shows: A customer invoice with the yellow alert banner suggesting to apply TCS under the section configured on the account, because the partner's aggregate amount exceeds the threshold.
+   :highlight: The alert banner.
+   :data: Demo company "YourCompany IN" (GSTIN 24AAGCC7144L6ZE), Indian localization installed; NIC sandbox credentials. Customer with PAN ABCPX1234E.
+   :module: l10n_in_withholding
+   :notes: English UI, light theme, 1440px width.
 
 **TCS** is directly applicable in the tax on the invoice lines. To apply **TDS**, click the
 :guilabel:`TDS Entry` smart button on the vendor bill/payment. The popup window allows specifying
 the TDS details. Confirm the entry to apply the TDS.
 
-.. image:: india/tds-apply.png
-   :alt: TDS application
+.. screenshot:: finance-fl-india-tds-apply
+   :menu: Accounting ‣ Vendors ‣ Bills ‣ (a bill) ‣ TDS Entry
+   :shows: The "TDS Entry" pop-up opened from the vendor bill smart button: the TDS section, base amount, TDS tax and amount fields, with the "Create" button.
+   :highlight: The TDS tax and amount fields.
+   :data: Demo company "YourCompany IN" (GSTIN 24AAGCC7144L6ZE), Indian localization installed; NIC sandbox credentials.
+   :module: l10n_in_withholding
+   :notes: English UI, light theme, 1440px width.
 
 In Odoo, the aggregate total is calculated for partners sharing the same PAN number, across all
 company branches.

@@ -65,6 +65,14 @@ For the fields shared by every third-party carrier, such as :guilabel:`Delivery 
    :guilabel:`Get Rate and Create Shipment`. With :guilabel:`Get Rate`, the method only computes
    prices at checkout and never contacts Foxpost at shipping time.
 
+.. screenshot:: setup-configuration-foxpost-configuration-tab
+   :menu: Inventory ‣ Configuration ‣ Delivery Methods ‣ Foxpost Parcelmachine
+   :shows: A Foxpost shipping method form with Provider set to "Foxpost" and the "Foxpost Configuration" tab open, showing the API User, API Password and API key fields and the delivery type selection.
+   :highlight: The "Foxpost Configuration" tab (red frame).
+   :data: Shipping method "Foxpost Parcelmachine"; use throw-away credentials.
+   :module: eyssen_delivery_foxpost
+   :notes: English UI, light theme, 1440px width.
+
 Credentials
 -----------
 

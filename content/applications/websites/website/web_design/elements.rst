@@ -21,8 +21,13 @@ To add or modify a website element:
    The default styles for headings, buttons, links, and paragraph text, for example, are defined in
    the :doc:`Theme tab <themes>` of the website editor.
 
-.. image:: elements/webdesign-elements.png
-   :alt: Type / to add website elements.
+.. screenshot:: website-elements-webdesign-elements
+   :menu: Website ‣ Edit ‣ (text area)
+   :shows: The powerbox drop-down menu opened by typing a forward slash in a text area, listing the website elements that can be inserted.
+   :highlight: The powerbox menu (red frame).
+   :data: Demo website 'My Website' in the website editor.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 .. _website/elements/titles:
 
@@ -144,8 +149,13 @@ website editor. To add a highlight:
 #. Modify its :guilabel:`Color`.
 #. Choose its :guilabel:`Thickness`.
 
-.. image:: elements/highlights-elements.png
-   :alt: Highlight texts and titles
+.. screenshot:: website-elements-highlights-elements
+   :menu: Website ‣ Edit ‣ (selected text)
+   :shows: A selected text with the text toolbar open on the highlight options, and a title already highlighted below it.
+   :highlight: The highlight options in the toolbar (red frame).
+   :data: Demo website 'My Website' in the website editor.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 .. _website/elements/animations:
 

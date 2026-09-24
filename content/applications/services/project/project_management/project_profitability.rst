@@ -29,8 +29,13 @@ displayed in both sections, e.g., the same timesheet is listed under :guilabel:`
 amount the customer paid for the work and under :guilabel:`Costs` with the amount of wages paid to
 the employees.
 
-.. image:: project_profitability/profitability-dashboard.png
-   :alt: Project dashboard.
+.. screenshot:: services-project-profitability-report
+   :menu: Project ‣ Projects ‣ (project card menu) ‣ Profitability
+   :shows: The project profitability report with the Revenues and Costs sections and the Expected, To invoice, Invoiced and Total columns.
+   :highlight: The three amount columns (red frame).
+   :data: Project "Boiler maintenance 2026" with timesheet revenues and employee costs.
+   :module: project, sale_timesheet
+   :notes: English UI, light theme, 1440px width, crop to the report table.
 
 The amounts displayed in the profitability report are divided into three columns:
 

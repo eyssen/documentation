@@ -18,11 +18,8 @@ specifying the weight, are used to weigh products and generate a barcode depicti
 price. The `21` and five-digit weight is the barcode pattern used to identify the barcode and can be
 customized to ensure Odoo correctly interprets all barcodes for the business.
 
-.. note::
-   Barcodes are also commonly used with Odoo's **Inventory** and **Barcode** apps.
-
-Odoo **Barcode** supports |EAN|, Universal Product Code (UPC), and :doc:`GS1 <gs1_nomenclature>`
-formats. This document exclusively focuses on :ref:`default rules and patterns in Odoo
+Odoo supports |EAN|, Universal Product Code (UPC), and :doc:`GS1 <gs1_nomenclature>` formats. This
+document exclusively focuses on :ref:`default rules and patterns in Odoo
 <barcode/operations/default-nomenclature-list>`, which use |UPC| and |EAN| encoding.
 
 .. important::
@@ -37,21 +34,17 @@ formats. This document exclusively focuses on :ref:`default rules and patterns i
 Configuration
 =============
 
-To use default nomenclature, navigate to :menuselection:`Inventory app --> Configuration -->
-Settings`. Under the :guilabel:`Barcode` section, tick the :guilabel:`Barcode Scanner` checkbox.
-Doing so installs the **Barcode** app in the database.
+The :guilabel:`Default Nomenclature` is active for every company out of the box, so the barcode
+actions using |UPC| and |EAN| detailed in the :ref:`default nomenclature list
+<barcode/operations/default-nomenclature-list>` are available for use immediately, with no
+configuration step required; Odoo also automatically handles |UPC|/|EAN| conversion.
 
-Next, in the :guilabel:`Barcode Nomenclature` field, ensure :guilabel:`Default Nomenclature` is
-selected. Then, click :guilabel:`Save`.
-
-.. image:: barcode_nomenclature/enable-nomenclature.png
-   :align: center
-   :alt: Enabled barcode setting with Default Nomenclature selected.
-
-With the **Barcode** module installed, and the :guilabel:`Default Nomenclature` selected, the
-barcode actions using |UPC| and |EAN|, detailed in the :ref:`default nomenclature list
-<barcode/operations/default-nomenclature-list>`, are available for use. And, by default, Odoo
-automatically handles |UPC|/|EAN| conversion.
+If the *Point of Sale* app is installed, the active nomenclature for the company (which rule set
+new barcodes are matched against everywhere, not only in Point of Sale) can be changed from
+:menuselection:`Point of Sale app --> Configuration --> Settings --> Barcode Nomenclature`. To
+inspect or edit the rules of a nomenclature directly, see :ref:`Create rules
+<barcode/operations/create-nomenclature-rules>` below, which uses the same :guilabel:`Barcode Nomenclatures`
+technical menu regardless of whether *Point of Sale* is installed.
 
 .. _barcode/operations/product-weight:
 
@@ -59,7 +52,7 @@ Example: product weight barcode
 ===============================
 
 To better understand how barcode nomenclature is used to identify products in Odoo, this example
-where product weight barcodes in |EAN| format are used to allow a :doc:`Point of Sale
+shows how product weight barcodes in |EAN| format allow a :doc:`Point of Sale
 <../../../sales/point_of_sale>` business to automatically print barcodes, and calculate the price
 using the weight of the item.
 
@@ -94,26 +87,34 @@ To configure the product barcode for `Pasta Bolognese`, the |EAN| barcode for we
 going to :menuselection:`Inventory app --> Products --> Products`, and selecting the desired
 product). In addition, the :guilabel:`Unit of Measure` is set to :guilabel:`kg`.
 
-.. image:: barcode_nomenclature/barcode.png
-   :align: center
-   :alt: Barcode field on the product form.
+.. screenshot:: barcode-nomenclature-product-barcode-field
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ General Information
+   :shows: The "Barcode" field on the product form filled in with "2112345000008".
+   :highlight: The "Barcode" field (red frame).
+   :data: Product "Pasta Bolognese", unit of measure "kg".
+   :module: product
+   :notes: English UI, light theme, 1440px width.
 
 Next, a customer's bowl of pasta is weighed to be `1.5` kilograms. This generates a new barcode for
 the pasta, according to the weight: `211234501500`, which has a check digit of `2`. The new barcode
 is `2112345015002`.
 
-.. image:: barcode_nomenclature/weighted-barcode.png
-   :align: center
-   :alt: Generated barcode that includes a weight of 1.5 kg.
+.. screenshot:: barcode-nomenclature-weighted-barcode
+   :menu: (diagram)
+   :shows: An illustration of the generated weighted barcode "2112345015002" broken down into its
+      AI/product/weight/check-digit segments (the same breakdown as the earlier example table).
+   :highlight: n/a
+   :data: n/a
+   :module: barcodes
+   :notes: Simple schematic drawing, not an Odoo screenshot.
 
-Ensure the products scan properly, by navigating to the :menuselection:`Barcode app --> Operations`.
-Next, click any operation type, such as :guilabel:`Receipts`. Then, click the :guilabel:`New` button
-to create a draft stock move. Scan the product weight barcode, such as `2112345015002`, and if the
-intended product appears, the barcode setup is correct.
+To confirm the barcode is read correctly, scan it into any barcode-enabled field, such as the
+:guilabel:`Barcode` search filter on :menuselection:`Inventory app --> Products --> Products`, or
+the barcode-scanner button on a draft transfer (see
+:doc:`../../inventory/product_management/stock_helpers`); if the intended product appears, the
+barcode setup is correct.
 
-.. image:: barcode_nomenclature/barcode-scan.png
-   :align: center
-   :alt: Show successfully scanned barcode.
+.. _barcode/operations/create-nomenclature-rules:
 
 Create rules
 ============
@@ -122,9 +123,8 @@ Create rules
    Adding new rules is necessary for |UPC| and |EAN| formats that are **not** in Odoo's default
    list, since barcodes cannot be read successfully if there are unknown fields.
 
-    While new rules can be created, Odoo fields do **not** auto-populate with information from these
-    rules. `Custom development <https://www.odoo.com/appointment/132>`_ is required for this
-    functionality.
+   While new rules can be created, Odoo fields do **not** auto-populate with information from these
+   rules; custom development is required for that.
 
 To create a rule, first enable :ref:`developer mode <developer-mode>`. Then, navigate to
 :menuselection:`Inventory app --> Configuration --> Barcode Nomenclatures`, and select
@@ -138,9 +138,14 @@ On this page, configure the following optional fields:
 - :guilabel:`Is GS1 Nomenclature`: ensure this checkbox is **not** ticked, as the
   :guilabel:`Default Nomenclature` uses |UPC| and |EAN| encoding, *not* GS1 encoding.
 
-.. image:: barcode_nomenclature/rule-config.png
-   :align: center
-   :alt: Default Nomenclature page setting fields.
+.. screenshot:: barcode-nomenclature-rule-config
+   :menu: Inventory ‣ Configuration ‣ Barcode Nomenclatures ‣ Default Nomenclature
+   :shows: The "Default Nomenclature" page's header fields, "UPC/EAN Conversion" and "Is GS1
+      Nomenclature".
+   :highlight: The two fields (red frame).
+   :data: n/a
+   :module: barcodes
+   :notes: English UI, light theme, 1440px width, requires developer mode enabled.
 
 On the :guilabel:`Default Nomenclature` page, click :guilabel:`Add a line` at the bottom of the
 table, which opens a :guilabel:`Create Rules` pop-up window to create a new rule.

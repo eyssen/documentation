@@ -8,9 +8,6 @@ Explore the various aspects of the Odoo **Events** detailed dashboard, and usefu
 be utilized to generate and gather valuable data about events (and their attendees), which can then
 be used to improve decision-making and event-planning.
 
-.. seealso::
-   `Odoo Tutorials: Events <https://www.odoo.com/slides/surveys-63>`_
-
 .. cards::
 
    .. card:: Create events
@@ -63,9 +60,12 @@ can be viewed in a number of different ways. Those different view options are ac
 By default, the :guilabel:`Events` dashboard is displayed in the :icon:`oi-view-kanban`
 :guilabel:`Kanban` view, which is populated with a variety of pipeline stages.
 
-.. image:: events/kanban-dashboard.png
-   :align: center
-   :alt: Overview of events setting with the kanban view in Odoo Events.
+.. screenshot:: events-events-kanban-dashboard
+   :menu: Events ‣ Events
+   :shows: The Events kanban dashboard with one card per event showing the dates, the number of registered attendees and the progress bar.
+   :data: Three demo events in different stages.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 This view showcases all the events in the database in their respective stages. By default, the
 stages are: :guilabel:`New`, :guilabel:`Booked`, :guilabel:`Announced`, :guilabel:`Ended`, and
@@ -82,9 +82,13 @@ of the event, and the person responsible for the event.
 To quickly add a new event to a pipeline, click the :icon:`fa-plus` :guilabel:`(plus)` icon at the
 top of the stage to which the event should be added to reveal a blank Kanban card to fill out.
 
-.. image:: events/blank-kanban-card.png
-   :align: center
-   :alt: Typical blank kanban card to fill out in the Odoo Events application.
+.. screenshot:: events-events-blank-kanban-card
+   :menu: Events ‣ Events ‣ New
+   :shows: The inline quick-create card on the Events kanban with the Event Name, Start Date, End Date and Template fields.
+   :highlight: The quick-create card (red frame).
+   :data: Empty quick-create card.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 In this blank Kanban card, enter the name of :guilabel:`Event`, along with the start and end
 :guilabel:`Date` and time.
@@ -108,9 +112,13 @@ Events section
 In the :guilabel:`Events` section of the :guilabel:`Settings` page, there are selectable features
 that can be enabled to add various elements to events created with the Odoo **Events** application.
 
-.. image:: events/settings-events-section.png
-   :align: center
-   :alt: The Events section on the Odoo Events settings page in the Odoo Events application.
+.. screenshot:: events-events-settings-events-section
+   :menu: Events ‣ Configuration ‣ Settings
+   :shows: The Events section of the Events settings page with the Schedule & Tracks, Online Exhibitors, Jitsi Server Domain, Community Chat Rooms and Booth Management options.
+   :highlight: The Events section (red frame).
+   :data: Demo company 'YourCompany'.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 The :guilabel:`Schedule & Tracks` feature allows users to manage and publish a schedule with tracks
 for events. *Tracks* is a catch-all term that refers to talks, lectures, demonstrations,
@@ -148,9 +156,13 @@ Registration section
 The :guilabel:`Registration` section of the :guilabel:`Settings` page provides selectable settings
 that are directly related to event registration.
 
-.. image:: events/settings-registration-section.png
-   :align: center
-   :alt: The Registration section in the Odoo Events settings page in the Odoo Events application.
+.. screenshot:: events-events-settings-registration-section
+   :menu: Events ‣ Configuration ‣ Settings
+   :shows: The Registration section of the Events settings page with the Tickets and Online Ticketing options.
+   :highlight: The Registration section (red frame).
+   :data: Demo company 'YourCompany'.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 The :guilabel:`Tickets` setting allows users to sell event tickets, via standard sales orders.
 
@@ -164,9 +176,13 @@ Attendance section
 In the :guilabel:`Attendance` section of the :guilabel:`Settings` page, there is a selectable
 setting that is directly related to how attendees can attend/enter the event.
 
-.. image:: events/settings-attendance-section.png
-   :align: center
-   :alt: The Attendance section in the Odoo Events Settings page in the Odoo Events application.
+.. screenshot:: events-events-settings-attendance-section
+   :menu: Events ‣ Configuration ‣ Settings
+   :shows: The Attendance section of the Events settings page with the Barcode / Badge option.
+   :highlight: The Attendance section (red frame).
+   :data: Demo company 'YourCompany'.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 The :guilabel:`Use Event Barcode` setting, when activated, enables barcode (and QR code) scanning
 for attendees to enter the event. This provides attendees with quick access, and helps Odoo users
@@ -174,6 +190,56 @@ easily track, manage, and analyze all event attendees.
 
 The :guilabel:`Barcode Nomenclature` field, beneath the :guilabel:`Use Event Barcode` setting, is
 set to :guilabel:`Default Nomenclature`, by default, but can be changed at any time.
+
+.. _events/stages:
+
+Event stages
+============
+
+The events on the dashboard are organized in stages, which describe where each event stands in its
+preparation. The default stages are :guilabel:`New`, :guilabel:`Booked`, :guilabel:`Announced`,
+:guilabel:`Ended` and :guilabel:`Cancelled`; they can be renamed, reordered and completed under
+:menuselection:`Events app --> Configuration --> Event Stages`.
+
+A stage has:
+
+- :guilabel:`Stage Name` and :guilabel:`Stage description`;
+- :guilabel:`Folded in Kanban`: the stage's column is collapsed on the dashboard, which keeps
+  finished or cancelled events out of the way;
+- :guilabel:`End Stage`: events are moved into this stage automatically once they are over;
+- the three kanban state labels (:guilabel:`Red`, :guilabel:`Green` and :guilabel:`Grey Kanban
+  Label`), which rename the status a user can set on an event card, for example to mark an event as
+  blocked.
+
+.. screenshot:: events-events-event-stages
+   :menu: Events ‣ Configuration ‣ Event Stages
+   :shows: The Event Stages list with the default stages, their sequence and the Folded in Kanban and End Stage columns.
+   :highlight: The End Stage column (red frame).
+   :data: The five default event stages.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
+
+.. _events/tags:
+
+Event tags
+==========
+
+Events are categorized with tags, and the tags themselves are grouped into categories
+(:menuselection:`Events app --> Configuration --> Event Tags Categories`). A category — for example
+*Format* or *Audience* — holds its own tags, and the order of both the categories and their tags is
+set by their sequence.
+
+A tag's :guilabel:`Color Index` decides whether it is public: a tag without a color is only visible
+internally, while a colored tag is also displayed on the event website, where visitors can filter
+the events by it.
+
+.. screenshot:: events-events-event-tag-categories
+   :menu: Events ‣ Configuration ‣ Event Tags Categories ‣ (category)
+   :shows: An event tag category with its name, sequence and the list of its tags with their colors.
+   :highlight: The tag list with the colors (red frame).
+   :data: Category "Format" with the tags "Online", "On site" and an uncolored internal tag.
+   :module: event
+   :notes: English UI, light theme, 1440px width.
 
 Create events
 =============

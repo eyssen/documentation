@@ -35,9 +35,14 @@ Next, go to the :guilabel:`Inventory` tab, and enable the :guilabel:`Buy` route.
    :doc:`Configure product types and track quantities
    <../../../inventory_and_mrp/inventory/product_management/configure>`
 
-.. image:: rfq/product-vendor-pricelist-config.png
-   :alt: Required configuration for purchasable products.
-
+.. screenshot:: purchase-rfq-product-purchase-config
+   :menu: Purchase ‣ Products ‣ Products ‣ (open a product)
+   :shows: Product form with the "Purchase" checkbox ticked below the product name, the Inventory
+           tab open, and the "Buy" route enabled.
+   :highlight: The "Purchase" checkbox and the "Buy" route (red frame).
+   :data: Demo company "YourCompany"; product "Office Chair Black".
+   :module: purchase
+   :notes: English UI, light theme, 1440px width.
 
 .. _purchase/manage_deals/vendor-pricelist:
 
@@ -59,11 +64,58 @@ To enable or disable columns, click the :icon:`oi-settings-adjust` :guilabel:`(a
 icon on the right side of the header row to reveal a drop-down menu of additional columns that can
 be added (or removed) from the :guilabel:`Purchase` tab.
 
+Additional columns worth enabling on a vendor pricelist line:
+
+- :guilabel:`Company`: restricts the price to a single company, in a multi-company database. Leave
+  it empty to make the price available to every company.
+- :guilabel:`Variant`: restricts the price to a single product variant. Leave it empty to apply the
+  price to every variant of the product.
+- :guilabel:`Validity`: two dates (:guilabel:`Start Date` and :guilabel:`End Date`) after which the
+  vendor price is no longer used to auto-populate |RFQs|. Leave them empty for a price that never
+  expires.
+
 .. note::
    Alternatively, prices and delivery lead times for existing products can be added by going to
    :menuselection:`Purchase app --> Configuration --> Vendor Pricelists`. Click :guilabel:`New` in
    the top-left corner. In the :guilabel:`Vendor` section of the pricelist form that appears, add
    the product information as it pertains to the vendor.
+
+   .. note::
+      This list can also show a :guilabel:`Created on` column (enable it via the
+      :icon:`oi-settings-adjust` :guilabel:`(additional options)` icon), which is useful for
+      auditing when a vendor price was entered.
+
+Vendors column on the product list
+-----------------------------------
+
+The :guilabel:`Products` list, under :menuselection:`Purchase app --> Products --> Products`, shows
+a :guilabel:`Vendors` column listing every vendor with a price on that product's vendor pricelist.
+Products can also be grouped by :guilabel:`Vendor`, via :menuselection:`Group By --> Vendor` in the
+search bar.
+
+.. note::
+   This column and grouping option are provided by the *eYssen Purchase* module
+   (`eyssen_purchase`).
+
+Warnings
+--------
+
+To display a custom message, or block the order, whenever a specific vendor or product is added to
+a purchase order, first navigate to :menuselection:`Purchase app --> Configuration --> Settings`,
+and under the :guilabel:`Orders` section, tick the :guilabel:`Warnings` checkbox. Then click
+:guilabel:`Save`.
+
+Next, set the warning on a vendor by going to their contact form, and, in the :guilabel:`Sales &
+Purchase` tab, under the :guilabel:`Purchase` section, select :guilabel:`Warning` or
+:guilabel:`Blocking Message` in the :guilabel:`Purchase Order Warning` field, and enter the message
+to display.
+
+To set a warning on a product instead, go to the product form, click the :guilabel:`Purchase` tab,
+and configure the same way in the :guilabel:`Purchase Order Line Warning` field.
+
+- :guilabel:`Warning`: a pop-up notifies the user of the message, but the order can still proceed.
+- :guilabel:`Blocking Message`: a pop-up displays the message, and the vendor (or product) is
+  removed from the order.
 
 Order products
 ==============
@@ -89,8 +141,14 @@ Additionally, the dashboard includes buttons for:
 - :guilabel:`Waiting`: |RFQs| that have been sent by email, and are waiting on vendor confirmation.
 - :guilabel:`Late`: |RFQs| or |POs| where the :guilabel:`Order Deadline` has passed.
 
-.. image:: rfq/rfq-dashboard.png
-   :alt: RFQ dashboard with orders and order statuses.
+.. screenshot:: purchase-rfq-dashboard
+   :menu: Purchase ‣ Orders ‣ Requests for Quotation
+   :shows: The Requests for Quotation list with the To Send/Waiting/Late buttons and the recent
+           purchases report at the top-right.
+   :highlight: The To Send, Waiting, and Late buttons.
+   :data: Demo company "YourCompany"; a handful of RFQs and POs in different states.
+   :module: purchase
+   :notes: English UI, light theme, 1440px width.
 
 In addition to view options, the :guilabel:`Requests for Quotation` dashboard provides
 :guilabel:`Filters` and :guilabel:`Group By` options, accessible via the search bar drop-down menu.
@@ -105,6 +163,14 @@ Create a new |RFQ|
 
 To create a new |RFQ|, click the :guilabel:`New` button on the top-left corner of the
 :guilabel:`Requests for Quotation` dashboard to reveal a new |PO| form.
+
+.. note::
+   With the *Process Number - Purchase* module (`process_number_purchase`) installed, a
+   :guilabel:`Process Number` field appears above the |RFQ| form, with a :guilabel:`Create a new
+   process number` link. See :doc:`../../../general/process_numbers` for the concept of a
+   process number. To have a process number created automatically for every new |RFQ|, enable
+   :guilabel:`Create Automatically` in the :guilabel:`Process Number` section of
+   :menuselection:`Settings --> eYssen ERP`.
 
 Start by assigning a :guilabel:`Vendor`.
 
@@ -132,6 +198,14 @@ their agreement to supply the products.
 :guilabel:`Expected Arrival` is automatically calculated based on the :guilabel:`Order Deadline` and
 vendor lead time. Tick the checkbox for :guilabel:`Ask confirmation` to ask the vendor to confirm
 the shipping date by email.
+
+.. note::
+   :guilabel:`Ask confirmation` only appears if the :guilabel:`Receipt Reminder` setting is enabled,
+   under :menuselection:`Purchase app --> Configuration --> Settings`. When enabled, Odoo
+   automatically emails a reminder to the vendor a set number of days before the expected receipt,
+   for any |PO| where :guilabel:`Ask confirmation` was ticked and the vendor has not yet confirmed.
+   The number of days is set per vendor, on the :guilabel:`Sales & Purchase` tab of their contact
+   form, in the :guilabel:`Days Before Receipt` field.
 
 With the :doc:`Storage Locations feature
 <../../inventory/warehouses_storage/inventory_management/use_locations>` activated, the
@@ -171,6 +245,38 @@ here, products can be added to the cart.
    To make adjustments to products and prices, access the product form by clicking the
    :icon:`oi-arrow-right` :guilabel:`(right arrow)` icon that becomes available upon hovering over
    the :guilabel:`Product` name.
+
+.. tip::
+   With the :guilabel:`Variant Grid Entry` setting enabled, under :menuselection:`Purchase app -->
+   Configuration --> Settings`, in the :guilabel:`Products` section, products with several variants
+   (size, color, etc.) can be added to the |RFQ| through a grid, instead of one variant at a time.
+   This mirrors the *Sales* app feature described in :doc:`the Sales documentation
+   <../../../sales/sales/sales_quotations/orders_and_variants>`; on a purchase order the setting is
+   named :guilabel:`Variant Grid Entry` rather than :guilabel:`Order Grid Entry`.
+
+Add items from a previous purchase order
+++++++++++++++++++++++++++++++++++++++++
+
+On a draft |RFQ|, click the :icon:`fa-files-o` :guilabel:`(add previous items)` button, above the
+:guilabel:`Products` tab, to copy the product lines of an earlier purchase order into the current
+one.
+
+In the :guilabel:`Add Previous Items` pop-up window, select the :guilabel:`Previous Purchase` to
+copy lines from, and choose what should happen :guilabel:`If Product Duplication` occurs (i.e., the
+current |RFQ| already has a line for one of the copied products):
+
+- :guilabel:`Stop`: cancels the whole operation with an error message.
+- :guilabel:`Skip`: leaves the existing line untouched, and copies over the remaining lines.
+- :guilabel:`Replace`: overwrites the existing line's quantity and price with the copied values.
+- :guilabel:`Increase`: adds the copied quantity to the existing line's quantity, and applies the
+  copied price.
+
+Click :guilabel:`Add` to copy the lines onto the current |RFQ|.
+
+.. note::
+   This feature is provided by the *Add Items from Previous Purchase* module
+   (`eyssen_add_item_from_previous_purchase`), and is only available while the |RFQ| is in the
+   :guilabel:`RFQ` (draft) stage.
 
 Send the |RFQ|
 --------------
@@ -218,3 +324,57 @@ documentation on :doc:`managing vendor bills <manage>`.
 
 .. seealso::
    :doc:`manage`
+
+.. _purchase/manage_deals/po-approval:
+
+Purchase order approval
+------------------------
+
+To require a manager's approval before a purchase order over a certain amount can be confirmed,
+navigate to :menuselection:`Purchase app --> Configuration --> Settings`, and under the
+:guilabel:`Orders` section, tick the :guilabel:`Purchase Order Approval` checkbox. Then, in the
+:guilabel:`Minimum Amount` field that appears, enter the threshold amount, and click
+:guilabel:`Save`.
+
+Once this setting is enabled, confirming an |RFQ| whose total is above the minimum amount moves it
+to the :guilabel:`To Approve` stage, instead of directly to :guilabel:`Purchase Order`. A user with
+the *Purchase Manager* role can then click :guilabel:`Approve Order` to confirm it.
+
+Lock confirmed orders
+-----------------------
+
+To prevent confirmed purchase orders from being edited, navigate to :menuselection:`Purchase app -->
+Configuration --> Settings`, and under the :guilabel:`Orders` section, tick the :guilabel:`Lock
+Confirmed Orders` checkbox, then click :guilabel:`Save`.
+
+With this setting enabled, every |PO| is automatically set to the :guilabel:`Locked` status once
+confirmed. To manually lock (or unlock) an individual order regardless of the setting, click the
+:guilabel:`Lock` (or :guilabel:`Unlock`) button on the |PO| form; unlocking requires the *Purchase
+Manager* role.
+
+Purchase order status
+-----------------------
+
+Throughout its lifecycle, a purchase order moves through the following statuses, shown at the top of
+the form:
+
+- :guilabel:`RFQ`: the initial, unconfirmed, draft state.
+- :guilabel:`RFQ Sent`: the request for quotation has been emailed to the vendor.
+- :guilabel:`To Approve`: the order total is above the :ref:`approval threshold
+  <purchase/manage_deals/po-approval>`, and is waiting for a manager to approve it.
+- :guilabel:`Purchase Order`: the order has been confirmed (or approved).
+- :guilabel:`Locked`: the confirmed order can no longer be edited.
+- :guilabel:`Cancelled`: the order was cancelled.
+
+Order quantity totals
+-----------------------
+
+On the |PO| form, next to the tax totals under the :guilabel:`Products` tab, a :guilabel:`Sum Qty`
+block lists the total ordered quantity of each unit of measure used on the order (for example, `12
+Units` and `3 kg`), together with the number of distinct storable products and services on the
+order. A shorter version of this total, such as `2 P, 15 Qty`, is also available as an optional
+column (:guilabel:`Sum Qty`) on the :guilabel:`Requests for Quotation` and purchase order lists.
+
+.. note::
+   This feature is provided by the *Add Quantity Total for Purchase* module
+   (`eyssen_quantity_total_purchase`).

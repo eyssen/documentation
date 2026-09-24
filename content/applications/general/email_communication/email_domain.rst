@@ -6,17 +6,14 @@ This documentation presents three complementary authentication protocols (SPF, D
 to prove the legitimacy of an email sender. Not complying with these protocols will greatly reduce
 chances of your emails to reach their destination.
 
-**Odoo Online** and **Odoo.sh** databases using the **default Odoo subdomain address** (e.g.,
-`\@company-name.odoo.com`) are pre-configured to **send authenticated emails** compliant with the
-SPF, DKIM, and DMARC protocols.
-
-If choosing to use a **custom domain** instead, **configuring SPF and DKIM records correctly is
+When emails are sent from a **custom domain**, **configuring SPF and DKIM records correctly is
 essential** to prevent emails from being quarantined as spam or not being delivered to recipients.
 
-If using :ref:`the default Odoo email server to send emails from a custom domain
-<email-outbound-custom-domain-odoo-server>`, the SPF and DKIM records must be configured as
-presented below. If using an outgoing email server, it is required to use the SPF and DKIM records
-specific to that email service and a custom domain.
+The records must authorize the mail server that actually sends the emails: the :ref:`default mail
+server <email-outbound-custom-domain-odoo-server>` of the Odoo server configuration, or the
+:ref:`external outgoing mail server <email-outbound-custom-domain-smtp-server>` configured in the
+database. The exact values (SPF `include` or IP addresses, DKIM selector and key) are provided by
+the operator of that mail server, e.g., the hosting provider or the email service.
 
 .. note::
    Email service providers apply different rules to incoming emails. An email may be classified as
@@ -39,18 +36,20 @@ Domain` field found under the database's :guilabel:`General Settings`. If using 
 The SPF policy of a domain is set using a TXT record. The way to create or modify this record
 depends on the provider hosting the :abbr:`DNS (Domain Name System)` zone of the domain name.
 
-If the domain name does not yet have an SPF record, create one using the following input:
+If the domain name does not yet have an SPF record, create one using the value given by the mail
+server operator, for example:
 
 .. code-block:: bash
 
-   v=spf1 include:_spf.odoo.com ~all
+   v=spf1 include:_spf.mail-provider.example ~all
 
 If the domain name **already has an SPF record, the record must be updated**. Do not create a new
 one, as a domain must have only one SPF record.
 
 .. example::
    If the TXT record is `v=spf1 include:_spf.google.com ~all`, edit it to add
-   `include:_spf.odoo.com`: `v=spf1 include:_spf.odoo.com include:_spf.google.com ~all`
+   `include:_spf.mail-provider.example`: `v=spf1 include:_spf.mail-provider.example
+   include:_spf.google.com ~all`
 
 Check the SPF record using a tool like `MXToolbox SPF Record Check
 <https://mxtoolbox.com/spf.aspx>`_. The process to create or modify an SPF record depends on the
@@ -64,32 +63,30 @@ DKIM (DomainKeys Identified Mail)
 
 The DomainKeys Identified Mail (DKIM) allows a user to authenticate emails with a digital signature.
 
-When sending an email, the Odoo email server includes a unique :abbr:`DKIM (DomainKeys Identified
+When sending an email, the outgoing mail server includes a unique :abbr:`DKIM (DomainKeys Identified
 Mail)` signature in the headers. The recipient's server decrypts this signature using the DKIM
 record in the database's domain name. If the signature and the key contained in the record match, it
 proves the message is authentic and has not been altered during transport.
 
-Enabling DKIM is **required** when sending emails **from a custom domain** using the Odoo email
-server.
+DKIM signing is performed by the mail server, not by Odoo itself. Enabling DKIM is **strongly
+recommended** when sending emails **from a custom domain**.
 
-To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to the :abbr:`DNS (Domain Name System)`
-zone of the domain name:
+To enable DKIM, add the record provided by the mail server operator to the :abbr:`DNS (Domain Name
+System)` zone of the domain name. Depending on the operator, it is a TXT record containing the
+public key, or a :abbr:`CNAME (Canonical Name)` record pointing to the operator's key, published
+under a *selector*, for example:
 
 .. code-block:: bash
 
-   odoo._domainkey IN CNAME odoo._domainkey.odoo.com.
-
-.. tip::
-   If the domain name is `company-name.com`, make sure to create a subdomain
-   `odoo._domainkey.company-name.com` whose canonical name is `odoo._domainkey.odoo.com.`.
+   selector1._domainkey IN TXT "v=DKIM1; k=rsa; p=<public key>"
 
 The way to create or modify a CNAME record depends on the provider hosting the DNS zone of the
 domain name. The :ref:`most common providers <email-domain-providers-documentation>` and their
 documentation are listed below.
 
 Check if the DKIM record is valid using a tool like `MXToolbox DKIM Record Lookup
-<https://mxtoolbox.com/dkim.aspx>`_. Enter `example.com:odoo` in the DKIM lookup tool, specifying
-that the selector being tested is `odoo` for the custom domain `example.com`.
+<https://mxtoolbox.com/dkim.aspx>`_. Enter `example.com:selector1` in the DKIM lookup tool,
+specifying that the selector being tested is `selector1` for the custom domain `example.com`.
 
 .. _email-domain-dmarc:
 
@@ -117,8 +114,7 @@ ignore it if the SPF or DKIM check fails.
 
 .. note::
    **For the DMARC to pass, the DKIM or SPF check needs to pass** and the domains must be in
-   alignment. If the hosting type is Odoo Online, DKIM configuration on the sending domain is
-   required to pass the DMARC.
+   alignment. Configuring DKIM on the sending domain is the most reliable way to pass the DMARC.
 
 Passing DMARC generally means that the email will be successfully delivered. However, it's important
 to note that **other factors like spam filters can still reject or quarantine a message**.
@@ -151,5 +147,4 @@ used to configure records for other, lesser-known providers.
 .. seealso::
    - `Using Mail-Tester to set SPF Records for specific carriers
      <https://www.mail-tester.com/spf/>`_
-   - `Magic Sheet - SPF, DKIM and DMARC configuration [PDF]
-     <https://drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_
+

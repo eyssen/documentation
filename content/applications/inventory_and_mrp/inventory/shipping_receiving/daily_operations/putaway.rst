@@ -14,9 +14,6 @@ In warehouses that process specific kinds of products, putaway rules can also pr
 substances from being stored in close proximity, by directing them to different locations determined
 by the warehouse manager.
 
-.. seealso::
-   `Odoo Tutorials: Putaway Rules <https://www.youtube.com/watch?v=nCQMf6sj_w8>`_
-
 Configuration
 =============
 
@@ -26,8 +23,12 @@ so, the :guilabel:`Storage Locations` feature is also automatically activated.
 
 Finally, click :guilabel:`Save`.
 
-.. image:: putaway/activate-multi-step-routes.png
-   :alt: Activate Multi-Step Routes in Inventory configuration settings.
+.. screenshot:: daily-operations-putaway-activate-multi-step-routes
+   :menu: Inventory app ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to "Warehouse", with the "Storage Locations" and "Multi-Step Routes" checkboxes enabled.
+   :highlight: Both checkboxes (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. _inventory/routes/putaway-rule:
 
@@ -62,8 +63,12 @@ easier to find).
 
    Repeat this for all products and hit :guilabel:`Save`.
 
-   .. image:: putaway/create-putaway-rules.png
-      :alt: Create putaway rules for apples and carrots.
+   .. screenshot:: daily-operations-putaway-create-rules
+      :menu: Inventory ‣ Configuration ‣ Putaway Rules
+      :shows: The putaway rules list with two rules, each sending a product to a different storage location.
+      :data: Rules for "Apple" to WH/Stock/Shelf 1 and "Carrot" to WH/Stock/Shelf 2.
+      :module: stock
+      :notes: English UI, light theme, 1440px width.
 
 Use the :guilabel:`Sublocation` field to specify whether to use a sublocation or specify a
 storage category:
@@ -108,6 +113,10 @@ match is found:
    #. The product `Lemonade can` is redirected to `WH/Stock/Shelf 2`
    #. Items in the `All/drinks` product category are redirected to `WH/Stock/Small Refrigerator`.
 
-  .. image:: putaway/putaway-example.png
-     :alt: Some examples of putaway rules.
+  .. screenshot:: daily-operations-putaway-example
+     :menu: Inventory ‣ Configuration ‣ Putaway Rules
+     :shows: The putaway rules list showing several rules of different scope (product, product category, package type) in priority order.
+     :highlight: The order of the rules (red frame).
+     :module: stock
+     :notes: English UI, light theme, 1440px width.
 

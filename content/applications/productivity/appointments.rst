@@ -1,209 +1,254 @@
 :show-content:
-:hide-toc:
 
 ============
 Appointments
 ============
 
-Odoo's **Appointments** app is a self-service scheduling app that simplifies the process of booking
-meetings, consultations, or services. Integrated with Odoo's suite of business apps, it allows
-companies to automate appointment scheduling, reduce manual coordination, and provide a seamless
-experience for clients. Appointments can be linked to calendars, **CRM** opportunities, employee
-schedules, and more, making it an ideal tool for service-based businesses seeking efficiency and
-organization.
-
-Configuration
-=============
-
-The **Appointments** app allows for new appointments to be scheduled based on the availability of
-users, or the availability of *resources*, such as meeting rooms or seating areas. To create a new
-resource, or manage existing resources, navigate to :menuselection:`Appointments --> Configuration
---> Resources`. This opens a list of the available resources in the database, as well as their
-individual capacity.
-
-.. _appointments/resources:
-
-Resources
----------
-
-Click :guilabel:`New` to create a new resource. On the blank record, enter a :guilabel:`Name` for
-the new resource. In the :guilabel:`Capacity` field, enter the maximum number of people the resource
-can accommodate. Then, confirm the :guilabel:`Timezone` for this resource.
-
-If desired, select one or more :guilabel:`Linked Resource` from the drop-down. This option
-designates one or more resources that can be used in combination to handled a bigger demand.
-
-.. important::
-   *Linked resources* are only used when using the :ref:`auto-assign <appointments/configure>`
-   :guilabel:`Assignment Method`.
-
-Lastly, add a :guilabel:`Description` for this resource.
-
-.. note::
-   The contents of the :guilabel:`Description` tab are visible to customers when booking an
-   appointment online.
-
-.. _appointments/configure:
-
-Appointment type configuration
-==============================
-
-Before appointments can be scheduled or booked, an appointment type must be created. Navigate to the
-:menuselection:`Appointments` app dashboard and click :guilabel:`New`. On the new blank record,
-enter an :guilabel:`Appointment Title`, then set a :guilabel:`Duration` for this appointment type.
-
-Next, set a :guilabel:`Pre-Booking Time`. This is the minimum amount of time between when an
-appointment can be booked and when the appointment can begin. If the :guilabel:`Pre-Booking Time` is
-`1` hour, appointments must be booked *at least* `1` hour in advance.
-
-.. example::
-    An appointment type is created for `Tennis Courts`, with a :guilabel:`Duration` of `1` hour, and
-    a :guilabel:`Pre-Booking Time` of `1` hour. At `02:00` PM, a customer attempts to book an
-    appointment for the same day at `02:45` pm. The first available time is `04:00` pm.
-
-    .. image:: appointments/pre-booking-example.png
-       :alt: An example of the booking calendar showing available times.
-
-Select a :guilabel:`Scheduling Window`:
-
-- Select :guilabel:`Available now` to allow customers to book an appointment immediately. Use the
-  :guilabel:`Up to X days into the future` field to define how far in advance customers can schedule
-  appointments. For example, if `14` is entered, customers cannot book anything more than 14 days
-  from the current date.
-- Select :guilabel:`Within a date range` to limit bookings to a specific range of dates. After
-  selecting this option, click the :guilabel:`From` and :guilabel:`to` fields, and use the calendar
-  pop-up window to customize the date and time range.
-
-Update the :guilabel:`Allow Cancelling` field to limit the amount of time before an appointment
-where a customer can cancel. If this setting is enabled, customers are unable to cancel within the
-designated time frame.
-
-.. note::
-   If a customer does try to cancel within the time frame, they receive an error message with
-   contact information. If the appointment is for a resource, the contact details are for the user
-   that created the appointment type. If the appointment is for a user, the contact details are for
-   the user the appointment is with.
-
-   .. image:: appointments/cancellation-message.png
-      :alt: An example of the message a customer sees when cancelling.
-
-Next, designate whether this appointment type is based on :guilabel:`Users` or
-:guilabel:`Resources`, by selecting the appropriate radio button. If it is based on users, select
-one or more :guilabel:`Users` in the drop-down. If it is based on :ref:`resources
-<appointments/resources>`, select one or more :guilabel:`Resources` in the drop-down.
-
-.. tip::
-   User-based appointment types can be used for scheduling sales meetings and demos, as well as
-   recruiting interviews.
-
-   Resource-based appointment types can be used for scheduling time in specific rooms or locations.
-
-Selecting :guilabel:`Resources` in the :guilabel:`Availability on` field reveals the
-:guilabel:`Manage Capacities` option. If selected, the appointment limits the number of participants
-based on the capacity of the resources selected.
-
-Choose an :guilabel:`Assignment Method` by selecting the appropriate radio button:
-
- - :guilabel:`Pick User/Resource then Time`: customers select from a list of available
-   users/resources, then select an open time slot.
- - :guilabel:`Select Time then User/Resource`: customers choose a date and time, then select from
-   the list of available users/resources.
- - :guilabel:`Select Time then auto-assign`: customers select a time slot and are automatically
-   assigned a user/resource.
-
-Schedule tab
-------------
-
-The :guilabel:`Schedule` tab is used to outline when this appointment type is to be made available.
-The settings define the time slots shown on the booking page.
-
-Click :guilabel:`Add a line` to create a new time frame. Select a day of the week from the
-:guilabel:`Every` drop-down menu, then update the times in the :guilabel:`From` and :guilabel:`To`
-fields. Click the :icon:`fa-trash-o` :guilabel:`(trash)` icon to delete an entry. Multiple entries
-can be included for a single day.
-
-.. tip::
-   If an appointment should not be available at specific times, such as when users are taking lunch,
-   include time slots before and after.
-
-   .. image:: appointments/schedule-tab.png
-      :alt: An example of the Schedule tab in an appointment.
-
-Options tab
------------
-
-The :guilabel:`Options` tab is used to customize the display options for this appointment, as well
-as notification settings for customers and users.
-
-The :guilabel:`Front-End Display` field determines how the appointment is presented on the website
-to customers. Select the :guilabel:`Show Pictures` radio button to publish the default pictures of
-the user or resources for this appointment on the website.
-
-The :guilabel:`Timezone` and :guilabel:`Location` fields automatically populate for resource
-appointments, based on where the resource is located. For user-based appointments, the
-:guilabel:`Location` field defaults to an `Online Meeting`, with a :guilabel:`Videoconference Link`
-automatically generated. If this should not be an online meeting, select a different option in the
-:guilabel:`Location` field.
-
-Tick the :guilabel:`Manual Confirmation` checkbox to require approval before a meeting is accepted.
-If this feature is enabled, the appointment time slot is still considered *reserved* until it is
-confirmed or rejected. Leave this checkbox blank to automatically accept meetings created from this
-appointment.
-
-The :doc:`Create Opportunities <appointments/create-opps>` feature adds an opportunity to the
-**CRM** app for each scheduled appointment, which is assigned to the responsible user. Tick the
-:guilabel:`Create Opportunities` checkbox to enable this option.
-
-.. important::
-   This field is only visible if the **CRM** app is installed on the database.
-
-The :guilabel:`Reminders` field is used to set how customers are to be contacted before the
-appointment time. Select one or more options from the drop-down, based on the communication method,
-and the time frame.
-
-Tick the :guilabel:`Allow Guests` checkbox to grant customers the ability to add additional guests
-when registering for an appointment.
-
-.. _appointments/questions:
-
-Questions tab
--------------
-
-The :guilabel:`Questions` tab can be used to prompt customers for additional information while they
-are booking an appointment. Click :guilabel:`Add a line` to add a new question.
-
-On the :guilabel:`Create Questions` pop-up window, enter the :guilabel:`Question`, then choose an
-:guilabel:`Answer Type`.
-
-Tick the :guilabel:`Mandatory Answer` checkbox to require customers to answer this question before
-they are allowed to book an appointment. Click :guilabel:`Save & New` to add another question, or
-:guilabel:`Save & Close` when finished.
-
-Messages tab
-------------
-
-The :guilabel:`Messages` tab is used by the business to provide additional information to customers
-regarding this appointment type.
-
-.. important::
-   The content in the :guilabel:`Messages` tab is visible to customers and website visitors.
-
-In the :guilabel:`Introduction Message` field, add a short description of the appointment type. This
-can include the topic of the appointment, a meeting agenda, or an introduction to the users
-responsible for the meeting.
-
-The :guilabel:`Extra Message on Confirmation` is displayed to a customer after they have booked a
-meeting. Add any additional information here that the customer should be aware of. This can include
-parking information, last minute rules, or additional instructions.
-
-Publishing an appointment
-=========================
-
-When an appointment is ready to publish, click the :guilabel:`Go to Website` smart button at the top
-of the record. Then, slide the :icon:`fa-toggle-off` :guilabel:`Unpublished` icon to
-:icon:`fa-toggle-on` :guilabel:`Published`.
-
 .. toctree::
    :titlesonly:
 
    appointments/create-opps
+
+The **Appointments** app lets customers and colleagues book time with the company: an *appointment
+type* defines who can be booked, when, for how long, and under which conditions, and each booking
+creates a calendar event for the provider.
+
+.. note::
+   The app is provided by the eYssen *Appointment* module family (``appointment`` and its bridge
+   modules). The optional features described below each require their own module, indicated in the
+   corresponding section.
+
+Access rights
+=============
+
+The :guilabel:`Appointments` category of the :ref:`access rights <access-rights/users>` offers:
+
+- :guilabel:`User`: sees and manages their own bookings;
+- :guilabel:`Manager`: sees all bookings, and configures appointment types and resources.
+
+.. _appointments/types:
+
+Appointment types
+=================
+
+Go to :menuselection:`Appointments --> Configuration --> Appointment Types` to create a type. Fill
+in the :guilabel:`Name`, a :guilabel:`Description` shown to the customer, the :guilabel:`Location`,
+and the :guilabel:`Time Zone` the slots are published in.
+
+Availability
+------------
+
+The :guilabel:`Availability` tab defines when the type can be booked:
+
+- :guilabel:`Allowed Providers`: the users who can be booked for this type. :guilabel:`Default
+  Working Hours` sets the working schedule used to compute the slots, and, under
+  :guilabel:`Per-provider Working Hours`, a different schedule can be set for individual providers.
+- :guilabel:`Required Resources`: resources (rooms, equipment) that must be free for the booking to
+  be possible.
+- :guilabel:`Weekly Slots`: the recurring time ranges of the week when bookings are accepted, with
+  an optional capacity or gap override per slot.
+- :guilabel:`Duration`: the :guilabel:`Min Duration (min)`, :guilabel:`Max Duration (min)`,
+  :guilabel:`Duration Step (min)`, and :guilabel:`Default Duration (min)` a customer can choose
+  from, and the :guilabel:`Slot Increment (min)` used to generate the proposed start times.
+- :guilabel:`Buffers & Gaps`: :guilabel:`Buffer Before (min)` and :guilabel:`Buffer After (min)`
+  keep time free around a booking, and :guilabel:`Gap Between Meetings (min)` enforces a pause
+  between two consecutive bookings.
+- :guilabel:`Limits`: how far ahead bookings are possible (:guilabel:`Max Days Ahead`), the
+  :guilabel:`Min Notice Hours` before the start, the :guilabel:`Cancel Notice Hours` until which a
+  customer may cancel, the :guilabel:`Max Future Bookings Per Person`, and the
+  :guilabel:`Capacity Per Slot` when several people may book the same slot.
+
+Odoo computes the free slots from the working hours, the existing bookings, the providers' calendar
+events, and their :ref:`leaves <appointments/leaves>`.
+
+.. screenshot:: productivity-appointments-type-availability
+   :menu: Appointments ‣ Configuration ‣ Appointment Types
+   :shows: An appointment type form on the Availability tab, with the Providers & Resources, Duration, Buffers & Gaps and Limits groups filled in, and the weekly slot lines below.
+   :highlight: The "Duration" and "Limits" groups (red frame).
+   :data: Type "Consultation", two providers, weekly slots Monday to Friday 09:00–17:00.
+   :module: appointment
+   :notes: English UI, light theme, 1440px width.
+
+Assignment and approval
+-----------------------
+
+When several providers are allowed, the :guilabel:`Assign Strategy` decides who gets the booking:
+:guilabel:`Least Assigned`, :guilabel:`Round Robin`, or :guilabel:`Random`.
+
+Enable :guilabel:`Require Approval` to hold new bookings in the :guilabel:`Requested` state until
+they are approved. The approval policy is either :guilabel:`Single Approval (Manager)` or
+:guilabel:`All Providers Must Approve`; in the latter case, each provider gets an approval line on
+the booking, and can approve or reject it from the booking form or from the link in the approval
+email.
+
+:guilabel:`Unconfirmed Expiry (hours)` automatically cancels bookings that are never confirmed.
+
+Questions
+---------
+
+The :guilabel:`Form` tab lists the questions asked when booking. Each question has a
+:guilabel:`Name`, a :guilabel:`Type` (:guilabel:`Short Text`, :guilabel:`Long Text`,
+:guilabel:`Number`, :guilabel:`Date`, :guilabel:`Select`, :guilabel:`Checkbox`, or
+:guilabel:`File`), and can be marked :guilabel:`Required`. For a :guilabel:`Select` question, list
+the options one per line. A question can also block the booking when a given answer is given, with
+the :guilabel:`Error Message` shown to the customer.
+
+The answers are stored on the booking, in its :guilabel:`Answers` tab.
+
+Notifications
+-------------
+
+In the :guilabel:`Notifications` tab, select the email template used for each step:
+:guilabel:`Email on Request`, :guilabel:`Email on Confirm`, :guilabel:`Email on Reject`,
+:guilabel:`Email on Cancel`, :guilabel:`Email on Approval Request`, and :guilabel:`Email on Waitlist
+Offer`. An :guilabel:`Additional email message` is appended to these emails.
+
+:guilabel:`Event reminders` send a reminder to the requester a given time before the appointment
+(e.g., `1` :guilabel:`Days`), while :guilabel:`Calendar alarms` are the reminders set on the
+provider's calendar event.
+
+Waitlist
+--------
+
+Enable :guilabel:`Waitlist` in the corresponding tab to let customers queue for a fully booked slot.
+When a slot frees up, Odoo offers it to the first customers in the queue (:guilabel:`Waitlist Notify
+Batch`), who then have :guilabel:`Waitlist Hold Minutes` to confirm before the offer expires and the
+next customers are notified.
+
+Visibility and restrictions
+---------------------------
+
+- :guilabel:`Visibility`: :guilabel:`Public`, :guilabel:`Unlisted` (only reachable with the link),
+  or :guilabel:`Private`.
+- In the :guilabel:`Restrictions` tab, :guilabel:`Allowed Domains` limits public booking to a
+  comma-separated list of email domains.
+- Click :guilabel:`Generate share link` to obtain a :guilabel:`Share URL` that can be sent to
+  customers. :guilabel:`Regenerate` invalidates the previous link.
+
+Pricing and payment
+-------------------
+
+A type can be free, or priced with a :guilabel:`Pricing Mode`:
+
+- :guilabel:`Fixed`: the :guilabel:`Fixed Amount` is charged per booking;
+- :guilabel:`Hourly`: the :guilabel:`Hourly Rate` is applied to the booked duration, rounded up to
+  the :guilabel:`Billing Increment (min)`.
+
+Enable :guilabel:`Payment Required` to make the payment part of the booking flow.
+:guilabel:`Allow Refund Until Hours` defines until when a cancellation is refundable.
+
+.. _appointments/bookings:
+
+Bookings
+========
+
+:menuselection:`Appointments --> Bookings` lists all bookings, in list or calendar view. A booking
+records:
+
+- the :guilabel:`Appointment Type`, the :guilabel:`Providers`, and the :guilabel:`Resources`;
+- the :guilabel:`Customer`, or, for a public booking, the visitor's name, email, phone, and
+  language;
+- the start, the end, and the :guilabel:`Duration (min)`;
+- the :guilabel:`Status`: :guilabel:`Requested`, :guilabel:`Approved`, :guilabel:`Rejected`, or
+  :guilabel:`Cancelled`;
+- the :guilabel:`Pricing` and the payment status (:guilabel:`Pending`, :guilabel:`Authorized`,
+  :guilabel:`Paid`, :guilabel:`Refunded`, or :guilabel:`Failed`).
+
+Use the buttons in the header to :guilabel:`Approve`, :guilabel:`Reject`, or :guilabel:`Cancel` a
+booking, and, after the appointment, to :guilabel:`Mark Show` or :guilabel:`Mark No-show`.
+:guilabel:`Force Approve` lets a manager approve a booking that is still waiting for other
+providers.
+
+An approved booking creates the calendar event of its providers, and the customer receives the
+confirmation email with a link to their booking.
+
+.. screenshot:: productivity-appointments-booking-form
+   :menu: Appointments ‣ Bookings
+   :shows: A booking form with the header buttons (Approve, Reject, Cancel, Mark Show, Mark No-show), the Booking Details, Customer, Pricing and Status groups, and the Approvals tab showing two provider lines.
+   :highlight: The header buttons (red frame).
+   :data: Booking for "Deco Addict", type "Consultation", state "Requested", two approval lines.
+   :module: appointment
+   :notes: English UI, light theme, 1440px width.
+
+.. _appointments/export:
+
+Export bookings
+---------------
+
+With the *eYssen Appointment (Reports & Export)* module (`appointment_reports`), appointment
+managers can download the bookings from the :guilabel:`Export` menu of the application:
+
+- :menuselection:`Appointments --> Export --> Export Bookings (CSV, max 10,000)` downloads the
+  `appointments.csv` file, with one row per booking: name, type, start, end, duration in minutes,
+  customer (or the visitor's name for a public booking), amount, status, and attendance;
+- :menuselection:`Appointments --> Export --> Export Bookings (iCal, max 10,000)` downloads the
+  `appointments.ics` calendar file, which can be imported in any calendar application. Each booking
+  is an event titled with the appointment type and the booking name, with its location and
+  description; approved bookings are marked as confirmed, the others as tentative.
+
+Both files contain the 10,000 most recent bookings at most, of all statuses. The dates and times
+are expressed in UTC.
+
+.. tip::
+   The export can be narrowed by adding parameters to the address of the download, e.g.,
+   `/appointment/export/csv?state=approved&date_from=2026-01-01&date_to=2026-03-31`. The available
+   parameters are `type_id` (the ID of an appointment type), `state` (`requested`, `approved`,
+   `rejected`, or `cancelled`), `date_from`, and `date_to` (`YYYY-MM-DD`).
+
+.. note::
+   To install the module, enable :guilabel:`Reports` under :guilabel:`Appointment` in
+   :menuselection:`Settings --> eYssen ERP`. The menu and the downloads are reserved for the users
+   with the :guilabel:`Manager` access level of the Appointments app.
+
+.. _appointments/leaves:
+
+Provider unavailability
+=======================
+
+Providers can be made unavailable for a period of time with an **appointment leave**, which has a
+:guilabel:`User`, a start and an end, a :guilabel:`Reason`, and a state (:guilabel:`Draft`,
+:guilabel:`Approved`, :guilabel:`Cancelled`). Only approved leaves block the slots.
+
+.. note::
+   With the *Appointment (HR Holidays)* (``appointment_hr``) module, validated time off of the
+   employees linked to the providers also blocks the corresponding slots, so time off does not have
+   to be entered twice.
+
+Passes
+======
+
+The *Appointment (Passes)* (``appointment_pass``) module sells packages of appointments. In
+:menuselection:`Appointments --> Passes --> Pass Products`, define a pass with a :guilabel:`Name`, a
+:guilabel:`Mode` (a number of :guilabel:`Occurrences` or a balance of minutes), the
+:guilabel:`Validity (days)`, and the :guilabel:`Price`.
+
+:menuselection:`Appointments --> Passes --> Pass Holders` lists the passes owned by customers, with
+their :guilabel:`Occurrences Remaining` or :guilabel:`Minutes Remaining` and the :guilabel:`Valid
+Until` date. When a customer with a valid pass books an appointment, the booking is redeemed against
+the pass instead of being paid.
+
+Coupons and gift cards
+======================
+
+The *Appointment (Payment)* (``appointment_payment``) module adds discounts to the booking flow:
+
+- :menuselection:`Appointments --> Configuration --> Payments & Discounts --> Coupons`: a coupon has
+  a :guilabel:`Code`, a :guilabel:`Discount Type` (percentage or fixed amount), an
+  :guilabel:`Amount`, a validity period, and a :guilabel:`Max Uses` limit (`0` = unlimited).
+- :menuselection:`Appointments --> Configuration --> Payments & Discounts --> Gift Cards`: a gift
+  card has a :guilabel:`Code`, a :guilabel:`Balance`, and an expiry date. The balance is deducted
+  from the amount due of the booking.
+
+The remaining :guilabel:`Amount Due` is then paid with one of the configured :doc:`payment providers
+<../finance/payment_providers>`.
+
+Other integrations
+==================
+
+- **Project**: with the *Appointment (Project Tasks)* (``appointment_project``) module, select a
+  :guilabel:`Target Project` on the appointment type to create a task there when a booking is
+  approved.
+- **eLearning**: with the *Appointment (eLearning)* (``appointment_elearning``) module, select a
+  :guilabel:`Course to Enroll` on the appointment type to enroll the customer in that course when
+  the booking is approved.
+- **CRM**: see :doc:`appointments/create-opps`.

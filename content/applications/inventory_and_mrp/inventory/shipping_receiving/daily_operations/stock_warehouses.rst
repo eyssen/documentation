@@ -68,9 +68,12 @@ Configuration` tab.
 Lastly, click :guilabel:`Save` to finish creating a *regular* warehouse. Continue following the
 steps below to finish configuring the virtual parent warehouse.
 
-.. image:: stock_warehouses/stock-warehouses-create-warehouse.png
-   :align: center
-   :alt: New warehouse form.
+.. screenshot:: daily-operations-stock-warehouses-create-warehouse
+   :menu: Inventory app ‣ Configuration ‣ Warehouses
+   :shows: A new warehouse form with the Warehouse name and Short Name fields filled in, used to create the virtual parent warehouse.
+   :data: Warehouse "Virtual Warehouses", short name "VWH".
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`Warehouse configurations <../../warehouses_storage/inventory_management/warehouses>`
@@ -102,9 +105,11 @@ configure the physical stock locations.
    | :guilabel:`Warehouses`: `Warehouse A` and `Warehouse B`
    | :guilabel:`Locations`: `WHA` and `WHB`
 
-   .. image:: stock_warehouses/parent-location.png
-      :align: center
-      :alt: Graphic of child locations 'WHA' and 'WHB' tied to the parent location.
+   .. screenshot:: daily-operations-stock-warehouses-parent-location
+      :menu: (diagram)
+      :shows: A schematic tree showing the virtual parent location with the two child warehouse locations WHA and WHB beneath it.
+      :module: stock
+      :notes: Simple schematic drawing, no Odoo UI.
 
 .. important::
    While the virtual stock location will be changed to 'View' later, the :guilabel:`Location Type`
@@ -132,9 +137,12 @@ warehouse's **stock location** (e.g. `VWH/Stock`) from the drop-down menu, and c
    menu, the parent warehouse stock location (e.g. `VWH/Stock`) **must**  have its
    :guilabel:`Location Type` set to :guilabel:`Internal Location`.
 
-.. image:: stock_warehouses/configure-physical-wh.png
-   :align: center
-   :alt: Set the child warehouse's *Parent Location* to the virtual warehouse.
+.. screenshot:: daily-operations-stock-warehouses-configure-physical-wh
+   :menu: Inventory ‣ Configuration ‣ Locations
+   :shows: A child warehouse's stock location form with the "Parent Location" field set to the virtual warehouse's view location.
+   :highlight: The "Parent Location" field (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Repeat the preceding steps to configure two or more child warehouses.
 
@@ -155,17 +163,22 @@ Click the virtual warehouse's stock location (e.g. `VWH/Stock`) that was :ref:`p
 On the location form, under the :guilabel:`Additional Information` heading, set the
 :guilabel:`Location Type` to :guilabel:`View`. :guilabel:`Save` the changes.
 
-.. image:: stock_warehouses/set-location-type-view.png
-   :align: center
-   :alt: Warehouse location types in location creation screen.
+.. screenshot:: daily-operations-stock-warehouses-set-location-type-view
+   :menu: Inventory app ‣ Configuration ‣ Locations
+   :shows: A location form with the "Location Type" field set to "View".
+   :highlight: The "Location Type" field (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    To view the total quantity across **all** linked child warehouses, go to the product form and
    click the :guilabel:`On Hand` smart button.
 
-   .. image:: stock_warehouses/on-hand.png
-      :align: center
-      :alt: Display stock across all linked warehouses.
+   .. screenshot:: daily-operations-stock-warehouses-on-hand
+      :menu: Inventory ‣ Reporting ‣ Stock
+      :shows: The stock report grouped by location, showing the quantities of both child warehouses adding up under the virtual parent location.
+      :module: stock
+      :notes: English UI, light theme, 1440px width.
 
 Example: sell products from a virtual warehouse
 ===============================================
@@ -189,9 +202,12 @@ Then, click the :guilabel:`Other Info` tab on the sales order form. Under the :g
 section, change the :guilabel:`Warehouse` field value to the virtual warehouse that was
 :ref:`previously created <inventory/routes/virtual-wh>`. Next, :guilabel:`Confirm` the sales order.
 
-.. image:: stock_warehouses/set-virtual-wh.png
-   :align: center
-   :alt: Set virtual warehouse as the *Warehouse* field in sales order's *Other Info* tab.
+.. screenshot:: daily-operations-stock-warehouses-set-virtual-wh
+   :menu: Sales ‣ Orders ‣ Orders
+   :shows: A sales order with the "Other Info" tab open and the "Warehouse" field set to the virtual warehouse.
+   :highlight: The "Warehouse" field (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Then, click the :guilabel:`Delivery` smart button. From the warehouse delivery form, confirm that
 the :guilabel:`Source Location` value matches the :guilabel:`Warehouse` field value from the sales
@@ -201,9 +217,12 @@ Finally, on the warehouse delivery form, under the :guilabel:`Detailed Operation
 the :guilabel:`Locations` in the :guilabel:`From` column for each product match the child locations
 that are tied to the virtual parent location.
 
-.. image:: stock_warehouses/delivery-order.png
-   :align: center
-   :alt: Delivery order with matching source and child locations.
+.. screenshot:: daily-operations-stock-warehouses-delivery-order
+   :menu: Inventory ‣ Delivery Orders
+   :shows: The delivery order created from the virtual warehouse, with the source location pointing to the child warehouse that actually holds the stock.
+   :highlight: The "Source Location" field (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. important::
    The :guilabel:`Source Location` on the warehouse delivery form, and the :guilabel:`Warehouse`
@@ -228,6 +247,9 @@ that are tied to the virtual parent location.
    should have the virtual warehouse assigned to them from the drop-down menu next to
    :guilabel:`Default Warehouse` on their employee form.
 
-   .. image:: stock_warehouses/stock-warehouses-employee-form.png
-      :align: center
-      :alt: Default warehouse location on employee form.
+   .. screenshot:: daily-operations-stock-warehouses-employee-form
+      :menu: Settings ‣ Users & Companies ‣ Users
+      :shows: A user form with the "Preferences" tab open, showing the "Default Warehouse" field.
+      :highlight: The "Default Warehouse" field (red frame).
+      :module: stock
+      :notes: English UI, light theme, 1440px width.

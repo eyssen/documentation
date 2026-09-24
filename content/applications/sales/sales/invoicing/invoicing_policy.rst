@@ -21,9 +21,13 @@ Configuration --> Settings`, and under the :guilabel:`Invoicing` heading, select
 :guilabel:`Invoicing Policy` rule: :guilabel:`Invoice what is ordered` or :guilabel:`Invoice what is
 delivered`.
 
-.. image:: invoicing_policy/invoicing-policy-setting.png
-   :align: center
-   :alt: Choosing an invoicing policy on Odoo Sales.
+.. screenshot:: sales-invoicing-policy-setting
+   :menu: Sales ‣ Configuration ‣ Settings
+   :shows: The Settings page scrolled to the "Invoicing" section, with the "Invoicing Policy" radio buttons "Invoice what is ordered" and "Invoice what is delivered".
+   :highlight: The Invoicing Policy radio buttons (red frame).
+   :data: Demo company.
+   :module: sale
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 .. important::
    If the :guilabel:`Invoice what is delivered` rule is chosen, it is **not** possible to activate
@@ -37,9 +41,13 @@ On any product page, via the :menuselection:`Sales app --> Products --> Products
 the :guilabel:`Invoicing Policy` option located under the :guilabel:`General Information` tab. It
 can be changed manually using the drop-down menu.
 
-.. image:: invoicing_policy/invoicing-policy-general-info-tab.png
-   :align: center
-   :alt: How to change your invoicing policy on a product form on Odoo Sales.
+.. screenshot:: sales-invoicing-policy-product-field
+   :menu: Sales ‣ Products ‣ Products ‣ (a product) ‣ General Information
+   :shows: A product form's General Information tab with the "Invoicing Policy" field set to "Delivered quantities".
+   :highlight: The Invoicing Policy field (red frame).
+   :data: Product "Cabinet with Doors".
+   :module: sale
+   :notes: English UI, light theme, 1440px width, crop to the Sales group of the tab.
 
 Impact on sales flow
 ====================
@@ -61,18 +69,26 @@ The following is a breakdown of how invoicing policy rules impact the aforementi
    error message appears: :guilabel:`There is no invoiceable line. If a product has a Delivered
    quantities invoicing policy, please make sure that a quantity has been delivered.`
 
-   .. image:: invoicing_policy/invoicing-policy-error-message.png
-      :align: center
-      :alt: If Delivered Quantities invoicing policy is chosen, ensure a quantity has been delivered.
+   .. screenshot:: sales-invoicing-policy-nothing-to-invoice
+      :menu: Sales ‣ Orders ‣ Orders ‣ (a confirmed order) ‣ Create Invoice
+      :shows: The warning dialog telling the user that there is nothing to invoice because no quantity has been delivered yet.
+      :highlight: The warning message (red frame).
+      :data: Order for a product invoiced on delivered quantities, nothing delivered.
+      :module: sale
+      :notes: English UI, light theme, 1440px width, crop to the dialog.
 
 .. note::
    Once a quotation is confirmed, and the status changes from :guilabel:`Quotation sent` to
    :guilabel:`Sales order`, the delivered and invoiced quantities are available to view, directly
    from the sales order. This is true for both invoicing policy rule options.
 
-   .. image:: invoicing_policy/invoicing-policy-order-lines.png
-      :align: center
-      :alt: How to see your delivered and invoiced quantities on Odoo Sales.
+   .. screenshot:: sales-invoicing-policy-delivered-invoiced-columns
+      :menu: Sales ‣ Orders ‣ Orders ‣ (a confirmed order) ‣ Order Lines
+      :shows: The Order Lines tab of a confirmed order showing the Quantity, Delivered and Invoiced columns side by side.
+      :highlight: The Delivered and Invoiced columns (red frame).
+      :data: One line, 10 ordered, 10 delivered, 0 invoiced.
+      :module: sale_stock
+      :notes: English UI, light theme, 1440px width, crop to the order-lines table.
 
    Odoo automatically adds the quantities to the invoice, both :guilabel:`Delivered` and
    :guilabel:`Invoiced`, even if it's a partial delivery, when the quotation is confirmed.

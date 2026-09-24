@@ -65,13 +65,16 @@ month or quarter. :guilabel:`Previous Year` compares the same time period from t
    While multiple time-based filters can be added at once, only one comparison can be selected at a
    time.
 
-.. figure:: procurement_expenses_report/filters-groups.png
-   :align: center
-   :alt: The drop-down menu of filters, group by and comparison options for the procurement expenses
-         report.
-
-   The filter for Q2, comparison for **Previous Period**, and group-by for **Vendor** and **Product
-   Category** were selected.
+.. screenshot:: purchase-procurement-expenses-filters-groups
+   :menu: Purchase ‣ Reporting ‣ Purchase
+   :shows: The drop-down menu with the Filters, Group By, and Comparison columns; Q2 date filter,
+           "Previous Period" comparison, and Vendor/Product Category selected under Group By.
+   :highlight: The Comparison section (red frame).
+   :data: Demo company "YourCompany".
+   :module: purchase
+   :notes: English UI, light theme, 1440px width. The filter for Q2, comparison for "Previous
+           Period", and group-by for "Vendor" and "Product Category" should be visible, matching
+           the original figure's caption.
 
 Add measures
 ------------
@@ -107,16 +110,17 @@ View results
 
 After all of the filters and measures have been selected, the report generates in the selected view.
 
-.. image:: procurement_expenses_report/sample-per-report.png
-   :align: center
-   :alt: A sample version of the procurement expenses report.
+.. screenshot:: purchase-procurement-expenses-sample-report
+   :menu: Purchase ‣ Reporting ‣ Purchase
+   :shows: A pivot table procurement expenses report, grouped by Vendor and Product Category, with
+           several measures enabled.
+   :highlight: The measures columns (red frame).
+   :data: Demo company "YourCompany".
+   :module: purchase
+   :notes: English UI, light theme, 1440px width.
 
-Click :guilabel:`Insert in Spreadsheet` to add the pivot view into an editable spreadsheet format
-within the *Documents* app.
-
-.. important::
-   The :guilabel:`Insert in Spreadsheet` option is **only** available if the *Documents Spreadsheet*
-   module is installed.
+To keep a copy of the results outside the pivot view, click the :icon:`fa-download`
+:guilabel:`(download)` icon at the top of the pivot table to download it as an XLSX spreadsheet.
 
 .. note::
    The |per| is also available in graph view. Click the :icon:`fa-area-chart` :guilabel:`(area

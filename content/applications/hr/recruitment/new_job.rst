@@ -10,8 +10,13 @@ candidates can apply, a :guilabel:`PUBLISHED` banner appears in the top-right co
 
 View submitted applications by clicking anywhere on a job position card.
 
-.. image:: new_job/jobs.png
-   :alt: Main dashboard view of Recruitment app showing all job positions.
+.. screenshot:: hr-recruitment-job-positions
+   :menu: Recruitment ‣ Applications ‣ By Job Position
+   :shows: The Recruitment dashboard in kanban view with one card per job position, each showing the new applications and the recruiter.
+   :highlight: The New Applications counters (red frame).
+   :data: Demo company "YourCompany HU"; three open job positions.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 .. _job-position/create-job-position:
 
@@ -33,8 +38,13 @@ them automatically.
 When complete, click the :guilabel:`Create` button to save the entry, or the :guilabel:`Discard`
 button to delete it.
 
-.. image:: new_job/job-title.png
-   :alt: Create a new job position.
+.. screenshot:: hr-recruitment-new-job-position
+   :menu: Recruitment ‣ Applications ‣ By Job Position ‣ New
+   :shows: The quick-create card for a new job position with the title typed in.
+   :highlight: The job position title field (red frame).
+   :data: Job position "Warehouse Coordinator".
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Once the job position has been created, it appears as a card in the Kanban view on the main
 **Recruitment** app dashboard.
@@ -48,8 +58,13 @@ After the job position is created, it is time to enter the details for the posit
 :icon:`fa-ellipsis-v` :guilabel:`(Dropdown menu)` icon in the upper-right corner of the relevant
 card to reveal several options, and then click :guilabel:`Configuration` to edit the details.
 
-.. image:: new_job/edit-job.png
-   :alt: Edit the job position card.
+.. screenshot:: hr-recruitment-job-position-form
+   :menu: Recruitment ‣ Applications ‣ By Job Position ‣ (open a job position)
+   :shows: The job position form with the title, the department, the company, the target number of employees and the expected new employees.
+   :highlight: The Expected New Employees field (red frame).
+   :data: Job position "Warehouse Coordinator", department "Warehouse", 2 expected new employees.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Recruitment tab
 ~~~~~~~~~~~~~~~
@@ -85,10 +100,6 @@ The fields can be filled out as follows:
 - :guilabel:`Working Schedule`: Select the working schedule for the job position. Odoo provides one
   working schedule by default, :guilabel:`Standard 40 hours/week`, but all working schedules in the
   database are available.
-- :guilabel:`Salary Range`: Enter both the minimum and maximum salaries offered for the position in
-  the two fields. Then, set the last field to the time-frame for the salary range. The default
-  options are :guilabel:`Hour`, :guilabel:`Day`, :guilabel:`Week`, :guilabel:`Bi-Week`,
-  :guilabel:`Month`, and :guilabel:`Year`.
 - :guilabel:`Expected Skills`: Select all the desired skills for the job position, using the
   drop-down menu. The skills presented are :ref:`configured in the Employees app
   <employees/skills>`.
@@ -103,11 +114,14 @@ The fields can be filled out as follows:
   selected.
 - :guilabel:`Interview Form`: select an :ref:`Interview form <recruitment/interview>` that
   applicants fill out prior to their interview.
-- :guilabel:`Contract Template`: Select a contract template to be used when offering the job to a
-  candidate.
 
-.. image:: new_job/recruitment-tab.png
-   :alt: The job information details in the Recruitment tab.
+.. screenshot:: hr-recruitment-job-position-recruitment-tab
+   :menu: Recruitment ‣ Applications ‣ By Job Position ‣ (open a job position) ‣ Recruitment
+   :shows: The Recruitment tab of a job position with the recruiter, the interviewers, the interview form and the email alias.
+   :highlight: The Recruiter and Interviewers fields (red frame).
+   :data: Recruiter "Anita Kovács", one interviewer, interview form "Warehouse screening".
+   :module: hr_recruitment, hr_recruitment_survey
+   :notes: English UI, light theme, 1440px width.
 
 Job summary tab
 ~~~~~~~~~~~~~~~
@@ -115,8 +129,13 @@ Job summary tab
 Enter the job description in the :guilabel:`Job Summary` tab. This description is visible on the
 website.
 
-.. image:: new_job/job-summary.png
-   :alt: The summary of the position in the Job Summary tab.
+.. screenshot:: hr-recruitment-job-position-summary
+   :menu: Recruitment ‣ Applications ‣ By Job Position ‣ (open a job position) ‣ Job Summary
+   :shows: The Job Summary tab with the description of the position as it appears on the website.
+   :highlight: The summary text (red frame).
+   :data: A short description of the Warehouse Coordinator position.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Application info tab
 ~~~~~~~~~~~~~~~~~~~~
@@ -136,8 +155,13 @@ of the business:
 - :guilabel:`Days to get an Offer`: Enter the number of days before the applicant should expect an
   offer after the recruitment process has ended. The default is :guilabel:`4 Days after Interview`.
 
-.. image:: new_job/app-info.png
-   :alt: Enter job information details in the recruitment tab.
+.. screenshot:: hr-recruitment-job-position-application-info
+   :menu: Recruitment ‣ Applications ‣ By Job Position ‣ (open a job position) ‣ Application Info
+   :shows: The Application Info tab with the job location, the employment type, the working schedule and the expected skills.
+   :highlight: The Expected Skills field (red frame).
+   :data: Location "Marbella office", employment type "Permanent", schedule "Standard 40 hours/week".
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    The :guilabel:`Process Details` section is a text field. All answers are typed in rather than
@@ -165,8 +189,13 @@ several options populate beneath the entry: :guilabel:`Create (interview form na
 :guilabel:`Search More...`, and :guilabel:`Create and edit...`. Click :guilabel:`Create and edit...`
 and a :guilabel:`Create Interview Form` pop-up window appears.
 
-.. image:: new_job/blank-interview-form.png
-   :alt: The blank interview form pop-up window.
+.. screenshot:: hr-recruitment-interview-form-new
+   :menu: Recruitment ‣ Applications ‣ By Job Position ‣ (open a job position) ‣ Recruitment ‣ Interview Form ‣ Create and edit
+   :shows: The blank interview form dialog with the form name and the survey type selection.
+   :highlight: The survey type selection (red frame).
+   :data: Form name "Warehouse screening".
+   :module: hr_recruitment_survey
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    The option :guilabel:`Search More...` only appears if there are any interview forms already

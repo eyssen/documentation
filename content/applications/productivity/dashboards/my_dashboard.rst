@@ -2,14 +2,13 @@
 My Dashboard
 ============
 
-**My Dashboard** allows you to centralize the :doc:`Odoo views <../../studio/views>` you consult
-most regularly, making it possible to see critical tasks at a glance without having to first
-navigate through multiple apps. Unlike other Odoo dashboards, My Dashboard is not based on **Odoo
-Spreadsheet**.
+**My Dashboard** allows you to centralize the views you consult most regularly, making it possible
+to see critical tasks at a glance without having to first navigate through multiple apps. Unlike the
+other dashboards of the Dashboards app, My Dashboard is built directly from database views.
 
 Views inserted in My Dashboard are fully dynamic and retain many features of the source view, e.g.,
-sorting of lists, changing the measures used for a pivot table or cohort view, changing the chart
-type, or clicking on a value or data point to view the underlying record(s).
+sorting of lists, changing the measures used for a pivot table, changing the chart type, or clicking
+on a value or data point to view the underlying record(s).
 
 .. tip::
    It is not possible to change the domain, i.e., the filtering or grouping, of a view that has been
@@ -21,9 +20,9 @@ Add views
 
 Most Odoo views can be added to My Dashboard, including:
 
-- :ref:`multiple record views <studio/views/multiple-records>` like list, kanban, and map
-- :ref:`timeline views <studio/views/timeline>` like calendar, cohort, and gantt
-- :ref:`reporting views <studio/views/reporting>` like pivot and graph
+- multiple record views like list and kanban
+- timeline views like calendar and :ref:`gantt <dashboards/my-dashboard/gantt>`
+- reporting views like pivot and graph
 
 To add a view to My Dashboard:
 
@@ -31,9 +30,13 @@ To add a view to My Dashboard:
    beside the name of the view, then :menuselection:`Dashboard`.
 #. Under :guilabel:`Add to my Dashboard`, rename the view if desired, then click :guilabel:`Add`.
 
-   .. image:: my_dashboard/add-view.png
-      :alt: Adding a view to My Dashboard
-      :scale: 80%
+   .. screenshot:: productivity-my-dashboard-add-view
+      :menu: Sales ‣ Orders ‣ Quotations
+      :shows: The "Actions" cog menu open on a list view with the "Dashboard" entry expanded, showing the "Add to my Dashboard" field with a name and the "Add" button.
+      :highlight: The "Add to my Dashboard" block (red frame).
+      :data: Demo company "YourCompany HU"; view renamed to "My quotations".
+      :module: board
+      :notes: English UI, light theme, 1440px width, crop to the dropdown.
 
 #. Refresh the page.
 
@@ -55,8 +58,12 @@ When at least one view has been added to My Dashboard, the page can be customize
      :guilabel:`(left caret)` and :icon:`fa-caret-right` :guilabel:`(right caret)` icons at the
      bottom of the page. If needed, scroll to the bottom of the page to see the column limits.
 
-     .. image:: my_dashboard/column-limits.png
-        :alt: Column limits visible at bottom of page
+     .. screenshot:: productivity-my-dashboard-column-limits
+        :menu: Dashboards ‣ My Dashboard
+        :shows: The bottom of My Dashboard with the left and right caret icons that mark the column limits of a two-column layout.
+        :highlight: The caret icons marking the column limits (red frame).
+        :module: board
+        :notes: English UI, light theme, crop to the bottom of the page.
 
 - **Collapse and expand widgets**: By default, an inserted widget is shown fully expanded. To
   collapse, or minimize, a widget, and show only the title, click the :icon:`fa-window-minimize`
@@ -67,4 +74,14 @@ When at least one view has been added to My Dashboard, the page can be customize
 - **Remove widgets**: To remove a widget from the page, click the :icon:`fa-times`
   :guilabel:`(remove)` icon.
 
+.. _dashboards/my-dashboard/gantt:
 
+Gantt views
+===========
+
+Gantt views are provided by the *Web Gantt* module, which adds a timeline view type to models that
+have a start and a stop date, e.g., project tasks or manufacturing orders. When a model offers a
+Gantt view, it can be added to My Dashboard like any other view.
+
+.. note::
+   Gantt views require the *Web Gantt* (``web_gantt``) module.

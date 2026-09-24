@@ -56,9 +56,13 @@ to :guilabel:`Create` an eWallet program. The following configuration options ar
 - :guilabel:`Point of Sale`: select the :abbr:`PoS (Point of Sale)` in which the program is valid
   and available. Leave this field empty to include all :abbr:`PoS (Point of Sale)`.
 
-.. image:: ewallets_giftcards/ewallet-configuration.png
-   :align: center
-   :alt: eWallet program configuration page
+.. screenshot:: sales-ewallet-program-form
+   :menu: Sales ‣ Products ‣ Gift cards & eWallet ‣ (an eWallet program)
+   :shows: An eWallet program form with the Program Name, Program Type "eWallet", Currency, Validity and the eWallet product.
+   :highlight: The Program Type field (red frame).
+   :data: Program "eWallet", currency EUR.
+   :module: loyalty
+   :notes: English UI, light theme, 1440px width, full form.
 
 Once the program is configured, click the :guilabel:`Generate eWallet` button in the upper-left
 corner to generate eWallets. eWallets can be generated based on :guilabel:`Customers` and/or
@@ -69,9 +73,13 @@ value`. Finally, set the :guilabel:`Valid Until` period if applicable.
 Generated eWallets can be accessed through the :guilabel:`eWallets` smart button in the upper-right
 corner. From there, :guilabel:`Send` or :guilabel:`Share` the eWallets via email or a URL link.
 
-.. image:: ewallets_giftcards/ewallet-share.png
-   :align: center
-   :alt: eWallets send and share buttons
+.. screenshot:: sales-ewallet-generate-share
+   :menu: Sales ‣ Products ‣ Gift cards & eWallet ‣ (an eWallet program) ‣ Generate eWallet
+   :shows: The "Generate eWallet" pop-up with the customer selection, the amount and the Send/Share options.
+   :highlight: The Send and Share buttons (red frame).
+   :data: One customer, 50.00 loaded.
+   :module: loyalty
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 Click on an eWallet to change the :guilabel:`Expiration Date`, :guilabel:`Partner`, or
 :guilabel:`Balance`. The :guilabel:`Code` of an eWallet *cannot* be changed, deleted, or duplicated.
@@ -119,9 +127,13 @@ available:
 - :guilabel:`Point of Sale`: select the :abbr:`PoS (Point of Sale)` in which the program is valid
   and available. Leave this field empty to include all :abbr:`PoS (Point of Sale)`.
 
-.. image:: ewallets_giftcards/giftcard-configuration.png
-   :align: center
-   :alt: Gift card program configuration page
+.. screenshot:: sales-giftcard-program-form
+   :menu: Sales ‣ Products ‣ Gift cards & eWallet ‣ (a gift-card program)
+   :shows: A gift-card program form with the Program Name, Program Type "Gift Card", Currency, Validity and the gift-card product.
+   :highlight: The Program Type field (red frame).
+   :data: Program "Gift Card", currency EUR.
+   :module: loyalty
+   :notes: English UI, light theme, 1440px width, full form.
 
 Once the program is configured, click the :guilabel:`Generate Gift Cards` button in the upper-left
 corner to generate gift cards. Gift cards can be generated either for :guilabel:`Anonymous
@@ -134,9 +146,13 @@ Generated gift cards can be accessed through the :guilabel:`Gift Cards` smart bu
 upper-right corner. From there, :guilabel:`Send` or :guilabel:`Share` the gift cards via email or a
 URL link.
 
-.. image:: ewallets_giftcards/giftcard-share.png
-   :align: center
-   :alt: Gift cards send and share buttons
+.. screenshot:: sales-giftcard-generate-share
+   :menu: Sales ‣ Products ‣ Gift cards & eWallet ‣ (a gift-card program) ‣ Generate Gift Cards
+   :shows: The "Generate Gift Cards" pop-up with the customer selection, the amount and the Send/Share options.
+   :highlight: The Send and Share buttons (red frame).
+   :data: Two customers, 25.00 each.
+   :module: loyalty
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 Click on a gift card to change the :guilabel:`Expiration Date`, :guilabel:`Partner`, or
 :guilabel:`Balance`. The :guilabel:`Code` of a gift card *cannot* be changed, deleted, or

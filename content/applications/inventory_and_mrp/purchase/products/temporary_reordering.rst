@@ -37,9 +37,8 @@ going to :menuselection:`Inventory app --> Products --> Products`, and click :gu
    The same configurations can also be made on an existing product, by going to
    :menuselection:`Inventory app --> Products --> Products`, and selecting an existing product.
 
-On the product form, enter the product name, and ensure the :guilabel:`Can be Sold` and
-:guilabel:`Can be Purchased` options are enabled, located beneath the :guilabel:`Product Name`
-field.
+On the product form, enter the product name, and ensure the :guilabel:`Sales` and
+:guilabel:`Purchase` checkboxes are enabled, located beneath the :guilabel:`Product Name` field.
 
 Then, set the :guilabel:`Product Type` to `Storable Product`, under the :guilabel:`General
 Information` tab.
@@ -53,17 +52,27 @@ to select a vendor from the drop-down menu. Then, set a purchase price under :gu
    :guilabel:`Replenishment` dashboard in the *Inventory* app triggers a warning to add a vendor on
    the product form.
 
-   .. image:: temporary_reordering/temporary-reordering-warning-popup.png
-      :align: center
-      :alt: Warning pop-up upon clicking to replenish product with no set vendor.
+   .. screenshot:: purchase-temporary-reordering-warning-popup
+      :menu: Inventory ‣ Operations ‣ Replenishment ‣ Order Once
+      :shows: A warning pop-up asking to add a vendor on the product form, triggered by replenishing
+              a product with no vendor set.
+      :highlight: The warning message text.
+      :data: Demo company "YourCompany"; product with no vendor pricelist line.
+      :module: purchase
+      :notes: English UI, light theme, 1440px width.
 
 Before creating a :abbr:`SO (sales order)` for the product, ensure the :guilabel:`On Hand` smart
 button on the product form reads `0.00 Units`. Then, ensure that the :guilabel:`Reordering Rules`
 smart button reads `0`, indicating there are no rules applied to this product.
 
-.. image:: temporary_reordering/temporary-reordering-smart-buttons.png
-   :align: center
-   :alt: Product form smart button row displaying reordering rules and on hand buttons.
+.. screenshot:: purchase-temporary-reordering-smart-buttons
+   :menu: Inventory ‣ Products ‣ Products ‣ (open a product)
+   :shows: A product form's smart button row, with "On Hand" reading 0.00 Units and "Reordering
+           Rules" reading 0.
+   :highlight: The On Hand and Reordering Rules smart buttons (red frame).
+   :data: Demo company "YourCompany"; product with 0 units on hand and 0 reordering rules.
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Trigger temporary reordering rule
 =================================
@@ -75,9 +84,13 @@ Then, add a customer in the :guilabel:`Customer` field, and click :guilabel:`Add
 the :guilabel:`Product` column in the :guilabel:`Order Lines` tab. Next, select the desired product
 from the drop-down menu. Lastly, :guilabel:`Confirm` the :abbr:`SO (sales order)`.
 
-.. image:: temporary_reordering/temporary-reordering-sales-order.png
-   :align: center
-   :alt: Sales order for product with no set reordering rules.
+.. screenshot:: purchase-temporary-reordering-sales-order
+   :menu: Sales ‣ Orders ‣ New
+   :shows: A confirmed sales order for a product that has 0 units in stock and no reordering rule.
+   :highlight: The Order Lines tab (red frame).
+   :data: Demo company "YourCompany"; sales order for a product with 0 units on hand.
+   :module: sale
+   :notes: English UI, light theme, 1440px width.
 
 .. _purchase/check-replenishment:
 
@@ -95,9 +108,14 @@ product line, its :guilabel:`On Hand` quantity, negative :guilabel:`Forecast` qu
 Additionally, two replenishment options are located to the far-right of the row: :guilabel:`Order
 Once` and :guilabel:`Automate`.
 
-.. image:: temporary_reordering/temporary-reordering-replenishment-dashboard.png
-   :align: center
-   :alt: Replenishment report displaying temporary reordering rule and options.
+.. screenshot:: purchase-temporary-reordering-replenishment-dashboard
+   :menu: Inventory ‣ Operations ‣ Replenishment
+   :shows: The Replenishment dashboard, with the out-of-stock product's line showing negative
+           Forecast, the Buy route, and the "Order Once"/"Automate" buttons.
+   :highlight: The Order Once and Automate buttons (red frame).
+   :data: Demo company "YourCompany"; one product line with a temporary reordering rule.
+   :module: stock, purchase_stock
+   :notes: English UI, light theme, 1440px width.
 
 To use the one-time, temporary reordering rule, click :guilabel:`Order Once`. This action triggers a
 confirmation pop-up window in the top-right corner, reading :guilabel:`The following replenishment
@@ -118,9 +136,14 @@ To view the purchase order created from the :guilabel:`Replenishment` dashboard,
 From here, click :guilabel:`Confirm Order`, then click :guilabel:`Receive Products`. Finally, click
 :guilabel:`Validate` to complete the purchase order.
 
-.. image:: temporary_reordering/temporary-reordering-purchase-order.png
-   :align: center
-   :alt: Purchase order for product ordered with temporary reordering rule.
+.. screenshot:: purchase-temporary-reordering-purchase-order
+   :menu: Purchase ‣ Orders ‣ Requests for Quotation ‣ (open the generated PO)
+   :shows: The purchase order generated from the temporary reordering rule, confirmed and with
+           products received.
+   :highlight: The Confirm Order and Receive Products buttons.
+   :data: Demo company "YourCompany"; generated PO for the out-of-stock product.
+   :module: purchase, purchase_stock
+   :notes: English UI, light theme, 1440px width.
 
 Now, the original sales order can be delivered and invoiced.
 

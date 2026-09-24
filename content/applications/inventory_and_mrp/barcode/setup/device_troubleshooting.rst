@@ -2,7 +2,7 @@
 Barcode device troubleshooting
 ==============================
 
-Odoo *Barcode* supports three main types of barcode scanners: USB scanners, bluetooth scanners, and
+Three main types of barcode scanners can be used with Odoo: USB scanners, Bluetooth scanners, and
 mobile computer scanners. While configuring each type of scanner, common issues may arise, in which
 the scanners do not work as intended, and Odoo returns errors to the device.
 
@@ -16,7 +16,7 @@ Refer to the following sections below for common issues involving popular barcod
 
 For issues related to specific devices, refer to the :ref:`Android scanners
 <barcode/setup/android-scanners>` section for mobile computer scanners, or to the :ref:`Screenless
-scanners <barcode/setup/screenless-scanners>` section for USB and bluetooth scanners.
+scanners <barcode/setup/screenless-scanners>` section for USB and Bluetooth scanners.
 
 Barcode cannot be read
 ----------------------
@@ -37,8 +37,8 @@ Odoo returns barcode error
 --------------------------
 
 All types of barcode scanners have their own device "language", which affects how they output
-barcode data to Odoo's *Barcode* app. Sometimes, this can cause Odoo *Barcode* to return a barcode
-error after scanning. This could be due to any of the following reasons:
+barcode data to the browser. Sometimes, this can cause a scan-enabled field or screen in Odoo to
+return a barcode error, or simply do nothing. This could be due to any of the following reasons:
 
 - The computer is configured with a different keyboard layout than the barcode scanner. To rule this
   out, ensure that the device is configured with the same keyboard layout.
@@ -59,23 +59,21 @@ Android scanners
 
 The most recent barcode scanner models using Android and Google Chrome should work with Odoo.
 However, due to the variety of models and configurations, it is recommended to first test a
-scanner's compatibility with Odoo.
+scanner's compatibility.
 
 The Zebra product line is recommended; specifically, the **Zebra TC21 (WiFi-only)**, and **Zebra
 TC26 (WiFi/cellular)**.
 
-.. seealso::
-   `Odoo Inventory & Barcode compatible hardware <https://www.odoo.com/app/inventory-hardware>`_
-
-Barcode app does not give feedback
+Scan field does not give feedback
 ----------------------------------
 
-By default, Android barcode scanners pre-process the barcode, then send a full text. Since Odoo
-*Barcode* does not read this type of output, settings for each type of scanner **must** be
+By default, Android barcode scanners pre-process the barcode, then send a full text. Since a plain
+input field does not read this type of output, settings for each type of scanner **must** be
 configured correctly.
 
-Odoo *Barcode* expects that the scanner works like an analogue keyboard, and so, only detects *key
-events*. Refer to the following sections for configuration settings for the most popular devices.
+Odoo's scan fields expect that the scanner works like an analogue keyboard, and so, only detects
+*key events*. Refer to the following sections for configuration settings for the most popular
+devices.
 
 Zebra TC21/TC26
 ---------------
@@ -91,9 +89,13 @@ settings.
 Once the profile is selected, scroll down to the :guilabel:`Keyboard Output` option, and ensure the
 :guilabel:`Enable/disable keystroke output` option is :guilabel:`Enabled`.
 
-.. image:: device_troubleshooting/device-troubleshooting-zebra-settings.png
-   :align: center
-   :alt: Show keystroke option in the Zebra scanner's DataWedge app.
+.. screenshot:: barcode-troubleshooting-zebra-settings
+   :menu: (Zebra DataWedge app) ‣ Profile ‣ Keyboard Output
+   :shows: The "Enable/disable keystroke output" toggle enabled in the Zebra DataWedge profile.
+   :highlight: The toggle (red frame).
+   :data: n/a
+   :module: barcodes
+   :notes: Screenshot of the Zebra device's own DataWedge app, not of Odoo.
 
 Once that option is enabled, go back to the :guilabel:`Profile` options page, and go to the
 :guilabel:`Keystroke output` section. Then, open the :guilabel:`Key event options` submenu. Under
@@ -114,9 +116,14 @@ When using MUNBYN Android scanners, ensure the following configurations are set 
 From the device's home screen, click :menuselection:`AppSettings`. On the resulting page, locate the
 :guilabel:`Process mode` section, and select :guilabel:`Keyboard input`.
 
-.. image:: device_troubleshooting/device-troubleshooting-munbyn-process-mode.png
-   :align: center
-   :alt: Process mode section on MUNBYN scanner's AppSettings page.
+.. screenshot:: barcode-troubleshooting-munbyn-process-mode
+   :menu: (MUNBYN AppSettings) ‣ Process mode
+   :shows: The Process mode section on the MUNBYN scanner's AppSettings page, with Keyboard input
+      selected.
+   :highlight: The "Keyboard input" option (red frame).
+   :data: n/a
+   :module: barcodes
+   :notes: Screenshot of the MUNBYN device's own settings app, not of Odoo.
 
 .. tip::
    The selected *Process mode* controls how data is processed after barcode data has been read out.
@@ -140,9 +147,13 @@ working as intended.
    the different output options available to users. Select :guilabel:`Keyboard Mode`, then click
    :guilabel:`OK`.
 
-   .. image:: device_troubleshooting/device-troubleshooting-output-mode-popup.png
-      :align: center
-      :alt: Output mode pop-up window on MUNBYN scanner.
+   .. screenshot:: barcode-troubleshooting-munbyn-output-mode
+      :menu: (MUNBYN Scanner app) ‣ Settings ‣ Output Mode
+      :shows: The Output Mode pop-up on the MUNBYN scanner with "Keyboard Mode" selected.
+      :highlight: The "Keyboard Mode" option (red frame).
+      :data: n/a
+      :module: barcodes
+      :notes: Screenshot of the MUNBYN device's own settings app, not of Odoo.
 
    Go back to the app that needs to be scanned, and click on the input dialog box first before
    scanning. Finally, perform a test scan to ensure the MUNBYN Android scanner is working as
@@ -165,17 +176,26 @@ activated.
 Then, also under the :guilabel:`Keyboard wedge` section, locate the :guilabel:`Keyboard wedge input
 mode` option. By default, the input mode is set to :guilabel:`Text injection`.
 
-.. image:: device_troubleshooting/device-troubleshooting-wedge-menu.png
-   :align: center
-   :alt: Wedge configuration menu on Datalogic scanner.
+.. screenshot:: barcode-troubleshooting-datalogic-wedge-menu
+   :menu: (Datalogic Settings app) ‣ System ‣ Scanner Settings ‣ Wedge
+   :shows: The Keyboard wedge configuration menu on a Datalogic scanner.
+   :highlight: n/a
+   :data: n/a
+   :module: barcodes
+   :notes: Screenshot of the Datalogic device's own settings app, not of Odoo.
 
 Click :guilabel:`Keyboard wedge input mode`, and change the setting to :guilabel:`Key pressure`.
 This ensures that scanned barcodes are translated into keyboard strokes, instead of being injected
 into the text area.
 
-.. image:: device_troubleshooting/device-troubleshooting-keyboard-wedge-input.png
-   :align: center
-   :alt: Keyboard wedge input mode selection on Datalogic scanner.
+.. screenshot:: barcode-troubleshooting-datalogic-wedge-input-mode
+   :menu: (Datalogic Settings app) ‣ System ‣ Scanner Settings ‣ Wedge ‣ Keyboard wedge input mode
+   :shows: The Keyboard wedge input mode selection on a Datalogic scanner, with "Key pressure"
+      selected.
+   :highlight: The "Key pressure" option (red frame).
+   :data: n/a
+   :module: barcodes
+   :notes: Screenshot of the Datalogic device's own settings app, not of Odoo.
 
 Once all those steps have been taken, perform a test scan to ensure the Datalogic Android scanner is
 working as intended.
@@ -186,13 +206,12 @@ Screenless scanners
 ===================
 
 Screenless scanners are barcode scanning devices that have no screens. These include USB scanners
-and bluetooth scanners.
+and Bluetooth scanners.
 
 .. important::
-   Odoo supports most USB and Bluetooth barcode scanners, as they all emulate a keyboard. However,
-   to verify that a scanner is compatible with a specific keyboard layout (or can be configured to
-   do so), refer to Odoo's `Inventory & Barcode compatible hardware
-   <https://www.odoo.com/app/inventory-hardware>`_ documentation.
+   Odoo supports most USB and Bluetooth barcode scanners, as they all emulate a keyboard. To verify
+   that a scanner is compatible with a specific keyboard layout (or can be configured to do so),
+   check the scanner vendor's own documentation.
 
 NETUM devices
 -------------
@@ -200,9 +219,13 @@ NETUM devices
 By default, the NETUM barcode scanner's user manual only shows the French keyboard configuration. To
 use the Belgian keyboard, scan the code below:
 
-.. image:: device_troubleshooting/device-troubleshooting-belgium-fr-key.png
-   :align: center
-   :alt: Belgian FR key barcode.
+.. screenshot:: barcode-troubleshooting-netum-belgium-key
+   :menu: (scanner user manual)
+   :shows: The Belgian FR keyboard-layout barcode from the NETUM scanner's user manual.
+   :highlight: n/a
+   :data: n/a
+   :module: barcodes
+   :notes: Reuse the previous illustration (vendor manual barcode); no Odoo UI involved.
 
 Once that code has been scanned, ensure the NETUM scanner has the correct keyboard configuration,
 and is working as intended.

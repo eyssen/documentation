@@ -5,11 +5,9 @@ Facebook sign-in authentication
 The *Facebook* OAuth sign-in function allows Odoo users to sign in to their database with their
 Facebook account.
 
-.. danger::
-   Databases housed on Odoo.com should **not** use OAuth login for the owner or administrator of the
-   database, as it would unlink the database from their Odoo.com account. If OAuth is setup for
-   that user, the database can no longer be duplicated, renamed, or otherwise managed from the
-   Odoo.com portal.
+.. tip::
+   Keep at least one administrator account that logs in with a password, so the database remains
+   accessible if the OAuth provider is unavailable.
 
 Meta for Developers setup
 =========================
@@ -40,9 +38,11 @@ After the new app is created, the :guilabel:`Dashboard` page appears, with a lis
 completed before the app can be published. From here, click :guilabel:`Customize adding a Facebook
 Login button`.
 
-.. image:: facebook/app-requirements.png
-   :align: center
-   :alt: The App Dashboard in the Meta for developers platform.
+.. screenshot:: general-facebook-app-dashboard
+   :menu: (Meta for Developers) ‣ My Apps ‣ (app) ‣ Dashboard
+   :shows: The App Dashboard of the new app with the "Authenticate and request data from users with Facebook Login" use case and its Customize button.
+   :module: auth_oauth
+   :notes: Meta for Developers website; blur IDs.
 
 On the :guilabel:`Customize` page, click :guilabel:`Settings`.
 
@@ -50,8 +50,8 @@ In the :guilabel:`Valid OAuth Redirect URIs` field, enter `https://<odoo base
 url>/auth_oauth/signin`, replacing `<odoo base url>` with the URL of the applicable database.
 
 .. example::
-   If a database has the URL `https://example.odoo.com`, the URL
-   `https://example.odoo.com/auth_oauth/signin` would be entered in the :guilabel:`Valid OAuth
+   If a database has the URL `https://erp.example.com`, the URL
+   `https://erp.example.com/auth_oauth/signin` would be entered in the :guilabel:`Valid OAuth
    Redirect URIs` field.
 
 Click :guilabel:`Save changes` when finished.
@@ -62,28 +62,26 @@ Configure settings
 At the far left of the page, click :menuselection:`App settings --> Basic`. This page contains
 additional settings that are required before the app can be submitted for approval.
 
-In the :guilabel:`Privacy Policy URL` field, enter `https://www.odoo.com/privacy`.
-
-.. note::
-   `<https://www.odoo.com/privacy>`_ is the default privacy policy for databases hosted on Odoo.com.
+In the :guilabel:`Privacy Policy URL` field, enter the URL of the company's privacy policy, e.g.,
+the privacy policy page of the company website.
 
 Click the :guilabel:`App Icon` field to open a file upload window. From here, select and upload an
 app icon.
 
-In the :guilabel:`User data deletion` field, enter
-`https://www.odoo.com/documentation/17.0/administration/odoo_accounts.html`.
-
-.. note::
-   This document provides instructions on how a user can delete their Odoo account.
+In the :guilabel:`User data deletion` field, enter the URL of a page that explains how users can
+request the deletion of their data, e.g., a page of the company website.
 
 Lastly, click the :guilabel:`Category` field, and select :guilabel:`Business and pages` from the
 drop-down menu.
 
 Click :guilabel:`Save changes`.
 
-.. image:: facebook/app-id.png
-   :align: center
-   :alt: An exampled of the Basic Settings page in the Meta for developers platform.
+.. screenshot:: general-facebook-basic-settings
+   :menu: (Meta for Developers) ‣ App settings ‣ Basic
+   :shows: The Basic Settings page with App ID, App Secret (hidden), Privacy Policy URL, User data deletion, App Icon and Category.
+   :highlight: The App ID field.
+   :module: auth_oauth
+   :notes: Meta for Developers website; blur IDs and secrets.
 
 .. _users/app-id:
 
@@ -115,9 +113,12 @@ First, activate :ref:`Developer mode <developer-mode/activation>`.
 Navigate to the :menuselection:`Settings app`, and scroll down to the :guilabel:`Integrations`
 section. There, tick the checkbox labeled, :guilabel:`OAuth Authentication`. Click :guilabel:`Save`.
 
-.. image:: facebook/enable-oauth.png
-   :align: center
-   :alt: The enable OAuth setting in the Settings app.
+.. screenshot:: general-facebook-oauth-setting
+   :menu: Settings ‣ General Settings ‣ Integrations
+   :shows: The Integrations section with the "OAuth Authentication" checkbox ticked.
+   :highlight: The OAuth Authentication setting.
+   :module: auth_oauth, base_setup
+   :notes: English UI, crop to the section.
 
 Then, sign in to the database once the login screen loads.
 
@@ -127,6 +128,9 @@ OAuth Providers`. Click :guilabel:`Facebook Graph`.
 In the :guilabel:`Client ID` field, enter the :ref:`App ID <users/app-id>` from the previous
 section, then tick the :guilabel:`Allowed` checkbox.
 
-.. image:: facebook/facebook-graph.png
-   :align: center
-   :alt: The Facebook Graph record in Odoo.
+.. screenshot:: general-facebook-provider
+   :menu: Settings ‣ General Settings ‣ Integrations ‣ OAuth Providers ‣ Facebook Graph
+   :shows: The "Facebook Graph" OAuth provider form with the Client ID filled and the Allowed checkbox ticked.
+   :highlight: Client ID and Allowed.
+   :module: auth_oauth
+   :notes: English UI, crop to the form; blur the Client ID.

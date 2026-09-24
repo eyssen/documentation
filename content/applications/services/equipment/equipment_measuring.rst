@@ -7,35 +7,48 @@ features specific to measuring instruments such as coordinate measuring machines
 measurement systems, and other precision devices. It adds calibration tracking, software and
 hardware information, and sensor management.
 
-.. image:: equipment_measuring/measuring-list-view.png
-   :alt: Measuring devices list view
+.. screenshot:: services-equipment-measuring-list
+   :menu: Equipment Management ‣ Measuring Devices ‣ Measuring Devices
+   :shows: The list of measuring devices with their serial numbers, customers and calibration status column.
+   :highlight: The Calibration Status column (red frame).
+   :data: Four measuring devices with mixed calibration statuses (valid, expiring, expired).
+   :module: equipment_measuring
+   :notes: English UI, light theme, 1440px width, crop to the list.
 
 Installation
 ============
 
 Enable the Measuring Devices module from :menuselection:`Equipment Management --> Settings -->
-Configuration --> Equipment Types --> Measuring Devices`, or install ``equipment_measuring`` from
-the Apps menu.
+Configuration`, by ticking :guilabel:`Measuring Devices` in the equipment types section, or install
+``equipment_measuring`` from the Apps menu. The module requires the *Repairs* app, which is
+installed along with it: calibrations are recorded as :ref:`repair orders
+<repairs/repair_orders/calibration>`.
 
 Dedicated measuring views
 =========================
 
 Once installed, a **Measuring Devices** menu appears in the Equipment Management navigation:
 
-- :menuselection:`Equipment Management --> Measuring Devices --> Measuring Devices`: Shows only
+- :menuselection:`Equipment Management --> Measuring Devices --> Measuring Devices`: shows only
   measuring-type equipment with specific columns (calibration status, next calibration date,
   product family, serial number).
-- :menuselection:`Equipment Management --> Measuring Devices --> Calibrations`: Lists all
-  calibration records across all measuring devices.
+- :menuselection:`Equipment Management --> Measuring Devices --> Calibrations`: lists all the
+  calibrations of all measuring devices.
 
 Creating an equipment from the Measuring Devices menu automatically sets the type to
-*Measuring Device*.
+*Measuring Device*. The *Measuring Device* type is also available on the equipment models
+(:menuselection:`Equipment Management --> Settings --> Models`).
 
 Measuring tab
 =============
 
-.. image:: equipment_measuring/measuring-form-tab.png
-   :alt: Measuring tab on equipment form
+.. screenshot:: services-equipment-measuring-tab
+   :menu: Equipment Management ‣ Measuring Devices ‣ (open a device) ‣ Measuring
+   :shows: The Measuring tab of an equipment with the calibration section, the software and hardware information, and the technical description.
+   :highlight: The Calibration section (red frame).
+   :data: Equipment "Zeiss Contura CMM" with a valid calibration.
+   :module: equipment_measuring
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 When an equipment has type *Measuring Device*, a dedicated :guilabel:`Measuring` tab appears on
 the form with the following sections:
@@ -43,27 +56,35 @@ the form with the following sections:
 Calibration
 -----------
 
-- **Last Calibration Date**: Automatically computed from the most recent calibration log entry.
-  Cannot be edited directly — add a calibration record instead.
-- **Next Calibration Date**: Computed as Last Calibration Date + Calibration Period. Read-only.
-- **Calibration Period (months)**: How often the equipment must be calibrated. Set manually.
-- **Calibration Status**: Computed status badge:
+- :guilabel:`Last Calibration Date`: the calibration date of the most recent **finished**
+  calibration of the equipment (repair order in the :guilabel:`Repaired` status). Cannot be edited
+  directly.
+- :guilabel:`Last Calibration Date (Manual)`: only displayed as long as the equipment has no
+  calibration. Enter here the date of the last calibration performed before the equipment was
+  recorded in the database; it is used as last calibration date until a first calibration is
+  finished.
+- :guilabel:`Next Calibration Date`: computed as the last calibration date plus the calibration
+  period. Read-only, and empty as long as one of the two is missing.
+- :guilabel:`Calibration Period (months)`: how often the equipment must be calibrated. Set manually.
+- :guilabel:`Calibration Status`: a badge computed from the next calibration date every time the
+  equipment is displayed:
 
-  - **OK** (green): Next calibration is more than 30 days away.
-  - **Warning** (yellow): Next calibration is within 30 days.
-  - **Overdue** (red): Calibration date has passed, or no calibration data exists.
+  - :guilabel:`OK` (green): the next calibration is more than 30 days away.
+  - :guilabel:`Warning` (yellow): the next calibration is within 30 days.
+  - :guilabel:`Overdue` (red): the calibration date has passed, or there is no next calibration
+    date.
 
 Software
 --------
 
-- **Software Modules**: Free-text description of installed software modules.
-- **Software Serial Number**: The license serial number.
-- **Software Version**: The current software version.
+- :guilabel:`Software Modules`: free-text description of the installed software modules.
+- :guilabel:`Software Serial Number`: the license serial number.
+- :guilabel:`Software Version`: the current software version.
 
 Hardware
 --------
 
-- **Hardware Keylock**: The hardware keylock number (dongle/license key).
+- :guilabel:`Hardware Keylock`: the hardware keylock number (dongle/license key).
 
 Characteristics
 ---------------
@@ -74,93 +95,123 @@ other characteristics of the measuring device.
 Sensors
 -------
 
-.. image:: equipment_measuring/measuring-sensors.png
-   :alt: Sensors inline list
+.. screenshot:: services-equipment-measuring-sensors
+   :menu: Equipment Management ‣ Measuring Devices ‣ (open a device) ‣ Measuring
+   :shows: The Sensors inline list of the Measuring tab with three sensor lines showing name, serial number and type.
+   :highlight: None.
+   :data: Sensors "Touch Probe SP25M", "Optical Sensor", "Chromatic Focus Point".
+   :module: equipment_measuring
+   :notes: English UI, light theme, 1440px width, crop to the sensor list.
 
 An inline editable list of sensors attached to the measuring device:
 
-- **Name**: Sensor name (e.g., "Optical Sensor", "Touch Probe SP25M").
-- **Serial Number**: The sensor's serial number for tracking and warranty purposes.
-- **Type**: Sensor type (free text — e.g., "Optical", "Tactile", "Chromatic Focus Point").
-- **Notes**: Additional notes.
+- :guilabel:`Name`: sensor name (e.g., "Optical Sensor", "Touch Probe SP25M").
+- :guilabel:`Serial Number`: the sensor's serial number for tracking and warranty purposes.
+- :guilabel:`Type`: sensor type (free text, e.g., "Optical", "Tactile", "Chromatic Focus Point").
+- :guilabel:`Notes`: additional notes (optional column).
 
 Click the :guilabel:`Sensors` stat button to view sensors in a dedicated list view.
 
 Calibration management
 ======================
 
-.. image:: equipment_measuring/measuring-calibration-list.png
-   :alt: Calibration records list view
+.. screenshot:: services-equipment-calibration-list
+   :menu: Equipment Management ‣ Measuring Devices ‣ Calibrations
+   :shows: The list of calibrations with the reference of the repair order, the certificate number, the equipment, the calibration date, the quality, the result, the customer and the status.
+   :highlight: The "Certificate Number" column (red frame).
+   :data: Six calibrations across three measuring devices, one of them cancelled (greyed out).
+   :module: equipment_measuring
+   :notes: English UI, light theme, 1440px width, crop to the list.
 
-Calibration records track the complete calibration history of each measuring device.
+A calibration is a **repair order** of the *Repairs* app on which the :guilabel:`Calibration`
+checkbox is ticked. It therefore follows the usual repair workflow (parts, operations, invoicing),
+and additionally carries the calibration data and a certificate number. The complete calibration
+history of each measuring device is made of its calibration repair orders.
 
-Creating a calibration record
------------------------------
+Creating a calibration
+----------------------
 
-.. image:: equipment_measuring/measuring-calibration-form.png
-   :alt: Calibration form
+.. screenshot:: services-equipment-calibration-form
+   :menu: Equipment Management ‣ Measuring Devices ‣ (open a device) ‣ Create Calibration
+   :shows: A repair order form with the Calibration checkbox ticked and the Calibration group: equipment, calibration date, quality and result badges, performed by, certificate number, certificate file, signature fields, work performed and notes.
+   :highlight: The "Calibration" group (red frame).
+   :data: Equipment "Zeiss Contura CMM"; quality "Accredited"; result "Pass"; certificate number "4382".
+   :module: equipment_measuring
+   :notes: English UI, light theme, 1440px width, crop to the form sheet.
 
-#. Navigate to :menuselection:`Equipment Management --> Measuring Devices --> Calibrations`.
-#. Click :guilabel:`New`.
-#. Fill in the required fields:
+#. Open the measuring device, and click :guilabel:`Create Calibration` in the header. The button is
+   available on :guilabel:`Active` and :guilabel:`Inactive` equipment. A new repair order opens,
+   with :guilabel:`Calibration` ticked, and the equipment, its product, and its customer filled in.
 
-   - **Equipment**: The measuring device being calibrated.
-   - **Calibration Date**: The date the calibration was performed (defaults to today).
-   - **Result**: The calibration outcome:
+   Alternatively, click :guilabel:`New` in :menuselection:`Equipment Management --> Measuring
+   Devices --> Calibrations`, or tick :guilabel:`Calibration` on any repair order, and select the
+   :guilabel:`Equipment` (only measuring devices can be selected).
 
-     - **Pass**: Equipment is within specifications.
-     - **Fail**: Equipment is out of specification and needs repair/adjustment.
-     - **Conditional**: Equipment passes with limitations or notes.
+#. Fill in the :guilabel:`Calibration` group:
 
-#. Optionally fill in:
+   - :guilabel:`Calibration Date`: the date the calibration is performed (defaults to today);
+   - :guilabel:`Calibration Quality`: :guilabel:`Accredited` or :guilabel:`Werks` (required);
+   - :guilabel:`Result`: :guilabel:`Pass`, :guilabel:`Fail`, :guilabel:`Conditional Pass`, or
+     :guilabel:`Conditional Fail`;
+   - :guilabel:`Performed By`: the person or organization performing the calibration;
+   - :guilabel:`Certificate`: the calibration certificate file (PDF, etc.);
+   - :guilabel:`Signed By`, :guilabel:`Customer Signature`, and :guilabel:`Sign Date`: the
+     acknowledgment of the customer;
+   - :guilabel:`Work Performed` and :guilabel:`Calibration Notes`.
 
-   - **Performed By**: Name or organization that performed the calibration.
-   - **Certificate**: Upload the calibration certificate (PDF, etc.).
-   - **Notes**: Any additional observations.
+#. Click :guilabel:`Confirm Repair`, and then :guilabel:`Start Repair`. At that moment, the
+   :guilabel:`Certificate Number` is issued from the *Calibration Certificate* sequence, so that it
+   can be printed on the worksheet before the calibration is finished.
+#. Click :guilabel:`Print Worksheet` to print the *Calibration Worksheet*.
+#. When the calibration is finished, click :guilabel:`End Repair`. The equipment's :guilabel:`Last
+   Calibration Date`, :guilabel:`Next Calibration Date`, and :guilabel:`Calibration Status` are
+   updated.
 
-#. Save.
+See :ref:`repairs/repair_orders/calibration` for the details of the calibration fields on the repair
+order.
 
-The equipment's **Last Calibration Date** and **Next Calibration Date** are automatically updated
-based on the latest calibration record.
+.. important::
+   The certificate number is a regulatory, gap-less numbering:
+
+   - it is issued automatically, and can neither be entered nor modified manually;
+   - a calibration with a certificate number cannot be deleted, reset to draft, or turned back into
+     a regular repair. It can only be cancelled; cancelled calibrations keep their number and can be
+     found with the :guilabel:`Voided Certificate` filter of the repair orders.
 
 .. tip::
-   You can also create calibration records directly from the equipment form by clicking the
-   :guilabel:`Calibrations` stat button and then :guilabel:`New`.
-
-Calibration workflow
---------------------
-
-A typical calibration workflow:
-
-#. The daily cron job (or the Calibration Status badge on the form) alerts that calibration is due.
-#. A technician performs the calibration.
-#. A calibration record is created with the result and certificate.
-#. The system automatically updates the next calibration date.
-#. The Calibration Status returns to *OK*.
+   The starting number of the certificates can be adapted in :ref:`developer mode <developer-mode>`
+   on the *Calibration Certificate* sequence (:menuselection:`Settings --> Technical --> Sequences &
+   Identifiers --> Sequences`) **before** the first certificate is issued.
 
 Search and filtering
 --------------------
 
-The calibration list view includes:
-
-- **Filters**: Pass, Fail, Conditional results.
-- **Group By**: Equipment, Result, Date (by month).
+In the repair order search, calibrations can be found by :guilabel:`Calibration Quality`,
+:guilabel:`Certificate Number`, and :guilabel:`Equipment`, filtered with :guilabel:`Accredited`,
+:guilabel:`Werks`, and :guilabel:`Voided Certificate`, and grouped by :guilabel:`Calibration
+Quality`.
 
 Stat buttons
 ============
 
 Measuring-type equipment shows additional stat buttons:
 
-- **Calibrations**: Total number of calibration records. Click to view the full calibration
-  history.
-- **Sensors**: Number of attached sensors. Only visible when sensors exist. Click to view sensors.
+- :guilabel:`Calibrations`: the number of calibration repair orders of the equipment. Click to view
+  the full calibration history.
+- :guilabel:`Sensors`: the number of attached sensors. Only visible when sensors exist.
 
 Dedicated search filters
 ========================
 
-The measuring devices list view includes specific search capabilities:
+The equipment and measuring devices list views include specific search capabilities:
 
-- **Filter: Calibration Due**: Measuring devices with calibration due within 30 days.
-- **Filter: Calibration Overdue**: Measuring devices past their calibration date.
-- **Group By: Product Family**: Group measuring devices by product family.
-- **Group By: Calibration Status**: Group by OK/Warning/Overdue status.
+- :guilabel:`Calibration Due` filter: measuring devices whose next calibration is within 30 days.
+- :guilabel:`Calibration Overdue` filter: measuring devices past their calibration date.
+- :guilabel:`Product Family` grouping.
+- :guilabel:`Calibration Status` grouping (:guilabel:`OK`, :guilabel:`Warning`,
+  :guilabel:`Overdue`).
+
+.. note::
+   There is no automatic reminder when a calibration becomes due: use the :guilabel:`Calibration
+   Due` and :guilabel:`Calibration Overdue` filters, e.g., saved as a favorite, or schedule an
+   activity on the equipment.

@@ -32,9 +32,14 @@ Configuration --> Settings`. Under the :guilabel:`Orders` section, click the che
 
 Then, click :guilabel:`Save` to apply the change.
 
-.. image:: calls_for_tenders/calls-for-tenders-enabled-setting.png
-   :align: center
-   :alt: Purchase Agreements enabled in the Purchase app settings.
+.. screenshot:: purchase-calls-for-tenders-enabled-setting
+   :menu: Purchase ‣ Configuration ‣ Settings
+   :shows: Settings page scrolled to the "Orders" section, with the "Purchase Agreements" checkbox
+           enabled.
+   :highlight: The "Purchase Agreements" setting (red frame).
+   :data: Demo company "YourCompany".
+   :module: purchase_requisition
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 .. _purchase/manage_deals/create-rfq:
 
@@ -59,9 +64,15 @@ To create alternative |RfQs| from the original, click the :guilabel:`Alternative
 :guilabel:`Create Alternative`. When clicked, a :guilabel:`Create alternative` pop-up window
 appears.
 
-.. image:: calls_for_tenders/calls-for-tenders-create-alternative.png
-   :align: center
-   :alt: Calls for tenders pop-up to create alternative quotation.
+.. screenshot:: purchase-calls-for-tenders-create-alternative
+   :menu: Purchase ‣ Orders ‣ Requests for Quotation ‣ (open an RfQ) ‣ Alternatives ‣ Create
+          Alternative
+   :shows: The "Create alternative" pop-up window with the Vendor field and "Copy Products"
+           checkbox.
+   :highlight: The "Copy Products" checkbox (red frame).
+   :data: Demo company "YourCompany"; alternative vendor "Wood Corner".
+   :module: purchase_requisition
+   :notes: English UI, light theme, 1440px width.
 
 From this window, select an alternative vendor from the drop-down menu next to the
 :guilabel:`Vendor` field, to whom the alternative quotation is assigned.
@@ -103,9 +114,13 @@ clicking :guilabel:`Add a product`, and selecting the desired products from the 
 
 Once the desired number of specific products are added, click :guilabel:`Send by Email`.
 
-.. image:: calls_for_tenders/calls-for-tenders-blank-quotation.png
-   :align: center
-   :alt: Blank alternative quotation with alternatives in breadcrumbs.
+.. screenshot:: purchase-calls-for-tenders-blank-quotation
+   :menu: Purchase ‣ Orders ‣ Requests for Quotation ‣ (open an alternative RfQ)
+   :shows: A blank alternative RfQ form with the "Alternatives" breadcrumb showing the linked RfQs.
+   :highlight: The Alternatives breadcrumb (red frame).
+   :data: Demo company "YourCompany"; three linked alternative RfQs.
+   :module: purchase_requisition
+   :notes: English UI, light theme, 1440px width.
 
 This opens a :guilabel:`Compose Email` pop-up window, wherein the message to the vendor can be
 customized, and attachments can be added, if necessary. Once ready, click :guilabel:`Send`.
@@ -135,9 +150,14 @@ separately, there are no other orders linked yet.
 However, to link this |RfQ| with existing alternatives, click :guilabel:`Link to Existing RfQ` on
 the first line in the :guilabel:`Vendor` column.
 
-.. image:: calls_for_tenders/calls-for-tenders-link-rfq-popup.png
-   :align: center
-   :alt: Pop-up to link new quotation to existing RFQs.
+.. screenshot:: purchase-calls-for-tenders-link-rfq-popup
+   :menu: Purchase ‣ Orders ‣ Requests for Quotation ‣ (open an RfQ) ‣ Alternatives ‣ Link to
+          Existing RfQ
+   :shows: The "Add: Alternative POs" pop-up window listing existing RfQs to link.
+   :highlight: The list of selectable RfQs.
+   :data: Demo company "YourCompany"; two existing RfQs listed.
+   :module: purchase_requisition
+   :notes: English UI, light theme, 1440px width.
 
 This opens an :guilabel:`Add: Alternative POs` pop-up window. Select the desired previously-created
 |RfQs|, and click :guilabel:`Select`. All of these orders are now copied to this |RfQ|, and can be
@@ -167,9 +187,15 @@ Then, click the :guilabel:`Alternatives` tab to see all linked |RfQs|. Next, und
 :guilabel:`Create Alternative` option, click :guilabel:`Compare Product Lines`. This navigates to
 the :guilabel:`Compare Order Lines` page.
 
-.. image:: calls_for_tenders/calls-for-tenders-compare-products.png
-   :align: center
-   :alt: Compare Product Lines page for alternative RFQs.
+.. screenshot:: purchase-calls-for-tenders-compare-products
+   :menu: Purchase ‣ Orders ‣ Requests for Quotation ‣ (open an RfQ) ‣ Alternatives ‣ Compare
+          Product Lines
+   :shows: The "Compare Order Lines" page grouped by Product, with the linked RfQ references and
+           the Choose/Clear buttons per line.
+   :highlight: The Choose button on one of the product lines.
+   :data: Demo company "YourCompany"; three alternative RfQs compared.
+   :module: purchase_requisition
+   :notes: English UI, light theme, 1440px width.
 
 The :guilabel:`Compare Order Lines` page, by default, groups by :guilabel:`Product`. Each product
 included in any of the |RfQs| is displayed in its own nested drop-down list, and features all of the
@@ -205,9 +231,14 @@ The cost in the :guilabel:`Total` column for each product that wasn't chosen is 
 Although they haven't been cancelled yet, this indicates that each of those orders can be cancelled
 without having an effect on the other live orders, once those orders have been confirmed.
 
-.. image:: calls_for_tenders/calls-for-tenders-zero-total.png
-   :align: center
-   :alt: Cancelled quotations in the Purchase app overview.
+.. screenshot:: purchase-calls-for-tenders-zero-total
+   :menu: Purchase ‣ Orders ‣ Requests for Quotation
+   :shows: The Requests for Quotation list, with the unselected alternative RfQs showing a Total of
+           0.
+   :highlight: The Total column for the unselected RfQs (red frame).
+   :data: Demo company "YourCompany"; two RfQs with a Total of 0.
+   :module: purchase_requisition
+   :notes: English UI, light theme, 1440px width.
 
 To confirm an |RfQ| for which products were selected, click into an |RfQ|, and click
 :guilabel:`Confirm Order`.
@@ -233,9 +264,14 @@ any additional product quantities need to be ordered later.
 Once all products are ordered, select :guilabel:`Cancel Alternatives` from whichever |PO|
 is open at that time.
 
-.. image:: calls_for_tenders/calls-for-tenders-keep-or-cancel.png
-   :align: center
-   :alt: Keep or cancel pop-up for alternative RFQs.
+.. screenshot:: purchase-calls-for-tenders-keep-or-cancel
+   :menu: Purchase ‣ Orders ‣ Requests for Quotation ‣ (open an RfQ) ‣ Confirm Order
+   :shows: The "What about the alternative Requests for Quotations?" pop-up window with the Cancel
+           Alternatives and Keep Alternatives buttons.
+   :highlight: The Cancel Alternatives and Keep Alternatives buttons.
+   :data: Demo company "YourCompany"; two alternative RfQs listed.
+   :module: purchase_requisition
+   :notes: English UI, light theme, 1440px width.
 
 Finally, using the breadcrumbs at the top of the page, click :guilabel:`Requests for Quotation` to
 navigate back to an overview of all |RfQs|.

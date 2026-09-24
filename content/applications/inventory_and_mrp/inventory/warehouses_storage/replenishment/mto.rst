@@ -52,18 +52,28 @@ To do so, begin by navigating to :menuselection:`Inventory app --> Configuration
 :guilabel:`Routes` page, click the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon on the right
 side of the search bar, and click the :guilabel:`Archived` filter to enable it.
 
-.. image:: mto/archived-filter.png
-   :align: center
-   :alt: The archived filter on the Routes page.
+.. screenshot:: inventory-mto-archived-filter
+   :menu: Inventory ‣ Configuration ‣ Routes
+   :shows: The Routes page with the search drop-down open and the "Archived" filter enabled, so the archived
+      "Replenish on Order (MTO)" route is listed.
+   :highlight: The "Archived" filter (red frame).
+   :data: A database where the MTO route is still archived.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, show the search drop-down and the list.
 
 After enabling the :guilabel:`Archived` filter, the :guilabel:`Routes` page shows all routes which
 are currently archived. Tick the checkbox next to :guilabel:`Replenish on Order (MTO)`, then click
 the :icon:`fa-cog` :guilabel:`Actions` button to reveal a drop-down menu. From the drop-down menu,
 select :guilabel:`Unarchive`.
 
-.. image:: mto/unarchive-button.png
-   :align: center
-   :alt: The unarchive action on the Routes page.
+.. screenshot:: inventory-mto-unarchive
+   :menu: Inventory ‣ Configuration ‣ Routes
+   :shows: The Routes page with the "Replenish on Order (MTO)" route selected and the Actions drop-down
+      open, showing the "Unarchive" entry.
+   :highlight: The "Unarchive" entry (red frame).
+   :data: The archived MTO route selected.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the selection bar and the open menu.
 
 Finally, remove the :guilabel:`Archived` filter from the search bar. The :guilabel:`Routes` page now
 shows all unarchived routes, including :guilabel:`Replenish on Order (MTO)`, which is selectable on
@@ -85,9 +95,13 @@ Order (MTO)` route in the :guilabel:`Routes` section, along with the :guilabel:`
    as well. This is because Odoo needs to know how to replenish the product when an order is placed
    for it (buy or manufacture it).
 
-.. image:: mto/select-routes.png
-   :align: center
-   :alt: Select the MTO route and a second route on the Inventory tab.
+.. screenshot:: inventory-mto-product-routes
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Inventory tab
+   :shows: The "Routes" section of a product form with both "Replenish on Order (MTO)" and "Buy" ticked.
+   :highlight: The two ticked routes (red frame).
+   :data: A purchased product with one vendor on its Purchase tab.
+   :module: stock, purchase_stock
+   :notes: English UI, light theme, 1440px width, crop to the Routes section.
 
 If the product is purchased from a vendor to fulfill |SOs|, enable the :guilabel:`Can be Purchased`
 checkbox under the product name. Doing so makes the :guilabel:`Purchase` tab appear alongside the

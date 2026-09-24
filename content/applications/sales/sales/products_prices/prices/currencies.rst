@@ -16,9 +16,13 @@ Once the *Accounting* app has been installed, foreign currencies can be added to
 Navigate to :menuselection:`Accounting app --> Configuration --> Settings`, scroll to the
 :guilabel:`Currencies` section, and locate the :guilabel:`Main Currency` setting.
 
-.. image:: currencies/main-currency-setting-page.png
-   :align: center
-   :alt: How the main currency feature appears on settings page in Odoo Accounting.
+.. screenshot:: sales-currencies-main-currency-setting
+   :menu: Accounting ‣ Configuration ‣ Settings
+   :shows: The Accounting settings scrolled to the "Currencies" section with the Main Currency field and the "Currencies" link.
+   :highlight: The Main Currency field (red frame).
+   :data: Main currency EUR.
+   :module: account
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 Odoo automatically sets the main currency as the currency of the country the company is based in.
 
@@ -30,9 +34,13 @@ field, select the desired currency, and be sure to :guilabel:`Save` the changes.
    on the *Accounting* settings page (:menuselection:`Accounting app --> Configuration --> Settings
    --> Currencies section`).
 
-   .. image:: currencies/automatic-currency-rates.png
-      :align: center
-      :alt: How the main currency feature appears on settings page in Odoo Accounting.
+   .. screenshot:: sales-currencies-automatic-rates
+      :menu: Accounting ‣ Configuration ‣ Settings
+      :shows: The "Automatic Currency Rates" setting with the Service, Interval and "Next Run" fields and the "Update Now" link.
+      :highlight: The Service and Interval fields (red frame).
+      :data: Service "European Central Bank", daily interval.
+      :module: account
+      :notes: English UI, light theme, 1440px width, crop to the setting block.
 
    Click the checkbox beside the :guilabel:`Automatic Currency Rates` feature, choose a designated
    bank to get the currency rates from in the :guilabel:`Service` field drop-down menu, and select
@@ -58,9 +66,13 @@ To view, edit, and add currencies to the database, making them available on pric
 
 When the :guilabel:`Currencies` link is clicked, a separate :guilabel:`Currencies` page is revealed.
 
-.. image:: currencies/main-currencies-page.png
-   :align: center
-   :alt: How the main currencies page appears in Odoo Accounting.
+.. screenshot:: sales-currencies-list
+   :menu: Accounting ‣ Configuration ‣ Currencies
+   :shows: The currencies list with the Currency, Symbol, Current Rate, Active columns and several currencies enabled.
+   :highlight: The Active toggle column (red frame).
+   :data: EUR, USD, HUF enabled; the rest inactive.
+   :module: base
+   :notes: English UI, light theme, 1440px width, crop to the list.
 
 On this page, Odoo provides a master list of 167 global currencies. Each row shows the corresponding
 :guilabel:`Currency`, :guilabel:`Symbol`, :guilabel:`Name`, date of the :guilabel:`Last Update`, and
@@ -89,9 +101,13 @@ Currency detail form
 To edit any currency on the :guilabel:`Currencies` page, click the desired currency to reveal the
 detail form for that specific currency, and proceed to make any necessary changes.
 
-.. image:: currencies/currency-detail-form.png
-   :align: center
-   :alt: How a currency detail form looks in Odoo Accounting.
+.. screenshot:: sales-currencies-detail-form
+   :menu: Accounting ‣ Configuration ‣ Currencies ‣ (a currency)
+   :shows: A currency form with the Currency, Symbol, Currency Unit/Subunit, Rounding Factor and Decimals fields and the Rates list.
+   :highlight: The Rates list (red frame).
+   :data: Currency USD with two rate lines.
+   :module: base
+   :notes: English UI, light theme, 1440px width, full form.
 
 On the currency detail form, the relevant currency code appears in the :guilabel:`Currency` field.
 Beneath that, the name for the currency is in the :guilabel:`Name` field.
@@ -120,9 +136,13 @@ Main currency detail form
 If the selected currency is the main currency of the company, a blue banner appears at the top of
 the currency detail form with the message: :guilabel:`This is your company's currency.`.
 
-.. image:: currencies/main-currency-detail-form.png
-   :align: center
-   :alt: How a main currency detail form looks in Odoo Accounting.
+.. screenshot:: sales-currencies-main-detail-form
+   :menu: Accounting ‣ Configuration ‣ Currencies ‣ (the main currency)
+   :shows: The form of the company's main currency, whose rate is fixed at 1.00.
+   :highlight: The rate of 1.00 (red frame).
+   :data: Currency EUR as main currency.
+   :module: base
+   :notes: English UI, light theme, 1440px width, full form.
 
 All the fields are the same as a typical currency detail form, but there will **not** be a
 :guilabel:`Rates` tab because all other currency rates are based off the main currency of the
@@ -137,9 +157,13 @@ open a blank currency template form.
 .. tip::
    The same :guilabel:`New` button is located in the upper-right corner of any currency detail form.
 
-.. image:: currencies/blank-currency-detail-form.png
-   :align: center
-   :alt: How a blank currency detail form looks in Odoo Accounting.
+.. screenshot:: sales-currencies-new-form
+   :menu: Accounting ‣ Configuration ‣ Currencies ‣ New
+   :shows: An empty currency form with the Currency, Symbol, Currency Unit, Currency Subunit, Rounding Factor and Decimals fields.
+   :highlight: No highlight; the empty form is the subject.
+   :data: New, unsaved currency.
+   :module: base
+   :notes: English UI, light theme, 1440px width, full form.
 
 On the blank currency detail form, proceed to enter the desired currency code in the
 :guilabel:`Currency` field. Beneath that, enter the name for the currency in the :guilabel:`Name`
@@ -201,9 +225,13 @@ Then, on the product detail form, click the :guilabel:`Extra Prices` smart butto
 upper-left corner. Doing so reveals a separate :guilabel:`Price Rules` page, specific to that
 particular product.
 
-.. image:: currencies/price-rules-currencies.png
-   :align: center
-   :alt: How to set product prices based on foreign currency pricelists in Odoo Sales.
+.. screenshot:: sales-currencies-pricelist-rules
+   :menu: Sales ‣ Products ‣ Pricelists ‣ (a foreign-currency pricelist) ‣ Price Rules
+   :shows: The Price Rules tab of a pricelist whose currency differs from the company currency, with a fixed price per product.
+   :highlight: The pricelist Currency field and one price rule (red frames).
+   :data: Pricelist "USD public", currency USD, one fixed-price rule.
+   :module: product
+   :notes: English UI, light theme, 1440px width, crop to the pricelist form.
 
 Click :guilabel:`New`, and select the desired pricelist from the drop-down menu in the
 :guilabel:`Pricelist` column.

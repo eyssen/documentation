@@ -17,8 +17,16 @@ Inventory Adjustments page
 To view the :guilabel:`Inventory Adjustments` page, navigate to :menuselection:`Inventory app -->
 Operations --> Physical Inventory`.
 
-.. image:: count_products/inventory-adjustments-page.png
-   :alt: In stock products listed on the Inventory adjustments page.
+.. screenshot:: inventory-count-products-page
+   :menu: Inventory ‣ Operations ‣ Physical Inventory
+   :shows: The Inventory Adjustments page listing the products currently in stock, with the Location,
+      Product, Lot/Serial Number, On Hand Quantity, Unit, Counted Quantity, Difference, Scheduled Date and
+      User columns.
+   :highlight: None.
+   :data: Five or six products in stock, at least one lot-tracked; Storage Locations enabled so the Location
+      column is shown.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, full list view.
 
 The :guilabel:`Inventory Adjustments` page lists all products that are currently in stock.
 
@@ -80,8 +88,13 @@ To create a new inventory adjustment from the :menuselection:`Inventory Adjustme
    :guilabel:`Forecasted` smart button. Then, at the top of the page, click :guilabel:`Update
    Quantity`, then :guilabel:`New`.
 
-   .. image:: count_products/forecast-report.png
-      :alt: The Update Quantities button on a Forecast report in the Inventory app.
+   .. screenshot:: inventory-count-products-forecast-update
+      :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Forecasted
+      :shows: The Forecasted report of a product with the "Update Quantity" button at the top of the page.
+      :highlight: The "Update Quantity" button (red frame).
+      :data: A storable product with stock on hand and one open delivery.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the top of the report.
 
 On this blank inventory adjustment line, click the drop-down menu under the :guilabel:`Product`
 column, and select a product. If the selected product is tracked using either lots or serial
@@ -109,8 +122,15 @@ the :guilabel:`Difference` column is **green**. If the :guilabel:`Counted Quanti
 quantities match, and have not been changed at all, no value appears in the :guilabel:`Difference`
 column.
 
-.. image:: count_products/difference-column.png
-   :alt: Difference column on inventory adjustments page.
+.. screenshot:: inventory-count-products-difference
+   :menu: Inventory ‣ Operations ‣ Physical Inventory
+   :shows: Two saved inventory adjustment lines: one where the counted quantity is higher than the on-hand
+      quantity (difference in green) and one where it is lower (difference in red).
+   :highlight: The "Difference" column (red frame).
+   :data: One product counted 12 against 10 on hand, another counted 8 against 10.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the lines; the green and red colours must be
+      visible.
 
 At this stage, the count (:dfn:`inventory adjustment`) is recorded, but not yet applied. This means
 that the quantity on hand before the adjustment has not yet been updated to match the new, real
@@ -137,8 +157,14 @@ Once ready, click :guilabel:`Apply` to apply the inventory adjustment.
    Applying an inventory adjustment simultaneously creates a :doc:`stock move line (SML)
    <../reporting/moves_history>` in the *Moves History* report for traceability.
 
-.. image:: count_products/apply-inventory-adjustment.png
-   :alt: Apply all option applies the inventory adjustment once a reason is specified.
+.. screenshot:: inventory-count-products-apply-popup
+   :menu: Inventory ‣ Operations ‣ Physical Inventory ‣ (select a line) ‣ Apply
+   :shows: The "Inventory Adjustment" pop-up with the "Inventory Reason" field pre-filled with today's date
+      and the "Apply" button.
+   :highlight: The "Inventory Reason" field (red frame).
+   :data: One selected adjustment line.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 Relocate products
 =================
@@ -148,8 +174,14 @@ different packages. To relocate a product, tick the checkbox at the far left of 
 desired product. At the top of the page, click the :guilabel:`Relocate` button. Doing so opens a
 pop-up.
 
-.. image:: count_products/relocate-popup.png
-   :alt: The Relocate products pop-up on the Inventory Adjustments page.
+.. screenshot:: inventory-count-products-relocate
+   :menu: Inventory ‣ Operations ‣ Physical Inventory ‣ (select a line) ‣ Relocate
+   :shows: The "Relocate products" pop-up with the "To Location", "To Package" and "Reason for relocation"
+      fields.
+   :highlight: The "To Location" field (red frame).
+   :data: Moving one product from WH/Stock/Shelf 1 to WH/Stock/Shelf 2.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 On the resulting pop-up, enter the following information:
 
@@ -187,8 +219,14 @@ Doing so copies the value from the :guilabel:`On Hand Quantity` column over to t
 `0.00`. Subsequently, once applied, an inventory move with `0.00` :guilabel:`Quantity Done` is
 recorded in the product's inventory adjustment history.
 
-.. image:: count_products/zero-move.png
-   :alt: Zero count inventory adjustment move.
+.. screenshot:: inventory-count-products-zero-move
+   :menu: Inventory ‣ Reporting ‣ Moves History
+   :shows: An inventory adjustment move with a quantity of 0.00, recorded after the counted quantity was set
+      equal to the on-hand quantity.
+   :highlight: The 0.00 quantity (red frame).
+   :data: One product whose count matched the database value.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the move line.
 
 If the newly-counted value for a given product does **not** match the value in the :guilabel:`On
 Hand Quantity` recorded in the database, instead of clicking the :icon:`fa-bullseye` :guilabel:`Set`
@@ -211,16 +249,28 @@ column.
 Subsequently, once applied, a move with the difference between the :guilabel:`On Hand Quantity` and
 the :guilabel:`Counted Quantity` is recorded in the product's inventory adjustment history.
 
-.. image:: count_products/history-inventory-adjustments.png
-   :alt: Inventory Adjustments History dashboard detailing a list of prior product moves.
+.. screenshot:: inventory-count-products-history-list
+   :menu: Inventory ‣ Reporting ‣ Moves History
+   :shows: The Moves History report listing earlier inventory adjustment moves of one product, with their
+      reference, date, locations and quantity.
+   :highlight: None.
+   :data: Two or three applied adjustments of the same product.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, full list view.
 
 The :guilabel:`Actions` menu appears when one or more products' checkboxes are selected. The
 :guilabel:`Actions` menu includes the option to :guilabel:`Set to quantity on hand`, which sets the
 selected products' :guilabel:`Counted Quantity` to the :guilabel:`On Hand Quantity`, and
 :guilabel:`Set to 0`, which sets the selected products' :guilabel:`Counted Quantity` to zero.
 
-.. image:: count_products/inventory-adjustment-actions.png
-   :alt: Inventory Adjustments Actions menu.
+.. screenshot:: inventory-count-products-actions-menu
+   :menu: Inventory ‣ Operations ‣ Physical Inventory ‣ (select lines) ‣ Actions
+   :shows: The Actions drop-down of the Inventory Adjustments page open, showing the "Set to quantity on
+      hand" and "Set to 0" entries.
+   :highlight: The two entries (red frame).
+   :data: Two selected adjustment lines.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the open menu.
 
 .. important::
    Sometimes a count occurs, but cannot be applied in the database right away. In the time between
@@ -244,8 +294,14 @@ Inventory Adjustment`.
    History` report. Instead, an additional line is added, this time with the word `[reverted]` added
    to the :guilabel:`Reference` column.
 
-   .. image:: count_products/reverted-adjustment.png
-      :alt: The reference fields on the Moves History report in the Inventory app.
+   .. screenshot:: inventory-count-products-reverted
+      :menu: Inventory ‣ Reporting ‣ Moves History
+      :shows: Two lines of the Moves History report: the original inventory adjustment and the line added by
+         reverting it, whose Reference ends with "[reverted]".
+      :highlight: The "[reverted]" reference (red frame).
+      :data: One applied and then reverted inventory adjustment.
+      :module: stock
+      :notes: English UI, light theme, 1440px width, crop to the two lines.
 
 Change inventory count frequency
 ================================
@@ -258,8 +314,14 @@ To modify the default scheduled date, go to :menuselection:`Inventory app --> Co
 Settings`. Then, in the :guilabel:`Operations` section, locate the :guilabel:`Annual Inventory Day
 and Month` setting, which includes a drop-down menu that is set to `31 December` by default.
 
-.. image:: count_products/annual-inventory.png
-   :alt: Adjust the next inventory count date with the Annual Inventory Day and Month setting.
+.. screenshot:: inventory-count-products-annual-day
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to the "Operations" section, showing the "Annual Inventory
+      Day and Month" setting at its default 31 December.
+   :highlight: The "Annual Inventory Day and Month" field (red frame).
+   :data: Demo company "YourCompany HU".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the setting.
 
 To change the day, click the `31`, enter a number from `1-31`, depending on the desired month of the
 year.
@@ -285,8 +347,14 @@ product line.
    table, in the header row next to the :guilabel:`Location` label. This selects **all** product
    lines.
 
-.. image:: count_products/count-popup.png
-   :alt: Request a count pop-up on inventory adjustments page.
+.. screenshot:: inventory-count-products-request-count
+   :menu: Inventory ‣ Operations ‣ Physical Inventory ‣ (select lines) ‣ Request a Count
+   :shows: The "Request a Count" pop-up with the "Inventory Date", "User", "Accounting Date" and "Count"
+      fields, the latter showing the "Leave Empty" and "Set Current Value" choices.
+   :highlight: The "Count" field (red frame).
+   :data: All product lines selected on the Inventory Adjustments page.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the pop-up.
 
 Once all desired products have been selected, click the :guilabel:`Request a Count` button at the
 top of the page. Doing so opens the :guilabel:`Request a Count` pop-up window, where the following
@@ -306,12 +374,10 @@ information can be filled:
 
 Finally, once ready, click :guilabel:`Confirm` to request the count.
 
-.. image:: count_products/count-popup.png
-   :alt: Request a count popup on inventory adjustments page.
-
 .. important::
-   In the Odoo **Barcode** app, users can only view inventory counts that are assigned to *them*,
-   and are scheduled for *today* or *earlier*.
+   In the eYssen **Barcode** app, an inventory count is taken per **location**: the operator picks a
+   location and the app lists the quantities already marked for counting there. The count requests
+   created here are therefore processed by location, not per assigned user.
 
    Sometimes a count occurs, but cannot be applied in the database right away. In the time between
    the actual count and applying the inventory adjustment, product moves can occur. In that case,
@@ -328,8 +394,14 @@ Details regarding inventory adjustment can be viewed by clicking the :icon:`fa-h
 The user who performed the count is listed in parenthesis in the :guilabel:`Reference` field, while
 the user who applied the count is listed in the :guilabel:`Done By`.
 
-.. image:: count_products/adjustment-history.png
-   :alt: The history record for an inventory adjustment.
+.. screenshot:: inventory-count-products-adjustment-history
+   :menu: Inventory ‣ Operations ‣ Physical Inventory ‣ (History icon on a line)
+   :shows: The history record of one inventory adjustment, where the "Reference" field names the user who
+      performed the count in parentheses and the "Done By" field the user who applied it.
+   :highlight: The "Reference" and "Done By" fields (red frames).
+   :data: An adjustment counted by one user and applied by another.
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the record.
 
 Inventory audit
 ---------------

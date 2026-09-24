@@ -19,9 +19,12 @@ receipts. First, make sure the *Multi-Step Routes* option is enabled in :menusel
 --> Configuration --> Settings --> Warehouse`. Note that activating :guilabel:`Multi-Step Routes`
 will also activate *Storage Locations*.
 
-.. image:: receipts_three_steps/receipts-three-steps-multi-step-routes.png
-   :align: center
-   :alt: Activate multi-step routes and storage locations in Inventory settings.
+.. screenshot:: daily-operations-receipts-three-steps-multi-step-routes
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to "Warehouse", with the "Storage Locations" and "Multi-Step Routes" checkboxes enabled.
+   :highlight: Both checkboxes (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Next, the warehouse needs to be configured for three-step receipts. To do that, go to
 :menuselection:`Inventory app --> Configuration --> Warehouses`, and select the desired warehouse to
@@ -30,9 +33,12 @@ be edited. Doing so reveals the detail form for that specific warehouse.
 On that :guilabel:`Warehouse` detail form page, select :guilabel:`Receive goods in input, then
 quality and then stock (3 steps)` for :guilabel:`Incoming Shipments`.
 
-.. image:: receipts_three_steps/receipts-three-steps-incoming-shipments.png
-   :align: center
-   :alt: Set incoming shipment option to receive in three steps.
+.. screenshot:: daily-operations-receipts-three-steps-incoming-shipments
+   :menu: Inventory app ‣ Configuration ‣ Warehouses
+   :shows: A warehouse form with "Incoming Shipments" set to the three-step option (input, quality control, stock).
+   :highlight: The "Incoming Shipments" option (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Activating three-step receipts and deliveries creates two new internal locations: *Input*
 (WH/Input), and *Quality Control* (WH/Quality Control). To rename these locations, go to
@@ -53,9 +59,12 @@ A :guilabel:`Receipt` smart button will appear in the top right, and the receipt
 with the purchase order. Clicking on the :guilabel:`Receipt` smart button will show the receipt
 order.
 
-.. image:: receipts_three_steps/receipts-three-steps-smart-button.png
-   :align: center
-   :alt: After confirming a purchase order, a Receipt smart button will appear.
+.. screenshot:: daily-operations-receipts-three-steps-smart-button
+   :menu: Purchase ‣ Orders ‣ Purchase Orders
+   :shows: A confirmed purchase order with the Receipt smart button showing three transfers.
+   :highlight: The Receipt smart button (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Process a receipt
 -----------------
@@ -72,9 +81,11 @@ receipt associated with the previous purchase order.
 Click :guilabel:`Validate` to validate the receipt, and move the product to the destination
 location, :guilabel:`WH/Input`.
 
-.. image:: receipts_three_steps/receipts-three-steps-receipt-form.png
-   :align: center
-   :alt: Receipt operation for product being moved to WH/Input location.
+.. screenshot:: daily-operations-receipts-three-steps-receipt-form
+   :menu: Inventory ‣ Receipts
+   :shows: The receipt that moves the goods from the vendor location to WH/Input.
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Process a transfer to Quality Control
 -------------------------------------
@@ -91,9 +102,12 @@ the internal transfer associated with the validated receipt.
 Once ready, click :guilabel:`Validate` to complete the transfer, and move the product from
 :guilabel:`WH/Input` to :guilabel:`WH/Quality Control`.
 
-.. image:: receipts_three_steps/receipts-three-steps-internal-transfer.png
-   :align: center
-   :alt: Internal transfer for product being moved to quality control zone.
+.. screenshot:: daily-operations-receipts-three-steps-internal-transfer
+   :menu: Inventory ‣ Operations ‣ Transfers
+   :shows: The internal transfer that moves the goods from WH/Input to the quality control location.
+   :highlight: The source and destination locations (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Process a transfer to stock
 ===========================
@@ -108,6 +122,9 @@ internal transfers to process. Then, select the new internal transfer to move th
 Once ready, click :guilabel:`Validate` to complete the transfer, and move the product from
 :guilabel:`WH/Quality Control` to :guilabel:`WH/Stock`.
 
-.. image:: receipts_three_steps/receipts-three-steps-second-transfer.png
-   :align: center
-   :alt: Internal transfer for product being moved to warehouse stock.
+.. screenshot:: daily-operations-receipts-three-steps-second-transfer
+   :menu: Inventory ‣ Operations ‣ Transfers
+   :shows: The internal transfer that moves the goods from quality control to WH/Stock.
+   :highlight: The source and destination locations (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.

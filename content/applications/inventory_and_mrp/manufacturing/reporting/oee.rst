@@ -81,7 +81,7 @@ The |OEE| target is the goal for how much of a work center's operating time shou
 productive time. It is displayed as a percentage, and should only be set as high as `100%`.
 
 To set the |OEE| target for a work center, navigate to :menuselection:`Manufacturing app -->
-Configuration --> Settings --> Work Centers`, and select a work center. On the :guilabel:`General
+Configuration --> Work Centers`, and select a work center. On the :guilabel:`General
 Information` tab, enter a numerical value of `100.00` or less in the :guilabel:`OEE Target` field.
 
 Calculating |OEE|
@@ -164,6 +164,10 @@ It is also possible to see |OEE| data in a pivot view, or a list displaying each
 clicking the :icon:`oi-view-pivot` :guilabel:`(pivot view)` or :icon:`oi-view-list` :guilabel:`(list
 view)` buttons at the top-right corner of the page.
 
-.. image:: oee/oee-report.png
-   :align: center
-   :alt: The dashboard of the OEE report.
+.. screenshot:: manufacturing-oee-report
+   :menu: Manufacturing app --> Reporting --> Overall Equipment Effectiveness
+   :shows: The OEE reporting bar chart, one bar per work center, "Measures" set to OEE percentage.
+   :highlight: The bar of the work center with the lowest OEE.
+   :data: Demo company "YourCompany"; 3 work centers with recorded productivity data.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width.

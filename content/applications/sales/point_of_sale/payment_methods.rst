@@ -11,8 +11,12 @@ allow this payment method *exclusively* for registered customers.
 Then, select the :guilabel:`Journal`. Choose :guilabel:`Cash` to use this payment method for cash
 payments, or :guilabel:`Bank` to use it for card payments.
 
-.. image:: payment_methods/payment-method.png
-   :alt: Creating a new payment method for a POS.
+.. screenshot:: pos-payment-methods-form
+   :menu: Point of Sale ‣ Configuration ‣ Payment Methods ‣ New
+   :shows: A new payment method form with a name, the "Journal" field set to a cash journal, and the "Identify Customer" option below it.
+   :data: Payment method "Cash", journal "Cash".
+   :module: point_of_sale
+   :notes: English UI, light theme, 1440px width, crop to the form.
 
 .. note::
    Selecting a :guilabel:`bank` journal automatically adds the :guilabel:`Use a Payment Terminal`

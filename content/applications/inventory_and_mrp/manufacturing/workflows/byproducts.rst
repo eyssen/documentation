@@ -25,9 +25,13 @@ so, navigate to :menuselection:`Manufacturing app --> Configuration --> Settings
 :guilabel:`By-Products` checkbox, located under the :guilabel:`Operations` heading. Then, click
 :guilabel:`Save` to apply the change.
 
-.. image:: byproducts/byproducts-setting.png
-   :align: center
-   :alt: The By-Products setting on the Manufacturing app settings page.
+.. screenshot:: manufacturing-byproducts-setting
+   :menu: Manufacturing app --> Configuration --> Settings
+   :shows: Settings page scrolled to "Operations"; "By-Products" checkbox enabled.
+   :highlight: The "By-Products" setting block.
+   :data: Demo company "YourCompany".
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 With the :guilabel:`By-Products` setting enabled, a :guilabel:`By-products` tab appears on product
 |BoMs|.
@@ -47,9 +51,20 @@ operation in the :guilabel:`Produced in Operation` field. For example, if a scra
 produced during an *Assemble* operation, select that operation in the :guilabel:`Produced in
 Operation` field.
 
-.. image:: byproducts/byproducts-tab.png
-   :align: center
-   :alt: The By-Products tab on a BoM, configured with a "Scrap Wood" by-product.
+In the :guilabel:`Cost Share (%)` field, optionally enter the percentage of the finished product's
+manufacturing cost that should be attributed to the by-product, instead of to the main product. This
+is useful for by-products that have their own resale value. The total :guilabel:`Cost Share (%)` of
+all by-products on a |BoM| cannot exceed 100%.
+
+.. screenshot:: manufacturing-byproducts-tab
+   :menu: Manufacturing app --> Products --> Bills of Materials (open a BoM) --> By-products tab
+   :shows: The By-products tab on a BoM, one line with "By-product" set to "Scrap Wood",
+      "Quantity", "Produced in Operation" and "Cost Share (%)" filled in.
+   :highlight: The "Cost Share (%)" column.
+   :data: Demo company "YourCompany"; BoM for "Rocking Chair", by-product "Scrap Wood", cost share
+      5%.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width.
 
 Manufacture by-product
 ======================
@@ -71,6 +86,12 @@ components and products. Each by-product is listed on the resulting :guilabel:`I
 page, with the :guilabel:`From` column displaying the virtual production location, and the
 :guilabel:`To` column displaying the location where the by-product is stored.
 
-.. image:: byproducts/product-moves.png
-   :align: center
-   :alt: The Product Moves page for an MO with by-products.
+.. screenshot:: manufacturing-byproducts-product-moves
+   :menu: Manufacturing app --> Operations --> Manufacturing Orders (open the completed MO) -->
+      Product Moves
+   :shows: The "Inventory Moves" list for a completed MO, one line for the finished product and one
+      for the by-product, "From"/"To" columns showing the production and stock locations.
+   :highlight: The by-product's move line.
+   :data: Demo company "YourCompany"; MO for "Rocking Chair" with by-product "Scrap Wood".
+   :module: mrp, stock
+   :notes: English UI, light theme, 1440px width.

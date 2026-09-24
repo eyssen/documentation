@@ -13,9 +13,13 @@ Revenues reporting page
 To access the *Attendees* reporting page, navigate to :menuselection:`Events app --> Reporting -->
 Revenues`.
 
-.. image:: revenues_report/default-view.png
-   :align: center
-   :alt: The default view of the Revenues reporting page in the Odoo Events application.
+.. screenshot:: events-revenues-report-default-view
+   :menu: Events ‣ Reporting ‣ Revenues
+   :shows: The Revenues reporting page in the default graph view with the Non-free tickets and Registration Date filters applied.
+   :highlight: The active filters in the search bar (red frame).
+   :data: Ticket sales of two demo events.
+   :module: event, event_sale
+   :notes: English UI, light theme, 1440px width.
 
 By default, the :guilabel:`Revenues` reporting page appears as a graph (a :icon:`fa-line-chart`
 :guilabel:`(Line Chart)` with :icon:`fa-database` :guilabel:`(Stacked)` data). The default filters,
@@ -132,9 +136,13 @@ The following is an example of how various filters and grouping options can crea
 graph report related to event revenues. In this case, the configurations present data about sold or
 free tickets to published events, with the metrics separated by ticket type and event.
 
-.. image:: revenues_report/event-ticket-analysis.png
-   :align: center
-   :alt: The event ticket analysis sample report with unique filters and groupings in place.
+.. screenshot:: events-revenues-report-event-ticket-analysis
+   :menu: Events ‣ Reporting ‣ Revenues
+   :shows: The Revenues report as a bar chart grouped by Event and Ticket, with the Revenues measure selected.
+   :highlight: The Measures menu and the group-by breadcrumbs (red frame).
+   :data: Two events, each with two ticket types.
+   :module: event, event_sale
+   :notes: English UI, light theme, 1440px width.
 
 To create such a report, navigate to :menuselection:`Events app --> Reporting --> Revenues`. Stay in
 the default graph view, but remove the default filters from the search bar.
@@ -169,9 +177,13 @@ pivot table report related to event revenues. In this case, the configurations p
 how much revenue different event types have generated, in order to gauge which events are the most
 profitable.
 
-.. image:: revenues_report/event-type-analysis.png
-   :align: center
-   :alt: The event type analysis sample report with unique filters and groupings in place.
+.. screenshot:: events-revenues-report-event-type-analysis
+   :menu: Events ‣ Reporting ‣ Revenues
+   :shows: The Revenues report as a pivot table grouped by Event Type in rows and Registration Date in columns.
+   :highlight: The pivot header rows (red frame).
+   :data: Two event types over two months.
+   :module: event, event_sale
+   :notes: English UI, light theme, 1440px width.
 
 First, navigate to :menuselection:`Events app --> Reporting --> Revenues`, and switch to the pivot
 table view, by clicking the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the upper-right

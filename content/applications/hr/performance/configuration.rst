@@ -67,6 +67,14 @@ Creating a scale
    Write the :guilabel:`Description` of every level. It costs an afternoon, and it is what
    stops *3* meaning "fine, I suppose" for one manager and "genuinely strong" for another.
 
+.. screenshot:: hr-performance-rating-scale
+   :menu: Performance ‣ Configuration ‣ Rating Scales ‣ New
+   :shows: A rating scale form with its levels, each level carrying a numeric value, a behavioural description, a target share and the below-expectation flag.
+   :highlight: The levels list with the numeric values and target shares (red frame).
+   :data: Scale "Ötfokozatú értékelési skála" with five levels from 1 to 5.
+   :module: hr_review, l10n_hu_hr_review
+   :notes: English UI, light theme, 1440px width.
+
 Starting from a scale somebody else wrote
 -----------------------------------------
 
@@ -111,6 +119,14 @@ Questionnaires
 
 A questionnaire is what people actually fill in. It is made of **sections**, and a section is
 made of **questions**. Go to :menuselection:`Performance --> Configuration --> Questionnaires`.
+
+.. screenshot:: hr-performance-questionnaire
+   :menu: Performance ‣ Configuration ‣ Questionnaires ‣ (open a questionnaire)
+   :shows: A released questionnaire with its sections, the questions of each section, their audiences and the shared-with-the-employee flag.
+   :highlight: The audience column of the questions (red frame).
+   :data: Questionnaire "Éves teljesítményértékelés", three sections.
+   :module: hr_review
+   :notes: English UI, light theme, 1440px width.
 
 Sections
 --------

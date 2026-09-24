@@ -47,16 +47,24 @@ corner, and select :guilabel:`My Profile` from the resulting drop-down menu.
 Click the :guilabel:`Account Security` tab, then slide the :guilabel:`Two-Factor Authentication`
 toggle to *active*.
 
-.. figure:: 2fa/account-security.png
-   :align: center
+.. screenshot:: general-2fa-account-security
+   :menu: Avatar ‣ My Profile ‣ Account Security tab
+   :shows: The Account Security tab of the user preferences with the "Two-factor Authentication" toggle switched off.
+   :highlight: The toggle.
+   :module: auth_totp
+   :notes: English UI, crop to the relevant area.
 
 This generates a :guilabel:`Security Control` pop-up window that requires password confirmation to
 continue. Enter the appropriate password, then click :guilabel:`Confirm Password`. Next, a
 :guilabel:`Two-Factor Authentication Activation` pop-up window appears, with a |QR|.
 
 
-.. figure:: 2fa/qr-code.png
-   :align: center
+.. screenshot:: general-2fa-activation-qr
+   :menu: Avatar ‣ My Profile ‣ Account Security tab ‣ enable 2FA
+   :shows: The "Two-Factor Authentication Activation" dialog with the QR code, the "Cannot scan it?" link and the Verification Code field.
+   :highlight: The QR code.
+   :module: auth_totp
+   :notes: English UI, crop to the dialog; use a throw-away secret.
 
 Using the desired authenticator application, scan the |QR| when prompted.
 
@@ -65,21 +73,35 @@ Using the desired authenticator application, scan the |QR| when prompted.
    the authenticator application), clicking the provided :guilabel:`Cannot scan it?` link, or
    copying the secret to manually set up the authenticator, is an alternative.
 
-   .. figure:: 2fa/secret-visible.png
-      :align: center
+   .. screenshot:: general-2fa-secret-visible
+      :menu: Avatar ‣ My Profile ‣ Account Security tab ‣ enable 2FA ‣ Cannot scan it?
+      :shows: The activation dialog after clicking "Cannot scan it?": the secret key is displayed in text form with a copy button.
+      :highlight: The secret key.
+      :module: auth_totp
+      :notes: English UI, crop to the dialog; use a throw-away secret.
 
-   .. figure:: 2fa/input-secret.png
-      :align: center
+   .. screenshot:: general-2fa-authenticator-manual-entry
+      :menu: (authenticator app)
+      :shows: The "enter a setup key" screen of an authenticator app with the account name and the copied secret key entered.
+      :module: auth_totp
+      :notes: Phone screenshot of any authenticator app; use a throw-away secret.
 
 Afterwards, the authenticator should display a *verification code*.
 
-.. figure:: 2fa/authenticator.png
-   :align: center
+.. screenshot:: general-2fa-authenticator-code
+   :menu: (authenticator app)
+   :shows: The authenticator app listing the Odoo account with its current 6-digit verification code.
+   :module: auth_totp
+   :notes: Phone screenshot; any authenticator app.
 
 Enter the code into the :guilabel:`Verification Code` field, then click :guilabel:`Activate`.
 
-.. figure:: 2fa/2fa-enabled.png
-   :align: center
+.. screenshot:: general-2fa-enabled
+   :menu: Avatar ‣ My Profile ‣ Account Security tab
+   :shows: The Account Security tab after activation: the toggle is on, and the "Trusted Devices" list is empty.
+   :highlight: The enabled toggle.
+   :module: auth_totp
+   :notes: English UI, crop to the relevant area.
 
 Logging in
 ==========
@@ -90,13 +112,27 @@ On the login page, input the username and password, then click :guilabel:`Log in
 :guilabel:`Two-factor Authentication` page, input the code provided by the chosen authenticator in
 the :guilabel:`Authentication Code` field, then click :guilabel:`Log in`.
 
-.. image:: 2fa/2fa-login.png
-   :align: center
-   :alt: The login page with 2fa enabled.
+.. screenshot:: general-2fa-login
+   :menu: (login page)
+   :shows: The "Two-factor Authentication" login step with the Authentication Code field, the "Don't ask again on this device" checkbox and the Log in button.
+   :highlight: The Authentication Code field.
+   :module: auth_totp
+   :notes: English UI, crop to the login box.
 
 .. danger::
    If a user loses access to their authenticator, an administrator **must** deactivate |2fa| on the
-   account before the user can log in.
+   account before the user can log in. To do so, open the user's form in :menuselection:`Settings
+   --> Users & Companies --> Users`, go to the :guilabel:`Account Security` tab, and switch off the
+   :guilabel:`Two-factor Authentication` toggle.
+
+Trusted devices
+---------------
+
+On the |2fa| login page, tick :guilabel:`Don't ask again on this device` to skip the code on that
+browser for a while. The devices trusted this way are listed in the :guilabel:`Trusted Devices`
+section of the :guilabel:`Account Security` tab of the user's preferences. Click the
+:icon:`fa-trash` :guilabel:`(delete)` icon next to a device to revoke it, or :guilabel:`Revoke All`
+to revoke all of them.
 
 Enforce two-factor authentication
 =================================
@@ -107,9 +143,12 @@ by mail`.
 
 Click :guilabel:`Install` on the Kanban card for the :guilabel:`2FA by mail` module.
 
-.. image:: 2fa/2FA-by-mail.png
-   :align: center
-   :alt: The 2FA by mail module in the Apps directory.
+.. screenshot:: general-2fa-by-mail-module
+   :menu: Apps (Apps filter removed)
+   :shows: The Apps dashboard searched for "2FA by mail", showing the module card with the Activate button.
+   :highlight: The module card.
+   :module: auth_totp_mail_enforce
+   :notes: English UI, crop to the relevant area.
 
 After installation is complete, go to :guilabel:`Settings app: Permissions`. Tick the checkbox
 labeled, :guilabel:`Enforce two-factor authentication`. Then, use the radio buttons to choose
@@ -118,8 +157,14 @@ whether to apply this setting to :guilabel:`Employees only`, or :guilabel:`All u
 .. note::
    Selecting :guilabel:`All users` applies the setting to portal users, in addition to employees.
 
-.. image:: 2fa/enforce-settings.png
-   :align: center
-   :alt: The enforce two factor setting in the Settings application.
+.. screenshot:: general-2fa-enforce-setting
+   :menu: Settings ‣ General Settings ‣ Permissions
+   :shows: The "Enforce two-factor authentication" setting ticked with the "Employees only" / "All users" radio buttons.
+   :highlight: The setting block.
+   :module: auth_totp_mail_enforce
+   :notes: English UI, crop to the relevant area.
 
 Click :guilabel:`Save` to commit any unsaved changes.
+
+Users who have not configured an authenticator app then receive a verification code by email when
+logging in.

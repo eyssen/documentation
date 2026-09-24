@@ -25,8 +25,13 @@ submit the request.
    Requesting time off can be done either form the main **Time Off** app dashboard, or by navigating
    to :menuselection:`Time Off --> My Time --> My Time Off`, and clicking :guilabel:`New`.
 
-.. image:: request_time_off/new-time-off.png
-   :alt: A time off request for three hours of vacation time off.
+.. screenshot:: hr-time-off-request-hours
+   :menu: Time Off ‣ My Time ‣ My Time Off ‣ New
+   :shows: A time off request for part of a day, with the Custom Hours option enabled and the start and end times entered.
+   :highlight: The Custom Hours fields (red frame).
+   :data: Three hours of Paid Time Off on 2026-04-23, 14:00-17:00.
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.
 
 .. _time_off/fields:
 
@@ -74,5 +79,10 @@ Enter the following information on the :guilabel:`New Time Off` request form:
   :guilabel:`Open` button. The files then appear on the time off request form. Multiple documents
   can be attached, if necessary.
 
-.. image:: request_time_off/time-off-request.png
-   :alt: A time off request form filled out for an employee home sick with the flu.
+.. screenshot:: hr-time-off-request-form
+   :menu: Time Off ‣ My Time ‣ My Time Off ‣ New
+   :shows: A complete time off request form with the time off type, the dates, the duration, the description and the attached document.
+   :highlight: The Time Off Type and the date fields (red frame).
+   :data: Sick Time Off, 2026-04-20 to 2026-04-22, description "Flu".
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.

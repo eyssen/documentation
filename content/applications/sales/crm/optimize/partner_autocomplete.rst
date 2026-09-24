@@ -27,9 +27,13 @@ Configuration
 Go to :menuselection:`Settings app --> Contacts section`. Then, activate the :guilabel:`Partner
 Autocomplete` feature, by ticking the checkbox beside it, and clicking :guilabel:`Save`.
 
-.. image:: partner_autocomplete/settings-partner-autocomplete.png
-   :align: center
-   :alt: View of settings page and the activations of the feature in Odoo.
+.. screenshot:: sales-crm-partner-autocomplete-setting
+   :menu: Settings ‣ General Settings
+   :shows: The Contacts section of the general settings with the "Partner Autocomplete" checkbox enabled.
+   :highlight: The "Partner Autocomplete" setting (red frame).
+   :data: Demo company.
+   :module: partner_autocomplete
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 Enrich contacts with corporate data
 ===================================
@@ -40,9 +44,13 @@ with corporate data related to that specific selection.
 
 For example, after typing `Odoo`, the following information populates:
 
-.. image:: partner_autocomplete/odoo-autocomplete.png
-   :align: center
-   :alt: Creating a new contact in Odoo
+.. screenshot:: sales-crm-partner-autocomplete-suggestions
+   :menu: Contacts ‣ New
+   :shows: A new contact form where typing a company name shows the autocomplete suggestion list with company logos.
+   :highlight: The suggestion list (red frame).
+   :data: A well-known company name typed in the Name field.
+   :module: partner_autocomplete
+   :notes: English UI, light theme, 1440px width, crop to the name field and the drop-down.
 
 .. tip::
    Partner Autocomplete also works if a :abbr:`VAT (value-added tax)` number is entered instead of
@@ -64,11 +72,6 @@ a desired package.
    suggested company will be the website link and the logo.
 
    Learn about our `Privacy Policy <https://iap.odoo.com/privacy>`_.
-
-.. note::
-   Enterprise Odoo users with a valid subscription get free credits to test :abbr:`IAP (In-App
-   Purchase)` features before deciding to purchase more credits for the database. This includes
-   demo/training databases, educational databases, and one-app-free databases.
 
 .. seealso::
    :doc:`../../../essentials/in_app_purchase`

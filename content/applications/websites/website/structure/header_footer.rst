@@ -65,15 +65,25 @@ you can:
 - **create a regular drop-down menu** by dragging and dropping the sub-menu items to the right,
   underneath their parent menu.
 
-.. image:: header_footer/menu-editor.png
-   :alt: Menu editor with sub-menus
+.. screenshot:: website-header-footer-menu-editor
+   :menu: Website ‣ Site ‣ Menu Editor
+   :shows: The Menu Editor pop-up window with the menu entries and their indented sub-menus, plus the Add Menu Item button.
+   :highlight: The sub-menu entries (red frame).
+   :data: Menu with the entries Home, Shop, Services (with two sub-items) and Contact us.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    You can also access the menu editor by clicking :guilabel:`Edit`, selecting any menu item, and
    clicking the :guilabel:`Edit Menu` icon.
 
-  .. image:: header_footer/edit-menu-icon.png
-     :alt: Access the Menu editor while in Edit mode.
+  .. screenshot:: website-header-footer-edit-menu-icon
+     :menu: Website ‣ Edit ‣ (header)
+     :shows: The website header in edit mode with the Edit Menu (pencil) icon that opens the Menu Editor.
+     :highlight: The Edit Menu icon (red frame).
+     :data: Demo website 'My Website'.
+     :module: website
+     :notes: English UI, light theme, 1440px width.
 
 .. _website/header_footer/menu-items:
 
@@ -121,8 +131,13 @@ amounts of content or :doc:`e-commerce websites <../../ecommerce>`, as they can 
 your web pages or :doc:`e-commerce categories <../../ecommerce/products/catalog>` in the menu while
 still making all menu items visible at once.
 
-.. image:: header_footer/mega-menu.png
-   :alt: Mega menu in the navigation bar.
+.. screenshot:: website-header-footer-mega-menu
+   :menu: (website)
+   :shows: The website navigation bar with a mega menu dropped down over the page, showing its columns of links and images.
+   :highlight: The opened mega menu (red frame).
+   :data: Mega menu 'Services' with three columns.
+   :module: website
+   :notes: English UI, light theme, 1440px width.
 
 To create a mega menu, go to :menuselection:`Website --> Site --> Menu Editor` and click
 :guilabel:`Add Mega Menu Item`. Enter the :guilabel:`Name` of the mega menu in the pop-up, click
@@ -137,8 +152,13 @@ each component individually. For example:
   in the small preview pop-up. Type `/` to search for a page on your website, or `#` to search for
   an existing custom anchor.
 
-  .. image:: header_footer/mega-menu-option.png
-     :alt: Edit a mega menu option.
+  .. screenshot:: website-header-footer-mega-menu-option
+     :menu: Website ‣ Edit ‣ (mega menu)
+     :shows: The editor's right sidebar for a selected mega menu with the Template and Size options.
+     :highlight: The Template option (red frame).
+     :data: Demo website 'My Website'.
+     :module: website
+     :notes: English UI, light theme, 1440px width.
 
 - Move a menu item by dragging and dropping the related block to the desired position in the mega
   menu.
@@ -151,6 +171,62 @@ editor, then, in the :guilabel:`Mega Menu` section:
 - Pick the :guilabel:`Size`: either :guilabel:`Full-Width` or :guilabel:`Narrow`.
 
 To finalize changes, click on :guilabel:`Save`.
+
+.. _website/header_footer/auto-mega-menus:
+
+Automatic category mega menus
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Keeping a mega menu in sync with a large eCommerce category tree by hand is tedious. The *Auto
+Category Mega Menu* module (`website_sale_megamenu_category`) generates the content of a mega menu
+from the :doc:`eCommerce categories <../../ecommerce/products/catalog>`.
+
+On a mega menu item in the :guilabel:`Menu Editor`, enable :guilabel:`Auto-generate mega menu` and
+set:
+
+- :guilabel:`Starting category`: the category whose children are listed. Leave it empty to start
+  from the top of the tree.
+- :guilabel:`Depth`: how many levels of sub-categories are included, two by default.
+- :guilabel:`Mega-menu template`: the layout used to render the generated menu.
+
+The menu is regenerated when the category tree changes. Three buttons control it:
+
+- :guilabel:`Regenerate`: rebuilds the menu content from the categories;
+- :guilabel:`Force regenerate (discard edits)`: rebuilds it even if the menu was edited by hand,
+  discarding those edits;
+- :guilabel:`Detach / make manual`: stops the automatic generation and keeps the current content as
+  an ordinary, hand-edited mega menu.
+
+.. screenshot:: website-header-footer-auto-mega-menu
+   :menu: Website ‣ Site ‣ Menu Editor ‣ (mega menu item)
+   :shows: A mega menu item with Auto-generate mega menu enabled, the Starting category, Depth and Mega-menu template fields, and the Regenerate / Force regenerate / Detach buttons.
+   :highlight: The Auto-generate mega menu checkbox and the Starting category field (red frame).
+   :data: Starting category "Shop", depth 2, template "Columns".
+   :module: website_sale_megamenu_category
+   :notes: English UI, light theme, 1440px width.
+
+Which categories appear in the menu is controlled on the category itself. Each eCommerce category
+has a :guilabel:`Show in mega menu` state and an :guilabel:`Auto-manage menu visibility` option:
+while the latter is enabled, a scheduled job hides categories that currently have no available
+product and shows them again when they do, so that the menu never leads to an empty page. Turn the
+option off on a category to set its visibility by hand.
+
+The layouts themselves are managed under :menuselection:`Website --> Configuration --> Mega Menu
+Templates`, where each template holds its own :guilabel:`XML`, :guilabel:`CSS` and :guilabel:`JS`,
+together with a revision :guilabel:`History` that can be compared and restored.
+
+.. screenshot:: website-header-footer-mega-menu-templates
+   :menu: Website ‣ Configuration ‣ Mega Menu Templates ‣ (template)
+   :shows: A mega menu template with its XML, CSS and JS tabs and the History section listing previous revisions with the Compare and Restore buttons.
+   :highlight: The History section (red frame).
+   :data: Template "Columns" with three revisions.
+   :module: website_sale_megamenu_category
+   :notes: English UI, light theme, 1440px width.
+
+.. note::
+   The generated menus are listed under :menuselection:`Website --> Configuration --> Auto Mega
+   Menus`, which gives an overview of every automatically managed mega menu and of the ones whose
+   content no longer matches the category tree.
 
 Hide a dynamic menu item for non-logged in users
 ------------------------------------------------

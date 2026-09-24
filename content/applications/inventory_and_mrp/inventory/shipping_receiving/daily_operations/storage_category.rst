@@ -33,8 +33,12 @@ Then, in the :guilabel:`Warehouse` section, ensure the :guilabel:`Storage Locati
 If intending to set capacities by :ref:`package type <inventory/routes/set-capacity-package>`, also
 make sure :guilabel:`Packages` is enabled. Click :guilabel:`Save`.
 
-.. image:: storage_category/enable-categories.png
-   :alt: Enable Storage Locations and Multi-Step Routes to enable storage categories.
+.. screenshot:: daily-operations-storage-category-enable-categories
+   :menu: Inventory app ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to "Warehouse", with "Storage Locations", "Multi-Step Routes" and "Storage Categories" enabled.
+   :highlight: The "Storage Categories" checkbox (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. _inventory/routes/define-storage:
 
@@ -100,8 +104,12 @@ their capacities in the :guilabel:`Quantity` field.
    single storage location, by specifying those amounts in the :guilabel:`Capacity by Product` tab
    of a storage category form.
 
-   .. image:: storage_category/capacity-by-product.png
-      :alt: Show storage category limiting by product count.
+   .. screenshot:: daily-operations-storage-category-capacity-by-product
+      :menu: Inventory ‣ Configuration ‣ Storage Categories
+      :shows: A storage category form with the "Capacity by Product" table filled in, limiting how many units of a product a location may hold.
+      :data: Category "Pallet zone": 10 units of "Large Cabinet".
+      :module: stock
+      :notes: English UI, light theme, 1440px width.
 
 .. _inventory/routes/set-capacity-package:
 
@@ -124,8 +132,12 @@ to set the :guilabel:`Package Type`.
    In the :guilabel:`Capacity by Package` tab, specify the number of packages for the designated
    :guilabel:`Package Type`, and set a maximum of `2.00` `Pallets` for a specific location.
 
-   .. image:: storage_category/storage-category.png
-      :alt: Create a storage category.
+   .. screenshot:: daily-operations-storage-category
+      :menu: Inventory ‣ Configuration ‣ Storage Categories
+      :shows: A new storage category form with the "Capacity by Package" table and the "Allow New Product" option.
+      :highlight: The "Allow New Product" field (red frame).
+      :module: stock
+      :notes: English UI, light theme, 1440px width.
 
 .. important::
    Odoo does **not** automatically split quantities across multiple storage locations. If an
@@ -149,8 +161,12 @@ Then, select the created category in the :guilabel:`Storage Category` field.
    Assign the `High frequency pallets` storage category (which limits pallets stored at any location
    to two pallets) to the `WH/Stock/Pallets/PAL1` sub-location.
 
-   .. image:: storage_category/location-storage-category.png
-      :alt: When a Storage Category is created, it can be linked to a warehouse location.
+   .. screenshot:: daily-operations-storage-category-location
+      :menu: Inventory app ‣ Configuration ‣ Locations
+      :shows: A location form with the "Storage Category" field set to a storage category.
+      :highlight: The "Storage Category" field (red frame).
+      :module: stock
+      :notes: English UI, light theme, 1440px width.
 
 .. _inventory/routes/set-putaway-attribute:
 
@@ -181,8 +197,11 @@ location to ensure that if one storage location is in use, the secondary locatio
    the putaway rule directing pallets of lemonade to locations with the `High frequency pallets`
    storage category :ref:`assigned to them <inventory/routes/assign-location>`.
 
-   .. image:: storage_category/smart-putaways.png
-      :alt: Storage Categories used in a variety of putaway rules.
+   .. screenshot:: daily-operations-storage-category-smart-putaways
+      :menu: Inventory app ‣ Configuration ‣ Putaway Rules
+      :shows: The putaway rules list, with the "Having Category" column showing rules restricted to different storage categories.
+      :module: stock
+      :notes: English UI, light theme, 1440px width.
 
 Use case: limit capacity by package
 ===================================
@@ -208,5 +227,9 @@ lemonade cans is received, the following scenarios happen:
   field, and then in the :guilabel:`Open: Stock move` box, click :guilabel:`Add a line`. Finally,
   split the receipt by quantity into separate locations, then click :guilabel:`Save`.
 
-     .. image:: storage_category/package-stock-move.png
-        :alt: Update the Stock move box to route pallets to the correct locations before validating.
+     .. screenshot:: daily-operations-storage-category-package-stock-move
+        :menu: Inventory ‣ Receipts
+        :shows: The detailed operations of a receipt, where pallets are routed to different destination locations by the storage-category putaway rule.
+        :highlight: The "Destination Location" column (red frame).
+        :module: stock
+        :notes: English UI, light theme, 1440px width.

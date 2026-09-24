@@ -6,7 +6,7 @@ When a new employee is hired, the first step is to create a new employee record.
 centralized place where all important information about the employee is stored, including
 :ref:`general information <employees/general-info>`, :ref:`job history and skills
 <employees/resume>`, :ref:`various work information <employees/work-info-tab>`, :ref:`personal
-details <employees/private-info>`, :ref:`payroll-related information <employees/payroll>`, and
+details <employees/private-info>`, and
 various :ref:`settings <employees/hr-settings>` that affect integrations with other apps in the
 database.
 
@@ -15,13 +15,17 @@ upper-left corner. Doing so reveals a blank employee form.
 
 Proceed to fill out the required information, along with any additional details.
 
-.. image:: new_employee/new-employee-form.png
-   :alt: Create a new employee form with all fields filled out.
+.. screenshot:: hr-employees-new-employee-form
+   :menu: Employees ‣ Employees ‣ New
+   :shows: A new employee form filled in with the name, job position, department, manager, work address, work email and work phone.
+   :highlight: The general information block above the tabs (red frame).
+   :data: Employee "Anita Kovács", job position "Warehouse Coordinator", department "Warehouse", demo company "YourCompany HU".
+   :module: hr
+   :notes: English UI, light theme, 1440px width. Use invented personal data.
 
 .. note::
    The current company phone number and name are populated in the :guilabel:`Work Phone` and
-   :guilabel:`Company` fields. If the **Appraisals** application is installed, the :guilabel:`Next
-   Appraisal Date` field is populated with a date six months from the current date.
+   :guilabel:`Company` fields.
 
 .. _employees/general-info:
 
@@ -53,8 +57,13 @@ Fill out the following employee details.
      position can be more specific, such as `Sales Representative - Subscriptions` if the employee
      is focused solely on subscription sales.
 
-     .. image:: new_employee/job-description-fields.png
-        :alt: Both job position fields entered but with different information.
+     .. screenshot:: hr-employees-job-position-vs-title
+        :menu: Employees ‣ Employees ‣ New
+        :shows: The Job Position field and the free-text job title below the employee name, filled in with different wording.
+        :highlight: Both fields (red frame).
+        :data: Job Position "Warehouse Coordinator", job title "Warehouse coordinator, night shift".
+        :module: hr
+        :notes: English UI, light theme, 1440px width. Crop to the two fields.
 
 - :guilabel:`Photo`: in the top-right image box of the employee form, click on the :icon:`fa-pencil`
   :guilabel:`(Edit)` icon, then select a photo to upload.
@@ -74,10 +83,6 @@ Fill out the following employee details.
   to reflect the currently selected job position, but is still editable.
 - :guilabel:`Manager`: select the employee's manager from the drop-down menu.
 - :guilabel:`Coach`: select the employee's coach from the drop-down menu.
-- :guilabel:`Next Appraisal Date`: this field is **only** visible if the **Appraisals** application
-  is installed. The date automatically populates with a date that is computed according to the
-  settings configured in the **Appraisals** application. This date can be modified using the
-  calendar selector.
 
 .. note::
    After a :guilabel:`Department` is selected, the department's configured manager and coach
@@ -122,8 +127,13 @@ Once all the information is entered, click the :guilabel:`Save & Close` button i
 entry to add, or click the :guilabel:`Save & New` button to save the current entry and create
 another resumé line.
 
-.. image:: new_employee/resume-lines.png
-   :alt: A resumé entry form with all the information populated.
+.. screenshot:: hr-employees-resume-line
+   :menu: Employees ‣ Employees ‣ (open an employee) ‣ Resumé ‣ Create a new entry
+   :shows: A resumé line dialog filled in with the title, the employee, the type, the dates and the description.
+   :highlight: The Type and date fields (red frame).
+   :data: Entry "Warehouse Coordinator", type "Experience", 2023-2026.
+   :module: hr_skills
+   :notes: English UI, light theme, 1440px width. Use invented data.
 
 .. note::
    After the new employee form is saved, the current position and company is automatically added to
@@ -169,8 +179,13 @@ Click the :guilabel:`Save & Close` button if there is only one skill to add, or 
 At any point, a new line can be added by clicking the :guilabel:`ADD` button next to the
 corresponding section.
 
-.. image:: new_employee/select-skills.png
-   :alt: A skill form with the information filled out.
+.. screenshot:: hr-employees-select-skill
+   :menu: Employees ‣ Employees ‣ (open an employee) ‣ Resumé ‣ Pick a skill from the list
+   :shows: The skill dialog with the skill type, the skill and the skill level selected, and the progress bar of the level.
+   :highlight: The Skill Level field and its progress (red frame).
+   :data: Skill type "Languages", skill "English", level "Fluent".
+   :module: hr_skills
+   :notes: English UI, light theme, 1440px width.
 
 .. important::
    Only users with :guilabel:`Officer: Manage all employees` or :guilabel:`Administrator` rights for
@@ -214,8 +229,13 @@ types.
      Default` on the `Beginner` line to set this as the default skill level. Last, click the colored
      box next to :guilabel:`Color`, and select yellow.
 
-     .. image:: new_employee/math-skills.png
-        :alt: A skill form for a Math skill type, with all the information entered.
+     .. screenshot:: hr-employees-skill-type-form
+        :menu: Employees ‣ Configuration ‣ Skill Types ‣ New
+        :shows: A skill type form with its skills and its levels, each level with a progress percentage and one marked as the default.
+        :highlight: The Levels list with the default level (red frame).
+        :data: Skill type "Languages" with the levels Basic 25%, Intermediate 50%, Advanced 75%, Fluent 100%.
+        :module: hr_skills
+        :notes: English UI, light theme, 1440px width.
 
 .. tip::
    Once the form is completely filled out, click the :icon:`fa-cloud-upload` :guilabel:`(Save
@@ -332,8 +352,13 @@ Leave the field blank (:guilabel:`Unspecified`) for non-working days, such as Sa
      current company populates this field, by default. This field **only** appears in a
      multi-company database.
 
-   .. image:: new_employee/location.png
-      :alt: A new work location form with all fields filled out.
+   .. screenshot:: hr-employees-work-location-form
+      :menu: Employees ‣ Configuration ‣ Work Locations ‣ New
+      :shows: A work location form filled in with the name, the work address, the cover image and the location number.
+      :highlight: The Work Address field (red frame).
+      :data: Location "Marbella office", demo company "YourCompany HU".
+      :module: hr
+      :notes: English UI, light theme, 1440px width.
 
 .. _employees/schedule:
 
@@ -361,29 +386,13 @@ This section defines when the employee is expected to work.
      If an employee's working hours are not configured as a working schedule for the company, new
      working schedules can be added, or existing working schedules can be modified.
 
-     Working hours can be modified in the **Payroll** application, where they are referred to as
-     :guilabel:`Working Schedules`.
-
-     For more information on how to create or modify :guilabel:`Working Schedules` in the
-     **Payroll** application, refer to the :doc:`../../hr/payroll` documentation.
+     For more information on how to create or modify working schedules, refer to the
+     :doc:`working schedules <working_schedules>` documentation.
 
      After the new working time is created, or an existing one is modified, the :guilabel:`Working
      Hours` can be selected on the employee form.
 
 - :guilabel:`Timezone`: using the drop-down menu, select the timezone for the employee.
-
-PLANNING
---------
-
-This section is **only** visible if the **Planning** app is installed, as this section affects what
-the employee can be assigned in the **Planning** app.
-
-- :guilabel:`Roles`: using the drop-down menu, select all the roles the employee can perform. There
-  are no preconfigured roles available, so all roles must be :ref:`configured in the Planning app
-  <planning/roles>`. There is no limit to the number of roles assigned to an employee.
-- :guilabel:`Default Role`: using the drop-down menu, select the default role the employee will
-  typically perform. If the :guilabel:`Default Role` is selected before the :guilabel:`Roles` field
-  is configured, the selected role is automatically added to the list of :guilabel:`Roles`.
 
 .. _employees/private-info:
 
@@ -428,8 +437,13 @@ PRIVATE CONTACT
   Finally, click the :guilabel:`Send Money` toggle. This changes the toggle color to green, and the
   status changes from :guilabel:`Untrusted` in black text, to :guilabel:`Trusted` in green text.
 
-  .. image:: new_employee/bank.png
-     :alt: The Create Bank Account form with all the information filled out.
+  .. screenshot:: hr-employees-bank-account
+     :menu: Employees ‣ Employees ‣ (open an employee) ‣ HR Settings ‣ Save a new bank account
+     :shows: The bank account dialog with the account number, the bank and the account holder filled in.
+     :highlight: The Account Number field (red frame).
+     :data: Employee "Anita Kovács"; use a throw-away account number.
+     :module: hr
+     :notes: English UI, light theme, 1440px width. Use a throw-away account number, never a real one.
 
   .. important::
      **All** bank accounts must be marked as :guilabel:`Trusted`, if not payments cannot be
@@ -441,6 +455,11 @@ PRIVATE CONTACT
   miles (:guilabel:`mi`) using the drop-down menu. This field is only necessary if the employee is
   receiving any type of commuter benefits or tax deductions based on commute distances.
 - :guilabel:`Private Car Plate`: enter the license plate for the employee's personal car.
+- :guilabel:`Holds a Driving Licence`: tick this checkbox when the employee holds a driving licence.
+- :guilabel:`Mailing Address Matches Private Address`: leave this ticked when post is sent to the
+  private address. Untick it to enter a separate :guilabel:`Mailing Street`,
+  :guilabel:`Mailing City`, :guilabel:`Mailing Zip`, :guilabel:`Mailing State` and
+  :guilabel:`Mailing Country`.
 
 EMERGENCY
 ---------
@@ -451,11 +470,15 @@ This section details the person to contact in the event of an emergency.
 - :guilabel:`Contact Phone`: enter the emergency contact's phone number. It is recommended to enter
   a phone number that the person has the most access to, typically a mobile phone.
 
+.. note::
+   When more than one emergency contact has to be kept, record them in the
+   :ref:`Dependants & Emergency <employees/dependants-emergency>` tab instead. These two fields then
+   show the first contact of that list and can no longer be edited here.
+
 FAMILY STATUS
 -------------
 
-This section is used for tax purposes, and affects the **Payroll** app. Enter the following
-information in the fields.
+This section is used for tax purposes. Enter the following information in the fields.
 
 - :guilabel:`Marital Status`: select the marital status for the employee using the drop-down menu.
   The default options are :guilabel:`Single`, :guilabel:`Married`, :guilabel:`Legal Cohabitant`,
@@ -467,6 +490,9 @@ information in the fields.
 - :guilabel:`Number of Dependent Children`: enter the number of dependent children. This number is
   the same number used for calculating tax deductions, and should follow all tax regulations
   regarding applicable dependents.
+- :guilabel:`Dependants Count`: the number of dependants actually registered in the
+  :ref:`Dependants & Emergency <employees/dependants-emergency>` tab. A warning appears when it
+  differs from :guilabel:`Number of Dependent Children`.
 
 CITIZENSHIP
 -----------
@@ -486,7 +512,9 @@ Information for all fields may not be available.
 - :guilabel:`Date of Birth`: using the calendar selector, select the birthday of the employee.
 - :guilabel:`Place of Birth`: enter the city or town the employee was born.
 - :guilabel:`Country of Birth`: using the drop-down menu, select the country the employee was born.
-- :guilabel:`Non-resident`: tick this checkbox if the employee lives in a foreign country.
+- :guilabel:`Birth Name`: the employee's name at birth, when it differs from the current name.
+- :guilabel:`Mother's Name`: the mother's maiden name, which several national employment
+  registrations require.
 
 EDUCATION
 ---------
@@ -516,26 +544,62 @@ section may be left blank if they do not require any work permits for employment
 - :guilabel:`Work Permit`: click :guilabel:`Upload your file`, then navigate to the work permit file
   in the file explorer, and click :guilabel:`Select` to add the permit.
 
-.. _employees/payroll:
+.. _employees/dependants-emergency:
 
-Payroll tab
-===========
+Dependants & Emergency tab
+==========================
 
-Depending on the installed :doc:`localization <../payroll/payroll_localizations>`, the sections and
-fields in this tab may vary considerably. Due to the specific nature of localizations and the
-variety of information that may be requested in this tab, it is recommended to check with the
-accounting department to fill out this section correctly.
+This tab records the people around the employee that the employer has to know about: the dependants
+the employee is entitled to claim, and everyone who may be contacted in an emergency. It replaces
+the single emergency contact of the :ref:`Private Information <employees/private-info>` tab.
 
-The following fields are universal for all localizations:
+Dependants
+----------
 
-- :guilabel:`Legal Name`: enter the legal name for the employee. This is the name that typically is
-  used for filing taxes.
-- :guilabel:`Payslip Language`: enter the desired language to be used when printing payslips for
-  this employee.
-- :guilabel:`Registration Number of the Employee`: enter the employees registration number.
+Click :guilabel:`Add a line` in the :guilabel:`Dependants` list and fill in:
 
-.. seealso::
-   :doc:`Payroll localizations <../payroll/payroll_localizations>`
+- :guilabel:`Name`: the dependant's name. This field is **required**.
+- :guilabel:`Relationship`: :guilabel:`Child`, :guilabel:`Spouse`, :guilabel:`Parent`, or
+  :guilabel:`Other`.
+- :guilabel:`Date of Birth`, :guilabel:`Place of Birth` and :guilabel:`Country of Birth`.
+- :guilabel:`Mother's Name`: the dependant's mother's maiden name, which some national
+  registrations require.
+- :guilabel:`Identification No` and :guilabel:`SSN No`: the dependant's tax and social security
+  identifiers.
+- :guilabel:`Counts as Dependant`: untick this when the person is registered for reference only and
+  must not be counted, for example an adult child.
+- :guilabel:`Valid From` and :guilabel:`Valid To`: the period during which the person qualifies as a
+  dependant. Leave the end date empty while it is open-ended.
+
+The number of registered dependants is shown as :guilabel:`Dependants Count` in the
+:ref:`Family Status <employees/private-info>` section, and a warning appears there when it differs
+from the :guilabel:`Number of Dependent Children`.
+
+Emergency contacts
+------------------
+
+Click :guilabel:`Add a line` in the :guilabel:`Emergency Contacts` list and fill in the
+:guilabel:`Contact Name`, the :guilabel:`Contact Phone`, the :guilabel:`Relation to Employee`
+(spouse, parent, friend, and so on) and any :guilabel:`Note`. Order the contacts by dragging the
+:icon:`oi-draggable` :guilabel:`(drag)` handle; the first one fills the emergency fields of the
+:ref:`Private Information <employees/private-info>` tab.
+
+.. screenshot:: hr-employees-dependants-emergency
+   :menu: Employees ‣ Employees ‣ (open an employee) ‣ Dependants & Emergency
+   :shows: The Dependants & Emergency tab with two dependants and two emergency contacts listed.
+   :highlight: The Counts as Dependant column and the first emergency contact line (red frame).
+   :data: Employee "Anita Kovács" with two children and two emergency contacts; use invented personal data.
+   :module: hr_employee_extra
+   :notes: English UI, light theme, 1440px width.
+
+.. note::
+   This tab comes from the *Employee Extra Personal Data* (`hr_employee_extra`) module, and is only
+   visible to users with the :guilabel:`Employee Manager` access right.
+
+.. tip::
+   With the Hungarian localization installed, the personal income tax reliefs claimed on these
+   dependants are recorded on the next tab. See :ref:`Personal income tax reliefs
+   <salary/hu/tax-reliefs>`.
 
 .. _employees/hr-settings:
 

@@ -133,11 +133,42 @@ Tasks and runs
 
 Operational menus (AI: User, supervisor-scoped):
 
-- :menuselection:`AI --> Agents --> Tasks` — work items (registry).
+- :menuselection:`AI --> Agents --> Tasks` — standing and scheduled tasks.
+- :menuselection:`AI --> Agents --> Work Items` — per-record queue drained
+  into isolated child runs (see :ref:`ai/agents/work-items`).
 - :menuselection:`AI --> Agents --> Runs` — execution ledger and steps.
 
 Supervisors use these to see what the agent attempted, which tools ran, and
 which proposals are waiting.
+
+.. _ai/agents/work-items:
+
+Per-record work items
+---------------------
+
+A standing task that processes many documents (vendor bills, and similar)
+must not load every attachment into one conversation: the model's context
+window fills, and one provider error aborts the whole batch.
+
+Put two texts on the task:
+
+- :guilabel:`Instruction` — the **scout**. Search candidate ids, call
+  ``queue_work_items``, then stop. Do not read PDFs here.
+- :guilabel:`Work Item Instruction` — the **child**. Placeholders
+  ``{model}`` and ``{id}``. Each queued record runs this in a **new
+  conversation**. Empty uses a generic one-record prompt that still forbids
+  further queueing.
+
+The scheduled action **AI: drain agent work items** (every minute) starts at
+most eight pending items per tick, still bounded by the same dispatch budget
+as other scheduled tasks. Child runs leave :guilabel:`Parent Run` empty —
+that field marks an **approval replay**, not fan-out — and they do **not**
+count towards the task's daily cap or circuit breaker.
+
+``queue_work_items`` needs the **write** capability. It only works on a
+standing-task run (not an inbox run, not a child), and it only queues
+records the agent can **read**. Ids that are still pending or running are
+skipped; done or failed items can be queued again. At most 200 ids per call.
 
 .. _ai/agents/task-write-mode:
 

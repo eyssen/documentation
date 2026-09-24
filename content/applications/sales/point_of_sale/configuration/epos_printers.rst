@@ -15,8 +15,13 @@ To use an ePos printer in Point of Sale:
 #. Activate the :guilabel:`ePos Printer` feature.
 #. Fill in the field with your ePos IP address.
 
-.. image:: epos_printers/setting.png
-   :alt: setting to enable the ePos printer feature
+.. screenshot:: pos-epos-printers-setting
+   :menu: Point of Sale ‣ Configuration ‣ Settings
+   :shows: The "Connected Devices" section of the POS settings with the "ePos Printer" option enabled and the printer's IP address entered below it.
+   :highlight: The "ePos Printer" setting block (red frame).
+   :data: IP address 192.168.1.25.
+   :module: point_of_sale, pos_epson_printer
+   :notes: English UI, light theme, 1440px width, crop to the settings block.
 
 .. note::
    When the printer connects to a network, it automatically prints a ticket with its IP address.
@@ -24,8 +29,7 @@ To use an ePos printer in Point of Sale:
 Directly supported ePOS printers
 ================================
 
-The following ePOS printers are directly compatible with Odoo without needing an **IoT system**
-(Enterprise).
+The following ePOS printers connect directly to Odoo over the network:
 
 - Epson TM-m30 i/ii/iii (Wi-Fi/Ethernet models only; Recommended)
 - Epson TM-H6000IV-DT (Receipt printer only)
@@ -42,23 +46,14 @@ The following ePOS printers are directly compatible with Odoo without needing an
 - Epson TM-P60II (Peeler: Wi-Fi® model)
 - Epson TM-P80 (Wi-Fi® model)
 
-ePOS printers with IoT system integration
-=========================================
-
-The following printers require an **IoT system** (Enterprise) to be compatible with Odoo:
-
-- Epson TM-T20 family (incompatible ePOS software)
-- Epson TM-T88 family (incompatible ePOS software)
-- Epson TM-U220 family (incompatible ePOS software)
-
 .. important::
    - Epson printers using Wi-Fi/Ethernet connections and following the `EPOS SDK Javascript protocol
      <https://download4.epson.biz/sec_pubs/pos/reference_en/technology/epson_epos_sdk.html>`_ are
-     compatible with Odoo **without** needing an **IoT system**.
-   - Thermal printers using ESC/POS are compatible **with** an **IoT system** (Enterprise).
-   - Epson printers using only USB connections are compatible **with** an **IoT system**
-     (Enterprise).
-   - Epson printers that connect via Bluetooth are **not compatible**.
+     compatible with Odoo.
+   - Epson printers that connect only over USB or Bluetooth, and thermal printers that use the
+     ESC/POS protocol, are **not compatible**.
+   - The Epson TM-T20, TM-T88, and TM-U220 families ship with ePOS software that is not compatible
+     with Odoo.
 
 .. seealso::
    - :doc:`https`

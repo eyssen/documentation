@@ -8,7 +8,6 @@ Online payments
    :titlesonly:
 
    payment_providers/wire_transfer
-   payment_providers/sdd
    payment_providers/adyen
    payment_providers/amazon_payment_services
    payment_providers/asiapay
@@ -33,8 +32,12 @@ subscriptions with recurring payments using their favorite payment methods, such
 Each payment provider is linked to a list of supported :ref:`payment methods
 <payment_providers/payment_methods>` that can be (de)activated based on your needs.
 
-.. image:: payment_providers/online-payment.png
-   :alt: Online payment form
+.. screenshot:: finance-payment-providers-payment-providers-online-payment
+   :menu: (customer portal) ‣ an invoice ‣ Pay now
+   :shows: The online payment form of the customer portal: the amount to pay, the list of payment methods (e.g. Card via Stripe, PayPal, Wire Transfer) as radio options, and the "Pay" button.
+   :data: Demo invoice INV/2025/00012 for Deco Addict, amount 1,200.00; Stripe (test mode), PayPal and Wire Transfer enabled.
+   :module: payment, account_payment
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    Odoo apps delegate the handling of sensitive information to the certified payment provider so
@@ -178,9 +181,6 @@ Bank payments
 - | :doc:`Wire Transfer <payment_providers/wire_transfer>`
   | When selected, Odoo displays your payment information with a payment reference. You have to
     approve the payment manually once you have received it in your bank account.
-- | :doc:`SEPA Direct Debit <payment_providers/sdd>`
-  | Your customers can make a bank transfer to register a SEPA Direct Debit mandate and get their
-    bank account charged directly.
 
 .. _payment_providers/add_new:
 
@@ -456,12 +456,16 @@ By default, the :guilabel:`Bank Account` defined for the :ref:`payment journal
 <accounting/journals/outstanding-accounts>` for each payment provider to separate the provider's
 payments from other payments.
 
-.. image:: payment_providers/bank_journal.png
-   :alt: Define an outstanding account for a payment provider.
+.. screenshot:: finance-payment-providers-payment-providers-bank-journal
+   :menu: Accounting ‣ Configuration ‣ Payment Providers ‣ (a provider) ‣ Configuration tab
+   :shows: The Configuration tab of a payment provider with the "Payment Journal" field set to "Bank" and, below it, the "Outstanding Account" field ("Outstanding Receipts") with the developer mode active.
+   :highlight: The "Outstanding Account" field.
+   :data: Provider Stripe, journal Bank.
+   :module: payment, account_payment
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`payment_providers/wire_transfer`
-   - :doc:`payment_providers/sdd`
    - :doc:`payment_providers/adyen`
    - :doc:`payment_providers/authorize`
    - :doc:`payment_providers/asiapay`

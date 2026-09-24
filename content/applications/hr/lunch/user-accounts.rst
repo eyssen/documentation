@@ -27,9 +27,9 @@ lunch accounts are replenished.
    Some examples of how money can be organized and transferred within a company:
 
    - Cash is handed to the **Lunch** app manager, who then updates the user's account.
-   - Money is automatically deducted from the user's paychecks, then the **Lunch** app manager
-     updates the account when paychecks are issued. This requires :ref:`adding a salary attachment
-     <payroll/worked-days-inputs>` for the user's payslip in the *Payroll* app.
+   - Money is deducted from the user's salary, then the **Lunch** app manager updates the account
+     when the salary is paid. Record the deduction as a line on the user's :doc:`salary sheet
+     <../salary/salary_sheets>`.
    - Companies can sell "lunch tickets" at a set price (for example, one ticket costs $5.00). Users
      can purchase tickets from a **Lunch** app manager, who then updates the user's account.
 
@@ -47,8 +47,13 @@ displaying each record's :guilabel:`Date`, :guilabel:`User`, :guilabel:`Descript
 :guilabel:`Amount`. The total of all the cash moves is displayed at the bottom of the
 :guilabel:`Amount` column.
 
-.. image:: user-accounts/cash.png
-   :alt: The list view of all cash moves.
+.. screenshot:: hr-lunch-cash-moves
+   :menu: Lunch ‣ Manager ‣ Cash Moves
+   :shows: The Cash Moves list with the date, the employee, the description and the amount of each movement.
+   :highlight: The Amount column (red frame).
+   :data: Payments from three employees over one month.
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.
 
 Add funds
 ---------
@@ -66,8 +71,13 @@ A blank :guilabel:`Cash Moves` form loads. Enter the following information on th
 - :guilabel:`Amount`: enter the amount being added to the lunch account.
 - :guilabel:`Description`: enter a brief description of the transaction.
 
-.. image:: user-accounts/cash-move-form.png
-   :alt: The cash move form filled out for a transaction of $40.00.
+.. screenshot:: hr-lunch-cash-move-form
+   :menu: Lunch ‣ Manager ‣ Cash Moves ‣ New
+   :shows: A cash move form with the date, the employee, the amount and the description filled in.
+   :highlight: The Amount field (red frame).
+   :data: Employee "Anita Kovács", amount 10 000 HUF, description "Cash payment".
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.
 
 Control Accounts
 ================
@@ -87,8 +97,13 @@ expand that specific group.
 Each record includes the :guilabel:`Date`, :guilabel:`User`, :guilabel:`Description`, and
 :guilabel:`Amount`.
 
-.. image:: user-accounts/control-accounts.png
-   :alt: The Control Accounts dashboard with two employee's transactions expanded.
+.. screenshot:: hr-lunch-control-accounts
+   :menu: Lunch ‣ Manager ‣ Control Accounts
+   :shows: The Control Accounts list grouped by employee, with two employee groups expanded to show their transactions and balances.
+   :highlight: The balances of the two expanded employees (red frame).
+   :data: Two employees with payments and order deductions, one with a negative balance.
+   :module: lunch
+   :notes: English UI, light theme, 1440px width.
 
 .. important::
    This list only displays the various transactions within the **Lunch** app, and does **not** allow

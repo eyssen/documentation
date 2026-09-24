@@ -55,9 +55,13 @@ To enable subcontracting in Odoo, navigate to :menuselection:`Manufacturing app 
 --> Settings`, and tick the checkbox next to the :guilabel:`Subcontracting` setting, under the
 :guilabel:`Operations` heading. Then, click :guilabel:`Save`.
 
-.. image:: subcontracting/subcontracting-setting.png
-   :align: center
-   :alt: The Subcontracting setting in the manufacturing app.
+.. screenshot:: manufacturing-subcontracting-setting
+   :menu: Manufacturing app --> Configuration --> Settings
+   :shows: Settings page scrolled to "Operations"; "Subcontracting" checkbox enabled.
+   :highlight: The "Subcontracting" setting block.
+   :data: Demo company "YourCompany".
+   :module: mrp_subcontracting
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
 
 With subcontracting enabled, a few different features become available in Odoo:
 
@@ -124,6 +128,20 @@ equation:
 It is important to note that not every subcontracted product valuation will include all of these
 variables. For example, if the product is not dropshipped to the end customer, then there is no need
 to factor in the cost of dropshipping.
+
+Subcontractor portal access
+===========================
+
+If the subcontractor's contact has :doc:`portal access <../../general/users/portal>`, they can
+follow the productions assigned to them without needing access to the Odoo database itself. Once
+logged into the portal, the subcontractor sees a :guilabel:`Productions` menu, listing every
+receipt linked to a subcontracted manufacturing order for which they are the vendor.
+
+Selecting a production opens an embedded view of the manufacturing order, on which the subcontractor
+can register the lot/serial number and quantity produced, in the same way as an internal user would
+on the *Manufacturing* app's backend. The physical receipt into the contracting company's stock
+still needs to be validated on the :guilabel:`Purchase` or :guilabel:`Inventory` app, as described
+in each workflow above.
 
 .. toctree::
 

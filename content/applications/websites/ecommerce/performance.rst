@@ -12,9 +12,13 @@ Data monitoring
 **reporting view**, go to :menuselection:`Website --> Reporting --> eCommerce`. This dashboard helps
 you monitor everything related to sales, such as sales performance per product, category, day, etc.
 
-.. image:: performance/reporting.png
-   :align: center
-   :alt: Performance reporting of eCommerce
+.. screenshot:: ecommerce-performance-reporting
+   :menu: Website ‣ Reporting ‣ eCommerce
+   :shows: The eCommerce reporting page in graph view with the Measures drop-down menu and the period comparison.
+   :highlight: The Measures drop-down menu (red frame).
+   :data: Sales of the last three months.
+   :module: website_sale
+   :notes: English UI, light theme, 1440px width.
 
 By clicking :guilabel:`Measures`, you can select the type of measurement used, such as:
 
@@ -24,8 +28,8 @@ By clicking :guilabel:`Measures`, you can select the type of measurement used, s
 - :guilabel:`Volume`;
 - ...
 
-Other options include **multiple views (Pivot, etc.), comparison** by periods or years, and directly
-:guilabel:`insert in spreadsheet`, etc.
+Other options include **multiple views (Pivot, etc.)**, **comparison** by periods or years, and the
+export of the report to a file.
 
 Analytics
 =========

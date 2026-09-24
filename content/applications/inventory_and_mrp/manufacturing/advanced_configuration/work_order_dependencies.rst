@@ -36,26 +36,36 @@ On the |BOM|, click on the :guilabel:`Miscellaneous` tab, then enable the :guila
 Dependencies` checkbox. This makes a new :guilabel:`Blocked By` option available in the settings of
 the :guilabel:`Operations` tab.
 
-.. image:: work_order_dependencies/operation-dependencies.png
-   :align: center
-   :alt: The Operation Dependencies checkbox on the Miscellaneous tab of a BoM.
+.. screenshot:: manufacturing-work-order-deps-operation-dependencies
+   :menu: Manufacturing ‣ Products ‣ Bills of Materials ‣ (BoM) ‣ Miscellaneous tab
+   :shows: The Miscellaneous tab of a BoM with the "Operation Dependencies" checkbox ticked.
+   :highlight: The "Operation Dependencies" checkbox.
+   :data: BoM for product "Product A".
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 Next, click on the :guilabel:`Operations` tab. On the top-right of the tab, click on the tab's
 :guilabel:`settings` button, then enable the :guilabel:`Blocked By` checkbox. This makes a
 :guilabel:`Blocked By` field appear for each operation on the :guilabel:`Operations` tab.
 
-.. image:: work_order_dependencies/operations-settings.png
-   :align: center
-   :alt: The settings for the Operations tab on a BoM.
+.. screenshot:: manufacturing-work-order-deps-operations-settings
+   :menu: Manufacturing ‣ Products ‣ Bills of Materials ‣ (BoM) ‣ Operations tab ‣ settings
+   :shows: The optional-columns menu of the Operations tab list with the "Blocked By" checkbox ticked.
+   :highlight: The "Blocked By" checkbox.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the dropdown.
 
 In the line of the operation that should be blocked by another operation, click the
 :guilabel:`Blocked By` field, and an :guilabel:`Open: Operations` pop-up window appears. In the
 :guilabel:`Blocked By` drop-down field on the pop-up window, select the blocking operation that must
 be completed *before* the operation that is blocked.
 
-.. image:: work_order_dependencies/blocked-by.png
-   :align: center
-   :alt: The Blocked By drop-down field for an operation on a BoM.
+.. screenshot:: manufacturing-work-order-deps-blocked-by
+   :menu: Manufacturing ‣ Products ‣ Bills of Materials ‣ (BoM) ‣ Operations tab ‣ Blocked By
+   :shows: The "Open: Operations" pop-up window with the "Blocked By" drop-down field open, listing the other operations of the BoM.
+   :data: BoM operations "Cut" and "Assemble"; "Assemble" blocked by "Cut".
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the dialog.
 
 Finally, save the |BOM| by clicking :guilabel:`Save`.
 
@@ -79,19 +89,26 @@ display a `Ready` tag in the :guilabel:`Status` section.
 Work orders that are blocked by one or more work orders display a `Waiting for another WO` tag
 instead. Once the blocking work order(s) are completed, the tag updates to `Ready`.
 
-.. image:: work_order_dependencies/work-order-status.png
-   :align: center
-   :alt: The status tags for work orders on a manufacturing order.
+.. screenshot:: manufacturing-work-order-deps-status-tags
+   :menu: Manufacturing ‣ Operations ‣ Manufacturing Orders ‣ (MO) ‣ Work Orders tab
+   :shows: The Work Orders tab with a "Ready" tag on the "Cut" operation and a "Waiting for another WO" tag on the "Assemble" operation.
+   :data: MO for product "Product A"; operations "Cut" and "Assemble".
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 To schedule the manufacturing order's work orders, click the :guilabel:`Plan` button at the top of
-the page. After doing so, the :guilabel:`Scheduled Start Date` field for each work order on the
-:guilabel:`Work Orders` tab auto-fills with the scheduled start date and time. A blocked work order
-is scheduled at the end of the time period specified in the :guilabel:`Expected Duration` field of
-the work order that precedes it.
+the page. After doing so, the :guilabel:`Start` field for each work order on the :guilabel:`Work
+Orders` tab auto-fills with the scheduled start date and time (enable the column from the
+:icon:`oi-settings-adjust` :guilabel:`(settings adjust)` icon if it is not shown). A blocked work
+order is scheduled at the end of the time period specified in the :guilabel:`Expected Duration`
+field of the work order that precedes it.
 
-.. image:: work_order_dependencies/scheduled-start-date.png
-   :align: center
-   :alt: The Scheduled Start Date field for work orders on a manufacturing order.
+.. screenshot:: manufacturing-work-order-deps-start-field
+   :menu: Manufacturing ‣ Operations ‣ Manufacturing Orders ‣ (MO) ‣ Work Orders tab
+   :shows: The Work Orders tab, "Start" column enabled, showing the scheduled start date and time for both operations.
+   :data: MO for product "Product A"; "Cut" starting at 1:30 PM, "Assemble" starting at 2:30 PM.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 .. example::
    A manufacturing order is created for Product A. The manufacturing order has two operations: Cut
@@ -102,17 +119,3 @@ the work order that precedes it.
    operation is scheduled to begin immediately. Since the Cut operation has an expected duration of
    60 minutes, the Assemble operation is scheduled to begin at 2:30 pm.
 
-Planning by workcenter
-----------------------
-
-To see a visual representation of how work orders are planned, navigate to the :guilabel:`Work
-Orders Planning` page by going to :menuselection:`Manufacturing --> Planning --> Planning by
-Workcenter`. This page shows a timeline of all the work orders scheduled for each operation.
-
-If one work order is blocked by the completion of another, the work order that is blocked is shown
-as scheduled to start after the work order blocking it. In addition, an arrow connects the two work
-orders, leading from the blocking operation to the blocked operation.
-
-.. image:: work_order_dependencies/planning-arrow.png
-   :align: center
-   :alt: The arrow connecting a blocked work order to the work order blocking it.

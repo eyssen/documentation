@@ -22,8 +22,12 @@ Then, set a default fiscal position that should be applied to all sales in the s
 :guilabel:`Default` field. You can also add more fiscal positions to choose from in the
 :guilabel:`Allowed` field.
 
-.. image:: fiscal_position/flexible-taxes-setting.png
-   :align: center
+.. screenshot:: pos-fiscal-position-setting
+   :menu: Point of Sale ‣ Configuration ‣ Settings
+   :shows: The "Accounting" section of the POS settings with "Flexible Taxes" enabled, a default fiscal position selected and two positions listed in the "Allowed" field.
+   :highlight: The "Flexible Taxes" setting block (red frame).
+   :module: point_of_sale, account
+   :notes: English UI, light theme, 1440px width, centered, crop to the settings block.
 
 According to the :doc:`fiscal localization package <../../../finance/fiscal_localizations>`
 activated, several fiscal positions are preconfigured and can be set and used in POS. However, you
@@ -41,8 +45,12 @@ click the :guilabel:`Tax` button next to the **book-shaped** icon and select a f
 the list. Doing so applies the defined rules automatically to all the products subject to the chosen
 fiscal position's regulations.
 
-.. image:: fiscal_position/set-tax.png
-   :align: center
+.. screenshot:: pos-fiscal-position-frontend
+   :menu: (POS interface) ‣ Register screen ‣ Tax
+   :shows: The POS register screen with the fiscal position button open, listing the allowed fiscal positions to apply to the order.
+   :highlight: The fiscal position button (red frame).
+   :module: point_of_sale, account
+   :notes: English UI, light theme, 1440px width, centered.
 
 .. note::
    If a default fiscal position is set, the tax button displays the name of the fiscal position.

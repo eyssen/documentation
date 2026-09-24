@@ -26,12 +26,14 @@ localization:
    * - Italy - E-invoicing (Withholding)
      - `l10n_it_edi_withholding`
      - E-invoice withholding
-   * - Italy - Accounting Reports
-     - `l10n_it_reports`
-     - Country-specific reports
    * - Italy - Stock DDT
      - `l10n_it_stock_ddt`
      - Transport documents - Documento di Trasporto (DDT)
+
+.. note::
+   The Italian country-specific reports, the Ri.Ba. (Ricevuta Bancaria) payment files and the
+   fiscal printers for the Point of Sale are **not** available in this edition. The tax grids of the
+   Italian VAT return can be reviewed in the :doc:`tax report <../accounting/reporting/dynamic_reports>`.
 
 .. seealso::
    :doc:`Documentation on e-invoicing’s legality and compliance in Italy
@@ -49,8 +51,13 @@ section, click :guilabel:`Update info`. From here, fill out the fields:
 - :guilabel:`Codice Fiscale`: the fiscal code of the company;
 - :guilabel:`Tax System`: the tax system under which the company falls;
 
-.. image:: italy/company.png
-   :alt: Company information to be provided
+.. screenshot:: finance-fl-italy-company
+   :menu: Settings ‣ General Settings ‣ Companies ‣ Update Info
+   :shows: The company form of an Italian company with the Address, VAT, "Codice Fiscale" and "Tax System" fields filled in.
+   :highlight: The "Codice Fiscale" and "Tax System" fields.
+   :data: Demo company "YourCompany IT", Italian localization installed; EDI in Demo mode.
+   :module: l10n_it
+   :notes: English UI, light theme, 1440px width.
 
 Taxes configuration
 -------------------
@@ -66,7 +73,7 @@ Tax exemption
 ~~~~~~~~~~~~~
 
 The use of sale taxes that amount to **zero percent** (0%) is required by Italian authorities to
-keep track of the exact :guilabel:`Tax Exemption Kind (Natura)` and :guilabel:`Law Reference` that
+keep track of the exact :guilabel:`Exoneration` and :guilabel:`Law Reference` that
 justify the exemption operated on an invoice line.
 
 .. example::
@@ -74,11 +81,16 @@ justify the exemption operated on an invoice line.
    found under :menuselection:`Accounting --> Configuration --> Taxes`. Exports are exempt from VAT,
    and therefore, they require :guilabel:`Exoneration` kind and :guilabel:`Law Reference` filled in.
 
-.. image:: italy/tax-exemption.png
-   :alt: Tax Exemption Settings
+.. screenshot:: finance-fl-italy-tax-exemption
+   :menu: Accounting ‣ Configuration ‣ Taxes ‣ (an exempt 0% tax) ‣ Advanced Options tab
+   :shows: The Advanced Options tab of the "0% EU" Italian export tax with the "Exoneration" drop-down set to "[N3.1] Non imponibili - esportazioni" and the "Law Reference" field filled in.
+   :highlight: The "Exoneration" field.
+   :data: Demo company "YourCompany IT", Italian localization installed; EDI in Demo mode.
+   :module: l10n_it
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
-   There are many :guilabel:`Tax Exemption Kind (Natura)` and :guilabel:`Law Reference` codes. Make
+   There are many :guilabel:`Exoneration` and :guilabel:`Law Reference` codes. Make
    sure you check the latest version available to get the latest information on:
 
    - `Italian authorities documentation <https://www.agenziaentrate.gov.it/portale/web/guest/aree-tematiche/fatturazione-elettronica>`_
@@ -114,7 +126,7 @@ Invoices
 --------
 
 **Reverse-charged** customer invoices show no VAT amount, but the :abbr:`AdE (Agenzia delle
-Entrate)` requires the seller to specify the :guilabel:`Tax Exemption` reason and the :guilabel:`Law
+Entrate)` requires the seller to specify the :guilabel:`Exoneration` reason and the :guilabel:`Law
 Reference` that enable the reverse-charge mechanism. Odoo provides a set of special 0% taxes that
 can be assigned to each reverse-charged invoice lines, representing the most commonly used
 configurations.
@@ -142,10 +154,15 @@ Tax grids
 
 The Italian localization has a specific :ref:`tax grid <tax-returns/tax-grids>` section for
 **reverse charge** taxes. These tax grids are identifiable by the :ref:`VJ <italy/grids>` tag, and
-can be found by going to :menuselection:`Accounting --> Reporting --> Audit Reports: Tax Report`.
+can be found in the :doc:`tax report <../accounting/reporting/dynamic_reports>`.
 
-.. image:: italy/grids.png
-   :alt: Reverse charge tax grid from the VJ section of the Tax Declaration
+.. screenshot:: finance-fl-italy-grids
+   :menu: Accounting ‣ Reporting ‣ Dynamic Reports ‣ Tax Report
+   :shows: The Italian tax report with the "VJ" section expanded, listing the reverse-charge grids (VJ1 … VJ19) with their base and tax amounts.
+   :highlight: The VJ section.
+   :data: Demo company "YourCompany IT", Italian localization installed; EDI in Demo mode.
+   :module: l10n_it, account_dynamic_reports
+   :notes: English UI, light theme, 1440px width.
 
 .. _italy/e-invoicing:
 
@@ -209,8 +226,13 @@ Accounting.
    Entrate)`: `0803HR0` - `N8MIMM9` - `X9XX79Z`. Any real production :guilabel:`Codice Destinario`
    of your customers will not be recognized as valid by the test service.
 
-.. image:: italy/edi.png
-   :alt: Electronic document invoicing settings
+.. screenshot:: finance-fl-italy-edi
+   :menu: Accounting ‣ Configuration ‣ Settings ‣ Electronic Document Invoicing
+   :shows: The "Electronic Document Invoicing" settings block of an Italian company: the mode radio buttons (Demo / Test (experimental) / Official) and the "Allow Odoo to process invoices" checkbox.
+   :highlight: The mode selection and the consent checkbox.
+   :data: Demo company "YourCompany IT", Italian localization installed; EDI in Demo mode.
+   :module: l10n_it_edi
+   :notes: English UI, light theme, 1440px width.
 
 .. _italy/e-invoicing-process:
 
@@ -222,11 +244,14 @@ process used for the mandatory transmission of tax documents in XML format betwe
 :abbr:`AdE (Agenzia delle Entrate)` to reduce errors and verify the correctness of operations.
 
 .. note::
-   You can check the current status of an invoice by the :guilabel:`SdI State` field. The XML file
+   You can check the current status of an invoice by the :guilabel:`SDI State` field. The XML file
    is attached to the invoice.
 
-.. image:: italy/edi-process.png
-   :alt: EDI system architecture
+.. screenshot:: finance-fl-italy-edi-process
+   :menu: (diagram)
+   :shows: Schematic of the Italian e-invoicing flow: Odoo → Odoo access point (proxy) → SdI (Sistema di Interscambio) → customer, with the return notifications (delivered / rejected).
+   :module: l10n_it_edi
+   :notes: Simple schematic drawing.
 
 XML Documents creation
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -235,19 +260,34 @@ Odoo generates the required XML files as attachments to invoices in the `Fattura
 by the :abbr:`AdE (Agenzia delle Entrate)`. Once the invoices needed are selected, go to
 :guilabel:`Action` and click on :guilabel:`Send and Print`.
 
-.. image:: italy/edi-menu.png
-   :alt: Send and Print menu
+.. screenshot:: finance-fl-italy-edi-menu
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (a posted invoice)
+   :shows: A posted Italian customer invoice with the "Send & Print" button in the header.
+   :highlight: The "Send & Print" button.
+   :data: Demo company "YourCompany IT", Italian localization installed; EDI in Demo mode.
+   :module: l10n_it_edi
+   :notes: English UI, light theme, 1440px width.
 
 When the pop-up window opens there is a selection of actions that can be taken. :guilabel:`Generate
 XML File` generates the attachments.
 
-.. image:: italy/edi-send-and-print.png
-   :alt: Send and Print dialog
+.. screenshot:: finance-fl-italy-edi-send-and-print
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (a posted invoice) ‣ Send & Print
+   :shows: The "Send" dialog with the "Send to SDI" checkbox enabled next to the e-mail and download options.
+   :highlight: The e-invoicing checkbox.
+   :data: Demo company "YourCompany IT", Italian localization installed; EDI in Demo mode.
+   :module: l10n_it_edi
+   :notes: English UI, light theme, 1440px width.
 
 The XML file as well as the PDF once can be found attached to the invoice.
 
-.. image:: italy/edi-attachments.png
-   :alt: EDI Attachments
+.. screenshot:: finance-fl-italy-edi-attachments
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (a sent invoice) ‣ chatter
+   :shows: The chatter/attachments of a sent invoice showing the generated FatturaPA XML file (IT01234567890_00001.xml) and the PDF.
+   :highlight: The XML attachment.
+   :data: Demo company "YourCompany IT", Italian localization installed; EDI in Demo mode.
+   :module: l10n_it_edi
+   :notes: English UI, light theme, 1440px width.
 
 Submission to SDI
 ~~~~~~~~~~~~~~~~~
@@ -266,8 +306,13 @@ also gets assigned a :guilabel:`FatturaPA Transaction` number that is shown in t
 :guilabel:`Electronic Invoicing` tab. The checks may take variable time, ranging from a few seconds
 up to a day, depending on the queue of invoices sent throughout Italy.
 
-.. image:: italy/edi-processing.png
-   :alt: Check Sending button and Sdi Processing state
+.. screenshot:: finance-fl-italy-edi-processing
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (a sent invoice)
+   :shows: A sent invoice with the "SDI State" field showing "Processing" and the "Check Sending" button in the header.
+   :highlight: The "Check Sending" button and the state field.
+   :data: Demo company "YourCompany IT", Italian localization installed; EDI in Demo mode.
+   :module: l10n_it_edi
+   :notes: English UI, light theme, 1440px width.
 
 Acceptance
 ~~~~~~~~~~
@@ -301,8 +346,13 @@ issue, it is sufficient to delete the attachments of the invoice, return the inv
    To regenerate the XML, both the XML attachment and the PDF report must be deleted, so that they
    are then regenerated together. This ensures that both always contain the same data.
 
-.. image:: italy/edi-rejected.png
-   :alt: EDI Rejected State
+.. screenshot:: finance-fl-italy-edi-rejected
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (a rejected invoice)
+   :shows: A sent invoice whose "SDI State" shows "Rejected" with the rejection message from the SdI in the chatter.
+   :highlight: The "Rejected" state and the chatter message.
+   :data: Demo company "YourCompany IT", Italian localization installed; EDI in Demo mode.
+   :module: l10n_it_edi
+   :notes: English UI, light theme, 1440px width.
 
 Forwarding Completed
 ~~~~~~~~~~~~~~~~~~~~
@@ -348,8 +398,13 @@ integration, as detailed in the :ref:`italy/document-types` section.
    When clicking on the :guilabel:`Send Tax Integration` button, an XML file of the appropriate
    :guilabel:`Document Type` is generated, attached to the bill, and sent as for invoices.
 
-   .. image:: italy/edi-tax-integration-button.png
-      :alt: EDI Send Tax Integration button
+   .. screenshot:: finance-fl-italy-edi-tax-integration-button
+      :menu: Accounting ‣ Vendors ‣ Bills ‣ (a reverse-charge bill)
+      :shows: A posted vendor bill with the "Send Tax Integration" button in the header, used to send the TD16/TD17/TD18/TD19 integration document to the SdI.
+      :highlight: The "Send Tax Integration" button.
+      :data: Demo company "YourCompany IT", Italian localization installed; EDI in Demo mode.
+      :module: l10n_it_edi
+      :notes: English UI, light theme, 1440px width.
 
 .. _italy/document-types:
 
@@ -407,7 +462,7 @@ In the :abbr:`EDI (Electronic Data Interchange)`, Odoo exports invoices as simpl
 
 #. It is a domestic transaction (i.e., the partner is from Italy);
 #. Your company's **required fields** (:guilabel:`VAT Number` or :guilabel:`Codice Fiscale`,
-   :guilabel:`Fiscal Regime`, and full **address**) are provided;
+   :guilabel:`Tax System`, and full **address**) are provided;
 #. The partner's address is not fully specified (i.e., it misses the City or the ZipCode);
 #. The total amount of VAT included is **less** than **400 EUR**.
 
@@ -513,7 +568,7 @@ the regular **reverse charge** rules. You can use the proper :guilabel:`Document
 the invoice type: `TD01`, `TD04`, `TD05`, `TD24`, `TD25`. Additional requirements are not enforced
 by Odoo. However, the user is requested by the **State** to:
 
-- Select a tax with the :guilabel:`Tax Exemption Kind` set to `N3.3`;
+- Select a tax with the :guilabel:`Exoneration` set to `N3.3`;
 - Use the generic :abbr:`SdI (Sistema di Interscambio)` :guilabel:`Destination Code` `2R4GTO8`.
 
 The invoice is then routed by a dedicated office in San Marino to the correct business.
@@ -582,7 +637,7 @@ The :guilabel:`Split Payment` mechanism behaves much like :ref:`italy/reverse-ch
    When an Italian company bills a :abbr:`PA (Public Administration)` business - for example,
    cleaning services for a public building - the :abbr:`PA (Public Administration)` business
    self-reports the VAT to the Tax Agency themselves, and the vendor just has to select the
-   appropriate tax with the right :guilabel:`Tax Exemption` for their invoice lines.
+   appropriate tax with the right :guilabel:`Exoneration` for their invoice lines.
 
 The specific :guilabel:`Scissione dei Pagamenti` fiscal position is available to deal with partners
 belonging to the :abbr:`PA (Public Administration)`.
@@ -620,139 +675,4 @@ Expired Terms
 If the :abbr:`PA (Public Administration)` business doesn't reply within 15 days, you need to contact
 the :abbr:`PA (Public Administration)` business directly, sending them both the invoice and the
 received deadline notification by email. You can make an arrangement with them and manually set the
-correct :guilabel:`SdI State` on your invoice.
-
-Point of Sale fiscal printers
-=============================
-
-.. warning::
-   Fiscal printers are distinct from :doc:`ePOS printers
-   </applications/sales/point_of_sale/configuration/epos_printers>`. The IP address for a fiscal
-   printer should not be entered in the ePOS IP address settings.
-
-Fiscal regulations mandate using certified RT devices, such as RT printers or RT servers, to ensure
-compliant sales receipts and secure communication with the Tax Authority. These devices
-automatically transmit fiscal data daily. RT printers, designed for individual POS terminals, handle
-transactions, print receipts, and report to the authorities, ensuring data integrity and compliance.
-
-Simulation mode
----------------
-
-.. warning::
-   Since the simulation mode sends data to the authorities, it should only be enabled at the very
-   start of the printer's configuration process. Once the printer is switched to the production
-   mode, it cannot be reverted to the simulation mode.
-
-To test the fiscal printer setup with Odoo, configure the fiscal printer in the simulation mode
-as follows:
-
-#. Make sure the fiscal printer is set to its default state: printer on, start-up cycle complete,
-   and no transaction in progress.
-#. Type `3333`.
-#. Press :guilabel:`Chiave`. The screen displays :guilabel:`Scelta Funzione`.
-#. Type `14`. The screen displays :guilabel:`Apprendimento`.
-#. Type `62`. The screen displays :guilabel:`Simulazione`.
-#. To turn the :guilabel:`no` into a :guilabel:`si`, press :guilabel:`X`.
-#. To confirm, press :guilabel:`Contante`.
-#. Press :guilabel:`Chiave`.
-
-To configure the printer for production, repeat the steps above.
-
-.. note::
-   To test the printer configuration, the physical device must first be obtained and registered with
-   the relevant authorities.
-
-Setting up the printer to work with Odoo
-----------------------------------------
-
-Fiscal printers are meant to work only in the local network. This means the printer and the
-device running :doc:`Odoo Point of Sale </applications/sales/point_of_sale>` must be connected to
-the same network.
-
-Fiscal printers are typically configured to use HTTP by default. To ensure compatibility with Odoo,
-the settings must be updated to enable HTTPS support on the printer. This can be done using either
-the EpsonFPWizard configuration software or the keyboard connected to the printer.
-
-To set up the fiscal printer using the keyboard, follow these steps:
-
-#. Make sure the fiscal printer is set to its default state: printer on, start-up cycle complete,
-   and no transaction in progress.
-#. Type `3333`.
-#. Press :guilabel:`Chiave`. The screen displays :guilabel:`Scelta Funzione`.
-#. Type `34`. The screen displays :guilabel:`Web Server`.
-#. Press :guilabel:`Contante` 3 times until the screen displays :guilabel:`Web Server: SSL`.
-#. To turn the value `0` into a `1`, press :guilabel:`X`.
-#. To confirm, press :guilabel:`Contante` 3 times.
-#. Press :guilabel:`Chiave`.
-
-Then, log in to the printer with the device that runs :doc:`Odoo Point of Sale
-</applications/sales/point_of_sale>` so it recognizes the printer's certificate.
-
-To approve and install the printer's certificate, follow these steps:
-
-#. Access the printer by opening a web browser and entering `https://<ip-of-your-printer>` in the
-   address bar. A :guilabel:`Warning: Potential Security Risk Ahead` security message appears.
-#. Click :guilabel:`Advanced` to show the certificate approval options.
-#. Click :guilabel:`Proceed` to validate the certificate.
-
-Then, to ensure :doc:`Odoo Point of Sale </applications/sales/point_of_sale>` is configured with the
-fiscal printer, go to :menuselection:`Point of Sale --> Configuration --> Settings`. In the
-:guilabel:`Connected Devices` section, add the IP address in the :guilabel:`Italian Fiscal Printer
-IP address` and enable :guilabel:`Use HTTPS`.
-
-Ri.Ba. (Ricevuta Bancaria)
-==========================
-
-:abbr:`Ri.Ba. (Ricevuta Bancaria)` is a payment method widely used in Italy where vendors request
-payments through their bank, which forwards the request to the customer's own bank and takes
-responsibility for the collection. This enables payment automation and reduces risks for the vendor.
-
-The vendor generally uploads a fixed-format text file with the list of payments to the bank's web
-portal.
-
-.. note::
-   - Ri.Ba. are exclusively for **domestic payments** in Italy. For recurring international
-     payments, please use `SEPA Direct Debt (SDD) <../accounting/payments/batch_sdd>`_
-
-Configuration
--------------
-
-#. Check that the `l10n_it_riba` module is :ref:`installed <general/install>`.
-#. Go to :menuselection:`Settings --> Users & Companies --> Companies` and select the company that
-   will use Ri.Ba.
-#. Fill out the required :guilabel:`SIA Code`.
-
-   .. image:: italy/sia-code.png
-      :alt: The company's SIA code
-
-   .. note::
-      The :guilabel:`SIA Code` identifies businesses within the Italian banking network and is used
-      to receive money through specific payment methods. It consists of one letter and four digits
-      (e.g., T1234) and can usually be found on the bank's portal or obtained by contacting the bank.
-
-#. Ensure the Company's bank account has an Italian IBAN.
-
-   .. seealso::
-      How to configure :doc:`Bank Accounts <../accounting/bank>`
-
-Accept Ri.Ba. for your invoices
--------------------------------
-
-Payments of type :abbr:`Ri.Ba. (Ricevuta Bancaria)` can be registered from the :guilabel:`Invoices`
-(:menuselection:`Accounting --> Customers --> Invoices`).
-
-.. important::
-   Make sure that your invoice involves a Partner that has a bank account with an Italian IBAN.
-
-Then, all Payments must be grouped in a **Batch Payment**.
-
-.. seealso::
-   - :doc:`Batch Payments <../accounting/payments>`
-   - :doc:`Create a Batch Payment <../accounting/payments/batch>`
-
-Once you press the :guilabel:`Validate` button for the Batch Payment, the :abbr:`Ri.Ba. (Ricevuta
-Bancaria)` file is generated and attached to the Batch Payment, so you can download it and upload it
-through your bank's web portal.
-
-.. image:: italy/riba-attachment.png
-   :alt: The Ri.Ba. file attached
+correct :guilabel:`SDI State` on your invoice.

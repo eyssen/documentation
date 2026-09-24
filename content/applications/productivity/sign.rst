@@ -11,8 +11,12 @@ An **electronic signature** shows a person's agreement to the content of a docum
 handwritten signature, the electronic one represents a legal binding by the terms of the signed
 document.
 
-.. image:: sign/sign-dashboard.png
-   :alt: eYssen Sign dashboard overview
+.. screenshot:: productivity-sign-dashboard
+   :menu: eYssen Sign
+   :shows: The Sign dashboard with the statistics counters at the top (Open Requests, Waiting for Others, Signed Today, My Requests, To Sign) and the template cards with their Send and Sign Now buttons below.
+   :data: Demo company "YourCompany HU"; templates "NDA", "Employment contract", "Delivery acceptance".
+   :module: sign
+   :notes: English UI, light theme, 1440px width.
 
 Validity of electronic signatures
 =================================
@@ -81,8 +85,7 @@ Overall, to be recognized as valid, electronic signatures have to meet five crit
 Dashboard
 =========
 
-The Sign dashboard is the first screen displayed when you open the app. It is built as an OWL
-component and provides an at-a-glance overview of your signing activity along with quick access to
+The Sign dashboard is the first screen displayed when you open the app. It provides an at-a-glance overview of your signing activity along with quick access to
 your templates.
 
 Statistics
@@ -117,7 +120,7 @@ Templates
 =========
 
 Templates are reusable PDF documents with pre-configured signing fields. Go to
-:menuselection:`Sign --> Templates` to view, create, and manage your templates.
+:menuselection:`eYssen Sign --> Templates` to view, create, and manage your templates.
 
 Creating a template
 -------------------
@@ -125,7 +128,7 @@ Creating a template
 To create a new template:
 
 #. Click :guilabel:`Upload a PDF Template` from the dashboard, or go to
-   :menuselection:`Sign --> Templates` and click :guilabel:`New`.
+   :menuselection:`eYssen Sign --> Templates` and click :guilabel:`New`.
 #. Select a PDF file from your computer.
 #. The template editor opens, allowing you to place signing fields on the document.
 
@@ -137,8 +140,13 @@ Template editor
 The template editor provides a visual, drag-and-drop interface for placing fields onto the pages
 of your PDF document.
 
-.. image:: sign/sign-template-editor.png
-   :alt: The eYssen Sign template editor with drag-and-drop fields
+.. screenshot:: productivity-sign-template-editor
+   :menu: eYssen Sign ‣ Templates
+   :shows: The template editor with the PDF page in the middle, the field palette on the side, and two fields (Signature, Date) already placed on the document.
+   :highlight: The field palette and one placed signature field (red frame).
+   :data: Template "NDA" with roles "Customer" and "Company".
+   :module: sign
+   :notes: English UI, light theme, 1440px width.
 
 The left sidebar lists all available :ref:`field types <sign/field-types>`. Drag a field from the
 sidebar and drop it onto the desired location on the PDF. Once placed, you can:
@@ -170,8 +178,12 @@ Template properties
 
 Click :guilabel:`Template Properties` in the template editor to configure additional settings.
 
-.. image:: sign/sign-template-properties.png
-   :alt: Template properties panel
+.. screenshot:: productivity-sign-template-properties
+   :menu: eYssen Sign ‣ Templates
+   :shows: The Template Properties panel open in the template editor, showing the template name, category, tags and the other template settings.
+   :data: Template "NDA", category "Legal", tag "2026".
+   :module: sign
+   :notes: English UI, light theme, crop to the properties panel.
 
 The following properties are available:
 
@@ -214,8 +226,12 @@ click :guilabel:`Compare Versions`. The comparison view highlights:
 - **Modified fields**: fields whose position, size, or properties changed between versions (shown in
   yellow).
 
-.. image:: sign/sign-version-compare.png
-   :alt: Side-by-side version comparison of a sign template
+.. screenshot:: productivity-sign-version-compare
+   :menu: eYssen Sign ‣ Templates
+   :shows: The side-by-side version comparison of a template, with added fields in green, removed fields in red and modified fields in yellow.
+   :data: Template "NDA", versions 1 and 2.
+   :module: sign
+   :notes: English UI, light theme, 1440px width.
 
 .. _sign/multilingual:
 
@@ -268,8 +284,13 @@ Share link
 
 Generate a public URL that allows anyone to sign a document without requiring an Odoo account.
 
-.. image:: sign/sign-share-link.png
-   :alt: Generate a share link for anonymous signing
+.. screenshot:: productivity-sign-share-link
+   :menu: eYssen Sign ‣ Templates
+   :shows: The share link dialog of a template with the generated public signing URL and the copy button.
+   :highlight: The generated URL (red frame).
+   :data: Template "Delivery acceptance".
+   :module: sign
+   :notes: English UI, light theme, use a throw-away token.
 
 To generate a share link:
 
@@ -292,14 +313,16 @@ Each field in a Sign document is assigned to a **role** that corresponds to a sp
 a document is sent for signing, each role is mapped to a person who must fill in the fields assigned
 to their role.
 
-Roles are managed at :menuselection:`Sign --> Configuration --> Roles`.
+In the template editor, select a field and pick its :guilabel:`Role` in the properties panel on
+the right. Each role has:
 
-You can create new roles or edit existing ones. Each role has:
+- a name (e.g., *Customer*, *Employee*, *Witness*);
+- a color, used to visually distinguish the fields belonging to that role in the editor;
+- a sequence, determining the default order when several roles exist;
+- an authentication method, applied to the signer filling that role.
 
-- :guilabel:`Role Name`: a descriptive name (e.g., *Customer*, *Employee*, *Witness*).
-- :guilabel:`Color`: a color used to visually distinguish fields belonging to this role in the
-  template editor.
-- :guilabel:`Sequence`: determines the default order when multiple roles exist.
+.. note::
+   The set of roles is part of the app's configuration data and is maintained by the administrator.
 
 .. _sign/field-types:
 
@@ -317,11 +340,14 @@ Fields define the type of information signers must provide. The following field 
 - :guilabel:`Selection`: a dropdown allowing the signer to choose one option from a predefined list.
 - :guilabel:`Date`: a date picker field.
 
-To manage field types, go to :menuselection:`Sign --> Configuration --> Settings --> Edit field
-types`.
+Field types, including their tip, placeholder, and the partner field used for
+:ref:`auto-fill <sign/auto-fill>`, are part of the app's configuration data and are maintained by
+the administrator.
+
+.. _sign/auto-fill:
 
 Auto-fill from partner data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Each field type can be configured with an :guilabel:`Auto-fill Partner Field` that automatically
 populates the field with data from the signer's contact record (``res.partner``). For example,
@@ -348,10 +374,14 @@ Sign requests
 =============
 
 A sign request represents a specific document sent to one or more signers for their signature. Go
-to :menuselection:`Sign --> Documents` to view all signing requests.
+to :menuselection:`eYssen Sign --> Sign Requests` to view all signing requests.
 
-.. image:: sign/sign-request-form.png
-   :alt: Sign request form view
+.. screenshot:: productivity-sign-request-form
+   :menu: eYssen Sign ‣ Sign Requests
+   :shows: A sign request form with the document, the signers and their roles, the state bar and the smart buttons.
+   :data: Request "NDA - Deco Addict" in state "Sent", two signers.
+   :module: sign
+   :notes: English UI, light theme, 1440px width.
 
 Creating a request
 ------------------
@@ -359,12 +389,17 @@ Creating a request
 To create a new signing request:
 
 #. From the dashboard, click :guilabel:`Send` on a template card. Alternatively, go to
-   :menuselection:`Sign --> Documents` and click :guilabel:`New`.
+   :menuselection:`eYssen Sign --> Sign Requests` and click :guilabel:`New`.
 #. Select the template to use.
 #. In the send wizard, assign a contact to each role defined in the template.
 
-.. image:: sign/sign-send-wizard.png
-   :alt: Send wizard for assigning signers to roles
+.. screenshot:: productivity-sign-send-wizard
+   :menu: eYssen Sign ‣ Sign Requests
+   :shows: The send wizard with one line per template role and a contact assigned to each of them, plus the send button.
+   :highlight: The role lines (red frame).
+   :data: Template "NDA"; roles "Customer" = Deco Addict, "Company" = Mitchell Admin.
+   :module: sign
+   :notes: English UI, light theme, 1440px width.
 
 Signing order
 -------------
@@ -403,8 +438,11 @@ Two-factor authentication (2FA)
 For additional security, you can require signers to verify their identity with a one-time password
 (OTP) before completing their signature.
 
-.. image:: sign/sign-otp-verification.png
-   :alt: OTP verification screen during signing
+.. screenshot:: productivity-sign-otp
+   :menu: (signing portal)
+   :shows: The one-time password verification step of the signing portal, with the code input field and the confirmation button.
+   :module: sign
+   :notes: English UI, light theme, use a throw-away code; crop to the dialog.
 
 To enable 2FA on a request:
 
@@ -420,8 +458,8 @@ After 3 failed attempts, a **15-minute lockout** period is enforced before a new
 requested.
 
 .. note::
-   SMS verification requires SMS credits. You can purchase credits at
-   :menuselection:`Sign --> Configuration --> Settings` under the :guilabel:`SMS` section.
+   SMS verification sends the code through the database's SMS service, which requires SMS
+   credits.
 
 Expiry date
 -----------
@@ -468,8 +506,12 @@ The signing portal is the public-facing interface where signers review and sign 
 accessible at ``/sign/<token>``, where ``<token>`` is a unique, secure access token generated for
 each signer.
 
-.. image:: sign/sign-portal-signing.png
-   :alt: Signing portal with PDF viewer and signature capture
+.. screenshot:: productivity-sign-portal
+   :menu: (signing portal, /sign/<token>)
+   :shows: The public signing portal with the PDF viewer, the fields to complete highlighted, and the signature capture dialog open.
+   :data: Document "NDA" for signer "Deco Addict".
+   :module: sign
+   :notes: English UI, light theme, 1440px width, use a throw-away token.
 
 PDF viewer
 ----------
@@ -490,8 +532,12 @@ When the signer reaches a signature or initials field, they can:
 If the signer has previously saved a signature on their partner record, it is offered as a
 quick-select option for reuse.
 
-.. image:: sign/sign-completed-document.png
-   :alt: Completed signed document
+.. screenshot:: productivity-sign-completed-document
+   :menu: (signing portal, /sign/<token>)
+   :shows: A fully signed document in the portal, with the completed signature fields and the download button.
+   :data: Document "NDA" signed by both parties.
+   :module: sign
+   :notes: English UI, light theme, 1440px width.
 
 OTP verification step
 ---------------------
@@ -530,8 +576,11 @@ QR code
 A QR code can be generated for a signing URL, allowing signers to quickly access the signing portal
 on a mobile device by scanning the code.
 
-.. image:: sign/sign-qr-code.png
-   :alt: QR code for a signing URL
+.. screenshot:: productivity-sign-qr-code
+   :menu: eYssen Sign ‣ Sign Requests
+   :shows: The QR code generated for a signing URL, as shown to the user.
+   :module: sign
+   :notes: English UI, light theme, crop to the QR code; use a throw-away token.
 
 .. _sign/my-signatures:
 
@@ -541,8 +590,12 @@ Portal — My Signatures
 Signers who have an Odoo portal account can access a list of all their signing requests at
 ``/my/sign``.
 
-.. image:: sign/sign-portal-my-signatures.png
-   :alt: Portal page listing the user's signing requests
+.. screenshot:: productivity-sign-my-signatures
+   :menu: (portal, /my/sign)
+   :shows: The portal page listing the signer's requests with the document name, status, date and download link columns.
+   :data: Two requests, one "Signed" with a download link and one "Sent".
+   :module: sign
+   :notes: English UI, light theme, 1440px width.
 
 The portal page displays:
 
@@ -557,10 +610,14 @@ Workflows
 =========
 
 The workflow engine allows you to define complex signing and approval processes using a visual graph
-builder. Go to :menuselection:`Sign --> Configuration --> Workflows` to manage workflows.
+builder. Go to :menuselection:`eYssen Sign --> Workflows` to manage workflows.
 
-.. image:: sign/sign-workflow-builder.png
-   :alt: Visual workflow builder with nodes and transitions
+.. screenshot:: productivity-sign-workflow-builder
+   :menu: eYssen Sign ‣ Workflows
+   :shows: The visual workflow builder with several nodes connected by transitions, and the properties of the selected node.
+   :data: Workflow "Contract approval" with nodes "Manager approval" and "Customer signature".
+   :module: sign
+   :notes: English UI, light theme, 1440px width.
 
 Creating a workflow
 -------------------
@@ -616,12 +673,16 @@ Bulk send
 
 Send the same template to multiple recipients at once using the bulk send feature.
 
-.. image:: sign/sign-bulk-send.png
-   :alt: Bulk send wizard
+.. screenshot:: productivity-sign-bulk-send
+   :menu: eYssen Sign ‣ Templates
+   :shows: The bulk send wizard with the selected template, the list of recipients and the send button.
+   :data: Template "NDA" with three recipients.
+   :module: sign
+   :notes: English UI, light theme, 1440px width.
 
 To perform a bulk send:
 
-#. Go to :menuselection:`Sign --> Templates`, select a template, and click :guilabel:`Bulk Send`.
+#. Go to :menuselection:`eYssen Sign --> Templates`, select a template, and click :guilabel:`Bulk Send`.
 #. In the wizard, add recipients by:
 
    - Selecting contacts from the database.
@@ -641,10 +702,14 @@ Webhooks
 ========
 
 Webhooks allow you to notify external systems when signing events occur. Go to
-:menuselection:`Sign --> Configuration --> Webhooks` to configure webhook endpoints.
+:menuselection:`eYssen Sign --> Configuration --> Webhooks` to configure webhook endpoints.
 
-.. image:: sign/sign-webhook-config.png
-   :alt: Webhook configuration form
+.. screenshot:: productivity-sign-webhook
+   :menu: eYssen Sign ‣ Configuration ‣ Webhooks
+   :shows: A webhook configuration form with the target URL, the selected events and the activation toggle.
+   :data: Webhook "ERP notification" pointing to an internal endpoint.
+   :module: sign
+   :notes: English UI, light theme, 1440px width, use a throw-away URL.
 
 Configuration
 -------------
@@ -708,8 +773,11 @@ REST API
 eYssen Sign provides a RESTful API for programmatic access to signing operations. All endpoints
 are under the ``/api/v1/sign/`` path.
 
-.. image:: sign/sign-rest-api.png
-   :alt: REST API endpoint documentation
+.. screenshot:: productivity-sign-rest-api
+   :menu: Settings ‣ General Settings ‣ Sign
+   :shows: The API access settings of the Sign app, where the API key of a technical user is created and the base path of the endpoints is shown.
+   :module: sign
+   :notes: English UI, light theme, use a throw-away API key.
 
 Authentication
 --------------
@@ -790,8 +858,12 @@ Audit & verification
 eYssen Sign maintains an immutable, hash-chained audit trail for every signing request, providing
 strong evidence of document integrity and the signing process.
 
-.. image:: sign/sign-audit-log.png
-   :alt: Audit log showing hash-chained entries
+.. screenshot:: productivity-sign-audit-log
+   :menu: eYssen Sign ‣ Sign Requests
+   :shows: The audit log of a sign request, listing the chained entries with their timestamp, event, signer and IP address.
+   :data: Request "NDA - Deco Addict" with the create, open, sign and complete entries.
+   :module: sign
+   :notes: English UI, light theme, 1440px width, use throw-away IP addresses.
 
 Hash-chained audit trail
 -------------------------
@@ -844,8 +916,12 @@ Integrations
 
 eYssen Sign integrates with other Odoo modules to streamline document-centric business processes.
 
-.. image:: sign/sign-integrations.png
-   :alt: Integration settings for Sign
+.. screenshot:: productivity-sign-integrations
+   :menu: Settings ‣ General Settings ‣ Sign
+   :shows: The integration settings of the Sign app, with the options linking sign requests to sales, invoicing and HR records.
+   :highlight: The integration options (red frame).
+   :module: sign
+   :notes: English UI, light theme, crop to the integration block.
 
 Sale orders
 -----------
@@ -883,10 +959,13 @@ also access an employee's signed documents directly from the employee form view.
 Settings
 ========
 
-Configure eYssen Sign at :menuselection:`Sign --> Configuration --> Settings`.
+Configure eYssen Sign at :menuselection:`Settings --> General Settings --> Sign`.
 
-.. image:: sign/sign-settings.png
-   :alt: Sign settings page
+.. screenshot:: productivity-sign-settings
+   :menu: Settings ‣ General Settings ‣ Sign
+   :shows: The Sign section of the General Settings with the Terms & Conditions setting.
+   :module: sign
+   :notes: English UI, light theme, 1440px width.
 
 Company Terms & Conditions
 --------------------------
@@ -894,27 +973,21 @@ Company Terms & Conditions
 Define the Terms & Conditions text that is displayed to signers before they finalize their
 signature. The Terms & Conditions are configured per company using a rich-text (HTML) editor.
 
-Default 2FA settings
---------------------
+Two-factor authentication
+-------------------------
 
-Set the default two-factor authentication method for new signing requests. This default can be
-overridden on individual requests.
+Two-factor authentication is set per request: enable :guilabel:`Require 2FA` on the request and
+select the :guilabel:`2FA Method` (:guilabel:`Email`, :guilabel:`SMS`, or :guilabel:`Email & SMS`).
 
-SMS credits
------------
-
-If you use SMS-based 2FA verification, you need SMS credits. Click :guilabel:`Buy Credits` to
-purchase additional credits.
-
-Template access control
------------------------
+Access control
+--------------
 
 Control who can create, edit, and use templates:
 
-- **Sign User**: can use templates to create and send signing requests. Can view their own requests
-  and requests where they are a signer or follower.
-- **Sign Manager**: full access to all templates, requests, and configuration. Can manage roles,
-  field types, workflows, webhooks, and settings.
+- **eYssen Sign User**: can use templates to create and send signing requests, and can view their
+  own requests and the requests where they are a signer or a follower.
+- **eYssen Sign Manager**: full access to all templates, requests, and configuration, including
+  roles, field types, workflows, webhooks, and settings.
 
 .. _sign/security:
 
@@ -923,7 +996,7 @@ Security
 
 eYssen Sign implements multiple layers of security:
 
-- **Role-based access**: the *Sign User* and *Sign Manager* groups control access levels. Users can
+- **Role-based access**: the *eYssen Sign User* and *eYssen Sign Manager* groups control access levels. Users can
   only see requests they created, are assigned to sign, or are following.
 - **Record rules**: enforce row-level security so users cannot access requests belonging to others
   unless they are a participant.
@@ -934,3 +1007,29 @@ eYssen Sign implements multiple layers of security:
   cross-site scripting attacks.
 - **State machine enforcement**: terminal states (*Signed*, *Refused*, *Canceled*, *Expired*)
   cannot be reversed, preventing unauthorized state manipulation.
+
+.. _sign/esign-reports:
+
+Digitally signed PDF reports
+============================
+
+The *E-Sign* (``eyssen_esign``) module is a separate feature: instead of collecting handwritten
+signatures, it applies a **digital signature** to the PDF files Odoo generates, so that the
+recipient can verify that the document was issued by the company and has not been altered.
+
+To enable it for a report, activate the :ref:`developer mode <developer-mode>`, go to
+:menuselection:`Settings --> Technical --> Reports`, open the report (e.g., the customer invoice),
+and enable :guilabel:`E-sign report`. From then on, every PDF generated from that report is signed
+before it is downloaded, printed, or sent.
+
+.. note::
+   The signature is applied by the eYssen signing service, so the database must be able to reach it.
+   Each signed report is recorded in the technical logs.
+
+.. screenshot:: productivity-sign-esign-report
+   :menu: Settings ‣ Technical ‣ Reports
+   :shows: A report form in developer mode with the "E-sign report" checkbox enabled next to the paper format field.
+   :highlight: The "E-sign report" checkbox (red frame).
+   :data: Report "Invoices" of the Invoicing app.
+   :module: eyssen_esign
+   :notes: English UI, light theme, crop to the report settings.

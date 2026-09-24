@@ -31,8 +31,14 @@ information auto-populate on a request for quotation each time the product is li
 .. seealso::
    :ref:`Vendor pricelist on product form <purchase/manage_deals/vendor-pricelist>`
 
-.. image:: pricelist/product-form-pricelist.png
-   :alt: Vendor pricelist on product form.
+.. screenshot:: purchase-pricelist-product-form
+   :menu: Purchase ‣ Products ‣ Products ‣ (open a product) ‣ Purchase
+   :shows: The Purchase tab of a product form with a vendor pricelist line: vendor, quantity, unit
+           price, and delivery lead time.
+   :highlight: The vendor pricelist line (red frame).
+   :data: Demo company "YourCompany"; vendor "Azure Interior".
+   :module: purchase
+   :notes: English UI, light theme, 1440px width.
 
 .. _purchase/products/import-pricelist:
 
@@ -57,8 +63,14 @@ On the page, tick the checkbox(es) for the desired vendor pricelists.
 Then, click the :icon:`fa-cog` :guilabel:`Actions` button that appears, and choose :icon:`fa-upload`
 :guilabel:`Export` from the drop-down menu.
 
-.. image:: pricelist/export.png
-   :alt: Show selected exported fields, with the Export button visible.
+.. screenshot:: purchase-pricelist-export
+   :menu: Purchase ‣ Configuration ‣ Vendor Pricelists
+   :shows: The Vendor Pricelists list with several lines selected, and the "Export" option open in
+           the Actions drop-down menu.
+   :highlight: The Actions ‣ Export menu entry (red frame).
+   :data: Demo company "YourCompany"; three selected vendor pricelist lines.
+   :module: purchase
+   :notes: English UI, light theme, 1440px width.
 
 In the resulting pop-up window, fields listed under the :guilabel:`Fields to export` section are
 included in the exported file. To add more fields, find the desired field in the
@@ -87,11 +99,14 @@ Finally, click :guilabel:`Export`.
    display the *field name* with the *technical name* in parenthesis.
 
 .. example::
-   .. figure:: pricelist/export-data.png
-      :alt: Exporting vendor pricelist.
-
-      Export vendor pricelist in XLSX format. It includes :guilabel:`Product Template` and other
-      fields in the :guilabel:`Fields to export` section.
+   .. screenshot:: purchase-pricelist-export-data
+      :menu: Purchase ‣ Configuration ‣ Vendor Pricelists ‣ Actions ‣ Export
+      :shows: The Export Data pop-up window, with the "Product Template" and other fields listed
+              under "Fields to export", and "XLSX" selected as the export format.
+      :highlight: The Fields to export list.
+      :data: Demo company "YourCompany".
+      :module: purchase
+      :notes: English UI, light theme, 1440px width.
 
 .. _purchase/products/external-id:
 
@@ -103,11 +118,14 @@ records create new entries, instead of updating existing ones. Including this fi
 CSV, indicates the line replaces an existing vendor pricelist in the Odoo database.
 
 .. example::
-   .. figure:: pricelist/duplicate-values.png
-      :alt: Show 'Ready Mat' appear twice.
-
-      `Ready Mat` appears twice because the external ID was omitted during the price update from
-      `$790` to `$780`.
+   .. screenshot:: purchase-pricelist-duplicate-values
+      :menu: Purchase ‣ Configuration ‣ Vendor Pricelists
+      :shows: The Vendor Pricelists list with "Ready Mat" appearing twice, at $790 and $780.
+      :highlight: The two "Ready Mat" lines (red frame).
+      :data: Demo company "YourCompany"; vendor "Ready Mat", prices $790 and $780.
+      :module: purchase
+      :notes: English UI, light theme, 1440px width. `Ready Mat` appears twice because the
+              external ID was omitted during the price update from `$790` to `$780`.
 
 To look-up the :guilabel:`External ID` for a vendor pricelist, tick the :guilabel:`I want to update
 data (import-compatible export)` checkbox at the top of the :guilabel:`Export Data` pop-up window.
@@ -141,6 +159,12 @@ Below is a list of commonly-used fields when importing vendor pricelists:
      - The Odoo product the vendor pricelist entry is related to.
      - :guilabel:`Product` field in the vendor pricelist.
      - `product_tmpl_id`
+   * - Product Variant
+     - Restricts the price to a single variant of the product. Leave empty to apply the price to
+       every variant.
+     - :guilabel:`Variant` field in the vendor pricelist (enable it via the
+       :icon:`oi-settings-adjust` :guilabel:`(adjust)` icon).
+     - `product_id`
    * - Quantity
      - The minimum quantity required to receive the product at the specified price.
      - :guilabel:`Quantity` field in the vendor pricelist. (If not visible, enable it by clicking
@@ -156,6 +180,12 @@ Below is a list of commonly-used fields when importing vendor pricelists:
        after confirming a purchase order.
      - :guilabel:`Delivery Lead Time` field on the vendor pricelist.
      - `delay`
+   * - Start Date / End Date
+     - The date range during which this vendor price is used. Leave both empty for a price that
+       never expires.
+     - :guilabel:`Validity` field in the vendor pricelist (enable it via the
+       :icon:`oi-settings-adjust` :guilabel:`(adjust)` icon).
+     - `date_start` / `date_end`
    * - Sequence
      - Defines the order of vendors in the pricelist when multiple vendors are available. For
        example, if `Azure Interior` is listed first and Wood Corner second, their sequences would be
@@ -188,8 +218,14 @@ file, confirm the correct fields, and click :guilabel:`Import`.
    - :doc:`../../../essentials/export_import_data`
    - :ref:`Common fields <purchase/products/common-fields>`
 
-.. image:: pricelist/supplier-pricelist-example.png
-   :alt: Upload file screen.
+.. screenshot:: purchase-pricelist-supplier-example
+   :menu: Purchase ‣ Configuration ‣ Vendor Pricelists ‣ Import records ‣ Upload File
+   :shows: The import "Upload File" screen with an XLSX file selected and its columns mapped to
+           Odoo fields.
+   :highlight: The Upload File button (red frame).
+   :data: Demo company "YourCompany"; sample vendor pricelist import file.
+   :module: purchase
+   :notes: English UI, light theme, 1440px width.
 
 Formatting import file
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -253,4 +289,3 @@ An import file is created to do the following:
 
    - :download:`Sample XLSX import file <pricelist/pricelist-example.xlsx>`
    - :download:`Sample CSV import file <pricelist/pricelist-example.csv>`
-

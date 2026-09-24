@@ -59,8 +59,13 @@ Multiple projects can be selected, if desired. To add another :guilabel:`Analyti
 click on the line to reveal the :guilabel:`Analytic` pop-over window. Click :guilabel:`Add a line`,
 then select the desired :guilabel:`Analytic Distribution` from the drop-down menu.
 
-.. image:: reinvoice_expenses/reinvoice-expense-form.png
-   :alt: An expense entry to reinvoice a project to the customer, for the gallery seating project.
+.. screenshot:: finance-expenses-reinvoice-expenses-reinvoice-expense-form
+   :menu: Expenses ‣ My Expenses ‣ My Expenses ‣ New
+   :shows: An expense form with the "Customer to Reinvoice" field set to a confirmed sales order and an expense category whose re-invoicing policy is "Sales price".
+   :highlight: The "Customer to Reinvoice" field (red frame).
+   :data: Description "Site visit – gallery seating", Category "Travel & Accommodation", Customer to Reinvoice S00042 – Deco Addict.
+   :module: hr_expense, sale_expense
+   :notes: English UI, light theme, 1440px width.
 
 .. important::
    If selecting more than one :guilabel:`Analytic Distribution`, the :guilabel:`Percentage` fields
@@ -96,8 +101,13 @@ reinvoiced.
    **approved**. After an expense report is approved, the :guilabel:`Customer to Reinvoice` field is
    no longer able to be modified.
 
-.. image:: reinvoice_expenses/reinvoice-approved.png
-   :alt: An expense report with a sales order smart button for reinvoicing.
+.. screenshot:: finance-expenses-reinvoice-expenses-reinvoice-approved
+   :menu: Expenses ‣ Expense Reports ‣ (an approved report)
+   :shows: An approved expense report with the "Sales Orders" smart button at the top, next to the "Journal Entry" button.
+   :highlight: The "Sales Orders" smart button.
+   :data: Report "Gallery seating project", 1 sales order.
+   :module: hr_expense, sale_expense
+   :notes: English UI, light theme, 1440px width.
 
 .. _expenses/reinvoice-approve:
 
@@ -147,8 +157,13 @@ a :guilabel:`Down payment (fixed amount)`. Then, click :guilabel:`Create Draft`.
 draft invoice for the customer. Click :guilabel:`Confirm` to confirm the invoice, and the customer
 is invoiced for the expenses.
 
-.. image:: reinvoice_expenses/reinvoiced.png
-   :alt: See the expenses listed on the sales order after clicking into it.
+.. screenshot:: finance-expenses-reinvoice-expenses-reinvoiced
+   :menu: Sales ‣ Orders ‣ Orders ‣ (the reinvoiced order)
+   :shows: The sales order form with the expense added as an extra order line in the Order Lines tab, "Delivered" quantity 1, ready to be invoiced.
+   :highlight: The order line created from the expense.
+   :data: Order S00042 – Deco Addict, line "Travel & Accommodation".
+   :module: sale_expense
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    :doc:`../../sales/sales/invoicing`

@@ -27,8 +27,12 @@ Create a new work center
 In the **Manufacturing** app, select :menuselection:`Configuration --> Work Centers` and click the
 :guilabel:`New` button to open a new work center form.
 
-.. image:: using_work_centers/work-center-form.png
-   :alt: An example of a fully configured work center form.
+.. screenshot:: manufacturing-work-centers-form
+   :menu: Manufacturing ‣ Configuration ‣ Work Centers ‣ (work center)
+   :shows: A fully configured work center form with Work Center Name, Tag, Alternative Workcenters, Code and Working Hours filled in.
+   :data: Work center "Assembly Line 1"; tag "Assembly"; working hours "Standard 40 hours/week".
+   :module: mrp
+   :notes: English UI, light theme, 1440px width.
 
 - :guilabel:`Work Center Name`: the label for the work center used to select it on a work order or
   on the reporting dashboards
@@ -53,8 +57,11 @@ These hours also form the basis for calculating *overall equipment efficiency* (
 To change the working hours, hover over the current :guilabel:`Working Hours` value and click the
 :icon:`fa-arrow-right` (:guilabel:`Internal link`) icon to open the working hours form.
 
-.. image:: using_work_centers/working-hours-form.png
-   :alt: The working hours form for Standard 40 hours/week.
+.. screenshot:: manufacturing-work-centers-working-hours
+   :menu: Manufacturing ‣ Configuration ‣ Work Centers ‣ (work center) ‣ Working Hours ‣ Internal link
+   :shows: The "Standard 40 hours/week" working hours form with five lines, Monday through Friday, 8:00 AM to 5:00 PM.
+   :module: resource, mrp
+   :notes: English UI, light theme, 1440px width.
 
 To create a new set of working hours, click the :guilabel:`New` button and give it a name. From
 here, edit any :guilabel:`Work from` or :guilabel:`Work to` value to adjust the time range. Remove a
@@ -65,15 +72,19 @@ click :guilabel:`Add a line` at the bottom of the list.
    - :doc:`../reporting/oee`
    - :doc:`../workflows/work_center_time_off`
 
-Set productivity standards and allowed employees
-------------------------------------------------
+Set productivity standards
+---------------------------
 
 The :guilabel:`General Information` tab on the work center form allows for productivity goals to be
 assigned to a work center. These are used as the basis for calculating how much of the potential
 time the work center is being used and its operating costs.
 
-.. image:: using_work_centers/work-center-general-information.png
-   :alt: The general information tab of the work center form.
+.. screenshot:: manufacturing-work-centers-general-info
+   :menu: Manufacturing ‣ Configuration ‣ Work Centers ‣ (work center) ‣ General Information tab
+   :shows: The General Information tab with Time Efficiency, Capacity, OEE Target, Setup Time, Cleanup Time and Cost per hour fields filled in.
+   :data: Work center "Assembly Line 1".
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 - :guilabel:`Time Efficiency`: a multiplier for how using this work center affects the normal speed
   of execution of a work order
@@ -96,18 +107,10 @@ time the work center is being used and its operating costs.
 
 - :guilabel:`Setup Time`: the time required before work can commence on a work order
 - :guilabel:`Cleanup Time`: breakdown or cleanup time required after a work order is finished
-- :guilabel:`Cost per hour`: the operating expense of that workstation. The :guilabel:`per employee`
-  value is for estimating the average cost per employee.
+- :guilabel:`Cost per hour`: the operating expense of operating this workstation.
 
    .. seealso::
       :doc:`../basic_setup/mo_costs`
-
-- :guilabel:`Allowed Employees`: the employees who can perform work at the work center. If blank,
-  all employees are allowed.
-
-   .. example::
-      If equipment at a work center requires a certification to operate, :guilabel:`Allowed
-      Employees` could list only those employees who have the certification.
 
 Set production capacities
 -------------------------
@@ -116,77 +119,20 @@ The :guilabel:`Capacity` setting on a work center creates a default value for ho
 produced at one time in a work center. To specify that a work center can produce different
 quantities of different products, select the :guilabel:`Specific Capacities` tab.
 
-.. image:: using_work_centers/work-center-specific-capacities.png
-   :alt: A work center form with different capacities specified for different products.
+.. screenshot:: manufacturing-work-centers-specific-capacities
+   :menu: Manufacturing ‣ Configuration ‣ Work Centers ‣ (work center) ‣ Specific Capacities tab
+   :shows: The Specific Capacities tab with two lines, each specifying a different capacity for a different product.
+   :data: Work center "Assembly Line 1"; products "Chair" (capacity 4), "Table" (capacity 1).
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 .. tip::
    To specify production capacities in different measurements from a count of units, enable the
    *Units of Measure* feature in the **Inventory** app.
 
 .. seealso::
-   :doc:`../../maintenance/add_new_equipment`
-
-.. _workcenter_iot:
-
-Integrate IoT devices
----------------------
-
-The :guilabel:`IoT Triggers` tab enables the integration of :abbr:`IoT (Internet of Things)` devices
-with a work center:
-
-- :guilabel:`Device`: specifies the IoT device to be triggered
-- :guilabel:`Key`: the security key for the device
-- :guilabel:`Action`: the IoT device action triggered
-
-.. image:: using_work_centers/work-center-iot.png
-   :alt: The IoT Triggers tab of the work center form.
-
-Assigning equipment to work centers
-===================================
-
-The **Maintenance** app makes it possible to add specific equipment to a work center and
-individually track its costs and productivity. It also adds the :guilabel:`Equipment` and
-:guilabel:`Maintenance` tabs to the work center form, used to list equipment and schedule
-maintenance activities.
-
-.. seealso::
-   :doc:`../../maintenance/add_new_equipment`
-
-Configure equipment
--------------------
-
-Using the :guilabel:`Equipment` tab, it is possible for specific pieces of equipment to be assigned
-to a work center. The following information is displayed for each piece of equipment added:
-
-- :guilabel:`Equipment Name`: the name of the piece of equipment
-- :guilabel:`Technician`: the technician responsible for servicing the equipment
-- :guilabel:`Equipment Category`: the category the equipment belongs to
-- :guilabel:`MTBF`: mean time between failures; the average time that the piece of equipment will
-  operate before failing
-- :guilabel:`MTTR`: mean time to recovery; the average time it takes for the equipment to become
-  fully operational again
-- :guilabel:`Est. Next Failure`: an estimate of when the next equipment failure will occur
-
-.. image:: using_work_centers/work-center-equipment.png
-   :alt: The equipment tab of the work center form.
-
-.. note::
-    :guilabel:`MTBF`, :guilabel:`MTTR`, and :guilabel:`Est. Next Failure` are all calculated
-    automatically based on past failure data, if any exists.
-
-Work center planning
-====================
-
-The currently scheduled work orders can be viewed by accessing :menuselection:`Manufacturing app -->
-Planning --> Planning by Workcenter`.
-
-.. image:: using_work_centers/work-center-planning.png
-   :alt: The Gantt view of planning showing two assembly work centers.
-
-Different views show how many individual work orders are scheduled, how many minutes of each hour
-the work center is in production, and the dates and times that are currently scheduled for work
-orders. Times and planned work centers can be changed by clicking to access the individual work
-order.
+   For general equipment maintenance tracking (not tied to a specific work center), see
+   :doc:`../../maintenance/add_new_equipment`.
 
 Work center performance
 =======================
@@ -195,8 +141,12 @@ Performance for an individual work center can be viewed by selecting :menuselect
 --> Work Centers`, and clicking on a work center. Metrics are displayed in smart buttons at the top
 of the form.
 
-.. image:: using_work_centers/work-center-smart-buttons.png
-   :alt: A work center form with smart buttons showing performance metrics.
+.. screenshot:: manufacturing-work-centers-smart-buttons
+   :menu: Manufacturing ‣ Configuration ‣ Work Centers ‣ (work center)
+   :shows: A work center form's button box with the OEE, Lost, Load and Performance smart buttons, each showing a value.
+   :data: Work center "Assembly Line 1".
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the button box.
 
 - :guilabel:`OEE`: overall equipment effectiveness, the percentage of time that the work center has
   been productive out of its available work hours.
@@ -228,15 +178,21 @@ Hours` field click the :icon:`fa-arrow-right` (:guilabel:`Internal link`), and t
    A manufacturer has two shifts: a day shift from 5 AM to 1 PM and a night shift from 1 PM to 9 PM.
    Starting from any existing work center, edit the existing working hours to match the day shift.
 
-   .. image:: using_work_centers/example-shift-day.png
-      :alt: The working hours for a day shift
+   .. screenshot:: manufacturing-work-centers-shift-day
+      :menu: Manufacturing ‣ Configuration ‣ Work Centers ‣ (work center) ‣ Working Hours ‣ Internal link
+      :shows: A working hours form named "Day Shift" with one line per weekday, 5:00 AM to 1:00 PM.
+      :module: resource
+      :notes: English UI, light theme, 1440px width.
 
    Once the day shift is saved, click the :icon:`fa-cog` :guilabel:`(cog)` icon and select
    :guilabel:`Duplicate`. Rename this new schedule `Night Shift` and change each :guilabel:`Work
    from` to 1 PM and :guilabel:`Work from` to 9 PM.
 
-   .. image:: using_work_centers/example-shift-night.png
-      :alt: The working hours for a night shift
+   .. screenshot:: manufacturing-work-centers-shift-night
+      :menu: Manufacturing ‣ Configuration ‣ Work Centers ‣ (work center) ‣ Working Hours ‣ Internal link
+      :shows: A working hours form named "Night Shift" with one line per weekday, 1:00 PM to 9:00 PM.
+      :module: resource
+      :notes: English UI, light theme, 1440px width.
 
 Work centers for multiple shifts
 --------------------------------
@@ -255,8 +211,12 @@ used by both shifts, either on the individual work center forms, or directly fro
    A manufacturer has two work centers, `Assembly Line 1` and `Assembly Line 2`, and two working
    hours, `Day Shift` and `Night Shift`.
 
-   .. image:: using_work_centers/work-centers-with-shifts.png
-      :alt: Work centers copied for day and night shifts.
+   .. screenshot:: manufacturing-work-centers-shift-workcenters
+      :menu: Manufacturing ‣ Configuration ‣ Work Centers
+      :shows: The Work Centers list with 4 entries: "Assembly Line 1 - Day/Night", "Assembly Line 2 - Day/Night".
+      :data: Work centers "Assembly Line 1" and "Assembly Line 2", each duplicated for "Day" and "Night" shifts.
+      :module: mrp
+      :notes: English UI, light theme, 1440px width.
 
   To create versions of `Assembly Line 1` and `Assembly Line 2` for each shift, duplicate each of
   the work centers. Select the first work center and add the shift name in that work center's name
@@ -280,8 +240,12 @@ shift, the OEE, or actual time that each shift is taking to produce a product.
    A report has been created to compare the time efficiency of two shifts producing the same product
    in the same work center.
 
-   .. image:: using_work_centers/work-order-duration-deviation.png
-      :alt: A bar graph of two work centers with duration deviations of -6.50 and 15.00
+   .. screenshot:: manufacturing-work-centers-duration-deviation
+      :menu: Manufacturing ‣ Reporting ‣ Work Orders
+      :shows: A bar graph comparing Duration Deviation (%) between "Day Shift" (-6.50%) and "Night Shift" (15.00%), grouped by work center.
+      :data: Work orders for work centers "Assembly Line 1 - Day" and "Assembly Line 1 - Night".
+      :module: mrp
+      :notes: English UI, light theme, 1440px width.
 
    To create this report, go to :menuselection:`Reporting --> Work Orders` and click to remove the
    :icon:`fa-filter` **Ready** *or* **Waiting** *or* **Pending** *or* **In Progress** filter by

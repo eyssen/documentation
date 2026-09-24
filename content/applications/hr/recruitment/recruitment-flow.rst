@@ -121,9 +121,13 @@ selected, the new email template loads in the email body.
 To send the email with the interview link to the applicant, click :guilabel:`Send` at the bottom of
 the email pop-up window.
 
-.. image:: recruitment-flow/send-survey.png
-   :alt: Send a custom survey, also referred to as an interview form, to an applicant using a
-         preconfigured template.
+.. screenshot:: hr-recruitment-flow-send-interview
+   :menu: Recruitment ‣ (job position) ‣ (open an applicant) ‣ Send Interview
+   :shows: The Send Interview dialog with the applicant as recipient, the interview form selected and the preconfigured email template loaded.
+   :highlight: The interview form field (red frame).
+   :data: Applicant "János Tóth", interview form "Warehouse screening".
+   :module: hr_recruitment_survey
+   :notes: English UI, light theme, 1440px width.
 
 .. _recruitment/initial-qualification:
 
@@ -149,9 +153,13 @@ recruitment team to potentially set up a phone call or an interview with the can
    Click the desired stage for the card, and the stage changes. A log note indicating the stage
    change appears in the chatter, as well.
 
-  .. image:: recruitment-flow/stage-change.png
-     :alt: Change the stage of an applicant by clicking on the desired stage at the top of the
-           applicant's card.
+  .. screenshot:: hr-recruitment-flow-stage-change
+     :menu: Recruitment ‣ (job position) ‣ (open an applicant)
+     :shows: The status bar at the top of an applicant form, with the stage being changed by clicking the next stage.
+     :highlight: The status bar (red frame).
+     :data: Applicant "János Tóth" moving from Initial Qualification to First Interview.
+     :module: hr_recruitment
+     :notes: English UI, light theme, 1440px width. Crop to the status bar.
 
 .. _recruitment/first-interview:
 
@@ -170,14 +178,9 @@ the :guilabel:`First Interview` stage on the status bar at the top of the indivi
 card.
 
 .. tip::
-   The :guilabel:`First Interview` stage can be modified, so when the applicant's card moves to the
-   :guilabel:`First Interview` stage, an email can be automatically sent to the applicant, stating
-   an interview is requested. In this preconfigured email template, a link to the recruiting team's
-   calendar appears, allowing the applicant to schedule their interview.
-
-   :ref:`Edit <recruitment/edit-stage>` the :guilabel:`First Interview` stage, and select the
-   :guilabel:`Recruitment: Schedule Interview` option in the :guilabel:`Email Template` field, to
-   automate this action.
+   The :guilabel:`First Interview` stage can be modified so that an email is sent to the applicant
+   automatically when their card reaches it. :ref:`Edit <recruitment/edit-stage>` the stage and
+   select the email template to send in the :guilabel:`Email Template` field.
 
 .. _recruitment/second-interview:
 

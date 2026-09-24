@@ -45,8 +45,13 @@ off summary. The complete details are presented in a popover window, including t
 :guilabel:`Allocated` time, :guilabel:`Accrual (Future)` time, :guilabel:`Approved` time off
 scheduled, :guilabel:`Planned` time off, and the currently :guilabel:`Available` time off.
 
-.. image:: my_time/balance-details.png
-   :alt: A view of the complete time off balance details in the popover window.
+.. screenshot:: hr-time-off-balance-details
+   :menu: Time Off ‣ My Time ‣ Dashboard
+   :shows: The balance pop-over of a time off type, showing the allocated, taken, planned and remaining days.
+   :highlight: The remaining days (red frame).
+   :data: Paid Time Off: 20 allocated, 6 taken, 2 planned.
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.
 
 A user can also select a future date to see an estimate of how much time they should accrue by that
 point. On the right side of the time off summary blocks, there is a :guilabel:`Balance at the
@@ -79,8 +84,13 @@ New allocation requests can also be made from the :guilabel:`Dashboard`. Click t
 Allocation Request` button to request more time off, and a :ref:`New Allocation
 <time_off/request-allocation>` pop-up window appears.
 
-.. image:: my_time/dashboard.png
-   :alt: Time off dashboard view with the legend, time off summaries, and view buttons highlighted.
+.. screenshot:: hr-time-off-dashboard
+   :menu: Time Off ‣ My Time ‣ Dashboard
+   :shows: The Time Off dashboard with the balance cards per time off type, the calendar and the legend of the colours.
+   :highlight: The balance cards (red frame).
+   :data: Three time off types with balances; a few absences in the calendar.
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.
 
 .. _time_off/my-time-off:
 
@@ -98,8 +108,13 @@ The list includes the following information for each request: the :guilabel:`Tim
 A new time off request can be made from this view. Click the :guilabel:`New` button to
 :doc:`request_time_off`.
 
-.. image:: my_time/my-time.png
-   :alt: My Time list view with all requests.
+.. screenshot:: hr-time-off-my-requests
+   :menu: Time Off ‣ My Time ‣ My Time Off
+   :shows: The My Time Off list with the time off type, the dates, the duration, the description and the status of the user's own requests.
+   :highlight: The Status column (red frame).
+   :data: Five requests of the current year, in different statuses.
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.
 
 .. _time_off/my-allocations:
 
@@ -117,5 +132,10 @@ option to :guilabel:`Approve` requests, if applicable.
 A new allocation request can be made from this view, as well. Click the :guilabel:`New` button to
 :ref:`request an allocation <time_off/request-allocation>`.
 
-.. image:: my_time/my-allocations.png
-   :alt: My Allocations list view with all requests.
+.. screenshot:: hr-time-off-my-allocations
+   :menu: Time Off ‣ My Time ‣ My Allocations
+   :shows: The My Allocations list with the time off type, the validity dates, the number of days and the status.
+   :highlight: The number of days (red frame).
+   :data: Two allocations for the current year.
+   :module: hr_holidays
+   :notes: English UI, light theme, 1440px width.

@@ -54,9 +54,13 @@ leads are selected from.
 For example, setting `01/01/2024 00:00:00` only includes leads created from, and including, the
 first day of 2024.
 
-.. image:: lead_distribution_report/created-on.png
-   :align: center
-   :alt: Add a Created On rule for the start of the year onward.
+.. screenshot:: sales-crm-lead-distribution-created-on
+   :menu: CRM ‣ Leads ‣ Leads ‣ Filters ‣ Add Custom Filter
+   :shows: The custom-filter editor with a "Created on" rule limiting the report to the current year.
+   :highlight: The "Created on" rule (red frame).
+   :data: Created on >= 01/01 of the current year.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the rule row.
 
 .. _crm/track_leads/sales-team:
 
@@ -78,9 +82,13 @@ In this third field, enter the name of the desired sales team(s) that are to be 
 report. It is important for all :guilabel:`contains` argument values to be specific enough and
 spelled correctly as they exist in Odoo, otherwise this risks returning multiple (or zero) values.
 
-.. image:: lead_distribution_report/sales-team-location.png
-   :align: center
-   :alt: Use Sales Team to filter the location the lead is associated with.
+.. screenshot:: sales-crm-lead-distribution-sales-team
+   :menu: CRM ‣ Leads ‣ Leads ‣ Filters ‣ Add Custom Filter
+   :shows: The custom-filter editor with a "Sales Team" rule selecting the teams of one location.
+   :highlight: The "Sales Team" rule (red frame).
+   :data: Sales Team is in "Europe".
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the rule row.
 
 .. important::
    By adding more than one rule to the form, a new option emerges at the top of the pop-up window
@@ -132,9 +140,13 @@ to create a new line of fields beneath it.
 
 Set the first field to :guilabel:`Active`. Then, select :guilabel:`is not set` in the next field.
 
-.. image:: lead_distribution_report/active-set.png
-   :align: center
-   :alt: Use Active to include active status in the report.
+.. screenshot:: sales-crm-lead-distribution-active
+   :menu: CRM ‣ Leads ‣ Leads ‣ Filters ‣ Add Custom Filter
+   :shows: The custom-filter editor with an "Active" rule set so that both active and archived leads are included.
+   :highlight: The "Active" rule (red frame).
+   :data: Active is set.
+   :module: crm
+   :notes: English UI, light theme, 1440px width, crop to the rule row.
 
 This rule adds the activity status of the lead to the report.
 

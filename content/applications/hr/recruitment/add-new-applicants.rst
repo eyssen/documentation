@@ -47,8 +47,13 @@ If preferred, after entering the :guilabel:`Candidate` in the Kanban card that a
 When doing a quick add, clicking away from an empty card, or clicking the :icon:`fa-trash-o`
 (:guilabel:`trash`) icon, discards the applicant.
 
-.. image:: add-new-applicants/quick-add.png
-   :alt: All the fields for a new applicant form entered when using the Quick Add option.
+.. screenshot:: hr-recruitment-quick-add
+   :menu: Recruitment ‣ (job position) ‣ New
+   :shows: The quick-add card in the applicant kanban, with the subject, the applicant name, the email and the expected salary filled in.
+   :highlight: The quick-add card (red frame).
+   :data: Applicant "János Tóth"; use invented contact data.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 .. _recruitment/create-new-applicant:
 
@@ -96,8 +101,13 @@ Candidate section
   not exist, type in the tag name, then click :guilabel:`Create "new tag"` from the resulting
   drop-down menu.
 
-.. image:: add-new-applicants/new-applicant.png
-   :alt: All the fields of the Candidate section for a new applicant form entered.
+.. screenshot:: hr-recruitment-applicant-candidate
+   :menu: Recruitment ‣ (job position) ‣ New ‣ Edit
+   :shows: The Candidate section of a new applicant form with the name, email, phone, LinkedIn profile, degree and availability filled in.
+   :highlight: The Candidate section (red frame).
+   :data: Applicant "János Tóth"; use invented contact data.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Notes tab
 ---------
@@ -159,8 +169,7 @@ Sourcing section
 ~~~~~~~~~~~~~~~~
 
 This section houses the details regarding the way the applicant applied for the job position. This
-information is necessary for :doc:`employee referrals <../referrals>`, and allows for reporting on
-the channels with the highest applicant generation.
+information allows for reporting on the channels with the highest applicant generation.
 
 - :guilabel:`Source`: Using the drop-down menu, select where the applicant learned about the job
   position. The following options come preconfigured in Odoo: :guilabel:`Search engine`,
@@ -173,15 +182,46 @@ the channels with the highest applicant generation.
   :guilabel:`SMS`, :guilabel:`Television`, :guilabel:`Website`, :guilabel:`X` (formerly "Twitter"),
   or :guilabel:`[Push Notifications] (website name)`. To add a new :guilabel:`Medium`, type in the
   medium, then click :guilabel:`Create "(new medium)"`.
-- :guilabel:`Referred By User`: If referral points are to be earned for this job position in the
-  **Referrals** application, select the user who referred the applicant from the drop-down menu. The
-  **Referrals** application **must** be installed for this field to appear.
 
-.. image:: add-new-applicants/details-tab.png
-   :alt: All the fields of the Details tab for a new applicant form entered.
+.. screenshot:: hr-recruitment-applicant-sourcing
+   :menu: Recruitment ‣ (job position) ‣ New ‣ Edit
+   :shows: The sourcing fields of an applicant form with the source, the medium and the tags filled in.
+   :highlight: The Source and Medium fields (red frame).
+   :data: Source "Job board", medium "LinkedIn".
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.
 
 Skills tab
 ----------
 
 Skills can be added to the applicant's card. For details on adding skills, refer to the :ref:`Create
 new employees <employees/skills>` document.
+
+.. _recruitment/candidates:
+
+Candidates
+==========
+
+A *candidate* is the person; an *applicant* is one application that person made for one job
+position. When the same person applies again — for another position, or for the same one a year
+later — the new applicant record is linked to the existing candidate, so their history is in one
+place.
+
+To see the people rather than the applications, go to :menuselection:`Recruitment app -->
+Applications --> Candidates`. A candidate record holds the contact details, the
+:guilabel:`Degree`, the :guilabel:`Availability`, the :guilabel:`Tags`, the
+:guilabel:`Manager` responsible and, once hired, the linked :guilabel:`Employee`. An
+:guilabel:`Applications` smart button opens every application the candidate ever made.
+
+.. tip::
+   Odoo warns on an applicant form when the email address or the phone number matches another
+   candidate, which is how duplicate applications are caught before two recruiters work the same
+   person in parallel.
+
+.. screenshot:: hr-recruitment-candidate-form
+   :menu: Recruitment ‣ Applications ‣ Candidates ‣ (open a candidate)
+   :shows: A candidate form with the contact details, the degree, the availability and the Applications smart button showing two applications.
+   :highlight: The Applications smart button (red frame).
+   :data: Candidate "János Tóth" with two applications; use invented contact data.
+   :module: hr_recruitment
+   :notes: English UI, light theme, 1440px width.

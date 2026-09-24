@@ -38,6 +38,14 @@ you will find the following company-level options:
      - —
      - The fallback destination for returned products that are not yet on any shelf.
 
+.. screenshot:: sales-withdrawal-settings
+   :menu: Sales ‣ Configuration ‣ Settings
+   :shows: The Settings page scrolled to the "Quotations & Orders" section showing the Withdrawal Period, Withdrawal Transit Buffer, Return Period and the two RMA Putaway settings.
+   :highlight: The withdrawal settings block (red frame).
+   :data: Demo company with the default values (14 / 3 / 30 days).
+   :module: eyssen_rma
+   :notes: English UI, light theme, 1440px width, crop to the setting block.
+
 How the deadline is calculated
 ==============================
 

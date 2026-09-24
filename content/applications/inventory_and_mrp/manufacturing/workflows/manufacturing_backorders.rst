@@ -40,18 +40,28 @@ menu and enter a quantity of two or more in the :guilabel:`Quantity` field, then
 After manufacturing the quantity that is being produced immediately, enter that number in the
 :guilabel:`Quantity` field at the top of the manufacturing order.
 
-.. image:: manufacturing_backorders/quantity-field.png
-   :align: center
-   :alt: The quantity field on a manufacturing order.
+.. screenshot:: manufacturing-backorders-quantity-field
+   :menu: Manufacturing app --> Operations --> Manufacturing Orders (open an MO)
+   :shows: The top of an in-progress MO form, "Quantity" field edited to a value lower than the
+      demand shown to its right.
+   :highlight: The "Quantity" field.
+   :data: Demo company "YourCompany"; MO for 10 units of "Product X", quantity set to 5.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width, crop to the header.
 
 Next, click :guilabel:`Validate`, and a :guilabel:`You produced less than initial demand` pop-up
 window appears, from which a backorder can be created. Click :guilabel:`Create Backorder` to split
 the manufacturing order into two separate orders, with the reference tags *WH/MO/XXXXX-001* and
 *WH/MO/XXXXX-002*.
 
-.. image:: manufacturing_backorders/create-backorder-button.png
-   :align: center
-   :alt: The Create Backorder button on the "You produced less than initial demand" pop-up window.
+.. screenshot:: manufacturing-backorders-create-button
+   :menu: Manufacturing app --> Operations --> Manufacturing Orders (open the MO) --> Validate
+   :shows: The "You produced less than initial demand" pop-up window, with "Create Backorder" and
+      "No Backorder" buttons.
+   :highlight: The "Create Backorder" button.
+   :data: Demo company "YourCompany"; MO for 10 units of "Product X", 5 produced.
+   :module: mrp
+   :notes: English UI, light theme, 1440px width.
 
 Order *001* contains the items that have been manufactured, and is closed immediately. Order *002*
 is the backorder that contains the items that have yet to be manufactured, and remains open, to be
@@ -65,67 +75,7 @@ order.
 If only some of the remaining units are manufactured immediately, create another backorder for the
 remainder by following the steps detailed in this section.
 
-Create a backorder in Shop Floor
-================================
-
-Backorders for manufacturing orders can also be created from the *Shop Floor* module.
-
-.. note::
-   In order to use the *Shop Floor* module, the *Work Orders* setting must be enabled. To do so,
-   navigate to :menuselection:`Manufacturing --> Configuration --> Settings`, enable the
-   :guilabel:`Work Orders` checkbox, and then click :guilabel:`Save`.
-
-To create a backorder from the *Shop Floor* module, begin by navigating to
-:menuselection:`Manufacturing --> Operations --> Manufacturing Orders`. Select an |MO| for multiple
-units of a product, for which a backorder needs to be created.
-
-On the |MO|, select the :guilabel:`Work Orders` tab, and then click the :guilabel:`Open Work Order
-(external link icon)` button on the line of the work order to be processed. On the resulting
-:guilabel:`Work Orders` pop-up window, click the :guilabel:`Open Shop Floor` button to open the
-*Shop Floor* module.
-
-When accessed from a specific work order, the *Shop Floor* module opens to the page for the work
-center where the order is configured to be processed, and isolates the work order's card so that no
-other cards are shown.
-
-Complete the steps on the work order's card until the :guilabel:`Register Production` step is
-reached, and then click on it to open the :guilabel:`Register Production` pop-up window.
-
-.. important::
-   Do **not** click the :guilabel:`# Units` button on the right side of the step. Doing so
-   automatically registers the full amount of units as having been produced.
-
-On the :guilabel:`Register Production` pop-up window, enter the number of units produced in the
-:guilabel:`Quantity` field. Make sure the number entered is *less* than the number of units listed
-to the right of the field. Then, click :guilabel:`Validate`.
-
-.. image:: manufacturing_backorders/register-production.png
-   :align: center
-   :alt: The Register Production pop-up window in the Shop Floor module.
-
-The pop-up window disappears and the :guilabel:`# Units` button on the work order's card updates to
-reflect the number of units produced, as a fraction of the number of units for which the |MO| was
-originally created.
-
-Next, click the :guilabel:`Mark as Done` button at the bottom-right of the work order's card. The
-work order card begins to fade away. Once it disappears completely, a new work order card appears,
-titled with the original |MO|'s reference number with a `-002` tag added to the end of it.
-
-This new reference number represents the backorder |MO|. The original |MO|'s reference number now
-appears with a `-001` tag added to the end of it to distinguish it from the backorder |MO|.
-
-If the original |MO| has no remaining work orders, it can be closed by selecting the :guilabel:`All`
-filter in the top navigation of the *Shop Floor* module, and then clicking :guilabel:`Close
-Production` at the bottom of the |MO|'s card.
-
-If the original |MO| has remaining work orders that must be completed before it can be closed, cards
-for these work orders appear on the *Shop Floor* pages for the work centers where they are
-configured to be carried out. They can be processed as normal, and additional backorders can be
-created from their work order cards using the instructions detailed in this section.
-
-Once the current work order for the backorder |MO| is ready to be processed, this can also be
-completed as normal, and an additional backorder can be created from its work order card by
-following the instructions detailed in this section.
-
-After the final work order for the backorder |MO| has been completed, the |MO| can be closed by
-clicking the :guilabel:`Close Production` button at the bottom of the work order's card.
+.. seealso::
+   For manufacturing orders that use routings, the operations must be completed on their
+   :doc:`work orders <work_orders>` before the |MO| can be validated and a backorder created for
+   it, as described above.

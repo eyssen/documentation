@@ -117,8 +117,13 @@ In Odoo's **Sales** app, quotations can include additional details and configura
 more detail and information, such as :doc:`quotation templates <sales_quotations/quote_template>`
 and :doc:`sales team referrer name <sales_quotations/create_quotations>`.
 
-.. image:: sales_quotations/sales-quotation.png
-   :alt: Unconfirmed sales quotation in Odoo **Sales** app.
+.. screenshot:: sales-quotations-overview-form
+   :menu: Sales ‣ Orders ‣ Quotations ‣ (a quotation)
+   :shows: A complete unconfirmed quotation form: customer block, Expiration and Pricelist fields, the Order Lines tab with three product lines, the tax and total block, and the Send by Email / Confirm buttons.
+   :highlight: No highlight; the whole form is the subject.
+   :data: Quotation S00021 for "Deco Addict", three furniture lines, total in the company currency.
+   :module: sale
+   :notes: English UI, light theme, 1440px width, full form.
 
 .. toctree::
    :titlesonly:

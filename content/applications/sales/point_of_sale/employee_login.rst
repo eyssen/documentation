@@ -22,8 +22,12 @@ settings <configuration/settings>`. Then,
 #. Add the employees with **basic POS functionality** access in the :guilabel:`Basic rights` field.
 #. Add the employees with **extended POS functionalities** in the :guilabel:`Advanced rights` field.
 
-.. image:: employee_login/activate-setting.png
-   :alt: setting to enable multiple cashiers in POS
+.. screenshot:: pos-employee-login-setting
+   :menu: Point of Sale ‣ Configuration ‣ Settings
+   :shows: The POS settings with the "Multi Employees per Session" option enabled, the "Allowed Employees" field listing two employees and the "Advanced rights" field listing one.
+   :highlight: The "Multi Employees per Session" setting block (red frame).
+   :module: point_of_sale, pos_hr
+   :notes: English UI, light theme, 1440px width, crop to the settings block.
 
 .. note::
    - Leaving the :guilabel:`Basic rights` field empty allows all employees to log in.
@@ -88,8 +92,11 @@ session <pos/session-start>` and access the POS interface. They can :ref:`scan t
 name from the list of authorized users, or by entering :ref:`their PIN code
 <pos/employee_login/pin>` in the :guilabel:`Enter your PIN` field.
 
-.. image:: employee_login/log-in.png
-   :alt: Login window to open a session when the multiple cashiers feature is active
+.. screenshot:: pos-employee-login-select-cashier
+   :menu: (POS interface) ‣ Select Cashier
+   :shows: The cashier selection screen listing the allowed employees, and the "Enter your PIN" keypad.
+   :module: point_of_sale, pos_hr
+   :notes: English UI, light theme, crop to the selection window.
 
 To switch between users during an :ref:`active session <pos/session-start>`, click on the currently
 logged-in employee's name at the top right of the POS screen and select the user to switch to.
@@ -109,7 +116,7 @@ the employee's profile in the **Employees** module:
 #. Navigate to the **Employees** module.
 #. Open the form view of the specific employee.
 #. Go to the :guilabel:`Settings` tab.
-#. The :guilabel:`Attendance/Point of Sale/Manufacturing` category offers two options:
+#. The :guilabel:`Attendance/Point of Sale` section offers two options:
 
    - Manually enter any badge ID in the :guilabel:`Badge ID` field.
    - Click :guilabel:`Generate` to create a unique badge ID automatically.
@@ -131,7 +138,7 @@ session. To set up a PIN code for an employee:
 #. Open the form view of the relevant employee.
 #. Go to the :guilabel:`Settings` tab.
 #. Enter a desired numerical code in the :guilabel:`PIN Code` field of the
-   :guilabel:`Attendance/Point of Sale/Manufacturing` category.
+   :guilabel:`Attendance/Point of Sale` section.
 
 .. note::
    The PIN code must consist of a sequence of digits only.

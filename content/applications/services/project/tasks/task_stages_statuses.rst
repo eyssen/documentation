@@ -39,9 +39,9 @@ there, click one of the following:
    - :guilabel:`Folded in Kanban`: to hide the task stage and all of the tasks in this stage from
      the Kanban view.
    - :guilabel:`Projects`: to share this task stage between several projects.
-   - :guilabel:`Automations`: to create custom rules that trigger automatic actions
-     (e.g., creating activities, adding followers, or sending webhook notifications). Note that this
-     requires **Studio** (Enterprise) and may impact your pricing plan.
+   - :guilabel:`Automations`: to create custom rules that trigger automatic actions when a task
+     reaches this stage (e.g., creating activities, adding followers, or sending webhook
+     notifications). See :doc:`/applications/general/automation_rules`.
 
  - :guilabel:`Delete`: to delete this stage.
  - :guilabel:`Archive/Unarchive all`: to archive or unarchive all of the tasks in this stage.
@@ -72,3 +72,32 @@ exist in Odoo and are used as follows:
    - The :guilabel:`Done` and :guilabel:`Canceled` statuses are independent from the Kanban stage.
      Once a task is marked as :guilabel:`Done` or :guilabel:`Canceled`, it is closed. If needed, it
      can be reopened by changing its status.
+
+.. _project/tasks/priorities:
+
+Task priorities
+===============
+
+Tasks are prioritized on a four-level scale instead of the single star of standard Odoo. Set the
+:guilabel:`Priority` on the task form, in the task list, or on the Kanban card:
+
+- :guilabel:`Low`
+- :guilabel:`Medium`
+- :guilabel:`High`
+- :guilabel:`Very High`
+
+The search panel of the task list offers a filter for each level, and :guilabel:`Priority` is
+available as a grouping, so the work can be sorted by urgency across projects.
+
+.. note::
+   This scale is provided by the *Project Task Priority* (`eyssen_project_task_priority`) module.
+   Priorities are also used by the :doc:`SLA policies <../sla>`, which can be restricted to tasks of
+   at least a given priority and can raise the priority of a task when an SLA is breached.
+
+.. screenshot:: services-project-task-priority
+   :menu: Project ‣ Tasks
+   :shows: The task list with the four-star Priority column, and the search panel open showing the Low/Medium/High/Very High Priority filters.
+   :highlight: The Priority column and the priority filters (red frames).
+   :data: About eight tasks of project "Boiler maintenance 2026" with mixed priorities.
+   :module: eyssen_project_task_priority
+   :notes: English UI, light theme, 1440px width, crop to the list and the open filter dropdown.

@@ -6,8 +6,7 @@ The *Least Packages* removal strategy fulfills an order by opening the fewest nu
 which is ideal for maintaining organized stock without needing to open multiple boxes.
 
 .. seealso::
-   - :doc:`About removal strategies <../removal_strategies>`
-   - `Odoo Tutorials: Least Packages <https://www.odoo.com/slides/slide/5477/share>`_
+   :doc:`About removal strategies <../removal_strategies>`
 
 To understand how the removal strategy works, consider the following example, featuring a warehouse
 that stores packages of flour in bulk packages of `100 kg`.
@@ -47,9 +46,12 @@ Removal Strategy` is set to :guilabel:`Least Packages`.
    To check the product's on-hand stock, navigate to the product form, and click the :guilabel:`On
    Hand` smart button.
 
-   .. image:: least_packages/on-hand-flour.png
-      :align: center
-      :alt: Show on-hand stock in each package.
+   .. screenshot:: removal-strategies-least-packages-on-hand-flour
+      :menu: Inventory ‣ Products ‣ Products
+      :shows: The "On Hand" list of a product grouped by package, showing packages holding different quantities.
+      :data: Product "Flour": packages of 50 kg, 20 kg and 5 kg.
+      :module: stock
+      :notes: English UI, light theme, 1440px width.
 
 Create a :ref:`delivery order <inventory/delivery/one-step>` for eighty kilograms of flour by going
 to the :menuselection:`Sales app` and creating a new quotation. After clicking :guilabel:`Confirm`,
@@ -67,6 +69,9 @@ the quantities to fulfill the :guilabel:`Demand` are picked. Since the order dem
 kilograms, which exceeds the quantity in the opened package of `54 kg`, an unopened package of `100
 kg` is selected.
 
-.. image:: least_packages/least-package.png
-   :align: center
-   :alt: Show which package was picked in the *Pick From* field.
+.. screenshot:: removal-strategies-least-packages-package
+   :menu: Inventory ‣ Delivery Orders
+   :shows: The detailed operations of a delivery order line, with the "Pick From" field showing the single package that covers the demand.
+   :highlight: The "Pick From" field (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.

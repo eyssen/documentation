@@ -25,9 +25,12 @@ configured, or create a new one by clicking :guilabel:`New`.
 In the :guilabel:`General` tab, locate the :guilabel:`Reservation Method` field, and select
 :guilabel:`Manually`.
 
-.. image:: manually/manually-operations-type.png
-   :align: center
-   :alt: Reservation method field on delivery order operation type form.
+.. screenshot:: reservation-methods-manually-operations-type
+   :menu: Inventory ‣ Configuration ‣ Operations Types
+   :shows: An operation type form for delivery orders with "Manually" selected as the reservation method.
+   :highlight: The "Manually" option (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    When the :guilabel:`Type of Operation` is changed to :guilabel:`Receipt` on an
@@ -63,9 +66,11 @@ but must be manually reserved.
    Additionally, unless there is a set replenishment or a live receipt, it also reads :guilabel:`No
    future availability`, in red text.
 
-.. image:: manually/manually-availability-tooltip.png
-   :align: center
-   :alt: Confirmed sales order with product availability tooltip selected.
+.. screenshot:: reservation-methods-manually-availability-tooltip
+   :menu: Sales app ‣ New
+   :shows: A confirmed sales order line with the availability tooltip open, showing that the quantity is not reserved.
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Once the |SO| is confirmed, navigate to the :menuselection:`Inventory app`, and locate the
 :guilabel:`Delivery Orders` card on the :guilabel:`Inventory Overview` page.
@@ -74,9 +79,12 @@ The :guilabel:`Delivery Orders` card displays the current status of live orders,
 with a :guilabel:`Waiting` status. Orders with this status indicate that the products in those
 orders have either not been reserved yet, or are not in stock at all.
 
-.. image:: manually/manually-delivery-orders-card.png
-   :align: center
-   :alt: Delivery orders task card with waiting status orders.
+.. screenshot:: reservation-methods-manually-delivery-orders-card
+   :menu: Inventory
+   :shows: The Inventory overview with the "Delivery Orders" card, showing the count of orders waiting for availability.
+   :highlight: The waiting-orders count on the card (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 To see the |SO| created previously, click the :guilabel:`(#) Waiting` button on the card (in this
 case, `8 Waiting`).
@@ -94,9 +102,11 @@ In the :guilabel:`Operations` tab, on the :guilabel:`Product` line, the numbers 
 In this case, the :guilabel:`Demand` column lists `10.00`, while the :guilabel:`Quantity` column
 lists `0`.
 
-.. image:: manually/manually-delivery-order-form.png
-   :align: center
-   :alt: Delivery order form with product availability and reserved quantity.
+.. screenshot:: reservation-methods-manually-delivery-order-form
+   :menu: Inventory ‣ Delivery Orders
+   :shows: A delivery order form in Waiting status with the Operations tab showing demand and zero reserved quantity.
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 To manually reserve the specified quantity of the product for this order, click the
 :guilabel:`Check Availability` button at the top of the form. Doing so turns the `Available` status
@@ -130,9 +140,12 @@ Once ready, click :guilabel:`Validate`.
    If there is *not* enough stock on-hand, the order retains its current status, and remains on the
    list.
 
-   .. image:: manually/manually-check-availability.png
-      :align: center
-      :alt: List of orders in waiting status and check availability button.
+   .. screenshot:: reservation-methods-manually-check-availability
+      :menu: Inventory ‣ Delivery Orders
+      :shows: The delivery orders list filtered to Waiting status, with the "Check Availability" button visible on the selected order.
+      :highlight: The "Check Availability" button (red frame).
+      :module: stock
+      :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`At confirmation reservation <at_confirmation>`

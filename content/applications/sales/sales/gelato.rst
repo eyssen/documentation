@@ -19,11 +19,21 @@ Configuration
    the company information in the Odoo database in order for sales orders to be confirmed and sent
    to Gelato for fulfillment.
 
-   .. image:: gelato/gelato-company.png
-      :alt: Company information in Gelato.
+   .. screenshot:: sales-gelato-company-in-gelato
+      :menu: (Gelato dashboard) ‣ Settings ‣ Company
+      :shows: The company information page on the Gelato platform, with the company name, address and VAT number.
+      :highlight: The company name and address (red frame).
+      :data: A throw-away Gelato account.
+      :module: sale_gelato
+      :notes: English UI, light theme, crop to the company block.
 
-   .. image:: gelato/odoo-company.png
-      :alt: Company information in Odoo.
+   .. screenshot:: sales-gelato-company-in-odoo
+      :menu: Settings ‣ Users & Companies ‣ Companies ‣ (the company)
+      :shows: The company form in Odoo, with the same name, address and VAT number as the Gelato account.
+      :highlight: The name, address and VAT fields (red frame).
+      :data: Demo company "YourCompany".
+      :module: base
+      :notes: English UI, light theme, 1440px width, crop to the company details.
 
 Configure API keys and webhooks in Gelato
 -----------------------------------------
@@ -46,8 +56,13 @@ open a new API key form. Type in a name, then click :guilabel:`Create Key`.
 
 Copy the generated API key using :guilabel:`Copy to Clipboard`.
 
-.. image:: gelato/gelato-api-key.png
-   :alt: Newly generated API key in the Gelato platform.
+.. screenshot:: sales-gelato-api-key
+   :menu: (Gelato dashboard) ‣ Developer ‣ API Keys
+   :shows: The Gelato API-keys page with a newly generated key and its copy button.
+   :highlight: The generated key (red frame).
+   :data: A throw-away key; mask the value.
+   :module: sale_gelato
+   :notes: English UI, light theme, crop to the key row. Use a throw-away secret and mask it.
 
 .. important::
    Copy the API key and store it somewhere safe and secure before leaving this page. Once the page
@@ -83,8 +98,13 @@ The webhook form requires several specific configurations:
 - Click :guilabel:`Generate Key` to generate a :guilabel:`Header Value`.
 - Click :guilabel:`Create` to complete this webhook configuration.
 
-.. image:: gelato/gelato-webhook.png
-   :alt: Newly configured webhook in the Gelato platform.
+.. screenshot:: sales-gelato-webhook
+   :menu: (Gelato dashboard) ‣ Developer ‣ Webhooks
+   :shows: The Gelato webhooks page with the configured order-status webhook pointing at the Odoo database URL.
+   :highlight: The webhook URL (red frame).
+   :data: A throw-away Gelato account; the URL points to the demo database.
+   :module: sale_gelato
+   :notes: English UI, light theme, crop to the webhook row.
 
 .. tip::
    Copy and paste the API key and webhook on a notepad before tabbing out of the Gelato webpage as

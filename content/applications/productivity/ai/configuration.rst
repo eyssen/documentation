@@ -247,6 +247,17 @@ value truncates answers.
    not to the model's real limit.
 
 .. warning::
+   :guilabel:`Max Output Tokens` on a catalogue row is often almost the whole
+   :guilabel:`Context Window` (for example 450 000 of 500 000). Providers such
+   as OpenRouter reject the call when *prompt + tools + max_tokens* exceeds
+   the window, even if the prompt itself still fits. The platform therefore
+   clamps the completion cap on every call to whatever still fits after an
+   overestimate of the prompt. A small first turn still gets the published
+   output limit; a large tool round gets a smaller leftover. This cannot help
+   when the **prompt alone** already exceeds the window — split the work
+   (see :ref:`ai/agents/work-items`).
+
+.. warning::
    Upgrading from an earlier version changes how agents that are already
    configured behave.
 

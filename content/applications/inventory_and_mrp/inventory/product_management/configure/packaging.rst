@@ -11,10 +11,10 @@ For example, different packages for cans of soda, such as a 6-pack, a 12-pack, o
 **must** be configured on the individual product form. This is because packagings are product
 specific, not generic.
 
-.. tip::
-   Packaging can be used in conjunction with Odoo :doc:`Barcode <../../../barcode/setup/software>`.
-   When receiving products from suppliers, scanning the packaging barcode automatically adds the
-   number of units in the packaging to the internal count of the product.
+.. note::
+   A barcode can be stored on each packaging line, but scanning that barcode does **not** add the
+   contained number of units to the product count automatically. Barcode-driven receipts record
+   quantities in the product's own unit of measure; see :doc:`../../../barcode`.
 
 Configuration
 =============
@@ -23,9 +23,14 @@ To use packagings, navigate to :menuselection:`Inventory app --> Configuration -
 under the :guilabel:`Products` heading, enable the :guilabel:`Product Packagings` feature, and click
 :guilabel:`Save`.
 
-.. image:: packaging/enable-packagings.png
-   :align: center
-   :alt: Enable packagings by selecting "Product Packagings".
+.. screenshot:: inventory-packaging-enable
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to the "Products" section with the "Product Packagings"
+      checkbox enabled.
+   :highlight: The "Product Packagings" checkbox (red frame).
+   :data: Demo company "YourCompany".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the "Products" settings block.
 
 .. _inventory/product_management/packaging-setup:
 
@@ -56,8 +61,8 @@ Under the :guilabel:`Inventory` tab, scroll down to the :guilabel:`Packaging` se
    to the far-right of the column titles in the :guilabel:`Packaging` section, and selecting the
    desired options from the drop-down menu that appears.
 
-- :guilabel:`Barcode`: identifier for tracing packaging in stock moves or pickings, using the
-  :ref:`Barcode app <barcode/operations/intro>`. Leave blank if not in use.
+- :guilabel:`Barcode`: identifier used to trace the packaging in stock moves and pickings. Leave
+  blank if not in use.
 - :guilabel:`Company`: indicates the packaging is only available at the selected company. Leave
   blank to make the packaging available across all companies.
 
@@ -66,9 +71,14 @@ Under the :guilabel:`Inventory` tab, scroll down to the :guilabel:`Packaging` se
    :guilabel:`Add a line`. In the line, name the :guilabel:`Packaging` `6-pack`, and set the
    :guilabel:`Contained quantity` to `6`. Repeat this process for additional packagings.
 
-   .. image:: packaging/create-product-packaging.png
-      :align: center
-      :alt: Create 6-pack case for product.
+   .. screenshot:: inventory-packaging-create-on-product
+      :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Inventory tab
+      :shows: The "Packaging" section of a product form with one line: Packaging "6-pack", Contained
+         quantity 6, Unit of Measure "Units", with the Sales and Purchase checkboxes visible.
+      :highlight: The new "6-pack" line (red frame).
+      :data: Product "Grape Soda", unit of measure "Units".
+      :module: stock, product
+      :notes: English UI, light theme, 1440px width, crop to the Packaging table.
 
 From product packagings page
 ----------------------------
@@ -83,9 +93,14 @@ list of all packagings that have been created for all products. Create new packa
    the :guilabel:`Product Packagings` page, each product can be sold as a `6-Pack` that contains 6
    products, as a `12-Pack` of 12 products, or as a `Case` of 32 products.
 
-   .. image:: packaging/packagings.png
-      :align: center
-      :alt: List of different packagings for products.
+   .. screenshot:: inventory-packaging-list
+      :menu: Inventory ‣ Configuration ‣ Product Packagings
+      :shows: The "Product Packagings" list with several packagings across products — for two soda products,
+         a "6-Pack" of 6, a "12-Pack" of 12 and a "Case" of 32.
+      :highlight: None.
+      :data: Products "Grape Soda" and "Diet Coke", three packagings each.
+      :module: stock, product
+      :notes: English UI, light theme, 1440px width, full list view.
 
 Partial reservation
 -------------------
@@ -107,9 +122,15 @@ can be set to :guilabel:`Reserve Only Full Packagings` or :guilabel:`Reserve Par
    Configuration --> Settings`, scroll to the :guilabel:`Products` section, tick the
    :guilabel:`Product Packagings` checkbox, and click :guilabel:`Save`.
 
-.. image:: packaging/reserve-packaging.png
-   :align: center
-   :alt: Show Reserve Packagings field on the product categories page.
+.. screenshot:: inventory-packaging-reserve
+   :menu: Inventory ‣ Configuration ‣ Product Categories ‣ (a category)
+   :shows: A product category form, "Logistics" section, with the "Reserve Packagings" field and its two
+      options "Reserve Only Full Packagings" and "Reserve Partial Packagings".
+   :highlight: The "Reserve Packagings" field (red frame).
+   :data: Product category "All / Saleable".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the Logistics section. The field only appears when
+      "Product Packagings" is enabled.
 
 .. example::
    To better evaluate the options based on business needs, consider the following example:
@@ -134,9 +155,14 @@ used for the product. The chosen packaging is displayed on the :abbr:`SO (Sales 
 .. example::
    18 cans of the product, `Grape Soda`, is packed using three 6-pack packagings.
 
-   .. image:: packaging/packagings-sales-order.png
-      :align: center
-      :alt: Assign packagings on the Sales Order Line.
+   .. screenshot:: inventory-packaging-on-sales-order
+      :menu: Sales ‣ Orders ‣ Orders ‣ (a quotation)
+      :shows: A sales order line with Quantity 18 and the "Packaging" field set to "6-pack", i.e. three
+         packagings of six.
+      :highlight: The "Packaging" cell on the order line (red frame).
+      :data: Customer "Deco Addict"; one line for 18 units of "Grape Soda".
+      :module: sale, stock
+      :notes: English UI, light theme, 1440px width, crop to the order lines.
 
 .. _inventory/product_management/packaging-route:
 
@@ -161,11 +187,15 @@ Create route
 On the :guilabel:`Routes` page, click :guilabel:`New`, or select a route that is **not** for a
 warehouse. Next, in the :guilabel:`Applicable on` section, tick the :guilabel:`Packagings` checkbox.
 
-.. figure:: packaging/route.png
-   :align: center
-   :alt: Create route for a packaging.
-
-   Route with "Packagings" selected, with "Products" and "Warehouses" not selected.
+.. screenshot:: inventory-packaging-route-form
+   :menu: Inventory ‣ Configuration ‣ Routes ‣ New
+   :shows: A route form with the "Applicable on" section showing the "Packagings" checkbox ticked while
+      "Products" and "Warehouses" are not ticked.
+   :highlight: The "Packagings" checkbox (red frame).
+   :data: A new route named "Packaging reception".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the "Applicable on" section. Caption to convey:
+      route with Packagings selected, Products and Warehouses not selected.
 
 .. _inventory/product_management/route-on-packaging:
 
@@ -183,7 +213,13 @@ that contains :ref:`configured packagings <inventory/product_management/packagin
 In the :guilabel:`Routes` field, select the packaging-specific route. Repeat these steps for all
 packaging intended to use the route.
 
-.. image:: packaging/apply-route.png
-   :align: center
-   :alt: Set route on a packaging.
+.. screenshot:: inventory-packaging-apply-route
+   :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Inventory tab
+   :shows: The "Packaging" table on a product form with the optional "Routes" column made visible and a
+      packaging-specific route selected on the packaging line.
+   :highlight: The "Routes" cell on the packaging line (red frame).
+   :data: Product "Grape Soda", packaging "6-pack", route "Packaging reception".
+   :module: stock
+   :notes: English UI, light theme, 1440px width, crop to the Packaging table. Requires Product Packagings,
+      Storage Locations and Multi-Step Routes to be enabled.
 

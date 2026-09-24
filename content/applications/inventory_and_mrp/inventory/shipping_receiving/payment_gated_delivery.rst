@@ -13,41 +13,12 @@ hold and ship early, and the override is fully traced in the chatter.
    - :doc:`delivery_payment` — restricting payment methods per delivery method
    - :doc:`cash_on_delivery` — collecting payment at handover instead of before shipping
 
-.. Screenshot plan:
-.. - payment_gated_delivery-payment-term-toggle.png: Payment Terms form (Accounting/Invoicing app
-..   --> Configuration --> Payment Terms --> open or create a term), showing the
-..   "Require payment before delivery" checkbox next to the terms note field.
-.. - payment_gated_delivery-order-banner.png: A confirmed sale order that uses a gated payment term
-..   and has an unpaid invoice, showing the orange "Delivery is held until this order is paid."
-..   banner above the order sheet. Click path: Sales app --> Orders --> open such an order.
-.. - payment_gated_delivery-picking-on-hold.png: The delivery's transfer form for that order, showing
-..   the red "On Hold" ribbon plus the "Hold" toggle (on) and "Hold Reason" = "Awaiting payment for
-..   delivery". Click path: from the sale order, click the "Delivery" smart button.
-.. - payment_gated_delivery-validate-blocked-error.png: The error dialog raised when clicking
-..   "Validate" on that held delivery ("This delivery is held until the order is paid...").
-..   Click path: on the held delivery form, click Validate.
-.. - payment_gated_delivery-release-button.png: The held delivery's header showing the yellow
-..   "Release for delivery" button (visible only to users in the "Deliver without payment" group)
-..   and its confirmation popup. Click path: log in as a user with that group, open the held
-..   delivery, click "Release for delivery".
-.. - payment_gated_delivery-release-chatter.png: The same delivery's chatter after confirming the
-..   release, showing the logged message "Delivery manually released for shipping before full
-..   payment by <user>." Click path: after confirming the release popup, scroll to the chatter.
-.. - payment_gated_delivery-deliver-without-payment-group.png: The user form's Access Rights /
-..   Preferences area showing the "Deliver without payment" group (Inventory category) being
-..   assigned. Click path: Settings app --> Users & Companies --> Users --> open a user.
-.. - payment_gated_delivery-auto-release-paid-invoice.png: The customer invoice after registering
-..   full payment (Payment Status = "Paid"), next to the now-released delivery (no ribbon, state
-..   "Ready"). Click path: Accounting app --> Customer Invoices --> open the invoice tied to the
-..   order --> Register Payment --> pay the full amount --> reopen the delivery.
-.. - payment_gated_delivery-backorder-rehold.png: A backorder transfer created from a partially
-..   validated, still-unpaid delivery, showing it re-acquired the "On Hold" ribbon on creation.
-..   Click path: on a manually released but still-unpaid delivery, validate a partial quantity so
-..   Odoo proposes a backorder, then open the resulting backorder transfer.
-
-.. image:: payment_gated_delivery/payment_gated_delivery-order-banner.png
-   :align: center
-   :alt: Sale order banner warning that delivery is held until payment.
+.. screenshot:: payment-gated-delivery-order-banner
+   :menu: Sales ‣ Orders ‣ Orders
+   :shows: A confirmed sales order with the banner warning that the delivery is held until the order is paid.
+   :highlight: The banner (red frame).
+   :module: sale_stock_payment_gate
+   :notes: English UI, light theme, 1440px width.
 
 The reusable "On Hold" primitive
 =================================
@@ -74,9 +45,10 @@ reservation to stay off until it is released.
 The payment-term flag
 ======================
 
-.. image:: payment_gated_delivery/payment_gated_delivery-payment-term-toggle.png
-   :align: center
-   :alt: Payment term form with the Require payment before delivery checkbox.
+.. screenshot:: payment-gated-delivery-payment-term-toggle
+   :shows: Payment term form with the Require payment before delivery checkbox.
+   :module: sale_stock_payment_gate
+   :notes: English UI, light theme, 1440px width.
 
 Whether an order is gated at all is decided by its **payment term**. The
 :guilabel:`Require payment before delivery` checkbox, added to the payment term form, marks a term
@@ -93,9 +65,10 @@ the gate's own :guilabel:`Held for payment` field is set as well. If the order i
 at confirmation time (for example, a proforma or down payment was settled before confirmation), no
 hold is applied and the delivery proceeds normally.
 
-.. image:: payment_gated_delivery/payment_gated_delivery-picking-on-hold.png
-   :align: center
-   :alt: Delivery transfer showing the On Hold ribbon and the payment hold reason.
+.. screenshot:: payment-gated-delivery-picking-on-hold
+   :shows: Delivery transfer showing the On Hold ribbon and the payment hold reason.
+   :module: sale_stock_payment_gate
+   :notes: English UI, light theme, 1440px width.
 
 The hard gate: no reservation, no validation
 =============================================
@@ -111,9 +84,10 @@ manual path:
   of shipping the goods, pointing the user to the :guilabel:`Release for delivery` button described
   below.
 
-.. image:: payment_gated_delivery/payment_gated_delivery-validate-blocked-error.png
-   :align: center
-   :alt: Error dialog blocking validation of a payment-held delivery.
+.. screenshot:: payment-gated-delivery-validate-blocked-error
+   :shows: Error dialog blocking validation of a payment-held delivery.
+   :module: sale_stock_payment_gate
+   :notes: English UI, light theme, 1440px width.
 
 .. important::
    Directly writing :guilabel:`Held for payment` = *unchecked* on a picking is blocked for any user
@@ -124,9 +98,10 @@ manual path:
 Automatic release when the order is paid
 =========================================
 
-.. image:: payment_gated_delivery/payment_gated_delivery-auto-release-paid-invoice.png
-   :align: center
-   :alt: Fully paid customer invoice next to its now-released delivery.
+.. screenshot:: payment-gated-delivery-auto-release-paid-invoice
+   :shows: Fully paid customer invoice next to its now-released delivery.
+   :module: sale_stock_payment_gate
+   :notes: English UI, light theme, 1440px width.
 
 An order counts as **delivery-paid** once every posted customer invoice linked to it reaches payment
 status :guilabel:`Paid` or :guilabel:`In Payment`. A ``base.automation`` rule watches the
@@ -164,9 +139,10 @@ long as the delivery was not manually released by a privileged user.
 Manual override: releasing a delivery before payment
 ======================================================
 
-.. image:: payment_gated_delivery/payment_gated_delivery-release-button.png
-   :align: center
-   :alt: Release for delivery button on a held transfer, with its confirmation prompt.
+.. screenshot:: payment-gated-delivery-release-button
+   :shows: Release for delivery button on a held transfer, with its confirmation prompt.
+   :module: sale_stock_payment_gate
+   :notes: English UI, light theme, 1440px width.
 
 Sometimes a delivery genuinely needs to ship before the order is fully paid (goodwill shipment,
 trusted customer, manual arrangement). The :guilabel:`Release for delivery` button on the transfer's
@@ -179,9 +155,10 @@ header does this:
   override; and
 - a chatter message records **who** released the delivery and **when**.
 
-.. image:: payment_gated_delivery/payment_gated_delivery-release-chatter.png
-   :align: center
-   :alt: Chatter entry logging the manual release of a delivery.
+.. screenshot:: payment-gated-delivery-release-chatter
+   :shows: Chatter entry logging the manual release of a delivery.
+   :module: sale_stock_payment_gate
+   :notes: English UI, light theme, 1440px width.
 
 A delivery flagged :guilabel:`Manually released for delivery` is **not** re-held by the automatic
 sync described above, even if the order later turns out to be unpaid again — the manual decision is
@@ -196,9 +173,10 @@ delivery: when the order still requires payment before delivery and is not yet f
 backorder transfer is put on hold again, with the same *"Awaiting payment for delivery"* reason —
 even if the original transfer had been manually released.
 
-.. image:: payment_gated_delivery/payment_gated_delivery-backorder-rehold.png
-   :align: center
-   :alt: Backorder transfer automatically re-held for payment.
+.. screenshot:: payment-gated-delivery-backorder-rehold
+   :shows: Backorder transfer automatically re-held for payment.
+   :module: sale_stock_payment_gate
+   :notes: English UI, light theme, 1440px width.
 
 Order-level visibility
 =======================
@@ -221,9 +199,10 @@ Configuration
    :menuselection:`Settings app --> Users & Companies --> Users`. This group also needs ordinary
    inventory read/write access to actually see and release the transfer.
 
-.. image:: payment_gated_delivery/payment_gated_delivery-deliver-without-payment-group.png
-   :align: center
-   :alt: Assigning the Deliver without payment group to a user.
+.. screenshot:: payment-gated-delivery-deliver-without-payment-group
+   :shows: Assigning the Deliver without payment group to a user.
+   :module: sale_stock_payment_gate
+   :notes: English UI, light theme, 1440px width.
 
 No further setup is required: the ``base.automation`` rule and the hold/release logic are active as
 soon as the module is installed and at least one payment term has the flag enabled.

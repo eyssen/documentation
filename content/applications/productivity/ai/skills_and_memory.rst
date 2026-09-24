@@ -91,10 +91,13 @@ Hard stops in the playbook:
 - Prefer reporting an existing bill over creating a second one with the same
   partner + reference.
 
-Pair with Recipe D in :doc:`agent_recipes` (chat helper or scheduled agent). For
-unattended runs, task :guilabel:`Write Mode` *auto* is only appropriate because
-this skill keeps bills draft; if you customise the skill to post, switch the
-task back to *confirm*.
+Pair with Recipe D in :doc:`agent_recipes` (chat helper or scheduled agent).
+On a scheduled agent the standing task **scouts** (search ids,
+``queue_work_items``) and each child runs this playbook for **one** bill —
+see :ref:`ai/agents/work-items`. For unattended runs, task
+:guilabel:`Write Mode` *auto* is only appropriate because this skill keeps
+bills draft; if you customise the skill to post, switch the task back to
+*confirm*.
 
 Writing a good skill
 --------------------

@@ -62,22 +62,25 @@ businesses evaluate which best suits their requirements.
        form
      - Tracks package location and contents within the warehouse
      - Tracks grouped quantities but not individual items' locations
-   * - Smooth barcode operations
+   * - Barcode operations
      - Not available
-     - Requires scanning both the package and individual items for reception. (even if there are 30
-       items in a package). Can enable the :ref:`Move Entire Packages
-       <inventory/product_management/move-entire-pack>` feature to update the package's contained
-       items' locations, when moving the package
-     - Scanning a packaging barcode automatically records all included units. (e.g. 1 pack = 12
-       units)
+     - Both the package and the individual items are scanned on reception (even if there are thirty
+       items in the package). The :ref:`Move Entire Packages
+       <inventory/product_management/move-entire-pack>` feature updates the locations of the items a
+       package contains when the package itself is moved
+     - A barcode can be stored on the packaging line, but scanning it does **not** record the
+       contained units automatically
    * - Product lookup
      - Not available
-     - Scanning a product's barcode identifies its typical storage location in the Odoo database
-     - Barcode identifies grouped quantity, not storage location
-   * - Unique barcodes
+     - The :ref:`Product Information <inventory/product_management/product-lookup>` screen of the
+       eYssen *Barcode* app lists every internal location and package where the scanned product is
+       stored, with the stored, reserved and available quantity per line
+     - Not available: a packaging barcode identifies a grouped quantity, not a storage location
+   * - Unique references
      - Not available
-     - Unique barcodes for individual packages (e.g. Pallet #12)
-     - Barcodes set at the packaging type level (e.g. for a pack of 6)
+     - Every package has its own unique reference (e.g. `PACK0000012`), which doubles as its barcode
+     - The barcode is set on the packaging line of one product (e.g. for a pack of six), so it is
+       shared by every pack of that kind
    * - Reusability
      - Not applicable
      - Can be disposable or reusable, configured via the :ref:`Package Use
@@ -125,19 +128,25 @@ distinctions include:
   "pallet of 96 soap bars") but do not uniquely identify individual pallets, such as Pallet #1 or
   Pallet #2.
 
-Capture product information using barcode
------------------------------------------
+.. _inventory/product_management/product-lookup:
 
-An Odoo user expects the **Barcode** app to display the typical storage location of a product by
-scanning a barcode for a container.
+Look up where a product is stored
+---------------------------------
 
-*Packages* was the most suitable. When the :ref:`appropriate setting is enabled
-<inventory/warehouses_storage/enable-package>`, scanning a package barcode displays its contents in
-the **Barcode** app.
+A warehouse operator needs to know, from the shop floor, where a product is currently stored and how
+much of it is available.
 
-Packages represent physical containers, enabling detailed tracking of the items they hold.
-Scanning a package provides visibility into its contents and facilitates operations, like inventory
-moves.
+*Packages* was the most suitable. Because a package is a physical container whose contents are
+tracked individually, the quantity of each product is recorded together with the location and the
+package holding it.
+
+In the eYssen *Barcode* app, the :guilabel:`Product Information` screen searches by barcode,
+internal reference or product name, and lists every internal location where the product is stored,
+the package on that location (if any), and the stored, reserved and available quantity for each
+line. Product labels can also be printed straight from that screen.
+
+.. seealso::
+   :doc:`../../barcode`
 
 .. _inventory/product_management/lots-uom:
 

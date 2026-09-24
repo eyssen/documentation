@@ -91,8 +91,13 @@ Entering *Kiosk Mode* is **only** available for users with specific :ref:`access
    Settings` section, use the link in the :guilabel:`Attendance Kiosk Url` field to open *Kiosk
    Mode* on any device.
 
-.. image:: kiosks/kiosk-url.png
-   :alt: The Attendances Kiosk URL field in the settings section of the Attendances application.
+.. screenshot:: hr-attendances-kiosk-settings
+   :menu: Attendances ‣ Configuration ‣ Settings
+   :shows: The Attendances settings page with the kiosk options and the Attendance Kiosk URL field.
+   :highlight: The Attendance Kiosk URL field and its copy button (red frame).
+   :data: Demo company "YourCompany HU"; barcode and manual selection enabled.
+   :module: hr_attendance
+   :notes: English UI, light theme, 1440px width.
 
 .. important::
    As a security measure, once a device is in *Kiosk Mode*, it is not possible to go back into the
@@ -116,8 +121,13 @@ Badge
 To check in or out using a badge, tap the :icon:`fa-barcode` :guilabel:`Scan your badge` image in
 the center of the kiosk.
 
-.. image:: kiosks/scan-badge.png
-   :alt: The Attendances Kiosk view displaying the scan badge image.
+.. screenshot:: hr-attendances-kiosk-scan
+   :menu: (kiosk screen)
+   :shows: The kiosk screen inviting the employee to scan a badge, with the manual identification button below it.
+   :highlight: The scan area (red frame).
+   :data: Demo company "YourCompany HU".
+   :module: hr_attendance
+   :notes: English UI, light theme, 1440px width. Full-screen kiosk view.
 
 Then, scan the barcode on the badge using the method configured in the :ref:`Kiosk Settings
 <attendances/kiosk-settings>` section of the configuration menu.
@@ -167,8 +177,13 @@ out, :guilabel:`(Employee) Please enter your PIN to check out` appears above the
 Tap in the PIN using the number pad, then tap :guilabel:`OK` when done. The employee is then checked
 in or out, and a :ref:`confirmation message <attendances/confirmation>` appears.
 
-.. image:: kiosks/enter-pin.png
-   :alt: The pop-up that appears when prompted to enter a pin.
+.. screenshot:: hr-attendances-kiosk-pin
+   :menu: (kiosk screen)
+   :shows: The kiosk PIN pad shown after an employee is selected manually.
+   :highlight: The PIN pad (red frame).
+   :data: Employee "Anita Kovács" selected; use a throw-away PIN.
+   :module: hr_attendance
+   :notes: English UI, light theme, 1440px width. Full-screen kiosk view.
 
 .. _attendances/confirmation:
 
@@ -189,5 +204,10 @@ minutes logged for the day.
 Beneath both the "welcome" and "goodbye" messages is an :guilabel:`OK` button. To exit the screen
 before the preset time in the kiosk, tap the :guilabel:`OK` button.
 
-.. image:: kiosks/goodbye-message.png
-   :alt: The goodbye message with all the employee's check out information.
+.. screenshot:: hr-attendances-kiosk-goodbye
+   :menu: (kiosk screen)
+   :shows: The kiosk confirmation screen after a check out, with the employee name, the hours worked today and the extra hours.
+   :highlight: The hours worked today (red frame).
+   :data: Employee "Anita Kovács", 8 hours worked.
+   :module: hr_attendance
+   :notes: English UI, light theme, 1440px width. Full-screen kiosk view.

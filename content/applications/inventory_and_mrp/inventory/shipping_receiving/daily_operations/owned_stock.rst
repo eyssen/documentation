@@ -20,9 +20,12 @@ do this, go to :menuselection:`Inventory --> Configuration --> Settings`, and un
 :guilabel:`Traceability` section, check the box next to :guilabel:`Consignment`, and then click
 :guilabel:`Save` to finish.
 
-.. image:: owned_stock/owned-stock-enable-consignment.png
-   :align: center
-   :alt: Enabled Consignment setting in Inventory configuration.
+.. screenshot:: daily-operations-owned-stock-enable-consignment
+   :menu: Inventory ‣ Configuration ‣ Settings
+   :shows: The Inventory settings page scrolled to "Traceability", with the "Consignment" checkbox enabled.
+   :highlight: The "Consignment" checkbox (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Receive (and store) consignment stock
 =====================================
@@ -48,9 +51,12 @@ the quantities to be received into the warehouse under the :guilabel:`Done` colu
 :guilabel:`Units of Measure` feature is enabled, the :abbr:`UoM (Units of Measure)` can be changed,
 as well. Once all the consignment stock has been received, :guilabel:`Validate` the receipt.
 
-.. image:: owned_stock/owned-stock-receipt-fields.png
-   :align: center
-   :alt: Matching vendor fields in consignment Receipt creation.
+.. screenshot:: daily-operations-owned-stock-receipt-fields
+   :menu: Inventory ‣ Receipts
+   :shows: A receipt form with the "Receive From" and "Assign Owner" fields both set to the consignment vendor.
+   :highlight: The "Assign Owner" field (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Sell and deliver consignment stock
 ==================================
@@ -70,9 +76,11 @@ Add the consignment product under the :guilabel:`Product` column in the order li
 :guilabel:`Quantity`, and fill out any other pertinent product details on the form. Once the
 quotation is complete, click :guilabel:`Confirm`.
 
-.. image:: owned_stock/owned-stock-sales-order.png
-   :align: center
-   :alt: Sales order of consignment stock.
+.. screenshot:: daily-operations-owned-stock-sales-order
+   :menu: Sales ‣ Orders ‣ Orders
+   :shows: A sales order selling a product that is held in consignment stock.
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 Once the quotation has been confirmed, it becomes a sales order. From here, the products can be
 delivered by clicking on the :guilabel:`Delivery` smart button, and selecting :guilabel:`Validate`
@@ -107,9 +115,12 @@ originate from :guilabel:`Partner Location/Vendors`.
    choose the :guilabel:`Add Custom Group` parameter, and then select :guilabel:`From Owner`, and
    :guilabel:`Apply` to finish.
 
-.. image:: owned_stock/owned-stock-moves-history.png
-   :align: center
-   :alt: Consignment stock moves history.
+.. screenshot:: daily-operations-owned-stock-moves-history
+   :menu: Inventory ‣ Reporting ‣ Product Moves
+   :shows: The Product Moves report with the "Owner" column shown, listing the moves of consignment stock.
+   :highlight: The "Owner" column (red frame).
+   :module: stock
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    To see forecasted units of consignment stock, go to :menuselection:`Inventory --> Reporting -->

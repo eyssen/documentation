@@ -17,15 +17,33 @@ Default taxes
 are also used to prefill the :guilabel:`Taxes` field when adding a new line on an invoice in
 :ref:`Accounting Firms <accounting/fiduciaries>` mode.
 
-.. image:: taxes/default-configuration.png
-   :alt: Odoo fills out the Tax field automatically according to the Default Taxes
+.. screenshot:: accounting-taxes-default-taxes-product
+   :menu: Accounting ‣ Customers ‣ Products ‣ New
+   :shows: New product form, "General Information" tab; the "Sales Taxes" field is prefilled with the default sales tax (e.g., "27%").
+   :highlight: The "Sales Taxes" field (red frame).
+   :data: Demo company "YourCompany HU" with the Hungarian chart of accounts; default sales tax "27%".
+   :module: account
+   :notes: English UI, light theme, 1440px width, crop to the upper part of the form.
 
-To change your **default taxes**, go to :menuselection:`Accounting --> Configuration --> Settings
---> Taxes --> Default Taxes`, select the appropriate taxes for your default sales tax and purchase
-tax, and click on :guilabel:`Save`.
+To change your **default taxes**, go to :menuselection:`Accounting --> Configuration --> Settings`,
+scroll to the :guilabel:`Taxes` section, select the appropriate :guilabel:`Sales Tax` and
+:guilabel:`Purchase Tax` in the :guilabel:`Default Taxes` setting, and click :guilabel:`Save`.
 
-.. image:: taxes/default-taxes.png
-   :alt: Define which taxes to use by default on Odoo
+In the same setting, the :guilabel:`Prices` field defines whether the sales prices used on products
+and invoices are :guilabel:`Tax Excluded` or :guilabel:`Tax Included` by default. This setting can
+no longer be changed once a journal entry has been created.
+
+.. screenshot:: accounting-taxes-default-taxes-settings
+   :menu: Accounting ‣ Configuration ‣ Settings
+   :shows: Settings page scrolled to the "Taxes" section; "Default Taxes" setting with the "Sales Tax", "Purchase Tax" and "Prices" fields, and the "Rounding Method" setting next to it.
+   :highlight: The "Default Taxes" setting block (red frame).
+   :data: Demo company "YourCompany HU"; Sales Tax "27%", Purchase Tax "27%", Prices "Tax Excluded".
+   :module: account
+   :notes: English UI, light theme, 1440px width, crop to the Taxes section.
+
+The :guilabel:`Rounding Method` setting defines how the total tax amount is computed on orders and
+invoices: :guilabel:`Round per Line` or :guilabel:`Round Globally`. Rounding per line is advised if
+your prices are tax-included, so that the sum of the line subtotals equals the total with taxes.
 
 .. note::
    **Default taxes** are automatically set up according to the country selected at the creation of
@@ -42,8 +60,17 @@ country's sales taxes are already preconfigured on your database. However, only 
 activated by default. To activate taxes relevant to your business, go to :menuselection:`Accounting
 --> Configuration --> Taxes` and enable the toggle button under the :guilabel:`Active` column.
 
-.. image:: taxes/list.png
-   :alt: Activate pre-configured taxes in Odoo Accounting
+.. screenshot:: accounting-taxes-list-activation
+   :menu: Accounting ‣ Configuration ‣ Taxes
+   :shows: Taxes list view (default Sale and Purchase filters) with the "Active" toggle column; some taxes active, some inactive (greyed out).
+   :highlight: The "Active" column (red frame).
+   :data: Demo company "YourCompany HU" with the Hungarian taxes.
+   :module: account
+   :notes: English UI, light theme, 1440px width.
+
+.. tip::
+   Use the :guilabel:`Active` and :guilabel:`Inactive` filters to display only the active or the
+   deactivated taxes, and group the list by :guilabel:`Tax Type` or :guilabel:`Tax Scope`.
 
 .. _taxes/configuration:
 
@@ -53,8 +80,12 @@ Configuration
 To edit or create a **tax**, go to :menuselection:`Accounting --> Configuration --> Taxes` and open
 a tax or click on :guilabel:`New`.
 
-.. image:: taxes/edit.png
-   :alt: Edition of a tax in Odoo Accounting
+.. screenshot:: accounting-taxes-tax-form
+   :menu: Accounting ‣ Configuration ‣ Taxes ‣ (open a tax)
+   :shows: Tax form of a 27% sales tax: Tax Name, Tax Computation, Active, Tax Type, Tax Scope, Amount fields; "Definition" tab with the "Distribution for Invoices" and "Distribution for Refunds" tables.
+   :data: Demo company "YourCompany HU"; tax "27%" (Sales, Percentage, 27%).
+   :module: account
+   :notes: English UI, light theme, 1440px width.
 
 Basic options
 -------------
@@ -97,13 +128,14 @@ Tax computation
    | 1,000       | 1,000       | 10       | 1,010.00 |
    +-------------+-------------+----------+----------+
 
-- **Percentage of price**
+- **Percentage**
 
   The *sales price* is the taxable basis: the tax amount is computed by multiplying the sales price
   by the tax percentage.
 
 .. example::
-   A product has a sales price of $1000, and we apply a *10% of Price* tax. We then have:
+   A product has a sales price of $1000, and we apply a *10%* :guilabel:`Percentage` tax. We then
+   have:
 
    +-------------+-------------+----------+----------+
    | Product     | Price       | Tax      | Total    |
@@ -112,13 +144,13 @@ Tax computation
    | 1,000       | 1,000       | 100      | 1,100.00 |
    +-------------+-------------+----------+----------+
 
-- **Percentage of Price Tax Included**
+- **Percentage Tax Included**
 
   The **total** is the taxable basis: the tax amount is a percentage of the total.
 
 .. example::
-   A product has a Sales Price of $1000, and we apply a *10% of Price Tax Included* tax. We then
-   have:
+   A product has a Sales Price of $1000, and we apply a *10%* :guilabel:`Percentage Tax Included`
+   tax. We then have:
 
    +-------------+-------------+----------+----------+
    | Product     | Price       | Tax      | Total    |
@@ -127,16 +159,17 @@ Tax computation
    | 1,000       | 1,000       | 111.11   | 1,111.11 |
    +-------------+-------------+----------+----------+
 
-- **Python code**
+- **Custom Formula**
 
-  A tax defined as **Python code** consists of two snippets of Python code that are executed in a
-  local environment containing data such as the unit price, product or partner.
-  :guilabel:`Python Code` defines the amount of the tax, and :guilabel:`Applicable Code` defines if
-  the tax is to be applied. The formula is found at the bottom of the :guilabel:`Definition` tab.
+  The tax amount is computed by a formula entered in the :guilabel:`Formula` field, which appears
+  when this computation is selected. The formula can use the `base` (the amount on which the tax is
+  applied), `price_unit` and `quantity` values, as well as the `product` fields.
+
+  .. note::
+     This option requires the *Define Taxes as Python Code* (`account_tax_python`) module.
 
 .. example::
-   :guilabel:`Python Code`: `result = price_unit * 0.10`
-   :guilabel:`Applicable Code`: `result = true`
+   :guilabel:`Formula`: `price_unit * 0.10`
 
 .. _taxes/active:
 
@@ -159,9 +192,9 @@ Tax type
 
 The :guilabel:`Tax Type` determines the tax application, which also restricts where it is displayed.
 
-- **Sales**: Customer invoices, product customer taxes, etc.
-- **Purchase**: Vendor bills, product vendor taxes, etc.
-- **None**
+- :guilabel:`Sales`: Customer invoices, product customer taxes, etc.
+- :guilabel:`Purchases`: Vendor bills, product vendor taxes, etc.
+- :guilabel:`None`
 
 .. tip::
    You can use :guilabel:`None` for taxes that you want to include in a :ref:`Group of Taxes
@@ -179,19 +212,27 @@ Definition tab
 --------------
 
 Allocate with precision the amount of the taxable basis or percentages of the computed tax to
-multiple accounts and tax grids.
+multiple accounts and tax grids. The distribution is defined separately for invoices
+(:guilabel:`Distribution for Invoices`) and refunds (:guilabel:`Distribution for Refunds`).
 
-.. image:: taxes/definition.png
-   :alt: Allocate tax amounts to the right accounts and tax grids
+.. screenshot:: accounting-taxes-definition-tab
+   :menu: Accounting ‣ Configuration ‣ Taxes ‣ (open a tax) ‣ Definition tab
+   :shows: "Definition" tab with the "Distribution for Invoices" and "Distribution for Refunds" tables; one "Base" line and one "of tax" line (100%) each, with the tax account and the tax grids.
+   :highlight: The "Based On", "Account" and "Tax Grids" columns (red frame).
+   :data: Demo company "YourCompany HU"; tax "27%" with tax account "467 Fizetendő ÁFA".
+   :module: account
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
-- **Based On**:
+- :guilabel:`%`: the percentage of the base or of the tax amount allocated by the line.
+- :guilabel:`Based On`:
 
   - :guilabel:`Base`: the price on the invoice line
-  - :guilabel:`% of tax`: a percentage of the computed tax.
+  - :guilabel:`of tax`: a percentage of the computed tax.
 
-- **Account**: if defined, an additional journal item is recorded.
-- **Tax Grids**:  used to generate :doc:`tax reports <reporting/tax_returns>`
+- :guilabel:`Account`: if defined, an additional journal item is recorded.
+- :guilabel:`Tax Grids`: used to generate :doc:`tax reports <reporting/tax_returns>`
   automatically, according to your country's regulations.
+- :guilabel:`Tax Closing Entry`: when enabled, the line is included in the tax closing entry.
 
 .. _taxes/advanced-tab:
 
@@ -206,8 +247,24 @@ Label on invoices
 The tax label is displayed on each invoice line in the :guilabel:`Taxes` column. This is visible to
 *front-end* users on exported invoices, in customer portals, etc.
 
-.. image:: taxes/invoice-label.png
-   :alt: The label on invoices is displayed on each invoice line
+.. screenshot:: accounting-taxes-invoice-label
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (open a posted invoice) ‣ Preview
+   :shows: Invoice PDF/portal preview; the invoice lines' "Taxes" column shows the tax's "Label on Invoices" value.
+   :highlight: The "Taxes" column (red frame).
+   :data: Demo company "YourCompany HU"; tax "27%" with Label on Invoices "27%".
+   :module: account
+   :notes: English UI, light theme, crop to the invoice lines table.
+
+Description
+~~~~~~~~~~~
+
+An internal description of the tax, displayed in the tax selector and when searching for taxes.
+
+Legal notes
+~~~~~~~~~~~
+
+The :guilabel:`Legal Notes` are printed on the invoices that use the tax (e.g., the legal reason for
+a VAT exemption or for a reverse charge).
 
 .. _taxes/tax-group:
 
@@ -222,8 +279,13 @@ the same tax differently according to :doc:`fiscal positions <taxes/fiscal_posit
 
 .. example::
 
-   .. image:: taxes/invoice-tax-group.png
-      :alt: The Tax Group name is different from the Label on Invoices
+   .. screenshot:: accounting-taxes-invoice-tax-group
+      :menu: Accounting ‣ Customers ‣ Invoices ‣ (open a posted invoice) ‣ Preview
+      :shows: Invoice to an intra-community customer; the line's Taxes column shows "0% EU S", and the totals block shows the tax group "VAT 0%" above the "Total" line.
+      :highlight: The "0% EU S" label and the "VAT 0%" tax group line (red frames).
+      :data: Belgian demo company, intra-community customer with the "Intra-Community B2B" fiscal position.
+      :module: account, l10n_be
+      :notes: English UI, light theme, crop to the lines and the totals block.
 
    In the example above, the :guilabel:`0% EU S` tax for intra-community customers in Europe records
    the amount on specific accounts and tax grids. However, it remains a 0% tax to the customer. This
@@ -256,13 +318,17 @@ invoice line.
 Included in price
 ~~~~~~~~~~~~~~~~~
 
-With this option activated, the total (including the tax) equals the **sales price**.
+The :guilabel:`Included in Price` field overrides the company's default (the :guilabel:`Prices`
+field of the :ref:`Default Taxes <taxes/default>` setting) for this tax. Leave it empty to use the
+company's default, or select :guilabel:`Tax Included` or :guilabel:`Tax Excluded`.
+
+With :guilabel:`Tax Included`, the total (including the tax) equals the **sales price**.
 
 `Total = Sales Price = Computed Tax-Excluded price + Tax`
 
 .. example::
-   A product has a sales price of $1000, and we apply a *10% of Price* tax, which is *included in
-   the price*. We then have:
+   A product has a sales price of $1000, and we apply a *10%* :guilabel:`Percentage` tax, which is
+   *included in the price*. We then have:
 
    +-------------+-------------+----------+----------+
    | Product     | Price       | Tax      | Total    |
@@ -276,11 +342,9 @@ With this option activated, the total (including the tax) equals the **sales pri
    following documentation: :doc:`taxes/B2B_B2C`.
 
 .. note::
-   By default, only the :guilabel:`Tax excluded` column is displayed on invoices. To display the
-   :guilabel:`Tax included` column, click the **dropdown toggle** button and check
-   :guilabel:`Tax incl.`.
-
-   .. image:: taxes/toggle-button.png
+   On customer invoices, the :guilabel:`Amount` column of the invoice lines shows the tax-excluded
+   amount if the company's default :guilabel:`Prices` setting is :guilabel:`Tax Excluded`, and the
+   tax-included amount if it is :guilabel:`Tax Included`.
 
 .. _taxes/base-subsequent:
 
@@ -293,8 +357,13 @@ the same product.
 You can configure a new :ref:`group of taxes <taxes/computation>` to include this tax or add it
 directly to a product line.
 
-.. image:: taxes/subsequent-line.png
-   :alt: The eco-tax is taken into the basis of the 21% VAT tax
+.. screenshot:: accounting-taxes-subsequent-line
+   :menu: Accounting ‣ Customers ‣ Invoices ‣ (open a draft invoice)
+   :shows: Invoice line with two taxes "Ecotax 5%" and "21%"; the totals block shows the 21% tax computed on the price plus the eco-tax.
+   :highlight: The line's Taxes field and the tax amounts in the totals block (red frames).
+   :data: Belgian demo company; product sold at 1,000; taxes "Ecotax 5%" (Affect Base of Subsequent Taxes) and "21%".
+   :module: account
+   :notes: English UI, light theme, crop to the lines and the totals block.
 
 .. warning::
    The order in which you add the taxes on a product line has no effect on how amounts are computed.
@@ -304,8 +373,13 @@ directly to a product line.
    To reorder the sequence, go to :menuselection:`Accounting --> Configuration --> Taxes`, and drag
    and drop the lines with the handles next to the tax names.
 
-   .. image:: taxes/list-sequence.png
-      :alt: The taxes' sequence in Odoo determines which tax is applied first
+   .. screenshot:: accounting-taxes-list-sequence
+      :menu: Accounting ‣ Configuration ‣ Taxes
+      :shows: Taxes list view with the drag handles in the first column; the "Ecotax 5%" tax placed above the "21%" tax.
+      :highlight: The drag handles (red frame).
+      :data: Belgian demo company; taxes "Ecotax 5%" and "21%".
+      :module: account
+      :notes: English UI, light theme, crop to the top of the list.
 
 Extra taxes
 ===========
@@ -330,13 +404,39 @@ drop the taxes in the :ref:`order they should be computed <taxes/base-subsequent
    - In our case, we created a 5% environmental tax (Ecotax) and put it *before* the Belgian base
      tax of 21%.
 
-   .. image:: taxes/ecotax.png
-      :alt: Environmental tax sequence in Belgium.
+   .. screenshot:: accounting-taxes-ecotax
+      :menu: Accounting ‣ Configuration ‣ Taxes ‣ (open the Ecotax tax) ‣ Advanced Options tab
+      :shows: Tax form of the "Ecotax 5%" tax on the "Advanced Options" tab, with "Affect Base of Subsequent Taxes" enabled.
+      :highlight: The "Affect Base of Subsequent Taxes" checkbox (red frame).
+      :data: Belgian demo company; tax "Ecotax 5%".
+      :module: account
+      :notes: English UI, light theme, 1440px width.
+
+UNECE tax codes
+===============
+
+With the *Account Tax UNECE* (`account_tax_unece`) module, taxes can be classified according to the
+nomenclature of the United Nations Economic Commission for Europe (UNECE). The codes are used when
+generating structured electronic invoices (e.g., UBL or CII). The module adds two fields to the
+:guilabel:`Advanced Options` tab of the tax form:
+
+- :guilabel:`UNECE Tax Type`: the tax type code (UNECE DataElement 5153, e.g., `VAT`);
+- :guilabel:`UNECE Tax Category`: the tax category code (UNECE DataElement 5305, e.g., `S` for
+  standard rate, `E` for exempt).
+
+Both fields can also be displayed as optional columns in the list of taxes.
+
+.. screenshot:: accounting-taxes-unece-fields
+   :menu: Accounting ‣ Configuration ‣ Taxes ‣ (open a tax) ‣ Advanced Options tab
+   :shows: "Advanced Options" tab of the tax form with the "UNECE Tax Type" (VAT) and "UNECE Tax Category" (S) fields below the checkbox options.
+   :highlight: The two UNECE fields (red frame).
+   :data: Demo company "YourCompany HU"; tax "27%".
+   :module: account, account_tax_unece
+   :notes: English UI, light theme, 1440px width, crop to the tab.
 
 .. seealso::
   - :doc:`taxes/fiscal_positions`
   - :doc:`taxes/B2B_B2C`
-  - :doc:`reporting/tax_returns`
 
 .. toctree::
    :titlesonly:
@@ -345,6 +445,5 @@ drop the taxes in the :ref:`order they should be computed <taxes/base-subsequent
    taxes/retention
    taxes/vat_verification
    taxes/fiscal_positions
-   taxes/avatax
    taxes/eu_distance_selling
    taxes/B2B_B2C

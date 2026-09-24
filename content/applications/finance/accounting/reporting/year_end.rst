@@ -17,12 +17,15 @@ By default, the fiscal year is set to last 12 months and ends on December 31st. 
 duration and end date can vary due to cultural, administrative, and economic considerations.
 
 To modify these values, go to :menuselection:`Accounting --> Configuration --> Settings`. Under the
-:guilabel:`Fiscal Periods` section, change the :guilabel:`Last Day` field if necessary.
+:guilabel:`Fiscal Year` section, change the :guilabel:`Last Day` field if necessary.
 
 If the period lasts *more* than or *less* than 12 months, enable :guilabel:`Fiscal Years` and
-:guilabel:`Save`. Go back to the :guilabel:`Fiscal Periods` section and click :icon:`oi-arrow-right`
-:guilabel:`Fiscal Years`. Then, click :guilabel:`New`, give it a :guilabel:`Name` and both a
-:guilabel:`Start Date` and :guilabel:`End Date`.
+:guilabel:`Save`. Then click :icon:`oi-arrow-right` :guilabel:`Fiscal Years`, click
+:guilabel:`New`, and give it a :guilabel:`Name` and both a :guilabel:`Start Date` and
+:guilabel:`End Date`.
+
+Fiscal years can also be managed from :menuselection:`Accounting --> Configuration --> Accounting
+--> Fiscal Year`.
 
 .. note::
    Once the set fiscal period is over, Odoo automatically reverts to the default periodicity,
@@ -66,8 +69,8 @@ Then, to close the fiscal year:
   - Reconcile all transactions in the cash and bank accounts by running the :ref:`aged receivables
     <accounting/reporting/aged-receivable>` and :ref:`aged payables
     <accounting/reporting/aged-payable>` reports.
-  - Audit all accounts, fully understanding all transactions and their nature, including :doc:`loans
-    <../bank/loans>` and :doc:`fixed assets <../vendor_bills/assets>`.
+  - Audit all accounts, fully understanding all transactions and their nature, including loans and
+    :doc:`fixed assets <../vendor_bills/assets>`.
   - Optionally, :ref:`match payments <accounting/payments/payments-matching>` to validate any open
     vendor bills and customer invoices with their payments. While this step is optional, it could
     assist the year-end closing process if all outstanding payments and invoices are reconciled,
@@ -87,41 +90,53 @@ loans, bank accounts, prepayments, sales tax statements) to compare them against
 recorded in Odoo.
 
 .. tip::
-   As part of this process, setting a :ref:`Lock Everything <year-end/lock-everything-date>` date to
-   the last day (inclusive) of the preceding fiscal year is good practice. This ensures that journal
-   entries with an accounting date on or before the lock date cannot be created or modified during
-   the audit. Users with *administrator* access rights can still create and edit entries if an
-   exception is configured.
+   As part of this process, setting a :ref:`lock date <year-end/lock-dates>` to the last day
+   (inclusive) of the preceding fiscal year is good practice. This ensures that journal entries with
+   an accounting date on or before the lock date cannot be created or modified during the audit.
 
-.. _year-end/lock-everything-date:
+.. _year-end/lock-dates:
 
-Lock everything date
-~~~~~~~~~~~~~~~~~~~~
+Lock dates
+~~~~~~~~~~
 
 Setting a lock date prevents modifications to any posted journal entries with an accounting date on
 or before the lock date. It also prevents posting new entries with an accounting date on or before
-the lock date. In such cases, the system automatically sets the accounting date to the day after the
-lock date.
+the lock date; in such cases, the entry is postponed to a later date in accordance with its
+journal's sequence.
 
-To set a :guilabel:`Lock Everything` date, go to :menuselection:`Accounting --> Accounting --> Lock
-Dates`. In the :guilabel:`Lock Journal Entries` window, set the :guilabel:`Lock Everything` date and
-:guilabel:`Save`.
+To set the lock dates, go to :menuselection:`Accounting --> Accounting --> Lock Dates`. The
+:guilabel:`Lock your Fiscal Period` window groups them in two:
 
-.. note::
-   Users with :guilabel:`Administrator` access rights to the Accounting app can create exceptions.
-   To do so:
+:guilabel:`Management Closing`
+   - :guilabel:`Sales Lock Date` — blocks customer entries only.
+   - :guilabel:`Purchase Lock Date` — blocks vendor entries only.
+   - :guilabel:`Tax Return Lock Date` — blocks entries with taxes, see :ref:`tax lock date
+     <tax-returns/lock-date>`.
 
-   #. After setting the :guilabel:`Lock Everything` date, reopen the :guilabel:`Lock Journal
-      Entries` window and remove the :guilabel:`Lock Everything` date.
-   #. In the :guilabel:`Exception` banner, choose if this exception should be set :guilabel:`for me`
-      (the current user) or :guilabel:`for everyone` and how long it should last.
-   #. A :guilabel:`Reason` for this exception can be added.
-   #. All of this information is logged in the chatter of the :doc:`company record
-      </applications/general/companies>`.
+:guilabel:`Account Period Closing`
+   - :guilabel:`Lock Date for All Users` — blocks every entry up to and including that date. It is
+     the field shown as :guilabel:`Global Lock Date` in the settings.
+   - :guilabel:`Hard Lock Date` — same effect, but irreversible and without any possible exception.
 
-.. tip::
-   To remove the :guilabel:`Lock Everything` date after it has been saved, configure the exception
-   to apply :guilabel:`for everyone` and set the duration to :guilabel:`forever`.
+Click :guilabel:`Save` to apply them.
+
+The same fields are also available under :menuselection:`Accounting --> Configuration --> Settings`,
+in the :guilabel:`Fiscal Period Closing` section.
+
+.. warning::
+   The :guilabel:`Hard Lock Date` is irreversible and is intended to ensure the data inalterability
+   required to comply with accounting regulations in certain countries. It **cannot be changed or
+   overridden**, regardless of access rights, so set it only once the period is confirmed correct.
+
+.. screenshot:: accounting-year-end-lock-dates
+   :menu: Accounting ‣ Accounting ‣ Lock Dates
+   :shows: The "Lock your Fiscal Period" dialog with the "Management Closing" group (Sales Lock
+      Date, Purchase Lock date, Tax Return Lock Date) and the "Account Period Closing" group (Lock
+      Date for All Users, Hard Lock Date), and the Save button.
+   :highlight: The "Account Period Closing" group (red frame).
+   :data: Lock Date for All Users set to 12/31/2025, Hard Lock Date empty.
+   :module: om_fiscal_year
+   :notes: English UI, light theme, dialog only.
 
 .. _year-end/current-year-earnings:
 
@@ -139,12 +154,5 @@ To allocate the current year's earnings, create a new miscellaneous entry with a
 of the fiscal year to book them to any equity account.
 
 Then, verify whether the current year's earnings on the **balance sheet** correctly show a zero
-balance. If so, a :guilabel:`Hard Lock date` can be set to the last day of the fiscal year in
+balance. If so, a :guilabel:`Hard Lock Date` can be set to the last day of the fiscal year in
 :menuselection:`Accounting --> Accounting --> Lock Dates`.
-
-.. tip::
-   The :guilabel:`Hard Lock date` field is irreversible and is intended to ensure data
-   inalterability required to comply with accounting regulations in certain countries. If such
-   compliance is not applicable, setting this field may not be necessary. However, if required, the
-   date should only be set once it is confirmed to be correct, as it **cannot be changed or
-   overridden**, regardless of access rights.

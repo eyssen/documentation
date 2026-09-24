@@ -52,7 +52,7 @@ Tracked kit inventory setup details
 Consider turning on tracking for the kit's inventory when the kit is a tangible product or warehouse
 and inventory tracking is essential.
 
-* **Recommended for Angle-Saxon Accounting**: If the Cost of Goods Sold (COGS) needs to be recorded
+* **Recommended for Anglo-Saxon Accounting**: If the Cost of Goods Sold (COGS) needs to be recorded
   in journals, then tracking the kit's inventory is recommended.
 * **Component Purchase Constraints**: Only the kit's minimum required components can be added to an
   **eCommerce** cart unless the option to :doc:`continue
@@ -88,8 +88,13 @@ specify their quantities under the :guilabel:`Quantity` column.
 
 Once ready, click :guilabel:`Save` to save the newly created :abbr:`BoM (bill of materials)`.
 
-.. image:: kit_shipping/bom-kit-selection.png
-   :alt: Kit selection on the bill of materials.
+.. screenshot:: manufacturing-kit-shipping-bom-selection
+   :menu: Manufacturing ‣ Products ‣ Bills of Materials ‣ (BoM)
+   :shows: A BoM form with BoM Type set to "Kit", and two component lines under the Components tab.
+   :highlight: The "Kit" radio option.
+   :data: Kit product "Office Chair Kit"; components "Seat", "Legs", "Assembly Instructions".
+   :module: mrp
+   :notes: English UI, light theme, 1440px width.
 
 If the kit is solely being used as a sellable product, then only components need to be added under
 the :guilabel:`Components` tab, and configuring manufacturing operations is not necessary.

@@ -22,8 +22,13 @@ reflects their level of satisfaction. The icons represent the following ratings:
  - **Okay** - |meh|
  - **Dissatisfied** - |frown|
 
-.. image:: ratings/live-chat-ratings-faces.png
-   :alt: View of the chat window from a user's side for Odoo Live Chat.
+.. screenshot:: livechat-ratings-live-chat-ratings-faces
+   :menu: (website)
+   :shows: The live chat window at the end of a conversation, showing the three rating faces (satisfied, okay, dissatisfied) the visitor can choose from.
+   :highlight: The three rating faces (red frame).
+   :data: Demo website 'My Website' with the live chat widget enabled; channel 'YourCompany'.
+   :module: im_livechat, website_livechat
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    When customers end a conversation, a field marked :guilabel:`Receive a copy of this conversation`
@@ -33,15 +38,25 @@ reflects their level of satisfaction. The icons represent the following ratings:
 If the customer selects the |smile|, they are presented with a thank you message and a
 :guilabel:`Close Conversation` link.
 
-.. image:: ratings/live-chat-thank-you.png
-   :alt: View of customer's live chat window with thank you message.
+.. screenshot:: livechat-ratings-live-chat-thank-you
+   :menu: (website)
+   :shows: The live chat window after the visitor submitted a rating, showing the thank-you message and the conversation transcript link.
+   :highlight: The thank-you message (red frame).
+   :data: Demo website 'My Website' with the live chat widget enabled; channel 'YourCompany'.
+   :module: im_livechat, website_livechat
+   :notes: English UI, light theme, 1440px width.
 
 If the customer selects either the |meh| or the |frown|, a text box appears. Customers can add
 comments in this text box to explain why they chose this rating. This message, along with the rating
 icon, is sent to the live chat operator.
 
-.. image:: ratings/live-chat-ratings-operator-window.png
-   :alt: View of a chat window from an operator's window highlighting a rating for Odoo Live Chat.
+.. screenshot:: livechat-ratings-live-chat-ratings-operator-window
+   :menu: Discuss
+   :shows: An operator's chat window in Discuss showing the rating the visitor left at the end of the conversation.
+   :highlight: The rating in the conversation (red frame).
+   :data: Demo website 'My Website' with the live chat widget enabled; channel 'YourCompany'.
+   :module: im_livechat, website_livechat
+   :notes: English UI, light theme, 1440px width.
 
 Publish customer ratings
 ========================
@@ -55,8 +70,12 @@ Website` smart button. This opens the :guilabel:`Live Chat Channel Statistics` p
 In the upper right corner of the page, click the red :guilabel:`Unpublished` slider. The slider
 changes from :guilabel:`Unpublished` to :guilabel:`Published`.
 
-.. image:: ratings/live-chat-ratings-unpublished.png
-   :alt: View of the published ratings on the portal for Odoo Live Chat.
+.. screenshot:: livechat-ratings-live-chat-ratings-unpublished
+   :menu: (website) ‣ /livechat
+   :shows: The public live chat ratings page of the website showing the channel's satisfaction percentages and the latest comments.
+   :data: Ratings from about ten conversations.
+   :module: im_livechat, website_livechat
+   :notes: English UI, light theme, 1440px width.
 
 .. note::
    The customer notes submitted with the rating are *not* published on the website; they are kept
@@ -85,8 +104,13 @@ The page lists the names of the :guilabel:`Live Chat Channels` whose ratings pag
 published. On the left side of the channel name is an icon, which users can click on to go to the
 ratings page for the respective channel.
 
-.. image:: ratings/live-chat-published-icon.png
-   :alt: View of the webpage for Live Chat ratings emphasizing the channel icon.
+.. screenshot:: livechat-ratings-live-chat-published-icon
+   :menu: Live Chat ‣ Configuration ‣ Live Chat Channels ‣ (channel)
+   :shows: The live chat channel form with the Go to Website smart button and the Unpublished / Published toggle.
+   :highlight: The Unpublished / Published toggle (red frame).
+   :data: Channel 'YourCompany'.
+   :module: im_livechat, website_livechat
+   :notes: English UI, light theme, 1440px width.
 
 .. tip::
    The icon displayed on this page is configured on the live chat channel's configuration page. To
@@ -104,8 +128,13 @@ list of pages to select the page and highlight the line. Then, click the checkbo
 labeled :guilabel:`Is Published`. The field with the checkbox is highlighted in white. Click the
 checkbox a second time to activate the :guilabel:`Is Published` box. The webpage is now published.
 
-.. image:: ratings/live-chat-is-published.png
-   :alt: View of the list of pages for a website with the 'is published' box emphasized.
+.. screenshot:: livechat-ratings-live-chat-is-published
+   :menu: Website ‣ Site ‣ Pages
+   :shows: The website Pages list with the ratings page and its Published column checkbox.
+   :highlight: The Published checkbox of the ratings page (red frame).
+   :data: Page '/livechat'.
+   :module: im_livechat, website_livechat
+   :notes: English UI, light theme, 1440px width.
 
 Once the page has been added to the site, ratings are set to be published by default. However,
 individual ratings can be manually selected to be hidden from the public. The rating is still
@@ -121,8 +150,12 @@ The :guilabel:`Customer Ratings` report (:menuselection:`Live Chat --> Report --
 displays an overview of the ratings received on live chat conversations, as well as any additional
 comments submitted with the rating.
 
-.. image:: ratings/live-chat-ratings-report.png
-   :alt: View of the customer ratings report in Odoo Live Chat.
+.. screenshot:: livechat-ratings-live-chat-ratings-report
+   :menu: Live Chat ‣ Reports ‣ Customer Ratings
+   :shows: The Customer Ratings report in kanban view, each card showing the rating, the operator and the visitor's comment.
+   :data: Ratings from about ten conversations.
+   :module: im_livechat, website_livechat
+   :notes: English UI, light theme, 1440px width.
 
 The report defaults to a Kanban view, with each rating represented by a different card. To switch to
 a different view, click on one of the icons in the upper-right corner of the screen. The report is
@@ -143,8 +176,13 @@ To hide a rating, go to :menuselection:`Live Chat app --> Report --> Customer Ra
 Kanban card for the rating to be hidden. On the individual rating's detail page, check the box
 labeled :guilabel:`Visible Internally Only`.
 
-.. image:: ratings/live-chat-ratings-visible-internally.png
-   :alt: View of an individual rating's detail page with the visible internally setting checked.
+.. screenshot:: livechat-ratings-live-chat-ratings-visible-internally
+   :menu: Live Chat ‣ Reports ‣ Customer Ratings ‣ (rating)
+   :shows: An individual rating's form with the Visible Internally Only checkbox enabled.
+   :highlight: The Visible Internally Only checkbox (red frame).
+   :data: One rating with a comment.
+   :module: im_livechat, website_livechat
+   :notes: English UI, light theme, 1440px width.
 
 .. seealso::
    - :doc:`/applications/websites/livechat`

@@ -5203,603 +5203,603 @@ msgstr "Tras convertir una iniciativa en una oportunidad, desea que la acción a
 
 #: ../../content/applications/general/automation_rules.rst:409
 msgid "Send Email and Send SMS"
-msgstr ""
+msgstr "Enviar correo electrónico y Enviar SMS"
 
 #: ../../content/applications/general/automation_rules.rst:411
 msgid "These actions are used to send an email or a text message to a contact linked to a specific record. To do so, select or create an :guilabel:`Email Template` or an :guilabel:`SMS Template`, then, in the :guilabel:`Send Email As` or :guilabel:`Send SMS As` field, choose how you want to send the email or text message:"
-msgstr ""
+msgstr "Estas acciones se utilizan para enviar un correo electrónico o un mensaje de texto a un contacto vinculado a un registro específico. Para ello, seleccione o cree una :guilabel:`Plantilla de correo electrónico` o una :guilabel:`Plantilla de SMS` y, a continuación, en el campo :guilabel:`Enviar correo electrónico como` o :guilabel:`Enviar SMS como`, elija cómo desea enviar el correo electrónico o el mensaje de texto:"
 
 #: ../../content/applications/general/automation_rules.rst:416
 msgid ":guilabel:`Email`: to send the message as an email to the recipients of the :guilabel:`Email Template`."
-msgstr ""
+msgstr ":guilabel:`Correo electrónico`: para enviar el mensaje como un correo electrónico a los destinatarios de la :guilabel:`Plantilla de correo electrónico`."
 
 #: ../../content/applications/general/automation_rules.rst:418
 msgid ":guilabel:`Message`: to post the message on the record and notify the record's followers."
-msgstr ""
+msgstr ":guilabel:`Mensaje`: para publicar el mensaje en el registro y notificar a los seguidores del registro."
 
 #: ../../content/applications/general/automation_rules.rst:419
 msgid ":guilabel:`Note`: to send the message as an internal note visible to internal users in the chatter."
-msgstr ""
+msgstr ":guilabel:`Nota`: para enviar el mensaje como una nota interna visible para los usuarios internos en el chatter."
 
 #: ../../content/applications/general/automation_rules.rst:421
 msgid ":guilabel:`SMS (without note)`: to send the message as a text message to the recipients of the :guilabel:`SMS template`."
-msgstr ""
+msgstr ":guilabel:`SMS (sin nota)`: para enviar el mensaje como un mensaje de texto a los destinatarios de la :guilabel:`Plantilla de SMS`."
 
 #: ../../content/applications/general/automation_rules.rst:423
 msgid ":guilabel:`SMS (with note)`: to send the message as a text message to the recipients of the :guilabel:`SMS template` and post it as an internal note in the chatter."
-msgstr ""
+msgstr ":guilabel:`SMS (con nota)`: para enviar el mensaje como un mensaje de texto a los destinatarios de la :guilabel:`Plantilla de SMS` y publicarlo como una nota interna en el chatter."
 
 #: ../../content/applications/general/automation_rules.rst:425
 msgid ":guilabel:`Note only`: to only post the message as an internal note in the chatter."
-msgstr ""
+msgstr ":guilabel:`Solo nota`: para publicar el mensaje únicamente como una nota interna en el chatter."
 
 #: ../../content/applications/general/automation_rules.rst:430
 msgid "Add Followers and Remove Followers"
-msgstr ""
+msgstr "Añadir seguidores y Eliminar seguidores"
 
 #: ../../content/applications/general/automation_rules.rst:432
 msgid "This action is used to subscribe/unsubscribe existing contacts to/from the record."
-msgstr ""
+msgstr "Esta acción se utiliza para suscribir o dar de baja a contactos existentes en el registro."
 
 #: ../../content/applications/general/automation_rules.rst:437
 msgid "Create Record"
-msgstr ""
+msgstr "Crear registro"
 
 #: ../../content/applications/general/automation_rules.rst:439
 msgid "This action is used to create a new record on any model."
-msgstr ""
+msgstr "Esta acción se utiliza para crear un nuevo registro en cualquier modelo."
 
 #: ../../content/applications/general/automation_rules.rst:441
 msgid "Select the required model in the :guilabel:`Record to Create` field; it contains the current model by default. Specify a :guilabel:`Name` for the record, and then, if you want to create the record on another model, select a field in the :guilabel:`Link Field` field to link the record that triggered the creation of the new record."
-msgstr ""
+msgstr "Seleccione el modelo requerido en el campo :guilabel:`Registro a crear`; de forma predeterminada, contiene el modelo actual. Especifique un :guilabel:`Nombre` para el registro y, si desea crear el registro en otro modelo, seleccione un campo en :guilabel:`Campo de enlace` para vincular el registro que desencadenó la creación del nuevo registro."
 
 #: ../../content/applications/general/automation_rules.rst:447
 msgid "The dropdown list related to the :guilabel:`Link Field` field only contains one2many fields existing on the current model that are linked to a many2one field on the target model."
-msgstr ""
+msgstr "La lista desplegable relacionada con el campo :guilabel:`Campo de enlace` solo contiene los campos one2many existentes en el modelo actual que están vinculados a un campo many2one en el modelo de destino."
 
 #: ../../content/applications/general/automation_rules.rst:451
 msgid "You can create another automation rule with :ref:`general/automation-rules/action-update-record` actions to update the fields of the new record if necessary. For example, you can use a :guilabel:`Create Record` action to create a new project task and then assign it to a specific user using an :guilabel:`Update Record` action."
-msgstr ""
+msgstr "Puede crear otra regla de automatización con acciones :ref:`general/automation-rules/action-update-record` para actualizar los campos del nuevo registro si es necesario. Por ejemplo, puede utilizar una acción :guilabel:`Crear registro` para crear una nueva tarea de proyecto y, a continuación, asignarla a un usuario específico mediante una acción :guilabel:`Actualizar registro`."
 
 #: ../../content/applications/general/automation_rules.rst:459
 msgid "Execute Code"
-msgstr ""
+msgstr "Ejecutar código"
 
 #: ../../content/applications/general/automation_rules.rst:462
 msgid "Custom code runs with the rights of the automation rule and is not covered by standard upgrades. Have it written and maintained by a developer."
-msgstr ""
+msgstr "El código personalizado se ejecuta con los derechos de la regla de automatización y no está cubierto por las actualizaciones estándar. Solicite a un desarrollador que lo escriba y lo mantenga."
 
 #: ../../content/applications/general/automation_rules.rst:465
 msgid "This action is used to execute Python code. You can write your code into the :guilabel:`Code` tab using the following variables:"
-msgstr ""
+msgstr "Esta acción se utiliza para ejecutar código Python. Puede escribir su código en la pestaña :guilabel:`Código` utilizando las siguientes variables:"
 
 #: ../../content/applications/general/automation_rules.rst:468
 msgid "`env`: environment on which the action is triggered"
-msgstr ""
+msgstr "`env`: entorno en el que se desencadena la acción"
 
 #: ../../content/applications/general/automation_rules.rst:469
 msgid "`model`: model of the record on which the action is triggered; is a void recordset"
-msgstr ""
+msgstr "`model`: modelo del registro en el que se desencadena la acción; es un conjunto de registros vacío"
 
 #: ../../content/applications/general/automation_rules.rst:470
 msgid "`record`: record on which the action is triggered; may be void"
-msgstr ""
+msgstr "`record`: registro en el que se desencadena la acción; puede estar vacío"
 
 #: ../../content/applications/general/automation_rules.rst:471
 msgid "`records`: recordset of all records on which the action is triggered in multi-mode; this may be left empty"
-msgstr ""
+msgstr "`records`: conjunto de registros de todos los registros en los que se desencadena la acción en modo múltiple; puede dejarse vacío"
 
 #: ../../content/applications/general/automation_rules.rst:473
 msgid "`time`, `datetime`, `dateutil`, `timezone`: useful Python libraries"
-msgstr ""
+msgstr "`time`, `datetime`, `dateutil`, `timezone`: bibliotecas de Python útiles"
 
 #: ../../content/applications/general/automation_rules.rst:474
 msgid "`float_compare`: utility function to compare floats based on specific precision"
-msgstr ""
+msgstr "`float_compare`: función de utilidad para comparar números de punto flotante según una precisión específica"
 
 #: ../../content/applications/general/automation_rules.rst:475
 msgid "`log(message, level='info')`: logging function to record debug information in ir.logging table"
-msgstr ""
+msgstr "`log(message, level='info')`: función de registro para guardar información de depuración en la tabla ir.logging"
 
 #: ../../content/applications/general/automation_rules.rst:477
 msgid "`_logger.info(message)`: logger to emit messages in server logs"
-msgstr ""
+msgstr "`_logger.info(message)`: registrador para emitir mensajes en los registros del servidor"
 
 #: ../../content/applications/general/automation_rules.rst:478
 msgid "`UserError`: exception class for raising user-facing warning messages"
-msgstr ""
+msgstr "`UserError`: clase de excepción para generar mensajes de advertencia dirigidos al usuario"
 
 #: ../../content/applications/general/automation_rules.rst:479
 msgid "`Command`: x2many commands namespace"
-msgstr ""
+msgstr "`Command`: espacio de nombres de comandos x2many"
 
 #: ../../content/applications/general/automation_rules.rst:480
 msgid "`action = {...}`: to return an action"
-msgstr ""
+msgstr "`action = {...}`: para devolver una acción"
 
 #: ../../content/applications/general/automation_rules.rst:483
 msgid "The available variables are described both in the :guilabel:`Code` and :guilabel:`Help` tabs."
-msgstr ""
+msgstr "Las variables disponibles se describen tanto en la pestaña :guilabel:`Código` como en la pestaña :guilabel:`Ayuda`."
 
 #: ../../content/applications/general/automation_rules.rst:486
 msgid ":doc:`Odoo's ORM capabilities </developer/reference/backend/orm>`"
-msgstr ""
+msgstr ":doc:`Las funciones ORM de Odoo </developer/reference/backend/orm>`"
 
 #: ../../content/applications/general/automation_rules.rst:491
 msgid "Send Webhook Notification"
-msgstr ""
+msgstr "Enviar notificación de webhook"
 
 #: ../../content/applications/general/automation_rules.rst:493
 msgid "This action is used to send a `POST` API request with the values of the selected :guilabel:`Fields` to the webhook URL specified in the :guilabel:`URL` field."
-msgstr ""
+msgstr "Esta acción se utiliza para enviar una solicitud de API `POST` con los valores de los :guilabel:`Campos` seleccionados a la URL del webhook especificada en el campo :guilabel:`URL`."
 
 #: ../../content/applications/general/automation_rules.rst:496
 msgid "The :guilabel:`Sample Payload` provides a preview of the data included in the request using a random record's data or dummy data if no record is available."
-msgstr ""
+msgstr "El :guilabel:`Payload de ejemplo` proporciona una vista previa de los datos incluidos en la solicitud, utilizando los datos de un registro aleatorio o datos ficticios si no hay ningún registro disponible."
 
 #: ../../content/applications/general/automation_rules.rst:500
 msgid "It is also possible to set up an automated action that :doc:`uses a webhook to receive data from an external system <automation_rules/webhooks>` when a predefined event occurs in that system."
-msgstr ""
+msgstr "También es posible configurar una acción automatizada que :doc:`utilice un webhook para recibir datos de un sistema externo <automation_rules/webhooks>` cuando se produzca un evento predefinido en dicho sistema."
 
 #: ../../content/applications/general/automation_rules.rst:506
 msgid "Execute Existing Actions"
-msgstr ""
+msgstr "Ejecutar acciones existentes"
 
 #: ../../content/applications/general/automation_rules.rst:508
 msgid "The action is used to trigger multiple actions (linked to the current model) at the same time. To do so, click on :guilabel:`Add a line`, then, in the :guilabel:`Add: Child Actions` pop-up, select an existing action or click :guilabel:`New` to create a new one."
-msgstr ""
+msgstr "Esta acción se utiliza para desencadenar varias acciones (vinculadas al modelo actual) al mismo tiempo. Para ello, haga clic en :guilabel:`Añadir una línea` y, en la ventana emergente :guilabel:`Añadir: acciones secundarias`, seleccione una acción existente o haga clic en :guilabel:`Nuevo` para crear una nueva."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:3
 msgid "Webhooks"
-msgstr ""
+msgstr "Webhooks"
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:10
 msgid "Webhooks, which are automation rules with the :guilabel:`On webhook` trigger, allow you to automate an action in your Odoo database when a specific event occurs in another, external system."
-msgstr ""
+msgstr "Los webhooks, que son reglas de automatización con el desencadenante :guilabel:`Al recibir un webhook`, le permiten automatizar una acción en su base de datos de Odoo cuando se produce un evento específico en otro sistema externo."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:13
 msgid "In practice, this works as follows: when the event occurs in the external system, a data file (the \"payload\") is sent to the Odoo webhook's URL via a `POST` API request, and a predefined action is performed in your Odoo database."
-msgstr ""
+msgstr "En la práctica, esto funciona de la siguiente manera: cuando se produce el evento en el sistema externo, se envía un archivo de datos (el «payload») a la URL del webhook de Odoo mediante una solicitud de API `POST`, y se ejecuta una acción predefinida en su base de datos de Odoo."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:17
 msgid "Unlike scheduled actions, which run at predefined intervals, or manual API requests, which need to be explicitly invoked, webhooks enable real-time, event-driven communication and automation. For example, you can set up a webhook to have your Odoo inventory data updated automatically when a sales order is confirmed in an external point-of-sale system."
-msgstr ""
+msgstr "A diferencia de las acciones planificadas, que se ejecutan en intervalos predefinidos, o de las solicitudes de API manuales, que deben invocarse explícitamente, los webhooks permiten una comunicación y una automatización en tiempo real basadas en eventos. Por ejemplo, puede configurar un webhook para que los datos de inventario de Odoo se actualicen automáticamente cuando se confirme un pedido de venta en un sistema de punto de venta externo."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:22
 msgid "Setting up a webhook in Odoo requires no coding when connecting two Odoo databases, but :ref:`testing a webhook <general/automation-rules/webhooks/test-webhook>` requires an external tool. :ref:`Custom target records or actions <general/automation-rules/webhooks/webhook-example>` may require programming skills."
-msgstr ""
+msgstr "Configurar un webhook en Odoo no requiere programación cuando se conectan dos bases de datos de Odoo, pero :ref:`probar un webhook <general/automation-rules/webhooks/test-webhook>` requiere una herramienta externa. Los :ref:`registros o acciones de destino personalizados <general/automation-rules/webhooks/webhook-example>` pueden requerir conocimientos de programación."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:28
 msgid "This article covers creating a webhook that *receives* data from an external source. However, it is also possible to create an automated action that :ref:`sends data to an external webhook <general/automation-rules/action-webhook>` when a change occurs in your Odoo database."
-msgstr ""
+msgstr "Este artículo trata sobre la creación de un webhook que *recibe* datos de una fuente externa. Sin embargo, también es posible crear una acción automatizada que :ref:`envíe datos a un webhook externo <general/automation-rules/action-webhook>` cuando se produzca un cambio en su base de datos de Odoo."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:35
 msgid "Create a webhook in Odoo"
-msgstr ""
+msgstr "Crear un webhook en Odoo"
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:38
 msgid "Before implementing a webhook in a live database, configure and test it using a duplicate (test) database to ensure the webhook performs as intended."
-msgstr ""
+msgstr "Antes de implementar un webhook en una base de datos en producción, configúrelo y pruébelo utilizando una base de datos duplicada (de prueba) para asegurarse de que funciona según lo previsto."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:42
 msgid ":ref:`Activating developer mode <developer-mode>` before creating up a webhook gives greater flexibility in selecting the model the automation rule targets. It also allows you to find the technical name of the model and fields, which may be needed to configure the payload."
-msgstr ""
+msgstr ":ref:`Activar el modo de desarrollador <developer-mode>` antes de crear un webhook proporciona mayor flexibilidad a la hora de seleccionar el modelo al que se dirige la regla de automatización. También le permite encontrar el nombre técnico del modelo y de los campos, lo cual puede ser necesario para configurar el payload."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:47
 msgid "To find a model's technical name, with developer mode activated, hover over the model name and then click :icon:`fa-arrow-right` :guilabel:`(Internal link)`. The technical name can be found in the :guilabel:`Model` field. For example, a sales order webhook uses the *Sales Order* model, but the technical name `sale.order` is used in the payload."
-msgstr ""
+msgstr "Para encontrar el nombre técnico de un modelo, con el modo de desarrollador activado, pase el cursor sobre el nombre del modelo y haga clic en :icon:`fa-arrow-right` :guilabel:`(Enlace interno)`. El nombre técnico se encuentra en el campo :guilabel:`Modelo`. Por ejemplo, un webhook de pedido de venta utiliza el modelo *Pedido de venta*, pero en el payload se utiliza el nombre técnico `sale.order`."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:52
 msgid "To create a webhook, proceed as follows:"
-msgstr ""
+msgstr "Para crear un webhook, siga estos pasos:"
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:56
 msgid "Give the webhook a clear, meaningful name that identifies its purpose."
-msgstr ""
+msgstr "Asigne al webhook un nombre claro y significativo que identifique su finalidad."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:57
 msgid "Select the appropriate :guilabel:`Model` from the dropdown."
-msgstr ""
+msgstr "Seleccione el :guilabel:`Modelo` adecuado en la lista desplegable."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:58
 msgid "Set the :guilabel:`Trigger` to :guilabel:`On webhook`."
-msgstr ""
+msgstr "Establezca el :guilabel:`Desencadenante` en :guilabel:`Al recibir un webhook`."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:60
 msgid "The webhook's URL is automatically generated, but can be changed if needed by clicking :guilabel:`Rotate Secret`. This is the URL that should be used when implementing the webhook in the external system that will send updates to the database."
-msgstr ""
+msgstr "La URL del webhook se genera automáticamente, pero se puede cambiar si es necesario haciendo clic en :guilabel:`Rotar secreto`. Esta es la URL que debe utilizarse al implementar el webhook en el sistema externo que enviará las actualizaciones a la base de datos."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:65
 msgid "The URL is **confidential** and should be treated with care. Sharing it online or without caution can provide unintended access to the Odoo database. If the URL is updated after the initial implementation, make sure to update it in the external system."
-msgstr ""
+msgstr "La URL es **confidencial** y debe tratarse con cuidado. Compartirla en línea o sin precaución puede otorgar un acceso no deseado a la base de datos de Odoo. Si la URL se actualiza después de la implementación inicial, asegúrese de actualizarla también en el sistema externo."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:69
 msgid "If desired, enable :guilabel:`Log Calls` to track the history of API requests made to the webhook's URL, e.g., for troubleshooting purposes."
-msgstr ""
+msgstr "Si lo desea, active :guilabel:`Registrar llamadas` para llevar un historial de las solicitudes de API realizadas a la URL del webhook, por ejemplo, con fines de resolución de problemas."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:72
 msgid "If the system sending the webhook is not Odoo, adjust the :guilabel:`Target Record` code to look for the JSON record included in the payload when the API request is made to the webhook's URL. If the system sending the webhook is an Odoo database, ensure that the `id` and `model` appear in the payload."
-msgstr ""
+msgstr "Si el sistema que envía el webhook no es Odoo, ajuste el código de :guilabel:`Registro de destino` para buscar el registro JSON incluido en el payload cuando se realice la solicitud de API a la URL del webhook. Si el sistema que envía el webhook es una base de datos de Odoo, asegúrese de que `id` y `model` aparezcan en el payload."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:77
 msgid "If the webhook is used to create records in the Odoo database, use `model.browse(i)` or `model.search(i)` instead of the default :guilabel:`Target Record` format."
-msgstr ""
+msgstr "Si el webhook se utiliza para crear registros en la base de datos de Odoo, utilice `model.browse(i)` o `model.search(i)` en lugar del formato predeterminado de :guilabel:`Registro de destino`."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:80
 msgid "Click :guilabel:`Add an action` in the :guilabel:`Actions To Do` tab to define the :ref:`actions <general/automation-rules/action>` to be executed."
-msgstr ""
+msgstr "Haga clic en :guilabel:`Añadir una acción` en la pestaña :guilabel:`Acciones a realizar` para definir las :ref:`acciones <general/automation-rules/action>` que se ejecutarán."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:82
 msgid "Before implementing the webhook in the external system, :ref:`test <general/automation-rules/webhooks/test-webhook>` it to ensure it works as intended."
-msgstr ""
+msgstr "Antes de implementar el webhook en el sistema externo, :ref:`pruébelo <general/automation-rules/webhooks/test-webhook>` para asegurarse de que funciona según lo previsto."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:86
 msgid "To access the history of API requests if :guilabel:`Log Calls` has been enabled, click the :guilabel:`Logs` smart button at the top of the :guilabel:`Automation rules` form."
-msgstr ""
+msgstr "Para acceder al historial de solicitudes de API si se ha activado :guilabel:`Registrar llamadas`, haga clic en el botón inteligente :guilabel:`Registros` situado en la parte superior del formulario de :guilabel:`Reglas de automatización`."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:88
 msgid "If the purpose of the webhook is anything other than to update an existing record, e.g., to create a new record, the :guilabel:`Execute Code` action must be chosen."
-msgstr ""
+msgstr "Si la finalidad del webhook es distinta de actualizar un registro existente, por ejemplo, crear un nuevo registro, debe elegirse la acción :guilabel:`Ejecutar código`."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:94
 msgid "Test a webhook"
-msgstr ""
+msgstr "Probar un webhook"
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:96
 msgid "Testing a webhook requires a test payload and an external tool or system, like `Postman <https://www.postman.com/>`_, to send the payload via a `POST` API request. This section presents the steps to test a webhook in Postman."
-msgstr ""
+msgstr "Para probar un webhook se necesita un payload de prueba y una herramienta o sistema externo, como `Postman <https://www.postman.com/>`_, para enviar el payload mediante una solicitud de API `POST`. Esta sección presenta los pasos para probar un webhook en Postman."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:101
 msgid "See the :ref:`webhook use cases section <general/automation-rules/webhooks/webhook-examples>` for step-by-step explanations of how to test webhooks using test payloads."
-msgstr ""
+msgstr "Consulte la :ref:`sección de casos de uso de webhooks <general/automation-rules/webhooks/webhook-examples>` para obtener explicaciones paso a paso sobre cómo probar webhooks utilizando payloads de prueba."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:103
 msgid "To get specific help with testing a webhook with Postman, contact their support team."
-msgstr ""
+msgstr "Para obtener ayuda específica sobre cómo probar un webhook con Postman, póngase en contacto con su equipo de soporte."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:105
 msgid "In Postman, create a new HTTP request and set its method to :guilabel:`POST`."
-msgstr ""
+msgstr "En Postman, cree una nueva solicitud HTTP y configure su método como :guilabel:`POST`."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:106
 msgid "Copy the webhook's URL from your Odoo database using the :icon:`fa-link` :guilabel:`(link)` icon and paste it into the URL field in Postman."
-msgstr ""
+msgstr "Copie la URL del webhook desde su base de datos de Odoo mediante el icono :icon:`fa-link` :guilabel:`(enlace)` y péguela en el campo de URL de Postman."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:108 ../../content/applications/general/automation_rules/webhooks.rst:190 ../../content/applications/general/automation_rules/webhooks.rst:266
 msgid "Click the :guilabel:`Body` tab and select :guilabel:`raw`."
-msgstr ""
+msgstr "Haga clic en la pestaña :guilabel:`Body` y seleccione :guilabel:`raw`."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:109
 msgid "Set the file type to :guilabel:`JSON`, then copy the code from the test payload and paste it into the code editor."
-msgstr ""
+msgstr "Establezca el tipo de archivo en :guilabel:`JSON`, luego copie el código del payload de prueba y péguelo en el editor de código."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:111 ../../content/applications/general/automation_rules/webhooks.rst:204 ../../content/applications/general/automation_rules/webhooks.rst:280
 msgid "Click :guilabel:`Send`."
-msgstr ""
+msgstr "Haga clic en :guilabel:`Send`."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:115
 msgid "In the :guilabel:`Response` viewer at the bottom of the screen in Postman, details, including a HTTP response code, indicate whether or not the webhook is functioning correctly."
-msgstr ""
+msgstr "En el visor :guilabel:`Response` de la parte inferior de la pantalla en Postman, los detalles, incluido un código de respuesta HTTP, indican si el webhook funciona correctamente o no."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:118
 msgid "A `200 OK` or `status: ok` message indicates that the webhook is functioning properly on Odoo's side. From here, implementation can begin with the other system to automatically send the API requests to the Odoo webhook's URL."
-msgstr ""
+msgstr "Un mensaje `200 OK` o `status: ok` indica que el webhook funciona correctamente en el lado de Odoo. A partir de aquí, se puede comenzar la implementación con el otro sistema para enviar automáticamente las solicitudes de API a la URL del webhook de Odoo."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:122
 msgid "If any other response is returned, the number associated with it helps to identify the problem. For example, a `500 Internal Server Error` message means that Odoo could not interpret the call properly. In this case, ensure the fields found in the JSON file are properly mapped in the webhook's configuration and in the system sending the test call."
-msgstr ""
+msgstr "Si se devuelve cualquier otra respuesta, el número asociado a ella ayuda a identificar el problema. Por ejemplo, un mensaje `500 Internal Server Error` significa que Odoo no pudo interpretar correctamente la llamada. En este caso, asegúrese de que los campos que se encuentran en el archivo JSON estén correctamente asignados en la configuración del webhook y en el sistema que envía la llamada de prueba."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:128
 msgid "Turning on call logging in the webhook's configuration in Odoo provides error logs if the webhook is not functioning as intended."
-msgstr ""
+msgstr "Activar el registro de llamadas en la configuración del webhook en Odoo proporciona registros de error si el webhook no funciona según lo previsto."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:132
 msgid "Implement a webhook in an external system"
-msgstr ""
+msgstr "Implementar un webhook en un sistema externo"
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:134
 msgid "When the webhook has been successfully created in Odoo and tested, implement it in the system that sends data to the Odoo database, making sure the `POST` API requests are sent to the webhook's URL."
-msgstr ""
+msgstr "Una vez creado y probado correctamente el webhook en Odoo, impleméntelo en el sistema que envía datos a la base de datos de Odoo, asegurándose de que las solicitudes de API `POST` se envíen a la URL del webhook."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:140
 msgid "Webhook use cases"
-msgstr ""
+msgstr "Casos de uso de webhooks"
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:142
 msgid "Below are two examples of how to use webhooks in Odoo. A test payload is provided for each example, and can be found in the section on testing the webhook. `Postman <https://www.postman.com/>`_ is used to send the test payload."
-msgstr ""
+msgstr "A continuación se presentan dos ejemplos de cómo utilizar webhooks en Odoo. Para cada ejemplo se proporciona un payload de prueba, que se puede encontrar en la sección sobre cómo probar el webhook. `Postman <https://www.postman.com/>`_ se utiliza para enviar el payload de prueba."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:147
 msgid "Update a sales order's currency"
-msgstr ""
+msgstr "Actualizar la divisa de un pedido de venta"
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:149
 msgid "This webhook updates a sales order in the **Sales** app to `USD` when the external system sends a `POST` API request to the webhook's URL that includes that sales order number (which is identified by the payload's `id` record)."
-msgstr ""
+msgstr "Este webhook actualiza un pedido de venta en la aplicación **Ventas** a `USD` cuando el sistema externo envía una solicitud de API `POST` a la URL del webhook que incluye el número de ese pedido de venta (identificado por el registro `id` del payload)."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:153
 msgid "This could be useful for subsidiaries outside the United States with a mother company located inside the United States or during mergers when consolidating data into one Odoo database."
-msgstr ""
+msgstr "Esto puede ser útil para filiales fuera de Estados Unidos con una empresa matriz ubicada dentro de Estados Unidos, o durante fusiones al consolidar datos en una única base de datos de Odoo."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:157 ../../content/applications/general/automation_rules/webhooks.rst:220
 msgid "Create the webhook"
-msgstr ""
+msgstr "Crear el webhook"
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:159 ../../content/applications/general/automation_rules/webhooks.rst:222
 msgid "To create this webhook, proceed as follows:"
-msgstr ""
+msgstr "Para crear este webhook, siga estos pasos:"
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:161
 msgid "Go to :menuselection:`Settings --> Technical --> Automation --> Automation Rules` and click :guilabel:`New`. Select the *Sales Order* model and set the :guilabel:`Trigger` to :guilabel:`On webhook`."
-msgstr ""
+msgstr "Vaya a :menuselection:`Ajustes --> Técnico --> Automatización --> Reglas de automatización` y haga clic en :guilabel:`Nuevo`. Seleccione el modelo *Pedido de venta* y establezca el :guilabel:`Desencadenante` en :guilabel:`Al recibir un webhook`."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:164
 msgid "Set the :guilabel:`Target Record` to `model.env[payload.get('model')].browse(int(payload.get('id')))`, where:"
-msgstr ""
+msgstr "Establezca el :guilabel:`Registro de destino` en `model.env[payload.get('model')].browse(int(payload.get('id')))`, donde:"
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:167
 msgid "`payload.get('model')` retrieves the value associated with the `model` key in the payload, i.e., `sale.order`, which is the technical name of the *Sales Order* model."
-msgstr ""
+msgstr "`payload.get('model')` recupera el valor asociado a la clave `model` en el payload, es decir, `sale.order`, que es el nombre técnico del modelo *Pedido de venta*."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:169
 msgid "`payload.get('id')` retrieves the value associated with the `id` key in the payload, i.e., the number of the target sales order in your Odoo database with the `S` and leading zeros removed."
-msgstr ""
+msgstr "`payload.get('id')` recupera el valor asociado a la clave `id` en el payload, es decir, el número del pedido de venta de destino en su base de datos de Odoo, sin la `S` ni los ceros iniciales."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:172
 msgid "`int` converts the retrieved id to an integer (i.e., a whole number) because the method `browse()` can only be used with an integer."
-msgstr ""
+msgstr "`int` convierte el id recuperado en un número entero, ya que el método `browse()` solo puede utilizarse con un número entero."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:175 ../../content/applications/general/automation_rules/webhooks.rst:230
 msgid "Click :guilabel:`Add an action`."
-msgstr ""
+msgstr "Haga clic en :guilabel:`Añadir una acción`."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:176
 msgid "In the :guilabel:`Type` section, click :guilabel:`Update Record`."
-msgstr ""
+msgstr "En la sección :guilabel:`Tipo`, haga clic en :guilabel:`Actualizar registro`."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:177
 msgid "In the :guilabel:`Action details` section, select :guilabel:`Update`, choose the field :guilabel:`Currency`, and select :guilabel:`USD`."
-msgstr ""
+msgstr "En la sección :guilabel:`Detalles de la acción`, seleccione :guilabel:`Actualizar`, elija el campo :guilabel:`Divisa` y seleccione :guilabel:`USD`."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:179 ../../content/applications/general/automation_rules/webhooks.rst:255
 msgid "Click :guilabel:`Save & Close`."
-msgstr ""
+msgstr "Haga clic en :guilabel:`Guardar y cerrar`."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:182 ../../content/applications/general/automation_rules/webhooks.rst:258
 msgid "Test the webhook"
-msgstr ""
+msgstr "Probar el webhook"
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:184 ../../content/applications/general/automation_rules/webhooks.rst:260
 msgid "To test this webhook, proceed as follows:"
-msgstr ""
+msgstr "Para probar este webhook, siga estos pasos:"
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:186
 msgid "With `Postman <https://www.postman.com/>`_ open, create a new HTTP request and set its method to :guilabel:`POST`."
-msgstr ""
+msgstr "Con `Postman <https://www.postman.com/>`_ abierto, cree una nueva solicitud HTTP y configure su método como :guilabel:`POST`."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:188 ../../content/applications/general/automation_rules/webhooks.rst:264
 msgid "Copy the URL of the Odoo webhook using the :icon:`fa-link` :guilabel:`(link)` icon and paste it into the URL field in Postman."
-msgstr ""
+msgstr "Copie la URL del webhook de Odoo mediante el icono :icon:`fa-link` :guilabel:`(enlace)` y péguela en el campo de URL de Postman."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:191 ../../content/applications/general/automation_rules/webhooks.rst:267
 msgid "Set the file type to :guilabel:`JSON`, then copy this code, i.e., the payload, and paste it into the code editor:"
-msgstr ""
+msgstr "Establezca el tipo de archivo en :guilabel:`JSON`, luego copie este código, es decir, el payload, y péguelo en el editor de código:"
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:201
 msgid "In your Odoo database, choose a sales order to test the webhook on. In the pasted code, replace `SALES ORDER NUMBER` with the sales order's number without the `S` or any zeros before the number. For example, a sales order with the number `S00007` should be entered as `7` in Postman."
-msgstr ""
+msgstr "En su base de datos de Odoo, elija un pedido de venta para probar el webhook. En el código pegado, sustituya `SALES ORDER NUMBER` por el número del pedido de venta sin la `S` ni los ceros que lo preceden. Por ejemplo, un pedido de venta con el número `S00007` debe introducirse como `7` en Postman."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:205 ../../content/applications/general/automation_rules/webhooks.rst:281
 msgid "Consult the :ref:`Response viewer <general/automation-rules/webhooks/test-webhook-response>` in Postman to determine whether or not the webhook is functioning properly. If a message other than `200 OK` or `status: ok` is returned, the number associated with the message helps to identify the problem."
-msgstr ""
+msgstr "Consulte el :ref:`visor de respuestas <general/automation-rules/webhooks/test-webhook-response>` en Postman para determinar si el webhook funciona correctamente o no. Si se devuelve un mensaje distinto de `200 OK` o `status: ok`, el número asociado al mensaje ayuda a identificar el problema."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:213
 msgid "Create a new contact"
-msgstr ""
+msgstr "Crear un nuevo contacto"
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:215
 msgid "This webhook uses custom code to create a new contact in an Odoo database when the external system sends a `POST` API request to the webhook's URL that includes the contact's information. This could be helpful for automatically creating new vendors or customers."
-msgstr ""
+msgstr "Este webhook utiliza código personalizado para crear un nuevo contacto en una base de datos de Odoo cuando el sistema externo envía una solicitud de API `POST` a la URL del webhook que incluye la información del contacto. Esto puede ser útil para crear automáticamente nuevos proveedores o clientes."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:224
 msgid "Go to :menuselection:`Settings --> Technical --> Automation --> Automation Rules` and click :guilabel:`New`. Select the *Contact* model and set the :guilabel:`Trigger` to :guilabel:`On webhook`."
-msgstr ""
+msgstr "Vaya a :menuselection:`Ajustes --> Técnico --> Automatización --> Reglas de automatización` y haga clic en :guilabel:`Nuevo`. Seleccione el modelo *Contacto* y establezca el :guilabel:`Desencadenante` en :guilabel:`Al recibir un webhook`."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:227
 msgid "Set the :guilabel:`Target Record` to `model.browse([2])`. This is essentially a placeholder as the code in the automated action tells the webhook what needs to be retrieved from the payload and in which model the record needs to be created."
-msgstr ""
+msgstr "Establezca el :guilabel:`Registro de destino` en `model.browse([2])`. Esto es esencialmente un marcador de posición, ya que el código de la acción automatizada indica al webhook qué debe recuperarse del payload y en qué modelo debe crearse el registro."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:231
 msgid "In the :guilabel:`Type` section, click :guilabel:`Execute Code`."
-msgstr ""
+msgstr "En la sección :guilabel:`Tipo`, haga clic en :guilabel:`Ejecutar código`."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:232
 msgid "Copy this code and paste it into the code editor in the :guilabel:`Code` tab of the :guilabel:`Action details` section:"
-msgstr ""
+msgstr "Copie este código y péguelo en el editor de código de la pestaña :guilabel:`Código` de la sección :guilabel:`Detalles de la acción`:"
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:262
 msgid "In `Postman <https://www.postman.com/>`_, create a new HTTP request and set its method to :guilabel:`POST`."
-msgstr ""
+msgstr "En `Postman <https://www.postman.com/>`_, cree una nueva solicitud HTTP y configure su método como :guilabel:`POST`."
 
 #: ../../content/applications/general/automation_rules/webhooks.rst:278
 msgid "In the pasted code, replace the `CONTACT NAME`, `CONTACTEMAIL@EMAIL.COM`, and `CONTACT PHONE NUMBER` with a new contact's information."
-msgstr ""
+msgstr "En el código pegado, sustituya `CONTACT NAME`, `CONTACTEMAIL@EMAIL.COM` y `CONTACT PHONE NUMBER` por la información de un nuevo contacto."
 
 #: ../../content/applications/general/backend_interface.rst:3
 msgid "Backend interface"
-msgstr ""
+msgstr "Interfaz de backend"
 
 #: ../../content/applications/general/backend_interface.rst:5
 msgid "Several eYssen and community modules change the look and the ergonomics of the back end (the interface used by internal users). This page describes what they add for the users, and how an administrator can adapt the appearance to the company."
-msgstr ""
+msgstr "Varios módulos de eYssen y de la comunidad modifican el aspecto y la ergonomía del backend (la interfaz utilizada por los usuarios internos). Esta página describe lo que aportan a los usuarios y cómo un administrador puede adaptar la apariencia a la empresa."
 
 #: ../../content/applications/general/backend_interface.rst:12
 msgid "eYssen backend theme"
-msgstr ""
+msgstr "Tema de backend de eYssen"
 
 #: ../../content/applications/general/backend_interface.rst:14
 msgid "The *eYssen Backend Theme* module (`eyssen_backend_theme`) replaces the standard navigation of the back end and lets each company use its own colors."
-msgstr ""
+msgstr "El módulo *eYssen Backend Theme* (`eyssen_backend_theme`) sustituye la navegación estándar del backend y permite que cada empresa utilice sus propios colores."
 
 #: ../../content/applications/general/backend_interface.rst:18
 msgid "To install the theme, go to :menuselection:`Settings --> eYssen ERP`, and, in the :guilabel:`General Modules` section, enable :guilabel:`eYssen ERP Backend Theme`. The theme installs along with it the :ref:`dialog size <backend-interface/dialog-size>` and :ref:`column width <backend-interface/column-width>` modules described below, the :doc:`chatter position <../productivity/discuss/chatter>` preference (`muk_web_chatter`), and the calculator (`odoo_calculator_tool`)."
-msgstr ""
+msgstr "Para instalar el tema, vaya a :menuselection:`Ajustes --> eYssen ERP` y, en la sección :guilabel:`General Modules`, active :guilabel:`eYssen ERP Backend Theme`. Junto con el tema se instalan los módulos de :ref:`tamaño de los diálogos <backend-interface/dialog-size>` y :ref:`ancho de las columnas <backend-interface/column-width>` descritos a continuación, la preferencia de :doc:`posición del chatter <../productivity/discuss/chatter>` (`muk_web_chatter`) y la calculadora (`odoo_calculator_tool`)."
 
 #: ../../content/applications/general/backend_interface.rst:26
 msgid "Home menu"
-msgstr ""
+msgstr "Menú de inicio"
 
 #: ../../content/applications/general/backend_interface.rst:28
 msgid "Click the :icon:`oi-apps` (:guilabel:`Home Menu`) icon, in the top-left corner, to open the home menu: a full-screen panel showing the icon and the name of every application the user has access to. Click an application to open it, or click outside the icons to close the panel."
-msgstr ""
+msgstr "Haga clic en el icono :icon:`oi-apps` (:guilabel:`Menú de inicio`), situado en la esquina superior izquierda, para abrir el menú de inicio: un panel a pantalla completa que muestra el icono y el nombre de todas las aplicaciones a las que el usuario tiene acceso. Haga clic en una aplicación para abrirla, o haga clic fuera de los iconos para cerrar el panel."
 
 #: ../../content/applications/general/backend_interface.rst:32
 msgid "While the home menu is open, start typing to search: the command palette opens in menu search mode (`/`), and lists the matching menu items of all applications."
-msgstr ""
+msgstr "Mientras el menú de inicio está abierto, empiece a escribir para buscar: la paleta de comandos se abre en el modo de búsqueda de menús (`/`) y enumera los elementos de menú coincidentes de todas las aplicaciones."
 
 #: ../../content/applications/general/backend_interface.rst:36
 msgid "Apps bar"
-msgstr ""
+msgstr "Barra de aplicaciones"
 
 #: ../../content/applications/general/backend_interface.rst:38
 msgid "The apps bar is a permanent shortcut bar listing the applications, so that the user can switch from one application to another with a single click, without opening the home menu. The current application is highlighted."
-msgstr ""
+msgstr "La barra de aplicaciones es una barra de accesos directos permanente que enumera las aplicaciones, de manera que el usuario puede pasar de una aplicación a otra con un solo clic, sin necesidad de abrir el menú de inicio. La aplicación actual aparece resaltada."
 
 #: ../../content/applications/general/backend_interface.rst:42
 msgid "Each user chooses where the apps bar is displayed: click the profile avatar in the top-right corner, select :guilabel:`Preferences`, and set the :guilabel:`Appsbar Position` field to one of the following values:"
-msgstr ""
+msgstr "Cada usuario elige dónde se muestra la barra de aplicaciones: haga clic en el avatar del perfil situado en la esquina superior derecha, seleccione :guilabel:`Preferencias` y establezca el campo :guilabel:`Posición de la barra de aplicaciones` en uno de los siguientes valores:"
 
 #: ../../content/applications/general/backend_interface.rst:46
 msgid ":guilabel:`Bottom Dock` (default): a floating dock centered at the bottom of the screen. Hover over an icon to enlarge it and display the name of the application. The dock hides itself while the home menu is open;"
-msgstr ""
+msgstr ":guilabel:`Bottom Dock` (predeterminado): un dock flotante centrado en la parte inferior de la pantalla. Pase el cursor sobre un icono para ampliarlo y mostrar el nombre de la aplicación. El dock se oculta mientras el menú de inicio está abierto;"
 
 #: ../../content/applications/general/backend_interface.rst:49
 msgid ":guilabel:`Left Small`: a narrow vertical bar on the left, with icons only;"
-msgstr ""
+msgstr ":guilabel:`Left Small`: una barra vertical estrecha a la izquierda, únicamente con iconos;"
 
 #: ../../content/applications/general/backend_interface.rst:50
 msgid ":guilabel:`Left Large`: a wide vertical bar on the left, with the icon and the name of each application, and the company's apps bar image at the bottom. On tablets, the bar shrinks to the icons; on mobile phones, it is hidden;"
-msgstr ""
+msgstr ":guilabel:`Left Large`: una barra vertical ancha a la izquierda, con el icono y el nombre de cada aplicación, y la imagen de la barra de aplicaciones de la empresa en la parte inferior. En tablets, la barra se reduce a los iconos; en teléfonos móviles, se oculta;"
 
 #: ../../content/applications/general/backend_interface.rst:53
 msgid ":guilabel:`Invisible`: no apps bar."
-msgstr ""
+msgstr ":guilabel:`Invisible`: sin barra de aplicaciones."
 
 #: ../../content/applications/general/backend_interface.rst:55
 msgid "Reload the page to apply the change."
-msgstr ""
+msgstr "Vuelva a cargar la página para aplicar el cambio."
 
 #: ../../content/applications/general/backend_interface.rst:73
 msgid "Company appearance"
-msgstr ""
+msgstr "Apariencia de la empresa"
 
 #: ../../content/applications/general/backend_interface.rst:75
 msgid "To adapt the theme to the company, go to :menuselection:`Settings --> General Settings`, and scroll down to the :guilabel:`Companies` section:"
-msgstr ""
+msgstr "Para adaptar el tema a la empresa, vaya a :menuselection:`Ajustes --> Ajustes generales` y desplácese hasta la sección :guilabel:`Empresas`:"
 
 #: ../../content/applications/general/backend_interface.rst:78
 msgid ":guilabel:`Backend Theme Appearance`: upload the :guilabel:`Appsbar Image`, displayed at the bottom of the apps bar in the :guilabel:`Left Large` position. The setting is company-specific; when the module is installed, the image of each company is initialized with a default image."
-msgstr ""
+msgstr ":guilabel:`Backend Theme Appearance`: suba la :guilabel:`Appsbar Image`, que se muestra en la parte inferior de la barra de aplicaciones en la posición :guilabel:`Left Large`. Este ajuste es específico de cada empresa; cuando se instala el módulo, la imagen de cada empresa se inicializa con una imagen predeterminada."
 
 #: ../../content/applications/general/backend_interface.rst:81
 msgid ":guilabel:`Backend ThemeColors`: pick the :guilabel:`Brand`, :guilabel:`Primary`, :guilabel:`Success`, :guilabel:`Info`, :guilabel:`Warning`, and :guilabel:`Danger` colors. The brand color replaces the standard Odoo brand color (e.g., in the navigation bar), the primary color is used for the main buttons and the links, and the four others for the corresponding badges, alerts, and buttons."
-msgstr ""
+msgstr ":guilabel:`Backend ThemeColors`: elija los colores :guilabel:`Brand`, :guilabel:`Primary`, :guilabel:`Success`, :guilabel:`Info`, :guilabel:`Warning` y :guilabel:`Danger`. El color de marca sustituye al color de marca estándar de Odoo (por ejemplo, en la barra de navegación), el color primario se utiliza para los botones principales y los enlaces, y los otros cuatro para las insignias, alertas y botones correspondientes."
 
 #: ../../content/applications/general/backend_interface.rst:87
 msgid "Click :guilabel:`Save`. The style sheets of the back end are regenerated with the new colors, and the page reloads."
-msgstr ""
+msgstr "Haga clic en :guilabel:`Guardar`. Las hojas de estilo del backend se regeneran con los nuevos colores y la página se vuelve a cargar."
 
 #: ../../content/applications/general/backend_interface.rst:91
 msgid "The colors are stored on the company, but they are applied to the whole database: the colors saved last are the ones in use for all companies."
-msgstr ""
+msgstr "Los colores se almacenan en la empresa, pero se aplican a toda la base de datos: los últimos colores guardados son los que se utilizan para todas las empresas."
 
 #: ../../content/applications/general/backend_interface.rst:93
 msgid "The :guilabel:`Favicon` field is not used yet."
-msgstr ""
+msgstr "El campo :guilabel:`Favicon` aún no se utiliza."
 
 #: ../../content/applications/general/backend_interface.rst:103
 msgid "Recipients of a message"
-msgstr ""
+msgstr "Destinatarios de un mensaje"
 
 #: ../../content/applications/general/backend_interface.rst:105
 msgid "In the chatter, clicking the :icon:`fa-envelope-o` (:guilabel:`envelope`) icon of a message lists the recipients who were notified by email. With the theme installed, the email address of each recipient is displayed next to their name."
-msgstr ""
+msgstr "En el chatter, al hacer clic en el icono :icon:`fa-envelope-o` (:guilabel:`sobre`) de un mensaje se muestra la lista de destinatarios que fueron notificados por correo electrónico. Con el tema instalado, la dirección de correo electrónico de cada destinatario se muestra junto a su nombre."
 
 #: ../../content/applications/general/backend_interface.rst:112
 msgid "Dialog size"
-msgstr ""
+msgstr "Tamaño de los diálogos"
 
 #: ../../content/applications/general/backend_interface.rst:114
 msgid "With the *MuK Dialog* module (`muk_web_dialog`), pop-up windows (dialogs) can be displayed in full-screen mode:"
-msgstr ""
+msgstr "Con el módulo *MuK Dialog* (`muk_web_dialog`), las ventanas emergentes (diálogos) se pueden mostrar en modo de pantalla completa:"
 
 #: ../../content/applications/general/backend_interface.rst:117
 msgid "click the :icon:`fa-expand` (:guilabel:`expand`) icon in the header of a dialog to enlarge it to the whole window, and the :icon:`fa-compress` (:guilabel:`compress`) icon to restore it;"
-msgstr ""
+msgstr "haga clic en el icono :icon:`fa-expand` (:guilabel:`expandir`) del encabezado de un diálogo para ampliarlo a toda la ventana, y en el icono :icon:`fa-compress` (:guilabel:`contraer`) para restaurarlo;"
 
 #: ../../content/applications/general/backend_interface.rst:119
 msgid "to choose the initial state of all dialogs, click the profile avatar, select :guilabel:`Preferences`, and set :guilabel:`Dialog Size` to :guilabel:`Minimize` (default) or :guilabel:`Maximize`."
-msgstr ""
+msgstr "para elegir el estado inicial de todos los diálogos, haga clic en el avatar del perfil, seleccione :guilabel:`Preferencias` y establezca :guilabel:`Dialog Size` en :guilabel:`Minimizar` (predeterminado) o :guilabel:`Maximizar`."
 
 #: ../../content/applications/general/backend_interface.rst:126
 msgid "Column widths in list views"
-msgstr ""
+msgstr "Anchos de columna en las vistas de lista"
 
 #: ../../content/applications/general/backend_interface.rst:128
 msgid "With the *List View Column width Adjustment* module (`web_listview_column_width_cr`), the width given to a column of a list view is remembered: drag the right border of a column header to resize the column, and the same width is applied the next time a list of the same model is displayed."
-msgstr ""
+msgstr "Con el módulo *List View Column width Adjustment* (`web_listview_column_width_cr`), se recuerda el ancho asignado a una columna de una vista de lista: arrastre el borde derecho de un encabezado de columna para redimensionar la columna, y se aplicará el mismo ancho la próxima vez que se muestre una lista del mismo modelo."
 
 #: ../../content/applications/general/backend_interface.rst:133
 msgid "The widths are stored in the browser, per model and per field. They are therefore specific to the computer and the browser in use, and are lost when the browsing data of the site is cleared."
-msgstr ""
+msgstr "Los anchos se almacenan en el navegador, por modelo y por campo. Por lo tanto, son específicos del ordenador y del navegador utilizados, y se pierden cuando se borran los datos de navegación del sitio."
 
 #: ../../content/applications/general/backend_interface.rst:139
 msgid "Quick creation disabled in many2one fields"
-msgstr ""
+msgstr "Creación rápida desactivada en los campos many2one"
 
 #: ../../content/applications/general/backend_interface.rst:141
 msgid "When typing a new value in a many2one field (e.g., a customer on a quotation), Odoo normally offers :guilabel:`Create \"value\"`, which creates the record at once with just a name. With the *No quick_create* module (`deltatech_no_quick_create`), this option is removed from many2one fields, to avoid incomplete contacts, products, etc. Only :guilabel:`Create and edit...` remains, which opens the full creation form."
-msgstr ""
+msgstr "Al escribir un nuevo valor en un campo many2one (por ejemplo, un cliente en un presupuesto), Odoo normalmente ofrece la opción :guilabel:`Crear \"valor\"`, que crea el registro de inmediato con solo un nombre. Con el módulo *No quick_create* (`deltatech_no_quick_create`), esta opción se elimina de los campos many2one para evitar contactos, productos, etc. incompletos. Solo queda :guilabel:`Crear y editar...`, que abre el formulario de creación completo."
 
 #: ../../content/applications/general/backend_interface.rst:150
 msgid "Clickable tags"
-msgstr ""
+msgstr "Etiquetas en las que se puede hacer clic"
 
 #: ../../content/applications/general/backend_interface.rst:152
 msgid "The *Clickable Many2many Tags Widget* module (`widget_many2many_clickable`) provides a variant of the tags field in which clicking a tag opens the form of the corresponding record. It is used, for example, by the eYssen return merchandise (RMA) forms to jump from a tag to the linked document. In other tags fields, clicking a tag keeps its standard behavior."
-msgstr ""
+msgstr "El módulo *Clickable Many2many Tags Widget* (`widget_many2many_clickable`) proporciona una variante del campo de etiquetas en la que al hacer clic en una etiqueta se abre el formulario del registro correspondiente. Se utiliza, por ejemplo, en los formularios de devolución de mercancía (RMA) de eYssen para pasar de una etiqueta al documento vinculado. En otros campos de etiquetas, al hacer clic en una etiqueta se mantiene su comportamiento estándar."
 
 #: ../../content/applications/general/backend_interface.rst:158 ../../content/applications/general/process_numbers.rst:155
 msgid ":doc:`eyssen_erp_settings`"
-msgstr ""
+msgstr ":doc:`eyssen_erp_settings`"
 
 #: ../../content/applications/general/backend_interface.rst:159 ../../content/applications/general/eyssen_erp_settings.rst:88 ../../content/applications/general/eyssen_erp_settings.rst:91 ../../content/applications/general/eyssen_erp_settings.rst:94
 msgid ":doc:`../productivity/discuss/chatter`"
-msgstr ""
+msgstr ":doc:`../productivity/discuss/chatter`"
 
 #: ../../content/applications/general/backend_interface.rst:160
 msgid ":doc:`../essentials/keyboard_shortcuts`"
-msgstr ""
+msgstr ":doc:`../essentials/keyboard_shortcuts`"
 
 #: ../../content/applications/general/companies.rst:69
 msgid "Configure the default layout of the company's printed and PDF documents (quotations, invoices, delivery slips, etc.). Go to :menuselection:`Settings`, then, in the :guilabel:`Companies` section, click :guilabel:`Configure Document Layout`. Layout settings are company-specific, but apply to all reports of that company."
-msgstr ""
+msgstr "Configure el diseño predeterminado de los documentos impresos y PDF de la empresa (presupuestos, facturas, albaranes de entrega, etc.). Vaya a :menuselection:`Ajustes` y, en la sección :guilabel:`Empresas`, haga clic en :guilabel:`Configurar diseño del documento`. Los ajustes de diseño son específicos de cada empresa, pero se aplican a todos los informes de esa empresa."
 
 #: ../../content/applications/general/companies.rst:75
 msgid "The preview on the right side of the :guilabel:`Configure your document layout` window shows how the settings affect the documents."
-msgstr ""
+msgstr "La vista previa en el lado derecho de la ventana :guilabel:`Configure el diseño de su documento` muestra cómo afectan los ajustes a los documentos."
 
 #: ../../content/applications/general/companies.rst:78
 msgid "The following settings are available:"
-msgstr ""
+msgstr "Están disponibles los siguientes ajustes:"
 
 #: ../../content/applications/general/companies.rst:80
 msgid ":guilabel:`Layout`: :guilabel:`Light`, :guilabel:`Boxed`, :guilabel:`Bold`, :guilabel:`Striped`, :guilabel:`Bubble`, :guilabel:`Wave`, or :guilabel:`Folder`."
-msgstr ""
+msgstr ":guilabel:`Diseño`: :guilabel:`Light`, :guilabel:`Boxed`, :guilabel:`Bold`, :guilabel:`Striped`, :guilabel:`Bubble`, :guilabel:`Wave` o :guilabel:`Folder`."
 
 #: ../../content/applications/general/companies.rst:82
 msgid ":guilabel:`Background`: :guilabel:`Blank`, :guilabel:`Demo logo`, or :guilabel:`Custom`, to upload a custom background image."
-msgstr ""
+msgstr ":guilabel:`Fondo`: :guilabel:`Blank`, :guilabel:`Demo logo` o :guilabel:`Custom`, para subir una imagen de fondo personalizada."
 
 #: ../../content/applications/general/companies.rst:84
 msgid ":guilabel:`Text`: the font used in the documents: Lato, Roboto, Open Sans, Montserrat, Oswald, Raleway, Tajawal (which supports Arabic and Latin scripts), or Fira Mono."

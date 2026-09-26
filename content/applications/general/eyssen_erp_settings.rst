@@ -21,6 +21,13 @@ Some options have sub-options, displayed under the main option (e.g., :guilabel:
 :guilabel:`PoS` under :guilabel:`Access Management`). They install a bridge between the feature and
 another application, and require that application to be installed.
 
+Country-specific parts of some features are installed automatically, without an option on this
+page, when the corresponding fiscal localization is installed. For example, with the Hungarian
+localization, the Hungarian rules of :doc:`invoicing from delivery notes
+<../finance/accounting/customer_invoices/invoice_from_delivery_notes>`, the Hungarian tax number
+check of :doc:`POS invoices <../sales/point_of_sale/receipts_invoices>` and the Hungarian tax number
+field of the :doc:`eCommerce checkout <../websites/ecommerce/checkout>` are added automatically.
+
 Once a module is installed, its own settings, if any, appear directly under its option on the same
 page (e.g., :guilabel:`Create Automatically` under the :guilabel:`Process Number` options), or in
 the settings of the related application.

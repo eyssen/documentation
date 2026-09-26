@@ -6151,7 +6151,7 @@ msgstr ":guilabel:`Nombre`: un nombre para esta conexión."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:21
 msgid ":guilabel:`Company`: the Odoo company the connection belongs to."
-msgstr ":guilabel:`Empresa`: la empresa de Odoo a la que pertenece la conexión."
+msgstr ":guilabel:`Compañía`: la empresa de Odoo a la que pertenece la conexión."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:22
 msgid ":guilabel:`Network Code`: the code of the Google Ad Manager network."
@@ -6183,7 +6183,7 @@ msgstr "Sincronización"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:47
 msgid "Each synchronization is recorded under :menuselection:`Ad Manager --> Reporting --> Sync Runs`, with its start and end time, its status, the number of records pulled from Google, pushed to Google, skipped, and in error, and the full log. This is the place to look when a record does not appear, or when a change made in Odoo did not reach Google."
-msgstr "Cada sincronización se registra en :menuselection:`Ad Manager --> Reportes --> Ejecuciones de sincronización`, con su hora de inicio y fin, su estado, el número de registros obtenidos de Google, enviados a Google, omitidos y con error, además del registro completo. Este es el lugar donde buscar cuando un registro no aparece o cuando un cambio realizado en Odoo no llegó a Google."
+msgstr "Cada sincronización se registra en :menuselection:`Ad Manager --> Informes --> Ejecuciones de sincronización`, con su hora de inicio y fin, su estado, el número de registros obtenidos de Google, enviados a Google, omitidos y con error, además del registro completo. Este es el lugar donde buscar cuando un registro no aparece o cuando un cambio realizado en Odoo no llegó a Google."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:60
 msgid "Every synchronized record carries its own state, shown on the record itself:"
@@ -6211,7 +6211,7 @@ msgstr ":guilabel:`Archivado pendiente` y :guilabel:`Archivado`: el registro se 
 
 #: ../../content/applications/marketing/google_ad_manager.rst:69
 msgid "A single record can be synchronized on its own with the :guilabel:`Sync` button on its form, which is useful after fixing the cause of an error."
-msgstr "Un solo registro se puede sincronizar de forma individual con el botón :guilabel:`Sincronizar` de su formulario, lo cual es útil después de corregir la causa de un error."
+msgstr "Un solo registro se puede sincronizar de forma individual con el botón :guilabel:`Sincronización` de su formulario, lo cual es útil después de corregir la causa de un error."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:73
 msgid "Advertisers and agencies"
@@ -6219,7 +6219,7 @@ msgstr "Anunciantes y agencias"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:75
 msgid ":menuselection:`Ad Manager --> Companies` lists the advertisers and agencies of the network, with their :guilabel:`Type` and contact email. Each of them can be linked to an Odoo :guilabel:`Contact`, so that the ad orders of a customer can be related to the rest of their file."
-msgstr ":menuselection:`Ad Manager --> Empresas` muestra los anunciantes y agencias de la red, con su :guilabel:`Tipo` y correo electrónico de contacto. Cada uno de ellos se puede vincular a un :guilabel:`Contacto` de Odoo, de modo que las órdenes publicitarias de un cliente puedan relacionarse con el resto de su expediente."
+msgstr ":menuselection:`Ad Manager --> Compañías` muestra los anunciantes y agencias de la red, con su :guilabel:`Tipo` y correo electrónico de contacto. Cada uno de ellos se puede vincular a un :guilabel:`Contacto` de Odoo, de modo que las órdenes publicitarias de un cliente puedan relacionarse con el resto de su expediente."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:80
 msgid "Orders and line items"
@@ -6227,11 +6227,11 @@ msgstr "Órdenes y elementos de línea"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:82
 msgid ":menuselection:`Ad Manager --> Orders` lists the ad orders, each with its :guilabel:`Advertiser`, :guilabel:`Agency`, :guilabel:`Status`, :guilabel:`Trafficker`, :guilabel:`Salesperson`, the period it runs, and its currency and notes."
-msgstr ":menuselection:`Ad Manager --> Órdenes` muestra las órdenes publicitarias, cada una con su :guilabel:`Anunciante`, :guilabel:`Agencia`, :guilabel:`Estado`, :guilabel:`Gestor de tráfico`, :guilabel:`Comercial`, el período en que se ejecuta, su moneda y sus notas."
+msgstr ":menuselection:`Ad Manager --> Pedidos` muestra las órdenes publicitarias, cada una con su :guilabel:`Anunciante`, :guilabel:`Agencia`, :guilabel:`Estado`, :guilabel:`Agente de tráfico`, :guilabel:`Comercial`, el período en que se ejecuta, su moneda y sus notas."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:86
 msgid "An order's :guilabel:`Line Items` (:menuselection:`Ad Manager --> Line Items`) describe what is actually delivered:"
-msgstr "Los :guilabel:`Elementos de línea` de una orden (:menuselection:`Ad Manager --> Elementos de línea`) describen lo que realmente se entrega:"
+msgstr "Los :guilabel:`Partidas` de una orden (:menuselection:`Ad Manager --> Partidas`) describen lo que realmente se entrega:"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:89
 msgid ":guilabel:`Type` and :guilabel:`Priority`: the kind of line item and its priority in ad serving;"
@@ -6239,7 +6239,7 @@ msgstr ":guilabel:`Tipo` y :guilabel:`Prioridad`: el tipo de elemento de línea 
 
 #: ../../content/applications/marketing/google_ad_manager.rst:90
 msgid ":guilabel:`Cost Type` and :guilabel:`Rate`: how the line item is charged (e.g., CPM) and at which rate, in the order's currency;"
-msgstr ":guilabel:`Tipo de costo` y :guilabel:`Tarifa`: cómo se cobra el elemento de línea (por ejemplo, CPM) y a qué tarifa, en la moneda de la orden;"
+msgstr ":guilabel:`Tipo de coste` y :guilabel:`Tasa`: cómo se cobra el elemento de línea (por ejemplo, CPM) y a qué tarifa, en la moneda de la orden;"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:92
 msgid ":guilabel:`Start` and :guilabel:`Target End`: the booked period, the effective end date coming back from Google;"
@@ -6259,7 +6259,7 @@ msgstr ":menuselection:`Ad Manager --> Inventario` contiene el espacio publicita
 
 #: ../../content/applications/marketing/google_ad_manager.rst:109
 msgid ":guilabel:`Ad Units`: the ad slots, organized as a tree under the network's root ad unit, with their code, status and the accepted sizes;"
-msgstr ":guilabel:`Unidades de anuncios`: los espacios publicitarios, organizados en árbol bajo la unidad de anuncios raíz de la red, con su código, estado y los tamaños aceptados;"
+msgstr ":guilabel:`Unidades de anuncio`: los espacios publicitarios, organizados en árbol bajo la unidad de anuncios raíz de la red, con su código, estado y los tamaños aceptados;"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:111
 msgid ":guilabel:`Placements`: named groups of ad units that can be targeted as one."
@@ -6279,7 +6279,7 @@ msgstr ":menuselection:`Ad Manager --> Creatividades` muestra las creatividades 
 
 #: ../../content/applications/marketing/google_ad_manager.rst:123
 msgid "A creative is shown for a line item through a **creative association** (:menuselection:`Ad Manager --> Creatives --> Creative Associations`), which links one creative to one line item for a given period and set of sizes."
-msgstr "Una creatividad se muestra para un elemento de línea mediante una **asociación de creatividad** (:menuselection:`Ad Manager --> Creatividades --> Asociaciones de creatividades`), que vincula una creatividad con un elemento de línea para un período y un conjunto de tamaños determinados."
+msgstr "Una creatividad se muestra para un elemento de línea mediante una **asociación de creatividad** (:menuselection:`Ad Manager --> Creatividades --> Asociaciones creativas`), que vincula una creatividad con un elemento de línea para un período y un conjunto de tamaños determinados."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:128
 msgid "`Google Ad Manager help <https://support.google.com/admanager>`_"

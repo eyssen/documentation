@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-19 10:41+0000\n"
+"POT-Creation-Date: 2026-09-26 17:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -10076,47 +10076,51 @@ msgid "Creating an invoice directly from one or more transfers"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:50
-msgid "A completed transfer whose :guilabel:`Invoice Status` is :guilabel:`Not invoiced` or :guilabel:`To Invoice` shows an :guilabel:`Invoicing` header button (labeled ``Számlázás`` in the current UI). The same action is also available as a bulk action from the transfers list, so several transfers can be selected and invoiced together in one click."
+msgid "A completed transfer whose :guilabel:`Invoice Status` is :guilabel:`Not invoiced` or :guilabel:`To Invoice` shows an :guilabel:`Invoicing` header button. The same action is also available as a bulk action from the transfers list, so several transfers can be selected and invoiced together in one click."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:60
 msgid "When triggered — on one picking or on a multi-selection — the action:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:62
 msgid "requires every selected transfer to belong to the **same partner**, be in the **Done** state, and share the **same currency**; otherwise it stops with a clear error;"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:64
 msgid "decides the target document type from the transfer's operation type: **outgoing** transfers create a customer invoice, any other direction (receipts, internal transfers used as vendor movements) creates a vendor bill;"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:67
 msgid "resolves a **fulfillment date** per transfer — for a delivery it prefers Odoo's actual completion date and falls back to the transfer's own delivery date; for a receipt it prefers the recorded delivery date (which may be earlier than the date the receipt was validated in Odoo) and falls back to the completion date;"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:72
-msgid "if the selected transfers do not all share the same fulfillment date, the partner must have the :guilabel:`Aggregate Invoice Agreement` box checked (a Hungarian-localization setting on the customer), otherwise the action is refused — a single invoice may not silently combine several fulfillment dates without that agreement in place;"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:71
+msgid "with the Hungarian localization, if the selected transfers do not all share the same fulfillment date, the partner must have the :guilabel:`Aggregate Invoice Agreement` box checked, otherwise the action is refused — a single invoice may not silently combine several fulfillment dates without that agreement in place;"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:75
+msgid "refuses to combine transfers whose fulfillment dates fall in **different calendar months**; and"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:76
-msgid "still refuses to combine transfers whose fulfillment dates fall in **different calendar months**, even with an aggregate agreement; and"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:78
 msgid "creates a new draft invoice/bill for the resolved partner, date and currency, and immediately fills it with one line per unbilled stock move on the selected transfers (see below), then opens the new document."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:83
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:81
 msgid "Adding delivery-note lines to an existing invoice"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:91
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:89
 msgid "Invoices do not have to originate from a transfer. Any draft invoice or vendor bill that already has a :guilabel:`Customer`/:guilabel:`Vendor` set shows an :guilabel:`Add Products from Delivery Notes` button above the invoice lines. It opens a :guilabel:`Selection of Delivery Notes` wizard prefiltered to that partner's **Done** transfers that are not yet fully invoiced (excluding internal transfers)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:102
-msgid "After picking one or more transfers and clicking :guilabel:`Loading Items`, the wizard adds one invoice line per remaining-to-invoice stock move, carrying over the product, the unbilled quantity, the move's unit price (or the linked sales order line's price when the move has none), the fulfillment date of that specific line, and a link back to the sale order line and/or purchase order line where applicable. The sign of the quantity is adjusted automatically so the same wizard also works when loading return/refund moves onto a credit note. Unless the invoice is an aggregate invoice or a corrective/reversal document (which must keep the original invoice's date), the header :guilabel:`Invoice/Bill Date` and :guilabel:`Delivery Date` are updated to the latest line date, and the contributing sale orders are appended to the invoice's :guilabel:`Origin`."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:100
+msgid "After picking one or more transfers and clicking :guilabel:`Loading Items`, the wizard adds one invoice line per remaining-to-invoice stock move, carrying over the product, the unbilled quantity, the move's unit price (or the linked sales order line's price when the move has none), and a link back to the sale order line and/or purchase order line where applicable. The sign of the quantity is adjusted automatically so the same wizard also works when loading return/refund moves onto a credit note. Unless the invoice is a reversal document (which must keep the original invoice's date), the header accounting date and :guilabel:`Delivery Date` are updated to the latest line date, and the contributing sale orders are appended to the invoice's :guilabel:`Origin`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:109
+msgid "With the Hungarian localization, each line also receives the fulfillment date of its own transfer, and the header dates of aggregate and corrective invoices are left unchanged."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:113
@@ -10172,11 +10176,11 @@ msgid "Only users in the **Invoicing/Accounting Manager** group (``account.group
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:194
-msgid "The feature requires no dedicated settings screen — it activates automatically once the three modules described below are installed on top of ``sale_stock`` and/or ``purchase``. It does rely on a couple of fields owned by other eYssen modules:"
+msgid "The feature requires no dedicated settings screen — it activates automatically once the modules described below are installed on top of ``sale_stock`` and/or ``purchase``. It does rely on a couple of fields owned by other eYssen modules:"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:198
-msgid "the customer's :guilabel:`Aggregate Invoice Agreement` checkbox (Hungarian localization, ``eyssen_l10n_hu``) must be enabled on :menuselection:`Contacts` before that customer's transfers with different fulfillment dates can be combined onto one invoice;"
+msgid "with the Hungarian localization, the customer's :guilabel:`Aggregate Invoice Agreement` checkbox must be enabled on :menuselection:`Contacts` before that customer's transfers with different fulfillment dates can be combined onto one invoice;"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:201
@@ -10212,7 +10216,7 @@ msgid "If a transfer should never be invoiced, open it, go to :guilabel:`Other I
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:231
-msgid "The feature is delivered by three modules:"
+msgid "The feature is delivered by the following modules:"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:233
@@ -10225,6 +10229,14 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:242
 msgid "``eyssen_purchase_stock_picking_invoice_link`` — extends the same link to purchase orders and vendor bills, including the retroactive link for goods invoiced before receipt (fork of the OCA ``purchase_stock_picking_invoice_link`` module)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:245
+msgid "``account_invoice_line_toolbar`` — the toolbar above the invoice lines that holds the :guilabel:`Add Products from Delivery Notes` button; installed automatically."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/invoicing_from_transfers.rst:247
+msgid "``eyssen_stock_picking_invoice_l10n_hu`` — the Hungarian rules (aggregate invoice agreement, fulfillment date of the invoice lines, unchanged dates of aggregate and corrective invoices); installed automatically when the Hungarian localization is installed."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/payment_gated_delivery.rst:3

@@ -178,9 +178,9 @@ a payment term due immediately. When an order paid with that payment method is i
 is created with the payment term of the method.
 
 The module also checks the customer's invoicing address while the order is being registered: if the
-street, city, ZIP code or country is missing — or, for a Hungarian company, a valid VAT number — the
-missing fields are listed next to the customer in the POS customer list, so the cashier can complete
-them before issuing the invoice.
+street, city, ZIP code or country is missing, the missing fields are listed next to the customer in
+the POS customer list, so the cashier can complete them before issuing the invoice. With the
+Hungarian localization, a Hungarian company must also have a valid Hungarian tax number.
 
 .. screenshot:: pos-invoice-payment-term
    :menu: Point of Sale ‣ Configuration ‣ Payment Methods ‣ (a payment method)
@@ -191,5 +191,6 @@ them before issuing the invoice.
    :notes: English UI, light theme, 1440px width, crop to the form.
 
 .. note::
-   This module requires the *eYssen Hungarian localization* module (`eyssen_l10n_hu`), which
-   provides the Hungarian VAT number validation used by the address check.
+   The module can be used in any country. The Hungarian tax number check is added by the *PoS
+   Invoice - Hungary* module (`l10n_hu_pos_invoice`), which is installed automatically when the
+   Hungarian localization is installed.

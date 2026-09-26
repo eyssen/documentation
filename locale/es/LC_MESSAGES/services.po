@@ -1544,7 +1544,7 @@ msgstr "Instalación"
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:21
 msgid "Enable the Measuring Devices module from :menuselection:`Equipment Management --> Settings --> Configuration`, by ticking :guilabel:`Measuring Devices` in the equipment types section, or install ``equipment_measuring`` from the Apps menu. The module requires the *Repairs* app, which is installed along with it: calibrations are recorded as :ref:`repair orders <repairs/repair_orders/calibration>`."
-msgstr "Active el módulo Dispositivos de medición desde :menuselection:`Gestión de equipos --> Ajustes --> Configuración`, marcando :guilabel:`Dispositivos de medición` en la sección de tipos de equipo, o instale ``equipment_measuring`` desde el menú Aplicaciones. El módulo requiere la aplicación *Reparaciones*, que se instala junto con él: las calibraciones se registran como :ref:`órdenes de reparación <repairs/repair_orders/calibration>`."
+msgstr "Active el módulo Dispositivos de medición desde :menuselection:`Gestión de equipos --> Ajustes --> Configuración`, marcando :guilabel:`Equipos de medición` en la sección de tipos de equipo, o instale ``equipment_measuring`` desde el menú Aplicaciones. El módulo requiere la aplicación *Reparaciones*, que se instala junto con él: las calibraciones se registran como :ref:`órdenes de reparación <repairs/repair_orders/calibration>`."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:28
 msgid "Dedicated measuring views"
@@ -1556,11 +1556,11 @@ msgstr "Una vez instalado, aparece un menú **Dispositivos de medición** en la 
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:32
 msgid ":menuselection:`Equipment Management --> Measuring Devices --> Measuring Devices`: shows only measuring-type equipment with specific columns (calibration status, next calibration date, product family, serial number)."
-msgstr ":menuselection:`Gestión de equipos --> Dispositivos de medición --> Dispositivos de medición`: muestra solo el equipo de tipo medición con columnas específicas (estado de calibración, próxima fecha de calibración, familia de productos, número de serie)."
+msgstr ":menuselection:`Gestión de equipos --> Equipos de medición --> Equipos de medición`: muestra solo el equipo de tipo medición con columnas específicas (estado de calibración, próxima fecha de calibración, familia de productos, número de serie)."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:35
 msgid ":menuselection:`Equipment Management --> Measuring Devices --> Calibrations`: lists all the calibrations of all measuring devices."
-msgstr ":menuselection:`Gestión de equipos --> Dispositivos de medición --> Calibraciones`: enumera todas las calibraciones de todos los dispositivos de medición."
+msgstr ":menuselection:`Gestión de equipos --> Equipos de medición --> Calibraciones`: enumera todas las calibraciones de todos los dispositivos de medición."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:38
 msgid "Creating an equipment from the Measuring Devices menu automatically sets the type to *Measuring Device*. The *Measuring Device* type is also available on the equipment models (:menuselection:`Equipment Management --> Settings --> Models`)."
@@ -1580,31 +1580,31 @@ msgstr "Calibración"
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:59
 msgid ":guilabel:`Last Calibration Date`: the calibration date of the most recent **finished** calibration of the equipment (repair order in the :guilabel:`Repaired` status). Cannot be edited directly."
-msgstr ":guilabel:`Fecha de la última calibración`: la fecha de calibración de la calibración **finalizada** más reciente del equipo (orden de reparación en el estado :guilabel:`Reparado`). No se puede editar directamente."
+msgstr ":guilabel:`Fecha de última calibración`: la fecha de calibración de la calibración **finalizada** más reciente del equipo (orden de reparación en el estado :guilabel:`Reparado`). No se puede editar directamente."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:62
 msgid ":guilabel:`Last Calibration Date (Manual)`: only displayed as long as the equipment has no calibration. Enter here the date of the last calibration performed before the equipment was recorded in the database; it is used as last calibration date until a first calibration is finished."
-msgstr ":guilabel:`Fecha de la última calibración (manual)`: solo se muestra mientras el equipo no tenga ninguna calibración. Introduzca aquí la fecha de la última calibración realizada antes de que el equipo se registrara en la base de datos; se utiliza como fecha de la última calibración hasta que se finalice una primera calibración."
+msgstr ":guilabel:`Fecha de última calibración (manual)`: solo se muestra mientras el equipo no tenga ninguna calibración. Introduzca aquí la fecha de la última calibración realizada antes de que el equipo se registrara en la base de datos; se utiliza como fecha de la última calibración hasta que se finalice una primera calibración."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:66
 msgid ":guilabel:`Next Calibration Date`: computed as the last calibration date plus the calibration period. Read-only, and empty as long as one of the two is missing."
-msgstr ":guilabel:`Próxima fecha de calibración`: se calcula como la fecha de la última calibración más el período de calibración. Es de solo lectura y permanece vacía mientras falte uno de los dos datos."
+msgstr ":guilabel:`Fecha de la próxima calibración`: se calcula como la fecha de la última calibración más el período de calibración. Es de solo lectura y permanece vacía mientras falte uno de los dos datos."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:68
 msgid ":guilabel:`Calibration Period (months)`: how often the equipment must be calibrated. Set manually."
-msgstr ":guilabel:`Período de calibración (meses)`: con qué frecuencia debe calibrarse el equipo. Se establece manualmente."
+msgstr ":guilabel:`Periodo de calibración (meses)`: con qué frecuencia debe calibrarse el equipo. Se establece manualmente."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:69
 msgid ":guilabel:`Calibration Status`: a badge computed from the next calibration date every time the equipment is displayed:"
-msgstr ":guilabel:`Estado de calibración`: una insignia que se calcula a partir de la próxima fecha de calibración cada vez que se muestra el equipo:"
+msgstr ":guilabel:`Estado de la calibración`: una insignia que se calcula a partir de la próxima fecha de calibración cada vez que se muestra el equipo:"
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:72
 msgid ":guilabel:`OK` (green): the next calibration is more than 30 days away."
-msgstr ":guilabel:`OK` (verde): a la próxima calibración le faltan más de 30 días."
+msgstr ":guilabel:`Aceptar` (verde): a la próxima calibración le faltan más de 30 días."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:73
 msgid ":guilabel:`Warning` (yellow): the next calibration is within 30 days."
-msgstr ":guilabel:`Aviso` (amarillo): la próxima calibración es dentro de 30 días."
+msgstr ":guilabel:`Advertencia` (amarillo): la próxima calibración es dentro de 30 días."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:74
 msgid ":guilabel:`Overdue` (red): the calibration date has passed, or there is no next calibration date."
@@ -1632,7 +1632,7 @@ msgstr "Hardware"
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:87
 msgid ":guilabel:`Hardware Keylock`: the hardware keylock number (dongle/license key)."
-msgstr ":guilabel:`Llave de hardware`: el número de la llave de hardware (dongle/clave de licencia)."
+msgstr ":guilabel:`Bloqueo de hardware por llave`: el número de la llave de hardware (dongle/clave de licencia)."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:90
 msgid "Characteristics"
@@ -1684,11 +1684,11 @@ msgstr "Crear una calibración"
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:142
 msgid "Open the measuring device, and click :guilabel:`Create Calibration` in the header. The button is available on :guilabel:`Active` and :guilabel:`Inactive` equipment. A new repair order opens, with :guilabel:`Calibration` ticked, and the equipment, its product, and its customer filled in."
-msgstr "Abra el dispositivo de medición y haga clic en :guilabel:`Crear calibración` en el encabezado. El botón está disponible tanto en equipos :guilabel:`Activos` como :guilabel:`Inactivos`. Se abre una nueva orden de reparación con la casilla :guilabel:`Calibración` marcada y con el equipo, su producto y su cliente ya completados."
+msgstr "Abra el dispositivo de medición y haga clic en :guilabel:`Crear calibración` en el encabezado. El botón está disponible tanto en equipos :guilabel:`Activo` como :guilabel:`Inactivo`. Se abre una nueva orden de reparación con la casilla :guilabel:`Calibración` marcada y con el equipo, su producto y su cliente ya completados."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:146
 msgid "Alternatively, click :guilabel:`New` in :menuselection:`Equipment Management --> Measuring Devices --> Calibrations`, or tick :guilabel:`Calibration` on any repair order, and select the :guilabel:`Equipment` (only measuring devices can be selected)."
-msgstr "También puede hacer clic en :guilabel:`Nuevo` en :menuselection:`Gestión de equipos --> Dispositivos de medición --> Calibraciones`, o marcar :guilabel:`Calibración` en cualquier orden de reparación y seleccionar el :guilabel:`Equipo` (solo se pueden seleccionar dispositivos de medición)."
+msgstr "También puede hacer clic en :guilabel:`Nuevo` en :menuselection:`Gestión de equipos --> Equipos de medición --> Calibraciones`, o marcar :guilabel:`Calibración` en cualquier orden de reparación y seleccionar el :guilabel:`Equipo` (solo se pueden seleccionar dispositivos de medición)."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:150
 msgid "Fill in the :guilabel:`Calibration` group:"
@@ -1700,15 +1700,15 @@ msgstr ":guilabel:`Fecha de calibración`: la fecha en la que se realiza la cali
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:153
 msgid ":guilabel:`Calibration Quality`: :guilabel:`Accredited` or :guilabel:`Werks` (required);"
-msgstr ":guilabel:`Calidad de la calibración`: :guilabel:`Acreditada` o :guilabel:`Werks` (obligatorio);"
+msgstr ":guilabel:`Calidad de la calibración`: :guilabel:`Acreditado` o :guilabel:`Werks` (obligatorio);"
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:154
 msgid ":guilabel:`Result`: :guilabel:`Pass`, :guilabel:`Fail`, :guilabel:`Conditional Pass`, or :guilabel:`Conditional Fail`;"
-msgstr ":guilabel:`Resultado`: :guilabel:`Apto`, :guilabel:`No apto`, :guilabel:`Apto condicional` o :guilabel:`No apto condicional`;"
+msgstr ":guilabel:`Resultado`: :guilabel:`Apto`, :guilabel:`No apto`, :guilabel:`Aprobado condicional` o :guilabel:`Fallo condicional`;"
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:156
 msgid ":guilabel:`Performed By`: the person or organization performing the calibration;"
-msgstr ":guilabel:`Realizada por`: la persona u organización que realiza la calibración;"
+msgstr ":guilabel:`Realizado por`: la persona u organización que realiza la calibración;"
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:157
 msgid ":guilabel:`Certificate`: the calibration certificate file (PDF, etc.);"
@@ -1716,7 +1716,7 @@ msgstr ":guilabel:`Certificado`: el archivo del certificado de calibración (PDF
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:158
 msgid ":guilabel:`Signed By`, :guilabel:`Customer Signature`, and :guilabel:`Sign Date`: the acknowledgment of the customer;"
-msgstr ":guilabel:`Firmado por`, :guilabel:`Firma del cliente` y :guilabel:`Fecha de firma`: la confirmación del cliente;"
+msgstr ":guilabel:`Firmada por`, :guilabel:`Firma del cliente` y :guilabel:`Fecha de firma`: la confirmación del cliente;"
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:160
 msgid ":guilabel:`Work Performed` and :guilabel:`Calibration Notes`."
@@ -1732,7 +1732,7 @@ msgstr "Haga clic en :guilabel:`Imprimir hoja de trabajo` para imprimir la *Hoja
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:166
 msgid "When the calibration is finished, click :guilabel:`End Repair`. The equipment's :guilabel:`Last Calibration Date`, :guilabel:`Next Calibration Date`, and :guilabel:`Calibration Status` are updated."
-msgstr "Cuando finalice la calibración, haga clic en :guilabel:`Finalizar reparación`. Se actualizan la :guilabel:`Fecha de la última calibración`, la :guilabel:`Próxima fecha de calibración` y el :guilabel:`Estado de calibración` del equipo."
+msgstr "Cuando finalice la calibración, haga clic en :guilabel:`Finalizar reparación`. Se actualizan la :guilabel:`Fecha de última calibración`, la :guilabel:`Fecha de la próxima calibración` y el :guilabel:`Estado de la calibración` del equipo."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:170
 msgid "See :ref:`repairs/repair_orders/calibration` for the details of the calibration fields on the repair order."
@@ -1760,7 +1760,7 @@ msgstr "Búsqueda y filtrado"
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:189
 msgid "In the repair order search, calibrations can be found by :guilabel:`Calibration Quality`, :guilabel:`Certificate Number`, and :guilabel:`Equipment`, filtered with :guilabel:`Accredited`, :guilabel:`Werks`, and :guilabel:`Voided Certificate`, and grouped by :guilabel:`Calibration Quality`."
-msgstr "En la búsqueda de órdenes de reparación, las calibraciones se pueden encontrar por :guilabel:`Calidad de la calibración`, :guilabel:`Número de certificado` y :guilabel:`Equipo`, filtrar con :guilabel:`Acreditada`, :guilabel:`Werks` y :guilabel:`Certificado anulado`, y agrupar por :guilabel:`Calidad de la calibración`."
+msgstr "En la búsqueda de órdenes de reparación, las calibraciones se pueden encontrar por :guilabel:`Calidad de la calibración`, :guilabel:`Número de certificado` y :guilabel:`Equipo`, filtrar con :guilabel:`Acreditado`, :guilabel:`Werks` y :guilabel:`Certificado anulado`, y agrupar por :guilabel:`Calidad de la calibración`."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:197
 msgid "Measuring-type equipment shows additional stat buttons:"
@@ -1792,11 +1792,11 @@ msgstr "Filtro :guilabel:`Calibración vencida`: dispositivos de medición cuya 
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:210
 msgid ":guilabel:`Product Family` grouping."
-msgstr "Agrupación por :guilabel:`Familia de productos`."
+msgstr "Agrupación por :guilabel:`Familia de producto`."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:211
 msgid ":guilabel:`Calibration Status` grouping (:guilabel:`OK`, :guilabel:`Warning`, :guilabel:`Overdue`)."
-msgstr "Agrupación por :guilabel:`Estado de calibración` (:guilabel:`OK`, :guilabel:`Aviso`, :guilabel:`Vencida`)."
+msgstr "Agrupación por :guilabel:`Estado de la calibración` (:guilabel:`Aceptar`, :guilabel:`Advertencia`, :guilabel:`Vencida`)."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:215
 msgid "There is no automatic reminder when a calibration becomes due: use the :guilabel:`Calibration Due` and :guilabel:`Calibration Overdue` filters, e.g., saved as a favorite, or schedule an activity on the equipment."
@@ -2100,7 +2100,7 @@ msgstr "Secuencia del ID de equipo"
 
 #: ../../content/applications/services/equipment/getting_started.rst:68
 msgid "By default, new equipment records receive an auto-generated ID using the format ``EQ/0001``, ``EQ/0002``, etc. The prefix can be customized in :menuselection:`Equipment Management --> Settings --> Configuration --> Defaults --> Equipment ID Prefix`."
-msgstr "De forma predeterminada, los nuevos registros de equipo reciben un ID generado automáticamente con el formato ``EQ/0001``, ``EQ/0002``, etc. El prefijo se puede personalizar en :menuselection:`Gestión de equipos --> Ajustes --> Configuración --> Valores predeterminados --> Prefijo del ID de equipo`."
+msgstr "De forma predeterminada, los nuevos registros de equipo reciben un ID generado automáticamente con el formato ``EQ/0001``, ``EQ/0002``, etc. El prefijo se puede personalizar en :menuselection:`Gestión de equipos --> Ajustes --> Configuración --> Valores predeterminados --> Prefijo del ID del equipo`."
 
 #: ../../content/applications/services/equipment/getting_started.rst:72
 msgid "The ID field remains editable — you can override the auto-generated value at any time, for example to match an existing internal numbering system."
@@ -2404,7 +2404,7 @@ msgstr "Ajustes"
 
 #: ../../content/applications/services/equipment/settings.rst:5
 msgid "Equipment settings are accessible from :menuselection:`Equipment Management --> Settings --> Configuration` or from :menuselection:`Settings --> Equipment`."
-msgstr "Los ajustes de equipos son accesibles desde :menuselection:`Gestión de equipos --> Ajustes --> Configuración` o desde :menuselection:`Ajustes --> Equipos`."
+msgstr "Los ajustes de equipos son accesibles desde :menuselection:`Gestión de equipos --> Ajustes --> Configuración` o desde :menuselection:`Ajustes --> Equipo`."
 
 #: ../../content/applications/services/equipment/settings.rst:17
 msgid "Equipment Types"
@@ -2884,7 +2884,7 @@ msgstr "Lista de precios en las tareas"
 
 #: ../../content/applications/services/project/categories.rst:76
 msgid "Installing *Project Category* also adds a :guilabel:`Pricelist` field, with its :guilabel:`Currency`, to project tasks. When a :guilabel:`Customer` is selected, the customer's pricelist is filled in automatically; it can be changed manually afterwards. Tasks that are :guilabel:`Done` or :guilabel:`Canceled` keep the pricelist they had."
-msgstr "Instalar *Categoría de proyecto* también añade un campo :guilabel:`Lista de precios`, con su :guilabel:`Divisa`, a las tareas del proyecto. Cuando se selecciona un :guilabel:`Cliente`, la lista de precios del cliente se completa automáticamente; después se puede cambiar manualmente. Las tareas :guilabel:`Listas` o :guilabel:`Canceladas` conservan la lista de precios que tenían."
+msgstr "Instalar *Categoría de proyecto* también añade un campo :guilabel:`Lista de precios`, con su :guilabel:`Moneda`, a las tareas del proyecto. Cuando se selecciona un :guilabel:`Cliente`, la lista de precios del cliente se completa automáticamente; después se puede cambiar manualmente. Las tareas :guilabel:`Listas` o :guilabel:`Canceladas` conservan la lista de precios que tenían."
 
 #: ../../content/applications/services/project/categories.rst:81
 msgid "The pricelist determines the prices of the :ref:`products used on the task <field_service/products-tab>` and the currency of the quotation created from it."
@@ -2932,7 +2932,7 @@ msgstr ":guilabel:`Progreso`: el porcentaje de finalización que se dibuja dentr
 
 #: ../../content/applications/services/project/gantt_planning.rst:24
 msgid ":guilabel:`Gantt Shape` – :guilabel:`Task` draws a bar, :guilabel:`Milestone` draws a diamond."
-msgstr ":guilabel:`Forma en Gantt`: :guilabel:`Tarea` dibuja una barra, :guilabel:`Hito` dibuja un rombo."
+msgstr ":guilabel:`Forma de Gantt`: :guilabel:`Tarea` dibuja una barra, :guilabel:`Hito` dibuja un rombo."
 
 #: ../../content/applications/services/project/gantt_planning.rst:26
 msgid "Two buttons are available on tasks that are scheduled:"
@@ -2940,7 +2940,7 @@ msgstr "En las tareas planificadas hay dos botones disponibles:"
 
 #: ../../content/applications/services/project/gantt_planning.rst:28
 msgid ":guilabel:`Unschedule` clears the planned dates and moves the task back to the unscheduled list."
-msgstr ":guilabel:`Anular planificación` borra las fechas previstas y devuelve la tarea a la lista de tareas sin planificar."
+msgstr ":guilabel:`Desprogramar` borra las fechas previstas y devuelve la tarea a la lista de tareas sin planificar."
 
 #: ../../content/applications/services/project/gantt_planning.rst:29
 msgid ":guilabel:`Save Baseline` stores the current planned dates as the **baseline**, which is then drawn under the bar so later changes to the plan remain visible."
@@ -3000,7 +3000,7 @@ msgstr "Las dependencias se pueden dibujar directamente en el gráfico, o gestio
 
 #: ../../content/applications/services/project/gantt_planning.rst:76
 msgid "a :guilabel:`Type`: :guilabel:`Finish to Start`, :guilabel:`Start to Start`, :guilabel:`Finish to Finish`, or :guilabel:`Start to Finish`;"
-msgstr "un :guilabel:`Tipo`: :guilabel:`Fin a inicio`, :guilabel:`Inicio a inicio`, :guilabel:`Fin a fin` o :guilabel:`Inicio a fin`;"
+msgstr "un :guilabel:`Tipo`: :guilabel:`Fin a inicio`, :guilabel:`Comienzo a comienzo`, :guilabel:`Fin a fin` o :guilabel:`Comienzo a fin`;"
 
 #: ../../content/applications/services/project/gantt_planning.rst:78
 msgid "a :guilabel:`Lag (days)`, a positive delay or a negative lead between the two tasks."
@@ -3040,7 +3040,7 @@ msgstr "Esta función la proporciona el módulo *Número de expediente - Proyect
 
 #: ../../content/applications/services/project/process_numbers.rst:16
 msgid "To have a process number created automatically for every new project, go to :menuselection:`Settings --> eYssen ERP`, and, in the :guilabel:`Process Number` section, enable :guilabel:`Create Automatically` under the :guilabel:`Project` option. The setting is per company."
-msgstr "Para que se cree automáticamente un número de expediente en cada proyecto nuevo, vaya a :menuselection:`Ajustes --> eYssen ERP` y, en la sección :guilabel:`Número de expediente`, active :guilabel:`Crear automáticamente` en la opción :guilabel:`Proyecto`. El ajuste es por compañía."
+msgstr "Para que se cree automáticamente un número de expediente en cada proyecto nuevo, vaya a :menuselection:`Ajustes --> eYssen ERP` y, en la sección :guilabel:`Número de proceso`, active :guilabel:`Crear automáticamente` en la opción :guilabel:`Proyecto`. El ajuste es por compañía."
 
 #: ../../content/applications/services/project/process_numbers.rst:21
 msgid ":doc:`../../general/process_numbers` for the process number records themselves, and their use in the other applications."
@@ -3056,7 +3056,7 @@ msgstr "Todos los proyectos tienen un :guilabel:`Modo de número de proceso`:"
 
 #: ../../content/applications/services/project/process_numbers.rst:34
 msgid ":guilabel:`Single`"
-msgstr ":guilabel:`Único`"
+msgstr ":guilabel:`Soltero(a)`"
 
 #: ../../content/applications/services/project/process_numbers.rst:32
 msgid "The whole project belongs to one case. The :guilabel:`Process Number` chosen on the project is applied to all of its tasks, and tasks created later inherit it. Changing the project's process number updates the tasks."
@@ -3072,7 +3072,7 @@ msgstr "Cada tarea tiene su propio número de proceso. El proyecto en sí no tie
 
 #: ../../content/applications/services/project/process_numbers.rst:40
 msgid "If the project already contains tasks with different process numbers, switching the mode back to :guilabel:`Single` is refused, so that existing case assignments are not silently overwritten."
-msgstr "Si el proyecto ya contiene tareas con diferentes números de proceso, no se permite volver al modo :guilabel:`Único`, de forma que las asignaciones de casos existentes no se sobrescriban sin previo aviso."
+msgstr "Si el proyecto ya contiene tareas con diferentes números de proceso, no se permite volver al modo :guilabel:`Soltero(a)`, de forma que las asignaciones de casos existentes no se sobrescriban sin previo aviso."
 
 #: ../../content/applications/services/project/process_numbers.rst:43
 msgid "Use the :guilabel:`Create a new process number` link on the project or on the task to generate a number on the spot instead of picking an existing one."
@@ -3208,7 +3208,7 @@ msgstr "El :guilabel:`Tipo de SLA` decide qué se mide:"
 
 #: ../../content/applications/services/project/sla.rst:32
 msgid ":guilabel:`Stage Completion` – the time the task may take to reach one of the :guilabel:`Target Stages`."
-msgstr ":guilabel:`Finalización de etapa` – el tiempo que puede tardar la tarea en llegar a una de las :guilabel:`Etapas objetivo`."
+msgstr ":guilabel:`Finalización de la etapa` – el tiempo que puede tardar la tarea en llegar a una de las :guilabel:`Etapas de destino`."
 
 #: ../../content/applications/services/project/sla.rst:34
 msgid ":guilabel:`First Activity` – the time that may pass until somebody first works on the task (a stage change, an assignment, a message, and similar events all count)."
@@ -3224,11 +3224,11 @@ msgstr "El :guilabel:`Calendario de recursos` es el horario laboral que se utili
 
 #: ../../content/applications/services/project/sla.rst:41
 msgid ":guilabel:`Target Stages` (for :guilabel:`Stage Completion`) are the stages that fulfill the policy."
-msgstr "Las :guilabel:`Etapas objetivo` (para :guilabel:`Finalización de etapa`) son las etapas que cumplen con la política."
+msgstr "Las :guilabel:`Etapas de destino` (para :guilabel:`Finalización de la etapa`) son las etapas que cumplen con la política."
 
 #: ../../content/applications/services/project/sla.rst:43
 msgid ":guilabel:`Freeze Stages` pause the timer. While the task sits in one of these stages — waiting for a customer answer, for instance — the clock does not run, and the deadline moves accordingly."
-msgstr "Las :guilabel:`Etapas de pausa` detienen el cronómetro. Mientras la tarea permanece en una de estas etapas — a la espera de la respuesta de un cliente, por ejemplo — el reloj no avanza y el plazo se ajusta en consecuencia."
+msgstr "Las :guilabel:`Congelar etapas` detienen el cronómetro. Mientras la tarea permanece en una de estas etapas — a la espera de la respuesta de un cliente, por ejemplo — el reloj no avanza y el plazo se ajusta en consecuencia."
 
 #: ../../content/applications/services/project/sla.rst:47
 msgid "Scope"
@@ -3248,7 +3248,7 @@ msgstr "Avisos"
 
 #: ../../content/applications/services/project/sla.rst:57
 msgid ":guilabel:`Urgent Time` is the remaining time at which the task switches to the :guilabel:`Urgent` state."
-msgstr "El :guilabel:`Tiempo urgente` es el tiempo restante a partir del cual la tarea cambia al estado :guilabel:`Urgente`."
+msgstr "El :guilabel:`Hora urgente` es el tiempo restante a partir del cual la tarea cambia al estado :guilabel:`Urgente`."
 
 #: ../../content/applications/services/project/sla.rst:59
 msgid ":guilabel:`Warning Before (hours)` schedules a :guilabel:`To Do` activity for the assignee (or, if the task is unassigned, for the project manager) that many hours before the deadline. Only one reminder is created per policy and task."
@@ -3264,7 +3264,7 @@ msgstr "Estados de SLA en las tareas"
 
 #: ../../content/applications/services/project/sla.rst:80
 msgid "Every task of an SLA-enabled project carries one line per applicable policy in its :guilabel:`SLAs` tab, showing the :guilabel:`SLA Deadline`, the :guilabel:`SLA Remaining Time`, and the state:"
-msgstr "Cada tarea de un proyecto con SLA habilitado tiene una línea por cada política aplicable en su pestaña :guilabel:`SLA`, que muestra el :guilabel:`Plazo de SLA`, el :guilabel:`Tiempo restante de SLA` y el estado:"
+msgstr "Cada tarea de un proyecto con SLA habilitado tiene una línea por cada política aplicable en su pestaña :guilabel:`SLA`, que muestra el :guilabel:`Plazo del SLA`, el :guilabel:`Tiempo restante del SLA` y el estado:"
 
 #: ../../content/applications/services/project/sla.rst:88
 msgid "State"
@@ -3288,7 +3288,7 @@ msgstr ":guilabel:`Urgente`"
 
 #: ../../content/applications/services/project/sla.rst:93
 msgid "The remaining time has fallen below the policy's :guilabel:`Urgent Time`."
-msgstr "El tiempo restante ha caído por debajo del :guilabel:`Tiempo urgente` de la política."
+msgstr "El tiempo restante ha caído por debajo del :guilabel:`Hora urgente` de la política."
 
 #: ../../content/applications/services/project/sla.rst:94
 msgid ":guilabel:`Success`"
@@ -3316,7 +3316,7 @@ msgstr "No se pudo calcular ningún plazo, por ejemplo porque la política no ti
 
 #: ../../content/applications/services/project/sla.rst:101
 msgid "The same states are shown as colored badges next to the task title, on the Kanban cards, and as :guilabel:`SLA In Time`, :guilabel:`SLA Urgent`, :guilabel:`SLA Success`, and :guilabel:`SLA Failed` filters in the search panel of the task list."
-msgstr "Los mismos estados se muestran como insignias de colores junto al título de la tarea, en las tarjetas Kanban y como filtros :guilabel:`SLA a tiempo`, :guilabel:`SLA urgente`, :guilabel:`SLA con éxito` y :guilabel:`SLA fallido` en el panel de búsqueda de la lista de tareas."
+msgstr "Los mismos estados se muestran como insignias de colores junto al título de la tarea, en las tarjetas Kanban y como filtros :guilabel:`SLA a tiempo`, :guilabel:`SLA urgente`, :guilabel:`SLA cumplido` y :guilabel:`SLA incumplido` en el panel de búsqueda de la lista de tareas."
 
 #: ../../content/applications/services/project/sla.rst:105
 msgid "A scheduled action re-evaluates the open SLA states in the background, so the states, the reminders, and the escalations stay up to date without anyone opening the task."
@@ -3328,11 +3328,11 @@ msgstr "Reglas de escalación"
 
 #: ../../content/applications/services/project/sla.rst:121
 msgid "The :guilabel:`Escalation Rules` list at the bottom of the policy defines what happens when the SLA goes wrong. Each rule has:"
-msgstr "La lista :guilabel:`Reglas de escalación` en la parte inferior de la política define qué ocurre cuando el SLA sale mal. Cada regla tiene:"
+msgstr "La lista :guilabel:`Reglas de escalado` en la parte inferior de la política define qué ocurre cuando el SLA sale mal. Cada regla tiene:"
 
 #: ../../content/applications/services/project/sla.rst:124
 msgid "a :guilabel:`Trigger`: :guilabel:`On SLA Breach` (the state became :guilabel:`Fail`) or :guilabel:`On Urgent Status`;"
-msgstr "un :guilabel:`Activador`: :guilabel:`Al incumplir el SLA` (el estado pasó a :guilabel:`Fallo`) o :guilabel:`Al estado urgente`;"
+msgstr "un :guilabel:`Activador`: :guilabel:`Al incumplir el SLA` (el estado pasó a :guilabel:`Fallo`) o :guilabel:`En estado urgente`;"
 
 #: ../../content/applications/services/project/sla.rst:126
 msgid "an :guilabel:`Action`:"
@@ -3340,7 +3340,7 @@ msgstr "una :guilabel:`Acción`:"
 
 #: ../../content/applications/services/project/sla.rst:128
 msgid ":guilabel:`Send Notification` – schedules a :guilabel:`To Do` activity for each user in :guilabel:`Notify Users`;"
-msgstr ":guilabel:`Enviar notificación` – programa una actividad :guilabel:`Por hacer` para cada usuario en :guilabel:`Notificar a usuarios`;"
+msgstr ":guilabel:`Enviar notificación` – programa una actividad :guilabel:`Por hacer` para cada usuario en :guilabel:`Notificar usuarios`;"
 
 #: ../../content/applications/services/project/sla.rst:130
 msgid ":guilabel:`Reassign Task` – assigns the task to the user in :guilabel:`Reassign To`, replacing the current assignees;"
@@ -3348,7 +3348,7 @@ msgstr ":guilabel:`Reasignar tarea` – asigna la tarea al usuario indicado en :
 
 #: ../../content/applications/services/project/sla.rst:132
 msgid ":guilabel:`Raise Priority` – raises the task to :guilabel:`New Priority`, never lowering it."
-msgstr ":guilabel:`Aumentar prioridad` – eleva la tarea a la :guilabel:`Nueva prioridad`, sin bajarla nunca."
+msgstr ":guilabel:`Elevar prioridad` – eleva la tarea a la :guilabel:`Nueva prioridad`, sin bajarla nunca."
 
 #: ../../content/applications/services/project/sla.rst:134
 msgid "Rules run in the order of the list handle, and each rule fires **at most once** per task and policy. A rule can be deactivated with its :guilabel:`Active` toggle without deleting its history."
@@ -3372,7 +3372,7 @@ msgstr ":guilabel:`Asignación automática` – cuando está habilitada, cada nu
 
 #: ../../content/applications/services/project/sla.rst:147
 msgid ":guilabel:`Assignment Method` – :guilabel:`Randomly` picks any team member, while :guilabel:`Balanced` picks the member with the fewest open tasks in the project."
-msgstr ":guilabel:`Método de asignación` – :guilabel:`Aleatorio` elige a cualquier miembro del equipo, mientras que :guilabel:`Equilibrado` elige al miembro con menos tareas abiertas en el proyecto."
+msgstr ":guilabel:`Método de asignación` – :guilabel:`Aleatoriamente` elige a cualquier miembro del equipo, mientras que :guilabel:`Equilibrado` elige al miembro con menos tareas abiertas en el proyecto."
 
 #: ../../content/applications/services/project/sla.rst:150
 msgid "The project settings also display the live SLA counters of the project — :guilabel:`In Time`, :guilabel:`Urgent`, :guilabel:`Success`, :guilabel:`Failed`, and the success :guilabel:`Rate`."
@@ -3384,7 +3384,7 @@ msgstr "Análisis de SLA"
 
 #: ../../content/applications/services/project/sla.rst:158
 msgid "Go to :menuselection:`Project --> Reporting --> SLA Analysis` for a pivot and graph view of the SLA results. Measures and groupings include the policy, the project, the customer, the assignee, the stage, the priority, the SLA type, the :guilabel:`SLA Target (hours)`, the :guilabel:`Hours to Close`, and the :guilabel:`Exceeded Hours`, so that recurring breaches can be traced back to a team, a customer, or a policy that is set too tightly."
-msgstr "Vaya a :menuselection:`Proyecto --> Informes --> Análisis de SLA` para ver los resultados del SLA en vistas de tabla dinámica y de gráfico. Las medidas y agrupaciones incluyen la política, el proyecto, el cliente, la persona asignada, la etapa, la prioridad, el tipo de SLA, el :guilabel:`Objetivo de SLA (horas)`, las :guilabel:`Horas para cerrar` y las :guilabel:`Horas excedidas`, de forma que los incumplimientos recurrentes se puedan rastrear hasta un equipo, un cliente o una política configurada de forma demasiado estricta."
+msgstr "Vaya a :menuselection:`Proyecto --> Informes --> Análisis de SLA` para ver los resultados del SLA en vistas de tabla dinámica y de gráfico. Las medidas y agrupaciones incluyen la política, el proyecto, el cliente, la persona asignada, la etapa, la prioridad, el tipo de SLA, el :guilabel:`Objetivo del SLA (horas)`, las :guilabel:`Horas para cerrar` y las :guilabel:`Horas excedidas`, de forma que los incumplimientos recurrentes se puedan rastrear hasta un equipo, un cliente o una política configurada de forma demasiado estricta."
 
 #: ../../content/applications/services/project/sla.rst:173 ../../content/applications/services/project/templates.rst:69
 msgid ":doc:`categories`"
@@ -3420,7 +3420,7 @@ msgstr ":guilabel:`Baja`"
 
 #: ../../content/applications/services/project/tasks/task_stages_statuses.rst:85
 msgid ":guilabel:`Medium`"
-msgstr ":guilabel:`Media`"
+msgstr ":guilabel:`Medio`"
 
 #: ../../content/applications/services/project/tasks/task_stages_statuses.rst:86
 msgid ":guilabel:`High`"
@@ -3464,11 +3464,11 @@ msgstr ":guilabel:`Etapas`"
 
 #: ../../content/applications/services/project/templates.rst:21
 msgid ":guilabel:`Add Existing Stages` – pick task stages that already exist in the database."
-msgstr ":guilabel:`Agregar etapas existentes` – elija etapas de tareas que ya existan en la base de datos."
+msgstr ":guilabel:`Añadir etapas existentes` – elija etapas de tareas que ya existan en la base de datos."
 
 #: ../../content/applications/services/project/templates.rst:22
 msgid ":guilabel:`Create New Stages` – type the stage names to be created, separated by commas, for example `New, In Progress, Paused|, Testing, Closed|`. A name that ends with a `|` character creates a **folded** stage in the Kanban view."
-msgstr ":guilabel:`Crear nuevas etapas` – escriba los nombres de las etapas que se van a crear, separados por comas, por ejemplo `Nuevo, En curso, Pausado|, Prueba, Cerrado|`. Un nombre que termine con el carácter `|` crea una etapa **plegada** en la vista Kanban."
+msgstr ":guilabel:`Crear etapas nuevas` – escriba los nombres de las etapas que se van a crear, separados por comas, por ejemplo `Nuevo, En curso, Pausado|, Prueba, Cerrado|`. Un nombre que termine con el carácter `|` crea una etapa **plegada** en la vista Kanban."
 
 #: ../../content/applications/services/project/templates.rst:32
 msgid ":guilabel:`More`"
@@ -3492,7 +3492,7 @@ msgstr ":guilabel:`Agregar categorías existentes` – las :doc:`categorías de 
 
 #: ../../content/applications/services/project/templates.rst:32
 msgid ":guilabel:`Company` – in a multi-company database, the company the template belongs to."
-msgstr ":guilabel:`Empresa` – en una base de datos multiempresa, la empresa a la que pertenece la plantilla."
+msgstr ":guilabel:`Compañía` – en una base de datos multiempresa, la empresa a la que pertenece la plantilla."
 
 #: ../../content/applications/services/project/templates.rst:34
 msgid "The :guilabel:`sequence` handle in the template list controls the order in which the templates are offered."
@@ -3652,7 +3652,7 @@ msgstr "Configuración de los servicios"
 
 #: ../../content/applications/services/timesheets/services.rst:18
 msgid "Go to :menuselection:`Project --> Configuration --> Timesheet Services`. Each service has:"
-msgstr "Vaya a :menuselection:`Proyecto --> Configuración --> Servicios de hoja de horas`. Cada servicio tiene:"
+msgstr "Vaya a :menuselection:`Proyecto --> Configuración --> Servicios de parte de horas`. Cada servicio tiene:"
 
 #: ../../content/applications/services/timesheets/services.rst:20
 msgid ":guilabel:`Service Name` – the label chosen on the timesheet line."
@@ -3672,11 +3672,11 @@ msgstr "Facturar un proyecto a partir de servicios de hoja de horas"
 
 #: ../../content/applications/services/timesheets/services.rst:40
 msgid "Open the project's settings and enable :guilabel:`Billable from Timesheet Services` to invoice time and material from the services instead of the standard billing setup. The option replaces the standard :guilabel:`Billable` setting; only one of the two applies to a project."
-msgstr "Abra los ajustes del proyecto y active :guilabel:`Facturable a partir de servicios de hoja de horas` para facturar el tiempo y los materiales a partir de los servicios en lugar de la configuración de facturación estándar. La opción sustituye al ajuste estándar :guilabel:`Facturable`; solo una de las dos se aplica a un proyecto."
+msgstr "Abra los ajustes del proyecto y active :guilabel:`Facturable desde los servicios de parte de horas` para facturar el tiempo y los materiales a partir de los servicios en lugar de la configuración de facturación estándar. La opción sustituye al ajuste estándar :guilabel:`Facturable`; solo una de las dos se aplica a un proyecto."
 
 #: ../../content/applications/services/timesheets/services.rst:44
 msgid "A :guilabel:`Contains Services` tab then appears on the project, listing the service credit agreed with the customer. Each line holds the :guilabel:`Timesheet Service`, the :guilabel:`Quantity` of hours included, and the :guilabel:`Start Date` and :guilabel:`End Date` of the period in which they can be consumed."
-msgstr "Entonces aparece en el proyecto una pestaña :guilabel:`Contiene servicios` que muestra el crédito de servicio acordado con el cliente. Cada línea contiene el :guilabel:`Servicio de hoja de horas`, la :guilabel:`Cantidad` de horas incluidas y la :guilabel:`Fecha de inicio` y :guilabel:`Fecha de fin` del período durante el cual pueden consumirse."
+msgstr "Entonces aparece en el proyecto una pestaña :guilabel:`Contiene servicios` que muestra el crédito de servicio acordado con el cliente. Cada línea contiene el :guilabel:`Servicio de parte de horas`, la :guilabel:`Cantidad` de horas incluidas y la :guilabel:`Fecha de inicio` y :guilabel:`Fecha de fin` del período durante el cual pueden consumirse."
 
 #: ../../content/applications/services/timesheets/services.rst:60
 msgid "Logging time on a service"
@@ -3712,7 +3712,7 @@ msgstr "El precio se consulta **al guardar la línea**. Corrija el servicio en l
 
 #: ../../content/applications/services/timesheets/services.rst:80
 msgid "Tasks show the resulting :guilabel:`Billed Time Spent` next to the hours actually spent, so the difference between the time worked and the time charged stays visible."
-msgstr "Las tareas muestran el :guilabel:`Tiempo facturado` resultante junto a las horas realmente dedicadas, de modo que la diferencia entre el tiempo trabajado y el tiempo facturado permanece visible."
+msgstr "Las tareas muestran el :guilabel:`Tiempo dedicado facturado` resultante junto a las horas realmente dedicadas, de modo que la diferencia entre el tiempo trabajado y el tiempo facturado permanece visible."
 
 #: ../../content/applications/services/timesheets/services.rst:85
 msgid ":doc:`/applications/sales/sales/invoicing/time_materials`"

@@ -261,9 +261,12 @@ Person` / :guilabel:`Company` choice at the top of the address step for visitors
 in. The choice sets the contact's :guilabel:`Company Type`, and the address form adapts to it: the
 company name and tax ID fields are only required for companies.
 
-Together with the Hungarian localization, the form also switches between the international
-:guilabel:`VAT` field and the Hungarian tax number field depending on the selected
-:guilabel:`Country`, and the B2B fields are always shown.
+When the Hungarian localization is installed, the *Website Sale Partner Type - Hungary* module
+(`website_sale_partner_type_l10n_hu`) is installed automatically. It adds the Hungarian tax number
+field to the address form, which then switches between the international :guilabel:`VAT` field and
+the Hungarian tax number field depending on the selected :guilabel:`Country`. On the website of a
+Hungarian company, a Hungarian company customer must fill in the Hungarian tax number instead of
+the international VAT number, and the B2B fields are always shown for Hungarian companies.
 
 .. screenshot:: ecommerce-checkout-customer-type
    :menu: (website) ‣ Checkout ‣ Address

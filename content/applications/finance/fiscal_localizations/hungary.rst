@@ -93,6 +93,22 @@ needs of the company.
      - `l10n_hu_subscription`
      - Installed automatically with the *Subscriptions* app; see :ref:`continuous fulfillment on
        subscription invoices <localizations/hungary/subscription>`.
+   * - :guilabel:`Invoicing from Stock Picking - Hungary`
+     - `eyssen_stock_picking_invoice_l10n_hu`
+     - Installed automatically with :doc:`invoicing from delivery notes
+       <../accounting/customer_invoices/invoice_from_delivery_notes>`: several delivery dates on one
+       invoice only with an aggregate invoice agreement, and the fulfillment date of every invoice
+       line taken from its delivery note.
+   * - :guilabel:`PoS Invoice - Hungary`
+     - `l10n_hu_pos_invoice`
+     - Installed automatically with the :ref:`payment terms on POS invoices
+       <receipts-invoices/payment-terms>`: a Hungarian company without a valid Hungarian tax number
+       cannot be invoiced from the Point of Sale.
+   * - :guilabel:`Website Sale Partner Type - Hungary`
+     - `website_sale_partner_type_l10n_hu`
+     - Installed automatically with the :ref:`private person or company choice
+       <ecommerce/checkout/customer-type>` of the eCommerce checkout: the Hungarian tax number field
+       of the address form.
 
 .. important::
    `eyssen_l10n_hu` replaces the standard :guilabel:`Hungary - E-invoicing` (`l10n_hu_edi`) module.

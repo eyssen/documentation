@@ -107,16 +107,18 @@ bills:
   in the list of invoices.
 
 .. note::
-   Except for the quantity totals and the copy buttons, these tools require the Hungarian
-   localization module (*Magyar számlázás és NAV adatszolgáltatás*, `eyssen_l10n_hu`), which
-   provides the toolbar above the invoice lines.
+   The toolbar above the invoice lines is provided by the *Invoice Line Toolbar* module
+   (`account_invoice_line_toolbar`), which is installed automatically with the tools that use it.
+   These tools do not require the Hungarian localization. With the Hungarian localization, the
+   toolbar also shows the lock toggle of the line data (see
+   :doc:`../fiscal_localizations/hungary/invoicing`).
 
 .. screenshot:: accounting-invoice-line-tools
    :menu: Accounting ‣ Customers ‣ Invoices ‣ (open a draft invoice)
    :shows: Draft invoice, "Invoice Lines" tab: the toolbar above the lines with the "Add Products from Delivery Notes" button (left) and the barcode, "Add Previous Items" and "Add Bulk Products" icon buttons and the copy toggle (right); the copy buttons are visible next to the Product, Account and Taxes columns; the totals block shows the quantity totals.
    :highlight: The toolbar buttons and the quantity totals (red frames).
    :data: Demo company "YourCompany HU"; draft invoice with three product lines.
-   :module: eyssen_l10n_hu, eyssen_stock_picking_invoice, eyssen_product_bulk_add_invoice, eyssen_add_item_from_previous_invoice, eyssen_barcode_invoice, eyssen_copy_invoice_row_value, eyssen_quantity_total_invoice
+   :module: account_invoice_line_toolbar, eyssen_stock_picking_invoice, eyssen_product_bulk_add_invoice, eyssen_add_item_from_previous_invoice, eyssen_barcode_invoice, eyssen_copy_invoice_row_value, eyssen_quantity_total_invoice
    :notes: English UI, light theme, 1440px width.
 
 .. _accounting/invoice/pricelist:

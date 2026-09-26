@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-19 14:35+0100\n"
+"POT-Creation-Date: 2026-09-26 17:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -3494,7 +3494,7 @@ msgstr "Az Odoo a *felhasználót* olyan személyként definiálja, aki hozzáf�
 msgid ":doc:`users/language`"
 msgstr ":doc:`users/language`"
 
-#: ../../content/applications/general/audit_log.rst:133 ../../content/applications/general/eyssen_erp_settings.rst:726 ../../content/applications/general/users.rst:15
+#: ../../content/applications/general/audit_log.rst:133 ../../content/applications/general/eyssen_erp_settings.rst:733 ../../content/applications/general/users.rst:15
 msgid ":doc:`users/access_rights`"
 msgstr ":doc:`users/access_rights`"
 
@@ -6248,7 +6248,7 @@ msgstr "Lépjen a :menuselection:`Beállítások --> Technikai --> Audit --> Rul
 
 #: ../../content/applications/general/audit_log.rst:29
 msgid ":guilabel:`Name`: the name of the rule;"
-msgstr ":guilabel:`Name`: a szabály neve;"
+msgstr ":guilabel:`Név`: a szabály neve;"
 
 #: ../../content/applications/general/audit_log.rst:30
 msgid ":guilabel:`Model`: the model to audit (e.g., *Contact* or *Product*);"
@@ -6256,7 +6256,7 @@ msgstr ":guilabel:`Model`: az auditálandó modell (pl. *Kapcsolat* vagy *Termé
 
 #: ../../content/applications/general/audit_log.rst:31
 msgid ":guilabel:`Type`:"
-msgstr ":guilabel:`Type`:"
+msgstr ":guilabel:`Típus`:"
 
 #: ../../content/applications/general/audit_log.rst:33
 msgid ":guilabel:`Full log`: the data of the record is compared before and after the operation. The log also contains the computed fields that changed as a consequence of the operation, but the operation is slower;"
@@ -6312,7 +6312,7 @@ msgstr "Az Audit menüből"
 
 #: ../../content/applications/general/audit_log.rst:83
 msgid ":menuselection:`Settings --> Technical --> Audit --> Logs` lists all the logged operations with their date, :guilabel:`User`, :guilabel:`Model`, :guilabel:`Resource Name`, :guilabel:`Resource ID`, and method (*create*, *read*, *write*, or *unlink*). Open a log to see the :guilabel:`Fields updated` list, with the technical name and the description of each field, and its old and new value. The list can be grouped by user, model, record, date, user session, or HTTP request."
-msgstr "A :menuselection:`Beállítások --> Technikai --> Audit --> Logs` menüpont az összes naplózott műveletet felsorolja a dátummal, a felhasználóval (:guilabel:`User`), a modellel (:guilabel:`Model`), a rekord nevével (:guilabel:`Resource Name`) és azonosítójával (:guilabel:`Resource ID`), valamint a metódussal (*create*, *read*, *write* vagy *unlink*). Nyisson meg egy naplót a :guilabel:`Fields updated` lista megtekintéséhez, amely minden mezőnél tartalmazza a technikai nevet, a leírást, valamint a régi és az új értéket. A lista csoportosítható felhasználó, modell, rekord, dátum, felhasználói munkamenet vagy HTTP-kérés szerint."
+msgstr "A :menuselection:`Beállítások --> Technikai --> Audit --> Logs` menüpont az összes naplózott műveletet felsorolja a dátummal, a felhasználóval (:guilabel:`Felhasználó`), a modellel (:guilabel:`Model`), a rekord nevével (:guilabel:`Resource Name`) és azonosítójával (:guilabel:`Resource ID`), valamint a metódussal (*create*, *read*, *write* vagy *unlink*). Nyisson meg egy naplót a :guilabel:`Fields updated` lista megtekintéséhez, amely minden mezőnél tartalmazza a technikai nevet, a leírást, valamint a régi és az új értéket. A lista csoportosítható felhasználó, modell, rekord, dátum, felhasználói munkamenet vagy HTTP-kérés szerint."
 
 #: ../../content/applications/general/audit_log.rst:89
 msgid ":menuselection:`Settings --> Technical --> Audit --> Log Lines` lists the field changes of all the logs in a single list, grouped by model. It is the most convenient view to follow the successive values of one field."
@@ -6346,7 +6346,7 @@ msgstr "Az *Auto-vacuum audit logs* ütemezett művelet törli a 180 napnál ré
 msgid "To enable it, go to :menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`, open :guilabel:`Auto-vacuum audit logs`, and turn on the :guilabel:`Active` toggle. To keep the logs for a different period, change the number of days in the code of the action, e.g., `model.autovacuum(365)` for one year."
 msgstr "A bekapcsolásához lépjen a :menuselection:`Beállítások --> Technikai --> Automatizálás --> Ütemezett műveletek` menüpontra, nyissa meg az :guilabel:`Auto-vacuum audit logs` műveletet, és kapcsolja be az :guilabel:`Aktív` kapcsolót. Ha a naplókat más időtartamig szeretné megőrizni, módosítsa a napok számát a művelet kódjában, például egy évre: `model.autovacuum(365)`."
 
-#: ../../content/applications/general/audit_log.rst:134 ../../content/applications/general/eyssen_erp_settings.rst:73 ../../content/applications/general/eyssen_erp_settings.rst:76
+#: ../../content/applications/general/audit_log.rst:134 ../../content/applications/general/eyssen_erp_settings.rst:80 ../../content/applications/general/eyssen_erp_settings.rst:83
 msgid ":doc:`users/access_management`"
 msgstr ":doc:`users/access_management`"
 
@@ -6487,8 +6487,8 @@ msgid "Quick creation disabled in many2one fields"
 msgstr "A gyors létrehozás letiltása a many2one mezőkben"
 
 #: ../../content/applications/general/backend_interface.rst:141
-msgid "When typing a new value in a many2one field (e.g., a customer on a quotation), Odoo normally offers :guilabel:`Create \"value\"`, which creates the record at once with just a name. With the *No quick_create* module (`deltatech_no_quick_create`), this option is removed from many2one fields, to avoid incomplete contacts, products, etc. Only :guilabel:`Create and edit...` remains, which opens the full creation form."
-msgstr "Amikor egy many2one mezőbe (pl. egy árajánlaton a vevő) új értéket gépel, az Odoo alapesetben felkínálja a :guilabel:`Létrehozás: \"érték\"` lehetőséget, amely azonnal, pusztán egy névvel létrehozza a rekordot. A *No quick_create* modullal (`deltatech_no_quick_create`) ez a lehetőség eltűnik a many2one mezőkből, hogy ne keletkezzenek hiányos kapcsolatok, termékek stb. Csak a :guilabel:`Create and edit...` lehetőség marad meg, amely a teljes létrehozási űrlapot nyitja meg."
+msgid "When typing a new value in a many2one field (e.g., a customer on a quotation), Odoo normally offers :guilabel:`Create \"value\"`, which creates the record at once with just a name. With the *Disable Many2one Quick Create* module (`web_no_quick_create`), this option is removed from many2one fields, to avoid incomplete contacts, products, etc. Only :guilabel:`Create and edit...` remains, which opens the full creation form."
+msgstr "Amikor egy many2one mezőbe (pl. egy árajánlaton a vevő) új értéket gépel, az Odoo alapesetben felkínálja a :guilabel:`Létrehozás: \"érték\"` lehetőséget, amely azonnal, pusztán egy névvel létrehozza a rekordot. A *Disable Many2one Quick Create* modullal (`web_no_quick_create`) ez a lehetőség eltűnik a many2one mezőkből, hogy ne keletkezzenek hiányos kapcsolatok, termékek stb. Csak a :guilabel:`Létrehozás és szerkesztés...` lehetőség marad meg, amely a teljes létrehozási űrlapot nyitja meg."
 
 #: ../../content/applications/general/backend_interface.rst:150
 msgid "Clickable tags"
@@ -6502,7 +6502,7 @@ msgstr "A *Clickable Many2many Tags Widget* modul (`widget_many2many_clickable`)
 msgid ":doc:`eyssen_erp_settings`"
 msgstr ":doc:`eyssen_erp_settings`"
 
-#: ../../content/applications/general/backend_interface.rst:159 ../../content/applications/general/eyssen_erp_settings.rst:88 ../../content/applications/general/eyssen_erp_settings.rst:91 ../../content/applications/general/eyssen_erp_settings.rst:94
+#: ../../content/applications/general/backend_interface.rst:159 ../../content/applications/general/eyssen_erp_settings.rst:95 ../../content/applications/general/eyssen_erp_settings.rst:98 ../../content/applications/general/eyssen_erp_settings.rst:101
 msgid ":doc:`../productivity/discuss/chatter`"
 msgstr ":doc:`../productivity/discuss/chatter`"
 
@@ -6560,7 +6560,7 @@ msgstr "Tipikus eset az olyan adatbázis, amelyben a nyitókészletet hibás egy
 
 #: ../../content/applications/general/data_audit.rst:22
 msgid "To install the module, go to :menuselection:`Settings --> eYssen ERP`, and, in the :guilabel:`General Modules` section, enable :guilabel:`Data Audit`. The *Inventory*, *Purchase*, and *Accounting* (automated inventory valuation) apps are required. The :ref:`correction <data-audit/fix>` step additionally relies on the valuation change history of the *Hungarian Accounting* module (`eyssen_l10n_hu_accountant`), which must be installed."
-msgstr "A modul telepítéséhez lépjen a :menuselection:`Beállítások --> eYssen ERP` menüpontra, és a :guilabel:`General Modules` szakaszban kapcsolja be a :guilabel:`Data Audit` beállítást. Szükséges hozzá a *Készlet*, a *Beszerzés* és a *Könyvelés* (automatikus készletértékelés) alkalmazás. A :ref:`javítási <data-audit/fix>` lépés emellett a *Hungarian Accounting* modul (`eyssen_l10n_hu_accountant`) értékelésmódosítási előzményeire is támaszkodik, ezért annak is telepítve kell lennie."
+msgstr "A modul telepítéséhez lépjen a :menuselection:`Beállítások --> eYssen ERP` menüpontra, és a :guilabel:`General Modules` szakaszban kapcsolja be a :guilabel:`Adat Audit` beállítást. Szükséges hozzá a *Készlet*, a *Beszerzés* és a *Könyvelés* (automatikus készletértékelés) alkalmazás. A :ref:`javítási <data-audit/fix>` lépés emellett a *Hungarian Accounting* modul (`eyssen_l10n_hu_accountant`) értékelésmódosítási előzményeire is támaszkodik, ezért annak is telepítve kell lennie."
 
 #: ../../content/applications/general/data_audit.rst:27
 msgid "The tool is reserved for users with the :guilabel:`Administration: Settings` access right. Its menu, :menuselection:`Settings --> Technical --> Data Audit --> Stock Valuation Audit`, is displayed in :ref:`developer mode <developer-mode>`."
@@ -6708,1601 +6708,1605 @@ msgstr "Egy modul eltávolítása törli a modul által hozzáadott mezőkben é
 
 #: ../../content/applications/general/eyssen_erp_settings.rst:20
 msgid "Some options have sub-options, displayed under the main option (e.g., :guilabel:`Account` and :guilabel:`PoS` under :guilabel:`Access Management`). They install a bridge between the feature and another application, and require that application to be installed."
-msgstr "Egyes beállításoknak albeállításai is vannak, amelyek a fő beállítás alatt jelennek meg (pl. az :guilabel:`Account` és a :guilabel:`PoS` az :guilabel:`Access Management` alatt). Ezek hidat telepítenek a funkció és egy másik alkalmazás közé, és az adott alkalmazás telepítését is megkövetelik."
+msgstr "Egyes beállításoknak albeállításai is vannak, amelyek a fő beállítás alatt jelennek meg (pl. az :guilabel:`Főkönyvi számla` és a :guilabel:`PoS` az :guilabel:`Access Management` alatt). Ezek hidat telepítenek a funkció és egy másik alkalmazás közé, és az adott alkalmazás telepítését is megkövetelik."
 
 #: ../../content/applications/general/eyssen_erp_settings.rst:24
+msgid "Country-specific parts of some features are installed automatically, without an option on this page, when the corresponding fiscal localization is installed. For example, with the Hungarian localization, the Hungarian rules of :doc:`invoicing from delivery notes <../finance/accounting/customer_invoices/invoice_from_delivery_notes>`, the Hungarian tax number check of :doc:`POS invoices <../sales/point_of_sale/receipts_invoices>` and the Hungarian tax number field of the :doc:`eCommerce checkout <../websites/ecommerce/checkout>` are added automatically."
+msgstr "Egyes funkciók országspecifikus részei automatikusan, ezen az oldalon lévő opció nélkül települnek, amikor a megfelelő pénzügyi lokalizáció telepítve van. A magyar lokalizációval például automatikusan hozzáadódnak a :doc:`szállítólevelekből történő számlázás <../finance/accounting/customer_invoices/invoice_from_delivery_notes>` magyar szabályai, a :doc:`POS-számlák <../sales/point_of_sale/receipts_invoices>` magyar adószám-ellenőrzése és az :doc:`e-kereskedelmi pénztár <../websites/ecommerce/checkout>` magyar adószám mezője."
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:31
 msgid "Once a module is installed, its own settings, if any, appear directly under its option on the same page (e.g., :guilabel:`Create Automatically` under the :guilabel:`Process Number` options), or in the settings of the related application."
 msgstr "A modul telepítése után annak saját beállításai – ha vannak – közvetlenül a beállítása alatt jelennek meg ugyanazon az oldalon (pl. a :guilabel:`Create Automatically` a :guilabel:`Process Number` beállításai alatt), vagy a kapcsolódó alkalmazás beállításai között."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:29
+#: ../../content/applications/general/eyssen_erp_settings.rst:36
 msgid "Only users with the :guilabel:`Administration: Settings` access right can open the page."
 msgstr "Az oldalt csak az :guilabel:`Adminisztráció: Beállítások` hozzáférési joggal rendelkező felhasználók nyithatják meg."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:30
+#: ../../content/applications/general/eyssen_erp_settings.rst:37
 msgid "The labels of this page are only available in English."
 msgstr "Az oldal feliratai csak angol nyelven érhetők el."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:31
+#: ../../content/applications/general/eyssen_erp_settings.rst:38
 msgid "Do not enable in a production database the options whose description reads *Under development. Don't use it yet!*"
 msgstr "Éles adatbázisban ne kapcsolja be azokat a beállításokat, amelyek leírásában ez áll: *Under development. Don't use it yet!*"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:33
+#: ../../content/applications/general/eyssen_erp_settings.rst:40
 msgid "The same modules can also be installed from the :doc:`Apps <apps_modules>` dashboard."
 msgstr "Ugyanezek a modulok az :doc:`Alkalmazások <apps_modules>` irányítópultról is telepíthetők."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:45
+#: ../../content/applications/general/eyssen_erp_settings.rst:52
 msgid "Available options"
 msgstr "Elérhető beállítások"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:47
+#: ../../content/applications/general/eyssen_erp_settings.rst:54
 msgid "The tables below list the options of each section of the page, the technical name of the module they install, and the documentation page describing the feature."
 msgstr "Az alábbi táblázatok az oldal egyes szakaszainak beállításait, az általuk telepített modul technikai nevét és a funkciót ismertető dokumentációs oldalt sorolják fel."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:51
+#: ../../content/applications/general/eyssen_erp_settings.rst:58
 msgid "General Modules"
 msgstr "General Modules"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:53
+#: ../../content/applications/general/eyssen_erp_settings.rst:60
 msgid "Features that are not tied to one application: interface, access control, documents, signature, and chatter."
 msgstr "Nem egyetlen alkalmazáshoz kötődő funkciók: kezelőfelület, hozzáférés-szabályozás, dokumentumok, aláírás és üzenetfal."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:59 ../../content/applications/general/eyssen_erp_settings.rst:108 ../../content/applications/general/eyssen_erp_settings.rst:142 ../../content/applications/general/eyssen_erp_settings.rst:158 ../../content/applications/general/eyssen_erp_settings.rst:240 ../../content/applications/general/eyssen_erp_settings.rst:286 ../../content/applications/general/eyssen_erp_settings.rst:302 ../../content/applications/general/eyssen_erp_settings.rst:318 ../../content/applications/general/eyssen_erp_settings.rst:349 ../../content/applications/general/eyssen_erp_settings.rst:422 ../../content/applications/general/eyssen_erp_settings.rst:456 ../../content/applications/general/eyssen_erp_settings.rst:520 ../../content/applications/general/eyssen_erp_settings.rst:557 ../../content/applications/general/eyssen_erp_settings.rst:573 ../../content/applications/general/eyssen_erp_settings.rst:595 ../../content/applications/general/eyssen_erp_settings.rst:626 ../../content/applications/general/eyssen_erp_settings.rst:661 ../../content/applications/general/process_numbers.rst:26
+#: ../../content/applications/general/eyssen_erp_settings.rst:66 ../../content/applications/general/eyssen_erp_settings.rst:115 ../../content/applications/general/eyssen_erp_settings.rst:149 ../../content/applications/general/eyssen_erp_settings.rst:165 ../../content/applications/general/eyssen_erp_settings.rst:247 ../../content/applications/general/eyssen_erp_settings.rst:293 ../../content/applications/general/eyssen_erp_settings.rst:309 ../../content/applications/general/eyssen_erp_settings.rst:325 ../../content/applications/general/eyssen_erp_settings.rst:356 ../../content/applications/general/eyssen_erp_settings.rst:429 ../../content/applications/general/eyssen_erp_settings.rst:463 ../../content/applications/general/eyssen_erp_settings.rst:527 ../../content/applications/general/eyssen_erp_settings.rst:564 ../../content/applications/general/eyssen_erp_settings.rst:580 ../../content/applications/general/eyssen_erp_settings.rst:602 ../../content/applications/general/eyssen_erp_settings.rst:633 ../../content/applications/general/eyssen_erp_settings.rst:668 ../../content/applications/general/process_numbers.rst:26
 msgid "Option"
 msgstr "Beállítás"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:60 ../../content/applications/general/eyssen_erp_settings.rst:109 ../../content/applications/general/eyssen_erp_settings.rst:143 ../../content/applications/general/eyssen_erp_settings.rst:159 ../../content/applications/general/eyssen_erp_settings.rst:241 ../../content/applications/general/eyssen_erp_settings.rst:287 ../../content/applications/general/eyssen_erp_settings.rst:303 ../../content/applications/general/eyssen_erp_settings.rst:319 ../../content/applications/general/eyssen_erp_settings.rst:350 ../../content/applications/general/eyssen_erp_settings.rst:423 ../../content/applications/general/eyssen_erp_settings.rst:457 ../../content/applications/general/eyssen_erp_settings.rst:521 ../../content/applications/general/eyssen_erp_settings.rst:558 ../../content/applications/general/eyssen_erp_settings.rst:574 ../../content/applications/general/eyssen_erp_settings.rst:596 ../../content/applications/general/eyssen_erp_settings.rst:627 ../../content/applications/general/eyssen_erp_settings.rst:662 ../../content/applications/general/process_numbers.rst:27
+#: ../../content/applications/general/eyssen_erp_settings.rst:67 ../../content/applications/general/eyssen_erp_settings.rst:116 ../../content/applications/general/eyssen_erp_settings.rst:150 ../../content/applications/general/eyssen_erp_settings.rst:166 ../../content/applications/general/eyssen_erp_settings.rst:248 ../../content/applications/general/eyssen_erp_settings.rst:294 ../../content/applications/general/eyssen_erp_settings.rst:310 ../../content/applications/general/eyssen_erp_settings.rst:326 ../../content/applications/general/eyssen_erp_settings.rst:357 ../../content/applications/general/eyssen_erp_settings.rst:430 ../../content/applications/general/eyssen_erp_settings.rst:464 ../../content/applications/general/eyssen_erp_settings.rst:528 ../../content/applications/general/eyssen_erp_settings.rst:565 ../../content/applications/general/eyssen_erp_settings.rst:581 ../../content/applications/general/eyssen_erp_settings.rst:603 ../../content/applications/general/eyssen_erp_settings.rst:634 ../../content/applications/general/eyssen_erp_settings.rst:669 ../../content/applications/general/process_numbers.rst:27
 msgid "Module"
 msgstr "Modul"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:61 ../../content/applications/general/eyssen_erp_settings.rst:110 ../../content/applications/general/eyssen_erp_settings.rst:144 ../../content/applications/general/eyssen_erp_settings.rst:160 ../../content/applications/general/eyssen_erp_settings.rst:242 ../../content/applications/general/eyssen_erp_settings.rst:288 ../../content/applications/general/eyssen_erp_settings.rst:304 ../../content/applications/general/eyssen_erp_settings.rst:320 ../../content/applications/general/eyssen_erp_settings.rst:351 ../../content/applications/general/eyssen_erp_settings.rst:424 ../../content/applications/general/eyssen_erp_settings.rst:458 ../../content/applications/general/eyssen_erp_settings.rst:522 ../../content/applications/general/eyssen_erp_settings.rst:559 ../../content/applications/general/eyssen_erp_settings.rst:575 ../../content/applications/general/eyssen_erp_settings.rst:597 ../../content/applications/general/eyssen_erp_settings.rst:628 ../../content/applications/general/eyssen_erp_settings.rst:663 ../../content/applications/general/process_numbers.rst:28
+#: ../../content/applications/general/eyssen_erp_settings.rst:68 ../../content/applications/general/eyssen_erp_settings.rst:117 ../../content/applications/general/eyssen_erp_settings.rst:151 ../../content/applications/general/eyssen_erp_settings.rst:167 ../../content/applications/general/eyssen_erp_settings.rst:249 ../../content/applications/general/eyssen_erp_settings.rst:295 ../../content/applications/general/eyssen_erp_settings.rst:311 ../../content/applications/general/eyssen_erp_settings.rst:327 ../../content/applications/general/eyssen_erp_settings.rst:358 ../../content/applications/general/eyssen_erp_settings.rst:431 ../../content/applications/general/eyssen_erp_settings.rst:465 ../../content/applications/general/eyssen_erp_settings.rst:529 ../../content/applications/general/eyssen_erp_settings.rst:566 ../../content/applications/general/eyssen_erp_settings.rst:582 ../../content/applications/general/eyssen_erp_settings.rst:604 ../../content/applications/general/eyssen_erp_settings.rst:635 ../../content/applications/general/eyssen_erp_settings.rst:670 ../../content/applications/general/process_numbers.rst:28
 msgid "Documentation"
 msgstr "Dokumentáció"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:62
+#: ../../content/applications/general/eyssen_erp_settings.rst:69
 msgid ":guilabel:`eYssen ERP Backend Theme`"
 msgstr ":guilabel:`eYssen ERP Backend Theme`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:63
+#: ../../content/applications/general/eyssen_erp_settings.rst:70
 msgid "`eyssen_backend_theme`"
 msgstr "`eyssen_backend_theme`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:64
+#: ../../content/applications/general/eyssen_erp_settings.rst:71
 msgid ":doc:`backend_interface`"
 msgstr ":doc:`backend_interface`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:65
+#: ../../content/applications/general/eyssen_erp_settings.rst:72
 msgid ":guilabel:`eYssen Cloud Token Login`"
 msgstr ":guilabel:`eYssen Cloud Token Login`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:66
+#: ../../content/applications/general/eyssen_erp_settings.rst:73
 msgid "`eyssen_cloud_token_login`"
 msgstr "`eyssen_cloud_token_login`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:67
+#: ../../content/applications/general/eyssen_erp_settings.rst:74
 msgid ":ref:`Below <eyssen-erp-settings/token-login>`"
 msgstr ":ref:`Lásd lent <eyssen-erp-settings/token-login>`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:68
+#: ../../content/applications/general/eyssen_erp_settings.rst:75
 msgid ":guilabel:`Document Management`"
 msgstr ":guilabel:`Document Management`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:69
+#: ../../content/applications/general/eyssen_erp_settings.rst:76
 msgid "`eyssen_document_management`"
 msgstr "`eyssen_document_management`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:70
+#: ../../content/applications/general/eyssen_erp_settings.rst:77
 msgid ":doc:`../productivity/documents`"
 msgstr ":doc:`../productivity/documents`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:71
+#: ../../content/applications/general/eyssen_erp_settings.rst:78
 msgid ":guilabel:`Access Management`"
 msgstr ":guilabel:`Access Management`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:72
+#: ../../content/applications/general/eyssen_erp_settings.rst:79
 msgid "`eyssen_access_management`"
 msgstr "`eyssen_access_management`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:74
+#: ../../content/applications/general/eyssen_erp_settings.rst:81
 msgid ":guilabel:`Access Management` ‣ :guilabel:`Account`"
-msgstr ":guilabel:`Access Management` ‣ :guilabel:`Account`"
+msgstr ":guilabel:`Access Management` ‣ :guilabel:`Főkönyvi számla`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:75
+#: ../../content/applications/general/eyssen_erp_settings.rst:82
 msgid "`eyssen_access_management_account`"
 msgstr "`eyssen_access_management_account`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:77
+#: ../../content/applications/general/eyssen_erp_settings.rst:84
 msgid ":guilabel:`Access Management` ‣ :guilabel:`PoS`"
 msgstr ":guilabel:`Access Management` ‣ :guilabel:`PoS`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:78
+#: ../../content/applications/general/eyssen_erp_settings.rst:85
 msgid "`eyssen_access_management_pos`"
 msgstr "`eyssen_access_management_pos`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:79 ../../content/applications/general/eyssen_erp_settings.rst:631 ../../content/applications/general/eyssen_erp_settings.rst:634 ../../content/applications/general/eyssen_erp_settings.rst:637
+#: ../../content/applications/general/eyssen_erp_settings.rst:86 ../../content/applications/general/eyssen_erp_settings.rst:638 ../../content/applications/general/eyssen_erp_settings.rst:641 ../../content/applications/general/eyssen_erp_settings.rst:644
 msgid ":doc:`../sales/point_of_sale/configuration`"
 msgstr ":doc:`../sales/point_of_sale/configuration`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:80
+#: ../../content/applications/general/eyssen_erp_settings.rst:87
 msgid ":guilabel:`Dashboard`"
 msgstr ":guilabel:`Dashboard`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:81
+#: ../../content/applications/general/eyssen_erp_settings.rst:88
 msgid "`dashboard`"
 msgstr "`dashboard`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:82
+#: ../../content/applications/general/eyssen_erp_settings.rst:89
 msgid ":doc:`../productivity/dashboards/custom_dashboards`"
 msgstr ":doc:`../productivity/dashboards/custom_dashboards`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:83
+#: ../../content/applications/general/eyssen_erp_settings.rst:90
 msgid ":guilabel:`eYssen Electronic Signature`"
 msgstr ":guilabel:`eYssen Electronic Signature`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:84
+#: ../../content/applications/general/eyssen_erp_settings.rst:91
 msgid "`eyssen_esign`"
 msgstr "`eyssen_esign`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:85
+#: ../../content/applications/general/eyssen_erp_settings.rst:92
 msgid ":doc:`../productivity/sign`"
 msgstr ":doc:`../productivity/sign`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:86
+#: ../../content/applications/general/eyssen_erp_settings.rst:93
 msgid ":guilabel:`Mail Follower Notification`"
 msgstr ":guilabel:`Mail Follower Notification`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:87
+#: ../../content/applications/general/eyssen_erp_settings.rst:94
 msgid "`eyssen_mail_follower_notification`"
 msgstr "`eyssen_mail_follower_notification`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:89
+#: ../../content/applications/general/eyssen_erp_settings.rst:96
 msgid ":guilabel:`Mail Follower Notification` ‣ :guilabel:`Invoicing`"
-msgstr ":guilabel:`Mail Follower Notification` ‣ :guilabel:`Invoicing`"
+msgstr ":guilabel:`Mail Follower Notification` ‣ :guilabel:`Számlázás`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:90
+#: ../../content/applications/general/eyssen_erp_settings.rst:97
 msgid "`eyssen_mail_follower_notification_account`"
 msgstr "`eyssen_mail_follower_notification_account`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:92
+#: ../../content/applications/general/eyssen_erp_settings.rst:99
 msgid ":guilabel:`Chatter: Log Archive/Restore (no duplicate with tracking)`"
 msgstr ":guilabel:`Chatter: Log Archive/Restore (no duplicate with tracking)`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:93
+#: ../../content/applications/general/eyssen_erp_settings.rst:100
 msgid "`eyssen_chatter_log_all_state_chnage`"
 msgstr "`eyssen_chatter_log_all_state_chnage`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:95
+#: ../../content/applications/general/eyssen_erp_settings.rst:102
 msgid ":guilabel:`Data Audit`"
-msgstr ":guilabel:`Data Audit`"
+msgstr ":guilabel:`Adat Audit`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:96
+#: ../../content/applications/general/eyssen_erp_settings.rst:103
 msgid "`eyssen_data_audit`"
 msgstr "`eyssen_data_audit`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:97
+#: ../../content/applications/general/eyssen_erp_settings.rst:104
 msgid ":doc:`data_audit`"
 msgstr ":doc:`data_audit`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:100
+#: ../../content/applications/general/eyssen_erp_settings.rst:107
 msgid "Process Number"
 msgstr "Process Number"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:102
+#: ../../content/applications/general/eyssen_erp_settings.rst:109
 msgid "Case identifiers shared by the documents of several applications."
 msgstr "Több alkalmazás bizonylatai által közösen használt ügyazonosítók."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:111
+#: ../../content/applications/general/eyssen_erp_settings.rst:118
 msgid ":guilabel:`Process Number`"
 msgstr ":guilabel:`Process Number`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:112
+#: ../../content/applications/general/eyssen_erp_settings.rst:119
 msgid "`process_number`"
 msgstr "`process_number`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:113 ../../content/applications/general/eyssen_erp_settings.rst:116 ../../content/applications/general/eyssen_erp_settings.rst:128
+#: ../../content/applications/general/eyssen_erp_settings.rst:120 ../../content/applications/general/eyssen_erp_settings.rst:123 ../../content/applications/general/eyssen_erp_settings.rst:135
 msgid ":doc:`process_numbers`"
 msgstr ":doc:`process_numbers`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:114
+#: ../../content/applications/general/eyssen_erp_settings.rst:121
 msgid ":guilabel:`Process Number` ‣ :guilabel:`CRM`"
 msgstr ":guilabel:`Process Number` ‣ :guilabel:`CRM`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:115 ../../content/applications/general/process_numbers.rst:30
+#: ../../content/applications/general/eyssen_erp_settings.rst:122 ../../content/applications/general/process_numbers.rst:30
 msgid "`process_number_crm`"
 msgstr "`process_number_crm`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:117
+#: ../../content/applications/general/eyssen_erp_settings.rst:124
 msgid ":guilabel:`Process Number` ‣ :guilabel:`Sale`"
-msgstr ":guilabel:`Process Number` ‣ :guilabel:`Sale`"
+msgstr ":guilabel:`Process Number` ‣ :guilabel:`Értékesítés`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:118 ../../content/applications/general/process_numbers.rst:33
+#: ../../content/applications/general/eyssen_erp_settings.rst:125 ../../content/applications/general/process_numbers.rst:33
 msgid "`process_number_sale`"
 msgstr "`process_number_sale`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:119 ../../content/applications/general/eyssen_erp_settings.rst:245 ../../content/applications/general/eyssen_erp_settings.rst:248 ../../content/applications/general/eyssen_erp_settings.rst:251 ../../content/applications/general/eyssen_erp_settings.rst:254 ../../content/applications/general/eyssen_erp_settings.rst:257 ../../content/applications/general/eyssen_erp_settings.rst:266
+#: ../../content/applications/general/eyssen_erp_settings.rst:126 ../../content/applications/general/eyssen_erp_settings.rst:252 ../../content/applications/general/eyssen_erp_settings.rst:255 ../../content/applications/general/eyssen_erp_settings.rst:258 ../../content/applications/general/eyssen_erp_settings.rst:261 ../../content/applications/general/eyssen_erp_settings.rst:264 ../../content/applications/general/eyssen_erp_settings.rst:273
 msgid ":doc:`../sales/sales/order_extensions`"
 msgstr ":doc:`../sales/sales/order_extensions`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:120
+#: ../../content/applications/general/eyssen_erp_settings.rst:127
 msgid ":guilabel:`Process Number` ‣ :guilabel:`Purchase`"
-msgstr ":guilabel:`Process Number` ‣ :guilabel:`Purchase`"
+msgstr ":guilabel:`Process Number` ‣ :guilabel:`Beszerzés`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:121 ../../content/applications/general/process_numbers.rst:36
+#: ../../content/applications/general/eyssen_erp_settings.rst:128 ../../content/applications/general/process_numbers.rst:36
 msgid "`process_number_purchase`"
 msgstr "`process_number_purchase`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:122 ../../content/applications/general/eyssen_erp_settings.rst:338
+#: ../../content/applications/general/eyssen_erp_settings.rst:129 ../../content/applications/general/eyssen_erp_settings.rst:345
 msgid ":doc:`../inventory_and_mrp/purchase/manage_deals/rfq`"
 msgstr ":doc:`../inventory_and_mrp/purchase/manage_deals/rfq`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:123
+#: ../../content/applications/general/eyssen_erp_settings.rst:130
 msgid ":guilabel:`Process Number` ‣ :guilabel:`Stock`"
 msgstr ":guilabel:`Process Number` ‣ :guilabel:`Stock`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:124 ../../content/applications/general/process_numbers.rst:39
+#: ../../content/applications/general/eyssen_erp_settings.rst:131 ../../content/applications/general/process_numbers.rst:39
 msgid "`process_number_stock`"
 msgstr "`process_number_stock`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:125 ../../content/applications/general/eyssen_erp_settings.rst:387 ../../content/applications/general/eyssen_erp_settings.rst:390 ../../content/applications/general/eyssen_erp_settings.rst:408
+#: ../../content/applications/general/eyssen_erp_settings.rst:132 ../../content/applications/general/eyssen_erp_settings.rst:394 ../../content/applications/general/eyssen_erp_settings.rst:397 ../../content/applications/general/eyssen_erp_settings.rst:415
 msgid ":doc:`../inventory_and_mrp/inventory/product_management/stock_helpers`"
 msgstr ":doc:`../inventory_and_mrp/inventory/product_management/stock_helpers`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:126
+#: ../../content/applications/general/eyssen_erp_settings.rst:133
 msgid ":guilabel:`Process Number` ‣ :guilabel:`Invoicing`"
-msgstr ":guilabel:`Process Number` ‣ :guilabel:`Invoicing`"
+msgstr ":guilabel:`Process Number` ‣ :guilabel:`Számlázás`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:127 ../../content/applications/general/process_numbers.rst:42
+#: ../../content/applications/general/eyssen_erp_settings.rst:134 ../../content/applications/general/process_numbers.rst:42
 msgid "`process_number_account`"
 msgstr "`process_number_account`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:129
+#: ../../content/applications/general/eyssen_erp_settings.rst:136
 msgid ":guilabel:`Process Number` ‣ :guilabel:`Project`"
-msgstr ":guilabel:`Process Number` ‣ :guilabel:`Project`"
+msgstr ":guilabel:`Process Number` ‣ :guilabel:`Projekt`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:130 ../../content/applications/general/process_numbers.rst:45
+#: ../../content/applications/general/eyssen_erp_settings.rst:137 ../../content/applications/general/process_numbers.rst:45
 msgid "`process_number_project`"
 msgstr "`process_number_project`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:131 ../../content/applications/general/process_numbers.rst:154
+#: ../../content/applications/general/eyssen_erp_settings.rst:138 ../../content/applications/general/process_numbers.rst:154
 msgid ":doc:`../services/project/process_numbers`"
 msgstr ":doc:`../services/project/process_numbers`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:134
+#: ../../content/applications/general/eyssen_erp_settings.rst:141
 msgid "Partner"
 msgstr "Partner"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:136
+#: ../../content/applications/general/eyssen_erp_settings.rst:143
 msgid "Extensions of the contacts."
 msgstr "A kapcsolatok bővítményei."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:145
+#: ../../content/applications/general/eyssen_erp_settings.rst:152
 msgid ":guilabel:`Partner Extension`"
 msgstr ":guilabel:`Partner Extension`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:146
+#: ../../content/applications/general/eyssen_erp_settings.rst:153
 msgid "`eyssen_partner`"
 msgstr "`eyssen_partner`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:147
+#: ../../content/applications/general/eyssen_erp_settings.rst:154
 msgid ":doc:`../sales/crm/optimize/contact_data`"
 msgstr ":doc:`../sales/crm/optimize/contact_data`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:150
+#: ../../content/applications/general/eyssen_erp_settings.rst:157
 msgid "Product"
 msgstr "Product"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:152
+#: ../../content/applications/general/eyssen_erp_settings.rst:159
 msgid "Extensions of the products, price lists, attributes, and barcodes."
 msgstr "A termékek, árlisták, attribútumok és vonalkódok bővítményei."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:161
+#: ../../content/applications/general/eyssen_erp_settings.rst:168
 msgid ":guilabel:`Product Management`"
 msgstr ":guilabel:`Product Management`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:162
+#: ../../content/applications/general/eyssen_erp_settings.rst:169
 msgid "`eyssen_product`"
 msgstr "`eyssen_product`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:163 ../../content/applications/general/eyssen_erp_settings.rst:166 ../../content/applications/general/eyssen_erp_settings.rst:181 ../../content/applications/general/eyssen_erp_settings.rst:199 ../../content/applications/general/eyssen_erp_settings.rst:220 ../../content/applications/general/eyssen_erp_settings.rst:223 ../../content/applications/general/eyssen_erp_settings.rst:226 ../../content/applications/general/eyssen_erp_settings.rst:562
+#: ../../content/applications/general/eyssen_erp_settings.rst:170 ../../content/applications/general/eyssen_erp_settings.rst:173 ../../content/applications/general/eyssen_erp_settings.rst:188 ../../content/applications/general/eyssen_erp_settings.rst:206 ../../content/applications/general/eyssen_erp_settings.rst:227 ../../content/applications/general/eyssen_erp_settings.rst:230 ../../content/applications/general/eyssen_erp_settings.rst:233 ../../content/applications/general/eyssen_erp_settings.rst:569
 msgid ":doc:`../inventory_and_mrp/inventory/product_management/product_data`"
 msgstr ":doc:`../inventory_and_mrp/inventory/product_management/product_data`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:164
+#: ../../content/applications/general/eyssen_erp_settings.rst:171
 msgid ":guilabel:`Product Stages`"
 msgstr ":guilabel:`Product Stages`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:165
+#: ../../content/applications/general/eyssen_erp_settings.rst:172
 msgid "`eyssen_product_stage`"
 msgstr "`eyssen_product_stage`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:167
+#: ../../content/applications/general/eyssen_erp_settings.rst:174
 msgid ":guilabel:`Show Pricelist Price on Product`"
 msgstr ":guilabel:`Show Pricelist Price on Product`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:168
+#: ../../content/applications/general/eyssen_erp_settings.rst:175
 msgid "`eyssen_product_show_pricelist_price`"
 msgstr "`eyssen_product_show_pricelist_price`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:169 ../../content/applications/general/eyssen_erp_settings.rst:172 ../../content/applications/general/eyssen_erp_settings.rst:175 ../../content/applications/general/eyssen_erp_settings.rst:178 ../../content/applications/general/eyssen_erp_settings.rst:202 ../../content/applications/general/eyssen_erp_settings.rst:205 ../../content/applications/general/value_scheduler.rst:181
+#: ../../content/applications/general/eyssen_erp_settings.rst:176 ../../content/applications/general/eyssen_erp_settings.rst:179 ../../content/applications/general/eyssen_erp_settings.rst:182 ../../content/applications/general/eyssen_erp_settings.rst:185 ../../content/applications/general/eyssen_erp_settings.rst:209 ../../content/applications/general/eyssen_erp_settings.rst:212 ../../content/applications/general/value_scheduler.rst:181
 msgid ":doc:`../inventory_and_mrp/inventory/product_management/pricing_extensions`"
 msgstr ":doc:`../inventory_and_mrp/inventory/product_management/pricing_extensions`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:170
+#: ../../content/applications/general/eyssen_erp_settings.rst:177
 msgid ":guilabel:`Price List Validation by Tags`"
 msgstr ":guilabel:`Price List Validation by Tags`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:171
+#: ../../content/applications/general/eyssen_erp_settings.rst:178
 msgid "`eyssen_product_pricelist_tag`"
 msgstr "`eyssen_product_pricelist_tag`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:173
+#: ../../content/applications/general/eyssen_erp_settings.rst:180
 msgid ":guilabel:`Price List Validation by Tags` ‣ :guilabel:`Price List Validation by Tags - WS Ribbon`"
 msgstr ":guilabel:`Price List Validation by Tags` ‣ :guilabel:`Price List Validation by Tags - WS Ribbon`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:174
+#: ../../content/applications/general/eyssen_erp_settings.rst:181
 msgid "`eyssen_product_pricelist_tag_ribbon`"
 msgstr "`eyssen_product_pricelist_tag_ribbon`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:176
+#: ../../content/applications/general/eyssen_erp_settings.rst:183
 msgid ":guilabel:`Price List Rule Sequence`"
 msgstr ":guilabel:`Price List Rule Sequence`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:177
+#: ../../content/applications/general/eyssen_erp_settings.rst:184
 msgid "`eyssen_product_pricelist_sequence`"
 msgstr "`eyssen_product_pricelist_sequence`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:179
+#: ../../content/applications/general/eyssen_erp_settings.rst:186
 msgid ":guilabel:`Product Reference Functions`"
 msgstr ":guilabel:`Product Reference Functions`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:180
+#: ../../content/applications/general/eyssen_erp_settings.rst:187
 msgid "`eyssen_product_default_code`"
 msgstr "`eyssen_product_default_code`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:182
+#: ../../content/applications/general/eyssen_erp_settings.rst:189
 msgid ":guilabel:`Barcode Generator`"
 msgstr ":guilabel:`Barcode Generator`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:183
+#: ../../content/applications/general/eyssen_erp_settings.rst:190
 msgid "`eyssen_product_barcode`"
 msgstr "`eyssen_product_barcode`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:184 ../../content/applications/general/eyssen_erp_settings.rst:208
+#: ../../content/applications/general/eyssen_erp_settings.rst:191 ../../content/applications/general/eyssen_erp_settings.rst:215
 msgid ":doc:`../inventory_and_mrp/inventory/product_management/labels`"
 msgstr ":doc:`../inventory_and_mrp/inventory/product_management/labels`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:185
+#: ../../content/applications/general/eyssen_erp_settings.rst:192
 msgid ":guilabel:`Barcode App Base`"
 msgstr ":guilabel:`Barcode App Base`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:186
+#: ../../content/applications/general/eyssen_erp_settings.rst:193
 msgid "`eyssen_barcode_app`"
 msgstr "`eyssen_barcode_app`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:187
+#: ../../content/applications/general/eyssen_erp_settings.rst:194
 msgid ":doc:`../inventory_and_mrp/barcode/operations/product_lookup`"
 msgstr ":doc:`../inventory_and_mrp/barcode/operations/product_lookup`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:188
+#: ../../content/applications/general/eyssen_erp_settings.rst:195
 msgid ":guilabel:`Bulk Update`"
 msgstr ":guilabel:`Bulk Update`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:189
+#: ../../content/applications/general/eyssen_erp_settings.rst:196
 msgid "`eyssen_product_bulk_update`"
 msgstr "`eyssen_product_bulk_update`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:190 ../../content/applications/general/eyssen_erp_settings.rst:193 ../../content/applications/general/eyssen_erp_settings.rst:260 ../../content/applications/general/eyssen_erp_settings.rst:332
+#: ../../content/applications/general/eyssen_erp_settings.rst:197 ../../content/applications/general/eyssen_erp_settings.rst:200 ../../content/applications/general/eyssen_erp_settings.rst:267 ../../content/applications/general/eyssen_erp_settings.rst:339
 msgid ":doc:`../inventory_and_mrp/inventory/product_management/bulk_editing`"
 msgstr ":doc:`../inventory_and_mrp/inventory/product_management/bulk_editing`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:191
+#: ../../content/applications/general/eyssen_erp_settings.rst:198
 msgid ":guilabel:`Bulk Update` ‣ :guilabel:`Bulk Update - Website Sale`"
 msgstr ":guilabel:`Bulk Update` ‣ :guilabel:`Bulk Update - Website Sale`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:192
+#: ../../content/applications/general/eyssen_erp_settings.rst:199
 msgid "`eyssen_product_bulk_update_ws`"
 msgstr "`eyssen_product_bulk_update_ws`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:194
+#: ../../content/applications/general/eyssen_erp_settings.rst:201
 msgid ":guilabel:`Advnaced UoM`"
 msgstr ":guilabel:`Advnaced UoM`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:195
+#: ../../content/applications/general/eyssen_erp_settings.rst:202
 msgid "`eyssen_uom`"
 msgstr "`eyssen_uom`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:196
+#: ../../content/applications/general/eyssen_erp_settings.rst:203
 msgid ":doc:`../inventory_and_mrp/inventory/product_management/configure/uom`"
 msgstr ":doc:`../inventory_and_mrp/inventory/product_management/configure/uom`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:197
+#: ../../content/applications/general/eyssen_erp_settings.rst:204
 msgid ":guilabel:`Dimensions`"
 msgstr ":guilabel:`Dimensions`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:198
+#: ../../content/applications/general/eyssen_erp_settings.rst:205
 msgid "`eyssen_product_dimension`"
 msgstr "`eyssen_product_dimension`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:200
+#: ../../content/applications/general/eyssen_erp_settings.rst:207
 msgid ":guilabel:`Pricelist Import`"
 msgstr ":guilabel:`Pricelist Import`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:201
+#: ../../content/applications/general/eyssen_erp_settings.rst:208
 msgid "`eyssen_pricelist_import`"
 msgstr "`eyssen_pricelist_import`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:203
+#: ../../content/applications/general/eyssen_erp_settings.rst:210
 msgid ":guilabel:`Pricelist Price Pair`"
 msgstr ":guilabel:`Pricelist Price Pair`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:204
+#: ../../content/applications/general/eyssen_erp_settings.rst:211
 msgid "`eyssen_pricelist_price_pair`"
 msgstr "`eyssen_pricelist_price_pair`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:206
+#: ../../content/applications/general/eyssen_erp_settings.rst:213
 msgid ":guilabel:`Custom Product Label`"
 msgstr ":guilabel:`Custom Product Label`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:207
+#: ../../content/applications/general/eyssen_erp_settings.rst:214
 msgid "`eyssen_product_custom_label`"
 msgstr "`eyssen_product_custom_label`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:209
+#: ../../content/applications/general/eyssen_erp_settings.rst:216
 msgid ":guilabel:`Attribute Management`"
 msgstr ":guilabel:`Attribute Management`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:210
+#: ../../content/applications/general/eyssen_erp_settings.rst:217
 msgid "`eyssen_product_attribute`"
 msgstr "`eyssen_product_attribute`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:211 ../../content/applications/general/eyssen_erp_settings.rst:214 ../../content/applications/general/eyssen_erp_settings.rst:217 ../../content/applications/general/eyssen_erp_settings.rst:329
+#: ../../content/applications/general/eyssen_erp_settings.rst:218 ../../content/applications/general/eyssen_erp_settings.rst:221 ../../content/applications/general/eyssen_erp_settings.rst:224 ../../content/applications/general/eyssen_erp_settings.rst:336
 msgid ":doc:`../inventory_and_mrp/inventory/product_management/product_attributes`"
 msgstr ":doc:`../inventory_and_mrp/inventory/product_management/product_attributes`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:212
+#: ../../content/applications/general/eyssen_erp_settings.rst:219
 msgid ":guilabel:`Attribute Management` ‣ :guilabel:`Attribute Management - Website Sale`"
 msgstr ":guilabel:`Attribute Management` ‣ :guilabel:`Attribute Management - Website Sale`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:213
+#: ../../content/applications/general/eyssen_erp_settings.rst:220
 msgid "`eyssen_product_attribute_ws`"
 msgstr "`eyssen_product_attribute_ws`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:215
+#: ../../content/applications/general/eyssen_erp_settings.rst:222
 msgid ":guilabel:`Attribute Collection`"
 msgstr ":guilabel:`Attribute Collection`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:216
+#: ../../content/applications/general/eyssen_erp_settings.rst:223
 msgid "`eyssen_product_attribute_collection`"
 msgstr "`eyssen_product_attribute_collection`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:218
+#: ../../content/applications/general/eyssen_erp_settings.rst:225
 msgid ":guilabel:`Product Material`"
 msgstr ":guilabel:`Product Material`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:219
+#: ../../content/applications/general/eyssen_erp_settings.rst:226
 msgid "`eyssen_product_material`"
 msgstr "`eyssen_product_material`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:221
+#: ../../content/applications/general/eyssen_erp_settings.rst:228
 msgid ":guilabel:`Season Management`"
 msgstr ":guilabel:`Season Management`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:222
+#: ../../content/applications/general/eyssen_erp_settings.rst:229
 msgid "`eyssen_product_season`"
 msgstr "`eyssen_product_season`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:224
+#: ../../content/applications/general/eyssen_erp_settings.rst:231
 msgid ":guilabel:`Product Image In List View`"
 msgstr ":guilabel:`Product Image In List View`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:225
+#: ../../content/applications/general/eyssen_erp_settings.rst:232
 msgid "`eyssen_product_list_view_image`"
 msgstr "`eyssen_product_list_view_image`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:227
+#: ../../content/applications/general/eyssen_erp_settings.rst:234
 msgid ":guilabel:`Product Catalog`"
 msgstr ":guilabel:`Product Catalog`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:228
+#: ../../content/applications/general/eyssen_erp_settings.rst:235
 msgid "`eyssen_product_catalog`"
 msgstr "`eyssen_product_catalog`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:229
+#: ../../content/applications/general/eyssen_erp_settings.rst:236
 msgid ":doc:`../inventory_and_mrp/inventory/warehouses_storage/inventory_management/product_catalog`"
 msgstr ":doc:`../inventory_and_mrp/inventory/warehouses_storage/inventory_management/product_catalog`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:232
+#: ../../content/applications/general/eyssen_erp_settings.rst:239
 msgid "Sale"
 msgstr "Sale"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:234
+#: ../../content/applications/general/eyssen_erp_settings.rst:241
 msgid "Extensions of the Sales application."
 msgstr "Az Értékesítés alkalmazás bővítményei."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:243
+#: ../../content/applications/general/eyssen_erp_settings.rst:250
 msgid ":guilabel:`Sale Price Calculator`"
-msgstr ":guilabel:`Sale Price Calculator`"
+msgstr ":guilabel:`Eladási ár kalkulátor`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:244
+#: ../../content/applications/general/eyssen_erp_settings.rst:251
 msgid "`eyssen_sale_price_calculator`"
 msgstr "`eyssen_sale_price_calculator`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:246
+#: ../../content/applications/general/eyssen_erp_settings.rst:253
 msgid ":guilabel:`Sale Multiple Warehouse`"
 msgstr ":guilabel:`Sale Multiple Warehouse`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:247
+#: ../../content/applications/general/eyssen_erp_settings.rst:254
 msgid "`eyssen_sale_multiple_warehouse`"
 msgstr "`eyssen_sale_multiple_warehouse`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:249
+#: ../../content/applications/general/eyssen_erp_settings.rst:256
 msgid ":guilabel:`Versioning`"
 msgstr ":guilabel:`Versioning`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:250
+#: ../../content/applications/general/eyssen_erp_settings.rst:257
 msgid "`eyssen_sale_version`"
 msgstr "`eyssen_sale_version`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:252
+#: ../../content/applications/general/eyssen_erp_settings.rst:259
 msgid ":guilabel:`Sale Quantity Limitation`"
 msgstr ":guilabel:`Sale Quantity Limitation`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:253
+#: ../../content/applications/general/eyssen_erp_settings.rst:260
 msgid "`eyssen_sale_quantity_limit`"
 msgstr "`eyssen_sale_quantity_limit`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:255
+#: ../../content/applications/general/eyssen_erp_settings.rst:262
 msgid ":guilabel:`Sale Quantity Limitation` ‣ :guilabel:`Sale Quantity Limitation - Website Sale`"
 msgstr ":guilabel:`Sale Quantity Limitation` ‣ :guilabel:`Sale Quantity Limitation - Website Sale`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:256
+#: ../../content/applications/general/eyssen_erp_settings.rst:263
 msgid "`eyssen_sale_quantity_limit_ws`"
 msgstr "`eyssen_sale_quantity_limit_ws`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:258
+#: ../../content/applications/general/eyssen_erp_settings.rst:265
 msgid ":guilabel:`Add Bulk Products for Sale`"
 msgstr ":guilabel:`Add Bulk Products for Sale`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:259
+#: ../../content/applications/general/eyssen_erp_settings.rst:266
 msgid "`eyssen_product_bulk_add_sale`"
 msgstr "`eyssen_product_bulk_add_sale`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:261
+#: ../../content/applications/general/eyssen_erp_settings.rst:268
 msgid ":guilabel:`Add Products to Sale Order with Barcode Scanner`"
 msgstr ":guilabel:`Add Products to Sale Order with Barcode Scanner`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:262
+#: ../../content/applications/general/eyssen_erp_settings.rst:269
 msgid "`eyssen_barcode_sale`"
 msgstr "`eyssen_barcode_sale`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:263 ../../content/applications/general/eyssen_erp_settings.rst:335
+#: ../../content/applications/general/eyssen_erp_settings.rst:270 ../../content/applications/general/eyssen_erp_settings.rst:342
 msgid ":doc:`../inventory_and_mrp/barcode/operations/scan_on_orders`"
 msgstr ":doc:`../inventory_and_mrp/barcode/operations/scan_on_orders`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:264
+#: ../../content/applications/general/eyssen_erp_settings.rst:271
 msgid ":guilabel:`Add item from previous sale`"
 msgstr ":guilabel:`Add item from previous sale`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:265
+#: ../../content/applications/general/eyssen_erp_settings.rst:272
 msgid "`eyssen_add_item_from_previous_sale`"
 msgstr "`eyssen_add_item_from_previous_sale`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:267
+#: ../../content/applications/general/eyssen_erp_settings.rst:274
 msgid ":guilabel:`Delivery Status`"
-msgstr ":guilabel:`Delivery Status`"
+msgstr ":guilabel:`Szállítási státusz`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:268
+#: ../../content/applications/general/eyssen_erp_settings.rst:275
 msgid "`eyssen_sale_delivery_status`"
 msgstr "`eyssen_sale_delivery_status`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:269 ../../content/applications/general/eyssen_erp_settings.rst:272
+#: ../../content/applications/general/eyssen_erp_settings.rst:276 ../../content/applications/general/eyssen_erp_settings.rst:279
 msgid ":doc:`../inventory_and_mrp/inventory/shipping_receiving/delivery_status_and_dates`"
 msgstr ":doc:`../inventory_and_mrp/inventory/shipping_receiving/delivery_status_and_dates`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:270
+#: ../../content/applications/general/eyssen_erp_settings.rst:277
 msgid ":guilabel:`Delivery Status` ‣ :guilabel:`Website Portal`"
-msgstr ":guilabel:`Delivery Status` ‣ :guilabel:`Website Portal`"
+msgstr ":guilabel:`Szállítási státusz` ‣ :guilabel:`Website Portal`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:271
+#: ../../content/applications/general/eyssen_erp_settings.rst:278
 msgid "`sale_delivery_status_ws`"
 msgstr "`sale_delivery_status_ws`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:273
+#: ../../content/applications/general/eyssen_erp_settings.rst:280
 msgid ":guilabel:`Sale Out of Stock Ordering (Preorder, Backorder)`"
 msgstr ":guilabel:`Sale Out of Stock Ordering (Preorder, Backorder)`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:274
+#: ../../content/applications/general/eyssen_erp_settings.rst:281
 msgid "`eyssen_sale_out_of_stock`"
 msgstr "`eyssen_sale_out_of_stock`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:275
+#: ../../content/applications/general/eyssen_erp_settings.rst:282
 msgid ":doc:`../inventory_and_mrp/inventory/product_management/out_of_stock_ordering`"
 msgstr ":doc:`../inventory_and_mrp/inventory/product_management/out_of_stock_ordering`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:278
+#: ../../content/applications/general/eyssen_erp_settings.rst:285
 msgid "CRM"
 msgstr "CRM"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:280
+#: ../../content/applications/general/eyssen_erp_settings.rst:287
 msgid "Extensions of the CRM application."
 msgstr "A CRM alkalmazás bővítményei."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:289
+#: ../../content/applications/general/eyssen_erp_settings.rst:296
 msgid ":guilabel:`Multi Currency`"
 msgstr ":guilabel:`Multi Currency`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:290
+#: ../../content/applications/general/eyssen_erp_settings.rst:297
 msgid "`eyssen_crm_multi_currency`"
 msgstr "`eyssen_crm_multi_currency`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:291
+#: ../../content/applications/general/eyssen_erp_settings.rst:298
 msgid ":doc:`../sales/crm/pipeline/multi_currency`"
 msgstr ":doc:`../sales/crm/pipeline/multi_currency`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:294
+#: ../../content/applications/general/eyssen_erp_settings.rst:301
 msgid "Subscription"
 msgstr "Subscription"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:296
+#: ../../content/applications/general/eyssen_erp_settings.rst:303
 msgid "Recurring sales and automatic invoicing."
 msgstr "Ismétlődő értékesítés és automatikus számlázás."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:305
+#: ../../content/applications/general/eyssen_erp_settings.rst:312
 msgid ":guilabel:`Subscription Management`"
-msgstr ":guilabel:`Subscription Management`"
+msgstr ":guilabel:`Előfizetés-kezelés`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:306
+#: ../../content/applications/general/eyssen_erp_settings.rst:313
 msgid "`subscription`"
 msgstr "`subscription`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:307
+#: ../../content/applications/general/eyssen_erp_settings.rst:314
 msgid ":doc:`../sales/subscriptions`"
 msgstr ":doc:`../sales/subscriptions`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:310
+#: ../../content/applications/general/eyssen_erp_settings.rst:317
 msgid "Purchase"
 msgstr "Purchase"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:312
+#: ../../content/applications/general/eyssen_erp_settings.rst:319
 msgid "Extensions of the Purchase application."
 msgstr "A Beszerzés alkalmazás bővítményei."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:321
+#: ../../content/applications/general/eyssen_erp_settings.rst:328
 msgid ":guilabel:`Supplier Product Management`"
 msgstr ":guilabel:`Supplier Product Management`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:322
+#: ../../content/applications/general/eyssen_erp_settings.rst:329
 msgid "`eyssen_supplier_product_management`"
 msgstr "`eyssen_supplier_product_management`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:323
+#: ../../content/applications/general/eyssen_erp_settings.rst:330
 msgid ":doc:`../inventory_and_mrp/inventory/product_management/supplier_products`"
 msgstr ":doc:`../inventory_and_mrp/inventory/product_management/supplier_products`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:324
+#: ../../content/applications/general/eyssen_erp_settings.rst:331
 msgid ":guilabel:`Supplier Product Management` ‣ :guilabel:`Vision Software API`"
 msgstr ":guilabel:`Supplier Product Management` ‣ :guilabel:`Vision Software API`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:325
+#: ../../content/applications/general/eyssen_erp_settings.rst:332
 msgid "`eyssen_vision_software_api`"
 msgstr "`eyssen_vision_software_api`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:326 ../../content/applications/general/eyssen_erp_settings.rst:372 ../../content/applications/general/eyssen_erp_settings.rst:675
+#: ../../content/applications/general/eyssen_erp_settings.rst:333 ../../content/applications/general/eyssen_erp_settings.rst:379 ../../content/applications/general/eyssen_erp_settings.rst:682
 msgid "—"
 msgstr "—"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:327
+#: ../../content/applications/general/eyssen_erp_settings.rst:334
 msgid ":guilabel:`Supplier Color Code`"
-msgstr ":guilabel:`Supplier Color Code`"
+msgstr ":guilabel:`Szállítói színkód`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:328
+#: ../../content/applications/general/eyssen_erp_settings.rst:335
 msgid "`supplier_color_code`"
 msgstr "`supplier_color_code`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:330
+#: ../../content/applications/general/eyssen_erp_settings.rst:337
 msgid ":guilabel:`Add Bulk Products for Purchase`"
 msgstr ":guilabel:`Add Bulk Products for Purchase`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:331
+#: ../../content/applications/general/eyssen_erp_settings.rst:338
 msgid "`eyssen_product_bulk_add_purchase`"
 msgstr "`eyssen_product_bulk_add_purchase`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:333
+#: ../../content/applications/general/eyssen_erp_settings.rst:340
 msgid ":guilabel:`Add Products to Purchase with Barcode Scanner`"
 msgstr ":guilabel:`Add Products to Purchase with Barcode Scanner`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:334
+#: ../../content/applications/general/eyssen_erp_settings.rst:341
 msgid "`eyssen_barcode_purchase`"
 msgstr "`eyssen_barcode_purchase`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:336
+#: ../../content/applications/general/eyssen_erp_settings.rst:343
 msgid ":guilabel:`Add item from previous purchase`"
 msgstr ":guilabel:`Add item from previous purchase`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:337
+#: ../../content/applications/general/eyssen_erp_settings.rst:344
 msgid "`eyssen_add_item_from_previous_purchase`"
 msgstr "`eyssen_add_item_from_previous_purchase`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:341
+#: ../../content/applications/general/eyssen_erp_settings.rst:348
 msgid "Stock"
 msgstr "Stock"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:343
+#: ../../content/applications/general/eyssen_erp_settings.rst:350
 msgid "Extensions of the Inventory application, including the shipping connectors."
 msgstr "A Készlet alkalmazás bővítményei, beleértve a szállítási csatlakozókat is."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:352
+#: ../../content/applications/general/eyssen_erp_settings.rst:359
 msgid ":guilabel:`Warehouse More Features`"
 msgstr ":guilabel:`Warehouse More Features`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:353
+#: ../../content/applications/general/eyssen_erp_settings.rst:360
 msgid "`eyssen_stock`"
 msgstr "`eyssen_stock`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:354 ../../content/applications/general/eyssen_erp_settings.rst:369 ../../content/applications/general/eyssen_erp_settings.rst:375 ../../content/applications/general/eyssen_erp_settings.rst:378
+#: ../../content/applications/general/eyssen_erp_settings.rst:361 ../../content/applications/general/eyssen_erp_settings.rst:376 ../../content/applications/general/eyssen_erp_settings.rst:382 ../../content/applications/general/eyssen_erp_settings.rst:385
 msgid ":doc:`../inventory_and_mrp/inventory/warehouses_storage/stock_control`"
 msgstr ":doc:`../inventory_and_mrp/inventory/warehouses_storage/stock_control`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:355
+#: ../../content/applications/general/eyssen_erp_settings.rst:362
 msgid ":guilabel:`Deliveryslip More Features`"
 msgstr ":guilabel:`Deliveryslip More Features`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:356
+#: ../../content/applications/general/eyssen_erp_settings.rst:363
 msgid "`eyssen_stock_deliveryslip`"
 msgstr "`eyssen_stock_deliveryslip`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:357 ../../content/applications/general/eyssen_erp_settings.rst:360 ../../content/applications/general/eyssen_erp_settings.rst:363 ../../content/applications/general/eyssen_erp_settings.rst:384
+#: ../../content/applications/general/eyssen_erp_settings.rst:364 ../../content/applications/general/eyssen_erp_settings.rst:367 ../../content/applications/general/eyssen_erp_settings.rst:370 ../../content/applications/general/eyssen_erp_settings.rst:391
 msgid ":doc:`../inventory_and_mrp/inventory/shipping_receiving/delivery_slips`"
 msgstr ":doc:`../inventory_and_mrp/inventory/shipping_receiving/delivery_slips`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:358
+#: ../../content/applications/general/eyssen_erp_settings.rst:365
 msgid ":guilabel:`Deliveryslip SO Info`"
 msgstr ":guilabel:`Deliveryslip SO Info`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:359
+#: ../../content/applications/general/eyssen_erp_settings.rst:366
 msgid "`eyssen_stock_deliveryslip_so_info`"
 msgstr "`eyssen_stock_deliveryslip_so_info`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:361
+#: ../../content/applications/general/eyssen_erp_settings.rst:368
 msgid ":guilabel:`Priced Delivery Note`"
 msgstr ":guilabel:`Priced Delivery Note`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:362
+#: ../../content/applications/general/eyssen_erp_settings.rst:369
 msgid "`eyssen_stock_priced_delivery_note`"
 msgstr "`eyssen_stock_priced_delivery_note`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:364
+#: ../../content/applications/general/eyssen_erp_settings.rst:371
 msgid ":guilabel:`Invoiceing from Picking`"
 msgstr ":guilabel:`Invoiceing from Picking`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:365
+#: ../../content/applications/general/eyssen_erp_settings.rst:372
 msgid "`eyssen_stock_picking_invoice`"
 msgstr "`eyssen_stock_picking_invoice`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:366
+#: ../../content/applications/general/eyssen_erp_settings.rst:373
 msgid ":doc:`../finance/accounting/customer_invoices/invoice_from_delivery_notes`"
 msgstr ":doc:`../finance/accounting/customer_invoices/invoice_from_delivery_notes`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:367
+#: ../../content/applications/general/eyssen_erp_settings.rst:374
 msgid ":guilabel:`Disallow Negative Stock`"
 msgstr ":guilabel:`Disallow Negative Stock`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:368
+#: ../../content/applications/general/eyssen_erp_settings.rst:375
 msgid "`eyssen_stock_disallow_negative_stock`"
 msgstr "`eyssen_stock_disallow_negative_stock`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:370
+#: ../../content/applications/general/eyssen_erp_settings.rst:377
 msgid ":guilabel:`Calculate Warehouse Stock`"
 msgstr ":guilabel:`Calculate Warehouse Stock`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:371
+#: ../../content/applications/general/eyssen_erp_settings.rst:378
 msgid "`eyssen_stock_calculate_wh_stock`"
 msgstr "`eyssen_stock_calculate_wh_stock`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:373
+#: ../../content/applications/general/eyssen_erp_settings.rst:380
 msgid ":guilabel:`Advanced Stock`"
 msgstr ":guilabel:`Advanced Stock`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:374
+#: ../../content/applications/general/eyssen_erp_settings.rst:381
 msgid "`eyssen_stock_advanced_stock`"
 msgstr "`eyssen_stock_advanced_stock`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:376
+#: ../../content/applications/general/eyssen_erp_settings.rst:383
 msgid ":guilabel:`Size & Load Management`"
 msgstr ":guilabel:`Size & Load Management`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:377
+#: ../../content/applications/general/eyssen_erp_settings.rst:384
 msgid "`eyssen_stock_load`"
 msgstr "`eyssen_stock_load`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:379
+#: ../../content/applications/general/eyssen_erp_settings.rst:386
 msgid ":guilabel:`Location Searchpanel`"
 msgstr ":guilabel:`Location Searchpanel`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:380
+#: ../../content/applications/general/eyssen_erp_settings.rst:387
 msgid "`eyssen_stock_location_searchpanel`"
 msgstr "`eyssen_stock_location_searchpanel`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:381 ../../content/applications/general/eyssen_erp_settings.rst:411
+#: ../../content/applications/general/eyssen_erp_settings.rst:388 ../../content/applications/general/eyssen_erp_settings.rst:418
 msgid ":doc:`../inventory_and_mrp/inventory/warehouses_storage/locations_and_picking`"
 msgstr ":doc:`../inventory_and_mrp/inventory/warehouses_storage/locations_and_picking`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:382
+#: ../../content/applications/general/eyssen_erp_settings.rst:389
 msgid ":guilabel:`Disable Remaining quantities not yet delivered section on Delivery Slip`"
 msgstr ":guilabel:`Disable Remaining quantities not yet delivered section on Delivery Slip`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:383
+#: ../../content/applications/general/eyssen_erp_settings.rst:390
 msgid "`eyssen_stock_disable_remaining_quantities_on_ds`"
 msgstr "`eyssen_stock_disable_remaining_quantities_on_ds`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:385
+#: ../../content/applications/general/eyssen_erp_settings.rst:392
 msgid ":guilabel:`Add Bulk Products for Stock`"
 msgstr ":guilabel:`Add Bulk Products for Stock`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:386
+#: ../../content/applications/general/eyssen_erp_settings.rst:393
 msgid "`eyssen_product_bulk_add_stock`"
 msgstr "`eyssen_product_bulk_add_stock`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:388
+#: ../../content/applications/general/eyssen_erp_settings.rst:395
 msgid ":guilabel:`Add Products to Stock with Barcode Scanner`"
 msgstr ":guilabel:`Add Products to Stock with Barcode Scanner`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:389
+#: ../../content/applications/general/eyssen_erp_settings.rst:396
 msgid "`eyssen_barcode_stock`"
 msgstr "`eyssen_barcode_stock`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:391
+#: ../../content/applications/general/eyssen_erp_settings.rst:398
 msgid ":guilabel:`Delivery Payment`"
 msgstr ":guilabel:`Delivery Payment`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:392
+#: ../../content/applications/general/eyssen_erp_settings.rst:399
 msgid "`eyssen_delivery_payment`"
 msgstr "`eyssen_delivery_payment`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:393
+#: ../../content/applications/general/eyssen_erp_settings.rst:400
 msgid ":doc:`../inventory_and_mrp/inventory/shipping_receiving/delivery_payment`"
 msgstr ":doc:`../inventory_and_mrp/inventory/shipping_receiving/delivery_payment`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:394
+#: ../../content/applications/general/eyssen_erp_settings.rst:401
 msgid ":guilabel:`Delivery Payment` ‣ :guilabel:`GLS Shipping Provider`"
 msgstr ":guilabel:`Delivery Payment` ‣ :guilabel:`GLS Shipping Provider`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:395
+#: ../../content/applications/general/eyssen_erp_settings.rst:402
 msgid "`eyssen_delivery_gls`"
 msgstr "`eyssen_delivery_gls`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:396
+#: ../../content/applications/general/eyssen_erp_settings.rst:403
 msgid ":doc:`../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/gls`"
 msgstr ":doc:`../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/gls`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:397
+#: ../../content/applications/general/eyssen_erp_settings.rst:404
 msgid ":guilabel:`Delivery Payment` ‣ :guilabel:`Foxpost Shipping Provider`"
 msgstr ":guilabel:`Delivery Payment` ‣ :guilabel:`Foxpost Shipping Provider`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:398
+#: ../../content/applications/general/eyssen_erp_settings.rst:405
 msgid "`eyssen_delivery_foxpost`"
 msgstr "`eyssen_delivery_foxpost`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:399
+#: ../../content/applications/general/eyssen_erp_settings.rst:406
 msgid ":doc:`../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/foxpost`"
 msgstr ":doc:`../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/foxpost`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:400
+#: ../../content/applications/general/eyssen_erp_settings.rst:407
 msgid ":guilabel:`Delivery Payment` ‣ :guilabel:`MPL (Magyar Posta) Shipping Provider`"
 msgstr ":guilabel:`Delivery Payment` ‣ :guilabel:`MPL (Magyar Posta) Shipping Provider`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:401
+#: ../../content/applications/general/eyssen_erp_settings.rst:408
 msgid "`eyssen_delivery_mpl`"
 msgstr "`eyssen_delivery_mpl`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:402
+#: ../../content/applications/general/eyssen_erp_settings.rst:409
 msgid ":doc:`../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/mpl`"
 msgstr ":doc:`../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/mpl`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:403
+#: ../../content/applications/general/eyssen_erp_settings.rst:410
 msgid ":guilabel:`Multiple Warehouse`"
 msgstr ":guilabel:`Multiple Warehouse`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:404
+#: ../../content/applications/general/eyssen_erp_settings.rst:411
 msgid "`eyssen_stock_multi_warehouse`"
 msgstr "`eyssen_stock_multi_warehouse`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:405
+#: ../../content/applications/general/eyssen_erp_settings.rst:412
 msgid ":doc:`../inventory_and_mrp/inventory/warehouses_storage/multi_warehouse`"
 msgstr ":doc:`../inventory_and_mrp/inventory/warehouses_storage/multi_warehouse`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:406
+#: ../../content/applications/general/eyssen_erp_settings.rst:413
 msgid ":guilabel:`Add item from previous picking`"
 msgstr ":guilabel:`Add item from previous picking`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:407
+#: ../../content/applications/general/eyssen_erp_settings.rst:414
 msgid "`eyssen_add_item_from_previous_stock`"
 msgstr "`eyssen_add_item_from_previous_stock`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:409
+#: ../../content/applications/general/eyssen_erp_settings.rst:416
 msgid ":guilabel:`Stock Removal Priority`"
 msgstr ":guilabel:`Stock Removal Priority`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:410
+#: ../../content/applications/general/eyssen_erp_settings.rst:417
 msgid "`eyssen_stock_removal_priority`"
 msgstr "`eyssen_stock_removal_priority`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:414
+#: ../../content/applications/general/eyssen_erp_settings.rst:421
 msgid "Invoicing"
 msgstr "Invoicing"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:416
+#: ../../content/applications/general/eyssen_erp_settings.rst:423
 msgid "Extensions of customer invoices and vendor bills, including the Hungarian invoicing features."
 msgstr "A vevői és szállítói számlák bővítményei, beleértve a magyar számlázási funkciókat is."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:425
+#: ../../content/applications/general/eyssen_erp_settings.rst:432
 msgid ":guilabel:`Hungarian Invoicing`"
-msgstr ":guilabel:`Hungarian Invoicing`"
+msgstr ":guilabel:`Magyar számlázás`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:426
+#: ../../content/applications/general/eyssen_erp_settings.rst:433
 msgid "`eyssen_l10n_hu`"
 msgstr "`eyssen_l10n_hu`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:427 ../../content/applications/general/eyssen_erp_settings.rst:485 ../../content/applications/general/eyssen_erp_settings.rst:646
+#: ../../content/applications/general/eyssen_erp_settings.rst:434 ../../content/applications/general/eyssen_erp_settings.rst:492 ../../content/applications/general/eyssen_erp_settings.rst:653
 msgid ":doc:`../finance/fiscal_localizations/hungary`"
 msgstr ":doc:`../finance/fiscal_localizations/hungary`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:428
+#: ../../content/applications/general/eyssen_erp_settings.rst:435
 msgid ":guilabel:`Hungarian Pro-Forma Invoicing`"
 msgstr ":guilabel:`Hungarian Pro-Forma Invoicing`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:429
+#: ../../content/applications/general/eyssen_erp_settings.rst:436
 msgid "`eyssen_l10n_hu_proforma`"
 msgstr "`eyssen_l10n_hu_proforma`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:430
+#: ../../content/applications/general/eyssen_erp_settings.rst:437
 msgid ":doc:`../finance/fiscal_localizations/hungary/proforma`"
 msgstr ":doc:`../finance/fiscal_localizations/hungary/proforma`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:431
+#: ../../content/applications/general/eyssen_erp_settings.rst:438
 msgid ":guilabel:`Hungarian KVTD`"
 msgstr ":guilabel:`Hungarian KVTD`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:432
+#: ../../content/applications/general/eyssen_erp_settings.rst:439
 msgid "`eyssen_l10n_hu_kvtd`"
 msgstr "`eyssen_l10n_hu_kvtd`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:433
+#: ../../content/applications/general/eyssen_erp_settings.rst:440
 msgid ":doc:`../finance/fiscal_localizations/hungary/kvtd`"
 msgstr ":doc:`../finance/fiscal_localizations/hungary/kvtd`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:434
+#: ../../content/applications/general/eyssen_erp_settings.rst:441
 msgid ":guilabel:`Copying Invoice rows values`"
 msgstr ":guilabel:`Copying Invoice rows values`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:435
+#: ../../content/applications/general/eyssen_erp_settings.rst:442
 msgid "`eyssen_copy_invoice_row_value`"
 msgstr "`eyssen_copy_invoice_row_value`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:436 ../../content/applications/general/eyssen_erp_settings.rst:439 ../../content/applications/general/eyssen_erp_settings.rst:442 ../../content/applications/general/eyssen_erp_settings.rst:445
+#: ../../content/applications/general/eyssen_erp_settings.rst:443 ../../content/applications/general/eyssen_erp_settings.rst:446 ../../content/applications/general/eyssen_erp_settings.rst:449 ../../content/applications/general/eyssen_erp_settings.rst:452
 msgid ":doc:`../finance/accounting/customer_invoices`"
 msgstr ":doc:`../finance/accounting/customer_invoices`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:437
+#: ../../content/applications/general/eyssen_erp_settings.rst:444
 msgid ":guilabel:`Add Bulk Products for Invoice`"
-msgstr ":guilabel:`Add Bulk Products for Invoice`"
+msgstr ":guilabel:`Termékek tömeges hozzáadása a számlához`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:438
+#: ../../content/applications/general/eyssen_erp_settings.rst:445
 msgid "`eyssen_product_bulk_add_invoice`"
 msgstr "`eyssen_product_bulk_add_invoice`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:440
+#: ../../content/applications/general/eyssen_erp_settings.rst:447
 msgid ":guilabel:`Add Products to Invoice with Barcode Scanner`"
 msgstr ":guilabel:`Add Products to Invoice with Barcode Scanner`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:441
+#: ../../content/applications/general/eyssen_erp_settings.rst:448
 msgid "`eyssen_barcode_invoice`"
 msgstr "`eyssen_barcode_invoice`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:443
+#: ../../content/applications/general/eyssen_erp_settings.rst:450
 msgid ":guilabel:`Add item from previous invoice`"
 msgstr ":guilabel:`Add item from previous invoice`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:444
+#: ../../content/applications/general/eyssen_erp_settings.rst:451
 msgid "`eyssen_add_item_from_previous_invoice`"
 msgstr "`eyssen_add_item_from_previous_invoice`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:448
+#: ../../content/applications/general/eyssen_erp_settings.rst:455
 msgid "Accounting"
 msgstr "Accounting"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:450
+#: ../../content/applications/general/eyssen_erp_settings.rst:457
 msgid "Full accounting, Hungarian accounting and tax returns, bank statement imports, and exchange rates."
 msgstr "Teljes körű könyvelés, magyar könyvelés és adóbevallások, bankkivonat-importok és árfolyamok."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:459
+#: ../../content/applications/general/eyssen_erp_settings.rst:466
 msgid ":guilabel:`Full Accounting`"
 msgstr ":guilabel:`Full Accounting`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:460
+#: ../../content/applications/general/eyssen_erp_settings.rst:467
 msgid "`eyssen_accountant`"
 msgstr "`eyssen_accountant`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:461
+#: ../../content/applications/general/eyssen_erp_settings.rst:468
 msgid ":doc:`../finance/accounting/bank/reconciliation`"
 msgstr ":doc:`../finance/accounting/bank/reconciliation`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:462
+#: ../../content/applications/general/eyssen_erp_settings.rst:469
 msgid ":guilabel:`Stock Accounting`"
 msgstr ":guilabel:`Stock Accounting`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:463
+#: ../../content/applications/general/eyssen_erp_settings.rst:470
 msgid "`eyssen_stock_accountant`"
 msgstr "`eyssen_stock_accountant`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:464
+#: ../../content/applications/general/eyssen_erp_settings.rst:471
 msgid ":doc:`../inventory_and_mrp/inventory/warehouses_storage/reporting/aging`"
 msgstr ":doc:`../inventory_and_mrp/inventory/warehouses_storage/reporting/aging`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:465
+#: ../../content/applications/general/eyssen_erp_settings.rst:472
 msgid ":guilabel:`Hungarian Accounting`"
 msgstr ":guilabel:`Hungarian Accounting`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:466
+#: ../../content/applications/general/eyssen_erp_settings.rst:473
 msgid "`eyssen_l10n_hu_accountant`"
 msgstr "`eyssen_l10n_hu_accountant`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:467 ../../content/applications/general/eyssen_erp_settings.rst:470 ../../content/applications/general/eyssen_erp_settings.rst:473 ../../content/applications/general/eyssen_erp_settings.rst:476
+#: ../../content/applications/general/eyssen_erp_settings.rst:474 ../../content/applications/general/eyssen_erp_settings.rst:477 ../../content/applications/general/eyssen_erp_settings.rst:480 ../../content/applications/general/eyssen_erp_settings.rst:483
 msgid ":doc:`../finance/fiscal_localizations/hungary/vat_return`"
 msgstr ":doc:`../finance/fiscal_localizations/hungary/vat_return`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:468
+#: ../../content/applications/general/eyssen_erp_settings.rst:475
 msgid ":guilabel:`Hungarian Accounting` ‣ :guilabel:`ABEV 2024`"
 msgstr ":guilabel:`Hungarian Accounting` ‣ :guilabel:`ABEV 2024`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:469
+#: ../../content/applications/general/eyssen_erp_settings.rst:476
 msgid "`eyssen_l10n_hu_abev_24`"
 msgstr "`eyssen_l10n_hu_abev_24`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:471
+#: ../../content/applications/general/eyssen_erp_settings.rst:478
 msgid ":guilabel:`Hungarian Accounting` ‣ :guilabel:`ABEV 2025`"
 msgstr ":guilabel:`Hungarian Accounting` ‣ :guilabel:`ABEV 2025`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:472
+#: ../../content/applications/general/eyssen_erp_settings.rst:479
 msgid "`eyssen_l10n_hu_abev_25`"
 msgstr "`eyssen_l10n_hu_abev_25`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:474
+#: ../../content/applications/general/eyssen_erp_settings.rst:481
 msgid ":guilabel:`Hungarian Accounting` ‣ :guilabel:`ABEV 2026`"
 msgstr ":guilabel:`Hungarian Accounting` ‣ :guilabel:`ABEV 2026`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:475
+#: ../../content/applications/general/eyssen_erp_settings.rst:482
 msgid "`eyssen_l10n_hu_abev_26`"
 msgstr "`eyssen_l10n_hu_abev_26`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:477
+#: ../../content/applications/general/eyssen_erp_settings.rst:484
 msgid ":guilabel:`Cash Register`"
 msgstr ":guilabel:`Cash Register`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:478
+#: ../../content/applications/general/eyssen_erp_settings.rst:485
 msgid "`eyssen_cashregister`"
 msgstr "`eyssen_cashregister`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:479
+#: ../../content/applications/general/eyssen_erp_settings.rst:486
 msgid ":doc:`../finance/accounting/bank/cash_register`"
 msgstr ":doc:`../finance/accounting/bank/cash_register`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:480
+#: ../../content/applications/general/eyssen_erp_settings.rst:487
 msgid ":guilabel:`Currency Rate Live`"
 msgstr ":guilabel:`Currency Rate Live`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:481
+#: ../../content/applications/general/eyssen_erp_settings.rst:488
 msgid "`eyssen_currency_rate_live_community`"
 msgstr "`eyssen_currency_rate_live_community`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:482
+#: ../../content/applications/general/eyssen_erp_settings.rst:489
 msgid ":doc:`../finance/accounting/get_started/multi_currency`"
 msgstr ":doc:`../finance/accounting/get_started/multi_currency`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:483
+#: ../../content/applications/general/eyssen_erp_settings.rst:490
 msgid ":guilabel:`Currency Rate Live` ‣ :guilabel:`MNB (Magyar Nemzeti Bank)`"
 msgstr ":guilabel:`Currency Rate Live` ‣ :guilabel:`MNB (Magyar Nemzeti Bank)`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:484
+#: ../../content/applications/general/eyssen_erp_settings.rst:491
 msgid "`eyssen_currency_rate_live_mnb_community`"
 msgstr "`eyssen_currency_rate_live_mnb_community`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:486
+#: ../../content/applications/general/eyssen_erp_settings.rst:493
 msgid ":guilabel:`CIB Bank Statement Import`"
 msgstr ":guilabel:`CIB Bank Statement Import`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:487
+#: ../../content/applications/general/eyssen_erp_settings.rst:494
 msgid "`eyssen_account_bank_statement_import_cib`"
 msgstr "`eyssen_account_bank_statement_import_cib`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:488 ../../content/applications/general/eyssen_erp_settings.rst:491 ../../content/applications/general/eyssen_erp_settings.rst:494 ../../content/applications/general/eyssen_erp_settings.rst:497 ../../content/applications/general/eyssen_erp_settings.rst:500
+#: ../../content/applications/general/eyssen_erp_settings.rst:495 ../../content/applications/general/eyssen_erp_settings.rst:498 ../../content/applications/general/eyssen_erp_settings.rst:501 ../../content/applications/general/eyssen_erp_settings.rst:504 ../../content/applications/general/eyssen_erp_settings.rst:507
 msgid ":doc:`../finance/accounting/bank/statement_import`"
 msgstr ":doc:`../finance/accounting/bank/statement_import`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:489
+#: ../../content/applications/general/eyssen_erp_settings.rst:496
 msgid ":guilabel:`CIB Bank Statement Import` ‣ :guilabel:`K&H Bank Statement Import`"
-msgstr ":guilabel:`CIB Bank Statement Import` ‣ :guilabel:`K&H Bank Statement Import`"
+msgstr ":guilabel:`CIB Bank Statement Import` ‣ :guilabel:`K&H bankkivonat importálás`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:490
+#: ../../content/applications/general/eyssen_erp_settings.rst:497
 msgid "`eyssen_account_bank_statement_import_kh`"
 msgstr "`eyssen_account_bank_statement_import_kh`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:492
+#: ../../content/applications/general/eyssen_erp_settings.rst:499
 msgid ":guilabel:`CIB Bank Statement Import` ‣ :guilabel:`OTP Bank Statement Import`"
-msgstr ":guilabel:`CIB Bank Statement Import` ‣ :guilabel:`OTP Bank Statement Import`"
+msgstr ":guilabel:`CIB Bank Statement Import` ‣ :guilabel:`OTP bankkivonat importálás`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:493
+#: ../../content/applications/general/eyssen_erp_settings.rst:500
 msgid "`eyssen_account_bank_statement_import_otp`"
 msgstr "`eyssen_account_bank_statement_import_otp`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:495
+#: ../../content/applications/general/eyssen_erp_settings.rst:502
 msgid ":guilabel:`CIB Bank Statement Import` ‣ :guilabel:`Raiffeisen Bank Statement Import`"
-msgstr ":guilabel:`CIB Bank Statement Import` ‣ :guilabel:`Raiffeisen Bank Statement Import`"
+msgstr ":guilabel:`CIB Bank Statement Import` ‣ :guilabel:`Raiffeisen bankkivonat importálás`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:496
+#: ../../content/applications/general/eyssen_erp_settings.rst:503
 msgid "`eyssen_account_bank_statement_import_raiffeisen`"
 msgstr "`eyssen_account_bank_statement_import_raiffeisen`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:498
+#: ../../content/applications/general/eyssen_erp_settings.rst:505
 msgid ":guilabel:`CIB Bank Statement Import` ‣ :guilabel:`Wise Bank Statement Import`"
-msgstr ":guilabel:`CIB Bank Statement Import` ‣ :guilabel:`Wise Bank Statement Import`"
+msgstr ":guilabel:`CIB Bank Statement Import` ‣ :guilabel:`Wise bankkivonat importálás`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:499
+#: ../../content/applications/general/eyssen_erp_settings.rst:506
 msgid "`eyssen_account_bank_statement_import_wise`"
 msgstr "`eyssen_account_bank_statement_import_wise`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:501
+#: ../../content/applications/general/eyssen_erp_settings.rst:508
 msgid ":guilabel:`Intrastat`"
 msgstr ":guilabel:`Intrastat`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:502
+#: ../../content/applications/general/eyssen_erp_settings.rst:509
 msgid "`eyssen_intrastat`"
 msgstr "`eyssen_intrastat`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:503
+#: ../../content/applications/general/eyssen_erp_settings.rst:510
 msgid ":doc:`../finance/accounting/reporting/intrastat`"
 msgstr ":doc:`../finance/accounting/reporting/intrastat`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:504
+#: ../../content/applications/general/eyssen_erp_settings.rst:511
 msgid ":guilabel:`Cashbook`"
 msgstr ":guilabel:`Cashbook`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:505
+#: ../../content/applications/general/eyssen_erp_settings.rst:512
 msgid "`eyssen_l10n_hu_cashbook`"
 msgstr "`eyssen_l10n_hu_cashbook`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:506
+#: ../../content/applications/general/eyssen_erp_settings.rst:513
 msgid ":doc:`../finance/fiscal_localizations/hungary/cashbook`"
 msgstr ":doc:`../finance/fiscal_localizations/hungary/cashbook`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:507
+#: ../../content/applications/general/eyssen_erp_settings.rst:514
 msgid ":guilabel:`Approval`"
-msgstr ":guilabel:`Approval`"
+msgstr ":guilabel:`Jóváhagyás`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:508
+#: ../../content/applications/general/eyssen_erp_settings.rst:515
 msgid "`account_approval`"
 msgstr "`account_approval`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:509
+#: ../../content/applications/general/eyssen_erp_settings.rst:516
 msgid ":doc:`../finance/accounting/customer_invoices/invoice_approval`"
 msgstr ":doc:`../finance/accounting/customer_invoices/invoice_approval`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:512
+#: ../../content/applications/general/eyssen_erp_settings.rst:519
 msgid "Project"
 msgstr "Project"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:514
+#: ../../content/applications/general/eyssen_erp_settings.rst:521
 msgid "Extensions of the Project application."
 msgstr "A Projekt alkalmazás bővítményei."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:523
+#: ../../content/applications/general/eyssen_erp_settings.rst:530
 msgid ":guilabel:`Project Template`"
 msgstr ":guilabel:`Project Template`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:524
+#: ../../content/applications/general/eyssen_erp_settings.rst:531
 msgid "`eyssen_project_template`"
 msgstr "`eyssen_project_template`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:525
+#: ../../content/applications/general/eyssen_erp_settings.rst:532
 msgid ":doc:`../services/project/templates`"
 msgstr ":doc:`../services/project/templates`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:526
+#: ../../content/applications/general/eyssen_erp_settings.rst:533
 msgid ":guilabel:`Project Category`"
 msgstr ":guilabel:`Project Category`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:527
+#: ../../content/applications/general/eyssen_erp_settings.rst:534
 msgid "`eyssen_project_category`"
 msgstr "`eyssen_project_category`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:528
+#: ../../content/applications/general/eyssen_erp_settings.rst:535
 msgid ":doc:`../services/project/categories`"
 msgstr ":doc:`../services/project/categories`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:529
+#: ../../content/applications/general/eyssen_erp_settings.rst:536
 msgid ":guilabel:`Project SLA`"
 msgstr ":guilabel:`Project SLA`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:530
+#: ../../content/applications/general/eyssen_erp_settings.rst:537
 msgid "`eyssen_project_sla`"
 msgstr "`eyssen_project_sla`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:531
+#: ../../content/applications/general/eyssen_erp_settings.rst:538
 msgid ":doc:`../services/project/sla`"
 msgstr ":doc:`../services/project/sla`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:532
+#: ../../content/applications/general/eyssen_erp_settings.rst:539
 msgid ":guilabel:`Project Product`"
 msgstr ":guilabel:`Project Product`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:533
+#: ../../content/applications/general/eyssen_erp_settings.rst:540
 msgid "`eyssen_project_product`"
 msgstr "`eyssen_project_product`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:534
+#: ../../content/applications/general/eyssen_erp_settings.rst:541
 msgid ":doc:`../services/field_service/product_management`"
 msgstr ":doc:`../services/field_service/product_management`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:535
+#: ../../content/applications/general/eyssen_erp_settings.rst:542
 msgid ":guilabel:`Project Worksheet`"
 msgstr ":guilabel:`Project Worksheet`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:536
+#: ../../content/applications/general/eyssen_erp_settings.rst:543
 msgid "`eyssen_project_worksheet`"
 msgstr "`eyssen_project_worksheet`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:537
+#: ../../content/applications/general/eyssen_erp_settings.rst:544
 msgid ":doc:`../services/field_service/worksheets`"
 msgstr ":doc:`../services/field_service/worksheets`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:538
+#: ../../content/applications/general/eyssen_erp_settings.rst:545
 msgid ":guilabel:`Project Field Service`"
 msgstr ":guilabel:`Project Field Service`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:539
+#: ../../content/applications/general/eyssen_erp_settings.rst:546
 msgid "`eyssen_project_fsm`"
 msgstr "`eyssen_project_fsm`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:540
+#: ../../content/applications/general/eyssen_erp_settings.rst:547
 msgid ":doc:`../services/field_service/configuration`"
 msgstr ":doc:`../services/field_service/configuration`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:541
+#: ../../content/applications/general/eyssen_erp_settings.rst:548
 msgid ":guilabel:`Task Priority`"
 msgstr ":guilabel:`Task Priority`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:542
+#: ../../content/applications/general/eyssen_erp_settings.rst:549
 msgid "`eyssen_project_task_priority`"
 msgstr "`eyssen_project_task_priority`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:543
+#: ../../content/applications/general/eyssen_erp_settings.rst:550
 msgid ":doc:`../services/project/tasks/task_stages_statuses`"
 msgstr ":doc:`../services/project/tasks/task_stages_statuses`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:544
+#: ../../content/applications/general/eyssen_erp_settings.rst:551
 msgid ":guilabel:`Invoice from Timesheet`"
 msgstr ":guilabel:`Invoice from Timesheet`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:545
+#: ../../content/applications/general/eyssen_erp_settings.rst:552
 msgid "`eyssen_invoice_from_timesheet`"
 msgstr "`eyssen_invoice_from_timesheet`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:546
+#: ../../content/applications/general/eyssen_erp_settings.rst:553
 msgid ":doc:`../services/timesheets/services`"
 msgstr ":doc:`../services/timesheets/services`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:549
+#: ../../content/applications/general/eyssen_erp_settings.rst:556
 msgid "MRP"
 msgstr "MRP"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:551
+#: ../../content/applications/general/eyssen_erp_settings.rst:558
 msgid "Extensions of the Manufacturing application."
 msgstr "A Gyártás alkalmazás bővítményei."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:560
+#: ../../content/applications/general/eyssen_erp_settings.rst:567
 msgid ":guilabel:`BoM on Product`"
 msgstr ":guilabel:`BoM on Product`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:561
+#: ../../content/applications/general/eyssen_erp_settings.rst:568
 msgid "`eyssen_mrp_bom_on_product`"
 msgstr "`eyssen_mrp_bom_on_product`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:565
+#: ../../content/applications/general/eyssen_erp_settings.rst:572
 msgid "Fleet"
 msgstr "Fleet"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:567
+#: ../../content/applications/general/eyssen_erp_settings.rst:574
 msgid "Extensions of the Fleet application."
 msgstr "A Flotta alkalmazás bővítményei."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:576
+#: ../../content/applications/general/eyssen_erp_settings.rst:583
 msgid ":guilabel:`Fleet More Features`"
 msgstr ":guilabel:`Fleet More Features`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:577
+#: ../../content/applications/general/eyssen_erp_settings.rst:584
 msgid "`fleet_extra`"
 msgstr "`fleet_extra`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:578 ../../content/applications/general/eyssen_erp_settings.rst:581 ../../content/applications/general/eyssen_erp_settings.rst:584
+#: ../../content/applications/general/eyssen_erp_settings.rst:585 ../../content/applications/general/eyssen_erp_settings.rst:588 ../../content/applications/general/eyssen_erp_settings.rst:591
 msgid ":doc:`../hr/fleet/extensions`"
 msgstr ":doc:`../hr/fleet/extensions`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:579
+#: ../../content/applications/general/eyssen_erp_settings.rst:586
 msgid ":guilabel:`Stock Management`"
 msgstr ":guilabel:`Stock Management`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:580
+#: ../../content/applications/general/eyssen_erp_settings.rst:587
 msgid "`fleet_stock`"
 msgstr "`fleet_stock`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:582
+#: ../../content/applications/general/eyssen_erp_settings.rst:589
 msgid ":guilabel:`Parts Management`"
 msgstr ":guilabel:`Parts Management`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:583
+#: ../../content/applications/general/eyssen_erp_settings.rst:590
 msgid "`fleet_parts`"
 msgstr "`fleet_parts`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:587
+#: ../../content/applications/general/eyssen_erp_settings.rst:594
 msgid "Website Sale"
 msgstr "Website Sale"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:589
+#: ../../content/applications/general/eyssen_erp_settings.rst:596
 msgid "Extensions of the eCommerce application."
 msgstr "Az e-kereskedelem alkalmazás bővítményei."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:598
+#: ../../content/applications/general/eyssen_erp_settings.rst:605
 msgid ":guilabel:`Product Multi Website`"
 msgstr ":guilabel:`Product Multi Website`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:599
+#: ../../content/applications/general/eyssen_erp_settings.rst:606
 msgid "`eyssen_website_sale_product_multi_website`"
 msgstr "`eyssen_website_sale_product_multi_website`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:600 ../../content/applications/general/eyssen_erp_settings.rst:615
+#: ../../content/applications/general/eyssen_erp_settings.rst:607 ../../content/applications/general/eyssen_erp_settings.rst:622
 msgid ":doc:`../websites/ecommerce/products`"
 msgstr ":doc:`../websites/ecommerce/products`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:601
+#: ../../content/applications/general/eyssen_erp_settings.rst:608
 msgid ":guilabel:`Order Sign`"
 msgstr ":guilabel:`Order Sign`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:602
+#: ../../content/applications/general/eyssen_erp_settings.rst:609
 msgid "`website_sale_order_sign`"
 msgstr "`website_sale_order_sign`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:603 ../../content/applications/general/eyssen_erp_settings.rst:612
+#: ../../content/applications/general/eyssen_erp_settings.rst:610 ../../content/applications/general/eyssen_erp_settings.rst:619
 msgid ":doc:`../websites/ecommerce/checkout`"
 msgstr ":doc:`../websites/ecommerce/checkout`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:604
+#: ../../content/applications/general/eyssen_erp_settings.rst:611
 msgid ":guilabel:`Payment Management`"
 msgstr ":guilabel:`Payment Management`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:605
+#: ../../content/applications/general/eyssen_erp_settings.rst:612
 msgid "`eyssen_website_sale_payment`"
 msgstr "`eyssen_website_sale_payment`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:606
+#: ../../content/applications/general/eyssen_erp_settings.rst:613
 msgid ":doc:`../websites/ecommerce/payments`"
 msgstr ":doc:`../websites/ecommerce/payments`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:607
+#: ../../content/applications/general/eyssen_erp_settings.rst:614
 msgid ":guilabel:`Disable Auto Confirmation`"
 msgstr ":guilabel:`Disable Auto Confirmation`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:608
+#: ../../content/applications/general/eyssen_erp_settings.rst:615
 msgid "`eyssen_website_sale_disable_auto_confirm`"
 msgstr "`eyssen_website_sale_disable_auto_confirm`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:609
+#: ../../content/applications/general/eyssen_erp_settings.rst:616
 msgid ":doc:`../websites/ecommerce/order_handling`"
 msgstr ":doc:`../websites/ecommerce/order_handling`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:610
+#: ../../content/applications/general/eyssen_erp_settings.rst:617
 msgid ":guilabel:`Company Checkout`"
 msgstr ":guilabel:`Company Checkout`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:611
+#: ../../content/applications/general/eyssen_erp_settings.rst:618
 msgid "`website_sale_company`"
 msgstr "`website_sale_company`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:613
+#: ../../content/applications/general/eyssen_erp_settings.rst:620
 msgid ":guilabel:`Árgép`"
 msgstr ":guilabel:`Árgép`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:614
+#: ../../content/applications/general/eyssen_erp_settings.rst:621
 msgid "`eyssen_website_sale_argep`"
 msgstr "`eyssen_website_sale_argep`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:618
+#: ../../content/applications/general/eyssen_erp_settings.rst:625
 msgid "Point of Sale"
 msgstr "Point of Sale"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:620
+#: ../../content/applications/general/eyssen_erp_settings.rst:627
 msgid "Extensions of the Point of Sale application."
 msgstr "Az Értékesítési pont alkalmazás bővítményei."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:629
+#: ../../content/applications/general/eyssen_erp_settings.rst:636
 msgid ":guilabel:`Performance Optimization`"
 msgstr ":guilabel:`Performance Optimization`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:630
+#: ../../content/applications/general/eyssen_erp_settings.rst:637
 msgid "`eyssen_pos_performance`"
 msgstr "`eyssen_pos_performance`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:632
+#: ../../content/applications/general/eyssen_erp_settings.rst:639
 msgid ":guilabel:`Logo & Screen Saver`"
 msgstr ":guilabel:`Logo & Screen Saver`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:633
+#: ../../content/applications/general/eyssen_erp_settings.rst:640
 msgid "`eyssen_pos_logo`"
 msgstr "`eyssen_pos_logo`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:635
+#: ../../content/applications/general/eyssen_erp_settings.rst:642
 msgid ":guilabel:`Product Restriction`"
 msgstr ":guilabel:`Product Restriction`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:636
+#: ../../content/applications/general/eyssen_erp_settings.rst:643
 msgid "`eyssen_pos_product_restriction`"
 msgstr "`eyssen_pos_product_restriction`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:638
+#: ../../content/applications/general/eyssen_erp_settings.rst:645
 msgid ":guilabel:`Grouping`"
 msgstr ":guilabel:`Grouping`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:639
+#: ../../content/applications/general/eyssen_erp_settings.rst:646
 msgid "`eyssen_pos_group`"
 msgstr "`eyssen_pos_group`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:640
+#: ../../content/applications/general/eyssen_erp_settings.rst:647
 msgid ":doc:`../sales/point_of_sale/configuration/pos_groups`"
 msgstr ":doc:`../sales/point_of_sale/configuration/pos_groups`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:641
+#: ../../content/applications/general/eyssen_erp_settings.rst:648
 msgid ":guilabel:`Invoice`"
-msgstr ":guilabel:`Invoice`"
+msgstr ":guilabel:`Számla`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:642
+#: ../../content/applications/general/eyssen_erp_settings.rst:649
 msgid "`eyssen_pos_invoice`"
 msgstr "`eyssen_pos_invoice`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:643
+#: ../../content/applications/general/eyssen_erp_settings.rst:650
 msgid ":doc:`../sales/point_of_sale/receipts_invoices`"
 msgstr ":doc:`../sales/point_of_sale/receipts_invoices`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:644
+#: ../../content/applications/general/eyssen_erp_settings.rst:651
 msgid ":guilabel:`PoS Hungarian`"
 msgstr ":guilabel:`PoS Hungarian`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:645
+#: ../../content/applications/general/eyssen_erp_settings.rst:652
 msgid "`eyssen_l10n_hu_pos`"
 msgstr "`eyssen_l10n_hu_pos`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:649
+#: ../../content/applications/general/eyssen_erp_settings.rst:656
 msgid "Appointment"
 msgstr "Appointment"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:651
+#: ../../content/applications/general/eyssen_erp_settings.rst:658
 msgid "The eYssen appointment booking application and its bridges."
 msgstr "Az eYssen időpontfoglaló alkalmazás és annak hídjai."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:654
+#: ../../content/applications/general/eyssen_erp_settings.rst:661
 msgid "On the settings page, this section is also titled :guilabel:`Process Number`. It is the last section of the page, below :guilabel:`Point of Sale`."
 msgstr "A beállítások oldalán ennek a szakasznak a címe szintén :guilabel:`Process Number`. Ez az oldal utolsó szakasza, a :guilabel:`Point of Sale` alatt."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:664
+#: ../../content/applications/general/eyssen_erp_settings.rst:671
 msgid ":guilabel:`Appointment`"
 msgstr ":guilabel:`Appointment`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:665
+#: ../../content/applications/general/eyssen_erp_settings.rst:672
 msgid "`appointment`"
 msgstr "`appointment`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:666 ../../content/applications/general/eyssen_erp_settings.rst:672 ../../content/applications/general/eyssen_erp_settings.rst:678 ../../content/applications/general/eyssen_erp_settings.rst:681 ../../content/applications/general/eyssen_erp_settings.rst:684 ../../content/applications/general/eyssen_erp_settings.rst:687
+#: ../../content/applications/general/eyssen_erp_settings.rst:673 ../../content/applications/general/eyssen_erp_settings.rst:679 ../../content/applications/general/eyssen_erp_settings.rst:685 ../../content/applications/general/eyssen_erp_settings.rst:688 ../../content/applications/general/eyssen_erp_settings.rst:691 ../../content/applications/general/eyssen_erp_settings.rst:694
 msgid ":doc:`../productivity/appointments`"
 msgstr ":doc:`../productivity/appointments`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:667
+#: ../../content/applications/general/eyssen_erp_settings.rst:674
 msgid ":guilabel:`Appointment` ‣ :guilabel:`CRM`"
 msgstr ":guilabel:`Appointment` ‣ :guilabel:`CRM`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:668
+#: ../../content/applications/general/eyssen_erp_settings.rst:675
 msgid "`appointment_crm`"
 msgstr "`appointment_crm`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:669
+#: ../../content/applications/general/eyssen_erp_settings.rst:676
 msgid ":doc:`../productivity/appointments/create-opps`"
 msgstr ":doc:`../productivity/appointments/create-opps`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:670
+#: ../../content/applications/general/eyssen_erp_settings.rst:677
 msgid ":guilabel:`Appointment` ‣ :guilabel:`eLearning`"
 msgstr ":guilabel:`Appointment` ‣ :guilabel:`eLearning`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:671
+#: ../../content/applications/general/eyssen_erp_settings.rst:678
 msgid "`appointment_elearning`"
 msgstr "`appointment_elearning`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:673
+#: ../../content/applications/general/eyssen_erp_settings.rst:680
 msgid ":guilabel:`Appointment` ‣ :guilabel:`HelpDesk`"
 msgstr ":guilabel:`Appointment` ‣ :guilabel:`HelpDesk`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:674
+#: ../../content/applications/general/eyssen_erp_settings.rst:681
 msgid "`appointment_helpdesk`"
 msgstr "`appointment_helpdesk`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:676
+#: ../../content/applications/general/eyssen_erp_settings.rst:683
 msgid ":guilabel:`Appointment` ‣ :guilabel:`HR`"
 msgstr ":guilabel:`Appointment` ‣ :guilabel:`HR`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:677
+#: ../../content/applications/general/eyssen_erp_settings.rst:684
 msgid "`appointment_hr`"
 msgstr "`appointment_hr`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:679
+#: ../../content/applications/general/eyssen_erp_settings.rst:686
 msgid ":guilabel:`Appointment` ‣ :guilabel:`Pass`"
 msgstr ":guilabel:`Appointment` ‣ :guilabel:`Pass`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:680
+#: ../../content/applications/general/eyssen_erp_settings.rst:687
 msgid "`appointment_pass`"
 msgstr "`appointment_pass`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:682
+#: ../../content/applications/general/eyssen_erp_settings.rst:689
 msgid ":guilabel:`Appointment` ‣ :guilabel:`Payment`"
-msgstr ":guilabel:`Appointment` ‣ :guilabel:`Payment`"
+msgstr ":guilabel:`Appointment` ‣ :guilabel:`Fizetés`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:683
+#: ../../content/applications/general/eyssen_erp_settings.rst:690
 msgid "`appointment_payment`"
 msgstr "`appointment_payment`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:685
+#: ../../content/applications/general/eyssen_erp_settings.rst:692
 msgid ":guilabel:`Appointment` ‣ :guilabel:`Reports`"
 msgstr ":guilabel:`Appointment` ‣ :guilabel:`Reports`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:686
+#: ../../content/applications/general/eyssen_erp_settings.rst:693
 msgid "`appointment_reports`"
 msgstr "`appointment_reports`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:688
+#: ../../content/applications/general/eyssen_erp_settings.rst:695
 msgid ":guilabel:`Appointment` ‣ :guilabel:`Website`"
 msgstr ":guilabel:`Appointment` ‣ :guilabel:`Website`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:689
+#: ../../content/applications/general/eyssen_erp_settings.rst:696
 msgid "`appointment_website`"
 msgstr "`appointment_website`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:690
+#: ../../content/applications/general/eyssen_erp_settings.rst:697
 msgid ":doc:`../websites/website/appointments`"
 msgstr ":doc:`../websites/website/appointments`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:693
+#: ../../content/applications/general/eyssen_erp_settings.rst:700
 msgid "The options :guilabel:`Supplier Product Management` ‣ :guilabel:`Vision Software API` (`eyssen_vision_software_api`) and :guilabel:`Calculate Warehouse Stock` (`eyssen_stock_calculate_wh_stock`) refer to modules that are no longer part of eYssen ERP; ticking them has no effect. The Vision Software connector is now provided by the `spm_vision_software_api` module; see :doc:`../inventory_and_mrp/inventory/product_management/supplier_connectors`."
 msgstr "A :guilabel:`Supplier Product Management` ‣ :guilabel:`Vision Software API` (`eyssen_vision_software_api`) és a :guilabel:`Calculate Warehouse Stock` (`eyssen_stock_calculate_wh_stock`) beállítások olyan modulokra hivatkoznak, amelyek már nem részei az eYssen ERP-nek; bejelölésüknek nincs hatása. A Vision Software csatlakozót ma az `spm_vision_software_api` modul biztosítja; lásd: :doc:`../inventory_and_mrp/inventory/product_management/supplier_connectors`."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:703
+#: ../../content/applications/general/eyssen_erp_settings.rst:710
 msgid "eYssen Cloud token login"
 msgstr "eYssen Cloud tokenes bejelentkezés"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:705
+#: ../../content/applications/general/eyssen_erp_settings.rst:712
 msgid "The :guilabel:`eYssen Cloud Token Login` option of the :guilabel:`General Modules` section installs the `eyssen_cloud_token_login` module. It lets the operator of the hosting platform open a session in the database **as any user, without knowing the user's password**, for testing, development, and support purposes."
 msgstr "A :guilabel:`General Modules` szakasz :guilabel:`eYssen Cloud Token Login` beállítása az `eyssen_cloud_token_login` modult telepíti. Ez lehetővé teszi, hogy a tárhelyplatform üzemeltetője tesztelési, fejlesztési és támogatási célból **bármely felhasználó nevében, a felhasználó jelszavának ismerete nélkül** munkamenetet nyisson az adatbázisban."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:710
+#: ../../content/applications/general/eyssen_erp_settings.rst:717
 msgid "The module requires the *Website* application, and has no menu and no setting in the database. The hosting platform registers a one-time token for the chosen user, and immediately opens the dedicated login address of the database with that token. A token can only be used once, and only during the 10 seconds following its creation."
 msgstr "A modulhoz szükséges a *Weboldal* alkalmazás, és nincs sem menüje, sem beállítása az adatbázisban. A tárhelyplatform egyszer használatos tokent regisztrál a kiválasztott felhasználóhoz, majd azonnal megnyitja az adatbázis erre szolgáló bejelentkezési címét a tokennel. Egy token csak egyszer, és csak a létrehozását követő 10 másodpercben használható fel."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:715
+#: ../../content/applications/general/eyssen_erp_settings.rst:722
 msgid "Enable this option only if you agree that your hosting provider or support provider can log in on behalf of your users. To withdraw the permission, untick the option and click :guilabel:`Save`."
 msgstr "Csak akkor kapcsolja be ezt a beállítást, ha egyetért azzal, hogy a tárhelyszolgáltatója vagy a támogatási partnere a felhasználói nevében bejelentkezhessen. Az engedély visszavonásához törölje a beállítás jelölését, és kattintson a :guilabel:`Mentés` gombra."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:719
+#: ../../content/applications/general/eyssen_erp_settings.rst:726
 msgid "About"
 msgstr "Névjegy"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:721
+#: ../../content/applications/general/eyssen_erp_settings.rst:728
 msgid "The :guilabel:`About` section, at the bottom of the page, displays the version and the publisher of eYssen ERP."
 msgstr "Az oldal alján található :guilabel:`About` szakasz az eYssen ERP verzióját és kiadóját jeleníti meg."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:725
+#: ../../content/applications/general/eyssen_erp_settings.rst:732
 msgid ":doc:`apps_modules`"
 msgstr ":doc:`apps_modules`"
 

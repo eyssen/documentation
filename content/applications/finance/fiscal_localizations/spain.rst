@@ -1,3 +1,6 @@
+:show-content:
+:show-toc:
+
 =====
 Spain
 =====
@@ -25,6 +28,69 @@ select a package in the :guilabel:`Fiscal Localization` section.
      <../accounting/customer_invoices/electronic_invoicing/spain>`
    - :doc:`Documentation on e-invoicing’s legality and compliance in the Basque Country
      <../accounting/customer_invoices/electronic_invoicing/basque_country>`
+
+.. _localizations/spain/base-layer:
+
+Spanish base layer
+------------------
+
+The *Spain - Base Layer* module sets up the combination of Spanish localization modules supported
+in eYssen. :ref:`Install <general/install>` it on top of the Spanish fiscal localization package. It
+also installs:
+
+- *AEAT Base*: the common framework of the AEAT tax declarations (tax maps, declaration records,
+  export of the declaration files);
+- the Spanish data of contacts and banks: the :guilabel:`Trade name` of contacts (contacts can also
+  be searched by it) and the Spanish bank directory, which is offered for import when the module is
+  installed (:guilabel:`Import spanish bank data`);
+- the Spanish provinces, municipalities and ZIP codes, used to fill in the city and the province
+  from the ZIP code;
+- the check of the identification data of contacts against the AEAT census: click
+  :guilabel:`Check Partner Data` on the AEAT tab of a contact, or enable :guilabel:`Verify Partner
+  Data using AEAT Census` in the settings to check contacts automatically when they are created or
+  modified.
+
+When the module is installed, the :guilabel:`Verify VAT Numbers` option (VIES validation of
+intra-EU VAT numbers) is enabled for every Spanish company.
+
+For several features, two alternative modules exist: one from the standard Odoo localization and
+one from the Spanish community localization (OCA). The *Spain - Base Layer* module enforces the
+supported choice: the alternative module cannot be installed while the base layer is installed, and
+the base layer cannot be installed while an alternative module is installed.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 40 35
+
+   * - Feature
+     - Supported module
+     - Alternative that cannot be installed
+   * - Veri*Factu
+     - *Spain - Veri\*Factu* (and its Point of Sale extension)
+     - The community Veri*Factu module
+   * - SII
+     - *Suministro Inmediato de Información en el IVA* (community)
+     - *Spain - SII EDI Suministro de Libros*
+   * - Facturae and FACe
+     - *Spain - Facturae EDI*
+     - The community Facturae and FACe modules
+   * - Point of Sale
+     - *Spain - Point of Sale*
+     - The community Spanish Point of Sale modules
+   * - Modelo 130
+     - *AEAT modelo 130* (community)
+     - *Spain - Modelo 130 Tax report*
+   * - EU One-Stop-Shop (OSS)
+     - The community OSS module, used by the OSS versions of the AEAT declarations
+     - *EU One Stop Shop (OSS)* and the Hungarian OSS bridge
+   * - Fixed assets
+     - :doc:`Spain - Fixed Assets <spain/fixed_assets>`
+     - The community fixed asset modules
+
+.. note::
+   If an alternative module is already installed, uninstall it before installing the *Spain - Base
+   Layer* module. Ask your system administrator before uninstalling a module, as its data is
+   deleted.
 
 Chart of accounts
 =================
@@ -80,6 +146,11 @@ The *Spain - SII EDI Suministro de Libros* (`l10n_es_edi_sii`) module sends the 
 customer invoices and vendor bills to the SII (*Llevanza de libros registro*) of the AEAT or of the
 regional tax agencies. It is mandatory for companies with a turnover above 6 M€ and optional for
 the others.
+
+.. important::
+   This module cannot be installed together with the :ref:`Spain - Base Layer
+   <localizations/spain/base-layer>` module. With the base layer, the SII is handled by the
+   community *Suministro Inmediato de Información en el IVA* module.
 
 Configuration
 -------------
@@ -348,3 +419,8 @@ Select :guilabel:`FACe Center` as the **type**, assign one or more **role(s)** t
    - When an electronic invoice is created using a partner with **administrative centers**, *all*
      administrative centers are included in the invoice.
    - You can add one contact with multiple roles or multiple contacts with a different role each.
+
+.. toctree::
+   :titlesonly:
+
+   spain/fixed_assets

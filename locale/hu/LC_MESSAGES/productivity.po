@@ -943,7 +943,7 @@ msgstr "Globális chat :guilabel:`AI írási mód`: **confirm** vagy **hybrid** 
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:274
 msgid "Restrict the persona to Accounting groups via :guilabel:`Restricted to groups` if needed."
-msgstr "Szükség esetén korlátozza a personát Könyvelés csoportokra a :guilabel:`Restricted to groups` mezővel."
+msgstr "Szükség esetén korlátozza a personát Könyvelés csoportokra a :guilabel:`Csoportokra korlátozva` mezővel."
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:278
 msgid "Variant D2 — Scheduled autonomous AP agent"
@@ -979,7 +979,7 @@ msgstr ":guilabel:`Ütemezés` *Ütemezetten*, intervallum pl. 1 óra;"
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:293
 msgid ":guilabel:`Deadline Seconds` well under the worker budget (e.g. 600 if the dispatch tick budget is ~870 — a deadline above the budget skips the run);"
-msgstr ":guilabel:`Határidő másodperc` jóval a worker költségvetése alatt (pl. 600, ha a dispatch tick budget ~870 — a budget feletti határidő kihagyja a futtatást);"
+msgstr ":guilabel:`Határidő (másodperc)` jóval a worker költségvetése alatt (pl. 600, ha a dispatch tick budget ~870 — a budget feletti határidő kihagyja a futtatást);"
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:295
 msgid ":guilabel:`Write Mode` **Apply immediately** (*auto*) is acceptable **only because** the skill never posts and the agent never pays — risk stays at “wrong draft lines”, not “posted garbage”. Use *confirm* if you want every line change to wait for the supervisor;"
@@ -2379,7 +2379,7 @@ msgstr "Az Anthropic a kivétel, épp az ellenkező irányban: az API-ja mindig 
 
 #: ../../content/applications/productivity/ai/configuration.rst:250
 msgid ":guilabel:`Max Output Tokens` on a catalogue row is often almost the whole :guilabel:`Context Window` (for example 450 000 of 500 000). Providers such as OpenRouter reject the call when *prompt + tools + max_tokens* exceeds the window, even if the prompt itself still fits. The platform therefore clamps the completion cap on every call to whatever still fits after an overestimate of the prompt. A small first turn still gets the published output limit; a large tool round gets a smaller leftover. This cannot help when the **prompt alone** already exceeds the window — split the work (see :ref:`ai/agents/work-items`)."
-msgstr "A katalógussor :guilabel:`Max. kimeneti tokenek` értéke gyakran majdnem az egész :guilabel:`Kontextusablak` (például 450 000 a 500 000-ből). Az olyan szolgáltatók, mint az OpenRouter, elutasítják a hívást, ha a *prompt + eszközök + max_tokens* meghaladja az ablakot, még akkor is, ha maga a prompt belefér. A platform ezért minden hívásnál a prompt felülbecslése után megmaradó helyre szorítja a válaszkorlátot. Egy kis első kör még megkapja a közzétett kimeneti korlátot; egy nagy tool-kör kisebb maradékot. Ez nem segít, ha **önmagában a prompt** már túlcsordul — bontsa a munkát (lásd :ref:`ai/agents/work-items`)."
+msgstr "A katalógussor :guilabel:`Max. kimeneti tokenek` értéke gyakran majdnem az egész :guilabel:`Kontextus ablak` (például 450 000 a 500 000-ből). Az olyan szolgáltatók, mint az OpenRouter, elutasítják a hívást, ha a *prompt + eszközök + max_tokens* meghaladja az ablakot, még akkor is, ha maga a prompt belefér. A platform ezért minden hívásnál a prompt felülbecslése után megmaradó helyre szorítja a válaszkorlátot. Egy kis első kör még megkapja a közzétett kimeneti korlátot; egy nagy tool-kör kisebb maradékot. Ez nem segít, ha **önmagában a prompt** már túlcsordul — bontsa a munkát (lásd :ref:`ai/agents/work-items`)."
 
 #: ../../content/applications/productivity/ai/configuration.rst:261
 msgid "Upgrading from an earlier version changes how agents that are already configured behave."
@@ -2459,7 +2459,7 @@ msgstr "Réteges rendszerkérdések (mag, globális, modul stb.) alakviselkedés
 
 #: ../../content/applications/productivity/ai/configuration.rst:317
 msgid "A layer's :guilabel:`Body` is **English only** and not translatable. These are the rails the model is steered by, not user-facing text: rails that switched language with the interface would leave the instructions in one language and the tool names in another. The assistant still answers in the language of the conversation — that is decided by the user's messages, never by this text."
-msgstr "A réteg :guilabel:`Szöveg` mezője **kizárólag angol**, és nem fordítható. Ezek a vezetősínek irányítják a modellt, nem a felhasználónak szánt szövegek: az a vezetősín, amely a felület nyelvével együtt váltana nyelvet, az utasításokat az egyik nyelven, az eszközneveket egy másikon hagyná. Az asszisztens ettől függetlenül a beszélgetés nyelvén válaszol — ezt a felhasználó üzenetei döntik el, soha nem ez a szöveg."
+msgstr "A réteg :guilabel:`Utasítások` mezője **kizárólag angol**, és nem fordítható. Ezek a vezetősínek irányítják a modellt, nem a felhasználónak szánt szövegek: az a vezetősín, amely a felület nyelvével együtt váltana nyelvet, az utasításokat az egyik nyelven, az eszközneveket egy másikon hagyná. Az asszisztens ettől függetlenül a beszélgetés nyelvén válaszol — ezt a felhasználó üzenetei döntik el, soha nem ez a szöveg."
 
 #: ../../content/applications/productivity/ai/configuration.rst:323
 msgid "On a database upgraded from an earlier version, each layer keeps its English body and any translated bodies are discarded. Re-check every global and per-module layer whose body you had edited in a translated interface."
@@ -3871,7 +3871,7 @@ msgstr "Harmadik fél naptárainak szinkronizálása"
 
 #: ../../content/applications/productivity/calendar.rst:32
 msgid "Users can sync Odoo with existing :doc:`Outlook <calendar/outlook>` and/or :doc:`Google <calendar/google>` calendars, by heading to :menuselection:`Calendar app --> Configuration --> Settings`. From here, enter :guilabel:`Client ID` and :guilabel:`Client Secret`. There is also an option to pause synchronization by ticking the checkbox, or automating synchronization by keeping it blank."
-msgstr "A felhasználók szinkronizálhatják az Odoo-t a meglévő :doc:`Outlook <calendar/outlook>` és/vagy :doc:`Google <calendar/google>` naptárakkal, ha a :menuselection:`Naptár alkalmazás --> Konfiguráció --> Beállítások` menüpontra lépnek. Innen adja meg a :guilabel:`Ügyfélazonosító` és :guilabel:`Ügyféltitok` adatokat. Van lehetőség a szinkronizálás szüneteltetésére a jelölőnégyzet bejelölésével, vagy a szinkronizálás automatizálására, ha üresen hagyja."
+msgstr "A felhasználók szinkronizálhatják az Odoo-t a meglévő :doc:`Outlook <calendar/outlook>` és/vagy :doc:`Google <calendar/google>` naptárakkal, ha a :menuselection:`Naptár alkalmazás --> Konfiguráció --> Beállítások` menüpontra lépnek. Innen adja meg a :guilabel:`Ügyfél azonosító` és :guilabel:`Ügyfél titok` adatokat. Van lehetőség a szinkronizálás szüneteltetésére a jelölőnégyzet bejelölésével, vagy a szinkronizálás automatizálására, ha üresen hagyja."
 
 #: ../../content/applications/productivity/calendar.rst:38
 msgid "Once the desired configurations are complete, be sure to click :guilabel:`Save` before moving on."
@@ -3899,7 +3899,7 @@ msgstr "Azonnal hozzon létre új találkozókat bárhol az Odoo-ban egy egyéni
 
 #: ../../content/applications/productivity/calendar.rst:52
 msgid "From the chatter, click on the :guilabel:`Activities` button. In the :guilabel:`Schedule Activity` pop-up window, select the desired :guilabel:`Activity Type`, which populates a set of buttons, depending on the activity."
-msgstr "A csevegőből kattintson a :guilabel:`Tevékenységek` gombra. A :guilabel:`Tevékenység ütemezése` felugró ablakban válassza ki a kívánt :guilabel:`Tevékenység típusa` lehetőséget, amely egy sor gombot jelenít meg, az adott tevékenységtől függően."
+msgstr "A csevegőből kattintson a :guilabel:`Tevékenységek` gombra. A :guilabel:`Tevékenység ütemezése` felugró ablakban válassza ki a kívánt :guilabel:`Tevékenység típus` lehetőséget, amely egy sor gombot jelenít meg, az adott tevékenységtől függően."
 
 #: ../../content/applications/productivity/calendar.rst:56
 msgid "Activities that involve other schedules, like :guilabel:`Meeting` or :guilabel:`Call for Demo`, link to the **Calendar** app. Select one of these activities to link to the **Calendar** app, then hit :guilabel:`Open Calendar` to navigate back to the app. Alternatively, it is also possible to :guilabel:`Schedule & Mark as Done` to close out the activity, or select :guilabel:`Done & Schedule Next` to keep the :guilabel:`Schedule Activity` window open to create another."
@@ -3919,7 +3919,7 @@ msgstr "Egy esemény naptárba helyezéséhez nyissa meg a :menuselection:`Napt�
 
 #: ../../content/applications/productivity/calendar.rst:79
 msgid "The target date auto-populates in the :guilabel:`Start` field. This can be changed by clicking into the date section, and selecting a date from the calendar. For multi-day events, select the end date in the second field, then click :guilabel:`Apply`."
-msgstr "A cél dátum automatikusan kitöltődik a :guilabel:`Kezdés` mezőben. Ez megváltoztatható, ha rákattint a dátum szakaszra, és kiválaszt egy dátumot a naptárból. Többnapos események esetén válassza ki a befejezés dátumát a második mezőben, majd kattintson a :guilabel:`Alkalmaz` gombra."
+msgstr "A cél dátum automatikusan kitöltődik a :guilabel:`Kezdete` mezőben. Ez megváltoztatható, ha rákattint a dátum szakaszra, és kiválaszt egy dátumot a naptárból. Többnapos események esetén válassza ki a befejezés dátumát a második mezőben, majd kattintson a :guilabel:`Alkalmaz` gombra."
 
 #: ../../content/applications/productivity/calendar.rst:83
 msgid "Tick the :guilabel:`All Day` checkbox if there is no specific start or end time."
@@ -3927,7 +3927,7 @@ msgstr "Jelölje be a :guilabel:`Egész nap` jelölőnégyzetet, ha nincs konkr�
 
 #: ../../content/applications/productivity/calendar.rst:85
 msgid "For events with specific start and stop times, ensure the :guilabel:`All Day` checkbox is unticked to enable time selection. With the :guilabel:`All Day` checkbox unticked, time selections appear in the :guilabel:`Start` field."
-msgstr "Azoknál az eseményeknél, amelyeknek konkrét kezdési és befejezési időpontja van, győződjön meg arról, hogy a :guilabel:`Egész nap` jelölőnégyzet nincs bejelölve, hogy engedélyezze az idő kiválasztását. Ha a :guilabel:`Egész nap` jelölőnégyzet nincs bejelölve, az időválasztási lehetőségek megjelennek a :guilabel:`Kezdés` mezőben."
+msgstr "Azoknál az eseményeknél, amelyeknek konkrét kezdési és befejezési időpontja van, győződjön meg arról, hogy a :guilabel:`Egész nap` jelölőnégyzet nincs bejelölve, hogy engedélyezze az idő kiválasztását. Ha a :guilabel:`Egész nap` jelölőnégyzet nincs bejelölve, az időválasztási lehetőségek megjelennek a :guilabel:`Kezdete` mezőben."
 
 #: ../../content/applications/productivity/calendar.rst:89
 msgid "The signed-in user auto-populates as the first attendee. Additional :guilabel:`Attendees` can be added or created from here, as well."
@@ -3935,7 +3935,7 @@ msgstr "A bejelentkezett felhasználó automatikusan az első résztvevőként j
 
 #: ../../content/applications/productivity/calendar.rst:92
 msgid "For virtual meetings, copy and paste the URL into the space provided in the :guilabel:`Videocall URL` field. Or, click :icon:`fa-plus` :guilabel:`Odoo meeting` to create a link."
-msgstr "Virtuális találkozók esetén másolja és illessze be az URL-t a :guilabel:`Videohívás URL` mezőben megadott helyre. Vagy kattintson az :icon:`fa-plus` :guilabel:`Odoo meeting` gombra a link létrehozásához."
+msgstr "Virtuális találkozók esetén másolja és illessze be az URL-t a :guilabel:`Videóhívás URL` mezőben megadott helyre. Vagy kattintson az :icon:`fa-plus` :guilabel:`Odoo meeting` gombra a link létrehozásához."
 
 #: ../../content/applications/productivity/calendar.rst:96
 msgid "Next, either create the event by clicking :guilabel:`Save & Close`, or select :guilabel:`More Options` to further configure the event."
@@ -3971,7 +3971,7 @@ msgstr ":guilabel:`Ismétlés`: Válassza ki a találkozó ismétlődési idősz
 
 #: ../../content/applications/productivity/calendar.rst:127
 msgid ":guilabel:`Until`: Select the limited :guilabel:`Number of repetitions` this meeting should recur, the :guilabel:`End date` of when the recurrences should stop, or if the meetings should recur :guilabel:`Forever`."
-msgstr ":guilabel:`Amíg`: Válassza ki a találkozó ismétlődésének korlátozott :guilabel:`Ismétlések számát`, az ismétlődések :guilabel:`Befejezési dátumát`, vagy hogy a találkozók :guilabel:`Örökké` ismétlődjenek."
+msgstr ":guilabel:`Amíg`: Válassza ki a találkozó ismétlődésének korlátozott :guilabel:`Ismétlések száma`, az ismétlődések :guilabel:`Befejező dátum`, vagy hogy a találkozók :guilabel:`Mindig` ismétlődjenek."
 
 #: ../../content/applications/productivity/calendar.rst:130
 msgid ":guilabel:`Tags`: Add tags to the event, like `Customer Meeting` or `Internal Meeting`. These can be searched and filtered in the **Calendar** app when organizing multiple events."
@@ -4131,7 +4131,7 @@ msgstr "A :guilabel:`Authorized redirect URIs` szakasz alatt kattintson a :guila
 
 #: ../../content/applications/productivity/calendar/google.rst:128
 msgid "A :guilabel:`Client ID` and :guilabel:`Client Secret` will appear, save these somewhere safe."
-msgstr "Egy :guilabel:`Client ID` és egy :guilabel:`Client Secret` fog megjelenni, mentse el ezeket biztonságos helyre."
+msgstr "Egy :guilabel:`Ügyfél azonosító` és egy :guilabel:`Ügyfél titok` fog megjelenni, mentse el ezeket biztonságos helyre."
 
 #: ../../content/applications/productivity/calendar/google.rst:131
 msgid "Setup in Odoo"
@@ -4139,11 +4139,11 @@ msgstr "Beállítás az Odoo-ban"
 
 #: ../../content/applications/productivity/calendar/google.rst:133
 msgid "Once the *Client ID* and the *Client Secret* are located, open the Odoo database and go to :menuselection:`Settings --> Calendar` to find the :guilabel:`Google Calendar` feature. Tick the checkbox labeled :guilabel:`Google Calendar`."
-msgstr "Miután a *Client ID* és a *Client Secret* megtalálható, nyissa meg az Odoo adatbázist, és menjen a :menuselection:`Settings --> Calendar` menüpontra, hogy megtalálja a :guilabel:`Google Calendar` funkciót. Jelölje be a :guilabel:`Google Calendar` feliratú jelölőnégyzetet."
+msgstr "Miután a *Client ID* és a *Client Secret* megtalálható, nyissa meg az Odoo adatbázist, és menjen a :menuselection:`Beállítások --> Naptár` menüpontra, hogy megtalálja a :guilabel:`Google Naptár` funkciót. Jelölje be a :guilabel:`Google Naptár` feliratú jelölőnégyzetet."
 
 #: ../../content/applications/productivity/calendar/google.rst:145
 msgid "Next, copy and paste the *Client ID* and the *Client Secret* from the Google Calendar API credentials page into their respective fields below the :guilabel:`Google Calendar` checkbox. Then, click :guilabel:`Save`."
-msgstr "Ezután másolja és illessze be a *Client ID*-t és a *Client Secret*-et a Google Calendar API hitelesítő adatok oldaláról a megfelelő mezőkbe a :guilabel:`Google Calendar` jelölőnégyzet alatt. Ezután kattintson a :guilabel:`Save` gombra."
+msgstr "Ezután másolja és illessze be a *Client ID*-t és a *Client Secret*-et a Google Calendar API hitelesítő adatok oldaláról a megfelelő mezőkbe a :guilabel:`Google Naptár` jelölőnégyzet alatt. Ezután kattintson a :guilabel:`Save` gombra."
 
 #: ../../content/applications/productivity/calendar/google.rst:150
 msgid "Tick the :guilabel:`Pause Synchronization` checkbox to temporarily pause events from being updated. This allows for testing and troubleshooting without removing credentials or uninstalling the synchronization. To resume the sync, clear the checkbox and save."
@@ -4359,7 +4359,7 @@ msgstr "Alkalmazás létrehozásához kattintson a :guilabel:`+ Hozzáadás` gom
 
 #: ../../content/applications/productivity/calendar/outlook.rst:45
 msgid "Enter a unique :guilabel:`Name` for the connected application."
-msgstr "Adjon meg egy egyedi :guilabel:`Nevet` a csatlakoztatott alkalmazáshoz."
+msgstr "Adjon meg egy egyedi :guilabel:`Név` a csatlakoztatott alkalmazáshoz."
 
 #: ../../content/applications/productivity/calendar/outlook.rst:47
 msgid "Choosing the appropriate :guilabel:`Supported account type` is essential, or else the connected application will not work. Users who wish to connect their *Outlook Calendar* to Odoo should select the :guilabel:`Accounts in any organizational directory (Any Microsoft Entra ID directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)` option for :guilabel:`Supported account types`."
@@ -4403,7 +4403,7 @@ msgstr "Ügyféltitok hozzáadásához kattintson a bal oldali menüben a :menus
 
 #: ../../content/applications/productivity/calendar/outlook.rst:111
 msgid "Next, type a :guilabel:`Description`, and select when the client secret :guilabel:`Expires`. Available options include: :guilabel:`90 days (3 months)`, :guilabel:`365 days (12 months)`, :guilabel:`545 days (18 months)`, :guilabel:`730 days (24 months)` or :guilabel:`Custom`. The :guilabel:`Custom` option allows the administrator to set a :guilabel:`Start` and :guilabel:`End` date."
-msgstr "Ezután írja be a :guilabel:`Leírás` mezőt, és válassza ki, mikor jár le az ügyfél titok :guilabel:`Lejár`. Elérhető opciók: :guilabel:`90 nap (3 hónap)`, :guilabel:`365 nap (12 hónap)`, :guilabel:`545 nap (18 hónap)`, :guilabel:`730 nap (24 hónap)` vagy :guilabel:`Egyéni`. Az :guilabel:`Egyéni` opció lehetővé teszi az adminisztrátor számára, hogy beállítson egy :guilabel:`Kezdő` és :guilabel:`Befejező` dátumot."
+msgstr "Ezután írja be a :guilabel:`Leírás` mezőt, és válassza ki, mikor jár le az ügyfél titok :guilabel:`Lejár`. Elérhető opciók: :guilabel:`90 nap (3 hónap)`, :guilabel:`365 nap (12 hónap)`, :guilabel:`545 nap (18 hónap)`, :guilabel:`730 nap (24 hónap)` vagy :guilabel:`Egyéni`. Az :guilabel:`Egyéni` opció lehetővé teszi az adminisztrátor számára, hogy beállítson egy :guilabel:`Kezdete` és :guilabel:`Befejező` dátumot."
 
 #: ../../content/applications/productivity/calendar/outlook.rst:117
 msgid "Finally, click :guilabel:`Add` to :guilabel:`Add a client secret`."
@@ -4427,7 +4427,7 @@ msgstr "Konfiguráció az Odoo-ban"
 
 #: ../../content/applications/productivity/calendar/outlook.rst:135
 msgid "In the Odoo database, go to :menuselection:`Calendar app --> Configuration --> Settings`, and tick the checkbox beside the :guilabel:`Outlook Calendar` setting. Remember to click :guilabel:`Save` to implement the changes."
-msgstr "Az Odoo adatbázisban menjen a :menuselection:`Naptár alkalmazás --> Konfiguráció --> Beállítások`, és jelölje be a :guilabel:`Outlook Naptár` beállítás melletti jelölőnégyzetet. Ne felejtse el megnyomni a :guilabel:`Mentés` gombot a változtatások végrehajtásához."
+msgstr "Az Odoo adatbázisban menjen a :menuselection:`Naptár alkalmazás --> Konfiguráció --> Beállítások`, és jelölje be a :guilabel:`Outlook naptár` beállítás melletti jelölőnégyzetet. Ne felejtse el megnyomni a :guilabel:`Mentés` gombot a változtatások végrehajtásához."
 
 #: ../../content/applications/productivity/calendar/outlook.rst:147
 msgid "From the Microsoft *Azure* portal, under the :guilabel:`Overview` section of the application, copy the :guilabel:`Application (Client) ID`, if it has not already been copied, and paste it into the :guilabel:`Client ID` field in Odoo."
@@ -5267,7 +5267,7 @@ msgstr "Ha egy felhasználó létrehoz vagy hozzárendelnek egy rekordhoz, autom
 
 #: ../../content/applications/productivity/discuss/chatter.rst:66
 msgid "At the top-right, above the chatter composer, click :guilabel:`Follow`. Doing this changes the button to read :guilabel:`Following`. Click it again to :guilabel:`Unfollow`."
-msgstr "A jobb felső sarokban, a beszélgetési szerkesztő felett kattintson a :guilabel:`Követés` gombra. Ezzel a gomb felirata :guilabel:`Követve`-re változik. Kattintson rá újra a :guilabel:`Követés megszüntetése` érdekében."
+msgstr "A jobb felső sarokban, a beszélgetési szerkesztő felett kattintson a :guilabel:`Követés` gombra. Ezzel a gomb felirata :guilabel:`Követve`-re változik. Kattintson rá újra a :guilabel:`Követés befejezése` érdekében."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:70
 msgid "Manage followers"
@@ -5295,7 +5295,7 @@ msgstr "A követő által kapott frissítések változhatnak az előfizetési be
 
 #: ../../content/applications/productivity/discuss/chatter.rst:97
 msgid "Tick the checkbox for any updates the follower should receive, and clear the checkbox for any updates they should **not** receive. Click :guilabel:`Apply` when finished."
-msgstr "Jelölje be a jelölőnégyzetet azokhoz a frissítésekhez, amelyeket a követőnek meg kell kapnia, és törölje a jelölést azoknál, amelyeket **nem** kell megkapnia. Kattintson a :guilabel:`Alkalmaz` gombra, ha végzett."
+msgstr "Jelölje be a jelölőnégyzetet azokhoz a frissítésekhez, amelyeket a követőnek meg kell kapnia, és törölje a jelölést azoknál, amelyeket **nem** kell megkapnia. Kattintson a :guilabel:`Alkalmazás` gombra, ha végzett."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:111
 msgid "Log notes"
@@ -5307,7 +5307,7 @@ msgstr "A csevegő funkció lehetővé teszi belső jegyzetek naplózását egye
 
 #: ../../content/applications/productivity/discuss/chatter.rst:117
 msgid "To log an internal note, first navigate to a record. For example, to open a *CRM* opportunity, navigate to :menuselection:`CRM app --> Sales --> My Pipeline`, and click on the Kanban card of an opportunity to open it. Then, at the top-right, above the chatter composer, click :guilabel:`Log note`."
-msgstr "Belső jegyzet naplózásához először navigáljon egy rekordhoz. Például, ha meg szeretne nyitni egy *CRM* lehetőséget, navigáljon ide: :menuselection:`CRM app --> Értékesítés --> Saját csővezeték`, és kattintson egy lehetőség Kanban kártyájára a megnyitáshoz. Ezután a jobb felső sarokban, a csevegő szerkesztő felett kattintson a :guilabel:`Jegyzet naplózása` gombra."
+msgstr "Belső jegyzet naplózásához először navigáljon egy rekordhoz. Például, ha meg szeretne nyitni egy *CRM* lehetőséget, navigáljon ide: :menuselection:`CRM app --> Értékesítés --> Saját csővezeték`, és kattintson egy lehetőség Kanban kártyájára a megnyitáshoz. Ezután a jobb felső sarokban, a csevegő szerkesztő felett kattintson a :guilabel:`Megjegyzés rögzítése` gombra."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:122
 msgid "Enter the note in the chatter composer. To tag an internal user, type `@`, and begin typing the name of the person to tag. Then, select a name from the drop-down menu. Depending on their notification settings, the user is notified by email, or through Odoo."
@@ -5359,7 +5359,7 @@ msgstr "A teljes komponáló megnyitásához kattintson a :icon:`fa-expand` :gui
 
 #: ../../content/applications/productivity/discuss/chatter.rst:185
 msgid "Doing this opens a :guilabel:`Compose Email` pop-up window. Confirm or edit the intended :guilabel:`Recipients` of the message, or add additional recipients. The :guilabel:`Subject` field auto-populates based on the title of the record, though it can be edited, if desired."
-msgstr "Ezzel megnyílik egy :guilabel:`Email írása` felugró ablak. Erősítse meg vagy szerkessze az üzenet tervezett :guilabel:`Címzettjeit`, vagy adjon hozzá további címzetteket. A :guilabel:`Tárgy` mező automatikusan kitöltődik a rekord címének alapján, bár igény szerint szerkeszthető."
+msgstr "Ezzel megnyílik egy :guilabel:`Email írás` felugró ablak. Erősítse meg vagy szerkessze az üzenet tervezett :guilabel:`Címzettek`, vagy adjon hozzá további címzetteket. A :guilabel:`Tárgy` mező automatikusan kitöltődik a rekord címének alapján, bár igény szerint szerkeszthető."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:189
 msgid "To use an :doc:`email template <../../general/companies/email_template/>` for the message, click the |ve| icon, then select a template from the list. Existing templates can also be overwritten or deleted from this menu."
@@ -5447,11 +5447,11 @@ msgstr "*Tevékenységek* olyan követő feladatok, amelyek egy Odoo adatbázis 
 
 #: ../../content/applications/productivity/discuss/chatter.rst:299
 msgid "To schedule an activity through a chatter thread, click the :guilabel:`Activities` button, located at the top of the chatter on any record. On the :guilabel:`Schedule Activity` pop-up window that appears, select an :guilabel:`Activity Type` from the drop-down menu."
-msgstr "Tevékenység ütemezéséhez egy csevegési szálon keresztül kattintson a :guilabel:`Tevékenységek` gombra, amely a csevegés tetején található bármely rekordnál. A megjelenő :guilabel:`Tevékenység ütemezése` felugró ablakban válasszon egy :guilabel:`Tevékenységtípust` a legördülő menüből."
+msgstr "Tevékenység ütemezéséhez egy csevegési szálon keresztül kattintson a :guilabel:`Tevékenységek` gombra, amely a csevegés tetején található bármely rekordnál. A megjelenő :guilabel:`Tevékenység ütemezése` felugró ablakban válasszon egy :guilabel:`Tevékenység típus` a legördülő menüből."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:304
 msgid "Individual applications have a list of *Activity Types* dedicated to that application. For example, to view and edit the activities available for the *CRM* application, go to :menuselection:`CRM app --> Configuration --> Activity Types`."
-msgstr "Az egyes alkalmazások rendelkeznek egy *Tevékenységtípusok* listával, amely az adott alkalmazásnak van szentelve. Például, ha meg szeretné tekinteni és szerkeszteni a *CRM* alkalmazás számára elérhető tevékenységeket, menjen ide: :menuselection:`CRM app --> Konfiguráció --> Tevékenységtípusok`."
+msgstr "Az egyes alkalmazások rendelkeznek egy *Tevékenységtípusok* listával, amely az adott alkalmazásnak van szentelve. Például, ha meg szeretné tekinteni és szerkeszteni a *CRM* alkalmazás számára elérhető tevékenységeket, menjen ide: :menuselection:`CRM app --> Konfiguráció --> Tevékenység típusok`."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:308
 msgid "Enter a title for the activity in the :guilabel:`Summary` field, located in the :guilabel:`Schedule Activity` pop-up window."
@@ -5463,11 +5463,11 @@ msgstr "Válasszon ki egy nevet a :guilabel:`Hozzárendelve` legördülő menüb
 
 #: ../../content/applications/productivity/discuss/chatter.rst:314
 msgid "Add any additional information in the optional :guilabel:`Log a note...` field."
-msgstr "Adjon meg bármilyen további információt az opcionális :guilabel:`Jegyzet hozzáadása...` mezőben."
+msgstr "Adjon meg bármilyen további információt az opcionális :guilabel:`Megjegyzés rögzítése...` mezőben."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:317
 msgid "The :guilabel:`Due Date` field on the :guilabel:`Schedule Activity` pop-up window auto-populates based on the configuration settings for the selected :guilabel:`Activity Type`. However, this date can be changed by selecting a day on the calendar in the :guilabel:`Due Date` field."
-msgstr "A :guilabel:`Határidő` mező a :guilabel:`Tevékenység ütemezése` felugró ablakban automatikusan kitöltődik a kiválasztott :guilabel:`Tevékenység típusa` konfigurációs beállításai alapján. Ez a dátum azonban módosítható a naptárban egy nap kiválasztásával a :guilabel:`Határidő` mezőben."
+msgstr "A :guilabel:`Fizetési határidő` mező a :guilabel:`Tevékenység ütemezése` felugró ablakban automatikusan kitöltődik a kiválasztott :guilabel:`Tevékenység típus` konfigurációs beállításai alapján. Ez a dátum azonban módosítható a naptárban egy nap kiválasztásával a :guilabel:`Fizetési határidő` mezőben."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:321
 msgid "Lastly, click one of the following buttons:"
@@ -5479,11 +5479,11 @@ msgstr ":guilabel:`Ütemezés`: hozzáadja a tevékenységet a csevegéshez a :g
 
 #: ../../content/applications/productivity/discuss/chatter.rst:324
 msgid ":guilabel:`Schedule & Mark as Done`: adds the details of the activity to the chatter under :guilabel:`Today`. The activity is added to :guilabel:`Today`, and is automatically marked as done."
-msgstr ":guilabel:`Ütemezés és Megjelölés késznek`: hozzáadja a tevékenység részleteit a csevegéshez a :guilabel:`Ma` alatt. A tevékenység hozzáadódik a :guilabel:`Ma`-hoz, és automatikusan késznek jelöli."
+msgstr ":guilabel:`Ütemezés és készre jelölés`: hozzáadja a tevékenység részleteit a csevegéshez a :guilabel:`Ma` alatt. A tevékenység hozzáadódik a :guilabel:`Ma`-hoz, és automatikusan késznek jelöli."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:327
 msgid ":guilabel:`Done \\& Schedule Next`: adds the task under :guilabel:`Today` marked as done, and opens a new activity window."
-msgstr ":guilabel:`Kész \\& Következő ütemezése`: hozzáadja a feladatot a :guilabel:`Ma` alá késznek jelölve, és megnyit egy új tevékenység ablakot."
+msgstr ":guilabel:`Kész, következő ütemezése`: hozzáadja a feladatot a :guilabel:`Ma` alá késznek jelölve, és megnyit egy új tevékenység ablakot."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:329
 msgid ":guilabel:`Cancel`: discards any changes made on the pop-up window."
@@ -5511,7 +5511,7 @@ msgstr "Kattintson a :icon:`fa-info-circle` :guilabel:`(info)` ikonra egy tervez
 
 #: ../../content/applications/productivity/discuss/chatter.rst:356
 msgid "After completing an activity, click :guilabel:`Mark Done` under the activity entry in the chatter. This opens a :guilabel:`Mark Done` pop-up window, where additional notes about the activity can be entered. After adding any comments to the pop-up window, click: :guilabel:`Done \\& Schedule Next`, :guilabel:`Done`, or :guilabel:`Discard`."
-msgstr "Miután befejezett egy tevékenységet, kattintson a :guilabel:`Kész` gombra a tevékenység bejegyzés alatt a csevegőben. Ez megnyit egy :guilabel:`Kész` felugró ablakot, ahol további megjegyzéseket lehet hozzáadni a tevékenységhez. Miután hozzáadta a megjegyzéseket a felugró ablakhoz, kattintson a következőkre: :guilabel:`Kész \\& Következő ütemezése`, :guilabel:`Kész`, vagy :guilabel:`Elvetés`."
+msgstr "Miután befejezett egy tevékenységet, kattintson a :guilabel:`Kész` gombra a tevékenység bejegyzés alatt a csevegőben. Ez megnyit egy :guilabel:`Kész` felugró ablakot, ahol további megjegyzéseket lehet hozzáadni a tevékenységhez. Miután hozzáadta a megjegyzéseket a felugró ablakhoz, kattintson a következőkre: :guilabel:`Kész, következő ütemezése`, :guilabel:`Kész`, vagy :guilabel:`Elvetés`."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:361
 msgid "After the activity is marked complete, an entry with the activity type, title, and any other details that were included in the pop-up window are listed in the chatter."
@@ -5919,7 +5919,7 @@ msgstr "A statisztikák alatt a sablonok kártyaként jelennek meg. Minden kárt
 
 #: ../../content/applications/productivity/sign.rst:109
 msgid ":guilabel:`Send`: opens the send wizard to create a new signing request from this template and assign signers to the defined roles."
-msgstr ":guilabel:`Send`: megnyitja a küldési varázslót, amellyel új aláírási kérelmet hozhat létre ebből a sablonból, és aláírókat rendelhet a meghatározott szerepkörökhöz."
+msgstr ":guilabel:`Küldés`: megnyitja a küldési varázslót, amellyel új aláírási kérelmet hozhat létre ebből a sablonból, és aláírókat rendelhet a meghatározott szerepkörökhöz."
 
 #: ../../content/applications/productivity/sign.rst:111
 msgid ":guilabel:`Sign Now`: starts a signing session immediately where you, as the current user, fill in all roles yourself. This is useful for internal documents that only require one signature."
@@ -6027,11 +6027,11 @@ msgstr ":guilabel:`Átirányítási URL`: egy URL, amelyre az aláíró az alá�
 
 #: ../../content/applications/productivity/sign.rst:195
 msgid ":guilabel:`Authorized Users`: restrict which users can use this template. Leave empty to allow all Sign users."
-msgstr ":guilabel:`Authorized Users`: korlátozza, hogy mely felhasználók használhatják ezt a sablont. Hagyja üresen, ha minden Sign felhasználó számára engedélyezni kívánja."
+msgstr ":guilabel:`Jogosult felhasználók`: korlátozza, hogy mely felhasználók használhatják ezt a sablont. Hagyja üresen, ha minden Sign felhasználó számára engedélyezni kívánja."
 
 #: ../../content/applications/productivity/sign.rst:197
 msgid ":guilabel:`Authorized Groups`: restrict template access to members of specific security groups."
-msgstr ":guilabel:`Authorized Groups`: korlátozza a sablonhoz való hozzáférést meghatározott biztonsági csoportok tagjainak."
+msgstr ":guilabel:`Jogosult csoportok`: korlátozza a sablonhoz való hozzáférést meghatározott biztonsági csoportok tagjainak."
 
 #: ../../content/applications/productivity/sign.rst:202
 msgid "Version management"
@@ -6067,7 +6067,7 @@ msgstr "Verzió-összehasonlítás"
 
 #: ../../content/applications/productivity/sign.rst:221
 msgid "You can compare two versions of a template side by side to see what changed. Open a template and click :guilabel:`Compare Versions`. The comparison view highlights:"
-msgstr "Egy sablon két verzióját egymás mellett hasonlíthatja össze, hogy lássa, mi változott. Nyissa meg a sablont, majd kattintson a :guilabel:`Compare Versions` gombra. Az összehasonlító nézet kiemeli:"
+msgstr "Egy sablon két verzióját egymás mellett hasonlíthatja össze, hogy lássa, mi változott. Nyissa meg a sablont, majd kattintson a :guilabel:`Verziók összehasonlítása` gombra. Az összehasonlító nézet kiemeli:"
 
 #: ../../content/applications/productivity/sign.rst:224
 msgid "**Added fields**: fields present in the new version but not in the old one (shown in green)."
@@ -6103,7 +6103,7 @@ msgstr "A beállításhoz:"
 
 #: ../../content/applications/productivity/sign.rst:251
 msgid "Open the template and set :guilabel:`Multilingual Mode` to :guilabel:`Template Copy per Language`."
-msgstr "Nyissa meg a sablont, és állítsa a :guilabel:`Multilingual Mode` értékét :guilabel:`Template Copy per Language` értékre."
+msgstr "Nyissa meg a sablont, és állítsa a :guilabel:`Többnyelvű mód` értékét :guilabel:`Sablon másolat nyelvenként` értékre."
 
 #: ../../content/applications/productivity/sign.rst:253
 msgid "Create child template copies for each language by clicking :guilabel:`Create Language Copy`."
@@ -6123,7 +6123,7 @@ msgstr "Használja az Odoo beépített fordítási rendszerét a mezők alapért
 
 #: ../../content/applications/productivity/sign.rst:263
 msgid "Open the template and set :guilabel:`Multilingual Mode` to :guilabel:`Dynamic Field Translation`."
-msgstr "Nyissa meg a sablont, és állítsa a :guilabel:`Multilingual Mode` értékét :guilabel:`Dynamic Field Translation` lehetőségre."
+msgstr "Nyissa meg a sablont, és állítsa a :guilabel:`Többnyelvű mód` értékét :guilabel:`Dinamikus mező fordítás` lehetőségre."
 
 #: ../../content/applications/productivity/sign.rst:265
 msgid "Switch to the desired language using the language selector and translate the default values of text fields."
@@ -6191,11 +6191,11 @@ msgstr "A mezők határozzák meg, hogy az aláíróknak milyen típusú inform�
 
 #: ../../content/applications/productivity/sign.rst:334
 msgid ":guilabel:`Signature`: the signer draws, auto-generates, or uploads their signature. Subsequent signature fields automatically reuse the first signature entered."
-msgstr ":guilabel:`Signature`: az aláíró kézzel rajzolja, automatikusan generálja vagy feltölti az aláírását. A további aláírási mezők automatikusan az első megadott aláírást használják újra."
+msgstr ":guilabel:`Aláírás`: az aláíró kézzel rajzolja, automatikusan generálja vagy feltölti az aláírását. A további aláírási mezők automatikusan az első megadott aláírást használják újra."
 
 #: ../../content/applications/productivity/sign.rst:336
 msgid ":guilabel:`Initials`: similar to signature, but for the signer's initials."
-msgstr ":guilabel:`Initials`: az aláíráshoz hasonló, de az aláíró monogramjához használatos."
+msgstr ":guilabel:`Kezdőbetűk`: az aláíráshoz hasonló, de az aláíró monogramjához használatos."
 
 #: ../../content/applications/productivity/sign.rst:337
 msgid ":guilabel:`Text`: a single-line text input."
@@ -6211,7 +6211,7 @@ msgstr ":guilabel:`Jelölőnégyzet`: jelölőnégyzet (pl. hozzájáruláshoz v
 
 #: ../../content/applications/productivity/sign.rst:340
 msgid ":guilabel:`Selection`: a dropdown allowing the signer to choose one option from a predefined list."
-msgstr ":guilabel:`Kiválasztás`: legördülő menü, amelyből az aláíró egy előre meghatározott listából választhat egyet."
+msgstr ":guilabel:`Legördülő lista`: legördülő menü, amelyből az aláíró egy előre meghatározott listából választhat egyet."
 
 #: ../../content/applications/productivity/sign.rst:341
 msgid ":guilabel:`Date`: a date picker field."
@@ -6275,7 +6275,7 @@ msgstr ":guilabel:`Párhuzamos`: minden aláíró egyidejűleg kapja meg a dokum
 
 #: ../../content/applications/productivity/sign.rst:410
 msgid ":guilabel:`Sequential`: signers receive the document one at a time, in the order you define. Each signer receives the document only after the previous one has completed their part."
-msgstr ":guilabel:`Szekvenciális`: az aláírók egymás után, az Ön által meghatározott sorrendben kapják meg a dokumentumot. Minden aláíró csak azután kapja meg a dokumentumot, hogy az előző már teljesítette a saját részét."
+msgstr ":guilabel:`Egymás utáni`: az aláírók egymás után, az Ön által meghatározott sorrendben kapják meg a dokumentumot. Minden aláíró csak azután kapja meg a dokumentumot, hogy az előző már teljesítette a saját részét."
 
 #: ../../content/applications/productivity/sign.rst:413
 msgid "For sequential signing, set the order number for each signer in the send wizard."
@@ -6331,7 +6331,7 @@ msgstr "A 2FA engedélyezéséhez egy kérelmen:"
 
 #: ../../content/applications/productivity/sign.rst:449
 msgid "In the send wizard, enable :guilabel:`Require 2FA`."
-msgstr "A küldési varázslóban engedélyezze a :guilabel:`2FA megkövetelése` opciót."
+msgstr "A küldési varázslóban engedélyezze a :guilabel:`Kétfaktoros hitelesítés szükséges` opciót."
 
 #: ../../content/applications/productivity/sign.rst:450
 msgid "Select the verification method:"
@@ -6527,7 +6527,7 @@ msgstr "Kattintson az :guilabel:`Új` gombra egy új munkafolyamat létrehozás�
 
 #: ../../content/applications/productivity/sign.rst:626
 msgid "Enter a :guilabel:`Name` and optionally link a default :guilabel:`Sign Template`."
-msgstr "Adjon meg egy :guilabel:`Nevet`, és igény szerint rendeljen hozzá egy alapértelmezett :guilabel:`Aláírási sablont`."
+msgstr "Adjon meg egy :guilabel:`Nevet`, és igény szerint rendeljen hozzá egy alapértelmezett :guilabel:`Aláírási sablon`."
 
 #: ../../content/applications/productivity/sign.rst:627
 msgid "Click :guilabel:`Open Builder` to launch the visual workflow builder."
@@ -6603,7 +6603,7 @@ msgstr "Munkafolyamat használata kérelemnél"
 
 #: ../../content/applications/productivity/sign.rst:665
 msgid "When creating a signing request, select a :guilabel:`Workflow` to govern the process. The request follows the workflow graph instead of simple parallel or sequential signing. The :guilabel:`Current Node` field on the request shows which step is currently active."
-msgstr "Aláírási kérelem létrehozásakor válasszon egy :guilabel:`Munkafolyamatot` a folyamat irányításához. A kérelem a munkafolyamat gráfját követi az egyszerű párhuzamos vagy egymás utáni aláírás helyett. A kérelmen található :guilabel:`Aktuális csomópont` mező mutatja, hogy éppen melyik lépés aktív."
+msgstr "Aláírási kérelem létrehozásakor válasszon egy :guilabel:`Munkafolyamatot` a folyamat irányításához. A kérelem a munkafolyamat gráfját követi az egyszerű párhuzamos vagy egymás utáni aláírás helyett. A kérelmen található :guilabel:`Aktuális lépés` mező mutatja, hogy éppen melyik lépés aktív."
 
 #: ../../content/applications/productivity/sign.rst:672
 msgid "Bulk send"
@@ -6967,7 +6967,7 @@ msgstr "Aláírási kérelem összekapcsolása egy alkalmazotti rekorddal. Amiko
 
 #: ../../content/applications/productivity/sign.rst:954
 msgid "To link a request to an employee, select the :guilabel:`Employee` field on the request form. You can also access an employee's signed documents directly from the employee form view."
-msgstr "A kérelem alkalmazotthoz való kapcsolásához válassza ki az :guilabel:`Alkalmazott` mezőt a kérelem űrlapon. Az alkalmazott aláírt dokumentumait közvetlenül az alkalmazott űrlapnézetéből is elérheti."
+msgstr "A kérelem alkalmazotthoz való kapcsolásához válassza ki az :guilabel:`Munkavállaló` mezőt a kérelem űrlapon. Az alkalmazott aláírt dokumentumait közvetlenül az alkalmazott űrlapnézetéből is elérheti."
 
 #: ../../content/applications/productivity/sign.rst:971
 msgid "Company Terms & Conditions"
@@ -7179,7 +7179,7 @@ msgstr ":menuselection:`Tevékenységek --> Összes tevékenység`: minden tevé
 
 #: ../../content/applications/productivity/activities.rst:33
 msgid "Besides the standard fields, an activity carries a :guilabel:`Supervisor`, :guilabel:`Tags`, a :guilabel:`Priority`, a :guilabel:`Feedback` and, when it is cancelled, a :guilabel:`Cancel Reason`. Its status is shown as :guilabel:`Overdue`, :guilabel:`Today`, :guilabel:`Planned`, :guilabel:`Done`, or :guilabel:`Cancelled`."
-msgstr "A szokásos mezőkön túl a tevékenységhez tartozik egy :guilabel:`Felügyelő`, :guilabel:`Címkék`, egy :guilabel:`Prioritás`, egy :guilabel:`Visszajelzés`, visszavonás esetén pedig egy :guilabel:`Visszavonás oka`. Az állapota :guilabel:`Lejárt`, :guilabel:`Mai`, :guilabel:`Tervezett`, :guilabel:`Kész` vagy :guilabel:`Visszavont` lehet."
+msgstr "A szokásos mezőkön túl a tevékenységhez tartozik egy :guilabel:`Felügyelő`, :guilabel:`Címkék`, egy :guilabel:`Prioritás`, egy :guilabel:`Visszajelzés`, visszavonás esetén pedig egy :guilabel:`Megszakítás indoka`. Az állapota :guilabel:`Lejárt`, :guilabel:`Ma`, :guilabel:`Tervezett`, :guilabel:`Elvégezve` vagy :guilabel:`Visszavont` lehet."
 
 #: ../../content/applications/productivity/activities.rst:46
 msgid "Multiple assignees"
@@ -7195,7 +7195,7 @@ msgstr "A címkék modellektől függetlenül csoportosítják a tevékenységek
 
 #: ../../content/applications/productivity/activities.rst:61
 msgid "A **reminder** notifies the assignee before the activity is due. Create reminders in :menuselection:`Activities --> Configuration --> Reminders`, with a :guilabel:`Type` (e-mail or notification), a :guilabel:`Remind Before` value and its :guilabel:`Reminder Unit`, and optionally a :guilabel:`Custom Notification Template`. Then add the reminders to an activity in its :guilabel:`Alarms` field."
-msgstr "Az **emlékeztető** a határidő előtt értesíti a felelőst. Az emlékeztetőket a :menuselection:`Tevékenységek --> Konfiguráció --> Emlékeztetők` menüpontban hozza létre: adja meg a :guilabel:`Típus` (e-mail vagy értesítés) mezőt, az :guilabel:`Emlékeztetés ennyivel korábban` értéket és az :guilabel:`Emlékeztető egysége` mezőt, valamint igény szerint egy :guilabel:`Egyedi értesítési sablon`-t. Ezután adja hozzá az emlékeztetőket a tevékenység :guilabel:`Riasztások` mezőjében."
+msgstr "Az **emlékeztető** a határidő előtt értesíti a felelőst. Az emlékeztetőket a :menuselection:`Tevékenységek --> Konfiguráció --> Emlékeztetők` menüpontban hozza létre: adja meg a :guilabel:`Típus` (e-mail vagy értesítés) mezőt, az :guilabel:`Emlékeztetés ennyivel korábban` értéket és az :guilabel:`Emlékeztető egysége` mezőt, valamint igény szerint egy :guilabel:`Egyéni értesítési sablon`-t. Ezután adja hozzá az emlékeztetőket a tevékenység :guilabel:`Riasztások` mezőjében."
 
 #: ../../content/applications/productivity/activities.rst:67
 msgid "Reminders are sent by a scheduled action, and only when :guilabel:`Activity Reminders` is enabled in :menuselection:`Settings --> Activities`."
@@ -7207,11 +7207,11 @@ msgstr "Határidős értesítések"
 
 #: ../../content/applications/productivity/activities.rst:73
 msgid "In :menuselection:`Settings --> Activities`, the :guilabel:`Due Activity Notifications` block sends daily mails around the due date of the activities: on the due date, one or two notices before it, and one or two notices after it, each with the number of days to apply. Each notice can also be copied to the user who created the activity."
-msgstr "A :menuselection:`Beállítások --> Tevékenységek` menüpont :guilabel:`Lejáró tevékenységek értesítései` blokkja naponta küld leveleket a tevékenységek határideje körül: a határidő napján, egy vagy két értesítést előtte, és egy vagy két értesítést utána, mindegyikhez megadva a napok számát. Minden értesítés másolatban a tevékenységet létrehozó felhasználónak is elküldhető."
+msgstr "A :menuselection:`Beállítások --> Tevékenységek` menüpont :guilabel:`Esedékes tevékenység értesítések` blokkja naponta küld leveleket a tevékenységek határideje körül: a határidő napján, egy vagy két értesítést előtte, és egy vagy két értesítést utána, mindegyikhez megadva a napok számát. Minden értesítés másolatban a tevékenységet létrehozó felhasználónak is elküldhető."
 
 #: ../../content/applications/productivity/activities.rst:78
 msgid ":guilabel:`Overdue Activity Escalation` notifies the supervisor when an activity stays overdue longer than the configured number of days."
-msgstr "A :guilabel:`Lejárt tevékenységek eszkalációja` értesíti a felügyelőt, ha egy tevékenység a beállított napszámnál hosszabb ideig marad lejárt állapotban."
+msgstr "A :guilabel:`Lejárt tevékenység eszkaláció` értesíti a felügyelőt, ha egy tevékenység a beállított napszámnál hosszabb ideig marad lejárt állapotban."
 
 #: ../../content/applications/productivity/activities.rst:89
 msgid "Recurring activities"
@@ -7227,11 +7227,11 @@ msgstr ":guilabel:`Ismétlés gyakorisága`: az időköz és annak egysége;"
 
 #: ../../content/applications/productivity/activities.rst:95
 msgid "the days of the week, the :guilabel:`Date of Month`, or the month, depending on the recurrence type chosen;"
-msgstr "a hét napjai, a :guilabel:`Hónap napja` vagy a hónap – a választott ismétlődési típustól függően;"
+msgstr "a hét napjai, a :guilabel:`A hónap napja` vagy a hónap – a választott ismétlődési típustól függően;"
 
 #: ../../content/applications/productivity/activities.rst:97
 msgid ":guilabel:`Repeat` or :guilabel:`End Date`: how the recurrence ends;"
-msgstr ":guilabel:`Ismétlések száma` vagy :guilabel:`Befejezés dátuma`: az ismétlődés vége;"
+msgstr ":guilabel:`Ismétlések száma` vagy :guilabel:`Záró dátum`: az ismétlődés vége;"
 
 #: ../../content/applications/productivity/activities.rst:98
 msgid "the :guilabel:`Summary`, :guilabel:`Description`, :guilabel:`Tags`, the assignee, and the :guilabel:`Supervisor` given to each generated activity;"
@@ -7247,7 +7247,7 @@ msgstr "Tevékenységelőzmények"
 
 #: ../../content/applications/productivity/activities.rst:105
 msgid ":menuselection:`Activities --> Activity History` gives a 360° view of every activity — open and completed — with its :guilabel:`Customer`, :guilabel:`Company`, :guilabel:`Assigned To`, :guilabel:`Supervisor`, :guilabel:`Activity Type`, :guilabel:`Due Date`, :guilabel:`Summary`, and :guilabel:`Feedback`. The same history is available from a contact, in :menuselection:`Contacts --> Activity History`."
-msgstr "A :menuselection:`Tevékenységek --> Tevékenységelőzmények` menüpont 360°-os képet ad minden tevékenységről – a nyitottakról és a lezártakról egyaránt –, az :guilabel:`Ügyfél`, :guilabel:`Vállalat`, :guilabel:`Felelős`, :guilabel:`Felügyelő`, :guilabel:`Tevékenység típusa`, :guilabel:`Határidő`, :guilabel:`Összefoglaló` és :guilabel:`Visszajelzés` adatokkal. Ugyanez az előzmény elérhető a partnerről is, a :menuselection:`Kapcsolatok --> Tevékenységelőzmények` menüpontban."
+msgstr "A :menuselection:`Tevékenységek --> Tevékenység-előzmények` menüpont 360°-os képet ad minden tevékenységről – a nyitottakról és a lezártakról egyaránt –, az :guilabel:`Ügyfél`, :guilabel:`Vállalat`, :guilabel:`Felelős`, :guilabel:`Felügyelő`, :guilabel:`Tevékenység típus`, :guilabel:`Határidő`, :guilabel:`Összefoglaló` és :guilabel:`Visszajelzés` adatokkal. Ugyanez az előzmény elérhető a partnerről is, a :menuselection:`Kapcsolatok --> Tevékenység-előzmények` menüpontban."
 
 #: ../../content/applications/productivity/activities.rst:112
 msgid "Reporting"
@@ -7255,7 +7255,7 @@ msgstr "Kimutatások"
 
 #: ../../content/applications/productivity/activities.rst:114
 msgid ":guilabel:`My Reporting` and :guilabel:`Reporting` analyze the activities of the user, or of everyone, by type, assignee, supervisor, or period."
-msgstr "A :guilabel:`Saját kimutatásaim` és a :guilabel:`Kimutatások` a felhasználó, illetve mindenki tevékenységeit elemzi típus, felelős, felügyelő vagy időszak szerint."
+msgstr "A :guilabel:`Saját kimutatások` és a :guilabel:`Kimutatások` a felhasználó, illetve mindenki tevékenységeit elemzi típus, felelős, felügyelő vagy időszak szerint."
 
 #: ../../content/applications/productivity/activities.rst:118
 msgid "Deletion log"
@@ -7263,7 +7263,7 @@ msgstr "Törlési napló"
 
 #: ../../content/applications/productivity/activities.rst:120
 msgid "Every deleted activity leaves a trace in :menuselection:`Activities --> Configuration --> Deletion Log`, with the document it belonged to, its summary, its assignee, its due date, who deleted it, when, and the :guilabel:`Removal Reason`. This makes it possible to see what was planned on a record even after the activity is gone."
-msgstr "Minden törölt tevékenység nyomot hagy a :menuselection:`Tevékenységek --> Konfiguráció --> Törlési napló` menüpontban: a dokumentum, amelyhez tartozott, az összefoglalója, a felelőse, a határideje, ki törölte, mikor, és a :guilabel:`Törlés oka`. Így az is látszik, mi volt betervezve egy rekordhoz, miután a tevékenység már nincs meg."
+msgstr "Minden törölt tevékenység nyomot hagy a :menuselection:`Tevékenységek --> Konfiguráció --> Törlési napló` menüpontban: a dokumentum, amelyhez tartozott, az összefoglalója, a felelőse, a határideje, ki törölte, mikor, és a :guilabel:`Eltávolítás indoka`. Így az is látszik, mi volt betervezve egy rekordhoz, miután a tevékenység már nincs meg."
 
 #: ../../content/applications/productivity/activities.rst:126
 msgid "In a multi-company database, the *Activity Multi-Company Fix* (``activity_multicompany``) module prevents access errors on activities belonging to another company."
@@ -7283,7 +7283,7 @@ msgstr "Az alkalmazást az eYssen *Appointment* modulcsalád (``appointment`` é
 
 #: ../../content/applications/productivity/appointments.rst:24
 msgid "The :guilabel:`Appointments` category of the :ref:`access rights <access-rights/users>` offers:"
-msgstr "A :ref:`hozzáférési jogosultságok <access-rights/users>` :guilabel:`Időpontfoglalás` kategóriája a következőket kínálja:"
+msgstr "A :ref:`hozzáférési jogosultságok <access-rights/users>` :guilabel:`Időpontok` kategóriája a következőket kínálja:"
 
 #: ../../content/applications/productivity/appointments.rst:26
 msgid ":guilabel:`User`: sees and manages their own bookings;"
@@ -7299,7 +7299,7 @@ msgstr "Időponttípusok"
 
 #: ../../content/applications/productivity/appointments.rst:34
 msgid "Go to :menuselection:`Appointments --> Configuration --> Appointment Types` to create a type. Fill in the :guilabel:`Name`, a :guilabel:`Description` shown to the customer, the :guilabel:`Location`, and the :guilabel:`Time Zone` the slots are published in."
-msgstr "Új típust a :menuselection:`Időpontfoglalás --> Konfiguráció --> Időponttípusok` menüpontban hozhat létre. Töltse ki a :guilabel:`Név` mezőt, az ügyfélnek megjelenő :guilabel:`Leírás`-t, a :guilabel:`Helyszín`-t és az :guilabel:`Időzóna` mezőt, amelyben az időpontok megjelennek."
+msgstr "Új típust a :menuselection:`Időpontok --> Beállítások --> Időponttípusok` menüpontban hozhat létre. Töltse ki a :guilabel:`Név` mezőt, az ügyfélnek megjelenő :guilabel:`Leírás`-t, a :guilabel:`Helyszín`-t és az :guilabel:`Időzóna` mezőt, amelyben az időpontok megjelennek."
 
 #: ../../content/applications/productivity/appointments.rst:39
 msgid "Availability"
@@ -7319,19 +7319,19 @@ msgstr ":guilabel:`Szükséges erőforrások`: azok az erőforrások (termek, es
 
 #: ../../content/applications/productivity/appointments.rst:48
 msgid ":guilabel:`Weekly Slots`: the recurring time ranges of the week when bookings are accepted, with an optional capacity or gap override per slot."
-msgstr ":guilabel:`Heti idősávok`: a hét ismétlődő időszakai, amikor a foglalás lehetséges; idősávonként a kapacitás vagy a szünet felülírható."
+msgstr ":guilabel:`Heti időszeletek`: a hét ismétlődő időszakai, amikor a foglalás lehetséges; idősávonként a kapacitás vagy a szünet felülírható."
 
 #: ../../content/applications/productivity/appointments.rst:50
 msgid ":guilabel:`Duration`: the :guilabel:`Min Duration (min)`, :guilabel:`Max Duration (min)`, :guilabel:`Duration Step (min)`, and :guilabel:`Default Duration (min)` a customer can choose from, and the :guilabel:`Slot Increment (min)` used to generate the proposed start times."
-msgstr ":guilabel:`Időtartam`: a :guilabel:`Minimális időtartam (perc)`, :guilabel:`Maximális időtartam (perc)`, :guilabel:`Időtartam lépésköze (perc)` és :guilabel:`Alapértelmezett időtartam (perc)`, amelyek közül az ügyfél választhat, valamint az :guilabel:`Idősáv lépésköze (perc)`, amely a felkínált kezdési időpontokat állítja elő."
+msgstr ":guilabel:`Időtartam`: a :guilabel:`Min. időtartam (perc)`, :guilabel:`Max. időtartam (perc)`, :guilabel:`Időtartam lépés (perc)` és :guilabel:`Alapértelmezett időtartam (perc)`, amelyek közül az ügyfél választhat, valamint az :guilabel:`Kezdőidőpont-lépésköz (perc)`, amely a felkínált kezdési időpontokat állítja elő."
 
 #: ../../content/applications/productivity/appointments.rst:53
 msgid ":guilabel:`Buffers & Gaps`: :guilabel:`Buffer Before (min)` and :guilabel:`Buffer After (min)` keep time free around a booking, and :guilabel:`Gap Between Meetings (min)` enforces a pause between two consecutive bookings."
-msgstr ":guilabel:`Ráhagyások és szünetek`: a :guilabel:`Ráhagyás előtte (perc)` és a :guilabel:`Ráhagyás utána (perc)` szabadon hagyja az időt a foglalás körül, a :guilabel:`Szünet két találkozó között (perc)` pedig két egymást követő foglalás közé szünetet iktat."
+msgstr ":guilabel:`Pufferek és szünetek`: a :guilabel:`Puffer előtte (perc)` és a :guilabel:`Puffer utána (perc)` szabadon hagyja az időt a foglalás körül, a :guilabel:`Szünet találkozók között (perc)` pedig két egymást követő foglalás közé szünetet iktat."
 
 #: ../../content/applications/productivity/appointments.rst:56
 msgid ":guilabel:`Limits`: how far ahead bookings are possible (:guilabel:`Max Days Ahead`), the :guilabel:`Min Notice Hours` before the start, the :guilabel:`Cancel Notice Hours` until which a customer may cancel, the :guilabel:`Max Future Bookings Per Person`, and the :guilabel:`Capacity Per Slot` when several people may book the same slot."
-msgstr ":guilabel:`Korlátok`: milyen messzire előre lehet foglalni (:guilabel:`Maximum ennyi nappal előre`), a kezdés előtti :guilabel:`Minimális előjelzés (óra)`, a :guilabel:`Lemondási határidő (óra)`, ameddig az ügyfél lemondhat, a :guilabel:`Jövőbeli foglalások maximuma személyenként`, valamint az :guilabel:`Idősáv kapacitása`, ha ugyanarra az idősávra többen is foglalhatnak."
+msgstr ":guilabel:`Korlátok`: milyen messzire előre lehet foglalni (:guilabel:`Max. napok előre`), a kezdés előtti :guilabel:`Min. értesítési idő (óra)`, a :guilabel:`Lemondási idő (óra)`, ameddig az ügyfél lemondhat, a :guilabel:`Max. jövőbeli foglalás személyenként`, valamint az :guilabel:`Kapacitás időszeletenként`, ha ugyanarra az idősávra többen is foglalhatnak."
 
 #: ../../content/applications/productivity/appointments.rst:61
 msgid "Odoo computes the free slots from the working hours, the existing bookings, the providers' calendar events, and their :ref:`leaves <appointments/leaves>`."
@@ -7343,15 +7343,15 @@ msgstr "Kiosztás és jóváhagyás"
 
 #: ../../content/applications/productivity/appointments.rst:75
 msgid "When several providers are allowed, the :guilabel:`Assign Strategy` decides who gets the booking: :guilabel:`Least Assigned`, :guilabel:`Round Robin`, or :guilabel:`Random`."
-msgstr "Ha több szolgáltató is engedélyezett, a :guilabel:`Kiosztási stratégia` dönti el, ki kapja a foglalást: :guilabel:`Legkevesebbet kapott`, :guilabel:`Körforgásos` vagy :guilabel:`Véletlenszerű`."
+msgstr "Ha több szolgáltató is engedélyezett, a :guilabel:`Hozzárendelési stratégia` dönti el, ki kapja a foglalást: :guilabel:`Legkevesebb hozzárendelés`, :guilabel:`Körbeforgó` vagy :guilabel:`Véletlenszerű`."
 
 #: ../../content/applications/productivity/appointments.rst:78
 msgid "Enable :guilabel:`Require Approval` to hold new bookings in the :guilabel:`Requested` state until they are approved. The approval policy is either :guilabel:`Single Approval (Manager)` or :guilabel:`All Providers Must Approve`; in the latter case, each provider gets an approval line on the booking, and can approve or reject it from the booking form or from the link in the approval email."
-msgstr "Kapcsolja be a :guilabel:`Jóváhagyás szükséges` beállítást, hogy az új foglalások a jóváhagyásukig :guilabel:`Igényelt` állapotban maradjanak. A jóváhagyási szabály vagy :guilabel:`Egyszeres jóváhagyás (menedzser)`, vagy :guilabel:`Minden szolgáltatónak jóvá kell hagynia`; utóbbi esetben minden szolgáltató jóváhagyási sort kap a foglaláson, és a foglalás űrlapjáról vagy a jóváhagyó e-mail hivatkozásáról hagyhatja jóvá vagy utasíthatja el."
+msgstr "Kapcsolja be a :guilabel:`Jóváhagyás szükséges` beállítást, hogy az új foglalások a jóváhagyásukig :guilabel:`Kérelmezett` állapotban maradjanak. A jóváhagyási szabály vagy :guilabel:`Egyszeri jóváhagyás (vezető)`, vagy :guilabel:`Minden szolgáltatónak jóvá kell hagynia`; utóbbi esetben minden szolgáltató jóváhagyási sort kap a foglaláson, és a foglalás űrlapjáról vagy a jóváhagyó e-mail hivatkozásáról hagyhatja jóvá vagy utasíthatja el."
 
 #: ../../content/applications/productivity/appointments.rst:84
 msgid ":guilabel:`Unconfirmed Expiry (hours)` automatically cancels bookings that are never confirmed."
-msgstr "A :guilabel:`Meg nem erősített foglalás lejárata (óra)` automatikusan visszavonja a soha meg nem erősített foglalásokat."
+msgstr "A :guilabel:`Visszaigazolatlan foglalás lejárata (óra)` automatikusan visszavonja a soha meg nem erősített foglalásokat."
 
 #: ../../content/applications/productivity/appointments.rst:87
 msgid "Questions"
@@ -7359,7 +7359,7 @@ msgstr "Kérdések"
 
 #: ../../content/applications/productivity/appointments.rst:89
 msgid "The :guilabel:`Form` tab lists the questions asked when booking. Each question has a :guilabel:`Name`, a :guilabel:`Type` (:guilabel:`Short Text`, :guilabel:`Long Text`, :guilabel:`Number`, :guilabel:`Date`, :guilabel:`Select`, :guilabel:`Checkbox`, or :guilabel:`File`), and can be marked :guilabel:`Required`. For a :guilabel:`Select` question, list the options one per line. A question can also block the booking when a given answer is given, with the :guilabel:`Error Message` shown to the customer."
-msgstr "Az :guilabel:`Űrlap` fül sorolja fel a foglaláskor feltett kérdéseket. Minden kérdésnek van :guilabel:`Név` és :guilabel:`Típus` mezője (:guilabel:`Rövid szöveg`, :guilabel:`Hosszú szöveg`, :guilabel:`Szám`, :guilabel:`Dátum`, :guilabel:`Választás`, :guilabel:`Jelölőnégyzet` vagy :guilabel:`Fájl`), és :guilabel:`Kötelező`-nek jelölhető. :guilabel:`Választás` típusú kérdésnél soronként egy választási lehetőséget adjon meg. A kérdés meg is akadályozhatja a foglalást egy adott válasz esetén; ilyenkor az ügyfél a :guilabel:`Hibaüzenet` mezőben megadott szöveget látja."
+msgstr "Az :guilabel:`Űrlap` fül sorolja fel a foglaláskor feltett kérdéseket. Minden kérdésnek van :guilabel:`Név` és :guilabel:`Típus` mezője (:guilabel:`Rövid szöveg`, :guilabel:`Hosszú szöveg`, :guilabel:`Szám`, :guilabel:`Dátum`, :guilabel:`Kiválasztás`, :guilabel:`Jelölőnégyzet` vagy :guilabel:`Fájl`), és :guilabel:`Kötelező`-nek jelölhető. :guilabel:`Kiválasztás` típusú kérdésnél soronként egy választási lehetőséget adjon meg. A kérdés meg is akadályozhatja a foglalást egy adott válasz esetén; ilyenkor az ügyfél a :guilabel:`Hibaüzenet` mezőben megadott szöveget látja."
 
 #: ../../content/applications/productivity/appointments.rst:96
 msgid "The answers are stored on the booking, in its :guilabel:`Answers` tab."
@@ -7367,7 +7367,7 @@ msgstr "A válaszok a foglaláson, annak :guilabel:`Válaszok` fülén tárolód
 
 #: ../../content/applications/productivity/appointments.rst:101
 msgid "In the :guilabel:`Notifications` tab, select the email template used for each step: :guilabel:`Email on Request`, :guilabel:`Email on Confirm`, :guilabel:`Email on Reject`, :guilabel:`Email on Cancel`, :guilabel:`Email on Approval Request`, and :guilabel:`Email on Waitlist Offer`. An :guilabel:`Additional email message` is appended to these emails."
-msgstr "Az :guilabel:`Értesítések` fülön válassza ki az egyes lépésekhez használt e-mail sablont: :guilabel:`E-mail igényléskor`, :guilabel:`E-mail megerősítéskor`, :guilabel:`E-mail elutasításkor`, :guilabel:`E-mail lemondáskor`, :guilabel:`E-mail jóváhagyási kéréskor` és :guilabel:`E-mail várólistás ajánlatkor`. A :guilabel:`További e-mail üzenet` ezekhez az e-mailekhez fűződik hozzá."
+msgstr "Az :guilabel:`Értesítések` fülön válassza ki az egyes lépésekhez használt e-mail sablont: :guilabel:`E-mail kéréskor`, :guilabel:`E-mail jóváhagyáskor`, :guilabel:`E-mail elutasításkor`, :guilabel:`E-mail lemondáskor`, :guilabel:`E-mail jóváhagyási kéréskor` és :guilabel:`E-mail várólistás ajánlatkor`. A :guilabel:`További e-mail üzenet` ezekhez az e-mailekhez fűződik hozzá."
 
 #: ../../content/applications/productivity/appointments.rst:106
 msgid ":guilabel:`Event reminders` send a reminder to the requester a given time before the appointment (e.g., `1` :guilabel:`Days`), while :guilabel:`Calendar alarms` are the reminders set on the provider's calendar event."
@@ -7379,7 +7379,7 @@ msgstr "Várólista"
 
 #: ../../content/applications/productivity/appointments.rst:113
 msgid "Enable :guilabel:`Waitlist` in the corresponding tab to let customers queue for a fully booked slot. When a slot frees up, Odoo offers it to the first customers in the queue (:guilabel:`Waitlist Notify Batch`), who then have :guilabel:`Waitlist Hold Minutes` to confirm before the offer expires and the next customers are notified."
-msgstr "Kapcsolja be a :guilabel:`Várólistá`-t a megfelelő fülön, hogy az ügyfelek egy betelt idősávra is sorba állhassanak. Ha felszabadul egy idősáv, az Odoo felkínálja a sor elején álló ügyfeleknek (:guilabel:`Várólistás értesítési köteg`), akiknek a :guilabel:`Várólistás foglalás ideje (perc)` áll rendelkezésükre a megerősítésre, mielőtt az ajánlat lejár, és a következő ügyfelek kapnak értesítést."
+msgstr "Kapcsolja be a :guilabel:`Várólistá`-t a megfelelő fülön, hogy az ügyfelek egy betelt idősávra is sorba állhassanak. Ha felszabadul egy idősáv, az Odoo felkínálja a sor elején álló ügyfeleknek (:guilabel:`Várólista értesítési köteg`), akiknek a :guilabel:`Várólista tartási idő (perc)` áll rendelkezésükre a megerősítésre, mielőtt az ajánlat lejár, és a következő ügyfelek kapnak értesítést."
 
 #: ../../content/applications/productivity/appointments.rst:119
 msgid "Visibility and restrictions"
@@ -7391,11 +7391,11 @@ msgstr ":guilabel:`Láthatóság`: :guilabel:`Nyilvános`, :guilabel:`Nem listá
 
 #: ../../content/applications/productivity/appointments.rst:123
 msgid "In the :guilabel:`Restrictions` tab, :guilabel:`Allowed Domains` limits public booking to a comma-separated list of email domains."
-msgstr "A :guilabel:`Korlátozások` fülön az :guilabel:`Engedélyezett domainek` mező a nyilvános foglalást az e-mail-domainek vesszővel elválasztott listájára korlátozza."
+msgstr "A :guilabel:`Korlátozások` fülön az :guilabel:`Engedélyezett domének` mező a nyilvános foglalást az e-mail-domainek vesszővel elválasztott listájára korlátozza."
 
 #: ../../content/applications/productivity/appointments.rst:125
 msgid "Click :guilabel:`Generate share link` to obtain a :guilabel:`Share URL` that can be sent to customers. :guilabel:`Regenerate` invalidates the previous link."
-msgstr "A :guilabel:`Megosztási hivatkozás létrehozása` gombbal olyan :guilabel:`Megosztási URL` jön létre, amely elküldhető az ügyfeleknek. Az :guilabel:`Újragenerálás` érvényteleníti a korábbi hivatkozást."
+msgstr "A :guilabel:`Megosztási link generálása` gombbal olyan :guilabel:`Megosztási URL` jön létre, amely elküldhető az ügyfeleknek. Az :guilabel:`Újragenerálás` érvényteleníti a korábbi hivatkozást."
 
 #: ../../content/applications/productivity/appointments.rst:129
 msgid "Pricing and payment"
@@ -7411,7 +7411,7 @@ msgstr ":guilabel:`Fix`: a :guilabel:`Fix összeg` kerül felszámításra fogla
 
 #: ../../content/applications/productivity/appointments.rst:134
 msgid ":guilabel:`Hourly`: the :guilabel:`Hourly Rate` is applied to the booked duration, rounded up to the :guilabel:`Billing Increment (min)`."
-msgstr ":guilabel:`Óradíjas`: az :guilabel:`Óradíj` a lefoglalt időtartamra vonatkozik, a :guilabel:`Számlázási lépésköz (perc)` értékre felkerekítve."
+msgstr ":guilabel:`Óradíjas`: az :guilabel:`Óradíj` a lefoglalt időtartamra vonatkozik, a :guilabel:`Számlázási egység (perc)` értékre felkerekítve."
 
 #: ../../content/applications/productivity/appointments.rst:137
 msgid "Enable :guilabel:`Payment Required` to make the payment part of the booking flow. :guilabel:`Allow Refund Until Hours` defines until when a cancellation is refundable."
@@ -7423,11 +7423,11 @@ msgstr "Foglalások"
 
 #: ../../content/applications/productivity/appointments.rst:145
 msgid ":menuselection:`Appointments --> Bookings` lists all bookings, in list or calendar view. A booking records:"
-msgstr "Az :menuselection:`Időpontfoglalás --> Foglalások` menüpont lista- vagy naptárnézetben sorolja fel az összes foglalást. A foglalás a következőket rögzíti:"
+msgstr "Az :menuselection:`Időpontok --> Foglalások` menüpont lista- vagy naptárnézetben sorolja fel az összes foglalást. A foglalás a következőket rögzíti:"
 
 #: ../../content/applications/productivity/appointments.rst:148
 msgid "the :guilabel:`Appointment Type`, the :guilabel:`Providers`, and the :guilabel:`Resources`;"
-msgstr "az :guilabel:`Időpont típusa`, a :guilabel:`Szolgáltatók` és az :guilabel:`Erőforrások`;"
+msgstr "az :guilabel:`Időponttípus`, a :guilabel:`Szolgáltatók` és az :guilabel:`Erőforrások`;"
 
 #: ../../content/applications/productivity/appointments.rst:149
 msgid "the :guilabel:`Customer`, or, for a public booking, the visitor's name, email, phone, and language;"
@@ -7439,11 +7439,11 @@ msgstr "a kezdés, a befejezés és az :guilabel:`Időtartam (perc)`;"
 
 #: ../../content/applications/productivity/appointments.rst:152
 msgid "the :guilabel:`Status`: :guilabel:`Requested`, :guilabel:`Approved`, :guilabel:`Rejected`, or :guilabel:`Cancelled`;"
-msgstr "az :guilabel:`Állapot`: :guilabel:`Igényelt`, :guilabel:`Jóváhagyott`, :guilabel:`Elutasított` vagy :guilabel:`Visszavont`;"
+msgstr "az :guilabel:`Állapot`: :guilabel:`Kérelmezett`, :guilabel:`Jóváhagyott`, :guilabel:`Elutasított` vagy :guilabel:`Visszavont`;"
 
 #: ../../content/applications/productivity/appointments.rst:154
 msgid "the :guilabel:`Pricing` and the payment status (:guilabel:`Pending`, :guilabel:`Authorized`, :guilabel:`Paid`, :guilabel:`Refunded`, or :guilabel:`Failed`)."
-msgstr "az :guilabel:`Árazás` és a fizetési állapot (:guilabel:`Függőben`, :guilabel:`Engedélyezett`, :guilabel:`Fizetett`, :guilabel:`Visszatérített` vagy :guilabel:`Sikertelen`)."
+msgstr "az :guilabel:`Árazás` és a fizetési állapot (:guilabel:`Függőben`, :guilabel:`Engedélyezett`, :guilabel:`Fizetve`, :guilabel:`Visszatérítve` vagy :guilabel:`Sikertelen`)."
 
 #: ../../content/applications/productivity/appointments.rst:157
 msgid "Use the buttons in the header to :guilabel:`Approve`, :guilabel:`Reject`, or :guilabel:`Cancel` a booking, and, after the appointment, to :guilabel:`Mark Show` or :guilabel:`Mark No-show`. :guilabel:`Force Approve` lets a manager approve a booking that is still waiting for other providers."
@@ -7459,7 +7459,7 @@ msgstr "Szolgáltatók elérhetetlensége"
 
 #: ../../content/applications/productivity/appointments.rst:208
 msgid "Providers can be made unavailable for a period of time with an **appointment leave**, which has a :guilabel:`User`, a start and an end, a :guilabel:`Reason`, and a state (:guilabel:`Draft`, :guilabel:`Approved`, :guilabel:`Cancelled`). Only approved leaves block the slots."
-msgstr "A szolgáltatók egy időszakra **időpontfoglalási távolléttel** tehetők elérhetetlenné; ennek van :guilabel:`Felhasználó` mezője, kezdete és vége, :guilabel:`Oka` és állapota (:guilabel:`Tervezet`, :guilabel:`Jóváhagyott`, :guilabel:`Visszavont`). Csak a jóváhagyott távollétek zárják ki az idősávokat."
+msgstr "A szolgáltatók egy időszakra **időpontfoglalási távolléttel** tehetők elérhetetlenné; ennek van :guilabel:`Felhasználó` mezője, kezdete és vége, :guilabel:`Ok` és állapota (:guilabel:`Tervezet`, :guilabel:`Jóváhagyott`, :guilabel:`Visszavont`). Csak a jóváhagyott távollétek zárják ki az idősávokat."
 
 #: ../../content/applications/productivity/appointments.rst:213
 msgid "With the *Appointment (HR Holidays)* (``appointment_hr``) module, validated time off of the employees linked to the providers also blocks the corresponding slots, so time off does not have to be entered twice."
@@ -7471,11 +7471,11 @@ msgstr "Bérletek"
 
 #: ../../content/applications/productivity/appointments.rst:220
 msgid "The *Appointment (Passes)* (``appointment_pass``) module sells packages of appointments. In :menuselection:`Appointments --> Passes --> Pass Products`, define a pass with a :guilabel:`Name`, a :guilabel:`Mode` (a number of :guilabel:`Occurrences` or a balance of minutes), the :guilabel:`Validity (days)`, and the :guilabel:`Price`."
-msgstr "Az *Appointment (Passes)* (``appointment_pass``) modul időpontcsomagokat értékesít. Az :menuselection:`Időpontfoglalás --> Bérletek --> Bérlettermékek` menüpontban adja meg a bérlet :guilabel:`Név` mezőjét, a :guilabel:`Mód`-ot (:guilabel:`Alkalmak` száma vagy percegyenleg), az :guilabel:`Érvényesség (nap)` és az :guilabel:`Ár` mezőt."
+msgstr "Az *Appointment (Passes)* (``appointment_pass``) modul időpontcsomagokat értékesít. Az :menuselection:`Időpontok --> Bérletek --> Bérlet termékek` menüpontban adja meg a bérlet :guilabel:`Név` mezőjét, a :guilabel:`Mód`-ot (:guilabel:`Alkalmak` száma vagy percegyenleg), az :guilabel:`Érvényesség (nap)` és az :guilabel:`Ár` mezőt."
 
 #: ../../content/applications/productivity/appointments.rst:225
 msgid ":menuselection:`Appointments --> Passes --> Pass Holders` lists the passes owned by customers, with their :guilabel:`Occurrences Remaining` or :guilabel:`Minutes Remaining` and the :guilabel:`Valid Until` date. When a customer with a valid pass books an appointment, the booking is redeemed against the pass instead of being paid."
-msgstr "Az :menuselection:`Időpontfoglalás --> Bérletek --> Bérlettulajdonosok` menüpont sorolja fel az ügyfelek bérleteit a :guilabel:`Fennmaradó alkalmak` vagy :guilabel:`Fennmaradó percek` és az :guilabel:`Érvényes eddig` dátummal. Ha egy érvényes bérlettel rendelkező ügyfél időpontot foglal, a foglalást a bérlet terhére számolja el a rendszer fizetés helyett."
+msgstr "Az :menuselection:`Időpontok --> Bérletek --> Bérlet tulajdonosok` menüpont sorolja fel az ügyfelek bérleteit a :guilabel:`Hátralévő alkalmak` vagy :guilabel:`Hátralévő percek` és az :guilabel:`Érvényes eddig` dátummal. Ha egy érvényes bérlettel rendelkező ügyfél időpontot foglal, a foglalást a bérlet terhére számolja el a rendszer fizetés helyett."
 
 #: ../../content/applications/productivity/appointments.rst:231
 msgid "Coupons and gift cards"
@@ -7487,11 +7487,11 @@ msgstr "Az *Appointment (Payment)* (``appointment_payment``) modul kedvezmények
 
 #: ../../content/applications/productivity/appointments.rst:235
 msgid ":menuselection:`Appointments --> Configuration --> Payments & Discounts --> Coupons`: a coupon has a :guilabel:`Code`, a :guilabel:`Discount Type` (percentage or fixed amount), an :guilabel:`Amount`, a validity period, and a :guilabel:`Max Uses` limit (`0` = unlimited)."
-msgstr ":menuselection:`Időpontfoglalás --> Konfiguráció --> Fizetések és kedvezmények --> Kuponok`: a kuponnak van :guilabel:`Kód`, :guilabel:`Kedvezmény típusa` (százalék vagy fix összeg), :guilabel:`Összeg`, érvényességi időszak és :guilabel:`Felhasználások maximuma` korlát (`0` = korlátlan)."
+msgstr ":menuselection:`Időpontok --> Beállítások --> Fizetés és kedvezmények --> Kuponok`: a kuponnak van :guilabel:`Kód`, :guilabel:`Kedvezmény típusa` (százalék vagy fix összeg), :guilabel:`Összeg`, érvényességi időszak és :guilabel:`Max. felhasználás` korlát (`0` = korlátlan)."
 
 #: ../../content/applications/productivity/appointments.rst:238
 msgid ":menuselection:`Appointments --> Configuration --> Payments & Discounts --> Gift Cards`: a gift card has a :guilabel:`Code`, a :guilabel:`Balance`, and an expiry date. The balance is deducted from the amount due of the booking."
-msgstr ":menuselection:`Időpontfoglalás --> Konfiguráció --> Fizetések és kedvezmények --> Ajándékkártyák`: az ajándékkártyának van :guilabel:`Kód`, :guilabel:`Egyenleg` és lejárati dátuma. Az egyenleget a rendszer levonja a foglalás fizetendő összegéből."
+msgstr ":menuselection:`Időpontok --> Beállítások --> Fizetés és kedvezmények --> Ajándékkártyák`: az ajándékkártyának van :guilabel:`Kód`, :guilabel:`Egyenleg` és lejárati dátuma. Az egyenleget a rendszer levonja a foglalás fizetendő összegéből."
 
 #: ../../content/applications/productivity/appointments.rst:242
 msgid "The remaining :guilabel:`Amount Due` is then paid with one of the configured :doc:`payment providers <../finance/payment_providers>`."
@@ -7523,11 +7523,11 @@ msgstr "Az *Appointment (CRM)* (``appointment_crm``) modullal a jóváhagyott fo
 
 #: ../../content/applications/productivity/appointments/create-opps.rst:12
 msgid "Go to :menuselection:`Appointments --> Configuration --> Appointment Types`, open the relevant type, and enable :guilabel:`Create CRM Lead`."
-msgstr "Lépjen az :menuselection:`Időpontfoglalás --> Konfiguráció --> Időponttípusok` menüpontra, nyissa meg az érintett típust, és kapcsolja be a :guilabel:`CRM-érdeklődő létrehozása` beállítást."
+msgstr "Lépjen az :menuselection:`Időpontok --> Beállítások --> Időponttípusok` menüpontra, nyissa meg az érintett típust, és kapcsolja be a :guilabel:`CRM lead létrehozása` beállítást."
 
 #: ../../content/applications/productivity/appointments/create-opps.rst:15
 msgid "In :guilabel:`Lead Title`, define the title of the lead created. Use `{customer}` as a placeholder for the customer name, e.g. `New appointment: {customer}`."
-msgstr "Az :guilabel:`Érdeklődő címe` mezőben adja meg a létrejövő érdeklődő címét. A `{customer}` helyőrzővel hivatkozhat az ügyfél nevére, például: `New appointment: {customer}`."
+msgstr "Az :guilabel:`Lead cím` mezőben adja meg a létrejövő érdeklődő címét. A `{customer}` helyőrzővel hivatkozhat az ügyfél nevére, például: `New appointment: {customer}`."
 
 #: ../../content/applications/productivity/appointments/create-opps.rst:27
 msgid "Use the leads"
@@ -7535,11 +7535,11 @@ msgstr "Az érdeklődők használata"
 
 #: ../../content/applications/productivity/appointments/create-opps.rst:29
 msgid "When a booking of that type is approved, Odoo creates the lead with the customer's contact details and the answers given while booking, and links it to the booking in the :guilabel:`Related Lead` field. Opening the field brings the salesperson directly to the pipeline record."
-msgstr "Amikor egy ilyen típusú foglalást jóváhagynak, az Odoo létrehozza az érdeklődőt az ügyfél elérhetőségeivel és a foglaláskor adott válaszokkal, és a :guilabel:`Kapcsolódó érdeklődő` mezőben összeköti a foglalással. A mező megnyitásával az értékesítő közvetlenül a folyamat rekordjához jut."
+msgstr "Amikor egy ilyen típusú foglalást jóváhagynak, az Odoo létrehozza az érdeklődőt az ügyfél elérhetőségeivel és a foglaláskor adott válaszokkal, és a :guilabel:`Kapcsolódó lead` mezőben összeköti a foglalással. A mező megnyitásával az értékesítő közvetlenül a folyamat rekordjához jut."
 
 #: ../../content/applications/productivity/appointments/create-opps.rst:34
 msgid "Leads are created on approval, so bookings that stay :guilabel:`Requested`, or that are rejected, do not generate a lead."
-msgstr "Az érdeklődők a jóváhagyáskor jönnek létre, így az :guilabel:`Igényelt` állapotban maradó vagy elutasított foglalások nem hoznak létre érdeklődőt."
+msgstr "Az érdeklődők a jóváhagyáskor jönnek létre, így az :guilabel:`Kérelmezett` állapotban maradó vagy elutasított foglalások nem hoznak létre érdeklődőt."
 
 #: ../../content/applications/productivity/calendar.rst:160
 msgid "Share availabilities"
@@ -7559,7 +7559,7 @@ msgstr "Alapértelmezés szerint a :guilabel:`Helyszín` nélküli találkozók 
 
 #: ../../content/applications/productivity/calendar.rst:174
 msgid "Each user can override the company setting in :menuselection:`Preferences --> Calendar`, by setting :guilabel:`Automatic Video Call` to :guilabel:`Company default`, :guilabel:`Yes`, or :guilabel:`No`."
-msgstr "Minden felhasználó felülírhatja a vállalati beállítást a :menuselection:`Beállítások --> Naptár` (felhasználói beállítások) menüpontban, ha az :guilabel:`Automatikus videohívás` értékét :guilabel:`Vállalati alapértelmezés`, :guilabel:`Igen` vagy :guilabel:`Nem` értékre állítja."
+msgstr "Minden felhasználó felülírhatja a vállalati beállítást a :menuselection:`Beállítások --> Naptár` (felhasználói beállítások) menüpontban, ha az :guilabel:`Automatikus videohívás` értékét :guilabel:`Céges alapértelmezés`, :guilabel:`Igen` vagy :guilabel:`Nem` értékre állítja."
 
 #: ../../content/applications/productivity/calendar.rst:178
 msgid "This behavior requires the *Calendar Auto Video Call* (``calendar_auto_videocall``) module, and the link itself is created by the synchronized Outlook or Google calendar."
@@ -8003,11 +8003,11 @@ msgstr "E-mail-kézbesítés követése"
 
 #: ../../content/applications/productivity/discuss/chatter.rst:473
 msgid "When an email is sent from the chatter, its delivery status is tracked and displayed next to the message: :guilabel:`Sent`, :guilabel:`Delivered`, :guilabel:`Opened`, :guilabel:`Deferred`, :guilabel:`Bounced`, :guilabel:`Soft bounced`, :guilabel:`Rejected`, :guilabel:`Spam`, :guilabel:`Unsubscribed`, or :guilabel:`Error`. Click the status to see the tracking events of that email, including the reported error."
-msgstr "Ha az üzenetfalról e-mail megy ki, a rendszer követi a kézbesítési állapotát, és az üzenet mellett megjeleníti: :guilabel:`Elküldve`, :guilabel:`Kézbesítve`, :guilabel:`Megnyitva`, :guilabel:`Késleltetve`, :guilabel:`Visszapattant`, :guilabel:`Átmenetileg visszapattant`, :guilabel:`Elutasítva`, :guilabel:`Levélszemét`, :guilabel:`Leiratkozott` vagy :guilabel:`Hiba`. Az állapotra kattintva megtekinthetők az adott e-mail követési eseményei, köztük a jelentett hiba is."
+msgstr "Ha az üzenetfalról e-mail megy ki, a rendszer követi a kézbesítési állapotát, és az üzenet mellett megjeleníti: :guilabel:`Elküldött`, :guilabel:`Kiszállítva`, :guilabel:`Megnyitva`, :guilabel:`Késleltetve`, :guilabel:`Visszadobott`, :guilabel:`Átmenetileg visszapattant`, :guilabel:`Elutasítva`, :guilabel:`Levélszemét`, :guilabel:`Leiratkozott` vagy :guilabel:`Hiba`. Az állapotra kattintva megtekinthetők az adott e-mail követési eseményei, köztük a jelentett hiba is."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:479
 msgid "The complete list is available to administrators in :menuselection:`Settings --> Technical --> Email --> Tracking emails` and :guilabel:`Tracking events`. In :menuselection:`Settings --> General Settings --> Discuss`, the retention of these records can be limited with the maximum age in days."
-msgstr "A teljes lista az adminisztrátorok számára a :menuselection:`Beállítások --> Technikai --> E-mail --> Követett e-mailek` és a :guilabel:`Követési események` menüpontban érhető el. A :menuselection:`Beállítások --> Általános beállítások --> Megbeszélés` menüpontban a rekordok megőrzése napokban korlátozható."
+msgstr "A teljes lista az adminisztrátorok számára a :menuselection:`Beállítások --> Technikai --> Email --> Követett e-mailek` és a :guilabel:`Követési események` menüpontban érhető el. A :menuselection:`Beállítások --> Általános beállítások --> Kommunikáció` menüpontban a rekordok megőrzése napokban korlátozható."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:484
 msgid "Requires the *Email tracking* (``mail_tracking``) module."
@@ -8067,7 +8067,7 @@ msgstr "Tájékozódás a postafiókban"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:16
 msgid "Open :menuselection:`Mailbox`. The left sidebar groups the messages:"
-msgstr "Nyissa meg a :menuselection:`Postafiók` alkalmazást. A bal oldali sáv csoportosítja az üzeneteket:"
+msgstr "Nyissa meg a :menuselection:`Postaláda` alkalmazást. A bal oldali sáv csoportosítja az üzeneteket:"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:18
 msgid ":guilabel:`Inbox`: the messages addressed to the user;"
@@ -8103,7 +8103,7 @@ msgstr "Az üzenetlistában több üzenet is kijelölhető, és a tömeges műve
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:44
 msgid "The reply composer offers :guilabel:`Send as e-mail` to send the answer as an email instead of an internal message, and supports :guilabel:`CC` and :guilabel:`BCC` recipients."
-msgstr "A válaszszerkesztőben a :guilabel:`Küldés e-mailben` lehetőséggel a válasz belső üzenet helyett e-mailként megy ki, és :guilabel:`Másolat` és :guilabel:`Titkos másolat` címzettek is megadhatók."
+msgstr "A válaszszerkesztőben a :guilabel:`Küldés e-mailként` lehetőséggel a válasz belső üzenet helyett e-mailként megy ki, és :guilabel:`Másolat (CC)` és :guilabel:`Titkos másolat (BCC)` címzettek is megadhatók."
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:50
 msgid "Labels"
@@ -8111,7 +8111,7 @@ msgstr "Címkék"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:52
 msgid "Labels classify messages across records. Manage them in :menuselection:`Mailbox --> Settings --> Labels`: each label has a :guilabel:`Name`, a color, an optional :guilabel:`Description`, a :guilabel:`Sequence`, and, in a multi-company database, a :guilabel:`Company`. The list also shows the number of messages carrying the label."
-msgstr "A címkék rekordoktól függetlenül csoportosítják az üzeneteket. A :menuselection:`Postafiók --> Beállítások --> Címkék` menüpontban kezelheti őket: minden címkének van :guilabel:`Név` mezője, színe, igény szerinti :guilabel:`Leírás`-a, :guilabel:`Sorrend`-je, több vállalatot kezelő adatbázisban pedig :guilabel:`Vállalat` mezője. A lista a címkét viselő üzenetek számát is mutatja."
+msgstr "A címkék rekordoktól függetlenül csoportosítják az üzeneteket. A :menuselection:`Postaláda --> Beállítások --> Címkék` menüpontban kezelheti őket: minden címkének van :guilabel:`Név` mezője, színe, igény szerinti :guilabel:`Leírás`-a, :guilabel:`Sorrend`-je, több vállalatot kezelő adatbázisban pedig :guilabel:`Vállalat` mezője. A lista a címkét viselő üzenetek számát is mutatja."
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:60
 msgid "Marks"
@@ -8119,7 +8119,7 @@ msgstr "Jelölések"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:62
 msgid "Marks are personal flags, similar to the flags of an email client. Manage them in :menuselection:`Mailbox --> Settings --> Marks`, where each mark has a :guilabel:`Name`, a color, and an icon. A mark is applied per user, so two users can flag the same message differently."
-msgstr "A jelölések személyes megjelölések, hasonlóan a levelezőprogramok zászlóihoz. A :menuselection:`Postafiók --> Beállítások --> Jelölések` menüpontban kezelhetők; minden jelölésnek van :guilabel:`Név` mezője, színe és ikonja. A jelölés felhasználónként érvényes, így két felhasználó eltérően jelölheti meg ugyanazt az üzenetet."
+msgstr "A jelölések személyes megjelölések, hasonlóan a levelezőprogramok zászlóihoz. A :menuselection:`Postaláda --> Beállítások --> Jelölések` menüpontban kezelhetők; minden jelölésnek van :guilabel:`Név` mezője, színe és ikonja. A jelölés felhasználónként érvényes, így két felhasználó eltérően jelölheti meg ugyanazt az üzenetet."
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:67
 msgid "Audit log"
@@ -8127,39 +8127,39 @@ msgstr "Naplózás"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:69
 msgid ":menuselection:`Mailbox --> Settings --> Audit Log` records the actions performed on the messages (edition, deletion, restoration), with their author and date."
-msgstr "A :menuselection:`Postafiók --> Beállítások --> Napló` menüpont rögzíti az üzeneteken végzett műveleteket (szerkesztés, törlés, visszaállítás), a végrehajtójukkal és a dátumukkal együtt."
+msgstr "A :menuselection:`Postaláda --> Beállítások --> Audit napló` menüpont rögzíti az üzeneteken végzett műveleteket (szerkesztés, törlés, visszaállítás), a végrehajtójukkal és a dátumukkal együtt."
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:75
 msgid "The :guilabel:`Mailbox` category of the :ref:`access rights <access-rights/users>` gives a fine control over what a user may do:"
-msgstr "A :ref:`hozzáférési jogosultságok <access-rights/users>` :guilabel:`Mailbox` kategóriája részletesen szabályozza, mit tehet egy felhasználó:"
+msgstr "A :ref:`hozzáférési jogosultságok <access-rights/users>` :guilabel:`Postaláda` kategóriája részletesen szabályozza, mit tehet egy felhasználó:"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:78
 msgid ":guilabel:`User: Access Mailbox`: open the app;"
-msgstr ":guilabel:`User: Access Mailbox`: megnyithatja az alkalmazást;"
+msgstr ":guilabel:`Felhasználó: Mailbox hozzáférés`: megnyithatja az alkalmazást;"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:79
 msgid ":guilabel:`User: Edit Own Messages` and :guilabel:`Administrator: Edit Any Message`;"
-msgstr ":guilabel:`User: Edit Own Messages` és :guilabel:`Administrator: Edit Any Message`;"
+msgstr ":guilabel:`Felhasználó: saját üzenetek szerkesztése` és :guilabel:`Adminisztrátor: bármely üzenet szerkesztése`;"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:80
 msgid ":guilabel:`User: Delete Own Messages` and :guilabel:`Administrator: Delete Any Message`;"
-msgstr ":guilabel:`User: Delete Own Messages` és :guilabel:`Administrator: Delete Any Message`;"
+msgstr ":guilabel:`Felhasználó: saját üzenetek törlése` és :guilabel:`Adminisztrátor: bármely üzenet törlése`;"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:81
 msgid ":guilabel:`User: Move Messages` and :guilabel:`User: Manage Labels`;"
-msgstr ":guilabel:`User: Move Messages` és :guilabel:`User: Manage Labels`;"
+msgstr ":guilabel:`Felhasználó: üzenetek áthelyezése` és :guilabel:`Felhasználó: címkék kezelése`;"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:82
 msgid ":guilabel:`User: Lost Messages Visibility`: see the messages whose record is gone;"
-msgstr ":guilabel:`User: Lost Messages Visibility`: látja azokat az üzeneteket, amelyek rekordja már nincs meg;"
+msgstr ":guilabel:`Felhasználó: elveszett üzenetek láthatósága`: látja azokat az üzeneteket, amelyek rekordja már nincs meg;"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:83
 msgid ":guilabel:`User: Send as E-mail`: answer by email from the mailbox;"
-msgstr ":guilabel:`User: Send as E-mail`: a postafiókból e-mailben válaszolhat;"
+msgstr ":guilabel:`Felhasználó: küldés e-mailként`: a postafiókból e-mailben válaszolhat;"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:84
 msgid ":guilabel:`Administrator: Mailbox`: full access."
-msgstr ":guilabel:`Administrator: Mailbox`: teljes hozzáférés."
+msgstr ":guilabel:`Adminisztrátor: Mailbox`: teljes hozzáférés."
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:88
 msgid ":doc:`chatter`"
@@ -8319,7 +8319,7 @@ msgstr "Az alkalmazást a *Knowledge* (``knowledge``) modul biztosítja, és saj
 
 #: ../../content/applications/productivity/knowledge.rst:15
 msgid "The :guilabel:`Knowledge` category of the :ref:`access rights <access-rights/users>` offers two levels:"
-msgstr "A :ref:`hozzáférési jogosultságok <access-rights/users>` :guilabel:`Knowledge` kategóriája két szintet kínál:"
+msgstr "A :ref:`hozzáférési jogosultságok <access-rights/users>` :guilabel:`Tudásbázis` kategóriája két szintet kínál:"
 
 #: ../../content/applications/productivity/knowledge.rst:18
 msgid ":guilabel:`User`: can read the pages they have access to, write the pages they are allowed to edit, and manage their own pages."
@@ -8343,7 +8343,7 @@ msgstr ":guilabel:`Név` és :guilabel:`Ikon`: ahogyan a tér az oldalsávban me
 
 #: ../../content/applications/productivity/knowledge.rst:29
 msgid ":guilabel:`Slug`: the technical identifier, generated from the name;"
-msgstr ":guilabel:`Azonosító`: a névből képzett technikai azonosító;"
+msgstr ":guilabel:`Slug`: a névből képzett technikai azonosító;"
 
 #: ../../content/applications/productivity/knowledge.rst:30
 msgid ":guilabel:`Description`: a short explanation of what belongs in the space;"
@@ -8423,7 +8423,7 @@ msgstr "Kattintson az :guilabel:`Oldal zárolása` lehetőségre, hogy a cím é
 
 #: ../../content/applications/productivity/knowledge.rst:92
 msgid "Click :guilabel:`Send to trash` to remove a page from the tree without deleting it. Trashed pages keep a :guilabel:`Deletion Date` 30 days later, and can be restored until then."
-msgstr "Kattintson a :guilabel:`Kukába helyezés` lehetőségre, ha törlés nélkül szeretné eltávolítani az oldalt a fából. A kukába helyezett oldalakon 30 nappal későbbi :guilabel:`Törlési dátum` szerepel, és addig visszaállíthatók."
+msgstr "Kattintson a :guilabel:`Kukába helyezés` lehetőségre, ha törlés nélkül szeretné eltávolítani az oldalt a fából. A kukába helyezett oldalakon 30 nappal későbbi :guilabel:`Törlés dátuma` szerepel, és addig visszaállíthatók."
 
 #: ../../content/applications/productivity/knowledge.rst:96
 msgid "Comments"
@@ -8439,7 +8439,7 @@ msgstr "Egy oldal hozzáférési jogosultságai"
 
 #: ../../content/applications/productivity/knowledge.rst:104
 msgid "By default, a page is visible to all internal users. Open the :guilabel:`Page settings` and use the :guilabel:`Access Rights` section to change this:"
-msgstr "Alapértelmezés szerint az oldal minden belső felhasználó számára látható. Ennek módosításához nyissa meg az :guilabel:`Oldal beállításai` ablakot, és használja a :guilabel:`Hozzáférési jogosultságok` szakaszt:"
+msgstr "Alapértelmezés szerint az oldal minden belső felhasználó számára látható. Ennek módosításához nyissa meg az :guilabel:`Oldal beállításai` ablakot, és használja a :guilabel:`Hozzáférési jogok` szakaszt:"
 
 #: ../../content/applications/productivity/knowledge.rst:107
 msgid ":guilabel:`Base Access` sets the level applied to every internal user: :guilabel:`Full edit` (write), :guilabel:`Read only`, or :guilabel:`No access`."
@@ -8447,7 +8447,7 @@ msgstr "Az :guilabel:`Alap hozzáférés` adja meg a minden belső felhasználó
 
 #: ../../content/applications/productivity/knowledge.rst:109
 msgid ":guilabel:`Custom Access` makes the page define its own access level. Without it, a page inherits the access of its parent page, and the settings dialog shows which page the access is inherited from."
-msgstr "Az :guilabel:`Egyedi hozzáférés` hatására az oldal saját hozzáférési szintet határoz meg. Enélkül az oldal a szülőoldala hozzáférését örökli, és a beállítási ablak megmutatja, melyik oldaltól örökli azt."
+msgstr "Az :guilabel:`Egyéni hozzáférés` hatására az oldal saját hozzáférési szintet határoz meg. Enélkül az oldal a szülőoldala hozzáférését örökli, és a beállítási ablak megmutatja, melyik oldaltól örökli azt."
 
 #: ../../content/applications/productivity/knowledge.rst:112
 msgid "In the access list, grant a specific :guilabel:`User` or :guilabel:`Group` the :guilabel:`Read`  or :guilabel:`Write` permission. These entries take precedence over the base access."
@@ -8483,7 +8483,7 @@ msgstr ":guilabel:`Forrás kiválasztása`: válassza ki az importálás forrás
 
 #: ../../content/applications/productivity/knowledge.rst:139
 msgid ":guilabel:`Connection Settings`: enter the :guilabel:`Odoo URL`, the :guilabel:`Database`, the :guilabel:`Login`, and the :guilabel:`API Key / Password` of the source database. Choose a :guilabel:`Target Space` to import everything into one space, or enable :guilabel:`Create spaces from root articles` to turn each top-level article into a space. :guilabel:`Skip \"Welcome\" articles` leaves out the personal onboarding articles."
-msgstr ":guilabel:`Kapcsolat beállításai`: adja meg a forrásadatbázis :guilabel:`Odoo URL`, :guilabel:`Adatbázis`, :guilabel:`Felhasználónév` és :guilabel:`API-kulcs / jelszó` adatait. Válasszon :guilabel:`Céltér`-t, ha mindent egy térbe szeretne importálni, vagy kapcsolja be a :guilabel:`Terek létrehozása a gyökérszócikkekből` beállítást, hogy minden legfelső szintű szócikkből tér legyen. A :guilabel:`„Welcome” szócikkek kihagyása` kihagyja a személyes bevezető szócikkeket."
+msgstr ":guilabel:`Kapcsolat beállítások`: adja meg a forrásadatbázis :guilabel:`Odoo URL`, :guilabel:`Adatbázis`, :guilabel:`Bejelentkezés` és :guilabel:`API kulcs / Jelszó` adatait. Válasszon :guilabel:`Cél tér`-t, ha mindent egy térbe szeretne importálni, vagy kapcsolja be a :guilabel:`Terek létrehozása gyökér cikkekből` beállítást, hogy minden legfelső szintű szócikkből tér legyen. A :guilabel:`\"Welcome\" cikkek kihagyása` kihagyja a személyes bevezető szócikkeket."
 
 #: ../../content/applications/productivity/knowledge.rst:144
 msgid ":guilabel:`User Mapping`: the wizard lists the authors found in the source database and matches them with local users where possible; complete the :guilabel:`Local User` column for the remaining ones."
@@ -8491,7 +8491,7 @@ msgstr ":guilabel:`Felhasználók megfeleltetése`: a varázsló felsorolja a fo
 
 #: ../../content/applications/productivity/knowledge.rst:147
 msgid ":guilabel:`Importing` and :guilabel:`Done`: the wizard reports the number of :guilabel:`Articles Found`, :guilabel:`Articles Imported`, and :guilabel:`Errors`, together with an :guilabel:`Import Log`."
-msgstr ":guilabel:`Importálás` és :guilabel:`Kész`: a varázsló jelenti a :guilabel:`Talált szócikkek`, az :guilabel:`Importált szócikkek` és a :guilabel:`Hibák` számát, valamint egy :guilabel:`Importálási napló`-t."
+msgstr ":guilabel:`Importálás folyamatban` és :guilabel:`Kész`: a varázsló jelenti a :guilabel:`Talált cikkek`, az :guilabel:`Importált oldalak` és a :guilabel:`Hibák` számát, valamint egy :guilabel:`Import napló`-t."
 
 #: ../../content/applications/productivity/knowledge.rst:152
 msgid "The import requires the *Knowledge Importer* (``knowledge_importer``) module and a user with API access on the source database."
@@ -8563,7 +8563,7 @@ msgstr "A webhookokkal külső rendszerek értesíthetők az aláírási esemén
 
 #: ../../content/applications/productivity/sign.rst:962
 msgid "Configure eYssen Sign at :menuselection:`Settings --> General Settings --> Sign`."
-msgstr "Az eYssen Sign beállításait a :menuselection:`Beállítások --> Általános beállítások --> Sign` menüpontban adhatja meg."
+msgstr "Az eYssen Sign beállításait a :menuselection:`Beállítások --> Általános beállítások --> Aláírás` menüpontban adhatja meg."
 
 #: ../../content/applications/productivity/sign.rst:977
 msgid "Two-factor authentication"
@@ -8571,7 +8571,7 @@ msgstr "Kétlépcsős azonosítás"
 
 #: ../../content/applications/productivity/sign.rst:979
 msgid "Two-factor authentication is set per request: enable :guilabel:`Require 2FA` on the request and select the :guilabel:`2FA Method` (:guilabel:`Email`, :guilabel:`SMS`, or :guilabel:`Email & SMS`)."
-msgstr "A kétlépcsős azonosítás kérelmenként állítható be: kapcsolja be a kérelmen a :guilabel:`Kétlépcsős azonosítás szükséges` beállítást, és válassza ki a :guilabel:`Kétlépcsős azonosítás módja` értékét (:guilabel:`E-mail`, :guilabel:`SMS` vagy :guilabel:`E-mail és SMS`)."
+msgstr "A kétlépcsős azonosítás kérelmenként állítható be: kapcsolja be a kérelmen a :guilabel:`Kétfaktoros hitelesítés szükséges` beállítást, és válassza ki a :guilabel:`Kétfaktoros módszer` értékét (:guilabel:`E-mail`, :guilabel:`SMS` vagy :guilabel:`E-mail és SMS`)."
 
 #: ../../content/applications/productivity/sign.rst:983
 msgid "Access control"
@@ -8719,11 +8719,11 @@ msgstr "Az *eYssen Appointment (Reports & Export)* modullal (`appointment_report
 
 #: ../../content/applications/productivity/appointments.rst:181
 msgid ":menuselection:`Appointments --> Export --> Export Bookings (CSV, max 10,000)` downloads the `appointments.csv` file, with one row per booking: name, type, start, end, duration in minutes, customer (or the visitor's name for a public booking), amount, status, and attendance;"
-msgstr "Az :menuselection:`Időpontfoglalás --> Exportálás --> Foglalások exportálása (CSV, legfeljebb 10 000)` menüpont az `appointments.csv` fájlt tölti le, foglalásonként egy sorral: név, típus, kezdés, befejezés, időtartam percben, ügyfél (nyilvános foglalásnál a látogató neve), összeg, állapot és megjelenés;"
+msgstr "Az :menuselection:`Időpontok --> Exportálás --> Foglalások exportálása (CSV, legfeljebb 10 000)` menüpont az `appointments.csv` fájlt tölti le, foglalásonként egy sorral: név, típus, kezdés, befejezés, időtartam percben, ügyfél (nyilvános foglalásnál a látogató neve), összeg, állapot és megjelenés;"
 
 #: ../../content/applications/productivity/appointments.rst:184
 msgid ":menuselection:`Appointments --> Export --> Export Bookings (iCal, max 10,000)` downloads the `appointments.ics` calendar file, which can be imported in any calendar application. Each booking is an event titled with the appointment type and the booking name, with its location and description; approved bookings are marked as confirmed, the others as tentative."
-msgstr "Az :menuselection:`Időpontfoglalás --> Exportálás --> Foglalások exportálása (iCal, legfeljebb 10 000)` menüpont az `appointments.ics` naptárfájlt tölti le, amely bármely naptáralkalmazásba importálható. Minden foglalás egy esemény, amelynek címe az időponttípusból és a foglalás nevéből áll, a helyszínnel és a leírással együtt; a jóváhagyott foglalások megerősítettként, a többi feltételesként szerepel."
+msgstr "Az :menuselection:`Időpontok --> Exportálás --> Foglalások exportálása (iCal, legfeljebb 10 000)` menüpont az `appointments.ics` naptárfájlt tölti le, amely bármely naptáralkalmazásba importálható. Minden foglalás egy esemény, amelynek címe az időponttípusból és a foglalás nevéből áll, a helyszínnel és a leírással együtt; a jóváhagyott foglalások megerősítettként, a többi feltételesként szerepel."
 
 #: ../../content/applications/productivity/appointments.rst:189
 msgid "Both files contain the 10,000 most recent bookings at most, of all statuses. The dates and times are expressed in UTC."
@@ -8743,11 +8743,11 @@ msgstr "Másolatot (Cc) és titkos másolatot (Bcc) kapó címzettek"
 
 #: ../../content/applications/productivity/discuss/chatter.rst:528
 msgid "In the standard full composer, all recipients are entered in a single :guilabel:`Recipients` field. With the *Email CC and BCC* module (`mail_composer_cc_bcc`), the full composer has two additional fields, :guilabel:`Cc` and :guilabel:`Bcc`, in which contacts can be selected (or created on the fly from an email address):"
-msgstr "A szabványos teljes szerkesztőben minden címzett egyetlen :guilabel:`Címzettek` mezőbe kerül. Az *Email CC and BCC* modullal (`mail_composer_cc_bcc`) a teljes szerkesztőben két további mező jelenik meg, a :guilabel:`Cc` és a :guilabel:`Bcc`, amelyekben kapcsolatok választhatók ki (vagy hozhatók létre menet közben egy e-mail-címből):"
+msgstr "A szabványos teljes szerkesztőben minden címzett egyetlen :guilabel:`Címzettek` mezőbe kerül. Az *Email CC and BCC* modullal (`mail_composer_cc_bcc`) a teljes szerkesztőben két további mező jelenik meg, a :guilabel:`Másolat` és a :guilabel:`Bcc`, amelyekben kapcsolatok választhatók ki (vagy hozhatók létre menet közben egy e-mail-címből):"
 
 #: ../../content/applications/productivity/discuss/chatter.rst:533
 msgid "the :guilabel:`Recipients` and the :guilabel:`Cc` contacts appear as such, in the *To* and *Cc* headers, in the email received by every recipient;"
-msgstr "a :guilabel:`Címzettek` és a :guilabel:`Cc` kapcsolatai ekként – a *Címzett* és a *Másolat* fejlécben – jelennek meg minden címzett e-mailjében;"
+msgstr "a :guilabel:`Címzettek` és a :guilabel:`Másolat` kapcsolatai ekként – a *Címzett* és a *Másolat* fejlécben – jelennek meg minden címzett e-mailjében;"
 
 #: ../../content/applications/productivity/discuss/chatter.rst:535
 msgid "the :guilabel:`Bcc` contacts receive a copy of the email, but their address is not disclosed to the other recipients."

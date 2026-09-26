@@ -6132,7 +6132,7 @@ msgstr "Kapcsolat"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:18
 msgid "Go to :menuselection:`Ad Manager --> Configuration --> Connections` and create a connection:"
-msgstr "Lépjen az :menuselection:`Ad Manager --> Configuration --> Connections` menüpontba, és hozzon létre egy kapcsolatot:"
+msgstr "Lépjen az :menuselection:`Ad Manager --> Konfiguráció --> Kapcsolatok` menüpontba, és hozzon létre egy kapcsolatot:"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:20
 msgid ":guilabel:`Name`: a name for this connection."
@@ -6172,7 +6172,7 @@ msgstr "Szinkronizálás"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:47
 msgid "Each synchronization is recorded under :menuselection:`Ad Manager --> Reporting --> Sync Runs`, with its start and end time, its status, the number of records pulled from Google, pushed to Google, skipped, and in error, and the full log. This is the place to look when a record does not appear, or when a change made in Odoo did not reach Google."
-msgstr "Minden szinkronizálás rögzítésre kerül az :menuselection:`Ad Manager --> Reporting --> Sync Runs` menüpontban, a kezdés és a befejezés időpontjával, az állapotával, a Google felől behúzott, a Google felé kiküldött, a kihagyott és a hibás rekordok számával, valamint a teljes naplóval. Itt érdemes keresni, ha egy rekord nem jelenik meg, vagy ha egy Odooban végzett módosítás nem jutott el a Google-höz."
+msgstr "Minden szinkronizálás rögzítésre kerül az :menuselection:`Ad Manager --> Reporting --> Szinkronizálási futások` menüpontban, a kezdés és a befejezés időpontjával, az állapotával, a Google felől behúzott, a Google felé kiküldött, a kihagyott és a hibás rekordok számával, valamint a teljes naplóval. Itt érdemes keresni, ha egy rekord nem jelenik meg, vagy ha egy Odooban végzett módosítás nem jutott el a Google-höz."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:60
 msgid "Every synchronized record carries its own state, shown on the record itself:"
@@ -6208,7 +6208,7 @@ msgstr "Hirdetők és ügynökségek"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:75
 msgid ":menuselection:`Ad Manager --> Companies` lists the advertisers and agencies of the network, with their :guilabel:`Type` and contact email. Each of them can be linked to an Odoo :guilabel:`Contact`, so that the ad orders of a customer can be related to the rest of their file."
-msgstr "Az :menuselection:`Ad Manager --> Companies` menüpont a hálózat hirdetőit és ügynökségeit sorolja fel, a :guilabel:`Type` mezőjükkel és a kapcsolattartási e-mail-címükkel. Mindegyikük hozzárendelhető egy Odoo :guilabel:`Contact` rekordhoz, így az ügyfél hirdetési megrendelései a többi adatához kapcsolhatók."
+msgstr "Az :menuselection:`Ad Manager --> Cégek` menüpont a hálózat hirdetőit és ügynökségeit sorolja fel, a :guilabel:`Type` mezőjükkel és a kapcsolattartási e-mail-címükkel. Mindegyikük hozzárendelhető egy Odoo :guilabel:`Contact` rekordhoz, így az ügyfél hirdetési megrendelései a többi adatához kapcsolhatók."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:80
 msgid "Orders and line items"
@@ -6216,11 +6216,11 @@ msgstr "Megrendelések és tételsorok"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:82
 msgid ":menuselection:`Ad Manager --> Orders` lists the ad orders, each with its :guilabel:`Advertiser`, :guilabel:`Agency`, :guilabel:`Status`, :guilabel:`Trafficker`, :guilabel:`Salesperson`, the period it runs, and its currency and notes."
-msgstr "Az :menuselection:`Ad Manager --> Orders` menüpont a hirdetési megrendeléseket sorolja fel, mindegyiket a :guilabel:`Advertiser`, :guilabel:`Agency`, :guilabel:`Status`, :guilabel:`Trafficker` és :guilabel:`Salesperson` adataival, a futási időszakkal, a pénznemmel és a megjegyzésekkel."
+msgstr "Az :menuselection:`Ad Manager --> Rendelések` menüpont a hirdetési megrendeléseket sorolja fel, mindegyiket a :guilabel:`Advertiser`, :guilabel:`Agency`, :guilabel:`Status`, :guilabel:`Trafficker` és :guilabel:`Salesperson` adataival, a futási időszakkal, a pénznemmel és a megjegyzésekkel."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:86
 msgid "An order's :guilabel:`Line Items` (:menuselection:`Ad Manager --> Line Items`) describe what is actually delivered:"
-msgstr "A megrendelés :guilabel:`Line Items` tételsorai (:menuselection:`Ad Manager --> Line Items`) írják le, mi kerül ténylegesen kiszolgálásra:"
+msgstr "A megrendelés :guilabel:`Hirdetési tételek` tételsorai (:menuselection:`Ad Manager --> Hirdetési tételek`) írják le, mi kerül ténylegesen kiszolgálásra:"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:89
 msgid ":guilabel:`Type` and :guilabel:`Priority`: the kind of line item and its priority in ad serving;"
@@ -6244,15 +6244,15 @@ msgstr "Hirdetési készlet"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:107
 msgid ":menuselection:`Ad Manager --> Inventory` holds the ad space of the network:"
-msgstr "Az :menuselection:`Ad Manager --> Inventory` menüpont tartalmazza a hálózat hirdetési felületeit:"
+msgstr "Az :menuselection:`Ad Manager --> Készlet` menüpont tartalmazza a hálózat hirdetési felületeit:"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:109
 msgid ":guilabel:`Ad Units`: the ad slots, organized as a tree under the network's root ad unit, with their code, status and the accepted sizes;"
-msgstr ":guilabel:`Ad Units`: a hirdetési helyek, a hálózat gyökér hirdetési egysége alatt fastruktúrába rendezve, a kódjukkal, állapotukkal és az elfogadott méretekkel;"
+msgstr ":guilabel:`Hirdetési egységek`: a hirdetési helyek, a hálózat gyökér hirdetési egysége alatt fastruktúrába rendezve, a kódjukkal, állapotukkal és az elfogadott méretekkel;"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:111
 msgid ":guilabel:`Placements`: named groups of ad units that can be targeted as one."
-msgstr ":guilabel:`Placements`: hirdetési egységek elnevezett csoportjai, amelyek egyben célozhatók."
+msgstr ":guilabel:`Elhelyezések`: hirdetési egységek elnevezett csoportjai, amelyek egyben célozhatók."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:113
 msgid "Line items are targeted at ad units and placements, so the inventory determines where each line item can be served."
@@ -6264,11 +6264,11 @@ msgstr "Kreatívok"
 
 #: ../../content/applications/marketing/google_ad_manager.rst:119
 msgid ":menuselection:`Ad Manager --> Creatives` lists the creatives with their type, size, advertiser, destination URL and — depending on the creative — the uploaded asset or the code snippet. A preview link opens the creative as Google renders it."
-msgstr "Az :menuselection:`Ad Manager --> Creatives` menüpont a kreatívokat sorolja fel a típusukkal, méretükkel, hirdetőjükkel, céloldaluk URL-jével és – a kreatívtól függően – a feltöltött állománnyal vagy a kódrészlettel. Egy előnézeti hivatkozás úgy nyitja meg a kreatívot, ahogyan a Google megjeleníti."
+msgstr "Az :menuselection:`Ad Manager --> Kreatívok` menüpont a kreatívokat sorolja fel a típusukkal, méretükkel, hirdetőjükkel, céloldaluk URL-jével és – a kreatívtól függően – a feltöltött állománnyal vagy a kódrészlettel. Egy előnézeti hivatkozás úgy nyitja meg a kreatívot, ahogyan a Google megjeleníti."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:123
 msgid "A creative is shown for a line item through a **creative association** (:menuselection:`Ad Manager --> Creatives --> Creative Associations`), which links one creative to one line item for a given period and set of sizes."
-msgstr "Egy kreatív **kreatív-hozzárendelésen** keresztül jelenik meg egy tételsorhoz (:menuselection:`Ad Manager --> Creatives --> Creative Associations`), amely egy kreatívot egy tételsorhoz köt adott időszakra és méretekre."
+msgstr "Egy kreatív **kreatív-hozzárendelésen** keresztül jelenik meg egy tételsorhoz (:menuselection:`Ad Manager --> Kreatívok --> Kreatív hozzárendelések`), amely egy kreatívot egy tételsorhoz köt adott időszakra és méretekre."
 
 #: ../../content/applications/marketing/google_ad_manager.rst:128
 msgid "`Google Ad Manager help <https://support.google.com/admanager>`_"

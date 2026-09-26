@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-26 03:03+0200\n"
+"POT-Creation-Date: 2026-09-26 17:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -7762,11 +7762,11 @@ msgid "To set it, go to :menuselection:`Point of Sale --> Configuration --> Paym
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:180
-msgid "The module also checks the customer's invoicing address while the order is being registered: if the street, city, ZIP code or country is missing — or, for a Hungarian company, a valid VAT number — the missing fields are listed next to the customer in the POS customer list, so the cashier can complete them before issuing the invoice."
+msgid "The module also checks the customer's invoicing address while the order is being registered: if the street, city, ZIP code or country is missing, the missing fields are listed next to the customer in the POS customer list, so the cashier can complete them before issuing the invoice. With the Hungarian localization, a Hungarian company must also have a valid Hungarian tax number."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:194
-msgid "This module requires the *eYssen Hungarian localization* module (`eyssen_l10n_hu`), which provides the Hungarian VAT number validation used by the address check."
+msgid "The module can be used in any country. The Hungarian tax number check is added by the *PoS Invoice - Hungary* module (`l10n_hu_pos_invoice`), which is installed automatically when the Hungarian localization is installed."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/reporting.rst:3

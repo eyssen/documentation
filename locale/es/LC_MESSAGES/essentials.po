@@ -3150,7 +3150,7 @@ msgstr "los registros se exportan en lotes sucesivos. Cuando el archivo está co
 
 #: ../../content/applications/essentials/background_jobs.rst:91
 msgid "The progress of an export can be followed in :menuselection:`Export Jobs --> My Export Jobs`: the :guilabel:`Progress Offset` column shows how many of the :guilabel:`Records` have been exported so far. Click :guilabel:`Download` on a done job to get the file."
-msgstr "El progreso de una exportación se puede seguir en :menuselection:`Trabajos de exportación --> Mis trabajos de exportación`: la columna :guilabel:`Desplazamiento de progreso` muestra cuántos :guilabel:`Registros` se han exportado hasta el momento. Haga clic en :guilabel:`Descargar` en un trabajo hecho para obtener el archivo."
+msgstr "El progreso de una exportación se puede seguir en :menuselection:`Tareas de exportación --> Mis trabajos de exportación`: la columna :guilabel:`Desplazamiento de progreso` muestra cuántos :guilabel:`Registros` se han exportado hasta el momento. Haga clic en :guilabel:`Descargar` en un trabajo hecho para obtener el archivo."
 
 #: ../../content/applications/essentials/background_jobs.rst:96
 msgid "Both the XLSX and the CSV formats are supported, as well as the :guilabel:`I want to update data (import-compatible export)` option."
@@ -3174,7 +3174,7 @@ msgstr ":guilabel:`Umbral de exportación masiva`: el número de registros a par
 
 #: ../../content/applications/essentials/background_jobs.rst:113
 msgid ":guilabel:`Chunk batch size`: the number of records processed per batch (200 by default). Lower it if exports containing heavy computed columns, such as price list prices, fail or take too long."
-msgstr ":guilabel:`Tamaño del lote`: el número de registros procesados por lote (200 de forma predeterminada). Redúzcalo si las exportaciones que contienen columnas calculadas pesadas, como los precios de las tarifas, fallan o tardan demasiado."
+msgstr ":guilabel:`Tamaño de lote`: el número de registros procesados por lote (200 de forma predeterminada). Redúzcalo si las exportaciones que contienen columnas calculadas pesadas, como los precios de las tarifas, fallan o tardan demasiado."
 
 #: ../../content/applications/essentials/background_jobs.rst:116
 msgid "As for printing, the users have to reload the page after a change of the threshold."
@@ -3190,7 +3190,7 @@ msgstr "Los trabajos en segundo plano se ejecutan mediante el módulo *Cola de t
 
 #: ../../content/applications/essentials/background_jobs.rst:126
 msgid "Users who belong to the :guilabel:`Job Queue Manager` group have access to the :menuselection:`Job Queue --> Queue --> Jobs` menu, which lists all the jobs of the database with their state, their execution time, and, for a failed job, the error. From a job, the :guilabel:`Requeue Job`, :guilabel:`Set to 'Done'`, and :guilabel:`Cancel job` buttons allow to run a failed job again, or to discard it."
-msgstr "Los usuarios que pertenecen al grupo :guilabel:`Gestor de cola de trabajos` tienen acceso al menú :menuselection:`Cola de trabajos --> Cola --> Trabajos`, que enumera todos los trabajos de la base de datos con su estado, su tiempo de ejecución y, en el caso de un trabajo fallido, el error. Desde un trabajo, los botones :guilabel:`Volver a poner en cola`, :guilabel:`Establecer como \"Hecho\"` y :guilabel:`Cancelar trabajo` permiten volver a ejecutar un trabajo fallido o descartarlo."
+msgstr "Los usuarios que pertenecen al grupo :guilabel:`Gestor de la cola de trabajos` tienen acceso al menú :menuselection:`Cola de trabajos --> Cola --> Trabajos`, que enumera todos los trabajos de la base de datos con su estado, su tiempo de ejecución y, en el caso de un trabajo fallido, el error. Desde un trabajo, los botones :guilabel:`Volver a poner el trabajo en la cola`, :guilabel:`Marcar como 'Hecho'` y :guilabel:`Cancelar trabajo` permiten volver a ejecutar un trabajo fallido o descartarlo."
 
 #: ../../content/applications/essentials/background_jobs.rst:133
 msgid "The jobs are only executed if the job runner is enabled in the configuration of the server. If the print or export jobs stay in the :guilabel:`Queued` status, contact your system administrator or your hosting provider."

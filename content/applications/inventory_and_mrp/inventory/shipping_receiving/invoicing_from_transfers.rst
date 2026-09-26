@@ -48,8 +48,7 @@ Creating an invoice directly from one or more transfers
    :notes: English UI, light theme, 1440px width.
 
 A completed transfer whose :guilabel:`Invoice Status` is :guilabel:`Not invoiced` or
-:guilabel:`To Invoice` shows an :guilabel:`Invoicing` header button (labeled ``Számlázás`` in the
-current UI). The same action is also available as a bulk action from the transfers list, so several
+:guilabel:`To Invoice` shows an :guilabel:`Invoicing` header button. The same action is also available as a bulk action from the transfers list, so several
 transfers can be selected and invoiced together in one click.
 
 .. screenshot:: invoicing-from-transfers-bulk-invoice-action
@@ -69,12 +68,11 @@ When triggered — on one picking or on a multi-selection — the action:
   date and falls back to the transfer's own delivery date; for a receipt it prefers the recorded
   delivery date (which may be earlier than the date the receipt was validated in Odoo) and falls back
   to the completion date;
-- if the selected transfers do not all share the same fulfillment date, the partner must have the
-  :guilabel:`Aggregate Invoice Agreement` box checked (a Hungarian-localization setting on the
-  customer), otherwise the action is refused — a single invoice may not silently combine several
-  fulfillment dates without that agreement in place;
-- still refuses to combine transfers whose fulfillment dates fall in **different calendar months**,
-  even with an aggregate agreement; and
+- with the Hungarian localization, if the selected transfers do not all share the same fulfillment
+  date, the partner must have the :guilabel:`Aggregate Invoice Agreement` box checked, otherwise the
+  action is refused — a single invoice may not silently combine several fulfillment dates without
+  that agreement in place;
+- refuses to combine transfers whose fulfillment dates fall in **different calendar months**; and
 - creates a new draft invoice/bill for the resolved partner, date and currency, and immediately fills
   it with one line per unbilled stock move on the selected transfers (see below), then opens the new
   document.
@@ -101,13 +99,15 @@ to that partner's **Done** transfers that are not yet fully invoiced (excluding 
 
 After picking one or more transfers and clicking :guilabel:`Loading Items`, the wizard adds one
 invoice line per remaining-to-invoice stock move, carrying over the product, the unbilled quantity,
-the move's unit price (or the linked sales order line's price when the move has none), the
-fulfillment date of that specific line, and a link back to the sale order line and/or purchase order
-line where applicable. The sign of the quantity is adjusted automatically so the same wizard also
-works when loading return/refund moves onto a credit note. Unless the invoice is an aggregate invoice
-or a corrective/reversal document (which must keep the original invoice's date), the header
-:guilabel:`Invoice/Bill Date` and :guilabel:`Delivery Date` are updated to the latest line date, and
-the contributing sale orders are appended to the invoice's :guilabel:`Origin`.
+the move's unit price (or the linked sales order line's price when the move has none), and a link
+back to the sale order line and/or purchase order line where applicable. The sign of the quantity is
+adjusted automatically so the same wizard also works when loading return/refund moves onto a credit
+note. Unless the invoice is a reversal document (which must keep the original invoice's date), the
+header accounting date and :guilabel:`Delivery Date` are updated to the latest line date, and the
+contributing sale orders are appended to the invoice's :guilabel:`Origin`.
+
+With the Hungarian localization, each line also receives the fulfillment date of its own transfer,
+and the header dates of aggregate and corrective invoices are left unchanged.
 
 Picking–invoice traceability
 ================================
@@ -191,13 +191,13 @@ scope.
 Configuration
 ================
 
-The feature requires no dedicated settings screen — it activates automatically once the three modules
+The feature requires no dedicated settings screen — it activates automatically once the modules
 described below are installed on top of ``sale_stock`` and/or ``purchase``. It does rely on a couple
 of fields owned by other eYssen modules:
 
-- the customer's :guilabel:`Aggregate Invoice Agreement` checkbox (Hungarian localization,
-  ``eyssen_l10n_hu``) must be enabled on :menuselection:`Contacts` before that customer's transfers
-  with different fulfillment dates can be combined onto one invoice;
+- with the Hungarian localization, the customer's :guilabel:`Aggregate Invoice Agreement` checkbox
+  must be enabled on :menuselection:`Contacts` before that customer's transfers with different
+  fulfillment dates can be combined onto one invoice;
 - the receipt's own partner document reference (``eyssen_stock_deliveryslip``), when filled in, is
   appended to the :guilabel:`Delivery Note` label shown on invoice lines.
 
@@ -228,7 +228,7 @@ Usage
 Scope and modules
 =====================
 
-The feature is delivered by three modules:
+The feature is delivered by the following modules:
 
 - ``eyssen_stock_picking_invoice`` — the :guilabel:`Invoicing` button and bulk action on transfers,
   the transfer :guilabel:`Invoice Status`/:guilabel:`No need to invoice` fields, the
@@ -242,3 +242,8 @@ The feature is delivered by three modules:
 - ``eyssen_purchase_stock_picking_invoice_link`` — extends the same link to purchase orders and
   vendor bills, including the retroactive link for goods invoiced before receipt (fork of the OCA
   ``purchase_stock_picking_invoice_link`` module).
+- ``account_invoice_line_toolbar`` — the toolbar above the invoice lines that holds the
+  :guilabel:`Add Products from Delivery Notes` button; installed automatically.
+- ``eyssen_stock_picking_invoice_l10n_hu`` — the Hungarian rules (aggregate invoice agreement,
+  fulfillment date of the invoice lines, unchanged dates of aggregate and corrective invoices);
+  installed automatically when the Hungarian localization is installed.

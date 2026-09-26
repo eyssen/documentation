@@ -529,7 +529,7 @@ msgstr "Mérőeszköz fül"
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:53
 msgid "When an equipment has type *Measuring Device*, a dedicated :guilabel:`Measuring` tab appears on the form with the following sections:"
-msgstr "Ha egy berendezés típusa *Mérőeszköz*, egy dedikált :guilabel:`Mérés` fül jelenik meg az űrlapon a következő szakaszokkal:"
+msgstr "Ha egy berendezés típusa *Mérőeszköz*, egy dedikált :guilabel:`Mérőeszköz` fül jelenik meg az űrlapon a következő szakaszokkal:"
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:57
 msgid "Calibration"
@@ -561,7 +561,7 @@ msgstr "A mérőeszközhöz csatlakoztatott érzékelők beágyazott, szerkeszth
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:113
 msgid "Click the :guilabel:`Sensors` stat button to view sensors in a dedicated list view."
-msgstr "Kattintson a :guilabel:`Sensors` statisztikai gombra az érzékelők megtekintéséhez egy dedikált listanézetben."
+msgstr "Kattintson a :guilabel:`Érzékelők` statisztikai gombra az érzékelők megtekintéséhez egy dedikált listanézetben."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:116
 msgid "Calibration management"
@@ -605,7 +605,7 @@ msgstr "A **Nyomtatók** almodul (``equipment_printer``) nyomtatóspecifikus fun
 
 #: ../../content/applications/services/equipment/equipment_printer.rst:20
 msgid "Enable the Printers module from :menuselection:`Equipment Management --> Settings --> Configuration --> Equipment Types --> Printers`, or install ``equipment_printer`` from the Apps menu."
-msgstr "A Nyomtatók modult a :menuselection:`Berendezéskezelés --> Beállítások --> Konfiguráció --> Berendezéstípusok --> Nyomtatók` menüpontból engedélyezheti, vagy telepítse az ``equipment_printer`` alkalmazást az Alkalmazások menüből."
+msgstr "A Nyomtatók modult a :menuselection:`Berendezéskezelés --> Beállítások --> Konfiguráció --> Berendezés típusok --> Nyomtatók` menüpontból engedélyezheti, vagy telepítse az ``equipment_printer`` alkalmazást az Alkalmazások menüből."
 
 #: ../../content/applications/services/equipment/equipment_printer.rst:25
 msgid "Dedicated printer views"
@@ -777,7 +777,7 @@ msgstr "Beállítások menü"
 
 #: ../../content/applications/services/equipment/equipment_printer.rst:130
 msgid "The Printers module adds entries to :menuselection:`Equipment Management --> Settings`:"
-msgstr "A Nyomtatók modul a következő bejegyzésekkel bővíti az :menuselection:`Eszközkezelés --> Beállítások` menüt:"
+msgstr "A Nyomtatók modul a következő bejegyzésekkel bővíti az :menuselection:`Berendezéskezelés --> Beállítások` menüt:"
 
 #: ../../content/applications/services/equipment/equipment_printer.rst:132
 msgid "**Cartridges**: Manage cartridge definitions (name, product, pages per cartridge)."
@@ -801,7 +801,7 @@ msgstr "A modul önálló alkalmazásként települ, saját főmenüponttal a f�
 
 #: ../../content/applications/services/equipment/getting_started.rst:14
 msgid "Sub-modules for specific equipment types (Printers, Measuring Devices) can be enabled in :menuselection:`Equipment Management --> Settings --> Configuration` or installed separately from the Apps menu."
-msgstr "Az egyes eszköztípusokhoz tartozó almodulok (Nyomtatók, Mérőeszközök) az :menuselection:`Eszközkezelés --> Beállítások --> Konfiguráció` menüben kapcsolhatók be, vagy külön is telepíthetők az Alkalmazások menüből."
+msgstr "Az egyes eszköztípusokhoz tartozó almodulok (Nyomtatók, Mérőeszközök) az :menuselection:`Berendezéskezelés --> Beállítások --> Konfiguráció` menüben kapcsolhatók be, vagy külön is telepíthetők az Alkalmazások menüből."
 
 #: ../../content/applications/services/equipment/getting_started.rst:19
 msgid "Creating your first equipment"
@@ -809,7 +809,7 @@ msgstr "Az első berendezés létrehozása"
 
 #: ../../content/applications/services/equipment/getting_started.rst:21
 msgid "Navigate to :menuselection:`Equipment Management --> All Equipment`."
-msgstr "Lépjen az :menuselection:`Eszközkezelés --> Összes eszköz` menüpontra."
+msgstr "Lépjen az :menuselection:`Berendezéskezelés --> Összes eszköz` menüpontra."
 
 #: ../../content/applications/services/equipment/getting_started.rst:25
 msgid "**Name**: A descriptive name for the equipment (e.g., \"Werth VideoCheck HA 400x400\")."
@@ -885,7 +885,7 @@ msgstr "Berendezés azonosító sorszám"
 
 #: ../../content/applications/services/equipment/getting_started.rst:68
 msgid "By default, new equipment records receive an auto-generated ID using the format ``EQ/0001``, ``EQ/0002``, etc. The prefix can be customized in :menuselection:`Equipment Management --> Settings --> Configuration --> Defaults --> Equipment ID Prefix`."
-msgstr "Alapértelmezés szerint az új eszközrekordok automatikusan generált azonosítót kapnak ``EQ/0001``, ``EQ/0002`` stb. formátumban. Az előtag a :menuselection:`Eszközkezelés --> Beállítások --> Konfiguráció --> Alapértékek --> Eszközazonosító előtag` menüpontban testreszabható."
+msgstr "Alapértelmezés szerint az új eszközrekordok automatikusan generált azonosítót kapnak ``EQ/0001``, ``EQ/0002`` stb. formátumban. Az előtag a :menuselection:`Berendezéskezelés --> Beállítások --> Konfiguráció --> Alapértékek --> Berendezés azonosító előtag` menüpontban testreszabható."
 
 #: ../../content/applications/services/equipment/getting_started.rst:72
 msgid "The ID field remains editable — you can override the auto-generated value at any time, for example to match an existing internal numbering system."
@@ -1189,7 +1189,7 @@ msgstr "Beállítások"
 
 #: ../../content/applications/services/equipment/settings.rst:5
 msgid "Equipment settings are accessible from :menuselection:`Equipment Management --> Settings --> Configuration` or from :menuselection:`Settings --> Equipment`."
-msgstr "Az eszközbeállítások a :menuselection:`Eszközkezelés --> Beállítások --> Konfiguráció` menüponton keresztül vagy a :menuselection:`Beállítások --> Eszköz` menüponton keresztül érhetők el."
+msgstr "Az eszközbeállítások a :menuselection:`Berendezéskezelés --> Beállítások --> Konfiguráció` menüponton keresztül vagy a :menuselection:`Beállítások --> Berendezés` menüponton keresztül érhetők el."
 
 #: ../../content/applications/services/equipment/settings.rst:17
 msgid "Equipment Types"
@@ -1241,7 +1241,7 @@ msgstr "Ha engedélyezve van, egy eszköz aktiválásakor automatikusan létrej�
 
 #: ../../content/applications/services/equipment/settings.rst:52
 msgid "The :guilabel:`Create Maintenance Equipment` button on the form remains available as a manual alternative when this setting is disabled."
-msgstr "Az űrlapon található :guilabel:`Karbantartási eszköz létrehozása` gomb manuális alternatívaként elérhető marad, ha ez a beállítás le van tiltva."
+msgstr "Az űrlapon található :guilabel:`Karbantartási berendezés létrehozása` gomb manuális alternatívaként elérhető marad, ha ez a beállítás le van tiltva."
 
 #: ../../content/applications/services/equipment/settings.rst:56
 msgid "Document Expiry Warning"
@@ -2597,7 +2597,7 @@ msgstr "Kategória létrehozása"
 
 #: ../../content/applications/services/project/categories.rst:18
 msgid "Go to :menuselection:`Project --> Configuration --> Project Category` and click :guilabel:`New`. Fill in the :guilabel:`Project Category` name, pick a :guilabel:`Color`, and set the options you want the category to enable:"
-msgstr "Lépjen a :menuselection:`Projekt --> Konfiguráció --> Project Category` menüpontra, és kattintson az :guilabel:`Új` gombra. Töltse ki a :guilabel:`Project Category` nevet, válasszon :guilabel:`Color` értéket, és állítsa be azokat az opciókat, amelyeket a kategóriával be szeretne kapcsolni:"
+msgstr "Lépjen a :menuselection:`Projekt --> Konfiguráció --> Project Category` menüpontra, és kattintson az :guilabel:`Új` gombra. Töltse ki a :guilabel:`Project Category` nevet, válasszon :guilabel:`Szín` értéket, és állítsa be azokat az opciókat, amelyeket a kategóriával be szeretne kapcsolni:"
 
 #: ../../content/applications/services/project/categories.rst:27
 msgid "What it adds to the projects and tasks"
@@ -2633,7 +2633,7 @@ msgstr "`eyssen_project_product`"
 
 #: ../../content/applications/services/project/categories.rst:39
 msgid "The :doc:`SLA policies <sla>` and the :guilabel:`SLAs` tab on the task."
-msgstr "A :doc:`SLA-szabályzatok <sla>` és a :guilabel:`SLAs` fül a feladaton."
+msgstr "A :doc:`SLA-szabályzatok <sla>` és a :guilabel:`SLA-k` fül a feladaton."
 
 #: ../../content/applications/services/project/categories.rst:40
 msgid "`eyssen_project_sla`"
@@ -2677,7 +2677,7 @@ msgstr "Árlista a feladatokon"
 
 #: ../../content/applications/services/project/categories.rst:76
 msgid "Installing *Project Category* also adds a :guilabel:`Pricelist` field, with its :guilabel:`Currency`, to project tasks. When a :guilabel:`Customer` is selected, the customer's pricelist is filled in automatically; it can be changed manually afterwards. Tasks that are :guilabel:`Done` or :guilabel:`Canceled` keep the pricelist they had."
-msgstr "A *Project Category* telepítése a projektfeladatokat egy :guilabel:`Pricelist` mezővel és a hozzá tartozó :guilabel:`Currency` mezővel is kiegészíti. Ha kiválaszt egy :guilabel:`Customer` értéket, a rendszer automatikusan kitölti az ügyfél árlistáját; ez utólag kézzel módosítható. A :guilabel:`Done` vagy :guilabel:`Canceled` állapotú feladatok megtartják a korábbi árlistájukat."
+msgstr "A *Project Category* telepítése a projektfeladatokat egy :guilabel:`Pricelist` mezővel és a hozzá tartozó :guilabel:`Currency` mezővel is kiegészíti. Ha kiválaszt egy :guilabel:`Ügyfél` értéket, a rendszer automatikusan kitölti az ügyfél árlistáját; ez utólag kézzel módosítható. A :guilabel:`Done` vagy :guilabel:`Canceled` állapotú feladatok megtartják a korábbi árlistájukat."
 
 #: ../../content/applications/services/project/categories.rst:81
 msgid "The pricelist determines the prices of the :ref:`products used on the task <field_service/products-tab>` and the currency of the quotation created from it."
@@ -2713,7 +2713,7 @@ msgstr "Tervezett dátumok"
 
 #: ../../content/applications/services/project/gantt_planning.rst:16
 msgid "The Gantt bar of a task is drawn between its :guilabel:`Start Date` and its :guilabel:`Planned End`; both fields are on the task form, next to the :guilabel:`Deadline`. The deadline itself is kept separate and is drawn on the chart as a marker, so that the plan and the commitment stay distinguishable."
-msgstr "A feladat Gantt-sávja a :guilabel:`Start Date` és a :guilabel:`Planned End` mező között húzódik; mindkét mező a feladat űrlapján található, a :guilabel:`Deadline` mellett. Maga a határidő ettől külön marad, és jelölőként jelenik meg a diagramon, így a terv és a vállalás továbbra is megkülönböztethető."
+msgstr "A feladat Gantt-sávja a :guilabel:`Kezdő dátum` és a :guilabel:`Tervezett vég` mező között húzódik; mindkét mező a feladat űrlapján található, a :guilabel:`Deadline` mellett. Maga a határidő ettől külön marad, és jelölőként jelenik meg a diagramon, így a terv és a vállalás továbbra is megkülönböztethető."
 
 #: ../../content/applications/services/project/gantt_planning.rst:21
 msgid "Two more fields control how the task appears:"
@@ -2721,11 +2721,11 @@ msgstr "További két mező befolyásolja a feladat megjelenését:"
 
 #: ../../content/applications/services/project/gantt_planning.rst:23
 msgid ":guilabel:`Progress` – the completion percentage drawn inside the bar."
-msgstr ":guilabel:`Progress` – a sávon belül megjelenő készültségi százalék."
+msgstr ":guilabel:`Készültség` – a sávon belül megjelenő készültségi százalék."
 
 #: ../../content/applications/services/project/gantt_planning.rst:24
 msgid ":guilabel:`Gantt Shape` – :guilabel:`Task` draws a bar, :guilabel:`Milestone` draws a diamond."
-msgstr ":guilabel:`Gantt Shape` – a :guilabel:`Task` sávot, a :guilabel:`Milestone` rombuszt rajzol."
+msgstr ":guilabel:`Gantt alakzat` – a :guilabel:`Feladat` sávot, a :guilabel:`Mérföldkő` rombuszt rajzol."
 
 #: ../../content/applications/services/project/gantt_planning.rst:26
 msgid "Two buttons are available on tasks that are scheduled:"
@@ -2733,11 +2733,11 @@ msgstr "Az ütemezett feladatokon két gomb érhető el:"
 
 #: ../../content/applications/services/project/gantt_planning.rst:28
 msgid ":guilabel:`Unschedule` clears the planned dates and moves the task back to the unscheduled list."
-msgstr "Az :guilabel:`Unschedule` gomb törli a tervezett dátumokat, és visszahelyezi a feladatot az ütemezetlenek közé."
+msgstr "Az :guilabel:`Ütemezés törlése` gomb törli a tervezett dátumokat, és visszahelyezi a feladatot az ütemezetlenek közé."
 
 #: ../../content/applications/services/project/gantt_planning.rst:29
 msgid ":guilabel:`Save Baseline` stores the current planned dates as the **baseline**, which is then drawn under the bar so later changes to the plan remain visible."
-msgstr "A :guilabel:`Save Baseline` gomb az aktuális tervezett dátumokat **alapvonalként** tárolja el, amely ezután a sáv alatt jelenik meg, így a terv későbbi változásai láthatók maradnak."
+msgstr "A :guilabel:`Alapterv mentése` gomb az aktuális tervezett dátumokat **alapvonalként** tárolja el, amely ezután a sáv alatt jelenik meg, így a terv későbbi változásai láthatók maradnak."
 
 #: ../../content/applications/services/project/gantt_planning.rst:33
 msgid "The planned end date must not be earlier than the planned start date, and the progress must be between 0 and 100."
@@ -2789,15 +2789,15 @@ msgstr "Feladatok közötti függőségek"
 
 #: ../../content/applications/services/project/gantt_planning.rst:73
 msgid "Dependencies can be drawn directly in the chart, or maintained in the :guilabel:`Gantt Links` tab of the task, which lists the incoming and the outgoing links. Each link has:"
-msgstr "A függőségek közvetlenül a diagramon is berajzolhatók, illetve a feladat :guilabel:`Gantt Links` fülén tarthatók karban, amely a bejövő és a kimenő kapcsolatokat sorolja fel. Minden kapcsolatnak van:"
+msgstr "A függőségek közvetlenül a diagramon is berajzolhatók, illetve a feladat :guilabel:`Gantt függőségek` fülén tarthatók karban, amely a bejövő és a kimenő kapcsolatokat sorolja fel. Minden kapcsolatnak van:"
 
 #: ../../content/applications/services/project/gantt_planning.rst:76
 msgid "a :guilabel:`Type`: :guilabel:`Finish to Start`, :guilabel:`Start to Start`, :guilabel:`Finish to Finish`, or :guilabel:`Start to Finish`;"
-msgstr "egy :guilabel:`Type` típusa: :guilabel:`Finish to Start`, :guilabel:`Start to Start`, :guilabel:`Finish to Finish` vagy :guilabel:`Start to Finish`;"
+msgstr "egy :guilabel:`Típus` típusa: :guilabel:`Befejezés–kezdés`, :guilabel:`Kezdés–kezdés`, :guilabel:`Befejezés–befejezés` vagy :guilabel:`Kezdés–befejezés`;"
 
 #: ../../content/applications/services/project/gantt_planning.rst:78
 msgid "a :guilabel:`Lag (days)`, a positive delay or a negative lead between the two tasks."
-msgstr "egy :guilabel:`Lag (days)` értéke, amely a két feladat közötti pozitív késleltetés vagy negatív előresietés napokban."
+msgstr "egy :guilabel:`Késleltetés (nap)` értéke, amely a két feladat közötti pozitív késleltetés vagy negatív előresietés napokban."
 
 #: ../../content/applications/services/project/gantt_planning.rst:81
 msgid "A task cannot be linked to itself, the same pair cannot be linked twice, and circular chains of dependencies are refused."
@@ -2805,7 +2805,7 @@ msgstr "Egy feladat nem kapcsolható önmagához, ugyanaz a pár nem kapcsolhat�
 
 #: ../../content/applications/services/project/gantt_planning.rst:83
 msgid ":guilabel:`Finish to Start` links are kept in sync with the standard :doc:`task dependencies <tasks/task_dependencies>` of the task, so both views of the same relationship stay consistent."
-msgstr "A :guilabel:`Finish to Start` kapcsolatok szinkronban maradnak a feladat szokásos :doc:`feladatfüggőségeivel <tasks/task_dependencies>`, így ugyanannak a kapcsolatnak mindkét nézete következetes marad."
+msgstr "A :guilabel:`Befejezés–kezdés` kapcsolatok szinkronban maradnak a feladat szokásos :doc:`feladatfüggőségeivel <tasks/task_dependencies>`, így ugyanannak a kapcsolatnak mindkét nézete következetes marad."
 
 #: ../../content/applications/services/project/gantt_planning.rst:87
 msgid "When a predecessor finishes later than its successor should start, taking the lag into account, the successor is flagged and drawn in red until the plan is corrected."
@@ -2981,7 +2981,7 @@ msgstr "SLA-szabályzat létrehozása"
 
 #: ../../content/applications/services/project/sla.rst:25
 msgid "Go to :menuselection:`Project --> Configuration --> SLA Policies` and click :guilabel:`New`."
-msgstr "Lépjen a :menuselection:`Projekt --> Konfiguráció --> SLA Policies` menüpontra, és kattintson az :guilabel:`Új` gombra."
+msgstr "Lépjen a :menuselection:`Projekt --> Konfiguráció --> SLA szabályzatok` menüpontra, és kattintson az :guilabel:`Új` gombra."
 
 #: ../../content/applications/services/project/sla.rst:28
 msgid "Target"
@@ -2989,31 +2989,31 @@ msgstr "Célkitűzés"
 
 #: ../../content/applications/services/project/sla.rst:30
 msgid ":guilabel:`SLA Type` decides what is measured:"
-msgstr "Az :guilabel:`SLA Type` mező dönti el, mit mér a szabályzat:"
+msgstr "Az :guilabel:`SLA típus` mező dönti el, mit mér a szabályzat:"
 
 #: ../../content/applications/services/project/sla.rst:32
 msgid ":guilabel:`Stage Completion` – the time the task may take to reach one of the :guilabel:`Target Stages`."
-msgstr ":guilabel:`Stage Completion` – az az idő, amely alatt a feladatnak el kell érnie a :guilabel:`Target Stages` valamelyikét."
+msgstr ":guilabel:`Fázis teljesítés` – az az idő, amely alatt a feladatnak el kell érnie a :guilabel:`Cél fázisok` valamelyikét."
 
 #: ../../content/applications/services/project/sla.rst:34
 msgid ":guilabel:`First Activity` – the time that may pass until somebody first works on the task (a stage change, an assignment, a message, and similar events all count)."
-msgstr ":guilabel:`First Activity` – az az idő, amely addig telhet el, amíg valaki először foglalkozik a feladattal (fázisváltás, felelős kijelölése, üzenet és hasonló események mind ide számítanak)."
+msgstr ":guilabel:`Első tevékenység` – az az idő, amely addig telhet el, amíg valaki először foglalkozik a feladattal (fázisváltás, felelős kijelölése, üzenet és hasonló események mind ide számítanak)."
 
 #: ../../content/applications/services/project/sla.rst:37
 msgid ":guilabel:`Time` and :guilabel:`Time Unit` set the allowed duration in :guilabel:`Hours` or :guilabel:`Days`."
-msgstr "A :guilabel:`Time` és a :guilabel:`Time Unit` mező az engedélyezett időtartamot adja meg :guilabel:`Hours` vagy :guilabel:`Days` egységben."
+msgstr "A :guilabel:`Idő` és a :guilabel:`Időegység` mező az engedélyezett időtartamot adja meg :guilabel:`Óra` vagy :guilabel:`Nap` egységben."
 
 #: ../../content/applications/services/project/sla.rst:39
 msgid ":guilabel:`Resource Calendar` is the working schedule used to count that time, so nights, weekends, and company holidays do not consume the SLA."
-msgstr "A :guilabel:`Resource Calendar` az a munkarend, amely szerint az idő telik, így az éjszakák, a hétvégék és a munkaszüneti napok nem fogyasztják az SLA-t."
+msgstr "A :guilabel:`Munkarend naptár` az a munkarend, amely szerint az idő telik, így az éjszakák, a hétvégék és a munkaszüneti napok nem fogyasztják az SLA-t."
 
 #: ../../content/applications/services/project/sla.rst:41
 msgid ":guilabel:`Target Stages` (for :guilabel:`Stage Completion`) are the stages that fulfill the policy."
-msgstr "A :guilabel:`Target Stages` (a :guilabel:`Stage Completion` típusnál) azok a fázisok, amelyek teljesítik a szabályzatot."
+msgstr "A :guilabel:`Cél fázisok` (a :guilabel:`Fázis teljesítés` típusnál) azok a fázisok, amelyek teljesítik a szabályzatot."
 
 #: ../../content/applications/services/project/sla.rst:43
 msgid ":guilabel:`Freeze Stages` pause the timer. While the task sits in one of these stages — waiting for a customer answer, for instance — the clock does not run, and the deadline moves accordingly."
-msgstr "A :guilabel:`Freeze Stages` szünetelteti az órát. Amíg a feladat ezen fázisok valamelyikében áll – például ügyfélválaszra vár –, az óra nem jár, és a határidő is ennek megfelelően tolódik."
+msgstr "A :guilabel:`Szüneteltetési fázisok` szünetelteti az órát. Amíg a feladat ezen fázisok valamelyikében áll – például ügyfélválaszra vár –, az óra nem jár, és a határidő is ennek megfelelően tolódik."
 
 #: ../../content/applications/services/project/sla.rst:47
 msgid "Scope"
@@ -3021,11 +3021,11 @@ msgstr "Hatókör"
 
 #: ../../content/applications/services/project/sla.rst:49
 msgid ":guilabel:`Minimum Priority` restricts the policy to tasks of at least that priority. Leave it at :guilabel:`All Priorities` to apply it everywhere."
-msgstr "A :guilabel:`Minimum Priority` mező a szabályzatot legalább az adott prioritású feladatokra korlátozza. Hagyja az :guilabel:`All Priorities` értéken, ha mindenhol érvényes legyen."
+msgstr "A :guilabel:`Minimum prioritás` mező a szabályzatot legalább az adott prioritású feladatokra korlátozza. Hagyja az :guilabel:`Minden prioritás` értéken, ha mindenhol érvényes legyen."
 
 #: ../../content/applications/services/project/sla.rst:51
 msgid ":guilabel:`Customers` restricts the policy to the tasks of the selected customers. Leave it empty to apply it to all customers."
-msgstr "A :guilabel:`Customers` mező a szabályzatot a kiválasztott ügyfelek feladataira korlátozza. Hagyja üresen, ha minden ügyfélre érvényes legyen."
+msgstr "A :guilabel:`Ügyfelek` mező a szabályzatot a kiválasztott ügyfelek feladataira korlátozza. Hagyja üresen, ha minden ügyfélre érvényes legyen."
 
 #: ../../content/applications/services/project/sla.rst:55
 msgid "Warnings"
@@ -3033,15 +3033,15 @@ msgstr "Figyelmeztetések"
 
 #: ../../content/applications/services/project/sla.rst:57
 msgid ":guilabel:`Urgent Time` is the remaining time at which the task switches to the :guilabel:`Urgent` state."
-msgstr "Az :guilabel:`Urgent Time` az a hátralévő idő, amelynél a feladat :guilabel:`Urgent` állapotba vált."
+msgstr "Az :guilabel:`Sürgős idő` az a hátralévő idő, amelynél a feladat :guilabel:`Sürgős` állapotba vált."
 
 #: ../../content/applications/services/project/sla.rst:59
 msgid ":guilabel:`Warning Before (hours)` schedules a :guilabel:`To Do` activity for the assignee (or, if the task is unassigned, for the project manager) that many hours before the deadline. Only one reminder is created per policy and task."
-msgstr "A :guilabel:`Warning Before (hours)` mező a határidő előtt ennyi órával :guilabel:`Tennivaló` tevékenységet ütemez a felelősnek (vagy, ha a feladatnak nincs felelőse, a projektmenedzsernek). Szabályzatonként és feladatonként csak egy emlékeztető jön létre."
+msgstr "A :guilabel:`Figyelmeztetés előtte (óra)` mező a határidő előtt ennyi órával :guilabel:`Tennivaló` tevékenységet ütemez a felelősnek (vagy, ha a feladatnak nincs felelőse, a projektmenedzsernek). Szabályzatonként és feladatonként csak egy emlékeztető jön létre."
 
 #: ../../content/applications/services/project/sla.rst:63
 msgid "The :guilabel:`SLA Policy Description` is a rich-text field for the wording of the agreement; it is translatable, as is the policy name. The :guilabel:`Projects` and :guilabel:`Tasks` smart buttons show where the policy is in use."
-msgstr "Az :guilabel:`SLA Policy Description` formázott szövegmező a megállapodás szövegéhez; a szabályzat nevéhez hasonlóan fordítható. A :guilabel:`Projects` és a :guilabel:`Tasks` okosgomb mutatja, hol van használatban a szabályzat."
+msgstr "Az :guilabel:`SLA szabályzat leírás` formázott szövegmező a megállapodás szövegéhez; a szabályzat nevéhez hasonlóan fordítható. A :guilabel:`Projektek` és a :guilabel:`Feladatok` okosgomb mutatja, hol van használatban a szabályzat."
 
 #: ../../content/applications/services/project/sla.rst:78
 msgid "SLA states on tasks"
@@ -3049,7 +3049,7 @@ msgstr "SLA-állapotok a feladatokon"
 
 #: ../../content/applications/services/project/sla.rst:80
 msgid "Every task of an SLA-enabled project carries one line per applicable policy in its :guilabel:`SLAs` tab, showing the :guilabel:`SLA Deadline`, the :guilabel:`SLA Remaining Time`, and the state:"
-msgstr "Az SLA-követésű projektek minden feladatának :guilabel:`SLAs` fülén szabályzatonként egy sor szerepel, amely mutatja az :guilabel:`SLA Deadline` és az :guilabel:`SLA Remaining Time` értékét, valamint az állapotot:"
+msgstr "Az SLA-követésű projektek minden feladatának :guilabel:`SLA-k` fülén szabályzatonként egy sor szerepel, amely mutatja az :guilabel:`SLA határidő` és az :guilabel:`SLA hátralévő idő` értékét, valamint az állapotot:"
 
 #: ../../content/applications/services/project/sla.rst:88
 msgid "State"
@@ -3061,7 +3061,7 @@ msgstr "Jelentése"
 
 #: ../../content/applications/services/project/sla.rst:90
 msgid ":guilabel:`In Time`"
-msgstr ":guilabel:`In Time`"
+msgstr ":guilabel:`Időben`"
 
 #: ../../content/applications/services/project/sla.rst:91
 msgid "The deadline is still comfortably ahead."
@@ -3069,15 +3069,15 @@ msgstr "A határidő még kényelmesen távol van."
 
 #: ../../content/applications/services/project/sla.rst:92
 msgid ":guilabel:`Urgent`"
-msgstr ":guilabel:`Urgent`"
+msgstr ":guilabel:`Sürgős`"
 
 #: ../../content/applications/services/project/sla.rst:93
 msgid "The remaining time has fallen below the policy's :guilabel:`Urgent Time`."
-msgstr "A hátralévő idő a szabályzat :guilabel:`Urgent Time` értéke alá csökkent."
+msgstr "A hátralévő idő a szabályzat :guilabel:`Sürgős idő` értéke alá csökkent."
 
 #: ../../content/applications/services/project/sla.rst:94
 msgid ":guilabel:`Success`"
-msgstr ":guilabel:`Success`"
+msgstr ":guilabel:`Sikeres`"
 
 #: ../../content/applications/services/project/sla.rst:95
 msgid "The task reached a target stage (or was first worked on) before the deadline."
@@ -3085,7 +3085,7 @@ msgstr "A feladat a határidő előtt elérte a célfázist (vagy valaki a hatá
 
 #: ../../content/applications/services/project/sla.rst:96
 msgid ":guilabel:`Fail`"
-msgstr ":guilabel:`Fail`"
+msgstr ":guilabel:`Sikertelen`"
 
 #: ../../content/applications/services/project/sla.rst:97
 msgid "The deadline passed without the target being reached."
@@ -3093,7 +3093,7 @@ msgstr "A határidő úgy telt le, hogy a cél nem teljesült."
 
 #: ../../content/applications/services/project/sla.rst:98
 msgid ":guilabel:`None`"
-msgstr ":guilabel:`None`"
+msgstr ":guilabel:`Nincs`"
 
 #: ../../content/applications/services/project/sla.rst:99
 msgid "No deadline could be computed, for example because the policy has no resource calendar."
@@ -3101,7 +3101,7 @@ msgstr "Nem volt kiszámítható határidő, például mert a szabályzathoz nin
 
 #: ../../content/applications/services/project/sla.rst:101
 msgid "The same states are shown as colored badges next to the task title, on the Kanban cards, and as :guilabel:`SLA In Time`, :guilabel:`SLA Urgent`, :guilabel:`SLA Success`, and :guilabel:`SLA Failed` filters in the search panel of the task list."
-msgstr "Ugyanezek az állapotok színes jelvényként jelennek meg a feladat címe mellett és a Kanban-kártyákon, valamint :guilabel:`SLA In Time`, :guilabel:`SLA Urgent`, :guilabel:`SLA Success` és :guilabel:`SLA Failed` szűrőként a feladatlista keresőpaneljén."
+msgstr "Ugyanezek az állapotok színes jelvényként jelennek meg a feladat címe mellett és a Kanban-kártyákon, valamint :guilabel:`SLA időben`, :guilabel:`SLA sürgős`, :guilabel:`SLA sikeres` és :guilabel:`SLA sikertelen` szűrőként a feladatlista keresőpaneljén."
 
 #: ../../content/applications/services/project/sla.rst:105
 msgid "A scheduled action re-evaluates the open SLA states in the background, so the states, the reminders, and the escalations stay up to date without anyone opening the task."
@@ -3113,27 +3113,27 @@ msgstr "Eszkalációs szabályok"
 
 #: ../../content/applications/services/project/sla.rst:121
 msgid "The :guilabel:`Escalation Rules` list at the bottom of the policy defines what happens when the SLA goes wrong. Each rule has:"
-msgstr "A szabályzat alján lévő :guilabel:`Escalation Rules` lista határozza meg, mi történjen, ha az SLA rosszul alakul. Minden szabálynak van:"
+msgstr "A szabályzat alján lévő :guilabel:`Eszkalációs szabályok` lista határozza meg, mi történjen, ha az SLA rosszul alakul. Minden szabálynak van:"
 
 #: ../../content/applications/services/project/sla.rst:124
 msgid "a :guilabel:`Trigger`: :guilabel:`On SLA Breach` (the state became :guilabel:`Fail`) or :guilabel:`On Urgent Status`;"
-msgstr "egy :guilabel:`Trigger` kiváltó eseménye: :guilabel:`On SLA Breach` (az állapot :guilabel:`Fail` lett) vagy :guilabel:`On Urgent Status`;"
+msgstr "egy :guilabel:`Kiváltó esemény` kiváltó eseménye: :guilabel:`SLA megsértésekor` (az állapot :guilabel:`Sikertelen` lett) vagy :guilabel:`Sürgős állapotnál`;"
 
 #: ../../content/applications/services/project/sla.rst:126
 msgid "an :guilabel:`Action`:"
-msgstr "egy :guilabel:`Action` művelete:"
+msgstr "egy :guilabel:`Művelet` művelete:"
 
 #: ../../content/applications/services/project/sla.rst:128
 msgid ":guilabel:`Send Notification` – schedules a :guilabel:`To Do` activity for each user in :guilabel:`Notify Users`;"
-msgstr ":guilabel:`Send Notification` – :guilabel:`Tennivaló` tevékenységet ütemez a :guilabel:`Notify Users` mezőben megadott minden felhasználónak;"
+msgstr ":guilabel:`Értesítés küldése` – :guilabel:`Tennivaló` tevékenységet ütemez a :guilabel:`Értesítendő felhasználók` mezőben megadott minden felhasználónak;"
 
 #: ../../content/applications/services/project/sla.rst:130
 msgid ":guilabel:`Reassign Task` – assigns the task to the user in :guilabel:`Reassign To`, replacing the current assignees;"
-msgstr ":guilabel:`Reassign Task` – a feladatot a :guilabel:`Reassign To` mezőben megadott felhasználóhoz rendeli, lecserélve a jelenlegi felelősöket;"
+msgstr ":guilabel:`Feladat átadása` – a feladatot a :guilabel:`Átadás neki` mezőben megadott felhasználóhoz rendeli, lecserélve a jelenlegi felelősöket;"
 
 #: ../../content/applications/services/project/sla.rst:132
 msgid ":guilabel:`Raise Priority` – raises the task to :guilabel:`New Priority`, never lowering it."
-msgstr ":guilabel:`Raise Priority` – a feladatot a :guilabel:`New Priority` szintre emeli, de sosem csökkenti a prioritását."
+msgstr ":guilabel:`Prioritás emelése` – a feladatot a :guilabel:`Új prioritás` szintre emeli, de sosem csökkenti a prioritását."
 
 #: ../../content/applications/services/project/sla.rst:134
 msgid "Rules run in the order of the list handle, and each rule fires **at most once** per task and policy. A rule can be deactivated with its :guilabel:`Active` toggle without deleting its history."
@@ -3149,19 +3149,19 @@ msgstr "A projektbeállítások :guilabel:`SLA` szakasza tartalmazza a projekt c
 
 #: ../../content/applications/services/project/sla.rst:144
 msgid ":guilabel:`Team Members` – the users among whom the work is shared."
-msgstr ":guilabel:`Team Members` – azok a felhasználók, akik között a munka megoszlik."
+msgstr ":guilabel:`Csapattagok` – azok a felhasználók, akik között a munka megoszlik."
 
 #: ../../content/applications/services/project/sla.rst:145
 msgid ":guilabel:`Automatic Assignment` – when enabled, each new task of the project is assigned automatically to a team member."
-msgstr ":guilabel:`Automatic Assignment` – ha be van kapcsolva, a projekt minden új feladata automatikusan egy csapattaghoz kerül."
+msgstr ":guilabel:`Automatikus hozzárendelés` – ha be van kapcsolva, a projekt minden új feladata automatikusan egy csapattaghoz kerül."
 
 #: ../../content/applications/services/project/sla.rst:147
 msgid ":guilabel:`Assignment Method` – :guilabel:`Randomly` picks any team member, while :guilabel:`Balanced` picks the member with the fewest open tasks in the project."
-msgstr ":guilabel:`Assignment Method` – a :guilabel:`Randomly` tetszőleges csapattagot választ, a :guilabel:`Balanced` pedig azt, akinek a legkevesebb nyitott feladata van a projektben."
+msgstr ":guilabel:`Hozzárendelési módszer` – a :guilabel:`Véletlenszerűen` tetszőleges csapattagot választ, a :guilabel:`Kiegyensúlyozottan` pedig azt, akinek a legkevesebb nyitott feladata van a projektben."
 
 #: ../../content/applications/services/project/sla.rst:150
 msgid "The project settings also display the live SLA counters of the project — :guilabel:`In Time`, :guilabel:`Urgent`, :guilabel:`Success`, :guilabel:`Failed`, and the success :guilabel:`Rate`."
-msgstr "A projektbeállítások a projekt élő SLA-számlálóit is megjelenítik: :guilabel:`In Time`, :guilabel:`Urgent`, :guilabel:`Success`, :guilabel:`Failed`, valamint a sikerességi :guilabel:`Rate`."
+msgstr "A projektbeállítások a projekt élő SLA-számlálóit is megjelenítik: :guilabel:`Időben`, :guilabel:`Sürgős`, :guilabel:`Sikeres`, :guilabel:`Sikertelen`, valamint a sikerességi :guilabel:`Rate`."
 
 #: ../../content/applications/services/project/sla.rst:156
 msgid "SLA analysis"
@@ -3169,7 +3169,7 @@ msgstr "SLA-elemzés"
 
 #: ../../content/applications/services/project/sla.rst:158
 msgid "Go to :menuselection:`Project --> Reporting --> SLA Analysis` for a pivot and graph view of the SLA results. Measures and groupings include the policy, the project, the customer, the assignee, the stage, the priority, the SLA type, the :guilabel:`SLA Target (hours)`, the :guilabel:`Hours to Close`, and the :guilabel:`Exceeded Hours`, so that recurring breaches can be traced back to a team, a customer, or a policy that is set too tightly."
-msgstr "Az SLA-eredmények pivot és grafikon nézetéhez lépjen a :menuselection:`Projekt --> Jelentések --> SLA Analysis` menüpontra. A mérőszámok és csoportosítások között szerepel a szabályzat, a projekt, az ügyfél, a felelős, a fázis, a prioritás, az SLA típusa, az :guilabel:`SLA Target (hours)`, a :guilabel:`Hours to Close` és az :guilabel:`Exceeded Hours`, így a visszatérő túllépések visszavezethetők egy csapatra, egy ügyfélre vagy egy túl szorosra szabott szabályzatra."
+msgstr "Az SLA-eredmények pivot és grafikon nézetéhez lépjen a :menuselection:`Projekt --> Jelentések --> SLA elemzés` menüpontra. A mérőszámok és csoportosítások között szerepel a szabályzat, a projekt, az ügyfél, a felelős, a fázis, a prioritás, az SLA típusa, az :guilabel:`SLA cél (óra)`, a :guilabel:`Lezárásig eltelt órák` és az :guilabel:`Túllépett órák`, így a visszatérő túllépések visszavezethetők egy csapatra, egy ügyfélre vagy egy túl szorosra szabott szabályzatra."
 
 #: ../../content/applications/services/project/sla.rst:173 ../../content/applications/services/project/templates.rst:69
 msgid ":doc:`categories`"
@@ -3369,11 +3369,11 @@ msgstr "Naptár nézet"
 
 #: ../../content/applications/services/timesheets/logging_time.rst:14
 msgid "The timesheet lists offer a :icon:`fa-calendar` :guilabel:`Calendar` view, which opens by default on :menuselection:`Timesheets --> Timesheets --> All Timesheets` and on the timesheets of a project. Entries are placed on the day they were logged, sized by the time spent, and colored by project."
-msgstr "A munkaidő-listák :icon:`fa-calendar` :guilabel:`Naptár` nézetet is kínálnak, amely alapértelmezés szerint a :menuselection:`Munkaidő-nyilvántartások --> Munkaidő-nyilvántartások --> Összes munkaidő-nyilvántartás` menüpontban és egy projekt munkaidő-bejegyzésein nyílik meg. A bejegyzések a rögzítésük napjára kerülnek, méretük a ráfordított időt tükrözi, színük pedig a projektet."
+msgstr "A munkaidő-listák :icon:`fa-calendar` :guilabel:`Naptár` nézetet is kínálnak, amely alapértelmezés szerint a :menuselection:`Munkaidő-kimutatások --> Munkaidő-kimutatások --> Összes munkaidő-nyilvántartás` menüpontban és egy projekt munkaidő-bejegyzésein nyílik meg. A bejegyzések a rögzítésük napjára kerülnek, méretük a ráfordított időt tükrözi, színük pedig a projektet."
 
 #: ../../content/applications/services/timesheets/logging_time.rst:19
 msgid "Use the :guilabel:`Month`, :guilabel:`Week`, and :guilabel:`Day` scales to see a whole month at a glance or a single day in detail, and the side panel to filter by :guilabel:`Employee`, :guilabel:`Project`, :guilabel:`Task`, or :guilabel:`User`. The total of the displayed time is shown with the entries, and an entry with an impossible duration — more than 24 hours, or a negative one — is highlighted, which makes mistyped entries easy to spot."
-msgstr "A :guilabel:`Month`, a :guilabel:`Week` és a :guilabel:`Day` léptékkel egy teljes hónapot vagy egyetlen napot tekinthet át részletesen, az oldalsó panelen pedig :guilabel:`Employee`, :guilabel:`Project`, :guilabel:`Task` vagy :guilabel:`User` szerint szűrhet. A megjelenített idő összesenje a bejegyzésekkel együtt látható, a lehetetlen időtartamú – 24 óránál hosszabb vagy negatív – bejegyzést pedig kiemeli a rendszer, így az elgépelt bejegyzések könnyen észrevehetők."
+msgstr "A :guilabel:`Hónap`, a :guilabel:`Week` és a :guilabel:`Day` léptékkel egy teljes hónapot vagy egyetlen napot tekinthet át részletesen, az oldalsó panelen pedig :guilabel:`Employee`, :guilabel:`Project`, :guilabel:`Task` vagy :guilabel:`Felhasználó` szerint szűrhet. A megjelenített idő összesenje a bejegyzésekkel együtt látható, a lehetetlen időtartamú – 24 óránál hosszabb vagy negatív – bejegyzést pedig kiemeli a rendszer, így az elgépelt bejegyzések könnyen észrevehetők."
 
 #: ../../content/applications/services/timesheets/logging_time.rst:25
 msgid "The timesheet analysis report can be displayed in the same way, so the recorded costs and hours can be reviewed per employee on a calendar."
@@ -3389,7 +3389,7 @@ msgstr "Tevékenységekre fordított idő"
 
 #: ../../content/applications/services/timesheets/logging_time.rst:45
 msgid "Timesheet entries can be linked to an :guilabel:`Activity`, so that the time spent on a planned piece of work is recorded against that activity rather than only against the task. Each entry can additionally carry a :guilabel:`Start Date` and an :guilabel:`End Date`, which is useful when the exact interval matters, for example for interventions billed by the hour."
-msgstr "A munkaidő-bejegyzések hozzákapcsolhatók egy :guilabel:`Activity` tevékenységhez, így a tervezett munkára fordított idő nem csupán a feladatra, hanem magára a tevékenységre is rögzül. Minden bejegyzés emellett :guilabel:`Start Date` és :guilabel:`End Date` értéket is kaphat, ami akkor hasznos, ha a pontos időintervallum számít, például óradíjas kiszállásoknál."
+msgstr "A munkaidő-bejegyzések hozzákapcsolhatók egy :guilabel:`Tevékenység` tevékenységhez, így a tervezett munkára fordított idő nem csupán a feladatra, hanem magára a tevékenységre is rögzül. Minden bejegyzés emellett :guilabel:`Kezdő dátum` és :guilabel:`Záró dátum` értéket is kaphat, ami akkor hasznos, ha a pontos időintervallum számít, például óradíjas kiszállásoknál."
 
 #: ../../content/applications/services/timesheets/logging_time.rst:50
 msgid "The activity then shows:"
@@ -3397,11 +3397,11 @@ msgstr "A tevékenységen ezután a következők látszanak:"
 
 #: ../../content/applications/services/timesheets/logging_time.rst:52
 msgid ":guilabel:`Allocated Hours` – the sum of the time logged on it;"
-msgstr ":guilabel:`Allocated Hours` – a rá rögzített idő összege;"
+msgstr ":guilabel:`Kiosztott órák` – a rá rögzített idő összege;"
 
 #: ../../content/applications/services/timesheets/logging_time.rst:53
 msgid ":guilabel:`Remaining Hours` – the estimated hours of the activity minus the time already logged."
-msgstr ":guilabel:`Remaining Hours` – a tevékenység becsült órái mínusz a már rögzített idő."
+msgstr ":guilabel:`Hátralévő órák` – a tevékenység becsült órái mínusz a már rögzített idő."
 
 #: ../../content/applications/services/timesheets/logging_time.rst:55
 msgid "Both are kept up to date automatically as entries are added or changed, which turns the activity list into a live comparison of the estimate against the work actually done."
@@ -3437,15 +3437,15 @@ msgstr "A szolgáltatások beállítása"
 
 #: ../../content/applications/services/timesheets/services.rst:18
 msgid "Go to :menuselection:`Project --> Configuration --> Timesheet Services`. Each service has:"
-msgstr "Lépjen a :menuselection:`Projekt --> Konfiguráció --> Timesheet Services` menüpontra. Minden szolgáltatáshoz tartozik:"
+msgstr "Lépjen a :menuselection:`Projekt --> Konfiguráció --> Időlap szolgáltatások` menüpontra. Minden szolgáltatáshoz tartozik:"
 
 #: ../../content/applications/services/timesheets/services.rst:20
 msgid ":guilabel:`Service Name` – the label chosen on the timesheet line."
-msgstr ":guilabel:`Service Name` – a munkaidősoron kiválasztható megnevezés."
+msgstr ":guilabel:`Szolgáltatás neve` – a munkaidősoron kiválasztható megnevezés."
 
 #: ../../content/applications/services/timesheets/services.rst:21
 msgid ":guilabel:`Product` – the service product used to price the work. Only products of type *Service* can be selected."
-msgstr ":guilabel:`Product` – az a szolgáltatástermék, amely a munka árazásához használatos. Csak *Szolgáltatás* típusú termékek választhatók."
+msgstr ":guilabel:`Termék` – az a szolgáltatástermék, amely a munka árazásához használatos. Csak *Szolgáltatás* típusú termékek választhatók."
 
 #: ../../content/applications/services/timesheets/services.rst:23
 msgid ":guilabel:`Billing Rate (%)` – the percentage of the logged hours charged against the customer's credit. Use it to weight the work by seniority: for instance 70% for junior work, 100% for standard work, 150% for senior work."
@@ -3457,11 +3457,11 @@ msgstr "Projekt számlázása munkaidő-szolgáltatások alapján"
 
 #: ../../content/applications/services/timesheets/services.rst:40
 msgid "Open the project's settings and enable :guilabel:`Billable from Timesheet Services` to invoice time and material from the services instead of the standard billing setup. The option replaces the standard :guilabel:`Billable` setting; only one of the two applies to a project."
-msgstr "Nyissa meg a projekt beállításait, és kapcsolja be a :guilabel:`Billable from Timesheet Services` opciót, ha az idő- és anyagalapú számlázást a szokásos számlázási beállítás helyett a szolgáltatások alapján szeretné végezni. Az opció a szokásos :guilabel:`Billable` beállítás helyébe lép; egy projektre a kettő közül csak az egyik érvényes."
+msgstr "Nyissa meg a projekt beállításait, és kapcsolja be a :guilabel:`Számlázható időlap szolgáltatásból` opciót, ha az idő- és anyagalapú számlázást a szokásos számlázási beállítás helyett a szolgáltatások alapján szeretné végezni. Az opció a szokásos :guilabel:`Számlázható` beállítás helyébe lép; egy projektre a kettő közül csak az egyik érvényes."
 
 #: ../../content/applications/services/timesheets/services.rst:44
 msgid "A :guilabel:`Contains Services` tab then appears on the project, listing the service credit agreed with the customer. Each line holds the :guilabel:`Timesheet Service`, the :guilabel:`Quantity` of hours included, and the :guilabel:`Start Date` and :guilabel:`End Date` of the period in which they can be consumed."
-msgstr "A projekten ezután megjelenik egy :guilabel:`Contains Services` fül, amely az ügyféllel megállapodott szolgáltatási keretet sorolja fel. Minden sor tartalmazza a :guilabel:`Timesheet Service` szolgáltatást, a benne foglalt órák :guilabel:`Quantity` mennyiségét, valamint annak az időszaknak a :guilabel:`Start Date` és :guilabel:`End Date` dátumát, amelyen belül felhasználható."
+msgstr "A projekten ezután megjelenik egy :guilabel:`Tartalmaz szolgáltatásokat` fül, amely az ügyféllel megállapodott szolgáltatási keretet sorolja fel. Minden sor tartalmazza a :guilabel:`Időlap szolgáltatás` szolgáltatást, a benne foglalt órák :guilabel:`Mennyiség` mennyiségét, valamint annak az időszaknak a :guilabel:`Kezdő dátum` és :guilabel:`Záró dátum` dátumát, amelyen belül felhasználható."
 
 #: ../../content/applications/services/timesheets/services.rst:60
 msgid "Logging time on a service"
@@ -3469,7 +3469,7 @@ msgstr "Idő rögzítése szolgáltatásra"
 
 #: ../../content/applications/services/timesheets/services.rst:62
 msgid "The :guilabel:`Service` is **required** on every timesheet line, and is available both in the quick entry form of :guilabel:`My Timesheets` and on the full timesheet line form. When the line is saved, the database fills in, from the service and the customer's pricelist:"
-msgstr "A :guilabel:`Service` megadása **kötelező** minden munkaidősoron, és a :guilabel:`Saját munkaidő-nyilvántartásaim` gyorsbeviteli űrlapján és a teljes munkaidősor-űrlapon egyaránt elérhető. A sor mentésekor a rendszer a szolgáltatás és az ügyfél árlistája alapján kitölti a következőket:"
+msgstr "A :guilabel:`Szolgáltatás` megadása **kötelező** minden munkaidősoron, és a :guilabel:`Saját munkaidő-nyilvántartásaim` gyorsbeviteli űrlapján és a teljes munkaidősor-űrlapon egyaránt elérhető. A sor mentésekor a rendszer a szolgáltatás és az ügyfél árlistája alapján kitölti a következőket:"
 
 #: ../../content/applications/services/timesheets/services.rst:66
 msgid ":guilabel:`Billing Rate (%)` – copied from the service;"
@@ -3481,11 +3481,11 @@ msgstr ":guilabel:`Billed Hours` – a rögzített órák szorozva a számlázá
 
 #: ../../content/applications/services/timesheets/services.rst:68
 msgid ":guilabel:`Service Unit Price` – the price of the service product for the project's customer on the date of the line, taken from that customer's pricelist (or the product's sales price when the customer has none);"
-msgstr ":guilabel:`Service Unit Price` – a szolgáltatástermék ára a projekt ügyfelére, a sor dátumán, az adott ügyfél árlistája alapján (illetve a termék eladási ára, ha az ügyfélhez nem tartozik árlista);"
+msgstr ":guilabel:`Szolgáltatás egységár` – a szolgáltatástermék ára a projekt ügyfelére, a sor dátumán, az adott ügyfél árlistája alapján (illetve a termék eladási ára, ha az ügyfélhez nem tartozik árlista);"
 
 #: ../../content/applications/services/timesheets/services.rst:71
 msgid ":guilabel:`Service Amount` – the unit price multiplied by the logged hours."
-msgstr ":guilabel:`Service Amount` – az egységár szorozva a rögzített órákkal."
+msgstr ":guilabel:`Szolgáltatás összeg` – az egységár szorozva a rögzített órákkal."
 
 #: ../../content/applications/services/timesheets/services.rst:73
 msgid "The rate and the price are stored on the line, so later changes to the service or the pricelist do not rewrite the history of the work already logged."
@@ -3585,7 +3585,7 @@ msgstr ":guilabel:`Megjegyzések`: további megjegyzések (választható oszlop)
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:126
 msgid "A calibration is a **repair order** of the *Repairs* app on which the :guilabel:`Calibration` checkbox is ticked. It therefore follows the usual repair workflow (parts, operations, invoicing), and additionally carries the calibration data and a certificate number. The complete calibration history of each measuring device is made of its calibration repair orders."
-msgstr "A kalibráció a *Javítások* alkalmazás olyan **javítási rendelése**, amelyen be van jelölve a :guilabel:`Kalibráció` jelölőnégyzet. Ezért a szokásos javítási munkafolyamatot követi (alkatrészek, műveletek, számlázás), emellett pedig a kalibrációs adatokat és egy tanúsítványszámot is hordoz. Az egyes mérőeszközök teljes kalibrációs előzményét a kalibrációs javítási rendeléseik alkotják."
+msgstr "A kalibráció a *Javítások* alkalmazás olyan **javítási rendelése**, amelyen be van jelölve a :guilabel:`Kalibrálás` jelölőnégyzet. Ezért a szokásos javítási munkafolyamatot követi (alkatrészek, műveletek, számlázás), emellett pedig a kalibrációs adatokat és egy tanúsítványszámot is hordoz. Az egyes mérőeszközök teljes kalibrációs előzményét a kalibrációs javítási rendeléseik alkotják."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:132
 msgid "Creating a calibration"
@@ -3593,15 +3593,15 @@ msgstr "Kalibráció létrehozása"
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:142
 msgid "Open the measuring device, and click :guilabel:`Create Calibration` in the header. The button is available on :guilabel:`Active` and :guilabel:`Inactive` equipment. A new repair order opens, with :guilabel:`Calibration` ticked, and the equipment, its product, and its customer filled in."
-msgstr "Nyissa meg a mérőeszközt, és kattintson a fejlécben a :guilabel:`Kalibráció létrehozása` gombra. A gomb :guilabel:`Aktív` és :guilabel:`Inaktív` berendezéseken érhető el. Új javítási rendelés nyílik meg, amelyen a :guilabel:`Kalibráció` be van jelölve, a berendezés, annak terméke és ügyfele pedig ki van töltve."
+msgstr "Nyissa meg a mérőeszközt, és kattintson a fejlécben a :guilabel:`Kalibráció létrehozása` gombra. A gomb :guilabel:`Aktív` és :guilabel:`Inaktív` berendezéseken érhető el. Új javítási rendelés nyílik meg, amelyen a :guilabel:`Kalibrálás` be van jelölve, a berendezés, annak terméke és ügyfele pedig ki van töltve."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:146
 msgid "Alternatively, click :guilabel:`New` in :menuselection:`Equipment Management --> Measuring Devices --> Calibrations`, or tick :guilabel:`Calibration` on any repair order, and select the :guilabel:`Equipment` (only measuring devices can be selected)."
-msgstr "Másik lehetőségként kattintson az :guilabel:`Új` gombra a :menuselection:`Berendezéskezelés --> Mérőeszközök --> Kalibrációk` menüpontban, vagy jelölje be a :guilabel:`Kalibráció` mezőt bármely javítási rendelésen, és válassza ki az :guilabel:`Eszköz` mezőben a berendezést (csak mérőeszközök választhatók)."
+msgstr "Másik lehetőségként kattintson az :guilabel:`Új` gombra a :menuselection:`Berendezéskezelés --> Mérőeszközök --> Kalibrációk` menüpontban, vagy jelölje be a :guilabel:`Kalibrálás` mezőt bármely javítási rendelésen, és válassza ki az :guilabel:`Berendezés` mezőben a berendezést (csak mérőeszközök választhatók)."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:150
 msgid "Fill in the :guilabel:`Calibration` group:"
-msgstr "Töltse ki a :guilabel:`Kalibráció` csoportot:"
+msgstr "Töltse ki a :guilabel:`Kalibrálás` csoportot:"
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:152
 msgid ":guilabel:`Calibration Date`: the date the calibration is performed (defaults to today);"
@@ -3665,7 +3665,7 @@ msgstr "A tanúsítványok kezdő sorszáma :ref:`fejlesztői módban <developer
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:189
 msgid "In the repair order search, calibrations can be found by :guilabel:`Calibration Quality`, :guilabel:`Certificate Number`, and :guilabel:`Equipment`, filtered with :guilabel:`Accredited`, :guilabel:`Werks`, and :guilabel:`Voided Certificate`, and grouped by :guilabel:`Calibration Quality`."
-msgstr "A javítási rendelések keresőjében a kalibrációk a :guilabel:`Kalibráció minősége`, a :guilabel:`Tanúsítvány száma` és az :guilabel:`Eszköz` alapján kereshetők, az :guilabel:`Akkreditált`, a :guilabel:`Werks (gyári)` és az :guilabel:`Érvénytelenített tanúsítvány` szűrővel szűrhetők, valamint :guilabel:`Kalibráció minősége` szerint csoportosíthatók."
+msgstr "A javítási rendelések keresőjében a kalibrációk a :guilabel:`Kalibráció minősége`, a :guilabel:`Tanúsítvány száma` és az :guilabel:`Berendezés` alapján kereshetők, az :guilabel:`Akkreditált`, a :guilabel:`Werks (gyári)` és az :guilabel:`Érvénytelenített tanúsítvány` szűrővel szűrhetők, valamint :guilabel:`Kalibráció minősége` szerint csoportosíthatók."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:199
 msgid ":guilabel:`Calibrations`: the number of calibration repair orders of the equipment. Click to view the full calibration history."

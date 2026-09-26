@@ -139,9 +139,9 @@ Quick creation disabled in many2one fields
 ==========================================
 
 When typing a new value in a many2one field (e.g., a customer on a quotation), Odoo normally offers
-:guilabel:`Create "value"`, which creates the record at once with just a name. With the *No
-quick_create* module (`deltatech_no_quick_create`), this option is removed from many2one fields, to
-avoid incomplete contacts, products, etc. Only :guilabel:`Create and edit...` remains, which opens
+:guilabel:`Create "value"`, which creates the record at once with just a name. With the *Disable
+Many2one Quick Create* module (`web_no_quick_create`), this option is removed from many2one fields,
+to avoid incomplete contacts, products, etc. Only :guilabel:`Create and edit...` remains, which opens
 the full creation form.
 
 .. _backend-interface/clickable-tags:

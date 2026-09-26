@@ -66,7 +66,7 @@ msgstr "Sincronizar calendarios externos"
 
 #: ../../content/applications/productivity/calendar.rst:32
 msgid "Users can sync Odoo with existing :doc:`Outlook <calendar/outlook>` and/or :doc:`Google <calendar/google>` calendars, by heading to :menuselection:`Calendar app --> Configuration --> Settings`. From here, enter :guilabel:`Client ID` and :guilabel:`Client Secret`. There is also an option to pause synchronization by ticking the checkbox, or automating synchronization by keeping it blank."
-msgstr "Los usuarios pueden sincronizar Odoo con los calendarios existentes de :doc:`Outlook <calendar/outlook>` o :doc:`Google <calendar/google>` en :menuselection:`Calendario --> Configuración --> Ajustes`. Aquí, ingrese el :guilabel:`ID del cliente` y :guilabel:`Secreto del cliente`. Si marca la casilla de verificación, la sincronización se pausará, pero si la deja en blanco, la sincronización se realizará automáticamente."
+msgstr "Los usuarios pueden sincronizar Odoo con los calendarios existentes de :doc:`Outlook <calendar/outlook>` o :doc:`Google <calendar/google>` en :menuselection:`Calendario --> Configuración --> Ajustes`. Aquí, ingrese el :guilabel:`ID de cliente` y :guilabel:`Secreto de cliente`. Si marca la casilla de verificación, la sincronización se pausará, pero si la deja en blanco, la sincronización se realizará automáticamente."
 
 #: ../../content/applications/productivity/calendar.rst:38
 msgid "Once the desired configurations are complete, be sure to click :guilabel:`Save` before moving on."
@@ -314,7 +314,7 @@ msgstr "El *ID del cliente* y el *secreto del cliente* son necesarios para conec
 
 #: ../../content/applications/productivity/calendar/google.rst:111
 msgid "Under :menuselection:`Create OAuth Client ID`, select :guilabel:`Website application` for the :guilabel:`Application Type` field, and type `My Odoo Database` for the :guilabel:`Name`."
-msgstr "En :menuselection:`Create OAuth Client ID` (crear un ID de cliente de OAuth), seleccione :guilabel:`Website application` (aplicación de sitio web) en el campo :guilabel:`Application Type` (tipo de aplicación)  y escriba `mi base de datos de Odoo` en :guilabel:`Name` (nombre)."
+msgstr "En :menuselection:`Create OAuth Client ID` (crear un ID de cliente de OAuth), seleccione :guilabel:`Website application` (aplicación de sitio web) en el campo :guilabel:`Application Type` (tipo de aplicación)  y escriba `mi base de datos de Odoo` en :guilabel:`Nombre` (nombre)."
 
 #: ../../content/applications/productivity/calendar/google.rst:114
 msgid "Under the :guilabel:`Authorized JavaScript Origins` section, click :guilabel:`+ Add URI` and type the company's Odoo full :abbr:`URL (Uniform Resource Locator)` address."
@@ -326,7 +326,7 @@ msgstr "En la sección :guilabel:`Authorized redirect URIs` (URI de redirección
 
 #: ../../content/applications/productivity/calendar/google.rst:128
 msgid "A :guilabel:`Client ID` and :guilabel:`Client Secret` will appear, save these somewhere safe."
-msgstr "Aparecerán un :guilabel:`Client ID` (ID de cliente) y un :guilabel:`Client Secret` (secreto de cliente); guárdelos en un lugar seguro."
+msgstr "Aparecerán un :guilabel:`ID de cliente` (ID de cliente) y un :guilabel:`Secreto de cliente` (secreto de cliente); guárdelos en un lugar seguro."
 
 #: ../../content/applications/productivity/calendar/google.rst:131
 msgid "Setup in Odoo"
@@ -334,7 +334,7 @@ msgstr "Configuración en Odoo"
 
 #: ../../content/applications/productivity/calendar/google.rst:133
 msgid "Once the *Client ID* and the *Client Secret* are located, open the Odoo database and go to :menuselection:`Settings --> Calendar` to find the :guilabel:`Google Calendar` feature. Tick the checkbox labeled :guilabel:`Google Calendar`."
-msgstr "Una vez que tenga el *ID del cliente* y el *secreto del cliente*, abra la base de datos de Odoo y vaya a :menuselection:`Settings --> Calendar` para encontrar la función :guilabel:`Google Calendar`. Marque la casilla llamada :guilabel:`Google Calendar`."
+msgstr "Una vez que tenga el *ID del cliente* y el *secreto del cliente*, abra la base de datos de Odoo y vaya a :menuselection:`Ajustes --> Calendario` para encontrar la función :guilabel:`Google Calendar`. Marque la casilla llamada :guilabel:`Google Calendar`."
 
 #: ../../content/applications/productivity/calendar/google.rst:145
 msgid "Next, copy and paste the *Client ID* and the *Client Secret* from the Google Calendar API credentials page into their respective fields below the :guilabel:`Google Calendar` checkbox. Then, click :guilabel:`Save`."
@@ -538,7 +538,7 @@ msgstr "Consulte la `documentación de Microsoft <https://learn.microsoft.com/es
 
 #: ../../content/applications/productivity/calendar/outlook.rst:25
 msgid "Existing Microsoft *Entra ID* users should log in at the `Microsoft Azure developer portal <https://portal.azure.com/#home>`_. Next, select :guilabel:`View` under the section labeled :guilabel:`Manage Microsoft Entra ID`."
-msgstr "Los usuarios existentes de Microsoft *Entra ID* deben iniciar sesión en el `portal para desarrolladores de Microsoft Azure <https://portal.azure.com/#home>`_. Seleccione :guilabel:`Ver` en la sección etiquetada como :guilabel:`Gestionar Microsoft Entra ID`."
+msgstr "Los usuarios existentes de Microsoft *Entra ID* deben iniciar sesión en el `portal para desarrolladores de Microsoft Azure <https://portal.azure.com/#home>`_. Seleccione :guilabel:`Vista` en la sección etiquetada como :guilabel:`Gestionar Microsoft Entra ID`."
 
 #: ../../content/applications/productivity/calendar/outlook.rst:30
 msgid "Register application"
@@ -554,7 +554,7 @@ msgstr "Haga clic en el botón :guilabel:`+ Agregar` del menú superior para cre
 
 #: ../../content/applications/productivity/calendar/outlook.rst:45
 msgid "Enter a unique :guilabel:`Name` for the connected application."
-msgstr "Proporcione un :guilabel:`nombre` único para la aplicación a conectar."
+msgstr "Proporcione un :guilabel:`Nombre` único para la aplicación a conectar."
 
 #: ../../content/applications/productivity/calendar/outlook.rst:47
 msgid "Choosing the appropriate :guilabel:`Supported account type` is essential, or else the connected application will not work. Users who wish to connect their *Outlook Calendar* to Odoo should select the :guilabel:`Accounts in any organizational directory (Any Microsoft Entra ID directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)` option for :guilabel:`Supported account types`."
@@ -598,7 +598,7 @@ msgstr "Haga clic en :menuselection:`Certificados y secretos` en el menú izquie
 
 #: ../../content/applications/productivity/calendar/outlook.rst:111
 msgid "Next, type a :guilabel:`Description`, and select when the client secret :guilabel:`Expires`. Available options include: :guilabel:`90 days (3 months)`, :guilabel:`365 days (12 months)`, :guilabel:`545 days (18 months)`, :guilabel:`730 days (24 months)` or :guilabel:`Custom`. The :guilabel:`Custom` option allows the administrator to set a :guilabel:`Start` and :guilabel:`End` date."
-msgstr "Después escriba una :guilabel:`descripción` y seleccione cuándo :guilabel:`expira` el secreto del cliente. Las opciones disponibles son: :guilabel:`90 días (3 meses)`, :guilabel:`365 días (12 meses)`, :guilabel:`545 días (18 meses)`, :guilabel:`730 días (24 meses)` o :guilabel:`Personalizado`. La opción :guilabel:`Personalizado` permite que el administrador establezca una :guilabel:`fecha de inicio` y una :guilabel:`fecha de finalización`."
+msgstr "Después escriba una :guilabel:`Descripción` y seleccione cuándo :guilabel:`expira` el secreto del cliente. Las opciones disponibles son: :guilabel:`90 días (3 meses)`, :guilabel:`365 días (12 meses)`, :guilabel:`545 días (18 meses)`, :guilabel:`730 días (24 meses)` o :guilabel:`Personalizado`. La opción :guilabel:`Personalizado` permite que el administrador establezca una :guilabel:`fecha de inicio` y una :guilabel:`fecha de finalización`."
 
 #: ../../content/applications/productivity/calendar/outlook.rst:117
 msgid "Finally, click :guilabel:`Add` to :guilabel:`Add a client secret`."
@@ -622,15 +622,15 @@ msgstr "Configuración en Odoo"
 
 #: ../../content/applications/productivity/calendar/outlook.rst:135
 msgid "In the Odoo database, go to :menuselection:`Calendar app --> Configuration --> Settings`, and tick the checkbox beside the :guilabel:`Outlook Calendar` setting. Remember to click :guilabel:`Save` to implement the changes."
-msgstr "En la base de datos de Odoo, vaya a :menuselection:`Calendario --> Configuración --> Ajustes`, y marque la casilla ubicada junto al ajuste :guilabel:`Outlook Calendar`. Recuerde hacer clic en :guilabel:`Guardar` para aplicar los cambios."
+msgstr "En la base de datos de Odoo, vaya a :menuselection:`Calendario --> Configuración --> Ajustes`, y marque la casilla ubicada junto al ajuste :guilabel:`Calendario de Outlook`. Recuerde hacer clic en :guilabel:`Guardar` para aplicar los cambios."
 
 #: ../../content/applications/productivity/calendar/outlook.rst:147
 msgid "From the Microsoft *Azure* portal, under the :guilabel:`Overview` section of the application, copy the :guilabel:`Application (Client) ID`, if it has not already been copied, and paste it into the :guilabel:`Client ID` field in Odoo."
-msgstr "Desde el portal de Microsoft *Azure*, en la sección :guilabel:`Resumen` de la aplicación, copie el :guilabel:`ID de la aplicación (cliente)` en caso de que no lo haya hecho y péguelo en el campo :guilabel:`ID del cliente` en Odoo."
+msgstr "Desde el portal de Microsoft *Azure*, en la sección :guilabel:`Resumen` de la aplicación, copie el :guilabel:`ID de la aplicación (cliente)` en caso de que no lo haya hecho y péguelo en el campo :guilabel:`ID de cliente` en Odoo."
 
 #: ../../content/applications/productivity/calendar/outlook.rst:157
 msgid "Copy the previously-acquired :guilabel:`Value` (Client Secret Value), and paste it into the :guilabel:`Client Secret` field in Odoo."
-msgstr "Copie el :guilabel:`valor` anterior (el valor del secreto de cliente)  y péguelo en el campo :guilabel:`Secreto del cliente` en Odoo."
+msgstr "Copie el :guilabel:`valor` anterior (el valor del secreto de cliente)  y péguelo en el campo :guilabel:`Secreto de cliente` en Odoo."
 
 #: ../../content/applications/productivity/calendar/outlook.rst:168
 msgid "Finally, on the Odoo :menuselection:`Settings --> General Settings` page, click :guilabel:`Save`."
@@ -1470,11 +1470,11 @@ msgstr "Gestionar seguidores"
 
 #: ../../content/applications/productivity/discuss/chatter.rst:72
 msgid "To add another user, or contact, as a follower, click the |user|. This opens a drop-down list of the current followers. Click :guilabel:`Add Followers` to open an :guilabel:`Invite Follower` pop-up window."
-msgstr "Haga clic en el icono correspondiente para agregar otro usuario o contacto como seguidor, esta acción abre una lista con los seguidores actuales. Haga clic en :guilabel:`Agregar seguidores` para abrir la ventana emergente :guilabel:`Invitar seguidor`."
+msgstr "Haga clic en el icono correspondiente para agregar otro usuario o contacto como seguidor, esta acción abre una lista con los seguidores actuales. Haga clic en :guilabel:`Añadir seguidores` para abrir la ventana emergente :guilabel:`Invitar seguidor`."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:76
 msgid "Select one or more contacts from the :guilabel:`Recipients` drop-down list. To notify the contacts, tick the :guilabel:`Send Notification` checkbox. Edit the message template as desired, then click :guilabel:`Add Followers`."
-msgstr "Seleccione uno o más contactos con la lista desplegable :guilabel:`Destinatarios`. Seleccione la casilla :guilabel:`Enviar notificación` para notificar a los contactos, edite la plantilla del mensaje según sea necesario y después haga clic en :guilabel:`Agregar seguidores`."
+msgstr "Seleccione uno o más contactos con la lista desplegable :guilabel:`Destinatarios`. Seleccione la casilla :guilabel:`Enviar notificación` para notificar a los contactos, edite la plantilla del mensaje según sea necesario y después haga clic en :guilabel:`Añadir seguidores`."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:80
 msgid "To remove followers, click the |user| to open the current followers list. Find the name of the follower to be removed, and click the :icon:`fa-remove` :guilabel:`(remove)` icon."
@@ -1554,7 +1554,7 @@ msgstr "Para abrir el redactor completo, haga clic en el icono :icon:`fa-expand`
 
 #: ../../content/applications/productivity/discuss/chatter.rst:185
 msgid "Doing this opens a :guilabel:`Compose Email` pop-up window. Confirm or edit the intended :guilabel:`Recipients` of the message, or add additional recipients. The :guilabel:`Subject` field auto-populates based on the title of the record, though it can be edited, if desired."
-msgstr "Al hacer esto se abrirá una ventana emergente con el :guilabel:`redactor de correo`. Aquí podrá confirmar o editar los :guilabel:`Destinatarios` de un mensaje e incluso agregar unos. El campo :guilabel:`Asunto` se llena de forma automática según el título del registro, aunque se puede editar si lo desea."
+msgstr "Al hacer esto se abrirá una ventana emergente con el :guilabel:`Redactar correo electrónico`. Aquí podrá confirmar o editar los :guilabel:`Destinatarios` de un mensaje e incluso agregar unos. El campo :guilabel:`Asunto` se llena de forma automática según el título del registro, aunque se puede editar si lo desea."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:189
 msgid "To use an :doc:`email template <../../general/companies/email_template/>` for the message, click the |ve| icon, then select a template from the list. Existing templates can also be overwritten or deleted from this menu."
@@ -1650,7 +1650,7 @@ msgstr "Las aplicaciones individuales tienen una lista de *tipos de actividad* e
 
 #: ../../content/applications/productivity/discuss/chatter.rst:308
 msgid "Enter a title for the activity in the :guilabel:`Summary` field, located in the :guilabel:`Schedule Activity` pop-up window."
-msgstr "Escriba un titulo para la actividad en el campo :guilabel:`Resumen` que se ubica en la ventana emergente de :guilabel:`Planear actividad`."
+msgstr "Escriba un titulo para la actividad en el campo :guilabel:`Resumen` que se ubica en la ventana emergente de :guilabel:`Programar actividad`."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:311
 msgid "Select a name from the :guilabel:`Assigned to` drop-down menu to assign the activity to a different user. Otherwise, the user creating the activity is automatically assigned."
@@ -1658,11 +1658,11 @@ msgstr "Seleccione un nombre en el menú desplegable :guilabel:`Asignado a` para
 
 #: ../../content/applications/productivity/discuss/chatter.rst:314
 msgid "Add any additional information in the optional :guilabel:`Log a note...` field."
-msgstr "Agregue cualquier información adicional en el campo opcional :guilabel:`Escribir una nota...`."
+msgstr "Agregue cualquier información adicional en el campo opcional :guilabel:`Registrar una nota...`."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:317
 msgid "The :guilabel:`Due Date` field on the :guilabel:`Schedule Activity` pop-up window auto-populates based on the configuration settings for the selected :guilabel:`Activity Type`. However, this date can be changed by selecting a day on the calendar in the :guilabel:`Due Date` field."
-msgstr "El campo :guilabel:`Fecha límite` en la ventana emergente de  :guilabel:`Planear actividad` se completa de manera automática según los ajustes de la configuración para el :guilabel:`tipo de actividad` que seleccionó. Sin embargo, puede cambiar esta fecha si selecciona un día en el calendario en el campo :guilabel:`Fecha límite`.  "
+msgstr "El campo :guilabel:`Fecha de vencimiento` en la ventana emergente de  :guilabel:`Programar actividad` se completa de manera automática según los ajustes de la configuración para el :guilabel:`Tipo de actividad` que seleccionó. Sin embargo, puede cambiar esta fecha si selecciona un día en el calendario en el campo :guilabel:`Fecha de vencimiento`.  "
 
 #: ../../content/applications/productivity/discuss/chatter.rst:321
 msgid "Lastly, click one of the following buttons:"
@@ -1670,7 +1670,7 @@ msgstr "Por último, haga clic en uno de los siguientes botones: "
 
 #: ../../content/applications/productivity/discuss/chatter.rst:323
 msgid ":guilabel:`Schedule`: adds the activity to the chatter under :guilabel:`Planned activities`."
-msgstr ":guilabel:`Planear`: agrega la actividad al chatter en la sección :guilabel:`Actividades planeadas`."
+msgstr ":guilabel:`Programar`: agrega la actividad al chatter en la sección :guilabel:`Actividades planeadas`."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:324
 msgid ":guilabel:`Schedule & Mark as Done`: adds the details of the activity to the chatter under :guilabel:`Today`. The activity is added to :guilabel:`Today`, and is automatically marked as done."
@@ -1706,7 +1706,7 @@ msgstr "Haga clic en el icono :icon:`fa-info-circle` :guilabel:`(información)` 
 
 #: ../../content/applications/productivity/discuss/chatter.rst:356
 msgid "After completing an activity, click :guilabel:`Mark Done` under the activity entry in the chatter. This opens a :guilabel:`Mark Done` pop-up window, where additional notes about the activity can be entered. After adding any comments to the pop-up window, click: :guilabel:`Done \\& Schedule Next`, :guilabel:`Done`, or :guilabel:`Discard`."
-msgstr "Después de completar una actividad, haga clic en :guilabel:`Marcar como hecho` en la entrada de la actividad en el chatter. Esto hará que se abra una ventana emergente :guilabel:`Marcar como hecho`, donde podrá ingresar notas adicionales sobre la actividad. Después de agregar los comentarios en la ventana emergente, haga clic en: :guilabel:`Hecho y programar siguiente`, :guilabel:`Listo`, o :guilabel:`Descartar`."
+msgstr "Después de completar una actividad, haga clic en :guilabel:`Marcar como hecho` en la entrada de la actividad en el chatter. Esto hará que se abra una ventana emergente :guilabel:`Marcar como hecho`, donde podrá ingresar notas adicionales sobre la actividad. Después de agregar los comentarios en la ventana emergente, haga clic en: :guilabel:`Hecho y programar siguiente`, :guilabel:`Hecho`, o :guilabel:`Descartar`."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:361
 msgid "After the activity is marked complete, an entry with the activity type, title, and any other details that were included in the pop-up window are listed in the chatter."
@@ -1766,7 +1766,7 @@ msgstr "Para activar el *Traductor de Google* en cualquier base de datos, primer
 
 #: ../../content/applications/productivity/discuss/chatter.rst:431
 msgid "After creating the API key, navigate to the :menuselection:`Settings app --> Discuss section` and paste the key in the :guilabel:`Message Translation` field. Click :guilabel:`Save` to save the changes."
-msgstr "Después de crear una clave API, vaya a :menuselection:`Ajustes --> sección de Conversaciones` y pegue la clave en el campo :guilabel:`Traducción de mensajes`. Haga clic en :guilabel:`Guardar` para guardar los cambios."
+msgstr "Después de crear una clave API, vaya a :menuselection:`Ajustes --> sección de Conversaciones` y pegue la clave en el campo :guilabel:`Traducción del mensaje`. Haga clic en :guilabel:`Guardar` para guardar los cambios."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:436
 msgid "Translate a chatter message"
@@ -2210,7 +2210,7 @@ msgstr ":guilabel:`Supervisor`: además, ve las actividades que supervisa;"
 
 #: ../../content/applications/productivity/activities.rst:21
 msgid ":guilabel:`Manager`: sees all activities and configures the app."
-msgstr ":guilabel:`Manager`: ve todas las actividades y configura la aplicación."
+msgstr ":guilabel:`Gerente`: ve todas las actividades y configura la aplicación."
 
 #: ../../content/applications/productivity/activities.rst:24
 msgid "The activity board"
@@ -2234,7 +2234,7 @@ msgstr ":menuselection:`Actividades --> Todas las actividades`: todas las activi
 
 #: ../../content/applications/productivity/activities.rst:33
 msgid "Besides the standard fields, an activity carries a :guilabel:`Supervisor`, :guilabel:`Tags`, a :guilabel:`Priority`, a :guilabel:`Feedback` and, when it is cancelled, a :guilabel:`Cancel Reason`. Its status is shown as :guilabel:`Overdue`, :guilabel:`Today`, :guilabel:`Planned`, :guilabel:`Done`, or :guilabel:`Cancelled`."
-msgstr "Además de los campos estándar, una actividad tiene un :guilabel:`Supervisor`, :guilabel:`Etiquetas`, una :guilabel:`Prioridad`, unos :guilabel:`Comentarios` y, cuando se cancela, un :guilabel:`Motivo de cancelación`. Su estado se muestra como :guilabel:`Atrasada`, :guilabel:`Hoy`, :guilabel:`Planificada`, :guilabel:`Hecha` o :guilabel:`Cancelada`."
+msgstr "Además de los campos estándar, una actividad tiene un :guilabel:`Supervisor`, :guilabel:`Etiquetas`, una :guilabel:`Prioridad`, unos :guilabel:`Comentarios` y, cuando se cancela, un :guilabel:`Motivo de cancelación`. Su estado se muestra como :guilabel:`Atrasada`, :guilabel:`Hoy`, :guilabel:`Planificado`, :guilabel:`Hecho` o :guilabel:`Cancelado`."
 
 #: ../../content/applications/productivity/activities.rst:46
 msgid "Multiple assignees"
@@ -2242,7 +2242,7 @@ msgstr "Varios responsables asignados"
 
 #: ../../content/applications/productivity/activities.rst:48
 msgid "When :guilabel:`Multiple Assignees` is enabled in :menuselection:`Settings --> Activities`, an activity can be assigned to several users at once. Each of them then gets their own copy of the activity, so everyone can complete their part separately."
-msgstr "Cuando se activa :guilabel:`Varios responsables` en :menuselection:`Ajustes --> Actividades`, una actividad se puede asignar a varios usuarios a la vez. Cada uno de ellos recibe entonces su propia copia de la actividad, de modo que todos puedan completar su parte por separado."
+msgstr "Cuando se activa :guilabel:`Varios asignados` en :menuselection:`Ajustes --> Actividades`, una actividad se puede asignar a varios usuarios a la vez. Cada uno de ellos recibe entonces su propia copia de la actividad, de modo que todos puedan completar su parte por separado."
 
 #: ../../content/applications/productivity/activities.rst:55
 msgid "Tags classify activities across models. Manage them in :menuselection:`Activities --> Configuration --> Tags`, where each tag has a :guilabel:`Name` and a :guilabel:`Color`."
@@ -2254,7 +2254,7 @@ msgstr "Recordatorios"
 
 #: ../../content/applications/productivity/activities.rst:61
 msgid "A **reminder** notifies the assignee before the activity is due. Create reminders in :menuselection:`Activities --> Configuration --> Reminders`, with a :guilabel:`Type` (e-mail or notification), a :guilabel:`Remind Before` value and its :guilabel:`Reminder Unit`, and optionally a :guilabel:`Custom Notification Template`. Then add the reminders to an activity in its :guilabel:`Alarms` field."
-msgstr "Un **recordatorio** notifica al responsable antes de que venza la actividad. Cree recordatorios en :menuselection:`Actividades --> Configuración --> Recordatorios`, con un :guilabel:`Tipo` (correo electrónico o notificación), un valor de :guilabel:`Recordar antes de` y su :guilabel:`Unidad de recordatorio`, y opcionalmente una :guilabel:`Plantilla de notificación personalizada`. Después, añada los recordatorios a una actividad en su campo :guilabel:`Alarmas`."
+msgstr "Un **recordatorio** notifica al responsable antes de que venza la actividad. Cree recordatorios en :menuselection:`Actividades --> Configuración --> Recordatorios`, con un :guilabel:`Tipo` (correo electrónico o notificación), un valor de :guilabel:`Recordar antes` y su :guilabel:`Unidad del recordatorio`, y opcionalmente una :guilabel:`Plantilla de notificación personalizada`. Después, añada los recordatorios a una actividad en su campo :guilabel:`Alarmas`."
 
 #: ../../content/applications/productivity/activities.rst:67
 msgid "Reminders are sent by a scheduled action, and only when :guilabel:`Activity Reminders` is enabled in :menuselection:`Settings --> Activities`."
@@ -2270,7 +2270,7 @@ msgstr "En :menuselection:`Ajustes --> Actividades`, el bloque :guilabel:`Notifi
 
 #: ../../content/applications/productivity/activities.rst:78
 msgid ":guilabel:`Overdue Activity Escalation` notifies the supervisor when an activity stays overdue longer than the configured number of days."
-msgstr ":guilabel:`Escalado de actividades atrasadas` notifica al supervisor cuando una actividad permanece atrasada más tiempo del número de días configurado."
+msgstr ":guilabel:`Escalado de actividad vencida` notifica al supervisor cuando una actividad permanece atrasada más tiempo del número de días configurado."
 
 #: ../../content/applications/productivity/activities.rst:89
 msgid "Recurring activities"
@@ -2286,7 +2286,7 @@ msgstr ":guilabel:`Repetir cada`: el intervalo y su unidad;"
 
 #: ../../content/applications/productivity/activities.rst:95
 msgid "the days of the week, the :guilabel:`Date of Month`, or the month, depending on the recurrence type chosen;"
-msgstr "los días de la semana, la :guilabel:`Fecha del mes` o el mes, según el tipo de recurrencia elegido;"
+msgstr "los días de la semana, la :guilabel:`Día del mes` o el mes, según el tipo de recurrencia elegido;"
 
 #: ../../content/applications/productivity/activities.rst:97
 msgid ":guilabel:`Repeat` or :guilabel:`End Date`: how the recurrence ends;"
@@ -2306,7 +2306,7 @@ msgstr "Historial de actividades"
 
 #: ../../content/applications/productivity/activities.rst:105
 msgid ":menuselection:`Activities --> Activity History` gives a 360° view of every activity — open and completed — with its :guilabel:`Customer`, :guilabel:`Company`, :guilabel:`Assigned To`, :guilabel:`Supervisor`, :guilabel:`Activity Type`, :guilabel:`Due Date`, :guilabel:`Summary`, and :guilabel:`Feedback`. The same history is available from a contact, in :menuselection:`Contacts --> Activity History`."
-msgstr ":menuselection:`Actividades --> Historial de actividades` ofrece una vista de 360° de cada actividad, abierta o completada, con su :guilabel:`Cliente`, :guilabel:`Empresa`, :guilabel:`Asignado a`, :guilabel:`Supervisor`, :guilabel:`Tipo de actividad`, :guilabel:`Fecha límite`, :guilabel:`Resumen` y :guilabel:`Comentarios`. El mismo historial está disponible desde un contacto, en :menuselection:`Contactos --> Historial de actividades`."
+msgstr ":menuselection:`Actividades --> Historial de actividades` ofrece una vista de 360° de cada actividad, abierta o completada, con su :guilabel:`Cliente`, :guilabel:`Compañía`, :guilabel:`Asignado a`, :guilabel:`Supervisor`, :guilabel:`Tipo de actividad`, :guilabel:`Fecha de vencimiento`, :guilabel:`Resumen` y :guilabel:`Comentarios`. El mismo historial está disponible desde un contacto, en :menuselection:`Contactos --> Historial de actividades`."
 
 #: ../../content/applications/productivity/activities.rst:112
 msgid "Reporting"
@@ -2322,7 +2322,7 @@ msgstr "Registro de eliminaciones"
 
 #: ../../content/applications/productivity/activities.rst:120
 msgid "Every deleted activity leaves a trace in :menuselection:`Activities --> Configuration --> Deletion Log`, with the document it belonged to, its summary, its assignee, its due date, who deleted it, when, and the :guilabel:`Removal Reason`. This makes it possible to see what was planned on a record even after the activity is gone."
-msgstr "Cada actividad eliminada deja un rastro en :menuselection:`Actividades --> Configuración --> Registro de eliminaciones`, con el documento al que pertenecía, su resumen, su responsable, su fecha límite, quién la eliminó, cuándo, y el :guilabel:`Motivo de eliminación`. Esto permite ver lo que estaba planificado en un registro incluso después de que la actividad haya desaparecido."
+msgstr "Cada actividad eliminada deja un rastro en :menuselection:`Actividades --> Configuración --> Registro de eliminaciones`, con el documento al que pertenecía, su resumen, su responsable, su fecha límite, quién la eliminó, cuándo, y el :guilabel:`Motivo de retirada`. Esto permite ver lo que estaba planificado en un registro incluso después de que la actividad haya desaparecido."
 
 #: ../../content/applications/productivity/activities.rst:126
 msgid "In a multi-company database, the *Activity Multi-Company Fix* (``activity_multicompany``) module prevents access errors on activities belonging to another company."
@@ -3126,7 +3126,7 @@ msgstr "Modo de escritura / supervisión"
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:185
 msgid "Keep the task :guilabel:`Write Mode` on **confirm** for public-facing bots so every create waits for a supervisor. For high-volume ticket spam, either:"
-msgstr "Mantenga el :guilabel:`Write Mode` de la tarea en **confirm** para los bots orientados al público, de modo que cada creación espere a un supervisor. Para un volumen alto de tickets basura, opte por:"
+msgstr "Mantenga el :guilabel:`Modo de escritura` de la tarea en **confirm** para los bots orientados al público, de modo que cada creación espere a un supervisor. Para un volumen alto de tickets basura, opte por:"
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:188
 msgid "leave *confirm* and batch-approve, **or**"
@@ -3250,11 +3250,11 @@ msgstr "Prefiera una persona de chat (sin usuario agente vinculado) para que las
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:272
 msgid "Global chat :guilabel:`Ai Write Mode`: **confirm** or **hybrid** for SOX-style trails; *auto* only in tightly controlled pilot groups."
-msgstr "El :guilabel:`Ai Write Mode` global del chat: **confirm** o **hybrid** para rastros de tipo SOX; *auto* solo en grupos piloto estrictamente controlados."
+msgstr "El :guilabel:`Modo de escritura de la IA` global del chat: **confirm** o **hybrid** para rastros de tipo SOX; *auto* solo en grupos piloto estrictamente controlados."
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:274
 msgid "Restrict the persona to Accounting groups via :guilabel:`Restricted to groups` if needed."
-msgstr "Restrinja la persona a los grupos de Contabilidad mediante :guilabel:`Restricted to groups` si es necesario."
+msgstr "Restrinja la persona a los grupos de Contabilidad mediante :guilabel:`Restringido a grupos` si es necesario."
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:278
 msgid "Variant D2 — Scheduled autonomous AP agent"
@@ -3286,23 +3286,23 @@ msgstr "Tarea permanente:"
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:292
 msgid ":guilabel:`Cadence` *On a schedule*, interval e.g. 1 hour;"
-msgstr ":guilabel:`Cadence` *On a schedule*, intervalo por ejemplo de 1 hora;"
+msgstr ":guilabel:`Cadencia` *On a schedule*, intervalo por ejemplo de 1 hora;"
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:293
 msgid ":guilabel:`Deadline Seconds` well under the worker budget (e.g. 600 if the dispatch tick budget is ~870 — a deadline above the budget skips the run);"
-msgstr ":guilabel:`Deadline Seconds` bastante por debajo del presupuesto del worker (por ejemplo, 600 si el presupuesto del tick de despacho es de ~870 — un plazo por encima del presupuesto omite la ejecución);"
+msgstr ":guilabel:`Segundos hasta la fecha límite` bastante por debajo del presupuesto del worker (por ejemplo, 600 si el presupuesto del tick de despacho es de ~870 — un plazo por encima del presupuesto omite la ejecución);"
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:295
 msgid ":guilabel:`Write Mode` **Apply immediately** (*auto*) is acceptable **only because** the skill never posts and the agent never pays — risk stays at “wrong draft lines”, not “posted garbage”. Use *confirm* if you want every line change to wait for the supervisor;"
-msgstr ":guilabel:`Write Mode` **Apply immediately** (*auto*) es aceptable **únicamente porque** la skill nunca contabiliza y el agente nunca paga — el riesgo se queda en \"líneas de borrador incorrectas\", no en \"basura contabilizada\". Use *confirm* si quiere que cada cambio de línea espere al supervisor;"
+msgstr ":guilabel:`Modo de escritura` **Apply immediately** (*auto*) es aceptable **únicamente porque** la skill nunca contabiliza y el agente nunca paga — el riesgo se queda en \"líneas de borrador incorrectas\", no en \"basura contabilizada\". Use *confirm* si quiere que cada cambio de línea espere al supervisor;"
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:299
 msgid "standing :guilabel:`Instruction` (scout): search candidate integer ids only — do not read PDFs — call ``queue_work_items`` (``account.move``, batches of 200), report queued/skipped counts, stop, never post;"
-msgstr "instrucción :guilabel:`Instruction` permanente (exploradora): buscar solo los ids enteros candidatos — no leer los PDF — llamar a ``queue_work_items`` (``account.move``, en lotes de 200), informar del recuento de encolados/omitidos, detenerse, nunca contabilizar;"
+msgstr "instrucción :guilabel:`Instrucción` permanente (exploradora): buscar solo los ids enteros candidatos — no leer los PDF — llamar a ``queue_work_items`` (``account.move``, en lotes de 200), informar del recuento de encolados/omitidos, detenerse, nunca contabilizar;"
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:303
 msgid ":guilabel:`Work Item Instruction` (child): the AP playbook for ``{model}`` id ``{id}`` only — never ``queue_work_items``, never post, never invent partners/taxes/accounts. See :ref:`ai/agents/work-items`."
-msgstr ":guilabel:`Work Item Instruction` (hija): el playbook de cuentas a pagar solo para el id ``{id}`` de ``{model}`` — nunca ``queue_work_items``, nunca contabilizar, nunca inventar contactos, impuestos o cuentas. Consulte :ref:`ai/agents/work-items`."
+msgstr ":guilabel:`Instrucción del elemento de trabajo` (hija): el playbook de cuentas a pagar solo para el id ``{id}`` de ``{model}`` — nunca ``queue_work_items``, nunca contabilizar, nunca inventar contactos, impuestos o cuentas. Consulte :ref:`ai/agents/work-items`."
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:307
 msgid "Channel rules only if humans also address the agent; pure cron tasks need no public channel audience."
@@ -3310,7 +3310,7 @@ msgstr "Reglas de canal solo si también hay personas que se dirigen al agente; 
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:309
 msgid "Supervisor watches :menuselection:`AI --> Agents --> Work Items` and :menuselection:`AI --> Agents --> Runs`, plus Accounting drafts; when *confirm* is used, approval To-Dos land on the **bill** (see :ref:`ai/agents/task-write-mode`)."
-msgstr "El supervisor vigila :menuselection:`AI --> Agents --> Work Items` y :menuselection:`AI --> Agents --> Runs`, además de los borradores de Contabilidad; cuando se usa *confirm*, las tareas pendientes de aprobación aparecen en la **factura** (consulte :ref:`ai/agents/task-write-mode`)."
+msgstr "El supervisor vigila :menuselection:`IA --> Agentes --> Elementos de trabajo` y :menuselection:`IA --> Agentes --> Ejecuciones`, además de los borradores de Contabilidad; cuando se usa *confirm*, las tareas pendientes de aprobación aparecen en la **factura** (consulte :ref:`ai/agents/task-write-mode`)."
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:315
 msgid "*auto* on an AP task that can **post**, register payment, or change bank data is not the same recipe. Keep posting out of the skill and off the allowed actions list."
@@ -3470,7 +3470,7 @@ msgstr "Se ejecuta **como el usuario que chatea** (con sus permisos y su pertene
 
 #: ../../content/applications/productivity/ai/agents.rst:18
 msgid ":guilabel:`System Prompt`, model overrides and capabilities shape the session."
-msgstr ":guilabel:`Instrucción del sistema`, las anulaciones de modelo y las capacidades determinan la sesión."
+msgstr ":guilabel:`Prompt del sistema`, las anulaciones de modelo y las capacidades determinan la sesión."
 
 #: ../../content/applications/productivity/ai/agents.rst:20
 msgid "No supervisor required."
@@ -3562,7 +3562,7 @@ msgstr "``0``, el valor predeterminado, no envía ningún límite: se aplica el 
 
 #: ../../content/applications/productivity/ai/agents.rst:62
 msgid ":guilabel:`System Prompt`"
-msgstr ":guilabel:`Instrucción del sistema`"
+msgstr ":guilabel:`Prompt del sistema`"
 
 #: ../../content/applications/productivity/ai/agents.rst:62
 msgid "Appended after global prompt layers."
@@ -3602,7 +3602,7 @@ msgstr "Obligatorio si se ha definido un usuario; debe tener el permiso IA: Usua
 
 #: ../../content/applications/productivity/ai/agents.rst:73
 msgid ":guilabel:`Channel Rules`"
-msgstr ":guilabel:`Reglas de canal`"
+msgstr ":guilabel:`Reglas del canal`"
 
 #: ../../content/applications/productivity/ai/agents.rst:73
 msgid "Default-deny allow-lists per channel."
@@ -3666,7 +3666,7 @@ msgstr ":guilabel:`Puede solicitar`: la audiencia puede desencadenar una ejecuci
 
 #: ../../content/applications/productivity/ai/agents.rst:105
 msgid ":guilabel:`Scope Mode`:"
-msgstr ":guilabel:`Modo de alcance`:"
+msgstr ":guilabel:`Modo de ámbito`:"
 
 #: ../../content/applications/productivity/ai/agents.rst:107
 msgid "**Agent rights ∩ requester rights** (``intersect``, default) — capability *classes* both hold. Data is still read/written as the **agent**."
@@ -3762,7 +3762,7 @@ msgstr ":guilabel:`Instrucción del elemento de trabajo`: la **hija**. Marcadore
 
 #: ../../content/applications/productivity/ai/agents.rst:162
 msgid "The scheduled action **AI: drain agent work items** (every minute) starts at most eight pending items per tick, still bounded by the same dispatch budget as other scheduled tasks. Child runs leave :guilabel:`Parent Run` empty — that field marks an **approval replay**, not fan-out — and they do **not** count towards the task's daily cap or circuit breaker."
-msgstr "La acción programada **IA: procesar elementos de trabajo del agente** (cada minuto) inicia como máximo ocho elementos pendientes por ciclo, siempre dentro del mismo presupuesto de envío que las demás tareas programadas. Las ejecuciones secundarias dejan vacío el campo :guilabel:`Ejecución principal`; ese campo marca una **repetición de aprobación**, no una ramificación, y **no** cuentan para el límite diario ni para el disyuntor de la tarea."
+msgstr "La acción programada **IA: procesar elementos de trabajo del agente** (cada minuto) inicia como máximo ocho elementos pendientes por ciclo, siempre dentro del mismo presupuesto de envío que las demás tareas programadas. Las ejecuciones secundarias dejan vacío el campo :guilabel:`Ejecución superior`; ese campo marca una **repetición de aprobación**, no una ramificación, y **no** cuentan para el límite diario ni para el disyuntor de la tarea."
 
 #: ../../content/applications/productivity/ai/agents.rst:168
 msgid "``queue_work_items`` needs the **write** capability. It only works on a standing-task run (not an inbox run, not a child), and it only queues records the agent can **read**. Ids that are still pending or running are skipped; done or failed items can be queued again. At most 200 ids per call."
@@ -3834,15 +3834,15 @@ msgstr "Detener una ejecución"
 
 #: ../../content/applications/productivity/ai/agents.rst:237
 msgid "Open the run and use :guilabel:`Request Cancellation`. The button appears while the run is :guilabel:`Running` or :guilabel:`Waiting for approval`, and only the agent's supervisor or an AI administrator may request it."
-msgstr "Abra la ejecución y use :guilabel:`Solicitar cancelación`. El botón aparece mientras la ejecución está en estado :guilabel:`En ejecución` o :guilabel:`Esperando aprobación`, y solo el supervisor del agente o un administrador de IA pueden solicitarla."
+msgstr "Abra la ejecución y use :guilabel:`Solicitar cancelación`. El botón aparece mientras la ejecución está en estado :guilabel:`En curso` o :guilabel:`En espera de aprobación`, y solo el supervisor del agente o un administrador de IA pueden solicitarla."
 
 #: ../../content/applications/productivity/ai/agents.rst:242
 msgid "This button is not a general \"stop the agent now\" control, because of the ledger behaviour above: a run that is executing normally has no row yet, so there is nothing to open. In practice you use it on a run parked in :guilabel:`Waiting for approval`, or on one left in :guilabel:`Running` by an earlier server incident. To stop unwanted work in advance instead, keep the task's :guilabel:`Deadline Seconds` short enough that a run ends on its own, and clear :guilabel:`Active` on the task so it is not dispatched again."
-msgstr "Este botón no es un control general para \"detener el agente ahora\", debido al comportamiento del registro descrito antes: una ejecución que se está ejecutando con normalidad todavía no tiene fila, así que no hay nada que abrir. En la práctica se usa en una ejecución detenida en :guilabel:`Esperando aprobación`, o en una que quedó en estado :guilabel:`En ejecución` por un incidente anterior del servidor. Para evitar de antemano un trabajo no deseado, mantenga el valor de :guilabel:`Segundos límite` de la tarea lo bastante corto para que una ejecución termine por sí sola, y desmarque :guilabel:`Activo` en la tarea para que no se vuelva a enviar."
+msgstr "Este botón no es un control general para \"detener el agente ahora\", debido al comportamiento del registro descrito antes: una ejecución que se está ejecutando con normalidad todavía no tiene fila, así que no hay nada que abrir. En la práctica se usa en una ejecución detenida en :guilabel:`En espera de aprobación`, o en una que quedó en estado :guilabel:`En curso` por un incidente anterior del servidor. Para evitar de antemano un trabajo no deseado, mantenga el valor de :guilabel:`Segundos hasta la fecha límite` de la tarea lo bastante corto para que una ejecución termine por sí sola, y desmarque :guilabel:`Activo` en la tarea para que no se vuelva a enviar."
 
 #: ../../content/applications/productivity/ai/agents.rst:250
 msgid "Cancelling a run parked in :guilabel:`Waiting for approval` withdraws its open write proposals, then closes the run: as :guilabel:`Done` if a proposal of that run had already been applied, otherwise as :guilabel:`Failed` with :guilabel:`Failure Type` ``waiting_approval_empty``, since nothing it proposed was approved."
-msgstr "Cancelar una ejecución detenida en :guilabel:`Esperando aprobación` retira sus propuestas de escritura abiertas y después cierra la ejecución: como :guilabel:`Hecho` si ya se había aplicado alguna propuesta de esa ejecución, o como :guilabel:`Fallido` con :guilabel:`Tipo de fallo` ``waiting_approval_empty`` si no se aprobó ninguna de sus propuestas."
+msgstr "Cancelar una ejecución detenida en :guilabel:`En espera de aprobación` retira sus propuestas de escritura abiertas y después cierra la ejecución: como :guilabel:`Hecho` si ya se había aplicado alguna propuesta de esa ejecución, o como :guilabel:`Fallido` con :guilabel:`Tipo de fallo` ``waiting_approval_empty`` si no se aprobó ninguna de sus propuestas."
 
 #: ../../content/applications/productivity/ai/agents.rst:256
 msgid "Cancelling a run that is genuinely still executing is **cooperative, never immediate**. The request is read at the start of each provider round and again before each tool call, so it takes effect only after the round-trip already in flight has finished — allow up to about two minutes at the shipped defaults, and never in the middle of a provider call. Such a run then closes as :guilabel:`Failed` with :guilabel:`Failure Type` ``cancelled``; there is no separate *Cancelled* state. The steps it did execute stay on the :guilabel:`Steps` tab, the run's answer records the cancellation rather than a partial reply, and any write proposals it had already opened are cancelled with it, so nothing is left approvable. A cancellation is neutral for the task's automatic deactivation: it neither counts as a failure nor clears an existing streak."
@@ -3850,7 +3850,7 @@ msgstr "Cancelar una ejecución que realmente sigue en curso es **cooperativo, n
 
 #: ../../content/applications/productivity/ai/agents.rst:270
 msgid "If no worker is left to hear the request, the button answers :guilabel:`Nothing in flight to cancel` instead of confirming. Nothing is broken — the run has most likely already finished, or its worker died — but no worker will see the request and the run will not stop on its account. Reload the record to see where it really stands; a dead worker's run is closed by the stuck-run reaper below."
-msgstr "Si no queda ningún proceso que atienda la solicitud, el botón responde :guilabel:`Nada en curso que cancelar` en lugar de confirmar. No hay ningún fallo; lo más probable es que la ejecución ya haya terminado o que su proceso haya muerto, pero ningún proceso verá la solicitud y la ejecución no se detendrá por ese motivo. Actualice el registro para ver su estado real; la ejecución de un proceso muerto la cierra el recolector de ejecuciones atascadas descrito a continuación."
+msgstr "Si no queda ningún proceso que atienda la solicitud, el botón responde :guilabel:`No hay nada en curso que cancelar` en lugar de confirmar. No hay ningún fallo; lo más probable es que la ejecución ya haya terminado o que su proceso haya muerto, pero ningún proceso verá la solicitud y la ejecución no se detendrá por ese motivo. Actualice el registro para ver su estado real; la ejecución de un proceso muerto la cierra el recolector de ejecuciones atascadas descrito a continuación."
 
 #: ../../content/applications/productivity/ai/agents.rst:280
 msgid "Runs whose worker died"
@@ -3866,11 +3866,11 @@ msgstr "No espere ese cierre en 15 minutos. La ejecución tiene que superar su p
 
 #: ../../content/applications/productivity/ai/agents.rst:299
 msgid "The same scheduled action also frees runs parked in :guilabel:`Waiting for approval` that have no open proposal left — for example when the last proposal expired while the supervisor was still confirming it — so such a run is not left holding an activity reminder for a proposal that no longer exists."
-msgstr "Esa misma acción programada también libera las ejecuciones detenidas en :guilabel:`Esperando aprobación` que ya no tienen ninguna propuesta abierta; por ejemplo, cuando la última propuesta caducó mientras el supervisor aún la estaba confirmando; de modo que esa ejecución no se queda con un recordatorio de actividad para una propuesta que ya no existe."
+msgstr "Esa misma acción programada también libera las ejecuciones detenidas en :guilabel:`En espera de aprobación` que ya no tienen ninguna propuesta abierta; por ejemplo, cuando la última propuesta caducó mientras el supervisor aún la estaba confirmando; de modo que esa ejecución no se queda con un recordatorio de actividad para una propuesta que ya no existe."
 
 #: ../../content/applications/productivity/ai/agents.rst:305
 msgid "Every dispatch attempt carries a :guilabel:`Dispatch Token`, shown on the run form. It is the key that joins a run to the short-lived record written when the run started, which is what both the reaper and :guilabel:`Request Cancellation` look for — so it is also the value to quote when correlating a run with the server log."
-msgstr "Cada intento de envío lleva un :guilabel:`Token de envío`, que se muestra en el formulario de la ejecución. Es la clave que vincula una ejecución con el registro efímero escrito al iniciarse, que es lo que buscan tanto el recolector como :guilabel:`Solicitar cancelación`; por eso es también el valor que hay que citar al correlacionar una ejecución con el registro del servidor."
+msgstr "Cada intento de envío lleva un :guilabel:`Token de despacho`, que se muestra en el formulario de la ejecución. Es la clave que vincula una ejecución con el registro efímero escrito al iniciarse, que es lo que buscan tanto el recolector como :guilabel:`Solicitar cancelación`; por eso es también el valor que hay que citar al correlacionar una ejecución con el registro del servidor."
 
 #: ../../content/applications/productivity/ai/agents.rst:314
 msgid "Pre-run instruction check"
@@ -3878,7 +3878,7 @@ msgstr "Comprobación de la instrucción antes de la ejecución"
 
 #: ../../content/applications/productivity/ai/agents.rst:316
 msgid "Scheduled and :guilabel:`Run Now` runs execute the task's standing instruction directly. Tick :guilabel:`Triage On Dispatch` on a task to run the same stage-1 check that an agent addressed from chat receives. The check can only **narrow** what the task already grants — it never widens anything."
-msgstr "Las ejecuciones programadas y las de :guilabel:`Ejecutar ahora` ejecutan directamente la instrucción permanente de la tarea. Marque :guilabel:`Triaje al enviar` en una tarea para ejecutar la misma comprobación de la etapa 1 que recibe un agente al que se dirigen desde el chat. La comprobación solo puede **restringir** lo que la tarea ya concede; nunca amplía nada."
+msgstr "Las ejecuciones programadas y las de :guilabel:`Ejecutar ahora` ejecutan directamente la instrucción permanente de la tarea. Marque :guilabel:`Triaje al despachar` en una tarea para ejecutar la misma comprobación de la etapa 1 que recibe un agente al que se dirigen desde el chat. La comprobación solo puede **restringir** lo que la tarea ya concede; nunca amplía nada."
 
 #: ../../content/applications/productivity/ai/agents.rst:321
 msgid "Consider before enabling it:"
@@ -3886,7 +3886,7 @@ msgstr "Tenga en cuenta lo siguiente antes de habilitarlo:"
 
 #: ../../content/applications/productivity/ai/agents.rst:323
 msgid "it costs one extra model call per run (time and tokens), and the scheduler reserves about 30 seconds of its own tick budget for that call. A task whose :guilabel:`Deadline Seconds` already sits close to the worker's time limit may therefore be skipped rather than dispatched;"
-msgstr "supone una llamada adicional al modelo por ejecución (tiempo y tokens), y el planificador reserva unos 30 segundos de su propio presupuesto de ciclo para esa llamada. Por eso una tarea cuyo valor de :guilabel:`Segundos límite` ya esté cerca del límite de tiempo del proceso puede omitirse en lugar de enviarse;"
+msgstr "supone una llamada adicional al modelo por ejecución (tiempo y tokens), y el planificador reserva unos 30 segundos de su propio presupuesto de ciclo para esa llamada. Por eso una tarea cuyo valor de :guilabel:`Segundos hasta la fecha límite` ya esté cerca del límite de tiempo del proceso puede omitirse en lugar de enviarse;"
 
 #: ../../content/applications/productivity/ai/agents.rst:327
 msgid "the check has its own short deadline of 15 seconds and is fail-closed: a triage model that is slow, unreachable, or answers off-schema counts as a refusal;"
@@ -4314,7 +4314,7 @@ msgstr "Configuración guiada del sistema"
 
 #: ../../content/applications/productivity/ai/configuration.rst:18
 msgid ":guilabel:`Start setup assistant` — opens chat with the guided setup skill for system administrators. Module install is never free-form: when setup plans are used, install goes through a confirmable plan (MVP may propose only)."
-msgstr ":guilabel:`Iniciar asistente de configuración` — abre el chat con la habilidad de configuración guiada para administradores del sistema. La instalación de módulos nunca es libre: cuando se utilizan planes de configuración, la instalación pasa por un plan que debe confirmarse (el MVP puede limitarse a proponer)."
+msgstr ":guilabel:`Iniciar el asistente de configuración` — abre el chat con la habilidad de configuración guiada para administradores del sistema. La instalación de módulos nunca es libre: cuando se utilizan planes de configuración, la instalación pasa por un plan que debe confirmarse (el MVP puede limitarse a proponer)."
 
 #: ../../content/applications/productivity/ai/configuration.rst:23
 msgid "Abuse guardrails"
@@ -4326,7 +4326,7 @@ msgstr "Significado"
 
 #: ../../content/applications/productivity/ai/configuration.rst:28
 msgid ":guilabel:`Ai Max Strikes`"
-msgstr ":guilabel:`Ai Max Strikes`"
+msgstr ":guilabel:`Máximo de infracciones de la IA`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:28
 msgid "Violations in the window before a temporary ban (default 3)."
@@ -4334,7 +4334,7 @@ msgstr "Infracciones dentro de la ventana antes de una prohibición temporal (3 
 
 #: ../../content/applications/productivity/ai/configuration.rst:31
 msgid ":guilabel:`Ai Strike Window Hours`"
-msgstr ":guilabel:`Ai Strike Window Hours`"
+msgstr ":guilabel:`Ventana de infracciones de la IA (horas)`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:31
 msgid "Hours over which strikes accumulate (default 24)."
@@ -4342,7 +4342,7 @@ msgstr "Horas durante las cuales se acumulan las faltas (24 de forma predetermin
 
 #: ../../content/applications/productivity/ai/configuration.rst:34
 msgid ":guilabel:`Ai Ban Minutes`"
-msgstr ":guilabel:`Ai Ban Minutes`"
+msgstr ":guilabel:`Minutos de bloqueo de la IA`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:34
 msgid "How long a ban lasts (default 60)."
@@ -4354,7 +4354,7 @@ msgstr "Límites de frecuencia y uso"
 
 #: ../../content/applications/productivity/ai/configuration.rst:43
 msgid ":guilabel:`Ai Rate Limit Rpm`"
-msgstr ":guilabel:`Ai Rate Limit Rpm`"
+msgstr ":guilabel:`Límite de frecuencia de la IA (solicitudes por minuto)`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:43
 msgid "Max requests per minute per user (default 20)."
@@ -4362,7 +4362,7 @@ msgstr "Número máximo de solicitudes por minuto y por usuario (20 de forma pre
 
 #: ../../content/applications/productivity/ai/configuration.rst:46
 msgid ":guilabel:`Ai Max Daily Calls`"
-msgstr ":guilabel:`Ai Max Daily Calls`"
+msgstr ":guilabel:`Máximo de llamadas diarias de la IA`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:46 ../../content/applications/productivity/ai/configuration.rst:52
 msgid "0 = unlimited."
@@ -4370,7 +4370,7 @@ msgstr "0 = sin límite."
 
 #: ../../content/applications/productivity/ai/configuration.rst:48
 msgid ":guilabel:`Ai Max Daily Cost Usd`"
-msgstr ":guilabel:`Ai Max Daily Cost Usd`"
+msgstr ":guilabel:`Coste diario máximo de la IA (USD)`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:48
 msgid "Soft cost cap using model unit prices; 0 = unlimited. Unpriced models may not enforce cost well."
@@ -4378,11 +4378,11 @@ msgstr "Límite de coste flexible basado en los precios unitarios del modelo; 0 
 
 #: ../../content/applications/productivity/ai/configuration.rst:52
 msgid ":guilabel:`Ai Max Conversations Per Day`"
-msgstr ":guilabel:`Ai Max Conversations Per Day`"
+msgstr ":guilabel:`Máximo de conversaciones de la IA por día`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:54
 msgid ":guilabel:`Ai Max Successive Calls`"
-msgstr ":guilabel:`Ai Max Successive Calls`"
+msgstr ":guilabel:`Máximo de llamadas sucesivas de la IA`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:54
 msgid "Bound on chained model turns (default 10)."
@@ -4390,7 +4390,7 @@ msgstr "Límite de turnos encadenados del modelo (10 de forma predeterminada)."
 
 #: ../../content/applications/productivity/ai/configuration.rst:57
 msgid ":guilabel:`Ai Max Tool Calls`"
-msgstr ":guilabel:`Ai Max Tool Calls`"
+msgstr ":guilabel:`Máximo de llamadas a herramientas de la IA`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:57
 msgid "Bound on tool invocations per turn loop (default 10)."
@@ -4398,15 +4398,15 @@ msgstr "Límite de invocaciones de herramientas por ciclo de turno (10 de forma 
 
 #: ../../content/applications/productivity/ai/configuration.rst:60
 msgid ":guilabel:`Ai Write Mode`"
-msgstr ":guilabel:`Ai Write Mode`"
+msgstr ":guilabel:`Modo de escritura de la IA`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:60
 msgid "**Interactive chat only** — auto / confirm / hybrid. Agent runs use each task's own :guilabel:`Write Mode` instead (default confirm). See :doc:`using_the_assistant` and :ref:`ai/agents/task-write-mode`."
-msgstr "**Solo para el chat interactivo** — auto / confirm / hybrid. Las ejecuciones de agentes utilizan en su lugar el :guilabel:`Write Mode` propio de cada tarea (confirm de forma predeterminada). Consulte :doc:`using_the_assistant` y :ref:`ai/agents/task-write-mode`."
+msgstr "**Solo para el chat interactivo** — auto / confirm / hybrid. Las ejecuciones de agentes utilizan en su lugar el :guilabel:`Modo de escritura` propio de cada tarea (confirm de forma predeterminada). Consulte :doc:`using_the_assistant` y :ref:`ai/agents/task-write-mode`."
 
 #: ../../content/applications/productivity/ai/configuration.rst:67
 msgid ":guilabel:`Chat write-proposal lifetime (minutes)`"
-msgstr ":guilabel:`Chat write-proposal lifetime (minutes)`"
+msgstr ":guilabel:`Vida útil de la propuesta de mensaje del chat (minutos)`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:67
 msgid "Minutes until a chat proposal expires; 0 = never."
@@ -4414,7 +4414,7 @@ msgstr "Minutos hasta que caduca una propuesta del chat; 0 = nunca."
 
 #: ../../content/applications/productivity/ai/configuration.rst:70
 msgid ":guilabel:`Agent write-proposal lifetime (minutes)`"
-msgstr ":guilabel:`Agent write-proposal lifetime (minutes)`"
+msgstr ":guilabel:`Duración de la propuesta de escritura del agente (minutos)`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:70
 msgid "Minutes until an agent proposal expires (default 1440); 0 = never."
@@ -4426,11 +4426,11 @@ msgstr "Registro"
 
 #: ../../content/applications/productivity/ai/configuration.rst:77
 msgid ":guilabel:`Ai Log Level` — *Metadata only* (default, recommended) or *Full payload* (stores message/tool content; high sensitivity)."
-msgstr ":guilabel:`Ai Log Level` — *Metadata only* (predeterminado, recomendado) o *Full payload* (almacena el contenido de los mensajes/herramientas; alta sensibilidad)."
+msgstr ":guilabel:`Nivel de registro de la IA` — *Metadata only* (predeterminado, recomendado) o *Full payload* (almacena el contenido de los mensajes/herramientas; alta sensibilidad)."
 
 #: ../../content/applications/productivity/ai/configuration.rst:79
 msgid ":guilabel:`Run Step Retention (Days)` — purge horizon for ``ai.agent.run.step`` journal rows (default 90; 0 disables). Does **not** auto-purge ``ai.log`` or run headers."
-msgstr ":guilabel:`Run Step Retention (Days)` — horizonte de purga para las filas del diario ``ai.agent.run.step`` (90 de forma predeterminada; 0 la desactiva). **No** purga automáticamente ``ai.log`` ni las cabeceras de las ejecuciones."
+msgstr ":guilabel:`Retención de pasos de ejecución (días)` — horizonte de purga para las filas del diario ``ai.agent.run.step`` (90 de forma predeterminada; 0 la desactiva). **No** purga automáticamente ``ai.log`` ni las cabeceras de las ejecuciones."
 
 #: ../../content/applications/productivity/ai/configuration.rst:84
 msgid "Model"
@@ -4438,7 +4438,7 @@ msgstr "Modelo"
 
 #: ../../content/applications/productivity/ai/configuration.rst:86
 msgid ":guilabel:`AI Model` — the model used by the interactive assistant. Its provider is used automatically."
-msgstr ":guilabel:`AI Model` — el modelo utilizado por el asistente interactivo. Su proveedor se usa automáticamente."
+msgstr ":guilabel:`Modelo de IA` — el modelo utilizado por el asistente interactivo. Su proveedor se usa automáticamente."
 
 #: ../../content/applications/productivity/ai/configuration.rst:89
 msgid "This setting covers the interactive assistant only. A per-agent completion cap is set on the agent itself (:doc:`agents`) and depends on the model record — see :ref:`ai/config/completion-caps`."
@@ -4470,7 +4470,7 @@ msgstr "Introspección en tiempo de ejecución"
 
 #: ../../content/applications/productivity/ai/configuration.rst:106
 msgid ":guilabel:`Publish Installed Modules` — whether environment facts may include the installed module list (still subject to the user's ``ir.module.module`` ACL). Denying makes the assistant more cautious, not magically more accurate. Version, edition, company and user facts remain."
-msgstr ":guilabel:`Publish Installed Modules` — indica si los datos del entorno pueden incluir la lista de módulos instalados (sigue sujeto a la ACL ``ir.module.module`` del usuario). Denegarlo hace que el asistente sea más prudente, no mágicamente más preciso. Los datos de versión, edición, compañía y usuario se mantienen."
+msgstr ":guilabel:`Publicar módulos instalados` — indica si los datos del entorno pueden incluir la lista de módulos instalados (sigue sujeto a la ACL ``ir.module.module`` del usuario). Denegarlo hace que el asistente sea más prudente, no mágicamente más preciso. Los datos de versión, edición, compañía y usuario se mantienen."
 
 #: ../../content/applications/productivity/ai/configuration.rst:112
 msgid "Web access and files"
@@ -4522,7 +4522,7 @@ msgstr "Caracteres conservados de una página obtenida."
 
 #: ../../content/applications/productivity/ai/configuration.rst:134
 msgid ":guilabel:`Max Query Length`"
-msgstr ":guilabel:`Longitud máxima de consulta`"
+msgstr ":guilabel:`Longitud máxima de la consulta`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:134
 msgid "Cap on search query size."
@@ -4538,7 +4538,7 @@ msgstr "Listas de tipos MIME permitidos para la ingesta."
 
 #: ../../content/applications/productivity/ai/configuration.rst:140
 msgid ":guilabel:`Max File Size`"
-msgstr ":guilabel:`Tamaño máximo de archivo`"
+msgstr ":guilabel:`Tamaño máximo del archivo`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:140
 msgid "Bytes (default 10 MiB)."
@@ -4618,7 +4618,7 @@ msgstr "Proveedores y modelos LLM"
 
 #: ../../content/applications/productivity/ai/configuration.rst:202
 msgid ":menuselection:`AI --> Configuration --> Providers --> LLM Providers`"
-msgstr ":menuselection:`IA --> Configuración --> Proveedores --> Proveedores LLM`"
+msgstr ":menuselection:`IA --> Configuración --> Proveedores --> Proveedores de LLM`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:204
 msgid "Fields of interest:"
@@ -4630,11 +4630,11 @@ msgstr "Tipo de proveedor y clave de API (almacenados como parámetros del siste
 
 #: ../../content/applications/productivity/ai/configuration.rst:207
 msgid ":guilabel:`Base Url` — only override when you understand the trust boundary (a writable base URL can be an SSRF risk if pointed at internal services)."
-msgstr ":guilabel:`Base Url` — modifique este valor solo si comprende el límite de confianza (una URL base modificable puede suponer un riesgo de SSRF si se apunta a servicios internos)."
+msgstr ":guilabel:`URL base` — modifique este valor solo si comprende el límite de confianza (una URL base modificable puede suponer un riesgo de SSRF si se apunta a servicios internos)."
 
 #: ../../content/applications/productivity/ai/configuration.rst:209
 msgid ":guilabel:`Timeout`, :guilabel:`Max Retries`, :guilabel:`Call Deadline` — wall-clock budget for one provider call including retries."
-msgstr ":guilabel:`Tiempo de espera`, :guilabel:`Número máximo de reintentos`, :guilabel:`Plazo de la llamada` — presupuesto de tiempo real para una llamada al proveedor, incluidos los reintentos."
+msgstr ":guilabel:`Tiempo de espera`, :guilabel:`Máximo de reintentos`, :guilabel:`Plazo de llamada` — presupuesto de tiempo real para una llamada al proveedor, incluidos los reintentos."
 
 #: ../../content/applications/productivity/ai/configuration.rst:212
 msgid ":menuselection:`AI --> Configuration --> Providers --> Models`"
@@ -4646,7 +4646,7 @@ msgstr ":guilabel:`Modelo` — el id exacto del proveedor."
 
 #: ../../content/applications/productivity/ai/configuration.rst:215
 msgid ":guilabel:`Context Window`, :guilabel:`Max Output Tokens`, tool and temperature support flags."
-msgstr ":guilabel:`Ventana de contexto`, :guilabel:`Número máximo de tokens de salida`, indicadores de compatibilidad con herramientas y con temperatura."
+msgstr ":guilabel:`Ventana de contexto`, :guilabel:`Máximo de tokens de salida`, indicadores de compatibilidad con herramientas y con temperatura."
 
 #: ../../content/applications/productivity/ai/configuration.rst:217
 msgid "Prompt / completion unit prices and price source (provider API, curated catalog, or manual — manual is not overwritten by refresh)."
@@ -4658,11 +4658,11 @@ msgstr "Límites de la respuesta generada"
 
 #: ../../content/applications/productivity/ai/configuration.rst:225
 msgid ":guilabel:`Max Output Tokens` on the model is what the assistant caps its completions at, and it is also the precondition for a per-agent cap. Only providers that publish a completion limit fill it in; ``0`` means *unknown*."
-msgstr "El :guilabel:`Número máximo de tokens de salida` del modelo es el límite con el que el asistente recorta sus respuestas, y también es la condición previa para un límite por agente. Solo los proveedores que publican un límite de finalización lo completan; ``0`` significa *desconocido*."
+msgstr "El :guilabel:`Máximo de tokens de salida` del modelo es el límite con el que el asistente recorta sus respuestas, y también es la condición previa para un límite por agente. Solo los proveedores que publican un límite de finalización lo completan; ``0`` significa *desconocido*."
 
 #: ../../content/applications/productivity/ai/configuration.rst:229
 msgid "An agent's own :guilabel:`Max Tokens (0 = no override)` (:doc:`agents`) reaches every provider — OpenAI, OpenRouter, xAI, Google Gemini and Anthropic — each under the parameter name its API expects. It is put on the wire **only** for a model that publishes a :guilabel:`Max Output Tokens` of its own. Point an agent at a model that still reads ``0`` and the agent's value is dropped: the model writes to its own limit, and nothing on the agent form says why. Fill in :guilabel:`Max Output Tokens` on the model if you want the per-agent cap to bite."
-msgstr "El propio :guilabel:`Número máximo de tokens (0 = sin anulación)` de un agente (:doc:`agents`) llega a todos los proveedores (OpenAI, OpenRouter, xAI, Google Gemini y Anthropic), cada uno bajo el nombre de parámetro que espera su API. Solo se envía en la llamada si el modelo publica su propio :guilabel:`Número máximo de tokens de salida`. Si asigna a un agente un modelo que todavía indica ``0``, el valor del agente se descarta: el modelo se ajusta a su propio límite, y nada en el formulario del agente explica el motivo. Complete el :guilabel:`Número máximo de tokens de salida` en el modelo si quiere que el límite por agente surta efecto."
+msgstr "El propio :guilabel:`Tokens máximos (0 = sin anulación)` de un agente (:doc:`agents`) llega a todos los proveedores (OpenAI, OpenRouter, xAI, Google Gemini y Anthropic), cada uno bajo el nombre de parámetro que espera su API. Solo se envía en la llamada si el modelo publica su propio :guilabel:`Máximo de tokens de salida`. Si asigna a un agente un modelo que todavía indica ``0``, el valor del agente se descarta: el modelo se ajusta a su propio límite, y nada en el formulario del agente explica el motivo. Complete el :guilabel:`Máximo de tokens de salida` en el modelo si quiere que el límite por agente surta efecto."
 
 #: ../../content/applications/productivity/ai/configuration.rst:237
 msgid "``0`` on the agent — the default — means *no override*: the model's own output cap applies, exactly as for a turn with no agent at all. Set a positive value only where you deliberately want that agent to be terser or cheaper, and remember that on reasoning models the cap counts thinking tokens too, so a low value truncates answers."
@@ -4670,11 +4670,11 @@ msgstr "``0`` en el agente (el valor predeterminado) significa *sin anulación*:
 
 #: ../../content/applications/productivity/ai/configuration.rst:244
 msgid "Anthropic is the exception, in the other direction: its API always requires the parameter. An Anthropic model whose :guilabel:`Max Output Tokens` is still ``0`` therefore falls back to a conservative built-in value of 1024 tokens, not to the model's real limit."
-msgstr "Anthropic es la excepción, en sentido contrario: su API siempre exige este parámetro. Por ello, un modelo de Anthropic cuyo :guilabel:`Número máximo de tokens de salida` todavía sea ``0`` recurre a un valor conservador integrado de 1024 tokens, y no al límite real del modelo."
+msgstr "Anthropic es la excepción, en sentido contrario: su API siempre exige este parámetro. Por ello, un modelo de Anthropic cuyo :guilabel:`Máximo de tokens de salida` todavía sea ``0`` recurre a un valor conservador integrado de 1024 tokens, y no al límite real del modelo."
 
 #: ../../content/applications/productivity/ai/configuration.rst:250
 msgid ":guilabel:`Max Output Tokens` on a catalogue row is often almost the whole :guilabel:`Context Window` (for example 450 000 of 500 000). Providers such as OpenRouter reject the call when *prompt + tools + max_tokens* exceeds the window, even if the prompt itself still fits. The platform therefore clamps the completion cap on every call to whatever still fits after an overestimate of the prompt. A small first turn still gets the published output limit; a large tool round gets a smaller leftover. This cannot help when the **prompt alone** already exceeds the window — split the work (see :ref:`ai/agents/work-items`)."
-msgstr "El :guilabel:`Número máximo de tokens de salida` de una fila del catálogo suele ser casi toda la :guilabel:`Ventana de contexto` (por ejemplo, 450 000 de 500 000). Proveedores como OpenRouter rechazan la llamada cuando *prompt + herramientas + max_tokens* supera la ventana, incluso si el prompt en sí todavía cabe. Por ello, la plataforma recorta el límite de la respuesta en cada llamada a lo que aún quepa tras una sobreestimación del prompt. Un primer turno pequeño sigue obteniendo el límite de salida publicado; una ronda de herramientas grande obtiene un remanente menor. Esto no ayuda cuando **el prompt por sí solo** ya supera la ventana; en ese caso, divida el trabajo (consulte :ref:`ai/agents/work-items`)."
+msgstr "El :guilabel:`Máximo de tokens de salida` de una fila del catálogo suele ser casi toda la :guilabel:`Ventana de contexto` (por ejemplo, 450 000 de 500 000). Proveedores como OpenRouter rechazan la llamada cuando *prompt + herramientas + max_tokens* supera la ventana, incluso si el prompt en sí todavía cabe. Por ello, la plataforma recorta el límite de la respuesta en cada llamada a lo que aún quepa tras una sobreestimación del prompt. Un primer turno pequeño sigue obteniendo el límite de salida publicado; una ronda de herramientas grande obtiene un remanente menor. Esto no ayuda cuando **el prompt por sí solo** ya supera la ventana; en ese caso, divida el trabajo (consulte :ref:`ai/agents/work-items`)."
 
 #: ../../content/applications/productivity/ai/configuration.rst:261
 msgid "Upgrading from an earlier version changes how agents that are already configured behave."
@@ -4686,7 +4686,7 @@ msgstr "Un límite que un administrador ya había escrito en un agente antes sol
 
 #: ../../content/applications/productivity/ai/configuration.rst:267
 msgid "The upgrade resets the old shipped default of ``2048`` to ``0`` on every agent still carrying it, so that no database keeps a cap nobody chose. On an Anthropic model that publishes a cap of its own, that 2048 was genuinely in force: those agents may now write up to the model's full :guilabel:`Max Output Tokens` — more tokens, more cost and more time, and an answer long enough to exhaust the provider's :guilabel:`Call Deadline` fails with an error instead of stopping at 2048 tokens."
-msgstr "La actualización restablece a ``0`` el antiguo valor predeterminado de fábrica ``2048`` en todos los agentes que todavía lo conservan, para que ninguna base de datos mantenga un límite que nadie eligió. En un modelo de Anthropic que publica su propio límite, ese 2048 realmente estaba en vigor: esos agentes ahora pueden escribir hasta el :guilabel:`Número máximo de tokens de salida` completo del modelo; más tokens, más costo y más tiempo, y una respuesta lo bastante larga como para agotar el :guilabel:`Plazo de la llamada` del proveedor fallará con un error en lugar de detenerse en los 2048 tokens."
+msgstr "La actualización restablece a ``0`` el antiguo valor predeterminado de fábrica ``2048`` en todos los agentes que todavía lo conservan, para que ninguna base de datos mantenga un límite que nadie eligió. En un modelo de Anthropic que publica su propio límite, ese 2048 realmente estaba en vigor: esos agentes ahora pueden escribir hasta el :guilabel:`Máximo de tokens de salida` completo del modelo; más tokens, más costo y más tiempo, y una respuesta lo bastante larga como para agotar el :guilabel:`Plazo de llamada` del proveedor fallará con un error en lugar de detenerse en los 2048 tokens."
 
 #: ../../content/applications/productivity/ai/configuration.rst:275
 msgid "Any other value you typed is kept. Re-enter a cap on every agent you meant to limit, including one you had deliberately set to 2048."
@@ -4746,7 +4746,7 @@ msgstr "Capas de prompt"
 
 #: ../../content/applications/productivity/ai/configuration.rst:309
 msgid ":menuselection:`AI --> Configuration --> Behavior --> Prompt Layers`"
-msgstr ":menuselection:`IA --> Configuración --> Comportamiento --> Capas de prompt`"
+msgstr ":menuselection:`IA --> Configuración --> Comportamiento --> Capas del prompt`"
 
 #: ../../content/applications/productivity/ai/configuration.rst:311
 msgid "Layered system prompts (core, global, module, …) shape behaviour. Core safety layers are not meant for casual editing. Global operational layers may be adjusted by AI administrators; migrations may refresh factory content only when still pristine."
@@ -4862,7 +4862,7 @@ msgstr "Conectar un proveedor"
 
 #: ../../content/applications/productivity/ai/getting_started.rst:35
 msgid "Open :menuselection:`AI --> Configuration --> Providers --> LLM Providers`."
-msgstr "Abra :menuselection:`IA --> Configuración --> Proveedores --> Proveedores LLM`."
+msgstr "Abra :menuselection:`IA --> Configuración --> Proveedores --> Proveedores de LLM`."
 
 #: ../../content/applications/productivity/ai/getting_started.rst:36
 msgid "Create or open a provider and set:"
@@ -5086,7 +5086,7 @@ msgstr "la conversación del usuario que actuó, donde el asistente informa del 
 
 #: ../../content/applications/productivity/ai/monitoring.rst:49
 msgid "the :guilabel:`Steps` tab of the run, for an agent: the tool call is recorded with :guilabel:`Gate Verdict` *denied* and the refusal message;"
-msgstr "la pestaña :guilabel:`Pasos` de la ejecución, en el caso de un agente: la llamada a la herramienta queda registrada con :guilabel:`Veredicto del control` en *denied* y el mensaje de rechazo;"
+msgstr "la pestaña :guilabel:`Pasos` de la ejecución, en el caso de un agente: la llamada a la herramienta queda registrada con :guilabel:`Veredicto de la puerta de control` en *denied* y el mensaje de rechazo;"
 
 #: ../../content/applications/productivity/ai/monitoring.rst:51
 msgid "the Odoo server log, for a refusal inside a one2many or many2many payload: the nested model and field are recorded there and nowhere in the interface, so ask whoever operates your server to look them up — they name the field-level rule that would open it."
@@ -5102,7 +5102,7 @@ msgstr "Suspensiones de usuario"
 
 #: ../../content/applications/productivity/ai/monitoring.rst:62
 msgid ":menuselection:`AI --> Monitoring --> User Bans`"
-msgstr ":menuselection:`IA --> Supervisión --> Suspensiones de usuario`"
+msgstr ":menuselection:`IA --> Supervisión --> Usuarios bloqueados`"
 
 #: ../../content/applications/productivity/ai/monitoring.rst:64
 msgid "Temporarily suspends AI use for a user. The gate checks bans **first**, before expensive LLM or triage work — this breaks adaptive attack iteration."
@@ -5110,7 +5110,7 @@ msgstr "Suspende temporalmente el uso de la IA para un usuario. El control verif
 
 #: ../../content/applications/productivity/ai/monitoring.rst:67
 msgid "Duration comes from Settings (:guilabel:`Ai Ban Minutes`) when auto-issued."
-msgstr "Cuando se emite automáticamente, la duración proviene de Ajustes (:guilabel:`Minutos de suspensión de IA`)."
+msgstr "Cuando se emite automáticamente, la duración proviene de Ajustes (:guilabel:`Minutos de bloqueo de la IA`)."
 
 #: ../../content/applications/productivity/ai/monitoring.rst:68
 msgid "Admins may manage bans manually."
@@ -5182,7 +5182,7 @@ msgstr ":menuselection:`IA --> Propuestas de escritura` es a la vez una herramie
 
 #: ../../content/applications/productivity/ai/monitoring.rst:136
 msgid "The :guilabel:`Agent write-proposal lifetime (minutes)` only applies while the proposing run is still open. Once that run has ended — most often a run that overran its time limit and closed as :guilabel:`Timed out` — its pending proposals are expired by the next pass of the **AI: Expire pending writes** scheduled action, every 15 minutes, because nobody is left to carry the result back. That sweep runs whatever the lifetime is set to, ``0`` included."
-msgstr "El valor de :guilabel:`Vigencia de la propuesta de escritura del agente (minutos)` solo se aplica mientras la ejecución que propone sigue abierta. Una vez que esa ejecución ha terminado (lo más habitual, una ejecución que superó su límite de tiempo y se cerró como :guilabel:`Tiempo agotado`), sus propuestas pendientes caducan en el siguiente paso de la acción planificada **AI: Expire pending writes**, cada 15 minutos, porque ya no queda nadie que lleve de vuelta el resultado. Esa purga se ejecuta sea cual sea el valor configurado para la vigencia, ``0`` incluido."
+msgstr "El valor de :guilabel:`Duración de la propuesta de escritura del agente (minutos)` solo se aplica mientras la ejecución que propone sigue abierta. Una vez que esa ejecución ha terminado (lo más habitual, una ejecución que superó su límite de tiempo y se cerró como :guilabel:`Tiempo de espera agotado`), sus propuestas pendientes caducan en el siguiente paso de la acción planificada **AI: Expire pending writes**, cada 15 minutos, porque ya no queda nadie que lleve de vuelta el resultado. Esa purga se ejecuta sea cual sea el valor configurado para la vigencia, ``0`` incluido."
 
 #: ../../content/applications/productivity/ai/monitoring.rst:143
 msgid "So review the proposals of failed and timed-out runs promptly; do not plan to come back to them tomorrow."
@@ -5318,7 +5318,7 @@ msgstr "los pasos de ejecución del agente y los registros con la carga completa
 
 #: ../../content/applications/productivity/ai/security.rst:46
 msgid "**Mitigations:** choose a provider and region you accept contractually; keep :guilabel:`Ai Log Level` on *Metadata only* in production unless investigating an incident; deny sensitive models/fields in AI access rules; do not enable Web or MCP for agents that handle confidential tickets; train users not to paste secrets into chat."
-msgstr "**Mitigaciones:** elija un proveedor y una región que acepte contractualmente; mantenga el :guilabel:`Nivel de registro de IA` en *Solo metadatos* en producción salvo que esté investigando un incidente; deniegue los modelos o campos sensibles en las reglas de acceso de IA; no habilite Web ni MCP para agentes que gestionen tickets confidenciales; forme a los usuarios para que no peguen secretos en el chat."
+msgstr "**Mitigaciones:** elija un proveedor y una región que acepte contractualmente; mantenga el :guilabel:`Nivel de registro de la IA` en *Solo metadatos* en producción salvo que esté investigando un incidente; deniegue los modelos o campos sensibles en las reglas de acceso de IA; no habilite Web ni MCP para agentes que gestionen tickets confidenciales; forme a los usuarios para que no peguen secretos en el chat."
 
 #: ../../content/applications/productivity/ai/security.rst:53
 msgid "Over-privileged interactive chat"
@@ -5766,7 +5766,7 @@ msgstr "La **memoria** (``ai.memory``) almacena datos duraderos que el asistente
 
 #: ../../content/applications/productivity/ai/skills_and_memory.rst:116
 msgid "Menu: :menuselection:`AI --> Memory --> Memories` and :guilabel:`Memory Graph`."
-msgstr "Menú: :menuselection:`AI --> Memoria --> Memorias` y :guilabel:`Grafo de memoria`."
+msgstr "Menú: :menuselection:`IA --> Memoria --> Memorias` y :guilabel:`Grafo de memoria`."
 
 #: ../../content/applications/productivity/ai/skills_and_memory.rst:119
 msgid "Types"
@@ -5874,7 +5874,7 @@ msgstr "Chat interactivo"
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:8
 msgid "Backend users in **AI: User** can open the assistant from the **systray bubble** (persistent chat UI) or from :menuselection:`AI --> Conversations`."
-msgstr "Los usuarios de backend con el grupo **AI: User** pueden abrir el asistente desde la **burbuja de la bandeja del sistema** (interfaz de chat persistente) o desde :menuselection:`AI --> Conversaciones`."
+msgstr "Los usuarios de backend con el grupo **AI: User** pueden abrir el asistente desde la **burbuja de la bandeja del sistema** (interfaz de chat persistente) o desde :menuselection:`IA --> Conversaciones`."
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:11
 msgid "Typical turn flow:"
@@ -5910,7 +5910,7 @@ msgstr "Conversaciones"
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:29
 msgid ":menuselection:`AI --> Conversations` lists chat threads for the current user (administrators may see more depending on record rules)."
-msgstr ":menuselection:`AI --> Conversaciones` muestra los hilos de chat del usuario actual (los administradores pueden ver más según las reglas de registro)."
+msgstr ":menuselection:`IA --> Conversaciones` muestra los hilos de chat del usuario actual (los administradores pueden ver más según las reglas de registro)."
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:32
 msgid "Use conversations to:"
@@ -5962,7 +5962,7 @@ msgstr "Cuando una herramienta quiere crear, actualizar, eliminar, adjuntar un a
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:61
 msgid "Open :menuselection:`AI --> Write Proposals` to:"
-msgstr "Abra :menuselection:`AI --> Propuestas de escritura` para:"
+msgstr "Abra :menuselection:`IA --> Propuestas de escritura` para:"
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:63
 msgid "read the human-readable :guilabel:`Summary`;"
@@ -6006,7 +6006,7 @@ msgstr "Controlado por"
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:101
 msgid "Global :guilabel:`Ai Write Mode` in Settings"
-msgstr "El :guilabel:`Modo de escritura de IA` global en Ajustes"
+msgstr "El :guilabel:`Modo de escritura de la IA` global en Ajustes"
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:101
 msgid "The **task's** :guilabel:`Write Mode` (default *confirm*; see :ref:`ai/agents/task-write-mode`)"
@@ -6062,7 +6062,7 @@ msgstr "Tarea pendiente en el **registro de negocio** cuando es posible, o en la
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:120
 msgid "The agent lifetime applies only while the proposing run is still open. Once that run has ended — :guilabel:`Done`, :guilabel:`Failed` or :guilabel:`Timed out` — the **AI: Expire pending writes** scheduled action expires its remaining proposals on its next pass, at most 15 minutes later, whatever the lifetime says. The case that catches supervisors out is a run that overran its own time limit: it closes as :guilabel:`Timed out` while still holding open proposals. Review proposals from failed and timed-out runs promptly. If you open a :guilabel:`To-Do` for a proposal that no longer exists, mark the activity done: the proposal expired with its run."
-msgstr "El tiempo de vida del agente solo se aplica mientras la ejecución que propuso sigue abierta. Una vez que esa ejecución termina — :guilabel:`Hecho`, :guilabel:`Fallido` o :guilabel:`Tiempo agotado` — la acción programada **AI: Expire pending writes** hace expirar las propuestas restantes en su siguiente pasada, como máximo 15 minutos después, sea cual sea el tiempo de vida configurado. El caso que sorprende a los supervisores es una ejecución que superó su propio límite de tiempo: se cierra como :guilabel:`Tiempo agotado` mientras aún mantiene propuestas abiertas. Revise sin demora las propuestas de ejecuciones fallidas o con tiempo agotado. Si abre una :guilabel:`Tarea pendiente` para una propuesta que ya no existe, marque la actividad como hecha: la propuesta expiró junto con su ejecución."
+msgstr "El tiempo de vida del agente solo se aplica mientras la ejecución que propuso sigue abierta. Una vez que esa ejecución termina — :guilabel:`Hecho`, :guilabel:`Fallido` o :guilabel:`Tiempo de espera agotado` — la acción programada **AI: Expire pending writes** hace expirar las propuestas restantes en su siguiente pasada, como máximo 15 minutos después, sea cual sea el tiempo de vida configurado. El caso que sorprende a los supervisores es una ejecución que superó su propio límite de tiempo: se cierra como :guilabel:`Tiempo de espera agotado` mientras aún mantiene propuestas abiertas. Revise sin demora las propuestas de ejecuciones fallidas o con tiempo agotado. Si abre una :guilabel:`Tarea pendiente` para una propuesta que ya no existe, marque la actividad como hecha: la propuesta expiró junto con su ejecución."
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:131
 msgid "Approving an agent proposal means: \"I authorise this agent to perform this change with *its* rights.\" The supervisor does not need (and should not use) broader rights than necessary to review the summary — execution rights come from the agent user + policy at apply time."
@@ -6074,7 +6074,7 @@ msgstr "Modos de escritura"
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:139
 msgid "**Interactive chat** — under :menuselection:`AI --> Configuration --> Settings`:"
-msgstr "**Chat interactivo** — en :menuselection:`AI --> Configuración --> Ajustes`:"
+msgstr "**Chat interactivo** — en :menuselection:`IA --> Configuración --> Ajustes`:"
 
 #: ../../content/applications/productivity/ai/using_the_assistant.rst:141
 msgid "**Apply automatically** — every create/write/delete/file tool runs immediately. Highest risk."
@@ -6174,11 +6174,11 @@ msgstr "La pestaña :guilabel:`Disponibilidad` define cuándo se puede reservar 
 
 #: ../../content/applications/productivity/appointments.rst:43
 msgid ":guilabel:`Allowed Providers`: the users who can be booked for this type. :guilabel:`Default Working Hours` sets the working schedule used to compute the slots, and, under :guilabel:`Per-provider Working Hours`, a different schedule can be set for individual providers."
-msgstr ":guilabel:`Proveedores permitidos`: los usuarios que se pueden reservar para este tipo. :guilabel:`Horario laboral predeterminado` establece el horario de trabajo usado para calcular las franjas, y, en :guilabel:`Horario laboral por proveedor`, se puede definir un horario distinto para cada proveedor."
+msgstr ":guilabel:`Proveedores permitidos`: los usuarios que se pueden reservar para este tipo. :guilabel:`Horas laborables por defecto` establece el horario de trabajo usado para calcular las franjas, y, en :guilabel:`Horario laboral por proveedor`, se puede definir un horario distinto para cada proveedor."
 
 #: ../../content/applications/productivity/appointments.rst:46
 msgid ":guilabel:`Required Resources`: resources (rooms, equipment) that must be free for the booking to be possible."
-msgstr ":guilabel:`Recursos necesarios`: recursos (salas, equipo) que deben estar libres para que la reserva sea posible."
+msgstr ":guilabel:`Recursos requeridos`: recursos (salas, equipo) que deben estar libres para que la reserva sea posible."
 
 #: ../../content/applications/productivity/appointments.rst:48
 msgid ":guilabel:`Weekly Slots`: the recurring time ranges of the week when bookings are accepted, with an optional capacity or gap override per slot."
@@ -6190,11 +6190,11 @@ msgstr ":guilabel:`Duración`: la :guilabel:`Duración mínima (min)`, la :guila
 
 #: ../../content/applications/productivity/appointments.rst:53
 msgid ":guilabel:`Buffers & Gaps`: :guilabel:`Buffer Before (min)` and :guilabel:`Buffer After (min)` keep time free around a booking, and :guilabel:`Gap Between Meetings (min)` enforces a pause between two consecutive bookings."
-msgstr ":guilabel:`Márgenes e intervalos`: el :guilabel:`Margen antes (min)` y el :guilabel:`Margen después (min)` mantienen tiempo libre alrededor de una reserva, y el :guilabel:`Intervalo entre reuniones (min)` impone una pausa entre dos reservas consecutivas."
+msgstr ":guilabel:`Márgenes y huecos`: el :guilabel:`Margen previo (min)` y el :guilabel:`Margen posterior (min)` mantienen tiempo libre alrededor de una reserva, y el :guilabel:`Intervalo entre reuniones (min)` impone una pausa entre dos reservas consecutivas."
 
 #: ../../content/applications/productivity/appointments.rst:56
 msgid ":guilabel:`Limits`: how far ahead bookings are possible (:guilabel:`Max Days Ahead`), the :guilabel:`Min Notice Hours` before the start, the :guilabel:`Cancel Notice Hours` until which a customer may cancel, the :guilabel:`Max Future Bookings Per Person`, and the :guilabel:`Capacity Per Slot` when several people may book the same slot."
-msgstr ":guilabel:`Límites`: con cuánta antelación se pueden hacer reservas (:guilabel:`Días máximos de antelación`), las :guilabel:`Horas mínimas de aviso` antes del inicio, las :guilabel:`Horas de aviso para cancelar` hasta las cuales un cliente puede cancelar, el :guilabel:`Máximo de reservas futuras por persona`, y la :guilabel:`Capacidad por franja` cuando varias personas pueden reservar la misma franja."
+msgstr ":guilabel:`Límites`: con cuánta antelación se pueden hacer reservas (:guilabel:`Máximo de días de antelación`), las :guilabel:`Horas mínimas de aviso` antes del inicio, las :guilabel:`Horas de preaviso de cancelación` hasta las cuales un cliente puede cancelar, el :guilabel:`Máximo de reservas futuras por persona`, y la :guilabel:`Capacidad por franja` cuando varias personas pueden reservar la misma franja."
 
 #: ../../content/applications/productivity/appointments.rst:61
 msgid "Odoo computes the free slots from the working hours, the existing bookings, the providers' calendar events, and their :ref:`leaves <appointments/leaves>`."
@@ -6206,15 +6206,15 @@ msgstr "Asignación y aprobación"
 
 #: ../../content/applications/productivity/appointments.rst:75
 msgid "When several providers are allowed, the :guilabel:`Assign Strategy` decides who gets the booking: :guilabel:`Least Assigned`, :guilabel:`Round Robin`, or :guilabel:`Random`."
-msgstr "Cuando se permiten varios proveedores, la :guilabel:`Estrategia de asignación` decide quién recibe la reserva: :guilabel:`Menos asignado`, :guilabel:`Turno rotativo`, o :guilabel:`Aleatorio`."
+msgstr "Cuando se permiten varios proveedores, la :guilabel:`Asignar estrategia` decide quién recibe la reserva: :guilabel:`Menos asignado`, :guilabel:`Turno rotativo`, o :guilabel:`Aleatorio`."
 
 #: ../../content/applications/productivity/appointments.rst:78
 msgid "Enable :guilabel:`Require Approval` to hold new bookings in the :guilabel:`Requested` state until they are approved. The approval policy is either :guilabel:`Single Approval (Manager)` or :guilabel:`All Providers Must Approve`; in the latter case, each provider gets an approval line on the booking, and can approve or reject it from the booking form or from the link in the approval email."
-msgstr "Active :guilabel:`Requerir aprobación` para mantener las nuevas reservas en el estado :guilabel:`Solicitada` hasta que se aprueben. La política de aprobación es :guilabel:`Aprobación única (gerente)` o :guilabel:`Todos los proveedores deben aprobar`; en este último caso, cada proveedor recibe una línea de aprobación en la reserva y puede aprobarla o rechazarla desde el formulario de la reserva o desde el enlace del correo de aprobación."
+msgstr "Active :guilabel:`Requerir aprobación` para mantener las nuevas reservas en el estado :guilabel:`Solicitado` hasta que se aprueben. La política de aprobación es :guilabel:`Aprobación única (responsable)` o :guilabel:`Todos los proveedores deben aprobar`; en este último caso, cada proveedor recibe una línea de aprobación en la reserva y puede aprobarla o rechazarla desde el formulario de la reserva o desde el enlace del correo de aprobación."
 
 #: ../../content/applications/productivity/appointments.rst:84
 msgid ":guilabel:`Unconfirmed Expiry (hours)` automatically cancels bookings that are never confirmed."
-msgstr ":guilabel:`Vencimiento sin confirmar (horas)` cancela automáticamente las reservas que nunca se confirman."
+msgstr ":guilabel:`Caducidad sin confirmar (horas)` cancela automáticamente las reservas que nunca se confirman."
 
 #: ../../content/applications/productivity/appointments.rst:87
 msgid "Questions"
@@ -6222,7 +6222,7 @@ msgstr "Preguntas"
 
 #: ../../content/applications/productivity/appointments.rst:89
 msgid "The :guilabel:`Form` tab lists the questions asked when booking. Each question has a :guilabel:`Name`, a :guilabel:`Type` (:guilabel:`Short Text`, :guilabel:`Long Text`, :guilabel:`Number`, :guilabel:`Date`, :guilabel:`Select`, :guilabel:`Checkbox`, or :guilabel:`File`), and can be marked :guilabel:`Required`. For a :guilabel:`Select` question, list the options one per line. A question can also block the booking when a given answer is given, with the :guilabel:`Error Message` shown to the customer."
-msgstr "La pestaña :guilabel:`Formulario` muestra las preguntas que se hacen al reservar. Cada pregunta tiene un :guilabel:`Nombre`, un :guilabel:`Tipo` (:guilabel:`Texto corto`, :guilabel:`Texto largo`, :guilabel:`Número`, :guilabel:`Fecha`, :guilabel:`Selección`, :guilabel:`Casilla`, o :guilabel:`Archivo`), y se puede marcar como :guilabel:`Obligatoria`. Para una pregunta de tipo :guilabel:`Selección`, indique las opciones una por línea. Una pregunta también puede bloquear la reserva cuando se da una respuesta determinada, mostrando el :guilabel:`Mensaje de error` al cliente."
+msgstr "La pestaña :guilabel:`Formulario` muestra las preguntas que se hacen al reservar. Cada pregunta tiene un :guilabel:`Nombre`, un :guilabel:`Tipo` (:guilabel:`Texto corto`, :guilabel:`Texto largo`, :guilabel:`Número`, :guilabel:`Fecha`, :guilabel:`Seleccionar`, :guilabel:`Casilla de verificación`, o :guilabel:`Archivo`), y se puede marcar como :guilabel:`Requerido`. Para una pregunta de tipo :guilabel:`Seleccionar`, indique las opciones una por línea. Una pregunta también puede bloquear la reserva cuando se da una respuesta determinada, mostrando el :guilabel:`Mensaje de error` al cliente."
 
 #: ../../content/applications/productivity/appointments.rst:96
 msgid "The answers are stored on the booking, in its :guilabel:`Answers` tab."
@@ -6230,7 +6230,7 @@ msgstr "Las respuestas se almacenan en la reserva, en su pestaña :guilabel:`Res
 
 #: ../../content/applications/productivity/appointments.rst:101
 msgid "In the :guilabel:`Notifications` tab, select the email template used for each step: :guilabel:`Email on Request`, :guilabel:`Email on Confirm`, :guilabel:`Email on Reject`, :guilabel:`Email on Cancel`, :guilabel:`Email on Approval Request`, and :guilabel:`Email on Waitlist Offer`. An :guilabel:`Additional email message` is appended to these emails."
-msgstr "En la pestaña :guilabel:`Notificaciones`, seleccione la plantilla de correo usada en cada paso: :guilabel:`Correo al solicitar`, :guilabel:`Correo al confirmar`, :guilabel:`Correo al rechazar`, :guilabel:`Correo al cancelar`, :guilabel:`Correo al solicitar aprobación`, y :guilabel:`Correo al ofrecer lista de espera`. Se añade un :guilabel:`Mensaje de correo adicional` a estos correos."
+msgstr "En la pestaña :guilabel:`Notificaciones`, seleccione la plantilla de correo usada en cada paso: :guilabel:`Correo electrónico en la solicitud`, :guilabel:`Correo electrónico al confirmar`, :guilabel:`Correo electrónico al rechazar`, :guilabel:`Correo electrónico al cancelar`, :guilabel:`Correo electrónico en la solicitud de aprobación`, y :guilabel:`Correo electrónico en la oferta de lista de espera`. Se añade un :guilabel:`Mensaje de correo electrónico adicional` a estos correos."
 
 #: ../../content/applications/productivity/appointments.rst:106
 msgid ":guilabel:`Event reminders` send a reminder to the requester a given time before the appointment (e.g., `1` :guilabel:`Days`), while :guilabel:`Calendar alarms` are the reminders set on the provider's calendar event."
@@ -6242,7 +6242,7 @@ msgstr "Lista de espera"
 
 #: ../../content/applications/productivity/appointments.rst:113
 msgid "Enable :guilabel:`Waitlist` in the corresponding tab to let customers queue for a fully booked slot. When a slot frees up, Odoo offers it to the first customers in the queue (:guilabel:`Waitlist Notify Batch`), who then have :guilabel:`Waitlist Hold Minutes` to confirm before the offer expires and the next customers are notified."
-msgstr "Active :guilabel:`Lista de espera` en la pestaña correspondiente para que los clientes puedan hacer cola para una franja completa. Cuando una franja se libera, Odoo la ofrece a los primeros clientes de la cola (:guilabel:`Lote de aviso de lista de espera`), quienes disponen entonces de los :guilabel:`Minutos de espera de la oferta` para confirmar antes de que la oferta expire y se avise a los siguientes clientes."
+msgstr "Active :guilabel:`Lista de espera` en la pestaña correspondiente para que los clientes puedan hacer cola para una franja completa. Cuando una franja se libera, Odoo la ofrece a los primeros clientes de la cola (:guilabel:`Lote de notificación de la lista de espera`), quienes disponen entonces de los :guilabel:`Minutos de reserva de la lista de espera` para confirmar antes de que la oferta expire y se avise a los siguientes clientes."
 
 #: ../../content/applications/productivity/appointments.rst:119
 msgid "Visibility and restrictions"
@@ -6250,7 +6250,7 @@ msgstr "Visibilidad y restricciones"
 
 #: ../../content/applications/productivity/appointments.rst:121
 msgid ":guilabel:`Visibility`: :guilabel:`Public`, :guilabel:`Unlisted` (only reachable with the link), or :guilabel:`Private`."
-msgstr ":guilabel:`Visibilidad`: :guilabel:`Pública`, :guilabel:`No listada` (solo accesible con el enlace), o :guilabel:`Privada`."
+msgstr ":guilabel:`Visibilidad`: :guilabel:`Público`, :guilabel:`No listado` (solo accesible con el enlace), o :guilabel:`Privado`."
 
 #: ../../content/applications/productivity/appointments.rst:123
 msgid "In the :guilabel:`Restrictions` tab, :guilabel:`Allowed Domains` limits public booking to a comma-separated list of email domains."
@@ -6266,7 +6266,7 @@ msgstr "Precios y pago"
 
 #: ../../content/applications/productivity/appointments.rst:131
 msgid "A type can be free, or priced with a :guilabel:`Pricing Mode`:"
-msgstr "Un tipo puede ser gratuito o tener un precio mediante un :guilabel:`Modo de precio`:"
+msgstr "Un tipo puede ser gratuito o tener un precio mediante un :guilabel:`Modo de precios`:"
 
 #: ../../content/applications/productivity/appointments.rst:133
 msgid ":guilabel:`Fixed`: the :guilabel:`Fixed Amount` is charged per booking;"
@@ -6274,7 +6274,7 @@ msgstr ":guilabel:`Fijo`: se cobra el :guilabel:`Importe fijo` por reserva;"
 
 #: ../../content/applications/productivity/appointments.rst:134
 msgid ":guilabel:`Hourly`: the :guilabel:`Hourly Rate` is applied to the booked duration, rounded up to the :guilabel:`Billing Increment (min)`."
-msgstr ":guilabel:`Por hora`: se aplica la :guilabel:`Tarifa por hora` a la duración reservada, redondeada al alza según el :guilabel:`Incremento de facturación (min)`."
+msgstr ":guilabel:`Por horas`: se aplica la :guilabel:`Tarifa horaria` a la duración reservada, redondeada al alza según el :guilabel:`Incremento de facturación (min)`."
 
 #: ../../content/applications/productivity/appointments.rst:137
 msgid "Enable :guilabel:`Payment Required` to make the payment part of the booking flow. :guilabel:`Allow Refund Until Hours` defines until when a cancellation is refundable."
@@ -6302,7 +6302,7 @@ msgstr "el inicio, el fin y la :guilabel:`Duración (min)`;"
 
 #: ../../content/applications/productivity/appointments.rst:152
 msgid "the :guilabel:`Status`: :guilabel:`Requested`, :guilabel:`Approved`, :guilabel:`Rejected`, or :guilabel:`Cancelled`;"
-msgstr "el :guilabel:`Estado`: :guilabel:`Solicitada`, :guilabel:`Aprobada`, :guilabel:`Rechazada`, o :guilabel:`Cancelada`;"
+msgstr "el :guilabel:`Estado`: :guilabel:`Solicitado`, :guilabel:`Aprobado`, :guilabel:`Rechazado`, o :guilabel:`Cancelado`;"
 
 #: ../../content/applications/productivity/appointments.rst:154
 msgid "the :guilabel:`Pricing` and the payment status (:guilabel:`Pending`, :guilabel:`Authorized`, :guilabel:`Paid`, :guilabel:`Refunded`, or :guilabel:`Failed`)."
@@ -6310,7 +6310,7 @@ msgstr "el :guilabel:`Precio` y el estado del pago (:guilabel:`Pendiente`, :guil
 
 #: ../../content/applications/productivity/appointments.rst:157
 msgid "Use the buttons in the header to :guilabel:`Approve`, :guilabel:`Reject`, or :guilabel:`Cancel` a booking, and, after the appointment, to :guilabel:`Mark Show` or :guilabel:`Mark No-show`. :guilabel:`Force Approve` lets a manager approve a booking that is still waiting for other providers."
-msgstr "Use los botones del encabezado para :guilabel:`Aprobar`, :guilabel:`Rechazar` o :guilabel:`Cancelar` una reserva, y, después de la cita, para :guilabel:`Marcar asistencia` o :guilabel:`Marcar inasistencia`. :guilabel:`Forzar aprobación` permite a un gerente aprobar una reserva que todavía espera a otros proveedores."
+msgstr "Use los botones del encabezado para :guilabel:`Aprobar`, :guilabel:`Rechazar` o :guilabel:`Cancelar` una reserva, y, después de la cita, para :guilabel:`Marcar como presentado` o :guilabel:`Marcar como no presentado`. :guilabel:`Forzar aprobación` permite a un gerente aprobar una reserva que todavía espera a otros proveedores."
 
 #: ../../content/applications/productivity/appointments.rst:162
 msgid "An approved booking creates the calendar event of its providers, and the customer receives the confirmation email with a link to their booking."
@@ -6322,15 +6322,15 @@ msgstr "Exportar reservas"
 
 #: ../../content/applications/productivity/appointments.rst:178
 msgid "With the *eYssen Appointment (Reports & Export)* module (`appointment_reports`), appointment managers can download the bookings from the :guilabel:`Export` menu of the application:"
-msgstr "Con el módulo *eYssen Appointment (Reports & Export)* (`appointment_reports`), los gerentes de citas pueden descargar las reservas desde el menú :guilabel:`Exportar` de la aplicación:"
+msgstr "Con el módulo *eYssen Appointment (Reports & Export)* (`appointment_reports`), los gerentes de citas pueden descargar las reservas desde el menú :guilabel:`Exportación` de la aplicación:"
 
 #: ../../content/applications/productivity/appointments.rst:181
 msgid ":menuselection:`Appointments --> Export --> Export Bookings (CSV, max 10,000)` downloads the `appointments.csv` file, with one row per booking: name, type, start, end, duration in minutes, customer (or the visitor's name for a public booking), amount, status, and attendance;"
-msgstr ":menuselection:`Citas --> Exportar --> Exportar reservas (CSV, máx. 10 000)` descarga el archivo `appointments.csv`, con una fila por reserva: nombre, tipo, inicio, fin, duración en minutos, cliente (o el nombre del visitante en una reserva pública), importe, estado y asistencia;"
+msgstr ":menuselection:`Citas --> Exportación --> Exportar reservas (CSV, máx. 10.000)` descarga el archivo `appointments.csv`, con una fila por reserva: nombre, tipo, inicio, fin, duración en minutos, cliente (o el nombre del visitante en una reserva pública), importe, estado y asistencia;"
 
 #: ../../content/applications/productivity/appointments.rst:184
 msgid ":menuselection:`Appointments --> Export --> Export Bookings (iCal, max 10,000)` downloads the `appointments.ics` calendar file, which can be imported in any calendar application. Each booking is an event titled with the appointment type and the booking name, with its location and description; approved bookings are marked as confirmed, the others as tentative."
-msgstr ":menuselection:`Citas --> Exportar --> Exportar reservas (iCal, máx. 10 000)` descarga el archivo de calendario `appointments.ics`, que se puede importar en cualquier aplicación de calendario. Cada reserva es un evento titulado con el tipo de cita y el nombre de la reserva, con su ubicación y descripción; las reservas aprobadas se marcan como confirmadas, y las demás como provisionales."
+msgstr ":menuselection:`Citas --> Exportación --> Exportar reservas (iCal, máx. 10.000)` descarga el archivo de calendario `appointments.ics`, que se puede importar en cualquier aplicación de calendario. Cada reserva es un evento titulado con el tipo de cita y el nombre de la reserva, con su ubicación y descripción; las reservas aprobadas se marcan como confirmadas, y las demás como provisionales."
 
 #: ../../content/applications/productivity/appointments.rst:189
 msgid "Both files contain the 10,000 most recent bookings at most, of all statuses. The dates and times are expressed in UTC."
@@ -6342,7 +6342,7 @@ msgstr "Puede restringir la exportación añadiendo parámetros a la dirección 
 
 #: ../../content/applications/productivity/appointments.rst:199
 msgid "To install the module, enable :guilabel:`Reports` under :guilabel:`Appointment` in :menuselection:`Settings --> eYssen ERP`. The menu and the downloads are reserved for the users with the :guilabel:`Manager` access level of the Appointments app."
-msgstr "Para instalar el módulo, active :guilabel:`Informes` en :guilabel:`Cita` dentro de :menuselection:`Ajustes --> eYssen ERP`. El menú y las descargas están reservados a los usuarios con el nivel de acceso :guilabel:`Administrador` de la aplicación Citas."
+msgstr "Para instalar el módulo, active :guilabel:`Informes` en :guilabel:`Cita` dentro de :menuselection:`Ajustes --> eYssen ERP`. El menú y las descargas están reservados a los usuarios con el nivel de acceso :guilabel:`Gerente` de la aplicación Citas."
 
 #: ../../content/applications/productivity/appointments.rst:206
 msgid "Provider unavailability"
@@ -6366,7 +6366,7 @@ msgstr "El módulo *Cita (Bonos)* (``appointment_pass``) permite vender paquetes
 
 #: ../../content/applications/productivity/appointments.rst:225
 msgid ":menuselection:`Appointments --> Passes --> Pass Holders` lists the passes owned by customers, with their :guilabel:`Occurrences Remaining` or :guilabel:`Minutes Remaining` and the :guilabel:`Valid Until` date. When a customer with a valid pass books an appointment, the booking is redeemed against the pass instead of being paid."
-msgstr ":menuselection:`Citas --> Bonos --> Titulares de bono` muestra los bonos de los clientes, con sus :guilabel:`Repeticiones restantes` o :guilabel:`Minutos restantes` y la fecha :guilabel:`Válido hasta`. Cuando un cliente con un bono válido reserva una cita, la reserva se descuenta del bono en lugar de pagarse."
+msgstr ":menuselection:`Citas --> Bonos --> Titulares del bono` muestra los bonos de los clientes, con sus :guilabel:`Repeticiones restantes` o :guilabel:`Minutos restantes` y la fecha :guilabel:`Válido hasta`. Cuando un cliente con un bono válido reserva una cita, la reserva se descuenta del bono en lugar de pagarse."
 
 #: ../../content/applications/productivity/appointments.rst:231
 msgid "Coupons and gift cards"
@@ -6398,7 +6398,7 @@ msgstr "**Proyecto**: con el módulo *Cita (Tareas de proyecto)* (``appointment_
 
 #: ../../content/applications/productivity/appointments.rst:251
 msgid "**eLearning**: with the *Appointment (eLearning)* (``appointment_elearning``) module, select a :guilabel:`Course to Enroll` on the appointment type to enroll the customer in that course when the booking is approved."
-msgstr "**eLearning**: con el módulo *Cita (eLearning)* (``appointment_elearning``), seleccione un :guilabel:`Curso de inscripción` en el tipo de cita para inscribir al cliente en ese curso cuando se apruebe la reserva."
+msgstr "**eLearning**: con el módulo *Cita (eLearning)* (``appointment_elearning``), seleccione un :guilabel:`Curso a inscribir` en el tipo de cita para inscribir al cliente en ese curso cuando se apruebe la reserva."
 
 #: ../../content/applications/productivity/appointments.rst:254
 msgid "**CRM**: see :doc:`appointments/create-opps`."
@@ -6414,7 +6414,7 @@ msgstr "Con el módulo *Cita (CRM)* (``appointment_crm``), una reserva aprobada 
 
 #: ../../content/applications/productivity/appointments/create-opps.rst:12
 msgid "Go to :menuselection:`Appointments --> Configuration --> Appointment Types`, open the relevant type, and enable :guilabel:`Create CRM Lead`."
-msgstr "Vaya a :menuselection:`Citas --> Configuración --> Tipos de cita`, abra el tipo correspondiente y active :guilabel:`Crear lead de CRM`."
+msgstr "Vaya a :menuselection:`Citas --> Configuración --> Tipos de cita`, abra el tipo correspondiente y active :guilabel:`Crear iniciativa de CRM`."
 
 #: ../../content/applications/productivity/appointments/create-opps.rst:15
 msgid "In :guilabel:`Lead Title`, define the title of the lead created. Use `{customer}` as a placeholder for the customer name, e.g. `New appointment: {customer}`."
@@ -6426,7 +6426,7 @@ msgstr "Usar los leads"
 
 #: ../../content/applications/productivity/appointments/create-opps.rst:29
 msgid "When a booking of that type is approved, Odoo creates the lead with the customer's contact details and the answers given while booking, and links it to the booking in the :guilabel:`Related Lead` field. Opening the field brings the salesperson directly to the pipeline record."
-msgstr "Cuando se aprueba una reserva de ese tipo, Odoo crea el lead con los datos de contacto del cliente y las respuestas dadas durante la reserva, y lo vincula a la reserva en el campo :guilabel:`Lead relacionado`. Al abrir el campo, el vendedor accede directamente al registro del flujo."
+msgstr "Cuando se aprueba una reserva de ese tipo, Odoo crea el lead con los datos de contacto del cliente y las respuestas dadas durante la reserva, y lo vincula a la reserva en el campo :guilabel:`Iniciativa relacionada`. Al abrir el campo, el vendedor accede directamente al registro del flujo."
 
 #: ../../content/applications/productivity/appointments/create-opps.rst:34
 msgid "Leads are created on approval, so bookings that stay :guilabel:`Requested`, or that are rejected, do not generate a lead."
@@ -6454,7 +6454,7 @@ msgstr "De forma predeterminada, las reuniones sin :guilabel:`Ubicación` no obt
 
 #: ../../content/applications/productivity/calendar.rst:174
 msgid "Each user can override the company setting in :menuselection:`Preferences --> Calendar`, by setting :guilabel:`Automatic Video Call` to :guilabel:`Company default`, :guilabel:`Yes`, or :guilabel:`No`."
-msgstr "Cada usuario puede anular el ajuste de la empresa en :menuselection:`Preferencias --> Calendario`, configurando :guilabel:`Videollamada automática` como :guilabel:`Valor predeterminado de la empresa`, :guilabel:`Sí` o :guilabel:`No`."
+msgstr "Cada usuario puede anular el ajuste de la empresa en :menuselection:`Preferencias --> Calendario`, configurando :guilabel:`Videollamada automática` como :guilabel:`Valor por defecto de la empresa`, :guilabel:`Sí` o :guilabel:`No`."
 
 #: ../../content/applications/productivity/calendar.rst:178
 msgid "This behavior requires the *Calendar Auto Video Call* (``calendar_auto_videocall``) module, and the link itself is created by the synchronized Outlook or Google calendar."
@@ -6570,15 +6570,15 @@ msgstr ":guilabel:`Usuario`: puede abrir los tableros a los que se le ha concedi
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:25
 msgid ":guilabel:`Manager`: can create and configure dashboards and widgets, and manage the layout."
-msgstr ":guilabel:`Administrador`: puede crear y configurar tableros y widgets, y gestionar el diseño."
+msgstr ":guilabel:`Gerente`: puede crear y configurar tableros y widgets, y gestionar el diseño."
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:26
 msgid ":guilabel:`Technical (Python / SQL)`: can additionally create widgets whose data comes from Python code or an SQL query."
-msgstr ":guilabel:`Técnico (Python/SQL)`: además, puede crear widgets cuyos datos provienen de código Python o de una consulta SQL."
+msgstr ":guilabel:`Técnico (Python / SQL)`: además, puede crear widgets cuyos datos provienen de código Python o de una consulta SQL."
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:30
 msgid "Python and SQL widgets run with full database access, bypassing access rights and record rules. Grant the :guilabel:`Technical (Python / SQL)` level only to users who are trusted with reading the entire database."
-msgstr "Los widgets de Python y SQL se ejecutan con acceso completo a la base de datos, omitiendo los derechos de acceso y las reglas de registro. Conceda el nivel :guilabel:`Técnico (Python/SQL)` solo a los usuarios de confianza autorizados a leer toda la base de datos."
+msgstr "Los widgets de Python y SQL se ejecutan con acceso completo a la base de datos, omitiendo los derechos de acceso y las reglas de registro. Conceda el nivel :guilabel:`Técnico (Python / SQL)` solo a los usuarios de confianza autorizados a leer toda la base de datos."
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:35
 msgid "Create a dashboard"
@@ -6590,11 +6590,11 @@ msgstr "Para crear un tablero, vaya a :menuselection:`Tableros --> Configuració
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:40
 msgid ":guilabel:`Dashboard Name`: the name shown in the menu and at the top of the dashboard."
-msgstr ":guilabel:`Nombre del tablero`: el nombre que aparece en el menú y en la parte superior del tablero."
+msgstr ":guilabel:`Nombre del panel`: el nombre que aparece en el menú y en la parte superior del tablero."
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:41
 msgid ":guilabel:`Menu Sequence`: the position of the dashboard's menu item."
-msgstr ":guilabel:`Secuencia del menú`: la posición del elemento de menú del tablero."
+msgstr ":guilabel:`Secuencia de menú`: la posición del elemento de menú del tablero."
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:42
 msgid ":guilabel:`Also show under`: optionally, another app's menu (e.g., :guilabel:`Sales`) where a menu item for this dashboard is created as well, in addition to the entry in the Dashboards app."
@@ -6602,7 +6602,7 @@ msgstr ":guilabel:`Mostrar también en`: opcionalmente, el menú de otra aplicac
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:44
 msgid ":guilabel:`Auto Refresh`: how often the dashboard reloads its data — :guilabel:`Off`, :guilabel:`15 seconds`, :guilabel:`30 seconds`, :guilabel:`1 minute`, or :guilabel:`5 minutes`."
-msgstr ":guilabel:`Actualización automática`: con qué frecuencia el tablero recarga sus datos: :guilabel:`Desactivado`, :guilabel:`15 segundos`, :guilabel:`30 segundos`, :guilabel:`1 minuto` o :guilabel:`5 minutos`."
+msgstr ":guilabel:`Actualización automática`: con qué frecuencia el tablero recarga sus datos: :guilabel:`Apagado`, :guilabel:`15 segundos`, :guilabel:`30 segundos`, :guilabel:`1 minuto` o :guilabel:`5 minutos`."
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:46
 msgid ":guilabel:`Allowed Groups` and :guilabel:`Allowed Users`: who may open the dashboard. If both are empty, every user with :guilabel:`Dashboard / User` rights sees it."
@@ -6614,7 +6614,7 @@ msgstr "La sección :guilabel:`Sistema` muestra la acción de cliente y los elem
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:52
 msgid "Click :guilabel:`View Dashboard` in the header to open the dashboard itself."
-msgstr "Haga clic en :guilabel:`Ver tablero` en el encabezado para abrir el tablero en sí."
+msgstr "Haga clic en :guilabel:`Ver panel` en el encabezado para abrir el tablero en sí."
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:63
 msgid "Arrange the layout"
@@ -6638,7 +6638,7 @@ msgstr "Fuente de datos"
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:86
 msgid ":guilabel:`ORM`: the widget reads a model through the standard database layer, so the user's access rights and record rules apply. Select the :guilabel:`Model`, the :guilabel:`Category / Group By` field and, for hierarchical charts, a :guilabel:`Sub / Secondary Group By` field. A :guilabel:`Domain Filter`, a :guilabel:`Date Filter Field` with a :guilabel:`Date Range`, a :guilabel:`Limit`, and the sorting (:guilabel:`Sort By`, :guilabel:`Sort Order`) further restrict the data. For records linked through a many2many or one2many field, :guilabel:`M2M / O2M Aggregation` decides whether a record is counted once for each related record or only once, and :guilabel:`Include Empty Category` adds a bucket for records with no value."
-msgstr ":guilabel:`ORM`: el widget lee un modelo a través de la capa estándar de la base de datos, por lo que se aplican los derechos de acceso y las reglas de registro del usuario. Seleccione el :guilabel:`Modelo`, el campo :guilabel:`Categoría/Agrupar por` y, para los gráficos jerárquicos, un campo :guilabel:`Sub/Agrupar por secundario`. Un :guilabel:`Filtro de dominio`, un :guilabel:`Campo de filtro de fecha` con un :guilabel:`Rango de fechas`, un :guilabel:`Límite` y el orden (:guilabel:`Ordenar por`, :guilabel:`Orden de clasificación`) restringen aún más los datos. Para los registros vinculados mediante un campo many2many o one2many, :guilabel:`Agregación M2M/O2M` decide si un registro se cuenta una vez por cada registro relacionado o solo una vez, y :guilabel:`Incluir categoría vacía` añade un grupo para los registros sin valor."
+msgstr ":guilabel:`ORM`: el widget lee un modelo a través de la capa estándar de la base de datos, por lo que se aplican los derechos de acceso y las reglas de registro del usuario. Seleccione el :guilabel:`Modelo`, el campo :guilabel:`Categoría / Agrupar por` y, para los gráficos jerárquicos, un campo :guilabel:`Agrupar por (secundario)`. Un :guilabel:`Filtro de dominio`, un :guilabel:`Campo de filtro de fecha` con un :guilabel:`Intervalo de fecha`, un :guilabel:`Límite` y el orden (:guilabel:`Ordenar por`, :guilabel:`Orden de clasificación`) restringen aún más los datos. Para los registros vinculados mediante un campo many2many o one2many, :guilabel:`Agregación M2M / O2M` decide si un registro se cuenta una vez por cada registro relacionado o solo una vez, y :guilabel:`Incluir categoría vacía` añade un grupo para los registros sin valor."
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:94
 msgid ":guilabel:`Python`: the widget is filled by a short Python snippet that populates a result dictionary."
@@ -6650,7 +6650,7 @@ msgstr ":guilabel:`SQL`: el widget se completa con una consulta `SELECT`. La pri
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:99
 msgid "Both :guilabel:`Python` and :guilabel:`SQL` are edited in the :guilabel:`Custom Code` tab and are only available to users with the :guilabel:`Technical (Python / SQL)` access level."
-msgstr "Tanto :guilabel:`Python` como :guilabel:`SQL` se editan en la pestaña :guilabel:`Código personalizado` y solo están disponibles para los usuarios con el nivel de acceso :guilabel:`Técnico (Python/SQL)`."
+msgstr "Tanto :guilabel:`Python` como :guilabel:`SQL` se editan en la pestaña :guilabel:`Código personalizado` y solo están disponibles para los usuarios con el nivel de acceso :guilabel:`Técnico (Python / SQL)`."
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:105
 msgid "In the :guilabel:`Measures` list, add the fields to plot or aggregate. For each measure, select the :guilabel:`Field`, the :guilabel:`Aggregation`, an optional :guilabel:`Label` and :guilabel:`Color`, and — for dual-axis charts — the :guilabel:`Y Axis` to use."
@@ -6658,15 +6658,15 @@ msgstr "En la lista :guilabel:`Medidas`, añada los campos que desea representar
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:112
 msgid "Set the :guilabel:`Chart Type` to :guilabel:`Bar`, :guilabel:`Line`, :guilabel:`Area`, :guilabel:`Pie`, :guilabel:`Radar`, :guilabel:`Funnel`, :guilabel:`Gauge`, :guilabel:`Scatter`, :guilabel:`Heatmap`, :guilabel:`Treemap`, :guilabel:`Sunburst`, :guilabel:`Dual Sunburst`, :guilabel:`Sankey`, :guilabel:`Stacked Bar (Hierarchical)`, or :guilabel:`Bubble / Scatter`."
-msgstr "Configure el :guilabel:`Tipo de gráfico` como :guilabel:`Barras`, :guilabel:`Líneas`, :guilabel:`Área`, :guilabel:`Circular`, :guilabel:`Radar`, :guilabel:`Embudo`, :guilabel:`Indicador`, :guilabel:`Dispersión`, :guilabel:`Mapa de calor`, :guilabel:`Mapa de árbol`, :guilabel:`Solar`, :guilabel:`Solar doble`, :guilabel:`Sankey`, :guilabel:`Barras apiladas (jerárquico)` o :guilabel:`Burbujas/Dispersión`."
+msgstr "Configure el :guilabel:`Tipo de gráfico` como :guilabel:`Barra`, :guilabel:`Línea`, :guilabel:`Área`, :guilabel:`Circular`, :guilabel:`Radar`, :guilabel:`Embudo`, :guilabel:`Indicador`, :guilabel:`Dispersión`, :guilabel:`Mapa de calor`, :guilabel:`Mapa de árbol`, :guilabel:`Sunburst`, :guilabel:`Sunburst doble`, :guilabel:`Sankey`, :guilabel:`Barras apiladas (jerárquico)` o :guilabel:`Burbujas / Dispersión`."
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:117
 msgid "Depending on the chart type, further options appear: :guilabel:`Orientation` and :guilabel:`Stacking` for bars, :guilabel:`Smooth`, :guilabel:`Show Dots` and :guilabel:`Step` for lines, :guilabel:`Doughnut Style`, :guilabel:`Top N (0=all)`, :guilabel:`Group Others` and :guilabel:`Label Format` for pies, or :guilabel:`Min` and :guilabel:`Max` for gauges. :guilabel:`Show Legend` and :guilabel:`Show Labels` control the chart decorations, and :guilabel:`Theme` switches between the :guilabel:`Default`, :guilabel:`Dark`, and :guilabel:`Vintage` color themes."
-msgstr "Según el tipo de gráfico, aparecen más opciones: :guilabel:`Orientación` y :guilabel:`Apilado` para las barras; :guilabel:`Suave`, :guilabel:`Mostrar puntos` y :guilabel:`Escalonado` para las líneas; :guilabel:`Estilo de dona`, :guilabel:`Top N (0=todos)`, :guilabel:`Agrupar otros` y :guilabel:`Formato de etiqueta` para los circulares; o :guilabel:`Mín.` y :guilabel:`Máx.` para los indicadores. :guilabel:`Mostrar leyenda` y :guilabel:`Mostrar etiquetas` controlan los elementos decorativos del gráfico, y :guilabel:`Tema` alterna entre los temas de color :guilabel:`Predeterminado`, :guilabel:`Oscuro` y :guilabel:`Vintage`."
+msgstr "Según el tipo de gráfico, aparecen más opciones: :guilabel:`Orientación` y :guilabel:`Apilado` para las barras; :guilabel:`Suave`, :guilabel:`Mostrar puntos` y :guilabel:`Escalonado` para las líneas; :guilabel:`Estilo de anillo`, :guilabel:`Top N (0=todos)`, :guilabel:`Agrupar otros` y :guilabel:`Formato de etiqueta` para los circulares; o :guilabel:`Mínimo` y :guilabel:`Max` para los indicadores. :guilabel:`Mostrar leyenda` y :guilabel:`Mostrar etiquetas` controlan los elementos decorativos del gráfico, y :guilabel:`Tema` alterna entre los temas de color :guilabel:`Por defecto`, :guilabel:`Oscuro` y :guilabel:`Añada`."
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:126
 msgid "Hierarchical chart types (treemap, sunburst, dual sunburst, sankey, hierarchical stacked bar, bubble) display two levels of data and therefore require a :guilabel:`Sub / Secondary Group By` field."
-msgstr "Los tipos de gráfico jerárquicos (mapa de árbol, solar, solar doble, sankey, barras apiladas jerárquicas, burbujas) muestran dos niveles de datos y, por lo tanto, requieren un campo :guilabel:`Sub/Agrupar por secundario`."
+msgstr "Los tipos de gráfico jerárquicos (mapa de árbol, solar, solar doble, sankey, barras apiladas jerárquicas, burbujas) muestran dos niveles de datos y, por lo tanto, requieren un campo :guilabel:`Agrupar por (secundario)`."
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:139
 msgid "|KPIs|"
@@ -6674,7 +6674,7 @@ msgstr "|KPIs|"
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:141
 msgid "A |KPI| widget shows a single aggregated figure. Set an :guilabel:`Icon`, an optional :guilabel:`Target` value, and a :guilabel:`Compare Period` to display the variation against the previous period."
-msgstr "Un widget de |KPI| muestra una única cifra agregada. Configure un :guilabel:`Icono`, un valor :guilabel:`Objetivo` opcional y un :guilabel:`Periodo de comparación` para mostrar la variación respecto al periodo anterior."
+msgstr "Un widget de |KPI| muestra una única cifra agregada. Configure un :guilabel:`Icono`, un valor :guilabel:`Objetivo` opcional y un :guilabel:`Comparar periodo` para mostrar la variación respecto al periodo anterior."
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:146
 msgid "Tables"
@@ -6690,7 +6690,7 @@ msgstr "Accesos directos"
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:155
 msgid "A shortcut widget is a button that opens a view or a URL. Select an :guilabel:`Action` or enter a :guilabel:`Target URL`, and choose an :guilabel:`Icon` or upload an :guilabel:`Icon Image`. To display a counter on the button, select a :guilabel:`Badge Model` and, optionally, a :guilabel:`Badge Domain` that restricts the records counted."
-msgstr "Un widget de acceso directo es un botón que abre una vista o una URL. Seleccione una :guilabel:`Acción` o introduzca una :guilabel:`URL de destino`, y elija un :guilabel:`Icono` o suba una :guilabel:`Imagen de icono`. Para mostrar un contador en el botón, seleccione un :guilabel:`Modelo de insignia` y, opcionalmente, un :guilabel:`Dominio de insignia` que restrinja los registros contados."
+msgstr "Un widget de acceso directo es un botón que abre una vista o una URL. Seleccione una :guilabel:`Acción` o introduzca una :guilabel:`URL objetivo`, y elija un :guilabel:`Icono` o suba una :guilabel:`Imagen de icono`. Para mostrar un contador en el botón, seleccione un :guilabel:`Modelo de la insignia` y, opcionalmente, un :guilabel:`Dominio de la insignia` que restrinja los registros contados."
 
 #: ../../content/applications/productivity/dashboards/custom_dashboards.rst:161
 msgid "Appearance and access"
@@ -6886,7 +6886,7 @@ msgstr "Posición del chatter"
 
 #: ../../content/applications/productivity/discuss/chatter.rst:463
 msgid "Each user can choose where the chatter is displayed on form views. In :menuselection:`Preferences`, set :guilabel:`Chatter Position` to :guilabel:`Side` (next to the form) or :guilabel:`Bottom` (under the form)."
-msgstr "Cada usuario puede elegir dónde se muestra el chatter en las vistas de formulario. En :menuselection:`Preferencias`, configure :guilabel:`Posición del chatter` como :guilabel:`Lateral` (junto al formulario) o :guilabel:`Inferior` (debajo del formulario)."
+msgstr "Cada usuario puede elegir dónde se muestra el chatter en las vistas de formulario. En :menuselection:`Preferencias`, configure :guilabel:`Posición del chatter` como :guilabel:`Lado` (junto al formulario) o :guilabel:`Abajo` (debajo del formulario)."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:468
 msgid "Requires the *MuK Chatter* (``muk_web_chatter``) module."
@@ -6898,11 +6898,11 @@ msgstr "Seguimiento de la entrega de correos electrónicos"
 
 #: ../../content/applications/productivity/discuss/chatter.rst:473
 msgid "When an email is sent from the chatter, its delivery status is tracked and displayed next to the message: :guilabel:`Sent`, :guilabel:`Delivered`, :guilabel:`Opened`, :guilabel:`Deferred`, :guilabel:`Bounced`, :guilabel:`Soft bounced`, :guilabel:`Rejected`, :guilabel:`Spam`, :guilabel:`Unsubscribed`, or :guilabel:`Error`. Click the status to see the tracking events of that email, including the reported error."
-msgstr "Cuando se envía un correo electrónico desde el chatter, se hace seguimiento de su estado de entrega y se muestra junto al mensaje: :guilabel:`Enviado`, :guilabel:`Entregado`, :guilabel:`Abierto`, :guilabel:`Aplazado`, :guilabel:`Rebotado`, :guilabel:`Rebote leve`, :guilabel:`Rechazado`, :guilabel:`Spam`, :guilabel:`Cancelado` o :guilabel:`Error`. Haga clic en el estado para ver los eventos de seguimiento de ese correo, incluido el error notificado."
+msgstr "Cuando se envía un correo electrónico desde el chatter, se hace seguimiento de su estado de entrega y se muestra junto al mensaje: :guilabel:`Enviado`, :guilabel:`Entregado`, :guilabel:`Abierto`, :guilabel:`Diferido`, :guilabel:`Rebotado`, :guilabel:`Rebotado débil`, :guilabel:`Rechazado`, :guilabel:`No deseado`, :guilabel:`Dado de baja` o :guilabel:`Error`. Haga clic en el estado para ver los eventos de seguimiento de ese correo, incluido el error notificado."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:479
 msgid "The complete list is available to administrators in :menuselection:`Settings --> Technical --> Email --> Tracking emails` and :guilabel:`Tracking events`. In :menuselection:`Settings --> General Settings --> Discuss`, the retention of these records can be limited with the maximum age in days."
-msgstr "Los administradores pueden consultar la lista completa en :menuselection:`Ajustes --> Técnico --> Correo electrónico --> Correos de seguimiento` y :guilabel:`Eventos de seguimiento`. En :menuselection:`Ajustes --> Ajustes generales --> Conversaciones`, la retención de estos registros se puede limitar con la antigüedad máxima en días."
+msgstr "Los administradores pueden consultar la lista completa en :menuselection:`Ajustes --> Técnico --> Correo electrónico --> Correos con seguimiento` y :guilabel:`Eventos de seguimiento`. En :menuselection:`Ajustes --> Ajustes generales --> Conversaciones`, la retención de estos registros se puede limitar con la antigüedad máxima en días."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:484
 msgid "Requires the *Email tracking* (``mail_tracking``) module."
@@ -6970,11 +6970,11 @@ msgstr "Los valores predeterminados se pueden preparar en dos lugares:"
 
 #: ../../content/applications/productivity/discuss/chatter.rst:544
 msgid "on the company: go to :menuselection:`Settings --> Users & Companies --> Companies`, open the company, and select contacts in the :guilabel:`Default Cc` and :guilabel:`Default Bcc` fields, under :guilabel:`Email`. These contacts are pre-filled in every email composed for that company, e.g., to archive all outgoing emails in a dedicated mailbox with a default Bcc contact;"
-msgstr "en la compañía: vaya a :menuselection:`Ajustes --> Usuarios y compañías --> Compañías`, abra la compañía y seleccione contactos en los campos :guilabel:`Cc predeterminado` y :guilabel:`Bcc predeterminado`, en :guilabel:`Correo electrónico`. Estos contactos se completan de forma predeterminada en todos los correos redactados para esa compañía, por ejemplo, para archivar todos los correos salientes en un buzón dedicado con un contacto Bcc predeterminado;"
+msgstr "en la compañía: vaya a :menuselection:`Ajustes --> Usuarios y compañías --> Compañías`, abra la compañía y seleccione contactos en los campos :guilabel:`Cc por defecto` y :guilabel:`Bcc por defecto`, en :guilabel:`Correo electrónico`. Estos contactos se completan de forma predeterminada en todos los correos redactados para esa compañía, por ejemplo, para archivar todos los correos salientes en un buzón dedicado con un contacto Bcc predeterminado;"
 
 #: ../../content/applications/productivity/discuss/chatter.rst:548
 msgid "on an :doc:`email template <../../general/companies/email_template>`: in addition to the standard :guilabel:`Cc` field, a :guilabel:`Bcc` field is available in the :guilabel:`Email Configuration` tab. When the template is selected in the composer, the addresses of these two fields are matched with the existing contacts, which are then added to the :guilabel:`Cc` and :guilabel:`Bcc` fields of the composer."
-msgstr "en una :doc:`plantilla de correo electrónico <../../general/companies/email_template>`: además del campo estándar :guilabel:`Cc`, hay disponible un campo :guilabel:`Bcc` en la pestaña :guilabel:`Configuración de correo electrónico`. Cuando se selecciona la plantilla en el compositor, las direcciones de estos dos campos se cotejan con los contactos existentes, que después se agregan a los campos :guilabel:`Cc` y :guilabel:`Bcc` del compositor."
+msgstr "en una :doc:`plantilla de correo electrónico <../../general/companies/email_template>`: además del campo estándar :guilabel:`Cc`, hay disponible un campo :guilabel:`Bcc` en la pestaña :guilabel:`Configuración del correo electrónico`. Cuando se selecciona la plantilla en el compositor, las direcciones de estos dos campos se cotejan con los contactos existentes, que después se agregan a los campos :guilabel:`Cc` y :guilabel:`Bcc` del compositor."
 
 #: ../../content/applications/productivity/discuss/chatter.rst:563
 msgid "Archive and restore log"
@@ -7014,7 +7014,7 @@ msgstr ":guilabel:`Bandeja de entrada`: los mensajes dirigidos al usuario;"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:19
 msgid ":guilabel:`Marked`: the messages flagged with a :ref:`mark <mailbox/marks>`;"
-msgstr ":guilabel:`Marcados`: los mensajes señalados con una :ref:`marca <mailbox/marks>`;"
+msgstr ":guilabel:`Marcado`: los mensajes señalados con una :ref:`marca <mailbox/marks>`;"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:20
 msgid ":guilabel:`Channels` and :guilabel:`Direct Messages`: the Discuss conversations;"
@@ -7042,7 +7042,7 @@ msgstr "Desde la lista de mensajes se pueden seleccionar varios mensajes para ac
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:44
 msgid "The reply composer offers :guilabel:`Send as e-mail` to send the answer as an email instead of an internal message, and supports :guilabel:`CC` and :guilabel:`BCC` recipients."
-msgstr "El compositor de respuesta ofrece :guilabel:`Enviar como correo electrónico` para enviar la respuesta como un correo electrónico en lugar de un mensaje interno, y admite destinatarios en :guilabel:`CC` y :guilabel:`BCC`."
+msgstr "El compositor de respuesta ofrece :guilabel:`Enviar como correo electrónico` para enviar la respuesta como un correo electrónico en lugar de un mensaje interno, y admite destinatarios en :guilabel:`CC` y :guilabel:`CCO`."
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:50
 msgid "Labels"
@@ -7074,31 +7074,31 @@ msgstr "La categoría :guilabel:`Buzón` de los :ref:`permisos de acceso <access
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:78
 msgid ":guilabel:`User: Access Mailbox`: open the app;"
-msgstr ":guilabel:`User: Access Mailbox`: abrir la aplicación;"
+msgstr ":guilabel:`Usuario: Acceder al buzón`: abrir la aplicación;"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:79
 msgid ":guilabel:`User: Edit Own Messages` and :guilabel:`Administrator: Edit Any Message`;"
-msgstr ":guilabel:`User: Edit Own Messages` y :guilabel:`Administrator: Edit Any Message`;"
+msgstr ":guilabel:`Usuario: Editar sus propios mensajes` y :guilabel:`Administrador: editar cualquier mensaje`;"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:80
 msgid ":guilabel:`User: Delete Own Messages` and :guilabel:`Administrator: Delete Any Message`;"
-msgstr ":guilabel:`User: Delete Own Messages` y :guilabel:`Administrator: Delete Any Message`;"
+msgstr ":guilabel:`Usuario: Eliminar sus propios mensajes` y :guilabel:`Administrador: eliminar cualquier mensaje`;"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:81
 msgid ":guilabel:`User: Move Messages` and :guilabel:`User: Manage Labels`;"
-msgstr ":guilabel:`User: Move Messages` y :guilabel:`User: Manage Labels`;"
+msgstr ":guilabel:`Usuario: Mover mensajes` y :guilabel:`Usuario: Gestionar etiquetas`;"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:82
 msgid ":guilabel:`User: Lost Messages Visibility`: see the messages whose record is gone;"
-msgstr ":guilabel:`User: Lost Messages Visibility`: ver los mensajes cuyo registro ha desaparecido;"
+msgstr ":guilabel:`Usuario: Visibilidad de mensajes perdidos`: ver los mensajes cuyo registro ha desaparecido;"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:83
 msgid ":guilabel:`User: Send as E-mail`: answer by email from the mailbox;"
-msgstr ":guilabel:`User: Send as E-mail`: responder por correo electrónico desde el buzón;"
+msgstr ":guilabel:`Usuario: Enviar como correo electrónico`: responder por correo electrónico desde el buzón;"
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:84
 msgid ":guilabel:`Administrator: Mailbox`: full access."
-msgstr ":guilabel:`Administrator: Mailbox`: acceso completo."
+msgstr ":guilabel:`Administrador: buzón de correo`: acceso completo."
 
 #: ../../content/applications/productivity/discuss/mailbox.rst:88
 msgid ":doc:`chatter`"
@@ -7114,7 +7114,7 @@ msgstr "La aplicación la proporciona el módulo *Document Management* (``eyssen
 
 #: ../../content/applications/productivity/documents.rst:17
 msgid "The module adds a :guilabel:`Document Management` category to the :ref:`access rights <access-rights/users>` of a user:"
-msgstr "El módulo agrega una categoría :guilabel:`Document Management` a los :ref:`permisos de acceso <access-rights/users>` de un usuario:"
+msgstr "El módulo agrega una categoría :guilabel:`Gestión documental` a los :ref:`permisos de acceso <access-rights/users>` de un usuario:"
 
 #: ../../content/applications/productivity/documents.rst:20
 msgid ":guilabel:`User`: can open the Documents app, and work with the files they have access to."
@@ -7122,7 +7122,7 @@ msgstr ":guilabel:`Usuario`: puede abrir la aplicación Documentos y trabajar co
 
 #: ../../content/applications/productivity/documents.rst:21
 msgid ":guilabel:`Manager`: can additionally configure folders, tags, and operations."
-msgstr ":guilabel:`Gestor`: además, puede configurar carpetas, etiquetas y operaciones."
+msgstr ":guilabel:`Gerente`: además, puede configurar carpetas, etiquetas y operaciones."
 
 #: ../../content/applications/productivity/documents.rst:24
 msgid "Browse documents"
@@ -7142,7 +7142,7 @@ msgstr "agrupar los documentos por :guilabel:`Carpeta`, :guilabel:`Modelo`, :gui
 
 #: ../../content/applications/productivity/documents.rst:34
 msgid "use the :guilabel:`Hide JS/CSS`, :guilabel:`Hide View Model`, and :guilabel:`Hide Without Model` filters to leave out the technical attachments that Odoo stores together with the business files."
-msgstr "utilizar los filtros :guilabel:`Hide JS/CSS`, :guilabel:`Hide View Model` y :guilabel:`Hide Without Model` para dejar fuera los archivos adjuntos técnicos que Odoo almacena junto con los archivos de negocio."
+msgstr "utilizar los filtros :guilabel:`Ocultar JS/CSS`, :guilabel:`Ocultar modelo de vista` y :guilabel:`Ocultar sin modelo` para dejar fuera los archivos adjuntos técnicos que Odoo almacena junto con los archivos de negocio."
 
 #: ../../content/applications/productivity/documents.rst:37
 msgid "Each document has a chatter, so notes and activities can be logged on a file itself."
@@ -7166,7 +7166,7 @@ msgstr "Las carpetas clasifican los documentos y pueden anidarse. Para crear una
 
 #: ../../content/applications/productivity/documents.rst:63
 msgid ":guilabel:`Folder Name` and :guilabel:`Parent Folder`: the position of the folder in the tree. The :guilabel:`Complete Name` of a folder shows its full path, e.g. `Contracts / 2026`."
-msgstr "el :guilabel:`Nombre de la carpeta` y la :guilabel:`Carpeta principal`: la posición de la carpeta en el árbol. El :guilabel:`Nombre completo` de una carpeta muestra su ruta completa, por ejemplo, `Contracts / 2026`."
+msgstr "el :guilabel:`Nombre de la carpeta` y la :guilabel:`Carpeta superior`: la posición de la carpeta en el árbol. El :guilabel:`Nombre completo` de una carpeta muestra su ruta completa, por ejemplo, `Contracts / 2026`."
 
 #: ../../content/applications/productivity/documents.rst:65
 msgid ":guilabel:`Company`: leave empty to make the folder available to all companies."
@@ -7178,7 +7178,7 @@ msgstr ":guilabel:`Secuencia`: el orden de las carpetas."
 
 #: ../../content/applications/productivity/documents.rst:68
 msgid "The :guilabel:`Documents` smart button opens the documents filed in the folder, and the :guilabel:`Child Folders` tab lists its subfolders."
-msgstr "El botón inteligente :guilabel:`Documentos` abre los documentos archivados en la carpeta, y la pestaña :guilabel:`Subcarpetas` muestra sus subcarpetas."
+msgstr "El botón inteligente :guilabel:`Documentos` abre los documentos archivados en la carpeta, y la pestaña :guilabel:`Carpetas secundarias` muestra sus subcarpetas."
 
 #: ../../content/applications/productivity/documents.rst:72
 msgid "Automatic folders"
@@ -7230,11 +7230,11 @@ msgstr ":guilabel:`Carpetas` y :guilabel:`Modelos`: restringen la operación a d
 
 #: ../../content/applications/productivity/documents.rst:128
 msgid ":guilabel:`Operation`: :guilabel:`Creating a New Record` or :guilabel:`Link to an Existing Record`."
-msgstr ":guilabel:`Operación`: :guilabel:`Creating a New Record` o :guilabel:`Link to an Existing Record`."
+msgstr ":guilabel:`Operación`: :guilabel:`Creando un nuevo registro` o :guilabel:`Vincular a un registro existente`."
 
 #: ../../content/applications/productivity/documents.rst:130
 msgid ":guilabel:`Model for the Operation`: the model of the record to create or to link to, and, optionally, a :guilabel:`Filter for the Operation Model` restricting the records proposed."
-msgstr ":guilabel:`Modelo para la operación`: el modelo del registro que se debe crear o al que se debe vincular y, opcionalmente, un :guilabel:`Filtro para el modelo de la operación` que restringe los registros propuestos."
+msgstr ":guilabel:`Modelo para la operación`: el modelo del registro que se debe crear o al que se debe vincular y, opcionalmente, un :guilabel:`Filtro para el modelo de operación` que restringe los registros propuestos."
 
 #: ../../content/applications/productivity/documents.rst:133
 msgid "To run an operation, open a document and click :guilabel:`Operations` in the :guilabel:`Organize` section. Select the :guilabel:`Operation` and the target :guilabel:`Record`, then save: the document is attached to that record."
@@ -7258,7 +7258,7 @@ msgstr "La aplicación la proporciona el módulo *Knowledge* (``knowledge``) y u
 
 #: ../../content/applications/productivity/knowledge.rst:15
 msgid "The :guilabel:`Knowledge` category of the :ref:`access rights <access-rights/users>` offers two levels:"
-msgstr "La categoría :guilabel:`Información` de los :ref:`permisos de acceso <access-rights/users>` ofrece dos niveles:"
+msgstr "La categoría :guilabel:`Conocimiento` de los :ref:`permisos de acceso <access-rights/users>` ofrece dos niveles:"
 
 #: ../../content/applications/productivity/knowledge.rst:18
 msgid ":guilabel:`User`: can read the pages they have access to, write the pages they are allowed to edit, and manage their own pages."
@@ -7266,7 +7266,7 @@ msgstr ":guilabel:`Usuario`: puede leer las páginas a las que tiene acceso, esc
 
 #: ../../content/applications/productivity/knowledge.rst:20
 msgid ":guilabel:`Manager`: can additionally manage spaces, all pages, and the app's configuration."
-msgstr ":guilabel:`Gestor`: además, puede gestionar los espacios, todas las páginas y la configuración de la aplicación."
+msgstr ":guilabel:`Gerente`: además, puede gestionar los espacios, todas las páginas y la configuración de la aplicación."
 
 #: ../../content/applications/productivity/knowledge.rst:23
 msgid "Spaces"
@@ -7274,7 +7274,7 @@ msgstr "Espacios"
 
 #: ../../content/applications/productivity/knowledge.rst:25
 msgid "A **space** is a top-level container that groups related pages, e.g., one space per department or per product. Managers create spaces in :menuselection:`Knowledge --> Configuration --> Spaces`:"
-msgstr "Un **espacio** es un contenedor de nivel superior que agrupa páginas relacionadas, por ejemplo, un espacio por departamento o por producto. Los gestores crean espacios en :menuselection:`Información --> Configuración --> Espacios`:"
+msgstr "Un **espacio** es un contenedor de nivel superior que agrupa páginas relacionadas, por ejemplo, un espacio por departamento o por producto. Los gestores crean espacios en :menuselection:`Conocimiento --> Configuración --> Espacios`:"
 
 #: ../../content/applications/productivity/knowledge.rst:28
 msgid ":guilabel:`Name` and :guilabel:`Icon`: how the space appears in the sidebar;"
@@ -7302,7 +7302,7 @@ msgstr "Páginas"
 
 #: ../../content/applications/productivity/knowledge.rst:39
 msgid "Go to :menuselection:`Knowledge --> Content` to open the editor. The left sidebar shows the spaces and, inside each of them, the page tree; the selected page is displayed on the right."
-msgstr "Vaya a :menuselection:`Información --> Contenido` para abrir el editor. La barra lateral izquierda muestra los espacios y, dentro de cada uno de ellos, el árbol de páginas; la página seleccionada se muestra a la derecha."
+msgstr "Vaya a :menuselection:`Conocimiento --> Contenido` para abrir el editor. La barra lateral izquierda muestra los espacios y, dentro de cada uno de ellos, el árbol de páginas; la página seleccionada se muestra a la derecha."
 
 #: ../../content/applications/productivity/knowledge.rst:43
 msgid "Create and organize pages"
@@ -7310,7 +7310,7 @@ msgstr "Crear y organizar páginas"
 
 #: ../../content/applications/productivity/knowledge.rst:45
 msgid "Click :icon:`fa-plus` :guilabel:`New page` to add a page to a space, or :guilabel:`Add child page` on a page to nest a new page under it."
-msgstr "Haga clic en :icon:`fa-plus` :guilabel:`Nueva página` para agregar una página a un espacio, o en :guilabel:`Agregar página secundaria` en una página para anidar una página nueva debajo de ella."
+msgstr "Haga clic en :icon:`fa-plus` :guilabel:`Nueva página` para agregar una página a un espacio, o en :guilabel:`Añadir página secundaria` en una página para anidar una página nueva debajo de ella."
 
 #: ../../content/applications/productivity/knowledge.rst:47
 msgid "Drag pages in the sidebar to reorder them."
@@ -7338,11 +7338,11 @@ msgstr "estilos de texto: :guilabel:`Negrita` (:command:`Ctrl` + :command:`B`), 
 
 #: ../../content/applications/productivity/knowledge.rst:68
 msgid "structure: :guilabel:`Heading 1` to :guilabel:`Heading 3`, :guilabel:`Bullet List`, :guilabel:`Numbered List`, :guilabel:`Checklist`, :guilabel:`Blockquote`, :guilabel:`Callout`, :guilabel:`Code Block`, :guilabel:`Table`, :guilabel:`Horizontal Rule`, :guilabel:`Toggle / Expand` sections, and a :guilabel:`Table of Contents` generated from the headings;"
-msgstr "estructura: de :guilabel:`Heading 1` a :guilabel:`Heading 3`, :guilabel:`Bullet List`, :guilabel:`Numbered List`, :guilabel:`Checklist`, :guilabel:`Blockquote`, :guilabel:`Callout`, :guilabel:`Code Block`, :guilabel:`Table`, :guilabel:`Horizontal Rule`, secciones :guilabel:`Toggle / Expand`, y una :guilabel:`Table of Contents` generada a partir de los títulos;"
+msgstr "estructura: de :guilabel:`Título 1` a :guilabel:`Heading 3`, :guilabel:`Lista con viñetas`, :guilabel:`Lista numerada`, :guilabel:`Lista de comprobación`, :guilabel:`Bloque de cita`, :guilabel:`Aviso`, :guilabel:`Bloque de código`, :guilabel:`Table`, :guilabel:`Línea horizontal`, secciones :guilabel:`Alternar/Expandir`, y una :guilabel:`Índice` generada a partir de los títulos;"
 
 #: ../../content/applications/productivity/knowledge.rst:72
 msgid "media and links: :guilabel:`Insert Link` (:command:`Ctrl` + :command:`K`), :guilabel:`Insert Image`, :guilabel:`Insert Video`, and :guilabel:`Insert File`."
-msgstr "contenido multimedia y enlaces: :guilabel:`Insert Link` (:command:`Ctrl` + :command:`K`), :guilabel:`Insert Image`, :guilabel:`Insert Video` e :guilabel:`Insert File`."
+msgstr "contenido multimedia y enlaces: :guilabel:`Insert Link` (:command:`Ctrl` + :command:`K`), :guilabel:`Insertar imagen`, :guilabel:`Inserta vídeo` e :guilabel:`Insertar archivo`."
 
 #: ../../content/applications/productivity/knowledge.rst:75
 msgid "Each time the body is saved, the page version is increased, and the page records who edited it and when. The top bar shows the current version and the last editor."
@@ -7362,7 +7362,7 @@ msgstr "Haga clic en :guilabel:`Lock page` para evitar que se modifiquen el tít
 
 #: ../../content/applications/productivity/knowledge.rst:92
 msgid "Click :guilabel:`Send to trash` to remove a page from the tree without deleting it. Trashed pages keep a :guilabel:`Deletion Date` 30 days later, and can be restored until then."
-msgstr "Haga clic en :guilabel:`Send to trash` para quitar una página del árbol sin eliminarla. Las páginas en la papelera conservan una :guilabel:`Deletion Date` 30 días después, y se pueden restaurar hasta entonces."
+msgstr "Haga clic en :guilabel:`Enviar a la papelera` para quitar una página del árbol sin eliminarla. Las páginas en la papelera conservan una :guilabel:`Fecha de eliminación` 30 días después, y se pueden restaurar hasta entonces."
 
 #: ../../content/applications/productivity/knowledge.rst:96
 msgid "Comments"
@@ -7370,7 +7370,7 @@ msgstr "Comentarios"
 
 #: ../../content/applications/productivity/knowledge.rst:98
 msgid "Select text in the body and click :guilabel:`Add Comment` to discuss a passage with colleagues. Each page also has a chatter, where followers are notified of the changes they are subscribed to."
-msgstr "Seleccione texto en el cuerpo y haga clic en :guilabel:`Add Comment` para hablar sobre un pasaje con sus compañeros. Cada página también tiene un chatter, donde se notifica a los seguidores de los cambios a los que están suscritos."
+msgstr "Seleccione texto en el cuerpo y haga clic en :guilabel:`Añadir comentario` para hablar sobre un pasaje con sus compañeros. Cada página también tiene un chatter, donde se notifica a los seguidores de los cambios a los que están suscritos."
 
 #: ../../content/applications/productivity/knowledge.rst:102
 msgid "Access rights of a page"
@@ -7378,19 +7378,19 @@ msgstr "Permisos de acceso de una página"
 
 #: ../../content/applications/productivity/knowledge.rst:104
 msgid "By default, a page is visible to all internal users. Open the :guilabel:`Page settings` and use the :guilabel:`Access Rights` section to change this:"
-msgstr "De forma predeterminada, una página es visible para todos los usuarios internos. Abra los :guilabel:`Page settings` y utilice la sección :guilabel:`Access Rights` para cambiar esto:"
+msgstr "De forma predeterminada, una página es visible para todos los usuarios internos. Abra los :guilabel:`Ajustes de página` y utilice la sección :guilabel:`Permisos de acceso` para cambiar esto:"
 
 #: ../../content/applications/productivity/knowledge.rst:107
 msgid ":guilabel:`Base Access` sets the level applied to every internal user: :guilabel:`Full edit` (write), :guilabel:`Read only`, or :guilabel:`No access`."
-msgstr ":guilabel:`Base Access` establece el nivel que se aplica a todos los usuarios internos: :guilabel:`Full edit` (escritura), :guilabel:`Read only` o :guilabel:`No access`."
+msgstr ":guilabel:`Acceso base` establece el nivel que se aplica a todos los usuarios internos: :guilabel:`Edición completa` (escritura), :guilabel:`Solo lectura` o :guilabel:`Sin acceso`."
 
 #: ../../content/applications/productivity/knowledge.rst:109
 msgid ":guilabel:`Custom Access` makes the page define its own access level. Without it, a page inherits the access of its parent page, and the settings dialog shows which page the access is inherited from."
-msgstr ":guilabel:`Custom Access` hace que la página defina su propio nivel de acceso. Sin esta opción, una página hereda el acceso de su página principal, y el cuadro de diálogo de ajustes muestra de qué página se hereda el acceso."
+msgstr ":guilabel:`Acceso personalizado` hace que la página defina su propio nivel de acceso. Sin esta opción, una página hereda el acceso de su página principal, y el cuadro de diálogo de ajustes muestra de qué página se hereda el acceso."
 
 #: ../../content/applications/productivity/knowledge.rst:112
 msgid "In the access list, grant a specific :guilabel:`User` or :guilabel:`Group` the :guilabel:`Read`  or :guilabel:`Write` permission. These entries take precedence over the base access."
-msgstr "En la lista de accesos, conceda a un :guilabel:`User` o :guilabel:`Group` específico el permiso de :guilabel:`Read` o :guilabel:`Write`. Estas entradas tienen prioridad sobre el acceso base."
+msgstr "En la lista de accesos, conceda a un :guilabel:`Usuario` o :guilabel:`Grupo` específico el permiso de :guilabel:`Leer` o :guilabel:`Escribir`. Estas entradas tienen prioridad sobre el acceso base."
 
 #: ../../content/applications/productivity/knowledge.rst:116
 msgid "Depending on these settings, a page is listed in one of three sidebar sections:"
@@ -7398,15 +7398,15 @@ msgstr "Según estos ajustes, una página aparece en una de tres secciones de la
 
 #: ../../content/applications/productivity/knowledge.rst:118
 msgid ":guilabel:`Team`: readable or editable by all internal users;"
-msgstr ":guilabel:`Team`: legible o editable por todos los usuarios internos;"
+msgstr ":guilabel:`Equipo`: legible o editable por todos los usuarios internos;"
 
 #: ../../content/applications/productivity/knowledge.rst:119
 msgid ":guilabel:`Personal`: base access set to :guilabel:`No access`, so only its author and the users explicitly granted access see it;"
-msgstr ":guilabel:`Personal`: acceso base establecido en :guilabel:`No access`, de forma que solo su autor y los usuarios con acceso concedido explícitamente pueden verla;"
+msgstr ":guilabel:`Personal`: acceso base establecido en :guilabel:`Sin acceso`, de forma que solo su autor y los usuarios con acceso concedido explícitamente pueden verla;"
 
 #: ../../content/applications/productivity/knowledge.rst:121
 msgid ":guilabel:`Collaborative`: shared with specific users or groups."
-msgstr ":guilabel:`Collaborative`: compartida con usuarios o grupos específicos."
+msgstr ":guilabel:`Colaborativo`: compartida con usuarios o grupos específicos."
 
 #: ../../content/applications/productivity/knowledge.rst:132
 msgid "Import articles from another database"
@@ -7414,23 +7414,23 @@ msgstr "Importar artículos desde otra base de datos"
 
 #: ../../content/applications/productivity/knowledge.rst:134
 msgid "The *Knowledge Importer* (``knowledge_importer``) module copies articles from another Odoo database into the Knowledge app. Go to :menuselection:`Knowledge --> Configuration --> Import` and follow the steps:"
-msgstr "El módulo *Knowledge Importer* (``knowledge_importer``) copia artículos de otra base de datos de Odoo a la aplicación Información. Vaya a :menuselection:`Información --> Configuración --> Importar` y siga los pasos:"
+msgstr "El módulo *Knowledge Importer* (``knowledge_importer``) copia artículos de otra base de datos de Odoo a la aplicación Información. Vaya a :menuselection:`Conocimiento --> Configuración --> Importación` y siga los pasos:"
 
 #: ../../content/applications/productivity/knowledge.rst:138
 msgid ":guilabel:`Select Source`: choose the import source."
-msgstr ":guilabel:`Select Source`: elija el origen de la importación."
+msgstr ":guilabel:`Seleccionar origen`: elija el origen de la importación."
 
 #: ../../content/applications/productivity/knowledge.rst:139
 msgid ":guilabel:`Connection Settings`: enter the :guilabel:`Odoo URL`, the :guilabel:`Database`, the :guilabel:`Login`, and the :guilabel:`API Key / Password` of the source database. Choose a :guilabel:`Target Space` to import everything into one space, or enable :guilabel:`Create spaces from root articles` to turn each top-level article into a space. :guilabel:`Skip \"Welcome\" articles` leaves out the personal onboarding articles."
-msgstr ":guilabel:`Connection Settings`: introduzca la :guilabel:`Odoo URL`, la :guilabel:`Database`, el :guilabel:`Login` y la :guilabel:`API Key / Password` de la base de datos de origen. Elija un :guilabel:`Target Space` para importar todo a un único espacio, o active :guilabel:`Create spaces from root articles` para convertir cada artículo de nivel superior en un espacio. :guilabel:`Skip \"Welcome\" articles` deja fuera los artículos personales de introducción."
+msgstr ":guilabel:`Ajustes de conexión`: introduzca la :guilabel:`URL de Odoo`, la :guilabel:`Base de datos`, el :guilabel:`Usuario` y la :guilabel:`Clave de API / Contraseña` de la base de datos de origen. Elija un :guilabel:`Espacio de destino` para importar todo a un único espacio, o active :guilabel:`Crear espacios a partir de artículos raíz` para convertir cada artículo de nivel superior en un espacio. :guilabel:`Omitir los artículos de «Bienvenida»` deja fuera los artículos personales de introducción."
 
 #: ../../content/applications/productivity/knowledge.rst:144
 msgid ":guilabel:`User Mapping`: the wizard lists the authors found in the source database and matches them with local users where possible; complete the :guilabel:`Local User` column for the remaining ones."
-msgstr ":guilabel:`User Mapping`: el asistente muestra los autores encontrados en la base de datos de origen y los asocia con los usuarios locales cuando es posible; complete la columna :guilabel:`Local User` para los restantes."
+msgstr ":guilabel:`Asignación de usuarios`: el asistente muestra los autores encontrados en la base de datos de origen y los asocia con los usuarios locales cuando es posible; complete la columna :guilabel:`Usuario local` para los restantes."
 
 #: ../../content/applications/productivity/knowledge.rst:147
 msgid ":guilabel:`Importing` and :guilabel:`Done`: the wizard reports the number of :guilabel:`Articles Found`, :guilabel:`Articles Imported`, and :guilabel:`Errors`, together with an :guilabel:`Import Log`."
-msgstr ":guilabel:`Importing` y :guilabel:`Done`: el asistente informa del número de :guilabel:`Articles Found`, :guilabel:`Articles Imported` y :guilabel:`Errors`, junto con un :guilabel:`Import Log`."
+msgstr ":guilabel:`Importando` y :guilabel:`Hecho`: el asistente informa del número de :guilabel:`Artículos encontrados`, :guilabel:`Artículos importados` y :guilabel:`Errores`, junto con un :guilabel:`Registro de importación`."
 
 #: ../../content/applications/productivity/knowledge.rst:152
 msgid "The import requires the *Knowledge Importer* (``knowledge_importer``) module and a user with API access on the source database."
@@ -7526,7 +7526,7 @@ msgstr "Debajo de las estadísticas, sus plantillas se muestran como tarjetas. C
 
 #: ../../content/applications/productivity/sign.rst:109
 msgid ":guilabel:`Send`: opens the send wizard to create a new signing request from this template and assign signers to the defined roles."
-msgstr ":guilabel:`Send`: abre el asistente de envío para crear una nueva solicitud de firma a partir de esta plantilla y asignar firmantes a los roles definidos."
+msgstr ":guilabel:`Enviar`: abre el asistente de envío para crear una nueva solicitud de firma a partir de esta plantilla y asignar firmantes a los roles definidos."
 
 #: ../../content/applications/productivity/sign.rst:111
 msgid ":guilabel:`Sign Now`: starts a signing session immediately where you, as the current user, fill in all roles yourself. This is useful for internal documents that only require one signature."
@@ -7734,7 +7734,7 @@ msgstr "Utilice el sistema de traducción integrado de Odoo para traducir los va
 
 #: ../../content/applications/productivity/sign.rst:263
 msgid "Open the template and set :guilabel:`Multilingual Mode` to :guilabel:`Dynamic Field Translation`."
-msgstr "Abra la plantilla y establezca :guilabel:`Modo multilingüe` en :guilabel:`Traducción dinámica de campos`."
+msgstr "Abra la plantilla y establezca :guilabel:`Modo multilingüe` en :guilabel:`Traducción dinámica de campo`."
 
 #: ../../content/applications/productivity/sign.rst:265
 msgid "Switch to the desired language using the language selector and translate the default values of text fields."
@@ -8638,7 +8638,7 @@ msgstr "Autenticación de dos factores"
 
 #: ../../content/applications/productivity/sign.rst:979
 msgid "Two-factor authentication is set per request: enable :guilabel:`Require 2FA` on the request and select the :guilabel:`2FA Method` (:guilabel:`Email`, :guilabel:`SMS`, or :guilabel:`Email & SMS`)."
-msgstr "La autenticación de dos factores se establece por solicitud: active :guilabel:`Requerir 2FA` en la solicitud y seleccione el :guilabel:`Método 2FA` (:guilabel:`Correo electrónico`, :guilabel:`SMS`, o :guilabel:`Correo electrónico y SMS`)."
+msgstr "La autenticación de dos factores se establece por solicitud: active :guilabel:`Requerir 2FA` en la solicitud y seleccione el :guilabel:`Método de 2FA` (:guilabel:`Correo electrónico`, :guilabel:`SMS`, o :guilabel:`Correo electrónico y SMS`)."
 
 #: ../../content/applications/productivity/sign.rst:983
 msgid "Access control"
@@ -8694,7 +8694,7 @@ msgstr "El módulo *E-Sign* (``eyssen_esign``) es una función independiente: en
 
 #: ../../content/applications/productivity/sign.rst:1020
 msgid "To enable it for a report, activate the :ref:`developer mode <developer-mode>`, go to :menuselection:`Settings --> Technical --> Reports`, open the report (e.g., the customer invoice), and enable :guilabel:`E-sign report`. From then on, every PDF generated from that report is signed before it is downloaded, printed, or sent."
-msgstr "Para activarlo en un informe, active el :ref:`modo desarrollador <developer-mode>`, vaya a :menuselection:`Ajustes --> Técnico --> Informes`, abra el informe (p. ej., la factura de cliente) y active :guilabel:`Informe con firma electrónica`. A partir de ese momento, cada PDF generado a partir de ese informe se firma antes de descargarse, imprimirse o enviarse."
+msgstr "Para activarlo en un informe, active el :ref:`modo desarrollador <developer-mode>`, vaya a :menuselection:`Ajustes --> Técnico --> Informes`, abra el informe (p. ej., la factura de cliente) y active :guilabel:`Informe de firma electrónica`. A partir de ese momento, cada PDF generado a partir de ese informe se firma antes de descargarse, imprimirse o enviarse."
 
 #: ../../content/applications/productivity/sign.rst:1026
 msgid "The signature is applied by the eYssen signing service, so the database must be able to reach it. Each signed report is recorded in the technical logs."
@@ -8746,7 +8746,7 @@ msgstr "Plantilla de mensaje"
 
 #: ../../content/applications/productivity/whatsapp.rst:21
 msgid "To define the text proposed by default when sending a quotation or an invoice, go to :menuselection:`Settings --> General Settings`, scroll to the :guilabel:`Whatsapp` section, and fill in the :guilabel:`Message Template` field. The template is stored per company; if it is left empty, Odoo composes a default message containing the customer name, the document number, and the total amount."
-msgstr "Para definir el texto que se propone de forma predeterminada al enviar un presupuesto o una factura, vaya a :menuselection:`Ajustes --> Ajustes generales`, desplácese hasta la sección :guilabel:`Whatsapp` y complete el campo :guilabel:`Plantilla de mensaje`. La plantilla se almacena por compañía; si se deja vacía, Odoo redacta un mensaje predeterminado que contiene el nombre del cliente, el número del documento y el importe total."
+msgstr "Para definir el texto que se propone de forma predeterminada al enviar un presupuesto o una factura, vaya a :menuselection:`Ajustes --> Ajustes generales`, desplácese hasta la sección :guilabel:`WhatsApp` y complete el campo :guilabel:`Plantilla de mensaje`. La plantilla se almacena por compañía; si se deja vacía, Odoo redacta un mensaje predeterminado que contiene el nombre del cliente, el número del documento y el importe total."
 
 #: ../../content/applications/productivity/whatsapp.rst:36
 msgid "Website chat button"
@@ -8758,7 +8758,7 @@ msgstr "El módulo añade un icono de WhatsApp al área de redes sociales del pi
 
 #: ../../content/applications/productivity/whatsapp.rst:43
 msgid "The messages offered to visitors in the chat window are managed in :menuselection:`Website --> Configuration --> Whatsapp Messages`. Each record has a :guilabel:`Name` and a :guilabel:`Message`; visitors can select one of them or choose :guilabel:`Custom` and type their own text."
-msgstr "Los mensajes que se ofrecen a los visitantes en la ventana de chat se gestionan en :menuselection:`Sitio web --> Configuración --> Mensajes de Whatsapp`. Cada registro tiene un :guilabel:`Nombre` y un :guilabel:`Mensaje`; los visitantes pueden seleccionar uno de ellos o elegir :guilabel:`Personalizado` y escribir su propio texto."
+msgstr "Los mensajes que se ofrecen a los visitantes en la ventana de chat se gestionan en :menuselection:`Sitio web --> Configuración --> Mensajes de WhatsApp`. Cada registro tiene un :guilabel:`Nombre` y un :guilabel:`Mensaje`; los visitantes pueden seleccionar uno de ellos o elegir :guilabel:`Personalizado` y escribir su propio texto."
 
 #: ../../content/applications/productivity/whatsapp.rst:55
 msgid "Send a quotation or an invoice"
@@ -8766,7 +8766,7 @@ msgstr "Enviar un presupuesto o una factura"
 
 #: ../../content/applications/productivity/whatsapp.rst:57
 msgid "Open a quotation or an invoice and click the :guilabel:`Send by Whatsapp` button next to the standard send buttons. A :guilabel:`Compose Whatsapp Message` window opens with:"
-msgstr "Abra un presupuesto o una factura y haga clic en el botón :guilabel:`Enviar por Whatsapp` junto a los botones de envío estándar. Se abre una ventana :guilabel:`Redactar mensaje de Whatsapp` con:"
+msgstr "Abra un presupuesto o una factura y haga clic en el botón :guilabel:`Enviar por WhatsApp` junto a los botones de envío estándar. Se abre una ventana :guilabel:`Redactar mensaje de WhatsApp` con:"
 
 #: ../../content/applications/productivity/whatsapp.rst:60
 msgid ":guilabel:`Recipient`: the customer of the document;"
@@ -8786,7 +8786,7 @@ msgstr "Haga clic en :guilabel:`Enviar mensaje` para abrir WhatsApp con el mensa
 
 #: ../../content/applications/productivity/whatsapp.rst:67
 msgid "Several documents can be sent at once: select them in the list view and click :guilabel:`Send by Whatsapp`. All selected documents must belong to the same customer; otherwise, Odoo raises an error."
-msgstr "Se pueden enviar varios documentos a la vez: selecciónelos en la vista de lista y haga clic en :guilabel:`Enviar por Whatsapp`. Todos los documentos seleccionados deben pertenecer al mismo cliente; de lo contrario, Odoo genera un error."
+msgstr "Se pueden enviar varios documentos a la vez: selecciónelos en la vista de lista y haga clic en :guilabel:`Enviar por WhatsApp`. Todos los documentos seleccionados deben pertenecer al mismo cliente; de lo contrario, Odoo genera un error."
 
 #: ../../content/applications/productivity/whatsapp.rst:79
 msgid "Share a portal link"
@@ -8794,7 +8794,7 @@ msgstr "Compartir un enlace del portal"
 
 #: ../../content/applications/productivity/whatsapp.rst:81
 msgid "When sharing a record with a customer (the :guilabel:`Share` action that opens the portal share window), a :guilabel:`Sharing Method` field allows :guilabel:`Whatsapp` to be selected instead of :guilabel:`Mail`. Select the :guilabel:`Customer`, check the :guilabel:`Mobile number`, and send: the portal link and the note are sent through WhatsApp and logged in the record's chatter."
-msgstr "Al compartir un registro con un cliente (la acción :guilabel:`Compartir` que abre la ventana de uso compartido del portal), el campo :guilabel:`Método para compartir` permite seleccionar :guilabel:`Whatsapp` en lugar de :guilabel:`Correo`. Seleccione el :guilabel:`Cliente`, compruebe el :guilabel:`Número de móvil` y envíe: el enlace del portal y la nota se envían por WhatsApp y se registran en el chatter del registro."
+msgstr "Al compartir un registro con un cliente (la acción :guilabel:`Compartir` que abre la ventana de uso compartido del portal), el campo :guilabel:`Método de compartición` permite seleccionar :guilabel:`WhatsApp` en lugar de :guilabel:`Correo electrónico`. Seleccione el :guilabel:`Cliente`, compruebe el :guilabel:`Número de teléfono móvil` y envíe: el enlace del portal y la nota se envían por WhatsApp y se registran en el chatter del registro."
 
 #: ../../content/applications/productivity/whatsapp.rst:87
 msgid "Systray shortcuts"
@@ -8802,7 +8802,7 @@ msgstr "Accesos directos de la bandeja del sistema"
 
 #: ../../content/applications/productivity/whatsapp.rst:89
 msgid "Two icons are added to the top-right systray area: one opens the :guilabel:`Compose Whatsapp Message` window for any number, the other opens a blank email composition form."
-msgstr "Se añaden dos iconos al área de la bandeja del sistema en la parte superior derecha: uno abre la ventana :guilabel:`Redactar mensaje de Whatsapp` para cualquier número, el otro abre un formulario de redacción de correo electrónico en blanco."
+msgstr "Se añaden dos iconos al área de la bandeja del sistema en la parte superior derecha: uno abre la ventana :guilabel:`Redactar mensaje de WhatsApp` para cualquier número, el otro abre un formulario de redacción de correo electrónico en blanco."
 
 #~ msgid "Odoo's **Appointments** app is a self-service scheduling app that simplifies the process of booking meetings, consultations, or services. Integrated with Odoo's suite of business apps, it allows companies to automate appointment scheduling, reduce manual coordination, and provide a seamless experience for clients. Appointments can be linked to calendars, **CRM** opportunities, employee schedules, and more, making it an ideal tool for service-based businesses seeking efficiency and organization."
 #~ msgstr "La aplicación **Citas** de Odoo es una aplicación en la que los clientes y otros usuarios pueden programar sus propias citas, lo que simplifica el proceso de reservas, preguntas o servicios. La aplicación está integrada con el paquete de aplicaciones empresariales de Odoo. De esta forma las empresas pueden automatizar la programación de reuniones, reducir la coordinación manual y brindar una experiencia sencilla a los clientes. Las reuniones pueden vincularse a calendarios, oportunidades de **CRM**, horarios de los empleados y más, lo que la convierte en la herramienta ideal para empresas que se basan en servicios y buscan eficacia y organización."

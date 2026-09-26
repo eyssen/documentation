@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-18 19:05+0000\n"
+"POT-Creation-Date: 2026-09-26 17:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -629,30 +629,30 @@ msgid "The *Website Sale Partner Type* module (`website_sale_partner_type`) adds
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:264
-msgid "Together with the Hungarian localization, the form also switches between the international :guilabel:`VAT` field and the Hungarian tax number field depending on the selected :guilabel:`Country`, and the B2B fields are always shown."
+msgid "When the Hungarian localization is installed, the *Website Sale Partner Type - Hungary* module (`website_sale_partner_type_l10n_hu`) is installed automatically. It adds the Hungarian tax number field to the address form, which then switches between the international :guilabel:`VAT` field and the Hungarian tax number field depending on the selected :guilabel:`Country`. On the website of a Hungarian company, a Hungarian company customer must fill in the Hungarian tax number instead of the international VAT number, and the B2B fields are always shown for Hungarian companies."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:276
+#: ../../content/applications/websites/ecommerce/checkout.rst:279
 msgid "When the visitor fills in a company name, the *Website Sale Company* module (`website_sale_company`) automatically creates the company contact and links the ordering person to it as a child contact, so that the order is placed on behalf of the company."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:283
+#: ../../content/applications/websites/ecommerce/checkout.rst:286
 msgid "Signing the order"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:285
+#: ../../content/applications/websites/ecommerce/checkout.rst:288
 msgid "The *Website Sale Order Sign* module (`website_sale_order_sign`) requires customers to accept and sign the order before they can pay. At the :guilabel:`Payment` step, an :guilabel:`Accept & Sign` button is displayed instead of the payment button; clicking it opens a dialog with the order summary and the signature field. Once the order is signed, the payment button appears and the signature and signing date are stored on the sales order."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:302
+#: ../../content/applications/websites/ecommerce/checkout.rst:305
 msgid "Order confirmation"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:304
+#: ../../content/applications/websites/ecommerce/checkout.rst:307
 msgid "The final step of the checkout process is the :guilabel:`Order confirmation`, which provides a summary of the customer's purchase details."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:308
+#: ../../content/applications/websites/ecommerce/checkout.rst:311
 msgid ":doc:`Order handling documentation <order_handling>`"
 msgstr ""
 

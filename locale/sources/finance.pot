@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-26 17:48+0200\n"
+"POT-Creation-Date: 2026-09-26 18:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -529,7 +529,7 @@ msgid "The aggregator connects to the Hungarian banks on your behalf. Enter the 
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:95
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:32
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:33
 msgid "Wise"
 msgstr ""
 
@@ -619,6 +619,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:16
 #: ../../content/applications/finance/accounting/payments/online.rst:21
 #: ../../content/applications/finance/accounting/payments/pay_checks.rst:10
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:22
 #: ../../content/applications/finance/accounting/taxes.rst:78
 #: ../../content/applications/finance/accounting/taxes/B2B_B2C.rst:52
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:14
@@ -655,8 +656,10 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:6
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:6
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:9
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:156
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:220
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:138
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:202
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:51
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:17
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:6
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:6
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:8
@@ -739,14 +742,14 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:227
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:17
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:87
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:120
 msgid ":doc:`transactions`"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:228
 #: ../../content/applications/finance/accounting/bank/internal_transfers.rst:70
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:14
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:88
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:121
 #: ../../content/applications/finance/accounting/bank/transactions.rst:130
 msgid ":doc:`reconciliation`"
 msgstr ""
@@ -1178,7 +1181,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:15
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:13
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:86
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:119
 msgid ":doc:`bank_synchronization`"
 msgstr ""
 
@@ -1512,14 +1515,14 @@ msgid "On a :guilabel:`Find a matching invoice/bill` rule, if any of the text co
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/statement_import.rst:5
-msgid "When your bank is not covered by :doc:`online synchronization <bank_synchronization>`, upload the statement files your bank provides. Dedicated import modules read the export formats of several Hungarian banks and of Wise, and turn each line of the file into a :doc:`bank transaction <transactions>` ready for :doc:`reconciliation <reconciliation>`."
+msgid "When your bank is not covered by :doc:`online synchronization <bank_synchronization>`, upload the statement files your bank provides. Dedicated import modules read the export formats of several Hungarian banks and of Wise, and the standard file formats such as the Spanish *Norma 43*, and turn each line of the file into a :doc:`bank transaction <transactions>` ready for :doc:`reconciliation <reconciliation>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:11
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:12
 msgid "Available importers"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:17
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:18
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:238
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:254
 #: ../../content/applications/finance/accounting/get_started/journals.rst:139
@@ -1527,122 +1530,162 @@ msgstr ""
 msgid "Bank"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:18
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:19
 msgid "File format"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:19
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:20
 msgid "Menu"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:20
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:21
 msgid "OTP Bank"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:21
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:27
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:22
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:28
 msgid "CSV, semicolon-separated"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:22
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:23
 msgid ":menuselection:`Accounting --> Configuration --> Banks --> OTP Bank Statement Import`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:23
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:24
 msgid "K&H Bank"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:24
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:30
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:25
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:31
 msgid "Excel (.xls)"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:25
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:26
 msgid ":menuselection:`Accounting --> Configuration --> Banks --> K&H Bank Statement Import`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:26
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:27
 msgid "CIB Bank"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:28
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:29
 msgid ":menuselection:`Accounting --> Configuration --> Banks --> CIB Bank Statement Import`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:29
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:30
 msgid "Raiffeisen Bank"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:31
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:32
 msgid ":menuselection:`Accounting --> Configuration --> Banks --> Raiffeisen Bank Statement Import`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:33
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:34
 msgid "CSV, comma-separated"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:34
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:35
 msgid ":menuselection:`Accounting --> Configuration --> Banks --> Wise Bank Statement Import`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:37
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:38
 msgid "The importers require the *eYssen Accountant* module. Each bank is a separate module, so only the banks you actually use need to be installed."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:41
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:42
 msgid "Import a file"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:43
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:44
 msgid "Open the menu of your bank, then:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:45
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:46
 msgid "Click :guilabel:`Data file` and select the file exported from your bank's online banking."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:46
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:47
 msgid "Optionally tick :guilabel:`Create monthly statement` to group the imported transactions into one bank statement per month and per journal, instead of leaving them as loose transactions."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:48
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:49
 msgid "Click :guilabel:`Import`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:62
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:63
 msgid "How transactions are assigned to a journal"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:64
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:65
 msgid "For the bank importers, each row of the file carries the account number it belongs to. Odoo normalizes that number, looks for the matching :guilabel:`Bank Account` in the right currency, and books the row in the journal linked to it. This means one file may contain several accounts, and each account is booked in its own journal."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:69
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:70
 msgid "The import stops with an explicit error when:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:71
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:72
 msgid "the currency in the file is not active in the database;"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:72
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:73
 msgid "no bank account matches the account number and currency (:guilabel:`Bank account not found`);"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:73
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:74
 msgid "the matching bank account is not linked to any journal (:guilabel:`Journal not found`)."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:75
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:76
 msgid "In these cases, correct the bank account or the journal under :menuselection:`Accounting --> Configuration --> Banks --> Add a Bank Account` and import the file again."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:78
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:79
 msgid "The Wise importer works differently: Wise files have no account number, so you select the :guilabel:`Journal` in the dialog."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:82
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:83
 msgid "Importing the same file twice is safe. Each transaction is stored with the bank reference built from the file, and a transaction already present in the journal is skipped."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:89
+msgid "Standard statement files"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:91
+msgid "Statement files in a standard format are imported with the generic importer, which reads every format whose module is installed. For Spanish banks, :ref:`install <general/install>` the *Importación de extractos bancarios españoles (Norma 43)* module to import the *AEB Norma 43* files (:file:`.n43`, also called *Cuaderno 43*) that all Spanish banks provide."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:96
+msgid "Go to :menuselection:`Accounting --> Accounting --> Import Statement`, or click the import button of the bank journal on the Accounting dashboard."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:98
+msgid "Select the statement file, and click :guilabel:`Import and View`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:100
+msgid "A bank statement is created for each account of the file, in the bank journal whose bank account matches the account number of the file. The file is attached to the statement. Transactions that were already imported are not created a second time."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:104
+msgid "The bank journal form has a :guilabel:`Norm 43 options` section (:guilabel:`Advanced Settings` tab):"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:107
+msgid ":guilabel:`Date type for N43 Import`: use the :guilabel:`Value Date` or the :guilabel:`Operation Date` of the file as the transaction date;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:109
+msgid ":guilabel:`Partner search for N43 import`: for some banks (CaixaBank, Sabadell, Santander), the partner of the transaction is looked up from the data of the file;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:111
+msgid ":guilabel:`Exclude pattern for N43 import`: a regular expression; the lines of the file matching it are not imported."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/statement_import.rst:115
+msgid "The import checks the control totals of the Norma 43 file (number of records, debit and credit totals, final balance) and stops with an error if the file is incomplete."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:5
@@ -2191,6 +2234,7 @@ msgid ":doc:`payment_terms`"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:22
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:166
 msgid ":doc:`../payments`"
 msgstr ""
 
@@ -2843,6 +2887,7 @@ msgid "While Odoo prefills the endpoint number based on the information availabl
 msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:151
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:76
 msgid "Send invoices"
 msgstr ""
 
@@ -4932,8 +4977,8 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:69
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:81
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:121
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:106
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:181
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:110
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:163
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:96
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:111
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:51
@@ -5695,7 +5740,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:9
 #: ../../content/applications/finance/fiscal_localizations/guatemala.rst:81
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:114
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:96
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:100
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:33
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:40
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:75
@@ -7865,6 +7910,198 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/pay_checks.rst:50
 msgid "To print all checks in batch, select all payments from the list view and click on :guilabel:`Print`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:3
+msgid "Payment orders and SEPA transfers"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:5
+msgid "Payment orders group the vendor bills to pay into one bank file, and debit orders group the customer invoices to collect by direct debit. The file is generated in the SEPA XML format (*PAIN*) accepted by the banks of the SEPA area:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:9
+msgid "**payment orders** (SEPA Credit Transfer) pay vendors from your bank account;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:10
+msgid "**debit orders** (SEPA Direct Debit) collect customer invoices from your customers' bank accounts, based on the direct debit **mandates** signed by the customers."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:14
+msgid "The features are provided by the *Account Payment Order*, *Account Payment Mode*, *Account Payment Partner*, *Account Banking Mandate*, *Account Banking SEPA Credit Transfer*, and *Account Banking SEPA Direct Debit* modules. :ref:`Install <general/install>` the SEPA modules you need; the other modules are installed with them."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:25
+msgid "SEPA identifiers"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:27
+msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`, and scroll to the :guilabel:`SEPA/PAIN` section:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:30
+msgid ":guilabel:`Initiating Party Identifier` and :guilabel:`Initiating Party Issuer`: the identifiers given by your bank for the files you send, if your bank requires them;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:32
+msgid ":guilabel:`SEPA Creditor Identifier`: the creditor identifier of your company, required for direct debits. It is composed of the country code, a check number, a business code, and a national identifier (in Spain, based on the tax ID of the company)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:36
+msgid "If your identifiers depend on the bank (as is common in Spain), enable :guilabel:`Multiple identifiers`: the identifiers are then entered on each payment mode."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:40
+msgid "Payment modes"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:42
+msgid "A *payment mode* defines how a payment is made: the payment method (for example SEPA Credit Transfer) and the bank journal used. Go to :menuselection:`Accounting --> Configuration --> Management --> Payment Modes`, and click :guilabel:`New`:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:46
+msgid "Enter a name, for example *SEPA transfer - Bank X*."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:47
+msgid "Select the :guilabel:`Payment Method`: :guilabel:`SEPA Credit Transfer to suppliers` for payment orders, or :guilabel:`SEPA Direct Debit for customers` for debit orders."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:49
+msgid "In :guilabel:`Link to Bank Account`, select *Fixed* to always use the same bank journal (then select it), or *Variable* to choose the bank journal on each order among the allowed ones."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:51
+msgid "Keep :guilabel:`Selectable in Payment Orders` ticked."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:52
+msgid "In the :guilabel:`Options for Payment Orders` section, set the :guilabel:`Default Payment Execution Date` of the orders and, if needed, tick :guilabel:`Group Transactions in Payment Orders` to pay several invoices of the same partner with one transfer."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:55
+msgid "In the :guilabel:`Select Move Lines to Pay - Default Values` section, set the default filters used to add journal items to the orders, for example :guilabel:`Linked to an Invoice or Refund` and the :guilabel:`Type of Date Filter`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:60
+msgid "The PAIN version used by the SEPA files is set on the payment method, under :menuselection:`Accounting --> Configuration --> Management --> Payment Methods` (:guilabel:`PAIN Version`). Keep the recommended version unless your bank asks for another one."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:73
+msgid "Contacts and invoices"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:75
+msgid "On the contact form, in the :guilabel:`Sales & Purchase` tab, select the :guilabel:`Customer Payment Mode` and the :guilabel:`Supplier Payment Mode`. They are proposed on the invoices and bills of the contact, in the :guilabel:`Payment Mode` field, which can be changed on a draft invoice. For SEPA payments and debits, the contact must also have a bank account (IBAN)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:83
+msgid "Direct debit mandates"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:85
+msgid "A direct debit requires a mandate signed by the customer, attached to the customer's bank account. Go to :menuselection:`Accounting --> Customers --> Banking Mandates`, and click :guilabel:`New`:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:89
+msgid "Select the customer's :guilabel:`Bank Account`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:90
+msgid "Select the :guilabel:`Type of Mandate`: :guilabel:`Recurrent` for regular debits, or :guilabel:`One-Off` for a single debit."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:92
+msgid "Select the :guilabel:`Scheme`: :guilabel:`Basic (CORE)` for consumers and most customers, or :guilabel:`Enterprise (B2B)` for business customers that agreed to this scheme with their bank."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:94
+msgid "Enter the :guilabel:`Date of Signature of the Mandate`, and attach the :guilabel:`Scan of the Mandate`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:96
+msgid "Click :guilabel:`Validate`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:98
+msgid "To get the mandate signed, click :guilabel:`Print` to print the mandate form, or :guilabel:`Send by Email` to send it to the customer."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:101
+msgid "The :guilabel:`Sequence Type for Next Debit` of a recurrent mandate is managed automatically: it switches from :guilabel:`First` to :guilabel:`Recurring` after the first debit order is sent. A mandate that has not been used for a long time is set to :guilabel:`Expired`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:108
+msgid "Pay vendors with a payment order"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:110
+msgid "Go to :menuselection:`Accounting --> Vendors --> Payment Orders`, and click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:111
+msgid "Select the :guilabel:`Payment Mode` (and the bank journal if the mode is variable)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:112
+msgid "Click :guilabel:`Create Payment Lines from Journal Items`, check the filters, then click :guilabel:`Add All Move Lines` to add all the matching open bills, or add them one by one."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:114
+msgid "Check the :guilabel:`Transactions` tab, then click :guilabel:`Confirm Payments`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:115
+msgid "Click :guilabel:`Generate Payment File`. The SEPA XML file is attached to the order; download it and upload it in your online banking."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:117
+msgid "Once the bank has accepted the file, click :guilabel:`File Successfully Uploaded`. The payments are posted and reconciled with the bills."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:121
+msgid "Bills can also be added from the list of vendor bills: select them, then click :menuselection:`Actions --> Add to Payment Order`. The lines are added to the draft payment order of the payment mode, or a new order is created."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:136
+msgid "Collect customer invoices with a debit order"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:138
+msgid "The steps are the same as for payment orders, from :menuselection:`Accounting --> Customers --> Debit Orders`, with a payment mode using :guilabel:`SEPA Direct Debit for customers`. Every customer of the order must have a valid mandate on the bank account used; the mandate is proposed automatically on the lines. Customer invoices can also be added with :menuselection:`Actions --> Add to Debit Order`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:147
+msgid "Payment returns"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:149
+msgid "When a customer's bank returns a direct debit (for example, insufficient funds or a mandate revoked by the customer), record the return so that the invoice is open again:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:152
+msgid "Go to :menuselection:`Accounting --> Customers --> Customer Payment Returns`, and click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:154
+msgid "Select the bank journal and the date of the return."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:155
+msgid "In the :guilabel:`Lines` tab, add a line per returned payment: select the returned payment (journal item), the :guilabel:`Amount`, and the :guilabel:`Return reason`. Bank charges can be recorded on the line as well. Alternatively, enter the references and click :guilabel:`Match` to find the payments."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:159
+msgid "Click :guilabel:`Confirm`. A journal entry removes the amount from the bank account, and the invoice is open again."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:162
+msgid "To debit the invoice again in a later debit order, tick :guilabel:`Include move lines from returns` when adding the journal items to the order."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:167
+msgid ":doc:`../bank/statement_import`"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:3
@@ -16370,6 +16607,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:152
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:46
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:46
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:37
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:59
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:37
 msgid "Company"
@@ -17949,7 +18187,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:59
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:126
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:564
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:245
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:227
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:141
 msgid "Invoices"
 msgstr ""
@@ -22160,7 +22398,7 @@ msgid "Alternative that cannot be installed"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:68
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:203
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:185
 msgid "Veri*Factu"
 msgstr ""
 
@@ -22205,6 +22443,7 @@ msgid "The community Spanish Point of Sale modules"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:80
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:27
 msgid "Modelo 130"
 msgstr ""
 
@@ -22244,303 +22483,540 @@ msgstr ""
 msgid "If an alternative module is already installed, uninstall it before installing the *Spain - Base Layer* module. Ask your system administrator before uninstalling a module, as its data is deleted."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:98
-msgid "You can reach the **Chart of Accounts** by going to :menuselection:`Accounting --> Configuration --> Accounting: Chart of Accounts`."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:96
+msgid ":doc:`spain/aeat_declarations`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:97
+msgid ":doc:`spain/sii`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:102
+msgid "You can reach the **Chart of Accounts** by going to :menuselection:`Accounting --> Configuration --> Accounting: Chart of Accounts`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:106
 msgid "When a new database is created for a Spanish company, **Spain - SMEs (2008)** is installed by default."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:108
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:112
 msgid "Default Spain-specific taxes are created automatically when the :guilabel:`Spanish - Accounting (PGCE 2008) (l10n_es)` module is installed. Each tax is mapped to the boxes of the Spanish **Modelo 303** VAT return, which can be reviewed in the :doc:`tax report <../accounting/reporting/dynamic_reports>`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:114
-msgid "With the ``l10n_es_base_layer`` and ``l10n_es_aeat_integration`` modules (plus the OCA AEAT modelo modules you install), Spain-specific AEAT declarations and the official PGC annual accounts **are** available:"
-msgstr ""
-
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:118
-msgid "AEAT declarations live under :menuselection:`Accounting --> Reporting --> AEAT` (modelo reports such as 111, 115, 303, 347, 349, 390, …, depending on which modules are installed)."
+msgid "With the :ref:`Spanish base layer <localizations/spain/base-layer>`, the AEAT tax declarations (modelos 303, 390, 111, 115, 347, 349, and others), the VAT books, and the official PGC annual accounts are prepared in the Accounting app. See :doc:`spain/aeat_declarations`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:121
-msgid "Official annual accounts are under :menuselection:`Accounting --> Reporting --> Annual Accounts (PGC)`, with :guilabel:`Balance Sheet (PGC)` and :guilabel:`Profit and Loss (PGC)`."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:124
-msgid "In :menuselection:`Accounting --> Configuration --> Settings`, the :guilabel:`AEAT Declarations` block sets the defaults used on new declarations: :guilabel:`AEAT Journal`, :guilabel:`VAT Counterpart Account`, :guilabel:`Withholding Counterpart Account`, the submitter contact, and the :guilabel:`Filing Frequency`."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:129
-msgid "A tax-map guard lists taxes that no installed AEAT tax map covers (they would be left out of the declarations); open that list from the settings block or from the AEAT configuration menus."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:132
-msgid "When a declaration's regularization entry would fall on a locked period, a lock-date warning is shown so you can post the entry before locking or ask an adviser to move the lock date."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:136
-msgid "Generic :doc:`financial reports <../accounting/reporting>` and the tax grids remain available alongside these Spain-specific tools."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:143
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:125
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:3
 msgid "SII (Suministro Inmediato de Información)"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:145
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:127
 msgid "The *Spain - SII EDI Suministro de Libros* (`l10n_es_edi_sii`) module sends the VAT information of customer invoices and vendor bills to the SII (*Llevanza de libros registro*) of the AEAT or of the regional tax agencies. It is mandatory for companies with a turnover above 6 M€ and optional for the others."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:151
-msgid "This module cannot be installed together with the :ref:`Spain - Base Layer <localizations/spain/base-layer>` module. With the base layer, the SII is handled by the community *Suministro Inmediato de Información en el IVA* module."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:133
+msgid "This module cannot be installed together with the :ref:`Spain - Base Layer <localizations/spain/base-layer>` module. With the base layer, the SII is handled by the community *Suministro Inmediato de Información en el IVA* module, see :doc:`spain/sii`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:158
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:140
 msgid ":ref:`Install <general/install>` the :guilabel:`Spain - SII EDI Suministro de Libros (l10n_es_edi_sii)` module."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:160
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:142
 msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`, scroll to the :guilabel:`Registro de Libros connection SII` setting and select the :guilabel:`Tax Agency for SII` (:guilabel:`Agencia Tributaria española`, :guilabel:`Hacienda Foral de Gipuzkoa`, :guilabel:`Hacienda Foral de Bizkaia`, or :guilabel:`Hacienda Foral de Navarra`)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:164
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:146
 msgid "Click the :guilabel:`Certificate (SII)` link to upload the company's digital certificate (file and password) used to sign the requests."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:166
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:148
 msgid "Keep :guilabel:`SII Test Mode` enabled while testing; disable it to send the data to the production web service."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:168
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:150
 msgid "On each sales and purchase journal that must report to the SII, enable the :guilabel:`SII IVA Llevanza de libros registro (ES)` format in the :guilabel:`Electronic invoicing` field of the :guilabel:`Advanced Settings` tab."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:183
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:165
 msgid "The Spanish taxes carry a :guilabel:`Tax Type (Spain)` (:guilabel:`Sujeto`, :guilabel:`Exento`, :guilabel:`Sujeto ISP`, :guilabel:`No Sujeto`, :guilabel:`Retencion`, :guilabel:`Recargo de Equivalencia`, :guilabel:`DUA`, …), an :guilabel:`Exempt Reason (Spain)` for exempt taxes (E1 … E6) and the :guilabel:`Bien de Inversion` flag, which determine how the amounts are reported to the SII. The default taxes are configured; check these fields when creating new taxes."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:190
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:172
 msgid "Sending documents"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:192
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:174
 msgid "Once a customer invoice or vendor bill is posted in a journal with the SII format enabled, it is sent to the SII by the scheduled action of the electronic invoicing (or immediately with the :guilabel:`Process now` link of the blue banner). The status is shown in the :guilabel:`Electronic invoicing` field; the CSV return code and the acceptance message (or the errors reported by the agency) are logged in the chatter. The :guilabel:`Registration Date` field of the document (Other Info tab) is the date reported as *fecha de registro contable* for vendor bills."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:206
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:188
 msgid "Producers of Veri*Factu billing systems must self-certify their compliance with the regulations (*declaración responsable*). Ask your support provider for the declaration that applies to your installation."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:210
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:192
 msgid "**Veri*Factu** is an e-Invoicing system used by the Spanish Tax Agency. It is mandatory for most taxpayers in Spain, except for those who use the SII system or are under a regional tax regime (i.e., TicketBai)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:214
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:196
 msgid "Odoo allows :ref:`invoices <localizations/spain/veri-factu-invoices>` and Point of Sale :ref:`orders <localizations/spain/veri-factu-orders>` to be automatically sent to the tax authorities."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:222
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:204
 msgid "To enable **Veri\\*Factu**, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:224
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:206
 msgid "Open the Settings app to make sure your company's :guilabel:`Country` and :guilabel:`Tax ID` are correctly set in the :ref:`Companies <general/companies/company>` section."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:226
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:208
 msgid ":ref:`Install <general/install>` the :guilabel:`Spain - Veri*Factu (l10n_es_edi_verifactu)` module."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:228
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:210
 msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`, scroll to the :guilabel:`Veri\\*Factu` section, check the :guilabel:`Enable Veri*Factu` option, and click :icon:`oi-arrow-right` :guilabel:`Manage certificates` to add a certificate."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:231
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:213
 msgid "In the :guilabel:`Certificates for Veri\\*Factu` list view, click :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:232
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:214
 msgid "Click :guilabel:`Upload your file`, then select a certificate file and enter the :guilabel:`Password` needed to open the certificate (if there is one)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:236
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:218
 msgid "At least one certificate has to be uploaded."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:237
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:219
 msgid "By default Veri*Factu is in testing mode. The data is sent to test servers and is not considered official. When official data can be sent to the production servers, go to the :guilabel:`Veri\\*Factu` section in the :guilabel:`Settings` and disable :guilabel:`Test Environment`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:247
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:229
 msgid "Once an :doc:`invoice <../../finance/accounting/customer_invoices>` is confirmed, it can be :ref:`sent <accounting/invoice/sending>`. In the :guilabel:`Send` window, the Veri*Factu option is available if Veri*Factu has been enabled."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:251
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:233
 msgid "Click :guilabel:`Send` to generate a JSON file containing the invoice details. This file is stored as a Veri*Factu document. In the :guilabel:`Veri*Factu` tab, all corresponding documents are listed by their creation date and current status."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:256
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:281
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:238
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:263
 msgid "To download a JSON file, click on its document in the :guilabel:`Veri*Factu` tab. Then, in the :guilabel:`Open: Veri*Factu Documents` window, click the link in the :guilabel:`JSON` field."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:260
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:285
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:242
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:267
 msgid "The document should be sent to the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)` immediately. However, it may be delayed due to mandatory waiting periods between submissions required by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`. In such cases, the document is automatically sent the next time a scheduled action runs."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:264
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:246
 msgid "A Veri\\*Factu **QR code** appears on the invoice PDF. Scan this code to verify that the invoice has been received and recognized by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:271
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:253
 msgid "Point of sale orders"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:273
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:255
 msgid "Once an order has been :ref:`paid <pos/sell>`, a JSON file containing the order details is generated. This file is stored as a Veri*Factu document."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:276
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:258
 msgid "Go to :menuselection:`Point of Sale --> Orders --> Orders`. In the :guilabel:`Orders` list view, select the relevant order. In the :guilabel:`Veri*Factu` tab, all the corresponding documents are listed by their creation date and current status."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:290
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:272
 msgid "If an invoice is generated for an order during the payment process, the Veri*Factu document is :ref:`created and sent for the invoice <localizations/spain/veri-factu-invoices>` instead."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:294
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:276
 msgid "A Veri\\*Factu **QR code** appears on the order receipt, even if an invoice is created for the order. Scan this code to verify that the invoice has been received and recognized by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:299
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:281
 msgid "TicketBAI"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:301
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:283
 msgid "`Ticket BAI <https://www.gipuzkoa.eus/es/web/ogasuna/ticketbai>`_ or **TBAI** is an e-Invoicing system used by the Basque government and its three provincial councils (Álava, Biscay, and Gipuzkoa)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:305
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:287
 msgid "Odoo supports the **TicketBAI (TBAI)** electronic invoicing format for all three regions of the **Basque Country**. To enable **TicketBAI**, set your company's :guilabel:`Country` and :guilabel:`Tax ID` under :menuselection:`Settings --> General Settings` in the :guilabel:`Companies` section."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:310
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:292
 msgid "Then, :ref:`install <general/install>` the module :guilabel:`Spain -TicketBAI (l10n_es_edi_TBAI)`, go to :menuselection:`Accounting --> Configuration --> Settings`, and select a **region** in the :guilabel:`Spain Localization` section's :guilabel:`Tax Agency for TBAI` field."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:314
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:296
 msgid "Once a region is selected, click :guilabel:`Manage certificates (SII/TicketBAI)`, then click :guilabel:`New`, upload the certificate, and enter the password provided by the tax agency."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:318
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:300
 msgid "If you are testing certificates, enable :guilabel:`Test Mode` in the :guilabel:`Spain Localization` section, which can be found under :guilabel:`Accounting` in the **Settings** app."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:323
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:377
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:305
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:359
 msgid "Use case"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:325
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:307
 msgid "Once an invoice has been :doc:`created <../../finance/accounting/customer_invoices>` and confirmed, a TicketBAI **banner** appears at the top."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:336
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:318
 msgid "Odoo sends invoices through TicketBAI automatically every **24 hours**. However, you can click :guilabel:`Process now` to send the invoice immediately."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:339
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:321
 msgid "When the invoice is **sent**, the status of the field :guilabel:`Electronic Invoice` changes to :guilabel:`Sent`, and the XML file can be found in the **chatter**. Under the :guilabel:`EDI Documents` tab, you can see the traceability of other generated documents related to the invoice (e.g., if the invoice should also be sent through the **SII**, it will appear here)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:345
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:327
 msgid "The TBAI **QR code** is displayed on the invoice PDF."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:356
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:338
 msgid "FACe"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:358
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:340
 msgid "`FACe <https://face.gob.es/en>`_ is the e-Invoicing platform used by the public administrations in Spain to send electronic invoices."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:361
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:343
 msgid "Before configuring the :abbr:`FACe (General Entrance for Electronic Invoices)` system, :ref:`install <general/install>` the :guilabel:`Spain - Facturae EDI (l10n_es_edi_facturae)` module and other **Facturae EDI**-related modules."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:365
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:347
 msgid "To configure FACe, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:367
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:349
 msgid "Go to :menuselection:`Accounting --> Configuration --> Certificates`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:368
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:350
 msgid "Click :guilabel:`New` to create a new certificate."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:369
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:351
 msgid "Complete the fields, including uploading the file of the :guilabel:`Certificate` provided by the tax agency and the provided :guilabel:`Certificate Password`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:373
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:355
 msgid "If using the Invoicing app instead of Accounting, go to :menuselection:`Invoicing --> Configuration --> Certificates`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:379
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:361
 msgid "Once you have :doc:`created <../../finance/accounting/customer_invoices>` an invoice and confirmed it, click :guilabel:`Send & Print`. Make sure :guilabel:`Generate Facturae edi file` is enabled, and click :guilabel:`Send & Print` again. Once the invoice is sent, the generated XML file is available in the **chatter**."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:385
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:367
 msgid "The file is **NOT** automatically sent. You have to send it yourself manually."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:388
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:370
 msgid "You can send **FACe** XML files in batch through `the governmental portal <https://www.facturae.gob.es/formato/Paginas/descarga-aplicacion-escritorio.aspx>`_."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:391
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:373
 msgid "Administrative centers"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:393
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:375
 msgid "In order for **FACe** to work with **administrative centers**, the invoice *must* include specific data about the centers."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:397
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:379
 msgid "Make sure to have the :guilabel:`Spain - Facturae EDI - Administrative Centers Patch (l10n_es_edi_facturae_adm_centers)` module :ref:`installed <general/install>`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:400
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:382
 msgid "To add **administrative centers**, create a new **contact** to add to the **partner** company. Select :guilabel:`FACe Center` as the **type**, assign one or more **role(s)** to that contact, and :guilabel:`Save`. The **three** roles usually required are:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:404
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:386
 msgid "Órgano gestor: :guilabel:`Receptor` (Receiver);"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:405
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:387
 msgid "Unidad tramitadora: :guilabel:`Pagador` (Payer);"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:406
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:388
 msgid "Oficina contable: :guilabel:`Fiscal` (Fiscal)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:417
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:399
 msgid "If administrative centers need different :guilabel:`Codes` per role, you *must* create different centers for each role."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:419
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:401
 msgid "When an electronic invoice is created using a partner with **administrative centers**, *all* administrative centers are included in the invoice."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:421
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:403
 msgid "You can add one contact with multiple roles or multiple contacts with a different role each."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:3
+msgid "AEAT tax declarations"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:5
+msgid "With the :ref:`Spain - Base Layer <localizations/spain/base-layer>`, the Spanish tax declarations (*modelos*) of the AEAT are prepared in the Accounting app: the declaration computes its boxes from the posted journal items of the period, creates the regularization entry, and exports the file (*fichero BOE*) that is uploaded to the AEAT electronic office."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:10
+msgid ":ref:`Install <general/install>` the *Spain - AEAT Declarations Integration* module. It installs the declarations below and fits them into the Accounting app:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:17
+msgid "Declaration"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:18
+msgid "Content"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:19
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:151
+msgid "Modelo 303"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:20
+msgid "VAT self-assessment, monthly or quarterly."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:21
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:155
+msgid "Modelo 390"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:22
+msgid "Annual VAT summary."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:23
+msgid "Modelo 111"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:24
+msgid "Withholdings on work income and professional activities."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:25
+msgid "Modelo 115"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:26
+msgid "Withholdings on the rent of urban property."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:28
+msgid "Instalment payment of the personal income tax (IRPF) of self-employed persons in direct estimation."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:30
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:168
+msgid "Modelo 347"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:31
+msgid "Annual declaration of operations with third parties above 3,005.06 €."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:32
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:173
+msgid "Modelo 349"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:33
+msgid "Recapitulative statement of intra-community operations."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:34
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:177
+msgid "Modelo 369"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:35
+msgid "VAT One-Stop-Shop (OSS) return for distance sales within the EU."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:36
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:182
+msgid "VAT and IRPF books"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:37
+msgid "*Libros registro* of issued and received invoices, exported to XLSX."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:39
+msgid "It also adds the official annual accounts (PGC balance sheet and profit and loss), see :ref:`localizations/spain/aeat/annual-accounts`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:43
+msgid "Other declarations (for example modelos 123, 190, 216 and 296) are separate modules. Once installed, they appear in the same menu and work the same way."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:46
+msgid "Users with the *Accountant* role (and advisers) can create and file the declarations."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:54
+msgid "Default values of the declarations"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:56
+msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`, and scroll to the :guilabel:`AEAT Declarations` section. The values set here are proposed on every new declaration of the company:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:60
+msgid ":guilabel:`Regularization entries`: the :guilabel:`AEAT Journal` in which the regularization entries are posted, the :guilabel:`VAT Counterpart Account` (by default 4750) for the VAT declarations whose counterpart is not computed by the declaration itself, such as the modelo 369, and the :guilabel:`Withholding Counterpart Account` (by default 4751) for the withholding declarations. The modelo 303 chooses 4750 or 4700 from its result by itself."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:65
+msgid ":guilabel:`Submitter and frequency`: the :guilabel:`AEAT Contact Name`, :guilabel:`AEAT Contact Phone` and :guilabel:`AEAT Contact Email` printed in the declarations (if empty, the data of the current user is used), and the :guilabel:`Filing Frequency` (:guilabel:`Quarterly` or :guilabel:`Monthly`). Monthly filing applies to large companies and to taxpayers registered in the REDEME or in the SII. A new declaration proposes the last closed period of this frequency; annual declarations propose the previous year."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:83
+msgid "Tax map check"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:85
+msgid "Each declaration adds up the amounts of the taxes listed in its *tax map*: a tax that is in no map line of an installed declaration is silently left out of the declarations. The :guilabel:`Tax map check` setting shows how many taxes of the company are in this situation. Click the link to open the list of these taxes, or go to :menuselection:`Accounting --> Configuration --> AEAT --> Taxes missing from the AEAT declarations`. In the tax list, the :guilabel:`Missing from AEAT declarations` filter gives the same result."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:92
+msgid "Review the listed taxes: either the tax is not used, or it must be replaced by one of the default Spanish taxes. The withholding taxes of declarations that are not installed (123, 216, 296) also appear in the list."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:97
+msgid "The tax maps themselves can be consulted under :menuselection:`Accounting --> Configuration --> AEAT --> Tax mapping`. Do not modify them unless your tax adviser asks for it."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:103
+msgid "File a declaration"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:105
+msgid "The declarations are under :menuselection:`Accounting --> Reporting --> AEAT`, one menu per declaration, for example :menuselection:`Accounting --> Reporting --> AEAT --> AEAT 303 model`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:108
+msgid "Click :guilabel:`New`. The :guilabel:`Year` and the :guilabel:`Period Type` of the last closed period, the journal, the counterpart account, and the contact data are proposed from the :ref:`settings <localizations/spain/aeat/configuration>`. Change them if needed."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:111
+msgid "Select the :guilabel:`Statement Type`: :guilabel:`Normal`, or :guilabel:`Complementary` or :guilabel:`Substitutive` to correct a declaration already filed. For the last two, enter the :guilabel:`Previous declaration number`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:114
+msgid "Click :guilabel:`Calculate`. The boxes of the declaration are computed from the posted journal items of the period. Open the :guilabel:`Tax lines` tab, and use the button at the end of a line to see the journal items that make up the amount of a box."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:117
+msgid "Fill in the boxes that are not computed automatically, if any, then click :guilabel:`Recalculate` if you changed accounting data in the meantime."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:119
+msgid "Click :guilabel:`Confirm` when the amounts are correct."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:120
+msgid "Click :guilabel:`Create move` to post the regularization entry, which moves the balances of the tax accounts to the counterpart account. Use :guilabel:`Show move` to open it."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:122
+msgid "Click :guilabel:`Export to BOE` to download the file, and upload it in the AEAT electronic office."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:134
+msgid "The regularization entry is dated on the last day of the period. If this date is in a locked period, a warning banner is shown on the declaration as soon as it is opened, and the entry cannot be posted. Create the declaration entry before locking the period, or ask an adviser to move the lock date."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:140
+msgid "A banner also warns when taxes used in the period are not in any AEAT tax map, as they are left out of the declaration. Click :guilabel:`Show taxes` to list them, and see :ref:`localizations/spain/aeat/tax-map`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:145
+msgid "Specific declarations"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:148
+msgid "The :guilabel:`Result Type` shows whether the result is to be paid, returned, or compensated in later periods. The amount to compensate from previous periods is proposed from the previous declarations. In the last period of the year (4T or month 12), indicate whether the company is exempt from the modelo 390, and if so, fill in the additional data of the activities."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:154
+msgid "The annual summary is computed for the whole year. Fill in the fields that are not computed automatically before confirming it."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:159
+msgid "Modelos 111 and 115"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:158
+msgid "The withholdings are computed from the withholding taxes of the vendor bills. In the modelo 111, fill in the boxes that Odoo cannot compute, such as the work income paid outside Odoo."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:162
+msgid "After :guilabel:`Calculate`, the :guilabel:`Partner records` tab lists the partners whose operations exceed the threshold; a record shown in red misses data needed for the declaration. Click :guilabel:`Send emails` to send each partner its record for verification, and use :guilabel:`Confirm as valid` when a partner agrees. Real estate rentals not declared in the modelo 115 can be added in the :guilabel:`Real estate records` tab. To exclude a contact from the declaration regardless of its amounts, tick :guilabel:`Not included in 347 report` on the contact form."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:171
+msgid "The :guilabel:`Partner records` and :guilabel:`Partners refunds` tabs list the intra-community operations of the period. Delete the operations that must not be declared from these tabs before confirming."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:176
+msgid "The OSS return is computed from the OSS taxes of the distance sales to consumers of other EU countries."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:184
+msgid "Go to :menuselection:`Accounting --> Reporting --> AEAT --> Libros del IVA y del IRPF` and create a book for the period, then click :guilabel:`Calculate`. The :guilabel:`Issued Invoices` and :guilabel:`Received Invoices` tabs list the invoices with their taxes; the :guilabel:`Summary` tab totals them per tax. Click :guilabel:`View Issued Invoices` or :guilabel:`View Received Invoices` to display the books. Click :guilabel:`Export draft` to download them as an XLSX file; after :guilabel:`Confirm`, the final file is downloaded with :guilabel:`Export BOE`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:194
+msgid "Official annual accounts (PGC)"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:196
+msgid "The official Spanish balance sheet and profit and loss, in the format of the annual accounts filed with the Mercantile Registry, are available under :menuselection:`Accounting --> Reporting --> Annual Accounts (PGC)`:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:200
+msgid ":guilabel:`Balance Sheet (PGC)`;"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:201
+msgid ":guilabel:`Profit and Loss (PGC)`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:203
+msgid "The report opens directly with two columns, :guilabel:`Current year` and :guilabel:`Previous year`, based on the posted entries. The template (SMEs, complete, or non-profit entities) follows the chart of accounts of the company. Click an amount to see the journal items behind it, and use :guilabel:`Print` or :guilabel:`Export` to get a PDF or XLSX file."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:209
+msgid "Only accounts numbered according to the PGC are included. An account with a custom code that is not a sub-account of a PGC account is not included in the report."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:213
+#: ../../content/applications/finance/fiscal_localizations/spain/fixed_assets.rst:100
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:111
+msgid ":doc:`../spain`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:214
+msgid ":doc:`../../accounting/reporting`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain/fixed_assets.rst:3
@@ -22643,8 +23119,120 @@ msgstr ""
 msgid ":doc:`../../accounting/vendor_bills/assets`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain/fixed_assets.rst:100
-msgid ":doc:`../spain`"
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:5
+msgid "With the :ref:`Spain - Base Layer <localizations/spain/base-layer>`, the SII (*Llevanza de libros registro del IVA a través de la Sede electrónica de la AEAT*) is handled by the *Suministro Inmediato de Información en el IVA* module. It sends the VAT data of customer invoices and vendor bills to the web service of the AEAT, or of the regional tax agency of the company. The SII is mandatory for companies with a turnover above 6 M€, for the taxpayers registered in the REDEME, and optional for the others."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:13
+msgid "The standard *Spain - SII EDI Suministro de Libros* module described in :ref:`the SII section of the Spain page <localizations/spain/sii>` cannot be installed together with the base layer."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:20
+msgid "Certificate"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:22
+msgid "The requests are signed with the electronic certificate of the company (a :file:`.p12` or :file:`.pfx` file)."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:25
+msgid "Go to :menuselection:`Accounting --> Configuration --> AEAT --> Certificates AEAT` and click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:27
+msgid "Enter a name, upload the certificate :guilabel:`File`, and enter a :guilabel:`Folder Name`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:28
+msgid "Click :guilabel:`Obtain Keys`, enter the password of the certificate, and confirm with :guilabel:`Obtain Keys`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:30
+msgid "Click :guilabel:`To Active` to use this certificate."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:33
+msgid "The certificate is also used by the other AEAT web services, such as the check of contact data against the AEAT census."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:39
+msgid "Open the company form (:ref:`Settings app <general/companies/company>`) and:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:41
+msgid "In the :guilabel:`AEAT` tab, check the :guilabel:`Tax Agency` (the AEAT or a regional tax agency)."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:43
+msgid "In the :guilabel:`SII` tab, tick :guilabel:`Enable SII`, then set:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:45
+msgid ":guilabel:`Sii Start Date`: invoices dated before this date are not sent;"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:46
+msgid ":guilabel:`Is it the SII test environment?`: keep it ticked while testing; untick it to send the data to the production web service;"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:48
+msgid ":guilabel:`Method`: :guilabel:`Automatic` queues the invoices for sending when they are confirmed; with :guilabel:`Manual`, the invoices are sent only when you request it;"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:50
+msgid ":guilabel:`Sii Period`: :guilabel:`Monthly` or :guilabel:`Quarterly`;"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:51
+msgid ":guilabel:`SII Description Method`: how the description of the operation sent to the SII is built (:guilabel:`Automatic` from the invoice lines, :guilabel:`Fixed` text, or :guilabel:`Manual` on each invoice), optionally preceded by the :guilabel:`SII Customer header` or :guilabel:`SII Supplier header`;"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:55
+msgid ":guilabel:`Send Mode`: :guilabel:`On validate`, :guilabel:`At fixed time`, or :guilabel:`With delay` (the default, which leaves time to correct a mistake before the invoice is sent)."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:67
+msgid "Journals, fiscal positions, and taxes"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:69
+msgid "On the sales and purchase journals, the :guilabel:`Enable SII` option (:guilabel:`Localization Settings` tab) is ticked by default. Untick it for a journal whose documents must not be sent."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:71
+msgid "The fiscal positions of the Spanish chart of accounts carry the SII data (registration keys, exemption and non-subject causes). Check them when you create a new fiscal position."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:73
+msgid "The taxes are sent according to the SII tax map, which covers the default Spanish taxes."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:78
+msgid "With the automatic method, a customer invoice or vendor bill is queued for sending when it is confirmed, and sent according to the :guilabel:`Send Mode`. The :guilabel:`SII` tab of the invoice shows:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:82
+msgid "the :guilabel:`Description` and the :guilabel:`Registration key` of the operation, proposed from the company settings and the fiscal position;"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:84
+msgid "in the result section, the :guilabel:`Send state`, the :guilabel:`CSV` code returned by the tax agency, and the :guilabel:`Send error` if the invoice was rejected."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:87
+msgid "To send an invoice immediately, click :guilabel:`Send now` in the :guilabel:`SII` tab. To send several invoices, select them in the list view, and click :menuselection:`Actions --> Send Invoices to SII`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:91
+msgid "If the sending failed, correct the invoice and click :guilabel:`Send to SII`. If a sent invoice is modified (for example, after resetting it to draft and confirming it again), the modification is sent again. To cancel a sent invoice in the SII, cancel the invoice, then click :guilabel:`Send cancellation to SII`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:97
+msgid "In the invoice and bill lists, use the :guilabel:`SII not sent`, :guilabel:`SII sent`, and :guilabel:`SII failed` filters to follow up the sending, and correct and resend the rejected documents."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:110
+msgid ":doc:`aeat_declarations`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:3

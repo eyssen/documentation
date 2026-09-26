@@ -92,6 +92,10 @@ the base layer cannot be installed while an alternative module is installed.
    Layer* module. Ask your system administrator before uninstalling a module, as its data is
    deleted.
 
+.. seealso::
+   - :doc:`spain/aeat_declarations`
+   - :doc:`spain/sii`
+
 Chart of accounts
 =================
 
@@ -110,32 +114,10 @@ Default Spain-specific taxes are created automatically when the
 the boxes of the Spanish **Modelo 303** VAT return, which can be reviewed in the :doc:`tax report
 <../accounting/reporting/dynamic_reports>`.
 
-.. note::
-   With the ``l10n_es_base_layer`` and ``l10n_es_aeat_integration`` modules (plus the
-   OCA AEAT modelo modules you install), Spain-specific AEAT declarations and the
-   official PGC annual accounts **are** available:
-
-   - AEAT declarations live under :menuselection:`Accounting --> Reporting --> AEAT`
-     (modelo reports such as 111, 115, 303, 347, 349, 390, …, depending on which
-     modules are installed).
-   - Official annual accounts are under :menuselection:`Accounting --> Reporting -->
-     Annual Accounts (PGC)`, with :guilabel:`Balance Sheet (PGC)` and
-     :guilabel:`Profit and Loss (PGC)`.
-   - In :menuselection:`Accounting --> Configuration --> Settings`, the
-     :guilabel:`AEAT Declarations` block sets the defaults used on new
-     declarations: :guilabel:`AEAT Journal`, :guilabel:`VAT Counterpart Account`,
-     :guilabel:`Withholding Counterpart Account`, the submitter contact, and the
-     :guilabel:`Filing Frequency`.
-   - A tax-map guard lists taxes that no installed AEAT tax map covers (they
-     would be left out of the declarations); open that list from the settings
-     block or from the AEAT configuration menus.
-   - When a declaration's regularization entry would fall on a locked period, a
-     lock-date warning is shown so you can post the entry before locking or ask
-     an adviser to move the lock date.
-
-   Generic :doc:`financial reports <../accounting/reporting>` and the tax grids
-   remain available alongside these Spain-specific tools.
-
+.. tip::
+   With the :ref:`Spanish base layer <localizations/spain/base-layer>`, the AEAT tax declarations
+   (modelos 303, 390, 111, 115, 347, 349, and others), the VAT books, and the official PGC annual
+   accounts are prepared in the Accounting app. See :doc:`spain/aeat_declarations`.
 
 .. _localizations/spain/sii:
 
@@ -150,7 +132,7 @@ the others.
 .. important::
    This module cannot be installed together with the :ref:`Spain - Base Layer
    <localizations/spain/base-layer>` module. With the base layer, the SII is handled by the
-   community *Suministro Inmediato de Información en el IVA* module.
+   community *Suministro Inmediato de Información en el IVA* module, see :doc:`spain/sii`.
 
 Configuration
 -------------
@@ -423,4 +405,6 @@ Select :guilabel:`FACe Center` as the **type**, assign one or more **role(s)** t
 .. toctree::
    :titlesonly:
 
+   spain/aeat_declarations
+   spain/sii
    spain/fixed_assets

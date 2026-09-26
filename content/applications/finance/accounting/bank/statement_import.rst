@@ -4,8 +4,9 @@ Import statement files
 
 When your bank is not covered by :doc:`online synchronization <bank_synchronization>`, upload the
 statement files your bank provides. Dedicated import modules read the export formats of several
-Hungarian banks and of Wise, and turn each line of the file into a :doc:`bank transaction
-<transactions>` ready for :doc:`reconciliation <reconciliation>`.
+Hungarian banks and of Wise, and the standard file formats such as the Spanish *Norma 43*, and turn
+each line of the file into a :doc:`bank transaction <transactions>` ready for :doc:`reconciliation
+<reconciliation>`.
 
 Available importers
 ===================
@@ -81,6 +82,38 @@ The Wise importer works differently: Wise files have no account number, so you s
 .. tip::
    Importing the same file twice is safe. Each transaction is stored with the bank reference built
    from the file, and a transaction already present in the journal is skipped.
+
+.. _accounting/bank/import-standard-files:
+
+Standard statement files
+========================
+
+Statement files in a standard format are imported with the generic importer, which reads every
+format whose module is installed. For Spanish banks, :ref:`install <general/install>` the
+*Importación de extractos bancarios españoles (Norma 43)* module to import the *AEB Norma 43*
+files (:file:`.n43`, also called *Cuaderno 43*) that all Spanish banks provide.
+
+#. Go to :menuselection:`Accounting --> Accounting --> Import Statement`, or click the import
+   button of the bank journal on the Accounting dashboard.
+#. Select the statement file, and click :guilabel:`Import and View`.
+
+A bank statement is created for each account of the file, in the bank journal whose bank account
+matches the account number of the file. The file is attached to the statement. Transactions that
+were already imported are not created a second time.
+
+The bank journal form has a :guilabel:`Norm 43 options` section (:guilabel:`Advanced Settings`
+tab):
+
+- :guilabel:`Date type for N43 Import`: use the :guilabel:`Value Date` or the :guilabel:`Operation
+  Date` of the file as the transaction date;
+- :guilabel:`Partner search for N43 import`: for some banks (CaixaBank, Sabadell, Santander), the
+  partner of the transaction is looked up from the data of the file;
+- :guilabel:`Exclude pattern for N43 import`: a regular expression; the lines of the file matching
+  it are not imported.
+
+.. note::
+   The import checks the control totals of the Norma 43 file (number of records, debit and credit
+   totals, final balance) and stops with an error if the file is incomplete.
 
 .. seealso::
    - :doc:`bank_synchronization`

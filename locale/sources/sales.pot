@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-19 10:41+0000\n"
+"POT-Creation-Date: 2026-09-26 03:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14683,38 +14683,78 @@ msgid "The states are :guilabel:`Draft`, :guilabel:`Active`, :guilabel:`Depleted
 msgstr ""
 
 #: ../../content/applications/sales/sales/service_credits.rst:54
-msgid ":guilabel:`Print Detail` produces a statement of the credit with the consumption behind it."
+msgid ":guilabel:`Print Detail` opens the :guilabel:`Credit Usage Detail` PDF report (see :ref:`sales/service-credits/reports` below)."
 msgstr ""
 
-#: ../../content/applications/sales/sales/service_credits.rst:65
-msgid "Consumption and warnings"
+#: ../../content/applications/sales/sales/service_credits.rst:68
+msgid "How hours are allocated"
 msgstr ""
 
-#: ../../content/applications/sales/sales/service_credits.rst:67
-msgid "Every timesheet entry recorded on a project linked to a credit reduces the remaining hours. The project itself shows :guilabel:`Total Credit Hours`, :guilabel:`Credit Hours Used` and :guilabel:`Credit Hours Remaining`, plus a traffic-light :guilabel:`Credit Status`:"
+#: ../../content/applications/sales/sales/service_credits.rst:70
+msgid "A single FIFO allocation pass is the source of truth for both the stored :guilabel:`Hours Used` / :guilabel:`Hours Remaining` on each credit and the PDF reports, so the header and the printed figures always reconcile."
 msgstr ""
 
-#: ../../content/applications/sales/sales/service_credits.rst:71
-msgid "green: enough hours left;"
+#: ../../content/applications/sales/sales/service_credits.rst:74
+msgid "In practice:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/service_credits.rst:72
-msgid "yellow: the remaining hours have fallen under the warning threshold;"
-msgstr ""
-
-#: ../../content/applications/sales/sales/service_credits.rst:73
-msgid "red: the credit is depleted."
-msgstr ""
-
-#: ../../content/applications/sales/sales/service_credits.rst:75
-msgid "A warning message is shown on the project when the status is yellow or red, so the team notices before working unpaid hours."
+#: ../../content/applications/sales/sales/service_credits.rst:76
+msgid "Uninvoiced timesheets dated **before** a credit's :guilabel:`Start Date` still roll into that credit (earlier work that was not yet settled)."
 msgstr ""
 
 #: ../../content/applications/sales/sales/service_credits.rst:78
+msgid "Work dated **after** the credit's :guilabel:`End Date` never hits that expired credit."
+msgstr ""
+
+#: ../../content/applications/sales/sales/service_credits.rst:80
+msgid ":guilabel:`Closed` credits keep the hours already allocated to them and never absorb overflow from other credits."
+msgstr ""
+
+#: ../../content/applications/sales/sales/service_credits.rst:82
+msgid "Timesheets that were invoiced separately through ``sale_timesheet`` (linked to a non-cancelled customer invoice) are skipped and do not consume the credit."
+msgstr ""
+
+#: ../../content/applications/sales/sales/service_credits.rst:88
+msgid "Usage reports"
+msgstr ""
+
+#: ../../content/applications/sales/sales/service_credits.rst:90
+msgid "**Credit Usage Detail.** On a credit form, :guilabel:`Print Detail` produces the :guilabel:`Credit Usage Detail` report: A4 portrait using the company paper format, rendered in the customer's language. It shows KPI tiles (purchased / used / remaining) with a progress bar, sections for earlier work versus work in the credit period, grey rows for non-billable timesheets, and a closing summary that reconciles the listed lines with :guilabel:`Hours Used` and :guilabel:`Hours Remaining`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/service_credits.rst:98
+msgid "**Credit Usage Summary.** From a customer that has service credits, open the :guilabel:`Credit Summary` smart button. The :guilabel:`Credit Usage Summary` wizard asks for the :guilabel:`Customer`, :guilabel:`From Date` and :guilabel:`To Date`; :guilabel:`Print PDF` builds a period summary across that customer's credits."
+msgstr ""
+
+#: ../../content/applications/sales/sales/service_credits.rst:113
+msgid "Consumption and warnings"
+msgstr ""
+
+#: ../../content/applications/sales/sales/service_credits.rst:115
+msgid "Every timesheet entry recorded on a project linked to a credit reduces the remaining hours. The project itself shows :guilabel:`Total Credit Hours`, :guilabel:`Credit Hours Used` and :guilabel:`Credit Hours Remaining`, plus a traffic-light :guilabel:`Credit Status`:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/service_credits.rst:119
+msgid "green: enough hours left;"
+msgstr ""
+
+#: ../../content/applications/sales/sales/service_credits.rst:120
+msgid "yellow: the remaining hours have fallen under the warning threshold;"
+msgstr ""
+
+#: ../../content/applications/sales/sales/service_credits.rst:121
+msgid "red: the credit is depleted."
+msgstr ""
+
+#: ../../content/applications/sales/sales/service_credits.rst:123
+msgid "A warning message is shown on the project when the status is yellow or red, so the team notices before working unpaid hours."
+msgstr ""
+
+#: ../../content/applications/sales/sales/service_credits.rst:126
 msgid "The customer contact also carries the totals: a :guilabel:`Service Credits` smart button, the :guilabel:`Credit Hours Remaining` and the same traffic-light status. The :guilabel:`Has Service Credits` filter on the contact list finds the customers who have any."
 msgstr ""
 
-#: ../../content/applications/sales/sales/service_credits.rst:83
+#: ../../content/applications/sales/sales/service_credits.rst:131
 msgid "Consuming credits requires the timesheet-invoicing module the service credit builds on (``eyssen_invoice_from_timesheet``)."
 msgstr ""
 
@@ -15643,183 +15683,183 @@ msgstr ""
 msgid "Contract-level figures are on the contract itself: :guilabel:`MRR` and :guilabel:`ARR` in the :guilabel:`Billing` group, the billed history on each line's :guilabel:`Billed Periods` tab, and every change on its :guilabel:`Change History` tab."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:6
+#: ../../content/applications/sales/withdrawal.rst:3
 msgid "Right of withdrawal"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:8
+#: ../../content/applications/sales/withdrawal.rst:5
 msgid "The **Right of withdrawal** feature lets a webshop consumer formally *withdraw from the contract* — the legally binding, no-reason cancellation guaranteed to consumers by EU law — directly from the customer portal, without contacting support and without logging in."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:12
+#: ../../content/applications/sales/withdrawal.rst:9
 msgid "It is built on top of the standard eYssen **RMA** (Return Merchandise Authorization) system: the :doc:`backend <withdrawal/backend>` adds a dedicated, non-rejectable *withdrawal declaration* record, while the :doc:`customer portal <withdrawal/consumer_portal>` adds the public, two-step declaration flow and the durable-medium confirmation e-mail."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:18
+#: ../../content/applications/sales/withdrawal.rst:15
 msgid "End-to-end flow (summary)"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:20
+#: ../../content/applications/sales/withdrawal.rst:17
 msgid "**Consumer** opens the declaration from the order page or from the order e-mail link (:doc:`withdrawal/consumer_portal`)."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:22
+#: ../../content/applications/sales/withdrawal.rst:19
 msgid "They choose **product** quantities (shipping lines are never offered), confirm, and receive a durable-medium confirmation e-mail."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:24
+#: ../../content/applications/sales/withdrawal.rst:21
 msgid "A **withdrawal declaration** is created in the backend already in :guilabel:`Posted` state under :menuselection:`Sales --> Orders --> Withdrawals`."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:26
+#: ../../content/applications/sales/withdrawal.rst:23
 msgid "When goods come back, the **agent** clicks :guilabel:`Start Return / Refund` → works a normal RMA (Post → accept lines → Done → validate receipt → credit note). See :doc:`withdrawal/backend`."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:31
+#: ../../content/applications/sales/withdrawal.rst:28
 msgid "Legal background"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:33
+#: ../../content/applications/sales/withdrawal.rst:30
 msgid "The feature implements the mandatory online **withdrawal button** required by **Directive (EU) 2023/2673** (which amends the Consumer Rights Directive 2011/83/EU, articles 11a and 11b). For distance and off-premises contracts, the trader must offer consumers an easily accessible electronic withdrawal function and confirm receipt of the withdrawal on a **durable medium** (e.g. e-mail)."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:40
+#: ../../content/applications/sales/withdrawal.rst:37
 msgid "The on-screen legal wording (button labels, the declaration text and the confirmation e-mail) is provided as a **draft pending legal review**. Have the texts approved by your legal counsel before going live. The texts live in editable QWeb templates and a :guilabel:`mail.template`, so they can be adjusted without code changes."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:46
+#: ../../content/applications/sales/withdrawal.rst:43
 msgid "Key principles"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:48
+#: ../../content/applications/sales/withdrawal.rst:45
 msgid "The withdrawal declaration is treated very differently from an ordinary return request:"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:50
+#: ../../content/applications/sales/withdrawal.rst:47
 msgid "**Legally binding and irrevocable.** A confirmed withdrawal can never be *rejected* — it is a unilateral consumer statement. The backend enforces this with database-level guards."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:52
+#: ../../content/applications/sales/withdrawal.rst:49
 msgid "**Immutable proof.** At confirmation time the system stores a frozen snapshot of the declaration (consumer, products, quantities, exact timestamp) and sends a durable-medium confirmation e-mail."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:54
+#: ../../content/applications/sales/withdrawal.rst:51
 msgid "**No automatic logistics.** A withdrawal never auto-generates a return picking or a refund. An RMA agent decides how to handle the physical return and the refund manually via :guilabel:`Start Return / Refund` (see :doc:`withdrawal/backend`)."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:57
+#: ../../content/applications/sales/withdrawal.rst:54
 msgid "**Stays Posted.** A confirmed declaration remains in :guilabel:`Posted` forever. That is normal — it is *not* stuck. The physical return and refund run on a **separate ordinary RMA**."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:59
+#: ../../content/applications/sales/withdrawal.rst:56
 msgid "**Goods only.** Carrier shipping lines (``is_delivery``) cannot be withdrawn or returned as standalone items. Only product lines appear on the portal form."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:61
+#: ../../content/applications/sales/withdrawal.rst:58
 msgid "**B2C scope only.** The feature is available only for genuine business-to-consumer webshop orders (see :doc:`withdrawal/consumer_portal`)."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:65
+#: ../../content/applications/sales/withdrawal.rst:62
 msgid "Withdrawal vs ordinary RMA (at a glance)"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:71
+#: ../../content/applications/sales/withdrawal.rst:68
 msgid "Topic"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:72
+#: ../../content/applications/sales/withdrawal.rst:69
 msgid "Withdrawal declaration"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:73
+#: ../../content/applications/sales/withdrawal.rst:70
 msgid "Ordinary RMA (return)"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:74
+#: ../../content/applications/sales/withdrawal.rst:71
 msgid "Menu"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:75
+#: ../../content/applications/sales/withdrawal.rst:72
 msgid ":menuselection:`Sales --> Orders --> Withdrawals`"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:76
+#: ../../content/applications/sales/withdrawal.rst:73
 msgid ":menuselection:`Sales --> Orders --> RMAs`"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:77
+#: ../../content/applications/sales/withdrawal.rst:74
 msgid "Who creates it"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:78
+#: ../../content/applications/sales/withdrawal.rst:75
 msgid "Consumer on the portal (or e-mail link)"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:79
+#: ../../content/applications/sales/withdrawal.rst:76
 msgid "Agent (or consumer *Request Return*)"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:80
+#: ../../content/applications/sales/withdrawal.rst:77
 msgid "State after creation"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:81
+#: ../../content/applications/sales/withdrawal.rst:78
 msgid "Always :guilabel:`Posted` (legal record)"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:82
+#: ../../content/applications/sales/withdrawal.rst:79
 msgid ":guilabel:`Draft` → :guilabel:`Posted` → :guilabel:`Done`"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:83
+#: ../../content/applications/sales/withdrawal.rst:80
 msgid "Can reject lines?"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:84
+#: ../../content/applications/sales/withdrawal.rst:81
 msgid "**No**"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:85
+#: ../../content/applications/sales/withdrawal.rst:82
 msgid "Yes (with reason)"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:86
+#: ../../content/applications/sales/withdrawal.rst:83
 msgid "Creates stock picking?"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:87
+#: ../../content/applications/sales/withdrawal.rst:84
 msgid "**Never** by itself"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:88
+#: ../../content/applications/sales/withdrawal.rst:85
 msgid "Yes, when marked :guilabel:`Done`"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:89
+#: ../../content/applications/sales/withdrawal.rst:86
 msgid "Agent next step"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:90
+#: ../../content/applications/sales/withdrawal.rst:87
 msgid ":guilabel:`Start Return / Refund`"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:91
+#: ../../content/applications/sales/withdrawal.rst:88
 msgid ":guilabel:`Post` → accept lines → :guilabel:`Done`"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:94
+#: ../../content/applications/sales/withdrawal.rst:91
 msgid "Scope and modules"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:96
+#: ../../content/applications/sales/withdrawal.rst:93
 msgid "The feature is delivered by two modules:"
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:98
+#: ../../content/applications/sales/withdrawal.rst:95
 msgid "**RMA** (``eyssen_rma``) — the backend withdrawal declaration, configuration, the :guilabel:`Withdrawals` menu and the confirmation e-mail."
 msgstr ""
 
-#: ../../content/applications/sales/withdrawal.rst:100
+#: ../../content/applications/sales/withdrawal.rst:97
 msgid "**RMA - Website Portal** (``eyssen_rma_website_sale``) — the public portal pages, the withdrawal button on the order page and the login-free link in the order-confirmation e-mail."
 msgstr ""
 

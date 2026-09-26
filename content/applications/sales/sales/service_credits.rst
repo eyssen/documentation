@@ -51,7 +51,8 @@ The states are :guilabel:`Draft`, :guilabel:`Active`, :guilabel:`Depleted` (no h
 :guilabel:`Closed`. The header buttons are :guilabel:`Activate` and :guilabel:`Close`; a credit can
 also be activated by hand when it was not sold through an invoice.
 
-:guilabel:`Print Detail` produces a statement of the credit with the consumption behind it.
+:guilabel:`Print Detail` opens the :guilabel:`Credit Usage Detail` PDF report (see
+:ref:`sales/service-credits/reports` below).
 
 .. screenshot:: sales-service-credits-form
    :menu: Project ‣ Configuration ‣ Service Credits ‣ (a credit)
@@ -60,6 +61,53 @@ also be activated by hand when it was not sold through an invoice.
    :data: Credit "INV/2026/0031 - Support package 40 h" for "Deco Addict"; 40 hours, 12 used, 28 remaining.
    :module: service_credit
    :notes: English UI, light theme, 1440px width, full form.
+
+.. _sales/service-credits/allocation:
+
+How hours are allocated
+=======================
+
+A single FIFO allocation pass is the source of truth for both the stored
+:guilabel:`Hours Used` / :guilabel:`Hours Remaining` on each credit and the PDF
+reports, so the header and the printed figures always reconcile.
+
+In practice:
+
+- Uninvoiced timesheets dated **before** a credit's :guilabel:`Start Date` still
+  roll into that credit (earlier work that was not yet settled).
+- Work dated **after** the credit's :guilabel:`End Date` never hits that expired
+  credit.
+- :guilabel:`Closed` credits keep the hours already allocated to them and never
+  absorb overflow from other credits.
+- Timesheets that were invoiced separately through ``sale_timesheet`` (linked to
+  a non-cancelled customer invoice) are skipped and do not consume the credit.
+
+.. _sales/service-credits/reports:
+
+Usage reports
+=============
+
+**Credit Usage Detail.** On a credit form, :guilabel:`Print Detail` produces the
+:guilabel:`Credit Usage Detail` report: A4 portrait using the company paper
+format, rendered in the customer's language. It shows KPI tiles (purchased /
+used / remaining) with a progress bar, sections for earlier work versus work in
+the credit period, grey rows for non-billable timesheets, and a closing summary
+that reconciles the listed lines with :guilabel:`Hours Used` and
+:guilabel:`Hours Remaining`.
+
+**Credit Usage Summary.** From a customer that has service credits, open the
+:guilabel:`Credit Summary` smart button. The :guilabel:`Credit Usage Summary`
+wizard asks for the :guilabel:`Customer`, :guilabel:`From Date` and
+:guilabel:`To Date`; :guilabel:`Print PDF` builds a period summary across that
+customer's credits.
+
+.. screenshot:: sales-service-credits-usage-detail
+   :menu: Project ‣ Configuration ‣ Service Credits ‣ (a credit) ‣ Print Detail
+   :shows: The Credit Usage Detail PDF with KPI tiles, earlier-work and in-period sections, and the reconciling closing summary.
+   :highlight: The KPI tiles and the closing summary.
+   :data: Credit "INV/2026/0031 - Support package 40 h"; earlier work 5 h; in-period 7 h; 28 h remaining.
+   :module: service_credit
+   :notes: English UI / PDF, A4 portrait, light theme.
 
 Consumption and warnings
 ========================

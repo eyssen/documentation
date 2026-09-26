@@ -45,10 +45,30 @@ the boxes of the Spanish **Modelo 303** VAT return, which can be reviewed in the
 <../accounting/reporting/dynamic_reports>`.
 
 .. note::
-   The Spain-specific statement reports (Balance Sheet (ES), Profit & Loss (ES), EC Sales List,
-   and the Modelo 111 / 115 / 130 / 303 / 347 / 349 / 390 tax reports with their AEAT export) are
-   **not** available in this edition; use the generic :doc:`financial reports
-   <../accounting/reporting>` and the tax grids instead.
+   With the ``l10n_es_base_layer`` and ``l10n_es_aeat_integration`` modules (plus the
+   OCA AEAT modelo modules you install), Spain-specific AEAT declarations and the
+   official PGC annual accounts **are** available:
+
+   - AEAT declarations live under :menuselection:`Accounting --> Reporting --> AEAT`
+     (modelo reports such as 111, 115, 303, 347, 349, 390, …, depending on which
+     modules are installed).
+   - Official annual accounts are under :menuselection:`Accounting --> Reporting -->
+     Annual Accounts (PGC)`, with :guilabel:`Balance Sheet (PGC)` and
+     :guilabel:`Profit and Loss (PGC)`.
+   - In :menuselection:`Accounting --> Configuration --> Settings`, the
+     :guilabel:`AEAT Declarations` block sets the defaults used on new
+     declarations: :guilabel:`AEAT Journal`, :guilabel:`VAT Counterpart Account`,
+     :guilabel:`Withholding Counterpart Account`, the submitter contact, and the
+     :guilabel:`Filing Frequency`.
+   - A tax-map guard lists taxes that no installed AEAT tax map covers (they
+     would be left out of the declarations); open that list from the settings
+     block or from the AEAT configuration menus.
+   - When a declaration's regularization entry would fall on a locked period, a
+     lock-date warning is shown so you can post the entry before locking or ask
+     an adviser to move the lock date.
+
+   Generic :doc:`financial reports <../accounting/reporting>` and the tax grids
+   remain available alongside these Spain-specific tools.
 
 
 .. _localizations/spain/sii:

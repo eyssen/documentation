@@ -307,5 +307,31 @@ Order confirmation
 The final step of the checkout process is the :guilabel:`Order confirmation`, which provides a
 summary of the customer's purchase details.
 
+.. _ecommerce/checkout/arukereso-trusted-shop:
+
+Árukereső Trusted Shop
+~~~~~~~~~~~~~~~~~~~~~~
+
+The *Árukereső Trusted Shop* module (`website_sale_arukereso_trusted`) sends confirmed webshop
+orders to the Árukereső Trusted Shop program from the order confirmation page.
+
+To configure it, go to :menuselection:`Website --> Configuration --> Settings`, scroll to the
+:guilabel:`Árukereső` section, and enter the :guilabel:`WebAPI Key` under
+:guilabel:`Trusted Shop`. Leave the key empty to disable the integration.
+
+When the key is set and the customer has finished checkout (payment transaction pending,
+authorized, or done, or the sales order confirmed; cancelled or failed checkouts are skipped),
+the confirmation page injects an HTML snippet that sends the customer email and the purchased
+product names to Árukereső. If a product has an internal reference (:guilabel:`Internal
+Reference`), it is sent as the product Id as well.
+
+.. screenshot:: ecommerce-checkout-arukereso-trusted-shop
+   :menu: Website ‣ Configuration ‣ Settings
+   :shows: The Website settings page with the Árukereső section and the Trusted Shop WebAPI Key field.
+   :highlight: The Árukereső block and the Trusted Shop WebAPI Key field (red frame).
+   :data: Demo website 'My Website' with an empty WebAPI Key field.
+   :module: website_sale_arukereso_trusted
+   :notes: English UI, light theme, 1440px width, crop to the Árukereső settings block.
+
 .. seealso::
    :doc:`Order handling documentation <order_handling>`

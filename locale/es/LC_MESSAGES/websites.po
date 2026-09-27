@@ -613,7 +613,7 @@ msgstr "Confirmación del pedido"
 msgid "The final step of the checkout process is the :guilabel:`Order confirmation`, which provides a summary of the customer's purchase details."
 msgstr "El paso final del proceso de pago es la :guilabel:`Confirmación del pedido`, que proporciona un resumen de los detalles de compra del cliente."
 
-#: ../../content/applications/websites/ecommerce/checkout.rst:311
+#: ../../content/applications/websites/ecommerce/checkout.rst:337
 msgid ":doc:`Order handling documentation <order_handling>`"
 msgstr ":doc:`Documentación de gestión de pedidos <order_handling>`"
 
@@ -8632,6 +8632,22 @@ msgstr "Al indexar su sitio web, los motores de búsqueda primero consultan el a
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:193
 msgid "With the *Website Code Editor — Insert Media* module (`website_code_editor_media`) installed, a :guilabel:`Media` button is available in the code editor of the :guilabel:`Embed Code` block — and in the website's HTML/CSS/JS resource editor. It opens the usual media dialog and inserts the URL of the selected image or document at the cursor, so that an image from the media library can be referenced in hand-written code without looking up its address."
 msgstr "Con el módulo *Editor de código del sitio web: insertar medios* (`website_code_editor_media`) instalado, hay disponible un botón :guilabel:`Medios` en el editor de código del bloque :guilabel:`Incrustar código` — y en el editor de recursos HTML/CSS/JS del sitio web. Abre el cuadro de diálogo de medios habitual e inserta la URL de la imagen o el documento seleccionado en el cursor, de modo que se pueda hacer referencia a una imagen de la biblioteca de medios en código escrito a mano sin tener que buscar su dirección."
+
+#: ../../content/applications/websites/ecommerce/checkout.rst:313
+msgid "Árukereső Trusted Shop"
+msgstr "Árukereső Tienda de confianza"
+
+#: ../../content/applications/websites/ecommerce/checkout.rst:315
+msgid "The *Árukereső Trusted Shop* module (`website_sale_arukereso_trusted`) sends confirmed webshop orders to the Árukereső Trusted Shop program from the order confirmation page."
+msgstr "El módulo *Árukereső Tienda de confianza* (`website_sale_arukereso_trusted`) envía los pedidos confirmados de la tienda online al programa Tienda de confianza de Árukereső desde la página de confirmación del pedido."
+
+#: ../../content/applications/websites/ecommerce/checkout.rst:318
+msgid "To configure it, go to :menuselection:`Website --> Configuration --> Settings`, scroll to the :guilabel:`Árukereső` section, and enter the :guilabel:`WebAPI Key` under :guilabel:`Trusted Shop`. Leave the key empty to disable the integration."
+msgstr "Para configurarlo, vaya a :menuselection:`Sitio web --> Configuración --> Ajustes`, desplácese hasta la sección :guilabel:`Árukereső` e introduzca la :guilabel:`Clave WebAPI` en :guilabel:`Tienda de confianza`. Deje la clave vacía para desactivar la integración."
+
+#: ../../content/applications/websites/ecommerce/checkout.rst:322
+msgid "When the key is set and the customer has finished checkout (payment transaction pending, authorized, or done, or the sales order confirmed; cancelled or failed checkouts are skipped), the confirmation page injects an HTML snippet that sends the customer email and the purchased product names to Árukereső. If a product has an internal reference (:guilabel:`Internal Reference`), it is sent as the product Id as well."
+msgstr "Cuando la clave está configurada y el cliente ha terminado el proceso de pago (transacción de pago pendiente, autorizada o hecha, o pedido de venta confirmado; se omiten los procesos cancelados o fallidos), la página de confirmación inserta un fragmento HTML que envía el correo electrónico del cliente y los nombres de los productos comprados a Árukereső. Si un producto tiene una referencia interna (:guilabel:`Referencia interna`), también se envía como Id del producto."
 
 #~ msgid "Together with the Hungarian localization, the form also switches between the international :guilabel:`VAT` field and the Hungarian tax number field depending on the selected :guilabel:`Country`, and the B2B fields are always shown."
 #~ msgstr "Junto con la localización húngara, el formulario también alterna entre el campo internacional :guilabel:`NIF-IVA` y el campo del número fiscal húngaro en función del :guilabel:`País` seleccionado, y los campos B2B siempre se muestran."

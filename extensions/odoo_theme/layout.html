@@ -53,6 +53,7 @@
     {%- if google_analytics_key -%}
         {%- include "layout_templates/google_analytics.html" %}
     {%- endif -%}
+    {%- if umami_website_id -%}{%- include "layout_templates/umami.html" %}{%- endif -%}
 {%- endblock %}
 
 {%- block header %}

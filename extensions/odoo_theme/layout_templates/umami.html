@@ -1,0 +1,144 @@
+{#- Umami (self-hosted, stats.eyssen.io) - conf.py: html_context['umami_website_id'] = '46cf62f0-f6e2-4bbc-8b77-5790c51d7061' (doc.eyssen.com). A data-host-url kötelező: nélküle a tracker a /assets/api/c-re küldene. -#}
+<script>window.EY_UMAMI_CFG = { utmMode: 'never', langTag: true, odoo: false, langSwitch: '.o_languages a.o_switcher_item' };</script>
+<script>
+(function () {
+  'use strict';
+  // ===== SITE-KONFIG (csak ez a blokk tér el site-onként) =====
+  var CFG = window.EY_UMAMI_CFG || {};
+  // CFG.utmMode:      'consent' | 'always' | 'never'   (Odoo: 'consent'; docs + namostakkormivan: 'never', nincs consent-mechanizmus)
+  // CFG.langTag:      true = tag = <html lang> első 2 betűje (en/hu/es); false = nincs nyelvi tag
+  // CFG.odoo:         true = Odoo-specifikus kizárás + lead/form/verifactu/blog események
+  // CFG.langSwitch:   CSS-szelektor a nyelvváltó linkekre, vagy null
+  // ============================================================
+  var UTM_MODE = CFG.utmMode || 'never';
+  var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+  var SKIP_PATH = CFG.odoo ? /^\/(?:[a-z]{2}(?:_[A-Z]{2})?\/)?(?:web|odoo|website|my)(?:\/|$)/ : null;
+  var LANG = CFG.langTag ? (document.documentElement.lang || '').slice(0, 2).toLowerCase() : '';
+  var consentNow = false;
+
+  function hasOptionalConsent() {
+    if (consentNow) return true;
+    var m = document.cookie.match(/(?:^|;\s*)website_cookies_bar=([^;]+)/);
+    if (!m) return false;
+    try { return JSON.parse(decodeURIComponent(m[1])).optional === true; } catch (e) { return false; }
+  }
+  function isInternal() {
+    if (window.self !== window.top) return true;
+    if (!CFG.odoo) return false;
+    var h = document.documentElement;
+    return h.hasAttribute('data-editable') || h.hasAttribute('data-translatable') ||
+      !!document.querySelector('.o_frontend_to_backend_nav') ||
+      SKIP_PATH.test(location.pathname);
+  }
+  function utmFrom(href) {
+    var out = {}, u = new URL(href, location.href);
+    UTM_KEYS.forEach(function (k) {
+      var v = u.searchParams.get(k);
+      if (v) out[k] = v.toLowerCase().slice(0, 100);
+    });
+    return out;
+  }
+  function cleanUrl(raw, keepUtm) {
+    var u = new URL(raw, location.href), q = new URLSearchParams();
+    var utm = keepUtm ? utmFrom(raw) : {};
+    Object.keys(utm).forEach(function (k) { q.set(k, utm[k]); });
+    u.search = q.toString(); u.hash = '';
+    return u.toString();
+  }
+  window.eyUmamiBeforeSend = function (type, payload) {
+    try {
+      if (isInternal() || navigator.globalPrivacyControl === true) return false;
+      var keepUtm = UTM_MODE === 'always' || (UTM_MODE === 'consent' && hasOptionalConsent());
+      if (payload.url) payload.url = cleanUrl(payload.url, keepUtm);
+      if (payload.referrer) {
+        var r = new URL(payload.referrer, location.href);
+        payload.referrer = r.origin === location.origin ? r.pathname : r.origin + r.pathname;
+      }
+      if (LANG) payload.tag = LANG;
+      return payload;
+    } catch (e) { return false; }
+  };
+
+  function track(name, data) {
+    if (window.umami && typeof window.umami.track === 'function') window.umami.track(name, data);
+  }
+  // Odoo 18 cookie-sáv: a documenten futó capture-listener stopImmediatePropagation-t hív,
+  // ezért WINDOW capture-fázisban figyelünk (az fut le előbb).
+  if (UTM_MODE === 'consent') {
+    window.addEventListener('optionalCookiesAccepted', function () {
+      consentNow = true;
+      var utm = utmFrom(location.href);
+      if (Object.keys(utm).length) track('campaign_attribution', utm);
+    }, true);
+  }
+
+  function onReady() {
+    var p = CFG.odoo ? (location.pathname.replace(/^\/(?:en|hu|es)(?=\/|$)/, '') || '/') : location.pathname;
+
+    if (CFG.odoo) {
+      var formName = p === '/verifactu' ? 'verifactu' : (p === '/contactus' || p === '/contact') ? 'contact' : 'other';
+      if (p === '/contactus-thank-you') track('lead_submit', { form: 'contact' });
+      if (p === '/verifactu-thank-you') track('lead_submit', { form: 'verifactu' });
+      var started = {};
+      document.addEventListener('focusin', function (e) {
+        var f = e.target.closest && e.target.closest('form.s_website_form, form[data-model_name]');
+        if (!f) return;
+        var key = f.getAttribute('data-model_name') || 'form';
+        if (started[key]) return;
+        started[key] = true;
+        track('form_start', { form: formName, model: key });
+      });
+      var post = document.getElementById('o_wblog_post_content');
+      if (post && /^\/blog\/[^/]+\/[^/]+/.test(p)) {
+        var done = false, t0 = Date.now();
+        var check = function () {
+          if (done) return;
+          var r = post.getBoundingClientRect();
+          if ((window.innerHeight - r.top) / Math.max(r.height, 1) >= 0.75 && Date.now() - t0 >= 30000) {
+            done = true;
+            window.removeEventListener('scroll', check);
+            var parts = p.split('/');
+            track('blog_read', { blog: parts[2], post: parts[3] });
+          }
+        };
+        window.addEventListener('scroll', check, { passive: true });
+        setTimeout(check, 30500);
+      }
+    }
+
+    // Delegált kattintáskövetés; nincs preventDefault, a tracker fetch keepalive-val navigáció közben is elküldi
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a || a.hasAttribute('data-umami-event')) return; // az attribútumos elemeket a tracker maga kezeli
+      if (CFG.langSwitch && a.matches(CFG.langSwitch)) {
+        var to = a.getAttribute('data-url_code') ||
+          ((new URL(a.href, location.href).pathname.match(/^\/(hu|es)(?=\/|$)/) || [])[1]) || 'en';
+        track('language_switch', { from: LANG, to: to.slice(0, 2) });
+        return;
+      }
+      var href = a.getAttribute('href') || '';
+      if (/^mailto:/i.test(href)) { track('contact_direct_click', { channel: 'email' }); return; }
+      if (/^tel:/i.test(href)) { track('contact_direct_click', { channel: 'phone' }); return; }
+      var u; try { u = new URL(a.href); } catch (err) { return; }
+      if (/(^|\.)wa\.me$|(^|\.)whatsapp\.com$/.test(u.hostname)) { track('contact_direct_click', { channel: 'whatsapp' }); return; }
+      if (u.hostname === location.hostname) {
+        if (!CFG.odoo) return;
+        var path = u.pathname.replace(/^\/(?:en|hu|es)(?=\/|$)/, '') || '/';
+        if (path === '/verifactu') track('verifactu_cta_click', { from: p });
+        else if (path === '/contactus' || path === '/contact') track('contact_cta_click', { from: p });
+        return;
+      }
+      if (/^https?:$/.test(u.protocol)) track('outbound_click', { domain: u.hostname.replace(/^www\./, '') });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', onReady);
+  else onReady();
+})();
+</script>
+<script defer src="https://stats.eyssen.io/assets/app-core.js"
+  data-host-url="https://stats.eyssen.io"
+  data-website-id="{{ umami_website_id }}"
+  data-domains="doc.eyssen.com"
+  data-exclude-hash="true"
+  data-do-not-track="true"
+  data-before-send="eyUmamiBeforeSend"></script>

@@ -484,7 +484,10 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
         """
         # If the canonical version is not set, assume that the project has a single version
         canonical_version_ = app.config.canonical_version or app.config.version
-        canonical_lang_ = 'en'  # Always 'en'. Don't take the value of the config option.
+        # eYssen: every language is self-canonical (EN at the root, HU under /hu/, ES under
+        # /es/). Upstream Odoo forces 'en' here, which made /hu/ and /es/ pages declare the
+        # English page as canonical and contradicted their hreflang annotations.
+        canonical_lang_ = app.config.language or 'en'
         context['canonical'] = build_url(version_=canonical_version_, lang_=canonical_lang_)
 
     def versionize():
@@ -531,6 +534,18 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
                         build_url(lang_=alternate_lang_),
                     )
                 )
+
+        # hreflang <link> tags: the full, symmetric set on every page, including a
+        # self-reference. English (served at the root) is announced both as 'en' and as
+        # 'x-default'. The language switcher keeps using `alternate_languages` above.
+        context['hreflang_links'] = []
+        for lang_ in provided_languages_:
+            url_ = build_url(lang_=lang_)
+            if lang_ == 'en':
+                context['hreflang_links'].append(('en', url_))
+                context['hreflang_links'].append(('x-default', url_))
+            else:
+                context['hreflang_links'].append((lang_.split('_')[0], url_))
 
         # Dynamic generation of localized legal doc links
         context['legal_translations'] = legal_translations

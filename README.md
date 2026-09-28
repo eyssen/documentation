@@ -53,7 +53,7 @@ still contain `User-agent` / `Allow` / `Sitemap`.
 
 ### Canonical URLs
 
-Production builds set `ROOT=https://doc.eyssen.com` and `IS_REMOTE_BUILD=True` by default (see `Makefile`). That makes `<link rel="canonical">` absolute under `https://doc.eyssen.com/…` via `conf.py` `_generate_alternate_urls` (same path the Odoo theme already supports). Empty `IS_REMOTE_BUILD=` restores relative canonicals for local preview. Alias hosts such as `doc.eyssen.uk` must 301 to `.com` at the edge (Traefik/Cloudflare) — that is outside this repo.
+Production builds set `ROOT=https://doc.eyssen.com` and `IS_REMOTE_BUILD=True` by default (see `Makefile`). That makes `<link rel="canonical">` absolute under `https://doc.eyssen.com/…` via `conf.py` `_generate_alternate_urls` (same path the Odoo theme already supports). Each language is self-canonical (EN at `https://doc.eyssen.com/…`, HU at `/hu/…`, ES at `/es/…`) and every page carries the full symmetric hreflang set (`en` + `x-default` for the root, `hu`, `es`). Empty `IS_REMOTE_BUILD=` restores relative canonicals for local preview. Alias hosts such as `doc.eyssen.uk` must 301 to `.com` at the edge (Traefik/Cloudflare) — that is outside this repo.
 
 This is a post-build step (`scripts/generate_sitemap.py`) rather than `sphinx-sitemap`: languages are built in separate Makefile passes into different output directories, English is served without an `/en/` prefix, and `locale/` still contains unpublished languages. After `make html` then `make html CURRENT_LANG=hu`, the sitemap contains both `/` and `/hu/` URLs.
 

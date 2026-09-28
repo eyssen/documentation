@@ -38,7 +38,7 @@
 {%- endblock %}
 
 {%- block linktags %}
-    {%- for alternate_language, language_code, url in alternate_languages %}
+    {%- for language_code, url in hreflang_links %}
         <link rel="alternate" hreflang="{{ language_code }}" href="{{ url }}" />
     {%- endfor %}
     <link rel="canonical" href="{{ canonical }}" />

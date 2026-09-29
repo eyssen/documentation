@@ -133,6 +133,29 @@ Customize posts by opening a blog post and clicking :menuselection:`Edit --> Cus
 .. tip::
    Use :ref:`Plausible <analytics/plausible>` to keep track of the traffic on your blog.
 
+.. _blog/seo:
+
+SEO of tag pages
+================
+
+The *Blog Sitemap SEO* module (`website_blog_sitemap_seo`) improves how search engines see the tag
+pages of your blogs:
+
+- **Sitemap**: the tag pages are added to :ref:`/sitemap.xml <website/seo/sitemap>`, for the tags
+  that have a :guilabel:`Meta Title` set and are used on published posts. The `/feed` addresses and
+  `/website/info` are left out of the sitemap, but remain reachable.
+- **Localized tag addresses**: in a language other than the default one, the tag page is served with
+  the tag name of that language in its address. The `hreflang` tags list the address of the tag page
+  in each language of the website, with the tag name translated (see :ref:`Hreflang HTML tags
+  <website/seo/hreflang>`).
+- **Redirects**: opening a tag page with the tag name of another language (or an outdated one), for
+  example `/hu/blog/tag/<english-name>`, redirects to the right address with **one** permanent
+  (301) redirect that keeps the language prefix. The same applies when the blog name in the address
+  is wrong as well.
+
+.. note::
+   Tag pages with several tags at once (e.g., `/tag/a,b`) keep the standard Odoo behavior.
+
 .. _blog/contents-landing:
 
 Contents landing page

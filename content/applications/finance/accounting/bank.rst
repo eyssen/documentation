@@ -82,6 +82,7 @@ formats of several Hungarian banks.
    :titlesonly:
 
    bank/bank_synchronization
+   bank/enable_banking
    bank/statement_import
    bank/transactions
    bank/reconciliation

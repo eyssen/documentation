@@ -15,7 +15,11 @@ to decide whether to store all or only essential cookies on their device.
    - Cookies bars are required to obtain visitors' consent for optional cookies only. Consent is not
      required for essential cookies.
 
-   - Odoo is compliant with `Google consent mode v2 <https://support.google.com/tagmanager/answer/13695607>`_.
+   - Odoo is compliant with `Google consent mode v2
+     <https://support.google.com/tagmanager/answer/13695607>`_: the consent state is set to
+     *denied* by default and updated to *granted* or *denied* according to the visitor's choice. In
+     eYssen ERP, the :ref:`Google consent mode (advanced) <cookies-bar/consent-mode-advanced>`
+     module also lets the Google tag load before the choice is made.
 
 Configuration
 =============
@@ -30,6 +34,69 @@ cookies.
 .. note::
    Using third-party cookies without a cookies bar does not prevent them from being triggered. Only
    the presence of a cookie bar **and** the visitor’s refusal ensure that these cookies are blocked.
+
+.. _cookies-bar/consent-mode-advanced:
+
+Google consent mode (advanced)
+==============================
+
+With the cookies bar enabled, the standard behavior is to block the Google tag (`gtag.js`) until the
+visitor accepts optional cookies, because `googletagmanager.com` and `google-analytics.com` are on
+the block list of third-party services. As a result, the tag only loads on the **next** page after
+the visitor accepted. Google Analytics 4 then loses the landing page, the `gclid` parameter of
+Google Ads and the referrer of the first page, and the visit is reported as *Direct*.
+
+The *Website: Google consent mode (advanced)* module (`eyssen_website_consent_mode`) fixes this by
+removing these two domains, and only these two, from the block list.
+
+.. rubric:: Set it up
+
+#. Install the module from :menuselection:`Apps` (search for `eyssen_website_consent_mode`). It has
+   no setting and no menu.
+#. Go to :menuselection:`Website --> Configuration --> Settings`, enable :guilabel:`Cookies Bar`
+   in the :guilabel:`Privacy` section, and enable :guilabel:`Google Analytics` in the
+   :guilabel:`SEO` section with your :guilabel:`Measurement ID`
+   (see :ref:`Google Analytics <analytics/google-analytics>`).
+#. Click :guilabel:`Save`.
+
+.. important::
+   The module removes the two Google domains from the block list of every website that has a
+   Google Analytics :guilabel:`Measurement ID`. It only has a visible effect when the cookies bar is
+   enabled with :guilabel:`Block tracking 3rd-party services`, which is the default. Websites
+   without a :guilabel:`Measurement ID` keep the standard behavior.
+
+.. rubric:: How it behaves
+
+- The Google tag loads on the first page, before the visitor answers the cookies bar. The consent
+  default stays *denied* for analytics and advertising storage, so Google does not set analytics
+  cookies until the visitor accepts.
+- When the visitor accepts or refuses optional cookies, the cookies bar sends the consent update
+  (*granted* or *denied*) on the **same page**, without a reload.
+- The landing page, the `gclid` and the referrer of the first page reach Google Analytics 4.
+- If you added `googletagmanager.com` or `google-analytics.com` yourself with :guilabel:`Add domains
+  to the block list`, they stay blocked.
+
+.. note::
+   This is Google's *advanced* consent mode: while consent is denied, Google may receive cookieless
+   pings from the visitor's browser. Check that this fits your data protection requirements and
+   mention it in your :ref:`cookies policy <cookies-bar/policy>`.
+
+.. rubric:: Check that it works
+
+Open your website in a private browsing window and open the developer tools of your browser
+(:kbd:`F12`), :guilabel:`Network` tab.
+
+#. Reload the page, without answering the cookies bar. A request to `googletagmanager.com/gtag/js`
+   must appear on this first page. Without the module, the script is rendered with the address
+   `about:blank` and no request is made.
+#. Click :guilabel:`I agree` or :guilabel:`Only essentials` in the cookies bar. In the browser
+   console, the `dataLayer` object receives a `consent` `update` entry (*granted* or *denied*) on
+   the same page, without a reload.
+
+.. note::
+   The module has no effect on other trackers: the other third-party services of the block list
+   (social networks, video platforms, Google Maps, etc.) are still blocked until the visitor
+   accepts optional cookies.
 
 .. _cookies-bar/policy:
 

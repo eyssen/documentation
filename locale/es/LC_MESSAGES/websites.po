@@ -8649,6 +8649,142 @@ msgstr "Para configurarlo, vaya a :menuselection:`Sitio web --> Configuración -
 msgid "When the key is set and the customer has finished checkout (payment transaction pending, authorized, or done, or the sales order confirmed; cancelled or failed checkouts are skipped), the confirmation page injects an HTML snippet that sends the customer email and the purchased product names to Árukereső. If a product has an internal reference (:guilabel:`Internal Reference`), it is sent as the product Id as well."
 msgstr "Cuando la clave está configurada y el cliente ha terminado el proceso de pago (transacción de pago pendiente, autorizada o hecha, o pedido de venta confirmado; se omiten los procesos cancelados o fallidos), la página de confirmación inserta un fragmento HTML que envía el correo electrónico del cliente y los nombres de los productos comprados a Árukereső. Si un producto tiene una referencia interna (:guilabel:`Referencia interna`), también se envía como Id del producto."
 
+#: ../../content/applications/websites/blog.rst:139
+msgid "SEO of tag pages"
+msgstr "SEO de las páginas de etiquetas"
+
+#: ../../content/applications/websites/blog.rst:141
+msgid "The *Blog Sitemap SEO* module (`website_blog_sitemap_seo`) improves how search engines see the tag pages of your blogs:"
+msgstr "El módulo *Blog Sitemap SEO* (`website_blog_sitemap_seo`) mejora cómo ven los motores de búsqueda las páginas de etiquetas de sus blogs:"
+
+#: ../../content/applications/websites/blog.rst:144
+msgid "**Sitemap**: the tag pages are added to :ref:`/sitemap.xml <website/seo/sitemap>`, for the tags that have a :guilabel:`Meta Title` set and are used on published posts. The `/feed` addresses and `/website/info` are left out of the sitemap, but remain reachable."
+msgstr "**Mapa del sitio**: las páginas de etiquetas se añaden a :ref:`/sitemap.xml <website/seo/sitemap>`, para las etiquetas que tienen un :guilabel:`Título meta` establecido y se utilizan en entradas publicadas. Las direcciones `/feed` y `/website/info` se excluyen del mapa del sitio, pero siguen siendo accesibles."
+
+#: ../../content/applications/websites/blog.rst:147
+msgid "**Localized tag addresses**: in a language other than the default one, the tag page is served with the tag name of that language in its address. The `hreflang` tags list the address of the tag page in each language of the website, with the tag name translated (see :ref:`Hreflang HTML tags <website/seo/hreflang>`)."
+msgstr "**Direcciones de etiqueta localizadas**: en un idioma distinto del predeterminado, la página de etiqueta se sirve con el nombre de la etiqueta en ese idioma en su dirección. Las etiquetas `hreflang` enumeran la dirección de la página de etiqueta en cada idioma del sitio web, con el nombre de la etiqueta traducido (véase :ref:`Etiquetas HTML hreflang <website/seo/hreflang>`)."
+
+#: ../../content/applications/websites/blog.rst:151
+msgid "**Redirects**: opening a tag page with the tag name of another language (or an outdated one), for example `/hu/blog/tag/<english-name>`, redirects to the right address with **one** permanent (301) redirect that keeps the language prefix. The same applies when the blog name in the address is wrong as well."
+msgstr "**Redirecciones**: al abrir una página de etiqueta con el nombre de la etiqueta de otro idioma (o uno obsoleto), por ejemplo `/hu/blog/tag/<english-name>`, se redirige a la dirección correcta con **una sola** redirección permanente (301) que conserva el prefijo de idioma. Lo mismo se aplica cuando el nombre del blog en la dirección también es incorrecto."
+
+#: ../../content/applications/websites/blog.rst:157
+msgid "Tag pages with several tags at once (e.g., `/tag/a,b`) keep the standard Odoo behavior."
+msgstr "Las páginas de etiquetas con varias etiquetas a la vez (p. ej., `/tag/a,b`) mantienen el comportamiento estándar de Odoo."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:18
+msgid "Odoo is compliant with `Google consent mode v2 <https://support.google.com/tagmanager/answer/13695607>`_: the consent state is set to *denied* by default and updated to *granted* or *denied* according to the visitor's choice. In eYssen ERP, the :ref:`Google consent mode (advanced) <cookies-bar/consent-mode-advanced>` module also lets the Google tag load before the choice is made."
+msgstr "Odoo cumple con el `modo de consentimiento v2 de Google <https://support.google.com/tagmanager/answer/13695607>`_: el estado de consentimiento se establece de forma predeterminada en *denied* y se actualiza a *granted* o *denied* según la elección del visitante. En eYssen ERP, el módulo :ref:`Google consent mode (advanced) <cookies-bar/consent-mode-advanced>` permite además que la etiqueta de Google se cargue antes de que se tome la decisión."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:41
+msgid "Google consent mode (advanced)"
+msgstr "Google consent mode (advanced)"
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:43
+msgid "With the cookies bar enabled, the standard behavior is to block the Google tag (`gtag.js`) until the visitor accepts optional cookies, because `googletagmanager.com` and `google-analytics.com` are on the block list of third-party services. As a result, the tag only loads on the **next** page after the visitor accepted. Google Analytics 4 then loses the landing page, the `gclid` parameter of Google Ads and the referrer of the first page, and the visit is reported as *Direct*."
+msgstr "Con la barra de cookies activada, el comportamiento estándar es bloquear la etiqueta de Google (`gtag.js`) hasta que el visitante acepta las cookies opcionales, porque `googletagmanager.com` y `google-analytics.com` figuran en la lista de bloqueo de servicios de terceros. Como consecuencia, la etiqueta solo se carga en la **siguiente** página tras la aceptación. Google Analytics 4 pierde entonces la página de destino, el parámetro `gclid` de Google Ads y el referente de la primera página, y la visita se registra como *Direct*."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:49
+msgid "The *Website: Google consent mode (advanced)* module (`eyssen_website_consent_mode`) fixes this by removing these two domains, and only these two, from the block list."
+msgstr "El módulo *Website: Google consent mode (advanced)* (`eyssen_website_consent_mode`) lo soluciona eliminando estos dos dominios, y solo estos dos, de la lista de bloqueo."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:53
+msgid "Set it up"
+msgstr "Configuración"
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:54
+msgid "Install the module from :menuselection:`Apps` (search for `eyssen_website_consent_mode`). It has no setting and no menu."
+msgstr "Instale el módulo desde :menuselection:`Aplicaciones` (busque `eyssen_website_consent_mode`). No tiene ajustes ni menú."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:56
+msgid "Go to :menuselection:`Website --> Configuration --> Settings`, enable :guilabel:`Cookies Bar` in the :guilabel:`Privacy` section, and enable :guilabel:`Google Analytics` in the :guilabel:`SEO` section with your :guilabel:`Measurement ID` (see :ref:`Google Analytics <analytics/google-analytics>`)."
+msgstr "Vaya a :menuselection:`Sitio web --> Configuración --> Ajustes`, active :guilabel:`Barra de cookies` en la sección :guilabel:`Privacidad` y active :guilabel:`Google Analytics` en la sección :guilabel:`SEO` con su :guilabel:`ID de medición` (véase :ref:`Google Analytics <analytics/google-analytics>`)."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:63
+msgid "The module removes the two Google domains from the block list of every website that has a Google Analytics :guilabel:`Measurement ID`. It only has a visible effect when the cookies bar is enabled with :guilabel:`Block tracking 3rd-party services`, which is the default. Websites without a :guilabel:`Measurement ID` keep the standard behavior."
+msgstr "El módulo elimina los dos dominios de Google de la lista de bloqueo de todos los sitios web que tienen un :guilabel:`ID de medición` de Google Analytics. Solo tiene un efecto visible cuando la barra de cookies está activada con :guilabel:`Bloquear servicios de seguimiento de terceros`, que es el valor predeterminado. Los sitios web sin :guilabel:`ID de medición` mantienen el comportamiento estándar."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:67
+msgid "How it behaves"
+msgstr "Cómo funciona"
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:68
+msgid "The Google tag loads on the first page, before the visitor answers the cookies bar. The consent default stays *denied* for analytics and advertising storage, so Google does not set analytics cookies until the visitor accepts."
+msgstr "La etiqueta de Google se carga en la primera página, antes de que el visitante responda a la barra de cookies. El consentimiento predeterminado sigue siendo *denied* para el almacenamiento de analítica y de publicidad, por lo que Google no establece cookies de analítica hasta que el visitante las acepta."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:71
+msgid "When the visitor accepts or refuses optional cookies, the cookies bar sends the consent update (*granted* or *denied*) on the **same page**, without a reload."
+msgstr "Cuando el visitante acepta o rechaza las cookies opcionales, la barra de cookies envía la actualización del consentimiento (*granted* o *denied*) en la **misma página**, sin recargarla."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:73
+msgid "The landing page, the `gclid` and the referrer of the first page reach Google Analytics 4."
+msgstr "La página de destino, el `gclid` y el referente de la primera página llegan a Google Analytics 4."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:74
+msgid "If you added `googletagmanager.com` or `google-analytics.com` yourself with :guilabel:`Add domains to the block list`, they stay blocked."
+msgstr "Si usted mismo añadió `googletagmanager.com` o `google-analytics.com` con :guilabel:`Añadir dominios a la lista de bloqueo`, siguen bloqueados."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:78
+msgid "This is Google's *advanced* consent mode: while consent is denied, Google may receive cookieless pings from the visitor's browser. Check that this fits your data protection requirements and mention it in your :ref:`cookies policy <cookies-bar/policy>`."
+msgstr "Este es el modo de consentimiento *advanced* de Google: mientras el consentimiento está denegado, Google puede recibir pings sin cookies desde el navegador del visitante. Compruebe que esto se ajusta a sus requisitos de protección de datos y menciónelo en su :ref:`política de cookies <cookies-bar/policy>`."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:83
+msgid "Check that it works"
+msgstr "Compruebe que funciona"
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:84
+msgid "Open your website in a private browsing window and open the developer tools of your browser (:kbd:`F12`), :guilabel:`Network` tab."
+msgstr "Abra su sitio web en una ventana de navegación privada y abra las herramientas de desarrollador de su navegador (:kbd:`F12`), pestaña :guilabel:`Red`."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:87
+msgid "Reload the page, without answering the cookies bar. A request to `googletagmanager.com/gtag/js` must appear on this first page. Without the module, the script is rendered with the address `about:blank` and no request is made."
+msgstr "Recargue la página sin responder a la barra de cookies. En esta primera página debe aparecer una solicitud a `googletagmanager.com/gtag/js`. Sin el módulo, el script se renderiza con la dirección `about:blank` y no se realiza ninguna solicitud."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:90
+msgid "Click :guilabel:`I agree` or :guilabel:`Only essentials` in the cookies bar. In the browser console, the `dataLayer` object receives a `consent` `update` entry (*granted* or *denied*) on the same page, without a reload."
+msgstr "Haga clic en :guilabel:`Acepto` o en :guilabel:`Solo las necesarias` en la barra de cookies. En la consola del navegador, el objeto `dataLayer` recibe una entrada `consent` `update` (*granted* o *denied*) en la misma página, sin recargarla."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:95
+msgid "The module has no effect on other trackers: the other third-party services of the block list (social networks, video platforms, Google Maps, etc.) are still blocked until the visitor accepts optional cookies."
+msgstr "El módulo no tiene efecto sobre otros rastreadores: los demás servicios de terceros de la lista de bloqueo (redes sociales, plataformas de vídeo, Google Maps, etc.) siguen bloqueados hasta que el visitante acepta las cookies opcionales."
+
+#: ../../content/applications/websites/website/configuration/translate.rst:47
+msgid "Blog tag URLs"
+msgstr "URL de etiquetas de blog"
+
+#: ../../content/applications/websites/website/configuration/translate.rst:49
+msgid "With the *Blog Sitemap SEO* module (`website_blog_sitemap_seo`), the address of a blog tag page contains the name of the tag **in the language of the page** (e.g., `/blog/news-1/tag/release-3` and `/hu/blog/news-1/tag/kiadas-3`). The `hreflang` tags of a tag page therefore list the tag address of each language, not the one of the current language. See :ref:`Blog SEO <blog/seo>`."
+msgstr "Con el módulo *Blog Sitemap SEO* (`website_blog_sitemap_seo`), la dirección de una página de etiqueta de blog contiene el nombre de la etiqueta **en el idioma de la página** (p. ej., `/blog/news-1/tag/release-3` y `/hu/blog/news-1/tag/kiadas-3`). Por ello, las etiquetas `hreflang` de una página de etiqueta enumeran la dirección de la etiqueta en cada idioma, no la del idioma actual. Véase :ref:`Blog SEO <blog/seo>`."
+
+#: ../../content/applications/websites/website/structure/seo.rst:317
+msgid "The tags are generated for each request, so the variant shown to a search engine is always the right one for the URL it requested:"
+msgstr "Las etiquetas se generan en cada solicitud, por lo que la variante que se muestra a un motor de búsqueda es siempre la correcta para la URL que ha solicitado:"
+
+#: ../../content/applications/websites/website/structure/seo.rst:320
+msgid "On the canonical URL of a page, the `hreflang` and `x-default` tags point to every language version of the page."
+msgstr "En la URL canónica de una página, las etiquetas `hreflang` y `x-default` apuntan a todas las versiones de idioma de la página."
+
+#: ../../content/applications/websites/website/structure/seo.rst:322
+msgid "On a URL with a query string (e.g., `?utm_source=...` or `?gclid=...`), the page is not the canonical URL, and the `hreflang` block is omitted."
+msgstr "En una URL con cadena de consulta (p. ej., `?utm_source=...` o `?gclid=...`), la página no es la URL canónica y se omite el bloque `hreflang`."
+
+#: ../../content/applications/websites/website/structure/seo.rst:324
+msgid "The `noindex` robots tag that depends on the requested domain (added when the request does not come from the website's indexable domain) is only rendered for that domain."
+msgstr "La etiqueta robots `noindex` que depende del dominio solicitado (se añade cuando la solicitud no procede del dominio indexable del sitio web) solo se renderiza para ese dominio."
+
+#: ../../content/applications/websites/website/structure/seo.rst:328
+msgid "In earlier versions, the first variant rendered after a restart was kept in a cache and served to every visitor. This is no longer the case."
+msgstr "En versiones anteriores, la primera variante renderizada tras un reinicio se guardaba en caché y se servía a todos los visitantes. Ya no es así."
+
+#: ../../content/applications/websites/website/structure/seo.rst:334
+msgid "Blog tags"
+msgstr "Etiquetas de blog"
+
+#: ../../content/applications/websites/website/structure/seo.rst:336
+msgid "With the *Blog Sitemap SEO* module (`website_blog_sitemap_seo`), the tag pages of the blog (`/blog/<blog>/tag/<tag>`) also get the slug of the tag translated into each language in the `hreflang` and canonical URLs. For example, the Hungarian version of a tag page links to the English page with the English tag slug, and the English page links back to the Hungarian tag slug. See :ref:`Blog SEO <blog/seo>` for the redirects applied when the address contains a wrong slug."
+msgstr "Con el módulo *Blog Sitemap SEO* (`website_blog_sitemap_seo`), las páginas de etiquetas del blog (`/blog/<blog>/tag/<tag>`) también obtienen el slug de la etiqueta traducido a cada idioma en las URL `hreflang` y canónicas. Por ejemplo, la versión húngara de una página de etiqueta enlaza con la página inglesa con el slug de etiqueta inglés, y la página inglesa enlaza de vuelta con el slug de etiqueta húngaro. Véase :ref:`Blog SEO <blog/seo>` para las redirecciones aplicadas cuando la dirección contiene un slug incorrecto."
+
 #~ msgid "Together with the Hungarian localization, the form also switches between the international :guilabel:`VAT` field and the Hungarian tax number field depending on the selected :guilabel:`Country`, and the B2B fields are always shown."
 #~ msgstr "Junto con la localización húngara, el formulario también alterna entre el campo internacional :guilabel:`NIF-IVA` y el campo del número fiscal húngaro en función del :guilabel:`País` seleccionado, y los campos B2B siempre se muestran."
 

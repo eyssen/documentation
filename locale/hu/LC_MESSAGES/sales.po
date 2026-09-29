@@ -33270,6 +33270,154 @@ msgstr ""
 msgid "Withdrawal period and deadlines: :doc:`configuration`"
 msgstr "Elállási időszak és határidők: :doc:`configuration`"
 
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:5
+msgid "A contract can charge its recurring invoices automatically against a stored payment method, and retry on a fixed schedule when a charge is declined. It can also be collected by :ref:`SEPA direct debit through your bank <sales/subscriptions/sepa-direct-debit>`."
+msgstr "A szerződés az ismétlődő számláit automatikusan terhelheti egy tárolt fizetési módra, és elutasított terhelés esetén rögzített ütemezés szerint újrapróbálkozik. Beszedhető :ref:`SEPA-beszedéssel is a bankon keresztül <sales/subscriptions/sepa-direct-debit>`."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:14
+msgid "Let the customer save a payment method — a card or a SEPA mandate held by the provider — for example from the :doc:`customer portal <portal>`."
+msgstr "Hagyja, hogy az ügyfél elmentsen egy fizetési módot – bankkártyát vagy a szolgáltatónál tárolt SEPA-mandátumot –, például az :doc:`ügyfélportálról <portal>`."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:43
+msgid "The charge is under way, or the provider has not answered yet. For a contract collected by :ref:`SEPA direct debit <sales/subscriptions/sepa-direct-debit>`, the invoice is waiting for a remittance, or for the bank statement to be reconciled."
+msgstr "A terhelés folyamatban van, vagy a szolgáltató még nem válaszolt. A :ref:`SEPA-beszedéssel <sales/subscriptions/sepa-direct-debit>` beszedett szerződés esetében a számla remesára, vagy a bankszámlakivonat egyeztetésére vár."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:71
+msgid "Collecting by SEPA direct debit"
+msgstr "Beszedés SEPA-beszedéssel"
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:73
+msgid "A contract can also be collected by **SEPA direct debit through your bank**, without card or online payment provider. The recurring invoices are gathered in collection remittances (:doc:`debit orders <../../finance/accounting/payments/payment_orders>`), you upload the file to your bank, and the invoice is settled when the debit shows up on the bank statement. It is the usual way to collect subscriptions of Spanish customers."
+msgstr "A szerződés **a bankon keresztüli SEPA-beszedéssel** is beszedhető, bankkártya vagy online fizetési szolgáltató nélkül. Az ismétlődő számlák beszedési remesákba (:doc:`beszedési megbízások <../../finance/accounting/payments/payment_orders>`) kerülnek, Ön feltölti a fájlt a bankba, és a számla akkor egyenlítődik ki, amikor a beszedés megjelenik a bankszámlakivonaton. Ez a spanyol ügyfelek előfizetéseinek szokásos beszedési módja."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:80
+msgid "The feature is provided by the *Subscriptions - SEPA Direct Debit* module, installed automatically when the *Subscriptions*, *Account Banking SEPA Direct Debit* and *Account Payment Order Return* modules are installed."
+msgstr "A funkciót a *Subscriptions - SEPA Direct Debit* modul biztosítja, amely automatikusan települ, ha a *Subscriptions*, az *Account Banking SEPA Direct Debit* és az *Account Payment Order Return* modul telepítve van."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:85
+msgid "Set up the contract"
+msgstr "A szerződés beállítása"
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:87
+msgid "The customer needs a **valid** :ref:`SEPA mandate <accounting/payment-orders/mandates>`. The customer can sign it :doc:`online <../../finance/accounting/payments/sepa_mandate_signature>`."
+msgstr "Az ügyfélnek **érvényes** :ref:`SEPA-mandátumra <accounting/payment-orders/mandates>` van szüksége. Az ügyfél :doc:`online <../../finance/accounting/payments/sepa_mandate_signature>` is aláírhatja."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:89
+msgid "Create a :doc:`contract <contracts>` for the customer. The first valid mandate of the customer is proposed in :guilabel:`SEPA Mandate`, and, if the customer's payment mode uses :guilabel:`SEPA Direct Debit for customers`, it is proposed in :guilabel:`Direct Debit Payment Mode`."
+msgstr "Hozzon létre egy :doc:`szerződést <contracts>` az ügyfélnek. Az ügyfél első érvényes mandátuma a :guilabel:`SEPA-mandátum` mezőben kerül felajánlásra, és ha az ügyfél fizetési módja a :guilabel:`SEPA csoportos beszedés vevők részére` módot használja, akkor a :guilabel:`Beszedési fizetési mód` mezőben is."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:92
+msgid "Check both fields. The payment mode must be a direct debit mode of the contract's company, and the mandate a valid mandate of the customer (or of one of its contacts). You need both or none: saving only one stops with *SEPA direct debit needs both a direct debit payment mode and a mandate*."
+msgstr "Ellenőrizze mindkét mezőt. A fizetési módnak a szerződés vállalatának beszedési módjának kell lennie, a mandátumnak pedig az ügyfél (vagy valamelyik kapcsolattartója) érvényes mandátumának. Vagy mindkettőre szükség van, vagy egyikre sem: ha csak az egyiket menti, a rendszer a következő üzenettel leáll: *SEPA direct debit needs both a direct debit payment mode and a mandate*."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:96
+msgid "Set :guilabel:`Invoice Posting` as usual."
+msgstr "Állítsa be a :guilabel:`Számla könyvelése` mezőt a szokásos módon."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:98
+msgid "When a mandate is selected, the :guilabel:`Payment Token` field is hidden: the card path is not used for this contract. The invoices generated for the contract carry the payment mode and the mandate."
+msgstr "Ha ki van választva mandátum, a :guilabel:`Fizetési token` mező rejtett: a kártyás út nem használatos ennél a szerződésnél. A szerződéshez generált számlák tartalmazzák a fizetési módot és a mandátumot."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:110
+msgid "Remittance settings"
+msgstr "Remesabeállítások"
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:112
+msgid "Go to :menuselection:`Accounting --> Configuration --> Settings` and scroll to the :guilabel:`SEPA/PAIN` section, :guilabel:`Subscription remittances`:"
+msgstr "Lépjen a :menuselection:`Könyvelés --> Konfiguráció --> Beállítások` menüpontra, és görgessen a :guilabel:`SEPA/PAIN` szakasz :guilabel:`Előfizetési remesák` részéhez:"
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:121
+msgid ":guilabel:`Remittance Days`"
+msgstr ":guilabel:`Remesanapok`"
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:122
+msgid "Days of the month, separated by commas (for example ``1,15``), on which the invoices to collect are gathered into a draft debit order. Leave it empty to add each invoice to the draft debit order as soon as it is posted. A day that does not exist in a month (29 to 31) is skipped that month."
+msgstr "A hónap vesszővel elválasztott napjai (például ``1,15``), amelyeken a beszedendő számlák piszkozat beszedési megbízásba kerülnek. Hagyja üresen, ha minden számlát a könyvelésbe vétele után azonnal hozzá szeretne adni a piszkozat beszedési megbízáshoz. Az adott hónapban nem létező nap (29–31) abban a hónapban kimarad."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:126
+msgid ":guilabel:`Collect Invoices Due Within (Days)`"
+msgstr ":guilabel:`Ennyi napon belül esedékes számlák (nap)`"
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:127
+msgid "Only the invoices due up to this number of days after the remittance day (7 by default) are collected."
+msgstr "Csak azok a számlák kerülnek beszedésre, amelyek a remesanaptól számított legfeljebb ennyi napon belül (alapértelmezés szerint 7) esedékesek."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:129
+msgid ":guilabel:`Generate the Remittance File`"
+msgstr ":guilabel:`Remesafájl generálása`"
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:130
+msgid "Also confirm the draft debit order and generate its file. The file still has to be uploaded to the bank by hand."
+msgstr "A piszkozat beszedési megbízást is megerősíti, és legenerálja a fájlját. A fájlt továbbra is kézzel kell feltölteni a bankba."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:132
+msgid ":guilabel:`Remittance Responsible`"
+msgstr ":guilabel:`Remesafelelős`"
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:133
+msgid "The user who receives the to-do *Subscription remittance ready: upload it to the bank*."
+msgstr "Az a felhasználó, aki megkapja az *Előfizetési remesa kész: töltse fel a bankba* teendőt."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:136
+msgid "How an invoice is collected"
+msgstr "Hogyan kerül beszedésre egy számla"
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:138
+msgid "**The invoice is posted**, automatically or by hand (if :guilabel:`Invoice Posting` is :guilabel:`Leave as draft for review`, the invoice enters the collection when you post it). A dunning attempt in the state :guilabel:`Pending` is created and the invoice waits for the remittance."
+msgstr "**A számla könyvelésre kerül**, automatikusan vagy kézzel (ha a :guilabel:`Számla könyvelése` értéke :guilabel:`Piszkozatban hagyás ellenőrzésre`, a számla a könyveléskor kerül a beszedésbe). Létrejön egy :guilabel:`Függőben` állapotú követeléskezelési kísérlet, és a számla a remesára vár."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:142
+msgid "**The invoice goes into a debit order.** Without remittance days, it is added at once to the draft debit order of the payment mode (a new one is created when none is open). With remittance days, the daily scheduled action gathers, on those days, the posted invoices whose last attempt is pending, that are not in an active order yet and are due within the lead time, into draft debit orders. A note is posted on the order, and the responsible user gets the to-do."
+msgstr "**A számla beszedési megbízásba kerül.** Remesanapok nélkül a fizetési mód piszkozat beszedési megbízásához azonnal hozzáadódik (ha nincs nyitott, újat hoz létre a rendszer). Remesanapokkal a napi ütemezett művelet ezeken a napokon piszkozat beszedési megbízásokba gyűjti azokat a könyvelt számlákat, amelyek utolsó kísérlete függőben van, még nincsenek aktív megbízásban, és az előfutási időn belül esedékesek. A megbízáson megjegyzés kerül rögzítésre, és a felelős felhasználó megkapja a teendőt."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:147
+msgid "**You upload the file.** Open the debit order, confirm it and generate the file (unless :guilabel:`Generate the Remittance File` did it), upload the file to your bank and click :guilabel:`File Successfully Uploaded`. The invoices are :guilabel:`In Payment`."
+msgstr "**Ön feltölti a fájlt.** Nyissa meg a beszedési megbízást, erősítse meg, és generálja le a fájlt (kivéve, ha a :guilabel:`Remesafájl generálása` ezt már megtette), töltse fel a fájlt a bankba, majd kattintson a :guilabel:`Fájl sikeresen feltöltve` gombra. A számlák :guilabel:`Kiegyenlítés alatt` állapotba kerülnek."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:150
+msgid "**The attempt succeeds when the invoice is paid.** After you import and reconcile the bank statement, the scheduled action sets the attempt to :guilabel:`Success` and the contract's :guilabel:`Dunning State` back to :guilabel:`OK`. Uploading the file is not enough: the attempt stays :guilabel:`Pending` until the debit is reconciled."
+msgstr "**A kísérlet akkor sikeres, ha a számla ki van fizetve.** A bankszámlakivonat importálása és egyeztetése után az ütemezett művelet a kísérletet :guilabel:`Siker` állapotra, a szerződés :guilabel:`Követeléskezelés állapota` mezőjét pedig ismét :guilabel:`OK` értékre állítja. A fájl feltöltése nem elég: a kísérlet :guilabel:`Függőben` marad, amíg a beszedést nem egyeztették."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:156
+msgid "The scheduled action *Subscription: SEPA Direct Debit Remittance* is delivered inactive. Enable it in every case, even without remittance days: it also settles the attempts of the paid invoices."
+msgstr "Az *Előfizetés: SEPA-beszedési remesa* ütemezett művelet inaktívan érkezik. Minden esetben engedélyezze, remesanapok nélkül is: a kifizetett számlák kísérleteit is lezárja."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:161
+msgid "When the bank returns a debit"
+msgstr "Amikor a bank visszaküld egy beszedést"
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:163
+msgid "Confirm the :ref:`payment return <accounting/payment-orders/returns>` (typed or imported from the report of the bank): the return reason is recorded as the decline code of the attempt of each invoice of a SEPA contract, and the dunning applies:"
+msgstr "Erősítse meg a :ref:`fizetési visszaküldést <accounting/payment-orders/returns>` (kézzel felvéve vagy a bank jelentéséből importálva): a visszaküldés oka a SEPA-szerződés minden számlája kísérletének elutasítási kódjaként kerül rögzítésre, és érvénybe lép a követeléskezelés:"
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:167
+msgid "**soft return** (for example AM04, insufficient funds): the attempt becomes :guilabel:`Soft Decline (retry)`, and the invoice is collected again after 1, 3, 7 and 14 days as :ref:`described above <sales/subscriptions/dunning>`: the scheduled action *Subscription: Dunning Retry* creates a new attempt, and the invoice goes into a new debit order, at once or on the next remittance day. After the fourth retry the attempt becomes a :guilabel:`Hard Decline`;"
+msgstr "**ideiglenes visszaküldés** (például AM04, fedezethiány): a kísérlet :guilabel:`Ideiglenes elutasítás (újrapróbálás)` állapotú lesz, és a számla 1, 3, 7 és 14 nap után újra beszedésre kerül a :ref:`fent leírtak szerint <sales/subscriptions/dunning>`: az *Előfizetés: követeléskezelési újrapróbálkozás* ütemezett művelet új kísérletet hoz létre, és a számla új beszedési megbízásba kerül, azonnal vagy a következő remesanapon. A negyedik újrapróbálkozás után a kísérlet :guilabel:`Hard Decline` állapotú lesz;"
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:172
+msgid "**hard return** (for example MD01, no mandate, AC04, closed account, or MD06, refund requested by the customer): the retries stop at once. The attempt becomes :guilabel:`Hard Decline (stop)`, the contract's :guilabel:`Dunning State` becomes :guilabel:`Hard decline` and the accountant gets the high-priority alert. Review the mandate with the customer before you collect again."
+msgstr "**végleges visszaküldés** (például MD01, nincs mandátum, AC04, megszűnt számla, vagy MD06, az ügyfél visszatérítést kért): az újrapróbálkozások azonnal leállnak. A kísérlet :guilabel:`Végleges elutasítás (leállítás)` állapotú lesz, a szerződés :guilabel:`Követeléskezelés állapota` mezője :guilabel:`Végleges elutasítás` értékre változik, és a könyvelő magas prioritású riasztást kap. Mielőtt újra beszedne, vizsgálja felül a mandátumot az ügyféllel."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:177
+msgid "Whether a return is soft or hard is read from the :guilabel:`Return Type` of the return reason when it is set (the Spanish localization sets it, see :doc:`../../finance/accounting/payments/spanish_remittances`). Otherwise, these codes are treated as hard: AC01, AC04, AC06, AC13, AG01, AG02, AM05, BE05, CNOR, CUST, DNOR, DUPL, FF01, MD01, MD02, MD06, MD07, MS02, RC01, RR01, RR02, RR03, RR04 and SL01. Any other code, or a return without reason, is soft."
+msgstr "Hogy a visszaküldés ideiglenes vagy végleges, azt a visszaküldési ok :guilabel:`Visszaküldés típusa` mezője határozza meg, ha az ki van töltve (a spanyol lokalizáció kitölti, lásd :doc:`../../finance/accounting/payments/spanish_remittances`). Ellenkező esetben a következő kódok végleges visszaküldésnek minősülnek: AC01, AC04, AC06, AC13, AG01, AG02, AM05, BE05, CNOR, CUST, DNOR, DUPL, FF01, MD01, MD02, MD06, MD07, MS02, RC01, RR01, RR02, RR03, RR04 és SL01. Minden más kód, vagy az ok nélküli visszaküldés ideiglenesnek minősül."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:187
+msgid "Three scheduled actions support automatic payments. They are delivered inactive and must be enabled in :menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`:"
+msgstr "Három ütemezett művelet támogatja az automatikus fizetést. Inaktívan érkeznek, és a :menuselection:`Beállítások --> Technikai --> Automatizálás --> Ütemezett műveletek` menüpontban kell engedélyezni őket:"
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:192
+msgid ":guilabel:`Subscription: SEPA Direct Debit Remittance` — daily; gathers the invoices collected by :ref:`SEPA direct debit <sales/subscriptions/sepa-direct-debit>` into debit orders and sets the attempts of the paid invoices to :guilabel:`Success`."
+msgstr ":guilabel:`Előfizetés: SEPA-beszedési remesa` – naponta fut; a :ref:`SEPA-beszedéssel <sales/subscriptions/sepa-direct-debit>` beszedett számlákat beszedési megbízásokba gyűjti, és a kifizetett számlák kísérleteit :guilabel:`Siker` állapotra állítja."
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:201
+msgid ":doc:`../../finance/accounting/payments/payment_orders`"
+msgstr ":doc:`../../finance/accounting/payments/payment_orders`"
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:202
+msgid ":doc:`../../finance/accounting/payments/sepa_mandate_signature`"
+msgstr ":doc:`../../finance/accounting/payments/sepa_mandate_signature`"
+
 #~ msgid ""
 #~ "This module requires the *eYssen Hungarian localization* module "
 #~ "(`eyssen_l10n_hu`), which provides the Hungarian VAT number validation used "

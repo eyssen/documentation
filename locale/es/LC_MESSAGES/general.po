@@ -8953,6 +8953,50 @@ msgstr ":menuselection:`Programador de valores --> Desarrollador --> Todos los c
 msgid ":doc:`../essentials/export_import_data`"
 msgstr ":doc:`../essentials/export_import_data`"
 
+#: ../../content/applications/general/eyssen_erp_settings.rst:728
+msgid "Options you do not see in Settings"
+msgstr "Opciones que no aparecen en Ajustes"
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:730
+msgid "eYssen ERP is based on the Community edition of Odoo and contains no Enterprise code. The general :guilabel:`Settings` screens therefore only offer what can actually be installed and used in your database:"
+msgstr "eYssen ERP se basa en la edición Community de Odoo y no contiene código Enterprise. Por ello, las pantallas generales de :guilabel:`Ajustes` solo ofrecen lo que realmente se puede instalar y utilizar en su base de datos:"
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:734
+msgid "The checkbox of an application or feature whose module is **not part of eYssen ERP** (or cannot be installed) is hidden. If the option was its only field, the whole setting disappears; if every setting of a block is hidden, the block title disappears too."
+msgstr "La casilla de una aplicación o función cuyo módulo **no forma parte de eYssen ERP** (o no se puede instalar) permanece oculta. Si la opción era el único campo del ajuste, desaparece el ajuste completo; si todos los ajustes de un bloque están ocultos, también desaparece el título del bloque."
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:737
+msgid "The checkbox of a module that **is available** is a plain checkbox: tick it and click :guilabel:`Save` to install the module."
+msgstr "La casilla de un módulo que **está disponible** es una casilla normal: márquela y haga clic en :guilabel:`Guardar` para instalar el módulo."
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:739
+msgid "A few options that only exist as placeholders, without any behavior in eYssen ERP, are hidden as well. This is the case, for example, of the timesheet reminders, the invoicing policy placeholder of *Timesheets*, and of the resulting *Timesheets Control* block."
+msgstr "También se ocultan algunas opciones que solo existen como marcadores de posición, sin ningún comportamiento en eYssen ERP. Es el caso, por ejemplo, de los recordatorios de partes de horas, del marcador de posición de la política de facturación de *Partes de horas* y del bloque resultante *Control de partes de horas*."
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:742
+msgid "No option shows an edition badge or offers to upgrade to another edition. Should an option that is not available still be triggered (e.g., from a custom view), a :guilabel:`Not available` dialog with the message *This option is not available in this database.* is displayed instead. Click :guilabel:`Close` to dismiss it; the option is reset."
+msgstr "Ninguna opción muestra una insignia de edición ni ofrece actualizar a otra edición. Si aun así se activa una opción que no está disponible (p. ej., desde una vista personalizada), en su lugar se muestra un cuadro de diálogo :guilabel:`No disponible` con el mensaje *This option is not available in this database.* Haga clic en :guilabel:`Cerrar` para descartarlo; la opción se restablece."
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:748
+msgid "The Odoo documentation describes some options that are not available in eYssen ERP. If an option mentioned in the Odoo documentation is missing from your :guilabel:`Settings`, it belongs to a module that is not part of this distribution. The :ref:`eYssen ERP options <eyssen-erp-settings/options>` and the :doc:`Apps <apps_modules>` dashboard list what is installable."
+msgstr "La documentación de Odoo describe algunas opciones que no están disponibles en eYssen ERP. Si una opción mencionada en la documentación de Odoo no aparece en sus :guilabel:`Ajustes`, pertenece a un módulo que no forma parte de esta distribución. Las :ref:`opciones de eYssen ERP <eyssen-erp-settings/options>` y el panel de :doc:`Aplicaciones <apps_modules>` indican qué se puede instalar."
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:757
+msgid "The :guilabel:`About` section, at the bottom of the page, displays the version and the publisher of eYssen ERP. It shows the Odoo version line (e.g., *Version: 18.0*) without any edition mention."
+msgstr "La sección :guilabel:`Acerca de`, en la parte inferior de la página, muestra la versión y el editor de eYssen ERP. Muestra la línea de versión de Odoo (p. ej., *Version: 18.0*) sin ninguna mención a la edición."
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:763
+msgid "Version and edition reported to external tools"
+msgstr "Versión y edición comunicadas a herramientas externas"
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:765
+msgid "The version of the server is published, without authentication, at `/web/webclient/version_info` and through the `version` method of the `/xmlrpc/2/common` and `/jsonrpc` endpoints. It ends with the suffix `+eyssen`. In the `server_version_info` list, the last element is the *edition marker*: Odoo uses an empty value for Community and `e` for Enterprise. eYssen ERP reports `eyssen`, which all Odoo clients read as **not Enterprise**."
+msgstr "La versión del servidor se publica, sin autenticación, en `/web/webclient/version_info` y a través del método `version` de los endpoints `/xmlrpc/2/common` y `/jsonrpc`. Termina con el sufijo `+eyssen`. En la lista `server_version_info`, el último elemento es el *marcador de edición*: Odoo usa un valor vacío para Community y `e` para Enterprise. eYssen ERP comunica `eyssen`, que todos los clientes de Odoo interpretan como **no Enterprise**."
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:771
+msgid "Integrators and monitoring tools that test the edition should therefore compare the marker with `e` (Enterprise) and treat any other value as a non-Enterprise edition. Testing for an empty value only would wrongly classify eYssen ERP as a different edition. The web client, the Point of Sale, and the spreadsheet features no longer behave as on an Enterprise database."
+msgstr "Por lo tanto, los integradores y las herramientas de monitorización que comprueben la edición deben comparar el marcador con `e` (Enterprise) y tratar cualquier otro valor como una edición no Enterprise. Comprobar únicamente si el valor está vacío clasificaría erróneamente eYssen ERP como otra edición. El cliente web, el Punto de venta y las funciones de hoja de cálculo ya no se comportan como en una base de datos Enterprise."
+
 #~ msgid "Add \"Extra\" filter in Odoo Apps."
 #~ msgstr "Añadir el filtro \"Extra\" en Aplicaciones de Odoo."
 

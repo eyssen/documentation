@@ -20,6 +20,7 @@ Online payments
    payment_providers/nuvei
    payment_providers/paypal
    payment_providers/razorpay
+   payment_providers/redsys
    payment_providers/stripe
    payment_providers/worldline
    payment_providers/xendit
@@ -134,6 +135,12 @@ Online payment providers
      - Odoo
      - |V|
      - Full only
+     - Full and partial
+     -
+   * - :doc:`Redsys <payment_providers/redsys>`
+     - The provider's website
+     -
+     -
      - Full and partial
      -
    * - :doc:`Stripe <payment_providers/stripe>`

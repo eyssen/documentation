@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-26 17:46+0200\n"
+"POT-Creation-Date: 2026-09-28 20:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -5859,6 +5859,7 @@ msgid "Technical name"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:30
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:120
 #: ../../content/applications/sales/subscriptions/contracts.rst:20
 #: ../../content/applications/sales/withdrawal/configuration.rst:20
 msgid "Description"
@@ -8487,7 +8488,7 @@ msgid "The :guilabel:`Online Payment` feature is not supported."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/self_order.rst:124
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:76
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:200
 msgid ":doc:`../../finance/payment_providers`"
 msgstr ""
 
@@ -14807,116 +14808,253 @@ msgid "Automatic payments and dunning"
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/automatic_payments.rst:5
-msgid "A contract can charge its recurring invoices automatically against a stored payment method, and retry on a fixed schedule when a charge is declined."
+msgid "A contract can charge its recurring invoices automatically against a stored payment method, and retry on a fixed schedule when a charge is declined. It can also be collected by :ref:`SEPA direct debit through your bank <sales/subscriptions/sepa-direct-debit>`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:9
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:10
 msgid "Setting up automatic charging"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:11
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:12
 msgid "Configure and enable a payment provider that supports saving payment methods (:doc:`../../finance/payment_providers`)."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:13
-msgid "Let the customer save a payment method — a card or a SEPA mandate — for example from the :doc:`customer portal <portal>`."
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:14
+msgid "Let the customer save a payment method — a card or a SEPA mandate held by the provider — for example from the :doc:`customer portal <portal>`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:15
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:16
 msgid "Open the contract and select that method in the :guilabel:`Payment Token` field. Only tokens belonging to the contract's customer are offered."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:17
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:18
 msgid "Set :guilabel:`Invoice Posting` to :guilabel:`Post automatically`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:19
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:20
 msgid "From then on, every recurring invoice generated for that contract is posted and charged off-session."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:23
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:24
 msgid "A charge is only treated as successful when the payment transaction actually reports :guilabel:`Authorized` or :guilabel:`Done`. A provider that declines an off-session payment does not raise an error, so the absence of an error is never taken as a payment."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:28
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:31
 msgid "Dunning"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:30
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:33
 msgid "Every charge attempt is recorded as a **dunning attempt** on the contract's :guilabel:`Dunning Attempts` tab, with its attempt number, timestamp, state, decline code and reason."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:37
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:40
 msgid "Attempt state"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:38
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:41
 #: ../../content/applications/sales/subscriptions/contracts.rst:68
 msgid "Meaning"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:39
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:42
 msgid ":guilabel:`Pending`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:40
-msgid "The charge is under way, or the provider has not answered yet."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:41
-msgid ":guilabel:`Success`"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:42
-msgid "The invoice was paid."
-msgstr ""
-
 #: ../../content/applications/sales/subscriptions/automatic_payments.rst:43
-msgid ":guilabel:`Soft Decline (retry)`"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:44
-msgid "The charge failed and a retry is scheduled at :guilabel:`Next Retry At`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:45
-msgid ":guilabel:`Hard Decline (stop)`"
+msgid "The charge is under way, or the provider has not answered yet. For a contract collected by :ref:`SEPA direct debit <sales/subscriptions/sepa-direct-debit>`, the invoice is waiting for a remittance, or for the bank statement to be reconciled."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/automatic_payments.rst:46
-msgid "No further retry is made."
+msgid ":guilabel:`Success`"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:47
+msgid "The invoice was paid."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/automatic_payments.rst:48
-msgid "The retry cadence is fixed: after the first failure the charge is retried after **1, 3, 7 and 14 days**. When those four retries are exhausted, the attempt becomes a :guilabel:`Hard Decline`."
+msgid ":guilabel:`Soft Decline (retry)`"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:49
+msgid "The charge failed and a retry is scheduled at :guilabel:`Next Retry At`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:50
+msgid ":guilabel:`Hard Decline (stop)`"
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/automatic_payments.rst:51
+msgid "No further retry is made."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:53
+msgid "The retry cadence is fixed: after the first failure the charge is retried after **1, 3, 7 and 14 days**. When those four retries are exhausted, the attempt becomes a :guilabel:`Hard Decline`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:56
 msgid "The contract's :guilabel:`Dunning State` summarises where it stands: :guilabel:`OK`, :guilabel:`Retry pending` or :guilabel:`Hard decline`. The :guilabel:`Payment Issue` filter on the contract list finds the contracts that need attention."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:64
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:71
+msgid "Collecting by SEPA direct debit"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:73
+msgid "A contract can also be collected by **SEPA direct debit through your bank**, without card or online payment provider. The recurring invoices are gathered in collection remittances (:doc:`debit orders <../../finance/accounting/payments/payment_orders>`), you upload the file to your bank, and the invoice is settled when the debit shows up on the bank statement. It is the usual way to collect subscriptions of Spanish customers."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:80
+msgid "The feature is provided by the *Subscriptions - SEPA Direct Debit* module, installed automatically when the *Subscriptions*, *Account Banking SEPA Direct Debit* and *Account Payment Order Return* modules are installed."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:85
+msgid "Set up the contract"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:87
+msgid "The customer needs a **valid** :ref:`SEPA mandate <accounting/payment-orders/mandates>`. The customer can sign it :doc:`online <../../finance/accounting/payments/sepa_mandate_signature>`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:89
+msgid "Create a :doc:`contract <contracts>` for the customer. The first valid mandate of the customer is proposed in :guilabel:`SEPA Mandate`, and, if the customer's payment mode uses :guilabel:`SEPA Direct Debit for customers`, it is proposed in :guilabel:`Direct Debit Payment Mode`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:92
+msgid "Check both fields. The payment mode must be a direct debit mode of the contract's company, and the mandate a valid mandate of the customer (or of one of its contacts). You need both or none: saving only one stops with *SEPA direct debit needs both a direct debit payment mode and a mandate*."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:96
+msgid "Set :guilabel:`Invoice Posting` as usual."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:98
+msgid "When a mandate is selected, the :guilabel:`Payment Token` field is hidden: the card path is not used for this contract. The invoices generated for the contract carry the payment mode and the mandate."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:110
+msgid "Remittance settings"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:112
+msgid "Go to :menuselection:`Accounting --> Configuration --> Settings` and scroll to the :guilabel:`SEPA/PAIN` section, :guilabel:`Subscription remittances`:"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:119
+#: ../../content/applications/sales/withdrawal/configuration.rst:18
+msgid "Setting"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:121
+msgid ":guilabel:`Remittance Days`"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:122
+msgid "Days of the month, separated by commas (for example ``1,15``), on which the invoices to collect are gathered into a draft debit order. Leave it empty to add each invoice to the draft debit order as soon as it is posted. A day that does not exist in a month (29 to 31) is skipped that month."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:126
+msgid ":guilabel:`Collect Invoices Due Within (Days)`"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:127
+msgid "Only the invoices due up to this number of days after the remittance day (7 by default) are collected."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:129
+msgid ":guilabel:`Generate the Remittance File`"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:130
+msgid "Also confirm the draft debit order and generate its file. The file still has to be uploaded to the bank by hand."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:132
+msgid ":guilabel:`Remittance Responsible`"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:133
+msgid "The user who receives the to-do *Subscription remittance ready: upload it to the bank*."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:136
+msgid "How an invoice is collected"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:138
+msgid "**The invoice is posted**, automatically or by hand (if :guilabel:`Invoice Posting` is :guilabel:`Leave as draft for review`, the invoice enters the collection when you post it). A dunning attempt in the state :guilabel:`Pending` is created and the invoice waits for the remittance."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:142
+msgid "**The invoice goes into a debit order.** Without remittance days, it is added at once to the draft debit order of the payment mode (a new one is created when none is open). With remittance days, the daily scheduled action gathers, on those days, the posted invoices whose last attempt is pending, that are not in an active order yet and are due within the lead time, into draft debit orders. A note is posted on the order, and the responsible user gets the to-do."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:147
+msgid "**You upload the file.** Open the debit order, confirm it and generate the file (unless :guilabel:`Generate the Remittance File` did it), upload the file to your bank and click :guilabel:`File Successfully Uploaded`. The invoices are :guilabel:`In Payment`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:150
+msgid "**The attempt succeeds when the invoice is paid.** After you import and reconcile the bank statement, the scheduled action sets the attempt to :guilabel:`Success` and the contract's :guilabel:`Dunning State` back to :guilabel:`OK`. Uploading the file is not enough: the attempt stays :guilabel:`Pending` until the debit is reconciled."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:156
+msgid "The scheduled action *Subscription: SEPA Direct Debit Remittance* is delivered inactive. Enable it in every case, even without remittance days: it also settles the attempts of the paid invoices."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:161
+msgid "When the bank returns a debit"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:163
+msgid "Confirm the :ref:`payment return <accounting/payment-orders/returns>` (typed or imported from the report of the bank): the return reason is recorded as the decline code of the attempt of each invoice of a SEPA contract, and the dunning applies:"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:167
+msgid "**soft return** (for example AM04, insufficient funds): the attempt becomes :guilabel:`Soft Decline (retry)`, and the invoice is collected again after 1, 3, 7 and 14 days as :ref:`described above <sales/subscriptions/dunning>`: the scheduled action *Subscription: Dunning Retry* creates a new attempt, and the invoice goes into a new debit order, at once or on the next remittance day. After the fourth retry the attempt becomes a :guilabel:`Hard Decline`;"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:172
+msgid "**hard return** (for example MD01, no mandate, AC04, closed account, or MD06, refund requested by the customer): the retries stop at once. The attempt becomes :guilabel:`Hard Decline (stop)`, the contract's :guilabel:`Dunning State` becomes :guilabel:`Hard decline` and the accountant gets the high-priority alert. Review the mandate with the customer before you collect again."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:177
+msgid "Whether a return is soft or hard is read from the :guilabel:`Return Type` of the return reason when it is set (the Spanish localization sets it, see :doc:`../../finance/accounting/payments/spanish_remittances`). Otherwise, these codes are treated as hard: AC01, AC04, AC06, AC13, AG01, AG02, AM05, BE05, CNOR, CUST, DNOR, DUPL, FF01, MD01, MD02, MD06, MD07, MS02, RC01, RR01, RR02, RR03, RR04 and SL01. Any other code, or a return without reason, is soft."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:185
 #: ../../content/applications/sales/subscriptions/configuration.rst:85
 msgid "Scheduled actions"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:66
-msgid "Two scheduled actions support automatic payments. Both are delivered inactive and must be enabled in :menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`:"
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:187
+msgid "Three scheduled actions support automatic payments. They are delivered inactive and must be enabled in :menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`:"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:69
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:190
 msgid ":guilabel:`Subscription: Dunning Retry` — every 4 hours; re-attempts the charges whose retry date has passed."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:71
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:192
+msgid ":guilabel:`Subscription: SEPA Direct Debit Remittance` — daily; gathers the invoices collected by :ref:`SEPA direct debit <sales/subscriptions/sepa-direct-debit>` into debit orders and sets the attempts of the paid invoices to :guilabel:`Success`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:195
 msgid ":guilabel:`Subscription: Emit Alerts` — daily; raises a to-do activity for the salesperson when a trial ends within three days, and a high-priority activity for the accountant on a hard decline."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:75
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:199
 #: ../../content/applications/sales/subscriptions/configuration.rst:109
 #: ../../content/applications/sales/subscriptions/contracts.rst:108
 #: ../../content/applications/sales/subscriptions/lines.rst:158
 msgid ":doc:`billing`"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:201
+msgid ":doc:`../../finance/accounting/payments/payment_orders`"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:202
+msgid ":doc:`../../finance/accounting/payments/sepa_mandate_signature`"
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/billing.rst:3
@@ -16209,10 +16347,6 @@ msgstr ""
 
 #: ../../content/applications/sales/withdrawal/configuration.rst:11
 msgid "Go to :menuselection:`Sales --> Configuration --> Settings`. Under :guilabel:`Quotations & Orders` you will find the following company-level options:"
-msgstr ""
-
-#: ../../content/applications/sales/withdrawal/configuration.rst:18
-msgid "Setting"
 msgstr ""
 
 #: ../../content/applications/sales/withdrawal/configuration.rst:19

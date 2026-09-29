@@ -8630,6 +8630,142 @@ msgstr "A beállításhoz lépjen a :menuselection:`Weboldal --> Konfiguráció 
 msgid "When the key is set and the customer has finished checkout (payment transaction pending, authorized, or done, or the sales order confirmed; cancelled or failed checkouts are skipped), the confirmation page injects an HTML snippet that sends the customer email and the purchased product names to Árukereső. If a product has an internal reference (:guilabel:`Internal Reference`), it is sent as the product Id as well."
 msgstr "Ha a kulcs meg van adva, és a vásárló befejezte a pénztárfolyamatot (függőben lévő, engedélyezett vagy kész fizetési tranzakció, illetve megerősített értékesítési rendelés; a megszakított vagy sikertelen pénztárfolyamatok kimaradnak), a visszaigazoló oldal egy HTML-részletet szúr be, amely elküldi a vásárló e-mail címét és a megvett termékek nevét az Árukeresőnek. Ha a terméknek van belső hivatkozása (:guilabel:`Belső hivatkozás`), az is elküldésre kerül termékazonosítóként (Id)."
 
+#: ../../content/applications/websites/blog.rst:139
+msgid "SEO of tag pages"
+msgstr "A címkeoldalak SEO-ja"
+
+#: ../../content/applications/websites/blog.rst:141
+msgid "The *Blog Sitemap SEO* module (`website_blog_sitemap_seo`) improves how search engines see the tag pages of your blogs:"
+msgstr "A *Blog Sitemap SEO* modul (`website_blog_sitemap_seo`) javítja, hogyan látják a keresőmotorok a blogok címkeoldalait:"
+
+#: ../../content/applications/websites/blog.rst:144
+msgid "**Sitemap**: the tag pages are added to :ref:`/sitemap.xml <website/seo/sitemap>`, for the tags that have a :guilabel:`Meta Title` set and are used on published posts. The `/feed` addresses and `/website/info` are left out of the sitemap, but remain reachable."
+msgstr "**Oldaltérkép**: a címkeoldalak bekerülnek a :ref:`/sitemap.xml <website/seo/sitemap>` fájlba, azon címkék esetében, amelyeknek van :guilabel:`Meta cím` értékük, és publikált bejegyzéseken használatosak. A `/feed` címek és a `/website/info` kimaradnak az oldaltérképből, de továbbra is elérhetők."
+
+#: ../../content/applications/websites/blog.rst:147
+msgid "**Localized tag addresses**: in a language other than the default one, the tag page is served with the tag name of that language in its address. The `hreflang` tags list the address of the tag page in each language of the website, with the tag name translated (see :ref:`Hreflang HTML tags <website/seo/hreflang>`)."
+msgstr "**Lokalizált címkecímek**: az alapértelmezettől eltérő nyelven a címkeoldal a cím részeként az adott nyelvű címkenévvel jelenik meg. A `hreflang` címkék felsorolják a címkeoldal címét a weboldal minden nyelvén, lefordított címkenévvel (lásd :ref:`Hreflang HTML címkék <website/seo/hreflang>`)."
+
+#: ../../content/applications/websites/blog.rst:151
+msgid "**Redirects**: opening a tag page with the tag name of another language (or an outdated one), for example `/hu/blog/tag/<english-name>`, redirects to the right address with **one** permanent (301) redirect that keeps the language prefix. The same applies when the blog name in the address is wrong as well."
+msgstr "**Átirányítások**: ha egy címkeoldalt egy másik nyelvű (vagy elavult) címkenévvel nyitnak meg, például `/hu/blog/tag/<english-name>`, a rendszer **egyetlen** állandó (301-es) átirányítással a megfelelő címre irányít, amely megtartja a nyelvi előtagot. Ugyanez érvényes akkor is, ha a címben szereplő blognév is hibás."
+
+#: ../../content/applications/websites/blog.rst:157
+msgid "Tag pages with several tags at once (e.g., `/tag/a,b`) keep the standard Odoo behavior."
+msgstr "Az egyszerre több címkét tartalmazó címkeoldalak (pl. `/tag/a,b`) a szokásos Odoo-viselkedést követik."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:18
+msgid "Odoo is compliant with `Google consent mode v2 <https://support.google.com/tagmanager/answer/13695607>`_: the consent state is set to *denied* by default and updated to *granted* or *denied* according to the visitor's choice. In eYssen ERP, the :ref:`Google consent mode (advanced) <cookies-bar/consent-mode-advanced>` module also lets the Google tag load before the choice is made."
+msgstr "Az Odoo megfelel a `Google consent mode v2 <https://support.google.com/tagmanager/answer/13695607>`_ követelményeinek: a hozzájárulási állapot alapértelmezés szerint *denied* értékre van állítva, és a látogató döntésének megfelelően *granted* vagy *denied* értékre frissül. Az eYssen ERP-ben a :ref:`Google consent mode (advanced) <cookies-bar/consent-mode-advanced>` modul azt is lehetővé teszi, hogy a Google-címke a döntés meghozatala előtt betöltődjön."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:41
+msgid "Google consent mode (advanced)"
+msgstr "Google consent mode (advanced)"
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:43
+msgid "With the cookies bar enabled, the standard behavior is to block the Google tag (`gtag.js`) until the visitor accepts optional cookies, because `googletagmanager.com` and `google-analytics.com` are on the block list of third-party services. As a result, the tag only loads on the **next** page after the visitor accepted. Google Analytics 4 then loses the landing page, the `gclid` parameter of Google Ads and the referrer of the first page, and the visit is reported as *Direct*."
+msgstr "Ha a sütisáv be van kapcsolva, a szokásos működés az, hogy a Google-címkét (`gtag.js`) blokkolja, amíg a látogató el nem fogadja az opcionális sütiket, mert a `googletagmanager.com` és a `google-analytics.com` harmadik felek szolgáltatásainak tiltólistáján szerepel. Ennek következtében a címke csak az elfogadást követő **következő** oldalon töltődik be. A Google Analytics 4 így elveszíti a nyitóoldalt, a Google Ads `gclid` paraméterét és az első oldal hivatkozóját, a látogatás pedig *Direct* forgalomként jelenik meg a jelentésekben."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:49
+msgid "The *Website: Google consent mode (advanced)* module (`eyssen_website_consent_mode`) fixes this by removing these two domains, and only these two, from the block list."
+msgstr "A *Website: Google consent mode (advanced)* modul (`eyssen_website_consent_mode`) ezt úgy oldja meg, hogy ezt a két domaint – és csak ezt a kettőt – eltávolítja a tiltólistáról."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:53
+msgid "Set it up"
+msgstr "Beállítás"
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:54
+msgid "Install the module from :menuselection:`Apps` (search for `eyssen_website_consent_mode`). It has no setting and no menu."
+msgstr "Telepítse a modult az :menuselection:`Alkalmazások` menüből (keressen rá: `eyssen_website_consent_mode`). Nincs beállítása és menüpontja."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:56
+msgid "Go to :menuselection:`Website --> Configuration --> Settings`, enable :guilabel:`Cookies Bar` in the :guilabel:`Privacy` section, and enable :guilabel:`Google Analytics` in the :guilabel:`SEO` section with your :guilabel:`Measurement ID` (see :ref:`Google Analytics <analytics/google-analytics>`)."
+msgstr "Lépjen a :menuselection:`Weboldal --> Konfiguráció --> Beállítások` menüpontra, kapcsolja be a :guilabel:`Sütisáv` funkciót az :guilabel:`Adatvédelem` szakaszban, és kapcsolja be a :guilabel:`Google Analytics` funkciót a :guilabel:`SEO` szakaszban a :guilabel:`Mérési azonosító` megadásával (lásd :ref:`Google Analytics <analytics/google-analytics>`)."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:63
+msgid "The module removes the two Google domains from the block list of every website that has a Google Analytics :guilabel:`Measurement ID`. It only has a visible effect when the cookies bar is enabled with :guilabel:`Block tracking 3rd-party services`, which is the default. Websites without a :guilabel:`Measurement ID` keep the standard behavior."
+msgstr "A modul eltávolítja a két Google-domaint a blokkolt harmadik féltől származó szolgáltatások listájáról minden olyan weboldalon, amelyhez tartozik Google Analytics :guilabel:`Mérési azonosító`. Látható hatása csak akkor van, ha a sütisáv be van kapcsolva a :guilabel:`Harmadik felek követésének tiltása` beállítással (ez az alapértelmezés). A :guilabel:`Mérési azonosító` nélküli weboldalak a szokásos viselkedést tartják meg."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:67
+msgid "How it behaves"
+msgstr "Hogyan működik"
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:68
+msgid "The Google tag loads on the first page, before the visitor answers the cookies bar. The consent default stays *denied* for analytics and advertising storage, so Google does not set analytics cookies until the visitor accepts."
+msgstr "A Google-címke az első oldalon betöltődik, még mielőtt a látogató válaszolna a sütisávra. A hozzájárulás alapértéke az analitikai és a hirdetési tárolásra *denied* marad, így a Google addig nem állít be analitikai sütiket, amíg a látogató el nem fogadja azokat."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:71
+msgid "When the visitor accepts or refuses optional cookies, the cookies bar sends the consent update (*granted* or *denied*) on the **same page**, without a reload."
+msgstr "Amikor a látogató elfogadja vagy elutasítja az opcionális sütiket, a sütisáv a hozzájárulás frissítését (*granted* vagy *denied*) **ugyanazon az oldalon** küldi el, újratöltés nélkül."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:73
+msgid "The landing page, the `gclid` and the referrer of the first page reach Google Analytics 4."
+msgstr "A nyitóoldal, a `gclid` és az első oldal hivatkozója eljut a Google Analytics 4-be."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:74
+msgid "If you added `googletagmanager.com` or `google-analytics.com` yourself with :guilabel:`Add domains to the block list`, they stay blocked."
+msgstr "Ha Ön maga adta hozzá a `googletagmanager.com` vagy a `google-analytics.com` domaint a :guilabel:`Domainek hozzáadása a tiltólistához` beállítással, azok blokkolva maradnak."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:78
+msgid "This is Google's *advanced* consent mode: while consent is denied, Google may receive cookieless pings from the visitor's browser. Check that this fits your data protection requirements and mention it in your :ref:`cookies policy <cookies-bar/policy>`."
+msgstr "Ez a Google *advanced* (fejlett) hozzájárulási módja: amíg a hozzájárulás meg van tagadva, a Google sütik nélküli jelzéseket (pingeket) kaphat a látogató böngészőjétől. Ellenőrizze, hogy ez megfelel-e az adatvédelmi követelményeinek, és említse meg a :ref:`sütiszabályzatban <cookies-bar/policy>`."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:83
+msgid "Check that it works"
+msgstr "Ellenőrizze, hogy működik"
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:84
+msgid "Open your website in a private browsing window and open the developer tools of your browser (:kbd:`F12`), :guilabel:`Network` tab."
+msgstr "Nyissa meg a weboldalát privát böngészési ablakban, és nyissa meg a böngésző fejlesztői eszközeit (:kbd:`F12`), :guilabel:`Hálózat` fül."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:87
+msgid "Reload the page, without answering the cookies bar. A request to `googletagmanager.com/gtag/js` must appear on this first page. Without the module, the script is rendered with the address `about:blank` and no request is made."
+msgstr "Töltse újra az oldalt anélkül, hogy válaszolna a sütisávra. Ezen az első oldalon meg kell jelennie egy `googletagmanager.com/gtag/js` kérésnek. A modul nélkül a szkript `about:blank` címmel jelenik meg, és nem indul kérés."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:90
+msgid "Click :guilabel:`I agree` or :guilabel:`Only essentials` in the cookies bar. In the browser console, the `dataLayer` object receives a `consent` `update` entry (*granted* or *denied*) on the same page, without a reload."
+msgstr "Kattintson az :guilabel:`Elfogadom` vagy a :guilabel:`Csak a szükségeseket` gombra a sütisávban. A böngésző konzoljában a `dataLayer` objektum ugyanazon az oldalon, újratöltés nélkül kap egy `consent` `update` bejegyzést (*granted* vagy *denied*)."
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:95
+msgid "The module has no effect on other trackers: the other third-party services of the block list (social networks, video platforms, Google Maps, etc.) are still blocked until the visitor accepts optional cookies."
+msgstr "A modul nincs hatással más nyomkövetőkre: a tiltólista többi harmadik féltől származó szolgáltatása (közösségi hálózatok, videoplatformok, Google Térkép stb.) továbbra is blokkolva marad, amíg a látogató el nem fogadja az opcionális sütiket."
+
+#: ../../content/applications/websites/website/configuration/translate.rst:47
+msgid "Blog tag URLs"
+msgstr "Blogcímke-URL-ek"
+
+#: ../../content/applications/websites/website/configuration/translate.rst:49
+msgid "With the *Blog Sitemap SEO* module (`website_blog_sitemap_seo`), the address of a blog tag page contains the name of the tag **in the language of the page** (e.g., `/blog/news-1/tag/release-3` and `/hu/blog/news-1/tag/kiadas-3`). The `hreflang` tags of a tag page therefore list the tag address of each language, not the one of the current language. See :ref:`Blog SEO <blog/seo>`."
+msgstr "A *Blog Sitemap SEO* modullal (`website_blog_sitemap_seo`) a blogcímkeoldal címe a címke nevét **az oldal nyelvén** tartalmazza (pl. `/blog/news-1/tag/release-3` és `/hu/blog/news-1/tag/kiadas-3`). A címkeoldal `hreflang` címkéi ezért minden nyelv címkecímét felsorolják, nem az aktuális nyelvét. Lásd: :ref:`Blog SEO <blog/seo>`."
+
+#: ../../content/applications/websites/website/structure/seo.rst:317
+msgid "The tags are generated for each request, so the variant shown to a search engine is always the right one for the URL it requested:"
+msgstr "A címkék minden kéréshez legenerálódnak, így a keresőmotornak megjelenített változat mindig megfelel a kért URL-nek:"
+
+#: ../../content/applications/websites/website/structure/seo.rst:320
+msgid "On the canonical URL of a page, the `hreflang` and `x-default` tags point to every language version of the page."
+msgstr "Egy oldal kanonikus URL-jén a `hreflang` és az `x-default` címkék az oldal minden nyelvi változatára mutatnak."
+
+#: ../../content/applications/websites/website/structure/seo.rst:322
+msgid "On a URL with a query string (e.g., `?utm_source=...` or `?gclid=...`), the page is not the canonical URL, and the `hreflang` block is omitted."
+msgstr "Lekérdezési karakterláncot (query string) tartalmazó URL-en (pl. `?utm_source=...` vagy `?gclid=...`) az oldal nem a kanonikus URL, és a `hreflang` blokk kimarad."
+
+#: ../../content/applications/websites/website/structure/seo.rst:324
+msgid "The `noindex` robots tag that depends on the requested domain (added when the request does not come from the website's indexable domain) is only rendered for that domain."
+msgstr "A kért domaintól függő `noindex` robots címke (akkor kerül hozzáadásra, ha a kérés nem a weboldal indexelhető domainjéről érkezik) csak ennél a domainnél jelenik meg."
+
+#: ../../content/applications/websites/website/structure/seo.rst:328
+msgid "In earlier versions, the first variant rendered after a restart was kept in a cache and served to every visitor. This is no longer the case."
+msgstr "A korábbi verziókban az újraindítás után elsőként megjelenített változat gyorsítótárba került, és minden látogatónak azt szolgálták ki. Ez már nem így van."
+
+#: ../../content/applications/websites/website/structure/seo.rst:334
+msgid "Blog tags"
+msgstr "Blogcímkék"
+
+#: ../../content/applications/websites/website/structure/seo.rst:336
+msgid "With the *Blog Sitemap SEO* module (`website_blog_sitemap_seo`), the tag pages of the blog (`/blog/<blog>/tag/<tag>`) also get the slug of the tag translated into each language in the `hreflang` and canonical URLs. For example, the Hungarian version of a tag page links to the English page with the English tag slug, and the English page links back to the Hungarian tag slug. See :ref:`Blog SEO <blog/seo>` for the redirects applied when the address contains a wrong slug."
+msgstr "A *Blog Sitemap SEO* modullal (`website_blog_sitemap_seo`) a blog címkeoldalai (`/blog/<blog>/tag/<tag>`) a címke slugját is lefordítva kapják meg az egyes nyelveken a `hreflang` és a kanonikus URL-ekben. Például a címkeoldal magyar változata az angol oldalra az angol címkeslugjával hivatkozik, az angol oldal pedig vissza a magyar címkeslugra. A hibás slugot tartalmazó címek esetén alkalmazott átirányításokat lásd a :ref:`Blog SEO <blog/seo>` részben."
+
 #~ msgid "Together with the Hungarian localization, the form also switches between the international :guilabel:`VAT` field and the Hungarian tax number field depending on the selected :guilabel:`Country`, and the B2B fields are always shown."
 #~ msgstr "A magyar lokalizációval együtt az űrlap a kiválasztott :guilabel:`Country` alapján vált a nemzetközi :guilabel:`VAT` mező és a magyar adószám mező között, és a B2B mezők mindig láthatók."
 

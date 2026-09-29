@@ -14,8 +14,12 @@ The *Spain - Fixed Assets* module adds the Spanish depreciation rules to the :do
 
 .. note::
    - The module is part of the :ref:`supported combination of Spanish modules
-     <localizations/spain/base-layer>`. The alternative community fixed asset modules cannot be
-     installed together with the *Spain - Base Layer* module.
+     <localizations/spain/module-choice>` and is installed with the :ref:`fiscal profile
+     <localizations/spain/fiscal-profile>` when it is available on the server. It depends on the
+     *Odoo 18 Assets Management* module and on *AEAT Base*.
+   - The alternative community fixed asset modules (*Assets Management* and its Spanish version)
+     cannot be installed together with it: Odoo refuses the installation, also from the command
+     line.
    - The Spanish rules only apply to assets. Deferred revenues keep the standard depreciation
      engine.
 

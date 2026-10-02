@@ -60,6 +60,11 @@ needs of the company.
      - `eyssen_l10n_hu_asset`
      - :doc:`Hungarian fixed asset accounting <hungary/assets>`: rate-based depreciation, corporate
        tax depreciation board, activation and disposal entries, protocols.
+   * - :guilabel:`Batch Bank Transfer`
+     - `eyssen_batch_bank_transfer`
+     - :doc:`Batch bank transfers <../accounting/payments/batch_bank_transfers>`: collects the open
+       vendor bills in a batch and generates the transfer file in the format of the Hungarian banks
+       (UNG, PAY, Electra, CIB).
    * - :guilabel:`MKVK AuditXML adatexport (főkönyvi tételek)`
      - `l10n_hu_mkvk`
      - :doc:`General ledger data export for auditors <hungary/mkvk>` in the MKVK AuditXML format.

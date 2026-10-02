@@ -28849,6 +28849,373 @@ msgstr "El motivo se muestra en la transacción y en el chatter del documento re
 msgid ":doc:`../fiscal_localizations/spain`"
 msgstr ":doc:`../fiscal_localizations/spain`"
 
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:3
+msgid "Batch bank transfers (Hungary)"
+msgstr "Transferencias bancarias por lotes (Hungría)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:5
+msgid "The *Batch Bank Transfer* module prepares the **bank file** for paying many vendor bills at once. You collect the open bills in a *batch*, check the amounts and the expected bank balance, and click :guilabel:`Approve`: Odoo generates the transfer file in the format of your bank, which you upload in your online banking. The formats of the main Hungarian banks are supported."
+msgstr "El módulo *Batch Bank Transfer* prepara el **archivo bancario** para pagar de una vez muchas facturas de proveedor. Reúna las facturas abiertas en un *lote*, compruebe los importes y el saldo bancario previsto y haga clic en :guilabel:`Aprobar`: Odoo genera el archivo de transferencias en el formato de su banco, que usted carga en su banca en línea. Se admiten los formatos de los principales bancos húngaros."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:11
+msgid "The module generates the file and keeps track of which bills were sent to the bank. It does **not** register payments. The bills are paid as usual when the bank statement is imported and :doc:`reconciled <../bank/reconciliation>`. If your bank accepts SEPA files, use :doc:`payment orders <payment_orders>` instead."
+msgstr "El módulo genera el archivo y registra qué facturas se enviaron al banco. **No** registra pagos. Las facturas se pagan como siempre al importar el extracto bancario y :doc:`conciliarlo <../bank/reconciliation>`. Si su banco acepta archivos SEPA, utilice en su lugar las :doc:`órdenes de pago <payment_orders>`."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:16
+msgid ":ref:`Install <general/install>` the :guilabel:`Batch Bank Transfer` module (`eyssen_batch_bank_transfer`). It requires the Hungarian localization (`eyssen_l10n_hu`, see :doc:`../../fiscal_localizations/hungary`). Users need the :guilabel:`Invoicing` access right to create and edit batches; the read-only accounting access right can only read them. Batches are separate for every company."
+msgstr ":ref:`Instale <general/install>` el módulo :guilabel:`Batch Bank Transfer` (`eyssen_batch_bank_transfer`). Requiere la localización húngara (`eyssen_l10n_hu`, véase :doc:`../../fiscal_localizations/hungary`). Los usuarios necesitan el derecho de acceso :guilabel:`Facturación` para crear y editar lotes; el derecho de solo lectura de contabilidad solo permite consultarlos. Los lotes son independientes para cada empresa."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:27
+msgid "The **bank account of your company** (:menuselection:`Accounting --> Configuration --> Bank Accounts`, or the :guilabel:`Bank Accounts` of the company contact) is filled in with its :guilabel:`Bank`, and the bank has its **BIC (SWIFT) code**. The BIC decides the :ref:`file format <accounting/batch-bank-transfer/formats>`. The largest Hungarian banks are loaded with the Hungarian localization."
+msgstr "La **cuenta bancaria de su empresa** (:menuselection:`Contabilidad --> Configuración --> Cuentas bancarias`, o las :guilabel:`Cuentas bancarias` del contacto de la empresa) está rellenada con su :guilabel:`Banco`, y el banco tiene su **código BIC (SWIFT)**. El BIC determina el :ref:`formato del archivo <accounting/batch-bank-transfer/formats>`. Los mayores bancos húngaros se cargan con la localización húngara."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:32
+msgid "The **vendors have a bank account** (IBAN or Hungarian account number), and the bills you want to pay are linked to it in the :guilabel:`Recipient Bank` field. A bill without a bank account can be added to a batch, but the batch cannot be approved."
+msgstr "Los **proveedores tienen una cuenta bancaria** (IBAN o número de cuenta húngaro), y las facturas que desea pagar están vinculadas a ella en el campo :guilabel:`Banco destinatario`. Una factura sin cuenta bancaria puede añadirse a un lote, pero el lote no puede aprobarse."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:35
+msgid "The bills are **posted** and not fully paid."
+msgstr "Las facturas están **contabilizadas** y no están pagadas por completo."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:40
+msgid "Create a batch"
+msgstr "Crear un lote"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:42
+msgid "Go to :menuselection:`Accounting --> Vendors --> Batch Bank Transfers` and click :guilabel:`New`. The batch is numbered automatically (for example *UTALASOK-000001*)."
+msgstr "Vaya a :menuselection:`Contabilidad --> Proveedores --> Transferencias bancarias por lotes` y haga clic en :guilabel:`Nuevo`. El lote se numera automáticamente (por ejemplo, *UTALASOK-000001*)."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:52
+msgid "Creation date of the batch. It is replaced by the approval date when the batch is approved."
+msgstr "Fecha de creación del lote. Se sustituye por la fecha de aprobación cuando se aprueba el lote."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:53
+msgid ":guilabel:`Bank Value Date`"
+msgstr ":guilabel:`Fecha valor bancaria`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:54
+msgid "Date on which the bank debits the transfers. It is **tomorrow** by default and cannot be earlier than today."
+msgstr "Fecha en la que el banco adeuda las transferencias. Por defecto es **mañana** y no puede ser anterior a hoy."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:56
+msgid ":guilabel:`Bank Account`"
+msgstr ":guilabel:`Cuenta bancaria`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:57
+msgid "Bank account of your company that is debited (required). The :guilabel:`Currency` of the batch is the currency of this account; an account without a currency is treated as HUF."
+msgstr "Cuenta bancaria de su empresa que se adeuda (obligatoria). La :guilabel:`Moneda` del lote es la de esta cuenta; una cuenta sin moneda se considera HUF."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:82
+msgid "Add the bills"
+msgstr "Añadir las facturas"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:84
+msgid "Use one of the buttons of the draft batch. Only posted bills with an open amount, of the company and in the currency of the batch bank account, are loaded. The amount already sent to the bank in approved batches is subtracted, so a bill that has been fully sent is not proposed again, and a partly sent bill is proposed for the remaining amount."
+msgstr "Utilice uno de los botones del lote en borrador. Solo se cargan las facturas contabilizadas con importe pendiente, de la empresa y en la moneda de la cuenta bancaria del lote. Se descuenta el importe ya enviado al banco en lotes aprobados, de modo que una factura enviada por completo no se propone de nuevo, y una factura enviada en parte se propone por el importe restante."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:93
+msgid "Button"
+msgstr "Botón"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:94
+msgid "Bills loaded"
+msgstr "Facturas cargadas"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:95
+msgid ":guilabel:`Load Overdue Invoices`"
+msgstr ":guilabel:`Cargar facturas vencidas`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:96
+msgid "Bills whose due date is today or earlier."
+msgstr "Facturas cuya fecha de vencimiento es hoy o anterior."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:97
+msgid ":guilabel:`Due Within 14 Days and Overdue`"
+msgstr ":guilabel:`Vencidas y con vencimiento en 14 días`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:98
+msgid "Bills due within the next 14 days, and the overdue ones."
+msgstr "Facturas con vencimiento en los próximos 14 días y las vencidas."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:99
+msgid ":guilabel:`Load Invoices by Due Date`"
+msgstr ":guilabel:`Cargar facturas por fecha de vencimiento`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:103
+msgid ":guilabel:`Load All Invoices`"
+msgstr ":guilabel:`Cargar todas las facturas`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:104
+msgid "All the open bills, whatever the due date."
+msgstr "Todas las facturas abiertas, sea cual sea la fecha de vencimiento."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:105
+msgid ":guilabel:`Load Invoices`"
+msgstr ":guilabel:`Cargar facturas`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:106
+msgid "Opens the list of the bills so that you can pick them yourself: select the bills, then click :menuselection:`Actions --> Add Invoices to Batch Bank Transfer`. You are brought back to the batch."
+msgstr "Abre la lista de facturas para que las elija usted mismo: seleccione las facturas y haga clic en :menuselection:`Acciones --> Añadir facturas a la transferencia bancaria por lotes`. Volverá al lote."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:110
+msgid "To add bills that were **already sent to the bank** (for instance to repeat a transfer the bank rejected), select them in the :guilabel:`Load Invoices` list and click :menuselection:`Actions --> Add Previously Transferred Invoices to Batch Bank Transfer`: the line is created for the full amount of the bill."
+msgstr "Para añadir facturas **ya enviadas al banco** (por ejemplo, para repetir una transferencia que el banco rechazó), selecciónelas en la lista :guilabel:`Cargar facturas` y haga clic en :menuselection:`Acciones --> Añadir facturas ya transferidas a la transferencia bancaria por lotes`: la línea se crea por el importe total de la factura."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:115
+msgid "You can also work from the list of vendor bills at any time: the :guilabel:`Bank Transfer` column shows whether a bill has been sent to the bank (:guilabel:`Not Sent`, :guilabel:`Partially Sent` or :guilabel:`Fully Sent`). Enable it with the optional columns selector if it is hidden."
+msgstr "También puede trabajar desde la lista de facturas de proveedor: la columna :guilabel:`Transferencia bancaria` muestra si una factura se ha enviado al banco (:guilabel:`No enviada`, :guilabel:`Enviada parcialmente` o :guilabel:`Enviada por completo`). Actívela con el selector de columnas opcionales si está oculta."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:130
+msgid "Check the lines"
+msgstr "Revisar las líneas"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:132
+msgid "Every bill is a line of the batch. You can edit the following directly in the list:"
+msgstr "Cada factura es una línea del lote. Puede editar directamente en la lista lo siguiente:"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:134
+msgid ":guilabel:`Amount to Transfer`: the amount to pay. Lower it to pay a bill **partially**."
+msgstr ":guilabel:`Importe a transferir`: el importe a pagar. Redúzcalo para pagar una factura **parcialmente**."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:135
+msgid ":guilabel:`Comment`: the message for the beneficiary. It is filled with the vendor reference and the payment reference of the bill."
+msgstr ":guilabel:`Comentario`: el mensaje para el beneficiario. Se rellena con la referencia del proveedor y la referencia de pago de la factura."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:137
+msgid ":guilabel:`Selected`: marks the line, to move it to another batch (see below)."
+msgstr ":guilabel:`Seleccionado`: marca la línea para moverla a otro lote (véase más abajo)."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:139
+msgid "The :guilabel:`Transferred Amount` is what has already been sent to the bank for the bill in other approved batches. A line is shown in **red** when its amount and the transferred amount exceed the total of the bill, and in **orange** when the bill has no vendor bank account. The search box above the list filters the lines."
+msgstr "El :guilabel:`Importe transferido` es lo que ya se ha enviado al banco por la factura en otros lotes aprobados. Una línea se muestra en **rojo** cuando su importe más el importe transferido superan el total de la factura, y en **naranja** cuando la factura no tiene cuenta bancaria del proveedor. El cuadro de búsqueda sobre la lista filtra las líneas."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:144
+msgid ":guilabel:`Move Selected Invoices to New Batch` moves the :guilabel:`Selected` lines to a new draft batch with the same bank account, for instance to pay them on another day."
+msgstr ":guilabel:`Mover las facturas seleccionadas a un nuevo lote` traslada las líneas :guilabel:`Seleccionado` a un nuevo lote en borrador con la misma cuenta bancaria, por ejemplo para pagarlas otro día."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:146
+msgid ":guilabel:`Clear` removes all the lines of the batch (the bills are not modified)."
+msgstr ":guilabel:`Vaciar` elimina todas las líneas del lote (las facturas no se modifican)."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:149
+msgid "Balance forecast"
+msgstr "Previsión de saldo"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:151
+msgid "The block next to the lines helps you to check that the account can cover the transfers. The figures are calculated when the batch is saved, and the closing balance after the transfers is updated when you change the lines."
+msgstr "El bloque situado junto a las líneas le ayuda a comprobar que la cuenta puede cubrir las transferencias. Las cifras se calculan al guardar el lote, y el saldo final tras las transferencias se actualiza al modificar las líneas."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:159
+msgid "Figure"
+msgstr "Cifra"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:160
+msgid "Meaning"
+msgstr "Significado"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:161
+msgid ":guilabel:`Bank Balance as of Date`"
+msgstr ":guilabel:`Saldo bancario a la fecha`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:162
+msgid "Balance of the bank journal(s) of the account up to the date of the batch."
+msgstr "Saldo de los diarios bancarios de la cuenta hasta la fecha del lote."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:163
+msgid ":guilabel:`Increase`"
+msgstr ":guilabel:`Aumento`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:167
+msgid ":guilabel:`Decrease`"
+msgstr ":guilabel:`Disminución`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:171
+msgid ":guilabel:`Closing Balance at Date + 2 Weeks (Invoices)`"
+msgstr ":guilabel:`Saldo final a la fecha + 2 semanas (facturas)`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:172
+msgid "Balance plus increase minus decrease: the balance if all the bills due within two weeks were paid."
+msgstr "Saldo más aumento menos disminución: el saldo si se pagaran todas las facturas con vencimiento en las dos semanas."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:174
+msgid ":guilabel:`Closing Balance at Date + 2 Weeks (Transfers)`"
+msgstr ":guilabel:`Saldo final a la fecha + 2 semanas (transferencias)`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:175
+msgid "Balance plus increase minus the total of **this batch**."
+msgstr "Saldo más aumento menos el total de **este lote**."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:180
+msgid "Approve the batch and send the file"
+msgstr "Aprobar el lote y enviar el archivo"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:182
+msgid "Click :guilabel:`Approve`. Odoo checks the batch, generates the file, attaches it to the batch and downloads it. The status changes from :guilabel:`Draft` to :guilabel:`Sent to Bank`, the :guilabel:`Date` becomes today, and the lines can no longer be edited. Upload the file in your online banking and authorize the transfers there."
+msgstr "Haga clic en :guilabel:`Aprobar`. Odoo comprueba el lote, genera el archivo, lo adjunta al lote y lo descarga. El estado pasa de :guilabel:`Borrador` a :guilabel:`Enviado al banco`, la :guilabel:`Fecha` pasa a ser hoy y las líneas ya no se pueden editar. Cargue el archivo en su banca en línea y autorice allí las transferencias."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:187
+msgid "The batch cannot be approved, and an explicit message tells you why, when:"
+msgstr "El lote no se puede aprobar, y un mensaje explícito le indica el motivo, cuando:"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:189
+msgid "a bill has no vendor bank account (*No partner bank account set for invoice ...*);"
+msgstr "una factura no tiene cuenta bancaria del proveedor (*No se ha indicado la cuenta bancaria del contacto en la factura ...*);"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:198
+msgid "The format depends on the **BIC of the bank** of the company bank account selected on the batch. Any other bank gets the :guilabel:`UNG` file."
+msgstr "El formato depende del **BIC del banco** de la cuenta bancaria de la empresa seleccionada en el lote. Cualquier otro banco recibe el archivo :guilabel:`UNG`."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:205
+msgid "Bank (BIC)"
+msgstr "Banco (BIC)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:206
+msgid "HUF account"
+msgstr "Cuenta en HUF"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:207
+msgid "Foreign currency account"
+msgstr "Cuenta en moneda extranjera"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:209
+msgid "UniCredit Bank (BACXHUHB)"
+msgstr "UniCredit Bank (BACXHUHB)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:210
+msgid "`.PAY` file, named after the bank value date (`yymmdd.PAY`)"
+msgstr "Archivo `.PAY`, con el nombre de la fecha valor bancaria (`yymmdd.PAY`)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:211
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:219
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:223
+msgid "Not available"
+msgstr "No disponible"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:212
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:224
+msgid "Amounts in whole forints."
+msgstr "Importes en forintos enteros."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:213
+msgid "OTP Bank (OTPVHUHB)"
+msgstr "OTP Bank (OTPVHUHB)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:214
+msgid "Electra XML file (`HUFTransactions`)"
+msgstr "Archivo XML Electra (`HUFTransactions`)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:215
+msgid "Electra XML file (`DEVTransactions`)"
+msgstr "Archivo XML Electra (`DEVTransactions`)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:216
+msgid "Encoded in ISO-8859-2. The file is named after the day of the approval (`yyyymmdd.xml`)."
+msgstr "Codificado en ISO-8859-2. El archivo lleva el nombre del día de la aprobación (`yyyymmdd.xml`)."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:217
+msgid "CIB Bank (CIBHHUHB)"
+msgstr "CIB Bank (CIBHHUHB)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:218
+msgid "CSV file (`yyyymmdd_HUF.csv`)"
+msgstr "Archivo CSV (`yyyymmdd_HUF.csv`)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:221
+msgid "Any other bank"
+msgstr "Cualquier otro banco"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:222
+msgid "`.UNG` file (`UNyymmdd.UNG`)"
+msgstr "Archivo `.UNG` (`UNyymmdd.UNG`)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:226
+msgid "In the `.PAY` and `.UNG` files, the lines paid to the same vendor bank account are **combined** into one transfer (the amounts are added, and the comments joined and shortened to 96 characters), and the names, addresses and comments are written without accents."
+msgstr "En los archivos `.PAY` y `.UNG`, las líneas pagadas a la misma cuenta bancaria del proveedor se **combinan** en una sola transferencia (los importes se suman y los comentarios se unen y se acortan a 96 caracteres), y los nombres, direcciones y comentarios se escriben sin acentos."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:231
+msgid "Undo"
+msgstr "Deshacer"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:233
+msgid "Click :guilabel:`Undo` on a batch that has been sent to bank to cancel it: the attached files are deleted, the :guilabel:`Date` is cleared and the batch is a :guilabel:`Draft` again, so you can change it and generate a new file. Nothing is booked in the accounting by the module, so there is nothing else to reverse. Undo a batch only if the file was **not** processed by the bank."
+msgstr "Haga clic en :guilabel:`Deshacer` en un lote enviado al banco para cancelarlo: se eliminan los archivos adjuntos, se borra la :guilabel:`Fecha` y el lote vuelve a ser un :guilabel:`Borrador`, de modo que puede modificarlo y generar un archivo nuevo. El módulo no contabiliza nada, por lo que no hay nada más que revertir. Deshaga un lote solo si el banco **no** ha procesado el archivo."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:241
+msgid "After the bank has processed the transfers"
+msgstr "Después de que el banco procese las transferencias"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:251
+msgid ":doc:`../../fiscal_localizations/hungary`"
+msgstr ":doc:`../../fiscal_localizations/hungary`"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:63
+msgid ":guilabel:`Batch Bank Transfer`"
+msgstr ":guilabel:`Batch Bank Transfer`"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:64
+msgid "`eyssen_batch_bank_transfer`"
+msgstr "`eyssen_batch_bank_transfer`"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:65
+msgid ":doc:`Batch bank transfers <../accounting/payments/batch_bank_transfers>`: collects the open vendor bills in a batch and generates the transfer file in the format of the Hungarian banks (UNG, PAY, Electra, CIB)."
+msgstr ":doc:`Transferencias bancarias por lotes <../accounting/payments/batch_bank_transfers>`: reúne las facturas de proveedor abiertas en un lote y genera el archivo de transferencias en el formato de los bancos húngaros (UNG, PAY, Electra, CIB)."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:59
+msgid ":guilabel:`Vendor Credit Notes`"
+msgstr ":guilabel:`Facturas rectificativas de proveedores`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:60
+msgid "Also load the vendor credit notes (the *Refunds* of the vendors). Off by default."
+msgstr "Carga también las facturas rectificativas de proveedores (los *Reembolsos* de proveedores). Desactivado por defecto."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:61
+msgid ":guilabel:`Customer Credit Notes`"
+msgstr ":guilabel:`Facturas rectificativas de clientes`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:62
+msgid "Also load the customer credit notes (refunds that you pay back to customers). On by default."
+msgstr "Carga también las facturas rectificativas de clientes (importes que se devuelven a los clientes). Activado por defecto."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:65
+msgid "The defaults of the two credit note options are system parameters (`1` = on, `0` = off): `eyssen_batch_bank_transfer.config.default_customer_credit` for :guilabel:`Vendor Credit Notes` and `eyssen_batch_bank_transfer.config.default_business_credit` for :guilabel:`Customer Credit Notes`. Edit them in :menuselection:`Settings --> Technical --> System Parameters` in :ref:`developer mode <developer-mode>`."
+msgstr "Los valores por defecto de las dos opciones de facturas rectificativas son parámetros del sistema (`1` = activado, `0` = desactivado): `eyssen_batch_bank_transfer.config.default_customer_credit` para :guilabel:`Facturas rectificativas de proveedores` y `eyssen_batch_bank_transfer.config.default_business_credit` para :guilabel:`Facturas rectificativas de clientes`. Edítelos en :menuselection:`Ajustes --> Técnico --> Parámetros del sistema` en :ref:`modo desarrollador <developer-mode>`."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:100
+msgid "Bills due on or before the date you enter in the :guilabel:`Due On or Before` field."
+msgstr "Facturas con vencimiento en la fecha indicada en el campo :guilabel:`Vence el o antes de`, o antes."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:162
+msgid "Amounts expected to come in: the open customer invoices in the currency of the account, overdue, due in the first week and due in the second week after the date."
+msgstr "Importes que se espera recibir: las facturas de cliente abiertas en la moneda de la cuenta, vencidas, con vencimiento en la primera semana y en la segunda semana posteriores a la fecha."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:165
+msgid "Open vendor bills in the currency of the account: overdue, due in the first week and due in the second week after the date (click the arrow to expand the details)."
+msgstr "Facturas de proveedor abiertas en la moneda de la cuenta: vencidas, con vencimiento en la primera semana y en la segunda semana posteriores a la fecha (haga clic en la flecha para ver el detalle)."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:186
+msgid "the currency of the bank account does not fit the format (for example, a foreign-currency account with a format that only supports HUF);"
+msgstr "la moneda de la cuenta bancaria no encaja con el formato (por ejemplo, una cuenta en moneda extranjera con un formato que solo admite HUF);"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:188
+msgid "for a foreign-currency transfer from a CIB account, the bank of the vendor has no SWIFT/BIC code."
+msgstr "en una transferencia en moneda extranjera desde una cuenta CIB, el banco del proveedor no tiene código SWIFT/BIC."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:217
+msgid "Semicolon-separated, named after the day of the approval. HUF amounts in whole forints, foreign currency amounts with two decimals. A foreign-currency transfer needs the SWIFT/BIC code of the vendor's bank."
+msgstr "Separado por punto y coma, con el nombre del día de la aprobación. Los importes en HUF en forintos enteros, los importes en moneda extranjera con dos decimales. Una transferencia en moneda extranjera necesita el código SWIFT/BIC del banco del proveedor."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:242
+msgid "Import the bank statement (:doc:`../bank/statement_import`) and :doc:`reconcile <../bank/reconciliation>` the debits with the bills, as for any other payment. The :guilabel:`Bank Transfer` column of the vendor bills shows what was sent to the bank: a bill is :guilabel:`Fully Sent` when the approved batches cover its open amount, and :guilabel:`Partially Sent` when they cover only a part of it."
+msgstr "Importe el extracto bancario (:doc:`../bank/statement_import`) y :doc:`concilie <../bank/reconciliation>` los adeudos con las facturas, como con cualquier otro pago. La columna :guilabel:`Transferencia bancaria` de las facturas de proveedor muestra lo que se envió al banco: una factura está :guilabel:`Enviada por completo` cuando los lotes aprobados cubren su importe pendiente, y :guilabel:`Enviada parcialmente` cuando cubren solo una parte."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:51
+msgid ":guilabel:`Date`"
+msgstr ":guilabel:`Fecha`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:193
+msgid "File formats"
+msgstr "Formatos de archivo"
+
 #~ msgid "With the ``l10n_es_base_layer`` and ``l10n_es_aeat_integration`` modules (plus the OCA AEAT modelo modules you install), Spain-specific AEAT declarations and the official PGC annual accounts **are** available:"
 #~ msgstr "Con los módulos ``l10n_es_base_layer`` y ``l10n_es_aeat_integration`` (más los módulos OCA de modelos AEAT que instale), las declaraciones AEAT específicas de España y las cuentas anuales oficiales del PGC **están** disponibles:"
 

@@ -28826,6 +28826,373 @@ msgstr "Az ok a tranzakción és a kapcsolódó dokumentum csevegőjében (chatt
 msgid ":doc:`../fiscal_localizations/spain`"
 msgstr ":doc:`../fiscal_localizations/spain`"
 
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:3
+msgid "Batch bank transfers (Hungary)"
+msgstr "Kötegelt banki utalások (Magyarország)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:5
+msgid "The *Batch Bank Transfer* module prepares the **bank file** for paying many vendor bills at once. You collect the open bills in a *batch*, check the amounts and the expected bank balance, and click :guilabel:`Approve`: Odoo generates the transfer file in the format of your bank, which you upload in your online banking. The formats of the main Hungarian banks are supported."
+msgstr "A *Batch Bank Transfer* modul elkészíti a **bankfájlt** több szállítói számla egyszerre történő kifizetéséhez. A nyitott számlákat egy *kötegbe* gyűjti, ellenőrzi az összegeket és a várható bankegyenleget, majd kattintson a :guilabel:`Jóváhagyás` gombra: az Odoo a bankja formátumában előállítja az utalási fájlt, amelyet az internetbankban kell feltölteni. A főbb magyar bankok formátumai támogatottak."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:11
+msgid "The module generates the file and keeps track of which bills were sent to the bank. It does **not** register payments. The bills are paid as usual when the bank statement is imported and :doc:`reconciled <../bank/reconciliation>`. If your bank accepts SEPA files, use :doc:`payment orders <payment_orders>` instead."
+msgstr "A modul előállítja a fájlt, és nyilvántartja, hogy mely számlákat küldték el a banknak. **Nem** rögzít kifizetéseket. A számlák a szokásos módon egyenlítődnek ki, a bankkivonat importálásakor és :doc:`egyeztetésekor <../bank/reconciliation>`. Ha a bankja elfogad SEPA-fájlokat, használjon inkább :doc:`fizetési megbízásokat <payment_orders>`."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:16
+msgid ":ref:`Install <general/install>` the :guilabel:`Batch Bank Transfer` module (`eyssen_batch_bank_transfer`). It requires the Hungarian localization (`eyssen_l10n_hu`, see :doc:`../../fiscal_localizations/hungary`). Users need the :guilabel:`Invoicing` access right to create and edit batches; the read-only accounting access right can only read them. Batches are separate for every company."
+msgstr ":ref:`Telepítse <general/install>` a :guilabel:`Batch Bank Transfer` modult (`eyssen_batch_bank_transfer`). Szükséges hozzá a magyar lokalizáció (`eyssen_l10n_hu`, lásd :doc:`../../fiscal_localizations/hungary`). A kötegek létrehozásához és szerkesztéséhez a :guilabel:`Számlázás` hozzáférési jog szükséges; a csak olvasási könyvelési jog csak megtekinteni engedi őket. A kötegek vállalatonként különállóak."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:27
+msgid "The **bank account of your company** (:menuselection:`Accounting --> Configuration --> Bank Accounts`, or the :guilabel:`Bank Accounts` of the company contact) is filled in with its :guilabel:`Bank`, and the bank has its **BIC (SWIFT) code**. The BIC decides the :ref:`file format <accounting/batch-bank-transfer/formats>`. The largest Hungarian banks are loaded with the Hungarian localization."
+msgstr "A **vállalat bankszámlája** (:menuselection:`Könyvelés --> Konfiguráció --> Bankszámlák`, vagy a vállalati partner :guilabel:`Bankszámlák` listája) ki van töltve a :guilabel:`Bank` mezővel, és a banknak megvan a **BIC (SWIFT) kódja**. A BIC határozza meg a :ref:`fájlformátumot <accounting/batch-bank-transfer/formats>`. A legnagyobb magyar bankok a magyar lokalizációval töltődnek be."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:32
+msgid "The **vendors have a bank account** (IBAN or Hungarian account number), and the bills you want to pay are linked to it in the :guilabel:`Recipient Bank` field. A bill without a bank account can be added to a batch, but the batch cannot be approved."
+msgstr "A **szállítóknak van bankszámlájuk** (IBAN vagy magyar számlaszám), és a kifizetendő számlák a :guilabel:`Címzett bank` mezőben hozzá vannak rendelve. Bankszámla nélküli számla hozzáadható a köteghez, de a köteg nem hagyható jóvá."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:35
+msgid "The bills are **posted** and not fully paid."
+msgstr "A számlák **könyveltek**, és még nincsenek teljesen kifizetve."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:40
+msgid "Create a batch"
+msgstr "Köteg létrehozása"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:42
+msgid "Go to :menuselection:`Accounting --> Vendors --> Batch Bank Transfers` and click :guilabel:`New`. The batch is numbered automatically (for example *UTALASOK-000001*)."
+msgstr "Lépjen a :menuselection:`Könyvelés --> Beszállítók --> Kötegelt utalások` menüpontra, és kattintson az :guilabel:`Új` gombra. A köteg automatikusan kap sorszámot (például *UTALASOK-000001*)."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:52
+msgid "Creation date of the batch. It is replaced by the approval date when the batch is approved."
+msgstr "A köteg létrehozásának dátuma. Jóváhagyáskor a jóváhagyás dátuma váltja fel."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:53
+msgid ":guilabel:`Bank Value Date`"
+msgstr ":guilabel:`Banki értéknap`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:54
+msgid "Date on which the bank debits the transfers. It is **tomorrow** by default and cannot be earlier than today."
+msgstr "Az a nap, amelyen a bank terheli az utalásokat. Alapértelmezés szerint **holnap**, és nem lehet korábbi a mai napnál."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:56
+msgid ":guilabel:`Bank Account`"
+msgstr ":guilabel:`Bankszámla`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:57
+msgid "Bank account of your company that is debited (required). The :guilabel:`Currency` of the batch is the currency of this account; an account without a currency is treated as HUF."
+msgstr "A vállalat megterhelt bankszámlája (kötelező). A köteg :guilabel:`Pénznem` mezője ennek a számlának a pénzneme; a pénznem nélküli számla HUF-nak számít."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:82
+msgid "Add the bills"
+msgstr "Számlák hozzáadása"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:84
+msgid "Use one of the buttons of the draft batch. Only posted bills with an open amount, of the company and in the currency of the batch bank account, are loaded. The amount already sent to the bank in approved batches is subtracted, so a bill that has been fully sent is not proposed again, and a partly sent bill is proposed for the remaining amount."
+msgstr "Használja a piszkozat köteg egyik gombját. Csak a vállalat könyvelt, nyitott összegű számlái töltődnek be, a köteg bankszámlájának pénznemében. A jóváhagyott kötegekben már elküldött összeg levonásra kerül, így a teljesen elküldött számlát nem ajánlja fel újra, a részben elküldöttet pedig a hátralévő összegre."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:93
+msgid "Button"
+msgstr "Gomb"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:94
+msgid "Bills loaded"
+msgstr "Betöltött számlák"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:95
+msgid ":guilabel:`Load Overdue Invoices`"
+msgstr ":guilabel:`Lejárt számlák betöltése`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:96
+msgid "Bills whose due date is today or earlier."
+msgstr "Azok a számlák, amelyek határideje ma vagy korábbi."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:97
+msgid ":guilabel:`Due Within 14 Days and Overdue`"
+msgstr ":guilabel:`14 napon belüli és lejárt`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:98
+msgid "Bills due within the next 14 days, and the overdue ones."
+msgstr "A következő 14 napon belül esedékes és a lejárt számlák."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:99
+msgid ":guilabel:`Load Invoices by Due Date`"
+msgstr ":guilabel:`Számlák betöltése dátum alapján`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:103
+msgid ":guilabel:`Load All Invoices`"
+msgstr ":guilabel:`Összes számla betöltése`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:104
+msgid "All the open bills, whatever the due date."
+msgstr "Az összes nyitott számla, a határidőtől függetlenül."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:105
+msgid ":guilabel:`Load Invoices`"
+msgstr ":guilabel:`Számlák betöltése`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:106
+msgid "Opens the list of the bills so that you can pick them yourself: select the bills, then click :menuselection:`Actions --> Add Invoices to Batch Bank Transfer`. You are brought back to the batch."
+msgstr "Megnyitja a számlák listáját, hogy Ön válogassa ki őket: jelölje ki a számlákat, majd kattintson az :menuselection:`Akciók --> Számlák hozzáadása kötegelt utaláshoz` menüpontra. Ezután visszatér a köteghez."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:110
+msgid "To add bills that were **already sent to the bank** (for instance to repeat a transfer the bank rejected), select them in the :guilabel:`Load Invoices` list and click :menuselection:`Actions --> Add Previously Transferred Invoices to Batch Bank Transfer`: the line is created for the full amount of the bill."
+msgstr "Az **már elküldött** számlák hozzáadásához (például egy a bank által visszautasított utalás megismétléséhez) jelölje ki őket a :guilabel:`Számlák betöltése` listában, és kattintson az :menuselection:`Akciók --> Korábban elutalt számlák hozzáadása kötegelt utaláshoz` menüpontra: a tétel a számla teljes összegére jön létre."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:115
+msgid "You can also work from the list of vendor bills at any time: the :guilabel:`Bank Transfer` column shows whether a bill has been sent to the bank (:guilabel:`Not Sent`, :guilabel:`Partially Sent` or :guilabel:`Fully Sent`). Enable it with the optional columns selector if it is hidden."
+msgstr "A szállítói számlák listájából is dolgozhat: a :guilabel:`Banki utalás` oszlop megmutatja, hogy a számlát elküldték-e a banknak (:guilabel:`Nem volt`, :guilabel:`Részlegesen beküldve` vagy :guilabel:`Teljesen beküldve`). Ha rejtett, kapcsolja be az opcionális oszlopok választójával."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:130
+msgid "Check the lines"
+msgstr "A tételek ellenőrzése"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:132
+msgid "Every bill is a line of the batch. You can edit the following directly in the list:"
+msgstr "Minden számla a köteg egy tétele. A következőket közvetlenül a listában szerkesztheti:"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:134
+msgid ":guilabel:`Amount to Transfer`: the amount to pay. Lower it to pay a bill **partially**."
+msgstr ":guilabel:`Utalandó összeg`: a kifizetendő összeg. Csökkentse, ha a számlát **részben** szeretné kifizetni."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:135
+msgid ":guilabel:`Comment`: the message for the beneficiary. It is filled with the vendor reference and the payment reference of the bill."
+msgstr ":guilabel:`Megjegyzés`: a kedvezményezettnek szóló közlemény. A számla szállítói hivatkozásával és fizetési hivatkozásával töltődik ki."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:137
+msgid ":guilabel:`Selected`: marks the line, to move it to another batch (see below)."
+msgstr ":guilabel:`Kiválasztva`: megjelöli a tételt, hogy áthelyezhesse egy másik kötegbe (lásd alább)."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:139
+msgid "The :guilabel:`Transferred Amount` is what has already been sent to the bank for the bill in other approved batches. A line is shown in **red** when its amount and the transferred amount exceed the total of the bill, and in **orange** when the bill has no vendor bank account. The search box above the list filters the lines."
+msgstr "Az :guilabel:`Utalt összeg` az az összeg, amelyet a számlára már elküldtek a banknak más jóváhagyott kötegekben. A tétel **pirosan** jelenik meg, ha az összege és az utalt összeg meghaladja a számla végösszegét, és **narancssárgán**, ha a számlának nincs szállítói bankszámlája. A lista feletti keresőmező szűri a tételeket."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:144
+msgid ":guilabel:`Move Selected Invoices to New Batch` moves the :guilabel:`Selected` lines to a new draft batch with the same bank account, for instance to pay them on another day."
+msgstr ":guilabel:`Kijelölt számlák új kötegbe`: a :guilabel:`Kiválasztva` tételeket egy új, azonos bankszámlájú piszkozat kötegbe helyezi át, például hogy másik napon fizesse ki őket."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:146
+msgid ":guilabel:`Clear` removes all the lines of the batch (the bills are not modified)."
+msgstr ":guilabel:`Törlés`: eltávolítja a köteg összes tételét (a számlák nem módosulnak)."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:149
+msgid "Balance forecast"
+msgstr "Egyenleg-előrejelzés"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:151
+msgid "The block next to the lines helps you to check that the account can cover the transfers. The figures are calculated when the batch is saved, and the closing balance after the transfers is updated when you change the lines."
+msgstr "A tételek melletti blokk segít ellenőrizni, hogy a számlán van-e fedezet az utalásokra. Az értékek a köteg mentésekor számítódnak ki, az utalások utáni záró egyenleg pedig a tételek módosításakor frissül."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:159
+msgid "Figure"
+msgstr "Érték"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:160
+msgid "Meaning"
+msgstr "Jelentés"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:161
+msgid ":guilabel:`Bank Balance as of Date`"
+msgstr ":guilabel:`Bank egyenleg dátum állapot szerint`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:162
+msgid "Balance of the bank journal(s) of the account up to the date of the batch."
+msgstr "A számla banknaplóinak egyenlege a köteg dátumáig."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:163
+msgid ":guilabel:`Increase`"
+msgstr ":guilabel:`Növekedés`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:167
+msgid ":guilabel:`Decrease`"
+msgstr ":guilabel:`Csökkenés`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:171
+msgid ":guilabel:`Closing Balance at Date + 2 Weeks (Invoices)`"
+msgstr ":guilabel:`Záró dátum + 2 hét állapot szerint (számlák)`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:172
+msgid "Balance plus increase minus decrease: the balance if all the bills due within two weeks were paid."
+msgstr "Egyenleg plusz növekedés mínusz csökkenés: az egyenleg, ha a két héten belül esedékes összes számlát kifizetnék."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:174
+msgid ":guilabel:`Closing Balance at Date + 2 Weeks (Transfers)`"
+msgstr ":guilabel:`Záró tényleges dátum + 2 hét állapot szerint (utalás)`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:175
+msgid "Balance plus increase minus the total of **this batch**."
+msgstr "Egyenleg plusz növekedés mínusz **ennek a kötegnek** az összege."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:180
+msgid "Approve the batch and send the file"
+msgstr "A köteg jóváhagyása és a fájl elküldése"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:182
+msgid "Click :guilabel:`Approve`. Odoo checks the batch, generates the file, attaches it to the batch and downloads it. The status changes from :guilabel:`Draft` to :guilabel:`Sent to Bank`, the :guilabel:`Date` becomes today, and the lines can no longer be edited. Upload the file in your online banking and authorize the transfers there."
+msgstr "Kattintson a :guilabel:`Jóváhagyás` gombra. Az Odoo ellenőrzi a köteget, előállítja a fájlt, csatolja a köteghez, és letölti. Az állapot :guilabel:`Piszkozat`-ról :guilabel:`Bankba beküldve`-re változik, a :guilabel:`Dátum` a mai nap lesz, és a tételek már nem szerkeszthetők. Töltse fel a fájlt az internetbankban, és ott engedélyezze az utalásokat."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:187
+msgid "The batch cannot be approved, and an explicit message tells you why, when:"
+msgstr "A köteg nem hagyható jóvá, és egyértelmű üzenet jelzi az okot, ha:"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:189
+msgid "a bill has no vendor bank account (*No partner bank account set for invoice ...*);"
+msgstr "egy számlának nincs szállítói bankszámlája (*… számlánál nincs megadva a partner bankszámlaszáma.*);"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:198
+msgid "The format depends on the **BIC of the bank** of the company bank account selected on the batch. Any other bank gets the :guilabel:`UNG` file."
+msgstr "A formátum a köteghez kiválasztott vállalati bankszámla **bankjának BIC kódjától** függ. Bármely más bank az :guilabel:`UNG` fájlt kapja."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:205
+msgid "Bank (BIC)"
+msgstr "Bank (BIC)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:206
+msgid "HUF account"
+msgstr "HUF számla"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:207
+msgid "Foreign currency account"
+msgstr "Devizaszámla"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:209
+msgid "UniCredit Bank (BACXHUHB)"
+msgstr "UniCredit Bank (BACXHUHB)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:210
+msgid "`.PAY` file, named after the bank value date (`yymmdd.PAY`)"
+msgstr "`.PAY` fájl, a banki értéknapról elnevezve (`yymmdd.PAY`)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:211
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:219
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:223
+msgid "Not available"
+msgstr "Nem elérhető"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:212
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:224
+msgid "Amounts in whole forints."
+msgstr "Az összegek egész forintban."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:213
+msgid "OTP Bank (OTPVHUHB)"
+msgstr "OTP Bank (OTPVHUHB)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:214
+msgid "Electra XML file (`HUFTransactions`)"
+msgstr "Electra XML fájl (`HUFTransactions`)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:215
+msgid "Electra XML file (`DEVTransactions`)"
+msgstr "Electra XML fájl (`DEVTransactions`)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:216
+msgid "Encoded in ISO-8859-2. The file is named after the day of the approval (`yyyymmdd.xml`)."
+msgstr "ISO-8859-2 kódolású. A fájl a jóváhagyás napjáról kapja a nevét (`yyyymmdd.xml`)."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:217
+msgid "CIB Bank (CIBHHUHB)"
+msgstr "CIB Bank (CIBHHUHB)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:218
+msgid "CSV file (`yyyymmdd_HUF.csv`)"
+msgstr "CSV fájl (`yyyymmdd_HUF.csv`)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:221
+msgid "Any other bank"
+msgstr "Bármely más bank"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:222
+msgid "`.UNG` file (`UNyymmdd.UNG`)"
+msgstr "`.UNG` fájl (`UNyymmdd.UNG`)"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:226
+msgid "In the `.PAY` and `.UNG` files, the lines paid to the same vendor bank account are **combined** into one transfer (the amounts are added, and the comments joined and shortened to 96 characters), and the names, addresses and comments are written without accents."
+msgstr "A `.PAY` és az `.UNG` fájlban az azonos szállítói bankszámlára fizetendő tételek **egy utalásba vonódnak össze** (az összegek összeadódnak, a közleményeket egymás után fűzi, és 96 karakterre rövidíti), a neveket, címeket és közleményeket pedig ékezetek nélkül írja."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:231
+msgid "Undo"
+msgstr "Visszavonás"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:233
+msgid "Click :guilabel:`Undo` on a batch that has been sent to bank to cancel it: the attached files are deleted, the :guilabel:`Date` is cleared and the batch is a :guilabel:`Draft` again, so you can change it and generate a new file. Nothing is booked in the accounting by the module, so there is nothing else to reverse. Undo a batch only if the file was **not** processed by the bank."
+msgstr "Kattintson a :guilabel:`Visszavonás` gombra egy bankba beküldött kötegen a visszavonásához: a csatolt fájlok törlődnek, a :guilabel:`Dátum` törlődik, és a köteg ismét :guilabel:`Piszkozat`, így módosíthatja, és új fájlt állíthat elő. A modul nem könyvel semmit, így nincs mit visszafordítani. Csak akkor vonjon vissza egy köteget, ha a bank a fájlt **nem** dolgozta fel."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:241
+msgid "After the bank has processed the transfers"
+msgstr "Miután a bank feldolgozta az utalásokat"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:251
+msgid ":doc:`../../fiscal_localizations/hungary`"
+msgstr ":doc:`../../fiscal_localizations/hungary`"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:63
+msgid ":guilabel:`Batch Bank Transfer`"
+msgstr ":guilabel:`Batch Bank Transfer`"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:64
+msgid "`eyssen_batch_bank_transfer`"
+msgstr "`eyssen_batch_bank_transfer`"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:65
+msgid ":doc:`Batch bank transfers <../accounting/payments/batch_bank_transfers>`: collects the open vendor bills in a batch and generates the transfer file in the format of the Hungarian banks (UNG, PAY, Electra, CIB)."
+msgstr ":doc:`Kötegelt banki utalások <../accounting/payments/batch_bank_transfers>`: a nyitott szállítói számlákat kötegbe gyűjti, és a magyar bankok formátumában (UNG, PAY, Electra, CIB) előállítja az utalási fájlt."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:59
+msgid ":guilabel:`Vendor Credit Notes`"
+msgstr ":guilabel:`Beszállítói jóváírások`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:60
+msgid "Also load the vendor credit notes (the *Refunds* of the vendors). Off by default."
+msgstr "A szállítói jóváíró számlák (a szállítók *Visszatérítések* menüpontja) is betöltődnek. Alapértelmezés szerint ki van kapcsolva."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:61
+msgid ":guilabel:`Customer Credit Notes`"
+msgstr ":guilabel:`Vevői jóváírások`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:62
+msgid "Also load the customer credit notes (refunds that you pay back to customers). On by default."
+msgstr "A vevői jóváíró számlák (a vevőknek visszafizetendő összegek) is betöltődnek. Alapértelmezés szerint be van kapcsolva."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:65
+msgid "The defaults of the two credit note options are system parameters (`1` = on, `0` = off): `eyssen_batch_bank_transfer.config.default_customer_credit` for :guilabel:`Vendor Credit Notes` and `eyssen_batch_bank_transfer.config.default_business_credit` for :guilabel:`Customer Credit Notes`. Edit them in :menuselection:`Settings --> Technical --> System Parameters` in :ref:`developer mode <developer-mode>`."
+msgstr "A két jóváíró számla beállítás alapértelmezett értéke rendszerparaméter (`1` = be, `0` = ki): az `eyssen_batch_bank_transfer.config.default_customer_credit` a :guilabel:`Beszállítói jóváírások`, az `eyssen_batch_bank_transfer.config.default_business_credit` a :guilabel:`Vevői jóváírások` beállításé. :ref:`Fejlesztői módban <developer-mode>` a :menuselection:`Beállítások --> Technikai --> Rendszer paraméterek` menüpontban szerkeszthetők."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:100
+msgid "Bills due on or before the date you enter in the :guilabel:`Due On or Before` field."
+msgstr "A :guilabel:`Lejárat` mezőben megadott napon vagy korábban esedékes számlák."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:162
+msgid "Amounts expected to come in: the open customer invoices in the currency of the account, overdue, due in the first week and due in the second week after the date."
+msgstr "A várhatóan beérkező összegek: a számla pénznemében nyitott vevői számlák, lejárt, a dátum utáni első héten és a második héten esedékes."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:165
+msgid "Open vendor bills in the currency of the account: overdue, due in the first week and due in the second week after the date (click the arrow to expand the details)."
+msgstr "A számla pénznemében nyitott szállítói számlák: lejárt, a dátum utáni első héten és a második héten esedékes (a részletekhez kattintson a nyílra)."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:186
+msgid "the currency of the bank account does not fit the format (for example, a foreign-currency account with a format that only supports HUF);"
+msgstr "a bankszámla pénzneme nem illik a formátumhoz (például devizaszámla olyan formátummal, amely csak HUF-ot támogat);"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:188
+msgid "for a foreign-currency transfer from a CIB account, the bank of the vendor has no SWIFT/BIC code."
+msgstr "devizás utalásnál CIB-számláról a szállító bankjának nincs SWIFT/BIC kódja."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:217
+msgid "Semicolon-separated, named after the day of the approval. HUF amounts in whole forints, foreign currency amounts with two decimals. A foreign-currency transfer needs the SWIFT/BIC code of the vendor's bank."
+msgstr "Pontosvesszővel tagolt, a jóváhagyás napjáról elnevezve. A HUF összegek egész forintban, a devizaösszegek két tizedesjeggyel. Devizás utaláshoz a szállító bankjának SWIFT/BIC kódja szükséges."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:242
+msgid "Import the bank statement (:doc:`../bank/statement_import`) and :doc:`reconcile <../bank/reconciliation>` the debits with the bills, as for any other payment. The :guilabel:`Bank Transfer` column of the vendor bills shows what was sent to the bank: a bill is :guilabel:`Fully Sent` when the approved batches cover its open amount, and :guilabel:`Partially Sent` when they cover only a part of it."
+msgstr "Importálja a bankkivonatot (:doc:`../bank/statement_import`), és :doc:`egyeztesse <../bank/reconciliation>` a terheléseket a számlákkal, mint bármely más kifizetésnél. A szállítói számlák :guilabel:`Banki utalás` oszlopa megmutatja, mi ment el a bankba: a számla :guilabel:`Teljesen beküldve`, ha a jóváhagyott kötegek fedezik a nyitott összegét, és :guilabel:`Részlegesen beküldve`, ha csak egy részét."
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:51
+msgid ":guilabel:`Date`"
+msgstr ":guilabel:`Dátum`"
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:193
+msgid "File formats"
+msgstr "Fájlformátumok"
+
 #~ msgid "With the ``l10n_es_base_layer`` and ``l10n_es_aeat_integration`` modules (plus the OCA AEAT modelo modules you install), Spain-specific AEAT declarations and the official PGC annual accounts **are** available:"
 #~ msgstr "A ``l10n_es_base_layer`` és a ``l10n_es_aeat_integration`` modulokkal (valamint a telepített OCA AEAT modelo modulokkal) a spanyol AEAT-bevallások és a hivatalos PGC éves beszámoló **elérhetők**:"
 

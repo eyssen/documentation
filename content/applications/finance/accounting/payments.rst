@@ -387,6 +387,7 @@ payment, click :guilabel:`Set To Draft` (only possible if no payment has been cr
    payments/follow_up
    payments/pay_checks
    payments/payment_orders
+   payments/batch_bank_transfers
    payments/sepa_mandate_signature
    payments/spanish_remittances
    payments/forecast

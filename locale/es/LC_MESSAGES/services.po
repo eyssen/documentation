@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-18 11:05+0000\n"
+"POT-Creation-Date: 2026-10-01 22:57+0200\n"
 "PO-Revision-Date: 2025-11-17 20:10+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Spanish <https://translate.odoo.com/projects/odoo-18-doc/services/es/>\n"
@@ -46,7 +46,7 @@ msgstr "Crear tareas de servicio de campo"
 msgid "Manual task creation"
 msgstr "Creación manual de tareas"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:108 ../../content/applications/services/equipment/getting_started.rst:22
+#: ../../content/applications/services/equipment/equipment_printer.rst:111 ../../content/applications/services/equipment/getting_started.rst:27
 msgid "Click :guilabel:`New`."
 msgstr "Haga clic en :guilabel:`Nuevo`."
 
@@ -1027,8 +1027,8 @@ msgid "Equipment Management"
 msgstr "Gestión de equipos"
 
 #: ../../content/applications/services/equipment.rst:7
-msgid "**Equipment Management** allows you to manage and track all types of physical equipment — printers, measuring devices, IT infrastructure, forklifts, cranes, and more — from a single centralized hub. It connects equipment to maintenance, invoicing, purchasing, fleet, stock, and project management, giving you a complete overview of each asset's lifecycle."
-msgstr "**Gestión de equipos** le permite gestionar y realizar el seguimiento de todo tipo de equipos físicos (impresoras, dispositivos de medición, infraestructura de TI, carretillas elevadoras, grúas y mucho más) desde un único centro centralizado. Conecta los equipos con el mantenimiento, la facturación, las compras, la flota, las existencias y la gestión de proyectos, lo que le ofrece una visión completa del ciclo de vida de cada activo."
+msgid "**Equipment Management** allows you to manage and track all types of physical equipment — printers, measuring devices, your own reference standards (:ref:`etalons <equipment/etalons>`), IT infrastructure, forklifts, cranes, and more — from a single centralized hub. It connects equipment to maintenance, invoicing, purchasing, fleet, stock, and project management, giving you a complete overview of each asset's lifecycle."
+msgstr "**Gestión de equipos** le permite gestionar y realizar el seguimiento de todo tipo de equipos físicos —impresoras, equipos de medición, sus propios patrones de referencia (:ref:`patrones <equipment/etalons>`), infraestructura de TI, carretillas elevadoras, grúas y mucho más— desde un único centro centralizado. Conecta los equipos con el mantenimiento, la facturación, las compras, la flota, las existencias y la gestión de proyectos, lo que le ofrece una visión completa del ciclo de vida de cada activo."
 
 #: ../../content/applications/services/equipment/documents.rst:3
 msgid "Documents"
@@ -1036,7 +1036,7 @@ msgstr "Documentos"
 
 #: ../../content/applications/services/equipment/documents.rst:5
 msgid "Each equipment can have multiple documents attached — manuals, certificates, calibration records, warranty documents, service books, and more."
-msgstr "Cada equipo puede tener varios documentos adjuntos: manuales, certificados, registros de calibración, documentos de garantía, libros de mantenimiento y mucho más."
+msgstr "Cada equipo puede tener varios documentos adjuntos: manuales, certificados, registros de calibración, documentos de garantía, libros de servicio y mucho más."
 
 #: ../../content/applications/services/equipment/documents.rst:17
 msgid "Document types"
@@ -1064,7 +1064,7 @@ msgstr "**Garantía**: documentación de garantía."
 
 #: ../../content/applications/services/equipment/documents.rst:25
 msgid "**Service Book**: Service history and maintenance logs."
-msgstr "**Libro de mantenimiento**: historial de servicio y registros de mantenimiento."
+msgstr "**Libro de servicio**: historial de servicio y registros de mantenimiento."
 
 #: ../../content/applications/services/equipment/documents.rst:26
 msgid "**Other**: Any other document type."
@@ -1080,7 +1080,7 @@ msgstr "Los documentos se pueden añadir directamente en el formulario del equip
 
 #: ../../content/applications/services/equipment/documents.rst:33
 msgid "Click :guilabel:`Add a line` in the documents table."
-msgstr "Haga clic en :guilabel:`Agregar una línea` en la tabla de documentos."
+msgstr "Haga clic en :guilabel:`Añadir una línea` en la tabla de documentos."
 
 #: ../../content/applications/services/equipment/documents.rst:34
 msgid "Enter a **Name** for the document."
@@ -1092,7 +1092,7 @@ msgstr "Seleccione el **Tipo**."
 
 #: ../../content/applications/services/equipment/documents.rst:36
 msgid "Set the **Expiry Date** if applicable (especially important for certificates, calibrations, and warranties)."
-msgstr "Establezca la **Fecha de vencimiento** si corresponde (especialmente importante para certificados, calibraciones y garantías)."
+msgstr "Establezca la **Fecha de caducidad** si corresponde (especialmente importante para certificados, calibraciones y garantías)."
 
 #: ../../content/applications/services/equipment/documents.rst:38
 msgid "Upload the **File**."
@@ -1112,7 +1112,7 @@ msgstr "Seguimiento de vencimientos"
 
 #: ../../content/applications/services/equipment/documents.rst:47
 msgid "Documents with an **Expiry Date** are automatically monitored by a daily scheduled job. When a document's expiry date is within the configured warning period (default: 30 days), the system creates an **activity** on the equipment record to alert the assigned user."
-msgstr "Los documentos con una **Fecha de vencimiento** se supervisan automáticamente mediante una tarea programada diaria. Cuando la fecha de vencimiento de un documento se encuentra dentro del periodo de aviso configurado (30 días de forma predeterminada), el sistema crea una **actividad** en el registro del equipo para avisar al usuario asignado."
+msgstr "Los documentos con una **Fecha de caducidad** se supervisan automáticamente mediante una tarea programada diaria. Cuando la fecha de caducidad de un documento se encuentra dentro del periodo de aviso configurado (30 días de forma predeterminada), el sistema crea una **actividad** en el registro del equipo para avisar al usuario asignado."
 
 #: ../../content/applications/services/equipment/documents.rst:51
 msgid "**How it works:**"
@@ -1120,7 +1120,7 @@ msgstr "**Cómo funciona:**"
 
 #: ../../content/applications/services/equipment/documents.rst:53
 msgid "The cron runs daily and checks all documents where the expiry date falls within the warning period."
-msgstr "La tarea automatizada se ejecuta a diario y comprueba todos los documentos cuya fecha de vencimiento se encuentra dentro del periodo de aviso."
+msgstr "La tarea automatizada se ejecuta a diario y comprueba todos los documentos cuya fecha de caducidad se encuentra dentro del periodo de aviso."
 
 #: ../../content/applications/services/equipment/documents.rst:55
 msgid "Only equipment in *Active* state is checked."
@@ -1128,7 +1128,7 @@ msgstr "Solo se comprueban los equipos en estado *Activo*."
 
 #: ../../content/applications/services/equipment/documents.rst:56
 msgid "A warning activity is created for each expiring document, assigned to the equipment's first assignee (or the company admin as fallback)."
-msgstr "Se crea una actividad de aviso para cada documento próximo a vencer, asignada al primer responsable del equipo (o al administrador de la empresa como opción alternativa)."
+msgstr "Se crea una actividad de aviso para cada documento próximo a vencer, asignada a la primera persona asignada del equipo (o al administrador de la empresa como opción alternativa)."
 
 #: ../../content/applications/services/equipment/documents.rst:58
 msgid "Duplicate activities are prevented — if a warning activity already exists for the same document, no new one is created."
@@ -1139,8 +1139,8 @@ msgid "**Configuring the warning period:**"
 msgstr "**Configurar el periodo de aviso:**"
 
 #: ../../content/applications/services/equipment/documents.rst:63
-msgid "Navigate to :menuselection:`Equipment Management --> Settings --> Configuration --> Automation --> Document Expiry Warning` and set the number of days. The default is 30 days."
-msgstr "Vaya a :menuselection:`Gestión de equipos --> Ajustes --> Configuración --> Automatización --> Aviso de vencimiento de documentos` y establezca el número de días. El valor predeterminado es 30 días."
+msgid "Navigate to :menuselection:`Equipment Management --> Settings --> Configuration --> Automation --> Document Expiry Warning Days` and set the number of days. The default is 30 days."
+msgstr "Vaya a :menuselection:`Gestión de equipos --> Ajustes --> Configuración --> Automatización --> Días de aviso de caducidad del documento` y establezca el número de días. El valor predeterminado es 30 días."
 
 #: ../../content/applications/services/equipment/documents.rst:67
 msgid "The expiry tracking applies to all document types, not just calibration documents. If you have a warranty expiring in 30 days, you'll receive a notification too."
@@ -1156,11 +1156,11 @@ msgstr "La vista de lista de documentos independiente (accesible desde el botón
 
 #: ../../content/applications/services/equipment/documents.rst:75
 msgid "**Filter: Expiring (30 days)**: Shows documents expiring within the next 30 days."
-msgstr "**Filtro: Próximos a vencer (30 días)**: muestra los documentos que vencen en los próximos 30 días."
+msgstr "**Filtro: Por caducar (30 días)**: muestra los documentos que vencen en los próximos 30 días."
 
 #: ../../content/applications/services/equipment/documents.rst:76
 msgid "**Filter: Expired**: Shows documents past their expiry date."
-msgstr "**Filtro: Vencidos**: muestra los documentos cuya fecha de vencimiento ya ha pasado."
+msgstr "**Filtro: Expirado**: muestra los documentos cuya fecha de caducidad ya ha pasado."
 
 #: ../../content/applications/services/equipment/documents.rst:77
 msgid "**Group By: Type**: Groups documents by their type."
@@ -1191,10 +1191,10 @@ msgid "**Create Ticket** button: Creates a project task linked to this equipment
 msgstr "Botón **Crear ticket**: crea una tarea de proyecto vinculada a este equipo. Solo es visible cuando el equipo está *Activo* y tiene al menos un proyecto asignado."
 
 #: ../../content/applications/services/equipment/equipment_form.rst:23
-msgid "**Status bar**: Click to change the state (*Draft* → *Active* → *Inactive*)."
-msgstr "**Barra de estado**: haga clic para cambiar el estado (*Borrador* → *Activo* → *Inactivo*)."
+msgid "**Status bar**: Click to change the state (*Draft* → *Active* → *Inactive* → *Scrapped*)."
+msgstr "**Barra de estado**: haga clic para cambiar el estado (*Borrador* → *Activo* → *Inactivo* → *Desechado*)."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:26 ../../content/applications/services/equipment/equipment_measuring.rst:195 ../../content/applications/services/equipment/equipment_printer.rst:120
+#: ../../content/applications/services/equipment/equipment_form.rst:26 ../../content/applications/services/equipment/equipment_measuring.rst:252 ../../content/applications/services/equipment/equipment_printer.rst:123
 msgid "Stat buttons"
 msgstr "Botones estadísticos"
 
@@ -1226,593 +1226,717 @@ msgstr "**Documentos**: muestra el número de documentos adjuntos. Haga clic par
 msgid "**Fleet**: Only visible when a fleet vehicle is linked. Click to open the fleet vehicle form."
 msgstr "**Flota**: solo es visible cuando hay un vehículo de flota vinculado. Haga clic para abrir el formulario del vehículo de flota."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:41
+#: ../../content/applications/services/equipment/equipment_form.rst:40
+msgid "Depending on the :guilabel:`Category`, the Printers and Measuring Devices sub-modules add further buttons and a tab of their own: see :doc:`equipment_printer` and :doc:`equipment_measuring`."
+msgstr "Según la :guilabel:`Categoría`, los submódulos Impresoras y Equipos de medición añaden más botones y una pestaña propia: consulte :doc:`equipment_printer` y :doc:`equipment_measuring`."
+
+#: ../../content/applications/services/equipment/equipment_form.rst:44
 msgid "Main fields"
 msgstr "Campos principales"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:43
+#: ../../content/applications/services/equipment/equipment_form.rst:46
 msgid "The main section contains core equipment data organized in groups:"
 msgstr "La sección principal contiene los datos esenciales del equipo organizados en grupos:"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:45
+#: ../../content/applications/services/equipment/equipment_form.rst:48
 msgid "**Title area:**"
 msgstr "**Área de título:**"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:47
-msgid "**Name**: The name of the equipment."
-msgstr "**Nombre**: el nombre del equipo."
+#: ../../content/applications/services/equipment/equipment_form.rst:50
+msgid "**Name**: The name of the equipment. For measuring devices and etalons, it cannot be typed: it is built from the serial number and the model, and it is updated when they change (see :ref:`equipment/derived-name`)."
+msgstr "**Nombre**: el nombre del equipo. En los equipos de medición y los patrones no se puede introducir manualmente: se genera a partir del número de serie y del modelo, y se actualiza cuando estos cambian (consulte :ref:`equipment/derived-name`)."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:48
+#: ../../content/applications/services/equipment/equipment_form.rst:53
 msgid "**Equipment ID**: A unique reference generated automatically from a sequence. It can be adjusted, and it is never copied when an equipment is duplicated."
 msgstr "**ID del equipo**: una referencia única generada automáticamente a partir de una secuencia. Se puede ajustar y nunca se copia cuando se duplica un equipo."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:50
+#: ../../content/applications/services/equipment/equipment_form.rst:55
 msgid "**Serial Number**: The manufacturer's serial number."
 msgstr "**Número de serie**: El número de serie del fabricante."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:51
+#: ../../content/applications/services/equipment/equipment_form.rst:56
 msgid "**Internal ID**: A customer-specific internal identifier, for cases where the customer tracks the equipment under a number of their own."
 msgstr "**ID interno**: Un identificador interno específico del cliente, para los casos en que el cliente hace seguimiento del equipo con un número propio."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:53
+#: ../../content/applications/services/equipment/equipment_form.rst:58
 msgid "**Stock Lot**: The lot or serial number record in **Inventory**, when the equipment was delivered from your own stock."
-msgstr "**Lote de existencias**: El registro del lote o número de serie en **Inventario**, cuando el equipo se entregó desde sus propias existencias."
+msgstr "**Lote de stock**: El registro del lote o número de serie en **Inventario**, cuando el equipo se entregó desde sus propias existencias."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:55 ../../content/applications/services/equipment/getting_started.rst:42
+#: ../../content/applications/services/equipment/equipment_form.rst:60 ../../content/applications/services/equipment/getting_started.rst:59
 msgid "**MAC Address**: For network-connected equipment."
 msgstr "**Dirección MAC**: Para equipos conectados a la red."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:57
+#: ../../content/applications/services/equipment/equipment_form.rst:63
+msgid "Wherever an equipment is selected, for example in the :guilabel:`Equipment` field of a task, a printer counter, or a calibration, you can type its name, :guilabel:`Serial Number`, :guilabel:`Internal ID`, or :guilabel:`Equipment ID` to find it. The same applies when records such as repair orders are searched by :guilabel:`Equipment`."
+msgstr "Allí donde se selecciona un equipo, por ejemplo, en el campo :guilabel:`Equipo` de una tarea, de un contador de impresora o de una calibración, puede escribir su nombre, su :guilabel:`Número de serie`, su :guilabel:`ID interno` o su :guilabel:`ID del equipo` para encontrarlo. Lo mismo ocurre cuando se buscan registros, como las órdenes de reparación, por :guilabel:`Equipo`."
+
+#: ../../content/applications/services/equipment/equipment_form.rst:68
 msgid "**Left column:**"
 msgstr "**Columna izquierda:**"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:59
-msgid "**Subscription Service**: If the equipment is part of a subscription."
-msgstr "**Servicio de suscripción**: Si el equipo forma parte de una suscripción."
+#: ../../content/applications/services/equipment/equipment_form.rst:70
+msgid "**Subscription**: If the equipment is part of a subscription."
+msgstr "**Suscripción**: Si el equipo forma parte de una suscripción."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:60
+#: ../../content/applications/services/equipment/equipment_form.rst:71
 msgid "**Customer**: The customer using the equipment."
 msgstr "**Cliente**: El cliente que utiliza el equipo."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:61
-msgid "**Owner**: The legal owner."
-msgstr "**Propietario**: El propietario legal."
+#: ../../content/applications/services/equipment/equipment_form.rst:72
+msgid "**Owner**: The legal owner. On a new etalon, the customer and the owner both default to your own company (see :ref:`equipment/etalons`)."
+msgstr "**Propietario**: El propietario legal. En un patrón nuevo, tanto el cliente como el propietario se establecen de forma predeterminada en su propia empresa (consulte :ref:`equipment/etalons`)."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:62
+#: ../../content/applications/services/equipment/equipment_form.rst:74
 msgid "**Assignees**: Users responsible for this equipment."
-msgstr "**Asignados**: Los usuarios responsables de este equipo."
+msgstr "**Personas asignadas**: Los usuarios responsables de este equipo."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:63 ../../content/applications/services/equipment/getting_started.rst:43
+#: ../../content/applications/services/equipment/equipment_form.rst:75 ../../content/applications/services/equipment/getting_started.rst:60
 msgid "**Sales Team**: The responsible sales team."
 msgstr "**Equipo de ventas**: El equipo de ventas responsable."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:64
+#: ../../content/applications/services/equipment/equipment_form.rst:76
 msgid "**Projects**: Projects linked to this equipment for ticket management."
 msgstr "**Proyectos**: Proyectos vinculados a este equipo para la gestión de incidencias."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:65
+#: ../../content/applications/services/equipment/equipment_form.rst:77
 msgid "**Tags**: Categorization tags."
 msgstr "**Etiquetas**: Etiquetas de categorización."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:67
+#: ../../content/applications/services/equipment/equipment_form.rst:79
 msgid "**Right column:**"
 msgstr "**Columna derecha:**"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:69
-msgid "**Type**: General, Printer, Measuring Device, etc."
-msgstr "**Tipo**: General, Impresora, Dispositivo de medición, etc."
+#: ../../content/applications/services/equipment/equipment_form.rst:81
+msgid "**Category**: :guilabel:`General`; with the sub-modules, also :guilabel:`Printer` (see :doc:`equipment_printer`), :guilabel:`Measuring Device`, and :guilabel:`Etalon` (see :doc:`equipment_measuring`). The category decides which models can be selected, which buttons and tabs are shown, and whether the name is typed or built automatically."
+msgstr "**Categoría**: :guilabel:`General`; con los submódulos, también :guilabel:`Impresora` (consulte :doc:`equipment_printer`), :guilabel:`Equipo de medición` y :guilabel:`Patrón` (consulte :doc:`equipment_measuring`). La categoría determina qué modelos se pueden seleccionar, qué botones y pestañas se muestran y si el nombre se introduce manualmente o se genera automáticamente."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:70
+#: ../../content/applications/services/equipment/equipment_form.rst:85
 msgid "**Manufacturer**: The equipment brand."
 msgstr "**Fabricante**: La marca del equipo."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:71
-msgid "**Model**: The specific model (filtered by brand and type)."
-msgstr "**Modelo**: El modelo específico (filtrado por marca y tipo)."
+#: ../../content/applications/services/equipment/equipment_form.rst:86
+msgid "**Model**: The specific model. Only the models of the equipment's category, and of its manufacturer if one is set, can be selected. A model created from this field (:guilabel:`Create` or :guilabel:`Create and edit...` in the drop-down menu) gets the equipment's category and manufacturer (see :ref:`equipment/models`)."
+msgstr "**Modelo**: El modelo específico. Solo se pueden seleccionar los modelos de la categoría del equipo y, si se ha indicado uno, de su fabricante. Un modelo creado desde este campo (:guilabel:`Crear` o :guilabel:`Crear y editar...` en el menú desplegable) recibe la categoría y el fabricante del equipo (consulte :ref:`equipment/models`)."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:72
+#: ../../content/applications/services/equipment/equipment_form.rst:90
 msgid "**Product**: Automatically set from the model's linked product."
 msgstr "**Producto**: Se establece automáticamente a partir del producto vinculado al modelo."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:73
+#: ../../content/applications/services/equipment/equipment_form.rst:91
 msgid "**Product Family**: The product family classification."
-msgstr "**Familia de productos**: La clasificación de la familia de productos."
+msgstr "**Familia de producto**: La clasificación por familia de producto."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:74
+#: ../../content/applications/services/equipment/equipment_form.rst:92
 msgid "**Production Year**: Year of manufacture."
-msgstr "**Año de fabricación**: El año de fabricación."
+msgstr "**Año de producción**: El año de fabricación."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:75
+#: ../../content/applications/services/equipment/equipment_form.rst:93
 msgid "**Warranty Expiration**: Warranty end date."
 msgstr "**Vencimiento de la garantía**: La fecha de finalización de la garantía."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:77
+#: ../../content/applications/services/equipment/equipment_form.rst:95
 msgid "**Location group:**"
 msgstr "**Grupo de ubicación:**"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:79
+#: ../../content/applications/services/equipment/equipment_form.rst:97
 msgid "**Location**: Delivery address of the customer."
 msgstr "**Ubicación**: La dirección de entrega del cliente."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:80
+#: ../../content/applications/services/equipment/equipment_form.rst:98
 msgid "**Location Name** and **Address**: Auto-filled from the selected location."
-msgstr "**Nombre de la ubicación** y **Dirección**: Se completan automáticamente a partir de la ubicación seleccionada."
+msgstr "**Nombre de ubicación** y **Dirección**: Se completan automáticamente a partir de la ubicación seleccionada."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:82
+#: ../../content/applications/services/equipment/equipment_form.rst:100
 msgid "**Contact group:**"
 msgstr "**Grupo de contacto:**"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:84
+#: ../../content/applications/services/equipment/equipment_form.rst:102
 msgid "**Contact**: Contact person at the customer site."
 msgstr "**Contacto**: La persona de contacto en las instalaciones del cliente."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:85
+#: ../../content/applications/services/equipment/equipment_form.rst:103
 msgid "**Contact Name**, **Email**, **Phone**: Auto-filled from the selected contact."
 msgstr "**Nombre del contacto**, **Correo electrónico**, **Teléfono**: Se completan automáticamente a partir del contacto seleccionado."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:88
+#: ../../content/applications/services/equipment/equipment_form.rst:106
 msgid "Tabs"
 msgstr "Pestañas"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:98
+#: ../../content/applications/services/equipment/equipment_form.rst:116
 msgid "The notebook section contains multiple tabs:"
 msgstr "La sección de pestañas contiene varias pestañas:"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:101
+#: ../../content/applications/services/equipment/equipment_form.rst:119
 msgid "Subscription tab"
 msgstr "Pestaña de suscripción"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:103
+#: ../../content/applications/services/equipment/equipment_form.rst:121
 msgid "Only visible when a subscription service is linked. Shows pricing information and the invoicing period."
 msgstr "Solo visible cuando hay un servicio de suscripción vinculado. Muestra la información de precios y el período de facturación."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:107
+#: ../../content/applications/services/equipment/equipment_form.rst:125
 msgid "Description tab"
 msgstr "Pestaña de descripción"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:109
+#: ../../content/applications/services/equipment/equipment_form.rst:127
 msgid "A rich text editor for detailed notes about the equipment. Supports collaborative editing."
 msgstr "Un editor de texto enriquecido para notas detalladas sobre el equipo. Admite la edición colaborativa."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:112
+#: ../../content/applications/services/equipment/equipment_form.rst:130
 msgid "Maintenance tab"
 msgstr "Pestaña de mantenimiento"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:122
+#: ../../content/applications/services/equipment/equipment_form.rst:140
 msgid "**Maintenance Equipment**: Link to the corresponding ``maintenance.equipment`` record. If not yet linked, click :guilabel:`Create Maintenance Equipment` to create or link one automatically."
 msgstr "**Equipo de mantenimiento**: Enlace al registro ``maintenance.equipment`` correspondiente. Si aún no está vinculado, haga clic en :guilabel:`Crear equipo de mantenimiento` para crear o vincular uno automáticamente."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:124
+#: ../../content/applications/services/equipment/equipment_form.rst:142
 msgid "**MTBF (days)**: Mean Time Between Failure, computed from maintenance history."
 msgstr "**MTBF (días)**: Tiempo medio entre fallos, calculado a partir del historial de mantenimiento."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:125
+#: ../../content/applications/services/equipment/equipment_form.rst:143
 msgid "**MTTR (days)**: Mean Time To Repair, computed from maintenance history."
 msgstr "**MTTR (días)**: Tiempo medio de reparación, calculado a partir del historial de mantenimiento."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:126
+#: ../../content/applications/services/equipment/equipment_form.rst:144
 msgid "**Last Failure**: Date of the most recent corrective maintenance."
 msgstr "**Último fallo**: La fecha del mantenimiento correctivo más reciente."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:127
+#: ../../content/applications/services/equipment/equipment_form.rst:145
 msgid "**Est. Next Failure**: Estimated date of the next failure based on MTBF."
-msgstr "**Próximo fallo est.**: La fecha estimada del próximo fallo según el MTBF."
+msgstr "**Próximo fallo estimado**: La fecha estimada del próximo fallo según el MTBF."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:128
+#: ../../content/applications/services/equipment/equipment_form.rst:146
 msgid "**Maintenance Requests**: Inline list of all maintenance requests for this equipment."
 msgstr "**Solicitudes de mantenimiento**: Lista en línea de todas las solicitudes de mantenimiento de este equipo."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:131
+#: ../../content/applications/services/equipment/equipment_form.rst:149
 msgid "Finance tab"
 msgstr "Pestaña de finanzas"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:141
+#: ../../content/applications/services/equipment/equipment_form.rst:159
 msgid "**Analytic Account**: The dedicated analytic account for this equipment. Can be auto-created when the equipment is activated (see :doc:`settings`)."
 msgstr "**Cuenta analítica**: La cuenta analítica dedicada a este equipo. Puede crearse automáticamente al activar el equipo (consulte :doc:`settings`)."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:143
+#: ../../content/applications/services/equipment/equipment_form.rst:161
 msgid "**Invoice Total**: Sum of all customer invoices linked through the analytic account."
-msgstr "**Total facturado**: La suma de todas las facturas de cliente vinculadas a través de la cuenta analítica."
+msgstr "**Total de la factura**: La suma de todas las facturas de cliente vinculadas a través de la cuenta analítica."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:144
+#: ../../content/applications/services/equipment/equipment_form.rst:162
 msgid "**Purchase Total**: Sum of all purchase orders linked through the analytic account."
-msgstr "**Total de compras**: La suma de todas las órdenes de compra vinculadas a través de la cuenta analítica."
+msgstr "**Total de compra**: La suma de todas las órdenes de compra vinculadas a través de la cuenta analítica."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:145
+#: ../../content/applications/services/equipment/equipment_form.rst:163
 msgid "**Margin**: Invoice Total minus Purchase Total."
-msgstr "**Margen**: Total facturado menos total de compras."
+msgstr "**Margen**: Total de la factura menos Total de compra."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:146
+#: ../../content/applications/services/equipment/equipment_form.rst:164
 msgid "**Recent Invoices**: Inline list of invoices with date, amount, and payment status."
 msgstr "**Facturas recientes**: Lista en línea de facturas con fecha, importe y estado de pago."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:149
+#: ../../content/applications/services/equipment/equipment_form.rst:167
 msgid "Documents tab"
 msgstr "Pestaña de documentos"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:159
+#: ../../content/applications/services/equipment/equipment_form.rst:177
 msgid "An inline editable list of documents attached to the equipment:"
 msgstr "Una lista editable en línea de los documentos adjuntos al equipo:"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:161
+#: ../../content/applications/services/equipment/equipment_form.rst:179
 msgid "**Name**: Document title."
 msgstr "**Nombre**: El título del documento."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:162
+#: ../../content/applications/services/equipment/equipment_form.rst:180
 msgid "**Type**: Manual, Certificate, Calibration, Warranty, Service Book, or Other."
 msgstr "**Tipo**: Manual, Certificado, Calibración, Garantía, Libro de servicio u Otro."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:163
+#: ../../content/applications/services/equipment/equipment_form.rst:181
 msgid "**Expiry Date**: When the document expires. A daily cron job creates warning activities for documents expiring within the configured number of days (default: 30)."
 msgstr "**Fecha de caducidad**: Cuándo caduca el documento. Una tarea cron diaria crea actividades de aviso para los documentos que caducan dentro del número de días configurado (por defecto: 30)."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:165
+#: ../../content/applications/services/equipment/equipment_form.rst:183
 msgid "**File**: The attached file (upload/download)."
 msgstr "**Archivo**: El archivo adjunto (subir/descargar)."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:166
+#: ../../content/applications/services/equipment/equipment_form.rst:184
 msgid "**Notes**: Additional notes."
 msgstr "**Notas**: Notas adicionales."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:169
+#: ../../content/applications/services/equipment/equipment_form.rst:187
 msgid "Fleet tab"
 msgstr "Pestaña de flota"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:179
+#: ../../content/applications/services/equipment/equipment_form.rst:197
 msgid "Only visible when a fleet vehicle is linked. Shows:"
 msgstr "Solo visible cuando hay un vehículo de flota vinculado. Muestra:"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:181
+#: ../../content/applications/services/equipment/equipment_form.rst:199
 msgid "**Fleet Vehicle**: Link to the ``fleet.vehicle`` record."
 msgstr "**Vehículo de flota**: Enlace al registro ``fleet.vehicle``."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:182
+#: ../../content/applications/services/equipment/equipment_form.rst:200
 msgid "**License Plate**: From the fleet vehicle."
 msgstr "**Matrícula**: Del vehículo de flota."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:183
+#: ../../content/applications/services/equipment/equipment_form.rst:201
 msgid "**Odometer**: Latest odometer reading."
-msgstr "**Cuentakilómetros**: La última lectura del cuentakilómetros."
+msgstr "**Odómetro**: La última lectura del odómetro."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:184
+#: ../../content/applications/services/equipment/equipment_form.rst:202
 msgid "**Last Service Date**: Date of the most recent fleet service."
 msgstr "**Fecha del último servicio**: La fecha del servicio de flota más reciente."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:185
+#: ../../content/applications/services/equipment/equipment_form.rst:203
 msgid "**Contract State**: Current fleet contract status."
 msgstr "**Estado del contrato**: El estado actual del contrato de la flota."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:188
+#: ../../content/applications/services/equipment/equipment_form.rst:206
 msgid "List and search views"
 msgstr "Vistas de lista y búsqueda"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:198
+#: ../../content/applications/services/equipment/equipment_form.rst:216
 msgid "The list view shows all equipment with optional columns that can be toggled:"
 msgstr "La vista de lista muestra todo el equipo con columnas opcionales que se pueden activar o desactivar:"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:200
-msgid "Production Year, Warranty Expiration, Product Family"
-msgstr "Año de fabricación, Vencimiento de la garantía, Familia de productos"
+#: ../../content/applications/services/equipment/equipment_form.rst:218
+msgid "Internal ID, Production Year, Warranty Expiration, Product Family"
+msgstr "ID interno, Año de producción, Vencimiento de la garantía, Familia de producto"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:201
-msgid "Open Maintenance count, Invoice count, Document count"
-msgstr "Número de mantenimientos abiertos, Número de facturas, Número de documentos"
+#: ../../content/applications/services/equipment/equipment_form.rst:219
+msgid "Open Maint., Invoice Count, Document Count"
+msgstr "Mant. abiertos, Número de facturas, Número de documentos"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:202
-msgid "Calibration Status (when Measuring Devices module is installed)"
-msgstr "Estado de calibración (cuando el módulo Dispositivos de medición está instalado)"
+#: ../../content/applications/services/equipment/equipment_form.rst:220
+msgid "Calibration (with the Measuring Devices sub-module): the calibration status, filled for measuring devices only"
+msgstr "Calibración (con el submódulo Equipos de medición): el estado de la calibración, que solo se rellena en los equipos de medición"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:204
+#: ../../content/applications/services/equipment/equipment_form.rst:223
+msgid "**Search fields:**"
+msgstr "**Campos de búsqueda:**"
+
+#: ../../content/applications/services/equipment/equipment_form.rst:225
+msgid "Name, Equipment ID, Serial Number, Internal ID, Customer, Manufacturer, Model, Tags, Projects, Product Family"
+msgstr "Nombre, ID del equipo, Número de serie, ID interno, Cliente, Fabricante, Modelo, Etiquetas, Proyectos, Familia de producto"
+
+#: ../../content/applications/services/equipment/equipment_form.rst:228
 msgid "**Search filters:**"
 msgstr "**Filtros de búsqueda:**"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:206
+#: ../../content/applications/services/equipment/equipment_form.rst:230
+msgid "**General**: Equipment of the :guilabel:`General` category."
+msgstr "**General**: Equipos de la categoría :guilabel:`General`."
+
+#: ../../content/applications/services/equipment/equipment_form.rst:231
+msgid "**Draft**, **Active**, **Inactive**, **Scrapped**: Equipment in the given state."
+msgstr "**Borrador**, **Activo**, **Inactivo**, **Desechado**: Equipos en el estado correspondiente."
+
+#: ../../content/applications/services/equipment/equipment_form.rst:232
+msgid "**Archived**: Archived equipment."
+msgstr "**Archivado**: Equipos archivados."
+
+#: ../../content/applications/services/equipment/equipment_form.rst:233
 msgid "**Open Maintenance**: Equipment with open maintenance requests."
 msgstr "**Mantenimiento abierto**: Equipos con solicitudes de mantenimiento abiertas."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:207
+#: ../../content/applications/services/equipment/equipment_form.rst:234
 msgid "**Expiring Documents**: Equipment with documents expiring within 30 days."
 msgstr "**Documentos por caducar**: Equipos con documentos que caducan dentro de 30 días."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:208
-msgid "**Calibration Due** / **Calibration Overdue**: Available when the Measuring Devices module is installed."
-msgstr "**Calibración pendiente** / **Calibración vencida**: Disponible cuando el módulo Dispositivos de medición está instalado."
+#: ../../content/applications/services/equipment/equipment_form.rst:235
+msgid "**Calibration Due** / **Calibration Overdue**: Available with the Measuring Devices sub-module; they only return measuring devices."
+msgstr "**Calibración pendiente** / **Calibración vencida**: Disponibles con el submódulo Equipos de medición; solo devuelven equipos de medición."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:211
+#: ../../content/applications/services/equipment/equipment_form.rst:238
 msgid "**Group By options:**"
 msgstr "**Opciones de agrupar por:**"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:213
-msgid "Type, State, Customer, Brand, Model, Product, Tag, Project"
-msgstr "Tipo, Estado, Cliente, Marca, Modelo, Producto, Etiqueta, Proyecto"
+#: ../../content/applications/services/equipment/equipment_form.rst:240
+msgid "Category, State, Customer, Brand, Model, Product, Tag, Project"
+msgstr "Categoría, Estado, Cliente, Marca, Modelo, Producto, Etiqueta, Proyecto"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:214
+#: ../../content/applications/services/equipment/equipment_form.rst:241
 msgid "Product Family, Analytic Account"
-msgstr "Familia de productos, Cuenta analítica"
+msgstr "Familia de producto, Cuenta analítica"
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:3
 msgid "Measuring Devices"
-msgstr "Dispositivos de medición"
+msgstr "Equipos de medición"
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:5
-msgid "The **Measuring Devices** sub-module (``equipment_measuring``) extends Equipment Management with features specific to measuring instruments such as coordinate measuring machines (CMMs), optical measurement systems, and other precision devices. It adds calibration tracking, software and hardware information, and sensor management."
-msgstr "El submódulo **Dispositivos de medición** (``equipment_measuring``) amplía Gestión de equipos con funciones específicas para instrumentos de medición, como máquinas de medición por coordenadas (MMC), sistemas de medición óptica y otros dispositivos de precisión. Añade el seguimiento de calibraciones, la información de software y hardware, y la gestión de sensores."
+msgid "The **Measuring Devices** sub-module extends Equipment Management with features specific to measuring instruments such as coordinate measuring machines (CMMs), optical measurement systems, and other precision devices. It adds calibration tracking, software and hardware information, sensor management, and the :guilabel:`Etalon` category for your company's own reference standards (see :ref:`equipment/etalons`). Measuring devices and etalons are named automatically after their serial number and model (see :ref:`equipment/derived-name`)."
+msgstr "El submódulo **Equipos de medición** amplía Gestión de equipos con funciones específicas para instrumentos de medición, como máquinas de medición por coordenadas (MMC), sistemas de medición óptica y otros dispositivos de precisión. Añade el seguimiento de calibraciones, la información de software y hardware, la gestión de sensores y la categoría :guilabel:`Patrón` para los patrones de referencia propios de su empresa (consulte :ref:`equipment/etalons`). Los equipos de medición y los patrones reciben automáticamente un nombre formado por su número de serie y su modelo (consulte :ref:`equipment/derived-name`)."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:19 ../../content/applications/services/equipment/equipment_printer.rst:18 ../../content/applications/services/equipment/getting_started.rst:6
+#: ../../content/applications/services/equipment/equipment_measuring.rst:21 ../../content/applications/services/equipment/equipment_printer.rst:17 ../../content/applications/services/equipment/getting_started.rst:6
 msgid "Installation"
 msgstr "Instalación"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:21
-msgid "Enable the Measuring Devices module from :menuselection:`Equipment Management --> Settings --> Configuration`, by ticking :guilabel:`Measuring Devices` in the equipment types section, or install ``equipment_measuring`` from the Apps menu. The module requires the *Repairs* app, which is installed along with it: calibrations are recorded as :ref:`repair orders <repairs/repair_orders/calibration>`."
-msgstr "Active el módulo Dispositivos de medición desde :menuselection:`Gestión de equipos --> Ajustes --> Configuración`, marcando :guilabel:`Equipos de medición` en la sección de tipos de equipo, o instale ``equipment_measuring`` desde el menú Aplicaciones. El módulo requiere la aplicación *Reparaciones*, que se instala junto con él: las calibraciones se registran como :ref:`órdenes de reparación <repairs/repair_orders/calibration>`."
+#: ../../content/applications/services/equipment/equipment_measuring.rst:23
+msgid "Enable the Measuring Devices module from :menuselection:`Equipment Management --> Settings --> Configuration`, by ticking :guilabel:`Measuring Devices` in the :guilabel:`Equipment Types` section, or install *Equipment Management - Measuring Devices* from the :menuselection:`Apps` menu (remove the :guilabel:`Apps` filter to find it). The module requires the *Repairs* app, which is installed along with it: calibrations are recorded as :ref:`repair orders <repairs/repair_orders/calibration>`."
+msgstr "Active el módulo Equipos de medición desde :menuselection:`Gestión de equipos --> Ajustes --> Configuración`, marcando :guilabel:`Equipos de medición` en la sección :guilabel:`Tipos de equipo`, o instale *Equipment Management - Measuring Devices* desde el menú :menuselection:`Aplicaciones` (quite el filtro :guilabel:`Aplicaciones` para encontrarlo). El módulo requiere la aplicación *Reparaciones*, que se instala junto con él: las calibraciones se registran como :ref:`órdenes de reparación <repairs/repair_orders/calibration>`."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:28
+#: ../../content/applications/services/equipment/equipment_measuring.rst:31
 msgid "Dedicated measuring views"
 msgstr "Vistas dedicadas de medición"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:30
-msgid "Once installed, a **Measuring Devices** menu appears in the Equipment Management navigation:"
-msgstr "Una vez instalado, aparece un menú **Dispositivos de medición** en la navegación de Gestión de equipos:"
+#: ../../content/applications/services/equipment/equipment_measuring.rst:33
+msgid "Once installed, the **Measuring Devices** and **Etalons** menus appear in the Equipment Management navigation:"
+msgstr "Una vez instalado, aparecen los menús **Equipos de medición** y **Patrones** en la navegación de Gestión de equipos:"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:32
-msgid ":menuselection:`Equipment Management --> Measuring Devices --> Measuring Devices`: shows only measuring-type equipment with specific columns (calibration status, next calibration date, product family, serial number)."
-msgstr ":menuselection:`Gestión de equipos --> Equipos de medición --> Equipos de medición`: muestra solo el equipo de tipo medición con columnas específicas (estado de calibración, próxima fecha de calibración, familia de productos, número de serie)."
+#: ../../content/applications/services/equipment/equipment_measuring.rst:36
+msgid ":menuselection:`Equipment Management --> Measuring Devices --> Measuring Devices`: shows only the equipment of the :guilabel:`Measuring Device` category. The list has no name column: each device is identified by its :guilabel:`Manufacturer`, :guilabel:`Product Family`, :guilabel:`Model`, and :guilabel:`Serial Number`, followed by the :guilabel:`Customer`, :guilabel:`Product`, :guilabel:`Calibration`, :guilabel:`Next Calibration Date`, :guilabel:`Software Serial Number`, :guilabel:`Assignees`, :guilabel:`Activities`, :guilabel:`Tags`, and :guilabel:`State` columns. :guilabel:`Internal ID`, :guilabel:`Software Version`, and :guilabel:`Sensors` are optional columns, hidden by default."
+msgstr ":menuselection:`Gestión de equipos --> Equipos de medición --> Equipos de medición`: muestra solo los equipos de la categoría :guilabel:`Equipo de medición`. La lista no tiene columna de nombre: cada equipo se identifica por su :guilabel:`Fabricante`, :guilabel:`Familia de producto`, :guilabel:`Modelo` y :guilabel:`Número de serie`, seguidos de las columnas :guilabel:`Cliente`, :guilabel:`Producto`, :guilabel:`Calibración`, :guilabel:`Fecha de la próxima calibración`, :guilabel:`Número de serie del software`, :guilabel:`Personas asignadas`, :guilabel:`Actividades`, :guilabel:`Etiquetas` y :guilabel:`Estado`. :guilabel:`ID interno`, :guilabel:`Versión del software` y :guilabel:`Sensores` son columnas opcionales, ocultas de forma predeterminada."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:35
+#: ../../content/applications/services/equipment/equipment_measuring.rst:44
 msgid ":menuselection:`Equipment Management --> Measuring Devices --> Calibrations`: lists all the calibrations of all measuring devices."
-msgstr ":menuselection:`Gestión de equipos --> Equipos de medición --> Calibraciones`: enumera todas las calibraciones de todos los dispositivos de medición."
+msgstr ":menuselection:`Gestión de equipos --> Equipos de medición --> Calibraciones`: enumera todas las calibraciones de todos los equipos de medición."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:38
-msgid "Creating an equipment from the Measuring Devices menu automatically sets the type to *Measuring Device*. The *Measuring Device* type is also available on the equipment models (:menuselection:`Equipment Management --> Settings --> Models`)."
-msgstr "Al crear un equipo desde el menú Dispositivos de medición, el tipo se establece automáticamente en *Dispositivo de medición*. El tipo *Dispositivo de medición* también está disponible en los modelos de equipo (:menuselection:`Gestión de equipos --> Ajustes --> Modelos`)."
+#: ../../content/applications/services/equipment/equipment_measuring.rst:46
+msgid ":menuselection:`Equipment Management --> Etalons`: your company's own reference standards (see :ref:`equipment/etalons`)."
+msgstr ":menuselection:`Gestión de equipos --> Patrones`: los patrones de referencia propios de su empresa (consulte :ref:`equipment/etalons`)."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:43
+#: ../../content/applications/services/equipment/equipment_measuring.rst:49
+msgid "Creating an equipment from the Measuring Devices menu sets its :guilabel:`Category` to :guilabel:`Measuring Device`, and its name is built automatically (see :ref:`equipment/derived-name`). The :guilabel:`Measuring Device` and :guilabel:`Etalon` categories are also available on the equipment models, in :menuselection:`Equipment Management --> Settings --> Models` (see :ref:`equipment/models`): the :guilabel:`Model` field of a device only offers the models of its category."
+msgstr "Al crear un equipo desde el menú Equipos de medición, su :guilabel:`Categoría` se establece en :guilabel:`Equipo de medición` y su nombre se genera automáticamente (consulte :ref:`equipment/derived-name`). Las categorías :guilabel:`Equipo de medición` y :guilabel:`Patrón` también están disponibles en los modelos de equipo, en :menuselection:`Gestión de equipos --> Ajustes --> Modelos` (consulte :ref:`equipment/models`): el campo :guilabel:`Modelo` de un equipo de medición solo ofrece los modelos de su categoría."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:59
+msgid "Names of measuring devices and etalons"
+msgstr "Nombres de los equipos de medición y los patrones"
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:61
+msgid "For the :guilabel:`Measuring Device` and :guilabel:`Etalon` categories, the name at the top of the form cannot be typed: it is built from the :guilabel:`Serial Number`, the :guilabel:`Model`, the :guilabel:`Manufacturer`, and the :guilabel:`Product Family`, and it is updated automatically when one of them changes, also when a model, a manufacturer, or a product family is renamed."
+msgstr "En las categorías :guilabel:`Equipo de medición` y :guilabel:`Patrón`, el nombre de la parte superior del formulario no se puede introducir manualmente: se genera a partir del :guilabel:`Número de serie`, el :guilabel:`Modelo`, el :guilabel:`Fabricante` y la :guilabel:`Familia de producto`, y se actualiza automáticamente cuando cambia alguno de ellos, también cuando se cambia el nombre de un modelo, un fabricante o una familia de producto."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:66
+msgid "The name is built as follows, for example with the manufacturer *Zeiss*, the product family *CMM*, the model *Contura*, and the serial number *CT-2019-0043*:"
+msgstr "El nombre se genera de la siguiente manera, por ejemplo, con el fabricante *Zeiss*, la familia de producto *CMM*, el modelo *Contura* y el número de serie *CT-2019-0043*:"
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:69
+msgid "with a serial number and a model: *<Serial Number> - <Model>*, e.g., ``CT-2019-0043 - Contura``;"
+msgstr "con número de serie y modelo: *<Número de serie> - <Modelo>*, por ejemplo, ``CT-2019-0043 - Contura``;"
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:70
+msgid "with a serial number but no model: *<Serial Number> - <Manufacturer> <Product Family>*, e.g., ``CT-2019-0043 - Zeiss CMM``, or the serial number alone if these are empty as well;"
+msgstr "con número de serie, pero sin modelo: *<Número de serie> - <Fabricante> <Familia de producto>*, por ejemplo, ``CT-2019-0043 - Zeiss CMM``, o solo el número de serie si estos también están vacíos;"
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:72
+msgid "without a serial number: *<Manufacturer> <Model>*, e.g., ``Zeiss Contura``, or, without a model either, *<Manufacturer> <Product Family>*, e.g., ``Zeiss CMM``;"
+msgstr "sin número de serie: *<Fabricante> <Modelo>*, por ejemplo, ``Zeiss Contura``, o, si tampoco hay modelo, *<Fabricante> <Familia de producto>*, por ejemplo, ``Zeiss CMM``;"
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:74
+msgid "with none of these: the :guilabel:`Equipment ID`, e.g., ``EQ/0042``."
+msgstr "sin ninguno de ellos: el :guilabel:`ID del equipo`, por ejemplo, ``EQ/0042``."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:76
+msgid "A name supplied in another way, for example in an import file, is replaced by the built name as well."
+msgstr "Un nombre proporcionado de otra forma, por ejemplo, en un archivo de importación, también se sustituye por el nombre generado."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:79
+msgid "The equipment of the other categories, such as :guilabel:`General` or :guilabel:`Printer`, keeps a typed name. When an equipment is switched to :guilabel:`Measuring Device` or :guilabel:`Etalon`, its name is replaced by the built one; when it is switched back to another category, it keeps its last name, which can then be edited again."
+msgstr "Los equipos de las demás categorías, como :guilabel:`General` o :guilabel:`Impresora`, conservan un nombre introducido manualmente. Cuando un equipo se cambia a :guilabel:`Equipo de medición` o :guilabel:`Patrón`, su nombre se sustituye por el generado; cuando se vuelve a cambiar a otra categoría, conserva su último nombre, que entonces se puede volver a editar."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:84
+msgid "As the name repeats the serial number and the model, the Measuring Devices and Etalons lists have no name column."
+msgstr "Como el nombre repite el número de serie y el modelo, las listas Equipos de medición y Patrones no tienen columna de nombre."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:88
 msgid "Measuring tab"
 msgstr "Pestaña de medición"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:53
-msgid "When an equipment has type *Measuring Device*, a dedicated :guilabel:`Measuring` tab appears on the form with the following sections:"
-msgstr "Cuando un equipo tiene el tipo *Dispositivo de medición*, aparece una pestaña dedicada :guilabel:`Medición` en el formulario con las siguientes secciones:"
+#: ../../content/applications/services/equipment/equipment_measuring.rst:98
+msgid "When the :guilabel:`Category` of an equipment is :guilabel:`Measuring Device`, a dedicated :guilabel:`Measuring` tab appears on the form (etalons do not have it), with the following sections:"
+msgstr "Cuando la :guilabel:`Categoría` de un equipo es :guilabel:`Equipo de medición`, aparece en el formulario una pestaña dedicada :guilabel:`Medición` (los patrones no la tienen), con las siguientes secciones:"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:57
+#: ../../content/applications/services/equipment/equipment_measuring.rst:102
 msgid "Calibration"
 msgstr "Calibración"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:59
+#: ../../content/applications/services/equipment/equipment_measuring.rst:104
 msgid ":guilabel:`Last Calibration Date`: the calibration date of the most recent **finished** calibration of the equipment (repair order in the :guilabel:`Repaired` status). Cannot be edited directly."
 msgstr ":guilabel:`Fecha de última calibración`: la fecha de calibración de la calibración **finalizada** más reciente del equipo (orden de reparación en el estado :guilabel:`Reparado`). No se puede editar directamente."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:62
+#: ../../content/applications/services/equipment/equipment_measuring.rst:107
 msgid ":guilabel:`Last Calibration Date (Manual)`: only displayed as long as the equipment has no calibration. Enter here the date of the last calibration performed before the equipment was recorded in the database; it is used as last calibration date until a first calibration is finished."
 msgstr ":guilabel:`Fecha de última calibración (manual)`: solo se muestra mientras el equipo no tenga ninguna calibración. Introduzca aquí la fecha de la última calibración realizada antes de que el equipo se registrara en la base de datos; se utiliza como fecha de la última calibración hasta que se finalice una primera calibración."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:66
+#: ../../content/applications/services/equipment/equipment_measuring.rst:111
 msgid ":guilabel:`Next Calibration Date`: computed as the last calibration date plus the calibration period. Read-only, and empty as long as one of the two is missing."
 msgstr ":guilabel:`Fecha de la próxima calibración`: se calcula como la fecha de la última calibración más el período de calibración. Es de solo lectura y permanece vacía mientras falte uno de los dos datos."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:68
+#: ../../content/applications/services/equipment/equipment_measuring.rst:113
 msgid ":guilabel:`Calibration Period (months)`: how often the equipment must be calibrated. Set manually."
 msgstr ":guilabel:`Periodo de calibración (meses)`: con qué frecuencia debe calibrarse el equipo. Se establece manualmente."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:69
+#: ../../content/applications/services/equipment/equipment_measuring.rst:114
 msgid ":guilabel:`Calibration Status`: a badge computed from the next calibration date every time the equipment is displayed:"
 msgstr ":guilabel:`Estado de la calibración`: una insignia que se calcula a partir de la próxima fecha de calibración cada vez que se muestra el equipo:"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:72
+#: ../../content/applications/services/equipment/equipment_measuring.rst:117
 msgid ":guilabel:`OK` (green): the next calibration is more than 30 days away."
-msgstr ":guilabel:`Aceptar` (verde): a la próxima calibración le faltan más de 30 días."
+msgstr ":guilabel:`OK` (verde): a la próxima calibración le faltan más de 30 días."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:73
+#: ../../content/applications/services/equipment/equipment_measuring.rst:118
 msgid ":guilabel:`Warning` (yellow): the next calibration is within 30 days."
 msgstr ":guilabel:`Advertencia` (amarillo): la próxima calibración es dentro de 30 días."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:74
+#: ../../content/applications/services/equipment/equipment_measuring.rst:119
 msgid ":guilabel:`Overdue` (red): the calibration date has passed, or there is no next calibration date."
 msgstr ":guilabel:`Vencida` (rojo): la fecha de calibración ya pasó, o no hay próxima fecha de calibración."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:78
+#: ../../content/applications/services/equipment/equipment_measuring.rst:122
+msgid "Only measuring devices have a calibration status: it stays empty for every other category, etalons included."
+msgstr "Solo los equipos de medición tienen estado de la calibración: queda vacío en todas las demás categorías, incluidos los patrones."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:126
 msgid "Software"
 msgstr "Software"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:80
+#: ../../content/applications/services/equipment/equipment_measuring.rst:128
 msgid ":guilabel:`Software Modules`: free-text description of the installed software modules."
 msgstr ":guilabel:`Módulos de software`: descripción de texto libre de los módulos de software instalados."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:81
+#: ../../content/applications/services/equipment/equipment_measuring.rst:129
 msgid ":guilabel:`Software Serial Number`: the license serial number."
 msgstr ":guilabel:`Número de serie del software`: el número de serie de la licencia."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:82
+#: ../../content/applications/services/equipment/equipment_measuring.rst:130
 msgid ":guilabel:`Software Version`: the current software version."
 msgstr ":guilabel:`Versión del software`: la versión actual del software."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:85
+#: ../../content/applications/services/equipment/equipment_measuring.rst:133
 msgid "Hardware"
 msgstr "Hardware"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:87
+#: ../../content/applications/services/equipment/equipment_measuring.rst:135
 msgid ":guilabel:`Hardware Keylock`: the hardware keylock number (dongle/license key)."
 msgstr ":guilabel:`Bloqueo de hardware por llave`: el número de la llave de hardware (dongle/clave de licencia)."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:90
+#: ../../content/applications/services/equipment/equipment_measuring.rst:138
 msgid "Characteristics"
 msgstr "Características"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:92
+#: ../../content/applications/services/equipment/equipment_measuring.rst:140
 msgid "A rich text field for technical specifications, measurement ranges, accuracy specifications, and other characteristics of the measuring device."
-msgstr "Un campo de texto enriquecido para las especificaciones técnicas, los rangos de medición, las especificaciones de precisión y otras características del dispositivo de medición."
+msgstr "Un campo de texto enriquecido para las especificaciones técnicas, los rangos de medición, las especificaciones de precisión y otras características del equipo de medición."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:96
+#: ../../content/applications/services/equipment/equipment_measuring.rst:144
 msgid "Sensors"
 msgstr "Sensores"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:106
+#: ../../content/applications/services/equipment/equipment_measuring.rst:154
 msgid "An inline editable list of sensors attached to the measuring device:"
-msgstr "Una lista editable en línea de los sensores conectados al dispositivo de medición:"
+msgstr "Una lista editable en línea de los sensores conectados al equipo de medición:"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:108
+#: ../../content/applications/services/equipment/equipment_measuring.rst:156
 msgid ":guilabel:`Name`: sensor name (e.g., \"Optical Sensor\", \"Touch Probe SP25M\")."
 msgstr ":guilabel:`Nombre`: el nombre del sensor (por ejemplo, «Sensor óptico», «Sonda de contacto SP25M»)."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:109
+#: ../../content/applications/services/equipment/equipment_measuring.rst:157
 msgid ":guilabel:`Serial Number`: the sensor's serial number for tracking and warranty purposes."
 msgstr ":guilabel:`Número de serie`: el número de serie del sensor para fines de seguimiento y garantía."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:110
-msgid ":guilabel:`Type`: sensor type (free text, e.g., \"Optical\", \"Tactile\", \"Chromatic Focus Point\")."
-msgstr ":guilabel:`Tipo`: el tipo de sensor (texto libre, por ejemplo, «Óptico», «Táctil», «Punto de enfoque cromático»)."
+#: ../../content/applications/services/equipment/equipment_measuring.rst:158
+msgid ":guilabel:`Type`: sensor type (free text, e.g., \"Optical\", \"Tactile\", \"Chromatic Focus Point\"); optional column, hidden by default."
+msgstr ":guilabel:`Tipo`: el tipo de sensor (texto libre, por ejemplo, «Óptico», «Táctil», «Punto de enfoque cromático»); columna opcional, oculta de forma predeterminada."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:111
-msgid ":guilabel:`Notes`: additional notes (optional column)."
-msgstr ":guilabel:`Notas`: notas adicionales (columna opcional)."
+#: ../../content/applications/services/equipment/equipment_measuring.rst:160
+msgid ":guilabel:`Notes`: additional notes; optional column, hidden by default."
+msgstr ":guilabel:`Notas`: notas adicionales; columna opcional, oculta de forma predeterminada."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:113
-msgid "Click the :guilabel:`Sensors` stat button to view sensors in a dedicated list view."
-msgstr "Haga clic en el botón estadístico :guilabel:`Sensores` para ver los sensores en una vista de lista dedicada."
+#: ../../content/applications/services/equipment/equipment_measuring.rst:162
+msgid "To show an optional column, click the :icon:`oi-settings-adjust` :guilabel:`(settings adjust)` icon at the far-right of the column titles."
+msgstr "Para mostrar una columna opcional, haga clic en el icono :icon:`oi-settings-adjust` :guilabel:`(ajustes de configuración)` situado en el extremo derecho de los títulos de las columnas."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:116
+#: ../../content/applications/services/equipment/equipment_measuring.rst:165
+msgid "Click the :guilabel:`Sensors` stat button to view sensors in a dedicated list view, with the same optional columns."
+msgstr "Haga clic en el botón estadístico :guilabel:`Sensores` para ver los sensores en una vista de lista dedicada, con las mismas columnas opcionales."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:169
 msgid "Calibration management"
 msgstr "Gestión de calibraciones"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:126
+#: ../../content/applications/services/equipment/equipment_measuring.rst:179
 msgid "A calibration is a **repair order** of the *Repairs* app on which the :guilabel:`Calibration` checkbox is ticked. It therefore follows the usual repair workflow (parts, operations, invoicing), and additionally carries the calibration data and a certificate number. The complete calibration history of each measuring device is made of its calibration repair orders."
-msgstr "Una calibración es una **orden de reparación** de la aplicación *Reparaciones* en la que se ha marcado la casilla :guilabel:`Calibración`. Por lo tanto, sigue el flujo de trabajo habitual de reparación (piezas, operaciones, facturación) y, además, incluye los datos de calibración y un número de certificado. El historial completo de calibraciones de cada dispositivo de medición está formado por sus órdenes de reparación de calibración."
+msgstr "Una calibración es una **orden de reparación** de la aplicación *Reparaciones* en la que se ha marcado la casilla :guilabel:`Calibración`. Por lo tanto, sigue el flujo de trabajo habitual de reparación (piezas, operaciones, facturación) y, además, incluye los datos de calibración y un número de certificado. El historial completo de calibraciones de cada equipo de medición está formado por sus órdenes de reparación de calibración."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:132
+#: ../../content/applications/services/equipment/equipment_measuring.rst:185
 msgid "Creating a calibration"
 msgstr "Crear una calibración"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:142
+#: ../../content/applications/services/equipment/equipment_measuring.rst:195
 msgid "Open the measuring device, and click :guilabel:`Create Calibration` in the header. The button is available on :guilabel:`Active` and :guilabel:`Inactive` equipment. A new repair order opens, with :guilabel:`Calibration` ticked, and the equipment, its product, and its customer filled in."
-msgstr "Abra el dispositivo de medición y haga clic en :guilabel:`Crear calibración` en el encabezado. El botón está disponible tanto en equipos :guilabel:`Activo` como :guilabel:`Inactivo`. Se abre una nueva orden de reparación con la casilla :guilabel:`Calibración` marcada y con el equipo, su producto y su cliente ya completados."
+msgstr "Abra el equipo de medición y haga clic en :guilabel:`Crear calibración` en el encabezado. El botón está disponible tanto en equipos :guilabel:`Activo` como :guilabel:`Inactivo`. Se abre una nueva orden de reparación con la casilla :guilabel:`Calibración` marcada y con el equipo, su producto y su cliente ya completados."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:146
-msgid "Alternatively, click :guilabel:`New` in :menuselection:`Equipment Management --> Measuring Devices --> Calibrations`, or tick :guilabel:`Calibration` on any repair order, and select the :guilabel:`Equipment` (only measuring devices can be selected)."
-msgstr "También puede hacer clic en :guilabel:`Nuevo` en :menuselection:`Gestión de equipos --> Equipos de medición --> Calibraciones`, o marcar :guilabel:`Calibración` en cualquier orden de reparación y seleccionar el :guilabel:`Equipo` (solo se pueden seleccionar dispositivos de medición)."
+#: ../../content/applications/services/equipment/equipment_measuring.rst:199
+msgid "Alternatively, click :guilabel:`New` in :menuselection:`Equipment Management --> Measuring Devices --> Calibrations`, or tick :guilabel:`Calibration` on any repair order, and select the :guilabel:`Equipment` (only measuring devices can be selected, not etalons; type the device's name, serial number, internal ID, or equipment ID to find it)."
+msgstr "También puede hacer clic en :guilabel:`Nuevo` en :menuselection:`Gestión de equipos --> Equipos de medición --> Calibraciones`, o marcar :guilabel:`Calibración` en cualquier orden de reparación, y seleccionar el :guilabel:`Equipo` (solo se pueden seleccionar equipos de medición, no patrones; para encontrarlo, escriba su nombre, su número de serie, su ID interno o su ID del equipo)."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:150
+#: ../../content/applications/services/equipment/equipment_measuring.rst:204
 msgid "Fill in the :guilabel:`Calibration` group:"
 msgstr "Complete el grupo :guilabel:`Calibración`:"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:152
+#: ../../content/applications/services/equipment/equipment_measuring.rst:206
 msgid ":guilabel:`Calibration Date`: the date the calibration is performed (defaults to today);"
 msgstr ":guilabel:`Fecha de calibración`: la fecha en la que se realiza la calibración (por defecto, hoy);"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:153
+#: ../../content/applications/services/equipment/equipment_measuring.rst:207
 msgid ":guilabel:`Calibration Quality`: :guilabel:`Accredited` or :guilabel:`Werks` (required);"
 msgstr ":guilabel:`Calidad de la calibración`: :guilabel:`Acreditado` o :guilabel:`Werks` (obligatorio);"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:154
+#: ../../content/applications/services/equipment/equipment_measuring.rst:208
 msgid ":guilabel:`Result`: :guilabel:`Pass`, :guilabel:`Fail`, :guilabel:`Conditional Pass`, or :guilabel:`Conditional Fail`;"
-msgstr ":guilabel:`Resultado`: :guilabel:`Apto`, :guilabel:`No apto`, :guilabel:`Aprobado condicional` o :guilabel:`Fallo condicional`;"
+msgstr ":guilabel:`Resultado`: :guilabel:`Apto`, :guilabel:`No apto`, :guilabel:`Apto condicional` o :guilabel:`No apto condicional`;"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:156
+#: ../../content/applications/services/equipment/equipment_measuring.rst:210
 msgid ":guilabel:`Performed By`: the person or organization performing the calibration;"
 msgstr ":guilabel:`Realizado por`: la persona u organización que realiza la calibración;"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:157
+#: ../../content/applications/services/equipment/equipment_measuring.rst:211
 msgid ":guilabel:`Certificate`: the calibration certificate file (PDF, etc.);"
 msgstr ":guilabel:`Certificado`: el archivo del certificado de calibración (PDF, etc.);"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:158
+#: ../../content/applications/services/equipment/equipment_measuring.rst:212
 msgid ":guilabel:`Signed By`, :guilabel:`Customer Signature`, and :guilabel:`Sign Date`: the acknowledgment of the customer;"
 msgstr ":guilabel:`Firmada por`, :guilabel:`Firma del cliente` y :guilabel:`Fecha de firma`: la confirmación del cliente;"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:160
+#: ../../content/applications/services/equipment/equipment_measuring.rst:214
 msgid ":guilabel:`Work Performed` and :guilabel:`Calibration Notes`."
 msgstr ":guilabel:`Trabajo realizado` y :guilabel:`Notas de calibración`."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:162
+#: ../../content/applications/services/equipment/equipment_measuring.rst:216
 msgid "Click :guilabel:`Confirm Repair`, and then :guilabel:`Start Repair`. At that moment, the :guilabel:`Certificate Number` is issued from the *Calibration Certificate* sequence, so that it can be printed on the worksheet before the calibration is finished."
-msgstr "Haga clic en :guilabel:`Confirmar reparación` y luego en :guilabel:`Iniciar reparación`. En ese momento, el :guilabel:`Número de certificado` se emite a partir de la secuencia *Certificado de calibración*, para que pueda imprimirse en la hoja de trabajo antes de que finalice la calibración."
+msgstr "Haga clic en :guilabel:`Confirmar reparación` y luego en :guilabel:`Iniciar reparación`. En ese momento, el :guilabel:`Número de certificado` se emite a partir de la secuencia *Calibration Certificate*, para que pueda imprimirse en la hoja de trabajo antes de que finalice la calibración."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:165
+#: ../../content/applications/services/equipment/equipment_measuring.rst:219
 msgid "Click :guilabel:`Print Worksheet` to print the *Calibration Worksheet*."
 msgstr "Haga clic en :guilabel:`Imprimir hoja de trabajo` para imprimir la *Hoja de trabajo de calibración*."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:166
+#: ../../content/applications/services/equipment/equipment_measuring.rst:220
 msgid "When the calibration is finished, click :guilabel:`End Repair`. The equipment's :guilabel:`Last Calibration Date`, :guilabel:`Next Calibration Date`, and :guilabel:`Calibration Status` are updated."
 msgstr "Cuando finalice la calibración, haga clic en :guilabel:`Finalizar reparación`. Se actualizan la :guilabel:`Fecha de última calibración`, la :guilabel:`Fecha de la próxima calibración` y el :guilabel:`Estado de la calibración` del equipo."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:170
+#: ../../content/applications/services/equipment/equipment_measuring.rst:224
 msgid "See :ref:`repairs/repair_orders/calibration` for the details of the calibration fields on the repair order."
 msgstr "Consulte :ref:`repairs/repair_orders/calibration` para conocer los detalles de los campos de calibración en la orden de reparación."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:174
+#: ../../content/applications/services/equipment/equipment_measuring.rst:228
 msgid "The certificate number is a regulatory, gap-less numbering:"
 msgstr "El número de certificado es una numeración reglamentaria y sin huecos:"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:176
+#: ../../content/applications/services/equipment/equipment_measuring.rst:230
 msgid "it is issued automatically, and can neither be entered nor modified manually;"
 msgstr "se emite automáticamente y no se puede introducir ni modificar manualmente;"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:177
+#: ../../content/applications/services/equipment/equipment_measuring.rst:231
 msgid "a calibration with a certificate number cannot be deleted, reset to draft, or turned back into a regular repair. It can only be cancelled; cancelled calibrations keep their number and can be found with the :guilabel:`Voided Certificate` filter of the repair orders."
 msgstr "una calibración con un número de certificado no se puede eliminar, restablecer a borrador ni convertir de nuevo en una reparación normal. Solo se puede cancelar; las calibraciones canceladas conservan su número y se pueden encontrar con el filtro :guilabel:`Certificado anulado` de las órdenes de reparación."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:182
+#: ../../content/applications/services/equipment/equipment_measuring.rst:236
 msgid "The starting number of the certificates can be adapted in :ref:`developer mode <developer-mode>` on the *Calibration Certificate* sequence (:menuselection:`Settings --> Technical --> Sequences & Identifiers --> Sequences`) **before** the first certificate is issued."
-msgstr "El número inicial de los certificados se puede adaptar en el :ref:`modo de desarrollador <developer-mode>` en la secuencia *Certificado de calibración* (:menuselection:`Ajustes --> Técnico --> Secuencias e identificadores --> Secuencias`) **antes** de que se emita el primer certificado."
+msgstr "El número inicial de los certificados se puede adaptar en el :ref:`modo de desarrollador <developer-mode>` en la secuencia *Calibration Certificate* (:menuselection:`Ajustes --> Técnico --> Secuencias e identificadores --> Secuencias`) **antes** de que se emita el primer certificado."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:187
+#: ../../content/applications/services/equipment/equipment_measuring.rst:241
 msgid "Search and filtering"
 msgstr "Búsqueda y filtrado"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:189
+#: ../../content/applications/services/equipment/equipment_measuring.rst:243
 msgid "In the repair order search, calibrations can be found by :guilabel:`Calibration Quality`, :guilabel:`Certificate Number`, and :guilabel:`Equipment`, filtered with :guilabel:`Accredited`, :guilabel:`Werks`, and :guilabel:`Voided Certificate`, and grouped by :guilabel:`Calibration Quality`."
 msgstr "En la búsqueda de órdenes de reparación, las calibraciones se pueden encontrar por :guilabel:`Calidad de la calibración`, :guilabel:`Número de certificado` y :guilabel:`Equipo`, filtrar con :guilabel:`Acreditado`, :guilabel:`Werks` y :guilabel:`Certificado anulado`, y agrupar por :guilabel:`Calidad de la calibración`."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:197
-msgid "Measuring-type equipment shows additional stat buttons:"
-msgstr "El equipo de tipo medición muestra botones estadísticos adicionales:"
+#: ../../content/applications/services/equipment/equipment_measuring.rst:248
+msgid "Searching by :guilabel:`Equipment` also finds a device by its serial number, internal ID, or equipment ID."
+msgstr "La búsqueda por :guilabel:`Equipo` también encuentra un equipo de medición por su número de serie, su ID interno o su ID del equipo."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:199
-msgid ":guilabel:`Calibrations`: the number of calibration repair orders of the equipment. Click to view the full calibration history."
-msgstr ":guilabel:`Calibraciones`: el número de órdenes de reparación de calibración del equipo. Haga clic para ver el historial completo de calibraciones."
+#: ../../content/applications/services/equipment/equipment_measuring.rst:254
+msgid "Measuring devices show additional stat buttons (etalons do not):"
+msgstr "Los equipos de medición muestran botones estadísticos adicionales (los patrones no):"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:201
+#: ../../content/applications/services/equipment/equipment_measuring.rst:256
+msgid ":guilabel:`Calibrations`: the number of calibration repair orders of the equipment. Click to open the calibrations of the device in the calibration list, with the same columns as :menuselection:`Equipment Management --> Measuring Devices --> Calibrations`; :guilabel:`New` there creates a calibration for this device."
+msgstr ":guilabel:`Calibraciones`: el número de órdenes de reparación de calibración del equipo. Haga clic para abrir las calibraciones del equipo en la lista de calibraciones, con las mismas columnas que :menuselection:`Gestión de equipos --> Equipos de medición --> Calibraciones`; :guilabel:`Nuevo` crea allí una calibración para este equipo."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:260
 msgid ":guilabel:`Sensors`: the number of attached sensors. Only visible when sensors exist."
 msgstr ":guilabel:`Sensores`: el número de sensores conectados. Solo visible cuando existen sensores."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:204
+#: ../../content/applications/services/equipment/equipment_measuring.rst:263
 msgid "Dedicated search filters"
 msgstr "Filtros de búsqueda dedicados"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:206
+#: ../../content/applications/services/equipment/equipment_measuring.rst:265
 msgid "The equipment and measuring devices list views include specific search capabilities:"
-msgstr "Las vistas de lista de equipos y dispositivos de medición incluyen funciones de búsqueda específicas:"
+msgstr "Las vistas de lista de los equipos y de los equipos de medición incluyen funciones de búsqueda específicas:"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:208
+#: ../../content/applications/services/equipment/equipment_measuring.rst:267
 msgid ":guilabel:`Calibration Due` filter: measuring devices whose next calibration is within 30 days."
-msgstr "Filtro :guilabel:`Calibración pendiente`: dispositivos de medición cuya próxima calibración es dentro de 30 días."
+msgstr "Filtro :guilabel:`Calibración pendiente`: equipos de medición cuya próxima calibración es dentro de 30 días."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:209
-msgid ":guilabel:`Calibration Overdue` filter: measuring devices past their calibration date."
-msgstr "Filtro :guilabel:`Calibración vencida`: dispositivos de medición cuya fecha de calibración ya pasó."
+#: ../../content/applications/services/equipment/equipment_measuring.rst:268
+msgid ":guilabel:`Calibration Overdue` filter: measuring devices past their calibration date. Devices without a next calibration date are not included, although their status is :guilabel:`Overdue`."
+msgstr "Filtro :guilabel:`Calibración vencida`: equipos de medición cuya fecha de calibración ya pasó. No se incluyen los equipos sin fecha de la próxima calibración, aunque su estado sea :guilabel:`Vencida`."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:210
+#: ../../content/applications/services/equipment/equipment_measuring.rst:270
 msgid ":guilabel:`Product Family` grouping."
 msgstr "Agrupación por :guilabel:`Familia de producto`."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:211
-msgid ":guilabel:`Calibration Status` grouping (:guilabel:`OK`, :guilabel:`Warning`, :guilabel:`Overdue`)."
-msgstr "Agrupación por :guilabel:`Estado de la calibración` (:guilabel:`Aceptar`, :guilabel:`Advertencia`, :guilabel:`Vencida`)."
+#: ../../content/applications/services/equipment/equipment_measuring.rst:271
+msgid ":guilabel:`Software Serial Number` search field, in the Measuring Devices list."
+msgstr "Campo de búsqueda :guilabel:`Número de serie del software`, en la lista Equipos de medición."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:215
+#: ../../content/applications/services/equipment/equipment_measuring.rst:274
 msgid "There is no automatic reminder when a calibration becomes due: use the :guilabel:`Calibration Due` and :guilabel:`Calibration Overdue` filters, e.g., saved as a favorite, or schedule an activity on the equipment."
 msgstr "No hay ningún recordatorio automático cuando una calibración vence: utilice los filtros :guilabel:`Calibración pendiente` y :guilabel:`Calibración vencida`, por ejemplo, guardados como favoritos, o programe una actividad en el equipo."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:281
+msgid "Etalons"
+msgstr "Patrones"
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:283
+msgid "The Measuring Devices sub-module also adds the :guilabel:`Etalon` category, for your company's own reference standards, such as gauge block sets or setting rings. The category also exists on the equipment models (see :ref:`equipment/models`)."
+msgstr "El submódulo Equipos de medición también añade la categoría :guilabel:`Patrón`, para los patrones de referencia propios de su empresa, como juegos de bloques patrón o anillos patrón. La categoría también existe en los modelos de equipo (consulte :ref:`equipment/models`)."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:295
+msgid ":menuselection:`Equipment Management --> Etalons` lists the etalons only; they also appear in :menuselection:`Equipment Management --> All Equipment`. As for measuring devices, the list has no name column: the etalons are identified by the :guilabel:`Manufacturer`, :guilabel:`Product Family`, :guilabel:`Model`, and :guilabel:`Serial Number` columns, followed by :guilabel:`Internal ID`, :guilabel:`Owner`, :guilabel:`Assignees`, :guilabel:`Activities`, and :guilabel:`State`. The :guilabel:`Customer` and :guilabel:`Tags` columns are optional, hidden by default."
+msgstr ":menuselection:`Gestión de equipos --> Patrones` muestra solo los patrones; estos también aparecen en :menuselection:`Gestión de equipos --> Todos los equipos`. Al igual que en los equipos de medición, la lista no tiene columna de nombre: los patrones se identifican por las columnas :guilabel:`Fabricante`, :guilabel:`Familia de producto`, :guilabel:`Modelo` y :guilabel:`Número de serie`, seguidas de :guilabel:`ID interno`, :guilabel:`Propietario`, :guilabel:`Personas asignadas`, :guilabel:`Actividades` y :guilabel:`Estado`. Las columnas :guilabel:`Cliente` y :guilabel:`Etiquetas` son opcionales y están ocultas de forma predeterminada."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:302
+msgid "The etalons can be searched by :guilabel:`Name`, :guilabel:`Equipment ID`, :guilabel:`Serial Number`, :guilabel:`Internal ID`, :guilabel:`Owner`, :guilabel:`Customer`, :guilabel:`Manufacturer`, :guilabel:`Model`, :guilabel:`Product Family`, and :guilabel:`Tags`, filtered by state (:guilabel:`Draft`, :guilabel:`Active`, :guilabel:`Inactive`, :guilabel:`Scrapped`) or with :guilabel:`Archived`, and grouped by :guilabel:`State`, :guilabel:`Owner`, :guilabel:`Brand`, :guilabel:`Model`, :guilabel:`Product Family`, or :guilabel:`Tag`."
+msgstr "Los patrones se pueden buscar por :guilabel:`Nombre`, :guilabel:`ID del equipo`, :guilabel:`Número de serie`, :guilabel:`ID interno`, :guilabel:`Propietario`, :guilabel:`Cliente`, :guilabel:`Fabricante`, :guilabel:`Modelo`, :guilabel:`Familia de producto` y :guilabel:`Etiquetas`, filtrar por estado (:guilabel:`Borrador`, :guilabel:`Activo`, :guilabel:`Inactivo`, :guilabel:`Desechado`) o con :guilabel:`Archivado`, y agrupar por :guilabel:`Estado`, :guilabel:`Propietario`, :guilabel:`Marca`, :guilabel:`Modelo`, :guilabel:`Familia de producto` o :guilabel:`Etiqueta`."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:309
+msgid "An equipment created with :guilabel:`New` in this menu gets the :guilabel:`Etalon` category. For etalons:"
+msgstr "Un equipo creado con :guilabel:`Nuevo` en este menú recibe la categoría :guilabel:`Patrón`. En los patrones:"
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:312
+msgid ":guilabel:`Customer` and :guilabel:`Owner` default to your company, also when :guilabel:`Etalon` is selected on a new equipment created from another menu, and when an import gives no customer or owner for an etalon. Both fields can be changed. If a new equipment is switched from :guilabel:`Etalon` to another category before it is saved, your company is removed from both fields again; a saved equipment keeps its customer and owner when its category changes."
+msgstr ":guilabel:`Cliente` y :guilabel:`Propietario` toman de forma predeterminada su empresa, también cuando se selecciona :guilabel:`Patrón` en un equipo nuevo creado desde otro menú y cuando una importación no indica cliente ni propietario para un patrón. Ambos campos se pueden cambiar. Si un equipo nuevo se cambia de :guilabel:`Patrón` a otra categoría antes de guardarlo, su empresa se vuelve a quitar de ambos campos; un equipo ya guardado conserva su cliente y su propietario cuando cambia su categoría."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:317
+msgid "The name is built automatically and cannot be typed, as for measuring devices (see :ref:`equipment/derived-name`)."
+msgstr "El nombre se genera automáticamente y no se puede introducir manualmente, como en los equipos de medición (consulte :ref:`equipment/derived-name`)."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:319
+msgid "The :guilabel:`Model` field only offers the models of the :guilabel:`Etalon` category."
+msgstr "El campo :guilabel:`Modelo` solo ofrece los modelos de la categoría :guilabel:`Patrón`."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:320
+msgid "There are no calibration features: no :guilabel:`Measuring` tab, no :guilabel:`Create Calibration` button, no :guilabel:`Calibrations` or :guilabel:`Sensors` stat button, and no calibration status. An etalon cannot be selected on a calibration repair order."
+msgstr "No hay funciones de calibración: ni pestaña :guilabel:`Medición`, ni botón :guilabel:`Crear calibración`, ni botones estadísticos :guilabel:`Calibraciones` o :guilabel:`Sensores`, ni estado de la calibración. Un patrón no se puede seleccionar en una orden de reparación de calibración."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:325
+msgid "To keep track of the certificates of an etalon, attach them in its :guilabel:`Documents` tab, for example with the :guilabel:`Calibration` type and an :guilabel:`Expiry Date`: for an active etalon, a warning activity is created when the expiry date approaches (see :doc:`documents`)."
+msgstr "Para hacer el seguimiento de los certificados de un patrón, adjúntelos en su pestaña :guilabel:`Documentos`, por ejemplo, con el tipo :guilabel:`Calibración` y una :guilabel:`Fecha de caducidad`: en un patrón activo, se crea una actividad de aviso cuando se acerca la fecha de caducidad (consulte :doc:`documents`)."
 
 #: ../../content/applications/services/equipment/equipment_printer.rst:3
 msgid "Printers"
 msgstr "Impresoras"
 
 #: ../../content/applications/services/equipment/equipment_printer.rst:5
-msgid "The **Printers** sub-module (``equipment_printer``) extends Equipment Management with printer-specific features: counter tracking, cartridge management, paper format support, and connection type details."
-msgstr "El submódulo **Impresoras** (``equipment_printer``) amplía Gestión de equipos con funciones específicas para impresoras: seguimiento de contadores, gestión de cartuchos, compatibilidad con formatos de papel y detalles del tipo de conexión."
+msgid "The **Printers** sub-module extends Equipment Management with printer-specific features: counter tracking, cartridge management, paper format support, and connection type details."
+msgstr "El submódulo **Impresoras** amplía Gestión de equipos con funciones específicas para impresoras: seguimiento de contadores, gestión de cartuchos, compatibilidad con formatos de papel y detalles del tipo de conexión."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:20
-msgid "Enable the Printers module from :menuselection:`Equipment Management --> Settings --> Configuration --> Equipment Types --> Printers`, or install ``equipment_printer`` from the Apps menu."
-msgstr "Active el módulo Impresoras desde :menuselection:`Gestión de equipos --> Ajustes --> Configuración --> Tipos de equipo --> Impresoras`, o instale ``equipment_printer`` desde el menú Aplicaciones."
+#: ../../content/applications/services/equipment/equipment_printer.rst:19
+msgid "Enable the Printers module from :menuselection:`Equipment Management --> Settings --> Configuration`, by ticking :guilabel:`Printers` in the :guilabel:`Equipment Types` section, or install *Equipment Management - Printers* from the :menuselection:`Apps` menu (remove the :guilabel:`Apps` filter to find it)."
+msgstr "Active el módulo Impresoras desde :menuselection:`Gestión de equipos --> Ajustes --> Configuración`, marcando :guilabel:`Impresoras` en la sección :guilabel:`Tipos de equipo`, o instale *Equipment Management - Printers* desde el menú :menuselection:`Aplicaciones` (quite el filtro :guilabel:`Aplicaciones` para encontrarlo)."
 
 #: ../../content/applications/services/equipment/equipment_printer.rst:25
 msgid "Dedicated printer views"
@@ -1823,178 +1947,178 @@ msgid "Once installed, a **Printers** menu appears in the Equipment Management n
 msgstr "Una vez instalado, aparece un menú **Impresoras** en la navegación de Gestión de equipos:"
 
 #: ../../content/applications/services/equipment/equipment_printer.rst:29
-msgid ":menuselection:`Equipment Management --> Printers --> Printers`: Shows only printer-type equipment with printer-specific columns (paper formats, counter date, reporting method)."
-msgstr ":menuselection:`Gestión de equipos --> Impresoras --> Impresoras`: muestra solo el equipo de tipo impresora con columnas específicas (formatos de papel, fecha del contador, método de notificación)."
+msgid ":menuselection:`Equipment Management --> Printers --> Printers`: Shows only the equipment of the :guilabel:`Printer` category, with printer-specific columns (paper formats, counter date, reporting method)."
+msgstr ":menuselection:`Gestión de equipos --> Impresoras --> Impresoras`: muestra solo los equipos de la categoría :guilabel:`Impresora`, con columnas específicas de impresoras (formatos de papel, fecha del contador, método de recuento)."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:31
+#: ../../content/applications/services/equipment/equipment_printer.rst:32
 msgid ":menuselection:`Equipment Management --> Printers --> Counters`: Lists all printer counter records across all printers."
 msgstr ":menuselection:`Gestión de equipos --> Impresoras --> Contadores`: enumera todos los registros de contadores de impresora de todas las impresoras."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:34
-msgid "Creating a printer from the Printers menu automatically sets the type to *Printer*."
-msgstr "Al crear una impresora desde el menú Impresoras, el tipo se establece automáticamente en *Impresora*."
+#: ../../content/applications/services/equipment/equipment_printer.rst:35
+msgid "An equipment created with :guilabel:`New` in :menuselection:`Equipment Management --> Printers --> Printers` gets the default :guilabel:`General` category: select :guilabel:`Printer` in its :guilabel:`Category` field, so that it appears in this list and gets the :guilabel:`Printer` tab."
+msgstr "Un equipo creado con :guilabel:`Nuevo` en :menuselection:`Gestión de equipos --> Impresoras --> Impresoras` recibe la categoría predeterminada :guilabel:`General`: seleccione :guilabel:`Impresora` en su campo :guilabel:`Categoría` para que aparezca en esta lista y obtenga la pestaña :guilabel:`Impresora`."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:37
+#: ../../content/applications/services/equipment/equipment_printer.rst:40
 msgid "Printer tab"
 msgstr "Pestaña de impresora"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:47
-msgid "When an equipment has type *Printer*, a dedicated :guilabel:`Printer` tab appears on the form with the following sections:"
-msgstr "Cuando un equipo tiene el tipo *Impresora*, aparece una pestaña dedicada :guilabel:`Impresora` en el formulario con las siguientes secciones:"
+#: ../../content/applications/services/equipment/equipment_printer.rst:50
+msgid "When the :guilabel:`Category` of an equipment is :guilabel:`Printer`, a dedicated :guilabel:`Printer` tab appears on the form with the following sections:"
+msgstr "Cuando la :guilabel:`Categoría` de un equipo es :guilabel:`Impresora`, aparece en el formulario una pestaña dedicada :guilabel:`Impresora` con las siguientes secciones:"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:51
+#: ../../content/applications/services/equipment/equipment_printer.rst:54
 msgid "Counters section"
 msgstr "Sección de contadores"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:53
+#: ../../content/applications/services/equipment/equipment_printer.rst:56
 msgid "**Counter Reporting Method**: How counter readings are collected — API (automatic), Email (automatic), SNMP (automatic), Portal (manual), Email (manual), or Call (manual)."
-msgstr "**Método de notificación del contador**: Cómo se recopilan las lecturas del contador — API (automático), Correo electrónico (automático), SNMP (automático), Portal (manual), Correo electrónico (manual) o Llamada (manual)."
+msgstr "**Método de recuento**: Cómo se recopilan las lecturas del contador — API (automático), Correo electrónico (automático), SNMP (automático), Portal (manual), Correo electrónico (manual) o Llamada (manual)."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:55
+#: ../../content/applications/services/equipment/equipment_printer.rst:58
 msgid "**Last Counter Date**: Date of the most recent counter reading, with color coding:"
 msgstr "**Fecha del último contador**: Fecha de la lectura de contador más reciente, con codificación de colores:"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:57
+#: ../../content/applications/services/equipment/equipment_printer.rst:60
 msgid "**Green**: Less than 30 days old."
 msgstr "**Verde**: Menos de 30 días de antigüedad."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:58
+#: ../../content/applications/services/equipment/equipment_printer.rst:61
 msgid "**Yellow**: 30-60 days old."
 msgstr "**Amarillo**: Entre 30 y 60 días de antigüedad."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:59
+#: ../../content/applications/services/equipment/equipment_printer.rst:62
 msgid "**Red**: More than 60 days old."
 msgstr "**Rojo**: Más de 60 días de antigüedad."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:61
+#: ../../content/applications/services/equipment/equipment_printer.rst:64
 msgid "**Last Counter**: Summary of the latest counter reading values."
 msgstr "**Último contador**: Resumen de los valores de la última lectura del contador."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:64
+#: ../../content/applications/services/equipment/equipment_printer.rst:67
 msgid "General section"
 msgstr "Sección General"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:66
+#: ../../content/applications/services/equipment/equipment_printer.rst:69
 msgid "These fields are inherited from the equipment model and are read-only:"
 msgstr "Estos campos se heredan del modelo de equipo y son de solo lectura:"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:68
+#: ../../content/applications/services/equipment/equipment_printer.rst:71
 msgid "**Color**: Black & White or Color (from the model)."
 msgstr "**Color**: Blanco y negro o Color (del modelo)."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:69
+#: ../../content/applications/services/equipment/equipment_printer.rst:72
 msgid "**Multifunctional**: Whether the printer is multifunctional."
-msgstr "**Multifunción**: Indica si la impresora es multifunción."
+msgstr "**Multifuncional**: Indica si la impresora es multifuncional."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:70
+#: ../../content/applications/services/equipment/equipment_printer.rst:73
 msgid "**Technology**: Inkjet, Laser, etc."
-msgstr "**Tecnología**: Inyección de tinta, láser, etc."
+msgstr "**Tecnología**: Inyección de tinta, Láser, etc."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:71
+#: ../../content/applications/services/equipment/equipment_printer.rst:74
 msgid "**Paper Formats**: Supported paper sizes."
 msgstr "**Formatos de papel**: Tamaños de papel admitidos."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:72
+#: ../../content/applications/services/equipment/equipment_printer.rst:75
 msgid "**Double Sided**: Whether duplex printing is supported."
 msgstr "**Doble cara**: Indica si se admite la impresión a doble cara."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:73
-msgid "**Document Feeder**: Whether the printer has an automatic document feeder."
-msgstr "**Alimentador de documentos**: Indica si la impresora tiene un alimentador automático de documentos."
-
 #: ../../content/applications/services/equipment/equipment_printer.rst:76
+msgid "**Has Document Feeder**: Whether the printer has an automatic document feeder."
+msgstr "**Tiene alimentador de documentos**: Indica si la impresora tiene un alimentador automático de documentos."
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:79
 msgid "Connection section"
 msgstr "Sección Conexión"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:78
+#: ../../content/applications/services/equipment/equipment_printer.rst:81
 msgid "**USB**, **Ethernet**, **WiFi**, **Bluetooth**: Connection types supported (from the model)."
 msgstr "**USB**, **Ethernet**, **WiFi**, **Bluetooth**: Tipos de conexión admitidos (del modelo)."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:81
+#: ../../content/applications/services/equipment/equipment_printer.rst:84
 msgid "Cartridges section"
 msgstr "Sección Cartuchos"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:83
+#: ../../content/applications/services/equipment/equipment_printer.rst:86
 msgid "Lists the compatible cartridges for this printer model, showing name, product, and pages per cartridge."
 msgstr "Enumera los cartuchos compatibles con este modelo de impresora, mostrando nombre, producto y páginas por cartucho."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:87
+#: ../../content/applications/services/equipment/equipment_printer.rst:90
 msgid "Counter management"
 msgstr "Gestión de contadores"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:97
+#: ../../content/applications/services/equipment/equipment_printer.rst:100
 msgid "Printer counters track page counts over time. Each counter record contains:"
 msgstr "Los contadores de la impresora registran el número de páginas a lo largo del tiempo. Cada registro de contador contiene:"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:99
+#: ../../content/applications/services/equipment/equipment_printer.rst:102
 msgid "**Equipment**: The printer this counter belongs to."
 msgstr "**Equipo**: La impresora a la que pertenece este contador."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:100
+#: ../../content/applications/services/equipment/equipment_printer.rst:103
 msgid "**Date**: The date of the reading (one reading per day per printer)."
 msgstr "**Fecha**: La fecha de la lectura (una lectura por día y por impresora)."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:101
-msgid "**Counter Lines**: One line per paper format and color type (B&W / Color), showing the current counter value and the previous reading for comparison."
-msgstr "**Líneas de contador**: Una línea por formato de papel y tipo de color (blanco y negro / color), que muestra el valor actual del contador y la lectura anterior para comparación."
+#: ../../content/applications/services/equipment/equipment_printer.rst:104
+msgid "**Counters**: One line per paper format and color type (B&W / Color), showing the current counter value and the previous reading for comparison."
+msgstr "**Contadores**: Una línea por formato de papel y tipo de color (blanco y negro / color), que muestra el valor actual del contador y la lectura anterior para comparación."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:103
+#: ../../content/applications/services/equipment/equipment_printer.rst:106
 msgid "**Scan Counter**: The scanner counter (for multifunctional printers)."
-msgstr "**Contador de escaneo**: El contador del escáner (para impresoras multifunción)."
+msgstr "**Contador de escaneos**: El contador del escáner (para impresoras multifuncionales)."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:105
+#: ../../content/applications/services/equipment/equipment_printer.rst:108
 msgid "**Creating a counter reading:**"
 msgstr "**Crear una lectura de contador:**"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:107
+#: ../../content/applications/services/equipment/equipment_printer.rst:110
 msgid "Navigate to :menuselection:`Equipment Management --> Printers --> Counters`."
 msgstr "Vaya a :menuselection:`Gestión de equipos --> Impresoras --> Contadores`."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:109
+#: ../../content/applications/services/equipment/equipment_printer.rst:112
 msgid "Select the **Equipment** (printer)."
 msgstr "Seleccione el **Equipo** (impresora)."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:110
+#: ../../content/applications/services/equipment/equipment_printer.rst:113
 msgid "The counter lines are auto-populated based on the printer's paper formats and color capabilities, pre-filled with the last known values."
 msgstr "Las líneas de contador se completan automáticamente según los formatos de papel y las capacidades de color de la impresora, y se rellenan previamente con los últimos valores conocidos."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:112
+#: ../../content/applications/services/equipment/equipment_printer.rst:115
 msgid "Enter the new counter values."
 msgstr "Introduzca los nuevos valores del contador."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:113
+#: ../../content/applications/services/equipment/equipment_printer.rst:116
 msgid "Save."
 msgstr "Guardar."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:116
+#: ../../content/applications/services/equipment/equipment_printer.rst:119
 msgid "Counter values cannot be lower than the previous reading. This prevents accidental data entry errors. Only the most recent counter record can be deleted."
 msgstr "Los valores del contador no pueden ser inferiores a la lectura anterior. Esto evita errores accidentales de introducción de datos. Solo se puede eliminar el registro de contador más reciente."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:122
-msgid "Printer-type equipment shows additional stat buttons:"
-msgstr "Los equipos de tipo impresora muestran botones de estadísticas adicionales:"
+#: ../../content/applications/services/equipment/equipment_printer.rst:125
+msgid "Printers show additional stat buttons:"
+msgstr "Las impresoras muestran botones estadísticos adicionales:"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:124
+#: ../../content/applications/services/equipment/equipment_printer.rst:127
 msgid "**Counters**: Number of counter records. Click to view the counter history."
 msgstr "**Contadores**: Número de registros de contador. Haga clic para ver el historial de contadores."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:125
+#: ../../content/applications/services/equipment/equipment_printer.rst:128
 msgid "**Equipments**: Count of task products linked to this printer."
 msgstr "**Equipos**: Número de productos de tarea vinculados a esta impresora."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:128
+#: ../../content/applications/services/equipment/equipment_printer.rst:131
 msgid "Settings menu"
 msgstr "Menú de ajustes"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:130
+#: ../../content/applications/services/equipment/equipment_printer.rst:133
 msgid "The Printers module adds entries to :menuselection:`Equipment Management --> Settings`:"
 msgstr "El módulo Impresoras añade entradas a :menuselection:`Gestión de equipos --> Ajustes`:"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:132
+#: ../../content/applications/services/equipment/equipment_printer.rst:135
 msgid "**Cartridges**: Manage cartridge definitions (name, product, pages per cartridge)."
 msgstr "**Cartuchos**: Gestione las definiciones de cartuchos (nombre, producto, páginas por cartucho)."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:133
+#: ../../content/applications/services/equipment/equipment_printer.rst:136
 msgid "**Paper Formats**: Manage paper format definitions used by printers."
 msgstr "**Formatos de papel**: Gestione las definiciones de formatos de papel utilizados por las impresoras."
 
@@ -2003,106 +2127,122 @@ msgid "Getting Started"
 msgstr "Primeros pasos"
 
 #: ../../content/applications/services/equipment/getting_started.rst:8
-msgid "Navigate to :menuselection:`Apps` and search for **Equipment Management**. Click :guilabel:`Install`."
-msgstr "Vaya a :menuselection:`Aplicaciones` y busque **Gestión de equipos**. Haga clic en :guilabel:`Instalar`."
+msgid "Navigate to :menuselection:`Apps` and search for **Equipment Management**. Click :guilabel:`Activate`."
+msgstr "Vaya a :menuselection:`Aplicaciones` y busque **Equipment Management**. Haga clic en :guilabel:`Activar`."
 
-#: ../../content/applications/services/equipment/getting_started.rst:10
+#: ../../content/applications/services/equipment/getting_started.rst:11
 msgid "The module installs as a standalone application with its own top-level menu item in the main navigation bar."
 msgstr "El módulo se instala como una aplicación independiente con su propio elemento de menú de nivel superior en la barra de navegación principal."
 
-#: ../../content/applications/services/equipment/getting_started.rst:14
+#: ../../content/applications/services/equipment/getting_started.rst:15
 msgid "Sub-modules for specific equipment types (Printers, Measuring Devices) can be enabled in :menuselection:`Equipment Management --> Settings --> Configuration` or installed separately from the Apps menu."
-msgstr "Los submódulos para tipos de equipo específicos (Impresoras, Dispositivos de medición) se pueden habilitar en :menuselection:`Gestión de equipos --> Ajustes --> Configuración` o instalarse por separado desde el menú Aplicaciones."
+msgstr "Los submódulos para tipos de equipo específicos (Impresoras, Equipos de medición) se pueden habilitar en :menuselection:`Gestión de equipos --> Ajustes --> Configuración` o instalarse por separado desde el menú Aplicaciones."
 
 #: ../../content/applications/services/equipment/getting_started.rst:19
+msgid "The Measuring Devices sub-module also adds the :guilabel:`Etalon` category, with its own :guilabel:`Etalons` menu, for your company's own reference standards (see :ref:`equipment/etalons`)."
+msgstr "El submódulo Equipos de medición también añade la categoría :guilabel:`Patrón`, con su propio menú :guilabel:`Patrones`, para los patrones de referencia propios de su empresa (consulte :ref:`equipment/etalons`)."
+
+#: ../../content/applications/services/equipment/getting_started.rst:24
 msgid "Creating your first equipment"
 msgstr "Crear su primer equipo"
 
-#: ../../content/applications/services/equipment/getting_started.rst:21
+#: ../../content/applications/services/equipment/getting_started.rst:26
 msgid "Navigate to :menuselection:`Equipment Management --> All Equipment`."
 msgstr "Vaya a :menuselection:`Gestión de equipos --> Todos los equipos`."
 
-#: ../../content/applications/services/equipment/getting_started.rst:23
+#: ../../content/applications/services/equipment/getting_started.rst:28
+msgid "Select the :guilabel:`Category` first: it decides which models can be selected, and whether the name is typed or built automatically. The default is :guilabel:`General`; the Printers sub-module adds :guilabel:`Printer`, and the Measuring Devices sub-module adds :guilabel:`Measuring Device` and :guilabel:`Etalon`. When you start from :menuselection:`Equipment Management --> Measuring Devices --> Measuring Devices` or :menuselection:`Equipment Management --> Etalons` instead, the category is already set."
+msgstr "Seleccione primero la :guilabel:`Categoría`: determina qué modelos se pueden seleccionar y si el nombre se introduce manualmente o se genera automáticamente. El valor predeterminado es :guilabel:`General`; el submódulo Impresoras añade :guilabel:`Impresora`, y el submódulo Equipos de medición añade :guilabel:`Equipo de medición` y :guilabel:`Patrón`. Si, en cambio, empieza desde :menuselection:`Gestión de equipos --> Equipos de medición --> Equipos de medición` o :menuselection:`Gestión de equipos --> Patrones`, la categoría ya está establecida."
+
+#: ../../content/applications/services/equipment/getting_started.rst:34
 msgid "Fill in the required fields:"
 msgstr "Complete los campos obligatorios:"
 
-#: ../../content/applications/services/equipment/getting_started.rst:25
-msgid "**Name**: A descriptive name for the equipment (e.g., \"Werth VideoCheck HA 400x400\")."
-msgstr "**Nombre**: Un nombre descriptivo para el equipo (por ejemplo, \"Werth VideoCheck HA 400x400\")."
+#: ../../content/applications/services/equipment/getting_started.rst:36
+msgid "**Name**: A descriptive name for the equipment (e.g., \"Warehouse forklift H25\"). For measuring devices and etalons, the name cannot be typed: it is built automatically from the serial number and the model (see :ref:`equipment/derived-name`)."
+msgstr "**Nombre**: Un nombre descriptivo para el equipo (por ejemplo, «Carretilla elevadora del almacén H25»). En los equipos de medición y los patrones, el nombre no se puede introducir manualmente: se genera automáticamente a partir del número de serie y del modelo (consulte :ref:`equipment/derived-name`)."
 
-#: ../../content/applications/services/equipment/getting_started.rst:26
+#: ../../content/applications/services/equipment/getting_started.rst:39
 msgid "**Equipment ID**: Auto-generated from the configured sequence (e.g., ``EQ/0001``). You can override this value manually if needed."
-msgstr "**ID de equipo**: Se genera automáticamente a partir de la secuencia configurada (por ejemplo, ``EQ/0001``). Puede sobrescribir este valor manualmente si es necesario."
+msgstr "**ID del equipo**: Se genera automáticamente a partir de la secuencia configurada (por ejemplo, ``EQ/0001``). Puede sobrescribir este valor manualmente si es necesario."
 
-#: ../../content/applications/services/equipment/getting_started.rst:28
+#: ../../content/applications/services/equipment/getting_started.rst:41
 msgid "**Customer**: The customer who owns or uses the equipment."
 msgstr "**Cliente**: El cliente propietario o usuario del equipo."
 
-#: ../../content/applications/services/equipment/getting_started.rst:29
+#: ../../content/applications/services/equipment/getting_started.rst:42
 msgid "**Owner**: The legal owner of the equipment."
 msgstr "**Propietario**: El propietario legal del equipo."
 
-#: ../../content/applications/services/equipment/getting_started.rst:31
-msgid "Set the **Type** to match the equipment category. The default is *General*. If sub-modules are installed, additional types become available (e.g., *Printer*, *Measuring Device*)."
-msgstr "Establezca el **Tipo** según la categoría del equipo. El valor predeterminado es *General*. Si hay submódulos instalados, estarán disponibles tipos adicionales (por ejemplo, *Impresora*, *Dispositivo de medición*)."
+#: ../../content/applications/services/equipment/getting_started.rst:44
+msgid "For an etalon, the customer and the owner both default to your own company (see :ref:`equipment/etalons`)."
+msgstr "En un patrón, tanto el cliente como el propietario se establecen de forma predeterminada en su propia empresa (consulte :ref:`equipment/etalons`)."
 
-#: ../../content/applications/services/equipment/getting_started.rst:33
+#: ../../content/applications/services/equipment/getting_started.rst:47
 msgid "Optionally fill in:"
 msgstr "Opcionalmente, complete:"
 
-#: ../../content/applications/services/equipment/getting_started.rst:35
+#: ../../content/applications/services/equipment/getting_started.rst:49
 msgid "**Serial Number**: The manufacturer's serial number. If a matching :doc:`stock lot </applications/inventory_and_mrp/inventory/product_management/product_tracking/lots>` exists, it will be automatically suggested."
 msgstr "**Número de serie**: El número de serie del fabricante. Si existe un :doc:`lote de existencias </applications/inventory_and_mrp/inventory/product_management/product_tracking/lots>` coincidente, se sugerirá automáticamente."
 
-#: ../../content/applications/services/equipment/getting_started.rst:38
-msgid "**Manufacturer** and **Model**: Select from the pre-configured brand/model hierarchy."
-msgstr "**Fabricante** y **Modelo**: Seleccione de la jerarquía de marca/modelo preconfigurada."
+#: ../../content/applications/services/equipment/getting_started.rst:52
+msgid "**Manufacturer** and **Model**: The :guilabel:`Model` field only offers the models of the selected category and, if one is selected, of the manufacturer. A missing model can be created directly from the :guilabel:`Model` field; it gets the equipment's category and manufacturer (see :ref:`equipment/models`)."
+msgstr "**Fabricante** y **Modelo**: El campo :guilabel:`Modelo` solo ofrece los modelos de la categoría seleccionada y, si se ha seleccionado uno, del fabricante. Un modelo que falte se puede crear directamente desde el campo :guilabel:`Modelo`; recibe la categoría y el fabricante del equipo (consulte :ref:`equipment/models`)."
 
-#: ../../content/applications/services/equipment/getting_started.rst:39
+#: ../../content/applications/services/equipment/getting_started.rst:56
 msgid "**Product Family**: The product family this equipment belongs to."
-msgstr "**Familia de productos**: La familia de productos a la que pertenece este equipo."
+msgstr "**Familia de producto**: La familia de producto a la que pertenece este equipo."
 
-#: ../../content/applications/services/equipment/getting_started.rst:40
+#: ../../content/applications/services/equipment/getting_started.rst:57
 msgid "**Production Year**: The year the equipment was manufactured."
-msgstr "**Año de fabricación**: El año en que se fabricó el equipo."
+msgstr "**Año de producción**: El año en que se fabricó el equipo."
 
-#: ../../content/applications/services/equipment/getting_started.rst:41
+#: ../../content/applications/services/equipment/getting_started.rst:58
 msgid "**Warranty Expiration**: The date when the manufacturer's warranty expires."
 msgstr "**Vencimiento de la garantía**: La fecha en que vence la garantía del fabricante."
 
-#: ../../content/applications/services/equipment/getting_started.rst:45
+#: ../../content/applications/services/equipment/getting_started.rst:62
+msgid "For a measuring device or an etalon, fill in at least the :guilabel:`Serial Number` and the :guilabel:`Model`: its name is built from them."
+msgstr "En un equipo de medición o un patrón, complete al menos el :guilabel:`Número de serie` y el :guilabel:`Modelo`: su nombre se genera a partir de ellos."
+
+#: ../../content/applications/services/equipment/getting_started.rst:65
 msgid "Click the :guilabel:`Draft` status bar to change the state to :guilabel:`Active`."
 msgstr "Haga clic en la barra de estado :guilabel:`Borrador` para cambiar el estado a :guilabel:`Activo`."
 
-#: ../../content/applications/services/equipment/getting_started.rst:56
+#: ../../content/applications/services/equipment/getting_started.rst:76
 msgid "Equipment states"
 msgstr "Estados del equipo"
 
-#: ../../content/applications/services/equipment/getting_started.rst:58
-msgid "Each equipment record goes through three lifecycle states:"
-msgstr "Cada registro de equipo pasa por tres estados de su ciclo de vida:"
+#: ../../content/applications/services/equipment/getting_started.rst:78
+msgid "Each equipment record goes through four lifecycle states:"
+msgstr "Cada registro de equipo pasa por cuatro estados de su ciclo de vida:"
 
-#: ../../content/applications/services/equipment/getting_started.rst:60
+#: ../../content/applications/services/equipment/getting_started.rst:80
 msgid "**Draft**: Initial state when created. Equipment is being set up."
 msgstr "**Borrador**: Estado inicial al crearse. El equipo se está configurando."
 
-#: ../../content/applications/services/equipment/getting_started.rst:61
+#: ../../content/applications/services/equipment/getting_started.rst:81
 msgid "**Active**: Equipment is in service. Activating an equipment can automatically create an analytic account and/or a maintenance equipment record (if configured in Settings)."
 msgstr "**Activo**: El equipo está en servicio. Activar un equipo puede crear automáticamente una cuenta analítica y/o un registro de equipo de mantenimiento (si así se configura en Ajustes)."
 
-#: ../../content/applications/services/equipment/getting_started.rst:63
+#: ../../content/applications/services/equipment/getting_started.rst:83
 msgid "**Inactive**: Equipment is no longer in service but kept for historical reference."
 msgstr "**Inactivo**: El equipo ya no está en servicio, pero se conserva como referencia histórica."
 
-#: ../../content/applications/services/equipment/getting_started.rst:66
-msgid "Equipment ID sequence"
-msgstr "Secuencia del ID de equipo"
+#: ../../content/applications/services/equipment/getting_started.rst:84
+msgid "**Scrapped**: Equipment that has been scrapped. Scrapped equipment cannot be archived, so that its record remains accessible."
+msgstr "**Desechado**: El equipo se ha desechado. Los equipos desechados no se pueden archivar, de modo que su registro siga siendo accesible."
 
-#: ../../content/applications/services/equipment/getting_started.rst:68
+#: ../../content/applications/services/equipment/getting_started.rst:88
+msgid "Equipment ID sequence"
+msgstr "Secuencia del ID del equipo"
+
+#: ../../content/applications/services/equipment/getting_started.rst:90
 msgid "By default, new equipment records receive an auto-generated ID using the format ``EQ/0001``, ``EQ/0002``, etc. The prefix can be customized in :menuselection:`Equipment Management --> Settings --> Configuration --> Defaults --> Equipment ID Prefix`."
 msgstr "De forma predeterminada, los nuevos registros de equipo reciben un ID generado automáticamente con el formato ``EQ/0001``, ``EQ/0002``, etc. El prefijo se puede personalizar en :menuselection:`Gestión de equipos --> Ajustes --> Configuración --> Valores predeterminados --> Prefijo del ID del equipo`."
 
-#: ../../content/applications/services/equipment/getting_started.rst:72
+#: ../../content/applications/services/equipment/getting_started.rst:94
 msgid "The ID field remains editable — you can override the auto-generated value at any time, for example to match an existing internal numbering system."
 msgstr "El campo ID sigue siendo editable — puede sobrescribir el valor generado automáticamente en cualquier momento, por ejemplo, para que coincida con un sistema de numeración interno existente."
 
@@ -2160,101 +2300,101 @@ msgstr "Cuando se establece el vínculo con el equipo de mantenimiento, los dato
 
 #: ../../content/applications/services/equipment/integrations.rst:28
 msgid "Serial number, customer, and assignees are kept in sync."
-msgstr "El número de serie, el cliente y los asignados se mantienen sincronizados."
+msgstr "El número de serie, el cliente y las personas asignadas se mantienen sincronizados."
 
 #: ../../content/applications/services/equipment/integrations.rst:29
-msgid "Changes on the equipment form propagate to the maintenance record."
-msgstr "Los cambios en el formulario del equipo se propagan al registro de mantenimiento."
+msgid "Other fields are not synced: for example, the maintenance equipment keeps its own name, also when the name of a measuring device or an etalon changes automatically."
+msgstr "Los demás campos no se sincronizan: por ejemplo, el equipo de mantenimiento conserva su propio nombre, también cuando el nombre de un equipo de medición o de un patrón cambia automáticamente."
 
-#: ../../content/applications/services/equipment/integrations.rst:32
+#: ../../content/applications/services/equipment/integrations.rst:33
 msgid "Analytic Accounting"
 msgstr "Contabilidad analítica"
 
-#: ../../content/applications/services/equipment/integrations.rst:34
+#: ../../content/applications/services/equipment/integrations.rst:35
 msgid "Each equipment can have a dedicated **analytic account** that tracks all financial transactions related to that specific piece of equipment."
 msgstr "Cada equipo puede tener una **cuenta analítica** dedicada que registra todas las transacciones financieras relacionadas con ese equipo en concreto."
 
-#: ../../content/applications/services/equipment/integrations.rst:37
+#: ../../content/applications/services/equipment/integrations.rst:38
 msgid "The analytic account is used to:"
 msgstr "La cuenta analítica se utiliza para:"
 
-#: ../../content/applications/services/equipment/integrations.rst:39
+#: ../../content/applications/services/equipment/integrations.rst:40
 msgid "Link customer invoices to the equipment (visible in the Finance tab)."
 msgstr "Vincular las facturas de cliente al equipo (visible en la pestaña Finanzas)."
 
-#: ../../content/applications/services/equipment/integrations.rst:40
+#: ../../content/applications/services/equipment/integrations.rst:41
 msgid "Link purchase orders to the equipment."
 msgstr "Vincular los pedidos de compra al equipo."
 
-#: ../../content/applications/services/equipment/integrations.rst:41
+#: ../../content/applications/services/equipment/integrations.rst:42
 msgid "Calculate revenue, cost, and margin per equipment."
 msgstr "Calcular los ingresos, el coste y el margen por equipo."
 
-#: ../../content/applications/services/equipment/integrations.rst:43
+#: ../../content/applications/services/equipment/integrations.rst:44
 msgid "When setting the analytic distribution on invoice lines or purchase order lines, select the equipment's analytic account to associate the transaction with the equipment."
 msgstr "Al establecer la distribución analítica en las líneas de factura o de pedido de compra, seleccione la cuenta analítica del equipo para asociar la transacción con dicho equipo."
 
-#: ../../content/applications/services/equipment/integrations.rst:47
+#: ../../content/applications/services/equipment/integrations.rst:48
 msgid "Enable **Auto-create Analytic Account** in Settings to have analytic accounts created automatically when equipment is activated."
 msgstr "Habilite **Crear cuenta analítica automáticamente** en Ajustes para que las cuentas analíticas se creen automáticamente al activar un equipo."
 
-#: ../../content/applications/services/equipment/integrations.rst:51
+#: ../../content/applications/services/equipment/integrations.rst:52
 msgid "Stock / Inventory"
 msgstr "Existencias / Inventario"
 
-#: ../../content/applications/services/equipment/integrations.rst:53
+#: ../../content/applications/services/equipment/integrations.rst:54
 msgid "Equipment can be linked to a **stock lot** (serial number tracking in Inventory). When you enter a serial number on the equipment form, the system automatically searches for a matching stock lot:"
 msgstr "El equipo se puede vincular a un **lote de existencias** (seguimiento de números de serie en Inventario). Al introducir un número de serie en el formulario del equipo, el sistema busca automáticamente un lote de existencias coincidente:"
 
-#: ../../content/applications/services/equipment/integrations.rst:56
+#: ../../content/applications/services/equipment/integrations.rst:57
 msgid "**One match found**: The lot is auto-linked."
 msgstr "**Se encuentra una coincidencia**: El lote se vincula automáticamente."
 
-#: ../../content/applications/services/equipment/integrations.rst:57
+#: ../../content/applications/services/equipment/integrations.rst:58
 msgid "**Multiple or no matches**: The lot field remains empty for manual selection."
 msgstr "**Varias coincidencias o ninguna**: El campo de lote permanece vacío para su selección manual."
 
-#: ../../content/applications/services/equipment/integrations.rst:59
+#: ../../content/applications/services/equipment/integrations.rst:60
 msgid "This link allows you to trace the equipment's inventory history, warehouse location, and stock movements."
 msgstr "Este vínculo permite rastrear el historial de inventario del equipo, su ubicación en el almacén y sus movimientos de existencias."
 
-#: ../../content/applications/services/equipment/integrations.rst:63
+#: ../../content/applications/services/equipment/integrations.rst:64
 msgid "Fleet"
 msgstr "Flota"
 
-#: ../../content/applications/services/equipment/integrations.rst:65
+#: ../../content/applications/services/equipment/integrations.rst:66
 msgid "For vehicle-type equipment (company cars, delivery trucks, forklifts), a **fleet vehicle** can be linked. The Fleet tab shows:"
 msgstr "Para equipos de tipo vehículo (coches de empresa, camiones de reparto, carretillas elevadoras), se puede vincular un **vehículo de flota**. La pestaña Flota muestra:"
 
-#: ../../content/applications/services/equipment/integrations.rst:68
-msgid "License plate, odometer, last service date, and contract state."
-msgstr "Matrícula, cuentakilómetros, fecha del último servicio y estado del contrato."
-
 #: ../../content/applications/services/equipment/integrations.rst:69
+msgid "License plate, odometer, last service date, and contract state."
+msgstr "Matrícula, odómetro, fecha del último servicio y estado del contrato."
+
+#: ../../content/applications/services/equipment/integrations.rst:70
 msgid "Direct link to the fleet vehicle form for full details."
 msgstr "Enlace directo al formulario del vehículo de flota para ver todos los detalles."
 
-#: ../../content/applications/services/equipment/integrations.rst:72
+#: ../../content/applications/services/equipment/integrations.rst:73
 msgid "Fleet vehicles must be created manually in the Fleet module first, then linked from the equipment form. This is because fleet vehicles have many required fields that cannot be auto-populated."
 msgstr "Los vehículos de flota deben crearse primero manualmente en el módulo Flota y, después, vincularse desde el formulario del equipo. Esto se debe a que los vehículos de flota tienen muchos campos obligatorios que no se pueden completar automáticamente."
 
-#: ../../content/applications/services/equipment/integrations.rst:77
+#: ../../content/applications/services/equipment/integrations.rst:78
 msgid "Project / Tickets"
 msgstr "Proyecto / Tickets"
 
-#: ../../content/applications/services/equipment/integrations.rst:79
+#: ../../content/applications/services/equipment/integrations.rst:80
 msgid "Equipment can be linked to one or more **projects** for ticket management. The :guilabel:`Create Ticket` button on the form creates a project task linked to the equipment."
 msgstr "El equipo se puede vincular a uno o varios **proyectos** para la gestión de tickets. El botón :guilabel:`Crear ticket` del formulario crea una tarea de proyecto vinculada al equipo."
 
-#: ../../content/applications/services/equipment/integrations.rst:82
+#: ../../content/applications/services/equipment/integrations.rst:83
 msgid "If the equipment has exactly one project, the task is created directly. If multiple projects are linked, a wizard appears to select the target project."
 msgstr "Si el equipo tiene un único proyecto, la tarea se crea directamente. Si hay varios proyectos vinculados, aparece un asistente para seleccionar el proyecto de destino."
 
-#: ../../content/applications/services/equipment/integrations.rst:86
+#: ../../content/applications/services/equipment/integrations.rst:87
 msgid "Subscription"
 msgstr "Suscripción"
 
-#: ../../content/applications/services/equipment/integrations.rst:88
+#: ../../content/applications/services/equipment/integrations.rst:89
 msgid "Equipment can be linked to a **subscription service** for recurring billing. When a subscription is linked, the Subscription tab shows pricing details and the invoicing period."
 msgstr "El equipo se puede vincular a un **servicio de suscripción** para la facturación recurrente. Cuando se vincula una suscripción, la pestaña Suscripción muestra los detalles de precios y el período de facturación."
 
@@ -2296,7 +2436,7 @@ msgstr "Ver todos los equipos, marcas, modelos, etiquetas y documentos. No puede
 
 #: ../../content/applications/services/equipment/security.rst:29
 msgid "**Officer**"
-msgstr "**Gestor**"
+msgstr "**Responsable**"
 
 #: ../../content/applications/services/equipment/security.rst:30
 msgid "``equipment_group_user``"
@@ -2307,7 +2447,7 @@ msgid "Everything Reader can do, plus: create and edit equipment, link maintenan
 msgstr "Todo lo que puede hacer Lector, además de: crear y editar equipos, vincular mantenimiento/flota/existencias, subir documentos y establecer cuentas analíticas."
 
 #: ../../content/applications/services/equipment/security.rst:33
-msgid "**Manager**"
+msgid "**Administrator**"
 msgstr "**Administrador**"
 
 #: ../../content/applications/services/equipment/security.rst:34
@@ -2316,7 +2456,7 @@ msgstr "``equipment_group_manager``"
 
 #: ../../content/applications/services/equipment/security.rst:35
 msgid "Everything Officer can do, plus: delete and archive equipment, delete documents, access Equipment Settings/Configuration."
-msgstr "Todo lo que puede hacer Gestor, además de: eliminar y archivar equipos, eliminar documentos y acceder a Ajustes/Configuración de equipos."
+msgstr "Todo lo que puede hacer Responsable, además de: eliminar y archivar equipos, eliminar documentos y acceder a Ajustes/Configuración de equipos."
 
 #: ../../content/applications/services/equipment/security.rst:39
 msgid "Assigning groups"
@@ -2332,15 +2472,15 @@ msgstr "Seleccione un usuario."
 
 #: ../../content/applications/services/equipment/security.rst:43
 msgid "In the :guilabel:`Access Rights` tab, find the **Equipment Management** section."
-msgstr "En la pestaña :guilabel:`Derechos de acceso`, busque la sección **Gestión de equipos**."
+msgstr "En la pestaña :guilabel:`Permisos de acceso`, busque la sección **Gestión de equipos**."
 
 #: ../../content/applications/services/equipment/security.rst:44
-msgid "Select the appropriate level: *Reader*, *Officer*, or *Manager*."
-msgstr "Seleccione el nivel adecuado: *Lector*, *Gestor* o *Administrador*."
+msgid "Select the appropriate level: *Reader*, *Officer*, or *Administrator*."
+msgstr "Seleccione el nivel adecuado: *Lector*, *Responsable* o *Administrador*."
 
 #: ../../content/applications/services/equipment/security.rst:47
-msgid "All internal users (``base.group_user``) automatically receive **Reader** access. You only need to explicitly assign **Officer** or **Manager** to users who need higher access."
-msgstr "Todos los usuarios internos (``base.group_user``) reciben automáticamente el acceso de **Lector**. Solo necesita asignar explícitamente **Gestor** o **Administrador** a los usuarios que necesiten un acceso superior."
+msgid "All internal users (``base.group_user``) automatically receive **Reader** access. You only need to explicitly assign **Officer** or **Administrator** to users who need higher access."
+msgstr "Todos los usuarios internos (``base.group_user``) reciben automáticamente el acceso de **Lector**. Solo necesita asignar explícitamente **Responsable** o **Administrador** a los usuarios que necesiten un acceso superior."
 
 #: ../../content/applications/services/equipment/security.rst:51
 msgid "Multi-company rules"
@@ -2376,7 +2516,7 @@ msgstr "Restricciones a nivel de vista"
 
 #: ../../content/applications/services/equipment/security.rst:66
 msgid "Certain fields on the equipment form are only visible to **Officer** and above:"
-msgstr "Ciertos campos del formulario del equipo solo son visibles para **Gestor** y niveles superiores:"
+msgstr "Ciertos campos del formulario del equipo solo son visibles para **Responsable** y niveles superiores:"
 
 #: ../../content/applications/services/equipment/security.rst:68
 msgid "Analytic Account"
@@ -2392,7 +2532,7 @@ msgstr "Vínculo con vehículo de flota"
 
 #: ../../content/applications/services/equipment/security.rst:71
 msgid "Stock Lot link"
-msgstr "Vínculo con lote de existencias"
+msgstr "Vínculo con lote de stock"
 
 #: ../../content/applications/services/equipment/security.rst:73
 msgid "Reader users see all the data and tabs but cannot see or modify these connection fields."
@@ -2415,88 +2555,108 @@ msgid "Enable or disable equipment type sub-modules:"
 msgstr "Habilite o deshabilite los submódulos de tipo de equipo:"
 
 #: ../../content/applications/services/equipment/settings.rst:21
-msgid "**Printers**: Install the ``equipment_printer`` module for printer-specific features including counter tracking, cartridge management, and paper format support. See :doc:`equipment_printer`."
-msgstr "**Impresoras**: Instale el módulo ``equipment_printer`` para funciones específicas de impresoras, como el seguimiento de contadores, la gestión de cartuchos y la compatibilidad con formatos de papel. Consulte :doc:`equipment_printer`."
+msgid "**Printers**: Adds the :guilabel:`Printer` category, with counter tracking, cartridge management, and paper format support. See :doc:`equipment_printer`."
+msgstr "**Impresoras**: Añade la categoría :guilabel:`Impresora`, con seguimiento de contadores, gestión de cartuchos y compatibilidad con formatos de papel. Consulte :doc:`equipment_printer`."
 
 #: ../../content/applications/services/equipment/settings.rst:23
-msgid "**Measuring Devices**: Install the ``equipment_measuring`` module for measuring device features including calibration tracking, sensor management, and software/hardware info. See :doc:`equipment_measuring`."
-msgstr "**Dispositivos de medición**: Instale el módulo ``equipment_measuring`` para funciones de dispositivos de medición, como el seguimiento de calibraciones, la gestión de sensores y la información de software/hardware. Consulte :doc:`equipment_measuring`."
+msgid "**Measuring Devices**: Adds the :guilabel:`Measuring Device` category, with calibration tracking, sensor management, and software and hardware information. It also adds the :guilabel:`Etalon` category, with its own :guilabel:`Etalons` menu, for your company's own reference standards. See :doc:`equipment_measuring`."
+msgstr "**Equipos de medición**: Añade la categoría :guilabel:`Equipo de medición`, con seguimiento de calibraciones, gestión de sensores e información de software y hardware. También añade la categoría :guilabel:`Patrón`, con su propio menú :guilabel:`Patrones`, para los patrones de referencia propios de su empresa. Consulte :doc:`equipment_measuring`."
 
-#: ../../content/applications/services/equipment/settings.rst:28
-msgid "Enabling a sub-module will install the corresponding Odoo module. Disabling it will uninstall the module (data is preserved)."
-msgstr "Al habilitar un submódulo se instalará el módulo de Odoo correspondiente. Al deshabilitarlo, se desinstalará el módulo (los datos se conservan)."
+#: ../../content/applications/services/equipment/settings.rst:29
+msgid "Enabling a sub-module will install the corresponding Odoo module."
+msgstr "Al habilitar un submódulo se instalará el módulo de Odoo correspondiente."
 
 #: ../../content/applications/services/equipment/settings.rst:32
+msgid "Disabling a sub-module uninstalls the module: the data it adds, such as printer counters, calibration data, or sensors, is deleted, and its equipment and models (printers, or measuring devices and etalons) get the :guilabel:`General` category."
+msgstr "Al deshabilitar un submódulo se desinstala el módulo: los datos que añade, como los contadores de impresora, los datos de calibración o los sensores, se eliminan, y sus equipos y modelos (impresoras, o equipos de medición y patrones) pasan a la categoría :guilabel:`General`."
+
+#: ../../content/applications/services/equipment/settings.rst:37
 msgid "Automation"
 msgstr "Automatización"
 
-#: ../../content/applications/services/equipment/settings.rst:35
+#: ../../content/applications/services/equipment/settings.rst:40
 msgid "Auto-create Analytic Account"
 msgstr "Crear cuenta analítica automáticamente"
 
-#: ../../content/applications/services/equipment/settings.rst:37
+#: ../../content/applications/services/equipment/settings.rst:42
 msgid "When enabled, activating an equipment (changing state from *Draft* to *Active*) automatically creates a dedicated analytic account for that equipment."
 msgstr "Cuando está habilitado, al activar un equipo (cambiar el estado de *Borrador* a *Activo*) se crea automáticamente una cuenta analítica dedicada para ese equipo."
 
-#: ../../content/applications/services/equipment/settings.rst:40
+#: ../../content/applications/services/equipment/settings.rst:45
 msgid "**Analytic Plan**: Select which analytic plan the auto-created accounts should belong to. The default is the *Equipment* plan created during module installation."
 msgstr "**Plan analítico**: Seleccione a qué plan analítico deben pertenecer las cuentas creadas automáticamente. El valor predeterminado es el plan *Equipo* creado durante la instalación del módulo."
 
-#: ../../content/applications/services/equipment/settings.rst:43
+#: ../../content/applications/services/equipment/settings.rst:48
 msgid "This is useful for tracking revenue and costs per equipment without manual setup."
 msgstr "Esto resulta útil para hacer un seguimiento de los ingresos y costes por equipo sin necesidad de configuración manual."
 
-#: ../../content/applications/services/equipment/settings.rst:46
+#: ../../content/applications/services/equipment/settings.rst:51
 msgid "Auto-create Maintenance Equipment"
-msgstr "Crear automáticamente el equipo de mantenimiento"
+msgstr "Crear equipo de mantenimiento automáticamente"
 
-#: ../../content/applications/services/equipment/settings.rst:48
+#: ../../content/applications/services/equipment/settings.rst:53
 msgid "When enabled, activating an equipment also creates a corresponding ``maintenance.equipment`` record automatically. If a maintenance equipment with the same serial number already exists, it will be linked instead of creating a duplicate."
 msgstr "Cuando esta opción está activada, al activar un equipo también se crea automáticamente el registro ``maintenance.equipment`` correspondiente. Si ya existe un equipo de mantenimiento con el mismo número de serie, se vinculará en lugar de crear un duplicado."
 
-#: ../../content/applications/services/equipment/settings.rst:52
+#: ../../content/applications/services/equipment/settings.rst:57
 msgid "The :guilabel:`Create Maintenance Equipment` button on the form remains available as a manual alternative when this setting is disabled."
 msgstr "El botón :guilabel:`Crear equipo de mantenimiento` del formulario sigue disponible como alternativa manual cuando este ajuste está desactivado."
 
-#: ../../content/applications/services/equipment/settings.rst:56
+#: ../../content/applications/services/equipment/settings.rst:61
 msgid "Document Expiry Warning"
 msgstr "Aviso de caducidad de documentos"
 
-#: ../../content/applications/services/equipment/settings.rst:58
+#: ../../content/applications/services/equipment/settings.rst:63
 msgid "Configure how many days before a document's expiry date the system should create a warning activity. The default is **30 days**."
 msgstr "Configure con cuántos días de antelación a la fecha de caducidad de un documento debe el sistema crear una actividad de aviso. El valor predeterminado es **30 días**."
 
-#: ../../content/applications/services/equipment/settings.rst:61
+#: ../../content/applications/services/equipment/settings.rst:66
 msgid "The daily scheduled job checks all active equipment's documents and creates activities for those within the warning period."
 msgstr "El trabajo programado diario revisa los documentos de todos los equipos activos y crea actividades para aquellos que se encuentran dentro del periodo de aviso."
 
-#: ../../content/applications/services/equipment/settings.rst:65
+#: ../../content/applications/services/equipment/settings.rst:70
 msgid "Defaults"
 msgstr "Valores predeterminados"
 
-#: ../../content/applications/services/equipment/settings.rst:68
+#: ../../content/applications/services/equipment/settings.rst:73
 msgid "Default Project"
 msgstr "Proyecto predeterminado"
 
-#: ../../content/applications/services/equipment/settings.rst:70
+#: ../../content/applications/services/equipment/settings.rst:75
 msgid "Set a default project that is automatically assigned to new equipment records. This is useful when all equipment should be linked to the same ticket/project management system."
 msgstr "Defina un proyecto predeterminado que se asigne automáticamente a los nuevos registros de equipos. Esto resulta útil cuando todos los equipos deben vincularse al mismo sistema de gestión de incidencias o proyectos."
 
-#: ../../content/applications/services/equipment/settings.rst:74
+#: ../../content/applications/services/equipment/settings.rst:79
 msgid "Equipment ID Prefix"
 msgstr "Prefijo del ID del equipo"
 
-#: ../../content/applications/services/equipment/settings.rst:76
+#: ../../content/applications/services/equipment/settings.rst:81
 msgid "Customize the prefix used for auto-generated Equipment IDs. The default is ``EQ/``, producing IDs like ``EQ/0001``, ``EQ/0002``, etc."
 msgstr "Personalice el prefijo utilizado para los ID de equipo generados automáticamente. El valor predeterminado es ``EQ/``, lo que genera ID como ``EQ/0001``, ``EQ/0002``, etc."
 
-#: ../../content/applications/services/equipment/settings.rst:79
+#: ../../content/applications/services/equipment/settings.rst:84
 msgid "Changing the prefix affects only newly created equipment — existing IDs are not modified."
 msgstr "Cambiar el prefijo solo afecta a los equipos creados a partir de ese momento: los ID existentes no se modifican."
 
-#: ../../content/applications/services/equipment/settings.rst:82
+#: ../../content/applications/services/equipment/settings.rst:87
 msgid "Each company can have its own sequence and prefix. In multi-company setups, configure the prefix separately for each company."
 msgstr "Cada compañía puede tener su propia secuencia y prefijo. En configuraciones multiempresa, configure el prefijo por separado para cada compañía."
+
+#: ../../content/applications/services/equipment/settings.rst:93
+msgid "Manufacturers and models"
+msgstr "Fabricantes y modelos"
+
+#: ../../content/applications/services/equipment/settings.rst:95
+msgid "Manufacturers and their models are managed in :menuselection:`Equipment Management --> Settings --> Manufacturers` and :menuselection:`Equipment Management --> Settings --> Models`. Each model has a :guilabel:`Manufacturer` (required), a :guilabel:`Category`, and optionally a :guilabel:`Product`, which is then shown on the equipment of this model."
+msgstr "Los fabricantes y sus modelos se gestionan en :menuselection:`Gestión de equipos --> Ajustes --> Fabricantes` y :menuselection:`Gestión de equipos --> Ajustes --> Modelos`. Cada modelo tiene un :guilabel:`Fabricante` (obligatorio), una :guilabel:`Categoría` y, opcionalmente, un :guilabel:`Producto`, que luego se muestra en los equipos de ese modelo."
+
+#: ../../content/applications/services/equipment/settings.rst:100
+msgid "The :guilabel:`Model` field of an equipment only offers the models of the equipment's category, and of its manufacturer if one is set. A missing model can also be created directly from that field: select :guilabel:`Create` or :guilabel:`Create and edit...` in its drop-down menu. The new model gets the equipment's category and manufacturer."
+msgstr "El campo :guilabel:`Modelo` de un equipo solo ofrece los modelos de la categoría del equipo y, si se ha indicado uno, de su fabricante. Un modelo que falte también se puede crear directamente desde ese campo: seleccione :guilabel:`Crear` o :guilabel:`Crear y editar...` en su menú desplegable. El nuevo modelo recibe la categoría y el fabricante del equipo."
+
+#: ../../content/applications/services/equipment/settings.rst:105
+msgid "The :guilabel:`Models` list shows the :guilabel:`Manufacturer`, :guilabel:`Name`, :guilabel:`Category`, and :guilabel:`Product` columns. It can be searched by :guilabel:`Name`, :guilabel:`Manufacturer`, and :guilabel:`Product`, filtered with :guilabel:`Archived`, and grouped by :guilabel:`Category`, :guilabel:`Brand`, or :guilabel:`Product`."
+msgstr "La lista :guilabel:`Modelos` muestra las columnas :guilabel:`Fabricante`, :guilabel:`Nombre`, :guilabel:`Categoría` y :guilabel:`Producto`. Se puede buscar por :guilabel:`Nombre`, :guilabel:`Fabricante` y :guilabel:`Producto`, filtrar con :guilabel:`Archivado` y agrupar por :guilabel:`Categoría`, :guilabel:`Marca` o :guilabel:`Producto`."
 
 #: ../../content/applications/services/field_service.rst:10
 msgid "**Field Service** covers the work your technicians perform at the customer's premises: the intervention is prepared in the office, carried out and documented on site, and then billed."

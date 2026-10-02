@@ -206,6 +206,8 @@ several days or weeks for search engines to update their results and remove the 
 .. example::
    This can be used to prevent websites from test databases from appearing in search results.
 
+.. _website/seo/sitemap:
+
 Sitemap
 =======
 
@@ -303,12 +305,39 @@ like the price and rating of a product:
    :module: website
    :notes: English UI, light theme, 1440px width.
 
+.. _website/seo/hreflang:
+
 Hreflang HTML tags
 ------------------
 
 Odoo automatically includes `hreflang` and `x-default` tags in the code of your website's
 multilingual pages. These HTML attributes are crucial in informing search engines about a specific
 page's language and geographical targeting.
+
+The tags are generated for each request, so the variant shown to a search engine is always the right
+one for the URL it requested:
+
+- On the canonical URL of a page, the `hreflang` and `x-default` tags point to every language
+  version of the page.
+- On a URL with a query string (e.g., `?utm_source=...` or `?gclid=...`), the page is not the
+  canonical URL, and the `hreflang` block is omitted.
+- The `noindex` robots tag that depends on the requested domain (added when the request does not
+  come from the website's indexable domain) is only rendered for that domain.
+
+.. note::
+   In earlier versions, the first variant rendered after a restart was kept in a cache and served
+   to every visitor. This is no longer the case.
+
+.. _website/seo/blog-tags:
+
+Blog tags
+~~~~~~~~~
+
+With the *Blog Sitemap SEO* module (`website_blog_sitemap_seo`), the tag pages of the blog
+(`/blog/<blog>/tag/<tag>`) also get the slug of the tag translated into each language in the `hreflang`
+and canonical URLs. For example, the Hungarian version of a tag page links to the English page with
+the English tag slug, and the English page links back to the Hungarian tag slug. See :ref:`Blog SEO
+<blog/seo>` for the redirects applied when the address contains a wrong slug.
 
 .. seealso::
    :doc:`../configuration/translate`

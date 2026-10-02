@@ -41,6 +41,16 @@ Configuration -–> Settings`, and select a language in the :guilabel:`Default` 
 .. note::
    This field is only visible if multiple languages have been installed and added to your website.
 
+.. _translate/blog-tags:
+
+Blog tag URLs
+-------------
+
+With the *Blog Sitemap SEO* module (`website_blog_sitemap_seo`), the address of a blog tag page
+contains the name of the tag **in the language of the page** (e.g., `/blog/news-1/tag/release-3`
+and `/hu/blog/news-1/tag/kiadas-3`). The `hreflang` tags of a tag page therefore list the tag address
+of each language, not the one of the current language. See :ref:`Blog SEO <blog/seo>`.
+
 .. _translate/language-selector:
 
 Language selector

@@ -387,16 +387,19 @@ Calibration repair orders
 =========================
 
 .. note::
-   Requires the *Equipment Management - Measuring Devices* module (``equipment_measuring``), which
-   depends on the eYssen *Equipment Management* app (``equipment``). See
-   :doc:`../../services/equipment/equipment_measuring` for the module itself.
+   Requires the *Equipment Management - Measuring Devices* module, which depends on the eYssen
+   *Equipment Management* app. See :doc:`../../services/equipment/equipment_measuring` for the
+   module itself.
 
 When this module is installed, ticking the :guilabel:`Calibration` checkbox near the top of a |RO|
 form turns it into a calibration record for a measuring device, and reveals a :guilabel:`Calibration`
 group with the following fields:
 
 - :guilabel:`Equipment`: the measuring device being calibrated; required, and restricted to
-  equipment of the *Measuring* type from the eYssen *Equipment Management* app.
+  equipment of the :guilabel:`Measuring Device` category of the eYssen *Equipment Management* app
+  (etalons and other categories cannot be selected). A device can be found by its name, serial
+  number, internal ID, or equipment ID; measuring devices are named after their serial number and
+  model (see :ref:`equipment/derived-name`).
 - :guilabel:`Calibration Date`: the date the calibration was performed.
 - :guilabel:`Calibration Quality`: :guilabel:`Accredited` or :guilabel:`Werks`, indicating whether
   the calibration was performed by an accredited lab or in-house.
@@ -425,3 +428,7 @@ calibration date, quality, result, customer, and status. From there, the search 
 :guilabel:`Accredited`, :guilabel:`Werks`, and :guilabel:`Voided Certificate` (cancelled repairs that
 still carry an issued certificate number) can be used to narrow down the list, and results can be
 grouped by :guilabel:`Calibration Quality`.
+
+The same list opens from the :guilabel:`Calibrations` smart button of a measuring device, limited to
+that device. When searching by :guilabel:`Equipment`, a device is also found by its serial number,
+internal ID, or equipment ID.

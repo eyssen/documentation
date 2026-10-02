@@ -6,11 +6,11 @@ The equipment form is a **single pane of glass** — a central hub where all Odo
 piece of equipment is visible in one place.
 
 .. screenshot:: services-equipment-form-overview
-   :menu: Equipment Management ‣ Equipment ‣ (open an equipment)
+   :menu: Equipment Management ‣ All Equipment ‣ (open an equipment)
    :shows: A complete equipment form: status bar in the Active state, smart buttons, the name and serial number, and the main field groups filled in.
    :highlight: None.
-   :data: Equipment "Zeiss Contura CMM", serial "CT-2019-0043", customer "Deco Addict".
-   :module: equipment
+   :data: Measuring device "CT-2019-0043 - Contura" (manufacturer "Zeiss", model "Contura", serial number "CT-2019-0043"), customer "Deco Addict".
+   :module: equipment, equipment_measuring
    :notes: English UI, light theme, 1440px width, crop to the form sheet.
 
 Header
@@ -20,7 +20,7 @@ The form header contains:
 
 - **Create Ticket** button: Creates a project task linked to this equipment. Only visible when the
   equipment is *Active* and has at least one project assigned.
-- **Status bar**: Click to change the state (*Draft* → *Active* → *Inactive*).
+- **Status bar**: Click to change the state (*Draft* → *Active* → *Inactive* → *Scrapped*).
 
 Stat buttons
 ============
@@ -37,6 +37,9 @@ Stat buttons appear at the top of the form, providing quick access to related re
 - **Documents**: Shows the number of attached documents. Click to view all documents.
 - **Fleet**: Only visible when a fleet vehicle is linked. Click to open the fleet vehicle form.
 
+Depending on the :guilabel:`Category`, the Printers and Measuring Devices sub-modules add further
+buttons and a tab of their own: see :doc:`equipment_printer` and :doc:`equipment_measuring`.
+
 Main fields
 ===========
 
@@ -44,7 +47,9 @@ The main section contains core equipment data organized in groups:
 
 **Title area:**
 
-- **Name**: The name of the equipment.
+- **Name**: The name of the equipment. For measuring devices and etalons, it cannot be typed: it is
+  built from the serial number and the model, and it is updated when they change (see
+  :ref:`equipment/derived-name`).
 - **Equipment ID**: A unique reference generated automatically from a sequence. It can be adjusted,
   and it is never copied when an equipment is duplicated.
 - **Serial Number**: The manufacturer's serial number.
@@ -54,11 +59,18 @@ The main section contains core equipment data organized in groups:
   from your own stock.
 - **MAC Address**: For network-connected equipment.
 
+.. tip::
+   Wherever an equipment is selected, for example in the :guilabel:`Equipment` field of a task, a
+   printer counter, or a calibration, you can type its name, :guilabel:`Serial Number`,
+   :guilabel:`Internal ID`, or :guilabel:`Equipment ID` to find it. The same applies when records
+   such as repair orders are searched by :guilabel:`Equipment`.
+
 **Left column:**
 
-- **Subscription Service**: If the equipment is part of a subscription.
+- **Subscription**: If the equipment is part of a subscription.
 - **Customer**: The customer using the equipment.
-- **Owner**: The legal owner.
+- **Owner**: The legal owner. On a new etalon, the customer and the owner both default to your own
+  company (see :ref:`equipment/etalons`).
 - **Assignees**: Users responsible for this equipment.
 - **Sales Team**: The responsible sales team.
 - **Projects**: Projects linked to this equipment for ticket management.
@@ -66,9 +78,15 @@ The main section contains core equipment data organized in groups:
 
 **Right column:**
 
-- **Type**: General, Printer, Measuring Device, etc.
+- **Category**: :guilabel:`General`; with the sub-modules, also :guilabel:`Printer` (see
+  :doc:`equipment_printer`), :guilabel:`Measuring Device`, and :guilabel:`Etalon` (see
+  :doc:`equipment_measuring`). The category decides which models can be selected, which buttons and
+  tabs are shown, and whether the name is typed or built automatically.
 - **Manufacturer**: The equipment brand.
-- **Model**: The specific model (filtered by brand and type).
+- **Model**: The specific model. Only the models of the equipment's category, and of its
+  manufacturer if one is set, can be selected. A model created from this field (:guilabel:`Create`
+  or :guilabel:`Create and edit...` in the drop-down menu) gets the equipment's category and
+  manufacturer (see :ref:`equipment/models`).
 - **Product**: Automatically set from the model's linked product.
 - **Product Family**: The product family classification.
 - **Production Year**: Year of manufacture.
@@ -88,11 +106,11 @@ Tabs
 ====
 
 .. screenshot:: services-equipment-form-tabs
-   :menu: Equipment Management ‣ Equipment ‣ (open an equipment)
-   :shows: The notebook of the equipment form with the tab row visible (Subscription, Description, Maintenance, Finance, Documents, Fleet).
+   :menu: Equipment Management ‣ All Equipment ‣ (open an equipment)
+   :shows: The notebook of the equipment form with the tab row visible (Subscription, Description, Maintenance, Finance, Documents, Fleet, Measuring).
    :highlight: The tab row (red frame).
-   :data: Equipment "Zeiss Contura CMM" with a linked fleet vehicle so that the Fleet tab is shown.
-   :module: equipment
+   :data: Measuring device "CT-2019-0043 - Contura" with a linked subscription line and a linked fleet vehicle, so that the Subscription and Fleet tabs are shown.
+   :module: equipment, equipment_measuring
    :notes: English UI, light theme, 1440px width, crop to the tab row and the first lines below it.
 
 The notebook section contains multiple tabs:
@@ -112,11 +130,11 @@ Maintenance tab
 ---------------
 
 .. screenshot:: services-equipment-maintenance-tab
-   :menu: Equipment Management ‣ Equipment ‣ (open an equipment) ‣ Maintenance
+   :menu: Equipment Management ‣ All Equipment ‣ (open an equipment) ‣ Maintenance
    :shows: The Maintenance tab with the linked maintenance equipment, the MTBF, MTTR, Last Failure and Est. Next Failure values, and an inline list of two maintenance requests.
    :highlight: The MTBF, MTTR and Est. Next Failure fields (red frame).
-   :data: Equipment "Zeiss Contura CMM" with two past maintenance requests.
-   :module: equipment, maintenance
+   :data: Measuring device "CT-2019-0043 - Contura" with two past maintenance requests.
+   :module: equipment, maintenance, equipment_measuring
    :notes: English UI, light theme, 1440px width, crop to the tab.
 
 - **Maintenance Equipment**: Link to the corresponding ``maintenance.equipment`` record. If not yet
@@ -131,11 +149,11 @@ Finance tab
 -----------
 
 .. screenshot:: services-equipment-finance-tab
-   :menu: Equipment Management ‣ Equipment ‣ (open an equipment) ‣ Finance
+   :menu: Equipment Management ‣ All Equipment ‣ (open an equipment) ‣ Finance
    :shows: The Finance tab with the analytic account, the Invoice Total, Purchase Total and Margin amounts, and an inline list of recent invoices with their payment status.
    :highlight: The Invoice Total, Purchase Total and Margin fields (red frame).
-   :data: Equipment "Zeiss Contura CMM"; analytic account "EQ/0043"; three invoices.
-   :module: equipment, account, analytic
+   :data: Measuring device "CT-2019-0043 - Contura"; analytic account "EQ/0043"; three invoices.
+   :module: equipment, account, analytic, equipment_measuring
    :notes: English UI, light theme, 1440px width, crop to the tab.
 
 - **Analytic Account**: The dedicated analytic account for this equipment. Can be auto-created
@@ -149,11 +167,11 @@ Documents tab
 -------------
 
 .. screenshot:: services-equipment-form-documents-tab
-   :menu: Equipment Management ‣ Equipment ‣ (open an equipment) ‣ Documents
+   :menu: Equipment Management ‣ All Equipment ‣ (open an equipment) ‣ Documents
    :shows: The Documents tab of the equipment form with three inline document lines showing name, type, expiry date and file.
    :highlight: None.
-   :data: Equipment "Zeiss Contura CMM"; documents "User manual", "CE certificate", "Calibration 2026".
-   :module: equipment
+   :data: Measuring device "CT-2019-0043 - Contura"; documents "User manual", "CE certificate", "Calibration 2026".
+   :module: equipment, equipment_measuring
    :notes: English UI, light theme, 1440px width, crop to the tab.
 
 An inline editable list of documents attached to the equipment:
@@ -169,7 +187,7 @@ Fleet tab
 ---------
 
 .. screenshot:: services-equipment-fleet-tab
-   :menu: Equipment Management ‣ Equipment ‣ (open an equipment) ‣ Fleet
+   :menu: Equipment Management ‣ All Equipment ‣ (open an equipment) ‣ Fleet
    :shows: The Fleet tab of an equipment linked to a fleet vehicle, showing the vehicle, the licence plate, the odometer reading, the last service date and the contract state.
    :highlight: None.
    :data: Equipment "Service van crane"; vehicle "Ford Transit / ABC-123".
@@ -188,27 +206,36 @@ List and search views
 =====================
 
 .. screenshot:: services-equipment-search-filters
-   :menu: Equipment Management ‣ Equipment
-   :shows: The Equipment list with the search panel open, showing the filters and the Group By options, and several optional columns enabled.
+   :menu: Equipment Management ‣ All Equipment
+   :shows: The All Equipment list with the search panel open, showing the filters and the Group By options, and several optional columns enabled.
    :highlight: The open filter dropdown (red frame).
-   :data: About ten equipment records of mixed types and states.
-   :module: equipment
+   :data: About ten equipment records of mixed categories and states.
+   :module: equipment, equipment_printer, equipment_measuring
    :notes: English UI, light theme, 1440px width, crop to the list and the open dropdown.
 
 The list view shows all equipment with optional columns that can be toggled:
 
-- Production Year, Warranty Expiration, Product Family
-- Open Maintenance count, Invoice count, Document count
-- Calibration Status (when Measuring Devices module is installed)
+- Internal ID, Production Year, Warranty Expiration, Product Family
+- Open Maint., Invoice Count, Document Count
+- Calibration (with the Measuring Devices sub-module): the calibration status, filled for measuring
+  devices only
+
+**Search fields:**
+
+- Name, Equipment ID, Serial Number, Internal ID, Customer, Manufacturer, Model, Tags, Projects,
+  Product Family
 
 **Search filters:**
 
+- **General**: Equipment of the :guilabel:`General` category.
+- **Draft**, **Active**, **Inactive**, **Scrapped**: Equipment in the given state.
+- **Archived**: Archived equipment.
 - **Open Maintenance**: Equipment with open maintenance requests.
 - **Expiring Documents**: Equipment with documents expiring within 30 days.
-- **Calibration Due** / **Calibration Overdue**: Available when the Measuring Devices module is
-  installed.
+- **Calibration Due** / **Calibration Overdue**: Available with the Measuring Devices sub-module;
+  they only return measuring devices.
 
 **Group By options:**
 
-- Type, State, Customer, Brand, Model, Product, Tag, Project
+- Category, State, Customer, Brand, Model, Product, Tag, Project
 - Product Family, Analytic Account

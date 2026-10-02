@@ -1,17 +1,34 @@
-============================================
+=========================================
 SII (Suministro Inmediato de Información)
-============================================
+=========================================
 
-With the :ref:`Spain - Base Layer <localizations/spain/base-layer>`, the SII (*Llevanza de libros
-registro del IVA a través de la Sede electrónica de la AEAT*) is handled by the *Suministro
-Inmediato de Información en el IVA* module. It sends the VAT data of customer invoices and vendor
+With the :ref:`Spanish fiscal profile <localizations/spain/fiscal-profile>` and its :guilabel:`SII
+Taxpayer` option, the SII (*Llevanza de libros registro del IVA a través de la Sede electrónica de
+la AEAT*) is handled by the *Suministro Inmediato de Información en el IVA* module. It sends the VAT data of customer invoices and vendor
 bills to the web service of the AEAT, or of the regional tax agency of the company. The SII is
 mandatory for companies with a turnover above 6 M€, for the taxpayers registered in the REDEME, and
 optional for the others.
 
 .. note::
    The standard *Spain - SII EDI Suministro de Libros* module described in :ref:`the SII section of
-   the Spain page <localizations/spain/sii>` cannot be installed together with the base layer.
+   the Spain page <localizations/spain/sii>` cannot be installed together with *AEAT Base*, which
+   the fiscal profile installs (see :ref:`localizations/spain/module-choice`).
+
+Installation
+============
+
+Enable :guilabel:`SII Taxpayer` in the :ref:`fiscal profile <localizations/spain/fiscal-profile>`
+(:menuselection:`Accounting --> Configuration --> Settings`, :guilabel:`Spain` section) and save, or
+select :guilabel:`SII taxpayer` in step :guilabel:`2. Fiscal profile` of the :ref:`company setup
+wizard <localizations/spain/setup-wizard>`. Odoo installs the SII module and its extensions:
+the OSS operations, the matching of the invoices with the AEAT records, and the summary of the
+simplified invoices of the Point of Sale.
+
+.. note::
+   A company cannot use the SII and Veri*Factu at the same time: SII taxpayers are exempt from
+   Veri*Factu. When you choose :guilabel:`SII (immediate supply of information)` in step
+   :guilabel:`4. Invoicing mode` of the wizard, the wizard turns Veri*Factu off, and enables the SII
+   in the test environment.
 
 Configuration
 =============

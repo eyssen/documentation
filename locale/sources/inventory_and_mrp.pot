@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-26 17:46+0200\n"
+"POT-Creation-Date: 2026-10-01 18:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27480,7 +27480,7 @@ msgid "Calibration repair orders"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:390
-msgid "Requires the *Equipment Management - Measuring Devices* module (``equipment_measuring``), which depends on the eYssen *Equipment Management* app (``equipment``). See :doc:`../../services/equipment/equipment_measuring` for the module itself."
+msgid "Requires the *Equipment Management - Measuring Devices* module, which depends on the eYssen *Equipment Management* app. See :doc:`../../services/equipment/equipment_measuring` for the module itself."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:394
@@ -27488,49 +27488,53 @@ msgid "When this module is installed, ticking the :guilabel:`Calibration` checkb
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:398
-msgid ":guilabel:`Equipment`: the measuring device being calibrated; required, and restricted to equipment of the *Measuring* type from the eYssen *Equipment Management* app."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:400
-msgid ":guilabel:`Calibration Date`: the date the calibration was performed."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:401
-msgid ":guilabel:`Calibration Quality`: :guilabel:`Accredited` or :guilabel:`Werks`, indicating whether the calibration was performed by an accredited lab or in-house."
+msgid ":guilabel:`Equipment`: the measuring device being calibrated; required, and restricted to equipment of the :guilabel:`Measuring Device` category of the eYssen *Equipment Management* app (etalons and other categories cannot be selected). A device can be found by its name, serial number, internal ID, or equipment ID; measuring devices are named after their serial number and model (see :ref:`equipment/derived-name`)."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:403
-msgid ":guilabel:`Result`: :guilabel:`Pass`, :guilabel:`Fail`, :guilabel:`Conditional Pass`, or :guilabel:`Conditional Fail`."
+msgid ":guilabel:`Calibration Date`: the date the calibration was performed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:405
-msgid ":guilabel:`Performed By`: free-text name of the person who performed the calibration."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:404
+msgid ":guilabel:`Calibration Quality`: :guilabel:`Accredited` or :guilabel:`Werks`, indicating whether the calibration was performed by an accredited lab or in-house."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:406
+msgid ":guilabel:`Result`: :guilabel:`Pass`, :guilabel:`Fail`, :guilabel:`Conditional Pass`, or :guilabel:`Conditional Fail`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:408
+msgid ":guilabel:`Performed By`: free-text name of the person who performed the calibration."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:409
 msgid ":guilabel:`Certificate Number`: a read-only, gap-less certificate number, automatically assigned from a dedicated sequence as soon as the |RO| moves to :guilabel:`Under Repair`. It can never be entered or edited manually, cannot be cleared by turning :guilabel:`Calibration` back off, and a calibration that already has one cannot be reset to :guilabel:`New` or deleted."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:410
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:413
 msgid ":guilabel:`Certificate`: an uploaded PDF or scan of the issued certificate."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:411
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:414
 msgid ":guilabel:`Signed By` and :guilabel:`Sign Date`, and a :guilabel:`Customer Signature` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:412
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:415
 msgid ":guilabel:`Work Performed` and :guilabel:`Calibration Notes` text fields."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:415
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:418
 msgid "The certificate number is a regulatory requirement: it is issued exactly once per calibration and cannot be changed by a user, even a database administrator, through the form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:418
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:421
 msgid "Click :guilabel:`Print Worksheet`, in the header, to print the calibration worksheet report for this |RO| (a plain repair prints the standard repair order report instead)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:421
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:424
 msgid "The :guilabel:`Calibrations` menu, under the eYssen *Equipment Management* app (:menuselection:`Equipment Management --> Measuring Devices --> Calibrations`), lists every calibration |RO| across all measuring devices, with its reference, certificate number, equipment, calibration date, quality, result, customer, and status. From there, the search filters :guilabel:`Accredited`, :guilabel:`Werks`, and :guilabel:`Voided Certificate` (cancelled repairs that still carry an issued certificate number) can be used to narrow down the list, and results can be grouped by :guilabel:`Calibration Quality`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:432
+msgid "The same list opens from the :guilabel:`Calibrations` smart button of a measuring device, limited to that device. When searching by :guilabel:`Equipment`, a device is also found by its serial number, internal ID, or equipment ID."
 msgstr ""

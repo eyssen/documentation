@@ -722,11 +722,56 @@ that token. A token can only be used once, and only during the 10 seconds follow
    Enable this option only if you agree that your hosting provider or support provider can log in on
    behalf of your users. To withdraw the permission, untick the option and click :guilabel:`Save`.
 
+.. _eyssen-erp-settings/availability:
+
+Options you do not see in Settings
+==================================
+
+eYssen ERP is based on the Community edition of Odoo and contains no Enterprise code. The general
+:guilabel:`Settings` screens therefore only offer what can actually be installed and used in your
+database:
+
+- The checkbox of an application or feature whose module is **not part of eYssen ERP** (or cannot be
+  installed) is hidden. If the option was its only field, the whole setting disappears; if every
+  setting of a block is hidden, the block title disappears too.
+- The checkbox of a module that **is available** is a plain checkbox: tick it and click
+  :guilabel:`Save` to install the module.
+- A few options that only exist as placeholders, without any behavior in eYssen ERP, are hidden as
+  well. This is the case, for example, of the timesheet reminders, the invoicing policy placeholder
+  of *Timesheets*, and of the resulting *Timesheets Control* block.
+- No option shows an edition badge or offers to upgrade to another edition. Should an option that
+  is not available still be triggered (e.g., from a custom view), a :guilabel:`Not available` dialog
+  with the message *This option is not available in this database.* is displayed instead. Click
+  :guilabel:`Close` to dismiss it; the option is reset.
+
+.. note::
+   The Odoo documentation describes some options that are not available in eYssen ERP. If an option
+   mentioned in the Odoo documentation is missing from your :guilabel:`Settings`, it belongs to a
+   module that is not part of this distribution. The :ref:`eYssen ERP options
+   <eyssen-erp-settings/options>` and the :doc:`Apps <apps_modules>` dashboard list what is
+   installable.
+
 About
 =====
 
 The :guilabel:`About` section, at the bottom of the page, displays the version and the publisher of
-eYssen ERP.
+eYssen ERP. It shows the Odoo version line (e.g., *Version: 18.0*) without any edition mention.
+
+.. _eyssen-erp-settings/edition-marker:
+
+Version and edition reported to external tools
+----------------------------------------------
+
+The version of the server is published, without authentication, at `/web/webclient/version_info`
+and through the `version` method of the `/xmlrpc/2/common` and `/jsonrpc` endpoints. It ends with
+the suffix `+eyssen`. In the `server_version_info` list, the last element is the *edition marker*:
+Odoo uses an empty value for Community and `e` for Enterprise. eYssen ERP reports `eyssen`, which
+all Odoo clients read as **not Enterprise**.
+
+Integrators and monitoring tools that test the edition should therefore compare the marker with `e`
+(Enterprise) and treat any other value as a non-Enterprise edition. Testing for an empty value only
+would wrongly classify eYssen ERP as a different edition. The web client, the Point of Sale, and
+the spreadsheet features no longer behave as on an Enterprise database.
 
 .. seealso::
    - :doc:`apps_modules`

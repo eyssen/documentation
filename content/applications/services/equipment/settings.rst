@@ -18,15 +18,20 @@ Equipment Types
 
 Enable or disable equipment type sub-modules:
 
-- **Printers**: Install the ``equipment_printer`` module for printer-specific features including
-  counter tracking, cartridge management, and paper format support. See :doc:`equipment_printer`.
-- **Measuring Devices**: Install the ``equipment_measuring`` module for measuring device features
-  including calibration tracking, sensor management, and software/hardware info. See
+- **Printers**: Adds the :guilabel:`Printer` category, with counter tracking, cartridge management,
+  and paper format support. See :doc:`equipment_printer`.
+- **Measuring Devices**: Adds the :guilabel:`Measuring Device` category, with calibration tracking,
+  sensor management, and software and hardware information. It also adds the :guilabel:`Etalon`
+  category, with its own :guilabel:`Etalons` menu, for your company's own reference standards. See
   :doc:`equipment_measuring`.
 
 .. note::
-   Enabling a sub-module will install the corresponding Odoo module. Disabling it will uninstall
-   the module (data is preserved).
+   Enabling a sub-module will install the corresponding Odoo module.
+
+.. warning::
+   Disabling a sub-module uninstalls the module: the data it adds, such as printer counters,
+   calibration data, or sensors, is deleted, and its equipment and models (printers, or measuring
+   devices and etalons) get the :guilabel:`General` category.
 
 Automation
 ==========
@@ -43,7 +48,7 @@ creates a dedicated analytic account for that equipment.
 This is useful for tracking revenue and costs per equipment without manual setup.
 
 Auto-create Maintenance Equipment
-----------------------------------
+---------------------------------
 
 When enabled, activating an equipment also creates a corresponding ``maintenance.equipment`` record
 automatically. If a maintenance equipment with the same serial number already exists, it will be
@@ -81,3 +86,23 @@ Changing the prefix affects only newly created equipment — existing IDs are no
 .. tip::
    Each company can have its own sequence and prefix. In multi-company setups, configure the
    prefix separately for each company.
+
+.. _equipment/models:
+
+Manufacturers and models
+========================
+
+Manufacturers and their models are managed in :menuselection:`Equipment Management --> Settings
+--> Manufacturers` and :menuselection:`Equipment Management --> Settings --> Models`. Each model has
+a :guilabel:`Manufacturer` (required), a :guilabel:`Category`, and optionally a :guilabel:`Product`,
+which is then shown on the equipment of this model.
+
+The :guilabel:`Model` field of an equipment only offers the models of the equipment's category, and
+of its manufacturer if one is set. A missing model can also be created directly from that field:
+select :guilabel:`Create` or :guilabel:`Create and edit...` in its drop-down menu. The new model
+gets the equipment's category and manufacturer.
+
+The :guilabel:`Models` list shows the :guilabel:`Manufacturer`, :guilabel:`Name`,
+:guilabel:`Category`, and :guilabel:`Product` columns. It can be searched by :guilabel:`Name`,
+:guilabel:`Manufacturer`, and :guilabel:`Product`, filtered with :guilabel:`Archived`, and grouped
+by :guilabel:`Category`, :guilabel:`Brand`, or :guilabel:`Product`.

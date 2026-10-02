@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-27 02:56+0200\n"
+"POT-Creation-Date: 2026-09-28 20:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -217,34 +217,58 @@ msgid "Use :ref:`Plausible <analytics/plausible>` to keep track of the traffic o
 msgstr ""
 
 #: ../../content/applications/websites/blog.rst:139
-msgid "Contents landing page"
+msgid "SEO of tag pages"
 msgstr ""
 
 #: ../../content/applications/websites/blog.rst:141
+msgid "The *Blog Sitemap SEO* module (`website_blog_sitemap_seo`) improves how search engines see the tag pages of your blogs:"
+msgstr ""
+
+#: ../../content/applications/websites/blog.rst:144
+msgid "**Sitemap**: the tag pages are added to :ref:`/sitemap.xml <website/seo/sitemap>`, for the tags that have a :guilabel:`Meta Title` set and are used on published posts. The `/feed` addresses and `/website/info` are left out of the sitemap, but remain reachable."
+msgstr ""
+
+#: ../../content/applications/websites/blog.rst:147
+msgid "**Localized tag addresses**: in a language other than the default one, the tag page is served with the tag name of that language in its address. The `hreflang` tags list the address of the tag page in each language of the website, with the tag name translated (see :ref:`Hreflang HTML tags <website/seo/hreflang>`)."
+msgstr ""
+
+#: ../../content/applications/websites/blog.rst:151
+msgid "**Redirects**: opening a tag page with the tag name of another language (or an outdated one), for example `/hu/blog/tag/<english-name>`, redirects to the right address with **one** permanent (301) redirect that keeps the language prefix. The same applies when the blog name in the address is wrong as well."
+msgstr ""
+
+#: ../../content/applications/websites/blog.rst:157
+msgid "Tag pages with several tags at once (e.g., `/tag/a,b`) keep the standard Odoo behavior."
+msgstr ""
+
+#: ../../content/applications/websites/blog.rst:162
+msgid "Contents landing page"
+msgstr ""
+
+#: ../../content/applications/websites/blog.rst:164
 msgid "By default, a blog's landing page lists the posts in reverse chronological order, which suits news but not reference content such as a handbook or a knowledge base. The *Blog Contents Landing* module (`website_blog_contents`) replaces that list with a generated table of contents."
 msgstr ""
 
-#: ../../content/applications/websites/blog.rst:145
+#: ../../content/applications/websites/blog.rst:168
 msgid "Enable it per blog under :menuselection:`Website --> Configuration --> Blog --> Blogs`, with the :guilabel:`Contents Landing` option. The blog header designed in the website editor stays above the generated tree. The other options are:"
 msgstr ""
 
-#: ../../content/applications/websites/blog.rst:149
+#: ../../content/applications/websites/blog.rst:172
 msgid ":guilabel:`Contents Sort` and :guilabel:`Contents Sort Direction`: the order of the posts within a section — by :guilabel:`Title`, :guilabel:`Publishing date`, :guilabel:`Created on`, :guilabel:`Last Updated on`, :guilabel:`Published Date` or by internal :guilabel:`ID`, ascending or descending."
 msgstr ""
 
-#: ../../content/applications/websites/blog.rst:153
+#: ../../content/applications/websites/blog.rst:176
 msgid ":guilabel:`Show Teaser`: shows each post's teaser or subtitle under its title."
 msgstr ""
 
-#: ../../content/applications/websites/blog.rst:154
+#: ../../content/applications/websites/blog.rst:177
 msgid ":guilabel:`Grouping Levels`: the tag categories used as nested grouping levels, in order. With the category *Chapter* as the first level and *Section* as the second, the contents page is grouped into chapters and, inside them, into sections. Leave it empty to simply list every published post in the sort order."
 msgstr ""
 
-#: ../../content/applications/websites/blog.rst:158
+#: ../../content/applications/websites/blog.rst:181
 msgid ":guilabel:`Section Order`: the order of the sections on the page, set by dragging. This writes the sequence of the corresponding tags."
 msgstr ""
 
-#: ../../content/applications/websites/blog.rst:178
+#: ../../content/applications/websites/blog.rst:201
 msgid "Only published posts appear on the contents page, and posts scheduled for a future date are left out until their publishing date."
 msgstr ""
 
@@ -728,7 +752,7 @@ msgstr ""
 #: ../../content/applications/websites/ecommerce/connectors.rst:116
 #: ../../content/applications/websites/ecommerce/payments.rst:14
 #: ../../content/applications/websites/website/configuration.rst:5
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:21
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:25
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:10
 #: ../../content/applications/websites/website/store_locator.rst:10
 msgid "Configuration"
@@ -5177,142 +5201,221 @@ msgid "Cookies bars are required to obtain visitors' consent for optional cookie
 msgstr ""
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:18
-msgid "Odoo is compliant with `Google consent mode v2 <https://support.google.com/tagmanager/answer/13695607>`_."
+msgid "Odoo is compliant with `Google consent mode v2 <https://support.google.com/tagmanager/answer/13695607>`_: the consent state is set to *denied* by default and updated to *granted* or *denied* according to the visitor's choice. In eYssen ERP, the :ref:`Google consent mode (advanced) <cookies-bar/consent-mode-advanced>` module also lets the Google tag load before the choice is made."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:23
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:27
 msgid "To add a cookies bar on your website, go to :menuselection:`Website --> Configuration --> Settings` and enable :guilabel:`Cookies Bar` in the :guilabel:`Privacy` section. This activates :guilabel:`Block tracking 3rd-party services` by default, including social media, video hosting platforms, and Google services. Click :guilabel:`Add domains to the block list` to include other external websites. These services remain blocked on your website until visitors accept optional cookies."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:31
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:35
 msgid "Using third-party cookies without a cookies bar does not prevent them from being triggered. Only the presence of a cookie bar **and** the visitor’s refusal ensure that these cookies are blocked."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:37
-msgid "Cookies policy"
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:41
+msgid "Google consent mode (advanced)"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:39
-msgid "When you enable the cookies bar for your website, Odoo creates the **Cookie Policy** page (`/cookie-policy`) containing a list of cookies set by default, with their purpose and examples."
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:48
-msgid "Category"
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:43
+msgid "With the cookies bar enabled, the standard behavior is to block the Google tag (`gtag.js`) until the visitor accepts optional cookies, because `googletagmanager.com` and `google-analytics.com` are on the block list of third-party services. As a result, the tag only loads on the **next** page after the visitor accepted. Google Analytics 4 then loses the landing page, the `gclid` parameter of Google Ads and the referrer of the first page, and the visit is reported as *Direct*."
 msgstr ""
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:49
-msgid "Role"
+msgid "The *Website: Google consent mode (advanced)* module (`eyssen_website_consent_mode`) fixes this by removing these two domains, and only these two, from the block list."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:50
-msgid "Name"
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:53
+msgid "Set it up"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:51
-msgid "Essential - Session & Security"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:52
-msgid "Authenticate visitors, protect visitor data and allow the website to deliver the services visitors expects, such as maintaining the content of their cart, or allowing file uploads. The website will not work properly without these cookies."
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:55
-msgid "session_id (Odoo)"
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:54
+msgid "Install the module from :menuselection:`Apps` (search for `eyssen_website_consent_mode`). It has no setting and no menu."
 msgstr ""
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:56
-msgid "Essential - Preferences"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:57
-msgid "Remember information about the preferred look or behavior of the website, such as the preferred language or region. The website will continue to function without these cookies, but the visitor’s experience may be affected."
+msgid "Go to :menuselection:`Website --> Configuration --> Settings`, enable :guilabel:`Cookies Bar` in the :guilabel:`Privacy` section, and enable :guilabel:`Google Analytics` in the :guilabel:`SEO` section with your :guilabel:`Measurement ID` (see :ref:`Google Analytics <analytics/google-analytics>`)."
 msgstr ""
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:60
-msgid "frontend_lang (Odoo)"
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:88
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:149
+#: ../../content/applications/websites/website/configuration/translate.rst:76
+msgid "Click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:61
-msgid "Optional - Interaction History"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:62
-msgid "Collect information about your interactions with the website, the pages you've seen, and any specific marketing campaign that brought you to the website. The website will work without these cookies, but some features or services may not perform optimally."
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:65
-msgid "im_livechat_previous_operator (Odoo), utm_campaign (Odoo), utm_source (Odoo), utm_medium (Odoo)"
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:63
+msgid "The module removes the two Google domains from the block list of every website that has a Google Analytics :guilabel:`Measurement ID`. It only has a visible effect when the cookies bar is enabled with :guilabel:`Block tracking 3rd-party services`, which is the default. Websites without a :guilabel:`Measurement ID` keep the standard behavior."
 msgstr ""
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:69
-msgid "Optional - Advertising & Marketing"
+msgid "How it behaves"
 msgstr ""
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:70
-msgid "Make advertising more engaging to visitors and more valuable to publishers and advertisers, such as providing more relevant ads when you visit other websites that display ads or to improve reporting on ad campaign performance. Note that some third-party services may install additional cookies on your browser in order to identify you."
+msgid "The Google tag loads on the first page, before the visitor answers the cookies bar. The consent default stays *denied* for analytics and advertising storage, so Google does not set analytics cookies until the visitor accepts."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:74
-msgid "__gads (Google), __gac (Google)"
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:73
+msgid "When the visitor accepts or refuses optional cookies, the cookies bar sends the consent update (*granted* or *denied*) on the **same page**, without a reload."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:75
+msgid "The landing page, the `gclid` and the referrer of the first page reach Google Analytics 4."
 msgstr ""
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:76
-msgid "Optional - Analytics"
+msgid "If you added `googletagmanager.com` or `google-analytics.com` yourself with :guilabel:`Add domains to the block list`, they stay blocked."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:77
-msgid "Understand how visitors engage with the website, via Google Analytics. The website will still work without these cookies."
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:79
-msgid "_ga (Google), _gat (Google), _gid (Google), _gac_* (Google)"
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:80
+msgid "This is Google's *advanced* consent mode: while consent is denied, Google may receive cookieless pings from the visitor's browser. Check that this fits your data protection requirements and mention it in your :ref:`cookies policy <cookies-bar/policy>`."
 msgstr ""
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:85
-msgid "It is not possible to let visitors customize or select which optional cookies they want to allow."
+msgid "Check that it works"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:88
-msgid "You could add a link to this page in your website's footer, for example."
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:86
+msgid "Open your website in a private browsing window and open the developer tools of your browser (:kbd:`F12`), :guilabel:`Network` tab."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:93
-msgid "Edit the Cookies policy page"
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:89
+msgid "Reload the page, without answering the cookies bar. A request to `googletagmanager.com/gtag/js` must appear on this first page. Without the module, the script is rendered with the address `about:blank` and no request is made."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:95
-msgid "To access it, click the :guilabel:`Cookie Policy` hyperlink in the cookies bar or open the page from :menuselection:`Website --> Site --> Pages`."
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:92
+msgid "Click :guilabel:`I agree` or :guilabel:`Only essentials` in the cookies bar. In the browser console, the `dataLayer` object receives a `consent` `update` entry (*granted* or *denied*) on the same page, without a reload."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:98
-msgid "To adapt the content of the page according to your needs, click the :guilabel:`Edit` button."
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:97
+msgid "The module has no effect on other trackers: the other third-party services of the block list (social networks, video platforms, Google Maps, etc.) are still blocked until the visitor accepts optional cookies."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:101
-msgid "You have to list every cookie you added yourself on the `/cookie-policy` page including their name, role, category and duration."
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:104
+msgid "Cookies policy"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:105
-msgid "To check the duration of cookies, use your browser’s developer tools."
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:108
-msgid ":doc:`Pages <../structure/pages>`"
-msgstr ""
-
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:113
-msgid "Customization"
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:106
+msgid "When you enable the cookies bar for your website, Odoo creates the **Cookie Policy** page (`/cookie-policy`) containing a list of cookies set by default, with their purpose and examples."
 msgstr ""
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:115
-msgid "To adapt the display of the cookies bar on your website, click :guilabel:`Edit` on the website editor, go to the :guilabel:`Invisible Elements` section at the bottom of the panel, and click :guilabel:`Cookies Bar`. You can modify the :guilabel:`Layout` and :guilabel:`Size` of the cookies bar, and enable :guilabel:`Backdrop` to gray out the page in the background when the cookies bar is displayed on the screen."
+msgid "Category"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:121
-msgid "Click anywhere in the building block to further customize the appearance of the cookies bar using :guilabel:`Block`, :guilabel:`Column` and/or :guilabel:`Inline Text` customization options."
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:116
+msgid "Role"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:117
+msgid "Name"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:118
+msgid "Essential - Session & Security"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:119
+msgid "Authenticate visitors, protect visitor data and allow the website to deliver the services visitors expects, such as maintaining the content of their cart, or allowing file uploads. The website will not work properly without these cookies."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:122
+msgid "session_id (Odoo)"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:123
+msgid "Essential - Preferences"
 msgstr ""
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:124
+msgid "Remember information about the preferred look or behavior of the website, such as the preferred language or region. The website will continue to function without these cookies, but the visitor’s experience may be affected."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:127
+msgid "frontend_lang (Odoo)"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:128
+msgid "Optional - Interaction History"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:129
+msgid "Collect information about your interactions with the website, the pages you've seen, and any specific marketing campaign that brought you to the website. The website will work without these cookies, but some features or services may not perform optimally."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:132
+msgid "im_livechat_previous_operator (Odoo), utm_campaign (Odoo), utm_source (Odoo), utm_medium (Odoo)"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:136
+msgid "Optional - Advertising & Marketing"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:137
+msgid "Make advertising more engaging to visitors and more valuable to publishers and advertisers, such as providing more relevant ads when you visit other websites that display ads or to improve reporting on ad campaign performance. Note that some third-party services may install additional cookies on your browser in order to identify you."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:141
+msgid "__gads (Google), __gac (Google)"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:143
+msgid "Optional - Analytics"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:144
+msgid "Understand how visitors engage with the website, via Google Analytics. The website will still work without these cookies."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:146
+msgid "_ga (Google), _gat (Google), _gid (Google), _gac_* (Google)"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:152
+msgid "It is not possible to let visitors customize or select which optional cookies they want to allow."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:155
+msgid "You could add a link to this page in your website's footer, for example."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:160
+msgid "Edit the Cookies policy page"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:162
+msgid "To access it, click the :guilabel:`Cookie Policy` hyperlink in the cookies bar or open the page from :menuselection:`Website --> Site --> Pages`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:165
+msgid "To adapt the content of the page according to your needs, click the :guilabel:`Edit` button."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:168
+msgid "You have to list every cookie you added yourself on the `/cookie-policy` page including their name, role, category and duration."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:172
+msgid "To check the duration of cookies, use your browser’s developer tools."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:175
+msgid ":doc:`Pages <../structure/pages>`"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:180
+msgid "Customization"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:182
+msgid "To adapt the display of the cookies bar on your website, click :guilabel:`Edit` on the website editor, go to the :guilabel:`Invisible Elements` section at the bottom of the panel, and click :guilabel:`Cookies Bar`. You can modify the :guilabel:`Layout` and :guilabel:`Size` of the cookies bar, and enable :guilabel:`Backdrop` to gray out the page in the background when the cookies bar is displayed on the screen."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:188
+msgid "Click anywhere in the building block to further customize the appearance of the cookies bar using :guilabel:`Block`, :guilabel:`Column` and/or :guilabel:`Inline Text` customization options."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:191
 msgid "To edit the contents of the cookies bar (i.e., the consent message), click directly in the building block."
 msgstr ""
 
@@ -6084,12 +6187,6 @@ msgstr ""
 msgid "Open the Cloudflare Turnstile page, copy the :guilabel:`Secret Key`, and paste it into the :guilabel:`CF Secret Key` field in Odoo."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:88
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:149
-#: ../../content/applications/websites/website/configuration/translate.rst:66
-msgid "Click :guilabel:`Save`."
-msgstr ""
-
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:91
 msgid "Navigate to Turnstile on your Cloudflare account to view the solve rates and access more settings."
 msgstr ""
@@ -6219,138 +6316,146 @@ msgid "This field is only visible if multiple languages have been installed and 
 msgstr ""
 
 #: ../../content/applications/websites/website/configuration/translate.rst:47
-msgid "Language selector"
+msgid "Blog tag URLs"
 msgstr ""
 
 #: ../../content/applications/websites/website/configuration/translate.rst:49
+msgid "With the *Blog Sitemap SEO* module (`website_blog_sitemap_seo`), the address of a blog tag page contains the name of the tag **in the language of the page** (e.g., `/blog/news-1/tag/release-3` and `/hu/blog/news-1/tag/kiadas-3`). The `hreflang` tags of a tag page therefore list the tag address of each language, not the one of the current language. See :ref:`Blog SEO <blog/seo>`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/translate.rst:57
+msgid "Language selector"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/translate.rst:59
 msgid "Your website’s visitors can switch languages using the language selector, available by default in the :guilabel:`Copyright` section at the bottom of the page. To edit the language selector menu:"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:52
+#: ../../content/applications/websites/website/configuration/translate.rst:62
 msgid "Go to your website and click :guilabel:`Edit`;"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:53
+#: ../../content/applications/websites/website/configuration/translate.rst:63
 msgid "Click the language selector available in the :guilabel:`Copyright` block and go to the :guilabel:`Copyright` section of the website builder;"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:55
+#: ../../content/applications/websites/website/configuration/translate.rst:65
 msgid "Set the :guilabel:`Language Selector` field to either :guilabel:`Dropdown` or :guilabel:`Inline`. Click :guilabel:`None` if you do not want to display the  :guilabel:`Language selector`;"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:69
+#: ../../content/applications/websites/website/configuration/translate.rst:79
 msgid "You can also add the :guilabel:`Language Selector` to the :guilabel:`Header` of your page. To do so, click the :guilabel:`Header` block and go to the :guilabel:`Navbar` section to edit the :guilabel:`Language Selector`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:76
+#: ../../content/applications/websites/website/configuration/translate.rst:86
 msgid "Translate your website"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:78
+#: ../../content/applications/websites/website/configuration/translate.rst:88
 msgid "Select your desired language from the language selector to see your content in another language. Then, click the :guilabel:`Translate` button in the top-right corner to manually activate the translation mode so that you can translate what has not been translated automatically by Odoo."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:82
+#: ../../content/applications/websites/website/configuration/translate.rst:92
 msgid "Translated text strings are highlighted in green; text strings that were not translated automatically are highlighted in yellow."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:93
+#: ../../content/applications/websites/website/configuration/translate.rst:103
 msgid "In this mode, you can only translate text. To change the page's structure, you must edit the master page, i.e., the page in the original language of the database. Any changes made to the master page are automatically applied to all translated versions."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:97
+#: ../../content/applications/websites/website/configuration/translate.rst:107
 msgid "To replace the original text with the translation, click the block, edit its contents, and :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:101
+#: ../../content/applications/websites/website/configuration/translate.rst:111
 msgid "When a website supports multiple languages, the core URL structure remains consistent across languages, while specific elements like product names or categories are translated. For example, `https://www.mywebsite.com/shop/product/my-product-1` is the English version of a product page, while `https://www.mywebsite.com/fr/shop/product/mon-produit-1` is the French version of the same page. The structure (/shop/product/) stays unchanged, but the translated elements (e.g., product name) adapt to the selected language."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:109
+#: ../../content/applications/websites/website/configuration/translate.rst:119
 msgid "Once the desired language is installed, you can translate some items from the backend (e.g., the product's name in the product form). To do so, click the language code (e.g., :guilabel:`EN`) next to the text you want to translate and add the translation."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:114
+#: ../../content/applications/websites/website/configuration/translate.rst:124
 msgid "Content visibility by language"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:116
+#: ../../content/applications/websites/website/configuration/translate.rst:126
 msgid "You can hide content (such as images or videos, for example) depending on the language. To do so:"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:118
+#: ../../content/applications/websites/website/configuration/translate.rst:128
 msgid "Click :guilabel:`Edit` and select an element of your website;"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:119
+#: ../../content/applications/websites/website/configuration/translate.rst:129
 msgid "Go to the :guilabel:`Text - Image` section and :guilabel:`Visibility`;"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:120
+#: ../../content/applications/websites/website/configuration/translate.rst:130
 msgid "Click :guilabel:`No condition` and select :guilabel:`Conditionally` instead;"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:121
+#: ../../content/applications/websites/website/configuration/translate.rst:131
 msgid "Go to :guilabel:`Languages` to configure the condition(s) to apply by selecting :guilabel:`Visible for` or :guilabel:`Hidden for`, and click :guilabel:`Choose a record` to decide which languages are impacted."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:128
+#: ../../content/applications/websites/website/configuration/translate.rst:138
 msgid "Language-specific images"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:130
+#: ../../content/applications/websites/website/configuration/translate.rst:140
 msgid "Images that contain text — banners, product sheets, infographics — usually need a different file per language. The *Website Image Translation* module (`website_image_translation`) makes it possible to attach a language variant to an image without touching the page itself: the page keeps pointing at the original image, and the visitor is served the variant matching their language, falling back to the original when no variant exists."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:136
+#: ../../content/applications/websites/website/configuration/translate.rst:146
 msgid "The variants are managed under :menuselection:`Website --> Configuration --> Image Language Variants`, where each record links a :guilabel:`Source attachment` — the image used in the page — to a :guilabel:`Language` and to the :guilabel:`Attachment` served for that language, optionally limited to one :guilabel:`Website`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:149
+#: ../../content/applications/websites/website/configuration/translate.rst:159
 msgid "This works for images placed with the website editor, for background images and for images from the media library. Because the page HTML is unchanged, adding or removing a variant later does not require editing the pages that use the image."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:154
+#: ../../content/applications/websites/website/configuration/translate.rst:164
 msgid "The menu is only visible to users in the *Editor and Designer* website group."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:159
+#: ../../content/applications/websites/website/configuration/translate.rst:169
 msgid "Region selector"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:161
+#: ../../content/applications/websites/website/configuration/translate.rst:171
 msgid "On a webshop serving several countries, the language is only part of the choice: the country also determines the prices, the currency and the taxes applied. The *Website Region Selector* module (`website_region_selector`) replaces the plain language menu with a modal in which anonymous visitors choose their :guilabel:`Language`, :guilabel:`Country` and :guilabel:`Currency` (pricelist) in one step. The selected country also drives the fiscal position used for the cart, so the prices shown include the right VAT."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:168
+#: ../../content/applications/websites/website/configuration/translate.rst:178
 msgid "Enable it per website in :menuselection:`Website --> Configuration --> Settings`:"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:170
+#: ../../content/applications/websites/website/configuration/translate.rst:180
 msgid ":guilabel:`Region Selector`: shows the selector on this website. Turn it off on websites that should not offer it, such as a B2B portal."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:172
+#: ../../content/applications/websites/website/configuration/translate.rst:182
 msgid ":guilabel:`Replace the language menu`: replaces the native header language menu with the region selector button. The language stays selectable inside the modal, and the `hreflang` tags are kept for search engines."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:184
+#: ../../content/applications/websites/website/configuration/translate.rst:194
 msgid "Which countries are offered, and with which pricelists, is configured on the countries themselves (:menuselection:`Settings --> Technical --> Countries`):"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:187
+#: ../../content/applications/websites/website/configuration/translate.rst:197
 msgid ":guilabel:`Available on the Website`: makes the country selectable in the region selector;"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:188
+#: ../../content/applications/websites/website/configuration/translate.rst:198
 msgid ":guilabel:`Website Pricelists`: the pricelists offered for this country. The first one, by pricelist sequence, is the default selection."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:208
+#: ../../content/applications/websites/website/configuration/translate.rst:218
 msgid "Logged-in users never see the selector: their language, pricelist and fiscal position come from their contact record."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:210
+#: ../../content/applications/websites/website/configuration/translate.rst:220
 msgid "With the **Theme Prime** theme, install the *Website Region Selector - Theme Prime* module (`website_region_selector_theme_prime`) as well, so that the selector button is rendered in that theme's header."
 msgstr ""
 
@@ -7651,107 +7756,135 @@ msgstr ""
 msgid "This can be used to prevent websites from test databases from appearing in search results."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:210
+#: ../../content/applications/websites/website/structure/seo.rst:212
 msgid "Sitemap"
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:212
+#: ../../content/applications/websites/website/structure/seo.rst:214
 msgid "The sitemap points out website pages and their relation to each other to search engine crawlers. Odoo generates a `/sitemap.xml` file, including all URLs. For performance reasons, this file is cached and updated every 12 hours."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:217
+#: ../../content/applications/websites/website/structure/seo.rst:219
 msgid "If your website has a lot of pages, Odoo automatically creates a Sitemap Index file, respecting the `sitemaps.org protocol <http://www.sitemaps.org/protocol.html>`_, grouping sitemap URLs in 45000 chunks per file."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:221
+#: ../../content/applications/websites/website/structure/seo.rst:223
 msgid "Every sitemap entry has three attributes that are computed automatically:"
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:223
+#: ../../content/applications/websites/website/structure/seo.rst:225
 msgid "`<loc>`: the URL of a page."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:224
+#: ../../content/applications/websites/website/structure/seo.rst:226
 msgid "`<lastmod>`: last modification date of the resource, computed automatically based on the related object. For a page related to a product, this could be the last modification date of the product or the page."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:227
+#: ../../content/applications/websites/website/structure/seo.rst:229
 msgid "`<priority>`: modules may implement their priority algorithm based on their content (for example, a forum might assign a priority based on the number of votes on a specific post). The priority of a static page is defined by its priority field, which is normalized (16 is the default)."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:232
+#: ../../content/applications/websites/website/structure/seo.rst:234
 msgid "To prevent pages from appearing in a sitemap, go to :menuselection:`Site --> Properties`, and toggle off the :guilabel:`Indexed` feature."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:244
+#: ../../content/applications/websites/website/structure/seo.rst:246
 msgid "robots.txt"
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:246
+#: ../../content/applications/websites/website/structure/seo.rst:248
 msgid "A `robots.txt` file instructs search engine crawlers which parts of a website they are permitted to access. Its primary purpose is to:"
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:249
+#: ../../content/applications/websites/website/structure/seo.rst:251
 msgid "**Prevent overloading the website:** By guiding crawlers away from certain sections, robots.txt helps manage server load."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:251
+#: ../../content/applications/websites/website/structure/seo.rst:253
 msgid "**Control access to resources and detailed descriptions:** It can prevent crawlers from accessing media files (images, videos), CSS stylesheets, and JavaScript files, and from reading the content (text) of specific pages."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:255
+#: ../../content/applications/websites/website/structure/seo.rst:257
 msgid "When indexing your website, search engines first look at the robots.txt file. Odoo automatically creates one robot.txt file available on `mydatabase.example.com/robots.txt`."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:259
+#: ../../content/applications/websites/website/structure/seo.rst:261
 msgid "Reputable bots adhere to robots.txt; others may require blocking via :ref:`Cloudflare <domain-name/naked/cloudflare>` on your custom domain."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:263
+#: ../../content/applications/websites/website/structure/seo.rst:265
 msgid "Edit robots.txt"
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:265
+#: ../../content/applications/websites/website/structure/seo.rst:267
 msgid "By editing a robots.txt file, you can control which site pages are accessible to search engine crawlers. To add custom instructions to the file, go to :menuselection:`Website --> Configuration --> Settings`, scroll down to the :guilabel:`SEO` section, and click :guilabel:`Edit robots.txt`."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:270
+#: ../../content/applications/websites/website/structure/seo.rst:272
 msgid "If you do not want robots to crawl the `/about-us` page of your site, you can edit the robots.txt file to add `Disallow: /about-us`."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:274
+#: ../../content/applications/websites/website/structure/seo.rst:276
 msgid "While `robots.txt` prevents content from being crawled, **it does not guarantee that a page will not be indexed**. A page can still appear in search results if it is linked to from other crawled pages (indexed by \"reference\"). Google generally does not recommend using robots.txt to block webpages that you wish to keep out of search results entirely."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:280
+#: ../../content/applications/websites/website/structure/seo.rst:282
 msgid "Advanced features"
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:283
+#: ../../content/applications/websites/website/structure/seo.rst:285
 msgid "Structured data markup"
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:285
+#: ../../content/applications/websites/website/structure/seo.rst:287
 msgid "Structured data markup is used to generate rich snippets in search engine results. It is a way for websites to send structured data to search engine crawlers, helping them understand your content and create well-presented search results."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:289
+#: ../../content/applications/websites/website/structure/seo.rst:291
 msgid "By default, Google supports many `rich snippets <https://developers.google.com/search/blog/2009/05/introducing-rich-snippets>`_ for content types, including Reviews, People, Products, Businesses, Events, and Organizations."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:292
+#: ../../content/applications/websites/website/structure/seo.rst:294
 msgid "Microdata is a set of tags, introduced with HTML5, that help search engines better understand your content and display it in a relevant way. Odoo implements microdata as defined in the schema.org `specification <https://schema.org/docs/gs.html>`_ for events, eCommerce products, forum posts, and contact addresses. This allows your product pages to be displayed in Google using extra information like the price and rating of a product:"
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:307
+#: ../../content/applications/websites/website/structure/seo.rst:311
 msgid "Hreflang HTML tags"
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:309
+#: ../../content/applications/websites/website/structure/seo.rst:313
 msgid "Odoo automatically includes `hreflang` and `x-default` tags in the code of your website's multilingual pages. These HTML attributes are crucial in informing search engines about a specific page's language and geographical targeting."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:314
+#: ../../content/applications/websites/website/structure/seo.rst:317
+msgid "The tags are generated for each request, so the variant shown to a search engine is always the right one for the URL it requested:"
+msgstr ""
+
+#: ../../content/applications/websites/website/structure/seo.rst:320
+msgid "On the canonical URL of a page, the `hreflang` and `x-default` tags point to every language version of the page."
+msgstr ""
+
+#: ../../content/applications/websites/website/structure/seo.rst:322
+msgid "On a URL with a query string (e.g., `?utm_source=...` or `?gclid=...`), the page is not the canonical URL, and the `hreflang` block is omitted."
+msgstr ""
+
+#: ../../content/applications/websites/website/structure/seo.rst:324
+msgid "The `noindex` robots tag that depends on the requested domain (added when the request does not come from the website's indexable domain) is only rendered for that domain."
+msgstr ""
+
+#: ../../content/applications/websites/website/structure/seo.rst:328
+msgid "In earlier versions, the first variant rendered after a restart was kept in a cache and served to every visitor. This is no longer the case."
+msgstr ""
+
+#: ../../content/applications/websites/website/structure/seo.rst:334
+msgid "Blog tags"
+msgstr ""
+
+#: ../../content/applications/websites/website/structure/seo.rst:336
+msgid "With the *Blog Sitemap SEO* module (`website_blog_sitemap_seo`), the tag pages of the blog (`/blog/<blog>/tag/<tag>`) also get the slug of the tag translated into each language in the `hreflang` and canonical URLs. For example, the Hungarian version of a tag page links to the English page with the English tag slug, and the English page links back to the Hungarian tag slug. See :ref:`Blog SEO <blog/seo>` for the redirects applied when the address contains a wrong slug."
+msgstr ""
+
+#: ../../content/applications/websites/website/structure/seo.rst:343
 msgid ":doc:`../configuration/translate`"
 msgstr ""
 

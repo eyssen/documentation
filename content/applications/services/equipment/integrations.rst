@@ -26,7 +26,8 @@ This enables:
 When the maintenance equipment link is established, data is synced automatically:
 
 - Serial number, customer, and assignees are kept in sync.
-- Changes on the equipment form propagate to the maintenance record.
+- Other fields are not synced: for example, the maintenance equipment keeps its own name, also when
+  the name of a measuring device or an etalon changes automatically.
 
 Analytic Accounting
 ===================

@@ -2,9 +2,8 @@
 Printers
 ========
 
-The **Printers** sub-module (``equipment_printer``) extends Equipment Management with
-printer-specific features: counter tracking, cartridge management, paper format support, and
-connection type details.
+The **Printers** sub-module extends Equipment Management with printer-specific features: counter
+tracking, cartridge management, paper format support, and connection type details.
 
 .. screenshot:: services-equipment-printer-list
    :menu: Equipment Management ‣ Printers ‣ Printers
@@ -18,20 +17,24 @@ Installation
 ============
 
 Enable the Printers module from :menuselection:`Equipment Management --> Settings -->
-Configuration --> Equipment Types --> Printers`, or install ``equipment_printer`` from the Apps
-menu.
+Configuration`, by ticking :guilabel:`Printers` in the :guilabel:`Equipment Types` section, or
+install *Equipment Management - Printers* from the :menuselection:`Apps` menu (remove the
+:guilabel:`Apps` filter to find it).
 
 Dedicated printer views
 =======================
 
 Once installed, a **Printers** menu appears in the Equipment Management navigation:
 
-- :menuselection:`Equipment Management --> Printers --> Printers`: Shows only printer-type
-  equipment with printer-specific columns (paper formats, counter date, reporting method).
+- :menuselection:`Equipment Management --> Printers --> Printers`: Shows only the equipment of the
+  :guilabel:`Printer` category, with printer-specific columns (paper formats, counter date,
+  reporting method).
 - :menuselection:`Equipment Management --> Printers --> Counters`: Lists all printer counter
   records across all printers.
 
-Creating a printer from the Printers menu automatically sets the type to *Printer*.
+An equipment created with :guilabel:`New` in :menuselection:`Equipment Management --> Printers -->
+Printers` gets the default :guilabel:`General` category: select :guilabel:`Printer` in its
+:guilabel:`Category` field, so that it appears in this list and gets the :guilabel:`Printer` tab.
 
 Printer tab
 ===========
@@ -44,8 +47,8 @@ Printer tab
    :module: equipment_printer
    :notes: English UI, light theme, 1440px width, crop to the tab.
 
-When an equipment has type *Printer*, a dedicated :guilabel:`Printer` tab appears on the form
-with the following sections:
+When the :guilabel:`Category` of an equipment is :guilabel:`Printer`, a dedicated
+:guilabel:`Printer` tab appears on the form with the following sections:
 
 Counters section
 ----------------
@@ -70,7 +73,7 @@ These fields are inherited from the equipment model and are read-only:
 - **Technology**: Inkjet, Laser, etc.
 - **Paper Formats**: Supported paper sizes.
 - **Double Sided**: Whether duplex printing is supported.
-- **Document Feeder**: Whether the printer has an automatic document feeder.
+- **Has Document Feeder**: Whether the printer has an automatic document feeder.
 
 Connection section
 ------------------
@@ -98,7 +101,7 @@ Printer counters track page counts over time. Each counter record contains:
 
 - **Equipment**: The printer this counter belongs to.
 - **Date**: The date of the reading (one reading per day per printer).
-- **Counter Lines**: One line per paper format and color type (B&W / Color), showing the current
+- **Counters**: One line per paper format and color type (B&W / Color), showing the current
   counter value and the previous reading for comparison.
 - **Scan Counter**: The scanner counter (for multifunctional printers).
 
@@ -119,7 +122,7 @@ Printer counters track page counts over time. Each counter record contains:
 Stat buttons
 ============
 
-Printer-type equipment shows additional stat buttons:
+Printers show additional stat buttons:
 
 - **Counters**: Number of counter records. Click to view the counter history.
 - **Equipments**: Count of task products linked to this printer.

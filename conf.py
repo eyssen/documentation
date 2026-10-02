@@ -295,7 +295,7 @@ html_theme = 'odoo_theme'
 html_context = {
     'google_analytics_key': 'G-P3YRJDP16Q',
 }
-# Umami (self-hosted, https://stats.eyssen.io) website ID for doc.eyssen.com.
+# Umami (self-hosted, https://umami.eyssen.io) website ID for doc.eyssen.com.
 # odoo_theme includes layout_templates/umami.html when this key is set.
 html_context['umami_website_id'] = '46cf62f0-f6e2-4bbc-8b77-5790c51d7061'
 

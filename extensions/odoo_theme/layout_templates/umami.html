@@ -1,4 +1,4 @@
-{#- Umami (self-hosted, stats.eyssen.io) - conf.py: html_context['umami_website_id'] = '46cf62f0-f6e2-4bbc-8b77-5790c51d7061' (doc.eyssen.com). A data-host-url kötelező: nélküle a tracker a /assets/api/c-re küldene. -#}
+{#- Umami (self-hosted, umami.eyssen.io) - conf.py: html_context['umami_website_id'] = '46cf62f0-f6e2-4bbc-8b77-5790c51d7061' (doc.eyssen.com). A data-host-url kötelező: nélküle a tracker a /assets/api/c-re küldene. -#}
 <script>window.EY_UMAMI_CFG = { utmMode: 'never', langTag: true, odoo: false, langSwitch: '.o_languages a.o_switcher_item' };</script>
 <script>
 (function () {
@@ -135,8 +135,8 @@
   else onReady();
 })();
 </script>
-<script defer src="https://stats.eyssen.io/assets/app-core.js"
-  data-host-url="https://stats.eyssen.io"
+<script defer src="https://umami.eyssen.io/assets/app-core.js"
+  data-host-url="https://umami.eyssen.io"
   data-website-id="{{ umami_website_id }}"
   data-domains="doc.eyssen.com"
   data-exclude-hash="true"

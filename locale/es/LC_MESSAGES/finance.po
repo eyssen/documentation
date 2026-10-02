@@ -27509,10 +27509,6 @@ msgstr ":ref:`Instale <general/install>` el módulo :guilabel:`Spain - Veri*Fact
 msgid "By default Veri*Factu is in testing mode. The data is sent to test servers and is not considered official. When official data can be sent to the production servers, go to the :guilabel:`Veri\\*Factu` section in the :guilabel:`Settings` and disable :guilabel:`Test Environment`. This is only possible when the :ref:`production conditions <localizations/spain/veri-factu-production>` are met."
 msgstr "De forma predeterminada, Veri*Factu está en modo de prueba. Los datos se envían a servidores de prueba y no se consideran oficiales. Cuando pueda enviar datos oficiales a los servidores de producción, vaya a la sección :guilabel:`Veri\\*Factu` en los :guilabel:`Ajustes` y desactive :guilabel:`Entorno de pruebas`. Esto solo es posible cuando se cumplen las :ref:`condiciones de producción <localizations/spain/veri-factu-production>`."
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:522
-msgid "Veri*Factu cannot be enabled on a company that uses the SII: SII taxpayers are exempt."
-msgstr "Veri*Factu no se puede activar en una empresa que utiliza el SII: los obligados al SII están exentos."
-
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:583
 msgid "Software producer and responsible declaration"
 msgstr "Productor del software y declaración responsable"
@@ -29215,6 +29211,142 @@ msgstr ":guilabel:`Fecha`"
 #: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:193
 msgid "File formats"
 msgstr "Formatos de archivo"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:499
+msgid "Registration with the AEAT"
+msgstr "Registro en la AEAT"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:501
+msgid "There is **no registration** of the company or of the software with the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)` to start using Veri*Factu. What you need before the :ref:`configuration <localizations/spain/veri-factu-configuration>` is a **qualified electronic certificate** that the software uses to authenticate itself to the AEAT."
+msgstr "Para empezar a usar Veri*Factu **no es necesario registrar** la empresa ni el software ante la :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`. Antes de la :ref:`configuración <localizations/spain/veri-factu-configuration>` necesita un **certificado electrónico cualificado**, con el que el software se autentica ante la AEAT."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:506
+msgid "**No census declaration.** It is not necessary to report in the *modelo 036* that the billing records are sent with a Veri*Factu system. The option is made tacitly, by systematically starting to send the billing records to the AEAT. A company can join Veri*Factu whenever it wishes, and stays in this mode at least until the end of the calendar year of the first submission."
+msgstr "**No hace falta ninguna declaración censal.** No es necesario comunicar en el *modelo 036* que los registros de facturación se envían con un sistema Veri*Factu. La opción se entiende realizada de forma tácita por el hecho de iniciar sistemáticamente la remisión de los registros de facturación a la AEAT. La empresa puede acogerse a Veri*Factu cuando lo desee y permanece en esta modalidad, como mínimo, hasta el final del año natural del primer envío."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:510
+msgid "**No registration of the software.** The AEAT does not keep a register of invoicing software. The producer of the software issues the :ref:`responsible declaration <localizations/spain/veri-factu-declaration>` of each version, and you keep the declarations of the versions you replace or update."
+msgstr "**Tampoco se registra el software.** La AEAT no lleva un registro de programas de facturación. El productor del software emite la :ref:`declaración responsable <localizations/spain/veri-factu-declaration>` de cada versión, y usted conserva las declaraciones de las versiones que sustituya o actualice."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:514
+msgid "**A qualified certificate is always needed**, also to test the system. It can be the certificate of the taxpayer, or the certificate of a representative, attorney or social collaborator (for example, a tax advisory firm) who sends the records on the taxpayer's behalf."
+msgstr "**Siempre se necesita un certificado cualificado**, también para probar el sistema. Puede ser el certificado del obligado tributario, o el de un representante, apoderado o colaborador social (por ejemplo, una gestoría) que envía los registros en su nombre."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:519
+msgid "The invoices issued with a Veri*Factu system are real invoices, and their records are sent to the AEAT, also when they are issued only to try the system. Use the :ref:`test environment <localizations/spain/veri-factu-configuration>` for tests: the AEAT requires that the invoices issued by mistake in production mode are cancelled."
+msgstr "Las facturas emitidas con un sistema Veri*Factu son facturas reales y sus registros se envían a la AEAT, también cuando se emiten solo para probar el sistema. Utilice el :ref:`entorno de pruebas <localizations/spain/veri-factu-configuration>` para las pruebas: la AEAT exige anular las facturas emitidas por error en modo producción."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:525
+msgid "Deadlines"
+msgstr "Plazos"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:527
+msgid "The Spanish invoicing systems must comply with the regulation (Royal Decree 1007/2023) before **1 January 2027** for the taxpayers of the Corporate Income Tax (for example, an *S.L.* or an *S.A.*), and before **1 July 2027** for the other businesses and professionals (Royal Decree-law 15/2025). Starting earlier is possible."
+msgstr "Los sistemas de facturación españoles deben cumplir el reglamento (Real Decreto 1007/2023) antes del **1 de enero de 2027** en el caso de los contribuyentes del Impuesto sobre Sociedades (por ejemplo, una *S.L.* o una *S.A.*) y antes del **1 de julio de 2027** en el de los demás empresarios y profesionales (Real Decreto-ley 15/2025). Es posible empezar antes."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:533
+msgid "Obtaining the certificate"
+msgstr "Cómo obtener el certificado"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:535
+msgid "The certificates are issued by the certification authorities recognized by the AEAT. The most common one is the **FNMT-RCM** (*Fábrica Nacional de Moneda y Timbre*), described below."
+msgstr "Los certificados los emiten los prestadores de servicios de certificación reconocidos por la AEAT. El más habitual es la **FNMT-RCM** (*Fábrica Nacional de Moneda y Timbre*), que se describe a continuación."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:538
+msgid "**Self-employed person (natural person)**"
+msgstr "**Autónomo (persona física)**"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:540
+msgid "Request the certificate online on the website of the FNMT. At the end of the request you receive a **request code**."
+msgstr "Solicite el certificado en línea en la web de la FNMT. Al final de la solicitud recibirá un **código de solicitud**."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:542
+msgid "Accredit your identity in person in a registration office, with the request code and your original DNI, NIE or Spanish passport. The offices of the AEAT and of the Social Security require an appointment; the offices of Correos do not. Some issuers accept an online request with an electronic DNI instead."
+msgstr "Acredite su identidad en persona en una oficina de registro, con el código de solicitud y su DNI, NIE o pasaporte español original. En las oficinas de la AEAT y de la Seguridad Social hace falta cita previa; en las de Correos no. Algunos emisores admiten la solicitud en línea con el DNI electrónico."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:546
+msgid "About an hour after the accreditation, download and install the certificate from the same website. Make a backup copy of the certificate file."
+msgstr "Aproximadamente una hora después de la acreditación, descargue e instale el certificado desde la misma web. Haga una copia de seguridad del archivo del certificado."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:549
+msgid "**Company (legal entity)**"
+msgstr "**Empresa (persona jurídica)**"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:551
+msgid "A company needs the *Certificado de Representante de Persona Jurídica* (certificate of representative of a legal entity), issued by the FNMT for entities whose NIF starts with A, B, C or D. It is requested by the legal or voluntary representative of the company, who accredits identity and representation either in person in a registration office, or online in the :guilabel:`Electronic Office` of the AEAT (procedure *ZZ38 - Solicitud Certificados Electrónicos de Representante*). For the online accreditation:"
+msgstr "La empresa necesita el *Certificado de Representante de Persona Jurídica*, que la FNMT emite para las entidades cuyo NIF empieza por A, B, C o D. Lo solicita el representante legal o voluntario de la empresa, que acredita su identidad y su representación en persona en una oficina de registro, o en línea en la :guilabel:`Sede electrónica` de la AEAT (procedimiento *ZZ38 - Solicitud Certificados Electrónicos de Representante*). Para la acreditación en línea:"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:558
+msgid "Request the certificate on the website of the FNMT and note the **request code**."
+msgstr "Solicite el certificado en la web de la FNMT y anote el **código de solicitud**."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:559
+msgid "Sign in to the Electronic Office of the AEAT with a personal certificate, and open the procedure :guilabel:`Certificados electrónicos de representante persona jurídica`."
+msgstr "Acceda a la Sede electrónica de la AEAT con un certificado personal y abra el procedimiento :guilabel:`Certificados electrónicos de representante persona jurídica`."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:561
+msgid "Fill in the data of the represented company and of the representative, and enter the request code."
+msgstr "Rellene los datos de la empresa representada y del representante, e introduzca el código de solicitud."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:0
+msgid "Form of the AEAT procedure ZZ382 with the represented entity, the representative and the request code"
+msgstr "Formulario del procedimiento ZZ382 de la AEAT con la entidad representada, el representante y el código de solicitud"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:567
+msgid "The AEAT form for the presentation of the documents of the certificate."
+msgstr "Formulario de la AEAT para la presentación de la documentación del certificado."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:569
+msgid "Attach the required documents. The AEAT asks for a recent (15 days) certificate of the *Registro Mercantil* about the company, and one of these two: a recent certificate of the *Registro Mercantil* about the appointment of the representative, or, for a voluntary representative, a notarial power of attorney with a special clause for obtaining the certificate. Joint administrators (*administradores mancomunados*) also provide the application form signed by all of them."
+msgstr "Adjunte los documentos solicitados. La AEAT pide una certificación reciente (15 días) del *Registro Mercantil* sobre la sociedad y una de estas dos: una certificación reciente del *Registro Mercantil* sobre el nombramiento del representante o, para un representante voluntario, un poder notarial con una cláusula especial para la obtención del certificado. Los administradores mancomunados presentan además el formulario de solicitud firmado por todos ellos."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:0
+msgid "Notice of the AEAT listing the documents to present"
+msgstr "Aviso de la AEAT con la lista de documentos que hay que presentar"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:580
+msgid "The documents required by the AEAT."
+msgstr "Los documentos que exige la AEAT."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:582
+msgid "Add the files, click :guilabel:`Presentar` (submit), and download the receipt. Then continue with the download of the certificate on the website of the FNMT, as above."
+msgstr "Añada los archivos, haga clic en :guilabel:`Presentar` y descargue el justificante. Después continúe con la descarga del certificado en la web de la FNMT, como se indica arriba."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:0
+msgid "Section of the AEAT form to attach the documents, with the Presentar button"
+msgstr "Sección del formulario de la AEAT para adjuntar los documentos, con el botón Presentar"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:589
+msgid "Attaching the documents and submitting them."
+msgstr "Adjuntar los documentos y presentarlos."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:591
+msgid "Once you have the certificate file (and its password), :ref:`upload it in eYssen <localizations/spain/veri-factu-configuration>`."
+msgstr "Cuando tenga el archivo del certificado (y su contraseña), :ref:`cárguelo en eYssen <localizations/spain/veri-factu-configuration>`."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:595
+msgid "Representation and social collaboration"
+msgstr "Representación y colaboración social"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:597
+msgid "If a tax advisory firm or another third party sends the records for you, the taxpayer must give them the power to do so, through **representation** (*apoderamiento*) or **social collaboration** (*colaboración social*). The AEAT provides specific Veri*Factu authorization models in the section *Modelos de autorización de trámites para colaboradores sociales* of its Electronic Office. The certificate uploaded in eYssen is then the qualified certificate of the representative, attorney or social collaborator."
+msgstr "Si una gestoría u otro tercero envía los registros por usted, el obligado tributario debe otorgarle esa facultad mediante **representación** (*apoderamiento*) o **colaboración social**. La AEAT ofrece modelos de autorización específicos para Veri*Factu en la sección *Modelos de autorización de trámites para colaboradores sociales* de su Sede electrónica. El certificado cargado en eYssen es entonces el certificado cualificado del representante, apoderado o colaborador social."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:605
+msgid "The records sent in the same batch must belong to the same taxpayer. In a database with several Spanish companies, eYssen sends the records of each company separately."
+msgstr "Los registros enviados en un mismo lote deben corresponder al mismo obligado tributario. En una base de datos con varias empresas españolas, eYssen envía los registros de cada empresa por separado."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:609
+msgid "Source of this section: Agencia Tributaria, `Veri*Factu FAQ <https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/sistemas-verifactu.html>`_ (page updated 22 July 2026), `declaración responsable FAQ <https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/certificacion-sistemas-informaticos-declaracion-responsable.html>`_ (22 July 2026) and `Acreditación de persona jurídica <https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/acreditarse-obtener-certificado-electronico/acreditacion-persona-juridica.html>`_ (8 January 2025, the source of the screenshots), and the `FNMT <https://www.sede.fnmt.gob.es/certificados/persona-fisica/obtener-certificado-software>`_ certificate guide. Reproduced under the reuse conditions of the AEAT."
+msgstr "Fuente de esta sección: Agencia Tributaria, `FAQ de Veri*Factu <https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/sistemas-verifactu.html>`_ (página actualizada el 22 de julio de 2026), `FAQ de la declaración responsable <https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/certificacion-sistemas-informaticos-declaracion-responsable.html>`_ (22 de julio de 2026) y `Acreditación de persona jurídica <https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/acreditarse-obtener-certificado-electronico/acreditacion-persona-juridica.html>`_ (8 de enero de 2025, origen de las capturas de pantalla), y la guía de certificados de la `FNMT <https://www.sede.fnmt.gob.es/certificados/persona-fisica/obtener-certificado-software>`_. Reproducido conforme a las condiciones de reutilización de la AEAT."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:645
+msgid "SII taxpayers are exempt from Veri*Factu: do not use both on the same company. With the :ref:`Spanish setup <localizations/spain/base-layer>` and the community SII module, enabling both is refused."
+msgstr "Los contribuyentes del SII están exentos de Veri*Factu: no utilice ambos en la misma empresa. Con la :ref:`configuración española <localizations/spain/base-layer>` y el módulo comunitario del SII, se rechaza activar ambos."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:740
+msgid "When you update to a new version, keep the declaration of the version you replace: the AEAT expects the users of an invoicing system to conserve the declarations of the previous versions."
+msgstr "Al actualizar a una nueva versión, conserve la declaración de la versión que sustituye: la AEAT espera que los usuarios de un sistema de facturación conserven las declaraciones de las versiones anteriores."
 
 #~ msgid "With the ``l10n_es_base_layer`` and ``l10n_es_aeat_integration`` modules (plus the OCA AEAT modelo modules you install), Spain-specific AEAT declarations and the official PGC annual accounts **are** available:"
 #~ msgstr "Con los módulos ``l10n_es_base_layer`` y ``l10n_es_aeat_integration`` (más los módulos OCA de modelos AEAT que instale), las declaraciones AEAT específicas de España y las cuentas anuales oficiales del PGC **están** disponibles:"

@@ -27486,10 +27486,6 @@ msgstr ":ref:`Telepítse <general/install>` a :guilabel:`Spain - Veri*Factu (l10
 msgid "By default Veri*Factu is in testing mode. The data is sent to test servers and is not considered official. When official data can be sent to the production servers, go to the :guilabel:`Veri\\*Factu` section in the :guilabel:`Settings` and disable :guilabel:`Test Environment`. This is only possible when the :ref:`production conditions <localizations/spain/veri-factu-production>` are met."
 msgstr "Alapértelmezés szerint a Veri*Factu teszt üzemmódban van. Az adatok tesztszerverekre kerülnek, és nem tekinthetők hivatalosnak. Amikor hivatalos adatokat lehet küldeni az éles szerverekre, menjen a :guilabel:`Beállítások` :guilabel:`Veri\\*Factu` szakaszába, és kapcsolja ki a :guilabel:`Tesztkörnyezet` opciót. Ez csak akkor lehetséges, ha teljesülnek az :ref:`éles üzem feltételei <localizations/spain/veri-factu-production>`."
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:522
-msgid "Veri*Factu cannot be enabled on a company that uses the SII: SII taxpayers are exempt."
-msgstr "A Veri*Factu nem kapcsolható be az SII-t használó cégnél: az SII-kötelesek mentesülnek."
-
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:583
 msgid "Software producer and responsible declaration"
 msgstr "Szoftvergyártó és felelősségvállalási nyilatkozat"
@@ -29192,6 +29188,142 @@ msgstr ":guilabel:`Dátum`"
 #: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:193
 msgid "File formats"
 msgstr "Fájlformátumok"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:499
+msgid "Registration with the AEAT"
+msgstr "Regisztráció az AEAT-nál"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:501
+msgid "There is **no registration** of the company or of the software with the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)` to start using Veri*Factu. What you need before the :ref:`configuration <localizations/spain/veri-factu-configuration>` is a **qualified electronic certificate** that the software uses to authenticate itself to the AEAT."
+msgstr "A Veri*Factu használatának megkezdéséhez **nincs szükség regisztrációra** sem a cég, sem a szoftver részéről az :abbr:`AEAT (Agencia Estatal de Administración Tributaria)` felé. A :ref:`beállítás <localizations/spain/veri-factu-configuration>` előtt egy **minősített elektronikus tanúsítványra** van szüksége, amellyel a szoftver azonosítja magát az AEAT felé."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:506
+msgid "**No census declaration.** It is not necessary to report in the *modelo 036* that the billing records are sent with a Veri*Factu system. The option is made tacitly, by systematically starting to send the billing records to the AEAT. A company can join Veri*Factu whenever it wishes, and stays in this mode at least until the end of the calendar year of the first submission."
+msgstr "**Nincs szükség adatbejelentésre.** A *036-os modellen* nem kell jelenteni, hogy a számlázási nyilvántartásokat Veri*Factu rendszerrel küldik. A választás hallgatólagosan történik: azzal, hogy a cég rendszeresen elkezdi küldeni a számlázási nyilvántartásokat az AEAT-nak. A cég bármikor csatlakozhat a Veri*Factuhoz, és az első beküldés naptári évének végéig mindenképpen ebben az üzemmódban marad."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:510
+msgid "**No registration of the software.** The AEAT does not keep a register of invoicing software. The producer of the software issues the :ref:`responsible declaration <localizations/spain/veri-factu-declaration>` of each version, and you keep the declarations of the versions you replace or update."
+msgstr "**A szoftvert sem kell regisztrálni.** Az AEAT nem vezet nyilvántartást a számlázószoftverekről. A szoftver gyártója minden verzióhoz kiadja a :ref:`felelősségvállalási nyilatkozatot <localizations/spain/veri-factu-declaration>`, Önnek pedig meg kell őriznie a lecserélt vagy frissített verziók nyilatkozatait."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:514
+msgid "**A qualified certificate is always needed**, also to test the system. It can be the certificate of the taxpayer, or the certificate of a representative, attorney or social collaborator (for example, a tax advisory firm) who sends the records on the taxpayer's behalf."
+msgstr "**Minősített tanúsítvány mindig szükséges**, a rendszer kipróbálásához is. Lehet az adózó tanúsítványa, vagy az adózó nevében a nyilvántartásokat beküldő képviselő, meghatalmazott vagy társadalmi együttműködő (például egy adótanácsadó iroda) tanúsítványa."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:519
+msgid "The invoices issued with a Veri*Factu system are real invoices, and their records are sent to the AEAT, also when they are issued only to try the system. Use the :ref:`test environment <localizations/spain/veri-factu-configuration>` for tests: the AEAT requires that the invoices issued by mistake in production mode are cancelled."
+msgstr "A Veri*Factu rendszerrel kiállított számlák valódi számlák, és nyilvántartásaikat elküldik az AEAT-nak akkor is, ha csak a rendszer kipróbálására állították ki őket. A teszteléshez használja a :ref:`tesztkörnyezetet <localizations/spain/veri-factu-configuration>`: az AEAT előírja, hogy az éles módban tévedésből kiállított számlákat sztornózni kell."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:525
+msgid "Deadlines"
+msgstr "Határidők"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:527
+msgid "The Spanish invoicing systems must comply with the regulation (Royal Decree 1007/2023) before **1 January 2027** for the taxpayers of the Corporate Income Tax (for example, an *S.L.* or an *S.A.*), and before **1 July 2027** for the other businesses and professionals (Royal Decree-law 15/2025). Starting earlier is possible."
+msgstr "A spanyol számlázórendszereknek a szabályozásnak (1007/2023. sz. királyi rendelet) a társasági adó alanyai (például *S.L.* vagy *S.A.*) esetében **2027. január 1-jéig**, a többi vállalkozó és szabadúszó esetében **2027. július 1-jéig** kell megfelelniük (15/2025. sz. királyi törvényerejű rendelet). Korábban is elkezdhető."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:533
+msgid "Obtaining the certificate"
+msgstr "A tanúsítvány megszerzése"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:535
+msgid "The certificates are issued by the certification authorities recognized by the AEAT. The most common one is the **FNMT-RCM** (*Fábrica Nacional de Moneda y Timbre*), described below."
+msgstr "A tanúsítványokat az AEAT által elismert hitelesítésszolgáltatók állítják ki. A leggyakoribb az **FNMT-RCM** (*Fábrica Nacional de Moneda y Timbre*), amelyet az alábbiakban ismertetünk."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:538
+msgid "**Self-employed person (natural person)**"
+msgstr "**Egyéni vállalkozó (természetes személy)**"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:540
+msgid "Request the certificate online on the website of the FNMT. At the end of the request you receive a **request code**."
+msgstr "Igényelje a tanúsítványt online az FNMT weboldalán. A kérelem végén egy **kérelemkódot** kap."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:542
+msgid "Accredit your identity in person in a registration office, with the request code and your original DNI, NIE or Spanish passport. The offices of the AEAT and of the Social Security require an appointment; the offices of Correos do not. Some issuers accept an online request with an electronic DNI instead."
+msgstr "Igazolja személyazonosságát személyesen egy regisztrációs irodában, a kérelemkóddal és az eredeti DNI-vel, NIE-vel vagy spanyol útlevéllel. Az AEAT és a társadalombiztosítás irodáiban előzetes időpontfoglalás szükséges, a Correos irodáiban nem. Egyes kibocsátók elfogadják az online kérelmet elektronikus DNI-vel is."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:546
+msgid "About an hour after the accreditation, download and install the certificate from the same website. Make a backup copy of the certificate file."
+msgstr "Az igazolás után nagyjából egy órával töltse le és telepítse a tanúsítványt ugyanarról a weboldalról. Készítsen biztonsági másolatot a tanúsítványfájlról."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:549
+msgid "**Company (legal entity)**"
+msgstr "**Cég (jogi személy)**"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:551
+msgid "A company needs the *Certificado de Representante de Persona Jurídica* (certificate of representative of a legal entity), issued by the FNMT for entities whose NIF starts with A, B, C or D. It is requested by the legal or voluntary representative of the company, who accredits identity and representation either in person in a registration office, or online in the :guilabel:`Electronic Office` of the AEAT (procedure *ZZ38 - Solicitud Certificados Electrónicos de Representante*). For the online accreditation:"
+msgstr "A cégnek *Certificado de Representante de Persona Jurídica* (jogi személy képviselőjének tanúsítványa) kell, amelyet az FNMT azoknak a szervezeteknek állít ki, amelyek adószáma (NIF) A, B, C vagy D betűvel kezdődik. Kérelmezője a cég törvényes vagy önkéntes képviselője, aki a személyazonosságát és a képviseleti jogát vagy személyesen egy regisztrációs irodában, vagy online, az AEAT :guilabel:`Elektronikus irodájában` (*Sede electrónica*) igazolja (*ZZ38 - Solicitud Certificados Electrónicos de Representante* eljárás). Az online igazoláshoz:"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:558
+msgid "Request the certificate on the website of the FNMT and note the **request code**."
+msgstr "Igényelje a tanúsítványt az FNMT weboldalán, és jegyezze fel a **kérelemkódot**."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:559
+msgid "Sign in to the Electronic Office of the AEAT with a personal certificate, and open the procedure :guilabel:`Certificados electrónicos de representante persona jurídica`."
+msgstr "Jelentkezzen be az AEAT Elektronikus irodájába személyes tanúsítvánnyal, és nyissa meg a :guilabel:`Certificados electrónicos de representante persona jurídica` eljárást."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:561
+msgid "Fill in the data of the represented company and of the representative, and enter the request code."
+msgstr "Töltse ki a képviselt cég és a képviselő adatait, és adja meg a kérelemkódot."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:0
+msgid "Form of the AEAT procedure ZZ382 with the represented entity, the representative and the request code"
+msgstr "Az AEAT ZZ382 eljárásának űrlapja a képviselt szervezettel, a képviselővel és a kérelemkóddal"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:567
+msgid "The AEAT form for the presentation of the documents of the certificate."
+msgstr "Az AEAT űrlapja a tanúsítvány dokumentumainak benyújtásához."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:569
+msgid "Attach the required documents. The AEAT asks for a recent (15 days) certificate of the *Registro Mercantil* about the company, and one of these two: a recent certificate of the *Registro Mercantil* about the appointment of the representative, or, for a voluntary representative, a notarial power of attorney with a special clause for obtaining the certificate. Joint administrators (*administradores mancomunados*) also provide the application form signed by all of them."
+msgstr "Csatolja a kért dokumentumokat. Az AEAT kér egy friss (15 napos) *Registro Mercantil*-kivonatot a cégről, valamint a következő kettő egyikét: friss *Registro Mercantil*-kivonatot a képviselő kinevezéséről, vagy önkéntes képviselő esetén közjegyzői meghatalmazást, amely külön záradékot tartalmaz a tanúsítvány megszerzésére. Együttes képviseletre jogosult vezetők (*administradores mancomunados*) esetén mindannyiuk által aláírt kérelemnyomtatványt is be kell nyújtani."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:0
+msgid "Notice of the AEAT listing the documents to present"
+msgstr "Az AEAT értesítése a benyújtandó dokumentumokról"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:580
+msgid "The documents required by the AEAT."
+msgstr "Az AEAT által kért dokumentumok."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:582
+msgid "Add the files, click :guilabel:`Presentar` (submit), and download the receipt. Then continue with the download of the certificate on the website of the FNMT, as above."
+msgstr "Adja hozzá a fájlokat, kattintson a :guilabel:`Presentar` (benyújtás) gombra, és töltse le az igazolást. Ezután folytassa a tanúsítvány letöltésével az FNMT weboldalán, a fentiek szerint."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:0
+msgid "Section of the AEAT form to attach the documents, with the Presentar button"
+msgstr "Az AEAT űrlapjának dokumentumcsatolási része a Presentar gombbal"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:589
+msgid "Attaching the documents and submitting them."
+msgstr "A dokumentumok csatolása és benyújtása."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:591
+msgid "Once you have the certificate file (and its password), :ref:`upload it in eYssen <localizations/spain/veri-factu-configuration>`."
+msgstr "Ha megvan a tanúsítványfájl (és a jelszava), :ref:`töltse fel az eYssenben <localizations/spain/veri-factu-configuration>`."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:595
+msgid "Representation and social collaboration"
+msgstr "Képviselet és társadalmi együttműködés"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:597
+msgid "If a tax advisory firm or another third party sends the records for you, the taxpayer must give them the power to do so, through **representation** (*apoderamiento*) or **social collaboration** (*colaboración social*). The AEAT provides specific Veri*Factu authorization models in the section *Modelos de autorización de trámites para colaboradores sociales* of its Electronic Office. The certificate uploaded in eYssen is then the qualified certificate of the representative, attorney or social collaborator."
+msgstr "Ha egy adótanácsadó iroda vagy más harmadik fél küldi be Ön helyett a nyilvántartásokat, az adózónak meg kell adnia nekik erre a jogot **képviselet** (*apoderamiento*) vagy **társadalmi együttműködés** (*colaboración social*) útján. Az AEAT az Elektronikus irodájának *Modelos de autorización de trámites para colaboradores sociales* szakaszában külön Veri*Factu meghatalmazási mintákat tesz közzé. Az eYssenbe feltöltött tanúsítvány ilyenkor a képviselő, meghatalmazott vagy társadalmi együttműködő minősített tanúsítványa."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:605
+msgid "The records sent in the same batch must belong to the same taxpayer. In a database with several Spanish companies, eYssen sends the records of each company separately."
+msgstr "Az ugyanabban a csomagban küldött nyilvántartásoknak ugyanahhoz az adózóhoz kell tartozniuk. Ha az adatbázisban több spanyol cég van, az eYssen minden cég nyilvántartásait külön küldi."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:609
+msgid "Source of this section: Agencia Tributaria, `Veri*Factu FAQ <https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/sistemas-verifactu.html>`_ (page updated 22 July 2026), `declaración responsable FAQ <https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/certificacion-sistemas-informaticos-declaracion-responsable.html>`_ (22 July 2026) and `Acreditación de persona jurídica <https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/acreditarse-obtener-certificado-electronico/acreditacion-persona-juridica.html>`_ (8 January 2025, the source of the screenshots), and the `FNMT <https://www.sede.fnmt.gob.es/certificados/persona-fisica/obtener-certificado-software>`_ certificate guide. Reproduced under the reuse conditions of the AEAT."
+msgstr "E szakasz forrása: Agencia Tributaria, `Veri*Factu GYIK <https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/sistemas-verifactu.html>`_ (az oldal frissítve: 2026. július 22.), `felelősségvállalási nyilatkozat GYIK <https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/certificacion-sistemas-informaticos-declaracion-responsable.html>`_ (2026. július 22.) és `Jogi személy igazolása <https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/acreditarse-obtener-certificado-electronico/acreditacion-persona-juridica.html>`_ (2025. január 8., a képernyőképek forrása), valamint az `FNMT <https://www.sede.fnmt.gob.es/certificados/persona-fisica/obtener-certificado-software>`_ tanúsítványkérési útmutatója. Az AEAT újrahasznosítási feltételei szerint közölve."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:645
+msgid "SII taxpayers are exempt from Veri*Factu: do not use both on the same company. With the :ref:`Spanish setup <localizations/spain/base-layer>` and the community SII module, enabling both is refused."
+msgstr "Az SII-adózók mentesülnek a Veri*Factu alól: ne használja mindkettőt ugyanazon a cégen. A :ref:`spanyol beállítással <localizations/spain/base-layer>` és a közösségi SII modullal mindkettő bekapcsolását a rendszer elutasítja."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:740
+msgid "When you update to a new version, keep the declaration of the version you replace: the AEAT expects the users of an invoicing system to conserve the declarations of the previous versions."
+msgstr "Új verzióra frissítéskor őrizze meg a lecserélt verzió nyilatkozatát: az AEAT elvárja, hogy a számlázórendszer felhasználói megőrizzék a korábbi verziók nyilatkozatait."
 
 #~ msgid "With the ``l10n_es_base_layer`` and ``l10n_es_aeat_integration`` modules (plus the OCA AEAT modelo modules you install), Spain-specific AEAT declarations and the official PGC annual accounts **are** available:"
 #~ msgstr "A ``l10n_es_base_layer`` és a ``l10n_es_aeat_integration`` modulokkal (valamint a telepített OCA AEAT modelo modulokkal) a spanyol AEAT-bevallások és a hivatalos PGC éves beszámoló **elérhetők**:"

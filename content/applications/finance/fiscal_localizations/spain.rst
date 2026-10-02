@@ -493,6 +493,129 @@ taxpayers in Spain, except for those who use the SII system or are under a regio
 Odoo allows :ref:`invoices <localizations/spain/veri-factu-invoices>` and Point of Sale :ref:`orders
 <localizations/spain/veri-factu-orders>` to be automatically sent to the tax authorities.
 
+.. _localizations/spain/veri-factu-registration:
+
+Registration with the AEAT
+--------------------------
+
+There is **no registration** of the company or of the software with the :abbr:`AEAT (Agencia Estatal
+de Administración Tributaria)` to start using Veri*Factu. What you need before the
+:ref:`configuration <localizations/spain/veri-factu-configuration>` is a **qualified electronic
+certificate** that the software uses to authenticate itself to the AEAT.
+
+- **No census declaration.** It is not necessary to report in the *modelo 036* that the billing
+  records are sent with a Veri*Factu system. The option is made tacitly, by systematically starting
+  to send the billing records to the AEAT. A company can join Veri*Factu whenever it wishes, and
+  stays in this mode at least until the end of the calendar year of the first submission.
+- **No registration of the software.** The AEAT does not keep a register of invoicing software. The
+  producer of the software issues the :ref:`responsible declaration
+  <localizations/spain/veri-factu-declaration>` of each version, and you keep the declarations of
+  the versions you replace or update.
+- **A qualified certificate is always needed**, also to test the system. It can be the certificate
+  of the taxpayer, or the certificate of a representative, attorney or social collaborator (for
+  example, a tax advisory firm) who sends the records on the taxpayer's behalf.
+
+.. important::
+   The invoices issued with a Veri*Factu system are real invoices, and their records are sent to
+   the AEAT, also when they are issued only to try the system. Use the :ref:`test environment
+   <localizations/spain/veri-factu-configuration>` for tests: the AEAT requires that the invoices
+   issued by mistake in production mode are cancelled.
+
+Deadlines
+~~~~~~~~~
+
+The Spanish invoicing systems must comply with the regulation (Royal Decree 1007/2023) before
+**1 January 2027** for the taxpayers of the Corporate Income Tax (for example, an *S.L.* or an
+*S.A.*), and before **1 July 2027** for the other businesses and professionals (Royal Decree-law
+15/2025). Starting earlier is possible.
+
+Obtaining the certificate
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The certificates are issued by the certification authorities recognized by the AEAT. The most common
+one is the **FNMT-RCM** (*Fábrica Nacional de Moneda y Timbre*), described below.
+
+**Self-employed person (natural person)**
+
+#. Request the certificate online on the website of the FNMT. At the end of the request you receive
+   a **request code**.
+#. Accredit your identity in person in a registration office, with the request code and your
+   original DNI, NIE or Spanish passport. The offices of the AEAT and of the Social Security
+   require an appointment; the offices of Correos do not. Some issuers accept an online request
+   with an electronic DNI instead.
+#. About an hour after the accreditation, download and install the certificate from the same
+   website. Make a backup copy of the certificate file.
+
+**Company (legal entity)**
+
+A company needs the *Certificado de Representante de Persona Jurídica* (certificate of
+representative of a legal entity), issued by the FNMT for entities whose NIF starts with A, B, C or
+D. It is requested by the legal or voluntary representative of the company, who accredits identity
+and representation either in person in a registration office, or online in the :guilabel:`Electronic
+Office` of the AEAT (procedure *ZZ38 - Solicitud Certificados Electrónicos de Representante*). For
+the online accreditation:
+
+#. Request the certificate on the website of the FNMT and note the **request code**.
+#. Sign in to the Electronic Office of the AEAT with a personal certificate, and open the procedure
+   :guilabel:`Certificados electrónicos de representante persona jurídica`.
+#. Fill in the data of the represented company and of the representative, and enter the request code.
+
+   .. figure:: spain/verifactu_registration/aeat-zz382-form.png
+      :alt: Form of the AEAT procedure ZZ382 with the represented entity, the representative and the request code
+      :width: 60%
+
+      The AEAT form for the presentation of the documents of the certificate.
+
+#. Attach the required documents. The AEAT asks for a recent (15 days) certificate of the
+   *Registro Mercantil* about the company, and one of these two: a recent certificate of the
+   *Registro Mercantil* about the appointment of the representative, or, for a voluntary
+   representative, a notarial power of attorney with a special clause for obtaining the certificate.
+   Joint administrators (*administradores mancomunados*) also provide the application form signed by
+   all of them.
+
+   .. figure:: spain/verifactu_registration/aeat-zz382-documents.png
+      :alt: Notice of the AEAT listing the documents to present
+      :width: 60%
+
+      The documents required by the AEAT.
+
+#. Add the files, click :guilabel:`Presentar` (submit), and download the receipt. Then continue with
+   the download of the certificate on the website of the FNMT, as above.
+
+   .. figure:: spain/verifactu_registration/aeat-zz382-attach.png
+      :alt: Section of the AEAT form to attach the documents, with the Presentar button
+      :width: 60%
+
+      Attaching the documents and submitting them.
+
+Once you have the certificate file (and its password), :ref:`upload it in eYssen
+<localizations/spain/veri-factu-configuration>`.
+
+Representation and social collaboration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If a tax advisory firm or another third party sends the records for you, the taxpayer must give them
+the power to do so, through **representation** (*apoderamiento*) or **social collaboration**
+(*colaboración social*). The AEAT provides specific Veri*Factu authorization models in the section
+*Modelos de autorización de trámites para colaboradores sociales* of its Electronic Office. The
+certificate uploaded in eYssen is then the qualified certificate of the representative, attorney or
+social collaborator.
+
+.. note::
+   The records sent in the same batch must belong to the same taxpayer. In a database with several
+   Spanish companies, eYssen sends the records of each company separately.
+
+.. seealso::
+   Source of this section: Agencia Tributaria,
+   `Veri*Factu FAQ <https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/sistemas-verifactu.html>`_
+   (page updated 22 July 2026), `declaración responsable FAQ
+   <https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/certificacion-sistemas-informaticos-declaracion-responsable.html>`_
+   (22 July 2026) and `Acreditación de persona jurídica
+   <https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/acreditarse-obtener-certificado-electronico/acreditacion-persona-juridica.html>`_
+   (8 January 2025, the source of the screenshots), and the `FNMT
+   <https://www.sede.fnmt.gob.es/certificados/persona-fisica/obtener-certificado-software>`_
+   certificate guide. Reproduced under the reuse conditions of the AEAT.
+
 .. _localizations/spain/veri-factu-configuration:
 
 Configuration
@@ -519,7 +642,9 @@ To enable **Veri\*Factu**, follow these steps:
      the :guilabel:`Veri\*Factu` section in the :guilabel:`Settings` and disable :guilabel:`Test
      Environment`. This is only possible when the :ref:`production conditions
      <localizations/spain/veri-factu-production>` are met.
-   - Veri*Factu cannot be enabled on a company that uses the SII: SII taxpayers are exempt.
+   - SII taxpayers are exempt from Veri*Factu: do not use both on the same company. With the
+     :ref:`Spanish setup <localizations/spain/base-layer>` and the community SII module, enabling
+     both is refused.
 
 .. _localizations/spain/veri-factu-invoices:
 
@@ -610,6 +735,10 @@ To read the declaration of the version you are running, use any of these entries
    :data: Demo company "YourCompany ES", development version (no published declaration).
    :module: l10n_es_edi_verifactu
    :notes: English UI, light theme, 1440px width, crop to the Veri*Factu section.
+
+.. tip::
+   When you update to a new version, keep the declaration of the version you replace: the AEAT
+   expects the users of an invoicing system to conserve the declarations of the previous versions.
 
 The declaration opens as a PDF (:file:`Declaracion_responsable_VeriFactu`), always in Spanish. It is
 generated from the declaration file that ships with each release

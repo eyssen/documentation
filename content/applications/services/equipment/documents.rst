@@ -6,11 +6,11 @@ Each equipment can have multiple documents attached — manuals, certificates, c
 warranty documents, service books, and more.
 
 .. screenshot:: services-equipment-documents-tab
-   :menu: Equipment Management ‣ Equipment ‣ (open an equipment) ‣ Documents
+   :menu: Equipment Management ‣ All Equipment ‣ (open an equipment) ‣ Documents
    :shows: The Documents tab of an equipment with four document lines of different types (Manual, Certificate, Calibration, Warranty), each with an expiry date and an attached file.
    :highlight: The Type and Expiry Date columns (red frame).
-   :data: Equipment "Zeiss Contura CMM"; documents "User manual", "CE certificate", "Calibration 2026", "Warranty".
-   :module: equipment
+   :data: Measuring device "CT-2019-0043 - Contura" (manufacturer "Zeiss", model "Contura"); documents "User manual", "CE certificate", "Calibration 2026", "Warranty".
+   :module: equipment, equipment_measuring
    :notes: English UI, light theme, 1440px width, crop to the tab.
 
 Document types
@@ -61,14 +61,14 @@ creates an **activity** on the equipment record to alert the assigned user.
 **Configuring the warning period:**
 
 Navigate to :menuselection:`Equipment Management --> Settings --> Configuration --> Automation -->
-Document Expiry Warning` and set the number of days. The default is 30 days.
+Document Expiry Warning Days` and set the number of days. The default is 30 days.
 
 .. note::
    The expiry tracking applies to all document types, not just calibration documents. If you have
    a warranty expiring in 30 days, you'll receive a notification too.
 
 Searching and filtering documents
-==================================
+=================================
 
 The standalone document list view (accessible via the Documents stat button) includes:
 

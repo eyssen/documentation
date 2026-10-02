@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-19 14:35+0100\n"
+"POT-Creation-Date: 2026-10-01 22:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -25,11 +25,11 @@ msgstr "Szolgáltatások"
 # Equipment Management documentation translations
 #: ../../content/applications/services/equipment.rst:5
 msgid "Equipment Management"
-msgstr "Berendezéskezelés"
+msgstr "Eszközkezelés"
 
 #: ../../content/applications/services/equipment.rst:7
-msgid "**Equipment Management** allows you to manage and track all types of physical equipment — printers, measuring devices, IT infrastructure, forklifts, cranes, and more — from a single centralized hub. It connects equipment to maintenance, invoicing, purchasing, fleet, stock, and project management, giving you a complete overview of each asset's lifecycle."
-msgstr "A **Berendezéskezelés** lehetővé teszi mindenféle fizikai berendezés — nyomtatók, mérőeszközök, IT infrastruktúra, targoncák, daruk és egyéb eszközök — kezelését és nyomon követését egyetlen központi felületen. Összekapcsolja a berendezéseket a karbantartással, számlázással, beszerzéssel, flottával, készletgazdálkodással és projektkezeléssel, így minden eszköz életciklusáról teljes áttekintést nyújt."
+msgid "**Equipment Management** allows you to manage and track all types of physical equipment — printers, measuring devices, your own reference standards (:ref:`etalons <equipment/etalons>`), IT infrastructure, forklifts, cranes, and more — from a single centralized hub. It connects equipment to maintenance, invoicing, purchasing, fleet, stock, and project management, giving you a complete overview of each asset's lifecycle."
+msgstr "Az **Eszközkezelés** lehetővé teszi mindenféle fizikai eszköz – nyomtatók, mérőeszközök, a saját referenciaetalonjai (:ref:`etalonok <equipment/etalons>`), IT-infrastruktúra, targoncák, daruk és még sok más – kezelését és nyomon követését egyetlen központi felületen. Összekapcsolja az eszközöket a karbantartással, számlázással, beszerzéssel, flottával, készletgazdálkodással és projektkezeléssel, így minden eszköz életciklusáról teljes áttekintést nyújt."
 
 #: ../../content/applications/services/equipment/documents.rst:3
 msgid "Documents"
@@ -37,11 +37,11 @@ msgstr "Dokumentumok"
 
 #: ../../content/applications/services/equipment/documents.rst:5
 msgid "Each equipment can have multiple documents attached — manuals, certificates, calibration records, warranty documents, service books, and more."
-msgstr "Minden berendezéshez több dokumentum is csatolható — kézikönyvek, tanúsítványok, kalibrálási nyilvántartások, garanciaokmányok, szervizkönyvek és egyebek."
+msgstr "Minden eszközhöz több dokumentum is csatolható – kézikönyvek, tanúsítványok, kalibrációs nyilvántartások, garanciaokmányok, szervizkönyvek és egyebek."
 
 #: ../../content/applications/services/equipment/documents.rst:17
 msgid "Document types"
-msgstr "Dokumentum típusok"
+msgstr "Dokumentumtípusok"
 
 #: ../../content/applications/services/equipment/documents.rst:19
 msgid "Each document has a **type** that categorizes it:"
@@ -57,7 +57,7 @@ msgstr "**Tanúsítvány**: Megfelelőségi tanúsítványok, biztonsági minős
 
 #: ../../content/applications/services/equipment/documents.rst:23
 msgid "**Calibration**: Calibration certificates and records."
-msgstr "**Kalibrálás**: Kalibrálási tanúsítványok és nyilvántartások."
+msgstr "**Kalibráció**: Kalibrációs tanúsítványok és nyilvántartások."
 
 #: ../../content/applications/services/equipment/documents.rst:24
 msgid "**Warranty**: Warranty documentation."
@@ -77,31 +77,31 @@ msgstr "Dokumentumok hozzáadása"
 
 #: ../../content/applications/services/equipment/documents.rst:31
 msgid "Documents can be added directly on the equipment form in the :guilabel:`Documents` tab:"
-msgstr "A dokumentumok közvetlenül a berendezés űrlapján adhatók hozzá a :guilabel:`Dokumentumok` lapon:"
+msgstr "A dokumentumok közvetlenül az eszköz űrlapján adhatók hozzá a :guilabel:`Dokumentumok` fülön:"
 
 #: ../../content/applications/services/equipment/documents.rst:33
 msgid "Click :guilabel:`Add a line` in the documents table."
-msgstr "Kattintson a :guilabel:`Sor hozzáadása` lehetőségre a dokumentumok táblázatban."
+msgstr "Kattintson a dokumentumtáblázatban az :guilabel:`Új sor` lehetőségre."
 
 #: ../../content/applications/services/equipment/documents.rst:34
 msgid "Enter a **Name** for the document."
-msgstr "Adjon meg egy **Nevet** a dokumentumnak."
+msgstr "Adja meg a dokumentum nevét a **Név** mezőben."
 
 #: ../../content/applications/services/equipment/documents.rst:35
 msgid "Select the **Type**."
-msgstr "Válassza ki a **Típust**."
+msgstr "Válassza ki a dokumentum típusát a **Típus** mezőben."
 
 #: ../../content/applications/services/equipment/documents.rst:36
 msgid "Set the **Expiry Date** if applicable (especially important for certificates, calibrations, and warranties)."
-msgstr "Adja meg a **Lejárati dátumot**, ha szükséges (különösen fontos tanúsítványok, kalibrálások és garanciák esetén)."
+msgstr "Szükség esetén töltse ki a **Lejárati dátum** mezőt (ez különösen fontos tanúsítványok, kalibrációk és garanciák esetén)."
 
 #: ../../content/applications/services/equipment/documents.rst:38
 msgid "Upload the **File**."
-msgstr "Töltse fel a **Fájlt**."
+msgstr "Töltse fel a fájlt a **Fájl** mezőbe."
 
 #: ../../content/applications/services/equipment/documents.rst:39
 msgid "Optionally add **Notes**."
-msgstr "Opcionálisan adjon hozzá **Megjegyzéseket**."
+msgstr "Opcionálisan töltse ki a **Megjegyzések** mezőt."
 
 #: ../../content/applications/services/equipment/documents.rst:41
 msgid "Documents can also be accessed from the :guilabel:`Documents` stat button, which opens the full document list view with advanced filtering and grouping."
@@ -109,11 +109,11 @@ msgstr "A dokumentumok a :guilabel:`Dokumentumok` statisztikai gombból is elér
 
 #: ../../content/applications/services/equipment/documents.rst:45
 msgid "Expiry tracking"
-msgstr "Lejárat követés"
+msgstr "Lejáratkövetés"
 
 #: ../../content/applications/services/equipment/documents.rst:47
 msgid "Documents with an **Expiry Date** are automatically monitored by a daily scheduled job. When a document's expiry date is within the configured warning period (default: 30 days), the system creates an **activity** on the equipment record to alert the assigned user."
-msgstr "A **Lejárati dátummal** rendelkező dokumentumokat automatikusan egy napi ütemezett feladat felügyeli. Ha egy dokumentum lejárati dátuma a beállított figyelmeztető időszakon belülre esik (alapértelmezés: 30 nap), a rendszer **tevékenységet** hoz létre a berendezés rekordján a hozzárendelt felhasználó értesítése érdekében."
+msgstr "Azokat a dokumentumokat, amelyeknél ki van töltve a **Lejárati dátum**, egy napi ütemezett feladat automatikusan figyeli. Ha egy dokumentum lejárati dátuma a beállított figyelmeztető időszakon belülre esik (alapértelmezés: 30 nap), a rendszer **tevékenységet** hoz létre az eszköz rekordján a hozzárendelt felhasználó értesítése érdekében."
 
 #: ../../content/applications/services/equipment/documents.rst:51
 msgid "**How it works:**"
@@ -125,27 +125,27 @@ msgstr "Az ütemezett feladat naponta fut, és ellenőrzi az összes olyan dokum
 
 #: ../../content/applications/services/equipment/documents.rst:55
 msgid "Only equipment in *Active* state is checked."
-msgstr "Csak az *Aktív* állapotú berendezések kerülnek ellenőrzésre."
+msgstr "Csak az *Aktív* állapotú eszközök kerülnek ellenőrzésre."
 
 #: ../../content/applications/services/equipment/documents.rst:56
 msgid "A warning activity is created for each expiring document, assigned to the equipment's first assignee (or the company admin as fallback)."
-msgstr "Minden lejáró dokumentumhoz figyelmeztetési tevékenység jön létre, amely a berendezés első felelőséhez (vagy tartalékként a vállalat adminisztrátorához) kerül hozzárendelésre."
+msgstr "Minden lejáró dokumentumhoz figyelmeztetési tevékenység jön létre, amely az eszköz első felelőséhez (ennek hiányában a vállalat adminisztrátorához) kerül hozzárendelésre."
 
 #: ../../content/applications/services/equipment/documents.rst:58
 msgid "Duplicate activities are prevented — if a warning activity already exists for the same document, no new one is created."
-msgstr "Az ismétlődő tevékenységek megakadályozottak — ha ugyanahhoz a dokumentumhoz már létezik figyelmeztetési tevékenység, nem jön létre új."
+msgstr "A rendszer megakadályozza a duplikált tevékenységeket – ha ugyanahhoz a dokumentumhoz már létezik figyelmeztetési tevékenység, nem jön létre új."
 
 #: ../../content/applications/services/equipment/documents.rst:61
 msgid "**Configuring the warning period:**"
-msgstr "**A figyelmeztetési időszak beállítása:**"
+msgstr "**A figyelmeztető időszak beállítása:**"
 
 #: ../../content/applications/services/equipment/documents.rst:63
-msgid "Navigate to :menuselection:`Equipment Management --> Settings --> Configuration --> Automation --> Document Expiry Warning` and set the number of days. The default is 30 days."
-msgstr "Lépjen a :menuselection:`Berendezéskezelés --> Beállítások --> Konfiguráció --> Automatizálás --> Dokumentumlejárat-figyelmeztetés` menüpontra, és adja meg a napok számát. Az alapértelmezett érték 30 nap."
+msgid "Navigate to :menuselection:`Equipment Management --> Settings --> Configuration --> Automation --> Document Expiry Warning Days` and set the number of days. The default is 30 days."
+msgstr "Lépjen az :menuselection:`Eszközkezelés --> Beállítások --> Konfiguráció --> Automatizálás --> Dokumentumlejárat-figyelmeztetés (nap)` menüpontra, és adja meg a napok számát. Az alapértelmezett érték 30 nap."
 
 #: ../../content/applications/services/equipment/documents.rst:67
 msgid "The expiry tracking applies to all document types, not just calibration documents. If you have a warranty expiring in 30 days, you'll receive a notification too."
-msgstr "A lejárat követése minden dokumentumtípusra vonatkozik, nem csak a kalibrációs dokumentumokra. Ha egy garancia 30 napon belül lejár, arról szintén értesítést kap."
+msgstr "A lejáratkövetés minden dokumentumtípusra vonatkozik, nem csak a kalibrációs dokumentumokra. Ha egy garancia 30 napon belül lejár, arról szintén értesítést kap."
 
 #: ../../content/applications/services/equipment/documents.rst:71
 msgid "Searching and filtering documents"
@@ -153,11 +153,11 @@ msgstr "Dokumentumok keresése és szűrése"
 
 #: ../../content/applications/services/equipment/documents.rst:73
 msgid "The standalone document list view (accessible via the Documents stat button) includes:"
-msgstr "Az önálló dokumentumlista nézet (a Dokumentumok statisztikai gombján keresztül érhető el) az alábbiakat tartalmazza:"
+msgstr "Az önálló dokumentumlista-nézet (a Dokumentumok statisztikai gombján keresztül érhető el) az alábbiakat tartalmazza:"
 
 #: ../../content/applications/services/equipment/documents.rst:75
 msgid "**Filter: Expiring (30 days)**: Shows documents expiring within the next 30 days."
-msgstr "**Szűrő: Lejáró (30 nap)**: A következő 30 napon belül lejáró dokumentumokat jeleníti meg."
+msgstr "**Szűrő: Lejáró (30 napon belül)**: A következő 30 napon belül lejáró dokumentumokat jeleníti meg."
 
 #: ../../content/applications/services/equipment/documents.rst:76
 msgid "**Filter: Expired**: Shows documents past their expiry date."
@@ -165,19 +165,19 @@ msgstr "**Szűrő: Lejárt**: A lejárati dátumon túl lévő dokumentumokat je
 
 #: ../../content/applications/services/equipment/documents.rst:77
 msgid "**Group By: Type**: Groups documents by their type."
-msgstr "**Csoportosítás: Típus szerint**: A dokumentumokat típusuk szerint csoportosítja."
+msgstr "**Csoportosítás: Típus**: A dokumentumokat típusuk szerint csoportosítja."
 
 #: ../../content/applications/services/equipment/documents.rst:78
 msgid "**Group By: Equipment**: Groups documents by their parent equipment."
-msgstr "**Csoportosítás: Berendezés szerint**: A dokumentumokat a szülő berendezésük szerint csoportosítja."
+msgstr "**Csoportosítás: Eszköz**: A dokumentumokat a szülő eszközük szerint csoportosítja."
 
 #: ../../content/applications/services/equipment/equipment_form.rst:3
 msgid "Equipment Form"
-msgstr "Berendezés űrlap"
+msgstr "Eszközűrlap"
 
 #: ../../content/applications/services/equipment/equipment_form.rst:5
 msgid "The equipment form is a **single pane of glass** — a central hub where all Odoo data related to a piece of equipment is visible in one place."
-msgstr "A berendezés űrlap egy **egyablakos rendszer** — egy központi felület, ahol az adott berendezéshez kapcsolódó összes Odoo adat egy helyen látható."
+msgstr "Az eszközűrlap egy **egyablakos rendszer** – egy központi felület, ahol az adott eszközhöz kapcsolódó összes Odoo-adat egy helyen látható."
 
 #: ../../content/applications/services/equipment/equipment_form.rst:17
 msgid "Header"
@@ -189,15 +189,15 @@ msgstr "Az űrlap fejléce a következőket tartalmazza:"
 
 #: ../../content/applications/services/equipment/equipment_form.rst:21
 msgid "**Create Ticket** button: Creates a project task linked to this equipment. Only visible when the equipment is *Active* and has at least one project assigned."
-msgstr "**Jegy létrehozása** gomb: Ehhez a berendezéshez kapcsolt projektfeladatot hoz létre. Csak akkor látható, ha a berendezés *Aktív*, és legalább egy projekt hozzá van rendelve."
+msgstr "**Jegy létrehozása** gomb: Ehhez az eszközhöz kapcsolt projektfeladatot hoz létre. Csak akkor látható, ha az eszköz *Aktív*, és legalább egy projekt hozzá van rendelve."
 
 #: ../../content/applications/services/equipment/equipment_form.rst:23
-msgid "**Status bar**: Click to change the state (*Draft* → *Active* → *Inactive*)."
-msgstr "**Állapotsor**: Kattintson az állapot módosításához (*Tervezet* → *Aktív* → *Inaktív*)."
+msgid "**Status bar**: Click to change the state (*Draft* → *Active* → *Inactive* → *Scrapped*)."
+msgstr "**Állapotsáv**: Kattintson az állapot módosításához (*Piszkozat* → *Aktív* → *Inaktív* → *Selejtezett*)."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:26 ../../content/applications/services/equipment/equipment_measuring.rst:195 ../../content/applications/services/equipment/equipment_printer.rst:120
+#: ../../content/applications/services/equipment/equipment_form.rst:26 ../../content/applications/services/equipment/equipment_measuring.rst:252 ../../content/applications/services/equipment/equipment_printer.rst:123
 msgid "Stat buttons"
-msgstr "Statisztika gombok"
+msgstr "Statisztikai gombok"
 
 #: ../../content/applications/services/equipment/equipment_form.rst:28
 msgid "Stat buttons appear at the top of the form, providing quick access to related records:"
@@ -205,7 +205,7 @@ msgstr "A statisztikai gombok az űrlap tetején jelennek meg, és gyors hozzáf
 
 #: ../../content/applications/services/equipment/equipment_form.rst:30
 msgid "**Maintenance**: Shows open/total maintenance requests. Only visible when a maintenance equipment is linked. Click to view all maintenance requests."
-msgstr "**Karbantartás**: A nyitott/összes karbantartási kérelmet jeleníti meg. Csak akkor látható, ha egy karbantartási berendezés van hozzárendelve. Kattintson az összes karbantartási kérelem megtekintéséhez."
+msgstr "**Karbantartás**: A nyitott/összes karbantartási igényt jeleníti meg. Csak akkor látható, ha karbantartási eszköz van hozzárendelve. Kattintson az összes karbantartási igény megtekintéséhez."
 
 #: ../../content/applications/services/equipment/equipment_form.rst:32
 msgid "**Invoices**: Shows invoice count and total amount. Only visible when invoices exist. Click to view related invoices."
@@ -213,7 +213,7 @@ msgstr "**Számlák**: A számlák számát és a teljes összeget jeleníti meg
 
 #: ../../content/applications/services/equipment/equipment_form.rst:34
 msgid "**Tickets**: Shows the number of project tasks linked to this equipment. Click to view all tasks."
-msgstr "**Jegyek**: Az ehhez a berendezéshez kapcsolt projektfeladatok számát jeleníti meg. Kattintson az összes feladat megtekintéséhez."
+msgstr "**Jegyek**: Az ehhez az eszközhöz kapcsolt projektfeladatok számát jeleníti meg. Kattintson az összes feladat megtekintéséhez."
 
 #: ../../content/applications/services/equipment/equipment_form.rst:35
 msgid "**Purchases**: Shows purchase order count and total amount. Only visible when purchases exist. Click to view related purchase orders."
@@ -227,371 +227,399 @@ msgstr "**Dokumentumok**: A csatolt dokumentumok számát jeleníti meg. Kattint
 msgid "**Fleet**: Only visible when a fleet vehicle is linked. Click to open the fleet vehicle form."
 msgstr "**Flotta**: Csak akkor látható, ha egy flottajármű van hozzárendelve. Kattintson a flottajármű-űrlap megnyitásához."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:41
+#: ../../content/applications/services/equipment/equipment_form.rst:40
+msgid "Depending on the :guilabel:`Category`, the Printers and Measuring Devices sub-modules add further buttons and a tab of their own: see :doc:`equipment_printer` and :doc:`equipment_measuring`."
+msgstr "A :guilabel:`Kategória` mező értékétől függően a Nyomtatók és a Mérőeszközök almodul további gombokkal és saját füllel egészíti ki az űrlapot (lásd: :doc:`equipment_printer` és :doc:`equipment_measuring`)."
+
+#: ../../content/applications/services/equipment/equipment_form.rst:44
 msgid "Main fields"
 msgstr "Fő mezők"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:43
+#: ../../content/applications/services/equipment/equipment_form.rst:46
 msgid "The main section contains core equipment data organized in groups:"
-msgstr "A fő szakasz csoportokba rendezve tartalmazza az alapvető berendezésadatokat:"
+msgstr "A fő szakasz csoportokba rendezve tartalmazza az alapvető eszközadatokat:"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:57
+#: ../../content/applications/services/equipment/equipment_form.rst:68
 msgid "**Left column:**"
 msgstr "**Bal oszlop:**"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:59
-msgid "**Subscription Service**: If the equipment is part of a subscription."
-msgstr "**Előfizetéses szolgáltatás**: Ha a berendezés egy előfizetés részét képezi."
+#: ../../content/applications/services/equipment/equipment_form.rst:70
+msgid "**Subscription**: If the equipment is part of a subscription."
+msgstr "**Előfizetés**: Ha az eszköz egy előfizetés része."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:60
+#: ../../content/applications/services/equipment/equipment_form.rst:71
 msgid "**Customer**: The customer using the equipment."
-msgstr "**Ügyfél**: A berendezést használó ügyfél."
+msgstr "**Ügyfél**: Az eszközt használó ügyfél."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:61
-msgid "**Owner**: The legal owner."
-msgstr "**Tulajdonos**: A jogszerű tulajdonos."
+#: ../../content/applications/services/equipment/equipment_form.rst:72
+msgid "**Owner**: The legal owner. On a new etalon, the customer and the owner both default to your own company (see :ref:`equipment/etalons`)."
+msgstr "**Tulajdonos**: A jogi tulajdonos. Új etalon esetén az ügyfél és a tulajdonos alapértelmezés szerint egyaránt a saját vállalata (lásd: :ref:`equipment/etalons`)."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:62
+#: ../../content/applications/services/equipment/equipment_form.rst:74
 msgid "**Assignees**: Users responsible for this equipment."
-msgstr "**Felelősök**: A berendezésért felelős felhasználók."
+msgstr "**Hozzárendelések**: Az eszközért felelős felhasználók."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:63 ../../content/applications/services/equipment/getting_started.rst:43
+#: ../../content/applications/services/equipment/equipment_form.rst:75 ../../content/applications/services/equipment/getting_started.rst:60
 msgid "**Sales Team**: The responsible sales team."
 msgstr "**Értékesítési csapat**: A felelős értékesítési csapat."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:64
+#: ../../content/applications/services/equipment/equipment_form.rst:76
 msgid "**Projects**: Projects linked to this equipment for ticket management."
-msgstr "**Projektek**: A berendezéshez kapcsolódó projektek a jegykezeléshez."
+msgstr "**Projektek**: Az eszközhöz kapcsolódó projektek a jegykezeléshez."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:65
+#: ../../content/applications/services/equipment/equipment_form.rst:77
 msgid "**Tags**: Categorization tags."
 msgstr "**Címkék**: Kategorizálási címkék."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:67
+#: ../../content/applications/services/equipment/equipment_form.rst:79
 msgid "**Right column:**"
 msgstr "**Jobb oszlop:**"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:69
-msgid "**Type**: General, Printer, Measuring Device, etc."
-msgstr "**Típus**: Általános, Nyomtató, Mérőeszköz stb."
+#: ../../content/applications/services/equipment/equipment_form.rst:81
+msgid "**Category**: :guilabel:`General`; with the sub-modules, also :guilabel:`Printer` (see :doc:`equipment_printer`), :guilabel:`Measuring Device`, and :guilabel:`Etalon` (see :doc:`equipment_measuring`). The category decides which models can be selected, which buttons and tabs are shown, and whether the name is typed or built automatically."
+msgstr "**Kategória**: :guilabel:`Általános`; az almodulokkal továbbá :guilabel:`Nyomtató` (lásd: :doc:`equipment_printer`), :guilabel:`Mérőeszköz` és :guilabel:`Etalon` (lásd: :doc:`equipment_measuring`). A kategória határozza meg, hogy mely modellek választhatók ki, mely gombok és fülek jelennek meg, valamint hogy a nevet kézzel kell-e beírni, vagy automatikusan képződik."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:70
+#: ../../content/applications/services/equipment/equipment_form.rst:85
 msgid "**Manufacturer**: The equipment brand."
-msgstr "**Gyártó**: A berendezés márkája."
+msgstr "**Gyártó**: Az eszköz márkája."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:71
-msgid "**Model**: The specific model (filtered by brand and type)."
-msgstr "**Modell**: A konkrét modell (márka és típus szerint szűrve)."
+#: ../../content/applications/services/equipment/equipment_form.rst:86
+msgid "**Model**: The specific model. Only the models of the equipment's category, and of its manufacturer if one is set, can be selected. A model created from this field (:guilabel:`Create` or :guilabel:`Create and edit...` in the drop-down menu) gets the equipment's category and manufacturer (see :ref:`equipment/models`)."
+msgstr "**Modell**: A konkrét modell. Csak az eszköz kategóriájába tartozó modellek választhatók ki, és ha gyártó is meg van adva, akkor csak az adott gyártó modelljei. Az ebből a mezőből létrehozott modell (a legördülő menü :guilabel:`Létrehozás` vagy :guilabel:`Létrehozás és szerkesztés...` pontjával) megkapja az eszköz kategóriáját és gyártóját (lásd: :ref:`equipment/models`)."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:72
+#: ../../content/applications/services/equipment/equipment_form.rst:90
 msgid "**Product**: Automatically set from the model's linked product."
 msgstr "**Termék**: Automatikusan kerül beállításra a modellhez kapcsolódó termékből."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:73
+#: ../../content/applications/services/equipment/equipment_form.rst:91
 msgid "**Product Family**: The product family classification."
 msgstr "**Termékcsalád**: A termékcsalád besorolása."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:74
+#: ../../content/applications/services/equipment/equipment_form.rst:92
 msgid "**Production Year**: Year of manufacture."
 msgstr "**Gyártási év**: A gyártás éve."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:75
+#: ../../content/applications/services/equipment/equipment_form.rst:93
 msgid "**Warranty Expiration**: Warranty end date."
 msgstr "**Garancia lejárata**: A garancia záró dátuma."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:77
+#: ../../content/applications/services/equipment/equipment_form.rst:95
 msgid "**Location group:**"
-msgstr "**Helyszín csoport:**"
+msgstr "**Lokáció csoport:**"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:79
+#: ../../content/applications/services/equipment/equipment_form.rst:97
 msgid "**Location**: Delivery address of the customer."
-msgstr "**Helyszín**: Az ügyfél szállítási címe."
+msgstr "**Lokáció**: Az ügyfél szállítási címe."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:80
+#: ../../content/applications/services/equipment/equipment_form.rst:98
 msgid "**Location Name** and **Address**: Auto-filled from the selected location."
-msgstr "**Helyszín neve** és **Cím**: A kiválasztott helyszínből automatikusan töltődik ki."
+msgstr "**Lokáció neve** és **Lokáció címe**: A kiválasztott lokációból automatikusan töltődnek ki."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:82
+#: ../../content/applications/services/equipment/equipment_form.rst:100
 msgid "**Contact group:**"
-msgstr "**Kapcsolattartó csoport:**"
+msgstr "**Kapcsolat csoport:**"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:84
+#: ../../content/applications/services/equipment/equipment_form.rst:102
 msgid "**Contact**: Contact person at the customer site."
-msgstr "**Kapcsolattartó**: A vevő oldalán lévő kapcsolattartó személy."
+msgstr "**Kapcsolat**: Kapcsolattartó személy az ügyfél telephelyén."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:85
+#: ../../content/applications/services/equipment/equipment_form.rst:103
 msgid "**Contact Name**, **Email**, **Phone**: Auto-filled from the selected contact."
-msgstr "**Kapcsolattartó neve**, **E-mail**, **Telefon**: A kiválasztott kapcsolattartóból automatikusan kitöltve."
+msgstr "**Kapcsolat neve**, **Kapcsolat e-mail-címe**, **Kapcsolat telefonszáma**: A kiválasztott kapcsolatból automatikusan töltődnek ki."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:88
+#: ../../content/applications/services/equipment/equipment_form.rst:106
 msgid "Tabs"
 msgstr "Fülek"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:98
+#: ../../content/applications/services/equipment/equipment_form.rst:116
 msgid "The notebook section contains multiple tabs:"
-msgstr "A notebook szakasz több lapot tartalmaz:"
+msgstr "A füles szakasz több fület tartalmaz:"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:101
+#: ../../content/applications/services/equipment/equipment_form.rst:119
 msgid "Subscription tab"
 msgstr "Előfizetés fül"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:103
+#: ../../content/applications/services/equipment/equipment_form.rst:121
 msgid "Only visible when a subscription service is linked. Shows pricing information and the invoicing period."
-msgstr "Csak akkor látható, ha előfizetési szolgáltatás van csatolva. Az árképzési információkat és a számlázási időszakot jeleníti meg."
+msgstr "Csak akkor látható, ha előfizetési szolgáltatás van csatolva. Az árazási információkat és a számlázási időszakot jeleníti meg."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:107
+#: ../../content/applications/services/equipment/equipment_form.rst:125
 msgid "Description tab"
 msgstr "Leírás fül"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:109
+#: ../../content/applications/services/equipment/equipment_form.rst:127
 msgid "A rich text editor for detailed notes about the equipment. Supports collaborative editing."
-msgstr "Részletes jegyzetek gazdag szövegszerkesztője a berendezésről. Támogatja az együttműködésen alapuló szerkesztést."
+msgstr "Formázható szövegszerkesztő az eszközzel kapcsolatos részletes jegyzetekhez. Támogatja az együttműködésen alapuló szerkesztést."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:112
+#: ../../content/applications/services/equipment/equipment_form.rst:130
 msgid "Maintenance tab"
 msgstr "Karbantartás fül"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:122
+#: ../../content/applications/services/equipment/equipment_form.rst:140
 msgid "**Maintenance Equipment**: Link to the corresponding ``maintenance.equipment`` record. If not yet linked, click :guilabel:`Create Maintenance Equipment` to create or link one automatically."
-msgstr "**Karbantartási berendezés**: Hivatkozás a megfelelő ``maintenance.equipment`` rekordra. Ha még nincs csatolva, kattintson a :guilabel:`Karbantartási berendezés létrehozása` gombra az automatikus létrehozáshoz vagy csatoláshoz."
+msgstr "**Karbantartási eszköz**: Hivatkozás a megfelelő ``maintenance.equipment`` rekordra. Ha még nincs csatolva, kattintson a :guilabel:`Karbantartási eszköz létrehozása` gombra az automatikus létrehozáshoz vagy csatoláshoz."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:124
+#: ../../content/applications/services/equipment/equipment_form.rst:142
 msgid "**MTBF (days)**: Mean Time Between Failure, computed from maintenance history."
-msgstr "**MTBF (nap)**: Átlagos meghibásodások közötti idő, a karbantartási előzményekből számítva."
+msgstr "**MTBF (nap)**: Meghibásodások közötti átlagos idő, a karbantartási előzményekből számítva."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:125
+#: ../../content/applications/services/equipment/equipment_form.rst:143
 msgid "**MTTR (days)**: Mean Time To Repair, computed from maintenance history."
 msgstr "**MTTR (nap)**: Átlagos javítási idő, a karbantartási előzményekből számítva."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:126
+#: ../../content/applications/services/equipment/equipment_form.rst:144
 msgid "**Last Failure**: Date of the most recent corrective maintenance."
-msgstr "**Utolsó meghibásodás**: A legutóbbi javító karbantartás dátuma."
+msgstr "**Utolsó meghibásodás**: A legutóbbi korrekciós karbantartás dátuma."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:127
+#: ../../content/applications/services/equipment/equipment_form.rst:145
 msgid "**Est. Next Failure**: Estimated date of the next failure based on MTBF."
-msgstr "**Becsült következő meghibásodás**: A következő meghibásodás becsült dátuma az MTBF alapján."
+msgstr "**Várható következő meghibásodás**: A következő meghibásodás becsült dátuma az MTBF alapján."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:128
+#: ../../content/applications/services/equipment/equipment_form.rst:146
 msgid "**Maintenance Requests**: Inline list of all maintenance requests for this equipment."
-msgstr "**Karbantartási kérések**: A berendezéshez tartozó összes karbantartási kérés beágyazott listája."
+msgstr "**Karbantartási igények**: Az eszközhöz tartozó összes karbantartási igény beágyazott listája."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:131
+#: ../../content/applications/services/equipment/equipment_form.rst:149
 msgid "Finance tab"
 msgstr "Pénzügy fül"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:141
+#: ../../content/applications/services/equipment/equipment_form.rst:159
 msgid "**Analytic Account**: The dedicated analytic account for this equipment. Can be auto-created when the equipment is activated (see :doc:`settings`)."
-msgstr "**Analitikus számla**: A berendezéshez dedikált analitikus számla. Automatikusan létrehozható a berendezés aktiválásakor (lásd: :doc:`settings`)."
+msgstr "**Analitikus számla**: Az eszközhöz dedikált analitikus számla. Automatikusan létrehozható az eszköz aktiválásakor (lásd: :doc:`settings`)."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:143
+#: ../../content/applications/services/equipment/equipment_form.rst:161
 msgid "**Invoice Total**: Sum of all customer invoices linked through the analytic account."
 msgstr "**Számla összesen**: Az analitikus számlán keresztül kapcsolt összes vevői számla összege."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:144
+#: ../../content/applications/services/equipment/equipment_form.rst:162
 msgid "**Purchase Total**: Sum of all purchase orders linked through the analytic account."
-msgstr "**Beszerzés összesen**: Az analitikus számlán keresztül kapcsolt összes megrendelés összege."
+msgstr "**Beszerzés összesen**: Az analitikus számlán keresztül kapcsolt összes beszerzési rendelés összege."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:145
+#: ../../content/applications/services/equipment/equipment_form.rst:163
 msgid "**Margin**: Invoice Total minus Purchase Total."
-msgstr "**Fedezet**: A számlák összege mínusz a beszerzések összege."
+msgstr "**Árrés**: A Számla összesen és a Beszerzés összesen különbsége."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:146
+#: ../../content/applications/services/equipment/equipment_form.rst:164
 msgid "**Recent Invoices**: Inline list of invoices with date, amount, and payment status."
 msgstr "**Legutóbbi számlák**: Számlák beágyazott listája dátummal, összeggel és fizetési státusszal."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:149
+#: ../../content/applications/services/equipment/equipment_form.rst:167
 msgid "Documents tab"
 msgstr "Dokumentumok fül"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:159
+#: ../../content/applications/services/equipment/equipment_form.rst:177
 msgid "An inline editable list of documents attached to the equipment:"
-msgstr "A berendezéshez csatolt dokumentumok szerkeszthető beágyazott listája:"
+msgstr "Az eszközhöz csatolt dokumentumok szerkeszthető beágyazott listája:"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:161
+#: ../../content/applications/services/equipment/equipment_form.rst:179
 msgid "**Name**: Document title."
 msgstr "**Név**: A dokumentum címe."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:162
+#: ../../content/applications/services/equipment/equipment_form.rst:180
 msgid "**Type**: Manual, Certificate, Calibration, Warranty, Service Book, or Other."
 msgstr "**Típus**: Kézikönyv, Tanúsítvány, Kalibráció, Garancia, Szervizkönyv vagy Egyéb."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:163
+#: ../../content/applications/services/equipment/equipment_form.rst:181
 msgid "**Expiry Date**: When the document expires. A daily cron job creates warning activities for documents expiring within the configured number of days (default: 30)."
-msgstr "**Lejárati dátum**: A dokumentum lejártának időpontja. Egy napi cron feladat figyelmeztetési tevékenységeket hoz létre a beállított napon belül (alapértelmezett: 30) lejáró dokumentumokhoz."
+msgstr "**Lejárati dátum**: A dokumentum lejártának időpontja. Egy napi ütemezett feladat figyelmeztetési tevékenységeket hoz létre a beállított számú napon belül (alapértelmezett: 30) lejáró dokumentumokhoz."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:165
+#: ../../content/applications/services/equipment/equipment_form.rst:183
 msgid "**File**: The attached file (upload/download)."
 msgstr "**Fájl**: A csatolt fájl (feltöltés/letöltés)."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:166
+#: ../../content/applications/services/equipment/equipment_form.rst:184
 msgid "**Notes**: Additional notes."
 msgstr "**Megjegyzések**: További megjegyzések."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:169
+#: ../../content/applications/services/equipment/equipment_form.rst:187
 msgid "Fleet tab"
 msgstr "Flotta fül"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:179
+#: ../../content/applications/services/equipment/equipment_form.rst:197
 msgid "Only visible when a fleet vehicle is linked. Shows:"
-msgstr "Csak akkor látható, ha flottajármű van hozzákapcsolva. Megjelenítések:"
+msgstr "Csak akkor látható, ha flottajármű van hozzákapcsolva. A következőket jeleníti meg:"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:181
+#: ../../content/applications/services/equipment/equipment_form.rst:199
 msgid "**Fleet Vehicle**: Link to the ``fleet.vehicle`` record."
 msgstr "**Flottajármű**: Hivatkozás a ``fleet.vehicle`` rekordra."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:182
+#: ../../content/applications/services/equipment/equipment_form.rst:200
 msgid "**License Plate**: From the fleet vehicle."
-msgstr "**Rendszám**: A flottajárműről."
+msgstr "**Rendszámtábla**: A flottajárműből származik."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:183
+#: ../../content/applications/services/equipment/equipment_form.rst:201
 msgid "**Odometer**: Latest odometer reading."
 msgstr "**Kilométeróra**: Legutóbbi kilométeróra-állás."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:184
+#: ../../content/applications/services/equipment/equipment_form.rst:202
 msgid "**Last Service Date**: Date of the most recent fleet service."
 msgstr "**Utolsó szerviz dátuma**: A legutóbbi flottaszerviz dátuma."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:185
+#: ../../content/applications/services/equipment/equipment_form.rst:203
 msgid "**Contract State**: Current fleet contract status."
 msgstr "**Szerződés állapota**: Az aktuális flottaszerződés státusza."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:188
+#: ../../content/applications/services/equipment/equipment_form.rst:206
 msgid "List and search views"
-msgstr "Lista és kereső nézetek"
+msgstr "Lista- és keresőnézetek"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:198
+#: ../../content/applications/services/equipment/equipment_form.rst:216
 msgid "The list view shows all equipment with optional columns that can be toggled:"
-msgstr "A listanézet az összes berendezést megjeleníti, opcionális oszlopokkal, amelyek be- és kikapcsolhatók:"
+msgstr "A listanézet az összes eszközt megjeleníti, választható oszlopokkal, amelyek be- és kikapcsolhatók:"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:200
-msgid "Production Year, Warranty Expiration, Product Family"
-msgstr "Gyártási év, Garancia lejárata, Termékcsalád"
+#: ../../content/applications/services/equipment/equipment_form.rst:218
+msgid "Internal ID, Production Year, Warranty Expiration, Product Family"
+msgstr "Belső azonosító, Gyártási év, Garancia lejárata, Termékcsalád"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:201
-msgid "Open Maintenance count, Invoice count, Document count"
-msgstr "Nyitott karbantartások száma, Számlák száma, Dokumentumok száma"
+#: ../../content/applications/services/equipment/equipment_form.rst:219
+msgid "Open Maint., Invoice Count, Document Count"
+msgstr "Nyitott karb., Számlák száma, Dokumentumok száma"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:202
-msgid "Calibration Status (when Measuring Devices module is installed)"
-msgstr "Kalibrálási állapot (ha a Mérőeszközök modul telepítve van)"
+#: ../../content/applications/services/equipment/equipment_form.rst:220
+msgid "Calibration (with the Measuring Devices sub-module): the calibration status, filled for measuring devices only"
+msgstr "Kalibráció (a Mérőeszközök almodullal): a kalibráció állapota, csak mérőeszközöknél van kitöltve"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:204
+#: ../../content/applications/services/equipment/equipment_form.rst:223
+msgid "**Search fields:**"
+msgstr "**Keresőmezők:**"
+
+#: ../../content/applications/services/equipment/equipment_form.rst:225
+msgid "Name, Equipment ID, Serial Number, Internal ID, Customer, Manufacturer, Model, Tags, Projects, Product Family"
+msgstr "Név, Eszközazonosító, Sorozatszám, Belső azonosító, Ügyfél, Gyártó, Modell, Címkék, Projektek, Termékcsalád"
+
+#: ../../content/applications/services/equipment/equipment_form.rst:228
 msgid "**Search filters:**"
 msgstr "**Keresési szűrők:**"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:206
+#: ../../content/applications/services/equipment/equipment_form.rst:230
+msgid "**General**: Equipment of the :guilabel:`General` category."
+msgstr "**Általános**: Az :guilabel:`Általános` kategóriájú eszközök."
+
+#: ../../content/applications/services/equipment/equipment_form.rst:231
+msgid "**Draft**, **Active**, **Inactive**, **Scrapped**: Equipment in the given state."
+msgstr "**Piszkozat**, **Aktív**, **Inaktív**, **Selejtezett**: Az adott állapotú eszközök."
+
+#: ../../content/applications/services/equipment/equipment_form.rst:232
+msgid "**Archived**: Archived equipment."
+msgstr "**Archivált**: Az archivált eszközök."
+
+#: ../../content/applications/services/equipment/equipment_form.rst:233
 msgid "**Open Maintenance**: Equipment with open maintenance requests."
-msgstr "**Nyitott karbantartás**: Nyitott karbantartási kéréssel rendelkező berendezések."
+msgstr "**Nyitott karbantartás**: Nyitott karbantartási igénnyel rendelkező eszközök."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:207
+#: ../../content/applications/services/equipment/equipment_form.rst:234
 msgid "**Expiring Documents**: Equipment with documents expiring within 30 days."
-msgstr "**Lejáró dokumentumok**: 30 napon belül lejáró dokumentumokkal rendelkező berendezések."
+msgstr "**Lejáró dokumentumok**: 30 napon belül lejáró dokumentumokkal rendelkező eszközök."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:208
-msgid "**Calibration Due** / **Calibration Overdue**: Available when the Measuring Devices module is installed."
-msgstr "**Kalibrálás esedékes** / **Kalibrálás lejárt**: A Mérőeszközök modul telepítése esetén érhető el."
+#: ../../content/applications/services/equipment/equipment_form.rst:235
+msgid "**Calibration Due** / **Calibration Overdue**: Available with the Measuring Devices sub-module; they only return measuring devices."
+msgstr "**Esedékes kalibráció** / **Lejárt kalibráció**: A Mérőeszközök almodullal érhetők el; csak mérőeszközöket jelenítenek meg."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:211
+#: ../../content/applications/services/equipment/equipment_form.rst:238
 msgid "**Group By options:**"
 msgstr "**Csoportosítási lehetőségek:**"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:213
-msgid "Type, State, Customer, Brand, Model, Product, Tag, Project"
-msgstr "Típus, Állapot, Ügyfél, Márka, Modell, Termék, Címke, Projekt"
+#: ../../content/applications/services/equipment/equipment_form.rst:240
+msgid "Category, State, Customer, Brand, Model, Product, Tag, Project"
+msgstr "Kategória, Állapot, Ügyfél, Márka, Modell, Termék, Címke, Projekt"
 
-#: ../../content/applications/services/equipment/equipment_form.rst:214
+#: ../../content/applications/services/equipment/equipment_form.rst:241
 msgid "Product Family, Analytic Account"
-msgstr "Termékcsoport, Analitikus számla"
+msgstr "Termékcsalád, Analitikus számla"
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:3
 msgid "Measuring Devices"
 msgstr "Mérőeszközök"
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:5
-msgid "The **Measuring Devices** sub-module (``equipment_measuring``) extends Equipment Management with features specific to measuring instruments such as coordinate measuring machines (CMMs), optical measurement systems, and other precision devices. It adds calibration tracking, software and hardware information, and sensor management."
-msgstr "A **Mérőeszközök** almodul (``equipment_measuring``) a Berendezéskezelést mérőeszköz-specifikus funkciókkal bővíti, például koordináta mérőgépek (CMM), optikai mérőrendszerek és egyéb precíziós eszközök kezeléséhez. Kalibrálás követést, szoftver és hardver információkat, valamint szenzor kezelést biztosít."
+msgid "The **Measuring Devices** sub-module extends Equipment Management with features specific to measuring instruments such as coordinate measuring machines (CMMs), optical measurement systems, and other precision devices. It adds calibration tracking, software and hardware information, sensor management, and the :guilabel:`Etalon` category for your company's own reference standards (see :ref:`equipment/etalons`). Measuring devices and etalons are named automatically after their serial number and model (see :ref:`equipment/derived-name`)."
+msgstr "A **Mérőeszközök** almodul az Eszközkezelés alkalmazást olyan funkciókkal bővíti, amelyek a mérőműszerekre, például a koordináta-mérőgépekre (CMM), az optikai mérőrendszerekre és más precíziós eszközökre jellemzőek. Kalibrációkövetést, szoftver- és hardverinformációkat, érzékelőkezelést, valamint a vállalat saját referenciaetalonjai számára az :guilabel:`Etalon` kategóriát biztosítja (lásd: :ref:`equipment/etalons`). A mérőeszközök és az etalonok neve automatikusan a sorozatszámukból és a modelljükből képződik (lásd: :ref:`equipment/derived-name`)."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:19 ../../content/applications/services/equipment/equipment_printer.rst:18 ../../content/applications/services/equipment/getting_started.rst:6
+#: ../../content/applications/services/equipment/equipment_measuring.rst:21 ../../content/applications/services/equipment/equipment_printer.rst:17 ../../content/applications/services/equipment/getting_started.rst:6
 msgid "Installation"
 msgstr "Telepítés"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:28
+#: ../../content/applications/services/equipment/equipment_measuring.rst:23
+msgid "Enable the Measuring Devices module from :menuselection:`Equipment Management --> Settings --> Configuration`, by ticking :guilabel:`Measuring Devices` in the :guilabel:`Equipment Types` section, or install *Equipment Management - Measuring Devices* from the :menuselection:`Apps` menu (remove the :guilabel:`Apps` filter to find it). The module requires the *Repairs* app, which is installed along with it: calibrations are recorded as :ref:`repair orders <repairs/repair_orders/calibration>`."
+msgstr "A Mérőeszközök modul bekapcsolásához az :menuselection:`Eszközkezelés --> Beállítások --> Konfiguráció` menüpontban jelölje be az :guilabel:`Eszköztípusok` szakaszban a :guilabel:`Mérőeszközök` lehetőséget, vagy telepítse az *Equipment Management - Measuring Devices* modult az :menuselection:`Alkalmazások` menüből (a megtalálásához távolítsa el az :guilabel:`Alkalmazások` szűrőt). A modul a *Javítások* alkalmazást igényli, amely vele együtt települ: a rendszer a kalibrációkat :ref:`javítási rendelésként <repairs/repair_orders/calibration>` rögzíti."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:31
 msgid "Dedicated measuring views"
-msgstr "Dedikált mérőeszköz nézetek"
+msgstr "Dedikált mérőeszköznézetek"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:30
-msgid "Once installed, a **Measuring Devices** menu appears in the Equipment Management navigation:"
-msgstr "A telepítés után a **Mérőeszközök** menü megjelenik a Berendezéskezelés navigációjában:"
+#: ../../content/applications/services/equipment/equipment_measuring.rst:33
+msgid "Once installed, the **Measuring Devices** and **Etalons** menus appear in the Equipment Management navigation:"
+msgstr "A telepítés után a **Mérőeszközök** és az **Etalonok** menü megjelenik az Eszközkezelés navigációjában:"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:43
+#: ../../content/applications/services/equipment/equipment_measuring.rst:36
+msgid ":menuselection:`Equipment Management --> Measuring Devices --> Measuring Devices`: shows only the equipment of the :guilabel:`Measuring Device` category. The list has no name column: each device is identified by its :guilabel:`Manufacturer`, :guilabel:`Product Family`, :guilabel:`Model`, and :guilabel:`Serial Number`, followed by the :guilabel:`Customer`, :guilabel:`Product`, :guilabel:`Calibration`, :guilabel:`Next Calibration Date`, :guilabel:`Software Serial Number`, :guilabel:`Assignees`, :guilabel:`Activities`, :guilabel:`Tags`, and :guilabel:`State` columns. :guilabel:`Internal ID`, :guilabel:`Software Version`, and :guilabel:`Sensors` are optional columns, hidden by default."
+msgstr ":menuselection:`Eszközkezelés --> Mérőeszközök --> Mérőeszközök`: csak a :guilabel:`Mérőeszköz` kategóriájú eszközöket jeleníti meg. A listában nincs névoszlop: az egyes eszközöket a :guilabel:`Gyártó`, a :guilabel:`Termékcsalád`, a :guilabel:`Modell` és a :guilabel:`Sorozatszám` azonosítja, ezeket az :guilabel:`Ügyfél`, a :guilabel:`Termék`, a :guilabel:`Kalibráció`, a :guilabel:`Következő kalibráció dátuma`, a :guilabel:`Szoftver sorozatszáma`, a :guilabel:`Hozzárendelések`, a :guilabel:`Tevékenységek`, a :guilabel:`Címkék` és az :guilabel:`Állapot` oszlop követi. A :guilabel:`Belső azonosító`, a :guilabel:`Szoftververzió` és az :guilabel:`Érzékelők` oszlop választható, alapértelmezés szerint rejtett."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:88
 msgid "Measuring tab"
 msgstr "Mérőeszköz fül"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:53
-msgid "When an equipment has type *Measuring Device*, a dedicated :guilabel:`Measuring` tab appears on the form with the following sections:"
-msgstr "Ha egy berendezés típusa *Mérőeszköz*, egy dedikált :guilabel:`Mérőeszköz` fül jelenik meg az űrlapon a következő szakaszokkal:"
+#: ../../content/applications/services/equipment/equipment_measuring.rst:98
+msgid "When the :guilabel:`Category` of an equipment is :guilabel:`Measuring Device`, a dedicated :guilabel:`Measuring` tab appears on the form (etalons do not have it), with the following sections:"
+msgstr "Ha egy eszköz :guilabel:`Kategória` mezőjének értéke :guilabel:`Mérőeszköz`, az űrlapon egy dedikált :guilabel:`Mérőeszköz` fül jelenik meg (az etalonoknál nincs ilyen) a következő szakaszokkal:"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:57
+#: ../../content/applications/services/equipment/equipment_measuring.rst:102
 msgid "Calibration"
-msgstr "Kalibrálás"
+msgstr "Kalibráció"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:78
+#: ../../content/applications/services/equipment/equipment_measuring.rst:126
 msgid "Software"
 msgstr "Szoftver"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:85
+#: ../../content/applications/services/equipment/equipment_measuring.rst:133
 msgid "Hardware"
 msgstr "Hardver"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:90
+#: ../../content/applications/services/equipment/equipment_measuring.rst:138
 msgid "Characteristics"
 msgstr "Jellemzők"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:92
+#: ../../content/applications/services/equipment/equipment_measuring.rst:140
 msgid "A rich text field for technical specifications, measurement ranges, accuracy specifications, and other characteristics of the measuring device."
 msgstr "Formázott szöveges mező a mérőeszköz műszaki adataihoz, mérési tartományaihoz, pontossági specifikációihoz és egyéb jellemzőihez."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:96
+#: ../../content/applications/services/equipment/equipment_measuring.rst:144
 msgid "Sensors"
-msgstr "Szenzorok"
+msgstr "Érzékelők"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:106
+#: ../../content/applications/services/equipment/equipment_measuring.rst:154
 msgid "An inline editable list of sensors attached to the measuring device:"
 msgstr "A mérőeszközhöz csatlakoztatott érzékelők beágyazott, szerkeszthető listája:"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:113
-msgid "Click the :guilabel:`Sensors` stat button to view sensors in a dedicated list view."
-msgstr "Kattintson a :guilabel:`Érzékelők` statisztikai gombra az érzékelők megtekintéséhez egy dedikált listanézetben."
-
-#: ../../content/applications/services/equipment/equipment_measuring.rst:116
+#: ../../content/applications/services/equipment/equipment_measuring.rst:169
 msgid "Calibration management"
-msgstr "Kalibrálás kezelés"
+msgstr "Kalibrációk kezelése"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:108 ../../content/applications/services/equipment/getting_started.rst:22
+#: ../../content/applications/services/equipment/equipment_printer.rst:111 ../../content/applications/services/equipment/getting_started.rst:27
 msgid "Click :guilabel:`New`."
-msgstr "Kattintson a :guilabel:`Új` gombra."
+msgstr "Kattintson az :guilabel:`Új` gombra."
 
-#: ../../content/applications/services/equipment/getting_started.rst:23
+#: ../../content/applications/services/equipment/getting_started.rst:34
 msgid "Fill in the required fields:"
 msgstr "Töltse ki a szükséges mezőket:"
 
-#: ../../content/applications/services/equipment/getting_started.rst:33
+#: ../../content/applications/services/equipment/getting_started.rst:36
+msgid "**Name**: A descriptive name for the equipment (e.g., \"Warehouse forklift H25\"). For measuring devices and etalons, the name cannot be typed: it is built automatically from the serial number and the model (see :ref:`equipment/derived-name`)."
+msgstr "**Név**: Az eszköz leíró neve (pl. „Raktári targonca H25”). Mérőeszközök és etalonok esetén a név nem írható be: a rendszer automatikusan képezi a sorozatszámból és a modellből (lásd: :ref:`equipment/derived-name`)."
+
+#: ../../content/applications/services/equipment/getting_started.rst:47
 msgid "Optionally fill in:"
 msgstr "Opcionálisan töltse ki:"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:113
+#: ../../content/applications/services/equipment/equipment_printer.rst:116
 msgid "Save."
 msgstr "Mentse el."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:187
+#: ../../content/applications/services/equipment/equipment_measuring.rst:241
 msgid "Search and filtering"
 msgstr "Keresés és szűrés"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:197
-msgid "Measuring-type equipment shows additional stat buttons:"
-msgstr "A mérőeszköz típusú berendezések további statisztikai gombokat jelenítenek meg:"
-
-#: ../../content/applications/services/equipment/equipment_measuring.rst:204
+#: ../../content/applications/services/equipment/equipment_measuring.rst:263
 msgid "Dedicated search filters"
 msgstr "Dedikált keresési szűrők"
 
@@ -600,190 +628,190 @@ msgid "Printers"
 msgstr "Nyomtatók"
 
 #: ../../content/applications/services/equipment/equipment_printer.rst:5
-msgid "The **Printers** sub-module (``equipment_printer``) extends Equipment Management with printer-specific features: counter tracking, cartridge management, paper format support, and connection type details."
-msgstr "A **Nyomtatók** almodul (``equipment_printer``) nyomtatóspecifikus funkciókkal bővíti a berendezéskezelést: számlálókövetés, patronkezelés, papírformátum-támogatás és csatlakozástípus részletek."
+msgid "The **Printers** sub-module extends Equipment Management with printer-specific features: counter tracking, cartridge management, paper format support, and connection type details."
+msgstr "A **Nyomtatók** almodul nyomtatóspecifikus funkciókkal bővíti az Eszközkezelés alkalmazást: számlálókövetéssel, patronkezeléssel, papírformátum-támogatással és a csatlakozástípusok adataival."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:20
-msgid "Enable the Printers module from :menuselection:`Equipment Management --> Settings --> Configuration --> Equipment Types --> Printers`, or install ``equipment_printer`` from the Apps menu."
-msgstr "A Nyomtatók modult a :menuselection:`Berendezéskezelés --> Beállítások --> Konfiguráció --> Berendezés típusok --> Nyomtatók` menüpontból engedélyezheti, vagy telepítse az ``equipment_printer`` alkalmazást az Alkalmazások menüből."
+#: ../../content/applications/services/equipment/equipment_printer.rst:19
+msgid "Enable the Printers module from :menuselection:`Equipment Management --> Settings --> Configuration`, by ticking :guilabel:`Printers` in the :guilabel:`Equipment Types` section, or install *Equipment Management - Printers* from the :menuselection:`Apps` menu (remove the :guilabel:`Apps` filter to find it)."
+msgstr "A Nyomtatók modult az :menuselection:`Eszközkezelés --> Beállítások --> Konfiguráció` menüpontban engedélyezheti az :guilabel:`Eszköztípusok` szakasz :guilabel:`Nyomtatók` jelölőnégyzetének bejelölésével, vagy telepítheti az *Equipment Management - Printers* nevű modult az :menuselection:`Alkalmazások` menüből (a megtalálásához távolítsa el az :guilabel:`Alkalmazások` szűrőt)."
 
 #: ../../content/applications/services/equipment/equipment_printer.rst:25
 msgid "Dedicated printer views"
-msgstr "Dedikált nyomtató nézetek"
+msgstr "Dedikált nyomtatónézetek"
 
 #: ../../content/applications/services/equipment/equipment_printer.rst:27
 msgid "Once installed, a **Printers** menu appears in the Equipment Management navigation:"
-msgstr "A telepítést követően egy **Nyomtatók** menü jelenik meg a berendezéskezelési navigációban:"
+msgstr "A telepítést követően egy **Nyomtatók** menü jelenik meg az Eszközkezelés navigációjában:"
 
 #: ../../content/applications/services/equipment/equipment_printer.rst:29
-msgid ":menuselection:`Equipment Management --> Printers --> Printers`: Shows only printer-type equipment with printer-specific columns (paper formats, counter date, reporting method)."
-msgstr ":menuselection:`Berendezéskezelés --> Nyomtatók --> Nyomtatók`: Csak a nyomtató típusú berendezéseket jeleníti meg, nyomtatóspecifikus oszlopokkal (papírformátumok, számlálódátum, jelentési módszer)."
+msgid ":menuselection:`Equipment Management --> Printers --> Printers`: Shows only the equipment of the :guilabel:`Printer` category, with printer-specific columns (paper formats, counter date, reporting method)."
+msgstr ":menuselection:`Eszközkezelés --> Nyomtatók --> Nyomtatók`: Csak a :guilabel:`Nyomtató` kategóriájú eszközöket jeleníti meg, nyomtatóspecifikus oszlopokkal (papírformátumok, számláló dátuma, bejelentés módja)."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:31
+#: ../../content/applications/services/equipment/equipment_printer.rst:32
 msgid ":menuselection:`Equipment Management --> Printers --> Counters`: Lists all printer counter records across all printers."
-msgstr ":menuselection:`Berendezéskezelés --> Nyomtatók --> Számlálók`: Felsorolja az összes nyomtató összes számlálórekordját."
+msgstr ":menuselection:`Eszközkezelés --> Nyomtatók --> Számlálók`: Felsorolja az összes nyomtató összes számlálórekordját."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:34
-msgid "Creating a printer from the Printers menu automatically sets the type to *Printer*."
-msgstr "A nyomtató létrehozása a Nyomtatók menüből automatikusan *Nyomtató* típusra állítja az eszközt."
+#: ../../content/applications/services/equipment/equipment_printer.rst:35
+msgid "An equipment created with :guilabel:`New` in :menuselection:`Equipment Management --> Printers --> Printers` gets the default :guilabel:`General` category: select :guilabel:`Printer` in its :guilabel:`Category` field, so that it appears in this list and gets the :guilabel:`Printer` tab."
+msgstr "Az :menuselection:`Eszközkezelés --> Nyomtatók --> Nyomtatók` menüpontban az :guilabel:`Új` gombbal létrehozott eszköz az alapértelmezett :guilabel:`Általános` kategóriát kapja: válassza a :guilabel:`Nyomtató` értéket a :guilabel:`Kategória` mezőben, hogy az eszköz megjelenjen ebben a listában, és megkapja a :guilabel:`Nyomtató` fület."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:37
+#: ../../content/applications/services/equipment/equipment_printer.rst:40
 msgid "Printer tab"
 msgstr "Nyomtató fül"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:47
-msgid "When an equipment has type *Printer*, a dedicated :guilabel:`Printer` tab appears on the form with the following sections:"
-msgstr "Ha egy eszköznek *Nyomtató* típusa van, egy dedikált :guilabel:`Nyomtató` fül jelenik meg az űrlapon a következő szakaszokkal:"
+#: ../../content/applications/services/equipment/equipment_printer.rst:50
+msgid "When the :guilabel:`Category` of an equipment is :guilabel:`Printer`, a dedicated :guilabel:`Printer` tab appears on the form with the following sections:"
+msgstr "Ha egy eszköz :guilabel:`Kategória` mezőjének értéke :guilabel:`Nyomtató`, az űrlapon megjelenik egy dedikált :guilabel:`Nyomtató` fül a következő szakaszokkal:"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:51
+#: ../../content/applications/services/equipment/equipment_printer.rst:54
 msgid "Counters section"
-msgstr "Számlálók szekció"
+msgstr "Számlálók szakasz"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:53
+#: ../../content/applications/services/equipment/equipment_printer.rst:56
 msgid "**Counter Reporting Method**: How counter readings are collected — API (automatic), Email (automatic), SNMP (automatic), Portal (manual), Email (manual), or Call (manual)."
-msgstr "**Számlálóleolvasás módszere**: Hogyan gyűjtik a számlálóleolvasásokat — API (automatikus), Email (automatikus), SNMP (automatikus), Portál (kézi), Email (kézi) vagy Hívás (kézi)."
+msgstr "**Számlálóállás-bejelentés módja**: Hogyan gyűjtik a számlálóleolvasásokat – API (automatikus), E-mail (automatikus), SNMP (automatikus), Portál (kézi), E-mail (kézi) vagy Telefonhívás (kézi)."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:55
+#: ../../content/applications/services/equipment/equipment_printer.rst:58
 msgid "**Last Counter Date**: Date of the most recent counter reading, with color coding:"
-msgstr "**Utolsó számlálódátum**: A legutóbbi számlálóleolvasás dátuma, színkódolással:"
+msgstr "**Utolsó számláló dátuma**: A legutóbbi számlálóleolvasás dátuma, színkódolással:"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:57
+#: ../../content/applications/services/equipment/equipment_printer.rst:60
 msgid "**Green**: Less than 30 days old."
 msgstr "**Zöld**: Kevesebb mint 30 napos."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:58
+#: ../../content/applications/services/equipment/equipment_printer.rst:61
 msgid "**Yellow**: 30-60 days old."
 msgstr "**Sárga**: 30–60 napos."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:59
+#: ../../content/applications/services/equipment/equipment_printer.rst:62
 msgid "**Red**: More than 60 days old."
 msgstr "**Piros**: Több mint 60 napos."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:61
+#: ../../content/applications/services/equipment/equipment_printer.rst:64
 msgid "**Last Counter**: Summary of the latest counter reading values."
 msgstr "**Utolsó számláló**: A legutóbbi számlálóleolvasás értékeinek összefoglalója."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:64
+#: ../../content/applications/services/equipment/equipment_printer.rst:67
 msgid "General section"
-msgstr "Általános szekció"
+msgstr "Általános szakasz"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:66
+#: ../../content/applications/services/equipment/equipment_printer.rst:69
 msgid "These fields are inherited from the equipment model and are read-only:"
 msgstr "Ezek a mezők az eszközmodellből öröklődnek, és csak olvashatók:"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:68
-msgid "**Color**: Black & White or Color (from the model)."
-msgstr "**Szín**: Fekete-fehér vagy színes (a modellből)."
-
-#: ../../content/applications/services/equipment/equipment_printer.rst:69
-msgid "**Multifunctional**: Whether the printer is multifunctional."
-msgstr "**Multifunkciós**: Hogy a nyomtató multifunkciós-e."
-
-#: ../../content/applications/services/equipment/equipment_printer.rst:70
-msgid "**Technology**: Inkjet, Laser, etc."
-msgstr "**Technológia**: Tintasugaras, lézer stb."
-
 #: ../../content/applications/services/equipment/equipment_printer.rst:71
+msgid "**Color**: Black & White or Color (from the model)."
+msgstr "**Szín**: Fekete-fehér vagy Szín (a modellből)."
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:72
+msgid "**Multifunctional**: Whether the printer is multifunctional."
+msgstr "**Multifunkciós**: Azt jelzi, hogy a nyomtató multifunkciós-e."
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:73
+msgid "**Technology**: Inkjet, Laser, etc."
+msgstr "**Technológia**: Tintasugaras, Lézeres stb."
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:74
 msgid "**Paper Formats**: Supported paper sizes."
 msgstr "**Papírformátumok**: Támogatott papírméretek."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:72
+#: ../../content/applications/services/equipment/equipment_printer.rst:75
 msgid "**Double Sided**: Whether duplex printing is supported."
-msgstr "**Kétoldalas nyomtatás**: Hogy támogatott-e a duplex nyomtatás."
-
-#: ../../content/applications/services/equipment/equipment_printer.rst:73
-msgid "**Document Feeder**: Whether the printer has an automatic document feeder."
-msgstr "**Dokumentumadagoló**: Hogy a nyomtatóhoz tartozik-e automatikus dokumentumadagoló."
+msgstr "**Kétoldalas**: Azt jelzi, hogy támogatott-e a duplex nyomtatás."
 
 #: ../../content/applications/services/equipment/equipment_printer.rst:76
-msgid "Connection section"
-msgstr "Csatlakozás szekció"
+msgid "**Has Document Feeder**: Whether the printer has an automatic document feeder."
+msgstr "**Van dokumentumadagoló**: Azt jelzi, hogy a nyomtatóhoz tartozik-e automatikus dokumentumadagoló."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:78
+#: ../../content/applications/services/equipment/equipment_printer.rst:79
+msgid "Connection section"
+msgstr "Csatlakozás szakasz"
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:81
 msgid "**USB**, **Ethernet**, **WiFi**, **Bluetooth**: Connection types supported (from the model)."
 msgstr "**USB**, **Ethernet**, **WiFi**, **Bluetooth**: Támogatott csatlakozástípusok (a modellből)."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:81
+#: ../../content/applications/services/equipment/equipment_printer.rst:84
 msgid "Cartridges section"
-msgstr "Patronok szekció"
+msgstr "Patronok szakasz"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:83
+#: ../../content/applications/services/equipment/equipment_printer.rst:86
 msgid "Lists the compatible cartridges for this printer model, showing name, product, and pages per cartridge."
 msgstr "Felsorolja az adott nyomtatómodellel kompatibilis patronokat, megjelenítve a nevet, a terméket és az oldalszámot patrononként."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:87
+#: ../../content/applications/services/equipment/equipment_printer.rst:90
 msgid "Counter management"
-msgstr "Számláló kezelés"
-
-#: ../../content/applications/services/equipment/equipment_printer.rst:97
-msgid "Printer counters track page counts over time. Each counter record contains:"
-msgstr "A nyomtatószámlálók időbeli oldalszámokat követnek nyomon. Minden számlálórekord a következőket tartalmazza:"
-
-#: ../../content/applications/services/equipment/equipment_printer.rst:99
-msgid "**Equipment**: The printer this counter belongs to."
-msgstr "**Berendezés**: A nyomtató, amelyhez ez a számláló tartozik."
+msgstr "Számlálókezelés"
 
 #: ../../content/applications/services/equipment/equipment_printer.rst:100
-msgid "**Date**: The date of the reading (one reading per day per printer)."
-msgstr "**Dátum**: Az leolvasás dátuma (napi egy leolvasás nyomtatónként)."
+msgid "Printer counters track page counts over time. Each counter record contains:"
+msgstr "A nyomtatószámlálók az oldalszámok időbeli alakulását követik nyomon. Minden számlálórekord a következőket tartalmazza:"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:101
-msgid "**Counter Lines**: One line per paper format and color type (B&W / Color), showing the current counter value and the previous reading for comparison."
-msgstr "**Számláló sorok**: Egy sor papírformátumonként és színtípusonként (Fekete-fehér / Színes), amely az aktuális számlálóértéket és az előző leolvasást mutatja összehasonlításhoz."
+#: ../../content/applications/services/equipment/equipment_printer.rst:102
+msgid "**Equipment**: The printer this counter belongs to."
+msgstr "**Eszköz**: A nyomtató, amelyhez ez a számláló tartozik."
 
 #: ../../content/applications/services/equipment/equipment_printer.rst:103
+msgid "**Date**: The date of the reading (one reading per day per printer)."
+msgstr "**Dátum**: A leolvasás dátuma (napi egy leolvasás nyomtatónként)."
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:104
+msgid "**Counters**: One line per paper format and color type (B&W / Color), showing the current counter value and the previous reading for comparison."
+msgstr "**Számlálók**: Egy sor papírformátumonként és színtípusonként (Fekete-fehér / Szín), amely az aktuális számlálóértéket és az előző leolvasást mutatja összehasonlításhoz."
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:106
 msgid "**Scan Counter**: The scanner counter (for multifunctional printers)."
 msgstr "**Szkennelési számláló**: A szkenner számlálója (multifunkciós nyomtatók esetén)."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:105
+#: ../../content/applications/services/equipment/equipment_printer.rst:108
 msgid "**Creating a counter reading:**"
 msgstr "**Számlálóleolvasás létrehozása:**"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:107
-msgid "Navigate to :menuselection:`Equipment Management --> Printers --> Counters`."
-msgstr "Navigáljon a :menuselection:`Berendezéskezelés --> Nyomtatók --> Számlálók` menüponthoz."
-
-#: ../../content/applications/services/equipment/equipment_printer.rst:109
-msgid "Select the **Equipment** (printer)."
-msgstr "Válassza ki a **Berendezést** (nyomtatót)."
-
 #: ../../content/applications/services/equipment/equipment_printer.rst:110
-msgid "The counter lines are auto-populated based on the printer's paper formats and color capabilities, pre-filled with the last known values."
-msgstr "A számláló sorok automatikusan kitöltésre kerülnek a nyomtató papírformátumai és színképességei alapján, előre kitöltve az utolsó ismert értékekkel."
+msgid "Navigate to :menuselection:`Equipment Management --> Printers --> Counters`."
+msgstr "Navigáljon az :menuselection:`Eszközkezelés --> Nyomtatók --> Számlálók` menüponthoz."
 
 #: ../../content/applications/services/equipment/equipment_printer.rst:112
+msgid "Select the **Equipment** (printer)."
+msgstr "Az **Eszköz** mezőben válassza ki a nyomtatót."
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:113
+msgid "The counter lines are auto-populated based on the printer's paper formats and color capabilities, pre-filled with the last known values."
+msgstr "A rendszer a nyomtató papírformátumai és színképességei alapján automatikusan létrehozza a számlálósorokat, és előre kitölti őket az utolsó ismert értékekkel."
+
+#: ../../content/applications/services/equipment/equipment_printer.rst:115
 msgid "Enter the new counter values."
 msgstr "Adja meg az új számlálóértékeket."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:116
+#: ../../content/applications/services/equipment/equipment_printer.rst:119
 msgid "Counter values cannot be lower than the previous reading. This prevents accidental data entry errors. Only the most recent counter record can be deleted."
-msgstr "A számlálóértékek nem lehetnek alacsonyabbak az előző leolvasásnál. Ez megakadályozza a véletlen adatbeviteli hibákat. Csak a legutóbbi számláló-rekord törölhető."
+msgstr "A számlálóértékek nem lehetnek alacsonyabbak az előző leolvasásnál. Ez megakadályozza a véletlen adatbeviteli hibákat. Csak a legutóbbi számlálórekord törölhető."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:122
-msgid "Printer-type equipment shows additional stat buttons:"
-msgstr "A nyomtató típusú berendezések további statisztikai gombokat jelenítenek meg:"
+#: ../../content/applications/services/equipment/equipment_printer.rst:125
+msgid "Printers show additional stat buttons:"
+msgstr "A nyomtatóknál további statisztikai gombok jelennek meg:"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:124
+#: ../../content/applications/services/equipment/equipment_printer.rst:127
 msgid "**Counters**: Number of counter records. Click to view the counter history."
 msgstr "**Számlálók**: A számlálórekordok száma. Kattintson rá a számlálóelőzmények megtekintéséhez."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:125
+#: ../../content/applications/services/equipment/equipment_printer.rst:128
 msgid "**Equipments**: Count of task products linked to this printer."
 msgstr "**Eszközök**: Az ehhez a nyomtatóhoz kapcsolt feladattermékek száma."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:128
+#: ../../content/applications/services/equipment/equipment_printer.rst:131
 msgid "Settings menu"
 msgstr "Beállítások menü"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:130
+#: ../../content/applications/services/equipment/equipment_printer.rst:133
 msgid "The Printers module adds entries to :menuselection:`Equipment Management --> Settings`:"
-msgstr "A Nyomtatók modul a következő bejegyzésekkel bővíti az :menuselection:`Berendezéskezelés --> Beállítások` menüt:"
+msgstr "A Nyomtatók modul a következő bejegyzésekkel bővíti az :menuselection:`Eszközkezelés --> Beállítások` menüt:"
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:132
+#: ../../content/applications/services/equipment/equipment_printer.rst:135
 msgid "**Cartridges**: Manage cartridge definitions (name, product, pages per cartridge)."
 msgstr "**Patronok**: A patronok definícióinak kezelése (név, termék, patrononkénti oldalszám)."
 
-#: ../../content/applications/services/equipment/equipment_printer.rst:133
+#: ../../content/applications/services/equipment/equipment_printer.rst:136
 msgid "**Paper Formats**: Manage paper format definitions used by printers."
 msgstr "**Papírformátumok**: A nyomtatók által használt papírformátumok kezelése."
 
@@ -792,104 +820,120 @@ msgid "Getting Started"
 msgstr "Első lépések"
 
 #: ../../content/applications/services/equipment/getting_started.rst:8
-msgid "Navigate to :menuselection:`Apps` and search for **Equipment Management**. Click :guilabel:`Install`."
-msgstr "Lépjen az :menuselection:`Alkalmazások` menübe, keressen rá az **Eszközkezelés** modulra, és kattintson a :guilabel:`Telepítés` gombra."
+msgid "Navigate to :menuselection:`Apps` and search for **Equipment Management**. Click :guilabel:`Activate`."
+msgstr "Lépjen az :menuselection:`Alkalmazások` menübe, keressen rá az **Equipment Management** alkalmazásra, és kattintson az :guilabel:`Aktivál` gombra."
 
-#: ../../content/applications/services/equipment/getting_started.rst:10
+#: ../../content/applications/services/equipment/getting_started.rst:11
 msgid "The module installs as a standalone application with its own top-level menu item in the main navigation bar."
 msgstr "A modul önálló alkalmazásként települ, saját főmenüponttal a fő navigációs sávban."
 
-#: ../../content/applications/services/equipment/getting_started.rst:14
+#: ../../content/applications/services/equipment/getting_started.rst:15
 msgid "Sub-modules for specific equipment types (Printers, Measuring Devices) can be enabled in :menuselection:`Equipment Management --> Settings --> Configuration` or installed separately from the Apps menu."
-msgstr "Az egyes eszköztípusokhoz tartozó almodulok (Nyomtatók, Mérőeszközök) az :menuselection:`Berendezéskezelés --> Beállítások --> Konfiguráció` menüben kapcsolhatók be, vagy külön is telepíthetők az Alkalmazások menüből."
+msgstr "Az egyes eszköztípusokhoz tartozó almodulok (Nyomtatók, Mérőeszközök) az :menuselection:`Eszközkezelés --> Beállítások --> Konfiguráció` menüben kapcsolhatók be, vagy külön is telepíthetők az Alkalmazások menüből."
 
 #: ../../content/applications/services/equipment/getting_started.rst:19
+msgid "The Measuring Devices sub-module also adds the :guilabel:`Etalon` category, with its own :guilabel:`Etalons` menu, for your company's own reference standards (see :ref:`equipment/etalons`)."
+msgstr "A Mérőeszközök almodul a vállalat saját referenciaetalonjainak nyilvántartásához az :guilabel:`Etalon` kategóriát is hozzáadja, külön :guilabel:`Etalonok` menüvel (lásd: :ref:`equipment/etalons`)."
+
+#: ../../content/applications/services/equipment/getting_started.rst:24
 msgid "Creating your first equipment"
-msgstr "Az első berendezés létrehozása"
-
-#: ../../content/applications/services/equipment/getting_started.rst:21
-msgid "Navigate to :menuselection:`Equipment Management --> All Equipment`."
-msgstr "Lépjen az :menuselection:`Berendezéskezelés --> Összes eszköz` menüpontra."
-
-#: ../../content/applications/services/equipment/getting_started.rst:25
-msgid "**Name**: A descriptive name for the equipment (e.g., \"Werth VideoCheck HA 400x400\")."
-msgstr "**Név**: Az eszköz beszédes megnevezése (például „Werth VideoCheck HA 400x400”)."
+msgstr "Az első eszköz létrehozása"
 
 #: ../../content/applications/services/equipment/getting_started.rst:26
-msgid "**Equipment ID**: Auto-generated from the configured sequence (e.g., ``EQ/0001``). You can override this value manually if needed."
-msgstr "**Eszközazonosító**: Automatikusan generálódik a beállított sorrend alapján (pl. ``EQ/0001``). Ez az érték szükség esetén manuálisan felülírható."
+msgid "Navigate to :menuselection:`Equipment Management --> All Equipment`."
+msgstr "Lépjen az :menuselection:`Eszközkezelés --> Összes eszköz` menüpontra."
 
 #: ../../content/applications/services/equipment/getting_started.rst:28
+msgid "Select the :guilabel:`Category` first: it decides which models can be selected, and whether the name is typed or built automatically. The default is :guilabel:`General`; the Printers sub-module adds :guilabel:`Printer`, and the Measuring Devices sub-module adds :guilabel:`Measuring Device` and :guilabel:`Etalon`. When you start from :menuselection:`Equipment Management --> Measuring Devices --> Measuring Devices` or :menuselection:`Equipment Management --> Etalons` instead, the category is already set."
+msgstr "Először a :guilabel:`Kategória` mezőt töltse ki: ez határozza meg, hogy mely modellek választhatók, és hogy a nevet kézzel kell-e beírni, vagy a rendszer automatikusan képezi. Az alapértelmezett érték az :guilabel:`Általános`; a Nyomtatók almodul a :guilabel:`Nyomtató`, a Mérőeszközök almodul pedig a :guilabel:`Mérőeszköz` és az :guilabel:`Etalon` kategóriát adja hozzá. Ha ehelyett az :menuselection:`Eszközkezelés --> Mérőeszközök --> Mérőeszközök` vagy az :menuselection:`Eszközkezelés --> Etalonok` menüpontból indul, a kategória már be van állítva."
+
+#: ../../content/applications/services/equipment/getting_started.rst:39
+msgid "**Equipment ID**: Auto-generated from the configured sequence (e.g., ``EQ/0001``). You can override this value manually if needed."
+msgstr "**Eszközazonosító**: Automatikusan generálódik a beállított sorszámozás alapján (pl. ``EQ/0001``). Ez az érték szükség esetén kézzel felülírható."
+
+#: ../../content/applications/services/equipment/getting_started.rst:41
 msgid "**Customer**: The customer who owns or uses the equipment."
 msgstr "**Ügyfél**: Az eszköz tulajdonosa vagy felhasználója."
 
-#: ../../content/applications/services/equipment/getting_started.rst:29
+#: ../../content/applications/services/equipment/getting_started.rst:42
 msgid "**Owner**: The legal owner of the equipment."
 msgstr "**Tulajdonos**: Az eszköz jogi tulajdonosa."
 
-#: ../../content/applications/services/equipment/getting_started.rst:31
-msgid "Set the **Type** to match the equipment category. The default is *General*. If sub-modules are installed, additional types become available (e.g., *Printer*, *Measuring Device*)."
-msgstr "Állítsa be a **Típus** mezőt az eszközkategóriának megfelelően. Az alapértelmezett érték *Általános*. Ha almodulok vannak telepítve, további típusok is elérhetővé válnak (pl. *Nyomtató*, *Mérőeszköz*)."
+#: ../../content/applications/services/equipment/getting_started.rst:44
+msgid "For an etalon, the customer and the owner both default to your own company (see :ref:`equipment/etalons`)."
+msgstr "Etalon esetén az ügyfél és a tulajdonos alapértelmezett értéke is a saját vállalata (lásd: :ref:`equipment/etalons`)."
 
-#: ../../content/applications/services/equipment/getting_started.rst:35
+#: ../../content/applications/services/equipment/getting_started.rst:49
 msgid "**Serial Number**: The manufacturer's serial number. If a matching :doc:`stock lot </applications/inventory_and_mrp/inventory/product_management/product_tracking/lots>` exists, it will be automatically suggested."
-msgstr "**Sorozatszám**: A gyártó sorozatszáma. Ha van egyező :doc:`készletsor </applications/inventory_and_mrp/inventory/product_management/product_tracking/lots>`, a rendszer automatikusan felajánlja."
+msgstr "**Sorozatszám**: A gyártó sorozatszáma. Ha van egyező :doc:`készlettétel </applications/inventory_and_mrp/inventory/product_management/product_tracking/lots>`, a rendszer automatikusan felajánlja."
 
-#: ../../content/applications/services/equipment/getting_started.rst:38
-msgid "**Manufacturer** and **Model**: Select from the pre-configured brand/model hierarchy."
-msgstr "**Gyártó** és **Modell**: Válasszon az előre beállított márka/modell hierarchiából."
+#: ../../content/applications/services/equipment/getting_started.rst:52
+msgid "**Manufacturer** and **Model**: The :guilabel:`Model` field only offers the models of the selected category and, if one is selected, of the manufacturer. A missing model can be created directly from the :guilabel:`Model` field; it gets the equipment's category and manufacturer (see :ref:`equipment/models`)."
+msgstr "**Gyártó** és **Modell**: A :guilabel:`Modell` mező csak a kiválasztott kategória modelljeit kínálja fel, és ha gyártó is ki van választva, csak az adott gyártóéit. A hiányzó modell közvetlenül a :guilabel:`Modell` mezőből is létrehozható; az új modell megkapja az eszköz kategóriáját és gyártóját (lásd: :ref:`equipment/models`)."
 
-#: ../../content/applications/services/equipment/getting_started.rst:39
+#: ../../content/applications/services/equipment/getting_started.rst:56
 msgid "**Product Family**: The product family this equipment belongs to."
 msgstr "**Termékcsalád**: Az a termékcsalád, amelyhez ez az eszköz tartozik."
 
-#: ../../content/applications/services/equipment/getting_started.rst:40
+#: ../../content/applications/services/equipment/getting_started.rst:57
 msgid "**Production Year**: The year the equipment was manufactured."
 msgstr "**Gyártási év**: Az az év, amelyben az eszközt gyártották."
 
-#: ../../content/applications/services/equipment/getting_started.rst:41
+#: ../../content/applications/services/equipment/getting_started.rst:58
 msgid "**Warranty Expiration**: The date when the manufacturer's warranty expires."
 msgstr "**Garancia lejárata**: A gyártói garancia lejáratának dátuma."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:55 ../../content/applications/services/equipment/getting_started.rst:42
+#: ../../content/applications/services/equipment/getting_started.rst:62
+msgid "For a measuring device or an etalon, fill in at least the :guilabel:`Serial Number` and the :guilabel:`Model`: its name is built from them."
+msgstr "Mérőeszköz vagy etalon esetén legalább a :guilabel:`Sorozatszám` és a :guilabel:`Modell` mezőt töltse ki: a neve ezekből képződik."
+
+#: ../../content/applications/services/equipment/equipment_form.rst:60 ../../content/applications/services/equipment/getting_started.rst:59
 msgid "**MAC Address**: For network-connected equipment."
 msgstr "**MAC-cím**: Hálózatra csatlakoztatott eszközöknél."
 
-#: ../../content/applications/services/equipment/getting_started.rst:45
+#: ../../content/applications/services/equipment/equipment_form.rst:63
+msgid "Wherever an equipment is selected, for example in the :guilabel:`Equipment` field of a task, a printer counter, or a calibration, you can type its name, :guilabel:`Serial Number`, :guilabel:`Internal ID`, or :guilabel:`Equipment ID` to find it. The same applies when records such as repair orders are searched by :guilabel:`Equipment`."
+msgstr "Bárhol, ahol eszközt kell kiválasztani – például egy feladat, egy nyomtatószámláló vagy egy kalibráció :guilabel:`Eszköz` mezőjében –, az eszközt a nevének, a :guilabel:`Sorozatszám`, a :guilabel:`Belső azonosító` vagy az :guilabel:`Eszközazonosító` értékének beírásával megtalálhatja. Ugyanez érvényes, ha rekordokat – például javítási rendeléseket – az :guilabel:`Eszköz` szerint keres."
+
+#: ../../content/applications/services/equipment/getting_started.rst:65
 msgid "Click the :guilabel:`Draft` status bar to change the state to :guilabel:`Active`."
 msgstr "Kattintson a :guilabel:`Piszkozat` állapotsávra az állapot :guilabel:`Aktív` értékre módosításához."
 
-#: ../../content/applications/services/equipment/getting_started.rst:56
+#: ../../content/applications/services/equipment/getting_started.rst:76
 msgid "Equipment states"
-msgstr "Berendezés állapotok"
+msgstr "Eszközállapotok"
 
-#: ../../content/applications/services/equipment/getting_started.rst:58
-msgid "Each equipment record goes through three lifecycle states:"
-msgstr "Minden eszközrekord három életciklus-állapoton megy keresztül:"
+#: ../../content/applications/services/equipment/getting_started.rst:78
+msgid "Each equipment record goes through four lifecycle states:"
+msgstr "Minden eszközrekord négy életciklus-állapoton megy keresztül:"
 
-#: ../../content/applications/services/equipment/getting_started.rst:60
+#: ../../content/applications/services/equipment/getting_started.rst:80
 msgid "**Draft**: Initial state when created. Equipment is being set up."
 msgstr "**Piszkozat**: Létrehozáskor az alapállapot. Az eszköz beállítás alatt áll."
 
-#: ../../content/applications/services/equipment/getting_started.rst:61
+#: ../../content/applications/services/equipment/getting_started.rst:81
 msgid "**Active**: Equipment is in service. Activating an equipment can automatically create an analytic account and/or a maintenance equipment record (if configured in Settings)."
-msgstr "**Aktív**: Az eszköz üzemben van. Az eszköz aktiválásakor a rendszer automatikusan létrehozhat egy analitikai számlát és/vagy egy karbantartási eszközrekordot (ha ez a Beállításokban konfigurálva van)."
+msgstr "**Aktív**: Az eszköz üzemben van. Az eszköz aktiválásakor a rendszer automatikusan létrehozhat egy analitikus számlát és/vagy egy karbantartási eszközrekordot (ha ez a Beállításokban konfigurálva van)."
 
-#: ../../content/applications/services/equipment/getting_started.rst:63
+#: ../../content/applications/services/equipment/getting_started.rst:83
 msgid "**Inactive**: Equipment is no longer in service but kept for historical reference."
-msgstr "**Inaktív**: Az eszköz már nincs üzemben, de a rendszer előzmény-célból megőrzi."
+msgstr "**Inaktív**: Az eszköz már nincs üzemben, de a rendszer nyilvántartási célból megőrzi."
 
-#: ../../content/applications/services/equipment/getting_started.rst:66
+#: ../../content/applications/services/equipment/getting_started.rst:84
+msgid "**Scrapped**: Equipment that has been scrapped. Scrapped equipment cannot be archived, so that its record remains accessible."
+msgstr "**Selejtezett**: Az eszközt leselejtezték. A selejtezett eszköz nem archiválható, hogy a rekordja továbbra is elérhető maradjon."
+
+#: ../../content/applications/services/equipment/getting_started.rst:88
 msgid "Equipment ID sequence"
-msgstr "Berendezés azonosító sorszám"
+msgstr "Eszközazonosítók sorszámozása"
 
-#: ../../content/applications/services/equipment/getting_started.rst:68
+#: ../../content/applications/services/equipment/getting_started.rst:90
 msgid "By default, new equipment records receive an auto-generated ID using the format ``EQ/0001``, ``EQ/0002``, etc. The prefix can be customized in :menuselection:`Equipment Management --> Settings --> Configuration --> Defaults --> Equipment ID Prefix`."
-msgstr "Alapértelmezés szerint az új eszközrekordok automatikusan generált azonosítót kapnak ``EQ/0001``, ``EQ/0002`` stb. formátumban. Az előtag a :menuselection:`Berendezéskezelés --> Beállítások --> Konfiguráció --> Alapértékek --> Berendezés azonosító előtag` menüpontban testreszabható."
+msgstr "Alapértelmezés szerint az új eszközrekordok automatikusan generált azonosítót kapnak ``EQ/0001``, ``EQ/0002`` stb. formátumban. Az előtag az :menuselection:`Eszközkezelés --> Beállítások --> Konfiguráció --> Alapértékek --> Eszközazonosító-előtag` menüpontban testreszabható."
 
-#: ../../content/applications/services/equipment/getting_started.rst:72
+#: ../../content/applications/services/equipment/getting_started.rst:94
 msgid "The ID field remains editable — you can override the auto-generated value at any time, for example to match an existing internal numbering system."
-msgstr "Az azonosító mező szerkeszthető marad — az automatikusan generált érték bármikor felülírható, például egy meglévő belső számozási rendszerhez való igazítás céljából."
+msgstr "Az azonosító mező szerkeszthető marad – az automatikusan generált érték bármikor felülírható, például egy meglévő belső számozási rendszerhez való igazítás céljából."
 
 #: ../../content/applications/services/equipment/integrations.rst:3
 msgid "Integrations"
@@ -897,7 +941,7 @@ msgstr "Integrációk"
 
 #: ../../content/applications/services/equipment/integrations.rst:5
 msgid "Equipment Management integrates with several Odoo modules to provide a complete view of each equipment's lifecycle."
-msgstr "Az Eszközkezelés több Odoo modullal is integrálódik, hogy teljes képet nyújtson az egyes eszközök életciklusáról."
+msgstr "Az Eszközkezelés több Odoo-modullal is integrálódik, hogy teljes képet nyújtson az egyes eszközök életciklusáról."
 
 #: ../../content/applications/services/equipment/integrations.rst:9
 msgid "Maintenance"
@@ -909,7 +953,7 @@ msgstr "Minden eszköz összekapcsolható a Karbantartás modul egy **karbantart
 
 #: ../../content/applications/services/equipment/integrations.rst:14
 msgid "Viewing maintenance requests directly on the equipment form."
-msgstr "Karbantartási kérelmek megtekintését közvetlenül az eszközűrlapon."
+msgstr "Karbantartási igények megtekintését közvetlenül az eszközűrlapon."
 
 #: ../../content/applications/services/equipment/integrations.rst:15
 msgid "MTBF/MTTR statistics computed from maintenance history."
@@ -921,11 +965,11 @@ msgstr "Megelőző karbantartás ütemezése a Karbantartás modulon keresztül.
 
 #: ../../content/applications/services/equipment/integrations.rst:18
 msgid "**Linking maintenance equipment:**"
-msgstr "**Karbantartási berendezés összekapcsolása:**"
+msgstr "**Karbantartási eszköz összekapcsolása:**"
 
 #: ../../content/applications/services/equipment/integrations.rst:20
 msgid "Open the equipment form."
-msgstr "Nyissa meg a berendezés űrlapját."
+msgstr "Nyissa meg az eszköz űrlapját."
 
 #: ../../content/applications/services/equipment/integrations.rst:21
 msgid "Go to the :guilabel:`Maintenance` tab."
@@ -933,115 +977,115 @@ msgstr "Lépjen a :guilabel:`Karbantartás` fülre."
 
 #: ../../content/applications/services/equipment/integrations.rst:22
 msgid "Click :guilabel:`Create Maintenance Equipment`."
-msgstr "Kattintson a :guilabel:`Karbantartási berendezés létrehozása` gombra."
+msgstr "Kattintson a :guilabel:`Karbantartási eszköz létrehozása` gombra."
 
 #: ../../content/applications/services/equipment/integrations.rst:23
 msgid "If a maintenance equipment with the same serial number already exists, it will be linked automatically instead of creating a duplicate."
-msgstr "Ha már létezik egy karbantartási berendezés ugyanazzal a sorozatszámmal, a rendszer automatikusan azt kapcsolja össze, ahelyett hogy duplikátumot hozna létre."
+msgstr "Ha már létezik egy karbantartási eszköz ugyanazzal a sorozatszámmal, a rendszer automatikusan azt kapcsolja hozzá, ahelyett, hogy duplikátumot hozna létre."
 
 #: ../../content/applications/services/equipment/integrations.rst:26
 msgid "When the maintenance equipment link is established, data is synced automatically:"
-msgstr "Amikor a karbantartási berendezés kapcsolata létrejön, az adatok automatikusan szinkronizálódnak:"
+msgstr "Amikor a karbantartási eszközzel való kapcsolat létrejön, az adatok automatikusan szinkronizálódnak:"
 
 #: ../../content/applications/services/equipment/integrations.rst:28
 msgid "Serial number, customer, and assignees are kept in sync."
 msgstr "A sorozatszám, az ügyfél és a felelős személyek szinkronban maradnak."
 
 #: ../../content/applications/services/equipment/integrations.rst:29
-msgid "Changes on the equipment form propagate to the maintenance record."
-msgstr "A berendezés-lapon végzett módosítások propagálódnak a karbantartási rekordba."
+msgid "Other fields are not synced: for example, the maintenance equipment keeps its own name, also when the name of a measuring device or an etalon changes automatically."
+msgstr "A többi mező nem szinkronizálódik: a karbantartási eszköz például megtartja a saját nevét akkor is, ha egy mérőeszköz vagy egy etalon neve automatikusan megváltozik."
 
-#: ../../content/applications/services/equipment/integrations.rst:32
+#: ../../content/applications/services/equipment/integrations.rst:33
 msgid "Analytic Accounting"
 msgstr "Analitikus könyvelés"
 
-#: ../../content/applications/services/equipment/integrations.rst:34
+#: ../../content/applications/services/equipment/integrations.rst:35
 msgid "Each equipment can have a dedicated **analytic account** that tracks all financial transactions related to that specific piece of equipment."
-msgstr "Minden berendezéshez dedikált **analitikus számla** rendelhető, amely nyomon követi az adott berendezéshez kapcsolódó összes pénzügyi tranzakciót."
+msgstr "Minden eszközhöz dedikált **analitikus számla** rendelhető, amely nyomon követi az adott eszközhöz kapcsolódó összes pénzügyi tranzakciót."
 
-#: ../../content/applications/services/equipment/integrations.rst:37
+#: ../../content/applications/services/equipment/integrations.rst:38
 msgid "The analytic account is used to:"
 msgstr "Az analitikus számla a következőkre szolgál:"
 
-#: ../../content/applications/services/equipment/integrations.rst:39
-msgid "Link customer invoices to the equipment (visible in the Finance tab)."
-msgstr "Vevői számlák összekapcsolása a berendezéssel (a Pénzügy fülön látható)."
-
 #: ../../content/applications/services/equipment/integrations.rst:40
-msgid "Link purchase orders to the equipment."
-msgstr "Beszerzési rendelések összekapcsolása a berendezéssel."
+msgid "Link customer invoices to the equipment (visible in the Finance tab)."
+msgstr "Vevői számlák összekapcsolása az eszközzel (a Pénzügy fülön látható)."
 
 #: ../../content/applications/services/equipment/integrations.rst:41
+msgid "Link purchase orders to the equipment."
+msgstr "Beszerzési rendelések összekapcsolása az eszközzel."
+
+#: ../../content/applications/services/equipment/integrations.rst:42
 msgid "Calculate revenue, cost, and margin per equipment."
-msgstr "Bevétel, költség és árrés kiszámítása berendezésenként."
+msgstr "Bevétel, költség és árrés kiszámítása eszközönként."
 
-#: ../../content/applications/services/equipment/integrations.rst:43
+#: ../../content/applications/services/equipment/integrations.rst:44
 msgid "When setting the analytic distribution on invoice lines or purchase order lines, select the equipment's analytic account to associate the transaction with the equipment."
-msgstr "Amikor a számlateteleken vagy a beszerzési rendeléssorokban analitikus elosztást állít be, válassza ki a berendezés analitikus számláját, hogy a tranzakciót a berendezéshez kösse."
+msgstr "Amikor a számlateteleken vagy a beszerzési rendeléssorokban analitikus felosztást állít be, válassza ki az eszköz analitikus számláját, hogy a tranzakciót az eszközhöz kösse."
 
-#: ../../content/applications/services/equipment/integrations.rst:47
+#: ../../content/applications/services/equipment/integrations.rst:48
 msgid "Enable **Auto-create Analytic Account** in Settings to have analytic accounts created automatically when equipment is activated."
-msgstr "Az **Analitikus számla automatikus létrehozása** beállítás engedélyezésével a Beállításokban az analitikus számlák automatikusan jönnek létre, amikor egy berendezést aktiválnak."
+msgstr "Engedélyezze a Beállításokban az **Analitikus számla automatikus létrehozása** opciót, hogy az eszköz aktiválásakor a rendszer automatikusan létrehozza az analitikus számlát."
 
-#: ../../content/applications/services/equipment/integrations.rst:51
+#: ../../content/applications/services/equipment/integrations.rst:52
 msgid "Stock / Inventory"
 msgstr "Készlet / Raktár"
 
-#: ../../content/applications/services/equipment/integrations.rst:53
+#: ../../content/applications/services/equipment/integrations.rst:54
 msgid "Equipment can be linked to a **stock lot** (serial number tracking in Inventory). When you enter a serial number on the equipment form, the system automatically searches for a matching stock lot:"
-msgstr "A berendezések összekapcsolhatók egy **készletsorral** (sorozatszám-követés a Készletben). Amikor sorozatszámot ad meg a berendezés-lapon, a rendszer automatikusan megkeresi az egyező készletsort:"
-
-#: ../../content/applications/services/equipment/integrations.rst:56
-msgid "**One match found**: The lot is auto-linked."
-msgstr "**Egy egyezés található**: A sor automatikusan összekapcsolódik."
+msgstr "Az eszközök összekapcsolhatók egy **készlettétellel** (sorozatszám-követés a Készletben). Amikor sorozatszámot ad meg az eszközűrlapon, a rendszer automatikusan megkeresi az egyező készlettételt:"
 
 #: ../../content/applications/services/equipment/integrations.rst:57
+msgid "**One match found**: The lot is auto-linked."
+msgstr "**Egy egyezés található**: A rendszer automatikusan hozzákapcsolja a tételt."
+
+#: ../../content/applications/services/equipment/integrations.rst:58
 msgid "**Multiple or no matches**: The lot field remains empty for manual selection."
-msgstr "**Több egyezés vagy nincs egyezés**: A sor mező üresen marad a manuális kiválasztáshoz."
+msgstr "**Több egyezés vagy nincs egyezés**: A készlettétel mező üresen marad, a tételt kézzel kell kiválasztani."
 
-#: ../../content/applications/services/equipment/integrations.rst:59
+#: ../../content/applications/services/equipment/integrations.rst:60
 msgid "This link allows you to trace the equipment's inventory history, warehouse location, and stock movements."
-msgstr "Ez a kapcsolat lehetővé teszi a berendezés készlettörténetének, raktári elhelyezkedésének és készletmozgásainak nyomon követését."
+msgstr "Ez a kapcsolat lehetővé teszi az eszköz készlettörténetének, raktári elhelyezkedésének és készletmozgásainak nyomon követését."
 
-#: ../../content/applications/services/equipment/integrations.rst:63
+#: ../../content/applications/services/equipment/integrations.rst:64
 msgid "Fleet"
 msgstr "Flotta"
 
-#: ../../content/applications/services/equipment/integrations.rst:65
+#: ../../content/applications/services/equipment/integrations.rst:66
 msgid "For vehicle-type equipment (company cars, delivery trucks, forklifts), a **fleet vehicle** can be linked. The Fleet tab shows:"
-msgstr "Jármű típusú berendezések esetén (céges autók, tehergépjárművek, targoncák) egy **flottajármű** csatolható. A Flotta fül a következőket jeleníti meg:"
-
-#: ../../content/applications/services/equipment/integrations.rst:68
-msgid "License plate, odometer, last service date, and contract state."
-msgstr "Rendszám, kilométeróra-állás, utolsó szerviz dátuma és szerződés állapota."
+msgstr "Járműtípusú eszközök esetén (céges autók, tehergépjárművek, targoncák) egy **flottajármű** csatolható. A Flotta fül a következőket jeleníti meg:"
 
 #: ../../content/applications/services/equipment/integrations.rst:69
+msgid "License plate, odometer, last service date, and contract state."
+msgstr "Rendszámtábla, kilométeróra, utolsó szerviz dátuma és szerződés állapota."
+
+#: ../../content/applications/services/equipment/integrations.rst:70
 msgid "Direct link to the fleet vehicle form for full details."
 msgstr "Közvetlen hivatkozás a flottajármű-űrlapra a teljes részletekért."
 
-#: ../../content/applications/services/equipment/integrations.rst:72
+#: ../../content/applications/services/equipment/integrations.rst:73
 msgid "Fleet vehicles must be created manually in the Fleet module first, then linked from the equipment form. This is because fleet vehicles have many required fields that cannot be auto-populated."
-msgstr "A flottajárműveket először manuálisan kell létrehozni a Flotta modulban, majd az eszközűrlapról kell hozzájuk kapcsolódni. Ennek oka, hogy a flottajárműveknek sok kötelező mezője van, amelyek nem tölthetők ki automatikusan."
+msgstr "A flottajárműveket először kézzel kell létrehozni a Flotta modulban, majd az eszközűrlapon kell hozzákapcsolni őket. Ennek oka, hogy a flottajárműveknek sok kötelező mezője van, amelyek nem tölthetők ki automatikusan."
 
-#: ../../content/applications/services/equipment/integrations.rst:77
+#: ../../content/applications/services/equipment/integrations.rst:78
 msgid "Project / Tickets"
 msgstr "Projekt / Jegyek"
 
-#: ../../content/applications/services/equipment/integrations.rst:79
+#: ../../content/applications/services/equipment/integrations.rst:80
 msgid "Equipment can be linked to one or more **projects** for ticket management. The :guilabel:`Create Ticket` button on the form creates a project task linked to the equipment."
 msgstr "Az eszköz egy vagy több **projekthez** is kapcsolható jegykezelés céljából. Az űrlapon lévő :guilabel:`Jegy létrehozása` gomb egy, az eszközhöz kapcsolt projektfeladatot hoz létre."
 
-#: ../../content/applications/services/equipment/integrations.rst:82
+#: ../../content/applications/services/equipment/integrations.rst:83
 msgid "If the equipment has exactly one project, the task is created directly. If multiple projects are linked, a wizard appears to select the target project."
 msgstr "Ha az eszközhöz pontosan egy projekt van hozzárendelve, a feladat közvetlenül jön létre. Ha több projekt van összekapcsolva, egy varázsló jelenik meg a célprojekt kiválasztásához."
 
-#: ../../content/applications/services/equipment/integrations.rst:86
+#: ../../content/applications/services/equipment/integrations.rst:87
 msgid "Subscription"
 msgstr "Előfizetés"
 
-#: ../../content/applications/services/equipment/integrations.rst:88
+#: ../../content/applications/services/equipment/integrations.rst:89
 msgid "Equipment can be linked to a **subscription service** for recurring billing. When a subscription is linked, the Subscription tab shows pricing details and the invoicing period."
-msgstr "Az eszköz **előfizetési szolgáltatáshoz** is kapcsolható ismétlődő számlázáshoz. Ha egy előfizetés össze van kapcsolva, az Előfizetés lap megjeleníti az árazási részleteket és a számlázási időszakot."
+msgstr "Az eszköz **előfizetési szolgáltatáshoz** is kapcsolható ismétlődő számlázáshoz. Ha egy előfizetés össze van kapcsolva, az Előfizetés fül megjeleníti az árazási részleteket és a számlázási időszakot."
 
 #: ../../content/applications/services/equipment/security.rst:3
 msgid "Security"
@@ -1081,7 +1125,7 @@ msgstr "Megtekintheti az összes eszközt, márkát, modellt, címkét és dokum
 
 #: ../../content/applications/services/equipment/security.rst:29
 msgid "**Officer**"
-msgstr "**Felelős**"
+msgstr "**Ügyintéző**"
 
 #: ../../content/applications/services/equipment/security.rst:30
 msgid "``equipment_group_user``"
@@ -1092,8 +1136,8 @@ msgid "Everything Reader can do, plus: create and edit equipment, link maintenan
 msgstr "Minden, amit az Olvasó megtehet, plusz: eszközök létrehozása és szerkesztése, karbantartás/flotta/készlet összekapcsolása, dokumentumok feltöltése, analitikus számlák beállítása."
 
 #: ../../content/applications/services/equipment/security.rst:33
-msgid "**Manager**"
-msgstr "**Vezető**"
+msgid "**Administrator**"
+msgstr "**Adminisztrátor**"
 
 #: ../../content/applications/services/equipment/security.rst:34
 msgid "``equipment_group_manager``"
@@ -1101,7 +1145,7 @@ msgstr "``equipment_group_manager``"
 
 #: ../../content/applications/services/equipment/security.rst:35
 msgid "Everything Officer can do, plus: delete and archive equipment, delete documents, access Equipment Settings/Configuration."
-msgstr "Minden, amit a Felelős megtehet, plusz: eszközök törlése és archiválása, dokumentumok törlése, az Eszközbeállítások/Konfiguráció elérése."
+msgstr "Minden, amit az Ügyintéző megtehet, plusz: eszközök törlése és archiválása, dokumentumok törlése, az Eszközbeállítások/Konfiguráció elérése."
 
 #: ../../content/applications/services/equipment/security.rst:39
 msgid "Assigning groups"
@@ -1109,7 +1153,7 @@ msgstr "Csoportok hozzárendelése"
 
 #: ../../content/applications/services/equipment/security.rst:41
 msgid "Navigate to :menuselection:`Settings --> Users & Companies --> Users`."
-msgstr "Lépjen a :menuselection:`Beállítások --> Felhasználók és vállalatok --> Felhasználók` menüpontra."
+msgstr "Lépjen a :menuselection:`Beállítások --> Felhasználók & Vállalatok --> Felhasználók` menüpontra."
 
 #: ../../content/applications/services/equipment/security.rst:42
 msgid "Select a user."
@@ -1117,15 +1161,15 @@ msgstr "Válasszon ki egy felhasználót."
 
 #: ../../content/applications/services/equipment/security.rst:43
 msgid "In the :guilabel:`Access Rights` tab, find the **Equipment Management** section."
-msgstr "Az :guilabel:`Hozzáférési jogok` fülön keresse meg az **Eszközkezelés** részt."
+msgstr "A :guilabel:`Hozzáférési jogok` fülön keresse meg az **Eszközkezelés** szakaszt."
 
 #: ../../content/applications/services/equipment/security.rst:44
-msgid "Select the appropriate level: *Reader*, *Officer*, or *Manager*."
-msgstr "Válassza ki a megfelelő szintet: *Olvasó*, *Tisztviselő* vagy *Vezető*."
+msgid "Select the appropriate level: *Reader*, *Officer*, or *Administrator*."
+msgstr "Válassza ki a megfelelő szintet: *Olvasó*, *Ügyintéző* vagy *Adminisztrátor*."
 
 #: ../../content/applications/services/equipment/security.rst:47
-msgid "All internal users (``base.group_user``) automatically receive **Reader** access. You only need to explicitly assign **Officer** or **Manager** to users who need higher access."
-msgstr "Minden belső felhasználó (``base.group_user``) automatikusan **Olvasó** hozzáférést kap. Csak azoknak a felhasználóknak kell explicit módon **Tisztviselő** vagy **Vezető** jogot adni, akiknek magasabb szintű hozzáférésre van szükségük."
+msgid "All internal users (``base.group_user``) automatically receive **Reader** access. You only need to explicitly assign **Officer** or **Administrator** to users who need higher access."
+msgstr "Minden belső felhasználó (``base.group_user``) automatikusan **Olvasó** hozzáférést kap. Csak azoknak a felhasználóknak kell explicit módon **Ügyintéző** vagy **Adminisztrátor** jogot adni, akiknek magasabb szintű hozzáférésre van szükségük."
 
 #: ../../content/applications/services/equipment/security.rst:51
 msgid "Multi-company rules"
@@ -1133,7 +1177,7 @@ msgstr "Többvállalatos szabályok"
 
 #: ../../content/applications/services/equipment/security.rst:53
 msgid "Equipment, documents, and sensor records are filtered by company. Users can only see records belonging to their current company (or companies they have access to in multi-company setups)."
-msgstr "Az eszközök, dokumentumok és szenzorrekordok vállalat szerint vannak szűrve. A felhasználók csak az aktuális vállalatukhoz (vagy a többvállalatos beállításokban hozzáférhető vállalataikhoz) tartozó rekordokat láthatják."
+msgstr "Az eszközök, dokumentumok és érzékelőrekordok vállalat szerint vannak szűrve. A felhasználók csak az aktuális vállalatukhoz (vagy a többvállalatos beállításokban hozzáférhető vállalataikhoz) tartozó rekordokat láthatják."
 
 #: ../../content/applications/services/equipment/security.rst:56
 msgid "This is enforced through global record rules:"
@@ -1149,19 +1193,19 @@ msgstr "Dokumentumok: ``[('equipment_id.company_id', 'in', company_ids)]``"
 
 #: ../../content/applications/services/equipment/security.rst:60
 msgid "Sensors: ``[('equipment_id.company_id', 'in', company_ids)]``"
-msgstr "Szenzorok: ``[('equipment_id.company_id', 'in', company_ids)]``"
+msgstr "Érzékelők: ``[('equipment_id.company_id', 'in', company_ids)]``"
 
 #: ../../content/applications/services/equipment/security.rst:61
 msgid "Calibrations: ``[('equipment_id.company_id', 'in', company_ids)]``"
-msgstr "Kalibrálások: ``[('equipment_id.company_id', 'in', company_ids)]``"
+msgstr "Kalibrációk: ``[('equipment_id.company_id', 'in', company_ids)]``"
 
 #: ../../content/applications/services/equipment/security.rst:64
 msgid "View-level restrictions"
-msgstr "Nézet szintű korlátozások"
+msgstr "Nézetszintű korlátozások"
 
 #: ../../content/applications/services/equipment/security.rst:66
 msgid "Certain fields on the equipment form are only visible to **Officer** and above:"
-msgstr "Az eszközűrlap egyes mezői csak **Tisztviselő** és magasabb szintű felhasználók számára láthatók:"
+msgstr "Az eszközűrlap egyes mezői csak **Ügyintéző** és magasabb szintű felhasználók számára láthatók:"
 
 #: ../../content/applications/services/equipment/security.rst:68
 msgid "Analytic Account"
@@ -1169,7 +1213,7 @@ msgstr "Analitikus számla"
 
 #: ../../content/applications/services/equipment/security.rst:69
 msgid "Maintenance Equipment link"
-msgstr "Karbantartási berendezés hivatkozás"
+msgstr "Hivatkozás a karbantartási eszközre"
 
 #: ../../content/applications/services/equipment/security.rst:70
 msgid "Fleet Vehicle link"
@@ -1189,99 +1233,119 @@ msgstr "Beállítások"
 
 #: ../../content/applications/services/equipment/settings.rst:5
 msgid "Equipment settings are accessible from :menuselection:`Equipment Management --> Settings --> Configuration` or from :menuselection:`Settings --> Equipment`."
-msgstr "Az eszközbeállítások a :menuselection:`Berendezéskezelés --> Beállítások --> Konfiguráció` menüponton keresztül vagy a :menuselection:`Beállítások --> Berendezés` menüponton keresztül érhetők el."
+msgstr "Az eszközbeállítások az :menuselection:`Eszközkezelés --> Beállítások --> Konfiguráció` menüponton keresztül vagy a :menuselection:`Beállítások --> Eszköz` menüponton keresztül érhetők el."
 
 #: ../../content/applications/services/equipment/settings.rst:17
 msgid "Equipment Types"
-msgstr "Berendezés típusok"
+msgstr "Eszköztípusok"
 
 #: ../../content/applications/services/equipment/settings.rst:19
 msgid "Enable or disable equipment type sub-modules:"
 msgstr "Az eszköztípus almoduljainak engedélyezése vagy letiltása:"
 
 #: ../../content/applications/services/equipment/settings.rst:21
-msgid "**Printers**: Install the ``equipment_printer`` module for printer-specific features including counter tracking, cartridge management, and paper format support. See :doc:`equipment_printer`."
-msgstr "**Nyomtatók**: Telepítse az ``equipment_printer`` modult a nyomtatóspecifikus funkciókhoz, beleértve a számlálókövetést, a festékkazetta-kezelést és a papírformátum-támogatást. Lásd: :doc:`equipment_printer`."
+msgid "**Printers**: Adds the :guilabel:`Printer` category, with counter tracking, cartridge management, and paper format support. See :doc:`equipment_printer`."
+msgstr "**Nyomtatók**: Hozzáadja a :guilabel:`Nyomtató` kategóriát számlálókövetéssel, patronkezeléssel és papírformátum-támogatással. Lásd: :doc:`equipment_printer`."
 
 #: ../../content/applications/services/equipment/settings.rst:23
-msgid "**Measuring Devices**: Install the ``equipment_measuring`` module for measuring device features including calibration tracking, sensor management, and software/hardware info. See :doc:`equipment_measuring`."
-msgstr "**Mérőeszközök**: Telepítse az ``equipment_measuring`` modult a mérőeszköz-funkciókhoz, beleértve a kalibráláskövetést, a szenzorkezelést, valamint a szoftver-/hardverinformációkat. Lásd: :doc:`equipment_measuring`."
+msgid "**Measuring Devices**: Adds the :guilabel:`Measuring Device` category, with calibration tracking, sensor management, and software and hardware information. It also adds the :guilabel:`Etalon` category, with its own :guilabel:`Etalons` menu, for your company's own reference standards. See :doc:`equipment_measuring`."
+msgstr "**Mérőeszközök**: Hozzáadja a :guilabel:`Mérőeszköz` kategóriát kalibrációkövetéssel, érzékelőkezeléssel, valamint szoftver- és hardverinformációkkal. Emellett a vállalat saját referenciaetalonjainak nyilvántartásához hozzáadja az :guilabel:`Etalon` kategóriát is, külön :guilabel:`Etalonok` menüvel. Lásd: :doc:`equipment_measuring`."
 
-#: ../../content/applications/services/equipment/settings.rst:28
-msgid "Enabling a sub-module will install the corresponding Odoo module. Disabling it will uninstall the module (data is preserved)."
-msgstr "Egy almodul engedélyezése telepíti a megfelelő Odoo modult. Letiltása eltávolítja a modult (az adatok megmaradnak)."
+#: ../../content/applications/services/equipment/settings.rst:29
+msgid "Enabling a sub-module will install the corresponding Odoo module."
+msgstr "Egy almodul engedélyezése telepíti a megfelelő Odoo-modult."
 
 #: ../../content/applications/services/equipment/settings.rst:32
+msgid "Disabling a sub-module uninstalls the module: the data it adds, such as printer counters, calibration data, or sensors, is deleted, and its equipment and models (printers, or measuring devices and etalons) get the :guilabel:`General` category."
+msgstr "Egy almodul letiltása eltávolítja a modult: az általa hozzáadott adatok (például a nyomtatószámlálók, a kalibrációs adatok vagy az érzékelők) törlődnek, a hozzá tartozó eszközök és modellek (a nyomtatók, illetve a mérőeszközök és az etalonok) pedig az :guilabel:`Általános` kategóriába kerülnek."
+
+#: ../../content/applications/services/equipment/settings.rst:37
 msgid "Automation"
 msgstr "Automatizálás"
 
-#: ../../content/applications/services/equipment/settings.rst:35
+#: ../../content/applications/services/equipment/settings.rst:40
 msgid "Auto-create Analytic Account"
 msgstr "Analitikus számla automatikus létrehozása"
 
-#: ../../content/applications/services/equipment/settings.rst:37
+#: ../../content/applications/services/equipment/settings.rst:42
 msgid "When enabled, activating an equipment (changing state from *Draft* to *Active*) automatically creates a dedicated analytic account for that equipment."
-msgstr "Ha engedélyezve van, egy eszköz aktiválásakor (az állapot *Piszkozat* állapotról *Aktív* állapotra változtatásakor) a rendszer automatikusan létrehoz egy dedikált analitikai számlát az adott eszközhöz."
+msgstr "Ha engedélyezve van, egy eszköz aktiválásakor (az állapot *Piszkozat* állapotról *Aktív* állapotra változtatásakor) a rendszer automatikusan létrehoz egy dedikált analitikus számlát az adott eszközhöz."
 
-#: ../../content/applications/services/equipment/settings.rst:40
+#: ../../content/applications/services/equipment/settings.rst:45
 msgid "**Analytic Plan**: Select which analytic plan the auto-created accounts should belong to. The default is the *Equipment* plan created during module installation."
-msgstr "**Analitikai terv**: Válassza ki, melyik analitikai tervhez tartozzanak az automatikusan létrehozott számlák. Az alapértelmezett az *Eszköz* terv, amelyet a modul telepítésekor hoztak létre."
-
-#: ../../content/applications/services/equipment/settings.rst:43
-msgid "This is useful for tracking revenue and costs per equipment without manual setup."
-msgstr "Ez hasznos a bevételek és költségek eszközönkénti nyomon követéséhez manuális beállítás nélkül."
-
-#: ../../content/applications/services/equipment/settings.rst:46
-msgid "Auto-create Maintenance Equipment"
-msgstr "Karbantartási berendezés automatikus létrehozása"
+msgstr "**Analitikus terv**: Válassza ki, melyik analitikus tervhez tartozzanak az automatikusan létrehozott számlák. Az alapértelmezett az *Eszköz* terv, amelyet a modul telepítésekor hoztak létre."
 
 #: ../../content/applications/services/equipment/settings.rst:48
+msgid "This is useful for tracking revenue and costs per equipment without manual setup."
+msgstr "Ez hasznos a bevételek és költségek eszközönkénti nyomon követéséhez kézi beállítás nélkül."
+
+#: ../../content/applications/services/equipment/settings.rst:51
+msgid "Auto-create Maintenance Equipment"
+msgstr "Karbantartási eszköz automatikus létrehozása"
+
+#: ../../content/applications/services/equipment/settings.rst:53
 msgid "When enabled, activating an equipment also creates a corresponding ``maintenance.equipment`` record automatically. If a maintenance equipment with the same serial number already exists, it will be linked instead of creating a duplicate."
-msgstr "Ha engedélyezve van, egy eszköz aktiválásakor automatikusan létrejön egy megfelelő ``maintenance.equipment`` rekord is. Ha már létezik azonos sorozatszámú karbantartási eszköz, a rendszer azt kapcsolja hozzá, nem hoz létre másolatot."
+msgstr "Ha engedélyezve van, egy eszköz aktiválásakor automatikusan létrejön egy megfelelő ``maintenance.equipment`` rekord is. Ha már létezik azonos sorozatszámú karbantartási eszköz, a rendszer azt kapcsolja hozzá, nem hoz létre duplikátumot."
 
-#: ../../content/applications/services/equipment/settings.rst:52
+#: ../../content/applications/services/equipment/settings.rst:57
 msgid "The :guilabel:`Create Maintenance Equipment` button on the form remains available as a manual alternative when this setting is disabled."
-msgstr "Az űrlapon található :guilabel:`Karbantartási berendezés létrehozása` gomb manuális alternatívaként elérhető marad, ha ez a beállítás le van tiltva."
-
-#: ../../content/applications/services/equipment/settings.rst:56
-msgid "Document Expiry Warning"
-msgstr "Dokumentum lejárati figyelmeztetés"
-
-#: ../../content/applications/services/equipment/settings.rst:58
-msgid "Configure how many days before a document's expiry date the system should create a warning activity. The default is **30 days**."
-msgstr "Adja meg, hány nappal egy dokumentum lejárati dátuma előtt hozzon létre a rendszer figyelmeztető tevékenységet. Az alapértelmezett érték **30 nap**."
+msgstr "Az űrlapon található :guilabel:`Karbantartási eszköz létrehozása` gomb kézi alternatívaként elérhető marad, ha ez a beállítás le van tiltva."
 
 #: ../../content/applications/services/equipment/settings.rst:61
+msgid "Document Expiry Warning"
+msgstr "Dokumentumlejárat-figyelmeztetés"
+
+#: ../../content/applications/services/equipment/settings.rst:63
+msgid "Configure how many days before a document's expiry date the system should create a warning activity. The default is **30 days**."
+msgstr "Adja meg, hány nappal egy dokumentum lejárati dátuma előtt hozzon létre a rendszer figyelmeztetési tevékenységet. Az alapértelmezett érték **30 nap**."
+
+#: ../../content/applications/services/equipment/settings.rst:66
 msgid "The daily scheduled job checks all active equipment's documents and creates activities for those within the warning period."
 msgstr "A napi ütemezett feladat ellenőrzi az összes aktív eszköz dokumentumát, és tevékenységeket hoz létre azokhoz, amelyek a figyelmeztető időszakon belül vannak."
 
-#: ../../content/applications/services/equipment/settings.rst:65
+#: ../../content/applications/services/equipment/settings.rst:70
 msgid "Defaults"
 msgstr "Alapértékek"
 
-#: ../../content/applications/services/equipment/settings.rst:68
+#: ../../content/applications/services/equipment/settings.rst:73
 msgid "Default Project"
 msgstr "Alapértelmezett projekt"
 
-#: ../../content/applications/services/equipment/settings.rst:70
+#: ../../content/applications/services/equipment/settings.rst:75
 msgid "Set a default project that is automatically assigned to new equipment records. This is useful when all equipment should be linked to the same ticket/project management system."
 msgstr "Állítson be egy alapértelmezett projektet, amelyet a rendszer automatikusan hozzárendel az új eszközrekordokhoz. Ez akkor hasznos, ha az összes eszközt ugyanahhoz a jegy-/projektkezelő rendszerhez kell kapcsolni."
 
-#: ../../content/applications/services/equipment/settings.rst:74
+#: ../../content/applications/services/equipment/settings.rst:79
 msgid "Equipment ID Prefix"
-msgstr "Berendezés azonosító előtag"
+msgstr "Eszközazonosító-előtag"
 
-#: ../../content/applications/services/equipment/settings.rst:76
+#: ../../content/applications/services/equipment/settings.rst:81
 msgid "Customize the prefix used for auto-generated Equipment IDs. The default is ``EQ/``, producing IDs like ``EQ/0001``, ``EQ/0002``, etc."
 msgstr "Szabja testre az automatikusan generált eszközazonosítókhoz használt előtagot. Az alapértelmezett érték ``EQ/``, amely ``EQ/0001``, ``EQ/0002`` stb. azonosítókat hoz létre."
 
-#: ../../content/applications/services/equipment/settings.rst:79
+#: ../../content/applications/services/equipment/settings.rst:84
 msgid "Changing the prefix affects only newly created equipment — existing IDs are not modified."
-msgstr "Az előtag módosítása csak az újonnan létrehozott eszközökre vonatkozik — a meglévő azonosítók nem változnak."
+msgstr "Az előtag módosítása csak az újonnan létrehozott eszközökre vonatkozik – a meglévő azonosítók nem változnak."
 
-#: ../../content/applications/services/equipment/settings.rst:82
+#: ../../content/applications/services/equipment/settings.rst:87
 msgid "Each company can have its own sequence and prefix. In multi-company setups, configure the prefix separately for each company."
-msgstr "Minden vállalatnak saját sorszáma és előtagja lehet. Több vállalatos környezetben az előtagot vállalatonként külön kell beállítani."
+msgstr "Minden vállalatnak saját sorszámozása és előtagja lehet. Többvállalatos környezetben az előtagot vállalatonként külön kell beállítani."
+
+#: ../../content/applications/services/equipment/settings.rst:93
+msgid "Manufacturers and models"
+msgstr "Gyártók és modellek"
+
+#: ../../content/applications/services/equipment/settings.rst:95
+msgid "Manufacturers and their models are managed in :menuselection:`Equipment Management --> Settings --> Manufacturers` and :menuselection:`Equipment Management --> Settings --> Models`. Each model has a :guilabel:`Manufacturer` (required), a :guilabel:`Category`, and optionally a :guilabel:`Product`, which is then shown on the equipment of this model."
+msgstr "A gyártókat és modelljeiket az :menuselection:`Eszközkezelés --> Beállítások --> Gyártók` és az :menuselection:`Eszközkezelés --> Beállítások --> Modellek` menüpontban kezelheti. Minden modellhez tartozik egy :guilabel:`Gyártó` (kötelező), egy :guilabel:`Kategória` és opcionálisan egy :guilabel:`Termék`, amely ezután az adott modellhez tartozó eszközökön is megjelenik."
+
+#: ../../content/applications/services/equipment/settings.rst:100
+msgid "The :guilabel:`Model` field of an equipment only offers the models of the equipment's category, and of its manufacturer if one is set. A missing model can also be created directly from that field: select :guilabel:`Create` or :guilabel:`Create and edit...` in its drop-down menu. The new model gets the equipment's category and manufacturer."
+msgstr "Az eszköz :guilabel:`Modell` mezője csak az eszköz kategóriájához tartozó modelleket kínálja fel, és ha a gyártó is meg van adva, csak az adott gyártóéit. A hiányzó modell közvetlenül ebből a mezőből is létrehozható: a legördülő menüben válassza a :guilabel:`Létrehozás` vagy a :guilabel:`Létrehozás és szerkesztés...` lehetőséget. Az új modell megkapja az eszköz kategóriáját és gyártóját."
+
+#: ../../content/applications/services/equipment/settings.rst:105
+msgid "The :guilabel:`Models` list shows the :guilabel:`Manufacturer`, :guilabel:`Name`, :guilabel:`Category`, and :guilabel:`Product` columns. It can be searched by :guilabel:`Name`, :guilabel:`Manufacturer`, and :guilabel:`Product`, filtered with :guilabel:`Archived`, and grouped by :guilabel:`Category`, :guilabel:`Brand`, or :guilabel:`Product`."
+msgstr "A :guilabel:`Modellek` lista a :guilabel:`Gyártó`, a :guilabel:`Név`, a :guilabel:`Kategória` és a :guilabel:`Termék` oszlopot mutatja. A listában :guilabel:`Név`, :guilabel:`Gyártó` és :guilabel:`Termék` szerint kereshet, az :guilabel:`Archivált` szűrővel szűrhet, valamint :guilabel:`Kategória`, :guilabel:`Márka` vagy :guilabel:`Termék` szerint csoportosíthat."
 
 #: ../../content/applications/services/field_service.rst:8
 msgid "Field Service"
@@ -2267,27 +2331,27 @@ msgstr "Tekintettel arra, hogy az érvényesítés nem szükséges, a kért szab
 msgid "Click on the magnifying glass, hovering over the concerned cell, to access all the aggregated data on that cell (day), and see details regarding the project/task."
 msgstr "Kattintson a nagyító ikonra, amely az érintett cella fölött lebeg, hogy hozzáférjen az adott cellában (nap) összesített adatokhoz, és megtekinthesse a projekt/feladat részleteit."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:45
-msgid "**Title area:**"
-msgstr "**Fejléc terület:**"
-
-#: ../../content/applications/services/equipment/equipment_form.rst:47
-msgid "**Name**: The name of the equipment."
-msgstr "**Név**: Az eszköz megnevezése."
-
 #: ../../content/applications/services/equipment/equipment_form.rst:48
-msgid "**Equipment ID**: A unique reference generated automatically from a sequence. It can be adjusted, and it is never copied when an equipment is duplicated."
-msgstr "**Eszközazonosító**: Sorszámozásból automatikusan képzett egyedi hivatkozás. Módosítható, és az eszköz sokszorosításakor soha nem másolódik át."
+msgid "**Title area:**"
+msgstr "**Fejrész (név és azonosítók):**"
 
 #: ../../content/applications/services/equipment/equipment_form.rst:50
+msgid "**Name**: The name of the equipment. For measuring devices and etalons, it cannot be typed: it is built from the serial number and the model, and it is updated when they change (see :ref:`equipment/derived-name`)."
+msgstr "**Név**: Az eszköz neve. Mérőeszközöknél és etalonoknál nem írható be kézzel: a sorozatszámból és a modellből képződik, és ezek változásakor frissül (lásd: :ref:`equipment/derived-name`)."
+
+#: ../../content/applications/services/equipment/equipment_form.rst:53
+msgid "**Equipment ID**: A unique reference generated automatically from a sequence. It can be adjusted, and it is never copied when an equipment is duplicated."
+msgstr "**Eszközazonosító**: Sorszámozásból automatikusan képzett egyedi hivatkozás. Módosítható, és az eszköz duplikálásakor soha nem másolódik át."
+
+#: ../../content/applications/services/equipment/equipment_form.rst:55
 msgid "**Serial Number**: The manufacturer's serial number."
 msgstr "**Sorozatszám**: A gyártó által adott sorozatszám."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:51
+#: ../../content/applications/services/equipment/equipment_form.rst:56
 msgid "**Internal ID**: A customer-specific internal identifier, for cases where the customer tracks the equipment under a number of their own."
 msgstr "**Belső azonosító**: Ügyfélspecifikus belső azonosító azokra az esetekre, amikor az ügyfél saját számon tartja nyilván az eszközt."
 
-#: ../../content/applications/services/equipment/equipment_form.rst:53
+#: ../../content/applications/services/equipment/equipment_form.rst:58
 msgid "**Stock Lot**: The lot or serial number record in **Inventory**, when the equipment was delivered from your own stock."
 msgstr "**Készlettétel**: A **Készlet** alkalmazásban lévő tétel- vagy sorozatszámrekord, ha az eszközt a saját készletéből szállította ki."
 
@@ -3503,201 +3567,297 @@ msgstr "A feladatokon a ténylegesen ráfordított órák mellett a belőlük ad
 msgid ":doc:`/applications/sales/sales/invoicing/time_materials`"
 msgstr ":doc:`/applications/sales/sales/invoicing/time_materials`"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:21
-msgid "Enable the Measuring Devices module from :menuselection:`Equipment Management --> Settings --> Configuration`, by ticking :guilabel:`Measuring Devices` in the equipment types section, or install ``equipment_measuring`` from the Apps menu. The module requires the *Repairs* app, which is installed along with it: calibrations are recorded as :ref:`repair orders <repairs/repair_orders/calibration>`."
-msgstr "A Mérőeszközök modul a :menuselection:`Berendezéskezelés --> Beállítások --> Konfiguráció` menüpontban kapcsolható be: a berendezéstípusok szakaszban jelölje be a :guilabel:`Mérőeszközök` lehetőséget, vagy telepítse az ``equipment_measuring`` modult az Alkalmazások menüből. A modulhoz szükséges a *Javítások* alkalmazás, amely vele együtt települ: a kalibrációk :ref:`javítási rendelésként <repairs/repair_orders/calibration>` kerülnek rögzítésre."
-
-#: ../../content/applications/services/equipment/equipment_measuring.rst:32
-msgid ":menuselection:`Equipment Management --> Measuring Devices --> Measuring Devices`: shows only measuring-type equipment with specific columns (calibration status, next calibration date, product family, serial number)."
-msgstr ":menuselection:`Berendezéskezelés --> Mérőeszközök --> Mérőeszközök`: csak a mérőeszköz típusú berendezéseket mutatja, egyedi oszlopokkal (kalibráció állapota, következő kalibráció dátuma, termékcsalád, sorozatszám)."
-
-#: ../../content/applications/services/equipment/equipment_measuring.rst:35
+#: ../../content/applications/services/equipment/equipment_measuring.rst:44
 msgid ":menuselection:`Equipment Management --> Measuring Devices --> Calibrations`: lists all the calibrations of all measuring devices."
-msgstr ":menuselection:`Berendezéskezelés --> Mérőeszközök --> Kalibrációk`: az összes mérőeszköz összes kalibrációját felsorolja."
+msgstr ":menuselection:`Eszközkezelés --> Mérőeszközök --> Kalibrációk`: az összes mérőeszköz összes kalibrációját felsorolja."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:38
-msgid "Creating an equipment from the Measuring Devices menu automatically sets the type to *Measuring Device*. The *Measuring Device* type is also available on the equipment models (:menuselection:`Equipment Management --> Settings --> Models`)."
-msgstr "Ha a Mérőeszközök menüből hoz létre berendezést, a típus automatikusan *Mérőeszköz* lesz. A *Mérőeszköz* típus a berendezésmodelleken is elérhető (:menuselection:`Berendezéskezelés --> Beállítások --> Modellek`)."
+#: ../../content/applications/services/equipment/equipment_measuring.rst:46
+msgid ":menuselection:`Equipment Management --> Etalons`: your company's own reference standards (see :ref:`equipment/etalons`)."
+msgstr ":menuselection:`Eszközkezelés --> Etalonok`: a vállalat saját referenciaetalonjai (lásd: :ref:`equipment/etalons`)."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:49
+msgid "Creating an equipment from the Measuring Devices menu sets its :guilabel:`Category` to :guilabel:`Measuring Device`, and its name is built automatically (see :ref:`equipment/derived-name`). The :guilabel:`Measuring Device` and :guilabel:`Etalon` categories are also available on the equipment models, in :menuselection:`Equipment Management --> Settings --> Models` (see :ref:`equipment/models`): the :guilabel:`Model` field of a device only offers the models of its category."
+msgstr "Ha a Mérőeszközök menüből hoz létre eszközt, annak :guilabel:`Kategória` mezője :guilabel:`Mérőeszköz` értéket kap, a neve pedig automatikusan képződik (lásd: :ref:`equipment/derived-name`). A :guilabel:`Mérőeszköz` és az :guilabel:`Etalon` kategória az eszközmodelleken is elérhető, az :menuselection:`Eszközkezelés --> Beállítások --> Modellek` menüpontban (lásd: :ref:`equipment/models`): az eszköz :guilabel:`Modell` mezője csak a saját kategóriájának modelljeit kínálja fel."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:59
-msgid ":guilabel:`Last Calibration Date`: the calibration date of the most recent **finished** calibration of the equipment (repair order in the :guilabel:`Repaired` status). Cannot be edited directly."
-msgstr ":guilabel:`Utolsó kalibráció dátuma`: a berendezés legutóbbi **befejezett** kalibrációjának (:guilabel:`Megjavítva` állapotú javítási rendelés) kalibrációs dátuma. Közvetlenül nem szerkeszthető."
+msgid "Names of measuring devices and etalons"
+msgstr "A mérőeszközök és az etalonok neve"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:62
-msgid ":guilabel:`Last Calibration Date (Manual)`: only displayed as long as the equipment has no calibration. Enter here the date of the last calibration performed before the equipment was recorded in the database; it is used as last calibration date until a first calibration is finished."
-msgstr ":guilabel:`Utolsó kalibráció dátuma (kézi)`: csak addig jelenik meg, amíg a berendezésnek nincs kalibrációja. Ide írja be annak az utolsó kalibrációnak a dátumát, amelyet még a berendezés adatbázisban való rögzítése előtt végeztek; ez számít az utolsó kalibráció dátumának, amíg az első kalibráció be nem fejeződik."
+#: ../../content/applications/services/equipment/equipment_measuring.rst:61
+msgid "For the :guilabel:`Measuring Device` and :guilabel:`Etalon` categories, the name at the top of the form cannot be typed: it is built from the :guilabel:`Serial Number`, the :guilabel:`Model`, the :guilabel:`Manufacturer`, and the :guilabel:`Product Family`, and it is updated automatically when one of them changes, also when a model, a manufacturer, or a product family is renamed."
+msgstr "A :guilabel:`Mérőeszköz` és az :guilabel:`Etalon` kategóriában az űrlap tetején lévő név nem gépelhető be: a rendszer a :guilabel:`Sorozatszám`, a :guilabel:`Modell`, a :guilabel:`Gyártó` és a :guilabel:`Termékcsalád` mezőből képzi, és automatikusan frissíti, ha ezek valamelyike megváltozik, akkor is, ha egy modellt, gyártót vagy termékcsaládot átneveznek."
 
 #: ../../content/applications/services/equipment/equipment_measuring.rst:66
+msgid "The name is built as follows, for example with the manufacturer *Zeiss*, the product family *CMM*, the model *Contura*, and the serial number *CT-2019-0043*:"
+msgstr "A név a következőképpen képződik, például ha a gyártó *Zeiss*, a termékcsalád *CMM*, a modell *Contura*, a sorozatszám pedig *CT-2019-0043*:"
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:69
+msgid "with a serial number and a model: *<Serial Number> - <Model>*, e.g., ``CT-2019-0043 - Contura``;"
+msgstr "sorozatszámmal és modellel: *<Sorozatszám> - <Modell>*, pl. ``CT-2019-0043 - Contura``;"
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:70
+msgid "with a serial number but no model: *<Serial Number> - <Manufacturer> <Product Family>*, e.g., ``CT-2019-0043 - Zeiss CMM``, or the serial number alone if these are empty as well;"
+msgstr "sorozatszámmal, de modell nélkül: *<Sorozatszám> - <Gyártó> <Termékcsalád>*, pl. ``CT-2019-0043 - Zeiss CMM``, vagy csak a sorozatszám, ha ezek is üresek;"
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:72
+msgid "without a serial number: *<Manufacturer> <Model>*, e.g., ``Zeiss Contura``, or, without a model either, *<Manufacturer> <Product Family>*, e.g., ``Zeiss CMM``;"
+msgstr "sorozatszám nélkül: *<Gyártó> <Modell>*, pl. ``Zeiss Contura``, vagy ha modell sincs, *<Gyártó> <Termékcsalád>*, pl. ``Zeiss CMM``;"
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:74
+msgid "with none of these: the :guilabel:`Equipment ID`, e.g., ``EQ/0042``."
+msgstr "ha ezek egyike sincs megadva: az :guilabel:`Eszközazonosító`, pl. ``EQ/0042``."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:76
+msgid "A name supplied in another way, for example in an import file, is replaced by the built name as well."
+msgstr "A más módon, például importfájlban megadott nevet is felülírja a képzett név."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:79
+msgid "The equipment of the other categories, such as :guilabel:`General` or :guilabel:`Printer`, keeps a typed name. When an equipment is switched to :guilabel:`Measuring Device` or :guilabel:`Etalon`, its name is replaced by the built one; when it is switched back to another category, it keeps its last name, which can then be edited again."
+msgstr "A többi kategóriába, például az :guilabel:`Általános` vagy a :guilabel:`Nyomtató` kategóriába tartozó eszközök neve továbbra is kézzel adható meg. Ha egy eszközt :guilabel:`Mérőeszköz` vagy :guilabel:`Etalon` kategóriára állítanak át, a nevét felváltja a képzett név; ha később másik kategóriára állítják vissza, megtartja az utolsó nevét, amely ezután ismét szerkeszthető."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:84
+msgid "As the name repeats the serial number and the model, the Measuring Devices and Etalons lists have no name column."
+msgstr "Mivel a név megismétli a sorozatszámot és a modellt, a Mérőeszközök és az Etalonok listában nincs névoszlop."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:104
+msgid ":guilabel:`Last Calibration Date`: the calibration date of the most recent **finished** calibration of the equipment (repair order in the :guilabel:`Repaired` status). Cannot be edited directly."
+msgstr ":guilabel:`Utolsó kalibráció dátuma`: az eszköz legutóbbi **befejezett** kalibrációjának (:guilabel:`Javított` állapotú javítási rendelés) kalibrációs dátuma. Közvetlenül nem szerkeszthető."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:107
+msgid ":guilabel:`Last Calibration Date (Manual)`: only displayed as long as the equipment has no calibration. Enter here the date of the last calibration performed before the equipment was recorded in the database; it is used as last calibration date until a first calibration is finished."
+msgstr ":guilabel:`Utolsó kalibráció dátuma (kézi)`: csak addig jelenik meg, amíg az eszköznek nincs kalibrációja. Ide írja be annak az utolsó kalibrációnak a dátumát, amelyet még az eszköz adatbázisban való rögzítése előtt végeztek; ez számít az utolsó kalibráció dátumának, amíg az első kalibráció be nem fejeződik."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:111
 msgid ":guilabel:`Next Calibration Date`: computed as the last calibration date plus the calibration period. Read-only, and empty as long as one of the two is missing."
 msgstr ":guilabel:`Következő kalibráció dátuma`: az utolsó kalibráció dátuma plusz a kalibrációs ciklus. Csak olvasható, és üres, amíg a kettő valamelyike hiányzik."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:68
+#: ../../content/applications/services/equipment/equipment_measuring.rst:113
 msgid ":guilabel:`Calibration Period (months)`: how often the equipment must be calibrated. Set manually."
-msgstr ":guilabel:`Kalibrációs ciklus (hónap)`: milyen gyakran kell kalibrálni a berendezést. Kézzel állítandó be."
+msgstr ":guilabel:`Kalibrációs ciklus (hónap)`: milyen gyakran kell kalibrálni az eszközt. Kézzel állítandó be."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:69
+#: ../../content/applications/services/equipment/equipment_measuring.rst:114
 msgid ":guilabel:`Calibration Status`: a badge computed from the next calibration date every time the equipment is displayed:"
-msgstr ":guilabel:`Kalibráció állapota`: a következő kalibráció dátumából a berendezés minden megjelenítésekor kiszámított jelvény:"
+msgstr ":guilabel:`Kalibráció állapota`: a következő kalibráció dátumából az eszköz minden megjelenítésekor kiszámított jelvény:"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:72
+#: ../../content/applications/services/equipment/equipment_measuring.rst:117
 msgid ":guilabel:`OK` (green): the next calibration is more than 30 days away."
 msgstr ":guilabel:`Rendben` (zöld): a következő kalibrációig több mint 30 nap van hátra."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:73
+#: ../../content/applications/services/equipment/equipment_measuring.rst:118
 msgid ":guilabel:`Warning` (yellow): the next calibration is within 30 days."
 msgstr ":guilabel:`Figyelmeztetés` (sárga): a következő kalibráció 30 napon belül esedékes."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:74
+#: ../../content/applications/services/equipment/equipment_measuring.rst:119
 msgid ":guilabel:`Overdue` (red): the calibration date has passed, or there is no next calibration date."
 msgstr ":guilabel:`Lejárt` (piros): a kalibráció dátuma elmúlt, vagy nincs következő kalibrációs dátum."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:80
+#: ../../content/applications/services/equipment/equipment_measuring.rst:122
+msgid "Only measuring devices have a calibration status: it stays empty for every other category, etalons included."
+msgstr "Csak a mérőeszközöknek van kalibrációs állapota: minden más kategóriánál, az etalonokat is beleértve, üres marad."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:128
 msgid ":guilabel:`Software Modules`: free-text description of the installed software modules."
-msgstr ":guilabel:`Szoftver modulok`: a telepített szoftvermodulok szabad szöveges leírása."
+msgstr ":guilabel:`Szoftvermodulok`: a telepített szoftvermodulok szabad szöveges leírása."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:81
+#: ../../content/applications/services/equipment/equipment_measuring.rst:129
 msgid ":guilabel:`Software Serial Number`: the license serial number."
-msgstr ":guilabel:`Szoftver sorozatszám`: a licenc sorozatszáma."
+msgstr ":guilabel:`Szoftver sorozatszáma`: a licenc sorozatszáma."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:82
+#: ../../content/applications/services/equipment/equipment_measuring.rst:130
 msgid ":guilabel:`Software Version`: the current software version."
-msgstr ":guilabel:`Szoftver verzió`: az aktuális szoftververzió."
+msgstr ":guilabel:`Szoftververzió`: az aktuális szoftververzió."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:87
+#: ../../content/applications/services/equipment/equipment_measuring.rst:135
 msgid ":guilabel:`Hardware Keylock`: the hardware keylock number (dongle/license key)."
 msgstr ":guilabel:`Hardverkulcs`: a hardverkulcs száma (dongle/licenckulcs)."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:108
+#: ../../content/applications/services/equipment/equipment_measuring.rst:156
 msgid ":guilabel:`Name`: sensor name (e.g., \"Optical Sensor\", \"Touch Probe SP25M\")."
 msgstr ":guilabel:`Név`: az érzékelő neve (pl. „Optical Sensor”, „Touch Probe SP25M”)."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:109
+#: ../../content/applications/services/equipment/equipment_measuring.rst:157
 msgid ":guilabel:`Serial Number`: the sensor's serial number for tracking and warranty purposes."
 msgstr ":guilabel:`Sorozatszám`: az érzékelő sorozatszáma nyomon követési és garanciális célokra."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:110
-msgid ":guilabel:`Type`: sensor type (free text, e.g., \"Optical\", \"Tactile\", \"Chromatic Focus Point\")."
-msgstr ":guilabel:`Típus`: az érzékelő típusa (szabad szöveg, pl. „Optical”, „Tactile”, „Chromatic Focus Point”)."
+#: ../../content/applications/services/equipment/equipment_measuring.rst:158
+msgid ":guilabel:`Type`: sensor type (free text, e.g., \"Optical\", \"Tactile\", \"Chromatic Focus Point\"); optional column, hidden by default."
+msgstr ":guilabel:`Típus`: az érzékelő típusa (szabad szöveg, pl. „Optical”, „Tactile”, „Chromatic Focus Point”); választható oszlop, alapértelmezés szerint rejtett."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:111
-msgid ":guilabel:`Notes`: additional notes (optional column)."
-msgstr ":guilabel:`Megjegyzések`: további megjegyzések (választható oszlop)."
+#: ../../content/applications/services/equipment/equipment_measuring.rst:160
+msgid ":guilabel:`Notes`: additional notes; optional column, hidden by default."
+msgstr ":guilabel:`Megjegyzések`: további megjegyzések; választható oszlop, alapértelmezés szerint rejtett."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:126
+#: ../../content/applications/services/equipment/equipment_measuring.rst:162
+msgid "To show an optional column, click the :icon:`oi-settings-adjust` :guilabel:`(settings adjust)` icon at the far-right of the column titles."
+msgstr "Egy választható oszlop megjelenítéséhez kattintson az oszlopcímek jobb szélén található :icon:`oi-settings-adjust` :guilabel:`(beállítások módosítása)` ikonra."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:165
+msgid "Click the :guilabel:`Sensors` stat button to view sensors in a dedicated list view, with the same optional columns."
+msgstr "Kattintson az :guilabel:`Érzékelők` statisztikai gombra, ha az érzékelőket egy dedikált listanézetben szeretné megtekinteni, ugyanazokkal a választható oszlopokkal."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:179
 msgid "A calibration is a **repair order** of the *Repairs* app on which the :guilabel:`Calibration` checkbox is ticked. It therefore follows the usual repair workflow (parts, operations, invoicing), and additionally carries the calibration data and a certificate number. The complete calibration history of each measuring device is made of its calibration repair orders."
-msgstr "A kalibráció a *Javítások* alkalmazás olyan **javítási rendelése**, amelyen be van jelölve a :guilabel:`Kalibrálás` jelölőnégyzet. Ezért a szokásos javítási munkafolyamatot követi (alkatrészek, műveletek, számlázás), emellett pedig a kalibrációs adatokat és egy tanúsítványszámot is hordoz. Az egyes mérőeszközök teljes kalibrációs előzményét a kalibrációs javítási rendeléseik alkotják."
+msgstr "A kalibráció a *Javítások* alkalmazás olyan **javítási rendelése**, amelyen be van jelölve a :guilabel:`Kalibráció` jelölőnégyzet. Ezért a szokásos javítási munkafolyamatot követi (alkatrészek, műveletek, számlázás), emellett pedig a kalibrációs adatokat és egy tanúsítványszámot is hordoz. Az egyes mérőeszközök teljes kalibrációs előzményét a kalibrációs javítási rendeléseik alkotják."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:132
+#: ../../content/applications/services/equipment/equipment_measuring.rst:185
 msgid "Creating a calibration"
 msgstr "Kalibráció létrehozása"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:142
+#: ../../content/applications/services/equipment/equipment_measuring.rst:195
 msgid "Open the measuring device, and click :guilabel:`Create Calibration` in the header. The button is available on :guilabel:`Active` and :guilabel:`Inactive` equipment. A new repair order opens, with :guilabel:`Calibration` ticked, and the equipment, its product, and its customer filled in."
-msgstr "Nyissa meg a mérőeszközt, és kattintson a fejlécben a :guilabel:`Kalibráció létrehozása` gombra. A gomb :guilabel:`Aktív` és :guilabel:`Inaktív` berendezéseken érhető el. Új javítási rendelés nyílik meg, amelyen a :guilabel:`Kalibrálás` be van jelölve, a berendezés, annak terméke és ügyfele pedig ki van töltve."
+msgstr "Nyissa meg a mérőeszközt, és kattintson a fejlécben a :guilabel:`Kalibráció létrehozása` gombra. A gomb az :guilabel:`Aktív` és az :guilabel:`Inaktív` eszközökön érhető el. Új javítási rendelés nyílik meg, amelyen a :guilabel:`Kalibráció` be van jelölve, az eszköz, annak terméke és ügyfele pedig ki van töltve."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:146
-msgid "Alternatively, click :guilabel:`New` in :menuselection:`Equipment Management --> Measuring Devices --> Calibrations`, or tick :guilabel:`Calibration` on any repair order, and select the :guilabel:`Equipment` (only measuring devices can be selected)."
-msgstr "Másik lehetőségként kattintson az :guilabel:`Új` gombra a :menuselection:`Berendezéskezelés --> Mérőeszközök --> Kalibrációk` menüpontban, vagy jelölje be a :guilabel:`Kalibrálás` mezőt bármely javítási rendelésen, és válassza ki az :guilabel:`Berendezés` mezőben a berendezést (csak mérőeszközök választhatók)."
+#: ../../content/applications/services/equipment/equipment_measuring.rst:199
+msgid "Alternatively, click :guilabel:`New` in :menuselection:`Equipment Management --> Measuring Devices --> Calibrations`, or tick :guilabel:`Calibration` on any repair order, and select the :guilabel:`Equipment` (only measuring devices can be selected, not etalons; type the device's name, serial number, internal ID, or equipment ID to find it)."
+msgstr "Másik lehetőségként kattintson az :guilabel:`Új` gombra az :menuselection:`Eszközkezelés --> Mérőeszközök --> Kalibrációk` menüpontban, vagy jelölje be a :guilabel:`Kalibráció` mezőt bármely javítási rendelésen, és válassza ki az eszközt az :guilabel:`Eszköz` mezőben (csak mérőeszközök választhatók ki, etalonok nem; a kereséshez írja be az eszköz nevét, sorozatszámát, belső azonosítóját vagy eszközazonosítóját)."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:150
+#: ../../content/applications/services/equipment/equipment_measuring.rst:204
 msgid "Fill in the :guilabel:`Calibration` group:"
-msgstr "Töltse ki a :guilabel:`Kalibrálás` csoportot:"
+msgstr "Töltse ki a :guilabel:`Kalibráció` csoportot:"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:152
+#: ../../content/applications/services/equipment/equipment_measuring.rst:206
 msgid ":guilabel:`Calibration Date`: the date the calibration is performed (defaults to today);"
 msgstr ":guilabel:`Kalibráció dátuma`: a kalibráció elvégzésének dátuma (alapértelmezés szerint a mai nap);"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:153
+#: ../../content/applications/services/equipment/equipment_measuring.rst:207
 msgid ":guilabel:`Calibration Quality`: :guilabel:`Accredited` or :guilabel:`Werks` (required);"
 msgstr ":guilabel:`Kalibráció minősége`: :guilabel:`Akkreditált` vagy :guilabel:`Werks (gyári)` (kötelező);"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:154
+#: ../../content/applications/services/equipment/equipment_measuring.rst:208
 msgid ":guilabel:`Result`: :guilabel:`Pass`, :guilabel:`Fail`, :guilabel:`Conditional Pass`, or :guilabel:`Conditional Fail`;"
 msgstr ":guilabel:`Eredmény`: :guilabel:`Megfelelt`, :guilabel:`Nem felelt meg`, :guilabel:`Feltételesen megfelelt` vagy :guilabel:`Feltételesen nem felelt meg`;"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:156
+#: ../../content/applications/services/equipment/equipment_measuring.rst:210
 msgid ":guilabel:`Performed By`: the person or organization performing the calibration;"
 msgstr ":guilabel:`Végezte`: a kalibrációt végző személy vagy szervezet;"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:157
+#: ../../content/applications/services/equipment/equipment_measuring.rst:211
 msgid ":guilabel:`Certificate`: the calibration certificate file (PDF, etc.);"
 msgstr ":guilabel:`Tanúsítvány`: a kalibrációs tanúsítvány fájlja (PDF stb.);"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:158
+#: ../../content/applications/services/equipment/equipment_measuring.rst:212
 msgid ":guilabel:`Signed By`, :guilabel:`Customer Signature`, and :guilabel:`Sign Date`: the acknowledgment of the customer;"
 msgstr ":guilabel:`Aláíró`, :guilabel:`Ügyfél aláírása` és :guilabel:`Aláírás dátuma`: az ügyfél általi átvétel igazolása;"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:160
+#: ../../content/applications/services/equipment/equipment_measuring.rst:214
 msgid ":guilabel:`Work Performed` and :guilabel:`Calibration Notes`."
 msgstr ":guilabel:`Elvégzett munka` és :guilabel:`Kalibrációs megjegyzések`."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:162
+#: ../../content/applications/services/equipment/equipment_measuring.rst:216
 msgid "Click :guilabel:`Confirm Repair`, and then :guilabel:`Start Repair`. At that moment, the :guilabel:`Certificate Number` is issued from the *Calibration Certificate* sequence, so that it can be printed on the worksheet before the calibration is finished."
-msgstr "Kattintson a :guilabel:`Javítás megerősítése`, majd a :guilabel:`Javítás megkezdése` gombra. Ebben a pillanatban a rendszer kiadja a :guilabel:`Tanúsítvány száma` értékét a *Calibration Certificate* sorszámozásból, így az már a kalibráció befejezése előtt rányomtatható a munkalapra."
+msgstr "Kattintson a :guilabel:`Javítás megerősítése`, majd a :guilabel:`Javítás kezdete` gombra. Ebben a pillanatban a rendszer kiadja a :guilabel:`Tanúsítvány száma` értékét a *Calibration Certificate* sorszámozásból, így az már a kalibráció befejezése előtt rányomtatható a munkalapra."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:165
+#: ../../content/applications/services/equipment/equipment_measuring.rst:219
 msgid "Click :guilabel:`Print Worksheet` to print the *Calibration Worksheet*."
-msgstr "Kattintson a :guilabel:`Munkalap nyomtatása` gombra a *Calibration Worksheet* (kalibrációs munkalap) kinyomtatásához."
+msgstr "Kattintson a :guilabel:`Munkalap nyomtatása` gombra a *Kalibrációs munkalap* kinyomtatásához."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:166
+#: ../../content/applications/services/equipment/equipment_measuring.rst:220
 msgid "When the calibration is finished, click :guilabel:`End Repair`. The equipment's :guilabel:`Last Calibration Date`, :guilabel:`Next Calibration Date`, and :guilabel:`Calibration Status` are updated."
-msgstr "A kalibráció befejezésekor kattintson a :guilabel:`Javítás befejezése` gombra. A berendezés :guilabel:`Utolsó kalibráció dátuma`, :guilabel:`Következő kalibráció dátuma` és :guilabel:`Kalibráció állapota` mezője frissül."
+msgstr "A kalibráció befejezésekor kattintson a :guilabel:`Javítás vége` gombra. Az eszköz :guilabel:`Utolsó kalibráció dátuma`, :guilabel:`Következő kalibráció dátuma` és :guilabel:`Kalibráció állapota` mezője frissül."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:170
+#: ../../content/applications/services/equipment/equipment_measuring.rst:224
 msgid "See :ref:`repairs/repair_orders/calibration` for the details of the calibration fields on the repair order."
 msgstr "A javítási rendelés kalibrációs mezőinek részleteit lásd itt: :ref:`repairs/repair_orders/calibration`."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:174
+#: ../../content/applications/services/equipment/equipment_measuring.rst:228
 msgid "The certificate number is a regulatory, gap-less numbering:"
-msgstr "A tanúsítványszám szabályozói követelmény szerinti, hézagmentes számozás:"
+msgstr "A tanúsítványszám szabályozási követelmény szerinti, hézagmentes számozás:"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:176
+#: ../../content/applications/services/equipment/equipment_measuring.rst:230
 msgid "it is issued automatically, and can neither be entered nor modified manually;"
 msgstr "a rendszer automatikusan adja ki, kézzel sem megadni, sem módosítani nem lehet;"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:177
+#: ../../content/applications/services/equipment/equipment_measuring.rst:231
 msgid "a calibration with a certificate number cannot be deleted, reset to draft, or turned back into a regular repair. It can only be cancelled; cancelled calibrations keep their number and can be found with the :guilabel:`Voided Certificate` filter of the repair orders."
 msgstr "a tanúsítványszámmal rendelkező kalibráció nem törölhető, nem állítható vissza piszkozatba, és nem alakítható vissza hagyományos javítássá. Csak visszavonni lehet; a visszavont kalibrációk megtartják a számukat, és a javítási rendelések :guilabel:`Érvénytelenített tanúsítvány` szűrőjével kereshetők meg."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:182
+#: ../../content/applications/services/equipment/equipment_measuring.rst:236
 msgid "The starting number of the certificates can be adapted in :ref:`developer mode <developer-mode>` on the *Calibration Certificate* sequence (:menuselection:`Settings --> Technical --> Sequences & Identifiers --> Sequences`) **before** the first certificate is issued."
 msgstr "A tanúsítványok kezdő sorszáma :ref:`fejlesztői módban <developer-mode>` a *Calibration Certificate* sorszámozáson módosítható (:menuselection:`Beállítások --> Technikai --> Sorrendek és azonosítók --> Sorszámok`), még az első tanúsítvány kiadása **előtt**."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:189
+#: ../../content/applications/services/equipment/equipment_measuring.rst:243
 msgid "In the repair order search, calibrations can be found by :guilabel:`Calibration Quality`, :guilabel:`Certificate Number`, and :guilabel:`Equipment`, filtered with :guilabel:`Accredited`, :guilabel:`Werks`, and :guilabel:`Voided Certificate`, and grouped by :guilabel:`Calibration Quality`."
-msgstr "A javítási rendelések keresőjében a kalibrációk a :guilabel:`Kalibráció minősége`, a :guilabel:`Tanúsítvány száma` és az :guilabel:`Berendezés` alapján kereshetők, az :guilabel:`Akkreditált`, a :guilabel:`Werks (gyári)` és az :guilabel:`Érvénytelenített tanúsítvány` szűrővel szűrhetők, valamint :guilabel:`Kalibráció minősége` szerint csoportosíthatók."
+msgstr "A javítási rendelések keresőjében a kalibrációk a :guilabel:`Kalibráció minősége`, a :guilabel:`Tanúsítvány száma` és az :guilabel:`Eszköz` alapján kereshetők, az :guilabel:`Akkreditált`, a :guilabel:`Werks (gyári)` és az :guilabel:`Érvénytelenített tanúsítvány` szűrővel szűrhetők, valamint :guilabel:`Kalibráció minősége` szerint csoportosíthatók."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:199
-msgid ":guilabel:`Calibrations`: the number of calibration repair orders of the equipment. Click to view the full calibration history."
-msgstr ":guilabel:`Kalibrációk`: a berendezés kalibrációs javítási rendeléseinek száma. Kattintson rá a teljes kalibrációs előzmény megtekintéséhez."
+#: ../../content/applications/services/equipment/equipment_measuring.rst:248
+msgid "Searching by :guilabel:`Equipment` also finds a device by its serial number, internal ID, or equipment ID."
+msgstr "Az :guilabel:`Eszköz` szerinti keresés az eszközt a sorozatszáma, a belső azonosítója vagy az eszközazonosítója alapján is megtalálja."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:201
+#: ../../content/applications/services/equipment/equipment_measuring.rst:254
+msgid "Measuring devices show additional stat buttons (etalons do not):"
+msgstr "A mérőeszközökön további statisztikai gombok jelennek meg (az etalonokon nem):"
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:256
+msgid ":guilabel:`Calibrations`: the number of calibration repair orders of the equipment. Click to open the calibrations of the device in the calibration list, with the same columns as :menuselection:`Equipment Management --> Measuring Devices --> Calibrations`; :guilabel:`New` there creates a calibration for this device."
+msgstr ":guilabel:`Kalibrációk`: az eszköz kalibrációs javítási rendeléseinek száma. Kattintásra az eszköz kalibrációi a kalibrációs listában nyílnak meg, ugyanazokkal az oszlopokkal, mint az :menuselection:`Eszközkezelés --> Mérőeszközök --> Kalibrációk` menüpontban; az ott található :guilabel:`Új` gombbal ehhez az eszközhöz hozhat létre kalibrációt."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:260
 msgid ":guilabel:`Sensors`: the number of attached sensors. Only visible when sensors exist."
 msgstr ":guilabel:`Érzékelők`: a csatolt érzékelők száma. Csak akkor látható, ha vannak érzékelők."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:206
+#: ../../content/applications/services/equipment/equipment_measuring.rst:265
 msgid "The equipment and measuring devices list views include specific search capabilities:"
-msgstr "A berendezések és a mérőeszközök listanézete egyedi keresési lehetőségeket tartalmaz:"
+msgstr "Az eszközök és a mérőeszközök listanézete egyedi keresési lehetőségeket tartalmaz:"
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:208
+#: ../../content/applications/services/equipment/equipment_measuring.rst:267
 msgid ":guilabel:`Calibration Due` filter: measuring devices whose next calibration is within 30 days."
 msgstr ":guilabel:`Esedékes kalibráció` szűrő: azok a mérőeszközök, amelyek következő kalibrációja 30 napon belül esedékes."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:209
-msgid ":guilabel:`Calibration Overdue` filter: measuring devices past their calibration date."
-msgstr ":guilabel:`Lejárt kalibráció` szűrő: azok a mérőeszközök, amelyek kalibrációs dátuma már elmúlt."
+#: ../../content/applications/services/equipment/equipment_measuring.rst:268
+msgid ":guilabel:`Calibration Overdue` filter: measuring devices past their calibration date. Devices without a next calibration date are not included, although their status is :guilabel:`Overdue`."
+msgstr ":guilabel:`Lejárt kalibráció` szűrő: azok a mérőeszközök, amelyek kalibrációs dátuma már elmúlt. A következő kalibrációs dátum nélküli eszközök nem szerepelnek benne, bár az állapotuk :guilabel:`Lejárt`."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:210
+#: ../../content/applications/services/equipment/equipment_measuring.rst:270
 msgid ":guilabel:`Product Family` grouping."
 msgstr ":guilabel:`Termékcsalád` szerinti csoportosítás."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:211
-msgid ":guilabel:`Calibration Status` grouping (:guilabel:`OK`, :guilabel:`Warning`, :guilabel:`Overdue`)."
-msgstr ":guilabel:`Kalibráció állapota` szerinti csoportosítás (:guilabel:`Rendben`, :guilabel:`Figyelmeztetés`, :guilabel:`Lejárt`)."
+#: ../../content/applications/services/equipment/equipment_measuring.rst:271
+msgid ":guilabel:`Software Serial Number` search field, in the Measuring Devices list."
+msgstr ":guilabel:`Szoftver sorozatszáma` keresőmező a Mérőeszközök listában."
 
-#: ../../content/applications/services/equipment/equipment_measuring.rst:215
+#: ../../content/applications/services/equipment/equipment_measuring.rst:274
 msgid "There is no automatic reminder when a calibration becomes due: use the :guilabel:`Calibration Due` and :guilabel:`Calibration Overdue` filters, e.g., saved as a favorite, or schedule an activity on the equipment."
-msgstr "A kalibráció esedékessé válásakor nincs automatikus emlékeztető: használja az :guilabel:`Esedékes kalibráció` és a :guilabel:`Lejárt kalibráció` szűrőt (pl. kedvencként elmentve), vagy ütemezzen tevékenységet a berendezésen."
+msgstr "A kalibráció esedékessé válásakor nincs automatikus emlékeztető: használja az :guilabel:`Esedékes kalibráció` és a :guilabel:`Lejárt kalibráció` szűrőt (pl. kedvencként elmentve), vagy ütemezzen tevékenységet az eszközön."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:281
+msgid "Etalons"
+msgstr "Etalonok"
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:283
+msgid "The Measuring Devices sub-module also adds the :guilabel:`Etalon` category, for your company's own reference standards, such as gauge block sets or setting rings. The category also exists on the equipment models (see :ref:`equipment/models`)."
+msgstr "A Mérőeszközök almodul az :guilabel:`Etalon` kategóriát is hozzáadja a vállalat saját referenciaetalonjainak (például mérőhasábkészleteknek vagy beállítógyűrűknek) a nyilvántartásához. A kategória az eszközmodelleken is megtalálható (lásd: :ref:`equipment/models`)."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:295
+msgid ":menuselection:`Equipment Management --> Etalons` lists the etalons only; they also appear in :menuselection:`Equipment Management --> All Equipment`. As for measuring devices, the list has no name column: the etalons are identified by the :guilabel:`Manufacturer`, :guilabel:`Product Family`, :guilabel:`Model`, and :guilabel:`Serial Number` columns, followed by :guilabel:`Internal ID`, :guilabel:`Owner`, :guilabel:`Assignees`, :guilabel:`Activities`, and :guilabel:`State`. The :guilabel:`Customer` and :guilabel:`Tags` columns are optional, hidden by default."
+msgstr "Az :menuselection:`Eszközkezelés --> Etalonok` menüpont csak az etalonokat listázza; ezek az :menuselection:`Eszközkezelés --> Összes eszköz` menüpontban is megjelennek. A mérőeszközökhöz hasonlóan a listában nincs névoszlop: az etalonokat a :guilabel:`Gyártó`, a :guilabel:`Termékcsalád`, a :guilabel:`Modell` és a :guilabel:`Sorozatszám` oszlop azonosítja, ezeket a :guilabel:`Belső azonosító`, a :guilabel:`Tulajdonos`, a :guilabel:`Hozzárendelések`, a :guilabel:`Tevékenységek` és az :guilabel:`Állapot` oszlop követi. Az :guilabel:`Ügyfél` és a :guilabel:`Címkék` oszlop választható, alapértelmezés szerint rejtett."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:302
+msgid "The etalons can be searched by :guilabel:`Name`, :guilabel:`Equipment ID`, :guilabel:`Serial Number`, :guilabel:`Internal ID`, :guilabel:`Owner`, :guilabel:`Customer`, :guilabel:`Manufacturer`, :guilabel:`Model`, :guilabel:`Product Family`, and :guilabel:`Tags`, filtered by state (:guilabel:`Draft`, :guilabel:`Active`, :guilabel:`Inactive`, :guilabel:`Scrapped`) or with :guilabel:`Archived`, and grouped by :guilabel:`State`, :guilabel:`Owner`, :guilabel:`Brand`, :guilabel:`Model`, :guilabel:`Product Family`, or :guilabel:`Tag`."
+msgstr "Az etalonok a :guilabel:`Név`, az :guilabel:`Eszközazonosító`, a :guilabel:`Sorozatszám`, a :guilabel:`Belső azonosító`, a :guilabel:`Tulajdonos`, az :guilabel:`Ügyfél`, a :guilabel:`Gyártó`, a :guilabel:`Modell`, a :guilabel:`Termékcsalád` és a :guilabel:`Címkék` alapján kereshetők, állapot szerint (:guilabel:`Piszkozat`, :guilabel:`Aktív`, :guilabel:`Inaktív`, :guilabel:`Selejtezett`) vagy az :guilabel:`Archivált` szűrővel szűrhetők, és :guilabel:`Állapot`, :guilabel:`Tulajdonos`, :guilabel:`Márka`, :guilabel:`Modell`, :guilabel:`Termékcsalád` vagy :guilabel:`Címke` szerint csoportosíthatók."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:309
+msgid "An equipment created with :guilabel:`New` in this menu gets the :guilabel:`Etalon` category. For etalons:"
+msgstr "Az ebben a menüben az :guilabel:`Új` gombbal létrehozott eszköz az :guilabel:`Etalon` kategóriát kapja. Az etalonok esetében:"
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:312
+msgid ":guilabel:`Customer` and :guilabel:`Owner` default to your company, also when :guilabel:`Etalon` is selected on a new equipment created from another menu, and when an import gives no customer or owner for an etalon. Both fields can be changed. If a new equipment is switched from :guilabel:`Etalon` to another category before it is saved, your company is removed from both fields again; a saved equipment keeps its customer and owner when its category changes."
+msgstr "Az :guilabel:`Ügyfél` és a :guilabel:`Tulajdonos` alapértelmezett értéke a saját vállalata, akkor is, ha egy másik menüből létrehozott új eszközön az :guilabel:`Etalon` kategóriát választja, és akkor is, ha egy importálás nem ad meg ügyfelet vagy tulajdonost egy etalonhoz. Mindkét mező módosítható. Ha egy új eszközt mentés előtt az :guilabel:`Etalon` kategóriáról másik kategóriára állít át, a vállalata ismét kikerül mindkét mezőből; a mentett eszköz kategóriaváltáskor megtartja az ügyfelét és a tulajdonosát."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:317
+msgid "The name is built automatically and cannot be typed, as for measuring devices (see :ref:`equipment/derived-name`)."
+msgstr "A név automatikusan képződik, és nem gépelhető be, ugyanúgy, mint a mérőeszközöknél (lásd: :ref:`equipment/derived-name`)."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:319
+msgid "The :guilabel:`Model` field only offers the models of the :guilabel:`Etalon` category."
+msgstr "A :guilabel:`Modell` mező csak az :guilabel:`Etalon` kategória modelljeit kínálja fel."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:320
+msgid "There are no calibration features: no :guilabel:`Measuring` tab, no :guilabel:`Create Calibration` button, no :guilabel:`Calibrations` or :guilabel:`Sensors` stat button, and no calibration status. An etalon cannot be selected on a calibration repair order."
+msgstr "Nincsenek kalibrációs funkciók: nincs :guilabel:`Mérőeszköz` fül, :guilabel:`Kalibráció létrehozása` gomb, :guilabel:`Kalibrációk` vagy :guilabel:`Érzékelők` statisztikai gomb, és kalibrációs állapot sincs. Etalon nem választható ki kalibrációs javítási rendelésen."
+
+#: ../../content/applications/services/equipment/equipment_measuring.rst:325
+msgid "To keep track of the certificates of an etalon, attach them in its :guilabel:`Documents` tab, for example with the :guilabel:`Calibration` type and an :guilabel:`Expiry Date`: for an active etalon, a warning activity is created when the expiry date approaches (see :doc:`documents`)."
+msgstr "Az etalon tanúsítványainak nyilvántartásához csatolja azokat az etalon :guilabel:`Dokumentumok` fülén, például :guilabel:`Kalibráció` típussal és :guilabel:`Lejárati dátum` megadásával: aktív etalon esetén a lejárati dátum közeledtével a rendszer figyelmeztetési tevékenységet hoz létre (lásd: :doc:`documents`)."
 
 #: ../../content/applications/services/project/process_numbers.rst:16
 msgid "To have a process number created automatically for every new project, go to :menuselection:`Settings --> eYssen ERP`, and, in the :guilabel:`Process Number` section, enable :guilabel:`Create Automatically` under the :guilabel:`Project` option. The setting is per company."
@@ -4008,17 +4168,11 @@ msgstr "Magukról az ügyszám rekordokról és azok más alkalmazásokban való
 #~ msgid "Products in sales orders created during field interventions are always pulled from the default warehouse, keeping the inventory accurate."
 #~ msgstr "A terepi beavatkozások során létrehozott értékesítési rendelések termékei mindig az alapértelmezett raktárból kerülnek lehívásra, így a készlet pontos marad."
 
-#~ msgid ":doc:`../../inventory_and_mrp/inventory`"
-#~ msgstr ""
-
 #~ msgid "To set up a user default warehouse, the :doc:`storage locations <../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations>` feature needs to be activated in the **Inventory** app. It is also necessary to have more than one warehouse in your database."
 #~ msgstr "Ahhoz, hogy beállítsunk egy felhasználói alapértelmezett raktárt, az :doc:`tárolási helyek <../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations>` funkciót aktiválni kell az **Készlet** alkalmazásban. Az is szükséges, hogy több mint egy raktár legyen az adatbázisban."
 
 #~ msgid "You can either set it up :ref:`for your profile <default-warehouse/my-profile>`, or :ref:`for all users <default-warehouse/all-users>`."
 #~ msgstr "Beállíthatja :ref:`a profiljához <default-warehouse/my-profile>`, vagy :ref:`minden felhasználó számára <default-warehouse/all-users>`."
-
-#~ msgid ":doc:`../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations`"
-#~ msgstr ""
 
 #~ msgid "For your profile"
 #~ msgstr "A profiljához"
@@ -4347,9 +4501,6 @@ msgstr "Magukról az ügyszám rekordokról és azok más alkalmazásokban való
 #~ msgid "View of smart buttons on a ticket focusing on the credit note button."
 #~ msgstr "Okos gombok nézete egy jegyen, a jóváíró számla gombra összpontosítva."
 
-#~ msgid ":doc:`../../../finance/accounting/customer_invoices/credit_notes`"
-#~ msgstr ""
-
 #~ msgid "Generate coupons from a ticket"
 #~ msgstr "Kuponok generálása egy jegyből"
 
@@ -4389,9 +4540,6 @@ msgstr "Magukról az ügyszám rekordokról és azok más alkalmazásokban való
 #~ msgid "`Coupons <https://www.youtube.com/watch?v=KW5cZHg10jQ>`_"
 #~ msgstr "`Kuponok <https://www.youtube.com/watch?v=KW5cZHg10jQ>`_"
 
-#~ msgid ":doc:`../../../sales/sales/products_prices/loyalty_discount`"
-#~ msgstr ""
-
 #~ msgid "Return products"
 #~ msgstr "Termékek visszaküldése"
 
@@ -4427,9 +4575,6 @@ msgstr "Magukról az ügyszám rekordokról és azok más alkalmazásokban való
 
 #~ msgid "View of the return smart button on a helpdesk ticket."
 #~ msgstr "A visszaküldési okos gomb nézete egy ügyfélszolgálati jegyen."
-
-#~ msgid ":doc:`../../../sales/sales/products_prices/returns`"
-#~ msgstr ""
 
 #~ msgid "Send products for repair from a ticket"
 #~ msgstr "Termékek küldése javításra egy jegyből"
@@ -4523,9 +4668,6 @@ msgstr "Magukról az ügyszám rekordokról és azok más alkalmazásokban való
 
 #~ msgid "View of ticket smart buttons focused on task."
 #~ msgstr "A jegy okosgombjainak nézete a feladatra összpontosítva."
-
-#~ msgid "`Field Service  <https://www.odoo.com/slides/slide/advanced-settings-862?fullscreen=1>`_"
-#~ msgstr ""
 
 #~ msgid "Close tickets"
 #~ msgstr "Jegyek lezárása"
@@ -4851,12 +4993,6 @@ msgstr "Magukról az ügyszám rekordokról és azok más alkalmazásokban való
 #~ msgid "When the necessary information has been entered, click :guilabel:`Create Draft`. The invoice can then be reviewed, edited, and sent to the customer for payment."
 #~ msgstr "Amikor a szükséges információk meg lettek adva, kattintson a :guilabel:`Create Draft` gombra. A számla ezután átnézhető, szerkeszthető, és elküldhető az ügyfélnek fizetésre."
 
-#~ msgid ":doc:`../../../inventory_and_mrp/inventory/product_management/configure/uom`"
-#~ msgstr ""
-
-#~ msgid ":doc:`../../../sales/sales/invoicing/down_payment`"
-#~ msgstr ""
-
 #~ msgid "Overview"
 #~ msgstr "Áttekintés"
 
@@ -5082,9 +5218,6 @@ msgstr "Magukról az ügyszám rekordokról és azok más alkalmazásokban való
 #~ msgid "The original forum post is linked in the chatter on the new ticket."
 #~ msgstr "Az eredeti fórum bejegyzés a csevegésben van összekapcsolva az új jegyen."
 
-#~ msgid "eLearning"
-#~ msgstr ""
-
 #~ msgid "Odoo **eLearning** courses offer customers additional training and content in the form of videos, presentations, and certifications/quizzes. Providing additional training enables customers to work through issues and find solutions on their own. They can also develop a deeper understanding of the services and products they are using."
 #~ msgstr "Az Odoo **eLearning** kurzusok további képzést és tartalmat kínálnak az ügyfelek számára videók, prezentációk és tanúsítványok/kvízek formájában. A további képzés lehetővé teszi az ügyfelek számára, hogy saját maguk oldják meg a problémákat és találjanak megoldásokat. Emellett mélyebb megértést szerezhetnek az általuk használt szolgáltatásokról és termékekről."
 
@@ -5229,12 +5362,6 @@ msgstr "Magukról az ügyszám rekordokról és azok más alkalmazásokban való
 
 #~ msgid "Customer ratings can also be viewed through the :guilabel:`Customer Ratings` report. To view this report, go to :menuselection:`Helpdesk app --> Reporting --> Customer Ratings`."
 #~ msgstr "Az ügyfél értékelései megtekinthetők a :guilabel:`Customer Ratings` jelentésen keresztül is. A jelentés megtekintéséhez menjen a :menuselection:`Helpdesk app --> Reporting --> Customer Ratings`."
-
-#~ msgid ":doc:`../../../general/companies/email_template`"
-#~ msgstr ""
-
-#~ msgid ":doc:`../advanced/close_tickets`"
-#~ msgstr ""
 
 #~ msgid ":doc:`reports`"
 #~ msgstr ":doc:`jelentések`"
@@ -5559,15 +5686,6 @@ msgstr "Magukról az ügyszám rekordokról és azok más alkalmazásokban való
 #~ msgid "As priority levels can be used as criteria for assigning :doc:`SLAs <sla>`, changing the priority level of a ticket can alter the :abbr:`SLA (Service Level Agreement)` deadline."
 #~ msgstr "Mivel a prioritási szintek felhasználhatók a :doc:`SLA-k <sla>` hozzárendelésének kritériumaként, a jegy prioritási szintjének megváltoztatása módosíthatja a :abbr:`SLA (Szolgáltatási Szint Megállapodás)` határidejét."
 
-#~ msgid ":doc:`/applications/services/helpdesk/advanced/close_tickets`"
-#~ msgstr ""
-
-#~ msgid ":doc:`../../../general/email_communication`"
-#~ msgstr ""
-
-#~ msgid ":doc:`/applications/websites/livechat`"
-#~ msgstr ""
-
 #~ msgid "Reports in Odoo **Helpdesk** provide the opportunity to manage employee workloads, identify areas for improvement, and confirm if customer expectations are being met."
 #~ msgstr "Az Odoo **Helpdesk** jelentései lehetőséget nyújtanak a munkavállalói terhelés kezelésére, a fejlesztési területek azonosítására, és annak megerősítésére, hogy az ügyfél elvárásai teljesülnek-e."
 
@@ -5708,9 +5826,6 @@ msgstr "Magukról az ügyszám rekordokról és azok más alkalmazásokban való
 
 #~ msgid "The time frame selected for this report may vary depending on a few factors, including the amount of tickets received on a regular basis, the number of |SLAs| enabled in the database, and the workload of the team. It is worth experimenting to see what option delivers the most insights."
 #~ msgstr "A jelentéshez kiválasztott időkeret változhat néhány tényezőtől függően, beleértve a rendszeresen beérkező jegyek számát, az adatbázisban engedélyezett |SLAs| számát és a csapat munkaterhelését. Érdemes kísérletezni, hogy melyik opció nyújtja a legtöbb betekintést."
-
-#~ msgid ":doc:`Odoo essentials reporting <../../../essentials/reporting>`"
-#~ msgstr ""
 
 #~ msgid "A *service level agreement* (SLA) defines the level of support a customer can expect from a service provider. |SLAs| provide a timeline that tells customers when they can expect results and keeps the support team on target."
 #~ msgstr "A *szolgáltatási szint megállapodás* (SLA) meghatározza azt a támogatási szintet, amelyet az ügyfél elvárhat a szolgáltatótól. Az |SLAs| egy idővonalat biztosítanak, amely megmondja az ügyfeleknek, mikor várhatnak eredményeket, és a támogatási csapatot célon tartja."
@@ -5999,9 +6114,6 @@ msgstr "Magukról az ügyszám rekordokról és azok más alkalmazásokban való
 
 #~ msgid "The :guilabel:`Working Hours` and the :guilabel:`Allocated Time` in Planning can impact **Payroll**, if the employee's contract is configured to generate work entries based on shifts."
 #~ msgstr "A :guilabel:`Munkaidő` és a :guilabel:`Kiosztott idő` a Tervezésben hatással lehet a **Bérszámfejtésre**, ha az alkalmazott szerződése úgy van beállítva, hogy a műszakok alapján generáljon munkabejegyzéseket."
-
-#~ msgid ":doc:`../hr/payroll/working_schedules`"
-#~ msgstr ""
 
 #~ msgid "Planning roles"
 #~ msgstr "Tervezési szerepkörök"

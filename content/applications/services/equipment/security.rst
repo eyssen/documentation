@@ -30,7 +30,7 @@ Access groups
      - ``equipment_group_user``
      - Everything Reader can do, plus: create and edit equipment, link maintenance/fleet/stock,
        upload documents, set analytic accounts.
-   * - **Manager**
+   * - **Administrator**
      - ``equipment_group_manager``
      - Everything Officer can do, plus: delete and archive equipment, delete documents, access
        Equipment Settings/Configuration.
@@ -41,11 +41,11 @@ Assigning groups
 #. Navigate to :menuselection:`Settings --> Users & Companies --> Users`.
 #. Select a user.
 #. In the :guilabel:`Access Rights` tab, find the **Equipment Management** section.
-#. Select the appropriate level: *Reader*, *Officer*, or *Manager*.
+#. Select the appropriate level: *Reader*, *Officer*, or *Administrator*.
 
 .. note::
    All internal users (``base.group_user``) automatically receive **Reader** access. You only need
-   to explicitly assign **Officer** or **Manager** to users who need higher access.
+   to explicitly assign **Officer** or **Administrator** to users who need higher access.
 
 Multi-company rules
 ===================

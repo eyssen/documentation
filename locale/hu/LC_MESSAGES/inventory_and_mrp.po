@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-26 17:46+0200\n"
+"POT-Creation-Date: 2026-10-01 18:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -25432,7 +25432,7 @@ msgstr "Ha a berendezésen megadott sorozatszám (lásd alább) megegyezik egy m
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:119
 msgid ":doc:`../../services/equipment` for the eYssen *Equipment Management* app (product-facing equipment, measuring devices and printers), which can be linked to a maintenance equipment record from this module: see :doc:`../../services/equipment/integrations`."
-msgstr ":doc:`../../services/equipment` az eYssen *Berendezéskezelés* alkalmazáshoz (termékoldali berendezések, mérőeszközök és nyomtatók), amely összeköthető ebből a modulból egy karbantartási berendezés rekorddal: lásd :doc:`../../services/equipment/integrations`."
+msgstr ":doc:`../../services/equipment` az eYssen *Eszközkezelés* alkalmazáshoz (termékoldali berendezések, mérőeszközök és nyomtatók), amely összeköthető ebből a modulból egy karbantartási berendezés rekorddal: lásd :doc:`../../services/equipment/integrations`."
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:5
 msgid "Avoiding equipment breakdowns requires constant equipment maintenance. Timely corrective maintenance for machines and tools that break unexpectedly, as well as preventive maintenance to ensure that such issues are avoided, are key to keeping operations running smoothly."
@@ -25908,67 +25908,71 @@ msgstr "Ha a *Gyártás* alkalmazás telepítve van, egy :guilabel:`Gyártási m
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:379
 msgid ":doc:`../../services/equipment/equipment_measuring` for the eYssen *Equipment Management - Measuring Devices* module, which extends the repair order form with a :guilabel:`Calibration` mode for measuring equipment: see :ref:`repairs/repair_orders/calibration` below."
-msgstr ":doc:`../../services/equipment/equipment_measuring` az eYssen *Berendezéskezelés - Mérőeszközök* modulhoz, amely a javítási megbízás űrlapot egy mérőeszközökhöz szánt :guilabel:`Kalibrálás` móddal bővíti: lásd alább: :ref:`repairs/repair_orders/calibration`."
+msgstr ":doc:`../../services/equipment/equipment_measuring` az eYssen *Equipment Management - Measuring Devices* modulhoz, amely a javítási rendelés űrlapot egy mérőeszközökhöz szánt :guilabel:`Kalibráció` móddal bővíti: lásd alább: :ref:`repairs/repair_orders/calibration`."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:387
 msgid "Calibration repair orders"
-msgstr "Kalibrálási javítási megbízások"
+msgstr "Kalibrációs javítási rendelések"
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:390
-msgid "Requires the *Equipment Management - Measuring Devices* module (``equipment_measuring``), which depends on the eYssen *Equipment Management* app (``equipment``). See :doc:`../../services/equipment/equipment_measuring` for the module itself."
-msgstr "A *Berendezéskezelés - Mérőeszközök* modult (``equipment_measuring``) igényli, amely az eYssen *Berendezéskezelés* alkalmazástól (``equipment``) függ. Magáról a modulról lásd: :doc:`../../services/equipment/equipment_measuring`."
+msgid "Requires the *Equipment Management - Measuring Devices* module, which depends on the eYssen *Equipment Management* app. See :doc:`../../services/equipment/equipment_measuring` for the module itself."
+msgstr "Ehhez az *Equipment Management - Measuring Devices* modul szükséges, amely az eYssen *Eszközkezelés* alkalmazástól függ. Magáról a modulról lásd: :doc:`../../services/equipment/equipment_measuring`."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:394
 msgid "When this module is installed, ticking the :guilabel:`Calibration` checkbox near the top of a |RO| form turns it into a calibration record for a measuring device, and reveals a :guilabel:`Calibration` group with the following fields:"
-msgstr "Ha ez a modul telepítve van, a |RO| űrlap tetején található :guilabel:`Kalibrálás` jelölőnégyzet bejelölése egy mérőeszköz kalibrálási rekordjává alakítja azt, és megjelenít egy :guilabel:`Kalibrálás` csoportot a következő mezőkkel:"
+msgstr "Ha ez a modul telepítve van, a |RO| űrlap tetején található :guilabel:`Kalibráció` jelölőnégyzet bejelölése egy mérőeszköz kalibrációs rekordjává alakítja azt, és megjelenít egy :guilabel:`Kalibráció` csoportot a következő mezőkkel:"
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:398
-msgid ":guilabel:`Equipment`: the measuring device being calibrated; required, and restricted to equipment of the *Measuring* type from the eYssen *Equipment Management* app."
-msgstr ":guilabel:`Berendezés`: a kalibrálandó mérőeszköz; kötelező, és csak az eYssen *Berendezéskezelés* alkalmazás *Mérő* típusú berendezéseire korlátozódik."
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:400
-msgid ":guilabel:`Calibration Date`: the date the calibration was performed."
-msgstr ":guilabel:`Kalibrálás dátuma`: a kalibrálás elvégzésének dátuma."
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:401
-msgid ":guilabel:`Calibration Quality`: :guilabel:`Accredited` or :guilabel:`Werks`, indicating whether the calibration was performed by an accredited lab or in-house."
-msgstr ":guilabel:`Kalibrálás minősége`: :guilabel:`Akkreditált` vagy :guilabel:`Werks`, jelezve, hogy a kalibrálást akkreditált labor vagy házon belül végezte-e."
+msgid ":guilabel:`Equipment`: the measuring device being calibrated; required, and restricted to equipment of the :guilabel:`Measuring Device` category of the eYssen *Equipment Management* app (etalons and other categories cannot be selected). A device can be found by its name, serial number, internal ID, or equipment ID; measuring devices are named after their serial number and model (see :ref:`equipment/derived-name`)."
+msgstr ":guilabel:`Eszköz`: a kalibrálandó mérőeszköz; kötelező, és csak az eYssen *Eszközkezelés* alkalmazás :guilabel:`Mérőeszköz` kategóriájú eszközei választhatók ki (etalonok és más kategóriák nem). Az eszköz a neve, a sorozatszáma, a belső azonosítója vagy az eszközazonosítója alapján kereshető meg; a mérőeszközök neve a sorozatszámukból és a modelljükből képződik (lásd: :ref:`equipment/derived-name`)."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:403
-msgid ":guilabel:`Result`: :guilabel:`Pass`, :guilabel:`Fail`, :guilabel:`Conditional Pass`, or :guilabel:`Conditional Fail`."
-msgstr ":guilabel:`Eredmény`: :guilabel:`Megfelelt`, :guilabel:`Nem felelt meg`, :guilabel:`Feltételesen megfelelt`, vagy :guilabel:`Feltételesen nem felelt meg`."
+msgid ":guilabel:`Calibration Date`: the date the calibration was performed."
+msgstr ":guilabel:`Kalibráció dátuma`: a kalibráció elvégzésének dátuma."
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:405
-msgid ":guilabel:`Performed By`: free-text name of the person who performed the calibration."
-msgstr ":guilabel:`Végrehajtó`: a kalibrálást végző személy szabadszöveges neve."
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:404
+msgid ":guilabel:`Calibration Quality`: :guilabel:`Accredited` or :guilabel:`Werks`, indicating whether the calibration was performed by an accredited lab or in-house."
+msgstr ":guilabel:`Kalibráció minősége`: :guilabel:`Akkreditált` vagy :guilabel:`Werks (gyári)`, attól függően, hogy a kalibrációt akkreditált laboratóriumban vagy házon belül végezték."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:406
-msgid ":guilabel:`Certificate Number`: a read-only, gap-less certificate number, automatically assigned from a dedicated sequence as soon as the |RO| moves to :guilabel:`Under Repair`. It can never be entered or edited manually, cannot be cleared by turning :guilabel:`Calibration` back off, and a calibration that already has one cannot be reset to :guilabel:`New` or deleted."
-msgstr ":guilabel:`Tanúsítvány száma`: egy csak olvasható, folyamatos (hézagmentes) tanúsítványszám, amelyet a rendszer egy erre dedikált sorszámozásból automatikusan hozzárendel, amint a |RO| a :guilabel:`Javítás alatt` állapotba kerül. Ez soha nem adható meg vagy szerkeszthető kézzel, a :guilabel:`Kalibrálás` visszakapcsolásával sem törölhető, és egy már számmal rendelkező kalibrálás nem állítható vissza :guilabel:`Új` állapotba, és nem törölhető."
+msgid ":guilabel:`Result`: :guilabel:`Pass`, :guilabel:`Fail`, :guilabel:`Conditional Pass`, or :guilabel:`Conditional Fail`."
+msgstr ":guilabel:`Eredmény`: :guilabel:`Megfelelt`, :guilabel:`Nem felelt meg`, :guilabel:`Feltételesen megfelelt` vagy :guilabel:`Feltételesen nem felelt meg`."
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:410
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:408
+msgid ":guilabel:`Performed By`: free-text name of the person who performed the calibration."
+msgstr ":guilabel:`Végezte`: a kalibrációt végző személy neve, szabad szövegként."
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:409
+msgid ":guilabel:`Certificate Number`: a read-only, gap-less certificate number, automatically assigned from a dedicated sequence as soon as the |RO| moves to :guilabel:`Under Repair`. It can never be entered or edited manually, cannot be cleared by turning :guilabel:`Calibration` back off, and a calibration that already has one cannot be reset to :guilabel:`New` or deleted."
+msgstr ":guilabel:`Tanúsítvány száma`: egy csak olvasható, folyamatos (hézagmentes) tanúsítványszám, amelyet a rendszer egy erre dedikált sorszámozásból automatikusan hozzárendel, amint a |RO| a :guilabel:`Javítás alatt` állapotba kerül. Ez soha nem adható meg vagy szerkeszthető kézzel, a :guilabel:`Kalibráció` jelölés eltávolításával sem törölhető, és egy már számmal rendelkező kalibráció nem állítható vissza :guilabel:`Új` állapotba, és nem is törölhető."
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:413
 msgid ":guilabel:`Certificate`: an uploaded PDF or scan of the issued certificate."
 msgstr ":guilabel:`Tanúsítvány`: a kiadott tanúsítvány feltöltött PDF-je vagy szkennelt képe."
 
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:411
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:414
 msgid ":guilabel:`Signed By` and :guilabel:`Sign Date`, and a :guilabel:`Customer Signature` field."
-msgstr ":guilabel:`Aláírta` és :guilabel:`Aláírás dátuma`, valamint egy :guilabel:`Vevő aláírása` mező."
-
-#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:412
-msgid ":guilabel:`Work Performed` and :guilabel:`Calibration Notes` text fields."
-msgstr ":guilabel:`Elvégzett munka` és :guilabel:`Kalibrálási megjegyzések` szöveges mezők."
+msgstr ":guilabel:`Aláíró` és :guilabel:`Aláírás dátuma`, valamint egy :guilabel:`Ügyfél aláírása` mező."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:415
-msgid "The certificate number is a regulatory requirement: it is issued exactly once per calibration and cannot be changed by a user, even a database administrator, through the form."
-msgstr "A tanúsítványszám szabályozási követelmény: kalibrálásonként pontosan egyszer kerül kiadásra, és felhasználó – még adatbázis-rendszergazda sem – nem módosíthatja az űrlapon keresztül."
+msgid ":guilabel:`Work Performed` and :guilabel:`Calibration Notes` text fields."
+msgstr ":guilabel:`Elvégzett munka` és :guilabel:`Kalibrációs megjegyzések` szöveges mezők."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:418
-msgid "Click :guilabel:`Print Worksheet`, in the header, to print the calibration worksheet report for this |RO| (a plain repair prints the standard repair order report instead)."
-msgstr "Kattintson a fejlécben a :guilabel:`Munkalap nyomtatása` gombra a |RO| kalibrálási munkalap jelentésének kinyomtatásához (egyszerű javítás esetén a szokásos javítási megbízás jelentés kerül nyomtatásra)."
+msgid "The certificate number is a regulatory requirement: it is issued exactly once per calibration and cannot be changed by a user, even a database administrator, through the form."
+msgstr "A tanúsítványszám szabályozási követelmény: a rendszer kalibrációnként pontosan egyszer adja ki, és az űrlapon keresztül egyetlen felhasználó sem módosíthatja, még az adatbázis-rendszergazda sem."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:421
+msgid "Click :guilabel:`Print Worksheet`, in the header, to print the calibration worksheet report for this |RO| (a plain repair prints the standard repair order report instead)."
+msgstr "Kattintson a fejlécben a :guilabel:`Munkalap nyomtatása` gombra a |RO| kalibrációs munkalapjának kinyomtatásához (egyszerű javításnál a gomb ehelyett a javítási rendelés szokásos jelentését nyomtatja ki)."
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:424
 msgid "The :guilabel:`Calibrations` menu, under the eYssen *Equipment Management* app (:menuselection:`Equipment Management --> Measuring Devices --> Calibrations`), lists every calibration |RO| across all measuring devices, with its reference, certificate number, equipment, calibration date, quality, result, customer, and status. From there, the search filters :guilabel:`Accredited`, :guilabel:`Werks`, and :guilabel:`Voided Certificate` (cancelled repairs that still carry an issued certificate number) can be used to narrow down the list, and results can be grouped by :guilabel:`Calibration Quality`."
-msgstr "A :guilabel:`Kalibrálások` menü, az eYssen *Berendezéskezelés* alkalmazás alatt (:menuselection:`Berendezéskezelés --> Mérőeszközök --> Kalibrálások`), az összes mérőeszköz minden kalibrálási |RO|-ját felsorolja, a hivatkozásukkal, tanúsítványszámukkal, berendezésükkel, kalibrálás dátumával, minőségével, eredményével, ügyfelükkel és állapotukkal együtt. Innen a :guilabel:`Akkreditált`, :guilabel:`Werks` és :guilabel:`Érvénytelenített tanúsítvány` (olyan törölt javítások, amelyeknek még van kiadott tanúsítványszáma) keresési szűrők használhatók a lista szűkítésére, az eredmények pedig a :guilabel:`Kalibrálás minősége` szerint csoportosíthatók."
+msgstr "Az eYssen *Eszközkezelés* alkalmazás :guilabel:`Kalibrációk` menüje (:menuselection:`Eszközkezelés --> Mérőeszközök --> Kalibrációk`) az összes mérőeszköz minden kalibrációs |RO|-ját felsorolja a hivatkozásával, tanúsítványszámával, eszközével, kalibrációs dátumával, minőségével, eredményével, ügyfelével és állapotával együtt. Innen az :guilabel:`Akkreditált`, a :guilabel:`Werks (gyári)` és az :guilabel:`Érvénytelenített tanúsítvány` (visszavont javítások, amelyeknek továbbra is van kiadott tanúsítványszáma) keresési szűrővel szűkíthető a lista, az eredmények pedig :guilabel:`Kalibráció minősége` szerint csoportosíthatók."
+
+#: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:432
+msgid "The same list opens from the :guilabel:`Calibrations` smart button of a measuring device, limited to that device. When searching by :guilabel:`Equipment`, a device is also found by its serial number, internal ID, or equipment ID."
+msgstr "Ugyanez a lista nyílik meg egy mérőeszköz :guilabel:`Kalibrációk` okos gombjáról is, az adott eszközre szűkítve. Az :guilabel:`Eszköz` szerinti keresés az eszközt a sorozatszáma, a belső azonosítója vagy az eszközazonosítója alapján is megtalálja."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:37
 msgid "The :guilabel:`Default Nomenclature` is active for every company out of the box, so the barcode actions using |UPC| and |EAN| detailed in the :ref:`default nomenclature list <barcode/operations/default-nomenclature-list>` are available for use immediately, with no configuration step required; Odoo also automatically handles |UPC|/|EAN| conversion."

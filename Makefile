@@ -55,7 +55,7 @@ endif
 
 #=== Standard rules ===#
 
-.PHONY: all help clean html latexpdf gettext fast static test review sitemap robots
+.PHONY: all help clean html latexpdf gettext fast static test review sitemap robots compile-mo
 
 # In first position to build the documentation from scratch by default
 all: html
@@ -97,10 +97,13 @@ robots:
 	cp html_extra/robots.txt $(BUILD_DIR)/html/robots.txt
 	@echo "robots.txt written to $(BUILD_DIR)/html/robots.txt"
 
+# Stop the build when msgfmt rejects a catalog. Otherwise its errors only scroll by in the log:
+# msgfmt may write no .mo or one that still holds the bad entry, and Sphinx then compiles outdated
+# catalogs again with Babel, which accepts some catalogs that msgfmt rejects.
 compile-mo:
 	@find locale -name "*.po" | while read po; do \
 		mo="$${po%.po}.mo"; \
-		msgfmt -o "$$mo" "$$po"; \
+		msgfmt -o "$$mo" "$$po" || { echo "ERROR: msgfmt failed for $$po" >&2; exit 1; }; \
 	done
 
 # To call *after* `make html`
@@ -113,9 +116,13 @@ latexpdf:
 	cp $(BUILD_DIR)/latex/*.pdf $(BUILD_DIR)/html/
 	@echo "Build finished."
 
+# LANGUAGE=C: with `language` unset, Sphinx looks up catalogs through the shell locale, and under
+# LANG=hu_HU it would apply the Hungarian ones (math blocks, image alt texts) before extracting the
+# messages, so the templates would contain Hungarian msgids. -E: re-read every source, so that no
+# doctree cached by an earlier run (possibly under a Hungarian locale) is reused.
 gettext:
 	@echo "Generating translatable files..."
-	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b gettext $(SOURCE_DIR) locale/sources
+	LANGUAGE=C $(SPHINX_BUILD) -E -c $(CONFIG_DIR) -b gettext $(SOURCE_DIR) locale/sources
 	@echo "Generation finished."
 
 $(HTML_BUILD_DIR)/_static/style.css: extensions/odoo_theme/static/style.scss extensions/odoo_theme/static/scss/*.scss

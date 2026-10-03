@@ -1534,7 +1534,7 @@ msgstr "El campo *Uso del paquete* en los formularios pertinentes tiene la opci�
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:25
 msgid "*Package type* is an optional feature used for :doc:`calculating shipping cost <../../shipping_receiving/setup_configuration>`, based on real shipping weight. Create package types to include the weight of the package itself (e.g. boxes, pallets, other shipping containers) in shipping cost calculations."
-msgstr " La función opcional *Tipo de paquete* se usa para :doc:`calcular el coste de envío <../../shipping_receiving/setup_configuration>`, según el peso real del envío. Cree tipos de paquetes para incluir el peso del paquete (por ejemplo, de cajas, palés y otros contenedores de envío) en los cálculos de costes de envío."
+msgstr "La función opcional *Tipo de paquete* se usa para :doc:`calcular el coste de envío <../../shipping_receiving/setup_configuration>`, según el peso real del envío. Cree tipos de paquetes para incluir el peso del paquete (por ejemplo, de cajas, palés y otros contenedores de envío) en los cálculos de costes de envío."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:31
 msgid "While packages are commonly used in the :doc:`three-step delivery route <../../shipping_receiving/daily_operations/delivery_three_steps>`, they can be used in any workflow involving storable products."
@@ -2670,7 +2670,7 @@ msgstr "Rastrea el coste de los artículos entrantes y salientes en tiempo real 
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:259
 msgid "This method is arguably the most accurate inventory valuation method for a variety of reasons, but it is highly sensitive to input data and human error."
-msgstr " En teoría, este método de valoración de inventario es el más preciso por varios motivos, pero es muy delicado con los datos introducidos y es posible cometer errores."
+msgstr "En teoría, este método de valoración de inventario es el más preciso por varios motivos, pero es muy delicado con los datos introducidos y es posible cometer errores."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:287
 msgid "$16"
@@ -6910,7 +6910,7 @@ msgstr "Para entender la *secuencia de ubicación* con la estrategia de remoció
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:19
 msgid "A product is stored in the following locations: `Shelf A/Pallet`, `Shelf A/Rack 1`, and `Shelf A/Rack 2`."
-msgstr " Un producto se almacena en las siguientes ubicaciones: `Estante A/Pallet`, `Estante A/Estantería 1`, and `Estante A/Estantería 2`."
+msgstr "Un producto se almacena en las siguientes ubicaciones: `Estante A/Pallet`, `Estante A/Estantería 1` y `Estante A/Estantería 2`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:28
 msgid "The sublocation, `Pallet`, is on the ground level. Products stored here are easier to retrieve, compared to requiring a forklift to reach `Rack 1` and `Rack 2`. The storage locations were strategically named in alphabetic order, based on ease of access."
@@ -14706,7 +14706,7 @@ msgstr "**Fabricar sobre pedido**: la fecha límite de la |MO| es la *fecha de e
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:30
 msgid "**Replenishment**: the |MO| deadline is *today + Manufacturing Lead Time*."
-msgstr "**Reabastecimiento**: la fecha límite de la |MO| es *hoy + plazo de entrega de fabricación*."
+msgstr "**Reabastecimiento**: la fecha límite de la |MO| es *hoy + plazo de fabricación*."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:31
 msgid "**Manually created MO**: the deadline field remains empty."
@@ -26262,11 +26262,11 @@ msgstr ":guilabel:`Producciones retrasadas`: la |MO| está retrasada (véase má
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:56
 msgid "An |MO| is considered *late* when it is confirmed or in progress, and its deadline has already passed, or its computed end date falls after the deadline. Late |MOs| are highlighted in red on list views."
-msgstr "Se considera que una |MO| está *retrasada* cuando está confirmada o en progreso, y su fecha límite ya ha pasado, o su fecha de fin calculada cae después de la fecha límite. Las |MOs| retrasadas se resaltan en rojo en las vistas de lista."
+msgstr "Se considera que una |MO| está *retrasada* cuando está confirmada o en progreso, y su fecha límite ya ha pasado, o su fecha de finalización calculada cae después de la fecha límite. Las |MOs| retrasadas se resaltan en rojo en las vistas de lista."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:69
 msgid "If the |MO| has a scheduled end date after September 17th, it is considered late, and its deadline is highlighted in red."
-msgstr "Si la |MO| tiene una fecha de fin programada posterior al 17 de septiembre, se considera retrasada, y su fecha límite se resalta en rojo."
+msgstr "Si la |MO| tiene una fecha de finalización programada posterior al 17 de septiembre, se considera retrasada, y su fecha límite se resalta en rojo."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:83
 msgid "To set the |OEE| target for a work center, navigate to :menuselection:`Manufacturing app --> Configuration --> Work Centers`, and select a work center. On the :guilabel:`General Information` tab, enter a numerical value of `100.00` or less in the :guilabel:`OEE Target` field."

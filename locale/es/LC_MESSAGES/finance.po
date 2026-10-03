@@ -443,10 +443,6 @@ msgstr "La función se divide en dos capas:"
 msgid "**Online Bank Sync** (``account_bank_sync``) provides the connections, the remote accounts, the journal mapping, the scheduled import, and the secure storage of the provider credentials."
 msgstr "**Sincronización bancaria en línea** (``account_bank_sync``) proporciona las conexiones, las cuentas remotas, la asignación de diarios, la importación programada y el almacenamiento seguro de las credenciales del proveedor."
 
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:14
-msgid "A **provider module** implements one specific institution or aggregator. Two are available:"
-msgstr "Un **módulo de proveedor** implementa una institución o agregador específico. Hay dos disponibles:"
-
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:16
 msgid "**Nyíltbankolás Partner** (``account_bank_sync_bankszamlakivonat``) — a multi-bank aggregator covering the Hungarian banks through the `bankszamlakivonat.hu` service."
 msgstr "**Nyíltbankolás Partner** (``account_bank_sync_bankszamlakivonat``): un agregador multibanco que cubre los bancos húngaros a través del servicio `bankszamlakivonat.hu`."
@@ -487,10 +483,6 @@ msgstr "Lee el estado y los resultados de la sincronización. No tiene acceso a 
 msgid ":guilabel:`Bank Sync / Manager`"
 msgstr ":guilabel:`Sincronización bancaria / Gestor`"
 
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:42
-msgid "Configure connections, accounts, and the journal mapping. Required to see the :guilabel:`Bank Sync` menu."
-msgstr "Configura las conexiones, las cuentas y la asignación de diarios. Es necesario para ver el menú :guilabel:`Sincronización bancaria`."
-
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:44
 msgid ":guilabel:`Bank Sync / Payment Approver`"
 msgstr ":guilabel:`Sincronización bancaria / Aprobador de pagos`"
@@ -502,10 +494,6 @@ msgstr "Aprueba y envía los pagos salientes."
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:46
 msgid ":guilabel:`Bank Sync / Admin`"
 msgstr ":guilabel:`Sincronización bancaria / Administrador`"
-
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:47
-msgid "Read and write the provider credentials and secrets."
-msgstr "Lee y escribe las credenciales y los secretos del proveedor."
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:52
 msgid "Create a connection"
@@ -527,33 +515,13 @@ msgstr ":guilabel:`Proveedor`: el módulo de proveedor que gestiona esta institu
 msgid ":guilabel:`Environment`: :guilabel:`Sandbox` for testing, :guilabel:`Production` for live data."
 msgstr ":guilabel:`Entorno`: :guilabel:`Entorno de pruebas` para pruebas, :guilabel:`Producción` para datos reales."
 
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:59
-msgid "The :guilabel:`Credentials` section, whose fields depend on the selected provider. Credentials are only visible to the :guilabel:`Bank Sync / Admin` group."
-msgstr "La sección :guilabel:`Credenciales`, cuyos campos dependen del proveedor seleccionado. Las credenciales solo son visibles para el grupo :guilabel:`Sincronización bancaria / Administrador`."
-
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:62
-msgid "The :guilabel:`Capabilities` section is filled in by the provider module and tells you what the connection supports: :guilabel:`Supports statement pull`, :guilabel:`Supports FX rates`, :guilabel:`Supports webhooks`, and :guilabel:`Supports payouts`."
-msgstr "La sección :guilabel:`Capacidades` la completa el módulo de proveedor e indica lo que admite la conexión: :guilabel:`Admite la descarga de extractos`, :guilabel:`Admite tipos de cambio`, :guilabel:`Admite webhooks` y :guilabel:`Admite pagos`."
-
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:66
-msgid "Click :guilabel:`Test connection` to verify the credentials. The :guilabel:`Status` bar moves from :guilabel:`Draft` to :guilabel:`Connected`; if the provider refuses the credentials, the status becomes :guilabel:`Error` and the reason is shown in :guilabel:`Last error`. A connection whose authorization has run out is set to :guilabel:`Expired` and must be renewed with the provider."
-msgstr "Haga clic en :guilabel:`Probar conexión` para verificar las credenciales. La barra de :guilabel:`Estado` pasa de :guilabel:`Borrador` a :guilabel:`Conectado`; si el proveedor rechaza las credenciales, el estado cambia a :guilabel:`Error` y el motivo se muestra en :guilabel:`Último error`. Una conexión cuya autorización haya caducado se marca como :guilabel:`Expirado` y debe renovarse con el proveedor."
-
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:84
 msgid "Nyíltbankolás Partner"
 msgstr "Nyíltbankolás Partner"
 
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:86
-msgid "The aggregator connects to the Hungarian banks on your behalf. Enter the :guilabel:`Entity id` and the :guilabel:`API key` you received from the service, then click :guilabel:`Get connection code`. Odoo requests a connection code, which is displayed in the :guilabel:`Connection code` field: use it on the provider's site to authorize your bank accounts. Once the authorization is done, click :guilabel:`Refresh / discover` to pull the list of authorized accounts into Odoo."
-msgstr "El agregador se conecta a los bancos húngaros en su nombre. Introduzca el :guilabel:`ID de entidad` y la :guilabel:`Clave de API` que recibió del servicio y haga clic en :guilabel:`Obtener código de conexión`. Odoo solicita un código de conexión, que se muestra en el campo :guilabel:`Código de conexión`: úselo en el sitio del proveedor para autorizar sus cuentas bancarias. Una vez realizada la autorización, haga clic en :guilabel:`Actualizar / descubrir` para importar a Odoo la lista de cuentas autorizadas."
-
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:95 ../../content/applications/finance/accounting/bank/statement_import.rst:33
 msgid "Wise"
 msgstr "Wise"
-
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:97
-msgid "Enter the :guilabel:`Wise profile id` and the :guilabel:`API token`. For payouts, Wise also requires a :guilabel:`Private key` used to sign strong-customer-authentication challenges, and for webhook delivery the :guilabel:`Webhook public key` published by Wise for the chosen environment. Use :guilabel:`Subscribe webhooks` to register Odoo with Wise so that new transactions trigger an immediate refresh, and :guilabel:`Unsubscribe webhooks` to stop them."
-msgstr "Introduzca el :guilabel:`Id de perfil de Wise` y el :guilabel:`token de API`. Para los pagos salientes, Wise también requiere una :guilabel:`Clave privada` que se usa para firmar los desafíos de autenticación reforzada del cliente y, para la entrega de webhooks, la :guilabel:`Clave pública del webhook` que Wise publica para el entorno elegido. Use :guilabel:`Suscribir webhooks` para registrar Odoo en Wise de forma que las nuevas transacciones activen una actualización inmediata, y :guilabel:`Cancelar suscripción de webhooks` para detenerlas."
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:104
 msgid "Webhook events are delivered to `/bank_sync/webhook/<provider>` on your database. Signature verification fails closed: an event that cannot be verified is rejected. Ask your system administrator to make sure this address is reachable from the internet."
@@ -571,18 +539,6 @@ msgstr "En una conexión ya conectada, haga clic en :guilabel:`Descubrir cuentas
 msgid ":guilabel:`Journal`: the bank journal in which the transactions are booked. **Nothing is imported until a journal is set.**"
 msgstr ":guilabel:`Diario`: el diario bancario en el que se registran las transacciones. **No se importa nada hasta que se configure un diario.**"
 
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:119
-msgid ":guilabel:`Sync enabled`: activates the scheduled import for this account."
-msgstr ":guilabel:`Sincronización habilitada`: activa la importación programada para esta cuenta."
-
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:120
-msgid ":guilabel:`Sync every`: the polling interval (for example, 1 hour)."
-msgstr ":guilabel:`Sincronizar cada`: el intervalo de consulta (por ejemplo, 1 hora)."
-
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:122
-msgid "The list view shows :guilabel:`Last successful run` and a colored :guilabel:`Last state` badge (:guilabel:`Ok`, :guilabel:`Error`, :guilabel:`Stale`), so you can spot an account that has stopped importing at a glance."
-msgstr "La vista de lista muestra la :guilabel:`Última ejecución correcta` y una insignia de color :guilabel:`Último estado` (:guilabel:`Ok`, :guilabel:`Error`, :guilabel:`Obsoleto`), de forma que puede identificar de un vistazo una cuenta que dejó de importar."
-
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:139
 msgid "Run a synchronization"
 msgstr "Ejecutar una sincronización"
@@ -594,10 +550,6 @@ msgstr "Hay tres formas en las que se puede ejecutar una sincronización:"
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:143
 msgid "**Scheduled**: the *Online Bank Sync: pull statements* scheduled action checks every 15 minutes which accounts are due and imports them. This scheduled action is **disabled by default**; ask your system administrator to enable it once the mapping is in place."
 msgstr "**Programada**: la acción programada *Sincronización bancaria en línea: obtener extractos* comprueba cada 15 minutos qué cuentas están pendientes y las importa. Esta acción programada está **deshabilitada de forma predeterminada**; pida a su administrador de sistemas que la habilite una vez que la asignación esté configurada."
-
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:146
-msgid "**Manual**: click :guilabel:`Sync now` on the account form, or on the journal card of the :guilabel:`Accounting Dashboard`."
-msgstr "**Manual**: haga clic en :guilabel:`Sincronizar ahora` en el formulario de la cuenta o en la tarjeta del diario del :guilabel:`tablero de Contabilidad`."
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:148
 msgid "**Webhook-triggered**: for providers supporting webhooks, an incoming event flags the account and the next scheduled run imports it immediately, even when periodic polling is off."
@@ -1563,41 +1515,9 @@ msgstr "Importar el mismo archivo dos veces es seguro. Cada transacción se guar
 msgid "Standard statement files"
 msgstr "Archivos de extracto estándar"
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:91
-msgid "Statement files in a standard format are imported with the generic importer, which reads every format whose module is installed. For Spanish banks, :ref:`install <general/install>` the *Importación de extractos bancarios españoles (Norma 43)* module to import the *AEB Norma 43* files (:file:`.n43`, also called *Cuaderno 43*) that all Spanish banks provide."
-msgstr "Los archivos de extracto en un formato estándar se importan con el importador genérico, que lee todos los formatos cuyo módulo está instalado. Para los bancos españoles, :ref:`instale <general/install>` el módulo *Importación de extractos bancarios españoles (Norma 43)* para importar los ficheros *AEB Norma 43* (:file:`.n43`, también llamados *Cuaderno 43*) que proporcionan todos los bancos españoles."
-
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:96
-msgid "Go to :menuselection:`Accounting --> Accounting --> Import Statement`, or click the import button of the bank journal on the Accounting dashboard."
-msgstr "Vaya a :menuselection:`Contabilidad --> Contabilidad --> Importar extracto` o haga clic en el botón de importación del diario de banco en el tablero de Contabilidad."
-
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:98
-msgid "Select the statement file, and click :guilabel:`Import and View`."
-msgstr "Seleccione el archivo de extracto y haga clic en :guilabel:`Importar y Ver`."
-
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:100
-msgid "A bank statement is created for each account of the file, in the bank journal whose bank account matches the account number of the file. The file is attached to the statement. Transactions that were already imported are not created a second time."
-msgstr "Se crea un extracto bancario por cada cuenta del archivo, en el diario de banco cuya cuenta bancaria coincide con el número de cuenta del archivo. El archivo se adjunta al extracto. Las transacciones ya importadas no se crean una segunda vez."
-
 #: ../../content/applications/finance/accounting/bank/statement_import.rst:104
 msgid "The bank journal form has a :guilabel:`Norm 43 options` section (:guilabel:`Advanced Settings` tab):"
 msgstr "El formulario del diario de banco tiene una sección :guilabel:`Opciones de Norma 43` (pestaña :guilabel:`Ajustes avanzados`):"
-
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:107
-msgid ":guilabel:`Date type for N43 Import`: use the :guilabel:`Value Date` or the :guilabel:`Operation Date` of the file as the transaction date;"
-msgstr ":guilabel:`Tipo de fecha para importación N43`: usar la :guilabel:`Fecha valor` o la :guilabel:`Fecha de operación` del archivo como fecha de la transacción;"
-
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:109
-msgid ":guilabel:`Partner search for N43 import`: for some banks (CaixaBank, Sabadell, Santander), the partner of the transaction is looked up from the data of the file;"
-msgstr ":guilabel:`Búsqueda de empresa para importación N43`: para algunos bancos (CaixaBank, Sabadell, Santander), la empresa de la transacción se busca a partir de los datos del archivo;"
-
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:111
-msgid ":guilabel:`Exclude pattern for N43 import`: a regular expression; the lines of the file matching it are not imported."
-msgstr ":guilabel:`Patrón de exclusión para importación N43`: una expresión regular; las líneas del archivo que coinciden con ella no se importan."
-
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:115
-msgid "The import checks the control totals of the Norma 43 file (number of records, debit and credit totals, final balance) and stops with an error if the file is incomplete."
-msgstr "La importación comprueba los totales de control del fichero Norma 43 (número de registros, totales del debe y del haber, saldo final) y se detiene con un error si el fichero está incompleto."
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:5
 msgid "Importing transactions from your bank statements allows keeping track of bank account transactions and reconciling them with the ones recorded in your accounting."
@@ -4873,7 +4793,7 @@ msgstr ":ref:`Otros métodos de valuación de inventario <inventory/warehouses_s
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:40
 msgid "To use average cost inventory valuation on a product, navigate to :menuselection:`Inventory --> Configuration --> Product Categories` and select the category that will be using |AVCO|. On the product category page, set :guilabel:`Costing Method` to `Average Cost (AVCO)` and :guilabel:`Inventory Valuation` to `Automated`."
-msgstr "Para utilizar la valuación del coste promedio del inventario en un producto, vaya a :menuselection:`Inventario --> Configuración --> Categorías de productos` y seleccione la categoría para la que usará la valuación. En la página de la categoría del producto, configure el :guilabel:`Método de coste` como `Coste promedio (AVCO)` y la :guilabel:`Valoración del inventario` en `Automático`."
+msgstr "Para utilizar la valuación del coste promedio del inventario en un producto, vaya a :menuselection:`Inventario --> Configuración --> Categorías de producto` y seleccione la categoría que utilizará |AVCO|. En la página de la categoría del producto, configure el :guilabel:`Método de coste` como `Coste promedio (AVCO)` y la :guilabel:`Valoración del inventario` en `Automatizado`."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:46
 msgid ":doc:`Inventory valuation configuration <../../../inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config>`"
@@ -4900,7 +4820,7 @@ msgid ""
 "Avg~Cost = \\frac{(Old~Qty \\times Old~Avg~Cost) + (Incoming~Qty \\times Purchase~Price)}{Final~Qty}\n"
 "\n"
 msgstr ""
-"Coste~promedio = \\frac{(Cantidad~anterior \\times Coste~promedio~anterior) + (Cantidad~entrante \\times Precio~de compra)}{Cantidad~final}\n"
+"Coste~promedio = \\frac{(Cantidad~anterior \\times Coste~promedio~anterior) + (Cantidad~entrante \\times Precio~de~compra)}{Cantidad~final}\n"
 "\n"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:66
@@ -4973,7 +4893,7 @@ msgstr "8 * $10"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:97 ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:293 ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:295
 msgid "$80"
-msgstr "80 €"
+msgstr "$80"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:97 ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:293 ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:295 ../../content/applications/finance/accounting/payments/follow_up.rst:50
 msgid "8"
@@ -5061,11 +4981,11 @@ msgstr "Para verificar esto en Odoo, en la aplicación *Compra*, ordene `8` unid
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:126
 msgid "In the table's :guilabel:`Product Category` field in the :guilabel:`General Information` tab of the product form, click the :icon:`oi-arrow-right` :guilabel:`(Internal link)` icon to edit the product category. Set the :guilabel:`Costing Method` to `Average Cost (AVCO)` and :guilabel:`Inventory Valuation` to `Automated`."
-msgstr "En el campo :guilabel:`Categoría de producto` de la tabla, en la pestaña :guilabel:`Información general` del formulario del producto, haga clic en el icono :icon:`oi-arrow-right` :guilabel:`(Enlace interno)` para editar la categoría de producto. Establezca el :guilabel:`Método de coste` en `Coste promedio (AVCO)` y la :guilabel:`Valoración del inventario` en `Automatizada`."
+msgstr "En el campo :guilabel:`Categoría de producto` de la mesa, en la pestaña :guilabel:`Información general` del formulario del producto, haga clic en el icono :icon:`oi-arrow-right` :guilabel:`(Enlace interno)` para editar la categoría de producto. Establezca el :guilabel:`Método de coste` en `Coste promedio (AVCO)` y la :guilabel:`Valoración del inventario` en `Automatizado`."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:131
 msgid "Then, return to the purchase order. Click :guilabel:`Confirm Order`, and click :guilabel:`Receive Products` to confirm receipt."
-msgstr "Luego, regrese a la orden de compra. Haga clic en :guilabel:`Confirmar orden` y haga clic en :guilabel:`Recibir productos` para confirmar la recepción.   "
+msgstr "Luego, regrese a la orden de compra. Haga clic en :guilabel:`Confirmar pedido` y haga clic en :guilabel:`Recibir productos` para confirmar la recepción."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:134
 msgid "Next, check the inventory valuation record generated by the product reception by navigating to :menuselection:`Inventory --> Reporting --> Valuation`. Select the drop-down for `Table`, and view the :guilabel:`Total Value` column for the *valuation layer* (:dfn:`inventory valuation at a specific point in time = on-hand quantity * unit price`). The 8 tables in-stock are worth $80."
@@ -5141,7 +5061,7 @@ msgstr "La valuación interna del coste no cambia."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:204
 msgid "The above :ref:`example table <inventory/avg_cost/math_table>` is updated as follows:"
-msgstr "La :ref:`tabal de ejemplo <inventory/avg_cost/math_table>` de arriba se actualiza de la siguiente manera: "
+msgstr "La :ref:`tabla de ejemplo <inventory/avg_cost/math_table>` de arriba se actualiza de la siguiente manera:"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:207
 msgid "Qty*Avg Cost"
@@ -5161,11 +5081,11 @@ msgstr "1"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:214
 msgid "In other words, returns to vendors are perceived by Odoo as another form of a product exiting the warehouse. To Odoo, because the table is valued at $12 per unit, the inventory value is reduced by `$12` when the product is returned; the initial purchase price of `$10` is unrelated to the table's average cost."
-msgstr "En otras palabras, Odoo percibe las devoluciones a los proveedores como otra forma de salida de un producto del almacén. Para Odoo, puesto que la mesa está valorada en $12 por unidad, el valor de inventario se reduce en `$12` cuando se regresa el producto. El precio inicial de compra de `$10` no está relacionado con el coste promedio de la tabla."
+msgstr "En otras palabras, Odoo percibe las devoluciones a los proveedores como otra forma de salida de un producto del almacén. Para Odoo, puesto que la mesa está valorada en $12 por unidad, el valor de inventario se reduce en `$12` cuando se devuelve el producto. El precio inicial de compra de `$10` no está relacionado con el coste promedio de la mesa."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:220
 msgid "To return a single table that was purchased for `$10`, navigate to the receipt in the *Inventory* app for the :ref:`8 tables purchased in Exercise 1 <inventory/avg_cost/ex-1>` by going to the :guilabel:`Inventory Overview`, clicking on :guilabel:`Receipts`, and selecting the desired receipt."
-msgstr "Para regresar una sola mesa que se compró a `$10`, vaya al recibo en la aplicación *Inventario* de las :ref:`8 mesas compradas en el ejercicio 1 <inventory/avg_cost/ex-1>` en la :guilabel:`vista general de Inventario` y haga clic en :guilabel:`Recibos` y seleccione el recibo que desea. "
+msgstr "Para devolver una sola mesa que se compró a `$10`, vaya en la aplicación *Inventario* a la recepción de las :ref:`8 mesas compradas en el ejercicio 1 <inventory/avg_cost/ex-1>`: abra el :guilabel:`Resumen de inventario`, haga clic en :guilabel:`Recepciones` y seleccione la recepción que desea."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:225
 msgid "Then, click :guilabel:`Return` on the validated delivery order, and modify the quantity to `1` in the reverse transfer window. This creates an outgoing shipment for the table. Select :guilabel:`Validate` to confirm the outgoing shipment."
@@ -5337,7 +5257,7 @@ msgstr "Se **recibieron** `$80` en mesas (se hace un **cargo** a la cuenta de *V
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:337
 msgid "`$80` must be paid **out** for received goods (**credit** the *Stock Input* account `$80`)."
-msgstr "se debe **pagar** `$80` por los productos recibidos (es decir, es un **ingreso** para la cuenta de *Entrada de existencias* por `$80`)."
+msgstr "se debe **pagar** `$80` por los productos recibidos (se hace un **abono** a la cuenta de *Entrada de existencias* por `$80`)."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:340 ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:403
 msgid "In Odoo"
@@ -5365,7 +5285,7 @@ msgstr "A continuación, reciba el envío en la aplicación *Compra* o *Inventar
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:378
 msgid "Click on the line for 8 tables. This accounting journal entry shows that when the 8 tables were received, the `Stock Valuation` account increased by `$80`. Conversely, the **Stock Input** account (set as `Stock Interim (Received)` account by default) is credited `$80`."
-msgstr "Haga clic en la línea correspondiente a las 8 mesas. Este asiento contable muestra que al recibir las mesas, la cuenta `Valuación de inventario` aumentó `$80`. Por otro lado, se abonaron `$80` a la cuenta **Entrada de existencias** (configurada de forma predeterminada como la cuenta `Provisional de existencias (recibido)`)."
+msgstr "Haga clic en la línea correspondiente a las 8 mesas. Este asiento contable muestra que al recibir las mesas, la cuenta `Valoración de stock` aumentó `$80`. Por otro lado, se abonaron `$80` a la cuenta **Entrada de existencias** (configurada de forma predeterminada como la cuenta `Stock provisional (Recibido)`)."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:391
 msgid "Accounts balanced at received vendor bill"
@@ -5389,15 +5309,15 @@ msgstr "Se abonan `$80` a las **cuentas por pagar**. Esta cuenta almacena el imp
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:405
 msgid "Once the vendor requests payment, navigate to the :menuselection:`Purchase --> Orders --> Purchase Orders` and select the :abbr:`PO (Purchase Order)` for 8 tables. Inside the :abbr:`PO (Purchase Order)`, select :guilabel:`Create Bill`."
-msgstr "Una vez que el proveedor solicite el pago, vaya a :menuselection:`Compra --> Órdenes --> Órdenes de compra` y seleccione la :abbr:`OC (Orden de compra)` de 8 mesas. Dentro de la :abbr:`OC (Orden de compra)`, seleccione :guilabel:`Crear factura`."
+msgstr "Una vez que el proveedor solicite el pago, vaya a :menuselection:`Compra --> Pedidos --> Pedidos de compra` y seleccione la :abbr:`OC (Orden de compra)` de 8 mesas. Dentro de la :abbr:`OC (Orden de compra)`, seleccione :guilabel:`Crear factura`."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:409
 msgid "Switch to the :guilabel:`Journal Items` tab to view how `$80` is transferred from the holding account, `Stock Interim (Received)` to `Accounts Payable`. :guilabel:`Confirm` the bill to record the payment to the vendor."
-msgstr "Vaya a la pestaña :guilabel:`Apuntes contables` para visualizar cómo se transfieren `$80` de la cuenta de retención, `Provisional de existencias (recibido)`, a `Cuentas por pagar`. :guilabel:`Confirmar` la factura para registrar el pago al proveedor."
+msgstr "Vaya a la pestaña :guilabel:`Apuntes contables` para visualizar cómo se transfieren `$80` de la cuenta de retención, `Stock provisional (Recibido)`, a `Cuenta por pagar`. Haga clic en :guilabel:`Confirmar` en la factura para registrar el pago al proveedor."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:422
 msgid "On product delivery"
-msgstr "Al recibir un producto"
+msgstr "Al entregar un producto"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:424
 msgid "In the :ref:`above example table <inventory/avg_price/price-table>`, when 10 products are delivered to a customer, the **Stock Input** account is untouched because there are no new products coming in. To put it simply:"
@@ -5445,7 +5365,7 @@ msgstr "Cargar `$2` adicionales a **Entrada de existencias** para compensar la *
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:469
 msgid "Credit **Stock Valuation** `$12` because the item is leaving the stock."
-msgstr "Abonar `$12` a **Entrada de existencias** debido a que el artículo sale de las existencias."
+msgstr "Abonar `$12` a **Valoración de stock** debido a que el artículo sale de las existencias."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:479
 msgid "Once the vendor's refund is received,"
@@ -7531,10 +7451,6 @@ msgstr "las **órdenes de pago** (transferencia SEPA) pagan a los proveedores de
 msgid "**debit orders** (SEPA Direct Debit) collect customer invoices from your customers' bank accounts, based on the direct debit **mandates** signed by the customers."
 msgstr "las **órdenes de cobro** (adeudo directo SEPA) cobran las facturas de cliente desde las cuentas bancarias de sus clientes, en base a los **mandatos** de adeudo directo firmados por los clientes."
 
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:14
-msgid "The features are provided by the *Account Payment Order*, *Account Payment Mode*, *Account Payment Partner*, *Account Banking Mandate*, *Account Banking SEPA Credit Transfer*, and *Account Banking SEPA Direct Debit* modules. :ref:`Install <general/install>` the SEPA modules you need; the other modules are installed with them."
-msgstr "Las funciones las proporcionan los módulos *Account Payment Order*, *Account Payment Mode*, *Account Payment Partner*, *Account Banking Mandate*, *Account Banking SEPA Credit Transfer* y *Account Banking SEPA Direct Debit*. :ref:`Instale <general/install>` los módulos SEPA que necesite; los demás módulos se instalan con ellos."
-
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:25
 msgid "SEPA identifiers"
 msgstr "Identificadores SEPA"
@@ -7571,25 +7487,9 @@ msgstr "Introduzca un nombre, por ejemplo *Transferencia SEPA - Banco X*."
 msgid "Select the :guilabel:`Payment Method`: :guilabel:`SEPA Credit Transfer to suppliers` for payment orders, or :guilabel:`SEPA Direct Debit for customers` for debit orders."
 msgstr "Seleccione el :guilabel:`Método de pago`: :guilabel:`Transferencia de crédito SEPA para proveedores` para las órdenes de pago, o :guilabel:`Débito directo SEPA para clientes` para las órdenes de cobro."
 
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:49
-msgid "In :guilabel:`Link to Bank Account`, select *Fixed* to always use the same bank journal (then select it), or *Variable* to choose the bank journal on each order among the allowed ones."
-msgstr "En :guilabel:`Enlazado a la cuenta bancaria`, seleccione *Fijo* para usar siempre el mismo diario de banco (y selecciónelo), o *Variable* para elegir el diario de banco en cada orden entre los permitidos."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:51
-msgid "Keep :guilabel:`Selectable in Payment Orders` ticked."
-msgstr "Deje marcada la opción :guilabel:`Seleccionable en las órdenes`."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:52
-msgid "In the :guilabel:`Options for Payment Orders` section, set the :guilabel:`Default Payment Execution Date` of the orders and, if needed, tick :guilabel:`Group Transactions in Payment Orders` to pay several invoices of the same partner with one transfer."
-msgstr "En la sección :guilabel:`Opciones para las órdenes`, configure la :guilabel:`Fecha de Ejecución del Pago por defecto` de las órdenes y, si es necesario, marque :guilabel:`Agrupar transacciones en las órdenes de pago` para pagar varias facturas del mismo contacto con una sola transferencia."
-
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:55
 msgid "In the :guilabel:`Select Move Lines to Pay - Default Values` section, set the default filters used to add journal items to the orders, for example :guilabel:`Linked to an Invoice or Refund` and the :guilabel:`Type of Date Filter`."
 msgstr "En la sección :guilabel:`Selección de los apuntes - Valores por defecto`, configure los filtros por defecto utilizados para añadir apuntes contables a las órdenes, por ejemplo :guilabel:`Vinculado a una factura o factura rectificativa` y el :guilabel:`Filtro de tipo de fecha`."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:60
-msgid "The PAIN version used by the SEPA files is set on the payment method, under :menuselection:`Accounting --> Configuration --> Management --> Payment Methods` (:guilabel:`PAIN Version`). Keep the recommended version unless your bank asks for another one."
-msgstr "La versión PAIN utilizada por los ficheros SEPA se configura en el método de pago, en :menuselection:`Contabilidad --> Configuración --> Administración --> Métodos de pago` (:guilabel:`Versión PAIN`). Mantenga la versión recomendada salvo que su banco le pida otra."
 
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:73
 msgid "Contacts and invoices"
@@ -7607,33 +7507,9 @@ msgstr "Mandatos de adeudo directo"
 msgid "A direct debit requires a mandate signed by the customer, attached to the customer's bank account. Go to :menuselection:`Accounting --> Customers --> Banking Mandates`, and click :guilabel:`New`:"
 msgstr "Un adeudo directo requiere un mandato firmado por el cliente, vinculado a la cuenta bancaria del cliente. Vaya a :menuselection:`Contabilidad --> Clientes --> Mandatos bancarios` y haga clic en :guilabel:`Nuevo`:"
 
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:89
-msgid "Select the customer's :guilabel:`Bank Account`."
-msgstr "Seleccione la :guilabel:`Cuenta bancaria` del cliente."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:90
-msgid "Select the :guilabel:`Type of Mandate`: :guilabel:`Recurrent` for regular debits, or :guilabel:`One-Off` for a single debit."
-msgstr "Seleccione el :guilabel:`Tipo de Mandato`: :guilabel:`Recurrente` para adeudos periódicos, o :guilabel:`Único` para un único adeudo."
-
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:92
 msgid "Select the :guilabel:`Scheme`: :guilabel:`Basic (CORE)` for consumers and most customers, or :guilabel:`Enterprise (B2B)` for business customers that agreed to this scheme with their bank."
 msgstr "Seleccione el :guilabel:`Esquema`: :guilabel:`Básico (CORE)` para consumidores y la mayoría de los clientes, o :guilabel:`Empresa (B2B)` para clientes empresariales que hayan acordado este esquema con su banco."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:94
-msgid "Enter the :guilabel:`Date of Signature of the Mandate`, and attach the :guilabel:`Scan of the Mandate`."
-msgstr "Introduzca la :guilabel:`Fecha de la firma del mandato` y adjunte el :guilabel:`Escaneado del mandato`."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:96
-msgid "Click :guilabel:`Validate`."
-msgstr "Haga clic en :guilabel:`Validar`."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:98
-msgid "To get the mandate signed, click :guilabel:`Print` to print the mandate form, or :guilabel:`Send by Email` to send it to the customer."
-msgstr "Para que se firme el mandato, haga clic en :guilabel:`Imprimir` para imprimir el formulario del mandato, o en :guilabel:`Enviar por correo electrónico` para enviarlo al cliente."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:101
-msgid "The :guilabel:`Sequence Type for Next Debit` of a recurrent mandate is managed automatically: it switches from :guilabel:`First` to :guilabel:`Recurring` after the first debit order is sent. A mandate that has not been used for a long time is set to :guilabel:`Expired`."
-msgstr "El :guilabel:`Tipo de secuencia para el próximo cobro` de un mandato recurrente se gestiona automáticamente: pasa de :guilabel:`Inicial` a :guilabel:`Periódico` después de enviar la primera orden de cobro. Un mandato que no se ha utilizado durante mucho tiempo pasa a :guilabel:`Expirado`."
 
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:108
 msgid "Pay vendors with a payment order"
@@ -7651,57 +7527,25 @@ msgstr "Seleccione el :guilabel:`Modo de pago` (y el diario de banco si el modo 
 msgid "Click :guilabel:`Create Payment Lines from Journal Items`, check the filters, then click :guilabel:`Add All Move Lines` to add all the matching open bills, or add them one by one."
 msgstr "Haga clic en :guilabel:`Importar apuntes contables`, compruebe los filtros y haga clic en :guilabel:`Añadir todos los apuntes contables` para añadir todas las facturas de proveedor abiertas que coinciden, o añádalas una a una."
 
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:114
-msgid "Check the :guilabel:`Transactions` tab, then click :guilabel:`Confirm Payments`."
-msgstr "Revise la pestaña :guilabel:`Transacciones` y haga clic en :guilabel:`Confirmar pagos`."
-
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:115
 msgid "Click :guilabel:`Generate Payment File`. The SEPA XML file is attached to the order; download it and upload it in your online banking."
 msgstr "Haga clic en :guilabel:`Generar archivo de pago`. El fichero SEPA XML se adjunta a la orden; descárguelo y súbalo a su banca en línea."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:117
-msgid "Once the bank has accepted the file, click :guilabel:`File Successfully Uploaded`. The payments are posted and reconciled with the bills."
-msgstr "Una vez que el banco haya aceptado el fichero, haga clic en :guilabel:`Fichero subido satisfactoriamente`. Los pagos se contabilizan y se concilian con las facturas."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:121
-msgid "Bills can also be added from the list of vendor bills: select them, then click :menuselection:`Actions --> Add to Payment Order`. The lines are added to the draft payment order of the payment mode, or a new order is created."
-msgstr "También puede añadir facturas desde la lista de facturas de proveedor: selecciónelas y haga clic en :menuselection:`Acciones --> Añadir a orden de pago`. Las líneas se añaden a la orden de pago en borrador del modo de pago, o se crea una nueva orden."
 
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:136
 msgid "Collect customer invoices with a debit order"
 msgstr "Cobrar facturas de cliente con una orden de cobro"
 
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:138
-msgid "The steps are the same as for payment orders, from :menuselection:`Accounting --> Customers --> Debit Orders`, with a payment mode using :guilabel:`SEPA Direct Debit for customers`. Every customer of the order must have a valid mandate on the bank account used; the mandate is proposed automatically on the lines. Customer invoices can also be added with :menuselection:`Actions --> Add to Debit Order`."
-msgstr "Los pasos son los mismos que para las órdenes de pago, desde :menuselection:`Contabilidad --> Clientes --> Órdenes de cobro`, con un modo de pago que use :guilabel:`Débito directo SEPA para clientes`. Cada cliente de la orden debe tener un mandato válido en la cuenta bancaria utilizada; el mandato se propone automáticamente en las líneas. También puede añadir facturas de cliente con :menuselection:`Acciones --> Añadir a orden de cobro`."
-
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:147
 msgid "Payment returns"
 msgstr "Devoluciones de pagos"
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:149
-msgid "When a customer's bank returns a direct debit (for example, insufficient funds or a mandate revoked by the customer), record the return so that the invoice is open again:"
-msgstr "Cuando el banco de un cliente devuelve un adeudo directo (por ejemplo, por falta de fondos o por un mandato revocado por el cliente), registre la devolución para que la factura vuelva a estar abierta:"
 
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:152
 msgid "Go to :menuselection:`Accounting --> Customers --> Customer Payment Returns`, and click :guilabel:`New`."
 msgstr "Vaya a :menuselection:`Contabilidad --> Clientes --> Devoluciones de cobros` y haga clic en :guilabel:`Nuevo`."
 
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:154
-msgid "Select the bank journal and the date of the return."
-msgstr "Seleccione el diario de banco y la fecha de la devolución."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:155
-msgid "In the :guilabel:`Lines` tab, add a line per returned payment: select the returned payment (journal item), the :guilabel:`Amount`, and the :guilabel:`Return reason`. Bank charges can be recorded on the line as well. Alternatively, enter the references and click :guilabel:`Match` to find the payments."
-msgstr "En la pestaña :guilabel:`Líneas`, añada una línea por cada pago devuelto: seleccione el pago devuelto (apunte contable), el :guilabel:`Importe` y el :guilabel:`Motivo de la devolución`. Los gastos bancarios también pueden registrarse en la línea. Como alternativa, introduzca las referencias y haga clic en :guilabel:`Casar referencias` para encontrar los pagos."
-
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:159
 msgid "Click :guilabel:`Confirm`. A journal entry removes the amount from the bank account, and the invoice is open again."
 msgstr "Haga clic en :guilabel:`Confirmar`. Un asiento contable retira el importe de la cuenta bancaria y la factura vuelve a estar abierta."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:162
-msgid "To debit the invoice again in a later debit order, tick :guilabel:`Include move lines from returns` when adding the journal items to the order."
-msgstr "Para volver a cobrar la factura en una orden de cobro posterior, marque :guilabel:`Incluir efectos devueltos` al añadir los apuntes contables a la orden."
 
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:167
 msgid ":doc:`../bank/statement_import`"
@@ -21539,10 +21383,6 @@ msgstr "España"
 msgid "Install the 🇪🇸 **Spanish** :doc:`fiscal localization package <../fiscal_localizations>` to get all the default accounting features of the Spanish localization."
 msgstr "Instale el :doc:`paquete de localización fiscal <../fiscal_localizations>` de **España** 🇪🇸 para obtener todas las funciones contables predeterminadas de la localización española."
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:14
-msgid "Three **Spanish** localizations exist, each with its own pre-configured **PGCE** charts of accounts:"
-msgstr "Hay tres localizaciones en **español**, cada una con sus propios planes contables **PGCE** preconfigurados:"
-
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:16
 msgid "Spain - SMEs (2008);"
 msgstr "España - PYMEs (2008);"
@@ -21550,10 +21390,6 @@ msgstr "España - PYMEs (2008);"
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:17
 msgid "Spain - Complete (2008);"
 msgstr "España - Completo (2008);"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:18
-msgid "Spain - Non-profit entities (2008)."
-msgstr "España - Entidades sin fines lucrativos (2008)."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:20
 msgid "To select the one to use, go to :menuselection:`Accounting --> Configuration --> Settings` and select a package in the :guilabel:`Fiscal Localization` section."
@@ -21571,38 +21407,6 @@ msgstr ":doc:`Documentación sobre la legalidad y el cumplimiento de las factura
 msgid ":doc:`Documentation on e-invoicing’s legality and compliance in the Basque Country <../accounting/customer_invoices/electronic_invoicing/basque_country>`"
 msgstr ":doc:`Documentación sobre la legalidad y el cumplimiento de las facturas electrónicas en el País Vasco <../accounting/customer_invoices/electronic_invoicing/basque_country>`"
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:35
-msgid "Spanish base layer"
-msgstr "Capa base española"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:37
-msgid "The *Spain - Base Layer* module sets up the combination of Spanish localization modules supported in eYssen. :ref:`Install <general/install>` it on top of the Spanish fiscal localization package. It also installs:"
-msgstr "El módulo *Spain - Base Layer* configura la combinación de módulos de localización española admitida en eYssen. :ref:`Instálelo <general/install>` sobre el paquete de localización fiscal español. También instala:"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:41
-msgid "*AEAT Base*: the common framework of the AEAT tax declarations (tax maps, declaration records, export of the declaration files);"
-msgstr "*AEAT Base*: el marco común de las declaraciones tributarias de la AEAT (mapas de impuestos, registros de declaración, exportación de los ficheros de declaración);"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:43
-msgid "the Spanish data of contacts and banks: the :guilabel:`Trade name` of contacts (contacts can also be searched by it) and the Spanish bank directory, which is offered for import when the module is installed (:guilabel:`Import spanish bank data`);"
-msgstr "los datos españoles de contactos y bancos: el :guilabel:`Nombre comercial` de los contactos (también se puede buscar a los contactos por él) y el directorio de bancos españoles, cuya importación se ofrece al instalar el módulo (:guilabel:`Importar los datos de los bancos españoles`);"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:46
-msgid "the Spanish provinces, municipalities and ZIP codes, used to fill in the city and the province from the ZIP code;"
-msgstr "las provincias, los municipios y los códigos postales españoles, que se utilizan para completar la ciudad y la provincia a partir del código postal;"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:48
-msgid "the check of the identification data of contacts against the AEAT census: click :guilabel:`Check Partner Data` on the AEAT tab of a contact, or enable :guilabel:`Verify Partner Data using AEAT Census` in the settings to check contacts automatically when they are created or modified."
-msgstr "la comprobación de los datos identificativos de los contactos en el censo de la AEAT: haga clic en :guilabel:`Comprobar datos de la empresa` en la pestaña AEAT de un contacto, o active :guilabel:`Verificar información de la empresa usando el censo de la AEAT.` en los ajustes para comprobar los contactos automáticamente cuando se crean o modifican."
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:53
-msgid "When the module is installed, the :guilabel:`Verify VAT Numbers` option (VIES validation of intra-EU VAT numbers) is enabled for every Spanish company."
-msgstr "Al instalar el módulo, la opción :guilabel:`Verificar NIFs` (validación VIES de los números de IVA intracomunitarios) se activa para todas las empresas españolas."
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:56
-msgid "For several features, two alternative modules exist: one from the standard Odoo localization and one from the Spanish community localization (OCA). The *Spain - Base Layer* module enforces the supported choice: the alternative module cannot be installed while the base layer is installed, and the base layer cannot be installed while an alternative module is installed."
-msgstr "Para varias funciones existen dos módulos alternativos: uno de la localización estándar de Odoo y otro de la localización española de la comunidad (OCA). El módulo *Spain - Base Layer* impone la opción admitida: el módulo alternativo no se puede instalar mientras la capa base esté instalada, y la capa base no se puede instalar mientras haya un módulo alternativo instalado."
-
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:65
 msgid "Feature"
 msgstr "Función"
@@ -21610,10 +21414,6 @@ msgstr "Función"
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:66
 msgid "Supported module"
 msgstr "Módulo admitido"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:67
-msgid "Alternative that cannot be installed"
-msgstr "Alternativa que no se puede instalar"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:102
 msgid "You can reach the **Chart of Accounts** by going to :menuselection:`Accounting --> Configuration --> Accounting: Chart of Accounts`."
@@ -21627,10 +21427,6 @@ msgstr "Cuando se crea una nueva base de datos para una empresa española, se in
 msgid "Default Spain-specific taxes are created automatically when the :guilabel:`Spanish - Accounting (PGCE 2008) (l10n_es)` module is installed. Each tax is mapped to the boxes of the Spanish **Modelo 303** VAT return, which can be reviewed in the :doc:`tax report <../accounting/reporting/dynamic_reports>`."
 msgstr "Los impuestos españoles por defecto se crean automáticamente al instalar el módulo :guilabel:`Spanish - Accounting (PGCE 2008) (l10n_es)`. Cada impuesto se asocia a las casillas del modelo de IVA español **Modelo 303**, que se puede consultar en el :doc:`informe de impuestos <../accounting/reporting/dynamic_reports>`."
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:118
-msgid "With the :ref:`Spanish base layer <localizations/spain/base-layer>`, the AEAT tax declarations (modelos 303, 390, 111, 115, 347, 349, and others), the VAT books, and the official PGC annual accounts are prepared in the Accounting app. See :doc:`spain/aeat_declarations`."
-msgstr "Con la :ref:`capa base española <localizations/spain/base-layer>`, las declaraciones tributarias de la AEAT (modelos 303, 390, 111, 115, 347, 349 y otros), los libros de IVA y las cuentas anuales oficiales del PGC se preparan en la aplicación Contabilidad. Consulte :doc:`spain/aeat_declarations`."
-
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:125 ../../content/applications/finance/fiscal_localizations/spain/sii.rst:3
 msgid "SII (Suministro Inmediato de Información)"
 msgstr "SII (Suministro Inmediato de Información)"
@@ -21638,10 +21434,6 @@ msgstr "SII (Suministro Inmediato de Información)"
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:127
 msgid "The *Spain - SII EDI Suministro de Libros* (`l10n_es_edi_sii`) module sends the VAT information of customer invoices and vendor bills to the SII (*Llevanza de libros registro*) of the AEAT or of the regional tax agencies. It is mandatory for companies with a turnover above 6 M€ and optional for the others."
 msgstr "El módulo *Spain - SII EDI Suministro de Libros* (`l10n_es_edi_sii`) envía la información de IVA de las facturas de cliente y de proveedor al SII (*Llevanza de libros registro*) de la AEAT o de las haciendas forales. Es obligatorio para las empresas con una facturación superior a 6 M€ y opcional para el resto."
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:133
-msgid "This module cannot be installed together with the :ref:`Spain - Base Layer <localizations/spain/base-layer>` module. With the base layer, the SII is handled by the community *Suministro Inmediato de Información en el IVA* module, see :doc:`spain/sii`."
-msgstr "Este módulo no se puede instalar junto con el módulo :ref:`Spain - Base Layer <localizations/spain/base-layer>`. Con la capa base, el SII lo gestiona el módulo de la comunidad *Suministro Inmediato de Información en el IVA*, consulte :doc:`spain/sii`."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:140
 msgid ":ref:`Install <general/install>` the :guilabel:`Spain - SII EDI Suministro de Libros (l10n_es_edi_sii)` module."
@@ -21679,10 +21471,6 @@ msgstr "Una vez contabilizada una factura de cliente o de proveedor en un diario
 msgid "Veri*Factu"
 msgstr "Veri*Factu"
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:69
-msgid "*Spain - Veri\\*Factu* (and its Point of Sale extension)"
-msgstr "*Spain - Veri\\*Factu* (y su extensión para el punto de venta)"
-
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:70
 msgid "The community Veri*Factu module"
 msgstr "El módulo Veri*Factu de la comunidad"
@@ -21690,10 +21478,6 @@ msgstr "El módulo Veri*Factu de la comunidad"
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:71
 msgid "SII"
 msgstr "SII"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:72
-msgid "*Suministro Inmediato de Información en el IVA* (community)"
-msgstr "*Suministro Inmediato de Información en el IVA* (comunidad)"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:73
 msgid "*Spain - SII EDI Suministro de Libros*"
@@ -21735,14 +21519,6 @@ msgstr "*Spain - Modelo 130 Tax report*"
 msgid "EU One-Stop-Shop (OSS)"
 msgstr "Ventanilla única de la UE (OSS)"
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:84
-msgid "The community OSS module, used by the OSS versions of the AEAT declarations"
-msgstr "El módulo OSS de la comunidad, que utilizan las versiones OSS de las declaraciones de la AEAT"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:85
-msgid "*EU One Stop Shop (OSS)* and the Hungarian OSS bridge"
-msgstr "*EU One Stop Shop (OSS)* y el puente OSS húngaro"
-
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:86
 msgid "Fixed assets"
 msgstr "Activos fijos"
@@ -21751,14 +21527,6 @@ msgstr "Activos fijos"
 msgid ":doc:`Spain - Fixed Assets <spain/fixed_assets>`"
 msgstr ":doc:`Spain - Fixed Assets <spain/fixed_assets>`"
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:88
-msgid "The community fixed asset modules"
-msgstr "Los módulos de activos fijos de la comunidad"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:91
-msgid "If an alternative module is already installed, uninstall it before installing the *Spain - Base Layer* module. Ask your system administrator before uninstalling a module, as its data is deleted."
-msgstr "Si ya hay un módulo alternativo instalado, desinstálelo antes de instalar el módulo *Spain - Base Layer*. Consulte con su administrador del sistema antes de desinstalar un módulo, ya que sus datos se eliminan."
-
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:96
 msgid ":doc:`spain/aeat_declarations`"
 msgstr ":doc:`spain/aeat_declarations`"
@@ -21766,10 +21534,6 @@ msgstr ":doc:`spain/aeat_declarations`"
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:97
 msgid ":doc:`spain/sii`"
 msgstr ":doc:`spain/sii`"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:188
-msgid "Producers of Veri*Factu billing systems must self-certify their compliance with the regulations (*declaración responsable*). Ask your support provider for the declaration that applies to your installation."
-msgstr "Los productores de sistemas de facturación Veri*Factu deben autocertificar su cumplimiento de la normativa (*declaración responsable*). Solicite a su proveedor de soporte la declaración aplicable a su instalación."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:192
 msgid "**Veri*Factu** is an e-Invoicing system used by the Spanish Tax Agency. It is mandatory for most taxpayers in Spain, except for those who use the SII system or are under a regional tax regime (i.e., TicketBai)."
@@ -21787,10 +21551,6 @@ msgstr "Para activar **Veri\\*Factu**, siga estos pasos:"
 msgid "Open the Settings app to make sure your company's :guilabel:`Country` and :guilabel:`Tax ID` are correctly set in the :ref:`Companies <general/companies/company>` section."
 msgstr "Abra la aplicación Ajustes para asegurarse de que el :guilabel:`País` y el :guilabel:`NIF` de su empresa estén configurados correctamente en la sección :ref:`Empresas <general/companies/company>`."
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:208
-msgid ":ref:`Install <general/install>` the :guilabel:`Spain - Veri*Factu (l10n_es_edi_verifactu)` module."
-msgstr ":ref:`Instale <general/install>` el módulo :guilabel:`España - Veri*Factu (l10n_es_edi_verifactu)`."
-
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:210
 msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`, scroll to the :guilabel:`Veri\\*Factu` section, check the :guilabel:`Enable Veri*Factu` option, and click :icon:`oi-arrow-right` :guilabel:`Manage certificates` to add a certificate."
 msgstr "Vaya a :menuselection:`Contabilidad --> Configuración --> Ajustes`, desplácese hasta la sección :guilabel:`Veri\\*Factu`, marque la opción :guilabel:`Activar Veri*Factu` y haga clic en :icon:`oi-arrow-right` :guilabel:`Gestionar certificados` para añadir un certificado."
@@ -21806,10 +21566,6 @@ msgstr "Haga clic en :guilabel:`Subir su archivo`, seleccione un archivo de cert
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:218
 msgid "At least one certificate has to be uploaded."
 msgstr "Debe subir al menos un certificado."
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:219
-msgid "By default Veri*Factu is in testing mode. The data is sent to test servers and is not considered official. When official data can be sent to the production servers, go to the :guilabel:`Veri\\*Factu` section in the :guilabel:`Settings` and disable :guilabel:`Test Environment`."
-msgstr "De forma predeterminada, Veri*Factu está en modo de prueba. Los datos se envían a servidores de prueba y no se consideran oficiales. Cuando pueda enviar datos oficiales a los servidores de producción, vaya a la sección :guilabel:`Veri\\*Factu` en los :guilabel:`Ajustes` y desactive :guilabel:`Entorno de prueba`."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:229
 msgid "Once an :doc:`invoice <../../finance/accounting/customer_invoices>` is confirmed, it can be :ref:`sent <accounting/invoice/sending>`. In the :guilabel:`Send` window, the Veri*Factu option is available if Veri*Factu has been enabled."
@@ -21983,14 +21739,6 @@ msgstr "Puede agregar un contacto con varios roles o varios contactos con un rol
 msgid "AEAT tax declarations"
 msgstr "Declaraciones tributarias de la AEAT"
 
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:5
-msgid "With the :ref:`Spain - Base Layer <localizations/spain/base-layer>`, the Spanish tax declarations (*modelos*) of the AEAT are prepared in the Accounting app: the declaration computes its boxes from the posted journal items of the period, creates the regularization entry, and exports the file (*fichero BOE*) that is uploaded to the AEAT electronic office."
-msgstr "Con la :ref:`Spain - Base Layer <localizations/spain/base-layer>`, las declaraciones tributarias españolas (*modelos*) de la AEAT se preparan en la aplicación Contabilidad: la declaración calcula sus casillas a partir de los apuntes contables publicados del periodo, crea el asiento de regularización y exporta el fichero (*fichero BOE*) que se presenta en la sede electrónica de la AEAT."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:10
-msgid ":ref:`Install <general/install>` the *Spain - AEAT Declarations Integration* module. It installs the declarations below and fits them into the Accounting app:"
-msgstr ":ref:`Instale <general/install>` el módulo *Spain - AEAT Declarations Integration*. Instala las declaraciones siguientes y las integra en la aplicación Contabilidad:"
-
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:17
 msgid "Declaration"
 msgstr "Declaración"
@@ -22067,45 +21815,13 @@ msgstr "Libros de IVA e IRPF"
 msgid "*Libros registro* of issued and received invoices, exported to XLSX."
 msgstr "*Libros registro* de facturas emitidas y recibidas, exportados a XLSX."
 
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:39
-msgid "It also adds the official annual accounts (PGC balance sheet and profit and loss), see :ref:`localizations/spain/aeat/annual-accounts`."
-msgstr "También añade las cuentas anuales oficiales (balance y cuenta de pérdidas y ganancias del PGC), consulte :ref:`localizations/spain/aeat/annual-accounts`."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:43
-msgid "Other declarations (for example modelos 123, 190, 216 and 296) are separate modules. Once installed, they appear in the same menu and work the same way."
-msgstr "Otras declaraciones (por ejemplo, los modelos 123, 190, 216 y 296) son módulos independientes. Una vez instalados, aparecen en el mismo menú y funcionan de la misma manera."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:46
-msgid "Users with the *Accountant* role (and advisers) can create and file the declarations."
-msgstr "Los usuarios con el rol *Contable* (y los asesores) pueden crear y presentar las declaraciones."
-
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:54
 msgid "Default values of the declarations"
 msgstr "Valores por defecto de las declaraciones"
 
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:56
-msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`, and scroll to the :guilabel:`AEAT Declarations` section. The values set here are proposed on every new declaration of the company:"
-msgstr "Vaya a :menuselection:`Contabilidad --> Configuración --> Ajustes` y desplácese hasta la sección :guilabel:`Declaraciones AEAT`. Los valores configurados aquí se proponen en cada nueva declaración de la empresa:"
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:60
-msgid ":guilabel:`Regularization entries`: the :guilabel:`AEAT Journal` in which the regularization entries are posted, the :guilabel:`VAT Counterpart Account` (by default 4750) for the VAT declarations whose counterpart is not computed by the declaration itself, such as the modelo 369, and the :guilabel:`Withholding Counterpart Account` (by default 4751) for the withholding declarations. The modelo 303 chooses 4750 or 4700 from its result by itself."
-msgstr ":guilabel:`Asientos de regularización`: el :guilabel:`Diario AEAT` en el que se contabilizan los asientos de regularización, la :guilabel:`Cuenta de contrapartida de IVA` (por defecto 4750) para las declaraciones de IVA cuya contrapartida no calcula la propia declaración, como el modelo 369, y la :guilabel:`Cuenta de contrapartida de retenciones` (por defecto 4751) para las declaraciones de retenciones. El modelo 303 elige por sí mismo la 4750 o la 4700 según su resultado."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:65
-msgid ":guilabel:`Submitter and frequency`: the :guilabel:`AEAT Contact Name`, :guilabel:`AEAT Contact Phone` and :guilabel:`AEAT Contact Email` printed in the declarations (if empty, the data of the current user is used), and the :guilabel:`Filing Frequency` (:guilabel:`Quarterly` or :guilabel:`Monthly`). Monthly filing applies to large companies and to taxpayers registered in the REDEME or in the SII. A new declaration proposes the last closed period of this frequency; annual declarations propose the previous year."
-msgstr ":guilabel:`Presentador y periodicidad`: el :guilabel:`Nombre de contacto AEAT`, el :guilabel:`Teléfono de contacto AEAT` y el :guilabel:`Email de contacto AEAT` que figuran en las declaraciones (si están vacíos, se usan los datos del usuario actual), y la :guilabel:`Periodicidad de presentación` (:guilabel:`Trimestral` o :guilabel:`Mensual`). La presentación mensual se aplica a las grandes empresas y a los contribuyentes inscritos en el REDEME o en el SII. Una nueva declaración propone el último periodo cerrado de esta periodicidad; las declaraciones anuales proponen el año anterior."
-
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:83
 msgid "Tax map check"
 msgstr "Comprobación del mapa de impuestos"
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:85
-msgid "Each declaration adds up the amounts of the taxes listed in its *tax map*: a tax that is in no map line of an installed declaration is silently left out of the declarations. The :guilabel:`Tax map check` setting shows how many taxes of the company are in this situation. Click the link to open the list of these taxes, or go to :menuselection:`Accounting --> Configuration --> AEAT --> Taxes missing from the AEAT declarations`. In the tax list, the :guilabel:`Missing from AEAT declarations` filter gives the same result."
-msgstr "Cada declaración suma los importes de los impuestos que figuran en su *mapa de impuestos*: un impuesto que no está en ninguna línea del mapa de una declaración instalada queda fuera de las declaraciones sin ningún aviso. El ajuste :guilabel:`Comprobación del mapa de impuestos` muestra cuántos impuestos de la empresa están en esta situación. Haga clic en el enlace para abrir la lista de estos impuestos, o vaya a :menuselection:`Contabilidad --> Configuración --> AEAT --> Impuestos que faltan en las declaraciones AEAT`. En la lista de impuestos, el filtro :guilabel:`Falta en las declaraciones AEAT` da el mismo resultado."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:92
-msgid "Review the listed taxes: either the tax is not used, or it must be replaced by one of the default Spanish taxes. The withholding taxes of declarations that are not installed (123, 216, 296) also appear in the list."
-msgstr "Revise los impuestos de la lista: o el impuesto no se utiliza, o debe sustituirse por uno de los impuestos españoles por defecto. Las retenciones de las declaraciones que no están instaladas (123, 216, 296) también aparecen en la lista."
 
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:97
 msgid "The tax maps themselves can be consulted under :menuselection:`Accounting --> Configuration --> AEAT --> Tax mapping`. Do not modify them unless your tax adviser asks for it."
@@ -22118,10 +21834,6 @@ msgstr "Presentar una declaración"
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:105
 msgid "The declarations are under :menuselection:`Accounting --> Reporting --> AEAT`, one menu per declaration, for example :menuselection:`Accounting --> Reporting --> AEAT --> AEAT 303 model`."
 msgstr "Las declaraciones están en :menuselection:`Contabilidad --> Informes --> AEAT`, un menú por declaración, por ejemplo :menuselection:`Contabilidad --> Informes --> AEAT --> Modelo 303`."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:108
-msgid "Click :guilabel:`New`. The :guilabel:`Year` and the :guilabel:`Period Type` of the last closed period, the journal, the counterpart account, and the contact data are proposed from the :ref:`settings <localizations/spain/aeat/configuration>`. Change them if needed."
-msgstr "Haga clic en :guilabel:`Nuevo`. El :guilabel:`Año` y el :guilabel:`Tipo de periodo` del último periodo cerrado, el diario, la cuenta de contrapartida y los datos de contacto se proponen a partir de los :ref:`ajustes <localizations/spain/aeat/configuration>`. Cámbielos si es necesario."
 
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:111
 msgid "Select the :guilabel:`Statement Type`: :guilabel:`Normal`, or :guilabel:`Complementary` or :guilabel:`Substitutive` to correct a declaration already filed. For the last two, enter the :guilabel:`Previous declaration number`."
@@ -22139,22 +21851,6 @@ msgstr "Rellene las casillas que no se calculan automáticamente, si las hay, y 
 msgid "Click :guilabel:`Confirm` when the amounts are correct."
 msgstr "Haga clic en :guilabel:`Confirmar` cuando los importes sean correctos."
 
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:120
-msgid "Click :guilabel:`Create move` to post the regularization entry, which moves the balances of the tax accounts to the counterpart account. Use :guilabel:`Show move` to open it."
-msgstr "Haga clic en :guilabel:`Crear asiento` para contabilizar el asiento de regularización, que traspasa los saldos de las cuentas de impuestos a la cuenta de contrapartida. Use :guilabel:`Ver asiento` para abrirlo."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:122
-msgid "Click :guilabel:`Export to BOE` to download the file, and upload it in the AEAT electronic office."
-msgstr "Haga clic en :guilabel:`Exportar a BOE` para descargar el fichero y preséntelo en la sede electrónica de la AEAT."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:134
-msgid "The regularization entry is dated on the last day of the period. If this date is in a locked period, a warning banner is shown on the declaration as soon as it is opened, and the entry cannot be posted. Create the declaration entry before locking the period, or ask an adviser to move the lock date."
-msgstr "El asiento de regularización tiene como fecha el último día del periodo. Si esta fecha está en un periodo bloqueado, se muestra un aviso en la declaración en cuanto se abre, y el asiento no se puede contabilizar. Cree el asiento de la declaración antes de bloquear el periodo, o pida a un asesor que mueva la fecha de bloqueo."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:140
-msgid "A banner also warns when taxes used in the period are not in any AEAT tax map, as they are left out of the declaration. Click :guilabel:`Show taxes` to list them, and see :ref:`localizations/spain/aeat/tax-map`."
-msgstr "Un aviso también advierte cuando los impuestos usados en el periodo no están en ningún mapa de impuestos de la AEAT, ya que quedan fuera de la declaración. Haga clic en :guilabel:`Ver impuestos` para listarlos y consulte :ref:`localizations/spain/aeat/tax-map`."
-
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:145
 msgid "Specific declarations"
 msgstr "Declaraciones específicas"
@@ -22170,18 +21866,6 @@ msgstr "El resumen anual se calcula para todo el año. Rellene los campos que no
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:159
 msgid "Modelos 111 and 115"
 msgstr "Modelos 111 y 115"
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:158
-msgid "The withholdings are computed from the withholding taxes of the vendor bills. In the modelo 111, fill in the boxes that Odoo cannot compute, such as the work income paid outside Odoo."
-msgstr "Las retenciones se calculan a partir de los impuestos de retención de las facturas de proveedor. En el modelo 111, rellene las casillas que Odoo no puede calcular, como los rendimientos del trabajo pagados fuera de Odoo."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:162
-msgid "After :guilabel:`Calculate`, the :guilabel:`Partner records` tab lists the partners whose operations exceed the threshold; a record shown in red misses data needed for the declaration. Click :guilabel:`Send emails` to send each partner its record for verification, and use :guilabel:`Confirm as valid` when a partner agrees. Real estate rentals not declared in the modelo 115 can be added in the :guilabel:`Real estate records` tab. To exclude a contact from the declaration regardless of its amounts, tick :guilabel:`Not included in 347 report` on the contact form."
-msgstr "Después de :guilabel:`Calcular`, la pestaña :guilabel:`Registros de empresas` lista las empresas cuyas operaciones superan el umbral; un registro mostrado en rojo carece de datos necesarios para la declaración. Haga clic en :guilabel:`Enviar correos electrónicos` para enviar a cada empresa su registro para su verificación, y use :guilabel:`Confirmar como válido` cuando una empresa esté de acuerdo. Los arrendamientos de inmuebles no declarados en el modelo 115 pueden añadirse en la pestaña :guilabel:`Registros de inmuebles`. Para excluir un contacto de la declaración independientemente de sus importes, marque :guilabel:`No incluido en la declaración 347` en el formulario del contacto."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:171
-msgid "The :guilabel:`Partner records` and :guilabel:`Partners refunds` tabs list the intra-community operations of the period. Delete the operations that must not be declared from these tabs before confirming."
-msgstr "Las pestañas :guilabel:`Registros de empresas` y :guilabel:`Rectificaciones empresas` listan las operaciones intracomunitarias del periodo. Elimine de estas pestañas las operaciones que no deben declararse antes de confirmar."
 
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:176
 msgid "The OSS return is computed from the OSS taxes of the distance sales to consumers of other EU countries."
@@ -22206,10 +21890,6 @@ msgstr ":guilabel:`Balance (PGC)`;"
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:201
 msgid ":guilabel:`Profit and Loss (PGC)`."
 msgstr ":guilabel:`Pérdidas y ganancias (PGC)`."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:203
-msgid "The report opens directly with two columns, :guilabel:`Current year` and :guilabel:`Previous year`, based on the posted entries. The template (SMEs, complete, or non-profit entities) follows the chart of accounts of the company. Click an amount to see the journal items behind it, and use :guilabel:`Print` or :guilabel:`Export` to get a PDF or XLSX file."
-msgstr "El informe se abre directamente con dos columnas, :guilabel:`Ejercicio actual` y :guilabel:`Ejercicio anterior`, basadas en los asientos publicados. La plantilla (pymes, completa o entidades sin fines lucrativos) sigue el plan contable de la empresa. Haga clic en un importe para ver los apuntes contables que lo componen, y use :guilabel:`Imprimir` o :guilabel:`Exportar` para obtener un fichero PDF o XLSX."
 
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:209
 msgid "Only accounts numbered according to the PGC are included. An account with a custom code that is not a sub-account of a PGC account is not included in the report."
@@ -22238,10 +21918,6 @@ msgstr "periodos de amortización que siguen el calendario, con el primer period
 #: ../../content/applications/finance/fiscal_localizations/spain/fixed_assets.rst:12
 msgid "the non-deductible VAT and the VAT prorata part of the vendor bill line included in the value of the assets created from vendor bills."
 msgstr "el IVA no deducible y la parte de la prorrata de IVA de la línea de la factura de proveedor se incluyen en el valor de los activos creados desde facturas de proveedor."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/fixed_assets.rst:16
-msgid "The module is part of the :ref:`supported combination of Spanish modules <localizations/spain/base-layer>`. The alternative community fixed asset modules cannot be installed together with the *Spain - Base Layer* module."
-msgstr "El módulo forma parte de la :ref:`combinación admitida de módulos españoles <localizations/spain/base-layer>`. Los módulos alternativos de activos fijos de la comunidad no se pueden instalar junto con el módulo *Spain - Base Layer*."
 
 #: ../../content/applications/finance/fiscal_localizations/spain/fixed_assets.rst:19
 msgid "The Spanish rules only apply to assets. Deferred revenues keep the standard depreciation engine."
@@ -22314,14 +21990,6 @@ msgstr "Cuando se crea un activo desde una línea de factura de proveedor con un
 #: ../../content/applications/finance/fiscal_localizations/spain/fixed_assets.rst:99
 msgid ":doc:`../../accounting/vendor_bills/assets`"
 msgstr ":doc:`../../accounting/vendor_bills/assets`"
-
-#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:5
-msgid "With the :ref:`Spain - Base Layer <localizations/spain/base-layer>`, the SII (*Llevanza de libros registro del IVA a través de la Sede electrónica de la AEAT*) is handled by the *Suministro Inmediato de Información en el IVA* module. It sends the VAT data of customer invoices and vendor bills to the web service of the AEAT, or of the regional tax agency of the company. The SII is mandatory for companies with a turnover above 6 M€, for the taxpayers registered in the REDEME, and optional for the others."
-msgstr "Con la :ref:`Spain - Base Layer <localizations/spain/base-layer>`, el SII (*Llevanza de libros registro del IVA a través de la Sede electrónica de la AEAT*) lo gestiona el módulo *Suministro Inmediato de Información en el IVA*. Envía los datos de IVA de las facturas de cliente y de proveedor al servicio web de la AEAT, o de la hacienda foral de la empresa. El SII es obligatorio para las empresas con un volumen de operaciones superior a 6 M€ y para los contribuyentes inscritos en el REDEME, y opcional para los demás."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:13
-msgid "The standard *Spain - SII EDI Suministro de Libros* module described in :ref:`the SII section of the Spain page <localizations/spain/sii>` cannot be installed together with the base layer."
-msgstr "El módulo estándar *Spain - SII EDI Suministro de Libros* descrito en :ref:`la sección SII de la página de España <localizations/spain/sii>` no se puede instalar junto con la capa base."
 
 #: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:20
 msgid "Certificate"
@@ -28375,7 +28043,7 @@ msgstr "El IVA que sigue sin pagarse el **31 de diciembre del año siguiente a l
 
 #: ../../content/applications/finance/fiscal_localizations/spain/cash_accounting.rst:144
 msgid "A daily scheduled action, :guilabel:`Spain: VAT accrual of the cash accounting regime (RECC)` (:menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`, with the developer mode active), looks for the posted invoices of Spanish companies with unpaid or partially paid RECC VAT whose deadline has passed. For each of them it creates an entry in the tax cash basis journal:"
-msgstr "Una acción programada diaria, :guilabel:`España: devengo del IVA del criterio de caja (RECC)` (:menuselection:`Ajustes --> Técnico --> Automatización --> Acciones programadas`, con el modo desarrollador activado), busca las facturas contabilizadas de empresas españolas con IVA RECC impagado o pagado parcialmente cuyo plazo límite haya vencido. Para cada una de ellas crea un asiento en el diario de impuestos con criterio de caja:"
+msgstr "Una acción programada diaria, :guilabel:`España: devengo del IVA del criterio de caja (RECC)` (:menuselection:`Ajustes --> Técnico --> Automatización --> Acciones planificadas`, con el modo desarrollador activado), busca las facturas contabilizadas de empresas españolas con IVA RECC impagado o pagado parcialmente cuyo plazo límite haya vencido. Para cada una de ellas crea un asiento en el diario de impuestos con criterio de caja:"
 
 #: ../../content/applications/finance/fiscal_localizations/spain/cash_accounting.rst:149
 msgid "the entry is dated on the deadline, or on the first day after the lock date if the period is already locked;"
@@ -29419,9 +29087,6 @@ msgstr "Al actualizar a una nueva versión, conserve la declaración de la versi
 
 #~ msgid "First synchronization"
 #~ msgstr "Primera sincronización"
-
-#~ msgid "Troubleshooting"
-#~ msgstr "Solución de problemas"
 
 #~ msgid "Why do my transactions only synchronize when I refresh manually?"
 #~ msgstr "¿Por qué mis transacciones solo se sincronizan cuando las actualizo de forma manual?"
@@ -35068,9 +34733,6 @@ msgstr "Al actualizar a una nueva versión, conserve la declaración de la versi
 #~ msgid "Purchase withholding"
 #~ msgstr "Retención de compra"
 
-#~ msgid ":guilabel:`Date`"
-#~ msgstr ":guilabel:`Fecha`"
-
 #~ msgid "Warehouse configuration"
 #~ msgstr "Configuración del almacén"
 
@@ -35131,9 +34793,6 @@ msgstr "Al actualizar a una nueva versión, conserve la declaración de la versi
 #~ msgid "FEC Import"
 #~ msgstr "Importar FEC"
 
-#~ msgid "File formats"
-#~ msgstr "Formatos de archivo"
-
 #~ msgid "**Encoding**: UTF-8, UTF-8-SIG and iso8859_15."
 #~ msgstr "**Codificación**: UTF-8, UTF-8-SIG e iso8859_15."
 
@@ -35176,9 +34835,6 @@ msgstr "Al actualizar a una nueva versión, conserve la declaración de la versi
 #~ msgid "Alphanumeric"
 #~ msgstr "Alfanumérico"
 
-#~ msgid "02"
-#~ msgstr "02"
-
 #~ msgid "JournalLib"
 #~ msgstr "JournalLib"
 
@@ -35187,9 +34843,6 @@ msgstr "Al actualizar a una nueva versión, conserve la declaración de la versi
 
 #~ msgid "`journal.name`"
 #~ msgstr "`journal.name`"
-
-#~ msgid "03"
-#~ msgstr "03"
 
 #~ msgid "EcritureNum"
 #~ msgstr "EcritureNum"
@@ -35226,9 +34879,6 @@ msgstr "Al actualizar a una nueva versión, conserve la declaración de la versi
 
 #~ msgid "`account.code`"
 #~ msgstr "`account.code`"
-
-#~ msgid "06"
-#~ msgstr "06"
 
 #~ msgid "CompteLib"
 #~ msgstr "CompteLib"

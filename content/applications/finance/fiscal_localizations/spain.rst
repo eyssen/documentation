@@ -562,7 +562,6 @@ the online accreditation:
 
    .. figure:: spain/verifactu_registration/aeat-zz382-form.png
       :alt: Form of the AEAT procedure ZZ382 with the represented entity, the representative and the request code
-      :width: 60%
 
       The AEAT form for the presentation of the documents of the certificate.
 
@@ -575,7 +574,6 @@ the online accreditation:
 
    .. figure:: spain/verifactu_registration/aeat-zz382-documents.png
       :alt: Notice of the AEAT listing the documents to present
-      :width: 60%
 
       The documents required by the AEAT.
 
@@ -584,7 +582,6 @@ the online accreditation:
 
    .. figure:: spain/verifactu_registration/aeat-zz382-attach.png
       :alt: Section of the AEAT form to attach the documents, with the Presentar button
-      :width: 60%
 
       Attaching the documents and submitting them.
 

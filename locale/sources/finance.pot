@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-28 20:47+0000\n"
+"POT-Creation-Date: 2026-10-03 21:16+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -835,7 +835,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:6
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:9
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:435
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:499
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:619
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:100
 #: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:34
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:6
@@ -1011,6 +1011,7 @@ msgid "The module ships four ready-made :guilabel:`No gap` sequences that you as
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:48
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:49
 msgid "Field"
 msgstr ""
 
@@ -5944,7 +5945,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:98
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:73
 #: ../../content/applications/finance/fiscal_localizations/guatemala.rst:100
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:277
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:282
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:57
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:37
 #: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:55
@@ -6797,6 +6798,7 @@ msgid "Account Types"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:65
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:50
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:152
 #: ../../content/applications/finance/accounting/taxes.rst:259
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:20
@@ -7577,7 +7579,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:128
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:217
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:129
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:364
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:369
 #: ../../content/applications/finance/fiscal_localizations/india.rst:127
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:129
 msgid "Journals"
@@ -8381,6 +8383,379 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst:371
 msgid "A scheduled action creates the payments of the lines whose date has passed. A payment can also be created manually with the :guilabel:`Create Payment` button of a line. To modify the recurring payment, click :guilabel:`Set To Draft` (only possible if no payment has been created yet)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:3
+msgid "Batch bank transfers (Hungary)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:5
+msgid "The *Batch Bank Transfer* module prepares the **bank file** for paying many vendor bills at once. You collect the open bills in a *batch*, check the amounts and the expected bank balance, and click :guilabel:`Approve`: Odoo generates the transfer file in the format of your bank, which you upload in your online banking. The formats of the main Hungarian banks are supported."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:11
+msgid "The module generates the file and keeps track of which bills were sent to the bank. It does **not** register payments. The bills are paid as usual when the bank statement is imported and :doc:`reconciled <../bank/reconciliation>`. If your bank accepts SEPA files, use :doc:`payment orders <payment_orders>` instead."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:16
+msgid ":ref:`Install <general/install>` the :guilabel:`Batch Bank Transfer` module (`eyssen_batch_bank_transfer`). It requires the Hungarian localization (`eyssen_l10n_hu`, see :doc:`../../fiscal_localizations/hungary`). Users need the :guilabel:`Invoicing` access right to create and edit batches; the read-only accounting access right can only read them. Batches are separate for every company."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:25
+#: ../../content/applications/finance/accounting/payments/sepa_mandate_signature.rst:20
+#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:20
+#: ../../content/applications/finance/payment_providers/redsys.rst:19
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:27
+msgid "The **bank account of your company** (:menuselection:`Accounting --> Configuration --> Bank Accounts`, or the :guilabel:`Bank Accounts` of the company contact) is filled in with its :guilabel:`Bank`, and the bank has its **BIC (SWIFT) code**. The BIC decides the :ref:`file format <accounting/batch-bank-transfer/formats>`. The largest Hungarian banks are loaded with the Hungarian localization."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:32
+msgid "The **vendors have a bank account** (IBAN or Hungarian account number), and the bills you want to pay are linked to it in the :guilabel:`Recipient Bank` field. A bill without a bank account can be added to a batch, but the batch cannot be approved."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:35
+msgid "The bills are **posted** and not fully paid."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:40
+msgid "Create a batch"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:42
+msgid "Go to :menuselection:`Accounting --> Vendors --> Batch Bank Transfers` and click :guilabel:`New`. The batch is numbered automatically (for example *UTALASOK-000001*)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:51
+msgid ":guilabel:`Date`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:52
+msgid "Creation date of the batch. It is replaced by the approval date when the batch is approved."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:53
+msgid ":guilabel:`Bank Value Date`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:54
+msgid "Date on which the bank debits the transfers. It is **tomorrow** by default and cannot be earlier than today."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:56
+msgid ":guilabel:`Bank Account`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:57
+msgid "Bank account of your company that is debited (required). The :guilabel:`Currency` of the batch is the currency of this account; an account without a currency is treated as HUF."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:59
+msgid ":guilabel:`Vendor Credit Notes`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:60
+msgid "Also load the vendor credit notes (the *Refunds* of the vendors). Off by default."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:61
+msgid ":guilabel:`Customer Credit Notes`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:62
+msgid "Also load the customer credit notes (refunds that you pay back to customers). On by default."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:65
+msgid "The defaults of the two credit note options are system parameters (`1` = on, `0` = off): `eyssen_batch_bank_transfer.config.default_customer_credit` for :guilabel:`Vendor Credit Notes` and `eyssen_batch_bank_transfer.config.default_business_credit` for :guilabel:`Customer Credit Notes`. Edit them in :menuselection:`Settings --> Technical --> System Parameters` in :ref:`developer mode <developer-mode>`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:82
+msgid "Add the bills"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:84
+msgid "Use one of the buttons of the draft batch. Only posted bills with an open amount, of the company and in the currency of the batch bank account, are loaded. The amount already sent to the bank in approved batches is subtracted, so a bill that has been fully sent is not proposed again, and a partly sent bill is proposed for the remaining amount."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:93
+msgid "Button"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:94
+msgid "Bills loaded"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:95
+msgid ":guilabel:`Load Overdue Invoices`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:96
+msgid "Bills whose due date is today or earlier."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:97
+msgid ":guilabel:`Due Within 14 Days and Overdue`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:98
+msgid "Bills due within the next 14 days, and the overdue ones."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:99
+msgid ":guilabel:`Load Invoices by Due Date`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:100
+msgid "Bills due on or before the date you enter in the :guilabel:`Due On or Before` field."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:101
+msgid ":guilabel:`Load All Invoices`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:102
+msgid "All the open bills, whatever the due date."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:103
+msgid ":guilabel:`Load Invoices`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:104
+msgid "Opens the list of the bills so that you can pick them yourself: select the bills, then click :menuselection:`Actions --> Add Invoices to Batch Bank Transfer`. You are brought back to the batch."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:108
+msgid "To add bills that were **already sent to the bank** (for instance to repeat a transfer the bank rejected), select them in the :guilabel:`Load Invoices` list and click :menuselection:`Actions --> Add Previously Transferred Invoices to Batch Bank Transfer`: the line is created for the full amount of the bill."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:113
+msgid "You can also work from the list of vendor bills at any time: the :guilabel:`Bank Transfer` column shows whether a bill has been sent to the bank (:guilabel:`Not Sent`, :guilabel:`Partially Sent` or :guilabel:`Fully Sent`). Enable it with the optional columns selector if it is hidden."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:128
+msgid "Check the lines"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:130
+msgid "Every bill is a line of the batch. You can edit the following directly in the list:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:132
+msgid ":guilabel:`Amount to Transfer`: the amount to pay. Lower it to pay a bill **partially**."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:133
+msgid ":guilabel:`Comment`: the message for the beneficiary. It is filled with the vendor reference and the payment reference of the bill."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:135
+msgid ":guilabel:`Selected`: marks the line, to move it to another batch (see below)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:137
+msgid "The :guilabel:`Transferred Amount` is what has already been sent to the bank for the bill in other approved batches. A line is shown in **red** when its amount and the transferred amount exceed the total of the bill, and in **orange** when the bill has no vendor bank account. The search box above the list filters the lines."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:142
+msgid ":guilabel:`Move Selected Invoices to New Batch` moves the :guilabel:`Selected` lines to a new draft batch with the same bank account, for instance to pay them on another day."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:144
+msgid ":guilabel:`Clear` removes all the lines of the batch (the bills are not modified)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:147
+msgid "Balance forecast"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:149
+msgid "The block next to the lines helps you to check that the account can cover the transfers. The figures are calculated when the batch is saved, and the closing balance after the transfers is updated when you change the lines."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:157
+msgid "Figure"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:158
+msgid "Meaning"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:159
+msgid ":guilabel:`Bank Balance as of Date`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:160
+msgid "Balance of the bank journal(s) of the account up to the date of the batch."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:161
+msgid ":guilabel:`Increase`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:162
+msgid "Amounts expected to come in: the open customer invoices in the currency of the account, overdue, due in the first week and due in the second week after the date."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:164
+msgid ":guilabel:`Decrease`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:165
+msgid "Open vendor bills in the currency of the account: overdue, due in the first week and due in the second week after the date (click the arrow to expand the details)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:167
+msgid ":guilabel:`Closing Balance at Date + 2 Weeks (Invoices)`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:168
+msgid "Balance plus increase minus decrease: the balance if all the bills due within two weeks were paid."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:170
+msgid ":guilabel:`Closing Balance at Date + 2 Weeks (Transfers)`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:171
+msgid "Balance plus increase minus the total of **this batch**."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:176
+msgid "Approve the batch and send the file"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:178
+msgid "Click :guilabel:`Approve`. Odoo checks the batch, generates the file, attaches it to the batch and downloads it. The status changes from :guilabel:`Draft` to :guilabel:`Sent to Bank`, the :guilabel:`Date` becomes today, and the lines can no longer be edited. Upload the file in your online banking and authorize the transfers there."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:183
+msgid "The batch cannot be approved, and an explicit message tells you why, when:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:185
+msgid "a bill has no vendor bank account (*No partner bank account set for invoice ...*);"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:186
+msgid "the currency of the bank account does not fit the format (for example, a foreign-currency account with a format that only supports HUF);"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:188
+msgid "for a foreign-currency transfer from a CIB account, the bank of the vendor has no SWIFT/BIC code."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:193
+msgid "File formats"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:195
+msgid "The format depends on the **BIC of the bank** of the company bank account selected on the batch. Any other bank gets the :guilabel:`UNG` file."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:202
+msgid "Bank (BIC)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:203
+msgid "HUF account"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:204
+msgid "Foreign currency account"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:205
+#: ../../content/applications/finance/accounting/payments/spanish_remittances.rst:34
+msgid "Notes"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:206
+msgid "UniCredit Bank (BACXHUHB)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:207
+msgid "`.PAY` file, named after the bank value date (`yymmdd.PAY`)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:208
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:222
+msgid "Not available"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:209
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:223
+msgid "Amounts in whole forints."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:210
+msgid "OTP Bank (OTPVHUHB)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:211
+msgid "Electra XML file (`HUFTransactions`)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:212
+msgid "Electra XML file (`DEVTransactions`)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:213
+msgid "Encoded in ISO-8859-2. The file is named after the day of the approval (`yyyymmdd.xml`)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:214
+msgid "CIB Bank (CIBHHUHB)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:215
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:216
+msgid "CSV file (`yyyymmdd_HUF.csv`)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:217
+msgid "Semicolon-separated, named after the day of the approval. HUF amounts in whole forints, foreign currency amounts with two decimals. A foreign-currency transfer needs the SWIFT/BIC code of the vendor's bank."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:220
+msgid "Any other bank"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:221
+msgid "`.UNG` file (`UNyymmdd.UNG`)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:225
+msgid "In the `.PAY` and `.UNG` files, the lines paid to the same vendor bank account are **combined** into one transfer (the amounts are added, and the comments joined and shortened to 96 characters), and the names, addresses and comments are written without accents."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:230
+msgid "Undo"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:232
+msgid "Click :guilabel:`Undo` on a batch that has been sent to bank to cancel it: the attached files are deleted, the :guilabel:`Date` is cleared and the batch is a :guilabel:`Draft` again, so you can change it and generate a new file. Nothing is booked in the accounting by the module, so there is nothing else to reverse. Undo a batch only if the file was **not** processed by the bank."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:240
+msgid "After the bank has processed the transfers"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:242
+msgid "Import the bank statement (:doc:`../bank/statement_import`) and :doc:`reconcile <../bank/reconciliation>` the debits with the bills, as for any other payment. The :guilabel:`Bank Transfer` column of the vendor bills shows what was sent to the bank: a bill is :guilabel:`Fully Sent` when the approved batches cover its open amount, and :guilabel:`Partially Sent` when they cover only a part of it."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:249
+#: ../../content/applications/finance/accounting/payments/sepa_mandate_signature.rst:127
+#: ../../content/applications/finance/accounting/payments/spanish_remittances.rst:165
+msgid ":doc:`payment_orders`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:250
+msgid ":doc:`../../fiscal_localizations/hungary`"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:3
@@ -9371,12 +9746,6 @@ msgstr ""
 msgid "The feature is provided by the *SEPA Mandate Online Signature* module, which needs the *eYssen Sign* and *Account Banking SEPA Direct Debit* modules. :ref:`Install <general/install>` it from the :guilabel:`Apps` menu."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/sepa_mandate_signature.rst:20
-#: ../../content/applications/finance/accounting/reporting/tax_returns.rst:20
-#: ../../content/applications/finance/payment_providers/redsys.rst:19
-msgid "Prerequisites"
-msgstr ""
-
 #: ../../content/applications/finance/accounting/payments/sepa_mandate_signature.rst:22
 msgid "The :guilabel:`SEPA Creditor Identifier` of the *company* is set in :menuselection:`Accounting --> Configuration --> Settings` (see :ref:`SEPA identifiers <accounting/payment-orders/configuration>`). It is printed on the mandate. Even if you use one identifier per payment mode, the company needs one to send a mandate; otherwise sending stops with *Set the SEPA creditor identifier of ... first*."
 msgstr ""
@@ -9509,11 +9878,6 @@ msgstr ""
 msgid "The mandate is proposed on the customer's invoices whose payment mode is :guilabel:`SEPA Direct Debit for customers`, so the customer is collected with the next debit order. With the *Subscriptions - SEPA Direct Debit* module, it is also proposed on the customer's new :doc:`subscription contracts <../../../sales/subscriptions/automatic_payments>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/sepa_mandate_signature.rst:127
-#: ../../content/applications/finance/accounting/payments/spanish_remittances.rst:165
-msgid ":doc:`payment_orders`"
-msgstr ""
-
 #: ../../content/applications/finance/accounting/payments/sepa_mandate_signature.rst:128
 msgid ":ref:`Two-factor authentication of Sign <sign/2fa>`"
 msgstr ""
@@ -9544,10 +9908,6 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/spanish_remittances.rst:33
 msgid "Payment method"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/spanish_remittances.rst:34
-msgid "Notes"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/spanish_remittances.rst:35
@@ -10845,7 +11205,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/reporting/intrastat.rst:46
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:104
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:114
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:294
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:299
 msgid "Fiscal positions"
 msgstr ""
 
@@ -16835,7 +17195,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:86
 #: ../../content/applications/finance/fiscal_localizations/guatemala.rst:90
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:175
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:180
 #: ../../content/applications/finance/fiscal_localizations/indonesia.rst:47
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:192
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:61
@@ -18204,7 +18564,7 @@ msgid "Default :ref:`fiscal localization package <fiscal_localizations/packages>
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/guatemala.rst:56
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:150
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:155
 #: ../../content/applications/finance/fiscal_localizations/indonesia.rst:37
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:152
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:46
@@ -18475,450 +18835,462 @@ msgid ":doc:`Hungarian fixed asset accounting <hungary/assets>`: rate-based depr
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:63
-msgid ":guilabel:`MKVK AuditXML adatexport (főkönyvi tételek)`"
+msgid ":guilabel:`Batch Bank Transfer`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:64
-msgid "`l10n_hu_mkvk`"
+msgid "`eyssen_batch_bank_transfer`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:65
-msgid ":doc:`General ledger data export for auditors <hungary/mkvk>` in the MKVK AuditXML format."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:66
-msgid ":guilabel:`MKVK Audit XML export (készletleltár analitika)`"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:67
-msgid "`l10n_hu_mkvk_stock`"
+msgid ":doc:`Batch bank transfers <../accounting/payments/batch_bank_transfers>`: collects the open vendor bills in a batch and generates the transfer file in the format of the Hungarian banks (UNG, PAY, Electra, CIB)."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:68
-msgid "Inventory analytics export for auditors in the MKVK Audit XML format."
+msgid ":guilabel:`MKVK AuditXML adatexport (főkönyvi tételek)`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:69
-msgid ":guilabel:`Hungary - EU OSS Bridge`"
+msgid "`l10n_hu_mkvk`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:70
-msgid "`l10n_hu_oss`"
+msgid ":doc:`General ledger data export for auditors <hungary/mkvk>` in the MKVK AuditXML format."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:71
-msgid ":doc:`EU One-Stop-Shop sales <hungary/oss>` for Hungarian companies. Installed automatically with :guilabel:`EU Intra-community Distance Selling`."
+msgid ":guilabel:`MKVK Audit XML export (készletleltár analitika)`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:72
+msgid "`l10n_hu_mkvk_stock`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:73
-msgid ":guilabel:`KVTD`"
+msgid "Inventory analytics export for auditors in the MKVK Audit XML format."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:74
-msgid "`eyssen_l10n_hu_kvtd`"
+msgid ":guilabel:`Hungary - EU OSS Bridge`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:75
-msgid ":doc:`Environmental product fee <hungary/kvtd>` (*környezetvédelmi termékdíj*) records on products and invoices."
+msgid "`l10n_hu_oss`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:77
-msgid ":guilabel:`Cashbook integráció`"
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:76
+msgid ":doc:`EU One-Stop-Shop sales <hungary/oss>` for Hungarian companies. Installed automatically with :guilabel:`EU Intra-community Distance Selling`."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:78
-msgid "`eyssen_l10n_hu_cashbook`"
+msgid ":guilabel:`KVTD`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:79
-msgid ":doc:`Data transfer to the external Cashbook service <hungary/cashbook>`."
+msgid "`eyssen_l10n_hu_kvtd`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:80
-msgid ":guilabel:`MNB (Magyar Nemzeti Bank) árfolyam szinkronizálás`"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:81
-msgid "`eyssen_currency_rate_live_mnb_community`"
+msgid ":doc:`Environmental product fee <hungary/kvtd>` (*környezetvédelmi termékdíj*) records on products and invoices."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:82
-msgid ":ref:`Official MNB exchange rates <localizations/hungary/mnb>`."
+msgid ":guilabel:`Cashbook integráció`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:83
-msgid ":guilabel:`PoS Hungarian`"
+msgid "`eyssen_l10n_hu_cashbook`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:84
-msgid "`eyssen_l10n_hu_pos`"
+msgid ":doc:`Data transfer to the external Cashbook service <hungary/cashbook>`."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:85
-msgid "Prints the line *Nem adóügyi bizonylat!* (not a fiscal receipt) in the header of every Point of Sale receipt."
+msgid ":guilabel:`MNB (Magyar Nemzeti Bank) árfolyam szinkronizálás`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:86
+msgid "`eyssen_currency_rate_live_mnb_community`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:87
-msgid ":guilabel:`eYssen Accountant - Hungarian Localization Bridge`"
+msgid ":ref:`Official MNB exchange rates <localizations/hungary/mnb>`."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:88
-msgid "`eyssen_accountant_l10n_hu`"
+msgid ":guilabel:`PoS Hungarian`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:89
-msgid "Installed automatically with the :doc:`cash register <../accounting/bank/cash_register>`: prints the Hungarian tax number and group tax number of the partner on payment receipts and cash vouchers."
+msgid "`eyssen_l10n_hu_pos`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:90
+msgid "Prints the line *Nem adóügyi bizonylat!* (not a fiscal receipt) in the header of every Point of Sale receipt."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:92
-msgid ":guilabel:`Subscription Management - Hungarian Localization`"
+msgid ":guilabel:`eYssen Accountant - Hungarian Localization Bridge`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:93
-msgid "`l10n_hu_subscription`"
+msgid "`eyssen_accountant_l10n_hu`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:94
-msgid "Installed automatically with the *Subscriptions* app; see :ref:`continuous fulfillment on subscription invoices <localizations/hungary/subscription>`."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:96
-msgid ":guilabel:`Invoicing from Stock Picking - Hungary`"
+msgid "Installed automatically with the :doc:`cash register <../accounting/bank/cash_register>`: prints the Hungarian tax number and group tax number of the partner on payment receipts and cash vouchers."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:97
-msgid "`eyssen_stock_picking_invoice_l10n_hu`"
+msgid ":guilabel:`Subscription Management - Hungarian Localization`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:98
-msgid "Installed automatically with :doc:`invoicing from delivery notes <../accounting/customer_invoices/invoice_from_delivery_notes>`: several delivery dates on one invoice only with an aggregate invoice agreement, and the fulfillment date of every invoice line taken from its delivery note."
+msgid "`l10n_hu_subscription`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:99
+msgid "Installed automatically with the *Subscriptions* app; see :ref:`continuous fulfillment on subscription invoices <localizations/hungary/subscription>`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:101
+msgid ":guilabel:`Invoicing from Stock Picking - Hungary`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:102
-msgid ":guilabel:`PoS Invoice - Hungary`"
+msgid "`eyssen_stock_picking_invoice_l10n_hu`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:103
-msgid "`l10n_hu_pos_invoice`"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:104
-msgid "Installed automatically with the :ref:`payment terms on POS invoices <receipts-invoices/payment-terms>`: a Hungarian company without a valid Hungarian tax number cannot be invoiced from the Point of Sale."
+msgid "Installed automatically with :doc:`invoicing from delivery notes <../accounting/customer_invoices/invoice_from_delivery_notes>`: several delivery dates on one invoice only with an aggregate invoice agreement, and the fulfillment date of every invoice line taken from its delivery note."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:107
-msgid ":guilabel:`Website Sale Partner Type - Hungary`"
+msgid ":guilabel:`PoS Invoice - Hungary`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:108
-msgid "`website_sale_partner_type_l10n_hu`"
+msgid "`l10n_hu_pos_invoice`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:109
-msgid "Installed automatically with the :ref:`private person or company choice <ecommerce/checkout/customer-type>` of the eCommerce checkout: the Hungarian tax number field of the address form."
+msgid "Installed automatically with the :ref:`payment terms on POS invoices <receipts-invoices/payment-terms>`: a Hungarian company without a valid Hungarian tax number cannot be invoiced from the Point of Sale."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:112
+msgid ":guilabel:`Website Sale Partner Type - Hungary`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:113
+msgid "`website_sale_partner_type_l10n_hu`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:114
+msgid "Installed automatically with the :ref:`private person or company choice <ecommerce/checkout/customer-type>` of the eCommerce checkout: the Hungarian tax number field of the address form."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:119
 msgid "`eyssen_l10n_hu` replaces the standard :guilabel:`Hungary - E-invoicing` (`l10n_hu_edi`) module. The two modules cannot be installed together: installing `eyssen_l10n_hu` uninstalls `l10n_hu_edi` and disables its automatic installation."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:121
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:126
 msgid "What changes at installation"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:123
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:128
 msgid "When `eyssen_l10n_hu` is installed, the following is set up for every Hungarian company:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:125
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:130
 msgid "The Hungarian language is activated, Hungary becomes a :guilabel:`Preferred` country (listed first in country selections), and the 20 Hungarian counties and the largest Hungarian banks are loaded."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:127
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:132
 msgid "The Hungarian chart of accounts is loaded with the journals `KI` (customer invoices), `BE` (vendor bills), `EGYEB` (miscellaneous), `ARFKU` (exchange difference) and `CABA` (cash basis taxes), and 27% default sales and purchase taxes. The customer invoice journal is secured with a hash (its entries are locked once posted) and uses a single number sequence for invoices, corrective invoices and credit notes."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:132
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:137
 msgid ":guilabel:`Verify VAT Numbers` (VIES), :guilabel:`Cash Rounding` and tax rounding *globally* are enabled; the default invoicing policy of products becomes *Delivered quantities*; the standard :guilabel:`Pro-Forma Invoice` option of the Sales app is switched off and removed from the settings (see :doc:`hungary/proforma`)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:136
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:141
 msgid "The payment terms :guilabel:`Cash`, :guilabel:`Card`, :guilabel:`Advance payment`, :guilabel:`Wire transfer, 8 day` and :guilabel:`Wire transfer, 30 day` are created. Existing payment terms without a :ref:`NAV payment method <localizations/hungary/payment-terms>` are set to *Egyéb* and **archived**."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:140
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:145
 msgid "The unit of measure :guilabel:`Units` is renamed to *pcs* (*db*), the :ref:`NAV unit types <localizations/hungary/products>` are mapped and the imperial units are archived."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:142
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:147
 msgid "The company name, address, tax numbers and registration number are written into the header and footer of the document layout."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:144
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:149
 msgid "A to-do activity *NAV adatszolgáltatáshoz be kell állítani!* reminds the administrator to :ref:`configure the NAV data reporting <localizations/hungary/nav-settings>`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:152
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:157
 msgid "Open :menuselection:`Settings --> Users & Companies --> Companies` and fill in the company's address and the following fields, which replace the standard *Tax ID* field:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:155
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:160
 msgid ":guilabel:`VAT Number`: the Hungarian tax number in the `12345678-1-12` format;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:156
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:161
 msgid ":guilabel:`Group VAT Number`: for members of a VAT group only;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:157
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:162
 msgid ":guilabel:`EU VAT Number`: the community tax number (for example, `HU12345678`);"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:158
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:163
 msgid ":guilabel:`Company ID`: the company registration number."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:160
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:165
 msgid "At least one bank account of the company must be recorded: a customer invoice cannot be confirmed without a :guilabel:`Recipient Bank`. When the currency of an invoice or quotation changes, the first company bank account in that currency is selected automatically."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:177
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:182
 msgid "On the contact form of companies located in Hungary, the standard *Tax ID* field is replaced by:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:179
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:184
 msgid ":guilabel:`VAT Number`: the Hungarian tax number (`12345678-1-23`). The format and the check digit are verified; an invalid number is marked with a red ✕ and a warning."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:181
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:186
 msgid ":guilabel:`Group VAT Number`: filled in automatically for members of a VAT group. If NAV reports that the partner is a group member but the full group number is not known, the warning *The Partner is a Group VAT payer! The Group VAT number must be provided, otherwise no invoice can be issued!* is displayed."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:185
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:190
 msgid ":guilabel:`EU VAT Number`: the community tax number, available for companies of any country."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:186
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:191
 msgid ":guilabel:`Co. Reg. Num.`: the company registration number."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:187
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:192
 msgid ":guilabel:`KATA Taxpayer`, :guilabel:`Sole Trader` and :guilabel:`Sole Trader Reg. Num.`: informative fields for small taxpayers and sole traders (contacts located in Hungary)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:191
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:196
 msgid "Query the taxpayer data from NAV"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:193
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:198
 msgid "When the :ref:`NAV data reporting <localizations/hungary/nav-settings>` is enabled, entering the first eight digits of the :guilabel:`VAT Number` is enough: Odoo queries the taxpayer from NAV and"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:196
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:201
 msgid "completes the tax number with the VAT code and the county code, and fills in the :guilabel:`Group VAT Number` if the partner belongs to a VAT group;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:198
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:203
 msgid "loads the taxpayer's short or full name (legal forms are abbreviated, e.g., *Kft.*, *Zrt.*);"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:199
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:204
 msgid "loads the ZIP code, city and street of the registered seat."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:201
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:206
 msgid "Click the refresh icon next to the field (:guilabel:`Check`) to repeat the query at any time. The options :guilabel:`Loading Taxpayer Name`, :guilabel:`Keep the manually set partner name` and :guilabel:`Keep the manually set partner address` in the :ref:`NAV settings <localizations/hungary/nav-settings>` control what the query may overwrite."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:206
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:211
 msgid "If another contact without a parent company already uses the same tax number, the banner *Another partner is already registered with this tax number!* is shown with a :guilabel:`View the other partner` link."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:219
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:224
 msgid "The Hungarian tax number is shared with the child contacts of a company. On an *Invoice Address* contact, :guilabel:`Use as Company` (enabled by default) makes the invoice and the NAV data report use the tax number of the parent company."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:222
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:227
 msgid "The Hungarian :guilabel:`VAT Number` can only be recorded on company-type contacts."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:225
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:230
 msgid "Invoicing agreements"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:227
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:232
 msgid "In the :guilabel:`Accounting` tab of the contact, below :guilabel:`Fiscal Position`:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:229
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:234
 msgid ":guilabel:`Aggregate Invoice Aggreement`: allows issuing :ref:`aggregate invoices <localizations/hungary/aggregate>` to the customer;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:231
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:236
 msgid ":guilabel:`Electronic Invoice Aggreement`: the :ref:`invoice format <localizations/hungary/invoice-format>` of the customer's invoices defaults to *Electronic*."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:237
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:242
 msgid "Taxes, tax groups and fiscal positions"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:240
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:245
 msgid "Tax groups"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:242
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:247
 msgid "The VAT data of the NAV report is taken from the **tax group** of the tax used on the invoice line. Go to :menuselection:`Accounting --> Configuration --> Tax Groups` (the menu is visible without :ref:`developer mode <developer-mode>` in Hungarian databases) and check the :guilabel:`NAV` section of each group:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:247
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:252
 msgid ":guilabel:`Amount %`: the VAT rate of the group, computed from its Hungarian taxes (0 for reverse-charge, exempt and out-of-scope groups);"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:249
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:254
 msgid ":guilabel:`Reversed`: domestic reverse charge (*fordított adózás*);"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:250
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:255
 msgid ":guilabel:`Az adómentesség jelölés kódja` (VAT exemption code): `AAM`, `TAM`, `KBAET`, `KBAUK`, `EAM`, `NAM` or `UNKNOWN`;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:252
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:257
 msgid ":guilabel:`Az Áfa tv. hatályán kívüliség kódja` (out of the scope of the VAT Act): `ATK`, `EUFAD37`, `EUFADE`, `EUE`, `HO` or `UNKNOWN`;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:254
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:259
 msgid ":guilabel:`Adóalap és felszámított adó eltérésének kódja` (VAT amount mismatch): `REFUNDABLE_VAT` or `NONREFUNDABLE_VAT`;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:256
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:261
 msgid ":guilabel:`Különbözet szerinti jogcímek` (margin scheme): `TRAVEL_AGENCY`, `SECOND_HAND`, `ARTWORK` or `ANTIQUES`;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:258
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:263
 msgid ":guilabel:`Legal Notes`: the reason text sent to NAV for exempt and out-of-scope items."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:260
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:265
 msgid "Only one of the four code fields can be set on a group. The labels of these fields are displayed in Hungarian in the current module version."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:264
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:269
 msgid "Every product line of a customer invoice must carry **exactly one** tax, and the rate of the tax must equal the :guilabel:`Amount %` of its tax group; otherwise the invoice cannot be confirmed. Create one tax group per VAT rate."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:279
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:284
 msgid "The tax form (:menuselection:`Accounting --> Configuration --> Taxes`) contains three additional options:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:282
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:287
 msgid ":guilabel:`VTSZ is Required`: an invoice line with this tax can only be confirmed if a :ref:`customs tariff number (VTSZ) <localizations/hungary/products>` is set on the product (typically for domestic reverse-charge goods);"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:285
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:290
 msgid ":guilabel:`Nem készíthető Gyűjtőszámla ezzel az áfa kulccsal` (sales taxes): the tax cannot be used on :ref:`aggregate invoices <localizations/hungary/aggregate>`;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:287
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:292
 msgid ":guilabel:`Alap % Áfa bevallásban` (purchase taxes, default `100`): the percentage of the tax base taken into account in the :doc:`VAT return <hungary/vat_return>` and in the VAT analytics, for partially deductible VAT."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:291
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:296
 msgid "A :guilabel:`Note` tab is available for internal remarks."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:296
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:301
 msgid "The fiscal positions *Domestic*, *EU Individual*, *EU Company*, *Non-EU* and *Cash Basis Taxes* are created with the chart of accounts. In the :guilabel:`Tax Mapping` tab, the :guilabel:`Tax Scope` column (:guilabel:`Services` or :guilabel:`Goods`) restricts a mapping line to service or goods products; leave it empty to apply the line to both."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:302
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:307
 msgid "A Hungarian customer is never mapped automatically to the *EU Company* fiscal position, even if an EU VAT number is recorded on the contact."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:308
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:313
 msgid "Payment terms and cash rounding"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:310
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:315
 msgid "On the payment term form (:menuselection:`Accounting --> Configuration --> Payment Terms`):"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:312
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:317
 msgid ":guilabel:`NAV Payment Method`: the payment method reported to NAV: *Banki átutalás* (transfer), *Készpénz* (cash), *Bankkártya, hitelkártya, egyéb készpénz helyettesítő eszköz* (card), *Utalvány, váltó, egyéb pénzhelyettesítő eszköz* (voucher) or *Egyéb* (other). Transfer is reported if nothing is set."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:316
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:321
 msgid "The term's description is printed as :guilabel:`Payment method` on the invoice (*Wire transfer* by default)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:318
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:323
 msgid ":guilabel:`Detailed description on the Invoice`: if filled in, it replaces the *Payment Communication* paragraph of the printed invoice. Use `%(invoice)s` for the invoice number and `%(amount)s` for the amount."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:321
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:326
 msgid "On the term lines: :guilabel:`Invoice Note` (text of the installment on the invoice; placeholders `%(count)s`, `%(date)s`, `%(amount)s`), :guilabel:`Account Note` (label of the receivable journal item; placeholder `%(count)s`) and :guilabel:`Ignore in payment deadline` (the installment is skipped when the :guilabel:`Due Date` of the invoice is computed)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:326
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:331
 msgid "Cash rounding methods (:menuselection:`Accounting --> Configuration --> Cash Roundings`) can be restricted with the :guilabel:`Payment Terms` and :guilabel:`Currency` fields (empty means *all*) and ordered with the drag handle. On invoices, the first method matching the payment term and the currency is selected automatically whenever the payment term or the currency changes. The method *5 Ft-os kerekítés* (rounding to 5 HUF, for the :guilabel:`Cash` payment term in HUF) is created at installation; set its :guilabel:`Profit Account` and :guilabel:`Loss Account` before using it."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:336
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:341
 msgid "Products and units of measure"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:338
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:343
 msgid "The :guilabel:`General Information` tab of the product form contains the statistical codes printed under the invoice lines and sent to NAV:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:341
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:346
 msgid "goods: :guilabel:`VTSZ` (customs tariff number) and :guilabel:`KN` (Combined Nomenclature);"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:342
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:347
 msgid "services: :guilabel:`SZJ`, :guilabel:`TESZOR` and :guilabel:`Intermediated Service by Default` (invoice lines of the product are marked as :ref:`intermediated service <localizations/hungary/intermediated>` automatically)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:346
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:351
 msgid "The code lists are maintained by administrators in :menuselection:`Accounting --> Configuration --> VTSZ, KN, SZJ, TESZOR`, under :guilabel:`Vámtarifaszám (VTSZ)` and :guilabel:`Kombinált Nómenklatúra (KN)`. The VTSZ numbers of the goods subject to domestic reverse charge (cereals, oilseeds, steel products) are preloaded."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:352
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:357
 msgid "There is no menu for the SZJ and TESZOR lists in the current module version; new codes can be created from the product form."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:355
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:360
 msgid "The NAV report requires a standard unit type for each unit of measure. Open :menuselection:`Accounting --> Configuration --> Units Of Measure --> Units Of Measure Categories` and check the :guilabel:`NAV volume unit types` column of the units: `PIECE`, `KILOGRAM`, `TON`, `KWH`, `DAY`, `HOUR`, `MINUTE`, `MONTH`, `LITER`, `KILOMETER`, `CUBIC_METER`, `METER`, `LINEAR_METER`, `CARTON`, `PACK` or `OWN` (own unit, reported with its name)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:366
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:371
 msgid "The following options are available in the :guilabel:`Journal Entries` tab of journals (:menuselection:`Accounting --> Configuration --> Journals`):"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:369
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:374
 msgid ":guilabel:`Invoice Format` (all journals): :guilabel:`Paper-based` or :guilabel:`Electronic` default :ref:`format <localizations/hungary/invoice-format>` of the invoices of the journal."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:371
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:376
 msgid ":guilabel:`Foreign VAT (Külföldi adószám)` (sales journals): see :ref:`invoicing under a foreign VAT registration <localizations/hungary/foreign-vat>`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:373
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:378
 msgid ":guilabel:`Hungarian Invoicing` (sales journals, when the NAV data reporting is enabled; visible in :ref:`developer mode <developer-mode>` only): see :ref:`journals for invoices issued in another system <localizations/hungary/external-journal>`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:380
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:385
 msgid "MNB exchange rates"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:382
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:387
 msgid "With the `eyssen_currency_rate_live_mnb_community` module, the :guilabel:`Magyar Nemzeti Bank` provider is available for the :ref:`automatic currency rate update <multi-currency/config-rates-auto>` in :menuselection:`Accounting --> Configuration --> Settings --> Currencies`; it becomes the default provider of newly created companies. The official rates are stored with the date on which MNB published them; on weekends and bank holidays the last published rates are returned, so no new rate is created for those days."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:389
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:394
 msgid "When the provider is selected, the :guilabel:`MNB Range Load` button loads the historical rates of all active currencies: set :guilabel:`Date from` and, optionally, :guilabel:`Date to` (today if empty; the range cannot exceed 366 days) and click :guilabel:`Load`. Rates that already exist for a currency and a date are not overwritten."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:395
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:400
 msgid "The rate used on a foreign-currency invoice is the rate of the :ref:`fulfillment date <localizations/hungary/fulfillment-date>`, or today's rate if the fulfillment date is in the future. Credit notes and corrective invoices use the rate of the original invoice."
 msgstr ""
 
@@ -19789,7 +20161,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:59
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:126
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:564
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:527
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:649
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:141
 msgid "Invoices"
 msgstr ""
@@ -23861,7 +24233,7 @@ msgid "When using **retention** or **withholding an amount** in a customer invoi
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:132
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:629
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:755
 msgid "Production mode"
 msgstr ""
 
@@ -24348,7 +24720,7 @@ msgid "The community Facturae and FACe modules"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:326
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:685
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:811
 msgid "TicketBAI"
 msgstr ""
 
@@ -24542,306 +24914,442 @@ msgstr ""
 msgid "Odoo allows :ref:`invoices <localizations/spain/veri-factu-invoices>` and Point of Sale :ref:`orders <localizations/spain/veri-factu-orders>` to be automatically sent to the tax authorities."
 msgstr ""
 
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:499
+msgid "Registration with the AEAT"
+msgstr ""
+
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:501
-msgid "To enable **Veri\\*Factu**, follow these steps:"
+msgid "There is **no registration** of the company or of the software with the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)` to start using Veri*Factu. What you need before the :ref:`configuration <localizations/spain/veri-factu-configuration>` is a **qualified electronic certificate** that the software uses to authenticate itself to the AEAT."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:503
-msgid "Open the Settings app to make sure your company's :guilabel:`Country` and :guilabel:`Tax ID` are correctly set in the :ref:`Companies <general/companies/company>` section."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:506
+msgid "**No census declaration.** It is not necessary to report in the *modelo 036* that the billing records are sent with a Veri*Factu system. The option is made tacitly, by systematically starting to send the billing records to the AEAT. A company can join Veri*Factu whenever it wishes, and stays in this mode at least until the end of the calendar year of the first submission."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:505
-msgid ":ref:`Install <general/install>` the :guilabel:`Spain - Veri*Factu (l10n_es_edi_verifactu)` module, if it is not installed yet (the :ref:`fiscal profile <localizations/spain/fiscal-profile>` installs it)."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:510
+msgid "**No registration of the software.** The AEAT does not keep a register of invoicing software. The producer of the software issues the :ref:`responsible declaration <localizations/spain/veri-factu-declaration>` of each version, and you keep the declarations of the versions you replace or update."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:508
-msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`, scroll to the :guilabel:`Veri\\*Factu` section, check the :guilabel:`Enable Veri*Factu` option, and click :icon:`oi-arrow-right` :guilabel:`Manage certificates` to add a certificate."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:514
+msgid "**A qualified certificate is always needed**, also to test the system. It can be the certificate of the taxpayer, or the certificate of a representative, attorney or social collaborator (for example, a tax advisory firm) who sends the records on the taxpayer's behalf."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:511
-msgid "In the :guilabel:`Certificates for Veri\\*Factu` list view, click :guilabel:`New`."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:519
+msgid "The invoices issued with a Veri*Factu system are real invoices, and their records are sent to the AEAT, also when they are issued only to try the system. Use the :ref:`test environment <localizations/spain/veri-factu-configuration>` for tests: the AEAT requires that the invoices issued by mistake in production mode are cancelled."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:512
-msgid "Click :guilabel:`Upload your file`, then select a certificate file and enter the :guilabel:`Password` needed to open the certificate (if there is one)."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:525
+msgid "Deadlines"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:516
-msgid "At least one certificate has to be uploaded."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:517
-msgid "By default Veri*Factu is in testing mode. The data is sent to test servers and is not considered official. When official data can be sent to the production servers, go to the :guilabel:`Veri\\*Factu` section in the :guilabel:`Settings` and disable :guilabel:`Test Environment`. This is only possible when the :ref:`production conditions <localizations/spain/veri-factu-production>` are met."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:529
-msgid "Once an :doc:`invoice <../../finance/accounting/customer_invoices>` is confirmed, it can be :ref:`sent <accounting/invoice/sending>`. In the :guilabel:`Send` window, the Veri*Factu option is available if Veri*Factu has been enabled."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:527
+msgid "The Spanish invoicing systems must comply with the regulation (Royal Decree 1007/2023) before **1 January 2027** for the taxpayers of the Corporate Income Tax (for example, an *S.L.* or an *S.A.*), and before **1 July 2027** for the other businesses and professionals (Royal Decree-law 15/2025). Starting earlier is possible."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:533
-msgid "Click :guilabel:`Send` to generate a JSON file containing the invoice details. This file is stored as a Veri*Factu document. In the :guilabel:`Veri*Factu` tab, all corresponding documents are listed by their creation date and current status."
+msgid "Obtaining the certificate"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:535
+msgid "The certificates are issued by the certification authorities recognized by the AEAT. The most common one is the **FNMT-RCM** (*Fábrica Nacional de Moneda y Timbre*), described below."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:538
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:563
-msgid "To download a JSON file, click on its document in the :guilabel:`Veri*Factu` tab. Then, in the :guilabel:`Open: Veri*Factu Documents` window, click the link in the :guilabel:`JSON` field."
+msgid "**Self-employed person (natural person)**"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:540
+msgid "Request the certificate online on the website of the FNMT. At the end of the request you receive a **request code**."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:542
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:567
-msgid "The document should be sent to the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)` immediately. However, it may be delayed due to mandatory waiting periods between submissions required by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`. In such cases, the document is automatically sent the next time a scheduled action runs."
+msgid "Accredit your identity in person in a registration office, with the request code and your original DNI, NIE or Spanish passport. The offices of the AEAT and of the Social Security require an appointment; the offices of Correos do not. Some issuers accept an online request with an electronic DNI instead."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:546
-msgid "A Veri\\*Factu **QR code** appears on the invoice PDF. Scan this code to verify that the invoice has been received and recognized by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`."
+msgid "About an hour after the accreditation, download and install the certificate from the same website. Make a backup copy of the certificate file."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:553
-msgid "Point of sale orders"
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:549
+msgid "**Company (legal entity)**"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:555
-msgid "Once an order has been :ref:`paid <pos/sell>`, a JSON file containing the order details is generated. This file is stored as a Veri*Factu document."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:551
+msgid "A company needs the *Certificado de Representante de Persona Jurídica* (certificate of representative of a legal entity), issued by the FNMT for entities whose NIF starts with A, B, C or D. It is requested by the legal or voluntary representative of the company, who accredits identity and representation either in person in a registration office, or online in the :guilabel:`Electronic Office` of the AEAT (procedure *ZZ38 - Solicitud Certificados Electrónicos de Representante*). For the online accreditation:"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:558
-msgid "Go to :menuselection:`Point of Sale --> Orders --> Orders`. In the :guilabel:`Orders` list view, select the relevant order. In the :guilabel:`Veri*Factu` tab, all the corresponding documents are listed by their creation date and current status."
+msgid "Request the certificate on the website of the FNMT and note the **request code**."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:572
-msgid "If an invoice is generated for an order during the payment process, the Veri*Factu document is :ref:`created and sent for the invoice <localizations/spain/veri-factu-invoices>` instead."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:559
+msgid "Sign in to the Electronic Office of the AEAT with a personal certificate, and open the procedure :guilabel:`Certificados electrónicos de representante persona jurídica`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:576
-msgid "A Veri\\*Factu **QR code** appears on the order receipt, even if an invoice is created for the order. Scan this code to verify that the invoice has been received and recognized by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`"
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:561
+msgid "Fill in the data of the represented company and of the representative, and enter the request code."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:583
-msgid "Software producer and responsible declaration"
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:0
+msgid "Form of the AEAT procedure ZZ382 with the represented entity, the representative and the request code"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:585
-msgid "The regulation requires the producer of a Veri*Factu system to declare the compliance of the system (*declaración responsable*) and to make the declaration easy to reach from inside the system. In eYssen, the producer of the fork is built into the release: the data sent to the AEAT in the *SistemaInformatico* block of each record (producer, system name, software version, installation number) cannot be edited in the interface. The installation number is unique per database and per company."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:566
+msgid "The AEAT form for the presentation of the documents of the certificate."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:593
-msgid "After cloning a database (for example, to create a test copy), the database UUID must be regenerated. Otherwise the clone reports the same installation numbers as the original."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:568
+msgid "Attach the required documents. The AEAT asks for a recent (15 days) certificate of the *Registro Mercantil* about the company, and one of these two: a recent certificate of the *Registro Mercantil* about the appointment of the representative, or, for a voluntary representative, a notarial power of attorney with a special clause for obtaining the certificate. Joint administrators (*administradores mancomunados*) also provide the application form signed by all of them."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:596
-msgid "To read the declaration of the version you are running, use any of these entries:"
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:0
+msgid "Notice of the AEAT listing the documents to present"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:598
-msgid "the user menu (your name at the top right), :guilabel:`Veri*Factu Responsible Declaration`;"
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:578
+msgid "The documents required by the AEAT."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:599
-msgid ":menuselection:`Settings --> General Settings`, :guilabel:`About` section, :guilabel:`Veri*Factu` setting, :guilabel:`Responsible declaration` link. The setting also shows the software producer and the version of the software;"
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:580
+msgid "Add the files, click :guilabel:`Presentar` (submit), and download the receipt. Then continue with the download of the certificate on the website of the FNMT, as above."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:0
+msgid "Section of the AEAT form to attach the documents, with the Presentar button"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:586
+msgid "Attaching the documents and submitting them."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:588
+msgid "Once you have the certificate file (and its password), :ref:`upload it in eYssen <localizations/spain/veri-factu-configuration>`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:592
+msgid "Representation and social collaboration"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:594
+msgid "If a tax advisory firm or another third party sends the records for you, the taxpayer must give them the power to do so, through **representation** (*apoderamiento*) or **social collaboration** (*colaboración social*). The AEAT provides specific Veri*Factu authorization models in the section *Modelos de autorización de trámites para colaboradores sociales* of its Electronic Office. The certificate uploaded in eYssen is then the qualified certificate of the representative, attorney or social collaborator."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:602
-msgid ":menuselection:`Accounting --> Configuration --> Settings`, :guilabel:`Veri*Factu` section, with the same producer, version and :guilabel:`Responsible declaration` link;"
+msgid "The records sent in the same batch must belong to the same taxpayer. In a database with several Spanish companies, eYssen sends the records of each company separately."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:604
-msgid ":menuselection:`Accounting --> Configuration --> Veri*Factu (Spain) --> Responsible Declaration`."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:614
-msgid "The declaration opens as a PDF (:file:`Declaracion_responsable_VeriFactu`), always in Spanish. It is generated from the declaration file that ships with each release (:file:`declarations/<version>.json` in the Veri*Factu module), which lists the producer, the system, the place and date, and the Veri*Factu modules and their versions. Releases have an identifier such as *18.0.es.2026.10.0*."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:606
+msgid "Source of this section: Agencia Tributaria, `Veri*Factu FAQ <https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/sistemas-verifactu.html>`_ (page updated 22 July 2026), `declaración responsable FAQ <https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/certificacion-sistemas-informaticos-declaracion-responsable.html>`_ (22 July 2026) and `Acreditación de persona jurídica <https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/acreditarse-obtener-certificado-electronico/acreditacion-persona-juridica.html>`_ (8 January 2025, the source of the screenshots), and the `FNMT <https://www.sede.fnmt.gob.es/certificados/persona-fisica/obtener-certificado-software>`_ certificate guide. Reproduced under the reuse conditions of the AEAT."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:621
-msgid "If there is no published declaration for the version that is running, for example on a development version, the PDF is a **draft marked \"BORRADOR – SIN VALIDEZ\"** (draft, without validity) that lists the problems found. Do not give such a draft to customers or to the tax agency."
+msgid "To enable **Veri\\*Factu**, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:623
+msgid "Open the Settings app to make sure your company's :guilabel:`Country` and :guilabel:`Tax ID` are correctly set in the :ref:`Companies <general/companies/company>` section."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:625
+msgid ":ref:`Install <general/install>` the :guilabel:`Spain - Veri*Factu (l10n_es_edi_verifactu)` module, if it is not installed yet (the :ref:`fiscal profile <localizations/spain/fiscal-profile>` installs it)."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:628
+msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`, scroll to the :guilabel:`Veri\\*Factu` section, check the :guilabel:`Enable Veri*Factu` option, and click :icon:`oi-arrow-right` :guilabel:`Manage certificates` to add a certificate."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:631
-msgid "The :guilabel:`Test Environment` option of the :guilabel:`Veri*Factu` section of the Accounting settings is enabled by default: the records are sent to the AEAT test servers. The production mode (sending real records to the AEAT) is only allowed when all of these conditions are met:"
+msgid "In the :guilabel:`Certificates for Veri\\*Factu` list view, click :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:635
-msgid "the producer data is complete;"
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:632
+msgid "Click :guilabel:`Upload your file`, then select a certificate file and enter the :guilabel:`Password` needed to open the certificate (if there is one)."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:636
-msgid "the running code is an ES release (identifier :samp:`18.0.es.{YYYY}.{MM}.{N}`), not a development version;"
+msgid "At least one certificate has to be uploaded."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:638
-msgid "the responsible declaration of the running version exists and matches the data that is sent to the AEAT."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:637
+msgid "By default Veri*Factu is in testing mode. The data is sent to test servers and is not considered official. When official data can be sent to the production servers, go to the :guilabel:`Veri\\*Factu` section in the :guilabel:`Settings` and disable :guilabel:`Test Environment`. This is only possible when the :ref:`production conditions <localizations/spain/veri-factu-production>` are met."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:641
-msgid "As long as a condition is not met:"
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:642
+msgid "SII taxpayers are exempt from Veri*Factu: do not use both on the same company. With the :ref:`Spanish setup <localizations/spain/base-layer>` and the community SII module, enabling both is refused."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:643
-msgid "the :guilabel:`Test Environment` option is read-only and a warning, :guilabel:`Production mode is not available`, lists the problems below the option. Records are still sent to the test servers, with the data shown in the section;"
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:651
+msgid "Once an :doc:`invoice <../../finance/accounting/customer_invoices>` is confirmed, it can be :ref:`sent <accounting/invoice/sending>`. In the :guilabel:`Send` window, the Veri*Factu option is available if Veri*Factu has been enabled."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:646
-msgid "Odoo refuses to generate or send production records, with the message *Veri\\*Factu production submission is blocked until the software producer data is complete* followed by the list of problems;"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:649
-msgid "accounting managers see a warning in the :ref:`pending records indicator <localizations/spain/veri-factu-pending>`."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:653
-msgid "A company that already sent production records with an earlier version is not switched back to the test environment when the module is upgraded, but its records are not sent until the conditions above are met. A warning is written in the server log."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:655
+msgid "Click :guilabel:`Send` to generate a JSON file containing the invoice details. This file is stored as a Veri*Factu document. In the :guilabel:`Veri*Factu` tab, all corresponding documents are listed by their creation date and current status."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:660
-msgid "Pending records and submission"
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:685
+msgid "To download a JSON file, click on its document in the :guilabel:`Veri*Factu` tab. Then, in the :guilabel:`Open: Veri*Factu Documents` window, click the link in the :guilabel:`JSON` field."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:662
-msgid "A record is generated when an invoice is sent from the :guilabel:`Send` window or a point of sale order is paid, and it is sent to the AEAT afterwards. The AEAT imposes waiting times between submissions, and a submission can fail when the AEAT or the network is unavailable. A record that is not sent yet is *pending*."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:664
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:689
+msgid "The document should be sent to the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)` immediately. However, it may be delayed due to mandatory waiting periods between submissions required by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`. In such cases, the document is automatically sent the next time a scheduled action runs."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:667
-msgid "A scheduled action, :guilabel:`Veri*Factu: Submit / Cancel Records`, retries the pending records **every hour**. On databases that were installed with an earlier version, the upgrade sets the hourly interval."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:670
-msgid "A **paper plane icon** in the top bar (systray) shows the number of pending records on a red badge, for the users of the companies that have Billing access rights. It is refreshed every five minutes and is only shown when records are pending or a warning exists. Hover over it to see the details. Click it to open the list :guilabel:`Veri*Factu Records Pending Submission` (creation date, company, journal entry, document type, chain index and state)."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:668
+msgid "A Veri\\*Factu **QR code** appears on the invoice PDF. Scan this code to verify that the invoice has been received and recognized by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:675
-msgid "If the production conditions above are not met, accounting managers see the icon turn into a warning triangle. When there are no pending records, clicking it opens the Accounting settings."
+msgid "Point of sale orders"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:677
-msgid "The same list is available in :menuselection:`Accounting --> Configuration --> Veri*Factu (Spain) --> Pending Records`."
+msgid "Once an order has been :ref:`paid <pos/sell>`, a JSON file containing the order details is generated. This file is stored as a Veri*Factu document."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:680
-msgid "If a record is sent more than **240 seconds** after it was generated (for example because the AEAT was unavailable or Odoo was not running), it is sent flagged as an *incident* (*Incidencia = S*) automatically, so that the AEAT does not register it with error 2004. Nothing has to be done."
+msgid "Go to :menuselection:`Point of Sale --> Orders --> Orders`. In the :guilabel:`Orders` list view, select the relevant order. In the :guilabel:`Veri*Factu` tab, all the corresponding documents are listed by their creation date and current status."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:687
-msgid "`Ticket BAI <https://www.gipuzkoa.eus/es/web/ogasuna/ticketbai>`_ or **TBAI** is an e-Invoicing system used by the Basque government and its three provincial councils (Álava, Biscay, and Gipuzkoa)."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:694
+msgid "If an invoice is generated for an order during the payment process, the Veri*Factu document is :ref:`created and sent for the invoice <localizations/spain/veri-factu-invoices>` instead."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:691
-msgid "Odoo supports the **TicketBAI (TBAI)** electronic invoicing format for all three regions of the **Basque Country**. To enable **TicketBAI**, set your company's :guilabel:`Country` and :guilabel:`Tax ID` under :menuselection:`Settings --> General Settings` in the :guilabel:`Companies` section."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:698
+msgid "A Veri\\*Factu **QR code** appears on the order receipt, even if an invoice is created for the order. Scan this code to verify that the invoice has been received and recognized by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:696
-msgid "Then, :ref:`install <general/install>` the module :guilabel:`Spain -TicketBAI (l10n_es_edi_TBAI)`, go to :menuselection:`Accounting --> Configuration --> Settings`, and select a **region** in the :guilabel:`Spain Localization` section's :guilabel:`Tax Agency for TBAI` field."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:705
+msgid "Software producer and responsible declaration"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:700
-msgid "Once a region is selected, click :guilabel:`Manage certificates (SII/TicketBAI)`, then click :guilabel:`New`, upload the certificate, and enter the password provided by the tax agency."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:707
+msgid "The regulation requires the producer of a Veri*Factu system to declare the compliance of the system (*declaración responsable*) and to make the declaration easy to reach from inside the system. In eYssen, the producer of the fork is built into the release: the data sent to the AEAT in the *SistemaInformatico* block of each record (producer, system name, software version, installation number) cannot be edited in the interface. The installation number is unique per database and per company."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:704
-msgid "If you are testing certificates, enable :guilabel:`Test Mode` in the :guilabel:`Spain Localization` section, which can be found under :guilabel:`Accounting` in the **Settings** app."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:715
+msgid "After cloning a database (for example, to create a test copy), the database UUID must be regenerated. Otherwise the clone reports the same installation numbers as the original."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:709
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:763
-msgid "Use case"
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:718
+msgid "To read the declaration of the version you are running, use any of these entries:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:711
-msgid "Once an invoice has been :doc:`created <../../finance/accounting/customer_invoices>` and confirmed, a TicketBAI **banner** appears at the top."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:720
+msgid "the user menu (your name at the top right), :guilabel:`Veri*Factu Responsible Declaration`;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:722
-msgid "Odoo sends invoices through TicketBAI automatically every **24 hours**. However, you can click :guilabel:`Process now` to send the invoice immediately."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:721
+msgid ":menuselection:`Settings --> General Settings`, :guilabel:`About` section, :guilabel:`Veri*Factu` setting, :guilabel:`Responsible declaration` link. The setting also shows the software producer and the version of the software;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:725
-msgid "When the invoice is **sent**, the status of the field :guilabel:`Electronic Invoice` changes to :guilabel:`Sent`, and the XML file can be found in the **chatter**. Under the :guilabel:`EDI Documents` tab, you can see the traceability of other generated documents related to the invoice (e.g., if the invoice should also be sent through the **SII**, it will appear here)."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:724
+msgid ":menuselection:`Accounting --> Configuration --> Settings`, :guilabel:`Veri*Factu` section, with the same producer, version and :guilabel:`Responsible declaration` link;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:731
-msgid "The TBAI **QR code** is displayed on the invoice PDF."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:726
+msgid ":menuselection:`Accounting --> Configuration --> Veri*Factu (Spain) --> Responsible Declaration`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:742
-msgid "FACe"
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:737
+msgid "When you update to a new version, keep the declaration of the version you replace: the AEAT expects the users of an invoicing system to conserve the declarations of the previous versions."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:744
-msgid "`FACe <https://face.gob.es/en>`_ is the e-Invoicing platform used by the public administrations in Spain to send electronic invoices."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:740
+msgid "The declaration opens as a PDF (:file:`Declaracion_responsable_VeriFactu`), always in Spanish. It is generated from the declaration file that ships with each release (:file:`declarations/<version>.json` in the Veri*Factu module), which lists the producer, the system, the place and date, and the Veri*Factu modules and their versions. Releases have an identifier such as *18.0.es.2026.10.0*."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:747
-msgid "Before configuring the :abbr:`FACe (General Entrance for Electronic Invoices)` system, :ref:`install <general/install>` the :guilabel:`Spain - Facturae EDI (l10n_es_edi_facturae)` module and other **Facturae EDI**-related modules."
+msgid "If there is no published declaration for the version that is running, for example on a development version, the PDF is a **draft marked \"BORRADOR – SIN VALIDEZ\"** (draft, without validity) that lists the problems found. Do not give such a draft to customers or to the tax agency."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:751
-msgid "To configure FACe, follow these steps:"
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:757
+msgid "The :guilabel:`Test Environment` option of the :guilabel:`Veri*Factu` section of the Accounting settings is enabled by default: the records are sent to the AEAT test servers. The production mode (sending real records to the AEAT) is only allowed when all of these conditions are met:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:753
-msgid "Go to :menuselection:`Accounting --> Configuration --> Certificates`."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:761
+msgid "the producer data is complete;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:754
-msgid "Click :guilabel:`New` to create a new certificate."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:762
+msgid "the running code is an ES release (identifier :samp:`18.0.es.{YYYY}.{MM}.{N}`), not a development version;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:755
-msgid "Complete the fields, including uploading the file of the :guilabel:`Certificate` provided by the tax agency and the provided :guilabel:`Certificate Password`."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:764
+msgid "the responsible declaration of the running version exists and matches the data that is sent to the AEAT."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:759
-msgid "If using the Invoicing app instead of Accounting, go to :menuselection:`Invoicing --> Configuration --> Certificates`."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:767
+msgid "As long as a condition is not met:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:765
-msgid "Once you have :doc:`created <../../finance/accounting/customer_invoices>` an invoice and confirmed it, click :guilabel:`Send & Print`. Make sure :guilabel:`Generate Facturae edi file` is enabled, and click :guilabel:`Send & Print` again. Once the invoice is sent, the generated XML file is available in the **chatter**."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:769
+msgid "the :guilabel:`Test Environment` option is read-only and a warning, :guilabel:`Production mode is not available`, lists the problems below the option. Records are still sent to the test servers, with the data shown in the section;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:771
-msgid "The file is **NOT** automatically sent. You have to send it yourself manually."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:772
+msgid "Odoo refuses to generate or send production records, with the message *Veri\\*Factu production submission is blocked until the software producer data is complete* followed by the list of problems;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:774
-msgid "You can send **FACe** XML files in batch through `the governmental portal <https://www.facturae.gob.es/formato/Paginas/descarga-aplicacion-escritorio.aspx>`_."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:777
-msgid "Administrative centers"
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:775
+msgid "accounting managers see a warning in the :ref:`pending records indicator <localizations/spain/veri-factu-pending>`."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:779
-msgid "In order for **FACe** to work with **administrative centers**, the invoice *must* include specific data about the centers."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:783
-msgid "Make sure to have the :guilabel:`Spain - Facturae EDI - Administrative Centers Patch (l10n_es_edi_facturae_adm_centers)` module :ref:`installed <general/install>`."
+msgid "A company that already sent production records with an earlier version is not switched back to the test environment when the module is upgraded, but its records are not sent until the conditions above are met. A warning is written in the server log."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:786
-msgid "To add **administrative centers**, create a new **contact** to add to the **partner** company. Select :guilabel:`FACe Center` as the **type**, assign one or more **role(s)** to that contact, and :guilabel:`Save`. The **three** roles usually required are:"
+msgid "Pending records and submission"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:790
-msgid "Órgano gestor: :guilabel:`Receptor` (Receiver);"
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:788
+msgid "A record is generated when an invoice is sent from the :guilabel:`Send` window or a point of sale order is paid, and it is sent to the AEAT afterwards. The AEAT imposes waiting times between submissions, and a submission can fail when the AEAT or the network is unavailable. A record that is not sent yet is *pending*."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:791
-msgid "Unidad tramitadora: :guilabel:`Pagador` (Payer);"
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:793
+msgid "A scheduled action, :guilabel:`Veri*Factu: Submit / Cancel Records`, retries the pending records **every hour**. On databases that were installed with an earlier version, the upgrade sets the hourly interval."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:792
-msgid "Oficina contable: :guilabel:`Fiscal` (Fiscal)."
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:796
+msgid "A **paper plane icon** in the top bar (systray) shows the number of pending records on a red badge, for the users of the companies that have Billing access rights. It is refreshed every five minutes and is only shown when records are pending or a warning exists. Hover over it to see the details. Click it to open the list :guilabel:`Veri*Factu Records Pending Submission` (creation date, company, journal entry, document type, chain index and state)."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:801
+msgid "If the production conditions above are not met, accounting managers see the icon turn into a warning triangle. When there are no pending records, clicking it opens the Accounting settings."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:803
+msgid "The same list is available in :menuselection:`Accounting --> Configuration --> Veri*Factu (Spain) --> Pending Records`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:806
+msgid "If a record is sent more than **240 seconds** after it was generated (for example because the AEAT was unavailable or Odoo was not running), it is sent flagged as an *incident* (*Incidencia = S*) automatically, so that the AEAT does not register it with error 2004. Nothing has to be done."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:813
+msgid "`Ticket BAI <https://www.gipuzkoa.eus/es/web/ogasuna/ticketbai>`_ or **TBAI** is an e-Invoicing system used by the Basque government and its three provincial councils (Álava, Biscay, and Gipuzkoa)."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:817
+msgid "Odoo supports the **TicketBAI (TBAI)** electronic invoicing format for all three regions of the **Basque Country**. To enable **TicketBAI**, set your company's :guilabel:`Country` and :guilabel:`Tax ID` under :menuselection:`Settings --> General Settings` in the :guilabel:`Companies` section."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:822
+msgid "Then, :ref:`install <general/install>` the module :guilabel:`Spain -TicketBAI (l10n_es_edi_TBAI)`, go to :menuselection:`Accounting --> Configuration --> Settings`, and select a **region** in the :guilabel:`Spain Localization` section's :guilabel:`Tax Agency for TBAI` field."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:826
+msgid "Once a region is selected, click :guilabel:`Manage certificates (SII/TicketBAI)`, then click :guilabel:`New`, upload the certificate, and enter the password provided by the tax agency."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:830
+msgid "If you are testing certificates, enable :guilabel:`Test Mode` in the :guilabel:`Spain Localization` section, which can be found under :guilabel:`Accounting` in the **Settings** app."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:835
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:889
+msgid "Use case"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:837
+msgid "Once an invoice has been :doc:`created <../../finance/accounting/customer_invoices>` and confirmed, a TicketBAI **banner** appears at the top."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:848
+msgid "Odoo sends invoices through TicketBAI automatically every **24 hours**. However, you can click :guilabel:`Process now` to send the invoice immediately."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:851
+msgid "When the invoice is **sent**, the status of the field :guilabel:`Electronic Invoice` changes to :guilabel:`Sent`, and the XML file can be found in the **chatter**. Under the :guilabel:`EDI Documents` tab, you can see the traceability of other generated documents related to the invoice (e.g., if the invoice should also be sent through the **SII**, it will appear here)."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:857
+msgid "The TBAI **QR code** is displayed on the invoice PDF."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:868
+msgid "FACe"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:870
+msgid "`FACe <https://face.gob.es/en>`_ is the e-Invoicing platform used by the public administrations in Spain to send electronic invoices."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:873
+msgid "Before configuring the :abbr:`FACe (General Entrance for Electronic Invoices)` system, :ref:`install <general/install>` the :guilabel:`Spain - Facturae EDI (l10n_es_edi_facturae)` module and other **Facturae EDI**-related modules."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:877
+msgid "To configure FACe, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:879
+msgid "Go to :menuselection:`Accounting --> Configuration --> Certificates`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:880
+msgid "Click :guilabel:`New` to create a new certificate."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:881
+msgid "Complete the fields, including uploading the file of the :guilabel:`Certificate` provided by the tax agency and the provided :guilabel:`Certificate Password`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:885
+msgid "If using the Invoicing app instead of Accounting, go to :menuselection:`Invoicing --> Configuration --> Certificates`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:891
+msgid "Once you have :doc:`created <../../finance/accounting/customer_invoices>` an invoice and confirmed it, click :guilabel:`Send & Print`. Make sure :guilabel:`Generate Facturae edi file` is enabled, and click :guilabel:`Send & Print` again. Once the invoice is sent, the generated XML file is available in the **chatter**."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:897
+msgid "The file is **NOT** automatically sent. You have to send it yourself manually."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:900
+msgid "You can send **FACe** XML files in batch through `the governmental portal <https://www.facturae.gob.es/formato/Paginas/descarga-aplicacion-escritorio.aspx>`_."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:903
+msgid "Administrative centers"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:905
+msgid "In order for **FACe** to work with **administrative centers**, the invoice *must* include specific data about the centers."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:909
+msgid "Make sure to have the :guilabel:`Spain - Facturae EDI - Administrative Centers Patch (l10n_es_edi_facturae_adm_centers)` module :ref:`installed <general/install>`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:912
+msgid "To add **administrative centers**, create a new **contact** to add to the **partner** company. Select :guilabel:`FACe Center` as the **type**, assign one or more **role(s)** to that contact, and :guilabel:`Save`. The **three** roles usually required are:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:916
+msgid "Órgano gestor: :guilabel:`Receptor` (Receiver);"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:917
+msgid "Unidad tramitadora: :guilabel:`Pagador` (Payer);"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:918
+msgid "Oficina contable: :guilabel:`Fiscal` (Fiscal)."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:929
 msgid "If administrative centers need different :guilabel:`Codes` per role, you *must* create different centers for each role."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:805
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:931
 msgid "When an electronic invoice is created using a partner with **administrative centers**, *all* administrative centers are included in the invoice."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:807
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:933
 msgid "You can add one contact with multiple roles or multiple contacts with a different role each."
 msgstr ""
 
@@ -29419,509 +29927,4 @@ msgstr ""
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:53
 msgid "Fill in the :guilabel:`Secret Key` and :guilabel:`Webhook Token` fields with the information saved at the step :ref:`payment_providers/xendit/configure_dashboard`."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:3
-msgid "Batch bank transfers (Hungary)"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:5
-msgid "The *Batch Bank Transfer* module prepares the **bank file** for paying many vendor bills at once. You collect the open bills in a *batch*, check the amounts and the expected bank balance, and click :guilabel:`Approve`: Odoo generates the transfer file in the format of your bank, which you upload in your online banking. The formats of the main Hungarian banks are supported."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:11
-msgid "The module generates the file and keeps track of which bills were sent to the bank. It does **not** register payments. The bills are paid as usual when the bank statement is imported and :doc:`reconciled <../bank/reconciliation>`. If your bank accepts SEPA files, use :doc:`payment orders <payment_orders>` instead."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:16
-msgid ":ref:`Install <general/install>` the :guilabel:`Batch Bank Transfer` module (`eyssen_batch_bank_transfer`). It requires the Hungarian localization (`eyssen_l10n_hu`, see :doc:`../../fiscal_localizations/hungary`). Users need the :guilabel:`Invoicing` access right to create and edit batches; the read-only accounting access right can only read them. Batches are separate for every company."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:27
-msgid "The **bank account of your company** (:menuselection:`Accounting --> Configuration --> Bank Accounts`, or the :guilabel:`Bank Accounts` of the company contact) is filled in with its :guilabel:`Bank`, and the bank has its **BIC (SWIFT) code**. The BIC decides the :ref:`file format <accounting/batch-bank-transfer/formats>`. The largest Hungarian banks are loaded with the Hungarian localization."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:32
-msgid "The **vendors have a bank account** (IBAN or Hungarian account number), and the bills you want to pay are linked to it in the :guilabel:`Recipient Bank` field. A bill without a bank account can be added to a batch, but the batch cannot be approved."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:35
-msgid "The bills are **posted** and not fully paid."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:40
-msgid "Create a batch"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:42
-msgid "Go to :menuselection:`Accounting --> Vendors --> Batch Bank Transfers` and click :guilabel:`New`. The batch is numbered automatically (for example *UTALASOK-000001*)."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:52
-msgid "Creation date of the batch. It is replaced by the approval date when the batch is approved."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:53
-msgid ":guilabel:`Bank Value Date`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:54
-msgid "Date on which the bank debits the transfers. It is **tomorrow** by default and cannot be earlier than today."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:56
-msgid ":guilabel:`Bank Account`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:57
-msgid "Bank account of your company that is debited (required). The :guilabel:`Currency` of the batch is the currency of this account; an account without a currency is treated as HUF."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:82
-msgid "Add the bills"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:84
-msgid "Use one of the buttons of the draft batch. Only posted bills with an open amount, of the company and in the currency of the batch bank account, are loaded. The amount already sent to the bank in approved batches is subtracted, so a bill that has been fully sent is not proposed again, and a partly sent bill is proposed for the remaining amount."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:93
-msgid "Button"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:94
-msgid "Bills loaded"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:95
-msgid ":guilabel:`Load Overdue Invoices`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:96
-msgid "Bills whose due date is today or earlier."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:97
-msgid ":guilabel:`Due Within 14 Days and Overdue`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:98
-msgid "Bills due within the next 14 days, and the overdue ones."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:99
-msgid ":guilabel:`Load Invoices by Due Date`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:103
-msgid ":guilabel:`Load All Invoices`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:104
-msgid "All the open bills, whatever the due date."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:105
-msgid ":guilabel:`Load Invoices`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:106
-msgid "Opens the list of the bills so that you can pick them yourself: select the bills, then click :menuselection:`Actions --> Add Invoices to Batch Bank Transfer`. You are brought back to the batch."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:110
-msgid "To add bills that were **already sent to the bank** (for instance to repeat a transfer the bank rejected), select them in the :guilabel:`Load Invoices` list and click :menuselection:`Actions --> Add Previously Transferred Invoices to Batch Bank Transfer`: the line is created for the full amount of the bill."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:115
-msgid "You can also work from the list of vendor bills at any time: the :guilabel:`Bank Transfer` column shows whether a bill has been sent to the bank (:guilabel:`Not Sent`, :guilabel:`Partially Sent` or :guilabel:`Fully Sent`). Enable it with the optional columns selector if it is hidden."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:130
-msgid "Check the lines"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:132
-msgid "Every bill is a line of the batch. You can edit the following directly in the list:"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:134
-msgid ":guilabel:`Amount to Transfer`: the amount to pay. Lower it to pay a bill **partially**."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:135
-msgid ":guilabel:`Comment`: the message for the beneficiary. It is filled with the vendor reference and the payment reference of the bill."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:137
-msgid ":guilabel:`Selected`: marks the line, to move it to another batch (see below)."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:139
-msgid "The :guilabel:`Transferred Amount` is what has already been sent to the bank for the bill in other approved batches. A line is shown in **red** when its amount and the transferred amount exceed the total of the bill, and in **orange** when the bill has no vendor bank account. The search box above the list filters the lines."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:144
-msgid ":guilabel:`Move Selected Invoices to New Batch` moves the :guilabel:`Selected` lines to a new draft batch with the same bank account, for instance to pay them on another day."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:146
-msgid ":guilabel:`Clear` removes all the lines of the batch (the bills are not modified)."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:149
-msgid "Balance forecast"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:151
-msgid "The block next to the lines helps you to check that the account can cover the transfers. The figures are calculated when the batch is saved, and the closing balance after the transfers is updated when you change the lines."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:159
-msgid "Figure"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:160
-msgid "Meaning"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:161
-msgid ":guilabel:`Bank Balance as of Date`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:162
-msgid "Balance of the bank journal(s) of the account up to the date of the batch."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:163
-msgid ":guilabel:`Increase`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:167
-msgid ":guilabel:`Decrease`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:171
-msgid ":guilabel:`Closing Balance at Date + 2 Weeks (Invoices)`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:172
-msgid "Balance plus increase minus decrease: the balance if all the bills due within two weeks were paid."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:174
-msgid ":guilabel:`Closing Balance at Date + 2 Weeks (Transfers)`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:175
-msgid "Balance plus increase minus the total of **this batch**."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:180
-msgid "Approve the batch and send the file"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:182
-msgid "Click :guilabel:`Approve`. Odoo checks the batch, generates the file, attaches it to the batch and downloads it. The status changes from :guilabel:`Draft` to :guilabel:`Sent to Bank`, the :guilabel:`Date` becomes today, and the lines can no longer be edited. Upload the file in your online banking and authorize the transfers there."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:187
-msgid "The batch cannot be approved, and an explicit message tells you why, when:"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:189
-msgid "a bill has no vendor bank account (*No partner bank account set for invoice ...*);"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:198
-msgid "The format depends on the **BIC of the bank** of the company bank account selected on the batch. Any other bank gets the :guilabel:`UNG` file."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:205
-msgid "Bank (BIC)"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:206
-msgid "HUF account"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:207
-msgid "Foreign currency account"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:209
-msgid "UniCredit Bank (BACXHUHB)"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:210
-msgid "`.PAY` file, named after the bank value date (`yymmdd.PAY`)"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:211
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:219
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:223
-msgid "Not available"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:212
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:224
-msgid "Amounts in whole forints."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:213
-msgid "OTP Bank (OTPVHUHB)"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:214
-msgid "Electra XML file (`HUFTransactions`)"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:215
-msgid "Electra XML file (`DEVTransactions`)"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:216
-msgid "Encoded in ISO-8859-2. The file is named after the day of the approval (`yyyymmdd.xml`)."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:217
-msgid "CIB Bank (CIBHHUHB)"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:218
-msgid "CSV file (`yyyymmdd_HUF.csv`)"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:221
-msgid "Any other bank"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:222
-msgid "`.UNG` file (`UNyymmdd.UNG`)"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:226
-msgid "In the `.PAY` and `.UNG` files, the lines paid to the same vendor bank account are **combined** into one transfer (the amounts are added, and the comments joined and shortened to 96 characters), and the names, addresses and comments are written without accents."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:231
-msgid "Undo"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:233
-msgid "Click :guilabel:`Undo` on a batch that has been sent to bank to cancel it: the attached files are deleted, the :guilabel:`Date` is cleared and the batch is a :guilabel:`Draft` again, so you can change it and generate a new file. Nothing is booked in the accounting by the module, so there is nothing else to reverse. Undo a batch only if the file was **not** processed by the bank."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:241
-msgid "After the bank has processed the transfers"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:251
-msgid ":doc:`../../fiscal_localizations/hungary`"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:63
-msgid ":guilabel:`Batch Bank Transfer`"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:64
-msgid "`eyssen_batch_bank_transfer`"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:65
-msgid ":doc:`Batch bank transfers <../accounting/payments/batch_bank_transfers>`: collects the open vendor bills in a batch and generates the transfer file in the format of the Hungarian banks (UNG, PAY, Electra, CIB)."
-msgstr ""
-
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:59
-msgid ":guilabel:`Vendor Credit Notes`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:60
-msgid "Also load the vendor credit notes (the *Refunds* of the vendors). Off by default."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:61
-msgid ":guilabel:`Customer Credit Notes`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:62
-msgid "Also load the customer credit notes (refunds that you pay back to customers). On by default."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:65
-msgid "The defaults of the two credit note options are system parameters (`1` = on, `0` = off): `eyssen_batch_bank_transfer.config.default_customer_credit` for :guilabel:`Vendor Credit Notes` and `eyssen_batch_bank_transfer.config.default_business_credit` for :guilabel:`Customer Credit Notes`. Edit them in :menuselection:`Settings --> Technical --> System Parameters` in :ref:`developer mode <developer-mode>`."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:100
-msgid "Bills due on or before the date you enter in the :guilabel:`Due On or Before` field."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:162
-msgid "Amounts expected to come in: the open customer invoices in the currency of the account, overdue, due in the first week and due in the second week after the date."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:165
-msgid "Open vendor bills in the currency of the account: overdue, due in the first week and due in the second week after the date (click the arrow to expand the details)."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:186
-msgid "the currency of the bank account does not fit the format (for example, a foreign-currency account with a format that only supports HUF);"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:188
-msgid "for a foreign-currency transfer from a CIB account, the bank of the vendor has no SWIFT/BIC code."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:217
-msgid "Semicolon-separated, named after the day of the approval. HUF amounts in whole forints, foreign currency amounts with two decimals. A foreign-currency transfer needs the SWIFT/BIC code of the vendor's bank."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:242
-msgid "Import the bank statement (:doc:`../bank/statement_import`) and :doc:`reconcile <../bank/reconciliation>` the debits with the bills, as for any other payment. The :guilabel:`Bank Transfer` column of the vendor bills shows what was sent to the bank: a bill is :guilabel:`Fully Sent` when the approved batches cover its open amount, and :guilabel:`Partially Sent` when they cover only a part of it."
-msgstr ""
-
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:51
-msgid ":guilabel:`Date`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:193
-msgid "File formats"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:499
-msgid "Registration with the AEAT"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:501
-msgid "There is **no registration** of the company or of the software with the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)` to start using Veri*Factu. What you need before the :ref:`configuration <localizations/spain/veri-factu-configuration>` is a **qualified electronic certificate** that the software uses to authenticate itself to the AEAT."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:506
-msgid "**No census declaration.** It is not necessary to report in the *modelo 036* that the billing records are sent with a Veri*Factu system. The option is made tacitly, by systematically starting to send the billing records to the AEAT. A company can join Veri*Factu whenever it wishes, and stays in this mode at least until the end of the calendar year of the first submission."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:510
-msgid "**No registration of the software.** The AEAT does not keep a register of invoicing software. The producer of the software issues the :ref:`responsible declaration <localizations/spain/veri-factu-declaration>` of each version, and you keep the declarations of the versions you replace or update."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:514
-msgid "**A qualified certificate is always needed**, also to test the system. It can be the certificate of the taxpayer, or the certificate of a representative, attorney or social collaborator (for example, a tax advisory firm) who sends the records on the taxpayer's behalf."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:519
-msgid "The invoices issued with a Veri*Factu system are real invoices, and their records are sent to the AEAT, also when they are issued only to try the system. Use the :ref:`test environment <localizations/spain/veri-factu-configuration>` for tests: the AEAT requires that the invoices issued by mistake in production mode are cancelled."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:525
-msgid "Deadlines"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:527
-msgid "The Spanish invoicing systems must comply with the regulation (Royal Decree 1007/2023) before **1 January 2027** for the taxpayers of the Corporate Income Tax (for example, an *S.L.* or an *S.A.*), and before **1 July 2027** for the other businesses and professionals (Royal Decree-law 15/2025). Starting earlier is possible."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:533
-msgid "Obtaining the certificate"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:535
-msgid "The certificates are issued by the certification authorities recognized by the AEAT. The most common one is the **FNMT-RCM** (*Fábrica Nacional de Moneda y Timbre*), described below."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:538
-msgid "**Self-employed person (natural person)**"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:540
-msgid "Request the certificate online on the website of the FNMT. At the end of the request you receive a **request code**."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:542
-msgid "Accredit your identity in person in a registration office, with the request code and your original DNI, NIE or Spanish passport. The offices of the AEAT and of the Social Security require an appointment; the offices of Correos do not. Some issuers accept an online request with an electronic DNI instead."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:546
-msgid "About an hour after the accreditation, download and install the certificate from the same website. Make a backup copy of the certificate file."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:549
-msgid "**Company (legal entity)**"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:551
-msgid "A company needs the *Certificado de Representante de Persona Jurídica* (certificate of representative of a legal entity), issued by the FNMT for entities whose NIF starts with A, B, C or D. It is requested by the legal or voluntary representative of the company, who accredits identity and representation either in person in a registration office, or online in the :guilabel:`Electronic Office` of the AEAT (procedure *ZZ38 - Solicitud Certificados Electrónicos de Representante*). For the online accreditation:"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:558
-msgid "Request the certificate on the website of the FNMT and note the **request code**."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:559
-msgid "Sign in to the Electronic Office of the AEAT with a personal certificate, and open the procedure :guilabel:`Certificados electrónicos de representante persona jurídica`."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:561
-msgid "Fill in the data of the represented company and of the representative, and enter the request code."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:0
-msgid "Form of the AEAT procedure ZZ382 with the represented entity, the representative and the request code"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:567
-msgid "The AEAT form for the presentation of the documents of the certificate."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:569
-msgid "Attach the required documents. The AEAT asks for a recent (15 days) certificate of the *Registro Mercantil* about the company, and one of these two: a recent certificate of the *Registro Mercantil* about the appointment of the representative, or, for a voluntary representative, a notarial power of attorney with a special clause for obtaining the certificate. Joint administrators (*administradores mancomunados*) also provide the application form signed by all of them."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:0
-msgid "Notice of the AEAT listing the documents to present"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:580
-msgid "The documents required by the AEAT."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:582
-msgid "Add the files, click :guilabel:`Presentar` (submit), and download the receipt. Then continue with the download of the certificate on the website of the FNMT, as above."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:0
-msgid "Section of the AEAT form to attach the documents, with the Presentar button"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:589
-msgid "Attaching the documents and submitting them."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:591
-msgid "Once you have the certificate file (and its password), :ref:`upload it in eYssen <localizations/spain/veri-factu-configuration>`."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:595
-msgid "Representation and social collaboration"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:597
-msgid "If a tax advisory firm or another third party sends the records for you, the taxpayer must give them the power to do so, through **representation** (*apoderamiento*) or **social collaboration** (*colaboración social*). The AEAT provides specific Veri*Factu authorization models in the section *Modelos de autorización de trámites para colaboradores sociales* of its Electronic Office. The certificate uploaded in eYssen is then the qualified certificate of the representative, attorney or social collaborator."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:605
-msgid "The records sent in the same batch must belong to the same taxpayer. In a database with several Spanish companies, eYssen sends the records of each company separately."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:609
-msgid "Source of this section: Agencia Tributaria, `Veri*Factu FAQ <https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/sistemas-verifactu.html>`_ (page updated 22 July 2026), `declaración responsable FAQ <https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu/preguntas-frecuentes/certificacion-sistemas-informaticos-declaracion-responsable.html>`_ (22 July 2026) and `Acreditación de persona jurídica <https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/firma-digital-sistema-clave-pin-tecnica/acreditarse-obtener-certificado-electronico/acreditacion-persona-juridica.html>`_ (8 January 2025, the source of the screenshots), and the `FNMT <https://www.sede.fnmt.gob.es/certificados/persona-fisica/obtener-certificado-software>`_ certificate guide. Reproduced under the reuse conditions of the AEAT."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:645
-msgid "SII taxpayers are exempt from Veri*Factu: do not use both on the same company. With the :ref:`Spanish setup <localizations/spain/base-layer>` and the community SII module, enabling both is refused."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:740
-msgid "When you update to a new version, keep the declaration of the version you replace: the AEAT expects the users of an invoicing system to conserve the declarations of the previous versions."
 msgstr ""

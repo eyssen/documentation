@@ -533,11 +533,6 @@ customize the report for different needs.
          :module: crm
          :notes: English UI, light theme, 1440px width, crop to the table.
 
-      .. important::
-         In pivot view, the :guilabel:`Insert In Spreadsheet` button may be greyed out due to the
-         report containing :guilabel:`duplicate group bys`. To fix this, replace the
-         :guilabel:`Stage` grouping in the search bar with another option.
-
    .. tab:: List View
 
       In list view, a win/loss report displays all leads on a single page.

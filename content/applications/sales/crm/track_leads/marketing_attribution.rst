@@ -122,10 +122,10 @@ can be used with or without filters.
     For a useful first report:
 
     #. From the :guilabel:`Filters` column, select the :guilabel:`Active` filter to view only leads
-    that are still marked as active.
+       that are still marked as active.
     #. From the :guilabel:`Group By` column, select (in this specific order) :guilabel:`Source`,
-    followed by the :guilabel:`City` or :guilabel:`Country`, depending on which grouping is more
-    relevant.
+       followed by the :guilabel:`City` or :guilabel:`Country`, depending on which grouping is more
+       relevant.
 
     .. screenshot:: sales-crm-attribution-grouped-results
        :menu: CRM ‣ Reporting ‣ Leads

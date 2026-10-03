@@ -13,9 +13,9 @@ ifndef CURRENT_LANG
   CURRENT_LANG = en
 endif
 
-# Default LANGUAGES for the language switcher (always include en and hu)
+# Default LANGUAGES for the language switcher (always include en, hu and es)
 ifndef LANGUAGES
-  LANGUAGES = en,hu
+  LANGUAGES = en,hu,es
 endif
 
 # Absolute canonical host for production HTML. Relative canonicals (the previous

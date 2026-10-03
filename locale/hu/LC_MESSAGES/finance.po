@@ -410,10 +410,6 @@ msgstr "A funkció két rétegre oszlik:"
 msgid "**Online Bank Sync** (``account_bank_sync``) provides the connections, the remote accounts, the journal mapping, the scheduled import, and the secure storage of the provider credentials."
 msgstr "Az **Online Bank Sync** (``account_bank_sync``) biztosítja a kapcsolatokat, a távoli számlákat, a naplóhoz rendelést, az ütemezett importálást és a szolgáltatói hitelesítő adatok biztonságos tárolását."
 
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:14
-msgid "A **provider module** implements one specific institution or aggregator. Two are available:"
-msgstr "Egy **szolgáltatói modul** egy konkrét pénzintézetet vagy aggregátort valósít meg. Kettő érhető el:"
-
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:16
 msgid "**Nyíltbankolás Partner** (``account_bank_sync_bankszamlakivonat``) — a multi-bank aggregator covering the Hungarian banks through the `bankszamlakivonat.hu` service."
 msgstr "**Nyíltbankolás Partner** (``account_bank_sync_bankszamlakivonat``) – több bankot lefedő aggregátor, amely a `bankszamlakivonat.hu` szolgáltatáson keresztül éri el a magyar bankokat."
@@ -454,10 +450,6 @@ msgstr "A szinkronizáció állapotának és eredményeinek olvasása. A hiteles
 msgid ":guilabel:`Bank Sync / Manager`"
 msgstr ":guilabel:`Bankszinkron / Menedzser`"
 
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:42
-msgid "Configure connections, accounts, and the journal mapping. Required to see the :guilabel:`Bank Sync` menu."
-msgstr "Kapcsolatok, számlák és a naplóhoz rendelés beállítása. A :guilabel:`Bankszinkron` menü megjelenéséhez szükséges."
-
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:44
 msgid ":guilabel:`Bank Sync / Payment Approver`"
 msgstr ":guilabel:`Bankszinkron / Kifizetés-jóváhagyó`"
@@ -469,10 +461,6 @@ msgstr "Kimenő kifizetések jóváhagyása és elküldése."
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:46
 msgid ":guilabel:`Bank Sync / Admin`"
 msgstr ":guilabel:`Bankszinkron / Adminisztrátor`"
-
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:47
-msgid "Read and write the provider credentials and secrets."
-msgstr "A szolgáltatói hitelesítő adatok és titkok olvasása és írása."
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:52
 msgid "Create a connection"
@@ -494,33 +482,13 @@ msgstr ":guilabel:`Szolgáltató`: az adott pénzintézetet kezelő szolgáltat�
 msgid ":guilabel:`Environment`: :guilabel:`Sandbox` for testing, :guilabel:`Production` for live data."
 msgstr ":guilabel:`Környezet`: :guilabel:`Tesztkörnyezet` a teszteléshez, :guilabel:`Éles` az éles adatokhoz."
 
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:59
-msgid "The :guilabel:`Credentials` section, whose fields depend on the selected provider. Credentials are only visible to the :guilabel:`Bank Sync / Admin` group."
-msgstr "A :guilabel:`Hitelesítő adatok` szakasz, amelynek mezői a kiválasztott szolgáltatótól függnek. A hitelesítő adatokat csak a :guilabel:`Bankszinkron / Adminisztrátor` csoport látja."
-
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:62
-msgid "The :guilabel:`Capabilities` section is filled in by the provider module and tells you what the connection supports: :guilabel:`Supports statement pull`, :guilabel:`Supports FX rates`, :guilabel:`Supports webhooks`, and :guilabel:`Supports payouts`."
-msgstr "A :guilabel:`Képességek` szakaszt a szolgáltatói modul tölti ki, és megmutatja, mit támogat a kapcsolat: :guilabel:`Támogatja a kivonat-lekérést`, :guilabel:`Támogatja az árfolyamokat`, :guilabel:`Támogatja a webhookokat` és :guilabel:`Támogatja a kifizetéseket`."
-
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:66
-msgid "Click :guilabel:`Test connection` to verify the credentials. The :guilabel:`Status` bar moves from :guilabel:`Draft` to :guilabel:`Connected`; if the provider refuses the credentials, the status becomes :guilabel:`Error` and the reason is shown in :guilabel:`Last error`. A connection whose authorization has run out is set to :guilabel:`Expired` and must be renewed with the provider."
-msgstr "Kattintson a :guilabel:`Kapcsolat tesztelése` gombra a hitelesítő adatok ellenőrzéséhez. Az :guilabel:`Állapot` sáv a :guilabel:`Piszkozat` értékről a :guilabel:`Kapcsolódva` értékre vált; ha a szolgáltató elutasítja a hitelesítő adatokat, az állapot :guilabel:`Hiba` lesz, az okot pedig a :guilabel:`Last error` mező mutatja. Az a kapcsolat, amelynek a felhatalmazása lejárt, :guilabel:`Lejárt` állapotba kerül, és a szolgáltatónál kell megújítani."
-
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:84
 msgid "Nyíltbankolás Partner"
 msgstr "Nyíltbankolás Partner"
 
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:86
-msgid "The aggregator connects to the Hungarian banks on your behalf. Enter the :guilabel:`Entity id` and the :guilabel:`API key` you received from the service, then click :guilabel:`Get connection code`. Odoo requests a connection code, which is displayed in the :guilabel:`Connection code` field: use it on the provider's site to authorize your bank accounts. Once the authorization is done, click :guilabel:`Refresh / discover` to pull the list of authorized accounts into Odoo."
-msgstr "Az aggregátor az Ön nevében kapcsolódik a magyar bankokhoz. Adja meg a szolgáltatótól kapott :guilabel:`Entity id` és :guilabel:`API key` értéket, majd kattintson a :guilabel:`Csatlakozási kód kérése` gombra. Az Odoo lekér egy kapcsolati kódot, amely a :guilabel:`Csatlakozási kód` mezőben jelenik meg: ezzel engedélyezze a bankszámláit a szolgáltató oldalán. Az engedélyezés után kattintson a :guilabel:`Frissítés / felfedezés` gombra, hogy az engedélyezett számlák listája bekerüljön az Odoo-ba."
-
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:95 ../../content/applications/finance/accounting/bank/statement_import.rst:33
 msgid "Wise"
 msgstr "Wise"
-
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:97
-msgid "Enter the :guilabel:`Wise profile id` and the :guilabel:`API token`. For payouts, Wise also requires a :guilabel:`Private key` used to sign strong-customer-authentication challenges, and for webhook delivery the :guilabel:`Webhook public key` published by Wise for the chosen environment. Use :guilabel:`Subscribe webhooks` to register Odoo with Wise so that new transactions trigger an immediate refresh, and :guilabel:`Unsubscribe webhooks` to stop them."
-msgstr "Adja meg a :guilabel:`Wise profil azonosító` és az :guilabel:`API token` értéket. A kifizetésekhez a Wise egy :guilabel:`Private key` kulcsot is kér, amellyel az erős ügyfélhitelesítési kérések aláírása történik, a webhookok kézbesítéséhez pedig a Wise által az adott környezethez közzétett :guilabel:`Webhook public key` kulcsot. A :guilabel:`Webhookok feliratkozás` gombbal regisztrálhatja az Odoo-t a Wise-nál, hogy az új tranzakciók azonnali frissítést indítsanak, az :guilabel:`Webhookok leiratkozás` gombbal pedig leállíthatja ezeket."
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:104
 msgid "Webhook events are delivered to `/bank_sync/webhook/<provider>` on your database. Signature verification fails closed: an event that cannot be verified is rejected. Ask your system administrator to make sure this address is reachable from the internet."
@@ -538,18 +506,6 @@ msgstr "Egy csatlakoztatott kapcsolaton kattintson a :guilabel:`Számlák felfed
 msgid ":guilabel:`Journal`: the bank journal in which the transactions are booked. **Nothing is imported until a journal is set.**"
 msgstr ":guilabel:`Napló`: az a banknapló, amelybe a tranzakciók kerülnek. **Amíg nincs napló beállítva, semmi sem importálódik.**"
 
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:119
-msgid ":guilabel:`Sync enabled`: activates the scheduled import for this account."
-msgstr ":guilabel:`Sync enabled`: bekapcsolja az ütemezett importálást ehhez a számlához."
-
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:120
-msgid ":guilabel:`Sync every`: the polling interval (for example, 1 hour)."
-msgstr ":guilabel:`Szinkronizálás gyakorisága`: a lekérdezés gyakorisága (például 1 óra)."
-
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:122
-msgid "The list view shows :guilabel:`Last successful run` and a colored :guilabel:`Last state` badge (:guilabel:`Ok`, :guilabel:`Error`, :guilabel:`Stale`), so you can spot an account that has stopped importing at a glance."
-msgstr "A listanézet megjeleníti a :guilabel:`Last successful run` értéket és egy színes :guilabel:`Last state` jelvényt (:guilabel:`Ok`, :guilabel:`Hiba`, :guilabel:`Elavult`), így egy pillantással észreveheti, ha egy számla importálása leállt."
-
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:139
 msgid "Run a synchronization"
 msgstr "Szinkronizálás futtatása"
@@ -561,10 +517,6 @@ msgstr "A szinkronizálás háromféleképpen futhat:"
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:143
 msgid "**Scheduled**: the *Online Bank Sync: pull statements* scheduled action checks every 15 minutes which accounts are due and imports them. This scheduled action is **disabled by default**; ask your system administrator to enable it once the mapping is in place."
 msgstr "**Ütemezetten**: az *Online Bank Sync: pull statements* ütemezett művelet 15 percenként megnézi, mely számlák esedékesek, és importálja azokat. Ez az ütemezett művelet **alapértelmezés szerint ki van kapcsolva**; kérje meg a rendszergazdáját, hogy kapcsolja be, amint a naplóhoz rendelés kész."
-
-#: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:146
-msgid "**Manual**: click :guilabel:`Sync now` on the account form, or on the journal card of the :guilabel:`Accounting Dashboard`."
-msgstr "**Kézzel**: kattintson a :guilabel:`Szinkronizálás most` gombra a számla űrlapján, vagy a :guilabel:`Könyvelési vezérlőpult` naplókártyáján."
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:148
 msgid "**Webhook-triggered**: for providers supporting webhooks, an incoming event flags the account and the next scheduled run imports it immediately, even when periodic polling is off."
@@ -1530,41 +1482,9 @@ msgstr "Ugyanazt a fájlt biztonságosan importálhatja kétszer is. Minden tran
 msgid "Standard statement files"
 msgstr "Szabványos kivonatfájlok"
 
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:91
-msgid "Statement files in a standard format are imported with the generic importer, which reads every format whose module is installed. For Spanish banks, :ref:`install <general/install>` the *Importación de extractos bancarios españoles (Norma 43)* module to import the *AEB Norma 43* files (:file:`.n43`, also called *Cuaderno 43*) that all Spanish banks provide."
-msgstr "A szabványos formátumú kivonatfájlokat az általános importáló olvassa be, amely minden olyan formátumot kezel, amelynek modulja telepítve van. Spanyol bankok esetén :ref:`telepítse <general/install>` az *Importación de extractos bancarios españoles (Norma 43)* modult az összes spanyol bank által biztosított *AEB Norma 43* fájlok (:file:`.n43`, más néven *Cuaderno 43*) importálásához."
-
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:96
-msgid "Go to :menuselection:`Accounting --> Accounting --> Import Statement`, or click the import button of the bank journal on the Accounting dashboard."
-msgstr "Lépjen a :menuselection:`Könyvelés --> Könyvelés --> Kivonat importálása` menüpontra, vagy kattintson a bank napló importálás gombjára a Könyvelési irányítópulton."
-
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:98
-msgid "Select the statement file, and click :guilabel:`Import and View`."
-msgstr "Válassza ki a kivonatfájlt, és kattintson az :guilabel:`Importálás és megtekintés` gombra."
-
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:100
-msgid "A bank statement is created for each account of the file, in the bank journal whose bank account matches the account number of the file. The file is attached to the statement. Transactions that were already imported are not created a second time."
-msgstr "A fájl minden számlájához létrejön egy bankkivonat abban a bank naplóban, amelynek bankszámlája megegyezik a fájlban szereplő számlaszámmal. A fájl a kivonathoz csatolva lesz. A már importált tranzakciók nem jönnek létre másodszor."
-
 #: ../../content/applications/finance/accounting/bank/statement_import.rst:104
 msgid "The bank journal form has a :guilabel:`Norm 43 options` section (:guilabel:`Advanced Settings` tab):"
 msgstr "A bank napló űrlapján található egy :guilabel:`43-as norma beállításai` szakasz (:guilabel:`Haladó beállítások` lap):"
-
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:107
-msgid ":guilabel:`Date type for N43 Import`: use the :guilabel:`Value Date` or the :guilabel:`Operation Date` of the file as the transaction date;"
-msgstr ":guilabel:`Dátumtípus az N43 importáláshoz`: a fájl :guilabel:`Értéknap` vagy :guilabel:`Művelet dátuma` adata legyen a tranzakció dátuma;"
-
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:109
-msgid ":guilabel:`Partner search for N43 import`: for some banks (CaixaBank, Sabadell, Santander), the partner of the transaction is looked up from the data of the file;"
-msgstr ":guilabel:`Partnerkeresés az N43 importáláshoz`: egyes bankoknál (CaixaBank, Sabadell, Santander) a tranzakció partnerét a fájl adatai alapján keresi meg a rendszer;"
-
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:111
-msgid ":guilabel:`Exclude pattern for N43 import`: a regular expression; the lines of the file matching it are not imported."
-msgstr ":guilabel:`Kizárási minta az N43 importáláshoz`: reguláris kifejezés; a fájl ennek megfelelő sorai nem kerülnek importálásra."
-
-#: ../../content/applications/finance/accounting/bank/statement_import.rst:115
-msgid "The import checks the control totals of the Norma 43 file (number of records, debit and credit totals, final balance) and stops with an error if the file is incomplete."
-msgstr "Az importálás ellenőrzi a Norma 43 fájl kontrollösszegeit (rekordok száma, tartozik és követel összesen, záróegyenleg), és hibával leáll, ha a fájl hiányos."
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:5
 msgid "Importing transactions from your bank statements allows keeping track of bank account transactions and reconciling them with the ones recorded in your accounting."
@@ -4796,11 +4716,11 @@ msgstr ":doc:`../fiscal_localizations`"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:3
 msgid "Average price on returned goods"
-msgstr "Visszáru áruk átlagos ára"
+msgstr "Visszaküldött áruk átlagára"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:8
 msgid "*Average cost valuation* (AVCO) is an inventory valuation method that evaluates cost based on the total cost of goods bought or produced during a period, divided by the total number of items on-hand. Inventory valuation is used to:"
-msgstr "*Átlagos költség szerinti értékelés* (AVCO) egy készletértékelési módszer, amely a költséget az adott időszakban vásárolt vagy előállított áruk összköltségének és a kéznél lévő összes tétel számának hányadosaként határozza meg. A készletértékelés célja:"
+msgstr "Az *átlagköltség szerinti értékelés* (AVCO) egy készletértékelési módszer, amely a költséget az adott időszakban vásárolt vagy előállított áruk összköltségének és a készleten lévő összes tétel számának hányadosaként határozza meg. A készletértékelés célja:"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:12
 msgid "reflect the value of a company's assets;"
@@ -4824,7 +4744,7 @@ msgstr "Mivel az |AVCO| súlyozott átlagot alkalmaz a költség meghatározás�
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:21
 msgid "Thus, when shipments are returned to their supplier, Odoo automatically generates accounting entries to reflect the change in inventory valuation. However, Odoo does **not** automatically update the |AVCO| calculation, because :ref:`this can potentially create inconsistencies with inventory valuation <inventory/avg_price/leaving_inventory>`."
-msgstr "Így, amikor a szállítmányokat visszaküldi a szállítónak, az Odoo automatikusan könyvelési bejegyzéseket generál a készletértékelés változásának tükrözéséhez. Az Odoo azonban **nem** frissíti automatikusan az |AVCO| számítást, mivel :ref:`ez potenciálisan ellentmondásokat okozhat a készletértékelésnél <inventory/avg_price/leaving_inventory>`."
+msgstr "Így, amikor a szállítmányokat visszaküldi a szállítónak, az Odoo automatikusan könyvelési tételeket generál a készletértékelés változásának tükrözéséhez. Az Odoo azonban **nem** frissíti automatikusan az |AVCO| számítást, mivel :ref:`ez potenciálisan ellentmondásokat okozhat a készletértékelésnél <inventory/avg_price/leaving_inventory>`."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:27
 msgid "This document addresses a specific use case for theoretical purposes. For instructions on how to set up and use |AVCO|, refer to the :doc:`inventory valuation configuration <../../../inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config>` doc."
@@ -4840,7 +4760,7 @@ msgstr ":ref:`Egyéb készletértékelési módszerek <inventory/warehouses_stor
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:40
 msgid "To use average cost inventory valuation on a product, navigate to :menuselection:`Inventory --> Configuration --> Product Categories` and select the category that will be using |AVCO|. On the product category page, set :guilabel:`Costing Method` to `Average Cost (AVCO)` and :guilabel:`Inventory Valuation` to `Automated`."
-msgstr "Az átlagos költség szerinti készletértékelés termékre való alkalmazásához navigáljon a :menuselection:`Készlet --> Konfiguráció --> Termék kategóriák` menüpontba, és válassza ki azt a kategóriát, amely az |AVCO| módszert fogja alkalmazni. A termékkategória oldalon állítsa a :guilabel:`Költségszámítási módszer` értékét `Átlagos költség (AVCO)` értékre, az :guilabel:`Készletértékelés` értékét pedig `Automatizált` értékre."
+msgstr "Az átlagköltség szerinti készletértékelés termékre való alkalmazásához navigáljon a :menuselection:`Készlet --> Konfiguráció --> Termék kategóriák` menüpontba, és válassza ki azt a kategóriát, amely az |AVCO| módszert fogja alkalmazni. A termékkategória oldalon állítsa a :guilabel:`Költségszámítási mód` értékét `Átlagos költség (AVCO)` értékre, a :guilabel:`Készletértékelés` értékét pedig `Automatizált` értékre."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:46
 msgid ":doc:`Inventory valuation configuration <../../../inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config>`"
@@ -4848,11 +4768,11 @@ msgstr ":doc:`Készletértékelés konfigurálása <../../../inventory_and_mrp/i
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:50
 msgid "Using average cost valuation"
-msgstr "Az átlagos költség szerinti értékelés használata"
+msgstr "Az átlagköltség szerinti értékelés használata"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:52
 msgid "The average cost method adjusts the inventory valuation when products are received in the warehouse. This section explains how it works, but if the explanation is unnecessary, skip to the :ref:`return to supplier use case <inventory/avg_cost/return>` section."
-msgstr "Az átlagos költség módszer a raktárba érkező termékek esetén módosítja a készletértékelést. Ez a szakasz bemutatja a működési elvét, de ha a magyarázatra nincs szükség, ugorjon közvetlenül a :ref:`szállítóhoz való visszaküldés felhasználási esetéhez <inventory/avg_cost/return>`."
+msgstr "Az átlagköltségmódszer a raktárba beérkező termékek esetén módosítja a készletértékelést. Ez a szakasz bemutatja a működési elvét, de ha a magyarázatra nincs szükség, ugorjon közvetlenül a :ref:`szállítóhoz való visszaküldés felhasználási esetéhez <inventory/avg_cost/return>`."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:59
 msgid "Formula"
@@ -4860,51 +4780,47 @@ msgstr "Képlet"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:61
 msgid "When new products arrive, the new average cost for each product is recomputed using the formula:"
-msgstr "Amikor új termékek érkeznek, az egyes termékek új átlagos költségét a következő képlettel számítják újra:"
+msgstr "Amikor új termékek érkeznek, az egyes termékek új átlagköltségét a következő képlettel számítják újra:"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:63
 msgid ""
 "Avg~Cost = \\frac{(Old~Qty \\times Old~Avg~Cost) + (Incoming~Qty \\times Purchase~Price)}{Final~Qty}\n"
 "\n"
 msgstr ""
-"Átlag~Költség = \\frac{(Régi~Mennyiség \\\times Régi~Átlag~Költség) + (Bejövő~Mennyiség \\\times Beszerzési~Ár)}{Végső~Mennyiség}\n"
-"\n"
-"Átlag~Költség = \\frac{(Régi~Mennyiség \\\times Régi~Átlag~Költség) + (Bejövő~Mennyiség \\\times Beszerzési~Ár)}{Végső~Mennyiség}\n"
-"\n"
-"Átlag~Költség = \\frac{(Régi~Mennyiség \\\times Régi~Átlag~Költség) + (Beérkező~Mennyiség \\\times Beszerzési~Ár)}{Végső~Mennyiség}\n"
+"Átlagköltség = \\frac{(Régi~mennyiség \\times Régi~átlagköltség) + (Beérkező~mennyiség \\times Beszerzési~ár)}{Végső~mennyiség}\n"
 "\n"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:66
 msgid "**Old Qty**: product count in stock before receiving the new shipment;"
-msgstr "**Old Qty**: a raktáron lévő termékek száma az új szállítmány beérkezése előtt;"
+msgstr "**Régi mennyiség**: a készleten lévő termékek száma az új szállítmány beérkezése előtt;"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:67
 msgid "**Old Avg Cost**: calculated average cost for a single product from the previous inventory valuation;"
-msgstr "**Old Avg Cost**: az előző készletértékelésből számított átlagos egységköltség;"
+msgstr "**Régi átlagköltség**: az előző készletértékelésből számított, egy darab termékre jutó átlagköltség;"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:69
 msgid "**Incoming Qty**: count of products arriving in the new shipment;"
-msgstr "**Incoming Qty**: az új szállítmányban érkező termékek száma;"
+msgstr "**Beérkező mennyiség**: az új szállítmányban beérkező termékek száma;"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:70
 msgid "**Purchase Price**: estimated price of products at the reception of products (since vendor bills may arrive later). The amount includes not only the price for the products, but also added costs, such as shipping, taxes, and :doc:`landed costs <../../../inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs>`. At reception of the vendor bill, this price is adjusted;"
-msgstr "**Purchase Price**: a termékek becsült ára a beérkezéskor (mivel a szállítói számlák később érkezhetnek). Az összeg nemcsak a termékek árát tartalmazza, hanem az egyéb ráfordításokat is, például a szállítási díjakat, az adókat és a :doc:`landed costs <../../../inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs>`. A szállítói számla beérkezésekor ez az ár módosul;"
+msgstr "**Beszerzési ár**: a termékek becsült ára a beérkezéskor (mivel a szállítói számlák később érkezhetnek). Az összeg nemcsak a termékek árát tartalmazza, hanem az egyéb ráfordításokat is, például a szállítási díjakat, az adókat és a :doc:`bekerülési költségeket <../../../inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs>`. A szállítói számla beérkezésekor ez az ár módosul;"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:75
 msgid "**Final Qty**: quantity of on-hand stock after the stock move."
-msgstr "**Final Qty**: a készleten lévő mennyiség a készletmozgás után."
+msgstr "**Végső mennyiség**: a készleten lévő mennyiség a készletmozgás után."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:80
 msgid "When products leave the warehouse, the average cost **does not** change. Read about why the average cost valuation is **not** adjusted :ref:`here <inventory/avg_price/leaving_inventory>`."
-msgstr "Amikor termékek hagyják el a raktárt, az átlagos költség **nem** változik. Olvassa el, miért **nem** kerül kiigazításra az átlagköltség-értékelés :ref:`here <inventory/avg_price/leaving_inventory>`."
+msgstr "Amikor termékek hagyják el a raktárt, az átlagköltség **nem** változik. :ref:`Itt <inventory/avg_price/leaving_inventory>` olvashatja el, miért **nem** igazítja ki a rendszer az átlagköltség szerinti értékelést."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:86
 msgid "Compute average cost"
-msgstr "Átlagos költség kiszámítása"
+msgstr "Átlagköltség kiszámítása"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:88
 msgid "To understand how the average cost of a product changes with each shipment, consider the following table of warehouse operations and stock moves. Each is a different example of how the average cost valuation is affected."
-msgstr "A termék átlagos költségének szállítmányonkénti változásának megértéséhez tekintse meg a raktári műveletek és készletmozgások alábbi táblázatát. Mindegyik különböző példát mutat arra, hogyan befolyásolja az átlagköltség-értékelést."
+msgstr "A termék átlagköltségének szállítmányonkénti változásának megértéséhez tekintse meg a raktári műveletek és készletmozgások alábbi táblázatát. Mindegyik különböző példát mutat arra, hogyan befolyásolja az átlagköltség szerinti értékelést."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:93 ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:207 ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:252 ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:289
 msgid "Operation"
@@ -4912,7 +4828,7 @@ msgstr "Művelet"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:93
 msgid "Incoming Value"
-msgstr "Érkező érték"
+msgstr "Beérkező érték"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:93 ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:207 ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:252 ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:289
 msgid "Inventory Value"
@@ -4936,7 +4852,7 @@ msgstr "0"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:97
 msgid "Receive 8 tables at $10/unit"
-msgstr "8 asztal fogadása 10 $/egység áron"
+msgstr "8 asztal átvétele $10/egység áron"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:97
 msgid "8 * $10"
@@ -4956,7 +4872,7 @@ msgstr "$10"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:99
 msgid "Receive 4 tables at $16/unit"
-msgstr "Fogadjon 4 asztalt $16/egység áron"
+msgstr "4 asztal átvétele $16/egység áron"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:99
 msgid "4 * $16"
@@ -4976,7 +4892,7 @@ msgstr "$12"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:101
 msgid "Deliver 10 tables"
-msgstr "10 asztal szállítása"
+msgstr "10 asztal kiszállítása"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:101
 msgid "-10 * $12"
@@ -4992,7 +4908,7 @@ msgstr "2"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:107
 msgid "Ensure comprehension of the above computations by reviewing the \"Receive 8 tables at $10/unit\" example."
-msgstr "A fenti számítások megértéséhez tekintse át a \"8 asztal fogadása $10/egység áron\" példát."
+msgstr "A fenti számítások megértéséhez tekintse át a „8 asztal átvétele $10/egység áron” példát."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:110
 msgid "Initially, the product stock is 0, so all values are $0."
@@ -5007,16 +4923,12 @@ msgid ""
 "Avg~Cost = \\frac{0 + 8 \\times $10}{8} = \\frac{$80}{8} = $10\n"
 "\n"
 msgstr ""
-"Átlag~Költség = \\frac{0 + 8 \\\times $10}{8} = \\frac{$80}{8} = $10\n"
-"\n"
-"Átlag~Költség = \\frac{0 + 8 \\\times $10}{8} = \\frac{$80}{8} = $10\n"
-"\n"
-"Átlag~Költség = \\frac{0 + 8 \\\times $10}{8} = \\frac{$80}{8} = $10\n"
+"Átlagköltség = \\frac{0 + 8 \\times $10}{8} = \\frac{$80}{8} = $10\n"
 "\n"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:118
 msgid "Since the *incoming quantity* of tables is `8` and the *purchase price* for each is `$10`,"
-msgstr "Mivel az *érkező mennyiség* `8` asztal és az *beszerzési ár* darabonként `$10`,"
+msgstr "Mivel a *beérkező mennyiség* `8` asztal, a *beszerzési ár* pedig darabonként `$10`,"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:119
 msgid "The inventory value in the numerator is evaluated to `$80`;"
@@ -5028,7 +4940,7 @@ msgstr "`$80` el van osztva a tárolandó asztalok teljes mennyiségével, `8`;"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:121
 msgid "`$10` is the average cost of a single table from the first shipment."
-msgstr "`$10` az első szállítmányból származó egyetlen asztal átlagos költsége."
+msgstr "`$10` az első szállítmányból származó egyetlen asztal átlagköltsége."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:123
 msgid "To verify this in Odoo, in the *Purchase* app, order `8` quantities of a new product, `Table`, with no previous stock moves, for `$10` each."
@@ -5036,19 +4948,19 @@ msgstr "Ennek ellenőrzéséhez az Odoo-ban, a *Beszerzés* alkalmazásban rende
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:126
 msgid "In the table's :guilabel:`Product Category` field in the :guilabel:`General Information` tab of the product form, click the :icon:`oi-arrow-right` :guilabel:`(Internal link)` icon to edit the product category. Set the :guilabel:`Costing Method` to `Average Cost (AVCO)` and :guilabel:`Inventory Valuation` to `Automated`."
-msgstr "A termékűrlap :guilabel:`Általános információk` fülén, az asztal :guilabel:`Termékkategória` mezőjénél kattintson az :icon:`oi-arrow-right` :guilabel:`(Belső hivatkozás)` ikonra a termékkategória szerkesztéséhez. Állítsa a :guilabel:`Költségszámítási módszert` `Average Cost (AVCO)` értékre, a :guilabel:`Készletértékelés` pedig `Automated` értékre."
+msgstr "A termékűrlap :guilabel:`Általános információk` fülén, az asztal :guilabel:`Termékkategória` mezőjénél kattintson a :icon:`oi-arrow-right` :guilabel:`(Belső hivatkozás)` ikonra a termékkategória szerkesztéséhez. Állítsa a :guilabel:`Költségszámítási mód` mezőt `Average Cost (AVCO)` értékre, a :guilabel:`Készletértékelés` mezőt pedig `Automatizált` értékre."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:131
 msgid "Then, return to the purchase order. Click :guilabel:`Confirm Order`, and click :guilabel:`Receive Products` to confirm receipt."
-msgstr "Ezután térjen vissza a beszerzési rendeléshez. Kattintson a :guilabel:`Rendelés megerősítése` gombra, majd kattintson a :guilabel:`Termékek átvétele` gombra a fogadás megerősítéséhez."
+msgstr "Ezután térjen vissza a beszerzési rendeléshez. Kattintson a :guilabel:`Rendelés megerősítése` gombra, majd kattintson a :guilabel:`Termékek átvétele` gombra az átvétel megerősítéséhez."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:134
 msgid "Next, check the inventory valuation record generated by the product reception by navigating to :menuselection:`Inventory --> Reporting --> Valuation`. Select the drop-down for `Table`, and view the :guilabel:`Total Value` column for the *valuation layer* (:dfn:`inventory valuation at a specific point in time = on-hand quantity * unit price`). The 8 tables in-stock are worth $80."
-msgstr "Ezután ellenőrizze a termék beérkezésekor keletkezett készletérték-rekordot a :menuselection:`Készlet --> Jelentések --> Értékelés` menüpontban. Nyissa le a `Table` csoportot, és nézze meg az *értékelési réteg* (:dfn:`egy adott időpontbeli készletérték = készleten lévő mennyiség * egységár`) :guilabel:`Teljes érték` oszlopát. A raktáron lévő 8 asztal értéke 80 $."
+msgstr "Ezután ellenőrizze a termék beérkezésekor keletkezett készletértékelési rekordot a :menuselection:`Készlet --> Kimutatás --> Értékelés` menüpontban. Nyissa le az `Asztal` csoportot, és nézze meg az *értékelési réteg* (:dfn:`egy adott időpontbeli készletérték = készleten lévő mennyiség * egységár`) :guilabel:`Összérték` oszlopát. A raktáron lévő 8 asztal értéke $80."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:149
 msgid "When the product category's :guilabel:`Costing Method` is set to :guilabel:`AVCO`, then the average cost of a product is also displayed on the :guilabel:`Cost` field, under the :guilabel:`General Information` tab, on the product page itself."
-msgstr "Amikor a termékkategória :guilabel:`Költségszámítási módszere` :guilabel:`AVCO`-ra van állítva, akkor a termék átlagos költsége is megjelenik a :guilabel:`Költség` mezőben, az :guilabel:`Általános információk` fül alatt, magán a termékoldalon."
+msgstr "Amikor a termékkategória :guilabel:`Költségszámítási mód` mezője :guilabel:`AVCO` értékre van állítva, akkor a termék átlagköltsége is megjelenik a :guilabel:`Költség` mezőben, az :guilabel:`Általános információk` fül alatt, magán a termékoldalon."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:154
 msgid "Product delivery (use case)"
@@ -5056,39 +4968,35 @@ msgstr "Termék kiszállítás (esettanulmány)"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:156
 msgid "For outgoing shipments, :ref:`outbound products have no effect on the average cost valuation <inventory/avg_cost/definite_rule>`. Although the average cost valuation is not recalculated, the inventory value still decreases because the product is removed from stock and delivered to the customer location."
-msgstr "Kimenő szállítmányok esetén a :ref:`kimenő termékek nem befolyásolják az átlagköltség értékelést <inventory/avg_cost/definite_rule>`. Bár az átlagköltség értékelése nem kerül újraszámításra, a készlet értéke mégis csökken, mivel a termék kikerül a készletből és kiszállításra kerül az ügyfél helyszínére."
+msgstr "Kimenő szállítmányok esetén a :ref:`kimenő termékek nem befolyásolják az átlagköltség szerinti értékelést <inventory/avg_cost/definite_rule>`. Bár az átlagköltség szerinti értékelést a rendszer nem számítja újra, a készletérték mégis csökken, mivel a termék kikerül a készletből, és kiszállításra kerül a vevő telephelyére."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:162
 msgid "To demonstrate that the average cost valuation is not recalculated, examine the \"Deliver 10 tables\" example."
-msgstr "Annak igazolására, hogy az átlagos önköltségi értékelés nem kerül újraszámításra, vizsgálja meg a \"10 asztal kiszállítása\" példát."
+msgstr "Annak igazolására, hogy az átlagköltség szerinti értékelést a rendszer nem számítja újra, vizsgálja meg a „10 asztal kiszállítása” példát."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:165
 msgid ""
 "Avg~Cost = \\frac{12 \\times $12 + (-10) \\times $12}{12-10} = \\frac{24}{2} = $12\n"
 "\n"
 msgstr ""
-"Átlag~Költség = \\frac{12 \\\times $12 + (-10) \\\times $12}{12-10} = \\frac{24}{2} = $12\n"
-"\n"
-"Átlag~Költség = \\frac{12 \\\times $12 + (-10) \\\times $12}{12-10} = \\frac{24}{2} = $12\n"
-"\n"
-"Átlag~Költség = \\frac{12 \\\times $12 + (-10) \\\times $12}{12-10} = \\frac{24}{2} = $12\n"
+"Átlagköltség = \\frac{12 \\times $12 + (-10) \\times $12}{12-10} = \\frac{24}{2} = $12\n"
 "\n"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:168
 msgid "Because 10 tables are being sent out to customers, the *incoming quantity* is `-10`. The previous average cost (`$12`) is used in lieu of a vendor's *purchase price*;"
-msgstr "Mivel 10 asztal kerül kiszállításra az ügyfeleknek, a *beérkező mennyiség* `-10`. Az előző átlagköltség (`$12`) kerül felhasználásra a szállító *beszerzési ára* helyett;"
+msgstr "Mivel 10 asztal kerül kiszállításra a vevőknek, a *beérkező mennyiség* `-10`. Az előző átlagköltség (`$12`) kerül felhasználásra a szállító *beszerzési ára* helyett;"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:170
 msgid "The *incoming inventory value* is `-10 * $12 = -$120`;"
-msgstr "A *beérkező készlet értéke* `-10 * $12 = -$120`;"
+msgstr "A *beérkező készletérték* `-10 * $12 = -$120`;"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:171
 msgid "The old *inventory value* (`$144`) is added to the *incoming inventory value* (`-$120`), so `$144 + -$120 = $24`;"
-msgstr "A régi *készlet értéke* (`$144`) hozzáadódik a *beérkező készlet értékéhez* (`-$120`), így `$144 + -$120 = $24`;"
+msgstr "A régi *készletérték* (`$144`) hozzáadódik a *beérkező készletértékhez* (`-$120`), így `$144 + -$120 = $24`;"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:173
 msgid "Only `2` tables remain after shipping out `10` tables from `12`. So the current *inventory value* (`$24`) is divided by the on-hand quantity (`2`);"
-msgstr "Csak `2` asztal marad, miután `10` asztalt kiszállítottak `12`-ből. Tehát a jelenlegi *készlet értéke* (`$24`) eloszlik a kéznél lévő mennyiséggel (`2`);"
+msgstr "Csak `2` asztal marad, miután `10` asztalt kiszállítottak `12`-ből. Tehát a jelenlegi *készletértéket* (`$24`) a rendszer elosztja a készleten lévő mennyiséggel (`2`);"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:175
 msgid "`$24 / 2 = $12`, which is the same average cost as the previous operation."
@@ -5096,7 +5004,7 @@ msgstr "`$24 / 2 = $12`, ami megegyezik az előző művelet átlagköltségével
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:177
 msgid "To verify this in Odoo, sell `10` tables in the *Sales* app, validate the delivery, and then review the inventory valuation record by going to in :menuselection:`Inventory --> Reporting --> Valuation`. In the topmost valuation layer, delivering `10` tables reduces the product's value by `-$120`."
-msgstr "Ennek ellenőrzéséhez adjon el `10` asztalt az *Értékesítés* alkalmazásban, hagyja jóvá a kiszállítást, majd tekintse meg a készletérték-rekordot a :menuselection:`Készlet --> Jelentések --> Értékelés` menüpontban. A legfelső értékelési rétegben a `10` asztal kiszállítása `-$120`-ral csökkenti a termék értékét."
+msgstr "Ennek ellenőrzéséhez adjon el `10` asztalt az *Értékesítés* alkalmazásban, hagyja jóvá a kiszállítást, majd tekintse meg a készletértékelési rekordot a :menuselection:`Készlet --> Kimutatás --> Értékelés` menüpontban. A legfelső értékelési rétegben a `10` asztal kiszállítása `-$120`-ral csökkenti a termék értékét."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:182
 msgid "**Note**: What is not represented in this stock valuation record is the revenue made from this sale, so this decrease is not a loss to the company."
@@ -5104,15 +5012,15 @@ msgstr "**Megjegyzés**: Ami nem jelenik meg ebben a készletértékelési rekor
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:196
 msgid "Return items to supplier (use case)"
-msgstr "Termékek visszaküldése a beszállítónak (esettanulmány)"
+msgstr "Termékek visszaküldése a szállítónak (esettanulmány)"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:198
 msgid "Because the price paid to suppliers can differ from the price the product is valued at with the |AVCO| method, Odoo handles returned items in a specific way."
-msgstr "Mivel a beszállítóknak fizetett ár eltérhet a termék |AVCO| módszer szerinti értékelési árától, az Odoo a visszaküldött termékeket egyedi módon kezeli."
+msgstr "Mivel a szállítóknak fizetett ár eltérhet a termék |AVCO| módszer szerinti értékelési árától, az Odoo a visszaküldött termékeket egyedi módon kezeli."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:201
 msgid "Products are returned to suppliers at the original purchase price, but;"
-msgstr "A termékek az eredeti vételáron kerülnek vissza a szállítókhoz, de;"
+msgstr "A termékek az eredeti beszerzési áron kerülnek vissza a szállítókhoz, de;"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:202
 msgid "The internal cost valuation remains unchanged."
@@ -5124,7 +5032,7 @@ msgstr "A fenti :ref:`példatáblázat <inventory/avg_cost/math_table>` az aláb
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:207
 msgid "Qty*Avg Cost"
-msgstr "Menny.*Átl. könyv. ár"
+msgstr "Menny.*Átlagköltség"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:211
 msgid "Return 1 table bought at $10"
@@ -5140,19 +5048,19 @@ msgstr "1"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:214
 msgid "In other words, returns to vendors are perceived by Odoo as another form of a product exiting the warehouse. To Odoo, because the table is valued at $12 per unit, the inventory value is reduced by `$12` when the product is returned; the initial purchase price of `$10` is unrelated to the table's average cost."
-msgstr "Más szóval, az Odoo a szállítókhoz való visszaküldéseket a raktárból kilépő termékek egy formájaként értelmezi. Az Odoo számára, mivel az asztal értéke egységenként $12, a készletérték `$12`-vel csökken a termék visszaküldésekor; a kezdeti `$10`-os vételár nem függ össze az asztal átlagos költségével."
+msgstr "Más szóval, az Odoo a szállítókhoz való visszaküldéseket a raktárból kilépő termékek egy formájaként értelmezi. Az Odoo számára, mivel az asztal értéke egységenként $12, a készletérték `$12`-vel csökken a termék visszaküldésekor; a kezdeti `$10`-os beszerzési ár nem függ össze az asztal átlagköltségével."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:220
 msgid "To return a single table that was purchased for `$10`, navigate to the receipt in the *Inventory* app for the :ref:`8 tables purchased in Exercise 1 <inventory/avg_cost/ex-1>` by going to the :guilabel:`Inventory Overview`, clicking on :guilabel:`Receipts`, and selecting the desired receipt."
-msgstr "Egy `$10`-ért vásárolt asztal visszaküldéséhez navigáljon a *Inventory* alkalmazásban a :ref:`Az 1. feladatban vásárolt 8 asztalhoz <inventory/avg_cost/ex-1>` tartozó bizonylathoz: nyissa meg a :guilabel:`Raktár áttekintő` nézetet, kattintson a :guilabel:`Beszállítások` lehetőségre, majd válassza ki a kívánt bizonylatot."
+msgstr "Egy `$10`-ért vásárolt asztal visszaküldéséhez navigáljon a *Készlet* alkalmazásban az :ref:`1. feladatban vásárolt 8 asztalhoz <inventory/avg_cost/ex-1>` tartozó bizonylathoz: nyissa meg a :guilabel:`Raktár áttekintő` nézetet, kattintson a :guilabel:`Beszállítások` lehetőségre, majd válassza ki a kívánt bizonylatot."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:225
 msgid "Then, click :guilabel:`Return` on the validated delivery order, and modify the quantity to `1` in the reverse transfer window. This creates an outgoing shipment for the table. Select :guilabel:`Validate` to confirm the outgoing shipment."
-msgstr "Ezután kattintson a :guilabel:`Visszaküldés` gombra az érvényesített szállítási megrendelésen, és módosítsa a mennyiséget `1`-re a fordított átviteli ablakban. Ez létrehoz egy kimenő szállítmányt az asztalhoz. Válassza az :guilabel:`Jóváhagyás` lehetőséget a kimenő szállítmány megerősítéséhez."
+msgstr "Ezután kattintson a :guilabel:`Visszaküldés` gombra a jóváhagyott szállítólevélen, és módosítsa a mennyiséget `1`-re a visszaküldési ablakban. Ez létrehoz egy kimenő szállítmányt az asztalhoz. Válassza a :guilabel:`Jóváhagyás` lehetőséget a kimenő szállítmány megerősítéséhez."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:229
 msgid "Return to :menuselection:`Inventory --> Reporting --> Valuation` to see how the outgoing shipment decreases the inventory value by $12."
-msgstr "Térjen vissza a :menuselection:`Készlet --> Jelentések --> Értékelés` menüpontra, és nézze meg, hogyan csökkenti a kimenő szállítás a készlet értékét 12 $-ral."
+msgstr "Térjen vissza a :menuselection:`Készlet --> Kimutatás --> Értékelés` menüpontra, és nézze meg, hogyan csökkenti a kimenő szállítmány a készletértéket $12-ral."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:243
 msgid "Eliminate stock valuation errors in outgoing products"
@@ -5160,11 +5068,11 @@ msgstr "Kimenő termékek készletértékelési hibáinak kiküszöbölése"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:245
 msgid "Inconsistencies can occur in a company's inventory when the average cost valuation is recalculated on outgoing shipments."
-msgstr "Következetlenségek léphetnek fel egy vállalat készletében, ha az átlagos költség szerinti értékelést a kimenő szállítmányoknál újraszámítják."
+msgstr "Következetlenségek léphetnek fel egy vállalat készletében, ha az átlagköltség szerinti értékelést a kimenő szállítmányoknál újraszámítják."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:248
 msgid "To demonstrate this error, the table below displays a scenario in which 1 table is shipped to a customer and another is returned to a supplier at the purchased price."
-msgstr "A hiba szemléltetéséhez az alábbi táblázat egy olyan forgatókönyvet mutat be, amelyben 1 asztalt egy vásárlónak szállítanak ki, egy másikat pedig a vételáron visszaküldenek a szállítónak."
+msgstr "A hiba szemléltetéséhez az alábbi táblázat egy olyan forgatókönyvet mutat be, amelyben 1 asztalt egy vevőnek szállítanak ki, egy másikat pedig a beszerzési áron visszaküldenek a szállítónak."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:252
 msgid "Qty*Price"
@@ -5172,7 +5080,7 @@ msgstr "Menny.*Ár"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:256
 msgid "Ship 1 product to customer"
-msgstr "1 termék kiszállítása a vásárlónak"
+msgstr "1 termék kiszállítása a vevőnek"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:256
 msgid "-1 \\* $12"
@@ -5204,15 +5112,15 @@ msgstr "Helyes módszer"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:266
 msgid "Use the average cost to value the return. This does not mean the company gets $12 back for a $10 purchase; the item returned for $10 is valued internally at $12. The inventory value change represents a product worth $12 no longer being accounted for in company assets."
-msgstr "A visszáru értékeléséhez használja az átlagköltséget. Ez nem jelenti azt, hogy a vállalat $12-t kap vissza egy $10-os vásárlásért; a $10-ért visszaküldött tétel belső értéke $12. A készletérték-változás azt jelképezi, hogy egy $12 értékű termék már nem szerepel a vállalat eszközei között."
+msgstr "A visszaküldés értékeléséhez használja az átlagköltséget. Ez nem jelenti azt, hogy a vállalat $12-t kap vissza egy $10-os vásárlásért; a $10-ért visszaküldött tétel belső értéke $12. A készletérték-változás azt jelképezi, hogy egy $12 értékű termék már nem szerepel a vállalat eszközei között."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:271
 msgid "Anglo-Saxon accounting"
-msgstr "Angolszász számvitel"
+msgstr "Angolszász könyvelés"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:273
 msgid "In addition to using |AVCO|, companies that use **Anglo-Saxon accounting** also keep a holding account that tracks the amount to be paid to vendors. Once a vendor delivers an order, **inventory value** increases based on the vendor price of the products that have entered the stock. The holding account (called **stock input**) is credited and only reconciled once the vendor bill is received."
-msgstr "A |AVCO| használata mellett az **angolszász számvitelt** alkalmazó vállalatok egy átmeneti számlát is vezetnek, amely nyomon követi a szállítóknak fizetendő összeget. Amikor egy szállító teljesít egy rendelést, a **készletérték** a raktárba beérkező termékek szállítói ára alapján növekszik. Az átmeneti számlát (amelyet **készletbevételnek** neveznek) jóváírják, és csak a szállítói számla beérkezésekor egyenlítik ki."
+msgstr "Az |AVCO| használata mellett az **angolszász könyvelést** alkalmazó vállalatok egy átmeneti számlát is vezetnek, amely nyomon követi a szállítóknak fizetendő összeget. Amikor egy szállító teljesít egy rendelést, a **készletérték** a raktárba beérkező termékek szállítói ára alapján növekszik. Az átmeneti számlát (ez a **készletnövekedés** számla) jóváírják, és csak a szállítói számla beérkezésekor egyeztetik."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:279
 msgid ":ref:`Anglo-Saxon vs. Continental <inventory/warehouses_storage/accounting-types>`"
@@ -5220,15 +5128,15 @@ msgstr ":ref:`Angolszász vs. kontinentális <inventory/warehouses_storage/accou
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:281
 msgid "The table below reflects journal entries and accounts. The *stock input* account stores the money intended to pay vendors when the vendor bill has not yet been received. To balance accounts when returning products that have a price difference between the price the product is **valued at** and the price it was bought for, a *price difference* account is created."
-msgstr "Az alábbi táblázat a könyvelési tételeket és számlákat tükrözi. A *készletbevétel* számla tárolja a szállítóknak szánt összeget, amíg a szállítói számla még nem érkezett be. Azon visszáru termékek esetén, amelyeknél különbség van a termék **értékelt ára** és a vételára között, az egyenleg biztosítása érdekében egy *árkülönbség* számlát hoznak létre."
+msgstr "Az alábbi táblázat a könyvelési tételeket és számlákat tükrözi. A *készletnövekedés* számla tárolja a szállítóknak szánt összeget, amíg a szállítói számla még nem érkezett be. Azon visszaküldött termékek esetén, amelyeknél különbség van a termék **értékelt ára** és a beszerzési ára között, az egyenleg biztosítása érdekében egy *árkülönbözeti* számlát hoznak létre."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:289
 msgid "Stock Input"
-msgstr "Készletbevétel"
+msgstr "Készletnövekedés"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:289
 msgid "Price Diff"
-msgstr "Árkülönbség"
+msgstr "Árkülönbözet"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:293
 msgid "Receive 8 tables at $10"
@@ -5260,7 +5168,7 @@ msgstr "10 asztal kiszállítása vevőnek"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:303
 msgid "Return 1 table initially bought at $10"
-msgstr "1 asztal visszáru, amelyet eredetileg $10-ért vásároltak"
+msgstr "1 eredetileg $10-ért vásárolt asztal visszaküldése"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:303
 msgid "**$10**"
@@ -5288,11 +5196,11 @@ msgstr "Összefoglalás"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:314
 msgid "At product reception, Odoo ensures companies can pay for goods that were purchased by preemptively moving an amount matching the price of received goods into the :doc:`liability account </applications/finance/accounting/get_started/cheat_sheet>`, **Stock Input**. Then, once the bill has been received, the amount in the holding account is transferred to *Accounts Payable*. Transfers into this account means the bill has been paid. **Stock Input** is reconciled once the vendor bill is received."
-msgstr "Termékbevételezéskor az Odoo biztosítja, hogy a vállalatok ki tudják fizetni a megvásárolt árukat azáltal, hogy előre áthelyezi a beérkezett áruk árának megfelelő összeget a :doc:`kötelezettség-számlára </applications/finance/accounting/get_started/cheat_sheet>`, a **Stock Input** számlára. Ezután, amint a számla megérkezett, a tartóeszköz-számlán lévő összeg átkerül a *Accounts Payable* számlára. Az erre a számlára való átutalás azt jelenti, hogy a számla ki lett fizetve. A **Stock Input** egyenleg kiegyenlítésre kerül, amint a szállítói számla megérkezik."
+msgstr "Termékbevételezéskor az Odoo biztosítja, hogy a vállalatok ki tudják fizetni a megvásárolt árukat azáltal, hogy előre áthelyezi a beérkezett áruk árának megfelelő összeget a :doc:`kötelezettség-számlára </applications/finance/accounting/get_started/cheat_sheet>`, a **Készletnövekedés** számlára. Ezután, amint a számla megérkezett, az átmeneti számlán lévő összeg átkerül a *Szállítói kötelezettségek* számlára. Az erre a számlára való átutalás azt jelenti, hogy a számla ki lett fizetve. A **Készletnövekedés** számlát a szállítói számla beérkezésekor egyeztetik."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:321
 msgid "Inventory valuation is a method of calculating how much each in-stock product is worth internally. Since there is a difference between the price the product is **valuated at** and the price the product was actually **purchased for**, the **Inventory Valuation** account is unrelated to the crediting and debiting operations of the **Stock Input** account."
-msgstr "A készletértékelés egy módszer, amellyel kiszámítható, hogy a raktáron lévő egyes termékek belsőleg mennyit érnek. Mivel különbség van a termék **értékelési ára** és a termék ténylegesen **megvásárolt ára** között, az **Inventory Valuation** számla nem kapcsolódik a **Stock Input** számla jóváírási és terhelési műveleteihez."
+msgstr "A készletértékelés egy módszer, amellyel kiszámítható, hogy a raktáron lévő egyes termékek belsőleg mennyit érnek. Mivel különbség van a termék **értékelési ára** és a termék ténylegesen **megvásárolt ára** között, a **Készletértékelés** számla nem kapcsolódik a **Készletnövekedés** számla jóváírási és terhelési műveleteihez."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:326
 msgid "To conceptualize all this, follow the breakdown below."
@@ -5304,19 +5212,19 @@ msgstr "Beérkezett termékeknél kiegyenlített számlák"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:331
 msgid "In this example, a company starts with zero units of a product, `table`, in stock. Then, 8 tables are received from the vendor:"
-msgstr "Ebben a példában egy vállalat nulla egységgel kezdi a `table` termékből raktáron. Ezután 8 asztalt vesz át a szállítótól:"
+msgstr "Ebben a példában egy vállalatnak kezdetben nulla egység van raktáron az `Asztal` termékből. Ezután 8 asztalt vesz át a szállítótól:"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:334
 msgid "The **Stock Input** account stores `$80` of credit owed to the vendor. The amount in this account is unrelated to the inventory value."
-msgstr "A **Stock Input** számla `$80` hitelt tartalmaz, amellyel a vállalat tartozik a szállítónak. Ezen a számlán lévő összeg nem függ össze a készletértékkel."
+msgstr "A **Készletnövekedés** számla `$80` hitelt tartalmaz, amellyel a vállalat tartozik a szállítónak. Ezen a számlán lévő összeg nem függ össze a készletértékkel."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:336
 msgid "`$80` worth of tables came **in** (**debit** the *Inventory Value* account `$80`), and"
-msgstr "`$80` értékű asztal érkezett **be** (**terhelje meg** az *Inventory Value* számlát `$80`-val), és"
+msgstr "`$80` értékű asztal érkezett **be** (**terhelje meg** a *Készletérték* számlát `$80`-val), és"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:337
 msgid "`$80` must be paid **out** for received goods (**credit** the *Stock Input* account `$80`)."
-msgstr "`$80`-t kell **kifizetni** a beérkezett árukért (**írja jóvá** a *Stock Input* számlán `$80`-t)."
+msgstr "`$80`-t kell **kifizetni** a beérkezett árukért (**írja jóvá** a *Készletnövekedés* számlán `$80`-t)."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:340 ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:403
 msgid "In Odoo"
@@ -5324,7 +5232,7 @@ msgstr "Az Odoo-ban"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:342
 msgid "Odoo generates an accounting journal entry when shipments that use |AVCO| costing method are received."
-msgstr "Az Odoo könyvelési naplóbejegyzést hoz létre az |AVCO| költségszámítási módszert használó szállítmányok beérkezésekor."
+msgstr "Az Odoo könyvelési tételt hoz létre az |AVCO| költségszámítási módot használó szállítmányok beérkezésekor."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:346
 msgid "The stock interim accounts and the price difference account are used with **Anglo-Saxon accounting**. It is enabled by default for most fiscal localizations and can be checked in :menuselection:`Accounting --> Configuration --> Settings`, in the :guilabel:`Anglo-Saxon Accounting` section (provided by the *Odoo 18 Accounting Community* module)."
@@ -5336,19 +5244,19 @@ msgstr "Állítson be egy :guilabel:`Árkülönbözet számlát`: a termékoldal
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:354
 msgid "Under :guilabel:`Account Properties`, create a new :guilabel:`Price Difference Account` by typing in the name of the account and clicking :guilabel:`Create and Edit`. Then set the account :guilabel:`Type` as `Expenses`, and click :guilabel:`Save`."
-msgstr "Az :guilabel:`Főkönyvi számla tulajdonságai` alatt hozzon létre egy új :guilabel:`Árkülönbözet-számlát` a számla nevének beírásával és a :guilabel:`Létrehozás és szerkesztés` gombra kattintva. Ezután állítsa be a számla :guilabel:`Típusát` `Expenses` értékre, és kattintson a :guilabel:`Mentés` gombra."
+msgstr "A :guilabel:`Főkönyvi számla tulajdonságai` alatt hozzon létre egy új :guilabel:`Árkülönbözet-számlát` a számla nevének beírásával és a :guilabel:`Létrehozás és szerkesztés...` lehetőségre kattintva. Ezután állítsa a számla :guilabel:`Típus` mezőjét `Költségek` értékre, és kattintson a :guilabel:`Mentés` gombra."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:366
 msgid "Then, receive the shipment in the *Purchase* app or *Inventory* app, and navigate to the :menuselection:`Accounting --> Accounting --> Journal Entries`. In the list, find the :guilabel:`Reference` that matches the warehouse reception operation for the relevant product."
-msgstr "Ezután vegye át a szállítmányt a *Beszerzés* vagy a *Készlet* alkalmazásban, és lépjen a :menuselection:`Könyvelés --> Könyvelés --> Könyvelési tételek` menüpontra. A listában keresse meg azt a :guilabel:`Hivatkozás`, amely az adott termék raktári beérkezési műveletéhez tartozik."
+msgstr "Ezután vegye át a szállítmányt a *Beszerzés* vagy a *Készlet* alkalmazásban, és lépjen a :menuselection:`Könyvelés --> Könyvelés --> Könyvelési tételek` menüpontra. A listában keresse meg azt a :guilabel:`Hivatkozás` értéket, amely az adott termék raktári beérkezési műveletéhez tartozik."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:378
 msgid "Click on the line for 8 tables. This accounting journal entry shows that when the 8 tables were received, the `Stock Valuation` account increased by `$80`. Conversely, the **Stock Input** account (set as `Stock Interim (Received)` account by default) is credited `$80`."
-msgstr "Kattintson a 8 asztalt tartalmazó sorra. Ez a könyvelési naplóbejegyzés azt mutatja, hogy amikor a 8 asztal beérkezett, a `Stock Valuation` számla `$80`-val növekedett. Ezzel szemben a **Stock Input** számla (alapértelmezés szerint `Stock Interim (Received)` számlaként van beállítva) `$80` jóváírást kap."
+msgstr "Kattintson a 8 asztalt tartalmazó sorra. Ez a könyvelési tétel azt mutatja, hogy amikor a 8 asztal beérkezett, a `Készletértékelés` számla `$80`-val növekedett. Ezzel szemben a **Készletnövekedés** számla (alapértelmezés szerint `Stock Interim (Received)` számlaként van beállítva) `$80` jóváírást kap."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:391
 msgid "Accounts balanced at received vendor bill"
-msgstr "A számlák egyensúlyban vannak a beérkezett szállítói számla alapján"
+msgstr "Beérkezett szállítói számlánál kiegyenlített számlák"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:393
 msgid "In this example, a company starts with zero units of a product, table, in stock. Then, 8 tables are received from the vendor. When the bill is received from vendor for 8 tables:"
@@ -5356,15 +5264,15 @@ msgstr "Ebben a példában egy vállalat nulla darab terméket, asztalt tart ké
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:396
 msgid "Use `$80` in the **Stock Input** account to pay the bill. This cancels out and the account now holds `$0`."
-msgstr "A számla kifizetéséhez használja a **Készletbevitel** számlán lévő `$80`-t. Ez kölcsönösen kiegyenlíti egymást, és a számla mostantól `$0`-t tartalmaz."
+msgstr "A számla kifizetéséhez használja a **Készletnövekedés** számlán lévő `$80`-t. Ez kölcsönösen kiegyenlíti egymást, és a számla mostantól `$0`-t tartalmaz."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:398
 msgid "Debit **Stock Input** `$80` (to reconcile this account)."
-msgstr "Terhelje meg a **Készletbevitel** számlát `$80`-ral (a számla egyeztetéséhez)."
+msgstr "Terhelje meg a **Készletnövekedés** számlát `$80`-ral (a számla egyeztetéséhez)."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:399
 msgid "Credit **Accounts payable** `$80`. This account stores the amount the company owes others, so accountants use the amount to write checks to vendors."
-msgstr "Írja jóvá a **Fizetendő számlák** számlát `$80`-ral. Ez a számla tárolja azt az összeget, amellyel a vállalat tartozik másoknak, ezért a könyvelők ezt az összeget használják a szállítóknak szóló csekkek kiállításához."
+msgstr "Írja jóvá a **Szállítói kötelezettségek** számlát `$80`-ral. Ez a számla tárolja azt az összeget, amellyel a vállalat tartozik másoknak, ezért a könyvelők ezt az összeget használják a szállítóknak szóló csekkek kiállításához."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:405
 msgid "Once the vendor requests payment, navigate to the :menuselection:`Purchase --> Orders --> Purchase Orders` and select the :abbr:`PO (Purchase Order)` for 8 tables. Inside the :abbr:`PO (Purchase Order)`, select :guilabel:`Create Bill`."
@@ -5372,7 +5280,7 @@ msgstr "Amikor a szállító kéri a kifizetést, lépjen a :menuselection:`Besz
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:409
 msgid "Switch to the :guilabel:`Journal Items` tab to view how `$80` is transferred from the holding account, `Stock Interim (Received)` to `Accounts Payable`. :guilabel:`Confirm` the bill to record the payment to the vendor."
-msgstr "Váltson a :guilabel:`Könyvelési tételsorok` fülre, hogy megtekinthesse, hogyan kerül át a `$80` az átmeneti számláról, a `Készletátmeneti (Beérkezett)` számláról a `Fizetendő számlák` számlára. A fizetés rögzítéséhez a szállítónál :guilabel:`Megerősítés` a számlát."
+msgstr "Váltson a :guilabel:`Könyvelési tételsorok` fülre, hogy megtekinthesse, hogyan kerül át a `$80` az átmeneti számláról (`Stock Interim (Received)`) a `Szállítói kötelezettségek` számlára. A szállítónak járó fizetés rögzítéséhez erősítse meg a számlát a :guilabel:`Megerősítés` gombbal."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:422
 msgid "On product delivery"
@@ -5380,7 +5288,7 @@ msgstr "A termék kiszállításakor"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:424
 msgid "In the :ref:`above example table <inventory/avg_price/price-table>`, when 10 products are delivered to a customer, the **Stock Input** account is untouched because there are no new products coming in. To put it simply:"
-msgstr "A :ref:`fenti példatáblázatban <inventory/avg_price/price-table>`, amikor 10 terméket szállítanak ki egy vevőnek, a **Készletbevitel** számla érintetlen marad, mivel nem érkeznek új termékek. Egyszerűen fogalmazva:"
+msgstr "A :ref:`fenti példatáblázatban <inventory/avg_price/price-table>`, amikor 10 terméket szállítanak ki egy vevőnek, a **Készletnövekedés** számla érintetlen marad, mivel nem érkeznek új termékek. Egyszerűen fogalmazva:"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:428
 msgid "**Inventory valuation** is credited `$120`. Subtracting from inventory valuation represents `$120` worth of products exiting the company."
@@ -5388,23 +5296,23 @@ msgstr "A **Készletértékelés** számlát `$120`-ral írják jóvá. A készl
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:430
 msgid "Debit **Accounts Receivable** to record revenue from the sale."
-msgstr "Terhelje meg a **Kintlévőségek** számlát az értékesítésből származó bevétel rögzítéséhez."
+msgstr "Terhelje meg a **Vevőkövetelések** számlát az értékesítésből származó bevétel rögzítéséhez."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:442
 msgid "In the accounting journal entry invoicing a customer for 10 tables, the accounts **Product Sales**, **Tax Received**, and **Accounts Receivable** all pertain to the sale of the product. **Accounts Receivable** is the account where the customer payment will be received."
-msgstr "Abban a könyvelési naplóbejegyzésben, amelyben 10 asztalra számláznak egy vevőnek, a **Termékértékesítés**, a **Kapott adó** és a **Kintlévőségek** számlák mind a termék értékesítéséhez kapcsolódnak. A **Kintlévőségek** az a számla, amelyre a vevő kifizetése érkezik."
+msgstr "Abban a könyvelési tételben, amelyben 10 asztalra számláznak egy vevőnek, a **Termékértékesítés**, az **Adóbevétel** és a **Vevőkövetelések** számlák mind a termék értékesítéséhez kapcsolódnak. A **Vevőkövetelések** az a számla, amelyre a vevő kifizetése érkezik."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:446
 msgid "Anglo-Saxon accounting recognizes the cost of goods sold (COGS) once the sale is made. So, up until the product is sold, scrapped, or returned, costs of keeping the product in stock are not accounted for. The **Expense** account is debited `$120` to log the costs of storing 10 tables during this period of time."
-msgstr "Az angolszász számvitel az eladott áruk bekerülési értékét (COGS) az értékesítés időpontjában számolja el. Tehát amíg a termék el nem adják, selejtezik vagy nem kerül visszáruzásra, a termék készleten tartásának költségei nem kerülnek elszámolásra. A **Ráfordítás** számlát `$120`-ral terhelik meg, hogy rögzítsék a 10 asztal tárolásának költségeit ebben az időszakban."
+msgstr "Az angolszász könyvelés az eladott áruk beszerzési értékét (COGS) az értékesítés időpontjában számolja el. Tehát amíg a terméket el nem adják, le nem selejtezik vagy vissza nem küldik, a termék készleten tartásának költségei nem kerülnek elszámolásra. A **Költségek** számlát `$120`-ral terhelik meg, hogy rögzítsék a 10 asztal tárolásának költségeit ebben az időszakban."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:452
 msgid "On product return"
-msgstr "A termék visszárujakor"
+msgstr "A termék visszaküldésekor"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:454
 msgid "In the :ref:`above example table <inventory/avg_price/price-table>`, when returning 1 product to a vendor purchased at `$10`, a company expects `$10` in the **Accounts Payable** account from the vendor. However, **Stock Input** account must be debited `$12` because the average cost is `$12` at the time of the return. The missing `$2` is accounted for in the :guilabel:`Price Difference Account`, which is set up in the product's :guilabel:`Product Category`."
-msgstr "A :ref:`fenti példatáblázatban <inventory/avg_price/price-table>`, amikor 1 terméket küldenek vissza egy szállítónak, amelyet `$10`-ért vásároltak, a vállalat `$10`-t vár a **Fizetendő számlák** számlán a szállítótól. Azonban a **Készletbevitel** számlát `$12`-vel kell megterhelni, mivel az átlagos bekerülési érték `$12` a visszáru időpontjában. A hiányzó `$2` a :guilabel:`Árkülönbözeti számla` terhére kerül elszámolásra, amelyet a termék :guilabel:`Termékkategóriájában` kell beállítani."
+msgstr "A :ref:`fenti példatáblázatban <inventory/avg_price/price-table>`, amikor 1 terméket küldenek vissza egy szállítónak, amelyet `$10`-ért vásároltak, a vállalat `$10`-t vár a **Szállítói kötelezettségek** számlán a szállítótól. Azonban a **Készletnövekedés** számlát `$12`-vel kell megterhelni, mivel az átlagköltség `$12` a visszaküldés időpontjában. A hiányzó `$2` az :guilabel:`Árkülönbözeti számla` terhére kerül elszámolásra, amelyet a termék :guilabel:`Termékkategóriájában` kell beállítani."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:461
 msgid "Behavior of *price difference accounts* varies from localization. In this case, the account is intended to store differences between vendor price and *automated* inventory valuation methods."
@@ -5416,15 +5324,15 @@ msgstr "Összefoglalás:"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:466
 msgid "Debit **Stock Input** account `$10` to move the table from stock to stock input. This move is to indicate that the table is to be processed for an outgoing shipment."
-msgstr "Terhelje a **Stock Input** számlát `$10` értékkel az asztal készletből a készlet-bemenetbe való átmozgatásához. Ez a mozgás azt jelzi, hogy az asztalt kimenő szállítmányként kell feldolgozni."
+msgstr "Terhelje a **Készletnövekedés** számlát `$10` értékkel az asztal készletből a készletnövekedés számlára való átmozgatásához. Ez a mozgás azt jelzi, hogy az asztalt kimenő szállítmányként kell feldolgozni."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:468
 msgid "Debit **Stock Input** an additional `$2` to account for the **Price Difference**."
-msgstr "Terhelje a **Stock Input** számlát további `$2` értékkel az **Árkülönbözet** elszámolásához."
+msgstr "Terhelje a **Készletnövekedés** számlát további `$2` értékkel az **Árkülönbözet** elszámolásához."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:469
 msgid "Credit **Stock Valuation** `$12` because the item is leaving the stock."
-msgstr "Írja jóvá a **Stock Valuation** számlát `$12` értékkel, mivel a termék elhagyja a készletet."
+msgstr "Írja jóvá a **Készletértékelés** számlát `$12` értékkel, mivel a termék elhagyja a készletet."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:479
 msgid "Once the vendor's refund is received,"
@@ -5432,7 +5340,7 @@ msgstr "Miután a szállító visszatérítése megérkezett,"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:481
 msgid "Credit **Stock Input** account `$10` to reconcile the price of the table."
-msgstr "Írja jóvá a **Stock Input** számlát `$10` értékkel az asztal árának egyeztetéséhez."
+msgstr "Írja jóvá a **Készletnövekedés** számlát `$10` értékkel az asztal árának egyeztetéséhez."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:482
 msgid "Debit **Accounts Payable** `$10` to have the accountants collect and register the payment in their journal."
@@ -7510,10 +7418,6 @@ msgstr "a **fizetési megbízások** (SEPA-átutalás) a szállítókat fizetik 
 msgid "**debit orders** (SEPA Direct Debit) collect customer invoices from your customers' bank accounts, based on the direct debit **mandates** signed by the customers."
 msgstr "az **inkasszómegbízások** (SEPA csoportos beszedés) a vevői számlákat szedik be a vevők bankszámlájáról, a vevők által aláírt csoportos beszedési **megbízások** alapján."
 
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:14
-msgid "The features are provided by the *Account Payment Order*, *Account Payment Mode*, *Account Payment Partner*, *Account Banking Mandate*, *Account Banking SEPA Credit Transfer*, and *Account Banking SEPA Direct Debit* modules. :ref:`Install <general/install>` the SEPA modules you need; the other modules are installed with them."
-msgstr "A funkciókat az *Account Payment Order*, *Account Payment Mode*, *Account Payment Partner*, *Account Banking Mandate*, *Account Banking SEPA Credit Transfer* és *Account Banking SEPA Direct Debit* modulok biztosítják. :ref:`Telepítse <general/install>` a szükséges SEPA-modulokat; a többi modul velük együtt települ."
-
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:25
 msgid "SEPA identifiers"
 msgstr "SEPA-azonosítók"
@@ -7550,25 +7454,9 @@ msgstr "Adjon meg egy nevet, például *SEPA-átutalás - X bank*."
 msgid "Select the :guilabel:`Payment Method`: :guilabel:`SEPA Credit Transfer to suppliers` for payment orders, or :guilabel:`SEPA Direct Debit for customers` for debit orders."
 msgstr "Válassza ki a :guilabel:`Fizetési módszer` mezőben a :guilabel:`SEPA átutalás szállítóknak` értéket a fizetési megbízásokhoz, vagy a :guilabel:`SEPA csoportos beszedés vevők részére` értéket az inkasszómegbízásokhoz."
 
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:49
-msgid "In :guilabel:`Link to Bank Account`, select *Fixed* to always use the same bank journal (then select it), or *Variable* to choose the bank journal on each order among the allowed ones."
-msgstr "A :guilabel:`Kapcsolat a bankszámlához` mezőben válassza a *Fix* értéket, ha mindig ugyanazt a bank naplót szeretné használni (majd válassza ki a naplót), vagy a *Változó* értéket, ha a bank naplót minden megbízásnál az engedélyezettek közül választja ki."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:51
-msgid "Keep :guilabel:`Selectable in Payment Orders` ticked."
-msgstr "Hagyja bejelölve a :guilabel:`Fizetési megbízásban választható` opciót."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:52
-msgid "In the :guilabel:`Options for Payment Orders` section, set the :guilabel:`Default Payment Execution Date` of the orders and, if needed, tick :guilabel:`Group Transactions in Payment Orders` to pay several invoices of the same partner with one transfer."
-msgstr "A :guilabel:`Fizetési megbízások beállításai` szakaszban adja meg a megbízások :guilabel:`Alapértelmezett fizetési teljesítési dátum` értékét, és szükség esetén jelölje be a :guilabel:`Tranzakciók csoportosítása a fizetési megbízásokban` opciót, hogy ugyanannak a partnernek több számláját egyetlen átutalással fizesse ki."
-
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:55
 msgid "In the :guilabel:`Select Move Lines to Pay - Default Values` section, set the default filters used to add journal items to the orders, for example :guilabel:`Linked to an Invoice or Refund` and the :guilabel:`Type of Date Filter`."
 msgstr "A :guilabel:`Fizetendő tételek kiválasztása - alapértelmezett értékek` szakaszban adja meg a naplótételek megbízásokhoz való hozzáadásakor használt alapértelmezett szűrőket, például :guilabel:`Számlához vagy jóváíráshoz kapcsolva` és :guilabel:`Dátumszűrő típusa`."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:60
-msgid "The PAIN version used by the SEPA files is set on the payment method, under :menuselection:`Accounting --> Configuration --> Management --> Payment Methods` (:guilabel:`PAIN Version`). Keep the recommended version unless your bank asks for another one."
-msgstr "A SEPA-fájlok által használt PAIN-verzió a fizetési módszeren van beállítva, a :menuselection:`Könyvelés --> Konfiguráció --> Kezelés --> Fizetési módszerek` menüpont alatt (:guilabel:`PAIN verzió`). Tartsa meg az ajánlott verziót, hacsak a bankja nem kér másikat."
 
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:73
 msgid "Contacts and invoices"
@@ -7586,33 +7474,9 @@ msgstr "Csoportos beszedési megbízások"
 msgid "A direct debit requires a mandate signed by the customer, attached to the customer's bank account. Go to :menuselection:`Accounting --> Customers --> Banking Mandates`, and click :guilabel:`New`:"
 msgstr "A csoportos beszedéshez a vevő által aláírt megbízás szükséges, amely a vevő bankszámlájához kapcsolódik. Lépjen a :menuselection:`Könyvelés --> Vevők --> Bankszámla-megbízások` menüpontra, és kattintson az :guilabel:`Új` gombra:"
 
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:89
-msgid "Select the customer's :guilabel:`Bank Account`."
-msgstr "Válassza ki a vevő :guilabel:`Bankszámla` adatát."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:90
-msgid "Select the :guilabel:`Type of Mandate`: :guilabel:`Recurrent` for regular debits, or :guilabel:`One-Off` for a single debit."
-msgstr "Válassza ki a :guilabel:`Megbízás típusa` mezőben az :guilabel:`Ismétlődő` értéket a rendszeres beszedésekhez, vagy az :guilabel:`Egyszeri` értéket egyetlen beszedéshez."
-
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:92
 msgid "Select the :guilabel:`Scheme`: :guilabel:`Basic (CORE)` for consumers and most customers, or :guilabel:`Enterprise (B2B)` for business customers that agreed to this scheme with their bank."
 msgstr "Válassza ki a :guilabel:`Séma` mezőben az :guilabel:`Alap (CORE)` értéket a magánszemélyekhez és a legtöbb vevőhöz, vagy a :guilabel:`Vállalati (B2B)` értéket azokhoz az üzleti vevőkhöz, akik ezt a sémát a bankjukkal egyeztették."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:94
-msgid "Enter the :guilabel:`Date of Signature of the Mandate`, and attach the :guilabel:`Scan of the Mandate`."
-msgstr "Adja meg :guilabel:`A megbízás aláírásának dátuma` értékét, és csatolja :guilabel:`A megbízás beszkennelt példánya` fájlt."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:96
-msgid "Click :guilabel:`Validate`."
-msgstr "Kattintson a :guilabel:`Jóváhagyás` gombra."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:98
-msgid "To get the mandate signed, click :guilabel:`Print` to print the mandate form, or :guilabel:`Send by Email` to send it to the customer."
-msgstr "A megbízás aláíratásához kattintson a :guilabel:`Nyomtatás` gombra a megbízási űrlap kinyomtatásához, vagy a :guilabel:`Küldés e-mailben` gombra a vevőnek való elküldéséhez."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:101
-msgid "The :guilabel:`Sequence Type for Next Debit` of a recurrent mandate is managed automatically: it switches from :guilabel:`First` to :guilabel:`Recurring` after the first debit order is sent. A mandate that has not been used for a long time is set to :guilabel:`Expired`."
-msgstr "Az ismétlődő megbízás :guilabel:`Sorozattípus a következő beszedéshez` mezőjét a rendszer automatikusan kezeli: az első inkasszómegbízás elküldése után :guilabel:`Első` értékről :guilabel:`Ismétlődő` értékre vált. A hosszú ideje nem használt megbízás :guilabel:`Lejárt` állapotba kerül."
 
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:108
 msgid "Pay vendors with a payment order"
@@ -7630,57 +7494,25 @@ msgstr "Válassza ki a :guilabel:`Fizetési módozat` értékét (változó mód
 msgid "Click :guilabel:`Create Payment Lines from Journal Items`, check the filters, then click :guilabel:`Add All Move Lines` to add all the matching open bills, or add them one by one."
 msgstr "Kattintson a :guilabel:`Fizetési sorok létrehozása könyvelési tételsorokból` gombra, ellenőrizze a szűrőket, majd kattintson az :guilabel:`Összes könyvelési tétel hozzáadása` gombra az összes megfelelő nyitott szállítói számla hozzáadásához, vagy adja hozzá őket egyenként."
 
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:114
-msgid "Check the :guilabel:`Transactions` tab, then click :guilabel:`Confirm Payments`."
-msgstr "Ellenőrizze a :guilabel:`Tranzakciók` lapot, majd kattintson a :guilabel:`Kifizetések megerősítése` gombra."
-
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:115
 msgid "Click :guilabel:`Generate Payment File`. The SEPA XML file is attached to the order; download it and upload it in your online banking."
 msgstr "Kattintson a :guilabel:`Fizetési fájl előállítása` gombra. A SEPA XML fájl a megbízáshoz csatolva lesz; töltse le, és töltse fel az internetbankjába."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:117
-msgid "Once the bank has accepted the file, click :guilabel:`File Successfully Uploaded`. The payments are posted and reconciled with the bills."
-msgstr "Miután a bank elfogadta a fájlt, kattintson a :guilabel:`Fájl sikeresen feltöltve` gombra. A kifizetések lekönyvelésre kerülnek, és egyeztetésre kerülnek a szállítói számlákkal."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:121
-msgid "Bills can also be added from the list of vendor bills: select them, then click :menuselection:`Actions --> Add to Payment Order`. The lines are added to the draft payment order of the payment mode, or a new order is created."
-msgstr "Szállítói számlákat a szállítói számlák listájából is hozzáadhat: jelölje ki őket, majd kattintson a :menuselection:`Akciók --> Hozzáadás fizetési megbízáshoz` menüpontra. A sorok a fizetési mód piszkozat fizetési megbízásához adódnak hozzá, vagy új megbízás jön létre."
 
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:136
 msgid "Collect customer invoices with a debit order"
 msgstr "Vevői számlák beszedése inkasszómegbízással"
 
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:138
-msgid "The steps are the same as for payment orders, from :menuselection:`Accounting --> Customers --> Debit Orders`, with a payment mode using :guilabel:`SEPA Direct Debit for customers`. Every customer of the order must have a valid mandate on the bank account used; the mandate is proposed automatically on the lines. Customer invoices can also be added with :menuselection:`Actions --> Add to Debit Order`."
-msgstr "A lépések megegyeznek a fizetési megbízásokéval, a :menuselection:`Könyvelés --> Vevők --> Inkasszómegbízások` menüpontból, a :guilabel:`SEPA csoportos beszedés vevők részére` fizetési módszert használó fizetési móddal. A megbízás minden vevőjének érvényes megbízással kell rendelkeznie a használt bankszámlán; a megbízást a rendszer automatikusan javasolja a sorokon. Vevői számlákat a :menuselection:`Akciók --> Hozzáadás inkasszómegbízáshoz` menüponttal is hozzáadhat."
-
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:147
 msgid "Payment returns"
 msgstr "Fizetés-visszaküldések"
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:149
-msgid "When a customer's bank returns a direct debit (for example, insufficient funds or a mandate revoked by the customer), record the return so that the invoice is open again:"
-msgstr "Ha a vevő bankja visszaküld egy csoportos beszedést (például fedezethiány vagy a vevő által visszavont megbízás miatt), rögzítse a visszaküldést, hogy a számla újra nyitott legyen:"
 
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:152
 msgid "Go to :menuselection:`Accounting --> Customers --> Customer Payment Returns`, and click :guilabel:`New`."
 msgstr "Lépjen a :menuselection:`Könyvelés --> Vevők --> Vevői fizetés-visszaküldések` menüpontra, és kattintson az :guilabel:`Új` gombra."
 
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:154
-msgid "Select the bank journal and the date of the return."
-msgstr "Válassza ki a bank naplót és a visszaküldés dátumát."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:155
-msgid "In the :guilabel:`Lines` tab, add a line per returned payment: select the returned payment (journal item), the :guilabel:`Amount`, and the :guilabel:`Return reason`. Bank charges can be recorded on the line as well. Alternatively, enter the references and click :guilabel:`Match` to find the payments."
-msgstr "A :guilabel:`Sorok` lapon adjon hozzá egy sort minden visszaküldött kifizetéshez: válassza ki a visszaküldött kifizetést (naplótétel), az :guilabel:`Összeg` értékét és a :guilabel:`Visszaküldés oka` értékét. A banki költségek is rögzíthetők a soron. Alternatívaként adja meg a hivatkozásokat, és kattintson az :guilabel:`Egyeztetés` gombra a kifizetések megkereséséhez."
-
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:159
 msgid "Click :guilabel:`Confirm`. A journal entry removes the amount from the bank account, and the invoice is open again."
 msgstr "Kattintson a :guilabel:`Megerősítés` gombra. Egy könyvelési tétel levonja az összeget a bankszámláról, és a számla újra nyitott lesz."
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:162
-msgid "To debit the invoice again in a later debit order, tick :guilabel:`Include move lines from returns` when adding the journal items to the order."
-msgstr "Ha a számlát egy későbbi inkasszómegbízásban újra be szeretné szedni, a naplótételek megbízáshoz való hozzáadásakor jelölje be a :guilabel:`Visszaküldésekből származó könyvelési tételek felvétele` opciót."
 
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:167
 msgid ":doc:`../bank/statement_import`"
@@ -21518,10 +21350,6 @@ msgstr "Spanyolország"
 msgid "Install the 🇪🇸 **Spanish** :doc:`fiscal localization package <../fiscal_localizations>` to get all the default accounting features of the Spanish localization."
 msgstr "Telepítse a 🇪🇸 **spanyol** :doc:`pénzügyi lokalizációs csomagot <../fiscal_localizations>` a spanyol lokalizáció összes alapértelmezett könyvelési funkciójához."
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:14
-msgid "Three **Spanish** localizations exist, each with its own pre-configured **PGCE** charts of accounts:"
-msgstr "Három **spanyol** lokalizáció létezik, mindegyik saját előre konfigurált **PGCE** számlarendszerrel:"
-
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:16
 msgid "Spain - SMEs (2008);"
 msgstr "Spanyolország – KKV-k (2008);"
@@ -21529,10 +21357,6 @@ msgstr "Spanyolország – KKV-k (2008);"
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:17
 msgid "Spain - Complete (2008);"
 msgstr "Spanyolország – Teljes (2008);"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:18
-msgid "Spain - Non-profit entities (2008)."
-msgstr "Spanyolország – Nonprofit szervezetek (2008)."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:20
 msgid "To select the one to use, go to :menuselection:`Accounting --> Configuration --> Settings` and select a package in the :guilabel:`Fiscal Localization` section."
@@ -21550,38 +21374,6 @@ msgstr ":doc:`Dokumentáció az elektronikus számlázás jogszerűségéről é
 msgid ":doc:`Documentation on e-invoicing’s legality and compliance in the Basque Country <../accounting/customer_invoices/electronic_invoicing/basque_country>`"
 msgstr ":doc:`Dokumentáció az elektronikus számlázás jogszerűségéről és megfelelőségéről a Baszk Tartományban <../accounting/customer_invoices/electronic_invoicing/basque_country>`"
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:35
-msgid "Spanish base layer"
-msgstr "Spanyol alapréteg"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:37
-msgid "The *Spain - Base Layer* module sets up the combination of Spanish localization modules supported in eYssen. :ref:`Install <general/install>` it on top of the Spanish fiscal localization package. It also installs:"
-msgstr "A *Spain - Base Layer* modul állítja be az eYssenben támogatott spanyol lokalizációs modulok kombinációját. :ref:`Telepítse <general/install>` a spanyol pénzügyi lokalizációs csomagra. A modul a következőket is telepíti:"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:41
-msgid "*AEAT Base*: the common framework of the AEAT tax declarations (tax maps, declaration records, export of the declaration files);"
-msgstr "*AEAT Base*: az AEAT-adóbevallások közös kerete (adótérképek, bevallási rekordok, a bevallási fájlok exportja);"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:43
-msgid "the Spanish data of contacts and banks: the :guilabel:`Trade name` of contacts (contacts can also be searched by it) and the Spanish bank directory, which is offered for import when the module is installed (:guilabel:`Import spanish bank data`);"
-msgstr "a partnerek és bankok spanyol adatai: a partnerek :guilabel:`Kereskedelmi név` mezője (a partnerek erre is kereshetők) és a spanyol bankjegyzék, amelynek importálását a modul telepítéskor felkínálja (:guilabel:`Spanyol bankadatok importálása`);"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:46
-msgid "the Spanish provinces, municipalities and ZIP codes, used to fill in the city and the province from the ZIP code;"
-msgstr "a spanyol tartományok, települések és irányítószámok, amelyek alapján a város és a tartomány az irányítószámból kitölthető;"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:48
-msgid "the check of the identification data of contacts against the AEAT census: click :guilabel:`Check Partner Data` on the AEAT tab of a contact, or enable :guilabel:`Verify Partner Data using AEAT Census` in the settings to check contacts automatically when they are created or modified."
-msgstr "a partnerek azonosító adatainak ellenőrzése az AEAT nyilvántartásában: kattintson a :guilabel:`Partneradatok ellenőrzése` gombra a partner AEAT fülén, vagy kapcsolja be a beállításokban a :guilabel:`Partneradatok ellenőrzése az AEAT nyilvántartásával` opciót, hogy a partnerek létrehozáskor és módosításkor automatikusan ellenőrizve legyenek."
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:53
-msgid "When the module is installed, the :guilabel:`Verify VAT Numbers` option (VIES validation of intra-EU VAT numbers) is enabled for every Spanish company."
-msgstr "A modul telepítésekor az :guilabel:`Adószámok ellenőrzése` opció (a közösségi adószámok VIES-ellenőrzése) minden spanyol vállalatnál bekapcsol."
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:56
-msgid "For several features, two alternative modules exist: one from the standard Odoo localization and one from the Spanish community localization (OCA). The *Spain - Base Layer* module enforces the supported choice: the alternative module cannot be installed while the base layer is installed, and the base layer cannot be installed while an alternative module is installed."
-msgstr "Több funkcióhoz két alternatív modul létezik: egy a szabványos Odoo lokalizációból és egy a spanyol közösségi lokalizációból (OCA). A *Spain - Base Layer* modul kikényszeríti a támogatott választást: az alternatív modul nem telepíthető, amíg az alapréteg telepítve van, és az alapréteg sem telepíthető, amíg egy alternatív modul telepítve van."
-
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:65
 msgid "Feature"
 msgstr "Funkció"
@@ -21589,10 +21381,6 @@ msgstr "Funkció"
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:66
 msgid "Supported module"
 msgstr "Támogatott modul"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:67
-msgid "Alternative that cannot be installed"
-msgstr "Nem telepíthető alternatíva"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:102
 msgid "You can reach the **Chart of Accounts** by going to :menuselection:`Accounting --> Configuration --> Accounting: Chart of Accounts`."
@@ -21606,10 +21394,6 @@ msgstr "Spanyol vállalat számára létrehozott új adatbázisban alapértelmez
 msgid "Default Spain-specific taxes are created automatically when the :guilabel:`Spanish - Accounting (PGCE 2008) (l10n_es)` module is installed. Each tax is mapped to the boxes of the Spanish **Modelo 303** VAT return, which can be reviewed in the :doc:`tax report <../accounting/reporting/dynamic_reports>`."
 msgstr "Az alapértelmezett spanyol adók a :guilabel:`Spanyol – Könyvelés (PGCE 2008) (l10n_es)` modul telepítésekor automatikusan létrejönnek. Minden adó a spanyol **Modelo 303** ÁFA-bevallás rovataihoz van rendelve, amelyek az :doc:`adójelentésben <../accounting/reporting/dynamic_reports>` tekinthetők át."
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:118
-msgid "With the :ref:`Spanish base layer <localizations/spain/base-layer>`, the AEAT tax declarations (modelos 303, 390, 111, 115, 347, 349, and others), the VAT books, and the official PGC annual accounts are prepared in the Accounting app. See :doc:`spain/aeat_declarations`."
-msgstr "A :ref:`spanyol alapréteggel <localizations/spain/base-layer>` az AEAT adóbevallásai (303-as, 390-es, 111-es, 115-ös, 347-es, 349-es és egyéb modelók), az ÁFA-könyvek és a hivatalos PGC éves beszámoló a Könyvelés alkalmazásban készülnek. Lásd: :doc:`spain/aeat_declarations`."
-
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:125 ../../content/applications/finance/fiscal_localizations/spain/sii.rst:3
 msgid "SII (Suministro Inmediato de Información)"
 msgstr "SII (Suministro Inmediato de Información)"
@@ -21617,10 +21401,6 @@ msgstr "SII (Suministro Inmediato de Información)"
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:127
 msgid "The *Spain - SII EDI Suministro de Libros* (`l10n_es_edi_sii`) module sends the VAT information of customer invoices and vendor bills to the SII (*Llevanza de libros registro*) of the AEAT or of the regional tax agencies. It is mandatory for companies with a turnover above 6 M€ and optional for the others."
 msgstr "A *Spanyolország – SII EDI Suministro de Libros* (`l10n_es_edi_sii`) modul a vevői és szállítói számlák ÁFA-adatait az AEAT vagy a regionális adóhatóságok SII-rendszerébe (*Llevanza de libros registro*) küldi. 6 M€ feletti árbevételű vállalatoknál kötelező, a többieknél választható."
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:133
-msgid "This module cannot be installed together with the :ref:`Spain - Base Layer <localizations/spain/base-layer>` module. With the base layer, the SII is handled by the community *Suministro Inmediato de Información en el IVA* module, see :doc:`spain/sii`."
-msgstr "Ez a modul nem telepíthető együtt a :ref:`Spain - Base Layer <localizations/spain/base-layer>` modullal. Az alapréteggel az SII-t a közösségi *Suministro Inmediato de Información en el IVA* modul kezeli, lásd: :doc:`spain/sii`."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:140
 msgid ":ref:`Install <general/install>` the :guilabel:`Spain - SII EDI Suministro de Libros (l10n_es_edi_sii)` module."
@@ -21658,10 +21438,6 @@ msgstr "Miután egy vevői vagy szállítói számlát olyan naplóban adott fel
 msgid "Veri*Factu"
 msgstr "Veri*Factu"
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:69
-msgid "*Spain - Veri\\*Factu* (and its Point of Sale extension)"
-msgstr "*Spain - Veri\\*Factu* (és értékesítésipont-bővítménye)"
-
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:70
 msgid "The community Veri*Factu module"
 msgstr "A közösségi Veri*Factu modul"
@@ -21669,10 +21445,6 @@ msgstr "A közösségi Veri*Factu modul"
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:71
 msgid "SII"
 msgstr "SII"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:72
-msgid "*Suministro Inmediato de Información en el IVA* (community)"
-msgstr "*Suministro Inmediato de Información en el IVA* (közösségi)"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:73
 msgid "*Spain - SII EDI Suministro de Libros*"
@@ -21714,14 +21486,6 @@ msgstr "*Spain - Modelo 130 Tax report*"
 msgid "EU One-Stop-Shop (OSS)"
 msgstr "Uniós egyablakos ügyintézés (OSS)"
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:84
-msgid "The community OSS module, used by the OSS versions of the AEAT declarations"
-msgstr "A közösségi OSS modul, amelyet az AEAT-bevallások OSS-változatai használnak"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:85
-msgid "*EU One Stop Shop (OSS)* and the Hungarian OSS bridge"
-msgstr "*EU One Stop Shop (OSS)* és a magyar OSS-híd"
-
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:86
 msgid "Fixed assets"
 msgstr "Tárgyi eszközök"
@@ -21730,14 +21494,6 @@ msgstr "Tárgyi eszközök"
 msgid ":doc:`Spain - Fixed Assets <spain/fixed_assets>`"
 msgstr ":doc:`Spain - Fixed Assets <spain/fixed_assets>`"
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:88
-msgid "The community fixed asset modules"
-msgstr "A közösségi tárgyieszköz-modulok"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:91
-msgid "If an alternative module is already installed, uninstall it before installing the *Spain - Base Layer* module. Ask your system administrator before uninstalling a module, as its data is deleted."
-msgstr "Ha egy alternatív modul már telepítve van, távolítsa el, mielőtt telepíti a *Spain - Base Layer* modult. Egy modul eltávolítása előtt egyeztessen a rendszergazdával, mert az adatai törlődnek."
-
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:96
 msgid ":doc:`spain/aeat_declarations`"
 msgstr ":doc:`spain/aeat_declarations`"
@@ -21745,10 +21501,6 @@ msgstr ":doc:`spain/aeat_declarations`"
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:97
 msgid ":doc:`spain/sii`"
 msgstr ":doc:`spain/sii`"
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:188
-msgid "Producers of Veri*Factu billing systems must self-certify their compliance with the regulations (*declaración responsable*). Ask your support provider for the declaration that applies to your installation."
-msgstr "A Veri*Factu számlázórendszerek gyártóinak önmaguknak kell tanúsítaniuk a szabályozásnak való megfelelést (*declaración responsable*). Kérje a támogatási szolgáltatójától az Ön telepítésére vonatkozó nyilatkozatot."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:192
 msgid "**Veri*Factu** is an e-Invoicing system used by the Spanish Tax Agency. It is mandatory for most taxpayers in Spain, except for those who use the SII system or are under a regional tax regime (i.e., TicketBai)."
@@ -21766,10 +21518,6 @@ msgstr "A **Veri\\*Factu** engedélyezéséhez kövesse az alábbi lépéseket:"
 msgid "Open the Settings app to make sure your company's :guilabel:`Country` and :guilabel:`Tax ID` are correctly set in the :ref:`Companies <general/companies/company>` section."
 msgstr "Nyissa meg a Beállítások alkalmazást, hogy megbizonyosodjon arról, hogy a vállalat :guilabel:`Ország` és :guilabel:`Adószám` helyesen van beállítva a :ref:`Vállalatok <general/companies/company>` szekcióban."
 
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:208
-msgid ":ref:`Install <general/install>` the :guilabel:`Spain - Veri*Factu (l10n_es_edi_verifactu)` module."
-msgstr ":ref:`Telepítse <general/install>` a :guilabel:`Spanyolország - Veri*Factu (l10n_es_edi_verifactu)` modult."
-
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:210
 msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`, scroll to the :guilabel:`Veri\\*Factu` section, check the :guilabel:`Enable Veri*Factu` option, and click :icon:`oi-arrow-right` :guilabel:`Manage certificates` to add a certificate."
 msgstr "Menjen a :menuselection:`Számvitel --> Konfiguráció --> Beállítások` menüpontra, görgessen a :guilabel:`Veri\\*Factu` szakaszhoz, jelölje be a :guilabel:`Veri*Factu engedélyezése` opciót, majd kattintson a :icon:`oi-arrow-right` :guilabel:`Tanúsítványok kezelése` gombra, hogy hozzáadjon egy tanúsítványt."
@@ -21785,10 +21533,6 @@ msgstr "Kattintson a :guilabel:`Fájl feltöltése` gombra, majd válasszon ki e
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:218
 msgid "At least one certificate has to be uploaded."
 msgstr "Legalább egy tanúsítványt fel kell tölteni."
-
-#: ../../content/applications/finance/fiscal_localizations/spain.rst:219
-msgid "By default Veri*Factu is in testing mode. The data is sent to test servers and is not considered official. When official data can be sent to the production servers, go to the :guilabel:`Veri\\*Factu` section in the :guilabel:`Settings` and disable :guilabel:`Test Environment`."
-msgstr "Alapértelmezés szerint a Veri*Factu teszt üzemmódban van. Az adatok tesztszerverekre kerülnek, és nem tekinthetők hivatalosnak. Amikor hivatalos adatokat lehet küldeni a termelési szerverekre, menjen a :guilabel:`Veri\\*Factu` szakaszba a :guilabel:`Beállítások` menüben, és tiltsa le a :guilabel:`Tesztkörnyezet` opciót."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:229
 msgid "Once an :doc:`invoice <../../finance/accounting/customer_invoices>` is confirmed, it can be :ref:`sent <accounting/invoice/sending>`. In the :guilabel:`Send` window, the Veri*Factu option is available if Veri*Factu has been enabled."
@@ -21962,14 +21706,6 @@ msgstr "Hozzáadhat egy kapcsolatot több szerepkörrel, vagy több kapcsolatot 
 msgid "AEAT tax declarations"
 msgstr "AEAT-adóbevallások"
 
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:5
-msgid "With the :ref:`Spain - Base Layer <localizations/spain/base-layer>`, the Spanish tax declarations (*modelos*) of the AEAT are prepared in the Accounting app: the declaration computes its boxes from the posted journal items of the period, creates the regularization entry, and exports the file (*fichero BOE*) that is uploaded to the AEAT electronic office."
-msgstr "A :ref:`Spain - Base Layer <localizations/spain/base-layer>` modullal az AEAT spanyol adóbevallásai (*modelos*) a Könyvelés alkalmazásban készülnek: a bevallás az időszak lekönyvelt naplótételeiből számítja ki a mezőit, létrehozza a rendező tételt, és exportálja az AEAT elektronikus ügyfélkapujára feltöltendő fájlt (*fichero BOE*)."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:10
-msgid ":ref:`Install <general/install>` the *Spain - AEAT Declarations Integration* module. It installs the declarations below and fits them into the Accounting app:"
-msgstr ":ref:`Telepítse <general/install>` a *Spain - AEAT Declarations Integration* modult. Ez telepíti az alábbi bevallásokat, és beilleszti őket a Könyvelés alkalmazásba:"
-
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:17
 msgid "Declaration"
 msgstr "Bevallás"
@@ -22046,45 +21782,13 @@ msgstr "ÁFA- és IRPF-könyvek"
 msgid "*Libros registro* of issued and received invoices, exported to XLSX."
 msgstr "A kiállított és befogadott számlák *Libros registro* nyilvántartásai, XLSX-be exportálva."
 
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:39
-msgid "It also adds the official annual accounts (PGC balance sheet and profit and loss), see :ref:`localizations/spain/aeat/annual-accounts`."
-msgstr "Hozzáadja a hivatalos éves beszámolót is (PGC mérleg és eredménykimutatás), lásd: :ref:`localizations/spain/aeat/annual-accounts`."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:43
-msgid "Other declarations (for example modelos 123, 190, 216 and 296) are separate modules. Once installed, they appear in the same menu and work the same way."
-msgstr "Más bevallások (például a 123-as, 190-es, 216-os és 296-os modelók) külön modulokban érhetők el. Telepítés után ugyanabban a menüben jelennek meg, és ugyanúgy működnek."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:46
-msgid "Users with the *Accountant* role (and advisers) can create and file the declarations."
-msgstr "A *Könyvelő* szerepkörrel rendelkező felhasználók (és a tanácsadók) hozhatják létre és nyújthatják be a bevallásokat."
-
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:54
 msgid "Default values of the declarations"
 msgstr "A bevallások alapértelmezett értékei"
 
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:56
-msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`, and scroll to the :guilabel:`AEAT Declarations` section. The values set here are proposed on every new declaration of the company:"
-msgstr "Lépjen a :menuselection:`Könyvelés --> Konfiguráció --> Beállítások` menüpontra, és görgessen az :guilabel:`AEAT-bevallások` szakaszhoz. Az itt megadott értékeket a rendszer a vállalat minden új bevallásán javasolja:"
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:60
-msgid ":guilabel:`Regularization entries`: the :guilabel:`AEAT Journal` in which the regularization entries are posted, the :guilabel:`VAT Counterpart Account` (by default 4750) for the VAT declarations whose counterpart is not computed by the declaration itself, such as the modelo 369, and the :guilabel:`Withholding Counterpart Account` (by default 4751) for the withholding declarations. The modelo 303 chooses 4750 or 4700 from its result by itself."
-msgstr ":guilabel:`Rendező tételek`: az :guilabel:`AEAT-napló`, amelyben a rendező tételek lekönyvelésre kerülnek, az :guilabel:`ÁFA-ellenszámla` (alapértelmezés szerint 4750) azokhoz az ÁFA-bevallásokhoz, amelyek ellenszámláját nem maga a bevallás számítja ki, például a 369-es modelóhoz, valamint a :guilabel:`Forrásadó-ellenszámla` (alapértelmezés szerint 4751) a forrásadó-bevallásokhoz. A 303-as modeló az eredménye alapján maga választja ki a 4750-es vagy a 4700-as számlát."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:65
-msgid ":guilabel:`Submitter and frequency`: the :guilabel:`AEAT Contact Name`, :guilabel:`AEAT Contact Phone` and :guilabel:`AEAT Contact Email` printed in the declarations (if empty, the data of the current user is used), and the :guilabel:`Filing Frequency` (:guilabel:`Quarterly` or :guilabel:`Monthly`). Monthly filing applies to large companies and to taxpayers registered in the REDEME or in the SII. A new declaration proposes the last closed period of this frequency; annual declarations propose the previous year."
-msgstr ":guilabel:`Benyújtó és gyakoriság`: a bevallásokon feltüntetett :guilabel:`AEAT kapcsolattartó neve`, :guilabel:`AEAT kapcsolattartó telefon` és :guilabel:`AEAT kapcsolattartó e-mail` (ha üres, az aktuális felhasználó adatai kerülnek felhasználásra), valamint a :guilabel:`Bevallási gyakoriság` (:guilabel:`Negyedéves` vagy :guilabel:`Havi`). A havi bevallás a nagyvállalatokra, valamint a REDEME-be vagy az SII-be bejegyzett adózókra vonatkozik. Az új bevallás ennek a gyakoriságnak az utolsó lezárt időszakát javasolja; az éves bevallások az előző évet javasolják."
-
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:83
 msgid "Tax map check"
 msgstr "Adótérkép ellenőrzése"
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:85
-msgid "Each declaration adds up the amounts of the taxes listed in its *tax map*: a tax that is in no map line of an installed declaration is silently left out of the declarations. The :guilabel:`Tax map check` setting shows how many taxes of the company are in this situation. Click the link to open the list of these taxes, or go to :menuselection:`Accounting --> Configuration --> AEAT --> Taxes missing from the AEAT declarations`. In the tax list, the :guilabel:`Missing from AEAT declarations` filter gives the same result."
-msgstr "Minden bevallás a *adótérképében* felsorolt adók összegeit adja össze: az az adó, amely egyetlen telepített bevallás egyik térképsorában sem szerepel, figyelmeztetés nélkül kimarad a bevallásokból. Az :guilabel:`Adótérkép-ellenőrzés` beállítás mutatja, hogy a vállalat hány adója van ebben a helyzetben. Kattintson a hivatkozásra ezen adók listájának megnyitásához, vagy lépjen a :menuselection:`Könyvelés --> Konfiguráció --> AEAT --> Az AEAT-bevallásokból hiányzó adók` menüpontra. Az adólistában a :guilabel:`Hiányzik az AEAT-bevallásokból` szűrő ugyanezt az eredményt adja."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:92
-msgid "Review the listed taxes: either the tax is not used, or it must be replaced by one of the default Spanish taxes. The withholding taxes of declarations that are not installed (123, 216, 296) also appear in the list."
-msgstr "Tekintse át a listázott adókat: vagy nem használt az adó, vagy le kell cserélni valamelyik alapértelmezett spanyol adóra. A nem telepített bevallások (123, 216, 296) forrásadói is megjelennek a listában."
 
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:97
 msgid "The tax maps themselves can be consulted under :menuselection:`Accounting --> Configuration --> AEAT --> Tax mapping`. Do not modify them unless your tax adviser asks for it."
@@ -22097,10 +21801,6 @@ msgstr "Bevallás benyújtása"
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:105
 msgid "The declarations are under :menuselection:`Accounting --> Reporting --> AEAT`, one menu per declaration, for example :menuselection:`Accounting --> Reporting --> AEAT --> AEAT 303 model`."
 msgstr "A bevallások a :menuselection:`Könyvelés --> Kimutatás --> AEAT` menüpont alatt találhatók, bevallásonként egy menüpontban, például :menuselection:`Könyvelés --> Kimutatás --> AEAT --> AEAT 303 modell`."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:108
-msgid "Click :guilabel:`New`. The :guilabel:`Year` and the :guilabel:`Period Type` of the last closed period, the journal, the counterpart account, and the contact data are proposed from the :ref:`settings <localizations/spain/aeat/configuration>`. Change them if needed."
-msgstr "Kattintson az :guilabel:`Új` gombra. Az utolsó lezárt időszak :guilabel:`Év` és :guilabel:`Időszak típusa` értékét, a naplót, az ellenszámlát és a kapcsolattartási adatokat a rendszer a :ref:`beállításokból <localizations/spain/aeat/configuration>` javasolja. Szükség esetén módosítsa őket."
 
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:111
 msgid "Select the :guilabel:`Statement Type`: :guilabel:`Normal`, or :guilabel:`Complementary` or :guilabel:`Substitutive` to correct a declaration already filed. For the last two, enter the :guilabel:`Previous declaration number`."
@@ -22118,22 +21818,6 @@ msgstr "Töltse ki az automatikusan nem számított mezőket, ha vannak ilyenek,
 msgid "Click :guilabel:`Confirm` when the amounts are correct."
 msgstr "Ha az összegek helyesek, kattintson a :guilabel:`Megerősítés` gombra."
 
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:120
-msgid "Click :guilabel:`Create move` to post the regularization entry, which moves the balances of the tax accounts to the counterpart account. Use :guilabel:`Show move` to open it."
-msgstr "Kattintson a :guilabel:`Könyvelési tétel létrehozása` gombra a rendező tétel lekönyveléséhez, amely az adószámlák egyenlegét az ellenszámlára vezeti át. A :guilabel:`Könyvelési tétel megjelenítése` gombbal nyithatja meg."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:122
-msgid "Click :guilabel:`Export to BOE` to download the file, and upload it in the AEAT electronic office."
-msgstr "Kattintson az :guilabel:`Exportálás BOE-ba` gombra a fájl letöltéséhez, majd töltse fel az AEAT elektronikus ügyfélkapujára."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:134
-msgid "The regularization entry is dated on the last day of the period. If this date is in a locked period, a warning banner is shown on the declaration as soon as it is opened, and the entry cannot be posted. Create the declaration entry before locking the period, or ask an adviser to move the lock date."
-msgstr "A rendező tétel dátuma az időszak utolsó napja. Ha ez a dátum zárolt időszakba esik, a bevallás megnyitásakor azonnal figyelmeztető sáv jelenik meg, és a tétel nem könyvelhető le. Hozza létre a bevallás tételét az időszak zárolása előtt, vagy kérje meg a tanácsadót a zárolási dátum módosítására."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:140
-msgid "A banner also warns when taxes used in the period are not in any AEAT tax map, as they are left out of the declaration. Click :guilabel:`Show taxes` to list them, and see :ref:`localizations/spain/aeat/tax-map`."
-msgstr "Figyelmeztető sáv jelzi azt is, ha az időszakban használt adók egyik AEAT-adótérképben sem szerepelnek, mivel ezek kimaradnak a bevallásból. Kattintson az :guilabel:`Adók megjelenítése` gombra a listázásukhoz, és lásd: :ref:`localizations/spain/aeat/tax-map`."
-
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:145
 msgid "Specific declarations"
 msgstr "Egyes bevallások sajátosságai"
@@ -22149,18 +21833,6 @@ msgstr "Az éves összesítőt a rendszer a teljes évre számítja ki. Megerős
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:159
 msgid "Modelos 111 and 115"
 msgstr "A 111-es és a 115-ös modeló"
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:158
-msgid "The withholdings are computed from the withholding taxes of the vendor bills. In the modelo 111, fill in the boxes that Odoo cannot compute, such as the work income paid outside Odoo."
-msgstr "A forrásadó-levonásokat a rendszer a szállítói számlák forrásadóiból számítja ki. A 111-es modelóban töltse ki azokat a mezőket, amelyeket az Odoo nem tud kiszámítani, például az Odoo-n kívül kifizetett munkajövedelmeket."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:162
-msgid "After :guilabel:`Calculate`, the :guilabel:`Partner records` tab lists the partners whose operations exceed the threshold; a record shown in red misses data needed for the declaration. Click :guilabel:`Send emails` to send each partner its record for verification, and use :guilabel:`Confirm as valid` when a partner agrees. Real estate rentals not declared in the modelo 115 can be added in the :guilabel:`Real estate records` tab. To exclude a contact from the declaration regardless of its amounts, tick :guilabel:`Not included in 347 report` on the contact form."
-msgstr "A :guilabel:`Számítás` után a :guilabel:`Partnerrekordok` lap felsorolja azokat a partnereket, akiknek az ügyletei meghaladják az értékhatárt; a pirossal megjelenített rekordból hiányoznak a bevalláshoz szükséges adatok. Kattintson az :guilabel:`E-mailek küldése` gombra, hogy minden partner megkapja a saját rekordját ellenőrzésre, és használja a :guilabel:`Jóváhagyás érvényesként` gombot, ha egy partner egyetért. A 115-ös modelóban be nem vallott ingatlanbérletek az :guilabel:`Ingatlanrekordok` lapon adhatók hozzá. Ha egy kapcsolatot az összegeitől függetlenül ki szeretne zárni a bevallásból, jelölje be a kapcsolat űrlapján a :guilabel:`Nem szerepel a 347-es jelentésben` opciót."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:171
-msgid "The :guilabel:`Partner records` and :guilabel:`Partners refunds` tabs list the intra-community operations of the period. Delete the operations that must not be declared from these tabs before confirming."
-msgstr "A :guilabel:`Partnerrekordok` és a :guilabel:`Partner jóváírások` lap az időszak Közösségen belüli ügyleteit sorolja fel. Megerősítés előtt törölje ezekről a lapokról azokat az ügyleteket, amelyeket nem kell bevallani."
 
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:176
 msgid "The OSS return is computed from the OSS taxes of the distance sales to consumers of other EU countries."
@@ -22185,10 +21857,6 @@ msgstr ":guilabel:`Mérleg (PGC)`;"
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:201
 msgid ":guilabel:`Profit and Loss (PGC)`."
 msgstr ":guilabel:`Eredménykimutatás (PGC)`."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:203
-msgid "The report opens directly with two columns, :guilabel:`Current year` and :guilabel:`Previous year`, based on the posted entries. The template (SMEs, complete, or non-profit entities) follows the chart of accounts of the company. Click an amount to see the journal items behind it, and use :guilabel:`Print` or :guilabel:`Export` to get a PDF or XLSX file."
-msgstr "A kimutatás közvetlenül két oszloppal nyílik meg, :guilabel:`Tárgyév` és :guilabel:`Előző év`, a lekönyvelt tételek alapján. A sablon (kkv, teljes vagy nonprofit szervezetek) a vállalat számlatükrét követi. Kattintson egy összegre a mögötte álló naplótételek megtekintéséhez, és a :guilabel:`Nyomtatás` vagy az :guilabel:`Exportálás` gombbal kérjen PDF- vagy XLSX-fájlt."
 
 #: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:209
 msgid "Only accounts numbered according to the PGC are included. An account with a custom code that is not a sub-account of a PGC account is not included in the report."
@@ -22217,10 +21885,6 @@ msgstr "a naptárhoz igazodó értékcsökkenési időszakok, az első időszak 
 #: ../../content/applications/finance/fiscal_localizations/spain/fixed_assets.rst:12
 msgid "the non-deductible VAT and the VAT prorata part of the vendor bill line included in the value of the assets created from vendor bills."
 msgstr "a szállítói számla sorának le nem vonható áfája és áfa-arányosítási része beszámít a szállítói számlákból létrehozott eszközök értékébe."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/fixed_assets.rst:16
-msgid "The module is part of the :ref:`supported combination of Spanish modules <localizations/spain/base-layer>`. The alternative community fixed asset modules cannot be installed together with the *Spain - Base Layer* module."
-msgstr "A modul a :ref:`támogatott spanyol modulkombináció <localizations/spain/base-layer>` része. Az alternatív közösségi tárgyieszköz-modulok nem telepíthetők együtt a *Spain - Base Layer* modullal."
 
 #: ../../content/applications/finance/fiscal_localizations/spain/fixed_assets.rst:19
 msgid "The Spanish rules only apply to assets. Deferred revenues keep the standard depreciation engine."
@@ -22293,14 +21957,6 @@ msgstr "Ha egy eszköz eszközkategóriával rendelkező szállítói számlasor
 #: ../../content/applications/finance/fiscal_localizations/spain/fixed_assets.rst:99
 msgid ":doc:`../../accounting/vendor_bills/assets`"
 msgstr ":doc:`../../accounting/vendor_bills/assets`"
-
-#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:5
-msgid "With the :ref:`Spain - Base Layer <localizations/spain/base-layer>`, the SII (*Llevanza de libros registro del IVA a través de la Sede electrónica de la AEAT*) is handled by the *Suministro Inmediato de Información en el IVA* module. It sends the VAT data of customer invoices and vendor bills to the web service of the AEAT, or of the regional tax agency of the company. The SII is mandatory for companies with a turnover above 6 M€, for the taxpayers registered in the REDEME, and optional for the others."
-msgstr "A :ref:`Spain - Base Layer <localizations/spain/base-layer>` modullal az SII-t (*Llevanza de libros registro del IVA a través de la Sede electrónica de la AEAT*) a *Suministro Inmediato de Información en el IVA* modul kezeli. Ez elküldi a vevői és szállítói számlák ÁFA-adatait az AEAT vagy a vállalat regionális adóhatóságának webszolgáltatására. Az SII kötelező a 6 M€ feletti árbevételű vállalatok és a REDEME-be bejegyzett adózók számára, a többiek számára választható."
-
-#: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:13
-msgid "The standard *Spain - SII EDI Suministro de Libros* module described in :ref:`the SII section of the Spain page <localizations/spain/sii>` cannot be installed together with the base layer."
-msgstr "A :ref:`Spanyolország oldal SII szakaszában <localizations/spain/sii>` leírt szabványos *Spain - SII EDI Suministro de Libros* modul nem telepíthető együtt az alapréteggel."
 
 #: ../../content/applications/finance/fiscal_localizations/spain/sii.rst:20
 msgid "Certificate"
@@ -26444,7 +26100,7 @@ msgstr "A pain.008.001.08 fájlokba írt postacím. Csak akkor jelenik meg, ha a
 
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:176
 msgid "The same fields are available on the payment method, under :menuselection:`Accounting --> Configuration --> Management --> Payment Methods` (:guilabel:`PAIN Version` and :guilabel:`Postal Address Mode`); the settings simply edit the standard SEPA payment methods."
-msgstr "Ugyanezek a mezők a fizetési módszeren is elérhetők, a :menuselection:`Könyvelés --> Konfiguráció --> Kezelés --> Fizetési módszerek` menüpont alatt (:guilabel:`PAIN verzió` és :guilabel:`Postacím módja`); a beállítások egyszerűen a szabványos SEPA fizetési módszereket szerkesztik."
+msgstr "Ugyanezek a mezők a fizetési módon is elérhetők, a :menuselection:`Könyvelés --> Konfiguráció --> Kezelés --> Fizetési módok` menüpont alatt (:guilabel:`PAIN verzió` és :guilabel:`Postacím módja`); a beállítások egyszerűen a szabványos SEPA fizetési módokat szerkesztik."
 
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:181
 msgid "Postal address mode"
@@ -26628,7 +26284,7 @@ msgstr "Visszaküldés kézi rögzítése"
 
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:375
 msgid "Select the :guilabel:`Bank journal` and the :guilabel:`Return date`."
-msgstr "Válassza ki a :guilabel:`Bank napló` és a :guilabel:`Visszaküldés dátuma` értékét."
+msgstr "Válassza ki a :guilabel:`Bank naplója` és a :guilabel:`Visszaküldés dátuma` értékét."
 
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:376
 msgid "In the :guilabel:`Lines` tab, add a line per returned payment: select the returned payment (:guilabel:`Payment Reference`, the journal item), the :guilabel:`Amount`, and the :guilabel:`Return reason`. Alternatively, enter the references and click :guilabel:`Match` to find the payments."

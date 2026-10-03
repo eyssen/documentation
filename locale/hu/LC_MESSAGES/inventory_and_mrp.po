@@ -11708,7 +11708,7 @@ msgstr "Szabályok alapján"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:134
 msgid "To calculate the price of shipping based on pricing rules, set the :guilabel:`Provider` field to the :guilabel:`Based on Rules` option. Optionally, adjust :guilabel:`Margin on Rate` and :guilabel:`Additional margin` to include additional shipping costs."
-msgstr "A szállítási ár árképzési szabályok alapján történő kiszámításához állítsa a :guilabel:`Szolgáltató` mezőt a :guilabel:`Szabályok alapján` opcióra. Opcionálisan módosíthatja a :guilabel:`Díj felára` és a :guilabel:`Kiegészítő felár` értékeket a további szállítási költségek beleszámításához."
+msgstr "A szállítási ár árképzési szabályok alapján történő kiszámításához állítsa a :guilabel:`Szolgáltató` mezőt a :guilabel:`Szabályok alapján` opcióra. Opcionálisan módosíthatja az :guilabel:`Árrés a költségen` és a :guilabel:`További árrés` értékeket a további szállítási költségek beleszámításához."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:139
 msgid "Create pricing rules"
@@ -11736,14 +11736,14 @@ msgstr "Szállítási költség kiszámítása"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:166
 msgid "Shipping cost is the :guilabel:`Delivery cost` specified in the rule that satisfies the :guilabel:`Condition`, plus any extra charges from the :guilabel:`Margin on rate` and :guilabel:`Additional margin`."
-msgstr "A szállítási költség a :guilabel:`Feltétel`t teljesítő szabályban meghatározott :guilabel:`Szállítási költség`, plusz a :guilabel:`Díj felára` és a :guilabel:`Kiegészítő felár` által felszámított további díjak."
+msgstr "A szállítási költség annak a szabálynak a :guilabel:`Szállítási költség` értéke, amelyre a :guilabel:`Feltétel` teljesül, plusz az :guilabel:`Árrés a költségen` és a :guilabel:`További árrés` által felszámított további díjak."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:170
 msgid ""
 "Total = Rule's~Delivery~Cost + (Margin~on~rate \\times Rule's~Delivery~Cost) + Additional~margin\n"
 "\n"
 msgstr ""
-"Összesen = Szabály~Szállítási~Költsége + (Díj~felára \\times Szabály~Szállítási~Költsége) + Kiegészítő~felár\n"
+"Összesen = Szabály~szállítási~költsége + (Árrés~a~költségen \\times Szabály~szállítási~költsége) + További~árrés\n"
 "\n"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:174
@@ -11760,7 +11760,7 @@ msgstr "Ha a rendelés több mint öt terméket tartalmaz, a szállítási költ
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:179
 msgid ":guilabel:`Margin on Rate` is `10%` and :guilabel:`Additional margin` is `$9.00`."
-msgstr ":guilabel:`Árrés az árfolyamon` `10%`, és :guilabel:`További árrés` `$9.00`."
+msgstr "Az :guilabel:`Árrés a költségen` értéke `10%`, a :guilabel:`További árrés` értéke `$9.00`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:188
 msgid "When the first rule is applied, the delivery cost is $31 (20 + (0.1 * 20) + 9). When the second rule is applied, the delivery cost is $64 (50 + (0.1 * 50) + 9)."
@@ -12088,7 +12088,7 @@ msgstr ":guilabel:`Számlázási politika`: válassza ki és számítsa ki a sz�
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:128
 msgid ":guilabel:`Margin on Rate`: specify an additional percentage amount added to the base shipping rate to cover extra costs, such as handling fees, packaging materials, exchange rates, etc."
-msgstr ":guilabel:`Árrés a díjon`: adjon meg egy további százalékos összeget, amelyet hozzáadnak az alap szállítási díjhoz a többletköltségek fedezésére, mint például kezelési díjak, csomagolóanyagok, árfolyamok stb."
+msgstr ":guilabel:`Árrés a költségen`: adjon meg egy további százalékos összeget, amelyet hozzáadnak az alap szállítási díjhoz a többletköltségek fedezésére, mint például kezelési díjak, csomagolóanyagok, árfolyamok stb."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:130
 msgid ":guilabel:`Free if order amount is above`: enables free shipping for orders surpassing a specified amount entered in the corresponding :guilabel:`Amount` field."
@@ -14220,11 +14220,11 @@ msgstr "Ha ma létrehozunk egy |RFQ|-t, a következő mezők jelennek meg:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:262
 msgid ":guilabel:`Order Deadline`: April 23 (:math:`\\text{Today} + 2`)"
-msgstr ":guilabel:`Rendelési határidő`: április 23 (:math:`\\\text{Ma} + 2`)"
+msgstr ":guilabel:`Rendelés határideje`: április 23. (:math:`\\text{Ma} + 2`)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:263
 msgid ":guilabel:`Expected Arrival`: April 24 (:math:`\\text{Order Deadline} + 1`)"
-msgstr ":guilabel:`Várható érkezés`: április 24 (:math:`\\\text{Rendelési határidő} + 1`)"
+msgstr ":guilabel:`Várható érkezés`: április 24. (:math:`\\text{Rendelés határideje} + 1`)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:277
 msgid "Vendor lead time"
@@ -18616,15 +18616,15 @@ msgstr "Határidő számítása"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:27
 msgid "The |MO| deadline depends on how the |MO| was created, and is calculated as follows:"
-msgstr "A |MO| határideje attól függ, hogyan lett a |MO| létrehozva, és az alábbiak szerint kerül kiszámításra:"
+msgstr "Az |MO| határideje attól függ, hogyan lett az |MO| létrehozva, és az alábbiak szerint kerül kiszámításra:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:29
 msgid "**Make To Order**: the |MO| deadline is the *Sales Order Delivery Date*."
-msgstr "**Rendelésre gyártás**: a |MO| határideje a *Megrendelés Szállítási Dátuma*."
+msgstr "**Rendelésre gyártás**: az |MO| határideje a *vevői rendelés teljesítési dátuma*."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:30
 msgid "**Replenishment**: the |MO| deadline is *today + Manufacturing Lead Time*."
-msgstr "**Utánpótlás**: a |MO| határideje *ma + Gyártási Átfutási Idő*."
+msgstr "**Utánpótlás**: az |MO| határideje *ma + Gyártási átfutási idő*."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:31
 msgid "**Manually created MO**: the deadline field remains empty."
@@ -18632,7 +18632,7 @@ msgstr "**Kézzel létrehozott MO**: a határidő mező üresen marad."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:34
 msgid "The |MO| *deadline* is not the same as the |MO| *end date*."
-msgstr "A |MO| *határideje* nem azonos a |MO| *befejezési dátumával*."
+msgstr "Az |MO| *határideje* nem azonos az |MO| *befejezési dátumával*."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:36
 msgid "The end date is computed as:"
@@ -18645,26 +18645,18 @@ msgid ""
 " +\\text{Total duration of all operations}\n"
 "\n"
 msgstr ""
-"\\\text{Befejezés dátuma} =\n"
-" \\\text{Ütemezett kezdési dátum}\n"
-" +\\\text{Az összes művelet teljes időtartama}\n"
-"\n"
-"\\\text{Befejezés dátuma} =\n"
-" \\\text{Ütemezett kezdési dátum}\n"
-" +\\\text{Az összes művelet teljes időtartama}\n"
-"\n"
-"\\\text{Befejezés dátuma} =\n"
-" \\\text{Ütemezett kezdési dátum}\n"
-" +\\\text{Az összes művelet teljes időtartama}\n"
+"\\text{Befejezési dátum} =\n"
+" \\text{Ütemezett kezdési dátum}\n"
+" +\\text{Az összes művelet teljes időtartama}\n"
 "\n"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:51
 msgid ":guilabel:`Late Availability`: one or more required components are not available before the deadline. For example, a confirmed purchase order or manufacturing order for components is scheduled to end *after* the |MO| deadline."
-msgstr ":guilabel:`Késői elérhetőség`: egy vagy több szükséges alkatrész nem áll rendelkezésre a határidő előtt. Például egy megerősített beszerzési rendelés vagy gyártási rendelés az alkatrészekre *a* |MO| határideje utánra van ütemezve."
+msgstr ":guilabel:`Késő elérhetőség`: egy vagy több szükséges komponens nem áll rendelkezésre a határidő előtt. Például egy megerősített, komponensekre szóló beszerzési vagy gyártási rendelés befejezése az |MO| határideje *utánra* van ütemezve."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:54
 msgid ":guilabel:`Components Available`: all components are available to begin production."
-msgstr ":guilabel:`Alkatrészek elérhetők`: minden alkatrész rendelkezésre áll a gyártás megkezdéséhez."
+msgstr ":guilabel:`Elérhető komponensek`: minden komponens rendelkezésre áll a gyártás megkezdéséhez."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:61
 msgid "Use case"
@@ -18676,15 +18668,15 @@ msgstr "Vegyünk egy |MO|-t, amelynek határideje **szeptember 17.**:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:65
 msgid "If production on the |MO| starts after September 17th, it appears in the :guilabel:`Delayed Productions` filter."
-msgstr "Ha a |MO| gyártása szeptember 17. után kezdődik, megjelenik a :guilabel:`Késleltetett gyártások` szűrőben."
+msgstr "Ha az |MO| gyártása szeptember 17. után kezdődik, megjelenik a :guilabel:`Késedelmes gyártások` szűrőben."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:67
 msgid "If required components are scheduled to arrive after September 17th, the |MO| appears in the :guilabel:`Late Availability` filter."
-msgstr "Ha a szükséges alkatrészek szeptember 17. utánra vannak ütemezve, hogy megérkezzenek, a |MO| megjelenik a :guilabel:`Késői elérhetőség` szűrőben."
+msgstr "Ha a szükséges komponensek beérkezése szeptember 17. utánra van ütemezve, az |MO| megjelenik a :guilabel:`Késő elérhetőség` szűrőben."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:81
 msgid "By combining these indicators, planners can quickly identify where production is at risk of missing delivery commitments."
-msgstr "Ezeknek a mutatóknak a kombinálásával a tervezők gyorsan azonosíthatják, hol van a termelés veszélyben a szállítási kötelezettségek elmulasztása miatt."
+msgstr "Ezeknek a mutatóknak a kombinálásával a tervezők gyorsan azonosíthatják, hol áll fenn annak a veszélye, hogy a gyártás nem teljesíti a szállítási vállalásokat."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:3
 msgid "Overall equipment effectiveness"
@@ -26256,7 +26248,7 @@ msgstr "A gyártási rendelések listáján a :guilabel:`Keresés...` sávban to
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:49
 msgid ":guilabel:`Delayed Productions`: the |MO| is either late (see below), or has one or more components with a delayed delivery."
-msgstr ":guilabel:`Késedelmes gyártások`: az |MO| vagy maga késik (lásd lent), vagy egy vagy több összetevőjének a szállítása késik."
+msgstr ":guilabel:`Késedelmes gyártások`: az |MO| vagy maga késik (lásd lent), vagy egy vagy több komponensének a szállítása késik."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:56
 msgid "An |MO| is considered *late* when it is confirmed or in progress, and its deadline has already passed, or its computed end date falls after the deadline. Late |MOs| are highlighted in red on list views."
@@ -29853,17 +29845,6 @@ msgstr "A *Process Number - Purchase* modul (`process_number_purchase`) telepít
 
 #~ msgid "Altogether, these default categories form an equation:"
 #~ msgstr "Ezek az alapértelmezett kategóriák összességében egy egyenletet alkotnak:"
-
-#~ msgid ""
-#~ "\\text{Forecasted Demand} + \\text{Suggested Replenishment} = \\text{Forecasted Stock}\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\\\text{Előrejelzett kereslet} + \\\text{Javasolt feltöltés} = \\\text{Előrejelzett készlet}\n"
-#~ "\n"
-#~ "\\\text{Előrejelzett kereslet} + \\\text{Javasolt feltöltés} = \\\text{Előrejelzett készlet}\n"
-#~ "\n"
-#~ "\\\text{Előrejelzett kereslet} + \\\text{Javasolt feltöltés} = \\\text{Előrejelzett készlet}\n"
-#~ "\n"
 
 #~ msgid "In the case of components, the :guilabel:`Indirect Demand Forecast` is taken into account as well."
 #~ msgstr "Az alkotóelemek esetében a :guilabel:`Közvetett kereslet előrejelzés` is figyelembe van véve."
@@ -35197,9 +35178,6 @@ msgstr "A *Process Number - Purchase* modul (`process_number_purchase`) telepít
 
 #~ msgid "*Horizon days* determine how many days ahead Odoo checks if the forecasted quantity will drop below reordering rule's minimum. The feature is meant to help users plan replenishment in advance, by increasing the :ref:`forecasted date <inventory/warehouses_storage/forecasted-date>`."
 #~ msgstr "*Horizont napok* határozzák meg, hogy hány nappal előre ellenőrzi az Odoo, hogy az előrejelzett mennyiség a rendelési szabály minimuma alá csökken-e. A funkció célja, hogy segítse a felhasználókat az utánpótlás előzetes tervezésében, azáltal, hogy növeli az :ref:`előrejelzett dátumot <inventory/warehouses_storage/forecasted-date>`."
-
-#~ msgid "\\text{Forecasted date} = \\text{Current date} + \\text{Vendor Lead Time} + \\text{Horizon Days}"
-#~ msgstr "\\\text{Előrejelzett dátum} = \\\text{Jelenlegi dátum} + \\\text{Szállítói átfutási idő} + \\\text{Horizont napok}"
 
 #~ msgid "Since horizon days are only meant to be used with manual reordering rules, find details about the feature in the :doc:`Replenishment report article <report>`."
 #~ msgstr "Mivel a horizont napok csak manuális rendelési szabályokkal használhatók, a funkció részleteit a :doc:`Utánpótlási jelentés cikkben <report>` találja."

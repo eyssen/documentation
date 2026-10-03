@@ -2100,7 +2100,7 @@ msgstr ":doc:`Gelato </applications/sales/sales/gelato>`"
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:38
 msgid "The field used to define additional fees **must** be filled **in your third-party delivery provider account**, even if you do not plan to charge customers any additional fee. If you do not want to apply a fee, enter `0`. If the field is left empty, the delivery price cannot be calculated, and an error message prompts the customer to select an alternative delivery method."
-msgstr "A mezőt, amelyet a további díjak meghatározására használnak, **ki kell tölteni **a harmadik fél szállítói fiókjában**, még akkor is, ha nem tervezi, hogy bármilyen további díjat számít fel az ügyfeleknek. Ha nem kíván díjat alkalmazni, írja be a `0` értéket. Ha a mező üresen marad, a szállítási ár nem számítható ki, és egy hibaüzenet arra kéri az ügyfelet, hogy válasszon alternatív szállítási módot."
+msgstr "A mezőt, amelyet a további díjak meghatározására használnak, **ki kell tölteni** **a harmadik fél szállítói fiókjában**, még akkor is, ha nem tervezi, hogy bármilyen további díjat számít fel az ügyfeleknek. Ha nem kíván díjat alkalmazni, írja be a `0` értéket. Ha a mező üresen marad, a szállítási ár nem számítható ki, és egy hibaüzenet arra kéri az ügyfelet, hogy válasszon alternatív szállítási módot."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:44
 msgid "Margin on delivery rate"
@@ -2112,7 +2112,7 @@ msgstr "Ha további díjat szeretne hozzáadni az alap szállítási díjhoz (pl
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:51
 msgid "Alternatively, enter `0` in your third-party shipping provider account, then set the fee in Odoo. To do so, access the desired :ref:`shipping method's form <inventory/shipping_receiving/configure-delivery-method>` and enter the fee in the :guilabel:`Margin on Rate` field to add a percentage to the shipping costs and/or the :guilabel:`Additional margin` field to add a fixed amount."
-msgstr "Alternatív megoldásként írja be a `0` értéket a harmadik fél szállítói fiókjába, majd állítsa be a díjat az Odoo-ban. Ehhez lépjen be a kívánt :ref:`szállítási mód űrlapjára <inventory/shipping_receiving/configure-delivery-method>`, és írja be a díjat a :guilabel:`Árrés a díjon` mezőbe, hogy százalékot adjon a szállítási költségekhez, és/vagy a :guilabel:`További árrés` mezőbe, hogy fix összeget adjon hozzá."
+msgstr "Alternatív megoldásként írja be a `0` értéket a harmadik fél szállítói fiókjába, majd állítsa be a díjat az Odoo-ban. Ehhez lépjen be a kívánt :ref:`szállítási mód űrlapjára <inventory/shipping_receiving/configure-delivery-method>`, és írja be a díjat az :guilabel:`Árrés a költségen` mezőbe, hogy százalékot adjon a szállítási költségekhez, és/vagy a :guilabel:`További árrés` mezőbe, hogy fix összeget adjon hozzá."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:58
 msgid "The field used to define additional fees cannot be left empty in your third-party shipping provider account."
@@ -4477,10 +4477,6 @@ msgstr "Az adatvédelmi törvények megkövetelik, hogy tájékoztassák a láto
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:15
 msgid "Cookies bars are required to obtain visitors' consent for optional cookies only. Consent is not required for essential cookies."
 msgstr "A sütik sávok csak az opcionális sütikhez szükségesek a látogatók beleegyezésének megszerzéséhez. Az alapvető sütikhez nem szükséges beleegyezés."
-
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:18
-msgid "Odoo is compliant with `Google consent mode v2 <https://support.google.com/tagmanager/answer/13695607>`_."
-msgstr "Az Odoo megfelel a `Google consent mode v2 <https://support.google.com/tagmanager/answer/13695607>`_ előírásainak."
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:23
 msgid "To add a cookies bar on your website, go to :menuselection:`Website --> Configuration --> Settings` and enable :guilabel:`Cookies Bar` in the :guilabel:`Privacy` section. This activates :guilabel:`Block tracking 3rd-party services` by default, including social media, video hosting platforms, and Google services. Click :guilabel:`Add domains to the block list` to include other external websites. These services remain blocked on your website until visitors accept optional cookies."

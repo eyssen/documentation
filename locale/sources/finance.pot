@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-03 21:16+0200\n"
+"POT-Creation-Date: 2026-10-04 12:28+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -939,39 +939,51 @@ msgid "Cash register"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register.rst:8
-msgid "The **Cash register** (*Házipénztár*) turns an Odoo cash journal into a Hungarian strict-accountability (*szigorú számadás*) cash book. It adds gap-free numbered cash-in and cash-out vouchers, serially numbered cash-book statements (*kivonat*), an amount spelled out in words on every voucher, and protection against back-dating."
+msgid "The **Cash register** (*Házipénztár*) turns an Odoo cash journal into a Hungarian strict-accountability (*szigorú számadás*) cash book. Every cash movement becomes a numbered cash voucher (*pénztárbizonylat*), the vouchers are collected on cash-book pages that are closed with a serial number and locked, and each page prints as a cash report (*pénztárjelentés*) together with the cash count of the drawer."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register.rst:13
-msgid "The module builds on standard Odoo :ref:`cash journals <accounting/journals/cash>` and the :guilabel:`Accounting Dashboard`; it does not replace them, it extends them with the controls a serially-numbered, audit-proof cash book requires."
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:14
+msgid "The module builds on standard Odoo :ref:`cash journals <accounting/journals/cash>`, the :guilabel:`Accounting Dashboard` and the reconciliation view of the statement lines; it does not replace them, it extends them with the controls a strict-accountability cash book requires."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register.rst:18
-msgid "Key features"
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:19
+msgid "How it works"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register.rst:20
-msgid "**Four no-gap numbering sequences per cash journal**: one for the journal entries, one for the cash-book statements (``STAT``), and one each for cash-in (``BEF``) and cash-out (``KIF``) vouchers."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/cash_register.rst:23
-msgid "**Numbered cash vouchers**: every posted cash-in or cash-out movement receives a continuous, per-year number and an amount written out in words (*betűs összeg*)."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/cash_register.rst:25
-msgid "**Cash-book statements**: a cash-book page can be opened and later confirmed (locked); the ``STAT`` number is assigned only on confirmation, so an open page never burns a number."
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:21
+msgid "In a cash journal, every cash movement is a statement line, and the journal entry of that line is the cash voucher: its number is the voucher number. A voucher can be recorded from three places (the cash journal card, the reconciliation view, or a payment), and in each case it is numbered, put on the open cash-book page and printed the same way."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register.rst:27
-msgid "**Back-dating protection**: a voucher cannot be dated earlier than the last already-numbered voucher, keeping the numbering and the dates monotonic."
+msgid "Key features"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register.rst:29
-msgid "**Cash count on closing**: the drawer can be counted by denomination and closed with an automatic discrepancy check."
+msgid "**Two numbering modes per cash journal**: one common series for receipts and disbursements, or two separate series (``BEF/`` for receipts, ``KIF/`` for disbursements). See :ref:`cash_register/numbering`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:32
+msgid "**Gap-free, audit-proof vouchers**: an issued voucher can never be deleted. A wrong voucher is voided; it keeps its number and appears as voided on the cash report."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:34
+msgid "**Recording from anywhere**: a cash receipt or payment can be recorded from the cash journal card, from the reconciliation view, or by paying an invoice or bill in cash. See :ref:`cash_register/record`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:37
+msgid "**Cash-book pages**: every cash voucher lands on the open page of its journal. Closing a page gives it a serial ``STAT`` number and locks it; only an accounting administrator can reopen it, and no voucher may be dated before a closed period."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:40
+msgid "**Cash report**: the printed page lists the opening balance, the vouchers with a running balance, daily totals, the voided vouchers, the closing balance, the last cash count and the signature lines."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register.rst:43
-msgid "The Cash register is an *eYssen* extension for Hungarian localization. Once the cash journals are configured, day-to-day operations (vouchers, statements, closing) are handled from the :guilabel:`Accounting Dashboard`."
+msgid "**Cash count with an optional controller**: the drawer is counted by denomination and compared with the book balance. A discrepancy needs a reason and the approval of an accounting administrator, and a cash journal can require a second user to check every count."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register.rst:58
+msgid "The Cash register is an *eYssen* extension for Hungarian localization. Once the cash journals are configured, day-to-day work (vouchers, pages, cash counts) is done from the :guilabel:`Accounting Dashboard`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:6
@@ -987,117 +999,186 @@ msgid "Navigate to :menuselection:`Apps`, search for **Cash Register**, and clic
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:13
-msgid "Configuring the numbering sequences is restricted to users in the :guilabel:`Billing Administrator` (*Főkönyvelő*) group. Cashiers do not need access to the configuration to record vouchers."
+msgid "The cash-book settings of a journal are visible to users with the :guilabel:`Administrator` access right of :guilabel:`Accounting`. Cashiers do not need this right to record vouchers."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:18
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:17
 msgid "Set up a cash journal"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:20
-msgid "Each physical cash desk is a separate cash journal, one per currency (for example *Cash HUF*, *Cash EUR*). To create one, go to :menuselection:`Accounting --> Configuration --> Journals`, click :guilabel:`New`, and set the :guilabel:`Type` to :guilabel:`Cash`."
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:19
+msgid "Each physical cash desk is a separate cash journal, one per currency (for example *Cash HUF*, *Cash EUR*). To create one, go to :menuselection:`Accounting --> Configuration --> Journals`, click :guilabel:`New`, set the :guilabel:`Type` to :guilabel:`Cash` and select the :guilabel:`Currency`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:24
-msgid "On a cash journal, the :guilabel:`Journal Entries` tab shows an extra **Cash Book Sequences** group where the four numbering sequences and the auto-statement option are assigned."
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:23
+msgid "On a cash journal, the :guilabel:`Journal Entries` tab shows three cash-book settings:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:38
-msgid "Numbering sequences"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:40
-msgid "The module ships four ready-made :guilabel:`No gap` sequences that you assign on each cash journal. A *no-gap* sequence guarantees a continuous, audit-proof numbering as required by Hungarian strict accountability, and each sequence restarts every year."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:48
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:29
 #: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:49
 msgid "Field"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:49
-msgid "Prefix"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:50
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:30
 #: ../../content/applications/finance/fiscal_localizations/hungary/nav_online_invoice.rst:133
 msgid "Purpose"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:51
-msgid ":guilabel:`Journal Sequence`"
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:31
+msgid ":guilabel:`Separate Receipt/Disbursement Numbering`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:52
-msgid "``NAPLO/``"
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:32
+msgid "Chooses the numbering mode of the cash vouchers (see :ref:`cash_register/numbering`)."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:53
-msgid "Numbers the journal entries of this cash journal."
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:33
+msgid ":guilabel:`Controller Required for Cash Count`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:54
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:34
+msgid "Requires a second user to check every cash count of the journal (see :ref:`cash_register/controller`)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:36
 msgid ":guilabel:`Statement Sequence`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:55
-msgid "``STAT/``"
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:37
+msgid "The numbering of the closed cash-book pages (see :ref:`cash_register/stat`)."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:56
-msgid "Assigned to each cash-book statement when it is confirmed (*kivonat sorszám*)."
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:51
+msgid "Voucher numbering modes"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:57
-msgid ":guilabel:`Cash-in Sequence`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:58
-msgid "``BEF/``"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:59
-msgid "Numbers inbound cash vouchers (*befizetés sorszám*)."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:60
-msgid ":guilabel:`Cash-out Sequence`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:61
-msgid "``KIF/``"
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:53
+msgid "The number of a cash voucher is the number of its journal entry. It is assigned when the voucher is recorded, continues without gaps, and restarts every fiscal year. Each cash journal uses one of two numbering modes:"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:62
-msgid "Numbers outbound cash vouchers (*kifizetés sorszám*)."
+msgid "Common numbering (default)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:63
+msgid "Separate numbering"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:64
+#: ../../content/applications/finance/accounting/payments/payment_orders.rst:151
+msgid "Setting"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:65
-msgid "You can assign the **same** sequence to :guilabel:`Cash-in Sequence` and :guilabel:`Cash-out Sequence` to keep a single running number across both directions, or assign **two different** sequences to number each direction separately. This choice also widens or narrows the scope of the back-dating check (see :ref:`cash_register/back-dating`)."
+msgid ":guilabel:`Separate Receipt/Disbursement Numbering` cleared"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:66
+msgid ":guilabel:`Separate Receipt/Disbursement Numbering` ticked"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:67
+msgid "Receipts"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:68
+msgid "``PENZ/2026/00001``, ``PENZ/2026/00003``, …"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:69
+msgid "``BEF/PENZ/2026/00001``, ``BEF/PENZ/2026/00002``, …"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:70
-msgid "To create your own sequences, duplicate the supplied templates in :menuselection:`Settings --> Technical --> Sequences & Identifiers --> Sequences`, keep the :guilabel:`Implementation` set to :guilabel:`No gap`, and select them on the journal. The running number is never reset by a module upgrade."
+msgid "Disbursements"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:76
-msgid "Auto statement"
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:71
+msgid "``PENZ/2026/00002``, ``PENZ/2026/00004``, …"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:72
+msgid "``KIF/PENZ/2026/00001``, ``KIF/PENZ/2026/00002``, …"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:73
+msgid "Result"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:74
+msgid "One running number for all vouchers of the cash desk, in the order they are recorded."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:75
+msgid "Two independent running numbers, one for receipts (*bevételi bizonylat*) and one for disbursements (*kiadási bizonylat*)."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:78
-msgid "Enable :guilabel:`Auto Statement` on the journal so that posting a cash voucher automatically opens or attaches a cash-book statement when none is open. Leave it disabled to open the cash-book pages manually."
+msgid "In the examples, ``PENZ`` is the short code of the cash journal and ``2026`` is the fiscal year."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:80
+msgid "Hungarian law does not prescribe either mode: the cash-handling policy (*pénzkezelési szabályzat*) of the company decides. Separate numbering follows the traditional pre-printed receipt and disbursement voucher pads; common numbering gives a single sequence that is easy to check for gaps."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:85
-msgid "Back-dating protection"
+msgid "The numbering mode can only be changed at the start of a fiscal year. Once a voucher has been numbered in the current fiscal year, the setting can no longer be changed for that year."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:87
-msgid "By default the cash book is protected against back-dating: a voucher cannot be posted with a date earlier than the last already-numbered voucher in its numbering scope. This keeps the numbering and the dates monotonic, as required for a strict-accountability cash book."
+msgid "With separate numbering, a voucher keeps its direction: an issued receipt cannot be turned into a disbursement (or the other way round) by changing its amount. Void it and record a new one instead."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:90
+msgid "A line with a zero amount moves no cash and gets no ``BEF/`` or ``KIF/`` number."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:91
-msgid "An administrator can lift this restriction by setting the system parameter ``eyssen_cashregister.override_sequence_date_constraint`` to ``1`` in :menuselection:`Settings --> Technical --> System Parameters`. The default value ``0`` keeps the protection active."
+msgid "Other entries of the cash journal that are not vouchers (for example a manual journal entry) keep the plain ``PENZ/`` numbering in both modes."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:95
+msgid "When a cash voucher is issued for a payment (see :ref:`cash_register/record`), the payment keeps its own journal entry with a separate number (for example ``PPENZ/2026/00001``). The voucher number shown on the printed voucher and on the cash report is always the number of the cash voucher, not that of the payment."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:103
+msgid "Cash-book page numbering"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:105
+msgid "A closed cash-book page receives a gap-free ``STAT`` number. The module ships the :guilabel:`Cash Book - Statement` sequence (prefix ``STAT/``, restarting every year); select it, or your own copy of it, in the :guilabel:`Statement Sequence` field of each cash journal. A page cannot be closed until the journal has a :guilabel:`Statement Sequence`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:110
+msgid "To create your own sequence, duplicate the supplied one in :menuselection:`Settings --> Technical --> Sequences & Identifiers --> Sequences` and keep its :guilabel:`Implementation` set to :guilabel:`No gap`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:115
+#: ../../content/applications/finance/accounting/payments.rst:24
+#: ../../content/applications/finance/payment_providers.rst:239
+#: ../../content/applications/finance/payment_providers/nuvei.rst:51
+#: ../../content/applications/finance/payment_providers/redsys.rst:85
+msgid "Payment methods"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:117
+msgid "When an invoice or a bill is paid with a cash journal, the payment is first booked against an outstanding account, and its cash voucher books the cash. On the :guilabel:`Incoming Payments` and :guilabel:`Outgoing Payments` tabs of the cash journal, the payment methods may therefore not use the cash account itself in the :guilabel:`Outstanding Receipts accounts` and :guilabel:`Outstanding Payments accounts` columns. Leave these columns empty to use the default outstanding accounts of the company."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:124
+msgid "A cash payment must also be in the currency of its cash journal."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:129
+msgid "Controller for the cash count"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:131
+msgid "By default, the user who counts the drawer also closes the count. Tick :guilabel:`Controller Required for Cash Count` on a cash journal to apply the four-eyes principle: every count of that journal must then be checked and approved by a second user, the controller, before it closes. See :ref:`cash_register/cash-count` for the procedure."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/configuration.rst:136
+msgid "The controller must be an active internal user of the company with accounting rights, and cannot be the user who counts the cash. Leave the option cleared on databases where only one user handles the cash."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:3
@@ -1105,95 +1186,279 @@ msgid "Operations"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:5
-msgid "Day-to-day cash handling is done from the :guilabel:`Accounting Dashboard`. On a cash journal card, the cash-register actions are available next to the standard buttons."
+msgid "Day-to-day cash handling starts from the cash journal card of the :guilabel:`Accounting Dashboard`. Its main button and its name open the reconciliation view of the cash journal, and the cash-register buttons sit next to the standard ones."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:18
-msgid "Record a cash-in or cash-out voucher"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:20
-msgid "On the cash journal card, click :guilabel:`New Cash-in` for money received, or :guilabel:`New Cash-out` for money paid out. A cash voucher form opens with the journal and the direction already filled in."
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:21
+msgid "Record a cash receipt or payment"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:23
-msgid "Select the :guilabel:`Customer` or :guilabel:`Vendor` and enter the :guilabel:`Amount`."
+msgid "A cash voucher can be recorded from three places. Wherever it starts, the voucher is numbered, placed on the open cash-book page and printed the same way."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:24
-msgid "Fill in the cash-specific fields:"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:26
-msgid ":guilabel:`Pretense` (*Jogcím*): the reason for the cash movement. It is editable only while the voucher is a draft."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:28
-msgid ":guilabel:`Date`: the voucher date. It may not be earlier than the last numbered voucher (see :ref:`cash_register/back-dating`)."
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:30
+msgid "Where"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:31
-msgid "Confirm the voucher. On posting:"
+msgid "Use it for"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:32
+msgid "What happens"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:33
-msgid "It receives the next gap-free number from the journal's :guilabel:`Cash-in Sequence` or :guilabel:`Cash-out Sequence` (for example ``BEF/2026/00012`` or ``KIF/2026/00007``), shown in :guilabel:`Voucher Number`."
+msgid "Cash journal card: :guilabel:`New Cash-in` or :guilabel:`New Cash-out`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:36
-msgid "The :guilabel:`Amount in Words` (*betűs összeg*) is filled in automatically for the printed voucher."
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:34
+msgid "Everyday cash movements, whether or not an invoice belongs to them."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:49
-msgid "A draft voucher that is cancelled never consumes a number, so the numbering stays gap-free. Once a voucher carries a number it can no longer be deleted, which preserves the audit trail."
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:35
+msgid "The voucher is recorded; you then match it with an invoice or book it to an account in the reconciliation view, where it opens."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:53
-msgid "Cash-book statements"
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:37
+msgid "Reconciliation view: :guilabel:`New`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:55
-msgid "A cash-book statement (*pénztárkönyv / kivonat*) is a numbered page that groups a period's cash movements. A statement is **Open** while it accepts entries and **Confirmed** once it is closed and locked."
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:38
+msgid "The same, when you are already working in the reconciliation view."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:70
-msgid "Confirm a cash book"
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:39
+msgid "The voucher is recorded and appears in the list, ready to be matched or booked."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:72
-msgid "When a cash-book page is complete, select it in the statement list and choose :menuselection:`Action --> Confirm cash-book`. On confirmation:"
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:40
+msgid "Paying an invoice or a bill: :guilabel:`Pay` with the cash journal"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:75
-msgid "The statement receives the next gap-free :guilabel:`STAT Number` from the journal's :guilabel:`Statement Sequence` (for example ``STAT/2026/00013``). Because the number is assigned only on confirmation, an open page never burns a ``STAT`` number."
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:41
+msgid "Settling a known invoice or bill in cash."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:42
+msgid "A payment is created, and its voucher is issued and matched automatically. Nothing else is needed."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:45
+msgid "A payment created by hand in :menuselection:`Accounting --> Customers --> Payments` or :menuselection:`Accounting --> Vendors --> Payments` with the cash journal works like the third case."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:50
+msgid "From the cash journal card"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:52
+msgid "On the cash journal card, click :guilabel:`New Cash-in` for money received, or :guilabel:`New Cash-out` for money paid out."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:54
+msgid "Enter the :guilabel:`Date`, the :guilabel:`Label` (the title of the cash movement, *jogcím*), the :guilabel:`Partner` and the :guilabel:`Amount`. Enter the amount without a sign: the button gives the direction."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:57
+msgid "Click :guilabel:`Save`. The voucher receives its number, lands on the open cash-book page, and the reconciliation view of the cash journal opens with the new voucher selected."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:59
+msgid "Match the voucher with an open invoice or bill on the :guilabel:`Reconcile` tab, or book it to an account on the :guilabel:`Manual operation` tab, then click :guilabel:`Validate`. The voucher stays in the list after it is matched."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:62
+msgid "Click :guilabel:`Print Cash Voucher` to print the voucher. It can be printed as soon as it is recorded, before or after matching."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:76
+msgid "From the reconciliation view"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:78
-msgid "The :guilabel:`Cash-book State` changes to :guilabel:`Confirmed`, and the page and its number can no longer be altered."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:82
-msgid "Reopen a cash book"
+msgid "Open the reconciliation view with the main button of the cash journal card, then click :guilabel:`New`. The form is the same as above, but here the sign of the :guilabel:`Amount` gives the direction: a positive amount is a receipt, a negative amount a disbursement. After saving, select the new voucher in the list to match, book and print it."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:84
-msgid "A confirmed cash book can be reopened with :menuselection:`Action --> Reopen cash-book`. This action is restricted to the :guilabel:`Billing Administrator` (*Főkönyvelő*) group. Reopening keeps the existing ``STAT`` number — a cash book is never re-numbered — and is recorded in the chatter."
+msgid "By paying an invoice or a bill"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:89
-msgid "Close and count the cash drawer"
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:86
+msgid "On a posted invoice or bill, click :guilabel:`Pay`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:91
-msgid "To reconcile the physical cash on hand, click :guilabel:`Close Cash Register` on the cash journal card. Count the drawer by denomination; the system compares the counted amount with the journal balance and reports any discrepancy. A controller can review and approve a discrepancy before the count is closed."
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:87
+msgid "Select the cash journal as :guilabel:`Journal`, check the amount and the date, and click :guilabel:`Create Payment`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:106
-msgid "Fill in the number of coins and bills per :guilabel:`Denomination`; the :guilabel:`Counted Balance` and the :guilabel:`Discrepancy` against the :guilabel:`Cash Balance in Journal` are computed as you type. If there is no difference, click :guilabel:`Close`. If there is one, enter the :guilabel:`Reason for Discrepancy`, appoint a :guilabel:`Controller` (it cannot be yourself) and click :guilabel:`Close with Discrepancy`; the closure then waits for that controller's approval. :guilabel:`Print` produces the cash count sheet."
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:90
+msgid "The payment is booked against an outstanding account, its cash voucher is issued in the cash journal and the two are matched at once, so the invoice is paid. The voucher can be printed from the reconciliation view of the cash journal with :guilabel:`Print Cash Voucher`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:95
+msgid "While its cash voucher stands, the payment cannot be reset to draft, cancelled or deleted. To correct it, void the voucher first (see below), then change the payment; posting the payment again issues a new voucher."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:100
+msgid "Void a cash voucher"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:102
+msgid "An issued voucher can never be deleted, because its number must stay accountable. To void a wrong voucher (*rontás*), open its journal entry with :guilabel:`View move` in the reconciliation view and click :guilabel:`Cancel Entry`. The voucher keeps its number, no longer counts in the cash balance, and appears as **VOIDED** on the cash report. Record the correct movement as a new voucher."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:107
+msgid "A voucher on a closed cash-book page cannot be voided: reopen the page first, or record a correcting voucher dated today."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:113
-msgid "Past closures are listed under :menuselection:`Accounting --> Reporting --> Cash Register Closures`, where they can be filtered by state (:guilabel:`Draft`, :guilabel:`Waiting for Approval`, :guilabel:`Closed`) and grouped by cash register, user or controller."
+msgid "Cash-book pages"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:115
+msgid "A cash-book page (*pénztárjelentés-lap*) collects the vouchers of a period. Every new voucher lands automatically on the open page of its cash journal; when the journal has no open page, the first voucher opens a new one. A page is either :guilabel:`Open` or :guilabel:`Confirmed` (closed)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:119
+msgid "The pages of a cash journal are listed with :menuselection:`(cash journal card) ⋮ --> Cash Registers`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:133
+msgid "Close a cash-book page"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:135
+msgid "Close the page at the end of the period set in the cash-handling policy (for example every day or every month): select it in the list and choose :menuselection:`Action --> Confirm cash-book`. On closing:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:139
+msgid "The page receives the next gap-free :guilabel:`STAT Number` (for example ``STAT/2026/00013``). An open page never uses up a number."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:141
+msgid "The page is locked. No voucher can be added to it, its vouchers can no longer be changed (amount, date, partner, label, order) or voided, and its balances are fixed."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:143
+msgid "The next voucher opens a new page, whose opening balance is the closing balance of this one."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:144
+msgid "No new voucher may be dated before the last day of the closed pages. A voucher dated on that same day is allowed, so a page closed at midday can be followed by vouchers of the afternoon."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:147
+msgid "The bookkeeping of a voucher on a closed page can still be completed: for example, a voucher booked to a suspense or outstanding account can be matched with an invoice later. This does not change the cash report."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:152
+msgid "Reopen a cash-book page"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:154
+msgid "A closed page can be reopened with :menuselection:`Action --> Reopen cash-book`. Only users with the :guilabel:`Administrator` access right of :guilabel:`Accounting` can reopen a page. Reopening keeps the existing ``STAT`` number — a page is never renumbered — and is recorded in the chatter."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:159
+msgid "Print the cash report"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:161
+msgid "Open a cash-book page and choose :menuselection:`Print --> Cash Report`. The cash report (*pénztárjelentés*) shows:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:164
+msgid "the company, the cash desk and its currency, the ``STAT`` number and the period of the page;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:165
+msgid "the opening balance;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:166
+msgid "every voucher in order, with its date, number, title, partner, receipt or disbursement and the running balance, and the voided vouchers marked **VOIDED** without an amount;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:168
+msgid "the daily totals and the closing balance;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:169
+msgid "the last approved cash count of the page with its denominations, or a note that no cash count was taken;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:171
+msgid "signature lines for the cashier and the checker."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:173
+msgid "An open page can be printed too, for information: the report is then marked **NOT CLOSED - FOR INFORMATION ONLY** and has no ``STAT`` number."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:179
+msgid "Count the cash drawer"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:181
+msgid "To compare the physical cash with the books, click :guilabel:`Close Cash Register` on the cash journal card. Enter the number of coins and bills per denomination; the :guilabel:`Counted Balance` and the :guilabel:`Discrepancy` against the :guilabel:`Cash Balance in Journal` are computed as you type. The book balance is computed again from the journal at the moment the count is closed."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:196
+msgid "The next steps depend on the :guilabel:`Controller Required for Cash Count` setting of the cash journal (see :ref:`cash_register/controller`)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:200
+msgid "Without a controller (default)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:202
+msgid "**No discrepancy**: click :guilabel:`Close`. The count is closed."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:203
+msgid "**Discrepancy**: enter the :guilabel:`Reason for Discrepancy` and click :guilabel:`Forward to the Manager`. The count waits for approval (:guilabel:`Waiting for Approval`) until an accounting administrator clicks :guilabel:`Close with Discrepancy`. When only one user handles the cash, that user may approve the own count, provided they have the :guilabel:`Administrator` access right."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:209
+msgid "With a controller"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:211
+msgid "Select the :guilabel:`Controller`: an active internal user of the company with accounting rights, other than yourself. If there is a discrepancy, enter the :guilabel:`Reason for Discrepancy` too."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:213
+msgid "Click :guilabel:`Send for Check`. The count is fixed as counted and waits for the controller (:guilabel:`Waiting for Check`)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:215
+msgid "The controller opens the count and clicks :guilabel:`Approve Count`. Only the selected controller can do this. Without a discrepancy the count is closed."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:217
+msgid "If there is a discrepancy, the count then waits for approval (:guilabel:`Waiting for Approval`), and an accounting administrator clicks :guilabel:`Close with Discrepancy`. The approver cannot be the user who counted the cash; the controller may be the same administrator, so two people are enough."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:223
+msgid "After the count"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:225
+msgid "The count belongs to the open cash-book page of the journal (to the last page, if the page was already closed), and the cash report of that page prints it once it is closed."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:227
+msgid "Once sent or closed, a count can no longer be changed; only a draft count can be deleted."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:228
+msgid ":guilabel:`Print` produces the cash count sheet."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/cash_register/operations.rst:230
+msgid "Past counts are listed under :menuselection:`Accounting --> Reporting --> Cash Register Closures`, where they can be filtered by state (:guilabel:`Draft`, :guilabel:`Waiting for Check`, :guilabel:`Waiting for Approval`, :guilabel:`Closed`) and grouped by cash register, user or controller."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/enable_banking.rst:3
@@ -8055,13 +8320,6 @@ msgstr ""
 msgid ":doc:`Internal transfers <bank/internal_transfers>`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:24
-#: ../../content/applications/finance/payment_providers.rst:239
-#: ../../content/applications/finance/payment_providers/nuvei.rst:51
-#: ../../content/applications/finance/payment_providers/redsys.rst:85
-msgid "Payment methods"
-msgstr ""
-
 #: ../../content/applications/finance/accounting/payments.rst:26
 msgid "Several payment methods are available in Odoo to allow different configurations for different types of payments. Examples of payment methods include manual payments (such as cash), :doc:`checks <payments/pay_checks>`, and :doc:`online payment providers <payments/online>`. Payment methods can be configured in the :guilabel:`Incoming Payments` and :guilabel:`Outgoing Payments` tabs of a bank or cash journal."
 msgstr ""
@@ -9399,10 +9657,6 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:143
 msgid "Go to :menuselection:`Accounting --> Configuration --> Settings` and scroll to the :guilabel:`SEPA/PAIN` section. Below the identifiers, you find, depending on the installed SEPA modules:"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/payment_orders.rst:151
-msgid "Setting"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/payment_orders.rst:153

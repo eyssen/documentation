@@ -21355,6 +21355,10 @@ msgstr "Una vez confirmada una :doc:`factura <../../finance/accounting/customer_
 msgid "Click :guilabel:`Send` to generate a JSON file containing the invoice details. This file is stored as a Veri*Factu document. In the :guilabel:`Veri*Factu` tab, all corresponding documents are listed by their creation date and current status."
 msgstr "Haga clic en :guilabel:`Enviar` para generar un archivo JSON con los detalles de la factura. Este archivo se almacena como un documento de Veri*Factu. En la pestaña :guilabel:`Veri*Factu`, todos los documentos correspondientes aparecen ordenados por su fecha de creación y estado actual."
 
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:660
+msgid "The tab shows two statuses, :guilabel:`Test registry` and :guilabel:`Production registry`. Each document is marked :guilabel:`Test` or :guilabel:`Production`. A record accepted in the test registry is not registered in the production registry. After you disable :guilabel:`Test Environment`, send the same posted invoice again: the new record goes to the production registry and the test record stays. If the registry currently selected on the company has already accepted the invoice, :guilabel:`Send` skips it and does not create a second record."
+msgstr "La pestaña muestra dos estados, :guilabel:`Registro de pruebas` y :guilabel:`Registro de producción`. Cada documento está marcado como :guilabel:`Pruebas` o :guilabel:`Producción`. Un registro aceptado en el registro de pruebas no está registrado en el registro de producción. Después de desactivar :guilabel:`Entorno de pruebas`, envíe de nuevo la misma factura contabilizada: el nuevo registro va al registro de producción y el registro de pruebas se conserva. Si el registro seleccionado ahora en la compañía ya ha aceptado la factura, :guilabel:`Enviar` la omite y no crea un segundo registro."
+
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:660 ../../content/applications/finance/fiscal_localizations/spain.rst:685
 msgid "To download a JSON file, click on its document in the :guilabel:`Veri*Factu` tab. Then, in the :guilabel:`Open: Veri*Factu Documents` window, click the link in the :guilabel:`JSON` field."
 msgstr "Para descargar un archivo JSON, haga clic en su documento en la pestaña :guilabel:`Veri*Factu`. A continuación, en la ventana :guilabel:`Abrir: Documentos de Veri*Factu`, haga clic en el enlace del campo :guilabel:`JSON`."
@@ -21364,8 +21368,20 @@ msgid "The document should be sent to the :abbr:`AEAT (Agencia Estatal de Admini
 msgstr "El documento debe enviarse de inmediato a la :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`. Sin embargo, puede retrasarse debido a los periodos de espera obligatorios entre envíos que exige la :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`. En estos casos, el documento se envía automáticamente la próxima vez que se ejecute una acción programada."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:668
-msgid "A Veri\\*Factu **QR code** appears on the invoice PDF. Scan this code to verify that the invoice has been received and recognized by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`."
-msgstr "En el PDF de la factura aparece un **código QR** de Veri\\*Factu. Escanee este código para verificar que la factura ha sido recibida y reconocida por la :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`."
+msgid "A Veri\\*Factu **QR code** appears on the invoice PDF. It points to the verification page of the registry selected on the company. Scan this code to verify that the invoice has been received and recognized by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`."
+msgstr "En el PDF de la factura aparece un **código QR** de Veri\\*Factu. Apunta a la página de verificación del registro seleccionado en la compañía. Escanee este código para verificar que la factura ha sido recibida y reconocida por la :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:682
+msgid "Cancellation"
+msgstr "Cancelación"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:685
+msgid "The cancellation button is on the :guilabel:`Veri*Factu` tab of the invoice, not in the form header. It is :guilabel:`Request Veri*Factu Cancellation`. A warning is shown above the button, and a confirmation question is asked before the record is sent."
+msgstr "El botón de cancelación está en la pestaña :guilabel:`Veri*Factu` de la factura, no en la cabecera del formulario. Se llama :guilabel:`Solicitar cancelación de Veri*Factu`. Encima del botón aparece una advertencia y, antes de enviar el registro, se pide confirmación."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:689
+msgid "The cancellation is sent to the AEAT registry currently selected on the company. If the AEAT accepts it, the invoice is cancelled in Odoo as well, and the same invoice number cannot be submitted again."
+msgstr "La anulación se envía al registro de la AEAT seleccionado ahora en la compañía. Si la AEAT la acepta, la factura también se anula en Odoo y el mismo número de factura no se puede volver a enviar."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:675
 msgid "Point of sale orders"
@@ -26990,8 +27006,8 @@ msgid ":menuselection:`Accounting --> Configuration --> Veri*Factu (Spain) --> R
 msgstr ":menuselection:`Contabilidad --> Configuración --> Veri*Factu (España) --> Declaración responsable`."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:740
-msgid "The declaration opens as a PDF (:file:`Declaracion_responsable_VeriFactu`), always in Spanish. It is generated from the declaration file that ships with each release (:file:`declarations/<version>.json` in the Veri*Factu module), which lists the producer, the system, the place and date, and the Veri*Factu modules and their versions. Releases have an identifier such as *18.0.es.2026.10.0*."
-msgstr "La declaración se abre como PDF (:file:`Declaracion_responsable_VeriFactu`), siempre en español. Se genera a partir del archivo de declaración que se entrega con cada versión (:file:`declarations/<version>.json` en el módulo Veri*Factu), que enumera el productor, el sistema, el lugar y la fecha, y los módulos Veri*Factu y sus versiones. Las versiones tienen un identificador como *18.0.es.2026.10.0*."
+msgid "The declaration opens as a PDF (:file:`Declaracion_responsable_VeriFactu`), always in Spanish. It is generated from the declaration file that ships with each release (:file:`declarations/<version>.json` in the Veri*Factu module), which lists the producer, the system, the place and date, and the Veri*Factu modules and their versions. Releases have an identifier such as *18.0.es.4*."
+msgstr "La declaración se abre como PDF (:file:`Declaracion_responsable_VeriFactu`), siempre en español. Se genera a partir del archivo de declaración que se entrega con cada versión (:file:`declarations/<version>.json` en el módulo Veri*Factu), que enumera el productor, el sistema, el lugar y la fecha, y los módulos Veri*Factu y sus versiones. Las versiones tienen un identificador como *18.0.es.4*."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:747
 msgid "If there is no published declaration for the version that is running, for example on a development version, the PDF is a **draft marked \"BORRADOR – SIN VALIDEZ\"** (draft, without validity) that lists the problems found. Do not give such a draft to customers or to the tax agency."
@@ -27006,8 +27022,8 @@ msgid "the producer data is complete;"
 msgstr "los datos del productor están completos;"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:762
-msgid "the running code is an ES release (identifier :samp:`18.0.es.{YYYY}.{MM}.{N}`), not a development version;"
-msgstr "el código en ejecución es una versión ES (identificador :samp:`18.0.es.{YYYY}.{MM}.{N}`), no una versión de desarrollo;"
+msgid "the running code is an ES release (identifier :samp:`18.0.es.{N}`), not a development version;"
+msgstr "el código en ejecución es una versión ES (identificador :samp:`18.0.es.{N}`), no una versión de desarrollo;"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:764
 msgid "the responsible declaration of the running version exists and matches the data that is sent to the AEAT."
@@ -28678,8 +28694,8 @@ msgid "**A qualified certificate is always needed**, also to test the system. It
 msgstr "**Siempre se necesita un certificado cualificado**, también para probar el sistema. Puede ser el certificado del obligado tributario, o el de un representante, apoderado o colaborador social (por ejemplo, una gestoría) que envía los registros en su nombre."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:519
-msgid "The invoices issued with a Veri*Factu system are real invoices, and their records are sent to the AEAT, also when they are issued only to try the system. Use the :ref:`test environment <localizations/spain/veri-factu-configuration>` for tests: the AEAT requires that the invoices issued by mistake in production mode are cancelled."
-msgstr "Las facturas emitidas con un sistema Veri*Factu son facturas reales y sus registros se envían a la AEAT, también cuando se emiten solo para probar el sistema. Utilice el :ref:`entorno de pruebas <localizations/spain/veri-factu-configuration>` para las pruebas: la AEAT exige anular las facturas emitidas por error en modo producción."
+msgid "The invoices issued with a Veri*Factu system are real invoices, and their records are sent to the AEAT, also when they are issued only to try the system. Use the :ref:`test environment <localizations/spain/veri-factu-configuration>` for tests: the AEAT requires that the invoices issued by mistake in production mode are :ref:`cancelled <localizations/spain/veri-factu-cancellation>`."
+msgstr "Las facturas emitidas con un sistema Veri*Factu son facturas reales y sus registros se envían a la AEAT, también cuando se emiten solo para probar el sistema. Utilice el :ref:`entorno de pruebas <localizations/spain/veri-factu-configuration>` para las pruebas: la AEAT exige que las facturas emitidas por error en modo producción se :ref:`anulen <localizations/spain/veri-factu-cancellation>`."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:525
 msgid "Deadlines"

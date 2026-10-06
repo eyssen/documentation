@@ -25189,7 +25189,7 @@ msgid "**A qualified certificate is always needed**, also to test the system. It
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:519
-msgid "The invoices issued with a Veri*Factu system are real invoices, and their records are sent to the AEAT, also when they are issued only to try the system. Use the :ref:`test environment <localizations/spain/veri-factu-configuration>` for tests: the AEAT requires that the invoices issued by mistake in production mode are cancelled."
+msgid "The invoices issued with a Veri*Factu system are real invoices, and their records are sent to the AEAT, also when they are issued only to try the system. Use the :ref:`test environment <localizations/spain/veri-factu-configuration>` for tests: the AEAT requires that the invoices issued by mistake in production mode are :ref:`cancelled <localizations/spain/veri-factu-cancellation>`."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:525
@@ -25341,6 +25341,10 @@ msgid "Click :guilabel:`Send` to generate a JSON file containing the invoice det
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:660
+msgid "The tab shows two statuses, :guilabel:`Test registry` and :guilabel:`Production registry`. Each document is marked :guilabel:`Test` or :guilabel:`Production`. A record accepted in the test registry is not registered in the production registry. After you disable :guilabel:`Test Environment`, send the same posted invoice again: the new record goes to the production registry and the test record stays. If the registry currently selected on the company has already accepted the invoice, :guilabel:`Send` skips it and does not create a second record."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:660
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:685
 msgid "To download a JSON file, click on its document in the :guilabel:`Veri*Factu` tab. Then, in the :guilabel:`Open: Veri*Factu Documents` window, click the link in the :guilabel:`JSON` field."
 msgstr ""
@@ -25351,7 +25355,19 @@ msgid "The document should be sent to the :abbr:`AEAT (Agencia Estatal de Admini
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:668
-msgid "A Veri\\*Factu **QR code** appears on the invoice PDF. Scan this code to verify that the invoice has been received and recognized by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`."
+msgid "A Veri\\*Factu **QR code** appears on the invoice PDF. It points to the verification page of the registry selected on the company. Scan this code to verify that the invoice has been received and recognized by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:682
+msgid "Cancellation"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:685
+msgid "The cancellation button is on the :guilabel:`Veri*Factu` tab of the invoice, not in the form header. It is :guilabel:`Request Veri*Factu Cancellation`. A warning is shown above the button, and a confirmation question is asked before the record is sent."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:689
+msgid "The cancellation is sent to the AEAT registry currently selected on the company. If the AEAT accepts it, the invoice is cancelled in Odoo as well, and the same invoice number cannot be submitted again."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:675
@@ -25411,7 +25427,7 @@ msgid "When you update to a new version, keep the declaration of the version you
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:740
-msgid "The declaration opens as a PDF (:file:`Declaracion_responsable_VeriFactu`), always in Spanish. It is generated from the declaration file that ships with each release (:file:`declarations/<version>.json` in the Veri*Factu module), which lists the producer, the system, the place and date, and the Veri*Factu modules and their versions. Releases have an identifier such as *18.0.es.2026.10.0*."
+msgid "The declaration opens as a PDF (:file:`Declaracion_responsable_VeriFactu`), always in Spanish. It is generated from the declaration file that ships with each release (:file:`declarations/<version>.json` in the Veri*Factu module), which lists the producer, the system, the place and date, and the Veri*Factu modules and their versions. Releases have an identifier such as *18.0.es.4*."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:747
@@ -25427,7 +25443,7 @@ msgid "the producer data is complete;"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:762
-msgid "the running code is an ES release (identifier :samp:`18.0.es.{YYYY}.{MM}.{N}`), not a development version;"
+msgid "the running code is an ES release (identifier :samp:`18.0.es.{N}`), not a development version;"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:764

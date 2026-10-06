@@ -519,7 +519,8 @@ certificate** that the software uses to authenticate itself to the AEAT.
    The invoices issued with a Veri*Factu system are real invoices, and their records are sent to
    the AEAT, also when they are issued only to try the system. Use the :ref:`test environment
    <localizations/spain/veri-factu-configuration>` for tests: the AEAT requires that the invoices
-   issued by mistake in production mode are cancelled.
+   issued by mistake in production mode are :ref:`cancelled
+   <localizations/spain/veri-factu-cancellation>`.
 
 Deadlines
 ~~~~~~~~~
@@ -656,6 +657,13 @@ Click :guilabel:`Send` to generate a JSON file containing the invoice details. T
 as a Veri*Factu document. In the :guilabel:`Veri*Factu` tab, all corresponding documents are
 listed by their creation date and current status.
 
+The tab shows two statuses, :guilabel:`Test registry` and :guilabel:`Production registry`. Each
+document is marked :guilabel:`Test` or :guilabel:`Production`. A record accepted in the test
+registry is not registered in the production registry. After you disable :guilabel:`Test
+Environment`, send the same posted invoice again: the new record goes to the production registry
+and the test record stays. If the registry currently selected on the company has already accepted
+the invoice, :guilabel:`Send` skips it and does not create a second record.
+
 .. tip::
    To download a JSON file, click on its document in the :guilabel:`Veri*Factu` tab. Then, in
    the :guilabel:`Open: Veri*Factu Documents` window, click the link in the :guilabel:`JSON` field.
@@ -665,9 +673,22 @@ listed by their creation date and current status.
      immediately. However, it may be delayed due to mandatory waiting periods between submissions
      required by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`. In such cases,
      the document is automatically sent the next time a scheduled action runs.
-   - A Veri\*Factu **QR code** appears on the invoice PDF. Scan this code to verify that the invoice
-     has been received and recognized by the :abbr:`AEAT (Agencia Estatal de Administración
-     Tributaria)`.
+   - A Veri\*Factu **QR code** appears on the invoice PDF. It points to the verification page of
+     the registry selected on the company. Scan this code to verify that the invoice has been
+     received and recognized by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`.
+
+.. _localizations/spain/veri-factu-cancellation:
+
+Cancellation
+------------
+
+The cancellation button is on the :guilabel:`Veri*Factu` tab of the invoice, not in the form
+header. It is :guilabel:`Request Veri*Factu Cancellation`. A warning is shown above the button,
+and a confirmation question is asked before the record is sent.
+
+The cancellation is sent to the AEAT registry currently selected on the company. If the AEAT
+accepts it, the invoice is cancelled in Odoo as well, and the same invoice number cannot be
+submitted again.
 
 .. _localizations/spain/veri-factu-orders:
 
@@ -741,7 +762,7 @@ The declaration opens as a PDF (:file:`Declaracion_responsable_VeriFactu`), alwa
 generated from the declaration file that ships with each release
 (:file:`declarations/<version>.json` in the Veri*Factu module), which lists the producer, the
 system, the place and date, and the Veri*Factu modules and their versions. Releases have an
-identifier such as *18.0.es.2026.10.0*.
+identifier such as *18.0.es.4*.
 
 .. warning::
    If there is no published declaration for the version that is running, for example on a
@@ -759,8 +780,7 @@ settings is enabled by default: the records are sent to the AEAT test servers. T
 (sending real records to the AEAT) is only allowed when all of these conditions are met:
 
 - the producer data is complete;
-- the running code is an ES release (identifier :samp:`18.0.es.{YYYY}.{MM}.{N}`), not a development
-  version;
+- the running code is an ES release (identifier :samp:`18.0.es.{N}`), not a development version;
 - the responsible declaration of the running version exists and matches the data that is sent to
   the AEAT.
 

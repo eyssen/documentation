@@ -21322,6 +21322,10 @@ msgstr "Amint egy :doc:`számla <../../finance/accounting/customer_invoices>` me
 msgid "Click :guilabel:`Send` to generate a JSON file containing the invoice details. This file is stored as a Veri*Factu document. In the :guilabel:`Veri*Factu` tab, all corresponding documents are listed by their creation date and current status."
 msgstr "Kattintson a :guilabel:`Küldés` gombra, hogy létrehozzon egy JSON fájlt, amely tartalmazza a számla részleteit. Ez a fájl Veri*Factu dokumentumként kerül tárolásra. A :guilabel:`Veri*Factu` fülön az összes megfelelő dokumentum a létrehozás dátuma és aktuális állapota szerint van felsorolva."
 
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:660
+msgid "The tab shows two statuses, :guilabel:`Test registry` and :guilabel:`Production registry`. Each document is marked :guilabel:`Test` or :guilabel:`Production`. A record accepted in the test registry is not registered in the production registry. After you disable :guilabel:`Test Environment`, send the same posted invoice again: the new record goes to the production registry and the test record stays. If the registry currently selected on the company has already accepted the invoice, :guilabel:`Send` skips it and does not create a second record."
+msgstr "A fül két állapotot mutat, a :guilabel:`Tesztnyilvántartás` és az :guilabel:`Éles nyilvántartás` állapotot. Minden dokumentum :guilabel:`Teszt` vagy :guilabel:`Éles` jelölést kap. A tesztnyilvántartásban elfogadott rekord nincs beregisztrálva az éles nyilvántartásba. A :guilabel:`Tesztkörnyezet` kikapcsolása után küldje el újra ugyanazt a könyvelt számlát: az új rekord az éles nyilvántartásba kerül, a teszt rekord megmarad. Ha a cégen éppen kiválasztott nyilvántartás már elfogadta a számlát, a :guilabel:`Küldés` kihagyja, és nem készül második rekord."
+
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:660 ../../content/applications/finance/fiscal_localizations/spain.rst:685
 msgid "To download a JSON file, click on its document in the :guilabel:`Veri*Factu` tab. Then, in the :guilabel:`Open: Veri*Factu Documents` window, click the link in the :guilabel:`JSON` field."
 msgstr "JSON fájl letöltéséhez kattintson a dokumentumra a :guilabel:`Veri*Factu` lapon. Ezután a :guilabel:`Megnyitás: Veri*Factu dokumentumok` ablakban kattintson a :guilabel:`JSON` mezőben lévő hivatkozásra."
@@ -21331,8 +21335,20 @@ msgid "The document should be sent to the :abbr:`AEAT (Agencia Estatal de Admini
 msgstr "A dokumentumot azonnal el kell küldeni az :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`-nak. Az :abbr:`AEAT (Agencia Estatal de Administración Tributaria)` által előírt kötelező várakozási idők miatt azonban a küldés késhet. Ilyen esetekben a dokumentum automatikusan elküldésre kerül a következő ütemezett művelet futásakor."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:668
-msgid "A Veri\\*Factu **QR code** appears on the invoice PDF. Scan this code to verify that the invoice has been received and recognized by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`."
-msgstr "A Veri\\*Factu **QR-kód** megjelenik a számla PDF-jén. Olvassa be ezt a kódot annak ellenőrzéséhez, hogy a számlát az :abbr:`AEAT (Agencia Estatal de Administración Tributaria)` megkapta és rögzítette."
+msgid "A Veri\\*Factu **QR code** appears on the invoice PDF. It points to the verification page of the registry selected on the company. Scan this code to verify that the invoice has been received and recognized by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`."
+msgstr "A Veri\\*Factu **QR-kód** megjelenik a számla PDF-jén. A cégen kiválasztott nyilvántartás ellenőrző oldalára mutat. Olvassa be ezt a kódot annak ellenőrzéséhez, hogy a számlát az :abbr:`AEAT (Agencia Estatal de Administración Tributaria)` megkapta és rögzítette."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:682
+msgid "Cancellation"
+msgstr "Érvénytelenítés"
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:685
+msgid "The cancellation button is on the :guilabel:`Veri*Factu` tab of the invoice, not in the form header. It is :guilabel:`Request Veri*Factu Cancellation`. A warning is shown above the button, and a confirmation question is asked before the record is sent."
+msgstr "Az érvénytelenítés gombja a számla :guilabel:`Veri*Factu` fülén van, nem az űrlap fejlécében. A neve :guilabel:`Veri*Factu érvénytelenítés kérése`. A gomb felett figyelmeztetés látszik, és a rekord elküldése előtt megerősítő kérdés jelenik meg."
+
+#: ../../content/applications/finance/fiscal_localizations/spain.rst:689
+msgid "The cancellation is sent to the AEAT registry currently selected on the company. If the AEAT accepts it, the invoice is cancelled in Odoo as well, and the same invoice number cannot be submitted again."
+msgstr "Az érvénytelenítés a cégen éppen kiválasztott AEAT-nyilvántartásba megy. Ha az AEAT elfogadja, a számla az Odooban is sztornózódik, és ugyanezt a számlaszámot nem lehet újra beküldeni."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:675
 msgid "Point of sale orders"
@@ -26955,8 +26971,8 @@ msgid ":menuselection:`Accounting --> Configuration --> Veri*Factu (Spain) --> R
 msgstr ":menuselection:`Könyvelés --> Konfiguráció --> Veri*Factu (Spanyolország) --> Felelősségvállalási nyilatkozat (declaración responsable)`."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:740
-msgid "The declaration opens as a PDF (:file:`Declaracion_responsable_VeriFactu`), always in Spanish. It is generated from the declaration file that ships with each release (:file:`declarations/<version>.json` in the Veri*Factu module), which lists the producer, the system, the place and date, and the Veri*Factu modules and their versions. Releases have an identifier such as *18.0.es.2026.10.0*."
-msgstr "A nyilatkozat PDF-ként nyílik meg (:file:`Declaracion_responsable_VeriFactu`), mindig spanyol nyelven. A rendszer az egyes kiadásokkal szállított nyilatkozatfájlból állítja elő (:file:`declarations/<version>.json` a Veri*Factu modulban), amely felsorolja a gyártót, a rendszert, a helyet és a dátumot, valamint a Veri*Factu modulokat és azok verzióit. A kiadásoknak azonosítójuk van, például *18.0.es.2026.10.0*."
+msgid "The declaration opens as a PDF (:file:`Declaracion_responsable_VeriFactu`), always in Spanish. It is generated from the declaration file that ships with each release (:file:`declarations/<version>.json` in the Veri*Factu module), which lists the producer, the system, the place and date, and the Veri*Factu modules and their versions. Releases have an identifier such as *18.0.es.4*."
+msgstr "A nyilatkozat PDF-ként nyílik meg (:file:`Declaracion_responsable_VeriFactu`), mindig spanyol nyelven. A rendszer az egyes kiadásokkal szállított nyilatkozatfájlból állítja elő (:file:`declarations/<version>.json` a Veri*Factu modulban), amely felsorolja a gyártót, a rendszert, a helyet és a dátumot, valamint a Veri*Factu modulokat és azok verzióit. A kiadások azonosítója ilyen alakú: *18.0.es.4*."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:747
 msgid "If there is no published declaration for the version that is running, for example on a development version, the PDF is a **draft marked \"BORRADOR – SIN VALIDEZ\"** (draft, without validity) that lists the problems found. Do not give such a draft to customers or to the tax agency."
@@ -26971,8 +26987,8 @@ msgid "the producer data is complete;"
 msgstr "a gyártói adatok hiánytalanok;"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:762
-msgid "the running code is an ES release (identifier :samp:`18.0.es.{YYYY}.{MM}.{N}`), not a development version;"
-msgstr "a futtatott kód ES kiadás (azonosító: :samp:`18.0.es.{YYYY}.{MM}.{N}`), nem fejlesztői verzió;"
+msgid "the running code is an ES release (identifier :samp:`18.0.es.{N}`), not a development version;"
+msgstr "a futtatott kód ES kiadás (azonosító: :samp:`18.0.es.{N}`), nem fejlesztői verzió;"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:764
 msgid "the responsible declaration of the running version exists and matches the data that is sent to the AEAT."
@@ -28643,8 +28659,8 @@ msgid "**A qualified certificate is always needed**, also to test the system. It
 msgstr "**Minősített tanúsítvány mindig szükséges**, a rendszer kipróbálásához is. Lehet az adózó tanúsítványa, vagy az adózó nevében a nyilvántartásokat beküldő képviselő, meghatalmazott vagy társadalmi együttműködő (például egy adótanácsadó iroda) tanúsítványa."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:519
-msgid "The invoices issued with a Veri*Factu system are real invoices, and their records are sent to the AEAT, also when they are issued only to try the system. Use the :ref:`test environment <localizations/spain/veri-factu-configuration>` for tests: the AEAT requires that the invoices issued by mistake in production mode are cancelled."
-msgstr "A Veri*Factu rendszerrel kiállított számlák valódi számlák, és nyilvántartásaikat elküldik az AEAT-nak akkor is, ha csak a rendszer kipróbálására állították ki őket. A teszteléshez használja a :ref:`tesztkörnyezetet <localizations/spain/veri-factu-configuration>`: az AEAT előírja, hogy az éles módban tévedésből kiállított számlákat sztornózni kell."
+msgid "The invoices issued with a Veri*Factu system are real invoices, and their records are sent to the AEAT, also when they are issued only to try the system. Use the :ref:`test environment <localizations/spain/veri-factu-configuration>` for tests: the AEAT requires that the invoices issued by mistake in production mode are :ref:`cancelled <localizations/spain/veri-factu-cancellation>`."
+msgstr "A Veri*Factu rendszerrel kiállított számlák valódi számlák, és nyilvántartásaikat elküldik az AEAT-nak akkor is, ha csak a rendszer kipróbálására állították ki őket. A teszteléshez használja a :ref:`tesztkörnyezetet <localizations/spain/veri-factu-configuration>`: az AEAT előírja, hogy az éles módban tévedésből kiállított számlákat :ref:`érvényteleníteni <localizations/spain/veri-factu-cancellation>` kell."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:525
 msgid "Deadlines"

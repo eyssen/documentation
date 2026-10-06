@@ -10103,3 +10103,55 @@ msgstr "Con el módulo *Blog Sitemap SEO* (`website_blog_sitemap_seo`), las pág
 
 #~ msgid "If you do not want the robots to crawl the `/about-us` page of your site, you can edit the robots.txt file to add `Disallow: /about-us`."
 #~ msgstr "Si no desea que los robots rastreen la página `/sobre-nosotros` de su sitio puede editar el archivo robots.txt para agregar `Disallow: /sobre-nosotros`."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:50
+msgid ":ref:`Shop sort rules <ecommerce/catalog/shop-sort>` fill the numbers behind :guilabel:`Featured`."
+msgstr "Las :ref:`Reglas de orden de la tienda <ecommerce/catalog/shop-sort>` rellenan los números que hay detrás de :guilabel:`Destacado`."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:59
+msgid "Shop sort rules"
+msgstr "Reglas de orden de la tienda"
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:61
+msgid "The :guilabel:`Featured` order is each product's website sequence. The *Shop Category Sort* module (`website_sale_category_sort`) writes that sequence from a list of sort rules. The other :guilabel:`Sort-by` choices, :guilabel:`Newest Arrivals`, :guilabel:`Name (A-Z)`, :guilabel:`Price - Low to High`, and :guilabel:`Price - High to Low`, still sort by their own field and leave the sequence as it is."
+msgstr "El orden :guilabel:`Destacado` es la secuencia del sitio web de cada producto. El módulo *Shop Category Sort* (`website_sale_category_sort`) escribe esa secuencia a partir de una lista de reglas de orden. Las demás opciones de :guilabel:`Ordenar por`, :guilabel:`Llegadas más recientes`, :guilabel:`Nombre (A-Z)`, :guilabel:`Precio - bajo a alto` y :guilabel:`Precio - alto a bajo`, siguen ordenando por su propio campo y dejan la secuencia como está."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:67
+msgid "Install the module from :menuselection:`Apps`. Website designers then open :menuselection:`Website --> eCommerce --> Products --> Shop Sort`, the :guilabel:`Shop Sort` page on the website form (:menuselection:`Website --> Configuration --> Websites`, in developer mode), or the :guilabel:`Shop Sort` section on an eCommerce category (:menuselection:`Website --> eCommerce --> Products --> eCommerce Categories`)."
+msgstr "Instale el módulo desde :menuselection:`Aplicaciones`. Los diseñadores del sitio web abren entonces :menuselection:`Sitio web --> Comercio electrónico --> Productos --> Orden de la tienda`, la página :guilabel:`Orden de la tienda` del formulario del sitio web (:menuselection:`Sitio web --> Configuración --> Sitios web`, en modo desarrollador) o la sección :guilabel:`Orden de la tienda` de una categoría de comercio electrónico (:menuselection:`Sitio web --> Comercio electrónico --> Productos --> Categorías de comercio electrónico`)."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:73
+msgid "A rule line belongs to one website or to one category. Give it a :guilabel:`Sort Key` and a :guilabel:`Direction` (:guilabel:`Ascending` or :guilabel:`Descending`). Lines run from top to bottom. Drag the handle to reorder them."
+msgstr "Una línea de regla pertenece a un sitio web o a una categoría. Indique una :guilabel:`Clave de orden` y una :guilabel:`Dirección` (:guilabel:`Ascendente` o :guilabel:`Descendente`). Las líneas se aplican de arriba abajo. Arrastre el asa para reordenarlas."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:77
+msgid ":guilabel:`Attribute value sequence` follows the order of the values of the attribute you choose. Set that order on the attribute. A product with several values of the attribute uses the lowest sequence. A product without the attribute is placed last, whether the direction is ascending or descending."
+msgstr "La :guilabel:`Secuencia del valor de atributo` sigue el orden de los valores del atributo que elija. Defina ese orden en el atributo. Un producto con varios valores de ese atributo usa la secuencia más baja. Un producto sin el atributo queda al final, tanto en sentido ascendente como descendente."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:81
+msgid ":guilabel:`Discount bucket`, ascending, lists products with no pricelist tag first, then products that have at least one. It is not the discount amount and not a pricelist price."
+msgstr "El :guilabel:`Tramo de descuento`, en sentido ascendente, lista primero los productos sin etiqueta de lista de precios y después los que tienen al menos una. No es el importe del descuento ni un precio de lista de precios."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:83
+msgid ":guilabel:`Website sequence` keeps the current sequence. Use it as the last line when products that are otherwise equal should stay in their previous order."
+msgstr "La :guilabel:`Secuencia del sitio web` conserva la secuencia actual. Úsela como última línea cuando los productos que por lo demás son iguales deban permanecer en su orden anterior."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:85
+msgid ":guilabel:`Creation date`, :guilabel:`Name`, and :guilabel:`Catalog price` use those product fields. Catalog price is the sales price on the product, not a pricelist price."
+msgstr "La :guilabel:`Fecha de creación`, el :guilabel:`Nombre` y el :guilabel:`Precio de catálogo` usan esos campos del producto. El precio de catálogo es el precio de venta del producto, no un precio de lista de precios."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:88
+msgid "Each product has one website sequence, so the shop has one order. A category does not store a second order for the same products. It only chooses which rules write the number."
+msgstr "Cada producto tiene una secuencia del sitio web, así que la tienda tiene un solo orden. Una categoría no guarda un segundo orden para los mismos productos. Solo elige qué reglas escriben el número."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:91
+msgid "If the product's category, or a parent of that category, has its own lines, those lines replace the website list. The deepest category on the chain that has lines wins. A category with no lines uses its parent, then the website list. Products that match no list keep their order relative to each other."
+msgstr "Si la categoría del producto, o un padre de esa categoría, tiene líneas propias, esas líneas sustituyen la lista del sitio web. Gana la categoría más profunda de la cadena que tenga líneas. Una categoría sin líneas usa su padre y, después, la lista del sitio web. Los productos que no coinciden con ninguna lista conservan su orden relativo."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:96
+msgid "Click :guilabel:`Apply now` to renumber every active product. The same renumber runs once a day, and again when a rule changes, when a watched product value changes (its category, pricelist tags, name, or catalog price, for example), or when the sequence of an attribute value changes. On a large catalog this can take a while. Dragging a product on the product list changes its place until the next renumber, which overwrites the drag."
+msgstr "Pulse :guilabel:`Aplicar ahora` para volver a numerar cada producto activo. La misma numeración se ejecuta una vez al día, y también cuando cambia una regla, cuando cambia un valor vigilado del producto (su categoría, las etiquetas de lista de precios, el nombre o el precio de catálogo, por ejemplo) o cuando cambia la secuencia de un valor de atributo. En un catálogo grande esto puede tardar un rato. Arrastrar un producto en la lista de productos cambia su lugar hasta la siguiente numeración, que sobrescribe el arrastre."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:103
+msgid "Archived products are left as they are. Removing the last rule stops future renumbers and does not put back the numbers from before the rules. A bulk import should skip the renumber (the technical context is ``skip_shop_sort``) and rely on :guilabel:`Apply now` or the daily action. Otherwise every saved product renumbers the whole catalog."
+msgstr "Los productos archivados se dejan como están. Quitar la última regla detiene las numeraciones futuras y no devuelve los números de antes de las reglas. Una importación masiva debe omitir la numeración (el contexto técnico es ``skip_shop_sort``) y apoyarse en :guilabel:`Aplicar ahora` o en la acción diaria. De lo contrario, cada producto guardado vuelve a numerar todo el catálogo."

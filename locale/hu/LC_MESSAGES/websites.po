@@ -9574,3 +9574,55 @@ msgstr "A *Blog Sitemap SEO* modullal (`website_blog_sitemap_seo`) a blog címke
 
 #~ msgid ":guilabel:`Create a Ticket` (:doc:`Helpdesk </applications/services/helpdesk>`)"
 #~ msgstr ":guilabel:`Jegy létrehozása` (:doc:`Helpdesk </applications/services/helpdesk>`)"
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:50
+msgid ":ref:`Shop sort rules <ecommerce/catalog/shop-sort>` fill the numbers behind :guilabel:`Featured`."
+msgstr "A :ref:`Webshop rendezési szabályok <ecommerce/catalog/shop-sort>` töltik ki a :guilabel:`Kiemelt` sorrend mögötti számokat."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:59
+msgid "Shop sort rules"
+msgstr "Webshop rendezési szabályok"
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:61
+msgid "The :guilabel:`Featured` order is each product's website sequence. The *Shop Category Sort* module (`website_sale_category_sort`) writes that sequence from a list of sort rules. The other :guilabel:`Sort-by` choices, :guilabel:`Newest Arrivals`, :guilabel:`Name (A-Z)`, :guilabel:`Price - Low to High`, and :guilabel:`Price - High to Low`, still sort by their own field and leave the sequence as it is."
+msgstr "A :guilabel:`Kiemelt` sorrend az egyes termékek weboldal-sorszáma. A *Shop Category Sort* modul (`website_sale_category_sort`) ezt a sorszámot rendezési szabályok listájából írja. A többi :guilabel:`Rendezés szerint` lehetőség, a :guilabel:`Legújabb érkezések`, a :guilabel:`Név - növekvő`, az :guilabel:`Ár - növekvő` és az :guilabel:`Ár - csökkenő`, továbbra is a saját mezője szerint rendez, és a sorszámot változatlanul hagyja."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:67
+msgid "Install the module from :menuselection:`Apps`. Website designers then open :menuselection:`Website --> eCommerce --> Products --> Shop Sort`, the :guilabel:`Shop Sort` page on the website form (:menuselection:`Website --> Configuration --> Websites`, in developer mode), or the :guilabel:`Shop Sort` section on an eCommerce category (:menuselection:`Website --> eCommerce --> Products --> eCommerce Categories`)."
+msgstr "Telepítse a modult az :menuselection:`Alkalmazások` menüből. A weboldal szerkesztői ezután a :menuselection:`Weboldal --> E-kereskedelem --> Termékek --> Webshop rendezés` menüt, a weboldal űrlap :guilabel:`Webshop rendezés` lapját (:menuselection:`Weboldal --> Konfiguráció --> Weboldalak`, fejlesztői módban), vagy a webshop-kategória :guilabel:`Webshop rendezés` szakaszát nyitják meg (:menuselection:`Weboldal --> E-kereskedelem --> Termékek --> E-kereskedelem kategóriák`)."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:73
+msgid "A rule line belongs to one website or to one category. Give it a :guilabel:`Sort Key` and a :guilabel:`Direction` (:guilabel:`Ascending` or :guilabel:`Descending`). Lines run from top to bottom. Drag the handle to reorder them."
+msgstr "Egy szabálysor egy weboldalhoz vagy egy kategóriához tartozik. Adja meg a :guilabel:`Rendezési kulcs` és az :guilabel:`Irány` mezőket (:guilabel:`Növekvő` vagy :guilabel:`Csökkenő`). A sorok fentről lefelé futnak. A fogantyú húzásával változtatható a sorrendjük."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:77
+msgid ":guilabel:`Attribute value sequence` follows the order of the values of the attribute you choose. Set that order on the attribute. A product with several values of the attribute uses the lowest sequence. A product without the attribute is placed last, whether the direction is ascending or descending."
+msgstr "Az :guilabel:`Attribútumérték sorszáma` a kiválasztott attribútum értékeinek sorrendjét követi. Ezt a sorrendet az attribútumnál állítsa be. Ha egy terméknek több értéke van ebből az attribútumból, a legkisebb sorszám számít. Az attribútum nélküli termék a végére kerül, növekvő és csökkenő irányban is."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:81
+msgid ":guilabel:`Discount bucket`, ascending, lists products with no pricelist tag first, then products that have at least one. It is not the discount amount and not a pricelist price."
+msgstr "A :guilabel:`Leértékelés`, növekvő irányban, előre veszi az árlista-címke nélküli termékeket, utána azokat, amelyeken van legalább egy. Ez nem a kedvezmény mértéke, és nem egy árlista ára."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:83
+msgid ":guilabel:`Website sequence` keeps the current sequence. Use it as the last line when products that are otherwise equal should stay in their previous order."
+msgstr "A :guilabel:`Weboldal sorszám` megtartja a jelenlegi sorszámot. Utolsó sorként akkor használja, ha az egyébként azonos termékeknek a korábbi sorrendjükben kell maradniuk."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:85
+msgid ":guilabel:`Creation date`, :guilabel:`Name`, and :guilabel:`Catalog price` use those product fields. Catalog price is the sales price on the product, not a pricelist price."
+msgstr "A :guilabel:`Létrehozás dátuma`, a :guilabel:`Név` és a :guilabel:`Katalógusár` ezeket a termékmezőket használja. A katalógusár a terméken lévő eladási ár, nem egy árlista ára."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:88
+msgid "Each product has one website sequence, so the shop has one order. A category does not store a second order for the same products. It only chooses which rules write the number."
+msgstr "Minden terméknek egy weboldal-sorszáma van, ezért a boltnak egy sorrendje van. Egy kategória nem tárol második sorrendet ugyanazokra a termékekre. Csak azt választja ki, hogy melyik szabályok írják a számot."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:91
+msgid "If the product's category, or a parent of that category, has its own lines, those lines replace the website list. The deepest category on the chain that has lines wins. A category with no lines uses its parent, then the website list. Products that match no list keep their order relative to each other."
+msgstr "Ha a termék kategóriájának vagy annak egy szülőjének saját sorai vannak, ezek a sorok lecserélik a weboldal listáját. A lánc legmélyebb olyan kategóriája nyer, amelynek van sora. A sor nélküli kategória a szülőt használja, majd a weboldal listáját. A listához nem tartozó termékek egymáshoz képest megtartják a sorrendjüket."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:96
+msgid "Click :guilabel:`Apply now` to renumber every active product. The same renumber runs once a day, and again when a rule changes, when a watched product value changes (its category, pricelist tags, name, or catalog price, for example), or when the sequence of an attribute value changes. On a large catalog this can take a while. Dragging a product on the product list changes its place until the next renumber, which overwrites the drag."
+msgstr "A :guilabel:`Futtatás most` minden aktív terméket újraszámoz. Ugyanez naponta egyszer lefut, és akkor is, ha egy szabály változik, ha egy figyelt termékérték változik (például a kategória, az árlista-címkék, a név vagy a katalógusár), vagy ha egy attribútumérték sorszáma változik. Nagy katalóguson ez eltarthat egy ideig. A termék húzása a terméklistán a következő újraszámozásig módosítja a helyét, az újraszámozás pedig felülírja a húzást."
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:103
+msgid "Archived products are left as they are. Removing the last rule stops future renumbers and does not put back the numbers from before the rules. A bulk import should skip the renumber (the technical context is ``skip_shop_sort``) and rely on :guilabel:`Apply now` or the daily action. Otherwise every saved product renumbers the whole catalog."
+msgstr "Az archivált termékek változatlanok maradnak. Az utolsó szabály törlése leállítja a további újraszámozást, és nem állítja vissza a szabályok előtti számokat. Tömeges importnál ki kell hagyni az újraszámozást (a technikai context ``skip_shop_sort``), és a :guilabel:`Futtatás most` gombra vagy a napi műveletre kell hagyatkozni. Különben minden mentett termék az egész katalógust újraszámozza."

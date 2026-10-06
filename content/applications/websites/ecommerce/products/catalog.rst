@@ -47,9 +47,71 @@ following :guilabel:`Default Sort` options:
 
 The default sort applies to *all* :ref:`categories <ecommerce/catalog/categories>`.
 
+:ref:`Shop sort rules <ecommerce/catalog/shop-sort>` fill the numbers behind :guilabel:`Featured`.
+
 .. tip::
    If you don't want to display a top bar or :ref:`side panel <ecommerce/catalog/side-panel>`,
    you can disable all related options in the website editor.
+
+.. _ecommerce/catalog/shop-sort:
+
+Shop sort rules
+===============
+
+The :guilabel:`Featured` order is each product's website sequence. The *Shop Category Sort*
+module (`website_sale_category_sort`) writes that sequence from a list of sort rules. The other
+:guilabel:`Sort-by` choices, :guilabel:`Newest Arrivals`, :guilabel:`Name (A-Z)`,
+:guilabel:`Price - Low to High`, and :guilabel:`Price - High to Low`, still sort by their own
+field and leave the sequence as it is.
+
+Install the module from :menuselection:`Apps`. Website designers then open
+:menuselection:`Website --> eCommerce --> Products --> Shop Sort`, the :guilabel:`Shop Sort` page
+on the website form (:menuselection:`Website --> Configuration --> Websites`, in developer mode),
+or the :guilabel:`Shop Sort` section on an eCommerce category
+(:menuselection:`Website --> eCommerce --> Products --> eCommerce Categories`).
+
+A rule line belongs to one website or to one category. Give it a :guilabel:`Sort Key` and a
+:guilabel:`Direction` (:guilabel:`Ascending` or :guilabel:`Descending`). Lines run from top to
+bottom. Drag the handle to reorder them.
+
+- :guilabel:`Attribute value sequence` follows the order of the values of the attribute you
+  choose. Set that order on the attribute. A product with several values of the attribute uses
+  the lowest sequence. A product without the attribute is placed last, whether the direction is
+  ascending or descending.
+- :guilabel:`Discount bucket`, ascending, lists products with no pricelist tag first, then
+  products that have at least one. It is not the discount amount and not a pricelist price.
+- :guilabel:`Website sequence` keeps the current sequence. Use it as the last line when products
+  that are otherwise equal should stay in their previous order.
+- :guilabel:`Creation date`, :guilabel:`Name`, and :guilabel:`Catalog price` use those product
+  fields. Catalog price is the sales price on the product, not a pricelist price.
+
+Each product has one website sequence, so the shop has one order. A category does not store a
+second order for the same products. It only chooses which rules write the number.
+
+If the product's category, or a parent of that category, has its own lines, those lines replace
+the website list. The deepest category on the chain that has lines wins. A category with no lines
+uses its parent, then the website list. Products that match no list keep their order relative to
+each other.
+
+Click :guilabel:`Apply now` to renumber every active product. The same renumber runs once a day,
+and again when a rule changes, when a watched product value changes (its category, pricelist tags,
+name, or catalog price, for example), or when the sequence of an attribute value changes. On a
+large catalog this can take a while. Dragging a product on the product list changes its place
+until the next renumber, which overwrites the drag.
+
+.. note::
+   Archived products are left as they are. Removing the last rule stops future renumbers and does
+   not put back the numbers from before the rules. A bulk import should skip the renumber (the
+   technical context is ``skip_shop_sort``) and rely on :guilabel:`Apply now` or the daily action.
+   Otherwise every saved product renumbers the whole catalog.
+
+.. screenshot:: ecommerce-catalog-shop-sort-rules
+   :menu: Website --> eCommerce --> Products --> Shop Sort
+   :shows: The shop sort list with two lines, attribute value sequence ascending on a season attribute, then discount bucket ascending.
+   :highlight: The Sort Key and Direction columns, and the Apply now button.
+   :data: One website, a no-variant attribute with two values ordered by sequence, and products with and without a pricelist tag.
+   :module: website_sale_category_sort
+   :notes: English UI, light theme, 1440px width. The menu is visible to website designers.
 
 .. _ecommerce/catalog/side-panel:
 

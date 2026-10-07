@@ -67,6 +67,10 @@ terms, customer reference and bank account of the order, and a single line *Down
 (translated to the language of the customer) for the requested gross amount with the taxes of the
 order lines. :ref:`Cash rounding <localizations/hungary/payment-terms>` is applied automatically.
 
+The :guilabel:`Delivery Address` of the pro-forma invoice is the customer's
+default delivery address. The printed pro-forma invoice shows the customer
+address only.
+
 .. screenshot:: finance-fl-hungary-proforma-wizard
    :menu: Sales ‣ Orders ‣ Orders ‣ (sales order) ‣ Create Proforma
    :shows: The "Create Pro Forma" dialog with "Összeg típusa" set to "Százalék", "Érték" 50, "Fizetési határidő (nap)" 2, the "Tételek hozzáadása" checkbox, and the "Kiállítás" and "Mégse" buttons.
@@ -144,6 +148,13 @@ Click :guilabel:`Kifizetés rögzítése`. In a single step, Odoo
 #. registers the payment and reconciles it with the invoice;
 #. e-mails the paid advance invoice to the customer, if an e-mail template was selected.
 
+When the pro-forma invoice comes from a sales order, the advance invoice takes
+the :guilabel:`Delivery Address` selected on that order. A delivery address
+changed later on the pro-forma invoice stays on the pro-forma invoice. The
+fiscal position of the advance invoice remains the fiscal position of the
+pro-forma invoice. A pro-forma invoice created without a sales order uses the
+customer's default delivery address on the advance invoice as well.
+
 The advance invoices are listed in the :guilabel:`Előlegszámlák` tab of the pro-forma invoice, and
 the pro-forma invoice is shown in the :guilabel:`Díjbekérő` field of the :guilabel:`Related Invoices`
 tab of the advance invoice.
@@ -162,6 +173,8 @@ Final invoice
 Invoice the sales order as usual with :guilabel:`Create Invoice` once the goods are delivered or the
 service is performed. The advance invoices are deducted automatically; see :ref:`advance and final
 invoices <localizations/hungary/corrective>` for the option limiting the deduction.
+
+The final invoice takes the :guilabel:`Delivery Address` of the sales order.
 
 Reports and customer portal
 ===========================

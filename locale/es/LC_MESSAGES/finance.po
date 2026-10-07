@@ -10035,7 +10035,7 @@ msgstr ":doc:`../accounting/customer_invoices/credit_notes`"
 msgid "Bill creation"
 msgstr "Creación de factura"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:23 ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:83
+#: ../../content/applications/finance/accounting/vendor_bills.rst:23 ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:87
 msgid "Manually"
 msgstr "Manualmente"
 
@@ -17683,111 +17683,123 @@ msgstr ":guilabel:`Tételek hozzáadása` (añadir artículos): enumera los prod
 msgid "Click :guilabel:`Kiállítás`. A draft pro-forma invoice opens with the customer, currency, payment terms, customer reference and bank account of the order, and a single line *Down payment* (translated to the language of the customer) for the requested gross amount with the taxes of the order lines. :ref:`Cash rounding <localizations/hungary/payment-terms>` is applied automatically."
 msgstr "Haga clic en :guilabel:`Kiállítás`. Se abre una factura proforma en borrador con el cliente, la divisa, los términos de pago, la referencia del cliente y la cuenta bancaria de la orden, y una única línea *Anticipo* (traducida al idioma del cliente) por el importe bruto solicitado con los impuestos de las líneas de la orden. El :ref:`redondeo de efectivo <localizations/hungary/payment-terms>` se aplica de forma automática."
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:78
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:70
+msgid "The :guilabel:`Delivery Address` of the pro-forma invoice is the customer's default delivery address. The printed pro-forma invoice shows the customer address only."
+msgstr "La :guilabel:`Dirección de entrega` de la factura proforma es la dirección de entrega predeterminada del cliente. La factura proforma impresa muestra la dirección del cliente."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:82
 msgid "Only one open pro-forma invoice can exist for an order: while a confirmed, unpaid pro-forma invoice exists, a new one can only be created after the previous one is cancelled. The :guilabel:`Díjbekérők` smart button of the sales order opens the related pro-forma invoices."
 msgstr "Solo puede existir una factura proforma abierta por orden: mientras exista una factura proforma confirmada y sin pagar, solo se puede crear una nueva después de cancelar la anterior. El botón inteligente :guilabel:`Díjbekérők` de la orden de venta abre las facturas proforma relacionadas."
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:85
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:89
 msgid "Go to :menuselection:`Accounting --> Customers --> Pro Forma Invoices` and click :guilabel:`New` to create a pro-forma invoice that is not linked to a sales order. Fill in the customer, the payment terms or due date, the :guilabel:`Bankszámla` (company bank account, mandatory) and the lines."
 msgstr "Vaya a :menuselection:`Contabilidad --> Clientes --> Facturas proforma` y haga clic en :guilabel:`Nuevo` para crear una factura proforma que no esté vinculada a ninguna orden de venta. Complete el cliente, los términos de pago o la fecha de vencimiento, la :guilabel:`Bankszámla` (cuenta bancaria de la empresa, obligatoria) y las líneas."
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:90
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:94
 msgid "Most field labels of the pro-forma invoice form are displayed in Hungarian in the current module version: :guilabel:`Ügyfél` (customer), :guilabel:`Díjbekérő dátuma` (date), :guilabel:`Fizetési hivatkozás` (payment reference), :guilabel:`Fizetési feltétel` (payment terms), :guilabel:`Díjbekérő tételek` (lines), :guilabel:`Előlegszámlák` (advance invoices), :guilabel:`Egyéb` (other information)."
 msgstr "La mayoría de las etiquetas de los campos del formulario de factura proforma se muestran en húngaro en la versión actual del módulo: :guilabel:`Ügyfél` (cliente), :guilabel:`Díjbekérő dátuma` (fecha), :guilabel:`Fizetési hivatkozás` (referencia de pago), :guilabel:`Fizetési feltétel` (términos de pago), :guilabel:`Díjbekérő tételek` (líneas), :guilabel:`Előlegszámlák` (facturas de anticipo), :guilabel:`Egyéb` (otra información)."
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:97
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:101
 msgid "Confirm and send"
 msgstr "Confirmar y enviar"
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:99
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:103
 msgid "Click :guilabel:`Confirm`. The pro-forma invoice gets its number and the status *Posted*; no journal entry is created."
 msgstr "Haga clic en :guilabel:`Confirmar`. La factura proforma obtiene su número y el estado *Posted*; no se crea ningún asiento contable."
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:101
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:105
 msgid "Click :guilabel:`Send & Print` to e-mail the PDF to the customer with the *Díjbekérő küldése* template (the text of the template is Hungarian), or to download it. :guilabel:`Preview` shows the document as the customer sees it in the portal."
 msgstr "Haga clic en :guilabel:`Enviar e imprimir` para enviar el PDF por correo al cliente con la plantilla *Díjbekérő küldése* (el texto de la plantilla está en húngaro), o para descargarlo. :guilabel:`Vista previa` muestra el documento tal como lo ve el cliente en el portal."
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:105
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:109
 msgid "The list opens with the :guilabel:`Nincs fizetve` (not paid) filter. The :guilabel:`Fizetés állapota` (payment status) of a pro-forma invoice is *Nincs fizetve* (not paid), *Részben fizetve* (partially paid), *Fizetés folyamatban* (in payment) or *Fizetve* (paid), depending on its advance invoices."
 msgstr "La lista se abre con el filtro :guilabel:`Nincs fizetve` (no pagada). El :guilabel:`Fizetés állapota` (estado de pago) de una factura proforma es *Nincs fizetve* (no pagada), *Részben fizetve* (pagada parcialmente), *Fizetés folyamatban* (en pago) o *Fizetve* (pagada), según sus facturas de anticipo."
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:110
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:114
 msgid "A draft or confirmed pro-forma invoice without advance invoice can be withdrawn with :guilabel:`Cancel`; it is then marked with a red :guilabel:`Revoked` ribbon. It cannot be reset to draft."
 msgstr "Una factura proforma en borrador o confirmada sin factura de anticipo se puede retirar con :guilabel:`Cancelar`; a continuación se marca con una cinta roja de :guilabel:`Revocado`. No se puede restablecer a borrador."
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:123
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:127
 msgid "Register the payment and issue the advance invoice"
 msgstr "Registrar el pago y emitir la factura de anticipo"
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:125
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:129
 msgid "When the money arrives, open the pro-forma invoice and click :guilabel:`Register Payment`. In the dialog (*Előlegszámla kiállítása és fizetés rögzítése*):"
 msgstr "Cuando llega el dinero, abra la factura proforma y haga clic en :guilabel:`Registrar pago`. En el cuadro de diálogo (*Előlegszámla kiállítása és fizetés rögzítése*):"
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:128
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:132
 msgid "adjust the :guilabel:`Bruttó összeg` (gross amount) of the lines if the customer paid only a part of the requested amount. The field is pre-filled with the amount not yet invoiced, so a pro-forma invoice can be paid in several installments;"
 msgstr "ajuste el :guilabel:`Bruttó összeg` (importe bruto) de las líneas si el cliente pagó solo una parte del importe solicitado. El campo aparece prellenado con el importe aún no facturado, de modo que una factura proforma se puede pagar en varios plazos;"
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:131
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:135
 msgid "select the :guilabel:`Bank napló` (bank or cash journal of the payment) and the :guilabel:`Számla napló` (sales journal of the advance invoice);"
 msgstr "seleccione el :guilabel:`Bank napló` (diario bancario o de efectivo del pago) y el :guilabel:`Számla napló` (diario de ventas de la factura de anticipo);"
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:133
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:137
 msgid "set the :guilabel:`Teljesítés időpontja` (fulfillment date): the day the payment was received;"
 msgstr "establezca la :guilabel:`Teljesítés időpontja` (fecha de cumplimiento): el día en que se recibió el pago;"
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:134
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:138
 msgid "check the payment terms and the payment method;"
 msgstr "compruebe los términos de pago y el método de pago;"
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:135
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:139
 msgid "keep or clear the :guilabel:`E-mail sablon` (e-mail template) to send or not to send the advance invoice to the customer (:guilabel:`Számla küldése`)."
 msgstr "conserve o borre la :guilabel:`E-mail sablon` (plantilla de correo) para enviar o no la factura de anticipo al cliente (:guilabel:`Számla küldése`)."
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:138
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:142
 msgid "Click :guilabel:`Kifizetés rögzítése`. In a single step, Odoo"
 msgstr "Haga clic en :guilabel:`Kifizetés rögzítése`. En un solo paso, Odoo"
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:140
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:144
 msgid "creates the advance invoice with today's invoice date and the given fulfillment and accounting date, with lines named after the pro-forma lines and the pro-forma number;"
 msgstr "crea la factura de anticipo con la fecha de factura de hoy y las fechas de cumplimiento y contables indicadas, con líneas nombradas según las líneas de la proforma y el número de proforma;"
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:142
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:146
 msgid "links the advance to the sales order, so that it is deducted on the final invoice;"
 msgstr "vincula el anticipo a la orden de venta, de modo que se descuenta en la factura final;"
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:143
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:147
 msgid "confirms the invoice, which is :doc:`reported to NAV <nav_online_invoice>`;"
 msgstr "confirma la factura, que se :doc:`comunica a la NAV <nav_online_invoice>`;"
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:144
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:148
 msgid "registers the payment and reconciles it with the invoice;"
 msgstr "registra el pago y lo concilia con la factura;"
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:145
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:149
 msgid "e-mails the paid advance invoice to the customer, if an e-mail template was selected."
 msgstr "envía por correo la factura de anticipo pagada al cliente, si se seleccionó una plantilla de correo."
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:147
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:151
+msgid "When the pro-forma invoice comes from a sales order, the advance invoice takes the :guilabel:`Delivery Address` selected on that order. A delivery address changed later on the pro-forma invoice stays on the pro-forma invoice. The fiscal position of the advance invoice remains the fiscal position of the pro-forma invoice. A pro-forma invoice created without a sales order uses the customer's default delivery address on the advance invoice as well."
+msgstr "Cuando la factura proforma proviene de una orden de venta, la factura de anticipo toma la :guilabel:`Dirección de entrega` seleccionada en esa orden. Una dirección de entrega modificada más tarde en la factura proforma permanece en la factura proforma. La posición fiscal de la factura de anticipo sigue siendo la posición fiscal de la factura proforma. Una factura proforma creada sin orden de venta usa también en la factura de anticipo la dirección de entrega predeterminada del cliente."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:158
 msgid "The advance invoices are listed in the :guilabel:`Előlegszámlák` tab of the pro-forma invoice, and the pro-forma invoice is shown in the :guilabel:`Díjbekérő` field of the :guilabel:`Related Invoices` tab of the advance invoice."
 msgstr "Las facturas de anticipo aparecen en la pestaña :guilabel:`Előlegszámlák` de la factura proforma, y la factura proforma se muestra en el campo :guilabel:`Díjbekérő` de la pestaña :guilabel:`Facturas relacionadas` de la factura de anticipo."
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:160
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:171
 msgid "Final invoice"
 msgstr "Factura final"
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:162
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:173
 msgid "Invoice the sales order as usual with :guilabel:`Create Invoice` once the goods are delivered or the service is performed. The advance invoices are deducted automatically; see :ref:`advance and final invoices <localizations/hungary/corrective>` for the option limiting the deduction."
 msgstr "Facture la orden de venta como de costumbre con :guilabel:`Create Invoice` una vez que se entreguen los bienes o se preste el servicio. Las facturas de anticipo se descuentan de forma automática; consulte :ref:`facturas de anticipo y finales <localizations/hungary/corrective>` para conocer la opción que limita el descuento."
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:167
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:177
+msgid "The final invoice takes the :guilabel:`Delivery Address` of the sales order."
+msgstr "La factura final toma la :guilabel:`Dirección de entrega` de la orden de venta."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:180
 msgid "Reports and customer portal"
 msgstr "Informes y portal del cliente"
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:169
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:182
 msgid "Two PDF reports are available in the :guilabel:`Print` menu: :guilabel:`Proformas` and :guilabel:`Proformas without Payment`. The document is titled *Pro Forma Invoice* (*Draft* or *Cancelled Pro Forma Invoice*) and shows the tax numbers of the customer, the dates, the payment method, the bank account and payment reference, the lines with net, VAT and gross amounts, and the exchange rate for foreign-currency documents."
 msgstr "Hay dos informes en PDF disponibles en el menú :guilabel:`Imprimir`: :guilabel:`Proformas` y :guilabel:`Proformas sin pago`. El documento se titula *Factura proforma* (*Borrador* o *Factura proforma cancelada*) y muestra los números fiscales del cliente, las fechas, el método de pago, la cuenta bancaria y la referencia de pago, las líneas con los importes neto, IVA y bruto, y el tipo de cambio para los documentos en divisa extranjera."
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:175
+#: ../../content/applications/finance/fiscal_localizations/hungary/proforma.rst:188
 msgid "Customers receive a secure link to the pro-forma invoice in the e-mail and can view and print it in the portal. Online payment of pro-forma invoices is not available."
 msgstr "Los clientes reciben un enlace seguro a la factura proforma en el correo y pueden verla e imprimirla en el portal. El pago en línea de las facturas proforma no está disponible."
 

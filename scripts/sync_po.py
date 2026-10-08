@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Sync Hungarian PO files with POT source templates.
+Sync PO files (Hungarian by default, or --lang ro etc.) with POT source templates.
 
 - Creates new .po files from .pot templates (msginit)
 - Updates existing .po files: adds new strings, marks obsolete (msgmerge)
@@ -12,6 +12,8 @@ Requires: brew install gettext
 Usage:
     python3 scripts/sync_po.py           # sync all
     python3 scripts/sync_po.py --dry-run # show what would change
+    python3 scripts/sync_po.py --lang ro # sync the Romanian catalogues (User Docs domains only)
+    python3 scripts/sync_po.py --lang ro --domain finance --domain hr
 """
 import argparse
 import shutil
@@ -27,10 +29,27 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCES_DIR = ROOT / "locale" / "sources"
-HU_DIR = ROOT / "locale" / "hu" / "LC_MESSAGES"
+LOCALE_DIR = ROOT / "locale"
+HU_DIR = LOCALE_DIR / "hu" / "LC_MESSAGES"  # kept for backward compatibility
 
 # POT files that don't need translation (build artifacts, not content)
 SKIP_POTS = {"last_build", "sphinx"}
+
+# Per-language profiles. "domains" None = every POT except "skip".
+LANG_PROFILES = {
+    "hu": {"team": "Hungarian", "skip": SKIP_POTS, "domains": None},
+    # Romanian covers the "User Docs" section only (applications/** + index) plus the
+    # theme/UI domain "sphinx"; administration, developer, contributing and legal are out.
+    "ro": {
+        "team": "Romanian",
+        "skip": {"last_build"},
+        "domains": {
+            "applications", "essentials", "finance", "general", "hr",
+            "inventory_and_mrp", "marketing", "productivity", "sales",
+            "services", "websites", "index", "sphinx",
+        },
+    },
+}
 
 
 def find_tool(name: str) -> str | None:
@@ -58,7 +77,11 @@ def count_entries(po_path: Path) -> dict:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Sync HU PO files with POT templates")
+    parser = argparse.ArgumentParser(description="Sync PO files with POT templates")
+    parser.add_argument("--lang", default="hu",
+                        help="Target language code (default: hu). Profiles: " + ", ".join(LANG_PROFILES))
+    parser.add_argument("--domain", action="append", dest="domains",
+                        help="Only sync this domain (repeatable, e.g. --domain finance)")
     parser.add_argument("--dry-run", action="store_true", help="Show what would change")
     args = parser.parse_args()
 
@@ -69,11 +92,25 @@ def main():
         print("ERROR: msgmerge not found. Install with: brew install gettext")
         sys.exit(1)
 
+    lang = args.lang
+    profile = LANG_PROFILES.get(lang, {
+        "team": lang, "skip": SKIP_POTS, "domains": None,
+    })
+    skip_pots = profile["skip"]
+    HU_DIR = LOCALE_DIR / lang / "LC_MESSAGES"  # target dir (name kept from the hu-only version)
     HU_DIR.mkdir(parents=True, exist_ok=True)
 
     pot_files = sorted(SOURCES_DIR.glob("*.pot"))
-    pot_names = {p.stem for p in pot_files} - SKIP_POTS
+    if profile["domains"] is not None:
+        pot_files = [p for p in pot_files if p.stem in profile["domains"]]
+    if args.domains:
+        pot_files = [p for p in pot_files if p.stem in set(args.domains)]
+    pot_names = {p.stem for p in pot_files} - skip_pots
     po_names = {p.stem for p in HU_DIR.glob("*.po")}
+    if profile["domains"] is not None:
+        po_names &= profile["domains"]  # out-of-scope catalogues are not orphans, just untouched
+    if args.domains:
+        po_names &= set(args.domains)
 
     # Report orphaned PO files (no matching POT)
     orphans = po_names - pot_names
@@ -84,7 +121,7 @@ def main():
     stats_rows = []
 
     for pot in pot_files:
-        if pot.stem in SKIP_POTS:
+        if pot.stem in skip_pots:
             continue
 
         po = HU_DIR / f"{pot.stem}.po"
@@ -98,7 +135,7 @@ def main():
 
             if msginit:
                 subprocess.run(
-                    [msginit, "--no-translator", "-l", "hu",
+                    [msginit, "--no-translator", "-l", lang,
                      "-i", str(pot), "-o", str(po)],
                     check=True, capture_output=True,
                 )
@@ -106,10 +143,10 @@ def main():
                 # Fallback: copy POT with header fixup
                 content = pot.read_text(encoding="utf-8")
                 content = content.replace(
-                    '"Language: \\n"', '"Language: hu\\n"'
+                    '"Language: \\n"', f'"Language: {lang}\\n"'
                 ).replace(
                     '"Language-Team: LANGUAGE <LL@li.org>\\n"',
-                    '"Language-Team: Hungarian <hu@li.org>\\n"',
+                    f'"Language-Team: {profile["team"]} <{lang}@li.org>\\n"',
                 )
                 po.write_text(content, encoding="utf-8")
 

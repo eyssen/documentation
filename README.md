@@ -42,7 +42,7 @@ The documentation is written in reStructuredText (`.rst`) format and can be gene
 
 ### Sitemap (`https://doc.eyssen.com/sitemap.xml`)
 
-Each `make html` pass rebuilds a single site-wide sitemap at `_build/html/sitemap.xml`. The generator walks the published HTML tree (English at the root, Hungarian under `hu/`) and writes absolute URLs under `https://doc.eyssen.com/`. Sphinx utility pages (`search.html`, `genindex.html`), `_static` artifacts, and redirect stubs are omitted.
+Each `make html` pass rebuilds a single site-wide sitemap at `_build/html/sitemap.xml`. The generator walks the published HTML tree (English at the root, Hungarian under `hu/`, Spanish under `es/`, Romanian under `ro/`) and writes absolute URLs under `https://doc.eyssen.com/`. Sphinx utility pages (`search.html`, `genindex.html`), `_static` artifacts, and redirect stubs are omitted.
 
 ### robots.txt (`https://doc.eyssen.com/robots.txt`)
 
@@ -53,9 +53,9 @@ still contain `User-agent` / `Allow` / `Sitemap`.
 
 ### Canonical URLs
 
-Production builds set `ROOT=https://doc.eyssen.com` and `IS_REMOTE_BUILD=True` by default (see `Makefile`). That makes `<link rel="canonical">` absolute under `https://doc.eyssen.com/…` via `conf.py` `_generate_alternate_urls` (same path the Odoo theme already supports). Each language is self-canonical (EN at `https://doc.eyssen.com/…`, HU at `/hu/…`, ES at `/es/…`) and every page carries the full symmetric hreflang set (`en` + `x-default` for the root, `hu`, `es`). Empty `IS_REMOTE_BUILD=` restores relative canonicals for local preview. Alias hosts such as `doc.eyssen.uk` must 301 to `.com` at the edge (Traefik/Cloudflare) — that is outside this repo.
+Production builds set `ROOT=https://doc.eyssen.com` and `IS_REMOTE_BUILD=True` by default (see `Makefile`). That makes `<link rel="canonical">` absolute under `https://doc.eyssen.com/…` via `conf.py` `_generate_alternate_urls` (same path the Odoo theme already supports). Each language is self-canonical (EN at `https://doc.eyssen.com/…`, HU at `/hu/…`, ES at `/es/…`, RO at `/ro/…`) and every page carries the full symmetric hreflang set (`en` + `x-default` for the root, `hu`, `es`, `ro`). Empty `IS_REMOTE_BUILD=` restores relative canonicals for local preview. Alias hosts such as `doc.eyssen.uk` must 301 to `.com` at the edge (Traefik/Cloudflare) — that is outside this repo.
 
-This is a post-build step (`scripts/generate_sitemap.py`) rather than `sphinx-sitemap`: languages are built in separate Makefile passes into different output directories, English is served without an `/en/` prefix, and `locale/` still contains unpublished languages. After `make html` then `make html CURRENT_LANG=hu`, the sitemap contains both `/` and `/hu/` URLs.
+This is a post-build step (`scripts/generate_sitemap.py`) rather than `sphinx-sitemap`: languages are built in separate Makefile passes into different output directories, English is served without an `/en/` prefix, and `locale/` still contains unpublished languages. After `make html` then `make html CURRENT_LANG=hu`, the sitemap contains both `/` and `/hu/` URLs (and `/es/`, `/ro/` once those passes are built).
 
 ### Hungarian translation
 
@@ -65,6 +65,15 @@ To work on the Hungarian translation:
 2.  Initialize or update the Hungarian PO files: `python3 scripts/init_hu_locale.py`
 3.  Edit the `.po` files in `locale/hu/LC_MESSAGES/` (e.g. with Poedit or a text editor)
 4.  Build the Hungarian documentation: `make html CURRENT_LANG=hu`
+
+### Romanian translation
+
+The Romanian (`ro`) catalogues cover the *User Docs* section only (`applications/**` and the front page): domains `applications`, `essentials`, `finance`, `general`, `hr`, `inventory_and_mrp`, `marketing`, `productivity`, `sales`, `services`, `websites`, `index` and `sphinx`. `administration`, `developer`, `contributing` and `legal` are not part of the Romanian scope.
+
+1.  Generate or update the POT files: `make gettext`
+2.  Sync the Romanian PO files with the POT templates: `python3 scripts/sync_po.py --lang ro` (add `--dry-run` to preview)
+3.  Machine-translate missing and fuzzy entries: `python3 scripts/translate_po.py --lang ro --file finance.po` (the glossary in `scripts/ro_glossary.md` is appended to the prompt automatically)
+4.  Build the Romanian documentation: `make html CURRENT_LANG=ro`
 
 > ℹ️ **Note on versions:** This repository focuses on the **Odoo 18.0** version. If you use version-switching related commands, make sure the `VERSIONS` parameter includes only the relevant versions, e.g. `VERSIONS=18.0`.
 
@@ -83,7 +92,7 @@ If found in these locations, the build process will incorporate Python docstring
 
 ### Troubleshooting
 
-* **Language switcher is empty:** Ensure both languages are built. Run `make html` first (English), then `make html CURRENT_LANG=hu` (Hungarian). The switcher links will then work in both directions. The same two-pass build is what fills `sitemap.xml` with both languages.
+* **Language switcher is empty:** Ensure both languages are built. Run `make html` first (English), then `make html CURRENT_LANG=hu` (Hungarian), and likewise `CURRENT_LANG=es` / `CURRENT_LANG=ro` for the other languages. The switcher links will then work in both directions. The same two-pass build is what fills `sitemap.xml` with both languages.
 * Check your Python version: `python3 --version` (should be 3.10–3.14)
 * Make sure your virtual environment is active and dependencies are installed.
 * If you have made changes to the file structure, try running `make clean` before building.

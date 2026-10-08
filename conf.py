@@ -232,6 +232,8 @@ locale_dirs = ['../locale/']
 # that case, so registering the English module under the `hu` name changes nothing but the warning.
 import docutils.parsers.rst.languages.en as _rst_lang_en  # noqa: E402
 sys.modules.setdefault('docutils.parsers.rst.languages.hu', _rst_lang_en)
+# Same for Romanian (`ro`), which docutils does not ship either.
+sys.modules.setdefault('docutils.parsers.rst.languages.ro', _rst_lang_en)
 templates_path = ['../extensions']
 
 # custom docname_to_domain to divide the translations of applications in subdirectories
@@ -488,7 +490,7 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
         # If the canonical version is not set, assume that the project has a single version
         canonical_version_ = app.config.canonical_version or app.config.version
         # eYssen: every language is self-canonical (EN at the root, HU under /hu/, ES under
-        # /es/). Upstream Odoo forces 'en' here, which made /hu/ and /es/ pages declare the
+        # /es/, RO under /ro/). Upstream Odoo forces 'en' here, which made /hu/ and /es/ pages declare the
         # English page as canonical and contradicted their hreflang annotations.
         canonical_lang_ = app.config.language or 'en'
         context['canonical'] = build_url(version_=canonical_version_, lang_=canonical_lang_)

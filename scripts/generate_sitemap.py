@@ -5,12 +5,14 @@ This project's Makefile builds languages in separate passes:
 
     make html                     # English  -> _build/html/
     make html CURRENT_LANG=hu     # Hungarian -> _build/html/hu/
+    make html CURRENT_LANG=es     # Spanish   -> _build/html/es/
+    make html CURRENT_LANG=ro     # Romanian  -> _build/html/ro/
 
 sphinx-sitemap is a poor fit here: each sphinx-build only sees one language,
 the default URL scheme would emit /en/ and /18.0/ prefixes that this site does
 not use, and locale_dirs still contains unpublished languages. Walking the
 published HTML after each pass produces a single sitemap at the site root
-covering whatever pages actually exist (EN, HU, or both).
+covering whatever pages actually exist (EN, HU, ES, RO or any subset).
 
 Usage:
     python3 scripts/generate_sitemap.py _build/html

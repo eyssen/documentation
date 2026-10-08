@@ -6,7 +6,7 @@
   // ===== SITE-KONFIG (csak ez a blokk tér el site-onként) =====
   var CFG = window.EY_UMAMI_CFG || {};
   // CFG.utmMode:      'consent' | 'always' | 'never'   (Odoo: 'consent'; docs + namostakkormivan: 'never', nincs consent-mechanizmus)
-  // CFG.langTag:      true = tag = <html lang> első 2 betűje (en/hu/es); false = nincs nyelvi tag
+  // CFG.langTag:      true = tag = <html lang> első 2 betűje (en/hu/es/ro); false = nincs nyelvi tag
   // CFG.odoo:         true = Odoo-specifikus kizárás + lead/form/verifactu/blog események
   // CFG.langSwitch:   CSS-szelektor a nyelvváltó linkekre, vagy null
   // ============================================================
@@ -73,7 +73,7 @@
   }
 
   function onReady() {
-    var p = CFG.odoo ? (location.pathname.replace(/^\/(?:en|hu|es)(?=\/|$)/, '') || '/') : location.pathname;
+    var p = CFG.odoo ? (location.pathname.replace(/^\/(?:en|hu|es|ro)(?=\/|$)/, '') || '/') : location.pathname;
 
     if (CFG.odoo) {
       var formName = p === '/verifactu' ? 'verifactu' : (p === '/contactus' || p === '/contact') ? 'contact' : 'other';
@@ -112,7 +112,7 @@
       if (!a || a.hasAttribute('data-umami-event')) return; // az attribútumos elemeket a tracker maga kezeli
       if (CFG.langSwitch && a.matches(CFG.langSwitch)) {
         var to = a.getAttribute('data-url_code') ||
-          ((new URL(a.href, location.href).pathname.match(/^\/(hu|es)(?=\/|$)/) || [])[1]) || 'en';
+          ((new URL(a.href, location.href).pathname.match(/^\/(hu|es|ro)(?=\/|$)/) || [])[1]) || 'en';
         track('language_switch', { from: LANG, to: to.slice(0, 2) });
         return;
       }
@@ -123,7 +123,7 @@
       if (/(^|\.)wa\.me$|(^|\.)whatsapp\.com$/.test(u.hostname)) { track('contact_direct_click', { channel: 'whatsapp' }); return; }
       if (u.hostname === location.hostname) {
         if (!CFG.odoo) return;
-        var path = u.pathname.replace(/^\/(?:en|hu|es)(?=\/|$)/, '') || '/';
+        var path = u.pathname.replace(/^\/(?:en|hu|es|ro)(?=\/|$)/, '') || '/';
         if (path === '/verifactu') track('verifactu_cta_click', { from: p });
         else if (path === '/contactus' || path === '/contact') track('contact_cta_click', { from: p });
         return;

@@ -13,9 +13,9 @@ ifndef CURRENT_LANG
   CURRENT_LANG = en
 endif
 
-# Default LANGUAGES for the language switcher (always include en, hu and es)
+# Default LANGUAGES for the language switcher (always include en, hu, es and ro)
 ifndef LANGUAGES
-  LANGUAGES = en,hu,es
+  LANGUAGES = en,hu,es,ro
 endif
 
 # Absolute canonical host for production HTML. Relative canonicals (the previous
@@ -82,7 +82,7 @@ html: $(HTML_BUILD_DIR)/_static/style.css compile-mo
 	@echo "Build finished."
 
 # Rebuild the site-wide sitemap from whatever HTML is already on disk.
-# English lives at $(BUILD_DIR)/html/; Hungarian at $(BUILD_DIR)/html/hu/.
+# English lives at $(BUILD_DIR)/html/; Hungarian at $(BUILD_DIR)/html/hu/, Spanish at .../es/, Romanian at .../ro/.
 # Running this after each language pass keeps https://doc.eyssen.com/sitemap.xml
 # in sync with both trees.
 sitemap:

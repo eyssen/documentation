@@ -44,7 +44,7 @@ msgstr ""
 
 #: ../../content/administration.rst:13
 msgid ":doc:`History of Versions <administration/supported_versions>`"
-msgstr ":doc:`Istoricul versiunilor <administrare/versiuni_suportate>`"
+msgstr ":doc:`Istoricul versiunilor <administration/supported_versions>`"
 
 #: ../../content/administration.rst:16
 #: ../../content/administration/on_premise/geo_ip.rst:9
@@ -64,7 +64,7 @@ msgid ""
 ":doc:`Online <administration/odoo_online>` is the easiest way to use Odoo in "
 "production or to try it."
 msgstr ""
-":doc:`Online <administrare/odoo_online>` este cel mai simplu mod de a "
+":doc:`Online <administration/odoo_online>` este cel mai simplu mod de a "
 "utiliza Odoo în producție sau de a-l încerca."
 
 #: ../../content/administration.rst:23
@@ -198,7 +198,7 @@ msgstr ""
 "pentru fiecare bază de date care ar trebui să fie upgradată. Dacă testul "
 "este reușit și durează mai puțin de 20 de minute, puteți declanșa direct "
 "upgrade-ul din baza de date. Dacă testul eșuează, puteți testa un upgrade "
-"folosind `managerul de baze de date <https://www.odoo.com/my/databases>`_."
+"folosind `managerul de baze de date <https://www.odoo.com/help-form>`_."
 
 #: ../../content/administration/hosting.rst:28
 #: ../../content/administration/hosting.rst:100
@@ -497,7 +497,7 @@ msgid ""
 msgstr ""
 "**Safari**: deschideți meniul **Partajare** atingând pătratul cu o săgeată "
 "în sus, selectați :guilabel:`Adăugați la ecranul de pornire`, editați "
-"detaliile PWA dacă doriți și atingeți :guilabel:`Adăugați `."
+"detaliile PWA dacă doriți și atingeți :guilabel:`Adăugați`."
 
 #: ../../content/administration/mobile.rst:42
 msgid ""
@@ -545,7 +545,7 @@ msgid ""
 msgstr ""
 "`Suport Microsoft: Instalați, gestionați sau dezinstalați aplicații în "
 "Microsoft Edge <https://support.microsoft.com/en-us/topic/install-manage-or-"
-"uninstall-apps-in-microsoft-edge-0c156575-a94a -45e4-a54f-3a84846f6113>`_"
+"uninstall-apps-in-microsoft-edge-0c156575-a94a-45e4-a54f-3a84846f6113>`_"
 
 #: ../../content/administration/mobile.rst:58
 msgid "Store apps"
@@ -557,9 +557,9 @@ msgid ""
 "<https://play.google.com/store/apps/details?id=com.odoo.mobile>`_ and `Apple "
 "App Store <https://apps.apple.com/app/odoo/id1272543640>`_."
 msgstr ""
-"Aplicațiile mobile Odoo sunt disponibile pentru descărcare din „Magazinul "
+"Aplicațiile mobile Odoo sunt disponibile pentru descărcare din `Magazinul "
 "Google Play <https://play.google.com/store/apps/details?"
-"id=com.odoo.mobile>`_ și „Magazinul de aplicații Apple <https:/ /"
+"id=com.odoo.mobile>`_ și `Magazinul de aplicații Apple <https://"
 "apps.apple.com/app/odoo/id1272543640>`_."
 
 #: ../../content/administration/mobile.rst:65
@@ -851,7 +851,7 @@ msgid ""
 "<https://www.odoo.com/help>`_."
 msgstr ""
 "Dacă un client dorește să schimbe datele de conectare, contactați asistența "
-"Odoo „aici <https://www.odoo.com/help>`_."
+"Odoo `aici <https://www.odoo.com/help>`_."
 
 #: ../../content/administration/odoo_accounts.rst:78
 msgid ""
@@ -906,8 +906,9 @@ msgstr ""
 "curentă în câmpul :guilabel:`Parolă`. Apoi, faceți clic "
 "pe :guilabel:`Confirmați parola`. După aceea, activați :abbr:`2FA "
 "(autentificare cu doi factori)` într-o aplicație :abbr:`2FA (autentificare "
-"cu doi factori)` (Google Authenticator, Authy etc.), prin scanarea codului "
-"QR :guilabel:` ` sau introducerea unui :guilabel:`Cod de verificare`."
+"cu doi factori)` (Google Authenticator, Authy etc.), prin "
+"scanarea :guilabel:`Cod QR` sau introducerea unui :guilabel:`Cod de "
+"verificare`."
 
 #: ../../content/administration/odoo_accounts.rst:98
 msgid ""
@@ -1124,7 +1125,7 @@ msgid ""
 "Databases are backed up daily as per the `Odoo Cloud Hosting SLA <https://"
 "www.odoo.com/cloud-sla>`_."
 msgstr ""
-"Se face backup zilnic pentru bazele de date conform „SLA Odoo Cloud Hosting "
+"Se face backup zilnic pentru bazele de date conform `SLA Odoo Cloud Hosting "
 "<https://www.odoo.com/cloud-sla>`_."
 
 #: ../../content/administration/odoo_online.rst:86
@@ -1262,7 +1263,7 @@ msgstr ":doc:`/applications/general/users`"
 
 #: ../../content/administration/odoo_online.rst:157
 msgid ":doc:`odoo_accounts`"
-msgstr ":doc:`conturi odoo`"
+msgstr ":doc:`odoo_accounts`"
 
 #: ../../content/administration/odoo_online.rst:162
 msgid "Web Services"
@@ -1686,7 +1687,7 @@ msgstr ""
 "aceeași server, și trebuie să garanțiem o parte echitabilă a server-ului "
 "pentru orice client. Acțiunile programate sunt, prin urmare, implementate "
 "ușor diferit decât pe un server Odoo obișnuit, și sunt rulate pe o politică "
-"de \"best effort\"."
+"de \"*best effort*\"."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:16
 msgid ""
@@ -2060,7 +2061,7 @@ msgstr "*my_module* este numele modulului."
 
 #: ../../content/administration/odoo_sh/first_module.rst:24
 msgid "Replace these by the values of your choice."
-msgstr "*Înlocuiți aceste valori cu ale dvs. alegere."
+msgstr "Înlocuiți aceste valori cu cele alese de dvs."
 
 #: ../../content/administration/odoo_sh/first_module.rst:27
 msgid "Create the development branch"
@@ -2660,7 +2661,9 @@ msgstr "**Extensiile PostgreSQL** nu sunt acceptate pe Odoo.sh."
 msgid ""
 "For more information, consult our `FAQ <https://www.odoo.sh/"
 "faq#install_dependencies>`_."
-msgstr "Pentru mai multe informații, consultați `FAQ-ul_."
+msgstr ""
+"Pentru mai multe informații, consultați `FAQ <https://www.odoo.sh/"
+"faq#install_dependencies>`_."
 
 #: ../../content/administration/odoo_sh/first_module.rst:441
 msgid ""
@@ -5823,7 +5826,7 @@ msgid ""
 "will be displayed."
 msgstr ""
 "Verificați că **nicio bază de date nu are același UUID** (identificator unic "
-"universal) deschizând „Contractul Odoo <https://accounts.odoo.com/my/"
+"universal) deschizând `Contractul Odoo <https://accounts.odoo.com/my/"
 "subscription>`_. Dacă două sau mai multe baze de date au același UUID, "
 "numele lor va fi afișat."
 
@@ -6349,7 +6352,7 @@ msgid ""
 "The :doc:`packaged installers <packages>` will automatically create a new "
 "user (``odoo``) and set it as the database user."
 msgstr ""
-":doc:`pachetele de instalare <pachetele>` vor crea automat un nou utilizator "
+":doc:`pachetele de instalare <packages>` vor crea automat un nou utilizator "
 "(``odoo``) și îl vor seta ca utilizator al bazei de date."
 
 #: ../../content/administration/on_premise/deploy.rst:129
@@ -6647,7 +6650,7 @@ msgid ""
 "Enable Odoo's :option:`proxy mode <odoo-bin --proxy-mode>`. This should only "
 "be enabled when Odoo is behind a reverse proxy"
 msgstr ""
-"Activați :option:`modulul proxy <odoo-bin --proxy-mode>` al Odoo. Acesta ar "
+"Activați :option:`proxy mode <odoo-bin --proxy-mode>` al Odoo. Acesta ar "
 "trebui să fie activat numai atunci când Odoo este în spatele unui reverse "
 "proxy"
 
@@ -6777,7 +6780,7 @@ msgstr ""
 "Pe sistemele asemănătoare Linux, se recomandă utilizarea serverului multi-"
 "procesare peste cel multi-threading pentru a beneficia de o utilizare mai "
 "bună a hardware-ului și de o stabilitate sporită, adică "
-"utilizarea :option:`--workers=-1 <odoo-bin -- worker>` și :option:`--max-"
+"utilizarea :option:`--workers=-1 <odoo-bin --workers>` și :option:`--max-"
 "cron-threads=n <odoo-bin --max-cron-threads>` opțiuni cli."
 
 #: ../../content/administration/on_premise/deploy.rst:415
@@ -6811,7 +6814,7 @@ msgstr ""
 "serverul cron și asigură-te că cererile a căror cale începe cu ``/websocket/"
 "`` sunt direcționate către acest server, fie pe :option:`--http-port <odoo-"
 "bin --http-port>` (server multi-threading), fie pe :option:`--gevent-port "
-"<odoo-bin --gevent-port >` (server multi-procesare)."
+"<odoo-bin --gevent-port>` (server multi-procesare)."
 
 #: ../../content/administration/on_premise/deploy.rst:430
 msgid "Serving static files and attachments"
@@ -6864,9 +6867,8 @@ msgid ""
 "Using the above NGINX (https) configuration, the following ``map`` and "
 "``location`` blocks should be added to serve static files via NGINX."
 msgstr ""
-"Folosind configurația NGINX (https) de mai sus, următoarele blocuri "
-"``hartă`` și ``locație`` ar trebui adăugate pentru a servi fișiere statice "
-"prin NGINX."
+"Folosind configurația NGINX (https) de mai sus, următoarele blocuri ``map`` "
+"și ``location`` ar trebui adăugate pentru a servi fișiere statice prin NGINX."
 
 #: ../../content/administration/on_premise/deploy.rst:475
 msgid ""
@@ -6889,7 +6891,7 @@ msgid ""
 msgstr ""
 "Să presupunem că Odoo a fost instalat prin **pachetele Debian** pentru "
 "Community și Enterprise și că :option:`--addons-path <odoo-bin --addons-"
-"path>` este ``'/usr/lib/ python3/dist-packages/odoo/addons'``."
+"path>` este ``'/usr/lib/python3/dist-packages/odoo/addons'``."
 
 #: ../../content/administration/on_premise/deploy.rst:488
 #: ../../content/administration/on_premise/deploy.rst:502
@@ -6912,7 +6914,7 @@ msgstr ""
 "Community și Enterprise au fost clonate în :file:`/opt/odoo/community` și, "
 "respectiv, :file:`/opt/odoo/enterprise` și că :option:`--addons-path <odoo-"
 "bin --addons-path>` este ``'/opt/odoo/community/odoo/addons,/opt/odoo/"
-"community/addons,/opt/odoo /întreprindere'``."
+"community/addons,/opt/odoo/enterprise'``."
 
 #: ../../content/administration/on_premise/deploy.rst:510
 msgid "Serving attachments"
@@ -7912,10 +7914,9 @@ msgid ""
 "dev.maxmind.com/geoip/geoip2/geolite2/>`_. You should end up with two files "
 "called :file:`GeoLite2-City.mmdb` and :file:`GeoLite2-Country.mmdb`."
 msgstr ""
-"Descărcați atât bazele de date GeoLite2 pentru orașe, cât și pentru țări "
-"<https://dev.maxmind.com/geoip/geoip2/geolite2/>`_. Ar trebui să ajungeți cu "
-"două fișiere numite :file:`GeoLite2-City.mmdb` și :file:`GeoLite2-"
-"Country.mmdb`."
+"Descărcați atât `bazele de date <https://dev.maxmind.com/geoip/geoip2/"
+"geolite2/>`_ GeoLite2 City, cât și Country. Ar trebui să ajungeți cu două "
+"fișiere numite :file:`GeoLite2-City.mmdb` și :file:`GeoLite2-Country.mmdb`."
 
 #: ../../content/administration/on_premise/geo_ip.rst:15
 msgid "Move the files to the folder :file:`/usr/share/GeoIP/`."
@@ -7934,7 +7935,7 @@ msgid ""
 "file and use it as the GeoIP database. For example:"
 msgstr ""
 "Dacă nu doriți să localizați baza de date geoip în :file:`/usr/share/GeoIP/"
-"`, utilizați :option:`--geoip-city-db <odoo-bin --geoip-city-db> ` "
+"`, utilizați :option:`--geoip-city-db <odoo-bin --geoip-city-db>` "
 "și :option:`--geoip-country-db <odoo-bin --geoip-country-db>` ale interfeței "
 "liniei de comandă Odoo. Aceste opțiuni iau calea absolută către fișierul "
 "bazei de date GeoIP și o folosesc ca bază de date GeoIP. De exemplu:"
@@ -8006,7 +8007,7 @@ msgid ""
 "proxy-mode>`."
 msgstr ""
 "Utilizați un proxy invers (apache, nginx) în fața lui Odoo, dar nu ați "
-"pornit Odoo cu modul proxy activat. Vezi :option:`mod proxy <odoo-bin --"
+"pornit Odoo cu modul proxy activat. Vezi :option:`proxy mode <odoo-bin --"
 "proxy-mode>`."
 
 #: ../../content/administration/on_premise/geo_ip.rst:62
@@ -8232,7 +8233,7 @@ msgstr ""
 "Descărcați programul de instalare de pe `serverul nightly <https://"
 "nightly.odoo.com>`_ (numai pentru comunitate) sau programul de instalare "
 "Windows de pe `pagina de descărcare Odoo <https://www.odoo.com/page/"
-"download> `_ (orice ediție."
+"download>`_ (orice ediție."
 
 #: ../../content/administration/on_premise/packages.rst:158
 msgid "Execute the downloaded file."
@@ -8252,7 +8253,7 @@ msgid ""
 "Accept the `UAC <https://en.wikipedia.org/wiki/User_Account_Control>`_ "
 "prompt."
 msgstr ""
-"Acceptați solicitarea „UAC <https://en.wikipedia.org/wiki/"
+"Acceptați solicitarea `UAC <https://en.wikipedia.org/wiki/"
 "User_Account_Control>`_."
 
 #: ../../content/administration/on_premise/packages.rst:165
@@ -8510,7 +8511,7 @@ msgstr ""
 "Pentru a face disponibile instrumentele din linia de comandă incluse în "
 "Postgres.app, asigurați-vă că ați configurat variabila `$PATH` urmând "
 "instrucțiunile instrumentelor CLI `Postgres.app <https://postgresapp.com/"
-"documentation/cli-tools.html >`_."
+"documentation/cli-tools.html>`_."
 
 #: ../../content/administration/on_premise/source.rst:223
 msgid ""
@@ -8535,7 +8536,7 @@ msgid ""
 "\\PostgreSQL\\\\<version>\\\\bin`) to the `PATH`."
 msgstr ""
 "Adăugați directorul `bin` al PostgreSQL (în mod implicit: :file:`C:\\"
-"\\Program Files\\\\PostgreSQL\\\\<versiunea>\\\\bin`) în `PATH`."
+"\\Program Files\\\\PostgreSQL\\\\<version>\\\\bin`) în `PATH`."
 
 #: ../../content/administration/on_premise/source.rst:243
 msgid "Create a postgres user with a password using the pg admin gui:"
@@ -9674,7 +9675,7 @@ msgid ""
 msgstr ""
 "Platforma Upgrade urmează aceeași `Politică de confidențialitate <https://"
 "www.odoo.com/privacy>`_ ca și celelalte servicii Odoo.com. Vizitați pagina "
-"„Regulamentul general privind protecția datelor <https://www.odoo.com/"
+"`Regulamentul general privind protecția datelor <https://www.odoo.com/"
 "gdpr>`_ pentru a afla mai multe despre modul în care Odoo vă gestionează "
 "datele și confidențialitatea."
 
@@ -9940,7 +9941,7 @@ msgid ""
 "etc.). This is the folder that should be merged with the production "
 "filestore in order to get the full upgraded filestore."
 msgstr ""
-"Un folder „magazin de fișiere” care conține fișiere extrase din "
+"Un folder `magazin de fișiere` care conține fișiere extrase din "
 "înregistrările din baza de date în atașamente (dacă există) și noi fișiere "
 "standard Odoo din versiunea Odoo vizată (de exemplu, imagini noi, "
 "pictograme, sigle ale furnizorului de plăți etc.). Acesta este folderul care "

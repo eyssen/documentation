@@ -1,0 +1,207 @@
+.. _localizations/romania/d300:
+
+=========================
+D300 VAT return and e-TVA
+=========================
+
+The :guilabel:`Romania - D300 VAT Return (Decont de TVA)` (`l10n_ro_d300`) module prepares the
+Romanian VAT return, form **D300** (*Decont de taxă pe valoarea adăugată*), in the model of
+**OPANAF 174/2026**, which applies to the periods from January 2026. The return is computed from
+the posted journal items of the period, validated, and exported as the XML file that is filed with
+:abbr:`ANAF (Agenția Națională de Administrare Fiscală)`. The module also compares the return with
+the pre-filled VAT return that ANAF prepares for the taxpayer in the **RO e-TVA** system.
+
+This page describes the specific features of the D300. The general flow of the Romanian
+declarations (statuses, deadlines, DUK validation, filing) is described in
+:doc:`declarations`.
+
+Configuration
+=============
+
+:ref:`Install <general/install>` the :guilabel:`Romania - D300 VAT Return (Decont de TVA)` module.
+Then check, in :menuselection:`Accounting --> Configuration --> Settings`, section :guilabel:`Romanian
+ANAF Declarations` (see :ref:`localizations/romania/declarations/configuration`):
+
+- the **declarant** (last name, first name, position): mandatory;
+- the **main CAEN code** of the company: 4 digits, mandatory;
+- the **VAT period** of the company, which is proposed as the period type of new returns;
+- the **bank account** printed on the return, with a bank name: the D300 requires the bank and the
+  account number. If the field is empty, the first bank account of the company is used;
+- the :guilabel:`Tax ID` of the company, with the `RO` prefix if the company is registered for VAT.
+
+The taxes used on the invoices must belong to the Romanian chart of accounts or be linked to a
+:ref:`Romanian tax code <localizations/romania/declarations/configuration>`, otherwise their
+amounts cannot be placed in a row of the return.
+
+.. note::
+   The taxes with a partial deduction (for example, 50% for vehicles) are handled as described in
+   :doc:`nondeductible_vat`. The return reports the full VAT of these purchases in the purchase
+   rows 20 to 28 and subtracts the non-deductible part in row 31.
+
+Prepare the VAT return
+======================
+
+#. Go to :menuselection:`Accounting --> Romania (ANAF) --> Declarations --> D300 VAT Return` and
+   click :guilabel:`New`.
+#. Set the :guilabel:`Period Type` (:guilabel:`Month`, :guilabel:`Quarter`, :guilabel:`Semester` or
+   :guilabel:`Year`), the :guilabel:`Year` and the :guilabel:`Period` number. The form shows the
+   dates of the period and the :guilabel:`Deadline` (the 25th of the following month, moved to the
+   next working day).
+#. Click :guilabel:`Compute`. The :guilabel:`Rows` tab is filled in, and the findings are listed in
+   the :guilabel:`Validation` tab.
+#. Review the rows (see below) and fill in the data that cannot be computed.
+#. Optionally, :ref:`reconcile the return with RO e-TVA <localizations/romania/d300/etva>`.
+#. Click :guilabel:`Validate`, then :guilabel:`Export XML`, file the return, and click
+   :guilabel:`Mark as Submitted`, as described in :doc:`declarations`.
+
+.. note::
+   A new return for a period before January 2026 can be computed, but it cannot be validated or
+   exported: the module contains the D300 model of OPANAF 174/2026 only. Periods before 2026 must be
+   filed with the model in force at the time.
+
+How the rows are computed
+-------------------------
+
+The return takes the **posted journal items** whose accounting date falls in the period and whose
+VAT is **exigible**. For the taxes with *VAT on payment* (*TVA la încasare*), the amount is reported
+through the cash basis entries, in the period of the payment.
+
+For each journal item and tax, Odoo finds the row in this order:
+
+#. a **tax mapping rule** of the form D300 that matches the tax;
+#. otherwise the **D300 tax grids** of the Romanian chart of accounts (for example, `09 - TAX BASE`
+   or `26_1 - VAT`);
+#. otherwise the **Romanian tax code** of the tax.
+
+If none applies, a message with the code `TAX_UNMAPPED` is added and the amount is not reported.
+The result of every row is rounded to whole lei.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
+
+   * - Rows
+     - Treatment
+   * - Operation rows (for example 1 to 11, 13 to 18, 20 to 25, 29 and 33)
+     - **Computed** from the accounting. The amounts can be corrected with the adjustment columns.
+   * - Totals: 12, 19, 26, 30, 31, 35, 36, 37, 40, 43, 44, 45
+     - **Computed** with the formulas of the form from the other rows. They cannot be edited, except
+       the VAT of row 31 (:guilabel:`VAT Adjustment`). Row 31 is row 30 minus the
+       :guilabel:`Non-deductible VAT` of the period.
+   * - Row 41 (negative balance carried over)
+     - **Automatic**: row 45 of the previous filed return, if no refund was requested for it.
+       Adjustable.
+   * - Row 38 (VAT payable balance of the previous return not paid at the filing date)
+     - **Manual**: enter it in the :guilabel:`VAT Adjustment` column.
+   * - Rows 39 and 42 (differences established by the tax authorities by communicated decision)
+     - **Manual**: enter them in the :guilabel:`VAT Adjustment` column.
+   * - Rows 32 (VAT refunded to foreign buyers) and 34 (pro-rata and capital goods adjustments)
+     - Not fed by the taxes of the standard chart of accounts: enter them in the
+       :guilabel:`VAT Adjustment` column if they apply.
+   * - Blocks A, A1, B, B1 (VAT on payment: supplies not yet chargeable and purchases whose
+       deduction was not exercised, at the end of the period)
+     - **Computed** from the open cash basis documents, in the :guilabel:`Supplementary
+       Information` tab. They can be corrected.
+   * - Invoice counters and totals of the :guilabel:`Invoices` group
+     - **Manual**, see below.
+
+The columns of the :guilabel:`Rows` tab are the base (:guilabel:`Base (col. 1)`) and the VAT
+(:guilabel:`VAT (col. 2)`) of each row, with the :guilabel:`Base Adjustment` and :guilabel:`VAT
+Adjustment` columns in which you type the manual corrections. The columns :guilabel:`Base
+(accounting)` and :guilabel:`VAT (accounting)` (hidden by default; use the optional columns menu)
+show the amounts computed from the accounting before the adjustment. Adjustments are kept when the
+return is recomputed.
+
+To see where an amount comes from, click the :guilabel:`Audit` button at the top of the return or
+the magnifier icon at the end of a row: it lists the journal items, taxes and sources (mapping rule,
+tax grid or tax code) behind the row. The list icon opens the journal items.
+
+Fill in the data that is not computed
+-------------------------------------
+
+Rows 32, 34, 38, 39 and 42
+   Type the amounts in the :guilabel:`VAT Adjustment` column of the row. Rows 38 and 41 cannot both
+   be filled in.
+
+Header data
+   On the :guilabel:`Header` tab, check the :guilabel:`Bank Account`, the :guilabel:`CAEN Code` and
+   the :guilabel:`Deduction Pro Rata (%)` (pro rata of art. 300 of the Fiscal Code; 0 when it does
+   not apply). Tick :guilabel:`Request Refund` to claim the negative balance of row 45 (allowed for
+   a balance of at least 5,000 lei). The :guilabel:`Payment Reference` (*număr de evidență a
+   plății*) is computed. The groups :guilabel:`Reverse Charge Supplies in the Period` and
+   :guilabel:`Special Situations` contain the options of the form, for example :guilabel:`Simplified
+   Method for Domestic Operations`, :guilabel:`Consolidated Return of a Fiscal Group` and
+   :guilabel:`Successor Fiscal Code`.
+
+Invoice counters
+   On the :guilabel:`Supplementary Information` tab, group :guilabel:`Invoices`, enter the number
+   of invoices issued and received and their base and VAT (:guilabel:`Invoices Issued (count)`,
+   :guilabel:`Invoices Issued: Base`, :guilabel:`Invoices Issued: VAT`, and the same for the
+   invoices received), and, if the VAT code was cancelled during the period, the invoices issued
+   in that time. The group :guilabel:`Services to Non-taxable Persons in Other Member States` holds
+   the totals of the previous and of the current year. Odoo does not compute these figures. Those
+   of the first two lines are part of the control sum of the XML file.
+
+Checks
+------
+
+The validation of the return includes the rules of ANAF's own checks. The main ones are:
+
+- the **self-assessed rows equal their deductible rows** (for example, row 20 equals row 5 and row
+  26 equals row 12), and the "of which" rows cannot exceed their parent row;
+- row 31 cannot exceed row 30, rows 38 and 41 cannot both be filled in, and the refund can be
+  requested only for a negative balance (row 45) of at least 5,000 lei;
+- for the rows with a VAT rate (9, 10, 11, 12.1, 12.2, 24, 25, 26.1, 26.2), the VAT must be within
+  the rate +/- 1 percentage point of the base (warning);
+- the bank account, the CAEN code and the declarant must be filled in, and the pro rata must be
+  between 0 and 100;
+- a company without the `RO` prefix in its Tax ID gets a warning.
+
+A rectificative return (:guilabel:`Create Rectificative`) is a new return for the same period with
+version 2 or more. The D300 XML has no rectification flag: ANAF records a new return for the same
+period as a correction, so file it as such.
+
+.. _localizations/romania/d300/etva:
+
+Reconciliation with RO e-TVA
+============================
+
+*RO e-TVA* is the ANAF system that prepares, for every VAT payer, a **pre-filled VAT return** (the
+*P300*) from the data reported by the taxpayer and its partners. ANAF compares it with the return
+that the taxpayer files. Odoo helps to find the differences **before** the return is filed.
+
+Odoo does not download the pre-filled return from ANAF. Obtain the values yourself, then:
+
+#. Compute the return, then click :guilabel:`Import e-TVA` (available when the return is not in
+   the :guilabel:`Draft` status). The :guilabel:`Import RO e-TVA (P300)` window opens.
+#. Upload the values of the pre-filled return in one of these formats:
+
+   - an **XML** file that uses the names of the D300 fields (`R9_1`, `R9_2`...), for example the XML
+     of a D300 or of the P300;
+   - a **CSV** or text file with one row per line: the row number (`9`, `12.1`, `rd. 26.2`), then
+     the base and the VAT, separated by `;`, `,` or a tab. Header lines are ignored.
+
+#. Click :guilabel:`Import`. The values replace those of all the rows: a row that is not in the file
+   is set to zero. A message in the chatter gives the number of rows read and the number of
+   significant differences.
+#. Click the :guilabel:`e-TVA Differences` button at the top of the return. The reconciliation list
+   shows, for each row, the amount of the return, the :guilabel:`e-TVA Base` and :guilabel:`e-TVA
+   VAT`, and the :guilabel:`Base Difference` and :guilabel:`VAT Difference`. The e-TVA values can
+   also be typed directly in this list.
+
+A difference is marked as :guilabel:`Significant Difference` (red line) when it reaches **both** 20%
+and 5,000 lei, measured on the VAT column or, for the rows without VAT, on the base. This is the
+threshold at which ANAF sends an e-TVA compliance notification, which must be answered within 20
+days. Use the filters :guilabel:`Significant Differences` and :guilabel:`Any Difference` to find
+the rows to check.
+
+For each difference, check the documents behind the row with the audit icon. If the cause is a wrong
+or missing document, correct the accounting and click :guilabel:`Recompute`; if the return is right,
+keep the difference and be ready to explain it. The imported e-TVA values are kept when the return is
+recomputed.
+
+.. seealso::
+   - :doc:`declarations`
+   - :doc:`d390`
+   - :doc:`d394`
+   - :doc:`nondeductible_vat`

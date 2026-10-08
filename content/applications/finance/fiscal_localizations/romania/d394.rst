@@ -1,0 +1,238 @@
+.. _localizations/romania/d394:
+
+==========================
+D394 informative statement
+==========================
+
+The :guilabel:`Romania - D394 Informative Statement (Domestic Supplies and Acquisitions)`
+(`l10n_ro_d394`) module prepares the **D394** (*Declarația informativă privind livrările/prestările
+și achizițiile efectuate pe teritoriul național*), which lists the domestic supplies and
+acquisitions of the company per partner, operation type and VAT rate. The module follows the model
+of **OPANAF 3769/2015 as replaced by OPANAF 2194/2025**, which applies to the operations from
+**August 2025**. The statement is computed from the posted invoices, bills and credit notes of the
+period, validated, and exported as the XML file filed with
+:abbr:`ANAF (Agenția Națională de Administrare Fiscală)`.
+
+This page describes the specific features of the D394. The general flow of the Romanian
+declarations (statuses, deadlines, DUK validation, filing) is described in
+:doc:`declarations`.
+
+Configuration
+=============
+
+:ref:`Install <general/install>` the :guilabel:`Romania - D394 Informative Statement (Domestic
+Supplies and Acquisitions)` module, which installs the :doc:`D300 <d300>` module as a dependency.
+The statement is only available for companies whose fiscal country is Romania. If the *Point of
+Sale* app is installed, its receipts are used for the cash register section.
+
+Company data
+------------
+
+Fill in the company data of the :ref:`declarations <localizations/romania/declarations/configuration>`:
+the declarant, the main CAEN code (mandatory), the phone number of the company (mandatory in the
+D394), and, if the company has a fiscal representative, the representative. Then go to
+:menuselection:`Accounting --> Configuration --> Settings`, section :guilabel:`Romanian ANAF
+Declarations`, setting :guilabel:`Informative Statement D394`, and fill in the data of the person who
+**prepares** the statement (*întocmit*):
+
+- :guilabel:`D394 Prepared By`: :guilabel:`Legal person` (for example, an accounting firm) or
+  :guilabel:`Individual`;
+- :guilabel:`Preparer Name` and :guilabel:`Preparer CUI/CNP`: if they are empty, the declarant is
+  used. The code is checked (control digit);
+- :guilabel:`Preparer Capacity` (*calitate*, for example *expert contabil*): mandatory for a legal
+  person;
+- :guilabel:`Preparer Position`: for an individual, the position in the company (if empty, the
+  position of the declarant is used);
+- :guilabel:`D394: Partners May Consult Transactions`: the option by which every VAT-registered
+  partner may consult, through the ANAF application, the transactions declared with it. Once given
+  for a fiscal year, it cannot be withdrawn.
+
+These values are copied to each new statement, where they can be changed (:guilabel:`Declarant` tab).
+
+Master data
+-----------
+
+The quality of the D394 depends on the data of the partners, products and invoices.
+
+Partners
+   The :guilabel:`D394 Partner Type` of a contact (next to the CNP) decides in which part of the
+   statement the partner is reported. If it is empty, Odoo derives it: a Romanian Tax ID with the
+   `RO` prefix, or a VAT payer in the ANAF register, is type 1; a Romanian partner not registered
+   for VAT, and individuals, are type 2; a company of another EU member state is type 3; a company
+   outside the EU is type 4. Set the field only to override this rule. Individuals (type 2) need the
+   CNP or, without a CNP, the country, city, county and street of the address.
+
+Products and product categories
+   The :guilabel:`D394 Goods Code` of a product (:guilabel:`General Information` tab) or of its
+   category categorizes the goods and services of the domestic reverse charge (cereals by NC code,
+   waste, wood, certificates, electricity, natural gas, buildings and land, investment gold, mobile
+   phones, microprocessors, consoles, tablets and laptops), and the nature of the acquisitions from
+   individuals (land, buildings, other goods, services). If the product has no code, the code of its
+   closest category is used. The code is mandatory for the reverse charge operations (`V` and `C`)
+   with Romanian partners and for the acquisitions from individuals without a code (`34` goods and
+   `35` services are used by default); the codes for mobile phones, microprocessors and consoles are
+   also detailed on the normal taxable operations.
+
+Invoices
+   In the :guilabel:`Accounting` group of the :guilabel:`Other Info` tab of the invoice,
+   :guilabel:`D394 Document Type` tells
+   whether the document is an invoice, a simplified invoice, a fiscal receipt qualifying as
+   simplified invoice, a purchase slip (*borderou*), a sheet of the agricultural sales book, a
+   contract or another document. Simplified invoices and receipts are reported in totals per VAT
+   rate; purchase slips, sales book sheets and contracts document the acquisitions from individuals.
+   :guilabel:`D394 Issued By` indicates who issued the document (the company, the customer or a
+   third party on behalf of the company, or the company on behalf of the supplier: self-billing); for
+   a third party, select the :guilabel:`D394 Issuer`. On vendor bills, :guilabel:`Supplier VAT on
+   Payment (at posting)` records whether the supplier applied VAT on payment when the bill was
+   posted, so that a later change of the supplier does not alter past statements.
+
+Taxes
+   The D394 treatment of a tax comes from its Romanian tax code (field :guilabel:`D394 Treatment`):
+   *Taxable* (`L`, `A` or `AI`), *Domestic reverse charge* (`V` and `C`), *Special scheme* (`LS`
+   and `AS`), or *Not reported in D394* (intra-Community operations, which belong to the
+   :doc:`D390 <d390>`, exports, imports, exempt and non-taxable operations). Acquisitions from
+   persons not registered for VAT are always reported as `N`.
+
+Invoice ranges
+   The D394 reports the ranges of invoice numbers allocated by internal decision. Create them in
+   :menuselection:`Accounting --> Romania (ANAF) --> Configuration --> D394 Invoice Ranges`: the
+   :guilabel:`Series`, the :guilabel:`From Number` and :guilabel:`To Number`, the journal, the
+   :guilabel:`Allocated On` date and the :guilabel:`Used Until` date. Without a range, the statement
+   uses the ranges actually issued and shows a warning.
+
+Prepare the D394
+================
+
+#. Go to :menuselection:`Accounting --> Romania (ANAF) --> Declarations --> D394 Informative
+   Statement` and click :guilabel:`New`.
+#. Choose the :guilabel:`Period Type` (:guilabel:`Month`, :guilabel:`Quarter`, :guilabel:`Semester`
+   or :guilabel:`Year`), the year and the period. The :guilabel:`Deadline` is the 30th of the month
+   following the period, moved to the next working day.
+#. Click :guilabel:`Compute`. A period before August 2025 can be computed, but a warning reminds you
+   that it belongs to the previous model.
+#. Review the tabs described below and complete the manual data.
+#. Click :guilabel:`Validate`, then :guilabel:`Export XML`, file the statement, and click
+   :guilabel:`Mark as Submitted`, as described in :doc:`declarations`.
+
+The documents are selected by date: the **customer invoices and credit notes issued** in the period
+(invoice date) and the **vendor bills received** in the period (accounting date), whatever the
+exigibility of the VAT. The amounts are rounded to whole lei per operation. An invoice with several
+rates is counted once, on the rate with the highest VAT.
+
+What is in the statement
+------------------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 22 78
+
+   * - Tab
+     - Content
+   * - :guilabel:`Operations`
+     - One line per partner, operation type and VAT rate (`L`, `LS`, `A`, `AI`, `AS`, `V`, `C`,
+       `N`), with the partner type, the partner code, the number of invoices, the taxable base and
+       the VAT. The document icon opens the invoices and the list icon opens the journal items.
+       Below the lines, the number of partners of each type.
+   * - :guilabel:`Summaries`
+     - The totals per partner type and VAT rate, with the goods details of the reverse charge and
+       of the acquisitions from individuals, and the totals per VAT rate, including the simplified
+       invoices and the receipts. They are computed from the operations: click :guilabel:`Refresh
+       Summaries` after editing the operations (the validation does it too).
+   * - :guilabel:`Invoice Series`
+     - The allocated ranges, the invoices issued in the period, and those issued by customers or
+       third parties, then the credit notes, cancelled invoices and self-billed invoices.
+   * - :guilabel:`Cash Registers`
+     - The monthly totals of the receipts of the fiscal cash registers (point of sale orders that
+       were not invoiced) and the :guilabel:`Listed Activities`.
+   * - :guilabel:`Other Information`
+     - The VAT on payment amounts, the special schemes, the refund of the negative VAT balance and
+       the nature of the operations that generate it.
+   * - :guilabel:`Declarant`
+     - The legal representative, the preparer and the consent option.
+
+Automatic and manual data
+-------------------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 35 65
+
+   * - Computed from the accounting
+     - Operations, summaries, the amounts of the simplified invoices and receipts per VAT rate (from
+       the :guilabel:`D394 Document Type` of the documents), invoice series, credit notes, cancelled
+       and self-billed invoices, cash register totals from the point of sale orders (when
+       installed), the VAT on payment amounts of the period, the nature of the operations of the
+       refund block, and, from the D300 of the same period, the refund request.
+   * - Entered by hand
+     - Cash register lines that do not come from point of sale orders (type `I2`, and type `I1`
+       if the receipts are not recorded in the point of sale app), the
+       :guilabel:`Listed Activities`, the :guilabel:`Special Schemes`, the box
+       :guilabel:`Operations with Affiliated Persons`, and any correction of the computed lines.
+
+All the sections can be edited. A line that is added or modified is flagged :guilabel:`Manual` and
+is kept when the statement is recomputed.
+
+Data to handle manually
+-----------------------
+
+Listed activities (CAEN)
+   The :guilabel:`Listed Activities` table (tab :guilabel:`Cash Registers`) is the list of CAEN
+   activities of the form for which the supplies are declared separately. It is never filled in
+   automatically: Odoo does not know which of your supplies belong to these activities. If the
+   company carries out one of them, add a line for each combination of activity, :guilabel:`VAT
+   Rate` and :guilabel:`Operation` (supplies of goods or of services), with the
+   :guilabel:`Value of Supplies` and the :guilabel:`VAT`. The activities available in the list are
+   `1071` pastry and confectionery, `4520` car wash, `4730` retail sale of automotive fuel, `47761`
+   flowers, plants and seeds, `47762` pets and pet food, `4932` taxi, `55101` hotels, `55102`
+   guesthouses, `56103` restaurants, `5630` beverage serving, `812` cleaning, `9313` fitness,
+   `9602` hairdressing and beauty treatment, and `9603` funeral activities. Each combination can be
+   declared only once.
+
+Special schemes
+   The operations under the margin schemes are not computed. The taxes with the treatment *Special
+   scheme* put the operations in the types `LS` and `AS` (with VAT rate 0), but the figures of the
+   schemes are typed in the group :guilabel:`Special Schemes` of the tab :guilabel:`Other
+   Information`: for **travel agencies**, the amount paid by the travellers, the costs, the profit
+   margin and the VAT, and for **second-hand goods**, the sale price, the purchase price, the profit
+   margin and the VAT.
+
+Cash registers and refund
+   The cash register lines (types `I1` and `I2`) give, per month, the number of cash registers
+   (*AMEF*), the number of fiscal receipts, the total of the receipts, and the base and VAT per
+   rate. For `I1`, the number of cash registers and of receipts is mandatory. In the refund block,
+   the nature of the operations that generate the negative VAT balance is derived from the
+   accounting; check it when the refund is requested.
+
+Checks
+------
+
+In addition to the common checks, the validation of the D394 verifies, among others, that:
+
+- the CAEN code, the phone number, the legal representative and the preparer are filled in, and
+  their codes are valid;
+- every partner has a valid code (CUI for type 1, the VAT number for type 3) and appears only once
+  per type and rate, and the individuals without CNP have an address;
+- the reverse charge operations and the acquisitions from individuals have a goods code;
+- when supplies are declared, the invoice series of type 1 (allocated ranges) and of type 2
+  (invoices issued in the period) are present; without a configured range, Odoo falls back to the
+  ranges actually issued and shows a warning;
+- the cash register amounts are positive, the receipts are not lower than the bases, and the months
+  are within the period;
+- the operations agree with the **D300 of the same period** (warnings `D394_D300`): for example,
+  `L` at 21% and 11% with rows 9 and 10, `V` with row 13, `C` with rows 12.1 and 12.2, and `A` with
+  rows 24 and 25. Differences are expected for the VAT on payment operations, which the D300
+  reports when the VAT becomes chargeable.
+
+Corrections
+-----------
+
+A corrected D394 is a **complete new statement** that replaces the one filed. Click
+:guilabel:`Create Corrected Declaration` on an exported or submitted statement: Odoo creates the next
+version of the period as a draft copy of the statement, with its lines. Click :guilabel:`Compute` to
+refresh it from the accounting: the lines flagged :guilabel:`Manual` are kept. The XML has no
+rectification flag.
+
+.. seealso::
+   - :doc:`declarations`
+   - :doc:`d300`
+   - :doc:`d390`

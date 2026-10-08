@@ -1,0 +1,137 @@
+.. _localizations/romania/d390:
+
+==================================
+D390 VIES recapitulative statement
+==================================
+
+The :guilabel:`Romania - D390 Recapitulative Statement (VIES)` (`l10n_ro_d390`) module prepares the
+**D390** (*Declarația recapitulativă privind livrările/achizițiile/prestările intracomunitare*),
+the monthly statement of the intra-Community operations of the company with VAT payers of other EU
+member states, in the model of **OPANAF 705/2020**. The operations are grouped by operation type and
+by partner (country and VAT number), and exported as the XML file filed with
+:abbr:`ANAF (Agenția Națională de Administrare Fiscală)`.
+
+This page describes the specific features of the D390. The general flow of the Romanian
+declarations (statuses, deadlines, DUK validation, filing) is described in
+:doc:`declarations`.
+
+Configuration
+=============
+
+:ref:`Install <general/install>` the :guilabel:`Romania - D390 Recapitulative Statement (VIES)`
+module, which installs the :doc:`D300 <d300>` module as a dependency. The company settings are those
+of the :ref:`declarations <localizations/romania/declarations/configuration>`: the declarant, the
+company Tax ID and the other data of the section :guilabel:`Romanian ANAF Declarations` in
+:menuselection:`Accounting --> Configuration --> Settings`.
+
+The operation type of each operation comes from the **Romanian tax code** of the tax used on the
+document (field :guilabel:`D390 Operation Type` of the tax code, in :menuselection:`Accounting -->
+Romania (ANAF) --> Configuration --> Romanian Tax Codes`), or from a :guilabel:`Tax Mapping Rule` of
+the form D390. For example, use a rule on a fiscal position to report the supplies of a triangular
+operation with type `T`.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10 90
+
+   * - Type
+     - Operation
+   * - `L`
+     - Intra-Community supplies of goods
+   * - `T`
+     - Supplies within a triangular operation
+   * - `A`
+     - Intra-Community acquisitions of goods
+   * - `P`
+     - Intra-Community supplies of services
+   * - `S`
+     - Intra-Community acquisitions of services
+   * - `R`
+     - Supplies under the special scheme for farmers
+
+Prepare the D390
+================
+
+#. Go to :menuselection:`Accounting --> Romania (ANAF) --> Declarations --> D390 VIES Statement`
+   and click :guilabel:`New`.
+#. Choose the :guilabel:`Year` and the :guilabel:`Month`. The D390 is monthly only; the
+   :guilabel:`Deadline` is the 25th of the following month, moved to the next working day.
+#. Choose how the credit notes of earlier months are handled in :guilabel:`Credit Notes of Earlier
+   Periods` (see below).
+#. Click :guilabel:`Compute`, and review the :guilabel:`Operations` tab.
+#. Click :guilabel:`Validate`, then :guilabel:`Export XML`, file the statement, and click
+   :guilabel:`Mark as Submitted`, as described in :doc:`declarations`.
+
+How the operations are computed
+-------------------------------
+
+The statement is computed from the posted invoices and bills of the month, whose taxes have a D390
+operation type. The :guilabel:`Operations` tab has one line per operation type, country, VAT number
+and partner name, with the :guilabel:`Taxable Base` in whole lei. A line shows the number of
+documents, and the list icon opens the journal items behind it.
+
+- The VAT number of the partner is split into the VIES country prefix and the number
+  (:guilabel:`VAT Number`, without the prefix). The prefix of Greece is `EL`; `XI` (Northern
+  Ireland) is accepted for goods. The United Kingdom is not an EU member state: operations with a
+  British partner are exports or imports, not D390 operations.
+- The VAT number is mandatory for the types `L`, `T`, `P` and `R`.
+- A partner that is not established in another EU member state, or without the mandatory VAT
+  number, is reported with an error message (`D390_PARTNER`) naming the partner and the document.
+  Check the country and the VAT number of the partner, or the tax used on the document. Operations
+  of a partner outside the EU are not included in the statement.
+- Credit notes reduce the base of the partner.
+
+The totals of the statement (:guilabel:`Total L`, :guilabel:`Total T`, ... and the number of
+operations) are shown below the lines. The statement is not due if there is no operation in the
+month: the validation shows the error `D390_EMPTY`.
+
+Credit notes of earlier periods
+-------------------------------
+
+A credit note issued in a month for an invoice of an earlier month can be reported in two ways. Set
+the choice in :guilabel:`Credit Notes of Earlier Periods`:
+
+:guilabel:`In the period of the credit note` (default)
+   The credit note is reported as a **negative** base in the month in which it is issued. Odoo shows
+   a warning for the lines with a negative base.
+
+:guilabel:`Rectify the original period`
+   The credit note is left out of the month and listed in a warning message (`D390_RECTIFY`) that
+   gives the original period. File a **rectificative D390** for that month.
+
+Rectificatives
+--------------
+
+Click :guilabel:`Create Rectificative` on an exported or submitted statement to create a new version
+of the same month. The XML of a rectificative statement contains the **complete corrected list** of
+operations, not only the differences, so every base must be positive: the validation fails if a
+line has a base that is zero or negative.
+
+Manual lines and call-off stock
+-------------------------------
+
+The lines of the :guilabel:`Operations` tab can be edited, and new lines can be added. A line that is
+added or modified is flagged :guilabel:`Manual` and is kept when the statement is recomputed.
+
+The :guilabel:`Call-off Stock` tab is filled in by hand. It declares the call-off stock arrangements
+(art. 275¹ of the Fiscal Code): section `A` for the goods transferred to the intended acquirer
+(:guilabel:`Country`, :guilabel:`VAT Number`, :guilabel:`Acquirer`), and section `B` for the changes
+(:guilabel:`Reason`: return of the goods, replacement of the acquirer, other). When the acquirer is
+replaced, give the :guilabel:`New Acquirer Country` and :guilabel:`New Acquirer VAT Number`. The
+statement can be exported without call-off stock lines.
+
+Checks
+------
+
+On top of the common checks, the validation of the D390 verifies that:
+
+- each partner and operation type appears **once** (no duplicates), and the base is not zero;
+- the country is an EU member state accepted by ANAF, and the VAT number is filled in for the types
+  that require it;
+- the totals agree with the **D300 of the same month** (warning `D390_D300`): type `L` with
+  rows 1 and 2, `P` with rows 3.1 and 4, `A` with rows 5 and 6, and `S` with rows 7.1 and 8. The
+  exempt intra-Community acquisitions (D300 row 29) explain a difference on `A` and `S`.
+
+.. seealso::
+   - :doc:`declarations`
+   - :doc:`d300`

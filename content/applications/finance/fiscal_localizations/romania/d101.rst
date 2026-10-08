@@ -1,0 +1,180 @@
+.. _localizations/romania/d101:
+
+===============================================
+D101 profit tax return and micro-enterprise tax
+===============================================
+
+The :guilabel:`Romania - D101 Profit Tax Return and Micro-enterprise Tax` (`l10n_ro_d101`) module
+has two features:
+
+- the **D101** (*Declarația privind impozitul pe profit*), the annual corporate income tax return, in
+  the model of **OPANAF 206/2025** (reporting year 2025). It is computed from the accounts, validated
+  and exported as the XML file filed with :abbr:`ANAF (Agenția Națională de Administrare Fiscală)`;
+- a quarterly helper for the **micro-enterprise income tax** (*impozitul pe veniturile
+  microîntreprinderilor*), which computes the tax base and the tax of the quarter and checks the
+  eligibility thresholds. It does not produce a declaration.
+
+This page describes the specific features of these two tools. The general flow of the Romanian
+declarations (statuses, deadlines, DUK validation, filing) is described in :doc:`declarations`.
+
+Configuration
+=============
+
+:ref:`Install <general/install>` the :guilabel:`Romania - D101 Profit Tax Return and
+Micro-enterprise Tax` module. It installs the :doc:`financial statements <financial_statements>`
+module as a dependency, and, through it, the Romanian accounting registers.
+
+The income and expenses of the return are read from the **Romanian trial balance**
+(*balanța de verificare*) of the accounting registers (see :doc:`statutory_registers`), the same
+source as the financial statements: the D101, the micro-enterprise tax, the financial statements and
+the trial balance therefore show the same figures. Only the posted journal entries count, and the
+income and expense accounts are the accounts of classes 6 and 7 of the chart of accounts.
+
+Check the company data of the :ref:`declarations <localizations/romania/declarations/configuration>`
+(declarant, main CAEN code) before you start.
+
+.. _localizations/romania/d101/return:
+
+Profit tax return (D101)
+========================
+
+#. Go to :menuselection:`Accounting --> Romania (ANAF) --> Declarations --> D101 Profit Tax Return`
+   and click :guilabel:`New`.
+#. Choose the :guilabel:`Year`. The D101 is annual; the :guilabel:`Deadline` is the 25th of June of
+   the following year (moved to the next working day). Select the :guilabel:`Profit Tax Type` if it
+   is not the default `103` (*profit tax of Romanian legal persons*); the other types are `102`
+   (prepayments of banks), `104` (annual profit tax of agriculture and non-profit organisations) and
+   `105` (foreign legal persons).
+#. In the :guilabel:`Header` tab, check the options of the return: :guilabel:`Exclude Result Closing
+   Entries` (ticked by default: the entries that close the income and expense accounts into account
+   121 are left out, so that the year can be computed before or after the closing), :guilabel:`Profit
+   Tax Payer from Quarter` (for a micro-enterprise that became a profit tax payer during the year,
+   the return then covers the period from the beginning of that quarter), the regularisation option
+   of non-residents, and the options for a return filed after a cancellation of the verification
+   reserve.
+#. Click :guilabel:`Compute`. The :guilabel:`Rows` tab is filled in. The :guilabel:`Accounting Data`
+   group of the :guilabel:`Header` tab shows the net turnover, the protocol expenses and the
+   sponsorship expenses that were used.
+#. Fill in the manual rows (see below), then click :guilabel:`Validate`, :guilabel:`Export XML`, file
+   the return, and click :guilabel:`Mark as Submitted`, as described in :doc:`declarations`.
+
+Rows: computed and manual
+-------------------------
+
+Every row of the :guilabel:`Rows` tab has a :guilabel:`Computed` value, an :guilabel:`Adjustment`
+that you can type, and the resulting :guilabel:`Amount`. The adjustments are kept when the return is
+recomputed. The manual rows are marked in blue.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
+
+   * - Rows
+     - Source
+   * - 1, 2, 4, 5
+     - Net turnovers of the accounts of classes 6 and 7: row 1 operating income (accounts 70 to 75
+       without 7418, plus 781 and 79), row 2 operating expenses (60 to 65 and 681, **plus** the profit tax
+       expense 691, 694 and 697, as the instructions of the form require), row 4 financial income
+       (76, 7418 and 786) and row 5 financial expenses (66 and 686). Rows 3, 6, 7 and 10 are totals.
+   * - 23, 27, 28
+     - Profit tax expense (691, 694, 697), sponsorship expenses (6582) and accounting depreciation
+       (6811).
+   * - 11
+     - Proposed equal to row 28 (accounting depreciation); adjust it for the tax depreciation.
+   * - 12.1
+     - Proposed from row 31 of the previous return.
+   * - 26
+     - Protocol expenses (account 6231) above the limit of 2% of the base defined by the Fiscal Code.
+   * - 39, 39.1
+     - Row 39 is proposed from the previous return (losses not yet recovered, plus the loss of the
+       previous year). Row 39.1, the loss recovered in the year, is limited to 70% of the profit
+       before the recovery (row 38.1) and to row 39.
+   * - 40, 40.1, 41, 41.1
+     - Taxable profit, tax loss of the year, total profit tax and profit tax at 16%.
+   * - 43.1
+     - Sponsorship credit: the lowest of the sponsorship expenses, 0.75% of the net turnover and 20%
+       of (row 41 - row 42), minus row 43.2.
+   * - 48, 48.1, 48.2, 52, 53
+     - Annual profit tax due and the difference to pay (row 52) or to recover (row 53), with the
+       official formulas.
+   * - All the other rows, including 46, 47, 49, 50 and 51
+     - **Manual**: elements similar to income and expenses, deductions, non-taxable income,
+       non-deductible expenses, tax credits, the minimum turnover tax, the tax established by the
+       tax inspection and the prepayments declared with the form 100 (row 50). Type them in the
+       :guilabel:`Adjustment` column.
+
+Checks
+------
+
+The validation of the D101 verifies the sub-rows and the signs of the rows, the limits of the Fiscal
+Code on the tax credits (rows 39.1, 42.1 to 45), the CAEN code, and the legal basis of a return
+filed after a cancellation of the reserve. It also compares the accounting result of row 7 with the
+**net result of the financial statements** of the same year (warning `D101_FS`): if they differ,
+check the closing entries and the financial statements. The manual rows that you filled in are
+listed in an information message.
+
+Corrections and limits
+----------------------
+
+- A corrected return is created with :guilabel:`Create Rectificative`. For a return rectified after
+  a conformity notice, tick :guilabel:`Rectification after a Conformity Notice`.
+- The fiscal groups, the modified fiscal year, the dates of liquidation and the computation of the
+  minimum turnover tax are not covered. The prepayments of banks (type `102`) can be selected, but
+  their computation is left to you.
+- The XSD schema that ANAF publishes for the D101 is not usable (it is not well-formed XML and
+  describes an older version of the form). Odoo therefore checks the XML against a schema built from
+  the official structure of the form: a valid :guilabel:`XSD Check` does not replace the
+  **DUKIntegrator validation**, which is the reference. Use a configured
+  :ref:`DUK validator service <localizations/romania/declarations/duk>`.
+- The D101 is validated by DUKIntegrator without the PDF, because the PDF of the return contains
+  the annexes of the declaration, which are assembled with the ANAF assistance program.
+
+.. _localizations/romania/d101/micro:
+
+Micro-enterprise tax
+====================
+
+The micro-enterprise tax is declared and paid with the form **100 (D100)** by the 25th of the month
+following each quarter. **Odoo does not generate the D100 or its XML**: the module computes the
+amount of the quarter, and you enter it in the ANAF assistance program for the form 100.
+
+Go to :menuselection:`Accounting --> Romania (ANAF) --> Declarations --> Micro-enterprise Tax` and
+click :guilabel:`New`, then choose the :guilabel:`Year` and the :guilabel:`Quarter`. One computation
+per company and quarter can exist.
+
+#. Choose the :guilabel:`Tax Rate` (1% or 3%). The rates allowed depend on the year: in 2025, 1% or
+   3%; from 2026, a single rate of 1%. Odoo does not choose the rate for you: for 2025, it shows a
+   note when the cumulated base exceeds 60,000 EUR while the rate is 1%, so that you check whether the
+   3% rate applies.
+#. In the group :guilabel:`Eligibility`, tick :guilabel:`At Least One Employee` and
+   :guilabel:`Shareholders Condition Met` once you have checked these two conditions of art. 47 of
+   the Fiscal Code. Odoo cannot know them and reminds you in the notes until they are ticked.
+#. Click :guilabel:`Compute`.
+
+The computation works on the figures cumulated from 1 January. The cumulated **tax base** is the
+revenue of class 7, minus the items that art. 53 (1) of the Fiscal Code excludes (variation of
+stocks, own production of fixed assets, operating subsidies, reversals of provisions, foreign
+exchange gains and dividends), plus the trade discounts received after invoicing (account 609), plus
+the :guilabel:`Manual Adjustment (cumulated)` that you enter for the elements that cannot be
+identified from the accounts (negative to deduct). The **tax of the quarter** is the cumulated base
+minus the base of the previous quarters, multiplied by the rate. The detail of the deductions is
+listed at the bottom of the form.
+
+The **thresholds** are 250,000 EUR in 2025 and 100,000 EUR from 2026. The cumulated tax base (shown
+as :guilabel:`Cumulated Revenue in EUR`) is converted with the exchange rate (EUR to RON) of 31
+December of the previous year, taken from the currency rates of Odoo. If the threshold is exceeded,
+the line is shown in red and a note explains that the company becomes a profit tax payer from that
+quarter: file the D101 for the rest of the year with :guilabel:`Profit Tax Payer from Quarter` set
+to that quarter. If there is no EUR rate at 31 December, the threshold cannot be checked and a note
+says so.
+
+When the amount is correct, click :guilabel:`Mark as Done`. Click :guilabel:`Create Journal Entry` to
+create the accrual of the tax of the quarter (debit account 698, credit account 4418) in a
+miscellaneous journal; the entry is dated at the end of the quarter and is created as a draft, which
+you review and post. The accounts must exist in the chart of accounts. :guilabel:`Reset to Draft` is
+refused while the entry is posted.
+
+.. seealso::
+   - :doc:`declarations`
+   - :doc:`financial_statements`
+   - :doc:`statutory_registers`

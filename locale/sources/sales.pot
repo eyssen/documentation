@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-03 21:16+0200\n"
+"POT-Creation-Date: 2026-10-08 17:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -9620,138 +9620,146 @@ msgstr ""
 msgid "Copy the generated API key using :guilabel:`Copy to Clipboard`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:68
+#: ../../content/applications/sales/sales/gelato.rst:None
+msgid "Newly generated API key in the Gelato platform."
+msgstr ""
+
+#: ../../content/applications/sales/sales/gelato.rst:63
 msgid "Copy the API key and store it somewhere safe and secure before leaving this page. Once the page is refreshed or exited, the key will not be available to copy."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:71
+#: ../../content/applications/sales/sales/gelato.rst:66
 msgid "If the key cannot be copied or is lost, return to the :guilabel:`API key` page and start over, creating a new API key."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:75
+#: ../../content/applications/sales/sales/gelato.rst:70
 msgid "Webhook"
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:77
+#: ../../content/applications/sales/sales/gelato.rst:72
 msgid "A webhook is an automated notification system that instantly updates Odoo when Gelato processes, ships, or delivers an order, ensuring real-time tracking and minimal manual intervention."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:80
+#: ../../content/applications/sales/sales/gelato.rst:75
 msgid "To create a webhook, go to :menuselection:`Developer --> Webhooks` under the :guilabel:`Developer` drop-down menu in the left menu bar. In the new page, click :guilabel:`Add Webhook` to open a :guilabel:`Create Webhook` form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:84
+#: ../../content/applications/sales/sales/gelato.rst:79
 msgid "The webhook form requires several specific configurations:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:86
+#: ../../content/applications/sales/sales/gelato.rst:81
 msgid ":guilabel:`URL`: This tells Gelato where to send the order updates in Odoo. Copy and paste the Odoo database URL with the additional suffix `/gelato/webhook`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:90
+#: ../../content/applications/sales/sales/gelato.rst:85
 msgid "`https://stealthywood.odoo.com/gelato/webhook`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:92
+#: ../../content/applications/sales/sales/gelato.rst:87
 msgid ":guilabel:`Events`: Click into the field and select :guilabel:`order_status_updated`. Selecting :guilabel:`order_status_updated` ensures Odoo receives order changes automatically."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:94
+#: ../../content/applications/sales/sales/gelato.rst:89
 msgid ":guilabel:`Method`: Click into the field and select the :guilabel:`HTTP Post` option, as this is the request method used to send data from Gelato to Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:96
+#: ../../content/applications/sales/sales/gelato.rst:91
 msgid "Tick the checkbox next to :guilabel:`I want to take Authorization to this webhook`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:97
+#: ../../content/applications/sales/sales/gelato.rst:92
 msgid ":guilabel:`Header Name`: In this field, type in `signature` to match the field in Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:98
+#: ../../content/applications/sales/sales/gelato.rst:93
 msgid "Click :guilabel:`Generate Key` to generate a :guilabel:`Header Value`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:99
+#: ../../content/applications/sales/sales/gelato.rst:94
 msgid "Click :guilabel:`Create` to complete this webhook configuration."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:110
+#: ../../content/applications/sales/sales/gelato.rst:None
+msgid "Newly configured webhook in the Gelato platform."
+msgstr ""
+
+#: ../../content/applications/sales/sales/gelato.rst:100
 msgid "Copy and paste the API key and webhook on a notepad before tabbing out of the Gelato webpage as backup."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:114
+#: ../../content/applications/sales/sales/gelato.rst:104
 msgid "Configure Gelato connector in Odoo"
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:116
+#: ../../content/applications/sales/sales/gelato.rst:106
 msgid "In Odoo, navigate to :menuselection:`Sales app --> Configuration --> Settings`, then scroll to the :guilabel:`Connectors` section. Enable the :guilabel:`Gelato` connector by ticking the checkbox. Next, paste the newly generated API keys and webhook secret key into their respective fields. Once saved, Gelato is available in Odoo **Sales** and **eCommerce** products."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:122
+#: ../../content/applications/sales/sales/gelato.rst:112
 msgid "Synchronizing Gelato products with Odoo Sales"
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:124
+#: ../../content/applications/sales/sales/gelato.rst:114
 msgid "It is recommended to have products already configured in Gelato before configuring them in Odoo. To get the product ID in Gelato, navigate to the :guilabel:`Templates` page from the side bar menu. Select which product to synchronize in Odoo, then hover over the product card to reveal the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` menu icon. Click the menu icon, then click :guilabel:`Copy Template ID` to copy the product template ID to the clipboard."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:131
+#: ../../content/applications/sales/sales/gelato.rst:121
 msgid "`Start selling products with Gelato: Quick & easy setup <https://www.gelato.com/blog/get-started-with-gelato-creating-products>`_"
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:136
+#: ../../content/applications/sales/sales/gelato.rst:126
 msgid "Odoo Sales product"
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:138
+#: ../../content/applications/sales/sales/gelato.rst:128
 msgid "To create a product in Odoo that matches the Gelato product, navigate to :menuselection:`Sales app --> Products --> Products`, select :guilabel:`New` to create a new product form. Type in the product :guilabel:`Name`, then navigate to the :guilabel:`Sales` tab. Find the :guilabel:`Gelato` section, then click into the :guilabel:`Template Reference` field and paste the copied template ID from the Gelato product. Finally, click :guilabel:`Synchronize`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:144
+#: ../../content/applications/sales/sales/gelato.rst:134
 msgid "Successful synchronization pulls the Gelato product variant options into the newly configured Odoo product."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:147
+#: ../../content/applications/sales/sales/gelato.rst:137
 msgid "In the new :guilabel:`Print Images` field, click the :guilabel:`default` marker to set a default product image. Click the :icon:`fa-pencil` :guilabel:`(edit)` icon and select the product image file to upload, then :guilabel:`Save & Close`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:152
+#: ../../content/applications/sales/sales/gelato.rst:142
 msgid "The :guilabel:`Print Images` field *must* be configured on all Gelato products and their respective product variations before they can be ordered."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:156
+#: ../../content/applications/sales/sales/gelato.rst:146
 #: ../../content/applications/sales/sales/products_prices/products/import.rst:256
 #: ../../content/applications/sales/sales/products_prices/products/variants.rst:3
 #: ../../content/applications/sales/sales/products_prices/products/variants.rst:219
 msgid "Product variants"
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:158
+#: ../../content/applications/sales/sales/gelato.rst:148
 msgid "To view and edit the newly synchronized product variants, navigate to the :guilabel:`Attributes & Variants` tab, which will have the variants pulled from the Gelato product configuration. Click the :guilabel:`Configure` button to edit and configure the variant images, delivery methods, additional pricing, etc."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:164
+#: ../../content/applications/sales/sales/gelato.rst:154
 msgid "Order a Gelato product from Odoo"
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:166
+#: ../../content/applications/sales/sales/gelato.rst:156
 msgid "Once synchronized, Gelato products are available to order in Odoo through :doc:`sales quotations <sales_quotations>` or on the **eCommerce** store. Gelato delivery options are automatically synchronized upon API and webhook configuration."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:170
+#: ../../content/applications/sales/sales/gelato.rst:160
 msgid "To add Gelato delivery, click :guilabel:`Add shipping` on the sales order. Select :guilabel:`Standard Delivery` or :guilabel:`Express Delivery` in the :guilabel:`Shipping Method` field, then click :guilabel:`Get rate`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:174
+#: ../../content/applications/sales/sales/gelato.rst:164
 msgid "Once the quotation is confirmed, it becomes an active sales order, and the order is sent to Gelato for fulfillment. Once a sales order is sent from Odoo to Gelato, Gelato processes the order, produces the product at the nearest fulfillment center, and ships it directly to the end-customer."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:179
+#: ../../content/applications/sales/sales/gelato.rst:169
 msgid ":doc:`sales_quotations/create_quotations`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:182
+#: ../../content/applications/sales/sales/gelato.rst:172
 msgid "When creating a sales order for Gelato products in the database, only Gelato products can be added to the same sales order. Multivendor orders are not available with the Gelato connector at this time."
 msgstr ""
 

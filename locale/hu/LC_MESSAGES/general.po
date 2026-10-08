@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-26 17:46+0200\n"
+"POT-Creation-Date: 2026-10-08 17:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -1310,247 +1310,269 @@ msgstr ":guilabel:`IMAP.HozzáférésFelhasználóként.Mind`"
 msgid "The :guilabel:`User.Read` permission will be added by default."
 msgstr "A :guilabel:`User.Read` engedély alapértelmezés szerint hozzá lesz adva."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:72
+#: ../../content/applications/general/email_communication/azure_oauth.rst:None
+msgid "API permissions needed for Odoo integration are listed under the Microsoft Graph."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/azure_oauth.rst:69
 msgid "Assign users and groups"
 msgstr "Felhasználók és csoportok hozzárendelése"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:74
+#: ../../content/applications/general/email_communication/azure_oauth.rst:71
 msgid "After adding the API permissions, navigate back to the :guilabel:`Overview` of the :guilabel:`Application` in the top of the left sidebar menu."
 msgstr "Az API-engedélyek hozzáadása után navigáljon vissza az :guilabel:`Application` :guilabel:`Overview` oldalára, amely a bal oldali oldalsáv menü tetején található."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:77
+#: ../../content/applications/general/email_communication/azure_oauth.rst:74
 msgid "Now, add users to this application. Under the :guilabel:`Essentials` overview table, click on the link labeled :guilabel:`Managed Application in Local Directory`, or the last option on the bottom right-hand side of the table."
 msgstr "Most adjon felhasználókat az alkalmazáshoz. Az :guilabel:`Essentials` áttekintő táblázatban kattintson a :guilabel:`Managed Application in Local Directory` feliratú hivatkozásra, vagy a táblázat jobb alsó sarkában lévő utolsó lehetőségre."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:88
+#: ../../content/applications/general/email_communication/azure_oauth.rst:None
+msgid ""
+"Add users/groups by clicking the Managed application in local directory link for the\n"
+"created application."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/azure_oauth.rst:83
 msgid "In the left sidebar menu, select :guilabel:`Users and Groups`. Next, click on :guilabel:`(+) Add User/Group`. Depending on the account, either a :guilabel:`Group` and a :guilabel:`User` can be added, or only :guilabel:`Users`. Personal accounts will only allow for :guilabel:`Users` to be added."
 msgstr "A bal oldali oldalsáv menüben válassza a :guilabel:`Users and Groups` lehetőséget. Ezután kattintson a :guilabel:`(+) Add User/Group` gombra. A fióktól függően egy :guilabel:`Group` és egy :guilabel:`User` is hozzáadható, vagy csak :guilabel:`Users`. Személyes fiókok esetén csak :guilabel:`Users` adható hozzá."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:93
+#: ../../content/applications/general/email_communication/azure_oauth.rst:88
 msgid "Under :guilabel:`Users` or :guilabel:`Groups`, click on :guilabel:`None Selected` and add the users or group of users that will be sending emails from the :guilabel:`Microsoft account` in Odoo. :guilabel:`Add` the users/groups, click :guilabel:`Select`, and then :guilabel:`Assign` them to the application."
 msgstr "A :guilabel:`Users` vagy :guilabel:`Groups` alatt kattintson a :guilabel:`None Selected` lehetőségre, és adja hozzá azokat a felhasználókat vagy felhasználói csoportokat, akik az Odooban a :guilabel:`Microsoft account` fiókból fognak e-maileket küldeni. :guilabel:`Add` a felhasználókat/csoportokat, kattintson a :guilabel:`Select` gombra, majd :guilabel:`Assign` őket az alkalmazáshoz."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:99 ../../content/applications/general/integrations/google_translate.rst:61
+#: ../../content/applications/general/email_communication/azure_oauth.rst:94 ../../content/applications/general/integrations/google_translate.rst:59
 msgid "Create credentials"
 msgstr "Hitelesítő adatok létrehozása"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:101
+#: ../../content/applications/general/email_communication/azure_oauth.rst:96
 msgid "Now that the Microsoft Azure app is set up, credentials need to be created for the Odoo setup. These include the :guilabel:`Client ID` and :guilabel:`Client Secret`. To start, the :guilabel:`Client ID` can be copied from the :guilabel:`Overview` page of the app. The :guilabel:`Client ID` or :guilabel:`Application ID` is located under the :guilabel:`Display Name` in the :guilabel:`Essentials` overview of the app."
 msgstr "Most, hogy a Microsoft Azure alkalmazás be van állítva, létre kell hozni a hitelesítő adatokat az Odoo beállításához. Ezek közé tartozik a :guilabel:`Client ID` és a :guilabel:`Client Secret`. Kezdésként a :guilabel:`Client ID` másolható az alkalmazás :guilabel:`Overview` oldaláról. A :guilabel:`Client ID` vagy :guilabel:`Application ID` a :guilabel:`Display Name` alatt található az alkalmazás :guilabel:`Essentials` áttekintőjében."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:114
+#: ../../content/applications/general/email_communication/azure_oauth.rst:None
+msgid "Application/Client ID located in the Overview of the app."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/azure_oauth.rst:106
 msgid "Next, the :guilabel:`Client Secret Value` needs to be retrieved. To get this value, click on :guilabel:`Certificates & Secrets` in the left sidebar menu. Then, a :guilabel:`Client Secret` needs to be produced. In order to do this, click on the :guilabel:`(+) New Client Secret` button."
 msgstr "Ezután le kell kérni a :guilabel:`Client Secret Value` értékét. Ehhez kattintson a :guilabel:`Certificates & Secrets` lehetőségre a bal oldali menüben. Majd létre kell hozni egy :guilabel:`Client Secret` elemet. Ehhez kattintson a :guilabel:`(+) New Client Secret` gombra."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:118
+#: ../../content/applications/general/email_communication/azure_oauth.rst:110
 msgid "A window on the right will populate with a button labeled :guilabel:`Add a client secret`. Under :guilabel:`Description`, type in `Odoo Fetchmail` or something recognizable, and then set the :guilabel:`expiration date`."
 msgstr "A jobb oldalon megjelenik egy panel egy :guilabel:`Add a client secret` feliratú gombbal. A :guilabel:`Description` mezőbe írja be, hogy `Odoo Fetchmail` vagy valami felismerhető nevet, majd állítsa be a :guilabel:`expiration date` értékét."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:123
+#: ../../content/applications/general/email_communication/azure_oauth.rst:115
 msgid "A new :guilabel:`Client Secret` will need to be produced and configured if the first one expires. In this event, there could be an interruption of service, so the expiration date should be noted and set to the furthest possible date."
 msgstr "Ha az első lejár, új :guilabel:`Client Secret` elemet kell létrehozni és beállítani. Ebben az esetben szolgáltatáskiesés léphet fel, ezért a lejárati dátumot fel kell jegyezni, és a lehető legtávolabbi időpontra kell beállítani."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:127
+#: ../../content/applications/general/email_communication/azure_oauth.rst:119
 msgid "Next, click on :guilabel:`Add` when these two values are entered. A :guilabel:`Client Secret Value` and :guilabel:`Secret ID` will be created. It is important to copy the :guilabel:`Value` or :guilabel:`Client Secret Value` into a notepad as it will become encrypted after leaving this page. The :guilabel:`Secret ID` is not needed."
 msgstr "Ezután kattintson az :guilabel:`Add` gombra, miután megadta a két értéket. Létrejön egy :guilabel:`Client Secret Value` és egy :guilabel:`Secret ID`. Fontos, hogy a :guilabel:`Value` vagy :guilabel:`Client Secret Value` értékét másolja be egy szövegszerkesztőbe, mivel az oldal elhagyása után titkosítva lesz megjelenítve. A :guilabel:`Secret ID` értékére nincs szükség."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:139
+#: ../../content/applications/general/email_communication/azure_oauth.rst:None
+msgid "Client Secret Value or Value in the app's credentials."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/azure_oauth.rst:128
 msgid "After these steps, the following items should be ready to be set up in Odoo:"
 msgstr "A fenti lépések elvégzése után az alábbi elemek készen állnak az Odoo-ban való beállításra:"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:141
+#: ../../content/applications/general/email_communication/azure_oauth.rst:130
 msgid "A client ID (:guilabel:`Client ID` or :guilabel:`Application ID`)"
 msgstr "Egy ügyfél-azonosító (:guilabel:`Client ID` vagy :guilabel:`Application ID`)"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:142
+#: ../../content/applications/general/email_communication/azure_oauth.rst:131
 msgid "A client secret (:guilabel:`Value` or :guilabel:`Client Secret Value`)"
 msgstr "Egy ügyfél-titok (:guilabel:`Value` vagy :guilabel:`Client Secret Value`)"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:144
+#: ../../content/applications/general/email_communication/azure_oauth.rst:133
 msgid "This completes the setup on the :guilabel:`Microsoft Azure Portal` side."
 msgstr "Ezzel a :guilabel:`Microsoft Azure Portal` oldalán elvégzett beállítás befejeződött."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:147 ../../content/applications/general/email_communication/google_oauth.rst:115
+#: ../../content/applications/general/email_communication/azure_oauth.rst:136 ../../content/applications/general/email_communication/google_oauth.rst:110
 msgid "Setup in Odoo"
 msgstr "Beállítás az Odoo-ban"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:150
+#: ../../content/applications/general/email_communication/azure_oauth.rst:139
 msgid "Enter Microsoft Outlook credentials"
 msgstr "Microsoft Outlook hitelesítő adatok megadása"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:152
+#: ../../content/applications/general/email_communication/azure_oauth.rst:141
 msgid "First, open the Odoo database and navigate to the :guilabel:`Apps` module. Then, remove the :guilabel:`Apps` filter from the search bar and type in `Outlook`. After that, install the module called :guilabel:`Microsoft Outlook`."
 msgstr "Először nyissa meg az Odoo adatbázist, és lépjen az :guilabel:`Apps` modulba. Ezután távolítsa el az :guilabel:`Apps` szűrőt a keresősávból, és írja be, hogy `Outlook`. Ezt követően telepítse a :guilabel:`Microsoft Outlook` nevű modult."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:156
+#: ../../content/applications/general/email_communication/azure_oauth.rst:145
 msgid "Next, navigate to :menuselection:`Settings --> General Settings`, and under the :guilabel:`Discuss` section, ensure that the checkbox for :guilabel:`Custom Email Servers` is checked. This populates a new option for :guilabel:`Outlook Credentials`."
 msgstr "Ezután lépjen a :menuselection:`Beállítások --> Általános beállítások` menübe, és a :guilabel:`Megbeszélés` szakasz alatt ellenőrizze, hogy az :guilabel:`Egyéni e-mail szerverek` jelölőnégyzet be van-e jelölve. Ezzel megjelenik egy új lehetőség az :guilabel:`Outlook hitelesítő adatok` számára."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:160
+#: ../../content/applications/general/email_communication/azure_oauth.rst:149
 msgid ":guilabel:`Save` the progress."
 msgstr "Mentse :guilabel:`Save` a haladást."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:162
+#: ../../content/applications/general/email_communication/azure_oauth.rst:151
 msgid "Then, copy and paste the :guilabel:`Client ID` (Application ID) and :guilabel:`Client Secret (Client Secret Value)` into the respective fields and :guilabel:`Save` the settings."
 msgstr "Ezután másolja be a :guilabel:`Client ID` (Application ID) és a :guilabel:`Client Secret (Client Secret Value)` értékét a megfelelő mezőkbe, majd kattintson a :guilabel:`Save` gombra."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:173 ../../content/applications/general/email_communication/google_oauth.rst:131
+#: ../../content/applications/general/email_communication/azure_oauth.rst:162 ../../content/applications/general/email_communication/google_oauth.rst:126
 msgid "Configure outgoing email server"
 msgstr "Kimenő e-mail szerver beállítása"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:175
+#: ../../content/applications/general/email_communication/azure_oauth.rst:164
 msgid "On the :guilabel:`General Settings` page, under the :guilabel:`Custom Email Servers` setting, click the :guilabel:`Outgoing Email Servers` link to configure the Microsoft account."
 msgstr "Az :guilabel:`Általános beállítások` oldalon, az :guilabel:`Egyéni e-mail szerverek` beállítás alatt kattintson a :guilabel:`Outgoing Email Servers` hivatkozásra a Microsoft-fiók beállításához."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:178
+#: ../../content/applications/general/email_communication/azure_oauth.rst:167
 msgid "Then, create a new email server and check the box for :guilabel:`Outlook`. Next, fill in the :guilabel:`Name` (it can be anything) and the Microsoft Outlook email :guilabel:`Username`."
 msgstr "Ezután hozzon létre egy új e-mail szervert, és jelölje be az :guilabel:`Outlook` jelölőnégyzetet. Töltse ki a :guilabel:`Name` mezőt (bármilyen nevet megadhat), valamint a Microsoft Outlook e-mail :guilabel:`Username` mezőjét."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:181
+#: ../../content/applications/general/email_communication/azure_oauth.rst:170
 msgid "If the :guilabel:`From Filter` field is empty, enter either a :ref:`domain or email address <email-outbound-unique-address>`."
 msgstr "Ha a :guilabel:`From Filter` mező üres, adjon meg egy :ref:`domaint vagy e-mail-címet <email-outbound-unique-address>`."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:184
+#: ../../content/applications/general/email_communication/azure_oauth.rst:173
 msgid "Then, click on :guilabel:`Connect your Outlook account`."
 msgstr "Ezután kattintson a :guilabel:`Connect your Outlook account` gombra."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:186
+#: ../../content/applications/general/email_communication/azure_oauth.rst:175
 msgid "A new window from Microsoft opens to complete the :guilabel:`authorization process`. Select the appropriate email address that is being configured in Odoo."
 msgstr "Megnyílik egy új Microsoft-ablak az :guilabel:`authorization process` befejezéséhez. Válassza ki azt az e-mail-címet, amelyet az Odoo-ban konfigurál."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:195
+#: ../../content/applications/general/email_communication/azure_oauth.rst:None
+msgid "Permission page to grant access between newly created app and Odoo."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/azure_oauth.rst:182
 msgid "Then, allow Odoo to access the Microsoft account by clicking on :guilabel:`Yes`. After this, the page will navigate back to the newly configured :guilabel:`Outgoing Mail Server` in Odoo. The configuration automatically loads the :guilabel:`token` in Odoo, and a tag stating :guilabel:`Outlook Token Valid` appears in green."
 msgstr "Ezután engedélyezze az Odoo számára a Microsoft-fiókhoz való hozzáférést a :guilabel:`Yes` gombra kattintva. Ezt követően az oldal visszanavigál az Odoo-ban újonnan konfigurált :guilabel:`Outgoing Mail Server` oldalra. A konfiguráció automatikusan betölti a :guilabel:`token` értékét az Odoo-ban, és megjelenik egy zöld :guilabel:`Outlook Token Valid` címke."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:207
+#: ../../content/applications/general/email_communication/azure_oauth.rst:194
 msgid "Finally, click :guilabel:`Test Connection`. A confirmation message should appear. The Odoo database can now send safe, secure emails through Microsoft Outlook using OAuth authentication."
 msgstr "Végül kattintson a :guilabel:`Test Connection` gombra. Egy megerősítő üzenetnek kell megjelennie. Az Odoo-adatbázis mostantól biztonságos e-maileket küldhet a Microsoft Outlookon keresztül OAuth-hitelesítéssel."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:213
+#: ../../content/applications/general/email_communication/azure_oauth.rst:200
 msgid "Configuration with a single outgoing mail server"
 msgstr "Konfiguráció egyetlen kimenő levelezőszerverrel"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:215
+#: ../../content/applications/general/email_communication/azure_oauth.rst:202
 msgid "Configuring a single outgoing server is the simplest configuration available for Microsoft Azure and it doesn't require extensive access rights for the users in the database."
 msgstr "Egyetlen kimenő szerver konfigurálása a legegyszerűbb elérhető konfiguráció a Microsoft Azure számára, és nem igényel kiterjedt hozzáférési jogokat az adatbázis felhasználói számára."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:218
+#: ../../content/applications/general/email_communication/azure_oauth.rst:205
 msgid "A generic email address would be used to send emails for all users within the database. For example it could be structured with a `notifications` alias (`notifications@example.com`) or `contact` alias (`contact@example.com`). This address must be set as the :guilabel:`FROM Filtering` on the server. This address must also match the `{mail.default.from}@{mail.catchall.domain}` key combination in the system parameters."
 msgstr "Az adatbázison belüli összes felhasználó e-mailjeit egy általános e-mail-cím küldi. Ez például lehet `notifications` alias (`notifications@example.com`) vagy `contact` alias (`contact@example.com`) formátumú. Ezt a címet kell beállítani a szerveren :guilabel:`FROM Filtering` értékként. Ennek a címnek meg kell egyeznie a rendszerparaméterekben szereplő `{mail.default.from}@{mail.catchall.domain}` kulcskombinációval is."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:225 ../../content/applications/general/email_communication/azure_oauth.rst:269
+#: ../../content/applications/general/email_communication/azure_oauth.rst:212 ../../content/applications/general/email_communication/azure_oauth.rst:256
 msgid "Visit the :ref:`From Filtering documentation <email-outbound-different-servers-personalized-from-filtering>` for more information."
 msgstr "További információért tekintse meg a :ref:`From Filtering dokumentációt <email-outbound-different-servers-personalized-from-filtering>`."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:229 ../../content/applications/general/email_communication/azure_oauth.rst:277
+#: ../../content/applications/general/email_communication/azure_oauth.rst:216 ../../content/applications/general/email_communication/azure_oauth.rst:264
 msgid "The :guilabel:`System Parameters` can be accessed by activating :ref:`developer-mode` in the :menuselection:`Settings --> Technical --> Parameters --> System Parameters` menu."
 msgstr "A :guilabel:`System Parameters` a :menuselection:`Beállítások --> Műszaki --> Paraméterek --> Rendszerparaméterek` menüben érhető el, miután aktiválta a :ref:`developer-mode` módot."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:232
+#: ../../content/applications/general/email_communication/azure_oauth.rst:219
 msgid "When using this configuration, every email that is sent from the database will use the address of the configured `notification` mailbox. However it should be noted that the name of the sender will appear but their email address will change:"
 msgstr "Ennél a konfigurációnál az adatbázisból küldött összes e-mail a konfigurált `notification` postafiók címét fogja használni. Meg kell azonban jegyezni, hogy a küldő neve megjelenik, de az e-mail-cím megváltozik:"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:243
+#: ../../content/applications/general/email_communication/azure_oauth.rst:230
 msgid "Single outgoing mail server configuration:"
 msgstr "Egyetlen kimenő levelezőszerver konfigurációja:"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:245
+#: ../../content/applications/general/email_communication/azure_oauth.rst:232
 msgid "Outgoing mail server **username** (login) = `notifications@example.com`"
 msgstr "Kimenő levelezőszerver **felhasználóneve** (bejelentkezési név) = `notifications@example.com`"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:246
+#: ../../content/applications/general/email_communication/azure_oauth.rst:233
 msgid "Outgoing mail server :guilabel:`FROM Filtering` = `notifications@example.com`"
 msgstr "Kimenő levelezőszerver :guilabel:`FROM Filtering` = `notifications@example.com`"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:247 ../../content/applications/general/email_communication/azure_oauth.rst:302
+#: ../../content/applications/general/email_communication/azure_oauth.rst:234 ../../content/applications/general/email_communication/azure_oauth.rst:289
 msgid "`mail.catchall.domain` in system parameters = `example.com`"
 msgstr "`mail.catchall.domain` a rendszerparaméterekben = `example.com`"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:248 ../../content/applications/general/email_communication/azure_oauth.rst:303
+#: ../../content/applications/general/email_communication/azure_oauth.rst:235 ../../content/applications/general/email_communication/azure_oauth.rst:290
 msgid "`mail.default.from` in system parameters = `notifications`"
 msgstr "`mail.default.from` a rendszerparaméterekben = `notifications`"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:251
+#: ../../content/applications/general/email_communication/azure_oauth.rst:238
 msgid "User-specific (multiple user) configuration"
 msgstr "Felhasználóspecifikus (több felhasználós) konfiguráció"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:253
+#: ../../content/applications/general/email_communication/azure_oauth.rst:240
 msgid "In addition to a generic email server, individual email servers can be set up for users in a database. These email addresses must be set as the :guilabel:`FROM Filtering` on each individual server for this configuration to work."
 msgstr "Az általános e-mail-szerveren kívül az adatbázis felhasználói számára egyéni e-mail-szerverek is beállíthatók. Ehhez a konfigurációhoz ezeket az e-mail-címeket kell beállítani :guilabel:`FROM Filtering` értékként az egyes szervereken."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:257
+#: ../../content/applications/general/email_communication/azure_oauth.rst:244
 msgid "This configuration is the more difficult of the two Microsoft Azure configurations, in that it requires all users configured with email servers to have access rights to settings in order to establish a connection to the email server."
 msgstr "Ez a konfiguráció a két Microsoft Azure-konfiguráció közül a nehezebbik, mivel az e-mail szerverrel konfigurált összes felhasználónak beállítási hozzáférési jogokra van szüksége ahhoz, hogy kapcsolatot létesítsen az e-mail szerverrel."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:262
+#: ../../content/applications/general/email_communication/azure_oauth.rst:249
 msgid "Setup"
 msgstr "Beállítás"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:264
+#: ../../content/applications/general/email_communication/azure_oauth.rst:251
 msgid "Each user should have a separate email server set up. The :guilabel:`FROM Filtering` should be set so that only the user's email is sent from that server. In other words, only a user with an email address that matches the set :guilabel:`FROM Filtering` is able to use this server."
 msgstr "Minden felhasználóhoz külön e-mail szervert kell beállítani. A :guilabel:`Feladó szűrés` értékét úgy kell megadni, hogy az adott szerverről csak a felhasználó e-mail címe legyen elküldhető. Más szóval, csak az a felhasználó használhatja ezt a szervert, akinek e-mail címe megegyezik a beállított :guilabel:`Feladó szűrés` értékével."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:272
+#: ../../content/applications/general/email_communication/azure_oauth.rst:259
 msgid "A :ref:`fallback server <azure_oauth/notifications>` must be setup to allow for the sending of :guilabel:`notifications`. The :guilabel:`FROM Filtering` for this server should have the value of the `{mail.default.from}@{mail.catchall.domain}`."
 msgstr "Be kell állítani egy :ref:`tartalék szervert <azure_oauth/notifications>` az :guilabel:`értesítések` küldésének lehetővé tételéhez. Ennek a szervernek a :guilabel:`Feladó szűrés` értéke legyen: `{mail.default.from}@{mail.catchall.domain}`."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:281
+#: ../../content/applications/general/email_communication/azure_oauth.rst:268
 msgid "The configuration for this transactional email server can work alongside an outgoing mass-mailing email server. The :guilabel:`FROM Filtering` for the mass-mailing email server can remain empty, but it's require to be added in the settings of the *Email Marketing* application."
 msgstr "Ez a tranzakciós e-mail szerver konfigurációja együtt működhet egy kimenő tömeges levelezési e-mail szerverrel. A tömeges levelezési szerver :guilabel:`Feladó szűrés` értéke üresen maradhat, de kötelező megadni az *E-mail Marketing* alkalmazás beállításaiban."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:286
+#: ../../content/applications/general/email_communication/azure_oauth.rst:273
 msgid "For more information on setting the mass-mailing email server visit :ref:`email-outbound-custom-domain-smtp-server`."
 msgstr "A tömeges levelezési e-mail szerver beállításával kapcsolatos további információkért látogasson el ide: :ref:`email-outbound-custom-domain-smtp-server`."
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:290
+#: ../../content/applications/general/email_communication/azure_oauth.rst:277
 msgid "Multiple user outgoing mail server configuration:"
 msgstr "Több felhasználós kimenő levelezőszerver-konfiguráció:"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:293
+#: ../../content/applications/general/email_communication/azure_oauth.rst:280
 msgid "User #1 mailbox"
 msgstr "1\\. felhasználó postafiókja"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:293
+#: ../../content/applications/general/email_communication/azure_oauth.rst:280
 msgid "Outgoing mail server #1 **username** (login) = `john@example.com`"
 msgstr "Kimenő levelezőszerver #1 **felhasználónév** (bejelentkezési név) = `john@example.com`"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:294
+#: ../../content/applications/general/email_communication/azure_oauth.rst:281
 msgid "Outgoing mail server #1 :guilabel:`FROM Filtering` = `john@example.com`"
 msgstr "Kimenő levelezőszerver #1 :guilabel:`Feladó szűrés` = `john@example.com`"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:296
+#: ../../content/applications/general/email_communication/azure_oauth.rst:283
 msgid "User #2 mailbox"
 msgstr "2\\. felhasználó postafiókja"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:296
+#: ../../content/applications/general/email_communication/azure_oauth.rst:283
 msgid "Outgoing mail server #2 **username** (login) = `jane@example.com`"
 msgstr "Kimenő levelezőszerver #2 **felhasználónév** (bejelentkezési név) = `jane@example.com`"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:297
+#: ../../content/applications/general/email_communication/azure_oauth.rst:284
 msgid "Outgoing mail server #2 :guilabel:`FROM Filtering` = `jane@example.com`"
 msgstr "Kimenő levelezőszerver #2 :guilabel:`Feladó szűrés` = `jane@example.com`"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:299
+#: ../../content/applications/general/email_communication/azure_oauth.rst:286
 msgid "Notifications mailbox"
 msgstr "Értesítések postafiókja"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:299
+#: ../../content/applications/general/email_communication/azure_oauth.rst:286
 msgid "Outgoing mail server #3 **username** (login) = `notifications@example.com`"
 msgstr "Kimenő levelezőszerver #3 **felhasználónév** (bejelentkezési név) = `notifications@example.com`"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:300
+#: ../../content/applications/general/email_communication/azure_oauth.rst:287
 msgid "Outgoing mail server #3 :guilabel:`FROM Filtering` = `notifications@example.com`"
 msgstr "Kimenő levelezőszerver #3 :guilabel:`Feladó szűrés` = `notifications@example.com`"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:302
+#: ../../content/applications/general/email_communication/azure_oauth.rst:289
 msgid "System Parameters"
 msgstr "Rendszerparaméterek"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:306
+#: ../../content/applications/general/email_communication/azure_oauth.rst:293
 msgid "Configure incoming email server"
 msgstr "Bejövő e-mail szerver konfigurálása"
 
-#: ../../content/applications/general/email_communication/azure_oauth.rst:308
+#: ../../content/applications/general/email_communication/azure_oauth.rst:295
 msgid "The incoming account should be configured in a similar way to the outgoing email account. Navigate to the :guilabel:`Incoming Mail Servers` in the :guilabel:`Technical Menu` and :guilabel:`Create` a new configuration. Check or Select the button next to :guilabel:`Outlook Oauth Authentication` and enter the :guilabel:`Microsoft Outlook username`.  Click on :guilabel:`Connect your Outlook account`. Odoo will state: :guilabel:`Outlook Token Valid` Now :guilabel:`Test and Confirm` the account. The account should be ready to receive email to the Odoo database."
 msgstr "A bejövő fiókot a kimenő e-mail fiókhoz hasonló módon kell konfigurálni. Navigáljon a :guilabel:`Technikai menü` :guilabel:`Bejövő levelezőszerverek` menüpontjához, majd :guilabel:`Hozzon létre` egy új konfigurációt. Jelölje be vagy válassza ki a :guilabel:`Outlook OAuth-hitelesítés` melletti gombot, és adja meg a :guilabel:`Microsoft Outlook-felhasználónevet`. Kattintson az :guilabel:`Outlook-fiók csatlakoztatása` gombra. Az Odoo ezt jelzi: :guilabel:`Az Outlook-token érvényes`. Most :guilabel:`Tesztelje és erősítse meg` a fiókot. A fiók ezt követően készen áll e-mailek fogadására az Odoo adatbázisában."
 
@@ -2470,165 +2492,185 @@ msgstr "Ezután kattintson a :guilabel:`Projekt létrehozása` gombra, amely az 
 msgid "On the :menuselection:`New Project` screen, rename the :guilabel:`Project name` to `Odoo` and browse for the :guilabel:`Location`. Set the :guilabel:`Location` as the *Google Workspace organization*. If you are using a personal Gmail account, then leave the :guilabel:`Location` as :guilabel:`No Organization`."
 msgstr "Az :menuselection:`Új projekt` képernyőn nevezze át a :guilabel:`Projekt neve` mezőt `Odoo`-ra, és keresse meg a :guilabel:`Helyszínt`. A :guilabel:`Helyszínt` állítsa be a *Google Workspace-szervezetként*. Ha személyes Gmail-fiókot használ, hagyja a :guilabel:`Helyszínt` :guilabel:`Nincs szervezet` értéken."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:44 ../../content/applications/general/integrations/google_translate.rst:41
+#: ../../content/applications/general/email_communication/google_oauth.rst:None ../../content/applications/general/integrations/google_translate.rst:None
+msgid "Project Name and Location for Google OAuth."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/google_oauth.rst:42 ../../content/applications/general/integrations/google_translate.rst:39
 msgid "Click on :guilabel:`Create` to finish this step."
 msgstr "Kattintson a :guilabel:`Létrehozás` gombra a lépés befejezéséhez."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:47 ../../content/applications/general/users/google.rst:48
+#: ../../content/applications/general/email_communication/google_oauth.rst:45 ../../content/applications/general/users/google.rst:48
 msgid "OAuth consent screen"
 msgstr "OAuth hozzájárulási képernyő"
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:49
+#: ../../content/applications/general/email_communication/google_oauth.rst:47
 msgid "If the page doesn't redirect to the :menuselection:`User Type` options, click on :guilabel:`OAuth consent screen` in the left menu."
 msgstr "Ha az oldal nem irányítja át a :menuselection:`Felhasználó típusa` lehetőségekhez, kattintson a bal oldali menüben az :guilabel:`OAuth hozzájárulási képernyőre`."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:52
+#: ../../content/applications/general/email_communication/google_oauth.rst:50
 msgid "Under :guilabel:`User Type` options, select the appropriate :guilabel:`User Type`, and then click on :guilabel:`Create` again, which will finally navigate to the :menuselection:`Edit app registration` page."
 msgstr "A :guilabel:`Felhasználó típusa` lehetőségek alatt válassza ki a megfelelő :guilabel:`Felhasználó típusát`, majd kattintson ismét a :guilabel:`Létrehozás` gombra, amely végül az :menuselection:`Alkalmazásregisztráció szerkesztése` oldalra navigál."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:57 ../../content/applications/general/users/google.rst:69
+#: ../../content/applications/general/email_communication/google_oauth.rst:55 ../../content/applications/general/users/google.rst:69
 msgid "*Personal* Gmail Accounts are only allowed to be **External** User Type, which means Google may require an approval, or for *Scopes* to be added on. However, using a *Google WorkSpace* account allows for **Internal** User Type to be used."
 msgstr "A *személyes* Gmail-fiókok kizárólag **Külső** felhasználótípusként engedélyezettek, ami azt jelenti, hogy a Google jóváhagyást kérhet, vagy *Hatókörök* hozzáadása szükséges. A *Google Workspace*-fiók használata azonban lehetővé teszi a **Belső** felhasználótípus alkalmazását."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:61 ../../content/applications/general/users/google.rst:73
+#: ../../content/applications/general/email_communication/google_oauth.rst:59 ../../content/applications/general/users/google.rst:73
 msgid "Note, as well, that while the API connection is in the *External* testing mode, then no approval is necessary from Google. User limits in this testing mode is set to 100 users."
 msgstr "Megjegyzendő, hogy amíg az API-kapcsolat *Külső* tesztelési módban van, addig nem szükséges a Google jóváhagyása. Ebben a tesztelési módban a felhasználók száma 100 főre korlátozott."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:65
+#: ../../content/applications/general/email_communication/google_oauth.rst:63
 msgid "Edit app registration"
 msgstr "Alkalmazásregisztráció szerkesztése"
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:67
+#: ../../content/applications/general/email_communication/google_oauth.rst:65
 msgid "Next we will configure the app registration of the project."
 msgstr "Következő lépésként konfiguráljuk a projekt alkalmazásregisztrációját."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:69
+#: ../../content/applications/general/email_communication/google_oauth.rst:67
 msgid "On the :guilabel:`OAuth consent screen` step, under the :guilabel:`App information` section, enter `Odoo` in the :guilabel:`App name` field. Select the organization's email address under the :guilabel:`User support` email field."
 msgstr "Az :guilabel:`OAuth beleegyezési képernyő` lépésben, az :guilabel:`Alkalmazásadatok` szakasz alatt, írja be az `Odoo` nevet az :guilabel:`Alkalmazás neve` mezőbe. Válassza ki a szervezet e-mail-címét a :guilabel:`Felhasználói támogatás` e-mail-mező alatt."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:76
+#: ../../content/applications/general/email_communication/google_oauth.rst:74
 msgid "After that, under the :guilabel:`Developer contact information` section, enter the organization's email address. Google uses this email address to notify the organization about any changes to your project."
 msgstr "Ezt követően a :guilabel:`Fejlesztői kapcsolattartási adatok` szakasz alatt adja meg a szervezet e-mail-címét. A Google erre az e-mail-címre küldi a szervezetnek a projektben bekövetkező változásokról szóló értesítéseket."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:80
+#: ../../content/applications/general/email_communication/google_oauth.rst:78
 msgid "Next, click on the :guilabel:`Save and Continue` button. Then, skip the :menuselection:`Scopes` page by scrolling to the bottom and clicking on :guilabel:`Save and Continue`."
 msgstr "Ezután kattintson a :guilabel:`Mentés és folytatás` gombra. Majd ugorja át a :menuselection:`Hatókörök` oldalt a lap aljára görgetéssel, és kattintson a :guilabel:`Mentés és folytatás` gombra."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:83
+#: ../../content/applications/general/email_communication/google_oauth.rst:81
 msgid "If continuing in testing mode (External), add the email addresses being configured under the :guilabel:`Test users` step, by clicking on :guilabel:`Add Users`, and then the :guilabel:`Save and Continue` button. A summary of the app registration appears."
 msgstr "Ha tesztelési módban (Külső) folytatja, adja hozzá a konfigurálni kívánt e-mail-címeket a :guilabel:`Tesztfelhasználók` lépésben a :guilabel:`Felhasználók hozzáadása` gombra kattintva, majd kattintson a :guilabel:`Mentés és folytatás` gombra. Megjelenik az alkalmazásregisztráció összefoglalója."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:87
+#: ../../content/applications/general/email_communication/google_oauth.rst:85
 msgid "Finally, scroll to the bottom and click on :guilabel:`Back to Dashboard` to finish setting up the project."
 msgstr "Végül görgessen az oldal aljára, és kattintson a :guilabel:`Vissza az irányítópultra` gombra a projekt beállításának befejezéséhez."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:91
+#: ../../content/applications/general/email_communication/google_oauth.rst:89
 msgid "Create Credentials"
 msgstr "Hitelesítő adatok létrehozása"
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:93
+#: ../../content/applications/general/email_communication/google_oauth.rst:91
 msgid "Now that the project is set up, credentials should be created, which includes the *Client ID* and *Client Secret*. First, click on :guilabel:`Credentials` in the left sidebar menu."
 msgstr "Most, hogy a projekt be van állítva, létre kell hozni a hitelesítő adatokat, amelyek tartalmazzák az *Ügyfél-azonosítót* és az *Ügyfél titkos kulcsát*. Először kattintson a bal oldali menü :guilabel:`Hitelesítő adatok` elemére."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:96
+#: ../../content/applications/general/email_communication/google_oauth.rst:94
 msgid "Then, click on :guilabel:`Create Credentials` in the top menu and select :guilabel:`OAuth client ID` from the dropdown menu."
 msgstr "Ezután kattintson a felső menü :guilabel:`Hitelesítő adatok létrehozása` gombjára, és válassza az :guilabel:`OAuth ügyfél-azonosító` lehetőséget a legördülő menüből."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:99
+#: ../../content/applications/general/email_communication/google_oauth.rst:97
 msgid "Under :guilabel:`Application Type`, select :guilabel:`Web Application` from the dropdown menu."
 msgstr "Az :guilabel:`Alkalmazástípus` alatt válassza a :guilabel:`Webalkalmazás` lehetőséget a legördülő menüből."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:100
+#: ../../content/applications/general/email_communication/google_oauth.rst:98
 msgid "In the :guilabel:`Name` field, enter `Odoo`."
 msgstr "A :guilabel:`Név` mezőbe írja be az `Odoo` értéket."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:103
+#: ../../content/applications/general/email_communication/google_oauth.rst:101
 msgid "Next, click on :guilabel:`Create` to generate an OAuth :guilabel:`Client ID` and :guilabel:`Client Secret`. Finally, copy each generated value for later use when configuring in Odoo, and then navigate to the Odoo database."
 msgstr "Ezután kattintson a :guilabel:`Létrehozás` gombra egy OAuth :guilabel:`Ügyfél-azonosító` és :guilabel:`Ügyfél titkos kulcsa` generálásához. Végül másolja ki mindkét generált értéket, hogy később az Odoo konfigurálásánál felhasználhassa, majd navigáljon az Odoo-adatbázishoz."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:118
+#: ../../content/applications/general/email_communication/google_oauth.rst:None
+msgid "Client ID and Client Secret for Google OAuth."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/google_oauth.rst:113
 msgid "Enter Google Credentials"
 msgstr "Google hitelesítő adatok megadása"
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:120
+#: ../../content/applications/general/email_communication/google_oauth.rst:115
 msgid "First, open Odoo and navigate to the :guilabel:`Apps` module. Then, remove the :guilabel:`Apps` filter from the search bar and type in `Google`. Install the module called :guilabel:`Google Gmail`."
 msgstr "Először nyissa meg az Odoo-t, és navigáljon az :guilabel:`Alkalmazások` modulhoz. Ezután távolítsa el az :guilabel:`Alkalmazások` szűrőt a keresősávból, és írja be a `Google` szöveget. Telepítse a :guilabel:`Google Gmail` nevű modult."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:124
+#: ../../content/applications/general/email_communication/google_oauth.rst:119
 msgid "Next, navigate to :menuselection:`Settings --> General Settings`, and under the :guilabel:`Discuss` section, ensure that the checkbox for :guilabel:`Custom Email Servers` or :guilabel:`External Email Servers` is checked. This populates a new option for :guilabel:`Gmail Credentials` or :guilabel:`Use a Gmail Sever`. Then, copy and paste the respective values into the :guilabel:`Client ID` and :guilabel:`Client Secret` fields and :guilabel:`Save` the settings."
 msgstr "Ezután navigáljon a :menuselection:`Beállítások --> Általános beállítások` menüponthoz, és a :guilabel:`Megbeszélés` szakasz alatt győződjön meg arról, hogy a :guilabel:`Egyéni e-mail-kiszolgálók` vagy a :guilabel:`Külső e-mail-kiszolgálók` jelölőnégyzet be van jelölve. Ez megjelenít egy új lehetőséget a :guilabel:`Gmail hitelesítő adatok` vagy a :guilabel:`Gmail-kiszolgáló használata` számára. Ezután másolja és illessze be a megfelelő értékeket az :guilabel:`Ügyfél-azonosító` és az :guilabel:`Ügyfél titkos kulcsa` mezőkbe, majd :guilabel:`Mentse` a beállításokat."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:133
+#: ../../content/applications/general/email_communication/google_oauth.rst:128
 msgid "To configure the external Gmail account, return to the top of the :guilabel:`Custom Email Servers` setting and then click the :guilabel:`Outgoing Email Servers` link."
 msgstr "A külső Gmail-fiók konfigurálásához térjen vissza az :guilabel:`Egyéni e-mail-kiszolgálók` beállítás tetejére, majd kattintson a :guilabel:`Kimenő e-mail-kiszolgálók` hivatkozásra."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:146
+#: ../../content/applications/general/email_communication/google_oauth.rst:141
 msgid "Next, click on :guilabel:`Gmail OAuth Authentication` or :guilabel:`Gmail` (under the :guilabel:`Authenticate with` or :guilabel:`Connection` section). Finally, click on :guilabel:`Connect your Gmail Account`."
 msgstr "Következő lépésként kattintson a :guilabel:`Gmail OAuth hitelesítés` vagy :guilabel:`Gmail` lehetőségre (a :guilabel:`Hitelesítés módja` vagy :guilabel:`Kapcsolat` szakasz alatt). Végül kattintson a :guilabel:`Gmail-fiók csatlakoztatása` gombra."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:150
+#: ../../content/applications/general/email_communication/google_oauth.rst:145
 msgid "A new window labeled :guilabel:`Google` opens to complete the authorization process. Select the appropriate email address that is being configured in Odoo."
 msgstr "Megnyílik egy :guilabel:`Google` feliratú új ablak az engedélyezési folyamat befejezéséhez. Válassza ki azt az e-mail-címet, amelyet az Odoo-ban konfigurál."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:153
+#: ../../content/applications/general/email_communication/google_oauth.rst:148
 msgid "If the email address is a personal account, then an extra step pops up, so click :guilabel:`Continue` to allow the verification and connect the Gmail account to Odoo."
 msgstr "Ha az e-mail-cím személyes fiókhoz tartozik, egy további lépés jelenik meg, ezért kattintson a :guilabel:`Folytatás` gombra az ellenőrzés engedélyezéséhez és a Gmail-fiók Odoo-hoz való csatlakoztatásához."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:156
+#: ../../content/applications/general/email_communication/google_oauth.rst:151
 msgid "Then, allow Odoo to access the Google account by clicking on :guilabel:`Continue` or :guilabel:`Allow`. After that, the page navigates back to the newly configured outgoing email server in Odoo. The configuration automatically loads the token in Odoo, and a tag stating :guilabel:`Gmail Token Valid` appears in green."
 msgstr "Ezután engedélyezze az Odoo számára a Google-fiókhoz való hozzáférést a :guilabel:`Folytatás` vagy :guilabel:`Engedélyezés` gombra kattintva. Ezt követően az oldal visszanavigál az Odoo-ban újonnan konfigurált kimenő e-mail szerverhez. A konfiguráció automatikusan betölti a tokent az Odoo-ban, és megjelenik egy zöld színű :guilabel:`Gmail token érvényes` címke."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:168
+#: ../../content/applications/general/email_communication/google_oauth.rst:163
 msgid "Finally, :guilabel:`Test the Connection`. A confirmation message should appear. The Odoo database can now send safe, secure emails through Google using OAuth authentication."
 msgstr "Végül kattintson a :guilabel:`Kapcsolat tesztelése` gombra. Egy megerősítő üzenetnek kell megjelennie. Az Odoo-adatbázis mostantól biztonságos e-maileket küldhet Google-on keresztül, OAuth hitelesítéssel."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:172
+#: ../../content/applications/general/email_communication/google_oauth.rst:167
 msgid "Google OAuth FAQ"
 msgstr "Google OAuth GYIK"
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:175
+#: ../../content/applications/general/email_communication/google_oauth.rst:170
 msgid "Production VS Testing Publishing Status"
 msgstr "Éles vs. tesztelési közzétételi állapot"
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:177
+#: ../../content/applications/general/email_communication/google_oauth.rst:172
 msgid "Choosing :guilabel:`Production` as the :guilabel:`Publishing Status` (instead of :guilabel:`Testing`) will display the following warning message:"
 msgstr "Ha a :guilabel:`Közzétételi állapot` értékeként :guilabel:`Éles` van kiválasztva (a :guilabel:`Tesztelés` helyett), a következő figyelmeztető üzenet jelenik meg:"
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:186
+#: ../../content/applications/general/email_communication/google_oauth.rst:None
+msgid "OAuth is Limited to 100 Sensitive Scope Logins."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/google_oauth.rst:179
 msgid "To correct this warning, navigate to the `Google API Platform <https://console.cloud.google.com/apis/credentials/consent>`_. If the :guilabel:`Publishing status` is :guilabel:`In Production`, click :guilabel:`Back to Testing` to correct the issue."
 msgstr "A figyelmeztetés kijavításához navigáljon a `Google API Platform <https://console.cloud.google.com/apis/credentials/consent>`_ oldalra. Ha a :guilabel:`Közzétételi állapot` értéke :guilabel:`Éles üzemben`, kattintson a :guilabel:`Visszatérés a teszteléshez` gombra a probléma megoldásához."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:191
+#: ../../content/applications/general/email_communication/google_oauth.rst:184
 msgid "No Test Users Added"
 msgstr "Nincsenek tesztfelhasználók hozzáadva"
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:193
+#: ../../content/applications/general/email_communication/google_oauth.rst:186
 msgid "If no test users are added to the OAuth consent screen, then a 403 access denied error will populate."
 msgstr "Ha nem adtak hozzá tesztfelhasználókat az OAuth hozzájárulási képernyőhöz, 403-as hozzáférés megtagadva hiba jelenik meg."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:202
+#: ../../content/applications/general/email_communication/google_oauth.rst:None
+msgid "403 Access Denied Error."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/google_oauth.rst:193
 msgid "To correct this error, return to the :guilabel:`OAuth consent screen` under :guilabel:`APIs & Services` and add test user(s) to the app. Add the email that you are configuring in Odoo."
 msgstr "A hiba kijavításához térjen vissza az :guilabel:`OAuth hozzájárulási képernyőhöz` az :guilabel:`API-k és szolgáltatások` menüpont alatt, és adjon hozzá tesztfelhasználó(ka)t az alkalmazáshoz. Adja meg az Odoo-ban konfigurált e-mail-címet."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:206
+#: ../../content/applications/general/email_communication/google_oauth.rst:197
 msgid "Gmail Module not updated"
 msgstr "A Gmail modul nincs frissítve"
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:208
+#: ../../content/applications/general/email_communication/google_oauth.rst:199
 msgid "If the *Google Gmail* module in Odoo has not been updated to the latest version, then a :guilabel:`Forbidden` error message populates."
 msgstr "Ha az Odoo *Google Gmail* modulja nem frissült a legújabb verzióra, egy :guilabel:`Tiltott` hibaüzenet jelenik meg."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:217
+#: ../../content/applications/general/email_communication/google_oauth.rst:208
 msgid "To correct this error, go to the :menuselection:`Apps` module and clear out the search terms. Then, search for `Gmail` or `Google` and upgrade the :guilabel:`Google Gmail` module. Finally, click on the three dots on the upper right of the module and select :guilabel:`Upgrade`."
 msgstr "A hiba kijavításához lépjen az :menuselection:`Alkalmazások` modulba, és törölje a keresési feltételeket. Ezután keressen rá a `Gmail` vagy `Google` kifejezésre, és frissítse a :guilabel:`Google Gmail` modult. Végül kattintson a modul jobb felső sarkában lévő három pontra, és válassza a :guilabel:`Frissítés` lehetőséget."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:222
+#: ../../content/applications/general/email_communication/google_oauth.rst:213
 msgid "Application Type"
 msgstr "Alkalmazás típusa"
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:224
+#: ../../content/applications/general/email_communication/google_oauth.rst:215
 msgid "When creating the credentials (OAuth *Client ID* and *Client Secret*), if :guilabel:`Desktop App` is selected for the :guilabel:`Application Type`, an :guilabel:`Authorization Error` appears."
 msgstr "A hitelesítő adatok (OAuth *Client ID* és *Client Secret*) létrehozásakor, ha az :guilabel:`Alkalmazás típusa` mezőnél az :guilabel:`Asztali alkalmazás` lehetőséget választja, :guilabel:`Hitelesítési hiba` jelenik meg."
+
+#: ../../content/applications/general/email_communication/google_oauth.rst:None
+msgid "Error 400 Redirect URI Mismatch."
+msgstr ""
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:3
 msgid "Mailjet API"
@@ -2650,151 +2692,171 @@ msgstr "API hitelesítő adatok létrehozása"
 msgid "To get started, sign in to the `Mailjet Account Information <https://app.mailjet.com/account>`_ page. Next, navigate to the :guilabel:`Senders & Domains` section and click on :guilabel:`SMTP and SEND API Settings`."
 msgstr "A kezdéshez jelentkezzen be a `Mailjet Account Information <https://app.mailjet.com/account>`_ oldalra. Ezután navigáljon a :guilabel:`Feladók és domainek` részhez, és kattintson az :guilabel:`SMTP és SEND API beállítások` lehetőségre."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:27
+#: ../../content/applications/general/email_communication/mailjet_api.rst:None
+msgid "SMTP and Send API Settings link in the Senders & Domains section of Mailjet."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/mailjet_api.rst:23
 msgid "Then, copy the :abbr:`SMTP (Simple Mail Transfer Protocol)` configuration settings onto a notepad. They can be found under the :guilabel:`Configuration (SMTP only)` section. The :abbr:`SMTP (Simple Mail Transfer Protocol)` configuration settings include the server address, the security option needed (Use :abbr:`SSL (Secure Sockets Layer)`/:abbr:`TLS (Transport Layer Security)`), and the port number. The settings are needed to configure Mailjet in Odoo, which is covered in the :ref:`last section <maintain/mailjet-api/odoo-setup>`."
 msgstr "Ezután másolja az :abbr:`SMTP (Simple Mail Transfer Protocol)` konfigurációs beállításokat egy jegyzettömbbe. Ezek a :guilabel:`Konfiguráció (csak SMTP)` részben találhatók. Az :abbr:`SMTP (Simple Mail Transfer Protocol)` konfigurációs beállítások tartalmazzák a kiszolgáló címét, a szükséges biztonsági beállítást (:abbr:`SSL (Secure Sockets Layer)`/:abbr:`TLS (Transport Layer Security)` használata), valamint a portszámot. Ezekre a beállításokra szükség van a Mailjet Odoo-ban történő konfigurálásához, amelyet az :ref:`utolsó szakasz <maintain/mailjet-api/odoo-setup>` ismertet."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:35
+#: ../../content/applications/general/email_communication/mailjet_api.rst:31
 msgid "`Mailjet: How can I configure my SMTP parameters? <https://documentation.mailjet.com/hc/articles/360043229473>`_"
 msgstr "`Mailjet: Hogyan konfigurálhatom az SMTP paramétereimet? <https://documentation.mailjet.com/hc/articles/360043229473>`_"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:48
+#: ../../content/applications/general/email_communication/mailjet_api.rst:41
 msgid "Next, click on the button labeled :guilabel:`Retrieve your API credentials` to retrieve the Mailjet API credentials."
 msgstr "Ezután kattintson az :guilabel:`API hitelesítő adatok lekérése` feliratú gombra a Mailjet API hitelesítő adatok lekéréséhez."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:51
+#: ../../content/applications/general/email_communication/mailjet_api.rst:44
 msgid "Then, click on the eye icon to reveal the :guilabel:`API key`. Copy this key to a notepad, as this serves as the :guilabel:`Username` in the Odoo configuration. Next, click on the :guilabel:`Generate Secret Key` button to generate the :guilabel:`Secret Key`. Copy this key to a notepad, as this serves as the :guilabel:`Password` in the Odoo configuration."
 msgstr "Ezután kattintson a szem ikonra az :guilabel:`API kulcs` megjelenítéséhez. Másolja ezt a kulcsot egy jegyzettömbbe, mivel ez szolgál :guilabel:`Felhasználónévként` az Odoo konfigurációban. Ezután kattintson a :guilabel:`Titkos kulcs generálása` gombra a :guilabel:`Titkos kulcs` létrehozásához. Másolja ezt a kulcsot is egy jegyzettömbbe, mivel ez szolgál :guilabel:`Jelszóként` az Odoo konfigurációban."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:57
+#: ../../content/applications/general/email_communication/mailjet_api.rst:50
 msgid "Add verified sender address(es)"
 msgstr "Ellenőrzött feladó cím(ek) hozzáadása"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:59
+#: ../../content/applications/general/email_communication/mailjet_api.rst:52
 msgid "The next step is to add a sender address or a domain to the Mailjet account settings so that the email address or domain is approved to send emails using Mailjet's servers. First, navigate to the `Mailjet Account Information <https://app.mailjet.com/account>`_ page. Next, click on the :guilabel:`Add a Sender Domain or Address` link under the :guilabel:`Senders & Domains` section."
 msgstr "A következő lépés egy feladó cím vagy domain hozzáadása a Mailjet-fiók beállításaihoz, hogy az e-mail cím vagy domain jóvá legyen hagyva e-mailek küldéséhez a Mailjet kiszolgálóin keresztül. Először navigáljon a `Mailjet Account Information <https://app.mailjet.com/account>`_ oldalra. Ezután kattintson a :guilabel:`Feladó domain vagy cím hozzáadása` hivatkozásra a :guilabel:`Feladók és domainek` részben."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:71
+#: ../../content/applications/general/email_communication/mailjet_api.rst:None
+msgid "Add a sender domain or address in the Mailjet interface."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/mailjet_api.rst:60
 msgid "Determine if a sender's email address or the entire domain needs to be added to the Mailjet settings. It may be easier to configure the domain as a whole if :abbr:`DNS (Domain Name System)` access is available. Jump to the :ref:`Add a domain <maintain/mailjet-api/add-domain>` section for steps on adding the domain."
 msgstr "Döntse el, hogy a feladó e-mail címét vagy a teljes domaint kell-e hozzáadni a Mailjet beállításaihoz. Ha :abbr:`DNS (Domain Name System)` hozzáférés rendelkezésre áll, egyszerűbb lehet az egész domaint konfigurálni. A domain hozzáadásának lépéseiért ugorjon a :ref:`Domain hozzáadása <maintain/mailjet-api/add-domain>` szakaszra."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:77
+#: ../../content/applications/general/email_communication/mailjet_api.rst:66
 msgid "Either all email addresses of the Odoo database users who are sending emails using Mailjet's servers need to be configured or the domain(s) of the users' email addresses can be configured."
 msgstr "Az Odoo adatbázis azon felhasználóinak minden e-mail-címét konfigurálni kell, akik a Mailjet szervereivel küldnek e-maileket, vagy a felhasználók e-mail-címeinek domainjei konfigurálhatók."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:80
+#: ../../content/applications/general/email_communication/mailjet_api.rst:69
 msgid "By default, the email address originally set up in the Mailjet account is added as a trusted sender. To add another email address, click on the button labeled :guilabel:`Add a sender address`. Then, add the email address that is configured to send from the custom domain."
 msgstr "Alapértelmezés szerint a Mailjet-fiókban eredetileg beállított e-mail-cím kerül megbízható küldőként hozzáadásra. Másik e-mail-cím hozzáadásához kattintson a :guilabel:`Küldő cím hozzáadása` feliratú gombra. Ezután adja meg azt az e-mail-címet, amely az egyéni domainről való küldésre van konfigurálva."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:84
+#: ../../content/applications/general/email_communication/mailjet_api.rst:73
 msgid "At minimum the following email addresses should be set up in the provider and verified in Mailjet:"
 msgstr "Legalább a következő e-mail-címeket kell beállítani a szolgáltatónál és ellenőrizni a Mailjet-ben:"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:86
+#: ../../content/applications/general/email_communication/mailjet_api.rst:75
 msgid "notifications\\@yourdomain.com"
 msgstr "notifications\\@yourdomain.com"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:87
+#: ../../content/applications/general/email_communication/mailjet_api.rst:76
 msgid "bounce\\@yourdomain.com"
 msgstr "bounce\\@yourdomain.com"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:88
+#: ../../content/applications/general/email_communication/mailjet_api.rst:77
 msgid "catchall\\@yourdomain.com"
 msgstr "catchall\\@yourdomain.com"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:91
+#: ../../content/applications/general/email_communication/mailjet_api.rst:80
 msgid "Replace `yourdomain` with the custom domain for the Odoo database. If there isn't one, then use the :guilabel:`mail.catchall.domain` system parameter."
 msgstr "Cserélje ki a `yourdomain` részt az Odoo adatbázis egyéni domainjére. Ha nincs ilyen, használja a :guilabel:`mail.catchall.domain` rendszerparamétert."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:94
+#: ../../content/applications/general/email_communication/mailjet_api.rst:83
 msgid "After that, fill out the :guilabel:`Email Information` form, making sure to select the appropriate email type: transactional email or mass emails. After completing the form, an activation email is sent to the email address and the trusted sender can be activated."
 msgstr "Ezután töltse ki az :guilabel:`E-mail-adatok` űrlapot, ügyelve arra, hogy a megfelelő e-mail-típust válassza ki: tranzakciós e-mail vagy tömeges e-mailek. Az űrlap kitöltése után egy aktiválási e-mail érkezik a megadott e-mail-címre, és a megbízható küldő aktiválható."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:98
+#: ../../content/applications/general/email_communication/mailjet_api.rst:87
 msgid "It is recommended to set up the :abbr:`SPF (Sender Policy Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC (Domain-based Message Authentication, Reporting, and Conformance)` settings on the domain of the sender."
 msgstr "Ajánlott beállítani az :abbr:`SPF (Sender Policy Framework)`/:abbr:`DKIM (DomainKeys Identified Mail)`/:abbr:`DMARC (Domain-based Message Authentication, Reporting, and Conformance)` beállításokat a küldő domainjén."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:103
+#: ../../content/applications/general/email_communication/mailjet_api.rst:92
 msgid "`Mailjet's SPF/DKIM documentation <https://documentation.mailjet.com/hc/en-us/articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-Complete-Guide>`_"
 msgstr "`A Mailjet SPF/DKIM dokumentációja <https://documentation.mailjet.com/hc/en-us/articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-Complete-Guide>`_"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:105
+#: ../../content/applications/general/email_communication/mailjet_api.rst:94
 msgid "`Mailjet's DMARC documentation <https://documentation.mailjet.com/hc/en-us/articles/20531905163419-Understanding-DMARC>`_"
 msgstr "`A Mailjet DMARC dokumentációja <https://documentation.mailjet.com/hc/en-us/articles/20531905163419-Understanding-DMARC>`_"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:109
+#: ../../content/applications/general/email_communication/mailjet_api.rst:98
 msgid "If the database is not using a custom domain, then in order to verify the sender's address, a temporary alias (of the three email addresses mentioned above) should be set up in Odoo CRM to create a lead. Then, the database is able to receive the verification email and verify the accounts."
 msgstr "Ha az adatbázis nem egyéni domaint használ, akkor a küldő e-mail-címének ellenőrzéséhez egy ideiglenes aliast (a fent említett három e-mail-cím egyikét) kell beállítani az Odoo CRM-ben egy érdeklődő létrehozásához. Ezután az adatbázis képes fogadni az ellenőrző e-mailt és jóváhagyni a fiókokat."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:117
+#: ../../content/applications/general/email_communication/mailjet_api.rst:106
 msgid "Add a domain"
 msgstr "Domain hozzáadása"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:119
+#: ../../content/applications/general/email_communication/mailjet_api.rst:108
 msgid "By adding an entire domain to the Mailjet account, all the sender addresses related to that domain are automatically validated for sending emails using Mailjet servers. First, navigate to the `Mailjet Account Information <https://app.mailjet.com/account>`_ page. Next, click on :guilabel:`Add a Sender Domain or Address` link under the :guilabel:`Senders & Domains` section. Then, click on :guilabel:`Add domain` to add the custom domain."
 msgstr "Egy teljes domain Mailjet-fiókhoz való hozzáadásával az adott domainhez tartozó összes küldő cím automatikusan érvényesítésre kerül a Mailjet szervereivel történő e-mail-küldéshez. Először navigáljon a `Mailjet-fiók adatai <https://app.mailjet.com/account>`_ oldalra. Ezután kattintson a :guilabel:`Küldő domain vagy cím hozzáadása` hivatkozásra a :guilabel:`Küldők és domainek` részben. Majd kattintson a :guilabel:`Domain hozzáadása` lehetőségre az egyéni domain hozzáadásához."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:126
+#: ../../content/applications/general/email_communication/mailjet_api.rst:115
 msgid "The domain needs to be added to the Mailjet account and then validated through the :abbr:`DNS (Domain Name System)`."
 msgstr "A domaint hozzá kell adni a Mailjet-fiókhoz, majd a :abbr:`DNS (Domain Name System)` segítségével kell ellenőrizni."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:129
+#: ../../content/applications/general/email_communication/mailjet_api.rst:118
 msgid "After that, fill out the :guilabel:`Add a new Domain` page on Mailjet and click :guilabel:`Continue`."
 msgstr "Ezután töltse ki az :guilabel:`Új domain hozzáadása` oldalt a Mailjet-ben, majd kattintson a :guilabel:`Folytatás` gombra."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:132
+#: ../../content/applications/general/email_communication/mailjet_api.rst:121
 msgid "After adding the domain, a validation page will populate. Unless the Odoo database is on-premise (in which case, choose :guilabel:`Option 1`), choose :guilabel:`Option 2: Create a DNS Record`. Copy the TXT record information to a notepad and then navigate to the domain's :abbr:`DNS (Domain Name System)` provider to complete validation."
 msgstr "A domain hozzáadása után megjelenik egy ellenőrző oldal. Hacsak az Odoo adatbázis nem helyszíni telepítésű (ebben az esetben válassza a :guilabel:`1. lehetőség` opciót), válassza a :guilabel:`2. lehetőség: DNS-rekord létrehozása` opciót. Másolja a TXT-rekord adatait egy szövegszerkesztőbe, majd navigáljon a domain :abbr:`DNS (Domain Name System)` szolgáltatójához az ellenőrzés elvégzéséhez."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:145
+#: ../../content/applications/general/email_communication/mailjet_api.rst:None
+msgid "The TXT record information to input on the domain's DNS."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/mailjet_api.rst:130
 msgid "Setup in the domain's DNS"
 msgstr "Beállítás a domain DNS-ében"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:147
+#: ../../content/applications/general/email_communication/mailjet_api.rst:132
 msgid "After getting the TXT record information from the Mailjet account, add a TXT record to the domain's :abbr:`DNS (Domain Name System)`. This process varies depending on the :abbr:`DNS (Domain Name System)` provider. Consult the provider for specific configuration processes. The TXT record information consists of the :guilabel:`Host` and :guilabel:`Value`. Paste these into the corresponding fields in the TXT record."
 msgstr "Miután megkapta a TXT-rekord adatait a Mailjet-fiókból, adjon hozzá egy TXT-rekordot a domain :abbr:`DNS (Domain Name System)` rendszeréhez. Ez a folyamat a :abbr:`DNS (Domain Name System)` szolgáltatótól függően eltérő lehet. A konkrét konfigurációs eljárásokkal kapcsolatban forduljon a szolgáltatóhoz. A TXT-rekord adatai a :guilabel:`Hoszt` és az :guilabel:`Érték` mezőkből állnak. Illessze be ezeket a TXT-rekord megfelelő mezőibe."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:154
+#: ../../content/applications/general/email_communication/mailjet_api.rst:139
 msgid "Return to Mailjet account information"
 msgstr "Visszatérés a Mailjet fiók adataihoz"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:156
+#: ../../content/applications/general/email_communication/mailjet_api.rst:141
 msgid "After adding the TXT record to the domain's :abbr:`DNS (Domain Name System)`, navigate back to the Mailjet account. Then, navigate to :menuselection:`Account Information --> Add a Sender Domain or Address`, click the gear icon next to :guilabel:`Domain`, and select :guilabel:`Validate`."
 msgstr "Miután hozzáadta a TXT rekordot a domain :abbr:`DNS (Domain Name System)` beállításaihoz, navigáljon vissza a Mailjet fiókhoz. Ezután lépjen a :menuselection:`Fiókadatok --> Feladói domain vagy cím hozzáadása` menüpontra, kattintson a fogaskerék ikonra a :guilabel:`Domain` mellett, majd válassza az :guilabel:`Érvényesítés` lehetőséget."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:160
+#: ../../content/applications/general/email_communication/mailjet_api.rst:145
 msgid "This action can also be done by going to the `Sender domains & addresses <https://app.mailjet.com/ account/sender>`_ page on the Mailjet account information and clicking on :guilabel:`Manage`."
 msgstr "Ez a művelet elvégezhető a Mailjet fiók adatainál a `Feladói domainek és címek <https://app.mailjet.com/ account/sender>`_ oldalon is, ha a :guilabel:`Kezelés` gombra kattint."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:163
+#: ../../content/applications/general/email_communication/mailjet_api.rst:148
 msgid "Next, click :guilabel:`Check Now` to validate the TXT record that was added on the domain. A success screen will appear if the domain is configured correctly."
 msgstr "Ezután kattintson az :guilabel:`Ellenőrzés most` gombra a domainhez hozzáadott TXT rekord érvényesítéséhez. Ha a domain helyesen van konfigurálva, egy sikeres képernyő jelenik meg."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:172
+#: ../../content/applications/general/email_communication/mailjet_api.rst:None
+msgid "Check DNS record in Mailjet."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/mailjet_api.rst:154
 msgid "After successfully setting up the domain, there is an option to :guilabel:`Authenticate this domain (SPF/DKIM)`. This button populates :abbr:`SPF (Sender Policy Framework)` & :abbr:`DKIM (DomainKeys Identified Mail) records to input into the :abbr:`DNS (Domain Name System)` provider."
 msgstr "A domain sikeres beállítása után lehetőség van a :guilabel:`Domain hitelesítése (SPF/DKIM)` funkcióra. Ez a gomb :abbr:`SPF (Sender Policy Framework)` és :abbr:`DKIM (DomainKeys Identified Mail)` rekordokat állít elő, amelyeket be kell írni a :abbr:`DNS (Domain Name System)` szolgáltatónál."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:177
+#: ../../content/applications/general/email_communication/mailjet_api.rst:159
 msgid "`Mailjet's SPF/DKIM/DMARC documentation <https://documentation.mailjet.com/hc/articles/ 360042412734-Authenticating-Domains-with-SPF-DKIM>`_"
 msgstr "`A Mailjet SPF/DKIM/DMARC dokumentációja <https://documentation.mailjet.com/hc/articles/ 360042412734-Authenticating-Domains-with-SPF-DKIM>`_"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:189
+#: ../../content/applications/general/email_communication/mailjet_api.rst:None
+msgid "Authenticate the domain with SPF/DKIM records in Mailjet."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/mailjet_api.rst:168
 msgid "Set up in Odoo"
 msgstr "Beállítás Odoo-ban"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:191
+#: ../../content/applications/general/email_communication/mailjet_api.rst:170
 msgid "To complete the setup, navigate to the Odoo database and go to the :guilabel:`Settings`. With :ref:`developer-mode` turned on, go to the :menuselection:`Technical Menu --> Email --> Outgoing Mail Servers`. Then, create a new outgoing server configuration by clicking on the :guilabel:`Create` button."
 msgstr "A beállítás befejezéséhez navigáljon az Odoo adatbázishoz, majd lépjen a :guilabel:`Beállítások` menübe. A :ref:`developer-mode` bekapcsolásával lépjen a :menuselection:`Technikai menü --> E-mail --> Kimenő levelezőszerverek` menüpontra. Ezután hozzon létre egy új kimenő szerver konfigurációt a :guilabel:`Létrehozás` gombra kattintva."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:196
+#: ../../content/applications/general/email_communication/mailjet_api.rst:175
 msgid "Next, input the `SMTP server` (in-v3.mailjet.com), `port number` (587 or 465), and `Security (SSL/TLS)` that was copied earlier from the Mailjet account. They can also be found `here <https://app.mailjet.com/account/setup>`_. It is recommended to use :abbr:`SSL (Secure Sockets Layer)`/:abbr:`TLS (Transport Layer Security)` even though Mailjet may not require it."
 msgstr "Ezután adja meg a korábban a Mailjet fiókból kimásolt `SMTP szerver` (in-v3.mailjet.com), `portszám` (587 vagy 465) és `Biztonság (SSL/TLS)` adatokat. Ezek `itt <https://app.mailjet.com/account/setup>`_ is megtalálhatók. Ajánlott az :abbr:`SSL (Secure Sockets Layer)`/:abbr:`TLS (Transport Layer Security)` használata, még ha a Mailjet esetleg nem is követeli meg."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:201
+#: ../../content/applications/general/email_communication/mailjet_api.rst:180
 msgid "For the :guilabel:`Username`, input the :guilabel:`API KEY`. For the :guilabel:`Password`, input the :guilabel:`SECRET KEY` that was copied from the Mailjet account to the notepad earlier. These settings can be found on :menuselection:`Mailjet -->  Account Settings --> SMTP and SEND API Settings`."
 msgstr "A :guilabel:`Felhasználónév` mezőbe adja meg az :guilabel:`API KULCS` értékét. A :guilabel:`Jelszó` mezőbe adja meg a :guilabel:`TITKOS KULCS` értékét, amelyet korábban másolt ki a Mailjet fiókból a jegyzettömbbe. Ezek a beállítások a :menuselection:`Mailjet --> Fiókbeállítások --> SMTP és SEND API beállítások` menüpontban találhatók."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:206
+#: ../../content/applications/general/email_communication/mailjet_api.rst:185
 msgid "Then, if the Mailjet server is used for mass emailing, set the :guilabel:`Priority` value higher than that of any transactional email server(s). Finally, save the settings and :guilabel:`Test the Connection`."
 msgstr "Ezután, ha a Mailjet szervert tömeges e-mailezésre használják, állítsa a :guilabel:`Prioritás` értékét magasabbra, mint bármely tranzakciós levelezőszerver esetében. Végül mentse el a beállításokat, és kattintson a :guilabel:`Kapcsolat tesztelése` gombra."
 
@@ -2874,7 +2936,7 @@ msgstr "Kattintson a :guilabel:`Résztvevő hozzáadása` gombra, és illessze b
 msgid "Select :guilabel:`Storage Admin` as :guilabel:`Role` under the :guilabel:`Cloud Storage` section and click :guilabel:`Save`."
 msgstr "Válassza a :guilabel:`Tárolási rendszergazda` szerepkört a :guilabel:`Cloud Storage` szakasz alatti :guilabel:`Szerepkör` lehetőségnél, majd kattintson a :guilabel:`Mentés` gombra."
 
-#: ../../content/applications/general/integrations/cloud_storage.rst:100 ../../content/applications/general/integrations/cloud_storage.rst:287 ../../content/applications/general/integrations/google_translate.rst:105
+#: ../../content/applications/general/integrations/cloud_storage.rst:100 ../../content/applications/general/integrations/cloud_storage.rst:287 ../../content/applications/general/integrations/google_translate.rst:100
 msgid "Odoo configuration"
 msgstr "Odoo konfiguráció"
 
@@ -3166,79 +3228,83 @@ msgstr "Ha a *Google API-konzolon* már léteznek projektek, kattintson a :guila
 msgid "On the :guilabel:`New Project` screen, rename the :guilabel:`Project name` to `Odoo Translate`, and browse for the :guilabel:`Location`. Set the :guilabel:`Location` as the *Google Workspace organization*. If a personal Gmail account is being used, leave the :guilabel:`Location` as :guilabel:`No Organization`."
 msgstr "Az :guilabel:`New Project` képernyőn nevezze át a :guilabel:`Project name` mezőt `Odoo Translate`-re, és tallózza ki a :guilabel:`Location` (Helyszín) értékét. Állítsa a :guilabel:`Location` értékét a *Google Workspace szervezetre*. Ha személyes Gmail-fiókot használ, hagyja a :guilabel:`Location` értékét :guilabel:`No Organization`-ként."
 
-#: ../../content/applications/general/integrations/google_translate.rst:44
+#: ../../content/applications/general/integrations/google_translate.rst:42
 msgid "API library"
 msgstr "API-könyvtár"
 
-#: ../../content/applications/general/integrations/google_translate.rst:51
+#: ../../content/applications/general/integrations/google_translate.rst:49
 msgid "Click :guilabel:`Enable` to install the library on this project."
 msgstr "Kattintson az :guilabel:`Enable` gombra a könyvtár telepítéséhez erre a projektre."
 
-#: ../../content/applications/general/integrations/google_translate.rst:54
+#: ../../content/applications/general/integrations/google_translate.rst:52
 msgid "Using the *Google Translate* API **requires** a current billing account with `Google <https://myaccount.google.com/>`_."
 msgstr "A *Google Translate* API használatához **érvényes** számlázási fiók szükséges a `Google <https://myaccount.google.com/>`_ szolgáltatásnál."
 
-#: ../../content/applications/general/integrations/google_translate.rst:57
+#: ../../content/applications/general/integrations/google_translate.rst:55
 msgid "Once a billing account is setup with *Google* and the library is enabled, click :guilabel:`Manage` to finish configuration on the API."
 msgstr "Miután a *Google* számlázási fiókja be van állítva és a könyvtár engedélyezve van, kattintson a :guilabel:`Manage` gombra az API konfigurációjának befejezéséhez."
 
-#: ../../content/applications/general/integrations/google_translate.rst:63
+#: ../../content/applications/general/integrations/google_translate.rst:61
 msgid "Now that the project is set up, and the *Cloud Translation API* is enabled, credentials **must** be created. This includes the *API key*."
 msgstr "Most, hogy a projekt be van állítva és a *Cloud Translation API* engedélyezve van, hitelesítő adatokat **kell** létrehozni. Ez magában foglalja az *API-kulcsot*."
 
-#: ../../content/applications/general/integrations/google_translate.rst:66
+#: ../../content/applications/general/integrations/google_translate.rst:64
 msgid "To begin this process, click :menuselection:`Credentials` in the left sidebar menu."
 msgstr "A folyamat megkezdéséhez kattintson a bal oldali oldalsáv menüjében a :menuselection:`Credentials` lehetőségre."
 
-#: ../../content/applications/general/integrations/google_translate.rst:68
+#: ../../content/applications/general/integrations/google_translate.rst:66
 msgid "Then, click :guilabel:`Create Credentials` in the top menu, and select :guilabel:`API key` from the drop-down menu."
 msgstr "Ezután kattintson a felső menüben a :guilabel:`Create Credentials` gombra, és válassza az :guilabel:`API key` lehetőséget a legördülő menüből."
 
-#: ../../content/applications/general/integrations/google_translate.rst:78
+#: ../../content/applications/general/integrations/google_translate.rst:None
+msgid "Create an API key in the Google API console."
+msgstr ""
+
+#: ../../content/applications/general/integrations/google_translate.rst:73
 msgid "Copy the :guilabel:`API key` for use in the next section."
 msgstr "Másolja ki az :guilabel:`API key` értékét a következő szakaszban való felhasználáshoz."
 
-#: ../../content/applications/general/integrations/google_translate.rst:81
+#: ../../content/applications/general/integrations/google_translate.rst:76
 msgid "For security purposes, the usage of the *API key* can be restricted."
 msgstr "Biztonsági okokból az *API-kulcs* használata korlátozható."
 
-#: ../../content/applications/general/integrations/google_translate.rst:83
+#: ../../content/applications/general/integrations/google_translate.rst:78
 msgid "To do that, go to the *API restrictions* by clicking on :guilabel:`Edit API key` in the pop-over window, or by clicking on the listed API key on the :guilabel:`Credentials` page. From here, key restrictions can be set. This includes setting an application to restrict the use of the API key, and whether this API key can call any API."
 msgstr "Ehhez lépjen az *API korlátozások* részhez az :guilabel:`Edit API key` gombra kattintva a felugró ablakban, vagy a :guilabel:`Credentials` oldalon felsorolt API-kulcsra kattintva. Innen kulcskorlátozások állíthatók be. Ez magában foglalja egy alkalmazás beállítását az API-kulcs használatának korlátozásához, valamint annak meghatározását, hogy ez az API-kulcs hívhat-e bármely API-t."
 
-#: ../../content/applications/general/integrations/google_translate.rst:88
+#: ../../content/applications/general/integrations/google_translate.rst:83
 msgid "It is recommended that the Odoo *Translate API* be restricted to **only** allow requests from the configured Odoo database and to the *Cloud Translation API*."
 msgstr "Ajánlott az Odoo *Translate API*-t úgy korlátozni, hogy **kizárólag** a konfigurált Odoo adatbázisból érkező kéréseket és a *Cloud Translation API*-t engedélyezze."
 
-#: ../../content/applications/general/integrations/google_translate.rst:91
+#: ../../content/applications/general/integrations/google_translate.rst:86
 msgid "To add the website restriction, click :guilabel:`Websites`, under the :guilabel:`Set an application restriction`. Then, enter the address of the database *Google Translate* is being used in, by clicking on :guilabel:`Add`. Lastly, add the :abbr:`URL (Uniform Resource Locator)`, and click :guilabel:`Done`."
 msgstr "A webhelyre vonatkozó korlátozás hozzáadásához kattintson a :guilabel:`Websites` lehetőségre a :guilabel:`Set an application restriction` alatt. Majd adja meg annak az adatbázisnak a címét, amelyben a *Google Translate* használatban van, a :guilabel:`Add` gombra kattintva. Végül adja hozzá a :abbr:`URL (Uniform Resource Locator)` értékét, és kattintson a :guilabel:`Done` gombra."
 
-#: ../../content/applications/general/integrations/google_translate.rst:96
+#: ../../content/applications/general/integrations/google_translate.rst:91
 msgid "To restrict use of the key to a selected API, first, select :guilabel:`Restrict key`, under the :guilabel:`API restrictions` section. Then use the drop-down menu to choose the API being configured (*Cloud Translation API*)."
 msgstr "A kulcs használatának egy kiválasztott API-ra való korlátozásához először válassza a :guilabel:`Restrict key` lehetőséget az :guilabel:`API restrictions` szakasz alatt. Majd a legördülő menüből válassza ki a konfigurált API-t (*Cloud Translation API*)."
 
-#: ../../content/applications/general/integrations/google_translate.rst:101
+#: ../../content/applications/general/integrations/google_translate.rst:96
 msgid "Save the API key: copy the API key and store it somewhere secure."
 msgstr "Mentse az API-kulcsot: másolja ki az API-kulcsot, és tárolja biztonságos helyen."
 
-#: ../../content/applications/general/integrations/google_translate.rst:102
+#: ../../content/applications/general/integrations/google_translate.rst:97
 msgid "Do **not** share the API key publicly or expose it in client-side code."
 msgstr "**Ne** ossza meg nyilvánosan az API-kulcsot, és ne tegye láthatóvá ügyféloldali kódban."
 
-#: ../../content/applications/general/integrations/google_translate.rst:107
+#: ../../content/applications/general/integrations/google_translate.rst:102
 msgid "To access the integration in Odoo, navigate to the :menuselection:`Settings app --> Discuss section`. Enter the API key into the field labeled :guilabel:`Message Translation`. Then, :guilabel:`Save` the settings, and *Google Translate* can be used in any chatter throughout the database."
 msgstr "Az Odooban az integráció eléréséhez navigáljon a :menuselection:`Beállítások alkalmazás --> Megbeszélés szakasz` menüponthoz. Adja meg az API-kulcsot a :guilabel:`Üzenetfordítás` feliratú mezőbe. Ezután :guilabel:`Mentse` a beállításokat, és a *Google Translate* az adatbázis bármely csevegőjében használható."
 
-#: ../../content/applications/general/integrations/google_translate.rst:120
+#: ../../content/applications/general/integrations/google_translate.rst:115
 msgid "Translate chatter"
 msgstr "Csevegő fordítása"
 
-#: ../../content/applications/general/integrations/google_translate.rst:122
+#: ../../content/applications/general/integrations/google_translate.rst:117
 msgid "To translate a user's text from another language, click the :guilabel:`... (three dot)` icon menu to the right of the chatter. Then, select :guilabel:`Translate`. The content translates to the *language* set on the user's preferences."
 msgstr "A csevegőben egy felhasználó szövegének más nyelvről történő lefordításához kattintson a csevegő jobb oldalán található :guilabel:`... (három pont)` ikonra. Ezután válassza a :guilabel:`Fordítás` lehetőséget. A tartalom a felhasználó beállításaiban megadott *nyelvre* fordítódik."
 
-#: ../../content/applications/general/integrations/google_translate.rst:135
+#: ../../content/applications/general/integrations/google_translate.rst:130
 msgid ":ref:`language/install`"
 msgstr ":ref:`language/install`"
 
@@ -3286,27 +3352,31 @@ msgstr "A *Gmail Plugin* integrálja az Odoo adatbázist egy Gmail postafiókkal
 msgid "Install the Gmail Plugin"
 msgstr "A Gmail Plugin telepítése"
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:67
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:64
 msgid "Configure the Odoo database"
 msgstr "Az Odoo adatbázis konfigurálása"
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:69
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:66
 msgid "The :guilabel:`Mail Plugin` feature must be enabled in the Odoo database in order to use the Gmail Plugin. To enable the feature, go to :menuselection:`Settings --> General Settings`. Under the :guilabel:`Integrations` section, activate :guilabel:`Mail Plugin`, and then click :guilabel:`Save`."
 msgstr "Az :guilabel:`Mail Plugin` funkciót engedélyezni kell az Odoo adatbázisban a Gmail Plugin használatához. A funkció engedélyezéséhez lépjen a :menuselection:`Beállítások --> Általános beállítások` menüpontra. Az :guilabel:`Integrációk` szakasz alatt aktiválja a :guilabel:`Mail Plugin` funkciót, majd kattintson a :guilabel:`Mentés` gombra."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:81
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:78
 msgid "Configure the Gmail inbox"
 msgstr "A Gmail postafiók konfigurálása"
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:83
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:80
 msgid "In the Gmail inbox, a purple Odoo icon is now visible on the right side panel. Click on the Odoo icon to open up the Odoo plugin window. Then, click on any email in the inbox. Click :guilabel:`Authorize Access` in the plugin window to grant Odoo access to the Gmail inbox."
 msgstr "A Gmail beérkező levelek mappájában egy lila Odoo ikon jelenik meg a jobb oldali panelen. Kattintson az Odoo ikonra az Odoo plugin ablak megnyitásához. Ezután kattintson bármelyik e-mailre a beérkező levelek mappájában. Kattintson a plugin ablakban a :guilabel:`Hozzáférés engedélyezése` gombra, hogy az Odoo hozzáférjen a Gmail postafiókhoz."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:94
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:None
+msgid "The Authorize Access button in the right sidebar of the Odoo plugin panel."
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:88
 msgid "Next, click :guilabel:`Login`. Then, enter the URL of the Odoo database that the user wishes to connect to the Gmail inbox, and log in to the database."
 msgstr "Ezután kattintson a :guilabel:`Bejelentkezés` gombra. Majd adja meg annak az Odoo adatbázisnak az URL-jét, amelyet a felhasználó a Gmail postaládájához szeretne csatlakoztatni, és lépjen be az adatbázisba."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:102
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:96
 msgid "Finally, click :guilabel:`Allow` to let Gmail access the Odoo database. The browser will then show a :guilabel:`Success!` message. After that, close the window. The Gmail inbox and Odoo database are now connected."
 msgstr "Végül kattintson az :guilabel:`Engedélyezés` gombra, hogy a Gmail hozzáférhessen az Odoo adatbázishoz. A böngésző ekkor egy :guilabel:`Sikeres!` üzenetet jelenít meg. Ezután zárja be az ablakot. A Gmail postaláda és az Odoo adatbázis mostantól össze van kapcsolva."
 
@@ -3318,27 +3388,31 @@ msgstr "Biztonsági irányelveik részeként a Google megköveteli a bővítmén
 msgid "First, access the `GitHub repository <https://github.com/odoo/mail-client-extensions>`_ for the Odoo Mail Plugins. Next, click on the green :guilabel:`Code` button. Then, click :guilabel:`Download ZIP` to download the Mail Plugin files onto the user's computer."
 msgstr "Először nyissa meg az Odoo Mail-bővítményekhez tartozó `GitHub-tárolót <https://github.com/odoo/mail-client-extensions>`_. Ezután kattintson a zöld :guilabel:`Kód` gombra. Majd kattintson a :guilabel:`ZIP letöltése` gombra, hogy letöltse a Mail-bővítmény fájljait a felhasználó számítógépére."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:37
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:None
+msgid "Download the ZIP file from the Odoo GitHub repository for Mail Plugins."
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:34
 msgid "Open the ZIP file on the computer. Then, go to :menuselection:`mail-client-extensions-master --> gmail --> src --> views`, and open the :file:`login.ts` file using any text editor software, such as Notepad (Windows), TextEdit (Mac), or Visual Studio Code."
 msgstr "Nyissa meg a ZIP-fájlt a számítógépen. Majd lépjen a :menuselection:`mail-client-extensions-master --> gmail --> src --> views` mappába, és nyissa meg a :file:`login.ts` fájlt bármely szövegszerkesztő programmal, például Notepad (Windows), TextEdit (Mac) vagy Visual Studio Code segítségével."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:41
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:38
 msgid "Delete the following three lines of text from the :file:`login.ts` file:"
 msgstr "Törölje a következő három szövegsort a :file:`login.ts` fájlból:"
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:49
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:46
 msgid "This removes the `odoo.com` domain constraint from the Gmail Plugin program."
 msgstr "Ez eltávolítja az `odoo.com` domain-korlátozást a Gmail-bővítmény programjából."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:55
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:52
 msgid "Then, in the same :guilabel:`gmail` folder, open the file called :guilabel:`README.md`. Follow the instructions in the :guilabel:`README.md` file to push the Gmail Plugin files as a Google Project."
 msgstr "Majd ugyanabban a :guilabel:`gmail` mappában nyissa meg a :guilabel:`README.md` nevű fájlt. Kövesse a :guilabel:`README.md` fájlban található utasításokat a Gmail-bővítmény fájljainak Google-projektként való feltöltéséhez."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:59
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:56
 msgid "The computer must be able to run Linux commands in order to follow the instructions on the :guilabel:`README.md` file."
 msgstr "A számítógépnek képesnek kell lennie Linux-parancsok futtatására ahhoz, hogy követni tudja a :guilabel:`README.md` fájlban található utasításokat."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:62
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:59
 msgid "After that, share the Google Project with the Gmail account that the user wishes to connect to Odoo. Then, click :guilabel:`Publish` and :guilabel:`Deploy from manifest`. Lastly, click :guilabel:`Install the add-on` to install the Gmail Plugin."
 msgstr "Ezután ossza meg a Google-projektet azzal a Gmail-fiókkal, amelyet a felhasználó az Odoo-hoz szeretne csatlakoztatni. Majd kattintson a :guilabel:`Közzététel` és a :guilabel:`Telepítés manifestből` gombra. Végül kattintson a :guilabel:`Bővítmény telepítése` gombra a Gmail-bővítmény telepítéséhez."
 
@@ -3374,87 +3448,127 @@ msgstr "Töltse le (:menuselection:`Oldal mentése másként --> Weblap, csak XM
 msgid "Next, open the Outlook mailbox, and select any email. After completing this, click on the :guilabel:`More actions` button in the upper right-side and select :guilabel:`Get Add-ins`."
 msgstr "Ezután nyissa meg az Outlook postaládát, és válasszon ki egy e-mailt. Miután ezt megtette, kattintson a jobb felső sarokban található :guilabel:`További műveletek` gombra, és válassza a :guilabel:`Bővítmények beszerzése` lehetőséget."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:41
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:None
+msgid "More actions button in Outlook"
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:39
 msgid "For locally installed versions of Microsoft Outlook, access the :guilabel:`Get Add-ins` menu item while in preview mode (**not** with a message open). First, click on the :guilabel:`... (ellipsis)` icon in the upper right of the previewed message, then scroll down, and click on :guilabel:`Get Add-ins`."
 msgstr "A Microsoft Outlook helyileg telepített verzióiban a :guilabel:`Bővítmények beszerzése` menüpontot az előnézeti módban érheti el (**nem** megnyitott üzenet esetén). Először kattintson az előnézeti üzenet jobb felső sarkában lévő :guilabel:`... (három pont)` ikonra, majd görgessen le, és kattintson a :guilabel:`Bővítmények beszerzése` lehetőségre."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:46
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:44
 msgid "Following this step, select the :guilabel:`My add-ins` tab on the left-side."
 msgstr "Ezt követően válassza a bal oldalon a :guilabel:`Saját bővítmények` lapot."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:54
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:None
+msgid "My add-ins in Outlook"
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:50
 msgid "Under :guilabel:`Custom add-ins` towards the bottom, click on :guilabel:`+ Add a custom add-in`, and then on :guilabel:`Add from file...`"
 msgstr "Az alul található :guilabel:`Egyéni bővítmények` résznél kattintson a :guilabel:`+ Egyéni bővítmény hozzáadása` lehetőségre, majd a :guilabel:`Hozzáadás fájlból...` opcióra."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:63
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:None
+msgid "Custom add-ins in Outlook"
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:57
 msgid "For the next step, attach the `manifest.xml` file downloaded above, and press :guilabel:`OK`. Next, read the warning and click on :guilabel:`Install`."
 msgstr "A következő lépésben csatolja a fent letöltött `manifest.xml` fájlt, és kattintson az :guilabel:`OK` gombra. Ezután olvassa el a figyelmeztetést, és kattintson a :guilabel:`Telepítés` gombra."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:75
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:None
+msgid "Custom add-in installation warning in Outlook"
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:67
 msgid "Connect the database"
 msgstr "Az adatbázis csatlakoztatása"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:77
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:69
 msgid "Now, Outlook will be connected to the Odoo database. First, open any email in the Outlook mailbox, click on the :guilabel:`More actions` button in the upper right-side, and select :guilabel:`Odoo for Outlook`."
 msgstr "Az Outlook most csatlakoztatva lesz az Odoo adatbázishoz. Először nyisson meg egy e-mailt az Outlook postaládájában, kattintson a jobb felső sarokban lévő :guilabel:`További műveletek` gombra, és válassza az :guilabel:`Odoo for Outlook` lehetőséget."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:87
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:None
+msgid "Odoo for Outlook add-in button"
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:77
 msgid "The right-side panel can now display **Company Insights**. At the bottom, click on :guilabel:`Login`."
 msgstr "A jobb oldali panel mostantól megjelenítheti a **Vállalati információkat**. Alul kattintson a :guilabel:`Bejelentkezés` gombra."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:101
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:None
+msgid "Logging in the Odoo database"
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:89
 msgid "If, after a short while, the panel is still empty, it is possible that the browser cookie settings prevented it from loading. Note that these settings also change if the browser is in \"Incognito\" mode."
 msgstr "Ha a panel rövid idő elteltével is üres marad, előfordulhat, hogy a böngésző cookie-beállításai megakadályozzák a betöltését. Vegye figyelembe, hogy ezek a beállítások akkor is megváltoznak, ha a böngésző \"Inkognitó\" módban van."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:105
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:93
 msgid "To fix this issue, configure the browser to always allow cookies on Odoo's plugin page."
 msgstr "A probléma megoldásához konfigurálja a böngészőt úgy, hogy mindig engedélyezze a cookie-kat az Odoo bővítményoldalán."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:107
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:95
 msgid "For Google Chrome, change the browser cookie settings by following the guide at: `https://support.google.com/chrome/answer/95647 <https://support.google.com/chrome/answer/95647>`_ and adding `download.odoo.com` to the list of :guilabel:`Sites that can always use cookies`."
 msgstr "Google Chrome esetén módosítsa a böngésző cookie-beállításait a következő útmutató alapján: `https://support.google.com/chrome/answer/95647 <https://support.google.com/chrome/answer/95647>`_, majd adja hozzá a `download.odoo.com` címet a :guilabel:`Mindig használhat cookie-kat` listájához."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:112
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:100
 msgid "Once this is complete, the Outlook panel needs to be opened again."
 msgstr "Miután ez megtörtént, az Outlook panelt újra meg kell nyitni."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:114
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:102
 msgid "Now, enter the Odoo database URL and click on :guilabel:`Login`."
 msgstr "Most adja meg az Odoo adatbázis URL-jét, majd kattintson a :guilabel:`Bejelentkezés` gombra."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:122
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:None
+msgid "Entering the Odoo database URL"
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:108
 msgid "Next, click on :guilabel:`Allow` to open the pop-up window."
 msgstr "Ezután kattintson az :guilabel:`Engedélyezés` gombra a felugró ablak megnyitásához."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:130
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:None
+msgid "New window pop-up warning"
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:114
 msgid "If the user isn't logged into the database, enter the credentials. Click on :guilabel:`Allow` to let the Outlook Plugin connect to the database."
 msgstr "Ha a felhasználó nincs bejelentkezve az adatbázisba, adja meg a bejelentkezési adatokat. Kattintson az :guilabel:`Engedélyezés` gombra, hogy az Outlook bővítmény csatlakozhasson az adatbázishoz."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:142
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:126
 msgid "Add a shortcut to the plugin"
 msgstr "Parancsikon hozzáadása a bővítményhez"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:144
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:128
 msgid "By default, the Outlook Plugin can be opened from the *More actions* menu. However, to save time, it's possible to add it next to the other default actions."
 msgstr "Alapértelmezés szerint az Outlook bővítmény a *További műveletek* menüből nyitható meg. Időmegtakarítás érdekében azonban lehetőség van arra is, hogy a többi alapértelmezett művelet mellé helyezze el."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:147
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:131
 msgid "In the Outlook mailbox, click on :guilabel:`Settings`, then on :guilabel:`View all Outlook settings`."
 msgstr "Az Outlook postaládában kattintson a :guilabel:`Beállítások` lehetőségre, majd az :guilabel:`Az összes Outlook-beállítás megtekintése` elemre."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:156
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:None
+msgid "Viewing all Outlook settings"
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:138
 msgid "Now, select :guilabel:`Customize actions` under :guilabel:`Mail`, click on :guilabel:`Odoo for Outlook`, and then :guilabel:`Save`."
 msgstr "Ezután válassza a :guilabel:`Műveletek testreszabása` lehetőséget a :guilabel:`Levelezés` menüpontban, kattintson az :guilabel:`Odoo for Outlook` elemre, majd a :guilabel:`Mentés` gombra."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:165
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:None ../../content/applications/general/integrations/mail_plugins/outlook.rst:None
+msgid "Odoo for Outlook customized action"
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:145
 msgid "Following this step, open any email; the shortcut should be displayed."
 msgstr "E lépés elvégzése után nyisson meg bármilyen e-mailt; a parancsikonnak meg kell jelennie."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:174
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:152
 msgid "Using the plugin"
 msgstr "A bővítmény használata"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:176
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:154
 msgid "Now that the plug-in is installed and operational, all that needs to be done to create a lead is to click on the `O` [Odoo icon] or navigate to :guilabel:`More actions` and click on :guilabel:`Odoo for Outlook`. The side panel will appear on the right-side, and under :guilabel:`Opportunities` click on :guilabel:`New`. A new window with the created opportunity in the Odoo database will populate."
 msgstr "Most, hogy a bővítmény telepítve és működőképes, egy lead létrehozásához elegendő az `O` [Odoo ikon] ikonra kattintani, vagy a :guilabel:`További műveletek` menüre navigálni, majd az :guilabel:`Odoo for Outlook` elemre kattintani. A jobb oldalon megjelenik az oldalpanel, ahol a :guilabel:`Lehetőségek` alatt kattintson az :guilabel:`Új` gombra. Megnyílik egy új ablak az Odoo adatbázisban létrehozott lehetőséggel."
 
@@ -3494,7 +3608,7 @@ msgstr "Az Odoo a *felhasználót* olyan személyként definiálja, aki hozzáf�
 msgid ":doc:`users/language`"
 msgstr ":doc:`users/language`"
 
-#: ../../content/applications/general/audit_log.rst:133 ../../content/applications/general/eyssen_erp_settings.rst:733 ../../content/applications/general/users.rst:15
+#: ../../content/applications/general/audit_log.rst:133 ../../content/applications/general/eyssen_erp_settings.rst:778 ../../content/applications/general/users.rst:15
 msgid ":doc:`users/access_rights`"
 msgstr ":doc:`users/access_rights`"
 
@@ -3730,43 +3844,43 @@ msgstr "Ha a képernyő beolvasása nem lehetséges (pl. a beállítás ugyanazo
 msgid "Afterwards, the authenticator should display a *verification code*."
 msgstr "Ezután a hitelesítőnek meg kell jelenítenie egy *ellenőrző kódot*."
 
-#: ../../content/applications/general/users/2fa.rst:97
+#: ../../content/applications/general/users/2fa.rst:94
 msgid "Enter the code into the :guilabel:`Verification Code` field, then click :guilabel:`Activate`."
 msgstr "Írja be a kódot a :guilabel:`Ellenőrző kód` mezőbe, majd kattintson az :guilabel:`Aktiválás` gombra."
 
-#: ../../content/applications/general/users/2fa.rst:107
+#: ../../content/applications/general/users/2fa.rst:104
 msgid "Logging in"
 msgstr "Bejelentkezés"
 
-#: ../../content/applications/general/users/2fa.rst:109
+#: ../../content/applications/general/users/2fa.rst:106
 msgid "To confirm |2fa| setup is complete, log out of Odoo."
 msgstr "A |2fa| beállítás befejezésének ellenőrzéséhez jelentkezzen ki az Odoo-ból."
 
-#: ../../content/applications/general/users/2fa.rst:111
+#: ../../content/applications/general/users/2fa.rst:108
 msgid "On the login page, input the username and password, then click :guilabel:`Log in`. On the :guilabel:`Two-factor Authentication` page, input the code provided by the chosen authenticator in the :guilabel:`Authentication Code` field, then click :guilabel:`Log in`."
 msgstr "A bejelentkezési oldalon adja meg a felhasználónevet és a jelszót, majd kattintson a :guilabel:`Bejelentkezés` gombra. A :guilabel:`Kétfaktoros hitelesítés` oldalon írja be a kiválasztott hitelesítő által megadott kódot a :guilabel:`Hitelesítési kód` mezőbe, majd kattintson a :guilabel:`Bejelentkezés` gombra."
 
-#: ../../content/applications/general/users/2fa.rst:138
+#: ../../content/applications/general/users/2fa.rst:135
 msgid "Enforce two-factor authentication"
 msgstr "Kétfaktoros hitelesítés kötelezővé tétele"
 
-#: ../../content/applications/general/users/2fa.rst:140
+#: ../../content/applications/general/users/2fa.rst:137
 msgid "To enforce the use of |2fa| for all users, first navigate to :menuselection:`Main Odoo Dashboard --> Apps`. Remove the :guilabel:`Apps` filter from the :guilabel:`Search...` bar, then search for `2FA by mail`."
 msgstr "A |2fa| minden felhasználóra való kötelezővé tételéhez először navigáljon a :menuselection:`Fő Odoo irányítópult --> Alkalmazások` menüponthoz. Távolítsa el az :guilabel:`Alkalmazások` szűrőt a :guilabel:`Keresés...` sávból, majd keressen rá a `2FA by mail` kifejezésre."
 
-#: ../../content/applications/general/users/2fa.rst:144
+#: ../../content/applications/general/users/2fa.rst:141
 msgid "Click :guilabel:`Install` on the Kanban card for the :guilabel:`2FA by mail` module."
 msgstr "Kattintson a :guilabel:`Telepítés` gombra a :guilabel:`2FA by mail` modul Kanban-kártyáján."
 
-#: ../../content/applications/general/users/2fa.rst:153
+#: ../../content/applications/general/users/2fa.rst:150
 msgid "After installation is complete, go to :guilabel:`Settings app: Permissions`. Tick the checkbox labeled, :guilabel:`Enforce two-factor authentication`. Then, use the radio buttons to choose whether to apply this setting to :guilabel:`Employees only`, or :guilabel:`All users`."
 msgstr "A telepítés befejezése után lépjen a :guilabel:`Beállítások alkalmazás: Jogosultságok` menüpontba. Jelölje be a :guilabel:`Kétfaktoros hitelesítés kötelezővé tétele` feliratú jelölőnégyzetet. Ezután a választógombokkal adja meg, hogy ezt a beállítást :guilabel:`Csak alkalmazottakra`, vagy :guilabel:`Minden felhasználóra` kívánja alkalmazni."
 
-#: ../../content/applications/general/users/2fa.rst:158
+#: ../../content/applications/general/users/2fa.rst:155
 msgid "Selecting :guilabel:`All users` applies the setting to portal users, in addition to employees."
 msgstr "A :guilabel:`Minden felhasználó` kiválasztása a beállítást a portálfelhasználókra is alkalmazza az alkalmazottak mellett."
 
-#: ../../content/applications/general/users/2fa.rst:167
+#: ../../content/applications/general/users/2fa.rst:164
 msgid "Click :guilabel:`Save` to commit any unsaved changes."
 msgstr "Kattintson a :guilabel:`Mentés` gombra a nem mentett változtatások véglegesítéséhez."
 
@@ -4058,77 +4172,93 @@ msgstr "Az új alkalmazás hitelesítésének szerkesztéséhez kattintson a bal
 msgid "Next, the type of *tokens* needed for the OAuth authentication will be chosen. These are not currency tokens but rather authentication tokens that are passed between Microsoft and Odoo. Therefore, there is no cost for these tokens; they are used merely for authentication purposes between two :abbr:`APIs (application programming interfaces)`. Select the tokens that should be issued by the authorization endpoint by scrolling down the screen and check the boxes labeled: :guilabel:`Access tokens (used for implicit flows)` and :guilabel:`ID tokens (used for implicit and hybrid flows)`."
 msgstr "Ezután ki kell választani az OAuth hitelesítéshez szükséges *token* típusokat. Ezek nem fizetési tokenek, hanem hitelesítési tokenek, amelyeket a Microsoft és az Odoo között váltanak ki. Ennélfogva ezeknek a tokeneknek nincs költsége; kizárólag a két :abbr:`API (application programming interfaces)` közötti hitelesítési célokat szolgálnak. Válassza ki az engedélyezési végpont által kibocsátandó tokeneket az oldal lefelé görgetésével, és jelölje be a következő jelölőnégyzeteket: :guilabel:`Hozzáférési tokenek (implicit folyamatokhoz)` és :guilabel:`Azonosító tokenek (implicit és hibrid folyamatokhoz)`."
 
-#: ../../content/applications/general/users/azure.rst:96
+#: ../../content/applications/general/users/azure.rst:None
+msgid "Authentication settings and endpoint tokens."
+msgstr ""
+
+#: ../../content/applications/general/users/azure.rst:93
 msgid "Click :guilabel:`Save` to ensure these settings are saved."
 msgstr "Kattintson a :guilabel:`Mentés` gombra a beállítások elmentéséhez."
 
-#: ../../content/applications/general/users/azure.rst:99
+#: ../../content/applications/general/users/azure.rst:96
 msgid "Gather credentials"
 msgstr "Hitelesítő adatok összegyűjtése"
 
-#: ../../content/applications/general/users/azure.rst:101
+#: ../../content/applications/general/users/azure.rst:98
 msgid "With the application created and authenticated in the Microsoft Azure console, credentials will be gathered next. To do so, click on the :guilabel:`Overview` menu item in the left-hand column. Select and copy the :guilabel:`Application (client) ID` in the window that appears. Paste this credential to a clipboard / notepad, as this credential will be used in the Odoo configuration later."
 msgstr "Miután az alkalmazás létrejött és hitelesítve lett a Microsoft Azure konzolon, következő lépésként a hitelesítő adatokat kell összegyűjteni. Ehhez kattintson a bal oldali oszlopban található :guilabel:`Áttekintés` menüpontra. A megjelenő ablakban válassza ki és másolja ki az :guilabel:`Alkalmazás (kliens) azonosítója` értéket. Illessze be ezt a hitelesítő adatot egy vágólapra / szövegszerkesztőbe, mivel ezt az adatot később az Odoo konfigurációjában fogja felhasználni."
 
-#: ../../content/applications/general/users/azure.rst:106
+#: ../../content/applications/general/users/azure.rst:103
 msgid "After finishing this step, click on :guilabel:`Endpoints` on the top menu and click the *copy icon* next to :guilabel:`OAuth 2.0 authorization endpoint (v2)` field. Paste this value in the clipboard / notepad."
 msgstr "A lépés befejezése után kattintson a felső menüben található :guilabel:`Végpontok` opcióra, majd kattintson az :guilabel:`OAuth 2.0 engedélyezési végpont (v2)` mező melletti *másolás ikonra*. Illessze be ezt az értéket a vágólapra / szövegszerkesztőbe."
 
-#: ../../content/applications/general/users/azure.rst:118 ../../content/applications/general/users/facebook.rst:109
+#: ../../content/applications/general/users/azure.rst:None
+msgid "Application ID and OAuth 2.0 authorization endpoint (v2) credentials."
+msgstr ""
+
+#: ../../content/applications/general/users/azure.rst:112 ../../content/applications/general/users/facebook.rst:104
 msgid "Odoo setup"
 msgstr "Odoo beállítása"
 
-#: ../../content/applications/general/users/azure.rst:120
+#: ../../content/applications/general/users/azure.rst:114
 msgid "Finally, the last step in the Microsoft Azure OAuth configuration is to configure some settings in Odoo. Navigate to :menuselection:`Settings --> Integrations --> OAuth Authentication` and check the box to activate the OAuth login feature. Click :guilabel:`Save` to ensure the progress is saved. Then, sign in to the database once the login screen loads."
 msgstr "Végül, a Microsoft Azure OAuth konfiguráció utolsó lépéseként néhány beállítást kell elvégezni az Odoo-ban. Navigáljon a :menuselection:`Beállítások --> Integrációk --> OAuth hitelesítés` menüponthoz, és jelölje be a jelölőnégyzetet az OAuth bejelentkezési funkció aktiválásához. Kattintson a :guilabel:`Mentés` gombra a folyamat mentéséhez. Ezután, amint megjelenik a bejelentkezési képernyő, jelentkezzen be az adatbázisba."
 
-#: ../../content/applications/general/users/azure.rst:125
+#: ../../content/applications/general/users/azure.rst:119
 msgid "Once again, navigate to :menuselection:`Settings --> Integrations --> OAuth Authentication` and click on :guilabel:`OAuth Providers`. Now, select :guilabel:`New` in the upper-left corner and name the provider `Azure`."
 msgstr "Navigáljon ismét a :menuselection:`Beállítások --> Integrációk --> OAuth hitelesítés` menüponthoz, majd kattintson az :guilabel:`OAuth szolgáltatók` opcióra. Ezután válassza az :guilabel:`Új` lehetőséget a bal felső sarokban, és nevezze el a szolgáltatót `Azure`-nak."
 
-#: ../../content/applications/general/users/azure.rst:129
+#: ../../content/applications/general/users/azure.rst:123
 msgid "Paste the :guilabel:`Application (client) ID` from the previous section into the :guilabel:`Client ID` field. After completing this, paste the new :guilabel:`OAuth 2.0 authorization endpoint (v2)` value into the :guilabel:`Authorization URL` field."
 msgstr "Illessze be az előző szakaszból másolt :guilabel:`Alkalmazás (kliens) azonosítója` értéket a :guilabel:`Kliens azonosító` mezőbe. Ezt követően illessze be az új :guilabel:`OAuth 2.0 engedélyezési végpont (v2)` értéket az :guilabel:`Engedélyezési URL` mezőbe."
 
-#: ../../content/applications/general/users/azure.rst:133
+#: ../../content/applications/general/users/azure.rst:127
 msgid "For the :guilabel:`UserInfo URL` field, paste the following :abbr:`URL (Uniform Resource Locator)`: `https://graph.microsoft.com/oidc/userinfo`"
 msgstr "A :guilabel:`Felhasználói adatok URL` mezőbe illessze be a következő :abbr:`URL (Uniform Resource Locator)` értéket: `https://graph.microsoft.com/oidc/userinfo`"
 
-#: ../../content/applications/general/users/azure.rst:136
+#: ../../content/applications/general/users/azure.rst:130
 msgid "In the :guilabel:`Scope` field, paste the following value: `openid profile email`. Next, the Windows logo can be used as the CSS class on the login screen by entering the following value: `fa fa-fw fa-windows`, in the :guilabel:`CSS class` field."
 msgstr "A :guilabel:`Hatókör` mezőbe illessze be a következő értéket: `openid profile email`. Ezután a Windows logó CSS osztályként megjelenítható a bejelentkezési képernyőn a következő érték megadásával: `fa fa-fw fa-windows`, a :guilabel:`CSS osztály` mezőben."
 
-#: ../../content/applications/general/users/azure.rst:140
+#: ../../content/applications/general/users/azure.rst:134
 msgid "Check the box next to the :guilabel:`Allowed` field to enable the OAuth provider. Finally, add `Microsoft Azure` to the :guilabel:`Login button label` field. This text will appear next to the Windows logo on the login page."
 msgstr "Jelölje be az :guilabel:`Engedélyezett` mező melletti jelölőnégyzetet az OAuth szolgáltató engedélyezéséhez. Végül adja hozzá a `Microsoft Azure` szöveget a :guilabel:`Bejelentkezési gomb felirata` mezőhöz. Ez a szöveg fog megjelenni a Windows logó mellett a bejelentkezési oldalon."
 
-#: ../../content/applications/general/users/azure.rst:151
+#: ../../content/applications/general/users/azure.rst:145
 msgid ":guilabel:`Save` the changes to complete the OAuth authentication setup in Odoo."
 msgstr "A :guilabel:`Mentés` gombbal mentse el a módosításokat az OAuth hitelesítés Odoo-ban történő konfigurálásának befejezéséhez."
 
-#: ../../content/applications/general/users/azure.rst:154
+#: ../../content/applications/general/users/azure.rst:148
 msgid "User experience flows"
 msgstr "Felhasználói élmény folyamatok"
 
-#: ../../content/applications/general/users/azure.rst:156
+#: ../../content/applications/general/users/azure.rst:150
 msgid "For a user to log in to Odoo using Microsoft Azure, the user must be on the :menuselection:`Odoo password reset page`. This is the only way that Odoo is able to link the Microsoft Azure account and allow the user to log in."
 msgstr "Ahhoz, hogy egy felhasználó Microsoft Azure segítségével jelentkezzen be az Odoo-ba, a felhasználónak az :menuselection:`Odoo jelszó-visszaállítási oldalán` kell lennie. Ez az egyetlen mód, amellyel az Odoo képes összekapcsolni a Microsoft Azure fiókot, és lehetővé tenni a felhasználó bejelentkezését."
 
-#: ../../content/applications/general/users/azure.rst:161
+#: ../../content/applications/general/users/azure.rst:155
 msgid "Existing users must :ref:`reset their password <users/reset-password>` to access the :menuselection:`Odoo password reset page`. New Odoo users must click the new user invitation link that was sent via email, then click on :guilabel:`Microsoft Azure`. Users should not set a new password."
 msgstr "A meglévő felhasználóknak :ref:`vissza kell állítaniuk a jelszavukat <users/reset-password>` az :menuselection:`Odoo jelszó-visszaállítási oldal` eléréséhez. Az új Odoo-felhasználóknak az e-mailben küldött új felhasználói meghívó hivatkozásra kell kattintaniuk, majd a :guilabel:`Microsoft Azure` opcióra. A felhasználók ne állítsanak be új jelszót."
 
-#: ../../content/applications/general/users/azure.rst:166
+#: ../../content/applications/general/users/azure.rst:160
 msgid "To sign in to Odoo for the first time using the Microsoft Azure OAuth provider, navigate to the :menuselection:`Odoo password reset page` (using the new user invitation link). A password reset page should appear. Then, click on the option labeled :guilabel:`Microsoft Azure`. The page will redirect to the Microsoft login page."
 msgstr "Az Odoo-ba való első bejelentkezéshez a Microsoft Azure OAuth szolgáltatóval navigáljon az :menuselection:`Odoo jelszó-visszaállítási oldalára` (az új felhasználói meghívó hivatkozás segítségével). Meg kell jelennie egy jelszó-visszaállítási oldalnak. Ezután kattintson a :guilabel:`Microsoft Azure` feliratú opcióra. Az oldal átirányítja Önt a Microsoft bejelentkezési oldalára."
 
-#: ../../content/applications/general/users/azure.rst:178
+#: ../../content/applications/general/users/azure.rst:172
 msgid "Enter the :guilabel:`Microsoft Email Address` and click :guilabel:`Next`. Follow the process to sign in to the account. Should :abbr:`2FA (Two Factor Authentication)` be turned on, then an extra step may be required."
 msgstr "Adja meg a :guilabel:`Microsoft e-mail cím` mezőt, majd kattintson a :guilabel:`Tovább` gombra. Kövesse a folyamatot a fiókba való bejelentkezéshez. Ha a :abbr:`2FA (kétfaktoros hitelesítés)` be van kapcsolva, egy további lépés is szükséges lehet."
 
-#: ../../content/applications/general/users/azure.rst:188
+#: ../../content/applications/general/users/azure.rst:None
+msgid "Enter Microsoft login credentials."
+msgstr ""
+
+#: ../../content/applications/general/users/azure.rst:180
 msgid "Finally, after logging in to the account, the page will redirect to a permissions page where the user will be prompted to :guilabel:`Accept` the conditions that the Odoo application will access their Microsoft information."
 msgstr "Végül a fiókba való bejelentkezés után az oldal egy engedélyek oldalra irányít át, ahol a felhasználónak el kell fogadnia (:guilabel:`Accept`) azokat a feltételeket, amelyek alapján az Odoo alkalmazás hozzáférhet a Microsoft-fiók adataihoz."
+
+#: ../../content/applications/general/users/azure.rst:None
+msgid "Accept Microsoft conditions for permission access to your account information."
+msgstr ""
 
 #: ../../content/applications/general/users/facebook.rst:3
 msgid "Facebook sign-in authentication"
@@ -4174,79 +4304,87 @@ msgstr "Alkalmazás testreszabása"
 msgid "After the new app is created, the :guilabel:`Dashboard` page appears, with a list of steps to be completed before the app can be published. From here, click :guilabel:`Customize adding a Facebook Login button`."
 msgstr "Az új alkalmazás létrehozása után megjelenik a :guilabel:`Dashboard` oldal, amely felsorolja az alkalmazás közzétételéhez szükséges lépéseket. Innen kattintson a :guilabel:`Customize adding a Facebook Login button` lehetőségre."
 
-#: ../../content/applications/general/users/facebook.rst:47
+#: ../../content/applications/general/users/facebook.rst:None
+msgid "The App Dashboard in the Meta for developers platform."
+msgstr ""
+
+#: ../../content/applications/general/users/facebook.rst:45
 msgid "On the :guilabel:`Customize` page, click :guilabel:`Settings`."
 msgstr "A :guilabel:`Customize` oldalon kattintson a :guilabel:`Settings` elemre."
 
-#: ../../content/applications/general/users/facebook.rst:49
+#: ../../content/applications/general/users/facebook.rst:47
 msgid "In the :guilabel:`Valid OAuth Redirect URIs` field, enter `https://<odoo base url>/auth_oauth/signin`, replacing `<odoo base url>` with the URL of the applicable database."
 msgstr "A :guilabel:`Valid OAuth Redirect URIs` mezőbe írja be: `https://<odoo base url>/auth_oauth/signin`, ahol az `<odoo base url>` helyére az adott adatbázis URL-jét kell beírni."
 
-#: ../../content/applications/general/users/facebook.rst:57
+#: ../../content/applications/general/users/facebook.rst:55
 msgid "Click :guilabel:`Save changes` when finished."
 msgstr "Kattintson a :guilabel:`Módosítások mentése` gombra, ha végzett."
 
-#: ../../content/applications/general/users/facebook.rst:60
+#: ../../content/applications/general/users/facebook.rst:58
 msgid "Configure settings"
 msgstr "Beállítások konfigurálása"
 
-#: ../../content/applications/general/users/facebook.rst:62
+#: ../../content/applications/general/users/facebook.rst:60
 msgid "At the far left of the page, click :menuselection:`App settings --> Basic`. This page contains additional settings that are required before the app can be submitted for approval."
 msgstr "Az oldal bal szélén kattintson a :menuselection:`Alkalmazásbeállítások --> Alapvető` menüpontra. Ez az oldal további beállításokat tartalmaz, amelyek szükségesek az alkalmazás jóváhagyásra való benyújtása előtt."
 
-#: ../../content/applications/general/users/facebook.rst:68
+#: ../../content/applications/general/users/facebook.rst:66
 msgid "Click the :guilabel:`App Icon` field to open a file upload window. From here, select and upload an app icon."
 msgstr "Kattintson az :guilabel:`Alkalmazás ikonja` mezőre a fájlfeltöltési ablak megnyitásához. Innen válassza ki és töltse fel az alkalmazás ikonját."
 
-#: ../../content/applications/general/users/facebook.rst:74
+#: ../../content/applications/general/users/facebook.rst:72
 msgid "Lastly, click the :guilabel:`Category` field, and select :guilabel:`Business and pages` from the drop-down menu."
 msgstr "Végül kattintson a :guilabel:`Kategória` mezőre, és válassza az :guilabel:`Vállalkozások és oldalak` lehetőséget a legördülő menüből."
 
-#: ../../content/applications/general/users/facebook.rst:77
+#: ../../content/applications/general/users/facebook.rst:75
 msgid "Click :guilabel:`Save changes`."
 msgstr "Kattintson a :guilabel:`Módosítások mentése` gombra."
 
-#: ../../content/applications/general/users/facebook.rst:89
+#: ../../content/applications/general/users/facebook.rst:None
+msgid "An exampled of the Basic Settings page in the Meta for developers platform."
+msgstr ""
+
+#: ../../content/applications/general/users/facebook.rst:84
 msgid "Capture app ID"
 msgstr "Alkalmazásazonosító rögzítése"
 
-#: ../../content/applications/general/users/facebook.rst:91
+#: ../../content/applications/general/users/facebook.rst:86
 msgid "After the app is created, and approved, select and copy the :guilabel:`App ID`. Paste this information on a clipboard or notepad file, as it is needed in a later step to complete the setup."
 msgstr "Az alkalmazás létrehozása és jóváhagyása után válassza ki és másolja ki az :guilabel:`Alkalmazásazonosítót`. Illessze be ezt az információt egy vágólapra vagy egy jegyzetfájlba, mivel egy későbbi lépésben szükség lesz rá a beállítás befejezéséhez."
 
-#: ../../content/applications/general/users/facebook.rst:95
+#: ../../content/applications/general/users/facebook.rst:90
 msgid "Publish"
 msgstr "Közzététel"
 
-#: ../../content/applications/general/users/facebook.rst:97
+#: ../../content/applications/general/users/facebook.rst:92
 msgid "On the left side of the page, click :guilabel:`Publish`. Depending on the status of the connected Facebook account, additional verification and testing steps may be required, and are listed on this page."
 msgstr "Az oldal bal oldalán kattintson a :guilabel:`Közzététel` gombra. A csatlakoztatott Facebook-fiók állapotától függően további ellenőrzési és tesztelési lépések lehetnek szükségesek, amelyek ezen az oldalon találhatók."
 
-#: ../../content/applications/general/users/facebook.rst:101
+#: ../../content/applications/general/users/facebook.rst:96
 msgid "After reviewing the information, click :guilabel:`Publish`."
 msgstr "Az információk áttekintése után kattintson a :guilabel:`Közzététel` gombra."
 
-#: ../../content/applications/general/users/facebook.rst:104
+#: ../../content/applications/general/users/facebook.rst:99
 msgid "Additional information regarding Meta App Development, including further details on building, testing, and use cases, can be found in the `Meta for developers documentation <https://developers.facebook.com/docs/development>`_."
 msgstr "A Meta alkalmazásfejlesztéssel kapcsolatos további információk, beleértve az építésre, tesztelésre és felhasználási esetekre vonatkozó részleteket, a `Meta fejlesztői dokumentációban <https://developers.facebook.com/docs/development>`_ találhatók."
 
-#: ../../content/applications/general/users/facebook.rst:111
+#: ../../content/applications/general/users/facebook.rst:106
 msgid "First, activate :ref:`Developer mode <developer-mode/activation>`."
 msgstr "Először aktiválja a :ref:`Fejlesztői módot <developer-mode/activation>`."
 
-#: ../../content/applications/general/users/facebook.rst:113
+#: ../../content/applications/general/users/facebook.rst:108
 msgid "Navigate to the :menuselection:`Settings app`, and scroll down to the :guilabel:`Integrations` section. There, tick the checkbox labeled, :guilabel:`OAuth Authentication`. Click :guilabel:`Save`."
 msgstr "Lépjen a :menuselection:`Beállítások alkalmazásba`, és görgessen le az :guilabel:`Integrációk` szakaszhoz. Ott jelölje be az :guilabel:`OAuth-hitelesítés` feliratú jelölőnégyzetet. Kattintson a :guilabel:`Mentés` gombra."
 
-#: ../../content/applications/general/users/facebook.rst:123
+#: ../../content/applications/general/users/facebook.rst:118
 msgid "Then, sign in to the database once the login screen loads."
 msgstr "Ezután jelentkezzen be az adatbázisba, amint betöltődik a bejelentkezési képernyő."
 
-#: ../../content/applications/general/users/facebook.rst:125
+#: ../../content/applications/general/users/facebook.rst:120
 msgid "After successfully logging in, navigate to :menuselection:`Settings app --> Users & Companies --> OAuth Providers`. Click :guilabel:`Facebook Graph`."
 msgstr "A sikeres bejelentkezés után navigáljon a :menuselection:`Beállítások alkalmazás --> Felhasználók és vállalatok --> OAuth-szolgáltatók` menüpontra. Kattintson a :guilabel:`Facebook Graph` elemre."
 
-#: ../../content/applications/general/users/facebook.rst:128
+#: ../../content/applications/general/users/facebook.rst:123
 msgid "In the :guilabel:`Client ID` field, enter the :ref:`App ID <users/app-id>` from the previous section, then tick the :guilabel:`Allowed` checkbox."
 msgstr "Az :guilabel:`Ügyfél-azonosító` mezőbe írja be az előző szakaszból származó :ref:`Alkalmazásazonosítót <users/app-id>`, majd jelölje be az :guilabel:`Engedélyezett` jelölőnégyzetet."
 
@@ -4342,39 +4480,43 @@ msgstr "Az ügyfél-azonosító lekérése"
 msgid "Once the previous steps are complete, two keys are generated on the Google API Dashboard: :guilabel:`Client ID` and :guilabel:`Client Secret`. Copy the :guilabel:`Client ID`."
 msgstr "Miután az előző lépések elvégzése megtörtént, a Google API irányítópulton két kulcs jön létre: :guilabel:`Ügyfél-azonosító` és :guilabel:`Ügyféltitkos kulcs`. Másolja ki az :guilabel:`Ügyfél-azonosítót`."
 
-#: ../../content/applications/general/users/google.rst:139
+#: ../../content/applications/general/users/google.rst:None
+msgid "Google OAuth Client ID generated."
+msgstr ""
+
+#: ../../content/applications/general/users/google.rst:136
 msgid "Odoo activation"
 msgstr "Odoo-aktiválás"
 
-#: ../../content/applications/general/users/google.rst:141
+#: ../../content/applications/general/users/google.rst:138
 msgid "Go to :menuselection:`Odoo General Settings --> Integrations` and activate :guilabel:`OAuth Authentication`."
 msgstr "Lépjen a :menuselection:`Odoo Általános beállítások --> Integrációk` menüpontra, és aktiválja az :guilabel:`OAuth-hitelesítés` lehetőséget."
 
-#: ../../content/applications/general/users/google.rst:145
+#: ../../content/applications/general/users/google.rst:142
 msgid "Odoo may prompt the user to log-in again after this step."
 msgstr "Az Odoo ezen lépés után kérheti a felhasználót, hogy jelentkezzen be újra."
 
-#: ../../content/applications/general/users/google.rst:147
+#: ../../content/applications/general/users/google.rst:144
 msgid "Go back to :menuselection:`General Settings --> Integrations --> OAuth Authentication`, activate the selection and :guilabel:`Save`. Next, return to :menuselection:`General Settings --> Integrations --> Google Authentication` and activate the selection. Then fill out the :guilabel:`Client ID` with the key from the Google API Dashboard, and :guilabel:`Save`."
 msgstr "Lépjen vissza az :menuselection:`Általános beállítások --> Integrációk --> OAuth-hitelesítés` menüpontra, aktiválja a kijelölést, és kattintson a :guilabel:`Mentés` gombra. Ezután lépjen vissza az :menuselection:`Általános beállítások --> Integrációk --> Google-hitelesítés` menüpontra, és aktiválja a kijelölést. Majd töltse ki az :guilabel:`Ügyfél-azonosító` mezőt a Google API irányítópultról származó kulccsal, és kattintson a :guilabel:`Mentés` gombra."
 
-#: ../../content/applications/general/users/google.rst:160
+#: ../../content/applications/general/users/google.rst:157
 msgid "Google OAuth2 configuration can also be accessed by clicking on :guilabel:`OAuth Providers` under the :guilabel:`OAuth Authentication` heading in :menuselection:`Integrations`."
 msgstr "A Google OAuth2 konfiguráció elérhető az :guilabel:`OAuth Providers` elemre kattintva is, amely az :menuselection:`Integrációk` menü :guilabel:`OAuth Authentication` szakasza alatt található."
 
-#: ../../content/applications/general/users/google.rst:166
+#: ../../content/applications/general/users/google.rst:163
 msgid "Log in to Odoo with Google"
 msgstr "Bejelentkezés az Odoo-ba Google-lel"
 
-#: ../../content/applications/general/users/google.rst:168
+#: ../../content/applications/general/users/google.rst:165
 msgid "To link the Google account to the Odoo profile, click on :guilabel:`Log in with Google` when first logging into Odoo."
 msgstr "A Google-fiók Odoo-profilhoz való csatolásához kattintson a :guilabel:`Bejelentkezés Google-lel` gombra az Odoo-ba való első bejelentkezéskor."
 
-#: ../../content/applications/general/users/google.rst:179
+#: ../../content/applications/general/users/google.rst:176
 msgid "Existing users must :ref:`reset their password <users/reset-password>` to access the :menuselection:`Reset Password` page, while new users can directly click on :guilabel:`Log in with Google`, instead of choosing a new password."
 msgstr "A meglévő felhasználóknak :ref:`vissza kell állítaniuk a jelszavukat <users/reset-password>` a :menuselection:`Jelszó visszaállítása` oldal eléréséhez, míg az új felhasználók közvetlenül a :guilabel:`Bejelentkezés Google-lel` gombra kattinthatnak, ahelyett, hogy új jelszót választanának."
 
-#: ../../content/applications/general/users/google.rst:184
+#: ../../content/applications/general/users/google.rst:181
 msgid "`Google Cloud Platform Console Help - Setting up OAuth 2.0 <https://support.google.com/cloud/answer/6158849>`_"
 msgstr "`Google Cloud Platform Console súgó – OAuth 2.0 beállítása <https://support.google.com/cloud/answer/6158849>`_"
 
@@ -5910,25 +6052,29 @@ msgstr "Információk támogatási kérésekhez"
 msgid "Here is a list of helpful information to include when reaching out to your support provider (the hosting provider, your Odoo partner, or your system administrator):"
 msgstr "Az alábbi hasznos információkat érdemes megadni, amikor a támogatási partneréhez (a tárhelyszolgáltatóhoz, az Odoo partneréhez vagy a rendszergazdához) fordul:"
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:73
+#: ../../content/applications/general/email_communication/google_oauth.rst:71
 msgid "Next, under :menuselection:`App Domain --> Authorized domains`, click on :guilabel:`Add Domain` and enter the domain of the Odoo database (e.g., `company-name.com`)."
 msgstr "Ezután az :menuselection:`App Domain --> Authorized domains` résznél kattintson az :guilabel:`Add Domain` gombra, és adja meg az Odoo adatbázis domainjét (pl. `company-name.com`)."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:101
+#: ../../content/applications/general/email_communication/google_oauth.rst:99
 msgid "Under the :guilabel:`Authorized redirect URIs` label, click the button :guilabel:`ADD URI`, and then input `https://<odoo base url>/google_gmail/confirm` in the :guilabel:`URIs 1` field."
 msgstr "Az :guilabel:`Authorized redirect URIs` címke alatt kattintson az :guilabel:`ADD URI` gombra, majd a :guilabel:`URIs 1` mezőbe írja be: `https://<odoo base url>/google_gmail/confirm`."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:143
+#: ../../content/applications/general/email_communication/google_oauth.rst:138
 msgid "Then, click :guilabel:`New` to create a new email server, and fill in the :guilabel:`Name`, :guilabel:`Description`, and the email :guilabel:`Username` (if required)."
 msgstr "Ezután kattintson az :guilabel:`Új` gombra új levelezőszerver létrehozásához, és töltse ki a :guilabel:`Név`, :guilabel:`Leírás` és (ha szükséges) az e-mail :guilabel:`Felhasználónév` mezőt."
 
-#: ../../content/applications/general/email_communication/google_oauth.rst:233
+#: ../../content/applications/general/email_communication/google_oauth.rst:222
 msgid "To correct this error, delete the credentials already created and create new credentials, selecting :guilabel:`Web Application` for the :guilabel:`Application Type`. Then, under :guilabel:`Authorized redirect URIs`, click :guilabel:`ADD URI` and type: `https://<odoo base url>/google_gmail/confirm` in the field, replacing `<odoo base url>` with the URL of the Odoo database (e.g., `https://erp.company-name.com`)."
 msgstr "A hiba javításához törölje a már létrehozott hitelesítő adatokat, és hozzon létre újakat, az :guilabel:`Application Type` mezőben a :guilabel:`Web Application` lehetőséget választva. Ezután az :guilabel:`Authorized redirect URIs` alatt kattintson az :guilabel:`ADD URI` gombra, és írja be: `https://<odoo base url>/google_gmail/confirm`, a `<odoo base url>` részt az Odoo adatbázis URL-jére cserélve (pl. `https://erp.company-name.com`)."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:39
+#: ../../content/applications/general/email_communication/mailjet_api.rst:35
 msgid "Port 25 is often :ref:`blocked by hosting providers <email-outbound-port-restriction>`; prefer port 465 or 587."
 msgstr "A 25-ös portot gyakran :ref:`letiltják a tárhelyszolgáltatók <email-outbound-port-restriction>`; használja inkább a 465-ös vagy 587-es portot."
+
+#: ../../content/applications/general/email_communication/mailjet_api.rst:None
+msgid "SMTP configuration from Mailjet."
+msgstr ""
 
 #: ../../content/applications/general/integrations/cloud_storage.rst:13
 msgid "Files generated by Odoo (e.g., PDF of sales orders) are always stored on the database's server."
@@ -5950,7 +6096,7 @@ msgstr "A *Geo Localization* funkció a kapcsolatok címe alapján kiszámítja 
 msgid "Once the feature is enabled, open a contact, go to the :guilabel:`Partner Assignment` tab, and click :guilabel:`Compute based on address` to compute the contact's coordinates. The coordinates can be used by other apps and modules, e.g., to display contacts on a map."
 msgstr "A funkció bekapcsolása után nyisson meg egy kapcsolatot, lépjen a :guilabel:`Partner hozzárendelés` fülre, és kattintson a :guilabel:`Számítás cím alapján` gombra a kapcsolat koordinátáinak kiszámításához. A koordinátákat más alkalmazások és modulok is használhatják, pl. kapcsolatok térképen való megjelenítéséhez."
 
-#: ../../content/applications/general/integrations/google_translate.rst:46
+#: ../../content/applications/general/integrations/google_translate.rst:44
 msgid "Next, the *Cloud Translation API* needs to be installed on this newly-created project. To do that, click :menuselection:`Library` in the left menu. Then, search the term `Cloud Translation API`, and click into the result. This should be a Google API labeled :guilabel:`Cloud Translation API`."
 msgstr "Ezután telepíteni kell a *Cloud Translation API*-t az újonnan létrehozott projektre. Ehhez kattintson a bal oldali menüben a :menuselection:`Library` elemre. Keressen rá a `Cloud Translation API` kifejezésre, és kattintson a találatra. Ennek egy :guilabel:`Cloud Translation API` feliratú Google API-nak kell lennie."
 
@@ -5966,11 +6112,11 @@ msgstr "Kövesse az alábbi lépéseket a Gmail bővítmény beállításához e
 msgid "The Gmail Plugin published on the Google Workspace Marketplace only allows the domains listed by its publisher (`odoo.com`). Databases hosted on other domains therefore need their own copy of the plugin, as described below."
 msgstr "A Google Workspace Marketplace-en közzétett Gmail bővítmény csak a közzétevő által felsorolt domaineket (`odoo.com`) engedélyezi. A más domainen üzemeltetett adatbázisokhoz ezért a bővítmény saját példányára van szükség az alábbiak szerint."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:51
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:48
 msgid "Next, in the ZIP file, go to :menuselection:`mail-client-extensions-master --> gmail`, and open the file called :guilabel:`appsscript.json`. In the :guilabel:`urlFetchWhitelist` section, replace all the references to `odoo.com` with the domain of the Odoo database."
 msgstr "Ezután a ZIP fájlban lépjen a :menuselection:`mail-client-extensions-master --> gmail` mappába, és nyissa meg az :guilabel:`appsscript.json` nevű fájlt. Az :guilabel:`urlFetchWhitelist` szakaszban cserélje le az összes `odoo.com` hivatkozást az Odoo adatbázis domainjére."
 
-#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:98
+#: ../../content/applications/general/integrations/mail_plugins/gmail.rst:92
 msgid "Use the general URL for the database, not the URL of a specific page in the database. For example, use `https://erp.mycompany.com`, not `https://erp.mycompany.com/odoo/action-menu`."
 msgstr "Az adatbázis általános URL-jét használja, ne egy adott oldal URL-jét. Például `https://erp.mycompany.com`, és nem `https://erp.mycompany.com/odoo/action-menu`."
 
@@ -6034,19 +6180,19 @@ msgstr "Az adminisztrátorok az összes felhasználó API kulcsát megtekintheti
 msgid "If multi-company access is not configured correctly, it could lead to inconsistent multi-company behaviors. Because of this, only experienced Odoo users should make access rights changes to users for databases with a multi-company configuration. For technical explanations, refer to the developer documentation on :doc:`/developer/howtos/company`."
 msgstr "A hibásan beállított több vállalatos hozzáférés következetlen működéshez vezethet. Ezért több vállalatos adatbázisokban csak tapasztalt Odoo felhasználók módosítsák a felhasználók hozzáférési jogait. Műszaki részletekért lásd a fejlesztői dokumentációt: :doc:`/developer/howtos/company`."
 
-#: ../../content/applications/general/users/2fa.rst:123
+#: ../../content/applications/general/users/2fa.rst:120
 msgid "If a user loses access to their authenticator, an administrator **must** deactivate |2fa| on the account before the user can log in. To do so, open the user's form in :menuselection:`Settings --> Users & Companies --> Users`, go to the :guilabel:`Account Security` tab, and switch off the :guilabel:`Two-factor Authentication` toggle."
 msgstr "Ha egy felhasználó elveszíti a hozzáférést a hitelesítő alkalmazásához, egy adminisztrátornak **ki kell kapcsolnia** a fiókon a |2fa|-t, mielőtt a felhasználó bejelentkezhetne. Ehhez nyissa meg a felhasználó űrlapját a :menuselection:`Beállítások --> Felhasználók és vállalatok --> Felhasználók` menüpontban, lépjen a :guilabel:`Fiókbiztonság` fülre, és kapcsolja ki a :guilabel:`Kétlépcsős azonosítás` kapcsolót."
 
-#: ../../content/applications/general/users/2fa.rst:129
+#: ../../content/applications/general/users/2fa.rst:126
 msgid "Trusted devices"
 msgstr "Megbízható eszközök"
 
-#: ../../content/applications/general/users/2fa.rst:131
+#: ../../content/applications/general/users/2fa.rst:128
 msgid "On the |2fa| login page, tick :guilabel:`Don't ask again on this device` to skip the code on that browser for a while. The devices trusted this way are listed in the :guilabel:`Trusted Devices` section of the :guilabel:`Account Security` tab of the user's preferences. Click the :icon:`fa-trash` :guilabel:`(delete)` icon next to a device to revoke it, or :guilabel:`Revoke All` to revoke all of them."
 msgstr "A |2fa| bejelentkezési oldalán jelölje be a :guilabel:`Ne kérdezzen újra ezen az eszközön` lehetőséget, hogy az adott böngészőben egy ideig ne kelljen megadni a kódot. Az így megbízhatónak jelölt eszközök a felhasználói beállítások :guilabel:`Fiókbiztonság` fülének :guilabel:`Megbízható eszközök` szakaszában láthatók. Egy eszköz visszavonásához kattintson a mellette lévő :icon:`fa-trash` :guilabel:`(törlés)` ikonra, az összes visszavonásához pedig a :guilabel:`Összes visszavonása` gombra."
 
-#: ../../content/applications/general/users/2fa.rst:169
+#: ../../content/applications/general/users/2fa.rst:166
 msgid "Users who have not configured an authenticator app then receive a verification code by email when logging in."
 msgstr "Azok a felhasználók, akik nem állítottak be hitelesítő alkalmazást, bejelentkezéskor e-mailben kapnak ellenőrző kódot."
 
@@ -6062,15 +6208,15 @@ msgstr "Tartson meg legalább egy jelszóval bejelentkező adminisztrátori fió
 msgid "Under the :guilabel:`Redirect URL` section, select :guilabel:`Web` as the platform, and then input `https://<odoo base url>/auth_oauth/signin` in the :guilabel:`URL` field. The Odoo base :abbr:`URL (Uniform Resource Locator)` is the canonical domain at which your Odoo instance can be reached (e.g., *erp.example.com*). Then, click :guilabel:`Register`, and the application is created."
 msgstr "A :guilabel:`Redirect URL` szakaszban válassza a :guilabel:`Web` platformot, majd az :guilabel:`URL` mezőbe írja be: `https://<odoo base url>/auth_oauth/signin`. Az Odoo alap :abbr:`URL (egységes erőforrás-azonosító)` az a kanonikus domain, amelyen az Odoo példánya elérhető (pl. *erp.example.com*). Ezután kattintson a :guilabel:`Register` gombra, és létrejön az alkalmazás."
 
-#: ../../content/applications/general/users/facebook.rst:53
+#: ../../content/applications/general/users/facebook.rst:51
 msgid "If a database has the URL `https://erp.example.com`, the URL `https://erp.example.com/auth_oauth/signin` would be entered in the :guilabel:`Valid OAuth Redirect URIs` field."
 msgstr "Ha az adatbázis URL-je `https://erp.example.com`, a :guilabel:`Valid OAuth Redirect URIs` mezőbe a `https://erp.example.com/auth_oauth/signin` URL-t kell beírni."
 
-#: ../../content/applications/general/users/facebook.rst:65
+#: ../../content/applications/general/users/facebook.rst:63
 msgid "In the :guilabel:`Privacy Policy URL` field, enter the URL of the company's privacy policy, e.g., the privacy policy page of the company website."
 msgstr "A :guilabel:`Privacy Policy URL` mezőbe írja be a vállalat adatvédelmi szabályzatának URL-jét, pl. a vállalati weboldal adatvédelmi oldalát."
 
-#: ../../content/applications/general/users/facebook.rst:71
+#: ../../content/applications/general/users/facebook.rst:69
 msgid "In the :guilabel:`User data deletion` field, enter the URL of a page that explains how users can request the deletion of their data, e.g., a page of the company website."
 msgstr "A :guilabel:`User data deletion` mezőbe írja be egy olyan oldal URL-jét, amely elmagyarázza, hogyan kérhetik a felhasználók adataik törlését, pl. a vállalati weboldal egy oldalát."
 
@@ -6214,7 +6360,7 @@ msgstr "Tekintse meg az `Érdeklődő-generálás IAP szolgáltatás adatvédelm
 msgid ":doc:`../../essentials/in_app_purchase`"
 msgstr ":doc:`../../essentials/in_app_purchase`"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:97
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:85
 msgid "Only a limited amount of **Company Insights** (*Lead Enrichment*) requests are available for free. This feature requires :ref:`prepaid credits <mail_plugins/pricing>`."
 msgstr "Csak korlátozott számú **Company Insights** (*Lead Enrichment*) kérés érhető el ingyenesen. A funkcióhoz :ref:`előre megvásárolt kreditek <mail_plugins/pricing>` szükségesek."
 
@@ -8298,11 +8444,11 @@ msgstr "A modulhoz szükséges a *Weboldal* alkalmazás, és nincs sem menüje, 
 msgid "Enable this option only if you agree that your hosting provider or support provider can log in on behalf of your users. To withdraw the permission, untick the option and click :guilabel:`Save`."
 msgstr "Csak akkor kapcsolja be ezt a beállítást, ha egyetért azzal, hogy a tárhelyszolgáltatója vagy a támogatási partnere a felhasználói nevében bejelentkezhessen. Az engedély visszavonásához törölje a beállítás jelölését, és kattintson a :guilabel:`Mentés` gombra."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:726
+#: ../../content/applications/general/eyssen_erp_settings.rst:755
 msgid "About"
 msgstr "Névjegy"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:732
+#: ../../content/applications/general/eyssen_erp_settings.rst:777
 msgid ":doc:`apps_modules`"
 msgstr ":doc:`apps_modules`"
 

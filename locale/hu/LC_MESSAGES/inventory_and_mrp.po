@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-01 18:31+0200\n"
+"POT-Creation-Date: 2026-10-08 17:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -278,7 +278,7 @@ msgstr "041"
 msgid "Location barcodes"
 msgstr "Helyszín vonalkódok"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:220 ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:192
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:220 ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:192 ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:192
 msgid "Location"
 msgstr "Helyszín"
 
@@ -302,7 +302,7 @@ msgstr "CSOM"
 msgid "Lot barcodes"
 msgstr "Tétel vonalkódok"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:228 ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:194 ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:197
+#: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:228 ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:194 ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:194 ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:197
 msgid "Lot"
 msgstr "Tétel"
 
@@ -522,7 +522,7 @@ msgstr "Csomagolás"
 msgid "Ship to / Deliver to global location"
 msgstr "Szállítás / Kézbesítés globális helyszínre"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:186 ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:189
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:186 ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:186 ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:189
 msgid "Destination location"
 msgstr "Célhely"
 
@@ -562,7 +562,7 @@ msgstr "(10) ([!\"%-/0-9:-?A-Z_a-z]{0,20})"
 msgid "Alpha-numeric name"
 msgstr "Alfanumerikus név"
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:197
+#: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:197 ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:197
 msgid "Serial number"
 msgstr "Sorozatszám"
 
@@ -926,127 +926,147 @@ msgstr "A Zebra termékvonal ajánlott; különösen a **Zebra TC21 (csak WiFi)*
 msgid "Zebra TC21/TC26"
 msgstr "Zebra TC21/TC26"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:81 ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:86
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:81 ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:82
 msgid "When using Zebra scanners, ensure the following keystroke configurations are set to prevent errors."
 msgstr "Zebra szkennerek használatakor győződjön meg arról, hogy a következő billentyűleütés konfigurációk be vannak állítva a hibák elkerülése érdekében."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:83 ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:88
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:83 ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:84
 msgid "Begin on the Zebra scanner's home screen, and select the :guilabel:`DataWedge` app (the app is represented by a :guilabel:`(light blue barcode)` icon)."
 msgstr "Kezdje a Zebra szkenner kezdőképernyőjén, és válassza ki a :guilabel:`DataWedge` alkalmazást (az alkalmazást egy :guilabel:`(világoskék vonalkód)` ikon jelöli)."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:86 ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:91
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:86 ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:87
 msgid "On the :guilabel:`DataWedge Profiles` page, select the profile option to access the Zebra scanner's settings."
 msgstr "A :guilabel:`DataWedge Profiles` oldalon válassza ki a profil opciót a Zebra szkenner beállításainak eléréséhez."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:89 ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:102
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:89 ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:98
 msgid "Once the profile is selected, scroll down to the :guilabel:`Keyboard Output` option, and ensure the :guilabel:`Enable/disable keystroke output` option is :guilabel:`Enabled`."
 msgstr "Miután kiválasztotta a profilt, görgessen le a :guilabel:`Keyboard Output` opcióhoz, és győződjön meg arról, hogy a :guilabel:`Enable/disable keystroke output` opció :guilabel:`Enabled` állapotban van."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:100 ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:113
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:None ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:None
+msgid "Show keystroke option in the Zebra scanner's DataWedge app."
+msgstr "Mutassa meg a billentyűleütés opciót a Zebra szkenner DataWedge alkalmazásában."
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:96 ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:105
 msgid "Once that option is enabled, go back to the :guilabel:`Profile` options page, and go to the :guilabel:`Keystroke output` section. Then, open the :guilabel:`Key event options` submenu. Under :guilabel:`Characters`, ensure the :guilabel:`Send Characters as Events` option is checked."
 msgstr "Ha ez a beállítás engedélyezve van, lépjen vissza a :guilabel:`Profile` beállítások oldalra, és navigáljon a :guilabel:`Keystroke output` szakaszhoz. Ezután nyissa meg a :guilabel:`Key event options` almenüt. A :guilabel:`Characters` alatt győződjön meg arról, hogy a :guilabel:`Send Characters as Events` beállítás be van jelölve."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:105 ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:118
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:101 ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:110
 msgid "The :guilabel:`Send Characters as Events` option **must** be checked on the Zebra scanner, or Odoo **cannot** recognize the barcodes that are scanned."
 msgstr "A :guilabel:`Send Characters as Events` beállítást **kötelező** bejelölni a Zebra olvasón, különben az Odoo **nem** tudja felismerni a beolvasott vonalkódokat."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:108
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:104
 msgid "Once the above steps have been taken, perform a test scan to ensure the Zebra scanner is working as intended."
 msgstr "A fenti lépések elvégzése után végezzen egy próbaleolvasást, hogy megbizonyosodjon arról, hogy a Zebra szkenner a várt módon működik."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:112
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:108
 msgid "MUNBYN Android devices"
 msgstr "MUNBYN Android eszközök"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:114
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:110
 msgid "When using MUNBYN Android scanners, ensure the following configurations are set to prevent errors."
 msgstr "MUNBYN Android szkennerek használatakor győződjön meg arról, hogy a következő konfigurációk be vannak állítva a hibák elkerülése érdekében."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:116
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:112
 msgid "From the device's home screen, click :menuselection:`AppSettings`. On the resulting page, locate the :guilabel:`Process mode` section, and select :guilabel:`Keyboard input`."
 msgstr "Az eszköz kezdőképernyőjéről kattintson a :menuselection:`AppSettings` menüpontra. A megjelenő oldalon keresse meg a :guilabel:`Process mode` szakaszt, és válassza a :guilabel:`Keyboard input` lehetőséget."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:129
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:None
+msgid "Process mode section on MUNBYN scanner's AppSettings page."
+msgstr "A folyamat mód szakasz a MUNBYN szkenner AppSettings oldalán."
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:120
 msgid "The selected *Process mode* controls how data is processed after barcode data has been read out."
 msgstr "A kiválasztott *Process mode* szabályozza, hogy az adatok hogyan kerülnek feldolgozásra a vonalkód adatok kiolvasása után."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:131
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:122
 msgid "*Keyboard input* enters read-out data at the position of the cursor, the same as input data on an analogue keyboard would."
 msgstr "A *Keyboard input* a kiolvasott adatokat a kurzor pozíciójára viszi be, ugyanúgy, mint egy analóg billentyűzeten bevitt adat."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:134
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:125
 msgid "Once the above steps have been taken, perform a test scan to ensure the MUNBYN Android scanner is working as intended."
 msgstr "A fenti lépések elvégzése után végezzen egy próbaleolvasást, hogy megbizonyosodjon arról, hogy a MUNBYN Android szkenner a várt módon működik."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:137
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:128
 msgid "Why is there no data output in the app after a successful scan?"
 msgstr "Miért nem jelenik meg adat az alkalmazásban egy sikeres beolvasás után?"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:139
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:130
 msgid "When scanning a barcode, the scanner might beep, indicating a successful scan, but there is no data output in the app."
 msgstr "Vonalkód beolvasásakor a szkenner jelezheti a sikeres beolvasást hangjelzéssel, de az alkalmazásban nem jelenik meg semmilyen adat."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:142
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:133
 msgid "To fix this issue, adjust the output method to *keyboard analogue* in the *Scanner* app on the device."
 msgstr "A probléma megoldásához módosítsa a kimeneti módot *keyboard analogue* értékre az eszközön lévő *Scanner* alkalmazásban."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:145
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:136
 msgid "From the device's home screen, click :menuselection:`Scanner App --> Settings`. From the :guilabel:`Settings` page, click :guilabel:`Output Mode`. The resulting pop-up window presents the different output options available to users. Select :guilabel:`Keyboard Mode`, then click :guilabel:`OK`."
 msgstr "Az eszköz kezdőképernyőjéről kattintson a :menuselection:`Scanner App --> Settings` menüpontra. A :guilabel:`Settings` oldalon kattintson a :guilabel:`Output Mode` lehetőségre. A megjelenő felugró ablak bemutatja a felhasználók számára elérhető különböző kimeneti lehetőségeket. Válassza a :guilabel:`Keyboard Mode` lehetőséget, majd kattintson az :guilabel:`OK` gombra."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:158
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:149
 msgid "Go back to the app that needs to be scanned, and click on the input dialog box first before scanning. Finally, perform a test scan to ensure the MUNBYN Android scanner is working as intended."
 msgstr "Lépjen vissza a beolvasást igénylő alkalmazásba, és kattintson először a beviteli párbeszédablakra a beolvasás előtt. Végül végezzen egy próbaleolvasást, hogy megbizonyosodjon arról, hogy a MUNBYN Android szkenner a várt módon működik."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:163
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:154
 msgid "Datalogic Android devices"
 msgstr "Datalogic Android eszközök"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:165
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:156
 msgid "When using Datalogic Android scanners, ensure the following configurations are set to prevent errors."
 msgstr "Datalogic Android szkennerek használatakor győződjön meg arról, hogy a következő konfigurációk be vannak állítva a hibák elkerülése érdekében."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:168
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:159
 msgid "To view and configure all settings for the scanner, use the *Settings* app on the Datalogic Android device. From the applications menu, select :menuselection:`Settings --> System --> Scanner Settings`."
 msgstr "A szkenner összes beállításának megtekintéséhez és konfigurálásához használja a Datalogic Android eszközön lévő *Settings* alkalmazást. Az alkalmazások menüjéből válassza a :menuselection:`Settings --> System --> Scanner Settings` menüpontot."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:172
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:163
 msgid "From the resulting list of settings, select :guilabel:`Wedge`. From this menu, under the :guilabel:`Keyboard wedge` section, ensure that the :guilabel:`Enable keyboard wedge` feature is activated."
 msgstr "A megjelenő beállítások listájából válassza a :guilabel:`Wedge` lehetőséget. Ebben a menüben, a :guilabel:`Keyboard wedge` szakasz alatt, győződjön meg arról, hogy az :guilabel:`Enable keyboard wedge` funkció aktiválva van."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:176
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:167
 msgid "Then, also under the :guilabel:`Keyboard wedge` section, locate the :guilabel:`Keyboard wedge input mode` option. By default, the input mode is set to :guilabel:`Text injection`."
 msgstr "Ezután szintén a :guilabel:`Keyboard wedge` szakasz alatt keresse meg a :guilabel:`Keyboard wedge input mode` opciót. Alapértelmezés szerint a beviteli mód :guilabel:`Text injection` értékre van beállítva."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:187
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:None
+msgid "Wedge configuration menu on Datalogic scanner."
+msgstr "Wedge konfigurációs menü Datalogic szkennerén."
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:174
 msgid "Click :guilabel:`Keyboard wedge input mode`, and change the setting to :guilabel:`Key pressure`. This ensures that scanned barcodes are translated into keyboard strokes, instead of being injected into the text area."
 msgstr "Kattintson a :guilabel:`Keyboard wedge input mode` opcióra, és módosítsa a beállítást :guilabel:`Key pressure` értékre. Ez biztosítja, hogy a beolvasott vonalkódok billentyűleütésekké alakuljanak át, ahelyett hogy közvetlenül a szövegmezőbe kerülnének beillesztésre."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:200
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:None
+msgid "Keyboard wedge input mode selection on Datalogic scanner."
+msgstr "Billentyűzet wedge beviteli mód kiválasztása Datalogic szkennerén."
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:182
 msgid "Once all those steps have been taken, perform a test scan to ensure the Datalogic Android scanner is working as intended."
 msgstr "Miután elvégezte mindezen lépéseket, végezzen el egy tesztbeolvasást annak ellenőrzésére, hogy a Datalogic Android szkenner az elvárásoknak megfelelően működik-e."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:206
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:188
 msgid "Screenless scanners"
 msgstr "Képernyő nélküli szkennerek"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:217
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:199
 msgid "NETUM devices"
 msgstr "NETUM eszközök"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:219
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:201
 msgid "By default, the NETUM barcode scanner's user manual only shows the French keyboard configuration. To use the Belgian keyboard, scan the code below:"
 msgstr "Alapértelmezés szerint a NETUM vonalkódolvasó felhasználói kézikönyve csak a francia billentyűzetkonfigurációt mutatja be. A belga billentyűzet használatához olvassa be az alábbi kódot:"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:230
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:None
+msgid "Belgian FR key barcode."
+msgstr "Belga FR billentyű vonalkódja."
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:208
 msgid "Once that code has been scanned, ensure the NETUM scanner has the correct keyboard configuration, and is working as intended."
 msgstr "Miután beolvasta a kódot, ellenőrizze, hogy a NETUM szkenner rendelkezik-e a helyes billentyűzetkonfigurációval, és az elvárásoknak megfelelően működik-e."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:234
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
 msgid ":doc:`../setup/hardware`"
 msgstr ":doc:`../setup/hardware`"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:235 ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:191
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:213 ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:171
 msgid ":doc:`../setup/software`"
 msgstr ":doc:`../setup/software`"
 
@@ -1090,83 +1110,99 @@ msgstr "USB vonalkód-szkenner használatakor a szkenner billentyűzetkiosztás�
 msgid "To configure the keyboard layout for a **Zebra** scanner, scan the keyboard wedge barcode for the desired language in the scanner's user manual."
 msgstr "A **Zebra** szkenner billentyűzetkiosztásának konfigurálásához olvassa be a szkenner felhasználói kézikönyvéből a kívánt nyelvhez tartozó billentyűzet-wedge vonalkódot."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:73
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:None
+msgid "Example of a user manual for keyboard layout."
+msgstr "Példa a billentyűzetkiosztáshoz tartozó felhasználói kézikönyvre."
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:69
 msgid "Automatic carriage return"
 msgstr "Automatikus kocsivissza"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:75
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:71
 msgid "Odoo has a default 100-millisecond delay between scans to prevent accidental double scanning. To synchronize with the barcode scanner, set it to include a *carriage return* (:dfn:`character like the \"Enter\" key on a keyboard`) after each scan. Odoo interprets the carriage return as the end of the barcode input; so Odoo accepts the scan, and waits for the next one."
 msgstr "Az Odoo alapértelmezés szerint 100 milliszekundumos késleltetést alkalmaz a szkennelések között a véletlen kettős szkennelés megelőzése érdekében. A vonalkód-szkennerrel való szinkronizáláshoz állítsa be úgy, hogy minden egyes szkennelés után *kocsivissza* karaktert (:dfn:`a billentyűzet \"Enter\" billentyűjéhez hasonló karakter`) adjon hozzá. Az Odoo a kocsivissza karaktert a vonalkód-bevitel végének értelmezi; így elfogadja a szkennelést, és vár a következőre."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:80
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:76
 msgid "Typically, on the scanner, a carriage return is included by default. Ensure it is set by scanning a specific barcode in the user manual, like `CR suffix ON` or `Apply Enter for suffix`."
 msgstr "A szkenneren általában alapértelmezés szerint szerepel a kocsivissza. Győződjön meg arról, hogy be van állítva egy adott vonalkód beolvasásával a felhasználói kézikönyvből, például `CR suffix ON` vagy `Apply Enter for suffix`."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:84
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:80
 msgid "Zebra scanner"
 msgstr "Zebra szkenner"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:95
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:91
 msgid "It is **not** suggested to use the \"DWDemo\" profile, as it does not work properly in every circumstance."
 msgstr "**Nem** ajánlott a \"DWDemo\" profil használata, mivel nem minden körülmények között működik megfelelően."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:121
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:113
 msgid "Once all those steps have been taken, perform a test scan to ensure the Zebra scanner is working properly, as intended."
 msgstr "Miután mindezeket a lépéseket elvégezte, hajtson végre egy próbaszkennelést, hogy megbizonyosodjon arról, hogy a Zebra szkenner a várt módon megfelelően működik."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:125
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:117
 msgid "Honeywell mobile computer scanner"
 msgstr "Honeywell mobilszámítógépes szkenner"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:127
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:119
 msgid "When using Honeywell scanners, follow the instructions below to ensure barcodes can be scanned in Odoo."
 msgstr "Honeywell szkennerek használatakor kövesse az alábbi utasításokat, hogy biztosítsa a vonalkódok Odoo-ban történő beolvashatóságát."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:130
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:122
 msgid "Begin on the Honeywell scanner's home screen, and select :guilabel:`Settings`, represented by a :guilabel:`⚙️ (gear)` icon. Then, click :guilabel:`Honeywell Settings`, followed by :guilabel:`Scanning`."
 msgstr "Kezdje a Honeywell szkenner főképernyőjén, és válassza a :guilabel:`Beállítások` lehetőséget, amelyet a :guilabel:`⚙️ (fogaskerék)` ikon jelöl. Ezután kattintson a :guilabel:`Honeywell Settings` menüpontra, majd a :guilabel:`Scanning` lehetőségre."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:134
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:126
 msgid "From here, click :guilabel:`Internal Scanner`, followed by :guilabel:`Default Profile`. From the resulting list of options, select :guilabel:`Data Processing Settings`."
 msgstr "Innen kattintson az :guilabel:`Internal Scanner` lehetőségre, majd a :guilabel:`Default Profile` opcióra. A megjelenő listából válassza a :guilabel:`Data Processing Settings` menüpontot."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:137
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:129
 msgid "The :guilabel:`Data Processing Settings` specify how barcode data is processed by the computer. Locate the :guilabel:`Wedge Method` setting. By default, this is set to :guilabel:`Standard`."
 msgstr "A :guilabel:`Data Processing Settings` meghatározza, hogy a vonalkódadatokat hogyan dolgozza fel a számítógép. Keresse meg a :guilabel:`Wedge Method` beállítást. Alapértelmezés szerint ez :guilabel:`Standard` értékre van állítva."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:148
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:None
+msgid "Data processing settings options for Honeywell scanner."
+msgstr "Adatfeldolgozási beállítások lehetőségei a Honeywell szkennerhez."
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:136
 msgid "Change the :guilabel:`Wedge Method` setting to :guilabel:`Keyboard`."
 msgstr "Változtassa meg a :guilabel:`Wedge Method` beállítást :guilabel:`Keyboard` értékre."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:150
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:138
 msgid "After completing the steps, conduct a test scan to verify the Honeywell scanner is working as intended."
 msgstr "A lépések elvégzése után végezzen egy próbaszkennelést annak ellenőrzésére, hogy a Honeywell szkenner az elvárásoknak megfelelően működik-e."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:154
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:142
 msgid "Cipherlab mobile computer scanner"
 msgstr "Cipherlab mobil számítógép szkenner"
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:156
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:144
 msgid "When using Cipherlab scanners, follow the instructions below to ensure barcodes can be scanned in Odoo."
 msgstr "Cipherlab szkennerek használatakor kövesse az alábbi utasításokat annak érdekében, hogy a vonalkódok beolvashatók legyenek az Odoo rendszerben."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:159
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:147
 msgid "Begin on the Cipherlab scanner's home screen, and navigate to the :menuselection:`App Drawer (All Applications)`. Then, click the :guilabel:`ReaderConfig` app, represented by an orange :guilabel:`⚙️ (gear)` icon over a blue :guilabel:`(barcode)` icon."
 msgstr "Kezdje a Cipherlab szkenner főképernyőjén, és navigáljon az :menuselection:`App Drawer (All Applications)` menübe. Ezután kattintson a :guilabel:`ReaderConfig` alkalmazásra, amelyet egy kék :guilabel:`(vonalkód)` ikon felett lévő narancssárga :guilabel:`⚙️ (fogaskerék)` ikon jelöl."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:163
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:151
 msgid "Next, select the :guilabel:`Default Profile`, or create a new profile, if needed."
 msgstr "Ezután válassza a :guilabel:`Default Profile` lehetőséget, vagy szükség esetén hozzon létre új profilt."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:153
 msgid "Under the :guilabel:`General Settings`, click :guilabel:`Data Output`, followed by :guilabel:`Keyboard Emulation`."
 msgstr "Az :guilabel:`General Settings` menüpont alatt kattintson a :guilabel:`Data Output`, majd a :guilabel:`Keyboard Emulation` lehetőségre."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:176
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:None
+msgid "Cipherlab scanner data output setting page."
+msgstr "A Cipherlab szkenner adatkimenet beállítási oldala."
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:160
 msgid "By default, the :guilabel:`Input Method`, under :guilabel:`Keyboard Emulation`, is set to :guilabel:`Default Mode`. Change this setting to :guilabel:`KeyEvent`."
 msgstr "Alapértelmezés szerint a :guilabel:`Keyboard Emulation` alatt található :guilabel:`Input Method` értéke :guilabel:`Default Mode`. Módosítsa ezt a beállítást :guilabel:`KeyEvent` értékre."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:187
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:None
+msgid "Cipherlab scanner keyboard emulation settings."
+msgstr "A Cipherlab szkenner billentyűzet-emuláció beállításai."
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:167
 msgid "After completing the steps, conduct a test scan to verify the Cipherlab scanner is working as intended."
 msgstr "A lépések elvégzése után végezzen egy próbaszkennelést annak ellenőrzésére, hogy a Cipherlab szkenner az elvárásoknak megfelelően működik-e."
 
@@ -25334,11 +25370,11 @@ msgstr "Alapértelmezés szerint az Android vonalkódolvasók előfeldolgozzák 
 msgid "Odoo's scan fields expect that the scanner works like an analogue keyboard, and so, only detects *key events*. Refer to the following sections for configuration settings for the most popular devices."
 msgstr "Az Odoo beolvasó mezői azt várják el, hogy a szkenner analóg billentyűzetként működjön, ezért csak *billentyűeseményeket* érzékelnek. A legnépszerűbb eszközök beállításaihoz lásd a következő szakaszokat."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:208
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:190
 msgid "Screenless scanners are barcode scanning devices that have no screens. These include USB scanners and Bluetooth scanners."
 msgstr "A képernyő nélküli szkennerek olyan vonalkódolvasó eszközök, amelyeknek nincs kijelzőjük. Ide tartoznak az USB-s és a Bluetooth-os szkennerek."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:194
 msgid "Odoo supports most USB and Bluetooth barcode scanners, as they all emulate a keyboard. To verify that a scanner is compatible with a specific keyboard layout (or can be configured to do so), check the scanner vendor's own documentation."
 msgstr "Az Odoo a legtöbb USB-s és Bluetooth-os vonalkódolvasót támogatja, mivel ezek mindegyike billentyűzetet emulál. Annak ellenőrzéséhez, hogy egy szkenner kompatibilis-e egy adott billentyűzetkiosztással (vagy beállítható-e arra), nézze meg a szkenner gyártójának saját dokumentációját."
 
@@ -25358,7 +25394,7 @@ msgstr "Mobil számítógépes szkenner használata esetén győződjön meg ró
 msgid "All three scanner types work the same way from Odoo's point of view: they emulate a keyboard, so any of the scan fields described in this section (product barcode, order scan button, etc.) accepts input from them without extra configuration, once the scanner itself is configured as described below. Check the scanner vendor's own specification sheet for keyboard-layout and 2D-barcode support before purchasing."
 msgstr "Mindhárom szkennertípus ugyanúgy működik az Odoo szempontjából: billentyűzetet emulálnak, így az ebben a szakaszban leírt bármelyik beolvasó mező (termék vonalkódja, rendelés beolvasó gombja stb.) külön beállítás nélkül fogadja tőlük a bevitelt, amint maga a szkenner az alábbiak szerint be van állítva. Vásárlás előtt ellenőrizze a szkenner gyártójának saját specifikációs lapját a billentyűzetkiosztás és a 2D-vonalkód-támogatás tekintetében."
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:98
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:94
 msgid "Instead, it is recommended to create a new, personal profile. Once a new profile is created, add the browser app used to access Odoo (e.g. *Google Chrome*) to the :guilabel:`Associated Apps` on the scanner's home screen."
 msgstr "Ehelyett ajánlott egy új, személyes profilt létrehozni. Az új profil létrehozása után adja hozzá az Odoo eléréséhez használt böngészőalkalmazást (pl. *Google Chrome*) a szkenner kezdőképernyőjén a :guilabel:`Associated Apps` listához."
 
@@ -28612,29 +28648,14 @@ msgstr "A *Process Number - Purchase* modul (`process_number_purchase`) telepít
 #~ msgid "Odoo *Barcode* expects that the scanner works like an analogue keyboard, and so, only detects *key events*. Refer to the following sections for configuration settings for the most popular devices."
 #~ msgstr "Az Odoo *Barcode* azt várja, hogy a szkenner úgy működjön, mint egy analóg billentyűzet, így csak *billentyű eseményeket* érzékel. A legnépszerűbb eszközök konfigurációs beállításaiért tekintse meg a következő szakaszokat."
 
-#~ msgid "Show keystroke option in the Zebra scanner's DataWedge app."
-#~ msgstr "Mutassa meg a billentyűleütés opciót a Zebra szkenner DataWedge alkalmazásában."
-
-#~ msgid "Process mode section on MUNBYN scanner's AppSettings page."
-#~ msgstr "A folyamat mód szakasz a MUNBYN szkenner AppSettings oldalán."
-
 #~ msgid "Output mode pop-up window on MUNBYN scanner."
 #~ msgstr "A kimeneti mód felugró ablaka a MUNBYN szkenneren."
-
-#~ msgid "Wedge configuration menu on Datalogic scanner."
-#~ msgstr "Wedge konfigurációs menü Datalogic szkennerén."
-
-#~ msgid "Keyboard wedge input mode selection on Datalogic scanner."
-#~ msgstr "Billentyűzet wedge beviteli mód kiválasztása Datalogic szkennerén."
 
 #~ msgid "Screenless scanners are barcode scanning devices that have no screens. These include USB scanners and bluetooth scanners."
 #~ msgstr "A képernyő nélküli szkennerek olyan vonalkód-leolvasó eszközök, amelyeknek nincs kijelzőjük. Ide tartoznak az USB-szkennerek és a Bluetooth-szkennerek."
 
 #~ msgid "Odoo supports most USB and Bluetooth barcode scanners, as they all emulate a keyboard. However, to verify that a scanner is compatible with a specific keyboard layout (or can be configured to do so), refer to Odoo's `Inventory & Barcode compatible hardware <https://www.odoo.com/app/inventory-hardware>`_ documentation."
 #~ msgstr "Az Odoo a legtöbb USB- és Bluetooth-vonalkódolvasót támogatja, mivel ezek mindegyike billentyűzetet emulál. Annak ellenőrzéséhez azonban, hogy egy szkenner kompatibilis-e egy adott billentyűzetkiosztással (vagy konfigurálható-e arra), tekintse meg az Odoo `Inventory & Barcode compatible hardware <https://www.odoo.com/app/inventory-hardware>`_ dokumentációját."
-
-#~ msgid "Belgian FR key barcode."
-#~ msgstr "Belga FR billentyű vonalkódja."
 
 #~ msgid "Follow this guide to choose and set up a barcode scanner compatible with Odoo's *Inventory* and *Barcode* apps."
 #~ msgstr "Kövesse ezt az útmutatót az Odoo *Inventory* és *Barcode* alkalmazásaival kompatibilis vonalkódolvasó kiválasztásához és konfigurálásához."
@@ -28651,23 +28672,11 @@ msgstr "A *Process Number - Purchase* modul (`process_number_purchase`) telepít
 #~ msgid "`Odoo Inventory & Barcode • Compatible Hardware <https://www.odoo.com/app/inventory-hardware>`_"
 #~ msgstr "`Odoo Inventory & Barcode • Kompatibilis hardver <https://www.odoo.com/app/inventory-hardware>`_"
 
-#~ msgid "Example of a user manual for keyboard layout."
-#~ msgstr "Példa a billentyűzetkiosztáshoz tartozó felhasználói kézikönyvre."
-
 #~ msgid "Examples of keyboard language settings in the Zebra scanner user manual."
 #~ msgstr "Példák a Zebra szkenner felhasználói kézikönyvében található billentyűzetnyelv-beállításokra."
 
 #~ msgid "Instead, it is recommended to create a new, personal profile. Once a new profile is created, add the *Odoo Mobile* app and *Google Chrome* app in the :guilabel:`Associated Apps` on the scanner's home screen."
 #~ msgstr "Ehelyett ajánlott egy új, személyes profil létrehozása. Az új profil létrehozása után adja hozzá az *Odoo Mobile* és a *Google Chrome* alkalmazást a szkenner főképernyőjén található :guilabel:`Kapcsolódó alkalmazások` részhez."
-
-#~ msgid "Data processing settings options for Honeywell scanner."
-#~ msgstr "Adatfeldolgozási beállítások lehetőségei a Honeywell szkennerhez."
-
-#~ msgid "Cipherlab scanner data output setting page."
-#~ msgstr "A Cipherlab szkenner adatkimenet beállítási oldala."
-
-#~ msgid "Cipherlab scanner keyboard emulation settings."
-#~ msgstr "A Cipherlab szkenner billentyűzet-emuláció beállításai."
 
 #~ msgid "Operation types and commands"
 #~ msgstr "Művelettípusok és parancsok"

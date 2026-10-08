@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-28 20:47+0000\n"
+"POT-Creation-Date: 2026-10-08 17:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -363,7 +363,7 @@ msgid "If you are running a B2B and B2C business, we *strongly* recommend to cre
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/b2b_b2c.rst:106
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:280
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:342
 msgid "Additional features"
 msgstr ""
 
@@ -1994,235 +1994,287 @@ msgstr ""
 msgid "The default sort applies to *all* :ref:`categories <ecommerce/catalog/categories>`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:51
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:50
+msgid ":ref:`Shop sort rules <ecommerce/catalog/shop-sort>` fill the numbers behind :guilabel:`Featured`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:53
 msgid "If you don't want to display a top bar or :ref:`side panel <ecommerce/catalog/side-panel>`, you can disable all related options in the website editor."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:57
-msgid "Side panel"
-msgstr ""
-
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:59
-msgid "The side panel provides advanced filtering tools to organize your product categories. To further :ref:`categorize <ecommerce/catalog/categories>` the shop page, you can activate various filters, such as the :ref:`attribute <ecommerce/catalog/attributes>` filter."
+msgid "Shop sort rules"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:64
-msgid "It is also possible to toggle the :guilabel:`Collapsible sidebar` switch to make the side panel manually collapsible."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:61
+msgid "The :guilabel:`Featured` order is each product's website sequence. The *Shop Category Sort* module (`website_sale_category_sort`) writes that sequence from a list of sort rules. The other :guilabel:`Sort-by` choices, :guilabel:`Newest Arrivals`, :guilabel:`Name (A-Z)`, :guilabel:`Price - Low to High`, and :guilabel:`Price - High to Low`, still sort by their own field and leave the sequence as it is."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:68
-msgid "To use a price range or tags filter, you have to enable :ref:`attributes <ecommerce/catalog/attributes>` first."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:67
+msgid "Install the module from :menuselection:`Apps`. Website designers then open :menuselection:`Website --> eCommerce --> Products --> Shop Sort`, the :guilabel:`Shop Sort` page on the website form (:menuselection:`Website --> Configuration --> Websites`, in developer mode), or the :guilabel:`Shop Sort` section on an eCommerce category (:menuselection:`Website --> eCommerce --> Products --> eCommerce Categories`)."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:74
-msgid "Product categorization in catalog"
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:73
+msgid "A rule line belongs to one website or to one category. Give it a :guilabel:`Sort Key` and a :guilabel:`Direction` (:guilabel:`Ascending` or :guilabel:`Descending`). Lines run from top to bottom. Drag the handle to reorder them."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:76
-msgid "eCommerce categories are used to organize products into groups, making it easier for customers to browse the online store."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:77
+msgid ":guilabel:`Attribute value sequence` follows the order of the values of the attribute you choose. Set that order on the attribute. A product with several values of the attribute uses the lowest sequence. A product without the attribute is placed last, whether the direction is ascending or descending."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:79
-msgid "To create eCommerce categories, go to :menuselection:`Website --> eCommerce --> eCommerce Categories`, and click :guilabel:`New`. On the category form, add a :guilabel:`Name`, optionally enter a :guilabel:`Parent Category`, and write a :guilabel:`Category Description`, if needed."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:81
+msgid ":guilabel:`Discount bucket`, ascending, lists products with no pricelist tag first, then products that have at least one. It is not the discount amount and not a pricelist price."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:84
-msgid "To use eCommerce categories, go to :menuselection:`Website --> eCommerce --> Products`, select the product you wish to modify, go to the :guilabel:`Sales` tab, navigate to the :guilabel:`Ecommerce shop` section, and select the :guilabel:`Categories` it belongs to."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:83
+msgid ":guilabel:`Website sequence` keeps the current sequence. Use it as the last line when products that are otherwise equal should stay in their previous order."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:89
-msgid "A single product can belong to multiple eCommerce categories."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:85
+msgid ":guilabel:`Creation date`, :guilabel:`Name`, and :guilabel:`Catalog price` use those product fields. Catalog price is the sales price on the product, not a pricelist price."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:88
+msgid "Each product has one website sequence, so the shop has one order. A category does not store a second order for the same products. It only chooses which rules write the number."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:91
-msgid "Once the categories are configured and assigned to the relevant products, go to the main shop page and open the website editor. In the :guilabel:`Categories` option, you can either enable a menu on the :guilabel:`Left`, i.e., in the :ref:`side panel <ecommerce/catalog/side-panel>`, or on the :guilabel:`Top`, i.e., in the :ref:`top bar <ecommerce/catalog/top-bar>`, or both. If you select the :guilabel:`Left` category, the option :guilabel:`Collapsible Category Recursive` appears, allowing you to collapse the category in the side panel."
+msgid "If the product's category, or a parent of that category, has its own lines, those lines replace the website list. The deepest category on the chain that has lines wins. A category with no lines uses its parent, then the website list. Products that match no list keep their order relative to each other."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:107
-msgid ":doc:`../products`"
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:96
+msgid "Click :guilabel:`Apply now` to renumber every active product. The same renumber runs once a day, and again when a rule changes, when a watched product value changes (its category, pricelist tags, name, or catalog price, for example), or when the sequence of an attribute value changes. On a large catalog this can take a while. Dragging a product on the product list changes its place until the next renumber, which overwrites the drag."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:112
-msgid "Attributes"
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:103
+msgid "Archived products are left as they are. Removing the last rule stops future renumbers and does not put back the numbers from before the rules. A bulk import should skip the renumber (the technical context is ``skip_shop_sort``) and rely on :guilabel:`Apply now` or the daily action. Otherwise every saved product renumbers the whole catalog."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:114
-msgid "Attributes refer to characteristics of a product, such as the color or material, whereas variants are the different combinations of attributes. To configure attributes and variants, go to :menuselection:`Website --> eCommerce --> Products`, select a product, and click the :guilabel:`Attributes & Variants` tab. Add as many attributes as desired."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:119
+msgid "Side panel"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:120
-msgid ":doc:`../../../sales/sales/products_prices/products/variants`"
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:121
+msgid "The side panel provides advanced filtering tools to organize your product categories. To further :ref:`categorize <ecommerce/catalog/categories>` the shop page, you can activate various filters, such as the :ref:`attribute <ecommerce/catalog/attributes>` filter."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:126
+msgid "It is also possible to toggle the :guilabel:`Collapsible sidebar` switch to make the side panel manually collapsible."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:130
-msgid "To enable attribute filtering, go to your main shop page, then open the website editor, and set the :guilabel:`Attributes` field to :guilabel:`Left` (:ref:`side panel <ecommerce/catalog/side-panel>`) and/or :guilabel:`Top` (:ref:`top bar <ecommerce/catalog/top-bar>`)."
+msgid "To use a price range or tags filter, you have to enable :ref:`attributes <ecommerce/catalog/attributes>` first."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:136
-msgid "When attribute filtering is enabled in the top bar, customers must click the :icon:`fa-sliders` (:guilabel:`dropdown toggle`) button to access it."
+msgid "Product categorization in catalog"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:139
-msgid "When enabling :guilabel:`Attributes`, more options become available:"
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:138
+msgid "eCommerce categories are used to organize products into groups, making it easier for customers to browse the online store."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:141
-msgid ":guilabel:`Price Filter`: Toggle the switch to display a :guilabel:`Price Range` bar, which allows customers to filter products according to a specific price range by dragging adjustable handles."
+msgid "To create eCommerce categories, go to :menuselection:`Website --> eCommerce --> eCommerce Categories`, and click :guilabel:`New`. On the category form, add a :guilabel:`Name`, optionally enter a :guilabel:`Parent Category`, and write a :guilabel:`Category Description`, if needed."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:144
-msgid ":guilabel:`Product Tags Filter`: Toggle the switch to display the :guilabel:`Product Tags` on the shop page, and allow customers to filter products using those tags by going to the :guilabel:`Tags` section in the :ref:`side panel <ecommerce/catalog/side-panel>`."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:146
+msgid "To use eCommerce categories, go to :menuselection:`Website --> eCommerce --> Products`, select the product you wish to modify, go to the :guilabel:`Sales` tab, navigate to the :guilabel:`Ecommerce shop` section, and select the :guilabel:`Categories` it belongs to."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:149
-msgid "If you want to use tags on your e-commerce, go to :menuselection:`eCommerce --> Product Tags` and click :guilabel:`New`. In the :guilabel:`Product Templates` tab of the product tags form, add the products to link to the given tag. You can also add product variants in the :guilabel:`Product Variants` tab and view a summary of all selected products in the :guilabel:`All Products` tab."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:151
+msgid "A single product can belong to multiple eCommerce categories."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:154
-msgid "Price filtering works independently from attributes and, therefore, can be enabled on its own, if desired."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:153
+msgid "Once the categories are configured and assigned to the relevant products, go to the main shop page and open the website editor. In the :guilabel:`Categories` option, you can either enable a menu on the :guilabel:`Left`, i.e., in the :ref:`side panel <ecommerce/catalog/side-panel>`, or on the :guilabel:`Top`, i.e., in the :ref:`top bar <ecommerce/catalog/top-bar>`, or both. If you select the :guilabel:`Left` category, the option :guilabel:`Collapsible Category Recursive` appears, allowing you to collapse the category in the side panel."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:160
-msgid "Product listing area"
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:169
+msgid ":doc:`../products`"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:162
-msgid "You can customize the layout of the entire shop page, as well as that of :ref:`individual category pages <ecommerce/catalog/customize-layout>`."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:166
-msgid "It is also possible to customize individual :ref:`product pages <ecommerce/products/product-form>`."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:170
-msgid "In the website editor, choose the :ref:`layout <ecommerce/catalog/sort-by-and-display-option>`, and set the default layout to either :guilabel:`Grid` or :guilabel:`List` view."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:173
-msgid "Use the following options to further adjust the layout:"
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:175
-msgid ":guilabel:`Size`: Set the number of products displayed per page and line."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:174
+msgid "Attributes"
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:176
-msgid ":guilabel:`Gap`: Define the gap between the products."
+msgid "Attributes refer to characteristics of a product, such as the color or material, whereas variants are the different combinations of attributes. To configure attributes and variants, go to :menuselection:`Website --> eCommerce --> Products`, select a product, and click the :guilabel:`Attributes & Variants` tab. Add as many attributes as desired."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:177
-msgid ":guilabel:`Style`: Select :guilabel:`Default`, :guilabel:`Cards`, :guilabel:`Thumbnails`, or :guilabel:`Grid`."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:182
+msgid ":doc:`../../../sales/sales/products_prices/products/variants`"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:179
-msgid ":guilabel:`Image Size`: Choose the aspect ratio for the product images: :guilabel:`Landscape (4/3)`, :guilabel:`Default (1/1)`, :guilabel:`Portrait (4/5)`, or :guilabel:`Vertical (2/3)`. You can also adjust the display by changing the :guilabel:`Fill` options to fit your design preferences best."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:192
+msgid "To enable attribute filtering, go to your main shop page, then open the website editor, and set the :guilabel:`Attributes` field to :guilabel:`Left` (:ref:`side panel <ecommerce/catalog/side-panel>`) and/or :guilabel:`Top` (:ref:`top bar <ecommerce/catalog/top-bar>`)."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:184
-msgid "Toggle the :guilabel:`Prod. Desc.` switch to display the product description below the product's name."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:198
+msgid "When attribute filtering is enabled in the top bar, customers must click the :icon:`fa-sliders` (:guilabel:`dropdown toggle`) button to access it."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:188
-msgid "You can choose the size of the grid, but be aware that displaying too many products may affect performance and page loading speed."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:201
+msgid "When enabling :guilabel:`Attributes`, more options become available:"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:191
-msgid "In addition, you can manually change a product’s position on the shop page. To do so, go to the main shop page, click the product, and open the website editor. In the :guilabel:`Product` section, you can reorder the products by using the arrows. The `<<` `>>` buttons allow to move the product to the extreme left or right, and `<` `>` allow to move it one row to the left or right."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:203
+msgid ":guilabel:`Price Filter`: Toggle the switch to display a :guilabel:`Price Range` bar, which allows customers to filter products according to a specific price range by dragging adjustable handles."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:197
-msgid "It is also possible to change the products' positions on the shop page by going to :menuselection:`Website --> eCommerce --> Products`, switching to the list view, and dragging and dropping the products within the list."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:206
+msgid ":guilabel:`Product Tags Filter`: Toggle the switch to display the :guilabel:`Product Tags` on the shop page, and allow customers to filter products using those tags by going to the :guilabel:`Tags` section in the :ref:`side panel <ecommerce/catalog/side-panel>`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:202
-msgid "Product highlight"
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:211
+msgid "If you want to use tags on your e-commerce, go to :menuselection:`eCommerce --> Product Tags` and click :guilabel:`New`. In the :guilabel:`Product Templates` tab of the product tags form, add the products to link to the given tag. You can also add product variants in the :guilabel:`Product Variants` tab and view a summary of all selected products in the :guilabel:`All Products` tab."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:204
-msgid "You can highlight products to make them more visible on the shop page. To do so, go to the website editor and click the product to highlight. In the :guilabel:`Product` section, you can choose the size of the product image by clicking the grid, and you can also add a :guilabel:`Ribbon`. This displays a banner across the product's image, such as :guilabel:`Sale`, :guilabel:`Sold out`, :guilabel:`Out of stock` or :guilabel:`New!`."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:216
+msgid "Price filtering works independently from attributes and, therefore, can be enabled on its own, if desired."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:218
-msgid "To create a new ribbon, click the green :icon:`fa-plus` (:guilabel:`Create`) icon next to the :guilabel:`Ribbon` field. Then add a :guilabel:`Ribbon name`, define its :guilabel:`Position`, and choose a :guilabel:`Background` and a :guilabel:`Text` label. To edit the ribbon, click the :icon:`fa-pencil-square-o` (:guilabel:`Edit`) icon next to the :guilabel:`Ribbon` label."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:222
+msgid "Product listing area"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:231
-msgid "The ribbon is now available for all the eCommerce products."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:224
+msgid "You can customize the layout of the entire shop page, as well as that of :ref:`individual category pages <ecommerce/catalog/customize-layout>`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:234
-msgid "There are other ways to create a new ribbon:"
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:228
+msgid "It is also possible to customize individual :ref:`product pages <ecommerce/products/product-form>`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:236
-msgid "Go to :menuselection:`Website --> eCommerce --> Product Ribbons` and click :guilabel:`New`."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:232
+msgid "In the website editor, choose the :ref:`layout <ecommerce/catalog/sort-by-and-display-option>`, and set the default layout to either :guilabel:`Grid` or :guilabel:`List` view."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:235
+msgid "Use the following options to further adjust the layout:"
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:237
-msgid "Activate the :doc:`developer mode <../../../general/developer_mode>`, access the product form, and under the :guilabel:`Sales` tab, change or create the ribbon in the :guilabel:`Ribbon` field."
+msgid ":guilabel:`Size`: Set the number of products displayed per page and line."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:238
+msgid ":guilabel:`Gap`: Define the gap between the products."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:239
+msgid ":guilabel:`Style`: Select :guilabel:`Default`, :guilabel:`Cards`, :guilabel:`Thumbnails`, or :guilabel:`Grid`."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:241
-msgid "It is also possible to add ribbons for specific :ref:`product variants <ecommerce/products/product-variants>`. To do so, go to :menuselection:`Website --> eCommerce --> Products` and select a product. Click the :guilabel:`Variants` smart button, choose a variant, and add a ribbon in the :guilabel:`Variant Ribbon` field of the :guilabel:`Sales` section."
+msgid ":guilabel:`Image Size`: Choose the aspect ratio for the product images: :guilabel:`Landscape (4/3)`, :guilabel:`Default (1/1)`, :guilabel:`Portrait (4/5)`, or :guilabel:`Vertical (2/3)`. You can also adjust the display by changing the :guilabel:`Fill` options to fit your design preferences best."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:246
+msgid "Toggle the :guilabel:`Prod. Desc.` switch to display the product description below the product's name."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:250
-msgid "Shop and category page design"
+msgid "You can choose the size of the grid, but be aware that displaying too many products may affect performance and page loading speed."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:252
-msgid "Use :doc:`building blocks <../../website/web_design/building_blocks>` to add content on the shop and/or category page."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:253
+msgid "In addition, you can manually change a product’s position on the shop page. To do so, go to the main shop page, click the product, and open the website editor. In the :guilabel:`Product` section, you can reorder the products by using the arrows. The `<<` `>>` buttons allow to move the product to the extreme left or right, and `<` `>` allow to move it one row to the left or right."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:255
-msgid "You can customize the top and/or bottom section of the catalog, either for the entire shop page or for a specific category. In the latter case, the block appears *only* when filtering by that category. To do so, move the block to the far top or bottom section to display it on the general shop page or to the area below the category's name at the top or beneath the product list to display it only when filtering by that specific category."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:259
+msgid "It is also possible to change the products' positions on the shop page by going to :menuselection:`Website --> eCommerce --> Products`, switching to the list view, and dragging and dropping the products within the list."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:270
-msgid "Adding content to an eCommerce category page helps improve the :doc:`SEO <../../website/structure/seo>` strategy. Using keywords linked to the products or the eCommerce categories can also increase organic traffic. Additionally, each category has its own specific URL that can be pointed to and is indexed by search engines."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:264
+msgid "Product highlight"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:274
-msgid "eCommerce categories can also be added as :ref:`mega menu items <website/header_footer/mega-menus>` for quick access."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:266
+msgid "You can highlight products to make them more visible on the shop page. To do so, go to the website editor and click the product to highlight. In the :guilabel:`Product` section, you can choose the size of the product image by clicking the grid, and you can also add a :guilabel:`Ribbon`. This displays a banner across the product's image, such as :guilabel:`Sale`, :guilabel:`Sold out`, :guilabel:`Out of stock` or :guilabel:`New!`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:282
-msgid "You can access and enable additional feature buttons such as a :guilabel:`Add to cart` or :guilabel:`Wishlist` button or a :guilabel:`Comparison list`. To do so, open the website editor, click the desired feature buttons. All three buttons appear when hovering the mouse over a product's image."
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:280
+msgid "To create a new ribbon, click the green :icon:`fa-plus` (:guilabel:`Create`) icon next to the :guilabel:`Ribbon` field. Then add a :guilabel:`Ribbon name`, define its :guilabel:`Position`, and choose a :guilabel:`Background` and a :guilabel:`Text` label. To edit the ribbon, click the :icon:`fa-pencil-square-o` (:guilabel:`Edit`) icon next to the :guilabel:`Ribbon` label."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:287
-msgid ":icon:`fa-shopping-cart` (:guilabel:`Add to cart`): adds a button to :doc:`add the product to the cart <../checkout>`;"
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:293
+msgid "The ribbon is now available for all the eCommerce products."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:289
-msgid ":icon:`fa-exchange` (:guilabel:`Compare`): adds a button to compare products based on their price, variant, etc.;"
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:296
+msgid "There are other ways to create a new ribbon:"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:291
-msgid ":icon:`fa-heart-o` (:guilabel:`Wishlist`): adds a button to :ref:`wishlist <ecommerce/products/wishlists>` the product."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:297
-msgid "Smart search"
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:298
+msgid "Go to :menuselection:`Website --> eCommerce --> Product Ribbons` and click :guilabel:`New`."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:299
+msgid "Activate the :doc:`developer mode <../../../general/developer_mode>`, access the product form, and under the :guilabel:`Sales` tab, change or create the ribbon in the :guilabel:`Ribbon` field."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:303
+msgid "It is also possible to add ribbons for specific :ref:`product variants <ecommerce/products/product-variants>`. To do so, go to :menuselection:`Website --> eCommerce --> Products` and select a product. Click the :guilabel:`Variants` smart button, choose a variant, and add a ribbon in the :guilabel:`Variant Ribbon` field of the :guilabel:`Sales` section."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:312
+msgid "Shop and category page design"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:314
+msgid "Use :doc:`building blocks <../../website/web_design/building_blocks>` to add content on the shop and/or category page."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:317
+msgid "You can customize the top and/or bottom section of the catalog, either for the entire shop page or for a specific category. In the latter case, the block appears *only* when filtering by that category. To do so, move the block to the far top or bottom section to display it on the general shop page or to the area below the category's name at the top or beneath the product list to display it only when filtering by that specific category."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:332
+msgid "Adding content to an eCommerce category page helps improve the :doc:`SEO <../../website/structure/seo>` strategy. Using keywords linked to the products or the eCommerce categories can also increase organic traffic. Additionally, each category has its own specific URL that can be pointed to and is indexed by search engines."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:336
+msgid "eCommerce categories can also be added as :ref:`mega menu items <website/header_footer/mega-menus>` for quick access."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:344
+msgid "You can access and enable additional feature buttons such as a :guilabel:`Add to cart` or :guilabel:`Wishlist` button or a :guilabel:`Comparison list`. To do so, open the website editor, click the desired feature buttons. All three buttons appear when hovering the mouse over a product's image."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:349
+msgid ":icon:`fa-shopping-cart` (:guilabel:`Add to cart`): adds a button to :doc:`add the product to the cart <../checkout>`;"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:351
+msgid ":icon:`fa-exchange` (:guilabel:`Compare`): adds a button to compare products based on their price, variant, etc.;"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:353
+msgid ":icon:`fa-heart-o` (:guilabel:`Wishlist`): adds a button to :ref:`wishlist <ecommerce/products/wishlists>` the product."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:359
+msgid "Smart search"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:361
 msgid "The *Smart Search (Theme Prime)* module (`eyssen_website_search_tp`) replaces the standard shop search with a fuzzy search based on PostgreSQL trigram matching, so that visitors also find products when they make a typo, use a different word order, or type only part of a product name. Special characters in the search term (e.g., `BUS+`) are taken into account for the ranking, and the \"did you mean\" suggestion is only offered when the search itself returns nothing."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:305
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:367
 msgid "Enable it in the theme's product search configuration, with the :guilabel:`Smart search` option; the :guilabel:`Search in description` option extends the search to the product descriptions."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:308
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:370
 msgid "What visitors searched for is recorded in the theme's search report. The module adds the searched term itself to that report's search bar as the default search field and as a :guilabel:`Search Term` group-by, so the most frequent searches — and those returning no result — can be reviewed directly."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:321
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:383
 msgid "This module requires the **Theme Prime** theme and its search widget; it has no effect on other themes. The trigram search needs the PostgreSQL `pg_trgm` extension to be available in the database — ask your hosting provider or system administrator if the option has no effect."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:326
+#: ../../content/applications/websites/ecommerce/products/catalog.rst:388
 msgid ":doc:`Products <../products>`"
 msgstr ""
 
@@ -5120,67 +5172,75 @@ msgstr ""
 msgid "Use ``https://yourdatabase.example.com`` and replace the *yourdatabase* subdomain prefix with the actual name of the database. A custom :abbr:`URL (Uniform Resource Locator)` can be used, as well, in place of the Odoo subdomain that was provided to the database."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cdn.rst:40
+#: ../../content/applications/websites/website/configuration/cdn.rst:None
+msgid "KeyCDN's Zone configuration page."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:36
 msgid "Under the :guilabel:`General Settings` heading below the zone form, click the :guilabel:`Show all settings` button to expand the zone options. This should be the last option on the page. After expanding the :guilabel:`General Settings` ensure that the :guilabel:`CORS` option is :guilabel:`enabled`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cdn.rst:45
+#: ../../content/applications/websites/website/configuration/cdn.rst:41
 msgid "Next, scroll to the bottom of the zone configuration page and :guilabel:`Save` the changes. KeyCDN will indicate that the new zone will be deployed. This can take about 10 minutes."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cdn.rst:57
+#: ../../content/applications/websites/website/configuration/cdn.rst:None
+msgid "KeyCDN deploying the new Zone."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cdn.rst:49
 msgid "A new :guilabel:`Zone URL` has been generated for your Zone, in this example it is ``pulltest-xxxxx.kxcdn.com``. This value will differ for each database."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cdn.rst:60
+#: ../../content/applications/websites/website/configuration/cdn.rst:52
 msgid "Copy this :guilabel:`Zone URL` to a text editor for later, as it will be used in the next steps."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cdn.rst:63
+#: ../../content/applications/websites/website/configuration/cdn.rst:55
 msgid "Configure the Odoo instance with the new zone"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cdn.rst:65
+#: ../../content/applications/websites/website/configuration/cdn.rst:57
 msgid "In the Odoo :guilabel:`Website` app, go to the :menuselection:`Settings` and then activate the :guilabel:`Content Delivery Network (CDN)` setting and copy/paste the :guilabel:`Zone URL` value from the earlier step into the :guilabel:`CDN Base URL` field. This field is only visible and configurable when the :ref:`developer mode <developer-mode>` is activated."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cdn.rst:71
+#: ../../content/applications/websites/website/configuration/cdn.rst:63
 msgid "Ensure that there are two *forward slashes* (`//`) before the :guilabel:`CDN Base URL` and one forward slash (`/`) after the :guilabel:`CDN Base URL`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cdn.rst:74
+#: ../../content/applications/websites/website/configuration/cdn.rst:66
 msgid ":guilabel:`Save` the settings when complete."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cdn.rst:84
+#: ../../content/applications/websites/website/configuration/cdn.rst:76
 msgid "Now the website is using the CDN for the resources matching the :guilabel:`CDN filters` regular expressions."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cdn.rst:87
+#: ../../content/applications/websites/website/configuration/cdn.rst:79
 msgid "In the HTML of the Odoo website, the :abbr:`CDN (content delivery network)` integration is evidenced as working properly by checking the :abbr:`URL (Uniform Resource Locators)` of images. The *CDN Base URL* value can be seen by using your web browser's :guilabel:`Inspect` feature on the Odoo website. Look for it's record by searching within the :guilabel:`Network` tab inside of devtools."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cdn.rst:101
+#: ../../content/applications/websites/website/configuration/cdn.rst:93
 msgid "Prevent security issues by activating cross-origin resource sharing (CORS)"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cdn.rst:103
+#: ../../content/applications/websites/website/configuration/cdn.rst:95
 msgid "A security restriction in some browsers (such as Mozilla Firefox and Google Chrome) prevents a remotely linked CSS file to fetch relative resources on this same external server."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cdn.rst:106
+#: ../../content/applications/websites/website/configuration/cdn.rst:98
 msgid "If the :abbr:`CORS (Cross-Origin Resource Sharing)` option isn't enabled in the :guilabel:`CDN Zone`, the more obvious resulting problem on a standard Odoo website will be the lack of *Font Awesome* icons because the font file declared in the *Font Awesome* CSS won't be loaded from the remote server."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cdn.rst:111
+#: ../../content/applications/websites/website/configuration/cdn.rst:103
 msgid "When these cross-origin resource issues occur, a security error message similar to the output below will appear in the web browser's developer console:"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cdn.rst:114
+#: ../../content/applications/websites/website/configuration/cdn.rst:106
 msgid "``Font from origin 'http://pulltest-xxxxx.kxcdn.com' has been blocked from loading /shop:1 by Cross-Origin Resource Sharing policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://yourdatabase.example.com' is therefore not allowed access.``"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cdn.rst:126
+#: ../../content/applications/websites/website/configuration/cdn.rst:118
 msgid "Enabling the :abbr:`CORS (Cross-Origin Resource Sharing)` option in the :abbr:`CDN (Content Delivery Network)` settings fixes this issue."
 msgstr ""
 
@@ -5237,8 +5297,8 @@ msgid "Go to :menuselection:`Website --> Configuration --> Settings`, enable :gu
 msgstr ""
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:60
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:88
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:149
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:83
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:139
 #: ../../content/applications/websites/website/configuration/translate.rst:76
 msgid "Click :guilabel:`Save`."
 msgstr ""
@@ -5808,115 +5868,119 @@ msgstr ""
 msgid "To enable Google Search Console for your website, go to `Google Search Console <https://search.google.com/search-console/welcome>`_. Then, select the property type :ref:`GSC-Domain` or :ref:`GSC-URL prefix`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:25
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:None
+msgid "Google Search Console domain or URL prefix"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:20
 msgid "Domain property"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:27
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:22
 msgid "A domain property in Search Console tracks all versions of your website, including subdomains and protocols (http/https). This comprehensive view allows you to analyze your overall website's search performance and make informed decisions to optimize its visibility. Enter the domain, e.g., `example.com` and click :guilabel:`Continue`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:33
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:28
 msgid "The domain property type can only be verified via `DNS record <https://support.google.com/webmasters/answer/9008080?hl=en#domain_name_verification&zippy=%2Chtml-tag>`_."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:35
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:30
 msgid "Google suggests creating at least one domain property to represent your site, as it is the most complete view of your website information."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:41
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:36
 msgid "URL prefix property"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:43
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:38
 msgid "This type of verification is usually simpler as you have multiple verification methods, such as using your existing Google Analytics or Tag Manager account. It also makes sense to view a section of your website separately. For example, if you work with a consultant on a specific part of your website, you might want to verify this part separately to limit access to your data. Enter the URL, e.g., `https://example.com/` and click :guilabel:`Continue`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:51
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:46
 msgid "Site ownership verification"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:53
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:48
 msgid "Before using Google Search Console for your website, you must verify your site ownership. This verification process is a security measure that protects both you and Google. It ensures that only authorized users have access to sensitive data and that you have control over how your website is treated in Google Search."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:58
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:53
 msgid "Five methods are available to do this:"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:62
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:57
 msgid ":ref:`GSC-HTML-file-upload`"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:63
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:58
 msgid "`DNS record <https://support.google.com/webmasters/answer/9008080?hl=en#domain_name_verification&zippy=%2Chtml-tag>`_"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:64
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:59
 msgid "`HTML tag <https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag>`_"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:65
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:60
 msgid "`Google Analytics tracking code <https://support.google.com/webmasters/answer/9008080?hl=en#google_analytics_verification>`_"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:66
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:61
 msgid "`Google Tag Manager container snippet <https://support.google.com/webmasters/answer/9008080?hl=en#google_tag_manager_verification>`_"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:69
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:64
 msgid "The best method for you depends on your comfort level and technical expertise. For beginners, using a file upload or HTML tag might be easiest. Those options are convenient if you already use :ref:`Google Analytics <analytics/google-analytics>` or :ref:`Google Tag Manager <analytics/google-tag-manager>`. You need to access your domain registrar's settings for domain verification."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:78
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:73
 msgid "HTML file upload"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:80
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:75
 msgid "This method involves uploading an HTML file provided by Google containing the verification code you have to put in your Odoo's Website Settings. Google verifies ownership by checking for this code."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:83
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:78
 msgid "Once you added your website URL under the URL prefix option and clicked :guilabel:`continue`, expand the HTML file section where you find a download :icon:`fa-download` button."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:94
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:89
 msgid "Download your HTML verification file and copy the verification code (e.g., `google123abc.html`)."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:104
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:99
 msgid "In your Odoo database, go to :menuselection:`Website --> Configuration --> Settings`, and enable :guilabel:`Google Search Console` in the :guilabel:`SEO` section. Paste the verification code (e.g., `google123abc.html`) in the dedicated field."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:116
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:111
 msgid "In Google Search Console, click :guilabel:`Verify`. If you perform the steps above correctly, verification should be done immediately."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:122
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:117
 msgid "HTML tag"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:124
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:119
 msgid "This method involves copying a meta tag provided by Google and pasting it into your Odoo website. To verify your site ownership using an HTML tag, follow these instructions:"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:127
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:122
 msgid "Expand the HTML tag section."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:137
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:132
 msgid ":guilabel:`Copy` the HTML tag to clipboard."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:138
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:133
 msgid "On your Odoo website, click :guilabel:`Edit` in the upper-right corner, go to the :guilabel:`Theme` tab, scroll down to the :guilabel:`Advanced` section, then click :guilabel:`<head> and </body>` next to :guilabel:`Code Injection`. Paste the copied tag into the first field (:guilabel:`<head>`), and click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:151
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:146
 msgid "Return to :abbr:`GSC (Google Search Console)` and click :guilabel:`Verify`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/google_search_console.rst:154
+#: ../../content/applications/websites/website/configuration/google_search_console.rst:149
 msgid ":doc:`domain_names`"
 msgstr ""
 
@@ -6166,112 +6230,120 @@ msgstr ""
 msgid "Click :guilabel:`Create`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:76
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:None
+msgid "Adding a website to Cloudflare Turnstile"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:71
 msgid "The generated keys are then displayed. Leave the page open for convenience, as copying the keys in Odoo is required next."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:80
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:132
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:75
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:122
 msgid "On Odoo"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:82
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:77
 msgid "From the database dashboard, click :guilabel:`Settings`. Under :guilabel:`Integrations`, enable :guilabel:`Cloudflare Turnstile` and click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:84
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:79
 msgid "Open the Cloudflare Turnstile page, copy the :guilabel:`Site Key`, and paste it into the :guilabel:`CF Site Key` field in Odoo."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:86
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:81
 msgid "Open the Cloudflare Turnstile page, copy the :guilabel:`Secret Key`, and paste it into the :guilabel:`CF Secret Key` field in Odoo."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:91
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:86
 msgid "Navigate to Turnstile on your Cloudflare account to view the solve rates and access more settings."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:97
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:92
 msgid "reCAPTCHA v3 configuration"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:100
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:95
 msgid "reCAPTCHA v3 may not be compliant with local data protection regulations."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:103
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:98
 msgid "On Google"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:105
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:100
 msgid "Open `the reCAPTCHA website registration page <https://www.google.com/recaptcha/admin/create>`_. Log in or create a Google account if necessary."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:108
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:103
 msgid "On the website registration page:"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:110
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:105
 msgid "Give the website a :guilabel:`Label`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:111
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:106
 msgid "Leave the :guilabel:`reCAPTCHA type` on :guilabel:`Score based (v3)`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:112
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:107
 msgid "Enter one or more :guilabel:`Domains` (e.g., *example.com* or *subdomain.example.com*)."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:113
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:108
 msgid "Under :guilabel:`Google Cloud Platform`, a project is automatically selected if one was already created with the logged-in Google account. If not, one is automatically created. Click :guilabel:`Google Cloud Platform` to select a project yourself or rename the automatically created project."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:117
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:112
 msgid "Agree to the terms of service."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:118
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:113
 msgid "Click :guilabel:`Submit`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:128
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:None
+msgid "reCAPTCHA website registration example"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:118
 msgid "A new page with the generated keys is then displayed. Leave it open for convenience, as copying the keys to Odoo is required next."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:134
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:124
 msgid "From the database dashboard, click :guilabel:`Settings`. Under :guilabel:`Integrations`, enable :guilabel:`reCAPTCHA` if needed."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:138
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:128
 msgid "Do not disable the :guilabel:`reCAPTCHA` feature or uninstall the :guilabel:`Google reCAPTCHA integration` module, as many other modules would also be removed."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:141
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:131
 msgid "Open the Google reCAPTCHA page, copy the :guilabel:`Site key`, and paste it into the :guilabel:`Site Key` field in Odoo."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:143
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:133
 msgid "Open the Google reCAPTCHA page, copy the :guilabel:`Secret key`, and paste it into the :guilabel:`Secret Key` field in Odoo."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:145
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:135
 msgid "Change the default :guilabel:`Minimum score` (`0.70`) if necessary, using a value between `1.00` and `0.00`. The higher the threshold is, the more difficult it is to pass the reCAPTCHA, and vice versa.  Out of the 11 levels, only the following four score levels are available by default: `0.1`, `0.3`, `0.7` and `0.9`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:152
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:142
 msgid "`Interpret reCAPTCHA scores - Google documentation <https://cloud.google.com/recaptcha/docs/interpret-assessment-website#interpret_scores>`_"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:154
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:144
 msgid "You can notify visitors that reCAPTCHA protects a form. To do so, open the website editor and navigate to the form. Then, click somewhere on the form, and on the right sidebar's :guilabel:`Customize` tab, toggle :guilabel:`Show reCAPTCHA Policy` found under the :guilabel:`Form` section."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:168
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:158
 msgid "If the reCAPTCHA check fails, the following error message is displayed:"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/spam_protection.rst:179
+#: ../../content/applications/websites/website/configuration/spam_protection.rst:169
 msgid "Analytics and additional settings are available on `Google's reCAPTCHA administration page <https://www.google.com/recaptcha/admin/>`_. For example, you can receive email alerts if Google detects suspicious traffic on your website or view the percentage of suspicious requests, which could help you determine the right minimum score."
 msgstr ""
 
@@ -7848,43 +7920,47 @@ msgstr ""
 msgid "Microdata is a set of tags, introduced with HTML5, that help search engines better understand your content and display it in a relevant way. Odoo implements microdata as defined in the schema.org `specification <https://schema.org/docs/gs.html>`_ for events, eCommerce products, forum posts, and contact addresses. This allows your product pages to be displayed in Google using extra information like the price and rating of a product:"
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:311
+#: ../../content/applications/websites/website/structure/seo.rst:None
+msgid "snippets in search engine results"
+msgstr ""
+
+#: ../../content/applications/websites/website/structure/seo.rst:306
 msgid "Hreflang HTML tags"
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:313
+#: ../../content/applications/websites/website/structure/seo.rst:308
 msgid "Odoo automatically includes `hreflang` and `x-default` tags in the code of your website's multilingual pages. These HTML attributes are crucial in informing search engines about a specific page's language and geographical targeting."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:317
+#: ../../content/applications/websites/website/structure/seo.rst:312
 msgid "The tags are generated for each request, so the variant shown to a search engine is always the right one for the URL it requested:"
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:320
+#: ../../content/applications/websites/website/structure/seo.rst:315
 msgid "On the canonical URL of a page, the `hreflang` and `x-default` tags point to every language version of the page."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:322
+#: ../../content/applications/websites/website/structure/seo.rst:317
 msgid "On a URL with a query string (e.g., `?utm_source=...` or `?gclid=...`), the page is not the canonical URL, and the `hreflang` block is omitted."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:324
+#: ../../content/applications/websites/website/structure/seo.rst:319
 msgid "The `noindex` robots tag that depends on the requested domain (added when the request does not come from the website's indexable domain) is only rendered for that domain."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:328
+#: ../../content/applications/websites/website/structure/seo.rst:323
 msgid "In earlier versions, the first variant rendered after a restart was kept in a cache and served to every visitor. This is no longer the case."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:334
+#: ../../content/applications/websites/website/structure/seo.rst:329
 msgid "Blog tags"
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:336
+#: ../../content/applications/websites/website/structure/seo.rst:331
 msgid "With the *Blog Sitemap SEO* module (`website_blog_sitemap_seo`), the tag pages of the blog (`/blog/<blog>/tag/<tag>`) also get the slug of the tag translated into each language in the `hreflang` and canonical URLs. For example, the Hungarian version of a tag page links to the English page with the English tag slug, and the English page links back to the Hungarian tag slug. See :ref:`Blog SEO <blog/seo>` for the redirects applied when the address contains a wrong slug."
 msgstr ""
 
-#: ../../content/applications/websites/website/structure/seo.rst:343
+#: ../../content/applications/websites/website/structure/seo.rst:338
 msgid ":doc:`../configuration/translate`"
 msgstr ""
 
@@ -8813,56 +8889,4 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/visibility.rst:108
 msgid "Blocks and elements with custom visibility settings are listed at the bottom of the website editor sidebar. You can preview how the page would look like by clicking the :icon:`fa-eye` (:guilabel:`visible`) button to hide a block or element, or the :icon:`fa-eye-slash` (:guilabel:`hidden`) to show it in the website editor."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:50
-msgid ":ref:`Shop sort rules <ecommerce/catalog/shop-sort>` fill the numbers behind :guilabel:`Featured`."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:59
-msgid "Shop sort rules"
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:61
-msgid "The :guilabel:`Featured` order is each product's website sequence. The *Shop Category Sort* module (`website_sale_category_sort`) writes that sequence from a list of sort rules. The other :guilabel:`Sort-by` choices, :guilabel:`Newest Arrivals`, :guilabel:`Name (A-Z)`, :guilabel:`Price - Low to High`, and :guilabel:`Price - High to Low`, still sort by their own field and leave the sequence as it is."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:67
-msgid "Install the module from :menuselection:`Apps`. Website designers then open :menuselection:`Website --> eCommerce --> Products --> Shop Sort`, the :guilabel:`Shop Sort` page on the website form (:menuselection:`Website --> Configuration --> Websites`, in developer mode), or the :guilabel:`Shop Sort` section on an eCommerce category (:menuselection:`Website --> eCommerce --> Products --> eCommerce Categories`)."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:73
-msgid "A rule line belongs to one website or to one category. Give it a :guilabel:`Sort Key` and a :guilabel:`Direction` (:guilabel:`Ascending` or :guilabel:`Descending`). Lines run from top to bottom. Drag the handle to reorder them."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:77
-msgid ":guilabel:`Attribute value sequence` follows the order of the values of the attribute you choose. Set that order on the attribute. A product with several values of the attribute uses the lowest sequence. A product without the attribute is placed last, whether the direction is ascending or descending."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:81
-msgid ":guilabel:`Discount bucket`, ascending, lists products with no pricelist tag first, then products that have at least one. It is not the discount amount and not a pricelist price."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:83
-msgid ":guilabel:`Website sequence` keeps the current sequence. Use it as the last line when products that are otherwise equal should stay in their previous order."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:85
-msgid ":guilabel:`Creation date`, :guilabel:`Name`, and :guilabel:`Catalog price` use those product fields. Catalog price is the sales price on the product, not a pricelist price."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:88
-msgid "Each product has one website sequence, so the shop has one order. A category does not store a second order for the same products. It only chooses which rules write the number."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:91
-msgid "If the product's category, or a parent of that category, has its own lines, those lines replace the website list. The deepest category on the chain that has lines wins. A category with no lines uses its parent, then the website list. Products that match no list keep their order relative to each other."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:96
-msgid "Click :guilabel:`Apply now` to renumber every active product. The same renumber runs once a day, and again when a rule changes, when a watched product value changes (its category, pricelist tags, name, or catalog price, for example), or when the sequence of an attribute value changes. On a large catalog this can take a while. Dragging a product on the product list changes its place until the next renumber, which overwrites the drag."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/products/catalog.rst:103
-msgid "Archived products are left as they are. Removing the last rule stops future renumbers and does not put back the numbers from before the rules. A bulk import should skip the renumber (the technical context is ``skip_shop_sort``) and rely on :guilabel:`Apply now` or the daily action. Otherwise every saved product renumbers the whole catalog."
 msgstr ""

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-01 08:02+0200\n"
+"POT-Creation-Date: 2026-10-08 17:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -4041,275 +4041,303 @@ msgstr "Ha először látogatja meg ezt az oldalt, a Google felszólítja a felh
 msgid "Next, click :guilabel:`Select a project` and select (or create) an API project to configure OAuth in, and store credentials. Click :guilabel:`New Project`."
 msgstr "Ezután kattintson a :guilabel:`Válasszon projektet` gombra, és válasszon ki (vagy hozzon létre) egy API projektet az OAuth konfigurálásához és a hitelesítő adatok tárolásához. Kattintson a :guilabel:`Új projekt` gombra."
 
-#: ../../content/applications/productivity/calendar/google.rst:36
+#: ../../content/applications/productivity/calendar/google.rst:None
+msgid "Create a new API project to store credentials."
+msgstr "Hozzon létre egy új API projektet a hitelesítő adatok tárolásához."
+
+#: ../../content/applications/productivity/calendar/google.rst:32
 msgid "Give the API project a clear name, like `Odoo Sync`, so it can be identified. Then click the :guilabel:`Create` button."
 msgstr "Adjon az API projektnek egy egyértelmű nevet, például `Odoo Sync`, hogy azonosítható legyen. Ezután kattintson a :guilabel:`Létrehozás` gombra."
 
-#: ../../content/applications/productivity/calendar/google.rst:40
+#: ../../content/applications/productivity/calendar/google.rst:36
 msgid "Enable Google calendar API"
 msgstr "Engedélyezze a Google naptár API-t"
 
-#: ../../content/applications/productivity/calendar/google.rst:42
+#: ../../content/applications/productivity/calendar/google.rst:38
 msgid "Now, click on :guilabel:`Enabled APIs and Services` in the left menu. Select :guilabel:`Enabled APIs and Services` again if the :guilabel:`Search bar` does not appear."
 msgstr "Most kattintson a bal oldali menüben az :guilabel:`Enabled APIs and Services` elemre. Válassza újra az :guilabel:`Enabled APIs and Services` elemet, ha a :guilabel:`Search bar` nem jelenik meg."
 
-#: ../../content/applications/productivity/calendar/google.rst:52
+#: ../../content/applications/productivity/calendar/google.rst:None
+msgid "Enable APIs and Services on the API Project."
+msgstr "Engedélyezze az API-kat és szolgáltatásokat az API Projekten."
+
+#: ../../content/applications/productivity/calendar/google.rst:44
 msgid "After that, search for `Google Calendar API` using the search bar and select :guilabel:`Google Calendar API` from the search results. Click :guilabel:`Enable`."
 msgstr "Ezután keressen rá a `Google Calendar API`-ra a keresősáv segítségével, és válassza ki a találatok közül a :guilabel:`Google Calendar API`-t. Kattintson az :guilabel:`Enable` gombra."
 
-#: ../../content/applications/productivity/calendar/google.rst:63
+#: ../../content/applications/productivity/calendar/google.rst:None
+msgid "Enable the Google Calendar API."
+msgstr "Engedélyezze a Google Calendar API-t."
+
+#: ../../content/applications/productivity/calendar/google.rst:51
 msgid "OAuth consent screen"
 msgstr "OAuth beleegyezési képernyő"
 
-#: ../../content/applications/productivity/calendar/google.rst:65
+#: ../../content/applications/productivity/calendar/google.rst:53
 msgid "Now that the API project has been created, OAuth should be configured. To do that, click on :guilabel:`OAuth consent screen` in the left menu, then click the :guilabel:`Get started` button."
 msgstr "Most, hogy az API projekt létrejött, az OAuth-ot konfigurálni kell. Ehhez kattintson a bal oldali menüben az :guilabel:`OAuth consent screen` elemre, majd kattintson a :guilabel:`Get started` gombra."
 
-#: ../../content/applications/productivity/calendar/google.rst:69
+#: ../../content/applications/productivity/calendar/google.rst:57
 msgid "*Personal* Gmail Accounts are only allowed to be **External** User Type, which means Google may require an approval, or for *Scopes* to be added on. However, using a *Google WorkSpace* account allows for **Internal** User Type to be used."
 msgstr "*Személyes* Gmail fiókok csak **Külső** Felhasználói Típusúak lehetnek, ami azt jelenti, hogy a Google jóváhagyást kérhet, vagy *Hatáskörök* hozzáadását. Azonban egy *Google WorkSpace* fiók használata lehetővé teszi a **Belső** Felhasználói Típus használatát."
 
-#: ../../content/applications/productivity/calendar/google.rst:73
+#: ../../content/applications/productivity/calendar/google.rst:61
 msgid "Note, as well, that while the API connection is in the *External* testing mode, then no approval is necessary from Google. User limits in this testing mode is set to 100 users."
 msgstr "Vegye figyelembe, hogy amíg az API kapcsolat *Külső* tesztelési módban van, addig nincs szükség Google jóváhagyásra. A felhasználói korlát ebben a tesztelési módban 100 felhasználóra van beállítva."
 
-#: ../../content/applications/productivity/calendar/google.rst:76
+#: ../../content/applications/productivity/calendar/google.rst:64
 msgid "Follow the proceeding steps, in order:"
 msgstr "Kövesse a következő lépéseket sorrendben:"
 
-#: ../../content/applications/productivity/calendar/google.rst:78
+#: ../../content/applications/productivity/calendar/google.rst:66
 msgid "In :guilabel:`App Information`, type `Odoo` in the :guilabel:`App name` field, then enter the email address for the :guilabel:`User support email` field and click the :guilabel:`Next` button."
 msgstr "Az :guilabel:`App Information` részben írja be az `Odoo`-t az :guilabel:`App name` mezőbe, majd adja meg az e-mail címet a :guilabel:`User support email` mezőbe, és kattintson a :guilabel:`Next` gombra."
 
-#: ../../content/applications/productivity/calendar/google.rst:80
+#: ../../content/applications/productivity/calendar/google.rst:68
 msgid "In :guilabel:`Audience`, select :guilabel:`External`, then click the :guilabel:`Next` button."
 msgstr "A :guilabel:`Közönség` részben válassza ki a :guilabel:`Külső` lehetőséget, majd kattintson a :guilabel:`Tovább` gombra."
 
-#: ../../content/applications/productivity/calendar/google.rst:81
+#: ../../content/applications/productivity/calendar/google.rst:69
 msgid "In :guilabel:`Contact Information`, enter the email again, then click the :guilabel:`Next` button."
 msgstr "A :guilabel:`Kapcsolattartási információk` részben adja meg újra az e-mail címet, majd kattintson a :guilabel:`Tovább` gombra."
 
-#: ../../content/applications/productivity/calendar/google.rst:83
+#: ../../content/applications/productivity/calendar/google.rst:71
 msgid "In :guilabel:`Finish`, tick the checkbox to agree to :guilabel:`Google API Services: User Policy.` For the last step, click the :guilabel:`Create` button."
 msgstr "A :guilabel:`Befejezés` részben jelölje be a jelölőnégyzetet, hogy elfogadja a :guilabel:`Google API Szolgáltatások: Felhasználói Szabályzatot.` Az utolsó lépésként kattintson a :guilabel:`Létrehozás` gombra."
 
-#: ../../content/applications/productivity/calendar/google.rst:87
+#: ../../content/applications/productivity/calendar/google.rst:75
 msgid "Authorized domain setup"
 msgstr "Engedélyezett domain beállítása"
 
-#: ../../content/applications/productivity/calendar/google.rst:89
+#: ../../content/applications/productivity/calendar/google.rst:77
 msgid "Next, any domains set to appear on the consent screen or in an OAuth client's configuration must be pre-registered. To do so, navigate to :guilabel:`Branding` in the left menu. In the :guilabel:`Authorized domains` section, click the :guilabel:`Add domain` button to create a field to enter an authorized domain. Enter a domain, such as `odoo.com`, then click the :guilabel:`Save` button at the bottom of the page."
 msgstr "Ezután minden olyan domaint, amely megjelenik a beleegyezési képernyőn vagy egy OAuth kliens konfigurációjában, előzetesen regisztrálni kell. Ehhez navigáljon a :guilabel:`Márkaépítés` részhez a bal oldali menüben. Az :guilabel:`Engedélyezett domainek` szakaszban kattintson a :guilabel:`Domain hozzáadása` gombra, hogy létrehozzon egy mezőt egy engedélyezett domain megadásához. Adjon meg egy domaint, például `odoo.com`, majd kattintson az oldal alján található :guilabel:`Mentés` gombra."
 
-#: ../../content/applications/productivity/calendar/google.rst:96
+#: ../../content/applications/productivity/calendar/google.rst:84
 msgid "Test users"
 msgstr "Tesztfelhasználók"
 
-#: ../../content/applications/productivity/calendar/google.rst:98
+#: ../../content/applications/productivity/calendar/google.rst:86
 msgid "To give users the ability to sync with personal Gmail accounts, they must be set as a test user. Setup test users by going to :guilabel:`Audience` in the left-side menu and clicking the :guilabel:`Add users` button in the :guilabel:`Test users` section. Enter any desired user emails, and click the :guilabel:`Save` button."
 msgstr "Ahhoz, hogy a felhasználók szinkronizálhassanak személyes Gmail fiókokkal, tesztfelhasználóként kell őket beállítani. A tesztfelhasználók beállításához menjen a :guilabel:`Közönség` részhez a bal oldali menüben, és kattintson a :guilabel:`Felhasználók hozzáadása` gombra a :guilabel:`Tesztfelhasználók` szakaszban. Adja meg a kívánt felhasználói e-mail címeket, majd kattintson a :guilabel:`Mentés` gombra."
 
-#: ../../content/applications/productivity/calendar/google.rst:104
+#: ../../content/applications/productivity/calendar/google.rst:92
 msgid "Create credentials"
 msgstr "Hitelesítő adatok létrehozása"
 
-#: ../../content/applications/productivity/calendar/google.rst:106
+#: ../../content/applications/productivity/calendar/google.rst:94
 msgid "The *Client ID* and the *Client Secret* are both needed to connect Google Calendar to Odoo. This is the last step in the Google console. Begin by clicking :guilabel:`Clients` in the left menu. Then, click :guilabel:`Create Credentials`, and select :guilabel:`OAuth client ID`, Google will open a guide to create credentials."
 msgstr "A *Kliensazonosító* és a *Kliens titok* egyaránt szükséges a Google Naptár Odoo-hoz való csatlakoztatásához. Ez az utolsó lépés a Google konzolon. Kezdje azzal, hogy kattintson a :guilabel:`Kliensek` részre a bal oldali menüben. Ezután kattintson a :guilabel:`Hitelesítő adatok létrehozása` gombra, és válassza a :guilabel:`OAuth kliensazonosító` lehetőséget, a Google megnyit egy útmutatót a hitelesítő adatok létrehozásához."
 
-#: ../../content/applications/productivity/calendar/google.rst:111
+#: ../../content/applications/productivity/calendar/google.rst:99
 msgid "Under :menuselection:`Create OAuth Client ID`, select :guilabel:`Website application` for the :guilabel:`Application Type` field, and type `My Odoo Database` for the :guilabel:`Name`."
 msgstr "A :menuselection:`OAuth Kliensazonosító létrehozása` alatt válassza a :guilabel:`Webhely alkalmazás` lehetőséget az :guilabel:`Alkalmazás típusa` mezőhöz, és írja be a :guilabel:`Név` mezőbe, hogy `My Odoo Database`."
 
-#: ../../content/applications/productivity/calendar/google.rst:114
+#: ../../content/applications/productivity/calendar/google.rst:102
 msgid "Under the :guilabel:`Authorized JavaScript Origins` section, click :guilabel:`+ Add URI` and type the company's Odoo full :abbr:`URL (Uniform Resource Locator)` address."
 msgstr "A :guilabel:`Authorized JavaScript Origins` szakasz alatt kattintson a :guilabel:`+ Add URI` gombra, és írja be a vállalat Odoo teljes :abbr:`URL (Uniform Resource Locator)` címét."
 
-#: ../../content/applications/productivity/calendar/google.rst:116
+#: ../../content/applications/productivity/calendar/google.rst:104
 msgid "Under the :guilabel:`Authorized redirect URIs` section, click :guilabel:`+ Add URI` and type the company's Odoo :abbr:`URL (Uniform Resource Locator)` address followed by `/google_account/authentication`. Finally, click :guilabel:`Create`."
 msgstr "A :guilabel:`Authorized redirect URIs` szakasz alatt kattintson a :guilabel:`+ Add URI` gombra, és írja be a vállalat Odoo :abbr:`URL (Uniform Resource Locator)` címét, amelyet a `/google_account/authentication` követ. Végül kattintson a :guilabel:`Create` gombra."
 
-#: ../../content/applications/productivity/calendar/google.rst:128
+#: ../../content/applications/productivity/calendar/google.rst:None
+msgid "Add the authorized JavaScript origins and the authorized redirect URIs."
+msgstr "Adja hozzá az engedélyezett JavaScript eredeteket és az engedélyezett átirányítási URI-kat."
+
+#: ../../content/applications/productivity/calendar/google.rst:111
 msgid "A :guilabel:`Client ID` and :guilabel:`Client Secret` will appear, save these somewhere safe."
 msgstr "Egy :guilabel:`Ügyfél azonosító` és egy :guilabel:`Ügyfél titok` fog megjelenni, mentse el ezeket biztonságos helyre."
 
-#: ../../content/applications/productivity/calendar/google.rst:131
+#: ../../content/applications/productivity/calendar/google.rst:114
 msgid "Setup in Odoo"
 msgstr "Beállítás az Odoo-ban"
 
-#: ../../content/applications/productivity/calendar/google.rst:133
+#: ../../content/applications/productivity/calendar/google.rst:116
 msgid "Once the *Client ID* and the *Client Secret* are located, open the Odoo database and go to :menuselection:`Settings --> Calendar` to find the :guilabel:`Google Calendar` feature. Tick the checkbox labeled :guilabel:`Google Calendar`."
 msgstr "Miután a *Client ID* és a *Client Secret* megtalálható, nyissa meg az Odoo adatbázist, és menjen a :menuselection:`Beállítások --> Naptár` menüpontra, hogy megtalálja a :guilabel:`Google Naptár` funkciót. Jelölje be a :guilabel:`Google Naptár` feliratú jelölőnégyzetet."
 
-#: ../../content/applications/productivity/calendar/google.rst:145
+#: ../../content/applications/productivity/calendar/google.rst:128
 msgid "Next, copy and paste the *Client ID* and the *Client Secret* from the Google Calendar API credentials page into their respective fields below the :guilabel:`Google Calendar` checkbox. Then, click :guilabel:`Save`."
 msgstr "Ezután másolja és illessze be a *Client ID*-t és a *Client Secret*-et a Google Calendar API hitelesítő adatok oldaláról a megfelelő mezőkbe a :guilabel:`Google Naptár` jelölőnégyzet alatt. Ezután kattintson a :guilabel:`Save` gombra."
 
-#: ../../content/applications/productivity/calendar/google.rst:150
+#: ../../content/applications/productivity/calendar/google.rst:133
 msgid "Tick the :guilabel:`Pause Synchronization` checkbox to temporarily pause events from being updated. This allows for testing and troubleshooting without removing credentials or uninstalling the synchronization. To resume the sync, clear the checkbox and save."
 msgstr "Jelölje be a :guilabel:`Pause Synchronization` jelölőnégyzetet, hogy ideiglenesen szüneteltesse az események frissítését. Ez lehetővé teszi a tesztelést és a hibakeresést anélkül, hogy eltávolítaná a hitelesítő adatokat vagy eltávolítaná a szinkronizálást. A szinkronizálás folytatásához törölje a jelölőnégyzetet, és mentse el."
 
-#: ../../content/applications/productivity/calendar/google.rst:155
+#: ../../content/applications/productivity/calendar/google.rst:138
 msgid "Sync calendar in Odoo"
 msgstr "Naptár szinkronizálása az Odoo-ban"
 
-#: ../../content/applications/productivity/calendar/google.rst:157
+#: ../../content/applications/productivity/calendar/google.rst:140
 msgid "Finally, open the :menuselection:`Calendar` app in Odoo and click on the :guilabel:`Google` sync button to sync Google Calendar with Odoo."
 msgstr "Végül nyissa meg az Odoo :menuselection:`Naptár` alkalmazást, és kattintson a :guilabel:`Google` szinkronizálás gombra, hogy szinkronizálja a Google Naptárt az Odoo-val."
 
-#: ../../content/applications/productivity/calendar/google.rst:168
+#: ../../content/applications/productivity/calendar/google.rst:151
 msgid "When syncing Google Calendar with Odoo for the first time, the page will redirect to the Google Account. From there, select the :guilabel:`Email Account` that should have access, then select :guilabel:`Continue` (should the app be unverified), and finally select :guilabel:`Continue` (to give permission for the transfer of data)."
 msgstr "Amikor először szinkronizálja a Google Naptárt az Odoo-val, az oldal átirányít a Google Fiókhoz. Innen válassza ki azt az :guilabel:`Email Fiókot`, amelynek hozzáférése kell legyen, majd válassza a :guilabel:`Folytatás` lehetőséget (ha az alkalmazás nincs ellenőrizve), és végül válassza a :guilabel:`Folytatás` lehetőséget (hogy engedélyezze az adatok átvitelét)."
 
-#: ../../content/applications/productivity/calendar/google.rst:180
+#: ../../content/applications/productivity/calendar/google.rst:None
+msgid "Give Odoo permission to access Google Calendar."
+msgstr "Adjon engedélyt az Odoo-nak a Google Naptár eléréséhez."
+
+#: ../../content/applications/productivity/calendar/google.rst:159
 msgid "Now, Odoo Calendar is successfully synced with Google Calendar!"
 msgstr "Most az Odoo Naptár sikeresen szinkronizálva van a Google Naptárral!"
 
-#: ../../content/applications/productivity/calendar/google.rst:183
+#: ../../content/applications/productivity/calendar/google.rst:162
 msgid "Odoo highly recommends testing the Google calendar synchronization on a test database and a test email address (that is not used for any other purpose) before attempting to sync the desired Google Calendar with the user's production database."
 msgstr "Az Odoo erősen ajánlja, hogy a Google naptár szinkronizálását egy tesztadatbázison és egy teszt email címen (amelyet más célra nem használnak) teszteljék, mielőtt megpróbálnák szinkronizálni a kívánt Google Naptárt a felhasználó éles adatbázisával."
 
-#: ../../content/applications/productivity/calendar/google.rst:187
+#: ../../content/applications/productivity/calendar/google.rst:166
 msgid "Once a user synchronizes their Google calendar with the Odoo calendar:"
 msgstr "Miután egy felhasználó szinkronizálta a Google naptárát az Odoo naptárral:"
 
-#: ../../content/applications/productivity/calendar/google.rst:189
+#: ../../content/applications/productivity/calendar/google.rst:168
 msgid "Creating an event in Odoo causes Google to send an invitation to all event attendees."
 msgstr "Egy esemény létrehozása az Odoo-ban arra készteti a Google-t, hogy meghívót küldjön az összes esemény résztvevőjének."
 
-#: ../../content/applications/productivity/calendar/google.rst:190
+#: ../../content/applications/productivity/calendar/google.rst:169
 msgid "Deleting an event in Odoo causes Google to send a cancellation to all event attendees."
 msgstr "Egy esemény törlése az Odoo-ban arra készteti a Google-t, hogy lemondást küldjön az összes esemény résztvevőjének."
 
-#: ../../content/applications/productivity/calendar/google.rst:191
+#: ../../content/applications/productivity/calendar/google.rst:170
 msgid "Adding a contact to an event causes Google to send an invitation to all event attendees."
 msgstr "Egy kapcsolat hozzáadása egy eseményhez arra készteti a Google-t, hogy meghívót küldjön az összes esemény résztvevőjének."
 
-#: ../../content/applications/productivity/calendar/google.rst:192
+#: ../../content/applications/productivity/calendar/google.rst:171
 msgid "Removing a contact from an event causes Google to send a cancellation to all event attendees."
 msgstr "Egy kapcsolat eltávolítása egy eseményről azt eredményezi, hogy a Google lemondást küld az összes esemény résztvevőjének."
 
-#: ../../content/applications/productivity/calendar/google.rst:194
+#: ../../content/applications/productivity/calendar/google.rst:173
 msgid "Events can be created in *Google Calendar* without sending a notification by selecting :guilabel:`Don't Send` when prompted to send invitation emails."
 msgstr "Események létrehozhatók a *Google Naptárban* értesítés küldése nélkül, ha a meghívó e-mailek küldésekor a :guilabel:`Ne küldjön` lehetőséget választja."
 
-#: ../../content/applications/productivity/calendar/google.rst:198 ../../content/applications/productivity/calendar/outlook.rst:239
+#: ../../content/applications/productivity/calendar/google.rst:177 ../../content/applications/productivity/calendar/outlook.rst:218
 msgid "Troubleshoot sync"
 msgstr "Szinkronizálási hibák elhárítása"
 
-#: ../../content/applications/productivity/calendar/google.rst:200
+#: ../../content/applications/productivity/calendar/google.rst:179
 msgid "There may be times when the *Google Calendar* account does not sync correctly with Odoo. Sync issues can be seen in the database logs."
 msgstr "Előfordulhat, hogy a *Google Naptár* fiók nem szinkronizál helyesen az Odoo-val. A szinkronizálási problémák megjelenhetnek az adatbázis naplóiban."
 
-#: ../../content/applications/productivity/calendar/google.rst:203
+#: ../../content/applications/productivity/calendar/google.rst:182
 msgid "In these cases, the account needs troubleshooting. A reset can be performed using the :guilabel:`Reset Account` button, which can be accessed by navigating to :menuselection:`Settings app --> Manage Users`. Then, select the user to modify the calendar, and click the :guilabel:`Calendar` tab."
 msgstr "Ilyen esetekben a fiók hibakeresést igényel. A visszaállítás elvégezhető a :guilabel:`Fiók visszaállítása` gomb segítségével, amely elérhető a :menuselection:`Beállítások alkalmazás --> Felhasználók kezelése` útvonalon. Ezután válassza ki azt a felhasználót, akinek a naptárát módosítani szeretné, és kattintson a :guilabel:`Naptár` fülre."
 
-#: ../../content/applications/productivity/calendar/google.rst:215 ../../content/applications/productivity/calendar/outlook.rst:256
+#: ../../content/applications/productivity/calendar/google.rst:194 ../../content/applications/productivity/calendar/outlook.rst:235
 msgid "Next, click :guilabel:`Reset Account` under the correct calendar."
 msgstr "Ezután kattintson a :guilabel:`Fiók visszaállítása` gombra a megfelelő naptár alatt."
 
-#: ../../content/applications/productivity/calendar/google.rst:218 ../../content/applications/productivity/calendar/outlook.rst:259
+#: ../../content/applications/productivity/calendar/google.rst:197 ../../content/applications/productivity/calendar/outlook.rst:238
 msgid "Reset options"
 msgstr "Visszaállítási lehetőségek"
 
-#: ../../content/applications/productivity/calendar/google.rst:220
+#: ../../content/applications/productivity/calendar/google.rst:199
 msgid "The following reset options are available for troubleshooting Google calendar sync with Odoo:"
 msgstr "A következő visszaállítási lehetőségek állnak rendelkezésre a Google naptár és az Odoo szinkronizálásának hibakereséséhez:"
 
-#: ../../content/applications/productivity/calendar/google.rst:228 ../../content/applications/productivity/calendar/outlook.rst:270
+#: ../../content/applications/productivity/calendar/google.rst:207 ../../content/applications/productivity/calendar/outlook.rst:249
 msgid ":guilabel:`User's Existing Events`:"
 msgstr ":guilabel:`Felhasználó meglévő eseményei`:"
 
-#: ../../content/applications/productivity/calendar/google.rst:230 ../../content/applications/productivity/calendar/outlook.rst:272
+#: ../../content/applications/productivity/calendar/google.rst:209 ../../content/applications/productivity/calendar/outlook.rst:251
 msgid ":guilabel:`Leave them untouched`: no changes to the events."
 msgstr ":guilabel:`Hagyja érintetlenül`: ne változtasson az eseményeken."
 
-#: ../../content/applications/productivity/calendar/google.rst:231
+#: ../../content/applications/productivity/calendar/google.rst:210
 msgid ":guilabel:`Delete from the current Google Calendar account`: delete the events from *Google Calendar*."
 msgstr ":guilabel:`Törlés a jelenlegi Google Naptár fiókból`: törölje az eseményeket a *Google Naptárból*."
 
-#: ../../content/applications/productivity/calendar/google.rst:233 ../../content/applications/productivity/calendar/outlook.rst:275
+#: ../../content/applications/productivity/calendar/google.rst:212 ../../content/applications/productivity/calendar/outlook.rst:254
 msgid ":guilabel:`Delete from Odoo`: delete the events from the Odoo calendar."
 msgstr ":guilabel:`Törlés az Odoo-ból`: törölje az eseményeket az Odoo naptárból."
 
-#: ../../content/applications/productivity/calendar/google.rst:234
+#: ../../content/applications/productivity/calendar/google.rst:213
 msgid ":guilabel:`Delete from both`: delete the events from both *Google Calendar* and Odoo calendar."
 msgstr ":guilabel:`Törlés mindkettőből`: törölje az eseményeket mind a *Google Naptárból*, mind az Odoo naptárból."
 
-#: ../../content/applications/productivity/calendar/google.rst:236 ../../content/applications/productivity/calendar/outlook.rst:279
+#: ../../content/applications/productivity/calendar/google.rst:215 ../../content/applications/productivity/calendar/outlook.rst:258
 msgid ":guilabel:`Next Synchronization`:"
 msgstr ":guilabel:`Következő szinkronizálás`:"
 
-#: ../../content/applications/productivity/calendar/google.rst:238
+#: ../../content/applications/productivity/calendar/google.rst:217
 msgid ":guilabel:`Synchronize only new events`: sync new events on *Google Calendar* and/or Odoo calendar."
 msgstr ":guilabel:`Csak új események szinkronizálása`: szinkronizálja az új eseményeket a *Google Naptárban* és/vagy az Odoo naptárban."
 
-#: ../../content/applications/productivity/calendar/google.rst:240
+#: ../../content/applications/productivity/calendar/google.rst:219
 msgid ":guilabel:`Synchronize all existing events`: sync all events on *Google Calendar* and/or Odoo calendar."
 msgstr ":guilabel:`Minden meglévő esemény szinkronizálása`: szinkronizálja az összes eseményt a *Google Naptárban* és/vagy az Odoo naptárban."
 
-#: ../../content/applications/productivity/calendar/google.rst:243 ../../content/applications/productivity/calendar/outlook.rst:286
+#: ../../content/applications/productivity/calendar/google.rst:222 ../../content/applications/productivity/calendar/outlook.rst:265
 msgid "Click :guilabel:`Confirm` after making the selection to modify the user's events and the calendar synchronization."
 msgstr "Kattintson a :guilabel:`Megerősítés` gombra a kiválasztás után, hogy módosítsa a felhasználó eseményeit és a naptár szinkronizálását."
 
-#: ../../content/applications/productivity/calendar/google.rst:247
+#: ../../content/applications/productivity/calendar/google.rst:226
 msgid "Google OAuth FAQ"
 msgstr "Google OAuth GYIK"
 
-#: ../../content/applications/productivity/calendar/google.rst:249
+#: ../../content/applications/productivity/calendar/google.rst:228
 msgid "At times there can be configuration errors that occur, and troubleshooting is needed to resolve the issue. Below are the most common errors that may occur when configuring the *Google Calendar* for use with Odoo."
 msgstr "Időnként előfordulhatnak konfigurációs hibák, amelyek elhárítást igényelnek a probléma megoldásához. Az alábbiakban a leggyakoribb hibák találhatók, amelyek előfordulhatnak a *Google Naptár* Odoo-val való használatra történő konfigurálásakor."
 
-#: ../../content/applications/productivity/calendar/google.rst:254
+#: ../../content/applications/productivity/calendar/google.rst:233
 msgid "Production vs. testing publishing status"
 msgstr "Gyártás vs. tesztelési közzétételi állapot"
 
-#: ../../content/applications/productivity/calendar/google.rst:256
+#: ../../content/applications/productivity/calendar/google.rst:235
 msgid "Choosing :guilabel:`Production` as the :guilabel:`Publishing Status` (instead of :guilabel:`Testing`) displays the following warning message:"
 msgstr "A :guilabel:`Gyártás` kiválasztása a :guilabel:`Közzétételi állapot`-ként (a :guilabel:`Tesztelés` helyett) a következő figyelmeztető üzenetet jeleníti meg:"
 
-#: ../../content/applications/productivity/calendar/google.rst:259
+#: ../../content/applications/productivity/calendar/google.rst:238
 msgid "`OAuth is limited to 100 sensitive scope logins until the OAuth consent screen is verified. This may require a verification process that can take several days.`"
 msgstr "`Az OAuth 100 érzékeny hatókörű bejelentkezésre korlátozódik, amíg az OAuth beleegyezési képernyő nincs ellenőrizve. Ez egy ellenőrzési folyamatot igényelhet, amely több napot is igénybe vehet.`"
 
-#: ../../content/applications/productivity/calendar/google.rst:262
+#: ../../content/applications/productivity/calendar/google.rst:241
 msgid "To correct this warning, navigate to the `Google API Platform <https://console.cloud.google.com/apis/credentials/consent>`_. If the :guilabel:`Publishing Status` is :guilabel:`In Production`, click :guilabel:`Back to Testing` to correct the issue."
 msgstr "A figyelmeztetés kijavításához navigáljon a `Google API Platform <https://console.cloud.google.com/apis/credentials/consent>`_ oldalra. Ha a :guilabel:`Közzétételi állapot` :guilabel:`Gyártásban`, kattintson a :guilabel:`Vissza a teszteléshez` gombra a probléma megoldásához."
 
-#: ../../content/applications/productivity/calendar/google.rst:267
+#: ../../content/applications/productivity/calendar/google.rst:246
 msgid "No test users added"
 msgstr "Nincsenek tesztfelhasználók hozzáadva"
 
-#: ../../content/applications/productivity/calendar/google.rst:269
+#: ../../content/applications/productivity/calendar/google.rst:248
 msgid "If no test users are added to the :guilabel:`OAuth consent screen`, then an :guilabel:`Error 403: access_denied` populates."
 msgstr "Ha nincsenek tesztfelhasználók hozzáadva a :guilabel:`OAuth beleegyezési képernyőhöz`, akkor egy :guilabel:`Hiba 403: hozzáférés megtagadva` jelenik meg."
 
-#: ../../content/applications/productivity/calendar/google.rst:279
+#: ../../content/applications/productivity/calendar/google.rst:None
+msgid "403 Access Denied Error."
+msgstr "403 Hozzáférés megtagadva hiba."
+
+#: ../../content/applications/productivity/calendar/google.rst:254
 msgid "To correct this error, return to the :guilabel:`OAuth consent screen`, under :guilabel:`APIs & Services`, and add test users to the app. Add the email to be configured in Odoo."
 msgstr "A hiba kijavításához térjen vissza a :guilabel:`OAuth beleegyezési képernyőhöz`, az :guilabel:`API-k és Szolgáltatások` alatt, és adjon hozzá tesztfelhasználókat az alkalmazáshoz. Adja hozzá az Odoo-ban konfigurálandó e-mail címet."
 
-#: ../../content/applications/productivity/calendar/google.rst:283
+#: ../../content/applications/productivity/calendar/google.rst:258
 msgid "Application Type"
 msgstr "Alkalmazás típusa"
 
-#: ../../content/applications/productivity/calendar/google.rst:285
+#: ../../content/applications/productivity/calendar/google.rst:260
 msgid "When creating the credentials (OAuth *Client ID* and *Client Secret*), if :guilabel:`Desktop App` is selected for the :guilabel:`Application Type`, an :guilabel:`Authorization Error` appears (:guilabel:`Error 400:redirect_uri_mismatch`)."
 msgstr "Amikor a hitelesítő adatokat (OAuth *Client ID* és *Client Secret*) létrehozzuk, ha a :guilabel:`Desktop App` van kiválasztva az :guilabel:`Application Type` mezőben, akkor egy :guilabel:`Authorization Error` jelenik meg (:guilabel:`Error 400:redirect_uri_mismatch`)."
 
-#: ../../content/applications/productivity/calendar/google.rst:295
+#: ../../content/applications/productivity/calendar/google.rst:None
+msgid "Error 400 Redirect URI Mismatch."
+msgstr "Hiba 400: Átirányítási URI nem egyezik."
+
+#: ../../content/applications/productivity/calendar/google.rst:267
 msgid "To correct this error, delete the existing credentials, and create new credentials, by selecting :guilabel:`Web Application` for the :guilabel:`Application Type`."
 msgstr "A hiba kijavításához törölje a meglévő hitelesítő adatokat, és hozzon létre újakat, az :guilabel:`Application Type` mezőben a :guilabel:`Web Application` kiválasztásával."
 
-#: ../../content/applications/productivity/calendar/google.rst:298
+#: ../../content/applications/productivity/calendar/google.rst:270
 msgid "Then, under :guilabel:`Authorized redirect URIs`, click :guilabel:`ADD URI`, and type: `https://yourdbname.odoo.com/google_account/authentication` in the field, being sure to replace *yourdbname* in the URL with the **real** Odoo database name."
 msgstr "Ezután az :guilabel:`Authorized redirect URIs` alatt kattintson a :guilabel:`ADD URI` gombra, és írja be a következőt a mezőbe: `https://yourdbname.odoo.com/google_account/authentication`, ügyelve arra, hogy az URL-ben a *yourdbname* helyére az **igazi** Odoo adatbázis nevet írja."
 
-#: ../../content/applications/productivity/calendar/google.rst:303
+#: ../../content/applications/productivity/calendar/google.rst:275
 msgid "Ensure that the domain (used in the URI: `https://yourdbname.odoo.com/google_account/authentication`) is the exact same domain as configured in the `web.base.url` system parameter."
 msgstr "Győződjön meg arról, hogy a domain (amelyet az URI-ban használ: `https://yourdbname.odoo.com/google_account/authentication`) pontosan megegyezik azzal a domainnel, amely a `web.base.url` rendszerparaméterben van beállítva."
 
-#: ../../content/applications/productivity/calendar/google.rst:307
+#: ../../content/applications/productivity/calendar/google.rst:279
 msgid "Access the `web.base.url` by activating :ref:`developer mode <developer-mode>`, and navigating to :menuselection:`Settings app --> Technical header menu --> Parameters section --> System Parameters`."
 msgstr "A `web.base.url` eléréséhez aktiválja a :ref:`developer mode <developer-mode>` módot, és navigáljon a következőhöz: :menuselection:`Settings app --> Technical header menu --> Parameters section --> System Parameters`."
 
@@ -4357,187 +4385,219 @@ msgstr "A Microsoft *Entra ID*-val való bejelentkezés után `regisztráljon eg
 msgid "To create an application, click :guilabel:`+ Add` in the top menu. From the resulting drop-down menu, select :guilabel:`App Registration`."
 msgstr "Alkalmazás létrehozásához kattintson a :guilabel:`+ Hozzáadás` gombra a felső menüben. A megjelenő legördülő menüből válassza a :guilabel:`Alkalmazás regisztráció` lehetőséget."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:45
+#: ../../content/applications/productivity/calendar/outlook.rst:None
+msgid "Microsoft Azure management page with + Add and App Registration menu highlighted."
+msgstr "Microsoft Azure kezelőoldal, ahol a + Hozzáadás és az Alkalmazás regisztráció menü ki van emelve."
+
+#: ../../content/applications/productivity/calendar/outlook.rst:42
 msgid "Enter a unique :guilabel:`Name` for the connected application."
 msgstr "Adjon meg egy egyedi :guilabel:`Név` a csatlakoztatott alkalmazáshoz."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:47
+#: ../../content/applications/productivity/calendar/outlook.rst:44
 msgid "Choosing the appropriate :guilabel:`Supported account type` is essential, or else the connected application will not work. Users who wish to connect their *Outlook Calendar* to Odoo should select the :guilabel:`Accounts in any organizational directory (Any Microsoft Entra ID directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)` option for :guilabel:`Supported account types`."
 msgstr "A megfelelő :guilabel:`Támogatott fióktípus` kiválasztása elengedhetetlen, különben a csatlakoztatott alkalmazás nem fog működni. Azoknak a felhasználóknak, akik az *Outlook Naptárukat* szeretnék csatlakoztatni az Odoo-hoz, a :guilabel:`Fiókok bármely szervezeti könyvtárban (Bármely Microsoft Entra ID könyvtár - Multitenant) és személyes Microsoft fiókok (pl. Skype, Xbox)` opciót kell választaniuk a :guilabel:`Támogatott fióktípusok` számára."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:53
+#: ../../content/applications/productivity/calendar/outlook.rst:50
 msgid "When configuring the :guilabel:`Redirect URI`, choose the :guilabel:`Web` option from the first drop-down menu. Then, enter the Odoo database URI (URL) followed by `/microsoft_account/authentication`."
 msgstr "A :guilabel:`Redirect URI` konfigurálásakor válassza a :guilabel:`Web` opciót az első legördülő menüből. Ezután adja meg az Odoo adatbázis URI-t (URL), majd `/microsoft_account/authentication`."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:58
+#: ../../content/applications/productivity/calendar/outlook.rst:55
 msgid "Enter `https://yourdbname.odoo.com/microsoft_account/authentication` for the :guilabel:`Redirect URI`. Replace `yourdbname.odoo.com` with the :abbr:`URL (Uniform Resource Locator)`."
 msgstr "Adja meg a `https://yourdbname.odoo.com/microsoft_account/authentication` címet a :guilabel:`Redirect URI` mezőben. Cserélje le a `yourdbname.odoo.com` részt az :abbr:`URL (Uniform Resource Locator)`-re."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:62
+#: ../../content/applications/productivity/calendar/outlook.rst:59
 msgid "Ensure the database's :abbr:`URL (Uniform Resource Locator)` (domain) used in the URI is the exact same domain as the one configured on the `web.base.url` system parameter."
 msgstr "Győződjön meg arról, hogy az URI-ban használt adatbázis :abbr:`URL (Uniform Resource Locator)` (domain) pontosan megegyezik azzal a domainnel, amely a `web.base.url` rendszerparaméterben van beállítva."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:65
+#: ../../content/applications/productivity/calendar/outlook.rst:62
 msgid "Access the `web.base.url` by activating :ref:`developer mode <developer-mode>`, and navigating to :menuselection:`Settings app --> Technical header menu --> Parameters section --> System Parameters`. Then, select it from the :guilabel:`Key` list on the :guilabel:`System Parameters` page."
 msgstr "A `web.base.url` eléréséhez aktiválja a :ref:`developer mode <developer-mode>` módot, és navigáljon a :menuselection:`Beállítások alkalmazás --> Technikai fejléc menü --> Paraméterek szakasz --> Rendszerparaméterek` menüpontra. Ezután válassza ki a :guilabel:`Kulcs` listából a :guilabel:`Rendszerparaméterek` oldalon."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:78
+#: ../../content/applications/productivity/calendar/outlook.rst:None
+msgid "The \"Supported account type\" and \"Redirect URI\" settings in the Microsoft Entra ID portal."
+msgstr ""
+
+#: ../../content/applications/productivity/calendar/outlook.rst:71
 msgid "For more information on the restrictions and limitations of URIs, check Microsoft's `Redirect URI (reply URL) restrictions and limitations <https://docs.microsoft.com/en-us/azure/active-directory/develop/reply-url>`_ page."
 msgstr "További információkért az URI-k korlátozásairól és megszorításairól tekintse meg a Microsoft `Redirect URI (reply URL) restrictions and limitations <https://docs.microsoft.com/en-us/azure/active-directory/develop/reply-url>`_ oldalát."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:82
+#: ../../content/applications/productivity/calendar/outlook.rst:75
 msgid "Finally, on the application registration page, click :guilabel:`Register` button to complete the application registration. The :guilabel:`Application (client) ID` is produced. Copy this value, as it is needed later, in the :ref:`outlook_calendar/odoo_setup`."
 msgstr "Végül, az alkalmazás regisztrációs oldalán kattintson a :guilabel:`Regisztráció` gombra az alkalmazás regisztrációjának befejezéséhez. A :guilabel:`Alkalmazás (ügyfél) azonosító` létrejön. Másolja ezt az értéket, mivel később szükség lesz rá a :ref:`outlook_calendar/odoo_setup` során."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:95
+#: ../../content/applications/productivity/calendar/outlook.rst:None
+msgid ""
+"Application client ID highlighted in the essentials section of the newly created\n"
+"application."
+msgstr "Az alkalmazás ügyfélazonosítója kiemelve az újonnan létrehozott alkalmazás alapvető szakaszában."
+
+#: ../../content/applications/productivity/calendar/outlook.rst:85
 msgid "Create client secret"
 msgstr "Ügyféltitok létrehozása"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:97
+#: ../../content/applications/productivity/calendar/outlook.rst:87
 msgid "The second credential needed to complete the synchronization of the Microsoft *Outlook Calendar* is the *Client Secret*. The user **must** add a client secret, as this allows Odoo to authenticate itself, requiring no interaction from the user's side. *Certificates* are optional."
 msgstr "A Microsoft *Outlook Naptár* szinkronizálásának befejezéséhez szükséges második hitelesítő adat az *Ügyféltitok*. A felhasználónak **kötelező** ügyféltitkot hozzáadnia, mivel ez lehetővé teszi az Odoo számára az önálló hitelesítést, felhasználói beavatkozás nélkül. A *Tanúsítványok* opcionálisak."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:101
+#: ../../content/applications/productivity/calendar/outlook.rst:91
 msgid "To add a client secret, click :menuselection:`Certificates & secrets` in the left menu. Then click :guilabel:`+ New client secret` to create the client secret."
 msgstr "Ügyféltitok hozzáadásához kattintson a bal oldali menüben a :menuselection:`Tanúsítványok és titkok` menüpontra. Ezután kattintson a :guilabel:`+ Új ügyféltitok` gombra az ügyféltitok létrehozásához."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:111
+#: ../../content/applications/productivity/calendar/outlook.rst:None
+msgid ""
+"New client secret page with certificates and secrets menu and new client secret option\n"
+"highlighted."
+msgstr "Új ügyfél titkos oldal tanúsítványokkal és titkok menüvel, valamint az új ügyfél titok opció kiemelve."
+
+#: ../../content/applications/productivity/calendar/outlook.rst:99
 msgid "Next, type a :guilabel:`Description`, and select when the client secret :guilabel:`Expires`. Available options include: :guilabel:`90 days (3 months)`, :guilabel:`365 days (12 months)`, :guilabel:`545 days (18 months)`, :guilabel:`730 days (24 months)` or :guilabel:`Custom`. The :guilabel:`Custom` option allows the administrator to set a :guilabel:`Start` and :guilabel:`End` date."
 msgstr "Ezután írja be a :guilabel:`Leírás` mezőt, és válassza ki, mikor jár le az ügyfél titok :guilabel:`Lejár`. Elérhető opciók: :guilabel:`90 nap (3 hónap)`, :guilabel:`365 nap (12 hónap)`, :guilabel:`545 nap (18 hónap)`, :guilabel:`730 nap (24 hónap)` vagy :guilabel:`Egyéni`. Az :guilabel:`Egyéni` opció lehetővé teszi az adminisztrátor számára, hogy beállítson egy :guilabel:`Kezdete` és :guilabel:`Befejező` dátumot."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:117
+#: ../../content/applications/productivity/calendar/outlook.rst:105
 msgid "Finally, click :guilabel:`Add` to :guilabel:`Add a client secret`."
 msgstr "Végül kattintson a :guilabel:`Hozzáadás` gombra az :guilabel:`Ügyfél titok hozzáadása` érdekében."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:120
+#: ../../content/applications/productivity/calendar/outlook.rst:108
 msgid "Since resetting the synchronization can be tricky, Odoo recommends setting the maximum allowed expiration date for the client secret (24 months or custom), so there is no need to re-synchronize soon."
 msgstr "Mivel a szinkronizálás visszaállítása bonyolult lehet, az Odoo javasolja, hogy állítsa be az ügyfél titok maximálisan megengedett lejárati dátumát (24 hónap vagy egyéni), így nincs szükség a közeljövőben újraszinkronizálásra."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:124
+#: ../../content/applications/productivity/calendar/outlook.rst:112
 msgid "Copy the :guilabel:`Value` for use in the next section."
 msgstr "Másolja a :guilabel:`Értéket` a következő szakaszban való használatra."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:127
+#: ../../content/applications/productivity/calendar/outlook.rst:115
 msgid "Client secret values cannot be viewed, except immediately after creation. Be sure to save the secret when created *before* leaving the page."
 msgstr "Az ügyfél titok értékek nem tekinthetők meg, kivéve közvetlenül a létrehozás után. Ügyeljen arra, hogy mentse a titkot a létrehozáskor *mielőtt* elhagyná az oldalt."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:133
+#: ../../content/applications/productivity/calendar/outlook.rst:121
 msgid "Configuration in Odoo"
 msgstr "Konfiguráció az Odoo-ban"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:135
+#: ../../content/applications/productivity/calendar/outlook.rst:123
 msgid "In the Odoo database, go to :menuselection:`Calendar app --> Configuration --> Settings`, and tick the checkbox beside the :guilabel:`Outlook Calendar` setting. Remember to click :guilabel:`Save` to implement the changes."
 msgstr "Az Odoo adatbázisban menjen a :menuselection:`Naptár alkalmazás --> Konfiguráció --> Beállítások`, és jelölje be a :guilabel:`Outlook naptár` beállítás melletti jelölőnégyzetet. Ne felejtse el megnyomni a :guilabel:`Mentés` gombot a változtatások végrehajtásához."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:147
+#: ../../content/applications/productivity/calendar/outlook.rst:135
 msgid "From the Microsoft *Azure* portal, under the :guilabel:`Overview` section of the application, copy the :guilabel:`Application (Client) ID`, if it has not already been copied, and paste it into the :guilabel:`Client ID` field in Odoo."
 msgstr "A Microsoft *Azure* portálon, az alkalmazás :guilabel:`Áttekintés` szakaszában másolja az :guilabel:`Alkalmazás (Ügyfél) azonosítót`, ha még nem másolta volna, és illessze be az Odoo-ban a :guilabel:`Ügyfél azonosító` mezőbe."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:157
+#: ../../content/applications/productivity/calendar/outlook.rst:None
+msgid "The \"Client ID\" in the Microsoft Azure portal."
+msgstr ""
+
+#: ../../content/applications/productivity/calendar/outlook.rst:143
 msgid "Copy the previously-acquired :guilabel:`Value` (Client Secret Value), and paste it into the :guilabel:`Client Secret` field in Odoo."
 msgstr "Másolja a korábban megszerzett :guilabel:`Értéket` (Ügyfél titok érték), és illessze be az Odoo-ban az :guilabel:`Ügyfél titok` mezőbe."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:168
+#: ../../content/applications/productivity/calendar/outlook.rst:None
+msgid "The \"Client Secret\" token to be copied from Microsoft to Odoo."
+msgstr ""
+
+#: ../../content/applications/productivity/calendar/outlook.rst:150
 msgid "Finally, on the Odoo :menuselection:`Settings --> General Settings` page, click :guilabel:`Save`."
 msgstr "Végül az Odoo :menuselection:`Beállítások --> Általános beállítások` oldalon kattintson a :guilabel:`Mentés` gombra."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:173
+#: ../../content/applications/productivity/calendar/outlook.rst:155
 msgid "Sync with Outlook"
 msgstr "Szinkronizálás az Outlookkal"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:177
+#: ../../content/applications/productivity/calendar/outlook.rst:159
 msgid "Odoo highly recommends testing the Outlook calendar synchronization on a test database and a test email address (that is not used for any other purpose) before attempting to sync the desired Outlook Calendar with the user's production database."
 msgstr "Az Odoo erősen ajánlja, hogy az Outlook naptár szinkronizálását egy tesztadatbázison és egy teszt e-mail címen (amelyet más célra nem használnak) próbálják ki, mielőtt megkísérelnék a kívánt Outlook naptár szinkronizálását a felhasználó éles adatbázisával."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:181
+#: ../../content/applications/productivity/calendar/outlook.rst:163
 msgid "If the user has any past, present, or future events on their Odoo calendar before syncing their Outlook calendar, Outlook will treat the events pulled from Odoo's calendar during the sync as new events, causing an email notification to be sent from Outlook to all the event attendees."
 msgstr "Ha a felhasználónak bármilyen múltbeli, jelenlegi vagy jövőbeli eseménye van az Odoo naptárában, mielőtt szinkronizálná az Outlook naptárát, az Outlook új eseményként fogja kezelni az Odoo naptárából a szinkronizálás során átvett eseményeket, ami e-mail értesítést eredményez az Outlookból az összes esemény résztvevőjének."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:185
+#: ../../content/applications/productivity/calendar/outlook.rst:167
 msgid "To avoid unwanted emails being sent to all past, present, and future event attendees, the user must add the events from the Odoo calendar to the Outlook calendar before the first ever sync, delete the events from Odoo, and then start the sync."
 msgstr "Annak elkerülése érdekében, hogy nem kívánt e-mailek kerüljenek kiküldésre az összes múltbeli, jelenlegi és jövőbeli esemény résztvevőjének, a felhasználónak hozzá kell adnia az Odoo naptár eseményeit az Outlook naptárhoz az első szinkronizálás előtt, törölnie kell az eseményeket az Odoo-ból, majd el kell indítania a szinkronizálást."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:189
+#: ../../content/applications/productivity/calendar/outlook.rst:171
 msgid "Even after synchronizing the Odoo Calendar with the Outlook calendar, Outlook will still send a notification to all event participants every time an event is edited (created, deleted, unarchived, or event date/time changed), with no exceptions. This is a limitation that cannot be fixed from Odoo's side."
 msgstr "Még az Odoo naptár Outlook naptárral történő szinkronizálása után is, az Outlook minden alkalommal értesítést küld az összes esemény résztvevőjének, amikor egy eseményt szerkesztenek (létrehoznak, törölnek, visszaállítanak, vagy az esemény dátuma/időpontja megváltozik), kivétel nélkül. Ez egy olyan korlátozás, amelyet az Odoo oldaláról nem lehet megoldani."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:194
+#: ../../content/applications/productivity/calendar/outlook.rst:176
 msgid "In summary, once a user synchronizes their Outlook calendar with the Odoo calendar:"
 msgstr "Összefoglalva, ha egy felhasználó szinkronizálja az Outlook naptárát az Odoo naptárral:"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:196
+#: ../../content/applications/productivity/calendar/outlook.rst:178
 msgid "Creating an event in Odoo causes Outlook to send an invitation to all event attendees."
 msgstr "Egy esemény létrehozása az Odoo-ban azt eredményezi, hogy az Outlook meghívót küld az összes esemény résztvevőjének."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:197
+#: ../../content/applications/productivity/calendar/outlook.rst:179
 msgid "Deleting an event in Odoo causes Outlook to send a cancellation to all event attendees."
 msgstr "Egy esemény törlése az Odoo-ban azt eredményezi, hogy az Outlook lemondást küld az összes esemény résztvevőjének."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:198
+#: ../../content/applications/productivity/calendar/outlook.rst:180
 msgid "Unarchiving an event in Odoo causes Outlook to send an invitation to all event attendees."
 msgstr "Egy esemény visszaállítása az Odoo-ban azt eredményezi, hogy az Outlook meghívót küld az összes esemény résztvevőjének."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:199
+#: ../../content/applications/productivity/calendar/outlook.rst:181
 msgid "Archiving an event in Odoo causes Outlook to send a cancellation to all event attendees."
 msgstr "Egy esemény archiválása az Odoo-ban azt eredményezi, hogy az Outlook lemondást küld az összes esemény résztvevőjének."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:200
+#: ../../content/applications/productivity/calendar/outlook.rst:182
 msgid "Adding a contact to an event causes Outlook to send an invitation to all event attendees."
 msgstr "Egy kapcsolat hozzáadása egy eseményhez azt eredményezi, hogy az Outlook meghívót küld az összes esemény résztvevőjének."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:201
+#: ../../content/applications/productivity/calendar/outlook.rst:183
 msgid "Removing a contact from an event causes Outlook to send a cancellation to all event attendees."
 msgstr "Egy kapcsolat eltávolítása egy eseményről azt eredményezi, hogy az Outlook lemondást küld az összes esemény résztvevőjének."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:204
+#: ../../content/applications/productivity/calendar/outlook.rst:186
 msgid "Sync Odoo Calendar and Outlook"
 msgstr "Odoo Naptár és Outlook szinkronizálása"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:206
+#: ../../content/applications/productivity/calendar/outlook.rst:188
 msgid "In the Odoo database, open to the *Calendar* module, and click the :guilabel:`Outlook` sync button on the right-side of the page, beneath the monthly calendar."
 msgstr "Az Odoo adatbázisban nyissa meg a *Naptár* modult, és kattintson az oldal jobb oldalán található :guilabel:`Outlook` szinkronizáló gombra, a havi naptár alatt."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:216
+#: ../../content/applications/productivity/calendar/outlook.rst:198
 msgid "The synchronization is a two-way process, meaning that events are reconciled in both accounts (*Outlook* and Odoo). The page redirects to a Microsoft login page, and the user is asked to log in to their account, if they are not already. Finally, grant the required permissions by clicking :guilabel:`Accept`."
 msgstr "A szinkronizálás kétirányú folyamat, ami azt jelenti, hogy az események mindkét fiókban (*Outlook* és Odoo) összehangolásra kerülnek. Az oldal átirányít egy Microsoft bejelentkezési oldalra, és a felhasználót megkérik, hogy jelentkezzen be a fiókjába, ha még nem tette meg. Végül adja meg a szükséges engedélyeket a :guilabel:`Elfogadás` gombra kattintva."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:229
+#: ../../content/applications/productivity/calendar/outlook.rst:None
+msgid "Authentication process on Microsoft Outlook OAuth page."
+msgstr "Hitelesítési folyamat a Microsoft Outlook OAuth oldalon."
+
+#: ../../content/applications/productivity/calendar/outlook.rst:208
 msgid "All users that want to use the synchronization simply need to :ref:`sync their calendar with Outlook <outlook/sync>`. The configuration of Microsoft's *Azure* account is only done once, as Microsoft *Entra ID* tenants' client IDs and client secrets are unique, and help the user manage a specific instance of Microsoft cloud services for internal and external users."
 msgstr "Minden felhasználónak, aki használni szeretné a szinkronizálást, egyszerűen :ref:`szinkronizálnia kell a naptárát az Outlookkal <outlook/sync>`. A Microsoft *Azure* fiók konfigurálása csak egyszer történik meg, mivel a Microsoft *Entra ID* bérlők ügyfélazonosítói és ügyféltitkai egyediek, és segítenek a felhasználónak egy adott Microsoft felhőszolgáltatás példány kezelésében belső és külső felhasználók számára."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:235
+#: ../../content/applications/productivity/calendar/outlook.rst:214
 msgid ":doc:`../../general/integrations/mail_plugins/outlook`"
 msgstr ":doc:`../../general/integrations/mail_plugins/outlook`"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:236
+#: ../../content/applications/productivity/calendar/outlook.rst:215
 msgid ":doc:`google`"
 msgstr ":doc:`google`"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:241
+#: ../../content/applications/productivity/calendar/outlook.rst:220
 msgid "There may be times when the *Microsoft Outlook Calendar* account does not sync correctly with Odoo. Sync issues can be seen in the database logs."
 msgstr "Előfordulhat, hogy a *Microsoft Outlook Naptár* fiók nem szinkronizál megfelelően az Odoo-val. A szinkronizálási problémák megjelenhetnek az adatbázis naplóiban."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:244
+#: ../../content/applications/productivity/calendar/outlook.rst:223
 msgid "In these cases, the account needs troubleshooting. A reset can be performed using the :guilabel:`Reset Account` button, which can be accessed by navigating to :menuselection:`Settings app --> Manage Users`. Then, select the user to modify the calendar, and click on the :guilabel:`Calendar` tab."
 msgstr "Ilyen esetekben a fiók hibakeresést igényel. A visszaállítás elvégezhető a :guilabel:`Fiók visszaállítása` gomb segítségével, amely elérhető a következő útvonalon: :menuselection:`Beállítások alkalmazás --> Felhasználók kezelése`. Ezután válassza ki azt a felhasználót, akinek a naptárát módosítani szeretné, és kattintson a :guilabel:`Naptár` fülre."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:261
+#: ../../content/applications/productivity/calendar/outlook.rst:240
 msgid "The following reset options are available for troubleshooting *Microsoft Outlook Calendar* sync with Odoo:"
 msgstr "A következő visszaállítási lehetőségek állnak rendelkezésre a *Microsoft Outlook Naptár* szinkronizálási problémáinak megoldására az Odoo-val:"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:273
+#: ../../content/applications/productivity/calendar/outlook.rst:252
 msgid ":guilabel:`Delete from the current Microsoft Calendar account`: delete the events from *Microsoft Outlook Calendar*."
 msgstr ":guilabel:`Törlés a jelenlegi Microsoft Naptár fiókból`: törli az eseményeket a *Microsoft Outlook Naptárból*."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:276
+#: ../../content/applications/productivity/calendar/outlook.rst:255
 msgid ":guilabel:`Delete from both`: delete the events from both *Microsoft Outlook Calendar* and Odoo calendar."
 msgstr ":guilabel:`Törlés mindkettőből`: törli az eseményeket mind a *Microsoft Outlook Naptárból*, mind az Odoo naptárból."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:281
+#: ../../content/applications/productivity/calendar/outlook.rst:260
 msgid ":guilabel:`Synchronize only new events`: sync new events on *Microsoft Outlook Calendar* and/or Odoo calendar."
 msgstr ":guilabel:`Csak új események szinkronizálása`: új események szinkronizálása a *Microsoft Outlook Naptárban* és/vagy az Odoo naptárban."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:283
+#: ../../content/applications/productivity/calendar/outlook.rst:262
 msgid ":guilabel:`Synchronize all existing events`: sync all events on *Microsoft Outlook Calendar* and/or Odoo calendar."
 msgstr ":guilabel:`Minden meglévő esemény szinkronizálása`: minden esemény szinkronizálása a *Microsoft Outlook Naptárban* és/vagy az Odoo naptárban."
 
@@ -5633,43 +5693,51 @@ msgstr "A :guilabel:`How do you want to build with Twilio?` kérdésnél válass
 msgid "For :guilabel:`What is your goal today?`, select :guilabel:`3rd party integrations`."
 msgstr "A :guilabel:`What is your goal today?` kérdésnél válassza a :guilabel:`3rd party integrations` lehetőséget."
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:37
+#: ../../content/applications/productivity/discuss/ice_servers.rst:None
+msgid "The Twilio welcome page."
+msgstr "A Twilio üdvözlő oldala."
+
+#: ../../content/applications/productivity/discuss/ice_servers.rst:34
 msgid "If necessary, change the billing country. Finally, click :guilabel:`Get Started with Twilio`."
 msgstr "Ha szükséges, változtassa meg a számlázási országot. Végül kattintson a :guilabel:`Get Started with Twilio` gombra."
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:40
+#: ../../content/applications/productivity/discuss/ice_servers.rst:37
 msgid "Locate the Twilio Account SID and Auth Token"
 msgstr "Keresse meg a Twilio Account SID és Auth Token értékeket."
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:42
+#: ../../content/applications/productivity/discuss/ice_servers.rst:39
 msgid "To locate the Account SID and Auth Token, go to the Twilio account dashboard. Then, click :guilabel:`Develop` on the sidebar. In the :guilabel:`Account Info` section, locate the :guilabel:`Account SID` and the :guilabel:`Auth Token`. Both of these are needed to connect Twilio to Odoo."
 msgstr "Az Account SID és Auth Token megkereséséhez lépjen a Twilio fiók irányítópultjára. Ezután kattintson az oldalsávon a :guilabel:`Fejlesztés` lehetőségre. Az :guilabel:`Fiók információk` szakaszban keresse meg az :guilabel:`Account SID` és az :guilabel:`Auth Token` elemeket. Mindkettő szükséges a Twilio és az Odoo összekapcsolásához."
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:56
+#: ../../content/applications/productivity/discuss/ice_servers.rst:None
+msgid "The Twilio Account SID and Auth Token can be found uner the Account Info section."
+msgstr "A Twilio Account SID és Auth Token az Account Info szakasz alatt található."
+
+#: ../../content/applications/productivity/discuss/ice_servers.rst:49
 msgid "Connect Twilio to Odoo"
 msgstr "Twilio összekapcsolása az Odoo-val"
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:58
+#: ../../content/applications/productivity/discuss/ice_servers.rst:51
 msgid "Open the Odoo database and go to :menuselection:`Settings --> General Settings --> Discuss`. Check the box next to :guilabel:`Use Twilio ICE servers` and enter the Twilio account's :guilabel:`Account SID` and :guilabel:`Auth Token`. Finally, click :guilabel:`Save` to apply these changes."
 msgstr "Nyissa meg az Odoo adatbázist, és lépjen a :menuselection:`Beállítások --> Általános beállítások --> Megbeszélés` menüpontra. Jelölje be a :guilabel:`Twilio ICE szerverek használata` melletti négyzetet, és adja meg a Twilio fiók :guilabel:`Account SID` és :guilabel:`Auth Token` adatait. Végül kattintson a :guilabel:`Mentés` gombra a változtatások alkalmazásához."
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:72
+#: ../../content/applications/productivity/discuss/ice_servers.rst:65
 msgid "Define a list of custom ICE servers"
 msgstr "Egyéni ICE szerverek listájának meghatározása"
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:74
+#: ../../content/applications/productivity/discuss/ice_servers.rst:67
 msgid "This step is not required for the Twilio configuration. However, if Twilio is not configured or is not working at any given moment, Odoo will fall back on the custom ICE servers list. The user must define the list of custom ICE servers."
 msgstr "Ez a lépés nem szükséges a Twilio konfigurációhoz. Azonban, ha a Twilio nincs konfigurálva vagy nem működik bármely adott pillanatban, az Odoo az egyéni ICE szerverek listájára fog támaszkodni. A felhasználónak meg kell határoznia az egyéni ICE szerverek listáját."
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:78
+#: ../../content/applications/productivity/discuss/ice_servers.rst:71
 msgid "In :menuselection:`Settings --> General Settings --> Discuss`, click the :guilabel:`ICE Servers` button under :guilabel:`Custom ICE server list`."
 msgstr "A :menuselection:`Beállítások --> Általános beállítások --> Megbeszélés` menüben kattintson az :guilabel:`ICE szerverek` gombra az :guilabel:`Egyéni ICE szerver lista` alatt."
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:88
+#: ../../content/applications/productivity/discuss/ice_servers.rst:81
 msgid "Odoo will redirect to the :guilabel:`ICE servers` page. Here you can define your own list of ICE servers."
 msgstr "Az Odoo átirányít az :guilabel:`ICE szerverek` oldalra. Itt meghatározhatja saját ICE szerver listáját."
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:99
+#: ../../content/applications/productivity/discuss/ice_servers.rst:92
 msgid "For on-premise instances of Odoo, the package `python3-gevent` is necessary for the Discuss module to run calls/video calls on Ubuntu (Linux) servers."
 msgstr "Az Odoo helyszíni példányai esetében a `python3-gevent` csomag szükséges ahhoz, hogy a Megbeszélés modul hívásokat/videohívásokat futtasson Ubuntu (Linux) szervereken."
 
@@ -9129,26 +9197,11 @@ msgstr "A modul telepítéséhez lépjen a :menuselection:`Beállítások --> eY
 #~ msgid "Information added to the :guilabel:`Extra Message on Confirmation` field appears once the meeting is confirmed."
 #~ msgstr "A :guilabel:`További üzenet a megerősítéskor` mezőbe írt információk a találkozó megerősítése után jelennek meg."
 
-#~ msgid "Create a new API project to store credentials."
-#~ msgstr "Hozzon létre egy új API projektet a hitelesítő adatok tárolásához."
-
-#~ msgid "Enable APIs and Services on the API Project."
-#~ msgstr "Engedélyezze az API-kat és szolgáltatásokat az API Projekten."
-
-#~ msgid "Enable the Google Calendar API."
-#~ msgstr "Engedélyezze a Google Calendar API-t."
-
-#~ msgid "Add the authorized JavaScript origins and the authorized redirect URIs."
-#~ msgstr "Adja hozzá az engedélyezett JavaScript eredeteket és az engedélyezett átirányítási URI-kat."
-
 #~ msgid "The Google Calendar checkbox in General Settings."
 #~ msgstr "A Google Calendar jelölőnégyzet az Általános beállításokban."
 
 #~ msgid "Click the Google sync button in Odoo Calendar to sync Google Calendar with Odoo."
 #~ msgstr "Kattintson az Odoo Naptárban a Google szinkronizálás gombra, hogy szinkronizálja a Google Naptárt az Odoo-val."
-
-#~ msgid "Give Odoo permission to access Google Calendar."
-#~ msgstr "Adjon engedélyt az Odoo-nak a Google Naptár eléréséhez."
 
 #~ msgid "Reset buttons highlighted on the calendar tab of the user."
 #~ msgstr "Visszaállítási gombok kiemelve a felhasználó naptár fülén."
@@ -9156,42 +9209,11 @@ msgstr "A modul telepítéséhez lépjen a :menuselection:`Beállítások --> eY
 #~ msgid "Google calendar reset options in Odoo."
 #~ msgstr "Google naptár visszaállítási lehetőségek az Odoo-ban."
 
-#~ msgid "403 Access Denied Error."
-#~ msgstr "403 Hozzáférés megtagadva hiba."
-
-#~ msgid "Error 400 Redirect URI Mismatch."
-#~ msgstr "Hiba 400: Átirányítási URI nem egyezik."
-
-#~ msgid "Microsoft Azure management page with + Add and App Registration menu highlighted."
-#~ msgstr "Microsoft Azure kezelőoldal, ahol a + Hozzáadás és az Alkalmazás regisztráció menü ki van emelve."
-
-#~ msgid "The \"Supported account type\" and \"Redirect URI\" settings in the Microsoft Entra ID portal."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Application client ID highlighted in the essentials section of the newly created\n"
-#~ "application."
-#~ msgstr "Az alkalmazás ügyfélazonosítója kiemelve az újonnan létrehozott alkalmazás alapvető szakaszában."
-
-#~ msgid ""
-#~ "New client secret page with certificates and secrets menu and new client secret option\n"
-#~ "highlighted."
-#~ msgstr "Új ügyfél titkos oldal tanúsítványokkal és titkok menüvel, valamint az új ügyfél titok opció kiemelve."
-
 #~ msgid "The \"Outlook Calendar\" setting activated in Odoo."
-#~ msgstr ""
-
-#~ msgid "The \"Client ID\" in the Microsoft Azure portal."
-#~ msgstr ""
-
-#~ msgid "The \"Client Secret\" token to be copied from Microsoft to Odoo."
 #~ msgstr ""
 
 #~ msgid "The \"Outlook\" sync button in Odoo Calendar."
 #~ msgstr ""
-
-#~ msgid "Authentication process on Microsoft Outlook OAuth page."
-#~ msgstr "Hitelesítési folyamat a Microsoft Outlook OAuth oldalon."
 
 #~ msgid "Outlook calendar reset options in Odoo."
 #~ msgstr "Outlook naptár visszaállítási lehetőségek az Odoo-ban."
@@ -10119,12 +10141,6 @@ msgstr "A modul telepítéséhez lépjen a :menuselection:`Beállítások --> eY
 
 #~ msgid "alt text"
 #~ msgstr "alternatív szöveg"
-
-#~ msgid "The Twilio welcome page."
-#~ msgstr "A Twilio üdvözlő oldala."
-
-#~ msgid "The Twilio Account SID and Auth Token can be found uner the Account Info section."
-#~ msgstr "A Twilio Account SID és Auth Token az Account Info szakasz alatt található."
 
 #~ msgid "Enable the \"Use Twilio ICE servers\" option in Odoo General Settings."
 #~ msgstr "Engedélyezze a \"Twilio ICE-kiszolgálók használata\" lehetőséget az Odoo Általános beállításaiban."

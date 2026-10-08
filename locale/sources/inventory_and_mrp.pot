@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-01 18:31+0200\n"
+"POT-Creation-Date: 2026-10-08 17:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1468,141 +1468,162 @@ msgid "Zebra TC21/TC26"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:81
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:86
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:82
 msgid "When using Zebra scanners, ensure the following keystroke configurations are set to prevent errors."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:83
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:88
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:84
 msgid "Begin on the Zebra scanner's home screen, and select the :guilabel:`DataWedge` app (the app is represented by a :guilabel:`(light blue barcode)` icon)."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:86
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:91
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:87
 msgid "On the :guilabel:`DataWedge Profiles` page, select the profile option to access the Zebra scanner's settings."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:89
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:102
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:98
 msgid "Once the profile is selected, scroll down to the :guilabel:`Keyboard Output` option, and ensure the :guilabel:`Enable/disable keystroke output` option is :guilabel:`Enabled`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:100
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:113
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:None
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:None
+msgid "Show keystroke option in the Zebra scanner's DataWedge app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:96
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:105
 msgid "Once that option is enabled, go back to the :guilabel:`Profile` options page, and go to the :guilabel:`Keystroke output` section. Then, open the :guilabel:`Key event options` submenu. Under :guilabel:`Characters`, ensure the :guilabel:`Send Characters as Events` option is checked."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:105
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:118
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:101
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:110
 msgid "The :guilabel:`Send Characters as Events` option **must** be checked on the Zebra scanner, or Odoo **cannot** recognize the barcodes that are scanned."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:108
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:104
 msgid "Once the above steps have been taken, perform a test scan to ensure the Zebra scanner is working as intended."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:112
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:108
 msgid "MUNBYN Android devices"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:114
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:110
 msgid "When using MUNBYN Android scanners, ensure the following configurations are set to prevent errors."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:116
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:112
 msgid "From the device's home screen, click :menuselection:`AppSettings`. On the resulting page, locate the :guilabel:`Process mode` section, and select :guilabel:`Keyboard input`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:129
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:None
+msgid "Process mode section on MUNBYN scanner's AppSettings page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:120
 msgid "The selected *Process mode* controls how data is processed after barcode data has been read out."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:131
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:122
 msgid "*Keyboard input* enters read-out data at the position of the cursor, the same as input data on an analogue keyboard would."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:134
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:125
 msgid "Once the above steps have been taken, perform a test scan to ensure the MUNBYN Android scanner is working as intended."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:137
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:128
 msgid "Why is there no data output in the app after a successful scan?"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:139
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:130
 msgid "When scanning a barcode, the scanner might beep, indicating a successful scan, but there is no data output in the app."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:142
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:133
 msgid "To fix this issue, adjust the output method to *keyboard analogue* in the *Scanner* app on the device."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:145
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:136
 msgid "From the device's home screen, click :menuselection:`Scanner App --> Settings`. From the :guilabel:`Settings` page, click :guilabel:`Output Mode`. The resulting pop-up window presents the different output options available to users. Select :guilabel:`Keyboard Mode`, then click :guilabel:`OK`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:158
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:149
 msgid "Go back to the app that needs to be scanned, and click on the input dialog box first before scanning. Finally, perform a test scan to ensure the MUNBYN Android scanner is working as intended."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:163
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:154
 msgid "Datalogic Android devices"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:165
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:156
 msgid "When using Datalogic Android scanners, ensure the following configurations are set to prevent errors."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:168
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:159
 msgid "To view and configure all settings for the scanner, use the *Settings* app on the Datalogic Android device. From the applications menu, select :menuselection:`Settings --> System --> Scanner Settings`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:172
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:163
 msgid "From the resulting list of settings, select :guilabel:`Wedge`. From this menu, under the :guilabel:`Keyboard wedge` section, ensure that the :guilabel:`Enable keyboard wedge` feature is activated."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:176
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:167
 msgid "Then, also under the :guilabel:`Keyboard wedge` section, locate the :guilabel:`Keyboard wedge input mode` option. By default, the input mode is set to :guilabel:`Text injection`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:187
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:None
+msgid "Wedge configuration menu on Datalogic scanner."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:174
 msgid "Click :guilabel:`Keyboard wedge input mode`, and change the setting to :guilabel:`Key pressure`. This ensures that scanned barcodes are translated into keyboard strokes, instead of being injected into the text area."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:200
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:None
+msgid "Keyboard wedge input mode selection on Datalogic scanner."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:182
 msgid "Once all those steps have been taken, perform a test scan to ensure the Datalogic Android scanner is working as intended."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:206
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:188
 msgid "Screenless scanners"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:208
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:190
 msgid "Screenless scanners are barcode scanning devices that have no screens. These include USB scanners and Bluetooth scanners."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:194
 msgid "Odoo supports most USB and Bluetooth barcode scanners, as they all emulate a keyboard. To verify that a scanner is compatible with a specific keyboard layout (or can be configured to do so), check the scanner vendor's own documentation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:217
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:199
 msgid "NETUM devices"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:219
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:201
 msgid "By default, the NETUM barcode scanner's user manual only shows the French keyboard configuration. To use the Belgian keyboard, scan the code below:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:230
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:None
+msgid "Belgian FR key barcode."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:208
 msgid "Once that code has been scanned, ensure the NETUM scanner has the correct keyboard configuration, and is working as intended."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:234
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:212
 msgid ":doc:`../setup/hardware`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:235
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:191
+#: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:213
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:171
 msgid ":doc:`../setup/software`"
 msgstr ""
 
@@ -1662,87 +1683,103 @@ msgstr ""
 msgid "To configure the keyboard layout for a **Zebra** scanner, scan the keyboard wedge barcode for the desired language in the scanner's user manual."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:73
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:None
+msgid "Example of a user manual for keyboard layout."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:69
 msgid "Automatic carriage return"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:75
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:71
 msgid "Odoo has a default 100-millisecond delay between scans to prevent accidental double scanning. To synchronize with the barcode scanner, set it to include a *carriage return* (:dfn:`character like the \"Enter\" key on a keyboard`) after each scan. Odoo interprets the carriage return as the end of the barcode input; so Odoo accepts the scan, and waits for the next one."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:80
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:76
 msgid "Typically, on the scanner, a carriage return is included by default. Ensure it is set by scanning a specific barcode in the user manual, like `CR suffix ON` or `Apply Enter for suffix`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:84
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:80
 msgid "Zebra scanner"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:95
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:91
 msgid "It is **not** suggested to use the \"DWDemo\" profile, as it does not work properly in every circumstance."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:98
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:94
 msgid "Instead, it is recommended to create a new, personal profile. Once a new profile is created, add the browser app used to access Odoo (e.g. *Google Chrome*) to the :guilabel:`Associated Apps` on the scanner's home screen."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:121
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:113
 msgid "Once all those steps have been taken, perform a test scan to ensure the Zebra scanner is working properly, as intended."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:125
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:117
 msgid "Honeywell mobile computer scanner"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:127
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:119
 msgid "When using Honeywell scanners, follow the instructions below to ensure barcodes can be scanned in Odoo."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:130
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:122
 msgid "Begin on the Honeywell scanner's home screen, and select :guilabel:`Settings`, represented by a :guilabel:`⚙️ (gear)` icon. Then, click :guilabel:`Honeywell Settings`, followed by :guilabel:`Scanning`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:134
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:126
 msgid "From here, click :guilabel:`Internal Scanner`, followed by :guilabel:`Default Profile`. From the resulting list of options, select :guilabel:`Data Processing Settings`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:137
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:129
 msgid "The :guilabel:`Data Processing Settings` specify how barcode data is processed by the computer. Locate the :guilabel:`Wedge Method` setting. By default, this is set to :guilabel:`Standard`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:148
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:None
+msgid "Data processing settings options for Honeywell scanner."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:136
 msgid "Change the :guilabel:`Wedge Method` setting to :guilabel:`Keyboard`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:150
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:138
 msgid "After completing the steps, conduct a test scan to verify the Honeywell scanner is working as intended."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:154
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:142
 msgid "Cipherlab mobile computer scanner"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:156
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:144
 msgid "When using Cipherlab scanners, follow the instructions below to ensure barcodes can be scanned in Odoo."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:159
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:147
 msgid "Begin on the Cipherlab scanner's home screen, and navigate to the :menuselection:`App Drawer (All Applications)`. Then, click the :guilabel:`ReaderConfig` app, represented by an orange :guilabel:`⚙️ (gear)` icon over a blue :guilabel:`(barcode)` icon."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:163
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:151
 msgid "Next, select the :guilabel:`Default Profile`, or create a new profile, if needed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:165
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:153
 msgid "Under the :guilabel:`General Settings`, click :guilabel:`Data Output`, followed by :guilabel:`Keyboard Emulation`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:176
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:None
+msgid "Cipherlab scanner data output setting page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:160
 msgid "By default, the :guilabel:`Input Method`, under :guilabel:`Keyboard Emulation`, is set to :guilabel:`Default Mode`. Change this setting to :guilabel:`KeyEvent`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:187
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:None
+msgid "Cipherlab scanner keyboard emulation settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:167
 msgid "After completing the steps, conduct a test scan to verify the Cipherlab scanner is working as intended."
 msgstr ""
 

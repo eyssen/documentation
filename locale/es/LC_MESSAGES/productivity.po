@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-18 11:05+0000\n"
+"POT-Creation-Date: 2026-10-08 17:35+0200\n"
 "PO-Revision-Date: 2025-11-19 20:10+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Spanish <https://translate.odoo.com/projects/odoo-18-doc/productivity/es/>\n"
@@ -236,275 +236,303 @@ msgstr "Si es la primera vez que visita esta página, Google le pedirá que sele
 msgid "Next, click :guilabel:`Select a project` and select (or create) an API project to configure OAuth in, and store credentials. Click :guilabel:`New Project`."
 msgstr "Después, haga clic en :guilabel:`Select a project` (seleccionar un proyecto) y seleccione (o cree) un proyecto API en el que pueda configurar OAuth y guardar credenciales. Haga clic en :guilabel:`New Project` (nuevo proyecto)."
 
-#: ../../content/applications/productivity/calendar/google.rst:36
+#: ../../content/applications/productivity/calendar/google.rst:None
+msgid "Create a new API project to store credentials."
+msgstr "Cree un nuevo proyecto de API donde guarde las credenciales"
+
+#: ../../content/applications/productivity/calendar/google.rst:32
 msgid "Give the API project a clear name, like `Odoo Sync`, so it can be identified. Then click the :guilabel:`Create` button."
 msgstr "Asígnele un nombre claro al proyecto de API, como `Odoo Sync`, para poder identificarlo. Después, haga clic en el botón :guilabel:`Create` (crear)."
 
-#: ../../content/applications/productivity/calendar/google.rst:40
+#: ../../content/applications/productivity/calendar/google.rst:36
 msgid "Enable Google calendar API"
 msgstr "Active el API del calendario de Google"
 
-#: ../../content/applications/productivity/calendar/google.rst:42
+#: ../../content/applications/productivity/calendar/google.rst:38
 msgid "Now, click on :guilabel:`Enabled APIs and Services` in the left menu. Select :guilabel:`Enabled APIs and Services` again if the :guilabel:`Search bar` does not appear."
 msgstr "Ahora, haga clic en :guilabel:`Enabled APIs and Services` (API y servicios habilitados) en el menú izquierdo. Vuelva a seleccionar :guilabel:`Enabled APIs and Services` (API y servicios habilitados) si no aparece la :guilabel:`Search bar` (barra de búsqueda)."
 
-#: ../../content/applications/productivity/calendar/google.rst:52
+#: ../../content/applications/productivity/calendar/google.rst:None
+msgid "Enable APIs and Services on the API Project."
+msgstr "Active el API y servicios en el proyecto API."
+
+#: ../../content/applications/productivity/calendar/google.rst:44
 msgid "After that, search for `Google Calendar API` using the search bar and select :guilabel:`Google Calendar API` from the search results. Click :guilabel:`Enable`."
 msgstr "Después, busque el `Google Calendar API` en la barra de búsqueda y seleccione :guilabel:`Google Calendar API` en los resultados de búsqueda. Haga clic en :guilabel:`Enable` (habilitar)."
 
-#: ../../content/applications/productivity/calendar/google.rst:63
+#: ../../content/applications/productivity/calendar/google.rst:None
+msgid "Enable the Google Calendar API."
+msgstr "Habilite el API del calendario de Google."
+
+#: ../../content/applications/productivity/calendar/google.rst:51
 msgid "OAuth consent screen"
 msgstr "Pantalla de consentimiento de OAuth"
 
-#: ../../content/applications/productivity/calendar/google.rst:65
+#: ../../content/applications/productivity/calendar/google.rst:53
 msgid "Now that the API project has been created, OAuth should be configured. To do that, click on :guilabel:`OAuth consent screen` in the left menu, then click the :guilabel:`Get started` button."
 msgstr "Ahora que ya creó el proyecto de API deberá configurar OAuth. Para ello, haga clic en :guilabel:`OAuth consent screen` (pantalla de consentimiento de OAuth) en el menú izquierdo y después haga clic en el botón :guilabel:`Get started` (comenzar)."
 
-#: ../../content/applications/productivity/calendar/google.rst:69
+#: ../../content/applications/productivity/calendar/google.rst:57
 msgid "*Personal* Gmail Accounts are only allowed to be **External** User Type, which means Google may require an approval, or for *Scopes* to be added on. However, using a *Google WorkSpace* account allows for **Internal** User Type to be used."
 msgstr "A las cuentas *personales* de Gmail solo se les permite ser el tipo de usuario **externo**. Esto significa que es posible que Google requiera una aprobación o que agregue *alcances*. Sin embargo, si usa una cuenta de *Google WorkSpace* podrá usar el tipo de usuario **interno**."
 
-#: ../../content/applications/productivity/calendar/google.rst:73
+#: ../../content/applications/productivity/calendar/google.rst:61
 msgid "Note, as well, that while the API connection is in the *External* testing mode, then no approval is necessary from Google. User limits in this testing mode is set to 100 users."
 msgstr "También tome en cuenta que siempre y cuando la conexión API se encuentre en el modo de prueba *externo* no necesitará que Google aprueba nada. El límite de usuarios en modo de prueba es 100."
 
-#: ../../content/applications/productivity/calendar/google.rst:76
+#: ../../content/applications/productivity/calendar/google.rst:64
 msgid "Follow the proceeding steps, in order:"
 msgstr "Siga estos pasos en el orden indicado:"
 
-#: ../../content/applications/productivity/calendar/google.rst:78
+#: ../../content/applications/productivity/calendar/google.rst:66
 msgid "In :guilabel:`App Information`, type `Odoo` in the :guilabel:`App name` field, then enter the email address for the :guilabel:`User support email` field and click the :guilabel:`Next` button."
 msgstr "En :guilabel:`App Information` (información de la aplicación), escriba `Odoo` en el campo :guilabel:`App name` (nombre de la aplicación), ingrese la dirección de correo electrónico en el campo :guilabel:`User support email` (correo de soporte al usuario) y haga clic en el botón :guilabel:`Next` (siguiente)."
 
-#: ../../content/applications/productivity/calendar/google.rst:80
+#: ../../content/applications/productivity/calendar/google.rst:68
 msgid "In :guilabel:`Audience`, select :guilabel:`External`, then click the :guilabel:`Next` button."
 msgstr "En :guilabel:`Audience` (público), seleccione :guilabel:`External` (externo) y después haga clic en el botón :guilabel:`Next` (siguiente)."
 
-#: ../../content/applications/productivity/calendar/google.rst:81
+#: ../../content/applications/productivity/calendar/google.rst:69
 msgid "In :guilabel:`Contact Information`, enter the email again, then click the :guilabel:`Next` button."
 msgstr "En :guilabel:`Contact Information` (información de contacto), ingrese el correo electrónico de nuevo y después haga clic en el botón :guilabel:`Next` (siguiente)."
 
-#: ../../content/applications/productivity/calendar/google.rst:83
+#: ../../content/applications/productivity/calendar/google.rst:71
 msgid "In :guilabel:`Finish`, tick the checkbox to agree to :guilabel:`Google API Services: User Policy.` For the last step, click the :guilabel:`Create` button."
 msgstr "En :guilabel:`Finish` (finalizar), marque la casilla para aceptar :guilabel:`Google API Services: User Policy.` (política de usuario de los servicios de API de Google). Para el último paso, haga clic en el botón :guilabel:`Create` (crear)."
 
-#: ../../content/applications/productivity/calendar/google.rst:87
+#: ../../content/applications/productivity/calendar/google.rst:75
 msgid "Authorized domain setup"
 msgstr "Configuración de dominios autorizados"
 
-#: ../../content/applications/productivity/calendar/google.rst:89
+#: ../../content/applications/productivity/calendar/google.rst:77
 msgid "Next, any domains set to appear on the consent screen or in an OAuth client's configuration must be pre-registered. To do so, navigate to :guilabel:`Branding` in the left menu. In the :guilabel:`Authorized domains` section, click the :guilabel:`Add domain` button to create a field to enter an authorized domain. Enter a domain, such as `odoo.com`, then click the :guilabel:`Save` button at the bottom of the page."
 msgstr "Después, deberá registrar previamente cualquier dominio que deba aparecer en la pantalla de consentimiento o en la configuración de un cliente de OAuth. Para ello, vaya a :guilabel:`Branding` (marca) en el menú izquierdo. En la sección :guilabel:`Authorized domains` (dominios autorizados), haga clic en el botón :guilabel:`Add domain` (agregar dominio) para crear un campo donde pueda ingresar un dominio autorizado. Ingrese un dominio, como `odoo.com`, y después haga clic en el botón :guilabel:`Save` (guardar) en la parte inferior de la página."
 
-#: ../../content/applications/productivity/calendar/google.rst:96
+#: ../../content/applications/productivity/calendar/google.rst:84
 msgid "Test users"
 msgstr "Usuarios de prueba"
 
-#: ../../content/applications/productivity/calendar/google.rst:98
+#: ../../content/applications/productivity/calendar/google.rst:86
 msgid "To give users the ability to sync with personal Gmail accounts, they must be set as a test user. Setup test users by going to :guilabel:`Audience` in the left-side menu and clicking the :guilabel:`Add users` button in the :guilabel:`Test users` section. Enter any desired user emails, and click the :guilabel:`Save` button."
 msgstr "Para permitir que los usuarios sincronicen con sus cuentas personales de Gmail, deberá configurarlos como usuarios de prueba. Para hacerlo, vaya a :guilabel:`Audience` (público) en el menú izquierdo y haga clic en el botón :guilabel:`Add users` (agregar usuarios) en la sección :guilabel:`Test users` (usuarios de prueba). Ingrese los correos electrónicos de los usuarios que desee y haga clic en el botón :guilabel:`Save` (guardar)."
 
-#: ../../content/applications/productivity/calendar/google.rst:104
+#: ../../content/applications/productivity/calendar/google.rst:92
 msgid "Create credentials"
 msgstr "Creación de credenciales"
 
-#: ../../content/applications/productivity/calendar/google.rst:106
+#: ../../content/applications/productivity/calendar/google.rst:94
 msgid "The *Client ID* and the *Client Secret* are both needed to connect Google Calendar to Odoo. This is the last step in the Google console. Begin by clicking :guilabel:`Clients` in the left menu. Then, click :guilabel:`Create Credentials`, and select :guilabel:`OAuth client ID`, Google will open a guide to create credentials."
 msgstr "El *ID del cliente* y el *secreto del cliente* son necesarios para conectar el Calendario de Google con Odoo. Este es el último paso en la consola de Google. Comience por hacer clic en :guilabel:`Clients` (clientes) en el menú izquierdo. Después, haga clic en :guilabel:`Create Credentials` (crear credenciales) y seleccione :guilabel:`OAuth client ID` (ID de cliente de OAuth). Google abrirá una guía para crear las credenciales."
 
-#: ../../content/applications/productivity/calendar/google.rst:111
+#: ../../content/applications/productivity/calendar/google.rst:99
 msgid "Under :menuselection:`Create OAuth Client ID`, select :guilabel:`Website application` for the :guilabel:`Application Type` field, and type `My Odoo Database` for the :guilabel:`Name`."
 msgstr "En :menuselection:`Create OAuth Client ID` (crear un ID de cliente de OAuth), seleccione :guilabel:`Website application` (aplicación de sitio web) en el campo :guilabel:`Application Type` (tipo de aplicación)  y escriba `mi base de datos de Odoo` en :guilabel:`Nombre` (nombre)."
 
-#: ../../content/applications/productivity/calendar/google.rst:114
+#: ../../content/applications/productivity/calendar/google.rst:102
 msgid "Under the :guilabel:`Authorized JavaScript Origins` section, click :guilabel:`+ Add URI` and type the company's Odoo full :abbr:`URL (Uniform Resource Locator)` address."
 msgstr "En la sección :guilabel:`Authorized JavaScript Origins` (orígenes autorizados de JavaScript) haga clic en :guilabel:`+ Add URI` (agregar URL) e ingrese la dirección :abbr:`URL (Localizador de recursos uniforme)` completa del Odoo de su empresa."
 
-#: ../../content/applications/productivity/calendar/google.rst:116
+#: ../../content/applications/productivity/calendar/google.rst:104
 msgid "Under the :guilabel:`Authorized redirect URIs` section, click :guilabel:`+ Add URI` and type the company's Odoo :abbr:`URL (Uniform Resource Locator)` address followed by `/google_account/authentication`. Finally, click :guilabel:`Create`."
 msgstr "En la sección :guilabel:`Authorized redirect URIs` (URI de redirección autorizadas) haga clic en :guilabel:`+ Add URI` (agregar URI) y escriba a dirección :abbr:`URL (Localizador de recursos uniforme)` del Odoo de su empresa seguido por `/google_account/authentication`. Para terminar haga clic en :guilabel:`Create` (crear)."
 
-#: ../../content/applications/productivity/calendar/google.rst:128
+#: ../../content/applications/productivity/calendar/google.rst:None
+msgid "Add the authorized JavaScript origins and the authorized redirect URIs."
+msgstr "Agregue los orígenes de JavaScript autorizados y después las URI de redirección autorizadas."
+
+#: ../../content/applications/productivity/calendar/google.rst:111
 msgid "A :guilabel:`Client ID` and :guilabel:`Client Secret` will appear, save these somewhere safe."
 msgstr "Aparecerán un :guilabel:`ID de cliente` (ID de cliente) y un :guilabel:`Secreto de cliente` (secreto de cliente); guárdelos en un lugar seguro."
 
-#: ../../content/applications/productivity/calendar/google.rst:131
+#: ../../content/applications/productivity/calendar/google.rst:114
 msgid "Setup in Odoo"
 msgstr "Configuración en Odoo"
 
-#: ../../content/applications/productivity/calendar/google.rst:133
+#: ../../content/applications/productivity/calendar/google.rst:116
 msgid "Once the *Client ID* and the *Client Secret* are located, open the Odoo database and go to :menuselection:`Settings --> Calendar` to find the :guilabel:`Google Calendar` feature. Tick the checkbox labeled :guilabel:`Google Calendar`."
 msgstr "Una vez que tenga el *ID del cliente* y el *secreto del cliente*, abra la base de datos de Odoo y vaya a :menuselection:`Ajustes --> Calendario` para encontrar la función :guilabel:`Google Calendar`. Marque la casilla llamada :guilabel:`Google Calendar`."
 
-#: ../../content/applications/productivity/calendar/google.rst:145
+#: ../../content/applications/productivity/calendar/google.rst:128
 msgid "Next, copy and paste the *Client ID* and the *Client Secret* from the Google Calendar API credentials page into their respective fields below the :guilabel:`Google Calendar` checkbox. Then, click :guilabel:`Save`."
 msgstr "Ahora, copie y pegue el *ID del cliente* y el *Secreto del cliente* desde la página de las credenciales del API del calendario de Google en los campos que aparecerán debajo dela opción :guilabel:`Google Calendar`. Después haga clic en :guilabel:`guardar`."
 
-#: ../../content/applications/productivity/calendar/google.rst:150
+#: ../../content/applications/productivity/calendar/google.rst:133
 msgid "Tick the :guilabel:`Pause Synchronization` checkbox to temporarily pause events from being updated. This allows for testing and troubleshooting without removing credentials or uninstalling the synchronization. To resume the sync, clear the checkbox and save."
 msgstr "Marque la casilla :guilabel:`Pause Synchronization` (pausar sincronización) para pausar temporalmente la actualización de eventos. Esto permite realizar pruebas y solucionar problemas sin necesidad de eliminar las credenciales o desinstalar la sincronización. Para reanudar la sincronización, desmarque la casilla y guarde los cambios."
 
-#: ../../content/applications/productivity/calendar/google.rst:155
+#: ../../content/applications/productivity/calendar/google.rst:138
 msgid "Sync calendar in Odoo"
 msgstr "Sincronización del calendario con Odoo"
 
-#: ../../content/applications/productivity/calendar/google.rst:157
+#: ../../content/applications/productivity/calendar/google.rst:140
 msgid "Finally, open the :menuselection:`Calendar` app in Odoo and click on the :guilabel:`Google` sync button to sync Google Calendar with Odoo."
 msgstr "Abra la aplicación :menuselection:`Calendario` en Odoo y haga clic en el botón :guilabel:`Google` para sincronizar su calendario de Google."
 
-#: ../../content/applications/productivity/calendar/google.rst:168
+#: ../../content/applications/productivity/calendar/google.rst:151
 msgid "When syncing Google Calendar with Odoo for the first time, the page will redirect to the Google Account. From there, select the :guilabel:`Email Account` that should have access, then select :guilabel:`Continue` (should the app be unverified), and finally select :guilabel:`Continue` (to give permission for the transfer of data)."
 msgstr "La primera vez que sincronice el Calendario de Google con Odoo, la página lo redirigirá a su cuenta de Google. Ahí, seleccione la :guilabel:`Email Account` (cuenta de correo electrónico) que deba tener acceso, después seleccione :guilabel:`Continue` (continuar) (en caso de que la aplicación no esté verificada) y, por último, seleccione :guilabel:`Continue` (continuar) (para dar permiso para la transferencia de datos)."
 
-#: ../../content/applications/productivity/calendar/google.rst:180
+#: ../../content/applications/productivity/calendar/google.rst:None
+msgid "Give Odoo permission to access Google Calendar."
+msgstr "Imagen sobre cómo darle permiso a Odoo de acceder al calendario de Google."
+
+#: ../../content/applications/productivity/calendar/google.rst:159
 msgid "Now, Odoo Calendar is successfully synced with Google Calendar!"
 msgstr "Su calendario de Odoo ya está sincronizado con su calendario de Google."
 
-#: ../../content/applications/productivity/calendar/google.rst:183
+#: ../../content/applications/productivity/calendar/google.rst:162
 msgid "Odoo highly recommends testing the Google calendar synchronization on a test database and a test email address (that is not used for any other purpose) before attempting to sync the desired Google Calendar with the user's production database."
 msgstr "Odoo le recomendamos que primero haga una prueba de la sincronización del calendario de Google en una base de datos de prueba con un correo electrónico de prueba (es decir, uno que solo use para esto) antes de hacer la sincronización en una base de datos en producción."
 
-#: ../../content/applications/productivity/calendar/google.rst:187
+#: ../../content/applications/productivity/calendar/google.rst:166
 msgid "Once a user synchronizes their Google calendar with the Odoo calendar:"
 msgstr "Ya que haya sincronizado el calendario de Google con el calendario de Odoo:"
 
-#: ../../content/applications/productivity/calendar/google.rst:189
+#: ../../content/applications/productivity/calendar/google.rst:168
 msgid "Creating an event in Odoo causes Google to send an invitation to all event attendees."
 msgstr "Si crea un evento en Odoo, se enviará una invitación de Google a todos los asistentes al evento."
 
-#: ../../content/applications/productivity/calendar/google.rst:190
+#: ../../content/applications/productivity/calendar/google.rst:169
 msgid "Deleting an event in Odoo causes Google to send a cancellation to all event attendees."
 msgstr "Si elimina un evento en Odoo, se enviará un correo de cancelación a todos los asistentes."
 
-#: ../../content/applications/productivity/calendar/google.rst:191
+#: ../../content/applications/productivity/calendar/google.rst:170
 msgid "Adding a contact to an event causes Google to send an invitation to all event attendees."
 msgstr "Si agrega un contacto el evento, se enviará un correo de invitación a todos los asistentes."
 
-#: ../../content/applications/productivity/calendar/google.rst:192
+#: ../../content/applications/productivity/calendar/google.rst:171
 msgid "Removing a contact from an event causes Google to send a cancellation to all event attendees."
 msgstr "Si quita un contanto del evento, se enviará un correo de cancelación a todos los asistentes al evento."
 
-#: ../../content/applications/productivity/calendar/google.rst:194
+#: ../../content/applications/productivity/calendar/google.rst:173
 msgid "Events can be created in *Google Calendar* without sending a notification by selecting :guilabel:`Don't Send` when prompted to send invitation emails."
 msgstr "Puede crear eventos en *Google Calendar* sin tener que enviar una notificación, solo debe seleccionar :guilabel:`No enviar` cuando se le pregunte si desea enviar correos de invitación."
 
-#: ../../content/applications/productivity/calendar/google.rst:198 ../../content/applications/productivity/calendar/outlook.rst:239
+#: ../../content/applications/productivity/calendar/google.rst:177 ../../content/applications/productivity/calendar/outlook.rst:218
 msgid "Troubleshoot sync"
 msgstr "Solución de problemas relacionados a la sincronización"
 
-#: ../../content/applications/productivity/calendar/google.rst:200
+#: ../../content/applications/productivity/calendar/google.rst:179
 msgid "There may be times when the *Google Calendar* account does not sync correctly with Odoo. Sync issues can be seen in the database logs."
 msgstr "Es posible que en algunas ocasiones la cuenta de *Google Calendar* no se sincronice de forma correcta con Odoo. Es posible consultar los problemas de sincronización en los registros de la base de datos."
 
-#: ../../content/applications/productivity/calendar/google.rst:203
+#: ../../content/applications/productivity/calendar/google.rst:182
 msgid "In these cases, the account needs troubleshooting. A reset can be performed using the :guilabel:`Reset Account` button, which can be accessed by navigating to :menuselection:`Settings app --> Manage Users`. Then, select the user to modify the calendar, and click the :guilabel:`Calendar` tab."
 msgstr "En estos casos es necesario solucionar los problemas de la cuenta y es posible restablecerla con el botón :guilabel:`Restablecer cuenta`. Vaya a :menuselection:`Ajustes --> Administrar usuarios`, seleccione el usuario del que se debe modificar el calendario y haga clic en la pestaña :guilabel:`Calendario`."
 
-#: ../../content/applications/productivity/calendar/google.rst:215 ../../content/applications/productivity/calendar/outlook.rst:256
+#: ../../content/applications/productivity/calendar/google.rst:194 ../../content/applications/productivity/calendar/outlook.rst:235
 msgid "Next, click :guilabel:`Reset Account` under the correct calendar."
 msgstr "Después, haga clic en el botón :guilabel:`Restablecer cuenta` del calendario correcto."
 
-#: ../../content/applications/productivity/calendar/google.rst:218 ../../content/applications/productivity/calendar/outlook.rst:259
+#: ../../content/applications/productivity/calendar/google.rst:197 ../../content/applications/productivity/calendar/outlook.rst:238
 msgid "Reset options"
 msgstr "Opciones de restablecimiento"
 
-#: ../../content/applications/productivity/calendar/google.rst:220
+#: ../../content/applications/productivity/calendar/google.rst:199
 msgid "The following reset options are available for troubleshooting Google calendar sync with Odoo:"
 msgstr "Las siguientes opciones de restablecimiento están disponibles para solucionar problemas de sincronización de Google Calendar con Odoo:"
 
-#: ../../content/applications/productivity/calendar/google.rst:228 ../../content/applications/productivity/calendar/outlook.rst:270
+#: ../../content/applications/productivity/calendar/google.rst:207 ../../content/applications/productivity/calendar/outlook.rst:249
 msgid ":guilabel:`User's Existing Events`:"
 msgstr ":guilabel:`Eventos existentes del usuario`:"
 
-#: ../../content/applications/productivity/calendar/google.rst:230 ../../content/applications/productivity/calendar/outlook.rst:272
+#: ../../content/applications/productivity/calendar/google.rst:209 ../../content/applications/productivity/calendar/outlook.rst:251
 msgid ":guilabel:`Leave them untouched`: no changes to the events."
 msgstr ":guilabel:`Dejarlos intactos`: no ocurren cambios en los eventos."
 
-#: ../../content/applications/productivity/calendar/google.rst:231
+#: ../../content/applications/productivity/calendar/google.rst:210
 msgid ":guilabel:`Delete from the current Google Calendar account`: delete the events from *Google Calendar*."
 msgstr ":guilabel:`Eliminar de la cuenta actual de Google Calendar`: elimina los eventos de *Google Calendar*."
 
-#: ../../content/applications/productivity/calendar/google.rst:233 ../../content/applications/productivity/calendar/outlook.rst:275
+#: ../../content/applications/productivity/calendar/google.rst:212 ../../content/applications/productivity/calendar/outlook.rst:254
 msgid ":guilabel:`Delete from Odoo`: delete the events from the Odoo calendar."
 msgstr ":guilabel:`Eliminar de Odoo`: elimina los eventos del calendario de Odoo."
 
-#: ../../content/applications/productivity/calendar/google.rst:234
+#: ../../content/applications/productivity/calendar/google.rst:213
 msgid ":guilabel:`Delete from both`: delete the events from both *Google Calendar* and Odoo calendar."
 msgstr ":guilabel:`Eliminar de ambos`: elimina los eventos de *Google Calendar* y del calendario de Odoo."
 
-#: ../../content/applications/productivity/calendar/google.rst:236 ../../content/applications/productivity/calendar/outlook.rst:279
+#: ../../content/applications/productivity/calendar/google.rst:215 ../../content/applications/productivity/calendar/outlook.rst:258
 msgid ":guilabel:`Next Synchronization`:"
 msgstr ":guilabel:`Siguiente sincronización`:"
 
-#: ../../content/applications/productivity/calendar/google.rst:238
+#: ../../content/applications/productivity/calendar/google.rst:217
 msgid ":guilabel:`Synchronize only new events`: sync new events on *Google Calendar* and/or Odoo calendar."
 msgstr ":guilabel:`Sincronizar solo los eventos nuevos`: sincroniza los nuevos eventos en *Google Calendar* y el calendario de Odoo."
 
-#: ../../content/applications/productivity/calendar/google.rst:240
+#: ../../content/applications/productivity/calendar/google.rst:219
 msgid ":guilabel:`Synchronize all existing events`: sync all events on *Google Calendar* and/or Odoo calendar."
 msgstr ":guilabel:`Sincronizar todos los eventos existentes`: sincroniza todos los eventos en *Google Calendar* y el calendario de Odoo."
 
-#: ../../content/applications/productivity/calendar/google.rst:243 ../../content/applications/productivity/calendar/outlook.rst:286
+#: ../../content/applications/productivity/calendar/google.rst:222 ../../content/applications/productivity/calendar/outlook.rst:265
 msgid "Click :guilabel:`Confirm` after making the selection to modify the user's events and the calendar synchronization."
 msgstr "Haga clic en :guilabel:`Confirmar` después de hacer la selección para modificar los eventos del usuario y la sincronización del calendario."
 
-#: ../../content/applications/productivity/calendar/google.rst:247
+#: ../../content/applications/productivity/calendar/google.rst:226
 msgid "Google OAuth FAQ"
 msgstr "Preguntas frecuentes sobre la autenticación OAuth de Google"
 
-#: ../../content/applications/productivity/calendar/google.rst:249
+#: ../../content/applications/productivity/calendar/google.rst:228
 msgid "At times there can be configuration errors that occur, and troubleshooting is needed to resolve the issue. Below are the most common errors that may occur when configuring the *Google Calendar* for use with Odoo."
 msgstr "En ocasiones pueden ocurrir errores de configuración que requieren solución de problemas para resolverse. A continuación encontrará los errores más comunes que pueden ocurrir al configurar el *Calendario de Google* para usarlo con Odoo."
 
-#: ../../content/applications/productivity/calendar/google.rst:254
+#: ../../content/applications/productivity/calendar/google.rst:233
 msgid "Production vs. testing publishing status"
 msgstr "Estado de publicación de producción y de prueba"
 
-#: ../../content/applications/productivity/calendar/google.rst:256
+#: ../../content/applications/productivity/calendar/google.rst:235
 msgid "Choosing :guilabel:`Production` as the :guilabel:`Publishing Status` (instead of :guilabel:`Testing`) displays the following warning message:"
 msgstr "Si elige :guilabel:`producción` como :guilabel:`estado de publicación` (en lugar de :guilabel:`prueba`) aparecerá el siguiente mensaje de advertencia:"
 
-#: ../../content/applications/productivity/calendar/google.rst:259
+#: ../../content/applications/productivity/calendar/google.rst:238
 msgid "`OAuth is limited to 100 sensitive scope logins until the OAuth consent screen is verified. This may require a verification process that can take several days.`"
 msgstr "`OAuth está limitado a 100 inicios de sesión de ámbito sensible hasta que se verifique la pantalla de consentimiento de OAuth. Es posible que esto necesite un proceso de verificación que puede tomar varios días.`"
 
-#: ../../content/applications/productivity/calendar/google.rst:262
+#: ../../content/applications/productivity/calendar/google.rst:241
 msgid "To correct this warning, navigate to the `Google API Platform <https://console.cloud.google.com/apis/credentials/consent>`_. If the :guilabel:`Publishing Status` is :guilabel:`In Production`, click :guilabel:`Back to Testing` to correct the issue."
 msgstr "Vaya a `Google API Platform <https://console.cloud.google.com/apis/credentials/consent>`_ para corregir esta advertencia. Si el :guilabel:`estado de publicación` es :guilabel:`en producción`, haga clic en :guilabel:`volver a prueba` para solucionar el problema."
 
-#: ../../content/applications/productivity/calendar/google.rst:267
+#: ../../content/applications/productivity/calendar/google.rst:246
 msgid "No test users added"
 msgstr "No hay usuarios de prueba"
 
-#: ../../content/applications/productivity/calendar/google.rst:269
+#: ../../content/applications/productivity/calendar/google.rst:248
 msgid "If no test users are added to the :guilabel:`OAuth consent screen`, then an :guilabel:`Error 403: access_denied` populates."
 msgstr "El mensaje :guilabel:`Error 403: access_denied` aparecerá si no hay usuarios de prueba en la :guilabel:`pantalla de consentimiento de OAuth`."
 
-#: ../../content/applications/productivity/calendar/google.rst:279
+#: ../../content/applications/productivity/calendar/google.rst:None
+msgid "403 Access Denied Error."
+msgstr "403 Error de acceso denegado."
+
+#: ../../content/applications/productivity/calendar/google.rst:254
 msgid "To correct this error, return to the :guilabel:`OAuth consent screen`, under :guilabel:`APIs & Services`, and add test users to the app. Add the email to be configured in Odoo."
 msgstr "Para solucionar este error, regrese a la :guilabel:`pantalla de consentimiento de OAuth`, vaya a :guilabel:`APIs y servicios` y agregue usuarios de prueba a la aplicación. Agregue el correo electrónico a configurar en Odoo."
 
-#: ../../content/applications/productivity/calendar/google.rst:283
+#: ../../content/applications/productivity/calendar/google.rst:258
 msgid "Application Type"
 msgstr "Tipo de aplicación"
 
-#: ../../content/applications/productivity/calendar/google.rst:285
+#: ../../content/applications/productivity/calendar/google.rst:260
 msgid "When creating the credentials (OAuth *Client ID* and *Client Secret*), if :guilabel:`Desktop App` is selected for the :guilabel:`Application Type`, an :guilabel:`Authorization Error` appears (:guilabel:`Error 400:redirect_uri_mismatch`)."
 msgstr "Aparecerá un :guilabel:`error de autorización` (:guilabel:`Error 400:redirect_uri_mismatch`) al crear las credenciales (*ID de cliente* y *secreto de cliente* de OAuth) si seleccionó :guilabel:`aplicación de escritorio` como el :guilabel:`tipo de aplicación`."
 
-#: ../../content/applications/productivity/calendar/google.rst:295
+#: ../../content/applications/productivity/calendar/google.rst:None
+msgid "Error 400 Redirect URI Mismatch."
+msgstr "Error 400 redirect_URI_mismatch."
+
+#: ../../content/applications/productivity/calendar/google.rst:267
 msgid "To correct this error, delete the existing credentials, and create new credentials, by selecting :guilabel:`Web Application` for the :guilabel:`Application Type`."
 msgstr "Para solucionar este error elimine las credenciales existentes y cree nuevas, seleccione :guilabel:`aplicación web` como :guilabel:`tipo de aplicación`."
 
-#: ../../content/applications/productivity/calendar/google.rst:298
+#: ../../content/applications/productivity/calendar/google.rst:270
 msgid "Then, under :guilabel:`Authorized redirect URIs`, click :guilabel:`ADD URI`, and type: `https://yourdbname.odoo.com/google_account/authentication` in the field, being sure to replace *yourdbname* in the URL with the **real** Odoo database name."
 msgstr "En :guilabel:`URI de redirección autorizados` haga clic en :guilabel:`AGREGAR URI` y escriba: `https://subasededatos.odoo.com/google_account/authentication` en el campo. Asegúrese de reemplazar *subasededatos* en la URL con el nombre **real** de la base de datos de Odoo."
 
-#: ../../content/applications/productivity/calendar/google.rst:303
+#: ../../content/applications/productivity/calendar/google.rst:275
 msgid "Ensure that the domain (used in the URI: `https://yourdbname.odoo.com/google_account/authentication`) is the exact same domain as configured in the `web.base.url` system parameter."
 msgstr "Asegúrese de que el dominio (el que se usa en URI: `https://subasededatos.odoo.com/google_account/authentication`) sea idéntico al dominio configurado en el parámetro del sistema `web.base.url`."
 
-#: ../../content/applications/productivity/calendar/google.rst:307
+#: ../../content/applications/productivity/calendar/google.rst:279
 msgid "Access the `web.base.url` by activating :ref:`developer mode <developer-mode>`, and navigating to :menuselection:`Settings app --> Technical header menu --> Parameters section --> System Parameters`."
 msgstr "Active el :ref:`modo de desarrollador <developer-mode>` para acceder a `web.base.url` y vaya a :menuselection:`Ajustes --> menú de encabezado Técnico --> sección Parámetros --> Parámetros del sistema`."
 
@@ -552,187 +580,223 @@ msgstr "Después de iniciar sesión con su Microsoft *Entra ID*, `registre una a
 msgid "To create an application, click :guilabel:`+ Add` in the top menu. From the resulting drop-down menu, select :guilabel:`App Registration`."
 msgstr "Haga clic en el botón :guilabel:`+ Agregar` del menú superior para crear una aplicación y en el menú desplegable seleccione :guilabel:`Registro de aplicación`."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:45
+#: ../../content/applications/productivity/calendar/outlook.rst:None
+msgid "Microsoft Azure management page with + Add and App Registration menu highlighted."
+msgstr "Página de administración de Microsoft Azure con el menú + Agregar y Registro de aplicaciones dentro de recuadros rojos."
+
+#: ../../content/applications/productivity/calendar/outlook.rst:42
 msgid "Enter a unique :guilabel:`Name` for the connected application."
 msgstr "Proporcione un :guilabel:`Nombre` único para la aplicación a conectar."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:47
+#: ../../content/applications/productivity/calendar/outlook.rst:44
 msgid "Choosing the appropriate :guilabel:`Supported account type` is essential, or else the connected application will not work. Users who wish to connect their *Outlook Calendar* to Odoo should select the :guilabel:`Accounts in any organizational directory (Any Microsoft Entra ID directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)` option for :guilabel:`Supported account types`."
 msgstr "Elegir el :guilabel:`tipo de cuenta admitido` es muy importante, de lo contrario la aplicación conectada no funcionará. Los usuarios que deseen conectar su *calendario de Outlook* con Odoo deben elegir la opción :guilabel:`Cuentas en cualquier directorio organizativo y cuentas Microsoft personales (como Skype y Xbox)` como :guilabel:`tipo de cuenta admitido`."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:53
+#: ../../content/applications/productivity/calendar/outlook.rst:50
 msgid "When configuring the :guilabel:`Redirect URI`, choose the :guilabel:`Web` option from the first drop-down menu. Then, enter the Odoo database URI (URL) followed by `/microsoft_account/authentication`."
 msgstr "Al configurar el :guilabel:`identificador URI de redirección`, seleccione la opción :guilabel:`Web` en el primer menú desplegable. Después, escriba el URI de la base de datos de Odoo (URL) y agregue `/microsoft_account/authentication`."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:58
+#: ../../content/applications/productivity/calendar/outlook.rst:55
 msgid "Enter `https://yourdbname.odoo.com/microsoft_account/authentication` for the :guilabel:`Redirect URI`. Replace `yourdbname.odoo.com` with the :abbr:`URL (Uniform Resource Locator)`."
 msgstr "Escriba `https://subasededatos.odoo.com/microsoft_account/authentication` en el :guilabel:`identificador URI de redirección`. Reemplace `subasededatos.odoo.com` con la :abbr:`URL (Localizador de recursos uniforme)`."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:62
+#: ../../content/applications/productivity/calendar/outlook.rst:59
 msgid "Ensure the database's :abbr:`URL (Uniform Resource Locator)` (domain) used in the URI is the exact same domain as the one configured on the `web.base.url` system parameter."
 msgstr "Asegúrese de que la :abbr:`URL (Localizador de recursos uniforme)` de la base de datos (dominio) que se usa en la URI sea idéntica al dominio configurado en el parámetro del sistema `web.base.url`."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:65
+#: ../../content/applications/productivity/calendar/outlook.rst:62
 msgid "Access the `web.base.url` by activating :ref:`developer mode <developer-mode>`, and navigating to :menuselection:`Settings app --> Technical header menu --> Parameters section --> System Parameters`. Then, select it from the :guilabel:`Key` list on the :guilabel:`System Parameters` page."
 msgstr "Active el :ref:`modo de desarrollador <developer-mode>` para acceder a `web.base.url` y vaya a :menuselection:`Ajustes --> menú de encabezado Técnico --> sección Parámetros --> Parámetros del sistema`. Después, selecciónelo en la lista :guilabel:`Clave`  de la página de :guilabel:`parámetros del sistema`."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:78
+#: ../../content/applications/productivity/calendar/outlook.rst:None
+msgid "The \"Supported account type\" and \"Redirect URI\" settings in the Microsoft Entra ID portal."
+msgstr "Los ajustes de \"tipo de cuenta admitido\" y \"URI de redirección\" en el portal de Microsoft Entra ID."
+
+#: ../../content/applications/productivity/calendar/outlook.rst:71
 msgid "For more information on the restrictions and limitations of URIs, check Microsoft's `Redirect URI (reply URL) restrictions and limitations <https://docs.microsoft.com/en-us/azure/active-directory/develop/reply-url>`_ page."
 msgstr "Consulte la página `Restricciones y limitaciones del identificador URI de redirección (dirección URL de respuesta) <https://docs.microsoft.com/es-mx/azure/active-directory/develop/reply-url>`_ de Microsoft para obtener más información sobre las restricciones y limitaciones de los identificadores URI."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:82
+#: ../../content/applications/productivity/calendar/outlook.rst:75
 msgid "Finally, on the application registration page, click :guilabel:`Register` button to complete the application registration. The :guilabel:`Application (client) ID` is produced. Copy this value, as it is needed later, in the :ref:`outlook_calendar/odoo_setup`."
 msgstr "Por último, en la página de registro de la aplicación, haga clic en el botón :guilabel:`Registrar` para completar el registro correspondiente. Se generará el :guilabel:`ID de la Aplicación (cliente)`. Copie este valor, ya que lo necesitará más adelante para la sección :ref:`outlook_calendar/odoo_setup`."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:95
+#: ../../content/applications/productivity/calendar/outlook.rst:None
+msgid ""
+"Application client ID highlighted in the essentials section of the newly created\n"
+"application."
+msgstr ""
+"El ID de cliente de la aplicación aparece destacado en la sección esencial de la aplicación recién\n"
+"creada."
+
+#: ../../content/applications/productivity/calendar/outlook.rst:85
 msgid "Create client secret"
 msgstr "Crear el secreto de cliente"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:97
+#: ../../content/applications/productivity/calendar/outlook.rst:87
 msgid "The second credential needed to complete the synchronization of the Microsoft *Outlook Calendar* is the *Client Secret*. The user **must** add a client secret, as this allows Odoo to authenticate itself, requiring no interaction from the user's side. *Certificates* are optional."
 msgstr "La segunda credencial necesaria para completar la sincronización del *calendario de Outlook* de Microsoft es el *secreto del cliente*. El usuario **debe** agregar un secreto del cliente, pues este permite que Odoo se autentique a sí mismo sin necesidad de que el usuario haga algo más. Los *certificados* son opcionales."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:101
+#: ../../content/applications/productivity/calendar/outlook.rst:91
 msgid "To add a client secret, click :menuselection:`Certificates & secrets` in the left menu. Then click :guilabel:`+ New client secret` to create the client secret."
 msgstr "Haga clic en :menuselection:`Certificados y secretos` en el menú izquierdo para agregar un secreto del cliente y después haga clic en :guilabel:`+ Nuevo secreto del cliente` para crearlo."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:111
+#: ../../content/applications/productivity/calendar/outlook.rst:None
+msgid ""
+"New client secret page with certificates and secrets menu and new client secret option\n"
+"highlighted."
+msgstr ""
+"Página del nuevo secreto de cliente. El menú de certificados y secretos y la nueva opción de secreto de cliente aparecen\n"
+"destacadas."
+
+#: ../../content/applications/productivity/calendar/outlook.rst:99
 msgid "Next, type a :guilabel:`Description`, and select when the client secret :guilabel:`Expires`. Available options include: :guilabel:`90 days (3 months)`, :guilabel:`365 days (12 months)`, :guilabel:`545 days (18 months)`, :guilabel:`730 days (24 months)` or :guilabel:`Custom`. The :guilabel:`Custom` option allows the administrator to set a :guilabel:`Start` and :guilabel:`End` date."
 msgstr "Después escriba una :guilabel:`Descripción` y seleccione cuándo :guilabel:`expira` el secreto del cliente. Las opciones disponibles son: :guilabel:`90 días (3 meses)`, :guilabel:`365 días (12 meses)`, :guilabel:`545 días (18 meses)`, :guilabel:`730 días (24 meses)` o :guilabel:`Personalizado`. La opción :guilabel:`Personalizado` permite que el administrador establezca una :guilabel:`fecha de inicio` y una :guilabel:`fecha de finalización`."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:117
+#: ../../content/applications/productivity/calendar/outlook.rst:105
 msgid "Finally, click :guilabel:`Add` to :guilabel:`Add a client secret`."
 msgstr "Para finalizar, haga clic en :guilabel:`Agregar` para :guilabel:`agregar un secreto del cliente`."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:120
+#: ../../content/applications/productivity/calendar/outlook.rst:108
 msgid "Since resetting the synchronization can be tricky, Odoo recommends setting the maximum allowed expiration date for the client secret (24 months or custom), so there is no need to re-synchronize soon."
 msgstr "Restablecer la sincronización puede ser complicado, así que le recomendamos que la fecha de vencimiento que configure el plazo máximo permitido en el secreto del cliente (24 meses o personalizado) para que no tenga que volver a realizar la sincronización pronto."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:124
+#: ../../content/applications/productivity/calendar/outlook.rst:112
 msgid "Copy the :guilabel:`Value` for use in the next section."
 msgstr "Copie el :guilabel:`valor`, deberá usarlo en la siguiente sección."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:127
+#: ../../content/applications/productivity/calendar/outlook.rst:115
 msgid "Client secret values cannot be viewed, except immediately after creation. Be sure to save the secret when created *before* leaving the page."
 msgstr "Los valores del secreto del cliente solo son visibles después de crearlos, asegúrese de guardarlo *antes* de salir de la página."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:133
+#: ../../content/applications/productivity/calendar/outlook.rst:121
 msgid "Configuration in Odoo"
 msgstr "Configuración en Odoo"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:135
+#: ../../content/applications/productivity/calendar/outlook.rst:123
 msgid "In the Odoo database, go to :menuselection:`Calendar app --> Configuration --> Settings`, and tick the checkbox beside the :guilabel:`Outlook Calendar` setting. Remember to click :guilabel:`Save` to implement the changes."
 msgstr "En la base de datos de Odoo, vaya a :menuselection:`Calendario --> Configuración --> Ajustes`, y marque la casilla ubicada junto al ajuste :guilabel:`Calendario de Outlook`. Recuerde hacer clic en :guilabel:`Guardar` para aplicar los cambios."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:147
+#: ../../content/applications/productivity/calendar/outlook.rst:135
 msgid "From the Microsoft *Azure* portal, under the :guilabel:`Overview` section of the application, copy the :guilabel:`Application (Client) ID`, if it has not already been copied, and paste it into the :guilabel:`Client ID` field in Odoo."
 msgstr "Desde el portal de Microsoft *Azure*, en la sección :guilabel:`Resumen` de la aplicación, copie el :guilabel:`ID de la aplicación (cliente)` en caso de que no lo haya hecho y péguelo en el campo :guilabel:`ID de cliente` en Odoo."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:157
+#: ../../content/applications/productivity/calendar/outlook.rst:None
+msgid "The \"Client ID\" in the Microsoft Azure portal."
+msgstr "El \"Client ID\" en el portal de Microsoft Azure."
+
+#: ../../content/applications/productivity/calendar/outlook.rst:143
 msgid "Copy the previously-acquired :guilabel:`Value` (Client Secret Value), and paste it into the :guilabel:`Client Secret` field in Odoo."
 msgstr "Copie el :guilabel:`valor` anterior (el valor del secreto de cliente)  y péguelo en el campo :guilabel:`Secreto de cliente` en Odoo."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:168
+#: ../../content/applications/productivity/calendar/outlook.rst:None
+msgid "The \"Client Secret\" token to be copied from Microsoft to Odoo."
+msgstr "El \"secreto de cliente\" que debe copiar de Microsoft a Odoo."
+
+#: ../../content/applications/productivity/calendar/outlook.rst:150
 msgid "Finally, on the Odoo :menuselection:`Settings --> General Settings` page, click :guilabel:`Save`."
 msgstr "En Odoo vaya a :menuselection:`Ajustes --> Ajustes generales` y haga clic en :guilabel:`Guardar`."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:173
+#: ../../content/applications/productivity/calendar/outlook.rst:155
 msgid "Sync with Outlook"
 msgstr "Sincronizar con Outlook"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:177
+#: ../../content/applications/productivity/calendar/outlook.rst:159
 msgid "Odoo highly recommends testing the Outlook calendar synchronization on a test database and a test email address (that is not used for any other purpose) before attempting to sync the desired Outlook Calendar with the user's production database."
 msgstr "Odoo le recomendamos que primero haga una prueba de la sincronización del calendario de Outlook en una base de datos de prueba con un correo electrónico de prueba (es decir, uno que solo use para esto) antes de hacer la sincronización en una base de datos en producción."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:181
+#: ../../content/applications/productivity/calendar/outlook.rst:163
 msgid "If the user has any past, present, or future events on their Odoo calendar before syncing their Outlook calendar, Outlook will treat the events pulled from Odoo's calendar during the sync as new events, causing an email notification to be sent from Outlook to all the event attendees."
 msgstr "Si el usuario tiene eventos pasados, presentes o futuros agendados en su calendario de Odoo antes de sincronizarlo con su calendario de Outlook, Outlook considerará estos eventos como eventos nuevos. Esto causará que se envíe una notificación de correo electrónico desde Outlook a todos los asistentes al evento."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:185
+#: ../../content/applications/productivity/calendar/outlook.rst:167
 msgid "To avoid unwanted emails being sent to all past, present, and future event attendees, the user must add the events from the Odoo calendar to the Outlook calendar before the first ever sync, delete the events from Odoo, and then start the sync."
 msgstr "Para evitar que se manden correos no deseados a asistentes pasados, presentes y futuros, el usuario debe agregar los eventos que tenga en el calendario de Odoo al calendario de Outlook antes de hacer la primera sincronización. Luego, borre todos los eventos del calendario de Odoo e inicie la sincronización."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:189
+#: ../../content/applications/productivity/calendar/outlook.rst:171
 msgid "Even after synchronizing the Odoo Calendar with the Outlook calendar, Outlook will still send a notification to all event participants every time an event is edited (created, deleted, unarchived, or event date/time changed), with no exceptions. This is a limitation that cannot be fixed from Odoo's side."
 msgstr "Incluso después de sincronizar el calendario de Odoo con el de Outlook, este último le enviará una notificación a todos los participantes de los eventos siempre que se editen, (ya sea que se cree, borre, desarchive, o se cambie la fecha y hora del evento) sin excepciones. Esta es una limitación que no se puede solucionar desde Odoo."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:194
+#: ../../content/applications/productivity/calendar/outlook.rst:176
 msgid "In summary, once a user synchronizes their Outlook calendar with the Odoo calendar:"
 msgstr "Para resumir, una vez que un usuario sincroniza el calendario de Outlook con Odoo:"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:196
+#: ../../content/applications/productivity/calendar/outlook.rst:178
 msgid "Creating an event in Odoo causes Outlook to send an invitation to all event attendees."
 msgstr "Si crea un evento en Odoo, se enviará una invitación de Outlook a todos los asistentes al evento."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:197
+#: ../../content/applications/productivity/calendar/outlook.rst:179
 msgid "Deleting an event in Odoo causes Outlook to send a cancellation to all event attendees."
 msgstr "Si elimina un evento en Odoo, se enviará un correo de cancelación a todos los asistentes."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:198
+#: ../../content/applications/productivity/calendar/outlook.rst:180
 msgid "Unarchiving an event in Odoo causes Outlook to send an invitation to all event attendees."
 msgstr "Si desarchiva un evento en Odoo, se enviará una invitación de Outlook a todos los asistentes al evento."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:199
+#: ../../content/applications/productivity/calendar/outlook.rst:181
 msgid "Archiving an event in Odoo causes Outlook to send a cancellation to all event attendees."
 msgstr "Si archiva un evento en Odoo, se enviará un correo de cancelación de Outlook a todos los asistentes al evento."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:200
+#: ../../content/applications/productivity/calendar/outlook.rst:182
 msgid "Adding a contact to an event causes Outlook to send an invitation to all event attendees."
 msgstr "Si agrega un contacto el evento, se enviará un correo de invitación a todos los asistentes."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:201
+#: ../../content/applications/productivity/calendar/outlook.rst:183
 msgid "Removing a contact from an event causes Outlook to send a cancellation to all event attendees."
 msgstr "Si quita un contanto del evento, se enviará un correo de cancelación a todos los asistentes al evento."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:204
+#: ../../content/applications/productivity/calendar/outlook.rst:186
 msgid "Sync Odoo Calendar and Outlook"
 msgstr "Sincronización del calendario de Odoo y Outlook"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:206
+#: ../../content/applications/productivity/calendar/outlook.rst:188
 msgid "In the Odoo database, open to the *Calendar* module, and click the :guilabel:`Outlook` sync button on the right-side of the page, beneath the monthly calendar."
 msgstr "En la base de datos de Odoo, abra el módulo *Calendario* y haga clic en el botón de sincronización de :guilabel:`Outlook` situado en el lado derecho de la página, abajo del calendario mensual."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:216
+#: ../../content/applications/productivity/calendar/outlook.rst:198
 msgid "The synchronization is a two-way process, meaning that events are reconciled in both accounts (*Outlook* and Odoo). The page redirects to a Microsoft login page, and the user is asked to log in to their account, if they are not already. Finally, grant the required permissions by clicking :guilabel:`Accept`."
 msgstr "La sincronización es un proceso bidireccional, lo que significa que los eventos se concilian en ambas cuentas (en *Outlook* y en Odoo). La página redirige a una página de inicio de sesión de Microsoft que le pide al usuario que inicie sesión en su cuenta, si aún no lo ha hecho. Por último, haga clic en :guilabel:`Aceptar` para proporcionar los permisos necesarios."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:229
+#: ../../content/applications/productivity/calendar/outlook.rst:None
+msgid "Authentication process on Microsoft Outlook OAuth page."
+msgstr "Proceso de autenticación en la página de OAuth de Microsoft Outlook."
+
+#: ../../content/applications/productivity/calendar/outlook.rst:208
 msgid "All users that want to use the synchronization simply need to :ref:`sync their calendar with Outlook <outlook/sync>`. The configuration of Microsoft's *Azure* account is only done once, as Microsoft *Entra ID* tenants' client IDs and client secrets are unique, and help the user manage a specific instance of Microsoft cloud services for internal and external users."
 msgstr "Todos los usuarios que deseen usar la sincronización solo necesitan :ref:`sincronizar su calendario con Outlook <outlook/sync>`. La configuración de la cuenta de Microsoft *Azure* solo se realiza una vez, ya que el ID de cliente y el secreto de cliente de los inquilinos de Microsoft *Entra ID* son únicos y ayudan al usuario a gestionar instancias específicas de los servicios en la nube de Microsoft para sus usuarios internos y externos."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:235
+#: ../../content/applications/productivity/calendar/outlook.rst:214
 msgid ":doc:`../../general/integrations/mail_plugins/outlook`"
 msgstr ":doc:`../../general/integrations/mail_plugins/outlook`"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:236
+#: ../../content/applications/productivity/calendar/outlook.rst:215
 msgid ":doc:`google`"
 msgstr ":doc:`google`"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:241
+#: ../../content/applications/productivity/calendar/outlook.rst:220
 msgid "There may be times when the *Microsoft Outlook Calendar* account does not sync correctly with Odoo. Sync issues can be seen in the database logs."
 msgstr "Es posible que en algunas ocasiones la cuenta del *calendario de Microsoft Outlook* no se sincronice de forma correcta con Odoo. Es posible consultar los problemas de sincronización en los registros de la base de datos."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:244
+#: ../../content/applications/productivity/calendar/outlook.rst:223
 msgid "In these cases, the account needs troubleshooting. A reset can be performed using the :guilabel:`Reset Account` button, which can be accessed by navigating to :menuselection:`Settings app --> Manage Users`. Then, select the user to modify the calendar, and click on the :guilabel:`Calendar` tab."
 msgstr "En estos casos es necesario solucionar los problemas de la cuenta y es posible restablecerla con el botón :guilabel:`Restablecer cuenta`. Vaya a :menuselection:`Ajustes --> Administrar usuarios`, seleccione el usuario del que se debe modificar el calendario y haga clic en la pestaña :guilabel:`Calendario`."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:261
+#: ../../content/applications/productivity/calendar/outlook.rst:240
 msgid "The following reset options are available for troubleshooting *Microsoft Outlook Calendar* sync with Odoo:"
 msgstr "Las siguientes opciones de restablecimiento están disponibles para solucionar problemas de sincronización del *calendario de Microsoft Outlook* con Odoo:"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:273
+#: ../../content/applications/productivity/calendar/outlook.rst:252
 msgid ":guilabel:`Delete from the current Microsoft Calendar account`: delete the events from *Microsoft Outlook Calendar*."
 msgstr ":guilabel:`Eliminar de la cuenta actual del calendario de Microsoft`: elimina los eventos del *calendario de Microsoft Outlook*."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:276
+#: ../../content/applications/productivity/calendar/outlook.rst:255
 msgid ":guilabel:`Delete from both`: delete the events from both *Microsoft Outlook Calendar* and Odoo calendar."
 msgstr ":guilabel:`Eliminar de ambos`: elimina los eventos del *calendario de Microsoft Outlook* y del calendario de Odoo."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:281
+#: ../../content/applications/productivity/calendar/outlook.rst:260
 msgid ":guilabel:`Synchronize only new events`: sync new events on *Microsoft Outlook Calendar* and/or Odoo calendar."
 msgstr ":guilabel:`Sincronizar solo los eventos nuevos`: sincroniza los nuevos eventos en el *calendario de Microsoft Outlook* y el calendario de Odoo."
 
-#: ../../content/applications/productivity/calendar/outlook.rst:283
+#: ../../content/applications/productivity/calendar/outlook.rst:262
 msgid ":guilabel:`Synchronize all existing events`: sync all events on *Microsoft Outlook Calendar* and/or Odoo calendar."
 msgstr ":guilabel:`Sincronizar todos los eventos existentes`: sincroniza todos los eventos en el *calendario de Microsoft Outlook* y el calendario de Odoo."
 
@@ -1828,43 +1892,51 @@ msgstr "Para :guilabel:`How do you want to build with Twilio?` (¿Cómo quiere c
 msgid "For :guilabel:`What is your goal today?`, select :guilabel:`3rd party integrations`."
 msgstr "Para :guilabel:`What is your goal today?` (¿Qué quiere lograr hoy?), seleccione :guilabel:`3rd party integrations` (integraciones con terceros)."
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:37
+#: ../../content/applications/productivity/discuss/ice_servers.rst:None
+msgid "The Twilio welcome page."
+msgstr "La página de inicio de Twilio."
+
+#: ../../content/applications/productivity/discuss/ice_servers.rst:34
 msgid "If necessary, change the billing country. Finally, click :guilabel:`Get Started with Twilio`."
 msgstr "Cambie el país de facturación si es necesario y, para terminar, haga clic en :guilabel:`Get Started with Twilio` (empezar a usar Twilio). "
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:40
+#: ../../content/applications/productivity/discuss/ice_servers.rst:37
 msgid "Locate the Twilio Account SID and Auth Token"
 msgstr "Ubicación del Account SID (SID de cuenta) y del Auth Token (token de autenticación)"
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:42
+#: ../../content/applications/productivity/discuss/ice_servers.rst:39
 msgid "To locate the Account SID and Auth Token, go to the Twilio account dashboard. Then, click :guilabel:`Develop` on the sidebar. In the :guilabel:`Account Info` section, locate the :guilabel:`Account SID` and the :guilabel:`Auth Token`. Both of these are needed to connect Twilio to Odoo."
 msgstr "Para ubicar el Account SID y el Auth Token, vaya al tablero de su cuenta de Twilio y haga clic en :guilabel:`Develop` (desarrollar) que se encuentra en la barra lateral. En la sección :guilabel:`Account Info` (información de la cuenta), ubique el :guilabel:`Account SID` y el :guilabel:`Auth Token`. Necesita esta información para conectar Twilio con Odoo."
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:56
+#: ../../content/applications/productivity/discuss/ice_servers.rst:None
+msgid "The Twilio Account SID and Auth Token can be found uner the Account Info section."
+msgstr "El Account SID y el Auth Token se pueden encontrar en la sección Account info (información de la cuenta)."
+
+#: ../../content/applications/productivity/discuss/ice_servers.rst:49
 msgid "Connect Twilio to Odoo"
 msgstr "Conectar Twilio a Odoo"
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:58
+#: ../../content/applications/productivity/discuss/ice_servers.rst:51
 msgid "Open the Odoo database and go to :menuselection:`Settings --> General Settings --> Discuss`. Check the box next to :guilabel:`Use Twilio ICE servers` and enter the Twilio account's :guilabel:`Account SID` and :guilabel:`Auth Token`. Finally, click :guilabel:`Save` to apply these changes."
 msgstr "Abra la base de datos de Odoo y vaya a :menuselection:`Ajustes --> Ajustes generales --> Conversaciones`. Marque la casilla junto a :guilabel:`Usar los servidores ICE de Twilio` e ingrese el :guilabel:`SID de cuenta de Twilio` y el :guilabel:`Token de autentificación de cuenta de Twilio`. Para terminar, haga clic en :guilabel:`Guardar` para aplicar los cambios."
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:72
+#: ../../content/applications/productivity/discuss/ice_servers.rst:65
 msgid "Define a list of custom ICE servers"
 msgstr "Definir una lista de servidores ICE personalizados"
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:74
+#: ../../content/applications/productivity/discuss/ice_servers.rst:67
 msgid "This step is not required for the Twilio configuration. However, if Twilio is not configured or is not working at any given moment, Odoo will fall back on the custom ICE servers list. The user must define the list of custom ICE servers."
 msgstr "Este paso no es necesario para configurar Twilio, pero si Twilio no está configurado o por algún motivo no sirve, Odoo recurrirá a la lista de servidores personalizados ICE. El usuario debe definir la lista de servidores personalizados ICE."
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:78
+#: ../../content/applications/productivity/discuss/ice_servers.rst:71
 msgid "In :menuselection:`Settings --> General Settings --> Discuss`, click the :guilabel:`ICE Servers` button under :guilabel:`Custom ICE server list`."
 msgstr "En :menuselection:`Ajustes --> Ajustes generales --> Conversaciones`, haga clic en el botón :guilabel:`Servidores ICE` que se encuentra en la categoría :guilabel:`Lista personalizada de servidores ICE`."
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:88
+#: ../../content/applications/productivity/discuss/ice_servers.rst:81
 msgid "Odoo will redirect to the :guilabel:`ICE servers` page. Here you can define your own list of ICE servers."
 msgstr "Odoo le redirigirá a la página de :guilabel:`servidores ICE`. Aquí puede definir su propia lista de servidores ICE."
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:99
+#: ../../content/applications/productivity/discuss/ice_servers.rst:92
 msgid "For on-premise instances of Odoo, the package `python3-gevent` is necessary for the Discuss module to run calls/video calls on Ubuntu (Linux) servers."
 msgstr "Para instancias locales de Odoo, el paquete `python3-gevent` es necesario para que el módulo Discuss pueda ejecutar llamadas de video o voz en los servidores de Ubuntu (Linux)."
 
@@ -9155,26 +9227,11 @@ msgstr "Se añaden dos iconos al área de la bandeja del sistema en la parte sup
 #~ msgid "Information added to the :guilabel:`Extra Message on Confirmation` field appears once the meeting is confirmed."
 #~ msgstr ""
 
-#~ msgid "Create a new API project to store credentials."
-#~ msgstr "Cree un nuevo proyecto de API donde guarde las credenciales"
-
-#~ msgid "Enable APIs and Services on the API Project."
-#~ msgstr "Active el API y servicios en el proyecto API."
-
-#~ msgid "Enable the Google Calendar API."
-#~ msgstr "Habilite el API del calendario de Google."
-
-#~ msgid "Add the authorized JavaScript origins and the authorized redirect URIs."
-#~ msgstr "Agregue los orígenes de JavaScript autorizados y después las URI de redirección autorizadas."
-
 #~ msgid "The Google Calendar checkbox in General Settings."
 #~ msgstr "La opción a activar de Google Calendar en los ajustes generales."
 
 #~ msgid "Click the Google sync button in Odoo Calendar to sync Google Calendar with Odoo."
 #~ msgstr "Haga clic en el botón de sincronización con Google para sincronizar su calendario de Google con Odoo."
-
-#~ msgid "Give Odoo permission to access Google Calendar."
-#~ msgstr "Imagen sobre cómo darle permiso a Odoo de acceder al calendario de Google."
 
 #~ msgid "Reset buttons highlighted on the calendar tab of the user."
 #~ msgstr "Los botones para restablecer aparecen resaltados en la pestaña Calendario del usuario."
@@ -9182,46 +9239,11 @@ msgstr "Se añaden dos iconos al área de la bandeja del sistema en la parte sup
 #~ msgid "Google calendar reset options in Odoo."
 #~ msgstr "Opciones de restablecimiento para Google Calendar en Odoo."
 
-#~ msgid "403 Access Denied Error."
-#~ msgstr "403 Error de acceso denegado."
-
-#~ msgid "Error 400 Redirect URI Mismatch."
-#~ msgstr "Error 400 redirect_URI_mismatch."
-
-#~ msgid "Microsoft Azure management page with + Add and App Registration menu highlighted."
-#~ msgstr "Página de administración de Microsoft Azure con el menú + Agregar y Registro de aplicaciones dentro de recuadros rojos."
-
-#~ msgid "The \"Supported account type\" and \"Redirect URI\" settings in the Microsoft Entra ID portal."
-#~ msgstr "Los ajustes de \"tipo de cuenta admitido\" y \"URI de redirección\" en el portal de Microsoft Entra ID."
-
-#~ msgid ""
-#~ "Application client ID highlighted in the essentials section of the newly created\n"
-#~ "application."
-#~ msgstr ""
-#~ "El ID de cliente de la aplicación aparece destacado en la sección esencial de la aplicación recién\n"
-#~ "creada."
-
-#~ msgid ""
-#~ "New client secret page with certificates and secrets menu and new client secret option\n"
-#~ "highlighted."
-#~ msgstr ""
-#~ "Página del nuevo secreto de cliente. El menú de certificados y secretos y la nueva opción de secreto de cliente aparecen\n"
-#~ "destacadas."
-
 #~ msgid "The \"Outlook Calendar\" setting activated in Odoo."
 #~ msgstr "La opción \"Calendario de Outlook\" activada."
 
-#~ msgid "The \"Client ID\" in the Microsoft Azure portal."
-#~ msgstr "El \"Client ID\" en el portal de Microsoft Azure."
-
-#~ msgid "The \"Client Secret\" token to be copied from Microsoft to Odoo."
-#~ msgstr "El \"secreto de cliente\" que debe copiar de Microsoft a Odoo."
-
 #~ msgid "The \"Outlook\" sync button in Odoo Calendar."
 #~ msgstr "El botón para sincronizar \"Outlook\" en la aplicación Calendario de Odoo."
-
-#~ msgid "Authentication process on Microsoft Outlook OAuth page."
-#~ msgstr "Proceso de autenticación en la página de OAuth de Microsoft Outlook."
 
 #~ msgid "Outlook calendar reset options in Odoo."
 #~ msgstr "Opciones de restablecimiento para el calendario de Outlook en Odoo."
@@ -10147,12 +10169,6 @@ msgstr "Se añaden dos iconos al área de la bandeja del sistema en la parte sup
 
 #~ msgid "alt text"
 #~ msgstr "Imagen del hilo del chatter donde se resalta el botón Traducir."
-
-#~ msgid "The Twilio welcome page."
-#~ msgstr "La página de inicio de Twilio."
-
-#~ msgid "The Twilio Account SID and Auth Token can be found uner the Account Info section."
-#~ msgstr "El Account SID y el Auth Token se pueden encontrar en la sección Account info (información de la cuenta)."
 
 #~ msgid "Enable the \"Use Twilio ICE servers\" option in Odoo General Settings."
 #~ msgstr "Activar la opción \"Usar los servidores ICE de Twilio\" en los ajustes generales de Odoo."

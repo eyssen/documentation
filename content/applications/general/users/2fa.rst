@@ -88,11 +88,8 @@ Using the desired authenticator application, scan the |QR| when prompted.
 
 Afterwards, the authenticator should display a *verification code*.
 
-.. screenshot:: general-2fa-authenticator-code
-   :menu: (authenticator app)
-   :shows: The authenticator app listing the Odoo account with its current 6-digit verification code.
-   :module: auth_totp
-   :notes: Phone screenshot; any authenticator app.
+.. figure:: 2fa/authenticator.png
+   :align: center
 
 Enter the code into the :guilabel:`Verification Code` field, then click :guilabel:`Activate`.
 

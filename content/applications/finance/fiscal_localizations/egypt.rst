@@ -48,24 +48,16 @@ these codes to :ref:`configure your Odoo Accounting app <egypt/e-invoicing-confi
 
 Access your company profile on the ETA portal by clicking on :guilabel:`View Taxpayer Profile`.
 
-.. screenshot:: finance-fl-egypt-taxpayer-profile
-   :menu: (ETA invoicing portal) ‣ home
-   :shows: The Egyptian Tax Authority invoicing portal home page with the "View Taxpayer Profile" link/button.
-   :highlight: The "View Taxpayer Profile" button.
-   :data: Preproduction portal, test taxpayer.
-   :module: l10n_eg_edi_eta
-   :notes: English UI, light theme, 1440px width.
+.. image:: egypt/taxpayer-profile.png
+   :align: center
+   :alt: Clicking on "View Taxpayer Profile" on an ETA invoicing portal
 
 Next, go to the :guilabel:`Representatives` section and then click on :guilabel:`Register ERP`.
 Fill out the :guilabel:`ERP Name` (e.g., ``Odoo``) and leave the other fields empty.
 
-.. screenshot:: finance-fl-egypt-add-erp-system
-   :menu: (ETA invoicing portal) ‣ Taxpayer Profile ‣ Representatives ‣ Register ERP
-   :shows: The "Register ERP" form of the ETA portal with "ERP Name" filled in as "Odoo" and the other fields empty.
-   :highlight: The "ERP Name" field.
-   :data: Preproduction portal.
-   :module: l10n_eg_edi_eta
-   :notes: English UI, light theme, 1440px width.
+.. image:: egypt/add-erp-system.png
+   :align: center
+   :alt: Filling out of the form to register an ERP system on the ETA portal.
 
 Once successfully registered, the website displays your API credentials:
 

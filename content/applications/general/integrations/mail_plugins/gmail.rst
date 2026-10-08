@@ -27,12 +27,9 @@ First, access the `GitHub repository <https://github.com/odoo/mail-client-extens
 Odoo Mail Plugins. Next, click on the green :guilabel:`Code` button. Then, click
 :guilabel:`Download ZIP` to download the Mail Plugin files onto the user's computer.
 
-.. screenshot:: general-gmail-plugin-download-zip
-   :menu: (GitHub) odoo/mail-client-extensions
-   :shows: The GitHub repository page with the green "Code" button open and "Download ZIP" highlighted.
-   :highlight: "Download ZIP".
-   :module: mail_plugin
-   :notes: GitHub website.
+.. image:: gmail/gh-download-zip.png
+   :align: center
+   :alt: Download the ZIP file from the Odoo GitHub repository for Mail Plugins.
 
 Open the ZIP file on the computer. Then, go to :menuselection:`mail-client-extensions-master -->
 gmail --> src --> views`, and open the :file:`login.ts` file using any text editor software,
@@ -84,12 +81,9 @@ In the Gmail inbox, a purple Odoo icon is now visible on the right side panel. C
 icon to open up the Odoo plugin window. Then, click on any email in the inbox. Click
 :guilabel:`Authorize Access` in the plugin window to grant Odoo access to the Gmail inbox.
 
-.. screenshot:: general-gmail-plugin-authorize
-   :menu: (Gmail) side panel ‣ Odoo
-   :shows: The Odoo plugin panel in Gmail with the "Authorize Access" button.
-   :highlight: The button.
-   :module: mail_plugin
-   :notes: Gmail web interface; demo mailbox.
+.. image:: gmail/authorize-access.png
+   :align: center
+   :alt: The Authorize Access button in the right sidebar of the Odoo plugin panel.
 
 Next, click :guilabel:`Login`. Then, enter the URL of the Odoo database that the user wishes to
 connect to the Gmail inbox, and log in to the database.

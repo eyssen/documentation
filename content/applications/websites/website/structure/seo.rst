@@ -297,13 +297,8 @@ content and display it in a relevant way. Odoo implements microdata as defined i
 contact addresses. This allows your product pages to be displayed in Google using extra information
 like the price and rating of a product:
 
-.. screenshot:: website-seo-rich-snippet
-   :menu: (search engine results page)
-   :shows: A search engine result page showing an enriched result (rich snippet) with rating stars and a price under the page link.
-   :highlight: The rich snippet (red frame).
-   :data: A product page result.
-   :module: website
-   :notes: English UI, light theme, 1440px width.
+.. image:: seo/rich-snippet.png
+   :alt: snippets in search engine results
 
 .. _website/seo/hreflang:
 

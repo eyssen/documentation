@@ -91,13 +91,8 @@ Export from Authorize.Net
   :guilabel:`Report 1 Download` sheet of the :ref:`Excel import template
   <authorize-import-template>`.
 
-.. screenshot:: finance-payment-providers-authorize-authorize-report1
-   :menu: (Authorize.Net merchant interface) ‣ Account ‣ Statements ‣ eCheck.Net Settlement Statement
-   :shows: The Authorize.Net settlement statement transaction list with all transactions of the selected batch range selected, ready to be copied into the "Report 1 Download" sheet.
-   :highlight: The selected transaction rows.
-   :data: Sandbox merchant, a few test transactions.
-   :module: payment_authorize
-   :notes: English UI, light theme, 1440px width.
+.. image:: authorize/authorize-report1.png
+   :alt: Selecting Authorize.Net transactions to import
 
 .. example::
 

@@ -126,12 +126,9 @@ Retrieve the Client ID
 Once the previous steps are complete, two keys are generated on the Google API Dashboard:
 :guilabel:`Client ID` and :guilabel:`Client Secret`. Copy the :guilabel:`Client ID`.
 
-.. screenshot:: general-google-signin-client-created
-   :menu: (Google Cloud console) ‣ Credentials
-   :shows: The "OAuth client created" dialog showing the Client ID and Client Secret with copy buttons.
-   :highlight: The Client ID.
-   :module: auth_oauth
-   :notes: Google website; blur IDs and secrets.
+.. image:: google/secret-ids.png
+   :align: center
+   :alt: Google OAuth Client ID generated.
 
 .. _google-sign-in/odoo-activation:
 

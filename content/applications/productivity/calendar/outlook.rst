@@ -35,12 +35,9 @@ After logging in with the Microsoft *Entra ID*, `register an application
 To create an application, click :guilabel:`+ Add` in the top menu. From the resulting drop-down
 menu, select :guilabel:`App Registration`.
 
-.. screenshot:: outlook-calendar-app-register
-   :menu: (Microsoft Entra admin center) ‣ App registrations
-   :shows: The Microsoft Entra ID app registrations page with the "+ New registration" button.
-   :highlight: The "New registration" button (red frame).
-   :module: microsoft_calendar
-   :notes: English UI, light theme, 1440px width.
+.. image:: outlook/app-register.png
+   :align: center
+   :alt: Microsoft Azure management page with + Add and App Registration menu highlighted.
 
 Enter a unique :guilabel:`Name` for the connected application.
 
@@ -67,13 +64,9 @@ drop-down menu. Then, enter the Odoo database URI (URL) followed by
    Parameters`. Then, select it from the :guilabel:`Key` list on the :guilabel:`System Parameters`
    page.
 
-.. screenshot:: outlook-calendar-register-application
-   :menu: (Microsoft Entra admin center) ‣ App registrations ‣ New registration
-   :shows: The application registration form with the name, the "Supported account types" option selected and the redirect URI of the database.
-   :highlight: The "Supported account types" and "Redirect URI" fields (red frame).
-   :data: Redirect URI https://company-name.com/microsoft_account/authentication.
-   :module: microsoft_calendar
-   :notes: English UI, light theme, 1440px width.
+.. image:: outlook/azure-register-application.png
+   :align: center
+   :alt: The "Supported account type" and "Redirect URI" settings in the Microsoft Entra ID portal.
 
 For more information on the restrictions and limitations of URIs, check Microsoft's `Redirect URI
 (reply URL) restrictions and limitations
@@ -83,13 +76,10 @@ Finally, on the application registration page, click :guilabel:`Register` button
 application registration. The :guilabel:`Application (client) ID` is produced. Copy this value, as
 it is needed later, in the :ref:`outlook_calendar/odoo_setup`.
 
-.. screenshot:: outlook-calendar-client-id
-   :menu: (Microsoft Entra admin center) ‣ App registrations ‣ Overview
-   :shows: The Essentials section of the registered application, showing the Application (client) ID.
-   :highlight: The "Application (client) ID" value (red frame).
-   :data: Use a throw-away application.
-   :module: microsoft_calendar
-   :notes: English UI, light theme, 1440px width.
+.. image:: outlook/app-client-id.png
+   :align: center
+   :alt: Application client ID highlighted in the essentials section of the newly created
+         application.
 
 Create client secret
 --------------------
@@ -101,12 +91,10 @@ itself, requiring no interaction from the user's side. *Certificates* are option
 To add a client secret, click :menuselection:`Certificates & secrets` in the left menu. Then click
 :guilabel:`+ New client secret` to create the client secret.
 
-.. screenshot:: outlook-calendar-new-client-secret
-   :menu: (Microsoft Entra admin center) ‣ Certificates & secrets
-   :shows: The "Certificates & secrets" page with the "+ New client secret" option and the description and expiry fields of the new secret.
-   :highlight: The "New client secret" button (red frame).
-   :module: microsoft_calendar
-   :notes: English UI, light theme, 1440px width.
+.. image:: outlook/client-secret.png
+   :align: center
+   :alt: New client secret page with certificates and secrets menu and new client secret option
+         highlighted.
 
 Next, type a :guilabel:`Description`, and select when the client secret :guilabel:`Expires`.
 Available options include: :guilabel:`90 days (3 months)`, :guilabel:`365 days (12 months)`,
@@ -148,22 +136,16 @@ From the Microsoft *Azure* portal, under the :guilabel:`Overview` section of the
 the :guilabel:`Application (Client) ID`, if it has not already been copied, and paste it into the
 :guilabel:`Client ID` field in Odoo.
 
-.. screenshot:: outlook-calendar-copy-client-id
-   :menu: (Microsoft Entra admin center) ‣ App registrations ‣ Overview
-   :shows: The Application (client) ID being copied from the application overview page.
-   :module: microsoft_calendar
-   :notes: English UI, light theme, 1440px width.
+.. image:: outlook/client-id.png
+   :align: center
+   :alt: The "Client ID" in the Microsoft Azure portal.
 
 Copy the previously-acquired :guilabel:`Value` (Client Secret Value), and paste it into the
 :guilabel:`Client Secret` field in Odoo.
 
-.. screenshot:: outlook-calendar-secret-value
-   :menu: (Microsoft Entra admin center) ‣ Certificates & secrets
-   :shows: The client secret list with the Value column that has to be copied into Odoo.
-   :highlight: The "Value" column (red frame).
-   :data: Use a throw-away secret.
-   :module: microsoft_calendar
-   :notes: English UI, light theme, 1440px width.
+.. image:: outlook/client-secret-value.png
+   :align: center
+   :alt: The "Client Secret" token to be copied from Microsoft to Odoo.
 
 Finally, on the Odoo :menuselection:`Settings --> General Settings` page, click :guilabel:`Save`.
 
@@ -218,12 +200,9 @@ The synchronization is a two-way process, meaning that events are reconciled in 
 to their account, if they are not already. Finally, grant the required permissions by clicking
 :guilabel:`Accept`.
 
-.. screenshot:: outlook-calendar-consent
-   :menu: (Microsoft account consent screen)
-   :shows: The Microsoft authentication page asking to grant the application access to the account's calendar.
-   :data: Use a throw-away Microsoft test account.
-   :module: microsoft_calendar
-   :notes: English UI, light theme, 1440px width.
+.. image:: outlook/accept-terms.png
+   :align: center
+   :alt: Authentication process on Microsoft Outlook OAuth page.
 
 .. note::
    All users that want to use the synchronization simply need to :ref:`sync their calendar with

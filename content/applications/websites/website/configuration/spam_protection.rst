@@ -65,13 +65,8 @@ On Cloudflare
 
 - Click :guilabel:`Create`.
 
-.. screenshot:: website-spam-protection-turnstile-configuration
-   :menu: (Cloudflare dashboard) ‣ Turnstile ‣ Add site
-   :shows: The Cloudflare Turnstile site configuration form with the site name, domain, widget mode and the generated site key and secret key.
-   :highlight: The site key and secret key (red frame).
-   :data: Use throw-away keys.
-   :module: website_cf_turnstile
-   :notes: English UI, light theme, 1440px width.
+.. image:: spam_protection/turnstile-configuration.png
+   :alt: Adding a website to Cloudflare Turnstile
 
 The generated keys are then displayed. Leave the page open for convenience, as copying the keys in
 Odoo is required next.
@@ -117,13 +112,8 @@ On the website registration page:
 - Agree to the terms of service.
 - Click :guilabel:`Submit`.
 
-.. screenshot:: website-spam-protection-recaptcha-google-configuration
-   :menu: (Google reCAPTCHA admin console) ‣ Create
-   :shows: The reCAPTCHA website registration form with the label, reCAPTCHA type v3 and the domain filled in.
-   :highlight: The reCAPTCHA type and Domains fields (red frame).
-   :data: Domain `example.com`.
-   :module: google_recaptcha
-   :notes: English UI, light theme, 1440px width.
+.. image:: spam_protection/recaptcha-google-configuration.png
+   :alt: reCAPTCHA website registration example
 
 A new page with the generated keys is then displayed. Leave it open for convenience, as copying the
 keys to Odoo is required next.

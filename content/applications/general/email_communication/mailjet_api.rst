@@ -17,12 +17,8 @@ To get started, sign in to the `Mailjet Account Information <https://app.mailjet
 page. Next, navigate to the :guilabel:`Senders & Domains` section and click on :guilabel:`SMTP and
 SEND API Settings`.
 
-.. screenshot:: general-email-mailjet-api-settings
-   :menu: (Mailjet) ‣ Account settings
-   :shows: The "Senders & Domains" section with the "SMTP and SEND API Settings" link.
-   :highlight: The link.
-   :module: mail
-   :notes: Mailjet website.
+.. image:: mailjet_api/api-settings.png
+   :alt: SMTP and Send API Settings link in the Senders & Domains section of Mailjet.
 
 Then, copy the :abbr:`SMTP (Simple Mail Transfer Protocol)` configuration settings onto a notepad.
 They can be found under the :guilabel:`Configuration (SMTP only)` section. The :abbr:`SMTP (Simple
@@ -39,11 +35,8 @@ port number. The settings are needed to configure Mailjet in Odoo, which is cove
    Port 25 is often :ref:`blocked by hosting providers <email-outbound-port-restriction>`; prefer
    port 465 or 587.
 
-.. screenshot:: general-email-mailjet-smtp-config
-   :menu: (Mailjet) ‣ SMTP and SEND API Settings
-   :shows: The "Configuration (SMTP only)" block with the SMTP server, port and SSL/TLS information, and the "Retrieve your API credentials" button.
-   :module: mail
-   :notes: Mailjet website.
+.. image:: mailjet_api/smtp-config.png
+   :alt: SMTP configuration from Mailjet.
 
 Next, click on the button labeled :guilabel:`Retrieve your API credentials` to retrieve the Mailjet
 API credentials.
@@ -61,12 +54,8 @@ email address or domain is approved to send emails using Mailjet's servers. Firs
 `Mailjet Account Information <https://app.mailjet.com/account>`_ page. Next, click on the
 :guilabel:`Add a Sender Domain or Address` link under the :guilabel:`Senders & Domains` section.
 
-.. screenshot:: general-email-mailjet-add-domain
-   :menu: (Mailjet) ‣ Account settings ‣ Senders & Domains
-   :shows: The "Add a Sender Domain or Address" link.
-   :highlight: The link.
-   :module: mail
-   :notes: Mailjet website.
+.. image:: mailjet_api/add-domain-email.png
+   :alt: Add a sender domain or address in the Mailjet interface.
 
 Determine if a sender's email address or the entire domain needs to be added to the Mailjet
 settings. It may be easier to configure the domain as a whole if :abbr:`DNS (Domain Name System)`
@@ -134,12 +123,8 @@ After adding the domain, a validation page will populate. Unless the Odoo databa
 Copy the TXT record information to a notepad and then navigate to the domain's :abbr:`DNS (Domain
 Name System)` provider to complete validation.
 
-.. screenshot:: general-email-mailjet-txt-record
-   :menu: (Mailjet) ‣ Senders & Domains ‣ (domain) ‣ validation
-   :shows: The TXT record host name and value to add to the domain's DNS for validation.
-   :highlight: Host and value.
-   :module: mail
-   :notes: Mailjet website; example domain.
+.. image:: mailjet_api/host-value-dns.png
+   :alt: The TXT record information to input on the domain's DNS.
 
 Setup in the domain's DNS
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -163,11 +148,8 @@ account/sender>`_ page on the Mailjet account information and clicking on :guila
 Next, click :guilabel:`Check Now` to validate the TXT record that was added on the domain. A
 success screen will appear if the domain is configured correctly.
 
-.. screenshot:: general-email-mailjet-check-dns
-   :menu: (Mailjet) ‣ Senders & Domains ‣ (domain)
-   :shows: The "Check DNS record now" button and the success message after validation.
-   :module: mail
-   :notes: Mailjet website; example domain.
+.. image:: mailjet_api/check-dns.png
+   :alt: Check DNS record in Mailjet.
 
 After successfully setting up the domain, there is an option to :guilabel:`Authenticate this domain
 (SPF/DKIM)`. This button populates :abbr:`SPF (Sender Policy Framework)` & :abbr:`DKIM (DomainKeys
@@ -177,11 +159,8 @@ Identified Mail) records to input into the :abbr:`DNS (Domain Name System)` prov
    `Mailjet's SPF/DKIM/DMARC documentation <https://documentation.mailjet.com/hc/articles/
    360042412734-Authenticating-Domains-with-SPF-DKIM>`_
 
-.. screenshot:: general-email-mailjet-authenticate
-   :menu: (Mailjet) ‣ Senders & Domains ‣ (domain) ‣ Authenticate this domain (SPF/DKIM)
-   :shows: The SPF and DKIM record values to add to the domain's DNS, with their status.
-   :module: mail
-   :notes: Mailjet website; example domain.
+.. image:: mailjet_api/authenticate.png
+   :alt: Authenticate the domain with SPF/DKIM records in Mailjet.
 
 .. _maintain/mailjet-api/odoo-setup:
 

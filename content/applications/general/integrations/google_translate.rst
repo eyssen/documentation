@@ -32,11 +32,9 @@ browse for the :guilabel:`Location`. Set the :guilabel:`Location` as the *Google
 organization*. If a personal Gmail account is being used, leave the :guilabel:`Location` as
 :guilabel:`No Organization`.
 
-.. screenshot:: general-google-translate-new-project
-   :menu: (Google Cloud console) ‣ New Project
-   :shows: The New Project form with Project name and Location.
-   :module: mail
-   :notes: Google website.
+.. image:: google_translate/new-project.png
+   :align: center
+   :alt: Project Name and Location for Google OAuth.
 
 Click on :guilabel:`Create` to finish this step.
 
@@ -68,12 +66,9 @@ To begin this process, click :menuselection:`Credentials` in the left sidebar me
 Then, click :guilabel:`Create Credentials` in the top menu, and select :guilabel:`API key` from the
 drop-down menu.
 
-.. screenshot:: general-google-translate-api-key
-   :menu: (Google Cloud console) ‣ Credentials ‣ Create credentials
-   :shows: The "Create credentials" dropdown with "API key", and the created API key dialog.
-   :highlight: The API key.
-   :module: mail
-   :notes: Google website; blur the key.
+.. image:: google_translate/api-key.png
+   :align: center
+   :alt: Create an API key in the Google API console.
 
 Copy the :guilabel:`API key` for use in the next section.
 

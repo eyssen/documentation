@@ -89,13 +89,9 @@ settings.
 Once the profile is selected, scroll down to the :guilabel:`Keyboard Output` option, and ensure the
 :guilabel:`Enable/disable keystroke output` option is :guilabel:`Enabled`.
 
-.. screenshot:: barcode-troubleshooting-zebra-settings
-   :menu: (Zebra DataWedge app) ‣ Profile ‣ Keyboard Output
-   :shows: The "Enable/disable keystroke output" toggle enabled in the Zebra DataWedge profile.
-   :highlight: The toggle (red frame).
-   :data: n/a
-   :module: barcodes
-   :notes: Screenshot of the Zebra device's own DataWedge app, not of Odoo.
+.. image:: device_troubleshooting/device-troubleshooting-zebra-settings.png
+   :align: center
+   :alt: Show keystroke option in the Zebra scanner's DataWedge app.
 
 Once that option is enabled, go back to the :guilabel:`Profile` options page, and go to the
 :guilabel:`Keystroke output` section. Then, open the :guilabel:`Key event options` submenu. Under
@@ -116,14 +112,9 @@ When using MUNBYN Android scanners, ensure the following configurations are set 
 From the device's home screen, click :menuselection:`AppSettings`. On the resulting page, locate the
 :guilabel:`Process mode` section, and select :guilabel:`Keyboard input`.
 
-.. screenshot:: barcode-troubleshooting-munbyn-process-mode
-   :menu: (MUNBYN AppSettings) ‣ Process mode
-   :shows: The Process mode section on the MUNBYN scanner's AppSettings page, with Keyboard input
-      selected.
-   :highlight: The "Keyboard input" option (red frame).
-   :data: n/a
-   :module: barcodes
-   :notes: Screenshot of the MUNBYN device's own settings app, not of Odoo.
+.. image:: device_troubleshooting/device-troubleshooting-munbyn-process-mode.png
+   :align: center
+   :alt: Process mode section on MUNBYN scanner's AppSettings page.
 
 .. tip::
    The selected *Process mode* controls how data is processed after barcode data has been read out.
@@ -176,26 +167,17 @@ activated.
 Then, also under the :guilabel:`Keyboard wedge` section, locate the :guilabel:`Keyboard wedge input
 mode` option. By default, the input mode is set to :guilabel:`Text injection`.
 
-.. screenshot:: barcode-troubleshooting-datalogic-wedge-menu
-   :menu: (Datalogic Settings app) ‣ System ‣ Scanner Settings ‣ Wedge
-   :shows: The Keyboard wedge configuration menu on a Datalogic scanner.
-   :highlight: n/a
-   :data: n/a
-   :module: barcodes
-   :notes: Screenshot of the Datalogic device's own settings app, not of Odoo.
+.. image:: device_troubleshooting/device-troubleshooting-wedge-menu.png
+   :align: center
+   :alt: Wedge configuration menu on Datalogic scanner.
 
 Click :guilabel:`Keyboard wedge input mode`, and change the setting to :guilabel:`Key pressure`.
 This ensures that scanned barcodes are translated into keyboard strokes, instead of being injected
 into the text area.
 
-.. screenshot:: barcode-troubleshooting-datalogic-wedge-input-mode
-   :menu: (Datalogic Settings app) ‣ System ‣ Scanner Settings ‣ Wedge ‣ Keyboard wedge input mode
-   :shows: The Keyboard wedge input mode selection on a Datalogic scanner, with "Key pressure"
-      selected.
-   :highlight: The "Key pressure" option (red frame).
-   :data: n/a
-   :module: barcodes
-   :notes: Screenshot of the Datalogic device's own settings app, not of Odoo.
+.. image:: device_troubleshooting/device-troubleshooting-keyboard-wedge-input.png
+   :align: center
+   :alt: Keyboard wedge input mode selection on Datalogic scanner.
 
 Once all those steps have been taken, perform a test scan to ensure the Datalogic Android scanner is
 working as intended.
@@ -219,13 +201,9 @@ NETUM devices
 By default, the NETUM barcode scanner's user manual only shows the French keyboard configuration. To
 use the Belgian keyboard, scan the code below:
 
-.. screenshot:: barcode-troubleshooting-netum-belgium-key
-   :menu: (scanner user manual)
-   :shows: The Belgian FR keyboard-layout barcode from the NETUM scanner's user manual.
-   :highlight: n/a
-   :data: n/a
-   :module: barcodes
-   :notes: Reuse the previous illustration (vendor manual barcode); no Odoo UI involved.
+.. image:: device_troubleshooting/device-troubleshooting-belgium-fr-key.png
+   :align: center
+   :alt: Belgian FR key barcode.
 
 Once that code has been scanned, ensure the NETUM scanner has the correct keyboard configuration,
 and is working as intended.

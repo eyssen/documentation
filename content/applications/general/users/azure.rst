@@ -86,12 +86,9 @@ issued by the authorization endpoint by scrolling down the screen and check the 
 :guilabel:`Access tokens (used for implicit flows)` and :guilabel:`ID tokens (used for implicit and
 hybrid flows)`.
 
-.. screenshot:: general-azure-authentication-tokens
-   :menu: (Microsoft Entra admin center / Azure portal) ‣ App registrations ‣ (app) ‣ Authentication
-   :shows: The Authentication page with the Web redirect URI and the "Access tokens" and "ID tokens" checkboxes ticked under implicit grant and hybrid flows.
-   :highlight: The two token checkboxes.
-   :module: auth_oauth
-   :notes: Microsoft website; blur IDs.
+.. image:: azure/authentication-tokens.png
+   :align: center
+   :alt: Authentication settings and endpoint tokens.
 
 Click :guilabel:`Save` to ensure these settings are saved.
 
@@ -107,12 +104,9 @@ After finishing this step, click on :guilabel:`Endpoints` on the top menu and cl
 next to :guilabel:`OAuth 2.0 authorization endpoint (v2)` field. Paste this value in the clipboard /
 notepad.
 
-.. screenshot:: general-azure-app-overview
-   :menu: (Microsoft Entra admin center / Azure portal) ‣ App registrations ‣ (app) ‣ Overview
-   :shows: The app Overview with the Application (client) ID and the Endpoints panel showing the OAuth 2.0 authorization endpoint (v2).
-   :highlight: The client ID and the authorization endpoint.
-   :module: auth_oauth
-   :notes: Microsoft website; blur IDs.
+.. image:: azure/overview-azure-app.png
+   :align: center
+   :alt: Application ID and OAuth 2.0 authorization endpoint (v2) credentials.
 
 Odoo setup
 ----------
@@ -179,19 +173,14 @@ Enter the :guilabel:`Microsoft Email Address` and click :guilabel:`Next`. Follow
 in to the account. Should :abbr:`2FA (Two Factor Authentication)` be turned on, then an extra step
 may be required.
 
-.. screenshot:: general-azure-microsoft-login
-   :menu: (Microsoft sign-in page)
-   :shows: The Microsoft sign-in page asking for the email address, with the Next button.
-   :module: auth_oauth
-   :notes: Microsoft website; use a demo account.
+.. image:: azure/login-next.png
+   :align: center
+   :alt: Enter Microsoft login credentials.
 
 Finally, after logging in to the account, the page will redirect to a permissions page where the
 user will be prompted to :guilabel:`Accept` the conditions that the Odoo application will access
 their Microsoft information.
 
-.. screenshot:: general-azure-permissions
-   :menu: (Microsoft sign-in page)
-   :shows: The Microsoft "Permissions requested" page for the app with the Accept button.
-   :highlight: The Accept button.
-   :module: auth_oauth
-   :notes: Microsoft website; use a demo account.
+.. image:: azure/accept-access.png
+   :align: center
+   :alt: Accept Microsoft conditions for permission access to your account information.

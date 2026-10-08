@@ -11,13 +11,8 @@ To enable Google Search Console for your website, go to `Google Search Console
 <https://search.google.com/search-console/welcome>`_. Then, select the property type
 :ref:`GSC-Domain` or :ref:`GSC-URL prefix`.
 
-.. screenshot:: website-google-search-console-add-domain-or-url-prefix
-   :menu: (Google Search Console)
-   :shows: The Google Search Console property selection screen with the Domain and URL prefix options side by side.
-   :highlight: The URL prefix option (red frame).
-   :data: Domain `example.com`.
-   :module: website
-   :notes: English UI, light theme, 1440px width.
+.. image:: google_search_console/add-domain-or-url-prefix.png
+   :alt: Google Search Console domain or URL prefix
 
 .. _GSC-Domain:
 

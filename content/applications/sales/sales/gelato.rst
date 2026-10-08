@@ -56,13 +56,8 @@ open a new API key form. Type in a name, then click :guilabel:`Create Key`.
 
 Copy the generated API key using :guilabel:`Copy to Clipboard`.
 
-.. screenshot:: sales-gelato-api-key
-   :menu: (Gelato dashboard) ‣ Developer ‣ API Keys
-   :shows: The Gelato API-keys page with a newly generated key and its copy button.
-   :highlight: The generated key (red frame).
-   :data: A throw-away key; mask the value.
-   :module: sale_gelato
-   :notes: English UI, light theme, crop to the key row. Use a throw-away secret and mask it.
+.. image:: gelato/gelato-api-key.png
+   :alt: Newly generated API key in the Gelato platform.
 
 .. important::
    Copy the API key and store it somewhere safe and secure before leaving this page. Once the page
@@ -98,13 +93,8 @@ The webhook form requires several specific configurations:
 - Click :guilabel:`Generate Key` to generate a :guilabel:`Header Value`.
 - Click :guilabel:`Create` to complete this webhook configuration.
 
-.. screenshot:: sales-gelato-webhook
-   :menu: (Gelato dashboard) ‣ Developer ‣ Webhooks
-   :shows: The Gelato webhooks page with the configured order-status webhook pointing at the Odoo database URL.
-   :highlight: The webhook URL (red frame).
-   :data: A throw-away Gelato account; the URL points to the demo database.
-   :module: sale_gelato
-   :notes: English UI, light theme, crop to the webhook row.
+.. image:: gelato/gelato-webhook.png
+   :alt: Newly configured webhook in the Gelato platform.
 
 .. tip::
    Copy and paste the API key and webhook on a notepad before tabbing out of the Gelato webpage as

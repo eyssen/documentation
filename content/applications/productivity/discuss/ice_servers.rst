@@ -27,12 +27,9 @@ questions:
 - For :guilabel:`How do you want to build with Twilio?`, select :guilabel:`With no code at all`.
 - For :guilabel:`What is your goal today?`, select :guilabel:`3rd party integrations`.
 
-.. screenshot:: productivity-ice-servers-twilio-welcome
-   :menu: (Twilio console) ‣ Sign up
-   :shows: The Twilio welcome page with the billing country selector and the "Get Started with Twilio" button.
-   :data: Use a throw-away Twilio account.
-   :module: mail
-   :notes: English UI, light theme, 1440px width.
+.. image:: ice_servers/twilio-welcome.png
+   :align: center
+   :alt: The Twilio welcome page.
 
 If necessary, change the billing country. Finally, click :guilabel:`Get Started with Twilio`.
 
@@ -44,13 +41,9 @@ To locate the Account SID and Auth Token, go to the Twilio account dashboard. Th
 :guilabel:`Account SID` and the :guilabel:`Auth Token`. Both of these are needed to connect Twilio
 to Odoo.
 
-.. screenshot:: productivity-ice-servers-twilio-credentials
-   :menu: (Twilio console) ‣ Account Info
-   :shows: The Account Info section of the Twilio console showing the Account SID and the Auth Token.
-   :highlight: The Account SID and Auth Token (red frame).
-   :data: Use throw-away credentials.
-   :module: mail
-   :notes: English UI, light theme, 1440px width.
+.. image:: ice_servers/twilio-acct-info.png
+   :align: center
+   :alt: The Twilio Account SID and Auth Token can be found uner the Account Info section.
 
 Connect Twilio to Odoo
 ======================

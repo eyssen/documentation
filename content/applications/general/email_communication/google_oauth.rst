@@ -35,11 +35,9 @@ browse for the :guilabel:`Location`. Set the :guilabel:`Location` as the *Google
 organization*. If you are using a personal Gmail account, then leave the :guilabel:`Location` as
 :guilabel:`No Organization`.
 
-.. screenshot:: general-email-google-new-project
-   :menu: (Google Cloud console) ‣ New Project
-   :shows: The New Project form with Project name and Location.
-   :module: google_gmail
-   :notes: Google website.
+.. image:: google_oauth/new-project.png
+   :align: center
+   :alt: Project Name and Location for Google OAuth.
 
 Click on :guilabel:`Create` to finish this step.
 
@@ -104,12 +102,9 @@ from the dropdown menu.
   Secret`. Finally, copy each generated value for later use when configuring in Odoo, and then
   navigate to the Odoo database.
 
-.. screenshot:: general-email-google-client-credentials
-   :menu: (Google Cloud console) ‣ Credentials
-   :shows: The "OAuth client created" dialog with Client ID and Client Secret.
-   :highlight: Client ID and Client Secret.
-   :module: google_gmail
-   :notes: Google website; blur IDs and secrets.
+.. image:: google_oauth/client-credentials.png
+   :align: center
+   :alt: Client ID and Client Secret for Google OAuth.
 
 Setup in Odoo
 =============
@@ -177,11 +172,9 @@ Production VS Testing Publishing Status
 Choosing :guilabel:`Production` as the :guilabel:`Publishing Status` (instead of
 :guilabel:`Testing`) will display the following warning message:
 
-.. screenshot:: general-email-google-testing-warning
-   :menu: (Google sign-in page)
-   :shows: The Google warning that the app is in testing and limited to 100 sensitive scope logins.
-   :module: google_gmail
-   :notes: Google website.
+.. image:: google_oauth/published-status.png
+   :align: center
+   :alt: OAuth is Limited to 100 Sensitive Scope Logins.
 
 To correct this warning, navigate to the `Google API Platform
 <https://console.cloud.google.com/apis/credentials/consent>`_. If the :guilabel:`Publishing status`
@@ -193,11 +186,9 @@ No Test Users Added
 If no test users are added to the OAuth consent screen, then a 403 access denied error will
 populate.
 
-.. screenshot:: general-email-google-403
-   :menu: (Google sign-in page)
-   :shows: The "Error 403: access_denied" page shown when the user is not a test user of the app.
-   :module: google_gmail
-   :notes: Google website.
+.. image:: google_oauth/403-error.png
+   :align: center
+   :alt: 403 Access Denied Error.
 
 To correct this error, return to the :guilabel:`OAuth consent screen` under :guilabel:`APIs &
 Services` and add test user(s) to the app. Add the email that you are configuring in Odoo.
@@ -224,11 +215,9 @@ Application Type
 When creating the credentials (OAuth *Client ID* and *Client Secret*), if :guilabel:`Desktop App` is
 selected for the :guilabel:`Application Type`, an :guilabel:`Authorization Error` appears.
 
-.. screenshot:: general-email-google-400
-   :menu: (Google sign-in page)
-   :shows: The "Error 400: redirect_uri_mismatch" authorization error.
-   :module: google_gmail
-   :notes: Google website.
+.. image:: google_oauth/error-400.png
+   :align: center
+   :alt: Error 400 Redirect URI Mismatch.
 
 To correct this error, delete the credentials already created and create new credentials, selecting
 :guilabel:`Web Application` for the :guilabel:`Application Type`. Then, under :guilabel:`Authorized

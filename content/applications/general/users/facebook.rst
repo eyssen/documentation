@@ -38,11 +38,9 @@ After the new app is created, the :guilabel:`Dashboard` page appears, with a lis
 completed before the app can be published. From here, click :guilabel:`Customize adding a Facebook
 Login button`.
 
-.. screenshot:: general-facebook-app-dashboard
-   :menu: (Meta for Developers) ‣ My Apps ‣ (app) ‣ Dashboard
-   :shows: The App Dashboard of the new app with the "Authenticate and request data from users with Facebook Login" use case and its Customize button.
-   :module: auth_oauth
-   :notes: Meta for Developers website; blur IDs.
+.. image:: facebook/app-requirements.png
+   :align: center
+   :alt: The App Dashboard in the Meta for developers platform.
 
 On the :guilabel:`Customize` page, click :guilabel:`Settings`.
 
@@ -76,12 +74,9 @@ drop-down menu.
 
 Click :guilabel:`Save changes`.
 
-.. screenshot:: general-facebook-basic-settings
-   :menu: (Meta for Developers) ‣ App settings ‣ Basic
-   :shows: The Basic Settings page with App ID, App Secret (hidden), Privacy Policy URL, User data deletion, App Icon and Category.
-   :highlight: The App ID field.
-   :module: auth_oauth
-   :notes: Meta for Developers website; blur IDs and secrets.
+.. image:: facebook/app-id.png
+   :align: center
+   :alt: An exampled of the Basic Settings page in the Meta for developers platform.
 
 .. _users/app-id:
 

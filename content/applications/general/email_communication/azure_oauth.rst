@@ -61,12 +61,9 @@ In the search bar, search for the following :guilabel:`Delegated permissions` an
 .. note::
    The :guilabel:`User.Read` permission will be added by default.
 
-.. screenshot:: general-email-azure-api-permissions
-   :menu: (Microsoft Entra admin center / Azure portal) ‣ App registrations ‣ (app) ‣ API permissions
-   :shows: The API permissions list under Microsoft Graph: offline_access, User.Read, IMAP.AccessAsUser.All and SMTP.Send (delegated).
-   :highlight: The permission list.
-   :module: microsoft_outlook
-   :notes: Microsoft website; blur tenant data.
+.. image:: azure_oauth/permissions.png
+   :align: center
+   :alt: API permissions needed for Odoo integration are listed under the Microsoft Graph.
 
 Assign users and groups
 =======================
@@ -78,12 +75,10 @@ Now, add users to this application. Under the :guilabel:`Essentials` overview ta
 link labeled :guilabel:`Managed Application in Local Directory`, or the last option on the bottom
 right-hand side of the table.
 
-.. screenshot:: general-email-azure-managed-app
-   :menu: (Microsoft Entra admin center / Azure portal) ‣ App registrations ‣ (app) ‣ Overview
-   :shows: The app overview with the "Managed application in local directory" link.
-   :highlight: The link.
-   :module: microsoft_outlook
-   :notes: Microsoft website; blur IDs.
+.. image:: azure_oauth/managed-application.png
+   :align: center
+   :alt: Add users/groups by clicking the Managed application in local directory link for the
+         created application.
 
 In the left sidebar menu, select :guilabel:`Users and Groups`. Next, click on :guilabel:`(+) Add
 User/Group`. Depending on the account, either a :guilabel:`Group` and a :guilabel:`User` can be
@@ -104,12 +99,9 @@ These include the :guilabel:`Client ID` and :guilabel:`Client Secret`. To start,
 :guilabel:`Client ID` or :guilabel:`Application ID` is located under the :guilabel:`Display Name`
 in the :guilabel:`Essentials` overview of the app.
 
-.. screenshot:: general-email-azure-client-id
-   :menu: (Microsoft Entra admin center / Azure portal) ‣ App registrations ‣ (app) ‣ Overview
-   :shows: The Essentials panel with the Application (client) ID.
-   :highlight: The Application (client) ID.
-   :module: microsoft_outlook
-   :notes: Microsoft website; blur IDs.
+.. image:: azure_oauth/application-id.png
+   :align: center
+   :alt: Application/Client ID located in the Overview of the app.
 
 Next, the :guilabel:`Client Secret Value` needs to be retrieved. To get this value, click on
 :guilabel:`Certificates & Secrets` in the left sidebar menu. Then, a :guilabel:`Client Secret`
@@ -129,12 +121,9 @@ and :guilabel:`Secret ID` will be created. It is important to copy the :guilabel
 :guilabel:`Client Secret Value` into a notepad as it will become encrypted after leaving this page.
 The :guilabel:`Secret ID` is not needed.
 
-.. screenshot:: general-email-azure-client-secret
-   :menu: (Microsoft Entra admin center / Azure portal) ‣ App registrations ‣ (app) ‣ Certificates & secrets
-   :shows: The client secrets list with the Value column (to copy) and the Secret ID column.
-   :highlight: The Value column.
-   :module: microsoft_outlook
-   :notes: Microsoft website; blur secrets.
+.. image:: azure_oauth/secretvalue.png
+   :align: center
+   :alt: Client Secret Value or Value in the app's credentials.
 
 After these steps, the following items should be ready to be set up in Odoo:
 
@@ -186,11 +175,9 @@ Then, click on :guilabel:`Connect your Outlook account`.
 A new window from Microsoft opens to complete the :guilabel:`authorization process`. Select the
 appropriate email address that is being configured in Odoo.
 
-.. screenshot:: general-email-azure-consent
-   :menu: (Microsoft sign-in page)
-   :shows: The Microsoft permission request page for the registered app, with the Yes/Accept button.
-   :module: microsoft_outlook
-   :notes: Microsoft website; use a demo account.
+.. image:: azure_oauth/verify-outlook.png
+   :align: center
+   :alt: Permission page to grant access between newly created app and Odoo.
 
 Then, allow Odoo to access the Microsoft account by clicking on :guilabel:`Yes`. After this, the
 page will navigate back to the newly configured :guilabel:`Outgoing Mail Server` in Odoo. The

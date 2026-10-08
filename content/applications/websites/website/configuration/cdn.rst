@@ -29,13 +29,9 @@ Locator)`.
    actual name of the database. A custom :abbr:`URL (Uniform Resource Locator)` can be used, as
    well, in place of the Odoo subdomain that was provided to the database.
 
-.. screenshot:: website-cdn-keycdn-zone
-   :menu: (KeyCDN dashboard) ‣ Zones ‣ Add Zone
-   :shows: The KeyCDN zone configuration page with the Zone Name, Zone Status and Zone Type (Pull) fields and the Origin URL.
-   :highlight: The Zone Type and Origin URL fields (red frame).
-   :data: Zone name 'odoo-website', origin `https://www.example.com`.
-   :module: website
-   :notes: English UI, light theme, 1440px width.
+.. image:: cdn/keycdn-zone.png
+   :align: center
+   :alt: KeyCDN's Zone configuration page.
 
 Under the :guilabel:`General Settings` heading below the zone form, click the :guilabel:`Show all
 settings` button to expand the zone options. This should be the last option on the page. After
@@ -45,13 +41,9 @@ expanding the :guilabel:`General Settings` ensure that the :guilabel:`CORS` opti
 Next, scroll to the bottom of the zone configuration page and :guilabel:`Save` the changes. KeyCDN
 will indicate that the new zone will be deployed. This can take about 10 minutes.
 
-.. screenshot:: website-cdn-zone-url
-   :menu: (KeyCDN dashboard) ‣ Zones
-   :shows: The KeyCDN zone list after deployment, showing the generated Zone URL of the new pull zone.
-   :highlight: The Zone URL (red frame).
-   :data: Zone 'odoo-website' in status 'active'.
-   :module: website
-   :notes: English UI, light theme, 1440px width.
+.. image:: cdn/zone-url.png
+   :align: center
+   :alt: KeyCDN deploying the new Zone.
 
 .. note::
    A new :guilabel:`Zone URL` has been generated for your Zone, in this example it is

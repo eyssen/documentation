@@ -26,12 +26,8 @@ Console <https://console.developers.google.com>`_ and log into the Google accoun
 Next, click :guilabel:`Select a project` and select (or create) an API project to configure OAuth
 in, and store credentials. Click :guilabel:`New Project`.
 
-.. screenshot:: google-calendar-new-api-project
-   :menu: (Google Cloud console) ‣ Select a project
-   :shows: The Google Cloud console project selector with the "New project" button, used to create the API project.
-   :data: Project name "Odoo Sync".
-   :module: google_calendar
-   :notes: English UI, light theme, 1440px width.
+.. image:: google/new-api-project.png
+   :alt: Create a new API project to store credentials.
 
 Give the API project a clear name, like `Odoo Sync`, so it can be identified. Then click the
 :guilabel:`Create` button.
@@ -42,22 +38,14 @@ Enable Google calendar API
 Now, click on :guilabel:`Enabled APIs and Services` in the left menu. Select :guilabel:`Enabled APIs
 and Services` again if the :guilabel:`Search bar` does not appear.
 
-.. screenshot:: google-calendar-enable-apis
-   :menu: (Google Cloud console) ‣ APIs & Services ‣ Enabled APIs and Services
-   :shows: The "Enabled APIs & Services" page with the "+ ENABLE APIS AND SERVICES" button.
-   :highlight: The "Enable APIs and Services" button (red frame).
-   :module: google_calendar
-   :notes: English UI, light theme, 1440px width.
+.. image:: google/enable-apis-services.png
+   :alt: Enable APIs and Services on the API Project.
 
 After that, search for `Google Calendar API` using the search bar and select :guilabel:`Google
 Calendar API` from the search results. Click :guilabel:`Enable`.
 
-.. screenshot:: google-calendar-enable-calendar-api
-   :menu: (Google Cloud console) ‣ API Library ‣ Google Calendar API
-   :shows: The Google Calendar API page of the API library with the "Enable" button.
-   :highlight: The "Enable" button (red frame).
-   :module: google_calendar
-   :notes: English UI, light theme, 1440px width.
+.. image:: google/enable-google-cal-api.png
+   :alt: Enable the Google Calendar API.
 
 OAuth consent screen
 --------------------
@@ -117,13 +105,8 @@ Under :menuselection:`Create OAuth Client ID`, select :guilabel:`Website applica
   company's Odoo :abbr:`URL (Uniform Resource Locator)` address followed by
   `/google_account/authentication`. Finally, click :guilabel:`Create`.
 
-.. screenshot:: google-calendar-oauth-uris
-   :menu: (Google Cloud console) ‣ APIs & Services ‣ Credentials ‣ Create OAuth client ID
-   :shows: The OAuth client creation form with the authorized JavaScript origins and the authorized redirect URIs filled in with the database URL.
-   :highlight: The two URI fields (red frame).
-   :data: Database URL https://company-name.com and .../google_account/authentication.
-   :module: google_calendar
-   :notes: English UI, light theme, 1440px width.
+.. image:: google/uri.png
+   :alt: Add the authorized JavaScript origins and the authorized redirect URIs.
 
 A :guilabel:`Client ID` and :guilabel:`Client Secret` will appear, save these somewhere safe.
 
@@ -170,12 +153,8 @@ button to sync Google Calendar with Odoo.
    :guilabel:`Continue` (should the app be unverified), and finally select :guilabel:`Continue` (to
    give permission for the transfer of data).
 
-.. screenshot:: google-calendar-consent
-   :menu: (Google account consent screen)
-   :shows: The Google consent screen asking to grant access to the Google Calendar of the account.
-   :data: Use a throw-away Google test account.
-   :module: google_calendar
-   :notes: English UI, light theme, 1440px width.
+.. image:: google/trust-odoo.png
+   :alt: Give Odoo permission to access Google Calendar.
 
 Now, Odoo Calendar is successfully synced with Google Calendar!
 
@@ -269,12 +248,8 @@ No test users added
 If no test users are added to the :guilabel:`OAuth consent screen`, then an :guilabel:`Error 403:
 access_denied` populates.
 
-.. screenshot:: google-calendar-error-403
-   :menu: (Google account consent screen)
-   :shows: The "403: access_denied" error page shown when the user is not a test user of the API project.
-   :data: Use a throw-away Google test account.
-   :module: google_calendar
-   :notes: English UI, light theme, 1440px width.
+.. image:: google/403-error.png
+   :alt: 403 Access Denied Error.
 
 To correct this error, return to the :guilabel:`OAuth consent screen`, under :guilabel:`APIs &
 Services`, and add test users to the app. Add the email to be configured in Odoo.
@@ -286,11 +261,8 @@ When creating the credentials (OAuth *Client ID* and *Client Secret*), if :guila
 selected for the :guilabel:`Application Type`, an :guilabel:`Authorization Error` appears
 (:guilabel:`Error 400:redirect_uri_mismatch`).
 
-.. screenshot:: google-calendar-error-400
-   :menu: (Google account consent screen)
-   :shows: The "400: redirect_uri_mismatch" error page shown when the redirect URI does not match the one configured in the credentials.
-   :module: google_calendar
-   :notes: English UI, light theme, 1440px width.
+.. image:: google/error-400.png
+   :alt: Error 400 Redirect URI Mismatch.
 
 To correct this error, delete the existing credentials, and create new credentials, by selecting
 :guilabel:`Web Application` for the :guilabel:`Application Type`.

@@ -20,13 +20,8 @@ Configuration on Flutterwave Dashboard
 #. Make sure *all* the remaining checkboxes are ticked.
 #. Click on **Save** to finalize the configuration.
 
-.. screenshot:: finance-payment-providers-flutterwave-flutterwave-settings
-   :menu: (Flutterwave Dashboard) ‣ Settings ‣ Webhooks
-   :shows: The Flutterwave webhook settings page: the "URL" field with the database URL followed by /payment/flutterwave/webhook, the "Secret hash" field, and all notification checkboxes ticked.
-   :highlight: The "URL" and "Secret hash" fields.
-   :data: Test-mode dashboard; use a throw-away secret hash.
-   :module: payment_flutterwave
-   :notes: English UI, light theme, 1440px width; use a throw-away secret.
+.. image:: flutterwave/flutterwave-settings.png
+   :alt: Flutterwave settings
 
 .. _payment_providers/flutterwave/configure_odoo:
 

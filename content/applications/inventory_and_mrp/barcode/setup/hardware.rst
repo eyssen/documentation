@@ -61,13 +61,9 @@ keyboard (HID), with the language set based on the keyboard that is in use.
 To configure the keyboard layout for a **Zebra** scanner, scan the keyboard wedge barcode for the
 desired language in the scanner's user manual.
 
-.. screenshot:: barcode-hardware-keyboard-manual
-   :menu: (scanner user manual)
-   :shows: A page from a Zebra scanner's user manual showing keyboard-language setting barcodes.
-   :highlight: n/a
-   :data: n/a
-   :module: barcodes
-   :notes: Reuse the previous illustration (vendor manual excerpt); no Odoo UI involved.
+.. figure:: hardware/keyboard-barcode.png
+   :align: center
+   :alt: Example of a user manual for keyboard layout.
 
 Automatic carriage return
 -------------------------
@@ -102,13 +98,9 @@ settings.
 Once the profile is selected, scroll down to the :guilabel:`Keyboard Output` option, and ensure the
 :guilabel:`Enable/disable keystroke output` option is :guilabel:`Enabled`.
 
-.. screenshot:: barcode-hardware-zebra-keystroke
-   :menu: (Zebra DataWedge app) ‣ Profile ‣ Keyboard Output
-   :shows: The "Enable/disable keystroke output" toggle enabled in the Zebra DataWedge profile.
-   :highlight: The toggle (red frame).
-   :data: n/a
-   :module: barcodes
-   :notes: Screenshot of the Zebra device's own DataWedge app, not of Odoo.
+.. image:: hardware/enable-keystroke.png
+   :align: center
+   :alt: Show keystroke option in the Zebra scanner's DataWedge app.
 
 Once that option is enabled, go back to the :guilabel:`Profile` options page, and go to the
 :guilabel:`Keystroke output` section. Then, open the :guilabel:`Key event options` submenu. Under
@@ -137,13 +129,9 @@ resulting list of options, select :guilabel:`Data Processing Settings`.
 The :guilabel:`Data Processing Settings` specify how barcode data is processed by the computer.
 Locate the :guilabel:`Wedge Method` setting. By default, this is set to :guilabel:`Standard`.
 
-.. screenshot:: barcode-hardware-honeywell-settings
-   :menu: (Honeywell Settings app) ‣ Scanning ‣ Internal Scanner ‣ Default Profile ‣ Data Processing Settings
-   :shows: The "Wedge Method" setting on the Honeywell scanner's Data Processing Settings page.
-   :highlight: The "Wedge Method" field (red frame).
-   :data: n/a
-   :module: barcodes
-   :notes: Screenshot of the Honeywell device's own settings app, not of Odoo.
+.. image:: hardware/hardware-honeywell-settings.png
+   :align: center
+   :alt: Data processing settings options for Honeywell scanner.
 
 Change the :guilabel:`Wedge Method` setting to :guilabel:`Keyboard`.
 
@@ -165,24 +153,16 @@ Next, select the :guilabel:`Default Profile`, or create a new profile, if needed
 Under the :guilabel:`General Settings`, click :guilabel:`Data Output`, followed by
 :guilabel:`Keyboard Emulation`.
 
-.. screenshot:: barcode-hardware-cipherlab-data-output
-   :menu: (Cipherlab ReaderConfig app) ‣ (profile) ‣ General Settings ‣ Data Output
-   :shows: The Cipherlab scanner's Data Output settings page, with Keyboard Emulation selected.
-   :highlight: n/a
-   :data: n/a
-   :module: barcodes
-   :notes: Screenshot of the Cipherlab device's own settings app, not of Odoo.
+.. image:: hardware/hardware-cipherlab-settings.png
+   :align: center
+   :alt: Cipherlab scanner data output setting page.
 
 By default, the :guilabel:`Input Method`, under :guilabel:`Keyboard Emulation`, is set to
 :guilabel:`Default Mode`. Change this setting to :guilabel:`KeyEvent`.
 
-.. screenshot:: barcode-hardware-cipherlab-keyboard-emulation
-   :menu: (Cipherlab ReaderConfig app) ‣ (profile) ‣ General Settings ‣ Data Output ‣ Keyboard Emulation
-   :shows: The Cipherlab scanner's Keyboard Emulation settings, with Input Method set to KeyEvent.
-   :highlight: The "Input Method" field (red frame).
-   :data: n/a
-   :module: barcodes
-   :notes: Screenshot of the Cipherlab device's own settings app, not of Odoo.
+.. image:: hardware/hardware-cipherlab-emulation.png
+   :align: center
+   :alt: Cipherlab scanner keyboard emulation settings.
 
 After completing the steps, conduct a test scan to verify the Cipherlab scanner is working as
 intended.

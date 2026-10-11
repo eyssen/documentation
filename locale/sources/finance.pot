@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-08 17:35+0200\n"
+"POT-Creation-Date: 2026-10-11 06:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -6845,6 +6845,7 @@ msgid "Product reception"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:312
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:139
 msgid "Summary"
 msgstr ""
 
@@ -8890,6 +8891,7 @@ msgid "Figure"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/batch_bank_transfers.rst:158
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:148
 #: ../../content/applications/finance/fiscal_localizations/romania/base.rst:105
 #: ../../content/applications/finance/fiscal_localizations/romania/declarations.rst:182
 #: ../../content/applications/finance/fiscal_localizations/romania/declarations.rst:273
@@ -10730,244 +10732,578 @@ msgstr ""
 msgid ":doc:`Analytic budget <budget>`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:18
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:14
+msgid ":doc:`Analytic cost control <analytic_cost_control>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:19
 msgid "Analytic accounts"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:20
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:21
 msgid "Analytic accounts give an overview of costs and revenue."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:22
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:23
 msgid "To access analytic accounts, go to :menuselection:`Accounting --> Configuration --> Analytic Accounts`. To create a new analytic account, click :guilabel:`New` and fill in the following information:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:26
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:27
 msgid ":guilabel:`Analytic Account`: Assign the name of the analytic account."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:27
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:28
 msgid ":guilabel:`Customer`: Select the customer linked to the project, if applicable."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:28
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:29
 msgid ":guilabel:`Reference`: Include a reference to make the account easier to find if needed."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:29
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:30
 msgid ":guilabel:`Plan`: Link the :guilabel:`Analytic Account` to an :ref:`analytic plan <accounting/analytic_accounting/analytic_plans>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:31
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:32
 msgid ":guilabel:`Company`: In a :doc:`multi-company </applications/general/companies/multi_company>` environment, select the company using the analytic account. To make the analytic account accessible to all companies, leave the field empty."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:34
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:35
 msgid ":guilabel:`Currency`: Update the currency of the analytic account if needed."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:36
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:37
 msgid "Then, the :doc:`budget <budget>` information can be filled in."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:41
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:42
 msgid "Analytic plans"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:43
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:44
 msgid "Analytic plans group :ref:`analytic accounts <accounting/analytic_accounting/analytic_accounts>`, allowing the company to analyze its accounting, such as tracking costs and revenues by project or department."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:47
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:48
 msgid "To access analytic plans, go to :menuselection:`Accounting --> Configuration --> Analytic Plans`. Click :guilabel:`New` to create a new plan, add a name, and fill in the following information:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:50
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:51
 msgid ":guilabel:`Parent`: Link the plan to another analytic plan if a hierarchy between plans must be built."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:52
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:53
 msgid ":guilabel:`Default Applicability`: Define how the plan is applied when creating a new journal entry:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:55
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:56
 msgid ":guilabel:`Optional`: Adding the analytic plan is not mandatory."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:56
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:57
 msgid ":guilabel:`Mandatory`: The entry cannot be confirmed if no analytic account is selected."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:57
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:58
 msgid ":guilabel:`Unavailable`: The plan is not available."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:59
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:60
 msgid ":guilabel:`Color`: Set a color for the tag related to this specific plan."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:61
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:62
 msgid "To fine-tune a plan's applicability, create a new line in the :guilabel:`Applicability` tab and set the following fields:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:64
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:65
 msgid ":guilabel:`Domain`: Choose the accounting documents to which the plan applies."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:65
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:66
 msgid ":guilabel:`Financial Accounts Prefixes`: Enter the prefix(es) of the account(s) to which the plan applies."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:67
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:68
 msgid ":guilabel:`Product Category`: Choose the product category to which the plan applies."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:68
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:69
 msgid ":guilabel:`Applicability`: Define how the plan is applied when creating a new journal entry. The applicability set here always overrides the default applicability."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:70
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:71
 msgid ":guilabel:`Company`: In a :doc:`multi-company </applications/general/companies/multi_company>` environment, select the company using the plan. To make the analytic plan accessible to all companies, leave the field empty."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:74
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:75
 msgid "Two smart buttons are available:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:76
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:77
 msgid ":guilabel:`Subplans`: To have a more complex analytic structure. Click the smart button, then click :guilabel:`New` to add a subplan. This creates a parent-child relationship between the two plans, and the :guilabel:`Parent` field of the subplan is automatically populated with the original plan."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:80
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:81
 msgid ":guilabel:`Analytic Accounts`: To access the :ref:`analytic accounts <accounting/analytic_accounting/analytic_accounts>` linked to the plan."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:84
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:85
 msgid "Each analytic plan must have at least one analytic account."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:89
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:90
 msgid "Analytic distribution"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:91
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:92
 msgid "The distribution of costs in one or more analytic accounts can be set in each :ref:`invoice/bill <accounting/analytic_accounting/distribution-invoices-bills>` or :ref:`en masse <accounting/analytic_accounting/distribution-mass>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:96
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:97
 msgid "The analytic distribution is prefilled based on the applicability and the :ref:`analytic distribution models <accounting/analytic_distribution_models>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:102
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:103
 msgid "Analytic distribution on invoices or bills"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:104
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:105
 msgid "To add analytic distribution, click the :guilabel:`Analytic Distribution` column when creating an :ref:`invoice <accounting/invoice/creation>` or :ref:`bill <accounting/vendor_bills/creation>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:108
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:109
 msgid "The :guilabel:`Analytic Distribution` field is mandatory only if the :ref:`analytic plan <accounting/analytic_accounting/analytic_plans>` has been set as :guilabel:`Mandatory` in either the :guilabel:`Default Applicability` field on an analytic plan or the :guilabel:`Applicability` field on an analytic plan line."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:113
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:114
 msgid "In the :guilabel:`Analytic` window, select the desired :guilabel:`Analytic Accounts` in the different :guilabel:`Analytic Plans` displayed in columns. Then, split the costs between the accounts by modifying the percentage."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:129
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:130
 msgid "Analytic distribution en masse"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:131
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:132
 msgid "To mass-edit analytic accounts in several entries simultaneously, go to :menuselection:`Accounting --> Accounting --> Journal items`, and select the ones that need to be updated. Click the :guilabel:`Analytic Distribution` column and add the required distribution in the :guilabel:`Analytic` column, then click the :icon:`oi-close` :guilabel:`(cross)` and :guilabel:`Confirm`. The analytic distribution is then added to the selected journal items."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:140
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:141
 msgid "Analytic distribution models"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:142
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:143
 msgid "Analytic distribution models automatically apply a specific distribution based on defined criteria."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:144
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:145
 msgid "To create a new analytic distribution model, go to :menuselection:`Accounting --> Configuration --> Analytic Distribution Models`, click :guilabel:`New`, and set the conditions the model has to meet to apply automatically:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:149
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:150
 msgid "All specified conditions of an analytic distribution model must be met for the model to be applied. To apply an analytic distribution model based on individual conditions, create separate analytic distribution models for each condition."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:152
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:153
 msgid "Analytic distribution models can be combined and sequenced, allowing distribution across multiple models if linked to different :ref:`analytic plans <accounting/analytic_accounting/analytic_plans>`. To adjust the order, drag and drop the models using the :icon:`oi-draggable` :guilabel:`(draggable)` icon."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:157
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:158
 msgid ":guilabel:`Accounts Prefixes`: Apply the distribution model only to journal items involving accounts that begin with specific prefixes."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:159
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:160
 msgid ":guilabel:`Partner`: Apply the distribution model only to journal items involving a specific partner."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:161
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:162
 msgid ":guilabel:`Product`: Apply the distribution model only to journal items involving a specific product."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:163
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:164
 msgid ":guilabel:`Company`: In a :doc:`multi-company </applications/general/companies/multi_company>` environment, apply the distribution model only to journal items involving a specific company. To apply it across all companies, leave the field empty."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:166
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:167
 msgid ":guilabel:`Analytic Distribution`: :ref:`Analytic distribution <accounting/analytic_accounting/analytic-distribution>` that will be applied when the above conditions are met."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:171
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:172
 msgid "Any time a journal item is posted to the :guilabel:`Utilities (601000)` account, it should be automatically distributed in the :guilabel:`Departments` analytic plan as follows:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:174
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:175
 msgid "60% to the :guilabel:`Manufacturing` analytic account"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:175
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:176
 msgid "30% to the :guilabel:`Marketing` analytic account"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:176
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:177
 msgid "10% to the :guilabel:`Admin` analytic account"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:178
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:179
 msgid "To automate this distribution, the :guilabel:`Accounts Prefix` can be set to `601`, as :guilabel:`Utilities (601000)` is the only account in the chart of accounts that begins with `601`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:182
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:183
 msgid "If additional accounts such as :guilabel:`Electricity (601100)` or :guilabel:`Gas (601200)` are available in the chart of accounts, the distribution will also apply to both since they share the same prefix."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:186
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:187
 msgid "To define more criteria, use the :icon:`oi-settings-adjust` :guilabel:`(adjust settings)` icon to reveal more columns or click :guilabel:`View` on an individual analytic distribution model."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:189
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:190
 msgid ":guilabel:`Partner Category`: Apply this distribution model only to journal items involving a partner in a specific category."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:191
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:192
 msgid ":guilabel:`Product Category`: Apply this distribution model to journal items involving a product in a specific category."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:195
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:196
 msgid "Alternatively, it is possible to create an analytic distribution model from the :guilabel:`Analytic` window by clicking :guilabel:`New Model`:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:198
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:199
 msgid "either when creating an invoice/bill and filling in the :ref:`analytic distribution <accounting/analytic_accounting/distribution-invoices-bills>`;"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:200
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:201
 msgid "or when :ref:`mass-editing analytic accounts <accounting/analytic_accounting/distribution-mass>` in several entries simultaneously."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:3
+msgid "Analytic cost control"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:5
+msgid "*Analytic Cost Control* (`account_analytic_cost_control`) adds plan-versus-actual cost control on top of :doc:`analytic accounts <analytic_accounting>`: a cost plan per analytic account, the committed and actual costs, the revenue, and the margin. A typical use is the follow-up of **work numbers** (job numbers), but it works with any analytic plan: projects, cost centers, etc."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:10
+msgid "The module adds no field to the documents. Customer invoices, vendor bills, purchase and sales order lines, timesheets, expenses, and stock valuation are booked to an analytic account through the standard :ref:`analytic distribution <accounting/analytic_accounting/analytic-distribution>` of their lines. The module then compares these booked items with the cost plan."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:16
+msgid "The module depends only on *Accounting*. The :guilabel:`Contract Value` of the summary is only available if *Sales* is installed, and the :guilabel:`Committed` column only if *Purchase* is installed."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:23
+msgid "Activate the feature"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:25
+msgid "Go to :menuselection:`Settings --> eYssen ERP`, and, in the :guilabel:`Analytic Cost Control` section, enable :guilabel:`Analytic Cost Control`. Then, click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:28
+msgid "The menus, the summary, and the cost plan are only displayed if analytic accounting is enabled. Go to :menuselection:`Accounting --> Configuration --> Settings`, and, in the :guilabel:`Analytics` section, enable :guilabel:`Analytic Accounting`. Then, click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:35
+msgid "Configure an analytic plan"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:37
+msgid "The module does **not** create any analytic plan when it is installed. Choose the plans to follow up: either enable the cost control on an existing plan (e.g., :guilabel:`Projects`), or create a new plan."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:41
+msgid "Go to :menuselection:`Accounting --> Configuration --> Analytic Plans`, open a plan, and set:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:43
+msgid ":guilabel:`Cost Control`: the analytic accounts of this plan get the cost plan, the summary, and the plan / actual report."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:45
+msgid ":guilabel:`Code Sequence` (optional, independent of :guilabel:`Cost Control`): select a sequence. The new analytic accounts of this plan that have no :guilabel:`Reference` get their reference from this sequence. For example, with the prefix `WN/%(year)s/`, the first work number of 2026 is `WN/2026/00001`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:51
+msgid "Both options can only be set on a **root** analytic plan, not on a sub-plan. Otherwise, the error *Cost control and the code sequence can only be set on a root analytic plan.* is displayed."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:55
+msgid "To follow up work numbers, create an analytic plan named `Work Numbers`, tick :guilabel:`Cost Control`, and create a sequence with the prefix `WN/%(year)s/` and a padding of `5` in :guilabel:`Code Sequence`. Projects carry the analytic accounts of all the plans, so the timesheets of a project that is linked to a work number are booked to it automatically."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:63
+msgid "How the analytic items are classified"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:65
+msgid "Every analytic item is classified when it is booked. The classification is stored and is used in the summary, the lists, and the report."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:68
+msgid "**Revenue or cost**"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:70
+msgid "An item is **revenue** if its financial account is an income account. An item without a financial account is revenue if its amount is positive and it is not a timesheet. Any other item is a cost."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:73
+msgid "**Cost category**"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:75
+msgid "A cost is either :guilabel:`Labour`, :guilabel:`Material`, or :guilabel:`Other Costs`. The category is the first one that applies in this order:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:78
+msgid "the :guilabel:`Cost Category` of the financial account (:menuselection:`Accounting --> Configuration --> Chart of Accounts`, in the account form; the field is not displayed for income and balance sheet accounts);"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:81
+msgid "the :guilabel:`Cost Category` of the product category (:menuselection:`Inventory --> Configuration --> Product Categories`, or the same menu of :guilabel:`Invoicing`, in the :guilabel:`Cost Control` group); sub-categories inherit it;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:84
+msgid "the product type: a service is :guilabel:`Labour`, a goods product is :guilabel:`Material`;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:85
+msgid "a timesheet line is :guilabel:`Labour`;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:86
+msgid "anything else is :guilabel:`Other Costs`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:88
+msgid "**Own or external**"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:90
+msgid "A cost is :guilabel:`External` if it comes from a vendor bill (including receipts), and :guilabel:`Own` for everything else: timesheets, stock valuation, payroll, and miscellaneous entries."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:94
+msgid "If the :guilabel:`Cost Category` of a parent product category is changed, the items that are already booked are not recomputed. Changing it on the financial account or on the product's own category does recompute them."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:101
+msgid "The analytic account form"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:103
+msgid "The following elements are only displayed on the analytic accounts of a plan with :guilabel:`Cost Control`, and only to the users of the :guilabel:`Analytic Accounting` group. To open an account, go to :menuselection:`Accounting --> Accounting --> Cost Control`, or :menuselection:`Accounting --> Configuration --> Analytic Accounts`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:108
+msgid "The form has the new fields :guilabel:`Responsible Users` and :guilabel:`Original Plan Saved On` (read-only), and its chatter also supports activities."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:112
+msgid "Cost plan"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:114
+msgid "The :guilabel:`Cost Plan` tab contains editable lines with the following columns, and the totals at the bottom:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:117
+msgid ":guilabel:`Cost Category`: :guilabel:`Labour`, :guilabel:`Material`, or :guilabel:`Other Costs`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:118
+msgid ":guilabel:`Own / External`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:119
+msgid ":guilabel:`Description`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:120
+msgid ":guilabel:`Original Plan`: read-only, set by the :guilabel:`Save as Original Plan` button."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:121
+msgid ":guilabel:`Current Plan`: the amount that is currently planned."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:123
+msgid "The :guilabel:`Notes` tab contains free rich-text notes."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:125
+msgid "When the quotation is accepted, click :guilabel:`Save as Original Plan` and confirm the message *The current cost plan overwrites the original plan. Continue?* The :guilabel:`Current Plan` of every cost plan line is copied to its :guilabel:`Original Plan`, the date is recorded in :guilabel:`Original Plan Saved On`, and a message is posted in the chatter. From then on, the :guilabel:`Current Plan` can be adjusted while the :guilabel:`Original Plan` keeps the figures of the quotation. If the account has no cost plan lines, an error is displayed."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:132
+msgid "The :guilabel:`Plan / Actual` smart button opens the :ref:`plan / actual analysis <accounting/analytic_cost_control/report>` filtered on the account and grouped by cost category and by own / external."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:141
+msgid "The summary at the top of the form shows these indicators:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:147
+msgid "Indicator"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:149
+msgid ":guilabel:`Contract Value`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:150
+msgid "The untaxed amount of the confirmed sales order lines distributed to this account, in proportion to the distribution percentage. Only displayed if *Sales* is installed."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:152
+msgid ":guilabel:`Invoiced Revenue`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:153
+msgid "The revenue items booked to the account."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:154
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:178
+msgid ":guilabel:`Actual Cost`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:155
+msgid "The cost items booked to the account."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:156
+msgid ":guilabel:`Margin`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:157
+msgid "The invoiced revenue minus the actual cost, with the margin as a percentage of the revenue."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:158
+msgid ":guilabel:`Planned Margin`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:159
+msgid "The contract value minus the current plan. Only displayed if there is a contract value."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:161
+msgid "Below the indicators, a table has one row per :guilabel:`Labour`, :guilabel:`Material`, and :guilabel:`Other Costs`, and a :guilabel:`Total` row. Its columns are:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:168
+msgid "Column"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:169
+#: ../../content/applications/finance/fiscal_localizations/romania/d394.rst:130
+#: ../../content/applications/finance/fiscal_localizations/romania/declarations.rst:20
+#: ../../content/applications/finance/fiscal_localizations/romania/e_factura.rst:189
+#: ../../content/applications/finance/fiscal_localizations/romania/financial_statements.rst:27
+#: ../../content/applications/finance/fiscal_localizations/romania/saft_d406.rst:69
+#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:21
+msgid "Content"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:170
+msgid ":guilabel:`Original Plan`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:171
+msgid "The plan :guilabel:`At quotation`, with the date on which it was saved."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:172
+msgid ":guilabel:`Current Plan`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:173
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:179
+msgid "The total, and its own / external split."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:174
+msgid ":guilabel:`Committed`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:175
+msgid "The :guilabel:`Open purchase orders`: the part not yet billed of the confirmed purchase order lines distributed to this account, in proportion to the distribution percentage. The category comes from the product. Only displayed if *Purchase* is installed."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:180
+msgid ":guilabel:`Completion`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:181
+msgid "The actual cost divided by the plan, as a total and as an own / external split. It is green up to 90%, orange from 90% to 100%, and red above 100%. A dash is displayed if there is no plan."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:185
+msgid "Click an amount to see the records behind it: the actual amounts open the analytic items (filtered by category and by own / external), :guilabel:`Invoiced Revenue` opens the revenue items, :guilabel:`Committed` opens the purchase orders, and :guilabel:`Contract Value` opens the sales orders."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:191
+msgid "The amounts are displayed in the currency of the company of the analytic account. Amounts in other currencies are converted at today's rate."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:197
+#: ../../content/applications/finance/fiscal_localizations/romania/multi_company.rst:65
+msgid "Menus"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:200
+msgid "Cost control list"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:202
+msgid "Go to :menuselection:`Accounting --> Accounting --> Cost Control` to list the analytic accounts of the plans with :guilabel:`Cost Control`, with the columns :guilabel:`Reference`, :guilabel:`Name`, :guilabel:`Plan`, :guilabel:`Customer`, :guilabel:`Responsible Users`, :guilabel:`Activities`, :guilabel:`Cost`, :guilabel:`Revenue`, and :guilabel:`Margin`. The :guilabel:`I'm Responsible` filter keeps the accounts of which you are a responsible user. Clicking :guilabel:`New` creates an account in the first plan with :guilabel:`Cost Control`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:212
+msgid "Plan / actual analysis"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:214
+msgid "Go to :menuselection:`Accounting --> Reporting --> Management --> Plan / Actual Analysis`. The report is available as a pivot table, a graph, and a list. It has one row per cost plan line and one row per analytic item booked to an account of a plan with :guilabel:`Cost Control`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:218
+msgid "**Measures**: :guilabel:`Original Plan`, :guilabel:`Current Plan`, :guilabel:`Actual Cost`, :guilabel:`Remaining Plan` (the current plan minus the actual cost), :guilabel:`Revenue`, and :guilabel:`Margin` (the revenue minus the actual cost)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:221
+msgid "**Dimensions**: :guilabel:`Analytic Account`, :guilabel:`Analytic Plan`, :guilabel:`Customer`, :guilabel:`Cost Category` (including :guilabel:`Revenue`), :guilabel:`Own / External`, :guilabel:`Source` (:guilabel:`Cost Plan` or :guilabel:`Booked`), :guilabel:`Financial Account`, :guilabel:`Product`, and :guilabel:`Date`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:225
+msgid "**Filters**: :guilabel:`Costs`, :guilabel:`Revenue`, :guilabel:`Own`, :guilabel:`External`, and :guilabel:`Date`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:229
+msgid "The cost plan lines have no date. When a :guilabel:`Date` filter is applied, only the booked figures are displayed."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:233
+msgid "Analytic items"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:235
+msgid "When the analytic items are opened from the summary, the list shows the additional columns :guilabel:`Cost Category` and :guilabel:`Own / External`. In the search view, the items can be grouped by :guilabel:`Cost Control Account`, :guilabel:`Cost Category`, and :guilabel:`Own / External`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:241
+#: ../../content/applications/finance/accounting/reporting/budget.rst:134
+msgid ":doc:`analytic_accounting`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:242
+msgid ":doc:`budget`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:243
+msgid ":doc:`/applications/general/eyssen_erp_settings`"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:3
@@ -11133,10 +11469,6 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:130
 msgid "The planned amounts can also be displayed next to the actuals in the :doc:`dynamic reports <dynamic_reports>`, with the :guilabel:`Budget Comparison` filter."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/reporting/budget.rst:134
-msgid ":doc:`analytic_accounting`"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:135
@@ -26300,15 +26632,6 @@ msgstr ""
 msgid "Tab"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/romania/d394.rst:130
-#: ../../content/applications/finance/fiscal_localizations/romania/declarations.rst:20
-#: ../../content/applications/finance/fiscal_localizations/romania/e_factura.rst:189
-#: ../../content/applications/finance/fiscal_localizations/romania/financial_statements.rst:27
-#: ../../content/applications/finance/fiscal_localizations/romania/saft_d406.rst:69
-#: ../../content/applications/finance/fiscal_localizations/spain/aeat_declarations.rst:21
-msgid "Content"
-msgstr ""
-
 #: ../../content/applications/finance/fiscal_localizations/romania/d394.rst:131
 msgid ":guilabel:`Operations`"
 msgstr ""
@@ -28509,10 +28832,6 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/romania/multi_company.rst:58
 msgid "Custom views that extend the Hungarian layout templates (for example `eyssen_l10n_hu.report_invoice_document`), or that use an XPath on a node created by them, only apply to the Hungarian layout and are skipped in the core layout. A customization meant for the documents of all the companies must extend the standard Odoo template and must not depend on a Hungarian node."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/romania/multi_company.rst:65
-msgid "Menus"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/romania/multi_company.rst:67

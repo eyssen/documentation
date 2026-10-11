@@ -4586,10 +4586,6 @@ msgstr ":guilabel:`Mozgáselemzés` jelentés"
 msgid "Stock productivity helpers"
 msgstr "Készlet-produktivitási segédeszközök"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:5
-msgid "Preparing a stock transfer by hand — adding products one by one, retyping a list from a supplier e-mail, checking totals, filing it under an internal work order or browsing the product catalog — is repetitive and error-prone on transfers with many lines. eYssen ships a small set of independent productivity helpers that attach directly to the :guilabel:`Transfer` (``stock.picking``) form to speed up exactly these steps. Each helper is a separate, single-purpose module, so a warehouse can install only the ones it needs."
-msgstr "Egy készletátmozgatás kézi előkészítése — termékek egyenkénti hozzáadása, egy beszállítói e-mailből származó lista újbóli begépelése, összegek ellenőrzése, belső munkaszám alá történő besorolás, vagy a termékkatalógus böngészése — sok tétel esetén ismétlődő és hibalehetőségekkel teli feladat. Az eYssen néhány önálló produktivitási segédeszközt kínál, amelyek közvetlenül az :guilabel:`Átmozgatás` (``stock.picking``) űrlaphoz kapcsolódnak, és éppen ezeket a lépéseket gyorsítják fel. Minden segédeszköz egy külön, egyetlen célra szolgáló modul, így egy raktár csak azokat telepítheti, amelyekre valóban szüksége van."
-
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:13 ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/cash_on_delivery.rst:33 ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/delivery_slips.rst:13 ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/locations_and_picking.rst:15 ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/multi_warehouse.rst:14
 msgid "Key features"
 msgstr "Főbb funkciók"
@@ -4605,10 +4601,6 @@ msgstr "**Termékek tömeges hozzáadása** egy átmozgatáshoz lista beilleszt�
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:17
 msgid "**See the total quantity** of a transfer, per unit of measure, both on the form and in the list view."
 msgstr "**Az átmozgatás teljes mennyiségének megtekintése** mértékegységenként, mind az űrlapon, mind a listanézetben."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:19
-msgid "**Link a transfer to an internal process number** to group related transfers under one reference."
-msgstr "**Egy átmozgatás összekapcsolása egy belső ügyszámmal**, hogy az összetartozó átmozgatások egy hivatkozás alá kerüljenek csoportosításra."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:21
 msgid "**Add products to a transfer from the product catalog**, the same kanban-based picker used elsewhere in Odoo for sales and purchase orders."
@@ -4693,18 +4685,6 @@ msgstr "Az átmozgatás :guilabel:`Műveletek` fülén, a terméksorok alatt, eg
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:167
 msgid "The same information is available in a compact one-line form (:guilabel:`Sum Qty`, e.g. *3 P, 42 Qty*) as an optional column in the :guilabel:`Transfers` list view, next to the status column, so totals can be scanned without opening each transfer."
 msgstr "Ugyanez az információ elérhető tömör, egysoros formában (:guilabel:`Mennyiség Összesen`, pl. *3 T, 42 db*) is, opcionális oszlopként az :guilabel:`Átmozgatások` listanézetben, az állapot oszlop mellett, így az összegek az egyes átmozgatások megnyitása nélkül is áttekinthetők."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:172
-msgid "Process number on a transfer"
-msgstr "Ügyszám az átvezetésen"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:199
-msgid "From the :guilabel:`Process Number` form itself, a :guilabel:`Stock Pickings` smart button shows how many transfers are linked to it and opens their list, and the transfer list view gains a :guilabel:`Process Number` column so linked transfers can be spotted at a glance."
-msgstr "Magáról a :guilabel:`Process Number` űrlapról egy :guilabel:`Stock Pickings` gyorsgomb mutatja, hány átmozgatás kapcsolódik hozzá, és megnyitja azok listáját; az átmozgatások listanézete pedig egy :guilabel:`Process Number` oszloppal bővül, így a kapcsolódó átmozgatások egy pillantással felismerhetők."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:204
-msgid "Changes to the :guilabel:`Process Number` field on a transfer are tracked in the chatter, which is useful for auditing when a transfer was reassigned to a different work order or job number."
-msgstr "Az átmozgatáson lévő :guilabel:`Process Number` mező módosításai a chatterben nyomon követhetők, ami hasznos annak ellenőrzéséhez, hogy egy átmozgatást mikor rendeltek át egy másik munkarendeléshez vagy munkaszámhoz."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:208
 msgid "Stock catalog"
@@ -23906,14 +23886,6 @@ msgstr "**Termék vonalkódjának beolvasása** a piszkozat átvezetéshez való
 msgid "**See the analytic distribution** of each operation line, and find the transfer behind an analytic entry."
 msgstr "**Az egyes művelet-sorok analitikus felosztásának megtekintése**, valamint az analitikus tétel mögötti átvezetés megtalálása."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:30
-msgid "These helpers require no settings screen. Once the relevant module is installed, its button, field or column appears automatically on the standard :guilabel:`Transfer` form and/or the :guilabel:`Transfers` list view (:menuselection:`Inventory --> Transfers`). Every module builds on top of the eYssen :guilabel:`Inventory` layer (``eyssen_stock`` and/or ``eyssen_base``); the process-number helper additionally requires the ``process_number`` module, which defines the shared :guilabel:`Process Number` record."
-msgstr "Ezekhez a segédekhez nincs beállítóképernyő. Az adott modul telepítése után a hozzá tartozó gomb, mező vagy oszlop automatikusan megjelenik a szabványos :guilabel:`Átvezetés` űrlapon és/vagy az :guilabel:`Átvezetések` listanézetben (:menuselection:`Készlet --> Átvezetések`). Minden modul az eYssen :guilabel:`Készlet` rétegére épül (``eyssen_stock`` és/vagy ``eyssen_base``); az ügyszám-segédhez ezen kívül a ``process_number`` modul is szükséges, amely a közös :guilabel:`Process Number` rekordot definiálja."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:183
-msgid "When the ``process_number_stock`` module is installed, every transfer form shows a :guilabel:`Process Number` field above the transfer's name. If it is empty, a :guilabel:`Create a new process number` link creates one on the spot; an existing process number can also be selected directly. This links the transfer to the shared eYssen :guilabel:`Process Number` record (a trackable reference with assignees and a description, used to group related documents across modules)."
-msgstr "Ha a ``process_number_stock`` modul telepítve van, minden átvezetés űrlapján megjelenik egy :guilabel:`Process Number` mező az átvezetés neve fölött. Ha üres, egy :guilabel:`Create a new process number` hivatkozás azonnal létrehoz egyet; de meglévő ügyszám is közvetlenül kiválasztható. Ez az átvezetést a közös eYssen :guilabel:`Process Number` rekordhoz kapcsolja (követhető hivatkozás felelősökkel és leírással, amellyel modulokon átnyúlóan csoportosíthatók az összetartozó bizonylatok)."
-
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:239
 msgid "Scan a barcode onto a transfer"
 msgstr "Vonalkód beolvasása átvezetésre"
@@ -23941,10 +23913,6 @@ msgstr "Az ellenkező irányban az analitikus tétel :guilabel:`Transfer Referen
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:281
 msgid "The column is read-only: the distribution is taken from the purchase order line and is empty for moves that come from a sales order or that have no source document."
 msgstr "Az oszlop csak olvasható: a felosztás a beszerzési megrendelési sorból származik, és üres azoknál a mozgásoknál, amelyek vevői megrendelésből jönnek, vagy amelyeknek nincs forrásbizonylata."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:293
-msgid "``process_number_stock`` — the :guilabel:`Process Number` field on transfers and the reverse :guilabel:`Stock Pickings` smart button (requires ``process_number``)."
-msgstr "``process_number_stock`` — a :guilabel:`Process Number` mező az átvezetéseken és a visszairányú :guilabel:`Stock Pickings` gyorsgomb (szükséges hozzá a ``process_number``)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:297
 msgid "``eyssen_barcode_stock`` — the barcode-scanner button that adds scanned products to a draft transfer."
@@ -26946,12 +26914,40 @@ msgstr ":doc:`supplier_products`"
 msgid ":doc:`../../../websites/ecommerce/products`"
 msgstr ":doc:`../../../websites/ecommerce/products`"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:168
-msgid "With the *Process Number - Purchase* module (`process_number_purchase`) installed, a :guilabel:`Process Number` field appears above the |RFQ| form, with a :guilabel:`Create a new process number` link. See :doc:`../../../general/process_numbers` for the concept of a process number. To have a process number created automatically for every new |RFQ|, enable :guilabel:`Create Automatically` in the :guilabel:`Process Number` section of :menuselection:`Settings --> eYssen ERP`."
-msgstr "A *Process Number - Purchase* modul (`process_number_purchase`) telepítése esetén egy :guilabel:`Process Number` (ügyszám) mező jelenik meg az |RFQ| űrlap felett, egy :guilabel:`Create a new process number` hivatkozással. Az ügyszám fogalmáról lásd: :doc:`../../../general/process_numbers`. Ahhoz, hogy minden új |RFQ|-hoz automatikusan létrejöjjön egy ügyszám, kapcsolja be a :guilabel:`Create Automatically` beállítást a :menuselection:`Beállítások --> eYssen ERP` menüpont :guilabel:`Process Number` szakaszában."
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:5
+msgid ""
+"Preparing a stock transfer by hand — adding products one by one, retyping a "
+"list from a supplier e-mail, checking totals or browsing the product catalog "
+"— is repetitive and error-prone on transfers with many lines. eYssen ships a "
+"small set of independent productivity helpers that attach directly to the "
+":guilabel:`Transfer` (``stock.picking``) form to speed up exactly these "
+"steps. Each helper is a separate, single-purpose module, so a warehouse can "
+"install only the ones it needs."
+msgstr ""
+"Egy készletátmozgatás kézi előkészítése — termékek egyenkénti hozzáadása, egy"
+" beszállítói e-mailből származó lista újbóli begépelése, összegek ellenőrzése"
+" vagy a termékkatalógus böngészése — sok tétel esetén ismétlődő és "
+"hibalehetőségekkel teli feladat. Az eYssen néhány önálló produktivitási "
+"segédeszközt kínál, amelyek közvetlenül az :guilabel:`Átmozgatás` "
+"(``stock.picking``) űrlaphoz kapcsolódnak, és éppen ezeket a lépéseket "
+"gyorsítják fel. Minden segédeszköz egy külön, egyetlen célra szolgáló modul, "
+"így egy raktár csak azokat telepítheti, amelyekre valóban szüksége van."
 
-#~ msgid "With the *Process Number - Purchase* module (`process_number_purchase`) installed, a :guilabel:`Process Number` field appears above the |RFQ| form, with a :guilabel:`Create a new process number` link. See :doc:`../../../services/project/process_numbers` for the concept of a process number. To have a process number created automatically for every new |RFQ|, enable :guilabel:`Create Automatically` under :menuselection:`Settings --> eYssen --> Process Number`."
-#~ msgstr "A *Process Number - Purchase* modul (`process_number_purchase`) telepítése esetén egy :guilabel:`Process Number` (Folyamatszám) mező jelenik meg az |RFQ| űrlap felett, egy :guilabel:`Create a new process number` (Új folyamatszám létrehozása) hivatkozással. A folyamatszám fogalmáról lásd: :doc:`../../../services/project/process_numbers`. Ahhoz, hogy minden új |RFQ|-hoz automatikusan létrejöjjön egy folyamatszám, engedélyezze a :guilabel:`Create Automatically` (Automatikus létrehozás) beállítást a :menuselection:`Settings --> eYssen --> Process Number` (Beállítások --> eYssen --> Folyamatszám) alatt."
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:28
+msgid ""
+"These helpers require no settings screen. Once the relevant module is "
+"installed, its button, field or column appears automatically on the standard "
+":guilabel:`Transfer` form and/or the :guilabel:`Transfers` list view "
+"(:menuselection:`Inventory --> Transfers`). Every module builds on top of the"
+" eYssen :guilabel:`Inventory` layer (``eyssen_stock`` and/or "
+"``eyssen_base``)."
+msgstr ""
+"Ezekhez a segédekhez nincs beállítóképernyő. Az adott modul telepítése után a"
+" hozzá tartozó gomb, mező vagy oszlop automatikusan megjelenik a szabványos "
+":guilabel:`Átvezetés` űrlapon és/vagy az :guilabel:`Átvezetések` "
+"listanézetben (:menuselection:`Készlet --> Átvezetések`). Minden modul az "
+"eYssen :guilabel:`Készlet` rétegére épül (``eyssen_stock`` és/vagy "
+"``eyssen_base``)."
 
 #~ msgid "**Odoo Manufacturing** helps manufacturers schedule, plan, and process manufacturing orders. With the work center control panel, put tablets on the shop floor to control work orders in real-time and allow workers to trigger maintenance operations, feedback loops, quality issues, etc."
 #~ msgstr "**Odoo Gyártás** segíti a gyártókat a gyártási rendelések ütemezésében, tervezésében és feldolgozásában. A munkaközpont vezérlőpultjával helyezzen el táblagépeket a gyártósoron, hogy valós időben irányítsa a munkarendeléseket, és lehetővé tegye a dolgozók számára a karbantartási műveletek, visszacsatolási hurkok, minőségi problémák stb. indítását."
@@ -34693,9 +34689,6 @@ msgstr "A *Process Number - Purchase* modul (`process_number_purchase`) telepít
 #~ msgid "Serial numbers reporting page with drop-down lists."
 #~ msgstr "A sorozatszámok jelentési oldala legördülő listákkal."
 
-#~ msgid "These helpers require no settings screen. Once the relevant module is installed, its button, field or column appears automatically on the standard :guilabel:`Transfer` form and/or the :guilabel:`Transfers` list view (:menuselection:`Inventory --> Transfers`). Every module builds on top of the eYssen :guilabel:`Inventory` layer (``eyssen_stock`` and/or ``eyssen_base``); the process-number helper additionally requires the ``eyssen_process_number`` module, which defines the shared :guilabel:`Process Number` record."
-#~ msgstr "Ezekhez a segédeszközökhöz nincs szükség beállítási képernyőre. Amint a megfelelő modul telepítve van, annak gombja, mezője vagy oszlopa automatikusan megjelenik a szabványos :guilabel:`Átmozgatás` űrlapon és/vagy az :guilabel:`Átmozgatások` listanézetben (:menuselection:`Készlet --> Átmozgatások`). Minden modul az eYssen :guilabel:`Készlet` rétegére épül (``eyssen_stock`` és/vagy ``eyssen_base``); a folyamatszám-segédeszköz ezen felül a ``eyssen_process_number`` modult is igényli, amely a közös :guilabel:`Folyamatszám` rekordot definiálja."
-
 #~ msgid "Add Previous Items button on a draft transfer"
 #~ msgstr "Előző tételek hozzáadása gomb egy vázlat állapotú átmozgatáson"
 
@@ -34718,25 +34711,11 @@ msgstr "A *Process Number - Purchase* modul (`process_number_purchase`) telepít
 #~ msgid "Compact Sum Qty column in the Transfers list view"
 #~ msgstr "Tömör mennyiségösszesítő oszlop az Átmozgatások listanézetben"
 
-#, fuzzy
-#~ msgid "Process Number field on a draft transfer form"
-#~ msgstr "Késztermék átvezetés feldolgozása"
-
-#~ msgid "When the ``eyssen_process_number_stock`` module is installed, every transfer form shows a :guilabel:`Process Number` field above the transfer's name. If it is empty, a :guilabel:`Create a new process number` link creates one on the spot; an existing process number can also be selected directly. This links the transfer to the shared eYssen :guilabel:`Process Number` record (a trackable reference with assignees and a description, used to group related documents across modules)."
-#~ msgstr "Ha a ``eyssen_process_number_stock`` modul telepítve van, minden átmozgatás űrlapon megjelenik egy :guilabel:`Folyamatszám` mező az átmozgatás neve fölött. Ha üres, egy :guilabel:`Új folyamatszám létrehozása` hivatkozás azonnal létrehoz egyet; egy meglévő folyamatszám közvetlenül is kiválasztható. Ez összekapcsolja az átmozgatást a közös eYssen :guilabel:`Folyamatszám` rekorddal (egy nyomon követhető hivatkozás felelősökkel és leírással, amelyet az összetartozó dokumentumok modulokon átívelő csoportosítására használnak)."
-
-#, fuzzy
-#~ msgid "Stock Pickings smart button on a Process Number form"
-#~ msgstr "A Csomagok intelligens gomb egy szállítási rendelésen."
-
 #~ msgid "Catalog button in the operations line list"
 #~ msgstr "Katalógus gomb a műveletsorok listájában"
 
 #~ msgid "Product catalog kanban opened from a transfer, no price shown"
 #~ msgstr "Az átmozgatásból megnyitott termékkatalógus kanban nézet, ár nélkül"
-
-#~ msgid "``eyssen_process_number_stock`` — the :guilabel:`Process Number` field on transfers and the reverse :guilabel:`Stock Pickings` smart button."
-#~ msgstr "``eyssen_process_number_stock`` — a :guilabel:`Folyamatszám` mező az átmozgatásokon, és a fordított irányú :guilabel:`Készletmozgások` gyorsgomb."
 
 #~ msgid ":doc:`Connect a printer <../../../../general/iot/devices/printer>` to Odoo's *IoT* app."
 #~ msgstr ":doc:`Csatlakoztasson nyomtatót <../../../../general/iot/devices/printer>` az Odoo *IoT* alkalmazásához."

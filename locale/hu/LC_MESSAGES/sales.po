@@ -21240,38 +21240,6 @@ msgstr ""
 "A küszöbértékek az ``account_payment_warning`` könyvelési modul *Fizetési "
 "figyelmeztetés* beállításaiból származnak."
 
-#: ../../content/applications/sales/sales/order_extensions.rst:182
-msgid "Process numbers"
-msgstr "Ügyiratszámok"
-
-#: ../../content/applications/sales/sales/order_extensions.rst:184
-msgid ""
-"*Process Number - Sale* (``process_number_sale``) links sales orders to the "
-"company's process (case) numbers."
-msgstr ""
-"A *Process Number - Sale* (``process_number_sale``) az értékesítési "
-"rendeléseket a vállalat ügyiratszámaihoz köti."
-
-#: ../../content/applications/sales/sales/order_extensions.rst:187
-msgid ""
-"A :guilabel:`Process Number` field is added to the sales order, and the "
-"process number record gets a :guilabel:`Sale Orders` smart button listing "
-"the orders attached to it. When the :guilabel:`Create Automatically` option "
-"is enabled in :menuselection:`Sales app --> Configuration --> Settings`, "
-"confirming an order without a process number creates one for it."
-msgstr ""
-"Az értékesítési rendelés egy :guilabel:`Ügyiratszám` mezőt kap, az "
-"ügyiratszám rekord pedig egy :guilabel:`Értékesítési rendelések` "
-"gyorsgombot, amely a hozzá csatolt rendeléseket listázza. Ha az "
-":menuselection:`Értékesítés alkalmazás --> Konfiguráció --> Beállítások` "
-"menüpontban be van kapcsolva az :guilabel:`Automatikus létrehozás` "
-"lehetőség, az ügyiratszám nélküli rendelés megerősítése létrehoz hozzá "
-"egyet."
-
-#: ../../content/applications/sales/sales/order_extensions.rst:193
-msgid "Requires the base *Process Number* module (``process_number``)."
-msgstr "Szükséges hozzá az alap *Process Number* modul (``process_number``)."
-
 #: ../../content/applications/sales/sales/order_extensions.rst:196
 msgid "Warehouse per order line"
 msgstr "Raktár rendelési soronként"
@@ -32964,6 +32932,14 @@ msgstr ":doc:`../../finance/accounting/payments/payment_orders`"
 msgid ":doc:`../../finance/accounting/payments/sepa_mandate_signature`"
 msgstr ":doc:`../../finance/accounting/payments/sepa_mandate_signature`"
 
+#: ../../content/applications/sales/sales/gelato.rst:None
+msgid "Newly generated API key in the Gelato platform."
+msgstr "Újonnan generált API kulcs a Gelato platformon."
+
+#: ../../content/applications/sales/sales/gelato.rst:None
+msgid "Newly configured webhook in the Gelato platform."
+msgstr "Újonnan konfigurált webhook a Gelato platformon."
+
 #~ msgid ""
 #~ "This module requires the *eYssen Hungarian localization* module "
 #~ "(`eyssen_l10n_hu`), which provides the Hungarian VAT number validation used "
@@ -38731,12 +38707,6 @@ msgstr ":doc:`../../finance/accounting/payments/sepa_mandate_signature`"
 
 #~ msgid "Company information in Odoo."
 #~ msgstr "Vállalati információk az Odoo-ban."
-
-#~ msgid "Newly generated API key in the Gelato platform."
-#~ msgstr "Újonnan generált API kulcs a Gelato platformon."
-
-#~ msgid "Newly configured webhook in the Gelato platform."
-#~ msgstr "Újonnan konfigurált webhook a Gelato platformon."
 
 #~ msgid "Create invoice(s) pop-up form that appears in Odoo Sales."
 #~ msgstr "Az Odoo Értékesítésben megjelenő Számla(k) létrehozása felugró ablak."

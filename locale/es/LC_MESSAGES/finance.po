@@ -34421,6 +34421,611 @@ msgstr ":guilabel:`Imprimir` genera la hoja de arqueo."
 msgid "Past counts are listed under :menuselection:`Accounting --> Reporting --> Cash Register Closures`, where they can be filtered by state (:guilabel:`Draft`, :guilabel:`Waiting for Check`, :guilabel:`Waiting for Approval`, :guilabel:`Closed`) and grouped by cash register, user or controller."
 msgstr "Los arqueos anteriores se muestran en :menuselection:`Contabilidad --> Informes --> Cierres de caja`, donde se pueden filtrar por estado (:guilabel:`Borrador`, :guilabel:`En espera de revisión`, :guilabel:`En espera de aprobación`, :guilabel:`Cerrado`) y agrupar por caja, usuario o revisor."
 
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:14
+msgid ":doc:`Analytic cost control <analytic_cost_control>`"
+msgstr ":doc:`Control de costes analítico <analytic_cost_control>`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:3
+msgid "Analytic cost control"
+msgstr "Control de costes analítico"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:5
+msgid ""
+"*Analytic Cost Control* (`account_analytic_cost_control`) adds plan-versus-"
+"actual cost control on top of :doc:`analytic accounts <analytic_accounting>`:"
+" a cost plan per analytic account, the committed and actual costs, the "
+"revenue, and the margin. A typical use is the follow-up of **work numbers** "
+"(job numbers), but it works with any analytic plan: projects, cost centers, "
+"etc."
+msgstr ""
+"*Analytic Cost Control* (`account_analytic_cost_control`) añade el control de"
+" costes plan frente a real sobre las :doc:`cuentas analíticas "
+"<analytic_accounting>`: un plan de costes por cuenta analítica, los costes "
+"comprometidos y reales, los ingresos y el margen. Un uso típico es el "
+"seguimiento de los **números de obra**, pero funciona con cualquier plan "
+"analítico: proyectos, centros de coste, etc."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:10
+msgid ""
+"The module adds no field to the documents. Customer invoices, vendor bills, "
+"purchase and sales order lines, timesheets, expenses, and stock valuation are"
+" booked to an analytic account through the standard :ref:`analytic "
+"distribution <accounting/analytic_accounting/analytic-distribution>` of their"
+" lines. The module then compares these booked items with the cost plan."
+msgstr ""
+"El módulo no añade ningún campo a los documentos. Las facturas de cliente, "
+"las facturas de proveedor, las líneas de pedidos de compra y de venta, los "
+"partes de horas, los gastos y la valoración de existencias se imputan a una "
+"cuenta analítica mediante la :ref:`distribución analítica "
+"<accounting/analytic_accounting/analytic-distribution>` estándar de sus "
+"líneas. Después, el módulo compara estos apuntes con el plan de costes."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:16
+msgid ""
+"The module depends only on *Accounting*. The :guilabel:`Contract Value` of "
+"the summary is only available if *Sales* is installed, and the "
+":guilabel:`Committed` column only if *Purchase* is installed."
+msgstr ""
+"El módulo depende únicamente de *Contabilidad*. El :guilabel:`Valor del "
+"contrato` del resumen solo está disponible si *Ventas* está instalado, y la "
+"columna :guilabel:`Comprometido` solo si *Compras* está instalado."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:23
+msgid "Activate the feature"
+msgstr "Activar la función"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:25
+msgid ""
+"Go to :menuselection:`Settings --> eYssen ERP`, and, in the "
+":guilabel:`Analytic Cost Control` section, enable :guilabel:`Analytic Cost "
+"Control`. Then, click :guilabel:`Save`."
+msgstr ""
+"Vaya a :menuselection:`Ajustes --> eYssen ERP` y, en la sección "
+":guilabel:`Analytic Cost Control`, active :guilabel:`Analytic Cost Control`. "
+"Luego, haga clic en :guilabel:`Guardar`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:36
+msgid "Configure an analytic plan"
+msgstr "Configurar un plan analítico"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:38
+msgid ""
+"The module does **not** create any analytic plan when it is installed. Choose"
+" the plans to follow up: either enable the cost control on an existing plan "
+"(e.g., :guilabel:`Projects`), or create a new plan."
+msgstr ""
+"El módulo **no** crea ningún plan analítico al instalarse. Elija los planes "
+"que desea seguir: active el control de costes en un plan existente (p. ej., "
+":guilabel:`Proyectos`) o cree un plan nuevo."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:42
+msgid ""
+"Go to :menuselection:`Accounting --> Configuration --> Analytic Plans`, open "
+"a plan, and set:"
+msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Configuración --> Planes analíticos`,"
+" abra un plan y defina:"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:44
+msgid ""
+":guilabel:`Cost Control`: the analytic accounts of this plan get the cost "
+"plan, the summary, and the plan / actual report."
+msgstr ""
+":guilabel:`Control de costes`: las cuentas analíticas de este plan reciben el"
+" plan de costes, el resumen y el informe plan / real."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:46
+msgid ""
+":guilabel:`Code Sequence` (optional, independent of :guilabel:`Cost "
+"Control`): select a sequence. The new analytic accounts of this plan that "
+"have no :guilabel:`Reference` get their reference from this sequence. For "
+"example, with the prefix `WN/%(year)s/`, the first work number of 2026 is "
+"`WN/2026/00001`."
+msgstr ""
+":guilabel:`Secuencia de código` (opcional, independiente de "
+":guilabel:`Control de costes`): seleccione una secuencia. Las nuevas cuentas "
+"analíticas de este plan que no tengan :guilabel:`Referencia` reciben su "
+"referencia de esta secuencia. Por ejemplo, con el prefijo `WN/%(year)s/`, el "
+"primer número de obra de 2026 es `WN/2026/00001`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:52
+msgid ""
+"Both options can only be set on a **root** analytic plan, not on a sub-plan. "
+"Otherwise, the error *Cost control and the code sequence can only be set on a"
+" root analytic plan.* is displayed."
+msgstr ""
+"Ambas opciones solo se pueden definir en un plan analítico **raíz**, no en un"
+" subplan. De lo contrario, se muestra el error *El control de costes y la "
+"secuencia de código solo se pueden definir en un plan analítico raíz.*"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:56
+msgid ""
+"To follow up work numbers, create an analytic plan named `Work Numbers`, tick"
+" :guilabel:`Cost Control`, and create a sequence with the prefix "
+"`WN/%(year)s/` and a padding of `5` in :guilabel:`Code Sequence`. Projects "
+"carry the analytic accounts of all the plans, so the timesheets of a project "
+"that is linked to a work number are booked to it automatically."
+msgstr ""
+"Para seguir los números de obra, cree un plan analítico llamado `Work "
+"Numbers`, marque :guilabel:`Control de costes` y, en :guilabel:`Secuencia de "
+"código`, cree una secuencia con el prefijo `WN/%(year)s/` y un relleno de "
+"`5`. Los proyectos llevan las cuentas analíticas de todos los planes, por lo "
+"que los partes de horas de un proyecto vinculado a un número de obra se "
+"imputan a este automáticamente."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:64
+msgid "How the analytic items are classified"
+msgstr "Cómo se clasifican los apuntes analíticos"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:66
+msgid ""
+"Every analytic item is classified when it is booked. The classification is "
+"stored and is used in the summary, the lists, and the report."
+msgstr ""
+"Cada apunte analítico se clasifica al contabilizarse. La clasificación se "
+"almacena y se utiliza en el resumen, las listas y el informe."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:69
+msgid "**Revenue or cost**"
+msgstr "**Ingreso o coste**"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:71
+msgid ""
+"An item is **revenue** if its financial account is an income account. An item"
+" without a financial account is revenue if its amount is positive and it is "
+"not a timesheet. Any other item is a cost."
+msgstr ""
+"Un apunte es un **ingreso** si su cuenta financiera es una cuenta de "
+"ingresos. Un apunte sin cuenta financiera es un ingreso si su importe es "
+"positivo y no es un parte de horas. Cualquier otro apunte es un coste."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:74
+msgid "**Cost category**"
+msgstr "**Categoría de coste**"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:76
+msgid ""
+"A cost is either :guilabel:`Labour`, :guilabel:`Material`, or "
+":guilabel:`Other Costs`. The category is the first one that applies in this "
+"order:"
+msgstr ""
+"Un coste es :guilabel:`Mano de obra`, :guilabel:`Material` u :guilabel:`Otros"
+" costes`. La categoría es la primera que se aplica en este orden:"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:79
+msgid ""
+"the :guilabel:`Cost Category` of the financial account "
+"(:menuselection:`Accounting --> Configuration --> Chart of Accounts`, in the "
+"account form; the field is not displayed for income and balance sheet "
+"accounts);"
+msgstr ""
+"la :guilabel:`Categoría de coste` de la cuenta financiera "
+"(:menuselection:`Contabilidad --> Configuración --> Plan contable`, en el "
+"formulario de la cuenta; el campo no se muestra en las cuentas de ingresos ni"
+" de balance);"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:82
+msgid ""
+"the :guilabel:`Cost Category` of the product category "
+"(:menuselection:`Inventory --> Configuration --> Product Categories`, or the "
+"same menu of :guilabel:`Invoicing`, in the :guilabel:`Cost Control` group); "
+"sub-categories inherit it;"
+msgstr ""
+"la :guilabel:`Categoría de coste` de la categoría de producto "
+"(:menuselection:`Inventario --> Configuración --> Categorías de producto`, o "
+"el mismo menú de :guilabel:`Facturación`, en el grupo :guilabel:`Control de "
+"costes`); las subcategorías la heredan;"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:85
+msgid ""
+"the product type: a service is :guilabel:`Labour`, a goods product is "
+":guilabel:`Material`;"
+msgstr ""
+"el tipo de producto: un servicio es :guilabel:`Mano de obra`, un producto de "
+"bienes es :guilabel:`Material`;"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:86
+msgid "a timesheet line is :guilabel:`Labour`;"
+msgstr "una línea de parte de horas es :guilabel:`Mano de obra`;"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:87
+msgid "anything else is :guilabel:`Other Costs`."
+msgstr "cualquier otro es :guilabel:`Otros costes`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:89
+msgid "**Own or external**"
+msgstr "**Propio o externo**"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:91
+msgid ""
+"A cost is :guilabel:`External` if it comes from a vendor bill (including "
+"receipts), and :guilabel:`Own` for everything else: timesheets, stock "
+"valuation, payroll, and miscellaneous entries."
+msgstr ""
+"Un coste es :guilabel:`Externo` si procede de una factura de proveedor "
+"(incluidos los recibos) y :guilabel:`Propio` en todos los demás casos: partes"
+" de horas, valoración de existencias, nóminas y asientos varios."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:95
+msgid ""
+"If the :guilabel:`Cost Category` of a parent product category is changed, the"
+" items that are already booked are not recomputed. Changing it on the "
+"financial account or on the product's own category does recompute them."
+msgstr ""
+"Si se cambia la :guilabel:`Categoría de coste` de una categoría de producto "
+"padre, los apuntes ya contabilizados no se recalculan. Cambiarla en la cuenta"
+" financiera o en la categoría propia del producto sí los recalcula."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:102
+msgid "The analytic account form"
+msgstr "El formulario de la cuenta analítica"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:104
+msgid ""
+"The following elements are only displayed on the analytic accounts of a plan "
+"with :guilabel:`Cost Control`, and only to the users of the "
+":guilabel:`Analytic Accounting` group. To open an account, go to "
+":menuselection:`Accounting --> Accounting --> Cost Control`, or "
+":menuselection:`Accounting --> Configuration --> Analytic Accounts`."
+msgstr ""
+"Los siguientes elementos solo se muestran en las cuentas analíticas de un "
+"plan con :guilabel:`Control de costes` y solo a los usuarios del grupo "
+":guilabel:`Contabilidad analítica`. Para abrir una cuenta, vaya a "
+":menuselection:`Contabilidad --> Contabilidad --> Control de costes` o a "
+":menuselection:`Contabilidad --> Configuración --> Cuentas analíticas`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:109
+msgid ""
+"The form has the new fields :guilabel:`Responsible Users` and "
+":guilabel:`Original Plan Saved On` (read-only), and its chatter also supports"
+" activities."
+msgstr ""
+"El formulario tiene los nuevos campos :guilabel:`Responsables` y "
+":guilabel:`Plan original guardado el` (solo lectura), y su chatter también "
+"admite actividades."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:113
+msgid "Cost plan"
+msgstr "Plan de costes"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:115
+msgid ""
+"The :guilabel:`Cost Plan` tab contains editable lines with the following "
+"columns, and the totals at the bottom:"
+msgstr ""
+"La pestaña :guilabel:`Plan de costes` contiene líneas editables con las "
+"siguientes columnas y, al final, los totales:"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:118
+msgid ""
+":guilabel:`Cost Category`: :guilabel:`Labour`, :guilabel:`Material`, or "
+":guilabel:`Other Costs`."
+msgstr ""
+":guilabel:`Categoría de coste`: :guilabel:`Mano de obra`, "
+":guilabel:`Material` u :guilabel:`Otros costes`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:119
+msgid ":guilabel:`Own / External`."
+msgstr ":guilabel:`Propio / externo`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:120
+msgid ":guilabel:`Description`."
+msgstr ":guilabel:`Descripción`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:121
+msgid ""
+":guilabel:`Original Plan`: read-only, set by the :guilabel:`Save as Original "
+"Plan` button."
+msgstr ""
+":guilabel:`Plan original`: solo lectura, lo define el botón "
+":guilabel:`Guardar como plan original`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:122
+msgid ":guilabel:`Current Plan`: the amount that is currently planned."
+msgstr ":guilabel:`Plan actual`: el importe previsto actualmente."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:124
+msgid "The :guilabel:`Notes` tab contains free rich-text notes."
+msgstr ""
+"La pestaña :guilabel:`Notas` contiene notas libres en texto enriquecido."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:126
+msgid ""
+"When the quotation is accepted, click :guilabel:`Save as Original Plan` and "
+"confirm the message *The current cost plan overwrites the original plan. "
+"Continue?* The :guilabel:`Current Plan` of every cost plan line is copied to "
+"its :guilabel:`Original Plan`, the date is recorded in :guilabel:`Original "
+"Plan Saved On`, and a message is posted in the chatter. From then on, the "
+":guilabel:`Current Plan` can be adjusted while the :guilabel:`Original Plan` "
+"keeps the figures of the quotation. If the account has no cost plan lines, an"
+" error is displayed."
+msgstr ""
+"Cuando se acepta el presupuesto, haga clic en :guilabel:`Guardar como plan "
+"original` y confirme el mensaje *El plan de costes actual sobrescribe el plan"
+" original. ¿Continuar?* El :guilabel:`Plan actual` de cada línea del plan de "
+"costes se copia en su :guilabel:`Plan original`, la fecha se registra en "
+":guilabel:`Plan original guardado el` y se publica un mensaje en el chatter. "
+"A partir de entonces, el :guilabel:`Plan actual` se puede ajustar mientras "
+"que el :guilabel:`Plan original` conserva las cifras del presupuesto. Si la "
+"cuenta no tiene líneas de plan de costes, se muestra un error."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:133
+msgid ""
+"The :guilabel:`Plan / Actual` smart button opens the :ref:`plan / actual "
+"analysis <accounting/analytic_cost_control/report>` filtered on the account "
+"and grouped by cost category and by own / external."
+msgstr ""
+"El botón inteligente :guilabel:`Plan / real` abre el :ref:`análisis plan / "
+"real <accounting/analytic_cost_control/report>` filtrado por la cuenta y "
+"agrupado por categoría de coste y por propio / externo."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:142
+msgid "The summary at the top of the form shows these indicators:"
+msgstr ""
+"El resumen de la parte superior del formulario muestra estos indicadores:"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:148
+msgid "Indicator"
+msgstr "Indicador"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:150
+msgid ":guilabel:`Contract Value`"
+msgstr ":guilabel:`Valor del contrato`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:151
+msgid ""
+"The untaxed amount of the confirmed sales order lines distributed to this "
+"account, in proportion to the distribution percentage. Only displayed if "
+"*Sales* is installed."
+msgstr ""
+"El importe sin impuestos de las líneas de pedido de venta confirmadas "
+"distribuidas a esta cuenta, en proporción al porcentaje de distribución. Solo"
+" se muestra si *Ventas* está instalado."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:153
+msgid ":guilabel:`Invoiced Revenue`"
+msgstr ":guilabel:`Ingresos facturados`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:154
+msgid "The revenue items booked to the account."
+msgstr "Los apuntes de ingresos imputados a la cuenta."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:155
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:179
+msgid ":guilabel:`Actual Cost`"
+msgstr ":guilabel:`Coste real`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:156
+msgid "The cost items booked to the account."
+msgstr "Los apuntes de coste imputados a la cuenta."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:157
+msgid ":guilabel:`Margin`"
+msgstr ":guilabel:`Margen`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:158
+msgid ""
+"The invoiced revenue minus the actual cost, with the margin as a percentage "
+"of the revenue."
+msgstr ""
+"Los ingresos facturados menos el coste real, con el margen como porcentaje de"
+" los ingresos."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:159
+msgid ":guilabel:`Planned Margin`"
+msgstr ":guilabel:`Margen previsto`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:160
+msgid ""
+"The contract value minus the current plan. Only displayed if there is a "
+"contract value."
+msgstr ""
+"El valor del contrato menos el plan actual. Solo se muestra si hay un valor "
+"del contrato."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:162
+msgid ""
+"Below the indicators, a table has one row per :guilabel:`Labour`, "
+":guilabel:`Material`, and :guilabel:`Other Costs`, and a :guilabel:`Total` "
+"row. Its columns are:"
+msgstr ""
+"Debajo de los indicadores, una tabla tiene una fila por :guilabel:`Mano de "
+"obra`, :guilabel:`Material` y :guilabel:`Otros costes`, y una fila "
+":guilabel:`Total`. Sus columnas son:"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:169
+msgid "Column"
+msgstr "Columna"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:171
+msgid ":guilabel:`Original Plan`"
+msgstr ":guilabel:`Plan original`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:172
+msgid "The plan :guilabel:`At quotation`, with the date on which it was saved."
+msgstr "El plan :guilabel:`Al presupuestar`, con la fecha en que se guardó."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:173
+msgid ":guilabel:`Current Plan`"
+msgstr ":guilabel:`Plan actual`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:174
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:180
+msgid "The total, and its own / external split."
+msgstr "El total y su desglose propio / externo."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:175
+msgid ":guilabel:`Committed`"
+msgstr ":guilabel:`Comprometido`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:176
+msgid ""
+"The :guilabel:`Open purchase orders`: the part not yet billed of the "
+"confirmed purchase order lines distributed to this account, in proportion to "
+"the distribution percentage. The category comes from the product. Only "
+"displayed if *Purchase* is installed."
+msgstr ""
+"Los :guilabel:`Pedidos de compra abiertos`: la parte aún no facturada de las "
+"líneas de pedido de compra confirmadas distribuidas a esta cuenta, en "
+"proporción al porcentaje de distribución. La categoría procede del producto. "
+"Solo se muestra si *Compras* está instalado."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:181
+msgid ":guilabel:`Completion`"
+msgstr ":guilabel:`Avance`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:182
+msgid ""
+"The actual cost divided by the plan, as a total and as an own / external "
+"split. It is green up to 90%, orange from 90% to 100%, and red above 100%. A "
+"dash is displayed if there is no plan."
+msgstr ""
+"El coste real dividido por el plan, en total y desglosado en propio / "
+"externo. Es verde hasta el 90 %, naranja del 90 % al 100 % y rojo por encima "
+"del 100 %. Si no hay plan, se muestra un guion."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:186
+msgid ""
+"Click an amount to see the records behind it: the actual amounts open the "
+"analytic items (filtered by category and by own / external), "
+":guilabel:`Invoiced Revenue` opens the revenue items, :guilabel:`Committed` "
+"opens the purchase orders, and :guilabel:`Contract Value` opens the sales "
+"orders."
+msgstr ""
+"Haga clic en un importe para ver los registros que hay detrás: los importes "
+"reales abren los apuntes analíticos (filtrados por categoría y por propio / "
+"externo), :guilabel:`Ingresos facturados` abre los apuntes de ingresos, "
+":guilabel:`Comprometido` abre los pedidos de compra y :guilabel:`Valor del "
+"contrato` abre los pedidos de venta."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:192
+msgid ""
+"The amounts are displayed in the currency of the company of the analytic "
+"account. Amounts in other currencies are converted at today's rate."
+msgstr ""
+"Los importes se muestran en la moneda de la empresa de la cuenta analítica. "
+"Los importes en otras monedas se convierten al tipo de cambio de hoy."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:201
+msgid "Cost control list"
+msgstr "Lista de control de costes"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:203
+msgid ""
+"Go to :menuselection:`Accounting --> Accounting --> Cost Control` to list the"
+" analytic accounts of the plans with :guilabel:`Cost Control`, with the "
+"columns :guilabel:`Reference`, :guilabel:`Name`, :guilabel:`Plan`, "
+":guilabel:`Customer`, :guilabel:`Responsible Users`, :guilabel:`Activities`, "
+":guilabel:`Cost`, :guilabel:`Revenue`, and :guilabel:`Margin`. The "
+":guilabel:`I'm Responsible` filter keeps the accounts of which you are a "
+"responsible user. Clicking :guilabel:`New` creates an account in the first "
+"plan with :guilabel:`Cost Control`."
+msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Contabilidad --> Control de costes` "
+"para listar las cuentas analíticas de los planes con :guilabel:`Control de "
+"costes`, con las columnas :guilabel:`Referencia`, :guilabel:`Nombre`, "
+":guilabel:`Plan`, :guilabel:`Cliente`, :guilabel:`Responsables`, "
+":guilabel:`Actividades`, :guilabel:`Coste`, :guilabel:`Ingresos` y "
+":guilabel:`Margen`. El filtro :guilabel:`Soy responsable` conserva las "
+"cuentas de las que usted es responsable. Al hacer clic en :guilabel:`Nuevo` "
+"se crea una cuenta en el primer plan con :guilabel:`Control de costes`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:213
+msgid "Plan / actual analysis"
+msgstr "Análisis plan / real"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:215
+msgid ""
+"Go to :menuselection:`Accounting --> Reporting --> Management --> Plan / "
+"Actual Analysis`. The report is available as a pivot table, a graph, and a "
+"list. It has one row per cost plan line and one row per analytic item booked "
+"to an account of a plan with :guilabel:`Cost Control`."
+msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Informes --> Gestión --> Análisis "
+"plan / real`. El informe está disponible como tabla dinámica, gráfico y "
+"lista. Tiene una fila por cada línea del plan de costes y una por cada apunte"
+" analítico imputado a una cuenta de un plan con :guilabel:`Control de "
+"costes`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:219
+msgid ""
+"**Measures**: :guilabel:`Original Plan`, :guilabel:`Current Plan`, "
+":guilabel:`Actual Cost`, :guilabel:`Remaining Plan` (the current plan minus "
+"the actual cost), :guilabel:`Revenue`, and :guilabel:`Margin` (the revenue "
+"minus the actual cost)."
+msgstr ""
+"**Medidas**: :guilabel:`Plan original`, :guilabel:`Plan actual`, "
+":guilabel:`Coste real`, :guilabel:`Plan restante` (el plan actual menos el "
+"coste real), :guilabel:`Ingresos` y :guilabel:`Margen` (los ingresos menos el"
+" coste real)."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:222
+msgid ""
+"**Dimensions**: :guilabel:`Analytic Account`, :guilabel:`Analytic Plan`, "
+":guilabel:`Customer`, :guilabel:`Cost Category` (including "
+":guilabel:`Revenue`), :guilabel:`Own / External`, :guilabel:`Source` "
+"(:guilabel:`Cost Plan` or :guilabel:`Booked`), :guilabel:`Financial Account`,"
+" :guilabel:`Product`, and :guilabel:`Date`."
+msgstr ""
+"**Dimensiones**: :guilabel:`Cuenta analítica`, :guilabel:`Plan analítico`, "
+":guilabel:`Cliente`, :guilabel:`Categoría de coste` (incluidos "
+":guilabel:`Ingresos`), :guilabel:`Propio / externo`, :guilabel:`Origen` "
+"(:guilabel:`Plan de costes` o :guilabel:`Contabilizado`), :guilabel:`Cuenta "
+"financiera`, :guilabel:`Producto` y :guilabel:`Fecha`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:226
+msgid ""
+"**Filters**: :guilabel:`Costs`, :guilabel:`Revenue`, :guilabel:`Own`, "
+":guilabel:`External`, and :guilabel:`Date`."
+msgstr ""
+"**Filtros**: :guilabel:`Costes`, :guilabel:`Ingresos`, :guilabel:`Propio`, "
+":guilabel:`Externo` y :guilabel:`Fecha`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:230
+msgid ""
+"The cost plan lines have no date. When a :guilabel:`Date` filter is applied, "
+"only the booked figures are displayed."
+msgstr ""
+"Las líneas del plan de costes no tienen fecha. Cuando se aplica un filtro de "
+":guilabel:`Fecha`, solo se muestran las cifras contabilizadas."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:234
+msgid "Analytic items"
+msgstr "Apuntes analíticos"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:236
+msgid ""
+"When the analytic items are opened from the summary, the list shows the "
+"additional columns :guilabel:`Cost Category` and :guilabel:`Own / External`. "
+"In the search view, the items can be grouped by :guilabel:`Cost Control "
+"Account`, :guilabel:`Cost Category`, and :guilabel:`Own / External`."
+msgstr ""
+"Cuando se abren los apuntes analíticos desde el resumen, la lista muestra las"
+" columnas adicionales :guilabel:`Categoría de coste` y :guilabel:`Propio / "
+"externo`. En la vista de búsqueda, los apuntes se pueden agrupar por "
+":guilabel:`Cuenta de control de costes`, :guilabel:`Categoría de coste` y "
+":guilabel:`Propio / externo`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:243
+msgid ":doc:`budget`"
+msgstr ":doc:`budget`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:244
+msgid ":doc:`/applications/general/eyssen_erp_settings`"
+msgstr ":doc:`/applications/general/eyssen_erp_settings`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:28
+msgid ""
+"The menus, the summary, and the cost plan are only displayed if analytic "
+"accounting is enabled. Go to :menuselection:`Accounting --> Configuration -->"
+" Settings`, and, in the :guilabel:`Analytics` section, enable "
+":guilabel:`Analytic Accounting`. Then, click :guilabel:`Save`."
+msgstr ""
+"Los menús, el resumen y el plan de costes solo se muestran si la contabilidad"
+" analítica está activada. Vaya a :menuselection:`Contabilidad --> "
+"Configuración --> Ajustes` y, en la sección :guilabel:`Analítica`, active "
+":guilabel:`Contabilidad analítica`. Luego, haga clic en :guilabel:`Guardar`."
+
 #~ msgid ":ref:`Install <general/install>` the following modules to get all the features of the Romanian localization."
 #~ msgstr ":ref:`Instale <general/install>` los siguientes módulos para obtener todas las funciones de la localización rumana. "
 

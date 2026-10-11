@@ -164,14 +164,6 @@ Create a new |RFQ|
 To create a new |RFQ|, click the :guilabel:`New` button on the top-left corner of the
 :guilabel:`Requests for Quotation` dashboard to reveal a new |PO| form.
 
-.. note::
-   With the *Process Number - Purchase* module (`process_number_purchase`) installed, a
-   :guilabel:`Process Number` field appears above the |RFQ| form, with a :guilabel:`Create a new
-   process number` link. See :doc:`../../../general/process_numbers` for the concept of a
-   process number. To have a process number created automatically for every new |RFQ|, enable
-   :guilabel:`Create Automatically` in the :guilabel:`Process Number` section of
-   :menuselection:`Settings --> eYssen ERP`.
-
 Start by assigning a :guilabel:`Vendor`.
 
 The :guilabel:`Vendor Reference` field points to the sales and delivery order numbers sent by the

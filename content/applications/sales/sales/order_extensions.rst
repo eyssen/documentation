@@ -178,20 +178,6 @@ and for how long.
    The thresholds come from the *Payment Warning* configuration of the accounting module
    ``account_payment_warning``.
 
-Process numbers
-===============
-
-*Process Number - Sale* (``process_number_sale``) links sales orders to the company's process (case)
-numbers.
-
-A :guilabel:`Process Number` field is added to the sales order, and the process number record gets a
-:guilabel:`Sale Orders` smart button listing the orders attached to it. When the
-:guilabel:`Create Automatically` option is enabled in :menuselection:`Sales app --> Configuration
---> Settings`, confirming an order without a process number creates one for it.
-
-.. note::
-   Requires the base *Process Number* module (``process_number``).
-
 Warehouse per order line
 ========================
 

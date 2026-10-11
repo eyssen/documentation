@@ -19,4 +19,3 @@ coworkers, and keep track of each project's profitability.
    project/templates
    project/sla
    project/gantt_planning
-   project/process_numbers

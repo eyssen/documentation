@@ -3,7 +3,7 @@ Stock productivity helpers
 =============================
 
 Preparing a stock transfer by hand — adding products one by one, retyping a list from a supplier
-e-mail, checking totals, filing it under an internal work order or browsing the product catalog —
+e-mail, checking totals or browsing the product catalog —
 is repetitive and error-prone on transfers with many lines. eYssen ships a small set of independent
 productivity helpers that attach directly to the :guilabel:`Transfer` (``stock.picking``) form to
 speed up exactly these steps. Each helper is a separate, single-purpose module, so a warehouse can
@@ -16,8 +16,6 @@ Key features
 - **Bulk-add products** to a transfer by pasting a list, or uploading a CSV or Excel file.
 - **See the total quantity** of a transfer, per unit of measure, both on the form and in the list
   view.
-- **Link a transfer to an internal process number** to group related transfers under one
-  reference.
 - **Add products to a transfer from the product catalog**, the same kanban-based picker used
   elsewhere in Odoo for sales and purchase orders.
 - **Scan a product barcode** to add it to a draft transfer.
@@ -30,9 +28,7 @@ Configuration
 These helpers require no settings screen. Once the relevant module is installed, its button,
 field or column appears automatically on the standard :guilabel:`Transfer` form and/or the
 :guilabel:`Transfers` list view (:menuselection:`Inventory --> Transfers`). Every module builds on
-top of the eYssen :guilabel:`Inventory` layer (``eyssen_stock`` and/or ``eyssen_base``); the
-process-number helper additionally requires the ``process_number`` module, which defines the
-shared :guilabel:`Process Number` record.
+top of the eYssen :guilabel:`Inventory` layer (``eyssen_stock`` and/or ``eyssen_base``).
 
 .. note::
    The bulk-add-products wizard reads Excel files with the ``openpyxl`` Python library, listed in
@@ -168,42 +164,6 @@ The same information is available in a compact one-line form (:guilabel:`Sum Qty
 Qty*) as an optional column in the :guilabel:`Transfers` list view, next to the status column, so
 totals can be scanned without opening each transfer.
 
-Process number on a transfer
-------------------------------
-
-.. screenshot:: inventory-stock-helpers-process-number-field
-   :menu: Inventory ‣ Transfers ‣ (a draft transfer)
-   :shows: A draft transfer form with the "Process Number" field above the transfer name and the "Create a
-      new process number" link visible because the field is still empty.
-   :highlight: The "Process Number" field and the create link (red frame).
-   :data: Draft transfer WH/INT/00003 with no process number yet.
-   :module: process_number_stock
-   :notes: English UI, light theme, 1440px width, crop to the form header.
-
-When the ``process_number_stock`` module is installed, every transfer form shows a
-:guilabel:`Process Number` field above the transfer's name. If it is empty, a :guilabel:`Create a
-new process number` link creates one on the spot; an existing process number can also be selected
-directly. This links the transfer to the shared eYssen :guilabel:`Process Number` record (a
-trackable reference with assignees and a description, used to group related documents across
-modules).
-
-.. screenshot:: inventory-stock-helpers-process-number-form
-   :menu: Inventory ‣ Process Numbers ‣ (a process number)
-   :shows: A Process Number form with the "Stock Pickings" smart button (truck icon) showing a count, and
-      the linked transfers listed below.
-   :highlight: The "Stock Pickings" smart button (red frame).
-   :data: A process number linked to three transfers.
-   :module: process_number_stock
-   :notes: English UI, light theme, 1440px width, crop to the button box and the linked transfers.
-
-From the :guilabel:`Process Number` form itself, a :guilabel:`Stock Pickings` smart button shows
-how many transfers are linked to it and opens their list, and the transfer list view gains a
-:guilabel:`Process Number` column so linked transfers can be spotted at a glance.
-
-.. tip::
-   Changes to the :guilabel:`Process Number` field on a transfer are tracked in the chatter, which
-   is useful for auditing when a transfer was reassigned to a different work order or job number.
-
 Stock catalog
 --------------
 
@@ -290,8 +250,6 @@ Scope and modules
   product lines from pasted text, CSV or Excel.
 - ``eyssen_quantity_total_stock`` — the :guilabel:`Sum Qty (detailed)` / :guilabel:`Sum Qty`
   computed totals on the transfer form and list view.
-- ``process_number_stock`` — the :guilabel:`Process Number` field on transfers and the reverse
-  :guilabel:`Stock Pickings` smart button (requires ``process_number``).
 - ``eyssen_stock_catalog`` — the :guilabel:`Catalog` button that opens the product catalog picker
   on a transfer.
 - ``eyssen_barcode_stock`` — the barcode-scanner button that adds scanned products to a draft

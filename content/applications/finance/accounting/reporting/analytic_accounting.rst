@@ -10,7 +10,8 @@ To activate this feature, go to :menuselection:`Accounting --> Configuration -->
 enable :guilabel:`Analytic Accounting` in the :guilabel:`Analytics` section.
 
 .. seealso::
-   :doc:`Analytic budget <budget>`
+   - :doc:`Analytic budget <budget>`
+   - :doc:`Analytic cost control <analytic_cost_control>`
 
 .. _accounting/analytic_accounting/analytic_accounts:
 

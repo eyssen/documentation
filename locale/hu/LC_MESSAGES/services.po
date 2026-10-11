@@ -1367,7 +1367,7 @@ msgstr "Feladat létrehozása értékesítési rendelésből"
 msgid "Product management"
 msgstr "Termékmenedzsment"
 
-#: ../../content/applications/services/field_service/configuration.rst:3 ../../content/applications/services/field_service/product_management.rst:10 ../../content/applications/services/field_service/worksheets.rst:10 ../../content/applications/services/project/process_numbers.rst:14 ../../content/applications/services/project/project_management.rst:18 ../../content/applications/services/project/sla.rst:14 ../../content/applications/services/project/tasks/recurring_tasks.rst:10 ../../content/applications/services/timesheets.rst:15
+#: ../../content/applications/services/field_service/configuration.rst:3 ../../content/applications/services/field_service/product_management.rst:10 ../../content/applications/services/field_service/worksheets.rst:10 ../../content/applications/services/project/project_management.rst:18 ../../content/applications/services/project/sla.rst:14 ../../content/applications/services/project/tasks/recurring_tasks.rst:10 ../../content/applications/services/timesheets.rst:15
 msgid "Configuration"
 msgstr "Konfiguráció"
 
@@ -2883,58 +2883,6 @@ msgstr ":doc:`tasks/task_dependencies`"
 msgid ":doc:`project_management`"
 msgstr ":doc:`project_management`"
 
-#: ../../content/applications/services/project/process_numbers.rst:3
-msgid "Process numbers"
-msgstr "Ügyszámok"
-
-#: ../../content/applications/services/project/process_numbers.rst:5
-msgid "A **process number** is a case identifier that ties together everything belonging to the same matter across the database. On the Project side it can be attached to a project and to its tasks, so that all the work on one case can be found from a single number."
-msgstr "Az **ügyszám** olyan ügyazonosító, amely az adatbázisban összeköti mindazt, ami ugyanahhoz az ügyhöz tartozik. A Projekt oldalán projekthez és annak feladataihoz is hozzárendelhető, így egy ügy teljes munkája egyetlen számról megtalálható."
-
-#: ../../content/applications/services/project/process_numbers.rst:10
-msgid "This feature is provided by the *Process Number - Project* (`process_number_project`) module, which requires the *Process Number* (`process_number`) module."
-msgstr "Ezt a funkciót a *Process Number - Project* (`process_number_project`) modul biztosítja, amelyhez a *Process Number* (`process_number`) modul szükséges."
-
-#: ../../content/applications/services/project/process_numbers.rst:27
-msgid "Process number mode"
-msgstr "Ügyszám mód"
-
-#: ../../content/applications/services/project/process_numbers.rst:29
-msgid "Every project has a :guilabel:`Process Number Mode`:"
-msgstr "Minden projektnek van egy :guilabel:`Process Number Mode` beállítása:"
-
-#: ../../content/applications/services/project/process_numbers.rst:34
-msgid ":guilabel:`Single`"
-msgstr ":guilabel:`Single`"
-
-#: ../../content/applications/services/project/process_numbers.rst:32
-msgid "The whole project belongs to one case. The :guilabel:`Process Number` chosen on the project is applied to all of its tasks, and tasks created later inherit it. Changing the project's process number updates the tasks."
-msgstr "A teljes projekt egyetlen ügyhöz tartozik. A projekten kiválasztott :guilabel:`Process Number` az összes feladatára érvényes, és a később létrehozott feladatok is öröklik. A projekt ügyszámának módosítása a feladatokat is frissíti."
-
-#: ../../content/applications/services/project/process_numbers.rst:38
-msgid ":guilabel:`Multi`"
-msgstr ":guilabel:`Multi`"
-
-#: ../../content/applications/services/project/process_numbers.rst:37
-msgid "Each task carries its own process number. The project itself has none, and every task can be assigned to a different case."
-msgstr "Minden feladat saját ügyszámot visel. Magának a projektnek nincs ügyszáma, és minden feladat más ügyhöz rendelhető."
-
-#: ../../content/applications/services/project/process_numbers.rst:40
-msgid "If the project already contains tasks with different process numbers, switching the mode back to :guilabel:`Single` is refused, so that existing case assignments are not silently overwritten."
-msgstr "Ha a projekt már tartalmaz eltérő ügyszámú feladatokat, a rendszer visszautasítja a visszaváltást :guilabel:`Single` módra, hogy a meglévő ügy-hozzárendelések ne íródjanak felül észrevétlenül."
-
-#: ../../content/applications/services/project/process_numbers.rst:43
-msgid "Use the :guilabel:`Create a new process number` link on the project or on the task to generate a number on the spot instead of picking an existing one."
-msgstr "A projekten vagy a feladaton lévő :guilabel:`Create a new process number` hivatkozással meglévő ügyszám kiválasztása helyett azonnal újat hozhat létre."
-
-#: ../../content/applications/services/project/process_numbers.rst:55
-msgid "Finding the work behind a number"
-msgstr "Egy ügyszám mögötti munka megtalálása"
-
-#: ../../content/applications/services/project/process_numbers.rst:57
-msgid "Open a process number to see the :guilabel:`Projects` and :guilabel:`Tasks` smart buttons with their counts, and the lists of the linked projects and tasks below them. The process number list also shows the linked projects and tasks as tags."
-msgstr "Nyisson meg egy ügyszámot: itt látja a :guilabel:`Projects` és a :guilabel:`Tasks` okosgombot a darabszámokkal, alattuk pedig a kapcsolódó projektek és feladatok listáját. Az ügyszámlista szintén címkeként jeleníti meg a kapcsolódó projekteket és feladatokat."
-
 #: ../../content/applications/services/project/project_management.rst:167
 msgid "Application settings"
 msgstr "Alkalmazásbeállítások"
@@ -3859,14 +3807,6 @@ msgstr "Nincsenek kalibrációs funkciók: nincs :guilabel:`Mérőeszköz` fül,
 msgid "To keep track of the certificates of an etalon, attach them in its :guilabel:`Documents` tab, for example with the :guilabel:`Calibration` type and an :guilabel:`Expiry Date`: for an active etalon, a warning activity is created when the expiry date approaches (see :doc:`documents`)."
 msgstr "Az etalon tanúsítványainak nyilvántartásához csatolja azokat az etalon :guilabel:`Dokumentumok` fülén, például :guilabel:`Kalibráció` típussal és :guilabel:`Lejárati dátum` megadásával: aktív etalon esetén a lejárati dátum közeledtével a rendszer figyelmeztetési tevékenységet hoz létre (lásd: :doc:`documents`)."
 
-#: ../../content/applications/services/project/process_numbers.rst:16
-msgid "To have a process number created automatically for every new project, go to :menuselection:`Settings --> eYssen ERP`, and, in the :guilabel:`Process Number` section, enable :guilabel:`Create Automatically` under the :guilabel:`Project` option. The setting is per company."
-msgstr "Ha minden új projekthez automatikusan ügyszámot szeretne létrehozni, lépjen a :menuselection:`Beállítások --> eYssen ERP` menüpontra, és a :guilabel:`Process Number` szakaszban, a :guilabel:`Project` beállítás alatt kapcsolja be a :guilabel:`Create Automatically` lehetőséget. A beállítás vállalatonként érvényes."
-
-#: ../../content/applications/services/project/process_numbers.rst:21
-msgid ":doc:`../../general/process_numbers` for the process number records themselves, and their use in the other applications."
-msgstr "Magukról az ügyszám rekordokról és azok más alkalmazásokban való használatáról lásd: :doc:`../../general/process_numbers`."
-
 #~ msgid "Enable the Measuring Devices module from :menuselection:`Equipment Management --> Settings --> Configuration --> Equipment Types --> Measuring Devices`, or install ``equipment_measuring`` from the Apps menu."
 #~ msgstr "A Mérőeszközök modul engedélyezése: :menuselection:`Berendezéskezelés --> Beállítások --> Konfiguráció --> Berendezéstípusok --> Mérőeszközök`, vagy telepítse az ``equipment_measuring`` csomagot az Alkalmazások menüből."
 
@@ -4013,9 +3953,6 @@ msgstr "Magukról az ügyszám rekordokról és azok más alkalmazásokban való
 
 #~ msgid "**Group By: Calibration Status**: Group by OK/Warning/Overdue status."
 #~ msgstr "**Csoportosítás: Kalibrálási állapot**: Csoportosítás OK/Figyelmeztetés/Lejárt állapot szerint."
-
-#~ msgid "To have a process number created automatically for every new project, go to :menuselection:`Settings --> eYssen --> Process Number` and enable :guilabel:`Create Automatically`. The setting is per company."
-#~ msgstr "Ha minden új projekthez automatikusan létre szeretne hozatni ügyszámot, lépjen a :menuselection:`Beállítások --> eYssen --> Process Number` menüpontra, és kapcsolja be a :guilabel:`Create Automatically` opciót. A beállítás vállalatonként érvényes."
 
 # Equipment Management documentation translations
 #~ msgid "Equipment Management list view"

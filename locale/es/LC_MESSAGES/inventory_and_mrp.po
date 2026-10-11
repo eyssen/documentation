@@ -20536,10 +20536,6 @@ msgstr "Las etiquetas con el número de serie y su código de barras se pueden i
 msgid "Stock productivity helpers"
 msgstr "Ayudas de productividad para las existencias"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:5
-msgid "Preparing a stock transfer by hand — adding products one by one, retyping a list from a supplier e-mail, checking totals, filing it under an internal work order or browsing the product catalog — is repetitive and error-prone on transfers with many lines. eYssen ships a small set of independent productivity helpers that attach directly to the :guilabel:`Transfer` (``stock.picking``) form to speed up exactly these steps. Each helper is a separate, single-purpose module, so a warehouse can install only the ones it needs."
-msgstr "Preparar un traslado de existencias a mano (agregar productos uno por uno, volver a escribir una lista de un correo del proveedor, revisar totales, clasificarlo bajo una orden de trabajo interna o buscar en el catálogo de productos) es repetitivo y propenso a errores en traslados con muchas líneas. eYssen incluye un pequeño conjunto de ayudas de productividad independientes que se integran directamente en el formulario de :guilabel:`Traslado` (``stock.picking``) para agilizar precisamente estos pasos. Cada ayuda es un módulo independiente y de propósito único, de modo que un almacén puede instalar solo las que necesita."
-
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:13 ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/cash_on_delivery.rst:33 ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/delivery_slips.rst:13 ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/locations_and_picking.rst:15 ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/multi_warehouse.rst:14
 msgid "Key features"
 msgstr "Funciones principales"
@@ -20556,10 +20552,6 @@ msgstr "**Agregar productos de forma masiva** a un traslado al pegar una lista o
 msgid "**See the total quantity** of a transfer, per unit of measure, both on the form and in the list view."
 msgstr "**Ver la cantidad total** de un traslado, por unidad de medida, tanto en el formulario como en la vista de lista."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:19
-msgid "**Link a transfer to an internal process number** to group related transfers under one reference."
-msgstr "**Vincular un traslado a un número de proceso interno** para agrupar traslados relacionados bajo una misma referencia."
-
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:21
 msgid "**Add products to a transfer from the product catalog**, the same kanban-based picker used elsewhere in Odoo for sales and purchase orders."
 msgstr "**Agregar productos a un traslado desde el catálogo de productos**, el mismo selector basado en kanban que se usa en otras partes de Odoo para los pedidos de venta y de compra."
@@ -20571,10 +20563,6 @@ msgstr "**Escanear el código de barras de un producto** para agregarlo a un tra
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:24
 msgid "**See the analytic distribution** of each operation line, and find the transfer behind an analytic entry."
 msgstr "**Ver la distribución analítica** de cada línea de operación y encontrar el traslado detrás de un apunte analítico."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:30
-msgid "These helpers require no settings screen. Once the relevant module is installed, its button, field or column appears automatically on the standard :guilabel:`Transfer` form and/or the :guilabel:`Transfers` list view (:menuselection:`Inventory --> Transfers`). Every module builds on top of the eYssen :guilabel:`Inventory` layer (``eyssen_stock`` and/or ``eyssen_base``); the process-number helper additionally requires the ``process_number`` module, which defines the shared :guilabel:`Process Number` record."
-msgstr "Estas ayudas no requieren ninguna pantalla de ajustes. Una vez que se instala el módulo correspondiente, su botón, campo o columna aparece automáticamente en el formulario estándar de :guilabel:`Traslado` o en la vista de lista :guilabel:`Traslados` (:menuselection:`Inventario --> Traslados`). Todos los módulos se basan en la capa de :guilabel:`Inventario` de eYssen (``eyssen_stock`` o ``eyssen_base``); la ayuda del número de proceso también requiere el módulo ``process_number``, que define el registro compartido :guilabel:`Número de proceso`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:38
 msgid "The bulk-add-products wizard reads Excel files with the ``openpyxl`` Python library, listed in the module's ``requirements.txt``. Make sure it is available in the Odoo environment before using the Excel import format."
@@ -20656,22 +20644,6 @@ msgstr "En la pestaña :guilabel:`Operaciones` de un traslado, debajo de las lí
 msgid "The same information is available in a compact one-line form (:guilabel:`Sum Qty`, e.g. *3 P, 42 Qty*) as an optional column in the :guilabel:`Transfers` list view, next to the status column, so totals can be scanned without opening each transfer."
 msgstr "La misma información está disponible en una forma compacta de una sola línea (:guilabel:`Suma de cantidad`, por ejemplo, *3 P, 42 Ctd*) como columna opcional en la vista de lista :guilabel:`Traslados`, junto a la columna de estado, de modo que se pueden revisar los totales sin abrir cada traslado."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:172
-msgid "Process number on a transfer"
-msgstr "Número de proceso en un traslado"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:183
-msgid "When the ``process_number_stock`` module is installed, every transfer form shows a :guilabel:`Process Number` field above the transfer's name. If it is empty, a :guilabel:`Create a new process number` link creates one on the spot; an existing process number can also be selected directly. This links the transfer to the shared eYssen :guilabel:`Process Number` record (a trackable reference with assignees and a description, used to group related documents across modules)."
-msgstr "Cuando el módulo ``process_number_stock`` está instalado, todos los formularios de traslado muestran un campo :guilabel:`Número de proceso` arriba del nombre del traslado. Si está vacío, un enlace :guilabel:`Crear un nuevo número de proceso` crea uno al instante; también se puede seleccionar directamente un número de proceso existente. Esto vincula el traslado al registro compartido de :guilabel:`Número de proceso` de eYssen (una referencia rastreable con personas asignadas y una descripción, que se usa para agrupar documentos relacionados entre varios módulos)."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:199
-msgid "From the :guilabel:`Process Number` form itself, a :guilabel:`Stock Pickings` smart button shows how many transfers are linked to it and opens their list, and the transfer list view gains a :guilabel:`Process Number` column so linked transfers can be spotted at a glance."
-msgstr "En el mismo formulario de :guilabel:`Número de proceso`, un botón inteligente :guilabel:`Traslados de existencias` muestra cuántos traslados están vinculados a él y abre su lista, y la vista de lista de traslados obtiene una columna :guilabel:`Número de proceso` para poder identificar los traslados vinculados de un vistazo."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:204
-msgid "Changes to the :guilabel:`Process Number` field on a transfer are tracked in the chatter, which is useful for auditing when a transfer was reassigned to a different work order or job number."
-msgstr "Los cambios en el campo :guilabel:`Número de proceso` de un traslado se registran en el chatter, lo que resulta útil para auditar cuándo se reasignó un traslado a una orden de trabajo o número de trabajo diferente."
-
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:208
 msgid "Stock catalog"
 msgstr "Catálogo de existencias"
@@ -20723,10 +20695,6 @@ msgstr "``eyssen_product_bulk_add_stock``: botón y asistente :guilabel:`Añadir
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:291
 msgid "``eyssen_quantity_total_stock`` — the :guilabel:`Sum Qty (detailed)` / :guilabel:`Sum Qty` computed totals on the transfer form and list view."
 msgstr "``eyssen_quantity_total_stock``: los totales calculados :guilabel:`Suma de cantidad (detallada)` / :guilabel:`Suma de cantidad` en el formulario y la vista de lista del traslado."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:293
-msgid "``process_number_stock`` — the :guilabel:`Process Number` field on transfers and the reverse :guilabel:`Stock Pickings` smart button (requires ``process_number``)."
-msgstr "``process_number_stock``: el campo :guilabel:`Número de proceso` en los traslados y el botón inteligente inverso :guilabel:`Traslados de existencias` (requiere ``process_number``)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:295
 msgid "``eyssen_stock_catalog`` — the :guilabel:`Catalog` button that opens the product catalog picker on a transfer."
@@ -26652,10 +26620,6 @@ msgstr ":guilabel:`Advertencia`: una ventana emergente notifica al usuario el me
 msgid ":guilabel:`Blocking Message`: a pop-up displays the message, and the vendor (or product) is removed from the order."
 msgstr ":guilabel:`Mensaje de bloqueo`: una ventana emergente muestra el mensaje, y el proveedor (o producto) se elimina del pedido."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:168
-msgid "With the *Process Number - Purchase* module (`process_number_purchase`) installed, a :guilabel:`Process Number` field appears above the |RFQ| form, with a :guilabel:`Create a new process number` link. See :doc:`../../../general/process_numbers` for the concept of a process number. To have a process number created automatically for every new |RFQ|, enable :guilabel:`Create Automatically` in the :guilabel:`Process Number` section of :menuselection:`Settings --> eYssen ERP`."
-msgstr "Con el módulo *Process Number - Purchase* (`process_number_purchase`) instalado, aparece un campo :guilabel:`Número de proceso` encima del formulario de la |RFQ|, con un enlace :guilabel:`Crear un nuevo número de proceso`. Consulte :doc:`../../../general/process_numbers` para conocer el concepto de número de proceso. Para que se cree automáticamente un número de proceso para cada nueva |RFQ|, active :guilabel:`Crear automáticamente` en la sección :guilabel:`Número de proceso` de :menuselection:`Ajustes --> eYssen ERP`."
-
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:203
 msgid ":guilabel:`Ask confirmation` only appears if the :guilabel:`Receipt Reminder` setting is enabled, under :menuselection:`Purchase app --> Configuration --> Settings`. When enabled, Odoo automatically emails a reminder to the vendor a set number of days before the expected receipt, for any |PO| where :guilabel:`Ask confirmation` was ticked and the vendor has not yet confirmed. The number of days is set per vendor, on the :guilabel:`Sales & Purchase` tab of their contact form, in the :guilabel:`Days Before Receipt` field."
 msgstr ":guilabel:`Solicitar confirmación` solo aparece si el ajuste :guilabel:`Recordatorio de recibo` está activado, en :menuselection:`Compra --> Configuración --> Ajustes`. Cuando está activado, Odoo envía automáticamente un correo de recordatorio al proveedor un número determinado de días antes de la recepción prevista, para cualquier |PO| en la que se haya marcado :guilabel:`Solicitar confirmación` y el proveedor aún no haya confirmado. El número de días se configura por proveedor, en la pestaña :guilabel:`Ventas y compras` de su formulario de contacto, en el campo :guilabel:`Días antes de la recepción`."
@@ -26971,6 +26935,41 @@ msgstr "El menú :guilabel:`Calibraciones`, en la aplicación eYssen *Gestión d
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:432
 msgid "The same list opens from the :guilabel:`Calibrations` smart button of a measuring device, limited to that device. When searching by :guilabel:`Equipment`, a device is also found by its serial number, internal ID, or equipment ID."
 msgstr "La misma lista se abre desde el botón inteligente :guilabel:`Calibraciones` de un equipo de medición, limitada a ese equipo. Al buscar por :guilabel:`Equipo`, un equipo de medición también se encuentra por su número de serie, su ID interno o su ID del equipo."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:5
+msgid ""
+"Preparing a stock transfer by hand — adding products one by one, retyping a "
+"list from a supplier e-mail, checking totals or browsing the product catalog "
+"— is repetitive and error-prone on transfers with many lines. eYssen ships a "
+"small set of independent productivity helpers that attach directly to the "
+":guilabel:`Transfer` (``stock.picking``) form to speed up exactly these "
+"steps. Each helper is a separate, single-purpose module, so a warehouse can "
+"install only the ones it needs."
+msgstr ""
+"Preparar un traslado de existencias a mano (agregar productos uno por uno, "
+"volver a escribir una lista de un correo del proveedor, revisar totales o "
+"buscar en el catálogo de productos) es repetitivo y propenso a errores en "
+"traslados con muchas líneas. eYssen incluye un pequeño conjunto de ayudas de "
+"productividad independientes que se integran directamente en el formulario de"
+" :guilabel:`Traslado` (``stock.picking``) para agilizar precisamente estos "
+"pasos. Cada ayuda es un módulo independiente y de propósito único, de modo "
+"que un almacén puede instalar solo las que necesita."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/stock_helpers.rst:28
+msgid ""
+"These helpers require no settings screen. Once the relevant module is "
+"installed, its button, field or column appears automatically on the standard "
+":guilabel:`Transfer` form and/or the :guilabel:`Transfers` list view "
+"(:menuselection:`Inventory --> Transfers`). Every module builds on top of the"
+" eYssen :guilabel:`Inventory` layer (``eyssen_stock`` and/or "
+"``eyssen_base``)."
+msgstr ""
+"Estas ayudas no requieren ninguna pantalla de ajustes. Una vez que se instala"
+" el módulo correspondiente, su botón, campo o columna aparece automáticamente"
+" en el formulario estándar de :guilabel:`Traslado` o en la vista de lista "
+":guilabel:`Traslados` (:menuselection:`Inventario --> Traslados`). Todos los "
+"módulos se basan en la capa de :guilabel:`Inventario` de eYssen "
+"(``eyssen_stock`` o ``eyssen_base``)."
 
 #~ msgid "**Odoo Barcode** allows users to assign barcodes to individual products and product categories, and track inventory movements using those barcodes. By connecting a barcode scanner, certain inventory processes can be triggered by scanning barcodes."
 #~ msgstr "La aplicación **Código de barras de Odoo** permite que los usuarios asignen códigos de barras a productos individuales y a categorías de productos para poder rastrear movimientos de inventario mediante estos códigos de barras. Si conectas un lector de código de barras, podrás activar algunos procesos de inventario al escanear los códigos de barras."

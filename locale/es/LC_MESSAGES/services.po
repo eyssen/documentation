@@ -58,7 +58,7 @@ msgstr "Creación de tareas desde una orden de venta"
 msgid "Product management"
 msgstr "Gestión de productos"
 
-#: ../../content/applications/services/field_service/configuration.rst:3 ../../content/applications/services/field_service/product_management.rst:10 ../../content/applications/services/field_service/worksheets.rst:10 ../../content/applications/services/project/process_numbers.rst:14 ../../content/applications/services/project/project_management.rst:18 ../../content/applications/services/project/sla.rst:14 ../../content/applications/services/project/tasks/recurring_tasks.rst:10 ../../content/applications/services/timesheets.rst:15
+#: ../../content/applications/services/field_service/configuration.rst:3 ../../content/applications/services/field_service/product_management.rst:10 ../../content/applications/services/field_service/worksheets.rst:10 ../../content/applications/services/project/project_management.rst:18 ../../content/applications/services/project/sla.rst:14 ../../content/applications/services/project/tasks/recurring_tasks.rst:10 ../../content/applications/services/timesheets.rst:15
 msgid "Configuration"
 msgstr "Configuración"
 
@@ -3185,66 +3185,6 @@ msgstr ":doc:`tasks/task_dependencies`"
 #: ../../content/applications/services/project/gantt_planning.rst:92 ../../content/applications/services/project/templates.rst:70
 msgid ":doc:`project_management`"
 msgstr ":doc:`project_management`"
-
-#: ../../content/applications/services/project/process_numbers.rst:3
-msgid "Process numbers"
-msgstr "Números de expediente"
-
-#: ../../content/applications/services/project/process_numbers.rst:5
-msgid "A **process number** is a case identifier that ties together everything belonging to the same matter across the database. On the Project side it can be attached to a project and to its tasks, so that all the work on one case can be found from a single number."
-msgstr "Un **número de expediente** es un identificador de caso que vincula todo lo relacionado con un mismo asunto en toda la base de datos. En el módulo de Proyecto se puede asociar a un proyecto y a sus tareas, de modo que todo el trabajo de un caso se pueda encontrar a partir de un único número."
-
-#: ../../content/applications/services/project/process_numbers.rst:10
-msgid "This feature is provided by the *Process Number - Project* (`process_number_project`) module, which requires the *Process Number* (`process_number`) module."
-msgstr "Esta función la proporciona el módulo *Número de expediente - Proyecto* (`process_number_project`), que requiere el módulo *Número de expediente* (`process_number`)."
-
-#: ../../content/applications/services/project/process_numbers.rst:16
-msgid "To have a process number created automatically for every new project, go to :menuselection:`Settings --> eYssen ERP`, and, in the :guilabel:`Process Number` section, enable :guilabel:`Create Automatically` under the :guilabel:`Project` option. The setting is per company."
-msgstr "Para que se cree automáticamente un número de expediente en cada proyecto nuevo, vaya a :menuselection:`Ajustes --> eYssen ERP` y, en la sección :guilabel:`Número de proceso`, active :guilabel:`Crear automáticamente` en la opción :guilabel:`Proyecto`. El ajuste es por compañía."
-
-#: ../../content/applications/services/project/process_numbers.rst:21
-msgid ":doc:`../../general/process_numbers` for the process number records themselves, and their use in the other applications."
-msgstr ":doc:`../../general/process_numbers` para los propios registros de números de expediente y su uso en el resto de aplicaciones."
-
-#: ../../content/applications/services/project/process_numbers.rst:27
-msgid "Process number mode"
-msgstr "Modo de número de proceso"
-
-#: ../../content/applications/services/project/process_numbers.rst:29
-msgid "Every project has a :guilabel:`Process Number Mode`:"
-msgstr "Todos los proyectos tienen un :guilabel:`Modo de número de proceso`:"
-
-#: ../../content/applications/services/project/process_numbers.rst:34
-msgid ":guilabel:`Single`"
-msgstr ":guilabel:`Soltero(a)`"
-
-#: ../../content/applications/services/project/process_numbers.rst:32
-msgid "The whole project belongs to one case. The :guilabel:`Process Number` chosen on the project is applied to all of its tasks, and tasks created later inherit it. Changing the project's process number updates the tasks."
-msgstr "Todo el proyecto pertenece a un solo caso. El :guilabel:`Número de proceso` elegido en el proyecto se aplica a todas sus tareas, y las tareas creadas más adelante lo heredan. Si cambia el número de proceso del proyecto, las tareas se actualizan."
-
-#: ../../content/applications/services/project/process_numbers.rst:38
-msgid ":guilabel:`Multi`"
-msgstr ":guilabel:`Múltiple`"
-
-#: ../../content/applications/services/project/process_numbers.rst:37
-msgid "Each task carries its own process number. The project itself has none, and every task can be assigned to a different case."
-msgstr "Cada tarea tiene su propio número de proceso. El proyecto en sí no tiene ninguno, y cada tarea se puede asignar a un caso diferente."
-
-#: ../../content/applications/services/project/process_numbers.rst:40
-msgid "If the project already contains tasks with different process numbers, switching the mode back to :guilabel:`Single` is refused, so that existing case assignments are not silently overwritten."
-msgstr "Si el proyecto ya contiene tareas con diferentes números de proceso, no se permite volver al modo :guilabel:`Soltero(a)`, de forma que las asignaciones de casos existentes no se sobrescriban sin previo aviso."
-
-#: ../../content/applications/services/project/process_numbers.rst:43
-msgid "Use the :guilabel:`Create a new process number` link on the project or on the task to generate a number on the spot instead of picking an existing one."
-msgstr "Utilice el enlace :guilabel:`Crear un nuevo número de proceso` en el proyecto o en la tarea para generar un número al instante en lugar de elegir uno existente."
-
-#: ../../content/applications/services/project/process_numbers.rst:55
-msgid "Finding the work behind a number"
-msgstr "Encontrar el trabajo detrás de un número"
-
-#: ../../content/applications/services/project/process_numbers.rst:57
-msgid "Open a process number to see the :guilabel:`Projects` and :guilabel:`Tasks` smart buttons with their counts, and the lists of the linked projects and tasks below them. The process number list also shows the linked projects and tasks as tags."
-msgstr "Abra un número de proceso para ver los botones inteligentes :guilabel:`Proyectos` y :guilabel:`Tareas` con sus totales, y las listas de los proyectos y tareas vinculados debajo de ellos. La lista de números de proceso también muestra los proyectos y tareas vinculados como etiquetas."
 
 #: ../../content/applications/services/project/project_management.rst:167
 msgid "Application settings"

@@ -34386,6 +34386,612 @@ msgstr "A :guilabel:`Nyomtatás` gomb a címletjegyzéket nyomtatja."
 msgid "Past counts are listed under :menuselection:`Accounting --> Reporting --> Cash Register Closures`, where they can be filtered by state (:guilabel:`Draft`, :guilabel:`Waiting for Check`, :guilabel:`Waiting for Approval`, :guilabel:`Closed`) and grouped by cash register, user or controller."
 msgstr "A korábbi számlálások a :menuselection:`Könyvelés --> Kimutatás --> Pénztárzárások` menüpontban találhatók, ahol állapot szerint szűrhetők (:guilabel:`Piszkozat`, :guilabel:`Ellenőrzésre vár`, :guilabel:`Jóváhagyásra vár`, :guilabel:`Lezárt`), és pénztár, felhasználó vagy ellenőr szerint csoportosíthatók."
 
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:14
+msgid ":doc:`Analytic cost control <analytic_cost_control>`"
+msgstr ":doc:`Analitikus költségkontroll <analytic_cost_control>`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:3
+msgid "Analytic cost control"
+msgstr "Analitikus költségkontroll"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:5
+msgid ""
+"*Analytic Cost Control* (`account_analytic_cost_control`) adds plan-versus-"
+"actual cost control on top of :doc:`analytic accounts <analytic_accounting>`:"
+" a cost plan per analytic account, the committed and actual costs, the "
+"revenue, and the margin. A typical use is the follow-up of **work numbers** "
+"(job numbers), but it works with any analytic plan: projects, cost centers, "
+"etc."
+msgstr ""
+"Az *Analytic Cost Control* (`account_analytic_cost_control`) terv–tény "
+"költségkontrollt ad az :doc:`analitikus számlákhoz <analytic_accounting>`: "
+"analitikus számlánként költségtervet, a lekötött és a tényleges költségeket, "
+"az árbevételt és a fedezetet. Tipikus felhasználása a **munkaszámok** "
+"követése, de bármelyik analitikus tervvel működik: projektekkel, "
+"költséghelyekkel stb."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:10
+msgid ""
+"The module adds no field to the documents. Customer invoices, vendor bills, "
+"purchase and sales order lines, timesheets, expenses, and stock valuation are"
+" booked to an analytic account through the standard :ref:`analytic "
+"distribution <accounting/analytic_accounting/analytic-distribution>` of their"
+" lines. The module then compares these booked items with the cost plan."
+msgstr ""
+"A modul nem ad új mezőt a bizonylatokhoz. A vevői számlák, a szállítói "
+"számlák, a beszerzési és értékesítési rendelések sorai, a munkaidő-"
+"nyilvántartások, a költségelszámolások és a készletértékelés a sorok szokásos"
+" :ref:`analitikus felosztásán <accounting/analytic_accounting/analytic-"
+"distribution>` keresztül kerülnek egy analitikus számlára. A modul ezután "
+"ezeket a könyvelt tételeket veti össze a költségtervvel."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:16
+msgid ""
+"The module depends only on *Accounting*. The :guilabel:`Contract Value` of "
+"the summary is only available if *Sales* is installed, and the "
+":guilabel:`Committed` column only if *Purchase* is installed."
+msgstr ""
+"A modul csak a *Könyvelés* modulra épül. Az összesítő :guilabel:`Szerződéses "
+"érték` mutatója csak telepített *Értékesítés* esetén, a :guilabel:`Lekötött` "
+"oszlop pedig csak telepített *Beszerzés* esetén érhető el."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:23
+msgid "Activate the feature"
+msgstr "A funkció bekapcsolása"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:25
+msgid ""
+"Go to :menuselection:`Settings --> eYssen ERP`, and, in the "
+":guilabel:`Analytic Cost Control` section, enable :guilabel:`Analytic Cost "
+"Control`. Then, click :guilabel:`Save`."
+msgstr ""
+"Lépjen a :menuselection:`Beállítások --> eYssen ERP` menüpontra, és az "
+":guilabel:`Analytic Cost Control` szakaszban jelölje be az "
+":guilabel:`Analytic Cost Control` beállítást. Ezután kattintson a "
+":guilabel:`Mentés` gombra."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:36
+msgid "Configure an analytic plan"
+msgstr "Analitikus terv beállítása"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:38
+msgid ""
+"The module does **not** create any analytic plan when it is installed. Choose"
+" the plans to follow up: either enable the cost control on an existing plan "
+"(e.g., :guilabel:`Projects`), or create a new plan."
+msgstr ""
+"A modul a telepítéskor **nem** hoz létre analitikus tervet. Válassza ki a "
+"követendő terveket: vagy kapcsolja be a költségkontrollt egy meglévő terven "
+"(pl. :guilabel:`Projektek`), vagy hozzon létre egy új tervet."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:42
+msgid ""
+"Go to :menuselection:`Accounting --> Configuration --> Analytic Plans`, open "
+"a plan, and set:"
+msgstr ""
+"Lépjen a :menuselection:`Könyvelés --> Konfiguráció --> Analitikus tervek` "
+"menüpontra, nyisson meg egy tervet, és állítsa be:"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:44
+msgid ""
+":guilabel:`Cost Control`: the analytic accounts of this plan get the cost "
+"plan, the summary, and the plan / actual report."
+msgstr ""
+":guilabel:`Költségkontroll`: a terv analitikus számlái költségtervet, "
+"összesítőt és terv / tény riportot kapnak."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:46
+msgid ""
+":guilabel:`Code Sequence` (optional, independent of :guilabel:`Cost "
+"Control`): select a sequence. The new analytic accounts of this plan that "
+"have no :guilabel:`Reference` get their reference from this sequence. For "
+"example, with the prefix `WN/%(year)s/`, the first work number of 2026 is "
+"`WN/2026/00001`."
+msgstr ""
+":guilabel:`Kód sorszámozás` (nem kötelező, a :guilabel:`Költségkontroll` "
+"beállítástól független): válasszon egy sorszámozást. A terv azon új "
+"analitikus számlái, amelyeknek nincs :guilabel:`Hivatkozás` értékük, ebből a "
+"sorszámozásból kapják a hivatkozásukat. Például a `WN/%(year)s/` előtaggal "
+"2026 első munkaszáma `WN/2026/00001`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:52
+msgid ""
+"Both options can only be set on a **root** analytic plan, not on a sub-plan. "
+"Otherwise, the error *Cost control and the code sequence can only be set on a"
+" root analytic plan.* is displayed."
+msgstr ""
+"Mindkét beállítás csak **legfelső szintű** analitikus terven adható meg, "
+"alterven nem. Ellenkező esetben a *Költségkontroll és kód sorszámozás csak "
+"legfelső szintű analitikus terven állítható be.* hibaüzenet jelenik meg."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:56
+msgid ""
+"To follow up work numbers, create an analytic plan named `Work Numbers`, tick"
+" :guilabel:`Cost Control`, and create a sequence with the prefix "
+"`WN/%(year)s/` and a padding of `5` in :guilabel:`Code Sequence`. Projects "
+"carry the analytic accounts of all the plans, so the timesheets of a project "
+"that is linked to a work number are booked to it automatically."
+msgstr ""
+"A munkaszámok követéséhez hozzon létre egy `Work Numbers` nevű analitikus "
+"tervet, jelölje be a :guilabel:`Költségkontroll` beállítást, és a "
+":guilabel:`Kód sorszámozás` mezőben hozzon létre egy `WN/%(year)s/` előtagú, "
+"`5` számjegyes kitöltésű sorszámozást. A projektek az összes terv analitikus "
+"számláját hordozzák, ezért a munkaszámhoz kapcsolt projekt munkaidő-"
+"nyilvántartásai automatikusan arra könyvelődnek."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:64
+msgid "How the analytic items are classified"
+msgstr "Az analitikus tételek besorolása"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:66
+msgid ""
+"Every analytic item is classified when it is booked. The classification is "
+"stored and is used in the summary, the lists, and the report."
+msgstr ""
+"Minden analitikus tétel a könyveléskor besorolásra kerül. A besorolás "
+"tárolódik, és az összesítőben, a listákban és a riportban is ezt használja a "
+"rendszer."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:69
+msgid "**Revenue or cost**"
+msgstr "**Árbevétel vagy költség**"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:71
+msgid ""
+"An item is **revenue** if its financial account is an income account. An item"
+" without a financial account is revenue if its amount is positive and it is "
+"not a timesheet. Any other item is a cost."
+msgstr ""
+"Egy tétel **árbevétel**, ha a főkönyvi számlája bevételi számla. A főkönyvi "
+"számla nélküli tétel árbevétel, ha az összege pozitív, és nem munkaidő-"
+"nyilvántartás. Minden más tétel költség."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:74
+msgid "**Cost category**"
+msgstr "**Költségkategória**"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:76
+msgid ""
+"A cost is either :guilabel:`Labour`, :guilabel:`Material`, or "
+":guilabel:`Other Costs`. The category is the first one that applies in this "
+"order:"
+msgstr ""
+"A költség :guilabel:`Munkadíj`, :guilabel:`Anyag` vagy :guilabel:`Egyéb "
+"költség` lehet. A kategória az első olyan, amely az alábbi sorrendben "
+"alkalmazható:"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:79
+msgid ""
+"the :guilabel:`Cost Category` of the financial account "
+"(:menuselection:`Accounting --> Configuration --> Chart of Accounts`, in the "
+"account form; the field is not displayed for income and balance sheet "
+"accounts);"
+msgstr ""
+"a főkönyvi számla :guilabel:`Költségkategória` mezője "
+"(:menuselection:`Könyvelés --> Konfiguráció --> Számlatükör`, a számla "
+"űrlapján; a mező a bevételi és a mérlegszámláknál nem jelenik meg);"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:82
+msgid ""
+"the :guilabel:`Cost Category` of the product category "
+"(:menuselection:`Inventory --> Configuration --> Product Categories`, or the "
+"same menu of :guilabel:`Invoicing`, in the :guilabel:`Cost Control` group); "
+"sub-categories inherit it;"
+msgstr ""
+"a termékkategória :guilabel:`Költségkategória` mezője "
+"(:menuselection:`Készlet --> Konfiguráció --> Termék kategóriák`, vagy a "
+":guilabel:`Számlázás` azonos menüpontja, a :guilabel:`Költségkontroll` "
+"csoportban); az alkategóriák öröklik;"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:85
+msgid ""
+"the product type: a service is :guilabel:`Labour`, a goods product is "
+":guilabel:`Material`;"
+msgstr ""
+"a terméktípus: a szolgáltatás :guilabel:`Munkadíj`, az áru :guilabel:`Anyag`;"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:86
+msgid "a timesheet line is :guilabel:`Labour`;"
+msgstr "a munkaidő-nyilvántartási sor :guilabel:`Munkadíj`;"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:87
+msgid "anything else is :guilabel:`Other Costs`."
+msgstr "minden más :guilabel:`Egyéb költség`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:89
+msgid "**Own or external**"
+msgstr "**Saját vagy külső**"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:91
+msgid ""
+"A cost is :guilabel:`External` if it comes from a vendor bill (including "
+"receipts), and :guilabel:`Own` for everything else: timesheets, stock "
+"valuation, payroll, and miscellaneous entries."
+msgstr ""
+"A költség :guilabel:`Külső`, ha szállítói számláról (beleértve a "
+"bevételezéseket) származik, minden más esetben :guilabel:`Saját`: munkaidő-"
+"nyilvántartás, készletértékelés, bérszámfejtés és egyéb könyvelési tételek."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:95
+msgid ""
+"If the :guilabel:`Cost Category` of a parent product category is changed, the"
+" items that are already booked are not recomputed. Changing it on the "
+"financial account or on the product's own category does recompute them."
+msgstr ""
+"Ha egy szülő termékkategória :guilabel:`Költségkategória` mezőjét módosítják,"
+" a már könyvelt tételek nem számolódnak újra. A főkönyvi számlán vagy a "
+"termék saját kategóriáján végzett módosítás újraszámolja őket."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:102
+msgid "The analytic account form"
+msgstr "Az analitikus számla űrlapja"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:104
+msgid ""
+"The following elements are only displayed on the analytic accounts of a plan "
+"with :guilabel:`Cost Control`, and only to the users of the "
+":guilabel:`Analytic Accounting` group. To open an account, go to "
+":menuselection:`Accounting --> Accounting --> Cost Control`, or "
+":menuselection:`Accounting --> Configuration --> Analytic Accounts`."
+msgstr ""
+"Az alábbi elemek csak a :guilabel:`Költségkontroll` beállítású terv "
+"analitikus számlain, és csak az :guilabel:`Analitikus könyvelés` csoport "
+"felhasználói számára jelennek meg. Egy számla megnyitásához lépjen a "
+":menuselection:`Könyvelés --> Könyvelés --> Költségkontroll` vagy a "
+":menuselection:`Könyvelés --> Konfiguráció --> Analitikus számlák` "
+"menüpontra."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:109
+msgid ""
+"The form has the new fields :guilabel:`Responsible Users` and "
+":guilabel:`Original Plan Saved On` (read-only), and its chatter also supports"
+" activities."
+msgstr ""
+"Az űrlapon új mező a :guilabel:`Felelősök` és az :guilabel:`Eredeti terv "
+"rögzítve` (csak olvasható), és a chatter már tevékenységeket is támogat."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:113
+msgid "Cost plan"
+msgstr "Költségterv"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:115
+msgid ""
+"The :guilabel:`Cost Plan` tab contains editable lines with the following "
+"columns, and the totals at the bottom:"
+msgstr ""
+"A :guilabel:`Költségterv` fül szerkeszthető sorokat tartalmaz az alábbi "
+"oszlopokkal, alul pedig az összesítéseket:"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:118
+msgid ""
+":guilabel:`Cost Category`: :guilabel:`Labour`, :guilabel:`Material`, or "
+":guilabel:`Other Costs`."
+msgstr ""
+":guilabel:`Költségkategória`: :guilabel:`Munkadíj`, :guilabel:`Anyag` vagy "
+":guilabel:`Egyéb költség`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:119
+msgid ":guilabel:`Own / External`."
+msgstr ":guilabel:`Saját / külső`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:120
+msgid ":guilabel:`Description`."
+msgstr ":guilabel:`Leírás`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:121
+msgid ""
+":guilabel:`Original Plan`: read-only, set by the :guilabel:`Save as Original "
+"Plan` button."
+msgstr ""
+":guilabel:`Eredeti terv`: csak olvasható, a :guilabel:`Mentés eredeti "
+"tervként` gomb állítja be."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:122
+msgid ":guilabel:`Current Plan`: the amount that is currently planned."
+msgstr ":guilabel:`Aktuális terv`: a jelenleg tervezett összeg."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:124
+msgid "The :guilabel:`Notes` tab contains free rich-text notes."
+msgstr ""
+"A :guilabel:`Jegyzetek` fül szabad, formázott szöveges jegyzeteket tartalmaz."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:126
+msgid ""
+"When the quotation is accepted, click :guilabel:`Save as Original Plan` and "
+"confirm the message *The current cost plan overwrites the original plan. "
+"Continue?* The :guilabel:`Current Plan` of every cost plan line is copied to "
+"its :guilabel:`Original Plan`, the date is recorded in :guilabel:`Original "
+"Plan Saved On`, and a message is posted in the chatter. From then on, the "
+":guilabel:`Current Plan` can be adjusted while the :guilabel:`Original Plan` "
+"keeps the figures of the quotation. If the account has no cost plan lines, an"
+" error is displayed."
+msgstr ""
+"Amikor az árajánlatot elfogadják, kattintson a :guilabel:`Mentés eredeti "
+"tervként` gombra, és erősítse meg az *Az aktuális költségterv felülírja az "
+"eredeti tervet. Folytatja?* üzenetet. A költségterv minden sorának "
+":guilabel:`Aktuális terv` értéke átmásolódik az :guilabel:`Eredeti terv` "
+"oszlopba, a dátumot az :guilabel:`Eredeti terv rögzítve` mező rögzíti, és a "
+"rendszer üzenetet tesz közzé a chatterben. Ezután az :guilabel:`Aktuális "
+"terv` módosítható, miközben az :guilabel:`Eredeti terv` az árajánlat számait "
+"őrzi. Ha a számlának nincs költségterv-sora, hibaüzenet jelenik meg."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:133
+msgid ""
+"The :guilabel:`Plan / Actual` smart button opens the :ref:`plan / actual "
+"analysis <accounting/analytic_cost_control/report>` filtered on the account "
+"and grouped by cost category and by own / external."
+msgstr ""
+"A :guilabel:`Terv / tény` intelligens gomb megnyitja a :ref:`terv / tény "
+"elemzést <accounting/analytic_cost_control/report>` a számlára szűrve, "
+"költségkategória és saját / külső szerint csoportosítva."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:142
+msgid "The summary at the top of the form shows these indicators:"
+msgstr "Az űrlap tetején lévő összesítő az alábbi mutatókat mutatja:"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:148
+msgid "Indicator"
+msgstr "Mutató"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:150
+msgid ":guilabel:`Contract Value`"
+msgstr ":guilabel:`Szerződéses érték`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:151
+msgid ""
+"The untaxed amount of the confirmed sales order lines distributed to this "
+"account, in proportion to the distribution percentage. Only displayed if "
+"*Sales* is installed."
+msgstr ""
+"A számlára felosztott, visszaigazolt vevői rendelési sorok adó nélküli "
+"összege a felosztási százalékkal arányosan. Csak telepített *Értékesítés* "
+"esetén jelenik meg."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:153
+msgid ":guilabel:`Invoiced Revenue`"
+msgstr ":guilabel:`Kiszámlázott árbevétel`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:154
+msgid "The revenue items booked to the account."
+msgstr "A számlára könyvelt árbevétel-tételek."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:155
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:179
+msgid ":guilabel:`Actual Cost`"
+msgstr ":guilabel:`Tényleges költség`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:156
+msgid "The cost items booked to the account."
+msgstr "A számlára könyvelt költségtételek."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:157
+msgid ":guilabel:`Margin`"
+msgstr ":guilabel:`Fedezet`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:158
+msgid ""
+"The invoiced revenue minus the actual cost, with the margin as a percentage "
+"of the revenue."
+msgstr ""
+"A kiszámlázott árbevétel mínusz a tényleges költség, a fedezettel az "
+"árbevétel százalékában."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:159
+msgid ":guilabel:`Planned Margin`"
+msgstr ":guilabel:`Tervezett fedezet`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:160
+msgid ""
+"The contract value minus the current plan. Only displayed if there is a "
+"contract value."
+msgstr ""
+"A szerződéses érték mínusz az aktuális terv. Csak akkor jelenik meg, ha van "
+"szerződéses érték."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:162
+msgid ""
+"Below the indicators, a table has one row per :guilabel:`Labour`, "
+":guilabel:`Material`, and :guilabel:`Other Costs`, and a :guilabel:`Total` "
+"row. Its columns are:"
+msgstr ""
+"A mutatók alatt egy táblázat soronként mutatja a :guilabel:`Munkadíj`, az "
+":guilabel:`Anyag` és az :guilabel:`Egyéb költség` értékeit, valamint egy "
+":guilabel:`Összesen` sort. Oszlopai:"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:169
+msgid "Column"
+msgstr "Oszlop"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:171
+msgid ":guilabel:`Original Plan`"
+msgstr ":guilabel:`Eredeti terv`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:172
+msgid "The plan :guilabel:`At quotation`, with the date on which it was saved."
+msgstr "Az :guilabel:`Árajánlatkor` érvényes terv, a mentés dátumával."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:173
+msgid ":guilabel:`Current Plan`"
+msgstr ":guilabel:`Aktuális terv`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:174
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:180
+msgid "The total, and its own / external split."
+msgstr "Az összeg, és annak saját / külső bontása."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:175
+msgid ":guilabel:`Committed`"
+msgstr ":guilabel:`Lekötött`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:176
+msgid ""
+"The :guilabel:`Open purchase orders`: the part not yet billed of the "
+"confirmed purchase order lines distributed to this account, in proportion to "
+"the distribution percentage. The category comes from the product. Only "
+"displayed if *Purchase* is installed."
+msgstr ""
+"A :guilabel:`Nyitott beszerzések`: a számlára felosztott, visszaigazolt "
+"beszerzési rendelési sorok még ki nem számlázott része a felosztási "
+"százalékkal arányosan. A kategória a termékből származik. Csak telepített "
+"*Beszerzés* esetén jelenik meg."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:181
+msgid ":guilabel:`Completion`"
+msgstr ":guilabel:`Teljesülés`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:182
+msgid ""
+"The actual cost divided by the plan, as a total and as an own / external "
+"split. It is green up to 90%, orange from 90% to 100%, and red above 100%. A "
+"dash is displayed if there is no plan."
+msgstr ""
+"A tényleges költség és a terv hányadosa, összesen és saját / külső bontásban."
+" 90%-ig zöld, 90% és 100% között narancssárga, 100% fölött piros. Ha nincs "
+"terv, kötőjel jelenik meg."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:186
+msgid ""
+"Click an amount to see the records behind it: the actual amounts open the "
+"analytic items (filtered by category and by own / external), "
+":guilabel:`Invoiced Revenue` opens the revenue items, :guilabel:`Committed` "
+"opens the purchase orders, and :guilabel:`Contract Value` opens the sales "
+"orders."
+msgstr ""
+"Kattintson egy összegre, hogy lássa a mögötte lévő rekordokat: a tényleges "
+"összegek az analitikus tételeket nyitják meg (kategória és saját / külső "
+"szerint szűrve), a :guilabel:`Kiszámlázott árbevétel` az árbevétel-tételeket,"
+" a :guilabel:`Lekötött` a beszerzési rendeléseket, a :guilabel:`Szerződéses "
+"érték` pedig a vevői rendeléseket."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:192
+msgid ""
+"The amounts are displayed in the currency of the company of the analytic "
+"account. Amounts in other currencies are converted at today's rate."
+msgstr ""
+"Az összegek az analitikus számla vállalatának pénznemében jelennek meg. A más"
+" pénznemű összegeket a rendszer a mai árfolyamon váltja át."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:201
+msgid "Cost control list"
+msgstr "Költségkontroll lista"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:203
+msgid ""
+"Go to :menuselection:`Accounting --> Accounting --> Cost Control` to list the"
+" analytic accounts of the plans with :guilabel:`Cost Control`, with the "
+"columns :guilabel:`Reference`, :guilabel:`Name`, :guilabel:`Plan`, "
+":guilabel:`Customer`, :guilabel:`Responsible Users`, :guilabel:`Activities`, "
+":guilabel:`Cost`, :guilabel:`Revenue`, and :guilabel:`Margin`. The "
+":guilabel:`I'm Responsible` filter keeps the accounts of which you are a "
+"responsible user. Clicking :guilabel:`New` creates an account in the first "
+"plan with :guilabel:`Cost Control`."
+msgstr ""
+"A :menuselection:`Könyvelés --> Könyvelés --> Költségkontroll` menüpont a "
+":guilabel:`Költségkontroll` beállítású tervek analitikus számláit listázza a "
+"következő oszlopokkal: :guilabel:`Hivatkozás`, :guilabel:`Név`, "
+":guilabel:`Terv`, :guilabel:`Vevő`, :guilabel:`Felelősök`, "
+":guilabel:`Tevékenységek`, :guilabel:`Költség`, :guilabel:`Árbevétel` és "
+":guilabel:`Fedezet`. Az :guilabel:`Én vagyok a felelős` szűrő azokat a "
+"számlákat tartja meg, amelyeknek Ön a felelőse. Az :guilabel:`Új` gombra "
+"kattintva a rendszer az első olyan tervben hoz létre számlát, amelynél be van"
+" kapcsolva a :guilabel:`Költségkontroll`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:213
+msgid "Plan / actual analysis"
+msgstr "Terv / tény elemzés"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:215
+msgid ""
+"Go to :menuselection:`Accounting --> Reporting --> Management --> Plan / "
+"Actual Analysis`. The report is available as a pivot table, a graph, and a "
+"list. It has one row per cost plan line and one row per analytic item booked "
+"to an account of a plan with :guilabel:`Cost Control`."
+msgstr ""
+"Lépjen a :menuselection:`Könyvelés --> Kimutatás --> Kezelés --> Terv / tény "
+"elemzés` menüpontra. A riport kimutatásként (pivot), grafikonként és "
+"listaként is elérhető. Soronként egy költségterv-sort és egy olyan analitikus"
+" tételt tartalmaz, amely egy :guilabel:`Költségkontroll` beállítású terv "
+"számlájára van könyvelve."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:219
+msgid ""
+"**Measures**: :guilabel:`Original Plan`, :guilabel:`Current Plan`, "
+":guilabel:`Actual Cost`, :guilabel:`Remaining Plan` (the current plan minus "
+"the actual cost), :guilabel:`Revenue`, and :guilabel:`Margin` (the revenue "
+"minus the actual cost)."
+msgstr ""
+"**Mértékek**: :guilabel:`Eredeti terv`, :guilabel:`Aktuális terv`, "
+":guilabel:`Tényleges költség`, :guilabel:`Fennmaradó terv` (az aktuális terv "
+"mínusz a tényleges költség), :guilabel:`Árbevétel` és :guilabel:`Fedezet` (az"
+" árbevétel mínusz a tényleges költség)."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:222
+msgid ""
+"**Dimensions**: :guilabel:`Analytic Account`, :guilabel:`Analytic Plan`, "
+":guilabel:`Customer`, :guilabel:`Cost Category` (including "
+":guilabel:`Revenue`), :guilabel:`Own / External`, :guilabel:`Source` "
+"(:guilabel:`Cost Plan` or :guilabel:`Booked`), :guilabel:`Financial Account`,"
+" :guilabel:`Product`, and :guilabel:`Date`."
+msgstr ""
+"**Dimenziók**: :guilabel:`Analitikus számla`, :guilabel:`Analitikus terv`, "
+":guilabel:`Vevő`, :guilabel:`Költségkategória` (az :guilabel:`Árbevétellel` "
+"együtt), :guilabel:`Saját / külső`, :guilabel:`Forrás` "
+"(:guilabel:`Költségterv` vagy :guilabel:`Könyvelt`), :guilabel:`Főkönyvi "
+"számla`, :guilabel:`Termék` és :guilabel:`Dátum`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:226
+msgid ""
+"**Filters**: :guilabel:`Costs`, :guilabel:`Revenue`, :guilabel:`Own`, "
+":guilabel:`External`, and :guilabel:`Date`."
+msgstr ""
+"**Szűrők**: :guilabel:`Költségek`, :guilabel:`Árbevétel`, :guilabel:`Saját`, "
+":guilabel:`Külső` és :guilabel:`Dátum`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:230
+msgid ""
+"The cost plan lines have no date. When a :guilabel:`Date` filter is applied, "
+"only the booked figures are displayed."
+msgstr ""
+"A költségterv-soroknak nincs dátumuk. :guilabel:`Dátum` szűrő alkalmazásakor "
+"csak a könyvelt számok jelennek meg."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:234
+msgid "Analytic items"
+msgstr "Analitikus tételek"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:236
+msgid ""
+"When the analytic items are opened from the summary, the list shows the "
+"additional columns :guilabel:`Cost Category` and :guilabel:`Own / External`. "
+"In the search view, the items can be grouped by :guilabel:`Cost Control "
+"Account`, :guilabel:`Cost Category`, and :guilabel:`Own / External`."
+msgstr ""
+"Ha az analitikus tételeket az összesítőből nyitják meg, a lista további "
+"oszlopokat mutat: :guilabel:`Költségkategória` és :guilabel:`Saját / külső`. "
+"A keresőnézetben a tételek csoportosíthatók :guilabel:`Költségkontroll "
+"számla`, :guilabel:`Költségkategória` és :guilabel:`Saját / külső` szerint."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:243
+msgid ":doc:`budget`"
+msgstr ":doc:`budget`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:244
+msgid ":doc:`/applications/general/eyssen_erp_settings`"
+msgstr ":doc:`/applications/general/eyssen_erp_settings`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:28
+msgid ""
+"The menus, the summary, and the cost plan are only displayed if analytic "
+"accounting is enabled. Go to :menuselection:`Accounting --> Configuration -->"
+" Settings`, and, in the :guilabel:`Analytics` section, enable "
+":guilabel:`Analytic Accounting`. Then, click :guilabel:`Save`."
+msgstr ""
+"A menük, az összesítő és a költségterv csak akkor jelennek meg, ha az "
+"analitikus könyvelés be van kapcsolva. Lépjen a :menuselection:`Könyvelés -->"
+" Konfiguráció --> Beállítások` menüpontra, és az :guilabel:`Analitika` "
+"szakaszban kapcsolja be az :guilabel:`Analitikus könyvelés` beállítást. "
+"Ezután kattintson a :guilabel:`Mentés` gombra."
+
 #~ msgid ":ref:`Install <general/install>` the following modules to get all the features of the Romanian localization."
 #~ msgstr "A román lokalizáció összes funkciójának eléréséhez :ref:`telepítse <general/install>` a következő modulokat."
 

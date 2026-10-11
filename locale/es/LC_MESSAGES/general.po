@@ -133,7 +133,7 @@ msgstr ":ref:`general/companies/branches`"
 msgid ":doc:`Multi-company <companies/multi_company>`"
 msgstr ":doc:`Multiempresa <companies/multi_company>`"
 
-#: ../../content/applications/general/companies.rst:17 ../../content/applications/general/companies.rst:132 ../../content/applications/general/companies/multi_company.rst:21 ../../content/applications/general/integrations/mail_plugins/outlook.rst:10 ../../content/applications/general/process_numbers.rst:16 ../../content/applications/general/users/azure.rst:20 ../../content/applications/general/users/google.rst:22
+#: ../../content/applications/general/companies.rst:17 ../../content/applications/general/companies.rst:132 ../../content/applications/general/companies/multi_company.rst:21 ../../content/applications/general/integrations/mail_plugins/outlook.rst:10 ../../content/applications/general/users/azure.rst:20 ../../content/applications/general/users/google.rst:22
 msgid "Configuration"
 msgstr "Configuración"
 
@@ -449,7 +449,7 @@ msgstr ":guilabel:`General`"
 msgid ":guilabel:`Connected Users`"
 msgstr ":guilabel:`Usuarios conectados`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:130 ../../content/applications/general/process_numbers.rst:44
+#: ../../content/applications/general/companies/digest_emails.rst:130
 msgid ":guilabel:`Project`"
 msgstr ":guilabel:`Proyecto`"
 
@@ -461,7 +461,7 @@ msgstr ":guilabel:`Tareas abiertas`"
 msgid ":guilabel:`Recruitment`"
 msgstr ":guilabel:`Reclutamiento`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:137 ../../content/applications/general/process_numbers.rst:29
+#: ../../content/applications/general/companies/digest_emails.rst:137
 msgid ":guilabel:`CRM`"
 msgstr ":guilabel:`CRM`"
 
@@ -505,7 +505,7 @@ msgstr ":guilabel:`Conversaciones gestionadas`"
 msgid ":guilabel:`Time to answer (sec)`"
 msgstr ":guilabel:`Tiempo de respuesta (seg)`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:152 ../../content/applications/general/process_numbers.rst:41
+#: ../../content/applications/general/companies/digest_emails.rst:152
 msgid ":guilabel:`Invoicing`"
 msgstr ":guilabel:`Facturación`"
 
@@ -5913,7 +5913,7 @@ msgstr "Etiquetas en las que se puede hacer clic"
 msgid "The *Clickable Many2many Tags Widget* module (`widget_many2many_clickable`) provides a variant of the tags field in which clicking a tag opens the form of the corresponding record. It is used, for example, by the eYssen return merchandise (RMA) forms to jump from a tag to the linked document. In other tags fields, clicking a tag keeps its standard behavior."
 msgstr "El módulo *Clickable Many2many Tags Widget* (`widget_many2many_clickable`) proporciona una variante del campo de etiquetas en la que al hacer clic en una etiqueta se abre el formulario del registro correspondiente. Se utiliza, por ejemplo, en los formularios de devolución de mercancía (RMA) de eYssen para pasar de una etiqueta al documento vinculado. En otros campos de etiquetas, al hacer clic en una etiqueta se mantiene su comportamiento estándar."
 
-#: ../../content/applications/general/backend_interface.rst:158 ../../content/applications/general/process_numbers.rst:155
+#: ../../content/applications/general/backend_interface.rst:158
 msgid ":doc:`eyssen_erp_settings`"
 msgstr ":doc:`eyssen_erp_settings`"
 
@@ -6657,10 +6657,6 @@ msgstr "Algunas opciones tienen subopciones, que se muestran debajo de la opció
 msgid "Country-specific parts of some features are installed automatically, without an option on this page, when the corresponding fiscal localization is installed. For example, with the Hungarian localization, the Hungarian rules of :doc:`invoicing from delivery notes <../finance/accounting/customer_invoices/invoice_from_delivery_notes>`, the Hungarian tax number check of :doc:`POS invoices <../sales/point_of_sale/receipts_invoices>` and the Hungarian tax number field of the :doc:`eCommerce checkout <../websites/ecommerce/checkout>` are added automatically."
 msgstr "Las partes específicas de cada país de algunas funciones se instalan automáticamente, sin una opción en esta página, cuando se instala la localización fiscal correspondiente. Por ejemplo, con la localización húngara se añaden automáticamente las reglas húngaras de la :doc:`facturación desde albaranes <../finance/accounting/customer_invoices/invoice_from_delivery_notes>`, la comprobación del número de identificación fiscal húngaro de las :doc:`facturas del TPV <../sales/point_of_sale/receipts_invoices>` y el campo del número de identificación fiscal húngaro del :doc:`proceso de pago del comercio electrónico <../websites/ecommerce/checkout>`."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:31
-msgid "Once a module is installed, its own settings, if any, appear directly under its option on the same page (e.g., :guilabel:`Create Automatically` under the :guilabel:`Process Number` options), or in the settings of the related application."
-msgstr "Una vez instalado un módulo, sus propios ajustes, si los tiene, aparecen directamente debajo de su opción en la misma página (por ejemplo, :guilabel:`Crear automáticamente` debajo de las opciones de :guilabel:`Número de proceso`), o en los ajustes de la aplicación relacionada."
-
 #: ../../content/applications/general/eyssen_erp_settings.rst:36
 msgid "Only users with the :guilabel:`Administration: Settings` access right can open the page."
 msgstr "Solo los usuarios con el permiso de acceso :guilabel:`Administración: Ajustes` pueden abrir la página."
@@ -6693,15 +6689,15 @@ msgstr "Módulos generales"
 msgid "Features that are not tied to one application: interface, access control, documents, signature, and chatter."
 msgstr "Funciones que no están vinculadas a una sola aplicación: interfaz, control de acceso, documentos, firma y chatter."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:66 ../../content/applications/general/eyssen_erp_settings.rst:115 ../../content/applications/general/eyssen_erp_settings.rst:149 ../../content/applications/general/eyssen_erp_settings.rst:165 ../../content/applications/general/eyssen_erp_settings.rst:247 ../../content/applications/general/eyssen_erp_settings.rst:293 ../../content/applications/general/eyssen_erp_settings.rst:309 ../../content/applications/general/eyssen_erp_settings.rst:325 ../../content/applications/general/eyssen_erp_settings.rst:356 ../../content/applications/general/eyssen_erp_settings.rst:429 ../../content/applications/general/eyssen_erp_settings.rst:463 ../../content/applications/general/eyssen_erp_settings.rst:527 ../../content/applications/general/eyssen_erp_settings.rst:564 ../../content/applications/general/eyssen_erp_settings.rst:580 ../../content/applications/general/eyssen_erp_settings.rst:602 ../../content/applications/general/eyssen_erp_settings.rst:633 ../../content/applications/general/eyssen_erp_settings.rst:668 ../../content/applications/general/process_numbers.rst:26
+#: ../../content/applications/general/eyssen_erp_settings.rst:66 ../../content/applications/general/eyssen_erp_settings.rst:115 ../../content/applications/general/eyssen_erp_settings.rst:149 ../../content/applications/general/eyssen_erp_settings.rst:165 ../../content/applications/general/eyssen_erp_settings.rst:247 ../../content/applications/general/eyssen_erp_settings.rst:293 ../../content/applications/general/eyssen_erp_settings.rst:309 ../../content/applications/general/eyssen_erp_settings.rst:325 ../../content/applications/general/eyssen_erp_settings.rst:356 ../../content/applications/general/eyssen_erp_settings.rst:429 ../../content/applications/general/eyssen_erp_settings.rst:463 ../../content/applications/general/eyssen_erp_settings.rst:527 ../../content/applications/general/eyssen_erp_settings.rst:564 ../../content/applications/general/eyssen_erp_settings.rst:580 ../../content/applications/general/eyssen_erp_settings.rst:602 ../../content/applications/general/eyssen_erp_settings.rst:633 ../../content/applications/general/eyssen_erp_settings.rst:668
 msgid "Option"
 msgstr "Opción"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:67 ../../content/applications/general/eyssen_erp_settings.rst:116 ../../content/applications/general/eyssen_erp_settings.rst:150 ../../content/applications/general/eyssen_erp_settings.rst:166 ../../content/applications/general/eyssen_erp_settings.rst:248 ../../content/applications/general/eyssen_erp_settings.rst:294 ../../content/applications/general/eyssen_erp_settings.rst:310 ../../content/applications/general/eyssen_erp_settings.rst:326 ../../content/applications/general/eyssen_erp_settings.rst:357 ../../content/applications/general/eyssen_erp_settings.rst:430 ../../content/applications/general/eyssen_erp_settings.rst:464 ../../content/applications/general/eyssen_erp_settings.rst:528 ../../content/applications/general/eyssen_erp_settings.rst:565 ../../content/applications/general/eyssen_erp_settings.rst:581 ../../content/applications/general/eyssen_erp_settings.rst:603 ../../content/applications/general/eyssen_erp_settings.rst:634 ../../content/applications/general/eyssen_erp_settings.rst:669 ../../content/applications/general/process_numbers.rst:27
+#: ../../content/applications/general/eyssen_erp_settings.rst:67 ../../content/applications/general/eyssen_erp_settings.rst:116 ../../content/applications/general/eyssen_erp_settings.rst:150 ../../content/applications/general/eyssen_erp_settings.rst:166 ../../content/applications/general/eyssen_erp_settings.rst:248 ../../content/applications/general/eyssen_erp_settings.rst:294 ../../content/applications/general/eyssen_erp_settings.rst:310 ../../content/applications/general/eyssen_erp_settings.rst:326 ../../content/applications/general/eyssen_erp_settings.rst:357 ../../content/applications/general/eyssen_erp_settings.rst:430 ../../content/applications/general/eyssen_erp_settings.rst:464 ../../content/applications/general/eyssen_erp_settings.rst:528 ../../content/applications/general/eyssen_erp_settings.rst:565 ../../content/applications/general/eyssen_erp_settings.rst:581 ../../content/applications/general/eyssen_erp_settings.rst:603 ../../content/applications/general/eyssen_erp_settings.rst:634 ../../content/applications/general/eyssen_erp_settings.rst:669
 msgid "Module"
 msgstr "Módulo"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:68 ../../content/applications/general/eyssen_erp_settings.rst:117 ../../content/applications/general/eyssen_erp_settings.rst:151 ../../content/applications/general/eyssen_erp_settings.rst:167 ../../content/applications/general/eyssen_erp_settings.rst:249 ../../content/applications/general/eyssen_erp_settings.rst:295 ../../content/applications/general/eyssen_erp_settings.rst:311 ../../content/applications/general/eyssen_erp_settings.rst:327 ../../content/applications/general/eyssen_erp_settings.rst:358 ../../content/applications/general/eyssen_erp_settings.rst:431 ../../content/applications/general/eyssen_erp_settings.rst:465 ../../content/applications/general/eyssen_erp_settings.rst:529 ../../content/applications/general/eyssen_erp_settings.rst:566 ../../content/applications/general/eyssen_erp_settings.rst:582 ../../content/applications/general/eyssen_erp_settings.rst:604 ../../content/applications/general/eyssen_erp_settings.rst:635 ../../content/applications/general/eyssen_erp_settings.rst:670 ../../content/applications/general/process_numbers.rst:28
+#: ../../content/applications/general/eyssen_erp_settings.rst:68 ../../content/applications/general/eyssen_erp_settings.rst:117 ../../content/applications/general/eyssen_erp_settings.rst:151 ../../content/applications/general/eyssen_erp_settings.rst:167 ../../content/applications/general/eyssen_erp_settings.rst:249 ../../content/applications/general/eyssen_erp_settings.rst:295 ../../content/applications/general/eyssen_erp_settings.rst:311 ../../content/applications/general/eyssen_erp_settings.rst:327 ../../content/applications/general/eyssen_erp_settings.rst:358 ../../content/applications/general/eyssen_erp_settings.rst:431 ../../content/applications/general/eyssen_erp_settings.rst:465 ../../content/applications/general/eyssen_erp_settings.rst:529 ../../content/applications/general/eyssen_erp_settings.rst:566 ../../content/applications/general/eyssen_erp_settings.rst:582 ../../content/applications/general/eyssen_erp_settings.rst:604 ../../content/applications/general/eyssen_erp_settings.rst:635 ../../content/applications/general/eyssen_erp_settings.rst:670
 msgid "Documentation"
 msgstr "Documentación"
 
@@ -6829,89 +6825,17 @@ msgstr "`eyssen_data_audit`"
 msgid ":doc:`data_audit`"
 msgstr ":doc:`data_audit`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:107
-msgid "Process Number"
-msgstr "Número de proceso"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:109
-msgid "Case identifiers shared by the documents of several applications."
-msgstr "Identificadores de proceso compartidos por los documentos de varias aplicaciones."
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:118
-msgid ":guilabel:`Process Number`"
-msgstr ":guilabel:`Número de proceso`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:119
-msgid "`process_number`"
-msgstr "`process_number`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:120 ../../content/applications/general/eyssen_erp_settings.rst:123 ../../content/applications/general/eyssen_erp_settings.rst:135
-msgid ":doc:`process_numbers`"
-msgstr ":doc:`process_numbers`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:121
-msgid ":guilabel:`Process Number` ‣ :guilabel:`CRM`"
-msgstr ":guilabel:`Número de proceso` ‣ :guilabel:`CRM`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:122 ../../content/applications/general/process_numbers.rst:30
-msgid "`process_number_crm`"
-msgstr "`process_number_crm`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:124
-msgid ":guilabel:`Process Number` ‣ :guilabel:`Sale`"
-msgstr ":guilabel:`Número de proceso` ‣ :guilabel:`Sale`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:125 ../../content/applications/general/process_numbers.rst:33
-msgid "`process_number_sale`"
-msgstr "`process_number_sale`"
-
 #: ../../content/applications/general/eyssen_erp_settings.rst:126 ../../content/applications/general/eyssen_erp_settings.rst:252 ../../content/applications/general/eyssen_erp_settings.rst:255 ../../content/applications/general/eyssen_erp_settings.rst:258 ../../content/applications/general/eyssen_erp_settings.rst:261 ../../content/applications/general/eyssen_erp_settings.rst:264 ../../content/applications/general/eyssen_erp_settings.rst:273
 msgid ":doc:`../sales/sales/order_extensions`"
 msgstr ":doc:`../sales/sales/order_extensions`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:127
-msgid ":guilabel:`Process Number` ‣ :guilabel:`Purchase`"
-msgstr ":guilabel:`Número de proceso` ‣ :guilabel:`Compra`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:128 ../../content/applications/general/process_numbers.rst:36
-msgid "`process_number_purchase`"
-msgstr "`process_number_purchase`"
 
 #: ../../content/applications/general/eyssen_erp_settings.rst:129 ../../content/applications/general/eyssen_erp_settings.rst:345
 msgid ":doc:`../inventory_and_mrp/purchase/manage_deals/rfq`"
 msgstr ":doc:`../inventory_and_mrp/purchase/manage_deals/rfq`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:130
-msgid ":guilabel:`Process Number` ‣ :guilabel:`Stock`"
-msgstr ":guilabel:`Número de proceso` ‣ :guilabel:`Stock`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:131 ../../content/applications/general/process_numbers.rst:39
-msgid "`process_number_stock`"
-msgstr "`process_number_stock`"
-
 #: ../../content/applications/general/eyssen_erp_settings.rst:132 ../../content/applications/general/eyssen_erp_settings.rst:394 ../../content/applications/general/eyssen_erp_settings.rst:397 ../../content/applications/general/eyssen_erp_settings.rst:415
 msgid ":doc:`../inventory_and_mrp/inventory/product_management/stock_helpers`"
 msgstr ":doc:`../inventory_and_mrp/inventory/product_management/stock_helpers`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:133
-msgid ":guilabel:`Process Number` ‣ :guilabel:`Invoicing`"
-msgstr ":guilabel:`Número de proceso` ‣ :guilabel:`Facturación`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:134 ../../content/applications/general/process_numbers.rst:42
-msgid "`process_number_account`"
-msgstr "`process_number_account`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:136
-msgid ":guilabel:`Process Number` ‣ :guilabel:`Project`"
-msgstr ":guilabel:`Número de proceso` ‣ :guilabel:`Proyecto`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:137 ../../content/applications/general/process_numbers.rst:45
-msgid "`process_number_project`"
-msgstr "`process_number_project`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:138 ../../content/applications/general/process_numbers.rst:154
-msgid ":doc:`../services/project/process_numbers`"
-msgstr ":doc:`../services/project/process_numbers`"
 
 #: ../../content/applications/general/eyssen_erp_settings.rst:141
 msgid "Partner"
@@ -8133,10 +8057,6 @@ msgstr "Cita"
 msgid "The eYssen appointment booking application and its bridges."
 msgstr "La aplicación de reserva de citas de eYssen y sus puentes."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:661
-msgid "On the settings page, this section is also titled :guilabel:`Process Number`. It is the last section of the page, below :guilabel:`Point of Sale`."
-msgstr "En la página de ajustes, esta sección también se titula :guilabel:`Número de proceso`. Es la última sección de la página, debajo de :guilabel:`Punto de venta`."
-
 #: ../../content/applications/general/eyssen_erp_settings.rst:671
 msgid ":guilabel:`Appointment`"
 msgstr ":guilabel:`Cita`"
@@ -8304,150 +8224,6 @@ msgstr "Para usar imágenes de Unsplash, se requiere una clave de acceso de Unsp
 #: ../../content/applications/general/integrations/unsplash.rst:33
 msgid "New Unsplash applications are in *demo* mode, limited to 50 Unsplash requests per hour, until they are approved for production by Unsplash."
 msgstr "Las nuevas aplicaciones de Unsplash están en modo *demo*, limitadas a 50 solicitudes de Unsplash por hora, hasta que Unsplash las apruebe para producción."
-
-#: ../../content/applications/general/process_numbers.rst:3
-msgid "Process numbers"
-msgstr "Números de proceso"
-
-#: ../../content/applications/general/process_numbers.rst:5
-msgid "A **process number** is a case identifier shared by all the documents that belong to the same business matter: the opportunity, the quotation, the purchase orders, the transfers, the invoices, the project, and its tasks. Once the documents carry the same process number, the whole history of a case can be found from a single record, whatever application the documents were created in."
-msgstr "Un **número de proceso** es un identificador de caso compartido por todos los documentos que pertenecen al mismo asunto comercial: la oportunidad, el presupuesto, los pedidos de compra, las transferencias, las facturas, el proyecto y sus tareas. Una vez que los documentos comparten el mismo número de proceso, se puede encontrar todo el historial de un caso desde un único registro, sin importar en qué aplicación se crearon los documentos."
-
-#: ../../content/applications/general/process_numbers.rst:10
-msgid "The feature is made of a base module, *Process Number* (`process_number`), and one optional bridge module per application."
-msgstr "La función está compuesta por un módulo base, *Número de proceso* (`process_number`), y un módulo puente opcional por cada aplicación."
-
-#: ../../content/applications/general/process_numbers.rst:18
-msgid "Go to :menuselection:`Settings --> eYssen ERP`, and, in the :guilabel:`Process Number` section, enable :guilabel:`Process Number`. Then, tick the applications in which process numbers are to be used, and click :guilabel:`Save`:"
-msgstr "Vaya a :menuselection:`Ajustes --> eYssen ERP` y, en la sección :guilabel:`Número de proceso`, active :guilabel:`Número de proceso`. Luego, marque las aplicaciones en las que se deben usar los números de proceso y haga clic en :guilabel:`Guardar`:"
-
-#: ../../content/applications/general/process_numbers.rst:31
-msgid ":ref:`Leads and opportunities <process-numbers/crm>`"
-msgstr ":ref:`Iniciativas y oportunidades <process-numbers/crm>`"
-
-#: ../../content/applications/general/process_numbers.rst:32
-msgid ":guilabel:`Sale`"
-msgstr ":guilabel:`Venta`"
-
-#: ../../content/applications/general/process_numbers.rst:34
-msgid ":doc:`Sales order extensions <../sales/sales/order_extensions>`"
-msgstr ":doc:`Extensiones de pedidos de venta <../sales/sales/order_extensions>`"
-
-#: ../../content/applications/general/process_numbers.rst:35
-msgid ":guilabel:`Purchase`"
-msgstr ":guilabel:`Compra`"
-
-#: ../../content/applications/general/process_numbers.rst:37
-msgid ":doc:`Requests for quotation <../inventory_and_mrp/purchase/manage_deals/rfq>`"
-msgstr ":doc:`Solicitudes de presupuesto <../inventory_and_mrp/purchase/manage_deals/rfq>`"
-
-#: ../../content/applications/general/process_numbers.rst:38
-msgid ":guilabel:`Stock`"
-msgstr ":guilabel:`Stock`"
-
-#: ../../content/applications/general/process_numbers.rst:40
-msgid ":doc:`Stock helpers <../inventory_and_mrp/inventory/product_management/stock_helpers>`"
-msgstr ":doc:`Ayudantes de inventario <../inventory_and_mrp/inventory/product_management/stock_helpers>`"
-
-#: ../../content/applications/general/process_numbers.rst:43
-msgid ":ref:`Invoices and bills <process-numbers/invoicing>`"
-msgstr ":ref:`Facturas y facturas de proveedor <process-numbers/invoicing>`"
-
-#: ../../content/applications/general/process_numbers.rst:46
-msgid ":doc:`Process numbers in Project <../services/project/process_numbers>`"
-msgstr ":doc:`Números de proceso en Proyecto <../services/project/process_numbers>`"
-
-#: ../../content/applications/general/process_numbers.rst:58
-msgid "Manage process numbers"
-msgstr "Gestionar números de proceso"
-
-#: ../../content/applications/general/process_numbers.rst:60
-msgid "The :guilabel:`Process Numbers` application lists all the process numbers of the current company. All internal users can create and edit them."
-msgstr "La aplicación :guilabel:`Números de proceso` muestra todos los números de proceso de la empresa actual. Todos los usuarios internos pueden crearlos y editarlos."
-
-#: ../../content/applications/general/process_numbers.rst:63
-msgid "Click :guilabel:`New` to create a process number. The number itself is assigned automatically from the *Process Number* sequence (by default `PN/<year>/<5-digit counter>`, e.g., `PN/2026/00042`) and cannot be modified. It is unique per company. Optionally, fill in:"
-msgstr "Haga clic en :guilabel:`Nuevo` para crear un número de proceso. El número se asigna automáticamente a partir de la secuencia *Número de proceso* (por defecto `PN/<year>/<5-digit counter>`, p. ej., `PN/2026/00042`) y no se puede modificar. Es único por empresa. De forma opcional, complete lo siguiente:"
-
-#: ../../content/applications/general/process_numbers.rst:67
-msgid ":guilabel:`Assignees`: the users in charge of the case;"
-msgstr ":guilabel:`Personas asignadas`: los usuarios responsables del caso;"
-
-#: ../../content/applications/general/process_numbers.rst:68
-msgid ":guilabel:`Description`: a rich-text description of the case. Several users can edit it at the same time, and its previous versions are kept in the history of the field."
-msgstr ":guilabel:`Descripción`: una descripción de texto enriquecido del caso. Varios usuarios pueden editarla al mismo tiempo, y sus versiones anteriores se conservan en el historial del campo."
-
-#: ../../content/applications/general/process_numbers.rst:71
-msgid "The chatter of the process number can be used to discuss the case and to schedule activities; the activities are also displayed in the list and in the activity view. A closed case can be archived with the :menuselection:`Action --> Archive` menu."
-msgstr "El chatter del número de proceso se puede usar para debatir el caso y programar actividades; las actividades también se muestran en la lista y en la vista de actividades. Un caso cerrado se puede archivar con el menú :menuselection:`Acción --> Archivar`."
-
-#: ../../content/applications/general/process_numbers.rst:75
-msgid "Each installed bridge module adds to the process number form a smart button with the number of linked documents, and the list of these documents. The same documents are shown as tags in the list view of the process numbers."
-msgstr "Cada módulo puente instalado añade al formulario del número de proceso un botón inteligente con el número de documentos vinculados, y la lista de dichos documentos. Los mismos documentos se muestran como etiquetas en la vista de lista de los números de proceso."
-
-#: ../../content/applications/general/process_numbers.rst:80
-msgid "The prefix and the padding of the numbers can be changed in :ref:`developer mode <developer-mode>` from :menuselection:`Settings --> Technical --> Sequences & Identifiers --> Sequences`, on the *Process Number* sequence."
-msgstr "El prefijo y el relleno de los números se pueden cambiar en el :ref:`modo de desarrollador <developer-mode>` desde :menuselection:`Ajustes --> Técnico --> Secuencias e identificadores --> Secuencias`, en la secuencia *Número de proceso*."
-
-#: ../../content/applications/general/process_numbers.rst:85
-msgid "A number is reserved as soon as the creation form is opened. Discarding the form therefore leaves a gap in the numbering."
-msgstr "Se reserva un número en cuanto se abre el formulario de creación. Por lo tanto, descartar el formulario deja un hueco en la numeración."
-
-#: ../../content/applications/general/process_numbers.rst:87
-msgid "The cost summary table displayed at the top of the form (planned cost, actual cost, readiness) is a placeholder: it is not filled in yet."
-msgstr "La tabla de resumen de costes que se muestra en la parte superior del formulario (coste previsto, coste real, grado de avance) es un marcador de posición: todavía no se rellena."
-
-#: ../../content/applications/general/process_numbers.rst:99
-msgid "Link a document to a process number"
-msgstr "Vincular un documento a un número de proceso"
-
-#: ../../content/applications/general/process_numbers.rst:101
-msgid "On the documents of the applications for which a bridge module is installed, the :guilabel:`Process Number` field is displayed above the title of the form. Either select an existing process number, or, as long as the field is empty, click :guilabel:`Create a new process number` in the yellow banner to generate a new one and link it to the document in one step."
-msgstr "En los documentos de las aplicaciones para las que hay instalado un módulo puente, el campo :guilabel:`Número de proceso` se muestra encima del título del formulario. Seleccione un número de proceso existente o, mientras el campo esté vacío, haga clic en :guilabel:`Crear un nuevo número de proceso` en el banner amarillo para generar uno nuevo y vincularlo al documento en un solo paso."
-
-#: ../../content/applications/general/process_numbers.rst:106
-msgid "Changes of the process number are logged in the chatter of the document."
-msgstr "Los cambios del número de proceso se registran en el chatter del documento."
-
-#: ../../content/applications/general/process_numbers.rst:111
-msgid "Leads and opportunities"
-msgstr "Iniciativas y oportunidades"
-
-#: ../../content/applications/general/process_numbers.rst:113
-msgid "With the *Process Number - CRM* module (`process_number_crm`), the :guilabel:`Process Number` field is available on leads and opportunities: on the form, as a column of the list view, and on the Kanban cards of the pipeline."
-msgstr "Con el módulo *Process Number - CRM* (`process_number_crm`), el campo :guilabel:`Número de proceso` está disponible en las iniciativas y oportunidades: en el formulario, como columna de la vista de lista y en las tarjetas Kanban del flujo."
-
-#: ../../content/applications/general/process_numbers.rst:117
-msgid "To get a process number for every new lead or opportunity, go to :menuselection:`Settings --> eYssen ERP`, and, in the :guilabel:`Process Number` section, tick :guilabel:`Create Automatically` under the :guilabel:`CRM` option. The setting is company-specific. A lead created without a company gets a number as soon as the option is enabled in at least one company. Leads that already have a process number, e.g., one selected on the creation form, keep it."
-msgstr "Para obtener un número de proceso para cada nueva iniciativa u oportunidad, vaya a :menuselection:`Ajustes --> eYssen ERP` y, en la sección :guilabel:`Número de proceso`, marque :guilabel:`Crear automáticamente` en la opción :guilabel:`CRM`. Este ajuste es específico de cada empresa. Una iniciativa creada sin empresa obtiene un número en cuanto la opción se activa en al menos una empresa. Las iniciativas que ya tienen un número de proceso, por ejemplo, uno seleccionado en el formulario de creación, lo conservan."
-
-#: ../../content/applications/general/process_numbers.rst:123
-msgid "On the process number, the :guilabel:`CRM Leads` smart button opens the linked opportunities in the pipeline, and the :guilabel:`CRM Leads` list shows their name, salesperson, expected revenue, and stage."
-msgstr "En el número de proceso, el botón inteligente :guilabel:`Iniciativas CRM` abre las oportunidades vinculadas en el flujo, y la lista :guilabel:`Iniciativas CRM` muestra su nombre, comercial, ingresos previstos y etapa."
-
-#: ../../content/applications/general/process_numbers.rst:138
-msgid "Invoices and bills"
-msgstr "Facturas y facturas de proveedor"
-
-#: ../../content/applications/general/process_numbers.rst:140
-msgid "With the *Process Number - Account* module (`process_number_account`), the :guilabel:`Process Number` field is available on all journal entries: customer invoices, credit notes, vendor bills, and refunds. It is also added as the first column of the customer invoices list."
-msgstr "Con el módulo *Process Number - Account* (`process_number_account`), el campo :guilabel:`Número de proceso` está disponible en todos los asientos contables: facturas de cliente, facturas rectificativas de cliente, facturas de proveedor y facturas rectificativas de proveedor. También se añade como primera columna de la lista de facturas de cliente."
-
-#: ../../content/applications/general/process_numbers.rst:144
-msgid "On the process number, two smart buttons and two lists separate the documents:"
-msgstr "En el número de proceso, dos botones inteligentes y dos listas separan los documentos:"
-
-#: ../../content/applications/general/process_numbers.rst:146
-msgid ":guilabel:`In Invoices`: the vendor bills and vendor refunds of the case;"
-msgstr ":guilabel:`Facturas de proveedor`: las facturas de proveedor y las facturas rectificativas de proveedor del caso;"
-
-#: ../../content/applications/general/process_numbers.rst:147
-msgid ":guilabel:`Out Invoices`: the customer invoices and credit notes of the case."
-msgstr ":guilabel:`Facturas de salida`: las facturas de cliente y las facturas rectificativas de cliente del caso."
-
-#: ../../content/applications/general/process_numbers.rst:150
-msgid "The process number of a sales order is not copied to its invoices automatically; select it on the invoice."
-msgstr "El número de proceso de un pedido de venta no se copia automáticamente a sus facturas; selecciónelo en la factura."
 
 #: ../../content/applications/general/users.rst:60
 msgid "Users can also be invited quickly by entering their email addresses in the :guilabel:`Invite New Users` field of the :guilabel:`Users` section in the :menuselection:`Settings` app, then clicking :guilabel:`Invite`."
@@ -9140,6 +8916,35 @@ msgstr "La versión del servidor se publica, sin autenticación, en `/web/webcli
 #: ../../content/applications/general/eyssen_erp_settings.rst:771
 msgid "Integrators and monitoring tools that test the edition should therefore compare the marker with `e` (Enterprise) and treat any other value as a non-Enterprise edition. Testing for an empty value only would wrongly classify eYssen ERP as a different edition. The web client, the Point of Sale, and the spreadsheet features no longer behave as on an Enterprise database."
 msgstr "Por lo tanto, los integradores y las herramientas de monitorización que comprueben la edición deben comparar el marcador con `e` (Enterprise) y tratar cualquier otro valor como una edición no Enterprise. Comprobar únicamente si el valor está vacío clasificaría erróneamente eYssen ERP como otra edición. El cliente web, el Punto de venta y las funciones de hoja de cálculo ya no se comportan como en una base de datos Enterprise."
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:31
+msgid ""
+"Once a module is installed, its own settings, if any, appear directly under "
+"its option on the same page, or in the settings of the related application."
+msgstr ""
+"Una vez instalado un módulo, sus propios ajustes, si los hay, aparecen "
+"directamente bajo su opción en la misma página, o en los ajustes de la "
+"aplicación relacionada."
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:106
+msgid "Analytic Cost Control"
+msgstr "Analytic Cost Control"
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:108
+msgid "Plan-versus-actual cost control per analytic account."
+msgstr "Control de costes plan frente a real por cuenta analítica."
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:117
+msgid ":guilabel:`Analytic Cost Control`"
+msgstr ":guilabel:`Analytic Cost Control`"
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:118
+msgid "`account_analytic_cost_control`"
+msgstr "`account_analytic_cost_control`"
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:119
+msgid ":doc:`../finance/accounting/reporting/analytic_cost_control`"
+msgstr ":doc:`../finance/accounting/reporting/analytic_cost_control`"
 
 #~ msgid "Add \"Extra\" filter in Odoo Apps."
 #~ msgstr "Añadir el filtro \"Extra\" en Aplicaciones de Odoo."

@@ -114,7 +114,7 @@ msgstr ":ref:`general/companies/branches`"
 msgid ":doc:`Multi-company <companies/multi_company>`"
 msgstr ":doc:`Több vállalat <companies/multi_company>`"
 
-#: ../../content/applications/general/companies.rst:17 ../../content/applications/general/companies.rst:132 ../../content/applications/general/companies/multi_company.rst:21 ../../content/applications/general/integrations/mail_plugins/outlook.rst:10 ../../content/applications/general/process_numbers.rst:16 ../../content/applications/general/users/azure.rst:20 ../../content/applications/general/users/google.rst:22
+#: ../../content/applications/general/companies.rst:17 ../../content/applications/general/companies.rst:132 ../../content/applications/general/companies/multi_company.rst:21 ../../content/applications/general/integrations/mail_plugins/outlook.rst:10 ../../content/applications/general/users/azure.rst:20 ../../content/applications/general/users/google.rst:22
 msgid "Configuration"
 msgstr "Konfiguráció"
 
@@ -430,7 +430,7 @@ msgstr ":guilabel:`Általános`"
 msgid ":guilabel:`Connected Users`"
 msgstr ":guilabel:`Csatlakozott felhasználók`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:130 ../../content/applications/general/process_numbers.rst:44
+#: ../../content/applications/general/companies/digest_emails.rst:130
 msgid ":guilabel:`Project`"
 msgstr ":guilabel:`Projekt`"
 
@@ -442,7 +442,7 @@ msgstr ":guilabel:`Nyitott feladatok`"
 msgid ":guilabel:`Recruitment`"
 msgstr ":guilabel:`Toborzás`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:137 ../../content/applications/general/process_numbers.rst:29
+#: ../../content/applications/general/companies/digest_emails.rst:137
 msgid ":guilabel:`CRM`"
 msgstr ":guilabel:`CRM`"
 
@@ -486,7 +486,7 @@ msgstr ":guilabel:`Kezelt beszélgetések`"
 msgid ":guilabel:`Time to answer (sec)`"
 msgstr ":guilabel:`Válaszidő (mp)`"
 
-#: ../../content/applications/general/companies/digest_emails.rst:152 ../../content/applications/general/process_numbers.rst:41
+#: ../../content/applications/general/companies/digest_emails.rst:152
 msgid ":guilabel:`Invoicing`"
 msgstr ":guilabel:`Számlázás`"
 
@@ -6644,7 +6644,7 @@ msgstr "Kattintható címkék"
 msgid "The *Clickable Many2many Tags Widget* module (`widget_many2many_clickable`) provides a variant of the tags field in which clicking a tag opens the form of the corresponding record. It is used, for example, by the eYssen return merchandise (RMA) forms to jump from a tag to the linked document. In other tags fields, clicking a tag keeps its standard behavior."
 msgstr "A *Clickable Many2many Tags Widget* modul (`widget_many2many_clickable`) a címkemező egy olyan változatát biztosítja, amelyben egy címkére kattintva megnyílik a megfelelő rekord űrlapja. Ezt használják például az eYssen visszáru- (RMA-) űrlapok, hogy egy címkéről a kapcsolódó bizonylatra lehessen ugrani. A többi címkemezőben a címkére kattintás megőrzi szabványos működését."
 
-#: ../../content/applications/general/backend_interface.rst:158 ../../content/applications/general/process_numbers.rst:155
+#: ../../content/applications/general/backend_interface.rst:158
 msgid ":doc:`eyssen_erp_settings`"
 msgstr ":doc:`eyssen_erp_settings`"
 
@@ -6860,10 +6860,6 @@ msgstr "Egyes beállításoknak albeállításai is vannak, amelyek a fő beáll
 msgid "Country-specific parts of some features are installed automatically, without an option on this page, when the corresponding fiscal localization is installed. For example, with the Hungarian localization, the Hungarian rules of :doc:`invoicing from delivery notes <../finance/accounting/customer_invoices/invoice_from_delivery_notes>`, the Hungarian tax number check of :doc:`POS invoices <../sales/point_of_sale/receipts_invoices>` and the Hungarian tax number field of the :doc:`eCommerce checkout <../websites/ecommerce/checkout>` are added automatically."
 msgstr "Egyes funkciók országspecifikus részei automatikusan, ezen az oldalon lévő opció nélkül települnek, amikor a megfelelő pénzügyi lokalizáció telepítve van. A magyar lokalizációval például automatikusan hozzáadódnak a :doc:`szállítólevelekből történő számlázás <../finance/accounting/customer_invoices/invoice_from_delivery_notes>` magyar szabályai, a :doc:`POS-számlák <../sales/point_of_sale/receipts_invoices>` magyar adószám-ellenőrzése és az :doc:`e-kereskedelmi pénztár <../websites/ecommerce/checkout>` magyar adószám mezője."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:31
-msgid "Once a module is installed, its own settings, if any, appear directly under its option on the same page (e.g., :guilabel:`Create Automatically` under the :guilabel:`Process Number` options), or in the settings of the related application."
-msgstr "A modul telepítése után annak saját beállításai – ha vannak – közvetlenül a beállítása alatt jelennek meg ugyanazon az oldalon (pl. a :guilabel:`Create Automatically` a :guilabel:`Process Number` beállításai alatt), vagy a kapcsolódó alkalmazás beállításai között."
-
 #: ../../content/applications/general/eyssen_erp_settings.rst:36
 msgid "Only users with the :guilabel:`Administration: Settings` access right can open the page."
 msgstr "Az oldalt csak az :guilabel:`Adminisztráció: Beállítások` hozzáférési joggal rendelkező felhasználók nyithatják meg."
@@ -6896,15 +6892,15 @@ msgstr "General Modules"
 msgid "Features that are not tied to one application: interface, access control, documents, signature, and chatter."
 msgstr "Nem egyetlen alkalmazáshoz kötődő funkciók: kezelőfelület, hozzáférés-szabályozás, dokumentumok, aláírás és üzenetfal."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:66 ../../content/applications/general/eyssen_erp_settings.rst:115 ../../content/applications/general/eyssen_erp_settings.rst:149 ../../content/applications/general/eyssen_erp_settings.rst:165 ../../content/applications/general/eyssen_erp_settings.rst:247 ../../content/applications/general/eyssen_erp_settings.rst:293 ../../content/applications/general/eyssen_erp_settings.rst:309 ../../content/applications/general/eyssen_erp_settings.rst:325 ../../content/applications/general/eyssen_erp_settings.rst:356 ../../content/applications/general/eyssen_erp_settings.rst:429 ../../content/applications/general/eyssen_erp_settings.rst:463 ../../content/applications/general/eyssen_erp_settings.rst:527 ../../content/applications/general/eyssen_erp_settings.rst:564 ../../content/applications/general/eyssen_erp_settings.rst:580 ../../content/applications/general/eyssen_erp_settings.rst:602 ../../content/applications/general/eyssen_erp_settings.rst:633 ../../content/applications/general/eyssen_erp_settings.rst:668 ../../content/applications/general/process_numbers.rst:26
+#: ../../content/applications/general/eyssen_erp_settings.rst:66 ../../content/applications/general/eyssen_erp_settings.rst:115 ../../content/applications/general/eyssen_erp_settings.rst:149 ../../content/applications/general/eyssen_erp_settings.rst:165 ../../content/applications/general/eyssen_erp_settings.rst:247 ../../content/applications/general/eyssen_erp_settings.rst:293 ../../content/applications/general/eyssen_erp_settings.rst:309 ../../content/applications/general/eyssen_erp_settings.rst:325 ../../content/applications/general/eyssen_erp_settings.rst:356 ../../content/applications/general/eyssen_erp_settings.rst:429 ../../content/applications/general/eyssen_erp_settings.rst:463 ../../content/applications/general/eyssen_erp_settings.rst:527 ../../content/applications/general/eyssen_erp_settings.rst:564 ../../content/applications/general/eyssen_erp_settings.rst:580 ../../content/applications/general/eyssen_erp_settings.rst:602 ../../content/applications/general/eyssen_erp_settings.rst:633 ../../content/applications/general/eyssen_erp_settings.rst:668
 msgid "Option"
 msgstr "Beállítás"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:67 ../../content/applications/general/eyssen_erp_settings.rst:116 ../../content/applications/general/eyssen_erp_settings.rst:150 ../../content/applications/general/eyssen_erp_settings.rst:166 ../../content/applications/general/eyssen_erp_settings.rst:248 ../../content/applications/general/eyssen_erp_settings.rst:294 ../../content/applications/general/eyssen_erp_settings.rst:310 ../../content/applications/general/eyssen_erp_settings.rst:326 ../../content/applications/general/eyssen_erp_settings.rst:357 ../../content/applications/general/eyssen_erp_settings.rst:430 ../../content/applications/general/eyssen_erp_settings.rst:464 ../../content/applications/general/eyssen_erp_settings.rst:528 ../../content/applications/general/eyssen_erp_settings.rst:565 ../../content/applications/general/eyssen_erp_settings.rst:581 ../../content/applications/general/eyssen_erp_settings.rst:603 ../../content/applications/general/eyssen_erp_settings.rst:634 ../../content/applications/general/eyssen_erp_settings.rst:669 ../../content/applications/general/process_numbers.rst:27
+#: ../../content/applications/general/eyssen_erp_settings.rst:67 ../../content/applications/general/eyssen_erp_settings.rst:116 ../../content/applications/general/eyssen_erp_settings.rst:150 ../../content/applications/general/eyssen_erp_settings.rst:166 ../../content/applications/general/eyssen_erp_settings.rst:248 ../../content/applications/general/eyssen_erp_settings.rst:294 ../../content/applications/general/eyssen_erp_settings.rst:310 ../../content/applications/general/eyssen_erp_settings.rst:326 ../../content/applications/general/eyssen_erp_settings.rst:357 ../../content/applications/general/eyssen_erp_settings.rst:430 ../../content/applications/general/eyssen_erp_settings.rst:464 ../../content/applications/general/eyssen_erp_settings.rst:528 ../../content/applications/general/eyssen_erp_settings.rst:565 ../../content/applications/general/eyssen_erp_settings.rst:581 ../../content/applications/general/eyssen_erp_settings.rst:603 ../../content/applications/general/eyssen_erp_settings.rst:634 ../../content/applications/general/eyssen_erp_settings.rst:669
 msgid "Module"
 msgstr "Modul"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:68 ../../content/applications/general/eyssen_erp_settings.rst:117 ../../content/applications/general/eyssen_erp_settings.rst:151 ../../content/applications/general/eyssen_erp_settings.rst:167 ../../content/applications/general/eyssen_erp_settings.rst:249 ../../content/applications/general/eyssen_erp_settings.rst:295 ../../content/applications/general/eyssen_erp_settings.rst:311 ../../content/applications/general/eyssen_erp_settings.rst:327 ../../content/applications/general/eyssen_erp_settings.rst:358 ../../content/applications/general/eyssen_erp_settings.rst:431 ../../content/applications/general/eyssen_erp_settings.rst:465 ../../content/applications/general/eyssen_erp_settings.rst:529 ../../content/applications/general/eyssen_erp_settings.rst:566 ../../content/applications/general/eyssen_erp_settings.rst:582 ../../content/applications/general/eyssen_erp_settings.rst:604 ../../content/applications/general/eyssen_erp_settings.rst:635 ../../content/applications/general/eyssen_erp_settings.rst:670 ../../content/applications/general/process_numbers.rst:28
+#: ../../content/applications/general/eyssen_erp_settings.rst:68 ../../content/applications/general/eyssen_erp_settings.rst:117 ../../content/applications/general/eyssen_erp_settings.rst:151 ../../content/applications/general/eyssen_erp_settings.rst:167 ../../content/applications/general/eyssen_erp_settings.rst:249 ../../content/applications/general/eyssen_erp_settings.rst:295 ../../content/applications/general/eyssen_erp_settings.rst:311 ../../content/applications/general/eyssen_erp_settings.rst:327 ../../content/applications/general/eyssen_erp_settings.rst:358 ../../content/applications/general/eyssen_erp_settings.rst:431 ../../content/applications/general/eyssen_erp_settings.rst:465 ../../content/applications/general/eyssen_erp_settings.rst:529 ../../content/applications/general/eyssen_erp_settings.rst:566 ../../content/applications/general/eyssen_erp_settings.rst:582 ../../content/applications/general/eyssen_erp_settings.rst:604 ../../content/applications/general/eyssen_erp_settings.rst:635 ../../content/applications/general/eyssen_erp_settings.rst:670
 msgid "Documentation"
 msgstr "Dokumentáció"
 
@@ -7032,89 +7028,17 @@ msgstr "`eyssen_data_audit`"
 msgid ":doc:`data_audit`"
 msgstr ":doc:`data_audit`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:107
-msgid "Process Number"
-msgstr "Process Number"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:109
-msgid "Case identifiers shared by the documents of several applications."
-msgstr "Több alkalmazás bizonylatai által közösen használt ügyazonosítók."
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:118
-msgid ":guilabel:`Process Number`"
-msgstr ":guilabel:`Process Number`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:119
-msgid "`process_number`"
-msgstr "`process_number`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:120 ../../content/applications/general/eyssen_erp_settings.rst:123 ../../content/applications/general/eyssen_erp_settings.rst:135
-msgid ":doc:`process_numbers`"
-msgstr ":doc:`process_numbers`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:121
-msgid ":guilabel:`Process Number` ‣ :guilabel:`CRM`"
-msgstr ":guilabel:`Process Number` ‣ :guilabel:`CRM`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:122 ../../content/applications/general/process_numbers.rst:30
-msgid "`process_number_crm`"
-msgstr "`process_number_crm`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:124
-msgid ":guilabel:`Process Number` ‣ :guilabel:`Sale`"
-msgstr ":guilabel:`Process Number` ‣ :guilabel:`Értékesítés`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:125 ../../content/applications/general/process_numbers.rst:33
-msgid "`process_number_sale`"
-msgstr "`process_number_sale`"
-
 #: ../../content/applications/general/eyssen_erp_settings.rst:126 ../../content/applications/general/eyssen_erp_settings.rst:252 ../../content/applications/general/eyssen_erp_settings.rst:255 ../../content/applications/general/eyssen_erp_settings.rst:258 ../../content/applications/general/eyssen_erp_settings.rst:261 ../../content/applications/general/eyssen_erp_settings.rst:264 ../../content/applications/general/eyssen_erp_settings.rst:273
 msgid ":doc:`../sales/sales/order_extensions`"
 msgstr ":doc:`../sales/sales/order_extensions`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:127
-msgid ":guilabel:`Process Number` ‣ :guilabel:`Purchase`"
-msgstr ":guilabel:`Process Number` ‣ :guilabel:`Beszerzés`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:128 ../../content/applications/general/process_numbers.rst:36
-msgid "`process_number_purchase`"
-msgstr "`process_number_purchase`"
 
 #: ../../content/applications/general/eyssen_erp_settings.rst:129 ../../content/applications/general/eyssen_erp_settings.rst:345
 msgid ":doc:`../inventory_and_mrp/purchase/manage_deals/rfq`"
 msgstr ":doc:`../inventory_and_mrp/purchase/manage_deals/rfq`"
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:130
-msgid ":guilabel:`Process Number` ‣ :guilabel:`Stock`"
-msgstr ":guilabel:`Process Number` ‣ :guilabel:`Stock`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:131 ../../content/applications/general/process_numbers.rst:39
-msgid "`process_number_stock`"
-msgstr "`process_number_stock`"
-
 #: ../../content/applications/general/eyssen_erp_settings.rst:132 ../../content/applications/general/eyssen_erp_settings.rst:394 ../../content/applications/general/eyssen_erp_settings.rst:397 ../../content/applications/general/eyssen_erp_settings.rst:415
 msgid ":doc:`../inventory_and_mrp/inventory/product_management/stock_helpers`"
 msgstr ":doc:`../inventory_and_mrp/inventory/product_management/stock_helpers`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:133
-msgid ":guilabel:`Process Number` ‣ :guilabel:`Invoicing`"
-msgstr ":guilabel:`Process Number` ‣ :guilabel:`Számlázás`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:134 ../../content/applications/general/process_numbers.rst:42
-msgid "`process_number_account`"
-msgstr "`process_number_account`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:136
-msgid ":guilabel:`Process Number` ‣ :guilabel:`Project`"
-msgstr ":guilabel:`Process Number` ‣ :guilabel:`Projekt`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:137 ../../content/applications/general/process_numbers.rst:45
-msgid "`process_number_project`"
-msgstr "`process_number_project`"
-
-#: ../../content/applications/general/eyssen_erp_settings.rst:138 ../../content/applications/general/process_numbers.rst:154
-msgid ":doc:`../services/project/process_numbers`"
-msgstr ":doc:`../services/project/process_numbers`"
 
 #: ../../content/applications/general/eyssen_erp_settings.rst:141
 msgid "Partner"
@@ -8336,10 +8260,6 @@ msgstr "Appointment"
 msgid "The eYssen appointment booking application and its bridges."
 msgstr "Az eYssen időpontfoglaló alkalmazás és annak hídjai."
 
-#: ../../content/applications/general/eyssen_erp_settings.rst:661
-msgid "On the settings page, this section is also titled :guilabel:`Process Number`. It is the last section of the page, below :guilabel:`Point of Sale`."
-msgstr "A beállítások oldalán ennek a szakasznak a címe szintén :guilabel:`Process Number`. Ez az oldal utolsó szakasza, a :guilabel:`Point of Sale` alatt."
-
 #: ../../content/applications/general/eyssen_erp_settings.rst:671
 msgid ":guilabel:`Appointment`"
 msgstr ":guilabel:`Appointment`"
@@ -8451,150 +8371,6 @@ msgstr "Névjegy"
 #: ../../content/applications/general/eyssen_erp_settings.rst:777
 msgid ":doc:`apps_modules`"
 msgstr ":doc:`apps_modules`"
-
-#: ../../content/applications/general/process_numbers.rst:3
-msgid "Process numbers"
-msgstr "Ügyszámok"
-
-#: ../../content/applications/general/process_numbers.rst:5
-msgid "A **process number** is a case identifier shared by all the documents that belong to the same business matter: the opportunity, the quotation, the purchase orders, the transfers, the invoices, the project, and its tasks. Once the documents carry the same process number, the whole history of a case can be found from a single record, whatever application the documents were created in."
-msgstr "Az **ügyszám** olyan ügyazonosító, amelyet az ugyanahhoz az üzleti ügyhöz tartozó összes bizonylat közösen használ: a lehetőség, az árajánlat, a beszerzési rendelések, a készletmozgások, a számlák, a projekt és annak feladatai. Ha a bizonylatok ugyanazt az ügyszámot viselik, egy ügy teljes története egyetlen rekordból elérhető, függetlenül attól, hogy a bizonylatok mely alkalmazásban jöttek létre."
-
-#: ../../content/applications/general/process_numbers.rst:10
-msgid "The feature is made of a base module, *Process Number* (`process_number`), and one optional bridge module per application."
-msgstr "A funkció egy alapmodulból (*Process Number*, `process_number`) és alkalmazásonként egy-egy választható hídmodulból áll."
-
-#: ../../content/applications/general/process_numbers.rst:18
-msgid "Go to :menuselection:`Settings --> eYssen ERP`, and, in the :guilabel:`Process Number` section, enable :guilabel:`Process Number`. Then, tick the applications in which process numbers are to be used, and click :guilabel:`Save`:"
-msgstr "Lépjen a :menuselection:`Beállítások --> eYssen ERP` menüpontra, és a :guilabel:`Process Number` szakaszban kapcsolja be a :guilabel:`Process Number` beállítást. Ezután jelölje be azokat az alkalmazásokat, amelyekben ügyszámokat kíván használni, és kattintson a :guilabel:`Mentés` gombra:"
-
-#: ../../content/applications/general/process_numbers.rst:31
-msgid ":ref:`Leads and opportunities <process-numbers/crm>`"
-msgstr ":ref:`Érdeklődők és lehetőségek <process-numbers/crm>`"
-
-#: ../../content/applications/general/process_numbers.rst:32
-msgid ":guilabel:`Sale`"
-msgstr ":guilabel:`Sale`"
-
-#: ../../content/applications/general/process_numbers.rst:34
-msgid ":doc:`Sales order extensions <../sales/sales/order_extensions>`"
-msgstr ":doc:`Az értékesítési rendelések bővítményei <../sales/sales/order_extensions>`"
-
-#: ../../content/applications/general/process_numbers.rst:35
-msgid ":guilabel:`Purchase`"
-msgstr ":guilabel:`Purchase`"
-
-#: ../../content/applications/general/process_numbers.rst:37
-msgid ":doc:`Requests for quotation <../inventory_and_mrp/purchase/manage_deals/rfq>`"
-msgstr ":doc:`Ajánlatkérések <../inventory_and_mrp/purchase/manage_deals/rfq>`"
-
-#: ../../content/applications/general/process_numbers.rst:38
-msgid ":guilabel:`Stock`"
-msgstr ":guilabel:`Stock`"
-
-#: ../../content/applications/general/process_numbers.rst:40
-msgid ":doc:`Stock helpers <../inventory_and_mrp/inventory/product_management/stock_helpers>`"
-msgstr ":doc:`Készletkezelési segédeszközök <../inventory_and_mrp/inventory/product_management/stock_helpers>`"
-
-#: ../../content/applications/general/process_numbers.rst:43
-msgid ":ref:`Invoices and bills <process-numbers/invoicing>`"
-msgstr ":ref:`Vevői és szállítói számlák <process-numbers/invoicing>`"
-
-#: ../../content/applications/general/process_numbers.rst:46
-msgid ":doc:`Process numbers in Project <../services/project/process_numbers>`"
-msgstr ":doc:`Ügyszámok a Projekt alkalmazásban <../services/project/process_numbers>`"
-
-#: ../../content/applications/general/process_numbers.rst:58
-msgid "Manage process numbers"
-msgstr "Az ügyszámok kezelése"
-
-#: ../../content/applications/general/process_numbers.rst:60
-msgid "The :guilabel:`Process Numbers` application lists all the process numbers of the current company. All internal users can create and edit them."
-msgstr "A :guilabel:`Process Numbers` alkalmazás felsorolja az aktuális vállalat összes ügyszámát. Minden belső felhasználó létrehozhatja és szerkesztheti őket."
-
-#: ../../content/applications/general/process_numbers.rst:63
-msgid "Click :guilabel:`New` to create a process number. The number itself is assigned automatically from the *Process Number* sequence (by default `PN/<year>/<5-digit counter>`, e.g., `PN/2026/00042`) and cannot be modified. It is unique per company. Optionally, fill in:"
-msgstr "Ügyszám létrehozásához kattintson az :guilabel:`Új` gombra. Magát a számot a rendszer automatikusan osztja ki a *Process Number* sorszámozásból (alapértelmezés szerint `PN/<év>/<5 jegyű számláló>`, pl. `PN/2026/00042`), és nem módosítható. Vállalatonként egyedi. Igény szerint töltse ki a következőket:"
-
-#: ../../content/applications/general/process_numbers.rst:67
-msgid ":guilabel:`Assignees`: the users in charge of the case;"
-msgstr ":guilabel:`Assignees`: az ügyért felelős felhasználók;"
-
-#: ../../content/applications/general/process_numbers.rst:68
-msgid ":guilabel:`Description`: a rich-text description of the case. Several users can edit it at the same time, and its previous versions are kept in the history of the field."
-msgstr ":guilabel:`Description`: az ügy formázott szöveges leírása. Egyszerre több felhasználó is szerkesztheti, korábbi változatai pedig megmaradnak a mező előzményeiben."
-
-#: ../../content/applications/general/process_numbers.rst:71
-msgid "The chatter of the process number can be used to discuss the case and to schedule activities; the activities are also displayed in the list and in the activity view. A closed case can be archived with the :menuselection:`Action --> Archive` menu."
-msgstr "Az ügyszám üzenetfala használható az ügy megbeszélésére és tevékenységek ütemezésére; a tevékenységek a listában és a tevékenységnézetben is megjelennek. A lezárt ügy a :menuselection:`Művelet --> Archiválás` menüvel archiválható."
-
-#: ../../content/applications/general/process_numbers.rst:75
-msgid "Each installed bridge module adds to the process number form a smart button with the number of linked documents, and the list of these documents. The same documents are shown as tags in the list view of the process numbers."
-msgstr "Minden telepített hídmodul egy intelligens gombot ad az ügyszám űrlapjához a kapcsolódó bizonylatok számával, valamint e bizonylatok listáját. Ugyanezek a bizonylatok címkeként az ügyszámok listanézetében is megjelennek."
-
-#: ../../content/applications/general/process_numbers.rst:80
-msgid "The prefix and the padding of the numbers can be changed in :ref:`developer mode <developer-mode>` from :menuselection:`Settings --> Technical --> Sequences & Identifiers --> Sequences`, on the *Process Number* sequence."
-msgstr "A számok előtagja és a számjegyek száma :ref:`fejlesztői módban <developer-mode>` módosítható a :menuselection:`Beállítások --> Technikai --> Sorrendek és azonosítók --> Sorszámok` menüpontban, a *Process Number* sorszámozáson."
-
-#: ../../content/applications/general/process_numbers.rst:85
-msgid "A number is reserved as soon as the creation form is opened. Discarding the form therefore leaves a gap in the numbering."
-msgstr "A rendszer már a létrehozási űrlap megnyitásakor lefoglal egy számot. Az űrlap elvetése ezért hézagot hagy a számozásban."
-
-#: ../../content/applications/general/process_numbers.rst:87
-msgid "The cost summary table displayed at the top of the form (planned cost, actual cost, readiness) is a placeholder: it is not filled in yet."
-msgstr "Az űrlap tetején megjelenő költségösszesítő táblázat (tervezett költség, tényleges költség, készültség) csak helykitöltő: egyelőre nem töltődik ki."
-
-#: ../../content/applications/general/process_numbers.rst:99
-msgid "Link a document to a process number"
-msgstr "Bizonylat ügyszámhoz kapcsolása"
-
-#: ../../content/applications/general/process_numbers.rst:101
-msgid "On the documents of the applications for which a bridge module is installed, the :guilabel:`Process Number` field is displayed above the title of the form. Either select an existing process number, or, as long as the field is empty, click :guilabel:`Create a new process number` in the yellow banner to generate a new one and link it to the document in one step."
-msgstr "Azoknak az alkalmazásoknak a bizonylatain, amelyekhez telepítve van hídmodul, a :guilabel:`Process Number` mező az űrlap címe fölött jelenik meg. Válasszon ki egy meglévő ügyszámot, vagy – amíg a mező üres – kattintson a sárga sávban a :guilabel:`Create a new process number` hivatkozásra, amellyel egy lépésben új ügyszámot hozhat létre és kapcsolhat a bizonylathoz."
-
-#: ../../content/applications/general/process_numbers.rst:106
-msgid "Changes of the process number are logged in the chatter of the document."
-msgstr "Az ügyszám változásai naplózásra kerülnek a bizonylat üzenetfalán."
-
-#: ../../content/applications/general/process_numbers.rst:111
-msgid "Leads and opportunities"
-msgstr "Érdeklődők és lehetőségek"
-
-#: ../../content/applications/general/process_numbers.rst:113
-msgid "With the *Process Number - CRM* module (`process_number_crm`), the :guilabel:`Process Number` field is available on leads and opportunities: on the form, as a column of the list view, and on the Kanban cards of the pipeline."
-msgstr "A *Process Number - CRM* modullal (`process_number_crm`) a :guilabel:`Process Number` mező az érdeklődőkön és a lehetőségeken is elérhető: az űrlapon, a listanézet oszlopaként és az értékesítési folyamat Kanban-kártyáin."
-
-#: ../../content/applications/general/process_numbers.rst:117
-msgid "To get a process number for every new lead or opportunity, go to :menuselection:`Settings --> eYssen ERP`, and, in the :guilabel:`Process Number` section, tick :guilabel:`Create Automatically` under the :guilabel:`CRM` option. The setting is company-specific. A lead created without a company gets a number as soon as the option is enabled in at least one company. Leads that already have a process number, e.g., one selected on the creation form, keep it."
-msgstr "Ha minden új érdeklődőhöz vagy lehetőséghez ügyszámot szeretne, lépjen a :menuselection:`Beállítások --> eYssen ERP` menüpontra, és a :guilabel:`Process Number` szakaszban, a :guilabel:`CRM` beállítás alatt jelölje be a :guilabel:`Create Automatically` lehetőséget. A beállítás vállalatfüggő. A vállalat nélkül létrehozott érdeklődő akkor kap számot, ha a beállítás legalább egy vállalatnál be van kapcsolva. Azok az érdeklődők, amelyeknek már van ügyszámuk (pl. a létrehozási űrlapon kiválasztott), megtartják azt."
-
-#: ../../content/applications/general/process_numbers.rst:123
-msgid "On the process number, the :guilabel:`CRM Leads` smart button opens the linked opportunities in the pipeline, and the :guilabel:`CRM Leads` list shows their name, salesperson, expected revenue, and stage."
-msgstr "Az ügyszámon a :guilabel:`CRM Leads` intelligens gomb megnyitja a kapcsolódó lehetőségeket az értékesítési folyamatban, a :guilabel:`CRM Leads` lista pedig megjeleníti azok nevét, értékesítőjét, várható bevételét és szakaszát."
-
-#: ../../content/applications/general/process_numbers.rst:138
-msgid "Invoices and bills"
-msgstr "Vevői és szállítói számlák"
-
-#: ../../content/applications/general/process_numbers.rst:140
-msgid "With the *Process Number - Account* module (`process_number_account`), the :guilabel:`Process Number` field is available on all journal entries: customer invoices, credit notes, vendor bills, and refunds. It is also added as the first column of the customer invoices list."
-msgstr "A *Process Number - Account* modullal (`process_number_account`) a :guilabel:`Process Number` mező minden könyvelési tételen elérhető: vevői számlákon, jóváíró számlákon, szállítói számlákon és szállítói jóváírásokon. A vevői számlák listájának első oszlopaként is megjelenik."
-
-#: ../../content/applications/general/process_numbers.rst:144
-msgid "On the process number, two smart buttons and two lists separate the documents:"
-msgstr "Az ügyszámon két intelligens gomb és két lista választja szét a bizonylatokat:"
-
-#: ../../content/applications/general/process_numbers.rst:146
-msgid ":guilabel:`In Invoices`: the vendor bills and vendor refunds of the case;"
-msgstr ":guilabel:`In Invoices`: az ügy szállítói számlái és szállítói jóváírásai;"
-
-#: ../../content/applications/general/process_numbers.rst:147
-msgid ":guilabel:`Out Invoices`: the customer invoices and credit notes of the case."
-msgstr ":guilabel:`Out Invoices`: az ügy vevői számlái és jóváíró számlái."
-
-#: ../../content/applications/general/process_numbers.rst:150
-msgid "The process number of a sales order is not copied to its invoices automatically; select it on the invoice."
-msgstr "Az értékesítési rendelés ügyszáma nem másolódik át automatikusan a számláira; a számlán külön kell kiválasztani."
 
 #: ../../content/applications/general/users/access_management.rst:3
 msgid "Access management"
@@ -9119,6 +8895,35 @@ msgstr "A szerver verziója hitelesítés nélkül elérhető a `/web/webclient/
 #: ../../content/applications/general/eyssen_erp_settings.rst:771
 msgid "Integrators and monitoring tools that test the edition should therefore compare the marker with `e` (Enterprise) and treat any other value as a non-Enterprise edition. Testing for an empty value only would wrongly classify eYssen ERP as a different edition. The web client, the Point of Sale, and the spreadsheet features no longer behave as on an Enterprise database."
 msgstr "A kiadást ellenőrző integrátoroknak és monitorozó eszközöknek ezért a jelölőt az `e` értékkel (Enterprise) kell összehasonlítaniuk, és minden más értéket nem Enterprise kiadásnak kell tekinteniük. Ha csak az üres értéket vizsgálják, az eYssen ERP-t tévesen másik kiadásba sorolnák. A webkliens, a Point of Sale és a táblázatkezelési funkciók már nem úgy viselkednek, mint egy Enterprise adatbázison."
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:31
+msgid ""
+"Once a module is installed, its own settings, if any, appear directly under "
+"its option on the same page, or in the settings of the related application."
+msgstr ""
+"Miután egy modul telepítve van, az esetleges saját beállításai közvetlenül az"
+" opciója alatt jelennek meg ugyanazon az oldalon, vagy a kapcsolódó "
+"alkalmazás beállításai között."
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:106
+msgid "Analytic Cost Control"
+msgstr "Analytic Cost Control"
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:108
+msgid "Plan-versus-actual cost control per analytic account."
+msgstr "Költségterv és tény szerinti költségkontroll analitikus számlánként."
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:117
+msgid ":guilabel:`Analytic Cost Control`"
+msgstr ":guilabel:`Analytic Cost Control`"
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:118
+msgid "`account_analytic_cost_control`"
+msgstr "`account_analytic_cost_control`"
+
+#: ../../content/applications/general/eyssen_erp_settings.rst:119
+msgid ":doc:`../finance/accounting/reporting/analytic_cost_control`"
+msgstr ":doc:`../finance/accounting/reporting/analytic_cost_control`"
 
 #~ msgid "Activate the :ref:`developer mode <developer-mode>` to set :doc:`social media accounts <../marketing/social_marketing>` and company-specific :doc:`email <email_communication>` system parameters."
 #~ msgstr "A :ref:`fejlesztői mód <developer-mode>` aktiválásával beállíthatja a :doc:`közösségi média fiókokat <../marketing/social_marketing>` és a vállalatspecifikus :doc:`e-mail <email_communication>` rendszerparamétereket."

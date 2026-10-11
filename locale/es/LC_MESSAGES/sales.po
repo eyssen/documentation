@@ -21516,37 +21516,6 @@ msgstr ""
 "Los umbrales provienen de la configuración de *Payment Warning* del módulo "
 "de contabilidad ``account_payment_warning``."
 
-#: ../../content/applications/sales/sales/order_extensions.rst:182
-msgid "Process numbers"
-msgstr "Números de proceso"
-
-#: ../../content/applications/sales/sales/order_extensions.rst:184
-msgid ""
-"*Process Number - Sale* (``process_number_sale``) links sales orders to the "
-"company's process (case) numbers."
-msgstr ""
-"*Process Number - Sale* (``process_number_sale``) vincula los pedidos de "
-"venta a los números de proceso (expediente) de la empresa."
-
-#: ../../content/applications/sales/sales/order_extensions.rst:187
-msgid ""
-"A :guilabel:`Process Number` field is added to the sales order, and the "
-"process number record gets a :guilabel:`Sale Orders` smart button listing "
-"the orders attached to it. When the :guilabel:`Create Automatically` option "
-"is enabled in :menuselection:`Sales app --> Configuration --> Settings`, "
-"confirming an order without a process number creates one for it."
-msgstr ""
-"Se añade un campo :guilabel:`Número de proceso` al pedido de venta, y el "
-"registro del número de proceso obtiene un botón inteligente "
-":guilabel:`Pedidos de venta` que lista los pedidos vinculados a él. Cuando "
-"la opción :guilabel:`Crear automáticamente` está activada en "
-":menuselection:`Ventas --> Configuración --> Ajustes`, al confirmar un "
-"pedido sin número de proceso se crea uno para él."
-
-#: ../../content/applications/sales/sales/order_extensions.rst:193
-msgid "Requires the base *Process Number* module (``process_number``)."
-msgstr "Requiere el módulo base *Process Number* (``process_number``)."
-
 #: ../../content/applications/sales/sales/order_extensions.rst:196
 msgid "Warehouse per order line"
 msgstr "Almacén por línea de pedido"
@@ -33424,6 +33393,14 @@ msgstr ":doc:`../../finance/accounting/payments/payment_orders`"
 #: ../../content/applications/sales/subscriptions/automatic_payments.rst:202
 msgid ":doc:`../../finance/accounting/payments/sepa_mandate_signature`"
 msgstr ":doc:`../../finance/accounting/payments/sepa_mandate_signature`"
+
+#: ../../content/applications/sales/sales/gelato.rst:None
+msgid "Newly generated API key in the Gelato platform."
+msgstr "Clave de API recién generada en la plataforma Gelato."
+
+#: ../../content/applications/sales/sales/gelato.rst:None
+msgid "Newly configured webhook in the Gelato platform."
+msgstr "Webhook recién configurado en la plataforma Gelato."
 
 #~ msgid ""
 #~ "This module requires the *eYssen Hungarian localization* module "

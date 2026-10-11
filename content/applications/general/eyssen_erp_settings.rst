@@ -29,8 +29,7 @@ check of :doc:`POS invoices <../sales/point_of_sale/receipts_invoices>` and the 
 field of the :doc:`eCommerce checkout <../websites/ecommerce/checkout>` are added automatically.
 
 Once a module is installed, its own settings, if any, appear directly under its option on the same
-page (e.g., :guilabel:`Create Automatically` under the :guilabel:`Process Number` options), or in
-the settings of the related application.
+page, or in the settings of the related application.
 
 .. note::
    - Only users with the :guilabel:`Administration: Settings` access right can open the page.
@@ -41,7 +40,7 @@ the settings of the related application.
 
 .. screenshot:: general-eyssen-erp-settings-page
    :menu: Settings ‣ eYssen ERP
-   :shows: The eYssen ERP settings page with the "eYssen ERP" entry selected in the left-hand application list, and the "General Modules" and "Process Number" sections with several options ticked.
+   :shows: The eYssen ERP settings page with the "eYssen ERP" entry selected in the left-hand application list, and the "General Modules" and "Analytic Cost Control" sections with several options ticked.
    :highlight: The "eYssen ERP" entry of the left-hand list (red frame).
    :module: eyssen_base
    :notes: English UI, light theme, 1440px width.
@@ -103,10 +102,10 @@ Features that are not tied to one application: interface, access control, docume
      - `eyssen_data_audit`
      - :doc:`data_audit`
 
-Process Number
---------------
+Analytic Cost Control
+---------------------
 
-Case identifiers shared by the documents of several applications.
+Plan-versus-actual cost control per analytic account.
 
 .. list-table::
    :header-rows: 1
@@ -115,27 +114,9 @@ Case identifiers shared by the documents of several applications.
    * - Option
      - Module
      - Documentation
-   * - :guilabel:`Process Number`
-     - `process_number`
-     - :doc:`process_numbers`
-   * - :guilabel:`Process Number` ‣ :guilabel:`CRM`
-     - `process_number_crm`
-     - :doc:`process_numbers`
-   * - :guilabel:`Process Number` ‣ :guilabel:`Sale`
-     - `process_number_sale`
-     - :doc:`../sales/sales/order_extensions`
-   * - :guilabel:`Process Number` ‣ :guilabel:`Purchase`
-     - `process_number_purchase`
-     - :doc:`../inventory_and_mrp/purchase/manage_deals/rfq`
-   * - :guilabel:`Process Number` ‣ :guilabel:`Stock`
-     - `process_number_stock`
-     - :doc:`../inventory_and_mrp/inventory/product_management/stock_helpers`
-   * - :guilabel:`Process Number` ‣ :guilabel:`Invoicing`
-     - `process_number_account`
-     - :doc:`process_numbers`
-   * - :guilabel:`Process Number` ‣ :guilabel:`Project`
-     - `process_number_project`
-     - :doc:`../services/project/process_numbers`
+   * - :guilabel:`Analytic Cost Control`
+     - `account_analytic_cost_control`
+     - :doc:`../finance/accounting/reporting/analytic_cost_control`
 
 Partner
 -------
@@ -656,10 +637,6 @@ Appointment
 -----------
 
 The eYssen appointment booking application and its bridges.
-
-.. note::
-   On the settings page, this section is also titled :guilabel:`Process Number`. It is the last
-   section of the page, below :guilabel:`Point of Sale`.
 
 .. list-table::
    :header-rows: 1

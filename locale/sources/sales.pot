@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-08 17:35+0200\n"
+"POT-Creation-Date: 2026-10-11 05:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11072,102 +11072,86 @@ msgid "The thresholds come from the *Payment Warning* configuration of the accou
 msgstr ""
 
 #: ../../content/applications/sales/sales/order_extensions.rst:182
-msgid "Process numbers"
-msgstr ""
-
-#: ../../content/applications/sales/sales/order_extensions.rst:184
-msgid "*Process Number - Sale* (``process_number_sale``) links sales orders to the company's process (case) numbers."
-msgstr ""
-
-#: ../../content/applications/sales/sales/order_extensions.rst:187
-msgid "A :guilabel:`Process Number` field is added to the sales order, and the process number record gets a :guilabel:`Sale Orders` smart button listing the orders attached to it. When the :guilabel:`Create Automatically` option is enabled in :menuselection:`Sales app --> Configuration --> Settings`, confirming an order without a process number creates one for it."
-msgstr ""
-
-#: ../../content/applications/sales/sales/order_extensions.rst:193
-msgid "Requires the base *Process Number* module (``process_number``)."
-msgstr ""
-
-#: ../../content/applications/sales/sales/order_extensions.rst:196
 msgid "Warehouse per order line"
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:198
+#: ../../content/applications/sales/sales/order_extensions.rst:184
 msgid "*Sale Multiple Warehouse* (``eyssen_sale_multiple_warehouse``) makes the :guilabel:`Warehouse` field editable **per order line** instead of only once for the whole order, so one order can be shipped from several warehouses."
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:202
+#: ../../content/applications/sales/sales/order_extensions.rst:188
 msgid "Set the warehouse on each line in the :guilabel:`Order Lines` tab; the delivery orders generated on confirmation are split accordingly."
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:206
+#: ../../content/applications/sales/sales/order_extensions.rst:192
 msgid ":doc:`../../inventory_and_mrp/inventory/warehouses_storage/multi_warehouse`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:209
+#: ../../content/applications/sales/sales/order_extensions.rst:195
 msgid "Comment templates"
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:211
+#: ../../content/applications/sales/sales/order_extensions.rst:197
 msgid "*Sale Comments* (``sale_comment_template``) lets you keep reusable comment texts and drop them on quotations and sales orders instead of retyping the same conditions."
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:214
+#: ../../content/applications/sales/sales/order_extensions.rst:200
 msgid "Maintain the texts in :menuselection:`Sales app --> Configuration --> Document Comments`. Each template has a position (before or after the document lines) and can be set to apply automatically to a partner or a document type."
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:219
+#: ../../content/applications/sales/sales/order_extensions.rst:205
 msgid "Requires the base comment-template modules (``base_comment_template``, ``account_comment_template``)."
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:223
+#: ../../content/applications/sales/sales/order_extensions.rst:209
 msgid "Order quantity limits"
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:225
+#: ../../content/applications/sales/sales/order_extensions.rst:211
 msgid "*Sale Quantity Limitation* (``eyssen_sale_quantity_limit``) enforces per-product ordering rules."
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:227
+#: ../../content/applications/sales/sales/order_extensions.rst:213
 msgid "Open a product and fill in the :guilabel:`Quantity Limitation` group of the :guilabel:`Sales` tab:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:229
+#: ../../content/applications/sales/sales/order_extensions.rst:215
 msgid ":guilabel:`Minimum Quantity`: the smallest quantity that may be ordered."
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:230
+#: ../../content/applications/sales/sales/order_extensions.rst:216
 msgid ":guilabel:`Maximum Quantity`: the largest quantity that may be ordered."
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:231
+#: ../../content/applications/sales/sales/order_extensions.rst:217
 msgid ":guilabel:`Quantity Multiplier`: the quantity must be a multiple of this number — for example `6` for a product sold by the half-dozen."
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:234
+#: ../../content/applications/sales/sales/order_extensions.rst:220
 msgid "A sales order line that breaks one of these rules is refused with an explanatory message."
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:245
+#: ../../content/applications/sales/sales/order_extensions.rst:231
 msgid "The companion module *Sale Quantity Limitation - Website Sale* (``eyssen_sale_quantity_limit_ws``) applies the same rules to the online store: the quantity selector on the product page and in the cart respects the minimum, the maximum and the multiplier."
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:253
+#: ../../content/applications/sales/sales/order_extensions.rst:239
 msgid "Report logo per sales team"
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:255
+#: ../../content/applications/sales/sales/order_extensions.rst:241
 msgid "*Conditional Report Logo* (``report_conditional_logo``) prints the logo of the **sales team** instead of the company logo in the header of the PDF documents, which is useful when several brands or business units sell under the same company."
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:259
+#: ../../content/applications/sales/sales/order_extensions.rst:245
 msgid "Go to :menuselection:`Sales --> Configuration --> Sales Teams`, open a team, and upload its image in the :guilabel:`Report Logo` group at the bottom of the form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:262
+#: ../../content/applications/sales/sales/order_extensions.rst:248
 msgid "From then on, every document that has a :guilabel:`Sales Team` field (quotations, sales orders, and customer invoices) is printed with the logo of its team, in all the document layouts. Documents whose team has no logo, and documents without a sales team (e.g., purchase orders or delivery slips), keep the company logo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/order_extensions.rst:266
+#: ../../content/applications/sales/sales/order_extensions.rst:252
 msgid "The feature can be switched off without removing the logos: go to :menuselection:`Sales --> Configuration --> Conditional Report Logos`, and turn off the :guilabel:`Active` toggle of the :guilabel:`Sales Team` source. A source can also be limited to one :guilabel:`Company`. The menu is reserved for the users with the :guilabel:`Sales: Administrator` access right."
 msgstr ""
 

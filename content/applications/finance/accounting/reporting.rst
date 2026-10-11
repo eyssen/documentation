@@ -208,6 +208,7 @@ customer VAT number, as required for the recapitulative statement.
    reporting/pdf_reports
    reporting/tax_returns
    reporting/analytic_accounting
+   reporting/analytic_cost_control
    reporting/budget
    reporting/intrastat
    reporting/data_inalterability

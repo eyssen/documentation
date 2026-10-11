@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-01 22:57+0200\n"
+"POT-Creation-Date: 2026-10-11 05:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1686,7 +1686,6 @@ msgstr ""
 #: ../../content/applications/services/field_service/configuration.rst:3
 #: ../../content/applications/services/field_service/product_management.rst:10
 #: ../../content/applications/services/field_service/worksheets.rst:10
-#: ../../content/applications/services/project/process_numbers.rst:14
 #: ../../content/applications/services/project/project_management.rst:18
 #: ../../content/applications/services/project/sla.rst:14
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:10
@@ -2246,66 +2245,6 @@ msgstr ""
 #: ../../content/applications/services/project/gantt_planning.rst:92
 #: ../../content/applications/services/project/templates.rst:70
 msgid ":doc:`project_management`"
-msgstr ""
-
-#: ../../content/applications/services/project/process_numbers.rst:3
-msgid "Process numbers"
-msgstr ""
-
-#: ../../content/applications/services/project/process_numbers.rst:5
-msgid "A **process number** is a case identifier that ties together everything belonging to the same matter across the database. On the Project side it can be attached to a project and to its tasks, so that all the work on one case can be found from a single number."
-msgstr ""
-
-#: ../../content/applications/services/project/process_numbers.rst:10
-msgid "This feature is provided by the *Process Number - Project* (`process_number_project`) module, which requires the *Process Number* (`process_number`) module."
-msgstr ""
-
-#: ../../content/applications/services/project/process_numbers.rst:16
-msgid "To have a process number created automatically for every new project, go to :menuselection:`Settings --> eYssen ERP`, and, in the :guilabel:`Process Number` section, enable :guilabel:`Create Automatically` under the :guilabel:`Project` option. The setting is per company."
-msgstr ""
-
-#: ../../content/applications/services/project/process_numbers.rst:21
-msgid ":doc:`../../general/process_numbers` for the process number records themselves, and their use in the other applications."
-msgstr ""
-
-#: ../../content/applications/services/project/process_numbers.rst:27
-msgid "Process number mode"
-msgstr ""
-
-#: ../../content/applications/services/project/process_numbers.rst:29
-msgid "Every project has a :guilabel:`Process Number Mode`:"
-msgstr ""
-
-#: ../../content/applications/services/project/process_numbers.rst:34
-msgid ":guilabel:`Single`"
-msgstr ""
-
-#: ../../content/applications/services/project/process_numbers.rst:32
-msgid "The whole project belongs to one case. The :guilabel:`Process Number` chosen on the project is applied to all of its tasks, and tasks created later inherit it. Changing the project's process number updates the tasks."
-msgstr ""
-
-#: ../../content/applications/services/project/process_numbers.rst:38
-msgid ":guilabel:`Multi`"
-msgstr ""
-
-#: ../../content/applications/services/project/process_numbers.rst:37
-msgid "Each task carries its own process number. The project itself has none, and every task can be assigned to a different case."
-msgstr ""
-
-#: ../../content/applications/services/project/process_numbers.rst:40
-msgid "If the project already contains tasks with different process numbers, switching the mode back to :guilabel:`Single` is refused, so that existing case assignments are not silently overwritten."
-msgstr ""
-
-#: ../../content/applications/services/project/process_numbers.rst:43
-msgid "Use the :guilabel:`Create a new process number` link on the project or on the task to generate a number on the spot instead of picking an existing one."
-msgstr ""
-
-#: ../../content/applications/services/project/process_numbers.rst:55
-msgid "Finding the work behind a number"
-msgstr ""
-
-#: ../../content/applications/services/project/process_numbers.rst:57
-msgid "Open a process number to see the :guilabel:`Projects` and :guilabel:`Tasks` smart buttons with their counts, and the lists of the linked projects and tasks below them. The process number list also shows the linked projects and tasks as tags."
 msgstr ""
 
 #: ../../content/applications/services/project/project_management.rst:6

@@ -69411,6 +69411,609 @@ msgstr ""
 "informațiile salvate la pasul :ref:`payment_providers/xendit/"
 "configure_dashboard`."
 
+#: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:14
+msgid ":doc:`Analytic cost control <analytic_cost_control>`"
+msgstr ":doc:`Controlul analitic al costurilor <analytic_cost_control>`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:3
+msgid "Analytic cost control"
+msgstr "Controlul analitic al costurilor"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:5
+msgid ""
+"*Analytic Cost Control* (`account_analytic_cost_control`) adds plan-versus-"
+"actual cost control on top of :doc:`analytic accounts <analytic_accounting>`:"
+" a cost plan per analytic account, the committed and actual costs, the "
+"revenue, and the margin. A typical use is the follow-up of **work numbers** "
+"(job numbers), but it works with any analytic plan: projects, cost centers, "
+"etc."
+msgstr ""
+"*Analytic Cost Control* (`account_analytic_cost_control`) adaugă controlul "
+"costurilor plan față de realizat peste :doc:`conturile analitice "
+"<analytic_accounting>`: un plan de costuri pe cont analitic, costurile "
+"angajate și realizate, veniturile și marja. O utilizare tipică este urmărirea"
+" **numerelor de lucrare**, dar funcționează cu orice plan analitic: proiecte,"
+" centre de cost etc."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:10
+msgid ""
+"The module adds no field to the documents. Customer invoices, vendor bills, "
+"purchase and sales order lines, timesheets, expenses, and stock valuation are"
+" booked to an analytic account through the standard :ref:`analytic "
+"distribution <accounting/analytic_accounting/analytic-distribution>` of their"
+" lines. The module then compares these booked items with the cost plan."
+msgstr ""
+"Modulul nu adaugă niciun câmp documentelor. Facturile client, facturile "
+"furnizor, liniile comenzilor de achiziție și de vânzare, foile de pontaj, "
+"cheltuielile și evaluarea stocurilor sunt înregistrate pe un cont analitic "
+"prin :ref:`distribuția analitică <accounting/analytic_accounting/analytic-"
+"distribution>` standard a liniilor lor. Modulul compară apoi aceste elemente "
+"înregistrate cu planul de costuri."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:16
+msgid ""
+"The module depends only on *Accounting*. The :guilabel:`Contract Value` of "
+"the summary is only available if *Sales* is installed, and the "
+":guilabel:`Committed` column only if *Purchase* is installed."
+msgstr ""
+"Modulul depinde doar de *Contabilitate*. :guilabel:`Valoare contract` din "
+"sumar este disponibilă numai dacă *Vânzări* este instalat, iar coloana "
+":guilabel:`Angajat` numai dacă *Achiziție* este instalat."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:23
+msgid "Activate the feature"
+msgstr "Activarea funcției"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:25
+msgid ""
+"Go to :menuselection:`Settings --> eYssen ERP`, and, in the "
+":guilabel:`Analytic Cost Control` section, enable :guilabel:`Analytic Cost "
+"Control`. Then, click :guilabel:`Save`."
+msgstr ""
+"Accesați :menuselection:`Setări --> eYssen ERP` și, în secțiunea "
+":guilabel:`Analytic Cost Control`, activați :guilabel:`Analytic Cost "
+"Control`. Apoi faceți clic pe :guilabel:`Salvează`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:36
+msgid "Configure an analytic plan"
+msgstr "Configurarea unui plan analitic"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:38
+msgid ""
+"The module does **not** create any analytic plan when it is installed. Choose"
+" the plans to follow up: either enable the cost control on an existing plan "
+"(e.g., :guilabel:`Projects`), or create a new plan."
+msgstr ""
+"Modulul **nu** creează niciun plan analitic la instalare. Alegeți planurile "
+"de urmărit: activați controlul costurilor pe un plan existent (de ex., "
+":guilabel:`Proiecte`) sau creați un plan nou."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:42
+msgid ""
+"Go to :menuselection:`Accounting --> Configuration --> Analytic Plans`, open "
+"a plan, and set:"
+msgstr ""
+"Accesați :menuselection:`Contabilitate --> Configurare --> Planuri "
+"Analitice`, deschideți un plan și setați:"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:44
+msgid ""
+":guilabel:`Cost Control`: the analytic accounts of this plan get the cost "
+"plan, the summary, and the plan / actual report."
+msgstr ""
+":guilabel:`Control costuri`: conturile analitice ale acestui plan primesc "
+"planul de costuri, sumarul și raportul plan / realizat."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:46
+msgid ""
+":guilabel:`Code Sequence` (optional, independent of :guilabel:`Cost "
+"Control`): select a sequence. The new analytic accounts of this plan that "
+"have no :guilabel:`Reference` get their reference from this sequence. For "
+"example, with the prefix `WN/%(year)s/`, the first work number of 2026 is "
+"`WN/2026/00001`."
+msgstr ""
+":guilabel:`Secvență cod` (opțional, independent de :guilabel:`Control "
+"costuri`): selectați o secvență. Conturile analitice noi ale acestui plan "
+"care nu au :guilabel:`Referință` primesc referința din această secvență. De "
+"exemplu, cu prefixul `WN/%(year)s/`, primul număr de lucrare din 2026 este "
+"`WN/2026/00001`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:52
+msgid ""
+"Both options can only be set on a **root** analytic plan, not on a sub-plan. "
+"Otherwise, the error *Cost control and the code sequence can only be set on a"
+" root analytic plan.* is displayed."
+msgstr ""
+"Ambele opțiuni pot fi setate doar pe un plan analitic **rădăcină**, nu pe un "
+"subplan. În caz contrar, se afișează eroarea *Controlul costurilor și "
+"secvența de cod pot fi setate doar pe un plan analitic rădăcină.*"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:56
+msgid ""
+"To follow up work numbers, create an analytic plan named `Work Numbers`, tick"
+" :guilabel:`Cost Control`, and create a sequence with the prefix "
+"`WN/%(year)s/` and a padding of `5` in :guilabel:`Code Sequence`. Projects "
+"carry the analytic accounts of all the plans, so the timesheets of a project "
+"that is linked to a work number are booked to it automatically."
+msgstr ""
+"Pentru a urmări numerele de lucrare, creați un plan analitic numit `Work "
+"Numbers`, bifați :guilabel:`Control costuri` și creați, în "
+":guilabel:`Secvență cod`, o secvență cu prefixul `WN/%(year)s/` și o "
+"completare de `5` cifre. Proiectele poartă conturile analitice ale tuturor "
+"planurilor, astfel că foile de pontaj ale unui proiect legat de un număr de "
+"lucrare sunt înregistrate automat pe acesta."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:64
+msgid "How the analytic items are classified"
+msgstr "Cum sunt clasificate elementele analitice"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:66
+msgid ""
+"Every analytic item is classified when it is booked. The classification is "
+"stored and is used in the summary, the lists, and the report."
+msgstr ""
+"Fiecare element analitic este clasificat în momentul înregistrării. "
+"Clasificarea este stocată și este utilizată în sumar, în liste și în raport."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:69
+msgid "**Revenue or cost**"
+msgstr "**Venit sau cost**"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:71
+msgid ""
+"An item is **revenue** if its financial account is an income account. An item"
+" without a financial account is revenue if its amount is positive and it is "
+"not a timesheet. Any other item is a cost."
+msgstr ""
+"Un element este **venit** dacă contul său financiar este un cont de venituri."
+" Un element fără cont financiar este venit dacă suma sa este pozitivă și nu "
+"este o foaie de pontaj. Orice alt element este un cost."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:74
+msgid "**Cost category**"
+msgstr "**Categoria de cost**"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:76
+msgid ""
+"A cost is either :guilabel:`Labour`, :guilabel:`Material`, or "
+":guilabel:`Other Costs`. The category is the first one that applies in this "
+"order:"
+msgstr ""
+"Un cost este :guilabel:`Manoperă`, :guilabel:`Material` sau :guilabel:`Alte "
+"costuri`. Categoria este prima care se aplică în această ordine:"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:79
+msgid ""
+"the :guilabel:`Cost Category` of the financial account "
+"(:menuselection:`Accounting --> Configuration --> Chart of Accounts`, in the "
+"account form; the field is not displayed for income and balance sheet "
+"accounts);"
+msgstr ""
+":guilabel:`Categorie de cost` a contului financiar "
+"(:menuselection:`Contabilitate --> Configurare --> Plan de conturi`, în "
+"formularul contului; câmpul nu este afișat pentru conturile de venituri și de"
+" bilanț);"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:82
+msgid ""
+"the :guilabel:`Cost Category` of the product category "
+"(:menuselection:`Inventory --> Configuration --> Product Categories`, or the "
+"same menu of :guilabel:`Invoicing`, in the :guilabel:`Cost Control` group); "
+"sub-categories inherit it;"
+msgstr ""
+":guilabel:`Categorie de cost` a categoriei de produs "
+"(:menuselection:`Inventar --> Configurare --> Categorii de produse`, sau "
+"același meniu din :guilabel:`Facturare`, în grupul :guilabel:`Control "
+"costuri`); subcategoriile o moștenesc;"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:85
+msgid ""
+"the product type: a service is :guilabel:`Labour`, a goods product is "
+":guilabel:`Material`;"
+msgstr ""
+"tipul produsului: un serviciu este :guilabel:`Manoperă`, un produs de tip "
+"bunuri este :guilabel:`Material`;"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:86
+msgid "a timesheet line is :guilabel:`Labour`;"
+msgstr "o linie de foaie de pontaj este :guilabel:`Manoperă`;"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:87
+msgid "anything else is :guilabel:`Other Costs`."
+msgstr "orice altceva este :guilabel:`Alte costuri`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:89
+msgid "**Own or external**"
+msgstr "**Propriu sau extern**"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:91
+msgid ""
+"A cost is :guilabel:`External` if it comes from a vendor bill (including "
+"receipts), and :guilabel:`Own` for everything else: timesheets, stock "
+"valuation, payroll, and miscellaneous entries."
+msgstr ""
+"Un cost este :guilabel:`Extern` dacă provine dintr-o factură furnizor "
+"(inclusiv recepții) și :guilabel:`Propriu` pentru orice altceva: foi de "
+"pontaj, evaluarea stocurilor, salarizare și înregistrări diverse."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:95
+msgid ""
+"If the :guilabel:`Cost Category` of a parent product category is changed, the"
+" items that are already booked are not recomputed. Changing it on the "
+"financial account or on the product's own category does recompute them."
+msgstr ""
+"Dacă se modifică :guilabel:`Categorie de cost` a unei categorii de produs "
+"părinte, elementele deja înregistrate nu sunt recalculate. Modificarea ei pe "
+"contul financiar sau pe categoria proprie a produsului le recalculează."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:102
+msgid "The analytic account form"
+msgstr "Formularul contului analitic"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:104
+msgid ""
+"The following elements are only displayed on the analytic accounts of a plan "
+"with :guilabel:`Cost Control`, and only to the users of the "
+":guilabel:`Analytic Accounting` group. To open an account, go to "
+":menuselection:`Accounting --> Accounting --> Cost Control`, or "
+":menuselection:`Accounting --> Configuration --> Analytic Accounts`."
+msgstr ""
+"Elementele următoare sunt afișate doar pe conturile analitice ale unui plan "
+"cu :guilabel:`Control costuri` și doar utilizatorilor din grupul "
+":guilabel:`Contabilitate analitică`. Pentru a deschide un cont, accesați "
+":menuselection:`Contabilitate --> Contabilitate --> Control costuri` sau "
+":menuselection:`Contabilitate --> Configurare --> Conturi Analitice`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:109
+msgid ""
+"The form has the new fields :guilabel:`Responsible Users` and "
+":guilabel:`Original Plan Saved On` (read-only), and its chatter also supports"
+" activities."
+msgstr ""
+"Formularul are câmpurile noi :guilabel:`Utilizatori responsabili` și "
+":guilabel:`Plan inițial salvat la` (doar citire), iar chatterul acceptă și "
+"activități."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:113
+msgid "Cost plan"
+msgstr "Plan de costuri"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:115
+msgid ""
+"The :guilabel:`Cost Plan` tab contains editable lines with the following "
+"columns, and the totals at the bottom:"
+msgstr ""
+"Fila :guilabel:`Plan de costuri` conține linii editabile cu următoarele "
+"coloane și, în partea de jos, totalurile:"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:118
+msgid ""
+":guilabel:`Cost Category`: :guilabel:`Labour`, :guilabel:`Material`, or "
+":guilabel:`Other Costs`."
+msgstr ""
+":guilabel:`Categorie de cost`: :guilabel:`Manoperă`, :guilabel:`Material` sau"
+" :guilabel:`Alte costuri`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:119
+msgid ":guilabel:`Own / External`."
+msgstr ":guilabel:`Propriu / extern`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:120
+msgid ":guilabel:`Description`."
+msgstr ":guilabel:`Descriere`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:121
+msgid ""
+":guilabel:`Original Plan`: read-only, set by the :guilabel:`Save as Original "
+"Plan` button."
+msgstr ""
+":guilabel:`Plan inițial`: doar citire, este setat de butonul "
+":guilabel:`Salvează ca plan inițial`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:122
+msgid ":guilabel:`Current Plan`: the amount that is currently planned."
+msgstr ":guilabel:`Plan curent`: suma planificată în prezent."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:124
+msgid "The :guilabel:`Notes` tab contains free rich-text notes."
+msgstr "Fila :guilabel:`Note` conține note libere în text îmbogățit."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:126
+msgid ""
+"When the quotation is accepted, click :guilabel:`Save as Original Plan` and "
+"confirm the message *The current cost plan overwrites the original plan. "
+"Continue?* The :guilabel:`Current Plan` of every cost plan line is copied to "
+"its :guilabel:`Original Plan`, the date is recorded in :guilabel:`Original "
+"Plan Saved On`, and a message is posted in the chatter. From then on, the "
+":guilabel:`Current Plan` can be adjusted while the :guilabel:`Original Plan` "
+"keeps the figures of the quotation. If the account has no cost plan lines, an"
+" error is displayed."
+msgstr ""
+"Când oferta este acceptată, faceți clic pe :guilabel:`Salvează ca plan "
+"inițial` și confirmați mesajul *Planul de costuri curent suprascrie planul "
+"inițial. Continuați?* :guilabel:`Plan curent` al fiecărei linii a planului de"
+" costuri este copiat în :guilabel:`Plan inițial`, data este înregistrată în "
+":guilabel:`Plan inițial salvat la`, iar în chatter este postat un mesaj. De "
+"acum, :guilabel:`Plan curent` poate fi ajustat, în timp ce :guilabel:`Plan "
+"inițial` păstrează cifrele din ofertă. Dacă contul nu are linii de plan de "
+"costuri, se afișează o eroare."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:133
+msgid ""
+"The :guilabel:`Plan / Actual` smart button opens the :ref:`plan / actual "
+"analysis <accounting/analytic_cost_control/report>` filtered on the account "
+"and grouped by cost category and by own / external."
+msgstr ""
+"Butonul inteligent :guilabel:`Plan / realizat` deschide :ref:`analiza plan / "
+"realizat <accounting/analytic_cost_control/report>` filtrată pe cont și "
+"grupată după categoria de cost și după propriu / extern."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:142
+msgid "The summary at the top of the form shows these indicators:"
+msgstr "Sumarul din partea de sus a formularului afișează acești indicatori:"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:148
+msgid "Indicator"
+msgstr "Indicator"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:150
+msgid ":guilabel:`Contract Value`"
+msgstr ":guilabel:`Valoare contract`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:151
+msgid ""
+"The untaxed amount of the confirmed sales order lines distributed to this "
+"account, in proportion to the distribution percentage. Only displayed if "
+"*Sales* is installed."
+msgstr ""
+"Suma fără taxe a liniilor comenzilor de vânzare confirmate distribuite pe "
+"acest cont, proporțional cu procentul de distribuție. Este afișată doar dacă "
+"*Vânzări* este instalat."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:153
+msgid ":guilabel:`Invoiced Revenue`"
+msgstr ":guilabel:`Venituri facturate`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:154
+msgid "The revenue items booked to the account."
+msgstr "Elementele de venit înregistrate pe cont."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:155
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:179
+msgid ":guilabel:`Actual Cost`"
+msgstr ":guilabel:`Cost realizat`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:156
+msgid "The cost items booked to the account."
+msgstr "Elementele de cost înregistrate pe cont."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:157
+msgid ":guilabel:`Margin`"
+msgstr ":guilabel:`Marjă`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:158
+msgid ""
+"The invoiced revenue minus the actual cost, with the margin as a percentage "
+"of the revenue."
+msgstr ""
+"Venituri facturate minus costul realizat, cu marja ca procent din venituri."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:159
+msgid ":guilabel:`Planned Margin`"
+msgstr ":guilabel:`Marjă planificată`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:160
+msgid ""
+"The contract value minus the current plan. Only displayed if there is a "
+"contract value."
+msgstr ""
+"Valoarea contractului minus planul curent. Este afișată doar dacă există o "
+"valoare a contractului."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:162
+msgid ""
+"Below the indicators, a table has one row per :guilabel:`Labour`, "
+":guilabel:`Material`, and :guilabel:`Other Costs`, and a :guilabel:`Total` "
+"row. Its columns are:"
+msgstr ""
+"Sub indicatori, un tabel are câte un rând pentru :guilabel:`Manoperă`, "
+":guilabel:`Material` și :guilabel:`Alte costuri`, plus un rând "
+":guilabel:`Total`. Coloanele sale sunt:"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:169
+msgid "Column"
+msgstr "Coloană"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:171
+msgid ":guilabel:`Original Plan`"
+msgstr ":guilabel:`Plan inițial`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:172
+msgid "The plan :guilabel:`At quotation`, with the date on which it was saved."
+msgstr "Planul :guilabel:`La ofertare`, cu data la care a fost salvat."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:173
+msgid ":guilabel:`Current Plan`"
+msgstr ":guilabel:`Plan curent`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:174
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:180
+msgid "The total, and its own / external split."
+msgstr "Totalul și împărțirea sa pe propriu / extern."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:175
+msgid ":guilabel:`Committed`"
+msgstr ":guilabel:`Angajat`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:176
+msgid ""
+"The :guilabel:`Open purchase orders`: the part not yet billed of the "
+"confirmed purchase order lines distributed to this account, in proportion to "
+"the distribution percentage. The category comes from the product. Only "
+"displayed if *Purchase* is installed."
+msgstr ""
+":guilabel:`Comenzi de achiziție deschise`: partea încă nefacturată a liniilor"
+" comenzilor de achiziție confirmate distribuite pe acest cont, proporțional "
+"cu procentul de distribuție. Categoria provine din produs. Este afișată doar "
+"dacă *Achiziție* este instalat."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:181
+msgid ":guilabel:`Completion`"
+msgstr ":guilabel:`Grad de realizare`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:182
+msgid ""
+"The actual cost divided by the plan, as a total and as an own / external "
+"split. It is green up to 90%, orange from 90% to 100%, and red above 100%. A "
+"dash is displayed if there is no plan."
+msgstr ""
+"Costul realizat împărțit la plan, în total și împărțit pe propriu / extern. "
+"Este verde până la 90%, portocaliu între 90% și 100% și roșu peste 100%. Dacă"
+" nu există plan, se afișează o liniuță."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:186
+msgid ""
+"Click an amount to see the records behind it: the actual amounts open the "
+"analytic items (filtered by category and by own / external), "
+":guilabel:`Invoiced Revenue` opens the revenue items, :guilabel:`Committed` "
+"opens the purchase orders, and :guilabel:`Contract Value` opens the sales "
+"orders."
+msgstr ""
+"Faceți clic pe o sumă pentru a vedea înregistrările din spatele ei: sumele "
+"realizate deschid elementele analitice (filtrate după categorie și după "
+"propriu / extern), :guilabel:`Venituri facturate` deschide elementele de "
+"venit, :guilabel:`Angajat` deschide comenzile de achiziție, iar "
+":guilabel:`Valoare contract` deschide comenzile de vânzare."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:192
+msgid ""
+"The amounts are displayed in the currency of the company of the analytic "
+"account. Amounts in other currencies are converted at today's rate."
+msgstr ""
+"Sumele sunt afișate în moneda companiei contului analitic. Sumele în alte "
+"monede sunt convertite la cursul de astăzi."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:201
+msgid "Cost control list"
+msgstr "Lista de control al costurilor"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:203
+msgid ""
+"Go to :menuselection:`Accounting --> Accounting --> Cost Control` to list the"
+" analytic accounts of the plans with :guilabel:`Cost Control`, with the "
+"columns :guilabel:`Reference`, :guilabel:`Name`, :guilabel:`Plan`, "
+":guilabel:`Customer`, :guilabel:`Responsible Users`, :guilabel:`Activities`, "
+":guilabel:`Cost`, :guilabel:`Revenue`, and :guilabel:`Margin`. The "
+":guilabel:`I'm Responsible` filter keeps the accounts of which you are a "
+"responsible user. Clicking :guilabel:`New` creates an account in the first "
+"plan with :guilabel:`Cost Control`."
+msgstr ""
+"Accesați :menuselection:`Contabilitate --> Contabilitate --> Control costuri`"
+" pentru a lista conturile analitice ale planurilor cu :guilabel:`Control "
+"costuri`, cu coloanele :guilabel:`Referință`, :guilabel:`Nume`, "
+":guilabel:`Plan`, :guilabel:`Client`, :guilabel:`Utilizatori responsabili`, "
+":guilabel:`Activități`, :guilabel:`Cost`, :guilabel:`Venituri` și "
+":guilabel:`Marjă`. Filtrul :guilabel:`Sunt responsabil` păstrează conturile "
+"pentru care sunteți responsabil. Un clic pe :guilabel:`Nou` creează un cont "
+"în primul plan cu :guilabel:`Control costuri`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:213
+msgid "Plan / actual analysis"
+msgstr "Analiză plan / realizat"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:215
+msgid ""
+"Go to :menuselection:`Accounting --> Reporting --> Management --> Plan / "
+"Actual Analysis`. The report is available as a pivot table, a graph, and a "
+"list. It has one row per cost plan line and one row per analytic item booked "
+"to an account of a plan with :guilabel:`Cost Control`."
+msgstr ""
+"Accesați :menuselection:`Contabilitate --> Raportare --> Management --> "
+"Analiză plan / realizat`. Raportul este disponibil ca tabel pivot, grafic și "
+"listă. Are câte un rând pentru fiecare linie a planului de costuri și câte "
+"unul pentru fiecare element analitic înregistrat pe un cont al unui plan cu "
+":guilabel:`Control costuri`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:219
+msgid ""
+"**Measures**: :guilabel:`Original Plan`, :guilabel:`Current Plan`, "
+":guilabel:`Actual Cost`, :guilabel:`Remaining Plan` (the current plan minus "
+"the actual cost), :guilabel:`Revenue`, and :guilabel:`Margin` (the revenue "
+"minus the actual cost)."
+msgstr ""
+"**Măsuri**: :guilabel:`Plan inițial`, :guilabel:`Plan curent`, "
+":guilabel:`Cost realizat`, :guilabel:`Plan rămas` (planul curent minus costul"
+" realizat), :guilabel:`Venituri` și :guilabel:`Marjă` (veniturile minus "
+"costul realizat)."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:222
+msgid ""
+"**Dimensions**: :guilabel:`Analytic Account`, :guilabel:`Analytic Plan`, "
+":guilabel:`Customer`, :guilabel:`Cost Category` (including "
+":guilabel:`Revenue`), :guilabel:`Own / External`, :guilabel:`Source` "
+"(:guilabel:`Cost Plan` or :guilabel:`Booked`), :guilabel:`Financial Account`,"
+" :guilabel:`Product`, and :guilabel:`Date`."
+msgstr ""
+"**Dimensiuni**: :guilabel:`Cont analitic`, :guilabel:`Plan analitic`, "
+":guilabel:`Client`, :guilabel:`Categorie de cost` (inclusiv "
+":guilabel:`Venituri`), :guilabel:`Propriu / extern`, :guilabel:`Sursă` "
+"(:guilabel:`Plan de costuri` sau :guilabel:`Înregistrat`), :guilabel:`Cont "
+"financiar`, :guilabel:`Produs` și :guilabel:`Dată`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:226
+msgid ""
+"**Filters**: :guilabel:`Costs`, :guilabel:`Revenue`, :guilabel:`Own`, "
+":guilabel:`External`, and :guilabel:`Date`."
+msgstr ""
+"**Filtre**: :guilabel:`Costuri`, :guilabel:`Venituri`, :guilabel:`Propriu`, "
+":guilabel:`Extern` și :guilabel:`Dată`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:230
+msgid ""
+"The cost plan lines have no date. When a :guilabel:`Date` filter is applied, "
+"only the booked figures are displayed."
+msgstr ""
+"Liniile planului de costuri nu au dată. Când se aplică un filtru "
+":guilabel:`Dată`, sunt afișate doar cifrele înregistrate."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:234
+msgid "Analytic items"
+msgstr "Elemente analitice"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:236
+msgid ""
+"When the analytic items are opened from the summary, the list shows the "
+"additional columns :guilabel:`Cost Category` and :guilabel:`Own / External`. "
+"In the search view, the items can be grouped by :guilabel:`Cost Control "
+"Account`, :guilabel:`Cost Category`, and :guilabel:`Own / External`."
+msgstr ""
+"Când elementele analitice sunt deschise din sumar, lista afișează coloanele "
+"suplimentare :guilabel:`Categorie de cost` și :guilabel:`Propriu / extern`. "
+"În vizualizarea de căutare, elementele pot fi grupate după :guilabel:`Cont "
+"control costuri`, :guilabel:`Categorie de cost` și :guilabel:`Propriu / "
+"extern`."
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:243
+msgid ":doc:`budget`"
+msgstr ":doc:`budget`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:244
+msgid ":doc:`/applications/general/eyssen_erp_settings`"
+msgstr ":doc:`/applications/general/eyssen_erp_settings`"
+
+#: ../../content/applications/finance/accounting/reporting/analytic_cost_control.rst:28
+msgid ""
+"The menus, the summary, and the cost plan are only displayed if analytic "
+"accounting is enabled. Go to :menuselection:`Accounting --> Configuration -->"
+" Settings`, and, in the :guilabel:`Analytics` section, enable "
+":guilabel:`Analytic Accounting`. Then, click :guilabel:`Save`."
+msgstr ""
+"Meniurile, sumarul și planul de costuri sunt afișate doar dacă contabilitatea"
+" analitică este activată. Accesați :menuselection:`Contabilitate --> "
+"Configurare --> Setări` și, în secțiunea :guilabel:`Analitică`, activați "
+":guilabel:`Contabilitate analitică`. Apoi faceți clic pe "
+":guilabel:`Salvează`."
+
 #~ msgid ""
 #~ ":ref:`Install <general/install>` the following modules to get all the "
 #~ "features of the Romanian localization."

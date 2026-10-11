@@ -53,6 +53,28 @@ What you can do
 - **Optional MCP / web / UI customization** — external tools, web search, and
   admin-only schema/view customization, all capability-gated and off by default
   where risky.
+- **Everyday help in the forms you use** — a writing assistant in editors and
+  chatter, an AI search bar, a command palette, AI-filled fields and AI in
+  server actions and automations (see :doc:`ai/writing_assistant`,
+  :doc:`ai/search_and_commands` and :doc:`ai/fields_and_automation`).
+- **Knowledge sources** — answers with citations from files, web pages, records,
+  Knowledge articles and Documents (see :doc:`ai/knowledge_sources` and
+  :doc:`ai/knowledge_documents`).
+- **MCP server** — connect Claude, ChatGPT or another AI app to your database
+  with OAuth sign-in and per-user consent (see :doc:`ai/mcp_server`).
+- **Website and live chat** — an AI agent that answers website visitors with a
+  hand-over to your operators, an AI page generator, builder tools and brand
+  kits (see :doc:`ai/livechat` and :doc:`ai/website`).
+- **Voice** — dictate messages and have Discuss calls transcribed and
+  summarised, with consent from each participant (see :doc:`ai/voice`).
+- **Business apps** — quick prompts and buttons in CRM, Sales, Purchase,
+  Inventory, Invoicing, Calendar, Products, Email marketing and Timesheets,
+  ticket triage for projects with SLA and AI analysis of accounting reports (see
+  :doc:`ai/app_integrations`, :doc:`ai/project_sla` and
+  :doc:`ai/accounting_reports`).
+- **Providers, models and access** — chat, image, embedding and speech-to-text
+  models, and a clear overview of who can use which AI feature (see
+  :doc:`ai/models_and_providers`, :doc:`ai/panel` and :doc:`ai/feature_access`).
 
 Who this documentation is for
 =============================
@@ -85,6 +107,21 @@ Document map
    ai/agent_recipes
    ai/skills_and_memory
    ai/monitoring
+   ai/models_and_providers
+   ai/panel
+   ai/writing_assistant
+   ai/search_and_commands
+   ai/fields_and_automation
+   ai/feature_access
+   ai/knowledge_sources
+   ai/knowledge_documents
+   ai/mcp_server
+   ai/livechat
+   ai/website
+   ai/voice
+   ai/app_integrations
+   ai/project_sla
+   ai/accounting_reports
 
 Key design principles
 =====================

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-08 17:35+0200\n"
+"POT-Creation-Date: 2026-10-11 16:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -239,112 +239,140 @@ msgstr ""
 msgid "**Optional MCP / web / UI customization** — external tools, web search, and admin-only schema/view customization, all capability-gated and off by default where risky."
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:58
+#: ../../content/applications/productivity/ai.rst:56
+msgid "**Everyday help in the forms you use** — a writing assistant in editors and chatter, an AI search bar, a command palette, AI-filled fields and AI in server actions and automations (see :doc:`ai/writing_assistant`, :doc:`ai/search_and_commands` and :doc:`ai/fields_and_automation`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai.rst:60
+msgid "**Knowledge sources** — answers with citations from files, web pages, records, Knowledge articles and Documents (see :doc:`ai/knowledge_sources` and :doc:`ai/knowledge_documents`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai.rst:63
+msgid "**MCP server** — connect Claude, ChatGPT or another AI app to your database with OAuth sign-in and per-user consent (see :doc:`ai/mcp_server`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai.rst:65
+msgid "**Website and live chat** — an AI agent that answers website visitors with a hand-over to your operators, an AI page generator, builder tools and brand kits (see :doc:`ai/livechat` and :doc:`ai/website`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai.rst:68
+msgid "**Voice** — dictate messages and have Discuss calls transcribed and summarised, with consent from each participant (see :doc:`ai/voice`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai.rst:70
+msgid "**Business apps** — quick prompts and buttons in CRM, Sales, Purchase, Inventory, Invoicing, Calendar, Products, Email marketing and Timesheets, ticket triage for projects with SLA and AI analysis of accounting reports (see :doc:`ai/app_integrations`, :doc:`ai/project_sla` and :doc:`ai/accounting_reports`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai.rst:75
+msgid "**Providers, models and access** — chat, image, embedding and speech-to-text models, and a clear overview of who can use which AI feature (see :doc:`ai/models_and_providers`, :doc:`ai/panel` and :doc:`ai/feature_access`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai.rst:80
 msgid "Who this documentation is for"
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:61
+#: ../../content/applications/productivity/ai.rst:83
 #: ../../content/applications/productivity/ai/capabilities_and_tools.rst:29
 msgid "Role"
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:61
+#: ../../content/applications/productivity/ai.rst:83
 msgid "Typical tasks"
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:63
+#: ../../content/applications/productivity/ai.rst:85
 msgid "System / AI administrator"
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:63
+#: ../../content/applications/productivity/ai.rst:85
 msgid "Providers, settings, policies, agents, monitoring"
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:65
+#: ../../content/applications/productivity/ai.rst:87
 msgid "Supervisor of an agent"
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:65
+#: ../../content/applications/productivity/ai.rst:87
 msgid "Approve write proposals, review tasks and runs"
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:67
+#: ../../content/applications/productivity/ai.rst:89
 msgid "Everyday AI user"
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:67
+#: ../../content/applications/productivity/ai.rst:89
 msgid "Chat, confirm own write proposals, use memory"
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:69
+#: ../../content/applications/productivity/ai.rst:91
 msgid "Security / compliance"
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:69
+#: ../../content/applications/productivity/ai.rst:91
 msgid "Threat model, least privilege, audit trail"
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:73
+#: ../../content/applications/productivity/ai.rst:95
 msgid "Document map"
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:90
+#: ../../content/applications/productivity/ai.rst:127
 msgid "Key design principles"
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:92
+#: ../../content/applications/productivity/ai.rst:129
 msgid "**Run as the user (or as the agent user)** — no ``sudo`` on business data. Odoo ACLs and record rules always apply."
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:94
+#: ../../content/applications/productivity/ai.rst:131
 msgid "**AI policy narrows, with one named exception** — ``ai.access.rule`` can never grant a right the underlying user does not already hold in Odoo. Within that ceiling, a rule naming a specific **field** is the one place a rule *opens* something the gate otherwise refuses: a field that also writes into another model. A model-level Allow deliberately never lifts that — see :ref:`ai/policy/cross-model`."
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:100
+#: ../../content/applications/productivity/ai.rst:137
 msgid "**Capabilities are master switches** — e.g. Write / Delete / Web / MCP / Customize ship disabled until an admin turns them on."
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:102
+#: ../../content/applications/productivity/ai.rst:139
 msgid "**Default-deny channels for agents** — an agent without a matching channel rule refuses inbound address (Discuss DM, @mention, activity, assignment)."
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:104
+#: ../../content/applications/productivity/ai.rst:141
 msgid "**Supervisor four-eyes by default on agent writes** — each agent **task** has its own :guilabel:`Write Mode` (default **Always require confirmation**). Unattended runs therefore propose for the supervisor unless that task explicitly opts into *hybrid* or *auto* for trusted, low-risk work (for example filling **draft** vendor bills that the playbook never posts). The global chat write mode does **not** control agent runs — see :ref:`ai/agents/task-write-mode`."
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:111
+#: ../../content/applications/productivity/ai.rst:148
 msgid "**Customer / email text is work material, not authority** — instructions in a ticket body cannot raise the agent's privileges; triage and capability ceilings subtract only."
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:114
+#: ../../content/applications/productivity/ai.rst:151
 msgid "**Grounding** — the assistant must not invent models, fields or stages; it uses tools and live environment facts for *this* database."
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:116
+#: ../../content/applications/productivity/ai.rst:153
 msgid "**Runs are accounted for** — cancellation is cooperative and recorded, never a silent kill: the run stops at its next step boundary and closes as failed with a cancellation reason. A run whose worker died is closed by a scheduled housekeeping job, which rebuilds its ledger row from the dispatch record where one survives."
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:121
+#: ../../content/applications/productivity/ai.rst:158
 msgid "**A structural refusal is not abuse** — the gate refuses plenty the model merely guessed at (a non-writable field, a field that also writes another model) without recording a violation or spending a strike, so an empty Violations list is not proof that nothing was refused. Strikes are for real boundaries: a secret or privileged field, an explicit policy Deny, a disabled capability."
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:129
+#: ../../content/applications/productivity/ai.rst:166
 msgid "See also"
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:131
+#: ../../content/applications/productivity/ai.rst:168
 msgid ":doc:`../general/users/access_rights` — Odoo groups and record rules (the floor under every AI action)"
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:133
+#: ../../content/applications/productivity/ai.rst:170
 msgid ":doc:`../general/developer_mode` — needed for the Technical menus where the AI system parameters and scheduled actions live"
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:135
+#: ../../content/applications/productivity/ai.rst:172
 msgid ":doc:`discuss` — Discuss DMs used by agent channels"
 msgstr ""
 
-#: ../../content/applications/productivity/ai.rst:136
+#: ../../content/applications/productivity/ai.rst:173
 msgid ":doc:`../services/project` — project tasks and assignment channel (if Project docs are available in your build)"
 msgstr ""
 
@@ -698,6 +726,110 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/access_policy.rst:260
 msgid "AI policy does **not** replace record rules. Multi-company, follower-only documents, and portal isolation remain enforced by Odoo when the gate runs as the user. When designing \"create but not read\", verify both layers: a create that returns a read snapshot may still fail or strip if read is denied — the assistant should treat tool errors as authoritative."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:3
+msgid "AI for accounting reports"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:5
+msgid "The module AI for Accounting Reports adds an assistant to the financial reports. It explains a report in plain language, points out trends and anomalies, and can run a second, independent check of its own findings with two AI agents. It never changes any accounting data."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:11
+msgid "Analyse a report"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:13
+msgid "Open a report wizard, for example profit and loss, balance sheet, trial balance, general ledger, partner ledger, aged partner balance, tax report or journal audit, and set the dates and options as you normally would."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:16
+msgid "Click :guilabel:`Analyse with AI` next to the usual print button (accountants only). You land on a new analysis. The analysis runs in the background; the form shows its progress and you are notified when it is done."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:19
+msgid "Read the result on the tab :guilabel:`Analysis`. The tab :guilabel:`Report data` shows the rows the AI was given. Use :guilabel:`Analyse again` to run it again."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:23
+msgid "All analyses are listed in :menuselection:`Accounting --> Reporting --> AI Report Analyses`. You see your own analyses; accounting managers see those of the company. Each analysis has its own chatter."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:28
+msgid "What the AI is given"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:30
+msgid "The AI works from the report's own computed rows, the same figures you could print, calculated in your environment with your access rights. No PDF is read. Each row gets a reference (R1, R2, and so on) so that findings can point to their evidence."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:34
+msgid "For financial reports and the trial balance with two dates and no comparison chosen, the same report is also computed for the previous period of the same length, so the AI can describe trends."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:37
+msgid "Key figures such as current ratio, quick ratio, debt to equity, margins, net result and income growth are calculated by the program, not by the AI. The AI only explains them. They are approximations from the account lines of the report, and a report without account detail gives none."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:41
+msgid "A report is limited to 400 rows. A large general ledger is reduced to account totals plus the 25 largest items of the period, and the text given to the AI is capped."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:46
+msgid "Audit with an auditor and a reviewer"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:48
+msgid "On an analysis, click :guilabel:`Audit with AI agents` for a more careful check. It also runs in the background."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:51
+msgid "The agent :guilabel:`Financial Auditor` proposes up to eight findings, each citing the report rows as evidence and, where relevant, an amount."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:53
+msgid "It hands them to a second agent, :guilabel:`Financial Reviewer`, which looks the rows up and confirms or rejects every finding."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:55
+msgid "The program then checks the evidence itself: a finding stays :guilabel:`Confirmed` only if the reviewer confirmed it, every row it cites exists and its amount (if any) is found in the cited rows within 0.5 percent. Findings that were not reviewed or are not supported are kept as rejected, with the reason, so nothing is hidden."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:61
+msgid "The result is the tab :guilabel:`Audit` with a summary, the :guilabel:`Confirmed findings` and the :guilabel:`Rejected findings` with their severity, evidence and verdict, plus a note in the chatter that lists the confirmed findings. Click :guilabel:`Open audit in AI panel` to read or continue the conversation with the auditor in the AI panel (see :doc:`panel`). The panel can also look up the report rows while the analysis is open, and two quick prompts are offered: :guilabel:`Explain this report` and :guilabel:`What should I check first?`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:70
+msgid "Safety and requirements"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:72
+msgid "Read-only: the two agents have only the Ask capability and no tools that read or write records. The only things written are the analysis and its findings, the AI conversation and the logs. Journal entries and other accounting data stay unchanged."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:76
+msgid "Before anything is sent, the program checks that a model is configured, that you have the Ask and Read capabilities, and that the AI read policy allows journal items and accounts (see :doc:`access_policy`). If not, you get a plain message and no strike is recorded."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:80
+msgid "The agents are available to accountants only. Their names are translatable, so they follow the language of the user."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:82
+msgid "Reports of the optional cash book, bank book and day book modules have their own wizards and are not covered."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:86
+msgid "Note for administrators: background jobs and time limits"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:88
+msgid "An audit makes several model calls and easily takes longer than an ordinary web request is allowed to run. That is why analyses and audits run as background jobs of the scheduled action \"AI: Run accounting report analyses and audits\". The job runs in the environment of the person who clicked, never in the identity of the scheduler, and the form refreshes by itself. A job that stays in the running state for more than 30 minutes is marked as failed, so nothing stays stuck."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/accounting_reports.rst:97
+msgid "The time a background job may run comes from the server option ``limit_time_real_cron`` when it is set to a positive value, otherwise from ``limit_time_real``, and otherwise from Odoo's default. If audits fail with a timeout, raise ``limit_time_real_cron`` in the server configuration file (for example to 900 seconds) and restart the server. The value 0 is not treated as \"no limit\"."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agent_recipes.rst:3
@@ -1876,6 +2008,131 @@ msgstr ""
 msgid "Next: practical recipes in :doc:`agent_recipes`."
 msgstr ""
 
+#: ../../content/applications/productivity/ai/app_integrations.rst:3
+msgid "AI in the business apps"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:5
+msgid "For many eYssen apps there is a small AI module that adds quick prompts and a few buttons to the forms you already use. The modules install themselves when the AI module and the matching app are both installed, so there is nothing to set up beyond the normal AI configuration (see :doc:`getting_started`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:11
+msgid "How they work"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:13
+msgid "Quick prompts appear as chips in the AI panel when a record of the app is open in a form view (see :doc:`panel`). Administrators can edit or archive them like any other quick prompt."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:16
+msgid "The AI reads only what you may see: your access rights, record rules and the AI access rules all apply (see :doc:`access_policy`). If an access rule stops the AI from reading what a button needs, you get a clear message instead of a partial result."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:20
+msgid "Buttons that change data work as your own decision: the AI proposes values, you click, and the change is made with your rights and recorded in the AI change log (see :doc:`monitoring`). Buttons that only draft text never send or save anything on their own."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:24
+msgid "Texts found in records, messages and descriptions are treated as untrusted content: the AI is told never to follow instructions written inside them."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:28
+msgid "CRM"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:30
+msgid "On a lead or opportunity the quick prompts are :guilabel:`Qualify` (a short assessment of the lead and of the information that is still missing), :guilabel:`Next best action` and :guilabel:`Follow-up email`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:34
+msgid "The button :guilabel:`Assign with AI` in the form header (and in the action menu of the list, for up to 20 leads at a time) picks a salesperson and a sales team for each lead. The AI looks at the lead, the sales teams and their members, the open workload of each salesperson and how many leads each of them won in the last year, in total and in the lead's country. It can only choose from the people and teams it was offered. The assignment is written with your rights, and a note \"Assigned with AI\" with the reason is added to the chatter. Leads you cannot edit are skipped, and a summary tells you how many were assigned and why others were not."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:45
+msgid "Sales, Purchase and Inventory"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:47
+msgid "Sales orders: :guilabel:`Summarise`, :guilabel:`Upsell ideas` (from the customer's order history) and :guilabel:`Follow-up`. When the margin or the delivery apps are installed, :guilabel:`Margin check` and :guilabel:`Delivery status` are added as well. If an administrator deletes one of them, it does not come back."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:52
+msgid "Purchase orders: :guilabel:`Compare with previous purchases` (price, vendor and lead time for the same products), :guilabel:`RFQ reminder` (a reminder to the vendor) and :guilabel:`Summarise`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:55
+msgid "Transfers: :guilabel:`Explain delays` and :guilabel:`Stock risk`. Products and product variants also have :guilabel:`Stock risk`, which compares the stock on hand with the forecast and the open demand. These are shown to Inventory users."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:61
+msgid "Invoicing"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:63
+msgid "Invoices: :guilabel:`Explain this invoice`, :guilabel:`Check for anomalies` (compares the invoice with the partner's previous invoices: amounts, lines, taxes, payment terms and possible duplicates) and :guilabel:`Payment reminder` (a polite reminder for the open amount)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:67
+msgid "Contacts, for users of the billing group: :guilabel:`Payment behaviour` and :guilabel:`Open items`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:69
+msgid "In the window that sends an invoice, the button :guilabel:`Draft with AI` above the message writes a short, personal email in the mail language. It reads the invoice, its lines and the partner's other open invoices. The text replaces the message body so you can edit it; nothing is sent until you click Send."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:76
+#: ../../content/applications/productivity/calendar.rst:5
+msgid "Calendar"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:78
+msgid "On a meeting the quick prompts are :guilabel:`Prepare agenda`, :guilabel:`Draft minutes` (from the description and the attendees) and :guilabel:`Follow-up email`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:83
+msgid "Products"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:85
+msgid ":guilabel:`Generate description with AI` in the product form header writes the sales description and, when the website shop is installed, the longer website description. It uses the name, category, price, internal reference, current descriptions and attribute values of the product."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:89
+msgid ":guilabel:`Generate image with AI` opens a small window with a prompt pre-filled from the product, which you can edit, and a :guilabel:`Size`. It needs an image model (see :doc:`models_and_providers`) and is hidden without one. The generated picture becomes the product image."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:95
+msgid "Email marketing"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:97
+msgid "In the mailing body editor, the AI command of the editor menu is labelled :guilabel:`AI writer` and is answered by your configured model (see :doc:`writing_assistant`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:100
+msgid "Quick prompts on a mailing: :guilabel:`Review this mailing`, :guilabel:`Preview text` and :guilabel:`A/B test idea`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:102
+msgid "The button :guilabel:`Subject lines with AI` next to the subject reads the mailing and proposes three subject lines in a dialog. Click :guilabel:`Use` next to the one you like to set it as the subject. The button disappears once the mailing has been sent."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:108
+msgid "Timesheets"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:110
+msgid "On the timesheet list, :guilabel:`Draft with AI` opens a dialog where you pick a day (today by default) and click :guilabel:`Propose`. For that day the AI looks at your calendar meetings, the tasks assigned to you that changed, the messages you wrote on tasks and the timesheets you already logged. It proposes lines with a task, a description and the hours. Each line has a checkbox and can be edited, and every line must name a task from the offered list. The hours are kept within sensible bounds and the day's total never goes above 24 hours. Click :guilabel:`Create timesheets` to create the lines you ticked. Nothing is logged without that click."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:121
+msgid "The timesheet assistant has no grid view because the grid view does not exist in the Community edition. Only your own messages on tasks are read, in your own environment."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/app_integrations.rst:126
+msgid "Further integrations are described in :doc:`knowledge_documents` (Knowledge, Documents and cloud storage), :doc:`project_sla` (projects with SLA) and :doc:`accounting_reports` (accounting reports)."
+msgstr ""
+
 #: ../../content/applications/productivity/ai/capabilities_and_tools.rst:3
 msgid "Capabilities and tools"
 msgstr ""
@@ -2705,6 +2962,174 @@ msgstr ""
 msgid "Plans proposed by the guided setup flow for module installation / configuration steps that require explicit confirmation."
 msgstr ""
 
+#: ../../content/applications/productivity/ai/feature_access.rst:3
+msgid "Who can use what"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:5
+msgid "This page is an overview for administrators: which group, capability and rule each AI feature depends on, and where to change it. The principle is always the same: AI works with your rights and can only be narrowed, never widened."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:10
+msgid "The three layers"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:12
+msgid "Groups. :guilabel:`AI: User` lets a person use the assistant and the one-click features. :guilabel:`AI: Administrator` lets a person configure providers, policies, agents and sources. Both are set on the user form under the AI category."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:16
+msgid "Capabilities. Master switches under :menuselection:`AI --> Configuration --> Behavior --> Capabilities` decide which classes of tools exist at all: :guilabel:`Ask (Q&A)`, :guilabel:`Read data`, :guilabel:`Navigate UI`, :guilabel:`Write data`, :guilabel:`Delete data`, :guilabel:`Web access`, :guilabel:`MCP tools`, :guilabel:`Business actions`, :guilabel:`Customize UI & schema` and :guilabel:`Guided system setup`. Write, delete, web, MCP, actions and customization are off after installation. A capability can be limited to groups."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:24
+msgid "Access rules. Under :menuselection:`AI --> Configuration --> Security --> Access Rules`, per-model and per-field allow and deny rules sit on top of Odoo's own rights. By default reading is allowed and creating, writing and deleting are denied. See :doc:`access_policy`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:30
+msgid "What each feature needs"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:32
+msgid "AI panel, writing assistant, AI search, command palette, dictation: :guilabel:`AI: User`, a chat model, the :guilabel:`Ask (Q&A)` capability. The assistant sees record data only if :guilabel:`Read data` and the access rules allow reading that model for you."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:36
+msgid "Changes made by the assistant in chat: :guilabel:`Write data` or :guilabel:`Delete data`, plus an allow rule for the model and fields, plus the write mode. Keep confirmation on."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:39
+msgid "One-click buttons in apps (assign a lead, describe a product, draft timesheets, file a document): the click is your decision, so they do not need the write capability, but they read data through the same access rules. If the AI is not allowed to read the model, you get a clear message instead of a result."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:44
+msgid "AI fields and AI server actions: the user chosen in :guilabel:`Acts as` (or the agent task's agent user). See :doc:`fields_and_automation`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:46
+msgid "Knowledge sources: sources are managed by AI administrators; each person only gets excerpts from sources and records they may read themselves (:doc:`knowledge_sources`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:49
+msgid "MCP server: internal users in :guilabel:`AI: User`; only an allow-list of tools; changes always wait for your confirmation (:doc:`mcp_server`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:51
+msgid "Live chat agent: a dedicated service user that can only ask, read the data sources you list and hand over; it gets no write rights beyond creating a lead, if you turn that on (:doc:`livechat`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:54
+msgid "Website builder tools: :guilabel:`Customize UI & schema` and the website designer group; every change is a confirmation card (:doc:`website`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:56
+msgid "AI triage of project tasks: reviewer in :guilabel:`AI: User`, the :guilabel:`Write data` capability and an allow rule for writing the task fields it changes (:doc:`project_sla`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:61
+msgid "Limits and traces"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:63
+msgid "Rate and cost limits per person and per day are under :menuselection:`AI --> Configuration --> Settings` (see :doc:`configuration`). Repeated policy violations earn strikes and a temporary ban."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:66
+msgid "Every model call is written to the AI log and every applied change to the change log, both under :menuselection:`AI --> Monitoring --> Logs` and :menuselection:`AI --> Monitoring --> Mutation Logs` (see :doc:`monitoring`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/feature_access.rst:71
+msgid "Roll out in steps: start with the assistant and the writing features for a pilot group, add knowledge sources, then enable one write path at a time and read the logs for a couple of weeks before widening it."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:3
+msgid "AI fields, server actions and automations"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:5
+msgid "AI can fill in data for you without anybody opening the assistant: a field that is written by the model, a server action that asks the model for a value, or a server action that hands a record to an agent. This page is for administrators."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:10
+msgid "AI fields"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:12
+msgid "An AI field is an existing, stored and editable field of any model that the model fills from an instruction. Typical examples: a one-sentence summary of a request, the category that fits a product best, a priority class. Supported field types are text, rich text, integer, decimal, monetary, checkbox, selection, date, date and time, many2one and many2many."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:18
+msgid "Create one under :menuselection:`AI --> Configuration --> Behavior --> AI Fields`:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:21
+msgid "Choose the model and the field. A field can have only one AI rule."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:22
+msgid "Write the instruction, for example \"A one-sentence summary of what the customer asks for.\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:24
+msgid ":guilabel:`Acts as` is the user whose access rights are used to read the record and to write the value. Choose a user who may read and change that model, never a more powerful one than needed."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:27
+msgid "Restrict the records with the domain, and use :guilabel:`Also show these fields` to give the model related fields to look at. For a relational field, the choice domain limits which records the model may pick."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:32
+msgid "When values are filled"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:34
+msgid ":guilabel:`Auto Fill`: a scheduled action runs every 15 minutes and fills only empty values, newest records first, in batches (20 records by default, system parameter ``ai.fields.batch_size``)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:37
+msgid ":guilabel:`Fill empty values now` on the rule runs it at once."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:38
+msgid "Numbers and checkboxes have no \"empty\" state, so they are only filled from the :guilabel:`Fill AI fields` entry of the Actions menu, which appears automatically on the model while a rule exists, or from an automation. Tick :guilabel:`Overwrite` if that action should also replace values that are already set."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:44
+msgid "The model must answer with a value that is valid for the field: selection keys, related records among the offered choices and dates are checked before anything is written, and an answer of \"nothing\" leaves the field empty. The record is shown to the model without the fields the assistant may never read. Every write is made as the :guilabel:`Acts as` user, so Odoo access rights and record rules apply, and it appears in the AI change log under :menuselection:`AI --> Monitoring --> Mutation Logs`. Problems are kept in the rule (:guilabel:`Last run` and the last error)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:54
+msgid "AI in server actions"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:56
+msgid "Two kinds of server action use AI. They need :doc:`developer mode <../../general/developer_mode>` to edit under :menuselection:`Settings --> Technical --> Server Actions`, and they can also be used as actions of an automation rule."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:61
+msgid ":guilabel:`Ask AI`: on an \"Update Record\" action, set the value type to :guilabel:`Ask AI` and describe in :guilabel:`AI instruction` what the model should put in the field (\"Describe what the AI should put in the field...\"). For each record the field is set from the model's answer, using the same engine and the same checks as AI fields. It works on saved records only."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:66
+msgid ":guilabel:`Hand to an AI agent`: choose an :guilabel:`Agent task` and the records are queued as work items of that standing task. A background job then runs one isolated agent run per record with the task's agent, capabilities, instruction and write mode. Only agents with their own user and a supervisor can be used, because unattended work must never run in the name of whoever triggered it. See :doc:`agents` and the work-item sections there."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:74
+msgid "Automations"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:76
+msgid "Combine a trigger with one of those actions in :menuselection:`Settings --> Technical --> Automation --> Automation Rules`: for example \"when a task is created, hand it to the triage agent\" or \"when a lead is created, fill its category with AI\". Time-based work (\"every Monday, summarise last week's tickets\") is better modelled as a standing agent task with a schedule under :menuselection:`AI --> Agents --> Tasks`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:83
+msgid "Administrators with the :guilabel:`Customize UI & schema` capability can also ask the assistant in chat to list, create, change or run automations. Creating or changing one is always a proposal that needs confirmation."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/fields_and_automation.rst:88
+msgid "Unattended AI acts without anyone clicking. Keep the model and field lists narrow, choose a low-privilege :guilabel:`Acts as` user, keep agent tasks on confirmation write mode unless the work is low risk, and review the AI change log regularly."
+msgstr ""
+
 #: ../../content/applications/productivity/ai/getting_started.rst:3
 msgid "Getting started"
 msgstr ""
@@ -2911,6 +3336,636 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/getting_started.rst:119
 msgid "Review the full security checklist — :doc:`security`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:3
+msgid "AI in Knowledge, Documents and cloud files"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:5
+msgid "Three small modules connect the AI to the places where your company keeps its articles and files. They build on the knowledge sources described in :doc:`knowledge_sources`, so the same indexing, citation and access rules apply, and they install themselves when the required apps are present. AI Knowledge needs the Knowledge app, AI Documents needs the Documents app and AI Cloud Storage needs cloud storage."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:13
+msgid "The pgvector extension and an embedding model are required for all knowledge sources (see :doc:`knowledge_sources`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:17
+msgid "Knowledge articles as sources"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:19
+msgid "In :menuselection:`AI --> Knowledge --> Sources`, create a source and choose the type :guilabel:`Knowledge articles`. Pick one or more :guilabel:`Knowledge spaces` (every article of the space is used) and/or single :guilabel:`Articles`. :guilabel:`Include sub-articles` is on by default. At least one space or article is needed. Templates and articles in the trash are not indexed, and a source covers at most 2000 articles by default."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:26
+msgid "Each article is indexed together with its position in the space (space, parent articles, title), so a search finds it by context. A citation chip in an answer opens the article."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:29
+msgid "When an article changes, only that article is indexed again, at the next indexing run (every 10 minutes) or when you click :guilabel:`Index now`. Moving an article takes its sub-articles along; deleting an article removes its excerpts at once."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:33
+msgid "The Knowledge app's own sharing is respected for every question: a private, archived or trashed article is never cited to someone who may not see it, even before it is indexed again. Files embedded in an article are not indexed with it; add them as a file source if you need them."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:39
+msgid "Draft an article with AI"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:41
+msgid "In the article editor, the top bar shows :guilabel:`Draft with AI` when a main AI model is configured, you are an AI user and the article is not locked or in the trash. It saves the article and opens a dialog with three steps:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:45
+msgid ":guilabel:`Brief`: describe :guilabel:`What should the article cover?` (the title is the default). If knowledge sources are available to you, you can switch on :guilabel:`Use the knowledge sources` so that the AI draws on your company's own material. Click :guilabel:`Propose an outline`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:49
+msgid ":guilabel:`Outline`: the AI proposes 3 to 8 sections as a list. Edit it freely, or click :guilabel:`New outline` to ask again. Then click :guilabel:`Write the article`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:52
+msgid ":guilabel:`Preview`: read the finished article. Click :guilabel:`Insert into the article`, or :guilabel:`Write again` or go back. When the article already has text, choose :guilabel:`When accepting` between :guilabel:`Replace the current content` and :guilabel:`Add after the current content`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:57
+msgid "The AI sees the title, the space, the current content and the names of the parent and sibling articles that you may see, and the excerpts from the sources when you chose them. It is told not to invent company facts and to put placeholders in square brackets, so review and complete the draft. The text goes into the article with your rights, is recorded in the AI change log and counts as a normal edit in the article history."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:65
+msgid "AI cover"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:67
+msgid "When an image model is configured (see :doc:`models_and_providers`), a picture button in the top bar (tooltip :guilabel:`Generate a cover image with AI`) opens a dialog with an editable description of the cover (by default a calm, wide banner for the title, without text). Click :guilabel:`Generate`, look at the preview, and then :guilabel:`Use as cover`, try again or :guilabel:`Change the description`. The cover appears above the article."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:75
+msgid "Document folders as sources"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:77
+msgid "In :menuselection:`AI --> Knowledge --> Sources`, choose the type :guilabel:`Document folders`, pick the folders and decide with :guilabel:`Include sub-folders` whether the sub-folders count. Files attached to fields and links are not used. A source covers at most 500 documents by default, newest first, and the text of each file is read up to 25 MB. When a document is attached to a business record, its excerpts also follow the record's access rules."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:85
+msgid "New and changed documents are indexed again incrementally. At question time a document is used only if you may read its folder and the document itself, with the same visibility as in the Documents app. Users without the Documents app get nothing from these sources."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:91
+msgid "AI filing of documents"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:93
+msgid "The AI can propose the right folder and tags for a document, either when you ask or when a file is uploaded."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:97
+msgid "On request"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:99
+msgid "On a document form, click :guilabel:`Suggest a folder` (you need write access to the document). The proposal is computed at once and shows the folder, the tags, the confidence and the reason. Click :guilabel:`Apply` or :guilabel:`Dismiss`. A pending proposal also appears as a banner on the document."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:105
+msgid "On upload"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:107
+msgid "Open a folder and look at the group :guilabel:`AI filing`. Choose :guilabel:`Suggest a folder` so that every document uploaded into the folder gets a proposal that the uploader confirms, or :guilabel:`File automatically` so that proposals are applied at once when the AI is at least as sure as the :guilabel:`Minimum confidence` (0.8 by default); the other proposals wait for confirmation. The option :guilabel:`AI may file documents here` decides whether other documents can be filed into this folder. Proposals are prepared about every 10 minutes, in the name of the person who uploaded the file, with that person's rights."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:117
+msgid "Open :menuselection:`Documents --> AI filing` to see the proposals (the filter :guilabel:`To decide` is on by default), with the filters :guilabel:`Applied`, :guilabel:`Failed` and :guilabel:`Applied automatically`. A failed proposal can be retried with :guilabel:`Try again`. When a proposal is applied, the previous folder and tags are kept on it, and a note in the document chatter says who confirmed it, or that it was filed automatically."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:125
+msgid "The AI reads the first part of a document's text only when the AI read policy allows documents, or when the folder has AI filing turned on, and never when an explicit AI deny rule applies to you. Filing runs with the uploader's AI rights, so uploads made by technical users, such as the mail gateway, usually fail with a recorded error."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:132
+msgid "Files in cloud storage"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:134
+msgid "With AI Cloud Storage installed, files that are stored with the cloud storage provider can be indexed like local files, wherever the knowledge sources read attachments: file sources, record sources, document folders and AI filing. The server downloads the file through the signed download link of the configured provider."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:140
+msgid "Only secure (https) links are followed and redirects are not. A file larger than 25 MB by default (100 MB at most) is skipped, and each file has a time budget, so a failed or too large download skips that file only."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_documents.rst:143
+msgid "Cloud files are downloaded completely every time the source is indexed again; there is no local cache. If cloud storage is not configured, the source fails with a clear message."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:3
+msgid "Knowledge sources"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:5
+msgid "Knowledge sources let the assistant answer from your own material: handbooks, price lists, web pages, a record and its attachments. The text is cut into pieces, turned into vectors by an embedding model and stored in PostgreSQL. When someone asks a question, the most similar pieces are found, the answer is written from them, and numbered citations show where each fact comes from."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:12
+msgid "Requirements"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:14
+msgid "The module AI Knowledge Sources (RAG) must be installed."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:15
+msgid "The PostgreSQL server that Odoo connects to must provide the pgvector extension (``vector``). Installing the module runs ``CREATE EXTENSION IF NOT EXISTS vector``; if the extension is not available on that server, the installation stops with a clear message. Install pgvector on the database server itself, not on the Odoo server, and make sure the database user is allowed to create the extension."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:21
+msgid "With Docker, the extension has to be in the image of the database container (for example an image built for PostgreSQL with pgvector), not in the Odoo container. If you use a managed PostgreSQL service, enable pgvector there."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:24
+msgid "An embedding model from a provider that offers one (OpenAI, Google Gemini or OpenRouter). Choose it under :menuselection:`AI --> Configuration --> Settings` in :guilabel:`Embedding model`. Changing it queues all sources for re-indexing, because vectors from different models are never compared."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:30
+msgid "Add a source"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:32
+msgid "Open :menuselection:`AI --> Knowledge --> Sources` and create a source. Choose its :guilabel:`Type`:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:35
+msgid ":guilabel:`Files`: upload PDFs, office documents, OpenDocument files or plain text."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:37
+msgid ":guilabel:`Web page`: an ``https://`` address. Tick :guilabel:`Crawl` to follow links to other pages of the same site, up to :guilabel:`Crawl Depth` link hops and :guilabel:`Max pages` pages. The crawler respects the site's ``robots.txt`` (it identifies itself as ``eYssenAIBot``), stays on the same host, reads static HTML only (no JavaScript) and never fetches private network addresses."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:43
+msgid ":guilabel:`Record`: any record of the database; tick :guilabel:`Include Attachments` to index its attachments too. Stored text fields are indexed, except fields the assistant may never read (passwords, tokens and the like)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:46
+msgid ":guilabel:`Folder`: groups other sources in a tree; place a source in a folder with the :guilabel:`Folder` field. Re-indexing a folder queues everything inside."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:50
+msgid "Knowledge articles, document folders and cloud-stored files are added as further source types by the Knowledge and Documents bridges (see :doc:`knowledge_documents`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:55
+msgid "Who can use a source"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:57
+msgid ":guilabel:`Available to the assistant` makes the source searchable from the everyday assistant. An agent searches its own sources instead, set in the :guilabel:`Knowledge` tab of the agent form, plus the global ones when :guilabel:`Also use global sources` is on."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:61
+msgid ":guilabel:`Allowed groups` and the company restrict who may read the source. Folders restrict everything inside them as well."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:63
+msgid "Whatever the source says, a person only gets excerpts from records and attachments they could open in Odoo themselves, and only for models the AI access rules allow. A private or archived record is never cited."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:68
+msgid "Indexing"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:70
+msgid "A new or changed source gets the status :guilabel:`Pending`. A scheduled action (:guilabel:`AI: Index knowledge sources`, every 10 minutes) processes pending sources. :guilabel:`Index now` processes one at once and :guilabel:`Re-index` queues it again. The status moves through :guilabel:`Processing` to :guilabel:`Indexed`; if something goes wrong the status is :guilabel:`Failed` and the error is shown on the form. The :guilabel:`Chunks` button shows how many pieces were stored."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:78
+msgid "Tuning is in the block :guilabel:`Knowledge sources` of the AI settings: :guilabel:`Chunk size (characters)` and :guilabel:`Chunk overlap (characters)` (1500 and 200 by default), :guilabel:`Excerpts per search` (6), :guilabel:`Embedding dimensions` (0 means the model's own size; OpenAI text-embedding-3 models can return shorter vectors), :guilabel:`Texts per embedding request`, :guilabel:`Embedding requests per minute` (indexing pauses when reached) and :guilabel:`Max pages per crawl`. Embedding calls are logged and priced like any other model call."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:88
+msgid "Use: citations and sources only"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:90
+msgid "When an embedding model is set and at least one indexed source is in scope, the assistant can search the sources. Its answer cites facts as numbered references, and clickable chips under the answer show the sources: a web page opens its address, a file downloads, a record opens its form."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:95
+msgid "In the :guilabel:`Conversation options` of the AI panel, :guilabel:`Answer from sources only` appears when sources are available. With it on, the assistant must search the sources and says plainly that it did not find the answer when the excerpts do not contain it."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:101
+msgid "Text found in sources is treated as material, not as instructions: a web page cannot tell the assistant to do something."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:105
+msgid "Similar tasks"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:107
+msgid "With an embedding model set, projects can find tasks that resemble the one you are looking at. In the project form, in the AI block, turn on :guilabel:`Similar tasks enabled`, and optionally set the :guilabel:`Similarity threshold` (0 to 1, default 0.75) and the :guilabel:`Time window (days)` (0 means no limit). Task text (name, description and recent messages) is embedded in the background every 15 minutes."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:114
+msgid "The task form then shows a :guilabel:`Similar tasks` smart button with the count, for example \"5, 2 closed\". It opens the matches sorted by similarity. The counts are computed when you open the form. Triage and the ticket quick prompts use the same feature (see :doc:`project_sla`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:120
+#: ../../content/applications/productivity/ai/mcp_server.rst:132
+#: ../../content/applications/productivity/ai/voice.rst:119
+msgid "Limits"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:122
+msgid "Token counts shown for chunks are estimates (characters divided by four); billing uses the provider's own counts in the AI log."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:124
+msgid "Vectors of more than 2000 dimensions are searched exactly (without an index), which is slower on large collections. Pick a shorter vector size if you can."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:126
+msgid "Web pages are read as static HTML; content built by JavaScript is not seen."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/knowledge_sources.rst:127
+msgid "When access is very selective on a very large collection, a search can return fewer excerpts than requested."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:3
+msgid "Live chat AI agent"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:5
+msgid "An AI agent can answer the visitors of your website in Live Chat. It answers questions from public data you choose, hands the conversation over to a human operator when needed and, optionally, creates a lead from the chat. It is a feature of eYssen and it needs the modules AI Live Chat (and, for leads, AI Live Chat CRM)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:12
+msgid "Set up the agent"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:14
+msgid "Create the agent in :menuselection:`AI --> Configuration --> Agents` (see :doc:`agents`). It must be a persona agent without its own user: it chats as a contact of its own, with a robot avatar. Give it a name and instructions that fit your company."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:18
+msgid "Open your channel in :menuselection:`Live Chat --> Channels` and go to the tab :guilabel:`AI Agent`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:20
+msgid "Choose the :guilabel:`AI agent mode`: :guilabel:`AI first, hand over to a human` (every new chat starts with the agent) or :guilabel:`AI only when no operator is available` (the agent answers only when nobody is online; the chat button is shown even with no operator). :guilabel:`No AI` keeps the standard behaviour."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:25
+msgid "Select the :guilabel:`AI agent`, optionally write an :guilabel:`AI welcome message` and set :guilabel:`Max AI answers`, the number of answers after which the agent hands over to a human."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:28
+msgid "Under :guilabel:`Data the agent may read` pick the data sources (see below)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:31
+msgid "Choose what the agent may read"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:33
+msgid "The agent talks to anonymous visitors, so it can read only what you explicitly allow. A data source is a model, a filter on its records and the fields that may be seen. Nothing else is readable for the agent: not other models, not other fields, not unpublished records."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:38
+msgid "Manage the sources in :menuselection:`AI --> Configuration --> Security --> Live Chat Data Sources`. Each source has a :guilabel:`Model`, a :guilabel:`Domain` (for example published records only), a :guilabel:`Description` that tells the agent when to use the data and, on the tab :guilabel:`Readable fields`, the fields it may see. The source is ready as soon as it is saved."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:44
+msgid "When the module is installed, ready-made sources are created for published products, website pages, published events and published courses (and, with the matching website modules, blog posts and job positions). Only the ones you add to a channel are used by that channel."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:50
+msgid "What happens in a chat"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:52
+msgid "The agent greets the visitor with the welcome message and answers in the visitor's language. Answers are ordinary chat messages, so operators see the full transcript of the session."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:55
+msgid "Messages are not answered instantly: the visitor sees the agent typing and the answer arrives as one message a few seconds later. Several messages sent in quick succession are answered together."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:58
+msgid "A visitor message is limited to 2000 characters per turn."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:61
+msgid "Hand-over to a human"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:63
+msgid "The agent hands the chat over to an available operator when the visitor asks for a person, when :guilabel:`Max AI answers` is reached, when the agent is unsure or when the AI service fails. The operator is chosen with the channel's normal operator selection and joins the session; the agent posts a short summary and stops answering. An operator who simply writes in the session also takes it over."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:70
+msgid "If nobody is available, the visitor is told so and asked for contact details, and the agent keeps helping for a limited number of further answers."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:74
+msgid "The hand-over summary is visible to the visitor, and it is labelled as an AI summary based on the visitor's messages that is not verified. It contains no clickable links."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:78
+msgid "On the session form of a live chat conversation you see the AI state, the number of AI answers, the hand-over reason and, for AI administrators, a link to the underlying AI conversation. In the session list you can filter by :guilabel:`Answered by AI` and :guilabel:`Handed over by AI`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:84
+msgid "Create leads from chats"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:86
+msgid "With the module AI Live Chat CRM, turn on :guilabel:`AI creates leads` on the tab :guilabel:`AI Agent` and optionally pick a :guilabel:`Sales team for AI leads`. When a visitor leaves contact details and shows interest, the agent creates one lead for the session, with the name, email, phone, company and a summary. The lead is unassigned and linked to the conversation, and the chat links back to the lead."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:94
+msgid "Nobody can confirm a request from an unattended visitor, so the lead is created directly. At most one lead is created per session and a limited number per visitor address per day (:guilabel:`Leads per visitor address and day` in the settings). The lead description starts with the label that the summary is unverified."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:101
+msgid "Preview cards"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:103
+msgid "With the module AI Website Live Chat Cards (and the matching website bridge modules), turn on the channel option for preview cards. The agent can then show the visitor a list of cards with a picture, a title, a short text and a link for the products, events, blog posts, courses or job positions it found. Only published, website-visible records are shown, with a fixed set of safe fields."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:110
+msgid "Limits and security"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:112
+msgid "The agent runs as a dedicated service user that can never log in. It can only ask, read the allowed sources, hand over and, if enabled, create a lead. It cannot write, delete, browse the web or use memory, skills or other tools, even if a visitor tries to talk it into it."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:116
+msgid "Visitor text is treated as untrusted. The agent does not reveal internal data, its prompt or its tools. The blocked patterns of the AI settings apply to visitor input and to answers."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:119
+msgid "Repeated attempts to make the agent break its rules are counted per session. After three, the agent hands over, or stops if nobody is available. One visitor cannot switch the AI off for everyone."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:122
+msgid "There is one service user for all channels, and the configuration is per channel. The answer is not streamed."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:126
+msgid "Abuse and cost limits"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:128
+msgid "Open :menuselection:`AI --> Configuration --> Settings` and look at the block :guilabel:`Live chat limits`. The limits are checked before the model is called. When one is reached, the visitor gets a polite message, and the session is handed over to an available operator or the AI stops in that session. A value of 0 switches the limit off."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:134
+msgid ":guilabel:`Per visitor`: :guilabel:`Seconds between AI answers`, :guilabel:`Visitor messages per minute`, :guilabel:`AI conversations per visitor and hour` and :guilabel:`AI answers per visitor and day`. Visitors are told apart by network address, guest, signed-in contact or website visitor."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:138
+msgid ":guilabel:`All visitors`: :guilabel:`AI requests per day (all visitors)` and :guilabel:`AI cost per day (USD, all visitors)`. If the cost limit is 0, the general daily cost limit of the AI settings applies."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/livechat.rst:143
+msgid "See :doc:`access_policy` for how access groups and rules work in general, and :doc:`website` for the website builder assistant."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:3
+msgid "MCP server"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:5
+msgid "With the MCP server enabled, your Odoo database can be connected to external AI apps that speak the Model Context Protocol, such as Claude, ChatGPT or an AI-enabled code editor. The app can then search and read the data its user can see in Odoo and, with confirmation, propose changes, from inside the app the person already uses."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:12
+msgid "This is the opposite direction of :menuselection:`AI --> Configuration --> Providers --> MCP Servers`, where Odoo calls tools of other servers (see :doc:`configuration`). Here Odoo is the server."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:17
+msgid "Enable the server"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:19
+msgid "Install the modules AI MCP Gateway (and, for portal users, AI MCP Gateway - Portal)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:21
+msgid "Open :menuselection:`AI --> Configuration --> Settings`, find the block :guilabel:`MCP server` and turn it on. The setting is off by default."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:23
+msgid "Copy the address from :guilabel:`MCP server URL`. It is your Odoo address followed by ``/mcp``, and it is what you paste into the AI app."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:27
+msgid "AI apps call the server without a login cookie, so Odoo must select this database from the host name alone. If the server serves several databases, set its ``dbfilter`` option so that this host name selects only this database (for example ``^%d$`` with one database per subdomain), or serve a single database. If that is not the case, the settings page shows a warning and the apps get \"404 Not Found\"."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:35
+msgid "Connect an AI app"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:37
+msgid "In the AI app, add a custom connector or MCP server and paste the server URL."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:38
+msgid "The app opens an Odoo sign-in page. Sign in with your own account. Only internal users in the :guilabel:`AI: User` group can connect, and the group is checked again on every request."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:41
+msgid "A consent page says which app wants to connect, what it will be able to do (:guilabel:`Read only` or :guilabel:`Read and propose changes`) and which tools it can use. Click :guilabel:`Allow` or :guilabel:`Deny`. Consent is asked every time an app connects."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:46
+msgid "Behind the scenes the connection uses OAuth 2.1 with PKCE. Access tokens are short-lived and refresh tokens rotate on every use; only hashes are stored. Scripted clients can alternatively use an Odoo API key as the bearer token, if :guilabel:`Accept Odoo API keys` is on."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:52
+msgid "Connected apps and disconnecting"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:54
+msgid "Every user sees their own connections in their preferences, on the tab :guilabel:`Connected AI apps`, with the date connected and last use. :guilabel:`Disconnect` takes effect immediately."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:58
+msgid "Administrators see all connections under :menuselection:`AI --> Configuration --> MCP Server --> Connected AI apps` (with :guilabel:`Revoke`) and the registered apps under :menuselection:`AI --> Configuration --> MCP Server --> AI Apps`. Revoking a refresh token revokes the whole connection."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:64
+msgid "Which tools are exposed"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:66
+msgid "The server does not hand out everything the assistant can do. It offers an allow-list of tools that are known to respect confirmation, filtered by the user's own capabilities:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:70
+msgid "Reading and looking up: search, read, group and aggregate records, describe fields, search the documentation of models, read the environment, list allowed actions and skills and use a skill, compute dates, read attachments, list menus, search memory, search and fetch web pages (if the Web access capability is on)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:75
+msgid "Changing (only if the Write, Delete or Business actions capability is on): create, update and delete records, call an allowed business action, fetch a file into a field."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:79
+msgid "Not exposed, whatever the capabilities: saving or forgetting memories, creating or running automations, changing views, fields or models, generating images and the website builder tools. A token with only read access sees only the read tools. Every tool call runs as the user, through the same access rules, policy checks and audit as the assistant in Odoo."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:86
+msgid "Changes made by AI apps"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:88
+msgid "By default :guilabel:`Always ask for confirmation` applies: each connection has its own conversation (\"MCP: app name\"), and every create, update, delete or action becomes a proposal that you approve in the AI panel (see :doc:`panel`). The alternative :guilabel:`Follow the AI write settings` uses the global write mode instead. Each tool call is written to the AI log as an MCP call and counts towards the rate limits."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:95
+msgid "Choose the behaviour in the setting :guilabel:`Changes made by AI apps`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:98
+msgid "Registering apps"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:100
+msgid "There are two ways to let an app in."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:102
+msgid "You register it yourself under :menuselection:`AI --> Configuration --> MCP Server --> AI Apps`: the :guilabel:`App name` shown on the consent page and the allowed :guilabel:`Redirect URIs`. Use :guilabel:`Generate secret` for a confidential app (the secret is shown only once) or :guilabel:`Make public (PKCE only)` for apps that cannot keep a secret."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:107
+msgid "Or you turn on :guilabel:`Allow dynamic client registration` and apps register themselves. This is off by default. When on, registration is limited per network address (:guilabel:`Registrations per address and hour`, 10 by default), the registered addresses must match :guilabel:`Allowed redirect URI patterns`, and apps that never get used are deleted after 72 hours. An authorization error of an app that is not yet reviewed is shown on an error page instead of redirecting back to the app."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:115
+msgid "More settings in the block :guilabel:`MCP server`: :guilabel:`Token lifetimes` (access token minutes and refresh token days) and :guilabel:`Allowed browser origins` for browser-based apps. The default redirect patterns accept ``https://`` addresses and the local loopback addresses used by desktop tools."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:121
+msgid "Portal users"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:123
+msgid "With the portal module and the setting :guilabel:`Portal users may connect AI apps` (off by default), portal users can connect AI apps too, from the page \"My AI apps\" of the portal. They get only the search, read and group tools, read-only, and only for models that have an explicit read allow rule in an AI access group they belong to. A shipped, empty group :guilabel:`Portal users (MCP)` is mapped to all portal users for that purpose. Odoo's own portal rights still apply underneath."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:134
+msgid "The server is stateless and answers single requests: no streaming, no server-initiated messages, no resources or prompts."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:136
+msgid "Apps are identified by registration (yours or dynamic), not by a URL-based client identity document."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/mcp_server.rst:138
+msgid "A user who is archived, removed from the AI group or banned loses access on the next request."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:3
+msgid "Providers and models"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:5
+msgid "eYssen AI talks to language-model providers over their web APIs. This page explains what to configure once, so that every other AI feature (chat, writing assistant, knowledge sources, voice, images) has a model to work with."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:10
+msgid "Providers"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:12
+msgid "Open :menuselection:`AI --> Configuration --> Providers --> LLM Providers` and create one provider per account you use. The supported types are OpenRouter, OpenAI, Anthropic, xAI and Google Gemini; any OpenAI-compatible gateway works through the :guilabel:`Base Url` field. The API key is write-only: once saved it is never shown again."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:18
+msgid "Click :guilabel:`Refresh Models` on the provider to import its model catalogue (and prices where the provider publishes them). Refreshing never overwrites a price you entered by hand."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:23
+msgid "Kinds of models"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:25
+msgid "Every model has a :guilabel:`Kind`. The kind decides where the model can be chosen:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:28
+msgid ":guilabel:`Chat` models answer conversations and drive the assistant, the writing assistant and all the one-click features. Choose one under :menuselection:`AI --> Configuration --> Settings` in :guilabel:`AI Model`. The assistant calls tools, so pick a model that supports tool calling."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:32
+msgid ":guilabel:`Image generation` models create pictures for the AI panel, the editor and the product and Knowledge cover features. Set the model by hand to this kind, then pick it in :guilabel:`Image Model` under :menuselection:`AI --> Configuration --> Settings`. Anthropic offers no image models; use another provider for images."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:37
+msgid ":guilabel:`Embedding` models turn text into vectors for knowledge sources and similar tasks (see :doc:`knowledge_sources`). OpenAI, Google Gemini and OpenRouter provide them; xAI and Anthropic do not."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:40
+msgid ":guilabel:`Speech to text` models transcribe audio for dictation and call transcription (see :doc:`voice`). Any provider with an OpenAI-compatible audio transcription route works, including a custom base URL such as Groq or a self-hosted Whisper server. Anthropic and OpenRouter are refused."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:46
+msgid "What Refresh Models does for each kind"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:48
+msgid "Models whose id contains ``embed`` are filed as :guilabel:`Embedding` automatically and never offered to the chat loop. OpenRouter lists embedding models on a separate endpoint, so a refresh of an OpenRouter provider also fetches that list and adds those models; if that second request fails, the normal refresh still succeeds."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:53
+msgid "Models whose id contains ``whisper`` or ``transcribe`` are filed as :guilabel:`Speech to text`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:55
+msgid "Image models are not detected: open the model and set its :guilabel:`Kind` to :guilabel:`Image generation` yourself. A refresh never changes a kind you set by hand."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:60
+msgid "Where each model is chosen"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:62
+msgid ":guilabel:`AI Model` and :guilabel:`Image Model`: :menuselection:`AI --> Configuration --> Settings`, block :guilabel:`Model`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:64
+msgid ":guilabel:`Embedding model`: same page, block :guilabel:`Knowledge sources`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:65
+msgid ":guilabel:`Speech-to-text model`: same page, block :guilabel:`Voice`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:68
+msgid "Reasoning and cost"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:70
+msgid "Only models flagged as reasoning-capable react to :guilabel:`Think longer` in the AI panel (see :doc:`panel`). Flag a model only if its API documents a reasoning effort or a thinking budget: other models reject the extra parameter."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:74
+msgid "Each model has unit prices (per million tokens, per image or per audio minute). They feed the cost cap in the settings and the log entries. A model without prices is not blocked, but the cost cap cannot count it."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/models_and_providers.rst:79
+msgid "Everything a model is asked is sent to the provider you chose. Pick providers whose data terms fit your obligations, and keep the log level on :guilabel:`Ai Log Level` metadata only unless you need payloads."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/monitoring.rst:3
@@ -3143,6 +4198,250 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/monitoring.rst:170
 msgid "Rate limits, strike thresholds and retention: :doc:`configuration`. Policy and capabilities: :doc:`access_policy`, :doc:`capabilities_and_tools`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:3
+msgid "The AI panel"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:5
+msgid "The AI panel is the everyday way to talk to the assistant. It opens from the AI bubble in the top bar of the backend, from :menuselection:`AI --> Conversations`, or from the command palette (see :doc:`search_and_commands`). When you open it on a record, the assistant sees that record and offers quick prompts that fit it."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:11
+msgid "Everything the assistant reads or changes goes through the same access gate as your own Odoo rights: it can never see or do more than you can, and an administrator can narrow it further (see :doc:`feature_access`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:16
+msgid "Quick prompts"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:18
+msgid "When a record form is open, a row of small buttons appears above the message box: the quick prompts. One click sends the stored instruction, for example \"Summarise\" or \"Next best action\". Hover a button to read the instruction it sends. Prompts made for the current model come first; generic prompts come last, and a specific prompt can replace a generic one."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:24
+msgid "Administrators manage them under :menuselection:`AI --> Configuration --> Behavior --> Quick Prompts`: name, instruction, the model they belong to, whether they need a single open record, the groups that see them and the generic prompt they replace. Many app modules ship their own prompts (see :doc:`app_integrations`); you can edit or archive them."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:31
+msgid "Conversation options"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:33
+msgid "The sliders button (:guilabel:`Conversation options`) opens a small drawer. Your choices are remembered for the next conversations."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:36
+msgid ":guilabel:`Think longer` asks the model for extended reasoning. Answers are slower and cost more, but hard questions get better results. It only has an effect on models flagged as reasoning-capable (see :doc:`models_and_providers`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:40
+msgid ":guilabel:`Show the steps the assistant takes` adds a collapsed \"N steps\" line under each answer. Open it to see which tools were called, whether each call was allowed and how long it took. Use it to understand or check an answer."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:43
+msgid ":guilabel:`Changes to data:` chooses how this conversation handles changes. :guilabel:`Follow the AI settings` uses the global write mode; :guilabel:`Always ask me first` turns every change into a proposal you confirm; :guilabel:`Apply without asking` skips the confirmation step. The last choice only appears when an administrator has enabled it, and rules that force confirmation still win."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:51
+msgid "Confirming changes"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:53
+msgid "When the assistant wants to create, update or delete something and confirmation is required, it does not change the data. A card with a plain-language summary appears under :guilabel:`Pending changes`. Click :guilabel:`Confirm` to apply the change in your name, or :guilabel:`Cancel` to drop it. All open proposals are also listed under :menuselection:`AI --> Write Proposals`, and a proposal that nobody answers expires after the configured lifetime."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:60
+msgid "The :guilabel:`Records created or updated` button lists the records the assistant touched in this conversation, with links."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:64
+msgid "What the assistant can show"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:66
+msgid "Record cards: for a list of records (up to 20) it shows compact clickable cards with the name and a few key fields instead of a long text list."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:68
+msgid "Pictures: ask for an image and, if an image model is configured, the result appears under the answer and is stored with the conversation."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:70
+msgid "Navigation: it can open the list, pivot or graph you ask for, with the filters, grouping and measures it understood, and it can change the search of the view you are looking at (add or remove filters, grouping, ordering)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:73
+msgid "Dates: \"last quarter\" or \"three working days from now\" are computed with your time zone and company calendar instead of being guessed."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:75
+msgid "Menus: it can tell you where in the menu tree a feature lives, limited to the menus you can see."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:79
+msgid "Files"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:81
+msgid "Use :guilabel:`Attach files` to add images and documents to your message. The assistant can read the text of a PDF or office document you are allowed to read, and look at pictures. Open :guilabel:`Conversation files` to see everything attached to the conversation. Allowed types and the maximum size are set in the AI settings."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:88
+msgid "Delegating to specialist agents"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:90
+msgid "An agent can hand a sub-task to a specialist agent, and the everyday assistant can consult agents that an administrator made available to it (\"ask the accounting agent\"). The sub-task runs as you, in its own conversation, and the specialist can use only the capabilities that both agents and you have: delegation never widens rights. You see the sub-task in the panel with a :guilabel:`Back` link to return to the main conversation. Delegation goes at most two levels deep and cannot loop."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/panel.rst:98
+msgid "Administrators set this up on the agent form: :guilabel:`Can delegate to` lists the specialists an agent may use, and :guilabel:`Available to the assistant` makes an agent consultable from the everyday chat. Only agents without their own user can be delegates."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:3
+msgid "AI for projects with SLA"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:5
+msgid "If you handle customer tickets as tasks of a project with service levels (SLA), the module AI Project SLA gives your team reply drafts, hand-over summaries, an SLA risk check and an optional automatic triage of new tickets. It needs the project SLA app and the knowledge sources module (see :doc:`knowledge_sources`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:11
+msgid "Quick prompts on tickets"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:13
+msgid "For project users, these quick prompts appear in the AI panel on a task (see :doc:`panel`). They read the recent messages, the SLA lines of the task, similar solved tickets and your knowledge sources, and they change nothing:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:17
+msgid ":guilabel:`Draft customer reply`: a reply based on the conversation, the way similar tickets were solved and your sources, with numbered citations. It is never posted for you."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:20
+msgid ":guilabel:`Summarise ticket`: a hand-over summary including the SLA situation. It replaces the generic summary prompt on tasks."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:22
+msgid ":guilabel:`Suggest priority and assignee`: a suggestion with reasons, based on similar tickets, the SLA and the workload of the candidates."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:24
+msgid ":guilabel:`SLA risk`: for every SLA, what it measures, the deadline in your time zone, the hours left, whether it is paused, fulfilled, urgent or breached, and what to do now."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:29
+msgid "The suggestions about similar tickets depend on the similar-tasks feature being on for the project and on an embedding model (see :doc:`knowledge_sources`). The prompts are offered on every task for project users; on a task without an SLA they say so."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:35
+msgid "Automatic triage of new tickets"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:37
+msgid "The triage lets the AI classify a new ticket: its priority, its tags and ticket type, and its assignee when nobody is assigned yet. It is off by default and is set per project."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:42
+msgid "Set it up"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:44
+msgid "Open the project form and find the setting :guilabel:`AI triage` in the AI block. Choose :guilabel:`Off`, :guilabel:`Propose for review` or :guilabel:`Apply automatically`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:47
+msgid "Choose the :guilabel:`Triage reviewer` (by default the project manager). The reviewer must be an AI user, and the project cannot be saved with triage on otherwise."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:50
+msgid "Optionally list the tags that stand for ticket types in :guilabel:`Ticket types`, for example Bug and Question."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:52
+msgid "Ask an administrator to allow AI writes on tasks: the capability :guilabel:`Write data` must be on and an AI access rule must allow writing the priority, tags and assignees of tasks (see :doc:`feature_access` and :doc:`access_policy`). Both are off by default."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:58
+msgid "What happens"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:60
+msgid "A new task of the project is marked :guilabel:`Waiting for AI triage`. About every 10 minutes (and right after the task is created) the AI first embeds the new tasks so that similar tickets are known, and then triages each queued task in the name of the reviewer, with the reviewer's rights."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:64
+msgid "The AI sees the ticket, its messages, the allowed priorities, ticket types and tags, the possible assignees (only when the task has none), similar solved tickets and the SLA. It can answer only with the offered values: a priority, tags and a ticket type from the lists and an assignee from the candidates. Values that equal the current ones are dropped. If nothing is left, the task shows :guilabel:`Nothing to change`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:70
+msgid "With :guilabel:`Propose for review`, the proposal waits for the reviewer. On the task, the reviewer sees a banner with the reasoning and the buttons :guilabel:`Apply` and :guilabel:`Discard`, gets a to-do activity, and finds the proposal also under the AI write proposals. With :guilabel:`Apply automatically` the same proposal is applied at once, and if that fails it waits for review. Unreviewed proposals expire after 24 hours by default."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:76
+msgid "You can also triage a single ticket yourself with :guilabel:`Triage with AI` in the task header. The proposal is then addressed to you."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:78
+msgid "Applying a triage does not count as the team's first reaction to the customer, so a \"first activity\" SLA is not marked as fulfilled by the AI's classification."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/project_sla.rst:83
+msgid "Nothing is changed on a ticket without the reviewer's confirmation unless the project manager chose :guilabel:`Apply automatically`. Every applied change is recorded in the AI change log (see :doc:`monitoring`). The AI reads only the names of the possible assignees, and the workload comes from the tasks themselves."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/search_and_commands.rst:3
+msgid "AI search and command palette"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/search_and_commands.rst:5
+msgid "Two shortcuts put the assistant at your fingertips: you can describe a search in your own words, and you can ask a question from anywhere with the command palette. Both need a configured chat model and the :guilabel:`AI: User` group."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/search_and_commands.rst:10
+msgid "Search with AI"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/search_and_commands.rst:12
+msgid "Open any list, kanban or other view with a search bar and click the magic-wand button :guilabel:`Search with AI` in the search bar."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/search_and_commands.rst:14
+msgid "Write what you are looking for as a sentence, for example \"quotations over 5,000 euros from last quarter, grouped by salesperson\", and press Enter."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/search_and_commands.rst:16
+msgid "The assistant turns the sentence into ordinary search facets (filters and grouping) on the current view. You can remove or change them like any other facet."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/search_and_commands.rst:20
+msgid "The proposed search is checked against the fields of the view and your rights before it is applied. If the assistant suggests something the view cannot use, you get a message instead of a wrong result. The button is hidden in pop-up dialogs."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/search_and_commands.rst:26
+msgid "Command palette"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/search_and_commands.rst:28
+msgid "Press :kbd:`Ctrl+K` (:kbd:`Cmd+K` on a Mac) to open the command palette."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/search_and_commands.rst:30
+msgid "Type ``?`` followed by your question and press Enter (:guilabel:`Ask the AI assistant...`). The AI panel opens and answers it."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/search_and_commands.rst:32
+msgid "In the default list, any longer free text you type (twelve characters or more) also offers an :guilabel:`Ask AI` entry, so you can turn a search that found nothing into a question."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/search_and_commands.rst:35
+msgid ":guilabel:`Open the AI assistant` opens the panel without a question."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/search_and_commands.rst:38
+msgid "Questions asked this way are ordinary assistant conversations: they appear under :menuselection:`AI --> Conversations` and follow the same access rules and limits (see :doc:`panel`)."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/security.rst:3
@@ -4041,6 +5340,370 @@ msgstr ""
 msgid "For agent-driven work (assignment, @mention), see :doc:`agents`."
 msgstr ""
 
+#: ../../content/applications/productivity/ai/voice.rst:3
+msgid "Voice: dictation and call transcription"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:5
+msgid "The module AI Voice adds speech to text to eYssen. You can dictate messages instead of typing them, and you can have a Discuss call transcribed and summarised, with action items. It uses a speech-to-text model that an administrator configures once."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:11
+msgid "Set up speech to text"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:13
+msgid "Add a provider that offers the OpenAI-compatible transcription route, for example OpenAI, or Groq or a self-hosted Whisper server using the provider type OpenAI with its own base URL (see :doc:`models_and_providers`). Anthropic and OpenRouter have no transcription route and cannot be used for speech to text."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:18
+msgid "Refresh the models of the provider. Ids that contain ``whisper`` or ``transcribe`` are classified as :guilabel:`Speech to text` models automatically."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:21
+msgid "Open :menuselection:`AI --> Configuration --> Settings`, find the block :guilabel:`Voice` and choose the :guilabel:`Speech-to-text model`. Dictation and call transcription stay hidden until a model is chosen."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:25
+msgid "The other settings of the block are:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:27
+msgid ":guilabel:`Spoken language`: an optional two-letter language code such as ``hu`` or ``es``. Leave it empty to detect the language automatically."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:29
+msgid ":guilabel:`Max recording size (MB)`: the limit per uploaded recording or call piece (10 MB by default, never more than 25 MB)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:31
+msgid ":guilabel:`Max dictation length (seconds)`: a dictation stops by itself after this time (120 seconds by default)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:33
+msgid ":guilabel:`Call chunk length (seconds)`: call audio is uploaded and transcribed in pieces of this length (30 seconds by default)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:35
+msgid ":guilabel:`Max transcribed minutes per call and person` (180 by default)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:36
+msgid ":guilabel:`Keep call audio (days)`: how long the call recordings are kept (7 days by default). With 0 the audio is not stored at all, only the text. The text always stays."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:39
+msgid ":guilabel:`Summarize calls automatically`: when a transcribed call ends, a summary with action items is posted in the channel (on by default)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:43
+msgid "Speech to text uses the AI capability Ask, the same rate limits as other AI requests and the daily call and cost caps. Each request is written to the AI log, with its cost estimated from the audio length or the token usage."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:48
+msgid "Dictate instead of typing"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:50
+msgid "A microphone button (:guilabel:`Dictate`) appears in the message box of the chatter and of Discuss, also when you edit a message, and next to the input of the AI panel. It is shown only to AI users, once a speech-to-text model is configured and when your browser can record."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:55
+msgid "Click the microphone and allow the browser to use it when asked."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:56
+msgid "Speak. Click the button again (:guilabel:`Stop dictation`) when you are done, or wait for the maximum length."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:58
+msgid "The recognised text is inserted at the cursor. It is never sent automatically: read it, correct it and send it with the normal button."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:61
+msgid "The dictation audio is sent to the provider for transcription and is never stored in eYssen."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:65
+msgid "Transcribe a call"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:67
+msgid "In a Discuss call, every participant sees the action :guilabel:`Transcribe` in the call controls (or :guilabel:`Join transcription` once someone has started it, and :guilabel:`Stop transcription` while you take part). While a call is being transcribed, the action is highlighted for everyone."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:73
+msgid "How consent works"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:75
+msgid "Transcription is opt-in for each person:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:77
+msgid "Turning it on asks you to confirm that your microphone will be recorded and transcribed."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:79
+msgid "When the first participant starts the transcription, a notice is posted in the channel. It says who started it, that only people who turn it on themselves are recorded, each from their own microphone, and how long the audio is kept. Everyone who joins later is announced the same way."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:83
+msgid "Each browser records only its own microphone, and only while that person has it turned on and is not muted. The server refuses audio from people who did not opt in and from people outside the channel."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:86
+msgid "Turning it off, leaving the call or the end of the call stops your recording. Guests who are not users cannot take part."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:90
+msgid "Check the privacy and employment rules that apply to you before you use call transcription, and tell the people on your calls. The audio is sent to the speech-to-text provider you configured."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:95
+msgid "Transcript, summary and action items"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:97
+msgid "When the last person turns transcription off, or nobody is left in the call, the transcript ends. If :guilabel:`Summarize calls automatically` is on, a summary is posted in the channel about a minute later, as a comment from the person who started the transcription. It contains the summary, the action items with a suggested person and a link to the transcript."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:103
+msgid "Open all transcripts in :menuselection:`AI --> Call transcripts`. Members of the channel see their own calls; AI administrators see all of them. On a transcript you have the tabs :guilabel:`Summary` and :guilabel:`Transcript`, the list of :guilabel:`Action items` and the buttons :guilabel:`Summarize` or :guilabel:`Summarize again` if you want a summary on demand (not while the call is still being recorded). Filter the list with :guilabel:`I took part` and :guilabel:`Not summarized`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:111
+msgid "The AI only suggests an assignee when the name spoken in the call matches exactly one internal member of the channel. Nothing is scheduled automatically: review the items on the transcript, edit the task, person or due date, tick the ones you want and click :guilabel:`Create activities`. Your click is the confirmation. Every item with an assignee gets a To-Do activity; the assignee must be a channel member."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:121
+msgid "Words spoken across the boundary of two pieces of audio can be split, and a single browser records one speaker only."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:123
+msgid "Very long calls are summarised from the last 60,000 characters of the transcript."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/voice.rst:125
+msgid "The push-to-talk and voice-activation settings of the call are not mirrored; only the mute state is respected."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:3
+msgid "Website AI"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:5
+msgid "The module AI Website adds three things to the eYssen website builder: a page generator, builder tools for the AI panel and brand kits. All of them are for website designers, and the AI never writes raw HTML or scripts: it only chooses and fills your website's own building blocks."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:11
+msgid "Page generator"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:13
+msgid "The generator turns a short brief into a complete page. You can start it in two places:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:16
+msgid "In the website editor, click :guilabel:`New` and choose :guilabel:`Page with AI`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:18
+msgid "In the backend, open :menuselection:`Website --> Site --> Create a page with AI`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:21
+msgid "Fill in the brief:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:23
+msgid ":guilabel:`Page name`, :guilabel:`What is the page for?` and, optionally, the :guilabel:`Audience`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:25
+msgid ":guilabel:`Sections to include`: the sections you want, in order, one per line."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:27
+msgid ":guilabel:`Tone` (:guilabel:`Professional`, :guilabel:`Friendly`, :guilabel:`Enthusiastic`, :guilabel:`Formal`, :guilabel:`Playful` or :guilabel:`Short and to the point`) and :guilabel:`Language`, chosen among the installed languages."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:31
+msgid ":guilabel:`Add to the menu` adds a menu item for the new page. :guilabel:`Search pictures on Unsplash` appears only when an Unsplash key is configured; without it the blocks keep their default pictures, which you can replace in the editor."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:36
+msgid "Click :guilabel:`Generate page`. The page is created unpublished and opens in the editor, so you can review and adjust it before publishing. Clicking the button is the confirmation, so no extra approval card appears."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:41
+msgid "The generator can use twelve common building blocks: cover, title, text, text with image, image with text, picture, three columns, features, numbers, call to action, FAQ and contact information. Blocks added by a theme are not offered, but a theme's own version of a listed block is used. The contact block takes the e-mail address, phone number and address from your company. Texts are plain text and the AI is told not to invent prices, figures, quotes or names, so always review the page."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:50
+msgid "Builder tools in the AI panel"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:52
+msgid "Website designers who have the :guilabel:`Customize UI & schema` capability can also ask the AI panel (see :doc:`panel`) to work on the website. That capability is off by default and for administrators only (see :doc:`feature_access`). The shipped agent :guilabel:`Website builder` is set up for this: it first looks at the existing pages and menus, proposes changes and never says that something is done before you confirm it."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:59
+msgid "The tools can:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:61
+msgid "list the usable blocks, pages, menu items and brand kits;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:62
+msgid "create a new unpublished page from a plan of blocks, optionally with a menu item;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:64
+msgid "insert one block at the start, at the end or at a given position of a page;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:65
+msgid "add, rename and reorder menu items;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:66
+msgid "replace or append a block of custom CSS managed by the AI;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:67
+msgid "apply a saved brand kit, or colours and fonts you give."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:70
+msgid "Confirmation cards"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:72
+msgid "Website changes are public, so they are always proposed first: the panel shows a card that you confirm or cancel (see :doc:`panel`). Only the :guilabel:`Apply without asking` write mode applies them straight away; the mixed mode still asks. The card lists everything that will change: every block with its title, texts, buttons and their targets, the replaced links, a note when a block goes onto an already published page and, for CSS changes, the complete CSS. Links to other websites are marked as external. The change is checked again when you confirm."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:82
+msgid "Links and CSS rules"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:84
+msgid "Links. The builder links only to pages and anchors that exist on this website, to its own absolute addresses, to e-mail addresses and to phone numbers. A made-up path or a link to another website is replaced and listed on the card; a menu item that points to another website is refused. An administrator can lift this with :guilabel:`AI may add links to other websites` in the block :guilabel:`Website builder` of :menuselection:`AI --> Configuration --> Settings`. Such links are then still marked on the card."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:91
+msgid "Custom CSS. The AI may only write plain CSS between its own markers in the website's custom stylesheet; your own rules outside the markers are kept. Imports, scripts, Sass features, unknown functions and addresses outside this site are refused, and the website styles must still compile, otherwise the change is rolled back."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:97
+msgid "If a turn has no builder tools (the capability is missing or you are not a website designer), the assistant explains the manual way instead: Menu Editor, Pages, edit mode and theme settings."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:102
+msgid "Brand kits"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:104
+msgid "A brand kit keeps your brand colours, fonts and logo together. Open :menuselection:`Website --> Configuration --> Brand kits`, click New and fill in a name, optionally a website (leave it empty to use the kit on any website), the five colours (:guilabel:`Primary colour`, :guilabel:`Secondary colour`, :guilabel:`Accent colour`, :guilabel:`Light colour`, :guilabel:`Dark colour`) as ``#RRGGBB`` values, the :guilabel:`Text font` and :guilabel:`Headings font`, and the logo. Empty values are left unchanged."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:112
+msgid "Click :guilabel:`Apply to the website` to set the colour palette, the fonts and the logo of the website theme in one step, exactly as the Theme tab of the editor would. A font that the website does not ship is loaded from Google Fonts. The AI panel can do the same with the tool for brand kits."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:118
+msgid "Who can use it"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:120
+msgid "The page generator and the brand kits need the website designer access right. Builder tools in the AI panel need the website designer right and the customize capability."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:123
+msgid "Public visitors, portal users and the live chat agent never see the builder tools."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:125
+msgid "If an AI access rule denies the website models, the builder is blocked as well (see :doc:`access_policy`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:129
+msgid "The preview cards that the live chat agent can show to visitors are described in :doc:`livechat`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/writing_assistant.rst:3
+msgid "Writing assistant"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/writing_assistant.rst:5
+msgid "The writing assistant helps you write texts where you already work: in any rich-text field, in the chatter of a record and in the image dialog of the editor. It only produces text or a picture for you to review. Nothing is posted, sent or saved until you do it yourself."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/writing_assistant.rst:10
+msgid "It needs a chat model (and, for pictures, an image model) set under :menuselection:`AI --> Configuration --> Settings`, and your user must be in the :guilabel:`AI: User` group. Every request counts against your rate limit and is written to the AI log."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/writing_assistant.rst:16
+msgid "AI writer in the editor"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/writing_assistant.rst:18
+msgid "In any rich-text field (a description, a note, an email body), type ``/`` and choose :guilabel:`AI writer` under the AI tools. You can also select some text and click the :guilabel:`AI` button in the toolbar."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/writing_assistant.rst:21
+msgid "In the dialog :guilabel:`Generate text with AI`, say what you want: write a paragraph, rewrite the selection in a friendlier tone, shorten it, expand it, fix the grammar or translate it. The dialog keeps the conversation, so you can refine the result with follow-up messages."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/writing_assistant.rst:25
+msgid "Click :guilabel:`Insert` on the answer you like. It replaces the selection or goes at the cursor. If you do not like it, close the dialog: the document is unchanged."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/writing_assistant.rst:29
+msgid "To translate selected text quickly, use the :guilabel:`Translate with AI` language selector in the toolbar."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/writing_assistant.rst:33
+msgid "The same dialog is used in the email marketing editor (see :doc:`app_integrations`), where it is also called :guilabel:`AI writer`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/writing_assistant.rst:37
+msgid "Draft with AI in the chatter"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/writing_assistant.rst:39
+msgid "On a saved record, the message composer of the chatter shows a :guilabel:`Draft with AI` button (a magic wand next to the attachment button). Use it for both a reply to followers (:guilabel:`Send message`) and an internal note. The assistant reads the record and its recent messages and writes a draft into the box. If you had already typed something, it takes your text into account."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/writing_assistant.rst:45
+msgid "The draft is only placed in the box. Edit it and send it the usual way. The button is not offered in Discuss channels or while you are editing an existing message."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/writing_assistant.rst:50
+msgid "AI images in the media dialog"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/writing_assistant.rst:52
+msgid "When an image model is configured, the editor's media dialog (the picture button, or the ``/image`` command) gets an :guilabel:`AI image` tab. Describe the picture in :guilabel:`Describe the image`, choose :guilabel:`Landscape`, :guilabel:`Square` or :guilabel:`Portrait`, and click :guilabel:`Generate`. When the preview looks right, add it like any uploaded picture. It is stored as a normal attachment."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/writing_assistant.rst:60
+msgid "Good to know"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/writing_assistant.rst:62
+msgid "Review before you use: the model can be wrong, and the text it writes is yours once you insert or send it."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/writing_assistant.rst:64
+msgid "The assistant only sees what you may see. The chatter draft reads the record and its thread with your own rights; if an administrator denied the AI access to that model, the draft is written from the conversation alone."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/writing_assistant.rst:67
+msgid "Prompts are sent to your AI provider. Do not paste secrets or data you may not share with it."
+msgstr ""
+
 #: ../../content/applications/productivity/appointments.rst:5
 msgid "Appointments"
 msgstr ""
@@ -4343,10 +6006,6 @@ msgstr ""
 
 #: ../../content/applications/productivity/appointments/create-opps.rst:34
 msgid "Leads are created on approval, so bookings that stay :guilabel:`Requested`, or that are rejected, do not generate a lead."
-msgstr ""
-
-#: ../../content/applications/productivity/calendar.rst:5
-msgid "Calendar"
 msgstr ""
 
 #: ../../content/applications/productivity/calendar.rst:7

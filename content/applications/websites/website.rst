@@ -37,6 +37,12 @@ with other Odoo apps to expand your website's functionality.
 
       Monitor your website's traffic with website analytics and set up link trackers.
 
+   .. card:: Tracking and consent
+      :target: website/tracking
+
+      Connect your website to Google and Meta: cookie consent, server events, connections, and
+      privacy.
+
    .. card:: Mail groups
       :target: website/mail_groups
 
@@ -67,6 +73,7 @@ with other Odoo apps to expand your website's functionality.
    website/structure
    website/configuration
    website/reporting
+   website/tracking
    website/mail_groups
    website/store_locator
    website/appointments

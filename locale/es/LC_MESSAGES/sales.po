@@ -2535,6 +2535,54 @@ msgstr ""
 "de Odoo <http://odoo.com/gdpr>`__ para obtener más información sobre el "
 "Reglamento General de Protección de Datos. "
 
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:3
+msgid "Lead tracking"
+msgstr "Seguimiento de oportunidades"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:5
+msgid "When the Google app or the Meta app is installed, the CRM reports the progress of your leads to the advertising platforms. Google Ads and Meta then know which clicks and which ads produce real customers, not only form submissions, and can optimize your campaigns for them."
+msgstr "Cuando la aplicación Google o la aplicación Meta está instalada, el CRM informa a las plataformas publicitarias del avance de sus oportunidades. Google Ads y Meta saben entonces qué clics y qué anuncios generan clientes reales, no solo envíos de formularios, y pueden optimizar sus campañas para ellos."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:9
+msgid "Two kinds of events are sent:"
+msgstr "Se envían dos tipos de eventos:"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:11
+msgid "the **new lead** event, when a visitor submits a website form that creates a lead;"
+msgstr "el evento de **nueva oportunidad**, cuando un visitante envía un formulario del sitio web que crea una oportunidad;"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:12
+msgid "the **stage events**, when a lead reaches a stage, is won, or is lost. They are defined by *lead stage rules*."
+msgstr "los **eventos de etapa**, cuando una oportunidad alcanza una etapa, se gana o se pierde. Se definen mediante *reglas de etapa de oportunidades*."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:15
+msgid "All events respect the cookie consent that the visitor gave when the lead was created, except the leads that come from a lead form of Google or Meta, who gave their consent in the ad. See :doc:`/applications/websites/website/tracking/privacy`."
+msgstr "Todos los eventos respetan el consentimiento de cookies que dio el visitante cuando se creó la oportunidad, salvo las oportunidades que proceden de un formulario de clientes potenciales de Google o Meta, que dieron su consentimiento en el anuncio. Vea :doc:`/applications/websites/website/tracking/privacy`."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:20
+msgid "Website form leads"
+msgstr "Oportunidades de formularios del sitio web"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:22
+msgid "When a website form creates a lead, the lead stores the **click identifiers** of the visit (Google Ads click IDs and Meta click and browser IDs) and the consent of the visitor. A `generate_lead` event is sent by the browser and by the server, with the same event ID so that the platforms count it once."
+msgstr "Cuando un formulario del sitio web crea una oportunidad, esta guarda los **identificadores de clic** de la visita (ID de clic de Google Ads e ID de clic y de navegador de Meta) y el consentimiento del visitante. Un evento `generate_lead` se envía desde el navegador y desde el servidor, con el mismo ID de evento para que las plataformas lo cuenten una sola vez."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:26
+msgid "To give a value to this event, go to :menuselection:`Website --> Configuration --> Settings`, and in the :guilabel:`Tracking` block, fill in the :guilabel:`Lead Value` of the :guilabel:`Lead Tracking` setting. `0` means that the event has no value."
+msgstr "Para dar un valor a este evento, vaya a :menuselection:`Sitio web --> Configuración --> Ajustes` y, en el bloque :guilabel:`Seguimiento`, complete el :guilabel:`Valor del lead` del ajuste :guilabel:`Seguimiento de leads`. `0` significa que el evento no tiene valor."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:31
+msgid "In developer mode, the :guilabel:`Ad Tracking` tab of the lead shows the stored identifiers and consent."
+msgstr "En modo desarrollador, la pestaña :guilabel:`Seguimiento de anuncios` de la oportunidad muestra los identificadores y el consentimiento guardados."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:37
+msgid "Lead stage rules"
+msgstr "Reglas de etapa de oportunidades"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:39
+msgid "Go to :menuselection:`CRM --> Configuration --> Lead Tracking Rules`, and click :guilabel:`New`. A rule says: *when this happens to a lead, send this event*."
+msgstr "Vaya a :menuselection:`CRM --> Configuración --> Reglas de seguimiento de leads` y haga clic en :guilabel:`Nuevo`. Una regla dice: *cuando esto le ocurra a una oportunidad, envía este evento*."
+
 #: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:3
 msgid "Enrich contacts with partner autocomplete"
 msgstr "Enriquecer contactos con la función “Autocompletar contacto”"
@@ -11771,6 +11819,118 @@ msgstr "Nombre técnico"
 msgid "Description"
 msgstr "Descripción"
 
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:48
+msgid ":guilabel:`Name`"
+msgstr ":guilabel:`Nombre`"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:49
+msgid "The name of the rule."
+msgstr "El nombre de la regla."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:50
+msgid ":guilabel:`Trigger`"
+msgstr ":guilabel:`Desencadenante`"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:51
+msgid ":guilabel:`Lead is created`, :guilabel:`Lead reaches a stage`, :guilabel:`Lead is won`, or :guilabel:`Lead is lost`."
+msgstr ":guilabel:`Se crea el lead`, :guilabel:`El lead alcanza una etapa`, :guilabel:`Se gana el lead` o :guilabel:`Se pierde el lead`."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:53
+msgid ":guilabel:`Stage`"
+msgstr ":guilabel:`Etapa`"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:54
+msgid "The stage, for the trigger :guilabel:`Lead reaches a stage`."
+msgstr "La etapa, para el desencadenante :guilabel:`El lead alcanza una etapa`."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:55
+msgid ":guilabel:`Sales Teams`"
+msgstr ":guilabel:`Equipos de ventas`"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:56
+msgid "Restricts the rule to some teams. Empty: all the teams."
+msgstr "Limita la regla a algunos equipos. Vacío: todos los equipos."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:57
+msgid ":guilabel:`Only Tracked Leads`"
+msgstr ":guilabel:`Solo leads con seguimiento`"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:58
+msgid "Enabled by default. The rule only applies to the leads that carry an ad click identifier, or the ID of a Meta lead. The other leads cannot be attributed to a campaign."
+msgstr "Activado por defecto. La regla solo se aplica a las oportunidades que llevan un identificador de clic de anuncio o el ID de una oportunidad de Meta. Las demás oportunidades no se pueden atribuir a una campaña."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:60
+msgid ":guilabel:`Event`"
+msgstr ":guilabel:`Evento`"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:61
+msgid "The event sent: :guilabel:`New lead`, :guilabel:`Working on the lead`, :guilabel:`Qualified lead`, :guilabel:`Disqualified lead`, :guilabel:`Won (converted)`, or :guilabel:`Lost (not converted)`."
+msgstr "El evento que se envía: :guilabel:`Nuevo lead`, :guilabel:`Trabajando en el lead`, :guilabel:`Lead cualificado`, :guilabel:`Lead descalificado`, :guilabel:`Ganado (convertido)` o :guilabel:`Perdido (no convertido)`."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:64
+msgid ":guilabel:`Value`"
+msgstr ":guilabel:`Valor`"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:65
+msgid ":guilabel:`Expected revenue` of the lead (default), a :guilabel:`Fixed value`, or :guilabel:`No value`."
+msgstr "El :guilabel:`Ingresos esperados` de la oportunidad (por defecto), un :guilabel:`Valor fijo` o :guilabel:`Sin valor`."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:78
+msgid "Destinations"
+msgstr "Destinos"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:80
+msgid "Each platform adds its fields to the rule:"
+msgstr "Cada plataforma añade sus campos a la regla:"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:82
+msgid "**Google Ads**: the :guilabel:`Google Ads Conversion Action ID` of the conversion action of type *Import from clicks* that receives this stage. Without an ID, the rule is not uploaded to Google Ads. See :doc:`/applications/websites/google/lead_forms` and :doc:`/applications/websites/google/offline_conversions`."
+msgstr "**Google Ads**: el :guilabel:`ID de acción de conversión de Google Ads` de la acción de conversión de tipo *Import from clicks* que recibe esta etapa. Sin un ID, la regla no se sube a Google Ads. Vea :doc:`/applications/websites/google/lead_forms` y :doc:`/applications/websites/google/offline_conversions`."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:86
+msgid "**Meta**: :guilabel:`Send to Meta` (enabled by default), and the :guilabel:`Meta Event Name`, which is the name of the stage in Meta Events Manager. If empty, the name of the rule is used. See :ref:`meta/lead-ads/conversion-leads`."
+msgstr "**Meta**: :guilabel:`Enviar a Meta` (activado por defecto) y el :guilabel:`Nombre del evento de Meta`, que es el nombre de la etapa en Meta Events Manager. Si está vacío, se usa el nombre de la regla. Vea :ref:`meta/lead-ads/conversion-leads`."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:89
+msgid "**Google Analytics 4**: when the :doc:`Measurement Protocol </applications/websites/google/measurement_protocol>` and its lead events are enabled, the events are also sent to GA4, whatever the destination fields."
+msgstr "**Google Analytics 4**: cuando el :doc:`Measurement Protocol </applications/websites/google/measurement_protocol>` y sus eventos de oportunidad están activados, los eventos también se envían a GA4, sea cual sea el contenido de los campos de destino."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:93
+msgid "Each destination has its own switch in the settings of the Google or the Meta app (:guilabel:`CRM Offline Conversions`, :guilabel:`CRM Lead Events`). A rule is sent only to the destinations that are enabled for the website of the lead."
+msgstr "Cada destino tiene su propio interruptor en los ajustes de la aplicación Google o Meta (:guilabel:`Conversiones offline del CRM`, :guilabel:`Eventos de leads del CRM`). Una regla se envía solo a los destinos activados para el sitio web de la oportunidad."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:98
+msgid "Behavior"
+msgstr "Comportamiento"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:100
+msgid "A rule sends its event **once** per lead and per rule. When a lead goes back to a previous stage and reaches the stage again, nothing is sent twice."
+msgstr "Una regla envía su evento **una sola vez** por oportunidad y por regla. Cuando una oportunidad vuelve a una etapa anterior y alcanza de nuevo la etapa, no se envía nada dos veces."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:102
+msgid "A lead is linked to the website where it was created. A lead created in the CRM without a website uses the first website of its company."
+msgstr "Una oportunidad está vinculada al sitio web donde se creó. Una oportunidad creada en el CRM sin sitio web usa el primer sitio web de su empresa."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:104
+msgid "The events are put in the queue of the :doc:`server events </applications/websites/website/tracking/server_events>`, and sent every few minutes. You can follow them there."
+msgstr "Los eventos se ponen en la cola de :doc:`eventos del servidor </applications/websites/website/tracking/server_events>` y se envían cada pocos minutos. Puede seguirlos allí."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:109
+msgid "For a good optimization, report few and clear stages: for example *Qualified* and *Won*. Keep the *Expected revenue* up to date: it is the value that Google and Meta learn from."
+msgstr "Para una buena optimización, informe de pocas etapas y claras: por ejemplo *Qualified* y *Won*. Mantenga actualizado el *Expected revenue*: es el valor del que aprenden Google y Meta."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:113
+msgid ":doc:`/applications/websites/google/lead_forms`"
+msgstr ":doc:`/applications/websites/google/lead_forms`"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:114
+msgid ":doc:`/applications/websites/meta/lead_ads`"
+msgstr ":doc:`/applications/websites/meta/lead_ads`"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:115
+msgid ":doc:`/applications/websites/website/tracking/privacy`"
+msgstr ":doc:`/applications/websites/website/tracking/privacy`"
+
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:31
 msgid "Pix"
 msgstr "Pix"
@@ -17235,6 +17395,94 @@ msgid ""
 msgstr ""
 "El cliente seleccionado debe tener una dirección establecida para poder "
 "enviar los productos."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:3
+msgid "Store sales tracking"
+msgstr "Seguimiento de ventas en tienda"
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:5
+msgid "If you advertise on Google or Meta, you also want to know which ads lead to purchases **in your shops**. Odoo can report the paid orders of the :abbr:`PoS (Point of Sale)` as **offline store sales** to the advertising platforms, so that they can measure the effect of the ads on your physical stores and optimize the campaigns."
+msgstr "Si anuncia en Google o Meta, también quiere saber qué anuncios llevan a compras **en sus tiendas**. Odoo puede informar de los pedidos pagados del :abbr:`PoS (Point of Sale)` como **ventas en tienda sin conexión** a las plataformas publicitarias, para que puedan medir el efecto de los anuncios en sus tiendas físicas y optimizar las campañas."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:10
+msgid "This feature is installed automatically when the Point of Sale and the Google or Meta app are installed."
+msgstr "Esta función se instala automáticamente cuando están instalados el Punto de venta y la aplicación Google o Meta."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:14
+msgid "No cookie consent can be collected at the counter. Only the customers you identified are reported, and only if the settings of the platform allow store sales. Enable this feature only if your legal basis allows it, and mention it in your privacy policy. See :doc:`/applications/websites/website/tracking/privacy`."
+msgstr "En el mostrador no se puede recoger el consentimiento de cookies. Solo se informa de los clientes que usted identificó, y solo si los ajustes de la plataforma permiten las ventas en tienda. Active esta función solo si su base jurídica lo permite y menciónelo en su política de privacidad. Vea :doc:`/applications/websites/website/tracking/privacy`."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:20
+msgid "Set up the store sales"
+msgstr "Configurar las ventas en tienda"
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:22
+msgid "In the settings of the platform, enable the store sales:"
+msgstr "En los ajustes de la plataforma, active las ventas en tienda:"
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:24
+msgid "Meta: go to :menuselection:`Meta --> Configuration --> Settings` and enable :guilabel:`Store Sales` in the :guilabel:`Conversions API` block (see :ref:`meta/capi/store-sales`)."
+msgstr "Meta: vaya a :menuselection:`Meta --> Configuración --> Ajustes` y active :guilabel:`Ventas en tienda` en el bloque :guilabel:`API de conversiones` (vea :ref:`meta/capi/store-sales`)."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:26
+msgid "Google Analytics 4: go to :menuselection:`Google --> Configuration --> Settings` and enable :guilabel:`Store Purchases` in the :doc:`Measurement Protocol </applications/websites/google/measurement_protocol>` options."
+msgstr "Google Analytics 4: vaya a :menuselection:`Google --> Configuración --> Ajustes` y active :guilabel:`Compras en tienda` en las opciones del :doc:`Measurement Protocol </applications/websites/google/measurement_protocol>`."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:30
+msgid "Go to :menuselection:`Point of Sale --> Configuration --> Settings`, select the point of sale in the :guilabel:`Point of Sale` field if needed, and in the :guilabel:`Report Store Sales` setting, select the :guilabel:`Report Sales to Ads` website. It is the website whose Google and Meta settings (pixel, dataset, tokens) apply to this point of sale."
+msgstr "Vaya a :menuselection:`Punto de venta --> Configuración --> Ajustes`, seleccione el punto de venta en el campo :guilabel:`Punto de venta` si es necesario y, en el ajuste :guilabel:`Notificar ventas en tienda`, seleccione el sitio web :guilabel:`Notificar las ventas a las plataformas publicitarias`. Es el sitio web cuyos ajustes de Google y Meta (píxel, conjunto de datos, tokens) se aplican a este punto de venta."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:44
+msgid "Leave the field empty to report nothing for this point of sale. Each point of sale has its own setting, so you can report some shops and not others."
+msgstr "Deje el campo vacío para no informar de nada para este punto de venta. Cada punto de venta tiene su propio ajuste, por lo que puede informar de algunas tiendas y de otras no."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:48
+msgid "Which orders are reported?"
+msgstr "¿Qué pedidos se informan?"
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:50
+msgid "When a PoS order is **paid**, Odoo reports it as a purchase if:"
+msgstr "Cuando un pedido de PoS se **paga**, Odoo lo informa como una compra si:"
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:52
+msgid "a website is selected for the point of sale;"
+msgstr "hay un sitio web seleccionado para el punto de venta;"
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:53
+msgid "the order has a **customer** with an email address or a phone number (the platforms use them to match the sale with a person, after hashing);"
+msgstr "el pedido tiene un **cliente** con un correo electrónico o un teléfono (las plataformas los usan para asociar la venta a una persona, tras aplicar el hash);"
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:55
+msgid "the total of the order is positive;"
+msgstr "el total del pedido es positivo;"
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:56
+msgid "the platform has the store sales enabled."
+msgstr "la plataforma tiene activadas las ventas en tienda."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:58
+msgid "The order is sent once, with its date and time, its currency, its untaxed amount, its reference, and the products (identifier, name, unit price, and quantity). The product identifier is the same as in the :doc:`product feeds and the website events </applications/websites/ecommerce/tracking>`."
+msgstr "El pedido se envía una sola vez, con su fecha y hora, su moneda, su importe sin impuestos, su referencia y los productos (identificador, nombre, precio unitario y cantidad). El identificador del producto es el mismo que en los :doc:`feeds de productos y los eventos del sitio web </applications/websites/ecommerce/tracking>`."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:62
+msgid "The customer's email, phone, name, and address are **hashed** with SHA-256 before being sent. The sales without an identified customer are never reported."
+msgstr "El correo electrónico, el teléfono, el nombre y la dirección del cliente se envían con **hash** SHA-256. Las ventas sin cliente identificado nunca se informan."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:66
+msgid "Ask your cashiers to identify the customer (a loyalty card or a customer account) so that the sale can be matched. The unidentified sales cannot be attributed to an ad."
+msgstr "Pida a sus cajeros que identifiquen al cliente (con una tarjeta de fidelidad o una cuenta de cliente) para poder asociar la venta. Las ventas sin identificar no se pueden atribuir a un anuncio."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:69
+msgid "The reports are put in the queue of the :doc:`server events </applications/websites/website/tracking/server_events>` (:menuselection:`Website --> Configuration --> Tracking & Consent --> Server Events`), where you can see whether they were sent."
+msgstr "Los informes se ponen en la cola de :doc:`eventos del servidor </applications/websites/website/tracking/server_events>` (:menuselection:`Sitio web --> Configuración --> Seguimiento y consentimiento --> Eventos del servidor`), donde puede ver si se enviaron."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:74
+msgid ":doc:`/applications/websites/meta/conversions_api`"
+msgstr ":doc:`/applications/websites/meta/conversions_api`"
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:75
+msgid ":doc:`/applications/websites/google/measurement_protocol`"
+msgstr ":doc:`/applications/websites/google/measurement_protocol`"
 
 #: ../../content/applications/sales/sales.rst:10
 msgid ""
@@ -33402,6 +33650,270 @@ msgstr "Clave de API recién generada en la plataforma Gelato."
 msgid "Newly configured webhook in the Gelato platform."
 msgstr "Webhook recién configurado en la plataforma Gelato."
 
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:5
+msgid "Consumer guarantees"
+msgstr "Garantías del consumidor"
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:7
+msgid "Since 27 September 2026, traders who sell goods to consumers in the European Union have to inform them about the legal guarantee of conformity with an official, harmonised notice. The European Commission publishes this notice in all 24 official languages of the EU, and it must be shown without any change."
+msgstr "Desde el 27 de septiembre de 2026, los comerciantes que venden bienes a consumidores en la Unión Europea deben informarles sobre la garantía legal de conformidad mediante un aviso armonizado oficial. La Comisión Europea publica este aviso en las 24 lenguas oficiales de la UE, y debe mostrarse sin ningún cambio."
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:12
+msgid "The **Consumer Guarantees** app shows the harmonised notice wherever a consumer decides to buy: on the website, at checkout, in the customer portal, on payment links, in order documents and, as a printed poster, in the store."
+msgstr "La aplicación **Garantías del consumidor** muestra el aviso armonizado allí donde el consumidor decide comprar: en el sitio web, en el proceso de pago, en el portal del cliente, en los enlaces de pago, en los documentos del pedido y, como cartel impreso, en la tienda."
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:17
+msgid "The app helps you to meet these information duties, but it does not make your business compliant on its own. The rules differ between Member States, and some duties are not covered yet (see below). Have your setup checked by your legal counsel."
+msgstr "La aplicación le ayuda a cumplir estas obligaciones de información, pero no garantiza por sí sola el cumplimiento normativo de su empresa. Las normas varían entre los Estados miembros y algunas obligaciones aún no están cubiertas (véase más abajo). Haga revisar su configuración por su asesor jurídico."
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:22
+msgid "What is covered"
+msgstr "Qué está cubierto"
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:24
+msgid "The **harmonised notice on the legal guarantee** in all 24 official EU languages, taken unchanged from the official files of the European Commission."
+msgstr "El **aviso armonizado sobre la garantía legal** en las 24 lenguas oficiales de la UE, tomado sin cambios de los archivos oficiales de la Comisión Europea."
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:26
+msgid "A legal guarantee page on the website and notice links in the website footer, on product pages, in the cart, at the payment step and on the order confirmation page."
+msgstr "Una página de garantía legal en el sitio web y enlaces al aviso en el pie de página, en las páginas de producto, en el carrito, en el paso de pago y en la página de confirmación del pedido."
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:28
+msgid "A notice section in the customer portal, and notice links in the portal's sign and pay windows and on payment links."
+msgstr "Una sección del aviso en el portal del cliente y enlaces al aviso en las ventanas de firma y de pago del portal y en los enlaces de pago."
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:30
+msgid "A notice page at the end of consumer quotations, sales orders and pro-forma invoices."
+msgstr "Una página del aviso al final de los presupuestos, pedidos de venta y facturas proforma de consumidores."
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:31
+msgid "A notice poster for the store in A4, A3, A2 or A1, in colour or in black and white, and a log of where and when the poster was put up."
+msgstr "Un cartel del aviso para la tienda en A4, A3, A2 o A1, en color o en blanco y negro, y un registro de dónde y cuándo se expuso el cartel."
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:33
+msgid "Reference data for the EU Member States, the EEA countries and the outermost regions of the EU, used to decide where the notice applies and in which languages it is printed."
+msgstr "Datos de referencia de los Estados miembros de la UE, los países del EEE y las regiones ultraperiféricas de la UE, que determinan dónde se aplica el aviso y en qué idiomas se imprime."
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:37
+msgid "What is not covered yet"
+msgstr "Qué no está cubierto todavía"
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:39
+msgid "The **harmonised label** for a commercial guarantee of durability offered by the producer (GARAN label)."
+msgstr "La **etiqueta armonizada** de la garantía comercial de durabilidad ofrecida por el productor (etiqueta GARAN)."
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:41
+msgid "Guarantee information received from producers and suppliers, and statements passed on to resellers."
+msgstr "La información sobre garantías recibida de productores y proveedores, y las declaraciones transmitidas a los revendedores."
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:43
+msgid "Information on reparability, spare parts, software updates and digital content or services."
+msgstr "La información sobre reparabilidad, piezas de recambio, actualizaciones de software y contenidos o servicios digitales."
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:44
+msgid "Point of Sale, printed catalogues and screens in the store."
+msgstr "El Punto de venta, los catálogos impresos y las pantallas en la tienda."
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:47
+msgid "Where the notice applies"
+msgstr "Dónde se aplica el aviso"
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:49
+msgid "The notice is enabled automatically for companies located in an EU Member State, including the outermost regions such as Réunion or Guadeloupe. For companies located elsewhere, for example in Norway or in the United Kingdom, it is disabled by default."
+msgstr "El aviso se activa automáticamente para las compañías situadas en un Estado miembro de la UE, incluidas las regiones ultraperiféricas como Reunión o Guadalupe. Para las compañías situadas en otros países, por ejemplo en Noruega o en el Reino Unido, está desactivado por defecto."
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:53
+msgid "Quotations, orders, the customer portal and payment links show the notice to consumers buying goods (on the website, the links appear for goods whatever the customer type):"
+msgstr "Los presupuestos, los pedidos, el portal del cliente y los enlaces de pago muestran el aviso a los consumidores que compran bienes (en el sitio web, los enlaces aparecen en los bienes sea cual sea el tipo de cliente):"
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:56
+msgid "A customer is a consumer when their :guilabel:`Consumer Guarantee Customer Type` is :guilabel:`Consumer`, or when it is :guilabel:`Automatic` and the customer is not a company. Set :guilabel:`Business` for companies and sole traders that buy for their business."
+msgstr "Un cliente es consumidor cuando su :guilabel:`Tipo de cliente` es :guilabel:`Consumidor`, o cuando es :guilabel:`Automático` y el cliente no es una empresa. Elija :guilabel:`Empresa` para las empresas y los autónomos que compran para su actividad."
+
+#: ../../content/applications/sales/sales/consumer_guarantees.rst:59
+msgid "A product counts as goods when its :guilabel:`Consumer Goods Type` is :guilabel:`Goods` or :guilabel:`Goods with digital elements`. Services never trigger the notice. For a combo product, the products it contains are checked."
+msgstr "Un producto se considera un bien cuando su :guilabel:`Tipo de bien` es :guilabel:`Bien` o :guilabel:`Bien con elementos digitales`. Los servicios nunca activan el aviso. En un producto combinado se comprueban los productos que contiene."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:3
+msgid "Legal guarantee notice"
+msgstr "Aviso sobre la garantía legal"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:5
+msgid "The harmonised notice explains to consumers their rights under the legal guarantee of conformity. It is an official document of the European Commission: the app always shows the official files as they are, in the language of the consumer, and never changes their text, layout or colours."
+msgstr "El aviso armonizado explica a los consumidores sus derechos derivados de la garantía legal de conformidad. Es un documento oficial de la Comisión Europea: la aplicación muestra siempre los archivos oficiales tal cual, en el idioma del consumidor, y nunca modifica su texto, su diseño ni sus colores."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:10
+msgid "Languages and reference data"
+msgstr "Idiomas y datos de referencia"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:12
+msgid "The notice exists in the 24 official EU languages. The app chooses the language in this order:"
+msgstr "El aviso existe en las 24 lenguas oficiales de la UE. La aplicación elige el idioma en este orden:"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:14
+msgid "the language of the page or of the customer;"
+msgstr "el idioma de la página o del cliente;"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:15
+msgid "the default language of the website;"
+msgstr "el idioma predeterminado del sitio web;"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:16
+msgid "the first official language of the company's country;"
+msgstr "la primera lengua oficial del país de la compañía;"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:17
+msgid "English."
+msgstr "inglés."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:19
+msgid "Languages close to an official language use that language, for example Catalan uses the Spanish notice. The languages and their notice files are listed in :menuselection:`Consumer Guarantees --> Configuration --> Languages`. They cannot be edited."
+msgstr "Los idiomas próximos a una lengua oficial usan esa lengua; por ejemplo, el catalán usa el aviso en español. Los idiomas y sus archivos del aviso figuran en :menuselection:`Garantías del consumidor --> Configuración --> Idiomas`. No se pueden modificar."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:23
+msgid ":menuselection:`Consumer Guarantees --> Configuration --> Countries` lists the EU Member States, the EEA countries and the outermost regions with their reference data. For each country, you can add a national note for your company, for example on a longer legal guarantee period. The national note is shown next to the notice, never inside it, and your note is kept when the reference data is updated."
+msgstr ":menuselection:`Garantías del consumidor --> Configuración --> Países` enumera los Estados miembros de la UE, los países del EEE y las regiones ultraperiféricas con sus datos de referencia. Para cada país puede añadir una nota nacional para su compañía, por ejemplo sobre un plazo de garantía legal más largo. La nota nacional se muestra junto al aviso, nunca dentro de él, y su nota se conserva cuando se actualizan los datos de referencia."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:30
+msgid "The national notes delivered with the app are drafts pending legal review. Check them with your legal counsel before you use them, or hide them for your company."
+msgstr "Las notas nacionales que se entregan con la aplicación son borradores pendientes de revisión jurídica. Revíselas con su asesor jurídico antes de usarlas u ocúltelas para su compañía."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:33
+msgid "The settings in :menuselection:`Consumer Guarantees --> Configuration --> Settings` show the date of the reference data. Click :guilabel:`Reference data versions` to see what changed in each version."
+msgstr "Los ajustes de :menuselection:`Garantías del consumidor --> Configuración --> Ajustes` muestran la fecha de los datos de referencia. Haga clic en :guilabel:`Versiones de los datos de referencia` para ver qué cambió en cada versión."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:38
+msgid "Website"
+msgstr "Sitio web"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:40
+msgid "On the website, the notice appears in these places:"
+msgstr "En el sitio web, el aviso aparece en estos lugares:"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:42
+msgid "the page ``/legal-guarantee``, with the official notice, a text version of the notice, a link to the Your Europe portal of the EU, a PDF download and, if set, the national note;"
+msgstr "la página ``/legal-guarantee``, con el aviso oficial, una versión en texto del aviso, un enlace al portal Tu Europa de la UE, una descarga en PDF y, si se ha configurado, la nota nacional;"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:44
+msgid "a link in the footer of every page;"
+msgstr "un enlace en el pie de cada página;"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:45
+msgid "a link in the terms area of the product page of goods;"
+msgstr "un enlace en la zona de condiciones de la página de producto de los bienes;"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:46
+msgid "a link in the cart, next to the order summary;"
+msgstr "un enlace en el carrito, junto al resumen del pedido;"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:47
+msgid "a link directly above the :guilabel:`Pay now` button at the payment step;"
+msgstr "un enlace justo encima del botón :guilabel:`Pagar ahora` en el paso de pago;"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:48
+msgid "a link on the order confirmation page."
+msgstr "un enlace en la página de confirmación del pedido."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:50
+msgid "A click or a tap on a link opens the full notice in a window. Without JavaScript, the link leads to the page ``/legal-guarantee``."
+msgstr "Al hacer clic o tocar un enlace, el aviso completo se abre en una ventana. Sin JavaScript, el enlace lleva a la página ``/legal-guarantee``."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:53
+msgid "To change the display, go to :menuselection:`Website --> Configuration --> Settings`:"
+msgstr "Para cambiar la visualización, vaya a :menuselection:`Sitio web --> Configuración --> Ajustes`:"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:55
+msgid ":guilabel:`Checkout notice`: choose :guilabel:`Link opening the full notice` (default) or :guilabel:`Full notice inline` to show the full notice on the payment step itself;"
+msgstr ":guilabel:`Aviso en el paso de pago`: elija :guilabel:`Enlace que abre el aviso completo` (por defecto) o :guilabel:`Aviso completo en la página` para mostrar el aviso completo en el propio paso de pago;"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:57
+msgid ":guilabel:`Footer link` and :guilabel:`Product page link`: hide or show these links."
+msgstr ":guilabel:`Enlace en el pie de página` y :guilabel:`Enlace en la página del producto`: ocultan o muestran estos enlaces."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:59
+msgid "The notice is not shown on a website whose company is outside the EU."
+msgstr "El aviso no se muestra en un sitio web cuya compañía está fuera de la UE."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:62
+msgid "Customer portal and payment links"
+msgstr "Portal del cliente y enlaces de pago"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:64
+msgid "When a consumer opens a quotation or an order with goods in the customer portal, a notice section follows the terms and conditions. The signature window and the payment window show a notice link before the button that signs or pays. A payment link sent for such an order shows the notice link directly above the :guilabel:`Pay` button."
+msgstr "Cuando un consumidor abre en el portal del cliente un presupuesto o un pedido con bienes, después de los términos y condiciones aparece una sección del aviso. Las ventanas de firma y de pago muestran un enlace al aviso antes del botón que firma o paga. Un enlace de pago enviado para un pedido así muestra el enlace al aviso justo encima del botón :guilabel:`Pagar`."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:70
+msgid "Order documents"
+msgstr "Documentos del pedido"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:72
+msgid "The notice page in colour is added at the end of the PDF of consumer quotations, sales orders and pro-forma invoices with goods, in the language of the customer. This applies to printed documents, to documents sent by e-mail and to downloads from the customer portal. Orders of business customers and orders with services only do not get a notice page."
+msgstr "La página del aviso en color se añade al final del PDF de los presupuestos, pedidos de venta y facturas proforma de consumidores que contienen bienes, en el idioma del cliente. Esto se aplica a los documentos impresos, a los enviados por correo electrónico y a las descargas desde el portal del cliente. Los pedidos de clientes empresariales y los pedidos que solo contienen servicios no reciben la página del aviso."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:77
+msgid "The option :guilabel:`EU Notice Page in Order PDFs` in :menuselection:`Sales --> Configuration --> Settings` is enabled automatically for companies in the EU. Disable it only if you give the notice to your consumers in another way."
+msgstr "La opción :guilabel:`Página del aviso de la UE en los PDF de pedidos` de :menuselection:`Ventas --> Configuración --> Ajustes` se activa automáticamente para las compañías de la UE. Desactívela solo si entrega el aviso a sus consumidores de otra forma."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:82
+msgid "In the store"
+msgstr "En la tienda"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:84
+msgid "In a physical store, the notice must be displayed as a poster in a place where consumers can easily see it, for example on the entrance door, on a wall or an aisle, or at the counter."
+msgstr "En una tienda física, el aviso debe exponerse como cartel en un lugar donde los consumidores lo vean fácilmente, por ejemplo en la puerta de entrada, en una pared o un pasillo, o en el mostrador."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:88
+msgid "Print the poster"
+msgstr "Imprimir el cartel"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:90
+msgid "Go to :menuselection:`Consumer Guarantees --> In store --> Print notice poster`."
+msgstr "Vaya a :menuselection:`Garantías del consumidor --> En tienda --> Imprimir cartel del aviso`."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:91
+msgid "Select the :guilabel:`Languages`. By default, these are the print languages of your company, which follow the official languages of the company's country."
+msgstr "Seleccione los :guilabel:`Idiomas`. Por defecto son los idiomas de impresión de su compañía, que siguen las lenguas oficiales del país de la compañía."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:93
+msgid "Choose the :guilabel:`Variant`: :guilabel:`Colour` or :guilabel:`Black and white`."
+msgstr "Elija la :guilabel:`Variante`: :guilabel:`Color` o :guilabel:`Blanco y negro`."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:94
+msgid "Choose the :guilabel:`Size`, then click :guilabel:`Print`. You get one page per language."
+msgstr "Elija el :guilabel:`Tamaño` y haga clic en :guilabel:`Imprimir`. Obtendrá una página por idioma."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:96
+msgid "When you place the poster:"
+msgstr "Al colocar el cartel:"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:98
+msgid "print it at least in A4 size;"
+msgstr "imprímalo como mínimo en tamaño A4;"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:99
+msgid "do not fold, cut or crop it, and keep it readable and in good condition;"
+msgstr "no lo doble, corte ni recorte, y manténgalo legible y en buen estado;"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:100
+msgid "choose the size by the viewing distance: A4 for 0.3 to 0.5 m, A3 for 0.5 to 1 m, A2 for 1 to 2 m and A1 for 2 to 3 m."
+msgstr "elija el tamaño según la distancia de lectura: A4 para 0,3 a 0,5 m, A3 para 0,5 a 1 m, A2 para 1 a 2 m y A1 para 2 a 3 m."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:104
+msgid "A screen in the store does not replace the printed poster. Display the poster even if you also show the notice on a screen."
+msgstr "Una pantalla en la tienda no sustituye al cartel impreso. Exponga el cartel aunque también muestre el aviso en una pantalla."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:108
+msgid "Log the poster"
+msgstr "Registrar el cartel"
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:110
+msgid "Keep a record of where and when the poster is displayed. After printing, click :guilabel:`Log posting`, or go to :menuselection:`Consumer Guarantees --> In store --> Notice postings` and create a posting. Enter the :guilabel:`Location`, for example \"pickup point entrance\", the date in :guilabel:`Posted on` and, ideally, a :guilabel:`Photo` of the displayed poster."
+msgstr "Lleve un registro de dónde y cuándo se expone el cartel. Después de imprimir, haga clic en :guilabel:`Registrar exposición`, o vaya a :menuselection:`Garantías del consumidor --> En tienda --> Avisos expuestos` y cree una exposición. Indique la :guilabel:`Ubicación`, por ejemplo «entrada del punto de recogida», la fecha en :guilabel:`Fecha de exposición` y, a ser posible, una :guilabel:`Foto` del cartel expuesto."
+
+#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:115
+msgid "All users of the app can create and update postings. Only managers can delete them; archive a posting when the poster has been taken down."
+msgstr "Todos los usuarios de la aplicación pueden crear y modificar exposiciones. Solo los gerentes pueden eliminarlas; archive una exposición cuando se haya retirado el cartel."
+
 #~ msgid ""
 #~ "This module requires the *eYssen Hungarian localization* module "
 #~ "(`eyssen_l10n_hu`), which provides the Hungarian VAT number validation used "
@@ -44047,267 +44559,3 @@ msgstr "Webhook recién configurado en la plataforma Gelato."
 #~ ":guilabel:`Activo` de la fila correspondiente del tablero de "
 #~ ":guilabel:`acciones programadas`. La acción programada está activa si la "
 #~ "casilla tiene una marca de verificación verde."
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:5
-msgid "Consumer guarantees"
-msgstr "Garantías del consumidor"
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:7
-msgid "Since 27 September 2026, traders who sell goods to consumers in the European Union have to inform them about the legal guarantee of conformity with an official, harmonised notice. The European Commission publishes this notice in all 24 official languages of the EU, and it must be shown without any change."
-msgstr "Desde el 27 de septiembre de 2026, los comerciantes que venden bienes a consumidores en la Unión Europea deben informarles sobre la garantía legal de conformidad mediante un aviso armonizado oficial. La Comisión Europea publica este aviso en las 24 lenguas oficiales de la UE, y debe mostrarse sin ningún cambio."
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:12
-msgid "The **Consumer Guarantees** app shows the harmonised notice wherever a consumer decides to buy: on the website, at checkout, in the customer portal, on payment links, in order documents and, as a printed poster, in the store."
-msgstr "La aplicación **Garantías del consumidor** muestra el aviso armonizado allí donde el consumidor decide comprar: en el sitio web, en el proceso de pago, en el portal del cliente, en los enlaces de pago, en los documentos del pedido y, como cartel impreso, en la tienda."
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:17
-msgid "The app helps you to meet these information duties, but it does not make your business compliant on its own. The rules differ between Member States, and some duties are not covered yet (see below). Have your setup checked by your legal counsel."
-msgstr "La aplicación le ayuda a cumplir estas obligaciones de información, pero no garantiza por sí sola el cumplimiento normativo de su empresa. Las normas varían entre los Estados miembros y algunas obligaciones aún no están cubiertas (véase más abajo). Haga revisar su configuración por su asesor jurídico."
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:22
-msgid "What is covered"
-msgstr "Qué está cubierto"
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:24
-msgid "The **harmonised notice on the legal guarantee** in all 24 official EU languages, taken unchanged from the official files of the European Commission."
-msgstr "El **aviso armonizado sobre la garantía legal** en las 24 lenguas oficiales de la UE, tomado sin cambios de los archivos oficiales de la Comisión Europea."
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:26
-msgid "A legal guarantee page on the website and notice links in the website footer, on product pages, in the cart, at the payment step and on the order confirmation page."
-msgstr "Una página de garantía legal en el sitio web y enlaces al aviso en el pie de página, en las páginas de producto, en el carrito, en el paso de pago y en la página de confirmación del pedido."
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:28
-msgid "A notice section in the customer portal, and notice links in the portal's sign and pay windows and on payment links."
-msgstr "Una sección del aviso en el portal del cliente y enlaces al aviso en las ventanas de firma y de pago del portal y en los enlaces de pago."
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:30
-msgid "A notice page at the end of consumer quotations, sales orders and pro-forma invoices."
-msgstr "Una página del aviso al final de los presupuestos, pedidos de venta y facturas proforma de consumidores."
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:31
-msgid "A notice poster for the store in A4, A3, A2 or A1, in colour or in black and white, and a log of where and when the poster was put up."
-msgstr "Un cartel del aviso para la tienda en A4, A3, A2 o A1, en color o en blanco y negro, y un registro de dónde y cuándo se expuso el cartel."
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:33
-msgid "Reference data for the EU Member States, the EEA countries and the outermost regions of the EU, used to decide where the notice applies and in which languages it is printed."
-msgstr "Datos de referencia de los Estados miembros de la UE, los países del EEE y las regiones ultraperiféricas de la UE, que determinan dónde se aplica el aviso y en qué idiomas se imprime."
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:37
-msgid "What is not covered yet"
-msgstr "Qué no está cubierto todavía"
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:39
-msgid "The **harmonised label** for a commercial guarantee of durability offered by the producer (GARAN label)."
-msgstr "La **etiqueta armonizada** de la garantía comercial de durabilidad ofrecida por el productor (etiqueta GARAN)."
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:41
-msgid "Guarantee information received from producers and suppliers, and statements passed on to resellers."
-msgstr "La información sobre garantías recibida de productores y proveedores, y las declaraciones transmitidas a los revendedores."
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:43
-msgid "Information on reparability, spare parts, software updates and digital content or services."
-msgstr "La información sobre reparabilidad, piezas de recambio, actualizaciones de software y contenidos o servicios digitales."
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:44
-msgid "Point of Sale, printed catalogues and screens in the store."
-msgstr "El Punto de venta, los catálogos impresos y las pantallas en la tienda."
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:47
-msgid "Where the notice applies"
-msgstr "Dónde se aplica el aviso"
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:49
-msgid "The notice is enabled automatically for companies located in an EU Member State, including the outermost regions such as Réunion or Guadeloupe. For companies located elsewhere, for example in Norway or in the United Kingdom, it is disabled by default."
-msgstr "El aviso se activa automáticamente para las compañías situadas en un Estado miembro de la UE, incluidas las regiones ultraperiféricas como Reunión o Guadalupe. Para las compañías situadas en otros países, por ejemplo en Noruega o en el Reino Unido, está desactivado por defecto."
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:53
-msgid "Quotations, orders, the customer portal and payment links show the notice to consumers buying goods (on the website, the links appear for goods whatever the customer type):"
-msgstr "Los presupuestos, los pedidos, el portal del cliente y los enlaces de pago muestran el aviso a los consumidores que compran bienes (en el sitio web, los enlaces aparecen en los bienes sea cual sea el tipo de cliente):"
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:56
-msgid "A customer is a consumer when their :guilabel:`Consumer Guarantee Customer Type` is :guilabel:`Consumer`, or when it is :guilabel:`Automatic` and the customer is not a company. Set :guilabel:`Business` for companies and sole traders that buy for their business."
-msgstr "Un cliente es consumidor cuando su :guilabel:`Tipo de cliente` es :guilabel:`Consumidor`, o cuando es :guilabel:`Automático` y el cliente no es una empresa. Elija :guilabel:`Empresa` para las empresas y los autónomos que compran para su actividad."
-
-#: ../../content/applications/sales/sales/consumer_guarantees.rst:59
-msgid "A product counts as goods when its :guilabel:`Consumer Goods Type` is :guilabel:`Goods` or :guilabel:`Goods with digital elements`. Services never trigger the notice. For a combo product, the products it contains are checked."
-msgstr "Un producto se considera un bien cuando su :guilabel:`Tipo de bien` es :guilabel:`Bien` o :guilabel:`Bien con elementos digitales`. Los servicios nunca activan el aviso. En un producto combinado se comprueban los productos que contiene."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:3
-msgid "Legal guarantee notice"
-msgstr "Aviso sobre la garantía legal"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:5
-msgid "The harmonised notice explains to consumers their rights under the legal guarantee of conformity. It is an official document of the European Commission: the app always shows the official files as they are, in the language of the consumer, and never changes their text, layout or colours."
-msgstr "El aviso armonizado explica a los consumidores sus derechos derivados de la garantía legal de conformidad. Es un documento oficial de la Comisión Europea: la aplicación muestra siempre los archivos oficiales tal cual, en el idioma del consumidor, y nunca modifica su texto, su diseño ni sus colores."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:10
-msgid "Languages and reference data"
-msgstr "Idiomas y datos de referencia"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:12
-msgid "The notice exists in the 24 official EU languages. The app chooses the language in this order:"
-msgstr "El aviso existe en las 24 lenguas oficiales de la UE. La aplicación elige el idioma en este orden:"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:14
-msgid "the language of the page or of the customer;"
-msgstr "el idioma de la página o del cliente;"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:15
-msgid "the default language of the website;"
-msgstr "el idioma predeterminado del sitio web;"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:16
-msgid "the first official language of the company's country;"
-msgstr "la primera lengua oficial del país de la compañía;"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:17
-msgid "English."
-msgstr "inglés."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:19
-msgid "Languages close to an official language use that language, for example Catalan uses the Spanish notice. The languages and their notice files are listed in :menuselection:`Consumer Guarantees --> Configuration --> Languages`. They cannot be edited."
-msgstr "Los idiomas próximos a una lengua oficial usan esa lengua; por ejemplo, el catalán usa el aviso en español. Los idiomas y sus archivos del aviso figuran en :menuselection:`Garantías del consumidor --> Configuración --> Idiomas`. No se pueden modificar."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:23
-msgid ":menuselection:`Consumer Guarantees --> Configuration --> Countries` lists the EU Member States, the EEA countries and the outermost regions with their reference data. For each country, you can add a national note for your company, for example on a longer legal guarantee period. The national note is shown next to the notice, never inside it, and your note is kept when the reference data is updated."
-msgstr ":menuselection:`Garantías del consumidor --> Configuración --> Países` enumera los Estados miembros de la UE, los países del EEE y las regiones ultraperiféricas con sus datos de referencia. Para cada país puede añadir una nota nacional para su compañía, por ejemplo sobre un plazo de garantía legal más largo. La nota nacional se muestra junto al aviso, nunca dentro de él, y su nota se conserva cuando se actualizan los datos de referencia."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:30
-msgid "The national notes delivered with the app are drafts pending legal review. Check them with your legal counsel before you use them, or hide them for your company."
-msgstr "Las notas nacionales que se entregan con la aplicación son borradores pendientes de revisión jurídica. Revíselas con su asesor jurídico antes de usarlas u ocúltelas para su compañía."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:33
-msgid "The settings in :menuselection:`Consumer Guarantees --> Configuration --> Settings` show the date of the reference data. Click :guilabel:`Reference data versions` to see what changed in each version."
-msgstr "Los ajustes de :menuselection:`Garantías del consumidor --> Configuración --> Ajustes` muestran la fecha de los datos de referencia. Haga clic en :guilabel:`Versiones de los datos de referencia` para ver qué cambió en cada versión."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:38
-msgid "Website"
-msgstr "Sitio web"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:40
-msgid "On the website, the notice appears in these places:"
-msgstr "En el sitio web, el aviso aparece en estos lugares:"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:42
-msgid "the page ``/legal-guarantee``, with the official notice, a text version of the notice, a link to the Your Europe portal of the EU, a PDF download and, if set, the national note;"
-msgstr "la página ``/legal-guarantee``, con el aviso oficial, una versión en texto del aviso, un enlace al portal Tu Europa de la UE, una descarga en PDF y, si se ha configurado, la nota nacional;"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:44
-msgid "a link in the footer of every page;"
-msgstr "un enlace en el pie de cada página;"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:45
-msgid "a link in the terms area of the product page of goods;"
-msgstr "un enlace en la zona de condiciones de la página de producto de los bienes;"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:46
-msgid "a link in the cart, next to the order summary;"
-msgstr "un enlace en el carrito, junto al resumen del pedido;"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:47
-msgid "a link directly above the :guilabel:`Pay now` button at the payment step;"
-msgstr "un enlace justo encima del botón :guilabel:`Pagar ahora` en el paso de pago;"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:48
-msgid "a link on the order confirmation page."
-msgstr "un enlace en la página de confirmación del pedido."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:50
-msgid "A click or a tap on a link opens the full notice in a window. Without JavaScript, the link leads to the page ``/legal-guarantee``."
-msgstr "Al hacer clic o tocar un enlace, el aviso completo se abre en una ventana. Sin JavaScript, el enlace lleva a la página ``/legal-guarantee``."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:53
-msgid "To change the display, go to :menuselection:`Website --> Configuration --> Settings`:"
-msgstr "Para cambiar la visualización, vaya a :menuselection:`Sitio web --> Configuración --> Ajustes`:"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:55
-msgid ":guilabel:`Checkout notice`: choose :guilabel:`Link opening the full notice` (default) or :guilabel:`Full notice inline` to show the full notice on the payment step itself;"
-msgstr ":guilabel:`Aviso en el paso de pago`: elija :guilabel:`Enlace que abre el aviso completo` (por defecto) o :guilabel:`Aviso completo en la página` para mostrar el aviso completo en el propio paso de pago;"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:57
-msgid ":guilabel:`Footer link` and :guilabel:`Product page link`: hide or show these links."
-msgstr ":guilabel:`Enlace en el pie de página` y :guilabel:`Enlace en la página del producto`: ocultan o muestran estos enlaces."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:59
-msgid "The notice is not shown on a website whose company is outside the EU."
-msgstr "El aviso no se muestra en un sitio web cuya compañía está fuera de la UE."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:62
-msgid "Customer portal and payment links"
-msgstr "Portal del cliente y enlaces de pago"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:64
-msgid "When a consumer opens a quotation or an order with goods in the customer portal, a notice section follows the terms and conditions. The signature window and the payment window show a notice link before the button that signs or pays. A payment link sent for such an order shows the notice link directly above the :guilabel:`Pay` button."
-msgstr "Cuando un consumidor abre en el portal del cliente un presupuesto o un pedido con bienes, después de los términos y condiciones aparece una sección del aviso. Las ventanas de firma y de pago muestran un enlace al aviso antes del botón que firma o paga. Un enlace de pago enviado para un pedido así muestra el enlace al aviso justo encima del botón :guilabel:`Pagar`."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:70
-msgid "Order documents"
-msgstr "Documentos del pedido"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:72
-msgid "The notice page in colour is added at the end of the PDF of consumer quotations, sales orders and pro-forma invoices with goods, in the language of the customer. This applies to printed documents, to documents sent by e-mail and to downloads from the customer portal. Orders of business customers and orders with services only do not get a notice page."
-msgstr "La página del aviso en color se añade al final del PDF de los presupuestos, pedidos de venta y facturas proforma de consumidores que contienen bienes, en el idioma del cliente. Esto se aplica a los documentos impresos, a los enviados por correo electrónico y a las descargas desde el portal del cliente. Los pedidos de clientes empresariales y los pedidos que solo contienen servicios no reciben la página del aviso."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:77
-msgid "The option :guilabel:`EU Notice Page in Order PDFs` in :menuselection:`Sales --> Configuration --> Settings` is enabled automatically for companies in the EU. Disable it only if you give the notice to your consumers in another way."
-msgstr "La opción :guilabel:`Página del aviso de la UE en los PDF de pedidos` de :menuselection:`Ventas --> Configuración --> Ajustes` se activa automáticamente para las compañías de la UE. Desactívela solo si entrega el aviso a sus consumidores de otra forma."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:82
-msgid "In the store"
-msgstr "En la tienda"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:84
-msgid "In a physical store, the notice must be displayed as a poster in a place where consumers can easily see it, for example on the entrance door, on a wall or an aisle, or at the counter."
-msgstr "En una tienda física, el aviso debe exponerse como cartel en un lugar donde los consumidores lo vean fácilmente, por ejemplo en la puerta de entrada, en una pared o un pasillo, o en el mostrador."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:88
-msgid "Print the poster"
-msgstr "Imprimir el cartel"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:90
-msgid "Go to :menuselection:`Consumer Guarantees --> In store --> Print notice poster`."
-msgstr "Vaya a :menuselection:`Garantías del consumidor --> En tienda --> Imprimir cartel del aviso`."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:91
-msgid "Select the :guilabel:`Languages`. By default, these are the print languages of your company, which follow the official languages of the company's country."
-msgstr "Seleccione los :guilabel:`Idiomas`. Por defecto son los idiomas de impresión de su compañía, que siguen las lenguas oficiales del país de la compañía."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:93
-msgid "Choose the :guilabel:`Variant`: :guilabel:`Colour` or :guilabel:`Black and white`."
-msgstr "Elija la :guilabel:`Variante`: :guilabel:`Color` o :guilabel:`Blanco y negro`."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:94
-msgid "Choose the :guilabel:`Size`, then click :guilabel:`Print`. You get one page per language."
-msgstr "Elija el :guilabel:`Tamaño` y haga clic en :guilabel:`Imprimir`. Obtendrá una página por idioma."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:96
-msgid "When you place the poster:"
-msgstr "Al colocar el cartel:"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:98
-msgid "print it at least in A4 size;"
-msgstr "imprímalo como mínimo en tamaño A4;"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:99
-msgid "do not fold, cut or crop it, and keep it readable and in good condition;"
-msgstr "no lo doble, corte ni recorte, y manténgalo legible y en buen estado;"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:100
-msgid "choose the size by the viewing distance: A4 for 0.3 to 0.5 m, A3 for 0.5 to 1 m, A2 for 1 to 2 m and A1 for 2 to 3 m."
-msgstr "elija el tamaño según la distancia de lectura: A4 para 0,3 a 0,5 m, A3 para 0,5 a 1 m, A2 para 1 a 2 m y A1 para 2 a 3 m."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:104
-msgid "A screen in the store does not replace the printed poster. Display the poster even if you also show the notice on a screen."
-msgstr "Una pantalla en la tienda no sustituye al cartel impreso. Exponga el cartel aunque también muestre el aviso en una pantalla."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:108
-msgid "Log the poster"
-msgstr "Registrar el cartel"
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:110
-msgid "Keep a record of where and when the poster is displayed. After printing, click :guilabel:`Log posting`, or go to :menuselection:`Consumer Guarantees --> In store --> Notice postings` and create a posting. Enter the :guilabel:`Location`, for example \"pickup point entrance\", the date in :guilabel:`Posted on` and, ideally, a :guilabel:`Photo` of the displayed poster."
-msgstr "Lleve un registro de dónde y cuándo se expone el cartel. Después de imprimir, haga clic en :guilabel:`Registrar exposición`, o vaya a :menuselection:`Garantías del consumidor --> En tienda --> Avisos expuestos` y cree una exposición. Indique la :guilabel:`Ubicación`, por ejemplo «entrada del punto de recogida», la fecha en :guilabel:`Fecha de exposición` y, a ser posible, una :guilabel:`Foto` del cartel expuesto."
-
-#: ../../content/applications/sales/sales/consumer_guarantees/legal_guarantee_notice.rst:115
-msgid "All users of the app can create and update postings. Only managers can delete them; archive a posting when the poster has been taken down."
-msgstr "Todos los usuarios de la aplicación pueden crear y modificar exposiciones. Solo los gerentes pueden eliminarlas; archive una exposición cuando se haya retirado el cartel."

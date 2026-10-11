@@ -238,4 +238,5 @@ To get an overview of all orders, regardless of the session, click the vertical 
    point_of_sale/pricing
    point_of_sale/payment_methods
    point_of_sale/pos_based_marketing
+   point_of_sale/store_sales_tracking
    point_of_sale/reporting

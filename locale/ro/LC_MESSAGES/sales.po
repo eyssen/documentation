@@ -2535,6 +2535,106 @@ msgstr ""
 "informații despre Regulamentul general privind protecția datelor, "
 "consultați: `Odoo GDPR <http://odoo.com/gdpr>`__."
 
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:3
+msgid "Lead tracking"
+msgstr "Urmărirea lead-urilor"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:5
+msgid ""
+"When the Google app or the Meta app is installed, the CRM reports the "
+"progress of your leads to the advertising platforms. Google Ads and Meta "
+"then know which clicks and which ads produce real customers, not only form "
+"submissions, and can optimize your campaigns for them."
+msgstr ""
+"Când aplicația Google sau aplicația Meta este instalată, CRM raportează "
+"progresul lead-urilor către platformele publicitare. Google Ads și Meta știu"
+" astfel ce clicuri și ce reclame produc clienți reali, nu doar trimiteri de "
+"formulare, și vă pot optimiza campaniile pentru aceștia."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:9
+msgid "Two kinds of events are sent:"
+msgstr "Se trimit două tipuri de evenimente:"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:11
+msgid ""
+"the **new lead** event, when a visitor submits a website form that creates a"
+" lead;"
+msgstr ""
+"evenimentul de **lead nou**, când un vizitator trimite un formular al site-"
+"ului web care creează un lead;"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:12
+msgid ""
+"the **stage events**, when a lead reaches a stage, is won, or is lost. They "
+"are defined by *lead stage rules*."
+msgstr ""
+"**evenimentele de etapă**, când un lead atinge o etapă, este câștigat sau "
+"pierdut. Acestea sunt definite de *regulile de etapă ale lead-urilor*."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:15
+msgid ""
+"All events respect the cookie consent that the visitor gave when the lead "
+"was created, except the leads that come from a lead form of Google or Meta, "
+"who gave their consent in the ad. See "
+":doc:`/applications/websites/website/tracking/privacy`."
+msgstr ""
+"Toate evenimentele respectă consimțământul pentru cookie-uri dat de "
+"vizitator la crearea lead-ului, cu excepția lead-urilor care provin dintr-un"
+" formular de lead Google sau Meta, care și-au dat acordul în reclamă. Vezi "
+":doc:`/applications/websites/website/tracking/privacy`."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:20
+msgid "Website form leads"
+msgstr "Lead-uri din formularele site-ului web"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:22
+msgid ""
+"When a website form creates a lead, the lead stores the **click "
+"identifiers** of the visit (Google Ads click IDs and Meta click and browser "
+"IDs) and the consent of the visitor. A `generate_lead` event is sent by the "
+"browser and by the server, with the same event ID so that the platforms "
+"count it once."
+msgstr ""
+"Când un formular al site-ului web creează un lead, acesta stochează "
+"**identificatorii de clic** ai vizitei (ID-uri de clic Google Ads și ID-uri "
+"Meta de clic și de browser) și consimțământul vizitatorului. Un eveniment "
+"`generate_lead` este trimis de browser și de server, cu același ID de "
+"eveniment, astfel încât platformele să îl numere o singură dată."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:26
+msgid ""
+"To give a value to this event, go to :menuselection:`Website --> "
+"Configuration --> Settings`, and in the :guilabel:`Tracking` block, fill in "
+"the :guilabel:`Lead Value` of the :guilabel:`Lead Tracking` setting. `0` "
+"means that the event has no value."
+msgstr ""
+"Pentru a atribui o valoare acestui eveniment, mergeți la "
+":menuselection:`Site web --> Configurare --> Setări` și, în blocul "
+":guilabel:`Urmărire`, completați :guilabel:`Valoarea pistei` al setării "
+":guilabel:`Urmărirea pistelor`. `0` înseamnă că evenimentul nu are valoare."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:31
+msgid ""
+"In developer mode, the :guilabel:`Ad Tracking` tab of the lead shows the "
+"stored identifiers and consent."
+msgstr ""
+"În modul dezvoltator, fila :guilabel:`Urmărirea reclamelor` a lead-ului "
+"afișează identificatorii și consimțământul stocate."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:37
+msgid "Lead stage rules"
+msgstr "Reguli de etapă ale lead-urilor"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:39
+msgid ""
+"Go to :menuselection:`CRM --> Configuration --> Lead Tracking Rules`, and "
+"click :guilabel:`New`. A rule says: *when this happens to a lead, send this "
+"event*."
+msgstr ""
+"Mergeți la :menuselection:`CRM --> Configurare --> Reguli de urmărire a "
+"pistelor` și faceți clic pe :guilabel:`Nou`. O regulă spune: *când i se "
+"întâmplă asta unui lead, trimite acest eveniment*."
+
 #: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:3
 msgid "Enrich contacts with partner autocomplete"
 msgstr "Îmbogățiți contactele cu completarea automată a partenerului"
@@ -11830,6 +11930,193 @@ msgstr "Nume tehnic"
 msgid "Description"
 msgstr "Descriere"
 
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:48
+msgid ":guilabel:`Name`"
+msgstr ":guilabel:`Nume`"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:49
+msgid "The name of the rule."
+msgstr "Numele regulii."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:50
+msgid ":guilabel:`Trigger`"
+msgstr ":guilabel:`Declanșator`"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:51
+msgid ""
+":guilabel:`Lead is created`, :guilabel:`Lead reaches a stage`, "
+":guilabel:`Lead is won`, or :guilabel:`Lead is lost`."
+msgstr ""
+":guilabel:`Pista este creată`, :guilabel:`Pista ajunge într-o etapă`, "
+":guilabel:`Pista este câștigată` sau :guilabel:`Pista este pierdută`."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:53
+msgid ":guilabel:`Stage`"
+msgstr ":guilabel:`Etapă`"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:54
+msgid "The stage, for the trigger :guilabel:`Lead reaches a stage`."
+msgstr "Etapa, pentru declanșatorul :guilabel:`Pista ajunge într-o etapă`."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:55
+msgid ":guilabel:`Sales Teams`"
+msgstr ":guilabel:`Echipe de vânzări`"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:56
+msgid "Restricts the rule to some teams. Empty: all the teams."
+msgstr "Restricționează regula la unele echipe. Gol: toate echipele."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:57
+msgid ":guilabel:`Only Tracked Leads`"
+msgstr ":guilabel:`Doar pistele urmărite`"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:58
+msgid ""
+"Enabled by default. The rule only applies to the leads that carry an ad "
+"click identifier, or the ID of a Meta lead. The other leads cannot be "
+"attributed to a campaign."
+msgstr ""
+"Activat implicit. Regula se aplică doar lead-urilor care poartă un "
+"identificator de clic pe reclamă sau ID-ul unui lead Meta. Celelalte lead-"
+"uri nu pot fi atribuite unei campanii."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:60
+msgid ":guilabel:`Event`"
+msgstr ":guilabel:`Eveniment`"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:61
+msgid ""
+"The event sent: :guilabel:`New lead`, :guilabel:`Working on the lead`, "
+":guilabel:`Qualified lead`, :guilabel:`Disqualified lead`, :guilabel:`Won "
+"(converted)`, or :guilabel:`Lost (not converted)`."
+msgstr ""
+"Evenimentul trimis: :guilabel:`Pistă nouă`, :guilabel:`Se lucrează la "
+"pistă`, :guilabel:`Pistă calificată`, :guilabel:`Pistă descalificată`, "
+":guilabel:`Câștigată (convertită)` sau :guilabel:`Pierdută (neconvertită)`."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:64
+msgid ":guilabel:`Value`"
+msgstr ":guilabel:`Valoare`"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:65
+msgid ""
+":guilabel:`Expected revenue` of the lead (default), a :guilabel:`Fixed "
+"value`, or :guilabel:`No value`."
+msgstr ""
+":guilabel:`Venit estimat` al lead-ului (implicit), o :guilabel:`Valoare "
+"fixă` sau :guilabel:`Fără valoare`."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:78
+msgid "Destinations"
+msgstr "Destinații"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:80
+msgid "Each platform adds its fields to the rule:"
+msgstr "Fiecare platformă adaugă câmpurile sale la regulă:"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:82
+msgid ""
+"**Google Ads**: the :guilabel:`Google Ads Conversion Action ID` of the "
+"conversion action of type *Import from clicks* that receives this stage. "
+"Without an ID, the rule is not uploaded to Google Ads. See "
+":doc:`/applications/websites/google/lead_forms` and "
+":doc:`/applications/websites/google/offline_conversions`."
+msgstr ""
+"**Google Ads**: :guilabel:`ID acțiune de conversie Google Ads` al acțiunii "
+"de conversie de tip *Import from clicks* care primește această etapă. Fără "
+"un ID, regula nu este încărcată în Google Ads. Vezi "
+":doc:`/applications/websites/google/lead_forms` și "
+":doc:`/applications/websites/google/offline_conversions`."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:86
+msgid ""
+"**Meta**: :guilabel:`Send to Meta` (enabled by default), and the "
+":guilabel:`Meta Event Name`, which is the name of the stage in Meta Events "
+"Manager. If empty, the name of the rule is used. See :ref:`meta/lead-"
+"ads/conversion-leads`."
+msgstr ""
+"**Meta**: :guilabel:`Trimitere către Meta` (activat implicit) și "
+":guilabel:`Nume eveniment Meta`, care este numele etapei în Meta Events "
+"Manager. Dacă este gol, se folosește numele regulii. Vezi :ref:`meta/lead-"
+"ads/conversion-leads`."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:89
+msgid ""
+"**Google Analytics 4**: when the :doc:`Measurement Protocol "
+"</applications/websites/google/measurement_protocol>` and its lead events "
+"are enabled, the events are also sent to GA4, whatever the destination "
+"fields."
+msgstr ""
+"**Google Analytics 4**: când :doc:`Measurement Protocol "
+"</applications/websites/google/measurement_protocol>` și evenimentele sale "
+"de lead sunt activate, evenimentele sunt trimise și către GA4, indiferent de"
+" câmpurile de destinație."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:93
+msgid ""
+"Each destination has its own switch in the settings of the Google or the "
+"Meta app (:guilabel:`CRM Offline Conversions`, :guilabel:`CRM Lead Events`)."
+" A rule is sent only to the destinations that are enabled for the website of"
+" the lead."
+msgstr ""
+"Fiecare destinație are propriul comutator în setările aplicației Google sau "
+"Meta (:guilabel:`Conversii offline CRM`, :guilabel:`Evenimente de piste "
+"CRM`). O regulă este trimisă doar către destinațiile activate pentru site-ul"
+" web al lead-ului."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:98
+msgid "Behavior"
+msgstr "Comportament"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:100
+msgid ""
+"A rule sends its event **once** per lead and per rule. When a lead goes back"
+" to a previous stage and reaches the stage again, nothing is sent twice."
+msgstr ""
+"O regulă își trimite evenimentul **o singură dată** pentru fiecare lead și "
+"pentru fiecare regulă. Când un lead revine la o etapă anterioară și atinge "
+"din nou etapa, nu se trimite nimic de două ori."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:102
+msgid ""
+"A lead is linked to the website where it was created. A lead created in the "
+"CRM without a website uses the first website of its company."
+msgstr ""
+"Un lead este legat de site-ul web în care a fost creat. Un lead creat în CRM"
+" fără site web folosește primul site web al companiei sale."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:104
+msgid ""
+"The events are put in the queue of the :doc:`server events "
+"</applications/websites/website/tracking/server_events>`, and sent every few"
+" minutes. You can follow them there."
+msgstr ""
+"Evenimentele sunt puse în coada :doc:`evenimentelor de server "
+"</applications/websites/website/tracking/server_events>` și trimise la "
+"câteva minute. Le puteți urmări acolo."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:109
+msgid ""
+"For a good optimization, report few and clear stages: for example "
+"*Qualified* and *Won*. Keep the *Expected revenue* up to date: it is the "
+"value that Google and Meta learn from."
+msgstr ""
+"Pentru o bună optimizare, raportați puține etape și clare: de exemplu "
+"*Qualified* și *Won*. Păstrați *Expected revenue* la zi: este valoarea din "
+"care învață Google și Meta."
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:113
+msgid ":doc:`/applications/websites/google/lead_forms`"
+msgstr ":doc:`/applications/websites/google/lead_forms`"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:114
+msgid ":doc:`/applications/websites/meta/lead_ads`"
+msgstr ":doc:`/applications/websites/meta/lead_ads`"
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:115
+msgid ":doc:`/applications/websites/website/tracking/privacy`"
+msgstr ":doc:`/applications/websites/website/tracking/privacy`"
+
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:31
 msgid "Pix"
 msgstr "Pix"
@@ -17234,6 +17521,182 @@ msgid ""
 msgstr ""
 "Clientul selectat trebuie să fi făcut referire la o adresă în sistem pentru "
 "ca produsele să fie expediate."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:3
+msgid "Store sales tracking"
+msgstr "Urmărirea vânzărilor din magazin"
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:5
+msgid ""
+"If you advertise on Google or Meta, you also want to know which ads lead to "
+"purchases **in your shops**. Odoo can report the paid orders of the "
+":abbr:`PoS (Point of Sale)` as **offline store sales** to the advertising "
+"platforms, so that they can measure the effect of the ads on your physical "
+"stores and optimize the campaigns."
+msgstr ""
+"Dacă faceți publicitate pe Google sau Meta, doriți să știți și ce reclame "
+"duc la achiziții **în magazinele dumneavoastră**. Odoo poate raporta "
+"comenzile plătite din :abbr:`PoS (Point of Sale)` ca **vânzări offline din "
+"magazin** către platformele publicitare, astfel încât acestea să poată "
+"măsura efectul reclamelor asupra magazinelor fizice și să optimizeze "
+"campaniile."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:10
+msgid ""
+"This feature is installed automatically when the Point of Sale and the "
+"Google or Meta app are installed."
+msgstr ""
+"Această funcție se instalează automat când Punctul de vânzare și aplicația "
+"Google sau Meta sunt instalate."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:14
+msgid ""
+"No cookie consent can be collected at the counter. Only the customers you "
+"identified are reported, and only if the settings of the platform allow "
+"store sales. Enable this feature only if your legal basis allows it, and "
+"mention it in your privacy policy. See "
+":doc:`/applications/websites/website/tracking/privacy`."
+msgstr ""
+"La tejghea nu se poate colecta consimțământul pentru cookie-uri. Sunt "
+"raportați doar clienții pe care i-ați identificat, și numai dacă setările "
+"platformei permit vânzările din magazin. Activați această funcție doar dacă "
+"temeiul dumneavoastră juridic o permite și menționați-o în politica de "
+"confidențialitate. Vezi "
+":doc:`/applications/websites/website/tracking/privacy`."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:20
+msgid "Set up the store sales"
+msgstr "Configurarea vânzărilor din magazin"
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:22
+msgid "In the settings of the platform, enable the store sales:"
+msgstr "În setările platformei, activați vânzările din magazin:"
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:24
+msgid ""
+"Meta: go to :menuselection:`Meta --> Configuration --> Settings` and enable "
+":guilabel:`Store Sales` in the :guilabel:`Conversions API` block (see "
+":ref:`meta/capi/store-sales`)."
+msgstr ""
+"Meta: mergeți la :menuselection:`Meta --> Configurare --> Setări` și "
+"activați :guilabel:`Vânzări în magazin` în blocul :guilabel:`API de "
+"conversii` (vezi :ref:`meta/capi/store-sales`)."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:26
+msgid ""
+"Google Analytics 4: go to :menuselection:`Google --> Configuration --> "
+"Settings` and enable :guilabel:`Store Purchases` in the :doc:`Measurement "
+"Protocol </applications/websites/google/measurement_protocol>` options."
+msgstr ""
+"Google Analytics 4: mergeți la :menuselection:`Google --> Configurare --> "
+"Setări` și activați :guilabel:`Achiziții în magazin` în opțiunile "
+":doc:`Measurement Protocol "
+"</applications/websites/google/measurement_protocol>`."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:30
+msgid ""
+"Go to :menuselection:`Point of Sale --> Configuration --> Settings`, select "
+"the point of sale in the :guilabel:`Point of Sale` field if needed, and in "
+"the :guilabel:`Report Store Sales` setting, select the :guilabel:`Report "
+"Sales to Ads` website. It is the website whose Google and Meta settings "
+"(pixel, dataset, tokens) apply to this point of sale."
+msgstr ""
+"Mergeți la :menuselection:`Punct de vânzare --> Configurare --> Setări`, "
+"selectați punctul de vânzare în câmpul :guilabel:`Punct de vânzare` dacă "
+"este necesar și, în setarea :guilabel:`Raportare vânzări în magazin`, "
+"selectați site-ul web :guilabel:`Raportare vânzări către platformele de "
+"publicitate`. Acesta este site-ul web ale cărui setări Google și Meta "
+"(pixel, set de date, tokenuri) se aplică acestui punct de vânzare."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:44
+msgid ""
+"Leave the field empty to report nothing for this point of sale. Each point "
+"of sale has its own setting, so you can report some shops and not others."
+msgstr ""
+"Lăsați câmpul gol pentru a nu raporta nimic pentru acest punct de vânzare. "
+"Fiecare punct de vânzare are propria setare, deci puteți raporta unele "
+"magazine și altele nu."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:48
+msgid "Which orders are reported?"
+msgstr "Ce comenzi sunt raportate?"
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:50
+msgid "When a PoS order is **paid**, Odoo reports it as a purchase if:"
+msgstr ""
+"Când o comandă PoS este **plătită**, Odoo o raportează ca achiziție dacă:"
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:52
+msgid "a website is selected for the point of sale;"
+msgstr "este selectat un site web pentru punctul de vânzare;"
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:53
+msgid ""
+"the order has a **customer** with an email address or a phone number (the "
+"platforms use them to match the sale with a person, after hashing);"
+msgstr ""
+"comanda are un **client** cu o adresă de e-mail sau un număr de telefon "
+"(platformele le folosesc pentru a potrivi vânzarea cu o persoană, după "
+"hash);"
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:55
+msgid "the total of the order is positive;"
+msgstr "totalul comenzii este pozitiv;"
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:56
+msgid "the platform has the store sales enabled."
+msgstr "platforma are vânzările din magazin activate."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:58
+msgid ""
+"The order is sent once, with its date and time, its currency, its untaxed "
+"amount, its reference, and the products (identifier, name, unit price, and "
+"quantity). The product identifier is the same as in the :doc:`product feeds "
+"and the website events </applications/websites/ecommerce/tracking>`."
+msgstr ""
+"Comanda este trimisă o singură dată, cu data și ora, moneda, suma fără taxe,"
+" referința și produsele (identificator, nume, preț unitar și cantitate). "
+"Identificatorul produsului este același ca în :doc:`fluxurile de produse și "
+"în evenimentele site-ului web </applications/websites/ecommerce/tracking>`."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:62
+msgid ""
+"The customer's email, phone, name, and address are **hashed** with SHA-256 "
+"before being sent. The sales without an identified customer are never "
+"reported."
+msgstr ""
+"E-mailul, telefonul, numele și adresa clientului sunt trimise cu **hash** "
+"SHA-256. Vânzările fără client identificat nu sunt niciodată raportate."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:66
+msgid ""
+"Ask your cashiers to identify the customer (a loyalty card or a customer "
+"account) so that the sale can be matched. The unidentified sales cannot be "
+"attributed to an ad."
+msgstr ""
+"Cereți casierilor să identifice clientul (cu un card de fidelitate sau un "
+"cont de client) pentru ca vânzarea să poată fi potrivită. Vânzările "
+"neidentificate nu pot fi atribuite unei reclame."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:69
+msgid ""
+"The reports are put in the queue of the :doc:`server events "
+"</applications/websites/website/tracking/server_events>` "
+"(:menuselection:`Website --> Configuration --> Tracking & Consent --> Server"
+" Events`), where you can see whether they were sent."
+msgstr ""
+"Rapoartele sunt puse în coada :doc:`evenimentelor de server "
+"</applications/websites/website/tracking/server_events>` "
+"(:menuselection:`Site web --> Configurare --> Urmărire și consimțământ --> "
+"Evenimente de pe server`), unde puteți vedea dacă au fost trimise."
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:74
+msgid ":doc:`/applications/websites/meta/conversions_api`"
+msgstr ":doc:`/applications/websites/meta/conversions_api`"
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:75
+msgid ":doc:`/applications/websites/google/measurement_protocol`"
+msgstr ":doc:`/applications/websites/google/measurement_protocol`"
 
 #: ../../content/applications/sales/sales.rst:10
 msgid ""

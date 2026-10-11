@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-11 05:54+0000\n"
+"POT-Creation-Date: 2026-10-11 07:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1185,6 +1185,179 @@ msgstr ""
 
 #: ../../content/applications/sales/crm/optimize/lead_enrichment.rst:136
 msgid "When collecting a company's contact information, make sure to be aware of the latest EU regulations. For more information about General Data Protection Regulation, refer to: `Odoo GDPR <http://odoo.com/gdpr>`__."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:3
+msgid "Lead tracking"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:5
+msgid "When the Google app or the Meta app is installed, the CRM reports the progress of your leads to the advertising platforms. Google Ads and Meta then know which clicks and which ads produce real customers, not only form submissions, and can optimize your campaigns for them."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:9
+msgid "Two kinds of events are sent:"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:11
+msgid "the **new lead** event, when a visitor submits a website form that creates a lead;"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:12
+msgid "the **stage events**, when a lead reaches a stage, is won, or is lost. They are defined by *lead stage rules*."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:15
+msgid "All events respect the cookie consent that the visitor gave when the lead was created, except the leads that come from a lead form of Google or Meta, who gave their consent in the ad. See :doc:`/applications/websites/website/tracking/privacy`."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:20
+msgid "Website form leads"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:22
+msgid "When a website form creates a lead, the lead stores the **click identifiers** of the visit (Google Ads click IDs and Meta click and browser IDs) and the consent of the visitor. A `generate_lead` event is sent by the browser and by the server, with the same event ID so that the platforms count it once."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:26
+msgid "To give a value to this event, go to :menuselection:`Website --> Configuration --> Settings`, and in the :guilabel:`Tracking` block, fill in the :guilabel:`Lead Value` of the :guilabel:`Lead Tracking` setting. `0` means that the event has no value."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:31
+msgid "In developer mode, the :guilabel:`Ad Tracking` tab of the lead shows the stored identifiers and consent."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:37
+msgid "Lead stage rules"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:39
+msgid "Go to :menuselection:`CRM --> Configuration --> Lead Tracking Rules`, and click :guilabel:`New`. A rule says: *when this happens to a lead, send this event*."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:46
+#: ../../content/applications/sales/subscriptions/contracts.rst:19
+msgid "Field"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:47
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:30
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:120
+#: ../../content/applications/sales/subscriptions/contracts.rst:20
+#: ../../content/applications/sales/withdrawal/configuration.rst:20
+msgid "Description"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:48
+msgid ":guilabel:`Name`"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:49
+msgid "The name of the rule."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:50
+msgid ":guilabel:`Trigger`"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:51
+msgid ":guilabel:`Lead is created`, :guilabel:`Lead reaches a stage`, :guilabel:`Lead is won`, or :guilabel:`Lead is lost`."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:53
+msgid ":guilabel:`Stage`"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:54
+msgid "The stage, for the trigger :guilabel:`Lead reaches a stage`."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:55
+msgid ":guilabel:`Sales Teams`"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:56
+msgid "Restricts the rule to some teams. Empty: all the teams."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:57
+msgid ":guilabel:`Only Tracked Leads`"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:58
+msgid "Enabled by default. The rule only applies to the leads that carry an ad click identifier, or the ID of a Meta lead. The other leads cannot be attributed to a campaign."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:60
+msgid ":guilabel:`Event`"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:61
+msgid "The event sent: :guilabel:`New lead`, :guilabel:`Working on the lead`, :guilabel:`Qualified lead`, :guilabel:`Disqualified lead`, :guilabel:`Won (converted)`, or :guilabel:`Lost (not converted)`."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:64
+msgid ":guilabel:`Value`"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:65
+msgid ":guilabel:`Expected revenue` of the lead (default), a :guilabel:`Fixed value`, or :guilabel:`No value`."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:78
+msgid "Destinations"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:80
+msgid "Each platform adds its fields to the rule:"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:82
+msgid "**Google Ads**: the :guilabel:`Google Ads Conversion Action ID` of the conversion action of type *Import from clicks* that receives this stage. Without an ID, the rule is not uploaded to Google Ads. See :doc:`/applications/websites/google/lead_forms` and :doc:`/applications/websites/google/offline_conversions`."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:86
+msgid "**Meta**: :guilabel:`Send to Meta` (enabled by default), and the :guilabel:`Meta Event Name`, which is the name of the stage in Meta Events Manager. If empty, the name of the rule is used. See :ref:`meta/lead-ads/conversion-leads`."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:89
+msgid "**Google Analytics 4**: when the :doc:`Measurement Protocol </applications/websites/google/measurement_protocol>` and its lead events are enabled, the events are also sent to GA4, whatever the destination fields."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:93
+msgid "Each destination has its own switch in the settings of the Google or the Meta app (:guilabel:`CRM Offline Conversions`, :guilabel:`CRM Lead Events`). A rule is sent only to the destinations that are enabled for the website of the lead."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:98
+msgid "Behavior"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:100
+msgid "A rule sends its event **once** per lead and per rule. When a lead goes back to a previous stage and reaches the stage again, nothing is sent twice."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:102
+msgid "A lead is linked to the website where it was created. A lead created in the CRM without a website uses the first website of its company."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:104
+msgid "The events are put in the queue of the :doc:`server events </applications/websites/website/tracking/server_events>`, and sent every few minutes. You can follow them there."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:109
+msgid "For a good optimization, report few and clear stages: for example *Qualified* and *Won*. Keep the *Expected revenue* up to date: it is the value that Google and Meta learn from."
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:113
+msgid ":doc:`/applications/websites/google/lead_forms`"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:114
+msgid ":doc:`/applications/websites/meta/lead_ads`"
+msgstr ""
+
+#: ../../content/applications/sales/crm/optimize/lead_tracking.rst:115
+msgid ":doc:`/applications/websites/website/tracking/privacy`"
 msgstr ""
 
 #: ../../content/applications/sales/crm/optimize/partner_autocomplete.rst:3
@@ -5858,13 +6031,6 @@ msgstr ""
 msgid "Technical name"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:30
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:120
-#: ../../content/applications/sales/subscriptions/contracts.rst:20
-#: ../../content/applications/sales/withdrawal/configuration.rst:20
-msgid "Description"
-msgstr ""
-
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:31
 msgid "Pix"
 msgstr ""
@@ -6077,6 +6243,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/pos_hardware.rst:50
 #: ../../content/applications/sales/point_of_sale/pricing/loyalty.rst:15
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:125
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:34
 #: ../../content/applications/sales/sales/products_prices/products/product_images.rst:151
 msgid "Click :guilabel:`Save`."
 msgstr ""
@@ -8865,6 +9032,94 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:51
 msgid "The selected customer must have referenced an address in the system for products to be shipped."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:3
+msgid "Store sales tracking"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:5
+msgid "If you advertise on Google or Meta, you also want to know which ads lead to purchases **in your shops**. Odoo can report the paid orders of the :abbr:`PoS (Point of Sale)` as **offline store sales** to the advertising platforms, so that they can measure the effect of the ads on your physical stores and optimize the campaigns."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:10
+msgid "This feature is installed automatically when the Point of Sale and the Google or Meta app are installed."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:14
+msgid "No cookie consent can be collected at the counter. Only the customers you identified are reported, and only if the settings of the platform allow store sales. Enable this feature only if your legal basis allows it, and mention it in your privacy policy. See :doc:`/applications/websites/website/tracking/privacy`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:20
+msgid "Set up the store sales"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:22
+msgid "In the settings of the platform, enable the store sales:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:24
+msgid "Meta: go to :menuselection:`Meta --> Configuration --> Settings` and enable :guilabel:`Store Sales` in the :guilabel:`Conversions API` block (see :ref:`meta/capi/store-sales`)."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:26
+msgid "Google Analytics 4: go to :menuselection:`Google --> Configuration --> Settings` and enable :guilabel:`Store Purchases` in the :doc:`Measurement Protocol </applications/websites/google/measurement_protocol>` options."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:30
+msgid "Go to :menuselection:`Point of Sale --> Configuration --> Settings`, select the point of sale in the :guilabel:`Point of Sale` field if needed, and in the :guilabel:`Report Store Sales` setting, select the :guilabel:`Report Sales to Ads` website. It is the website whose Google and Meta settings (pixel, dataset, tokens) apply to this point of sale."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:44
+msgid "Leave the field empty to report nothing for this point of sale. Each point of sale has its own setting, so you can report some shops and not others."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:48
+msgid "Which orders are reported?"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:50
+msgid "When a PoS order is **paid**, Odoo reports it as a purchase if:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:52
+msgid "a website is selected for the point of sale;"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:53
+msgid "the order has a **customer** with an email address or a phone number (the platforms use them to match the sale with a person, after hashing);"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:55
+msgid "the total of the order is positive;"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:56
+msgid "the platform has the store sales enabled."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:58
+msgid "The order is sent once, with its date and time, its currency, its untaxed amount, its reference, and the products (identifier, name, unit price, and quantity). The product identifier is the same as in the :doc:`product feeds and the website events </applications/websites/ecommerce/tracking>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:62
+msgid "The customer's email, phone, name, and address are **hashed** with SHA-256 before being sent. The sales without an identified customer are never reported."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:66
+msgid "Ask your cashiers to identify the customer (a loyalty card or a customer account) so that the sale can be matched. The unidentified sales cannot be attributed to an ad."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:69
+msgid "The reports are put in the queue of the :doc:`server events </applications/websites/website/tracking/server_events>` (:menuselection:`Website --> Configuration --> Tracking & Consent --> Server Events`), where you can see whether they were sent."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:74
+msgid ":doc:`/applications/websites/meta/conversions_api`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/store_sales_tracking.rst:75
+msgid ":doc:`/applications/websites/google/measurement_protocol`"
 msgstr ""
 
 #: ../../content/applications/sales/sales.rst:10
@@ -15557,10 +15812,6 @@ msgstr ""
 
 #: ../../content/applications/sales/subscriptions/contracts.rst:12
 msgid "Go to :menuselection:`Subscriptions app --> Contracts` and click :guilabel:`New`. The :guilabel:`Contract Number` is generated automatically on saving."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/contracts.rst:19
-msgid "Field"
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/contracts.rst:21

@@ -16,3 +16,4 @@ General settings
     general/value_scheduler
     general/audit_log
     general/data_audit
+    general/tracking_broker

@@ -6128,6 +6128,274 @@ msgstr "Az Unsplash képek használatához Unsplash hozzáférési kulcs szüks�
 msgid "New Unsplash applications are in *demo* mode, limited to 50 Unsplash requests per hour, until they are approved for production by Unsplash."
 msgstr "Az új Unsplash alkalmazások *demo* módban vannak, óránként legfeljebb 50 Unsplash kéréssel, amíg az Unsplash jóvá nem hagyja őket éles használatra."
 
+#: ../../content/applications/general/tracking_broker.rst:3
+msgid "Connection broker for Google and Meta"
+msgstr "Kapcsolatközvetítő a Google-höz és a Metához"
+
+#: ../../content/applications/general/tracking_broker.rst:5
+msgid "A **connection broker** is a central Odoo database that owns **one** verified Google OAuth client and **one** Meta app, and lets many other Odoo databases (the *instances*) connect to Google and Meta accounts through it. The instances do not create any app at Google or Meta: their administrators just click :guilabel:`Connect`."
+msgstr "A **kapcsolatközvetítő** (connection broker) egy központi Odoo-adatbázis, amely **egy** ellenőrzött Google OAuth-klienst és **egy** Meta-alkalmazást birtokol, és lehetővé teszi, hogy sok más Odoo-adatbázis (a *példányok*) rajta keresztül csatlakozzon Google- és Meta-fiókokhoz. A példányok nem hoznak létre alkalmazást a Google-nél vagy a Metánál: az adminisztrátoraik csak a :guilabel:`Csatlakozás` gombra kattintanak."
+
+#: ../../content/applications/general/tracking_broker.rst:10
+msgid "This page is for the administrators of a company that **offers** the connection as a service to several databases, for example an integrator who manages the databases of its customers. If you only use the Google or Meta app in your own database, read :doc:`/applications/websites/website/tracking/connections` instead."
+msgstr "Ez az oldal azon vállalatok adminisztrátorainak szól, amelyek a kapcsolatot szolgáltatásként **kínálják** több adatbázisnak, például egy integrátornak, aki az ügyfelei adatbázisait kezeli. Ha a Google vagy a Meta alkalmazást csak a saját adatbázisában használja, inkább olvassa el a :doc:`/applications/websites/website/tracking/connections` oldalt."
+
+#: ../../content/applications/general/tracking_broker.rst:16
+msgid "The broker is a separate database, installed only once. Do not install it on the databases that use the Google and Meta apps. Install *Website Tracking Connection Broker* from :menuselection:`Apps` in the central database."
+msgstr "A közvetítő egy különálló adatbázis, amelyet csak egyszer kell telepíteni. Ne telepítse a Google és Meta alkalmazásokat használó adatbázisokra. Telepítse a *Website Tracking Connection Broker* modult az :menuselection:`Alkalmazások` menüből a központi adatbázisban."
+
+#: ../../content/applications/general/tracking_broker.rst:21
+msgid "How it works"
+msgstr "Hogyan működik"
+
+#: ../../content/applications/general/tracking_broker.rst:23
+msgid "The administrator of an instance clicks :guilabel:`Connect` on a connection in :guilabel:`Broker service` mode."
+msgstr "Egy példány adminisztrátora a :guilabel:`Bróker szolgáltatás` módú kapcsolaton a :guilabel:`Csatlakozás` gombra kattint."
+
+#: ../../content/applications/general/tracking_broker.rst:25
+msgid "The instance sends the administrator to the broker with a **signed request**. The broker checks the instance, the signature, the return address, and the requested permissions, then redirects the administrator to the consent screen of Google or Meta."
+msgstr "A példány egy **aláírt kéréssel** a közvetítőhöz irányítja az adminisztrátort. A közvetítő ellenőrzi a példányt, az aláírást, a visszatérési címet és a kért engedélyeket, majd átirányítja az adminisztrátort a Google vagy a Meta hozzájárulási képernyőjére."
+
+#: ../../content/applications/general/tracking_broker.rst:28
+msgid "After the consent, the broker keeps the long-lived secret of the account (the Google refresh token or the Meta long-lived token) **encrypted**, and sends the administrator back to the instance with a one-time code that is valid for ten minutes."
+msgstr "A hozzájárulás után a közvetítő **titkosítva** őrzi a fiók hosszú élettartamú titkát (a Google frissítő tokenjét vagy a Meta hosszú élettartamú tokenjét), és az adminisztrátort tíz percig érvényes, egyszer használható kóddal küldi vissza a példányhoz."
+
+#: ../../content/applications/general/tracking_broker.rst:31
+msgid "The instance redeems the code. From then on, it asks the broker for **short-lived access tokens** when it needs to call Google or Meta. The long-lived secrets never leave the broker."
+msgstr "A példány beváltja a kódot. Ettől kezdve a közvetítőtől kér **rövid élettartamú hozzáférési tokeneket**, amikor a Google-t vagy a Metát kell hívnia. A hosszú élettartamú titkok soha nem hagyják el a közvetítőt."
+
+#: ../../content/applications/general/tracking_broker.rst:34
+msgid "The broker never reads the data of the instances: it only holds the authorizations."
+msgstr "A közvetítő soha nem olvassa a példányok adatait: csak az engedélyeket tárolja."
+
+#: ../../content/applications/general/tracking_broker.rst:37
+msgid "Set up the broker"
+msgstr "A közvetítő beállítása"
+
+#: ../../content/applications/general/tracking_broker.rst:39
+msgid "Go to :menuselection:`Settings --> Tracking Broker --> Settings`. All the settings below are available to administrators only."
+msgstr "Lépjen a :menuselection:`Beállítások --> Követési bróker --> Beállítások` menüpontra. Az alábbi beállítások mind csak adminisztrátorok számára érhetők el."
+
+#: ../../content/applications/general/tracking_broker.rst:43
+msgid "Encryption key"
+msgstr "Titkosítási kulcs"
+
+#: ../../content/applications/general/tracking_broker.rst:45
+msgid "The tokens are stored encrypted with a key. Generate a key and add it to the server configuration file:"
+msgstr "A tokenek egy kulccsal titkosítva tárolódnak. Generáljon egy kulcsot, és adja hozzá a szerver konfigurációs fájljához:"
+
+#: ../../content/applications/general/tracking_broker.rst:51
+msgid "You can list several keys separated by commas: the first one encrypts, all of them decrypt. This lets you rotate the key. The :guilabel:`Token Encryption` setting shows the :guilabel:`Encryption Key Status`."
+msgstr "Több kulcsot is megadhat vesszővel elválasztva: az első titkosít, mindegyik visszafejt. Ez lehetővé teszi a kulcs cseréjét. A :guilabel:`Tokenek titkosítása` beállítás mutatja az :guilabel:`Titkosítási kulcs állapota` állapotot."
+
+#: ../../content/applications/general/tracking_broker.rst:55
+msgid "Without the option in the configuration file, Odoo generates a key and keeps it in the database. A warning is displayed in the settings. A key stored in the database is lost with it: use the configuration file in production, and keep a copy of the key in a safe place. If the key is lost, all the connections must be made again."
+msgstr "Ha az opció hiányzik a konfigurációs fájlból, az Odoo generál egy kulcsot, és az adatbázisban tárolja. A beállításokban figyelmeztetés jelenik meg. Az adatbázisban tárolt kulcs az adatbázissal együtt elvész: éles környezetben használja a konfigurációs fájlt, és őrizzen egy másolatot a kulcsról biztos helyen. Ha a kulcs elvész, az összes kapcsolatot újra létre kell hozni."
+
+#: ../../content/applications/general/tracking_broker.rst:61
+msgid "Public URL"
+msgstr "Nyilvános URL"
+
+#: ../../content/applications/general/tracking_broker.rst:63
+msgid "In the :guilabel:`Public URL` setting, enter the public HTTPS address of the broker (for example `https://connect.example.com`). It is given to the instances. The **redirect URIs** to register at Google and Meta are displayed in the settings: the address followed by `/broker/google/callback` and `/broker/meta/callback`."
+msgstr "A :guilabel:`Nyilvános URL` beállításban adja meg a közvetítő nyilvános HTTPS-címét (például `https://connect.example.com`). Ezt kapják meg a példányok. A Google-nél és a Metánál regisztrálandó **átirányítási URI-k** megjelennek a beállításokban: a cím, amelyet a `/broker/google/callback` és a `/broker/meta/callback` követ."
+
+#: ../../content/applications/general/tracking_broker.rst:78
+msgid "Google"
+msgstr "Google"
+
+#: ../../content/applications/general/tracking_broker.rst:80
+msgid "In the Google Cloud console, create a project and enable the APIs that your customers use (Content API for Shopping and Merchant API, Google Ads API, Data Manager API, Search Console API, Business Profile APIs, Analytics Admin API)."
+msgstr "A Google Cloud konzolban hozzon létre egy projektet, és engedélyezze azokat az API-kat, amelyeket az ügyfelei használnak (Content API for Shopping és Merchant API, Google Ads API, Data Manager API, Search Console API, Business Profile APIs, Analytics Admin API)."
+
+#: ../../content/applications/general/tracking_broker.rst:83
+msgid "Configure the **OAuth consent screen** with the scopes that you allow, and create an OAuth client ID of type *Web application* with the Google redirect URI displayed in the settings."
+msgstr "Állítsa be az **OAuth hozzájárulási képernyőt** az Ön által engedélyezett hatókörökkel, és hozzon létre egy *Web application* típusú OAuth-ügyfélazonosítót a beállításokban megjelenő Google átirányítási URI-val."
+
+#: ../../content/applications/general/tracking_broker.rst:85
+msgid "Enter the :guilabel:`Broker Google Client ID` and the :guilabel:`Broker Google Client Secret` in the :guilabel:`OAuth Client` setting."
+msgstr "Adja meg a :guilabel:`Bróker Google-ügyfélazonosító` és a :guilabel:`Bróker Google-ügyfélkulcs` értékét az :guilabel:`OAuth-ügyfél` beállításban."
+
+#: ../../content/applications/general/tracking_broker.rst:87
+msgid "Check the :guilabel:`Allowed Google Scopes`: the scopes that the instances may request, separated by spaces. Any other request is refused."
+msgstr "Ellenőrizze az :guilabel:`Engedélyezett Google-hatókörök` értékét: azok a hatókörök, amelyeket a példányok kérhetnek, szóközzel elválasztva. Bármilyen más kérés elutasításra kerül."
+
+#: ../../content/applications/general/tracking_broker.rst:91
+msgid "Google must **verify** your application before people outside your organization can grant it sensitive scopes (Google Ads, Search Console, Business Profile, Merchant Center). Until it is verified, the application stays in *testing* mode and the authorizations expire after a few days."
+msgstr "A Google-nek **ellenőriznie** kell az alkalmazását, mielőtt a szervezetén kívüli személyek érzékeny hatóköröket (Google Ads, Search Console, Business Profile, Merchant Center) adhatnának neki. Az ellenőrzésig az alkalmazás *tesztelési* módban marad, és az engedélyek néhány nap után lejárnak."
+
+#: ../../content/applications/general/tracking_broker.rst:96
+msgid "Meta"
+msgstr "Meta"
+
+#: ../../content/applications/general/tracking_broker.rst:98
+msgid "In Meta for Developers, create an app of type **Business** and add the *Facebook Login for Business* product."
+msgstr "A Meta for Developers oldalon hozzon létre egy **Business** típusú alkalmazást, és adja hozzá a *Facebook Login for Business* terméket."
+
+#: ../../content/applications/general/tracking_broker.rst:100
+msgid "Add the Meta redirect URI displayed in the settings to the valid OAuth redirect URIs."
+msgstr "Adja hozzá a beállításokban megjelenő Meta átirányítási URI-t az érvényes OAuth-átirányítási URI-khoz."
+
+#: ../../content/applications/general/tracking_broker.rst:101
+msgid "Request the *advanced access* of the permissions that you allow (app review)."
+msgstr "Kérje az Ön által engedélyezett engedélyek *speciális hozzáférését* (alkalmazás-felülvizsgálat)."
+
+#: ../../content/applications/general/tracking_broker.rst:102
+msgid "Enter the :guilabel:`Broker Meta App ID`, the :guilabel:`Broker Meta App Secret`, and the :guilabel:`Broker Graph API Version` in the :guilabel:`Meta App` setting, and check the :guilabel:`Allowed Meta Permissions`."
+msgstr "Adja meg a :guilabel:`Bróker Meta-alkalmazásazonosító`, a :guilabel:`Bróker Meta-alkalmazás titkos kulcsa` és a :guilabel:`Bróker Graph API verzió` értékét a :guilabel:`Meta-alkalmazás` beállításban, és ellenőrizze az :guilabel:`Engedélyezett Meta-jogosultságok` értékét."
+
+#: ../../content/applications/general/tracking_broker.rst:107
+msgid "Register the instances"
+msgstr "A példányok regisztrálása"
+
+#: ../../content/applications/general/tracking_broker.rst:109
+msgid "Go to :menuselection:`Settings --> Tracking Broker --> Broker Instances`, and create **one record per customer database**:"
+msgstr "Lépjen a :menuselection:`Beállítások --> Követési bróker --> Bróker példányok` menüpontra, és hozzon létre **ügyféladatbázisonként egy rekordot**:"
+
+#: ../../content/applications/general/tracking_broker.rst:116
+msgid "Field"
+msgstr "Mező"
+
+#: ../../content/applications/general/tracking_broker.rst:117
+msgid "Description"
+msgstr "Leírás"
+
+#: ../../content/applications/general/tracking_broker.rst:118
+msgid ":guilabel:`Name` and :guilabel:`Customer`"
+msgstr ":guilabel:`Név` és :guilabel:`Ügyfél`"
+
+#: ../../content/applications/general/tracking_broker.rst:119
+msgid "To recognize the instance."
+msgstr "A példány azonosításához."
+
+#: ../../content/applications/general/tracking_broker.rst:120
+msgid ":guilabel:`Instance ID`"
+msgstr ":guilabel:`Példányazonosító`"
+
+#: ../../content/applications/general/tracking_broker.rst:121
+msgid "The identifier of the instance, generated by Odoo. Copy it."
+msgstr "A példány Odoo által generált azonosítója. Másolja ki."
+
+#: ../../content/applications/general/tracking_broker.rst:122
+msgid ":guilabel:`Broker URL`"
+msgstr ":guilabel:`Bróker URL`"
+
+#: ../../content/applications/general/tracking_broker.rst:123
+msgid "The address of the broker to give to the instance."
+msgstr "A közvetítő címe, amelyet a példánynak meg kell adni."
+
+#: ../../content/applications/general/tracking_broker.rst:124
+msgid ":guilabel:`Google` and :guilabel:`Meta`"
+msgstr ":guilabel:`Google` és :guilabel:`Meta`"
+
+#: ../../content/applications/general/tracking_broker.rst:125
+msgid "The providers that the instance may use."
+msgstr "A szolgáltatók, amelyeket a példány használhat."
+
+#: ../../content/applications/general/tracking_broker.rst:126
+msgid ":guilabel:`Allowed Hosts`"
+msgstr ":guilabel:`Engedélyezett hosztok`"
+
+#: ../../content/applications/general/tracking_broker.rst:127
+msgid "The host names of the websites of the instance, one per line (`www.example.com`, or `host:port`). The broker only redirects the administrators back to these hosts, which must use HTTPS (plain HTTP is accepted for `localhost`)."
+msgstr "A példány weboldalainak hosztnevei, soronként egy (`www.example.com` vagy `host:port`). A közvetítő csak ezekre a hosztokra irányítja vissza az adminisztrátorokat, amelyeknek HTTPS-t kell használniuk (a sima HTTP a `localhost` esetén elfogadott)."
+
+#: ../../content/applications/general/tracking_broker.rst:131
+msgid "Click :guilabel:`Show Secret`. A window displays the :guilabel:`Broker URL`, the :guilabel:`Instance ID`, and the **secret**. **The secret is displayed only once**: copy the three values and send them securely to the administrator of the instance. If the secret is lost, click :guilabel:`Generate New Secret`; the instance must then be updated."
+msgstr "Kattintson a :guilabel:`Titkos kulcs megjelenítése` gombra. Egy ablak megjeleníti a :guilabel:`Bróker URL`, az :guilabel:`Példányazonosító` és a **titok** értékét. **A titok csak egyszer jelenik meg**: másolja ki a három értéket, és biztonságosan küldje el a példány adminisztrátorának. Ha a titok elveszik, kattintson a :guilabel:`Új titkos kulcs generálása` gombra; a példányt ekkor frissíteni kell."
+
+#: ../../content/applications/general/tracking_broker.rst:136
+msgid "The administrator of the instance enters the three values in :menuselection:`Website --> Configuration --> Settings --> Tracking --> Connection Broker`. See :ref:`tracking/connections/broker-setting`."
+msgstr "A példány adminisztrátora a három értéket a :menuselection:`Weboldal --> Konfiguráció --> Beállítások --> Követés --> Kapcsolódási bróker` helyen adja meg. Lásd: :ref:`tracking/connections/broker-setting`."
+
+#: ../../content/applications/general/tracking_broker.rst:150
+msgid "Follow and revoke the connections"
+msgstr "A kapcsolatok követése és visszavonása"
+
+#: ../../content/applications/general/tracking_broker.rst:152
+msgid ":menuselection:`Settings --> Tracking Broker --> Broker Grants` lists the connections made through the broker: the instance, the provider, the connected account, the last use, and the status."
+msgstr "A :menuselection:`Beállítások --> Követési bróker --> Bróker engedélyek` felsorolja a közvetítőn keresztül létesített kapcsolatokat: a példányt, a szolgáltatót, a csatlakoztatott fiókot, az utolsó használatot és az állapotot."
+
+#: ../../content/applications/general/tracking_broker.rst:159
+msgid "Status"
+msgstr "Állapot"
+
+#: ../../content/applications/general/tracking_broker.rst:160
+msgid "Meaning"
+msgstr "Jelentés"
+
+#: ../../content/applications/general/tracking_broker.rst:161
+msgid ":guilabel:`Pending`"
+msgstr ":guilabel:`Függőben`"
+
+#: ../../content/applications/general/tracking_broker.rst:162
+msgid "The administrator came back from the consent screen, but the instance did not redeem the code yet. The grants that are not redeemed in ten minutes are deleted."
+msgstr "Az adminisztrátor visszatért a hozzájárulási képernyőről, de a példány még nem váltotta be a kódot. A tíz percen belül be nem váltott engedélyek törlődnek."
+
+#: ../../content/applications/general/tracking_broker.rst:164
+msgid ":guilabel:`Active`"
+msgstr ":guilabel:`Aktív`"
+
+#: ../../content/applications/general/tracking_broker.rst:165
+msgid "The instance uses the grant."
+msgstr "A példány használja az engedélyt."
+
+#: ../../content/applications/general/tracking_broker.rst:166
+msgid ":guilabel:`Error`"
+msgstr ":guilabel:`Hiba`"
+
+#: ../../content/applications/general/tracking_broker.rst:167
+msgid "The broker cannot get a token anymore (access revoked by the user, expired Meta token). The administrator of the instance has to reconnect. The reason is displayed in :guilabel:`Last Error`."
+msgstr "A közvetítő már nem tud tokent szerezni (a felhasználó visszavonta a hozzáférést, lejárt Meta-token). A példány adminisztrátorának újra kell csatlakoznia. Az ok a :guilabel:`Utolsó hiba` mezőben látható."
+
+#: ../../content/applications/general/tracking_broker.rst:170
+msgid ":guilabel:`Revoked`"
+msgstr ":guilabel:`Visszavonva`"
+
+#: ../../content/applications/general/tracking_broker.rst:171
+msgid "Disconnected by the instance or by you."
+msgstr "A példány vagy Ön szétkapcsolta."
+
+#: ../../content/applications/general/tracking_broker.rst:173
+msgid "Click :guilabel:`Revoke` on a grant to disconnect it. The authorization is also revoked at Google or Meta, unless another grant uses the same account."
+msgstr "Kattintson egy engedélyen a :guilabel:`Visszavonás` gombra a szétkapcsolásához. Az engedély a Google-nél vagy a Metánál is visszavonásra kerül, kivéve, ha egy másik engedély ugyanazt a fiókot használja."
+
+#: ../../content/applications/general/tracking_broker.rst:177
+msgid "A Meta token lasts about 60 days. The broker extends it automatically when it is used during the last seven days and Meta allows it. If the token expired before, or if Meta refuses, the status turns to :guilabel:`Error` and the administrator of the instance has to click :guilabel:`Reconnect`."
+msgstr "Egy Meta-token körülbelül 60 napig érvényes. A közvetítő automatikusan meghosszabbítja, ha az utolsó hét napban használják, és a Meta engedi. Ha a token korábban lejárt, vagy ha a Meta elutasítja, az állapot :guilabel:`Hiba` értékre vált, és a példány adminisztrátorának a :guilabel:`Újracsatlakozás` gombra kell kattintania."
+
+#: ../../content/applications/general/tracking_broker.rst:183
+msgid "Security"
+msgstr "Biztonság"
+
+#: ../../content/applications/general/tracking_broker.rst:185
+msgid "Each request of an instance is **signed** with its secret. A request with a wrong signature, an unknown instance, or a provider that is not allowed is refused, and the number of requests is limited."
+msgstr "A példány minden kérése a titkával **alá van írva**. A hibás aláírású kérés, az ismeretlen példány vagy a nem engedélyezett szolgáltató elutasításra kerül, és a kérések száma korlátozott."
+
+#: ../../content/applications/general/tracking_broker.rst:188
+msgid "The broker only redirects to the allowed hosts of the instance, and only the allowed scopes are requested."
+msgstr "A közvetítő csak a példány engedélyezett hosztjaira irányít át, és csak az engedélyezett hatóköröket kéri."
+
+#: ../../content/applications/general/tracking_broker.rst:190
+msgid "The instances receive access tokens that last a few minutes (Google) or the long-lived token needed for the call (Meta); the refresh tokens stay encrypted in the broker."
+msgstr "A példányok néhány percig érvényes hozzáférési tokeneket (Google) vagy a híváshoz szükséges hosszú élettartamú tokent (Meta) kapnak; a frissítő tokenek titkosítva maradnak a közvetítőben."
+
+#: ../../content/applications/general/tracking_broker.rst:192
+msgid "Treat the broker as a sensitive system: restrict the access to its database, use HTTPS only, and back up the encryption key."
+msgstr "Kezelje a közvetítőt érzékeny rendszerként: korlátozza az adatbázisához való hozzáférést, kizárólag HTTPS-t használjon, és készítsen biztonsági másolatot a titkosítási kulcsról."
+
+#: ../../content/applications/general/tracking_broker.rst:196
+msgid ":doc:`/applications/websites/website/tracking/connections`"
+msgstr ":doc:`/applications/websites/website/tracking/connections`"
+
+#: ../../content/applications/general/tracking_broker.rst:197
+msgid ":doc:`/applications/websites/google/connection`"
+msgstr ":doc:`/applications/websites/google/connection`"
+
+#: ../../content/applications/general/tracking_broker.rst:198
+msgid ":doc:`/applications/websites/meta/connection`"
+msgstr ":doc:`/applications/websites/meta/connection`"
+
 #: ../../content/applications/general/users.rst:60
 msgid "Users can also be invited quickly by entering their email addresses in the :guilabel:`Invite New Users` field of the :guilabel:`Users` section in the :menuselection:`Settings` app, then clicking :guilabel:`Invite`."
 msgstr "Felhasználókat gyorsan is meghívhat: írja be az e-mail címüket a :menuselection:`Beállítások` alkalmazás :guilabel:`Felhasználók` szakaszának :guilabel:`Új felhasználók meghívása` mezőjébe, majd kattintson a :guilabel:`Meghívás` gombra."

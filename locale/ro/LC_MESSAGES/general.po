@@ -13350,6 +13350,499 @@ msgstr ""
 "Aplicațiile Unsplash noi sunt în modul *demo*, limitate la 50 de cereri "
 "Unsplash pe oră, până când sunt aprobate pentru producție de către Unsplash."
 
+#: ../../content/applications/general/tracking_broker.rst:3
+msgid "Connection broker for Google and Meta"
+msgstr "Broker de conexiune pentru Google și Meta"
+
+#: ../../content/applications/general/tracking_broker.rst:5
+msgid ""
+"A **connection broker** is a central Odoo database that owns **one** "
+"verified Google OAuth client and **one** Meta app, and lets many other Odoo "
+"databases (the *instances*) connect to Google and Meta accounts through it. "
+"The instances do not create any app at Google or Meta: their administrators "
+"just click :guilabel:`Connect`."
+msgstr ""
+"Un **broker de conexiune** (connection broker) este o bază de date Odoo "
+"centrală care deține **un singur** client OAuth Google verificat și **o "
+"singură** aplicație Meta și permite mai multor baze de date Odoo "
+"(*instanțele*) să se conecteze prin el la conturi Google și Meta. Instanțele"
+" nu creează nicio aplicație la Google sau Meta: administratorii lor doar fac"
+" clic pe :guilabel:`Conectează`."
+
+#: ../../content/applications/general/tracking_broker.rst:10
+msgid ""
+"This page is for the administrators of a company that **offers** the "
+"connection as a service to several databases, for example an integrator who "
+"manages the databases of its customers. If you only use the Google or Meta "
+"app in your own database, read "
+":doc:`/applications/websites/website/tracking/connections` instead."
+msgstr ""
+"Această pagină este destinată administratorilor unei companii care **oferă**"
+" conexiunea ca serviciu mai multor baze de date, de exemplu un integrator "
+"care administrează bazele de date ale clienților săi. Dacă folosiți "
+"aplicația Google sau Meta doar în propria bază de date, citiți în schimb "
+":doc:`/applications/websites/website/tracking/connections`."
+
+#: ../../content/applications/general/tracking_broker.rst:16
+msgid ""
+"The broker is a separate database, installed only once. Do not install it on"
+" the databases that use the Google and Meta apps. Install *Website Tracking "
+"Connection Broker* from :menuselection:`Apps` in the central database."
+msgstr ""
+"Brokerul este o bază de date separată, instalată o singură dată. Nu îl "
+"instalați pe bazele de date care folosesc aplicațiile Google și Meta. "
+"Instalați *Website Tracking Connection Broker* din "
+":menuselection:`Aplicații` în baza de date centrală."
+
+#: ../../content/applications/general/tracking_broker.rst:21
+msgid "How it works"
+msgstr "Cum funcționează"
+
+#: ../../content/applications/general/tracking_broker.rst:23
+msgid ""
+"The administrator of an instance clicks :guilabel:`Connect` on a connection "
+"in :guilabel:`Broker service` mode."
+msgstr ""
+"Administratorul unei instanțe face clic pe :guilabel:`Conectează` la o "
+"conexiune în modul :guilabel:`Serviciu broker`."
+
+#: ../../content/applications/general/tracking_broker.rst:25
+msgid ""
+"The instance sends the administrator to the broker with a **signed "
+"request**. The broker checks the instance, the signature, the return "
+"address, and the requested permissions, then redirects the administrator to "
+"the consent screen of Google or Meta."
+msgstr ""
+"Instanța trimite administratorul la broker cu o **cerere semnată**. Brokerul"
+" verifică instanța, semnătura, adresa de întoarcere și permisiunile "
+"solicitate, apoi redirecționează administratorul către ecranul de "
+"consimțământ Google sau Meta."
+
+#: ../../content/applications/general/tracking_broker.rst:28
+msgid ""
+"After the consent, the broker keeps the long-lived secret of the account "
+"(the Google refresh token or the Meta long-lived token) **encrypted**, and "
+"sends the administrator back to the instance with a one-time code that is "
+"valid for ten minutes."
+msgstr ""
+"După consimțământ, brokerul păstrează **criptat** secretul pe termen lung al"
+" contului (tokenul de reîmprospătare Google sau tokenul Meta de lungă "
+"durată) și trimite administratorul înapoi la instanță cu un cod de unică "
+"folosință valabil zece minute."
+
+#: ../../content/applications/general/tracking_broker.rst:31
+msgid ""
+"The instance redeems the code. From then on, it asks the broker for **short-"
+"lived access tokens** when it needs to call Google or Meta. The long-lived "
+"secrets never leave the broker."
+msgstr ""
+"Instanța valorifică codul. De atunci, cere brokerului **tokenuri de acces de"
+" scurtă durată** când trebuie să apeleze Google sau Meta. Secretele de lungă"
+" durată nu părăsesc niciodată brokerul."
+
+#: ../../content/applications/general/tracking_broker.rst:34
+msgid ""
+"The broker never reads the data of the instances: it only holds the "
+"authorizations."
+msgstr ""
+"Brokerul nu citește niciodată datele instanțelor: păstrează doar "
+"autorizările."
+
+#: ../../content/applications/general/tracking_broker.rst:37
+msgid "Set up the broker"
+msgstr "Configurarea brokerului"
+
+#: ../../content/applications/general/tracking_broker.rst:39
+msgid ""
+"Go to :menuselection:`Settings --> Tracking Broker --> Settings`. All the "
+"settings below are available to administrators only."
+msgstr ""
+"Mergeți la :menuselection:`Setări --> Broker de urmărire --> Setări`. Toate "
+"setările de mai jos sunt disponibile doar administratorilor."
+
+#: ../../content/applications/general/tracking_broker.rst:43
+msgid "Encryption key"
+msgstr "Cheie de criptare"
+
+#: ../../content/applications/general/tracking_broker.rst:45
+msgid ""
+"The tokens are stored encrypted with a key. Generate a key and add it to the"
+" server configuration file:"
+msgstr ""
+"Tokenurile sunt stocate criptate cu o cheie. Generați o cheie și adăugați-o "
+"în fișierul de configurare al serverului:"
+
+#: ../../content/applications/general/tracking_broker.rst:51
+msgid ""
+"You can list several keys separated by commas: the first one encrypts, all "
+"of them decrypt. This lets you rotate the key. The :guilabel:`Token "
+"Encryption` setting shows the :guilabel:`Encryption Key Status`."
+msgstr ""
+"Puteți enumera mai multe chei separate prin virgule: prima criptează, toate "
+"decriptează. Aceasta vă permite să rotiți cheia. Setarea "
+":guilabel:`Criptarea tokenurilor` afișează :guilabel:`Starea cheii de "
+"criptare`."
+
+#: ../../content/applications/general/tracking_broker.rst:55
+msgid ""
+"Without the option in the configuration file, Odoo generates a key and keeps"
+" it in the database. A warning is displayed in the settings. A key stored in"
+" the database is lost with it: use the configuration file in production, and"
+" keep a copy of the key in a safe place. If the key is lost, all the "
+"connections must be made again."
+msgstr ""
+"Fără opțiunea din fișierul de configurare, Odoo generează o cheie și o "
+"păstrează în baza de date. În setări este afișat un avertisment. O cheie "
+"stocată în baza de date se pierde odată cu aceasta: folosiți fișierul de "
+"configurare în producție și păstrați o copie a cheii într-un loc sigur. Dacă"
+" cheia se pierde, toate conexiunile trebuie refăcute."
+
+#: ../../content/applications/general/tracking_broker.rst:61
+msgid "Public URL"
+msgstr "URL public"
+
+#: ../../content/applications/general/tracking_broker.rst:63
+msgid ""
+"In the :guilabel:`Public URL` setting, enter the public HTTPS address of the"
+" broker (for example `https://connect.example.com`). It is given to the "
+"instances. The **redirect URIs** to register at Google and Meta are "
+"displayed in the settings: the address followed by `/broker/google/callback`"
+" and `/broker/meta/callback`."
+msgstr ""
+"În setarea :guilabel:`URL public`, introduceți adresa HTTPS publică a "
+"brokerului (de exemplu `https://connect.example.com`). Aceasta este dată "
+"instanțelor. **URI-urile de redirecționare** de înregistrat la Google și "
+"Meta sunt afișate în setări: adresa urmată de `/broker/google/callback` și "
+"`/broker/meta/callback`."
+
+#: ../../content/applications/general/tracking_broker.rst:78
+msgid "Google"
+msgstr "Google"
+
+#: ../../content/applications/general/tracking_broker.rst:80
+msgid ""
+"In the Google Cloud console, create a project and enable the APIs that your "
+"customers use (Content API for Shopping and Merchant API, Google Ads API, "
+"Data Manager API, Search Console API, Business Profile APIs, Analytics Admin"
+" API)."
+msgstr ""
+"În consola Google Cloud, creați un proiect și activați API-urile folosite de"
+" clienții dumneavoastră (Content API for Shopping și Merchant API, Google "
+"Ads API, Data Manager API, Search Console API, Business Profile APIs, "
+"Analytics Admin API)."
+
+#: ../../content/applications/general/tracking_broker.rst:83
+msgid ""
+"Configure the **OAuth consent screen** with the scopes that you allow, and "
+"create an OAuth client ID of type *Web application* with the Google redirect"
+" URI displayed in the settings."
+msgstr ""
+"Configurați **ecranul de consimțământ OAuth** cu domeniile pe care le "
+"permiteți și creați un ID de client OAuth de tip *Web application* cu URI-ul"
+" de redirecționare Google afișat în setări."
+
+#: ../../content/applications/general/tracking_broker.rst:85
+msgid ""
+"Enter the :guilabel:`Broker Google Client ID` and the :guilabel:`Broker "
+"Google Client Secret` in the :guilabel:`OAuth Client` setting."
+msgstr ""
+"Introduceți :guilabel:`ID client Google al brokerului` și :guilabel:`Secret "
+"client Google al brokerului` în setarea :guilabel:`Client OAuth`."
+
+#: ../../content/applications/general/tracking_broker.rst:87
+msgid ""
+"Check the :guilabel:`Allowed Google Scopes`: the scopes that the instances "
+"may request, separated by spaces. Any other request is refused."
+msgstr ""
+"Verificați :guilabel:`Domenii Google permise`: domeniile pe care instanțele "
+"le pot solicita, separate prin spații. Orice altă cerere este refuzată."
+
+#: ../../content/applications/general/tracking_broker.rst:91
+msgid ""
+"Google must **verify** your application before people outside your "
+"organization can grant it sensitive scopes (Google Ads, Search Console, "
+"Business Profile, Merchant Center). Until it is verified, the application "
+"stays in *testing* mode and the authorizations expire after a few days."
+msgstr ""
+"Google trebuie să **verifice** aplicația dumneavoastră înainte ca persoanele"
+" din afara organizației să îi poată acorda domenii sensibile (Google Ads, "
+"Search Console, Business Profile, Merchant Center). Până la verificare, "
+"aplicația rămâne în modul *testing*, iar autorizările expiră după câteva "
+"zile."
+
+#: ../../content/applications/general/tracking_broker.rst:96
+msgid "Meta"
+msgstr "Meta"
+
+#: ../../content/applications/general/tracking_broker.rst:98
+msgid ""
+"In Meta for Developers, create an app of type **Business** and add the "
+"*Facebook Login for Business* product."
+msgstr ""
+"În Meta for Developers, creați o aplicație de tip **Business** și adăugați "
+"produsul *Facebook Login for Business*."
+
+#: ../../content/applications/general/tracking_broker.rst:100
+msgid ""
+"Add the Meta redirect URI displayed in the settings to the valid OAuth "
+"redirect URIs."
+msgstr ""
+"Adăugați URI-ul de redirecționare Meta afișat în setări la URI-urile de "
+"redirecționare OAuth valide."
+
+#: ../../content/applications/general/tracking_broker.rst:101
+msgid ""
+"Request the *advanced access* of the permissions that you allow (app "
+"review)."
+msgstr ""
+"Solicitați *accesul avansat* pentru permisiunile pe care le permiteți "
+"(revizuirea aplicației)."
+
+#: ../../content/applications/general/tracking_broker.rst:102
+msgid ""
+"Enter the :guilabel:`Broker Meta App ID`, the :guilabel:`Broker Meta App "
+"Secret`, and the :guilabel:`Broker Graph API Version` in the :guilabel:`Meta"
+" App` setting, and check the :guilabel:`Allowed Meta Permissions`."
+msgstr ""
+"Introduceți :guilabel:`ID aplicație Meta a brokerului`, :guilabel:`Secretul "
+"aplicației Meta a brokerului` și :guilabel:`Versiunea Graph API a "
+"brokerului` în setarea :guilabel:`Aplicație Meta` și verificați "
+":guilabel:`Permisiuni Meta permise`."
+
+#: ../../content/applications/general/tracking_broker.rst:107
+msgid "Register the instances"
+msgstr "Înregistrarea instanțelor"
+
+#: ../../content/applications/general/tracking_broker.rst:109
+msgid ""
+"Go to :menuselection:`Settings --> Tracking Broker --> Broker Instances`, "
+"and create **one record per customer database**:"
+msgstr ""
+"Mergeți la :menuselection:`Setări --> Broker de urmărire --> Instanțe "
+"broker` și creați **câte o înregistrare pentru fiecare bază de date a "
+"clientului**:"
+
+#: ../../content/applications/general/tracking_broker.rst:116
+msgid "Field"
+msgstr "Câmp"
+
+#: ../../content/applications/general/tracking_broker.rst:117
+msgid "Description"
+msgstr "Descriere"
+
+#: ../../content/applications/general/tracking_broker.rst:118
+msgid ":guilabel:`Name` and :guilabel:`Customer`"
+msgstr ":guilabel:`Nume` și :guilabel:`Client`"
+
+#: ../../content/applications/general/tracking_broker.rst:119
+msgid "To recognize the instance."
+msgstr "Pentru a recunoaște instanța."
+
+#: ../../content/applications/general/tracking_broker.rst:120
+msgid ":guilabel:`Instance ID`"
+msgstr ":guilabel:`ID instanță`"
+
+#: ../../content/applications/general/tracking_broker.rst:121
+msgid "The identifier of the instance, generated by Odoo. Copy it."
+msgstr "Identificatorul instanței, generat de Odoo. Copiați-l."
+
+#: ../../content/applications/general/tracking_broker.rst:122
+msgid ":guilabel:`Broker URL`"
+msgstr ":guilabel:`URL broker`"
+
+#: ../../content/applications/general/tracking_broker.rst:123
+msgid "The address of the broker to give to the instance."
+msgstr "Adresa brokerului de dat instanței."
+
+#: ../../content/applications/general/tracking_broker.rst:124
+msgid ":guilabel:`Google` and :guilabel:`Meta`"
+msgstr ":guilabel:`Google` și :guilabel:`Meta`"
+
+#: ../../content/applications/general/tracking_broker.rst:125
+msgid "The providers that the instance may use."
+msgstr "Furnizorii pe care instanța îi poate folosi."
+
+#: ../../content/applications/general/tracking_broker.rst:126
+msgid ":guilabel:`Allowed Hosts`"
+msgstr ":guilabel:`Gazde permise`"
+
+#: ../../content/applications/general/tracking_broker.rst:127
+msgid ""
+"The host names of the websites of the instance, one per line "
+"(`www.example.com`, or `host:port`). The broker only redirects the "
+"administrators back to these hosts, which must use HTTPS (plain HTTP is "
+"accepted for `localhost`)."
+msgstr ""
+"Numele de gazdă ale site-urilor web ale instanței, câte unul pe linie "
+"(`www.example.com` sau `host:port`). Brokerul redirecționează "
+"administratorii înapoi doar către aceste gazde, care trebuie să folosească "
+"HTTPS (HTTP simplu este acceptat pentru `localhost`)."
+
+#: ../../content/applications/general/tracking_broker.rst:131
+msgid ""
+"Click :guilabel:`Show Secret`. A window displays the :guilabel:`Broker URL`,"
+" the :guilabel:`Instance ID`, and the **secret**. **The secret is displayed "
+"only once**: copy the three values and send them securely to the "
+"administrator of the instance. If the secret is lost, click "
+":guilabel:`Generate New Secret`; the instance must then be updated."
+msgstr ""
+"Faceți clic pe :guilabel:`Afișează secretul`. O fereastră afișează "
+":guilabel:`URL broker`, :guilabel:`ID instanță` și **secretul**. **Secretul "
+"este afișat o singură dată**: copiați cele trei valori și trimiteți-le în "
+"siguranță administratorului instanței. Dacă secretul se pierde, faceți clic "
+"pe :guilabel:`Generează un secret nou`; instanța trebuie apoi actualizată."
+
+#: ../../content/applications/general/tracking_broker.rst:136
+msgid ""
+"The administrator of the instance enters the three values in "
+":menuselection:`Website --> Configuration --> Settings --> Tracking --> "
+"Connection Broker`. See :ref:`tracking/connections/broker-setting`."
+msgstr ""
+"Administratorul instanței introduce cele trei valori în :menuselection:`Site"
+" web --> Configurare --> Setări --> Urmărire --> Broker de conectare`. Vezi "
+":ref:`tracking/connections/broker-setting`."
+
+#: ../../content/applications/general/tracking_broker.rst:150
+msgid "Follow and revoke the connections"
+msgstr "Urmărirea și revocarea conexiunilor"
+
+#: ../../content/applications/general/tracking_broker.rst:152
+msgid ""
+":menuselection:`Settings --> Tracking Broker --> Broker Grants` lists the "
+"connections made through the broker: the instance, the provider, the "
+"connected account, the last use, and the status."
+msgstr ""
+":menuselection:`Setări --> Broker de urmărire --> Autorizări broker` "
+"listează conexiunile făcute prin broker: instanța, furnizorul, contul "
+"conectat, ultima utilizare și starea."
+
+#: ../../content/applications/general/tracking_broker.rst:159
+msgid "Status"
+msgstr "Stare"
+
+#: ../../content/applications/general/tracking_broker.rst:160
+msgid "Meaning"
+msgstr "Semnificație"
+
+#: ../../content/applications/general/tracking_broker.rst:161
+msgid ":guilabel:`Pending`"
+msgstr ":guilabel:`În așteptare`"
+
+#: ../../content/applications/general/tracking_broker.rst:162
+msgid ""
+"The administrator came back from the consent screen, but the instance did "
+"not redeem the code yet. The grants that are not redeemed in ten minutes are"
+" deleted."
+msgstr ""
+"Administratorul s-a întors de la ecranul de consimțământ, dar instanța nu a "
+"valorificat încă codul. Autorizările nevalorificate în zece minute sunt "
+"șterse."
+
+#: ../../content/applications/general/tracking_broker.rst:164
+msgid ":guilabel:`Active`"
+msgstr ":guilabel:`Activ`"
+
+#: ../../content/applications/general/tracking_broker.rst:165
+msgid "The instance uses the grant."
+msgstr "Instanța folosește autorizarea."
+
+#: ../../content/applications/general/tracking_broker.rst:166
+msgid ":guilabel:`Error`"
+msgstr ":guilabel:`Eroare`"
+
+#: ../../content/applications/general/tracking_broker.rst:167
+msgid ""
+"The broker cannot get a token anymore (access revoked by the user, expired "
+"Meta token). The administrator of the instance has to reconnect. The reason "
+"is displayed in :guilabel:`Last Error`."
+msgstr ""
+"Brokerul nu mai poate obține un token (acces revocat de utilizator, token "
+"Meta expirat). Administratorul instanței trebuie să se reconecteze. Motivul "
+"este afișat în :guilabel:`Ultima eroare`."
+
+#: ../../content/applications/general/tracking_broker.rst:170
+msgid ":guilabel:`Revoked`"
+msgstr ":guilabel:`Revocată`"
+
+#: ../../content/applications/general/tracking_broker.rst:171
+msgid "Disconnected by the instance or by you."
+msgstr "Deconectat de instanță sau de dumneavoastră."
+
+#: ../../content/applications/general/tracking_broker.rst:173
+msgid ""
+"Click :guilabel:`Revoke` on a grant to disconnect it. The authorization is "
+"also revoked at Google or Meta, unless another grant uses the same account."
+msgstr ""
+"Faceți clic pe :guilabel:`Revocă` la o autorizare pentru a o deconecta. "
+"Autorizarea este revocată și la Google sau Meta, cu excepția cazului în care"
+" o altă autorizare folosește același cont."
+
+#: ../../content/applications/general/tracking_broker.rst:177
+msgid ""
+"A Meta token lasts about 60 days. The broker extends it automatically when "
+"it is used during the last seven days and Meta allows it. If the token "
+"expired before, or if Meta refuses, the status turns to :guilabel:`Error` "
+"and the administrator of the instance has to click :guilabel:`Reconnect`."
+msgstr ""
+"Un token Meta durează aproximativ 60 de zile. Brokerul îl prelungește "
+"automat când este folosit în ultimele șapte zile și Meta permite acest "
+"lucru. Dacă tokenul a expirat mai devreme sau dacă Meta refuză, starea "
+"devine :guilabel:`Eroare`, iar administratorul instanței trebuie să facă "
+"clic pe :guilabel:`Reconectează`."
+
+#: ../../content/applications/general/tracking_broker.rst:183
+msgid "Security"
+msgstr "Securitate"
+
+#: ../../content/applications/general/tracking_broker.rst:185
+msgid ""
+"Each request of an instance is **signed** with its secret. A request with a "
+"wrong signature, an unknown instance, or a provider that is not allowed is "
+"refused, and the number of requests is limited."
+msgstr ""
+"Fiecare cerere a unei instanțe este **semnată** cu secretul acesteia. O "
+"cerere cu semnătură greșită, o instanță necunoscută sau un furnizor nepermis"
+" este refuzată, iar numărul de cereri este limitat."
+
+#: ../../content/applications/general/tracking_broker.rst:188
+msgid ""
+"The broker only redirects to the allowed hosts of the instance, and only the"
+" allowed scopes are requested."
+msgstr ""
+"Brokerul redirecționează doar către gazdele permise ale instanței și sunt "
+"solicitate doar domeniile permise."
+
+#: ../../content/applications/general/tracking_broker.rst:190
+msgid ""
+"The instances receive access tokens that last a few minutes (Google) or the "
+"long-lived token needed for the call (Meta); the refresh tokens stay "
+"encrypted in the broker."
+msgstr ""
+"Instanțele primesc tokenuri de acces care durează câteva minute (Google) sau"
+" tokenul de lungă durată necesar apelului (Meta); tokenurile de "
+"reîmprospătare rămân criptate în broker."
+
+#: ../../content/applications/general/tracking_broker.rst:192
+msgid ""
+"Treat the broker as a sensitive system: restrict the access to its database,"
+" use HTTPS only, and back up the encryption key."
+msgstr ""
+"Tratați brokerul ca pe un sistem sensibil: restricționați accesul la baza sa"
+" de date, folosiți doar HTTPS și faceți o copie de rezervă a cheii de "
+"criptare."
+
+#: ../../content/applications/general/tracking_broker.rst:196
+msgid ":doc:`/applications/websites/website/tracking/connections`"
+msgstr ":doc:`/applications/websites/website/tracking/connections`"
+
+#: ../../content/applications/general/tracking_broker.rst:197
+msgid ":doc:`/applications/websites/google/connection`"
+msgstr ":doc:`/applications/websites/google/connection`"
+
+#: ../../content/applications/general/tracking_broker.rst:198
+msgid ":doc:`/applications/websites/meta/connection`"
+msgstr ":doc:`/applications/websites/meta/connection`"
+
 #: ../../content/applications/general/users.rst:9
 msgid ""
 "Odoo defines a *user* as someone who has access to a database. An "

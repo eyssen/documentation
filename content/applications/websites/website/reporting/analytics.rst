@@ -129,63 +129,13 @@ To follow your Odoo website's traffic with Google Analytics:
 Google Tag Manager
 ==================
 
-Google Tag Manager is a tag management system that allows you to easily update
-measurement codes and related code fragments, collectively known as tags on your website or mobile
-app, directly through the code injector.
+Google Tag Manager is a tag management system that allows you to update measurement codes and other
+marketing tags on your website without changing its code.
 
-.. note::
-   :abbr:`GTM (Google Tag Manager)` is not an analytics tool and does not offer reporting features;
-   it is used to collect data and works alongside Google Analytics to provide more detailed
-   insights. In order to use GTM properly, it is recommended to configure Google Analytics as well.
-
-   For more information refer to the `documentation on linking Google Analytics and
-   Google Tag Manager <https://support.google.com/tagmanager/answer/9442095?hl=en>`_.
-
-.. warning::
-   - Some GTM tags use data layers (e.g., advanced eCommerce tracking data layers) to retrieve
-     variables and send them to Google Analytics. Data layers are currently not managed in Odoo.
-   - Google Tag Manager may not be compliant with local data protection regulations.
-
-To configure GTM, proceed as follows:
-
-#. Create or sign in to a Google account by going to https://tagmanager.google.com/.
-
-#. In the :guilabel:`Accounts` tab, click :guilabel:`Create Account`.
-
-#. Enter an :guilabel:`Account Name` and select the account's :guilabel:`Country`.
-
-#. Enter your website's URL in the :guilabel:`Container name` field and select the :guilabel:`Target
-   platform`.
-
-#. Click :guilabel:`Create` and agree to the Terms of Service.
-
-#. Copy the `<head>` and `<body>` codes from the popup window. Then, go to your website, click
-   :guilabel:`Edit`, go to the :guilabel:`Theme` tab, scroll down to the
-   :guilabel:`Advanced` section, then click :guilabel:`<head>` and :guilabel:`</body>` next to
-   :guilabel:`Code Injection` to paste the codes.
-
-   .. screenshot:: website-analytics-gtm-codes
-      :menu: (Google Tag Manager)
-      :shows: The Google Tag Manager install instructions showing the two code snippets to copy into the website's <head> and <body>.
-      :highlight: The two code snippets (red frame).
-      :data: Use a throw-away container ID.
-      :module: website_google_analytics
-      :notes: English UI, light theme, 1440px width.
-
-.. tip::
-   With the *Odoo Google Tag Manager* module (`website_google_tag`) installed, the container script
-   does not have to be injected by hand. Go to :menuselection:`Website --> Configuration -->
-   Settings`, enable :guilabel:`Google Tag Manager` under the Google Analytics setting, and enter
-   the :guilabel:`Container ID` (e.g., `GTM-XXXXXXX`). The tag is then inserted on every page of
-   that website, and the setting is per website, so each website can use its own container.
-
-   .. screenshot:: website-analytics-gtm-container-id
-      :menu: Website ‣ Configuration ‣ Settings
-      :shows: The Website settings page with the Google Tag Manager setting enabled and the Container ID field filled in, right below the Google Analytics setting.
-      :highlight: The Google Tag Manager setting and its Container ID field (red frame).
-      :data: Use a throw-away container ID.
-      :module: website_google_tag
-      :notes: English UI, light theme, 1440px width, crop to the setting.
+The *Google* app inserts your Tag Manager container on every page of the website, with the consent of
+the visitors, and fills the data layer with the eCommerce and lead events. Install the *Google* app,
+then enter the :guilabel:`Container ID` in :menuselection:`Google --> Configuration --> Settings`. See
+:doc:`/applications/websites/google/tags` for the details.
 
 .. note::
    The data is collected in the marketing tools used to monitor the website (e.g., Google Analytics,

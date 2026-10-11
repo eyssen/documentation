@@ -8225,6 +8225,274 @@ msgstr "Para usar imágenes de Unsplash, se requiere una clave de acceso de Unsp
 msgid "New Unsplash applications are in *demo* mode, limited to 50 Unsplash requests per hour, until they are approved for production by Unsplash."
 msgstr "Las nuevas aplicaciones de Unsplash están en modo *demo*, limitadas a 50 solicitudes de Unsplash por hora, hasta que Unsplash las apruebe para producción."
 
+#: ../../content/applications/general/tracking_broker.rst:3
+msgid "Connection broker for Google and Meta"
+msgstr "Intermediario de conexión para Google y Meta"
+
+#: ../../content/applications/general/tracking_broker.rst:5
+msgid "A **connection broker** is a central Odoo database that owns **one** verified Google OAuth client and **one** Meta app, and lets many other Odoo databases (the *instances*) connect to Google and Meta accounts through it. The instances do not create any app at Google or Meta: their administrators just click :guilabel:`Connect`."
+msgstr "Un **intermediario de conexión** (connection broker) es una base de datos Odoo central que posee **un** cliente OAuth de Google verificado y **una** aplicación de Meta, y permite que muchas otras bases de datos Odoo (las *instancias*) se conecten a cuentas de Google y Meta a través de él. Las instancias no crean ninguna aplicación en Google ni en Meta: sus administradores solo hacen clic en :guilabel:`Conectar`."
+
+#: ../../content/applications/general/tracking_broker.rst:10
+msgid "This page is for the administrators of a company that **offers** the connection as a service to several databases, for example an integrator who manages the databases of its customers. If you only use the Google or Meta app in your own database, read :doc:`/applications/websites/website/tracking/connections` instead."
+msgstr "Esta página es para los administradores de una empresa que **ofrece** la conexión como servicio a varias bases de datos, por ejemplo un integrador que gestiona las bases de datos de sus clientes. Si solo usa la aplicación Google o Meta en su propia base de datos, lea en su lugar :doc:`/applications/websites/website/tracking/connections`."
+
+#: ../../content/applications/general/tracking_broker.rst:16
+msgid "The broker is a separate database, installed only once. Do not install it on the databases that use the Google and Meta apps. Install *Website Tracking Connection Broker* from :menuselection:`Apps` in the central database."
+msgstr "El intermediario es una base de datos independiente, que se instala una sola vez. No lo instale en las bases de datos que usan las aplicaciones Google y Meta. Instale *Website Tracking Connection Broker* desde :menuselection:`Aplicaciones` en la base de datos central."
+
+#: ../../content/applications/general/tracking_broker.rst:21
+msgid "How it works"
+msgstr "Cómo funciona"
+
+#: ../../content/applications/general/tracking_broker.rst:23
+msgid "The administrator of an instance clicks :guilabel:`Connect` on a connection in :guilabel:`Broker service` mode."
+msgstr "El administrador de una instancia hace clic en :guilabel:`Conectar` en una conexión en modo :guilabel:`Servicio bróker`."
+
+#: ../../content/applications/general/tracking_broker.rst:25
+msgid "The instance sends the administrator to the broker with a **signed request**. The broker checks the instance, the signature, the return address, and the requested permissions, then redirects the administrator to the consent screen of Google or Meta."
+msgstr "La instancia envía al administrador al intermediario con una **solicitud firmada**. El intermediario comprueba la instancia, la firma, la dirección de retorno y los permisos solicitados, y luego redirige al administrador a la pantalla de consentimiento de Google o Meta."
+
+#: ../../content/applications/general/tracking_broker.rst:28
+msgid "After the consent, the broker keeps the long-lived secret of the account (the Google refresh token or the Meta long-lived token) **encrypted**, and sends the administrator back to the instance with a one-time code that is valid for ten minutes."
+msgstr "Tras el consentimiento, el intermediario conserva **cifrado** el secreto de larga duración de la cuenta (el token de actualización de Google o el token de larga duración de Meta) y devuelve al administrador a la instancia con un código de un solo uso válido durante diez minutos."
+
+#: ../../content/applications/general/tracking_broker.rst:31
+msgid "The instance redeems the code. From then on, it asks the broker for **short-lived access tokens** when it needs to call Google or Meta. The long-lived secrets never leave the broker."
+msgstr "La instancia canjea el código. A partir de entonces, pide al intermediario **tokens de acceso de corta duración** cuando necesita llamar a Google o Meta. Los secretos de larga duración nunca salen del intermediario."
+
+#: ../../content/applications/general/tracking_broker.rst:34
+msgid "The broker never reads the data of the instances: it only holds the authorizations."
+msgstr "El intermediario nunca lee los datos de las instancias: solo conserva las autorizaciones."
+
+#: ../../content/applications/general/tracking_broker.rst:37
+msgid "Set up the broker"
+msgstr "Configurar el intermediario"
+
+#: ../../content/applications/general/tracking_broker.rst:39
+msgid "Go to :menuselection:`Settings --> Tracking Broker --> Settings`. All the settings below are available to administrators only."
+msgstr "Vaya a :menuselection:`Ajustes --> Bróker de seguimiento --> Ajustes`. Todos los ajustes siguientes están disponibles solo para los administradores."
+
+#: ../../content/applications/general/tracking_broker.rst:43
+msgid "Encryption key"
+msgstr "Clave de cifrado"
+
+#: ../../content/applications/general/tracking_broker.rst:45
+msgid "The tokens are stored encrypted with a key. Generate a key and add it to the server configuration file:"
+msgstr "Los tokens se guardan cifrados con una clave. Genere una clave y añádala al archivo de configuración del servidor:"
+
+#: ../../content/applications/general/tracking_broker.rst:51
+msgid "You can list several keys separated by commas: the first one encrypts, all of them decrypt. This lets you rotate the key. The :guilabel:`Token Encryption` setting shows the :guilabel:`Encryption Key Status`."
+msgstr "Puede indicar varias claves separadas por comas: la primera cifra y todas descifran. Esto permite rotar la clave. El ajuste :guilabel:`Cifrado de tokens` muestra el :guilabel:`Estado de la clave de cifrado`."
+
+#: ../../content/applications/general/tracking_broker.rst:55
+msgid "Without the option in the configuration file, Odoo generates a key and keeps it in the database. A warning is displayed in the settings. A key stored in the database is lost with it: use the configuration file in production, and keep a copy of the key in a safe place. If the key is lost, all the connections must be made again."
+msgstr "Sin la opción en el archivo de configuración, Odoo genera una clave y la guarda en la base de datos. Se muestra una advertencia en los ajustes. Una clave guardada en la base de datos se pierde con ella: use el archivo de configuración en producción y guarde una copia de la clave en un lugar seguro. Si se pierde la clave, hay que volver a hacer todas las conexiones."
+
+#: ../../content/applications/general/tracking_broker.rst:61
+msgid "Public URL"
+msgstr "URL pública"
+
+#: ../../content/applications/general/tracking_broker.rst:63
+msgid "In the :guilabel:`Public URL` setting, enter the public HTTPS address of the broker (for example `https://connect.example.com`). It is given to the instances. The **redirect URIs** to register at Google and Meta are displayed in the settings: the address followed by `/broker/google/callback` and `/broker/meta/callback`."
+msgstr "En el ajuste :guilabel:`URL pública`, introduzca la dirección HTTPS pública del intermediario (por ejemplo `https://connect.example.com`). Se entrega a las instancias. Los **URI de redirección** que debe registrar en Google y Meta se muestran en los ajustes: la dirección seguida de `/broker/google/callback` y `/broker/meta/callback`."
+
+#: ../../content/applications/general/tracking_broker.rst:78
+msgid "Google"
+msgstr "Google"
+
+#: ../../content/applications/general/tracking_broker.rst:80
+msgid "In the Google Cloud console, create a project and enable the APIs that your customers use (Content API for Shopping and Merchant API, Google Ads API, Data Manager API, Search Console API, Business Profile APIs, Analytics Admin API)."
+msgstr "En la consola de Google Cloud, cree un proyecto y active las API que usan sus clientes (Content API for Shopping y Merchant API, Google Ads API, Data Manager API, Search Console API, Business Profile APIs, Analytics Admin API)."
+
+#: ../../content/applications/general/tracking_broker.rst:83
+msgid "Configure the **OAuth consent screen** with the scopes that you allow, and create an OAuth client ID of type *Web application* with the Google redirect URI displayed in the settings."
+msgstr "Configure la **pantalla de consentimiento de OAuth** con los ámbitos que permite y cree un ID de cliente OAuth de tipo *Web application* con el URI de redirección de Google que se muestra en los ajustes."
+
+#: ../../content/applications/general/tracking_broker.rst:85
+msgid "Enter the :guilabel:`Broker Google Client ID` and the :guilabel:`Broker Google Client Secret` in the :guilabel:`OAuth Client` setting."
+msgstr "Introduzca el :guilabel:`ID de cliente de Google del bróker` y el :guilabel:`Secreto de cliente de Google del bróker` en el ajuste :guilabel:`Cliente OAuth`."
+
+#: ../../content/applications/general/tracking_broker.rst:87
+msgid "Check the :guilabel:`Allowed Google Scopes`: the scopes that the instances may request, separated by spaces. Any other request is refused."
+msgstr "Compruebe los :guilabel:`Ámbitos de Google permitidos`: los ámbitos que las instancias pueden solicitar, separados por espacios. Cualquier otra solicitud se rechaza."
+
+#: ../../content/applications/general/tracking_broker.rst:91
+msgid "Google must **verify** your application before people outside your organization can grant it sensitive scopes (Google Ads, Search Console, Business Profile, Merchant Center). Until it is verified, the application stays in *testing* mode and the authorizations expire after a few days."
+msgstr "Google debe **verificar** su aplicación antes de que personas ajenas a su organización puedan concederle ámbitos sensibles (Google Ads, Search Console, Business Profile, Merchant Center). Hasta que se verifique, la aplicación permanece en modo *testing* y las autorizaciones caducan a los pocos días."
+
+#: ../../content/applications/general/tracking_broker.rst:96
+msgid "Meta"
+msgstr "Meta"
+
+#: ../../content/applications/general/tracking_broker.rst:98
+msgid "In Meta for Developers, create an app of type **Business** and add the *Facebook Login for Business* product."
+msgstr "En Meta for Developers, cree una aplicación de tipo **Business** y añada el producto *Facebook Login for Business*."
+
+#: ../../content/applications/general/tracking_broker.rst:100
+msgid "Add the Meta redirect URI displayed in the settings to the valid OAuth redirect URIs."
+msgstr "Añada el URI de redirección de Meta que se muestra en los ajustes a los URI de redirección de OAuth válidos."
+
+#: ../../content/applications/general/tracking_broker.rst:101
+msgid "Request the *advanced access* of the permissions that you allow (app review)."
+msgstr "Solicite el *acceso avanzado* de los permisos que permite (revisión de la aplicación)."
+
+#: ../../content/applications/general/tracking_broker.rst:102
+msgid "Enter the :guilabel:`Broker Meta App ID`, the :guilabel:`Broker Meta App Secret`, and the :guilabel:`Broker Graph API Version` in the :guilabel:`Meta App` setting, and check the :guilabel:`Allowed Meta Permissions`."
+msgstr "Introduzca el :guilabel:`ID de la aplicación de Meta del bróker`, el :guilabel:`Secreto de la aplicación de Meta del bróker` y la :guilabel:`Versión de la Graph API del bróker` en el ajuste :guilabel:`Aplicación de Meta`, y compruebe los :guilabel:`Permisos de Meta permitidos`."
+
+#: ../../content/applications/general/tracking_broker.rst:107
+msgid "Register the instances"
+msgstr "Registrar las instancias"
+
+#: ../../content/applications/general/tracking_broker.rst:109
+msgid "Go to :menuselection:`Settings --> Tracking Broker --> Broker Instances`, and create **one record per customer database**:"
+msgstr "Vaya a :menuselection:`Ajustes --> Bróker de seguimiento --> Instancias del bróker` y cree **un registro por base de datos de cliente**:"
+
+#: ../../content/applications/general/tracking_broker.rst:116
+msgid "Field"
+msgstr "Campo"
+
+#: ../../content/applications/general/tracking_broker.rst:117
+msgid "Description"
+msgstr "Descripción"
+
+#: ../../content/applications/general/tracking_broker.rst:118
+msgid ":guilabel:`Name` and :guilabel:`Customer`"
+msgstr ":guilabel:`Nombre` y :guilabel:`Cliente`"
+
+#: ../../content/applications/general/tracking_broker.rst:119
+msgid "To recognize the instance."
+msgstr "Para reconocer la instancia."
+
+#: ../../content/applications/general/tracking_broker.rst:120
+msgid ":guilabel:`Instance ID`"
+msgstr ":guilabel:`ID de instancia`"
+
+#: ../../content/applications/general/tracking_broker.rst:121
+msgid "The identifier of the instance, generated by Odoo. Copy it."
+msgstr "El identificador de la instancia, generado por Odoo. Cópielo."
+
+#: ../../content/applications/general/tracking_broker.rst:122
+msgid ":guilabel:`Broker URL`"
+msgstr ":guilabel:`URL del bróker`"
+
+#: ../../content/applications/general/tracking_broker.rst:123
+msgid "The address of the broker to give to the instance."
+msgstr "La dirección del intermediario que se debe dar a la instancia."
+
+#: ../../content/applications/general/tracking_broker.rst:124
+msgid ":guilabel:`Google` and :guilabel:`Meta`"
+msgstr ":guilabel:`Google` y :guilabel:`Meta`"
+
+#: ../../content/applications/general/tracking_broker.rst:125
+msgid "The providers that the instance may use."
+msgstr "Los proveedores que la instancia puede usar."
+
+#: ../../content/applications/general/tracking_broker.rst:126
+msgid ":guilabel:`Allowed Hosts`"
+msgstr ":guilabel:`Hosts permitidos`"
+
+#: ../../content/applications/general/tracking_broker.rst:127
+msgid "The host names of the websites of the instance, one per line (`www.example.com`, or `host:port`). The broker only redirects the administrators back to these hosts, which must use HTTPS (plain HTTP is accepted for `localhost`)."
+msgstr "Los nombres de host de los sitios web de la instancia, uno por línea (`www.example.com` o `host:port`). El intermediario solo redirige a los administradores de vuelta a estos hosts, que deben usar HTTPS (se acepta HTTP simple para `localhost`)."
+
+#: ../../content/applications/general/tracking_broker.rst:131
+msgid "Click :guilabel:`Show Secret`. A window displays the :guilabel:`Broker URL`, the :guilabel:`Instance ID`, and the **secret**. **The secret is displayed only once**: copy the three values and send them securely to the administrator of the instance. If the secret is lost, click :guilabel:`Generate New Secret`; the instance must then be updated."
+msgstr "Haga clic en :guilabel:`Mostrar secreto`. Una ventana muestra la :guilabel:`URL del bróker`, el :guilabel:`ID de instancia` y el **secreto**. **El secreto se muestra una sola vez**: copie los tres valores y envíelos de forma segura al administrador de la instancia. Si pierde el secreto, haga clic en :guilabel:`Generar nuevo secreto`; la instancia deberá actualizarse."
+
+#: ../../content/applications/general/tracking_broker.rst:136
+msgid "The administrator of the instance enters the three values in :menuselection:`Website --> Configuration --> Settings --> Tracking --> Connection Broker`. See :ref:`tracking/connections/broker-setting`."
+msgstr "El administrador de la instancia introduce los tres valores en :menuselection:`Sitio web --> Configuración --> Ajustes --> Seguimiento --> Bróker de conexión`. Vea :ref:`tracking/connections/broker-setting`."
+
+#: ../../content/applications/general/tracking_broker.rst:150
+msgid "Follow and revoke the connections"
+msgstr "Seguir y revocar las conexiones"
+
+#: ../../content/applications/general/tracking_broker.rst:152
+msgid ":menuselection:`Settings --> Tracking Broker --> Broker Grants` lists the connections made through the broker: the instance, the provider, the connected account, the last use, and the status."
+msgstr ":menuselection:`Ajustes --> Bróker de seguimiento --> Autorizaciones del bróker` enumera las conexiones realizadas a través del intermediario: la instancia, el proveedor, la cuenta conectada, el último uso y el estado."
+
+#: ../../content/applications/general/tracking_broker.rst:159
+msgid "Status"
+msgstr "Estado"
+
+#: ../../content/applications/general/tracking_broker.rst:160
+msgid "Meaning"
+msgstr "Significado"
+
+#: ../../content/applications/general/tracking_broker.rst:161
+msgid ":guilabel:`Pending`"
+msgstr ":guilabel:`Pendiente`"
+
+#: ../../content/applications/general/tracking_broker.rst:162
+msgid "The administrator came back from the consent screen, but the instance did not redeem the code yet. The grants that are not redeemed in ten minutes are deleted."
+msgstr "El administrador volvió de la pantalla de consentimiento, pero la instancia todavía no canjeó el código. Las autorizaciones que no se canjean en diez minutos se eliminan."
+
+#: ../../content/applications/general/tracking_broker.rst:164
+msgid ":guilabel:`Active`"
+msgstr ":guilabel:`Activo`"
+
+#: ../../content/applications/general/tracking_broker.rst:165
+msgid "The instance uses the grant."
+msgstr "La instancia usa la autorización."
+
+#: ../../content/applications/general/tracking_broker.rst:166
+msgid ":guilabel:`Error`"
+msgstr ":guilabel:`Error`"
+
+#: ../../content/applications/general/tracking_broker.rst:167
+msgid "The broker cannot get a token anymore (access revoked by the user, expired Meta token). The administrator of the instance has to reconnect. The reason is displayed in :guilabel:`Last Error`."
+msgstr "El intermediario ya no puede obtener un token (acceso revocado por el usuario, token de Meta caducado). El administrador de la instancia debe volver a conectar. El motivo se muestra en :guilabel:`Último error`."
+
+#: ../../content/applications/general/tracking_broker.rst:170
+msgid ":guilabel:`Revoked`"
+msgstr ":guilabel:`Revocada`"
+
+#: ../../content/applications/general/tracking_broker.rst:171
+msgid "Disconnected by the instance or by you."
+msgstr "Desconectada por la instancia o por usted."
+
+#: ../../content/applications/general/tracking_broker.rst:173
+msgid "Click :guilabel:`Revoke` on a grant to disconnect it. The authorization is also revoked at Google or Meta, unless another grant uses the same account."
+msgstr "Haga clic en :guilabel:`Revocar` en una autorización para desconectarla. La autorización también se revoca en Google o Meta, salvo que otra autorización use la misma cuenta."
+
+#: ../../content/applications/general/tracking_broker.rst:177
+msgid "A Meta token lasts about 60 days. The broker extends it automatically when it is used during the last seven days and Meta allows it. If the token expired before, or if Meta refuses, the status turns to :guilabel:`Error` and the administrator of the instance has to click :guilabel:`Reconnect`."
+msgstr "Un token de Meta dura unos 60 días. El intermediario lo amplía automáticamente cuando se usa durante los últimos siete días y Meta lo permite. Si el token caducó antes, o si Meta lo rechaza, el estado pasa a :guilabel:`Error` y el administrador de la instancia debe hacer clic en :guilabel:`Volver a conectar`."
+
+#: ../../content/applications/general/tracking_broker.rst:183
+msgid "Security"
+msgstr "Seguridad"
+
+#: ../../content/applications/general/tracking_broker.rst:185
+msgid "Each request of an instance is **signed** with its secret. A request with a wrong signature, an unknown instance, or a provider that is not allowed is refused, and the number of requests is limited."
+msgstr "Cada solicitud de una instancia se **firma** con su secreto. Una solicitud con una firma incorrecta, una instancia desconocida o un proveedor no permitido se rechaza, y el número de solicitudes está limitado."
+
+#: ../../content/applications/general/tracking_broker.rst:188
+msgid "The broker only redirects to the allowed hosts of the instance, and only the allowed scopes are requested."
+msgstr "El intermediario solo redirige a los hosts permitidos de la instancia y solo se solicitan los ámbitos permitidos."
+
+#: ../../content/applications/general/tracking_broker.rst:190
+msgid "The instances receive access tokens that last a few minutes (Google) or the long-lived token needed for the call (Meta); the refresh tokens stay encrypted in the broker."
+msgstr "Las instancias reciben tokens de acceso que duran unos minutos (Google) o el token de larga duración necesario para la llamada (Meta); los tokens de actualización permanecen cifrados en el intermediario."
+
+#: ../../content/applications/general/tracking_broker.rst:192
+msgid "Treat the broker as a sensitive system: restrict the access to its database, use HTTPS only, and back up the encryption key."
+msgstr "Trate el intermediario como un sistema sensible: restrinja el acceso a su base de datos, use solo HTTPS y haga una copia de seguridad de la clave de cifrado."
+
+#: ../../content/applications/general/tracking_broker.rst:196
+msgid ":doc:`/applications/websites/website/tracking/connections`"
+msgstr ":doc:`/applications/websites/website/tracking/connections`"
+
+#: ../../content/applications/general/tracking_broker.rst:197
+msgid ":doc:`/applications/websites/google/connection`"
+msgstr ":doc:`/applications/websites/google/connection`"
+
+#: ../../content/applications/general/tracking_broker.rst:198
+msgid ":doc:`/applications/websites/meta/connection`"
+msgstr ":doc:`/applications/websites/meta/connection`"
+
 #: ../../content/applications/general/users.rst:60
 msgid "Users can also be invited quickly by entering their email addresses in the :guilabel:`Invite New Users` field of the :guilabel:`Users` section in the :menuselection:`Settings` app, then clicking :guilabel:`Invite`."
 msgstr "Los usuarios también se pueden invitar rápidamente introduciendo sus direcciones de correo electrónico en el campo :guilabel:`Invitar nuevos usuarios` de la sección :guilabel:`Usuarios` de la aplicación :menuselection:`Ajustes`, y luego haciendo clic en :guilabel:`Invitar`."

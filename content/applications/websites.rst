@@ -13,3 +13,5 @@ Websites
     websites/forum
     websites/blog
     websites/livechat
+    websites/google
+    websites/meta

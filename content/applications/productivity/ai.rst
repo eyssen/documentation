@@ -68,10 +68,12 @@ What you can do
 - **Voice** — dictate messages and have Discuss calls transcribed and
   summarised, with consent from each participant (see :doc:`ai/voice`).
 - **Business apps** — quick prompts and buttons in CRM, Sales, Purchase,
-  Inventory, Invoicing, Calendar, Products, Email marketing and Timesheets,
-  ticket triage for projects with SLA and AI analysis of accounting reports (see
-  :doc:`ai/app_integrations`, :doc:`ai/project_sla` and
+  Inventory, Manufacturing, Invoicing, Calendar, Products, Email marketing and
+  Timesheets, ticket triage for projects with SLA and AI analysis of accounting
+  reports (see :doc:`ai/app_integrations`, :doc:`ai/project_sla` and
   :doc:`ai/accounting_reports`).
+- **CAD imports** — suggested quantities and lengths for the members of a steel
+  structure drawing, which you accept or reject (see :doc:`ai/cad_bom_import`).
 - **Providers, models and access** — chat, image, embedding and speech-to-text
   models, and a clear overview of who can use which AI feature (see
   :doc:`ai/models_and_providers`, :doc:`ai/panel` and :doc:`ai/feature_access`).
@@ -122,6 +124,7 @@ Document map
    ai/app_integrations
    ai/project_sla
    ai/accounting_reports
+   ai/cad_bom_import
 
 Key design principles
 =====================

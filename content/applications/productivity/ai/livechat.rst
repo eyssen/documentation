@@ -63,17 +63,22 @@ Hand-over to a human
 The agent hands the chat over to an available operator when the visitor asks for
 a person, when :guilabel:`Max AI answers` is reached, when the agent is unsure
 or when the AI service fails. The operator is chosen with the channel's normal
-operator selection and joins the session; the agent posts a short summary and
-stops answering. An operator who simply writes in the session also takes it
-over.
+operator selection and joins the session; the agent sends a short summary to
+the operator and stops answering. An operator who simply writes in the session
+also takes it over.
 
 If nobody is available, the visitor is told so and asked for contact details,
 and the agent keeps helping for a limited number of further answers.
 
 .. important::
-   The hand-over summary is visible to the visitor, and it is labelled as an AI
-   summary based on the visitor's messages that is not verified. It contains no
-   clickable links.
+   The hand-over summary is for the operator only. It arrives as a message in a
+   direct chat between the AI agent's contact and the operator, in the operator's
+   language, and it is never written into the visitor's session. Because it is
+   derived from what the visitor wrote, it is labelled "AI summary based on the
+   visitor's messages - unverified". It is plain text: a link is shown as its
+   text followed by the address in brackets and cannot be clicked. If the model
+   gives no summary, one is built without the model from the reason for the
+   hand-over and the last visitor messages.
 
 On the session form of a live chat conversation you see the AI state, the number
 of AI answers, the hand-over reason and, for AI administrators, a link to the
@@ -94,8 +99,9 @@ links back to the lead.
    Nobody can confirm a request from an unattended visitor, so the lead is
    created directly. At most one lead is created per session and a limited
    number per visitor address per day (:guilabel:`Leads per visitor address and
-   day` in the settings). The lead description starts with the label that the
-   summary is unverified.
+   day` in the settings, 3 by default, 0 for no limit). The lead description
+   starts with the label that the summary is unverified, and the links in it are
+   plain text, so nobody receives a clickable link written by a visitor.
 
 Preview cards
 =============
@@ -105,6 +111,17 @@ modules), turn on the channel option for preview cards. The agent can then show
 the visitor a list of cards with a picture, a title, a short text and a link for
 the products, events, blog posts, courses or job positions it found. Only
 published, website-visible records are shown, with a fixed set of safe fields.
+
+- The cards are built with the rights of the website's public user, so a record
+  that an anonymous visitor could not open on the website never becomes a card.
+- The links and pictures are relative addresses of your site. Only when the
+  website has its own domain set, that domain is put in front, which keeps the
+  links working when the chat is embedded in another site. Links to other sites
+  are never shown.
+- Dates (for example of an event) are written in the visitor's language and time
+  zone, or in the language of the website when the visitor's is not installed.
+- The agent is told to mention cards only when its tool reports that cards were
+  shown. If nothing was shown, it must not say that it has shown anything.
 
 Limits and security
 ===================
@@ -131,13 +148,21 @@ When one is reached, the visitor gets a polite message, and the session is
 handed over to an available operator or the AI stops in that session. A value of
 0 switches the limit off.
 
-- :guilabel:`Per visitor`: :guilabel:`Seconds between AI answers`,
-  :guilabel:`Visitor messages per minute`, :guilabel:`AI conversations per
-  visitor and hour` and :guilabel:`AI answers per visitor and day`. Visitors are
-  told apart by network address, guest, signed-in contact or website visitor.
-- :guilabel:`All visitors`: :guilabel:`AI requests per day (all visitors)` and
-  :guilabel:`AI cost per day (USD, all visitors)`. If the cost limit is 0, the
-  general daily cost limit of the AI settings applies.
+- :guilabel:`Per conversation and per visitor`: :guilabel:`Seconds between AI
+  answers` (3 by default), :guilabel:`Visitor messages per minute` (10),
+  :guilabel:`AI conversations per visitor and hour` (10) and :guilabel:`AI
+  answers per visitor and day` (150). The first two apply inside one
+  conversation, the other two to everything one visitor does. Visitors are told
+  apart by network address, guest, signed-in contact or website visitor.
+- :guilabel:`All visitors`: :guilabel:`AI requests per day (all visitors)`,
+  500 by default and counting every model call of the live chat, and the
+  optional :guilabel:`AI cost per day (USD, all visitors)`. If the cost limit is
+  0, the general daily cost limit of the AI settings applies.
+- :guilabel:`Leads per visitor address and day` (3 by default) limits the leads
+  that the AI creates (see above).
+
+The live chat also keeps the requests of its service user under 60 per minute;
+the system parameter ``ai_livechat.rate_limit_rpm`` changes this.
 
 .. seealso::
    See :doc:`access_policy` for how access groups and rules work in general, and

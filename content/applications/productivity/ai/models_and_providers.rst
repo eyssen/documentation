@@ -15,6 +15,15 @@ OpenAI, Anthropic, xAI and Google Gemini; any OpenAI-compatible gateway works
 through the :guilabel:`Base Url` field. The API key is write-only: once saved it
 is never shown again.
 
+A hosted provider needs its API key. If it has none, the request fails at once
+with the message "The AI provider has no API key. Set it under AI >
+Configuration > Providers." instead of being sent and rejected by the provider.
+A self-hosted endpoint such as Ollama, LM Studio or vLLM needs no key. That is
+the case when the :guilabel:`Base Url` points to the local machine
+(``localhost``), to a private network address, to a name ending in ``.local``,
+``.localhost``, ``.internal`` or ``.lan``, or to a plain host name without dots,
+such as ``http://ollama:11434/v1``.
+
 Click :guilabel:`Refresh Models` on the provider to import its model catalogue
 (and prices where the provider publishes them). Refreshing never overwrites a
 price you entered by hand.

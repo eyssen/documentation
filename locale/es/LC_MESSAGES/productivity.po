@@ -8876,6 +8876,358 @@ msgstr "Accesos directos de la bandeja del sistema"
 msgid "Two icons are added to the top-right systray area: one opens the :guilabel:`Compose Whatsapp Message` window for any number, the other opens a blank email composition form."
 msgstr "Se añaden dos iconos al área de la bandeja del sistema en la parte superior derecha: uno abre la ventana :guilabel:`Redactar mensaje de WhatsApp` para cualquier número, el otro abre un formulario de redacción de correo electrónico en blanco."
 
+#: ../mnt/documentation/content/applications/productivity/ai.rst:70
+msgid "**Business apps** — quick prompts and buttons in CRM, Sales, Purchase, Inventory, Manufacturing, Invoicing, Calendar, Products, Email marketing and Timesheets, ticket triage for projects with SLA and AI analysis of accounting reports (see :doc:`ai/app_integrations`, :doc:`ai/project_sla` and :doc:`ai/accounting_reports`)."
+msgstr "**Aplicaciones de negocio**: indicaciones rápidas y botones en CRM, Ventas, Compras, Inventario, Fabricación, Facturación, Calendario, Productos, Marketing por correo electrónico y Hojas de horas, clasificación de tickets para proyectos con SLA y análisis con IA de los informes contables (véanse :doc:`ai/app_integrations`, :doc:`ai/project_sla` y :doc:`ai/accounting_reports`)."
+
+#: ../mnt/documentation/content/applications/productivity/ai.rst:75
+msgid "**CAD imports** — suggested quantities and lengths for the members of a steel structure drawing, which you accept or reject (see :doc:`ai/cad_bom_import`)."
+msgstr "**Importaciones CAD**: cantidades y longitudes sugeridas para los elementos de un plano de estructura de acero, que usted acepta o rechaza (véase :doc:`ai/cad_bom_import`)."
+
+#: ../mnt/documentation/content/applications/productivity/ai/accounting_reports.rst:88
+msgid "An audit makes several model calls and easily takes longer than an ordinary web request is allowed to run. That is why analyses and audits run as background jobs of the scheduled action \"AI: Run accounting report analyses and audits\". The job runs in the environment of the person who clicked, never in the identity of the scheduler, and the form refreshes by itself. A job that stays in the running state for more than 30 minutes is marked as failed with the message \"The AI job was interrupted. Start it again.\", so nothing stays stuck."
+msgstr "Una auditoría realiza varias llamadas al modelo y fácilmente tarda más de lo que se permite ejecutar a una petición web normal. Por eso los análisis y las auditorías se ejecutan como trabajos en segundo plano de la acción planificada \"AI: Run accounting report analyses and audits\". El trabajo se ejecuta en el entorno de la persona que hizo clic, nunca con la identidad del planificador, y el formulario se actualiza solo. Un trabajo que permanece en estado de ejecución más de 30 minutos se marca como fallido con el mensaje \"The AI job was interrupted. Start it again.\", de modo que nada se queda bloqueado."
+
+#: ../mnt/documentation/content/applications/productivity/ai/accounting_reports.rst:104
+msgid "If the model does not answer within the time that is left, the analysis or audit ends as failed with the message \"The AI model did not answer in time. Try again later, or ask for something shorter or narrower.\" The message is shown on the analysis, posted in its chatter and sent to you as a notification."
+msgstr "Si el modelo no responde en el tiempo que queda, el análisis o la auditoría termina como fallido con el mensaje \"The AI model did not answer in time. Try again later, or ask for something shorter or narrower.\" El mensaje se muestra en el análisis, se publica en su chatter y se le envía como notificación."
+
+#: ../mnt/documentation/content/applications/productivity/ai/app_integrations.rst:59
+msgid "On an open product or variant, the AI is given the stock figures of the record: quantity on hand, forecasted and free quantity, incoming and outgoing quantities and the limits of the reordering rules. They are read with your rights, like the rest of the record, so the assistant does not have to guess where they are. For the open transfers behind them it searches the stock moves."
+msgstr "En un producto o variante abierto, la IA recibe las cifras de existencias del registro: cantidad disponible, cantidad prevista y libre, cantidades entrantes y salientes y los límites de las reglas de reabastecimiento. Se leen con sus derechos, como el resto del registro, de modo que el asistente no tiene que adivinar dónde están. Para las transferencias abiertas que hay detrás busca en los movimientos de stock."
+
+#: ../mnt/documentation/content/applications/productivity/ai/app_integrations.rst:67
+msgid "Manufacturing"
+msgstr "Fabricación"
+
+#: ../mnt/documentation/content/applications/productivity/ai/app_integrations.rst:69
+msgid "On a CAD import (see :doc:`cad_bom_import`) the button :guilabel:`Analyse with AI` suggests quantities, lengths and products for the members of a drawing, and the quick prompts :guilabel:`Explain this import`, :guilabel:`What still needs review?` and :guilabel:`Material totals by type` are added."
+msgstr "En una importación CAD (véase :doc:`cad_bom_import`), el botón :guilabel:`Analizar con IA` sugiere cantidades, longitudes y productos para los elementos de un plano, y se añaden las indicaciones rápidas :guilabel:`Explicar esta importación`, :guilabel:`¿Qué falta por revisar?` y :guilabel:`Totales de material por tipo`."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:3
+msgid "AI for CAD imports"
+msgstr "IA para importaciones CAD"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:5
+msgid "The module **AI CAD BoM import** (``ai_mrp_cad_bom``) helps with the part of a CAD import that the rules cannot do. A drawing that only has position labels (\"R1 / 100x100x4\", \"PM 2 / 300x300x10\", \"Bolt / M 16\") tells you *which* members exist but not *how many* there are or *how long* they are, because the same member is labelled in several views. The AI reads the drawing again, including its dimensions, and **suggests** values that you accept or reject. It installs itself when the AI module and the :doc:`CAD import <../../inventory_and_mrp/manufacturing/cad_bom_import>` are both installed."
+msgstr "El módulo **AI CAD BoM import** (``ai_mrp_cad_bom``) ayuda con la parte de una importación CAD que las reglas no pueden resolver. Un plano que solo tiene etiquetas de posición (\"R1 / 100x100x4\", \"PM 2 / 300x300x10\", \"Bolt / M 16\") indica *qué* elementos existen, pero no *cuántos* hay ni *qué longitud* tienen, porque el mismo elemento se etiqueta en varias vistas. La IA vuelve a leer el plano, incluidas sus cotas, y **sugiere** valores que usted acepta o rechaza. Se instala sola cuando están instalados el módulo de IA y la :doc:`importación CAD <../../inventory_and_mrp/manufacturing/cad_bom_import>`."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:13
+msgid "The AI never writes a quantity, length, section or product on its own, and it never creates products or bills of materials. A suggestion changes the import only when you accept it, and the weights, the totals of the two options and the material summary change only then. Products and bills of materials are still created by the normal flow of the CAD import."
+msgstr "La IA nunca escribe por sí sola una cantidad, longitud, perfil o producto, y nunca crea productos ni listas de materiales. Una sugerencia modifica la importación solo cuando usted la acepta, y los pesos, los totales de las dos opciones y el resumen de materiales cambian solo entonces. Los productos y las listas de materiales se siguen creando con el flujo normal de la importación CAD."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:21
+msgid "A chat model is configured (see :doc:`models_and_providers`)."
+msgstr "Hay un modelo de chat configurado (véase :doc:`models_and_providers`)."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:22
+msgid "You are in the group :guilabel:`AI: User`, the capability *Ask* is on for you (see :doc:`feature_access`) and you may edit CAD imports (*Manufacturing / User*)."
+msgstr "Usted pertenece al grupo :guilabel:`IA: Usuario`, la capacidad *Ask* está activada para usted (véase :doc:`feature_access`) y puede editar importaciones CAD (*Fabricación / Usuario*)."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:24
+msgid "The import is :guilabel:`Parsed` or :guilabel:`Reviewed`."
+msgstr "La importación está :guilabel:`Analizado` o :guilabel:`Revisado`."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:27
+msgid "Analyse an import"
+msgstr "Analizar una importación"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:29
+msgid "Open a parsed import and click :guilabel:`Analyse with AI` in the form header. The analysis runs in the background, so you can keep working. The form shows the progress (it refreshes every few seconds) and you are notified when the suggestions are ready or when the analysis failed. Only one analysis runs for an import at a time, and while it runs you can neither parse the import again nor accept or reject suggestions."
+msgstr "Abra una importación analizada y haga clic en :guilabel:`Analizar con IA` en la cabecera del formulario. El análisis se ejecuta en segundo plano, por lo que puede seguir trabajando. El formulario muestra el progreso (se actualiza cada pocos segundos) y se le notifica cuando las sugerencias están listas o cuando el análisis ha fallado. Solo se ejecuta un análisis a la vez para una importación y, mientras se ejecuta, no puede analizar de nuevo la importación ni aceptar o rechazar sugerencias."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:35
+msgid "The job runs in your own environment: your language, your company, your access rights. It goes through these steps and commits each one separately, so a failure keeps the suggestions of the steps that were finished and shows the error under :guilabel:`AI analysis failed:` and in the chatter."
+msgstr "El trabajo se ejecuta en su propio entorno: su idioma, su empresa, sus derechos de acceso. Recorre los siguientes pasos y confirma cada uno por separado, de modo que un fallo conserva las sugerencias de los pasos terminados y muestra el error en :guilabel:`El análisis con IA ha fallado:` y en el chatter."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:39
+msgid "**Reading the drawing.** The drawing is read again for its geometry (see below)."
+msgstr "**Lectura del plano.** El plano se vuelve a leer para obtener su geometría (véase más abajo)."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:40
+msgid "**Interpreting the lines.** The AI checks every line: its kind, family, designation, grade, whether it is a purlin and a short description. It decides the ambiguous ``AxBxC`` (plate or hollow section), reads the general notes of the drawing (grade, bolt class, standards) and explains conflicts such as the same mark with different sizes."
+msgstr "**Interpretación de las líneas.** La IA comprueba cada línea: su tipo, familia, designación, calidad, si es una correa y una breve descripción. Decide el ``AxBxC`` ambiguo (chapa o perfil hueco), lee las notas generales del plano (calidad, clase de tornillo, normas) y explica conflictos como la misma marca con medidas distintas."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:44
+msgid "**Estimating quantities and lengths.** For the lines that came from labels, the AI proposes the number of pieces and the length of one piece (or the width and length of a plate), with its reasoning and the evidence. Lines from a parts list or from block attributes already carry quantities and are not estimated."
+msgstr "**Estimación de cantidades y longitudes.** Para las líneas procedentes de etiquetas, la IA propone el número de piezas y la longitud de una pieza (o la anchura y la longitud de una chapa), con su razonamiento y las pruebas. Las líneas de una lista de piezas o de atributos de bloque ya llevan cantidades y no se estiman."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:48
+msgid "**Matching products.** Lines without a product get a suggested existing product, chosen among a few candidates that the server selected."
+msgstr "**Búsqueda de productos.** Las líneas sin producto reciben un producto existente sugerido, elegido entre unos pocos candidatos seleccionados por el servidor."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:50
+msgid "**Checks.** Rule-based checks look for gaps (see below). This step does not use the AI."
+msgstr "**Comprobaciones.** Comprobaciones basadas en reglas buscan carencias (véase más abajo). Este paso no utiliza la IA."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:51
+msgid "**Review note.** A short note in your language with the totals now and the totals if you accepted every suggestion, the main materials and the checks. It is shown on the tab :guilabel:`AI review` and posted in the chatter."
+msgstr "**Nota de revisión.** Una nota breve en su idioma con los totales actuales y los totales si aceptara todas las sugerencias, los materiales principales y las comprobaciones. Se muestra en la pestaña :guilabel:`Revisión con IA` y se publica en el chatter."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:55
+msgid "Every answer is parsed as JSON and checked. Whatever is not valid is dropped: unknown lines, products that were not offered as candidates, designations the parser cannot read, negative values and views that do not exist."
+msgstr "Cada respuesta se analiza como JSON y se comprueba. Lo que no es válido se descarta: líneas desconocidas, productos que no se ofrecieron como candidatos, designaciones que el analizador no puede leer, valores negativos y vistas que no existen."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:60
+msgid "How the drawing is read"
+msgstr "Cómo se lee el plano"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:62
+msgid "The geometry step collects the dimensions of the drawing (linear and aligned dimensions of model and paper space), splits each space into views and sheet frames, and finds the title of each view (*SECTIUNE, PLAN, DETALIU, SECTION, DETAIL, METSZET, ALAPRAJZ, ...*), the cut markers and the sheet numbers. The scale of a view comes from its dimensions: a drawing made at 1:10 with a dimension scale factor of 10 is detected as such, and lengths are given to the AI in millimetres."
+msgstr "El paso de geometría recoge las cotas del plano (cotas lineales y alineadas del espacio modelo y del espacio papel), divide cada espacio en vistas y marcos de hoja, y encuentra el título de cada vista (*SECTIUNE, PLAN, DETALIU, SECTION, DETAIL, METSZET, ALAPRAJZ, ...*), las marcas de corte y los números de hoja. La escala de una vista se obtiene de sus cotas: un plano hecho a 1:10 con un factor de escala de cotas de 10 se detecta como tal, y las longitudes se entregan a la IA en milímetros."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:68
+msgid "For each line the AI receives its labels per view, with the position of each label, the leader line that touches it, the segments the leader points to (the member), the nearest lines and the nearest dimensions. The AI is told that the same piece is labelled in several views, so pieces are counted once (usually from the plan) and lengths are taken from sections and details."
+msgstr "Para cada línea, la IA recibe sus etiquetas por vista, con la posición de cada etiqueta, la línea de referencia que la toca, los segmentos a los que apunta esa línea (el elemento), las líneas más cercanas y las cotas más cercanas. Se le indica a la IA que la misma pieza se etiqueta en varias vistas, por lo que las piezas se cuentan una sola vez (normalmente desde la planta) y las longitudes se toman de las secciones y los detalles."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:74
+msgid "Review the suggestions"
+msgstr "Revisar las sugerencias"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:76
+msgid "The tab :guilabel:`AI review` appears after an analysis. It has:"
+msgstr "La pestaña :guilabel:`Revisión con IA` aparece después de un análisis. Contiene:"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:78
+msgid "the :guilabel:`AI review note` and the :guilabel:`Drawing notes read by the AI`;"
+msgstr "la :guilabel:`Nota de revisión de la IA` y las :guilabel:`Notas del plano leídas por la IA`;"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:79
+msgid "the list :guilabel:`Suggestions to review`: for each line the current quantity and length, what the AI proposes (:guilabel:`AI quantity`, :guilabel:`AI length (mm)`), its :guilabel:`Confidence`, the reasoning, the evidence (views and values) and a note; and"
+msgstr "la lista :guilabel:`Sugerencias por revisar`: para cada línea, la cantidad y la longitud actuales, lo que propone la IA (:guilabel:`Cantidad de la IA`, :guilabel:`Longitud de la IA (mm)`), su :guilabel:`Confianza`, el razonamiento, las pruebas (vistas y valores) y una nota; y"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:82
+msgid "the list :guilabel:`Checks`."
+msgstr "la lista :guilabel:`Comprobaciones`."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:84
+msgid "Use the buttons :guilabel:`Accept` and :guilabel:`Reject` on a line (the ticks in the list of lines do the same), :guilabel:`Accept all above the threshold` and :guilabel:`Reject all`. :guilabel:`Run the checks again` repeats the checks without the AI, for example after you corrected a line. Suggestions can be accepted or rejected while the import is parsed or reviewed."
+msgstr "Utilice los botones :guilabel:`Aceptar` y :guilabel:`Rechazar` de una línea (las marcas de la lista de líneas hacen lo mismo), :guilabel:`Aceptar todo lo que supera el umbral` y :guilabel:`Rechazar todo`. :guilabel:`Volver a ejecutar las comprobaciones` repite las comprobaciones sin la IA, por ejemplo después de corregir una línea. Las sugerencias pueden aceptarse o rechazarse mientras la importación está analizada o revisada."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:89
+msgid "Accepting a suggestion applies:"
+msgstr "Aceptar una sugerencia aplica:"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:91
+msgid "a changed designation (the line is parsed again: family, kind, dimensions, plate size), otherwise the kind;"
+msgstr "una designación modificada (la línea se vuelve a analizar: familia, tipo, dimensiones, medida de chapa) o, en su defecto, el tipo;"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:93
+msgid "the grade (it is resolved through the material master, so \"OL37\" becomes S235JR), the description and the purlin flag;"
+msgstr "la calidad (se resuelve a través del maestro de materiales, de modo que \"OL37\" pasa a ser S235JR), la descripción y el indicador de correa;"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:95
+msgid "the quantity, and the length of a linear member or the width and length of a plate when missing; and"
+msgstr "la cantidad y, si falta, la longitud de un elemento lineal o la anchura y la longitud de una chapa; y"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:96
+msgid "the suggested product, as if you had chosen it by hand."
+msgstr "el producto sugerido, como si lo hubiera elegido a mano."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:98
+msgid "The line's source becomes :guilabel:`AI suggestion` and the confidence is stored. **A line whose confidence is below the threshold stays flagged** :guilabel:`To review` after you accept it. The threshold is the field :guilabel:`AI confidence threshold` on the tab (0.6 by default, from the settings), and :guilabel:`Accept all above the threshold` accepts only suggestions that reach it."
+msgstr "El origen de la línea pasa a ser :guilabel:`Sugerencia de la IA` y se guarda la confianza. **Una línea cuya confianza está por debajo del umbral sigue marcada** como :guilabel:`Por revisar` después de aceptarla. El umbral es el campo :guilabel:`Umbral de confianza de la IA` de la pestaña (0,6 por defecto, tomado de los ajustes), y :guilabel:`Aceptar todo lo que supera el umbral` acepta solo las sugerencias que lo alcanzan."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:103
+msgid "A product that you accept from the AI, or that you choose by hand on an analysed line, is remembered as an alias, so the next import finds it without the AI."
+msgstr "Un producto que acepta de la IA, o que elige a mano en una línea analizada, se recuerda como alias, de modo que la siguiente importación lo encuentra sin la IA."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:116
+msgid "Checks"
+msgstr "Comprobaciones"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:118
+msgid "The checks never change data. They report: bolts without nuts or washers; a plate with no bolt or hole label near any of its labels; purlins without sag rods or tie rods (information); a missing grade; open conflicts, with the AI's explanation; a linear member without a length and without an estimate; a piece longer than the stock bar (information); a line whose weight is far above the others (more than eight times the median and more than 40 % of the total); and the number of suggestions below the threshold (information). Each check is a warning or an information."
+msgstr "Las comprobaciones nunca modifican datos. Informan de: tornillos sin tuercas ni arandelas; una chapa sin etiqueta de tornillo o de agujero cerca de ninguna de sus etiquetas; correas sin tirantes ni tensores (información); una calidad que falta; conflictos abiertos, con la explicación de la IA; un elemento lineal sin longitud y sin estimación; una pieza más larga que la barra comercial (información); una línea cuyo peso es muy superior al de las demás (más de ocho veces la mediana y más del 40 % del total); y el número de sugerencias por debajo del umbral (información). Cada comprobación es una advertencia o una información."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:128
+msgid "On a CAD import the AI panel (see :doc:`panel`) offers the quick prompts :guilabel:`Explain this import` (in place of the generic *Summarise*), :guilabel:`What still needs review?` and :guilabel:`Material totals by type`. The panel sees the lines, the material summary and the checks of the import, as far as your own access rights allow."
+msgstr "En una importación CAD, el panel de IA (véase :doc:`panel`) ofrece las indicaciones rápidas :guilabel:`Explicar esta importación` (en lugar del *Resumir* genérico), :guilabel:`¿Qué falta por revisar?` y :guilabel:`Totales de material por tipo`. El panel ve las líneas, el resumen de materiales y las comprobaciones de la importación, en la medida en que lo permitan sus propios derechos de acceso."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:134
+msgid "Cost, limits and data sent to the model"
+msgstr "Coste, límites y datos enviados al modelo"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:136
+msgid "Every call goes through the normal AI machinery: the capability *Ask*, the rate limit, the blocked patterns and the AI log with its cost (see :doc:`monitoring`). In the background job the per-minute rate limit is waited for instead of failing, but the daily limits stop the job at once."
+msgstr "Cada llamada pasa por la maquinaria normal de IA: la capacidad *Ask*, el límite de frecuencia, los patrones bloqueados y el registro de IA con su coste (véase :doc:`monitoring`). En el trabajo en segundo plano se espera al límite de frecuencia por minuto en lugar de fallar, pero los límites diarios detienen el trabajo de inmediato."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:139
+msgid "The size depends on the drawing. The analysis of a staircase drawing with 260 labels, 17 groups of members and 787 dimensions took seven calls and about 22,000 input tokens. A very large drawing is limited to twenty estimation requests (roughly 100,000 tokens); the lines beyond are reported as not estimated."
+msgstr "El tamaño depende del plano. El análisis de un plano de escalera con 260 etiquetas, 17 grupos de elementos y 787 cotas requirió siete llamadas y unos 22 000 tokens de entrada. Un plano muy grande se limita a veinte solicitudes de estimación (unos 100 000 tokens); las líneas que quedan fuera se informan como no estimadas."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:143
+msgid "The model receives the line data and texts of the drawing, the general notes, the geometric context (numbers, view titles and sheet numbers), the totals and check messages for the note, and, for matching, the names and internal references of the candidate products. It receives **no** customer, project or import name and no other business data."
+msgstr "El modelo recibe los datos de línea y los textos del plano, las notas generales, el contexto geométrico (números, títulos de vistas y números de hoja), los totales y los mensajes de comprobación para la nota y, para la búsqueda de productos, los nombres y referencias internas de los productos candidatos. **No** recibe ningún nombre de cliente, de proyecto o de importación ni otros datos de negocio."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:151
+msgid "In :menuselection:`Manufacturing app --> Configuration --> Settings`, block :guilabel:`CAD BoM import`, under :guilabel:`AI suggestions`:"
+msgstr "En :menuselection:`app Fabricación --> Configuración --> Ajustes`, bloque :guilabel:`Importación de LdM desde CAD`, bajo :guilabel:`Sugerencias de la IA`:"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:154
+msgid ":guilabel:`AI confidence threshold`: estimates below it stay flagged to review and are left out of :guilabel:`Accept all above the threshold`. Default 0.6."
+msgstr ":guilabel:`Umbral de confianza de la IA`: las estimaciones por debajo de él siguen marcadas para revisión y quedan fuera de :guilabel:`Aceptar todo lo que supera el umbral`. Por defecto, 0,6."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:156
+msgid ":guilabel:`Analyse with AI after parsing`: queues the analysis automatically after each parse when label lines need a review and you may use the AI; otherwise it is skipped silently. Off by default."
+msgstr ":guilabel:`Analizar con IA tras el análisis del plano`: pone en cola el análisis automáticamente tras cada análisis del plano cuando las líneas de etiquetas necesitan revisión y usted puede usar la IA; en caso contrario se omite sin avisar. Desactivado por defecto."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:160
+msgid ":doc:`../../inventory_and_mrp/manufacturing/cad_bom_import`"
+msgstr ":doc:`../../inventory_and_mrp/manufacturing/cad_bom_import`"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:161
+msgid ":doc:`app_integrations`"
+msgstr ":doc:`app_integrations`"
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:63
+msgid "The agent hands the chat over to an available operator when the visitor asks for a person, when :guilabel:`Max AI answers` is reached, when the agent is unsure or when the AI service fails. The operator is chosen with the channel's normal operator selection and joins the session; the agent sends a short summary to the operator and stops answering. An operator who simply writes in the session also takes it over."
+msgstr "El agente transfiere el chat a un operador disponible cuando el visitante pide hablar con una persona, cuando se alcanza el :guilabel:`Máximo de respuestas de la IA`, cuando el agente no está seguro o cuando falla el servicio de IA. El operador se elige con la selección normal de operadores del canal y se une a la sesión; el agente envía un breve resumen al operador y deja de responder. Un operador que simplemente escribe en la sesión también se hace cargo de ella."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:74
+msgid "The hand-over summary is for the operator only. It arrives as a message in a direct chat between the AI agent's contact and the operator, in the operator's language, and it is never written into the visitor's session. Because it is derived from what the visitor wrote, it is labelled \"AI summary based on the visitor's messages - unverified\". It is plain text: a link is shown as its text followed by the address in brackets and cannot be clicked. If the model gives no summary, one is built without the model from the reason for the hand-over and the last visitor messages."
+msgstr "El resumen de traspaso es solo para el operador. Llega como mensaje en un chat directo entre el contacto del agente de IA y el operador, en el idioma del operador, y nunca se escribe en la sesión del visitante. Como se deriva de lo que escribió el visitante, lleva la etiqueta \"AI summary based on the visitor's messages - unverified\". Es texto sin formato: un enlace se muestra como su texto seguido de la dirección entre paréntesis y no se puede pulsar. Si el modelo no da ningún resumen, se construye uno sin el modelo a partir del motivo del traspaso y de los últimos mensajes del visitante."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:99
+msgid "Nobody can confirm a request from an unattended visitor, so the lead is created directly. At most one lead is created per session and a limited number per visitor address per day (:guilabel:`Leads per visitor address and day` in the settings, 3 by default, 0 for no limit). The lead description starts with the label that the summary is unverified, and the links in it are plain text, so nobody receives a clickable link written by a visitor."
+msgstr "Nadie puede confirmar una solicitud de un visitante sin supervisión, por lo que la oportunidad se crea directamente. Se crea como máximo una oportunidad por sesión y un número limitado por dirección de visitante y día (:guilabel:`Oportunidades por dirección de visitante y día` en los ajustes, 3 por defecto, 0 para no tener límite). La descripción de la oportunidad empieza con la etiqueta de que el resumen no está verificado, y los enlaces que contiene son texto sin formato, de modo que nadie recibe un enlace pulsable escrito por un visitante."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:115
+msgid "The cards are built with the rights of the website's public user, so a record that an anonymous visitor could not open on the website never becomes a card."
+msgstr "Las tarjetas se construyen con los derechos del usuario público del sitio web, por lo que un registro que un visitante anónimo no podría abrir en el sitio web nunca se convierte en tarjeta."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:117
+msgid "The links and pictures are relative addresses of your site. Only when the website has its own domain set, that domain is put in front, which keeps the links working when the chat is embedded in another site. Links to other sites are never shown."
+msgstr "Los enlaces y las imágenes son direcciones relativas de su sitio. Solo cuando el sitio web tiene establecido su propio dominio, ese dominio se antepone, lo que mantiene los enlaces operativos cuando el chat está incrustado en otro sitio. Los enlaces a otros sitios nunca se muestran."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:121
+msgid "Dates (for example of an event) are written in the visitor's language and time zone, or in the language of the website when the visitor's is not installed."
+msgstr "Las fechas (por ejemplo, las de un evento) se escriben en el idioma y la zona horaria del visitante, o en el idioma del sitio web cuando el del visitante no está instalado."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:123
+msgid "The agent is told to mention cards only when its tool reports that cards were shown. If nothing was shown, it must not say that it has shown anything."
+msgstr "Se indica al agente que mencione tarjetas solo cuando su herramienta informa de que se mostraron tarjetas. Si no se mostró nada, no debe decir que ha mostrado algo."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:151
+msgid ":guilabel:`Per conversation and per visitor`: :guilabel:`Seconds between AI answers` (3 by default), :guilabel:`Visitor messages per minute` (10), :guilabel:`AI conversations per visitor and hour` (10) and :guilabel:`AI answers per visitor and day` (150). The first two apply inside one conversation, the other two to everything one visitor does. Visitors are told apart by network address, guest, signed-in contact or website visitor."
+msgstr ":guilabel:`Por conversación y por visitante`: :guilabel:`Segundos entre respuestas de la IA` (3 por defecto), :guilabel:`Mensajes del visitante por minuto` (10), :guilabel:`Conversaciones de IA por visitante y hora` (10) y :guilabel:`Respuestas de la IA por visitante y día` (150). Los dos primeros se aplican dentro de una conversación; los otros dos, a todo lo que hace un visitante. Los visitantes se distinguen por dirección de red, invitado, contacto con sesión iniciada o visitante del sitio web."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:157
+msgid ":guilabel:`All visitors`: :guilabel:`AI requests per day (all visitors)`, 500 by default and counting every model call of the live chat, and the optional :guilabel:`AI cost per day (USD, all visitors)`. If the cost limit is 0, the general daily cost limit of the AI settings applies."
+msgstr ":guilabel:`Todos los visitantes`: :guilabel:`Solicitudes de IA por día (todos los visitantes)`, 500 por defecto y que cuenta cada llamada al modelo del chat en vivo, y el opcional :guilabel:`Coste de IA por día (USD, todos los visitantes)`. Si el límite de coste es 0, se aplica el límite diario de coste general de los ajustes de IA."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:161
+msgid ":guilabel:`Leads per visitor address and day` (3 by default) limits the leads that the AI creates (see above)."
+msgstr ":guilabel:`Oportunidades por dirección de visitante y día` (3 por defecto) limita las oportunidades que crea la IA (véase más arriba)."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:164
+msgid "The live chat also keeps the requests of its service user under 60 per minute; the system parameter ``ai_livechat.rate_limit_rpm`` changes this."
+msgstr "El chat en vivo también mantiene las solicitudes de su usuario de servicio por debajo de 60 por minuto; el parámetro del sistema ``ai_livechat.rate_limit_rpm`` lo modifica."
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:107
+msgid "Or you turn on :guilabel:`Allow dynamic client registration` and apps register themselves. This is off by default. Users still sign in and approve every connection, but registration is limited:"
+msgstr "O bien usted activa :guilabel:`Permitir el registro dinámico de clientes` y las aplicaciones se registran solas. Está desactivado por defecto. Los usuarios siguen iniciando sesión y aprobando cada conexión, pero el registro está limitado:"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:111
+msgid "per network address (:guilabel:`Registrations per address and hour`, 10 by default). Beyond that the app gets \"Too many app registrations from this address\";"
+msgstr "por dirección de red (:guilabel:`Registros por dirección y hora`, 10 por defecto). Más allá, la aplicación recibe \"Too many app registrations from this address\";"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:114
+msgid "an app may register at most 10 redirect URIs, each at most 2048 characters long, in a request of at most 16 KB;"
+msgstr "una aplicación puede registrar como máximo 10 URI de redirección, cada una de como máximo 2048 caracteres, en una solicitud de como máximo 16 KB;"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:116
+msgid "every redirect URI must match one of the :guilabel:`Allowed redirect URI patterns` (see below);"
+msgstr "cada URI de redirección debe coincidir con uno de los :guilabel:`Patrones de URI de redirección permitidos` (véase más abajo);"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:118
+msgid "at most 1000 self-registered apps are accepted (the system parameter ``ai_mcp_gateway.dcr_max_clients``). Apps that never connected and are older than the clean-up time below do not count; and"
+msgstr "se aceptan como máximo 1000 aplicaciones autorregistradas (el parámetro del sistema ``ai_mcp_gateway.dcr_max_clients``). Las aplicaciones que nunca se conectaron y son más antiguas que el tiempo de limpieza indicado a continuación no cuentan; y"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:121
+msgid "an app that was registered by itself and never connected is deleted by a scheduled job after 72 hours (the system parameter ``ai_mcp_gateway.dcr_unused_client_hours``)."
+msgstr "una aplicación que se registró por sí sola y nunca se conectó se elimina mediante un trabajo planificado tras 72 horas (el parámetro del sistema ``ai_mcp_gateway.dcr_unused_client_hours``)."
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:125
+msgid "An authorization error that is found *before* the consent page (a missing PKCE challenge, for example) is not sent back to a self-registered app: it is shown to you on an error page, so that an unreviewed app cannot use the server to redirect you somewhere. After the consent page, your own :guilabel:`Deny` is always sent back to the app, as the protocol expects. Apps that you registered yourself receive their errors as usual."
+msgstr "Un error de autorización detectado *antes* de la página de consentimiento (por ejemplo, la falta de un desafío PKCE) no se devuelve a una aplicación autorregistrada: se le muestra a usted en una página de error, para que una aplicación sin revisar no pueda usar el servidor para redirigirle a otro sitio. Después de la página de consentimiento, su propio :guilabel:`Rechazar` siempre se devuelve a la aplicación, como espera el protocolo. Las aplicaciones que usted mismo registró reciben sus errores como de costumbre."
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:132
+msgid "More settings in the block :guilabel:`MCP server`: :guilabel:`Token lifetimes` (access token minutes and refresh token days) and :guilabel:`Allowed browser origins` for browser-based apps."
+msgstr "Más ajustes en el bloque :guilabel:`Servidor MCP`: :guilabel:`Duración de los tokens` (minutos del token de acceso y días del token de actualización) y :guilabel:`Orígenes de navegador permitidos` para aplicaciones basadas en navegador."
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:137
+msgid "Redirect URI rules"
+msgstr "Reglas de las URI de redirección"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:139
+msgid "Where the AI app may send you back after sign-in is restricted by :guilabel:`Allowed redirect URI patterns`. Every redirect URI, whether you enter it or an app registers it, must match one of the patterns (separated by spaces or commas). A pattern has the form ``scheme://host[:port][/path]``:"
+msgstr "Los sitios a los que la aplicación de IA puede devolverle tras iniciar sesión están restringidos por los :guilabel:`Patrones de URI de redirección permitidos`. Toda URI de redirección, ya la introduzca usted o la registre una aplicación, debe coincidir con uno de los patrones (separados por espacios o comas). Un patrón tiene la forma ``scheme://host[:port][/path]``:"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:144
+msgid "the host is a literal name, ``*`` for any host, or ``*.example.com`` for exactly **one** more label in front of ``example.com`` (``a.example.com``, not ``a.b.example.com``);"
+msgstr "el host es un nombre literal, ``*`` para cualquier host, o ``*.example.com`` para exactamente **una** etiqueta más delante de ``example.com`` (``a.example.com``, no ``a.b.example.com``);"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:147
+msgid "the port is a number or ``*`` for any port. Without a port, the address may not name one (except the default port of the scheme);"
+msgstr "el puerto es un número o ``*`` para cualquier puerto. Sin puerto, la dirección no puede indicar ninguno (salvo el puerto predeterminado del esquema);"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:149
+msgid "the path is empty (any path), a fixed path (exact match) or ends in ``/*`` (that path and everything below it);"
+msgstr "la ruta está vacía (cualquier ruta), es una ruta fija (coincidencia exacta) o termina en ``/*`` (esa ruta y todo lo que hay debajo);"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:151
+msgid "nothing else is a wildcard, and ``*`` never stretches over a ``/``."
+msgstr "nada más es un comodín, y ``*`` nunca se extiende sobre una ``/``."
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:153
+msgid "For example, ``https://claude.ai/api/*`` allows only addresses below that path. The default patterns accept any ``https://`` address and the local loopback addresses (``127.0.0.1``, ``localhost`` and ``[::1]``) that desktop tools use."
+msgstr "Por ejemplo, ``https://claude.ai/api/*`` solo permite las direcciones situadas bajo esa ruta. Los patrones por defecto aceptan cualquier dirección ``https://`` y las direcciones de bucle local (``127.0.0.1``, ``localhost`` y ``[::1]``) que usan las herramientas de escritorio."
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:157
+msgid "Independently of the patterns, a redirect URI must be absolute, must not contain a fragment or user information, must not use the ``javascript``, ``data``, ``file`` or ``vbscript`` schemes, and plain ``http`` is allowed for loopback addresses only. URIs with dot segments or spaces never match. When an app asks to be sent back to a URI, it must equal a registered one exactly; only the port of a registered loopback ``http`` address may differ."
+msgstr "Con independencia de los patrones, una URI de redirección debe ser absoluta, no debe contener fragmento ni información de usuario, no debe usar los esquemas ``javascript``, ``data``, ``file`` o ``vbscript``, y ``http`` sin cifrar solo se permite para direcciones de bucle local. Las URI con segmentos de punto o espacios nunca coinciden. Cuando una aplicación pide que se la redirija a una URI, esta debe ser exactamente igual a una registrada; solo el puerto de una dirección ``http`` de bucle local registrada puede diferir."
+
+#: ../mnt/documentation/content/applications/productivity/ai/models_and_providers.rst:18
+msgid "A hosted provider needs its API key. If it has none, the request fails at once with the message \"The AI provider has no API key. Set it under AI > Configuration > Providers.\" instead of being sent and rejected by the provider. A self-hosted endpoint such as Ollama, LM Studio or vLLM needs no key. That is the case when the :guilabel:`Base Url` points to the local machine (``localhost``), to a private network address, to a name ending in ``.local``, ``.localhost``, ``.internal`` or ``.lan``, or to a plain host name without dots, such as ``http://ollama:11434/v1``."
+msgstr "Un proveedor alojado necesita su clave de API. Si no la tiene, la solicitud falla de inmediato con el mensaje \"The AI provider has no API key. Set it under AI > Configuration > Providers.\" en lugar de enviarse y ser rechazada por el proveedor. Un endpoint autoalojado como Ollama, LM Studio o vLLM no necesita clave. Es el caso cuando la :guilabel:`URL base` apunta a la máquina local (``localhost``), a una dirección de red privada, a un nombre que termina en ``.local``, ``.localhost``, ``.internal`` o ``.lan``, o a un nombre de host simple sin puntos, como ``http://ollama:11434/v1``."
+
+#: ../mnt/documentation/content/applications/productivity/ai/panel.rst:5
+msgid "The AI panel is the everyday way to talk to the assistant. It opens from the AI bubble in the top bar of the backend and of the website preview, from :menuselection:`AI --> Conversations`, or from the command palette (see :doc:`search_and_commands`). When you open it on a record, the assistant sees that record and offers quick prompts that fit it."
+msgstr "El panel de IA es la forma cotidiana de hablar con el asistente. Se abre desde la burbuja de IA de la barra superior del backend y de la vista previa del sitio web, desde :menuselection:`IA --> Conversaciones`, o desde la paleta de comandos (véase :doc:`search_and_commands`). Cuando lo abre sobre un registro, el asistente ve ese registro y ofrece indicaciones rápidas adecuadas."
+
+#: ../mnt/documentation/content/applications/productivity/ai/panel.rst:88
+msgid "When something goes wrong"
+msgstr "Cuando algo sale mal"
+
+#: ../mnt/documentation/content/applications/productivity/ai/panel.rst:90
+msgid "If a tool the assistant calls fails, the assistant is told why, so that it can correct itself: when it used a field that does not exist, for example, it sees the message of the error and tries again with a valid one. The message is shortened to its first lines and never contains technical details such as SQL statements, tracebacks or server paths. The exception is a refusal by the access rules: in general the assistant only learns that access was denied, not why, so that it cannot be used to find out which records or fields exist. Changes made by the failed tool are rolled back."
+msgstr "Si una herramienta que llama el asistente falla, se le informa del motivo para que pueda corregirse: cuando ha usado un campo que no existe, por ejemplo, ve el mensaje del error y lo intenta de nuevo con uno válido. El mensaje se acorta a sus primeras líneas y nunca contiene detalles técnicos como sentencias SQL, trazas de error o rutas del servidor. La excepción es una denegación por las reglas de acceso: en general el asistente solo sabe que se denegó el acceso, no por qué, para que no pueda usarse para averiguar qué registros o campos existen. Los cambios realizados por la herramienta fallida se revierten."
+
+#: ../mnt/documentation/content/applications/productivity/ai/panel.rst:99
+msgid "The assistant answers in plain words and in the language of your message. It uses the labels you see in your interface and does not name its internal tools, not even when it explains what it cannot do."
+msgstr "El asistente responde con palabras sencillas y en el idioma de su mensaje. Utiliza las etiquetas que usted ve en su interfaz y no nombra sus herramientas internas, ni siquiera cuando explica lo que no puede hacer."
+
+#: ../mnt/documentation/content/applications/productivity/ai/search_and_commands.rst:20
+msgid "When you ask for everything about a topic (for example \"everything about consignment stock\"), the assistant does not look for your exact words. It lists a few short word stems in your language, adds synonyms and the English term (for the Hungarian question above: *bizomány*, *konszignáci* and *consignment*), and keeps the records whose name or description contains **any** of the stems, ignoring upper and lower case. Up to eight stems are used, each at least three characters long. They are looked up in the free-text fields that the list has, such as name, description, note, comment, reference, email, subject and body."
+msgstr "Cuando pide todo sobre un tema (por ejemplo \"todo sobre el stock en consigna\"), el asistente no busca sus palabras exactas. Enumera unas pocas raíces de palabras cortas en su idioma, añade sinónimos y el término en inglés (para la pregunta húngara anterior: *bizomány*, *konszignáci* y *consignment*), y conserva los registros cuyo nombre o descripción contiene **cualquiera** de las raíces, sin distinguir mayúsculas y minúsculas. Se usan hasta ocho raíces, cada una de al menos tres caracteres. Se buscan en los campos de texto libre que tiene la lista, como nombre, descripción, nota, comentario, referencia, correo electrónico, asunto y cuerpo."
+
+#: ../mnt/documentation/content/applications/productivity/ai/website.rst:52
+msgid "Website designers who have the :guilabel:`Customize UI & schema` capability can also ask the AI panel (see :doc:`panel`) to work on the website. That capability is off by default and for administrators only (see :doc:`feature_access`). The AI bubble is in the top bar of the website preview too, so you can open the panel while you look at the page. The shipped agent :guilabel:`Website builder` is set up for this: it first looks at the existing pages and menus, proposes changes and never says that something is done before you confirm it."
+msgstr "Los diseñadores web que tienen la capacidad :guilabel:`Personalizar interfaz y esquema` también pueden pedir al panel de IA (véase :doc:`panel`) que trabaje en el sitio web. Esa capacidad está desactivada por defecto y es solo para administradores (véase :doc:`feature_access`). La burbuja de IA también está en la barra superior de la vista previa del sitio web, de modo que puede abrir el panel mientras mira la página. El agente incluido :guilabel:`Constructor web` está preparado para esto: primero mira las páginas y menús existentes, propone cambios y nunca dice que algo está hecho antes de que usted lo confirme."
+
+#: ../mnt/documentation/content/applications/productivity/ai/website.rst:73
+msgid "Website changes are public, so they are always proposed first: the panel shows a card that you confirm or cancel (see :doc:`panel`). Only the :guilabel:`Apply without asking` write mode applies them straight away; the mixed mode still asks. The card shows the full content of the change, not a summary: every block with its title, texts, buttons and their targets, the replaced links, a note when a block goes onto an already published page and, for CSS changes, the complete CSS. A link to another website is marked on the card with the host it leads to. The change is checked again when you confirm."
+msgstr "Los cambios del sitio web son públicos, por lo que siempre se proponen primero: el panel muestra una tarjeta que usted confirma o cancela (véase :doc:`panel`). Solo el modo de escritura :guilabel:`Aplicar sin preguntar` los aplica de inmediato; el modo mixto sigue preguntando. La tarjeta muestra el contenido completo del cambio, no un resumen: cada bloque con su título, textos, botones y destinos, los enlaces sustituidos, una nota cuando un bloque se añade a una página ya publicada y, en los cambios de CSS, el CSS completo. Un enlace a otro sitio web se marca en la tarjeta con el host al que lleva. El cambio se vuelve a comprobar cuando usted confirma."
+
+#: ../mnt/documentation/content/applications/productivity/ai/website.rst:92
+msgid "Custom CSS. The AI may only write plain CSS rules between its own markers in the website's custom stylesheet; your own rules outside the markers are kept. Sass is refused (variables, interpolation and the like), as are imports, scripts, functions that CSS does not know and at-rules other than ``@media``, ``@supports``, ``@keyframes`` and ``@font-face``. An ``url()`` may only point to pictures and static files of this site. The CSS is compiled once on its own and the result is checked again, and then the website's real frontend style bundle is compiled with the new rules before anything is saved. If it does not compile, nothing is saved and the error is shown."
+msgstr "CSS personalizado. La IA solo puede escribir reglas CSS simples entre sus propios marcadores en la hoja de estilos personalizada del sitio web; sus propias reglas fuera de los marcadores se conservan. Sass se rechaza (variables, interpolación y similares), al igual que las importaciones, los scripts, las funciones que CSS no conoce y las reglas at distintas de ``@media``, ``@supports``, ``@keyframes`` y ``@font-face``. Un ``url()`` solo puede apuntar a imágenes y archivos estáticos de este sitio. El CSS se compila una vez por separado y se vuelve a comprobar el resultado; después se compila el paquete de estilos real del frontend del sitio web con las nuevas reglas antes de guardar nada. Si no compila, no se guarda nada y se muestra el error."
+
+#: ../mnt/documentation/content/applications/productivity/ai/website.rst:102
+msgid "If a turn has no builder tools (the capability is missing or you are not a website designer), the assistant tells you that the :guilabel:`Customize UI & schema` capability or the website designer right is missing, that an administrator can grant it, and explains the manual way instead: Menu Editor, Pages, edit mode and theme settings."
+msgstr "Si un turno no tiene herramientas de construcción (falta la capacidad o usted no es diseñador web), el asistente le indica que falta la capacidad :guilabel:`Personalizar interfaz y esquema` o el derecho de diseñador web, que un administrador puede concederlo, y explica en su lugar la vía manual: editor de menús, páginas, modo de edición y ajustes del tema."
+
 #~ msgid "Odoo's **Appointments** app is a self-service scheduling app that simplifies the process of booking meetings, consultations, or services. Integrated with Odoo's suite of business apps, it allows companies to automate appointment scheduling, reduce manual coordination, and provide a seamless experience for clients. Appointments can be linked to calendars, **CRM** opportunities, employee schedules, and more, making it an ideal tool for service-based businesses seeking efficiency and organization."
 #~ msgstr "La aplicación **Citas** de Odoo es una aplicación en la que los clientes y otros usuarios pueden programar sus propias citas, lo que simplifica el proceso de reservas, preguntas o servicios. La aplicación está integrada con el paquete de aplicaciones empresariales de Odoo. De esta forma las empresas pueden automatizar la programación de reuniones, reducir la coordinación manual y brindar una experiencia sencilla a los clientes. Las reuniones pueden vincularse a calendarios, oportunidades de **CRM**, horarios de los empleados y más, lo que la convierte en la herramienta ideal para empresas que se basan en servicios y buscan eficacia y organización."
 
@@ -19989,20 +20341,19 @@ msgstr ""
 " resuman, con el consentimiento de cada participante (véase "
 ":doc:`ai/voice`)."
 
-#: ../../content/applications/productivity/ai.rst:70
-msgid ""
-"**Business apps** — quick prompts and buttons in CRM, Sales, Purchase, "
-"Inventory, Invoicing, Calendar, Products, Email marketing and Timesheets, "
-"ticket triage for projects with SLA and AI analysis of accounting reports "
-"(see :doc:`ai/app_integrations`, :doc:`ai/project_sla` and "
-":doc:`ai/accounting_reports`)."
-msgstr ""
-"**Aplicaciones de negocio** — indicaciones rápidas y botones en CRM, Ventas,"
-" Compras, Inventario, Facturación, Calendario, Productos, Marketing por "
-"correo electrónico y Partes de horas, clasificación de tickets para "
-"proyectos con SLA y análisis con IA de informes contables (véase "
-":doc:`ai/app_integrations`, :doc:`ai/project_sla` y "
-":doc:`ai/accounting_reports`)."
+#~ msgid ""
+#~ "**Business apps** — quick prompts and buttons in CRM, Sales, Purchase, "
+#~ "Inventory, Invoicing, Calendar, Products, Email marketing and Timesheets, "
+#~ "ticket triage for projects with SLA and AI analysis of accounting reports "
+#~ "(see :doc:`ai/app_integrations`, :doc:`ai/project_sla` and "
+#~ ":doc:`ai/accounting_reports`)."
+#~ msgstr ""
+#~ "**Aplicaciones de negocio** — indicaciones rápidas y botones en CRM, Ventas,"
+#~ " Compras, Inventario, Facturación, Calendario, Productos, Marketing por "
+#~ "correo electrónico y Partes de horas, clasificación de tickets para "
+#~ "proyectos con SLA y análisis con IA de informes contables (véase "
+#~ ":doc:`ai/app_integrations`, :doc:`ai/project_sla` y "
+#~ ":doc:`ai/accounting_reports`)."
 
 #: ../../content/applications/productivity/ai.rst:75
 msgid ""
@@ -20243,24 +20594,23 @@ msgid "Note for administrators: background jobs and time limits"
 msgstr ""
 "Nota para administradores: trabajos en segundo plano y límites de tiempo"
 
-#: ../../content/applications/productivity/ai/accounting_reports.rst:88
-msgid ""
-"An audit makes several model calls and easily takes longer than an ordinary "
-"web request is allowed to run. That is why analyses and audits run as "
-"background jobs of the scheduled action \"AI: Run accounting report analyses"
-" and audits\". The job runs in the environment of the person who clicked, "
-"never in the identity of the scheduler, and the form refreshes by itself. A "
-"job that stays in the running state for more than 30 minutes is marked as "
-"failed, so nothing stays stuck."
-msgstr ""
-"Una auditoría hace varias llamadas al modelo y fácilmente tarda más de lo "
-"que una petición web normal puede ejecutarse. Por eso los análisis y las "
-"auditorías se ejecutan como trabajos en segundo plano de la acción "
-"programada «AI: Run accounting report analyses and audits». El trabajo se "
-"ejecuta en el entorno de la persona que hizo clic, nunca con la identidad "
-"del planificador, y el formulario se actualiza solo. Un trabajo que "
-"permanece en estado de ejecución más de 30 minutos se marca como fallido, de"
-" modo que nada se queda bloqueado."
+#~ msgid ""
+#~ "An audit makes several model calls and easily takes longer than an ordinary "
+#~ "web request is allowed to run. That is why analyses and audits run as "
+#~ "background jobs of the scheduled action \"AI: Run accounting report analyses"
+#~ " and audits\". The job runs in the environment of the person who clicked, "
+#~ "never in the identity of the scheduler, and the form refreshes by itself. A "
+#~ "job that stays in the running state for more than 30 minutes is marked as "
+#~ "failed, so nothing stays stuck."
+#~ msgstr ""
+#~ "Una auditoría hace varias llamadas al modelo y fácilmente tarda más de lo "
+#~ "que una petición web normal puede ejecutarse. Por eso los análisis y las "
+#~ "auditorías se ejecutan como trabajos en segundo plano de la acción "
+#~ "programada «AI: Run accounting report analyses and audits». El trabajo se "
+#~ "ejecuta en el entorno de la persona que hizo clic, nunca con la identidad "
+#~ "del planificador, y el formulario se actualiza solo. Un trabajo que "
+#~ "permanece en estado de ejecución más de 30 minutos se marca como fallido, de"
+#~ " modo que nada se queda bloqueado."
 
 #: ../../content/applications/productivity/ai/accounting_reports.rst:97
 msgid ""
@@ -21844,21 +22194,20 @@ msgstr "Un mensaje del visitante está limitado a 2000 caracteres por turno."
 msgid "Hand-over to a human"
 msgstr "Traspaso a una persona"
 
-#: ../../content/applications/productivity/ai/livechat.rst:63
-msgid ""
-"The agent hands the chat over to an available operator when the visitor asks"
-" for a person, when :guilabel:`Max AI answers` is reached, when the agent is"
-" unsure or when the AI service fails. The operator is chosen with the "
-"channel's normal operator selection and joins the session; the agent posts a"
-" short summary and stops answering. An operator who simply writes in the "
-"session also takes it over."
-msgstr ""
-"El agente traspasa el chat a un operador disponible cuando el visitante pide"
-" hablar con una persona, cuando se alcanza :guilabel:`Máximo de respuestas "
-"de la IA`, cuando el agente no está seguro o cuando falla el servicio de IA."
-" El operador se elige con la selección normal de operadores del canal y se "
-"une a la sesión; el agente publica un breve resumen y deja de responder. Un "
-"operador que simplemente escribe en la sesión también la asume."
+#~ msgid ""
+#~ "The agent hands the chat over to an available operator when the visitor asks"
+#~ " for a person, when :guilabel:`Max AI answers` is reached, when the agent is"
+#~ " unsure or when the AI service fails. The operator is chosen with the "
+#~ "channel's normal operator selection and joins the session; the agent posts a"
+#~ " short summary and stops answering. An operator who simply writes in the "
+#~ "session also takes it over."
+#~ msgstr ""
+#~ "El agente traspasa el chat a un operador disponible cuando el visitante pide"
+#~ " hablar con una persona, cuando se alcanza :guilabel:`Máximo de respuestas "
+#~ "de la IA`, cuando el agente no está seguro o cuando falla el servicio de IA."
+#~ " El operador se elige con la selección normal de operadores del canal y se "
+#~ "une a la sesión; el agente publica un breve resumen y deja de responder. Un "
+#~ "operador que simplemente escribe en la sesión también la asume."
 
 #: ../../content/applications/productivity/ai/livechat.rst:70
 msgid ""
@@ -21870,15 +22219,14 @@ msgstr ""
 "de contacto, y el agente sigue ayudando durante un número limitado de "
 "respuestas adicionales."
 
-#: ../../content/applications/productivity/ai/livechat.rst:74
-msgid ""
-"The hand-over summary is visible to the visitor, and it is labelled as an AI"
-" summary based on the visitor's messages that is not verified. It contains "
-"no clickable links."
-msgstr ""
-"El resumen del traspaso es visible para el visitante y está etiquetado como "
-"un resumen de IA basado en los mensajes del visitante que no ha sido "
-"verificado. No contiene enlaces en los que se pueda hacer clic."
+#~ msgid ""
+#~ "The hand-over summary is visible to the visitor, and it is labelled as an AI"
+#~ " summary based on the visitor's messages that is not verified. It contains "
+#~ "no clickable links."
+#~ msgstr ""
+#~ "El resumen del traspaso es visible para el visitante y está etiquetado como "
+#~ "un resumen de IA basado en los mensajes del visitante que no ha sido "
+#~ "verificado. No contiene enlaces en los que se pueda hacer clic."
 
 #: ../../content/applications/productivity/ai/livechat.rst:78
 msgid ""
@@ -21914,20 +22262,19 @@ msgstr ""
 "empresa y un resumen. El cliente potencial queda sin asignar y vinculado a "
 "la conversación, y el chat enlaza de vuelta al cliente potencial."
 
-#: ../../content/applications/productivity/ai/livechat.rst:94
-msgid ""
-"Nobody can confirm a request from an unattended visitor, so the lead is "
-"created directly. At most one lead is created per session and a limited "
-"number per visitor address per day (:guilabel:`Leads per visitor address and"
-" day` in the settings). The lead description starts with the label that the "
-"summary is unverified."
-msgstr ""
-"Nadie puede confirmar una solicitud de un visitante desatendido, por lo que "
-"el cliente potencial se crea directamente. Se crea como máximo un cliente "
-"potencial por sesión y un número limitado por dirección de visitante al día "
-"(:guilabel:`Oportunidades por dirección de visitante y día` en los ajustes)."
-" La descripción del cliente potencial empieza con la etiqueta de que el "
-"resumen no está verificado."
+#~ msgid ""
+#~ "Nobody can confirm a request from an unattended visitor, so the lead is "
+#~ "created directly. At most one lead is created per session and a limited "
+#~ "number per visitor address per day (:guilabel:`Leads per visitor address and"
+#~ " day` in the settings). The lead description starts with the label that the "
+#~ "summary is unverified."
+#~ msgstr ""
+#~ "Nadie puede confirmar una solicitud de un visitante desatendido, por lo que "
+#~ "el cliente potencial se crea directamente. Se crea como máximo un cliente "
+#~ "potencial por sesión y un número limitado por dirección de visitante al día "
+#~ "(:guilabel:`Oportunidades por dirección de visitante y día` en los ajustes)."
+#~ " La descripción del cliente potencial empieza con la etiqueta de que el "
+#~ "resumen no está verificado."
 
 #: ../../content/applications/productivity/ai/livechat.rst:101
 msgid "Preview cards"
@@ -22013,30 +22360,28 @@ msgstr ""
 "cortés y la sesión se traspasa a un operador disponible o la IA se detiene "
 "en esa sesión. Un valor de 0 desactiva el límite."
 
-#: ../../content/applications/productivity/ai/livechat.rst:134
-msgid ""
-":guilabel:`Per visitor`: :guilabel:`Seconds between AI answers`, "
-":guilabel:`Visitor messages per minute`, :guilabel:`AI conversations per "
-"visitor and hour` and :guilabel:`AI answers per visitor and day`. Visitors "
-"are told apart by network address, guest, signed-in contact or website "
-"visitor."
-msgstr ""
-":guilabel:`Por visitante`: :guilabel:`Segundos entre respuestas de la IA`, "
-":guilabel:`Mensajes del visitante por minuto`, :guilabel:`Conversaciones de "
-"IA por visitante y hora` y :guilabel:`Respuestas de la IA por visitante y "
-"día`. Los visitantes se distinguen por dirección de red, invitado, contacto "
-"con sesión iniciada o visitante del sitio web."
+#~ msgid ""
+#~ ":guilabel:`Per visitor`: :guilabel:`Seconds between AI answers`, "
+#~ ":guilabel:`Visitor messages per minute`, :guilabel:`AI conversations per "
+#~ "visitor and hour` and :guilabel:`AI answers per visitor and day`. Visitors "
+#~ "are told apart by network address, guest, signed-in contact or website "
+#~ "visitor."
+#~ msgstr ""
+#~ ":guilabel:`Por visitante`: :guilabel:`Segundos entre respuestas de la IA`, "
+#~ ":guilabel:`Mensajes del visitante por minuto`, :guilabel:`Conversaciones de "
+#~ "IA por visitante y hora` y :guilabel:`Respuestas de la IA por visitante y "
+#~ "día`. Los visitantes se distinguen por dirección de red, invitado, contacto "
+#~ "con sesión iniciada o visitante del sitio web."
 
-#: ../../content/applications/productivity/ai/livechat.rst:138
-msgid ""
-":guilabel:`All visitors`: :guilabel:`AI requests per day (all visitors)` and"
-" :guilabel:`AI cost per day (USD, all visitors)`. If the cost limit is 0, "
-"the general daily cost limit of the AI settings applies."
-msgstr ""
-":guilabel:`Todos los visitantes`: :guilabel:`Solicitudes de IA por día "
-"(todos los visitantes)` y :guilabel:`Coste de IA por día (USD, todos los "
-"visitantes)`. Si el límite de coste es 0, se aplica el límite de coste "
-"diario general de los ajustes de IA."
+#~ msgid ""
+#~ ":guilabel:`All visitors`: :guilabel:`AI requests per day (all visitors)` and"
+#~ " :guilabel:`AI cost per day (USD, all visitors)`. If the cost limit is 0, "
+#~ "the general daily cost limit of the AI settings applies."
+#~ msgstr ""
+#~ ":guilabel:`Todos los visitantes`: :guilabel:`Solicitudes de IA por día "
+#~ "(todos los visitantes)` y :guilabel:`Coste de IA por día (USD, todos los "
+#~ "visitantes)`. Si el límite de coste es 0, se aplica el límite de coste "
+#~ "diario general de los ajustes de IA."
 
 #: ../../content/applications/productivity/ai/livechat.rst:143
 msgid ""
@@ -22301,39 +22646,37 @@ msgstr ""
 " (el secreto se muestra una sola vez) o :guilabel:`Hacer público (solo "
 "PKCE)` para aplicaciones que no pueden guardar un secreto."
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:107
-msgid ""
-"Or you turn on :guilabel:`Allow dynamic client registration` and apps "
-"register themselves. This is off by default. When on, registration is "
-"limited per network address (:guilabel:`Registrations per address and hour`,"
-" 10 by default), the registered addresses must match :guilabel:`Allowed "
-"redirect URI patterns`, and apps that never get used are deleted after 72 "
-"hours. An authorization error of an app that is not yet reviewed is shown on"
-" an error page instead of redirecting back to the app."
-msgstr ""
-"O activa :guilabel:`Permitir el registro dinámico de clientes` y las "
-"aplicaciones se registran solas. Está desactivado por defecto. Cuando está "
-"activado, el registro se limita por dirección de red (:guilabel:`Registros "
-"por dirección y hora`, 10 por defecto), las direcciones registradas deben "
-"coincidir con :guilabel:`Patrones de URI de redirección permitidos` y las "
-"aplicaciones que nunca se usan se eliminan a las 72 horas. Un error de "
-"autorización de una aplicación aún no revisada se muestra en una página de "
-"error en lugar de redirigir de vuelta a la aplicación."
+#~ msgid ""
+#~ "Or you turn on :guilabel:`Allow dynamic client registration` and apps "
+#~ "register themselves. This is off by default. When on, registration is "
+#~ "limited per network address (:guilabel:`Registrations per address and hour`,"
+#~ " 10 by default), the registered addresses must match :guilabel:`Allowed "
+#~ "redirect URI patterns`, and apps that never get used are deleted after 72 "
+#~ "hours. An authorization error of an app that is not yet reviewed is shown on"
+#~ " an error page instead of redirecting back to the app."
+#~ msgstr ""
+#~ "O activa :guilabel:`Permitir el registro dinámico de clientes` y las "
+#~ "aplicaciones se registran solas. Está desactivado por defecto. Cuando está "
+#~ "activado, el registro se limita por dirección de red (:guilabel:`Registros "
+#~ "por dirección y hora`, 10 por defecto), las direcciones registradas deben "
+#~ "coincidir con :guilabel:`Patrones de URI de redirección permitidos` y las "
+#~ "aplicaciones que nunca se usan se eliminan a las 72 horas. Un error de "
+#~ "autorización de una aplicación aún no revisada se muestra en una página de "
+#~ "error en lugar de redirigir de vuelta a la aplicación."
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:115
-msgid ""
-"More settings in the block :guilabel:`MCP server`: :guilabel:`Token "
-"lifetimes` (access token minutes and refresh token days) and "
-":guilabel:`Allowed browser origins` for browser-based apps. The default "
-"redirect patterns accept ``https://`` addresses and the local loopback "
-"addresses used by desktop tools."
-msgstr ""
-"Más ajustes en el bloque :guilabel:`Servidor MCP`: :guilabel:`Duración de "
-"los tokens` (minutos del token de acceso y días del token de renovación) y "
-":guilabel:`Orígenes de navegador permitidos` para aplicaciones basadas en "
-"navegador. Los patrones de redirección por defecto aceptan direcciones "
-"``https://`` y las direcciones locales de loopback que usan las herramientas"
-" de escritorio."
+#~ msgid ""
+#~ "More settings in the block :guilabel:`MCP server`: :guilabel:`Token "
+#~ "lifetimes` (access token minutes and refresh token days) and "
+#~ ":guilabel:`Allowed browser origins` for browser-based apps. The default "
+#~ "redirect patterns accept ``https://`` addresses and the local loopback "
+#~ "addresses used by desktop tools."
+#~ msgstr ""
+#~ "Más ajustes en el bloque :guilabel:`Servidor MCP`: :guilabel:`Duración de "
+#~ "los tokens` (minutos del token de acceso y días del token de renovación) y "
+#~ ":guilabel:`Orígenes de navegador permitidos` para aplicaciones basadas en "
+#~ "navegador. Los patrones de redirección por defecto aceptan direcciones "
+#~ "``https://`` y las direcciones locales de loopback que usan las herramientas"
+#~ " de escritorio."
 
 #: ../../content/applications/productivity/ai/mcp_server.rst:121
 msgid "Portal users"
@@ -22595,19 +22938,18 @@ msgstr ""
 msgid "The AI panel"
 msgstr "El panel de IA"
 
-#: ../../content/applications/productivity/ai/panel.rst:5
-msgid ""
-"The AI panel is the everyday way to talk to the assistant. It opens from the"
-" AI bubble in the top bar of the backend, from :menuselection:`AI --> "
-"Conversations`, or from the command palette (see "
-":doc:`search_and_commands`). When you open it on a record, the assistant "
-"sees that record and offers quick prompts that fit it."
-msgstr ""
-"El panel de IA es la forma habitual de hablar con el asistente. Se abre "
-"desde la burbuja de IA de la barra superior del backend, desde "
-":menuselection:`IA --> Conversaciones` o desde la paleta de comandos (véase "
-":doc:`search_and_commands`). Si lo abre sobre un registro, el asistente ve "
-"ese registro y ofrece indicaciones rápidas adecuadas."
+#~ msgid ""
+#~ "The AI panel is the everyday way to talk to the assistant. It opens from the"
+#~ " AI bubble in the top bar of the backend, from :menuselection:`AI --> "
+#~ "Conversations`, or from the command palette (see "
+#~ ":doc:`search_and_commands`). When you open it on a record, the assistant "
+#~ "sees that record and offers quick prompts that fit it."
+#~ msgstr ""
+#~ "El panel de IA es la forma habitual de hablar con el asistente. Se abre "
+#~ "desde la burbuja de IA de la barra superior del backend, desde "
+#~ ":menuselection:`IA --> Conversaciones` o desde la paleta de comandos (véase "
+#~ ":doc:`search_and_commands`). Si lo abre sobre un registro, el asistente ve "
+#~ "ese registro y ofrece indicaciones rápidas adecuadas."
 
 #: ../../content/applications/productivity/ai/panel.rst:11
 msgid ""
@@ -23617,22 +23959,21 @@ msgstr ""
 msgid "Builder tools in the AI panel"
 msgstr "Herramientas de construcción en el panel de IA"
 
-#: ../../content/applications/productivity/ai/website.rst:52
-msgid ""
-"Website designers who have the :guilabel:`Customize UI & schema` capability "
-"can also ask the AI panel (see :doc:`panel`) to work on the website. That "
-"capability is off by default and for administrators only (see "
-":doc:`feature_access`). The shipped agent :guilabel:`Website builder` is set"
-" up for this: it first looks at the existing pages and menus, proposes "
-"changes and never says that something is done before you confirm it."
-msgstr ""
-"Los diseñadores web que tienen la capacidad :guilabel:`Personalizar interfaz"
-" y esquema` también pueden pedir al panel de IA (véase :doc:`panel`) que "
-"trabaje en el sitio web. Esa capacidad está desactivada por defecto y es "
-"solo para administradores (véase :doc:`feature_access`). El agente incluido "
-":guilabel:`Constructor web` está preparado para ello: primero examina las "
-"páginas y menús existentes, propone cambios y nunca dice que algo está hecho"
-" antes de que usted lo confirme."
+#~ msgid ""
+#~ "Website designers who have the :guilabel:`Customize UI & schema` capability "
+#~ "can also ask the AI panel (see :doc:`panel`) to work on the website. That "
+#~ "capability is off by default and for administrators only (see "
+#~ ":doc:`feature_access`). The shipped agent :guilabel:`Website builder` is set"
+#~ " up for this: it first looks at the existing pages and menus, proposes "
+#~ "changes and never says that something is done before you confirm it."
+#~ msgstr ""
+#~ "Los diseñadores web que tienen la capacidad :guilabel:`Personalizar interfaz"
+#~ " y esquema` también pueden pedir al panel de IA (véase :doc:`panel`) que "
+#~ "trabaje en el sitio web. Esa capacidad está desactivada por defecto y es "
+#~ "solo para administradores (véase :doc:`feature_access`). El agente incluido "
+#~ ":guilabel:`Constructor web` está preparado para ello: primero examina las "
+#~ "páginas y menús existentes, propone cambios y nunca dice que algo está hecho"
+#~ " antes de que usted lo confirme."
 
 #: ../../content/applications/productivity/ai/website.rst:59
 msgid "The tools can:"
@@ -23677,26 +24018,25 @@ msgstr ""
 msgid "Confirmation cards"
 msgstr "Tarjetas de confirmación"
 
-#: ../../content/applications/productivity/ai/website.rst:72
-msgid ""
-"Website changes are public, so they are always proposed first: the panel "
-"shows a card that you confirm or cancel (see :doc:`panel`). Only the "
-":guilabel:`Apply without asking` write mode applies them straight away; the "
-"mixed mode still asks. The card lists everything that will change: every "
-"block with its title, texts, buttons and their targets, the replaced links, "
-"a note when a block goes onto an already published page and, for CSS "
-"changes, the complete CSS. Links to other websites are marked as external. "
-"The change is checked again when you confirm."
-msgstr ""
-"Los cambios en el sitio web son públicos, por lo que siempre se proponen "
-"primero: el panel muestra una tarjeta que usted confirma o cancela (véase "
-":doc:`panel`). Solo el modo de escritura :guilabel:`Aplicar sin preguntar` "
-"los aplica de inmediato; el modo mixto sigue preguntando. La tarjeta enumera"
-" todo lo que cambiará: cada bloque con su título, textos, botones y sus "
-"destinos, los enlaces sustituidos, una nota cuando un bloque se añade a una "
-"página ya publicada y, en los cambios de CSS, el CSS completo. Los enlaces a"
-" otros sitios web se marcan como externos. El cambio se vuelve a comprobar "
-"al confirmar."
+#~ msgid ""
+#~ "Website changes are public, so they are always proposed first: the panel "
+#~ "shows a card that you confirm or cancel (see :doc:`panel`). Only the "
+#~ ":guilabel:`Apply without asking` write mode applies them straight away; the "
+#~ "mixed mode still asks. The card lists everything that will change: every "
+#~ "block with its title, texts, buttons and their targets, the replaced links, "
+#~ "a note when a block goes onto an already published page and, for CSS "
+#~ "changes, the complete CSS. Links to other websites are marked as external. "
+#~ "The change is checked again when you confirm."
+#~ msgstr ""
+#~ "Los cambios en el sitio web son públicos, por lo que siempre se proponen "
+#~ "primero: el panel muestra una tarjeta que usted confirma o cancela (véase "
+#~ ":doc:`panel`). Solo el modo de escritura :guilabel:`Aplicar sin preguntar` "
+#~ "los aplica de inmediato; el modo mixto sigue preguntando. La tarjeta enumera"
+#~ " todo lo que cambiará: cada bloque con su título, textos, botones y sus "
+#~ "destinos, los enlaces sustituidos, una nota cuando un bloque se añade a una "
+#~ "página ya publicada y, en los cambios de CSS, el CSS completo. Los enlaces a"
+#~ " otros sitios web se marcan como externos. El cambio se vuelve a comprobar "
+#~ "al confirmar."
 
 #: ../../content/applications/productivity/ai/website.rst:82
 msgid "Links and CSS rules"
@@ -23721,30 +24061,28 @@ msgstr ""
 ":guilabel:`Constructor web` de :menuselection:`IA --> Configuración --> "
 "Ajustes`. Esos enlaces se siguen marcando en la tarjeta."
 
-#: ../../content/applications/productivity/ai/website.rst:91
-msgid ""
-"Custom CSS. The AI may only write plain CSS between its own markers in the "
-"website's custom stylesheet; your own rules outside the markers are kept. "
-"Imports, scripts, Sass features, unknown functions and addresses outside "
-"this site are refused, and the website styles must still compile, otherwise "
-"the change is rolled back."
-msgstr ""
-"CSS personalizado. La IA solo puede escribir CSS simple entre sus propios "
-"marcadores en la hoja de estilos personalizada del sitio web; sus propias "
-"reglas fuera de los marcadores se conservan. Se rechazan las importaciones, "
-"los scripts, las funciones de Sass, las funciones desconocidas y las "
-"direcciones externas a este sitio, y los estilos del sitio web deben seguir "
-"compilándose; de lo contrario, el cambio se revierte."
+#~ msgid ""
+#~ "Custom CSS. The AI may only write plain CSS between its own markers in the "
+#~ "website's custom stylesheet; your own rules outside the markers are kept. "
+#~ "Imports, scripts, Sass features, unknown functions and addresses outside "
+#~ "this site are refused, and the website styles must still compile, otherwise "
+#~ "the change is rolled back."
+#~ msgstr ""
+#~ "CSS personalizado. La IA solo puede escribir CSS simple entre sus propios "
+#~ "marcadores en la hoja de estilos personalizada del sitio web; sus propias "
+#~ "reglas fuera de los marcadores se conservan. Se rechazan las importaciones, "
+#~ "los scripts, las funciones de Sass, las funciones desconocidas y las "
+#~ "direcciones externas a este sitio, y los estilos del sitio web deben seguir "
+#~ "compilándose; de lo contrario, el cambio se revierte."
 
-#: ../../content/applications/productivity/ai/website.rst:97
-msgid ""
-"If a turn has no builder tools (the capability is missing or you are not a "
-"website designer), the assistant explains the manual way instead: Menu "
-"Editor, Pages, edit mode and theme settings."
-msgstr ""
-"Si un turno no dispone de herramientas de construcción (falta la capacidad o"
-" no es diseñador web), el asistente explica en su lugar la vía manual: "
-"editor de menús, páginas, modo de edición y ajustes del tema."
+#~ msgid ""
+#~ "If a turn has no builder tools (the capability is missing or you are not a "
+#~ "website designer), the assistant explains the manual way instead: Menu "
+#~ "Editor, Pages, edit mode and theme settings."
+#~ msgstr ""
+#~ "Si un turno no dispone de herramientas de construcción (falta la capacidad o"
+#~ " no es diseñador web), el asistente explica en su lugar la vía manual: "
+#~ "editor de menús, páginas, modo de edición y ajustes del tema."
 
 #: ../../content/applications/productivity/ai/website.rst:102
 msgid "Brand kits"

@@ -17,6 +17,15 @@ Search with AI
    grouping) on the current view. You can remove or change them like any other
    facet.
 
+When you ask for everything about a topic (for example "everything about
+consignment stock"), the assistant does not look for your exact words. It lists
+a few short word stems in your language, adds synonyms and the English term
+(for the Hungarian question above: *bizomány*, *konszignáci* and *consignment*),
+and keeps the records whose name or description contains **any** of the stems,
+ignoring upper and lower case. Up to eight stems are used, each at least three
+characters long. They are looked up in the free-text fields that the list has,
+such as name, description, note, comment, reference, email, subject and body.
+
 The proposed search is checked against the fields of the view and your rights
 before it is applied. If the assistant suggests something the view cannot use,
 you get a message instead of a wrong result. The button is hidden in pop-up

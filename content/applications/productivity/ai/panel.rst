@@ -3,7 +3,7 @@ The AI panel
 ============
 
 The AI panel is the everyday way to talk to the assistant. It opens from the AI
-bubble in the top bar of the backend, from :menuselection:`AI -->
+bubble in the top bar of the backend and of the website preview, from :menuselection:`AI -->
 Conversations`, or from the command palette (see :doc:`search_and_commands`).
 When you open it on a record, the assistant sees that record and offers quick
 prompts that fit it.
@@ -83,6 +83,22 @@ assistant can read the text of a PDF or office document you are allowed to read,
 and look at pictures. Open :guilabel:`Conversation files` to see everything
 attached to the conversation. Allowed types and the maximum size are set in the
 AI settings.
+
+When something goes wrong
+=========================
+
+If a tool the assistant calls fails, the assistant is told why, so that it can
+correct itself: when it used a field that does not exist, for example, it sees
+the message of the error and tries again with a valid one. The message is
+shortened to its first lines and never contains technical details such as SQL
+statements, tracebacks or server paths. The exception is a refusal by the
+access rules: in general the assistant only learns that access was denied, not
+why, so that it cannot be used to find out which records or fields exist.
+Changes made by the failed tool are rolled back.
+
+The assistant answers in plain words and in the language of your message. It
+uses the labels you see in your interface and does not name its internal tools,
+not even when it explains what it cannot do.
 
 Delegating to specialist agents
 ===============================

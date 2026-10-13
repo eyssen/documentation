@@ -105,17 +105,61 @@ There are two ways to let an app in.
   confidential app (the secret is shown only once) or :guilabel:`Make public
   (PKCE only)` for apps that cannot keep a secret.
 - Or you turn on :guilabel:`Allow dynamic client registration` and apps register
-  themselves. This is off by default. When on, registration is limited per
-  network address (:guilabel:`Registrations per address and hour`, 10 by
-  default), the registered addresses must match :guilabel:`Allowed redirect URI
-  patterns`, and apps that never get used are deleted after 72 hours. An
-  authorization error of an app that is not yet reviewed is shown on an error
-  page instead of redirecting back to the app.
+  themselves. This is off by default. Users still sign in and approve every
+  connection, but registration is limited:
+
+  - per network address (:guilabel:`Registrations per address and hour`, 10 by
+    default). Beyond that the app gets "Too many app registrations from this
+    address";
+  - an app may register at most 10 redirect URIs, each at most 2048 characters
+    long, in a request of at most 16 KB;
+  - every redirect URI must match one of the :guilabel:`Allowed redirect URI
+    patterns` (see below);
+  - at most 1000 self-registered apps are accepted (the system parameter
+    ``ai_mcp_gateway.dcr_max_clients``). Apps that never connected and are older
+    than the clean-up time below do not count; and
+  - an app that was registered by itself and never connected is deleted by a
+    scheduled job after 72 hours (the system parameter
+    ``ai_mcp_gateway.dcr_unused_client_hours``).
+
+- An authorization error that is found *before* the consent page (a missing PKCE
+  challenge, for example) is not sent back to a self-registered app: it is shown to
+  you on an error page, so that an unreviewed app cannot use the server to
+  redirect you somewhere. After the consent page, your own :guilabel:`Deny` is
+  always sent back to the app, as the protocol expects. Apps that you registered
+  yourself receive their errors as usual.
 
 More settings in the block :guilabel:`MCP server`: :guilabel:`Token lifetimes`
 (access token minutes and refresh token days) and :guilabel:`Allowed browser
-origins` for browser-based apps. The default redirect patterns accept
-``https://`` addresses and the local loopback addresses used by desktop tools.
+origins` for browser-based apps.
+
+Redirect URI rules
+------------------
+
+Where the AI app may send you back after sign-in is restricted by
+:guilabel:`Allowed redirect URI patterns`. Every redirect URI, whether you enter
+it or an app registers it, must match one of the patterns (separated by spaces
+or commas). A pattern has the form ``scheme://host[:port][/path]``:
+
+- the host is a literal name, ``*`` for any host, or ``*.example.com`` for
+  exactly **one** more label in front of ``example.com`` (``a.example.com``, not
+  ``a.b.example.com``);
+- the port is a number or ``*`` for any port. Without a port, the address may
+  not name one (except the default port of the scheme);
+- the path is empty (any path), a fixed path (exact match) or ends in ``/*``
+  (that path and everything below it);
+- nothing else is a wildcard, and ``*`` never stretches over a ``/``.
+
+For example, ``https://claude.ai/api/*`` allows only addresses below that path.
+The default patterns accept any ``https://`` address and the local loopback
+addresses (``127.0.0.1``, ``localhost`` and ``[::1]``) that desktop tools use.
+
+Independently of the patterns, a redirect URI must be absolute, must not
+contain a fragment or user information, must not use the ``javascript``,
+``data``, ``file`` or ``vbscript`` schemes, and plain ``http`` is allowed for
+loopback addresses only. URIs with dot segments or spaces never match. When an
+app asks to be sent back to a URI, it must equal a registered one exactly; only
+the port of a registered loopback ``http`` address may differ.
 
 Portal users
 ============

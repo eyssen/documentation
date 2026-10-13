@@ -52,7 +52,8 @@ Builder tools in the AI panel
 Website designers who have the :guilabel:`Customize UI & schema` capability can
 also ask the AI panel (see :doc:`panel`) to work on the website. That capability
 is off by default and for administrators only (see :doc:`feature_access`). The
-shipped agent :guilabel:`Website builder` is set up for this: it first looks at
+AI bubble is in the top bar of the website preview too, so you can open the
+panel while you look at the page. The shipped agent :guilabel:`Website builder` is set up for this: it first looks at
 the existing pages and menus, proposes changes and never says that something is
 done before you confirm it.
 
@@ -72,11 +73,11 @@ Confirmation cards
 Website changes are public, so they are always proposed first: the panel shows a
 card that you confirm or cancel (see :doc:`panel`). Only the :guilabel:`Apply
 without asking` write mode applies them straight away; the mixed mode still
-asks. The card lists everything that will change: every block with its title,
-texts, buttons and their targets, the replaced links, a note when a block goes
-onto an already published page and, for CSS changes, the complete CSS. Links to
-other websites are marked as external. The change is checked again when you
-confirm.
+asks. The card shows the full content of the change, not a summary: every block
+with its title, texts, buttons and their targets, the replaced links, a note
+when a block goes onto an already published page and, for CSS changes, the
+complete CSS. A link to another website is marked on the card with the host it
+leads to. The change is checked again when you confirm.
 
 Links and CSS rules
 -------------------
@@ -88,14 +89,20 @@ Links and CSS rules
   lift this with :guilabel:`AI may add links to other websites` in the block
   :guilabel:`Website builder` of :menuselection:`AI --> Configuration -->
   Settings`. Such links are then still marked on the card.
-- Custom CSS. The AI may only write plain CSS between its own markers in the
-  website's custom stylesheet; your own rules outside the markers are kept.
-  Imports, scripts, Sass features, unknown functions and addresses outside this
-  site are refused, and the website styles must still compile, otherwise the
-  change is rolled back.
+- Custom CSS. The AI may only write plain CSS rules between its own markers in
+  the website's custom stylesheet; your own rules outside the markers are kept.
+  Sass is refused (variables, interpolation and the like), as are imports,
+  scripts, functions that CSS does not know and at-rules other than ``@media``,
+  ``@supports``, ``@keyframes`` and ``@font-face``. An ``url()`` may only point to
+  pictures and static files of this site. The CSS is compiled once on its own
+  and the result is checked again, and then the website's real frontend style
+  bundle is compiled with the new rules before anything is saved. If it does
+  not compile, nothing is saved and the error is shown.
 
 If a turn has no builder tools (the capability is missing or you are not a
-website designer), the assistant explains the manual way instead: Menu Editor,
+website designer), the assistant tells you that the :guilabel:`Customize UI &
+schema` capability or the website designer right is missing, that an
+administrator can grant it, and explains the manual way instead: Menu Editor,
 Pages, edit mode and theme settings.
 
 Brand kits

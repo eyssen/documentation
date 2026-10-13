@@ -90,8 +90,8 @@ request is allowed to run. That is why analyses and audits run as background
 jobs of the scheduled action "AI: Run accounting report analyses and audits".
 The job runs in the environment of the person who clicked, never in the identity
 of the scheduler, and the form refreshes by itself. A job that stays in the
-running state for more than 30 minutes is marked as failed, so nothing stays
-stuck.
+running state for more than 30 minutes is marked as failed with the message
+"The AI job was interrupted. Start it again.", so nothing stays stuck.
 
 .. important::
    The time a background job may run comes from the server option
@@ -100,3 +100,8 @@ stuck.
    timeout, raise ``limit_time_real_cron`` in the server configuration file (for
    example to 900 seconds) and restart the server. The value 0 is not treated as
    "no limit".
+
+If the model does not answer within the time that is left, the analysis or audit
+ends as failed with the message "The AI model did not answer in time. Try again
+later, or ask for something shorter or narrower." The message is shown on the
+analysis, posted in its chatter and sent to you as a notification.

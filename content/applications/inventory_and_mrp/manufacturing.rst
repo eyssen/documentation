@@ -16,5 +16,6 @@ the reports used to track manufacturing costs, delays, and efficiency.
    manufacturing/basic_setup
    manufacturing/advanced_configuration
    manufacturing/workflows
+   manufacturing/cad_bom_import
    manufacturing/subcontracting
    manufacturing/reporting

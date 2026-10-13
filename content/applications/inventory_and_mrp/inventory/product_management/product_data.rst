@@ -3,9 +3,9 @@ Product data extensions
 ==========================
 
 The eYssen modules on this page extend the product record itself: they add a dedicated
-**Products** app menu, a rule-driven internal reference generator, a material composition, a
-product lifecycle stage that can gate sales and purchases, seasons, computed dimensions, product
-images in list views and bulk media upload. Every module is independent — install only the ones a
+**Products** app menu, a rule-driven internal reference generator, a material master with
+densities and a material composition, a product lifecycle stage that can gate sales and purchases,
+seasons, computed dimensions and weights, product images in list views and bulk media upload. Every module is independent — install only the ones a
 company needs.
 
 Products app
@@ -85,27 +85,96 @@ category.
    :module: eyssen_product_default_code
    :notes: English UI, light theme, 1440px width, crop to the value list.
 
-Material composition
-====================
+.. _inventory/product_data/material:
 
-``eyssen_product_material`` records what a product is made of, in percentages, which is required
-for textile and footwear labelling among others.
+Materials and material composition
+==================================
+
+``eyssen_product_material`` keeps a master list of materials. It records what a product is made of,
+in percentages, which is required for textile and footwear labelling among others, and it holds the
+technical data (grade, standard and density) that weight calculations need, for example for steel
+structures (see :doc:`../../manufacturing/cad_bom_import`).
 
 The materials are maintained under :menuselection:`Products --> Configuration --> Materials`. Each
 material has a translatable :guilabel:`Material Name` and belongs to a :guilabel:`Material Group`
-(for example *Upper*, *Lining*, *Sole*); a group has a translatable :guilabel:`Group Name` and a
-:guilabel:`Sequence` that orders the groups on a product.
+(for example *Upper*, *Lining*, *Sole*, or *Steel (structural)*); a group has a translatable
+:guilabel:`Group Name` and a :guilabel:`Sequence` that orders the groups on a product. In addition, a
+material has:
 
-On the product form, one line per material records the :guilabel:`Material Group`, the
-:guilabel:`Material` and its :guilabel:`Percentage`. A computed :guilabel:`Material Info` summary
-and a rendered :guilabel:`Material Pct` breakdown make the composition easy to read and to reuse on
-reports.
+- a :guilabel:`Code`, the short designation of the material or grade, such as ``S235JR``, ``1.4301``
+  or ``EN AW-6060``;
+- a :guilabel:`Standard` that defines it, such as EN 10025-2;
+- :guilabel:`Aliases`, other designations of the same material separated by commas (for example
+  ``OL37, St37-2, Fe360`` for S235JR); and
+- a :guilabel:`Density` with its :guilabel:`Density Unit` (a unit of the *Specific Gravity*
+  category, kg/m³ by default). :guilabel:`Density (kg/m³)` shows the value converted to kg/m³, which
+  is the value used in computations.
+
+The search box of the list finds a material by name, code or alias. When another module looks up a
+designation (the CAD import does, for the grades written on a drawing), the comparison ignores case,
+accents, spaces, dashes and dots, so ``St 37-2`` finds the material that lists ``St37-2``. There is
+no approximate match: a designation that is not in the master, such as S275J0 when only S275JR
+exists, is not replaced by a similar one.
+
+The standard data contains three groups and eight materials:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 25 25 20
+
+   * - Material
+     - Group
+     - Standard
+     - Density (kg/m³)
+   * - S235JR (aliases S235, OL37, St37-2, Fe360, ...)
+     - Steel (structural)
+     - EN 10025-2
+     - 7850
+   * - S275JR (S275, OL44, St44-2, Fe430, ...)
+     - Steel (structural)
+     - EN 10025-2
+     - 7850
+   * - S355J2 (S355, OL52, St52-3, Fe510, ...)
+     - Steel (structural)
+     - EN 10025-2
+     - 7850
+   * - S460 (S460N, S460NL, S460M, S460ML)
+     - Steel (structural)
+     - EN 10025-3 and -4
+     - 7850
+   * - 1.4301 (AISI 304)
+     - Stainless steel
+     - EN 10088-2
+     - 7900
+   * - 1.4404 (AISI 316L)
+     - Stainless steel
+     - EN 10088-2
+     - 8000
+   * - EN AW-6060
+     - Aluminium
+     - 
+     - 2700
+   * - EN AW-6082
+     - Aluminium
+     - 
+     - 2700
+
+On the product form, the tab :guilabel:`Materials` has one line per material with the
+:guilabel:`Material Group`, the :guilabel:`Material` and its :guilabel:`Percentage`. A computed
+:guilabel:`Material Info` summary and a rendered :guilabel:`Material Pct` breakdown make the
+composition easy to read and to reuse on reports.
+
+Below them, the :guilabel:`Main Material` is the material used for weight computations, and
+:guilabel:`Density (kg/m³)` shows its density. It is filled in from the composition line with the
+highest percentage (the first group wins a tie), and it can also be set directly, for example to the
+steel grade of a profile that has no composition lines. Without composition lines the material you set
+is kept.
 
 .. screenshot:: inventory-product-data-material
    :menu: Inventory ‣ Products ‣ Products ‣ (a product)
    :shows: The material lines of a product form, each with its Material Group, Material and Percentage, and
-      the computed composition summary next to them.
-   :highlight: The material lines and the computed summary (red frames).
+      the computed composition summary and the Main Material next to them.
+   :highlight: The material lines, the computed summary and the Main Material (red frames).
    :data: A shoe with Upper 100% leather, Lining 100% textile and Sole 100% rubber.
    :module: eyssen_product_material
    :notes: English UI, light theme, 1440px width, crop to the material section.
@@ -175,42 +244,99 @@ contains. On the product form, a product can belong to several seasons at once.
    :module: eyssen_product_season
    :notes: English UI, light theme, 1440px width, full list view. The field labels appear in Hungarian.
 
-Dimensions and computed volume
-==============================
+.. _inventory/product_data/dimensions:
 
-``eyssen_product_dimension`` computes a product's volume from its physical dimensions instead of
-having it typed in. In the :guilabel:`Dimensions` group of the product's :guilabel:`Inventory` tab,
-choose a :guilabel:`Shape` — cuboid, cylinder, hollow section, tube or sphere — and only the
-dimensions that shape needs remain visible:
+Dimensions, computed volume and weight
+======================================
 
-- length, width and height/thickness for a cuboid or a hollow section;
-- length and diameter for a cylinder or a tube;
-- diameter only for a sphere; and
-- a wall thickness for a hollow section or a tube.
+``eyssen_product_dimension`` computes a product's volume, and optionally its weight, from its
+physical dimensions instead of having them typed in. In the :guilabel:`Dimensions` group of the
+product's :guilabel:`Inventory` tab, choose a :guilabel:`Shape`: :guilabel:`Cuboid`,
+:guilabel:`Cylinder`, :guilabel:`Hollow Section`, :guilabel:`Tube`, :guilabel:`Sphere` or
+:guilabel:`Open Profile`. Only the dimensions that shape needs remain visible:
 
-From those, the product's :guilabel:`Volume` and a :guilabel:`Net Volume` (the volume of the
-material itself, so a hollow section or tube excludes its cavity) are computed, converted into the
-company's volume unit of measure through the :guilabel:`Dimensional UoM`. The module also adds the
-same dimension, volume and weight fields, each with its own unit of measure, to
-:doc:`packagings <configure/packaging>`.
+- length (x), width (y) and height/thickness (z) for a cuboid or a hollow section;
+- length (x) and diameter (d) for a cylinder or a tube;
+- diameter (d) only for a sphere;
+- a wall thickness (wt) for a hollow section or a tube; and
+- for an open profile, the length (x), the height (z) as *h*, the width (y) as *b*, the web thickness
+  (wt) and, for I, H and U profiles, the flange thickness (tf).
+
+All dimensions are in the :guilabel:`Dimensional UoM` of the product (millimetres, for example).
+
+Open profiles
+-------------
+
+The shape :guilabel:`Open Profile` describes rolled and cold-formed sections. Its
+:guilabel:`Profile Type` is one of:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
+
+   * - Profile type
+     - Cross-section area
+   * - :guilabel:`I / H`
+     - 2 x b x tf + (h - 2 x tf) x tw
+   * - :guilabel:`U (channel)`
+     - The same formula, with one web.
+   * - :guilabel:`L (angle)`
+     - t x (h + b - t), with the two legs h and b and the thickness t.
+   * - :guilabel:`Z` and :guilabel:`C`
+     - t x (h + 2 x b - 2 x t), on the centre line of the sheet. Lips are ignored.
+   * - :guilabel:`Other`
+     - Not computed: enter the :guilabel:`Cross-section Area` directly, for example from a catalogue.
+
+Root and toe radii of rolled sections are ignored, so the computed area is slightly smaller than a
+catalogue value; type the catalogue area in :guilabel:`Cross-section Area` when you need it exact.
+
+Volume, area and weight
+-----------------------
+
+From the dimensions, the product's :guilabel:`Volume` (the gross volume of the enclosing shape) and a
+:guilabel:`Net Volume` (the volume of the material itself, so a hollow section or tube excludes its
+cavity) are computed, converted into the company's volume unit of measure through the
+:guilabel:`Dimensional UoM`. The :guilabel:`Cross-section Area` is the area perpendicular to the length:
+it is computed for every shape except the sphere (and :guilabel:`Other` profiles), and it can be
+entered by hand for profiles.
+
+When the product has a :ref:`Main Material <inventory/product_data/material>` with a density, the
+:guilabel:`Computed Weight` is the net weight of **one unit of measure of the product**:
+
+- for a product measured by length (m), the weight per metre: cross-section area x density;
+- for a product measured by area (m²), the weight per m² (cuboid plates: thickness x density);
+- for a product measured by volume, volume x density;
+- for a product measured by weight, that weight; and
+- otherwise, the weight of one piece.
+
+The weight of the product itself is never overwritten unless you ask for it:
+
+- tick :guilabel:`Weight from Dimensions` and the product's :guilabel:`Weight` always equals the
+  computed weight, also when the dimensions, the unit of measure, the main material or the density of
+  the material change later; or
+- click :guilabel:`Compute weight` to set the weight once.
+
+The module also adds the same dimension, volume and weight fields, each with its own unit of measure,
+to :doc:`packagings <configure/packaging>`.
 
 .. screenshot:: inventory-product-data-dimensions
    :menu: Inventory ‣ Products ‣ Products ‣ (a product) ‣ Inventory tab
-   :shows: The "Dimensions" group of a product form with the "Shape" field set to "Hollow section", the
-      length, width, height and wall thickness fields visible, and the computed Net Volume below them.
-   :highlight: The "Shape" field and the computed "Net Volume" (red frames).
-   :data: A steel hollow section, 6000 x 40 x 40 mm with a 2 mm wall.
+   :shows: The "Dimensions" group of a product form with the "Shape" field set to "Open Profile" and the
+      profile type "I / H", the dimension fields, the Cross-section Area, the Net Volume, the Computed
+      Weight and the "Weight from Dimensions" checkbox.
+   :highlight: The "Shape" field, the "Cross-section Area" and the "Weight from Dimensions" checkbox (red
+      frames).
+   :data: A steel IPE 200 beam (h 200, b 100, tw 5.6, tf 8.5 mm), unit of measure metre, main material
+      S235JR.
    :module: eyssen_product_dimension
-   :notes: English UI, light theme, 1440px width, crop to the group. Some field labels appear in Hungarian.
+   :notes: English UI, light theme, 1440px width, crop to the group.
 
 .. important::
-   The volume computation reads the reference length unit of the company's volume unit of measure,
-   which is set up by the :ref:`Advanced UoM module <inventory/uom/advanced>`. If those units are
-   not configured, saving dimensions raises a validation error.
-
-.. note::
-   The length, width, height, diameter and wall-thickness labels are currently Hungarian in the
-   source code, as are the shape names.
+   The computation reads the reference length unit of the company's volume unit of measure, which is
+   set up by the :ref:`Advanced UoM module <inventory/uom/advanced>`. If those units are not
+   configured, saving dimensions raises a validation error. The module also checks that the
+   thicknesses fit the dimensions (twice the wall thickness cannot reach the width or height) and
+   that no dimension is negative.
 
 Product image in list views
 ===========================

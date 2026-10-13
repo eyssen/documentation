@@ -56,10 +56,23 @@ Sales, Purchase and Inventory
   product variants also have :guilabel:`Stock risk`, which compares the stock on
   hand with the forecast and the open demand. These are shown to Inventory
   users.
+- On an open product or variant, the AI is given the stock figures of the
+  record: quantity on hand, forecasted and free quantity, incoming and outgoing
+  quantities and the limits of the reordering rules. They are read with your
+  rights, like the rest of the record, so the assistant does not have to guess
+  where they are. For the open transfers behind them it searches the stock
+  moves.
+
+Manufacturing
+=============
+
+On a CAD import (see :doc:`cad_bom_import`) the button :guilabel:`Analyse with AI`
+suggests quantities, lengths and products for the members of a drawing, and the
+quick prompts :guilabel:`Explain this import`, :guilabel:`What still needs
+review?` and :guilabel:`Material totals by type` are added.
 
 Invoicing
 =========
-
 - Invoices: :guilabel:`Explain this invoice`, :guilabel:`Check for anomalies`
   (compares the invoice with the partner's previous invoices: amounts, lines,
   taxes, payment terms and possible duplicates) and :guilabel:`Payment reminder`

@@ -8849,6 +8849,358 @@ msgstr "Amikor egy rekordot archiválnak vagy visszaállítanak, a szabványos �
 msgid "To install the module, go to :menuselection:`Settings --> eYssen ERP`, and, in the :guilabel:`General Modules` section, enable :guilabel:`Chatter: Log Archive/Restore (no duplicate with tracking)`."
 msgstr "A modul telepítéséhez lépjen a :menuselection:`Beállítások --> eYssen ERP` menüpontra, és a :guilabel:`General Modules` szakaszban kapcsolja be a :guilabel:`Chatter: Log Archive/Restore (no duplicate with tracking)` beállítást."
 
+#: ../mnt/documentation/content/applications/productivity/ai.rst:70
+msgid "**Business apps** — quick prompts and buttons in CRM, Sales, Purchase, Inventory, Manufacturing, Invoicing, Calendar, Products, Email marketing and Timesheets, ticket triage for projects with SLA and AI analysis of accounting reports (see :doc:`ai/app_integrations`, :doc:`ai/project_sla` and :doc:`ai/accounting_reports`)."
+msgstr "**Üzleti alkalmazások** — gyorsindítók és gombok a CRM-ben, az Értékesítésben, a Beszerzésben, a Készletben, a Gyártásban, a Számlázásban, a Naptárban, a Termékeknél, az E-mail marketingben és a Munkaidő-nyilvántartásban, jegyek szűrése SLA-val rendelkező projektekhez, valamint a számviteli riportok AI-elemzése (lásd :doc:`ai/app_integrations`, :doc:`ai/project_sla` és :doc:`ai/accounting_reports`)."
+
+#: ../mnt/documentation/content/applications/productivity/ai.rst:75
+msgid "**CAD imports** — suggested quantities and lengths for the members of a steel structure drawing, which you accept or reject (see :doc:`ai/cad_bom_import`)."
+msgstr "**CAD-importok** — javasolt mennyiségek és hosszak egy acélszerkezeti rajz elemeihez, amelyeket elfogadhatsz vagy elutasíthatsz (lásd :doc:`ai/cad_bom_import`)."
+
+#: ../mnt/documentation/content/applications/productivity/ai/accounting_reports.rst:88
+msgid "An audit makes several model calls and easily takes longer than an ordinary web request is allowed to run. That is why analyses and audits run as background jobs of the scheduled action \"AI: Run accounting report analyses and audits\". The job runs in the environment of the person who clicked, never in the identity of the scheduler, and the form refreshes by itself. A job that stays in the running state for more than 30 minutes is marked as failed with the message \"The AI job was interrupted. Start it again.\", so nothing stays stuck."
+msgstr "Egy ellenőrzés több modellhívást tesz, és könnyen tovább tart, mint amennyit egy szokásos webes kérés futhat. Ezért az elemzések és ellenőrzések háttérfeladatként futnak az \"AI: Run accounting report analyses and audits\" ütemezett műveletben. A feladat annak a környezetében fut, aki rákattintott, soha nem az ütemező identitásával, és az űrlap magától frissül. Az a feladat, amely több mint 30 percig futó állapotban marad, sikertelennek lesz jelölve a \"The AI job was interrupted. Start it again.\" üzenettel, így semmi sem ragad be."
+
+#: ../mnt/documentation/content/applications/productivity/ai/accounting_reports.rst:104
+msgid "If the model does not answer within the time that is left, the analysis or audit ends as failed with the message \"The AI model did not answer in time. Try again later, or ask for something shorter or narrower.\" The message is shown on the analysis, posted in its chatter and sent to you as a notification."
+msgstr "Ha a modell a hátralévő időn belül nem válaszol, az elemzés vagy ellenőrzés sikertelenül ér véget a \"The AI model did not answer in time. Try again later, or ask for something shorter or narrower.\" üzenettel. Az üzenet megjelenik az elemzésen, bekerül a chatterébe, és értesítésként is megkapod."
+
+#: ../mnt/documentation/content/applications/productivity/ai/app_integrations.rst:59
+msgid "On an open product or variant, the AI is given the stock figures of the record: quantity on hand, forecasted and free quantity, incoming and outgoing quantities and the limits of the reordering rules. They are read with your rights, like the rest of the record, so the assistant does not have to guess where they are. For the open transfers behind them it searches the stock moves."
+msgstr "Egy megnyitott terméken vagy termékváltozaton az AI megkapja a rekord készletadatait: a raktáron lévő, az előrejelzett és a szabad mennyiséget, a bejövő és kimenő mennyiségeket, valamint az újrarendelési szabályok határait. Ezeket a te jogosultságaiddal olvassa, mint a rekord többi részét, így az asszisztensnek nem kell találgatnia, hol vannak. A mögöttük álló nyitott szállításokhoz a készletmozgásokban keres."
+
+#: ../mnt/documentation/content/applications/productivity/ai/app_integrations.rst:67
+msgid "Manufacturing"
+msgstr "Gyártás"
+
+#: ../mnt/documentation/content/applications/productivity/ai/app_integrations.rst:69
+msgid "On a CAD import (see :doc:`cad_bom_import`) the button :guilabel:`Analyse with AI` suggests quantities, lengths and products for the members of a drawing, and the quick prompts :guilabel:`Explain this import`, :guilabel:`What still needs review?` and :guilabel:`Material totals by type` are added."
+msgstr "Egy CAD-importon (lásd :doc:`cad_bom_import`) az :guilabel:`Elemzés AI-jal` gomb mennyiségeket, hosszakat és termékeket javasol egy rajz elemeihez, és hozzáadódnak az :guilabel:`Import magyarázata`, a :guilabel:`Mit kell még ellenőrizni?` és az :guilabel:`Anyagösszesítés típusonként` gyorsindítók."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:3
+msgid "AI for CAD imports"
+msgstr "AI a CAD-importokhoz"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:5
+msgid "The module **AI CAD BoM import** (``ai_mrp_cad_bom``) helps with the part of a CAD import that the rules cannot do. A drawing that only has position labels (\"R1 / 100x100x4\", \"PM 2 / 300x300x10\", \"Bolt / M 16\") tells you *which* members exist but not *how many* there are or *how long* they are, because the same member is labelled in several views. The AI reads the drawing again, including its dimensions, and **suggests** values that you accept or reject. It installs itself when the AI module and the :doc:`CAD import <../../inventory_and_mrp/manufacturing/cad_bom_import>` are both installed."
+msgstr "Az **AI CAD BoM import** modul (``ai_mrp_cad_bom``) a CAD-import azon részében segít, amelyet a szabályok nem tudnak elvégezni. Az a rajz, amelyen csak tételjelek vannak (\"R1 / 100x100x4\", \"PM 2 / 300x300x10\", \"Bolt / M 16\"), megmondja, *milyen* elemek vannak, de azt nem, hogy *hány darab* és *milyen hosszúak*, mert ugyanazt az elemet több nézeten is feliratozzák. Az AI újra elolvassa a rajzot, a méretekkel együtt, és olyan értékeket **javasol**, amelyeket elfogadhatsz vagy elutasíthatsz. Magától települ, ha az AI modul és a :doc:`CAD-import <../../inventory_and_mrp/manufacturing/cad_bom_import>` is telepítve van."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:13
+msgid "The AI never writes a quantity, length, section or product on its own, and it never creates products or bills of materials. A suggestion changes the import only when you accept it, and the weights, the totals of the two options and the material summary change only then. Products and bills of materials are still created by the normal flow of the CAD import."
+msgstr "Az AI soha nem ír be magától mennyiséget, hosszt, szelvényt vagy terméket, és soha nem hoz létre terméket vagy anyagjegyzéket. Egy javaslat csak akkor módosítja az importot, ha elfogadod, és a tömegek, a két változat összesítései és az anyagösszesítő is csak ekkor változnak. A termékeket és az anyagjegyzékeket továbbra is a CAD-import szokásos folyamata hozza létre."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:21
+msgid "A chat model is configured (see :doc:`models_and_providers`)."
+msgstr "Egy csevegőmodell be van állítva (lásd :doc:`models_and_providers`)."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:22
+msgid "You are in the group :guilabel:`AI: User`, the capability *Ask* is on for you (see :doc:`feature_access`) and you may edit CAD imports (*Manufacturing / User*)."
+msgstr "Az :guilabel:`AI: Felhasználó` csoport tagja vagy, az *Ask* képesség be van kapcsolva neked (lásd :doc:`feature_access`), és szerkesztheted a CAD-importokat (*Gyártás / Felhasználó*)."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:24
+msgid "The import is :guilabel:`Parsed` or :guilabel:`Reviewed`."
+msgstr "Az import :guilabel:`Feldolgozva` vagy :guilabel:`Ellenőrizve` állapotú."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:27
+msgid "Analyse an import"
+msgstr "Egy import elemzése"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:29
+msgid "Open a parsed import and click :guilabel:`Analyse with AI` in the form header. The analysis runs in the background, so you can keep working. The form shows the progress (it refreshes every few seconds) and you are notified when the suggestions are ready or when the analysis failed. Only one analysis runs for an import at a time, and while it runs you can neither parse the import again nor accept or reject suggestions."
+msgstr "Nyiss meg egy feldolgozott importot, és kattints az űrlap fejlécében az :guilabel:`Elemzés AI-jal` gombra. Az elemzés a háttérben fut, így közben dolgozhatsz tovább. Az űrlap mutatja az előrehaladást (néhány másodpercenként frissül), és értesítést kapsz, amikor a javaslatok elkészültek vagy az elemzés sikertelen volt. Egy importhoz egyszerre csak egy elemzés fut, és amíg fut, az importot nem dolgozhatod fel újra, és javaslatokat sem fogadhatsz el vagy utasíthatsz el."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:35
+msgid "The job runs in your own environment: your language, your company, your access rights. It goes through these steps and commits each one separately, so a failure keeps the suggestions of the steps that were finished and shows the error under :guilabel:`AI analysis failed:` and in the chatter."
+msgstr "A feladat a saját környezetedben fut: a te nyelveden, a te vállalatoddal, a te jogosultságaiddal. A következő lépéseken megy végig, és mindegyiket külön véglegesíti, így egy hiba megtartja a befejezett lépések javaslatait, és a hibát az :guilabel:`AI-elemzés nem sikerült:` mező alatt és a chatterben mutatja."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:39
+msgid "**Reading the drawing.** The drawing is read again for its geometry (see below)."
+msgstr "**A rajz beolvasása.** A rajzot újra beolvassa a geometriájáért (lásd alább)."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:40
+msgid "**Interpreting the lines.** The AI checks every line: its kind, family, designation, grade, whether it is a purlin and a short description. It decides the ambiguous ``AxBxC`` (plate or hollow section), reads the general notes of the drawing (grade, bolt class, standards) and explains conflicts such as the same mark with different sizes."
+msgstr "**A sorok értelmezése.** Az AI minden sort ellenőriz: a fajtáját, szelvénycsaládját, jelölését, minőségét, hogy szelemen-e, és egy rövid leírást. Eldönti a kétértelmű ``AxBxC`` jelölést (lemez vagy zártszelvény), elolvassa a rajz általános megjegyzéseit (minőség, csavarosztály, szabványok), és megmagyarázza az olyan ütközéseket, mint az ugyanaz a tételjel eltérő méretekkel."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:44
+msgid "**Estimating quantities and lengths.** For the lines that came from labels, the AI proposes the number of pieces and the length of one piece (or the width and length of a plate), with its reasoning and the evidence. Lines from a parts list or from block attributes already carry quantities and are not estimated."
+msgstr "**Mennyiségek és hosszak becslése.** A címkékből származó sorokra az AI javasolja a darabszámot és egy darab hosszát (vagy a lemez szélességét és hosszát) az indoklásával és a bizonyítékokkal. A darabjegyzékből vagy blokkattribútumokból származó sorok már hordoznak mennyiséget, ezeket nem becsüli."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:48
+msgid "**Matching products.** Lines without a product get a suggested existing product, chosen among a few candidates that the server selected."
+msgstr "**Termékek párosítása.** A termék nélküli sorokra egy meglévő terméket javasol, amelyet a szerver által kiválasztott néhány jelölt közül választ."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:50
+msgid "**Checks.** Rule-based checks look for gaps (see below). This step does not use the AI."
+msgstr "**Ellenőrzések.** Szabályalapú ellenőrzések hiányosságokat keresnek (lásd alább). Ez a lépés nem használ AI-t."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:51
+msgid "**Review note.** A short note in your language with the totals now and the totals if you accepted every suggestion, the main materials and the checks. It is shown on the tab :guilabel:`AI review` and posted in the chatter."
+msgstr "**Ellenőrzési jegyzet.** Egy rövid jegyzet a te nyelveden a jelenlegi összesítőkkel, azokkal az összesítőkkel, ha minden javaslatot elfogadnál, a fő anyagokkal és az ellenőrzésekkel. Az :guilabel:`AI-ellenőrzés` fülön látható, és bekerül a chatterbe."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:55
+msgid "Every answer is parsed as JSON and checked. Whatever is not valid is dropped: unknown lines, products that were not offered as candidates, designations the parser cannot read, negative values and views that do not exist."
+msgstr "Minden választ JSON-ként dolgoz fel és ellenőriz. Ami nem érvényes, azt eldobja: ismeretlen sorokat, olyan termékeket, amelyeket nem kínáltak fel jelöltként, olyan jelöléseket, amelyeket az elemző nem tud olvasni, negatív értékeket és nem létező nézeteket."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:60
+msgid "How the drawing is read"
+msgstr "Hogyan olvassa a rajzot"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:62
+msgid "The geometry step collects the dimensions of the drawing (linear and aligned dimensions of model and paper space), splits each space into views and sheet frames, and finds the title of each view (*SECTIUNE, PLAN, DETALIU, SECTION, DETAIL, METSZET, ALAPRAJZ, ...*), the cut markers and the sheet numbers. The scale of a view comes from its dimensions: a drawing made at 1:10 with a dimension scale factor of 10 is detected as such, and lengths are given to the AI in millimetres."
+msgstr "A geometria lépés összegyűjti a rajz méreteit (a modelltér és a papírtér lineáris és igazított méretei), minden teret nézetekre és lapkeretekre oszt, és megkeresi minden nézet címét (*SECTIUNE, PLAN, DETALIU, SECTION, DETAIL, METSZET, ALAPRAJZ, ...*), a metszetjeleket és a lapszámokat. A nézet léptéke a méreteiből adódik: az 1:10 léptékben, 10-es méretezési skálatényezővel készült rajzot ennek ismeri fel, és a hosszakat milliméterben adja át az AI-nak."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:68
+msgid "For each line the AI receives its labels per view, with the position of each label, the leader line that touches it, the segments the leader points to (the member), the nearest lines and the nearest dimensions. The AI is told that the same piece is labelled in several views, so pieces are counted once (usually from the plan) and lengths are taken from sections and details."
+msgstr "Minden sorhoz az AI nézetenként megkapja a címkéit, az egyes címkék helyzetével, az őket érintő vezetővonallal, azokkal a szakaszokkal, amelyekre a vezetővonal mutat (az elem), a legközelebbi vonalakkal és a legközelebbi méretekkel. Az AI megkapja, hogy ugyanaz a darab több nézeten is fel van címkézve, így a darabokat egyszer számolja (általában az alaprajzról), a hosszakat pedig a metszetekből és részletekből veszi."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:74
+msgid "Review the suggestions"
+msgstr "A javaslatok ellenőrzése"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:76
+msgid "The tab :guilabel:`AI review` appears after an analysis. It has:"
+msgstr "Az :guilabel:`AI-ellenőrzés` fül egy elemzés után jelenik meg. Tartalma:"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:78
+msgid "the :guilabel:`AI review note` and the :guilabel:`Drawing notes read by the AI`;"
+msgstr "az :guilabel:`AI-ellenőrzési jegyzet` és az :guilabel:`Az AI által olvasott rajzmegjegyzések`;"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:79
+msgid "the list :guilabel:`Suggestions to review`: for each line the current quantity and length, what the AI proposes (:guilabel:`AI quantity`, :guilabel:`AI length (mm)`), its :guilabel:`Confidence`, the reasoning, the evidence (views and values) and a note; and"
+msgstr "az :guilabel:`Ellenőrizendő javaslatok` lista: soronként a jelenlegi mennyiség és hossz, az AI javaslata (:guilabel:`AI-mennyiség`, :guilabel:`AI-hossz (mm)`), a :guilabel:`Megbízhatóság`, az indoklás, a bizonyítékok (nézetek és értékek) és egy megjegyzés; valamint"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:82
+msgid "the list :guilabel:`Checks`."
+msgstr "az :guilabel:`Ellenőrzések` lista."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:84
+msgid "Use the buttons :guilabel:`Accept` and :guilabel:`Reject` on a line (the ticks in the list of lines do the same), :guilabel:`Accept all above the threshold` and :guilabel:`Reject all`. :guilabel:`Run the checks again` repeats the checks without the AI, for example after you corrected a line. Suggestions can be accepted or rejected while the import is parsed or reviewed."
+msgstr "Használd a sor :guilabel:`Elfogadás` és :guilabel:`Elutasítás` gombjait (a sorok listájában a pipák ugyanezt teszik), az :guilabel:`Összes elfogadása a küszöb felett` és az :guilabel:`Összes elutasítása` gombot. Az :guilabel:`Ellenőrzések újrafuttatása` az AI nélkül megismétli az ellenőrzéseket, például egy sor kijavítása után. A javaslatok elfogadhatók vagy elutasíthatók, amíg az import feldolgozott vagy ellenőrzött állapotú."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:89
+msgid "Accepting a suggestion applies:"
+msgstr "Egy javaslat elfogadása a következőket alkalmazza:"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:91
+msgid "a changed designation (the line is parsed again: family, kind, dimensions, plate size), otherwise the kind;"
+msgstr "egy módosított jelölést (a sort újra feldolgozza: szelvénycsalád, fajta, méretek, lemezméret), egyébként a fajtát;"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:93
+msgid "the grade (it is resolved through the material master, so \"OL37\" becomes S235JR), the description and the purlin flag;"
+msgstr "a minőséget (az anyagtörzsön keresztül oldja fel, így az \"OL37\" S235JR lesz), a leírást és a szelemen jelölést;"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:95
+msgid "the quantity, and the length of a linear member or the width and length of a plate when missing; and"
+msgstr "a mennyiséget, valamint hiány esetén egy szálas elem hosszát vagy egy lemez szélességét és hosszát; és"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:96
+msgid "the suggested product, as if you had chosen it by hand."
+msgstr "a javasolt terméket, mintha kézzel választottad volna ki."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:98
+msgid "The line's source becomes :guilabel:`AI suggestion` and the confidence is stored. **A line whose confidence is below the threshold stays flagged** :guilabel:`To review` after you accept it. The threshold is the field :guilabel:`AI confidence threshold` on the tab (0.6 by default, from the settings), and :guilabel:`Accept all above the threshold` accepts only suggestions that reach it."
+msgstr "A sor forrása :guilabel:`AI-javaslat` lesz, és a megbízhatóság eltárolódik. **Az a sor, amelynek megbízhatósága a küszöb alatt van, az elfogadás után is megjelölve marad** :guilabel:`Ellenőrizendő` állapotban. A küszöb az :guilabel:`AI megbízhatósági küszöb` mező a fülön (alapértelmezés szerint 0,6, a beállításokból), és az :guilabel:`Összes elfogadása a küszöb felett` csak azokat a javaslatokat fogadja el, amelyek elérik."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:103
+msgid "A product that you accept from the AI, or that you choose by hand on an analysed line, is remembered as an alias, so the next import finds it without the AI."
+msgstr "Az AI-tól elfogadott, vagy egy elemzett soron kézzel kiválasztott terméket a rendszer álnévként megjegyzi, így a következő import AI nélkül is megtalálja."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:116
+msgid "Checks"
+msgstr "Ellenőrzések"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:118
+msgid "The checks never change data. They report: bolts without nuts or washers; a plate with no bolt or hole label near any of its labels; purlins without sag rods or tie rods (information); a missing grade; open conflicts, with the AI's explanation; a linear member without a length and without an estimate; a piece longer than the stock bar (information); a line whose weight is far above the others (more than eight times the median and more than 40 % of the total); and the number of suggestions below the threshold (information). Each check is a warning or an information."
+msgstr "Az ellenőrzések soha nem módosítanak adatot. Jelentik: anyák vagy alátétek nélküli csavarokat; olyan lemezt, amelynek egyik címkéje közelében sincs csavar- vagy furatcímke; merevítő- vagy húzórudak nélküli szelemeneket (tájékoztatás); hiányzó minőséget; nyitott ütközéseket az AI magyarázatával; hossz és becslés nélküli szálas elemet; a szálnál hosszabb darabot (tájékoztatás); olyan sort, amelynek tömege jóval nagyobb a többinél (a medián több mint nyolcszorosa és az összesen több mint 40 %-a); valamint a küszöb alatti javaslatok számát (tájékoztatás). Minden ellenőrzés figyelmeztetés vagy tájékoztatás."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:128
+msgid "On a CAD import the AI panel (see :doc:`panel`) offers the quick prompts :guilabel:`Explain this import` (in place of the generic *Summarise*), :guilabel:`What still needs review?` and :guilabel:`Material totals by type`. The panel sees the lines, the material summary and the checks of the import, as far as your own access rights allow."
+msgstr "Egy CAD-importon az AI-panel (lásd :doc:`panel`) az :guilabel:`Import magyarázata` (az általános *Összefoglalás* helyett), a :guilabel:`Mit kell még ellenőrizni?` és az :guilabel:`Anyagösszesítés típusonként` gyorsindítókat kínálja. A panel látja az import sorait, anyagösszesítőjét és ellenőrzéseit, ameddig a saját jogosultságaid engedik."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:134
+msgid "Cost, limits and data sent to the model"
+msgstr "Költség, korlátok és a modellnek küldött adatok"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:136
+msgid "Every call goes through the normal AI machinery: the capability *Ask*, the rate limit, the blocked patterns and the AI log with its cost (see :doc:`monitoring`). In the background job the per-minute rate limit is waited for instead of failing, but the daily limits stop the job at once."
+msgstr "Minden hívás a szokásos AI-gépezeten megy át: az *Ask* képesség, a sebességkorlát, a tiltott minták és az AI-napló a költségével (lásd :doc:`monitoring`). A háttérfeladatban a percenkénti sebességkorlátra vár, ahelyett hogy hibával leállna, a napi korlátok viszont azonnal leállítják a feladatot."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:139
+msgid "The size depends on the drawing. The analysis of a staircase drawing with 260 labels, 17 groups of members and 787 dimensions took seven calls and about 22,000 input tokens. A very large drawing is limited to twenty estimation requests (roughly 100,000 tokens); the lines beyond are reported as not estimated."
+msgstr "A méret a rajztól függ. Egy 260 címkéjű, 17 elemcsoportot és 787 méretet tartalmazó lépcsőrajz elemzése hét hívást és mintegy 22 000 bemeneti tokent vett igénybe. Egy nagyon nagy rajz legfeljebb húsz becslési kérésre van korlátozva (nagyjából 100 000 token); az azon túli sorokat nem becsültként jelzi."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:143
+msgid "The model receives the line data and texts of the drawing, the general notes, the geometric context (numbers, view titles and sheet numbers), the totals and check messages for the note, and, for matching, the names and internal references of the candidate products. It receives **no** customer, project or import name and no other business data."
+msgstr "A modell megkapja a rajz sorainak adatait és szövegeit, az általános megjegyzéseket, a geometriai környezetet (számok, nézetcímek és lapszámok), a jegyzethez az összesítőket és az ellenőrzési üzeneteket, a párosításhoz pedig a jelölt termékek nevét és belső hivatkozását. **Nem** kap ügyfél-, projekt- vagy importnevet, sem más üzleti adatot."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:151
+msgid "In :menuselection:`Manufacturing app --> Configuration --> Settings`, block :guilabel:`CAD BoM import`, under :guilabel:`AI suggestions`:"
+msgstr "A :menuselection:`Gyártás alkalmazás --> Konfiguráció --> Beállítások` menüben, a :guilabel:`CAD anyagjegyzék-importálás` blokkban, az :guilabel:`AI-javaslatok` alatt:"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:154
+msgid ":guilabel:`AI confidence threshold`: estimates below it stay flagged to review and are left out of :guilabel:`Accept all above the threshold`. Default 0.6."
+msgstr ":guilabel:`AI megbízhatósági küszöb`: az ez alatti becslések ellenőrizendőként megjelölve maradnak, és kimaradnak az :guilabel:`Összes elfogadása a küszöb felett` műveletből. Alapértelmezés: 0,6."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:156
+msgid ":guilabel:`Analyse with AI after parsing`: queues the analysis automatically after each parse when label lines need a review and you may use the AI; otherwise it is skipped silently. Off by default."
+msgstr ":guilabel:`Elemzés AI-jal a feldolgozás után`: minden feldolgozás után automatikusan sorba állítja az elemzést, ha a címkesorokat át kell nézni, és használhatod az AI-t; egyébként csendben kihagyja. Alapértelmezés szerint ki van kapcsolva."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:160
+msgid ":doc:`../../inventory_and_mrp/manufacturing/cad_bom_import`"
+msgstr ":doc:`../../inventory_and_mrp/manufacturing/cad_bom_import`"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:161
+msgid ":doc:`app_integrations`"
+msgstr ":doc:`app_integrations`"
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:63
+msgid "The agent hands the chat over to an available operator when the visitor asks for a person, when :guilabel:`Max AI answers` is reached, when the agent is unsure or when the AI service fails. The operator is chosen with the channel's normal operator selection and joins the session; the agent sends a short summary to the operator and stops answering. An operator who simply writes in the session also takes it over."
+msgstr "Az ügynök átadja a csevegést egy elérhető operátornak, ha a látogató embert kér, ha elérte az :guilabel:`AI válaszok maximális száma` értéket, ha az ügynök bizonytalan, vagy ha az AI szolgáltatás meghibásodik. Az operátort a csatorna szokásos operátorkiválasztása jelöli ki, és csatlakozik a munkamenethez; az ügynök rövid összefoglalót küld az operátornak, és nem válaszol tovább. Az az operátor is átveszi a munkamenetet, aki egyszerűen ír benne."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:74
+msgid "The hand-over summary is for the operator only. It arrives as a message in a direct chat between the AI agent's contact and the operator, in the operator's language, and it is never written into the visitor's session. Because it is derived from what the visitor wrote, it is labelled \"AI summary based on the visitor's messages - unverified\". It is plain text: a link is shown as its text followed by the address in brackets and cannot be clicked. If the model gives no summary, one is built without the model from the reason for the hand-over and the last visitor messages."
+msgstr "Az átadási összefoglaló csak az operátornak szól. Üzenetként érkezik az AI-ügynök kapcsolata és az operátor közötti közvetlen csevegésben, az operátor nyelvén, és soha nem kerül be a látogató munkamenetébe. Mivel a látogató által írtakból származik, a következő felirattal van ellátva: \"AI summary based on the visitor's messages - unverified\". Egyszerű szöveg: a hivatkozás a szövegével jelenik meg, utána zárójelben a címmel, és nem kattintható. Ha a modell nem ad összefoglalót, a rendszer a modell nélkül állít össze egyet az átadás okából és a látogató utolsó üzeneteiből."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:99
+msgid "Nobody can confirm a request from an unattended visitor, so the lead is created directly. At most one lead is created per session and a limited number per visitor address per day (:guilabel:`Leads per visitor address and day` in the settings, 3 by default, 0 for no limit). The lead description starts with the label that the summary is unverified, and the links in it are plain text, so nobody receives a clickable link written by a visitor."
+msgstr "Felügyelet nélküli látogató kérését senki sem tudja megerősíteni, ezért az érdeklődő közvetlenül jön létre. Munkamenetenként legfeljebb egy érdeklődő jön létre, és látogatói címenként naponta korlátozott számú (a beállításokban az :guilabel:`Érdeklődők látogatói címenként és naponta`, alapértelmezés szerint 3, 0 korlátlant jelent). Az érdeklődő leírása azzal a felirattal kezdődik, hogy az összefoglaló nem ellenőrzött, a benne lévő hivatkozások pedig egyszerű szövegek, így senki sem kap látogató által írt, kattintható hivatkozást."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:115
+msgid "The cards are built with the rights of the website's public user, so a record that an anonymous visitor could not open on the website never becomes a card."
+msgstr "A kártyák a weboldal nyilvános felhasználójának jogosultságaival készülnek, így az a rekord, amelyet egy névtelen látogató nem nyithatna meg a weboldalon, soha nem lesz kártya."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:117
+msgid "The links and pictures are relative addresses of your site. Only when the website has its own domain set, that domain is put in front, which keeps the links working when the chat is embedded in another site. Links to other sites are never shown."
+msgstr "A hivatkozások és a képek az oldalad relatív címei. Csak ha a weboldalnak saját tartománya van beállítva, kerül az elé, ami működőképesen tartja a hivatkozásokat, ha a csevegés egy másik oldalba van beágyazva. A más oldalakra mutató hivatkozások soha nem jelennek meg."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:121
+msgid "Dates (for example of an event) are written in the visitor's language and time zone, or in the language of the website when the visitor's is not installed."
+msgstr "A dátumokat (például egy eseményét) a látogató nyelvén és időzónájában írja ki, vagy a weboldal nyelvén, ha a látogatóé nincs telepítve."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:123
+msgid "The agent is told to mention cards only when its tool reports that cards were shown. If nothing was shown, it must not say that it has shown anything."
+msgstr "Az ügynök csak akkor említhet kártyákat, ha az eszköze jelzi, hogy kártyák jelentek meg. Ha semmi nem jelent meg, nem mondhatja, hogy bármit megmutatott."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:151
+msgid ":guilabel:`Per conversation and per visitor`: :guilabel:`Seconds between AI answers` (3 by default), :guilabel:`Visitor messages per minute` (10), :guilabel:`AI conversations per visitor and hour` (10) and :guilabel:`AI answers per visitor and day` (150). The first two apply inside one conversation, the other two to everything one visitor does. Visitors are told apart by network address, guest, signed-in contact or website visitor."
+msgstr ":guilabel:`Beszélgetésenként és látogatónként`: :guilabel:`Másodpercek az AI-válaszok között` (alapértelmezés szerint 3), :guilabel:`Látogatói üzenetek percenként` (10), :guilabel:`AI-beszélgetések látogatónként és óránként` (10) és :guilabel:`AI-válaszok látogatónként és naponta` (150). Az első kettő egy beszélgetésen belül érvényes, a másik kettő mindenre, amit egy látogató tesz. A látogatókat a hálózati cím, a vendég, a bejelentkezett kapcsolat vagy a weboldal-látogató különbözteti meg."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:157
+msgid ":guilabel:`All visitors`: :guilabel:`AI requests per day (all visitors)`, 500 by default and counting every model call of the live chat, and the optional :guilabel:`AI cost per day (USD, all visitors)`. If the cost limit is 0, the general daily cost limit of the AI settings applies."
+msgstr ":guilabel:`Összes látogató`: :guilabel:`AI-kérések naponta (összes látogató)`, alapértelmezés szerint 500, amely a csevegés minden modellhívását számolja, és a választható :guilabel:`AI-költség naponta (USD, összes látogató)`. Ha a költségkorlát 0, az AI-beállítások általános napi költségkorlátja érvényes."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:161
+msgid ":guilabel:`Leads per visitor address and day` (3 by default) limits the leads that the AI creates (see above)."
+msgstr "Az :guilabel:`Érdeklődők látogatói címenként és naponta` (alapértelmezés szerint 3) korlátozza az AI által létrehozott érdeklődőket (lásd fent)."
+
+#: ../mnt/documentation/content/applications/productivity/ai/livechat.rst:164
+msgid "The live chat also keeps the requests of its service user under 60 per minute; the system parameter ``ai_livechat.rate_limit_rpm`` changes this."
+msgstr "Az élő csevegés a szolgáltatásfelhasználójának kéréseit is percenként 60 alatt tartja; ezt az ``ai_livechat.rate_limit_rpm`` rendszerparaméter módosítja."
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:107
+msgid "Or you turn on :guilabel:`Allow dynamic client registration` and apps register themselves. This is off by default. Users still sign in and approve every connection, but registration is limited:"
+msgstr "Vagy bekapcsolod a :guilabel:`Dinamikus kliensregisztráció engedélyezése` beállítást, és az alkalmazások maguktól regisztrálnak. Ez alapértelmezés szerint ki van kapcsolva. A felhasználók továbbra is bejelentkeznek és minden kapcsolatot jóváhagynak, de a regisztráció korlátozott:"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:111
+msgid "per network address (:guilabel:`Registrations per address and hour`, 10 by default). Beyond that the app gets \"Too many app registrations from this address\";"
+msgstr "hálózati címenként (:guilabel:`Regisztrációk címenként és óránként`, alapértelmezés szerint 10). Ezen felül az alkalmazás a \"Too many app registrations from this address\" üzenetet kapja;"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:114
+msgid "an app may register at most 10 redirect URIs, each at most 2048 characters long, in a request of at most 16 KB;"
+msgstr "egy alkalmazás legfeljebb 10 átirányítási URI-t regisztrálhat, egyenként legfeljebb 2048 karakter hosszút, legfeljebb 16 KB méretű kérésben;"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:116
+msgid "every redirect URI must match one of the :guilabel:`Allowed redirect URI patterns` (see below);"
+msgstr "minden átirányítási URI-nek meg kell felelnie az egyik :guilabel:`Engedélyezett átirányítási URI-minták` mintának (lásd alább);"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:118
+msgid "at most 1000 self-registered apps are accepted (the system parameter ``ai_mcp_gateway.dcr_max_clients``). Apps that never connected and are older than the clean-up time below do not count; and"
+msgstr "legfeljebb 1000 önregisztrált alkalmazást fogad el a rendszer (``ai_mcp_gateway.dcr_max_clients`` rendszerparaméter). Azok az alkalmazások, amelyek soha nem csatlakoztak, és régebbiek az alábbi takarítási időnél, nem számítanak; és"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:121
+msgid "an app that was registered by itself and never connected is deleted by a scheduled job after 72 hours (the system parameter ``ai_mcp_gateway.dcr_unused_client_hours``)."
+msgstr "az az alkalmazás, amely magától regisztrált, és soha nem csatlakozott, 72 óra után törlődik egy ütemezett feladat által (``ai_mcp_gateway.dcr_unused_client_hours`` rendszerparaméter)."
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:125
+msgid "An authorization error that is found *before* the consent page (a missing PKCE challenge, for example) is not sent back to a self-registered app: it is shown to you on an error page, so that an unreviewed app cannot use the server to redirect you somewhere. After the consent page, your own :guilabel:`Deny` is always sent back to the app, as the protocol expects. Apps that you registered yourself receive their errors as usual."
+msgstr "Az engedélyezési oldal *előtt* felismert engedélyezési hibát nem küldi vissza egy önregisztrált alkalmazásnak: egy hibaoldalon mutatja meg neked, hogy egy átnézetlen alkalmazás ne használhassa a szervert arra, hogy máshová irányítson át. A jóváhagyási oldal után a saját :guilabel:`Tiltás` döntésed mindig visszakerül az alkalmazáshoz, ahogy a protokoll elvárja. Az általad regisztrált alkalmazások a hibákat a szokásos módon kapják."
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:132
+msgid "More settings in the block :guilabel:`MCP server`: :guilabel:`Token lifetimes` (access token minutes and refresh token days) and :guilabel:`Allowed browser origins` for browser-based apps."
+msgstr "További beállítások az :guilabel:`MCP szerver` blokkban: :guilabel:`Tokenek élettartama` (a hozzáférési token percei és a frissítő token napjai) és :guilabel:`Engedélyezett böngésző-originek` a böngészőalapú alkalmazásokhoz."
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:137
+msgid "Redirect URI rules"
+msgstr "Átirányítási URI szabályok"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:139
+msgid "Where the AI app may send you back after sign-in is restricted by :guilabel:`Allowed redirect URI patterns`. Every redirect URI, whether you enter it or an app registers it, must match one of the patterns (separated by spaces or commas). A pattern has the form ``scheme://host[:port][/path]``:"
+msgstr "Azt, hogy az AI-alkalmazás hová küldhet vissza a bejelentkezés után, az :guilabel:`Engedélyezett átirányítási URI-minták` korlátozza. Minden átirányítási URI-nek, akár te adod meg, akár egy alkalmazás regisztrálja, meg kell felelnie az egyik mintának (szóközzel vagy vesszővel elválasztva). A minta alakja ``scheme://host[:port][/path]``:"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:144
+msgid "the host is a literal name, ``*`` for any host, or ``*.example.com`` for exactly **one** more label in front of ``example.com`` (``a.example.com``, not ``a.b.example.com``);"
+msgstr "a gazdagép (host) szó szerinti név, ``*`` bármely gazdagéphez, vagy ``*.example.com`` pontosan **egy** további címkéhez az ``example.com`` előtt (``a.example.com``, nem ``a.b.example.com``);"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:147
+msgid "the port is a number or ``*`` for any port. Without a port, the address may not name one (except the default port of the scheme);"
+msgstr "a port szám vagy ``*`` bármely porthoz. Port nélkül a cím nem nevezhet meg portot (a séma alapértelmezett portját kivéve);"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:149
+msgid "the path is empty (any path), a fixed path (exact match) or ends in ``/*`` (that path and everything below it);"
+msgstr "az útvonal (path) üres (bármely útvonal), rögzített útvonal (pontos egyezés), vagy ``/*``-ra végződik (az az útvonal és minden alatta lévő);"
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:151
+msgid "nothing else is a wildcard, and ``*`` never stretches over a ``/``."
+msgstr "semmi más nem helyettesítő karakter, és a ``*`` soha nem terjed át egy ``/`` jelen."
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:153
+msgid "For example, ``https://claude.ai/api/*`` allows only addresses below that path. The default patterns accept any ``https://`` address and the local loopback addresses (``127.0.0.1``, ``localhost`` and ``[::1]``) that desktop tools use."
+msgstr "Például a ``https://claude.ai/api/*`` csak az ez alatti útvonalon lévő címeket engedi. Az alapértelmezett minták bármely ``https://`` címet elfogadnak, valamint a helyi loopback címeket (``127.0.0.1``, ``localhost`` és ``[::1]``), amelyeket az asztali eszközök használnak."
+
+#: ../mnt/documentation/content/applications/productivity/ai/mcp_server.rst:157
+msgid "Independently of the patterns, a redirect URI must be absolute, must not contain a fragment or user information, must not use the ``javascript``, ``data``, ``file`` or ``vbscript`` schemes, and plain ``http`` is allowed for loopback addresses only. URIs with dot segments or spaces never match. When an app asks to be sent back to a URI, it must equal a registered one exactly; only the port of a registered loopback ``http`` address may differ."
+msgstr "A mintáktól függetlenül egy átirányítási URI-nek abszolútnak kell lennie, nem tartalmazhat töredéket (fragment) vagy felhasználói adatot, nem használhatja a ``javascript``, ``data``, ``file`` vagy ``vbscript`` sémákat, és sima ``http`` csak loopback címekhez engedélyezett. A pontszegmenseket vagy szóközt tartalmazó URI-k soha nem egyeznek. Amikor egy alkalmazás egy URI-ra kéri a visszairányítást, annak pontosan meg kell egyeznie egy regisztrálttal; csak egy regisztrált loopback ``http`` cím portja különbözhet."
+
+#: ../mnt/documentation/content/applications/productivity/ai/models_and_providers.rst:18
+msgid "A hosted provider needs its API key. If it has none, the request fails at once with the message \"The AI provider has no API key. Set it under AI > Configuration > Providers.\" instead of being sent and rejected by the provider. A self-hosted endpoint such as Ollama, LM Studio or vLLM needs no key. That is the case when the :guilabel:`Base Url` points to the local machine (``localhost``), to a private network address, to a name ending in ``.local``, ``.localhost``, ``.internal`` or ``.lan``, or to a plain host name without dots, such as ``http://ollama:11434/v1``."
+msgstr "Egy felhőszolgáltatónak szüksége van az API-kulcsára. Ha nincs, a kérés azonnal sikertelen a \"The AI provider has no API key. Set it under AI > Configuration > Providers.\" üzenettel, ahelyett hogy elküldenék, és a szolgáltató elutasítaná. Az önállóan üzemeltetett végpontnak, mint az Ollama, az LM Studio vagy a vLLM, nincs szüksége kulcsra. Ez az eset áll fenn, ha az :guilabel:`Alap URL` a helyi gépre (``localhost``), egy privát hálózati címre, egy ``.local``, ``.localhost``, ``.internal`` vagy ``.lan`` végű névre, vagy egy pontok nélküli egyszerű gépnévre mutat, például ``http://ollama:11434/v1``."
+
+#: ../mnt/documentation/content/applications/productivity/ai/panel.rst:5
+msgid "The AI panel is the everyday way to talk to the assistant. It opens from the AI bubble in the top bar of the backend and of the website preview, from :menuselection:`AI --> Conversations`, or from the command palette (see :doc:`search_and_commands`). When you open it on a record, the assistant sees that record and offers quick prompts that fit it."
+msgstr "Az AI-panel az asszisztenssel való beszélgetés mindennapi módja. A backend és a weboldal-előnézet felső sávjában lévő AI-buborékból nyílik meg, az :menuselection:`AI --> Beszélgetések` menüből, vagy a parancspalettáról (lásd :doc:`search_and_commands`). Ha egy rekordon nyitod meg, az asszisztens látja azt a rekordot, és hozzá illő gyorsindítókat kínál."
+
+#: ../mnt/documentation/content/applications/productivity/ai/panel.rst:88
+msgid "When something goes wrong"
+msgstr "Amikor valami nem sikerül"
+
+#: ../mnt/documentation/content/applications/productivity/ai/panel.rst:90
+msgid "If a tool the assistant calls fails, the assistant is told why, so that it can correct itself: when it used a field that does not exist, for example, it sees the message of the error and tries again with a valid one. The message is shortened to its first lines and never contains technical details such as SQL statements, tracebacks or server paths. The exception is a refusal by the access rules: in general the assistant only learns that access was denied, not why, so that it cannot be used to find out which records or fields exist. Changes made by the failed tool are rolled back."
+msgstr "Ha egy eszköz, amelyet az asszisztens hív, hibával jár, az asszisztens megtudja az okát, hogy kijavíthassa magát: ha például nem létező mezőt használt, látja a hiba üzenetét, és egy érvényessel próbálkozik újra. Az üzenet az első soraira van rövidítve, és soha nem tartalmaz műszaki részleteket, például SQL-utasításokat, visszakövetéseket vagy szerverútvonalakat. A kivétel a hozzáférési szabályok általi elutasítás: az asszisztens általában csak azt tudja meg, hogy a hozzáférést megtagadták, azt nem, hogy miért, hogy ne lehessen vele kideríteni, mely rekordok vagy mezők léteznek. A meghibásodott eszköz módosításai visszavonódnak."
+
+#: ../mnt/documentation/content/applications/productivity/ai/panel.rst:99
+msgid "The assistant answers in plain words and in the language of your message. It uses the labels you see in your interface and does not name its internal tools, not even when it explains what it cannot do."
+msgstr "Az asszisztens egyszerű szavakkal és az üzeneted nyelvén válaszol. Azokat a feliratokat használja, amelyeket a felületeden látsz, és nem nevezi meg a belső eszközeit, még akkor sem, ha elmagyarázza, mit nem tud megtenni."
+
+#: ../mnt/documentation/content/applications/productivity/ai/search_and_commands.rst:20
+msgid "When you ask for everything about a topic (for example \"everything about consignment stock\"), the assistant does not look for your exact words. It lists a few short word stems in your language, adds synonyms and the English term (for the Hungarian question above: *bizomány*, *konszignáci* and *consignment*), and keeps the records whose name or description contains **any** of the stems, ignoring upper and lower case. Up to eight stems are used, each at least three characters long. They are looked up in the free-text fields that the list has, such as name, description, note, comment, reference, email, subject and body."
+msgstr "Ha egy témáról mindent kérsz (például \"mindent a bizományi készletről\"), az asszisztens nem a pontos szavaidat keresi. Felsorol néhány rövid szótövet a te nyelveden, hozzáad szinonimákat és az angol kifejezést (a fenti magyar kérdésnél: *bizomány*, *konszignáci* és *consignment*), és megtartja azokat a rekordokat, amelyek neve vagy leírása a szótövek **bármelyikét** tartalmazza, a kis- és nagybetűk figyelmen kívül hagyásával. Legfeljebb nyolc szótövet használ, mindegyik legalább három karakter hosszú. Ezeket a lista szabad szöveges mezőiben keresi, mint a név, leírás, megjegyzés, hozzászólás, hivatkozás, e-mail, tárgy és törzs."
+
+#: ../mnt/documentation/content/applications/productivity/ai/website.rst:52
+msgid "Website designers who have the :guilabel:`Customize UI & schema` capability can also ask the AI panel (see :doc:`panel`) to work on the website. That capability is off by default and for administrators only (see :doc:`feature_access`). The AI bubble is in the top bar of the website preview too, so you can open the panel while you look at the page. The shipped agent :guilabel:`Website builder` is set up for this: it first looks at the existing pages and menus, proposes changes and never says that something is done before you confirm it."
+msgstr "Az a weboldaltervező, akinek megvan a :guilabel:`Felület és séma testreszabása` képessége, megkérheti az AI-panelt (lásd :doc:`panel`), hogy dolgozzon a weboldalon. Ez a képesség alapértelmezés szerint ki van kapcsolva, és csak az adminisztrátoroké (lásd :doc:`feature_access`). Az AI-buborék a weboldal-előnézet felső sávjában is ott van, így megnyithatod a panelt, miközben az oldalt nézed. A mellékelt :guilabel:`Weboldalépítő` ügynök erre van beállítva: először megnézi a meglévő oldalakat és menüket, változtatásokat javasol, és soha nem mondja, hogy valami kész, mielőtt megerősítenéd."
+
+#: ../mnt/documentation/content/applications/productivity/ai/website.rst:73
+msgid "Website changes are public, so they are always proposed first: the panel shows a card that you confirm or cancel (see :doc:`panel`). Only the :guilabel:`Apply without asking` write mode applies them straight away; the mixed mode still asks. The card shows the full content of the change, not a summary: every block with its title, texts, buttons and their targets, the replaced links, a note when a block goes onto an already published page and, for CSS changes, the complete CSS. A link to another website is marked on the card with the host it leads to. The change is checked again when you confirm."
+msgstr "A weboldal változtatásai nyilvánosak, ezért mindig előbb javaslatként jelennek meg: a panel egy kártyát mutat, amelyet megerősítesz vagy elvetsz (lásd :doc:`panel`). Csak az :guilabel:`Alkalmazás kérdezés nélkül` írási mód alkalmazza őket azonnal; a vegyes mód továbbra is kérdez. A kártya a változtatás teljes tartalmát mutatja, nem összefoglalót: minden blokkot a címével, szövegeivel, gombjaival és azok céljaival, a lecserélt hivatkozásokat, megjegyzést, ha egy blokk már publikált oldalra kerül, és CSS-változtatásnál a teljes CSS-t. Egy másik weboldalra mutató hivatkozást a kártya megjelöl azzal a gazdagéppel, ahová vezet. A változtatást a rendszer a megerősítéskor újra ellenőrzi."
+
+#: ../mnt/documentation/content/applications/productivity/ai/website.rst:92
+msgid "Custom CSS. The AI may only write plain CSS rules between its own markers in the website's custom stylesheet; your own rules outside the markers are kept. Sass is refused (variables, interpolation and the like), as are imports, scripts, functions that CSS does not know and at-rules other than ``@media``, ``@supports``, ``@keyframes`` and ``@font-face``. An ``url()`` may only point to pictures and static files of this site. The CSS is compiled once on its own and the result is checked again, and then the website's real frontend style bundle is compiled with the new rules before anything is saved. If it does not compile, nothing is saved and the error is shown."
+msgstr "Egyéni CSS. Az AI csak egyszerű CSS-szabályokat írhat a weboldal egyéni stíluslapján a saját jelölői között; a jelölőkön kívüli saját szabályaid megmaradnak. A Sass tiltott (változók, interpoláció és hasonlók), ahogy az importok, a szkriptek, a CSS által nem ismert függvények, valamint a ``@media``, ``@supports``, ``@keyframes`` és ``@font-face`` kivételével minden at-szabály. Egy ``url()`` csak ennek az oldalnak a képeire és statikus fájljaira mutathat. A CSS-t egyszer önmagában lefordítja, és az eredményt újra ellenőrzi, majd a weboldal valódi frontend stílus-csomagját is lefordítja az új szabályokkal, mielőtt bármi mentésre kerülne. Ha nem fordul le, semmi sem kerül mentésre, és a hiba megjelenik."
+
+#: ../mnt/documentation/content/applications/productivity/ai/website.rst:102
+msgid "If a turn has no builder tools (the capability is missing or you are not a website designer), the assistant tells you that the :guilabel:`Customize UI & schema` capability or the website designer right is missing, that an administrator can grant it, and explains the manual way instead: Menu Editor, Pages, edit mode and theme settings."
+msgstr "Ha egy fordulónak nincsenek építőeszközei (hiányzik a képesség, vagy nem vagy weboldaltervező), az asszisztens megmondja, hogy hiányzik a :guilabel:`Felület és séma testreszabása` képesség vagy a weboldaltervezői jog, hogy egy adminisztrátor megadhatja, és helyette elmagyarázza a kézi utat: Menüszerkesztő, Oldalak, szerkesztési mód és témabeállítások."
+
 #~ msgid "Odoo's **Appointments** app is a self-service scheduling app that simplifies the process of booking meetings, consultations, or services. Integrated with Odoo's suite of business apps, it allows companies to automate appointment scheduling, reduce manual coordination, and provide a seamless experience for clients. Appointments can be linked to calendars, **CRM** opportunities, employee schedules, and more, making it an ideal tool for service-based businesses seeking efficiency and organization."
 #~ msgstr "Az Odoo **Appointments** alkalmazása egy önkiszolgáló ütemezési alkalmazás, amely leegyszerűsíti a találkozók, konzultációk vagy szolgáltatások foglalásának folyamatát. Az Odoo üzleti alkalmazáscsomagjával integrálva lehetővé teszi a vállalatok számára az időpontfoglalás automatizálását, a manuális koordináció csökkentését, és zökkenőmentes élményt nyújt az ügyfelek számára. Az időpontok összekapcsolhatók naptárakkal, **CRM** lehetőségekkel, munkavállalói ütemezésekkel és még sok mással, így ideális eszköz a hatékonyságra és szervezettségre törekvő szolgáltatásalapú vállalkozások számára."
 
@@ -18350,20 +18702,19 @@ msgstr ""
 "**Hang** — üzenetek diktálása, valamint Discuss-hívások átírása és "
 "összefoglalása minden résztvevő hozzájárulásával (lásd: :doc:`ai/voice`)."
 
-#: ../../content/applications/productivity/ai.rst:70
-msgid ""
-"**Business apps** — quick prompts and buttons in CRM, Sales, Purchase, "
-"Inventory, Invoicing, Calendar, Products, Email marketing and Timesheets, "
-"ticket triage for projects with SLA and AI analysis of accounting reports "
-"(see :doc:`ai/app_integrations`, :doc:`ai/project_sla` and "
-":doc:`ai/accounting_reports`)."
-msgstr ""
-"**Üzleti alkalmazások** — gyorsindítások és gombok a CRM-ben, az "
-"Értékesítésben, a Beszerzésben, a Készletben, a Számlázásban, a Naptárban, a"
-" Termékeknél, az E-mail marketingben és a Munkaidő-nyilvántartásban, "
-"jegybesorolás SLA-s projektekhez, valamint a könyvelési riportok AI-elemzése"
-" (lásd: :doc:`ai/app_integrations`, :doc:`ai/project_sla` és "
-":doc:`ai/accounting_reports`)."
+#~ msgid ""
+#~ "**Business apps** — quick prompts and buttons in CRM, Sales, Purchase, "
+#~ "Inventory, Invoicing, Calendar, Products, Email marketing and Timesheets, "
+#~ "ticket triage for projects with SLA and AI analysis of accounting reports "
+#~ "(see :doc:`ai/app_integrations`, :doc:`ai/project_sla` and "
+#~ ":doc:`ai/accounting_reports`)."
+#~ msgstr ""
+#~ "**Üzleti alkalmazások** — gyorsindítások és gombok a CRM-ben, az "
+#~ "Értékesítésben, a Beszerzésben, a Készletben, a Számlázásban, a Naptárban, a"
+#~ " Termékeknél, az E-mail marketingben és a Munkaidő-nyilvántartásban, "
+#~ "jegybesorolás SLA-s projektekhez, valamint a könyvelési riportok AI-elemzése"
+#~ " (lásd: :doc:`ai/app_integrations`, :doc:`ai/project_sla` és "
+#~ ":doc:`ai/accounting_reports`)."
 
 #: ../../content/applications/productivity/ai.rst:75
 msgid ""
@@ -18604,23 +18955,22 @@ msgstr ""
 msgid "Note for administrators: background jobs and time limits"
 msgstr "Megjegyzés adminisztrátoroknak: háttérfeladatok és időkorlátok"
 
-#: ../../content/applications/productivity/ai/accounting_reports.rst:88
-msgid ""
-"An audit makes several model calls and easily takes longer than an ordinary "
-"web request is allowed to run. That is why analyses and audits run as "
-"background jobs of the scheduled action \"AI: Run accounting report analyses"
-" and audits\". The job runs in the environment of the person who clicked, "
-"never in the identity of the scheduler, and the form refreshes by itself. A "
-"job that stays in the running state for more than 30 minutes is marked as "
-"failed, so nothing stays stuck."
-msgstr ""
-"Egy audit több modellhívást végez, és könnyen tovább tart, mint amennyi "
-"ideig egy átlagos webes kérés futhat. Ezért az elemzések és az auditok az "
-"„AI: Run accounting report analyses and audits” ütemezett művelet "
-"háttérfeladataiként futnak. A feladat a kattintó személy környezetében fut, "
-"soha nem az ütemező azonosságával, és az űrlap magától frissül. Az a "
-"feladat, amely több mint 30 percig „fut” állapotban marad, sikertelenként "
-"lesz megjelölve, így semmi sem ragad el."
+#~ msgid ""
+#~ "An audit makes several model calls and easily takes longer than an ordinary "
+#~ "web request is allowed to run. That is why analyses and audits run as "
+#~ "background jobs of the scheduled action \"AI: Run accounting report analyses"
+#~ " and audits\". The job runs in the environment of the person who clicked, "
+#~ "never in the identity of the scheduler, and the form refreshes by itself. A "
+#~ "job that stays in the running state for more than 30 minutes is marked as "
+#~ "failed, so nothing stays stuck."
+#~ msgstr ""
+#~ "Egy audit több modellhívást végez, és könnyen tovább tart, mint amennyi "
+#~ "ideig egy átlagos webes kérés futhat. Ezért az elemzések és az auditok az "
+#~ "„AI: Run accounting report analyses and audits” ütemezett művelet "
+#~ "háttérfeladataiként futnak. A feladat a kattintó személy környezetében fut, "
+#~ "soha nem az ütemező azonosságával, és az űrlap magától frissül. Az a "
+#~ "feladat, amely több mint 30 percig „fut” állapotban marad, sikertelenként "
+#~ "lesz megjelölve, így semmi sem ragad el."
 
 #: ../../content/applications/productivity/ai/accounting_reports.rst:97
 msgid ""
@@ -20193,22 +20543,21 @@ msgstr "Egy látogatói üzenet legfeljebb 2000 karakter lehet fordulónként."
 msgid "Hand-over to a human"
 msgstr "Átadás emberi operátornak"
 
-#: ../../content/applications/productivity/ai/livechat.rst:63
-msgid ""
-"The agent hands the chat over to an available operator when the visitor asks"
-" for a person, when :guilabel:`Max AI answers` is reached, when the agent is"
-" unsure or when the AI service fails. The operator is chosen with the "
-"channel's normal operator selection and joins the session; the agent posts a"
-" short summary and stops answering. An operator who simply writes in the "
-"session also takes it over."
-msgstr ""
-"Az ügynök átadja a chatet egy elérhető operátornak, ha a látogató embert "
-"kér, ha elérte a :guilabel:`AI válaszok maximális száma` értékét, ha az "
-"ügynök bizonytalan, vagy ha az AI-szolgáltatás hibázik. Az operátort a "
-"csatorna szokásos operátorválasztása jelöli ki, és csatlakozik a "
-"munkamenethez; az ügynök rövid összefoglalót ír, majd abbahagyja a "
-"válaszolást. Az az operátor is átveszi a beszélgetést, aki egyszerűen ír a "
-"munkamenetben."
+#~ msgid ""
+#~ "The agent hands the chat over to an available operator when the visitor asks"
+#~ " for a person, when :guilabel:`Max AI answers` is reached, when the agent is"
+#~ " unsure or when the AI service fails. The operator is chosen with the "
+#~ "channel's normal operator selection and joins the session; the agent posts a"
+#~ " short summary and stops answering. An operator who simply writes in the "
+#~ "session also takes it over."
+#~ msgstr ""
+#~ "Az ügynök átadja a chatet egy elérhető operátornak, ha a látogató embert "
+#~ "kér, ha elérte a :guilabel:`AI válaszok maximális száma` értékét, ha az "
+#~ "ügynök bizonytalan, vagy ha az AI-szolgáltatás hibázik. Az operátort a "
+#~ "csatorna szokásos operátorválasztása jelöli ki, és csatlakozik a "
+#~ "munkamenethez; az ügynök rövid összefoglalót ír, majd abbahagyja a "
+#~ "válaszolást. Az az operátor is átveszi a beszélgetést, aki egyszerűen ír a "
+#~ "munkamenetben."
 
 #: ../../content/applications/productivity/ai/livechat.rst:70
 msgid ""
@@ -20219,15 +20568,14 @@ msgstr ""
 "Ha senki sem elérhető, a látogató ezt megtudja, és elérhetőséget kérnek "
 "tőle, az ügynök pedig korlátozott számú további válaszig tovább segít."
 
-#: ../../content/applications/productivity/ai/livechat.rst:74
-msgid ""
-"The hand-over summary is visible to the visitor, and it is labelled as an AI"
-" summary based on the visitor's messages that is not verified. It contains "
-"no clickable links."
-msgstr ""
-"Az átadási összefoglaló a látogató számára is látható, és úgy van "
-"megjelölve, mint a látogató üzenetei alapján készült, nem ellenőrzött AI-"
-"összefoglaló. Nem tartalmaz kattintható hivatkozásokat."
+#~ msgid ""
+#~ "The hand-over summary is visible to the visitor, and it is labelled as an AI"
+#~ " summary based on the visitor's messages that is not verified. It contains "
+#~ "no clickable links."
+#~ msgstr ""
+#~ "Az átadási összefoglaló a látogató számára is látható, és úgy van "
+#~ "megjelölve, mint a látogató üzenetei alapján készült, nem ellenőrzött AI-"
+#~ "összefoglaló. Nem tartalmaz kattintható hivatkozásokat."
 
 #: ../../content/applications/productivity/ai/livechat.rst:78
 msgid ""
@@ -20263,19 +20611,18 @@ msgstr ""
 "rendelve, kapcsolódik a beszélgetéshez, a chat pedig visszamutat az "
 "érdeklődőre."
 
-#: ../../content/applications/productivity/ai/livechat.rst:94
-msgid ""
-"Nobody can confirm a request from an unattended visitor, so the lead is "
-"created directly. At most one lead is created per session and a limited "
-"number per visitor address per day (:guilabel:`Leads per visitor address and"
-" day` in the settings). The lead description starts with the label that the "
-"summary is unverified."
-msgstr ""
-"Őrizetlen látogatói kérést senki nem tud megerősíteni, ezért az érdeklődő "
-"közvetlenül jön létre. Munkamenetenként legfeljebb egy érdeklődő jön létre, "
-"látogatói címenként pedig naponta korlátozott számú (a beállításokban a "
-":guilabel:`Érdeklődők látogatói címenként és naponta`). Az érdeklődő leírása"
-" azzal a jelöléssel kezdődik, hogy az összefoglaló nem ellenőrzött."
+#~ msgid ""
+#~ "Nobody can confirm a request from an unattended visitor, so the lead is "
+#~ "created directly. At most one lead is created per session and a limited "
+#~ "number per visitor address per day (:guilabel:`Leads per visitor address and"
+#~ " day` in the settings). The lead description starts with the label that the "
+#~ "summary is unverified."
+#~ msgstr ""
+#~ "Őrizetlen látogatói kérést senki nem tud megerősíteni, ezért az érdeklődő "
+#~ "közvetlenül jön létre. Munkamenetenként legfeljebb egy érdeklődő jön létre, "
+#~ "látogatói címenként pedig naponta korlátozott számú (a beállításokban a "
+#~ ":guilabel:`Érdeklődők látogatói címenként és naponta`). Az érdeklődő leírása"
+#~ " azzal a jelöléssel kezdődik, hogy az összefoglaló nem ellenőrzött."
 
 #: ../../content/applications/productivity/ai/livechat.rst:101
 msgid "Preview cards"
@@ -20361,29 +20708,27 @@ msgstr ""
 "udvarias üzenetet kap, a munkamenetet pedig átadja egy elérhető operátornak,"
 " vagy az AI leáll abban a munkamenetben. A 0 érték kikapcsolja a korlátot."
 
-#: ../../content/applications/productivity/ai/livechat.rst:134
-msgid ""
-":guilabel:`Per visitor`: :guilabel:`Seconds between AI answers`, "
-":guilabel:`Visitor messages per minute`, :guilabel:`AI conversations per "
-"visitor and hour` and :guilabel:`AI answers per visitor and day`. Visitors "
-"are told apart by network address, guest, signed-in contact or website "
-"visitor."
-msgstr ""
-":guilabel:`Látogatónként`: :guilabel:`Másodpercek az AI-válaszok között`, "
-":guilabel:`Látogatói üzenetek percenként`, :guilabel:`AI-beszélgetések "
-"látogatónként és óránként` és :guilabel:`AI-válaszok látogatónként és "
-"naponta`. A látogatókat hálózati cím, vendég, bejelentkezett kapcsolat vagy "
-"weboldal-látogató alapján különböztetjük meg."
+#~ msgid ""
+#~ ":guilabel:`Per visitor`: :guilabel:`Seconds between AI answers`, "
+#~ ":guilabel:`Visitor messages per minute`, :guilabel:`AI conversations per "
+#~ "visitor and hour` and :guilabel:`AI answers per visitor and day`. Visitors "
+#~ "are told apart by network address, guest, signed-in contact or website "
+#~ "visitor."
+#~ msgstr ""
+#~ ":guilabel:`Látogatónként`: :guilabel:`Másodpercek az AI-válaszok között`, "
+#~ ":guilabel:`Látogatói üzenetek percenként`, :guilabel:`AI-beszélgetések "
+#~ "látogatónként és óránként` és :guilabel:`AI-válaszok látogatónként és "
+#~ "naponta`. A látogatókat hálózati cím, vendég, bejelentkezett kapcsolat vagy "
+#~ "weboldal-látogató alapján különböztetjük meg."
 
-#: ../../content/applications/productivity/ai/livechat.rst:138
-msgid ""
-":guilabel:`All visitors`: :guilabel:`AI requests per day (all visitors)` and"
-" :guilabel:`AI cost per day (USD, all visitors)`. If the cost limit is 0, "
-"the general daily cost limit of the AI settings applies."
-msgstr ""
-":guilabel:`Összes látogató`: :guilabel:`AI-kérések naponta (összes "
-"látogató)` és :guilabel:`AI-költség naponta (USD, összes látogató)`. Ha a "
-"költségkorlát 0, az AI-beállítások általános napi költségkorlátja érvényes."
+#~ msgid ""
+#~ ":guilabel:`All visitors`: :guilabel:`AI requests per day (all visitors)` and"
+#~ " :guilabel:`AI cost per day (USD, all visitors)`. If the cost limit is 0, "
+#~ "the general daily cost limit of the AI settings applies."
+#~ msgstr ""
+#~ ":guilabel:`Összes látogató`: :guilabel:`AI-kérések naponta (összes "
+#~ "látogató)` és :guilabel:`AI-költség naponta (USD, összes látogató)`. Ha a "
+#~ "költségkorlát 0, az AI-beállítások általános napi költségkorlátja érvényes."
 
 #: ../../content/applications/productivity/ai/livechat.rst:143
 msgid ""
@@ -20655,39 +21000,37 @@ msgstr ""
 ":guilabel:`Nyilvánossá tétel (csak PKCE)` gombot olyan alkalmazásokhoz, "
 "amelyek nem tudnak titkot őrizni."
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:107
-msgid ""
-"Or you turn on :guilabel:`Allow dynamic client registration` and apps "
-"register themselves. This is off by default. When on, registration is "
-"limited per network address (:guilabel:`Registrations per address and hour`,"
-" 10 by default), the registered addresses must match :guilabel:`Allowed "
-"redirect URI patterns`, and apps that never get used are deleted after 72 "
-"hours. An authorization error of an app that is not yet reviewed is shown on"
-" an error page instead of redirecting back to the app."
-msgstr ""
-"Vagy bekapcsolod az :guilabel:`Dinamikus kliensregisztráció engedélyezése` "
-"beállítást, és az alkalmazások maguk regisztrálnak. Ez alapértelmezés "
-"szerint ki van kapcsolva. Bekapcsolva a regisztráció hálózati címenként "
-"korlátozott (:guilabel:`Regisztrációk címenként és óránként`, alapértelmezés"
-" szerint 10), a regisztrált címeknek meg kell felelniük az "
-":guilabel:`Engedélyezett átirányítási URI-minták` mintáknak, és a soha nem "
-"használt alkalmazások 72 óra után törlődnek. Egy még át nem vizsgált "
-"alkalmazás hitelesítési hibája hibaoldalon jelenik meg, nem irányít vissza "
-"az alkalmazáshoz."
+#~ msgid ""
+#~ "Or you turn on :guilabel:`Allow dynamic client registration` and apps "
+#~ "register themselves. This is off by default. When on, registration is "
+#~ "limited per network address (:guilabel:`Registrations per address and hour`,"
+#~ " 10 by default), the registered addresses must match :guilabel:`Allowed "
+#~ "redirect URI patterns`, and apps that never get used are deleted after 72 "
+#~ "hours. An authorization error of an app that is not yet reviewed is shown on"
+#~ " an error page instead of redirecting back to the app."
+#~ msgstr ""
+#~ "Vagy bekapcsolod az :guilabel:`Dinamikus kliensregisztráció engedélyezése` "
+#~ "beállítást, és az alkalmazások maguk regisztrálnak. Ez alapértelmezés "
+#~ "szerint ki van kapcsolva. Bekapcsolva a regisztráció hálózati címenként "
+#~ "korlátozott (:guilabel:`Regisztrációk címenként és óránként`, alapértelmezés"
+#~ " szerint 10), a regisztrált címeknek meg kell felelniük az "
+#~ ":guilabel:`Engedélyezett átirányítási URI-minták` mintáknak, és a soha nem "
+#~ "használt alkalmazások 72 óra után törlődnek. Egy még át nem vizsgált "
+#~ "alkalmazás hitelesítési hibája hibaoldalon jelenik meg, nem irányít vissza "
+#~ "az alkalmazáshoz."
 
-#: ../../content/applications/productivity/ai/mcp_server.rst:115
-msgid ""
-"More settings in the block :guilabel:`MCP server`: :guilabel:`Token "
-"lifetimes` (access token minutes and refresh token days) and "
-":guilabel:`Allowed browser origins` for browser-based apps. The default "
-"redirect patterns accept ``https://`` addresses and the local loopback "
-"addresses used by desktop tools."
-msgstr ""
-"További beállítások az :guilabel:`MCP szerver` blokkban: :guilabel:`Tokenek "
-"élettartama` (hozzáférési token percei és frissítő token napjai) és "
-":guilabel:`Engedélyezett böngésző-originek` a böngészőalapú alkalmazásokhoz."
-" Az alapértelmezett átirányítási minták elfogadják az ``https://`` címeket "
-"és az asztali eszközök által használt helyi loopback címeket."
+#~ msgid ""
+#~ "More settings in the block :guilabel:`MCP server`: :guilabel:`Token "
+#~ "lifetimes` (access token minutes and refresh token days) and "
+#~ ":guilabel:`Allowed browser origins` for browser-based apps. The default "
+#~ "redirect patterns accept ``https://`` addresses and the local loopback "
+#~ "addresses used by desktop tools."
+#~ msgstr ""
+#~ "További beállítások az :guilabel:`MCP szerver` blokkban: :guilabel:`Tokenek "
+#~ "élettartama` (hozzáférési token percei és frissítő token napjai) és "
+#~ ":guilabel:`Engedélyezett böngésző-originek` a böngészőalapú alkalmazásokhoz."
+#~ " Az alapértelmezett átirányítási minták elfogadják az ``https://`` címeket "
+#~ "és az asztali eszközök által használt helyi loopback címeket."
 
 #: ../../content/applications/productivity/ai/mcp_server.rst:121
 msgid "Portal users"
@@ -20954,19 +21297,18 @@ msgstr ""
 msgid "The AI panel"
 msgstr "Az AI panel"
 
-#: ../../content/applications/productivity/ai/panel.rst:5
-msgid ""
-"The AI panel is the everyday way to talk to the assistant. It opens from the"
-" AI bubble in the top bar of the backend, from :menuselection:`AI --> "
-"Conversations`, or from the command palette (see "
-":doc:`search_and_commands`). When you open it on a record, the assistant "
-"sees that record and offers quick prompts that fit it."
-msgstr ""
-"Az AI panel az asszisztenssel való mindennapi beszélgetés eszköze. A "
-"háttérrendszer felső sávjában lévő AI buborékról, az :menuselection:`AI --> "
-"Beszélgetések` menüből vagy a parancspalettáról nyitható meg (lásd: "
-":doc:`search_and_commands`). Ha egy rekordon nyitod meg, az asszisztens "
-"látja azt a rekordot, és hozzá illő gyorsparancsokat kínál."
+#~ msgid ""
+#~ "The AI panel is the everyday way to talk to the assistant. It opens from the"
+#~ " AI bubble in the top bar of the backend, from :menuselection:`AI --> "
+#~ "Conversations`, or from the command palette (see "
+#~ ":doc:`search_and_commands`). When you open it on a record, the assistant "
+#~ "sees that record and offers quick prompts that fit it."
+#~ msgstr ""
+#~ "Az AI panel az asszisztenssel való mindennapi beszélgetés eszköze. A "
+#~ "háttérrendszer felső sávjában lévő AI buborékról, az :menuselection:`AI --> "
+#~ "Beszélgetések` menüből vagy a parancspalettáról nyitható meg (lásd: "
+#~ ":doc:`search_and_commands`). Ha egy rekordon nyitod meg, az asszisztens "
+#~ "látja azt a rekordot, és hozzá illő gyorsparancsokat kínál."
 
 #: ../../content/applications/productivity/ai/panel.rst:11
 msgid ""
@@ -21972,22 +22314,21 @@ msgstr ""
 msgid "Builder tools in the AI panel"
 msgstr "Építőeszközök az AI-panelben"
 
-#: ../../content/applications/productivity/ai/website.rst:52
-msgid ""
-"Website designers who have the :guilabel:`Customize UI & schema` capability "
-"can also ask the AI panel (see :doc:`panel`) to work on the website. That "
-"capability is off by default and for administrators only (see "
-":doc:`feature_access`). The shipped agent :guilabel:`Website builder` is set"
-" up for this: it first looks at the existing pages and menus, proposes "
-"changes and never says that something is done before you confirm it."
-msgstr ""
-"Azok a weboldal-tervezők, akik rendelkeznek a :guilabel:`Felület és séma "
-"testreszabása` képességgel, az AI-panelt (lásd: :doc:`panel`) is megkérhetik"
-" a weboldalon végzett munkára. Ez a képesség alapértelmezés szerint ki van "
-"kapcsolva, és csak adminisztrátoroknak érhető el (lásd: "
-":doc:`feature_access`). A mellékelt :guilabel:`Weboldalépítő` ügynök erre "
-"van beállítva: először megnézi a meglévő oldalakat és menüket, javaslatot "
-"tesz, és soha nem mondja, hogy valami kész, amíg meg nem erősíted."
+#~ msgid ""
+#~ "Website designers who have the :guilabel:`Customize UI & schema` capability "
+#~ "can also ask the AI panel (see :doc:`panel`) to work on the website. That "
+#~ "capability is off by default and for administrators only (see "
+#~ ":doc:`feature_access`). The shipped agent :guilabel:`Website builder` is set"
+#~ " up for this: it first looks at the existing pages and menus, proposes "
+#~ "changes and never says that something is done before you confirm it."
+#~ msgstr ""
+#~ "Azok a weboldal-tervezők, akik rendelkeznek a :guilabel:`Felület és séma "
+#~ "testreszabása` képességgel, az AI-panelt (lásd: :doc:`panel`) is megkérhetik"
+#~ " a weboldalon végzett munkára. Ez a képesség alapértelmezés szerint ki van "
+#~ "kapcsolva, és csak adminisztrátoroknak érhető el (lásd: "
+#~ ":doc:`feature_access`). A mellékelt :guilabel:`Weboldalépítő` ügynök erre "
+#~ "van beállítva: először megnézi a meglévő oldalakat és menüket, javaslatot "
+#~ "tesz, és soha nem mondja, hogy valami kész, amíg meg nem erősíted."
 
 #: ../../content/applications/productivity/ai/website.rst:59
 msgid "The tools can:"
@@ -22030,26 +22371,25 @@ msgstr ""
 msgid "Confirmation cards"
 msgstr "Megerősítő kártyák"
 
-#: ../../content/applications/productivity/ai/website.rst:72
-msgid ""
-"Website changes are public, so they are always proposed first: the panel "
-"shows a card that you confirm or cancel (see :doc:`panel`). Only the "
-":guilabel:`Apply without asking` write mode applies them straight away; the "
-"mixed mode still asks. The card lists everything that will change: every "
-"block with its title, texts, buttons and their targets, the replaced links, "
-"a note when a block goes onto an already published page and, for CSS "
-"changes, the complete CSS. Links to other websites are marked as external. "
-"The change is checked again when you confirm."
-msgstr ""
-"A weboldal-módosítások nyilvánosak, ezért mindig javaslatként jelennek meg "
-"előbb: a panel egy kártyát mutat, amelyet megerősíthetsz vagy elvethetsz "
-"(lásd: :doc:`panel`). Csak az :guilabel:`Alkalmazás kérdezés nélkül` írási "
-"mód alkalmazza őket azonnal; a vegyes mód is rákérdez. A kártya felsorol "
-"mindent, ami változni fog: minden blokkot a címével, szövegeivel, gombjaival"
-" és azok céljaival, a lecserélt hivatkozásokat, megjegyzést arról, ha egy "
-"blokk már közzétett oldalra kerül, CSS-módosításnál pedig a teljes CSS-t. A "
-"más weboldalakra mutató hivatkozásokat külsőként jelöli. A módosítást "
-"megerősítéskor a rendszer újra ellenőrzi."
+#~ msgid ""
+#~ "Website changes are public, so they are always proposed first: the panel "
+#~ "shows a card that you confirm or cancel (see :doc:`panel`). Only the "
+#~ ":guilabel:`Apply without asking` write mode applies them straight away; the "
+#~ "mixed mode still asks. The card lists everything that will change: every "
+#~ "block with its title, texts, buttons and their targets, the replaced links, "
+#~ "a note when a block goes onto an already published page and, for CSS "
+#~ "changes, the complete CSS. Links to other websites are marked as external. "
+#~ "The change is checked again when you confirm."
+#~ msgstr ""
+#~ "A weboldal-módosítások nyilvánosak, ezért mindig javaslatként jelennek meg "
+#~ "előbb: a panel egy kártyát mutat, amelyet megerősíthetsz vagy elvethetsz "
+#~ "(lásd: :doc:`panel`). Csak az :guilabel:`Alkalmazás kérdezés nélkül` írási "
+#~ "mód alkalmazza őket azonnal; a vegyes mód is rákérdez. A kártya felsorol "
+#~ "mindent, ami változni fog: minden blokkot a címével, szövegeivel, gombjaival"
+#~ " és azok céljaival, a lecserélt hivatkozásokat, megjegyzést arról, ha egy "
+#~ "blokk már közzétett oldalra kerül, CSS-módosításnál pedig a teljes CSS-t. A "
+#~ "más weboldalakra mutató hivatkozásokat külsőként jelöli. A módosítást "
+#~ "megerősítéskor a rendszer újra ellenőrzi."
 
 #: ../../content/applications/productivity/ai/website.rst:82
 msgid "Links and CSS rules"
@@ -22074,29 +22414,27 @@ msgstr ""
 "más weboldalakra mutató hivatkozásokat is hozzáadhat` beállítással. Az ilyen"
 " hivatkozásokat ekkor is külsőként jelöli a kártya."
 
-#: ../../content/applications/productivity/ai/website.rst:91
-msgid ""
-"Custom CSS. The AI may only write plain CSS between its own markers in the "
-"website's custom stylesheet; your own rules outside the markers are kept. "
-"Imports, scripts, Sass features, unknown functions and addresses outside "
-"this site are refused, and the website styles must still compile, otherwise "
-"the change is rolled back."
-msgstr ""
-"Egyéni CSS. Az AI csak sima CSS-t írhat a weboldal egyéni stíluslapjában a "
-"saját jelölői között; a jelölőkön kívüli saját szabályaid megmaradnak. Az "
-"importot, szkripteket, Sass-funkciókat, ismeretlen függvényeket és a "
-"webhelyen kívüli címeket elutasítja a rendszer, és a weboldal stílusainak "
-"továbbra is le kell fordulniuk, különben a módosítás visszaáll."
+#~ msgid ""
+#~ "Custom CSS. The AI may only write plain CSS between its own markers in the "
+#~ "website's custom stylesheet; your own rules outside the markers are kept. "
+#~ "Imports, scripts, Sass features, unknown functions and addresses outside "
+#~ "this site are refused, and the website styles must still compile, otherwise "
+#~ "the change is rolled back."
+#~ msgstr ""
+#~ "Egyéni CSS. Az AI csak sima CSS-t írhat a weboldal egyéni stíluslapjában a "
+#~ "saját jelölői között; a jelölőkön kívüli saját szabályaid megmaradnak. Az "
+#~ "importot, szkripteket, Sass-funkciókat, ismeretlen függvényeket és a "
+#~ "webhelyen kívüli címeket elutasítja a rendszer, és a weboldal stílusainak "
+#~ "továbbra is le kell fordulniuk, különben a módosítás visszaáll."
 
-#: ../../content/applications/productivity/ai/website.rst:97
-msgid ""
-"If a turn has no builder tools (the capability is missing or you are not a "
-"website designer), the assistant explains the manual way instead: Menu "
-"Editor, Pages, edit mode and theme settings."
-msgstr ""
-"Ha egy körben nincsenek építőeszközök (hiányzik a képesség, vagy nem vagy "
-"weboldal-tervező), az asszisztens inkább a kézi módszert magyarázza el: "
-"Menüszerkesztő, Oldalak, szerkesztő mód és témabeállítások."
+#~ msgid ""
+#~ "If a turn has no builder tools (the capability is missing or you are not a "
+#~ "website designer), the assistant explains the manual way instead: Menu "
+#~ "Editor, Pages, edit mode and theme settings."
+#~ msgstr ""
+#~ "Ha egy körben nincsenek építőeszközök (hiányzik a képesség, vagy nem vagy "
+#~ "weboldal-tervező), az asszisztens inkább a kézi módszert magyarázza el: "
+#~ "Menüszerkesztő, Oldalak, szerkesztő mód és témabeállítások."
 
 #: ../../content/applications/productivity/ai/website.rst:102
 msgid "Brand kits"

@@ -134,6 +134,17 @@ needed for conversions between volume and specific-gravity units.
    :module: eyssen_uom
    :notes: English UI, light theme, 1440px width, crop to the form and the units table.
 
+Conversion to standard units
+----------------------------
+
+The module can convert a quantity in any unit of a *Length / Distance*, *Surface*, *Volume*, *Weight*
+or *Specific Gravity* category to the standard unit of its type: metre (m), square metre (m²), cubic
+metre (m³), kilogram (kg) and kg/m³. Other modules use this to compute with physical quantities: for
+instance, the density of a material may be entered in g/cm³ or kg/m³, and the weight computed from
+the dimensions of a product is converted into the company's weight unit. Units of the types *Unit*
+and *Time* are not physical quantities; converting them raises the error "The unit of measure cannot be
+converted to a physical quantity".
+
 UNECE codes
 -----------
 

@@ -53,9 +53,10 @@ do not need to install them yourself. Their names appear in the :menuselection:`
      - What it adds
    * - *Website Tracking & Consent*
      - the Google or the Meta app is installed
-     - The shared base: the consent categories of the cookies bar, the :guilabel:`Tracking` block
-       of the Website settings, the :guilabel:`Tracking & Consent` menu (server events, consent
-       log, connections), and the click identifiers stored on orders and leads.
+     - The shared base: the cookie consent banner that replaces the cookies bar, the
+       :guilabel:`Tracking` block of the Website settings, the :guilabel:`Tracking & Consent` menu
+       (server events, consent log, cookies, connections), and the click identifiers stored on
+       orders and leads.
    * - *Website Tracking for eCommerce*
      - the shared base and eCommerce are installed
      - The eCommerce events (product views, cart, checkout, purchase, refund) and the
@@ -114,7 +115,7 @@ Where to find the settings
    * - Menu
      - Content
    * - :menuselection:`Website --> Configuration --> Settings`
-     - :guilabel:`Consent Categories` (privacy section) and the :guilabel:`Tracking` block: debug
+     - :guilabel:`Cookie Consent` (privacy section) and the :guilabel:`Tracking` block: debug
        mode, retention, :guilabel:`Connection Broker`, :guilabel:`eCommerce Tracking`,
        :guilabel:`Lead Tracking`.
    * - :menuselection:`Website --> Configuration --> Tracking & Consent`
@@ -142,7 +143,7 @@ page before changing anything.
 Getting started
 ===============
 
-#. Enable the :guilabel:`Cookies Bar` in :menuselection:`Website --> Configuration --> Settings`
+#. Enable :guilabel:`Cookie Consent` in :menuselection:`Website --> Configuration --> Settings`
    and choose how the consent is collected, as described in :doc:`cookie_consent`.
 #. Install the Google app, the Meta app, or both.
 #. Enter the identifiers of your accounts (measurement ID, container ID, pixel ID…) in the settings

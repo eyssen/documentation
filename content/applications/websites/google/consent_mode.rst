@@ -5,7 +5,7 @@ Consent mode
 *Google Consent Mode v2* tells the Google tags what the visitor allowed, so that they adapt their
 behavior. It is required for the audiences and measurement of Google Ads in the European Economic
 Area. The Google app sends the seven consent signals of Consent Mode v2 and updates them when the
-visitor makes a choice in the :doc:`cookies bar or consent platform
+visitor makes a choice in the :doc:`consent banner or consent platform
 </applications/websites/website/tracking/cookie_consent>`:
 
 .. list-table::

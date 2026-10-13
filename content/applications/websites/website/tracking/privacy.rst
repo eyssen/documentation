@@ -13,10 +13,15 @@ Consent first
   is sent, only if the matching :doc:`consent category <cookie_consent>` is granted:
   **analytics** for Google Analytics events, **marketing** for Google Ads, the Meta Pixel, the
   Conversions API, remarketing, and Customer Match.
-- Without a cookies bar and without an external consent platform, all categories are considered
-  granted: enable one of them.
-- The consent state is checked again on every page. Visitors who consented to an older
-  :guilabel:`Cookie Policy Version` are asked again.
+- Without the consent banner and without an external consent platform, all categories are
+  considered granted: enable one of them.
+- The consent state is checked again on every page. Visitors who consented to another
+  :guilabel:`Cookie Policy Version`, or longer ago than :guilabel:`Ask Again After (months)`, are
+  asked again.
+- Rejecting is as easy as accepting: the banner shows :guilabel:`Reject all` next to
+  :guilabel:`Accept all`, with the same look, and nothing is pre-selected in the preferences dialog.
+- Visitors can change or withdraw their choice at any time with the :guilabel:`Cookie settings`
+  link or the floating cookie button. The cookies of a withdrawn category are deleted.
 - No tracking is done in the website editor, in the translation mode, or for the website
   designers while they edit the website.
 - With the Google :doc:`consent mode </applications/websites/google/consent_mode>` in
@@ -99,9 +104,8 @@ Google Tag Manager
 
 Third-party domains
    Scripts of Google and Meta that Odoo manages itself are removed from the blocked third-party
-   list of the cookies bar, so that they are loaded after consent and not blanked. Other embedded
+   list of the website, so that they are loaded after consent and not blanked. Other embedded
    services stay blocked until the visitor accepts the :guilabel:`Functional` cookies.
 
 .. seealso::
    - :doc:`cookie_consent`
-   - :doc:`/applications/websites/website/configuration/cookies_bar`

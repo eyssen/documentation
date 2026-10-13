@@ -9172,23 +9172,6 @@ msgstr ":doc:`merchant_center`"
 msgid "Consent mode"
 msgstr "Modul de consimțământ"
 
-#: ../../content/applications/websites/google/consent_mode.rst:5
-msgid ""
-"*Google Consent Mode v2* tells the Google tags what the visitor allowed, so "
-"that they adapt their behavior. It is required for the audiences and "
-"measurement of Google Ads in the European Economic Area. The Google app "
-"sends the seven consent signals of Consent Mode v2 and updates them when the"
-" visitor makes a choice in the :doc:`cookies bar or consent platform "
-"</applications/websites/website/tracking/cookie_consent>`:"
-msgstr ""
-"*Google Consent Mode v2* informează etichetele Google despre ce a permis "
-"vizitatorul, astfel încât acestea să își adapteze comportamentul. Este "
-"necesar pentru audiențele și măsurarea Google Ads în Spațiul Economic "
-"European. Aplicația Google trimite cele șapte semnale de consimțământ din "
-"Consent Mode v2 și le actualizează atunci când vizitatorul face o alegere în"
-" :doc:`bara de cookie-uri sau în platforma de consimțământ "
-"</applications/websites/website/tracking/cookie_consent>`:"
-
 #: ../../content/applications/websites/google/consent_mode.rst:15
 msgid "Signal"
 msgstr "Semnal"
@@ -22094,24 +22077,6 @@ msgstr ":doc:`/applications/websites/meta/connection`"
 msgid "Cookie consent"
 msgstr "Consimțământ pentru cookie-uri"
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:5
-msgid ""
-"Google and Meta may only measure a visitor or show personalized ads to a "
-"visitor who agreed. The tracking base therefore extends the :doc:`cookies "
-"bar </applications/websites/website/configuration/cookies_bar>` of the "
-"website with **consent categories**, remembers the version of your cookie "
-"policy, logs every choice as proof of consent, and can hand the consent over"
-" to an **external consent management platform** (CMP) instead."
-msgstr ""
-"Google și Meta pot măsura un vizitator sau îi pot afișa reclame "
-"personalizate doar dacă acesta și-a dat acordul. Baza de urmărire extinde, "
-"așadar, :doc:`bara de cookie-uri "
-"</applications/websites/website/configuration/cookies_bar>` a site-ului web "
-"cu **categorii de consimțământ**, reține versiunea politicii de cookie-uri, "
-"înregistrează fiecare alegere ca dovadă a consimțământului și poate preda "
-"consimțământul unei **platforme externe de gestionare a consimțământului** "
-"(CMP)."
-
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:11
 msgid ""
 "Every tracking feature checks the consent of the visitor before it loads a "
@@ -22120,26 +22085,9 @@ msgstr ""
 "Fiecare funcție de urmărire verifică consimțământul vizitatorului înainte de"
 " a încărca un script sau de a trimite un eveniment."
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:14
-msgid ""
-"The consent is only requested if the :guilabel:`Cookies Bar` is enabled in "
-"the Website settings (or if an external consent platform is used). **Without"
-" a cookies bar, the website considers that consent is handled elsewhere, and"
-" all categories are treated as granted.**"
-msgstr ""
-"Consimțământul este solicitat doar dacă :guilabel:`Bară de cookie-uri` este "
-"activată în setările Website (sau dacă se folosește o platformă externă de "
-"consimțământ). **Fără o bară de cookie-uri, site-ul web consideră că "
-"consimțământul este gestionat în altă parte, iar toate categoriile sunt "
-"tratate ca acordate.**"
-
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:21
 msgid "Consent categories"
 msgstr "Categorii de consimțământ"
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:23
-msgid "Visitors can accept or refuse the cookies by category:"
-msgstr "Vizitatorii pot accepta sau refuza cookie-urile pe categorii:"
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:30
 msgid "Used for"
@@ -22168,12 +22116,6 @@ msgstr "Stocarea de securitate este întotdeauna acordată."
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:35
 msgid "Functional"
 msgstr "Funcționale"
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:36
-msgid "Embedded content such as videos and maps, and remembered preferences."
-msgstr ""
-"Conținut încorporat, cum ar fi videoclipuri și hărți, și preferințe "
-"reținute."
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:37
 msgid "Functionality storage and personalization storage."
@@ -22209,77 +22151,13 @@ msgstr ""
 "Stocare pentru reclame, date de utilizator pentru reclame și personalizarea "
 "reclamelor."
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:45
-msgid ""
-"No tracking script of an unaccepted category is loaded, and no server event "
-"of an unaccepted category is sent."
-msgstr ""
-"Nu se încarcă niciun script de urmărire dintr-o categorie neacceptată și nu "
-"se trimite niciun eveniment de server dintr-o categorie neacceptată."
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:49
-msgid "Configure the cookies bar"
-msgstr "Configurarea barei de cookie-uri"
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:51
-msgid ""
-"Go to :menuselection:`Website --> Configuration --> Settings`. In the "
-"privacy section, enable :guilabel:`Cookies Bar`. Right below it, the "
-":guilabel:`Consent Categories` setting groups the options of this page:"
-msgstr ""
-"Mergeți la :menuselection:`Site web --> Configurare --> Setări`. În "
-"secțiunea de confidențialitate, activați :guilabel:`Bară de cookie-uri`. "
-"Chiar dedesubt, setarea :guilabel:`Categorii de consimțământ` grupează "
-"opțiunile din această pagină:"
-
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:70
 msgid ":guilabel:`Consent Source`"
 msgstr ":guilabel:`Sursa consimțământului`"
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:71
-msgid ""
-":guilabel:`Website cookies bar` (default): visitors choose in the cookies "
-"bar of the website. :guilabel:`External consent platform (CMP)`: the cookies"
-" bar is replaced by a consent platform such as Cookiebot, which provides the"
-" consent state to the trackers. See :ref:`tracking/consent/cmp`."
-msgstr ""
-":guilabel:`Bara de cookie-uri a site-ului` (implicit): vizitatorii aleg în "
-"bara de cookie-uri a site-ului web. :guilabel:`Platformă externă de "
-"consimțământ (CMP)`: bara de cookie-uri este înlocuită de o platformă de "
-"consimțământ (de exemplu Cookiebot), care furnizează starea consimțământului"
-" către instrumentele de urmărire. Vezi :ref:`tracking/consent/cmp`."
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:75
-msgid ":guilabel:`Consent Categories`"
-msgstr ":guilabel:`Categorii de consimțământ`"
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:76
-msgid ""
-"Shows a :guilabel:`Customize` button in the cookies bar so that visitors can"
-" choose the functional, analytics, and marketing cookies one by one. Only "
-"available with the website cookies bar. If disabled, the bar offers the "
-"standard choice between all optional cookies and essential cookies only."
-msgstr ""
-"Afișează un buton :guilabel:`Personalizează` în bara de cookie-uri pentru ca"
-" vizitatorii să poată alege pe rând cookie-urile funcționale, de analiză și "
-"de marketing. Disponibil doar cu bara de cookie-uri a site-ului web. Dacă "
-"este dezactivat, bara oferă alegerea obișnuită între toate cookie-urile "
-"opționale și doar cookie-urile esențiale."
-
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:80
 msgid ":guilabel:`Cookie Policy Version`"
 msgstr ":guilabel:`Versiunea politicii de cookie-uri`"
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:81
-msgid ""
-"A short text, `1` by default. **Change it each time your cookie policy "
-"changes:** the visitors who consented to an older version are asked again "
-"and nothing is granted until they answer."
-msgstr ""
-"Un text scurt, implicit `1`. **Schimbați-l de fiecare dată când se schimbă "
-"politica de cookie-uri:** vizitatorii care și-au dat acordul pentru o "
-"versiune mai veche sunt întrebați din nou, iar nimic nu este acordat până "
-"când răspund."
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:84
 msgid ":guilabel:`Log Consents`"
@@ -22294,65 +22172,9 @@ msgstr ""
 "data) ca dovadă a consimțământului. Activat implicit. Vezi "
 ":ref:`tracking/consent/log`."
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:91
-msgid "The Customize panel"
-msgstr "Panoul Personalizare"
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:93
-msgid ""
-"With :guilabel:`Consent Categories` enabled, the cookies bar shows a "
-":guilabel:`Customize` button next to the usual buttons. It opens a panel "
-"with one switch per category: :guilabel:`Necessary` (always on), "
-":guilabel:`Functional`, :guilabel:`Analytics`, and :guilabel:`Marketing`. A "
-"visitor chooses the categories and clicks :guilabel:`Save my choices`. The "
-"choice is stored in the cookie of the cookies bar, together with the policy "
-"version."
-msgstr ""
-"Cu :guilabel:`Categorii de consimțământ` activat, bara de cookie-uri "
-"afișează un buton :guilabel:`Personalizează` lângă butoanele obișnuite. "
-"Acesta deschide un panou cu un comutator pentru fiecare categorie: "
-":guilabel:`Necesar` (mereu activată), :guilabel:`Funcțional`, "
-":guilabel:`Analiză` și :guilabel:`Marketing`. Vizitatorul alege categoriile "
-"și face clic pe :guilabel:`Salvează opțiunile mele`. Alegerea este stocată "
-"în cookie-ul barei de cookie-uri, împreună cu versiunea politicii."
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:108
-msgid ""
-"A visitor who clicks the standard buttons instead gets the matching "
-"shortcut: accepting all optional cookies grants every category, and keeping "
-"only the essential cookies refuses functional, analytics, and marketing."
-msgstr ""
-"Un vizitator care folosește în schimb butoanele obișnuite primește "
-"scurtătura corespunzătoare: acceptarea tuturor cookie-urilor opționale "
-"acordă toate categoriile, iar păstrarea doar a cookie-urilor esențiale "
-"refuză cele funcționale, de analiză și de marketing."
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:113
-msgid ""
-"Visitors can change their mind at any time: the cookies bar is shown again "
-"when the visitor removes the cookie of the website in the browser, or when "
-"you change the :guilabel:`Cookie Policy Version`."
-msgstr ""
-"Vizitatorii se pot răzgândi oricând: bara de cookie-uri este afișată din nou"
-" când vizitatorul șterge cookie-ul site-ului web din browser sau când "
-"schimbați :guilabel:`Versiunea politicii de cookie-uri`."
-
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:120
 msgid "External consent platform (CMP)"
 msgstr "Platformă externă de consimțământ (CMP)"
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:122
-msgid ""
-"If you already use a consent management platform, let it collect the consent"
-" and hand the result to Odoo. Set :guilabel:`Consent Source` to "
-":guilabel:`External consent platform (CMP)`: the cookies bar of the website "
-"is hidden, and the following fields appear."
-msgstr ""
-"Dacă folosiți deja o platformă de gestionare a consimțământului, lăsați-o să"
-" colecteze consimțământul și să predea rezultatul către Odoo. Setați "
-":guilabel:`Sursa consimțământului` la :guilabel:`Platformă externă de "
-"consimțământ (CMP)`: bara de cookie-uri a site-ului web este ascunsă și apar"
-" următoarele câmpuri."
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:132
 msgid ":guilabel:`Consent Platform`"
@@ -22379,21 +22201,6 @@ msgstr ""
 "Etichetele de script ale platformei, copiate din administrarea acesteia. "
 "Sunt inserate la începutul head-ului fiecărei pagini. Lăsați gol dacă "
 "platforma este încărcată în alt mod, de exemplu prin Google Tag Manager."
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:140
-msgid ""
-"Odoo reads the choice of the visitor from the platform and maps its "
-"categories to the four categories above (for example, the *Preferences* "
-"category of Cookiebot to :guilabel:`Functional`, *Statistics* to "
-":guilabel:`Analytics`, and *Marketing* to :guilabel:`Marketing`). Each time "
-"the visitor changes the choice, the tracking tags are updated."
-msgstr ""
-"Odoo citește alegerea vizitatorului de la platformă și mapează categoriile "
-"acesteia la cele patru categorii de mai sus (de exemplu, categoria "
-"*Preferences* din Cookiebot la :guilabel:`Funcțional`, *Statistics* la "
-":guilabel:`Analiză` și *Marketing* la :guilabel:`Marketing`). De fiecare "
-"dată când vizitatorul își schimbă alegerea, etichetele de urmărire sunt "
-"actualizate."
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:146
 msgid "Custom platform"
@@ -22429,19 +22236,6 @@ msgstr ""
 msgid "Consent log"
 msgstr "Jurnal de consimțământ"
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:167
-msgid ""
-"Go to :menuselection:`Website --> Configuration --> Tracking & Consent --> "
-"Consent Log` (or click :guilabel:`Consent Log` in the Website settings). "
-"Every choice made in the cookies bar or in the consent platform is a line, "
-"which cannot be edited:"
-msgstr ""
-"Mergeți la :menuselection:`Site web --> Configurare --> Urmărire și "
-"consimțământ --> Jurnal de consimțăminte` (sau faceți clic pe "
-":guilabel:`Jurnal de consimțăminte` în setările Website). Fiecare alegere "
-"făcută în bara de cookie-uri sau în platforma de consimțământ este o linie, "
-"care nu poate fi editată:"
-
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:171
 msgid ""
 ":guilabel:`Date`, :guilabel:`Website` (with several websites), and the "
@@ -22451,13 +22245,6 @@ msgstr ""
 ":guilabel:`Dată`, :guilabel:`Site web` (cu mai multe site-uri web) și "
 ":guilabel:`ID consimțământ`, un identificator aleatoriu stocat în cookie-ul "
 "de consimțământ al vizitatorului."
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:173
-msgid ""
-":guilabel:`Source`: :guilabel:`Cookies bar` or :guilabel:`Consent platform`."
-msgstr ""
-":guilabel:`Sursă`: :guilabel:`Bară de cookie-uri` sau :guilabel:`Platformă "
-"de consimțământ`."
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:174
 msgid ""
@@ -22582,11 +22369,6 @@ msgstr ""
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:110
 msgid ":doc:`privacy`"
 msgstr ":doc:`privacy`"
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:218
-#: ../../content/applications/websites/website/tracking/privacy.rst:107
-msgid ":doc:`/applications/websites/website/configuration/cookies_bar`"
-msgstr ":doc:`/applications/websites/website/configuration/cookies_bar`"
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:219
 msgid ":doc:`/applications/websites/google/consent_mode`"
@@ -22715,18 +22497,6 @@ msgstr "*Website Tracking & Consent*"
 #: ../../content/applications/websites/website/tracking/overview.rst:55
 msgid "the Google or the Meta app is installed"
 msgstr "aplicația Google sau aplicația Meta este instalată"
-
-#: ../../content/applications/websites/website/tracking/overview.rst:56
-msgid ""
-"The shared base: the consent categories of the cookies bar, the "
-":guilabel:`Tracking` block of the Website settings, the :guilabel:`Tracking "
-"& Consent` menu (server events, consent log, connections), and the click "
-"identifiers stored on orders and leads."
-msgstr ""
-"Baza comună: categoriile de consimțământ ale barei de cookie-uri, blocul "
-":guilabel:`Urmărire` din setările Website, meniul :guilabel:`Urmărire și "
-"consimțământ` (evenimente de server, jurnal de consimțământ, conexiuni) și "
-"identificatorii de clic stocați pe comenzi și lead-uri."
 
 #: ../../content/applications/websites/website/tracking/overview.rst:59
 msgid "*Website Tracking for eCommerce*"
@@ -22923,16 +22693,6 @@ msgstr "Meniu"
 msgid ":menuselection:`Website --> Configuration --> Settings`"
 msgstr ":menuselection:`Site web --> Configurare --> Setări`"
 
-#: ../../content/applications/websites/website/tracking/overview.rst:117
-msgid ""
-":guilabel:`Consent Categories` (privacy section) and the "
-":guilabel:`Tracking` block: debug mode, retention, :guilabel:`Connection "
-"Broker`, :guilabel:`eCommerce Tracking`, :guilabel:`Lead Tracking`."
-msgstr ""
-":guilabel:`Categorii de consimțământ` (secțiunea de confidențialitate) și "
-"blocul :guilabel:`Urmărire`: mod de depanare, păstrare, :guilabel:`Broker de"
-" conectare`, :guilabel:`Urmărire eCommerce`, :guilabel:`Urmărirea pistelor`."
-
 #: ../../content/applications/websites/website/tracking/overview.rst:120
 msgid ":menuselection:`Website --> Configuration --> Tracking & Consent`"
 msgstr ""
@@ -23014,16 +22774,6 @@ msgstr ""
 msgid "Getting started"
 msgstr "Primii pași"
 
-#: ../../content/applications/websites/website/tracking/overview.rst:145
-msgid ""
-"Enable the :guilabel:`Cookies Bar` in :menuselection:`Website --> "
-"Configuration --> Settings` and choose how the consent is collected, as "
-"described in :doc:`cookie_consent`."
-msgstr ""
-"Activați :guilabel:`Bară de cookie-uri` în :menuselection:`Site web --> "
-"Configurare --> Setări` și alegeți cum este colectat consimțământul, așa cum"
-" este descris în :doc:`cookie_consent`."
-
 #: ../../content/applications/websites/website/tracking/overview.rst:147
 msgid "Install the Google app, the Meta app, or both."
 msgstr "Instalați aplicația Google, aplicația Meta sau ambele."
@@ -23092,23 +22842,6 @@ msgstr ""
 "acordată: **analiza** pentru evenimentele Google Analytics, **marketingul** "
 "pentru Google Ads, pixelul Meta, Conversions API, remarketing și Customer "
 "Match."
-
-#: ../../content/applications/websites/website/tracking/privacy.rst:16
-msgid ""
-"Without a cookies bar and without an external consent platform, all "
-"categories are considered granted: enable one of them."
-msgstr ""
-"Fără bară de cookie-uri și fără platformă externă de consimțământ, toate "
-"categoriile sunt considerate acordate: activați una dintre ele."
-
-#: ../../content/applications/websites/website/tracking/privacy.rst:18
-msgid ""
-"The consent state is checked again on every page. Visitors who consented to "
-"an older :guilabel:`Cookie Policy Version` are asked again."
-msgstr ""
-"Starea consimțământului este verificată din nou pe fiecare pagină. "
-"Vizitatorii care și-au dat acordul pentru o :guilabel:`Versiunea politicii "
-"de cookie-uri` mai veche sunt întrebați din nou."
 
 #: ../../content/applications/websites/website/tracking/privacy.rst:20
 msgid ""
@@ -23363,19 +23096,6 @@ msgstr ""
 msgid "Third-party domains"
 msgstr "Domenii terțe"
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:101
-msgid ""
-"Scripts of Google and Meta that Odoo manages itself are removed from the "
-"blocked third-party list of the cookies bar, so that they are loaded after "
-"consent and not blanked. Other embedded services stay blocked until the "
-"visitor accepts the :guilabel:`Functional` cookies."
-msgstr ""
-"Scripturile Google și Meta pe care Odoo le gestionează singur sunt scoase "
-"din lista terților blocați a barei de cookie-uri, astfel încât sunt "
-"încărcate după consimțământ și nu sunt golite. Celelalte servicii "
-"încorporate rămân blocate până când vizitatorul acceptă cookie-urile "
-":guilabel:`Funcțional`."
-
 #: ../../content/applications/websites/website/tracking/privacy.rst:106
 msgid ":doc:`cookie_consent`"
 msgstr ":doc:`cookie_consent`"
@@ -23518,17 +23238,6 @@ msgstr ""
 msgid "Testing and troubleshooting"
 msgstr "Testare și depanare"
 
-#: ../../content/applications/websites/website/tracking/troubleshooting.rst:5
-msgid ""
-"Test every integration before you start a campaign, and again after each "
-"change to the website, the cookies bar, or the checkout. Use the tools "
-"below, from the simplest to the most detailed."
-msgstr ""
-"Testați fiecare integrare înainte de a lansa o campanie și din nou după "
-"fiecare modificare a site-ului web, a barei de cookie-uri sau a finalizării "
-"comenzii. Folosiți instrumentele de mai jos, de la cel mai simplu la cel mai"
-" detaliat."
-
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:11
 msgid "Before you test"
 msgstr "Înainte de testare"
@@ -23541,18 +23250,6 @@ msgstr ""
 "Testați într-o **fereastră privată** în care nu sunteți autentificat ca "
 "administrator. Nu se trimite niciun eveniment în timp ce editați sau "
 "traduceți site-ul web."
-
-#: ../../content/applications/websites/website/tracking/troubleshooting.rst:15
-msgid ""
-"Accept the cookies: open the :ref:`Customize panel "
-"<tracking/consent/customize>` and accept the analytics and marketing "
-"cookies. Check the line that appeared in the :ref:`consent log "
-"<tracking/consent/log>`."
-msgstr ""
-"Acceptați cookie-urile: deschideți :ref:`panoul Personalizare "
-"<tracking/consent/customize>` și acceptați cookie-urile de analiză și de "
-"marketing. Verificați linia apărută în :ref:`jurnalul de consimțământ "
-"<tracking/consent/log>`."
 
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:18
 msgid "Disable the ad blockers of your browser."
@@ -23739,20 +23436,6 @@ msgstr "Verificare"
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:80
 msgid "No event at all"
 msgstr "Niciun eveniment"
-
-#: ../../content/applications/websites/website/tracking/troubleshooting.rst:81
-msgid ""
-"Is the cookies bar enabled and are the marketing/analytics cookies accepted?"
-" Is the :guilabel:`Cookie Policy Version` the one of the cookie you have? "
-"Did you select the right website in :guilabel:`Settings of Website`? Is the "
-"Google tag or the pixel enabled with a valid ID? Are you logged in as a "
-"designer, or in edit mode?"
-msgstr ""
-"Este activată bara de cookie-uri și sunt acceptate cookie-urile de "
-"marketing/analiză? :guilabel:`Versiunea politicii de cookie-uri` este cea a "
-"cookie-ului pe care îl aveți? Ați selectat site-ul web corect în "
-":guilabel:`Setările site-ului`? Este activată eticheta Google sau pixelul cu"
-" un ID valid? Sunteți autentificat ca designer sau în modul de editare?"
 
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:85
 msgid "The pixel or the Google tag loads only on the second page"
@@ -28521,3 +28204,307 @@ msgstr ""
 #~ "Dacă nu doriți ca roboții să acceseze cu crawlere pagina `/about-us` a "
 #~ "site-ului dvs., puteți edita fișierul robots.txt pentru a adăuga "
 #~ "`Disallow: /about-us`."
+
+#: ../../content/applications/websites/google/consent_mode.rst:5
+msgid "*Google Consent Mode v2* tells the Google tags what the visitor allowed, so that they adapt their behavior. It is required for the audiences and measurement of Google Ads in the European Economic Area. The Google app sends the seven consent signals of Consent Mode v2 and updates them when the visitor makes a choice in the :doc:`consent banner or consent platform </applications/websites/website/tracking/cookie_consent>`:"
+msgstr "*Google Consent Mode v2* le comunică etichetelor Google ce a permis vizitatorul, astfel încât acestea să își adapteze comportamentul. Este obligatoriu pentru audiențele și măsurarea Google Ads în Spațiul Economic European. Aplicația Google trimite cele șapte semnale de consimțământ ale Consent Mode v2 și le actualizează atunci când vizitatorul face o alegere în :doc:`bannerul de consimțământ sau în platforma de consimțământ </applications/websites/website/tracking/cookie_consent>`:"
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:11
+msgid "When the Google app or the Meta app is installed, the cookies bar is replaced by the **cookie consent banner** (:guilabel:`Accept all`, :guilabel:`Reject all`, :guilabel:`Customize`, consent categories, cookie list, and :guilabel:`Cookie settings` link) and its settings replace the :guilabel:`Cookies Bar` setting. See :doc:`/applications/websites/website/tracking/cookie_consent`."
+msgstr "Când aplicația Google sau aplicația Meta este instalată, bara de cookie-uri este înlocuită de **bannerul de consimțământ pentru cookie-uri** (:guilabel:`Acceptă toate`, :guilabel:`Respinge toate`, :guilabel:`Personalizează`, categorii de consimțământ, lista de cookie-uri și linkul :guilabel:`Setări cookie-uri`), iar setările acestuia înlocuiesc setarea :guilabel:`Bară de cookie-uri`. Vezi :doc:`/applications/websites/website/tracking/cookie_consent`."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:5
+msgid "Google and Meta may only measure a visitor or show personalized ads to a visitor who agreed. The tracking base therefore replaces the cookies bar of the website with a **consent banner** in the form visitors know from most websites: :guilabel:`Accept all`, :guilabel:`Reject all`, and :guilabel:`Customize` on the first screen, a preferences dialog with one switch per category and the list of the cookies, and a :guilabel:`Cookie settings` link to change or withdraw the choice at any time. It remembers the version of your cookie policy, logs every choice as proof of consent, and can hand the consent over to an **external consent management platform** (CMP) instead."
+msgstr "Google și Meta pot măsura un vizitator sau îi pot afișa reclame personalizate doar dacă acesta și-a dat acordul. Baza de urmărire înlocuiește, așadar, bara de cookie-uri a site-ului cu un **banner de consimțământ** în forma pe care vizitatorii o cunosc de pe majoritatea site-urilor: :guilabel:`Acceptă toate`, :guilabel:`Respinge toate` și :guilabel:`Personalizează` pe primul ecran, o fereastră de preferințe cu un comutator pentru fiecare categorie și lista cookie-urilor, precum și un link :guilabel:`Setări cookie-uri` pentru a schimba sau retrage alegerea oricând. Reține versiunea politicii de cookie-uri, înregistrează fiecare alegere ca dovadă a consimțământului și poate preda consimțământul unei **platforme externe de gestionare a consimțământului** (CMP)."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:16
+msgid "The consent is only requested if :guilabel:`Cookie Consent` is enabled in the Website settings. **Without it, the website considers that consent is handled elsewhere, and all categories are treated as granted.**"
+msgstr "Consimțământul este solicitat doar dacă :guilabel:`Consimțământ pentru cookie-uri` este activat în setările site-ului. **Fără el, site-ul consideră că consimțământul este gestionat în altă parte și toate categoriile sunt tratate ca acordate.**"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:25
+msgid "Visitors accept or refuse the cookies by category:"
+msgstr "Vizitatorii acceptă sau refuză cookie-urile pe categorii:"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:38
+msgid "Embedded content such as videos and maps, the live chat, the campaign cookies (UTM) and features that remember choices, such as recently viewed products."
+msgstr "Conținut încorporat, precum videoclipuri și hărți, chatul live, cookie-urile de campanie (UTM) și funcțiile care rețin alegeri, precum produsele vizualizate recent."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:48
+msgid "No tracking script of an unaccepted category is loaded, and no server event of an unaccepted category is sent. The optional cookies of the website itself (embedded content, campaign and live chat cookies) follow the :guilabel:`Functional` category."
+msgstr "Niciun script de urmărire dintr-o categorie neacceptată nu este încărcat și niciun eveniment de server dintr-o categorie neacceptată nu este trimis. Cookie-urile opționale ale site-ului însuși (conținut încorporat, cookie-uri de campanie și de chat live) urmează categoria :guilabel:`Funcțional`."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:55
+msgid "Configure the consent banner"
+msgstr "Configurarea bannerului de consimțământ"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:57
+msgid "Go to :menuselection:`Website --> Configuration --> Settings` and enable :guilabel:`Cookie Consent` in the :guilabel:`Privacy` section. This setting replaces the standard :guilabel:`Cookies Bar` setting of the website, which is no longer shown."
+msgstr "Accesați :menuselection:`Site web --> Configurare --> Setări` și activați :guilabel:`Consimțământ pentru cookie-uri` în secțiunea :guilabel:`Confidențialitate`. Această setare înlocuiește setarea standard :guilabel:`Bară de cookie-uri` a site-ului, care nu mai este afișată."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:79
+msgid ":guilabel:`Consent banner of this website` (default): visitors choose in the banner of the website. :guilabel:`External consent platform (CMP)`: the banner is replaced by a consent platform such as Cookiebot, which provides the consent state to the trackers. See :ref:`tracking/consent/cmp`."
+msgstr ":guilabel:`Bannerul de consimțământ al acestui site` (implicit): vizitatorii aleg în bannerul site-ului. :guilabel:`Platformă externă de consimțământ (CMP)`: bannerul este înlocuit de o platformă de consimțământ precum Cookiebot, care transmite starea consimțământului instrumentelor de urmărire. Vezi :ref:`tracking/consent/cmp`."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:83
+msgid ":guilabel:`Banner Layout`"
+msgstr ":guilabel:`Aspectul bannerului`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:84
+msgid ":guilabel:`Bar at the bottom` (default), :guilabel:`Box, bottom left`, :guilabel:`Box, bottom right`, or :guilabel:`Popup in the center` (the page is dimmed until the visitor chooses). On the cookie policy page, the popup is shown as a bar so that the policy stays readable."
+msgstr ":guilabel:`Bară în partea de jos` (implicit), :guilabel:`Casetă, stânga jos`, :guilabel:`Casetă, dreapta jos` sau :guilabel:`Fereastră pop-up în centru` (pagina este întunecată până când vizitatorul alege). Pe pagina politicii de cookie-uri, fereastra pop-up este afișată ca bară, pentru ca politica să rămână lizibilă."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:87
+msgid ":guilabel:`Banner Title`, :guilabel:`Banner Text`"
+msgstr ":guilabel:`Titlul bannerului`, :guilabel:`Textul bannerului`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:88
+msgid "Your own title and text. Leave them empty to use the default ones (*We value your privacy* and a short explanation), which are translated into the languages of the website. Your own texts can be translated with the translation button of the fields."
+msgstr "Titlul și textul propriu. Lăsați-le goale pentru a folosi valorile implicite (*Respectăm confidențialitatea dumneavoastră* și o scurtă explicație), care sunt traduse în limbile site-ului. Textele proprii pot fi traduse cu butonul de traducere al câmpurilor."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:91
+msgid ":guilabel:`Cookie Policy Page`"
+msgstr ":guilabel:`Pagina politicii de cookie-uri`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:92
+msgid "The page linked from the banner and the dialog. Leave it empty to use `/cookie-policy`."
+msgstr "Pagina la care trimit bannerul și fereastra. Lăsați gol pentru a folosi `/cookie-policy`."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:93
+msgid ":guilabel:`Floating Settings Button`"
+msgstr ":guilabel:`Buton flotant pentru setări`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:94
+msgid "Once the visitor has chosen, a small round cookie button stays in the bottom left corner of the page. It opens the preferences dialog. Enabled by default. A :guilabel:`Cookie settings` link is added to the footer in any case."
+msgstr "După ce vizitatorul a ales, un mic buton rotund cu un cookie rămâne în colțul din stânga jos al paginii. Acesta deschide fereastra de preferințe. Activat implicit. Un link :guilabel:`Setări cookie-uri` este adăugat oricum în subsol."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:97
+msgid ":guilabel:`Ask Again After (months)`"
+msgstr ":guilabel:`Întreabă din nou după (luni)`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:98
+msgid "How long the choice of a visitor is kept. `12` months by default; after this delay the banner is shown again."
+msgstr "Cât timp este păstrată alegerea unui vizitator. Implicit `12` luni; după acest interval bannerul este afișat din nou."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:101
+msgid "A short text, `1` by default. **Change it each time your cookie policy changes:** the visitors who consented to another version are asked again and nothing is granted until they answer."
+msgstr "Un text scurt, implicit `1`. **Schimbați-l de fiecare dată când politica de cookie-uri se modifică:** vizitatorii care și-au dat consimțământul pentru o altă versiune sunt întrebați din nou și nu se acordă nimic până când nu răspund."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:107
+msgid ":guilabel:`Block Third-Party Content`"
+msgstr ":guilabel:`Blocați conținutul terților`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:108
+msgid "Keeps embedded videos, maps, and other third-party content blocked until the visitor accepts the functional cookies. In their place, visitors see a notice; clicking it opens the preferences dialog. Click :guilabel:`Blocked Third-Party Domains` to add domains to the list."
+msgstr "Menține blocate videoclipurile, hărțile și alt conținut terț încorporat până când vizitatorul acceptă cookie-urile funcționale. În locul lor, vizitatorii văd o notificare; un clic pe aceasta deschide fereastra de preferințe. Faceți clic pe :guilabel:`Domenii terțe blocate` pentru a adăuga domenii în listă."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:112
+msgid "The links below the fields open the :ref:`cookie list <tracking/consent/cookie_list>`, the :ref:`consent log <tracking/consent/log>`, the list of blocked domains, and recreate the :ref:`cookie policy page <tracking/consent/policy_page>`."
+msgstr "Linkurile de sub câmpuri deschid :ref:`lista de cookie-uri <tracking/consent/cookie_list>`, :ref:`jurnalul de consimțământ <tracking/consent/log>` și lista domeniilor blocate și recreează :ref:`pagina politicii de cookie-uri <tracking/consent/policy_page>`."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:117
+msgid "The banner takes the colors, fonts and buttons of your website theme. It cannot be edited in the website editor: change its texts in the settings."
+msgstr "Bannerul preia culorile, fonturile și butoanele temei site-ului. Nu poate fi editat în editorul site-ului: modificați-i textele în setări."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:123
+msgid "What visitors see"
+msgstr "Ce văd vizitatorii"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:126
+msgid "The banner"
+msgstr "Bannerul"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:128
+msgid "A visitor who has not chosen yet sees the banner with three buttons of the same size: :guilabel:`Customize`, :guilabel:`Reject all`, and :guilabel:`Accept all`, and a link to the cookie policy. Rejecting is as easy as accepting, as the European data protection authorities require."
+msgstr "Un vizitator care nu a ales încă vede bannerul cu trei butoane de aceeași dimensiune: :guilabel:`Personalizează`, :guilabel:`Respinge toate` și :guilabel:`Acceptă toate`, precum și un link către politica de cookie-uri. Respingerea este la fel de ușoară ca acceptarea, așa cum cer autoritățile europene pentru protecția datelor."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:132
+msgid ":guilabel:`Accept all` grants every category."
+msgstr ":guilabel:`Acceptă toate` acordă toate categoriile."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:133
+msgid ":guilabel:`Reject all` keeps the necessary cookies only."
+msgstr ":guilabel:`Respinge toate` păstrează doar cookie-urile necesare."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:134
+msgid ":guilabel:`Customize` opens the preferences dialog."
+msgstr ":guilabel:`Personalizează` deschide fereastra de preferințe."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:136
+msgid "Until the visitor answers, nothing optional is used: continuing to browse or scrolling does not count as consent."
+msgstr "Până când vizitatorul răspunde, nu se folosește nimic opțional: continuarea navigării sau derularea nu constituie consimțământ."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:150
+msgid "The preferences dialog"
+msgstr "Fereastra de preferințe"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:152
+msgid "The dialog lists the categories: :guilabel:`Necessary` (always on), :guilabel:`Functional`, :guilabel:`Analytics`, and :guilabel:`Marketing`, each with a switch, a short description and, when the visitor unfolds it, the cookies of the category with their provider, duration, and purpose. The visitor clicks :guilabel:`Save my choices`, or :guilabel:`Reject all` or :guilabel:`Accept all`."
+msgstr "Fereastra listează categoriile: :guilabel:`Necesare` (întotdeauna active), :guilabel:`Funcțional`, :guilabel:`Analiză` și :guilabel:`Marketing`, fiecare cu un comutator, o scurtă descriere și, când vizitatorul o extinde, cookie-urile categoriei cu furnizorul, durata și scopul lor. Vizitatorul face clic pe :guilabel:`Salvează opțiunile mele`, :guilabel:`Respinge toate` sau :guilabel:`Acceptă toate`."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:166
+msgid "The choice is stored in the consent cookie of the website, with the policy version and the date."
+msgstr "Alegerea este stocată în cookie-ul de consimțământ al site-ului, împreună cu versiunea politicii și data."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:169
+msgid "Change or withdraw the choice"
+msgstr "Schimbarea sau retragerea alegerii"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:171
+msgid "Visitors can open the preferences dialog again at any time:"
+msgstr "Vizitatorii pot redeschide oricând fereastra de preferințe:"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:173
+msgid "with the floating cookie button in the bottom left corner (if :guilabel:`Floating Settings Button` is enabled);"
+msgstr "cu butonul flotant cu cookie din colțul din stânga jos (dacă :guilabel:`Buton flotant pentru setări` este activat);"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:175
+msgid "with the :guilabel:`Cookie policy · Cookie settings` links added to the copyright line of the footer;"
+msgstr "cu linkurile :guilabel:`Politica de cookie-uri · Setări cookie-uri` adăugate pe linia de copyright din subsol;"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:177
+msgid "with the :guilabel:`Change my cookie settings` button of the cookie policy page;"
+msgstr "cu butonul :guilabel:`Modifică setările mele de cookie-uri` de pe pagina politicii de cookie-uri;"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:178
+msgid "by clicking the notice shown in place of blocked embedded content."
+msgstr "făcând clic pe notificarea afișată în locul conținutului încorporat blocat."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:180
+msgid "When a visitor withdraws a category, the cookies of that category listed in the :ref:`cookie list <tracking/consent/cookie_list>` are deleted from the browser, and the tracking tags stop using them."
+msgstr "Când un vizitator retrage o categorie, cookie-urile acelei categorii din :ref:`lista de cookie-uri <tracking/consent/cookie_list>` sunt șterse din browser, iar etichetele de urmărire nu le mai folosesc."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:185
+msgid "To add your own link to the cookie settings, for example in a footer column or a menu, point it to `#cookie-settings`."
+msgstr "Pentru a adăuga propriul link către setările de cookie-uri, de exemplu într-o coloană din subsol sau într-un meniu, direcționați-l către `#cookie-settings`."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:191
+msgid "Cookie list"
+msgstr "Lista de cookie-uri"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:193
+msgid "Go to :menuselection:`Website --> Configuration --> Tracking & Consent --> Cookies` (or click :guilabel:`Cookie List` in the settings). The list feeds the preferences dialog and the cookie policy page."
+msgstr "Accesați :menuselection:`Site web --> Configurare --> Urmărire și consimțământ --> Cookie-uri` (sau faceți clic pe :guilabel:`Lista de cookie-uri` în setări). Lista alimentează fereastra de preferințe și pagina politicii de cookie-uri."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:203
+msgid ":guilabel:`Cookie`"
+msgstr ":guilabel:`Cookie`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:204
+msgid "The name of the cookie. Use `*` for names that vary, for example `_ga_*`."
+msgstr "Numele cookie-ului. Folosiți `*` pentru numele care variază, de exemplu `_ga_*`."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:205
+msgid ":guilabel:`Provider`"
+msgstr ":guilabel:`Furnizor`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:206
+msgid "Who sets the cookie: *This website* or a third party, such as *Google Analytics*."
+msgstr "Cine plasează cookie-ul: *Acest site* sau un terț, precum *Google Analytics*."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:208
+msgid ":guilabel:`Necessary`, :guilabel:`Functional`, :guilabel:`Analytics`, or :guilabel:`Marketing`."
+msgstr ":guilabel:`Necesare`, :guilabel:`Funcțional`, :guilabel:`Analiză` sau :guilabel:`Marketing`."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:210
+msgid ":guilabel:`Duration`"
+msgstr ":guilabel:`Durată`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:211
+msgid "How long the cookie is kept, for example *2 years*. The duration of the consent cookie follows :guilabel:`Ask Again After (months)`."
+msgstr "Cât timp este păstrat cookie-ul, de exemplu *2 ani*. Durata cookie-ului de consimțământ urmează :guilabel:`Întreabă din nou după (luni)`."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:213
+msgid ":guilabel:`Purpose`"
+msgstr ":guilabel:`Scop`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:214
+msgid "What the cookie is used for, in a sentence visitors understand."
+msgstr "La ce folosește cookie-ul, într-o propoziție pe înțelesul vizitatorilor."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:216
+msgid "Leave it empty to list the cookie on every website."
+msgstr "Lăsați gol pentru a afișa cookie-ul pe toate site-urile."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:218
+msgid "The cookies of the website and of the installed features are listed from the start: the session, language and consent cookies, the campaign cookies, the live chat cookies (with a live chat channel on the website), the recently viewed products (eCommerce), Google Analytics (`_ga`, `_ga_*`), Google Ads (`_gcl_au`, `_gcl_aw`), and the Meta Pixel (`_fbp`, `_fbc`). A cookie of a feature is only shown while the feature is enabled on the website; with Google Tag Manager, the Google Analytics and Google Ads cookies are both listed."
+msgstr "Cookie-urile site-ului și ale funcțiilor instalate sunt listate de la început: cookie-urile de sesiune, de limbă și de consimțământ, cookie-urile de campanie, cookie-urile chatului live (cu un canal de chat live pe site), produsele vizualizate recent (eCommerce), Google Analytics (`_ga`, `_ga_*`), Google Ads (`_gcl_au`, `_gcl_aw`) și pixelul Meta (`_fbp`, `_fbc`). Cookie-ul unei funcții este afișat doar cât timp funcția este activată pe site; cu Google Tag Manager sunt listate atât cookie-urile Google Analytics, cât și cele Google Ads."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:225
+msgid "Add the cookies of the other services you embed in your pages (a video platform, a chat, a booking widget) with their category, so that visitors see them and they are deleted when the category is withdrawn. All the texts can be translated."
+msgstr "Adăugați cookie-urile altor servicii pe care le încorporați în pagini (o platformă video, un chat, un widget de rezervări) cu categoria lor, pentru ca vizitatorii să le vadă și ca ele să fie șterse când categoria este retrasă. Toate textele pot fi traduse."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:232
+msgid "Cookie policy page"
+msgstr "Pagina politicii de cookie-uri"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:234
+msgid "When you enable :guilabel:`Cookie Consent`, a **Cookie Policy** page is created at `/cookie-policy`. Its first part explains what cookies are and how visitors choose; you can edit it in the website editor like any page. Below it, the page lists the cookies of the website by category, from the :ref:`cookie list <tracking/consent/cookie_list>`, and shows a :guilabel:`Change my cookie settings` button. This part is always up to date and is not editable."
+msgstr "Când activați :guilabel:`Consimțământ pentru cookie-uri`, se creează o pagină **Politica de cookie-uri** la `/cookie-policy`. Prima ei parte explică ce sunt cookie-urile și cum aleg vizitatorii; o puteți edita în editorul site-ului ca pe orice pagină. Sub aceasta, pagina listează cookie-urile site-ului pe categorii, din :ref:`lista de cookie-uri <tracking/consent/cookie_list>`, și afișează un buton :guilabel:`Modifică setările mele de cookie-uri`. Această parte este mereu actualizată și nu poate fi editată."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:240
+msgid "If the website already had a cookie policy page, click :guilabel:`Recreate Cookie Policy Page` in the settings to replace it with the new one. The changes made to the old page are lost."
+msgstr "Dacă site-ul avea deja o pagină a politicii de cookie-uri, faceți clic pe :guilabel:`Recreați pagina politicii de cookie-uri` în setări pentru a o înlocui cu cea nouă. Modificările făcute în pagina veche se pierd."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:244
+msgid "If your cookie policy lives on another page, set it in :guilabel:`Cookie Policy Page`."
+msgstr "Dacă politica de cookie-uri se află pe altă pagină, setați-o în :guilabel:`Pagina politicii de cookie-uri`."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:251
+msgid "If you already use a consent management platform, let it collect the consent and hand the result to Odoo. Set :guilabel:`Consent Source` to :guilabel:`External consent platform (CMP)`: the consent banner of the website is hidden, and the following fields appear."
+msgstr "Dacă folosiți deja o platformă de gestionare a consimțământului, lăsați-o să colecteze consimțământul și să transmită rezultatul către Odoo. Setați :guilabel:`Sursa consimțământului` la :guilabel:`Platformă externă de consimțământ (CMP)`: bannerul de consimțământ al site-ului este ascuns și apar următoarele câmpuri."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:269
+msgid "Odoo reads the choice of the visitor from the platform and maps its categories to the four categories above (for example, the *Preferences* category of Cookiebot to :guilabel:`Functional`, *Statistics* to :guilabel:`Analytics`, and *Marketing* to :guilabel:`Marketing`). Each time the visitor changes the choice, the tracking tags are updated, and embedded content follows the functional choice."
+msgstr "Odoo citește alegerea vizitatorului din platformă și asociază categoriile acesteia celor patru categorii de mai sus (de exemplu, categoria *Preferences* din Cookiebot la :guilabel:`Funcțional`, *Statistics* la :guilabel:`Analiză` și *Marketing* la :guilabel:`Marketing`). De fiecare dată când vizitatorul își schimbă alegerea, etichetele de urmărire sunt actualizate, iar conținutul încorporat urmează alegerea funcțională."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:297
+msgid "Go to :menuselection:`Website --> Configuration --> Tracking & Consent --> Consent Log` (or click :guilabel:`Consent Log` in the Website settings). Every choice made in the consent banner or in the consent platform is a line, which cannot be edited:"
+msgstr "Accesați :menuselection:`Site web --> Configurare --> Urmărire și consimțământ --> Jurnal de consimțăminte` (sau faceți clic pe :guilabel:`Jurnal de consimțăminte` în setările site-ului). Fiecare alegere făcută în bannerul de consimțământ sau în platforma de consimțământ este o linie, care nu poate fi editată:"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:303
+msgid ":guilabel:`Source`: :guilabel:`Consent banner` or :guilabel:`Consent platform`."
+msgstr ":guilabel:`Sursă`: :guilabel:`Banner de consimțământ` sau :guilabel:`Platformă de consimțământ`."
+
+#: ../../content/applications/websites/website/tracking/overview.rst:56
+msgid "The shared base: the cookie consent banner that replaces the cookies bar, the :guilabel:`Tracking` block of the Website settings, the :guilabel:`Tracking & Consent` menu (server events, consent log, cookies, connections), and the click identifiers stored on orders and leads."
+msgstr "Baza comună: bannerul de consimțământ pentru cookie-uri care înlocuiește bara de cookie-uri, blocul :guilabel:`Urmărire` din setările site-ului, meniul :guilabel:`Urmărire și consimțământ` (evenimente de server, jurnal de consimțământ, cookie-uri, conexiuni) și identificatorii de clic stocați pe comenzi și pe piste."
+
+#: ../../content/applications/websites/website/tracking/overview.rst:118
+msgid ":guilabel:`Cookie Consent` (privacy section) and the :guilabel:`Tracking` block: debug mode, retention, :guilabel:`Connection Broker`, :guilabel:`eCommerce Tracking`, :guilabel:`Lead Tracking`."
+msgstr ":guilabel:`Consimțământ pentru cookie-uri` (secțiunea de confidențialitate) și blocul :guilabel:`Urmărire`: mod de depanare, păstrare, :guilabel:`Broker de conectare`, :guilabel:`Urmărire eCommerce`, :guilabel:`Urmărirea pistelor`."
+
+#: ../../content/applications/websites/website/tracking/overview.rst:146
+msgid "Enable :guilabel:`Cookie Consent` in :menuselection:`Website --> Configuration --> Settings` and choose how the consent is collected, as described in :doc:`cookie_consent`."
+msgstr "Activați :guilabel:`Consimțământ pentru cookie-uri` în :menuselection:`Site web --> Configurare --> Setări` și alegeți cum este colectat consimțământul, așa cum este descris în :doc:`cookie_consent`."
+
+#: ../../content/applications/websites/website/tracking/privacy.rst:16
+msgid "Without the consent banner and without an external consent platform, all categories are considered granted: enable one of them."
+msgstr "Fără bannerul de consimțământ și fără o platformă externă de consimțământ, toate categoriile sunt considerate acordate: activați una dintre ele."
+
+#: ../../content/applications/websites/website/tracking/privacy.rst:18
+msgid "The consent state is checked again on every page. Visitors who consented to another :guilabel:`Cookie Policy Version`, or longer ago than :guilabel:`Ask Again After (months)`, are asked again."
+msgstr "Starea consimțământului este verificată din nou pe fiecare pagină. Vizitatorii care și-au dat consimțământul pentru o altă :guilabel:`Versiunea politicii de cookie-uri` sau de mai mult timp decât :guilabel:`Întreabă din nou după (luni)` sunt întrebați din nou."
+
+#: ../../content/applications/websites/website/tracking/privacy.rst:21
+msgid "Rejecting is as easy as accepting: the banner shows :guilabel:`Reject all` next to :guilabel:`Accept all`, with the same look, and nothing is pre-selected in the preferences dialog."
+msgstr "Respingerea este la fel de ușoară ca acceptarea: bannerul afișează :guilabel:`Respinge toate` lângă :guilabel:`Acceptă toate`, cu același aspect, iar în fereastra de preferințe nu este nimic preselectat."
+
+#: ../../content/applications/websites/website/tracking/privacy.rst:23
+msgid "Visitors can change or withdraw their choice at any time with the :guilabel:`Cookie settings` link or the floating cookie button. The cookies of a withdrawn category are deleted."
+msgstr "Vizitatorii își pot schimba sau retrage alegerea oricând cu linkul :guilabel:`Setări cookie-uri` sau cu butonul flotant cu cookie. Cookie-urile unei categorii retrase sunt șterse."
+
+#: ../../content/applications/websites/website/tracking/privacy.rst:106
+msgid "Scripts of Google and Meta that Odoo manages itself are removed from the blocked third-party list of the website, so that they are loaded after consent and not blanked. Other embedded services stay blocked until the visitor accepts the :guilabel:`Functional` cookies."
+msgstr "Scripturile Google și Meta pe care Odoo le gestionează singur sunt eliminate din lista de terți blocați a site-ului, pentru a fi încărcate după consimțământ și a nu fi golite. Celelalte servicii încorporate rămân blocate până când vizitatorul acceptă cookie-urile :guilabel:`Funcțional`."
+
+#: ../../content/applications/websites/website/tracking/troubleshooting.rst:5
+msgid "Test every integration before you start a campaign, and again after each change to the website, the consent banner, or the checkout. Use the tools below, from the simplest to the most detailed."
+msgstr "Testați fiecare integrare înainte de a începe o campanie și din nou după fiecare modificare a site-ului, a bannerului de consimțământ sau a procesului de finalizare a comenzii. Folosiți instrumentele de mai jos, de la cel mai simplu la cel mai detaliat."
+
+#: ../../content/applications/websites/website/tracking/troubleshooting.rst:15
+msgid "Accept the cookies: click :guilabel:`Accept all` in the banner, or open the :ref:`preferences dialog <tracking/consent/customize>` and accept the analytics and marketing cookies. Check the line that appeared in the :ref:`consent log <tracking/consent/log>`."
+msgstr "Acceptați cookie-urile: faceți clic pe :guilabel:`Acceptă toate` în banner sau deschideți :ref:`fereastra de preferințe <tracking/consent/customize>` și acceptați cookie-urile de analiză și de marketing. Verificați linia apărută în :ref:`jurnalul de consimțământ <tracking/consent/log>`."
+
+#: ../../content/applications/websites/website/tracking/troubleshooting.rst:81
+msgid "Is :guilabel:`Cookie Consent` enabled and are the marketing/analytics cookies accepted? Is the :guilabel:`Cookie Policy Version` the one of the cookie you have? Did you select the right website in :guilabel:`Settings of Website`? Is the Google tag or the pixel enabled with a valid ID? Are you logged in as a designer, or in edit mode?"
+msgstr "Este activat :guilabel:`Consimțământ pentru cookie-uri` și sunt acceptate cookie-urile de marketing/analiză? :guilabel:`Versiunea politicii de cookie-uri` este cea a cookie-ului pe care îl aveți? Ați selectat site-ul web corect în :guilabel:`Setările site-ului`? Este activată eticheta Google sau pixelul cu un ID valid? Sunteți autentificat ca designer sau în modul de editare?"

@@ -4015,10 +4015,6 @@ msgstr ":doc:`merchant_center`"
 msgid "Consent mode"
 msgstr "Hozzájárulási mód"
 
-#: ../../content/applications/websites/google/consent_mode.rst:5
-msgid "*Google Consent Mode v2* tells the Google tags what the visitor allowed, so that they adapt their behavior. It is required for the audiences and measurement of Google Ads in the European Economic Area. The Google app sends the seven consent signals of Consent Mode v2 and updates them when the visitor makes a choice in the :doc:`cookies bar or consent platform </applications/websites/website/tracking/cookie_consent>`:"
-msgstr "A *Google Consent Mode v2* tájékoztatja a Google címkéket arról, hogy a látogató mit engedélyezett, így azok ehhez igazítják a működésüket. Az Európai Gazdasági Térségben ez kötelező a Google Ads közönségeihez és méréséhez. A Google alkalmazás elküldi a Consent Mode v2 hét hozzájárulási jelzését, és frissíti őket, amikor a látogató döntést hoz a :doc:`sütik sávjában vagy a hozzájárulás-kezelő platformon </applications/websites/website/tracking/cookie_consent>`:"
-
 #: ../../content/applications/websites/google/consent_mode.rst:15
 msgid "Signal"
 msgstr "Jelzés"
@@ -9248,25 +9244,13 @@ msgstr ":doc:`/applications/websites/meta/connection`"
 msgid "Cookie consent"
 msgstr "Sütihozzájárulás"
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:5
-msgid "Google and Meta may only measure a visitor or show personalized ads to a visitor who agreed. The tracking base therefore extends the :doc:`cookies bar </applications/websites/website/configuration/cookies_bar>` of the website with **consent categories**, remembers the version of your cookie policy, logs every choice as proof of consent, and can hand the consent over to an **external consent management platform** (CMP) instead."
-msgstr "A Google és a Meta csak olyan látogatót mérhet vagy jeleníthet meg számára személyre szabott hirdetéseket, aki hozzájárult. A követési alap ezért kiegészíti a weboldal :doc:`sütisávját </applications/websites/website/configuration/cookies_bar>` **hozzájárulási kategóriákkal**, megjegyzi a sütiszabályzat verzióját, minden választást naplóz a hozzájárulás bizonyítékaként, és a hozzájárulás kezelését átadhatja egy **külső hozzájárulás-kezelő platformnak** (CMP)."
-
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:11
 msgid "Every tracking feature checks the consent of the visitor before it loads a script or sends an event."
 msgstr "Minden követési funkció ellenőrzi a látogató hozzájárulását, mielőtt szkriptet töltene be vagy eseményt küldene."
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:14
-msgid "The consent is only requested if the :guilabel:`Cookies Bar` is enabled in the Website settings (or if an external consent platform is used). **Without a cookies bar, the website considers that consent is handled elsewhere, and all categories are treated as granted.**"
-msgstr "A hozzájárulás csak akkor kérhető, ha a :guilabel:`Sütisáv` engedélyezve van a Website beállításaiban (vagy ha külső hozzájárulás-kezelő platformot használ). **Sütisáv nélkül a weboldal úgy tekinti, hogy a hozzájárulást máshol kezelik, és minden kategóriát megadottnak kezel.**"
-
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:21
 msgid "Consent categories"
 msgstr "Hozzájárulási kategóriák"
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:23
-msgid "Visitors can accept or refuse the cookies by category:"
-msgstr "A látogatók kategóriánként fogadhatják el vagy utasíthatják el a sütiket:"
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:30
 msgid "Used for"
@@ -9292,10 +9276,6 @@ msgstr "A biztonsági tárolás mindig megadott."
 msgid "Functional"
 msgstr "Funkcionális"
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:36
-msgid "Embedded content such as videos and maps, and remembered preferences."
-msgstr "Beágyazott tartalmak, például videók és térképek, valamint megjegyzett beállítások."
-
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:37
 msgid "Functionality storage and personalization storage."
 msgstr "Funkcionalitási és személyre szabási tárolás."
@@ -9320,41 +9300,13 @@ msgstr "Hirdetés: Google Ads, Meta Pixel, Conversions API, remarketing, Custome
 msgid "Ad storage, ad user data, and ad personalization."
 msgstr "Hirdetési tárolás, hirdetési felhasználói adatok és hirdetésszemélyre szabás."
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:45
-msgid "No tracking script of an unaccepted category is loaded, and no server event of an unaccepted category is sent."
-msgstr "Egyetlen el nem fogadott kategóriájú követőszkript sem töltődik be, és egyetlen el nem fogadott kategóriájú szerveroldali esemény sem kerül elküldésre."
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:49
-msgid "Configure the cookies bar"
-msgstr "A sütisáv beállítása"
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:51
-msgid "Go to :menuselection:`Website --> Configuration --> Settings`. In the privacy section, enable :guilabel:`Cookies Bar`. Right below it, the :guilabel:`Consent Categories` setting groups the options of this page:"
-msgstr "Lépjen a :menuselection:`Weboldal --> Konfiguráció --> Beállítások` menüpontra. Az adatvédelmi szakaszban engedélyezze a :guilabel:`Sütisáv` beállítást. Közvetlenül alatta a :guilabel:`Hozzájárulási kategóriák` beállítás csoportosítja az ezen az oldalon leírt lehetőségeket:"
-
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:70
 msgid ":guilabel:`Consent Source`"
 msgstr ":guilabel:`Hozzájárulás forrása`"
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:71
-msgid ":guilabel:`Website cookies bar` (default): visitors choose in the cookies bar of the website. :guilabel:`External consent platform (CMP)`: the cookies bar is replaced by a consent platform such as Cookiebot, which provides the consent state to the trackers. See :ref:`tracking/consent/cmp`."
-msgstr ":guilabel:`A weboldal sütisávja` (alapértelmezett): a látogatók a weboldal sütisávjában választanak. :guilabel:`Külső hozzájárulás-kezelő platform (CMP)`: a sütisávot egy hozzájárulás-kezelő platform váltja fel (például Cookiebot), amely a hozzájárulási állapotot átadja a követőknek. Lásd: :ref:`tracking/consent/cmp`."
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:75
-msgid ":guilabel:`Consent Categories`"
-msgstr ":guilabel:`Hozzájárulási kategóriák`"
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:76
-msgid "Shows a :guilabel:`Customize` button in the cookies bar so that visitors can choose the functional, analytics, and marketing cookies one by one. Only available with the website cookies bar. If disabled, the bar offers the standard choice between all optional cookies and essential cookies only."
-msgstr "A sütisávban megjelenít egy :guilabel:`Testreszabás` gombot, hogy a látogatók egyenként választhassák ki a funkcionális, analitikai és marketingsütiket. Csak a weboldal sütisávjával érhető el. Ha le van tiltva, a sáv a szokásos választást kínálja az összes választható süti és csak a nélkülözhetetlen sütik között."
-
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:80
 msgid ":guilabel:`Cookie Policy Version`"
 msgstr ":guilabel:`Sütiszabályzat verziója`"
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:81
-msgid "A short text, `1` by default. **Change it each time your cookie policy changes:** the visitors who consented to an older version are asked again and nothing is granted until they answer."
-msgstr "Egy rövid szöveg, alapértelmezés szerint `1`. **Módosítsa minden alkalommal, amikor a sütiszabályzata megváltozik:** azokat a látogatókat, akik egy régebbi verzióhoz járultak hozzá, újra megkérdezi a rendszer, és addig semmi sem engedélyezett, amíg nem válaszolnak."
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:84
 msgid ":guilabel:`Log Consents`"
@@ -9364,29 +9316,9 @@ msgstr ":guilabel:`Hozzájárulások naplózása`"
 msgid "Keeps a record of every choice (categories, policy version, date) as proof of consent. Enabled by default. See :ref:`tracking/consent/log`."
 msgstr "Nyilvántartást vezet minden választásról (kategóriák, szabályzatverzió, dátum) a hozzájárulás bizonyítékaként. Alapértelmezés szerint engedélyezett. Lásd: :ref:`tracking/consent/log`."
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:91
-msgid "The Customize panel"
-msgstr "A Testreszabás panel"
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:93
-msgid "With :guilabel:`Consent Categories` enabled, the cookies bar shows a :guilabel:`Customize` button next to the usual buttons. It opens a panel with one switch per category: :guilabel:`Necessary` (always on), :guilabel:`Functional`, :guilabel:`Analytics`, and :guilabel:`Marketing`. A visitor chooses the categories and clicks :guilabel:`Save my choices`. The choice is stored in the cookie of the cookies bar, together with the policy version."
-msgstr "Ha a :guilabel:`Hozzájárulási kategóriák` engedélyezett, a sütisáv a szokásos gombok mellett egy :guilabel:`Testreszabás` gombot is mutat. Ez egy panelt nyit meg kategóriánként egy kapcsolóval: :guilabel:`Szükséges` (mindig be van kapcsolva), :guilabel:`Funkcionális`, :guilabel:`Analitika` és :guilabel:`Marketing`. A látogató kiválasztja a kategóriákat, és a :guilabel:`Választásaim mentése` gombra kattint. A választás a sütisáv sütijében tárolódik a szabályzat verziójával együtt."
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:108
-msgid "A visitor who clicks the standard buttons instead gets the matching shortcut: accepting all optional cookies grants every category, and keeping only the essential cookies refuses functional, analytics, and marketing."
-msgstr "Az a látogató, aki helyette a szokásos gombokat használja, a megfelelő gyorsválasztást kapja: az összes választható süti elfogadása minden kategóriát engedélyez, a csak nélkülözhetetlen sütik megtartása pedig elutasítja a funkcionális, analitikai és marketingsütiket."
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:113
-msgid "Visitors can change their mind at any time: the cookies bar is shown again when the visitor removes the cookie of the website in the browser, or when you change the :guilabel:`Cookie Policy Version`."
-msgstr "A látogatók bármikor meggondolhatják magukat: a sütisáv újra megjelenik, amikor a látogató törli a weboldal sütijét a böngészőben, vagy amikor módosítja a :guilabel:`Sütiszabályzat verziója` értékét."
-
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:120
 msgid "External consent platform (CMP)"
 msgstr "Külső hozzájárulás-kezelő platform (CMP)"
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:122
-msgid "If you already use a consent management platform, let it collect the consent and hand the result to Odoo. Set :guilabel:`Consent Source` to :guilabel:`External consent platform (CMP)`: the cookies bar of the website is hidden, and the following fields appear."
-msgstr "Ha már használ hozzájárulás-kezelő platformot, hagyja, hogy az gyűjtse a hozzájárulást, és adja át az eredményt az Odoónak. Állítsa a :guilabel:`Hozzájárulás forrása` mezőt :guilabel:`Külső hozzájárulás-kezelő platform (CMP)` értékre: a weboldal sütisávja elrejtésre kerül, és a következő mezők jelennek meg."
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:132
 msgid ":guilabel:`Consent Platform`"
@@ -9404,10 +9336,6 @@ msgstr ":guilabel:`CMP-szkript`"
 msgid "The script tag(s) of the platform, copied from its administration. They are inserted at the top of the head of every page. Leave it empty if the platform is loaded another way, for example through Google Tag Manager."
 msgstr "A platform szkriptcímkéi, az adminisztrációs felületéről kimásolva. Minden oldal fejlécének tetejére kerülnek beillesztésre. Hagyja üresen, ha a platform más módon töltődik be, például a Google Tag Manageren keresztül."
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:140
-msgid "Odoo reads the choice of the visitor from the platform and maps its categories to the four categories above (for example, the *Preferences* category of Cookiebot to :guilabel:`Functional`, *Statistics* to :guilabel:`Analytics`, and *Marketing* to :guilabel:`Marketing`). Each time the visitor changes the choice, the tracking tags are updated."
-msgstr "Az Odoo kiolvassa a látogató választását a platformról, és a kategóriáit a fenti négy kategóriára képezi le (például a Cookiebot *Preferences* kategóriáját a :guilabel:`Funkcionális`-ra, a *Statistics* kategóriát az :guilabel:`Analitika`-re, a *Marketing* kategóriát pedig a :guilabel:`Marketing`-re). Minden alkalommal, amikor a látogató megváltoztatja a választását, a követőcímkék frissülnek."
-
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:146
 msgid "Custom platform"
 msgstr "Egyéni platform"
@@ -9424,17 +9352,9 @@ msgstr "Hozzájárulás-kezelő platformmal a Google-címkék azonnal betöltőd
 msgid "Consent log"
 msgstr "Hozzájárulási napló"
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:167
-msgid "Go to :menuselection:`Website --> Configuration --> Tracking & Consent --> Consent Log` (or click :guilabel:`Consent Log` in the Website settings). Every choice made in the cookies bar or in the consent platform is a line, which cannot be edited:"
-msgstr "Lépjen a :menuselection:`Weboldal --> Konfiguráció --> Követés és hozzájárulás --> Hozzájárulási napló` menüpontra (vagy kattintson a :guilabel:`Hozzájárulási napló` gombra a Website beállításaiban). A sütisávban vagy a hozzájárulás-kezelő platformon tett minden választás egy sor, amely nem szerkeszthető:"
-
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:171
 msgid ":guilabel:`Date`, :guilabel:`Website` (with several websites), and the :guilabel:`Consent ID`, a random identifier stored in the visitor's consent cookie."
 msgstr ":guilabel:`Dátum`, :guilabel:`Weboldal` (több weboldal esetén) és a :guilabel:`Hozzájárulás-azonosító`, egy véletlen azonosító, amelyet a látogató hozzájárulási sütije tárol."
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:173
-msgid ":guilabel:`Source`: :guilabel:`Cookies bar` or :guilabel:`Consent platform`."
-msgstr ":guilabel:`Forrás`: :guilabel:`Sütisáv` vagy :guilabel:`Hozzájárulás-kezelő platform`."
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:174
 msgid ":guilabel:`Functional`, :guilabel:`Analytics`, :guilabel:`Marketing`: what the visitor accepted."
@@ -9501,11 +9421,6 @@ msgstr "Egy ütemezett művelet naponta fut, hogy alkalmazza ezeket a határidő
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:110
 msgid ":doc:`privacy`"
 msgstr ":doc:`privacy`"
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:218
-#: ../../content/applications/websites/website/tracking/privacy.rst:107
-msgid ":doc:`/applications/websites/website/configuration/cookies_bar`"
-msgstr ":doc:`/applications/websites/website/configuration/cookies_bar`"
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:219
 msgid ":doc:`/applications/websites/google/consent_mode`"
@@ -9582,10 +9497,6 @@ msgstr "*Website Tracking & Consent*"
 #: ../../content/applications/websites/website/tracking/overview.rst:55
 msgid "the Google or the Meta app is installed"
 msgstr "a Google vagy a Meta alkalmazás telepítve van"
-
-#: ../../content/applications/websites/website/tracking/overview.rst:56
-msgid "The shared base: the consent categories of the cookies bar, the :guilabel:`Tracking` block of the Website settings, the :guilabel:`Tracking & Consent` menu (server events, consent log, connections), and the click identifiers stored on orders and leads."
-msgstr "A közös alap: a sütisáv hozzájárulási kategóriái, a Website beállításainak :guilabel:`Követés` blokkja, a :guilabel:`Követés és hozzájárulás` menü (szerveroldali események, hozzájárulási napló, kapcsolatok), valamint a rendeléseken és leadeken tárolt kattintási azonosítók."
 
 #: ../../content/applications/websites/website/tracking/overview.rst:59
 msgid "*Website Tracking for eCommerce*"
@@ -9723,10 +9634,6 @@ msgstr "Menü"
 msgid ":menuselection:`Website --> Configuration --> Settings`"
 msgstr ":menuselection:`Weboldal --> Konfiguráció --> Beállítások`"
 
-#: ../../content/applications/websites/website/tracking/overview.rst:117
-msgid ":guilabel:`Consent Categories` (privacy section) and the :guilabel:`Tracking` block: debug mode, retention, :guilabel:`Connection Broker`, :guilabel:`eCommerce Tracking`, :guilabel:`Lead Tracking`."
-msgstr ":guilabel:`Hozzájárulási kategóriák` (adatvédelmi szakasz) és a :guilabel:`Követés` blokk: hibakeresési mód, megőrzés, :guilabel:`Kapcsolódási bróker`, :guilabel:`E-kereskedelmi követés`, :guilabel:`Érdeklődőkövetés`."
-
 #: ../../content/applications/websites/website/tracking/overview.rst:120
 msgid ":menuselection:`Website --> Configuration --> Tracking & Consent`"
 msgstr ":menuselection:`Weboldal --> Konfiguráció --> Követés és hozzájárulás`"
@@ -9787,10 +9694,6 @@ msgstr "A Google és a Meta alkalmazás menüi a *Website* alkalmazás azon felh
 msgid "Getting started"
 msgstr "Első lépések"
 
-#: ../../content/applications/websites/website/tracking/overview.rst:145
-msgid "Enable the :guilabel:`Cookies Bar` in :menuselection:`Website --> Configuration --> Settings` and choose how the consent is collected, as described in :doc:`cookie_consent`."
-msgstr "Engedélyezze a :guilabel:`Sütisáv` beállítást a :menuselection:`Weboldal --> Konfiguráció --> Beállítások` oldalon, és válassza ki, hogyan gyűjtse a hozzájárulást, a :doc:`cookie_consent` oldalon leírtak szerint."
-
 #: ../../content/applications/websites/website/tracking/overview.rst:147
 msgid "Install the Google app, the Meta app, or both."
 msgstr "Telepítse a Google alkalmazást, a Meta alkalmazást, vagy mindkettőt."
@@ -9827,14 +9730,6 @@ msgstr "Először a hozzájárulás"
 #: ../../content/applications/websites/website/tracking/privacy.rst:12
 msgid "A tracking script (Google tag, Google Tag Manager, Meta Pixel) is loaded, and a server event is sent, only if the matching :doc:`consent category <cookie_consent>` is granted: **analytics** for Google Analytics events, **marketing** for Google Ads, the Meta Pixel, the Conversions API, remarketing, and Customer Match."
 msgstr "Egy követőszkript (Google-címke, Google Tag Manager, Meta Pixel) csak akkor töltődik be, és egy szerveroldali esemény csak akkor kerül elküldésre, ha a megfelelő :doc:`hozzájárulási kategória <cookie_consent>` megadott: az **analitika** a Google Analytics eseményekhez, a **marketing** a Google Adshez, a Meta Pixelhez, a Conversions API-hoz, a remarketinghez és a Customer Matchhez."
-
-#: ../../content/applications/websites/website/tracking/privacy.rst:16
-msgid "Without a cookies bar and without an external consent platform, all categories are considered granted: enable one of them."
-msgstr "Sütisáv és külső hozzájárulás-kezelő platform nélkül minden kategória megadottnak minősül: engedélyezze valamelyiket."
-
-#: ../../content/applications/websites/website/tracking/privacy.rst:18
-msgid "The consent state is checked again on every page. Visitors who consented to an older :guilabel:`Cookie Policy Version` are asked again."
-msgstr "A hozzájárulási állapotot minden oldalon újra ellenőrzi. Azokat a látogatókat, akik egy régebbi :guilabel:`Sütiszabályzat verziója` verzióhoz járultak hozzá, újra megkérdezi."
 
 #: ../../content/applications/websites/website/tracking/privacy.rst:20
 msgid "No tracking is done in the website editor, in the translation mode, or for the website designers while they edit the website."
@@ -9968,10 +9863,6 @@ msgstr "A GTM-konténerben létrehozott címkékért Ön felel: ellenőrizze, mi
 msgid "Third-party domains"
 msgstr "Harmadik felek domainjei"
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:101
-msgid "Scripts of Google and Meta that Odoo manages itself are removed from the blocked third-party list of the cookies bar, so that they are loaded after consent and not blanked. Other embedded services stay blocked until the visitor accepts the :guilabel:`Functional` cookies."
-msgstr "Az Odoo által maga kezelt Google- és Meta-szkriptek kikerülnek a sütisáv blokkolt harmadik felek listájáról, így a hozzájárulás után töltődnek be, és nincsenek elhomályosítva. A többi beágyazott szolgáltatás blokkolva marad, amíg a látogató el nem fogadja a :guilabel:`Funkcionális` sütiket."
-
 #: ../../content/applications/websites/website/tracking/privacy.rst:106
 msgid ":doc:`cookie_consent`"
 msgstr ":doc:`cookie_consent`"
@@ -10040,10 +9931,6 @@ msgstr "A sorok a :guilabel:`Elküldött események megőrzése (nap)` beállít
 msgid "Testing and troubleshooting"
 msgstr "Tesztelés és hibaelhárítás"
 
-#: ../../content/applications/websites/website/tracking/troubleshooting.rst:5
-msgid "Test every integration before you start a campaign, and again after each change to the website, the cookies bar, or the checkout. Use the tools below, from the simplest to the most detailed."
-msgstr "Minden integrációt tesztelje egy kampány indítása előtt, valamint a weboldal, a sütisáv vagy a pénztár minden módosítása után újra. Használja az alábbi eszközöket, a legegyszerűbbtől a legrészletesebbig."
-
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:11
 msgid "Before you test"
 msgstr "Teszt előtt"
@@ -10051,10 +9938,6 @@ msgstr "Teszt előtt"
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:13
 msgid "Test in a **private window** that is not logged in as an administrator. No event is sent while you edit the website or translate it."
 msgstr "Tesztelje **privát ablakban**, amely nincs adminisztrátorként bejelentkezve. A weboldal szerkesztése vagy fordítása közben nem kerül elküldésre esemény."
-
-#: ../../content/applications/websites/website/tracking/troubleshooting.rst:15
-msgid "Accept the cookies: open the :ref:`Customize panel <tracking/consent/customize>` and accept the analytics and marketing cookies. Check the line that appeared in the :ref:`consent log <tracking/consent/log>`."
-msgstr "Fogadja el a sütiket: nyissa meg a :ref:`Testreszabás panelt <tracking/consent/customize>`, és fogadja el az analitikai és marketingsütiket. Ellenőrizze a :ref:`hozzájárulási naplóban <tracking/consent/log>` megjelent sort."
 
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:18
 msgid "Disable the ad blockers of your browser."
@@ -10167,10 +10050,6 @@ msgstr "Ellenőrzés"
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:80
 msgid "No event at all"
 msgstr "Egyáltalán nincs esemény"
-
-#: ../../content/applications/websites/website/tracking/troubleshooting.rst:81
-msgid "Is the cookies bar enabled and are the marketing/analytics cookies accepted? Is the :guilabel:`Cookie Policy Version` the one of the cookie you have? Did you select the right website in :guilabel:`Settings of Website`? Is the Google tag or the pixel enabled with a valid ID? Are you logged in as a designer, or in edit mode?"
-msgstr "Engedélyezve van a sütisáv, és el vannak fogadva a marketing-/analitikai sütik? A :guilabel:`Sütiszabályzat verziója` megegyezik a meglévő süti verziójával? A megfelelő weboldalt választotta a :guilabel:`Weboldal beállításai` mezőben? A Google-címke vagy a pixel engedélyezve van érvényes azonosítóval? Tervezőként van bejelentkezve, vagy szerkesztő módban van?"
 
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:85
 msgid "The pixel or the Google tag loads only on the second page"
@@ -13783,3 +13662,307 @@ msgstr "Az archivált termékek változatlanok maradnak. Az utolsó szabály tö
 
 #~ msgid ":guilabel:`Create a Ticket` (:doc:`Helpdesk </applications/services/helpdesk>`)"
 #~ msgstr ":guilabel:`Jegy létrehozása` (:doc:`Helpdesk </applications/services/helpdesk>`)"
+
+#: ../../content/applications/websites/google/consent_mode.rst:5
+msgid "*Google Consent Mode v2* tells the Google tags what the visitor allowed, so that they adapt their behavior. It is required for the audiences and measurement of Google Ads in the European Economic Area. The Google app sends the seven consent signals of Consent Mode v2 and updates them when the visitor makes a choice in the :doc:`consent banner or consent platform </applications/websites/website/tracking/cookie_consent>`:"
+msgstr "A *Google Consent Mode v2* közli a Google-címkékkel, mit engedélyezett a látogató, hogy azok ehhez igazítsák a működésüket. Az Európai Gazdasági Térségben a Google Ads közönségeihez és méréséhez kötelező. A Google alkalmazás elküldi a Consent Mode v2 hét hozzájárulási jelét, és frissíti őket, amikor a látogató választ a :doc:`hozzájárulási sávban vagy a hozzájárulás-kezelő platformon </applications/websites/website/tracking/cookie_consent>`:"
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:11
+msgid "When the Google app or the Meta app is installed, the cookies bar is replaced by the **cookie consent banner** (:guilabel:`Accept all`, :guilabel:`Reject all`, :guilabel:`Customize`, consent categories, cookie list, and :guilabel:`Cookie settings` link) and its settings replace the :guilabel:`Cookies Bar` setting. See :doc:`/applications/websites/website/tracking/cookie_consent`."
+msgstr "Ha a Google vagy a Meta alkalmazás telepítve van, a sütisávot a **süti-hozzájárulási sáv** váltja fel (:guilabel:`Összes elfogadása`, :guilabel:`Összes elutasítása`, :guilabel:`Testreszabás`, hozzájárulási kategóriák, sütilista és :guilabel:`Süti-beállítások` link), és a beállításai lépnek a :guilabel:`Sütisáv` beállítás helyébe. Lásd: :doc:`/applications/websites/website/tracking/cookie_consent`."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:5
+msgid "Google and Meta may only measure a visitor or show personalized ads to a visitor who agreed. The tracking base therefore replaces the cookies bar of the website with a **consent banner** in the form visitors know from most websites: :guilabel:`Accept all`, :guilabel:`Reject all`, and :guilabel:`Customize` on the first screen, a preferences dialog with one switch per category and the list of the cookies, and a :guilabel:`Cookie settings` link to change or withdraw the choice at any time. It remembers the version of your cookie policy, logs every choice as proof of consent, and can hand the consent over to an **external consent management platform** (CMP) instead."
+msgstr "A Google és a Meta csak olyan látogatót mérhet vagy jeleníthet meg számára személyre szabott hirdetéseket, aki hozzájárult. A követési alap ezért a weboldal sütisávját egy **hozzájárulási sávra** cseréli, abban a formában, amelyet a látogatók a legtöbb weboldalról ismernek: az első képernyőn :guilabel:`Összes elfogadása`, :guilabel:`Összes elutasítása` és :guilabel:`Testreszabás`, egy beállítási ablak kategóriánként egy kapcsolóval és a sütik listájával, valamint egy :guilabel:`Süti-beállítások` link, amellyel a döntés bármikor módosítható vagy visszavonható. Megjegyzi a sütiszabályzat verzióját, minden választást naplóz a hozzájárulás bizonyítékaként, és a hozzájárulás kezelését átadhatja egy **külső hozzájárulás-kezelő platformnak** (CMP) is."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:16
+msgid "The consent is only requested if :guilabel:`Cookie Consent` is enabled in the Website settings. **Without it, the website considers that consent is handled elsewhere, and all categories are treated as granted.**"
+msgstr "A hozzájárulást csak akkor kéri a weboldal, ha a :guilabel:`Süti-hozzájárulás` engedélyezve van a Weboldal beállításaiban. **Enélkül a weboldal úgy tekinti, hogy a hozzájárulást máshol kezelik, és minden kategóriát engedélyezettnek vesz.**"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:25
+msgid "Visitors accept or refuse the cookies by category:"
+msgstr "A látogatók kategóriánként fogadják el vagy utasítják el a sütiket:"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:38
+msgid "Embedded content such as videos and maps, the live chat, the campaign cookies (UTM) and features that remember choices, such as recently viewed products."
+msgstr "Beágyazott tartalmak, például videók és térképek, az élő chat, a kampánysütik (UTM) és a választásokat megjegyző funkciók, például a nemrég megtekintett termékek."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:48
+msgid "No tracking script of an unaccepted category is loaded, and no server event of an unaccepted category is sent. The optional cookies of the website itself (embedded content, campaign and live chat cookies) follow the :guilabel:`Functional` category."
+msgstr "Egy el nem fogadott kategória egyetlen követőszkriptje sem töltődik be, és egyetlen szerveroldali eseménye sem kerül elküldésre. Magának a weboldalnak a választható sütijei (beágyazott tartalmak, kampány- és élő chat sütik) a :guilabel:`Funkcionális` kategóriát követik."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:55
+msgid "Configure the consent banner"
+msgstr "A hozzájárulási sáv beállítása"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:57
+msgid "Go to :menuselection:`Website --> Configuration --> Settings` and enable :guilabel:`Cookie Consent` in the :guilabel:`Privacy` section. This setting replaces the standard :guilabel:`Cookies Bar` setting of the website, which is no longer shown."
+msgstr "Lépjen a :menuselection:`Weboldal --> Konfiguráció --> Beállítások` menüpontra, és az :guilabel:`Adatvédelem` szakaszban engedélyezze a :guilabel:`Süti-hozzájárulás` beállítást. Ez a beállítás a weboldal szokásos :guilabel:`Sütisáv` beállítását váltja fel, amely már nem jelenik meg."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:79
+msgid ":guilabel:`Consent banner of this website` (default): visitors choose in the banner of the website. :guilabel:`External consent platform (CMP)`: the banner is replaced by a consent platform such as Cookiebot, which provides the consent state to the trackers. See :ref:`tracking/consent/cmp`."
+msgstr ":guilabel:`A weboldal saját hozzájárulási sávja` (alapértelmezett): a látogatók a weboldal sávjában választanak. :guilabel:`Külső hozzájárulás-kezelő platform (CMP)`: a sáv helyett egy hozzájárulás-kezelő platform (például Cookiebot) jelenik meg, és az adja át a hozzájárulás állapotát a követőkódoknak. Lásd: :ref:`tracking/consent/cmp`."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:83
+msgid ":guilabel:`Banner Layout`"
+msgstr ":guilabel:`Sáv elrendezése`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:84
+msgid ":guilabel:`Bar at the bottom` (default), :guilabel:`Box, bottom left`, :guilabel:`Box, bottom right`, or :guilabel:`Popup in the center` (the page is dimmed until the visitor chooses). On the cookie policy page, the popup is shown as a bar so that the policy stays readable."
+msgstr ":guilabel:`Sáv alul` (alapértelmezett), :guilabel:`Doboz, bal alsó sarok`, :guilabel:`Doboz, jobb alsó sarok` vagy :guilabel:`Felugró ablak középen` (az oldal elsötétül, amíg a látogató nem választ). A süti-szabályzat oldalon a felugró ablak sávként jelenik meg, hogy a szabályzat olvasható maradjon."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:87
+msgid ":guilabel:`Banner Title`, :guilabel:`Banner Text`"
+msgstr ":guilabel:`Sáv címe`, :guilabel:`Sáv szövege`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:88
+msgid "Your own title and text. Leave them empty to use the default ones (*We value your privacy* and a short explanation), which are translated into the languages of the website. Your own texts can be translated with the translation button of the fields."
+msgstr "Saját cím és szöveg. Hagyja üresen őket az alapértelmezettek használatához (*Fontos számunkra az adatvédelem* és egy rövid magyarázat), amelyek a weboldal nyelveire le vannak fordítva. A saját szövegek a mezők fordítás gombjával fordíthatók le."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:91
+msgid ":guilabel:`Cookie Policy Page`"
+msgstr ":guilabel:`Süti-szabályzat oldal`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:92
+msgid "The page linked from the banner and the dialog. Leave it empty to use `/cookie-policy`."
+msgstr "A sávból és az ablakból hivatkozott oldal. Hagyja üresen a `/cookie-policy` használatához."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:93
+msgid ":guilabel:`Floating Settings Button`"
+msgstr ":guilabel:`Lebegő beállítás gomb`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:94
+msgid "Once the visitor has chosen, a small round cookie button stays in the bottom left corner of the page. It opens the preferences dialog. Enabled by default. A :guilabel:`Cookie settings` link is added to the footer in any case."
+msgstr "Miután a látogató választott, egy kis kerek süti gomb marad az oldal bal alsó sarkában. Ez megnyitja a beállítási ablakot. Alapértelmezés szerint engedélyezett. A láblécbe mindenképp bekerül egy :guilabel:`Süti-beállítások` link."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:97
+msgid ":guilabel:`Ask Again After (months)`"
+msgstr ":guilabel:`Újrakérdezés (hónap után)`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:98
+msgid "How long the choice of a visitor is kept. `12` months by default; after this delay the banner is shown again."
+msgstr "Meddig őrizzük meg a látogató döntését. Alapértelmezés szerint `12` hónap; ezután a sáv újra megjelenik."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:101
+msgid "A short text, `1` by default. **Change it each time your cookie policy changes:** the visitors who consented to another version are asked again and nothing is granted until they answer."
+msgstr "Rövid szöveg, alapértelmezés szerint `1`. **Módosítsa minden alkalommal, amikor a sütiszabályzata megváltozik:** a más verzióhoz hozzájárult látogatókat a rendszer újra megkérdezi, és amíg nem válaszolnak, semmit nem engedélyez."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:107
+msgid ":guilabel:`Block Third-Party Content`"
+msgstr ":guilabel:`Külső tartalmak blokkolása`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:108
+msgid "Keeps embedded videos, maps, and other third-party content blocked until the visitor accepts the functional cookies. In their place, visitors see a notice; clicking it opens the preferences dialog. Click :guilabel:`Blocked Third-Party Domains` to add domains to the list."
+msgstr "A beágyazott videók, térképek és más külső tartalmak blokkolva maradnak, amíg a látogató el nem fogadja a funkcionális sütiket. Helyettük a látogatók egy értesítést látnak; erre kattintva megnyílik a beállítási ablak. Domainek hozzáadásához kattintson a :guilabel:`Blokkolt külső domainek` linkre."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:112
+msgid "The links below the fields open the :ref:`cookie list <tracking/consent/cookie_list>`, the :ref:`consent log <tracking/consent/log>`, the list of blocked domains, and recreate the :ref:`cookie policy page <tracking/consent/policy_page>`."
+msgstr "A mezők alatti linkek megnyitják a :ref:`sütilistát <tracking/consent/cookie_list>`, a :ref:`hozzájárulási naplót <tracking/consent/log>` és a blokkolt domainek listáját, illetve újra létrehozzák a :ref:`süti-szabályzat oldalt <tracking/consent/policy_page>`."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:117
+msgid "The banner takes the colors, fonts and buttons of your website theme. It cannot be edited in the website editor: change its texts in the settings."
+msgstr "A sáv a weboldal témájának színeit, betűtípusait és gombjait használja. A weboldal-szerkesztőben nem szerkeszthető: a szövegeit a beállításokban módosíthatja."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:123
+msgid "What visitors see"
+msgstr "Mit látnak a látogatók"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:126
+msgid "The banner"
+msgstr "A sáv"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:128
+msgid "A visitor who has not chosen yet sees the banner with three buttons of the same size: :guilabel:`Customize`, :guilabel:`Reject all`, and :guilabel:`Accept all`, and a link to the cookie policy. Rejecting is as easy as accepting, as the European data protection authorities require."
+msgstr "Az a látogató, aki még nem választott, a sávot látja három egyforma méretű gombbal: :guilabel:`Testreszabás`, :guilabel:`Összes elutasítása` és :guilabel:`Összes elfogadása`, valamint egy linket a süti-szabályzathoz. Az elutasítás ugyanolyan egyszerű, mint az elfogadás, ahogy azt az európai adatvédelmi hatóságok megkövetelik."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:132
+msgid ":guilabel:`Accept all` grants every category."
+msgstr "Az :guilabel:`Összes elfogadása` minden kategóriát engedélyez."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:133
+msgid ":guilabel:`Reject all` keeps the necessary cookies only."
+msgstr "Az :guilabel:`Összes elutasítása` csak a szükséges sütiket tartja meg."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:134
+msgid ":guilabel:`Customize` opens the preferences dialog."
+msgstr "A :guilabel:`Testreszabás` megnyitja a beállítási ablakot."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:136
+msgid "Until the visitor answers, nothing optional is used: continuing to browse or scrolling does not count as consent."
+msgstr "Amíg a látogató nem válaszol, semmilyen választható süti nem kerül használatba: a további böngészés vagy a görgetés nem számít hozzájárulásnak."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:150
+msgid "The preferences dialog"
+msgstr "A beállítási ablak"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:152
+msgid "The dialog lists the categories: :guilabel:`Necessary` (always on), :guilabel:`Functional`, :guilabel:`Analytics`, and :guilabel:`Marketing`, each with a switch, a short description and, when the visitor unfolds it, the cookies of the category with their provider, duration, and purpose. The visitor clicks :guilabel:`Save my choices`, or :guilabel:`Reject all` or :guilabel:`Accept all`."
+msgstr "Az ablak felsorolja a kategóriákat: :guilabel:`Szükséges` (mindig bekapcsolva), :guilabel:`Funkcionális`, :guilabel:`Analitika` és :guilabel:`Marketing`, mindegyiket kapcsolóval, rövid leírással, és ha a látogató lenyitja, a kategória sütijeivel, azok szolgáltatójával, időtartamával és céljával. A látogató a :guilabel:`Választásaim mentése`, az :guilabel:`Összes elutasítása` vagy az :guilabel:`Összes elfogadása` gombra kattint."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:166
+msgid "The choice is stored in the consent cookie of the website, with the policy version and the date."
+msgstr "A döntés a weboldal hozzájárulási sütijében tárolódik, a szabályzat verziójával és a dátummal együtt."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:169
+msgid "Change or withdraw the choice"
+msgstr "A döntés módosítása vagy visszavonása"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:171
+msgid "Visitors can open the preferences dialog again at any time:"
+msgstr "A látogatók bármikor újra megnyithatják a beállítási ablakot:"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:173
+msgid "with the floating cookie button in the bottom left corner (if :guilabel:`Floating Settings Button` is enabled);"
+msgstr "a bal alsó sarokban lebegő süti gombbal (ha a :guilabel:`Lebegő beállítás gomb` engedélyezve van);"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:175
+msgid "with the :guilabel:`Cookie policy · Cookie settings` links added to the copyright line of the footer;"
+msgstr "a lábléc copyright sorába került :guilabel:`Süti-szabályzat · Süti-beállítások` linkekkel;"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:177
+msgid "with the :guilabel:`Change my cookie settings` button of the cookie policy page;"
+msgstr "a süti-szabályzat oldal :guilabel:`Süti-beállításaim módosítása` gombjával;"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:178
+msgid "by clicking the notice shown in place of blocked embedded content."
+msgstr "a blokkolt beágyazott tartalom helyén megjelenő értesítésre kattintva."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:180
+msgid "When a visitor withdraws a category, the cookies of that category listed in the :ref:`cookie list <tracking/consent/cookie_list>` are deleted from the browser, and the tracking tags stop using them."
+msgstr "Ha egy látogató visszavon egy kategóriát, a :ref:`sütilistában <tracking/consent/cookie_list>` szereplő, abba a kategóriába tartozó sütik törlődnek a böngészőből, és a követőkódok nem használják tovább őket."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:185
+msgid "To add your own link to the cookie settings, for example in a footer column or a menu, point it to `#cookie-settings`."
+msgstr "Ha saját linket szeretne a süti-beállításokhoz, például egy lábléc oszlopban vagy egy menüben, irányítsa a `#cookie-settings` címre."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:191
+msgid "Cookie list"
+msgstr "Sütilista"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:193
+msgid "Go to :menuselection:`Website --> Configuration --> Tracking & Consent --> Cookies` (or click :guilabel:`Cookie List` in the settings). The list feeds the preferences dialog and the cookie policy page."
+msgstr "Lépjen a :menuselection:`Weboldal --> Konfiguráció --> Követés és hozzájárulás --> Sütik` menüpontra (vagy kattintson a :guilabel:`Sütik listája` linkre a beállításokban). A lista tölti fel a beállítási ablakot és a süti-szabályzat oldalt."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:203
+msgid ":guilabel:`Cookie`"
+msgstr ":guilabel:`Süti`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:204
+msgid "The name of the cookie. Use `*` for names that vary, for example `_ga_*`."
+msgstr "A süti neve. Változó neveknél használja a `*` jelet, például `_ga_*`."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:205
+msgid ":guilabel:`Provider`"
+msgstr ":guilabel:`Szolgáltató`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:206
+msgid "Who sets the cookie: *This website* or a third party, such as *Google Analytics*."
+msgstr "Ki helyezi el a sütit: *Ez a weboldal* vagy egy harmadik fél, például a *Google Analytics*."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:208
+msgid ":guilabel:`Necessary`, :guilabel:`Functional`, :guilabel:`Analytics`, or :guilabel:`Marketing`."
+msgstr ":guilabel:`Szükséges`, :guilabel:`Funkcionális`, :guilabel:`Analitika` vagy :guilabel:`Marketing`."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:210
+msgid ":guilabel:`Duration`"
+msgstr ":guilabel:`Időtartam`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:211
+msgid "How long the cookie is kept, for example *2 years*. The duration of the consent cookie follows :guilabel:`Ask Again After (months)`."
+msgstr "Mennyi ideig marad meg a süti, például *2 év*. A hozzájárulási süti időtartama az :guilabel:`Újrakérdezés (hónap után)` beállítást követi."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:213
+msgid ":guilabel:`Purpose`"
+msgstr ":guilabel:`Cél`"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:214
+msgid "What the cookie is used for, in a sentence visitors understand."
+msgstr "Mire szolgál a süti, egy a látogatók számára érthető mondatban."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:216
+msgid "Leave it empty to list the cookie on every website."
+msgstr "Hagyja üresen, ha minden weboldalon szerepeljen."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:218
+msgid "The cookies of the website and of the installed features are listed from the start: the session, language and consent cookies, the campaign cookies, the live chat cookies (with a live chat channel on the website), the recently viewed products (eCommerce), Google Analytics (`_ga`, `_ga_*`), Google Ads (`_gcl_au`, `_gcl_aw`), and the Meta Pixel (`_fbp`, `_fbc`). A cookie of a feature is only shown while the feature is enabled on the website; with Google Tag Manager, the Google Analytics and Google Ads cookies are both listed."
+msgstr "A weboldal és a telepített funkciók sütijei kezdettől szerepelnek a listában: a munkamenet-, nyelvi és hozzájárulási sütik, a kampánysütik, az élő chat sütijei (ha a weboldalhoz élő chat csatorna tartozik), a nemrég megtekintett termékek (webshop), a Google Analytics (`_ga`, `_ga_*`), a Google Ads (`_gcl_au`, `_gcl_aw`) és a Meta pixel (`_fbp`, `_fbc`). Egy funkció sütije csak addig jelenik meg, amíg a funkció be van kapcsolva a weboldalon; Google Tag Managerrel a Google Analytics és a Google Ads sütijei is szerepelnek."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:225
+msgid "Add the cookies of the other services you embed in your pages (a video platform, a chat, a booking widget) with their category, so that visitors see them and they are deleted when the category is withdrawn. All the texts can be translated."
+msgstr "Adja hozzá az oldalaiba beágyazott egyéb szolgáltatások (videóplatform, chat, foglalási widget) sütijeit a kategóriájukkal, hogy a látogatók lássák őket, és a kategória visszavonásakor törlődjenek. Minden szöveg lefordítható."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:232
+msgid "Cookie policy page"
+msgstr "Süti-szabályzat oldal"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:234
+msgid "When you enable :guilabel:`Cookie Consent`, a **Cookie Policy** page is created at `/cookie-policy`. Its first part explains what cookies are and how visitors choose; you can edit it in the website editor like any page. Below it, the page lists the cookies of the website by category, from the :ref:`cookie list <tracking/consent/cookie_list>`, and shows a :guilabel:`Change my cookie settings` button. This part is always up to date and is not editable."
+msgstr "A :guilabel:`Süti-hozzájárulás` engedélyezésekor létrejön egy **Süti-szabályzat** oldal a `/cookie-policy` címen. Az első része elmagyarázza, mik a sütik és hogyan választanak a látogatók; ezt bármely oldalhoz hasonlóan szerkesztheti a weboldal-szerkesztőben. Alatta az oldal kategóriánként felsorolja a weboldal sütijeit a :ref:`sütilistából <tracking/consent/cookie_list>`, és megjelenít egy :guilabel:`Süti-beállításaim módosítása` gombot. Ez a rész mindig naprakész, és nem szerkeszthető."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:240
+msgid "If the website already had a cookie policy page, click :guilabel:`Recreate Cookie Policy Page` in the settings to replace it with the new one. The changes made to the old page are lost."
+msgstr "Ha a weboldalnak már volt süti-szabályzat oldala, kattintson a beállításokban a :guilabel:`Süti-szabályzat oldal újralétrehozása` linkre, hogy az újjal cserélje le. A régi oldalon végzett módosítások elvesznek."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:244
+msgid "If your cookie policy lives on another page, set it in :guilabel:`Cookie Policy Page`."
+msgstr "Ha a sütiszabályzata egy másik oldalon található, adja meg a :guilabel:`Süti-szabályzat oldal` mezőben."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:251
+msgid "If you already use a consent management platform, let it collect the consent and hand the result to Odoo. Set :guilabel:`Consent Source` to :guilabel:`External consent platform (CMP)`: the consent banner of the website is hidden, and the following fields appear."
+msgstr "Ha már használ hozzájárulás-kezelő platformot, hagyja, hogy az gyűjtse a hozzájárulást, és adja át az eredményt az Odoónak. Állítsa a :guilabel:`Hozzájárulás forrása` mezőt :guilabel:`Külső hozzájárulás-kezelő platform (CMP)` értékre: a weboldal hozzájárulási sávja eltűnik, és megjelennek a következő mezők."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:269
+msgid "Odoo reads the choice of the visitor from the platform and maps its categories to the four categories above (for example, the *Preferences* category of Cookiebot to :guilabel:`Functional`, *Statistics* to :guilabel:`Analytics`, and *Marketing* to :guilabel:`Marketing`). Each time the visitor changes the choice, the tracking tags are updated, and embedded content follows the functional choice."
+msgstr "Az Odoo kiolvassa a látogató döntését a platformból, és annak kategóriáit a fenti négy kategóriához rendeli (például a Cookiebot *Preferences* kategóriáját a :guilabel:`Funkcionális`, a *Statistics* kategóriát az :guilabel:`Analitika`, a *Marketing* kategóriát a :guilabel:`Marketing` kategóriához). Minden alkalommal, amikor a látogató módosítja a döntését, a követőkódok frissülnek, és a beágyazott tartalmak a funkcionális döntést követik."
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:297
+msgid "Go to :menuselection:`Website --> Configuration --> Tracking & Consent --> Consent Log` (or click :guilabel:`Consent Log` in the Website settings). Every choice made in the consent banner or in the consent platform is a line, which cannot be edited:"
+msgstr "Lépjen a :menuselection:`Weboldal --> Konfiguráció --> Követés és hozzájárulás --> Hozzájárulási napló` menüpontra (vagy kattintson a :guilabel:`Hozzájárulási napló` linkre a Weboldal beállításaiban). A hozzájárulási sávban vagy a hozzájárulás-kezelő platformon tett minden választás egy sor, amely nem szerkeszthető:"
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:303
+msgid ":guilabel:`Source`: :guilabel:`Consent banner` or :guilabel:`Consent platform`."
+msgstr ":guilabel:`Forrás`: :guilabel:`Hozzájárulási sáv` vagy :guilabel:`Hozzájárulás-kezelő platform`."
+
+#: ../../content/applications/websites/website/tracking/overview.rst:56
+msgid "The shared base: the cookie consent banner that replaces the cookies bar, the :guilabel:`Tracking` block of the Website settings, the :guilabel:`Tracking & Consent` menu (server events, consent log, cookies, connections), and the click identifiers stored on orders and leads."
+msgstr "A közös alap: a sütisávot felváltó süti-hozzájárulási sáv, a Weboldal beállításainak :guilabel:`Követés` blokkja, a :guilabel:`Követés és hozzájárulás` menü (szerveroldali események, hozzájárulási napló, sütik, kapcsolatok), valamint a rendeléseken és érdeklődőkön tárolt kattintásazonosítók."
+
+#: ../../content/applications/websites/website/tracking/overview.rst:118
+msgid ":guilabel:`Cookie Consent` (privacy section) and the :guilabel:`Tracking` block: debug mode, retention, :guilabel:`Connection Broker`, :guilabel:`eCommerce Tracking`, :guilabel:`Lead Tracking`."
+msgstr ":guilabel:`Süti-hozzájárulás` (adatvédelmi szakasz) és a :guilabel:`Követés` blokk: hibakeresési mód, megőrzés, :guilabel:`Kapcsolódási bróker`, :guilabel:`E-kereskedelmi követés`, :guilabel:`Érdeklődőkövetés`."
+
+#: ../../content/applications/websites/website/tracking/overview.rst:146
+msgid "Enable :guilabel:`Cookie Consent` in :menuselection:`Website --> Configuration --> Settings` and choose how the consent is collected, as described in :doc:`cookie_consent`."
+msgstr "Engedélyezze a :guilabel:`Süti-hozzájárulás` beállítást a :menuselection:`Weboldal --> Konfiguráció --> Beállítások` menüpontban, és válassza ki, hogyan gyűjtse a rendszer a hozzájárulást, a :doc:`cookie_consent` oldalon leírtak szerint."
+
+#: ../../content/applications/websites/website/tracking/privacy.rst:16
+msgid "Without the consent banner and without an external consent platform, all categories are considered granted: enable one of them."
+msgstr "Hozzájárulási sáv és külső hozzájárulás-kezelő platform nélkül minden kategória engedélyezettnek számít: kapcsolja be valamelyiket."
+
+#: ../../content/applications/websites/website/tracking/privacy.rst:18
+msgid "The consent state is checked again on every page. Visitors who consented to another :guilabel:`Cookie Policy Version`, or longer ago than :guilabel:`Ask Again After (months)`, are asked again."
+msgstr "A hozzájárulás állapotát a rendszer minden oldalon újra ellenőrzi. Azokat a látogatókat, akik egy másik :guilabel:`Sütiszabályzat verziója` mellett, vagy az :guilabel:`Újrakérdezés (hónap után)` értékénél régebben járultak hozzá, újra megkérdezi."
+
+#: ../../content/applications/websites/website/tracking/privacy.rst:21
+msgid "Rejecting is as easy as accepting: the banner shows :guilabel:`Reject all` next to :guilabel:`Accept all`, with the same look, and nothing is pre-selected in the preferences dialog."
+msgstr "Az elutasítás ugyanolyan egyszerű, mint az elfogadás: a sáv az :guilabel:`Összes elfogadása` mellett ugyanolyan megjelenésű :guilabel:`Összes elutasítása` gombot mutat, és a beállítási ablakban semmi sincs előre bejelölve."
+
+#: ../../content/applications/websites/website/tracking/privacy.rst:23
+msgid "Visitors can change or withdraw their choice at any time with the :guilabel:`Cookie settings` link or the floating cookie button. The cookies of a withdrawn category are deleted."
+msgstr "A látogatók bármikor módosíthatják vagy visszavonhatják a döntésüket a :guilabel:`Süti-beállítások` linkkel vagy a lebegő süti gombbal. A visszavont kategória sütijei törlődnek."
+
+#: ../../content/applications/websites/website/tracking/privacy.rst:106
+msgid "Scripts of Google and Meta that Odoo manages itself are removed from the blocked third-party list of the website, so that they are loaded after consent and not blanked. Other embedded services stay blocked until the visitor accepts the :guilabel:`Functional` cookies."
+msgstr "A Google és a Meta azon szkriptjei, amelyeket az Odoo maga kezel, kikerülnek a weboldal blokkolt külső domainjeinek listájáról, hogy a hozzájárulás után betöltődjenek, és ne ürüljenek ki. A többi beágyazott szolgáltatás blokkolva marad, amíg a látogató el nem fogadja a :guilabel:`Funkcionális` sütiket."
+
+#: ../../content/applications/websites/website/tracking/troubleshooting.rst:5
+msgid "Test every integration before you start a campaign, and again after each change to the website, the consent banner, or the checkout. Use the tools below, from the simplest to the most detailed."
+msgstr "Teszteljen minden integrációt egy kampány indítása előtt, és újra a weboldal, a hozzájárulási sáv vagy a pénztár minden módosítása után. Használja az alábbi eszközöket, a legegyszerűbbtől a legrészletesebbig."
+
+#: ../../content/applications/websites/website/tracking/troubleshooting.rst:15
+msgid "Accept the cookies: click :guilabel:`Accept all` in the banner, or open the :ref:`preferences dialog <tracking/consent/customize>` and accept the analytics and marketing cookies. Check the line that appeared in the :ref:`consent log <tracking/consent/log>`."
+msgstr "Fogadja el a sütiket: kattintson az :guilabel:`Összes elfogadása` gombra a sávban, vagy nyissa meg a :ref:`beállítási ablakot <tracking/consent/customize>`, és fogadja el az analitikai és marketingsütiket. Ellenőrizze a :ref:`hozzájárulási naplóban <tracking/consent/log>` megjelent sort."
+
+#: ../../content/applications/websites/website/tracking/troubleshooting.rst:81
+msgid "Is :guilabel:`Cookie Consent` enabled and are the marketing/analytics cookies accepted? Is the :guilabel:`Cookie Policy Version` the one of the cookie you have? Did you select the right website in :guilabel:`Settings of Website`? Is the Google tag or the pixel enabled with a valid ID? Are you logged in as a designer, or in edit mode?"
+msgstr "Engedélyezve van a :guilabel:`Süti-hozzájárulás`, és el vannak fogadva a marketing-/analitikai sütik? A :guilabel:`Sütiszabályzat verziója` megegyezik a meglévő süti verziójával? A megfelelő weboldalt választotta a :guilabel:`Weboldal beállításai` mezőben? A Google-címke vagy a pixel engedélyezve van érvényes azonosítóval? Tervezőként van bejelentkezve, vagy szerkesztő módban van?"

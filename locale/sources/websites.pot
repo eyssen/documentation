@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-11 07:06+0000\n"
+"POT-Creation-Date: 2026-10-13 21:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -757,7 +757,7 @@ msgstr ""
 #: ../../content/applications/websites/ecommerce/connectors.rst:116
 #: ../../content/applications/websites/ecommerce/payments.rst:14
 #: ../../content/applications/websites/website/configuration.rst:5
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:25
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:31
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:10
 #: ../../content/applications/websites/website/store_locator.rst:10
 msgid "Configuration"
@@ -1398,7 +1398,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/performance.rst:35
 #: ../../content/applications/websites/website/configuration/multi_website.rst:167
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:38
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:41
 msgid "Analytics"
 msgstr ""
 
@@ -1544,9 +1544,10 @@ msgstr ""
 #: ../../content/applications/websites/meta/lead_ads.rst:53
 #: ../../content/applications/websites/meta/pixel.rst:21
 #: ../../content/applications/websites/meta/whatsapp.rst:25
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:68
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:130
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:197
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:76
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:201
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:259
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:327
 msgid "Field"
 msgstr ""
 
@@ -1576,9 +1577,10 @@ msgstr ""
 #: ../../content/applications/websites/meta/social.rst:39
 #: ../../content/applications/websites/meta/whatsapp.rst:26
 #: ../../content/applications/websites/website/tracking/connections.rst:26
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:69
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:131
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:198
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:77
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:202
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:260
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:328
 msgid "Description"
 msgstr ""
 
@@ -1812,6 +1814,7 @@ msgid ":guilabel:`Brand`, :guilabel:`MPN`, :guilabel:`Has Unique Identifiers` (u
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/product_feeds.rst:197
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:207
 msgid ":guilabel:`Category`"
 msgstr ""
 
@@ -3719,7 +3722,7 @@ msgid ":guilabel:`Forum`: Build a community space where attendees can ask questi
 msgstr ""
 
 #: ../../content/applications/websites/elearning.rst:202
-#: ../../content/applications/websites/website/tracking/overview.rst:115
+#: ../../content/applications/websites/website/tracking/overview.rst:116
 msgid "Content"
 msgstr ""
 
@@ -4648,6 +4651,7 @@ msgstr ""
 #: ../../content/applications/websites/google/consent_mode.rst:83
 #: ../../content/applications/websites/meta/lead_ads.rst:63
 #: ../../content/applications/websites/meta/social.rst:50
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:215
 msgid ":guilabel:`Website`"
 msgstr ""
 
@@ -4812,7 +4816,7 @@ msgid "Consent mode"
 msgstr ""
 
 #: ../../content/applications/websites/google/consent_mode.rst:5
-msgid "*Google Consent Mode v2* tells the Google tags what the visitor allowed, so that they adapt their behavior. It is required for the audiences and measurement of Google Ads in the European Economic Area. The Google app sends the seven consent signals of Consent Mode v2 and updates them when the visitor makes a choice in the :doc:`cookies bar or consent platform </applications/websites/website/tracking/cookie_consent>`:"
+msgid "*Google Consent Mode v2* tells the Google tags what the visitor allowed, so that they adapt their behavior. It is required for the audiences and measurement of Google Ads in the European Economic Area. The Google app sends the seven consent signals of Consent Mode v2 and updates them when the visitor makes a choice in the :doc:`consent banner or consent platform </applications/websites/website/tracking/cookie_consent>`:"
 msgstr ""
 
 #: ../../content/applications/websites/google/consent_mode.rst:15
@@ -5084,7 +5088,7 @@ msgstr ""
 #: ../../content/applications/websites/google/measurement_protocol.rst:12
 #: ../../content/applications/websites/google/search_console_reviews.rst:18
 #: ../../content/applications/websites/google/search_console_reviews.rst:68
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:53
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:59
 msgid "Set it up"
 msgstr ""
 
@@ -5726,7 +5730,7 @@ msgstr ""
 
 #: ../../content/applications/websites/google/tags.rst:64
 #: ../../content/applications/websites/website/reporting/analytics.rst:130
-#: ../../content/applications/websites/website/tracking/privacy.rst:98
+#: ../../content/applications/websites/website/tracking/privacy.rst:103
 msgid "Google Tag Manager"
 msgstr ""
 
@@ -7302,7 +7306,7 @@ msgid "No cookie consent can be collected at the counter. Enable this setting on
 msgstr ""
 
 #: ../../content/applications/websites/meta/conversions_api.rst:106
-#: ../../content/applications/websites/website/tracking/privacy.rst:95
+#: ../../content/applications/websites/website/tracking/privacy.rst:100
 msgid "Limited Data Use"
 msgstr ""
 
@@ -8295,227 +8299,231 @@ msgstr ""
 msgid "**Cookies** are small text files sent to your device when you visit a website. They are processed and stored by your browser and record visitor information like login details, preferences, and browsing history. **Essential cookies** are necessary for the website to function, while **optional cookies** are used to analyze behavior or display ads."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:10
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:11
+msgid "When the Google app or the Meta app is installed, the cookies bar is replaced by the **cookie consent banner** (:guilabel:`Accept all`, :guilabel:`Reject all`, :guilabel:`Customize`, consent categories, cookie list, and :guilabel:`Cookie settings` link) and its settings replace the :guilabel:`Cookies Bar` setting. See :doc:`/applications/websites/website/tracking/cookie_consent`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:16
 msgid "Data protection laws require notifying visitors about data collection methods and purposes. **Cookies bar** fulfill this obligation by informing visitors on their first visit and allowing them to decide whether to store all or only essential cookies on their device."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:15
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:21
 msgid "Cookies bars are required to obtain visitors' consent for optional cookies only. Consent is not required for essential cookies."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:18
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:24
 msgid "Odoo is compliant with `Google consent mode v2 <https://support.google.com/tagmanager/answer/13695607>`_: the consent state is set to *denied* by default and updated to *granted* or *denied* according to the visitor's choice. In eYssen ERP, the :ref:`Google consent mode (advanced) <cookies-bar/consent-mode-advanced>` module also lets the Google tag load before the choice is made."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:27
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:33
 msgid "To add a cookies bar on your website, go to :menuselection:`Website --> Configuration --> Settings` and enable :guilabel:`Cookies Bar` in the :guilabel:`Privacy` section. This activates :guilabel:`Block tracking 3rd-party services` by default, including social media, video hosting platforms, and Google services. Click :guilabel:`Add domains to the block list` to include other external websites. These services remain blocked on your website until visitors accept optional cookies."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:35
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:41
 msgid "Using third-party cookies without a cookies bar does not prevent them from being triggered. Only the presence of a cookie bar **and** the visitor’s refusal ensure that these cookies are blocked."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:41
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:47
 msgid "Google consent mode (advanced)"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:43
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:49
 msgid "With the cookies bar enabled, the standard behavior is to block the Google tag (`gtag.js`) until the visitor accepts optional cookies, because `googletagmanager.com` and `google-analytics.com` are on the block list of third-party services. As a result, the tag only loads on the **next** page after the visitor accepted. Google Analytics 4 then loses the landing page, the `gclid` parameter of Google Ads and the referrer of the first page, and the visit is reported as *Direct*."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:49
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:55
 msgid "The *Website: Google consent mode (advanced)* module (`eyssen_website_consent_mode`) fixes this by removing these two domains, and only these two, from the block list."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:54
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:60
 msgid "Install the module from :menuselection:`Apps` (search for `eyssen_website_consent_mode`). It has no setting and no menu."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:56
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:62
 msgid "Go to :menuselection:`Website --> Configuration --> Settings`, enable :guilabel:`Cookies Bar` in the :guilabel:`Privacy` section, and enable :guilabel:`Google Analytics` in the :guilabel:`SEO` section with your :guilabel:`Measurement ID` (see :ref:`Google Analytics <analytics/google-analytics>`)."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:60
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:66
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:83
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:139
 #: ../../content/applications/websites/website/configuration/translate.rst:76
 msgid "Click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:63
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:69
 msgid "The module removes the two Google domains from the block list of every website that has a Google Analytics :guilabel:`Measurement ID`. It only has a visible effect when the cookies bar is enabled with :guilabel:`Block tracking 3rd-party services`, which is the default. Websites without a :guilabel:`Measurement ID` keep the standard behavior."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:69
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:75
 msgid "How it behaves"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:70
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:76
 msgid "The Google tag loads on the first page, before the visitor answers the cookies bar. The consent default stays *denied* for analytics and advertising storage, so Google does not set analytics cookies until the visitor accepts."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:73
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:79
 msgid "When the visitor accepts or refuses optional cookies, the cookies bar sends the consent update (*granted* or *denied*) on the **same page**, without a reload."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:75
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:81
 msgid "The landing page, the `gclid` and the referrer of the first page reach Google Analytics 4."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:76
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:82
 msgid "If you added `googletagmanager.com` or `google-analytics.com` yourself with :guilabel:`Add domains to the block list`, they stay blocked."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:80
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:86
 msgid "This is Google's *advanced* consent mode: while consent is denied, Google may receive cookieless pings from the visitor's browser. Check that this fits your data protection requirements and mention it in your :ref:`cookies policy <cookies-bar/policy>`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:85
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:91
 msgid "Check that it works"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:86
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:92
 msgid "Open your website in a private browsing window and open the developer tools of your browser (:kbd:`F12`), :guilabel:`Network` tab."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:89
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:95
 msgid "Reload the page, without answering the cookies bar. A request to `googletagmanager.com/gtag/js` must appear on this first page. Without the module, the script is rendered with the address `about:blank` and no request is made."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:92
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:98
 msgid "Click :guilabel:`I agree` or :guilabel:`Only essentials` in the cookies bar. In the browser console, the `dataLayer` object receives a `consent` `update` entry (*granted* or *denied*) on the same page, without a reload."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:97
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:103
 msgid "The module has no effect on other trackers: the other third-party services of the block list (social networks, video platforms, Google Maps, etc.) are still blocked until the visitor accepts optional cookies."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:104
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:110
 msgid "Cookies policy"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:106
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:112
 msgid "When you enable the cookies bar for your website, Odoo creates the **Cookie Policy** page (`/cookie-policy`) containing a list of cookies set by default, with their purpose and examples."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:115
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:29
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:121
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:31
 msgid "Category"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:116
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:122
 msgid "Role"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:117
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:123
 msgid "Name"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:118
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:124
 msgid "Essential - Session & Security"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:119
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:125
 msgid "Authenticate visitors, protect visitor data and allow the website to deliver the services visitors expects, such as maintaining the content of their cart, or allowing file uploads. The website will not work properly without these cookies."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:122
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:128
 msgid "session_id (Odoo)"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:123
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:129
 msgid "Essential - Preferences"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:124
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:130
 msgid "Remember information about the preferred look or behavior of the website, such as the preferred language or region. The website will continue to function without these cookies, but the visitor’s experience may be affected."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:127
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:133
 msgid "frontend_lang (Odoo)"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:128
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:134
 msgid "Optional - Interaction History"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:129
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:135
 msgid "Collect information about your interactions with the website, the pages you've seen, and any specific marketing campaign that brought you to the website. The website will work without these cookies, but some features or services may not perform optimally."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:132
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:138
 msgid "im_livechat_previous_operator (Odoo), utm_campaign (Odoo), utm_source (Odoo), utm_medium (Odoo)"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:136
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:142
 msgid "Optional - Advertising & Marketing"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:137
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:143
 msgid "Make advertising more engaging to visitors and more valuable to publishers and advertisers, such as providing more relevant ads when you visit other websites that display ads or to improve reporting on ad campaign performance. Note that some third-party services may install additional cookies on your browser in order to identify you."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:141
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:147
 msgid "__gads (Google), __gac (Google)"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:143
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:149
 msgid "Optional - Analytics"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:144
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:150
 msgid "Understand how visitors engage with the website, via Google Analytics. The website will still work without these cookies."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:146
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:152
 msgid "_ga (Google), _gat (Google), _gid (Google), _gac_* (Google)"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:152
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:158
 msgid "It is not possible to let visitors customize or select which optional cookies they want to allow."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:155
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:161
 msgid "You could add a link to this page in your website's footer, for example."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:160
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:166
 msgid "Edit the Cookies policy page"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:162
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:168
 msgid "To access it, click the :guilabel:`Cookie Policy` hyperlink in the cookies bar or open the page from :menuselection:`Website --> Site --> Pages`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:165
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:171
 msgid "To adapt the content of the page according to your needs, click the :guilabel:`Edit` button."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:168
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:174
 msgid "You have to list every cookie you added yourself on the `/cookie-policy` page including their name, role, category and duration."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:172
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:178
 msgid "To check the duration of cookies, use your browser’s developer tools."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:175
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:181
 msgid ":doc:`Pages <../structure/pages>`"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:180
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:186
 msgid "Customization"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:182
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:188
 msgid "To adapt the display of the cookies bar on your website, click :guilabel:`Edit` on the website editor, go to the :guilabel:`Invisible Elements` section at the bottom of the panel, and click :guilabel:`Cookies Bar`. You can modify the :guilabel:`Layout` and :guilabel:`Size` of the cookies bar, and enable :guilabel:`Backdrop` to gray out the page in the background when the cookies bar is displayed on the screen."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:188
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:194
 msgid "Click anywhere in the building block to further customize the appearance of the cookies bar using :guilabel:`Block`, :guilabel:`Column` and/or :guilabel:`Inline Text` customization options."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/cookies_bar.rst:191
+#: ../../content/applications/websites/website/configuration/cookies_bar.rst:197
 msgid "To edit the contents of the cookies bar (i.e., the consent message), click directly in the building block."
 msgstr ""
 
@@ -11190,265 +11198,436 @@ msgid "Cookie consent"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:5
-msgid "Google and Meta may only measure a visitor or show personalized ads to a visitor who agreed. The tracking base therefore extends the :doc:`cookies bar </applications/websites/website/configuration/cookies_bar>` of the website with **consent categories**, remembers the version of your cookie policy, logs every choice as proof of consent, and can hand the consent over to an **external consent management platform** (CMP) instead."
+msgid "Google and Meta may only measure a visitor or show personalized ads to a visitor who agreed. The tracking base therefore replaces the cookies bar of the website with a **consent banner** in the form visitors know from most websites: :guilabel:`Accept all`, :guilabel:`Reject all`, and :guilabel:`Customize` on the first screen, a preferences dialog with one switch per category and the list of the cookies, and a :guilabel:`Cookie settings` link to change or withdraw the choice at any time. It remembers the version of your cookie policy, logs every choice as proof of consent, and can hand the consent over to an **external consent management platform** (CMP) instead."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:11
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:13
 msgid "Every tracking feature checks the consent of the visitor before it loads a script or sends an event."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:14
-msgid "The consent is only requested if the :guilabel:`Cookies Bar` is enabled in the Website settings (or if an external consent platform is used). **Without a cookies bar, the website considers that consent is handled elsewhere, and all categories are treated as granted.**"
-msgstr ""
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:21
-msgid "Consent categories"
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:16
+msgid "The consent is only requested if :guilabel:`Cookie Consent` is enabled in the Website settings. **Without it, the website considers that consent is handled elsewhere, and all categories are treated as granted.**"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:23
-msgid "Visitors can accept or refuse the cookies by category:"
+msgid "Consent categories"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:30
-msgid "Used for"
-msgstr ""
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:31
-msgid "Effect on the Google signals"
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:25
+msgid "Visitors accept or refuse the cookies by category:"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:32
-msgid "Necessary"
+msgid "Used for"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:33
-msgid "Session, cart, language, and the cookie choice itself. Always on; visitors cannot disable it."
+msgid "Effect on the Google signals"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:34
-msgid "Security storage is always granted."
+msgid "Necessary"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:35
-msgid "Functional"
+msgid "Session, cart, language, and the cookie choice itself. Always on; visitors cannot disable it."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:36
-msgid "Embedded content such as videos and maps, and remembered preferences."
+msgid "Security storage is always granted."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:37
-msgid "Functionality storage and personalization storage."
+msgid "Functional"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:39
-msgid "Visit statistics: Google Analytics, Search Console links, GA4 Measurement Protocol."
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:38
+msgid "Embedded content such as videos and maps, the live chat, the campaign cookies (UTM) and features that remember choices, such as recently viewed products."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:40
-msgid "Analytics storage."
-msgstr ""
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:41
-msgid "Marketing"
+msgid "Functionality storage and personalization storage."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:42
-msgid "Advertising: Google Ads, Meta Pixel, Conversions API, remarketing, Customer Match."
+msgid "Visit statistics: Google Analytics, Search Console links, GA4 Measurement Protocol."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:43
-msgid "Ad storage, ad user data, and ad personalization."
+msgid "Analytics storage."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:44
+msgid "Marketing"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:45
-msgid "No tracking script of an unaccepted category is loaded, and no server event of an unaccepted category is sent."
+msgid "Advertising: Google Ads, Meta Pixel, Conversions API, remarketing, Customer Match."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:49
-msgid "Configure the cookies bar"
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:46
+msgid "Ad storage, ad user data, and ad personalization."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:51
-msgid "Go to :menuselection:`Website --> Configuration --> Settings`. In the privacy section, enable :guilabel:`Cookies Bar`. Right below it, the :guilabel:`Consent Categories` setting groups the options of this page:"
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:48
+msgid "No tracking script of an unaccepted category is loaded, and no server event of an unaccepted category is sent. The optional cookies of the website itself (embedded content, campaign and live chat cookies) follow the :guilabel:`Functional` category."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:70
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:55
+msgid "Configure the consent banner"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:57
+msgid "Go to :menuselection:`Website --> Configuration --> Settings` and enable :guilabel:`Cookie Consent` in the :guilabel:`Privacy` section. This setting replaces the standard :guilabel:`Cookies Bar` setting of the website, which is no longer shown."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:78
 msgid ":guilabel:`Consent Source`"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:71
-msgid ":guilabel:`Website cookies bar` (default): visitors choose in the cookies bar of the website. :guilabel:`External consent platform (CMP)`: the cookies bar is replaced by a consent platform such as Cookiebot, which provides the consent state to the trackers. See :ref:`tracking/consent/cmp`."
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:79
+msgid ":guilabel:`Consent banner of this website` (default): visitors choose in the banner of the website. :guilabel:`External consent platform (CMP)`: the banner is replaced by a consent platform such as Cookiebot, which provides the consent state to the trackers. See :ref:`tracking/consent/cmp`."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:75
-msgid ":guilabel:`Consent Categories`"
-msgstr ""
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:76
-msgid "Shows a :guilabel:`Customize` button in the cookies bar so that visitors can choose the functional, analytics, and marketing cookies one by one. Only available with the website cookies bar. If disabled, the bar offers the standard choice between all optional cookies and essential cookies only."
-msgstr ""
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:80
-msgid ":guilabel:`Cookie Policy Version`"
-msgstr ""
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:81
-msgid "A short text, `1` by default. **Change it each time your cookie policy changes:** the visitors who consented to an older version are asked again and nothing is granted until they answer."
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:83
+msgid ":guilabel:`Banner Layout`"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:84
-msgid ":guilabel:`Log Consents`"
+msgid ":guilabel:`Bar at the bottom` (default), :guilabel:`Box, bottom left`, :guilabel:`Box, bottom right`, or :guilabel:`Popup in the center` (the page is dimmed until the visitor chooses). On the cookie policy page, the popup is shown as a bar so that the policy stays readable."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:85
-msgid "Keeps a record of every choice (categories, policy version, date) as proof of consent. Enabled by default. See :ref:`tracking/consent/log`."
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:87
+msgid ":guilabel:`Banner Title`, :guilabel:`Banner Text`"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:88
+msgid "Your own title and text. Leave them empty to use the default ones (*We value your privacy* and a short explanation), which are translated into the languages of the website. Your own texts can be translated with the translation button of the fields."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:91
-msgid "The Customize panel"
+msgid ":guilabel:`Cookie Policy Page`"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:92
+msgid "The page linked from the banner and the dialog. Leave it empty to use `/cookie-policy`."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:93
-msgid "With :guilabel:`Consent Categories` enabled, the cookies bar shows a :guilabel:`Customize` button next to the usual buttons. It opens a panel with one switch per category: :guilabel:`Necessary` (always on), :guilabel:`Functional`, :guilabel:`Analytics`, and :guilabel:`Marketing`. A visitor chooses the categories and clicks :guilabel:`Save my choices`. The choice is stored in the cookie of the cookies bar, together with the policy version."
+msgid ":guilabel:`Floating Settings Button`"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:94
+msgid "Once the visitor has chosen, a small round cookie button stays in the bottom left corner of the page. It opens the preferences dialog. Enabled by default. A :guilabel:`Cookie settings` link is added to the footer in any case."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:97
+msgid ":guilabel:`Ask Again After (months)`"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:98
+msgid "How long the choice of a visitor is kept. `12` months by default; after this delay the banner is shown again."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:100
+msgid ":guilabel:`Cookie Policy Version`"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:101
+msgid "A short text, `1` by default. **Change it each time your cookie policy changes:** the visitors who consented to another version are asked again and nothing is granted until they answer."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:104
+msgid ":guilabel:`Log Consents`"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:105
+msgid "Keeps a record of every choice (categories, policy version, date) as proof of consent. Enabled by default. See :ref:`tracking/consent/log`."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:107
+msgid ":guilabel:`Block Third-Party Content`"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:108
-msgid "A visitor who clicks the standard buttons instead gets the matching shortcut: accepting all optional cookies grants every category, and keeping only the essential cookies refuses functional, analytics, and marketing."
+msgid "Keeps embedded videos, maps, and other third-party content blocked until the visitor accepts the functional cookies. In their place, visitors see a notice; clicking it opens the preferences dialog. Click :guilabel:`Blocked Third-Party Domains` to add domains to the list."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:113
-msgid "Visitors can change their mind at any time: the cookies bar is shown again when the visitor removes the cookie of the website in the browser, or when you change the :guilabel:`Cookie Policy Version`."
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:112
+msgid "The links below the fields open the :ref:`cookie list <tracking/consent/cookie_list>`, the :ref:`consent log <tracking/consent/log>`, the list of blocked domains, and recreate the :ref:`cookie policy page <tracking/consent/policy_page>`."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:120
-msgid "External consent platform (CMP)"
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:117
+msgid "The banner takes the colors, fonts and buttons of your website theme. It cannot be edited in the website editor: change its texts in the settings."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:122
-msgid "If you already use a consent management platform, let it collect the consent and hand the result to Odoo. Set :guilabel:`Consent Source` to :guilabel:`External consent platform (CMP)`: the cookies bar of the website is hidden, and the following fields appear."
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:123
+msgid "What visitors see"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:126
+msgid "The banner"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:128
+msgid "A visitor who has not chosen yet sees the banner with three buttons of the same size: :guilabel:`Customize`, :guilabel:`Reject all`, and :guilabel:`Accept all`, and a link to the cookie policy. Rejecting is as easy as accepting, as the European data protection authorities require."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:132
-msgid ":guilabel:`Consent Platform`"
+msgid ":guilabel:`Accept all` grants every category."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:133
-msgid ":guilabel:`Cookiebot`, :guilabel:`Usercentrics`, :guilabel:`Complianz`, or :guilabel:`Custom (JavaScript event)`."
+msgid ":guilabel:`Reject all` keeps the necessary cookies only."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:135
-msgid ":guilabel:`CMP Script`"
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:134
+msgid ":guilabel:`Customize` opens the preferences dialog."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:136
-msgid "The script tag(s) of the platform, copied from its administration. They are inserted at the top of the head of every page. Leave it empty if the platform is loaded another way, for example through Google Tag Manager."
+msgid "Until the visitor answers, nothing optional is used: continuing to browse or scrolling does not count as consent."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:140
-msgid "Odoo reads the choice of the visitor from the platform and maps its categories to the four categories above (for example, the *Preferences* category of Cookiebot to :guilabel:`Functional`, *Statistics* to :guilabel:`Analytics`, and *Marketing* to :guilabel:`Marketing`). Each time the visitor changes the choice, the tracking tags are updated."
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:150
+msgid "The preferences dialog"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:146
-msgid "Custom platform"
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:152
+msgid "The dialog lists the categories: :guilabel:`Necessary` (always on), :guilabel:`Functional`, :guilabel:`Analytics`, and :guilabel:`Marketing`, each with a switch, a short description and, when the visitor unfolds it, the cookies of the category with their provider, duration, and purpose. The visitor clicks :guilabel:`Save my choices`, or :guilabel:`Reject all` or :guilabel:`Accept all`."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:147
-msgid "Choose :guilabel:`Custom (JavaScript event)` if your platform is not in the list. From your consent tool, dispatch this browser event whenever the visitor makes or changes a choice:"
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:166
+msgid "The choice is stored in the consent cookie of the website, with the policy version and the date."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:157
-msgid "With a consent platform, the Google tags load at once with all the signals denied (in the default *Advanced* :doc:`consent mode </applications/websites/google/consent_mode>`), and the platform's choice updates them. Set :guilabel:`Wait for Update (ms)` in the Google settings if your platform needs a moment to answer."
-msgstr ""
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:165
-msgid "Consent log"
-msgstr ""
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:167
-msgid "Go to :menuselection:`Website --> Configuration --> Tracking & Consent --> Consent Log` (or click :guilabel:`Consent Log` in the Website settings). Every choice made in the cookies bar or in the consent platform is a line, which cannot be edited:"
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:169
+msgid "Change or withdraw the choice"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:171
-msgid ":guilabel:`Date`, :guilabel:`Website` (with several websites), and the :guilabel:`Consent ID`, a random identifier stored in the visitor's consent cookie."
+msgid "Visitors can open the preferences dialog again at any time:"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:173
-msgid ":guilabel:`Source`: :guilabel:`Cookies bar` or :guilabel:`Consent platform`."
-msgstr ""
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:174
-msgid ":guilabel:`Functional`, :guilabel:`Analytics`, :guilabel:`Marketing`: what the visitor accepted."
+msgid "with the floating cookie button in the bottom left corner (if :guilabel:`Floating Settings Button` is enabled);"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:175
-msgid ":guilabel:`Policy Version`, the :guilabel:`Page` where the choice was made, the truncated IP address (the last part is removed), and the contact if the visitor was logged in."
+msgid "with the :guilabel:`Cookie policy · Cookie settings` links added to the copyright line of the footer;"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:177
+msgid "with the :guilabel:`Change my cookie settings` button of the cookie policy page;"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:178
-msgid "Use the filters :guilabel:`Marketing Granted`, :guilabel:`Analytics Granted`, and :guilabel:`All Refused`, and group the lines by :guilabel:`Policy Version` or :guilabel:`Day`. To answer a data subject's request, search by :guilabel:`Consent ID` or contact."
+msgid "by clicking the notice shown in place of blocked embedded content."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:182
-msgid "Consent log lines are deleted automatically after 36 months. A choice that is identical to the previous choice of the same visitor session is not logged again."
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:180
+msgid "When a visitor withdraws a category, the cookies of that category listed in the :ref:`cookie list <tracking/consent/cookie_list>` are deleted from the browser, and the tracking tags stop using them."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:188
-msgid "Retention and debug settings"
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:185
+msgid "To add your own link to the cookie settings, for example in a footer column or a menu, point it to `#cookie-settings`."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:190
-msgid "The :guilabel:`Tracking` block of :menuselection:`Website --> Configuration --> Settings` contains the :guilabel:`Tracking Debug Mode` setting and the retention options:"
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:191
+msgid "Cookie list"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:199
-msgid ":guilabel:`Tracking Debug Mode`"
-msgstr ""
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:200
-msgid "Logs every tracking event and the data sent to each provider in the **browser console**, and in the server log. Disable it in production."
-msgstr ""
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:202
-msgid ":guilabel:`Customer Name Order`"
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:193
+msgid "Go to :menuselection:`Website --> Configuration --> Tracking & Consent --> Cookies` (or click :guilabel:`Cookie List` in the settings). The list feeds the preferences dialog and the cookie policy page."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:203
-msgid "How the name of a customer is split into first and last name when sent to the advertising platforms: :guilabel:`First name, Last name` or :guilabel:`Last name, First name` (useful for Hungarian names, for instance)."
+msgid ":guilabel:`Cookie`"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:204
+msgid "The name of the cookie. Use `*` for names that vary, for example `_ga_*`."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:205
+msgid ":guilabel:`Provider`"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:206
-msgid ":guilabel:`Keep Sent Events (days)`"
+msgid "Who sets the cookie: *This website* or a third party, such as *Google Analytics*."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:207
-msgid "Sent, failed, and discarded :doc:`server events <server_events>` are deleted after this delay. `30` days by default. Events that are still waiting to be sent are never deleted."
-msgstr ""
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:209
-msgid ":guilabel:`Keep Visitor Identifiers (days)`"
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:208
+msgid ":guilabel:`Necessary`, :guilabel:`Functional`, :guilabel:`Analytics`, or :guilabel:`Marketing`."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:210
-msgid "The IP address, the browser data, and the ad click identifiers stored on orders and leads are cleared after this delay. `90` days by default, which is the longest period during which the ad platforms accept an offline conversion for a click."
+msgid ":guilabel:`Duration`"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:211
+msgid "How long the cookie is kept, for example *2 years*. The duration of the consent cookie follows :guilabel:`Ask Again After (months)`."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:213
+msgid ":guilabel:`Purpose`"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/cookie_consent.rst:214
+msgid "What the cookie is used for, in a sentence visitors understand."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:216
+msgid "Leave it empty to list the cookie on every website."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:218
+msgid "The cookies of the website and of the installed features are listed from the start: the session, language and consent cookies, the campaign cookies, the live chat cookies (with a live chat channel on the website), the recently viewed products (eCommerce), Google Analytics (`_ga`, `_ga_*`), Google Ads (`_gcl_au`, `_gcl_aw`), and the Meta Pixel (`_fbp`, `_fbc`). A cookie of a feature is only shown while the feature is enabled on the website; with Google Tag Manager, the Google Analytics and Google Ads cookies are both listed."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:225
+msgid "Add the cookies of the other services you embed in your pages (a video platform, a chat, a booking widget) with their category, so that visitors see them and they are deleted when the category is withdrawn. All the texts can be translated."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:232
+msgid "Cookie policy page"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:234
+msgid "When you enable :guilabel:`Cookie Consent`, a **Cookie Policy** page is created at `/cookie-policy`. Its first part explains what cookies are and how visitors choose; you can edit it in the website editor like any page. Below it, the page lists the cookies of the website by category, from the :ref:`cookie list <tracking/consent/cookie_list>`, and shows a :guilabel:`Change my cookie settings` button. This part is always up to date and is not editable."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:240
+msgid "If the website already had a cookie policy page, click :guilabel:`Recreate Cookie Policy Page` in the settings to replace it with the new one. The changes made to the old page are lost."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:244
+msgid "If your cookie policy lives on another page, set it in :guilabel:`Cookie Policy Page`."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:249
+msgid "External consent platform (CMP)"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:251
+msgid "If you already use a consent management platform, let it collect the consent and hand the result to Odoo. Set :guilabel:`Consent Source` to :guilabel:`External consent platform (CMP)`: the consent banner of the website is hidden, and the following fields appear."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:261
+msgid ":guilabel:`Consent Platform`"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:262
+msgid ":guilabel:`Cookiebot`, :guilabel:`Usercentrics`, :guilabel:`Complianz`, or :guilabel:`Custom (JavaScript event)`."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:264
+msgid ":guilabel:`CMP Script`"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:265
+msgid "The script tag(s) of the platform, copied from its administration. They are inserted at the top of the head of every page. Leave it empty if the platform is loaded another way, for example through Google Tag Manager."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:269
+msgid "Odoo reads the choice of the visitor from the platform and maps its categories to the four categories above (for example, the *Preferences* category of Cookiebot to :guilabel:`Functional`, *Statistics* to :guilabel:`Analytics`, and *Marketing* to :guilabel:`Marketing`). Each time the visitor changes the choice, the tracking tags are updated, and embedded content follows the functional choice."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:276
+msgid "Custom platform"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:277
+msgid "Choose :guilabel:`Custom (JavaScript event)` if your platform is not in the list. From your consent tool, dispatch this browser event whenever the visitor makes or changes a choice:"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:287
+msgid "With a consent platform, the Google tags load at once with all the signals denied (in the default *Advanced* :doc:`consent mode </applications/websites/google/consent_mode>`), and the platform's choice updates them. Set :guilabel:`Wait for Update (ms)` in the Google settings if your platform needs a moment to answer."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:295
+msgid "Consent log"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:297
+msgid "Go to :menuselection:`Website --> Configuration --> Tracking & Consent --> Consent Log` (or click :guilabel:`Consent Log` in the Website settings). Every choice made in the consent banner or in the consent platform is a line, which cannot be edited:"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:301
+msgid ":guilabel:`Date`, :guilabel:`Website` (with several websites), and the :guilabel:`Consent ID`, a random identifier stored in the visitor's consent cookie."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:303
+msgid ":guilabel:`Source`: :guilabel:`Consent banner` or :guilabel:`Consent platform`."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:304
+msgid ":guilabel:`Functional`, :guilabel:`Analytics`, :guilabel:`Marketing`: what the visitor accepted."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:305
+msgid ":guilabel:`Policy Version`, the :guilabel:`Page` where the choice was made, the truncated IP address (the last part is removed), and the contact if the visitor was logged in."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:308
+msgid "Use the filters :guilabel:`Marketing Granted`, :guilabel:`Analytics Granted`, and :guilabel:`All Refused`, and group the lines by :guilabel:`Policy Version` or :guilabel:`Day`. To answer a data subject's request, search by :guilabel:`Consent ID` or contact."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:312
+msgid "Consent log lines are deleted automatically after 36 months. A choice that is identical to the previous choice of the same visitor session is not logged again."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:318
+msgid "Retention and debug settings"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:320
+msgid "The :guilabel:`Tracking` block of :menuselection:`Website --> Configuration --> Settings` contains the :guilabel:`Tracking Debug Mode` setting and the retention options:"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:329
+msgid ":guilabel:`Tracking Debug Mode`"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:330
+msgid "Logs every tracking event and the data sent to each provider in the **browser console**, and in the server log. Disable it in production."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:332
+msgid ":guilabel:`Customer Name Order`"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:333
+msgid "How the name of a customer is split into first and last name when sent to the advertising platforms: :guilabel:`First name, Last name` or :guilabel:`Last name, First name` (useful for Hungarian names, for instance)."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:336
+msgid ":guilabel:`Keep Sent Events (days)`"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:337
+msgid "Sent, failed, and discarded :doc:`server events <server_events>` are deleted after this delay. `30` days by default. Events that are still waiting to be sent are never deleted."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:339
+msgid ":guilabel:`Keep Visitor Identifiers (days)`"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:340
+msgid "The IP address, the browser data, and the ad click identifiers stored on orders and leads are cleared after this delay. `90` days by default, which is the longest period during which the ad platforms accept an offline conversion for a click."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:344
 msgid "A scheduled action runs every day to apply these delays."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:217
-#: ../../content/applications/websites/website/tracking/overview.rst:155
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:347
+#: ../../content/applications/websites/website/tracking/overview.rst:156
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:110
 msgid ":doc:`privacy`"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:218
-#: ../../content/applications/websites/website/tracking/privacy.rst:107
-msgid ":doc:`/applications/websites/website/configuration/cookies_bar`"
-msgstr ""
-
-#: ../../content/applications/websites/website/tracking/cookie_consent.rst:219
+#: ../../content/applications/websites/website/tracking/cookie_consent.rst:348
 msgid ":doc:`/applications/websites/google/consent_mode`"
 msgstr ""
 
@@ -11525,230 +11704,230 @@ msgid "the Google or the Meta app is installed"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/overview.rst:56
-msgid "The shared base: the consent categories of the cookies bar, the :guilabel:`Tracking` block of the Website settings, the :guilabel:`Tracking & Consent` menu (server events, consent log, connections), and the click identifiers stored on orders and leads."
-msgstr ""
-
-#: ../../content/applications/websites/website/tracking/overview.rst:59
-msgid "*Website Tracking for eCommerce*"
+msgid "The shared base: the cookie consent banner that replaces the cookies bar, the :guilabel:`Tracking` block of the Website settings, the :guilabel:`Tracking & Consent` menu (server events, consent log, cookies, connections), and the click identifiers stored on orders and leads."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/overview.rst:60
-msgid "the shared base and eCommerce are installed"
+msgid "*Website Tracking for eCommerce*"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/overview.rst:61
+msgid "the shared base and eCommerce are installed"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/overview.rst:62
 msgid "The eCommerce events (product views, cart, checkout, purchase, refund) and the :ref:`eCommerce tracking settings <ecommerce/tracking>`."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:63
+#: ../../content/applications/websites/website/tracking/overview.rst:64
 msgid "*Website Tracking for CRM*"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:64
+#: ../../content/applications/websites/website/tracking/overview.rst:65
 msgid "the shared base and the Website CRM forms are installed"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:65
+#: ../../content/applications/websites/website/tracking/overview.rst:66
 msgid "The lead events of website forms and the :doc:`lead stage rules </applications/sales/crm/optimize/lead_tracking>` (offline conversions)."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:67
+#: ../../content/applications/websites/website/tracking/overview.rst:68
 msgid "*Website Tracking for Point of Sale*"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:68
+#: ../../content/applications/websites/website/tracking/overview.rst:69
 msgid "the shared base and Point of Sale are installed"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:69
+#: ../../content/applications/websites/website/tracking/overview.rst:70
 msgid "The :doc:`Report Store Sales </applications/sales/point_of_sale/store_sales_tracking>` setting."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:71
+#: ../../content/applications/websites/website/tracking/overview.rst:72
 msgid "*eCommerce Product Feeds*"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:72
+#: ../../content/applications/websites/website/tracking/overview.rst:73
 msgid "Google for eCommerce or Meta Catalog for eCommerce is installed"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:73
+#: ../../content/applications/websites/website/tracking/overview.rst:74
 msgid "The :doc:`product feeds </applications/websites/ecommerce/product_feeds>` and the :guilabel:`Marketing` tab of the products."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:75
+#: ../../content/applications/websites/website/tracking/overview.rst:76
 msgid "*eCommerce Product Feeds - Stock*"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:76
+#: ../../content/applications/websites/website/tracking/overview.rst:77
 msgid "product feeds and eCommerce stock management are installed"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:77
+#: ../../content/applications/websites/website/tracking/overview.rst:78
 msgid "The stock quantities and the availability in the product feeds."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:78
+#: ../../content/applications/websites/website/tracking/overview.rst:79
 msgid "*Google for eCommerce*"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:79
+#: ../../content/applications/websites/website/tracking/overview.rst:80
 msgid "the Google app and the eCommerce tracking are installed"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:80
+#: ../../content/applications/websites/website/tracking/overview.rst:81
 msgid ":doc:`Merchant Center </applications/websites/google/merchant_center>`, Google Customer Reviews, :doc:`offline purchase conversions and Customer Match </applications/websites/google/offline_conversions>`."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:82
+#: ../../content/applications/websites/website/tracking/overview.rst:83
 msgid "*Google for CRM*"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:83
+#: ../../content/applications/websites/website/tracking/overview.rst:84
 msgid "the Google app and the CRM tracking are installed"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:84
+#: ../../content/applications/websites/website/tracking/overview.rst:85
 msgid "The :doc:`Google Ads lead form webhook </applications/websites/google/lead_forms>` and the Google Ads conversion action on the lead stage rules."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:86
+#: ../../content/applications/websites/website/tracking/overview.rst:87
 msgid "*Meta Catalog for eCommerce*"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:87
+#: ../../content/applications/websites/website/tracking/overview.rst:88
 msgid "the Meta app and the eCommerce tracking are installed"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:88
+#: ../../content/applications/websites/website/tracking/overview.rst:89
 msgid "The :doc:`Meta catalog </applications/websites/meta/catalog>` feed and real-time updates."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:89
+#: ../../content/applications/websites/website/tracking/overview.rst:90
 msgid "*Meta Lead Ads and Conversion Leads for CRM*"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:90
+#: ../../content/applications/websites/website/tracking/overview.rst:91
 msgid "the Meta app and the CRM tracking are installed"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:91
+#: ../../content/applications/websites/website/tracking/overview.rst:92
 msgid ":doc:`Lead Ads and Conversion Leads </applications/websites/meta/lead_ads>`."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:93
+#: ../../content/applications/websites/website/tracking/overview.rst:94
 msgid "Two further modules are **not** installed automatically because they change how your company works every day. Install them from :menuselection:`Apps` if you need them:"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:96
+#: ../../content/applications/websites/website/tracking/overview.rst:97
 msgid "*Meta Social: Facebook & Instagram Inbox and Posts*: :doc:`Messenger and Instagram messages and posts </applications/websites/meta/social>`."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:98
+#: ../../content/applications/websites/website/tracking/overview.rst:99
 msgid "*WhatsApp (Meta Cloud API)*: :doc:`WhatsApp messages and templates </applications/websites/meta/whatsapp>`."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:101
+#: ../../content/applications/websites/website/tracking/overview.rst:102
 msgid "The *Tracking Broker* is a different kind of module: it is installed only on the **central** database of a company that offers the connection to Google and Meta as a service to several databases. See :doc:`/applications/general/tracking_broker`."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:108
+#: ../../content/applications/websites/website/tracking/overview.rst:109
 msgid "Where to find the settings"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:114
+#: ../../content/applications/websites/website/tracking/overview.rst:115
 msgid "Menu"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:116
+#: ../../content/applications/websites/website/tracking/overview.rst:117
 msgid ":menuselection:`Website --> Configuration --> Settings`"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:117
-msgid ":guilabel:`Consent Categories` (privacy section) and the :guilabel:`Tracking` block: debug mode, retention, :guilabel:`Connection Broker`, :guilabel:`eCommerce Tracking`, :guilabel:`Lead Tracking`."
-msgstr ""
-
-#: ../../content/applications/websites/website/tracking/overview.rst:120
-msgid ":menuselection:`Website --> Configuration --> Tracking & Consent`"
+#: ../../content/applications/websites/website/tracking/overview.rst:118
+msgid ":guilabel:`Cookie Consent` (privacy section) and the :guilabel:`Tracking` block: debug mode, retention, :guilabel:`Connection Broker`, :guilabel:`eCommerce Tracking`, :guilabel:`Lead Tracking`."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/overview.rst:121
-msgid ":guilabel:`Server Events`, :guilabel:`Consent Log`, and :guilabel:`Connections`."
+msgid ":menuselection:`Website --> Configuration --> Tracking & Consent`"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/overview.rst:122
-msgid ":menuselection:`Google --> Configuration --> Settings`"
+msgid ":guilabel:`Server Events`, :guilabel:`Consent Log`, and :guilabel:`Connections`."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/overview.rst:123
-msgid "All the settings of the Google app."
+msgid ":menuselection:`Google --> Configuration --> Settings`"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/overview.rst:124
-msgid ":menuselection:`Meta --> Configuration --> Settings`"
+msgid "All the settings of the Google app."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/overview.rst:125
-msgid "All the settings of the Meta app."
+msgid ":menuselection:`Meta --> Configuration --> Settings`"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/overview.rst:126
-msgid ":menuselection:`Website --> eCommerce --> Product Feeds`"
+msgid "All the settings of the Meta app."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/overview.rst:127
-msgid "The product feeds."
+msgid ":menuselection:`Website --> eCommerce --> Product Feeds`"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/overview.rst:128
-msgid ":menuselection:`CRM --> Configuration --> Lead Tracking Rules`"
+msgid "The product feeds."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/overview.rst:129
-msgid "The lead stage rules."
+msgid ":menuselection:`CRM --> Configuration --> Lead Tracking Rules`"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/overview.rst:130
-msgid ":menuselection:`Point of Sale --> Configuration --> Settings`"
+msgid "The lead stage rules."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/overview.rst:131
+msgid ":menuselection:`Point of Sale --> Configuration --> Settings`"
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/overview.rst:132
 msgid ":guilabel:`Report Store Sales`."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:133
+#: ../../content/applications/websites/website/tracking/overview.rst:134
 msgid "The settings of the Google and Meta apps apply to **one website**. If your database has several websites, select the website in the :guilabel:`Settings of Website` field at the top of the settings page before changing anything."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:138
+#: ../../content/applications/websites/website/tracking/overview.rst:139
 msgid "The menus of the Google and Meta apps are available to the users of the *Website* application who have the *Designer* access right. The connections, the secrets, and the webhooks can only be changed by an administrator (*Settings* access right)."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:143
+#: ../../content/applications/websites/website/tracking/overview.rst:144
 msgid "Getting started"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:145
-msgid "Enable the :guilabel:`Cookies Bar` in :menuselection:`Website --> Configuration --> Settings` and choose how the consent is collected, as described in :doc:`cookie_consent`."
-msgstr ""
-
-#: ../../content/applications/websites/website/tracking/overview.rst:147
-msgid "Install the Google app, the Meta app, or both."
+#: ../../content/applications/websites/website/tracking/overview.rst:146
+msgid "Enable :guilabel:`Cookie Consent` in :menuselection:`Website --> Configuration --> Settings` and choose how the consent is collected, as described in :doc:`cookie_consent`."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/overview.rst:148
+msgid "Install the Google app, the Meta app, or both."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/overview.rst:149
 msgid "Enter the identifiers of your accounts (measurement ID, container ID, pixel ID…) in the settings of the app. These identifiers only make the browser tags work: no connection is needed."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:150
+#: ../../content/applications/websites/website/tracking/overview.rst:151
 msgid "For the features that use the platform APIs (Merchant Center, offline conversions, Lead Ads, catalog, Search Console, Business Profile, WhatsApp), :doc:`connect your account <connections>`."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:152
+#: ../../content/applications/websites/website/tracking/overview.rst:153
 msgid ":doc:`Test <troubleshooting>` that the events arrive."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/overview.rst:156
+#: ../../content/applications/websites/website/tracking/overview.rst:157
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:109
 msgid ":doc:`server_events`"
 msgstr ""
@@ -11770,150 +11949,158 @@ msgid "A tracking script (Google tag, Google Tag Manager, Meta Pixel) is loaded,
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/privacy.rst:16
-msgid "Without a cookies bar and without an external consent platform, all categories are considered granted: enable one of them."
+msgid "Without the consent banner and without an external consent platform, all categories are considered granted: enable one of them."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/privacy.rst:18
-msgid "The consent state is checked again on every page. Visitors who consented to an older :guilabel:`Cookie Policy Version` are asked again."
+msgid "The consent state is checked again on every page. Visitors who consented to another :guilabel:`Cookie Policy Version`, or longer ago than :guilabel:`Ask Again After (months)`, are asked again."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:20
+#: ../../content/applications/websites/website/tracking/privacy.rst:21
+msgid "Rejecting is as easy as accepting: the banner shows :guilabel:`Reject all` next to :guilabel:`Accept all`, with the same look, and nothing is pre-selected in the preferences dialog."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/privacy.rst:23
+msgid "Visitors can change or withdraw their choice at any time with the :guilabel:`Cookie settings` link or the floating cookie button. The cookies of a withdrawn category are deleted."
+msgstr ""
+
+#: ../../content/applications/websites/website/tracking/privacy.rst:25
 msgid "No tracking is done in the website editor, in the translation mode, or for the website designers while they edit the website."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:22
+#: ../../content/applications/websites/website/tracking/privacy.rst:27
 msgid "With the Google :doc:`consent mode </applications/websites/google/consent_mode>` in *Advanced* mode, the Google tags load before the answer with every signal denied and send **cookieless pings**, which Google uses to model conversions. In *Basic* mode, nothing is loaded before consent. With :guilabel:`Load Before Consent`, the Meta Pixel does the same with its consent revoked: enable it only if your legal basis allows it."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:29
+#: ../../content/applications/websites/website/tracking/privacy.rst:34
 msgid "What is sent"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:35
+#: ../../content/applications/websites/website/tracking/privacy.rst:40
 msgid "Data"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:36
+#: ../../content/applications/websites/website/tracking/privacy.rst:41
 msgid "Where it goes and how"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:37
+#: ../../content/applications/websites/website/tracking/privacy.rst:42
 msgid "Page views, product views, cart, checkout steps"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:38
+#: ../../content/applications/websites/website/tracking/privacy.rst:43
 msgid "From the browser, to Google (gtag or the Google Tag Manager data layer) and to Meta (pixel), with the product identifier, name, price, and quantity."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:40
+#: ../../content/applications/websites/website/tracking/privacy.rst:45
 msgid "Purchases, refunds, leads, sign-ups"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:41
+#: ../../content/applications/websites/website/tracking/privacy.rst:46
 msgid "From the browser and/or from the server. The same :guilabel:`Event ID` is used on both sides so that the platform counts the event once."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:43
+#: ../../content/applications/websites/website/tracking/privacy.rst:48
 msgid "Customer data (email, phone, name, address)"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:44
+#: ../../content/applications/websites/website/tracking/privacy.rst:49
 msgid "Only for :guilabel:`Enhanced Conversions`, :guilabel:`Advanced Matching`, the Conversions API, Customer Match, and offline conversions. It is **normalized (trimmed, lowercased, phone numbers in international format) and hashed with SHA-256** before leaving the server; Odoo never sends the email address or the phone number in clear text. Enhanced conversions and advanced matching also require marketing consent."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:49
+#: ../../content/applications/websites/website/tracking/privacy.rst:54
 msgid "Customer identifier"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:50
+#: ../../content/applications/websites/website/tracking/privacy.rst:55
 msgid "The :guilabel:`GA4 User ID` is a keyed hash of the customer, never the email address. The Meta external identifier is hashed."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:52
+#: ../../content/applications/websites/website/tracking/privacy.rst:57
 msgid "Browser data"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:53
+#: ../../content/applications/websites/website/tracking/privacy.rst:58
 msgid "The Conversions API requires the **IP address and the user agent** of the visitor, and the Meta identifiers `fbp` and `fbc`: they are sent as they are, as Meta requires. The GA4 client and session identifiers and the Google click identifiers (`gclid`, `gbraid`, `wbraid`) are sent with the server events of Google."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:57
+#: ../../content/applications/websites/website/tracking/privacy.rst:62
 msgid "Customer lists"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:58
+#: ../../content/applications/websites/website/tracking/privacy.rst:63
 msgid ":guilabel:`Customer Match` sends hashed email addresses, phone numbers, and addresses of the contacts selected by the filter, and removes the contacts that leave it."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:60
+#: ../../content/applications/websites/website/tracking/privacy.rst:65
 msgid "Never sent"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:61
+#: ../../content/applications/websites/website/tracking/privacy.rst:66
 msgid "Passwords, payment card data, and bank details are not part of any event."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:64
+#: ../../content/applications/websites/website/tracking/privacy.rst:69
 msgid "Data stored in Odoo"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:66
+#: ../../content/applications/websites/website/tracking/privacy.rst:71
 msgid "**Orders and leads** created from a tracked visit store the Google and Meta click identifiers, the GA4 client identifier, the IP address, the user agent, and the consent state at the time (in the :guilabel:`Ad Tracking` tab, visible in developer mode). They are needed for the offline conversions and are **cleared after** :guilabel:`Keep Visitor Identifiers (days)` (90 days by default). The consent snapshot is kept."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:71
+#: ../../content/applications/websites/website/tracking/privacy.rst:76
 msgid "**Server events** keep a copy of what was sent for :guilabel:`Keep Sent Events (days)` (30 days by default)."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:73
+#: ../../content/applications/websites/website/tracking/privacy.rst:78
 msgid "The **consent log** keeps the choices for 36 months, with a truncated IP address (the last part is removed)."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:77
+#: ../../content/applications/websites/website/tracking/privacy.rst:82
 msgid "Special cases"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:83
+#: ../../content/applications/websites/website/tracking/privacy.rst:88
 msgid "Store sales (point of sale)"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:80
+#: ../../content/applications/websites/website/tracking/privacy.rst:85
 msgid "No cookie consent can be collected at the counter. Reporting store purchases to Google (Measurement Protocol) or Meta (Conversions API) is a separate setting for each provider and must have a legal basis that you determine. It only concerns customers recorded on the order with an email address or a phone number."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:87
+#: ../../content/applications/websites/website/tracking/privacy.rst:92
 msgid "Lead Ads"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:86
+#: ../../content/applications/websites/website/tracking/privacy.rst:91
 msgid "The person who fills in a Meta lead form gave the consent in the Meta form. The lead events are reported to Meta with the Meta lead ID without a cookie consent."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:92
+#: ../../content/applications/websites/website/tracking/privacy.rst:97
 msgid "Customer Match"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:90
+#: ../../content/applications/websites/website/tracking/privacy.rst:95
 msgid "The audience filter must only contain customers who agreed to receive marketing and personalized advertising. You confirm it with :guilabel:`Customers Consented`; the members are sent with the consent signals granted."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:95
+#: ../../content/applications/websites/website/tracking/privacy.rst:100
 msgid "For the US state privacy laws, :guilabel:`Limited Data Use` flags the Meta server events."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:98
+#: ../../content/applications/websites/website/tracking/privacy.rst:103
 msgid "The tags that you create in a GTM container are under your responsibility: check what they send."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:103
+#: ../../content/applications/websites/website/tracking/privacy.rst:108
 msgid "Third-party domains"
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:101
-msgid "Scripts of Google and Meta that Odoo manages itself are removed from the blocked third-party list of the cookies bar, so that they are loaded after consent and not blanked. Other embedded services stay blocked until the visitor accepts the :guilabel:`Functional` cookies."
+#: ../../content/applications/websites/website/tracking/privacy.rst:106
+msgid "Scripts of Google and Meta that Odoo manages itself are removed from the blocked third-party list of the website, so that they are loaded after consent and not blanked. Other embedded services stay blocked until the visitor accepts the :guilabel:`Functional` cookies."
 msgstr ""
 
-#: ../../content/applications/websites/website/tracking/privacy.rst:106
+#: ../../content/applications/websites/website/tracking/privacy.rst:111
 msgid ":doc:`cookie_consent`"
 msgstr ""
 
@@ -11982,7 +12169,7 @@ msgid "Testing and troubleshooting"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:5
-msgid "Test every integration before you start a campaign, and again after each change to the website, the cookies bar, or the checkout. Use the tools below, from the simplest to the most detailed."
+msgid "Test every integration before you start a campaign, and again after each change to the website, the consent banner, or the checkout. Use the tools below, from the simplest to the most detailed."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:11
@@ -11994,7 +12181,7 @@ msgid "Test in a **private window** that is not logged in as an administrator. N
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:15
-msgid "Accept the cookies: open the :ref:`Customize panel <tracking/consent/customize>` and accept the analytics and marketing cookies. Check the line that appeared in the :ref:`consent log <tracking/consent/log>`."
+msgid "Accept the cookies: click :guilabel:`Accept all` in the banner, or open the :ref:`preferences dialog <tracking/consent/customize>` and accept the analytics and marketing cookies. Check the line that appeared in the :ref:`consent log <tracking/consent/log>`."
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:18
@@ -12110,7 +12297,7 @@ msgid "No event at all"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:81
-msgid "Is the cookies bar enabled and are the marketing/analytics cookies accepted? Is the :guilabel:`Cookie Policy Version` the one of the cookie you have? Did you select the right website in :guilabel:`Settings of Website`? Is the Google tag or the pixel enabled with a valid ID? Are you logged in as a designer, or in edit mode?"
+msgid "Is :guilabel:`Cookie Consent` enabled and are the marketing/analytics cookies accepted? Is the :guilabel:`Cookie Policy Version` the one of the cookie you have? Did you select the right website in :guilabel:`Settings of Website`? Is the Google tag or the pixel enabled with a valid ID? Are you logged in as a designer, or in edit mode?"
 msgstr ""
 
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:85

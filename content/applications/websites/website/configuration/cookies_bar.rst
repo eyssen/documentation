@@ -7,6 +7,12 @@ and stored by your browser and record visitor information like login details, pr
 browsing history. **Essential cookies** are necessary for the website to function, while
 **optional cookies** are used to analyze behavior or display ads.
 
+.. important::
+   When the Google app or the Meta app is installed, the cookies bar is replaced by the **cookie
+   consent banner** (:guilabel:`Accept all`, :guilabel:`Reject all`, :guilabel:`Customize`, consent
+   categories, cookie list, and :guilabel:`Cookie settings` link) and its settings replace the
+   :guilabel:`Cookies Bar` setting. See :doc:`/applications/websites/website/tracking/cookie_consent`.
+
 Data protection laws require notifying visitors about data collection methods and purposes.
 **Cookies bar** fulfill this obligation by informing visitors on their first visit and allowing them
 to decide whether to store all or only essential cookies on their device.

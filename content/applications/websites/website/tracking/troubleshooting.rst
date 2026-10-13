@@ -3,7 +3,7 @@ Testing and troubleshooting
 =================================
 
 Test every integration before you start a campaign, and again after each change to the website, the
-cookies bar, or the checkout. Use the tools below, from the simplest to the most detailed.
+consent banner, or the checkout. Use the tools below, from the simplest to the most detailed.
 
 .. _tracking/troubleshooting/prepare:
 
@@ -12,9 +12,9 @@ Before you test
 
 #. Test in a **private window** that is not logged in as an administrator. No event is sent while
    you edit the website or translate it.
-#. Accept the cookies: open the :ref:`Customize panel <tracking/consent/customize>` and accept the
-   analytics and marketing cookies. Check the line that appeared in the :ref:`consent log
-   <tracking/consent/log>`.
+#. Accept the cookies: click :guilabel:`Accept all` in the banner, or open the :ref:`preferences
+   dialog <tracking/consent/customize>` and accept the analytics and marketing cookies. Check the
+   line that appeared in the :ref:`consent log <tracking/consent/log>`.
 #. Disable the ad blockers of your browser.
 #. Enable the :guilabel:`Tracking Debug Mode` in :menuselection:`Website --> Configuration -->
    Settings` to see every event and its data in the browser console (open the developer tools of
@@ -78,8 +78,8 @@ Common problems
    * - Symptom
      - Check
    * - No event at all
-     - Is the cookies bar enabled and are the marketing/analytics cookies accepted? Is the
-       :guilabel:`Cookie Policy Version` the one of the cookie you have? Did you select the right
+     - Is :guilabel:`Cookie Consent` enabled and are the marketing/analytics cookies accepted? Is
+       the :guilabel:`Cookie Policy Version` the one of the cookie you have? Did you select the right
        website in :guilabel:`Settings of Website`? Is the Google tag or the pixel enabled with a
        valid ID? Are you logged in as a designer, or in edit mode?
    * - The pixel or the Google tag loads only on the second page

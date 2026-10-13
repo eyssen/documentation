@@ -417,8 +417,11 @@ Extensions of customer invoices and vendor bills, including the Hungarian invoic
      - `eyssen_l10n_hu_proforma`
      - :doc:`../finance/fiscal_localizations/hungary/proforma`
    * - :guilabel:`Hungarian KVTD`
-     - `eyssen_l10n_hu_kvtd`
+     - `l10n_hu_kvtd`
      - :doc:`../finance/fiscal_localizations/hungary/kvtd`
+   * - :guilabel:`Hungarian EPR`
+     - `l10n_hu_epr`
+     - :doc:`../finance/fiscal_localizations/hungary/epr`
    * - :guilabel:`Copying Invoice rows values`
      - `eyssen_copy_invoice_row_value`
      - :doc:`../finance/accounting/customer_invoices`

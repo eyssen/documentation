@@ -40,7 +40,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-08 17:35+0200\n"
+"POT-Creation-Date: 2026-10-13 16:29+0000\n"
 "PO-Revision-Date: 2025-11-19 20:11+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Spanish <https://translate.odoo.com/projects/odoo-18-doc/finance/es/>\n"
@@ -15687,10 +15687,6 @@ msgstr "Asegúrese de que el :guilabel:`banco destinatario` esté configurado, p
 msgid "Hungary"
 msgstr "Hungría"
 
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:8
-msgid "The Hungarian localization combines the standard :guilabel:`Hungary - Accounting` package with a set of *eYssen* modules. Together they cover invoicing according to the Hungarian VAT Act, real-time data reporting to the :abbr:`NAV (Nemzeti Adó- és Vámhivatal, National Tax and Customs Administration)` *Online Számla* system, pro-forma and advance invoices, the VAT return (through ÁNYK forms or the NAV eÁFA machine-to-machine interface), fixed assets, the auditor data export of the Chamber of Hungarian Auditors (MKVK), the environmental product fee (KVTD), EU OSS sales and the official exchange rates of the Hungarian National Bank (MNB)."
-msgstr "La localización húngara combina el paquete estándar :guilabel:`Hungary - Accounting` con un conjunto de módulos *eYssen*. Juntos cubren la facturación según la Ley del IVA húngara, el reporte de datos en tiempo real al sistema *Online Számla* de la :abbr:`NAV (Nemzeti Adó- és Vámhivatal, Administración Nacional Tributaria y Aduanera)`, las facturas proforma y de anticipo, la declaración de IVA (mediante formularios ÁNYK o la interfaz máquina a máquina eÁFA de la NAV), los activos fijos, la exportación de datos para auditores de la Cámara de Auditores Húngaros (MKVK), la tasa por productos ambientales (KVTD), las ventas mediante la ventanilla única (OSS) de la UE y los tipos de cambio oficiales del Banco Nacional de Hungría (MNB)."
-
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:21
 msgid ":ref:`Install <general/install>` the following modules to get the features of the Hungarian localization. Only the first two are required for invoicing; install the others according to the needs of the company."
 msgstr ":ref:`Instale <general/install>` los siguientes módulos para obtener las funciones de la localización húngara. Solo los dos primeros son necesarios para la facturación; instale los demás según las necesidades de la empresa."
@@ -15826,18 +15822,6 @@ msgstr "`l10n_hu_oss`"
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:76
 msgid ":doc:`EU One-Stop-Shop sales <hungary/oss>` for Hungarian companies. Installed automatically with :guilabel:`EU Intra-community Distance Selling`."
 msgstr ":doc:`Ventas mediante la ventanilla única (OSS) de la UE <hungary/oss>` para empresas húngaras. Se instala de forma automática con :guilabel:`EU Intra-community Distance Selling`."
-
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:78
-msgid ":guilabel:`KVTD`"
-msgstr ":guilabel:`KVTD`"
-
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:79
-msgid "`eyssen_l10n_hu_kvtd`"
-msgstr "`eyssen_l10n_hu_kvtd`"
-
-#: ../../content/applications/finance/fiscal_localizations/hungary.rst:80
-msgid ":doc:`Environmental product fee <hungary/kvtd>` (*környezetvédelmi termékdíj*) records on products and invoices."
-msgstr ":doc:`Tasa por productos ambientales <hungary/kvtd>` (*környezetvédelmi termékdíj*) en productos y facturas."
 
 #: ../../content/applications/finance/fiscal_localizations/hungary.rst:82
 msgid ":guilabel:`Cashbook integráció`"
@@ -17043,89 +17027,9 @@ msgstr "En los diarios habituales, no se pueden seleccionar posiciones fiscales 
 msgid "Environmental product fee (KVTD)"
 msgstr "Tasa medioambiental de producto (KVTD)"
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:5
-msgid "The :guilabel:`KVTD` (`eyssen_l10n_hu_kvtd`) module records the environmental product fee (*környezetvédelmi termékdíj*) content of products, calculates the fee-liable weight and the fee on invoice lines, prints it on customer invoices, and provides the list needed to prepare the product fee return. It can be installed from the Apps menu or by ticking :guilabel:`Hungarian KVTD` in the general settings."
-msgstr "El módulo :guilabel:`KVTD` (`eyssen_l10n_hu_kvtd`) registra el contenido de tasa medioambiental de producto (*környezetvédelmi termékdíj*) de los productos, calcula el peso sujeto a tasa y la tasa en las líneas de factura, la imprime en las facturas de cliente y proporciona la lista necesaria para preparar la declaración de la tasa de producto. Se puede instalar desde el menú Aplicaciones o marcando :guilabel:`KVTD húngaro` en los ajustes generales."
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:12
-msgid "The fee is **informative**: it does not change the price, the taxes or the journal entry of the invoice, and no return file is generated."
-msgstr "La tasa es **informativa**: no modifica el precio, los impuestos ni el asiento contable de la factura, y no se genera ningún archivo de declaración."
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:14
-msgid "The menus and fields of this module are displayed in Hungarian in the current module version."
-msgstr "Los menús y campos de este módulo se muestran en húngaro en la versión actual del módulo."
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:20
-msgid "Fee types"
-msgstr "Tipos de tasa"
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:22
-msgid "Go to :menuselection:`Accounting --> Configuration --> Környezetvédelmi termékdíj --> Termékdíj típusok` and create a row for every fee item used by the company:"
-msgstr "Vaya a :menuselection:`Contabilidad --> Configuración --> Környezetvédelmi termékdíj --> Termékdíj típusok` y cree una fila para cada elemento de tasa que use la empresa:"
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:25
-msgid ":guilabel:`Megnevezés`: unique name;"
-msgstr ":guilabel:`Megnevezés`: nombre único;"
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:26
-msgid ":guilabel:`KT/CSK kód`: the KT or CsK code of the fee item;"
-msgstr ":guilabel:`KT/CSK kód`: el código KT o CsK del elemento de tasa;"
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:27
-msgid ":guilabel:`Termékdíj kategória`: battery, packaging, other petroleum products, tyres, refrigerants, advertising paper, or electrical and electronic equipment;"
-msgstr ":guilabel:`Termékdíj kategória`: batería, envase, otros productos derivados del petróleo, neumáticos, refrigerantes, papel publicitario, o equipos eléctricos y electrónicos;"
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:29
-msgid ":guilabel:`VTSZ`: customs tariff number (optional);"
-msgstr ":guilabel:`VTSZ`: número de arancel aduanero (opcional);"
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:30
-msgid ":guilabel:`Díjtétel (Ft/kg)`: the fee rate in HUF per kilogram;"
-msgstr ":guilabel:`Díjtétel (Ft/kg)`: el tipo de la tasa en HUF por kilogramo;"
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:31
-msgid ":guilabel:`Mode`: :guilabel:`Bejövő számla alapján` (the fee is recorded on vendor bills) or :guilabel:`Kiemnő számla alapján` (on customer invoices)."
-msgstr ":guilabel:`Modo`: :guilabel:`Bejövő számla alapján` (la tasa se registra en las facturas de proveedor) o :guilabel:`Kiemnő számla alapján` (en las facturas de cliente)."
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:37
-msgid "On the :guilabel:`KVTD` tab of the product form, add a line for every fee type contained in the product with the :guilabel:`Mennyiség (kg)`: the weight of the fee-liable material in **one unit** of the product. The same assignments can be edited in bulk in :menuselection:`Accounting --> Configuration --> Környezetvédelmi termékdíj --> Termékdíj termékenként`."
-msgstr "En la pestaña :guilabel:`KVTD` de la ficha de producto, añada una línea para cada tipo de tasa que contenga el producto con la :guilabel:`Mennyiség (kg)`: el peso del material sujeto a tasa en **una unidad** del producto. Las mismas asignaciones se pueden editar en bloque en :menuselection:`Contabilidad --> Configuración --> Környezetvédelmi termékdíj --> Termékdíj termékenként`."
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:42
-msgid "On the :guilabel:`Inventory` tab, :guilabel:`Nettó súly` (net weight) can be recorded next to the :guilabel:`Weight`. A red ✕ warns if the weight minus the packaging fee quantities differs from the net weight."
-msgstr "En la pestaña :guilabel:`Inventario`, se puede registrar :guilabel:`Nettó súly` (peso neto) junto al :guilabel:`Peso`. Una ✕ roja advierte si el peso menos las cantidades de tasa de envase difiere del peso neto."
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:47
-msgid "Fee types and product assignments can be modified by users with the :guilabel:`Settings` administration right; other users can only read them."
-msgstr "Los tipos de tasa y las asignaciones de producto los pueden modificar los usuarios con el derecho de administración :guilabel:`Ajustes`; el resto de usuarios solo pueden consultarlos."
-
 #: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:59 ../../content/applications/finance/fiscal_localizations/italy.rst:126 ../../content/applications/finance/fiscal_localizations/italy.rst:564 ../../content/applications/finance/fiscal_localizations/romania/d394.rst:87 ../../content/applications/finance/fiscal_localizations/spain.rst:650 ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:141
 msgid "Invoices"
 msgstr "Facturas"
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:61
-msgid "When a product with fee assignments is added to a customer invoice (types recorded on customer invoices) or to a vendor bill (types recorded on vendor bills), a KVTD record is created for each fee type: weight = quantity per unit × invoiced quantity, fee = weight × rate."
-msgstr "Cuando se añade un producto con asignaciones de tasa a una factura de cliente (tipos registrados en facturas de cliente) o a una factura de proveedor (tipos registrados en facturas de proveedor), se crea un registro KVTD para cada tipo de tasa: peso = cantidad por unidad × cantidad facturada, tasa = peso × tipo."
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:65
-msgid "The optional :guilabel:`KVTD` column of the invoice lines shows the weight and the fee type."
-msgstr "La columna opcional :guilabel:`KVTD` de las líneas de factura muestra el peso y el tipo de tasa."
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:66
-msgid "The pencil icon at the end of the line opens the journal item, where the :guilabel:`KVTD` tab allows changing the fee type and the :guilabel:`Súly (kg)`; the fee is recalculated."
-msgstr "El icono de lápiz al final de la línea abre el apunte contable, donde la pestaña :guilabel:`KVTD` permite cambiar el tipo de tasa y el :guilabel:`Súly (kg)`; la tasa se recalcula."
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:68
-msgid "On the printed customer invoice, the fee content is shown under the line: code, name, weight, and the sentence stating the amount of the product fee included in the gross price."
-msgstr "En la factura de cliente impresa, el contenido de la tasa se muestra debajo de la línea: código, nombre, peso, y la frase que indica el importe de la tasa de producto incluida en el precio bruto."
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:72
-msgid "In the current module version, no KVTD records are created on credit notes, the quantity is not converted between units of measure, and the existing records are not updated when the quantity of the line is changed later: check the weight with the pencil icon in these cases."
-msgstr "En la versión actual del módulo, no se crean registros KVTD en las notas de crédito, la cantidad no se convierte entre unidades de medida, y los registros existentes no se actualizan cuando la cantidad de la línea se modifica más tarde: compruebe el peso con el icono de lápiz en estos casos."
-
-#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:79
-msgid ":menuselection:`Accounting --> Reporting --> Környezetvédelmi termékdíj` lists the KVTD records of **posted** invoices with the invoice date, invoice line, fee type, KT/CSK code, category, VTSZ, mode, :guilabel:`Súly (kg)`, :guilabel:`Díjtétel (Ft)` and :guilabel:`Termékdíj (Ft)`. Filter by mode and by :guilabel:`Számla kelte` (invoice date), group by fee type or category, and export the list to a spreadsheet to total the weights and fees for the quarterly product fee return."
-msgstr ":menuselection:`Contabilidad --> Informes --> Környezetvédelmi termékdíj` enumera los registros KVTD de las facturas **contabilizadas** con la fecha de factura, la línea de factura, el tipo de tasa, el código KT/CSK, la categoría, el VTSZ, el modo, :guilabel:`Súly (kg)`, :guilabel:`Díjtétel (Ft)` y :guilabel:`Termékdíj (Ft)`. Filtre por modo y por :guilabel:`Számla kelte` (fecha de factura), agrupe por tipo de tasa o categoría, y exporte la lista a una hoja de cálculo para totalizar los pesos y las tasas de la declaración trimestral de la tasa de producto."
 
 #: ../../content/applications/finance/fiscal_localizations/hungary/mkvk.rst:3
 msgid "MKVK data export for the auditor"
@@ -35025,6 +34929,866 @@ msgstr ""
 " analítica está activada. Vaya a :menuselection:`Contabilidad --> "
 "Configuración --> Ajustes` y, en la sección :guilabel:`Analítica`, active "
 ":guilabel:`Contabilidad analítica`. Luego, haga clic en :guilabel:`Guardar`."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:8
+msgid "The Hungarian localization combines the standard :guilabel:`Hungary - Accounting` package with a set of *eYssen* modules. Together they cover invoicing according to the Hungarian VAT Act, real-time data reporting to the :abbr:`NAV (Nemzeti Adó- és Vámhivatal, National Tax and Customs Administration)` *Online Számla* system, pro-forma and advance invoices, the VAT return (through ÁNYK forms or the NAV eÁFA machine-to-machine interface), fixed assets, the auditor data export of the Chamber of Hungarian Auditors (MKVK), the environmental product fee (KVTD), the extended producer responsibility (EPR), EU OSS sales and the official exchange rates of the Hungarian National Bank (MNB)."
+msgstr "La localización húngara combina el paquete estándar :guilabel:`Hungary - Accounting` con un conjunto de módulos *eYssen*. Juntos cubren la facturación según la Ley del IVA húngara, el reporte de datos en tiempo real al sistema *Online Számla* de la :abbr:`NAV (Nemzeti Adó- és Vámhivatal, Administración Nacional Tributaria y Aduanera)`, las facturas proforma y de anticipo, la declaración de IVA (mediante formularios ÁNYK o la interfaz máquina a máquina eÁFA de la NAV), los activos fijos, la exportación de datos para auditores de la Cámara de Auditores Húngaros (MKVK), la tasa medioambiental de producto (KVTD), la responsabilidad ampliada del productor (EPR), las ventas mediante la ventanilla única (OSS) de la UE y los tipos de cambio oficiales del Banco Nacional de Hungría (MNB)."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:79
+msgid ":guilabel:`Hungary - Environmental Product Charge (KVTD)`"
+msgstr ":guilabel:`Hungary - Environmental Product Charge (KVTD)`"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:80
+msgid "`l10n_hu_kvtd`"
+msgstr "`l10n_hu_kvtd`"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:81
+msgid ":doc:`Environmental product fee <hungary/kvtd>` (*környezetvédelmi termékdíj*): register, invoice clauses and quarterly summary for the remaining fee-liable products. Replaces `eyssen_l10n_hu_kvtd`."
+msgstr ":doc:`Tasa medioambiental de producto <hungary/kvtd>` (*környezetvédelmi termékdíj*): registro, cláusulas de factura y resumen trimestral de los productos que siguen sujetos a la tasa. Sustituye a `eyssen_l10n_hu_kvtd`."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:84
+msgid ":guilabel:`Hungary - Extended Producer Responsibility (EPR / KGYF)`"
+msgstr ":guilabel:`Hungary - Extended Producer Responsibility (EPR / KGYF)`"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:85
+msgid "`l10n_hu_epr`"
+msgstr "`l10n_hu_epr`"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary.rst:86
+msgid ":doc:`Extended producer responsibility <hungary/epr>` (*kiterjesztett gyártói felelősség*): KF codes on products, EPR register, invoice clauses and the quarterly OKIRkapu data report."
+msgstr ":doc:`Responsabilidad ampliada del productor <hungary/epr>` (*kiterjesztett gyártói felelősség*): códigos KF en los productos, registro EPR, cláusulas de factura y el informe de datos trimestral para OKIRkapu."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:3
+msgid "Extended producer responsibility (EPR)"
+msgstr "Responsabilidad ampliada del productor (EPR)"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:5
+msgid "The :guilabel:`Hungary - Extended Producer Responsibility (EPR / KGYF)` (`l10n_hu_epr`) module implements the Hungarian extended producer responsibility (*kiterjesztett gyártói felelősség*, Government Decree 80/2023. (III. 14.)): it keeps the EPR register of the products placed on the Hungarian market by KF code, prints the invoice clauses, and prepares the quarterly data report (OKIRkapu data package :guilabel:`KG:KGYF-NÉ`) as an XML file validated against the official schema. It can be installed from the Apps menu or by ticking :guilabel:`Hungarian EPR` in the :doc:`eYssen ERP settings <../../../general/eyssen_erp_settings>`."
+msgstr "El módulo :guilabel:`Hungary - Extended Producer Responsibility (EPR / KGYF)` (`l10n_hu_epr`) implementa la responsabilidad ampliada del productor húngara (*kiterjesztett gyártói felelősség*, Decreto del Gobierno 80/2023. (III. 14.)): lleva el registro EPR de los productos introducidos en el mercado húngaro por código KF, imprime las cláusulas de factura y prepara el informe de datos trimestral (paquete de datos de OKIRkapu :guilabel:`KG:KGYF-NÉ`) como un archivo XML validado con el esquema oficial. Se puede instalar desde el menú Aplicaciones o marcando :guilabel:`Hungarian EPR` en los :doc:`ajustes de eYssen ERP <../../../general/eyssen_erp_settings>`."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:13
+msgid "The EPR covers packaging, single-use plastic products, electrical and electronic equipment, batteries, vehicles, tyres, office paper, advertising paper, frying oil and fat, textiles and wooden furniture. The fee is collected by the concessionaire MOHU MOL Hulladékgazdálkodási Zrt. The products still subject to the environmental product fee are handled by the :doc:`KVTD module <kvtd>`."
+msgstr "La EPR abarca los envases, los productos de plástico de un solo uso, los aparatos eléctricos y electrónicos, las pilas y baterías, los vehículos, los neumáticos, el papel de oficina, el papel publicitario, los aceites y grasas de fritura, los textiles y los muebles de madera. La tasa la recauda la empresa concesionaria MOHU MOL Hulladékgazdálkodási Zrt. Los productos que siguen sujetos a la tasa medioambiental de producto se gestionan con el :doc:`módulo KVTD <kvtd>`."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:19
+msgid "The data report is uploaded to OKIRkapu by the user: OKIRkapu has no machine interface, the module generates the file."
+msgstr "El usuario sube el informe de datos a OKIRkapu: OKIRkapu no tiene interfaz automatizada, el módulo genera el archivo."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:21
+msgid "The fee is not posted by the module. MOHU invoices it quarterly on the basis of the data report; record the MOHU invoice as a vendor bill and link it to the report to compare the amounts."
+msgstr "El módulo no contabiliza la tasa. MOHU la factura trimestralmente con base en el informe de datos; registre la factura de MOHU como factura de proveedor y vincúlela al informe para comparar los importes."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:25
+msgid "How the obligation works"
+msgstr "Cómo funciona la obligación"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:27
+msgid "The **producer** is whoever places a product on the Hungarian market for the first time: the domestic manufacturer, or the importer or EU purchaser at its first domestic sale (80/2023. Korm. r. 16. §). A company buying from a Hungarian supplier and reselling is not liable."
+msgstr "El **productor** es quien introduce un producto en el mercado húngaro por primera vez: el fabricante nacional, o el importador o adquirente intracomunitario en su primera venta nacional (80/2023. Korm. r. 16. §). Una empresa que compra a un proveedor húngaro y revende no está obligada."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:30
+msgid "Every separable component of a packaging (bottle, cap, label, film, carton) has its own KF code and fee (11. § (5))."
+msgstr "Cada componente separable de un envase (botella, tapón, etiqueta, film, caja de cartón) tiene su propio código KF y su propia tasa (11. § (5))."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:32
+msgid "The producer reports the quantities by KF code quarterly, by the 20th day of the month following the quarter, to the national waste management authority through OKIRkapu (27. §). MOHU invoices the fee on this basis; it is payable within 15 days of receipt (21. § (1))."
+msgstr "El productor declara las cantidades por código KF trimestralmente, a más tardar el día 20 del mes siguiente al trimestre, ante la autoridad nacional de gestión de residuos a través de OKIRkapu (27. §). MOHU factura la tasa con esta base; se debe pagar en un plazo de 15 días desde su recepción (21. § (1))."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:35
+msgid "Records are kept for at least 5 years and must be traceable item by item (26. §, 28. §)."
+msgstr "Los registros se conservan durante al menos 5 años y deben ser trazables partida por partida (26. §, 28. §)."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:38
+msgid "KF codes"
+msgstr "Códigos KF"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:40
+msgid "The KF code has 8 characters:"
+msgstr "El código KF tiene 8 caracteres:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:46
+msgid "Characters"
+msgstr "Caracteres"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:48
+msgid "Where it comes from in Odoo"
+msgstr "De dónde procede en Odoo"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:49
+msgid "1–2"
+msgstr "1–2"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:50
+msgid "Product stream (11 packaging, 12 single-use plastic, 13 EEE, …)"
+msgstr "Flujo de producto (11 envases, 12 plástico de un solo uso, 13 AEE, …)"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:51 ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:54 ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:57
+msgid "EPR component of the product"
+msgstr "Componente EPR del producto"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:52
+msgid "3–4"
+msgstr "3–4"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:53
+msgid "Material stream (e.g. 01 PET, 20 corrugated board)"
+msgstr "Flujo de material (p. ej., 01 PET, 20 cartón ondulado)"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:55
+msgid "5–6"
+msgstr "5–6"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:56
+msgid "Group (e.g. 10 consumer packaging, 20 transport packaging)"
+msgstr "Grupo (p. ej., 10 envases de consumo, 20 envases de transporte)"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:58
+msgid "7"
+msgstr "7"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:59
+msgid "Obligation code: 1 collective, 2 individual, A / B customer declaration"
+msgstr "Código de obligación: 1 colectiva, 2 individual, A / B declaración del cliente"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:60
+msgid "Company setting and customer declaration"
+msgstr "Ajuste de la empresa y declaración del cliente"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:62
+msgid "Origin: 1/2/3 domestic, 5/6/7 brought in from abroad, 8 own use"
+msgstr "Origen: 1/2/3 nacional, 5/6/7 introducido desde el extranjero, 8 uso propio"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:63
+msgid "Origin and role of the component"
+msgstr "Origen y función del componente"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:65
+msgid "Example: `11202013` is corrugated board (20), non-reusable transport packaging (20), collective fulfillment (1), packaging produced in Hungary (3)."
+msgstr "Ejemplo: `11202013` es cartón ondulado (20), envase de transporte no reutilizable (20), cumplimiento colectivo (1), envase producido en Hungría (3)."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:74
+msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`, section :guilabel:`Hungarian EPR (Extended Producer Responsibility)`:"
+msgstr "Vaya a :menuselection:`Contabilidad --> Configuración --> Ajustes`, sección :guilabel:`Hungarian EPR (Extended Producer Responsibility)`:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:77
+msgid ":guilabel:`EPR Producer`: the company is a producer and keeps an EPR register."
+msgstr ":guilabel:`EPR Producer`: la empresa es productora y lleva un registro EPR."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:78
+msgid ":guilabel:`EPR Register Method`:"
+msgstr ":guilabel:`EPR Register Method`:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:80
+msgid ":guilabel:`Placing on the market (customer invoices)`: the register lines are created from the domestic customer invoices."
+msgstr ":guilabel:`Placing on the market (customer invoices)`: las líneas del registro se crean a partir de las facturas de cliente nacionales."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:82
+msgid ":guilabel:`Stock-in (vendor bills, 26/A. §)`: the register lines are created from the vendor bills of goods bought from abroad. This method can be chosen from the first day of a quarter, with an opening inventory."
+msgstr ":guilabel:`Stock-in (vendor bills, 26/A. §)`: las líneas del registro se crean a partir de las facturas de proveedor de bienes comprados en el extranjero. Este método se puede elegir a partir del primer día de un trimestre, con un inventario inicial."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:86
+msgid ":guilabel:`EPR Register Start`: invoices with an earlier fulfillment date do not create register lines."
+msgstr ":guilabel:`EPR Register Start`: las facturas con una fecha de cumplimiento anterior no crean líneas en el registro."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:88
+msgid ":guilabel:`EPR Fulfilment`: :guilabel:`Collective (through the concessionaire)` or :guilabel:`Individual`. Individual fulfillment is only possible for EEE, batteries and vehicles (7–9. §); for every other product stream collective fulfillment is reported."
+msgstr ":guilabel:`EPR Fulfilment`: :guilabel:`Collective (through the concessionaire)` o :guilabel:`Individual`. El cumplimiento individual solo es posible para AEE, pilas y baterías y vehículos (7–9. §); para todos los demás flujos de producto se declara el cumplimiento colectivo."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:91
+msgid ":guilabel:`OKIRkapu data`: the :guilabel:`KÜJ Number` (environmental client identifier), the :guilabel:`EPR Registration Number`, the :guilabel:`EPR Contact Person` (a contact with address, phone and e-mail) and the :guilabel:`EPR Contact Position`. They are required for the XML."
+msgstr ":guilabel:`OKIRkapu data`: el :guilabel:`KÜJ Number` (identificador de cliente medioambiental), el :guilabel:`EPR Registration Number`, el :guilabel:`EPR Contact Person` (un contacto con dirección, teléfono y correo electrónico) y el :guilabel:`EPR Contact Position`. Son obligatorios para el XML."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:94
+msgid ":guilabel:`Print EPR Clauses on Invoices`: prints the clauses of 21. § on the customer invoices."
+msgstr ":guilabel:`Print EPR Clauses on Invoices`: imprime las cláusulas del 21. § en las facturas de cliente."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:96
+msgid "The company address and the Hungarian :guilabel:`VAT Number` of the company are also used in the data report."
+msgstr "La dirección de la empresa y su :guilabel:`VAT Number` húngaro también se utilizan en el informe de datos."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:108
+msgid "KF codes, fee codes and rates"
+msgstr "Códigos KF, códigos de tasa y tipos"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:110
+msgid ":menuselection:`Accounting --> Configuration --> EPR --> KF Codes` lists the valid first six characters of the KF codes (80/2023. Korm. r. 2. melléklet) with the material stream, the group and the fee code. The list is loaded with the module and updated with it."
+msgstr ":menuselection:`Contabilidad --> Configuración --> EPR --> KF Codes` enumera los seis primeros caracteres válidos de los códigos KF (80/2023. Korm. r. 2. melléklet) con el flujo de material, el grupo y el código de tasa. La lista se carga con el módulo y se actualiza con él."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:113
+msgid ":menuselection:`Accounting --> Configuration --> EPR --> EPR Fee Codes and Rates` lists the fee codes (`M01` plastic packaging, `P01` paper packaging, `V01` metal packaging, `SUP01` single-use plastic, `E01`–`E06` EEE, `A11`–`A51` batteries, …) with dated rates in HUF/kg, net of VAT, and their concession and municipal elements. The rates of 2025 and 2026 are loaded with the module; when a new fee decree is published, close the old rate and add the new one."
+msgstr ":menuselection:`Contabilidad --> Configuración --> EPR --> EPR Fee Codes and Rates` enumera los códigos de tasa (`M01` envases de plástico, `P01` envases de papel, `V01` envases de metal, `SUP01` plástico de un solo uso, `E01`–`E06` AEE, `A11`–`A51` pilas y baterías, …) con tipos fechados en HUF/kg, sin IVA, y sus componentes de concesión y municipal. Los tipos de 2025 y 2026 se cargan con el módulo; cuando se publique un nuevo decreto de tasas, cierre el tipo anterior y añada el nuevo."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:122
+msgid "On the :guilabel:`EPR` tab of the product form:"
+msgstr "En la pestaña :guilabel:`EPR` del formulario de producto:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:124
+msgid ":guilabel:`EPR Liability`: :guilabel:`According to the company method` (default), :guilabel:`Always liable` (also when bought from a Hungarian supplier, stock-in method) or :guilabel:`Not liable (another company placed it on the market)`."
+msgstr ":guilabel:`EPR Liability`: :guilabel:`According to the company method` (predeterminado), :guilabel:`Always liable` (también cuando se compra a un proveedor húngaro, método de entrada en existencias) o :guilabel:`Not liable (another company placed it on the market)`."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:127
+msgid "One line per **EPR component** of one unit of the product:"
+msgstr "Una línea por cada **componente EPR** de una unidad del producto:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:129
+msgid ":guilabel:`Component`: e.g. *bottle*, *cap*, *label*, *shrink film*, *carton box*;"
+msgstr ":guilabel:`Component`: p. ej., *botella*, *tapón*, *etiqueta*, *film retráctil*, *caja de cartón*;"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:130
+msgid ":guilabel:`KF Code (1-6)`: search by code, material or group; the :guilabel:`Fee Code` is shown next to it;"
+msgstr ":guilabel:`KF Code (1-6)`: busque por código, material o grupo; el :guilabel:`Fee Code` se muestra al lado;"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:132
+msgid ":guilabel:`Weight per Unit (kg)`: the mass in one unit of measure of the product (six decimals);"
+msgstr ":guilabel:`Weight per Unit (kg)`: la masa en una unidad de medida del producto (seis decimales);"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:133
+msgid ":guilabel:`Role`: :guilabel:`Packaging`, :guilabel:`Product placed on the market on its own` or :guilabel:`Component or accessory of another product`. KF codes of the packaging stream can only be used for packaging;"
+msgstr ":guilabel:`Role`: :guilabel:`Packaging`, :guilabel:`Product placed on the market on its own` o :guilabel:`Component or accessory of another product`. Los códigos KF del flujo de envases solo se pueden utilizar para envases;"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:136
+msgid ":guilabel:`Origin`: :guilabel:`Produced in Hungary` or :guilabel:`Brought in from abroad (EU or third country)`;"
+msgstr ":guilabel:`Origin`: :guilabel:`Produced in Hungary` o :guilabel:`Brought in from abroad (EU or third country)`;"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:138
+msgid ":guilabel:`Origin Code` (computed): the 8th character of the KF code;"
+msgstr ":guilabel:`Origin Code` (calculado): el 8.º carácter del código KF;"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:139
+msgid ":guilabel:`Variant` (optional, with variants): lines of a variant replace the lines without variant for that variant."
+msgstr ":guilabel:`Variant` (opcional, con variantes): las líneas de una variante sustituyen a las líneas sin variante para esa variante."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:142
+msgid "For electrical and electronic equipment, batteries, tyres, textiles, furniture and the other product streams, add a line for the product itself (role *on its own* or *component*), next to the lines of its packaging."
+msgstr "Para los aparatos eléctricos y electrónicos, las pilas y baterías, los neumáticos, los textiles, los muebles y los demás flujos de producto, añada una línea para el propio producto (función *on its own* o *component*), junto a las líneas de su envase."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:146
+msgid ":guilabel:`EPR Weight per Unit (kg)` and :guilabel:`EPR Fee per Unit (HUF)` show the totals of one unit at the current rates."
+msgstr ":guilabel:`EPR Weight per Unit (kg)` y :guilabel:`EPR Fee per Unit (HUF)` muestran los totales de una unidad con los tipos vigentes."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:158
+msgid "Customer declarations"
+msgstr "Declaraciones del cliente"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:160
+msgid "A customer who ships at least 60% of the products abroad (22. §), or who uses frying oil or fat as raw material (22/A. §), can declare it. Sales covered by the declaration are reported with obligation code `A` or `B`, without fee, and the declaring customer is listed in the data report."
+msgstr "Un cliente que envía al menos el 60 % de los productos al extranjero (22. §), o que utiliza aceite o grasa de fritura como materia prima (22/A. §), puede declararlo. Las ventas cubiertas por la declaración se reportan con el código de obligación `A` o `B`, sin tasa, y el cliente declarante figura en el informe de datos."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:164
+msgid "Record the declarations in :menuselection:`Accounting --> Configuration --> EPR --> Customer Declarations`:"
+msgstr "Registre las declaraciones en :menuselection:`Contabilidad --> Configuración --> EPR --> Customer Declarations`:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:167
+msgid ":guilabel:`Registration Number`: the filing number of the declaration at the authority (printed on the invoice);"
+msgstr ":guilabel:`Registration Number`: el número de registro de entrada de la declaración ante la autoridad (se imprime en la factura);"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:169
+msgid ":guilabel:`Customer (Declarant)` and :guilabel:`Type`;"
+msgstr ":guilabel:`Customer (Declarant)` y :guilabel:`Type`;"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:170
+msgid ":guilabel:`Valid From` and :guilabel:`Valid To`: at most 3 years (22/B. §);"
+msgstr ":guilabel:`Valid From` y :guilabel:`Valid To`: como máximo 3 años (22/B. §);"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:171
+msgid ":guilabel:`Sent to the Authority On`: the declaration is effective from the day it was sent to the authority (26. § (6));"
+msgstr ":guilabel:`Sent to the Authority On`: la declaración surte efecto a partir del día en que se envió a la autoridad (26. § (6));"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:173
+msgid ":guilabel:`KF Codes (1-6)`: the codes covered by the declaration (required). A 22/A. § declaration can only cover frying oil and fat."
+msgstr ":guilabel:`KF Codes (1-6)`: los códigos cubiertos por la declaración (obligatorio). Una declaración del 22/A. § solo puede cubrir aceites y grasas de fritura."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:176
+msgid "Customers who asked for the clause *A kiterjesztett gyártói felelősségi díj megfizetésre kerül.* (21. § (5)) are marked with :guilabel:`EPR Clause Requested` in the :guilabel:`Accounting` tab of the contact."
+msgstr "Los clientes que solicitaron la cláusula *A kiterjesztett gyártói felelősségi díj megfizetésre kerül.* (21. § (5)) se marcan con :guilabel:`EPR Clause Requested` en la pestaña :guilabel:`Contabilidad` del contacto."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:183
+msgid "When an invoice is posted, a register line is created for every EPR component of its products: quantity = invoiced quantity converted to the unit of the product × weight per unit, fee = quantity × rate valid on the fulfillment date. The lines are shown on the :guilabel:`EPR` tab of the invoice (visible to invoicing users and accountants)."
+msgstr "Al contabilizar una factura, se crea una línea de registro para cada componente EPR de sus productos: cantidad = cantidad facturada convertida a la unidad del producto × peso por unidad, tasa = cantidad × tipo vigente en la fecha de cumplimiento. Las líneas se muestran en la pestaña :guilabel:`EPR` de la factura (visible para los usuarios de facturación y los contadores)."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:188
+msgid "Deliveries abroad (shipping address outside Hungary) are not reportable (16. § (4))."
+msgstr "Las entregas al extranjero (dirección de envío fuera de Hungría) no se reportan (16. § (4))."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:189
+msgid "Sales covered by an effective customer declaration are reported without fee, with obligation code `A` or `B`."
+msgstr "Las ventas cubiertas por una declaración del cliente vigente se reportan sin tasa, con el código de obligación `A` o `B`."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:191
+msgid "With the stock-in method, purchases from Hungarian suppliers are not reportable unless the product is :guilabel:`Always liable`."
+msgstr "Con el método de entrada en existencias, las compras a proveedores húngaros no se reportan, a menos que el producto sea :guilabel:`Always liable`."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:193
+msgid "Credit notes reverse the lines of the original invoice in proportion to the credited quantity, with the same KF code, rate and declaration. If a credit note or a corrective invoice only corrects the price, tick :guilabel:`No EPR Effect` on it; the field can also be changed after posting."
+msgstr "Las notas de crédito revierten las líneas de la factura original en proporción a la cantidad abonada, con el mismo código KF, tipo y declaración. Si una nota de crédito o una factura correctiva solo corrige el precio, marque :guilabel:`No EPR Effect` en ella; el campo también se puede cambiar después de contabilizar."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:196
+msgid "If the EPR components of a product are completed later, select the posted invoices in the list view and use :menuselection:`Actions --> Rebuild EPR lines` (accounting administrators). Lines of a closed data report are not changed."
+msgstr "Si los componentes EPR de un producto se completan más tarde, seleccione las facturas contabilizadas en la vista de lista y utilice :menuselection:`Acciones --> Rebuild EPR lines` (administradores de contabilidad). Las líneas de un informe de datos cerrado no se modifican."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:201
+msgid "Only invoices create register lines. Point of Sale orders without an invoice, foreign packaging removed in Hungary (own use, origin code `8`, 17. § (3)) and the opening inventory of the stock-in method are entered as manual lines in the EPR register."
+msgstr "Solo las facturas crean líneas de registro. Los pedidos del Punto de venta sin factura, los envases extranjeros retirados en Hungría (uso propio, código de origen `8`, 17. § (3)) y el inventario inicial del método de entrada en existencias se introducen como líneas manuales en el registro EPR."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:206 ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:206
+msgid "Invoice clauses"
+msgstr "Cláusulas de factura"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:208
+msgid "The printed customer invoice shows, before the payment terms (not on retail sales to consumers without a tax number):"
+msgstr "La factura de cliente impresa muestra, antes de las condiciones de pago (no en las ventas al por menor a consumidores sin número de identificación fiscal):"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:211
+msgid "*A kiterjesztett gyártói felelősségi díj megfizetése az eladót terheli.* when the company declares and pays the fee of the invoice (21. § (2));"
+msgstr "*A kiterjesztett gyártói felelősségi díj megfizetése az eladót terheli.* cuando la empresa declara y paga la tasa de la factura (21. § (2));"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:213
+msgid "*A kiterjesztett gyártói felelősségi díj a vevő nyilatkozata alapján nem került megfizetésre (a nyilatkozat iktatási száma: …).* for sales covered by a declaration (21. § (3));"
+msgstr "*A kiterjesztett gyártói felelősségi díj a vevő nyilatkozata alapján nem került megfizetésre (a nyilatkozat iktatási száma: …).* para las ventas cubiertas por una declaración (21. § (3));"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:215
+msgid "*A kiterjesztett gyártói felelősségi díj megfizetésre kerül.* if the customer asked for it and no other clause applies (21. § (5))."
+msgstr "*A kiterjesztett gyártói felelősségi díj megfizetésre kerül.* si el cliente la solicitó y no se aplica ninguna otra cláusula (21. § (5))."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:218
+msgid "With the stock-in method, the clause of 21. § (2) is printed on the domestic sales of the products with EPR components."
+msgstr "Con el método de entrada en existencias, la cláusula del 21. § (2) se imprime en las ventas nacionales de los productos con componentes EPR."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:222
+msgid "Register and data report"
+msgstr "Registro e informe de datos"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:225 ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:223
+msgid "Register"
+msgstr "Registro"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:227
+msgid ":menuselection:`Accounting --> Reporting --> EPR --> EPR Register` lists the register lines with date, KF code, fee code, product and component, invoice, partner, quantity, rate, fee and status (:guilabel:`Fee payable`, :guilabel:`Reported without fee`, :guilabel:`Not reportable`). Group by KF code, fee code, product stream or quarter, or open the pivot view."
+msgstr ":menuselection:`Contabilidad --> Informes --> EPR --> EPR Register` enumera las líneas del registro con fecha, código KF, código de tasa, producto y componente, factura, contacto, cantidad, tipo, tasa y estado (:guilabel:`Fee payable`, :guilabel:`Reported without fee`, :guilabel:`Not reportable`). Agrupe por código KF, código de tasa, flujo de producto o trimestre, o abra la vista de tabla dinámica."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:233
+msgid "Quarterly data report"
+msgstr "Informe de datos trimestral"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:235
+msgid ":menuselection:`Accounting --> Reporting --> EPR --> EPR Data Reports`:"
+msgstr ":menuselection:`Contabilidad --> Informes --> EPR --> EPR Data Reports`:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:237
+msgid "Create a report with the year and the quarter. The :guilabel:`Deadline` (20th day of the month after the quarter) is shown."
+msgstr "Cree un informe con el año y el trimestre. Se muestra el :guilabel:`Deadline` (día 20 del mes siguiente al trimestre)."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:239
+msgid "Click :guilabel:`Compute`. The register lines of the quarter are summed by KF code:"
+msgstr "Haga clic en :guilabel:`Compute`. Las líneas del registro del trimestre se suman por código KF:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:241
+msgid "deliveries in the :guilabel:`Summary` tab as *placed on the market* rows (data package block `KG_KGYF_NE_TERMEK_FORG`), with the declaring buyers of the `A` and `B` codes;"
+msgstr "las entregas, en la pestaña :guilabel:`Summary`, como filas *introducidas en el mercado* (bloque del paquete de datos `KG_KGYF_NE_TERMEK_FORG`), con los compradores declarantes de los códigos `A` y `B`;"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:243
+msgid "credit notes as *returned* rows with positive quantities (block `KG_KGYF_NE_TERMEK_VISSZA`);"
+msgstr "las notas de crédito, como filas *devueltas* con cantidades positivas (bloque `KG_KGYF_NE_TERMEK_VISSZA`);"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:244
+msgid "the :guilabel:`Expected Fee` tab: quantity × rate by fee code and rate, net of the returns."
+msgstr "la pestaña :guilabel:`Expected Fee`: cantidad × tipo por código de tasa y tipo, descontadas las devoluciones."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:246
+msgid "Quantities are in kg with three decimals; codes netting to zero are left out. Without any line the report is a :guilabel:`Zero Report`."
+msgstr "Las cantidades se expresan en kg con tres decimales; los códigos con saldo cero se omiten. Sin ninguna línea, el informe es un :guilabel:`Zero Report`."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:248
+msgid "Check the warnings: draft invoices of the quarter, lines of earlier quarters that are in no report (late credit notes), returned products, missing rates, declarations without buyer address, Point of Sale orders without invoice, and missing OKIRkapu data."
+msgstr "Compruebe las advertencias: facturas en borrador del trimestre, líneas de trimestres anteriores que no están en ningún informe (notas de crédito tardías), productos devueltos, tipos faltantes, declaraciones sin dirección del comprador, pedidos del Punto de venta sin factura y datos de OKIRkapu faltantes."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:251
+msgid ":guilabel:`Export XML (OKIRkapu)` computes the draft report again, builds the :guilabel:`KG:KGYF-NÉ` XML and validates it against the official XSD (version 1.16). :guilabel:`Export XLSX` downloads the summary, the expected fee and the detailed register."
+msgstr ":guilabel:`Export XML (OKIRkapu)` vuelve a calcular el informe en borrador, genera el XML :guilabel:`KG:KGYF-NÉ` y lo valida con el XSD oficial (versión 1.16). :guilabel:`Export XLSX` descarga el resumen, la tasa prevista y el registro detallado."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:254
+msgid "Click :guilabel:`Close`: the register lines of the quarter are locked."
+msgstr "Haga clic en :guilabel:`Close`: las líneas del registro del trimestre se bloquean."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:255
+msgid "In OKIRkapu, create the data package with :guilabel:`Új adatcsomag XML-ből`, upload the XML, check it and submit it. Record :guilabel:`Submitted On` and :guilabel:`OKIR Filing Number`, then click :guilabel:`Mark as Submitted`."
+msgstr "En OKIRkapu, cree el paquete de datos con :guilabel:`Új adatcsomag XML-ből`, suba el XML, revíselo y preséntelo. Registre :guilabel:`Submitted On` y :guilabel:`OKIR Filing Number` y, después, haga clic en :guilabel:`Mark as Submitted`."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:258
+msgid "When the MOHU invoice arrives, add it to :guilabel:`MOHU Invoices` in the :guilabel:`Expected Fee` tab: :guilabel:`Invoiced by MOHU (net)` and :guilabel:`Difference` show the comparison. A complaint with the correct data can be filed within 15 days of receipt (21. § (7))."
+msgstr "Cuando llegue la factura de MOHU, añádala a :guilabel:`MOHU Invoices` en la pestaña :guilabel:`Expected Fee`: :guilabel:`Invoiced by MOHU (net)` y :guilabel:`Difference` muestran la comparación. Se puede presentar una reclamación con los datos correctos en un plazo de 15 días desde la recepción (21. § (7))."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:273
+msgid "The data of a submitted quarter can be corrected once a year, between 1 January and 31 March of the following year, or with a complaint against the MOHU invoice within 15 days (27. § (6), 21. § (7)). Create a new report for the quarter with :guilabel:`Correction` ticked and fill in :guilabel:`Disputed MOHU Invoice` or :guilabel:`Authority Case Number`. The correction takes a snapshot of all register lines of the quarter; the lines stay linked to the original report."
+msgstr "Los datos de un trimestre presentado se pueden corregir una vez al año, entre el 1 de enero y el 31 de marzo del año siguiente, o mediante una reclamación contra la factura de MOHU en un plazo de 15 días (27. § (6), 21. § (7)). Cree un nuevo informe para el trimestre con :guilabel:`Correction` marcado y complete :guilabel:`Disputed MOHU Invoice` o :guilabel:`Authority Case Number`. La corrección toma una instantánea de todas las líneas del registro del trimestre; las líneas siguen vinculadas al informe original."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:280
+msgid "The following cases are not supported by the module: the yearly report of small producers (`KG:KGYF-ÉV`), take-over contracts, deposit-return (DRS) products, the lump sum for wine bottles and vehicles, and the handling data of individual fulfillment."
+msgstr "El módulo no admite los siguientes casos: el informe anual de los pequeños productores (`KG:KGYF-ÉV`), los contratos de asunción, los productos con sistema de depósito, devolución y retorno (DRS), la cantidad global para botellas de vino y vehículos, y los datos de gestión del cumplimiento individual."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:5
+msgid "The :guilabel:`Hungary - Environmental Product Charge (KVTD)` (`l10n_hu_kvtd`) module keeps the register of the environmental product fee (*környezetvédelmi termékdíj*, Act LXXXV of 2011, Ktdt.), prints the required clauses on the invoices and prepares the quarterly summary of the NAV :guilabel:`KTBEV` return. It can be installed from the Apps menu or by ticking :guilabel:`Hungarian KVTD` in the :doc:`eYssen ERP settings <../../../general/eyssen_erp_settings>`."
+msgstr "El módulo :guilabel:`Hungary - Environmental Product Charge (KVTD)` (`l10n_hu_kvtd`) lleva el registro de la tasa medioambiental de producto (*környezetvédelmi termékdíj*, Ley LXXXV de 2011, Ktdt.), imprime las cláusulas obligatorias en las facturas y prepara el resumen trimestral de la declaración :guilabel:`KTBEV` de la NAV. Se puede instalar desde el menú Aplicaciones o marcando :guilabel:`Hungarian KVTD` en los :doc:`ajustes de eYssen ERP <../../../general/eyssen_erp_settings>`."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:11
+msgid "Since 1 January 2025 the product fee only applies to three product streams; packaging, electrical and electronic equipment, batteries, tyres, office paper and advertising paper are covered by the :doc:`extended producer responsibility (EPR) <epr>` instead:"
+msgstr "Desde el 1 de enero de 2025, la tasa de producto solo se aplica a tres flujos de producto; los envases, los aparatos eléctricos y electrónicos, las pilas y baterías, los neumáticos, el papel de oficina y el papel publicitario pasan a estar cubiertos por la :doc:`responsabilidad ampliada del productor (EPR) <epr>`:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:15
+msgid "**other petroleum products**: lubricating, hydraulic and industrial oils (KT groups `602`, `603`, `604`);"
+msgstr "**otros productos petrolíferos**: aceites lubricantes, hidráulicos e industriales (grupos KT `602`, `603`, `604`);"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:17
+msgid "**other plastic products**: artificial flowers and plants (`301`) and plastic carrier bags (`311`, `312`, `316`, `351`, `352`, by thickness and biodegradability);"
+msgstr "**otros productos de plástico**: flores y plantas artificiales (`301`) y bolsas de plástico (`311`, `312`, `316`, `351`, `352`, según el grosor y la biodegradabilidad);"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:19
+msgid "**other chemical products**: soaps, detergents and cleaning products (`701`) and cosmetics (`702`)."
+msgstr "**otros productos químicos**: jabones, detergentes y productos de limpieza (`701`) y cosméticos (`702`)."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:22
+msgid "The fee does not change the price, the taxes or the journal entry of the invoice. The module keeps the register and the summary; the return itself is filed on the :guilabel:`KTBEV` form of NAV."
+msgstr "La tasa no modifica el precio, los impuestos ni el asiento contable de la factura. El módulo lleva el registro y el resumen; la declaración en sí se presenta en el formulario :guilabel:`KTBEV` de la NAV."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:25
+msgid "The module replaces the earlier `eyssen_l10n_hu_kvtd` module. See :ref:`Changing from the earlier module <localizations/hungary/kvtd-migration>`."
+msgstr "El módulo sustituye al anterior módulo `eyssen_l10n_hu_kvtd`. Consulte :ref:`Cambio desde el módulo anterior <localizations/hungary/kvtd-migration>`."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:34
+msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`, section :guilabel:`Hungarian Product Charge (KVTD)`:"
+msgstr "Vaya a :menuselection:`Contabilidad --> Configuración --> Ajustes`, sección :guilabel:`Hungarian Product Charge (KVTD)`:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:37
+msgid ":guilabel:`Product Charge Method`: when the obligation arises."
+msgstr ":guilabel:`Product Charge Method`: cuándo surge la obligación."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:39
+msgid ":guilabel:`Placing on the market (customer invoices)`: the fee is recorded on the domestic customer invoices of the company (Ktdt. 5. §)."
+msgstr ":guilabel:`Placing on the market (customer invoices)`: la tasa se registra en las facturas de cliente nacionales de la empresa (Ktdt. 5. §)."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:41
+msgid ":guilabel:`Stock-in (vendor bills, Ktdt. 6. §)`: the fee is recorded on the vendor bills of goods bought from abroad. The stock-in method can only be chosen from the first day of a year and must be notified to NAV by 31 January."
+msgstr ":guilabel:`Stock-in (vendor bills, Ktdt. 6. §)`: la tasa se registra en las facturas de proveedor de bienes comprados en el extranjero. El método de entrada en existencias solo se puede elegir a partir del primer día de un año y debe notificarse a la NAV antes del 31 de enero."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:45
+msgid ":guilabel:`Product Charge Register Start`: invoices with an earlier fulfillment date do not create register lines (default: 1 January 2025)."
+msgstr ":guilabel:`Product Charge Register Start`: las facturas con una fecha de cumplimiento anterior no crean líneas de registro (predeterminado: 1 de enero de 2025)."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:47
+msgid ":guilabel:`Domestic Petroleum Producer`: tick it if the company produces petroleum products in Hungary. For these products the **first buyer** is liable for the fee (Ktdt. 3. § (2) b)), unless the company takes it over on the invoice."
+msgstr ":guilabel:`Domestic Petroleum Producer`: márquelo si la empresa produce productos petrolíferos en Hungría. Para estos productos, el **primer comprador** está obligado al pago de la tasa (Ktdt. 3. § (2) b)), a menos que la empresa la asuma en la factura."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:50
+msgid ":guilabel:`Small Quantity Lump Sum`: the company pays the yearly lump sum of Ktdt. 15/B. § instead of the fee and files a yearly return."
+msgstr ":guilabel:`Small Quantity Lump Sum`: la empresa paga la cantidad global anual del Ktdt. 15/B. § en lugar de la tasa y presenta una declaración anual."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:52
+msgid ":guilabel:`Print KT Code and Charge on Invoices`: prints the KT code, the rate and the fee amount under every invoice line for every customer."
+msgstr ":guilabel:`Print KT Code and Charge on Invoices`: imprime el código KT, el tipo y el importe de la tasa debajo de cada línea de factura para todos los clientes."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:64
+msgid "KT product groups and rates"
+msgstr "Grupos de productos KT y tipos"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:66
+msgid ":menuselection:`Accounting --> Configuration --> Product Charge (KVTD) --> KT Product Groups` lists the KT product groups (the first three digits of the KT code) with their product stream, their customs tariff numbers and their current rate. The groups and the rates valid from 1 January 2025 are loaded with the module:"
+msgstr ":menuselection:`Contabilidad --> Configuración --> Product Charge (KVTD) --> KT Product Groups` enumera los grupos de productos KT (los tres primeros dígitos del código KT) con su flujo de producto, sus códigos arancelarios y su tipo vigente. Los grupos y los tipos vigentes desde el 1 de enero de 2025 se cargan con el módulo:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:75
+msgid "KT group"
+msgstr "Grupo KT"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:77
+msgid "Rate (HUF/kg)"
+msgstr "Tipo (HUF/kg)"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:78
+msgid "`602`, `603`, `604`"
+msgstr "`602`, `603`, `604`"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:79
+msgid "Motor, gear and industrial oils"
+msgstr "Aceites de motor, de engranajes e industriales"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:80
+msgid "114"
+msgstr "114"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:81
+msgid "`301`"
+msgstr "`301`"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:82
+msgid "Plastic flowers, foliage and fruit imitations"
+msgstr "Flores, follaje y frutas artificiales de plástico"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:83
+msgid "1 900"
+msgstr "1 900"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:84
+msgid "`311`, `351`"
+msgstr "`311`, `351`"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:85
+msgid "Plastic carrier bags, not biodegradable"
+msgstr "Bolsas de plástico, no biodegradables"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:86
+msgid "1 681"
+msgstr "1 681"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:87
+msgid "`312`, `316`, `352`"
+msgstr "`312`, `316`, `352`"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:88
+msgid "Plastic carrier bags, biodegradable"
+msgstr "Bolsas de plástico, biodegradables"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:89
+msgid "281"
+msgstr "281"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:90
+msgid "`701`"
+msgstr "`701`"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:91
+msgid "Soaps, surface-active agents, detergents"
+msgstr "Jabones, agentes tensioactivos, detergentes"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:93
+msgid "`702`"
+msgstr "`702`"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:94
+msgid "Beauty and body care products"
+msgstr "Productos de belleza y cuidado corporal"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:95
+msgid "57"
+msgstr "57"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:97
+msgid "The rates of the carrier bags are 1 900 HUF/kg (biodegradable: 500 HUF/kg) reduced by the EPR fee of the bag (Ktdt. 2. melléklet). For carrier bags the quantity is also kept in pieces."
+msgstr "Los tipos de las bolsas de plástico son 1 900 HUF/kg (biodegradables: 500 HUF/kg), menos la tasa EPR de la bolsa (Ktdt. 2. melléklet). Para las bolsas de plástico, la cantidad también se lleva en unidades."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:100
+msgid "Each group has a :guilabel:`Rates` tab with :guilabel:`Valid From` and :guilabel:`Valid To` dates: when a rate changes, close the old line and add a new one. The register always uses the rate valid on the fulfillment date of the invoice. Overlapping periods are not allowed."
+msgstr "Cada grupo tiene una pestaña :guilabel:`Rates` con las fechas :guilabel:`Valid From` y :guilabel:`Valid To`: cuando cambie un tipo, cierre la línea anterior y añada una nueva. El registro siempre utiliza el tipo vigente en la fecha de cumplimiento de la factura. No se permiten periodos superpuestos."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:107
+msgid "On the :guilabel:`Product Charge (KVTD)` tab of the product form:"
+msgstr "En la pestaña :guilabel:`Product Charge (KVTD)` del formulario de producto:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:109
+msgid ":guilabel:`Product Charge Liability`:"
+msgstr ":guilabel:`Product Charge Liability`:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:111
+msgid ":guilabel:`According to the company method` (default): every domestic sale is charged with the *placing on the market* method; only purchases from abroad with the *stock-in* method."
+msgstr ":guilabel:`According to the company method` (predeterminado): toda venta nacional se grava con el método de *introducción en el mercado*; con el método de *entrada en existencias*, solo las compras en el extranjero."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:113
+msgid ":guilabel:`Always liable`: also charged when bought from a Hungarian supplier (stock-in method)."
+msgstr ":guilabel:`Always liable`: también se grava cuando se compra a un proveedor húngaro (método de entrada en existencias)."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:114
+msgid ":guilabel:`Not liable (charge paid by the supplier)`: the company is not the first domestic distributor of the product."
+msgstr ":guilabel:`Not liable (charge paid by the supplier)`: la empresa no es el primer distribuidor nacional del producto."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:117
+msgid "One line per KT group contained in **one unit** of the product:"
+msgstr "Una línea por cada grupo KT contenido en **una unidad** del producto:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:119
+msgid ":guilabel:`KT Group`;"
+msgstr ":guilabel:`KT Group`;"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:120
+msgid ":guilabel:`Weight per Unit (kg)`: the chargeable mass in one unit of measure of the product;"
+msgstr ":guilabel:`Weight per Unit (kg)`: la masa sujeta a tasa en una unidad de medida del producto;"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:121
+msgid ":guilabel:`Pieces per Unit`: carrier bags only;"
+msgstr ":guilabel:`Pieces per Unit`: solo para bolsas de plástico;"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:122
+msgid ":guilabel:`Origin`: :guilabel:`Domestic production` or :guilabel:`Imported (EU or third country)`;"
+msgstr ":guilabel:`Origin`: :guilabel:`Domestic production` o :guilabel:`Imported (EU or third country)`;"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:123
+msgid ":guilabel:`Role`: charged under its own tariff number, or component or accessory of another product;"
+msgstr ":guilabel:`Role`: gravado con su propio código arancelario, o componente o accesorio de otro producto;"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:125
+msgid ":guilabel:`Supplementary Code` (computed): the last two characters of the KT code, `B1`, `B2`, `K1` or `K2`;"
+msgstr ":guilabel:`Supplementary Code` (calculado): los dos últimos caracteres del código KT, `B1`, `B2`, `K1` o `K2`;"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:127
+msgid ":guilabel:`Variant` (optional, with variants): a line for one variant replaces the lines without variant for that variant, for example when the 1 l and the 4 l bottles have different weights."
+msgstr ":guilabel:`Variant` (opcional, con variantes): una línea para una variante sustituye a las líneas sin variante para esa variante, por ejemplo, cuando las botellas de 1 l y de 4 l tienen pesos diferentes."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:130
+msgid ":guilabel:`Product Charge per Unit (HUF)` shows the fee of one unit at the current rates."
+msgstr ":guilabel:`Product Charge per Unit (HUF)` muestra la tasa de una unidad con los tipos vigentes."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:141
+msgid "Customers and take-over"
+msgstr "Clientes y asunción"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:143
+msgid "The :guilabel:`Accounting` tab of company contacts contains the :guilabel:`Product Charge (KVTD)` section:"
+msgstr "La pestaña :guilabel:`Contabilidad` de los contactos de tipo empresa contiene la sección :guilabel:`Product Charge (KVTD)`:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:146
+msgid ":guilabel:`Print KT Code and Charge on Invoices`: the customer is entitled to a refund and asked for the details of Ktdt. 13. § (3) on the invoice."
+msgstr ":guilabel:`Print KT Code and Charge on Invoices`: el cliente tiene derecho a un reembolso y solicitó los datos del Ktdt. 13. § (3) en la factura."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:148
+msgid ":guilabel:`Take Over Petroleum Charge on Invoice`: as the producer of a domestic petroleum product, the company takes over the buyer's obligation on the invoice (Ktdt. 14. § (4))."
+msgstr ":guilabel:`Take Over Petroleum Charge on Invoice`: como productora de un producto petrolífero nacional, la empresa asume la obligación del comprador en la factura (Ktdt. 14. § (4))."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:151
+msgid "Contractual take-over (Ktdt. 14. § (5)) is recorded in :menuselection:`Accounting --> Configuration --> Product Charge (KVTD) --> Take-over Contracts`: :guilabel:`Customer (Taking Over)`, :guilabel:`Legal Basis` (the buyer exports at least 60% or stores the goods in a tax warehouse, or contract manufacturing), the validity (at most 3 years), the optional :guilabel:`KT Groups` and :guilabel:`Registered by NAV On`. The contract is effective only from its registration by NAV (Ktdt. 14/A. §)."
+msgstr "La asunción contractual (Ktdt. 14. § (5)) se registra en :menuselection:`Contabilidad --> Configuración --> Product Charge (KVTD) --> Take-over Contracts`: :guilabel:`Customer (Taking Over)`, :guilabel:`Legal Basis` (el comprador exporta al menos el 60 % o almacena los bienes en un depósito fiscal, o fabricación por encargo), la validez (como máximo 3 años), los :guilabel:`KT Groups` opcionales y :guilabel:`Registered by NAV On`. El contrato solo surte efecto a partir de su registro por la NAV (Ktdt. 14/A. §)."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:161
+msgid "When an invoice is posted, a register line is created for every charge line of its products: quantity = invoiced quantity converted to the unit of the product × weight per unit, fee = quantity × rate valid on the fulfillment date. The lines are listed on the :guilabel:`Product Charge` tab of the invoice (visible to invoicing users and accountants)."
+msgstr "Al contabilizar una factura, se crea una línea de registro para cada línea de tasa de sus productos: cantidad = cantidad facturada convertida a la unidad del producto × peso por unidad, tasa = cantidad × tipo vigente en la fecha de cumplimiento. Las líneas se enumeran en la pestaña :guilabel:`Product Charge` de la factura (visible para los usuarios de facturación y los contadores)."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:166
+msgid "The register line gets the full 7-character KT code: KT group + handling code + supplementary code, for example `60201K1`."
+msgstr "La línea de registro recibe el código KT completo de 7 caracteres: grupo KT + código de tratamiento + código complementario, por ejemplo, `60201K1`."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:173
+msgid "Case"
+msgstr "Caso"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:174
+msgid "Handling code"
+msgstr "Código de tratamiento"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:176
+msgid "Domestic sale"
+msgstr "Venta nacional"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:178
+msgid "Fee payable."
+msgstr "Tasa a pagar."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:179
+msgid "Delivery abroad (shipping address outside Hungary)"
+msgstr "Entrega al extranjero (dirección de envío fuera de Hungría)"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:180 ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:189
+msgid "–"
+msgstr "–"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:181
+msgid "Not reportable (Ktdt. 4. § (2) a))."
+msgstr "No se reporta (Ktdt. 4. § (2) a))."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:182
+msgid "Customer with an effective take-over contract"
+msgstr "Cliente con un contrato de asunción vigente"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:183
+msgid "`77` or `78`"
+msgstr "`77` o `78`"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:184
+msgid "Reported without fee; the invoice gets the clause of the contract."
+msgstr "Se reporta sin tasa; la factura recibe la cláusula del contrato."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:185
+msgid "Take-over on the invoice (domestic petroleum product of a producer)"
+msgstr "Asunción en la factura (producto petrolífero nacional de un productor)"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:186
+msgid "`73`"
+msgstr "`73`"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:187
+msgid "Fee payable by the company; the invoice gets the clause with the amount."
+msgstr "Tasa a pagar por la empresa; la factura recibe la cláusula con el importe."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:188
+msgid "Domestic petroleum product of a producer, no take-over"
+msgstr "Producto petrolífero nacional de un productor, sin asunción"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:190
+msgid "Not reportable: the first buyer is liable."
+msgstr "No se reporta: el primer comprador está obligado."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:192
+msgid "Credit notes reverse the lines of the original invoice in proportion to the credited quantity, with the same KT code and rate. If a credit note or a corrective invoice only corrects the price (no goods were returned), tick :guilabel:`No Product Charge Effect` on it; the field can also be changed after posting, the lines are then rebuilt."
+msgstr "Las notas de crédito revierten las líneas de la factura original en proporción a la cantidad abonada, con el mismo código KT y tipo. Si una nota de crédito o una factura correctiva solo corrige el precio (no se devolvieron bienes), marque :guilabel:`No Product Charge Effect` en ella; el campo también se puede cambiar después de contabilizar y, en ese caso, las líneas se vuelven a generar."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:197
+msgid "If the charge lines of a product are completed later, select the posted invoices in the list view and use :menuselection:`Actions --> Rebuild product charge lines` (accounting administrators). Lines that belong to a closed return summary are not changed."
+msgstr "Si las líneas de tasa de un producto se completan más tarde, seleccione las facturas contabilizadas en la vista de lista y utilice :menuselection:`Acciones --> Rebuild product charge lines` (administradores de contabilidad). Las líneas que pertenecen a un resumen de declaración cerrado no se modifican."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:202
+msgid "Only invoices create register lines. Point of Sale orders without an invoice are not included; the return summary warns about them, add their quantities as manual register lines."
+msgstr "Solo las facturas crean líneas de registro. Los pedidos del Punto de venta sin factura no se incluyen; el resumen de la declaración advierte sobre ellos: añada sus cantidades como líneas de registro manuales."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:208
+msgid "The printed customer invoice shows, before the payment terms:"
+msgstr "La factura de cliente impresa muestra, antes de las condiciones de pago:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:210
+msgid "with contractual take-over: *A termékdíj-kötelezettség a Ktdt. 14. § (5) bekezdés a) [b)] pontja alapján a vevőt terheli.*"
+msgstr "con asunción contractual: *A termékdíj-kötelezettség a Ktdt. 14. § (5) bekezdés a) [b)] pontja alapján a vevőt terheli.*"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:212
+msgid "with take-over on the invoice: *Az egyéb kőolajtermék vevője nem termékdíj-kötelezett, a bruttó árból … Ft termékdíj átvállalásra került.*"
+msgstr "con asunción en la factura: *Az egyéb kőolajtermék vevője nem termékdíj-kötelezett, a bruttó árból … Ft termékdíj átvállalásra került.*"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:215
+msgid "When the details are requested (customer or company setting), every line shows the KT code, the quantity, the rate and the fee, and the invoice shows the name, address and tax number of the liable company. Lump-sum payers cannot print these details (Ktdt. 13. § (2))."
+msgstr "Cuando se solicitan los datos (ajuste del cliente o de la empresa), cada línea muestra el código KT, la cantidad, el tipo y la tasa, y la factura muestra el nombre, la dirección y el número de identificación fiscal de la empresa obligada. Quienes pagan la cantidad global no pueden imprimir estos datos (Ktdt. 13. § (2))."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:220
+msgid "Register and returns"
+msgstr "Registro y declaraciones"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:225
+msgid ":menuselection:`Accounting --> Reporting --> Product Charge (KVTD) --> Product Charge Register` lists the register lines with date, KT code, product, invoice, partner, quantity, rate, fee and status (:guilabel:`Chargeable`, :guilabel:`Reported without charge`, :guilabel:`Not reportable`, :guilabel:`Legacy (before 2025)`). Group by KT code or quarter, or open the pivot view. Opening stock (stock-in method), own use and corrections can be entered as manual lines."
+msgstr ":menuselection:`Contabilidad --> Informes --> Product Charge (KVTD) --> Product Charge Register` enumera las líneas del registro con fecha, código KT, producto, factura, contacto, cantidad, tipo, tasa y estado (:guilabel:`Chargeable`, :guilabel:`Reported without charge`, :guilabel:`Not reportable`, :guilabel:`Legacy (before 2025)`). Agrupe por código KT o trimestre, o abra la vista de tabla dinámica. Las existencias iniciales (método de entrada en existencias), el uso propio y las correcciones se pueden introducir como líneas manuales."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:232
+msgid "Quarterly return summary"
+msgstr "Resumen trimestral de la declaración"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:234
+msgid ":menuselection:`Accounting --> Reporting --> Product Charge (KVTD) --> Product Charge Returns`:"
+msgstr ":menuselection:`Contabilidad --> Informes --> Product Charge (KVTD) --> Product Charge Returns`:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:236
+msgid "Create a summary with :guilabel:`Quarterly` (or :guilabel:`Yearly (lump sum)`), the year and the quarter."
+msgstr "Cree un resumen con :guilabel:`Quarterly` (o :guilabel:`Yearly (lump sum)`), el año y el trimestre."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:238
+msgid "Click :guilabel:`Compute`: the register lines of the period are summed by KT code and rate. The quantity is rounded to two decimals of kg (Ktdt. 11. § (4)) and the fee is quantity × rate. :guilabel:`Payable` is zero if the total is below 1 000 HUF (Ktdt. 12. § (2)); for lump-sum payers it is the yearly lump sum of the categories used."
+msgstr "Haga clic en :guilabel:`Compute`: las líneas del registro del periodo se suman por código KT y tipo. La cantidad se redondea a dos decimales de kg (Ktdt. 11. § (4)) y la tasa es cantidad × tipo. :guilabel:`Payable` es cero si el total es inferior a 1 000 HUF (Ktdt. 12. § (2)); para quienes pagan la cantidad global, es la cantidad global anual de las categorías utilizadas."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:242
+msgid "Check the warnings: draft invoices of the period, lines without rate, negative balances, lines of earlier periods that are in no return (for example late credit notes, which belong to their own period), Point of Sale orders without invoice, and the yearly limit of the lump sum (40 kg petroleum products, 2 kg artificial flowers, 75 kg carrier bags, 200 kg chemical products)."
+msgstr "Compruebe las advertencias: facturas en borrador del periodo, líneas sin tipo, saldos negativos, líneas de periodos anteriores que no están en ninguna declaración (por ejemplo, notas de crédito tardías, que pertenecen a su propio periodo), pedidos del Punto de venta sin factura y el límite anual de la cantidad global (40 kg de productos petrolíferos, 2 kg de flores artificiales, 75 kg de bolsas de plástico, 200 kg de productos químicos)."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:246
+msgid ":guilabel:`Export XLSX` downloads the summary and the detailed register for filling in the :guilabel:`KTBEV` form."
+msgstr ":guilabel:`Export XLSX` descarga el resumen y el registro detallado para completar el formulario :guilabel:`KTBEV`."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:248
+msgid "File the return in NAV by the 20th day of the month following the quarter and pay the fee by the same day. Record :guilabel:`Submitted On` and :guilabel:`NAV Filing Number`, then click :guilabel:`Close`: the register lines of the period are locked."
+msgstr "Presente la declaración ante la NAV a más tardar el día 20 del mes siguiente al trimestre y pague la tasa ese mismo día. Registre :guilabel:`Submitted On` y :guilabel:`NAV Filing Number` y, después, haga clic en :guilabel:`Close`: las líneas del registro del periodo se bloquean."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:252
+msgid ":guilabel:`Reopen` (accounting administrators) unlocks the summary for a correction."
+msgstr ":guilabel:`Reopen` (administradores de contabilidad) desbloquea el resumen para una corrección."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:265
+msgid "Changing from the earlier module"
+msgstr "Cambio desde el módulo anterior"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:267
+msgid "The earlier `eyssen_l10n_hu_kvtd` module and `l10n_hu_kvtd` use different data and can be installed side by side for the change:"
+msgstr "El anterior módulo `eyssen_l10n_hu_kvtd` y `l10n_hu_kvtd` utilizan datos diferentes y se pueden instalar en paralelo para el cambio:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:270
+msgid "Install `l10n_hu_kvtd`."
+msgstr "Instale `l10n_hu_kvtd`."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:271
+msgid "Set the KT groups and the weights on the products. The petroleum products of the earlier module can be copied (the packaging and the other categories that moved to EPR are not needed any more; carrier bags were packaging in the earlier module and need their new KT group)."
+msgstr "Configure los grupos KT y los pesos en los productos. Los productos petrolíferos del módulo anterior se pueden copiar (los envases y las demás categorías que pasaron a la EPR ya no son necesarios; las bolsas de plástico eran envases en el módulo anterior y necesitan su nuevo grupo KT)."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:274
+msgid "Keep the earlier lines of already filed periods as read-only *legacy* lines, and rebuild the invoices of the first period not yet filed with :menuselection:`Actions --> Rebuild product charge lines`."
+msgstr "Conserve las líneas anteriores de los periodos ya declarados como líneas *heredadas* de solo lectura, y vuelva a generar las líneas de las facturas del primer periodo aún no declarado con :menuselection:`Acciones --> Rebuild product charge lines`."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:277
+msgid "Uninstall `eyssen_l10n_hu_kvtd`."
+msgstr "Desinstale `eyssen_l10n_hu_kvtd`."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:280
+msgid "eYssen provides a migration script for these steps; ask your eYssen contact."
+msgstr "eYssen proporciona un script de migración para estos pasos; consulte a su contacto de eYssen."
+
+#~ msgid "The Hungarian localization combines the standard :guilabel:`Hungary - Accounting` package with a set of *eYssen* modules. Together they cover invoicing according to the Hungarian VAT Act, real-time data reporting to the :abbr:`NAV (Nemzeti Adó- és Vámhivatal, National Tax and Customs Administration)` *Online Számla* system, pro-forma and advance invoices, the VAT return (through ÁNYK forms or the NAV eÁFA machine-to-machine interface), fixed assets, the auditor data export of the Chamber of Hungarian Auditors (MKVK), the environmental product fee (KVTD), EU OSS sales and the official exchange rates of the Hungarian National Bank (MNB)."
+#~ msgstr "La localización húngara combina el paquete estándar :guilabel:`Hungary - Accounting` con un conjunto de módulos *eYssen*. Juntos cubren la facturación según la Ley del IVA húngara, el reporte de datos en tiempo real al sistema *Online Számla* de la :abbr:`NAV (Nemzeti Adó- és Vámhivatal, Administración Nacional Tributaria y Aduanera)`, las facturas proforma y de anticipo, la declaración de IVA (mediante formularios ÁNYK o la interfaz máquina a máquina eÁFA de la NAV), los activos fijos, la exportación de datos para auditores de la Cámara de Auditores Húngaros (MKVK), la tasa por productos ambientales (KVTD), las ventas mediante la ventanilla única (OSS) de la UE y los tipos de cambio oficiales del Banco Nacional de Hungría (MNB)."
+
+#~ msgid ":guilabel:`KVTD`"
+#~ msgstr ":guilabel:`KVTD`"
+
+#~ msgid "`eyssen_l10n_hu_kvtd`"
+#~ msgstr "`eyssen_l10n_hu_kvtd`"
+
+#~ msgid ":doc:`Environmental product fee <hungary/kvtd>` (*környezetvédelmi termékdíj*) records on products and invoices."
+#~ msgstr ":doc:`Tasa por productos ambientales <hungary/kvtd>` (*környezetvédelmi termékdíj*) en productos y facturas."
+
+#~ msgid "The :guilabel:`KVTD` (`eyssen_l10n_hu_kvtd`) module records the environmental product fee (*környezetvédelmi termékdíj*) content of products, calculates the fee-liable weight and the fee on invoice lines, prints it on customer invoices, and provides the list needed to prepare the product fee return. It can be installed from the Apps menu or by ticking :guilabel:`Hungarian KVTD` in the general settings."
+#~ msgstr "El módulo :guilabel:`KVTD` (`eyssen_l10n_hu_kvtd`) registra el contenido de tasa medioambiental de producto (*környezetvédelmi termékdíj*) de los productos, calcula el peso sujeto a tasa y la tasa en las líneas de factura, la imprime en las facturas de cliente y proporciona la lista necesaria para preparar la declaración de la tasa de producto. Se puede instalar desde el menú Aplicaciones o marcando :guilabel:`KVTD húngaro` en los ajustes generales."
+
+#~ msgid "The fee is **informative**: it does not change the price, the taxes or the journal entry of the invoice, and no return file is generated."
+#~ msgstr "La tasa es **informativa**: no modifica el precio, los impuestos ni el asiento contable de la factura, y no se genera ningún archivo de declaración."
+
+#~ msgid "The menus and fields of this module are displayed in Hungarian in the current module version."
+#~ msgstr "Los menús y campos de este módulo se muestran en húngaro en la versión actual del módulo."
+
+#~ msgid "Fee types"
+#~ msgstr "Tipos de tasa"
+
+#~ msgid "Go to :menuselection:`Accounting --> Configuration --> Környezetvédelmi termékdíj --> Termékdíj típusok` and create a row for every fee item used by the company:"
+#~ msgstr "Vaya a :menuselection:`Contabilidad --> Configuración --> Környezetvédelmi termékdíj --> Termékdíj típusok` y cree una fila para cada elemento de tasa que use la empresa:"
+
+#~ msgid ":guilabel:`Megnevezés`: unique name;"
+#~ msgstr ":guilabel:`Megnevezés`: nombre único;"
+
+#~ msgid ":guilabel:`KT/CSK kód`: the KT or CsK code of the fee item;"
+#~ msgstr ":guilabel:`KT/CSK kód`: el código KT o CsK del elemento de tasa;"
+
+#~ msgid ":guilabel:`Termékdíj kategória`: battery, packaging, other petroleum products, tyres, refrigerants, advertising paper, or electrical and electronic equipment;"
+#~ msgstr ":guilabel:`Termékdíj kategória`: batería, envase, otros productos derivados del petróleo, neumáticos, refrigerantes, papel publicitario, o equipos eléctricos y electrónicos;"
+
+#~ msgid ":guilabel:`VTSZ`: customs tariff number (optional);"
+#~ msgstr ":guilabel:`VTSZ`: número de arancel aduanero (opcional);"
+
+#~ msgid ":guilabel:`Díjtétel (Ft/kg)`: the fee rate in HUF per kilogram;"
+#~ msgstr ":guilabel:`Díjtétel (Ft/kg)`: el tipo de la tasa en HUF por kilogramo;"
+
+#~ msgid ":guilabel:`Mode`: :guilabel:`Bejövő számla alapján` (the fee is recorded on vendor bills) or :guilabel:`Kiemnő számla alapján` (on customer invoices)."
+#~ msgstr ":guilabel:`Modo`: :guilabel:`Bejövő számla alapján` (la tasa se registra en las facturas de proveedor) o :guilabel:`Kiemnő számla alapján` (en las facturas de cliente)."
+
+#~ msgid "On the :guilabel:`KVTD` tab of the product form, add a line for every fee type contained in the product with the :guilabel:`Mennyiség (kg)`: the weight of the fee-liable material in **one unit** of the product. The same assignments can be edited in bulk in :menuselection:`Accounting --> Configuration --> Környezetvédelmi termékdíj --> Termékdíj termékenként`."
+#~ msgstr "En la pestaña :guilabel:`KVTD` de la ficha de producto, añada una línea para cada tipo de tasa que contenga el producto con la :guilabel:`Mennyiség (kg)`: el peso del material sujeto a tasa en **una unidad** del producto. Las mismas asignaciones se pueden editar en bloque en :menuselection:`Contabilidad --> Configuración --> Környezetvédelmi termékdíj --> Termékdíj termékenként`."
+
+#~ msgid "On the :guilabel:`Inventory` tab, :guilabel:`Nettó súly` (net weight) can be recorded next to the :guilabel:`Weight`. A red ✕ warns if the weight minus the packaging fee quantities differs from the net weight."
+#~ msgstr "En la pestaña :guilabel:`Inventario`, se puede registrar :guilabel:`Nettó súly` (peso neto) junto al :guilabel:`Peso`. Una ✕ roja advierte si el peso menos las cantidades de tasa de envase difiere del peso neto."
+
+#~ msgid "Fee types and product assignments can be modified by users with the :guilabel:`Settings` administration right; other users can only read them."
+#~ msgstr "Los tipos de tasa y las asignaciones de producto los pueden modificar los usuarios con el derecho de administración :guilabel:`Ajustes`; el resto de usuarios solo pueden consultarlos."
+
+#~ msgid "When a product with fee assignments is added to a customer invoice (types recorded on customer invoices) or to a vendor bill (types recorded on vendor bills), a KVTD record is created for each fee type: weight = quantity per unit × invoiced quantity, fee = weight × rate."
+#~ msgstr "Cuando se añade un producto con asignaciones de tasa a una factura de cliente (tipos registrados en facturas de cliente) o a una factura de proveedor (tipos registrados en facturas de proveedor), se crea un registro KVTD para cada tipo de tasa: peso = cantidad por unidad × cantidad facturada, tasa = peso × tipo."
+
+#~ msgid "The optional :guilabel:`KVTD` column of the invoice lines shows the weight and the fee type."
+#~ msgstr "La columna opcional :guilabel:`KVTD` de las líneas de factura muestra el peso y el tipo de tasa."
+
+#~ msgid "The pencil icon at the end of the line opens the journal item, where the :guilabel:`KVTD` tab allows changing the fee type and the :guilabel:`Súly (kg)`; the fee is recalculated."
+#~ msgstr "El icono de lápiz al final de la línea abre el apunte contable, donde la pestaña :guilabel:`KVTD` permite cambiar el tipo de tasa y el :guilabel:`Súly (kg)`; la tasa se recalcula."
+
+#~ msgid "On the printed customer invoice, the fee content is shown under the line: code, name, weight, and the sentence stating the amount of the product fee included in the gross price."
+#~ msgstr "En la factura de cliente impresa, el contenido de la tasa se muestra debajo de la línea: código, nombre, peso, y la frase que indica el importe de la tasa de producto incluida en el precio bruto."
+
+#~ msgid "In the current module version, no KVTD records are created on credit notes, the quantity is not converted between units of measure, and the existing records are not updated when the quantity of the line is changed later: check the weight with the pencil icon in these cases."
+#~ msgstr "En la versión actual del módulo, no se crean registros KVTD en las notas de crédito, la cantidad no se convierte entre unidades de medida, y los registros existentes no se actualizan cuando la cantidad de la línea se modifica más tarde: compruebe el peso con el icono de lápiz en estos casos."
+
+#~ msgid ":menuselection:`Accounting --> Reporting --> Környezetvédelmi termékdíj` lists the KVTD records of **posted** invoices with the invoice date, invoice line, fee type, KT/CSK code, category, VTSZ, mode, :guilabel:`Súly (kg)`, :guilabel:`Díjtétel (Ft)` and :guilabel:`Termékdíj (Ft)`. Filter by mode and by :guilabel:`Számla kelte` (invoice date), group by fee type or category, and export the list to a spreadsheet to total the weights and fees for the quarterly product fee return."
+#~ msgstr ":menuselection:`Contabilidad --> Informes --> Környezetvédelmi termékdíj` enumera los registros KVTD de las facturas **contabilizadas** con la fecha de factura, la línea de factura, el tipo de tasa, el código KT/CSK, la categoría, el VTSZ, el modo, :guilabel:`Súly (kg)`, :guilabel:`Díjtétel (Ft)` y :guilabel:`Termékdíj (Ft)`. Filtre por modo y por :guilabel:`Számla kelte` (fecha de factura), agrupe por tipo de tasa o categoría, y exporte la lista a una hoja de cálculo para totalizar los pesos y las tasas de la declaración trimestral de la tasa de producto."
 
 #~ msgid ":ref:`Install <general/install>` the following modules to get all the features of the Romanian localization."
 #~ msgstr ":ref:`Instale <general/install>` los siguientes módulos para obtener todas las funciones de la localización rumana. "

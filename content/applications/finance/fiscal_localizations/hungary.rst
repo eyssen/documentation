@@ -10,8 +10,9 @@ of *eYssen* modules. Together they cover invoicing according to the Hungarian VA
 data reporting to the :abbr:`NAV (Nemzeti Adó- és Vámhivatal, National Tax and Customs
 Administration)` *Online Számla* system, pro-forma and advance invoices, the VAT return (through
 ÁNYK forms or the NAV eÁFA machine-to-machine interface), fixed assets, the auditor data export of
-the Chamber of Hungarian Auditors (MKVK), the environmental product fee (KVTD), EU OSS sales and the
-official exchange rates of the Hungarian National Bank (MNB).
+the Chamber of Hungarian Auditors (MKVK), the environmental product fee (KVTD), the extended producer
+responsibility (EPR), EU OSS sales and the official exchange rates of the Hungarian National Bank
+(MNB).
 
 .. _localizations/hungary/modules:
 
@@ -75,10 +76,15 @@ needs of the company.
      - `l10n_hu_oss`
      - :doc:`EU One-Stop-Shop sales <hungary/oss>` for Hungarian companies. Installed automatically
        with :guilabel:`EU Intra-community Distance Selling`.
-   * - :guilabel:`KVTD`
-     - `eyssen_l10n_hu_kvtd`
-     - :doc:`Environmental product fee <hungary/kvtd>` (*környezetvédelmi termékdíj*) records on
-       products and invoices.
+   * - :guilabel:`Hungary - Environmental Product Charge (KVTD)`
+     - `l10n_hu_kvtd`
+     - :doc:`Environmental product fee <hungary/kvtd>` (*környezetvédelmi termékdíj*): register,
+       invoice clauses and quarterly summary for the remaining fee-liable products. Replaces
+       `eyssen_l10n_hu_kvtd`.
+   * - :guilabel:`Hungary - Extended Producer Responsibility (EPR / KGYF)`
+     - `l10n_hu_epr`
+     - :doc:`Extended producer responsibility <hungary/epr>` (*kiterjesztett gyártói felelősség*):
+       KF codes on products, EPR register, invoice clauses and the quarterly OKIRkapu data report.
    * - :guilabel:`Cashbook integráció`
      - `eyssen_l10n_hu_cashbook`
      - :doc:`Data transfer to the external Cashbook service <hungary/cashbook>`.
@@ -414,4 +420,5 @@ currency and a date are not overwritten.
    hungary/mkvk
    hungary/oss
    hungary/kvtd
+   hungary/epr
    hungary/cashbook

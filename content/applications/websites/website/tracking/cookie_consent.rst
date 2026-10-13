@@ -114,8 +114,8 @@ The links below the fields open the :ref:`cookie list <tracking/consent/cookie_l
 :ref:`cookie policy page <tracking/consent/policy_page>`.
 
 .. tip::
-   The banner takes the colors, fonts and buttons of your website theme. It cannot be edited in the
-   website editor: change its texts in the settings.
+   The banner uses the fonts and colors of your theme; its buttons take the text color of the banner,
+   so they always stand out. Edit its texts in the settings, not in the website editor.
 
 .. _tracking/consent/banner:
 

@@ -7651,6 +7651,14 @@ msgstr "Los strings traducidos están resaltados en verde; los strings de texto 
 msgid "In this mode, you can only translate text. To change the page's structure, you must edit the master page, i.e., the page in the original language of the database. Any changes made to the master page are automatically applied to all translated versions."
 msgstr "En este modo solo puede traducir textos. Para cambiar la estructura de la página, debe editar la página principal, es decir, la página en el idioma original de la base de datos. Los cambios que se hagan en la página principal se aplicarán de forma automática a todas las versiones traducidas."
 
+#: ../../content/applications/websites/website/configuration/translate.rst:108
+msgid ""
+"To translate whole pages with AI, see :doc:`/applications/productivity/ai/"
+"website/translation`."
+msgstr ""
+"Para traducir páginas completas con IA, véase :doc:`/applications/"
+"productivity/ai/website/translation`."
+
 #: ../../content/applications/websites/website/configuration/translate.rst:97
 msgid "To replace the original text with the translation, click the block, edit its contents, and :guilabel:`Save`."
 msgstr "Para reemplazar el texto original con la traducción, haga clic en el bloque, edite su contenido y :guilabel:`Guardar`."
@@ -8459,6 +8467,22 @@ msgstr ":ref:`Publique <website/pages/un-publish-page>` la página."
 msgid "Disable :guilabel:`Add to menu` if the page should not appear in the menu."
 msgstr "Desactive la opción :guilabel:`Agregar al menú` si la página no debe aparecer en el menú. "
 
+#: ../../content/applications/websites/website/structure/pages.rst:55
+msgid ""
+":doc:`/applications/productivity/ai/website` to create a page from a short "
+"brief with AI"
+msgstr ""
+":doc:`/applications/productivity/ai/website` para crear una página a partir "
+"de un breve resumen con IA"
+
+#: ../../content/applications/websites/website/structure/pages.rst:56
+msgid ""
+":doc:`/applications/productivity/ai/website/import` to copy the pages of an "
+"existing website"
+msgstr ""
+":doc:`/applications/productivity/ai/website/import` para copiar las páginas "
+"de un sitio web existente"
+
 #: ../../content/applications/websites/website/structure/pages.rst:57
 msgid "Page management"
 msgstr "Gestión de página"
@@ -8820,6 +8844,16 @@ msgid "It is normal to experience a traffic decrease in the first days."
 msgstr "Es normal experimentar una disminución del tráfico en los primeros días."
 
 #: ../../content/applications/websites/website/structure/seo.rst:165
+msgid ""
+"The :doc:`website import </applications/productivity/ai/website/import>` "
+"keeps the original addresses where it can and creates the 301 redirects for "
+"the others."
+msgstr ""
+"La :doc:`importación de sitios web </applications/productivity/ai/website/"
+"import>` conserva las direcciones originales siempre que puede y crea las "
+"redirecciones 301 para las demás."
+
+#: ../../content/applications/websites/website/structure/seo.rst:165
 msgid "Prevent a page from being indexed"
 msgstr "Evitar que una página sea indexada"
 
@@ -8966,6 +9000,17 @@ msgstr "Los microdatos son un conjunto de etiquetas, implementados desde HTML5, 
 #: ../../content/applications/websites/website/structure/seo.rst:None
 msgid "snippets in search engine results"
 msgstr "Snippets en los resultados del motor de búsqueda. "
+
+#: ../../content/applications/websites/website/structure/seo.rst:308
+msgid ""
+":doc:`/applications/productivity/ai/website/seo` for AI-written titles and "
+"descriptions, the SEO audit, structured data (JSON-LD) for the organisation "
+"and FAQ blocks, and ``/llms.txt``."
+msgstr ""
+":doc:`/applications/productivity/ai/website/seo` para títulos y "
+"descripciones escritos por IA, la auditoría SEO, datos estructurados (JSON-"
+"LD) para la organización y los bloques de preguntas frecuentes, y ``/llms."
+"txt``."
 
 #: ../../content/applications/websites/website/structure/seo.rst:307
 msgid "Hreflang HTML tags"
@@ -14495,3 +14540,4 @@ msgstr "Acepte las cookies: haga clic en :guilabel:`Aceptar todas` en el banner,
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:81
 msgid "Is :guilabel:`Cookie Consent` enabled and are the marketing/analytics cookies accepted? Is the :guilabel:`Cookie Policy Version` the one of the cookie you have? Did you select the right website in :guilabel:`Settings of Website`? Is the Google tag or the pixel enabled with a valid ID? Are you logged in as a designer, or in edit mode?"
 msgstr "¿Está activado :guilabel:`Consentimiento de cookies` y se han aceptado las cookies de marketing/analítica? ¿La :guilabel:`Versión de la política de cookies` es la de la cookie que tiene? ¿Seleccionó el sitio web correcto en :guilabel:`Ajustes del sitio web`? ¿Está activada la etiqueta de Google o el píxel con un ID válido? ¿Ha iniciado sesión como diseñador o está en modo de edición?"
+

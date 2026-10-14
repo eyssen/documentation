@@ -1240,6 +1240,332 @@ msgstr "Icono"
 msgid "Use"
 msgstr "Uso"
 
+#: ../../content/applications/productivity/ai/website/setup.rst:67
+msgid "``ai_website.chrome_path``"
+msgstr "``ai_website.chrome_path``"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:68
+msgid ""
+"Path or command name of the browser for the visual check. Empty: the server "
+"looks for Chromium or Chrome itself. ``disabled`` switches the visual check "
+"off."
+msgstr ""
+"Ruta o nombre de comando del navegador para la comprobación visual. Vacío: "
+"el servidor busca Chromium o Chrome por sí mismo. ``disabled`` desactiva la "
+"comprobación visual."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:70
+msgid "``ai_website.screenshot_base_url``"
+msgstr "``ai_website.screenshot_base_url``"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:71
+msgid ""
+"The address at which the server's browser reaches Odoo, for example an "
+"internal address in Kubernetes. Empty: ``web.base.url``."
+msgstr ""
+"La dirección en la que el navegador del servidor llega a Odoo, por ejemplo "
+"una dirección interna en Kubernetes. Vacío: ``web.base.url``."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:73
+msgid "``ai_website.ca_bundle``"
+msgstr "``ai_website.ca_bundle``"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:74
+msgid ""
+"Path of a file of certificate authorities used to check HTTPS certificates "
+"when pictures and pages are downloaded, for example behind a proxy that "
+"inspects TLS. Certificates are always checked."
+msgstr ""
+"Ruta de un archivo de autoridades de certificación que se usa para comprobar "
+"los certificados HTTPS al descargar imágenes y páginas, por ejemplo detrás "
+"de un proxy que inspecciona TLS. Los certificados siempre se comprueban."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:77
+msgid "``ai_website_import.max_pages``"
+msgstr "``ai_website_import.max_pages``"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:78
+msgid ""
+"The highest number of pages an import may read (default 50, at most 300)."
+msgstr ""
+"El número máximo de páginas que puede leer una importación (50 por defecto, "
+"como máximo 300)."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:79
+msgid "``ai_website_import.request_interval``"
+msgstr "``ai_website_import.request_interval``"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:80
+msgid "Seconds between two requests to the imported site (default 0.5)."
+msgstr "Segundos entre dos peticiones al sitio importado (0,5 por defecto)."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:81
+msgid "``ai_website_import.compare_pages``"
+msgstr "``ai_website_import.compare_pages``"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:82
+msgid ""
+"Pages compared per click on :guilabel:`Compare pages` (default 3, at most "
+"20)."
+msgstr ""
+"Páginas comparadas por cada clic en :guilabel:`Comparar páginas` (3 por "
+"defecto, como máximo 20)."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:84
+msgid ""
+"Two scheduled actions belong to the modules: :guilabel:`AI website: drop AI "
+"change history older than 90 days` (daily) and :guilabel:`AI website import: "
+"continue running imports` (every minute)."
+msgstr ""
+"Dos acciones planificadas pertenecen a los módulos: :guilabel:`Sitio web IA: "
+"eliminar el historial de cambios de la IA de más de 90 días` (diaria) e :"
+"guilabel:`Importación de sitios web con IA: continuar las importaciones en "
+"curso` (cada minuto)."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:90
+msgid "Visual check"
+msgstr "Comprobación visual"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:92
+msgid ""
+"When a browser is available, the AI can take a screenshot of a page, as a "
+"visitor sees it, to check its work after large changes: on a desktop (1366 "
+"pixels wide) or a mobile (390 pixels) screen, the whole page or one block, "
+"at most two per answer. The picture is stored with the AI conversation and "
+"sent to the model. The import uses the same browser to compare the source "
+"and the imported pages."
+msgstr ""
+"Cuando hay un navegador disponible, la IA puede hacer una captura de "
+"pantalla de una página, tal como la ve un visitante, para comprobar su "
+"trabajo después de cambios grandes: en una pantalla de escritorio (1366 "
+"píxeles de ancho) o móvil (390 píxeles), de toda la página o de un bloque, "
+"como máximo dos por respuesta. La imagen se guarda con la conversación de la "
+"IA y se envía al modelo. La importación usa el mismo navegador para comparar "
+"las páginas de origen y las importadas."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:97
+msgid ""
+"An unpublished page is shown to the browser with a short-lived code (two "
+"minutes) that is valid for that page only. No session is opened and nothing "
+"is saved."
+msgstr ""
+"Una página sin publicar se muestra al navegador con un código de corta "
+"duración (dos minutos) que solo es válido para esa página. No se abre "
+"ninguna sesión y no se guarda nada."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:99
+msgid ""
+"The browser opens the page on the server's own address, never on the "
+"website's domain. It may only reach that address; pictures, fonts and style "
+"sheets of other sites are downloaded by the server's safe download and "
+"handed to it, and everything else (other documents, scripts of other sites, "
+"connections) is blocked."
+msgstr ""
+"El navegador abre la página en la propia dirección del servidor, nunca en el "
+"dominio del sitio web. Solo puede llegar a esa dirección; las imágenes, "
+"tipografías y hojas de estilo de otros sitios las descarga la descarga "
+"segura del servidor y se las entrega, y todo lo demás (otros documentos, "
+"scripts de otros sitios, conexiones) se bloquea."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:103
+msgid ""
+"Run Odoo as an ordinary user, not as root: as root, Chromium cannot use its "
+"own sandbox, and a warning is written to the log."
+msgstr ""
+"Ejecute Odoo como un usuario normal, no como root: como root, Chromium no "
+"puede usar su propio sandbox y se escribe una advertencia en el registro."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:106
+msgid "If no browser is found, the AI simply does not offer the visual check."
+msgstr ""
+"Si no se encuentra ningún navegador, la IA simplemente no ofrece la "
+"comprobación visual."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:109
+msgid "Security in plain words"
+msgstr "La seguridad en palabras sencillas"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:111
+msgid ""
+"**The AI writes data, not code.** It gives texts, links, pictures and "
+"options; the server builds the blocks from the website's own templates and "
+"stores texts as plain text. JavaScript is never accepted, and custom CSS is "
+"checked and compiled before it is saved."
+msgstr ""
+"**La IA escribe datos, no código.** Indica textos, enlaces, imágenes y "
+"opciones; el servidor construye los bloques con las propias plantillas del "
+"sitio web y guarda los textos como texto sin formato. Nunca se acepta "
+"JavaScript, y el CSS personalizado se comprueba y se compila antes de "
+"guardarlo."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:114
+msgid ""
+"**Your rights, never more.** Every change runs with your own access rights, "
+"goes through the AI access rules and is logged. Website changes are "
+"proposals that you confirm, unless you chose the :guilabel:`Apply without "
+"asking` write mode."
+msgstr ""
+"**Sus derechos, nunca más.** Cada cambio se ejecuta con sus propios derechos "
+"de acceso, pasa por las reglas de acceso de la IA y queda registrado. Los "
+"cambios del sitio web son propuestas que usted confirma, salvo que haya "
+"elegido el modo de escritura :guilabel:`Aplicar sin preguntar`."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:117
+msgid ""
+"**Everything can be undone.** Each change keeps the earlier state, and an "
+"undo that would overwrite later work by hand is refused unless you choose :"
+"guilabel:`Undo anyway`."
+msgstr ""
+"**Todo se puede deshacer.** Cada cambio conserva el estado anterior, y un "
+"deshacer que sobrescribiría trabajo posterior hecho a mano se rechaza salvo "
+"que elija :guilabel:`Deshacer de todos modos`."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:119
+msgid ""
+"**Downloads are fenced.** Pictures and imported pages are downloaded by the "
+"server only from public internet addresses (never internal ones), over the "
+"usual web ports, with limits on size, time and redirects; the result is "
+"stored, never linked."
+msgstr ""
+"**Las descargas están acotadas.** El servidor descarga las imágenes y las "
+"páginas importadas solo de direcciones públicas de internet (nunca de "
+"internas), por los puertos web habituales, con límites de tamaño, tiempo y "
+"redirecciones; el resultado se guarda, nunca se enlaza."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:122
+msgid ""
+"**Imported content is untrusted.** Texts read from another site are only "
+"data: they are cleaned, scripts, frames and foreign forms are dropped, and "
+"the AI is told that they are not instructions. Once such content is part of "
+"an AI conversation turn, every change in that turn waits for your "
+"confirmation."
+msgstr ""
+"**El contenido importado no es fiable.** Los textos leídos de otro sitio son "
+"solo datos: se limpian, se descartan los scripts, los marcos y los "
+"formularios ajenos, y se indica a la IA que no son instrucciones. En cuanto "
+"ese contenido forma parte de un turno de la conversación con la IA, todos "
+"los cambios de ese turno esperan su confirmación."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:126
+msgid ""
+"**Only for the right people.** Visitors, portal users and the live chat "
+"agent never get these tools; imports are for administrators."
+msgstr ""
+"**Solo para las personas adecuadas.** Los visitantes, los usuarios del "
+"portal y el agente del chat en vivo nunca obtienen estas herramientas; las "
+"importaciones son para administradores."
+
+#: ../../content/applications/productivity/ai/website/translation.rst:3
+msgid "Translate pages with AI"
+msgstr "Traducir páginas con IA"
+
+#: ../../content/applications/productivity/ai/website/translation.rst:5
+msgid ""
+"The AI translates website pages from the website's default language into its "
+"other languages. For the languages of a website and the manual translate "
+"mode, see :doc:`/applications/websites/website/configuration/translate`."
+msgstr ""
+"La IA traduce las páginas del sitio web desde su idioma por defecto a sus "
+"demás idiomas. Para los idiomas de un sitio web y el modo de traducción "
+"manual, véase :doc:`/applications/websites/website/configuration/translate`."
+
+#: ../../content/applications/productivity/ai/website/translation.rst:10
+msgid "Translate one or several pages"
+msgstr "Traducir una o varias páginas"
+
+#: ../../content/applications/productivity/ai/website/translation.rst:12
+msgid ""
+"Open a page in :menuselection:`Website --> Site --> Pages` and click :"
+"guilabel:`Translate with AI`, or select up to 20 pages of one website in the "
+"list and choose :guilabel:`Translate with AI` in the :guilabel:`Actions` "
+"menu."
+msgstr ""
+"Abra una página en :menuselection:`Sitio web --> Sitio --> Páginas` y haga "
+"clic en :guilabel:`Traducir con IA`, o seleccione en la lista hasta 20 "
+"páginas de un mismo sitio web y elija :guilabel:`Traducir con IA` en el "
+"menú :guilabel:`Acciones`."
+
+#: ../../content/applications/productivity/ai/website/translation.rst:15
+msgid ""
+"Tick the :guilabel:`Languages` to translate into. Only the languages of the "
+"website other than its default language are offered; if the website has only "
+"one language, the dialog says so."
+msgstr ""
+"Marque los :guilabel:`Idiomas` a los que traducir. Solo se ofrecen los "
+"idiomas del sitio web distintos de su idioma por defecto; si el sitio web "
+"solo tiene un idioma, el diálogo lo indica."
+
+#: ../../content/applications/productivity/ai/website/translation.rst:17
+msgid ""
+"Leave :guilabel:`Translate again what is already translated` off to keep the "
+"existing translations and translate only what is missing. Turn it on to "
+"replace them."
+msgstr ""
+"Deje desactivado :guilabel:`Volver a traducir lo ya traducido` para "
+"conservar las traducciones existentes y traducir solo lo que falta. Actívelo "
+"para sustituirlas."
+
+#: ../../content/applications/productivity/ai/website/translation.rst:19
+msgid ""
+"Click :guilabel:`Translate`. A message shows how many texts were translated "
+"per language."
+msgstr ""
+"Haga clic en :guilabel:`Traducir`. Un mensaje muestra cuántos textos se han "
+"traducido por idioma."
+
+#: ../../content/applications/productivity/ai/website/translation.rst:21
+msgid ""
+"Review the result in the website editor's translate mode. You can also "
+"translate the page you are editing from the AI dialog of the editor (see :"
+"doc:`editor`), or ask the AI panel, for example \"Translate the About us "
+"page into Spanish\"."
+msgstr ""
+"Revise el resultado en el modo de traducción del editor del sitio web. "
+"También puede traducir la página que está editando desde el diálogo de IA "
+"del editor (véase :doc:`editor`), o pedirlo al panel de IA, por ejemplo "
+"«Traduce la página Sobre nosotros al español»."
+
+#: ../../content/applications/productivity/ai/website/translation.rst:26
+msgid "What is translated"
+msgstr "Qué se traduce"
+
+#: ../../content/applications/productivity/ai/website/translation.rst:28
+msgid ""
+"the texts of the page, including buttons, picture texts and the texts of the "
+"blocks;"
+msgstr ""
+"los textos de la página, incluidos los botones, los textos de las imágenes y "
+"los textos de los bloques;"
+
+#: ../../content/applications/productivity/ai/website/translation.rst:29
+msgid "the SEO title, description and keywords of the page;"
+msgstr "el título, la descripción y las palabras clave SEO de la página;"
+
+#: ../../content/applications/productivity/ai/website/translation.rst:30
+msgid "the menu items that link to the page."
+msgstr "los elementos de menú que enlazan a la página."
+
+#: ../../content/applications/productivity/ai/website/translation.rst:32
+msgid ""
+"Formatting inside a text (bold, links…) is kept exactly: the AI may not add, "
+"remove or change tags or their attributes, and a translation that does not "
+"keep them is refused and asked again once. Text that only looks like code, "
+"such as \"<b>\" written on a page about HTML, stays plain text."
+msgstr ""
+"El formato dentro de un texto (negrita, enlaces…) se conserva exactamente: "
+"la IA no puede añadir, quitar ni cambiar etiquetas ni sus atributos, y una "
+"traducción que no los conserva se rechaza y se vuelve a pedir una vez. El "
+"texto que solo parece código, como «<b>» escrito en una página sobre HTML, "
+"sigue siendo texto sin formato."
+
+#: ../../content/applications/productivity/ai/website/translation.rst:36
+msgid ""
+"Every translated page is recorded in the AI changes and can be undone (see :"
+"doc:`history`)."
+msgstr ""
+"Cada página traducida queda registrada en los cambios de la IA y se puede "
+"deshacer (véase :doc:`history`)."
+
 #: ../../content/applications/productivity/discuss.rst:146
 msgid ":icon:`fa-microphone`"
 msgstr ":icon:`fa-microphone`"
@@ -6294,6 +6620,1110 @@ msgstr ":guilabel:`Caducidad sin confirmar (horas)` cancela automáticamente las
 msgid "Questions"
 msgstr "Preguntas"
 
+#: ../../content/applications/productivity/ai/website/import.rst:82
+msgid ""
+"When something important is open, the import asks before it goes on. The "
+"questions appear on the :guilabel:`Questions` tab, each with choices and "
+"often a field for another answer. Examples:"
+msgstr ""
+"Cuando queda abierto algo importante, la importación pregunta antes de "
+"continuar. Las preguntas aparecen en la pestaña :guilabel:`Preguntas`, cada "
+"una con opciones y a menudo con un campo para otra respuesta. Ejemplos:"
+
+#: ../../content/applications/productivity/ai/website/import.rst:85
+msgid "\"Create a new website or import into My Website?\""
+msgstr "«¿Crear un sitio web nuevo o importar en My Website?»"
+
+#: ../../content/applications/productivity/ai/website/import.rst:86
+msgid ""
+"\"Replace the current menu of My Website or add the imported pages next to "
+"it?\""
+msgstr ""
+"«¿Reemplazar el menú actual de My Website o añadir las páginas importadas "
+"junto a él?»"
+
+#: ../../content/applications/productivity/ai/website/import.rst:87
+msgid "\"Replace the homepage of My Website with the imported homepage?\""
+msgstr "«¿Reemplazar la página de inicio de My Website por la importada?»"
+
+#: ../../content/applications/productivity/ai/website/import.rst:88
+msgid "\"Apply the colours and fonts of the imported site to My Website?\""
+msgstr "«¿Aplicar los colores y tipografías del sitio importado a My Website?»"
+
+#: ../../content/applications/productivity/ai/website/import.rst:89
+msgid "\"Primary colour: keep #1a5f2a or use #1f4fbf / #2563eb / #1d4ed8?\""
+msgstr ""
+"«Color principal: ¿mantener #1a5f2a o usar #1f4fbf / #2563eb / #1d4ed8?»"
+
+#: ../../content/applications/productivity/ai/website/import.rst:90
+msgid ""
+"\"Rebuild the footer of My Website from the footer of the imported site?\""
+msgstr ""
+"«¿Reconstruir el pie de página de My Website a partir del pie de página del "
+"sitio importado?»"
+
+#: ../../content/applications/productivity/ai/website/import.rst:91
+msgid ""
+"questions about the languages, the blog posts, the products and their "
+"currency."
+msgstr ""
+"preguntas sobre los idiomas, las entradas de blog, los productos y su moneda."
+
+#: ../../content/applications/productivity/ai/website/import.rst:93
+msgid ""
+"Some questions come before the site is read, because they change what is "
+"read; others come after the analysis. Answer them and click :guilabel:"
+"`Continue`, or click :guilabel:`Use the suggested answers` to take the pre-"
+"selected choices."
+msgstr ""
+"Algunas preguntas llegan antes de leer el sitio, porque cambian lo que se "
+"lee; otras llegan después del análisis. Respóndalas y haga clic en :guilabel:"
+"`Continuar`, o haga clic en :guilabel:`Usar las respuestas sugeridas` para "
+"tomar las opciones preseleccionadas."
+
+#: ../../content/applications/productivity/ai/website/import.rst:98
+msgid "Reading the site"
+msgstr "Lectura del sitio"
+
+#: ../../content/applications/productivity/ai/website/import.rst:100
+msgid ""
+"After :guilabel:`Start`, the form shows a progress bar with :guilabel:`Pages "
+"found`, :guilabel:`Pages read`, :guilabel:`Pages ready` and :guilabel:"
+"`Pictures`. The work continues while the form is open and, in the "
+"background, every minute, so you can close the form and come back later. :"
+"guilabel:`Cancel import` stops it."
+msgstr ""
+"Después de :guilabel:`Iniciar`, el formulario muestra una barra de progreso "
+"con :guilabel:`Páginas encontradas`, :guilabel:`Páginas leídas`, :guilabel:"
+"`Páginas listas` e :guilabel:`Imágenes`. El trabajo continúa mientras el "
+"formulario está abierto y, en segundo plano, cada minuto, así que puede "
+"cerrar el formulario y volver más tarde. :guilabel:`Cancelar la importación` "
+"lo detiene."
+
+#: ../../content/applications/productivity/ai/website/import.rst:105
+msgid "The import reads the site politely and safely:"
+msgstr "La importación lee el sitio de forma respetuosa y segura:"
+
+#: ../../content/applications/productivity/ai/website/import.rst:107
+msgid ""
+"only pages of the same site (with and without ``www.``), starting with its "
+"sitemap, then following links up to four levels deep;"
+msgstr ""
+"solo las páginas del mismo sitio (con y sin ``www.``), empezando por su mapa "
+"del sitio y siguiendo después los enlaces hasta cuatro niveles de "
+"profundidad;"
+
+#: ../../content/applications/productivity/ai/website/import.rst:109
+msgid ""
+"the site's ``robots.txt`` is respected (the import identifies itself as "
+"``eYssenImport``); a site that protects its ``robots.txt`` is not read;"
+msgstr ""
+"se respeta el ``robots.txt`` del sitio (la importación se identifica como "
+"``eYssenImport``); un sitio que protege su ``robots.txt`` no se lee;"
+
+#: ../../content/applications/productivity/ai/website/import.rst:111
+msgid ""
+"at most two requests per second, 15 seconds and 5 MB per page, HTML pages "
+"only;"
+msgstr ""
+"como máximo dos peticiones por segundo, 15 segundos y 5 MB por página, solo "
+"páginas HTML;"
+
+#: ../../content/applications/productivity/ai/website/import.rst:112
+msgid ""
+"at most 300 pictures per import and 30 per page; further pictures keep the "
+"block's default picture."
+msgstr ""
+"como máximo 300 imágenes por importación y 30 por página; las imágenes "
+"adicionales conservan la imagen por defecto del bloque."
+
+#: ../../content/applications/productivity/ai/website/import.rst:115
+msgid ""
+"The import recognises common platforms (WordPress, WooCommerce, Shopify, "
+"PrestaShop, Wix, Squarespace, Webflow) and, on WordPress, also reads the "
+"public list of pages. Everything that happens is written on the :guilabel:"
+"`Log` tab."
+msgstr ""
+"La importación reconoce las plataformas habituales (WordPress, WooCommerce, "
+"Shopify, PrestaShop, Wix, Squarespace, Webflow) y, en WordPress, también lee "
+"la lista pública de páginas. Todo lo que ocurre se anota en la pestaña :"
+"guilabel:`Registro`."
+
+#: ../../content/applications/productivity/ai/website/import.rst:120
+msgid "Languages"
+msgstr "Idiomas"
+
+#: ../../content/applications/productivity/ai/website/import.rst:122
+msgid ""
+"A multilingual source (language versions such as ``/es/…``, language links "
+"or language switchers) is imported in its main language, the language of its "
+"homepage. The import asks which other languages to import as translations of "
+"the same pages. Those translations are written with the page, its SEO texts "
+"and the menu items; the texts are matched by structure, and the AI "
+"translates only what cannot be matched. Languages that are not active yet "
+"are activated and added to the website during the import."
+msgstr ""
+"Un origen multilingüe (versiones por idioma como ``/es/…``, enlaces de "
+"idioma o selectores de idioma) se importa en su idioma principal, el idioma "
+"de su página de inicio. La importación pregunta qué otros idiomas importar "
+"como traducciones de las mismas páginas. Esas traducciones se escriben con "
+"la página, sus textos SEO y los elementos de menú; los textos se emparejan "
+"por estructura y la IA solo traduce lo que no se puede emparejar. Los "
+"idiomas que aún no están activos se activan y se añaden al sitio web durante "
+"la importación."
+
+#: ../../content/applications/productivity/ai/website/import.rst:130
+msgid "Review"
+msgstr "Revisión"
+
+#: ../../content/applications/productivity/ai/website/import.rst:132
+msgid ""
+"When the analysis is done, the import shows :guilabel:`Review`. Check the "
+"tabs before you import:"
+msgstr ""
+"Cuando termina el análisis, la importación muestra :guilabel:`Revisión`. "
+"Compruebe las pestañas antes de importar:"
+
+#: ../../content/applications/productivity/ai/website/import.rst:134
+msgid ""
+":guilabel:`Pages`: every page found, with :guilabel:`Include`, its title, "
+"the source address, the :guilabel:`New address`, the status and the list of :"
+"guilabel:`Blocks` chosen for it. Untick the pages to leave out and change a "
+"new address if needed."
+msgstr ""
+":guilabel:`Páginas`: cada página encontrada, con :guilabel:`Incluir`, su "
+"título, la dirección de origen, la :guilabel:`Dirección nueva`, el estado y "
+"la lista de :guilabel:`Bloques` elegidos para ella. Desmarque las páginas "
+"que quiera dejar fuera y cambie una dirección nueva si es necesario."
+
+#: ../../content/applications/productivity/ai/website/import.rst:137
+msgid ""
+":guilabel:`Design`: the colours and fonts found on the source, the five "
+"colours and two fonts that will be used, and :guilabel:`Apply colours and "
+"fonts`. A colour wish such as \"blue\" is turned into a palette whose text "
+"stays readable on the primary colour."
+msgstr ""
+":guilabel:`Diseño`: los colores y tipografías encontrados en el origen, los "
+"cinco colores y las dos tipografías que se usarán, y :guilabel:`Aplicar "
+"colores y tipografías`. Un deseo de color como «azul» se convierte en una "
+"paleta en la que el texto sigue siendo legible sobre el color principal."
+
+#: ../../content/applications/productivity/ai/website/import.rst:140
+msgid ":guilabel:`SEO`: the suggestions, each with a tick box (see below)."
+msgstr ""
+":guilabel:`SEO`: las sugerencias, cada una con una casilla (véase más abajo)."
+
+#: ../../content/applications/productivity/ai/website/import.rst:141
+msgid ""
+":guilabel:`Menu and redirects`: the menu that will be created, the :guilabel:"
+"`Footer of the source` and the :guilabel:`Redirects (301)`."
+msgstr ""
+":guilabel:`Menú y redirecciones`: el menú que se creará, el :guilabel:`Pie "
+"de página del origen` y las :guilabel:`Redirecciones (301)`."
+
+#: ../../content/applications/productivity/ai/website/import.rst:143
+msgid ""
+":guilabel:`Languages`: the languages of the source and what happens with "
+"them."
+msgstr ":guilabel:`Idiomas`: los idiomas del origen y qué ocurre con ellos."
+
+#: ../../content/applications/productivity/ai/website/import.rst:144
+msgid ""
+":guilabel:`Compare`: screenshots of source pages next to the imported pages "
+"(see below)."
+msgstr ""
+":guilabel:`Comparar`: capturas de pantalla de las páginas de origen junto a "
+"las páginas importadas (véase más abajo)."
+
+#: ../../content/applications/productivity/ai/website/import.rst:147
+msgid "SEO and internal links"
+msgstr "SEO y enlaces internos"
+
+#: ../../content/applications/productivity/ai/website/import.rst:149
+msgid ""
+"With :guilabel:`SEO` set to :guilabel:`Keep as it is`, titles, descriptions "
+"and headings are copied as they are. With :guilabel:`Suggest improvements`, "
+"the import checks the source with rules and asks the AI for better titles, "
+"descriptions, main headings, picture texts and keywords. It also suggests "
+"internal links:"
+msgstr ""
+"Con :guilabel:`SEO` en :guilabel:`Mantener tal cual`, los títulos, "
+"descripciones y encabezados se copian tal como están. Con :guilabel:`Sugerir "
+"mejoras`, la importación comprueba el origen con reglas y pide a la IA "
+"mejores títulos, descripciones, encabezados principales, textos de imagen y "
+"palabras clave. También sugiere enlaces internos:"
+
+#: ../../content/applications/productivity/ai/website/import.rst:154
+msgid "a link to a page that no other page, menu or footer links to;"
+msgstr ""
+"un enlace a una página a la que no enlaza ninguna otra página, menú ni pie "
+"de página;"
+
+#: ../../content/applications/productivity/ai/website/import.rst:155
+msgid ""
+"a clear text instead of a vague link text such as \"click here\" or \"read "
+"more\";"
+msgstr ""
+"un texto claro en lugar de un texto de enlace impreciso como «haga clic "
+"aquí» o «leer más»;"
+
+#: ../../content/applications/productivity/ai/website/import.rst:156
+msgid ""
+"a new target for a link to a page that is not imported, when the website has "
+"a page at the same address;"
+msgstr ""
+"un nuevo destino para un enlace a una página que no se importa, cuando el "
+"sitio web tiene una página en la misma dirección;"
+
+#: ../../content/applications/productivity/ai/website/import.rst:158
+msgid ""
+"a link to the contact page on important pages (services, prices, about…)."
+msgstr ""
+"un enlace a la página de contacto en las páginas importantes (servicios, "
+"precios, sobre nosotros…)."
+
+#: ../../content/applications/productivity/ai/website/import.rst:160
+msgid "Only the ticked suggestions are applied."
+msgstr "Solo se aplican las sugerencias marcadas."
+
+#: ../../content/applications/productivity/ai/website/import.rst:163
+msgid "Addresses and redirects"
+msgstr "Direcciones y redirecciones"
+
+#: ../../content/applications/productivity/ai/website/import.rst:165
+msgid ""
+"Imported pages keep their original address when it is free on the website. "
+"Otherwise they get a new address, and a permanent (301) redirect is created "
+"from the old address, so links and search results keep working. On an "
+"existing website, the imported homepage becomes ``/home`` unless you replace "
+"the homepage. The redirects are listed on the :guilabel:`Menu and redirects` "
+"tab."
+msgstr ""
+"Las páginas importadas conservan su dirección original cuando está libre en "
+"el sitio web. Si no, reciben una dirección nueva y se crea una redirección "
+"permanente (301) desde la dirección antigua, para que los enlaces y los "
+"resultados de búsqueda sigan funcionando. En un sitio web existente, la "
+"página de inicio importada pasa a ser ``/home``, salvo que reemplace la "
+"página de inicio. Las redirecciones se muestran en la pestaña :guilabel:"
+"`Menú y redirecciones`."
+
+#: ../../content/applications/productivity/ai/website/import.rst:171
+msgid "Compare pages"
+msgstr "Comparar páginas"
+
+#: ../../content/applications/productivity/ai/website/import.rst:173
+msgid ""
+"When the visual check is available on the server (see :ref:`ai/website/"
+"visual-check`), click :guilabel:`Compare pages` to take screenshots of the "
+"next pages (three at a time by default). On a page line, :guilabel:`Compare` "
+"opens the source page and the imported page side by side; :guilabel:`Take "
+"the pictures` takes them again and :guilabel:`List the differences with AI` "
+"asks the AI for the visible differences. The source page is loaded without "
+"JavaScript, so pages that build their content with scripts look emptier than "
+"in a browser."
+msgstr ""
+"Cuando la comprobación visual está disponible en el servidor (véase :ref:`ai/"
+"website/visual-check`), haga clic en :guilabel:`Comparar páginas` para hacer "
+"capturas de pantalla de las páginas siguientes (tres cada vez por defecto). "
+"En la línea de una página, :guilabel:`Comparar` abre la página de origen y "
+"la página importada una junto a otra; :guilabel:`Hacer las capturas` las "
+"vuelve a hacer y :guilabel:`Enumerar las diferencias con IA` pide a la IA "
+"las diferencias visibles. La página de origen se carga sin JavaScript, de "
+"modo que las páginas que construyen su contenido con scripts se ven más "
+"vacías que en un navegador."
+
+#: ../../content/applications/productivity/ai/website/import.rst:181
+msgid "Import and undo"
+msgstr "Importar y deshacer"
+
+#: ../../content/applications/productivity/ai/website/import.rst:183
+msgid ""
+"Click :guilabel:`Import` and confirm. The import creates everything on the "
+"target website at once:"
+msgstr ""
+"Haga clic en :guilabel:`Importar` y confirme. La importación crea todo de "
+"una vez en el sitio web de destino:"
+
+#: ../../content/applications/productivity/ai/website/import.rst:185
+msgid "the pages, unpublished unless :guilabel:`Publish the pages` is on;"
+msgstr ""
+"las páginas, sin publicar salvo que :guilabel:`Publicar las páginas` esté "
+"activado;"
+
+#: ../../content/applications/productivity/ai/website/import.rst:186
+msgid ""
+"the menu: added next to the current menu, or replacing it. A replaced menu "
+"is not deleted: its items are kept aside unchanged and come back if you undo "
+"the import;"
+msgstr ""
+"el menú: junto al menú actual o en su lugar. Un menú reemplazado no se "
+"elimina: sus elementos se apartan sin cambios y vuelven si deshace la "
+"importación;"
+
+#: ../../content/applications/productivity/ai/website/import.rst:188
+msgid ""
+"the homepage, only on a new website or when :guilabel:`Replace the homepage` "
+"is ticked;"
+msgstr ""
+"la página de inicio, solo en un sitio web nuevo o cuando :guilabel:"
+"`Reemplazar la página de inicio` está marcado;"
+
+#: ../../content/applications/productivity/ai/website/import.rst:189
+msgid ""
+"a brand kit \"Imported from …\" with the colours, fonts and logo of the "
+"review (see :doc:`../website`), applied to the website when :guilabel:`Apply "
+"colours and fonts` is on (always on a new website), and the social network "
+"links of the source;"
+msgstr ""
+"un kit de marca «Importado de …» con los colores, tipografías y logotipo de "
+"la revisión (véase :doc:`../website`), aplicado al sitio web cuando :"
+"guilabel:`Aplicar colores y tipografías` está activado (siempre en un sitio "
+"web nuevo), y los enlaces a redes sociales del origen;"
+
+#: ../../content/applications/productivity/ai/website/import.rst:192
+msgid ""
+"the footer, when :guilabel:`Rebuild the footer` is on (always on a new "
+"website);"
+msgstr ""
+"el pie de página, cuando :guilabel:`Reconstruir el pie de página` está "
+"activado (siempre en un sitio web nuevo);"
+
+#: ../../content/applications/productivity/ai/website/import.rst:193
+msgid ""
+"the translations, the blog posts and the products you chose, and the "
+"redirects."
+msgstr ""
+"las traducciones, las entradas de blog y los productos que haya elegido, y "
+"las redirecciones."
+
+#: ../../content/applications/productivity/ai/website/import.rst:195
+msgid ""
+"The form then shows a summary and a link to the imported homepage. The "
+"import is listed in the AI changes as :guilabel:`Website import` (see :doc:"
+"`history`)."
+msgstr ""
+"El formulario muestra entonces un resumen y un enlace a la página de inicio "
+"importada. La importación aparece en los cambios de la IA como :guilabel:"
+"`Importación de sitio web` (véase :doc:`history`)."
+
+#: ../../content/applications/productivity/ai/website/import.rst:198
+msgid ""
+"To remove the import, click :guilabel:`Undo import` and confirm. Everything "
+"the import created is deleted (pages, menu items, redirects, posts, "
+"products, pictures it downloaded, the brand kit, a new website) and the "
+"homepage, menu, design and languages of the website are restored. A language "
+"the import activated stays installed."
+msgstr ""
+"Para retirar la importación, haga clic en :guilabel:`Deshacer importación` y "
+"confirme. Todo lo que creó la importación se elimina (páginas, elementos de "
+"menú, redirecciones, entradas, productos, las imágenes que descargó, el kit "
+"de marca, un sitio web nuevo) y se restauran la página de inicio, el menú, "
+"el diseño y los idiomas del sitio web. Un idioma que activó la importación "
+"sigue instalado."
+
+#: ../../content/applications/productivity/ai/website/import.rst:203
+msgid ""
+"If a later AI change touched the imported content, undo that change first "
+"(see :doc:`history`)."
+msgstr ""
+"Si un cambio posterior de la IA afectó al contenido importado, deshaga "
+"primero ese cambio (véase :doc:`history`)."
+
+#: ../../content/applications/productivity/ai/website/import.rst:204
+msgid ""
+"If imported content was changed by hand since, the form shows :guilabel:"
+"`Changed since the import:` and only :guilabel:`Undo import anyway` is "
+"offered. It deletes the imported pages and records with your changes."
+msgstr ""
+"Si el contenido importado se ha cambiado a mano desde entonces, el "
+"formulario muestra :guilabel:`Cambiado desde la importación:` y solo ofrece :"
+"guilabel:`Deshacer importación de todos modos`. Esto elimina las páginas y "
+"registros importados junto con sus cambios."
+
+#: ../../content/applications/productivity/ai/website/import.rst:211
+msgid "Import from the AI panel"
+msgstr "Importar desde el panel de IA"
+
+#: ../../content/applications/productivity/ai/website/import.rst:213
+msgid ""
+"The AI panel can run the whole import in the conversation. Ask, for example, "
+"\"Copy the website https://www.example.com exactly\" or \"Copy https://www."
+"example.com and suggest SEO improvements\". The assistant starts the import, "
+"asks the questions as choices, reports the progress and shows the review. "
+"Creating the import on the website is a change you confirm on a card, like "
+"any other website change (see :doc:`edit_pages`)."
+msgstr ""
+"El panel de IA puede ejecutar toda la importación dentro de la conversación. "
+"Pida, por ejemplo, «Copia el sitio web https://www.example.com tal cual» o "
+"«Copia https://www.example.com y sugiere mejoras de SEO». El asistente "
+"inicia la importación, hace las preguntas como opciones, informa del "
+"progreso y muestra la revisión. Crear la importación en el sitio web es un "
+"cambio que usted confirma en una tarjeta, como cualquier otro cambio del "
+"sitio web (véase :doc:`edit_pages`)."
+
+#: ../../content/applications/productivity/ai/website/import.rst:219
+msgid ""
+"The assistant needs the :guilabel:`Customize UI & schema` capability, and "
+"you need the rights described above. Texts read from the other site are "
+"treated as untrusted data: they are shown to the AI marked as such, and once "
+"they are part of a conversation turn, every change in that turn waits for "
+"your confirmation."
+msgstr ""
+"El asistente necesita la capacidad :guilabel:`Personalizar interfaz y "
+"esquema`, y usted necesita los derechos descritos arriba. Los textos leídos "
+"del otro sitio se tratan como datos no fiables: se muestran a la IA marcados "
+"como tales y, en cuanto forman parte de un turno de la conversación, todos "
+"los cambios de ese turno esperan su confirmación."
+
+#: ../../content/applications/productivity/ai/website/import.rst:227
+msgid "Limits and troubleshooting"
+msgstr "Límites y solución de problemas"
+
+#: ../../content/applications/productivity/ai/website/import.rst:229
+msgid ""
+"**Without an AI model**, the pages are laid out by rules (a cover for the "
+"first heading and picture, alternating text and pictures, cards for repeated "
+"items, FAQ, contact form, text blocks) and the texts are kept as they are. "
+"Improving or translating texts needs an AI model."
+msgstr ""
+"**Sin un modelo de IA**, las páginas se maquetan con reglas (una portada "
+"para el primer título e imagen, texto e imágenes alternados, tarjetas para "
+"los elementos repetidos, preguntas frecuentes, formulario de contacto, "
+"bloques de texto) y los textos se conservan tal cual. Mejorar o traducir los "
+"textos requiere un modelo de IA."
+
+#: ../../content/applications/productivity/ai/website/import.rst:232
+msgid ""
+"**Pages built with JavaScript**: the import reads the HTML that the server "
+"sends. A site that only fills its pages with scripts gives little content."
+msgstr ""
+"**Páginas construidas con JavaScript**: la importación lee el HTML que envía "
+"el servidor. Un sitio que solo rellena sus páginas con scripts aporta poco "
+"contenido."
+
+#: ../../content/applications/productivity/ai/website/import.rst:234
+msgid ""
+"**Protected or private sites**: pages behind a login, sites that forbid "
+"reading in their ``robots.txt`` and internal addresses are not read."
+msgstr ""
+"**Sitios protegidos o privados**: no se leen las páginas que requieren "
+"iniciar sesión, los sitios que prohíben la lectura en su ``robots.txt`` ni "
+"las direcciones internas."
+
+#: ../../content/applications/productivity/ai/website/import.rst:236
+msgid ""
+"**What is not copied**: scripts, iframes (YouTube and Vimeo videos are "
+"rebuilt from their address), inline styles and forms that send their data "
+"elsewhere. A form of the source becomes the website's own contact form."
+msgstr ""
+"**Lo que no se copia**: scripts, iframes (los vídeos de YouTube y Vimeo se "
+"reconstruyen a partir de su dirección), estilos en línea y formularios que "
+"envían sus datos a otro lugar. Un formulario del origen se convierte en el "
+"formulario de contacto propio del sitio web."
+
+#: ../../content/applications/productivity/ai/website/import.rst:239
+msgid ""
+"**Errors**: when the import stops, the form shows the error and :guilabel:"
+"`Retry` continues where it stopped. Pages that could not be read are listed "
+"on the :guilabel:`Pages` tab with their error."
+msgstr ""
+"**Errores**: cuando la importación se detiene, el formulario muestra el "
+"error y :guilabel:`Reintentar` continúa donde se detuvo. Las páginas que no "
+"se pudieron leer aparecen en la pestaña :guilabel:`Páginas` con su error."
+
+#: ../../content/applications/productivity/ai/website/import.rst:241
+msgid ""
+"**More pages**: the default limit of 50 pages can be raised to 300 by an "
+"administrator (see :doc:`setup`)."
+msgstr ""
+"**Más páginas**: un administrador puede subir el límite por defecto de 50 "
+"páginas hasta 300 (véase :doc:`setup`)."
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:3
+msgid "Blog posts and products in an import"
+msgstr "Entradas de blog y productos en una importación"
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:5
+msgid ""
+"Two bridge modules extend the :doc:`website import <import>`. They install "
+"themselves when the matching app is installed:"
+msgstr ""
+"Dos módulos puente amplían la :doc:`importación de sitios web <import>`. Se "
+"instalan solos cuando la aplicación correspondiente está instalada:"
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:8
+msgid ""
+"**AI Website Import - Blog** (``ai_website_import_blog``), with the Blog app;"
+msgstr ""
+"**AI Website Import - Blog** (``ai_website_import_blog``), con la aplicación "
+"Blog;"
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:9
+msgid ""
+"**AI Website Import - eCommerce** (``ai_website_import_sale``), with the "
+"eCommerce app."
+msgstr ""
+"**AI Website Import - eCommerce** (``ai_website_import_sale``), con la "
+"aplicación Comercio electrónico."
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:12
+msgid "Blog posts"
+msgstr "Entradas de blog"
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:14
+msgid ""
+"The import recognises the articles of the source: pages marked as articles, "
+"pages under addresses such as ``/blog/…`` or ``/news/…`` and, on WordPress, "
+"the posts of its public list of posts. When it finds some, it asks \"Import "
+"the 34 blog posts too?\" (field :guilabel:`Import the blog posts`)."
+msgstr ""
+"La importación reconoce los artículos del origen: las páginas marcadas como "
+"artículos, las páginas bajo direcciones como ``/blog/…`` o ``/news/…`` y, en "
+"WordPress, las entradas de su lista pública de entradas. Cuando encuentra "
+"algunos, pregunta «¿Importar también las 34 entradas del blog?» (campo :"
+"guilabel:`Importar las entradas del blog`)."
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:18
+msgid ""
+"The posts are created in the first blog of the target website, or in a new "
+"blog named \"Blog\". Each post gets its title, its date, its text (headings, "
+"paragraphs, lists, quotes, links, bold and italic, pictures), its cover "
+"picture and its SEO texts. They are unpublished unless :guilabel:`Publish "
+"the pages` is on. A 301 redirect is created from each old address to the new "
+"post."
+msgstr ""
+"Las entradas se crean en el primer blog del sitio web de destino o en un "
+"blog nuevo llamado «Blog». Cada entrada recibe su título, su fecha, su texto "
+"(encabezados, párrafos, listas, citas, enlaces, negrita y cursiva, "
+"imágenes), su imagen de portada y sus textos SEO. Quedan sin publicar salvo "
+"que :guilabel:`Publicar las páginas` esté activado. Se crea una redirección "
+"301 desde cada dirección antigua a la nueva entrada."
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:24
+msgid "At most 200 posts are imported, with 30 pictures per post."
+msgstr "Se importan como máximo 200 entradas, con 30 imágenes por entrada."
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:29
+msgid ""
+"The import reads products from the public product list of the shop (Shopify, "
+"WooCommerce) or from the product data written in its pages (schema.org). No "
+"password or key is asked or stored. When it finds products, it asks \"Import "
+"the 12 products too (unpublished)?\" (field :guilabel:`Import the products`)."
+msgstr ""
+"La importación lee los productos de la lista pública de productos de la "
+"tienda (Shopify, WooCommerce) o de los datos de producto escritos en sus "
+"páginas (schema.org). No se pide ni se guarda ninguna contraseña ni clave. "
+"Cuando encuentra productos, pregunta «¿Importar también los 12 productos "
+"(sin publicar)?» (campo :guilabel:`Importar los productos`)."
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:34
+msgid ""
+"The products are created unpublished (unless :guilabel:`Publish the pages` "
+"is on) with their name, price, description, pictures and a 301 redirect from "
+"their old address. Stock quantities are not imported. At most 250 products "
+"are imported."
+msgstr ""
+"Los productos se crean sin publicar (salvo que :guilabel:`Publicar las "
+"páginas` esté activado) con su nombre, precio, descripción, imágenes y una "
+"redirección 301 desde su dirección antigua. Las cantidades en existencias no "
+"se importan. Se importan como máximo 250 productos."
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:38
+msgid ""
+"The :guilabel:`Products` tab of the review lists every product with :"
+"guilabel:`Include`, the number of :guilabel:`Variants`, the :guilabel:"
+"`Price` and the :guilabel:`Warnings`."
+msgstr ""
+"La pestaña :guilabel:`Productos` de la revisión enumera cada producto con :"
+"guilabel:`Incluir`, el número de :guilabel:`Variantes`, el :guilabel:"
+"`Precio` y las :guilabel:`Advertencias`."
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:42
+msgid "Variants"
+msgstr "Variantes"
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:44
+msgid ""
+"The options of a product (size, colour…) become product attributes. An "
+"attribute or value with the same name that already exists in the database is "
+"reused; missing ones are created."
+msgstr ""
+"Las opciones de un producto (talla, color…) se convierten en atributos de "
+"producto. Un atributo o valor con el mismo nombre que ya existe en la base "
+"de datos se reutiliza; los que faltan se crean."
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:47
+msgid ""
+"When the variants have their own price, reference, barcode or picture, or "
+"when the shop sells only some combinations, Odoo variants are created (the "
+"combinations that are not sold are archived). Otherwise the options are kept "
+"as attributes that do not create variants, and the product stays one product."
+msgstr ""
+"Cuando las variantes tienen su propio precio, referencia, código de barras o "
+"imagen, o cuando la tienda solo vende algunas combinaciones, se crean "
+"variantes de Odoo (las combinaciones que no se venden se archivan). Si no, "
+"las opciones se conservan como atributos que no crean variantes y el "
+"producto sigue siendo un único producto."
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:51
+msgid ""
+"The lowest variant price becomes the product price; the differences become "
+"extra prices per value when they add up for every variant. When they do not, "
+"every variant keeps the product price and the review and the log list the "
+"variants to price by hand."
+msgstr ""
+"El precio de variante más bajo pasa a ser el precio del producto; las "
+"diferencias se convierten en precios adicionales por valor cuando cuadran "
+"para todas las variantes. Si no cuadran, todas las variantes conservan el "
+"precio del producto y la revisión y el registro enumeran las variantes que "
+"hay que tarifar a mano."
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:54
+msgid ""
+"References, valid barcodes that are not used yet and pictures per variant "
+"are set."
+msgstr ""
+"Se fijan las referencias, los códigos de barras válidos que aún no se usan y "
+"las imágenes por variante."
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:55
+msgid ""
+"A product with more than 100 variants (or more than Odoo's own variant "
+"limit, when that is lower) is imported without variants, and the review says "
+"so."
+msgstr ""
+"Un producto con más de 100 variantes (o más que el límite de variantes "
+"propio de Odoo, cuando es menor) se importa sin variantes, y la revisión lo "
+"indica."
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:59
+msgid "Prices in another currency"
+msgstr "Precios en otra moneda"
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:61
+msgid ""
+"The import finds the currency of the source prices in the shop data or in "
+"the pages. When it differs from the currency of the website's company, the "
+"import asks what to do (field :guilabel:`Prices in another currency`):"
+msgstr ""
+"La importación obtiene la moneda de los precios de origen de los datos de la "
+"tienda o de las páginas. Cuando difiere de la moneda de la empresa del sitio "
+"web, la importación pregunta qué hacer (campo :guilabel:`Precios en otra "
+"moneda`):"
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:65
+msgid ""
+":guilabel:`Convert with Odoo's exchange rate`: the prices are converted with "
+"the current rate of Odoo (its date is shown) and rounded. This is the "
+"default when Odoo has a rate."
+msgstr ""
+":guilabel:`Convertir con el tipo de cambio de Odoo`: los precios se "
+"convierten con el tipo de cambio actual de Odoo (se muestra su fecha) y se "
+"redondean. Es la opción por defecto cuando Odoo tiene un tipo de cambio."
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:67
+msgid ""
+":guilabel:`Keep the source prices in a pricelist in their currency`: a "
+"pricelist of the website in the source currency gets the source prices as "
+"fixed prices. The currency is activated if needed. The pricelist can be "
+"chosen on the website; it is not made the default anywhere else."
+msgstr ""
+":guilabel:`Mantener los precios de origen en una tarifa en su moneda`: una "
+"tarifa del sitio web en la moneda de origen recibe los precios de origen "
+"como precios fijos. La moneda se activa si es necesario. La tarifa se puede "
+"elegir en el sitio web; no se convierte en la predeterminada en ningún otro "
+"lugar."
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:70
+msgid ""
+":guilabel:`Same numbers, not converted`: the numbers are kept as they are. "
+"This is the default when Odoo has no rate; check the prices afterwards."
+msgstr ""
+":guilabel:`Mismas cifras, sin convertir`: las cifras se conservan tal cual. "
+"Es la opción por defecto cuando Odoo no tiene tipo de cambio; compruebe los "
+"precios después."
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:73
+msgid ""
+"The :guilabel:`Products` tab shows the decision with the rate, and you can "
+"change it until you import."
+msgstr ""
+"La pestaña :guilabel:`Productos` muestra la decisión con el tipo de cambio, "
+"y puede cambiarla hasta que importe."
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:77
+msgid "Undo"
+msgstr "Deshacer"
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:79
+msgid ""
+":guilabel:`Undo import` also removes the posts, a blog the import created, "
+"the products with their variants, and the pricelist. Attributes and values "
+"created by the import are deleted only when no product uses them any more, "
+"and a currency the import activated is deactivated only when no company or "
+"pricelist uses it."
+msgstr ""
+":guilabel:`Deshacer importación` también elimina las entradas, un blog "
+"creado por la importación, los productos con sus variantes y la tarifa. Los "
+"atributos y valores creados por la importación solo se eliminan cuando ya "
+"ningún producto los usa, y una moneda activada por la importación solo se "
+"desactiva cuando ninguna empresa ni tarifa la usa."
+
+#: ../../content/applications/productivity/ai/website/seo.rst:3
+msgid "SEO, structured data and llms.txt"
+msgstr "SEO, datos estructurados y llms.txt"
+
+#: ../../content/applications/productivity/ai/website/seo.rst:5
+msgid ""
+"The AI writes SEO titles, descriptions and keywords from the content of your "
+"pages. An SEO audit finds what is missing, and two website settings publish "
+"data for search engines and AI assistants. For the SEO features of the "
+"website itself, see :doc:`/applications/websites/website/structure/seo`."
+msgstr ""
+"La IA escribe títulos, descripciones y palabras clave SEO a partir del "
+"contenido de sus páginas. Una auditoría SEO detecta lo que falta, y dos "
+"ajustes del sitio web publican datos para los motores de búsqueda y los "
+"asistentes de IA. Para las funciones SEO del propio sitio web, véase :doc:`/"
+"applications/websites/website/structure/seo`."
+
+#: ../../content/applications/productivity/ai/website/seo.rst:10
+msgid "Optimize SEO with AI"
+msgstr "Optimizar el SEO con IA"
+
+#: ../../content/applications/productivity/ai/website/seo.rst:12
+msgid ""
+"Open a page in :menuselection:`Website --> Site --> Pages` and click :"
+"guilabel:`Optimize SEO with AI`. To do several pages at once (at most 20), "
+"select them in the list and choose :guilabel:`Optimize SEO with AI` in the :"
+"guilabel:`Actions` menu."
+msgstr ""
+"Abra una página en :menuselection:`Sitio web --> Sitio --> Páginas` y haga "
+"clic en :guilabel:`Optimizar el SEO con IA`. Para tratar varias páginas a la "
+"vez (como máximo 20), selecciónelas en la lista y elija :guilabel:`Optimizar "
+"el SEO con IA` en el menú :guilabel:`Acciones`."
+
+#: ../../content/applications/productivity/ai/website/seo.rst:15
+msgid ""
+"The AI reads the visible headings and paragraphs of each page and suggests a "
+"title (50 to 60 characters, at most 70), a description (120 to 160 "
+"characters, at most 170), up to ten keywords taken from the content and, "
+"when the page has pictures, one of them as the sharing picture."
+msgstr ""
+"La IA lee los encabezados y párrafos visibles de cada página y sugiere un "
+"título (de 50 a 60 caracteres, como máximo 70), una descripción (de 120 a "
+"160 caracteres, como máximo 170), hasta diez palabras clave tomadas del "
+"contenido y, cuando la página tiene imágenes, una de ellas como imagen para "
+"compartir."
+
+#: ../../content/applications/productivity/ai/website/seo.rst:18
+msgid ""
+"Review the suggestions in the dialog. The current values are shown next to "
+"the new ones, with the length of the new title and description. Edit what "
+"you want, and untick :guilabel:`Apply` on the pages to keep as they are. "
+"Tick :guilabel:`Use as sharing picture` (off by default) to make the "
+"suggested picture the page's social sharing picture."
+msgstr ""
+"Revise las sugerencias en el diálogo. Los valores actuales se muestran junto "
+"a los nuevos, con la longitud del nuevo título y de la nueva descripción. "
+"Edite lo que quiera y desmarque :guilabel:`Aplicar` en las páginas que "
+"quiera dejar como están. Marque :guilabel:`Usar como imagen para compartir` "
+"(desactivado por defecto) para que la imagen sugerida sea la imagen para "
+"compartir en redes sociales de la página."
+
+#: ../../content/applications/productivity/ai/website/seo.rst:22
+msgid "Click :guilabel:`Apply`."
+msgstr "Haga clic en :guilabel:`Aplicar`."
+
+#: ../../content/applications/productivity/ai/website/seo.rst:24
+msgid ""
+"The new values are recorded in the AI changes and can be undone (see :doc:"
+"`history`). In the AI panel or the editor dialog you can ask for the same, "
+"for example \"Improve the SEO of this page\"."
+msgstr ""
+"Los nuevos valores quedan registrados en los cambios de la IA y se pueden "
+"deshacer (véase :doc:`history`). En el panel de IA o en el diálogo del "
+"editor puede pedir lo mismo, por ejemplo «Mejora el SEO de esta página»."
+
+#: ../../content/applications/productivity/ai/website/seo.rst:28
+msgid "SEO audit"
+msgstr "Auditoría SEO"
+
+#: ../../content/applications/productivity/ai/website/seo.rst:30
+msgid ""
+"Open :menuselection:`Website --> Site --> SEO audit`. The audit checks the "
+"pages of the website without AI and lists its findings as errors, warnings "
+"and hints:"
+msgstr ""
+"Abra :menuselection:`Sitio web --> Sitio --> Auditoría SEO`. La auditoría "
+"comprueba las páginas del sitio web sin IA y enumera sus hallazgos como "
+"errores, advertencias y consejos:"
+
+#: ../../content/applications/productivity/ai/website/seo.rst:33
+msgid "missing, duplicate, too short or too long titles and descriptions;"
+msgstr ""
+"títulos y descripciones que faltan, duplicados, demasiado cortos o demasiado "
+"largos;"
+
+#: ../../content/applications/productivity/ai/website/seo.rst:34
+msgid "pages without a main heading (H1) or with several;"
+msgstr "páginas sin encabezado principal (H1) o con varios;"
+
+#: ../../content/applications/productivity/ai/website/seo.rst:35
+msgid "pictures without alternative text;"
+msgstr "imágenes sin texto alternativo;"
+
+#: ../../content/applications/productivity/ai/website/seo.rst:36
+msgid "thin pages (fewer than 150 words);"
+msgstr "páginas pobres (menos de 150 palabras);"
+
+#: ../../content/applications/productivity/ai/website/seo.rst:37
+msgid "broken internal links;"
+msgstr "enlaces internos rotos;"
+
+#: ../../content/applications/productivity/ai/website/seo.rst:38
+msgid "unpublished pages in the menu."
+msgstr "páginas sin publicar en el menú."
+
+#: ../../content/applications/productivity/ai/website/seo.rst:40
+msgid ""
+"The :guilabel:`Open the page` button of a line opens the page. :guilabel:"
+"`Check again` runs the audit again after your changes. :guilabel:`Improve "
+"titles and descriptions with AI` opens the SEO dialog above for the pages "
+"with title or description findings."
+msgstr ""
+"El botón :guilabel:`Abrir la página` de una línea abre la página. :guilabel:"
+"`Comprobar de nuevo` vuelve a ejecutar la auditoría después de sus cambios. :"
+"guilabel:`Mejorar títulos y descripciones con IA` abre el diálogo SEO "
+"anterior para las páginas con hallazgos sobre el título o la descripción."
+
+#: ../../content/applications/productivity/ai/website/seo.rst:45
+msgid "Structured data"
+msgstr "Datos estructurados"
+
+#: ../../content/applications/productivity/ai/website/seo.rst:47
+msgid ""
+"With :guilabel:`Structured data` on (:menuselection:`Website --> "
+"Configuration --> Settings`, block :guilabel:`SEO`), every page carries "
+"structured data (JSON-LD) for search engines:"
+msgstr ""
+"Con :guilabel:`Datos estructurados` activado (:menuselection:`Sitio web --> "
+"Configuración --> Ajustes`, bloque :guilabel:`SEO`), cada página lleva datos "
+"estructurados (JSON-LD) para los motores de búsqueda:"
+
+#: ../../content/applications/productivity/ai/website/seo.rst:50
+msgid ""
+"your organisation: name, address of the website, logo, social network links "
+"and contact data;"
+msgstr ""
+"su organización: nombre, dirección del sitio web, logotipo, enlaces a redes "
+"sociales y datos de contacto;"
+
+#: ../../content/applications/productivity/ai/website/seo.rst:51
+msgid "a local business, when the company has an address;"
+msgstr "un negocio local, cuando la empresa tiene una dirección;"
+
+#: ../../content/applications/productivity/ai/website/seo.rst:52
+msgid "the website itself;"
+msgstr "el propio sitio web;"
+
+#: ../../content/applications/productivity/ai/website/seo.rst:53
+msgid ""
+"the questions and answers of the visible FAQ blocks of the page. Hidden "
+"blocks are left out, so the structured data only states what a visitor can "
+"read."
+msgstr ""
+"las preguntas y respuestas de los bloques de preguntas frecuentes visibles "
+"de la página. Los bloques ocultos se omiten, de modo que los datos "
+"estructurados solo declaran lo que un visitante puede leer."
+
+#: ../../content/applications/productivity/ai/website/seo.rst:56
+msgid ""
+"No AI is involved: the data comes from your company, your website and the "
+"page. The setting is on for new installations and off for databases upgraded "
+"to this version."
+msgstr ""
+"No interviene la IA: los datos proceden de su empresa, de su sitio web y de "
+"la página. El ajuste está activado en las instalaciones nuevas y desactivado "
+"en las bases de datos actualizadas a esta versión."
+
+#: ../../content/applications/productivity/ai/website/seo.rst:60
+msgid "llms.txt"
+msgstr "llms.txt"
+
+#: ../../content/applications/productivity/ai/website/seo.rst:62
+msgid ""
+"With :guilabel:`Publish /llms.txt` on (same place), the website answers at "
+"``/llms.txt`` with a short text file for AI assistants and search tools: the "
+"website name, the description of the homepage and the list of published "
+"pages, each with its title and description. Only pages that everybody may "
+"see and that search engines may index are listed. The setting is off by "
+"default."
+msgstr ""
+"Con :guilabel:`Publicar /llms.txt` activado (en el mismo lugar), el sitio "
+"web responde en ``/llms.txt`` con un breve archivo de texto para asistentes "
+"de IA y herramientas de búsqueda: el nombre del sitio web, la descripción de "
+"la página de inicio y la lista de páginas publicadas, cada una con su título "
+"y su descripción. Solo se incluyen las páginas que todo el mundo puede ver y "
+"que los motores de búsqueda pueden indexar. El ajuste está desactivado por "
+"defecto."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:3
+msgid "Requirements and settings"
+msgstr "Requisitos y ajustes"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:5
+msgid ""
+"This page is for administrators: what the website AI needs, who may use "
+"which part, the settings and system parameters, and how the module keeps the "
+"website and the server safe."
+msgstr ""
+"Esta página es para administradores: qué necesita la IA del sitio web, quién "
+"puede usar cada parte, los ajustes y parámetros del sistema, y cómo el "
+"módulo protege el sitio web y el servidor."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:11
+msgid ""
+"The modules **AI Website Builder** (``ai_website``, it needs AI, Website and "
+"the Unsplash image library) and, for imports, **AI Website Import** "
+"(``ai_website_import``). The import bridges for the Blog and eCommerce apps "
+"install themselves."
+msgstr ""
+"Los módulos **AI Website Builder** (``ai_website``, que requiere IA, Sitio "
+"web y la biblioteca de imágenes de Unsplash) y, para las importaciones, **AI "
+"Website Import** (``ai_website_import``). Los módulos puente de importación "
+"para las aplicaciones Blog y Comercio electrónico se instalan solos."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:14
+msgid ""
+"A chat model (see :doc:`../models_and_providers`). Generated pictures also "
+"need an image model, and stock photos need an Unsplash key in the website "
+"settings."
+msgstr ""
+"Un modelo de chat (véase :doc:`../models_and_providers`). Las imágenes "
+"generadas requieren además un modelo de imágenes, y las fotos de archivo una "
+"clave de Unsplash en los ajustes del sitio web."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:16
+msgid ""
+"For the visual check and the page comparison of the import: Chromium or "
+"Google Chrome on the Odoo server (see :ref:`ai/website/visual-check`)."
+msgstr ""
+"Para la comprobación visual y la comparación de páginas de la importación: "
+"Chromium o Google Chrome en el servidor de Odoo (véase :ref:`ai/website/"
+"visual-check`)."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:26
+msgid "Feature"
+msgstr "Función"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:27
+msgid "Needs"
+msgstr "Requiere"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:28
+msgid ""
+"Page generator, :guilabel:`Optimize SEO with AI`, :guilabel:`Translate with "
+"AI`"
+msgstr ""
+"Generador de páginas, :guilabel:`Optimizar el SEO con IA`, :guilabel:"
+"`Traducir con IA`"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:29
+msgid "Website designer, :guilabel:`Ask (Q&A)` capability"
+msgstr "Diseñador web, capacidad :guilabel:`Preguntar (P y R)`"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:30
+msgid "Brand kits, SEO audit"
+msgstr "Kits de marca, auditoría SEO"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:31
+msgid "Website designer"
+msgstr "Diseñador web"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:32
+msgid "AI panel and AI in the website editor, undo of AI changes"
+msgstr "Panel de IA e IA en el editor del sitio web, deshacer cambios de la IA"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:33
+msgid "Website designer, :guilabel:`Customize UI & schema` capability"
+msgstr "Diseñador web, capacidad :guilabel:`Personalizar interfaz y esquema`"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:34
+msgid "Website import (form and AI panel)"
+msgstr "Importación de sitios web (formulario y panel de IA)"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:35
+msgid ""
+"Website designer and Settings administrator; in the AI panel also the :"
+"guilabel:`Customize UI & schema` capability"
+msgstr ""
+"Diseñador web y administrador de Ajustes; en el panel de IA, también la "
+"capacidad :guilabel:`Personalizar interfaz y esquema`"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:38
+msgid ""
+"Capabilities are set in :menuselection:`AI --> Configuration --> Behavior --"
+"> Capabilities` (see :doc:`../feature_access`). AI access rules apply on top "
+"(see :doc:`../access_policy`), and every change is written to the AI logs "
+"(see :doc:`../monitoring`)."
+msgstr ""
+"Las capacidades se configuran en :menuselection:`IA --> Configuración --> "
+"Comportamiento --> Capacidades` (véase :doc:`../feature_access`). Por encima "
+"se aplican las reglas de acceso de la IA (véase :doc:`../access_policy`), y "
+"cada cambio se escribe en los registros de la IA (véase :doc:`../"
+"monitoring`)."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:45
+msgid ""
+"In :menuselection:`AI --> Configuration --> Settings`, block :guilabel:"
+"`Website builder`:"
+msgstr ""
+"En :menuselection:`IA --> Configuración --> Ajustes`, bloque :guilabel:"
+"`Constructor web`:"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:47
+msgid ""
+":guilabel:`AI may add links to other websites`: off by default. When off, "
+"the buttons and menu items the AI creates may only link to this website, e-"
+"mail addresses and phone numbers."
+msgstr ""
+":guilabel:`La IA puede añadir enlaces a otros sitios web`: desactivado por "
+"defecto. Desactivado, los botones y elementos de menú que crea la IA solo "
+"pueden enlazar a este sitio web, a direcciones de correo y a números de "
+"teléfono."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:49
+msgid ""
+":guilabel:`Let the AI use all building blocks`: on by default, for the "
+"selected website. When off, the AI uses only the curated blocks (see :ref:"
+"`ai/website/catalogue`)."
+msgstr ""
+":guilabel:`Permitir que la IA use todos los bloques`: activado por defecto, "
+"para el sitio web seleccionado. Desactivado, la IA solo usa los bloques "
+"seleccionados (véase :ref:`ai/website/catalogue`)."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:52
+msgid ""
+"In :menuselection:`Website --> Configuration --> Settings`, block :guilabel:"
+"`SEO`: :guilabel:`Structured data` and :guilabel:`Publish /llms.txt` (see :"
+"doc:`seo`)."
+msgstr ""
+"En :menuselection:`Sitio web --> Configuración --> Ajustes`, bloque :"
+"guilabel:`SEO`: :guilabel:`Datos estructurados` y :guilabel:`Publicar /llms."
+"txt` (véase :doc:`seo`)."
+
+#: ../../content/applications/productivity/ai/website/setup.rst:58
+msgid ""
+"These optional parameters are set in :menuselection:`Settings --> Technical "
+"--> Parameters --> System Parameters` (developer mode):"
+msgstr ""
+"Estos parámetros opcionales se configuran en :menuselection:`Ajustes --> "
+"Técnico --> Parámetros --> Parámetros del sistema` (modo de desarrollador):"
+
+#: ../../content/applications/productivity/ai/website/setup.rst:65
+msgid "Parameter"
+msgstr "Parámetro"
+
 #: ../../content/applications/productivity/appointments.rst:89
 msgid "The :guilabel:`Form` tab lists the questions asked when booking. Each question has a :guilabel:`Name`, a :guilabel:`Type` (:guilabel:`Short Text`, :guilabel:`Long Text`, :guilabel:`Number`, :guilabel:`Date`, :guilabel:`Select`, :guilabel:`Checkbox`, or :guilabel:`File`), and can be marked :guilabel:`Required`. For a :guilabel:`Select` question, list the options one per line. A question can also block the booking when a given answer is given, with the :guilabel:`Error Message` shown to the customer."
 msgstr "La pestaña :guilabel:`Formulario` muestra las preguntas que se hacen al reservar. Cada pregunta tiene un :guilabel:`Nombre`, un :guilabel:`Tipo` (:guilabel:`Texto corto`, :guilabel:`Texto largo`, :guilabel:`Número`, :guilabel:`Fecha`, :guilabel:`Seleccionar`, :guilabel:`Casilla de verificación`, o :guilabel:`Archivo`), y se puede marcar como :guilabel:`Requerido`. Para una pregunta de tipo :guilabel:`Seleccionar`, indique las opciones una por línea. Una pregunta también puede bloquear la reserva cuando se da una respuesta determinada, mostrando el :guilabel:`Mensaje de error` al cliente."
@@ -9246,6 +10676,578 @@ msgstr "CSS personalizado. La IA solo puede escribir reglas CSS simples entre su
 msgid "If a turn has no builder tools (the capability is missing or you are not a website designer), the assistant tells you that the :guilabel:`Customize UI & schema` capability or the website designer right is missing, that an administrator can grant it, and explains the manual way instead: Menu Editor, Pages, edit mode and theme settings."
 msgstr "Si un turno no tiene herramientas de construcción (falta la capacidad o usted no es diseñador web), el asistente le indica que falta la capacidad :guilabel:`Personalizar interfaz y esquema` o el derecho de diseñador web, que un administrador puede concederlo, y explica en su lugar la vía manual: editor de menús, páginas, modo de edición y ajustes del tema."
 
+#: ../../content/applications/productivity/ai/website/editor.rst:3
+msgid "AI in the website editor"
+msgstr "La IA en el editor del sitio web"
+
+#: ../../content/applications/productivity/ai/website/editor.rst:5
+msgid ""
+"While you edit a page, you can ask the AI to change it without leaving the "
+"editor. The requests are ordinary AI conversations limited to the website "
+"tools and to the page you are editing (see :doc:`edit_pages`)."
+msgstr ""
+"Mientras edita una página, puede pedir a la IA que la cambie sin salir del "
+"editor. Las peticiones son conversaciones de IA normales, limitadas a las "
+"herramientas del sitio web y a la página que está editando (véase :doc:"
+"`edit_pages`)."
+
+#: ../../content/applications/productivity/ai/website/editor.rst:10
+msgid "Open the AI dialog"
+msgstr "Abrir el diálogo de la IA"
+
+#: ../../content/applications/productivity/ai/website/editor.rst:12
+msgid ""
+"Click :guilabel:`AI` in the top bar of the website editor to work on the "
+"whole page."
+msgstr ""
+"Haga clic en :guilabel:`IA` en la barra superior del editor del sitio web "
+"para trabajar en toda la página."
+
+#: ../../content/applications/productivity/ai/website/editor.rst:13
+msgid ""
+"Or select a block and click the :guilabel:`Ask AI` button (magic wand) in "
+"the block's options toolbar to work on that block. This works for the blocks "
+"of the page and of the footer."
+msgstr ""
+"O bien seleccione un bloque y haga clic en el botón :guilabel:`Preguntar a "
+"la IA` (varita mágica) de la barra de opciones del bloque para trabajar en "
+"ese bloque. Funciona con los bloques de la página y del pie de página."
+
+#: ../../content/applications/productivity/ai/website/editor.rst:16
+msgid ""
+"The buttons are shown to internal users of the AI. They work for website "
+"designers with the :guilabel:`Customize UI & schema` capability; otherwise "
+"the tooltip says which right is missing."
+msgstr ""
+"Los botones se muestran a los usuarios internos de la IA. Funcionan para los "
+"diseñadores web con la capacidad :guilabel:`Personalizar interfaz y "
+"esquema`; si no, la información sobre herramientas indica qué derecho falta."
+
+#: ../../content/applications/productivity/ai/website/editor.rst:19
+msgid ""
+"The dialog opens at the side of the page. Under :guilabel:`Selected block:` "
+"it shows the block you work on (with \"(footer)\" for a footer block); :"
+"guilabel:`Whole page` goes back to the whole page."
+msgstr ""
+"El diálogo se abre a un lado de la página. En :guilabel:`Bloque seleccionado:"
+"` muestra el bloque en el que trabaja (con «(pie de página)» para un bloque "
+"del pie de página); :guilabel:`Toda la página` vuelve a la página completa."
+
+#: ../../content/applications/productivity/ai/website/editor.rst:23
+msgid ""
+"The AI only works on the saved page. If the page has unsaved changes, the "
+"dialog asks you to save it first: click :guilabel:`Save`, or :guilabel:"
+"`Cancel` to keep editing."
+msgstr ""
+"La IA solo trabaja con la página guardada. Si la página tiene cambios sin "
+"guardar, el diálogo le pide que la guarde primero: haga clic en :guilabel:"
+"`Guardar`, o en :guilabel:`Cancelar` para seguir editando."
+
+#: ../../content/applications/productivity/ai/website/editor.rst:27
+msgid "Ask and review"
+msgstr "Preguntar y revisar"
+
+#: ../../content/applications/productivity/ai/website/editor.rst:29
+msgid ""
+"Type your request, or click one of the quick buttons: :guilabel:`Rewrite "
+"shorter`, :guilabel:`More persuasive`, :guilabel:`Change colours`, :guilabel:"
+"`Translate` or :guilabel:`SEO`. Press :guilabel:`Send` (or :kbd:"
+"`Ctrl+Enter`)."
+msgstr ""
+"Escriba su petición o haga clic en uno de los botones rápidos: :guilabel:"
+"`Reescribir más corto`, :guilabel:`Más persuasivo`, :guilabel:`Cambiar "
+"colores`, :guilabel:`Traducir` o :guilabel:`SEO`. Pulse :guilabel:`Enviar` "
+"(o :kbd:`Ctrl+Enter`)."
+
+#: ../../content/applications/productivity/ai/website/editor.rst:32
+msgid ""
+"The dialog shows the steps live while the AI works, for example \"Reading "
+"the page…\" or \"Proposing 3 changes…\", and then its answer."
+msgstr ""
+"Mientras la IA trabaja, el diálogo muestra los pasos en directo, por ejemplo "
+"«Leyendo la página…» o «Proponiendo 3 cambios…», y después su respuesta."
+
+#: ../../content/applications/productivity/ai/website/editor.rst:34
+msgid ""
+"Each proposed change appears as a card with a summary. Click :guilabel:"
+"`Accept` to apply it or :guilabel:`Reject` to drop it. With the :guilabel:"
+"`Apply without asking` write mode, the changes are applied at once."
+msgstr ""
+"Cada cambio propuesto aparece como una tarjeta con un resumen. Haga clic en :"
+"guilabel:`Aceptar` para aplicarlo o en :guilabel:`Rechazar` para "
+"descartarlo. Con el modo de escritura :guilabel:`Aplicar sin preguntar`, los "
+"cambios se aplican de inmediato."
+
+#: ../../content/applications/productivity/ai/website/editor.rst:37
+msgid ""
+"After a change is applied, the editor reloads the page and stays in edit "
+"mode. The changed blocks are briefly outlined, so you can see what the AI "
+"did."
+msgstr ""
+"Después de aplicar un cambio, el editor recarga la página y sigue en modo de "
+"edición. Los bloques cambiados se resaltan brevemente con un contorno, para "
+"que vea lo que hizo la IA."
+
+#: ../../content/applications/productivity/ai/website/editor.rst:40
+msgid ""
+":guilabel:`AI change applied.` is then shown with an :guilabel:`Undo AI "
+"change` button that puts the page back as it was."
+msgstr ""
+"A continuación se muestra :guilabel:`Cambio de la IA aplicado.` con un "
+"botón :guilabel:`Deshacer el cambio de la IA` que devuelve la página a como "
+"estaba."
+
+#: ../../content/applications/productivity/ai/website/editor.rst:44
+msgid "History of the day"
+msgstr "Historial del día"
+
+#: ../../content/applications/productivity/ai/website/editor.rst:46
+msgid ""
+":guilabel:`AI changes of this page today` lists the AI changes of the page "
+"and of the footer made today, newest first, with who made them, a :guilabel:"
+"`Details` link to the change and an :guilabel:`Undo` button. If an undo is "
+"refused because the content changed since (by hand or by a later AI change), "
+"the message explains why and links to the change, where :guilabel:`Undo "
+"anyway` is available (see :doc:`history`)."
+msgstr ""
+"La lista :guilabel:`Cambios de la IA en esta página hoy` muestra los cambios "
+"de la IA de la página y del pie de página hechos hoy, del más reciente al "
+"más antiguo, con quién los hizo, un enlace :guilabel:`Detalles` al cambio y "
+"un botón :guilabel:`Deshacer`. Si se rechaza deshacer porque el contenido ha "
+"cambiado desde entonces (a mano o por un cambio posterior de la IA), el "
+"mensaje explica el motivo y enlaza al cambio, donde está disponible :"
+"guilabel:`Deshacer de todos modos` (véase :doc:`history`)."
+
+#: ../../content/applications/productivity/ai/website/editor.rst:53
+msgid "Translate mode"
+msgstr "Modo de traducción"
+
+#: ../../content/applications/productivity/ai/website/editor.rst:55
+msgid ""
+"When you open the dialog in the editor's translate mode (see :doc:`/"
+"applications/websites/website/configuration/translate`), it shows :guilabel:"
+"`Translate mode` and a :guilabel:`Translate this page with AI` button. The "
+"AI translates the texts of the page into the language shown; the translation "
+"is proposed, and you accept or reject it like any other change. You can also "
+"ask questions about the page or its translation. Changes to the structure of "
+"the page are refused in this mode: make them in the default language."
+msgstr ""
+"Cuando abre el diálogo en el modo de traducción del editor (véase :doc:`/"
+"applications/websites/website/configuration/translate`), muestra :guilabel:"
+"`Modo de traducción` y un botón :guilabel:`Traducir esta página con IA`. La "
+"IA traduce los textos de la página al idioma mostrado; la traducción se "
+"propone y usted la acepta o la rechaza como cualquier otro cambio. También "
+"puede hacer preguntas sobre la página o su traducción. En este modo se "
+"rechazan los cambios en la estructura de la página: hágalos en el idioma por "
+"defecto."
+
+#: ../../content/applications/productivity/ai/website/editor.rst:65
+msgid ""
+"The dialog works on website pages and on the footer. Pages generated by an "
+"application (the shop, the blog…) have no content the AI can edit here."
+msgstr ""
+"El diálogo funciona con las páginas del sitio web y con el pie de página. "
+"Las páginas generadas por una aplicación (la tienda, el blog…) no tienen "
+"aquí contenido que la IA pueda editar."
+
+#: ../../content/applications/productivity/ai/website/editor.rst:67
+msgid ""
+"The dialog continues your own AI conversation only, never someone else's."
+msgstr ""
+"El diálogo solo continúa su propia conversación con la IA, nunca la de otra "
+"persona."
+
+#: ../../content/applications/productivity/ai/website/editor.rst:68
+msgid ""
+"A chat model must be configured; otherwise the dialog says that an "
+"administrator must set one."
+msgstr ""
+"Debe haber un modelo de chat configurado; si no, el diálogo indica que un "
+"administrador debe configurarlo."
+
+#: ../../content/applications/productivity/ai/website/history.rst:3
+msgid "AI changes and undo"
+msgstr "Cambios de la IA y deshacer"
+
+#: ../../content/applications/productivity/ai/website/history.rst:5
+msgid ""
+"Every website change made by the AI is recorded with what the content looked "
+"like before, so it can be undone in one click: new pages, page and footer "
+"edits, new blocks, menu changes, custom CSS, brand kits applied by the AI, "
+"SEO texts, translations and website imports."
+msgstr ""
+"Cada cambio que la IA hace en el sitio web se registra junto con el aspecto "
+"que tenía antes el contenido, de modo que se puede deshacer con un clic: "
+"páginas nuevas, ediciones de páginas y del pie de página, bloques nuevos, "
+"cambios de menú, CSS personalizado, kits de marca aplicados por la IA, "
+"textos SEO, traducciones e importaciones de sitios web."
+
+#: ../../content/applications/productivity/ai/website/history.rst:10
+msgid "The list of changes"
+msgstr "La lista de cambios"
+
+#: ../../content/applications/productivity/ai/website/history.rst:12
+msgid ""
+"Open :menuselection:`Website --> Configuration --> AI changes`. The list "
+"shows the :guilabel:`Applied` changes by default, with the date, the :"
+"guilabel:`Kind of change` (for example :guilabel:`Page edited`, :guilabel:"
+"`Footer edited`, :guilabel:`New page`, :guilabel:`SEO` or :guilabel:"
+"`Translation`), a summary, the author and the status. Use the filters :"
+"guilabel:`Undone` and :guilabel:`My changes`, or group by :guilabel:`Kind of "
+"change` or :guilabel:`Author`."
+msgstr ""
+"Abra :menuselection:`Sitio web --> Configuración --> Cambios de la IA`. Por "
+"defecto, la lista muestra los cambios en estado :guilabel:`Aplicado`, con la "
+"fecha, el :guilabel:`Tipo de cambio` (por ejemplo :guilabel:`Página "
+"editada`, :guilabel:`Pie de página editado`, :guilabel:`Página nueva`, :"
+"guilabel:`SEO` o :guilabel:`Traducción`), un resumen, el autor y el estado. "
+"Use los filtros :guilabel:`Deshecho` y :guilabel:`Mis cambios`, o agrupe "
+"por :guilabel:`Tipo de cambio` o :guilabel:`Autor`."
+
+#: ../../content/applications/productivity/ai/website/history.rst:18
+msgid ""
+"The history keeps 90 days: older changes are removed automatically and can "
+"no longer be undone."
+msgstr ""
+"El historial se conserva 90 días: los cambios más antiguos se eliminan "
+"automáticamente y ya no se pueden deshacer."
+
+#: ../../content/applications/productivity/ai/website/history.rst:21
+msgid "Undo a change"
+msgstr "Deshacer un cambio"
+
+#: ../../content/applications/productivity/ai/website/history.rst:23
+msgid ""
+"Click :guilabel:`Undo` on a line, or open the change and click :guilabel:"
+"`Undo`, then confirm. The content touched by the change is put back as it "
+"was: the texts and blocks of the page, the menu items, the CSS, the SEO "
+"fields and their translations. Pages and menu items the change created are "
+"removed. The change gets the status :guilabel:`Undone`, with who undid it "
+"and when."
+msgstr ""
+"Haga clic en :guilabel:`Deshacer` en una línea, o abra el cambio y haga clic "
+"en :guilabel:`Deshacer`, y luego confirme. El contenido afectado por el "
+"cambio vuelve a quedar como estaba: los textos y bloques de la página, los "
+"elementos de menú, el CSS, los campos SEO y sus traducciones. Las páginas y "
+"los elementos de menú creados por el cambio se eliminan. El cambio pasa al "
+"estado :guilabel:`Deshecho`, con quién lo deshizo y cuándo."
+
+#: ../../content/applications/productivity/ai/website/history.rst:28
+msgid ""
+"You can also undo from the website editor (see :doc:`editor`) or ask the AI "
+"panel, for example \"Undo my last website change\". The AI then proposes the "
+"undo, which you confirm."
+msgstr ""
+"También puede deshacer desde el editor del sitio web (véase :doc:`editor`) o "
+"pedirlo al panel de IA, por ejemplo «Deshaz mi último cambio en el sitio "
+"web». La IA propone entonces deshacer el cambio y usted lo confirma."
+
+#: ../../content/applications/productivity/ai/website/history.rst:31
+msgid ""
+"Undoing needs the same rights as the changes: the website designer right and "
+"the :guilabel:`Customize UI & schema` capability."
+msgstr ""
+"Deshacer requiere los mismos derechos que los cambios: el derecho de "
+"diseñador web y la capacidad :guilabel:`Personalizar interfaz y esquema`."
+
+#: ../../content/applications/productivity/ai/website/history.rst:35
+msgid "When an undo is refused"
+msgstr "Cuando se rechaza deshacer"
+
+#: ../../content/applications/productivity/ai/website/history.rst:37
+msgid ""
+"**A later AI change touched the same content.** Undo the later change first: "
+"always undo the newest change first. The message names the later changes."
+msgstr ""
+"**Un cambio posterior de la IA afectó al mismo contenido.** Deshaga primero "
+"el cambio posterior: deshaga siempre primero el cambio más reciente. El "
+"mensaje indica los cambios posteriores."
+
+#: ../../content/applications/productivity/ai/website/history.rst:39
+msgid ""
+"**The content was changed by hand since** (in the editor or by another "
+"tool). The form shows :guilabel:`Changed since this AI change:` with what "
+"changed. A normal undo would overwrite that work, so it is refused. If you "
+"really want the earlier state back, click :guilabel:`Undo anyway` and "
+"confirm: your later changes are lost, and pages or menu items created by the "
+"AI change are deleted even if they were edited since. The AI itself never "
+"forces an undo."
+msgstr ""
+"**El contenido se ha cambiado a mano desde entonces** (en el editor o con "
+"otra herramienta). El formulario muestra :guilabel:`Cambiado desde este "
+"cambio de la IA:` con lo que ha cambiado. Deshacer de forma normal "
+"sobrescribiría ese trabajo, así que se rechaza. Si de verdad quiere "
+"recuperar el estado anterior, haga clic en :guilabel:`Deshacer de todos "
+"modos` y confirme: sus cambios posteriores se pierden, y las páginas o "
+"elementos de menú creados por el cambio de la IA se eliminan aunque se hayan "
+"editado desde entonces. La propia IA nunca fuerza un deshacer."
+
+#: ../../content/applications/productivity/ai/website/history.rst:46
+msgid ""
+"A website import is undone from the import itself, with :guilabel:`Undo "
+"import` (see :doc:`import`). It is listed here so that later changes can see "
+"it, but it has no :guilabel:`Undo` button."
+msgstr ""
+"Una importación de sitio web se deshace desde la propia importación, con :"
+"guilabel:`Deshacer importación` (véase :doc:`import`). Aparece aquí para que "
+"los cambios posteriores la tengan en cuenta, pero no tiene botón :guilabel:"
+"`Deshacer`."
+
+#: ../../content/applications/productivity/ai/website/import.rst:3
+msgid "Import a website"
+msgstr "Importar un sitio web"
+
+#: ../../content/applications/productivity/ai/website/import.rst:5
+msgid ""
+"The module **AI Website Import** (``ai_website_import``) copies an existing "
+"website into Odoo from its address. It reads the pages of the site, rebuilds "
+"each page from your website's own building blocks and shows everything for "
+"review before anything is created. It does not copy the HTML of the other "
+"site: texts, pictures, links, lists, cards, questions and forms are taken "
+"over and put into Odoo blocks, so the result can be edited in the website "
+"editor like any other page."
+msgstr ""
+"El módulo **AI Website Import** (``ai_website_import``) copia en Odoo un "
+"sitio web existente a partir de su dirección. Lee las páginas del sitio, "
+"reconstruye cada página con los propios bloques de construcción de su sitio "
+"web y lo muestra todo para revisarlo antes de crear nada. No copia el HTML "
+"del otro sitio: los textos, imágenes, enlaces, listas, tarjetas, preguntas y "
+"formularios se recogen y se colocan en bloques de Odoo, de modo que el "
+"resultado se puede editar en el editor del sitio web como cualquier otra "
+"página."
+
+#: ../../content/applications/productivity/ai/website/import.rst:11
+msgid ""
+"You describe what you want in your own words, for example \"Copy it "
+"exactly\" or \"Copy it and change the colours to blue\". What the "
+"instructions leave open and matters is asked as a question with choices."
+msgstr ""
+"Usted describe lo que quiere con sus propias palabras, por ejemplo «Cópialo "
+"tal cual» o «Cópialo y cambia los colores a azul». Lo que las instrucciones "
+"dejan abierto y es importante se pregunta con opciones."
+
+#: ../../content/applications/productivity/ai/website/import.rst:16
+msgid ""
+"Blog posts and products of the imported site are handled by two bridge "
+"modules that install themselves with the Blog and eCommerce apps (see :doc:"
+"`import_shop`)."
+msgstr ""
+"Las entradas de blog y los productos del sitio importado los gestionan dos "
+"módulos puente que se instalan solos con las aplicaciones Blog y Comercio "
+"electrónico (véase :doc:`import_shop`)."
+
+#: ../../content/applications/productivity/ai/website/import.rst:22
+msgid ""
+"Only administrators who are also website designers can import a website (the "
+"import downloads content from the internet). A chat model is recommended: "
+"without one, the pages are laid out by rules and the texts are kept as they "
+"are (see :ref:`ai/website/import/without-ai`)."
+msgstr ""
+"Solo los administradores que además son diseñadores web pueden importar un "
+"sitio web (la importación descarga contenido de internet). Se recomienda un "
+"modelo de chat: sin él, las páginas se maquetan con reglas y los textos se "
+"conservan tal cual (véase :ref:`ai/website/import/without-ai`)."
+
+#: ../../content/applications/productivity/ai/website/import.rst:27
+msgid "Start an import"
+msgstr "Iniciar una importación"
+
+#: ../../content/applications/productivity/ai/website/import.rst:29
+msgid "You can start an import in three ways:"
+msgstr "Puede iniciar una importación de tres maneras:"
+
+#: ../../content/applications/productivity/ai/website/import.rst:31
+msgid ""
+"Open :menuselection:`Website --> Configuration --> Import a website`. The "
+"list shows the earlier imports; click :guilabel:`New`."
+msgstr ""
+"Abra :menuselection:`Sitio web --> Configuración --> Importar un sitio web`. "
+"La lista muestra las importaciones anteriores; haga clic en :guilabel:"
+"`Nuevo`."
+
+#: ../../content/applications/productivity/ai/website/import.rst:33
+msgid ""
+"In the website editor, click :guilabel:`New` and choose :guilabel:`Import "
+"website`. The import targets the website you are on."
+msgstr ""
+"En el editor del sitio web, haga clic en :guilabel:`Nuevo` y elija :guilabel:"
+"`Importar sitio web`. La importación tiene como destino el sitio web en el "
+"que se encuentra."
+
+#: ../../content/applications/productivity/ai/website/import.rst:35
+msgid ""
+"Ask the AI panel, for example \"Copy the website https://www.example.com "
+"into a new website, with a blue colour scheme\" (see :ref:`ai/website/import/"
+"chat`)."
+msgstr ""
+"Pídalo al panel de IA, por ejemplo «Copia el sitio web https://www.example."
+"com en un sitio web nuevo, con una combinación de colores azul» (véase :ref:"
+"`ai/website/import/chat`)."
+
+#: ../../content/applications/productivity/ai/website/import.rst:38
+msgid "In the form, fill in:"
+msgstr "En el formulario, rellene:"
+
+#: ../../content/applications/productivity/ai/website/import.rst:40
+msgid ""
+":guilabel:`Website address`: the address of the site to import, for example "
+"``https://www.example.com``. Only public internet addresses are accepted."
+msgstr ""
+":guilabel:`Dirección del sitio web`: la dirección del sitio que se importa, "
+"por ejemplo ``https://www.example.com``. Solo se aceptan direcciones "
+"públicas de internet."
+
+#: ../../content/applications/productivity/ai/website/import.rst:42
+msgid ""
+":guilabel:`Import`: :guilabel:`Into an existing website` (then choose the :"
+"guilabel:`Target website`) or :guilabel:`Into a new website` (then give the :"
+"guilabel:`New website name`)."
+msgstr ""
+":guilabel:`Importar`: :guilabel:`En un sitio web existente` (elija entonces "
+"el :guilabel:`Sitio web de destino`) o :guilabel:`En un sitio web nuevo` "
+"(indique entonces el :guilabel:`Nombre del sitio web nuevo`)."
+
+#: ../../content/applications/productivity/ai/website/import.rst:44
+msgid ""
+"On the :guilabel:`Instructions` tab, your wishes in plain words (see below)."
+msgstr ""
+"En la pestaña :guilabel:`Instrucciones`, sus deseos en palabras sencillas "
+"(véase más abajo)."
+
+#: ../../content/applications/productivity/ai/website/import.rst:46
+msgid "Then click :guilabel:`Start`."
+msgstr "Después haga clic en :guilabel:`Iniciar`."
+
+#: ../../content/applications/productivity/ai/website/import.rst:49
+msgid "Instructions in plain words"
+msgstr "Instrucciones en palabras sencillas"
+
+#: ../../content/applications/productivity/ai/website/import.rst:51
+msgid "Write what you want as you would tell a colleague. Some examples:"
+msgstr ""
+"Escriba lo que quiere como se lo diría a un compañero. Algunos ejemplos:"
+
+#: ../../content/applications/productivity/ai/website/import.rst:53
+msgid ""
+"\"Copy https://www.example.com exactly.\" The texts are kept word for word "
+"and the layout follows the source."
+msgstr ""
+"«Copia https://www.example.com tal cual». Los textos se conservan palabra "
+"por palabra y la maquetación sigue el origen."
+
+#: ../../content/applications/productivity/ai/website/import.rst:55
+msgid ""
+"\"Copy it and suggest SEO improvements.\" The review lists SEO suggestions "
+"per page, which you tick."
+msgstr ""
+"«Cópialo y sugiere mejoras de SEO». La revisión enumera sugerencias SEO por "
+"página, que usted marca."
+
+#: ../../content/applications/productivity/ai/website/import.rst:56
+msgid ""
+"\"Copy it and change the colours to blue.\" The design takes a blue colour "
+"scheme instead of the source's colours."
+msgstr ""
+"«Cópialo y cambia los colores a azul». El diseño adopta una combinación de "
+"colores azul en lugar de los colores del origen."
+
+#: ../../content/applications/productivity/ai/website/import.rst:58
+msgid "\"Copy only /about and /services, and publish the pages.\""
+msgstr "«Copia solo /about y /services, y publica las páginas»."
+
+#: ../../content/applications/productivity/ai/website/import.rst:59
+msgid "\"Copy it into a new website and translate it to Spanish.\""
+msgstr "«Cópialo en un sitio web nuevo y tradúcelo al español»."
+
+#: ../../content/applications/productivity/ai/website/import.rst:61
+msgid ""
+"The AI turns the instructions into the options below the text, which you can "
+"also set by hand before starting:"
+msgstr ""
+"La IA convierte las instrucciones en las opciones que aparecen bajo el "
+"texto, que también puede fijar a mano antes de iniciar:"
+
+#: ../../content/applications/productivity/ai/website/import.rst:64
+msgid ""
+":guilabel:`Use AI`: lay out the pages with the AI (on when a chat model is "
+"configured)."
+msgstr ""
+":guilabel:`Usar IA`: maquetar las páginas con la IA (activado cuando hay un "
+"modelo de chat configurado)."
+
+#: ../../content/applications/productivity/ai/website/import.rst:65
+msgid ""
+":guilabel:`Fidelity`: :guilabel:`Copy exactly` or :guilabel:`Improve the "
+"texts`."
+msgstr ""
+":guilabel:`Fidelidad`: :guilabel:`Copiar tal cual` o :guilabel:`Mejorar los "
+"textos`."
+
+#: ../../content/applications/productivity/ai/website/import.rst:66
+msgid ""
+":guilabel:`SEO`: :guilabel:`Keep as it is` or :guilabel:`Suggest "
+"improvements`."
+msgstr ""
+":guilabel:`SEO`: :guilabel:`Mantener tal cual` o :guilabel:`Sugerir mejoras`."
+
+#: ../../content/applications/productivity/ai/website/import.rst:67
+msgid ":guilabel:`Design wish`: for example \"blue colour scheme\"."
+msgstr ""
+":guilabel:`Deseo de diseño`: por ejemplo «combinación de colores azul»."
+
+#: ../../content/applications/productivity/ai/website/import.rst:68
+msgid ":guilabel:`Translate to`: a language to translate the texts into."
+msgstr ":guilabel:`Traducir a`: un idioma al que traducir los textos."
+
+#: ../../content/applications/productivity/ai/website/import.rst:69
+msgid ":guilabel:`Max Pages`: the number of pages to read (50 by default)."
+msgstr ""
+":guilabel:`Máximo de páginas`: el número de páginas que se leen (50 por "
+"defecto)."
+
+#: ../../content/applications/productivity/ai/website/import.rst:70
+msgid ""
+":guilabel:`Scope`: :guilabel:`Every page` or :guilabel:`Only listed pages`, "
+"with the :guilabel:`Pages to import`, one path per line (for example ``/"
+"about``)."
+msgstr ""
+":guilabel:`Alcance`: :guilabel:`Todas las páginas` o :guilabel:`Solo las "
+"páginas indicadas`, con las :guilabel:`Páginas a importar`, una ruta por "
+"línea (por ejemplo ``/about``)."
+
+#: ../../content/applications/productivity/ai/website/import.rst:72
+msgid ""
+":guilabel:`Publish the pages`: off by default, so the pages are created "
+"unpublished."
+msgstr ""
+":guilabel:`Publicar las páginas`: desactivado por defecto, de modo que las "
+"páginas se crean sin publicar."
+
+#: ../../content/applications/productivity/ai/website/import.rst:73
+msgid ""
+":guilabel:`Menu`: :guilabel:`Add next to the current menu` or :guilabel:"
+"`Replace the menu`."
+msgstr ""
+":guilabel:`Menú`: :guilabel:`Añadir junto al menú actual` o :guilabel:"
+"`Reemplazar el menú`."
+
+#: ../../content/applications/productivity/ai/website/import.rst:74
+msgid ""
+":guilabel:`Replace the homepage` (existing website only) and :guilabel:"
+"`Rebuild the footer`."
+msgstr ""
+":guilabel:`Reemplazar la página de inicio` (solo en un sitio web existente) "
+"y :guilabel:`Reconstruir el pie de página`."
+
+#: ../../content/applications/productivity/ai/website/import.rst:75
+msgid ":guilabel:`Content changes`: other wishes, one per line."
+msgstr ":guilabel:`Cambios de contenido`: otros deseos, uno por línea."
+
+#: ../../content/applications/productivity/ai/website/import.rst:77
+msgid "What you state clearly in the instructions is never asked again."
+msgstr ""
+"Lo que indique claramente en las instrucciones nunca se vuelve a preguntar."
+
 #~ msgid "Odoo's **Appointments** app is a self-service scheduling app that simplifies the process of booking meetings, consultations, or services. Integrated with Odoo's suite of business apps, it allows companies to automate appointment scheduling, reduce manual coordination, and provide a seamless experience for clients. Appointments can be linked to calendars, **CRM** opportunities, employee schedules, and more, making it an ideal tool for service-based businesses seeking efficiency and organization."
 #~ msgstr "La aplicación **Citas** de Odoo es una aplicación en la que los clientes y otros usuarios pueden programar sus propias citas, lo que simplifica el proceso de reservas, preguntas o servicios. La aplicación está integrada con el paquete de aplicaciones empresariales de Odoo. De esta forma las empresas pueden automatizar la programación de reuniones, reducir la coordinación manual y brindar una experiencia sencilla a los clientes. Las reuniones pueden vincularse a calendarios, oportunidades de **CRM**, horarios de los empleados y más, lo que la convierte en la herramienta ideal para empresas que se basan en servicios y buscan eficacia y organización."
 
@@ -10675,8 +12677,9 @@ msgstr "Si un turno no tiene herramientas de construcción (falta la capacidad o
 #~ msgid "Setting up custom actions and automation rules may impact your `pricing plan <https://www.odoo.com/pricing>`_."
 #~ msgstr "Configurar acciones personalizadas y reglas de automatización puede afectar su `tarifa <https://www.odoo.com/pricing>`_."
 
-#~ msgid "Files"
-#~ msgstr "Archivos"
+#: ../../content/applications/productivity/ai/panel.rst:79
+msgid "Files"
+msgstr "Archivos"
 
 #~ msgid "To upload a file, select the desired folder in the tree, click :guilabel:`New` and select :guilabel:`Upload`."
 #~ msgstr "Para subir un archivo, seleccione la carpeta que quiera en la barra lateral, haga clic en :guilabel:`Nuevo` y después en :guilabel:`Subir`."
@@ -20341,6 +22344,33 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai.rst:65
 msgid ""
+"**Website and live chat** — an AI agent that answers website visitors with a "
+"hand-over to your operators (see :doc:`ai/livechat`), and an AI website "
+"builder that creates and edits pages and the footer, styles blocks, writes "
+"SEO texts and translations, works inside the website editor and undoes any "
+"of its changes in one click (see :doc:`ai/website`)."
+msgstr ""
+"**Sitio web y chat en vivo** — un agente de IA que responde a los visitantes "
+"del sitio web y pasa la conversación a sus operadores (véase :doc:`ai/"
+"livechat`), y un constructor web con IA que crea y edita páginas y el pie de "
+"página, da estilo a los bloques, escribe textos SEO y traducciones, funciona "
+"dentro del editor del sitio web y deshace cualquiera de sus cambios con un "
+"clic (véase :doc:`ai/website`)."
+
+#: ../../content/applications/productivity/ai.rst:70
+msgid ""
+"**Website import** — copy an existing website from its address, with "
+"instructions in plain words, questions, SEO suggestions, redirects, blog "
+"posts and products, reviewed before anything is created (see :doc:`ai/"
+"website/import`)."
+msgstr ""
+"**Importación de sitios web** — copie un sitio web existente a partir de su "
+"dirección, con instrucciones en palabras sencillas, preguntas, sugerencias "
+"SEO, redirecciones, entradas de blog y productos, todo revisado antes de "
+"crear nada (véase :doc:`ai/website/import`)."
+
+#: ../../content/applications/productivity/ai.rst:65
+msgid ""
 "**Website and live chat** — an AI agent that answers website visitors with a"
 " hand-over to your operators, an AI page generator, builder tools and brand "
 "kits (see :doc:`ai/livechat` and :doc:`ai/website`)."
@@ -21098,6 +23128,19 @@ msgstr ""
 "preguntar, leer las fuentes de datos que usted indique y transferir; no "
 "obtiene permisos de escritura más allá de crear una oportunidad, si lo "
 "activa (:doc:`livechat`)."
+
+#: ../../content/applications/productivity/ai/feature_access.rst:54
+msgid ""
+"Website builder tools: :guilabel:`Customize UI & schema` and the website "
+"designer group; every change is a confirmation card and can be undone (:doc:"
+"`website`). Importing a website also needs the Settings administrator right "
+"(:doc:`website/import`)."
+msgstr ""
+"Herramientas del constructor web: :guilabel:`Personalizar interfaz y "
+"esquema` y el grupo de diseñador web; cada cambio es una tarjeta de "
+"confirmación y se puede deshacer (:doc:`website`). Importar un sitio web "
+"requiere además el derecho de administrador de Ajustes (:doc:`website/"
+"import`)."
 
 #: ../../content/applications/productivity/ai/feature_access.rst:54
 msgid ""
@@ -23862,16 +25905,117 @@ msgstr "IA para el sitio web"
 
 #: ../../content/applications/productivity/ai/website.rst:5
 msgid ""
-"The module AI Website adds three things to the eYssen website builder: a "
-"page generator, builder tools for the AI panel and brand kits. All of them "
-"are for website designers, and the AI never writes raw HTML or scripts: it "
-"only chooses and fills your website's own building blocks."
+"The module **AI Website Builder** (``ai_website``) adds AI to the eYssen "
+"website builder. It creates new pages from a short brief, edits the pages "
+"and the footer you already have, styles blocks with the editor's own "
+"options, writes SEO texts and translations, and keeps a history in which "
+"every AI change can be undone. The module **AI Website Import** "
+"(``ai_website_import``) copies an existing website from its address. "
+"Everything is for website designers."
 msgstr ""
-"El módulo AI Website añade tres cosas al constructor de sitios web de "
-"eYssen: un generador de páginas, herramientas de construcción para el panel "
-"de IA y kits de marca. Todo ello es para diseñadores web, y la IA nunca "
-"escribe HTML ni scripts en bruto: solo elige y rellena los bloques de "
-"construcción propios de su sitio web."
+"El módulo **AI Website Builder** (``ai_website``) añade IA al constructor de "
+"sitios web de eYssen. Crea páginas nuevas a partir de un breve resumen, "
+"edita las páginas y el pie de página que ya tiene, da estilo a los bloques "
+"con las propias opciones del editor, escribe textos SEO y traducciones, y "
+"mantiene un historial en el que cada cambio de la IA se puede deshacer. El "
+"módulo **AI Website Import** (``ai_website_import``) copia un sitio web "
+"existente a partir de su dirección. Todo ello es para diseñadores web."
+
+#: ../../content/applications/productivity/ai/website.rst:12
+msgid ""
+"The AI never writes HTML or scripts. It only chooses your website's own "
+"building blocks and gives the texts, links, pictures and options to put in "
+"them; the server builds the markup and checks every change again before it "
+"is saved."
+msgstr ""
+"La IA nunca escribe HTML ni scripts. Solo elige los propios bloques de "
+"construcción de su sitio web e indica los textos, enlaces, imágenes y "
+"opciones que se colocan en ellos; el servidor genera el marcado y vuelve a "
+"comprobar cada cambio antes de guardarlo."
+
+#: ../../content/applications/productivity/ai/website.rst:19
+msgid "**Create a page** from a brief with the page generator (below)."
+msgstr ""
+"**Crear una página** a partir de un resumen con el generador de páginas (más "
+"abajo)."
+
+#: ../../content/applications/productivity/ai/website.rst:20
+msgid ""
+"**Edit existing pages and the footer**: change texts, links and pictures, "
+"remove, move or duplicate blocks and items, add blocks and set block options "
+"such as colours and spacing (see :doc:`website/edit_pages`)."
+msgstr ""
+"**Editar las páginas existentes y el pie de página**: cambiar textos, "
+"enlaces e imágenes, eliminar, mover o duplicar bloques y elementos, añadir "
+"bloques y fijar opciones de bloque como colores y espaciado (véase :doc:"
+"`website/edit_pages`)."
+
+#: ../../content/applications/productivity/ai/website.rst:23
+msgid ""
+"**Use AI inside the website editor**: select a block, ask, then accept or "
+"reject the proposal (see :doc:`website/editor`)."
+msgstr ""
+"**Usar la IA dentro del editor del sitio web**: seleccione un bloque, "
+"pregunte y luego acepte o rechace la propuesta (véase :doc:`website/editor`)."
+
+#: ../../content/applications/productivity/ai/website.rst:25
+msgid ""
+"**Undo any AI change** in one click, also days later (see :doc:`website/"
+"history`)."
+msgstr ""
+"**Deshacer cualquier cambio de la IA** con un clic, incluso días después "
+"(véase :doc:`website/history`)."
+
+#: ../../content/applications/productivity/ai/website.rst:26
+msgid ""
+"**Improve SEO**: titles, descriptions, keywords and the sharing picture, an "
+"SEO audit, structured data and ``/llms.txt`` (see :doc:`website/seo`)."
+msgstr ""
+"**Mejorar el SEO**: títulos, descripciones, palabras clave y la imagen para "
+"compartir, una auditoría SEO, datos estructurados y ``/llms.txt`` (véase :"
+"doc:`website/seo`)."
+
+#: ../../content/applications/productivity/ai/website.rst:28
+msgid ""
+"**Translate pages** into the other languages of the website (see :doc:"
+"`website/translation`)."
+msgstr ""
+"**Traducir páginas** a los demás idiomas del sitio web (véase :doc:`website/"
+"translation`)."
+
+#: ../../content/applications/productivity/ai/website.rst:29
+msgid ""
+"**Import a website** from its address, with blog posts and products (see :"
+"doc:`website/import` and :doc:`website/import_shop`)."
+msgstr ""
+"**Importar un sitio web** a partir de su dirección, con entradas de blog y "
+"productos (véase :doc:`website/import` y :doc:`website/import_shop`)."
+
+#: ../../content/applications/productivity/ai/website.rst:31
+msgid "**Apply a brand kit** with your colours, fonts and logo (below)."
+msgstr ""
+"**Aplicar un kit de marca** con sus colores, tipografías y logotipo (más "
+"abajo)."
+
+#: ../../content/applications/productivity/ai/website.rst:33
+msgid ""
+"Administrators find the rights, settings and the visual check in :doc:"
+"`website/setup`."
+msgstr ""
+"Los administradores encontrarán los derechos, los ajustes y la comprobación "
+"visual en :doc:`website/setup`."
+
+#~ msgid ""
+#~ "The module AI Website adds three things to the eYssen website builder: a "
+#~ "page generator, builder tools for the AI panel and brand kits. All of "
+#~ "them are for website designers, and the AI never writes raw HTML or "
+#~ "scripts: it only chooses and fills your website's own building blocks."
+#~ msgstr ""
+#~ "El módulo AI Website añade tres cosas al constructor de sitios web de "
+#~ "eYssen: un generador de páginas, herramientas de construcción para el "
+#~ "panel de IA y kits de marca. Todo ello es para diseñadores web, y la IA "
+#~ "nunca escribe HTML ni scripts en bruto: solo elige y rellena los bloques "
+#~ "de construcción propios de su sitio web."
 
 #: ../../content/applications/productivity/ai/website.rst:11
 msgid "Page generator"
@@ -23945,6 +26089,35 @@ msgstr ""
 " Unsplash configurada; sin ella, los bloques conservan sus imágenes por "
 "defecto, que puede sustituir en el editor."
 
+#: ../../content/applications/productivity/ai/website.rst:55
+msgid ""
+"Click :guilabel:`Generate page`. The page is created unpublished and opens "
+"in the editor, so you can review and adjust it before publishing. Clicking "
+"the button is the confirmation, so no extra approval card appears. The new "
+"page is listed in :doc:`the AI changes <website/history>`, where you can "
+"undo it."
+msgstr ""
+"Haga clic en :guilabel:`Generar página`. La página se crea sin publicar y se "
+"abre en el editor, de modo que puede revisarla y ajustarla antes de "
+"publicarla. Hacer clic en el botón es la confirmación, por lo que no aparece "
+"ninguna tarjeta de aprobación adicional. La nueva página aparece en :doc:"
+"`los cambios de la IA <website/history>`, donde puede deshacerla."
+
+#: ../../content/applications/productivity/ai/website.rst:61
+msgid ""
+"A page has at most twelve blocks, chosen from the catalogue of building "
+"blocks described in :ref:`ai/website/catalogue`. The contact block takes the "
+"e-mail address, phone number and address from your company. Texts are plain "
+"text and the AI is told not to invent prices, figures, quotes or names, so "
+"always review the page."
+msgstr ""
+"Una página tiene como máximo doce bloques, elegidos del catálogo de bloques "
+"de construcción descrito en :ref:`ai/website/catalogue`. El bloque de "
+"contacto toma de su empresa la dirección de correo electrónico, el número de "
+"teléfono y la dirección. Los textos son texto sin formato y se indica a la "
+"IA que no invente precios, cifras, citas ni nombres, así que revise siempre "
+"la página."
+
 #: ../../content/applications/productivity/ai/website.rst:36
 msgid ""
 "Click :guilabel:`Generate page`. The page is created unpublished and opens "
@@ -23975,9 +26148,8 @@ msgstr ""
 "textos son texto plano y se indica a la IA que no invente precios, cifras, "
 "citas ni nombres, así que revise siempre la página."
 
-#: ../../content/applications/productivity/ai/website.rst:50
-msgid "Builder tools in the AI panel"
-msgstr "Herramientas de construcción en el panel de IA"
+#~ msgid "Builder tools in the AI panel"
+#~ msgstr "Herramientas de construcción en el panel de IA"
 
 #~ msgid ""
 #~ "Website designers who have the :guilabel:`Customize UI & schema` capability "
@@ -23999,34 +26171,31 @@ msgstr "Herramientas de construcción en el panel de IA"
 msgid "The tools can:"
 msgstr "Las herramientas pueden:"
 
-#: ../../content/applications/productivity/ai/website.rst:61
-msgid "list the usable blocks, pages, menu items and brand kits;"
-msgstr ""
-"listar los bloques, páginas, elementos de menú y kits de marca utilizables;"
+#~ msgid "list the usable blocks, pages, menu items and brand kits;"
+#~ msgstr ""
+#~ "listar los bloques, páginas, elementos de menú y kits de marca "
+#~ "utilizables;"
 
-#: ../../content/applications/productivity/ai/website.rst:62
-msgid ""
-"create a new unpublished page from a plan of blocks, optionally with a menu "
-"item;"
-msgstr ""
-"crear una página nueva sin publicar a partir de un plan de bloques, "
-"opcionalmente con un elemento de menú;"
+#~ msgid ""
+#~ "create a new unpublished page from a plan of blocks, optionally with a "
+#~ "menu item;"
+#~ msgstr ""
+#~ "crear una página nueva sin publicar a partir de un plan de bloques, "
+#~ "opcionalmente con un elemento de menú;"
 
-#: ../../content/applications/productivity/ai/website.rst:64
-msgid ""
-"insert one block at the start, at the end or at a given position of a page;"
-msgstr ""
-"insertar un bloque al principio, al final o en una posición dada de una "
-"página;"
+#~ msgid ""
+#~ "insert one block at the start, at the end or at a given position of a "
+#~ "page;"
+#~ msgstr ""
+#~ "insertar un bloque al principio, al final o en una posición dada de una "
+#~ "página;"
 
-#: ../../content/applications/productivity/ai/website.rst:65
-msgid "add, rename and reorder menu items;"
-msgstr "añadir, renombrar y reordenar elementos de menú;"
+#~ msgid "add, rename and reorder menu items;"
+#~ msgstr "añadir, renombrar y reordenar elementos de menú;"
 
-#: ../../content/applications/productivity/ai/website.rst:66
-msgid "replace or append a block of custom CSS managed by the AI;"
-msgstr ""
-"sustituir o añadir un bloque de CSS personalizado gestionado por la IA;"
+#~ msgid "replace or append a block of custom CSS managed by the AI;"
+#~ msgstr ""
+#~ "sustituir o añadir un bloque de CSS personalizado gestionado por la IA;"
 
 #: ../../content/applications/productivity/ai/website.rst:67
 msgid "apply a saved brand kit, or colours and fonts you give."
@@ -24037,6 +26206,43 @@ msgstr ""
 #: ../../content/applications/productivity/ai/website.rst:70
 msgid "Confirmation cards"
 msgstr "Tarjetas de confirmación"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:115
+msgid ""
+"Website changes are public, so they are always proposed first: the panel "
+"shows a card that you confirm or cancel (see :doc:`../panel`). Only the :"
+"guilabel:`Apply without asking` write mode applies them straight away; the "
+"mixed mode still asks. The card shows the full content of the change, not a "
+"summary: for page edits every operation with the text before and after, for "
+"new blocks every block with its title, texts, buttons and their targets, the "
+"replaced links, a note when a block goes onto an already published page and, "
+"for CSS changes, the complete CSS. A link to another website is marked on "
+"the card with the host it leads to. The change is checked again when you "
+"confirm."
+msgstr ""
+"Los cambios del sitio web son públicos, por lo que siempre se proponen "
+"primero: el panel muestra una tarjeta que usted confirma o cancela (véase :"
+"doc:`../panel`). Solo el modo de escritura :guilabel:`Aplicar sin preguntar` "
+"los aplica de inmediato; el modo mixto sigue preguntando. La tarjeta muestra "
+"el contenido completo del cambio, no un resumen: en las ediciones de página, "
+"cada operación con el texto antes y después; en los bloques nuevos, cada "
+"bloque con su título, textos, botones y sus destinos; los enlaces "
+"sustituidos; una nota cuando un bloque va a una página ya publicada y, en "
+"los cambios de CSS, el CSS completo. Un enlace a otro sitio web se marca en "
+"la tarjeta con el host al que lleva. El cambio se vuelve a comprobar cuando "
+"usted confirma."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:124
+msgid ""
+"Every applied change is recorded in the AI changes and can be undone (see :"
+"doc:`history`). When the visual check is available, the AI can look at a "
+"screenshot of the page after a large change (see :ref:`ai/website/visual-"
+"check`)."
+msgstr ""
+"Cada cambio aplicado queda registrado en los cambios de la IA y se puede "
+"deshacer (véase :doc:`history`). Cuando la comprobación visual está "
+"disponible, la IA puede mirar una captura de pantalla de la página después "
+"de un cambio grande (véase :ref:`ai/website/visual-check`)."
 
 #~ msgid ""
 #~ "Website changes are public, so they are always proposed first: the panel "
@@ -24128,6 +26334,23 @@ msgstr ""
 " la :guilabel:`Fuente del texto` y la :guilabel:`Fuente de los títulos`, y "
 "el logotipo. Los valores vacíos se dejan sin cambios."
 
+#: ../../content/applications/productivity/ai/website.rst:76
+msgid ""
+"Click :guilabel:`Apply to the website` to set the colour palette, the fonts "
+"and the logo of the website theme in one step, exactly as the Theme tab of "
+"the editor would. A font that the website does not ship is loaded from "
+"Google Fonts. The AI panel can do the same with the tool for brand kits; a "
+"brand kit applied by the AI is recorded in :doc:`the AI changes <website/"
+"history>` and can be undone there."
+msgstr ""
+"Haga clic en :guilabel:`Aplicar al sitio web` para establecer en un solo "
+"paso la paleta de colores, las tipografías y el logotipo del tema del sitio "
+"web, exactamente como lo haría la pestaña Tema del editor. Una tipografía "
+"que el sitio web no incluye se carga desde Google Fonts. El panel de IA "
+"puede hacer lo mismo con la herramienta de kits de marca; un kit de marca "
+"aplicado por la IA queda registrado en :doc:`los cambios de la IA <website/"
+"history>` y se puede deshacer allí."
+
 #: ../../content/applications/productivity/ai/website.rst:112
 msgid ""
 "Click :guilabel:`Apply to the website` to set the colour palette, the fonts "
@@ -24144,6 +26367,41 @@ msgstr ""
 #: ../../content/applications/productivity/ai/website.rst:118
 msgid "Who can use it"
 msgstr "Quién puede usarlo"
+
+#: ../../content/applications/productivity/ai/website.rst:85
+msgid ""
+"The brand kits and the SEO audit need the website designer access right. The "
+"page generator and the SEO and translation buttons also need the :guilabel:"
+"`Ask (Q&A)` capability."
+msgstr ""
+"Los kits de marca y la auditoría SEO requieren el derecho de acceso de "
+"diseñador web. El generador de páginas y los botones de SEO y de traducción "
+"requieren además la capacidad :guilabel:`Preguntar (P y R)`."
+
+#: ../../content/applications/productivity/ai/website.rst:87
+msgid ""
+"Changes made by the AI panel and by the AI in the website editor, and "
+"undoing them, need the website designer right and the :guilabel:`Customize "
+"UI & schema` capability."
+msgstr ""
+"Los cambios hechos por el panel de IA y por la IA del editor del sitio web, "
+"y deshacerlos, requieren el derecho de diseñador web y la capacidad :"
+"guilabel:`Personalizar interfaz y esquema`."
+
+#: ../../content/applications/productivity/ai/website.rst:89
+msgid ""
+"Importing a website needs the website designer right and the Settings "
+"administrator right."
+msgstr ""
+"Importar un sitio web requiere el derecho de diseñador web y el derecho de "
+"administrador de Ajustes."
+
+#: ../../content/applications/productivity/ai/website.rst:90
+msgid ""
+"Public visitors, portal users and the live chat agent never see these tools."
+msgstr ""
+"Los visitantes públicos, los usuarios del portal y el agente del chat en "
+"vivo nunca ven estas herramientas."
 
 #: ../../content/applications/productivity/ai/website.rst:120
 msgid ""
@@ -24171,6 +26429,10 @@ msgstr ""
 "Si una regla de acceso de IA deniega los modelos del sitio web, el "
 "constructor también queda bloqueado (véase :doc:`access_policy`)."
 
+#: ../../content/applications/productivity/ai/website.rst:94
+msgid "See :doc:`website/setup` for the details."
+msgstr "Encontrará los detalles en :doc:`website/setup`."
+
 #: ../../content/applications/productivity/ai/website.rst:129
 msgid ""
 "The preview cards that the live chat agent can show to visitors are "
@@ -24178,6 +26440,344 @@ msgid ""
 msgstr ""
 "Las tarjetas de vista previa que el agente del chat en vivo puede mostrar a "
 "los visitantes se describen en :doc:`livechat`."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:3
+msgid "Edit pages with the AI"
+msgstr "Editar páginas con la IA"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:5
+msgid ""
+"Website designers who have the :guilabel:`Customize UI & schema` capability "
+"can ask the AI panel (see :doc:`../panel`) to work on the website: create "
+"pages, change existing pages and the footer, restyle blocks, edit the menu "
+"and apply brand kits. That capability is off by default and for "
+"administrators only (see :doc:`../feature_access`). The AI bubble is in the "
+"top bar of the website preview too, so you can open the panel while you look "
+"at the page. The same tools also work inside the website editor (see :doc:"
+"`editor`)."
+msgstr ""
+"Los diseñadores web que tienen la capacidad :guilabel:`Personalizar interfaz "
+"y esquema` pueden pedir al panel de IA (véase :doc:`../panel`) que trabaje "
+"en el sitio web: crear páginas, cambiar las páginas existentes y el pie de "
+"página, cambiar el estilo de los bloques, editar el menú y aplicar kits de "
+"marca. Esa capacidad está desactivada por defecto y es solo para "
+"administradores (véase :doc:`../feature_access`). La burbuja de IA también "
+"está en la barra superior de la vista previa del sitio web, así que puede "
+"abrir el panel mientras mira la página. Las mismas herramientas funcionan "
+"también dentro del editor del sitio web (véase :doc:`editor`)."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:12
+msgid ""
+"The shipped agent :guilabel:`Website builder` is set up for this: it first "
+"reads the pages and menus, proposes changes and never says that something is "
+"done before you confirm it."
+msgstr ""
+"El agente incluido :guilabel:`Constructor web` está configurado para ello: "
+"primero lee las páginas y los menús, propone cambios y nunca dice que algo "
+"está hecho antes de que usted lo confirme."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:15
+msgid "Examples of requests:"
+msgstr "Ejemplos de peticiones:"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:17
+msgid ""
+"\"On the About us page, make the first title shorter and change the button "
+"to point to the contact page.\""
+msgstr ""
+"«En la página Sobre nosotros, acorte el primer título y haga que el botón "
+"apunte a la página de contacto»."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:19
+msgid "\"Remove the third block of the homepage and move the FAQ to the end.\""
+msgstr ""
+"«Elimine el tercer bloque de la página de inicio y mueva las preguntas "
+"frecuentes al final»."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:20
+msgid ""
+"\"Give the pricing block a dark colour combination and more space above and "
+"below.\""
+msgstr ""
+"«Dé al bloque de precios una combinación de colores oscura y más espacio "
+"arriba y abajo»."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:21
+msgid "\"Add our phone number to the footer.\""
+msgstr "«Añada nuestro número de teléfono al pie de página»."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:24
+msgid "What the AI can change"
+msgstr "Qué puede cambiar la IA"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:26
+msgid ""
+"The AI reads a page (or the footer) as an outline: its blocks in order, and "
+"in each block the headings, paragraphs, buttons, links, pictures, icons and "
+"repeated items such as cards or questions. It then sends a list of "
+"operations, at most 50 at a time, applied together:"
+msgstr ""
+"La IA lee una página (o el pie de página) como un esquema: sus bloques en "
+"orden y, en cada bloque, los títulos, párrafos, botones, enlaces, imágenes, "
+"iconos y elementos repetidos, como tarjetas o preguntas. Después envía una "
+"lista de operaciones, como máximo 50 a la vez, que se aplican juntas:"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:30
+msgid "change a text, or the address and label of a link or button;"
+msgstr ""
+"cambiar un texto, o la dirección y la etiqueta de un enlace o un botón;"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:31
+msgid ""
+"replace a picture and its alternative text, or the background picture of a "
+"block;"
+msgstr ""
+"sustituir una imagen y su texto alternativo, o la imagen de fondo de un "
+"bloque;"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:32
+msgid ""
+"remove, move or duplicate a block, or an item inside a block (a card, a "
+"question, a number);"
+msgstr ""
+"eliminar, mover o duplicar un bloque, o un elemento dentro de un bloque (una "
+"tarjeta, una pregunta, una cifra);"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:33
+msgid "insert a new block from the catalogue;"
+msgstr "insertar un bloque nuevo del catálogo;"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:34
+msgid ""
+"set the options of a block (see below) and give a block an anchor for "
+"``#anchor`` links."
+msgstr ""
+"fijar las opciones de un bloque (véase más abajo) y dar a un bloque un ancla "
+"para enlaces ``#anchor``."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:36
+msgid ""
+"It can also create new unpublished pages, add a block to a page, add, rename "
+"and reorder menu items, apply a brand kit and change the AI-managed custom "
+"CSS."
+msgstr ""
+"También puede crear páginas nuevas sin publicar, añadir un bloque a una "
+"página, añadir, renombrar y reordenar elementos de menú, aplicar un kit de "
+"marca y cambiar el CSS personalizado gestionado por la IA."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:40
+msgid ""
+"The footer is edited like a page. The first AI change makes a copy of the "
+"footer for this website, as the website editor does when you edit it."
+msgstr ""
+"El pie de página se edita como una página. El primer cambio de la IA hace "
+"una copia del pie de página para este sitio web, como hace el editor del "
+"sitio web cuando usted lo edita."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:42
+msgid ""
+"Pages generated by an application (the shop, the blog, event pages…) and the "
+"header are not edited by the AI: change them in the website editor."
+msgstr ""
+"Las páginas generadas por una aplicación (la tienda, el blog, las páginas de "
+"eventos…) y el encabezado no los edita la IA: cámbielos en el editor del "
+"sitio web."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:44
+msgid ""
+"Every operation names the element it changes. If the page was changed "
+"meanwhile, the operation is refused and the AI reads the page again, so it "
+"never overwrites a newer version by mistake."
+msgstr ""
+"Cada operación indica el elemento que cambia. Si la página ha cambiado "
+"entretanto, la operación se rechaza y la IA vuelve a leer la página, de modo "
+"que nunca sobrescribe por error una versión más reciente."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:48
+msgid "Block options"
+msgstr "Opciones de bloque"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:50
+msgid ""
+"The AI styles blocks with the options the website editor itself offers, not "
+"with hand-written CSS:"
+msgstr ""
+"La IA da estilo a los bloques con las opciones que ofrece el propio editor "
+"del sitio web, no con CSS escrito a mano:"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:52
+msgid "colour combination (one of the website's five, or none);"
+msgstr "combinación de colores (una de las cinco del sitio web, o ninguna);"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:53
+msgid "space above and below the block;"
+msgstr "espacio encima y debajo del bloque;"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:54
+msgid "text alignment (start, centre, end);"
+msgstr "alineación del texto (inicio, centro, final);"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:55
+msgid ""
+"width (small, regular, full width) and height (automatic, half screen, full "
+"screen);"
+msgstr ""
+"ancho (pequeño, normal, ancho completo) y alto (automático, media pantalla, "
+"pantalla completa);"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:56
+msgid "background picture, or none;"
+msgstr "imagen de fondo, o ninguna;"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:57
+msgid "shadow and rounded corners of a block or an item."
+msgstr "sombra y esquinas redondeadas de un bloque o de un elemento."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:59
+msgid ""
+"The AI uses, in this order: texts, links and pictures; block options; a "
+"brand kit for colours and fonts of the whole site; and custom CSS only when "
+"nothing else can do it."
+msgstr ""
+"La IA usa, en este orden: textos, enlaces e imágenes; opciones de bloque; un "
+"kit de marca para los colores y las tipografías de todo el sitio; y CSS "
+"personalizado solo cuando nada más puede hacerlo."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:65
+msgid "Building blocks"
+msgstr "Bloques de construcción"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:67
+msgid ""
+"New pages and new blocks use the website's own building blocks. A catalogue "
+"of 32 blocks is prepared for the AI with what each one is for: covers and "
+"banners, titles and text blocks, text with picture, columns, features and "
+"cards, numbers, timelines, tabs, pricing tables, team members, quotes, "
+"logos, picture galleries and mosaics, calls to action, FAQ, contact "
+"information and a contact form. A theme's own version of a block is used "
+"when the theme has one."
+msgstr ""
+"Las páginas nuevas y los bloques nuevos usan los propios bloques de "
+"construcción del sitio web. Para la IA se ha preparado un catálogo de 32 "
+"bloques con la finalidad de cada uno: portadas y banners, títulos y bloques "
+"de texto, texto con imagen, columnas, características y tarjetas, cifras, "
+"líneas de tiempo, pestañas, tablas de precios, miembros del equipo, citas, "
+"logotipos, galerías de imágenes y mosaicos, llamadas a la acción, preguntas "
+"frecuentes, información de contacto y un formulario de contacto. Si el tema "
+"tiene su propia versión de un bloque, se usa esa."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:73
+msgid ""
+"When :guilabel:`Let the AI use all building blocks` is on (the default), the "
+"AI may also use every other block of the website's block panel, theme blocks "
+"included; their texts and pictures are found automatically. Blocks that show "
+"records, embed other sites, run scripts or send forms are never offered. "
+"Turn the setting off to keep to the curated blocks (see :doc:`setup`)."
+msgstr ""
+"Cuando :guilabel:`Permitir que la IA use todos los bloques` está activado "
+"(el valor por defecto), la IA también puede usar todos los demás bloques del "
+"panel de bloques del sitio web, incluidos los del tema; sus textos e "
+"imágenes se detectan automáticamente. Nunca se ofrecen los bloques que "
+"muestran registros, incrustan otros sitios, ejecutan scripts o envían "
+"formularios. Desactive el ajuste para limitarse a los bloques seleccionados "
+"(véase :doc:`setup`)."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:79
+msgid ""
+"The contact form sends its messages to the company's e-mail address. It "
+"never creates records of other applications."
+msgstr ""
+"El formulario de contacto envía sus mensajes a la dirección de correo "
+"electrónico de la empresa. Nunca crea registros de otras aplicaciones."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:83
+msgid "Pictures"
+msgstr "Imágenes"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:85
+msgid "A new picture can come from:"
+msgstr "Una imagen nueva puede proceder de:"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:87
+msgid ""
+"a stock photo of Unsplash, when an Unsplash key is set in the website "
+"settings;"
+msgstr ""
+"una foto de archivo de Unsplash, cuando hay una clave de Unsplash en los "
+"ajustes del sitio web;"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:88
+msgid ""
+"a picture generated by AI, when an image model is configured (see :doc:`../"
+"models_and_providers`);"
+msgstr ""
+"una imagen generada por IA, cuando hay un modelo de imágenes configurado "
+"(véase :doc:`../models_and_providers`);"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:90
+msgid ""
+"a public picture of the website's media, or a picture attached to the AI "
+"conversation;"
+msgstr ""
+"una imagen pública de la biblioteca multimedia del sitio web, o una imagen "
+"adjunta a la conversación con la IA;"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:91
+msgid ""
+"an address on the internet. The server downloads it with strict limits "
+"(public addresses only, 10 MB, 10 seconds, picture files only) and stores it "
+"as a website picture; it is never linked from the other site."
+msgstr ""
+"una dirección de internet. El servidor la descarga con límites estrictos "
+"(solo direcciones públicas, 10 MB, 10 segundos, solo archivos de imagen) y "
+"la guarda como imagen del sitio web; nunca se enlaza desde el otro sitio."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:96
+msgid "Links and custom CSS"
+msgstr "Enlaces y CSS personalizado"
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:98
+msgid ""
+"Links. The builder links only to pages and anchors that exist on this "
+"website, to its own absolute addresses, to e-mail addresses and to phone "
+"numbers. A made-up path or a link to another website is replaced and listed "
+"on the card; a menu item that points to another website is refused. An "
+"administrator can lift this with :guilabel:`AI may add links to other "
+"websites` (see :doc:`setup`). Such links are then still marked on the card."
+msgstr ""
+"Enlaces. El constructor solo enlaza a páginas y anclas que existen en este "
+"sitio web, a sus propias direcciones absolutas, a direcciones de correo y a "
+"números de teléfono. Una ruta inventada o un enlace a otro sitio web se "
+"sustituye y se indica en la tarjeta; un elemento de menú que apunta a otro "
+"sitio web se rechaza. Un administrador puede levantar esta restricción con :"
+"guilabel:`La IA puede añadir enlaces a otros sitios web` (véase :doc:"
+"`setup`). Aun así, esos enlaces se siguen marcando en la tarjeta."
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:103
+msgid ""
+"Custom CSS. The AI may only write plain CSS rules between its own markers in "
+"the website's custom stylesheet; your own rules outside the markers are "
+"kept. The CSS can apply to the whole site, to one page or to one block: for "
+"a page or a block, every rule is limited to it automatically, so it cannot "
+"change other pages. Sass is refused (variables, interpolation and the like), "
+"as are imports, scripts, functions that CSS does not know and at-rules other "
+"than ``@media``, ``@supports``, ``@keyframes`` and ``@font-face``. An "
+"``url()`` may only point to pictures and static files of this site. The "
+"website's style bundle is compiled with the new rules before anything is "
+"saved; if it does not compile, nothing is saved and the error is shown."
+msgstr ""
+"CSS personalizado. La IA solo puede escribir reglas CSS simples entre sus "
+"propios marcadores en la hoja de estilos personalizada del sitio web; sus "
+"propias reglas fuera de los marcadores se conservan. El CSS puede aplicarse "
+"a todo el sitio, a una página o a un bloque: para una página o un bloque, "
+"cada regla se limita automáticamente a él, de modo que no puede cambiar "
+"otras páginas. Sass se rechaza (variables, interpolación y similares), al "
+"igual que las importaciones, los scripts, las funciones que CSS no conoce y "
+"las reglas arroba distintas de ``@media``, ``@supports``, ``@keyframes`` y "
+"``@font-face``. Un ``url()`` solo puede apuntar a imágenes y archivos "
+"estáticos de este sitio. El paquete de estilos del sitio web se compila con "
+"las nuevas reglas antes de guardar nada; si no compila, no se guarda nada y "
+"se muestra el error."
 
 #: ../../content/applications/productivity/ai/writing_assistant.rst:3
 msgid "Writing assistant"
@@ -24347,3 +26947,4 @@ msgstr ""
 
 #~ msgid "**Estimating quantities and lengths.** For the lines that came from labels, the AI proposes the number of pieces and the length of one piece (or the width and length of a plate), with its reasoning and the evidence. Lines from a parts list or from block attributes already carry quantities and are not estimated."
 #~ msgstr "**Estimación de cantidades y longitudes.** Para las líneas procedentes de etiquetas, la IA propone el número de piezas y la longitud de una pieza (o la anchura y la longitud de una chapa), con su razonamiento y las pruebas. Las líneas de una lista de piezas o de atributos de bloque ya llevan cantidades y no se estiman."
+

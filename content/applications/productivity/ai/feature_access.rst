@@ -52,7 +52,9 @@ What each feature needs
   sources you list and hand over; it gets no write rights beyond creating a
   lead, if you turn that on (:doc:`livechat`).
 - Website builder tools: :guilabel:`Customize UI & schema` and the website
-  designer group; every change is a confirmation card (:doc:`website`).
+  designer group; every change is a confirmation card and can be undone
+  (:doc:`website`). Importing a website also needs the Settings administrator
+  right (:doc:`website/import`).
 - AI triage of project tasks: reviewer in :guilabel:`AI: User`, the
   :guilabel:`Write data` capability and an allow rule for writing the task
   fields it changes (:doc:`project_sla`).

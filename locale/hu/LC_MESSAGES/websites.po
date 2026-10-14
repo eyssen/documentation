@@ -7632,6 +7632,14 @@ msgstr "A lefordított szövegrészek zölddel vannak kiemelve; az automatikusan
 msgid "In this mode, you can only translate text. To change the page's structure, you must edit the master page, i.e., the page in the original language of the database. Any changes made to the master page are automatically applied to all translated versions."
 msgstr "Ebben a módban csak szöveget fordíthat. Az oldal szerkezetének megváltoztatásához a mesteroldalt kell szerkesztenie, azaz az adatbázis eredeti nyelvén lévő oldalt. A mesteroldalon végrehajtott bármilyen változtatás automatikusan alkalmazásra kerül az összes lefordított verzióra."
 
+#: ../../content/applications/websites/website/configuration/translate.rst:108
+msgid ""
+"To translate whole pages with AI, see :doc:`/applications/productivity/ai/"
+"website/translation`."
+msgstr ""
+"Teljes oldalak AI-jal való fordításáról lásd: :doc:`/applications/"
+"productivity/ai/website/translation`."
+
 #: ../../content/applications/websites/website/configuration/translate.rst:97
 msgid "To replace the original text with the translation, click the block, edit its contents, and :guilabel:`Save`."
 msgstr "Az eredeti szöveg fordítással való helyettesítéséhez kattintson a blokkra, szerkessze annak tartalmát, majd :guilabel:`Mentés`."
@@ -8440,6 +8448,22 @@ msgstr ":ref:`Tegye közzé <website/pages/un-publish-page>` az oldalt."
 msgid "Disable :guilabel:`Add to menu` if the page should not appear in the menu."
 msgstr "Tiltsa le a :guilabel:`Hozzáadás a menühöz` opciót, ha az oldal nem jelenjen meg a menüben."
 
+#: ../../content/applications/websites/website/structure/pages.rst:55
+msgid ""
+":doc:`/applications/productivity/ai/website` to create a page from a short "
+"brief with AI"
+msgstr ""
+":doc:`/applications/productivity/ai/website` – oldal létrehozása rövid "
+"leírásból AI-jal"
+
+#: ../../content/applications/websites/website/structure/pages.rst:56
+msgid ""
+":doc:`/applications/productivity/ai/website/import` to copy the pages of an "
+"existing website"
+msgstr ""
+":doc:`/applications/productivity/ai/website/import` – egy meglévő weboldal "
+"oldalainak átmásolása"
+
 #: ../../content/applications/websites/website/structure/pages.rst:57
 msgid "Page management"
 msgstr "Oldalkezelés"
@@ -8801,6 +8825,16 @@ msgid "It is normal to experience a traffic decrease in the first days."
 msgstr "Normális, hogy az első napokban forgalomcsökkenést tapasztalunk."
 
 #: ../../content/applications/websites/website/structure/seo.rst:165
+msgid ""
+"The :doc:`website import </applications/productivity/ai/website/import>` "
+"keeps the original addresses where it can and creates the 301 redirects for "
+"the others."
+msgstr ""
+"A :doc:`weboldal-importálás </applications/productivity/ai/website/import>` "
+"ahol lehet, megtartja az eredeti címeket, a többinél pedig létrehozza a 301-"
+"es átirányításokat."
+
+#: ../../content/applications/websites/website/structure/seo.rst:165
 msgid "Prevent a page from being indexed"
 msgstr "Megakadályozni egy oldal indexelését"
 
@@ -8947,6 +8981,16 @@ msgstr "A Microdata egy HTML5-tel bevezetett címkekészlet, amely segít a kere
 #: ../../content/applications/websites/website/structure/seo.rst:None
 msgid "snippets in search engine results"
 msgstr "kivonatok a keresőmotorok találati listájában"
+
+#: ../../content/applications/websites/website/structure/seo.rst:308
+msgid ""
+":doc:`/applications/productivity/ai/website/seo` for AI-written titles and "
+"descriptions, the SEO audit, structured data (JSON-LD) for the organisation "
+"and FAQ blocks, and ``/llms.txt``."
+msgstr ""
+":doc:`/applications/productivity/ai/website/seo` – AI által írt címek és "
+"leírások, SEO-ellenőrzés, strukturált adatok (JSON-LD) a szervezethez és a "
+"GYIK-blokkokhoz, valamint ``/llms.txt``."
 
 #: ../../content/applications/websites/website/structure/seo.rst:307
 msgid "Hreflang HTML tags"
@@ -13966,3 +14010,4 @@ msgstr "Fogadja el a sütiket: kattintson az :guilabel:`Összes elfogadása` gom
 #: ../../content/applications/websites/website/tracking/troubleshooting.rst:81
 msgid "Is :guilabel:`Cookie Consent` enabled and are the marketing/analytics cookies accepted? Is the :guilabel:`Cookie Policy Version` the one of the cookie you have? Did you select the right website in :guilabel:`Settings of Website`? Is the Google tag or the pixel enabled with a valid ID? Are you logged in as a designer, or in edit mode?"
 msgstr "Engedélyezve van a :guilabel:`Süti-hozzájárulás`, és el vannak fogadva a marketing-/analitikai sütik? A :guilabel:`Sütiszabályzat verziója` megegyezik a meglévő süti verziójával? A megfelelő weboldalt választotta a :guilabel:`Weboldal beállításai` mezőben? A Google-címke vagy a pixel engedélyezve van érvényes azonosítóval? Tervezőként van bejelentkezve, vagy szerkesztő módban van?"
+

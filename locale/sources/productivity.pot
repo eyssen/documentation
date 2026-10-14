@@ -251,6 +251,14 @@ msgstr ""
 msgid "**MCP server** — connect Claude, ChatGPT or another AI app to your database with OAuth sign-in and per-user consent (see :doc:`ai/mcp_server`)."
 msgstr ""
 
+#: ../../content/applications/productivity/ai.rst:65
+msgid "**Website and live chat** — an AI agent that answers website visitors with a hand-over to your operators (see :doc:`ai/livechat`), and an AI website builder that creates and edits pages and the footer, styles blocks, writes SEO texts and translations, works inside the website editor and undoes any of its changes in one click (see :doc:`ai/website`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai.rst:70
+msgid "**Website import** — copy an existing website from its address, with instructions in plain words, questions, SEO suggestions, redirects, blog posts and products, reviewed before anything is created (see :doc:`ai/website/import`)."
+msgstr ""
+
 #: ../mnt/documentation/content/applications/productivity/ai.rst:65
 msgid "**Website and live chat** — an AI agent that answers website visitors with a hand-over to your operators, an AI page generator, builder tools and brand kits (see :doc:`ai/livechat` and :doc:`ai/website`)."
 msgstr ""
@@ -3241,6 +3249,10 @@ msgstr ""
 msgid "Live chat agent: a dedicated service user that can only ask, read the data sources you list and hand over; it gets no write rights beyond creating a lead, if you turn that on (:doc:`livechat`)."
 msgstr ""
 
+#: ../../content/applications/productivity/ai/feature_access.rst:54
+msgid "Website builder tools: :guilabel:`Customize UI & schema` and the website designer group; every change is a confirmation card and can be undone (:doc:`website`). Importing a website also needs the Settings administrator right (:doc:`website/import`)."
+msgstr ""
+
 #: ../mnt/documentation/content/applications/productivity/ai/feature_access.rst:54
 msgid "Website builder tools: :guilabel:`Customize UI & schema` and the website designer group; every change is a confirmation card (:doc:`website`)."
 msgstr ""
@@ -5807,6 +5819,50 @@ msgstr ""
 msgid "Website AI"
 msgstr ""
 
+#: ../../content/applications/productivity/ai/website.rst:5
+msgid "The module **AI Website Builder** (``ai_website``) adds AI to the eYssen website builder. It creates new pages from a short brief, edits the pages and the footer you already have, styles blocks with the editor's own options, writes SEO texts and translations, and keeps a history in which every AI change can be undone. The module **AI Website Import** (``ai_website_import``) copies an existing website from its address. Everything is for website designers."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:12
+msgid "The AI never writes HTML or scripts. It only chooses your website's own building blocks and gives the texts, links, pictures and options to put in them; the server builds the markup and checks every change again before it is saved."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:19
+msgid "**Create a page** from a brief with the page generator (below)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:20
+msgid "**Edit existing pages and the footer**: change texts, links and pictures, remove, move or duplicate blocks and items, add blocks and set block options such as colours and spacing (see :doc:`website/edit_pages`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:23
+msgid "**Use AI inside the website editor**: select a block, ask, then accept or reject the proposal (see :doc:`website/editor`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:25
+msgid "**Undo any AI change** in one click, also days later (see :doc:`website/history`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:26
+msgid "**Improve SEO**: titles, descriptions, keywords and the sharing picture, an SEO audit, structured data and ``/llms.txt`` (see :doc:`website/seo`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:28
+msgid "**Translate pages** into the other languages of the website (see :doc:`website/translation`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:29
+msgid "**Import a website** from its address, with blog posts and products (see :doc:`website/import` and :doc:`website/import_shop`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:31
+msgid "**Apply a brand kit** with your colours, fonts and logo (below)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:33
+msgid "Administrators find the rights, settings and the visual check in :doc:`website/setup`."
+msgstr ""
+
 #: ../mnt/documentation/content/applications/productivity/ai/website.rst:5
 msgid "The module AI Website adds three things to the eYssen website builder: a page generator, builder tools for the AI panel and brand kits. All of them are for website designers, and the AI never writes raw HTML or scripts: it only chooses and fills your website's own building blocks."
 msgstr ""
@@ -5845,6 +5901,14 @@ msgstr ""
 
 #: ../mnt/documentation/content/applications/productivity/ai/website.rst:31
 msgid ":guilabel:`Add to the menu` adds a menu item for the new page. :guilabel:`Search pictures on Unsplash` appears only when an Unsplash key is configured; without it the blocks keep their default pictures, which you can replace in the editor."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:55
+msgid "Click :guilabel:`Generate page`. The page is created unpublished and opens in the editor, so you can review and adjust it before publishing. Clicking the button is the confirmation, so no extra approval card appears. The new page is listed in :doc:`the AI changes <website/history>`, where you can undo it."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:61
+msgid "A page has at most twelve blocks, chosen from the catalogue of building blocks described in :ref:`ai/website/catalogue`. The contact block takes the e-mail address, phone number and address from your company. Texts are plain text and the AI is told not to invent prices, figures, quotes or names, so always review the page."
 msgstr ""
 
 #: ../mnt/documentation/content/applications/productivity/ai/website.rst:36
@@ -5895,6 +5959,14 @@ msgstr ""
 msgid "Confirmation cards"
 msgstr ""
 
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:115
+msgid "Website changes are public, so they are always proposed first: the panel shows a card that you confirm or cancel (see :doc:`../panel`). Only the :guilabel:`Apply without asking` write mode applies them straight away; the mixed mode still asks. The card shows the full content of the change, not a summary: for page edits every operation with the text before and after, for new blocks every block with its title, texts, buttons and their targets, the replaced links, a note when a block goes onto an already published page and, for CSS changes, the complete CSS. A link to another website is marked on the card with the host it leads to. The change is checked again when you confirm."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:124
+msgid "Every applied change is recorded in the AI changes and can be undone (see :doc:`history`). When the visual check is available, the AI can look at a screenshot of the page after a large change (see :ref:`ai/website/visual-check`)."
+msgstr ""
+
 #: ../mnt/documentation/content/applications/productivity/ai/website.rst:73
 msgid "Website changes are public, so they are always proposed first: the panel shows a card that you confirm or cancel (see :doc:`panel`). Only the :guilabel:`Apply without asking` write mode applies them straight away; the mixed mode still asks. The card shows the full content of the change, not a summary: every block with its title, texts, buttons and their targets, the replaced links, a note when a block goes onto an already published page and, for CSS changes, the complete CSS. A link to another website is marked on the card with the host it leads to. The change is checked again when you confirm."
 msgstr ""
@@ -5915,6 +5987,282 @@ msgstr ""
 msgid "If a turn has no builder tools (the capability is missing or you are not a website designer), the assistant tells you that the :guilabel:`Customize UI & schema` capability or the website designer right is missing, that an administrator can grant it, and explains the manual way instead: Menu Editor, Pages, edit mode and theme settings."
 msgstr ""
 
+#: ../../content/applications/productivity/ai/website/editor.rst:3
+msgid "AI in the website editor"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:5
+msgid "While you edit a page, you can ask the AI to change it without leaving the editor. The requests are ordinary AI conversations limited to the website tools and to the page you are editing (see :doc:`edit_pages`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:10
+msgid "Open the AI dialog"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:12
+msgid "Click :guilabel:`AI` in the top bar of the website editor to work on the whole page."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:13
+msgid "Or select a block and click the :guilabel:`Ask AI` button (magic wand) in the block's options toolbar to work on that block. This works for the blocks of the page and of the footer."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:16
+msgid "The buttons are shown to internal users of the AI. They work for website designers with the :guilabel:`Customize UI & schema` capability; otherwise the tooltip says which right is missing."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:19
+msgid "The dialog opens at the side of the page. Under :guilabel:`Selected block:` it shows the block you work on (with \"(footer)\" for a footer block); :guilabel:`Whole page` goes back to the whole page."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:23
+msgid "The AI only works on the saved page. If the page has unsaved changes, the dialog asks you to save it first: click :guilabel:`Save`, or :guilabel:`Cancel` to keep editing."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:27
+msgid "Ask and review"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:29
+msgid "Type your request, or click one of the quick buttons: :guilabel:`Rewrite shorter`, :guilabel:`More persuasive`, :guilabel:`Change colours`, :guilabel:`Translate` or :guilabel:`SEO`. Press :guilabel:`Send` (or :kbd:`Ctrl+Enter`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:32
+msgid "The dialog shows the steps live while the AI works, for example \"Reading the page…\" or \"Proposing 3 changes…\", and then its answer."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:34
+msgid "Each proposed change appears as a card with a summary. Click :guilabel:`Accept` to apply it or :guilabel:`Reject` to drop it. With the :guilabel:`Apply without asking` write mode, the changes are applied at once."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:37
+msgid "After a change is applied, the editor reloads the page and stays in edit mode. The changed blocks are briefly outlined, so you can see what the AI did."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:40
+msgid ":guilabel:`AI change applied.` is then shown with an :guilabel:`Undo AI change` button that puts the page back as it was."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:44
+msgid "History of the day"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:46
+msgid ":guilabel:`AI changes of this page today` lists the AI changes of the page and of the footer made today, newest first, with who made them, a :guilabel:`Details` link to the change and an :guilabel:`Undo` button. If an undo is refused because the content changed since (by hand or by a later AI change), the message explains why and links to the change, where :guilabel:`Undo anyway` is available (see :doc:`history`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:53
+msgid "Translate mode"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:55
+msgid "When you open the dialog in the editor's translate mode (see :doc:`/applications/websites/website/configuration/translate`), it shows :guilabel:`Translate mode` and a :guilabel:`Translate this page with AI` button. The AI translates the texts of the page into the language shown; the translation is proposed, and you accept or reject it like any other change. You can also ask questions about the page or its translation. Changes to the structure of the page are refused in this mode: make them in the default language."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:65
+msgid "The dialog works on website pages and on the footer. Pages generated by an application (the shop, the blog…) have no content the AI can edit here."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:67
+msgid "The dialog continues your own AI conversation only, never someone else's."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/editor.rst:68
+msgid "A chat model must be configured; otherwise the dialog says that an administrator must set one."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/history.rst:3
+msgid "AI changes and undo"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/history.rst:5
+msgid "Every website change made by the AI is recorded with what the content looked like before, so it can be undone in one click: new pages, page and footer edits, new blocks, menu changes, custom CSS, brand kits applied by the AI, SEO texts, translations and website imports."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/history.rst:10
+msgid "The list of changes"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/history.rst:12
+msgid "Open :menuselection:`Website --> Configuration --> AI changes`. The list shows the :guilabel:`Applied` changes by default, with the date, the :guilabel:`Kind of change` (for example :guilabel:`Page edited`, :guilabel:`Footer edited`, :guilabel:`New page`, :guilabel:`SEO` or :guilabel:`Translation`), a summary, the author and the status. Use the filters :guilabel:`Undone` and :guilabel:`My changes`, or group by :guilabel:`Kind of change` or :guilabel:`Author`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/history.rst:18
+msgid "The history keeps 90 days: older changes are removed automatically and can no longer be undone."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/history.rst:21
+msgid "Undo a change"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/history.rst:23
+msgid "Click :guilabel:`Undo` on a line, or open the change and click :guilabel:`Undo`, then confirm. The content touched by the change is put back as it was: the texts and blocks of the page, the menu items, the CSS, the SEO fields and their translations. Pages and menu items the change created are removed. The change gets the status :guilabel:`Undone`, with who undid it and when."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/history.rst:28
+msgid "You can also undo from the website editor (see :doc:`editor`) or ask the AI panel, for example \"Undo my last website change\". The AI then proposes the undo, which you confirm."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/history.rst:31
+msgid "Undoing needs the same rights as the changes: the website designer right and the :guilabel:`Customize UI & schema` capability."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/history.rst:35
+msgid "When an undo is refused"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/history.rst:37
+msgid "**A later AI change touched the same content.** Undo the later change first: always undo the newest change first. The message names the later changes."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/history.rst:39
+msgid "**The content was changed by hand since** (in the editor or by another tool). The form shows :guilabel:`Changed since this AI change:` with what changed. A normal undo would overwrite that work, so it is refused. If you really want the earlier state back, click :guilabel:`Undo anyway` and confirm: your later changes are lost, and pages or menu items created by the AI change are deleted even if they were edited since. The AI itself never forces an undo."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/history.rst:46
+msgid "A website import is undone from the import itself, with :guilabel:`Undo import` (see :doc:`import`). It is listed here so that later changes can see it, but it has no :guilabel:`Undo` button."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:3
+msgid "Import a website"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:5
+msgid "The module **AI Website Import** (``ai_website_import``) copies an existing website into Odoo from its address. It reads the pages of the site, rebuilds each page from your website's own building blocks and shows everything for review before anything is created. It does not copy the HTML of the other site: texts, pictures, links, lists, cards, questions and forms are taken over and put into Odoo blocks, so the result can be edited in the website editor like any other page."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:11
+msgid "You describe what you want in your own words, for example \"Copy it exactly\" or \"Copy it and change the colours to blue\". What the instructions leave open and matters is asked as a question with choices."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:16
+msgid "Blog posts and products of the imported site are handled by two bridge modules that install themselves with the Blog and eCommerce apps (see :doc:`import_shop`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:22
+msgid "Only administrators who are also website designers can import a website (the import downloads content from the internet). A chat model is recommended: without one, the pages are laid out by rules and the texts are kept as they are (see :ref:`ai/website/import/without-ai`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:27
+msgid "Start an import"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:29
+msgid "You can start an import in three ways:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:31
+msgid "Open :menuselection:`Website --> Configuration --> Import a website`. The list shows the earlier imports; click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:33
+msgid "In the website editor, click :guilabel:`New` and choose :guilabel:`Import website`. The import targets the website you are on."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:35
+msgid "Ask the AI panel, for example \"Copy the website https://www.example.com into a new website, with a blue colour scheme\" (see :ref:`ai/website/import/chat`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:38
+msgid "In the form, fill in:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:40
+msgid ":guilabel:`Website address`: the address of the site to import, for example ``https://www.example.com``. Only public internet addresses are accepted."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:42
+msgid ":guilabel:`Import`: :guilabel:`Into an existing website` (then choose the :guilabel:`Target website`) or :guilabel:`Into a new website` (then give the :guilabel:`New website name`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:44
+msgid "On the :guilabel:`Instructions` tab, your wishes in plain words (see below)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:46
+msgid "Then click :guilabel:`Start`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:49
+msgid "Instructions in plain words"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:51
+msgid "Write what you want as you would tell a colleague. Some examples:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:53
+msgid "\"Copy https://www.example.com exactly.\" The texts are kept word for word and the layout follows the source."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:55
+msgid "\"Copy it and suggest SEO improvements.\" The review lists SEO suggestions per page, which you tick."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:56
+msgid "\"Copy it and change the colours to blue.\" The design takes a blue colour scheme instead of the source's colours."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:58
+msgid "\"Copy only /about and /services, and publish the pages.\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:59
+msgid "\"Copy it into a new website and translate it to Spanish.\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:61
+msgid "The AI turns the instructions into the options below the text, which you can also set by hand before starting:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:64
+msgid ":guilabel:`Use AI`: lay out the pages with the AI (on when a chat model is configured)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:65
+msgid ":guilabel:`Fidelity`: :guilabel:`Copy exactly` or :guilabel:`Improve the texts`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:66
+msgid ":guilabel:`SEO`: :guilabel:`Keep as it is` or :guilabel:`Suggest improvements`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:67
+msgid ":guilabel:`Design wish`: for example \"blue colour scheme\"."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:68
+msgid ":guilabel:`Translate to`: a language to translate the texts into."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:69
+msgid ":guilabel:`Max Pages`: the number of pages to read (50 by default)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:70
+msgid ":guilabel:`Scope`: :guilabel:`Every page` or :guilabel:`Only listed pages`, with the :guilabel:`Pages to import`, one path per line (for example ``/about``)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:72
+msgid ":guilabel:`Publish the pages`: off by default, so the pages are created unpublished."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:73
+msgid ":guilabel:`Menu`: :guilabel:`Add next to the current menu` or :guilabel:`Replace the menu`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:74
+msgid ":guilabel:`Replace the homepage` (existing website only) and :guilabel:`Rebuild the footer`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:75
+msgid ":guilabel:`Content changes`: other wishes, one per line."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:77
+msgid "What you state clearly in the instructions is never asked again."
+msgstr ""
+
 #: ../mnt/documentation/content/applications/productivity/ai/website.rst:109
 msgid "Brand kits"
 msgstr ""
@@ -5923,12 +6271,32 @@ msgstr ""
 msgid "A brand kit keeps your brand colours, fonts and logo together. Open :menuselection:`Website --> Configuration --> Brand kits`, click New and fill in a name, optionally a website (leave it empty to use the kit on any website), the five colours (:guilabel:`Primary colour`, :guilabel:`Secondary colour`, :guilabel:`Accent colour`, :guilabel:`Light colour`, :guilabel:`Dark colour`) as ``#RRGGBB`` values, the :guilabel:`Text font` and :guilabel:`Headings font`, and the logo. Empty values are left unchanged."
 msgstr ""
 
+#: ../../content/applications/productivity/ai/website.rst:76
+msgid "Click :guilabel:`Apply to the website` to set the colour palette, the fonts and the logo of the website theme in one step, exactly as the Theme tab of the editor would. A font that the website does not ship is loaded from Google Fonts. The AI panel can do the same with the tool for brand kits; a brand kit applied by the AI is recorded in :doc:`the AI changes <website/history>` and can be undone there."
+msgstr ""
+
 #: ../mnt/documentation/content/applications/productivity/ai/website.rst:119
 msgid "Click :guilabel:`Apply to the website` to set the colour palette, the fonts and the logo of the website theme in one step, exactly as the Theme tab of the editor would. A font that the website does not ship is loaded from Google Fonts. The AI panel can do the same with the tool for brand kits."
 msgstr ""
 
 #: ../mnt/documentation/content/applications/productivity/ai/website.rst:125
 msgid "Who can use it"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:85
+msgid "The brand kits and the SEO audit need the website designer access right. The page generator and the SEO and translation buttons also need the :guilabel:`Ask (Q&A)` capability."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:87
+msgid "Changes made by the AI panel and by the AI in the website editor, and undoing them, need the website designer right and the :guilabel:`Customize UI & schema` capability."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:89
+msgid "Importing a website needs the website designer right and the Settings administrator right."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website.rst:90
+msgid "Public visitors, portal users and the live chat agent never see these tools."
 msgstr ""
 
 #: ../mnt/documentation/content/applications/productivity/ai/website.rst:127
@@ -5943,8 +6311,176 @@ msgstr ""
 msgid "If an AI access rule denies the website models, the builder is blocked as well (see :doc:`access_policy`)."
 msgstr ""
 
+#: ../../content/applications/productivity/ai/website.rst:94
+msgid "See :doc:`website/setup` for the details."
+msgstr ""
+
 #: ../mnt/documentation/content/applications/productivity/ai/website.rst:136
 msgid "The preview cards that the live chat agent can show to visitors are described in :doc:`livechat`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:3
+msgid "Edit pages with the AI"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:5
+msgid "Website designers who have the :guilabel:`Customize UI & schema` capability can ask the AI panel (see :doc:`../panel`) to work on the website: create pages, change existing pages and the footer, restyle blocks, edit the menu and apply brand kits. That capability is off by default and for administrators only (see :doc:`../feature_access`). The AI bubble is in the top bar of the website preview too, so you can open the panel while you look at the page. The same tools also work inside the website editor (see :doc:`editor`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:12
+msgid "The shipped agent :guilabel:`Website builder` is set up for this: it first reads the pages and menus, proposes changes and never says that something is done before you confirm it."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:15
+msgid "Examples of requests:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:17
+msgid "\"On the About us page, make the first title shorter and change the button to point to the contact page.\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:19
+msgid "\"Remove the third block of the homepage and move the FAQ to the end.\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:20
+msgid "\"Give the pricing block a dark colour combination and more space above and below.\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:21
+msgid "\"Add our phone number to the footer.\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:24
+msgid "What the AI can change"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:26
+msgid "The AI reads a page (or the footer) as an outline: its blocks in order, and in each block the headings, paragraphs, buttons, links, pictures, icons and repeated items such as cards or questions. It then sends a list of operations, at most 50 at a time, applied together:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:30
+msgid "change a text, or the address and label of a link or button;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:31
+msgid "replace a picture and its alternative text, or the background picture of a block;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:32
+msgid "remove, move or duplicate a block, or an item inside a block (a card, a question, a number);"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:33
+msgid "insert a new block from the catalogue;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:34
+msgid "set the options of a block (see below) and give a block an anchor for ``#anchor`` links."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:36
+msgid "It can also create new unpublished pages, add a block to a page, add, rename and reorder menu items, apply a brand kit and change the AI-managed custom CSS."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:40
+msgid "The footer is edited like a page. The first AI change makes a copy of the footer for this website, as the website editor does when you edit it."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:42
+msgid "Pages generated by an application (the shop, the blog, event pages…) and the header are not edited by the AI: change them in the website editor."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:44
+msgid "Every operation names the element it changes. If the page was changed meanwhile, the operation is refused and the AI reads the page again, so it never overwrites a newer version by mistake."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:48
+msgid "Block options"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:50
+msgid "The AI styles blocks with the options the website editor itself offers, not with hand-written CSS:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:52
+msgid "colour combination (one of the website's five, or none);"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:53
+msgid "space above and below the block;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:54
+msgid "text alignment (start, centre, end);"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:55
+msgid "width (small, regular, full width) and height (automatic, half screen, full screen);"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:56
+msgid "background picture, or none;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:57
+msgid "shadow and rounded corners of a block or an item."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:59
+msgid "The AI uses, in this order: texts, links and pictures; block options; a brand kit for colours and fonts of the whole site; and custom CSS only when nothing else can do it."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:65
+msgid "Building blocks"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:67
+msgid "New pages and new blocks use the website's own building blocks. A catalogue of 32 blocks is prepared for the AI with what each one is for: covers and banners, titles and text blocks, text with picture, columns, features and cards, numbers, timelines, tabs, pricing tables, team members, quotes, logos, picture galleries and mosaics, calls to action, FAQ, contact information and a contact form. A theme's own version of a block is used when the theme has one."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:73
+msgid "When :guilabel:`Let the AI use all building blocks` is on (the default), the AI may also use every other block of the website's block panel, theme blocks included; their texts and pictures are found automatically. Blocks that show records, embed other sites, run scripts or send forms are never offered. Turn the setting off to keep to the curated blocks (see :doc:`setup`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:79
+msgid "The contact form sends its messages to the company's e-mail address. It never creates records of other applications."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:83
+msgid "Pictures"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:85
+msgid "A new picture can come from:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:87
+msgid "a stock photo of Unsplash, when an Unsplash key is set in the website settings;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:88
+msgid "a picture generated by AI, when an image model is configured (see :doc:`../models_and_providers`);"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:90
+msgid "a public picture of the website's media, or a picture attached to the AI conversation;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:91
+msgid "an address on the internet. The server downloads it with strict limits (public addresses only, 10 MB, 10 seconds, picture files only) and stores it as a website picture; it is never linked from the other site."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:96
+msgid "Links and custom CSS"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:98
+msgid "Links. The builder links only to pages and anchors that exist on this website, to its own absolute addresses, to e-mail addresses and to phone numbers. A made-up path or a link to another website is replaced and listed on the card; a menu item that points to another website is refused. An administrator can lift this with :guilabel:`AI may add links to other websites` (see :doc:`setup`). Such links are then still marked on the card."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/edit_pages.rst:103
+msgid "Custom CSS. The AI may only write plain CSS rules between its own markers in the website's custom stylesheet; your own rules outside the markers are kept. The CSS can apply to the whole site, to one page or to one block: for a page or a block, every rule is limited to it automatically, so it cannot change other pages. Sass is refused (variables, interpolation and the like), as are imports, scripts, functions that CSS does not know and at-rules other than ``@media``, ``@supports``, ``@keyframes`` and ``@font-face``. An ``url()`` may only point to pictures and static files of this site. The website's style bundle is compiled with the new rules before anything is saved; if it does not compile, nothing is saved and the error is shown."
 msgstr ""
 
 #: ../mnt/documentation/content/applications/productivity/ai/writing_assistant.rst:3
@@ -6105,6 +6641,538 @@ msgstr ""
 
 #: ../mnt/documentation/content/applications/productivity/appointments.rst:87
 msgid "Questions"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:82
+msgid "When something important is open, the import asks before it goes on. The questions appear on the :guilabel:`Questions` tab, each with choices and often a field for another answer. Examples:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:85
+msgid "\"Create a new website or import into My Website?\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:86
+msgid "\"Replace the current menu of My Website or add the imported pages next to it?\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:87
+msgid "\"Replace the homepage of My Website with the imported homepage?\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:88
+msgid "\"Apply the colours and fonts of the imported site to My Website?\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:89
+msgid "\"Primary colour: keep #1a5f2a or use #1f4fbf / #2563eb / #1d4ed8?\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:90
+msgid "\"Rebuild the footer of My Website from the footer of the imported site?\""
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:91
+msgid "questions about the languages, the blog posts, the products and their currency."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:93
+msgid "Some questions come before the site is read, because they change what is read; others come after the analysis. Answer them and click :guilabel:`Continue`, or click :guilabel:`Use the suggested answers` to take the pre-selected choices."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:98
+msgid "Reading the site"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:100
+msgid "After :guilabel:`Start`, the form shows a progress bar with :guilabel:`Pages found`, :guilabel:`Pages read`, :guilabel:`Pages ready` and :guilabel:`Pictures`. The work continues while the form is open and, in the background, every minute, so you can close the form and come back later. :guilabel:`Cancel import` stops it."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:105
+msgid "The import reads the site politely and safely:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:107
+msgid "only pages of the same site (with and without ``www.``), starting with its sitemap, then following links up to four levels deep;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:109
+msgid "the site's ``robots.txt`` is respected (the import identifies itself as ``eYssenImport``); a site that protects its ``robots.txt`` is not read;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:111
+msgid "at most two requests per second, 15 seconds and 5 MB per page, HTML pages only;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:112
+msgid "at most 300 pictures per import and 30 per page; further pictures keep the block's default picture."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:115
+msgid "The import recognises common platforms (WordPress, WooCommerce, Shopify, PrestaShop, Wix, Squarespace, Webflow) and, on WordPress, also reads the public list of pages. Everything that happens is written on the :guilabel:`Log` tab."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:120
+msgid "Languages"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:122
+msgid "A multilingual source (language versions such as ``/es/…``, language links or language switchers) is imported in its main language, the language of its homepage. The import asks which other languages to import as translations of the same pages. Those translations are written with the page, its SEO texts and the menu items; the texts are matched by structure, and the AI translates only what cannot be matched. Languages that are not active yet are activated and added to the website during the import."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:130
+msgid "Review"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:132
+msgid "When the analysis is done, the import shows :guilabel:`Review`. Check the tabs before you import:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:134
+msgid ":guilabel:`Pages`: every page found, with :guilabel:`Include`, its title, the source address, the :guilabel:`New address`, the status and the list of :guilabel:`Blocks` chosen for it. Untick the pages to leave out and change a new address if needed."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:137
+msgid ":guilabel:`Design`: the colours and fonts found on the source, the five colours and two fonts that will be used, and :guilabel:`Apply colours and fonts`. A colour wish such as \"blue\" is turned into a palette whose text stays readable on the primary colour."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:140
+msgid ":guilabel:`SEO`: the suggestions, each with a tick box (see below)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:141
+msgid ":guilabel:`Menu and redirects`: the menu that will be created, the :guilabel:`Footer of the source` and the :guilabel:`Redirects (301)`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:143
+msgid ":guilabel:`Languages`: the languages of the source and what happens with them."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:144
+msgid ":guilabel:`Compare`: screenshots of source pages next to the imported pages (see below)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:147
+msgid "SEO and internal links"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:149
+msgid "With :guilabel:`SEO` set to :guilabel:`Keep as it is`, titles, descriptions and headings are copied as they are. With :guilabel:`Suggest improvements`, the import checks the source with rules and asks the AI for better titles, descriptions, main headings, picture texts and keywords. It also suggests internal links:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:154
+msgid "a link to a page that no other page, menu or footer links to;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:155
+msgid "a clear text instead of a vague link text such as \"click here\" or \"read more\";"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:156
+msgid "a new target for a link to a page that is not imported, when the website has a page at the same address;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:158
+msgid "a link to the contact page on important pages (services, prices, about…)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:160
+msgid "Only the ticked suggestions are applied."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:163
+msgid "Addresses and redirects"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:165
+msgid "Imported pages keep their original address when it is free on the website. Otherwise they get a new address, and a permanent (301) redirect is created from the old address, so links and search results keep working. On an existing website, the imported homepage becomes ``/home`` unless you replace the homepage. The redirects are listed on the :guilabel:`Menu and redirects` tab."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:171
+msgid "Compare pages"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:173
+msgid "When the visual check is available on the server (see :ref:`ai/website/visual-check`), click :guilabel:`Compare pages` to take screenshots of the next pages (three at a time by default). On a page line, :guilabel:`Compare` opens the source page and the imported page side by side; :guilabel:`Take the pictures` takes them again and :guilabel:`List the differences with AI` asks the AI for the visible differences. The source page is loaded without JavaScript, so pages that build their content with scripts look emptier than in a browser."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:181
+msgid "Import and undo"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:183
+msgid "Click :guilabel:`Import` and confirm. The import creates everything on the target website at once:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:185
+msgid "the pages, unpublished unless :guilabel:`Publish the pages` is on;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:186
+msgid "the menu: added next to the current menu, or replacing it. A replaced menu is not deleted: its items are kept aside unchanged and come back if you undo the import;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:188
+msgid "the homepage, only on a new website or when :guilabel:`Replace the homepage` is ticked;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:189
+msgid "a brand kit \"Imported from …\" with the colours, fonts and logo of the review (see :doc:`../website`), applied to the website when :guilabel:`Apply colours and fonts` is on (always on a new website), and the social network links of the source;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:192
+msgid "the footer, when :guilabel:`Rebuild the footer` is on (always on a new website);"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:193
+msgid "the translations, the blog posts and the products you chose, and the redirects."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:195
+msgid "The form then shows a summary and a link to the imported homepage. The import is listed in the AI changes as :guilabel:`Website import` (see :doc:`history`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:198
+msgid "To remove the import, click :guilabel:`Undo import` and confirm. Everything the import created is deleted (pages, menu items, redirects, posts, products, pictures it downloaded, the brand kit, a new website) and the homepage, menu, design and languages of the website are restored. A language the import activated stays installed."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:203
+msgid "If a later AI change touched the imported content, undo that change first (see :doc:`history`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:204
+msgid "If imported content was changed by hand since, the form shows :guilabel:`Changed since the import:` and only :guilabel:`Undo import anyway` is offered. It deletes the imported pages and records with your changes."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:211
+msgid "Import from the AI panel"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:213
+msgid "The AI panel can run the whole import in the conversation. Ask, for example, \"Copy the website https://www.example.com exactly\" or \"Copy https://www.example.com and suggest SEO improvements\". The assistant starts the import, asks the questions as choices, reports the progress and shows the review. Creating the import on the website is a change you confirm on a card, like any other website change (see :doc:`edit_pages`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:219
+msgid "The assistant needs the :guilabel:`Customize UI & schema` capability, and you need the rights described above. Texts read from the other site are treated as untrusted data: they are shown to the AI marked as such, and once they are part of a conversation turn, every change in that turn waits for your confirmation."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:227
+msgid "Limits and troubleshooting"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:229
+msgid "**Without an AI model**, the pages are laid out by rules (a cover for the first heading and picture, alternating text and pictures, cards for repeated items, FAQ, contact form, text blocks) and the texts are kept as they are. Improving or translating texts needs an AI model."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:232
+msgid "**Pages built with JavaScript**: the import reads the HTML that the server sends. A site that only fills its pages with scripts gives little content."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:234
+msgid "**Protected or private sites**: pages behind a login, sites that forbid reading in their ``robots.txt`` and internal addresses are not read."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:236
+msgid "**What is not copied**: scripts, iframes (YouTube and Vimeo videos are rebuilt from their address), inline styles and forms that send their data elsewhere. A form of the source becomes the website's own contact form."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:239
+msgid "**Errors**: when the import stops, the form shows the error and :guilabel:`Retry` continues where it stopped. Pages that could not be read are listed on the :guilabel:`Pages` tab with their error."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import.rst:241
+msgid "**More pages**: the default limit of 50 pages can be raised to 300 by an administrator (see :doc:`setup`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:3
+msgid "Blog posts and products in an import"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:5
+msgid "Two bridge modules extend the :doc:`website import <import>`. They install themselves when the matching app is installed:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:8
+msgid "**AI Website Import - Blog** (``ai_website_import_blog``), with the Blog app;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:9
+msgid "**AI Website Import - eCommerce** (``ai_website_import_sale``), with the eCommerce app."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:12
+msgid "Blog posts"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:14
+msgid "The import recognises the articles of the source: pages marked as articles, pages under addresses such as ``/blog/…`` or ``/news/…`` and, on WordPress, the posts of its public list of posts. When it finds some, it asks \"Import the 34 blog posts too?\" (field :guilabel:`Import the blog posts`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:18
+msgid "The posts are created in the first blog of the target website, or in a new blog named \"Blog\". Each post gets its title, its date, its text (headings, paragraphs, lists, quotes, links, bold and italic, pictures), its cover picture and its SEO texts. They are unpublished unless :guilabel:`Publish the pages` is on. A 301 redirect is created from each old address to the new post."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:24
+msgid "At most 200 posts are imported, with 30 pictures per post."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:29
+msgid "The import reads products from the public product list of the shop (Shopify, WooCommerce) or from the product data written in its pages (schema.org). No password or key is asked or stored. When it finds products, it asks \"Import the 12 products too (unpublished)?\" (field :guilabel:`Import the products`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:34
+msgid "The products are created unpublished (unless :guilabel:`Publish the pages` is on) with their name, price, description, pictures and a 301 redirect from their old address. Stock quantities are not imported. At most 250 products are imported."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:38
+msgid "The :guilabel:`Products` tab of the review lists every product with :guilabel:`Include`, the number of :guilabel:`Variants`, the :guilabel:`Price` and the :guilabel:`Warnings`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:42
+msgid "Variants"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:44
+msgid "The options of a product (size, colour…) become product attributes. An attribute or value with the same name that already exists in the database is reused; missing ones are created."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:47
+msgid "When the variants have their own price, reference, barcode or picture, or when the shop sells only some combinations, Odoo variants are created (the combinations that are not sold are archived). Otherwise the options are kept as attributes that do not create variants, and the product stays one product."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:51
+msgid "The lowest variant price becomes the product price; the differences become extra prices per value when they add up for every variant. When they do not, every variant keeps the product price and the review and the log list the variants to price by hand."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:54
+msgid "References, valid barcodes that are not used yet and pictures per variant are set."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:55
+msgid "A product with more than 100 variants (or more than Odoo's own variant limit, when that is lower) is imported without variants, and the review says so."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:59
+msgid "Prices in another currency"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:61
+msgid "The import finds the currency of the source prices in the shop data or in the pages. When it differs from the currency of the website's company, the import asks what to do (field :guilabel:`Prices in another currency`):"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:65
+msgid ":guilabel:`Convert with Odoo's exchange rate`: the prices are converted with the current rate of Odoo (its date is shown) and rounded. This is the default when Odoo has a rate."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:67
+msgid ":guilabel:`Keep the source prices in a pricelist in their currency`: a pricelist of the website in the source currency gets the source prices as fixed prices. The currency is activated if needed. The pricelist can be chosen on the website; it is not made the default anywhere else."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:70
+msgid ":guilabel:`Same numbers, not converted`: the numbers are kept as they are. This is the default when Odoo has no rate; check the prices afterwards."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:73
+msgid "The :guilabel:`Products` tab shows the decision with the rate, and you can change it until you import."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:77
+msgid "Undo"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/import_shop.rst:79
+msgid ":guilabel:`Undo import` also removes the posts, a blog the import created, the products with their variants, and the pricelist. Attributes and values created by the import are deleted only when no product uses them any more, and a currency the import activated is deactivated only when no company or pricelist uses it."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:3
+msgid "SEO, structured data and llms.txt"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:5
+msgid "The AI writes SEO titles, descriptions and keywords from the content of your pages. An SEO audit finds what is missing, and two website settings publish data for search engines and AI assistants. For the SEO features of the website itself, see :doc:`/applications/websites/website/structure/seo`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:10
+msgid "Optimize SEO with AI"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:12
+msgid "Open a page in :menuselection:`Website --> Site --> Pages` and click :guilabel:`Optimize SEO with AI`. To do several pages at once (at most 20), select them in the list and choose :guilabel:`Optimize SEO with AI` in the :guilabel:`Actions` menu."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:15
+msgid "The AI reads the visible headings and paragraphs of each page and suggests a title (50 to 60 characters, at most 70), a description (120 to 160 characters, at most 170), up to ten keywords taken from the content and, when the page has pictures, one of them as the sharing picture."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:18
+msgid "Review the suggestions in the dialog. The current values are shown next to the new ones, with the length of the new title and description. Edit what you want, and untick :guilabel:`Apply` on the pages to keep as they are. Tick :guilabel:`Use as sharing picture` (off by default) to make the suggested picture the page's social sharing picture."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:22
+msgid "Click :guilabel:`Apply`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:24
+msgid "The new values are recorded in the AI changes and can be undone (see :doc:`history`). In the AI panel or the editor dialog you can ask for the same, for example \"Improve the SEO of this page\"."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:28
+msgid "SEO audit"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:30
+msgid "Open :menuselection:`Website --> Site --> SEO audit`. The audit checks the pages of the website without AI and lists its findings as errors, warnings and hints:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:33
+msgid "missing, duplicate, too short or too long titles and descriptions;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:34
+msgid "pages without a main heading (H1) or with several;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:35
+msgid "pictures without alternative text;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:36
+msgid "thin pages (fewer than 150 words);"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:37
+msgid "broken internal links;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:38
+msgid "unpublished pages in the menu."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:40
+msgid "The :guilabel:`Open the page` button of a line opens the page. :guilabel:`Check again` runs the audit again after your changes. :guilabel:`Improve titles and descriptions with AI` opens the SEO dialog above for the pages with title or description findings."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:45
+msgid "Structured data"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:47
+msgid "With :guilabel:`Structured data` on (:menuselection:`Website --> Configuration --> Settings`, block :guilabel:`SEO`), every page carries structured data (JSON-LD) for search engines:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:50
+msgid "your organisation: name, address of the website, logo, social network links and contact data;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:51
+msgid "a local business, when the company has an address;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:52
+msgid "the website itself;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:53
+msgid "the questions and answers of the visible FAQ blocks of the page. Hidden blocks are left out, so the structured data only states what a visitor can read."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:56
+msgid "No AI is involved: the data comes from your company, your website and the page. The setting is on for new installations and off for databases upgraded to this version."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:60
+msgid "llms.txt"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/seo.rst:62
+msgid "With :guilabel:`Publish /llms.txt` on (same place), the website answers at ``/llms.txt`` with a short text file for AI assistants and search tools: the website name, the description of the homepage and the list of published pages, each with its title and description. Only pages that everybody may see and that search engines may index are listed. The setting is off by default."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:3
+msgid "Requirements and settings"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:5
+msgid "This page is for administrators: what the website AI needs, who may use which part, the settings and system parameters, and how the module keeps the website and the server safe."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:11
+msgid "The modules **AI Website Builder** (``ai_website``, it needs AI, Website and the Unsplash image library) and, for imports, **AI Website Import** (``ai_website_import``). The import bridges for the Blog and eCommerce apps install themselves."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:14
+msgid "A chat model (see :doc:`../models_and_providers`). Generated pictures also need an image model, and stock photos need an Unsplash key in the website settings."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:16
+msgid "For the visual check and the page comparison of the import: Chromium or Google Chrome on the Odoo server (see :ref:`ai/website/visual-check`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:26
+msgid "Feature"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:27
+msgid "Needs"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:28
+msgid "Page generator, :guilabel:`Optimize SEO with AI`, :guilabel:`Translate with AI`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:29
+msgid "Website designer, :guilabel:`Ask (Q&A)` capability"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:30
+msgid "Brand kits, SEO audit"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:31
+msgid "Website designer"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:32
+msgid "AI panel and AI in the website editor, undo of AI changes"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:33
+msgid "Website designer, :guilabel:`Customize UI & schema` capability"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:34
+msgid "Website import (form and AI panel)"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:35
+msgid "Website designer and Settings administrator; in the AI panel also the :guilabel:`Customize UI & schema` capability"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:38
+msgid "Capabilities are set in :menuselection:`AI --> Configuration --> Behavior --> Capabilities` (see :doc:`../feature_access`). AI access rules apply on top (see :doc:`../access_policy`), and every change is written to the AI logs (see :doc:`../monitoring`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:45
+msgid "In :menuselection:`AI --> Configuration --> Settings`, block :guilabel:`Website builder`:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:47
+msgid ":guilabel:`AI may add links to other websites`: off by default. When off, the buttons and menu items the AI creates may only link to this website, e-mail addresses and phone numbers."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:49
+msgid ":guilabel:`Let the AI use all building blocks`: on by default, for the selected website. When off, the AI uses only the curated blocks (see :ref:`ai/website/catalogue`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:52
+msgid "In :menuselection:`Website --> Configuration --> Settings`, block :guilabel:`SEO`: :guilabel:`Structured data` and :guilabel:`Publish /llms.txt` (see :doc:`seo`)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:58
+msgid "These optional parameters are set in :menuselection:`Settings --> Technical --> Parameters --> System Parameters` (developer mode):"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:65
+msgid "Parameter"
 msgstr ""
 
 #: ../mnt/documentation/content/applications/productivity/appointments.rst:89
@@ -7935,6 +9003,166 @@ msgstr ""
 
 #: ../mnt/documentation/content/applications/productivity/discuss.rst:144
 msgid "Use"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:67
+msgid "``ai_website.chrome_path``"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:68
+msgid "Path or command name of the browser for the visual check. Empty: the server looks for Chromium or Chrome itself. ``disabled`` switches the visual check off."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:70
+msgid "``ai_website.screenshot_base_url``"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:71
+msgid "The address at which the server's browser reaches Odoo, for example an internal address in Kubernetes. Empty: ``web.base.url``."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:73
+msgid "``ai_website.ca_bundle``"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:74
+msgid "Path of a file of certificate authorities used to check HTTPS certificates when pictures and pages are downloaded, for example behind a proxy that inspects TLS. Certificates are always checked."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:77
+msgid "``ai_website_import.max_pages``"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:78
+msgid "The highest number of pages an import may read (default 50, at most 300)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:79
+msgid "``ai_website_import.request_interval``"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:80
+msgid "Seconds between two requests to the imported site (default 0.5)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:81
+msgid "``ai_website_import.compare_pages``"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:82
+msgid "Pages compared per click on :guilabel:`Compare pages` (default 3, at most 20)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:84
+msgid "Two scheduled actions belong to the modules: :guilabel:`AI website: drop AI change history older than 90 days` (daily) and :guilabel:`AI website import: continue running imports` (every minute)."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:90
+msgid "Visual check"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:92
+msgid "When a browser is available, the AI can take a screenshot of a page, as a visitor sees it, to check its work after large changes: on a desktop (1366 pixels wide) or a mobile (390 pixels) screen, the whole page or one block, at most two per answer. The picture is stored with the AI conversation and sent to the model. The import uses the same browser to compare the source and the imported pages."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:97
+msgid "An unpublished page is shown to the browser with a short-lived code (two minutes) that is valid for that page only. No session is opened and nothing is saved."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:99
+msgid "The browser opens the page on the server's own address, never on the website's domain. It may only reach that address; pictures, fonts and style sheets of other sites are downloaded by the server's safe download and handed to it, and everything else (other documents, scripts of other sites, connections) is blocked."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:103
+msgid "Run Odoo as an ordinary user, not as root: as root, Chromium cannot use its own sandbox, and a warning is written to the log."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:106
+msgid "If no browser is found, the AI simply does not offer the visual check."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:109
+msgid "Security in plain words"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:111
+msgid "**The AI writes data, not code.** It gives texts, links, pictures and options; the server builds the blocks from the website's own templates and stores texts as plain text. JavaScript is never accepted, and custom CSS is checked and compiled before it is saved."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:114
+msgid "**Your rights, never more.** Every change runs with your own access rights, goes through the AI access rules and is logged. Website changes are proposals that you confirm, unless you chose the :guilabel:`Apply without asking` write mode."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:117
+msgid "**Everything can be undone.** Each change keeps the earlier state, and an undo that would overwrite later work by hand is refused unless you choose :guilabel:`Undo anyway`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:119
+msgid "**Downloads are fenced.** Pictures and imported pages are downloaded by the server only from public internet addresses (never internal ones), over the usual web ports, with limits on size, time and redirects; the result is stored, never linked."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:122
+msgid "**Imported content is untrusted.** Texts read from another site are only data: they are cleaned, scripts, frames and foreign forms are dropped, and the AI is told that they are not instructions. Once such content is part of an AI conversation turn, every change in that turn waits for your confirmation."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/setup.rst:126
+msgid "**Only for the right people.** Visitors, portal users and the live chat agent never get these tools; imports are for administrators."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/translation.rst:3
+msgid "Translate pages with AI"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/translation.rst:5
+msgid "The AI translates website pages from the website's default language into its other languages. For the languages of a website and the manual translate mode, see :doc:`/applications/websites/website/configuration/translate`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/translation.rst:10
+msgid "Translate one or several pages"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/translation.rst:12
+msgid "Open a page in :menuselection:`Website --> Site --> Pages` and click :guilabel:`Translate with AI`, or select up to 20 pages of one website in the list and choose :guilabel:`Translate with AI` in the :guilabel:`Actions` menu."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/translation.rst:15
+msgid "Tick the :guilabel:`Languages` to translate into. Only the languages of the website other than its default language are offered; if the website has only one language, the dialog says so."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/translation.rst:17
+msgid "Leave :guilabel:`Translate again what is already translated` off to keep the existing translations and translate only what is missing. Turn it on to replace them."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/translation.rst:19
+msgid "Click :guilabel:`Translate`. A message shows how many texts were translated per language."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/translation.rst:21
+msgid "Review the result in the website editor's translate mode. You can also translate the page you are editing from the AI dialog of the editor (see :doc:`editor`), or ask the AI panel, for example \"Translate the About us page into Spanish\"."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/translation.rst:26
+msgid "What is translated"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/translation.rst:28
+msgid "the texts of the page, including buttons, picture texts and the texts of the blocks;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/translation.rst:29
+msgid "the SEO title, description and keywords of the page;"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/translation.rst:30
+msgid "the menu items that link to the page."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/translation.rst:32
+msgid "Formatting inside a text (bold, links…) is kept exactly: the AI may not add, remove or change tags or their attributes, and a translation that does not keep them is refused and asked again once. Text that only looks like code, such as \"<b>\" written on a page about HTML, stays plain text."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/website/translation.rst:36
+msgid "Every translated page is recorded in the AI changes and can be undone (see :doc:`history`)."
 msgstr ""
 
 #: ../mnt/documentation/content/applications/productivity/discuss.rst:146
@@ -10873,3 +12101,4 @@ msgstr ""
 #: ../mnt/documentation/content/applications/productivity/whatsapp.rst:89
 msgid "Two icons are added to the top-right systray area: one opens the :guilabel:`Compose Whatsapp Message` window for any number, the other opens a blank email composition form."
 msgstr ""
+

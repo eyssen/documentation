@@ -51,6 +51,10 @@ page, proceed as follows:
 .. tip::
    Disable :guilabel:`Add to menu` if the page should not appear in the menu.
 
+.. seealso::
+   - :doc:`/applications/productivity/ai/website` to create a page from a short brief with AI
+   - :doc:`/applications/productivity/ai/website/import` to copy the pages of an existing website
+
 .. _website/pages/page_management:
 
 Page management

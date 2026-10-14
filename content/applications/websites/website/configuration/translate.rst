@@ -104,6 +104,9 @@ In this mode, you can only translate text. To change the page's structure, you m
 page, i.e., the page in the original language of the database. Any changes made to the master page
 are automatically applied to all translated versions.
 
+.. tip::
+   To translate whole pages with AI, see :doc:`/applications/productivity/ai/website/translation`.
+
 To replace the original text with the translation, click the block, edit its contents, and
 :guilabel:`Save`.
 

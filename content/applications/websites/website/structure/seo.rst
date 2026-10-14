@@ -161,6 +161,10 @@ results.
 .. note::
    It is normal to experience a traffic decrease in the first days.
 
+.. tip::
+   The :doc:`website import </applications/productivity/ai/website/import>` keeps the original
+   addresses where it can and creates the 301 redirects for the others.
+
 Prevent a page from being indexed
 ---------------------------------
 
@@ -299,6 +303,10 @@ like the price and rating of a product:
 
 .. image:: seo/rich-snippet.png
    :alt: snippets in search engine results
+
+.. seealso::
+   :doc:`/applications/productivity/ai/website/seo` for AI-written titles and descriptions, the SEO
+   audit, structured data (JSON-LD) for the organisation and FAQ blocks, and ``/llms.txt``.
 
 .. _website/seo/hreflang:
 

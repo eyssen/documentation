@@ -2,136 +2,109 @@
 Website AI
 ==========
 
-The module AI Website adds three things to the eYssen website builder: a page
-generator, builder tools for the AI panel and brand kits. All of them are for
-website designers, and the AI never writes raw HTML or scripts: it only chooses
-and fills your website's own building blocks.
+The module **AI Website Builder** (``ai_website``) adds AI to the eYssen website builder. It creates
+new pages from a short brief, edits the pages and the footer you already have, styles blocks with
+the editor's own options, writes SEO texts and translations, and keeps a history in which every AI
+change can be undone. The module **AI Website Import** (``ai_website_import``) copies an existing
+website from its address. Everything is for website designers.
+
+.. important::
+   The AI never writes HTML or scripts. It only chooses your website's own building blocks and
+   gives the texts, links, pictures and options to put in them; the server builds the markup and
+   checks every change again before it is saved.
+
+What you can do
+===============
+
+- **Create a page** from a brief with the page generator (below).
+- **Edit existing pages and the footer**: change texts, links and pictures, remove, move or
+  duplicate blocks and items, add blocks and set block options such as colours and spacing (see
+  :doc:`website/edit_pages`).
+- **Use AI inside the website editor**: select a block, ask, then accept or reject the proposal
+  (see :doc:`website/editor`).
+- **Undo any AI change** in one click, also days later (see :doc:`website/history`).
+- **Improve SEO**: titles, descriptions, keywords and the sharing picture, an SEO audit, structured
+  data and ``/llms.txt`` (see :doc:`website/seo`).
+- **Translate pages** into the other languages of the website (see :doc:`website/translation`).
+- **Import a website** from its address, with blog posts and products (see :doc:`website/import`
+  and :doc:`website/import_shop`).
+- **Apply a brand kit** with your colours, fonts and logo (below).
+
+Administrators find the rights, settings and the visual check in :doc:`website/setup`.
 
 Page generator
 ==============
 
-The generator turns a short brief into a complete page. You can start it in two
-places:
+The generator turns a short brief into a complete page. You can start it in two places:
 
-- In the website editor, click :guilabel:`New` and choose :guilabel:`Page with
-  AI`.
-- In the backend, open :menuselection:`Website --> Site --> Create a page with
-  AI`.
+- In the website editor, click :guilabel:`New` and choose :guilabel:`Page with AI`.
+- In the backend, open :menuselection:`Website --> Site --> Create a page with AI`.
 
 Fill in the brief:
 
 - :guilabel:`Page name`, :guilabel:`What is the page for?` and, optionally, the
   :guilabel:`Audience`.
-- :guilabel:`Sections to include`: the sections you want, in order, one per
-  line.
-- :guilabel:`Tone` (:guilabel:`Professional`, :guilabel:`Friendly`,
-  :guilabel:`Enthusiastic`, :guilabel:`Formal`, :guilabel:`Playful` or
-  :guilabel:`Short and to the point`) and :guilabel:`Language`, chosen among the
-  installed languages.
-- :guilabel:`Add to the menu` adds a menu item for the new page.
-  :guilabel:`Search pictures on Unsplash` appears only when an Unsplash key is
-  configured; without it the blocks keep their default pictures, which you can
-  replace in the editor.
+- :guilabel:`Sections to include`: the sections you want, in order, one per line.
+- :guilabel:`Tone` (:guilabel:`Professional`, :guilabel:`Friendly`, :guilabel:`Enthusiastic`,
+  :guilabel:`Formal`, :guilabel:`Playful` or :guilabel:`Short and to the point`) and
+  :guilabel:`Language`, chosen among the installed languages.
+- :guilabel:`Add to the menu` adds a menu item for the new page. :guilabel:`Search pictures on
+  Unsplash` appears only when an Unsplash key is configured; without it the blocks keep their
+  default pictures, which you can replace in the editor.
 
-Click :guilabel:`Generate page`. The page is created unpublished and opens in
-the editor, so you can review and adjust it before publishing. Clicking the
-button is the confirmation, so no extra approval card appears.
+Click :guilabel:`Generate page`. The page is created unpublished and opens in the editor, so you can
+review and adjust it before publishing. Clicking the button is the confirmation, so no extra
+approval card appears. The new page is listed in :doc:`the AI changes <website/history>`, where you
+can undo it.
 
 .. note::
-   The generator can use twelve common building blocks: cover, title, text, text
-   with image, image with text, picture, three columns, features, numbers, call
-   to action, FAQ and contact information. Blocks added by a theme are not
-   offered, but a theme's own version of a listed block is used. The contact
-   block takes the e-mail address, phone number and address from your company.
-   Texts are plain text and the AI is told not to invent prices, figures, quotes
+   A page has at most twelve blocks, chosen from the catalogue of building blocks described in
+   :ref:`ai/website/catalogue`. The contact block takes the e-mail address, phone number and address
+   from your company. Texts are plain text and the AI is told not to invent prices, figures, quotes
    or names, so always review the page.
-
-Builder tools in the AI panel
-=============================
-
-Website designers who have the :guilabel:`Customize UI & schema` capability can
-also ask the AI panel (see :doc:`panel`) to work on the website. That capability
-is off by default and for administrators only (see :doc:`feature_access`). The
-AI bubble is in the top bar of the website preview too, so you can open the
-panel while you look at the page. The shipped agent :guilabel:`Website builder` is set up for this: it first looks at
-the existing pages and menus, proposes changes and never says that something is
-done before you confirm it.
-
-The tools can:
-
-- list the usable blocks, pages, menu items and brand kits;
-- create a new unpublished page from a plan of blocks, optionally with a menu
-  item;
-- insert one block at the start, at the end or at a given position of a page;
-- add, rename and reorder menu items;
-- replace or append a block of custom CSS managed by the AI;
-- apply a saved brand kit, or colours and fonts you give.
-
-Confirmation cards
-------------------
-
-Website changes are public, so they are always proposed first: the panel shows a
-card that you confirm or cancel (see :doc:`panel`). Only the :guilabel:`Apply
-without asking` write mode applies them straight away; the mixed mode still
-asks. The card shows the full content of the change, not a summary: every block
-with its title, texts, buttons and their targets, the replaced links, a note
-when a block goes onto an already published page and, for CSS changes, the
-complete CSS. A link to another website is marked on the card with the host it
-leads to. The change is checked again when you confirm.
-
-Links and CSS rules
--------------------
-
-- Links. The builder links only to pages and anchors that exist on this website,
-  to its own absolute addresses, to e-mail addresses and to phone numbers. A
-  made-up path or a link to another website is replaced and listed on the card;
-  a menu item that points to another website is refused. An administrator can
-  lift this with :guilabel:`AI may add links to other websites` in the block
-  :guilabel:`Website builder` of :menuselection:`AI --> Configuration -->
-  Settings`. Such links are then still marked on the card.
-- Custom CSS. The AI may only write plain CSS rules between its own markers in
-  the website's custom stylesheet; your own rules outside the markers are kept.
-  Sass is refused (variables, interpolation and the like), as are imports,
-  scripts, functions that CSS does not know and at-rules other than ``@media``,
-  ``@supports``, ``@keyframes`` and ``@font-face``. An ``url()`` may only point to
-  pictures and static files of this site. The CSS is compiled once on its own
-  and the result is checked again, and then the website's real frontend style
-  bundle is compiled with the new rules before anything is saved. If it does
-  not compile, nothing is saved and the error is shown.
-
-If a turn has no builder tools (the capability is missing or you are not a
-website designer), the assistant tells you that the :guilabel:`Customize UI &
-schema` capability or the website designer right is missing, that an
-administrator can grant it, and explains the manual way instead: Menu Editor,
-Pages, edit mode and theme settings.
 
 Brand kits
 ==========
 
-A brand kit keeps your brand colours, fonts and logo together. Open
-:menuselection:`Website --> Configuration --> Brand kits`, click New and fill in
-a name, optionally a website (leave it empty to use the kit on any website), the
-five colours (:guilabel:`Primary colour`, :guilabel:`Secondary colour`,
-:guilabel:`Accent colour`, :guilabel:`Light colour`, :guilabel:`Dark colour`) as
-``#RRGGBB`` values, the :guilabel:`Text font` and :guilabel:`Headings font`, and
-the logo. Empty values are left unchanged.
+A brand kit keeps your brand colours, fonts and logo together. Open :menuselection:`Website -->
+Configuration --> Brand kits`, click New and fill in a name, optionally a website (leave it empty to
+use the kit on any website), the five colours (:guilabel:`Primary colour`, :guilabel:`Secondary
+colour`, :guilabel:`Accent colour`, :guilabel:`Light colour`, :guilabel:`Dark colour`) as
+``#RRGGBB`` values, the :guilabel:`Text font` and :guilabel:`Headings font`, and the logo. Empty
+values are left unchanged.
 
-Click :guilabel:`Apply to the website` to set the colour palette, the fonts and
-the logo of the website theme in one step, exactly as the Theme tab of the
-editor would. A font that the website does not ship is loaded from Google Fonts.
-The AI panel can do the same with the tool for brand kits.
+Click :guilabel:`Apply to the website` to set the colour palette, the fonts and the logo of the
+website theme in one step, exactly as the Theme tab of the editor would. A font that the website
+does not ship is loaded from Google Fonts. The AI panel can do the same with the tool for brand
+kits; a brand kit applied by the AI is recorded in :doc:`the AI changes <website/history>` and can
+be undone there.
 
 Who can use it
 ==============
 
-- The page generator and the brand kits need the website designer access right.
-  Builder tools in the AI panel need the website designer right and the
-  customize capability.
-- Public visitors, portal users and the live chat agent never see the builder
-  tools.
-- If an AI access rule denies the website models, the builder is blocked as well
-  (see :doc:`access_policy`).
+- The brand kits and the SEO audit need the website designer access right. The page generator and
+  the SEO and translation buttons also need the :guilabel:`Ask (Q&A)` capability.
+- Changes made by the AI panel and by the AI in the website editor, and undoing them, need the
+  website designer right and the :guilabel:`Customize UI & schema` capability.
+- Importing a website needs the website designer right and the Settings administrator right.
+- Public visitors, portal users and the live chat agent never see these tools.
+- If an AI access rule denies the website models, the builder is blocked as well (see
+  :doc:`access_policy`).
+
+See :doc:`website/setup` for the details.
 
 .. seealso::
-   The preview cards that the live chat agent can show to visitors are described
-   in :doc:`livechat`.
+   The preview cards that the live chat agent can show to visitors are described in
+   :doc:`livechat`.
+
+.. toctree::
+   :titlesonly:
+
+   website/edit_pages
+   website/editor
+   website/history
+   website/seo
+   website/translation
+   website/import
+   website/import_shop
+   website/setup

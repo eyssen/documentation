@@ -63,8 +63,14 @@ What you can do
 - **MCP server** — connect Claude, ChatGPT or another AI app to your database
   with OAuth sign-in and per-user consent (see :doc:`ai/mcp_server`).
 - **Website and live chat** — an AI agent that answers website visitors with a
-  hand-over to your operators, an AI page generator, builder tools and brand
-  kits (see :doc:`ai/livechat` and :doc:`ai/website`).
+  hand-over to your operators (see :doc:`ai/livechat`), and an AI website
+  builder that creates and edits pages and the footer, styles blocks, writes SEO
+  texts and translations, works inside the website editor and undoes any of its
+  changes in one click (see :doc:`ai/website`).
+- **Website import** — copy an existing website from its address, with
+  instructions in plain words, questions, SEO suggestions, redirects, blog posts
+  and products, reviewed before anything is created (see
+  :doc:`ai/website/import`).
 - **Voice** — dictate messages and have Discuss calls transcribed and
   summarised, with consent from each participant (see :doc:`ai/voice`).
 - **Business apps** — quick prompts and buttons in CRM, Sales, Purchase,

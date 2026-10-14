@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-14 10:15+0000\n"
+"POT-Creation-Date: 2026-10-14 16:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -8722,7 +8722,10 @@ msgstr "LOT3"
 msgid "On-hand stock"
 msgstr "Aktuális készlet"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fefo.rst:97 ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fifo.rst:78 ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:94 ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:267
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fefo.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fifo.rst:78
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:94
+#: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:267
 msgid "5"
 msgstr "5"
 
@@ -10794,7 +10797,11 @@ msgstr "A **rendszerparaméterek** (:menuselection:`Beállítások --> Technikai
 msgid "Parameter"
 msgstr "Paraméter"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/gls.rst:401 ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:109 ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:161 ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:218 ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:62
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/gls.rst:401
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:218
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:62
 msgid "Default"
 msgstr "Alapértelmezett"
 
@@ -18010,7 +18017,8 @@ msgstr "A gyártási rendelés :guilabel:`Tervezés` gombjára 13:30-kor kattint
 msgid "Basic setup"
 msgstr "Alapvető beállítás"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:3 ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:52
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:3
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:55
 msgid "Bill of materials"
 msgstr "Darabjegyzék"
 
@@ -20506,7 +20514,8 @@ msgstr "Kattintson a :guilabel:`Plan` gombra, és a :guilabel:`Work Orders` fül
 msgid "Once the time-off period for the unavailable work center ends, Odoo recognizes the work center is available again. At this point, clicking the :guilabel:`Plan` button does not route work orders to an alternative work center unless the first one is at capacity."
 msgstr "Amint a munkahelyi központ elérhetetlenségi időszaka véget ér, az Odoo felismeri, hogy a munkahelyi központ ismét elérhető. Ezen a ponton a :guilabel:`Tervezés` gombra kattintva nem irányítja át a munkarendeléseket egy alternatív munkahelyi központhoz, hacsak az első nincs teljes kapacitáson."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:55 ../../content/applications/inventory_and_mrp/purchase.rst:8
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:58
+#: ../../content/applications/inventory_and_mrp/purchase.rst:8
 msgid "Purchase"
 msgstr "Beszerzés"
 
@@ -23583,250 +23592,312 @@ msgid "a :guilabel:`Density` with its :guilabel:`Density Unit` (a unit of the *S
 msgstr "egy :guilabel:`Sűrűség` a hozzá tartozó :guilabel:`Sűrűség mértékegysége` egységgel (a *Sűrűség* kategória egysége, alapértelmezés szerint kg/m³). A :guilabel:`Sűrűség (kg/m³)` mező a kg/m³-re átváltott értéket mutatja, amelyet a számítások használnak."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:113
-msgid "The search box of the list finds a material by name, code or alias. When another module looks up a designation (the CAD import does, for the grades written on a drawing), the comparison ignores case, accents, spaces, dashes and dots, so ``St 37-2`` finds the material that lists ``St37-2``. There is no approximate match: a designation that is not in the master, such as S275J0 when only S275JR exists, is not replaced by a similar one."
-msgstr "A lista keresőmezője név, kód vagy alias alapján talál anyagot. Ha egy másik modul jelölés alapján keres (a CAD-importálás így keresi a rajzon szereplő anyagminőségeket), az összehasonlítás figyelmen kívül hagyja a kis- és nagybetűt, az ékezeteket, a szóközöket, a kötőjeleket és a pontokat, így az ``St 37-2`` megtalálja azt az anyagot, amelynek aliasai közt ``St37-2`` szerepel. Hozzávetőleges egyezés nincs: az a jelölés, amely nincs a törzsben (például S275J0, ha csak S275JR van), nem cserélődik hasonlóra."
+msgid "The search box of the list finds a material by name, code or alias. When another module looks up a designation (the CAD import does, for the grades written on a drawing), the comparison ignores case, accents, spaces, dashes and dots, so ``St 37-2`` finds the material that lists ``St37-2``. There is no approximate match: a designation that is not in the master, such as S275N, is not replaced by a similar one. The qualities of EN 10025-2 are separate materials, so a grade written on a drawing matches its exact quality (S355J0 is not read as S355J2)."
+msgstr "A lista keresőmezője név, kód vagy alias alapján talál anyagot. Ha egy másik modul jelölés alapján keres (a CAD-importálás így keresi a rajzon szereplő anyagminőségeket), az összehasonlítás figyelmen kívül hagyja a kis- és nagybetűt, az ékezeteket, a szóközöket, a kötőjeleket és a pontokat, így az ``St 37-2`` megtalálja azt az anyagot, amelynek aliasai közt ``St37-2`` szerepel. Hozzávetőleges egyezés nincs: az a jelölés, amely nincs a törzsben (például S275N), nem cserélődik hasonlóra. Az EN 10025-2 minőségei külön anyagok, ezért a rajzon szereplő minőség a pontos minőségével egyezik (az S355J0-t nem S355J2-ként olvassa be)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:119
-msgid "The standard data contains three groups and eight materials:"
-msgstr "A szabványos adatok három csoportot és nyolc anyagot tartalmaznak:"
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:120
+msgid "The standard data contains three groups and fifteen materials:"
+msgstr "A szabványos adatok három csoportot és tizenöt anyagot tartalmaznak:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:126
 msgid "Material"
 msgstr "Anyag"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:126 ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:127
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:134
 msgid "Group"
 msgstr "Csoport"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:128
 msgid "Standard"
 msgstr "Szabvány"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:128
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:129
 msgid "Density (kg/m³)"
 msgstr "Sűrűség (kg/m³)"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:130
 msgid "S235JR (aliases S235, OL37, St37-2, Fe360, ...)"
 msgstr "S235JR (aliasok: S235, OL37, St37-2, Fe360, ...)"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:130 ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:134 ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:138 ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:142
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:131
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:135
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:155
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:171
 msgid "Steel (structural)"
 msgstr "Szerkezeti acél"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:131 ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:135 ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:136
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:144
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:148
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:156
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:164
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:168
 msgid "EN 10025-2"
 msgstr "EN 10025-2"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:132 ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:136 ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:140 ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:144
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:145
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:153
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:157
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:165
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:173
 msgid "7850"
 msgstr "7850"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:134
+msgid "S235J0 (S235J0G2, St37-3U, Fe360C)"
+msgstr "S235J0 (S235J0G2, St37-3U, Fe360C)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:138
+msgid "S235J2 (S235J2G3, St37-3N, Fe360D)"
+msgstr "S235J2 (S235J2G3, St37-3N, Fe360D)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:142
 msgid "S275JR (S275, OL44, St44-2, Fe430, ...)"
 msgstr "S275JR (S275, OL44, St44-2, Fe430, ...)"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:146
+msgid "S275J0 (S275J0G2, St44-3U, Fe430C)"
+msgstr "S275J0 (S275J0G2, St44-3U, Fe430C)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:150
+msgid "S275J2 (S275J2G3, St44-3N, Fe430D)"
+msgstr "S275J2 (S275J2G3, St44-3N, Fe430D)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:154
+msgid "S355JR (S355JRG2, Fe510B)"
+msgstr "S355JR (S355JRG2, Fe510B)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:158
+msgid "S355J0 (S355J0G3, St52-3U, Fe510C)"
+msgstr "S355J0 (S355J0G3, St52-3U, Fe510C)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:162
 msgid "S355J2 (S355, OL52, St52-3, Fe510, ...)"
 msgstr "S355J2 (S355, OL52, St52-3, Fe510, ...)"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:166
+msgid "S355K2 (S355K2G3, Fe510DD)"
+msgstr "S355K2 (S355K2G3, Fe510DD)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:170
 msgid "S460 (S460N, S460NL, S460M, S460ML)"
 msgstr "S460 (S460N, S460NL, S460M, S460ML)"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:172
 msgid "EN 10025-3 and -4"
 msgstr "EN 10025-3 és -4"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:145
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:174
 msgid "1.4301 (AISI 304)"
 msgstr "1.4301 (AISI 304)"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:146 ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:150
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:179
 msgid "Stainless steel"
 msgstr "Rozsdamentes acél"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:147 ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:176
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:180
 msgid "EN 10088-2"
 msgstr "EN 10088-2"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:148
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:177
 msgid "7900"
 msgstr "7900"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:178
 msgid "1.4404 (AISI 316L)"
 msgstr "1.4404 (AISI 316L)"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:181
 msgid "8000"
 msgstr "8000"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:153
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:182
 msgid "EN AW-6060"
 msgstr "EN AW-6060"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:154 ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:158
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:183
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:187
 msgid "Aluminium"
 msgstr "Alumínium"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:156 ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:185
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:189
 msgid "2700"
 msgstr "2700"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:157
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:186
 msgid "EN AW-6082"
 msgstr "EN AW-6082"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:191
 msgid "On the product form, the tab :guilabel:`Materials` has one line per material with the :guilabel:`Material Group`, the :guilabel:`Material` and its :guilabel:`Percentage`. A computed :guilabel:`Material Info` summary and a rendered :guilabel:`Material Pct` breakdown make the composition easy to read and to reuse on reports."
 msgstr "A termék űrlapján az :guilabel:`Anyagok` fülön anyagonként egy-egy sor rögzíti az :guilabel:`Anyagcsoport` csoportot, az :guilabel:`Anyag` anyagot és annak :guilabel:`Arány` értékét. Egy számított :guilabel:`Material Info` összegzés és egy megjelenített :guilabel:`Material Pct` bontás teszi az összetételt jól olvashatóvá és riportokon újrahasznosíthatóvá."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:196
 msgid "Below them, the :guilabel:`Main Material` is the material used for weight computations, and :guilabel:`Density (kg/m³)` shows its density. It is filled in from the composition line with the highest percentage (the first group wins a tie), and it can also be set directly, for example to the steel grade of a profile that has no composition lines. Without composition lines the material you set is kept."
 msgstr "Alattuk a :guilabel:`Fő anyag` a súlyszámításhoz használt anyag, a :guilabel:`Sűrűség (kg/m³)` pedig ennek sűrűségét mutatja. A legnagyobb arányú összetételi sorból töltődik ki (döntetlen esetén az első csoport nyer), és közvetlenül is megadható, például egy olyan szelvény acélminőségére, amelynek nincsenek összetételi sorai. Összetételi sorok nélkül a megadott anyag megmarad."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:250
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:279
 msgid "Dimensions, computed volume and weight"
 msgstr "Méretek, számított térfogat és tömeg"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:252
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:281
 msgid "``eyssen_product_dimension`` computes a product's volume, and optionally its weight, from its physical dimensions instead of having them typed in. In the :guilabel:`Dimensions` group of the product's :guilabel:`Inventory` tab, choose a :guilabel:`Shape`: :guilabel:`Cuboid`, :guilabel:`Cylinder`, :guilabel:`Hollow Section`, :guilabel:`Tube`, :guilabel:`Sphere` or :guilabel:`Open Profile`. Only the dimensions that shape needs remain visible:"
 msgstr "Az ``eyssen_product_dimension`` modul a termék térfogatát, és ha kéred, a tömegét is a fizikai méreteiből számítja, nem pedig kézi beírásra hagyja. A termék :guilabel:`Készlet` fülének :guilabel:`Méretek` csoportjában válassz egy :guilabel:`Forma` alakot: :guilabel:`Hasáb`, :guilabel:`Henger`, :guilabel:`Zártszelvény`, :guilabel:`Cső`, :guilabel:`Gömb` vagy :guilabel:`Nyitott szelvény`. Csak az adott alakhoz szükséges méretek maradnak láthatók:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:258
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:287
 msgid "length (x), width (y) and height/thickness (z) for a cuboid or a hollow section;"
 msgstr "hosszúság (x), szélesség (y) és magasság/vastagság (z) hasábnál vagy zártszelvénynél;"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:259
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:288
 msgid "length (x) and diameter (d) for a cylinder or a tube;"
 msgstr "hosszúság (x) és átmérő (d) hengernél vagy csőnél;"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:260
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:289
 msgid "diameter (d) only for a sphere;"
 msgstr "csak az átmérő (d) gömbnél;"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:261
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:290
 msgid "a wall thickness (wt) for a hollow section or a tube; and"
 msgstr "falvastagság (wt) zártszelvénynél vagy csőnél; valamint"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:262
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:291
 msgid "for an open profile, the length (x), the height (z) as *h*, the width (y) as *b*, the web thickness (wt) and, for I, H and U profiles, the flange thickness (tf)."
 msgstr "nyitott szelvénynél a hosszúság (x), a magasság (z) *h*-ként, a szélesség (y) *b*-ként, a gerincvastagság (wt) és az I, H és U szelvényeknél az övvastagság (tf)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:265
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:294
 msgid "All dimensions are in the :guilabel:`Dimensional UoM` of the product (millimetres, for example)."
 msgstr "Minden méret a termék :guilabel:`Méret mértékegysége` egységében értendő (például milliméterben)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:268
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:297
 msgid "Open profiles"
 msgstr "Nyitott szelvények"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:270
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:299
 msgid "The shape :guilabel:`Open Profile` describes rolled and cold-formed sections. Its :guilabel:`Profile Type` is one of:"
 msgstr "A :guilabel:`Nyitott szelvény` alak a hengerelt és a hidegen alakított szelvényeket írja le. A :guilabel:`Szelvénytípus` a következők egyike:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:277
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:306
 msgid "Profile type"
 msgstr "Szelvénytípus"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:278
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:307
 msgid "Cross-section area"
 msgstr "Keresztmetszet területe"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:279
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:308
 msgid ":guilabel:`I / H`"
 msgstr ":guilabel:`I / H`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:280
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:309
 msgid "2 x b x tf + (h - 2 x tf) x tw"
 msgstr "2 x b x tf + (h - 2 x tf) x tw"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:281
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:310
 msgid ":guilabel:`U (channel)`"
 msgstr ":guilabel:`U (U-acél)`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:282
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:311
 msgid "The same formula, with one web."
 msgstr "Ugyanez a képlet, egy gerinccel."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:283
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:312
 msgid ":guilabel:`L (angle)`"
 msgstr ":guilabel:`L (szögacél)`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:284
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:313
 msgid "t x (h + b - t), with the two legs h and b and the thickness t."
 msgstr "t x (h + b - t), ahol h és b a két szár, t pedig a vastagság."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:285
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:314
 msgid ":guilabel:`Z` and :guilabel:`C`"
 msgstr ":guilabel:`Z` és :guilabel:`C`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:286
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:315
 msgid "t x (h + 2 x b - 2 x t), on the centre line of the sheet. Lips are ignored."
 msgstr "t x (h + 2 x b - 2 x t), a lemez középvonalán számolva. A peremeket (ajkakat) figyelmen kívül hagyja."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:287
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:316
 msgid ":guilabel:`Other`"
 msgstr ":guilabel:`Egyéb`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:288
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:317
 msgid "Not computed: enter the :guilabel:`Cross-section Area` directly, for example from a catalogue."
 msgstr "Nem számítja ki: add meg közvetlenül a :guilabel:`Keresztmetszet területe` értékét, például katalógusból."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:290
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:319
 msgid "Root and toe radii of rolled sections are ignored, so the computed area is slightly smaller than a catalogue value; type the catalogue area in :guilabel:`Cross-section Area` when you need it exact."
 msgstr "A hengerelt szelvények gyök- és lábgörbületi sugarait nem veszi figyelembe, ezért a számított terület kissé kisebb a katalógusértéknél; ha pontos értékre van szükséged, add meg a katalógus szerinti területet a :guilabel:`Keresztmetszet területe` mezőben."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:294
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:323
 msgid "Volume, area and weight"
 msgstr "Térfogat, terület és tömeg"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:296
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:325
 msgid "From the dimensions, the product's :guilabel:`Volume` (the gross volume of the enclosing shape) and a :guilabel:`Net Volume` (the volume of the material itself, so a hollow section or tube excludes its cavity) are computed, converted into the company's volume unit of measure through the :guilabel:`Dimensional UoM`. The :guilabel:`Cross-section Area` is the area perpendicular to the length: it is computed for every shape except the sphere (and :guilabel:`Other` profiles), and it can be entered by hand for profiles."
 msgstr "A méretekből számítódik a termék :guilabel:`Térfogata` (a befoglaló alak bruttó térfogata) és a :guilabel:`Nettó térfogat` (magának az anyagnak a térfogata, így a zártszelvény vagy a cső esetében az üreg nélkül), a :guilabel:`Méret mértékegysége` egységen keresztül a vállalat térfogat-mértékegységére átszámítva. A :guilabel:`Keresztmetszet területe` a hosszra merőleges terület: a gömb (és az :guilabel:`Egyéb` szelvények) kivételével minden alaknál számítódik, szelvényeknél pedig kézzel is megadható."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:303
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:332
 msgid "When the product has a :ref:`Main Material <inventory/product_data/material>` with a density, the :guilabel:`Computed Weight` is the net weight of **one unit of measure of the product**:"
 msgstr "Ha a terméknek van :ref:`Fő anyaga <inventory/product_data/material>` sűrűséggel, a :guilabel:`Számított tömeg` a **termék egy mértékegységének** nettó tömege:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:306
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:335
 msgid "for a product measured by length (m), the weight per metre: cross-section area x density;"
 msgstr "hosszmértékben (m) mért terméknél a folyóméterenkénti tömeg: keresztmetszet területe x sűrűség;"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:307
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:336
 msgid "for a product measured by area (m²), the weight per m² (cuboid plates: thickness x density);"
 msgstr "területmértékben (m²) mért terméknél az m²-enkénti tömeg (hasáb alakú lemezeknél: vastagság x sűrűség);"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:308
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:337
 msgid "for a product measured by volume, volume x density;"
 msgstr "térfogatmértékben mért terméknél térfogat x sűrűség;"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:309
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:338
 msgid "for a product measured by weight, that weight; and"
 msgstr "tömegmértékben mért terméknél maga a tömeg; egyébként"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:310
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:339
 msgid "otherwise, the weight of one piece."
 msgstr "egy darab tömege."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:312
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:341
 msgid "The weight of the product itself is never overwritten unless you ask for it:"
 msgstr "A termék saját tömegét soha nem írja felül, hacsak nem kéred:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:314
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:343
 msgid "tick :guilabel:`Weight from Dimensions` and the product's :guilabel:`Weight` always equals the computed weight, also when the dimensions, the unit of measure, the main material or the density of the material change later; or"
 msgstr "jelöld be a :guilabel:`Tömeg a méretekből` jelölőnégyzetet, és a termék :guilabel:`Súly` értéke mindig egyenlő a számított tömeggel, akkor is, ha a méretek, a mértékegység, a fő anyag vagy az anyag sűrűsége később megváltozik; vagy"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:317
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:346
 msgid "click :guilabel:`Compute weight` to set the weight once."
 msgstr "kattints a :guilabel:`Tömeg számítása` gombra, hogy egyszer beállítsd a tömeget."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:319
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:348
 msgid "The module also adds the same dimension, volume and weight fields, each with its own unit of measure, to :doc:`packagings <configure/packaging>`."
 msgstr "A modul ugyanezeket a méret-, térfogat- és súlymezőket, mindegyiket saját mértékegységgel, a :doc:`kiszerelésekhez <configure/packaging>` is hozzáadja."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:335
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:364
 msgid "The computation reads the reference length unit of the company's volume unit of measure, which is set up by the :ref:`Advanced UoM module <inventory/uom/advanced>`. If those units are not configured, saving dimensions raises a validation error. The module also checks that the thicknesses fit the dimensions (twice the wall thickness cannot reach the width or height) and that no dimension is negative."
 msgstr "A számítás a vállalat térfogat-mértékegységének hivatkozási hosszúságegységét olvassa be, amelyet a :ref:`haladó mértékegység modul <inventory/uom/advanced>` állít be. Ha ezek az egységek nincsenek beállítva, a méretek mentése érvényesítési hibát ad. A modul azt is ellenőrzi, hogy a vastagságok beleférnek-e a méretekbe (a falvastagság kétszerese nem érheti el a szélességet vagy a magasságot), és hogy egyik méret sem negatív."
 
@@ -23835,126 +23906,126 @@ msgid "CAD bill of materials import"
 msgstr "CAD anyagjegyzék-importálás"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:5
-msgid "A steel structure fabricator usually receives the project documentation as a DWG (sometimes DXF) drawing. The drawing may contain a parts list, position blocks with attributes, or nothing but position labels next to the members (\"R1 / 100x100x4\", \"GM1 / U180\", \"PM 2 / 300x300x10\", \"Bolt / M 16\"). The eYssen module **CAD Bill of Materials Import** (``mrp_cad_bom_import``) turns such a drawing into:"
-msgstr "Az acélszerkezet-gyártó a projektdokumentációt általában DWG (néha DXF) rajzként kapja meg. A rajzon lehet darabjegyzék, attribútumos pozíciókészlet-blokkok, vagy csupán a szerkezeti elemek mellett álló tételjel-feliratok („R1 / 100x100x4”, „GM1 / U180”, „PM 2 / 300x300x10”, „Bulon / M 16”). Az eYssen **CAD Bill of Materials Import** modul (``mrp_cad_bom_import``) az ilyen rajzból a következőket készíti:"
+msgid "A steel structure fabricator usually receives the project documentation as a DWG (sometimes DXF) drawing. The drawing may contain one or more parts lists (also tables pasted from a spreadsheet, and lists per assembly with a summary table), position blocks with attributes, or nothing but position labels next to the members (\"R1 / 100x100x4\", \"GM1 / U180\", \"PM 2 / 300x300x10\", \"Bolt / M 16\"). The eYssen module **CAD Bill of Materials Import** (``mrp_cad_bom_import``) turns such a drawing into:"
+msgstr "A acélszerkezet-gyártó a projektdokumentációt általában DWG (néha DXF) rajz formájában kapja meg. A rajz tartalmazhat egy vagy több darabjegyzéket (táblázatból beillesztett táblázatokat, valamint szerkezetenkénti listákat összesítő táblázattal), attribútumokkal ellátott tételblokkokat, vagy csak az elemek melletti tételfeliratokat („R1 / 100x100x4”, „GM1 / U180”, „PM 2 / 300x300x10”, „Bolt / M 16”). Az eYssen **CAD Bill of Materials Import** modul (``mrp_cad_bom_import``) egy ilyen rajzból hoz létre:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:11
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:12
 msgid "a reviewed material list with weights taken from a steel section catalogue;"
 msgstr "átvizsgált anyaglista, a tömegekkel acélszelvény-katalógusból;"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:12
-msgid "a material summary by kind of material, with the total weight without and with purlins;"
-msgstr "anyagfajtánkénti anyagösszesítő, a teljes tömeggel szelemenek nélkül és szelemenekkel;"
-
 #: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:13
+msgid "a material summary by kind of material, section and grade, with the total weight without and with purlins;"
+msgstr "anyagfajta, szelvény és minőség szerinti anyagösszesítő, a teljes tömeggel szelemenek nélkül és szelemenekkel;"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:15
 msgid "a purely kg-based quotation (manufacturing price per kg and assembly price per kg);"
 msgstr "tisztán kilogrammalapú árajánlat (gyártási ár kg-onként és szerelési ár kg-onként);"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:14
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:16
 msgid "after acceptance, a bill of materials with matched or newly created products; and"
 msgstr "elfogadás után anyagjegyzék a megtalált vagy újonnan létrehozott termékekkel; valamint"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:15
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:17
 msgid "a procurement list in stock lengths with cutting waste, and draft requests for quotation."
 msgstr "szálhosszak szerinti beszerzési lista a vágási veszteséggel, és ajánlatkérés-piszkozatok."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:18
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:20
 msgid "Nothing is final until you have reviewed it. The importer marks every line it is unsure of, and the :doc:`AI bridge <../../productivity/ai/cad_bom_import>` only ever *suggests* quantities and lengths that you accept or reject one by one."
 msgstr "Semmi sem végleges, amíg átnézted. Az importáló minden bizonytalan sort megjelöl, az :doc:`AI-híd <../../productivity/ai/cad_bom_import>` pedig csak *javaslatot* tesz a mennyiségekre és hosszakra, amelyeket egyenként elfogadsz vagy elutasítasz."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:23
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:25
 msgid "The workflow"
 msgstr "A munkafolyamat"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:25
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:27
 msgid "Every import is a record in :menuselection:`Manufacturing app --> CAD imports` that moves through six statuses: :guilabel:`Draft`, :guilabel:`Parsed`, :guilabel:`Reviewed`, :guilabel:`Quoted`, :guilabel:`Accepted` and :guilabel:`Done`."
 msgstr "Minden importálás egy rekord a :menuselection:`Gyártás alkalmazás --> CAD-importálások` menüben, amely hat státuszon megy végig: :guilabel:`Piszkozat`, :guilabel:`Feldolgozva`, :guilabel:`Ellenőrizve`, :guilabel:`Árajánlat kiadva`, :guilabel:`Elfogadva` és :guilabel:`Kész`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:33
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:35
 msgid "Step"
 msgstr "Lépés"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:34
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:36
 msgid "What you do"
 msgstr "Mit teszel"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:35
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:37
 msgid "Result"
 msgstr "Eredmény"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:36
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:38
 msgid "Upload"
 msgstr "Feltöltés"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:37
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:39
 msgid "Add the DWG or DXF files under :guilabel:`Drawings (DWG, DXF)`."
 msgstr "Add hozzá a DWG- vagy DXF-fájlokat a :guilabel:`Rajzok (DWG, DXF)` mezőben."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:40
 msgid "The files are attached to the import."
 msgstr "A fájlok az importáláshoz csatolódnak."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:39
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:41
 msgid "Parse"
 msgstr "Feldolgozás"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:40
-msgid "Click :guilabel:`Parse drawings`."
-msgstr "Kattints a :guilabel:`Rajzok feldolgozása` gombra."
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:42
+msgid "Click :guilabel:`Parse drawings`. If the drawings contain several parts lists, choose the ones to import first."
+msgstr "Kattints a :guilabel:`Rajzok feldolgozása` gombra. Ha a rajzok több darabjegyzéket tartalmaznak, előbb válaszd ki az importálandókat."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:41
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:44
 msgid "The lines are extracted, the products are matched and the summary is built. Status: :guilabel:`Parsed`."
 msgstr "A sorok kinyerése, a termékek párosítása és az összesítő elkészítése megtörténik. Státusz: :guilabel:`Feldolgozva`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:43
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:46
 msgid "Review"
 msgstr "Ellenőrzés"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:44
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:47
 msgid "Correct the lines, then click :guilabel:`Mark as reviewed`."
 msgstr "Javítsd a sorokat, majd kattints az :guilabel:`Ellenőrzöttnek jelölés` gombra."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:45
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:48
 msgid "Status :guilabel:`Reviewed`. Open conflicts are logged in the chatter."
 msgstr "Státusz: :guilabel:`Ellenőrizve`. A nyitott ütközések bekerülnek a chatterbe."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:46
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:49
 msgid "Quote"
 msgstr "Árajánlat"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:47
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:50
 msgid "Click :guilabel:`Create quotation`."
 msgstr "Kattints az :guilabel:`Árajánlat készítése` gombra."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:48
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:51
 msgid "A sales quotation priced per kg. Status :guilabel:`Quoted`."
 msgstr "Kilogrammonként árazott értékesítési árajánlat. Státusz: :guilabel:`Árajánlat kiadva`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:49
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:52
 msgid "Accept"
 msgstr "Elfogadás"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:50
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:53
 msgid "Confirm the quotation, or click :guilabel:`Mark as accepted`."
 msgstr "Erősítsd meg az árajánlatot, vagy kattints az :guilabel:`Elfogadottnak jelölés` gombra."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:51
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:54
 msgid "Status :guilabel:`Accepted`. If the setting is on, the bill of materials is created at once."
 msgstr "Státusz: :guilabel:`Elfogadva`. Ha a beállítás be van kapcsolva, az anyagjegyzék azonnal létrejön."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:53
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:56
 msgid "Click :guilabel:`Create BoM` (Manufacturing administrators)."
 msgstr "Kattints az :guilabel:`Anyagjegyzék létrehozása` gombra (gyártási adminisztrátorok)."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:57
 msgid "A new bill of materials version. Status :guilabel:`Done`."
 msgstr "Új anyagjegyzék-verzió. Státusz: :guilabel:`Kész`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:56
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:59
 msgid "Click :guilabel:`Procurement list`, then :guilabel:`Create RFQs`."
 msgstr "Kattints a :guilabel:`Beszerzési lista`, majd az :guilabel:`Ajánlatkérések létrehozása` gombra."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:57
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:60
 msgid "A list of bars and sheets to buy, and draft requests for quotation. Nothing is confirmed."
 msgstr "A megvásárlandó szálak és lemezek listája, valamint ajánlatkérés-piszkozatok. Semmi sem kerül megerősítésre."
 
@@ -23978,335 +24049,623 @@ msgstr "A rajzok alatt az :guilabel:`Alapértelmezett anyagminőség` és a :gui
 msgid "Click :guilabel:`Parse drawings`. The :guilabel:`Extraction` field then names the strategy that found the lines, the tab :guilabel:`Parse log` lists what was read, repaired or ignored, and the import is :guilabel:`Parsed`. You can parse again while the import is parsed or reviewed: the lines that were not added by hand are replaced, and the lines you added manually are kept."
 msgstr "Kattints a :guilabel:`Rajzok feldolgozása` gombra. A :guilabel:`Kinyerés` mező ekkor megnevezi a sorokat megtaláló stratégiát, a :guilabel:`Feldolgozási napló` fül felsorolja, mi lett beolvasva, javítva vagy figyelmen kívül hagyva, az importálás pedig :guilabel:`Feldolgozva` státuszú lesz. Újra feldolgozhatod, amíg az importálás feldolgozott vagy ellenőrzött státuszú: a nem kézzel hozzáadott sorok lecserélődnek, a kézzel hozzáadottak megmaradnak."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:25
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:24
+msgid "If the drawings contain several parts lists, :guilabel:`Parse drawings` first asks which of them to import (see :ref:`manufacturing/cad_bom_import/choose_tables`)."
+msgstr "Ha a rajzok több darabjegyzéket tartalmaznak, a :guilabel:`Rajzok feldolgozása` először megkérdezi, melyiket importálja (lásd: :ref:`manufacturing/cad_bom_import/choose_tables`)."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:28
 msgid "Texts are read from model space and every paper space of the drawing, including the texts inside blocks. For a DWG, ``dwgread`` converts the file first; text in other code pages (for example Central European drawings) is decoded with the code page stored in the drawing."
 msgstr "A szövegek beolvasása a rajz modelltérből és az összes papírtérből történik, a blokkokban lévő szövegekkel együtt. DWG esetén a ``dwgread`` előbb átkonvertálja a fájlt; a más kódlapú szövegeket (például közép-európai rajzokon) a rajzban tárolt kódlap szerint dekódolja."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:30
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:33
+msgid "The output of the converter is read step by step. A large DWG file, with hundreds of megabytes of converted data, therefore no longer runs the server out of memory. It only takes longer to parse."
+msgstr "A konverter kimenetét lépésenként olvassa be a rendszer. A nagy DWG-fájl, több száz megabájtnyi konvertált adattal, ezért már nem meríti ki a szerver memóriáját. Csak a feldolgozás tart tovább."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:37
 msgid "How the lines are found"
 msgstr "Hogyan találja meg a sorokat"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:32
-msgid "The importer tries three strategies in order. The first one that finds lines wins; the label strategy runs only when the others found nothing. The :guilabel:`Source` of every line shows which one produced it: :guilabel:`Parts list table`, :guilabel:`Block attributes`, :guilabel:`Labels`, :guilabel:`Manual` or :guilabel:`AI suggestion`."
-msgstr "Az importáló három stratégiát próbál ki sorrendben. Az első, amelyik sorokat talál, nyer; a feliratstratégia csak akkor fut, ha a többi semmit sem talált. Minden sor :guilabel:`Forrás` mezője megmutatja, melyik hozta létre: :guilabel:`Darabjegyzék-táblázat`, :guilabel:`Blokkattribútumok`, :guilabel:`Feliratok`, :guilabel:`Kézi` vagy :guilabel:`AI-javaslat`."
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:39
+msgid "The importer tries three strategies in order. The first one that finds lines wins; the label strategy runs only when the others found nothing. (If you choose no parts list in the :ref:`dialog <manufacturing/cad_bom_import/choose_tables>`, the parts lists are skipped and the drawing is read through its labels.) The :guilabel:`Source` of every line shows which one produced it: :guilabel:`Parts list table`, :guilabel:`Block attributes`, :guilabel:`Labels`, :guilabel:`Manual` or :guilabel:`AI suggestion`."
+msgstr "Az importáló három stratégiát próbál ki sorrendben. Az első, amelyik sorokat talál, nyer; a feliratstratégia csak akkor fut, ha a többi semmit sem talált. (Ha a :ref:`párbeszédablakban <manufacturing/cad_bom_import/choose_tables>` egyetlen darabjegyzéket sem választasz, a darabjegyzékeket kihagyja, és a rajzot a feliratain keresztül olvassa be.) Minden sor :guilabel:`Forrás` mezője megmutatja, melyik hozta létre: :guilabel:`Darabjegyzék-táblázat`, :guilabel:`Blokkattribútumok`, :guilabel:`Feliratok`, :guilabel:`Kézi` vagy :guilabel:`AI-javaslat`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:47
 msgid "Parts list table"
 msgstr "Darabjegyzék-táblázat"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:40
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:49
 msgid "The texts of the drawing are grouped into rows. A row is the **header** of a parts list when at least three of its cells are recognised by a table of synonyms in Romanian, Hungarian, English, German and Spanish, for example mark (*Poz, Pos, Mark, Marca, Tétel, Jel*), quantity (*Buc, Db, Qty, Pcs, Stk, Cant*), profile (*Profil, Szelvény, Section, Perfil*), material or grade, length, width, thickness, weight, description, area and notes."
 msgstr "A rajz szövegei sorokba csoportosulnak. Egy sor a darabjegyzék **fejléce**, ha legalább három cellájét felismeri a román, magyar, angol, német és spanyol szinonimák táblázata, például a tételjelet (*Poz, Pos, Mark, Marca, Tétel, Jel*), a mennyiséget (*Buc, Db, Qty, Pcs, Stk, Cant*), a szelvényt (*Profil, Szelvény, Section, Perfil*), az anyagot vagy minőséget, a hosszt, a szélességet, a vastagságot, a tömeget, a leírást, a területet és a megjegyzéseket."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:46
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:55
 msgid "The columns come from the vertical lines that cross the header, or else from the midpoints between the header texts."
 msgstr "Az oszlopokat a fejlécet keresztező függőleges vonalak adják, ennek hiányában a fejlécszövegek közötti felezőpontok."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:48
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:57
 msgid "The rows below *and above* the header are read (a parts list in a title block grows upwards) and the longer run is kept. The run ends at a gap that is too large, at another header, or where no text is left in the table."
 msgstr "A fejléc alatti *és feletti* sorokat is beolvassa (a címmezőben lévő darabjegyzék felfelé nő), és a hosszabb sorozatot tartja meg. A sorozat egy túl nagy résnél, egy másik fejlécnél, vagy ott ér véget, ahol a táblázatban már nincs szöveg."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:51
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:60
 msgid "A row of units (``mm``, ``kg``, ``buc``) sets the column units, and units in the header such as ``[m]`` or ``(cm)`` convert lengths to millimetres. A length below 30 with decimals and no unit is read as metres, and the parse log says so."
 msgstr "Az egységeket tartalmazó sor (``mm``, ``kg``, ``buc``) az oszlopok egységét állítja be, a fejlécben lévő egységek, például ``[m]`` vagy ``(cm)``, a hosszakat milliméterre váltják. A 30-nál kisebb, tizedesjegyes, egység nélküli hosszat méterként olvassa, és a feldolgozási napló ezt jelzi."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:63
 msgid "ACAD_TABLE objects are read the same way."
 msgstr "Az ACAD_TABLE objektumokat ugyanígy olvassa."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:55
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:64
 msgid "A weight written on the drawing is kept in :guilabel:`Weight on drawing (kg)`. If it differs from the computed weight by more than 5 %, the line gets a conflict note."
 msgstr "A rajzon feltüntetett tömeg a :guilabel:`Tömeg a rajzon (kg)` mezőben marad meg. Ha ez több mint 5 %-kal eltér a számított tömegtől, a sor ütközésjelzést kap."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:59
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:68
+msgid "Parts lists pasted from a spreadsheet"
+msgstr "Táblázatkezelőből beillesztett darabjegyzékek"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:70
+msgid "A parts list that was pasted into the drawing from Excel is not text but an embedded object (OLE). The importer reads these objects too, in the legacy ``.xls`` format and in ``.xlsx``, and handles them like any other parts list."
+msgstr "Az Excelből a rajzba beillesztett darabjegyzék nem szöveg, hanem beágyazott objektum (OLE). Az importáló ezeket is beolvassa, a régi ``.xls`` és az ``.xlsx`` formátumban egyaránt, és úgy kezeli őket, mint bármely más darabjegyzéket."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:74
+msgid "A list that is placed twice in the drawing (in model space and in a layout) is read once."
+msgstr "A rajzon kétszer elhelyezett lista (a modelltérben és egy elrendezésben) egyszer kerül beolvasásra."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:75
+msgid "Reinforcement (rebar) schedules are skipped. They are recognised by their steel grades (for example B500C or PC52), by the word *armătură* and by stirrups written as *etr.*"
+msgstr "A vasalási (betonacél) kimutatásokat kihagyja. Felismeri őket az acélminőségükről (például B500C vagy PC52), az *armătură* szóról és az *etr.* alakban írt kengyelekről."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:77
+msgid "The parse log names each embedded spreadsheet with its title and its number of rows."
+msgstr "A feldolgozási napló megnevezi az egyes beágyazott táblázatokat a címükkel és a soraik számával."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:80
+msgid "Headers and rows of a parts list"
+msgstr "A darabjegyzék fejlécei és sorai"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:82
+msgid "A header can have **two rows**, which are read together. \"Nr. / buc.\" is the quantity; \"Greutate [kg] / ml | buc | total\" gives the weight per metre, per piece and in total; \"Dimensiuni (mm) / l | g | L\" gives the width, the thickness and the length. Quantity headers such as \"Nr. pieselor\" and \"Nr. piese\" are recognised too."
+msgstr "A fejléc **két soros** is lehet, a két sort együtt olvassa be. A „Nr. / buc.” a mennyiség; a „Greutate [kg] / ml | buc | total” a folyóméterenkénti, a darabonkénti és az összes tömeget adja; a „Dimensiuni (mm) / l | g | L” a szélességet, a vastagságot és a hosszt. A „Nr. pieselor” és a „Nr. piese” típusú mennyiségfejlécek szintén felismerhetők."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:86
+msgid "A section can be written with words in front of it (\"Pana Z 180x2\"), or with its length glued on (\"HEA 300 - 7020\", \"Z200x2,5 - 9090\"). Tie rods and round bars (\"tirant de 24 mm\", \"oțel de 20 mm\") are recognised as well."
+msgstr "A szelvény előtt szavak állhatnak („Pana Z 180x2”), vagy a hossza lehet hozzáírva („HEA 300 - 7020”, „Z200x2,5 - 9090”). A húzórudakat és a kerek rudakat („tirant de 24 mm”, „oțel de 20 mm”) szintén felismeri."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:89
+msgid "Nuts and washers (*piuliță, șaibă*) are kept as separate lines. They are not turned into bolts."
+msgstr "Az anyákat és az alátéteket (*piuliță, șaibă*) külön sorként tartja meg. Nem alakítja őket csavarrá."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:90
+msgid "Group-heading rows and subtotal or total rows inside a list are skipped."
+msgstr "A csoportcímsorokat, valamint a lista belsejében lévő részösszeg- és összegsorokat kihagyja."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:93
+msgid "Parts lists per assembly"
+msgstr "Szerkezetenkénti darabjegyzékek"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:95
+msgid "Many drawings have one parts list for each assembly (for example \"Extras de laminate pentru grinda G1\") and a summary table of the assemblies (\"NECESAR ELEMENTE\") with the assembly, its count, its weight per piece and its total weight. The importer puts them together."
+msgstr "Sok rajzon minden szerkezethez külön darabjegyzék tartozik (például „Extras de laminate pentru grinda G1”), emellett van egy összesítő táblázat a szerkezetekről („NECESAR ELEMENTE”) a szerkezettel, a darabszámával, a darabonkénti tömegével és az összes tömegével. Az importáló összekapcsolja őket."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:99
+msgid "The quantities of the list of an assembly are multiplied by the count of that assembly in the summary table."
+msgstr "Egy szerkezet listájának mennyiségeit megszorozza a szerkezet összesítő táblázatban szereplő darabszámával."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:101
+msgid "The assembly is found by the mark in the title of the list: G1 is 8 pieces. If the title names no mark (for example \"valabil pentru un stâlp\"), the total of the list is matched to the weight per piece in the summary table: a list of 1431 kg belongs to \"Stâlpi S1, S2\", which is 20 pieces."
+msgstr "A szerkezetet a lista címében szereplő tételjel alapján találja meg: a G1 8 darab. Ha a cím nem nevez meg tételjelet (például „valabil pentru un stâlp”), a lista összegét az összesítő táblázat darabonkénti tömegével párosítja: az 1431 kg-os lista a „Stâlpi S1, S2” szerkezethez tartozik, amely 20 darab."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:104
+msgid "The :guilabel:`Drawing text` of each line shows where it comes from, as \"[list title × count]\"."
+msgstr "Az egyes sorok :guilabel:`Rajz szövege` mezője megmutatja, honnan származik a sor, így: „[lista címe × darabszám]”."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:105
+msgid "An assembly that is only in the summary table, because its parts list is not on this drawing (for example trusses, or purlins \"see other list\"), comes in as one line with the stated weight and count. The line is flagged :guilabel:`To review` and the note says \"only in the summary table...\". Purlin assemblies are marked as purlins."
+msgstr "Az a szerkezet, amely csak az összesítő táblázatban szerepel, mert a darabjegyzéke nincs ezen a rajzon (például rácsos tartók, vagy „lásd másik lista” szelemenek), egyetlen sorként kerül be a megadott tömeggel és darabszámmal. A sor :guilabel:`Ellenőrizendő` jelzést kap, és a megjegyzés így szól: „only in the summary table...”. A szelemenszerkezeteket szelemenként jelöli meg."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:110
+msgid "The parse log compares the total that a list states with the sum of its rows, and adds \"-- they differ, check the table\" when the difference is more than 5 %. It does the same for the total of the summary tables and the total of the lines."
+msgstr "A feldolgozási napló összeveti a lista által megadott összeget a sorai összegével, és hozzáteszi a „-- they differ, check the table” üzenetet, ha az eltérés több mint 5 %. Ugyanezt teszi az összesítő táblázatok összegével és a sorok összegével."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:115
 msgid "Block attributes"
 msgstr "Blokkattribútumok"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:61
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:117
 msgid "Blocks with attributes (``POS``, ``QTY``, ``PROFILE``, ``LENGTH``, ``MATERIAL``, ``WEIGHT``, and their Romanian, Hungarian and German names) become lines, grouped by mark, section and length. With a quantity attribute the quantity is the largest value found (different values are a conflict, because several references often carry the assembly quantity). Without it, the quantity is the number of block references and the line is flagged to review. The setting :guilabel:`Block attribute tags` adds your own tag names."
 msgstr "Az attribútumokat tartalmazó blokkokból (``POS``, ``QTY``, ``PROFILE``, ``LENGTH``, ``MATERIAL``, ``WEIGHT`` és ezek román, magyar és német nevei) sorok lesznek, tételjel, szelvény és hossz szerint csoportosítva. Mennyiségi attribútum esetén a mennyiség a talált legnagyobb érték (a különböző értékek ütközést jelentenek, mert több hivatkozás is gyakran az összeszerelési mennyiséget hordozza). Nélküle a mennyiség a blokkhivatkozások száma, és a sor ellenőrzésre jelölt. A :guilabel:`Blokkattribútum-címkék` beállítás saját címkeneveket ad hozzá."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:69
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:125
 msgid "Labels"
 msgstr "Feliratok"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:71
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:127
 msgid "Many drawings have no parts list, only a label next to each member. The importer then reads every short text, pairs a mark (``R1``, ``PM 2``, ``GM1``) with a section designation written in the same text or just below or beside it, and groups the lines by mark and section."
 msgstr "Sok rajzon nincs darabjegyzék, csak egy felirat áll az egyes elemek mellett. Az importáló ilyenkor minden rövid szöveget beolvas, a tételjelet (``R1``, ``PM 2``, ``GM1``) összepárosítja az ugyanabban a szövegben vagy közvetlenül alatta vagy mellette álló szelvényjelöléssel, és a sorokat tételjel és szelvény szerint csoportosítja."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:76
-msgid "**The number of labels is not the quantity.** The same member is labelled in several views and sometimes several times in one view. The label strategy therefore stores the count as :guilabel:`Occurrences`, sets the quantity to 1, leaves the length empty and flags the line :guilabel:`To review`. Only an explicit text such as ``4 buc``, ``2 db``, ``n=2`` or ``L=2500`` fills the quantity or the length. Without a length, a linear member has no weight until you enter it (or accept an :doc:`AI suggestion <../../../productivity/ai/cad_bom_import>`)."
-msgstr "**A feliratok száma nem a mennyiség.** Ugyanazt az elemet több nézeten, néha egy nézeten belül többször is felirattal látják el. A feliratstratégia ezért a számot az :guilabel:`Előfordulások` mezőben tárolja, a mennyiséget 1-re állítja, a hosszt üresen hagyja, a sort pedig :guilabel:`Ellenőrizendő` jelzéssel látja el. Csak egy kifejezett szöveg, például ``4 buc``, ``2 db``, ``n=2`` vagy ``L=2500`` tölti ki a mennyiséget vagy a hosszt. Hossz nélkül a hosszirányú elemnek nincs tömege, amíg meg nem adod (vagy el nem fogadsz egy :doc:`AI-javaslatot <../../../productivity/ai/cad_bom_import>`)."
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:131
+msgid "One-line callouts with all the data are read as they are:"
+msgstr "Az összes adatot tartalmazó egysoros feliratokat úgy olvassa be, ahogy vannak:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:83
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:133
+msgid "``P12 - IPE 400 - 7360 - 1buc.``: mark, section, length and pieces;"
+msgstr "``P12 - IPE 400 - 7360 - 1buc.``: tételjel, szelvény, hossz és darabszám;"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:134
+msgid "``P54 L 60x60x6 - 300 20buc.``: an angle, 300 mm long, 20 pieces;"
+msgstr "``P54 L 60x60x6 - 300 20buc.``: egy szögacél, 300 mm hosszú, 20 darab;"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:135
+msgid "``P20 - 10x144 - 370 - 2buc.``: a plate of 10 mm by 144 mm, 370 mm long, 2 pieces;"
+msgstr "``P20 - 10x144 - 370 - 2buc.``: 10 mm vastag és 144 mm széles lemez, 370 mm hosszú, 2 darab;"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:136
+msgid "``P79 pana Z 200x1.5 l=6000``: a word in front of the section, and the length after ``l=``; and"
+msgstr "``P79 pana Z 200x1.5 l=6000``: a szelvény előtt egy szó, a hossz pedig az ``l=`` után; és"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:137
+msgid "``PANE PA2 / Z200x2.5-8290``."
+msgstr "``PANE PA2 / Z200x2.5-8290``."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:139
+msgid "A quantity can be written ``(72 buc)``, ``2buc.`` or ``200 bucăți``."
+msgstr "A mennyiség így is írható: ``(72 buc)``, ``2buc.`` vagy ``200 bucăți``."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:142
+msgid "**The number of labels is not the quantity.** The same member is labelled in several views and sometimes several times in one view. For a bare label (a mark and a section, without a length) the label strategy therefore stores the count as :guilabel:`Occurrences`, sets the quantity to 1, leaves the length empty and flags the line :guilabel:`To review`. Only an explicit text such as ``4 buc``, ``2 db``, ``n=2`` or ``L=2500`` fills the quantity or the length. Without a length, a linear member has no weight until you enter it (or accept an :doc:`AI suggestion <../../../productivity/ai/cad_bom_import>`)."
+msgstr "**A feliratok száma nem a mennyiség.** Ugyanazt az elemet több nézeten, néha egy nézeten belül többször is felirattal látják el. A puszta feliratnál (tételjel és szelvény, hossz nélkül) a feliratstratégia ezért a számot az :guilabel:`Előfordulások` mezőben tárolja, a mennyiséget 1-re állítja, a hosszt üresen hagyja, a sort pedig :guilabel:`Ellenőrizendő` jelzéssel látja el. Csak egy kifejezett szöveg, például ``4 buc``, ``2 db``, ``n=2`` vagy ``L=2500`` tölti ki a mennyiséget vagy a hosszt. Hossz nélkül a hosszirányú elemnek nincs tömege, amíg meg nem adod (vagy el nem fogadsz egy :doc:`AI-javaslatot <../../../productivity/ai/cad_bom_import>`)."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:150
+msgid "There is one exception. A member tag with a length but no quantity, for example one ``P79 ... l=6000`` label for every purlin on a roof plan, gets the **number of its labels** as the quantity. The labels are counted in the drawing space (model space or one layout) in which they appear most, so a layout that repeats the model space is not counted twice. These lines stay :guilabel:`To review`, and the parse log lists them (\"quantity = number of labels (to check)\")."
+msgstr "Van egy kivétel. Az a tételcímke, amelyen van hossz, de nincs mennyiség, például egy ``P79 ... l=6000`` felirat tetőterven minden szelemenhez, mennyiségként a **feliratai számát** kapja. A feliratokat abban a rajztérben (a modelltérben vagy egy elrendezésben) számolja meg, ahol a legtöbb szerepel, így az az elrendezés, amely a modelltér ismétlése, nem számít kétszer. Ezek a sorok :guilabel:`Ellenőrizendő` jelzésűek maradnak, és a feldolgozási napló felsorolja őket („quantity = number of labels (to check)”)."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:156
 msgid "Other rules of the label strategy:"
 msgstr "A feliratstratégia további szabályai:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:85
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:158
 msgid "Words for existing members (*existent, existing, meglévő, vorhanden, existente*) make the line :guilabel:`Excluded`: it is shown but not counted."
 msgstr "A meglévő elemekre utaló szavak (*existent, existing, meglévő, vorhanden, existente*) a sort :guilabel:`Kizárva` állapotúvá teszik: látszik, de nem számít bele."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:87
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:160
 msgid "Holes and annotations (*Găuri, furat, holes, Bohrung, Secțiune, Plan, Detaliu*) are ignored and counted in the parse log."
 msgstr "A furatokat és a megjegyzéseket (*Găuri, furat, holes, Bohrung, Secțiune, Plan, Detaliu*) figyelmen kívül hagyja, és a feldolgozási naplóban megszámolja."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:89
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:162
 msgid "Bolt words (*Bulon, Șurub, Csavar, Bolt, Schraube, Tornillo*) make a bolt line."
 msgstr "A csavarokra utaló szavak (*Bulon, Șurub, Csavar, Bolt, Schraube, Tornillo*) csavarsort eredményeznek."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:90
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:163
 msgid "A bare plate or round size without a mark is ignored as too ambiguous."
 msgstr "A tételjel nélküli puszta lemez- vagy kerekméretet túl félreérthetőnek tekinti, és figyelmen kívül hagyja."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:91
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:164
 msgid "If the same mark appears with different sections (for example PM 3 as 200x250x10 and 200x350x10), every line of that mark gets a conflict note."
 msgstr "Ha ugyanaz a tételjel különböző szelvényekkel szerepel (például a PM 3 200x250x10 és 200x350x10 méretben), a tételjel minden sora ütközésjelzést kap."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:95
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:168
+msgid "Assembly counts on the drawing"
+msgstr "Szerkezetek darabszáma a rajzon"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:170
+msgid "An assembly title with a count multiplies the piece callouts that are drawn on the same sheet: \"Grinda G1 - 8 buc.\", \"Stâlpi S1; S2 - 20 buc.\" or \"CADRU TRANSVERSAL (5 buc. : ax 3...7)\"."
+msgstr "Egy darabszámmal ellátott szerkezetcím megszorozza az ugyanazon a lapon rajzolt elemfeliratokat: „Grinda G1 - 8 buc.”, „Stâlpi S1; S2 - 20 buc.” vagy „CADRU TRANSVERSAL (5 buc. : ax 3...7)”."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:173
+msgid "The sheet is found from its frame, the rectangle around the sheet. A sheet drawn without a frame uses the nearest assembly title that is also outside every frame."
+msgstr "A lapot a keretéről, a lap körüli téglalapról ismeri fel. A keret nélkül rajzolt lap a legközelebbi olyan szerkezetcímet használja, amely szintén minden kereten kívül van."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:175
+msgid "A piece that is repeated on one sheet counts once. The same piece on several sheets is added up."
+msgstr "Az egy lapon ismétlődő elem egyszer számít. Ugyanaz az elem több lapon összeadódik."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:176
+msgid "The parse log lists the assemblies that were used: \"assemblies: Grinda G1 × 8, ...\"."
+msgstr "A feldolgozási napló felsorolja a felhasznált szerkezeteket: „assemblies: Grinda G1 × 8, ...”."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:179
 msgid "Section designations"
 msgstr "Szelvényjelölések"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:97
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:181
 msgid "Designations are normalised before they are looked up: upper case, no accents, ``×`` and ``*`` as ``x``, decimal comma as point, and a trailing grade (``S235JR``, ``OL 37``) is split off. A count prefix such as ``2xL50x5`` is kept as a count."
 msgstr "A jelöléseket keresés előtt normalizálja: nagybetű, ékezetek nélkül, a ``×`` és a ``*`` ``x``-ként, a tizedesvessző tizedesponttal, és a záró minőségjelölést (``S235JR``, ``OL 37``) leválasztja. A darabszám-előtagot, például ``2xL50x5``, darabszámként őrzi meg."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:105
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:189
 msgid "Family"
 msgstr "Család"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:106
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:190
 msgid "Accepted forms"
 msgstr "Elfogadott alakok"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:107
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:191
 msgid "Becomes"
 msgstr "Eredmény"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:108
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:192
 msgid "I and H sections"
 msgstr "I és H szelvények"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:109
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:193
 msgid "``IPE200``, ``HE 200 A``, ``HE200B``, ``I 200``"
 msgstr "``IPE200``, ``HE 200 A``, ``HE200B``, ``I 200``"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:110
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:194
 msgid "``IPE 200``, ``HEA 200``"
 msgstr "``IPE 200``, ``HEA 200``"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:111
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:195
 msgid "Channels"
 msgstr "U-acélok"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:112
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:196
 msgid "``U180``, ``UNP 180``, ``UPN180``, ``UPE 200``"
 msgstr "``U180``, ``UNP 180``, ``UPN180``, ``UPE 200``"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:113
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:197
 msgid "``UPN 180``"
 msgstr "``UPN 180``"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:114
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:198
 msgid "Angles"
 msgstr "Szögacélok"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:115
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:199
 msgid "``L50x5``, ``L 50x50x5``, ``L100x50x6``, ``Cornier 60x6``"
 msgstr "``L50x5``, ``L 50x50x5``, ``L100x50x6``, ``Cornier 60x6``"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:116
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:200
 msgid "``L 50x5``, ``L 100x50x6``"
 msgstr "``L 50x5``, ``L 100x50x6``"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:117
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:201
 msgid "Square and rectangular hollow sections"
 msgstr "Négyzetes és téglalap alakú zártszelvények"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:118
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:202
 msgid "``SHS 100x100x4``, ``RHS 80x120x5``, ``TEAVA 60x60x4``, a bare ``100x100x4``"
 msgstr "``SHS 100x100x4``, ``RHS 80x120x5``, ``TEAVA 60x60x4``, egy puszta ``100x100x4``"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:119
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:203
 msgid "``SHS 100x100x4``"
 msgstr "``SHS 100x100x4``"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:120
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:204
 msgid "Round hollow sections"
 msgstr "Kör alakú zártszelvények"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:121
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:205
 msgid "``Ø88.9x4``, ``CHS 114.3x5``, ``%%C88,9x4``"
 msgstr "``Ø88.9x4``, ``CHS 114.3x5``, ``%%C88,9x4``"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:122
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:206
 msgid "``CHS 88.9x4``"
 msgstr "``CHS 88.9x4``"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:123
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:207
 msgid "Flat and round bars"
 msgstr "Laposacélok és köracélok"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:124
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:208
 msgid "``FL 50x5``, ``Platbandă 5x60``, ``-80x8``, ``Ø20``"
 msgstr "``FL 50x5``, ``Platbandă 5x60``, ``-80x8``, ``Ø20``"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:125
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:209
 msgid "``FL 60x5``, ``Ø20``"
 msgstr "``FL 60x5``, ``Ø20``"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:126
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:210
 msgid "Plates"
 msgstr "Lemezek"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:127
-msgid "``PL 10x300x400``, ``PL10``, ``t=12``, ``Tablă 2x1000x2000``"
-msgstr "``PL 10x300x400``, ``PL10``, ``t=12``, ``Tablă 2x1000x2000``"
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:211
+msgid "``PL 10x300x400``, ``PL10``, ``t=12``, ``Tablă 2x1000x2000``, ``tb 188x106x6``"
+msgstr "``PL 10x300x400``, ``PL10``, ``t=12``, ``Tablă 2x1000x2000``, ``tb 188x106x6``"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:128
-msgid "``PL 300x400x10``"
-msgstr "``PL 300x400x10``"
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:212
+msgid "``PL 300x400x10``, ``PL 106x188x6``"
+msgstr "``PL 300x400x10``, ``PL 106x188x6``"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:129
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:213
 msgid "Z, C and Σ purlins"
 msgstr "Z, C és Σ szelemenek"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:130
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:214
 msgid "``Z200/2.0``, ``Z 200x2``, ``C150/2``, ``Σ200/2.5``"
 msgstr "``Z200/2.0``, ``Z 200x2``, ``C150/2``, ``Σ200/2.5``"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:131
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:215
 msgid "``Z200/2.0``"
 msgstr "``Z200/2.0``"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:132
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:216
+msgid "Square and rectangular hollow sections (Romanian)"
+msgstr "Négyzet- és téglalap keresztmetszetű zártszelvények (román jelölés)"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:217
+msgid "``Tv 80x80x5``, ``tv.patr.80x5``"
+msgstr "``Tv 80x80x5``, ``tv.patr.80x5``"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:218
+msgid "``SHS 80x80x5``"
+msgstr "``SHS 80x80x5``"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:219
+msgid "Cold-formed U channels"
+msgstr "Hidegen hajlított U-szelvények"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:220
+msgid "``U60x60x5``"
+msgstr "``U60x60x5``"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:221
+msgid "``U 60x60x5`` (family :guilabel:`Cold-formed U channel`)"
+msgstr "``U 60x60x5`` (:guilabel:`Hidegen hajlított U-szelvény` család)"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:222
+msgid "Halved I and H sections"
+msgstr "Félbevágott I- és H-szelvények"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:223
+msgid "``IPE 400/2``"
+msgstr "``IPE 400/2``"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:224
+msgid "``IPE 400``, counted as half a section (quantity x 0.5)"
+msgstr "``IPE 400``, fél szelvényként számolva (mennyiség x 0,5)"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:225
 msgid "Bolts"
 msgstr "Csavarok"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:133
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:226
 msgid "``M16``, ``M16x60-8.8``, ``4xM20x80 10.9``, ``Șurub M12``"
 msgstr "``M16``, ``M16x60-8.8``, ``4xM20x80 10.9``, ``Șurub M12``"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:134
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:227
 msgid "``M16x60`` and a property class"
 msgstr "``M16x60`` és egy szilárdsági osztály"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:136
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:228
+msgid "Bolt sets"
+msgstr "Csavarkészletek"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:229
+msgid "``M24x70, 2S+P``, ``IP M27x85, P+2S``"
+msgstr "``M24x70, 2S+P``, ``IP M27x85, P+2S``"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:230
+msgid "``M24x70``, ``M27x85`` (the notation for washers and nut is dropped, the property class is kept)"
+msgstr "``M24x70``, ``M27x85`` (az alátétek és az anya jelölését elhagyja, a szilárdsági osztály megmarad)"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:232
 msgid "A bare ``AxBxC`` is decided by context: a plate mark prefix (see the settings) or a thickness written first (``10x300x300``) means a plate; otherwise it is a hollow section when the thickness is at most 16 mm and the sides at most 500 mm, and the line is marked as ambiguous with a lower confidence. A plate thinner than 3 mm is a sheet."
 msgstr "Egy puszta ``AxBxC`` jelölésről a környezet dönt: a lemez tételjelének előtagja (lásd a beállításokat) vagy elöl írt vastagság (``10x300x300``) lemezt jelent; egyébként zártszelvény, ha a vastagság legfeljebb 16 mm, az oldalak pedig legfeljebb 500 mm, és a sor alacsonyabb megbízhatósággal kétértelműként van megjelölve. A 3 mm-nél vékonyabb lemez vékonylemez."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:142
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:240
+msgid "Choose the parts lists"
+msgstr "Válaszd ki a darabjegyzékeket"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:242
+msgid "When the drawings of an import contain several parts lists, :guilabel:`Parse drawings` does not import at once. It opens the window :guilabel:`Choose the parts lists`, with one row for each list:"
+msgstr "Ha egy importálás rajzai több darabjegyzéket tartalmaznak, a :guilabel:`Rajzok feldolgozása` nem importál azonnal. Megnyitja a :guilabel:`Válaszd ki az anyagkimutatásokat` ablakot, listánként egy sorral:"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:249
+msgid "Column"
+msgstr "Oszlop"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:250
+msgid "What it shows"
+msgstr "Mit mutat"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:251
+msgid ":guilabel:`Import`"
+msgstr ":guilabel:`Importálás`"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:252
+msgid "Tick the lists to import."
+msgstr "Jelöld be az importálandó listákat."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:253
+msgid ":guilabel:`File`"
+msgstr ":guilabel:`Fájl`"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:254
+msgid "The drawing file that holds the list."
+msgstr "A listát tartalmazó rajzfájl."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:255
+msgid ":guilabel:`Table`"
+msgstr ":guilabel:`Táblázat`"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:256
+msgid "The title of the list."
+msgstr "A lista címe."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:257
+msgid ":guilabel:`Kind`"
+msgstr ":guilabel:`Fajta`"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:258
+msgid ":guilabel:`Parts list` or :guilabel:`Summary of assemblies`."
+msgstr ":guilabel:`Anyagkimutatás` vagy :guilabel:`Szerkezetek összesítője`."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:259
+msgid ":guilabel:`Rows`"
+msgstr ":guilabel:`Sorok`"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:260
+msgid "The number of rows."
+msgstr "A sorok száma."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:261
+msgid ":guilabel:`Total on the drawing (kg)`"
+msgstr ":guilabel:`Összesen a rajzon (kg)`"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:262
+msgid "The total that the list states."
+msgstr "A lista által megadott összeg."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:263
+msgid ":guilabel:`Assembly`"
+msgstr ":guilabel:`Szerkezet`"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:264
+msgid "The assembly the list is for and how many of it the summary asks for, for example \"Grinzi G1 × 8\"."
+msgstr "A szerkezet, amelyhez a lista tartozik, és hogy az összesítő hányat kér belőle, például „Grinzi G1 × 8”."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:266
+msgid ":guilabel:`Against the drawing`"
+msgstr ":guilabel:`Összevetés a rajzzal`"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:267
+msgid "The result of the :ref:`check against the labels <manufacturing/cad_bom_import/check_tables>`, for example \"matches the drawing\", \"6 of 10 rows are not on the drawing\" or \"no labels to compare with\"."
+msgstr "A :ref:`feliratokkal való összevetés <manufacturing/cad_bom_import/check_tables>` eredménye, például „matches the drawing”, „6 of 10 rows are not on the drawing” vagy „no labels to compare with”."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:281
+msgid "Lists whose rows are mostly not labelled on the drawing start unticked. Click :guilabel:`Import` to parse with the lists you ticked."
+msgstr "Azok a listák, amelyek soraihoz a rajzon többnyire nem tartozik felirat, bejelölés nélkül indulnak. Kattints az :guilabel:`Importálás` gombra, hogy a bejelölt listákkal dolgozza fel a rajzokat."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:284
+msgid "If you tick **none**, the bill of materials is read from the drawing itself, through its labels."
+msgstr "Ha **egyet sem** jelölsz be, az anyagjegyzéket magából a rajzból, a feliratokon keresztül olvassa be."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:285
+msgid "If the drawings have **exactly one** parts list, it is used without asking. If they have none, the drawing is read through its labels."
+msgstr "Ha a rajzokon **pontosan egy** darabjegyzék van, azt kérdés nélkül használja. Ha egy sincs, a rajzot a feliratokon keresztül olvassa be."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:287
+msgid "Your choice is kept. Parsing again does not ask again, unless the drawings changed (a new drawing or a new parts list). Then the window opens again."
+msgstr "A választásod megmarad. Az újabb feldolgozás nem kérdez újra, hacsak a rajzok nem változtak (új rajz vagy új darabjegyzék). Ilyenkor az ablak újra megnyílik."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:290
+msgid "The field :guilabel:`Parts lists found` on the import gives the number of lists. When two or more were found, the button :guilabel:`Choose parts lists` reopens the window. The lists that were not used are named in the parse log (\"tables not used (not selected)\")."
+msgstr "Az importáláson a :guilabel:`Talált anyagkimutatások` mező a listák számát mutatja. Ha kettő vagy több van, az :guilabel:`Anyagkimutatások kiválasztása` gomb újra megnyitja az ablakot. A fel nem használt listákat a feldolgozási napló nevezi meg („tables not used (not selected)”)."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:297
+msgid "Check a parts list against the drawing"
+msgstr "Darabjegyzék ellenőrzése a rajzzal szemben"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:299
+msgid "The rows of the imported parts lists are compared with the labels of the drawing. A row gets a conflict note and is flagged :guilabel:`To review` when its section is labelled nowhere on the drawing (\"... is not labelled on the drawing\"), or when its mark is labelled with another section on the drawing (\"on the drawing P5 is labelled HEA 200\"). The parse log says how many rows do not match."
+msgstr "Az importált darabjegyzékek sorait összeveti a rajz feliratival. A sor ütközési megjegyzést kap, és :guilabel:`Ellenőrizendő` jelzést, ha a szelvénye a rajzon sehol sincs felirattal ellátva („... is not labelled on the drawing”), vagy ha a tételjele a rajzon más szelvénnyel szerepel („on the drawing P5 is labelled HEA 200”). A feldolgozási napló megmondja, hány sor nem egyezik."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:305
 msgid "Review the lines"
 msgstr "A sorok ellenőrzése"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:144
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:307
 msgid "The tab :guilabel:`Lines` is an editable list. Change anything that is wrong, add lines with :guilabel:`Add a line` and drag the handle to reorder. When you change the :guilabel:`Section`, the dimensions, family and weight are worked out again."
 msgstr "A :guilabel:`Sorok` fül szerkeszthető lista. Javíts ki mindent, ami hibás, vegyél fel sorokat a :guilabel:`Sor hozzáadása` gombbal, és a fogantyú húzásával rendezd át őket. Ha módosítod a :guilabel:`Szelvény` értékét, a méretek, a szelvénycsalád és a tömeg újraszámítódik."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:148
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:311
+msgid "The lines stay one per row of the drawing or of the parts list. The same piece in the lists of G1, G2 and G3 is three lines, each with its source in the :guilabel:`Drawing text`. The material summary, the bill of materials and the procurement list add them up (see below)."
+msgstr "A sorok továbbra is a rajz vagy a darabjegyzék soronkénti bontását követik. Ugyanaz az elem a G1, a G2 és a G3 listájában három sor, mindegyik a forrásával a :guilabel:`Rajz szövege` mezőben. Az anyagösszesítő, az anyagjegyzék és a beszerzési lista összeadja őket (lásd lent)."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:315
 msgid "The colour of a line tells you what to look at:"
 msgstr "A sor színe megmutatja, mire kell figyelni:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:150
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:317
 msgid "**Orange**: :guilabel:`To review`, for example a quantity that is only a guess."
 msgstr "**Narancssárga**: :guilabel:`Ellenőrizendő`, például egy csak becsült mennyiség."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:151
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:318
 msgid "**Red**: a :guilabel:`Conflict`, with the reason in the conflict note (same mark with different sizes, weight on the drawing that differs from the computed weight, a grade that is not in the material master, different quantities in the attributes)."
 msgstr "**Piros**: egy :guilabel:`Ütközés`, amelynek oka az ütközési megjegyzésben olvasható (ugyanaz a tételjel eltérő méretekkel, a rajzon szereplő tömeg eltér a számított tömegtől, az anyagtörzsben nem szereplő minőség, eltérő mennyiségek az attribútumokban)."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:154
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:321
 msgid "**Grey**: :guilabel:`Excluded`, an existing member that is not counted."
 msgstr "**Szürke**: :guilabel:`Kizárva`, egy meglévő elem, amelyet nem számol a rendszer."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:166
-msgid "Use the optional columns for the rest: :guilabel:`Family`, :guilabel:`Height (mm)`, :guilabel:`Width (mm)`, :guilabel:`Thickness (mm)`, :guilabel:`Diameter (mm)`, :guilabel:`Occurrences`, :guilabel:`Source`, :guilabel:`Confidence`, :guilabel:`Weight on drawing (kg)`, :guilabel:`Drawing text` and :guilabel:`Product action`. For bolts the grade column becomes the :guilabel:`Property class`. A grade written on the drawing that is not in the material master is kept as :guilabel:`Grade on drawing`; the line is flagged and weighed with the density of steel until you choose a material."
-msgstr "A többihez használd a választható oszlopokat: :guilabel:`Szelvénycsalád`, :guilabel:`Magasság (mm)`, :guilabel:`Szélesség (mm)`, :guilabel:`Vastagság (mm)`, :guilabel:`Átmérő (mm)`, :guilabel:`Előfordulások`, :guilabel:`Forrás`, :guilabel:`Megbízhatóság`, :guilabel:`Tömeg a rajzon (kg)`, :guilabel:`Rajz szövege` és :guilabel:`Termékművelet`. Csavaroknál a minőség oszlop :guilabel:`Szilárdsági osztály` lesz. A rajzon szereplő, de az anyagtörzsben nem található minőség :guilabel:`Minőség a rajzon` értékként megmarad; a sor megjelölésre kerül, és az acél sűrűségével számolja a rendszer a tömegét, amíg anyagot nem választasz."
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:333
+msgid "Use the optional columns for the rest: :guilabel:`Family`, :guilabel:`Height (mm)`, :guilabel:`Width (mm)`, :guilabel:`Thickness (mm)`, :guilabel:`Diameter (mm)`, :guilabel:`Occurrences`, :guilabel:`Source`, :guilabel:`Confidence`, :guilabel:`Weight on drawing (kg)`, :guilabel:`Drawing text` and :guilabel:`Product action`. :guilabel:`Quantity on the drawing` and :guilabel:`Length on the drawing` are set when the quantity, or the length of one piece, is written on the drawing (in a parts list, a block attribute or a label); an estimate never changes them. For bolts the grade column becomes the :guilabel:`Property class`. A grade written on the drawing that is not in the material master is kept as :guilabel:`Grade on drawing`; the line is flagged and weighed with the density of steel until you choose a material."
+msgstr "A többihez használd a választható oszlopokat: :guilabel:`Szelvénycsalád`, :guilabel:`Magasság (mm)`, :guilabel:`Szélesség (mm)`, :guilabel:`Vastagság (mm)`, :guilabel:`Átmérő (mm)`, :guilabel:`Előfordulások`, :guilabel:`Forrás`, :guilabel:`Megbízhatóság`, :guilabel:`Tömeg a rajzon (kg)`, :guilabel:`Rajz szövege` és :guilabel:`Termékművelet`. A :guilabel:`Darabszám a rajzon` és a :guilabel:`Hossz a rajzon` akkor kap értéket, ha a mennyiség, illetve egy darab hossza a rajzon szerepel (darabjegyzékben, blokkattribútumban vagy felirat szövegében); a becslés ezeket soha nem módosítja. Csavaroknál a minőség oszlop :guilabel:`Szilárdsági osztály` lesz. A rajzon szereplő, de az anyagtörzsben nem található minőség :guilabel:`Minőség a rajzon` értékként megmarad; a sor megjelölésre kerül, és az acél sűrűségével számolja a rendszer a tömegét, amíg anyagot nem választasz."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:174
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:343
 msgid "When every line is right, click :guilabel:`Mark as reviewed`. Open conflicts are written in the chatter."
 msgstr "Ha minden sor rendben van, kattints az :guilabel:`Ellenőrzöttnek jelölés` gombra. A nyitott ütközések bekerülnek a chatterbe."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:178
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:347
 msgid "Weights and the steel section catalogue"
 msgstr "Tömegek és az acélszelvény-katalógus"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:180
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:349
 msgid "The weight of a line comes from the density of its material and from the mass per metre of the section."
 msgstr "Egy sor tömege az anyagának sűrűségéből és a szelvény folyóméter-tömegéből adódik."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:183
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:352
 msgid "The **catalogue** under :menuselection:`Manufacturing app --> Configuration --> Steel sections` holds the sections with their dimensions and mass per metre: IPE 80 to 600, HEA, HEB and HEM, UPN and UPE channels, and equal and unequal angles. The values follow EN 10365 and EN 10056-1 and are tabulated for steel of 7850 kg/m³. Manufacturing administrators can edit the catalogue."
 msgstr "A **katalógus** a :menuselection:`Gyártás alkalmazás --> Konfiguráció --> Acélszelvények` menüben a szelvényeket tartalmazza méreteikkel és folyóméter-tömegükkel: IPE 80-tól 600-ig, HEA, HEB és HEM, UPN és UPE U-acélok, valamint egyenlő és egyenlőtlen szárú szögacélok. Az értékek az EN 10365 és az EN 10056-1 szerintiek, és 7850 kg/m³ sűrűségű acélra vannak táblázatba foglalva. A gyártási adminisztrátorok szerkeszthetik a katalógust."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:187
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:356
 msgid "The tabulated mass is scaled by *density of the grade / 7850*, so the same section in stainless steel (7900 kg/m³) or aluminium (2700 kg/m³) is weighed correctly. A line without a grade is weighed as steel at 7850 kg/m³."
 msgstr "A táblázatos tömeg skálázása *az anyagminőség sűrűsége / 7850* szerint történik, így ugyanaz a szelvény rozsdamentes acélból (7900 kg/m³) vagy alumíniumból (2700 kg/m³) is helyesen számítódik. A minőség nélküli sor 7850 kg/m³ sűrűségű acélként számít."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:190
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:359
 msgid "**Hollow sections** are calculated from their dimensions with the corner radii of EN 10219-2 (SHS 100x100x4 is 11.73 kg/m); round hollow sections, flat bars and round bars from their geometry."
 msgstr "A **zártszelvények** tömege a méreteikből, az EN 10219-2 szerinti sarokgörbületi sugarakkal számítódik (az SHS 100x100x4 11,73 kg/m); a kör alakú zártszelvényeké, a laposacéloké és a köracéloké a geometriájukból."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:193
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:362
 msgid "**Plates** weigh width x length x thickness x density per piece (300x300x10 is 7.065 kg), and their area is given in m²."
 msgstr "A **lemezek** darabonkénti tömege szélesség x hosszúság x vastagság x sűrűség (a 300x300x10 7,065 kg), a területük pedig m²-ben van megadva."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:195
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:364
 msgid "**Z, C and Σ purlins** are calculated from the developed width of the section and its thickness. The generic geometry per height is stored in the catalogue and is editable; the server action :guilabel:`Recompute purlin weight from geometry` recalculates the mass after you change the flange or lip. Align the values with your supplier."
 msgstr "A **Z, C és Σ szelemenek** tömege a szelvény kifejtett szélességéből és vastagságából számítódik. A magasságonkénti általános geometria a katalógusban van tárolva, és szerkeszthető; a :guilabel:`Szelemen tömegének újraszámítása a geometriából` szerveroldali művelet az öv vagy az ajak módosítása után újraszámolja a tömeget. Igazítsd az értékeket a szállítódhoz."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:199
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:368
 msgid "**Bolts** are counted in pieces and add no weight to the totals."
 msgstr "A **csavarok** darabszám szerint számítanak, és nem adnak hozzá tömeget az összesítőkhöz."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:201
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:370
 msgid "For each line the list shows the :guilabel:`Unit weight` (per metre or per piece), the :guilabel:`Total length (m)`, the :guilabel:`Total area (m²)` and the :guilabel:`Total weight (kg)`. If nothing can be calculated, the weight written on the drawing is used."
 msgstr "A lista minden sorához megmutatja a :guilabel:`Fajlagos tömeg` (folyóméterenként vagy darabonként), a :guilabel:`Teljes hossz (m)`, a :guilabel:`Teljes terület (m²)` és az :guilabel:`Össztömeg (kg)` értéket. Ha semmi sem számítható, a rajzon szereplő tömeg érvényes."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:206
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:375
 msgid "Material summary and the two options"
 msgstr "Anyagösszesítő és a két változat"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:208
-msgid "The tab :guilabel:`Material summary` adds the lines up by kind of material and section: pieces, total length, area and weight. Click :guilabel:`Refresh` to rebuild it; it is also rebuilt whenever a line changes. The weights block above the tabs shows three totals:"
-msgstr "Az :guilabel:`Anyagösszesítő` fül anyagfajta és szelvény szerint összegzi a sorokat: darabszám, teljes hossz, terület és tömeg. Az újraépítéshez kattints a :guilabel:`Frissítés` gombra; minden soron végzett módosításkor is újraépül. A fülek feletti tömegblokk három összesítést mutat:"
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:377
+msgid "The tab :guilabel:`Material summary` adds the lines up by kind of material, section and grade: pieces, total length, area and weight. Equal pieces from different lists are therefore one row. The bill of materials and the procurement list add the lines up by product. Click :guilabel:`Refresh` to rebuild it; it is also rebuilt whenever a line changes. The weights block above the tabs shows three totals:"
+msgstr "Az :guilabel:`Anyagösszesítő` fül anyagfajta, szelvény és minőség szerint összegzi a sorokat: darabszám, teljes hossz, terület és tömeg. Az azonos elemek a különböző listákból ezért egy sorba kerülnek. Az anyagjegyzék és a beszerzési lista termékenként összegzi a sorokat. Az újraépítéshez kattints a :guilabel:`Frissítés` gombra; minden soron végzett módosításkor is újraépül. A fülek feletti tömegblokk három összesítést mutat:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:212
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:382
 msgid ":guilabel:`Option 1: without purlins (kg)`: the total weight without the purlin lines;"
 msgstr ":guilabel:`1. változat: szelemenek nélkül (kg)`: a szelemensorok nélküli össztömeg;"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:213
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:383
 msgid ":guilabel:`Purlins (kg)`: the weight of the purlins; and"
 msgstr ":guilabel:`Szelemenek (kg)`: a szelemenek tömege; és"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:214
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:384
 msgid ":guilabel:`Option 2: with purlins (kg)`: the total weight including the purlins."
 msgstr ":guilabel:`2. változat: szelemenekkel (kg)`: a szelemeneket is tartalmazó össztömeg."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:216
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:386
 msgid "A line is a purlin when its family is Z, C or Σ; the :guilabel:`Purlin` box can be changed by hand. Excluded lines are in no total."
 msgstr "Egy sor szelemen, ha a szelvénycsaládja Z, C vagy Σ; a :guilabel:`Szelemen` jelölőnégyzet kézzel módosítható. A kizárt sorok egyik összesítésben sem szerepelnek."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:219
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:389
 msgid "Use :guilabel:`PDF` or :guilabel:`Print summary` for the report *Material summary* (the summary, option 1, the purlins, option 2 and the lines to check), and :guilabel:`XLSX` for a spreadsheet with the summary and a sheet with the detailed lines."
 msgstr "Az *Anyagösszesítő* jelentéshez (az összesítő, az 1. változat, a szelemenek, a 2. változat és az ellenőrizendő sorok) használd a :guilabel:`PDF` vagy az :guilabel:`Összesítő nyomtatása` gombot, az összesítőt és egy, a részletes sorokat tartalmazó munkalapot tartalmazó táblázathoz pedig az :guilabel:`XLSX` gombot."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:224
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:394
 msgid "Limits"
 msgstr "Korlátok"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:226
-msgid "The label strategy cannot know quantities and lengths. They are left for you to review, or for the :doc:`AI bridge <../../../productivity/ai/cad_bom_import>` to suggest."
-msgstr "A címkestratégia nem ismerheti a mennyiségeket és a hosszakat. Ezeket neked kell ellenőrizned, vagy az :doc:`AI-híd <../../../productivity/ai/cad_bom_import>` javasolhatja őket."
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:396
+msgid "A label that does not state a quantity or a length leaves them open. They are left for you to review, or for the :doc:`AI bridge <../../../productivity/ai/cad_bom_import>` to suggest. A quantity that was counted from labels is only a guess and stays flagged."
+msgstr "Az a felirat, amely nem ad meg mennyiséget vagy hosszt, nyitva hagyja őket. Neked kell ellenőrizned őket, vagy az :doc:`AI-híd <../../../productivity/ai/cad_bom_import>` javasolhat értéket. A feliratokból megszámolt mennyiség csak találgatás, és megjelölve marad."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:228
-msgid "A parts list needs a header with at least three recognised columns. Rotated tables and tables that are split over several areas of the drawing are not joined."
-msgstr "Egy darabjegyzékhez legalább három felismert oszlopot tartalmazó fejléc szükséges. Az elforgatott táblázatokat és a rajz több területére szétosztott táblázatokat a rendszer nem fűzi össze."
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:399
+msgid "A parts list needs a header with at least three recognised columns. Rotated tables and tables that are split over several areas of the drawing are not joined. Spreadsheets pasted into the drawing are read (``.xls`` and ``.xlsx``), but reinforcement schedules are skipped."
+msgstr "A darabjegyzékhez legalább három felismert oszlopot tartalmazó fejléc kell. A forgatott táblázatokat és a rajz több területére szétosztott táblázatokat nem fűzi össze. A rajzba beillesztett táblázatkezelő-táblázatokat beolvassa (``.xls`` és ``.xlsx``), de a vasalási kimutatásokat kihagyja."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:230
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:402
 msgid "LibreDWG does not decode every DWG object (for example proxy entities). The contents of an ACAD_TABLE in a DWG are read from the graphics of the table, not from its cells."
 msgstr "A LibreDWG nem dekódol minden DWG-objektumot (például a proxy entitásokat). Egy DWG-ben lévő ACAD_TABLE tartalmát a táblázat grafikájából, nem a celláiból olvassa ki."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:232
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:404
 msgid "Purlin weights are generic until you align the catalogue with the supplier."
 msgstr "A szelemenek tömege általános érték, amíg a katalógust nem igazítod a szállítódhoz."
 
@@ -24367,90 +24726,94 @@ msgid "The importer gives every distinct material a **product key** of the form 
 msgstr "Az importáló minden különálló anyaghoz **termékkulcsot** rendel ``FAMILY|DESIGNATION|GRADE`` alakban, például ``SHS|100X100X4|S235JR``. A kilogrammban vásárolt lemezeknek vastagságonként egy kulcsuk van (``PLATE|T10|S235JR``); a darabra vásároltaknak méretenként egy (``PLATE|300X300X10|S235JR``). A kulcs a terméken a :guilabel:`CAD anyagkulcs` mezőben van tárolva."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:61
+msgid "The lines of the import stay one per row of the drawing or of the parts list. The products and the bill of materials add them up: equal materials are one product, and the bill of materials has one line per product."
+msgstr "Az importálás sorai továbbra is a rajz vagy a darabjegyzék soronkénti bontását követik. A termékek és az anyagjegyzék összeadja őket: az azonos anyagok egyetlen terméket alkotnak, az anyagjegyzékben pedig termékenként egy sor van."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:65
 msgid "For each line the product is found in this order:"
 msgstr "Minden sorhoz a terméket a következő sorrendben keresi a rendszer:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:63
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:67
 msgid "the product you chose on the line;"
 msgstr "a sorra választott termék;"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:64
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:68
 msgid "a product with the same CAD key;"
 msgstr "az azonos CAD-kulcsú termék;"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:65
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:69
 msgid "a product remembered in :menuselection:`Manufacturing app --> Configuration --> CAD product aliases`;"
 msgstr "a :menuselection:`Gyártás alkalmazás --> Konfiguráció --> CAD termék-álnevek` menüben megjegyzett termék;"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:67
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:71
 msgid "a product whose internal reference equals the key written with dashes (for products coded that way by hand);"
 msgstr "az a termék, amelynek belső hivatkozása megegyezik a kötőjelekkel írt kulccsal (a kézzel így kódolt termékeknél);"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:69
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:73
 msgid "a product with the same name, ignoring case, accents, spaces and separators; and"
 msgstr "az azonos nevű termék, a kis- és nagybetűk, ékezetek, szóközök és elválasztók figyelmen kívül hagyásával; és"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:70
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:74
 msgid "otherwise a new product is created. **Only missing products are created.**"
 msgstr "egyébként új terméket hoz létre. **Csak a hiányzó termékek jönnek létre.**"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:72
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:76
 msgid "A product you choose by hand on a line is remembered as an alias when the bill of materials is created, so the next import finds it. On the line, :guilabel:`Product action` shows whether the product is an existing one or will be created."
 msgstr "A sorra kézzel választott terméket az anyagjegyzék létrehozásakor álnévként megjegyzi a rendszer, így a következő import megtalálja. A soron a :guilabel:`Termékművelet` mutatja, hogy a termék meglévő-e, vagy létre fog jönni."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:76
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:80
 msgid "Created products are storable goods in a category per kind (*Steel materials*, with *Profiles*, *Hollow sections*, *Purlins*, *Bars*, *Plates*, *Bolts* and *Other materials*). Profiles, tubes, bars and purlins are measured in metres (the bill of materials quantity is the total length, the product weight is kg per metre), plates in kilograms or pieces according to the setting, bolts in units. They carry:"
 msgstr "A létrehozott termékek raktározott áruk, fajtánként egy kategóriában (*Acél anyagok*, azon belül *Szelvények*, *Zártszelvények*, *Szelemenek*, *Rudak*, *Lemezek*, *Csavarok* és *Egyéb anyagok*). A szelvények, csövek, rudak és szelemenek méterben vannak mérve (az anyagjegyzék mennyisége a teljes hossz, a termék tömege kg/méter), a lemezek a beállítástól függően kilogrammban vagy darabban, a csavarok egységben. Tartalmazzák:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:81
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:85
 msgid "their **main material**, the grade of the line, with its density;"
 msgstr "a **fő anyagukat**, a sor minőségét a sűrűségével együtt;"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:82
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:86
 msgid "their **shape and dimensions** in millimetres: I, H and U sections and angles as open profiles (height, width, web and flange thickness), Z, C and Σ purlins as open profiles, square and rectangular hollow sections as hollow sections, round hollow sections as tubes, flat bars and plates as cuboids, and round bars as cylinders; and"
 msgstr "az **alakjukat és méreteiket** milliméterben: az I, H és U szelvényeket és a szögacélokat nyitott szelvényként (magasság, szélesség, gerinc- és övvastagság), a Z, C és Σ szelemeneket nyitott szelvényként, a négyzetes és téglalap alakú zártszelvényeket zártszelvényként, a kör alakú zártszelvényeket csőként, a laposacélokat és lemezeket hasábként, a köracélokat pedig hengerként; és"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:86
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:90
 msgid "the **cross-section area** the import weighed with, with :guilabel:`Weight from Dimensions` switched on. The weight of the product therefore equals area x density and follows later changes of the material density."
 msgstr "az import által a tömeghez használt **keresztmetszeti területet**, bekapcsolt :guilabel:`Tömeg a méretekből` beállítással. A termék tömege így terület x sűrűség, és követi az anyag sűrűségének későbbi módosításait."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:90
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:94
 msgid "The importer never writes the internal reference itself. When the rules of the *default code* module are installed, they code the new product; otherwise the reference stays empty."
 msgstr "Az importáló soha nem írja be maga a belső hivatkozást. Ha az *alapértelmezett kód* modul szabályai telepítve vannak, azok kódolják az új terméket; egyébként a hivatkozás üres marad."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:93
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:97
 msgid "The **bill of materials** is made for a finished product named after the project or the import. It has one line per product (quantities of equal products are added up) and the reference ``CAD v1``, ``CAD v2``, and so on. A new bill of materials archives the previous ones of the import, so the history is kept; all versions are behind the :guilabel:`BoMs` button."
 msgstr "Az **anyagjegyzék** egy, a projektről vagy az importról elnevezett késztermékhez készül. Termékenként egy sora van (az azonos termékek mennyiségei összeadódnak), a hivatkozása pedig ``CAD v1``, ``CAD v2`` és így tovább. Az új anyagjegyzék archiválja az import korábbi anyagjegyzékeit, így az előzmények megmaradnak; minden verzió az :guilabel:`Anyagjegyzékek` gomb mögött található."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:101
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:105
 msgid "Procurement list"
 msgstr "Beszerzési lista"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:103
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:107
 msgid "Click :guilabel:`Procurement list` (or :guilabel:`Compute` on the tab :guilabel:`Procurement list`) to work out what to buy. The lines are grouped by product key."
 msgstr "A beszerzendők kiszámításához kattints a :guilabel:`Beszerzési lista` gombra (vagy a :guilabel:`Beszerzési lista` fülön a :guilabel:`Számítás` gombra). A sorokat a termékkulcs szerint csoportosítja a rendszer."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:106
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:110
 msgid "**Linear members** (profiles, tubes, bars, purlins): the *stock length* is the quantity of the product's first packaging (for example \"Bar 6 m\" with a quantity of 6 on a product in metres), and otherwise the stock length of the kind in the settings. The number of :guilabel:`Bars` is the larger of two figures: a first-fit-decreasing packing of the pieces into bars, and the total length plus the :guilabel:`Waste (%)` divided by the stock length. The :guilabel:`Purchase quantity` is bars x stock length. A piece longer than a stock bar is noted (\"joints needed\")."
 msgstr "**Szálas elemek** (szelvények, csövek, rudak, szelemenek): a *szálhossz* a termék első csomagolásának mennyisége (például a \"Bar 6 m\" csomagolás 6-os mennyiséggel egy méterben mért terméknél), egyébként a beállításokban megadott fajtánkénti szálhossz. A :guilabel:`Szálak` száma két érték közül a nagyobb: a darabok szálakba csomagolása first-fit-decreasing módszerrel, illetve a teljes hossz és a :guilabel:`Veszteség (%)` összege osztva a szálhosszal. A :guilabel:`Beszerzési mennyiség` a szálak száma szorozva a szálhosszal. Ha egy darab hosszabb egy szálnál, azt a rendszer jelzi (\"toldás szükséges\")."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:112
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:116
 msgid "**Plates**: the area in m² and the weight with waste, or pieces if plates are bought per piece."
 msgstr "**Lemezek**: a terület m²-ben és a tömeg veszteséggel együtt, illetve darab, ha a lemezeket darabra vásárolod."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:113
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:117
 msgid "**Bolts and others**: pieces."
 msgstr "**Csavarok és egyebek**: darab."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:115
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:119
 msgid "The columns show the :guilabel:`Net quantity`, :guilabel:`Stock length (m)`, the :guilabel:`Stock packaging` it came from, :guilabel:`Bars`, :guilabel:`Waste (%)`, :guilabel:`Purchase quantity` and the first :guilabel:`Vendor` of the product. Use :guilabel:`PDF` and :guilabel:`XLSX` for the report *Procurement list*."
 msgstr "Az oszlopok a következőket mutatják: :guilabel:`Nettó mennyiség`, :guilabel:`Szálhossz (m)`, a :guilabel:`Szálcsomagolás`, amelyből származik, :guilabel:`Szálak`, :guilabel:`Veszteség (%)`, :guilabel:`Beszerzési mennyiség` és a termék első :guilabel:`Szállítója`. A *Beszerzési lista* jelentéshez használd a :guilabel:`PDF` és az :guilabel:`XLSX` gombot."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:121
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:125
 msgid "Create requests for quotation"
 msgstr "Ajánlatkérések létrehozása"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:123
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:127
 msgid "Click :guilabel:`Create RFQs`, choose a :guilabel:`Default vendor` for the products that have no vendor, review the materials and confirm. The module creates the missing products, then one **draft** purchase order per vendor (the first vendor of each product, with its price and the packaging as the line packaging), converting the quantities to the purchase unit of measure. Lines without any vendor are reported to you. Nothing is confirmed: you confirm the requests for quotation yourself. They are listed behind the :guilabel:`RFQs` button."
 msgstr "Kattints az :guilabel:`Ajánlatkérések létrehozása` gombra, válassz egy :guilabel:`Alapértelmezett szállító` szállítót a szállító nélküli termékekhez, ellenőrizd az anyagokat, és erősítsd meg. A modul létrehozza a hiányzó termékeket, majd szállítónként egy **piszkozat** beszerzési rendelést (a termékek első szállítójától, az árával és a csomagolással mint sorcsomagolással), a mennyiségeket a beszerzési mértékegységre átváltva. A szállító nélküli sorokról tájékoztatást kapsz. Semmi sem lesz megerősítve: az ajánlatkéréseket te erősíted meg. Az :guilabel:`Ajánlatkérések` gomb mögött találhatók."
 
@@ -24526,7 +24889,8 @@ msgstr "Mit csinál"
 msgid ":guilabel:`DWG converter`"
 msgstr ":guilabel:`DWG-konverter`"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:65 ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:100
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:65
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:100
 msgid "empty"
 msgstr "üres"
 
@@ -24667,46 +25031,46 @@ msgid "Master data the import relies on"
 msgstr "Az import által használt törzsadatok"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:114
-msgid "**Materials.** Every line has a material grade. Grades are records of the material master (:menuselection:`Products --> Configuration --> Materials`), looked up by code, name and aliases, and their density drives the weights. The standard data contains S235JR, S275JR, S355J2, S460, 1.4301, 1.4404, EN AW-6060 and EN AW-6082; old designations such as OL37, St37-2 or Fe360 are aliases of S235JR. See :ref:`inventory/product_data/material`."
-msgstr "**Anyagok.** Minden sornak van anyagminősége. A minőségek az anyagtörzs rekordjai (:menuselection:`Termékek --> Konfiguráció --> Anyagok`), kód, név és alias nevek alapján keresi meg őket a rendszer, és a sűrűségük határozza meg a tömegeket. A szabványos adatok között szerepel az S235JR, S275JR, S355J2, S460, 1.4301, 1.4404, EN AW-6060 és EN AW-6082; az OL37, St37-2 vagy Fe360 jellegű régi jelölések az S235JR alias nevei. Lásd: :ref:`inventory/product_data/material`."
+msgid "**Materials.** Every line has a material grade. Grades are records of the material master (:menuselection:`Products --> Configuration --> Materials`), looked up by code, name and aliases, and their density drives the weights. The standard data contains the EN 10025-2 qualities S235JR, S235J0, S235J2, S275JR, S275J0, S275J2, S355JR, S355J0, S355J2 and S355K2, and also S460, 1.4301, 1.4404, EN AW-6060 and EN AW-6082. A grade written on a drawing matches its exact quality, and old designations such as OL37, St37-2 or Fe360 are aliases of S235JR. See :ref:`inventory/product_data/material`."
+msgstr "**Anyagok.** Minden sornak van anyagminősége. A minőségek az anyagtörzs rekordjai (:menuselection:`Termékek --> Konfiguráció --> Anyagok`), kód, név és alias nevek alapján keresi meg őket a rendszer, és a sűrűségük határozza meg a tömegeket. A szabványos adatok az EN 10025-2 minőségeit tartalmazzák: S235JR, S235J0, S235J2, S275JR, S275J0, S275J2, S355JR, S355J0, S355J2 és S355K2, továbbá az S460, 1.4301, 1.4404, EN AW-6060 és EN AW-6082 anyagokat. A rajzon szereplő minőség a pontos minőségével egyezik, az OL37, St37-2 vagy Fe360 jellegű régi jelölések pedig az S235JR alias nevei. Lásd: :ref:`inventory/product_data/material`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:119
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:121
 msgid "**Product dimensions.** Products created by the import carry their shape, dimensions and cross-section area, so that their weight follows the material density. See :ref:`inventory/product_data/dimensions`."
 msgstr "**Termékméretek.** Az importtal létrehozott termékek hordozzák az alakjukat, méreteiket és keresztmetszeti területüket, így a tömegük követi az anyag sűrűségét. Lásd: :ref:`inventory/product_data/dimensions`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:122
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:124
 msgid "**Packaging.** If you buy a product in fixed bar lengths, add a packaging such as \"Bar 6 m\" with a quantity of 6 to the product. The procurement list and the request for quotation then use it."
 msgstr "**Csomagolás.** Ha egy terméket rögzített szálhosszakban vásárolsz, adj a termékhez egy \"Bar 6 m\" jellegű csomagolást 6-os mennyiséggel. A beszerzési lista és az ajánlatkérés ezt használja."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:133
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:135
 msgid "Can"
 msgstr "Jogosultság"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:134
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:136
 msgid "*Manufacturing / User*"
 msgstr "*Gyártás / Felhasználó*"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:135
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:137
 msgid "Create and edit imports, lines, summaries and procurement lists, use the wizards, read the steel section catalogue and read and write the product aliases. Imports cannot be deleted."
 msgstr "Importok, sorok, összesítők és beszerzési listák létrehozása és szerkesztése, a varázslók használata, az acélszelvény-katalógus olvasása, valamint a termék-álnevek olvasása és írása. Az importok nem törölhetők."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:137
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:139
 msgid "*Manufacturing / Administrator*"
 msgstr "*Gyártás / Adminisztrátor*"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:138
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:140
 msgid "Everything, including deleting imports, creating bills of materials, and editing the steel section catalogue and the CAD product aliases."
 msgstr "Minden, beleértve az importok törlését, az anyagjegyzékek létrehozását, valamint az acélszelvény-katalógus és a CAD termék-álnevek szerkesztését."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:140
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:142
 msgid "*Sales* users"
 msgstr "*Értékesítés* felhasználók"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:141
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:143
 msgid "Read the import linked on a quotation."
 msgstr "Az árajánlathoz kapcsolt import olvasása."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:143
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:145
 msgid "The imports are separated by company."
 msgstr "Az importok vállalatok szerint vannak elkülönítve."
 
@@ -24774,95 +25138,95 @@ msgstr "Hivatkozási értékek a jellemzőkön és a kategóriákon"
 msgid "So that a reference stays short, an attribute value carries a separate :guilabel:`Product Reference Value` (for example `BLK` for the colour *Black*), used instead of its full name when a rule's line is set to use the reference value. Product categories carry a :guilabel:`Sequence for default code`, which lets the sequence part of a reference be counted per category."
 msgstr "Hogy a hivatkozás rövid maradjon, a jellemzőérték külön :guilabel:`Product Reference Value` értéket hordoz (például `BLK` a *Fekete* színhez), amelyet a rendszer a teljes név helyett használ, ha a szabály sora a hivatkozási értéket kéri. A termékkategóriákon egy :guilabel:`Sequence for default code` mező található, amellyel a hivatkozás sorszám része kategóriánként számolható."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:183
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:212
 msgid "Product stages"
 msgstr "Termékszakaszok"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:185
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:214
 msgid "``eyssen_product_stage`` gives every product a lifecycle :guilabel:`Stage`, and lets each stage decide what may be done with the product. This is how an unfinished product record is kept out of quotations, orders and deliveries until its data is complete."
 msgstr "Az ``eyssen_product_stage`` modul minden terméknek életciklus-:guilabel:`Szakaszt` ad, és minden szakasz maga dönti el, mit lehet a termékkel tenni. Így tartható távol a befejezetlen termékrekord az árajánlatoktól, megrendelésektől és kiszállításoktól, amíg az adatai nem teljesek."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:189
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:218
 msgid "Stages are configured under :menuselection:`Products --> Configuration --> Product Stages`. A stage has:"
 msgstr "A szakaszokat a :menuselection:`Termékek --> Konfiguráció --> Product Stages` menüben lehet beállítani. Egy szakasz részei:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:191
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:220
 msgid "a translatable :guilabel:`Name`, a :guilabel:`Sequence`, a :guilabel:`Color` and an :guilabel:`Active` flag;"
 msgstr "lefordítható :guilabel:`Név`, :guilabel:`Sorszám`, :guilabel:`Szín` és :guilabel:`Aktív` jelző;"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:193
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:222
 msgid ":guilabel:`Required Fields` and :guilabel:`Required Attributes` — what must be filled in on the product before it can reach the stage;"
 msgstr ":guilabel:`Required Fields` és :guilabel:`Required Attributes` — mit kell kitölteni a terméken, hogy elérhesse a szakaszt;"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:195
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:224
 msgid ":guilabel:`Groups` and :guilabel:`Users` — who may move a product into the stage;"
 msgstr ":guilabel:`Groups` és :guilabel:`Users` — ki helyezheti a terméket a szakaszba;"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:196
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:225
 msgid "the permission switches :guilabel:`Allow Sale Order Send`, :guilabel:`Allow Sale Order Confirm`, :guilabel:`Allow Purchase Order Send`, :guilabel:`Allow Purchase Order Confirm`, :guilabel:`Allow Stock Picking` and :guilabel:`Allow Account Move`, all enabled by default; and"
 msgstr "az :guilabel:`Allow Sale Order Send`, :guilabel:`Allow Sale Order Confirm`, :guilabel:`Allow Purchase Order Send`, :guilabel:`Allow Purchase Order Confirm`, :guilabel:`Allow Stock Picking` és :guilabel:`Allow Account Move` engedélykapcsolók, amelyek alapértelmezetten mind be vannak kapcsolva; valamint"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:199
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:228
 msgid ":guilabel:`Create Reference`, which generates the product's internal reference (see above) when it does not have one yet."
 msgstr "a :guilabel:`Create Reference`, amely előállítja a termék belső hivatkozását (lásd feljebb), ha még nincs neki."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:211
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:240
 msgid "The product's :guilabel:`Stage` is tracked in the chatter, and a product variant inherits the stage of its template. When a document contains a product whose stage does not allow the operation, that action — sending or confirming a quotation, sending or confirming a purchase order, validating a transfer, or posting an invoice — is blocked with an error naming the product."
 msgstr "A termék :guilabel:`Szakasz` mezőjét a rendszer a chatterben követi, a termékváltozat pedig a sablonja szakaszát örökli. Ha egy bizonylaton olyan termék szerepel, amelynek a szakasza nem engedi a műveletet, a rendszer letiltja azt — árajánlat kiküldését vagy megerősítését, beszerzési megrendelés kiküldését vagy megerősítését, átvezetés érvényesítését, illetve számla könyvelését —, és a hibaüzenet megnevezi a terméket."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:226
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:255
 msgid "Seasons"
 msgstr "Szezonok"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:228
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:257
 msgid "``eyssen_product_season`` groups products into selling seasons. A season (:menuselection:`Sales --> Configuration --> Szezonok`) has a name, a start and an end date, a colour and the list of products that belong to it, with a counter showing how many products it contains. On the product form, a product can belong to several seasons at once."
 msgstr "Az ``eyssen_product_season`` modul értékesítési szezonokba csoportosítja a termékeket. Egy szezonnak (:menuselection:`Értékesítés --> Konfiguráció --> Szezonok`) van neve, kezdő- és záródátuma, színe, valamint a hozzá tartozó termékek listája, egy számlálóval, amely a termékek számát mutatja. A termék űrlapján egy termék egyszerre több szezonhoz is tartozhat."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:234
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:263
 msgid "The labels of this module are currently Hungarian in the source code (*Szezon*, *Szezon kezdete*, *Szezon vége*, *Termékek*), so they appear in Hungarian regardless of the interface language until translations are added."
 msgstr "A modul feliratai jelenleg magyarul vannak a forráskódban (*Szezon*, *Szezon kezdete*, *Szezon vége*, *Termékek*), így a felület nyelvétől függetlenül magyarul jelennek meg, amíg nem készül hozzájuk fordítás."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:342
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:371
 msgid "Product image in list views"
 msgstr "Termékkép a listanézetekben"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:344
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:373
 msgid "``eyssen_product_list_view_image`` adds the product image as a small thumbnail column to the products and product variants **list** views, so a catalog can be scanned visually without switching to the kanban view. The column is shown by default and can be hidden from the optional-column selector."
 msgstr "Az ``eyssen_product_list_view_image`` modul kis bélyegkép oszlopként adja hozzá a termékképet a termékek és a termékváltozatok **lista**\\ nézetéhez, így a katalógus a kanban nézetre váltás nélkül is szemmel átfutható. Az oszlop alapértelmezetten látszik, és az opcionális oszlopválasztóból elrejthető."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:350
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:379
 msgid "Bulk media upload"
 msgstr "Csoportos médiafeltöltés"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:352
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:381
 msgid "``product_media`` speeds up maintaining a product's extra images:"
 msgstr "A ``product_media`` modul felgyorsítja a termék további képeinek karbantartását:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:354
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:383
 msgid "an :guilabel:`Upload Media` action takes several files at once and creates one extra product image per file, named after the file;"
 msgstr "az :guilabel:`Upload Media` művelet egyszerre több fájlt vesz át, és fájlonként egy-egy további termékképet hoz létre, a fájlról elnevezve;"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:356
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:385
 msgid "an :guilabel:`Set as Main Image` action on an extra image swaps it with the product's main image; and"
 msgstr "egy további képen a :guilabel:`Set as Main Image` művelet felcseréli azt a termék főképével; valamint"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:358
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:387
 msgid "a :guilabel:`Delete All Extra Media` action clears every extra image of a product in one step."
 msgstr "a :guilabel:`Delete All Extra Media` művelet egy lépésben törli a termék összes további képét."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:361
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:390
 msgid "This module targets the webshop's product gallery. The webshop-side presentation of those images is documented with the **Website** application."
 msgstr "Ez a modul a webshop termékgalériáját célozza. Ezeknek a képeknek a webshop-oldali megjelenítése a **Weboldal** alkalmazás dokumentációjában szerepel."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:365
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:394
 msgid "Bill of materials on the product form"
 msgstr "Anyagjegyzék a termék űrlapján"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:367
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:396
 msgid "``eyssen_mrp_bom_on_product`` makes a product's bill of materials editable directly on the product form, instead of only in the **Manufacturing** app. A :guilabel:`Selected BoM` field picks which bill of materials is shown, and the fields below it — :guilabel:`Reference`, :guilabel:`BoM Type`, :guilabel:`Quantity`, :guilabel:`Unit of Measure`, the component lines, the by-products, the operations, :guilabel:`Manufacturing Readiness`, :guilabel:`Operation Type`, :guilabel:`Flexible Consumption`, :guilabel:`Operation Dependencies`, :guilabel:`Manufacturing Lead Time` and :guilabel:`Days to prepare Manufacturing Order` — all edit that bill of materials in place. Buttons step through the product's bills of materials and create a new one, and the component and by-product lists can be filled from the :doc:`product catalog <../warehouses_storage/inventory_management/product_catalog>`."
 msgstr "Az ``eyssen_mrp_bom_on_product`` modul közvetlenül a termék űrlapján szerkeszthetővé teszi a termék anyagjegyzékét, nem csak a **Gyártás** alkalmazásban. A :guilabel:`Selected BoM` mező választja ki a megjelenített anyagjegyzéket, az alatta lévő mezők pedig — :guilabel:`Hivatkozás`, :guilabel:`BoM Type`, :guilabel:`Mennyiség`, :guilabel:`Mértékegység`, az összetevősorok, a melléktermékek, a műveletek, a :guilabel:`Manufacturing Readiness`, a :guilabel:`Művelettípus`, a :guilabel:`Flexible Consumption`, az :guilabel:`Operation Dependencies`, a :guilabel:`Gyártási átfutási idő` és a :guilabel:`Gyártási megrendelés előkészítésének napjai` — mind helyben szerkesztik az adott anyagjegyzéket. Gombokkal lehet végiglépni a termék anyagjegyzékein és újat létrehozni, az összetevő- és melléktermék-listák pedig a :doc:`termékkatalógusból <../warehouses_storage/inventory_management/product_catalog>` is feltölthetők."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:379
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:408
 msgid ":doc:`Bills of materials <../../manufacturing/basic_setup/bill_configuration>`"
 msgstr ":doc:`Anyagjegyzékek <../../manufacturing/basic_setup/bill_configuration>`"
 
@@ -25674,7 +26038,8 @@ msgstr "Telepítse az *ADR Dangerous Goods* modult (``l10n_eu_product_adr``). A 
 msgid "The shipped catalog is generated from a public spreadsheet. The specification itself sometimes lists several options or additional restrictions for one entry, and that complexity is **not** encoded in the data. Verify each dangerous good used in the database against the current specification, and adjust it to the situation in the warehouse."
 msgstr "A modullal szállított katalógus egy nyilvános táblázatból készült. Maga az előírás egy-egy tételhez időnként több lehetőséget vagy további korlátozásokat is megad, és ez az összetettség **nincs** leképezve az adatokban. Ellenőrizze az adatbázisban használt minden veszélyes árut a hatályos előírás alapján, és igazítsa azt a raktárban fennálló helyzethez."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/dangerous_goods.rst:29 ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/dangerous_goods.rst:29
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:128
 msgid "Access rights"
 msgstr "Hozzáférési jogosultságok"
 
@@ -36839,3 +37204,46 @@ msgstr "Ha a *Supplier Product Management* modul telepítve van, minden beszáll
 
 #~ msgid "Once any desired changes have been made, click :guilabel:`New` (via the breadcrumbs, at the top of the page) to navigate back to the blanket order form. Then, click :guilabel:`Confirm` to save this new purchase agreement."
 #~ msgstr "Miután a kívánt módosításokat elvégezték, kattintson a :guilabel:`Új` gombra (a kenyérmorzsákon keresztül, az oldal tetején), hogy visszatérjen a keretszerződés űrlapra. Ezután kattintson a :guilabel:`Megerősítés` gombra, hogy elmentse ezt az új beszerzési megállapodást."
+
+
+#~ msgid "The search box of the list finds a material by name, code or alias. When another module looks up a designation (the CAD import does, for the grades written on a drawing), the comparison ignores case, accents, spaces, dashes and dots, so ``St 37-2`` finds the material that lists ``St37-2``. There is no approximate match: a designation that is not in the master, such as S275J0 when only S275JR exists, is not replaced by a similar one."
+#~ msgstr "A lista keresőmezője név, kód vagy alias alapján talál anyagot. Ha egy másik modul jelölés alapján keres (a CAD-importálás így keresi a rajzon szereplő anyagminőségeket), az összehasonlítás figyelmen kívül hagyja a kis- és nagybetűt, az ékezeteket, a szóközöket, a kötőjeleket és a pontokat, így az ``St 37-2`` megtalálja azt az anyagot, amelynek aliasai közt ``St37-2`` szerepel. Hozzávetőleges egyezés nincs: az a jelölés, amely nincs a törzsben (például S275J0, ha csak S275JR van), nem cserélődik hasonlóra."
+
+#~ msgid "The standard data contains three groups and eight materials:"
+#~ msgstr "A szabványos adatok három csoportot és nyolc anyagot tartalmaznak:"
+
+#~ msgid "A steel structure fabricator usually receives the project documentation as a DWG (sometimes DXF) drawing. The drawing may contain a parts list, position blocks with attributes, or nothing but position labels next to the members (\"R1 / 100x100x4\", \"GM1 / U180\", \"PM 2 / 300x300x10\", \"Bolt / M 16\"). The eYssen module **CAD Bill of Materials Import** (``mrp_cad_bom_import``) turns such a drawing into:"
+#~ msgstr "Az acélszerkezet-gyártó a projektdokumentációt általában DWG (néha DXF) rajzként kapja meg. A rajzon lehet darabjegyzék, attribútumos pozíciókészlet-blokkok, vagy csupán a szerkezeti elemek mellett álló tételjel-feliratok („R1 / 100x100x4”, „GM1 / U180”, „PM 2 / 300x300x10”, „Bulon / M 16”). Az eYssen **CAD Bill of Materials Import** modul (``mrp_cad_bom_import``) az ilyen rajzból a következőket készíti:"
+
+#~ msgid "a material summary by kind of material, with the total weight without and with purlins;"
+#~ msgstr "anyagfajtánkénti anyagösszesítő, a teljes tömeggel szelemenek nélkül és szelemenekkel;"
+
+#~ msgid "Click :guilabel:`Parse drawings`."
+#~ msgstr "Kattints a :guilabel:`Rajzok feldolgozása` gombra."
+
+#~ msgid "The importer tries three strategies in order. The first one that finds lines wins; the label strategy runs only when the others found nothing. The :guilabel:`Source` of every line shows which one produced it: :guilabel:`Parts list table`, :guilabel:`Block attributes`, :guilabel:`Labels`, :guilabel:`Manual` or :guilabel:`AI suggestion`."
+#~ msgstr "Az importáló három stratégiát próbál ki sorrendben. Az első, amelyik sorokat talál, nyer; a feliratstratégia csak akkor fut, ha a többi semmit sem talált. Minden sor :guilabel:`Forrás` mezője megmutatja, melyik hozta létre: :guilabel:`Darabjegyzék-táblázat`, :guilabel:`Blokkattribútumok`, :guilabel:`Feliratok`, :guilabel:`Kézi` vagy :guilabel:`AI-javaslat`."
+
+#~ msgid "**The number of labels is not the quantity.** The same member is labelled in several views and sometimes several times in one view. The label strategy therefore stores the count as :guilabel:`Occurrences`, sets the quantity to 1, leaves the length empty and flags the line :guilabel:`To review`. Only an explicit text such as ``4 buc``, ``2 db``, ``n=2`` or ``L=2500`` fills the quantity or the length. Without a length, a linear member has no weight until you enter it (or accept an :doc:`AI suggestion <../../../productivity/ai/cad_bom_import>`)."
+#~ msgstr "**A feliratok száma nem a mennyiség.** Ugyanazt az elemet több nézeten, néha egy nézeten belül többször is felirattal látják el. A feliratstratégia ezért a számot az :guilabel:`Előfordulások` mezőben tárolja, a mennyiséget 1-re állítja, a hosszt üresen hagyja, a sort pedig :guilabel:`Ellenőrizendő` jelzéssel látja el. Csak egy kifejezett szöveg, például ``4 buc``, ``2 db``, ``n=2`` vagy ``L=2500`` tölti ki a mennyiséget vagy a hosszt. Hossz nélkül a hosszirányú elemnek nincs tömege, amíg meg nem adod (vagy el nem fogadsz egy :doc:`AI-javaslatot <../../../productivity/ai/cad_bom_import>`)."
+
+#~ msgid "``PL 10x300x400``, ``PL10``, ``t=12``, ``Tablă 2x1000x2000``"
+#~ msgstr "``PL 10x300x400``, ``PL10``, ``t=12``, ``Tablă 2x1000x2000``"
+
+#~ msgid "``PL 300x400x10``"
+#~ msgstr "``PL 300x400x10``"
+
+#~ msgid "Use the optional columns for the rest: :guilabel:`Family`, :guilabel:`Height (mm)`, :guilabel:`Width (mm)`, :guilabel:`Thickness (mm)`, :guilabel:`Diameter (mm)`, :guilabel:`Occurrences`, :guilabel:`Source`, :guilabel:`Confidence`, :guilabel:`Weight on drawing (kg)`, :guilabel:`Drawing text` and :guilabel:`Product action`. For bolts the grade column becomes the :guilabel:`Property class`. A grade written on the drawing that is not in the material master is kept as :guilabel:`Grade on drawing`; the line is flagged and weighed with the density of steel until you choose a material."
+#~ msgstr "A többihez használd a választható oszlopokat: :guilabel:`Szelvénycsalád`, :guilabel:`Magasság (mm)`, :guilabel:`Szélesség (mm)`, :guilabel:`Vastagság (mm)`, :guilabel:`Átmérő (mm)`, :guilabel:`Előfordulások`, :guilabel:`Forrás`, :guilabel:`Megbízhatóság`, :guilabel:`Tömeg a rajzon (kg)`, :guilabel:`Rajz szövege` és :guilabel:`Termékművelet`. Csavaroknál a minőség oszlop :guilabel:`Szilárdsági osztály` lesz. A rajzon szereplő, de az anyagtörzsben nem található minőség :guilabel:`Minőség a rajzon` értékként megmarad; a sor megjelölésre kerül, és az acél sűrűségével számolja a rendszer a tömegét, amíg anyagot nem választasz."
+
+#~ msgid "The tab :guilabel:`Material summary` adds the lines up by kind of material and section: pieces, total length, area and weight. Click :guilabel:`Refresh` to rebuild it; it is also rebuilt whenever a line changes. The weights block above the tabs shows three totals:"
+#~ msgstr "Az :guilabel:`Anyagösszesítő` fül anyagfajta és szelvény szerint összegzi a sorokat: darabszám, teljes hossz, terület és tömeg. Az újraépítéshez kattints a :guilabel:`Frissítés` gombra; minden soron végzett módosításkor is újraépül. A fülek feletti tömegblokk három összesítést mutat:"
+
+#~ msgid "The label strategy cannot know quantities and lengths. They are left for you to review, or for the :doc:`AI bridge <../../../productivity/ai/cad_bom_import>` to suggest."
+#~ msgstr "A címkestratégia nem ismerheti a mennyiségeket és a hosszakat. Ezeket neked kell ellenőrizned, vagy az :doc:`AI-híd <../../../productivity/ai/cad_bom_import>` javasolhatja őket."
+
+#~ msgid "A parts list needs a header with at least three recognised columns. Rotated tables and tables that are split over several areas of the drawing are not joined."
+#~ msgstr "Egy darabjegyzékhez legalább három felismert oszlopot tartalmazó fejléc szükséges. Az elforgatott táblázatokat és a rajz több területére szétosztott táblázatokat a rendszer nem fűzi össze."
+
+#~ msgid "**Materials.** Every line has a material grade. Grades are records of the material master (:menuselection:`Products --> Configuration --> Materials`), looked up by code, name and aliases, and their density drives the weights. The standard data contains S235JR, S275JR, S355J2, S460, 1.4301, 1.4404, EN AW-6060 and EN AW-6082; old designations such as OL37, St37-2 or Fe360 are aliases of S235JR. See :ref:`inventory/product_data/material`."
+#~ msgstr "**Anyagok.** Minden sornak van anyagminősége. A minőségek az anyagtörzs rekordjai (:menuselection:`Termékek --> Konfiguráció --> Anyagok`), kód, név és alias nevek alapján keresi meg őket a rendszer, és a sűrűségük határozza meg a tömegeket. A szabványos adatok között szerepel az S235JR, S275JR, S355J2, S460, 1.4301, 1.4404, EN AW-6060 és EN AW-6082; az OL37, St37-2 vagy Fe360 jellegű régi jelölések az S235JR alias nevei. Lásd: :ref:`inventory/product_data/material`."

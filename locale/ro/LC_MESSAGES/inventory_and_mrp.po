@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-08 17:35+0200\n"
+"POT-Creation-Date: 2026-10-14 16:00+0000\n"
 "PO-Revision-Date: 2025-11-13 20:11+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -9812,1163 +9812,1518 @@ msgstr "Conversia în unități standard"
 msgid "The module can convert a quantity in any unit of a *Length / Distance*, *Surface*, *Volume*, *Weight* or *Specific Gravity* category to the standard unit of its type: metre (m), square metre (m²), cubic metre (m³), kilogram (kg) and kg/m³. Other modules use this to compute with physical quantities: for instance, the density of a material may be entered in g/cm³ or kg/m³, and the weight computed from the dimensions of a product is converted into the company's weight unit. Units of the types *Unit* and *Time* are not physical quantities; converting them raises the error \"The unit of measure cannot be converted to a physical quantity\"."
 msgstr "Modulul poate converti o cantitate exprimată în orice unitate dintr-o categorie *Lungime / Distanță*, *Suprafață*, *Volum*, *Greutate* sau *Greutate specifică* în unitatea standard a tipului său: metru (m), metru pătrat (m²), metru cub (m³), kilogram (kg) și kg/m³. Alte module folosesc această conversie pentru a calcula cu mărimi fizice: de exemplu, densitatea unui material poate fi introdusă în g/cm³ sau kg/m³, iar greutatea calculată din dimensiunile unui produs este convertită în unitatea de greutate a companiei. Unitățile de tip *Unitate* și *Timp* nu sunt mărimi fizice; la conversia lor apare eroarea \"The unit of measure cannot be converted to a physical quantity\"."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:5
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:5
 msgid "The eYssen modules on this page extend the product record itself: they add a dedicated **Products** app menu, a rule-driven internal reference generator, a material master with densities and a material composition, a product lifecycle stage that can gate sales and purchases, seasons, computed dimensions and weights, product images in list views and bulk media upload. Every module is independent — install only the ones a company needs."
 msgstr "Modulele eYssen de pe această pagină extind chiar fișa produsului: adaugă un meniu de aplicație **Produse** dedicat, un generator de referințe interne bazat pe reguli, un registru de materiale cu densități și o compoziție a materialelor, o etapă din ciclul de viață al produsului care poate condiționa vânzările și achizițiile, sezoane, dimensiuni și greutăți calculate, imagini ale produselor în listele de vizualizare și încărcarea în masă a fișierelor media. Fiecare modul este independent: instalează-le doar pe cele de care are nevoie compania."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:91
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:91
 msgid "Materials and material composition"
 msgstr "Materiale și compoziția materialelor"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:93
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:93
 msgid "``eyssen_product_material`` keeps a master list of materials. It records what a product is made of, in percentages, which is required for textile and footwear labelling among others, and it holds the technical data (grade, standard and density) that weight calculations need, for example for steel structures (see :doc:`../../manufacturing/cad_bom_import`)."
 msgstr "``eyssen_product_material`` păstrează o listă principală de materiale. Înregistrează din ce este făcut un produs, în procente, lucru necesar, printre altele, pentru etichetarea articolelor textile și a încălțămintei, și conține datele tehnice (calitate, standard și densitate) de care au nevoie calculele de greutate, de exemplu pentru structuri metalice (vezi :doc:`../../manufacturing/cad_bom_import`)."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:98
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:98
 msgid "The materials are maintained under :menuselection:`Products --> Configuration --> Materials`. Each material has a translatable :guilabel:`Material Name` and belongs to a :guilabel:`Material Group` (for example *Upper*, *Lining*, *Sole*, or *Steel (structural)*); a group has a translatable :guilabel:`Group Name` and a :guilabel:`Sequence` that orders the groups on a product. In addition, a material has:"
 msgstr "Materialele se întrețin la :menuselection:`Produse --> Configurare --> Materiale`. Fiecare material are un :guilabel:`Numele materialului` care poate fi tradus și aparține unui :guilabel:`Grup de materiale` (de exemplu *Față*, *Căptușeală*, *Talpă* sau *Oțel (structural)*); un grup are un :guilabel:`Nume grup` care poate fi tradus și o :guilabel:`Secvență` care ordonează grupurile pe un produs. În plus, un material are:"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:104
 msgid "a :guilabel:`Code`, the short designation of the material or grade, such as ``S235JR``, ``1.4301`` or ``EN AW-6060``;"
 msgstr "un :guilabel:`Cod`, denumirea scurtă a materialului sau a calității, cum ar fi ``S235JR``, ``1.4301`` sau ``EN AW-6060``;"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:106
 msgid "a :guilabel:`Standard` that defines it, such as EN 10025-2;"
 msgstr "un :guilabel:`Standard` care îl definește, de exemplu EN 10025-2;"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:107
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:107
 msgid ":guilabel:`Aliases`, other designations of the same material separated by commas (for example ``OL37, St37-2, Fe360`` for S235JR); and"
 msgstr ":guilabel:`Denumiri alternative`, alte denumiri ale aceluiași material, separate prin virgule (de exemplu ``OL37, St37-2, Fe360`` pentru S235JR); și"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:109
 msgid "a :guilabel:`Density` with its :guilabel:`Density Unit` (a unit of the *Specific Gravity* category, kg/m³ by default). :guilabel:`Density (kg/m³)` shows the value converted to kg/m³, which is the value used in computations."
 msgstr "o :guilabel:`Densitate` cu :guilabel:`Unitate densitate` (o unitate din categoria *Greutate specifică*, implicit kg/m³). :guilabel:`Densitate (kg/m³)` arată valoarea convertită în kg/m³, care este valoarea folosită în calcule."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:113
-msgid "The search box of the list finds a material by name, code or alias. When another module looks up a designation (the CAD import does, for the grades written on a drawing), the comparison ignores case, accents, spaces, dashes and dots, so ``St 37-2`` finds the material that lists ``St37-2``. There is no approximate match: a designation that is not in the master, such as S275J0 when only S275JR exists, is not replaced by a similar one."
-msgstr "Câmpul de căutare al listei găsește un material după nume, cod sau denumire alternativă. Când un alt modul caută o denumire (importul CAD o face pentru calitățile scrise pe un desen), comparația ignoră majusculele, diacriticele, spațiile, cratimele și punctele, astfel încât ``St 37-2`` găsește materialul care are ``St37-2`` în listă. Nu există potrivire aproximativă: o denumire care nu se află în registru, cum ar fi S275J0 când există doar S275JR, nu este înlocuită cu una asemănătoare."
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:113
+msgid "The search box of the list finds a material by name, code or alias. When another module looks up a designation (the CAD import does, for the grades written on a drawing), the comparison ignores case, accents, spaces, dashes and dots, so ``St 37-2`` finds the material that lists ``St37-2``. There is no approximate match: a designation that is not in the master, such as S275N, is not replaced by a similar one. The qualities of EN 10025-2 are separate materials, so a grade written on a drawing matches its exact quality (S355J0 is not read as S355J2)."
+msgstr "Câmpul de căutare al listei găsește un material după nume, cod sau denumire alternativă. Când un alt modul caută o denumire (importul CAD o face pentru calitățile scrise pe un desen), comparația ignoră majusculele, diacriticele, spațiile, cratimele și punctele, astfel încât ``St 37-2`` găsește materialul care are ``St37-2`` în listă. Nu există potrivire aproximativă: o denumire care nu se află în registru, cum ar fi S275N, nu este înlocuită cu una asemănătoare. Calitățile din EN 10025-2 sunt materiale separate, deci o calitate scrisă pe un desen se potrivește cu calitatea sa exactă (S355J0 nu este citit ca S355J2)."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:119
-msgid "The standard data contains three groups and eight materials:"
-msgstr "Datele standard conțin trei grupuri și opt materiale:"
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:120
+msgid "The standard data contains three groups and fifteen materials:"
+msgstr "Datele standard conțin trei grupuri și cincisprezece materiale:"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:126
 msgid "Material"
 msgstr "Material"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:126 ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:127
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:134
 msgid "Group"
 msgstr "Grup"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:128
 msgid "Standard"
 msgstr "Standard"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:128
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:129
 msgid "Density (kg/m³)"
 msgstr "Densitate (kg/m³)"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:130
 msgid "S235JR (aliases S235, OL37, St37-2, Fe360, ...)"
 msgstr "S235JR (denumiri alternative S235, OL37, St37-2, Fe360, ...)"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:130 ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:134 ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:138 ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:142
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:131
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:135
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:155
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:171
 msgid "Steel (structural)"
 msgstr "Oțel (structural)"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:131 ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:135 ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:136
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:144
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:148
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:156
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:164
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:168
 msgid "EN 10025-2"
 msgstr "EN 10025-2"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:132 ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:136 ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:140 ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:144
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:145
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:153
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:157
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:165
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:173
 msgid "7850"
 msgstr "7850"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:134
+msgid "S235J0 (S235J0G2, St37-3U, Fe360C)"
+msgstr "S235J0 (S235J0G2, St37-3U, Fe360C)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:138
+msgid "S235J2 (S235J2G3, St37-3N, Fe360D)"
+msgstr "S235J2 (S235J2G3, St37-3N, Fe360D)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:142
 msgid "S275JR (S275, OL44, St44-2, Fe430, ...)"
 msgstr "S275JR (S275, OL44, St44-2, Fe430, ...)"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:146
+msgid "S275J0 (S275J0G2, St44-3U, Fe430C)"
+msgstr "S275J0 (S275J0G2, St44-3U, Fe430C)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:150
+msgid "S275J2 (S275J2G3, St44-3N, Fe430D)"
+msgstr "S275J2 (S275J2G3, St44-3N, Fe430D)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:154
+msgid "S355JR (S355JRG2, Fe510B)"
+msgstr "S355JR (S355JRG2, Fe510B)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:158
+msgid "S355J0 (S355J0G3, St52-3U, Fe510C)"
+msgstr "S355J0 (S355J0G3, St52-3U, Fe510C)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:162
 msgid "S355J2 (S355, OL52, St52-3, Fe510, ...)"
 msgstr "S355J2 (S355, OL52, St52-3, Fe510, ...)"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:166
+msgid "S355K2 (S355K2G3, Fe510DD)"
+msgstr "S355K2 (S355K2G3, Fe510DD)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:170
 msgid "S460 (S460N, S460NL, S460M, S460ML)"
 msgstr "S460 (S460N, S460NL, S460M, S460ML)"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:172
 msgid "EN 10025-3 and -4"
 msgstr "EN 10025-3 și -4"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:145
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:174
 msgid "1.4301 (AISI 304)"
 msgstr "1.4301 (AISI 304)"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:146 ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:150
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:179
 msgid "Stainless steel"
 msgstr "Oțel inoxidabil"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:147 ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:176
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:180
 msgid "EN 10088-2"
 msgstr "EN 10088-2"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:148
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:177
 msgid "7900"
 msgstr "7900"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:178
 msgid "1.4404 (AISI 316L)"
 msgstr "1.4404 (AISI 316L)"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:181
 msgid "8000"
 msgstr "8000"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:153
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:182
 msgid "EN AW-6060"
 msgstr "EN AW-6060"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:154 ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:158
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:183
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:187
 msgid "Aluminium"
 msgstr "Aluminiu"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:156 ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:185
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:189
 msgid "2700"
 msgstr "2700"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:157
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:186
 msgid "EN AW-6082"
 msgstr "EN AW-6082"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:191
 msgid "On the product form, the tab :guilabel:`Materials` has one line per material with the :guilabel:`Material Group`, the :guilabel:`Material` and its :guilabel:`Percentage`. A computed :guilabel:`Material Info` summary and a rendered :guilabel:`Material Pct` breakdown make the composition easy to read and to reuse on reports."
 msgstr "Pe formularul produsului, fila :guilabel:`Materiale` are o linie pentru fiecare material, cu :guilabel:`Grup de materiale`, :guilabel:`Material` și :guilabel:`Procentaj`. Un rezumat calculat :guilabel:`Material Info` și o defalcare afișată :guilabel:`Material Pct` fac compoziția ușor de citit și de reutilizat în rapoarte."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:196
 msgid "Below them, the :guilabel:`Main Material` is the material used for weight computations, and :guilabel:`Density (kg/m³)` shows its density. It is filled in from the composition line with the highest percentage (the first group wins a tie), and it can also be set directly, for example to the steel grade of a profile that has no composition lines. Without composition lines the material you set is kept."
 msgstr "Sub acestea, :guilabel:`Material principal` este materialul folosit la calculele de greutate, iar :guilabel:`Densitate (kg/m³)` arată densitatea lui. Se completează din linia de compoziție cu cel mai mare procent (la egalitate câștigă primul grup) și poate fi stabilit și direct, de exemplu la calitatea oțelului unui profil care nu are linii de compoziție. Fără linii de compoziție, materialul pe care l-ai stabilit se păstrează."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:250
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:279
 msgid "Dimensions, computed volume and weight"
 msgstr "Dimensiuni, volum și greutate calculate"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:252
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:281
 msgid "``eyssen_product_dimension`` computes a product's volume, and optionally its weight, from its physical dimensions instead of having them typed in. In the :guilabel:`Dimensions` group of the product's :guilabel:`Inventory` tab, choose a :guilabel:`Shape`: :guilabel:`Cuboid`, :guilabel:`Cylinder`, :guilabel:`Hollow Section`, :guilabel:`Tube`, :guilabel:`Sphere` or :guilabel:`Open Profile`. Only the dimensions that shape needs remain visible:"
 msgstr "``eyssen_product_dimension`` calculează volumul unui produs și, opțional, greutatea lui din dimensiunile sale fizice, în loc să fie introduse manual. În grupul :guilabel:`Dimensiuni` din fila :guilabel:`Inventar` a produsului, alege o :guilabel:`Formă`: :guilabel:`Paralelipiped`, :guilabel:`Cilindru`, :guilabel:`Secțiune goală`, :guilabel:`Țeavă`, :guilabel:`Sferă` sau :guilabel:`Profil deschis`. Rămân vizibile doar dimensiunile de care are nevoie forma respectivă:"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:258
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:287
 msgid "length (x), width (y) and height/thickness (z) for a cuboid or a hollow section;"
 msgstr "lungime (x), lățime (y) și înălțime/grosime (z) pentru un paralelipiped sau o secțiune goală;"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:259
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:288
 msgid "length (x) and diameter (d) for a cylinder or a tube;"
 msgstr "lungime (x) și diametru (d) pentru un cilindru sau o țeavă;"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:260
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:289
 msgid "diameter (d) only for a sphere;"
 msgstr "doar diametrul (d) pentru o sferă;"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:261
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:290
 msgid "a wall thickness (wt) for a hollow section or a tube; and"
 msgstr "o grosime de perete (wt) pentru o secțiune goală sau o țeavă; și"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:262
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:291
 msgid "for an open profile, the length (x), the height (z) as *h*, the width (y) as *b*, the web thickness (wt) and, for I, H and U profiles, the flange thickness (tf)."
 msgstr "pentru un profil deschis, lungimea (x), înălțimea (z) ca *h*, lățimea (y) ca *b*, grosimea inimii (wt) și, pentru profilele I, H și U, grosimea tălpii (tf)."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:265
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:294
 msgid "All dimensions are in the :guilabel:`Dimensional UoM` of the product (millimetres, for example)."
 msgstr "Toate dimensiunile sunt exprimate în :guilabel:`UM dimensională` a produsului (de exemplu milimetri)."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:268
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:297
 msgid "Open profiles"
 msgstr "Profile deschise"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:270
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:299
 msgid "The shape :guilabel:`Open Profile` describes rolled and cold-formed sections. Its :guilabel:`Profile Type` is one of:"
 msgstr "Forma :guilabel:`Profil deschis` descrie profilele laminate și cele formate la rece. :guilabel:`Tip profil` este unul dintre:"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:277
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:306
 msgid "Profile type"
 msgstr "Tip profil"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:278
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:307
 msgid "Cross-section area"
 msgstr "Aria secțiunii"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:279
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:308
 msgid ":guilabel:`I / H`"
 msgstr ":guilabel:`I / H`"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:280
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:309
 msgid "2 x b x tf + (h - 2 x tf) x tw"
 msgstr "2 x b x tf + (h - 2 x tf) x tw"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:281
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:310
 msgid ":guilabel:`U (channel)`"
 msgstr ":guilabel:`U (profil U)`"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:282
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:311
 msgid "The same formula, with one web."
 msgstr "Aceeași formulă, cu o singură inimă."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:283
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:312
 msgid ":guilabel:`L (angle)`"
 msgstr ":guilabel:`L (cornier)`"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:284
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:313
 msgid "t x (h + b - t), with the two legs h and b and the thickness t."
 msgstr "t x (h + b - t), cu cele două aripi h și b și grosimea t."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:285
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:314
 msgid ":guilabel:`Z` and :guilabel:`C`"
 msgstr ":guilabel:`Z` și :guilabel:`C`"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:286
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:315
 msgid "t x (h + 2 x b - 2 x t), on the centre line of the sheet. Lips are ignored."
 msgstr "t x (h + 2 x b - 2 x t), pe linia mediană a tablei. Buzele sunt ignorate."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:287
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:316
 msgid ":guilabel:`Other`"
 msgstr ":guilabel:`Altele`"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:288
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:317
 msgid "Not computed: enter the :guilabel:`Cross-section Area` directly, for example from a catalogue."
 msgstr "Nu se calculează: introdu direct :guilabel:`Aria secțiunii`, de exemplu dintr-un catalog."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:290
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:319
 msgid "Root and toe radii of rolled sections are ignored, so the computed area is slightly smaller than a catalogue value; type the catalogue area in :guilabel:`Cross-section Area` when you need it exact."
 msgstr "Razele de racordare de la rădăcină și de la vârf ale profilelor laminate sunt ignorate, astfel încât aria calculată este puțin mai mică decât valoarea din catalog; introdu aria din catalog în :guilabel:`Aria secțiunii` când ai nevoie de valoarea exactă."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:294
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:323
 msgid "Volume, area and weight"
 msgstr "Volum, arie și greutate"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:296
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:325
 msgid "From the dimensions, the product's :guilabel:`Volume` (the gross volume of the enclosing shape) and a :guilabel:`Net Volume` (the volume of the material itself, so a hollow section or tube excludes its cavity) are computed, converted into the company's volume unit of measure through the :guilabel:`Dimensional UoM`. The :guilabel:`Cross-section Area` is the area perpendicular to the length: it is computed for every shape except the sphere (and :guilabel:`Other` profiles), and it can be entered by hand for profiles."
 msgstr "Din dimensiuni se calculează :guilabel:`Volum` al produsului (volumul brut al formei circumscrise) și :guilabel:`Volum net` (volumul materialului propriu-zis, astfel încât o secțiune goală sau o țeavă exclude cavitatea), convertite în unitatea de volum a companiei prin :guilabel:`UM dimensională`. :guilabel:`Aria secțiunii` este aria perpendiculară pe lungime: se calculează pentru orice formă în afară de sferă (și de profilele :guilabel:`Altele`) și poate fi introdusă manual pentru profile."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:303
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:332
 msgid "When the product has a :ref:`Main Material <inventory/product_data/material>` with a density, the :guilabel:`Computed Weight` is the net weight of **one unit of measure of the product**:"
 msgstr "Când produsul are un :ref:`Material principal <inventory/product_data/material>` cu densitate, :guilabel:`Greutate calculată` este greutatea netă a **unei unități de măsură a produsului**:"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:306
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:335
 msgid "for a product measured by length (m), the weight per metre: cross-section area x density;"
 msgstr "pentru un produs măsurat în lungime (m), greutatea pe metru: aria secțiunii x densitatea;"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:307
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:336
 msgid "for a product measured by area (m²), the weight per m² (cuboid plates: thickness x density);"
 msgstr "pentru un produs măsurat în suprafață (m²), greutatea pe m² (plăci paralelipipedice: grosimea x densitatea);"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:308
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:337
 msgid "for a product measured by volume, volume x density;"
 msgstr "pentru un produs măsurat în volum, volumul x densitatea;"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:309
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:338
 msgid "for a product measured by weight, that weight; and"
 msgstr "pentru un produs măsurat în greutate, acea greutate; și"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:310
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:339
 msgid "otherwise, the weight of one piece."
 msgstr "în celelalte cazuri, greutatea unei bucăți."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:312
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:341
 msgid "The weight of the product itself is never overwritten unless you ask for it:"
 msgstr "Greutatea produsului propriu-zis nu este niciodată suprascrisă decât dacă o ceri:"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:314
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:343
 msgid "tick :guilabel:`Weight from Dimensions` and the product's :guilabel:`Weight` always equals the computed weight, also when the dimensions, the unit of measure, the main material or the density of the material change later; or"
 msgstr "bifează :guilabel:`Greutate din dimensiuni` și :guilabel:`Greutate` a produsului este întotdeauna egală cu greutatea calculată, inclusiv când dimensiunile, unitatea de măsură, materialul principal sau densitatea materialului se schimbă ulterior; sau"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:317
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:346
 msgid "click :guilabel:`Compute weight` to set the weight once."
 msgstr "fă clic pe :guilabel:`Calculează greutatea` pentru a stabili greutatea o singură dată."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:319
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:348
 msgid "The module also adds the same dimension, volume and weight fields, each with its own unit of measure, to :doc:`packagings <configure/packaging>`."
 msgstr "Modulul adaugă aceleași câmpuri de dimensiune, volum și greutate, fiecare cu propria unitate de măsură, și la :doc:`ambalaje <configure/packaging>`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:335
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:364
 msgid "The computation reads the reference length unit of the company's volume unit of measure, which is set up by the :ref:`Advanced UoM module <inventory/uom/advanced>`. If those units are not configured, saving dimensions raises a validation error. The module also checks that the thicknesses fit the dimensions (twice the wall thickness cannot reach the width or height) and that no dimension is negative."
 msgstr "Calculul citește unitatea de lungime de referință a unității de volum a companiei, care este configurată de :ref:`modulul Advanced UoM <inventory/uom/advanced>`. Dacă aceste unități nu sunt configurate, salvarea dimensiunilor generează o eroare de validare. Modulul verifică și dacă grosimile se încadrează în dimensiuni (dublul grosimii peretelui nu poate atinge lățimea sau înălțimea) și dacă nicio dimensiune nu este negativă."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:3
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:3
 msgid "CAD bill of materials import"
 msgstr "Import CAD listă materiale"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:5
-msgid "A steel structure fabricator usually receives the project documentation as a DWG (sometimes DXF) drawing. The drawing may contain a parts list, position blocks with attributes, or nothing but position labels next to the members (\"R1 / 100x100x4\", \"GM1 / U180\", \"PM 2 / 300x300x10\", \"Bolt / M 16\"). The eYssen module **CAD Bill of Materials Import** (``mrp_cad_bom_import``) turns such a drawing into:"
-msgstr "Un constructor de structuri metalice primește de obicei documentația proiectului sub forma unui desen DWG (uneori DXF). Desenul poate conține un extras de materiale, blocuri de poziții cu atribute sau doar etichete de poziție lângă elemente (\"R1 / 100x100x4\", \"GM1 / U180\", \"PM 2 / 300x300x10\", \"Bolt / M 16\"). Modulul eYssen **CAD Bill of Materials Import** (``mrp_cad_bom_import``) transformă un astfel de desen în:"
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:5
+msgid "A steel structure fabricator usually receives the project documentation as a DWG (sometimes DXF) drawing. The drawing may contain one or more parts lists (also tables pasted from a spreadsheet, and lists per assembly with a summary table), position blocks with attributes, or nothing but position labels next to the members (\"R1 / 100x100x4\", \"GM1 / U180\", \"PM 2 / 300x300x10\", \"Bolt / M 16\"). The eYssen module **CAD Bill of Materials Import** (``mrp_cad_bom_import``) turns such a drawing into:"
+msgstr "Un producător de structuri metalice primește de obicei documentația proiectului sub forma unui desen DWG (uneori DXF). Desenul poate conține unul sau mai multe extrase de materiale (și tabele lipite dintr-o foaie de calcul, precum și extrase pe ansamblu cu un tabel centralizator), blocuri de poziție cu atribute sau doar etichete de poziție lângă elemente (\"R1 / 100x100x4\", \"GM1 / U180\", \"PM 2 / 300x300x10\", \"Bolt / M 16\"). Modulul eYssen **CAD Bill of Materials Import** (``mrp_cad_bom_import``) transformă un astfel de desen în:"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:11
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:12
 msgid "a reviewed material list with weights taken from a steel section catalogue;"
 msgstr "o listă de materiale verificată, cu greutăți luate dintr-un catalog de profile de oțel;"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:12
-msgid "a material summary by kind of material, with the total weight without and with purlins;"
-msgstr "un centralizator de materiale pe tipuri de material, cu greutatea totală fără pane și cu pane;"
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:13
+msgid "a material summary by kind of material, section and grade, with the total weight without and with purlins;"
+msgstr "un centralizator de materiale pe tip de material, profil și calitate, cu greutatea totală fără și cu pane;"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:13
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:15
 msgid "a purely kg-based quotation (manufacturing price per kg and assembly price per kg);"
 msgstr "o ofertă bazată exclusiv pe kg (preț de fabricație pe kg și preț de montaj pe kg);"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:14
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:16
 msgid "after acceptance, a bill of materials with matched or newly created products; and"
 msgstr "după acceptare, o listă de materiale (BoM) cu produse găsite sau create nou; și"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:15
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:17
 msgid "a procurement list in stock lengths with cutting waste, and draft requests for quotation."
 msgstr "o listă de aprovizionare în lungimi comerciale cu pierderi la debitare și cereri de ofertă în ciornă."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:18
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:20
 msgid "Nothing is final until you have reviewed it. The importer marks every line it is unsure of, and the :doc:`AI bridge <../../productivity/ai/cad_bom_import>` only ever *suggests* quantities and lengths that you accept or reject one by one."
 msgstr "Nimic nu este final până nu verifici. Importatorul marchează fiecare linie de care nu este sigur, iar :doc:`puntea AI <../../productivity/ai/cad_bom_import>` doar *sugerează* cantități și lungimi pe care le accepți sau le respingi pe rând."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:23
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:25
 msgid "The workflow"
 msgstr "Fluxul de lucru"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:25
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:27
 msgid "Every import is a record in :menuselection:`Manufacturing app --> CAD imports` that moves through six statuses: :guilabel:`Draft`, :guilabel:`Parsed`, :guilabel:`Reviewed`, :guilabel:`Quoted`, :guilabel:`Accepted` and :guilabel:`Done`."
 msgstr "Fiecare import este o înregistrare la :menuselection:`Fabricație --> Importuri CAD` care trece prin șase stări: :guilabel:`Ciornă`, :guilabel:`Analizat`, :guilabel:`Verificat`, :guilabel:`Ofertat`, :guilabel:`Acceptată` și :guilabel:`Efectuat`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:33
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:35
 msgid "Step"
 msgstr "Pas"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:34
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:36
 msgid "What you do"
 msgstr "Ce faci"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:35
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:37
 msgid "Result"
 msgstr "Rezultat"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:36
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:38
 msgid "Upload"
 msgstr "Încărcare"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:37
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:39
 msgid "Add the DWG or DXF files under :guilabel:`Drawings (DWG, DXF)`."
 msgstr "Adaugă fișierele DWG sau DXF la :guilabel:`Desene (DWG, DXF)`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:40
 msgid "The files are attached to the import."
 msgstr "Fișierele sunt atașate la import."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:39
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:41
 msgid "Parse"
 msgstr "Analiză"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:40
-msgid "Click :guilabel:`Parse drawings`."
-msgstr "Fă clic pe :guilabel:`Analizează desenele`."
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:42
+msgid "Click :guilabel:`Parse drawings`. If the drawings contain several parts lists, choose the ones to import first."
+msgstr "Fă clic pe :guilabel:`Analizează desenele`. Dacă desenele conțin mai multe extrase de materiale, alege mai întâi extrasele de importat."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:41
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:44
 msgid "The lines are extracted, the products are matched and the summary is built. Status: :guilabel:`Parsed`."
 msgstr "Liniile sunt extrase, produsele sunt potrivite și centralizatorul este construit. Stare: :guilabel:`Analizat`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:43
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:46
 msgid "Review"
 msgstr "Verificare"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:44
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:47
 msgid "Correct the lines, then click :guilabel:`Mark as reviewed`."
 msgstr "Corectează liniile, apoi fă clic pe :guilabel:`Marchează ca verificat`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:45
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:48
 msgid "Status :guilabel:`Reviewed`. Open conflicts are logged in the chatter."
 msgstr "Stare :guilabel:`Verificat`. Conflictele deschise sunt înregistrate în chatter."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:46
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:49
 msgid "Quote"
 msgstr "Ofertare"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:47
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:50
 msgid "Click :guilabel:`Create quotation`."
 msgstr "Fă clic pe :guilabel:`Creează ofertă`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:48
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:51
 msgid "A sales quotation priced per kg. Status :guilabel:`Quoted`."
 msgstr "O ofertă de vânzare cu preț pe kg. Stare :guilabel:`Ofertat`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:49
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:52
 msgid "Accept"
 msgstr "Acceptare"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:50
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:53
 msgid "Confirm the quotation, or click :guilabel:`Mark as accepted`."
 msgstr "Confirmă oferta sau fă clic pe :guilabel:`Marchează ca acceptat`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:51
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:54
 msgid "Status :guilabel:`Accepted`. If the setting is on, the bill of materials is created at once."
 msgstr "Stare :guilabel:`Acceptată`. Dacă setarea este activată, lista de materiale se creează imediat."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:53
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:56
 msgid "Click :guilabel:`Create BoM` (Manufacturing administrators)."
 msgstr "Fă clic pe :guilabel:`Creează lista de materiale` (administratori Fabricație)."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:57
 msgid "A new bill of materials version. Status :guilabel:`Done`."
 msgstr "O nouă versiune a listei de materiale. Stare :guilabel:`Efectuat`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:56
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:59
 msgid "Click :guilabel:`Procurement list`, then :guilabel:`Create RFQs`."
 msgstr "Fă clic pe :guilabel:`Listă de aprovizionare`, apoi pe :guilabel:`Creează cereri de ofertă`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:57
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:60
 msgid "A list of bars and sheets to buy, and draft requests for quotation. Nothing is confirmed."
 msgstr "O listă de bare și table de cumpărat și cereri de ofertă în ciornă. Nimic nu este confirmat."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:3
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:3
 msgid "Read a drawing and review the material list"
 msgstr "Citirea unui desen și verificarea listei de materiale"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:6
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:6
 msgid "Create an import"
 msgstr "Crearea unui import"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:8
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:8
 msgid "Open :menuselection:`Manufacturing app --> CAD imports` and click :guilabel:`New`. Give the import a name (for example \"Staircase steel structure\") and, if you want, a :guilabel:`Customer`, a :guilabel:`Project` and a :guilabel:`Responsible`. The :guilabel:`Reference` is numbered automatically (``CAD/<year>/...``). Add the drawings under :guilabel:`Drawings (DWG, DXF)`; you can add several files."
 msgstr "Deschide :menuselection:`Fabricație --> Importuri CAD` și fă clic pe :guilabel:`Nou`. Dă importului un nume (de exemplu \"Structură metalică scară\") și, dacă dorești, un :guilabel:`Client`, un :guilabel:`Proiect` și un :guilabel:`Responsabil`. :guilabel:`Referință` este numerotată automat (``CAD/<year>/...``). Adaugă desenele la :guilabel:`Desene (DWG, DXF)`; poți adăuga mai multe fișiere."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:14
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:14
 msgid "Under the drawings, :guilabel:`Default material grade` and :guilabel:`Bolt property class` give the grade of the lines that name none. They start from the :ref:`settings <manufacturing/cad_bom_import/requirements>` and are overridden by the general notes of the drawing, for example \"MATERIALE FOLOSITE: PROFILE LAMINATE - OL 37 (S235) ... ȘURUBURI - GRUPA 8.8\", which gives S235JR and 8.8."
 msgstr "Sub desene, :guilabel:`Calitate implicită a materialului` și :guilabel:`Grupa de calitate a șuruburilor` indică calitatea liniilor care nu menționează niciuna. Pornesc de la :ref:`setări <manufacturing/cad_bom_import/requirements>` și sunt înlocuite de notele generale ale desenului, de exemplu \"MATERIALE FOLOSITE: PROFILE LAMINATE - OL 37 (S235) ... ȘURUBURI - GRUPA 8.8\", care dă S235JR și 8.8."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:19
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:19
 msgid "Click :guilabel:`Parse drawings`. The :guilabel:`Extraction` field then names the strategy that found the lines, the tab :guilabel:`Parse log` lists what was read, repaired or ignored, and the import is :guilabel:`Parsed`. You can parse again while the import is parsed or reviewed: the lines that were not added by hand are replaced, and the lines you added manually are kept."
 msgstr "Fă clic pe :guilabel:`Analizează desenele`. Câmpul :guilabel:`Extragere` indică apoi strategia care a găsit liniile, fila :guilabel:`Jurnal analiză` enumeră ce a fost citit, reparat sau ignorat, iar importul devine :guilabel:`Analizat`. Poți analiza din nou cât timp importul este analizat sau verificat: liniile care nu au fost adăugate manual sunt înlocuite, iar cele adăugate manual se păstrează."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:25
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:24
+msgid "If the drawings contain several parts lists, :guilabel:`Parse drawings` first asks which of them to import (see :ref:`manufacturing/cad_bom_import/choose_tables`)."
+msgstr "Dacă desenele conțin mai multe extrase de materiale, :guilabel:`Analizează desenele` te întreabă mai întâi pe care să le importe (vezi :ref:`manufacturing/cad_bom_import/choose_tables`)."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:28
 msgid "Texts are read from model space and every paper space of the drawing, including the texts inside blocks. For a DWG, ``dwgread`` converts the file first; text in other code pages (for example Central European drawings) is decoded with the code page stored in the drawing."
 msgstr "Textele sunt citite din spațiul model și din toate spațiile hârtie ale desenului, inclusiv textele din blocuri. Pentru un DWG, ``dwgread`` convertește mai întâi fișierul; textul în alte pagini de cod (de exemplu desene central-europene) este decodat cu pagina de cod stocată în desen."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:30
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:33
+msgid "The output of the converter is read step by step. A large DWG file, with hundreds of megabytes of converted data, therefore no longer runs the server out of memory. It only takes longer to parse."
+msgstr "Rezultatul convertorului este citit pas cu pas. Un fișier DWG mare, cu sute de megaocteți de date convertite, nu mai epuizează memoria serverului. Analiza doar durează mai mult."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:37
 msgid "How the lines are found"
 msgstr "Cum sunt găsite liniile"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:32
-msgid "The importer tries three strategies in order. The first one that finds lines wins; the label strategy runs only when the others found nothing. The :guilabel:`Source` of every line shows which one produced it: :guilabel:`Parts list table`, :guilabel:`Block attributes`, :guilabel:`Labels`, :guilabel:`Manual` or :guilabel:`AI suggestion`."
-msgstr "Importatorul încearcă trei strategii, în ordine. Câștigă prima care găsește linii; strategia etichetelor rulează doar când celelalte nu au găsit nimic. :guilabel:`Sursă` fiecărei linii arată care strategie a produs-o: :guilabel:`Tabel extras de materiale`, :guilabel:`Atribute bloc`, :guilabel:`Etichete`, :guilabel:`Manual` sau :guilabel:`Sugestie AI`."
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:39
+msgid "The importer tries three strategies in order. The first one that finds lines wins; the label strategy runs only when the others found nothing. (If you choose no parts list in the :ref:`dialog <manufacturing/cad_bom_import/choose_tables>`, the parts lists are skipped and the drawing is read through its labels.) The :guilabel:`Source` of every line shows which one produced it: :guilabel:`Parts list table`, :guilabel:`Block attributes`, :guilabel:`Labels`, :guilabel:`Manual` or :guilabel:`AI suggestion`."
+msgstr "Importatorul încearcă trei strategii, în ordine. Câștigă prima care găsește linii; strategia etichetelor rulează doar când celelalte nu au găsit nimic. (Dacă nu alegi niciun extras de materiale în :ref:`fereastra de dialog <manufacturing/cad_bom_import/choose_tables>`, extrasele sunt ignorate, iar desenul este citit prin etichetele sale.) :guilabel:`Sursă` fiecărei linii arată care strategie a produs-o: :guilabel:`Tabel extras de materiale`, :guilabel:`Atribute bloc`, :guilabel:`Etichete`, :guilabel:`Manual` sau :guilabel:`Sugestie AI`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:47
 msgid "Parts list table"
 msgstr "Tabel extras de materiale"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:40
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:49
 msgid "The texts of the drawing are grouped into rows. A row is the **header** of a parts list when at least three of its cells are recognised by a table of synonyms in Romanian, Hungarian, English, German and Spanish, for example mark (*Poz, Pos, Mark, Marca, Tétel, Jel*), quantity (*Buc, Db, Qty, Pcs, Stk, Cant*), profile (*Profil, Szelvény, Section, Perfil*), material or grade, length, width, thickness, weight, description, area and notes."
 msgstr "Textele desenului sunt grupate în rânduri. Un rând este **antetul** unui extras de materiale când cel puțin trei dintre celulele sale sunt recunoscute de un tabel de sinonime în română, maghiară, engleză, germană și spaniolă, de exemplu poziție (*Poz, Pos, Mark, Marca, Tétel, Jel*), cantitate (*Buc, Db, Qty, Pcs, Stk, Cant*), profil (*Profil, Szelvény, Section, Perfil*), material sau calitate, lungime, lățime, grosime, greutate, descriere, arie și observații."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:46
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:55
 msgid "The columns come from the vertical lines that cross the header, or else from the midpoints between the header texts."
 msgstr "Coloanele provin din liniile verticale care traversează antetul sau, în lipsa lor, din punctele de mijloc dintre textele antetului."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:48
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:57
 msgid "The rows below *and above* the header are read (a parts list in a title block grows upwards) and the longer run is kept. The run ends at a gap that is too large, at another header, or where no text is left in the table."
 msgstr "Se citesc rândurile de sub antet *și de deasupra lui* (un extras de materiale dintr-un cartuș crește în sus) și se păstrează seria mai lungă. Seria se oprește la un gol prea mare, la un alt antet sau acolo unde nu mai rămâne text în tabel."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:51
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:60
 msgid "A row of units (``mm``, ``kg``, ``buc``) sets the column units, and units in the header such as ``[m]`` or ``(cm)`` convert lengths to millimetres. A length below 30 with decimals and no unit is read as metres, and the parse log says so."
 msgstr "Un rând de unități (``mm``, ``kg``, ``buc``) stabilește unitățile coloanelor, iar unitățile din antet, cum ar fi ``[m]`` sau ``(cm)``, convertesc lungimile în milimetri. O lungime sub 30 cu zecimale și fără unitate este citită ca metri, iar jurnalul de analiză o menționează."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:63
 msgid "ACAD_TABLE objects are read the same way."
 msgstr "Obiectele ACAD_TABLE sunt citite în același mod."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:55
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:64
 msgid "A weight written on the drawing is kept in :guilabel:`Weight on drawing (kg)`. If it differs from the computed weight by more than 5 %, the line gets a conflict note."
 msgstr "O greutate scrisă pe desen se păstrează în :guilabel:`Greutate pe desen (kg)`. Dacă diferă de greutatea calculată cu mai mult de 5 %, linia primește o notă de conflict."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:59
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:68
+msgid "Parts lists pasted from a spreadsheet"
+msgstr "Extrase de materiale lipite dintr-o foaie de calcul"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:70
+msgid "A parts list that was pasted into the drawing from Excel is not text but an embedded object (OLE). The importer reads these objects too, in the legacy ``.xls`` format and in ``.xlsx``, and handles them like any other parts list."
+msgstr "Un extras de materiale lipit în desen din Excel nu este text, ci un obiect încorporat (OLE). Importatorul citește și aceste obiecte, atât în formatul vechi ``.xls``, cât și în ``.xlsx``, și le tratează ca pe orice alt extras de materiale."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:74
+msgid "A list that is placed twice in the drawing (in model space and in a layout) is read once."
+msgstr "O listă plasată de două ori în desen (în spațiul model și într-un aranjament) este citită o singură dată."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:75
+msgid "Reinforcement (rebar) schedules are skipped. They are recognised by their steel grades (for example B500C or PC52), by the word *armătură* and by stirrups written as *etr.*"
+msgstr "Extrasele de armare (fierul-beton) sunt ignorate. Sunt recunoscute după calitățile de oțel (de exemplu B500C sau PC52), după cuvântul *armătură* și după etrierii scriși *etr.*"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:77
+msgid "The parse log names each embedded spreadsheet with its title and its number of rows."
+msgstr "Jurnalul de analiză numește fiecare foaie de calcul încorporată cu titlul și numărul de rânduri."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:80
+msgid "Headers and rows of a parts list"
+msgstr "Antetele și rândurile unui extras de materiale"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:82
+msgid "A header can have **two rows**, which are read together. \"Nr. / buc.\" is the quantity; \"Greutate [kg] / ml | buc | total\" gives the weight per metre, per piece and in total; \"Dimensiuni (mm) / l | g | L\" gives the width, the thickness and the length. Quantity headers such as \"Nr. pieselor\" and \"Nr. piese\" are recognised too."
+msgstr "Un antet poate avea **două rânduri**, care sunt citite împreună. \"Nr. / buc.\" este cantitatea; \"Greutate [kg] / ml | buc | total\" dă greutatea pe metru, pe bucată și totală; \"Dimensiuni (mm) / l | g | L\" dă lățimea, grosimea și lungimea. Sunt recunoscute și antetele de cantitate precum \"Nr. pieselor\" și \"Nr. piese\"."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:86
+msgid "A section can be written with words in front of it (\"Pana Z 180x2\"), or with its length glued on (\"HEA 300 - 7020\", \"Z200x2,5 - 9090\"). Tie rods and round bars (\"tirant de 24 mm\", \"oțel de 20 mm\") are recognised as well."
+msgstr "Un profil poate fi scris cu cuvinte în față (\"Pana Z 180x2\") sau cu lungimea lipită de el (\"HEA 300 - 7020\", \"Z200x2,5 - 9090\"). Sunt recunoscuți și tiranții și barele rotunde (\"tirant de 24 mm\", \"oțel de 20 mm\")."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:89
+msgid "Nuts and washers (*piuliță, șaibă*) are kept as separate lines. They are not turned into bolts."
+msgstr "Piulițele și șaibele (*piuliță, șaibă*) sunt păstrate ca linii separate. Nu sunt transformate în șuruburi."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:90
+msgid "Group-heading rows and subtotal or total rows inside a list are skipped."
+msgstr "Rândurile de titlu de grup și rândurile de subtotal sau total din interiorul unei liste sunt ignorate."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:93
+msgid "Parts lists per assembly"
+msgstr "Extrase de materiale pe ansamblu"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:95
+msgid "Many drawings have one parts list for each assembly (for example \"Extras de laminate pentru grinda G1\") and a summary table of the assemblies (\"NECESAR ELEMENTE\") with the assembly, its count, its weight per piece and its total weight. The importer puts them together."
+msgstr "Multe desene au câte un extras de materiale pentru fiecare ansamblu (de exemplu \"Extras de laminate pentru grinda G1\") și un tabel centralizator al ansamblurilor (\"NECESAR ELEMENTE\") cu ansamblul, numărul, greutatea pe bucată și greutatea totală. Importatorul le pune cap la cap."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:99
+msgid "The quantities of the list of an assembly are multiplied by the count of that assembly in the summary table."
+msgstr "Cantitățile din extrasul unui ansamblu sunt înmulțite cu numărul acelui ansamblu din tabelul centralizator."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:101
+msgid "The assembly is found by the mark in the title of the list: G1 is 8 pieces. If the title names no mark (for example \"valabil pentru un stâlp\"), the total of the list is matched to the weight per piece in the summary table: a list of 1431 kg belongs to \"Stâlpi S1, S2\", which is 20 pieces."
+msgstr "Ansamblul este găsit după poziția din titlul extrasului: G1 înseamnă 8 bucăți. Dacă titlul nu numește nicio poziție (de exemplu \"valabil pentru un stâlp\"), totalul extrasului este potrivit cu greutatea pe bucată din tabelul centralizator: un extras de 1431 kg aparține ansamblului \"Stâlpi S1, S2\", adică 20 de bucăți."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:104
+msgid "The :guilabel:`Drawing text` of each line shows where it comes from, as \"[list title × count]\"."
+msgstr ":guilabel:`Text din desen` al fiecărei linii arată de unde provine, sub forma \"[titlul extrasului × număr]\"."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:105
+msgid "An assembly that is only in the summary table, because its parts list is not on this drawing (for example trusses, or purlins \"see other list\"), comes in as one line with the stated weight and count. The line is flagged :guilabel:`To review` and the note says \"only in the summary table...\". Purlin assemblies are marked as purlins."
+msgstr "Un ansamblu care apare doar în tabelul centralizator, deoarece extrasul său nu se află pe acest desen (de exemplu ferme sau pane \"vezi alt extras\"), intră ca o singură linie cu greutatea și numărul indicate. Linia este marcată :guilabel:`De verificat`, iar nota spune \"only in the summary table...\". Ansamblurile de pane sunt marcate ca pane."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:110
+msgid "The parse log compares the total that a list states with the sum of its rows, and adds \"-- they differ, check the table\" when the difference is more than 5 %. It does the same for the total of the summary tables and the total of the lines."
+msgstr "Jurnalul de analiză compară totalul indicat de un extras cu suma rândurilor sale și adaugă \"-- they differ, check the table\" când diferența depășește 5 %. Face același lucru pentru totalul tabelelor centralizatoare și totalul liniilor."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:115
 msgid "Block attributes"
 msgstr "Atribute bloc"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:61
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:117
 msgid "Blocks with attributes (``POS``, ``QTY``, ``PROFILE``, ``LENGTH``, ``MATERIAL``, ``WEIGHT``, and their Romanian, Hungarian and German names) become lines, grouped by mark, section and length. With a quantity attribute the quantity is the largest value found (different values are a conflict, because several references often carry the assembly quantity). Without it, the quantity is the number of block references and the line is flagged to review. The setting :guilabel:`Block attribute tags` adds your own tag names."
 msgstr "Blocurile cu atribute (``POS``, ``QTY``, ``PROFILE``, ``LENGTH``, ``MATERIAL``, ``WEIGHT`` și denumirile lor în română, maghiară și germană) devin linii, grupate după poziție, profil și lungime. Cu un atribut de cantitate, cantitatea este cea mai mare valoare găsită (valorile diferite reprezintă un conflict, deoarece adesea mai multe referințe poartă cantitatea ansamblului). Fără el, cantitatea este numărul de referințe de bloc, iar linia este marcată pentru verificare. Setarea :guilabel:`Etichete atribute bloc` adaugă propriile tale denumiri de etichete."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:69
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:125
 msgid "Labels"
 msgstr "Etichete"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:71
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:127
 msgid "Many drawings have no parts list, only a label next to each member. The importer then reads every short text, pairs a mark (``R1``, ``PM 2``, ``GM1``) with a section designation written in the same text or just below or beside it, and groups the lines by mark and section."
 msgstr "Multe desene nu au un extras de materiale, ci doar o etichetă lângă fiecare element. Importatorul citește atunci fiecare text scurt, asociază o poziție (``R1``, ``PM 2``, ``GM1``) cu o denumire de profil scrisă în același text sau imediat dedesubt ori alături și grupează liniile după poziție și profil."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:76
-msgid "**The number of labels is not the quantity.** The same member is labelled in several views and sometimes several times in one view. The label strategy therefore stores the count as :guilabel:`Occurrences`, sets the quantity to 1, leaves the length empty and flags the line :guilabel:`To review`. Only an explicit text such as ``4 buc``, ``2 db``, ``n=2`` or ``L=2500`` fills the quantity or the length. Without a length, a linear member has no weight until you enter it (or accept an :doc:`AI suggestion <../../../productivity/ai/cad_bom_import>`)."
-msgstr "**Numărul de etichete nu este cantitatea.** Același element este etichetat în mai multe vederi și uneori de mai multe ori în aceeași vedere. De aceea strategia etichetelor stochează numărul ca :guilabel:`Apariții`, stabilește cantitatea la 1, lasă lungimea goală și marchează linia :guilabel:`De verificat`. Doar un text explicit, cum ar fi ``4 buc``, ``2 db``, ``n=2`` sau ``L=2500``, completează cantitatea sau lungimea. Fără lungime, un element liniar nu are greutate până o introduci (sau accepți o :doc:`sugestie AI <../../../productivity/ai/cad_bom_import>`)."
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:131
+msgid "One-line callouts with all the data are read as they are:"
+msgstr "Etichetele pe un singur rând, cu toate datele, sunt citite ca atare:"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:83
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:133
+msgid "``P12 - IPE 400 - 7360 - 1buc.``: mark, section, length and pieces;"
+msgstr "``P12 - IPE 400 - 7360 - 1buc.``: poziție, profil, lungime și bucăți;"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:134
+msgid "``P54 L 60x60x6 - 300 20buc.``: an angle, 300 mm long, 20 pieces;"
+msgstr "``P54 L 60x60x6 - 300 20buc.``: un cornier, lung de 300 mm, 20 de bucăți;"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:135
+msgid "``P20 - 10x144 - 370 - 2buc.``: a plate of 10 mm by 144 mm, 370 mm long, 2 pieces;"
+msgstr "``P20 - 10x144 - 370 - 2buc.``: o tablă de 10 mm pe 144 mm, lungă de 370 mm, 2 bucăți;"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:136
+msgid "``P79 pana Z 200x1.5 l=6000``: a word in front of the section, and the length after ``l=``; and"
+msgstr "``P79 pana Z 200x1.5 l=6000``: un cuvânt în fața profilului și lungimea după ``l=``; și"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:137
+msgid "``PANE PA2 / Z200x2.5-8290``."
+msgstr "``PANE PA2 / Z200x2.5-8290``."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:139
+msgid "A quantity can be written ``(72 buc)``, ``2buc.`` or ``200 bucăți``."
+msgstr "O cantitate poate fi scrisă ``(72 buc)``, ``2buc.`` sau ``200 bucăți``."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:142
+msgid "**The number of labels is not the quantity.** The same member is labelled in several views and sometimes several times in one view. For a bare label (a mark and a section, without a length) the label strategy therefore stores the count as :guilabel:`Occurrences`, sets the quantity to 1, leaves the length empty and flags the line :guilabel:`To review`. Only an explicit text such as ``4 buc``, ``2 db``, ``n=2`` or ``L=2500`` fills the quantity or the length. Without a length, a linear member has no weight until you enter it (or accept an :doc:`AI suggestion <../../../productivity/ai/cad_bom_import>`)."
+msgstr "**Numărul de etichete nu este cantitatea.** Același element este etichetat în mai multe vederi și uneori de mai multe ori în aceeași vedere. Pentru o etichetă simplă (o poziție și un profil, fără lungime), strategia etichetelor stochează numărul ca :guilabel:`Apariții`, stabilește cantitatea la 1, lasă lungimea goală și marchează linia :guilabel:`De verificat`. Doar un text explicit, cum ar fi ``4 buc``, ``2 db``, ``n=2`` sau ``L=2500``, completează cantitatea sau lungimea. Fără lungime, un element liniar nu are greutate până o introduci (sau accepți o :doc:`sugestie AI <../../../productivity/ai/cad_bom_import>`)."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:150
+msgid "There is one exception. A member tag with a length but no quantity, for example one ``P79 ... l=6000`` label for every purlin on a roof plan, gets the **number of its labels** as the quantity. The labels are counted in the drawing space (model space or one layout) in which they appear most, so a layout that repeats the model space is not counted twice. These lines stay :guilabel:`To review`, and the parse log lists them (\"quantity = number of labels (to check)\")."
+msgstr "Există o excepție. O etichetă de element cu lungime, dar fără cantitate, de exemplu o etichetă ``P79 ... l=6000`` pentru fiecare pană dintr-un plan de acoperiș, primește drept cantitate **numărul etichetelor sale**. Etichetele sunt numărate în spațiul de desen (spațiul model sau un aranjament) în care apar cel mai des, astfel încât un aranjament care repetă spațiul model nu este numărat de două ori. Aceste linii rămân :guilabel:`De verificat`, iar jurnalul de analiză le enumeră (\"quantity = number of labels (to check)\")."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:156
 msgid "Other rules of the label strategy:"
 msgstr "Alte reguli ale strategiei etichetelor:"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:85
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:158
 msgid "Words for existing members (*existent, existing, meglévő, vorhanden, existente*) make the line :guilabel:`Excluded`: it is shown but not counted."
 msgstr "Cuvintele pentru elemente existente (*existent, existing, meglévő, vorhanden, existente*) fac linia :guilabel:`Exclus`: este afișată, dar nu este numărată."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:87
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:160
 msgid "Holes and annotations (*Găuri, furat, holes, Bohrung, Secțiune, Plan, Detaliu*) are ignored and counted in the parse log."
 msgstr "Găurile și adnotările (*Găuri, furat, holes, Bohrung, Secțiune, Plan, Detaliu*) sunt ignorate și numărate în jurnalul de analiză."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:89
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:162
 msgid "Bolt words (*Bulon, Șurub, Csavar, Bolt, Schraube, Tornillo*) make a bolt line."
 msgstr "Cuvintele pentru șuruburi (*Bulon, Șurub, Csavar, Bolt, Schraube, Tornillo*) generează o linie de șurub."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:90
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:163
 msgid "A bare plate or round size without a mark is ignored as too ambiguous."
 msgstr "O dimensiune de tablă sau de rotund fără poziție este ignorată ca prea ambiguă."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:91
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:164
 msgid "If the same mark appears with different sections (for example PM 3 as 200x250x10 and 200x350x10), every line of that mark gets a conflict note."
 msgstr "Dacă aceeași poziție apare cu profile diferite (de exemplu PM 3 ca 200x250x10 și 200x350x10), fiecare linie a acelei poziții primește o notă de conflict."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:95
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:168
+msgid "Assembly counts on the drawing"
+msgstr "Numărul ansamblurilor pe desen"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:170
+msgid "An assembly title with a count multiplies the piece callouts that are drawn on the same sheet: \"Grinda G1 - 8 buc.\", \"Stâlpi S1; S2 - 20 buc.\" or \"CADRU TRANSVERSAL (5 buc. : ax 3...7)\"."
+msgstr "Un titlu de ansamblu cu un număr înmulțește etichetele pieselor desenate pe aceeași planșă: \"Grinda G1 - 8 buc.\", \"Stâlpi S1; S2 - 20 buc.\" sau \"CADRU TRANSVERSAL (5 buc. : ax 3...7)\"."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:173
+msgid "The sheet is found from its frame, the rectangle around the sheet. A sheet drawn without a frame uses the nearest assembly title that is also outside every frame."
+msgstr "Planșa este găsită după cadrul ei, dreptunghiul din jurul planșei. O planșă desenată fără cadru folosește cel mai apropiat titlu de ansamblu care se află, de asemenea, în afara tuturor cadrelor."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:175
+msgid "A piece that is repeated on one sheet counts once. The same piece on several sheets is added up."
+msgstr "O piesă repetată pe aceeași planșă se numără o singură dată. Aceeași piesă pe mai multe planșe se adună."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:176
+msgid "The parse log lists the assemblies that were used: \"assemblies: Grinda G1 × 8, ...\"."
+msgstr "Jurnalul de analiză enumeră ansamblurile folosite: \"assemblies: Grinda G1 × 8, ...\"."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:179
 msgid "Section designations"
 msgstr "Denumirile profilelor"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:97
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:181
 msgid "Designations are normalised before they are looked up: upper case, no accents, ``×`` and ``*`` as ``x``, decimal comma as point, and a trailing grade (``S235JR``, ``OL 37``) is split off. A count prefix such as ``2xL50x5`` is kept as a count."
 msgstr "Denumirile sunt normalizate înainte de a fi căutate: majuscule, fără diacritice, ``×`` și ``*`` ca ``x``, virgula zecimală ca punct, iar o calitate finală (``S235JR``, ``OL 37``) este separată. Un prefix de număr, cum ar fi ``2xL50x5``, este păstrat ca număr de bucăți."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:105
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:189
 msgid "Family"
 msgstr "Familie"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:106
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:190
 msgid "Accepted forms"
 msgstr "Forme acceptate"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:107
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:191
 msgid "Becomes"
 msgstr "Devine"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:108
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:192
 msgid "I and H sections"
 msgstr "Profile I și H"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:109
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:193
 msgid "``IPE200``, ``HE 200 A``, ``HE200B``, ``I 200``"
 msgstr "``IPE200``, ``HE 200 A``, ``HE200B``, ``I 200``"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:110
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:194
 msgid "``IPE 200``, ``HEA 200``"
 msgstr "``IPE 200``, ``HEA 200``"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:111
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:195
 msgid "Channels"
 msgstr "Profile U"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:112
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:196
 msgid "``U180``, ``UNP 180``, ``UPN180``, ``UPE 200``"
 msgstr "``U180``, ``UNP 180``, ``UPN180``, ``UPE 200``"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:113
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:197
 msgid "``UPN 180``"
 msgstr "``UPN 180``"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:114
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:198
 msgid "Angles"
 msgstr "Corniere"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:115
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:199
 msgid "``L50x5``, ``L 50x50x5``, ``L100x50x6``, ``Cornier 60x6``"
 msgstr "``L50x5``, ``L 50x50x5``, ``L100x50x6``, ``Cornier 60x6``"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:116
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:200
 msgid "``L 50x5``, ``L 100x50x6``"
 msgstr "``L 50x5``, ``L 100x50x6``"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:117
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:201
 msgid "Square and rectangular hollow sections"
 msgstr "Profile tubulare pătrate și dreptunghiulare"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:118
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:202
 msgid "``SHS 100x100x4``, ``RHS 80x120x5``, ``TEAVA 60x60x4``, a bare ``100x100x4``"
 msgstr "``SHS 100x100x4``, ``RHS 80x120x5``, ``TEAVA 60x60x4``, un simplu ``100x100x4``"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:119
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:203
 msgid "``SHS 100x100x4``"
 msgstr "``SHS 100x100x4``"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:120
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:204
 msgid "Round hollow sections"
 msgstr "Profile tubulare rotunde"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:121
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:205
 msgid "``Ø88.9x4``, ``CHS 114.3x5``, ``%%C88,9x4``"
 msgstr "``Ø88.9x4``, ``CHS 114.3x5``, ``%%C88,9x4``"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:122
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:206
 msgid "``CHS 88.9x4``"
 msgstr "``CHS 88.9x4``"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:123
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:207
 msgid "Flat and round bars"
 msgstr "Platbande și bare rotunde"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:124
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:208
 msgid "``FL 50x5``, ``Platbandă 5x60``, ``-80x8``, ``Ø20``"
 msgstr "``FL 50x5``, ``Platbandă 5x60``, ``-80x8``, ``Ø20``"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:125
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:209
 msgid "``FL 60x5``, ``Ø20``"
 msgstr "``FL 60x5``, ``Ø20``"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:126
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:210
 msgid "Plates"
 msgstr "Table"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:127
-msgid "``PL 10x300x400``, ``PL10``, ``t=12``, ``Tablă 2x1000x2000``"
-msgstr "``PL 10x300x400``, ``PL10``, ``t=12``, ``Tablă 2x1000x2000``"
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:211
+msgid "``PL 10x300x400``, ``PL10``, ``t=12``, ``Tablă 2x1000x2000``, ``tb 188x106x6``"
+msgstr "``PL 10x300x400``, ``PL10``, ``t=12``, ``Tablă 2x1000x2000``, ``tb 188x106x6``"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:128
-msgid "``PL 300x400x10``"
-msgstr "``PL 300x400x10``"
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:212
+msgid "``PL 300x400x10``, ``PL 106x188x6``"
+msgstr "``PL 300x400x10``, ``PL 106x188x6``"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:129
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:213
 msgid "Z, C and Σ purlins"
 msgstr "Pane Z, C și Σ"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:130
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:214
 msgid "``Z200/2.0``, ``Z 200x2``, ``C150/2``, ``Σ200/2.5``"
 msgstr "``Z200/2.0``, ``Z 200x2``, ``C150/2``, ``Σ200/2.5``"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:131
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:215
 msgid "``Z200/2.0``"
 msgstr "``Z200/2.0``"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:132
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:216
+msgid "Square and rectangular hollow sections (Romanian)"
+msgstr "Profile tubulare pătrate și dreptunghiulare (notație românească)"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:217
+msgid "``Tv 80x80x5``, ``tv.patr.80x5``"
+msgstr "``Tv 80x80x5``, ``tv.patr.80x5``"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:218
+msgid "``SHS 80x80x5``"
+msgstr "``SHS 80x80x5``"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:219
+msgid "Cold-formed U channels"
+msgstr "Profile U formate la rece"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:220
+msgid "``U60x60x5``"
+msgstr "``U60x60x5``"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:221
+msgid "``U 60x60x5`` (family :guilabel:`Cold-formed U channel`)"
+msgstr "``U 60x60x5`` (familia :guilabel:`Profil U formatat la rece`)"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:222
+msgid "Halved I and H sections"
+msgstr "Profile I și H tăiate în două"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:223
+msgid "``IPE 400/2``"
+msgstr "``IPE 400/2``"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:224
+msgid "``IPE 400``, counted as half a section (quantity x 0.5)"
+msgstr "``IPE 400``, numărat ca jumătate de profil (cantitate x 0,5)"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:225
 msgid "Bolts"
 msgstr "Șuruburi"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:133
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:226
 msgid "``M16``, ``M16x60-8.8``, ``4xM20x80 10.9``, ``Șurub M12``"
 msgstr "``M16``, ``M16x60-8.8``, ``4xM20x80 10.9``, ``Șurub M12``"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:134
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:227
 msgid "``M16x60`` and a property class"
 msgstr "``M16x60`` și o grupă de calitate"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:136
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:228
+msgid "Bolt sets"
+msgstr "Seturi de șuruburi"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:229
+msgid "``M24x70, 2S+P``, ``IP M27x85, P+2S``"
+msgstr "``M24x70, 2S+P``, ``IP M27x85, P+2S``"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:230
+msgid "``M24x70``, ``M27x85`` (the notation for washers and nut is dropped, the property class is kept)"
+msgstr "``M24x70``, ``M27x85`` (notația pentru șaibe și piuliță este eliminată, grupa de rezistență este păstrată)"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:232
 msgid "A bare ``AxBxC`` is decided by context: a plate mark prefix (see the settings) or a thickness written first (``10x300x300``) means a plate; otherwise it is a hollow section when the thickness is at most 16 mm and the sides at most 500 mm, and the line is marked as ambiguous with a lower confidence. A plate thinner than 3 mm is a sheet."
 msgstr "Un simplu ``AxBxC`` este stabilit de context: un prefix de marcaj de tablă (vezi setările) sau o grosime scrisă prima (``10x300x300``) înseamnă tablă; altfel este un profil tubular când grosimea este de cel mult 16 mm și laturile de cel mult 500 mm, iar linia este marcată ca ambiguă, cu o încredere mai mică. O tablă mai subțire de 3 mm este foaie de tablă."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:142
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:240
+msgid "Choose the parts lists"
+msgstr "Alege extrasele de materiale"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:242
+msgid "When the drawings of an import contain several parts lists, :guilabel:`Parse drawings` does not import at once. It opens the window :guilabel:`Choose the parts lists`, with one row for each list:"
+msgstr "Când desenele unui import conțin mai multe extrase de materiale, :guilabel:`Analizează desenele` nu importă imediat. Deschide fereastra :guilabel:`Alege extrasele de materiale`, cu un rând pentru fiecare extras:"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:249
+msgid "Column"
+msgstr "Coloană"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:250
+msgid "What it shows"
+msgstr "Ce arată"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:251
+msgid ":guilabel:`Import`"
+msgstr ":guilabel:`Import`"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:252
+msgid "Tick the lists to import."
+msgstr "Bifează extrasele de importat."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:253
+msgid ":guilabel:`File`"
+msgstr ":guilabel:`Fișier`"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:254
+msgid "The drawing file that holds the list."
+msgstr "Fișierul de desen care conține extrasul."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:255
+msgid ":guilabel:`Table`"
+msgstr ":guilabel:`Tabel`"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:256
+msgid "The title of the list."
+msgstr "Titlul extrasului."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:257
+msgid ":guilabel:`Kind`"
+msgstr ":guilabel:`Tip`"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:258
+msgid ":guilabel:`Parts list` or :guilabel:`Summary of assemblies`."
+msgstr ":guilabel:`Extras de materiale` sau :guilabel:`Necesar de ansambluri`."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:259
+msgid ":guilabel:`Rows`"
+msgstr ":guilabel:`Rânduri`"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:260
+msgid "The number of rows."
+msgstr "Numărul de rânduri."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:261
+msgid ":guilabel:`Total on the drawing (kg)`"
+msgstr ":guilabel:`Total pe desen (kg)`"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:262
+msgid "The total that the list states."
+msgstr "Totalul indicat de extras."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:263
+msgid ":guilabel:`Assembly`"
+msgstr ":guilabel:`Ansamblu`"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:264
+msgid "The assembly the list is for and how many of it the summary asks for, for example \"Grinzi G1 × 8\"."
+msgstr "Ansamblul pentru care este extrasul și câte bucăți din el cere centralizatorul, de exemplu \"Grinzi G1 × 8\"."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:266
+msgid ":guilabel:`Against the drawing`"
+msgstr ":guilabel:`Comparat cu desenul`"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:267
+msgid "The result of the :ref:`check against the labels <manufacturing/cad_bom_import/check_tables>`, for example \"matches the drawing\", \"6 of 10 rows are not on the drawing\" or \"no labels to compare with\"."
+msgstr "Rezultatul :ref:`verificării față de etichete <manufacturing/cad_bom_import/check_tables>`, de exemplu \"matches the drawing\", \"6 of 10 rows are not on the drawing\" sau \"no labels to compare with\"."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:281
+msgid "Lists whose rows are mostly not labelled on the drawing start unticked. Click :guilabel:`Import` to parse with the lists you ticked."
+msgstr "Extrasele ale căror rânduri nu sunt în mare parte etichetate pe desen pornesc nebifate. Fă clic pe :guilabel:`Import` pentru a analiza cu extrasele bifate."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:284
+msgid "If you tick **none**, the bill of materials is read from the drawing itself, through its labels."
+msgstr "Dacă nu bifezi **niciunul**, lista de materiale este citită din desenul însuși, prin etichetele lui."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:285
+msgid "If the drawings have **exactly one** parts list, it is used without asking. If they have none, the drawing is read through its labels."
+msgstr "Dacă desenele au **exact un** extras de materiale, acesta este folosit fără întrebare. Dacă nu au niciunul, desenul este citit prin etichete."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:287
+msgid "Your choice is kept. Parsing again does not ask again, unless the drawings changed (a new drawing or a new parts list). Then the window opens again."
+msgstr "Alegerea ta este păstrată. O nouă analiză nu mai întreabă, decât dacă desenele s-au schimbat (un desen nou sau un extras nou). Atunci fereastra se deschide din nou."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:290
+msgid "The field :guilabel:`Parts lists found` on the import gives the number of lists. When two or more were found, the button :guilabel:`Choose parts lists` reopens the window. The lists that were not used are named in the parse log (\"tables not used (not selected)\")."
+msgstr "Câmpul :guilabel:`Extrase de materiale găsite` din import arată numărul extraselor. Când au fost găsite două sau mai multe, butonul :guilabel:`Alege extrasele de materiale` redeschide fereastra. Extrasele care nu au fost folosite sunt numite în jurnalul de analiză (\"tables not used (not selected)\")."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:297
+msgid "Check a parts list against the drawing"
+msgstr "Verifică un extras de materiale față de desen"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:299
+msgid "The rows of the imported parts lists are compared with the labels of the drawing. A row gets a conflict note and is flagged :guilabel:`To review` when its section is labelled nowhere on the drawing (\"... is not labelled on the drawing\"), or when its mark is labelled with another section on the drawing (\"on the drawing P5 is labelled HEA 200\"). The parse log says how many rows do not match."
+msgstr "Rândurile extraselor importate sunt comparate cu etichetele desenului. Un rând primește o notă de conflict și este marcat :guilabel:`De verificat` când profilul său nu este etichetat nicăieri pe desen (\"... is not labelled on the drawing\") sau când poziția sa este etichetată pe desen cu alt profil (\"on the drawing P5 is labelled HEA 200\"). Jurnalul de analiză spune câte rânduri nu se potrivesc."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:305
 msgid "Review the lines"
 msgstr "Verificarea liniilor"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:144
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:307
 msgid "The tab :guilabel:`Lines` is an editable list. Change anything that is wrong, add lines with :guilabel:`Add a line` and drag the handle to reorder. When you change the :guilabel:`Section`, the dimensions, family and weight are worked out again."
 msgstr "Fila :guilabel:`Linii` este o listă editabilă. Schimbă tot ce este greșit, adaugă linii cu :guilabel:`Adaugă o linie` și trage de mâner pentru a le reordona. Când schimbi :guilabel:`Profil`, dimensiunile, familia și greutatea sunt recalculate."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:148
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:311
+msgid "The lines stay one per row of the drawing or of the parts list. The same piece in the lists of G1, G2 and G3 is three lines, each with its source in the :guilabel:`Drawing text`. The material summary, the bill of materials and the procurement list add them up (see below)."
+msgstr "Liniile rămân câte una pentru fiecare rând al desenului sau al extrasului. Aceeași piesă din extrasele G1, G2 și G3 înseamnă trei linii, fiecare cu sursa ei în :guilabel:`Text din desen`. Centralizatorul de materiale, lista de materiale și lista de aprovizionare le adună (vezi mai jos)."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:315
 msgid "The colour of a line tells you what to look at:"
 msgstr "Culoarea unei linii îți arată la ce să te uiți:"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:150
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:317
 msgid "**Orange**: :guilabel:`To review`, for example a quantity that is only a guess."
 msgstr "**Portocaliu**: :guilabel:`De verificat`, de exemplu o cantitate care este doar presupusă."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:151
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:318
 msgid "**Red**: a :guilabel:`Conflict`, with the reason in the conflict note (same mark with different sizes, weight on the drawing that differs from the computed weight, a grade that is not in the material master, different quantities in the attributes)."
 msgstr "**Roșu**: un :guilabel:`Conflict`, cu motivul în nota de conflict (aceeași poziție cu dimensiuni diferite, greutatea de pe desen diferă de greutatea calculată, o calitate care nu se află în registrul de materiale, cantități diferite în atribute)."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:154
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:321
 msgid "**Grey**: :guilabel:`Excluded`, an existing member that is not counted."
 msgstr "**Gri**: :guilabel:`Exclus`, un element existent care nu este numărat."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:166
-msgid "Use the optional columns for the rest: :guilabel:`Family`, :guilabel:`Height (mm)`, :guilabel:`Width (mm)`, :guilabel:`Thickness (mm)`, :guilabel:`Diameter (mm)`, :guilabel:`Occurrences`, :guilabel:`Source`, :guilabel:`Confidence`, :guilabel:`Weight on drawing (kg)`, :guilabel:`Drawing text` and :guilabel:`Product action`. For bolts the grade column becomes the :guilabel:`Property class`. A grade written on the drawing that is not in the material master is kept as :guilabel:`Grade on drawing`; the line is flagged and weighed with the density of steel until you choose a material."
-msgstr "Folosește coloanele opționale pentru restul: :guilabel:`Familie`, :guilabel:`Înălțime (mm)`, :guilabel:`Lățime (mm)`, :guilabel:`Grosime (mm)`, :guilabel:`Diametru (mm)`, :guilabel:`Apariții`, :guilabel:`Sursă`, :guilabel:`Încredere`, :guilabel:`Greutate pe desen (kg)`, :guilabel:`Text din desen` și :guilabel:`Acțiune produs`. Pentru șuruburi, coloana de calitate devine :guilabel:`Grupa de rezistență`. O calitate scrisă pe desen care nu se află în registrul de materiale este păstrată ca :guilabel:`Calitatea de pe desen`; linia este marcată și cântărită cu densitatea oțelului până când alegi un material."
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:333
+msgid "Use the optional columns for the rest: :guilabel:`Family`, :guilabel:`Height (mm)`, :guilabel:`Width (mm)`, :guilabel:`Thickness (mm)`, :guilabel:`Diameter (mm)`, :guilabel:`Occurrences`, :guilabel:`Source`, :guilabel:`Confidence`, :guilabel:`Weight on drawing (kg)`, :guilabel:`Drawing text` and :guilabel:`Product action`. :guilabel:`Quantity on the drawing` and :guilabel:`Length on the drawing` are set when the quantity, or the length of one piece, is written on the drawing (in a parts list, a block attribute or a label); an estimate never changes them. For bolts the grade column becomes the :guilabel:`Property class`. A grade written on the drawing that is not in the material master is kept as :guilabel:`Grade on drawing`; the line is flagged and weighed with the density of steel until you choose a material."
+msgstr "Folosește coloanele opționale pentru restul: :guilabel:`Familie`, :guilabel:`Înălțime (mm)`, :guilabel:`Lățime (mm)`, :guilabel:`Grosime (mm)`, :guilabel:`Diametru (mm)`, :guilabel:`Apariții`, :guilabel:`Sursă`, :guilabel:`Încredere`, :guilabel:`Greutate pe desen (kg)`, :guilabel:`Text din desen` și :guilabel:`Acțiune produs`. :guilabel:`Cantitate pe desen` și :guilabel:`Lungime pe desen` sunt completate când cantitatea sau lungimea unei bucăți este scrisă pe desen (într-un extras de materiale, într-un atribut de bloc sau într-o etichetă); o estimare nu le schimbă niciodată. Pentru șuruburi, coloana de calitate devine :guilabel:`Grupa de rezistență`. O calitate scrisă pe desen care nu se află în registrul de materiale este păstrată ca :guilabel:`Calitatea de pe desen`; linia este marcată și cântărită cu densitatea oțelului până când alegi un material."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:174
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:343
 msgid "When every line is right, click :guilabel:`Mark as reviewed`. Open conflicts are written in the chatter."
 msgstr "Când toate liniile sunt corecte, fă clic pe :guilabel:`Marchează ca verificat`. Conflictele deschise sunt scrise în chatter."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:178
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:347
 msgid "Weights and the steel section catalogue"
 msgstr "Greutăți și catalogul de profile de oțel"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:180
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:349
 msgid "The weight of a line comes from the density of its material and from the mass per metre of the section."
 msgstr "Greutatea unei linii provine din densitatea materialului ei și din masa pe metru a profilului."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:183
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:352
 msgid "The **catalogue** under :menuselection:`Manufacturing app --> Configuration --> Steel sections` holds the sections with their dimensions and mass per metre: IPE 80 to 600, HEA, HEB and HEM, UPN and UPE channels, and equal and unequal angles. The values follow EN 10365 and EN 10056-1 and are tabulated for steel of 7850 kg/m³. Manufacturing administrators can edit the catalogue."
 msgstr "**Catalogul** de la :menuselection:`Fabricație --> Configurare --> Profile metalice` conține profilele cu dimensiunile și masa lor pe metru: IPE 80 până la 600, HEA, HEB și HEM, profile U UPN și UPE, precum și corniere cu aripi egale și inegale. Valorile urmează EN 10365 și EN 10056-1 și sunt tabelate pentru oțel de 7850 kg/m³. Administratorii Fabricație pot edita catalogul."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:187
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:356
 msgid "The tabulated mass is scaled by *density of the grade / 7850*, so the same section in stainless steel (7900 kg/m³) or aluminium (2700 kg/m³) is weighed correctly. A line without a grade is weighed as steel at 7850 kg/m³."
 msgstr "Masa tabelată este scalată cu *densitatea calității / 7850*, astfel încât același profil din oțel inoxidabil (7900 kg/m³) sau aluminiu (2700 kg/m³) este cântărit corect. O linie fără calitate este cântărită ca oțel de 7850 kg/m³."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:190
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:359
 msgid "**Hollow sections** are calculated from their dimensions with the corner radii of EN 10219-2 (SHS 100x100x4 is 11.73 kg/m); round hollow sections, flat bars and round bars from their geometry."
 msgstr "**Profilele tubulare** sunt calculate din dimensiunile lor, cu razele de colț din EN 10219-2 (SHS 100x100x4 are 11,73 kg/m); profilele tubulare rotunde, platbandele și barele rotunde sunt calculate din geometria lor."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:193
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:362
 msgid "**Plates** weigh width x length x thickness x density per piece (300x300x10 is 7.065 kg), and their area is given in m²."
 msgstr "**Tablele** cântăresc lățime x lungime x grosime x densitate pe bucată (300x300x10 are 7,065 kg), iar aria lor este dată în m²."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:195
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:364
 msgid "**Z, C and Σ purlins** are calculated from the developed width of the section and its thickness. The generic geometry per height is stored in the catalogue and is editable; the server action :guilabel:`Recompute purlin weight from geometry` recalculates the mass after you change the flange or lip. Align the values with your supplier."
 msgstr "**Panele Z, C și Σ** sunt calculate din lățimea desfășurată a profilului și din grosimea lui. Geometria generică pentru fiecare înălțime este stocată în catalog și poate fi editată; acțiunea de server :guilabel:`Recalculează greutatea panei din geometrie` recalculează masa după ce schimbi talpa sau buza. Aliniază valorile cu cele ale furnizorului tău."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:199
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:368
 msgid "**Bolts** are counted in pieces and add no weight to the totals."
 msgstr "**Șuruburile** sunt numărate în bucăți și nu adaugă greutate la totaluri."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:201
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:370
 msgid "For each line the list shows the :guilabel:`Unit weight` (per metre or per piece), the :guilabel:`Total length (m)`, the :guilabel:`Total area (m²)` and the :guilabel:`Total weight (kg)`. If nothing can be calculated, the weight written on the drawing is used."
 msgstr "Pentru fiecare linie, lista arată :guilabel:`Greutate unitară` (pe metru sau pe bucată), :guilabel:`Lungime totală (m)`, :guilabel:`Suprafață totală (m²)` și :guilabel:`Greutate totală (kg)`. Dacă nu se poate calcula nimic, se folosește greutatea scrisă pe desen."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:206
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:375
 msgid "Material summary and the two options"
 msgstr "Centralizatorul de materiale și cele două variante"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:208
-msgid "The tab :guilabel:`Material summary` adds the lines up by kind of material and section: pieces, total length, area and weight. Click :guilabel:`Refresh` to rebuild it; it is also rebuilt whenever a line changes. The weights block above the tabs shows three totals:"
-msgstr "Fila :guilabel:`Centralizator materiale` adună liniile pe tip de material și profil: bucăți, lungime totală, arie și greutate. Fă clic pe :guilabel:`Reîmprospătează` pentru a-l reconstrui; se reconstruiește și ori de câte ori se schimbă o linie. Blocul de greutăți de deasupra filelor arată trei totaluri:"
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:377
+msgid "The tab :guilabel:`Material summary` adds the lines up by kind of material, section and grade: pieces, total length, area and weight. Equal pieces from different lists are therefore one row. The bill of materials and the procurement list add the lines up by product. Click :guilabel:`Refresh` to rebuild it; it is also rebuilt whenever a line changes. The weights block above the tabs shows three totals:"
+msgstr "Fila :guilabel:`Centralizator materiale` adună liniile pe tip de material, profil și calitate: bucăți, lungime totală, arie și greutate. Piesele identice din extrase diferite formează astfel un singur rând. Lista de materiale și lista de aprovizionare adună liniile pe produs. Fă clic pe :guilabel:`Reîmprospătează` pentru a-l reconstrui; se reconstruiește și ori de câte ori se schimbă o linie. Blocul de greutăți de deasupra filelor arată trei totaluri:"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:212
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:382
 msgid ":guilabel:`Option 1: without purlins (kg)`: the total weight without the purlin lines;"
 msgstr ":guilabel:`Varianta 1: fără pane (kg)`: greutatea totală fără liniile de pane;"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:213
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:383
 msgid ":guilabel:`Purlins (kg)`: the weight of the purlins; and"
 msgstr ":guilabel:`Pane (kg)`: greutatea panelor; și"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:214
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:384
 msgid ":guilabel:`Option 2: with purlins (kg)`: the total weight including the purlins."
 msgstr ":guilabel:`Varianta 2: cu pane (kg)`: greutatea totală, inclusiv panele."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:216
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:386
 msgid "A line is a purlin when its family is Z, C or Σ; the :guilabel:`Purlin` box can be changed by hand. Excluded lines are in no total."
 msgstr "O linie este o pană când familia ei este Z, C sau Σ; caseta :guilabel:`Pană` poate fi schimbată manual. Liniile excluse nu intră în niciun total."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:219
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:389
 msgid "Use :guilabel:`PDF` or :guilabel:`Print summary` for the report *Material summary* (the summary, option 1, the purlins, option 2 and the lines to check), and :guilabel:`XLSX` for a spreadsheet with the summary and a sheet with the detailed lines."
 msgstr "Folosește :guilabel:`PDF` sau :guilabel:`Tipărește centralizatorul` pentru raportul *Centralizator materiale* (centralizatorul, varianta 1, panele, varianta 2 și liniile de verificat) și :guilabel:`XLSX` pentru o foaie de calcul cu centralizatorul și o foaie cu liniile detaliate."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:224
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:394
 msgid "Limits"
 msgstr "Limite"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:226
-msgid "The label strategy cannot know quantities and lengths. They are left for you to review, or for the :doc:`AI bridge <../../../productivity/ai/cad_bom_import>` to suggest."
-msgstr "Strategia etichetelor nu poate cunoaște cantitățile și lungimile. Acestea rămân să le verifici tu sau să le sugereze :doc:`puntea AI <../../../productivity/ai/cad_bom_import>`."
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:396
+msgid "A label that does not state a quantity or a length leaves them open. They are left for you to review, or for the :doc:`AI bridge <../../../productivity/ai/cad_bom_import>` to suggest. A quantity that was counted from labels is only a guess and stays flagged."
+msgstr "O etichetă care nu indică o cantitate sau o lungime le lasă deschise. Rămân să le verifici tu sau să le sugereze :doc:`puntea AI <../../../productivity/ai/cad_bom_import>`. O cantitate numărată din etichete este doar o presupunere și rămâne marcată."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:228
-msgid "A parts list needs a header with at least three recognised columns. Rotated tables and tables that are split over several areas of the drawing are not joined."
-msgstr "Un extras de materiale necesită un antet cu cel puțin trei coloane recunoscute. Tabelele rotite și tabelele împărțite pe mai multe zone ale desenului nu sunt unite."
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:399
+msgid "A parts list needs a header with at least three recognised columns. Rotated tables and tables that are split over several areas of the drawing are not joined. Spreadsheets pasted into the drawing are read (``.xls`` and ``.xlsx``), but reinforcement schedules are skipped."
+msgstr "Un extras de materiale are nevoie de un antet cu cel puțin trei coloane recunoscute. Tabelele rotite și tabelele împărțite în mai multe zone ale desenului nu sunt unite. Foile de calcul lipite în desen sunt citite (``.xls`` și ``.xlsx``), dar extrasele de armare sunt ignorate."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:230
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:402
 msgid "LibreDWG does not decode every DWG object (for example proxy entities). The contents of an ACAD_TABLE in a DWG are read from the graphics of the table, not from its cells."
 msgstr "LibreDWG nu decodează toate obiectele DWG (de exemplu entitățile proxy). Conținutul unui ACAD_TABLE dintr-un DWG este citit din grafica tabelului, nu din celulele lui."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:232
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/drawings.rst:404
 msgid "Purlin weights are generic until you align the catalogue with the supplier."
 msgstr "Greutățile panelor sunt generice până când aliniezi catalogul cu furnizorul."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:3
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:3
 msgid "Quotation, bill of materials and purchasing"
 msgstr "Ofertă, listă de materiale și aprovizionare"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:6
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:6
 msgid "Create the quotation"
 msgstr "Crearea ofertei"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:8
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:8
 msgid "When the import is :guilabel:`Reviewed`, click :guilabel:`Create quotation`. A window opens with the weights and prices of the import:"
 msgstr "Când importul este :guilabel:`Verificat`, fă clic pe :guilabel:`Creează ofertă`. Se deschide o fereastră cu greutățile și prețurile importului:"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:11
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:11
 msgid ":guilabel:`Manufacturing weight`: choose :guilabel:`Option 1: without purlins` or :guilabel:`Option 2: with purlins`. The :guilabel:`Manufacturing quantity (kg)` below shows the weight that will be quoted. Option 2 is proposed."
 msgstr ":guilabel:`Greutate fabricație`: alege :guilabel:`Varianta 1: fără pane` sau :guilabel:`Varianta 2: cu pane`. :guilabel:`Cantitate fabricație (kg)` de dedesubt arată greutatea care va fi ofertată. Este propusă varianta 2."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:14
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:14
 msgid ":guilabel:`Manufacturing price per kg`: the default comes from the import, which takes it from the settings."
 msgstr ":guilabel:`Preț fabricație pe kg`: valoarea implicită provine din import, care o preia din setări."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:16
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:16
 msgid ":guilabel:`Add assembly` and :guilabel:`Assembly price per kg`: assembly is optional and is always quoted on the weight of **option 2**, purlins included."
 msgstr ":guilabel:`Adaugă montaj` și :guilabel:`Preț montaj pe kg`: montajul este opțional și este ofertat întotdeauna pe greutatea **variantei 2**, inclusiv panele."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:18
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:18
 msgid ":guilabel:`Pricelist`: a pricelist in euro is proposed when one exists. Otherwise the customer's pricelist is used, and a note in the chatter of the import and of the order says that the quotation is not in euro."
 msgstr ":guilabel:`Listă de prețuri`: este propusă o listă de prețuri în euro, dacă există una. Altfel se folosește lista de prețuri a clientului, iar o notă în chatter-ul importului și al comenzii spune că oferta nu este în euro."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:21
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:21
 msgid ":guilabel:`Untaxed amount`: the total, for your information."
 msgstr ":guilabel:`Valoare fără taxe`: totalul, cu titlu informativ."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:23
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:23
 msgid "Click :guilabel:`Create quotation`. The sales order gets two lines in kilograms, *Steel structure manufacturing* (the weight of the chosen option) and *Steel structure assembly* (the weight of option 2). The prices you typed are kept, so the price stays purely kg-based; taxes come from the products and the fiscal position. The prices are also written back to the import. You can create another quotation with :guilabel:`New quotation`; all of them are listed behind the :guilabel:`Quotations` button."
 msgstr "Fă clic pe :guilabel:`Creează ofertă`. Comanda de vânzare primește două linii în kilograme, *Fabricație structură metalică* (greutatea variantei alese) și *Montaj structură metalică* (greutatea variantei 2). Prețurile introduse de tine se păstrează, astfel încât prețul rămâne strict pe kg; taxele provin din produse și din poziția fiscală. Prețurile sunt scrise și înapoi în import. Poți crea o altă ofertă cu :guilabel:`Ofertă nouă`; toate sunt listate în spatele butonului :guilabel:`Oferte`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:39
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:39
 msgid "Accept the quotation"
 msgstr "Acceptarea ofertei"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:41
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:41
 msgid "When the customer confirms the sales order, the import becomes :guilabel:`Accepted`. If the quotation was accepted outside Odoo, click :guilabel:`Mark as accepted`."
 msgstr "Când clientul confirmă comanda de vânzare, importul devine :guilabel:`Acceptată`. Dacă oferta a fost acceptată în afara Odoo, fă clic pe :guilabel:`Marchează ca acceptat`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:44
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:44
 msgid "With the setting :guilabel:`Create the BoM when the quotation is confirmed` (on by default) the bill of materials is created at once. A failure does not block the order: the error is posted in the chatter of the import and you create the bill of materials by hand with :guilabel:`Create BoM`. That button, and :guilabel:`New BoM version` after an import is :guilabel:`Done`, needs the *Manufacturing / Administrator* right. The automatic creation runs with elevated rights when the person confirming the order is not an administrator."
 msgstr "Cu setarea :guilabel:`Creează lista de materiale la confirmarea ofertei` (activată implicit), lista de materiale este creată imediat. O eroare nu blochează comanda: eroarea este postată în chatter-ul importului, iar lista de materiale o creezi manual cu :guilabel:`Creează lista de materiale`. Acest buton și :guilabel:`Versiune nouă listă de materiale`, după ce importul este :guilabel:`Efectuat`, necesită dreptul *Fabricație / Administrator*. Crearea automată rulează cu drepturi sporite când persoana care confirmă comanda nu este administrator."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:54
 msgid "Products and the bill of materials"
 msgstr "Produse și lista de materiale"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:56
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:56
 msgid "The importer gives every distinct material a **product key** of the form ``FAMILY|DESIGNATION|GRADE``, for example ``SHS|100X100X4|S235JR``. Plates bought in kilograms have one key per thickness (``PLATE|T10|S235JR``); plates bought in pieces have one per size (``PLATE|300X300X10|S235JR``). The key is stored on the product in the field :guilabel:`CAD material key`."
 msgstr "Importatorul dă fiecărui material distinct o **cheie de produs** de forma ``FAMILY|DESIGNATION|GRADE``, de exemplu ``SHS|100X100X4|S235JR``. Tablele cumpărate în kilograme au o cheie pentru fiecare grosime (``PLATE|T10|S235JR``); tablele cumpărate în bucăți au una pentru fiecare dimensiune (``PLATE|300X300X10|S235JR``). Cheia este stocată pe produs în câmpul :guilabel:`Cheie material CAD`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:61
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:61
+msgid "The lines of the import stay one per row of the drawing or of the parts list. The products and the bill of materials add them up: equal materials are one product, and the bill of materials has one line per product."
+msgstr "Liniile importului rămân câte una pentru fiecare rând al desenului sau al extrasului. Produsele și lista de materiale le adună: materialele identice formează un singur produs, iar lista de materiale are o linie pe produs."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:65
 msgid "For each line the product is found in this order:"
 msgstr "Pentru fiecare linie, produsul este căutat în această ordine:"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:63
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:67
 msgid "the product you chose on the line;"
 msgstr "produsul ales de tine pe linie;"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:64
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:68
 msgid "a product with the same CAD key;"
 msgstr "un produs cu aceeași cheie CAD;"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:65
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:69
 msgid "a product remembered in :menuselection:`Manufacturing app --> Configuration --> CAD product aliases`;"
 msgstr "un produs memorat la :menuselection:`Fabricație --> Configurare --> Aliasuri produse CAD`;"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:67
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:71
 msgid "a product whose internal reference equals the key written with dashes (for products coded that way by hand);"
 msgstr "un produs a cărui referință internă este egală cu cheia scrisă cu cratime (pentru produsele codificate astfel manual);"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:69
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:73
 msgid "a product with the same name, ignoring case, accents, spaces and separators; and"
 msgstr "un produs cu același nume, ignorând majusculele, diacriticele, spațiile și separatorii; și"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:70
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:74
 msgid "otherwise a new product is created. **Only missing products are created.**"
 msgstr "altfel, este creat un produs nou. **Sunt create doar produsele lipsă.**"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:72
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:76
 msgid "A product you choose by hand on a line is remembered as an alias when the bill of materials is created, so the next import finds it. On the line, :guilabel:`Product action` shows whether the product is an existing one or will be created."
 msgstr "Un produs ales manual pe o linie este memorat ca alias când se creează lista de materiale, astfel încât următorul import îl găsește. Pe linie, :guilabel:`Acțiune produs` arată dacă produsul este unul existent sau urmează să fie creat."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:76
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:80
 msgid "Created products are storable goods in a category per kind (*Steel materials*, with *Profiles*, *Hollow sections*, *Purlins*, *Bars*, *Plates*, *Bolts* and *Other materials*). Profiles, tubes, bars and purlins are measured in metres (the bill of materials quantity is the total length, the product weight is kg per metre), plates in kilograms or pieces according to the setting, bolts in units. They carry:"
 msgstr "Produsele create sunt bunuri stocabile, într-o categorie pentru fiecare tip (*Materiale din oțel*, cu *Profile*, *Profile tubulare*, *Pane*, *Bare*, *Table*, *Șuruburi* și *Alte materiale*). Profilele, țevile, barele și panele sunt măsurate în metri (cantitatea din lista de materiale este lungimea totală, iar greutatea produsului este în kg pe metru), tablele în kilograme sau bucăți, după setare, iar șuruburile în unități. Ele conțin:"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:81
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:85
 msgid "their **main material**, the grade of the line, with its density;"
 msgstr "**materialul lor principal**, calitatea liniei, cu densitatea sa;"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:82
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:86
 msgid "their **shape and dimensions** in millimetres: I, H and U sections and angles as open profiles (height, width, web and flange thickness), Z, C and Σ purlins as open profiles, square and rectangular hollow sections as hollow sections, round hollow sections as tubes, flat bars and plates as cuboids, and round bars as cylinders; and"
 msgstr "**forma și dimensiunile** lor în milimetri: profilele I, H și U și cornierele ca profile deschise (înălțime, lățime, grosimea inimii și a tălpii), panele Z, C și Σ ca profile deschise, profilele tubulare pătrate și dreptunghiulare ca secțiuni goale, profilele tubulare rotunde ca țevi, platbandele și tablele ca paralelipipede, iar barele rotunde ca cilindri; și"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:86
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:90
 msgid "the **cross-section area** the import weighed with, with :guilabel:`Weight from Dimensions` switched on. The weight of the product therefore equals area x density and follows later changes of the material density."
 msgstr "**aria secțiunii** cu care importul a calculat greutatea, cu :guilabel:`Greutate din dimensiuni` activat. Greutatea produsului este astfel egală cu aria x densitatea și urmează modificările ulterioare ale densității materialului."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:90
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:94
 msgid "The importer never writes the internal reference itself. When the rules of the *default code* module are installed, they code the new product; otherwise the reference stays empty."
 msgstr "Importatorul nu scrie niciodată el însuși referința internă. Când sunt instalate regulile modulului de *cod implicit*, acestea codifică produsul nou; altfel, referința rămâne goală."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:93
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:97
 msgid "The **bill of materials** is made for a finished product named after the project or the import. It has one line per product (quantities of equal products are added up) and the reference ``CAD v1``, ``CAD v2``, and so on. A new bill of materials archives the previous ones of the import, so the history is kept; all versions are behind the :guilabel:`BoMs` button."
 msgstr "**Lista de materiale** este creată pentru un produs finit numit după proiect sau după import. Are o linie pentru fiecare produs (cantitățile produselor egale se adună) și referința ``CAD v1``, ``CAD v2`` și așa mai departe. O listă de materiale nouă le arhivează pe cele anterioare ale importului, astfel încât istoricul se păstrează; toate versiunile sunt în spatele butonului :guilabel:`Liste materiale`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:101
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:105
 msgid "Procurement list"
 msgstr "Listă de aprovizionare"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:103
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:107
 msgid "Click :guilabel:`Procurement list` (or :guilabel:`Compute` on the tab :guilabel:`Procurement list`) to work out what to buy. The lines are grouped by product key."
 msgstr "Fă clic pe :guilabel:`Listă de aprovizionare` (sau pe :guilabel:`Calculează` în fila :guilabel:`Listă de aprovizionare`) pentru a calcula ce trebuie cumpărat. Liniile sunt grupate după cheia produsului."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:106
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:110
 msgid "**Linear members** (profiles, tubes, bars, purlins): the *stock length* is the quantity of the product's first packaging (for example \"Bar 6 m\" with a quantity of 6 on a product in metres), and otherwise the stock length of the kind in the settings. The number of :guilabel:`Bars` is the larger of two figures: a first-fit-decreasing packing of the pieces into bars, and the total length plus the :guilabel:`Waste (%)` divided by the stock length. The :guilabel:`Purchase quantity` is bars x stock length. A piece longer than a stock bar is noted (\"joints needed\")."
 msgstr "**Elemente liniare** (profile, țevi, bare, pane): *lungimea comercială* este cantitatea primului ambalaj al produsului (de exemplu \"Bar 6 m\" cu cantitatea 6 la un produs în metri), iar în lipsa lui, lungimea comercială a tipului din setări. Numărul de :guilabel:`Bare` este cea mai mare dintre două valori: o împachetare first-fit-decreasing a bucăților în bare și lungimea totală plus :guilabel:`Pierderi (%)` împărțite la lungimea comercială. :guilabel:`Cantitate de achiziționat` este bare x lungimea comercială. O bucată mai lungă decât o bară comercială este notată (\"sunt necesare îmbinări\")."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:112
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:116
 msgid "**Plates**: the area in m² and the weight with waste, or pieces if plates are bought per piece."
 msgstr "**Table**: aria în m² și greutatea cu pierderi sau bucăți, dacă tablele se cumpără la bucată."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:113
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:117
 msgid "**Bolts and others**: pieces."
 msgstr "**Șuruburi și altele**: bucăți."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:115
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:119
 msgid "The columns show the :guilabel:`Net quantity`, :guilabel:`Stock length (m)`, the :guilabel:`Stock packaging` it came from, :guilabel:`Bars`, :guilabel:`Waste (%)`, :guilabel:`Purchase quantity` and the first :guilabel:`Vendor` of the product. Use :guilabel:`PDF` and :guilabel:`XLSX` for the report *Procurement list*."
 msgstr "Coloanele arată :guilabel:`Cantitate netă`, :guilabel:`Lungime comercială (m)`, :guilabel:`Ambalaj comercial` din care provine, :guilabel:`Bare`, :guilabel:`Pierderi (%)`, :guilabel:`Cantitate de achiziționat` și primul :guilabel:`Furnizor` al produsului. Folosește :guilabel:`PDF` și :guilabel:`XLSX` pentru raportul *Listă de aprovizionare*."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:121
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:125
 msgid "Create requests for quotation"
 msgstr "Crearea cererilor de ofertă"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:123
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/quotation_bom.rst:127
 msgid "Click :guilabel:`Create RFQs`, choose a :guilabel:`Default vendor` for the products that have no vendor, review the materials and confirm. The module creates the missing products, then one **draft** purchase order per vendor (the first vendor of each product, with its price and the packaging as the line packaging), converting the quantities to the purchase unit of measure. Lines without any vendor are reported to you. Nothing is confirmed: you confirm the requests for quotation yourself. They are listed behind the :guilabel:`RFQs` button."
 msgstr "Fă clic pe :guilabel:`Creează cereri de ofertă`, alege un :guilabel:`Furnizor implicit` pentru produsele care nu au furnizor, verifică materialele și confirmă. Modulul creează produsele lipsă, apoi o comandă de achiziție în **ciornă** pentru fiecare furnizor (primul furnizor al fiecărui produs, cu prețul lui și ambalajul ca ambalaj al liniei), convertind cantitățile în unitatea de măsură de achiziție. Liniile fără furnizor îți sunt raportate. Nimic nu este confirmat: cererile de ofertă le confirmi tu. Sunt listate în spatele butonului :guilabel:`Cereri de ofertă`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:3
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:3
 msgid "Set up the CAD import"
 msgstr "Configurarea importului CAD"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:5
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:5
 msgid "This page lists what the server needs, the settings of the import and the master data it relies on."
 msgstr "Această pagină enumeră ce are nevoie serverul, setările importului și datele de bază pe care se sprijină."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:10
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:10
 msgid "Requirements"
 msgstr "Cerințe"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:12
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:12
 msgid "Install the module **CAD Bill of Materials Import** (``mrp_cad_bom_import``). It depends on *Manufacturing*, *Sales*, *Purchase*, *Project* and the eYssen modules for the :ref:`material master and product dimensions <inventory/product_data/material>`, which are installed with it."
 msgstr "Instalează modulul **CAD Bill of Materials Import** (``mrp_cad_bom_import``). Depinde de *Fabricație*, *Vânzări*, *Achiziții*, *Proiect* și de modulele eYssen pentru :ref:`registrul de materiale și dimensiunile produselor <inventory/product_data/material>`, care se instalează odată cu el."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:16
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:16
 msgid "The server needs the following software."
 msgstr "Serverul are nevoie de următoarele programe."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:18
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:18
 msgid "**ezdxf**, a Python library (MIT license) that reads DXF files. It is installed with ``pip install ezdxf`` and listed in ``requirements-eyssen.txt``."
 msgstr "**ezdxf**, o bibliotecă Python (licență MIT) care citește fișiere DXF. Se instalează cu ``pip install ezdxf`` și este menționată în ``requirements-eyssen.txt``."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:20
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:20
 msgid "**LibreDWG** and its ``dwgread`` program, but *only* if you import DWG files. **DXF files need no converter.** If ``dwgread`` is missing, the import stops with a message that explains how to install it, or asks you to upload the drawing as DXF."
 msgstr "**LibreDWG** și programul său ``dwgread``, dar *numai* dacă importi fișiere DWG. **Fișierele DXF nu au nevoie de convertor.** Dacă ``dwgread`` lipsește, importul se oprește cu un mesaj care explică instalarea sau îți cere să încarci desenul ca DXF."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:25
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:25
 msgid "LibreDWG is distributed under the GPL. The module never links to it and never ships it: it only runs ``dwgread`` as a separate program in a temporary folder. Install it yourself on the Odoo server."
 msgstr "LibreDWG este distribuit sub licența GPL. Modulul nu îl leagă niciodată și nu îl livrează: rulează doar ``dwgread`` ca program separat într-un dosar temporar. Instalează-l tu însuți pe serverul Odoo."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:30
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:30
 msgid "Install LibreDWG for DWG files"
 msgstr "Instalarea LibreDWG pentru fișiere DWG"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:32
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:32
 msgid "**Docker** (Debian or Ubuntu based image): add the following to the Dockerfile of your Odoo image."
 msgstr "**Docker** (imagine bazată pe Debian sau Ubuntu): adaugă următoarele în Dockerfile-ul imaginii tale Odoo."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:41
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:41
 msgid "``dwgread`` is then found at ``/opt/libredwg/bin/dwgread``. When the module runs it, it sets ``LD_LIBRARY_PATH`` to ``/opt/libredwg/lib``."
 msgstr "``dwgread`` se găsește apoi la ``/opt/libredwg/bin/dwgread``. Când modulul îl rulează, setează ``LD_LIBRARY_PATH`` la ``/opt/libredwg/lib``."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:44
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:44
 msgid "**macOS**: run ``brew install libredwg``. ``dwgread`` is then on the ``PATH``. If you installed it elsewhere, enter the path in the settings."
 msgstr "**macOS**: rulează ``brew install libredwg``. ``dwgread`` este apoi în ``PATH``. Dacă l-ai instalat în altă parte, introdu calea în setări."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:47
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:47
 msgid "The module looks for the converter in this order: the path in the setting :guilabel:`DWG converter`, ``dwgread`` on the ``PATH``, and ``/opt/libredwg/bin/dwgread``. The setting :guilabel:`Converter in use` shows which program was found. A DWG is converted once per parse (time limit 180 seconds)."
 msgstr "Modulul caută convertorul în această ordine: calea din setarea :guilabel:`Convertor DWG`, ``dwgread`` în ``PATH`` și ``/opt/libredwg/bin/dwgread``. Setarea :guilabel:`Convertor folosit` arată ce program a fost găsit. Un DWG este convertit o singură dată la fiecare analiză (limită de timp 180 de secunde)."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:52
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:52
 msgid "Settings"
 msgstr "Setări"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:54
 msgid "Open :menuselection:`Manufacturing app --> Configuration --> Settings` and scroll to the block :guilabel:`CAD BoM import`."
 msgstr "Deschide :menuselection:`Fabricație --> Configurare --> Setări` și derulează la blocul :guilabel:`Import CAD listă materiale`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:61
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:61
 msgid "Setting"
 msgstr "Setare"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:63
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:63
 msgid "What it does"
 msgstr "Ce face"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:64
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:64
 msgid ":guilabel:`DWG converter`"
 msgstr ":guilabel:`Convertor DWG`"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:65 ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:100
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:65
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:100
 msgid "empty"
 msgstr "gol"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:66
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:66
 msgid "Path of the ``dwgread`` program. Empty: it is searched on the ``PATH`` and in ``/opt/libredwg/bin``. :guilabel:`Converter in use` shows the result."
 msgstr "Calea programului ``dwgread``. Gol: este căutat în ``PATH`` și în ``/opt/libredwg/bin``. :guilabel:`Convertor folosit` arată rezultatul."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:68
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:68
 msgid ":guilabel:`Manufacturing price per kg`"
 msgstr ":guilabel:`Preț fabricație pe kg`"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:69
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:69
 msgid "2.5"
 msgstr "2.5"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:70
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:70
 msgid "Default manufacturing price of the quotation, in euro per kg. It can be changed on every quotation."
 msgstr "Prețul implicit de fabricație al ofertei, în euro pe kg. Poate fi schimbat la fiecare ofertă."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:72
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:72
 msgid ":guilabel:`Assembly price per kg`"
 msgstr ":guilabel:`Preț montaj pe kg`"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:73
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:73
 msgid "0.8"
 msgstr "0.8"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:74
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:74
 msgid "Default assembly price of the quotation, in euro per kg."
 msgstr "Prețul implicit de montaj al ofertei, în euro pe kg."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:75
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:75
 msgid ":guilabel:`Manufacturing product` and :guilabel:`Assembly product`"
 msgstr ":guilabel:`Produs fabricație` și :guilabel:`Produs montaj`"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:76
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:76
 msgid "*Steel structure manufacturing* and *Steel structure assembly*"
 msgstr "*Fabricație structură metalică* și *Montaj structură metalică*"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:77
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:77
 msgid "The service products (unit of measure kg) used on the quotation lines. You can replace them."
 msgstr "Produsele de tip serviciu (unitate de măsură kg) folosite pe liniile ofertei. Le poți înlocui."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:78
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:78
 msgid ":guilabel:`Default material grade`"
 msgstr ":guilabel:`Calitate implicită a materialului`"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:79
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:79
 msgid "empty (S235JR)"
 msgstr "gol (S235JR)"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:80
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:80
 msgid "Grade of the lines when neither the line nor the drawing notes name one."
 msgstr "Calitatea liniilor când nici linia, nici notele desenului nu indică una."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:81
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:81
 msgid ":guilabel:`Default bolt property class`"
 msgstr ":guilabel:`Grupa implicită a șuruburilor`"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:82
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:82
 msgid "8.8"
 msgstr "8.8"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:83
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:83
 msgid "Property class of the bolts when the drawing does not say."
 msgstr "Grupa de calitate a șuruburilor când desenul nu o indică."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:84
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:84
 msgid ":guilabel:`Plates in`"
 msgstr ":guilabel:`Plăci în`"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:85
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:85
 msgid "Kilograms"
 msgstr "Kilograme"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:86
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:86
 msgid "Plates are bought in :guilabel:`Kilograms (one product per thickness)` or in :guilabel:`Pieces (one product per plate size)`."
 msgstr "Tablele sunt cumpărate în :guilabel:`Kilograme (un produs pe grosime)` sau în :guilabel:`Bucăți (un produs pe dimensiune de placă)`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:88
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:88
 msgid ":guilabel:`Stock length of profiles (m)`, :guilabel:`Stock length of tubes (m)`, :guilabel:`Stock length of purlins (m)` and :guilabel:`Stock length of bars (m)`"
 msgstr ":guilabel:`Lungime comercială profile (m)`, :guilabel:`Lungime comercială țevi (m)`, :guilabel:`Lungime comercială pane (m)` și :guilabel:`Lungime comercială bare (m)`"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:90
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:90
 msgid "12, 6, 12 and 6"
 msgstr "12, 6, 12 și 6"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:91
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:91
 msgid "Length of the bars you buy. It is used when the product has no packaging such as \"Bar 6 m\" (see :ref:`the procurement list <manufacturing/cad_bom_import/procurement>`)."
 msgstr "Lungimea barelor pe care le cumperi. Este folosită când produsul nu are un ambalaj precum \"Bar 6 m\" (vezi :ref:`lista de aprovizionare <manufacturing/cad_bom_import/procurement>`)."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:93
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:93
 msgid ":guilabel:`Cutting waste (%)`"
 msgstr ":guilabel:`Pierderi la debitare (%)`"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:95
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:95
 msgid "Waste added when the number of bars is calculated."
 msgstr "Pierderi adăugate la calculul numărului de bare."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:96
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:96
 msgid ":guilabel:`Create the BoM when the quotation is confirmed`"
 msgstr ":guilabel:`Creează lista de materiale la confirmarea ofertei`"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:97
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:97
 msgid "on"
 msgstr "activat"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:98
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:98
 msgid "Creates the bill of materials as soon as the customer's quotation is confirmed."
 msgstr "Creează lista de materiale de îndată ce oferta clientului este confirmată."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:99
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:99
 msgid ":guilabel:`Block attribute tags`"
 msgstr ":guilabel:`Etichete atribute bloc`"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:101
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:101
 msgid "Extra tag mapping for drawings whose blocks use their own attribute names, for example ``POSNR=mark, ANZ=quantity, PROF=profile, LG=length``. The roles are mark, quantity, profile, material, length, width, thickness, weight and description."
 msgstr "Mapare suplimentară a etichetelor pentru desene ale căror blocuri folosesc propriile denumiri de atribute, de exemplu ``POSNR=mark, ANZ=quantity, PROF=profile, LG=length``. Rolurile sunt mark, quantity, profile, material, length, width, thickness, weight și description."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:104
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:104
 msgid ":guilabel:`Plate mark prefixes`"
 msgstr ":guilabel:`Prefixe marcaj plăci`"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:105
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:105
 msgid "PM, PL, P, PB, PC, PI, PS, T, TB, TP, LEMEZ, PLACA, TABLA, BL, CH, GUS"
 msgstr "PM, PL, P, PB, PC, PI, PS, T, TB, TP, LEMEZ, PLACA, TABLA, BL, CH, GUS"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:106
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:106
 msgid "A mark that starts with one of these letters is a plate when its size has no family, for example \"PM 2 / 300x300x10\"."
 msgstr "Un marcaj care începe cu una dintre aceste litere este o tablă când dimensiunea ei nu are familie, de exemplu \"PM 2 / 300x300x10\"."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:109
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:109
 msgid "The same block has a shortcut to the steel section catalogue (see :doc:`drawings`)."
 msgstr "Același bloc are o scurtătură către catalogul de profile de oțel (vezi :doc:`drawings`)."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:112
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:112
 msgid "Master data the import relies on"
 msgstr "Datele de bază pe care se sprijină importul"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:114
-msgid "**Materials.** Every line has a material grade. Grades are records of the material master (:menuselection:`Products --> Configuration --> Materials`), looked up by code, name and aliases, and their density drives the weights. The standard data contains S235JR, S275JR, S355J2, S460, 1.4301, 1.4404, EN AW-6060 and EN AW-6082; old designations such as OL37, St37-2 or Fe360 are aliases of S235JR. See :ref:`inventory/product_data/material`."
-msgstr "**Materiale.** Fiecare linie are o calitate de material. Calitățile sunt înregistrări ale registrului de materiale (:menuselection:`Produse --> Configurare --> Materiale`), căutate după cod, nume și denumiri alternative, iar densitatea lor determină greutățile. Datele standard conțin S235JR, S275JR, S355J2, S460, 1.4301, 1.4404, EN AW-6060 și EN AW-6082; denumiri vechi precum OL37, St37-2 sau Fe360 sunt denumiri alternative ale S235JR. Vezi :ref:`inventory/product_data/material`."
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:114
+msgid "**Materials.** Every line has a material grade. Grades are records of the material master (:menuselection:`Products --> Configuration --> Materials`), looked up by code, name and aliases, and their density drives the weights. The standard data contains the EN 10025-2 qualities S235JR, S235J0, S235J2, S275JR, S275J0, S275J2, S355JR, S355J0, S355J2 and S355K2, and also S460, 1.4301, 1.4404, EN AW-6060 and EN AW-6082. A grade written on a drawing matches its exact quality, and old designations such as OL37, St37-2 or Fe360 are aliases of S235JR. See :ref:`inventory/product_data/material`."
+msgstr "**Materiale.** Fiecare linie are o calitate de material. Calitățile sunt înregistrări ale registrului de materiale (:menuselection:`Produse --> Configurare --> Materiale`), căutate după cod, nume și denumiri alternative, iar densitatea lor determină greutățile. Datele standard conțin calitățile din EN 10025-2 S235JR, S235J0, S235J2, S275JR, S275J0, S275J2, S355JR, S355J0, S355J2 și S355K2, precum și S460, 1.4301, 1.4404, EN AW-6060 și EN AW-6082. O calitate scrisă pe un desen se potrivește cu calitatea sa exactă, iar denumiri vechi precum OL37, St37-2 sau Fe360 sunt denumiri alternative ale S235JR. Vezi :ref:`inventory/product_data/material`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:119
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:121
 msgid "**Product dimensions.** Products created by the import carry their shape, dimensions and cross-section area, so that their weight follows the material density. See :ref:`inventory/product_data/dimensions`."
 msgstr "**Dimensiunile produselor.** Produsele create de import conțin forma, dimensiunile și aria secțiunii, astfel încât greutatea lor urmează densitatea materialului. Vezi :ref:`inventory/product_data/dimensions`."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:122
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:124
 msgid "**Packaging.** If you buy a product in fixed bar lengths, add a packaging such as \"Bar 6 m\" with a quantity of 6 to the product. The procurement list and the request for quotation then use it."
 msgstr "**Ambalaj.** Dacă cumperi un produs în lungimi fixe de bară, adaugă produsului un ambalaj precum \"Bar 6 m\" cu cantitatea 6. Lista de aprovizionare și cererea de ofertă îl folosesc apoi."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:133
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:135
 msgid "Can"
 msgstr "Poate"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:134
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:136
 msgid "*Manufacturing / User*"
 msgstr "*Fabricație / Utilizator*"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:135
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:137
 msgid "Create and edit imports, lines, summaries and procurement lists, use the wizards, read the steel section catalogue and read and write the product aliases. Imports cannot be deleted."
 msgstr "Să creeze și să editeze importuri, linii, centralizatoare și liste de aprovizionare, să folosească asistenții, să citească catalogul de profile de oțel și să citească și să scrie aliasurile produselor. Importurile nu pot fi șterse."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:137
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:139
 msgid "*Manufacturing / Administrator*"
 msgstr "*Fabricație / Administrator*"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:138
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:140
 msgid "Everything, including deleting imports, creating bills of materials, and editing the steel section catalogue and the CAD product aliases."
 msgstr "Tot, inclusiv ștergerea importurilor, crearea listelor de materiale și editarea catalogului de profile de oțel și a aliasurilor produselor CAD."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:140
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:142
 msgid "*Sales* users"
 msgstr "Utilizatori *Vânzări*"
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:141
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:143
 msgid "Read the import linked on a quotation."
 msgstr "Să citească importul legat de o ofertă."
 
-#: ../mnt/documentation/content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:143
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:145
 msgid "The imports are separated by company."
 msgstr "Importurile sunt separate pe companii."
 
@@ -11793,11 +12148,11 @@ msgstr ""
 #~ "defalcare randată :guilabel:`Material Pct` fac compoziția ușor de citit și "
 #~ "de reutilizat în rapoarte."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:212
 msgid "Product stages"
 msgstr "Etapele produselor"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:116
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:214
 msgid ""
 "``eyssen_product_stage`` gives every product a lifecycle :guilabel:`Stage`, "
 "and lets each stage decide what may be done with the product. This is how an "
@@ -11809,7 +12164,7 @@ msgstr ""
 "produsul. Astfel, o înregistrare de produs neterminată este ținută departe "
 "de oferte, comenzi și livrări până când datele ei sunt complete."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:120
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:218
 msgid ""
 "Stages are configured under :menuselection:`Products --> Configuration --> "
 "Product Stages`. A stage has:"
@@ -11817,7 +12172,7 @@ msgstr ""
 "Etapele se configurează în :menuselection:`Produse --> Configurare --> Etape "
 "produs`. O etapă are:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:220
 msgid ""
 "a translatable :guilabel:`Name`, a :guilabel:`Sequence`, a :guilabel:`Color` "
 "and an :guilabel:`Active` flag;"
@@ -11825,7 +12180,7 @@ msgstr ""
 "un :guilabel:`Nume` traductibil, o :guilabel:`Secvență`, "
 "o :guilabel:`Culoare` și un indicator :guilabel:`Activ`;"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:222
 msgid ""
 ":guilabel:`Required Fields` and :guilabel:`Required Attributes` — what must "
 "be filled in on the product before it can reach the stage;"
@@ -11833,7 +12188,7 @@ msgstr ""
 ":guilabel:`Câmpuri obligatorii` și :guilabel:`Atribute obligatorii` — ce "
 "trebuie completat pe produs înainte ca acesta să poată ajunge la etapă;"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:224
 msgid ""
 ":guilabel:`Groups` and :guilabel:`Users` — who may move a product into the "
 "stage;"
@@ -11841,7 +12196,7 @@ msgstr ""
 ":guilabel:`Grupuri` și :guilabel:`Utilizatori` — cine poate muta un produs "
 "în etapă;"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:225
 msgid ""
 "the permission switches :guilabel:`Allow Sale Order Send`, :guilabel:`Allow "
 "Sale Order Confirm`, :guilabel:`Allow Purchase Order Send`, :guilabel:`Allow "
@@ -11855,7 +12210,7 @@ msgstr ""
 "achiziție`, :guilabel:`Permite transfer de stoc` și :guilabel:`Permite "
 "înregistrare contabilă`, toate activate implicit; și"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:228
 msgid ""
 ":guilabel:`Create Reference`, which generates the product's internal "
 "reference (see above) when it does not have one yet."
@@ -11863,7 +12218,7 @@ msgstr ""
 ":guilabel:`Creează referință`, care generează referința internă a produsului "
 "(vezi mai sus) atunci când acesta nu are încă una."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:142
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:240
 msgid ""
 "The product's :guilabel:`Stage` is tracked in the chatter, and a product "
 "variant inherits the stage of its template. When a document contains a "
@@ -11879,11 +12234,11 @@ msgstr ""
 "achiziție, validarea unui transfer sau postarea unei facturi — este blocată "
 "cu o eroare care indică produsul."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:157
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:255
 msgid "Seasons"
 msgstr "Sezoane"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:257
 msgid ""
 "``eyssen_product_season`` groups products into selling seasons. A season "
 "(:menuselection:`Sales --> Configuration --> Szezonok`) has a name, a start "
@@ -11897,7 +12252,7 @@ msgstr ""
 "cu un contor care arată câte produse conține. Pe formularul produsului, un "
 "produs poate aparține simultan mai multor sezoane."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:165
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:263
 msgid ""
 "The labels of this module are currently Hungarian in the source code "
 "(*Szezon*, *Szezon kezdete*, *Szezon vége*, *Termékek*), so they appear in "
@@ -11971,11 +12326,11 @@ msgstr ""
 #~ "sunt în prezent în limba maghiară în codul sursă, la fel ca denumirile "
 #~ "formelor."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:216
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:371
 msgid "Product image in list views"
 msgstr "Imaginea produsului în vizualizările de tip listă"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:218
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:373
 msgid ""
 "``eyssen_product_list_view_image`` adds the product image as a small "
 "thumbnail column to the products and product variants **list** views, so a "
@@ -11989,17 +12344,17 @@ msgstr ""
 "la vizualizarea kanban. Coloana este afișată implicit și poate fi ascunsă "
 "din selectorul de coloane opționale."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:224
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:379
 msgid "Bulk media upload"
 msgstr "Încărcarea în masă a fișierelor media"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:226
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:381
 msgid "``product_media`` speeds up maintaining a product's extra images:"
 msgstr ""
 "``product_media`` accelerează întreținerea imaginilor suplimentare ale unui "
 "produs:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:228
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:383
 msgid ""
 "an :guilabel:`Upload Media` action takes several files at once and creates "
 "one extra product image per file, named after the file;"
@@ -12008,7 +12363,7 @@ msgstr ""
 "creează câte o imagine suplimentară de produs pentru fiecare fișier, "
 "denumită după fișier;"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:230
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:385
 msgid ""
 "an :guilabel:`Set as Main Image` action on an extra image swaps it with the "
 "product's main image; and"
@@ -12016,7 +12371,7 @@ msgstr ""
 "o acțiune :guilabel:`Set as Main Image` pe o imagine suplimentară o "
 "interschimbă cu imaginea principală a produsului; și"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:232
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:387
 msgid ""
 "a :guilabel:`Delete All Extra Media` action clears every extra image of a "
 "product in one step."
@@ -12024,7 +12379,7 @@ msgstr ""
 "o acțiune :guilabel:`Delete All Extra Media` șterge dintr-un singur pas "
 "toate imaginile suplimentare ale unui produs."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:235
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:390
 msgid ""
 "This module targets the webshop's product gallery. The webshop-side "
 "presentation of those images is documented with the **Website** application."
@@ -12033,11 +12388,11 @@ msgstr ""
 "prezentare a acestor imagini în magazinul web este documentat în aplicația "
 "**Site web**."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:239
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:394
 msgid "Bill of materials on the product form"
 msgstr "Lista de materiale pe formularul produsului"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:241
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:396
 msgid ""
 "``eyssen_mrp_bom_on_product`` makes a product's bill of materials editable "
 "directly on the product form, instead of only in the **Manufacturing** app. "
@@ -12068,7 +12423,7 @@ msgstr ""
 "componente și de produse secundare pot fi completate din :doc:`catalogul de "
 "produse <../warehouses_storage/inventory_management/product_catalog>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:253
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/product_data.rst:408
 msgid ""
 ":doc:`Bills of materials <../../manufacturing/basic_setup/"
 "bill_configuration>`"
@@ -21070,6 +21425,7 @@ msgstr ""
 "specificația curentă și ajustați-o la situația din depozit."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/dangerous_goods.rst:29
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:128
 msgid "Access rights"
 msgstr "Drepturi de acces"
 
@@ -26396,6 +26752,7 @@ msgstr "Stoc la îndemână"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fefo.rst:97
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fifo.rst:78
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:94
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:267
 msgid "5"
 msgstr "5"
@@ -31109,6 +31466,7 @@ msgstr "Parametru"
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:109
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:161
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:218
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import/setup.rst:62
 msgid "Default"
 msgstr "Implicit"
 
@@ -49518,6 +49876,7 @@ msgid "Basic setup"
 msgstr "Configurare de bază"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:3
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:55
 msgid "Bill of materials"
 msgstr "Proiect de lege de materiale"
 
@@ -56623,6 +56982,7 @@ msgstr ""
 "tehnologic al operațiunii include un fișier PDF, un link Google Slides sau o "
 "notă text, configurate ca instrucțiuni pentru executarea operațiunii."
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/cad_bom_import.rst:58
 #: ../../content/applications/inventory_and_mrp/purchase.rst:8
 msgid "Purchase"
 msgstr "Achiziție"
@@ -79935,3 +80295,46 @@ msgstr ""
 #~ "acum deasupra |PO|. După ce produsele sunt recepționate, faceți clic "
 #~ "pe :guilabel:`Receive Products` pentru a deschide comanda de recepție, "
 #~ "apoi pe :guilabel:`Validate` pentru a introduce produsele în stoc."
+
+
+#~ msgid "The search box of the list finds a material by name, code or alias. When another module looks up a designation (the CAD import does, for the grades written on a drawing), the comparison ignores case, accents, spaces, dashes and dots, so ``St 37-2`` finds the material that lists ``St37-2``. There is no approximate match: a designation that is not in the master, such as S275J0 when only S275JR exists, is not replaced by a similar one."
+#~ msgstr "Câmpul de căutare al listei găsește un material după nume, cod sau denumire alternativă. Când un alt modul caută o denumire (importul CAD o face pentru calitățile scrise pe un desen), comparația ignoră majusculele, diacriticele, spațiile, cratimele și punctele, astfel încât ``St 37-2`` găsește materialul care are ``St37-2`` în listă. Nu există potrivire aproximativă: o denumire care nu se află în registru, cum ar fi S275J0 când există doar S275JR, nu este înlocuită cu una asemănătoare."
+
+#~ msgid "The standard data contains three groups and eight materials:"
+#~ msgstr "Datele standard conțin trei grupuri și opt materiale:"
+
+#~ msgid "A steel structure fabricator usually receives the project documentation as a DWG (sometimes DXF) drawing. The drawing may contain a parts list, position blocks with attributes, or nothing but position labels next to the members (\"R1 / 100x100x4\", \"GM1 / U180\", \"PM 2 / 300x300x10\", \"Bolt / M 16\"). The eYssen module **CAD Bill of Materials Import** (``mrp_cad_bom_import``) turns such a drawing into:"
+#~ msgstr "Un constructor de structuri metalice primește de obicei documentația proiectului sub forma unui desen DWG (uneori DXF). Desenul poate conține un extras de materiale, blocuri de poziții cu atribute sau doar etichete de poziție lângă elemente (\"R1 / 100x100x4\", \"GM1 / U180\", \"PM 2 / 300x300x10\", \"Bolt / M 16\"). Modulul eYssen **CAD Bill of Materials Import** (``mrp_cad_bom_import``) transformă un astfel de desen în:"
+
+#~ msgid "a material summary by kind of material, with the total weight without and with purlins;"
+#~ msgstr "un centralizator de materiale pe tipuri de material, cu greutatea totală fără pane și cu pane;"
+
+#~ msgid "Click :guilabel:`Parse drawings`."
+#~ msgstr "Fă clic pe :guilabel:`Analizează desenele`."
+
+#~ msgid "The importer tries three strategies in order. The first one that finds lines wins; the label strategy runs only when the others found nothing. The :guilabel:`Source` of every line shows which one produced it: :guilabel:`Parts list table`, :guilabel:`Block attributes`, :guilabel:`Labels`, :guilabel:`Manual` or :guilabel:`AI suggestion`."
+#~ msgstr "Importatorul încearcă trei strategii, în ordine. Câștigă prima care găsește linii; strategia etichetelor rulează doar când celelalte nu au găsit nimic. :guilabel:`Sursă` fiecărei linii arată care strategie a produs-o: :guilabel:`Tabel extras de materiale`, :guilabel:`Atribute bloc`, :guilabel:`Etichete`, :guilabel:`Manual` sau :guilabel:`Sugestie AI`."
+
+#~ msgid "**The number of labels is not the quantity.** The same member is labelled in several views and sometimes several times in one view. The label strategy therefore stores the count as :guilabel:`Occurrences`, sets the quantity to 1, leaves the length empty and flags the line :guilabel:`To review`. Only an explicit text such as ``4 buc``, ``2 db``, ``n=2`` or ``L=2500`` fills the quantity or the length. Without a length, a linear member has no weight until you enter it (or accept an :doc:`AI suggestion <../../../productivity/ai/cad_bom_import>`)."
+#~ msgstr "**Numărul de etichete nu este cantitatea.** Același element este etichetat în mai multe vederi și uneori de mai multe ori în aceeași vedere. De aceea strategia etichetelor stochează numărul ca :guilabel:`Apariții`, stabilește cantitatea la 1, lasă lungimea goală și marchează linia :guilabel:`De verificat`. Doar un text explicit, cum ar fi ``4 buc``, ``2 db``, ``n=2`` sau ``L=2500``, completează cantitatea sau lungimea. Fără lungime, un element liniar nu are greutate până o introduci (sau accepți o :doc:`sugestie AI <../../../productivity/ai/cad_bom_import>`)."
+
+#~ msgid "``PL 10x300x400``, ``PL10``, ``t=12``, ``Tablă 2x1000x2000``"
+#~ msgstr "``PL 10x300x400``, ``PL10``, ``t=12``, ``Tablă 2x1000x2000``"
+
+#~ msgid "``PL 300x400x10``"
+#~ msgstr "``PL 300x400x10``"
+
+#~ msgid "Use the optional columns for the rest: :guilabel:`Family`, :guilabel:`Height (mm)`, :guilabel:`Width (mm)`, :guilabel:`Thickness (mm)`, :guilabel:`Diameter (mm)`, :guilabel:`Occurrences`, :guilabel:`Source`, :guilabel:`Confidence`, :guilabel:`Weight on drawing (kg)`, :guilabel:`Drawing text` and :guilabel:`Product action`. For bolts the grade column becomes the :guilabel:`Property class`. A grade written on the drawing that is not in the material master is kept as :guilabel:`Grade on drawing`; the line is flagged and weighed with the density of steel until you choose a material."
+#~ msgstr "Folosește coloanele opționale pentru restul: :guilabel:`Familie`, :guilabel:`Înălțime (mm)`, :guilabel:`Lățime (mm)`, :guilabel:`Grosime (mm)`, :guilabel:`Diametru (mm)`, :guilabel:`Apariții`, :guilabel:`Sursă`, :guilabel:`Încredere`, :guilabel:`Greutate pe desen (kg)`, :guilabel:`Text din desen` și :guilabel:`Acțiune produs`. Pentru șuruburi, coloana de calitate devine :guilabel:`Grupa de rezistență`. O calitate scrisă pe desen care nu se află în registrul de materiale este păstrată ca :guilabel:`Calitatea de pe desen`; linia este marcată și cântărită cu densitatea oțelului până când alegi un material."
+
+#~ msgid "The tab :guilabel:`Material summary` adds the lines up by kind of material and section: pieces, total length, area and weight. Click :guilabel:`Refresh` to rebuild it; it is also rebuilt whenever a line changes. The weights block above the tabs shows three totals:"
+#~ msgstr "Fila :guilabel:`Centralizator materiale` adună liniile pe tip de material și profil: bucăți, lungime totală, arie și greutate. Fă clic pe :guilabel:`Reîmprospătează` pentru a-l reconstrui; se reconstruiește și ori de câte ori se schimbă o linie. Blocul de greutăți de deasupra filelor arată trei totaluri:"
+
+#~ msgid "The label strategy cannot know quantities and lengths. They are left for you to review, or for the :doc:`AI bridge <../../../productivity/ai/cad_bom_import>` to suggest."
+#~ msgstr "Strategia etichetelor nu poate cunoaște cantitățile și lungimile. Acestea rămân să le verifici tu sau să le sugereze :doc:`puntea AI <../../../productivity/ai/cad_bom_import>`."
+
+#~ msgid "A parts list needs a header with at least three recognised columns. Rotated tables and tables that are split over several areas of the drawing are not joined."
+#~ msgstr "Un extras de materiale necesită un antet cu cel puțin trei coloane recunoscute. Tabelele rotite și tabelele împărțite pe mai multe zone ale desenului nu sunt unite."
+
+#~ msgid "**Materials.** Every line has a material grade. Grades are records of the material master (:menuselection:`Products --> Configuration --> Materials`), looked up by code, name and aliases, and their density drives the weights. The standard data contains S235JR, S275JR, S355J2, S460, 1.4301, 1.4404, EN AW-6060 and EN AW-6082; old designations such as OL37, St37-2 or Fe360 are aliases of S235JR. See :ref:`inventory/product_data/material`."
+#~ msgstr "**Materiale.** Fiecare linie are o calitate de material. Calitățile sunt înregistrări ale registrului de materiale (:menuselection:`Produse --> Configurare --> Materiale`), căutate după cod, nume și denumiri alternative, iar densitatea lor determină greutățile. Datele standard conțin S235JR, S275JR, S355J2, S460, 1.4301, 1.4404, EN AW-6060 și EN AW-6082; denumiri vechi precum OL37, St37-2 sau Fe360 sunt denumiri alternative ale S235JR. Vezi :ref:`inventory/product_data/material`."

@@ -113,10 +113,11 @@ material has:
 The search box of the list finds a material by name, code or alias. When another module looks up a
 designation (the CAD import does, for the grades written on a drawing), the comparison ignores case,
 accents, spaces, dashes and dots, so ``St 37-2`` finds the material that lists ``St37-2``. There is
-no approximate match: a designation that is not in the master, such as S275J0 when only S275JR
-exists, is not replaced by a similar one.
+no approximate match: a designation that is not in the master, such as S275N, is not replaced by a
+similar one. The qualities of EN 10025-2 are separate materials, so a grade written on a drawing
+matches its exact quality (S355J0 is not read as S355J2).
 
-The standard data contains three groups and eight materials:
+The standard data contains three groups and fifteen materials:
 
 .. list-table::
    :header-rows: 1
@@ -130,11 +131,39 @@ The standard data contains three groups and eight materials:
      - Steel (structural)
      - EN 10025-2
      - 7850
+   * - S235J0 (S235J0G2, St37-3U, Fe360C)
+     - Steel (structural)
+     - EN 10025-2
+     - 7850
+   * - S235J2 (S235J2G3, St37-3N, Fe360D)
+     - Steel (structural)
+     - EN 10025-2
+     - 7850
    * - S275JR (S275, OL44, St44-2, Fe430, ...)
      - Steel (structural)
      - EN 10025-2
      - 7850
+   * - S275J0 (S275J0G2, St44-3U, Fe430C)
+     - Steel (structural)
+     - EN 10025-2
+     - 7850
+   * - S275J2 (S275J2G3, St44-3N, Fe430D)
+     - Steel (structural)
+     - EN 10025-2
+     - 7850
+   * - S355JR (S355JRG2, Fe510B)
+     - Steel (structural)
+     - EN 10025-2
+     - 7850
+   * - S355J0 (S355J0G3, St52-3U, Fe510C)
+     - Steel (structural)
+     - EN 10025-2
+     - 7850
    * - S355J2 (S355, OL52, St52-3, Fe510, ...)
+     - Steel (structural)
+     - EN 10025-2
+     - 7850
+   * - S355K2 (S355K2G3, Fe510DD)
      - Steel (structural)
      - EN 10025-2
      - 7850

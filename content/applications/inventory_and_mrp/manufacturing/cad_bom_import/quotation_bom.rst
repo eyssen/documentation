@@ -58,6 +58,10 @@ The importer gives every distinct material a **product key** of the form
 key per thickness (``PLATE|T10|S235JR``); plates bought in pieces have one per size
 (``PLATE|300X300X10|S235JR``). The key is stored on the product in the field :guilabel:`CAD material key`.
 
+The lines of the import stay one per row of the drawing or of the parts list. The products and the
+bill of materials add them up: equal materials are one product, and the bill of materials has one line
+per product.
+
 For each line the product is found in this order:
 
 1. the product you chose on the line;

@@ -43,8 +43,10 @@ finished and shows the error under :guilabel:`AI analysis failed:` and in the ch
    the same mark with different sizes.
 3. **Estimating quantities and lengths.** For the lines that came from labels, the AI proposes the
    number of pieces and the length of one piece (or the width and length of a plate), with its
-   reasoning and the evidence. Lines from a parts list or from block attributes already carry
-   quantities and are not estimated.
+   reasoning and the evidence. A quantity or a length that is written on the drawing is never
+   estimated again. A line whose quantity and length are both stated is not sent to the model at all.
+   When only one of the two is stated, it is passed to the model as known, and the answer cannot
+   change it. Lines that were read from a parts list or from block attributes are not estimated.
 4. **Matching products.** Lines without a product get a suggested existing product, chosen among a few
    candidates that the server selected.
 5. **Checks.** Rule-based checks look for gaps (see below). This step does not use the AI.
@@ -129,6 +131,17 @@ On a CAD import the AI panel (see :doc:`panel`) offers the quick prompts :guilab
 (in place of the generic *Summarise*), :guilabel:`What still needs review?` and :guilabel:`Material totals
 by type`. The panel sees the lines, the material summary and the checks of the import, as far as your
 own access rights allow.
+
+Choose the model
+================
+
+The analysis is interactive: you wait for the suggestions. Use a fast chat model with a low cost per
+call (see :doc:`models_and_providers`).
+
+- Model variants that run as a batch (names ending in ``:batch``) do not suit this analysis, because
+  their answers arrive much later.
+- Very slow reasoning modes can take longer than the timeout of the provider. If you use one, raise the
+  :guilabel:`Timeout` of the provider (see :doc:`configuration`).
 
 Cost, limits and data sent to the model
 =======================================

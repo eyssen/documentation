@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-08 17:35+0200\n"
+"POT-Creation-Date: 2026-10-14 16:00+0000\n"
 "PO-Revision-Date: 2025-11-19 20:11+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -3867,8 +3867,9 @@ msgstr ""
 "corespund parametrilor de sistem sunt pe pagina **Setări** (doar pentru "
 "utilizatorii Settings)."
 
-#: ../../content/applications/productivity/ai/configuration.rst:10
-#: ../../content/applications/productivity/sign.rst:960
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:162
+#: ../mnt/documentation/content/applications/productivity/ai/configuration.rst:10
+#: ../mnt/documentation/content/applications/productivity/sign.rst:960
 msgid "Settings"
 msgstr "Setări"
 
@@ -16670,134 +16671,150 @@ msgid "**Interpreting the lines.** The AI checks every line: its kind, family, d
 msgstr "**Interpretarea liniilor.** AI verifică fiecare linie: tipul, familia, denumirea, calitatea, dacă este o pană și o scurtă descriere. Decide asupra lui ``AxBxC`` ambiguu (tablă sau profil tubular), citește notele generale ale desenului (calitate, clasa șuruburilor, standarde) și explică conflicte precum aceeași poziție cu dimensiuni diferite."
 
 #: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:44
-msgid "**Estimating quantities and lengths.** For the lines that came from labels, the AI proposes the number of pieces and the length of one piece (or the width and length of a plate), with its reasoning and the evidence. Lines from a parts list or from block attributes already carry quantities and are not estimated."
-msgstr "**Estimarea cantităților și a lungimilor.** Pentru liniile provenite din etichete, AI propune numărul de bucăți și lungimea unei bucăți (sau lățimea și lungimea unei table), cu raționamentul și dovezile sale. Liniile dintr-un extras de materiale sau din atribute de bloc au deja cantități și nu sunt estimate."
+msgid "**Estimating quantities and lengths.** For the lines that came from labels, the AI proposes the number of pieces and the length of one piece (or the width and length of a plate), with its reasoning and the evidence. A quantity or a length that is written on the drawing is never estimated again. A line whose quantity and length are both stated is not sent to the model at all. When only one of the two is stated, it is passed to the model as known, and the answer cannot change it. Lines that were read from a parts list or from block attributes are not estimated."
+msgstr "**Estimarea cantităților și a lungimilor.** Pentru liniile provenite din etichete, AI propune numărul de bucăți și lungimea unei bucăți (sau lățimea și lungimea unei table), cu raționamentul și dovezile sale. O cantitate sau o lungime scrisă pe desen nu mai este niciodată estimată. O linie la care sunt indicate atât cantitatea, cât și lungimea nu este trimisă deloc modelului. Când este indicată doar una dintre ele, aceasta este transmisă modelului ca valoare cunoscută, iar răspunsul nu o poate schimba. Liniile citite dintr-un extras de materiale sau din atribute de bloc nu sunt estimate."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:48
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:50
 msgid "**Matching products.** Lines without a product get a suggested existing product, chosen among a few candidates that the server selected."
 msgstr "**Potrivirea produselor.** Liniile fără produs primesc un produs existent sugerat, ales dintre câțiva candidați selectați de server."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:50
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:52
 msgid "**Checks.** Rule-based checks look for gaps (see below). This step does not use the AI."
 msgstr "**Verificări.** Verificări bazate pe reguli caută lipsuri (vezi mai jos). Acest pas nu folosește AI."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:51
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:53
 msgid "**Review note.** A short note in your language with the totals now and the totals if you accepted every suggestion, the main materials and the checks. It is shown on the tab :guilabel:`AI review` and posted in the chatter."
 msgstr "**Nota de verificare.** O notă scurtă în limba ta, cu totalurile de acum și totalurile dacă ai accepta toate sugestiile, materialele principale și verificările. Este afișată în fila :guilabel:`Verificare AI` și postată în chatter."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:55
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:57
 msgid "Every answer is parsed as JSON and checked. Whatever is not valid is dropped: unknown lines, products that were not offered as candidates, designations the parser cannot read, negative values and views that do not exist."
 msgstr "Fiecare răspuns este analizat ca JSON și verificat. Tot ce nu este valid este eliminat: linii necunoscute, produse care nu au fost oferite drept candidați, denumiri pe care analizorul nu le poate citi, valori negative și vederi care nu există."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:60
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:62
 msgid "How the drawing is read"
 msgstr "Cum este citit desenul"
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:62
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:64
 msgid "The geometry step collects the dimensions of the drawing (linear and aligned dimensions of model and paper space), splits each space into views and sheet frames, and finds the title of each view (*SECTIUNE, PLAN, DETALIU, SECTION, DETAIL, METSZET, ALAPRAJZ, ...*), the cut markers and the sheet numbers. The scale of a view comes from its dimensions: a drawing made at 1:10 with a dimension scale factor of 10 is detected as such, and lengths are given to the AI in millimetres."
 msgstr "Pasul de geometrie colectează cotele desenului (cote liniare și aliniate din spațiul model și din spațiul hârtie), împarte fiecare spațiu în vederi și cadre de foaie și găsește titlul fiecărei vederi (*SECTIUNE, PLAN, DETALIU, SECTION, DETAIL, METSZET, ALAPRAJZ, ...*), marcajele de secțiune și numerele foilor. Scara unei vederi rezultă din cotele ei: un desen făcut la 1:10 cu un factor de scară al cotelor de 10 este detectat ca atare, iar lungimile sunt date lui AI în milimetri."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:68
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:70
 msgid "For each line the AI receives its labels per view, with the position of each label, the leader line that touches it, the segments the leader points to (the member), the nearest lines and the nearest dimensions. The AI is told that the same piece is labelled in several views, so pieces are counted once (usually from the plan) and lengths are taken from sections and details."
 msgstr "Pentru fiecare linie, AI primește etichetele ei pe vederi, cu poziția fiecărei etichete, linia de indicație care o atinge, segmentele spre care arată linia de indicație (elementul), cele mai apropiate linii și cele mai apropiate cote. AI este informat că aceeași piesă este etichetată în mai multe vederi, astfel încât piesele sunt numărate o singură dată (de obicei din plan), iar lungimile sunt luate din secțiuni și detalii."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:74
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:76
 msgid "Review the suggestions"
 msgstr "Verificarea sugestiilor"
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:76
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:78
 msgid "The tab :guilabel:`AI review` appears after an analysis. It has:"
 msgstr "Fila :guilabel:`Verificare AI` apare după o analiză. Conține:"
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:78
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:80
 msgid "the :guilabel:`AI review note` and the :guilabel:`Drawing notes read by the AI`;"
 msgstr ":guilabel:`Notă de verificare AI` și :guilabel:`Note ale desenului citite de AI`;"
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:79
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:81
 msgid "the list :guilabel:`Suggestions to review`: for each line the current quantity and length, what the AI proposes (:guilabel:`AI quantity`, :guilabel:`AI length (mm)`), its :guilabel:`Confidence`, the reasoning, the evidence (views and values) and a note; and"
 msgstr "lista :guilabel:`Sugestii de verificat`: pentru fiecare linie cantitatea și lungimea actuale, ce propune AI (:guilabel:`Cantitate AI`, :guilabel:`Lungime AI (mm)`), :guilabel:`Încredere`, raționamentul, dovezile (vederi și valori) și o notă; și"
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:82
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:84
 msgid "the list :guilabel:`Checks`."
 msgstr "lista :guilabel:`Verificări`."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:84
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:86
 msgid "Use the buttons :guilabel:`Accept` and :guilabel:`Reject` on a line (the ticks in the list of lines do the same), :guilabel:`Accept all above the threshold` and :guilabel:`Reject all`. :guilabel:`Run the checks again` repeats the checks without the AI, for example after you corrected a line. Suggestions can be accepted or rejected while the import is parsed or reviewed."
 msgstr "Folosește butoanele :guilabel:`Acceptă` și :guilabel:`Respinge` de pe o linie (bifele din lista de linii fac același lucru), :guilabel:`Acceptă tot peste prag` și :guilabel:`Respinge tot`. :guilabel:`Rulează din nou verificările` repetă verificările fără AI, de exemplu după ce ai corectat o linie. Sugestiile pot fi acceptate sau respinse cât timp importul este analizat sau verificat."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:89
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:91
 msgid "Accepting a suggestion applies:"
 msgstr "Acceptarea unei sugestii aplică:"
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:91
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:93
 msgid "a changed designation (the line is parsed again: family, kind, dimensions, plate size), otherwise the kind;"
 msgstr "o denumire modificată (linia este analizată din nou: familie, tip, dimensiuni, dimensiunea tablei), altfel tipul;"
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:93
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:95
 msgid "the grade (it is resolved through the material master, so \"OL37\" becomes S235JR), the description and the purlin flag;"
 msgstr "calitatea (este rezolvată prin registrul de materiale, astfel încât \"OL37\" devine S235JR), descrierea și indicatorul de pană;"
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:95
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:97
 msgid "the quantity, and the length of a linear member or the width and length of a plate when missing; and"
 msgstr "cantitatea și, când lipsește, lungimea unui element liniar sau lățimea și lungimea unei table; și"
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:96
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:98
 msgid "the suggested product, as if you had chosen it by hand."
 msgstr "produsul sugerat, ca și cum l-ai fi ales manual."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:98
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:100
 msgid "The line's source becomes :guilabel:`AI suggestion` and the confidence is stored. **A line whose confidence is below the threshold stays flagged** :guilabel:`To review` after you accept it. The threshold is the field :guilabel:`AI confidence threshold` on the tab (0.6 by default, from the settings), and :guilabel:`Accept all above the threshold` accepts only suggestions that reach it."
 msgstr "Sursa liniei devine :guilabel:`Sugestie AI`, iar încrederea este stocată. **O linie a cărei încredere este sub prag rămâne marcată** :guilabel:`De verificat` după ce o accepți. Pragul este câmpul :guilabel:`Prag de încredere AI` din filă (0,6 implicit, preluat din setări), iar :guilabel:`Acceptă tot peste prag` acceptă doar sugestiile care îl ating."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:103
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:105
 msgid "A product that you accept from the AI, or that you choose by hand on an analysed line, is remembered as an alias, so the next import finds it without the AI."
 msgstr "Un produs pe care îl accepți de la AI sau pe care îl alegi manual pe o linie analizată este memorat ca alias, astfel încât următorul import îl găsește fără AI."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:116
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:118
 msgid "Checks"
 msgstr "Verificări"
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:118
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:120
 msgid "The checks never change data. They report: bolts without nuts or washers; a plate with no bolt or hole label near any of its labels; purlins without sag rods or tie rods (information); a missing grade; open conflicts, with the AI's explanation; a linear member without a length and without an estimate; a piece longer than the stock bar (information); a line whose weight is far above the others (more than eight times the median and more than 40 % of the total); and the number of suggestions below the threshold (information). Each check is a warning or an information."
 msgstr "Verificările nu modifică niciodată datele. Raportează: șuruburi fără piulițe sau șaibe; o tablă fără etichetă de șurub sau de gaură lângă vreuna dintre etichetele ei; pane fără tiranți sau contravântuiri (informație); o calitate lipsă; conflicte deschise, cu explicația AI; un element liniar fără lungime și fără estimare; o piesă mai lungă decât bara comercială (informație); o linie a cărei greutate este mult peste a celorlalte (de peste opt ori mediana și de peste 40 % din total); și numărul sugestiilor sub prag (informație). Fiecare verificare este un avertisment sau o informație."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:128
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:130
 msgid "On a CAD import the AI panel (see :doc:`panel`) offers the quick prompts :guilabel:`Explain this import` (in place of the generic *Summarise*), :guilabel:`What still needs review?` and :guilabel:`Material totals by type`. The panel sees the lines, the material summary and the checks of the import, as far as your own access rights allow."
 msgstr "Pe un import CAD, panoul AI (vezi :doc:`panel`) oferă prompturile rapide :guilabel:`Explică acest import` (în locul generalului *Rezumă*), :guilabel:`Ce mai trebuie verificat?` și :guilabel:`Totaluri de material pe tipuri`. Panoul vede liniile, centralizatorul de materiale și verificările importului, în măsura în care o permit propriile tale drepturi de acces."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:134
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:136
+msgid "Choose the model"
+msgstr "Alegerea modelului"
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:138
+msgid "The analysis is interactive: you wait for the suggestions. Use a fast chat model with a low cost per call (see :doc:`models_and_providers`)."
+msgstr "Analiza este interactivă: aștepți sugestiile. Folosește un model de chat rapid, cu un cost redus pe apel (vezi :doc:`models_and_providers`)."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:141
+msgid "Model variants that run as a batch (names ending in ``:batch``) do not suit this analysis, because their answers arrive much later."
+msgstr "Variantele de model care rulează în lot (nume terminate în ``:batch``) nu se potrivesc pentru această analiză, deoarece răspunsurile lor vin mult mai târziu."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:143
+msgid "Very slow reasoning modes can take longer than the timeout of the provider. If you use one, raise the :guilabel:`Timeout` of the provider (see :doc:`configuration`)."
+msgstr "Modurile de raționament foarte lente pot dura mai mult decât timpul de expirare al furnizorului. Dacă folosești unul, mărește :guilabel:`Timp de expirare` al furnizorului (vezi :doc:`configuration`)."
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:147
 msgid "Cost, limits and data sent to the model"
 msgstr "Cost, limite și datele trimise modelului"
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:136
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:149
 msgid "Every call goes through the normal AI machinery: the capability *Ask*, the rate limit, the blocked patterns and the AI log with its cost (see :doc:`monitoring`). In the background job the per-minute rate limit is waited for instead of failing, but the daily limits stop the job at once."
 msgstr "Fiecare apel trece prin mecanismul AI obișnuit: capacitatea *Ask*, limita de frecvență, modelele blocate și jurnalul AI cu costul său (vezi :doc:`monitoring`). În jobul de fundal se așteaptă limita de frecvență pe minut în loc să eșueze, dar limitele zilnice opresc jobul imediat."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:139
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:152
 msgid "The size depends on the drawing. The analysis of a staircase drawing with 260 labels, 17 groups of members and 787 dimensions took seven calls and about 22,000 input tokens. A very large drawing is limited to twenty estimation requests (roughly 100,000 tokens); the lines beyond are reported as not estimated."
 msgstr "Dimensiunea depinde de desen. Analiza unui desen de scară cu 260 de etichete, 17 grupuri de elemente și 787 de cote a durat șapte apeluri și aproximativ 22 000 de tokeni de intrare. Un desen foarte mare este limitat la douăzeci de cereri de estimare (aproximativ 100 000 de tokeni); liniile de dincolo de limită sunt raportate ca neestimate."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:143
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:156
 msgid "The model receives the line data and texts of the drawing, the general notes, the geometric context (numbers, view titles and sheet numbers), the totals and check messages for the note, and, for matching, the names and internal references of the candidate products. It receives **no** customer, project or import name and no other business data."
 msgstr "Modelul primește datele liniilor și textele desenului, notele generale, contextul geometric (numere, titluri de vederi și numere de foi), totalurile și mesajele de verificare pentru notă și, pentru potrivire, denumirile și referințele interne ale produselor candidate. **Nu** primește niciun nume de client, de proiect sau de import și nicio altă dată de business."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:151
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:164
 msgid "In :menuselection:`Manufacturing app --> Configuration --> Settings`, block :guilabel:`CAD BoM import`, under :guilabel:`AI suggestions`:"
 msgstr "La :menuselection:`Fabricație --> Configurare --> Setări`, blocul :guilabel:`Import CAD listă materiale`, sub :guilabel:`Sugestii AI`:"
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:154
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:167
 msgid ":guilabel:`AI confidence threshold`: estimates below it stay flagged to review and are left out of :guilabel:`Accept all above the threshold`. Default 0.6."
 msgstr ":guilabel:`Prag de încredere AI`: estimările sub acest prag rămân marcate pentru verificare și sunt excluse din :guilabel:`Acceptă tot peste prag`. Implicit 0,6."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:156
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:169
 msgid ":guilabel:`Analyse with AI after parsing`: queues the analysis automatically after each parse when label lines need a review and you may use the AI; otherwise it is skipped silently. Off by default."
 msgstr ":guilabel:`Analizează cu AI după citirea desenului`: pune analiza în coadă automat după fiecare citire a desenului, când liniile din etichete necesită verificare și poți folosi AI; altfel este omisă în tăcere. Dezactivat implicit."
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:160
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:173
 msgid ":doc:`../../inventory_and_mrp/manufacturing/cad_bom_import`"
 msgstr ":doc:`../../inventory_and_mrp/manufacturing/cad_bom_import`"
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:161
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:174
 msgid ":doc:`app_integrations`"
 msgstr ":doc:`app_integrations`"
 
@@ -40600,7 +40617,8 @@ msgstr ""
 "găsesc cele mai asemănătoare bucăți, răspunsul este scris pe baza lor, iar "
 "citările numerotate arată de unde provine fiecare informație."
 
-#: ../../content/applications/productivity/ai/knowledge_sources.rst:12
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:19
+#: ../mnt/documentation/content/applications/productivity/ai/knowledge_sources.rst:12
 msgid "Requirements"
 msgstr "Cerințe"
 
@@ -41824,7 +41842,8 @@ msgstr ""
 "decât puteți dvs., iar un administrator îl poate restrânge și mai mult (vezi"
 " :doc:`feature_access`)."
 
-#: ../../content/applications/productivity/ai/panel.rst:16
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:128
+#: ../mnt/documentation/content/applications/productivity/ai/panel.rst:16
 msgid "Quick prompts"
 msgstr "Comenzi rapide"
 
@@ -43176,3 +43195,7 @@ msgid ""
 msgstr ""
 "Cererile sunt trimise furnizorului dvs. AI. Nu lipiți secrete sau date pe "
 "care nu aveți voie să le partajați cu acesta."
+
+
+#~ msgid "**Estimating quantities and lengths.** For the lines that came from labels, the AI proposes the number of pieces and the length of one piece (or the width and length of a plate), with its reasoning and the evidence. Lines from a parts list or from block attributes already carry quantities and are not estimated."
+#~ msgstr "**Estimarea cantităților și a lungimilor.** Pentru liniile provenite din etichete, AI propune numărul de bucăți și lungimea unei bucăți (sau lățimea și lungimea unei table), cu raționamentul și dovezile sale. Liniile dintr-un extras de materiale sau din atribute de bloc au deja cantități și nu sunt estimate."

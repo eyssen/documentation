@@ -21,16 +21,25 @@ the lines, the tab :guilabel:`Parse log` lists what was read, repaired or ignore
 :guilabel:`Parsed`. You can parse again while the import is parsed or reviewed: the lines that were not
 added by hand are replaced, and the lines you added manually are kept.
 
+If the drawings contain several parts lists, :guilabel:`Parse drawings` first asks which of them to
+import (see :ref:`manufacturing/cad_bom_import/choose_tables`).
+
 .. note::
    Texts are read from model space and every paper space of the drawing, including the texts inside
    blocks. For a DWG, ``dwgread`` converts the file first; text in other code pages (for example
    Central European drawings) is decoded with the code page stored in the drawing.
 
+.. note::
+   The output of the converter is read step by step. A large DWG file, with hundreds of megabytes of
+   converted data, therefore no longer runs the server out of memory. It only takes longer to parse.
+
 How the lines are found
 =======================
 
 The importer tries three strategies in order. The first one that finds lines wins; the label
-strategy runs only when the others found nothing. The :guilabel:`Source` of every line shows which
+strategy runs only when the others found nothing. (If you choose no parts list in the
+:ref:`dialog <manufacturing/cad_bom_import/choose_tables>`, the parts lists are skipped and the
+drawing is read through its labels.) The :guilabel:`Source` of every line shows which
 one produced it: :guilabel:`Parts list table`, :guilabel:`Block attributes`, :guilabel:`Labels`,
 :guilabel:`Manual` or :guilabel:`AI suggestion`.
 
@@ -55,6 +64,53 @@ weight, description, area and notes.
 - A weight written on the drawing is kept in :guilabel:`Weight on drawing (kg)`. If it differs from
   the computed weight by more than 5 %, the line gets a conflict note.
 
+Parts lists pasted from a spreadsheet
+-------------------------------------
+
+A parts list that was pasted into the drawing from Excel is not text but an embedded object (OLE).
+The importer reads these objects too, in the legacy ``.xls`` format and in ``.xlsx``, and handles them
+like any other parts list.
+
+- A list that is placed twice in the drawing (in model space and in a layout) is read once.
+- Reinforcement (rebar) schedules are skipped. They are recognised by their steel grades (for example
+  B500C or PC52), by the word *armătură* and by stirrups written as *etr.*
+- The parse log names each embedded spreadsheet with its title and its number of rows.
+
+Headers and rows of a parts list
+--------------------------------
+
+- A header can have **two rows**, which are read together. "Nr. / buc." is the quantity;
+  "Greutate [kg] / ml | buc | total" gives the weight per metre, per piece and in total;
+  "Dimensiuni (mm) / l | g | L" gives the width, the thickness and the length. Quantity headers such
+  as "Nr. pieselor" and "Nr. piese" are recognised too.
+- A section can be written with words in front of it ("Pana Z 180x2"), or with its length glued on
+  ("HEA 300 - 7020", "Z200x2,5 - 9090"). Tie rods and round bars ("tirant de 24 mm", "oțel de 20 mm")
+  are recognised as well.
+- Nuts and washers (*piuliță, șaibă*) are kept as separate lines. They are not turned into bolts.
+- Group-heading rows and subtotal or total rows inside a list are skipped.
+
+Parts lists per assembly
+------------------------
+
+Many drawings have one parts list for each assembly (for example "Extras de laminate pentru grinda
+G1") and a summary table of the assemblies ("NECESAR ELEMENTE") with the assembly, its count, its
+weight per piece and its total weight. The importer puts them together.
+
+- The quantities of the list of an assembly are multiplied by the count of that assembly in the
+  summary table.
+- The assembly is found by the mark in the title of the list: G1 is 8 pieces. If the title names no
+  mark (for example "valabil pentru un stâlp"), the total of the list is matched to the weight per piece
+  in the summary table: a list of 1431 kg belongs to "Stâlpi S1, S2", which is 20 pieces.
+- The :guilabel:`Drawing text` of each line shows where it comes from, as "[list title × count]".
+- An assembly that is only in the summary table, because its parts list is not on this drawing (for
+  example trusses, or purlins "see other list"), comes in as one line with the stated weight and count.
+  The line is flagged :guilabel:`To review` and the note says "only in the summary table...". Purlin
+  assemblies are marked as purlins.
+
+The parse log compares the total that a list states with the sum of its rows, and adds "-- they
+differ, check the table" when the difference is more than 5 %. It does the same for the total of the
+summary tables and the total of the lines.
+
 Block attributes
 ----------------
 
@@ -72,13 +128,30 @@ Many drawings have no parts list, only a label next to each member. The importer
 short text, pairs a mark (``R1``, ``PM 2``, ``GM1``) with a section designation written in the same
 text or just below or beside it, and groups the lines by mark and section.
 
+One-line callouts with all the data are read as they are:
+
+- ``P12 - IPE 400 - 7360 - 1buc.``: mark, section, length and pieces;
+- ``P54 L 60x60x6 - 300 20buc.``: an angle, 300 mm long, 20 pieces;
+- ``P20 - 10x144 - 370 - 2buc.``: a plate of 10 mm by 144 mm, 370 mm long, 2 pieces;
+- ``P79 pana Z 200x1.5 l=6000``: a word in front of the section, and the length after ``l=``; and
+- ``PANE PA2 / Z200x2.5-8290``.
+
+A quantity can be written ``(72 buc)``, ``2buc.`` or ``200 bucăți``.
+
 .. important::
    **The number of labels is not the quantity.** The same member is labelled in several views and
-   sometimes several times in one view. The label strategy therefore stores the count as
-   :guilabel:`Occurrences`, sets the quantity to 1, leaves the length empty and flags the line
-   :guilabel:`To review`. Only an explicit text such as ``4 buc``, ``2 db``, ``n=2`` or ``L=2500``
-   fills the quantity or the length. Without a length, a linear member has no weight until you
-   enter it (or accept an :doc:`AI suggestion <../../../productivity/ai/cad_bom_import>`).
+   sometimes several times in one view. For a bare label (a mark and a section, without a length) the
+   label strategy therefore stores the count as :guilabel:`Occurrences`, sets the quantity to 1,
+   leaves the length empty and flags the line :guilabel:`To review`. Only an explicit text such as
+   ``4 buc``, ``2 db``, ``n=2`` or ``L=2500`` fills the quantity or the length. Without a length, a
+   linear member has no weight until you enter it (or accept an :doc:`AI suggestion
+   <../../../productivity/ai/cad_bom_import>`).
+
+   There is one exception. A member tag with a length but no quantity, for example one ``P79 ...
+   l=6000`` label for every purlin on a roof plan, gets the **number of its labels** as the quantity.
+   The labels are counted in the drawing space (model space or one layout) in which they appear most,
+   so a layout that repeats the model space is not counted twice. These lines stay :guilabel:`To
+   review`, and the parse log lists them ("quantity = number of labels (to check)").
 
 Other rules of the label strategy:
 
@@ -90,6 +163,17 @@ Other rules of the label strategy:
 - A bare plate or round size without a mark is ignored as too ambiguous.
 - If the same mark appears with different sections (for example PM 3 as 200x250x10 and 200x350x10),
   every line of that mark gets a conflict note.
+
+Assembly counts on the drawing
+------------------------------
+
+An assembly title with a count multiplies the piece callouts that are drawn on the same sheet:
+"Grinda G1 - 8 buc.", "Stâlpi S1; S2 - 20 buc." or "CADRU TRANSVERSAL (5 buc. : ax 3...7)".
+
+- The sheet is found from its frame, the rectangle around the sheet. A sheet drawn without a frame
+  uses the nearest assembly title that is also outside every frame.
+- A piece that is repeated on one sheet counts once. The same piece on several sheets is added up.
+- The parse log lists the assemblies that were used: "assemblies: Grinda G1 × 8, ...".
 
 Section designations
 --------------------
@@ -124,19 +208,98 @@ prefix such as ``2xL50x5`` is kept as a count.
      - ``FL 50x5``, ``Platbandă 5x60``, ``-80x8``, ``Ø20``
      - ``FL 60x5``, ``Ø20``
    * - Plates
-     - ``PL 10x300x400``, ``PL10``, ``t=12``, ``Tablă 2x1000x2000``
-     - ``PL 300x400x10``
+     - ``PL 10x300x400``, ``PL10``, ``t=12``, ``Tablă 2x1000x2000``, ``tb 188x106x6``
+     - ``PL 300x400x10``, ``PL 106x188x6``
    * - Z, C and Σ purlins
      - ``Z200/2.0``, ``Z 200x2``, ``C150/2``, ``Σ200/2.5``
      - ``Z200/2.0``
+   * - Square and rectangular hollow sections (Romanian)
+     - ``Tv 80x80x5``, ``tv.patr.80x5``
+     - ``SHS 80x80x5``
+   * - Cold-formed U channels
+     - ``U60x60x5``
+     - ``U 60x60x5`` (family :guilabel:`Cold-formed U channel`)
+   * - Halved I and H sections
+     - ``IPE 400/2``
+     - ``IPE 400``, counted as half a section (quantity x 0.5)
    * - Bolts
      - ``M16``, ``M16x60-8.8``, ``4xM20x80 10.9``, ``Șurub M12``
      - ``M16x60`` and a property class
+   * - Bolt sets
+     - ``M24x70, 2S+P``, ``IP M27x85, P+2S``
+     - ``M24x70``, ``M27x85`` (the notation for washers and nut is dropped, the property class is kept)
 
 A bare ``AxBxC`` is decided by context: a plate mark prefix (see the settings) or a thickness written
 first (``10x300x300``) means a plate; otherwise it is a hollow section when the thickness is at most
 16 mm and the sides at most 500 mm, and the line is marked as ambiguous with a lower confidence.
 A plate thinner than 3 mm is a sheet.
+
+.. _manufacturing/cad_bom_import/choose_tables:
+
+Choose the parts lists
+======================
+
+When the drawings of an import contain several parts lists, :guilabel:`Parse drawings` does not
+import at once. It opens the window :guilabel:`Choose the parts lists`, with one row for each list:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
+
+   * - Column
+     - What it shows
+   * - :guilabel:`Import`
+     - Tick the lists to import.
+   * - :guilabel:`File`
+     - The drawing file that holds the list.
+   * - :guilabel:`Table`
+     - The title of the list.
+   * - :guilabel:`Kind`
+     - :guilabel:`Parts list` or :guilabel:`Summary of assemblies`.
+   * - :guilabel:`Rows`
+     - The number of rows.
+   * - :guilabel:`Total on the drawing (kg)`
+     - The total that the list states.
+   * - :guilabel:`Assembly`
+     - The assembly the list is for and how many of it the summary asks for, for example "Grinzi G1
+       × 8".
+   * - :guilabel:`Against the drawing`
+     - The result of the :ref:`check against the labels <manufacturing/cad_bom_import/check_tables>`,
+       for example "matches the drawing", "6 of 10 rows are not on the drawing" or "no labels to
+       compare with".
+
+.. screenshot:: manufacturing-cad-import-choose-tables
+   :menu: Manufacturing app --> CAD imports --> (an import) --> Parse drawings
+   :shows: The window "Choose the parts lists" with several parts lists and one summary of assemblies,
+      the Import toggles and the column "Against the drawing".
+   :highlight: The Import toggles and the column "Against the drawing" (red frames).
+   :data: A steel structure with four parts lists (G1, G2, S1 and one list that is not on the
+      drawing, unticked) and the summary of assemblies.
+   :module: mrp_cad_bom_import
+   :notes: English UI, light theme, 1440px width, crop to the window.
+
+Lists whose rows are mostly not labelled on the drawing start unticked. Click :guilabel:`Import` to
+parse with the lists you ticked.
+
+- If you tick **none**, the bill of materials is read from the drawing itself, through its labels.
+- If the drawings have **exactly one** parts list, it is used without asking. If they have none, the
+  drawing is read through its labels.
+- Your choice is kept. Parsing again does not ask again, unless the drawings changed (a new drawing or
+  a new parts list). Then the window opens again.
+
+The field :guilabel:`Parts lists found` on the import gives the number of lists. When two or more were
+found, the button :guilabel:`Choose parts lists` reopens the window. The lists that were not used are
+named in the parse log ("tables not used (not selected)").
+
+.. _manufacturing/cad_bom_import/check_tables:
+
+Check a parts list against the drawing
+--------------------------------------
+
+The rows of the imported parts lists are compared with the labels of the drawing. A row gets a conflict
+note and is flagged :guilabel:`To review` when its section is labelled nowhere on the drawing ("... is
+not labelled on the drawing"), or when its mark is labelled with another section on the drawing ("on
+the drawing P5 is labelled HEA 200"). The parse log says how many rows do not match.
 
 Review the lines
 ================
@@ -144,6 +307,10 @@ Review the lines
 The tab :guilabel:`Lines` is an editable list. Change anything that is wrong, add lines with
 :guilabel:`Add a line` and drag the handle to reorder. When you change the :guilabel:`Section`, the
 dimensions, family and weight are worked out again.
+
+The lines stay one per row of the drawing or of the parts list. The same piece in the lists of
+G1, G2 and G3 is three lines, each with its source in the :guilabel:`Drawing text`. The material
+summary, the bill of materials and the procurement list add them up (see below).
 
 The colour of a line tells you what to look at:
 
@@ -166,7 +333,9 @@ The colour of a line tells you what to look at:
 Use the optional columns for the rest: :guilabel:`Family`, :guilabel:`Height (mm)`,
 :guilabel:`Width (mm)`, :guilabel:`Thickness (mm)`, :guilabel:`Diameter (mm)`,
 :guilabel:`Occurrences`, :guilabel:`Source`, :guilabel:`Confidence`, :guilabel:`Weight on drawing
-(kg)`, :guilabel:`Drawing text` and :guilabel:`Product action`. For bolts the grade column becomes the
+(kg)`, :guilabel:`Drawing text` and :guilabel:`Product action`. :guilabel:`Quantity on the drawing` and
+:guilabel:`Length on the drawing` are set when the quantity, or the length of one piece, is written on
+the drawing (in a parts list, a block attribute or a label); an estimate never changes them. For bolts the grade column becomes the
 :guilabel:`Property class`. A grade written on the drawing that is not in the material master is kept
 as :guilabel:`Grade on drawing`; the line is flagged and weighed with the density of steel until you
 choose a material.
@@ -205,8 +374,9 @@ nothing can be calculated, the weight written on the drawing is used.
 Material summary and the two options
 ====================================
 
-The tab :guilabel:`Material summary` adds the lines up by kind of material and section: pieces, total
-length, area and weight. Click :guilabel:`Refresh` to rebuild it; it is also rebuilt whenever a line
+The tab :guilabel:`Material summary` adds the lines up by kind of material, section and grade: pieces,
+total length, area and weight. Equal pieces from different lists are therefore one row. The bill of
+materials and the procurement list add the lines up by product. Click :guilabel:`Refresh` to rebuild it; it is also rebuilt whenever a line
 changes. The weights block above the tabs shows three totals:
 
 - :guilabel:`Option 1: without purlins (kg)`: the total weight without the purlin lines;
@@ -223,10 +393,12 @@ the summary and a sheet with the detailed lines.
 Limits
 ======
 
-- The label strategy cannot know quantities and lengths. They are left for you to review, or for the
-  :doc:`AI bridge <../../../productivity/ai/cad_bom_import>` to suggest.
+- A label that does not state a quantity or a length leaves them open. They are left for you to
+  review, or for the :doc:`AI bridge <../../../productivity/ai/cad_bom_import>` to suggest. A quantity
+  that was counted from labels is only a guess and stays flagged.
 - A parts list needs a header with at least three recognised columns. Rotated tables and tables
-  that are split over several areas of the drawing are not joined.
+  that are split over several areas of the drawing are not joined. Spreadsheets pasted into the
+  drawing are read (``.xls`` and ``.xlsx``), but reinforcement schedules are skipped.
 - LibreDWG does not decode every DWG object (for example proxy entities). The contents of an
   ACAD_TABLE in a DWG are read from the graphics of the table, not from its cells.
 - Purlin weights are generic until you align the catalogue with the supplier.

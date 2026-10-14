@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-13 09:21+0000\n"
+"POT-Creation-Date: 2026-10-14 16:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2203,145 +2203,161 @@ msgid "**Interpreting the lines.** The AI checks every line: its kind, family, d
 msgstr ""
 
 #: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:44
-msgid "**Estimating quantities and lengths.** For the lines that came from labels, the AI proposes the number of pieces and the length of one piece (or the width and length of a plate), with its reasoning and the evidence. Lines from a parts list or from block attributes already carry quantities and are not estimated."
-msgstr ""
-
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:48
-msgid "**Matching products.** Lines without a product get a suggested existing product, chosen among a few candidates that the server selected."
+msgid "**Estimating quantities and lengths.** For the lines that came from labels, the AI proposes the number of pieces and the length of one piece (or the width and length of a plate), with its reasoning and the evidence. A quantity or a length that is written on the drawing is never estimated again. A line whose quantity and length are both stated is not sent to the model at all. When only one of the two is stated, it is passed to the model as known, and the answer cannot change it. Lines that were read from a parts list or from block attributes are not estimated."
 msgstr ""
 
 #: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:50
+msgid "**Matching products.** Lines without a product get a suggested existing product, chosen among a few candidates that the server selected."
+msgstr ""
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:52
 msgid "**Checks.** Rule-based checks look for gaps (see below). This step does not use the AI."
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:51
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:53
 msgid "**Review note.** A short note in your language with the totals now and the totals if you accepted every suggestion, the main materials and the checks. It is shown on the tab :guilabel:`AI review` and posted in the chatter."
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:55
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:57
 msgid "Every answer is parsed as JSON and checked. Whatever is not valid is dropped: unknown lines, products that were not offered as candidates, designations the parser cannot read, negative values and views that do not exist."
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:60
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:62
 msgid "How the drawing is read"
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:62
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:64
 msgid "The geometry step collects the dimensions of the drawing (linear and aligned dimensions of model and paper space), splits each space into views and sheet frames, and finds the title of each view (*SECTIUNE, PLAN, DETALIU, SECTION, DETAIL, METSZET, ALAPRAJZ, ...*), the cut markers and the sheet numbers. The scale of a view comes from its dimensions: a drawing made at 1:10 with a dimension scale factor of 10 is detected as such, and lengths are given to the AI in millimetres."
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:68
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:70
 msgid "For each line the AI receives its labels per view, with the position of each label, the leader line that touches it, the segments the leader points to (the member), the nearest lines and the nearest dimensions. The AI is told that the same piece is labelled in several views, so pieces are counted once (usually from the plan) and lengths are taken from sections and details."
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:74
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:76
 msgid "Review the suggestions"
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:76
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:78
 msgid "The tab :guilabel:`AI review` appears after an analysis. It has:"
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:78
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:80
 msgid "the :guilabel:`AI review note` and the :guilabel:`Drawing notes read by the AI`;"
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:79
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:81
 msgid "the list :guilabel:`Suggestions to review`: for each line the current quantity and length, what the AI proposes (:guilabel:`AI quantity`, :guilabel:`AI length (mm)`), its :guilabel:`Confidence`, the reasoning, the evidence (views and values) and a note; and"
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:82
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:84
 msgid "the list :guilabel:`Checks`."
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:84
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:86
 msgid "Use the buttons :guilabel:`Accept` and :guilabel:`Reject` on a line (the ticks in the list of lines do the same), :guilabel:`Accept all above the threshold` and :guilabel:`Reject all`. :guilabel:`Run the checks again` repeats the checks without the AI, for example after you corrected a line. Suggestions can be accepted or rejected while the import is parsed or reviewed."
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:89
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:91
 msgid "Accepting a suggestion applies:"
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:91
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:93
 msgid "a changed designation (the line is parsed again: family, kind, dimensions, plate size), otherwise the kind;"
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:93
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:95
 msgid "the grade (it is resolved through the material master, so \"OL37\" becomes S235JR), the description and the purlin flag;"
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:95
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:97
 msgid "the quantity, and the length of a linear member or the width and length of a plate when missing; and"
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:96
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:98
 msgid "the suggested product, as if you had chosen it by hand."
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:98
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:100
 msgid "The line's source becomes :guilabel:`AI suggestion` and the confidence is stored. **A line whose confidence is below the threshold stays flagged** :guilabel:`To review` after you accept it. The threshold is the field :guilabel:`AI confidence threshold` on the tab (0.6 by default, from the settings), and :guilabel:`Accept all above the threshold` accepts only suggestions that reach it."
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:103
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:105
 msgid "A product that you accept from the AI, or that you choose by hand on an analysed line, is remembered as an alias, so the next import finds it without the AI."
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:116
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:118
 msgid "Checks"
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:118
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:120
 msgid "The checks never change data. They report: bolts without nuts or washers; a plate with no bolt or hole label near any of its labels; purlins without sag rods or tie rods (information); a missing grade; open conflicts, with the AI's explanation; a linear member without a length and without an estimate; a piece longer than the stock bar (information); a line whose weight is far above the others (more than eight times the median and more than 40 % of the total); and the number of suggestions below the threshold (information). Each check is a warning or an information."
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:126
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:128
 #: ../mnt/documentation/content/applications/productivity/ai/panel.rst:16
 msgid "Quick prompts"
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:128
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:130
 msgid "On a CAD import the AI panel (see :doc:`panel`) offers the quick prompts :guilabel:`Explain this import` (in place of the generic *Summarise*), :guilabel:`What still needs review?` and :guilabel:`Material totals by type`. The panel sees the lines, the material summary and the checks of the import, as far as your own access rights allow."
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:134
-msgid "Cost, limits and data sent to the model"
-msgstr ""
-
 #: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:136
-msgid "Every call goes through the normal AI machinery: the capability *Ask*, the rate limit, the blocked patterns and the AI log with its cost (see :doc:`monitoring`). In the background job the per-minute rate limit is waited for instead of failing, but the daily limits stop the job at once."
+msgid "Choose the model"
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:139
-msgid "The size depends on the drawing. The analysis of a staircase drawing with 260 labels, 17 groups of members and 787 dimensions took seven calls and about 22,000 input tokens. A very large drawing is limited to twenty estimation requests (roughly 100,000 tokens); the lines beyond are reported as not estimated."
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:138
+msgid "The analysis is interactive: you wait for the suggestions. Use a fast chat model with a low cost per call (see :doc:`models_and_providers`)."
+msgstr ""
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:141
+msgid "Model variants that run as a batch (names ending in ``:batch``) do not suit this analysis, because their answers arrive much later."
 msgstr ""
 
 #: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:143
-msgid "The model receives the line data and texts of the drawing, the general notes, the geometric context (numbers, view titles and sheet numbers), the totals and check messages for the note, and, for matching, the names and internal references of the candidate products. It receives **no** customer, project or import name and no other business data."
+msgid "Very slow reasoning modes can take longer than the timeout of the provider. If you use one, raise the :guilabel:`Timeout` of the provider (see :doc:`configuration`)."
+msgstr ""
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:147
+msgid "Cost, limits and data sent to the model"
 msgstr ""
 
 #: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:149
+msgid "Every call goes through the normal AI machinery: the capability *Ask*, the rate limit, the blocked patterns and the AI log with its cost (see :doc:`monitoring`). In the background job the per-minute rate limit is waited for instead of failing, but the daily limits stop the job at once."
+msgstr ""
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:152
+msgid "The size depends on the drawing. The analysis of a staircase drawing with 260 labels, 17 groups of members and 787 dimensions took seven calls and about 22,000 input tokens. A very large drawing is limited to twenty estimation requests (roughly 100,000 tokens); the lines beyond are reported as not estimated."
+msgstr ""
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:156
+msgid "The model receives the line data and texts of the drawing, the general notes, the geometric context (numbers, view titles and sheet numbers), the totals and check messages for the note, and, for matching, the names and internal references of the candidate products. It receives **no** customer, project or import name and no other business data."
+msgstr ""
+
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:162
 #: ../mnt/documentation/content/applications/productivity/ai/configuration.rst:10
 #: ../mnt/documentation/content/applications/productivity/sign.rst:960
 msgid "Settings"
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:151
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:164
 msgid "In :menuselection:`Manufacturing app --> Configuration --> Settings`, block :guilabel:`CAD BoM import`, under :guilabel:`AI suggestions`:"
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:154
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:167
 msgid ":guilabel:`AI confidence threshold`: estimates below it stay flagged to review and are left out of :guilabel:`Accept all above the threshold`. Default 0.6."
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:156
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:169
 msgid ":guilabel:`Analyse with AI after parsing`: queues the analysis automatically after each parse when label lines need a review and you may use the AI; otherwise it is skipped silently. Off by default."
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:160
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:173
 msgid ":doc:`../../inventory_and_mrp/manufacturing/cad_bom_import`"
 msgstr ""
 
-#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:161
+#: ../mnt/documentation/content/applications/productivity/ai/cad_bom_import.rst:174
 msgid ":doc:`app_integrations`"
 msgstr ""
 

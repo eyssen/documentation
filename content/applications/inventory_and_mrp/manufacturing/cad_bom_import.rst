@@ -3,13 +3,15 @@ CAD bill of materials import
 ============================
 
 A steel structure fabricator usually receives the project documentation as a DWG (sometimes DXF)
-drawing. The drawing may contain a parts list, position blocks with attributes, or nothing but
+drawing. The drawing may contain one or more parts lists (also tables pasted from a spreadsheet, and
+lists per assembly with a summary table), position blocks with attributes, or nothing but
 position labels next to the members ("R1 / 100x100x4", "GM1 / U180", "PM 2 / 300x300x10",
 "Bolt / M 16"). The eYssen module **CAD Bill of Materials Import** (``mrp_cad_bom_import``) turns such
 a drawing into:
 
 - a reviewed material list with weights taken from a steel section catalogue;
-- a material summary by kind of material, with the total weight without and with purlins;
+- a material summary by kind of material, section and grade, with the total weight without and with
+  purlins;
 - a purely kg-based quotation (manufacturing price per kg and assembly price per kg);
 - after acceptance, a bill of materials with matched or newly created products; and
 - a procurement list in stock lengths with cutting waste, and draft requests for quotation.
@@ -37,7 +39,8 @@ statuses: :guilabel:`Draft`, :guilabel:`Parsed`, :guilabel:`Reviewed`, :guilabel
      - Add the DWG or DXF files under :guilabel:`Drawings (DWG, DXF)`.
      - The files are attached to the import.
    * - Parse
-     - Click :guilabel:`Parse drawings`.
+     - Click :guilabel:`Parse drawings`. If the drawings contain several parts lists, choose the ones
+       to import first.
      - The lines are extracted, the products are matched and the summary is built. Status:
        :guilabel:`Parsed`.
    * - Review

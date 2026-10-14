@@ -113,9 +113,11 @@ Master data the import relies on
 
 - **Materials.** Every line has a material grade. Grades are records of the material master
   (:menuselection:`Products --> Configuration --> Materials`), looked up by code, name and
-  aliases, and their density drives the weights. The standard data contains S235JR, S275JR,
-  S355J2, S460, 1.4301, 1.4404, EN AW-6060 and EN AW-6082; old designations such as OL37, St37-2 or
-  Fe360 are aliases of S235JR. See :ref:`inventory/product_data/material`.
+  aliases, and their density drives the weights. The standard data contains the EN 10025-2
+  qualities S235JR, S235J0, S235J2, S275JR, S275J0, S275J2, S355JR, S355J0, S355J2 and S355K2, and
+  also S460, 1.4301, 1.4404, EN AW-6060 and EN AW-6082. A grade written on a drawing matches its exact
+  quality, and old designations such as OL37, St37-2 or Fe360 are aliases of S235JR. See
+  :ref:`inventory/product_data/material`.
 - **Product dimensions.** Products created by the import carry their shape, dimensions and
   cross-section area, so that their weight follows the material density. See
   :ref:`inventory/product_data/dimensions`.

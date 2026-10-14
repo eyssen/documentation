@@ -10972,6 +10972,635 @@ msgstr "Să citească importul legat de o ofertă."
 msgid "The imports are separated by company."
 msgstr "Importurile sunt separate pe companii."
 
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:5
+msgid ""
+"Odoo tracks what *your own* warehouses hold. When a large part of the "
+"catalog is drop-shipped or bought to order, the decisive question is a "
+"different one: **how much does the supplier have?** The eYssen *Supplier "
+"Product Management* module (``supplier_product_management``, usually "
+"shortened to *SPM*) records the supplier's own stock next to each vendor "
+"line of a product, uses it to warn on purchase and sales orders, and "
+"calculates the expected cost of the next purchase."
+msgstr ""
+"Odoo urmărește ce dețin depozitele *dumneavoastră*. Când o mare parte din "
+"catalog este livrată direct de furnizor (drop-shipping) sau cumpărată la "
+"comandă, întrebarea decisivă este alta: **cât are furnizorul?** Modulul "
+"eYssen *Supplier Product Management* (``supplier_product_management``, de "
+"obicei prescurtat *SPM*) înregistrează stocul propriu al furnizorului lângă "
+"fiecare linie de furnizor a unui produs, îl folosește pentru a avertiza pe "
+"comenzile de achiziție și de vânzare și calculează costul estimat al "
+"următoarei achiziții."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:12
+msgid ""
+"An earlier module, ``eyssen_supplier_product_management``, implements the "
+"same supplier-location and supplier-stock model without the minimum-order "
+"policy, the order warnings, the GTIN validation, the expected cost and the "
+"supplier dashboard. ``supplier_product_management`` supersedes it; only one "
+"of the two should be installed."
+msgstr ""
+"Un modul anterior, ``eyssen_supplier_product_management``, implementează "
+"același model de locații și stocuri ale furnizorului, fără politica de "
+"comandă minimă, avertismentele pe comenzi, validarea GTIN, costul estimat și"
+" tabloul de bord al furnizorilor. ``supplier_product_management`` îl "
+"înlocuiește; trebuie instalat doar unul dintre cele două."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:67
+msgid ""
+"On a **vendor line** of a product: a :guilabel:`Supplier Quantity` total and"
+" a :guilabel:`Supplier Quantities` breakdown per location and kind; the form"
+" of the vendor pricelist line lists the stock lines in its "
+":guilabel:`Supplier Stock` section."
+msgstr ""
+"Pe o **linie de furnizor** a unui produs: un total :guilabel:`Cantitate "
+"furnizor` și o defalcare :guilabel:`Cantități furnizor` pe locație și tip; "
+"formularul liniei din lista de prețuri a furnizorului listează liniile de "
+"stoc în secțiunea :guilabel:`Stoc furnizor`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:87
+msgid "Expected cost"
+msgstr "Cost estimat"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:89
+msgid ""
+"The :guilabel:`Cost` of a product follows past purchases: it is right for "
+"accounting, but it says little about the next purchase. The price on a "
+"vendor pricelist line is only the price of the goods: shipping, import duty,"
+" the EPR fee and the vendor's later rebates come on top or are deducted. SPM"
+" therefore calculates an **expected cost** on every vendor pricelist line:"
+msgstr ""
+":guilabel:`Cost` al unui produs urmează achizițiile anterioare: este corect "
+"pentru contabilitate, dar spune puțin despre următoarea achiziție. Prețul de"
+" pe o linie din lista de prețuri a furnizorului este doar prețul mărfii: "
+"transportul, taxa vamală, taxa EPR și rabaturile ulterioare ale furnizorului"
+" se adaugă sau se scad. De aceea SPM calculează un **cost estimat** pe "
+"fiecare linie din lista de prețuri a furnizorului:"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:94
+msgid "price after discount"
+msgstr "preț după reducere"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:95
+msgid "+ shipping"
+msgstr "+ transport"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:96
+msgid "+ import duty"
+msgstr "+ taxă vamală"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:97
+msgid "+ EPR fee"
+msgstr "+ taxă EPR"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:98
+msgid "− rebate"
+msgstr "− rabat"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:99
+msgid "+ safety margin (a percentage of the sum above)"
+msgstr "+ marjă de siguranță (un procent din suma de mai sus)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:101
+msgid ""
+"The vendor pricelist form shows the inputs in its :guilabel:`Expected Cost` "
+"section on the left and the result on the right: :guilabel:`Price after "
+"Discount`, :guilabel:`Expected Shipping`, :guilabel:`Expected Import Duty`, "
+":guilabel:`Expected EPR Fee`, :guilabel:`Expected Rebate`, :guilabel:`Safety"
+" Margin`, and the :guilabel:`Expected Cost` in the vendor currency and, with"
+" several currencies, :guilabel:`Expected Cost (Company Currency)` converted "
+"at today's rate. All amounts are per unit of the pricelist line. The "
+":guilabel:`Expected Cost` column can also be shown in the vendor lists of "
+"the product."
+msgstr ""
+"Formularul listei de prețuri a furnizorului afișează datele de intrare în "
+"secțiunea :guilabel:`Cost estimat` în stânga și rezultatul în dreapta: "
+":guilabel:`Preț după reducere`, :guilabel:`Transport estimat`, "
+":guilabel:`Taxă vamală estimată`, :guilabel:`Taxă EPR estimată`, "
+":guilabel:`Rabat estimat`, :guilabel:`Marjă de siguranță` și :guilabel:`Cost"
+" estimat` în moneda furnizorului și, cu mai multe monede, :guilabel:`Cost "
+"estimat (moneda companiei)` convertit la cursul de azi. Toate sumele sunt pe"
+" unitatea liniei din lista de prețuri. Coloana :guilabel:`Cost estimat` "
+"poate fi afișată și în listele de furnizori ale produsului."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:120
+msgid "Shipping and rebate"
+msgstr "Transport și rabat"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:122
+msgid ""
+":guilabel:`Shipping Cost` and :guilabel:`Rebate` are each either a "
+"percentage of the price (:guilabel:`% of Price`) or an :guilabel:`Amount per"
+" Unit` in the vendor currency. The rebate is a later credit from the vendor,"
+" for example a monthly volume rebate that is used up in the next month."
+msgstr ""
+":guilabel:`Cost de transport` și :guilabel:`Rabat` sunt fiecare fie un "
+"procent din preț (:guilabel:`% din preț`), fie o :guilabel:`Sumă pe unitate`"
+" în moneda furnizorului. Rabatul este un credit ulterior de la furnizor, de "
+"exemplu un rabat lunar de volum folosit în luna următoare."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:126
+msgid ""
+"Defaults per vendor are set on the vendor's contact form, :guilabel:`Sales &"
+" Purchase` tab, section :guilabel:`Expected Cost Defaults`: "
+":guilabel:`Default Shipping Cost`, :guilabel:`Default Rebate` and "
+":guilabel:`Preferential Origin`. New pricelist lines of the vendor take "
+"these values; existing lines keep their own. :guilabel:`Apply to all "
+"pricelist lines of this vendor` overwrites the shipping, rebate and "
+"preferential origin on every pricelist line of the vendor."
+msgstr ""
+"Valorile implicite pe furnizor se setează în formularul de contact al "
+"furnizorului, fila :guilabel:`Vânzări & Achiziții`, secțiunea "
+":guilabel:`Valori implicite pentru costul estimat`: :guilabel:`Cost implicit"
+" de transport`, :guilabel:`Rabat implicit` și :guilabel:`Origine "
+"preferențială`. Liniile noi din lista de prețuri a furnizorului preiau "
+"aceste valori; liniile existente își păstrează propriile valori. "
+":guilabel:`Aplică la toate liniile din lista de prețuri a acestui furnizor` "
+"suprascrie transportul, rabatul și originea preferențială pe toate liniile "
+"furnizorului."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:133
+msgid "Import duty"
+msgstr "Taxă vamală la import"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:135
+msgid ":guilabel:`Import Duty` sets how the duty is estimated:"
+msgstr ":guilabel:`Taxă vamală la import` stabilește cum se estimează taxa:"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:137
+msgid ""
+":guilabel:`From Customs Tariff` (default): the EU duty of the product's "
+"customs tariff code for the origin of goods, see "
+":doc:`../../purchase/products/customs_tariff`. The origin is the product's "
+":guilabel:`Origin of Goods`, or the vendor's country if the product has "
+"none."
+msgstr ""
+":guilabel:`Din tariful vamal` (implicit): taxa UE a codului tarifar vamal al"
+" produsului pentru originea mărfurilor, vedeți "
+":doc:`../../purchase/products/customs_tariff`. Originea este "
+":guilabel:`Originea bunurilor` a produsului sau, dacă aceasta lipsește, țara"
+" furnizorului."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:140
+msgid ":guilabel:`Manual Rate`: a fixed percentage of the customs value."
+msgstr ":guilabel:`Rată manuală`: un procent fix din valoarea în vamă."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:141
+msgid ":guilabel:`No Import Duty`."
+msgstr ":guilabel:`Fără taxă vamală`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:143
+msgid ""
+"The duty is calculated on the customs value, the price after discount plus "
+"the shipping, as customs value includes the transport to the EU border. With"
+" :guilabel:`Preferential Origin` (the vendor provides a proof of "
+"preferential origin, such as a statement on origin under a free trade "
+"agreement), the lower preferential duty applies. Specific duties (per kg, "
+"per 100 kg, per piece, per litre) use the :guilabel:`Weight` and "
+":guilabel:`Volume` of the product; EUR amounts are converted into the vendor"
+" currency."
+msgstr ""
+"Taxa se calculează asupra valorii în vamă, adică prețul după reducere plus "
+"transportul, deoarece valoarea în vamă include transportul până la frontiera"
+" UE. Cu :guilabel:`Origine preferențială` (furnizorul oferă o dovadă a "
+"originii preferențiale, cum ar fi o declarație de origine conform unui acord"
+" de liber schimb), se aplică taxa preferențială mai mică. Taxele specifice "
+"(pe kg, pe 100 kg, pe bucată, pe litru) folosesc :guilabel:`Greutate` și "
+":guilabel:`Volum` ale produsului; sumele în EUR sunt convertite în moneda "
+"furnizorului."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:150
+msgid ""
+"No duty is estimated when the vendor is in the EU, when the vendor has no "
+"country, when the product has no tariff code, or when the company is outside"
+" the EU. :guilabel:`Import Duty Details` explains the rate and these cases, "
+"and warns when a rate is only an estimate (conditions, quotas, minimum or "
+"maximum amounts)."
+msgstr ""
+"Nu se estimează nicio taxă când furnizorul este în UE, când furnizorul nu "
+"are țară, când produsul nu are cod tarifar sau când compania este în afara "
+"UE. :guilabel:`Detalii taxă vamală la import` explică rata și aceste cazuri "
+"și avertizează când o rată este doar o estimare (condiții, contingente, sume"
+" minime sau maxime)."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:156
+msgid "EPR fee"
+msgstr "Taxa EPR"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:158
+msgid ""
+":guilabel:`EPR Fee per Unit` is the extended producer responsibility fee of "
+"one unit in the company currency. It can be entered by hand. With the "
+"Hungarian EPR module installed, it is filled from the EPR components of the "
+"product, see :ref:`EPR fee in the expected cost <l10n_hu/epr/expected-"
+"cost>`."
+msgstr ""
+":guilabel:`Taxă EPR pe unitate` este taxa de răspundere extinsă a "
+"producătorului pentru o unitate, în moneda companiei. Poate fi introdusă "
+"manual. Cu modulul EPR maghiar instalat, se completează pe baza "
+"componentelor EPR ale produsului, vedeți :ref:`Taxa EPR în costul estimat "
+"<l10n_hu/epr/expected-cost>`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:164
+msgid "Safety margin"
+msgstr "Marjă de siguranță"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:166
+msgid ""
+"The safety margin covers price, freight and exchange rate changes. It is set"
+" for the company in :menuselection:`Purchase --> Configuration --> "
+"Settings`, section :guilabel:`Expected Cost`, :guilabel:`Safety Margin`, as "
+"a percentage."
+msgstr ""
+"Marja de siguranță acoperă variațiile de preț, de transport și de curs "
+"valutar. Se setează pentru companie în :menuselection:`Achiziție --> "
+"Configurare --> Setări`, secțiunea :guilabel:`Cost estimat`, "
+":guilabel:`Marjă de siguranță`, ca procent."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:171
+msgid "Expected purchase cost on the product"
+msgstr "Costul de achiziție estimat pe produs"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:173
+msgid ""
+"On the product form, :guilabel:`General Information` tab, "
+":guilabel:`Expected Purchase Cost` under the :guilabel:`Cost` shows the "
+"expected cost of one unit from the preferred vendor pricelist line (the one "
+"a purchase order would use), in the company currency and in the unit of "
+"measure of the product."
+msgstr ""
+"Pe formularul produsului, fila :guilabel:`Informații generale`, "
+":guilabel:`Cost de achiziție estimat` sub :guilabel:`Cost` afișează costul "
+"estimat al unei unități din linia preferată din lista de prețuri a "
+"furnizorului (cea pe care ar folosi-o o comandă de achiziție), în moneda "
+"companiei și în unitatea de măsură a produsului."
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:3
+msgid "Customs tariff and import duty"
+msgstr "Tarif vamal și taxă vamală la import"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:5
+msgid ""
+"Goods bought from outside the European Union pay import duty when they are "
+"released for free circulation. The rate depends on the **customs tariff "
+"code** of the goods and on their **origin**, and it changes over time: new "
+"free trade agreements, anti-dumping duties, safeguard measures. The eYssen "
+"*Customs Tariff (EU TARIC)* module (``product_customs_tariff``) keeps the "
+"official EU tariff in the database, shows the expected import duty on the "
+"product form, and gives the duty to the :ref:`expected cost "
+"<inventory/supplier-products/expected-cost>` of the vendor pricelists."
+msgstr ""
+"Mărfurile cumpărate din afara Uniunii Europene plătesc taxe vamale la import"
+" la punerea în liberă circulație. Rata depinde de **codul tarifar vamal** al"
+" mărfurilor și de **originea** lor și se schimbă în timp: noi acorduri de "
+"liber schimb, taxe antidumping, măsuri de salvgardare. Modulul eYssen "
+"*Customs Tariff (EU TARIC)* (``product_customs_tariff``) păstrează tariful "
+"oficial al UE în baza de date, afișează taxa vamală estimată pe formularul "
+"produsului și transmite taxa către :ref:`costul estimat <inventory/supplier-"
+"products/expected-cost>` al listelor de prețuri ale furnizorilor."
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:12
+msgid ""
+"Customs duties are the same in every EU country: the Hungarian (NAV) and "
+"Spanish (AEAT) tariff consultations show the same TARIC data. VAT and excise"
+" duties are national and are not part of the tariff."
+msgstr ""
+"Taxele vamale sunt aceleași în toate țările UE: consultările tarifare "
+"maghiară (NAV) și spaniolă (AEAT) afișează aceleași date TARIC. TVA-ul și "
+"accizele sunt naționale și nu fac parte din tarif."
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:17
+msgid ""
+"The module gives an estimate for planning, not a customs declaration. Tariff"
+" quotas, company-specific anti-dumping rates (additional codes) and end-use "
+"relief are not applied automatically; the estimate uses the general rate and"
+" says so."
+msgstr ""
+"Modulul oferă o estimare pentru planificare, nu o declarație vamală. "
+"Contingentele tarifare, ratele antidumping specifice unei companii (coduri "
+"adiționale) și facilitățile pentru destinația finală nu se aplică automat; "
+"estimarea folosește rata generală și indică acest lucru."
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:22
+msgid "Where the data comes from"
+msgstr "De unde provin datele"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:24
+msgid ""
+"The European Commission (DG TAXUD) publishes the TARIC database every month "
+"as XLSX extractions in the public CIRCABC library *TARIC & Quota Data and "
+"Information*. Reuse is authorised under Commission Decision 2011/833/EU. The"
+" module imports:"
+msgstr ""
+"Comisia Europeană (DG TAXUD) publică lunar baza de date TARIC sub formă de "
+"extracții XLSX în biblioteca publică CIRCABC *TARIC & Quota Data and "
+"Information*. Reutilizarea este autorizată prin Decizia 2011/833/UE a "
+"Comisiei. Modulul importă:"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:28
+msgid ""
+"the **nomenclature**: every Combined Nomenclature (CN, 8 digits) and TARIC "
+"(10 digits) line with its description and its place in the hierarchy;"
+msgstr ""
+"**nomenclatura**: fiecare linie a Nomenclaturii Combinate (NC, 8 cifre) și "
+"TARIC (10 cifre), cu descrierea și locul său în ierarhie;"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:30
+msgid ""
+"the **import duty measures**: third country duty, autonomous tariff "
+"suspensions, tariff preferences, anti-dumping and countervailing duties, "
+"additional duties, and the flag of the goods under the Carbon Border "
+"Adjustment Mechanism (CBAM); and"
+msgstr ""
+"**măsurile de taxe vamale la import**: taxa pentru țări terțe, suspendări "
+"tarifare autonome, preferințe tarifare, taxe antidumping și compensatorii, "
+"taxe suplimentare și marcajul mărfurilor care intră sub incidența "
+"Mecanismului de ajustare la frontieră în funcție de carbon (CBAM); și"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:33
+msgid ""
+"the **geographical areas**: countries and country groups (for example `1011`"
+" ERGA OMNES, the GSP groups), with the countries excluded from a measure."
+msgstr ""
+"**zonele geografice**: țări și grupuri de țări (de exemplu `1011` ERGA "
+"OMNES, grupurile SGP), cu țările excluse de la o măsură."
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:36
+msgid ""
+"The descriptions are in English; descriptions in other languages are loaded "
+"when the Commission publishes them in the same library."
+msgstr ""
+"Descrierile sunt în limba engleză; descrierile în alte limbi se încarcă "
+"atunci când Comisia le publică în aceeași bibliotecă."
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:40
+msgid "Updating the tariff"
+msgstr "Actualizarea tarifului"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:42
+msgid ""
+"Go to :menuselection:`Purchase --> Configuration --> Settings`, section "
+":guilabel:`Customs Tariff`:"
+msgstr ""
+"Accesați :menuselection:`Achiziție --> Configurare --> Setări`, secțiunea "
+":guilabel:`Tarif vamal`:"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:44
+msgid ""
+":guilabel:`Update Customs Tariff Automatically` checks the library every "
+"week and imports a newly published month. The date and size of the last "
+"import are shown below the option."
+msgstr ""
+":guilabel:`Actualizează automat tariful vamal` verifică biblioteca "
+"săptămânal și importă luna nou publicată. Data și dimensiunea ultimului "
+"import sunt afișate sub opțiune."
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:46
+msgid ""
+":guilabel:`Update Now` opens the update window: :guilabel:`Download from the"
+" EU` downloads and imports the newest month at once. A full import takes one"
+" to two minutes."
+msgstr ""
+":guilabel:`Actualizează acum` deschide fereastra de actualizare: "
+":guilabel:`Descarcă de la UE` descarcă și importă imediat cea mai recentă "
+"lună. Un import complet durează unul-două minute."
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:49
+msgid ""
+"If the server cannot reach the internet, download the files from CIRCABC and"
+" upload them in the same window with their original names: at least "
+":file:`Nomenclature EN.xlsx` and :file:`Duties Import 01-99.xlsx`, and for a"
+" complete result also :file:`Geographical areas composition.xlsx`, "
+":file:`Geographical areas description.xlsx` and :file:`Measure "
+"exclusions.xlsx`. Then click :guilabel:`Import Uploaded Files`."
+msgstr ""
+"Dacă serverul nu are acces la internet, descărcați fișierele din CIRCABC și "
+"încărcați-le în aceeași fereastră cu numele originale: cel puțin "
+":file:`Nomenclature EN.xlsx` și :file:`Duties Import 01-99.xlsx`, iar pentru"
+" un rezultat complet și :file:`Geographical areas composition.xlsx`, "
+":file:`Geographical areas description.xlsx` și :file:`Measure "
+"exclusions.xlsx`. Apoi faceți clic pe :guilabel:`Importă fișierele "
+"încărcate`."
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:65
+msgid "Tariff codes"
+msgstr "Coduri tarifare"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:67
+msgid ""
+":menuselection:`Purchase --> Configuration --> Customs Tariff --> Customs "
+"Tariff Codes` lists the declarable codes. Search by code with or without "
+"spaces (``7208 51`` or ``720851``) or by description. A code shows:"
+msgstr ""
+":menuselection:`Achiziție --> Configurare --> Tarif vamal --> Coduri "
+"tarifare vamale` listează codurile declarabile. Căutați după cod, cu sau "
+"fără spații (``7208 51`` sau ``720851``), sau după descriere. Un cod "
+"afișează:"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:71
+msgid ""
+"its :guilabel:`Parent` line and :guilabel:`CN Code` (the first 8 digits);"
+msgstr "linia :guilabel:`Părinte` și :guilabel:`Cod NC` (primele 8 cifre);"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:72
+msgid ""
+":guilabel:`Declarable`: the lowest-level line that can be used in a customs "
+"declaration;"
+msgstr ""
+":guilabel:`Declarabil`: linia de nivelul cel mai de jos care poate fi "
+"folosită într-o declarație vamală;"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:73
+msgid ""
+"the :guilabel:`Full Description` tab with the descriptions of all levels up "
+"to the chapter;"
+msgstr ""
+"fila :guilabel:`Descriere completă`, cu descrierile tuturor nivelurilor până"
+" la capitol;"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:74
+msgid ""
+"the :guilabel:`Measures` tab with the measures attached to the line itself. "
+"The measures of the parent lines also apply to it;"
+msgstr ""
+"fila :guilabel:`Măsuri`, cu măsurile atașate liniei înseși. I se aplică și "
+"măsurile liniilor superioare;"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:76
+msgid ""
+"the :guilabel:`Products` button with the products that use the code; and"
+msgstr "butonul :guilabel:`Produse`, cu produsele care folosesc codul; și"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:77
+msgid ""
+":guilabel:`Open in TARIC`, which opens the official TARIC consultation for "
+"the code."
+msgstr ""
+":guilabel:`Deschide în TARIC`, care deschide consultarea oficială TARIC "
+"pentru cod."
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:79
+msgid ""
+":guilabel:`Customs Tariff Measures` and :guilabel:`Customs Geographical "
+"Areas` in the same menu list all imported measures and areas. Measures can "
+"also be added by hand (source :guilabel:`Manual`); they are kept when the "
+"tariff is updated."
+msgstr ""
+":guilabel:`Măsuri tarifare` și :guilabel:`Zone geografice vamale`, în "
+"același meniu, listează toate măsurile și zonele importate. Măsurile pot fi "
+"adăugate și manual (sursa :guilabel:`Manual`); acestea se păstrează la "
+"actualizarea tarifului."
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:84
+msgid "Tariff code on the product"
+msgstr "Codul tarifar pe produs"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:86
+msgid ""
+"On the product form, in the :guilabel:`Inventory` tab, select the "
+":guilabel:`Customs Tariff Code` (only declarable codes) and the "
+":guilabel:`Origin of Goods`. The :guilabel:`HS Code` is filled from the "
+"tariff code, so delivery slips and carrier integrations use it too."
+msgstr ""
+"Pe formularul produsului, în fila :guilabel:`Stoc`, selectați :guilabel:`Cod"
+" tarifar vamal` (doar coduri declarabile) și :guilabel:`Originea bunurilor`."
+" :guilabel:`Cod HS` se completează din codul tarifar, astfel încât avizele "
+"de livrare și integrările cu transportatorii îl folosesc și ele."
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:90
+msgid "As soon as a code is set, the :guilabel:`Import Duty` section shows:"
+msgstr ""
+"Imediat ce este setat un cod, secțiunea :guilabel:`Taxă vamală la import` "
+"afișează:"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:92
+msgid ""
+":guilabel:`Import Duty (%)`: the duty for the origin of goods today, as a "
+"percentage of the customs value;"
+msgstr ""
+":guilabel:`Taxă vamală la import (%)`: taxa pentru originea mărfurilor "
+"astăzi, ca procent din valoarea în vamă;"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:94
+msgid ""
+":guilabel:`CBAM Goods`, when the goods fall under the Carbon Border "
+"Adjustment Mechanism and CBAM certificates are due on their embedded "
+"emissions;"
+msgstr ""
+":guilabel:`Mărfuri CBAM`, când mărfurile intră sub incidența Mecanismului de"
+" ajustare la frontieră în funcție de carbon și pentru emisiile lor "
+"încorporate se datorează certificate CBAM;"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:96
+msgid ""
+"the breakdown: third country duty, suspension, anti-dumping or "
+"countervailing duty, additional duty, with a warning when a rate has "
+"conditions, quotas or minimum / maximum amounts; and"
+msgstr ""
+"defalcarea: taxa pentru țări terțe, suspendarea, taxa antidumping sau "
+"compensatorie, taxa suplimentară, cu un avertisment când o rată are "
+"condiții, contingente sau sume minime / maxime; și"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:98
+msgid ""
+":guilabel:`Open in TARIC`, with the code and the origin already filled in."
+msgstr ":guilabel:`Deschide în TARIC`, cu codul și originea deja completate."
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:100
+msgid ""
+"Without an origin of goods, the general (ERGA OMNES) duty is shown. Tariff "
+"preferences are not included on the product form, because they need a proof "
+"of preferential origin from the vendor; the vendor pricelist takes them into"
+" account (see below)."
+msgstr ""
+"Fără originea mărfurilor, se afișează taxa generală (ERGA OMNES). "
+"Preferințele tarifare nu sunt incluse pe formularul produsului, deoarece "
+"necesită o dovadă a originii preferențiale de la furnizor; lista de prețuri "
+"a furnizorului le ia în calcul (vedeți mai jos)."
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:114
+msgid "How the duty is determined"
+msgstr "Cum se determină taxa"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:116
+msgid ""
+"For a tariff code, an origin and a date, the module takes the measures of "
+"the code and of all its parent lines that are valid on that date and apply "
+"to the origin (the country itself, a group it belongs to, or ERGA OMNES, "
+"unless the country is excluded):"
+msgstr ""
+"Pentru un cod tarifar, o origine și o dată, modulul ia măsurile codului și "
+"ale tuturor liniilor sale superioare care sunt valabile la acea dată și se "
+"aplică originii (țara însăși, un grup din care face parte sau ERGA OMNES, cu"
+" excepția cazului în care țara este exclusă):"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:120
+msgid "the **third country duty** of the most specific line;"
+msgstr "**taxa pentru țări terțe** a liniei celei mai specifice;"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:121
+msgid "an **autonomous tariff suspension** replaces it when it is lower;"
+msgstr ""
+"o **suspendare tarifară autonomă** o înlocuiește atunci când este mai mică;"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:122
+msgid ""
+"with **preferential origin**, the lowest **tariff preference** of the origin"
+" replaces it when it is lower (free trade agreements, GSP, the customs union"
+" with Türkiye);"
+msgstr ""
+"cu **origine preferențială**, cea mai mică **preferință tarifară** a "
+"originii o înlocuiește atunci când este mai mică (acorduri de liber schimb, "
+"SGP, uniunea vamală cu Turcia);"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:124
+msgid ""
+"**anti-dumping and countervailing duties** and **additional duties** are "
+"added on top. For company-specific anti-dumping rates the residual rate (all"
+" other companies) is used."
+msgstr ""
+"**taxele antidumping și compensatorii** și **taxele suplimentare** se "
+"adaugă. Pentru ratele antidumping specifice unei companii se folosește rata "
+"reziduală (toate celelalte companii)."
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:127
+msgid ""
+"The result is an ad valorem rate (percentage of the customs value) and, for "
+"some goods, specific duties in EUR per unit, per 100 kg, per hectolitre and "
+"so on."
+msgstr ""
+"Rezultatul este o rată ad valorem (procent din valoarea în vamă) și, pentru "
+"unele mărfuri, taxe specifice în EUR pe bucată, pe 100 kg, pe hectolitru și "
+"așa mai departe."
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:131
+msgid ""
+"Hot-rolled non-alloy steel plate (7208 51 20 10) from China in October 2026:"
+" third country duty 0%, definitive anti-dumping duty 73.7% (residual rate), "
+"additional duty 50% (out-of-quota rate of the EU steel measure); CBAM goods."
+" Total: 123.7% of the customs value."
+msgstr ""
+"Tablă de oțel nealiat laminată la cald (7208 51 20 10) din China în "
+"octombrie 2026: taxa pentru țări terțe 0%, taxa antidumping definitivă 73,7%"
+" (rata reziduală), taxa suplimentară 50% (rata în afara contingentului a "
+"măsurii UE privind oțelul); mărfuri CBAM. Total: 123,7% din valoarea în "
+"vamă."
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:136
+msgid "Use in the expected purchase cost"
+msgstr "Utilizarea în costul de achiziție estimat"
+
+#: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:138
+msgid ""
+"With the *Supplier Product Management* module installed, every vendor "
+"pricelist line calculates its import duty from the tariff code of the "
+"product. See :ref:`Expected cost <inventory/supplier-products/expected-"
+"cost>`."
+msgstr ""
+"Cu modulul *Supplier Product Management* instalat, fiecare linie din lista "
+"de prețuri a furnizorului își calculează taxa vamală pe baza codului tarifar"
+" al produsului. Vedeți :ref:`Cost estimat <inventory/supplier-"
+"products/expected-cost>`."
+
 #~ msgid ""
 #~ "The eYssen modules on this page extend the product record itself: they add a "
 #~ "dedicated **Products** app menu, a rule-driven internal reference generator, "

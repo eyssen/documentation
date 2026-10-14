@@ -71323,6 +71323,73 @@ msgstr ""
 "eYssen oferă un script de migrare pentru acești pași; adresați-vă persoanei "
 "de contact eYssen."
 
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:224
+msgid "EPR fee in the expected cost"
+msgstr "Taxa EPR în costul estimat"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:226
+msgid ""
+"With *Supplier Product Management* installed, the module :guilabel:`Supplier"
+" Product Management - Hungarian EPR` "
+"(`supplier_product_management_l10n_hu_epr`) is installed automatically. It "
+"fills the :guilabel:`EPR Fee per Unit` of the vendor pricelist lines from "
+"the EPR components of the product: weight per unit × current rate of the fee"
+" code, summed over the components and converted to the unit of the pricelist"
+" line. The fee becomes part of the :ref:`expected cost <inventory/supplier-"
+"products/expected-cost>` of the line."
+msgstr ""
+"Cu *Supplier Product Management* instalat, modulul :guilabel:`Supplier "
+"Product Management - Hungarian EPR` "
+"(`supplier_product_management_l10n_hu_epr`) se instalează automat. Acesta "
+"completează :guilabel:`Taxă EPR pe unitate` a liniilor din lista de prețuri "
+"a furnizorului pe baza componentelor EPR ale produsului: greutatea pe "
+"unitate × cota curentă a codului de taxă, însumată pe componente și "
+"convertită în unitatea liniei din lista de prețuri. Taxa devine parte a "
+":ref:`costului estimat <inventory/supplier-products/expected-cost>` al "
+"liniei."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:233
+msgid ""
+"The fee is filled only when the company pays it for goods bought from that "
+"vendor, following the same rules as the register:"
+msgstr ""
+"Taxa se completează doar atunci când compania o plătește pentru mărfurile "
+"cumpărate de la acel furnizor, după aceleași reguli ca registrul:"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:236
+msgid ""
+"no fee if the EPR register is not active or the product's :guilabel:`EPR "
+"Liability` is :guilabel:`Not liable (another company placed it on the "
+"market)`;"
+msgstr ""
+"nu există taxă dacă registrul EPR nu este activ sau dacă :guilabel:`EPR "
+"Liability` a produsului este :guilabel:`Not liable (another company placed "
+"it on the market)`;"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:238
+msgid ""
+"with :guilabel:`Always liable`, or with the placing-on-the-market method, "
+"the fee is always counted;"
+msgstr ""
+"cu :guilabel:`Always liable` sau cu metoda punerii pe piață, taxa se ia "
+"întotdeauna în calcul;"
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:240
+msgid ""
+"with the stock-in method, the fee is counted for vendors abroad, not for "
+"Hungarian vendors."
+msgstr ""
+"cu metoda intrării în stoc, taxa se ia în calcul pentru furnizorii din "
+"străinătate, nu și pentru furnizorii din Ungaria."
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:242
+msgid ""
+"The fee is recalculated when the vendor, the product or its EPR components "
+"change; it can be overwritten by hand on the line."
+msgstr ""
+"Taxa se recalculează când se schimbă furnizorul, produsul sau componentele "
+"sale EPR; poate fi suprascrisă manual pe linie."
+
 #~ msgid ""
 #~ "The Hungarian localization combines the standard :guilabel:`Hungary - "
 #~ "Accounting` package with a set of *eYssen* modules. Together they cover "

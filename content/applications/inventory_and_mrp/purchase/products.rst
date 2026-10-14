@@ -10,3 +10,4 @@ Products
    products/pricelist
    products/reordering
    products/temporary_reordering
+   products/customs_tariff

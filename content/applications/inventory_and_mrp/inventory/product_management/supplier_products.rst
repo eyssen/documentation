@@ -5,13 +5,13 @@ Supplier stock and data
 Odoo tracks what *your own* warehouses hold. When a large part of the catalog is drop-shipped or
 bought to order, the decisive question is a different one: **how much does the supplier have?** The
 eYssen *Supplier Product Management* module (``supplier_product_management``, usually shortened to
-*SPM*) records the supplier's own stock next to each vendor line of a product, and uses it to warn
-on purchase and sales orders.
+*SPM*) records the supplier's own stock next to each vendor line of a product, uses it to warn on
+purchase and sales orders, and calculates the expected cost of the next purchase.
 
 .. note::
    An earlier module, ``eyssen_supplier_product_management``, implements the same supplier-location
    and supplier-stock model without the minimum-order policy, the order warnings, the GTIN
-   validation and the supplier dashboard. ``supplier_product_management`` supersedes it; only one
+   validation, the expected cost and the supplier dashboard. ``supplier_product_management`` supersedes it; only one
    of the two should be installed.
 
 Supplier locations
@@ -65,7 +65,8 @@ Where supplier stock is shown
 -----------------------------
 
 - On a **vendor line** of a product: a :guilabel:`Supplier Quantity` total and a
-  :guilabel:`Supplier Quantities` breakdown per location and kind.
+  :guilabel:`Supplier Quantities` breakdown per location and kind; the form of the vendor pricelist
+  line lists the stock lines in its :guilabel:`Supplier Stock` section.
 - On a **product** (and product variant): a :guilabel:`Supplier Quantity` total across every
   vendor, and a :guilabel:`Supplier Stocks` action that opens the underlying lines.
 - On a **sales order line**: the stock available at the supplier for that product, so a
@@ -79,6 +80,100 @@ Where supplier stock is shown
    :data: Two vendors, one with 40 free and 100 expected units.
    :module: supplier_product_management
    :notes: English UI, light theme, 1440px width, crop to the Purchase tab.
+
+.. _inventory/supplier-products/expected-cost:
+
+Expected cost
+=============
+
+The :guilabel:`Cost` of a product follows past purchases: it is right for accounting, but it says
+little about the next purchase. The price on a vendor pricelist line is only the price of the goods:
+shipping, import duty, the EPR fee and the vendor's later rebates come on top or are deducted. SPM
+therefore calculates an **expected cost** on every vendor pricelist line:
+
+| price after discount
+| + shipping
+| + import duty
+| + EPR fee
+| − rebate
+| + safety margin (a percentage of the sum above)
+
+The vendor pricelist form shows the inputs in its :guilabel:`Expected Cost` section on the left and
+the result on the right: :guilabel:`Price after Discount`, :guilabel:`Expected Shipping`,
+:guilabel:`Expected Import Duty`, :guilabel:`Expected EPR Fee`, :guilabel:`Expected Rebate`,
+:guilabel:`Safety Margin`, and the :guilabel:`Expected Cost` in the vendor currency and, with
+several currencies, :guilabel:`Expected Cost (Company Currency)` converted at today's rate. All
+amounts are per unit of the pricelist line. The :guilabel:`Expected Cost` column can also be shown in
+the vendor lists of the product.
+
+.. screenshot:: inventory-supplier-products-expected-cost
+   :menu: Purchase ‣ Configuration ‣ Vendor Pricelists ‣ (a line)
+   :shows: The Expected Cost section of a vendor pricelist line with the shipping, rebate, EPR fee and
+      import duty inputs on the left and the cost breakdown with the expected cost on the right.
+   :highlight: The "Expected Cost" and "Expected Cost (Company Currency)" fields (red frame).
+   :data: Steel plate from a Chinese vendor at 95.00 EUR, shipping 8%, rebate 2%, import duty from the
+      customs tariff, safety margin 5%.
+   :module: supplier_product_management
+   :notes: English UI, light theme, 1440px width, crop to the Expected Cost section.
+
+Shipping and rebate
+-------------------
+
+:guilabel:`Shipping Cost` and :guilabel:`Rebate` are each either a percentage of the price
+(:guilabel:`% of Price`) or an :guilabel:`Amount per Unit` in the vendor currency. The rebate is a
+later credit from the vendor, for example a monthly volume rebate that is used up in the next month.
+
+Defaults per vendor are set on the vendor's contact form, :guilabel:`Sales & Purchase` tab, section
+:guilabel:`Expected Cost Defaults`: :guilabel:`Default Shipping Cost`, :guilabel:`Default Rebate`
+and :guilabel:`Preferential Origin`. New pricelist lines of the vendor take these values; existing
+lines keep their own. :guilabel:`Apply to all pricelist lines of this vendor` overwrites the
+shipping, rebate and preferential origin on every pricelist line of the vendor.
+
+Import duty
+-----------
+
+:guilabel:`Import Duty` sets how the duty is estimated:
+
+- :guilabel:`From Customs Tariff` (default): the EU duty of the product's customs tariff code for the
+  origin of goods, see :doc:`../../purchase/products/customs_tariff`. The origin is the product's
+  :guilabel:`Origin of Goods`, or the vendor's country if the product has none.
+- :guilabel:`Manual Rate`: a fixed percentage of the customs value.
+- :guilabel:`No Import Duty`.
+
+The duty is calculated on the customs value, the price after discount plus the shipping, as customs
+value includes the transport to the EU border. With :guilabel:`Preferential Origin` (the vendor
+provides a proof of preferential origin, such as a statement on origin under a free trade
+agreement), the lower preferential duty applies. Specific duties (per kg, per 100 kg, per piece, per
+litre) use the :guilabel:`Weight` and :guilabel:`Volume` of the product; EUR amounts are converted
+into the vendor currency.
+
+No duty is estimated when the vendor is in the EU, when the vendor has no country, when the product
+has no tariff code, or when the company is outside the EU. :guilabel:`Import Duty Details` explains
+the rate and these cases, and warns when a rate is only an estimate (conditions, quotas, minimum or
+maximum amounts).
+
+EPR fee
+-------
+
+:guilabel:`EPR Fee per Unit` is the extended producer responsibility fee of one unit in the company
+currency. It can be entered by hand. With the Hungarian EPR module installed, it is filled from the
+EPR components of the product, see :ref:`EPR fee in the expected cost
+<l10n_hu/epr/expected-cost>`.
+
+Safety margin
+-------------
+
+The safety margin covers price, freight and exchange rate changes. It is set for the company in
+:menuselection:`Purchase --> Configuration --> Settings`, section :guilabel:`Expected Cost`,
+:guilabel:`Safety Margin`, as a percentage.
+
+Expected purchase cost on the product
+-------------------------------------
+
+On the product form, :guilabel:`General Information` tab, :guilabel:`Expected Purchase Cost` under
+the :guilabel:`Cost` shows the expected cost of one unit from the preferred vendor pricelist line
+(the one a purchase order would use), in the company currency and in the unit of measure of the
+product.
 
 Purchase order warnings
 =======================

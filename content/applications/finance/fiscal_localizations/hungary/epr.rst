@@ -218,6 +218,30 @@ without a tax number):
 With the stock-in method, the clause of 21. § (2) is printed on the domestic sales of the products
 with EPR components.
 
+.. _l10n_hu/epr/expected-cost:
+
+EPR fee in the expected cost
+============================
+
+With *Supplier Product Management* installed, the module
+:guilabel:`Supplier Product Management - Hungarian EPR` (`supplier_product_management_l10n_hu_epr`)
+is installed automatically. It fills the :guilabel:`EPR Fee per Unit` of the vendor pricelist lines
+from the EPR components of the product: weight per unit × current rate of the fee code, summed over
+the components and converted to the unit of the pricelist line. The fee becomes part of the
+:ref:`expected cost <inventory/supplier-products/expected-cost>` of the line.
+
+The fee is filled only when the company pays it for goods bought from that vendor, following the
+same rules as the register:
+
+- no fee if the EPR register is not active or the product's :guilabel:`EPR Liability` is
+  :guilabel:`Not liable (another company placed it on the market)`;
+- with :guilabel:`Always liable`, or with the placing-on-the-market method, the fee is always
+  counted;
+- with the stock-in method, the fee is counted for vendors abroad, not for Hungarian vendors.
+
+The fee is recalculated when the vendor, the product or its EPR components change; it can be
+overwritten by hand on the line.
+
 Register and data report
 ========================
 

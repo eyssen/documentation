@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-13 16:29+0000\n"
+"POT-Creation-Date: 2026-10-14 10:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20576,82 +20576,110 @@ msgstr ""
 msgid "With the stock-in method, the clause of 21. § (2) is printed on the domestic sales of the products with EPR components."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:222
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:224
+msgid "EPR fee in the expected cost"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:226
+msgid "With *Supplier Product Management* installed, the module :guilabel:`Supplier Product Management - Hungarian EPR` (`supplier_product_management_l10n_hu_epr`) is installed automatically. It fills the :guilabel:`EPR Fee per Unit` of the vendor pricelist lines from the EPR components of the product: weight per unit × current rate of the fee code, summed over the components and converted to the unit of the pricelist line. The fee becomes part of the :ref:`expected cost <inventory/supplier-products/expected-cost>` of the line."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:233
+msgid "The fee is filled only when the company pays it for goods bought from that vendor, following the same rules as the register:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:236
+msgid "no fee if the EPR register is not active or the product's :guilabel:`EPR Liability` is :guilabel:`Not liable (another company placed it on the market)`;"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:238
+msgid "with :guilabel:`Always liable`, or with the placing-on-the-market method, the fee is always counted;"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:240
+msgid "with the stock-in method, the fee is counted for vendors abroad, not for Hungarian vendors."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:242
+msgid "The fee is recalculated when the vendor, the product or its EPR components change; it can be overwritten by hand on the line."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:246
 msgid "Register and data report"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:225
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:249
 #: ../../content/applications/finance/fiscal_localizations/hungary/kvtd.rst:223
 msgid "Register"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:227
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:251
 msgid ":menuselection:`Accounting --> Reporting --> EPR --> EPR Register` lists the register lines with date, KF code, fee code, product and component, invoice, partner, quantity, rate, fee and status (:guilabel:`Fee payable`, :guilabel:`Reported without fee`, :guilabel:`Not reportable`). Group by KF code, fee code, product stream or quarter, or open the pivot view."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:233
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:257
 msgid "Quarterly data report"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:235
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:259
 msgid ":menuselection:`Accounting --> Reporting --> EPR --> EPR Data Reports`:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:237
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:261
 msgid "Create a report with the year and the quarter. The :guilabel:`Deadline` (20th day of the month after the quarter) is shown."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:239
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:263
 msgid "Click :guilabel:`Compute`. The register lines of the quarter are summed by KF code:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:241
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:265
 msgid "deliveries in the :guilabel:`Summary` tab as *placed on the market* rows (data package block `KG_KGYF_NE_TERMEK_FORG`), with the declaring buyers of the `A` and `B` codes;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:243
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:267
 msgid "credit notes as *returned* rows with positive quantities (block `KG_KGYF_NE_TERMEK_VISSZA`);"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:244
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:268
 msgid "the :guilabel:`Expected Fee` tab: quantity × rate by fee code and rate, net of the returns."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:246
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:270
 msgid "Quantities are in kg with three decimals; codes netting to zero are left out. Without any line the report is a :guilabel:`Zero Report`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:248
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:272
 msgid "Check the warnings: draft invoices of the quarter, lines of earlier quarters that are in no report (late credit notes), returned products, missing rates, declarations without buyer address, Point of Sale orders without invoice, and missing OKIRkapu data."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:251
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:275
 msgid ":guilabel:`Export XML (OKIRkapu)` computes the draft report again, builds the :guilabel:`KG:KGYF-NÉ` XML and validates it against the official XSD (version 1.16). :guilabel:`Export XLSX` downloads the summary, the expected fee and the detailed register."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:254
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:278
 msgid "Click :guilabel:`Close`: the register lines of the quarter are locked."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:255
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:279
 msgid "In OKIRkapu, create the data package with :guilabel:`Új adatcsomag XML-ből`, upload the XML, check it and submit it. Record :guilabel:`Submitted On` and :guilabel:`OKIR Filing Number`, then click :guilabel:`Mark as Submitted`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:258
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:282
 msgid "When the MOHU invoice arrives, add it to :guilabel:`MOHU Invoices` in the :guilabel:`Expected Fee` tab: :guilabel:`Invoiced by MOHU (net)` and :guilabel:`Difference` show the comparison. A complaint with the correct data can be filed within 15 days of receipt (21. § (7))."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:271
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:295
 #: ../../content/applications/finance/fiscal_localizations/romania/d394.rst:227
 #: ../../content/applications/finance/fiscal_localizations/romania/declarations.rst:217
 msgid "Corrections"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:273
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:297
 msgid "The data of a submitted quarter can be corrected once a year, between 1 January and 31 March of the following year, or with a complaint against the MOHU invoice within 15 days (27. § (6), 21. § (7)). Create a new report for the quarter with :guilabel:`Correction` ticked and fill in :guilabel:`Disputed MOHU Invoice` or :guilabel:`Authority Case Number`. The correction takes a snapshot of all register lines of the quarter; the lines stay linked to the original report."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:280
+#: ../../content/applications/finance/fiscal_localizations/hungary/epr.rst:304
 msgid "The following cases are not supported by the module: the yearly report of small producers (`KG:KGYF-ÉV`), take-over contracts, deposit-return (DRS) products, the lump sum for wine bottles and vehicles, and the handling data of individual fulfillment."
 msgstr ""
 

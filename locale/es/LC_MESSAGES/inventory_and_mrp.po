@@ -28365,8 +28365,8 @@ msgid "These helpers require no settings screen. Once the relevant module is ins
 msgstr "Estas ayudas no requieren ninguna pantalla de ajustes. Una vez que se instala el módulo correspondiente, su botón, campo o columna aparece automáticamente en el formulario estándar de :guilabel:`Traslado` o en la vista de lista :guilabel:`Traslados` (:menuselection:`Inventario --> Traslados`). Todos los módulos se basan en la capa de :guilabel:`Inventario` de eYssen (``eyssen_stock`` o ``eyssen_base``)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:5
-msgid "Odoo tracks what *your own* warehouses hold. When a large part of the catalog is drop-shipped or bought to order, the decisive question is a different one: **how much does the supplier have?** The eYssen *Supplier Product Management* module (``supplier_product_management``, usually shortened to *SPM*) records the supplier's own stock next to each vendor line of a product, uses it to warn on purchase and sales orders, and calculates the expected cost of the next purchase."
-msgstr "Odoo registra lo que tienen *sus propios* almacenes. Cuando una gran parte del catálogo se envía por triangulación o se compra por encargo, la pregunta decisiva es otra: **¿cuánto tiene el proveedor?** El módulo eYssen *Supplier Product Management* (``supplier_product_management``, generalmente abreviado como *SPM*) registra las existencias propias del proveedor junto a cada línea de proveedor de un producto, las utiliza para avisar en los pedidos de compra y de venta, y calcula el coste previsto de la próxima compra."
+msgid "Odoo tracks what *your own* warehouses hold. When a large part of the catalog is drop-shipped or bought to order, the decisive question is a different one: **how much does the supplier have?** The eYssen *Supplier Product Management* module (``supplier_product_management``, usually shortened to *SPM*) records the supplier's own stock next to each vendor line of a product, uses it to warn on purchase and sales orders, and calculates the expected cost of the next purchase and the expected margin of the product."
+msgstr "Odoo registra lo que tienen *sus propios* almacenes. Cuando una gran parte del catálogo se envía por triangulación o se compra por encargo, la pregunta decisiva es otra: **¿cuánto tiene el proveedor?** El módulo eYssen *Supplier Product Management* (``supplier_product_management``, generalmente abreviado como *SPM*) registra las existencias propias del proveedor junto a cada línea de proveedor de un producto, las utiliza para avisar en los pedidos de compra y de venta, y calcula el coste previsto de la próxima compra y el margen previsto del producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:12
 msgid "An earlier module, ``eyssen_supplier_product_management``, implements the same supplier-location and supplier-stock model without the minimum-order policy, the order warnings, the GTIN validation, the expected cost and the supplier dashboard. ``supplier_product_management`` supersedes it; only one of the two should be installed."
@@ -28475,6 +28475,38 @@ msgstr "Coste de compra previsto en el producto"
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:177
 msgid "On the product form, :guilabel:`General Information` tab, :guilabel:`Expected Purchase Cost` under the :guilabel:`Cost` shows the expected cost of one unit from the preferred vendor pricelist line (the one a purchase order would use), in the company currency and in the unit of measure of the product."
 msgstr "En el formulario del producto, pestaña :guilabel:`Información general`, el :guilabel:`Coste de compra previsto` bajo el :guilabel:`Coste` muestra el coste previsto de una unidad según la línea de tarifa del proveedor preferido (la que usaría un pedido de compra), en la moneda de la empresa y en la unidad de medida del producto."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:186
+msgid "Expected margin"
+msgstr "Margen previsto"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:188
+msgid "The *Supplier Product Management - Expected Margin* module (``supplier_product_expected_margin``) compares the sales price of a product with its expected purchase cost, before anything is bought or sold:"
+msgstr "El módulo *Supplier Product Management - Expected Margin* (``supplier_product_expected_margin``) compara el precio de venta de un producto con su coste de compra previsto, antes de comprar o vender nada:"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:192
+msgid "expected margin = sales price without taxes − expected purchase cost"
+msgstr "margen previsto = precio de venta sin impuestos − coste de compra previsto"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:193
+msgid "expected margin (%) = expected margin ÷ sales price without taxes × 100"
+msgstr "margen previsto (%) = margen previsto ÷ precio de venta sin impuestos × 100"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:195
+msgid "The sales price is the :guilabel:`Sales Price` of the product without the taxes included in it; the cost is the :guilabel:`Expected Purchase Cost` above. Both are per unit of the product and in the company currency. The percentage is a margin on the sales price, not a markup on the cost."
+msgstr "El precio de venta es el :guilabel:`Precio de venta` del producto sin los impuestos incluidos en él; el coste es el :guilabel:`Coste de compra previsto` anterior. Ambos son por unidad del producto y en la moneda de la empresa. El porcentaje es un margen sobre el precio de venta, no un recargo sobre el coste."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:199
+msgid "On the product form, :guilabel:`Expected Margin` is shown under the :guilabel:`Expected Purchase Cost`, with the percentage in brackets; a negative margin is shown in red. Products without a vendor pricelist line have no expected margin, and the field is hidden. For a product with several variants, the first vendor pricelist line of the product is used."
+msgstr "En el formulario del producto, el :guilabel:`Margen previsto` aparece debajo del :guilabel:`Coste de compra previsto`, con el porcentaje entre paréntesis; un margen negativo se muestra en rojo. Los productos sin línea de tarifa de proveedor no tienen margen previsto y el campo se oculta. Para un producto con varias variantes se usa la primera línea de tarifa de proveedor del producto."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:204
+msgid "In the product list, the :guilabel:`Expected Margin` and :guilabel:`Expected Margin (%)` columns can be added from the optional columns menu; grouped lists show the average percentage. The search has two filters: :guilabel:`Negative Expected Margin` and :guilabel:`No Expected Margin`. The fields are visible to sales and purchase users."
+msgstr "En la lista de productos, las columnas :guilabel:`Margen previsto` y :guilabel:`Margen previsto (%)` pueden añadirse desde el menú de columnas opcionales; las listas agrupadas muestran el porcentaje medio. La búsqueda tiene dos filtros: :guilabel:`Margen previsto negativo` y :guilabel:`Sin margen previsto`. Los campos son visibles para los usuarios de ventas y de compras."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:218
+msgid "The values are stored, so products can be sorted, filtered and grouped by them. They are recalculated when the sales price, the taxes or the product change, when a vendor pricelist line or one of its expected cost inputs changes, when the safety margin of the company changes, and after a customs tariff update. Exchange rate changes are not followed automatically: after a large change, select the products in the list and use :menuselection:`Actions --> Recompute Expected Margin`."
+msgstr "Los valores se almacenan, de modo que los productos pueden ordenarse, filtrarse y agruparse por ellos. Se vuelven a calcular cuando cambian el precio de venta, los impuestos o el producto, cuando cambia una línea de tarifa de proveedor o uno de sus datos de coste previsto, cuando cambia el margen de seguridad de la empresa y tras una actualización del arancel aduanero. Los cambios de tipo de cambio no se siguen automáticamente: tras un cambio importante, seleccione los productos en la lista y use :menuselection:`Acciones --> Recalcular margen previsto`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:3
 msgid "Customs tariff and import duty"

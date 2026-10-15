@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-15 19:20+0000\n"
+"POT-Creation-Date: 2026-10-15 19:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -7344,246 +7344,278 @@ msgid "Supplier stock and data"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:5
-msgid "Odoo tracks what *your own* warehouses hold. When a large part of the catalog is drop-shipped or bought to order, the decisive question is a different one: **how much does the supplier have?** The eYssen *Supplier Product Management* module (``supplier_product_management``, usually shortened to *SPM*) records the supplier's own stock next to each vendor line of a product, uses it to warn on purchase and sales orders, and calculates the expected cost of the next purchase."
+msgid "Odoo tracks what *your own* warehouses hold. When a large part of the catalog is drop-shipped or bought to order, the decisive question is a different one: **how much does the supplier have?** The eYssen *Supplier Product Management* module (``supplier_product_management``, usually shortened to *SPM*) records the supplier's own stock next to each vendor line of a product, uses it to warn on purchase and sales orders, and calculates the expected cost of the next purchase and the expected margin of the product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:12
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:13
 msgid "An earlier module, ``eyssen_supplier_product_management``, implements the same supplier-location and supplier-stock model without the minimum-order policy, the order warnings, the GTIN validation, the expected cost and the supplier dashboard. ``supplier_product_management`` supersedes it; only one of the two should be installed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:18
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:19
 msgid "Supplier locations"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:20
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:21
 msgid "A **supplier location** is a warehouse or depot of a vendor, from which that vendor can ship. Locations are maintained under :menuselection:`Purchase --> Configuration --> Supplier Locations`, and each one has:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:24
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:25
 msgid "a :guilabel:`Name` and a :guilabel:`Description`;"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:25
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:26
 msgid "the :guilabel:`Supplier` it belongs to;"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:27
 msgid "a :guilabel:`Location Address` — the contact holding the physical address; and"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:27
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:28
 msgid "an :guilabel:`Active` flag, plus a counter of the stock lines recorded for it."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:29
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:30
 msgid "A vendor's own contact form lists its :guilabel:`Locations` and its :guilabel:`Supplier Stocks`, and shows a :guilabel:`Warehouse Stocks` summary of what that vendor currently holds."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:42
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:43
 msgid "Supplier stock"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:44
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:45
 msgid "Supplier stock is recorded per **vendor line** of a product (the lines on a product's :guilabel:`Purchase` tab), per supplier location, and per kind:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:48
 msgid ":guilabel:`Free` — what the supplier can ship right now;"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:49
 msgid ":guilabel:`On-hand` — what the supplier physically holds; and"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:49
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:50
 msgid ":guilabel:`Expected` — what the supplier expects to receive, with an :guilabel:`Expected Date` and an :guilabel:`Expected Note`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:52
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:53
 msgid "Every line carries its :guilabel:`Quantity` in the supplier's own unit of measure. The full list is available under :menuselection:`Purchase --> SPM --> Supplier Stocks`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:66
 msgid "Where supplier stock is shown"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:67
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:68
 msgid "On a **vendor line** of a product: a :guilabel:`Supplier Quantity` total and a :guilabel:`Supplier Quantities` breakdown per location and kind; the form of the vendor pricelist line lists the stock lines in its :guilabel:`Supplier Stock` section."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:70
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:71
 msgid "On a **product** (and product variant): a :guilabel:`Supplier Quantity` total across every vendor, and a :guilabel:`Supplier Stocks` action that opens the underlying lines."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:73
 msgid "On a **sales order line**: the stock available at the supplier for that product, so a salesperson can promise a date for something that is not in the company's own stock."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:87
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:88
 msgid "Expected cost"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:90
 msgid "The :guilabel:`Cost` of a product follows past purchases: it is right for accounting, but it says little about the next purchase. The price on a vendor pricelist line is only the price of the goods: shipping, import duty, the EPR fee and the vendor's later rebates come on top or are deducted. SPM therefore calculates an **expected cost** on every vendor pricelist line:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:95
 msgid "price after discount"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:95
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:96
 msgid "+ shipping"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:97
 msgid "+ import duty"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:98
 msgid "+ EPR fee"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:98
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:99
 msgid "− rebate"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:100
 msgid "+ safety margin (a percentage of the sum above)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:102
 msgid "The vendor pricelist form shows the inputs in its :guilabel:`Expected Cost` section on the left and the result on the right: :guilabel:`Price after Discount`, :guilabel:`Expected Shipping`, :guilabel:`Expected Import Duty`, :guilabel:`Expected EPR Fee`, :guilabel:`Expected Rebate`, :guilabel:`Safety Margin`, and the :guilabel:`Expected Cost` in the vendor currency and, with several currencies, :guilabel:`Expected Cost (Company Currency)` converted at today's rate. All amounts are per unit of the pricelist line. The :guilabel:`Expected Cost` column can also be shown in the vendor lists of the product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:110
 msgid "The expected cost can also be the cost basis of a pricing rule of the *Competitor Prices* app, so that a recommended sales price never goes below the expected purchase cost plus the minimum margin (see :ref:`pricing rules <sales/competitor-prices/pricing-rules>`)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:125
 msgid "Shipping and rebate"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:127
 msgid ":guilabel:`Shipping Cost` and :guilabel:`Rebate` are each either a percentage of the price (:guilabel:`% of Price`) or an :guilabel:`Amount per Unit` in the vendor currency. The rebate is a later credit from the vendor, for example a monthly volume rebate that is used up in the next month."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:131
 msgid "Defaults per vendor are set on the vendor's contact form, :guilabel:`Sales & Purchase` tab, section :guilabel:`Expected Cost Defaults`: :guilabel:`Default Shipping Cost`, :guilabel:`Default Rebate` and :guilabel:`Preferential Origin`. New pricelist lines of the vendor take these values; existing lines keep their own. :guilabel:`Apply to all pricelist lines of this vendor` overwrites the shipping, rebate and preferential origin on every pricelist line of the vendor."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:138
 msgid "Import duty"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:140
 msgid ":guilabel:`Import Duty` sets how the duty is estimated:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:142
 msgid ":guilabel:`From Customs Tariff` (default): the EU duty of the product's customs tariff code for the origin of goods, see :doc:`../../purchase/products/customs_tariff`. The origin is the product's :guilabel:`Origin of Goods`, or the vendor's country if the product has none."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:144
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:145
 msgid ":guilabel:`Manual Rate`: a fixed percentage of the customs value."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:145
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:146
 msgid ":guilabel:`No Import Duty`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:148
 msgid "The duty is calculated on the customs value, the price after discount plus the shipping, as customs value includes the transport to the EU border. With :guilabel:`Preferential Origin` (the vendor provides a proof of preferential origin, such as a statement on origin under a free trade agreement), the lower preferential duty applies. Specific duties (per kg, per 100 kg, per piece, per litre) use the :guilabel:`Weight` and :guilabel:`Volume` of the product; EUR amounts are converted into the vendor currency."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:154
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:155
 msgid "No duty is estimated when the vendor is in the EU, when the vendor has no country, when the product has no tariff code, or when the company is outside the EU. :guilabel:`Import Duty Details` explains the rate and these cases, and warns when a rate is only an estimate (conditions, quotas, minimum or maximum amounts)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:161
 msgid "EPR fee"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:163
 msgid ":guilabel:`EPR Fee per Unit` is the extended producer responsibility fee of one unit in the company currency. It can be entered by hand. With the Hungarian EPR module installed, it is filled from the EPR components of the product, see :ref:`EPR fee in the expected cost <l10n_hu/epr/expected-cost>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:168
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:169
 msgid "Safety margin"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:170
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:171
 msgid "The safety margin covers price, freight and exchange rate changes. It is set for the company in :menuselection:`Purchase --> Configuration --> Settings`, section :guilabel:`Expected Cost`, :guilabel:`Safety Margin`, as a percentage."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:176
 msgid "Expected purchase cost on the product"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:177
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:178
 msgid "On the product form, :guilabel:`General Information` tab, :guilabel:`Expected Purchase Cost` under the :guilabel:`Cost` shows the expected cost of one unit from the preferred vendor pricelist line (the one a purchase order would use), in the company currency and in the unit of measure of the product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:183
-msgid "Purchase order warnings"
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:186
-msgid "Minimum order amount"
+msgid "Expected margin"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:188
-msgid "On a vendor's contact form, a minimum order value can be agreed:"
+msgid "The *Supplier Product Management - Expected Margin* module (``supplier_product_expected_margin``) compares the sales price of a product with its expected purchase cost, before anything is bought or sold:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:190
-msgid ":guilabel:`Minimum Order Amount` with its :guilabel:`Minimum Order Currency`; and"
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:192
+msgid "expected margin = sales price without taxes − expected purchase cost"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:191
-msgid ":guilabel:`Minimum Order Policy` — :guilabel:`No Minimum`, :guilabel:`Warn Below Minimum` or :guilabel:`Block Below Minimum`."
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:193
+msgid "expected margin (%) = expected margin ÷ sales price without taxes × 100"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:194
-msgid "A purchase order whose total falls under the agreed minimum shows a warning naming the missing amount. With :guilabel:`Block Below Minimum` the order cannot be confirmed until the total reaches the minimum; with :guilabel:`Warn Below Minimum` it is only a warning. The order total is converted into the minimum-order currency with the rate of the order date."
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:195
+msgid "The sales price is the :guilabel:`Sales Price` of the product without the taxes included in it; the cost is the :guilabel:`Expected Purchase Cost` above. Both are per unit of the product and in the company currency. The percentage is a margin on the sales price, not a markup on the cost."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:210
-msgid "Supplier stock shortage"
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:199
+msgid "On the product form, :guilabel:`Expected Margin` is shown under the :guilabel:`Expected Purchase Cost`, with the percentage in brackets; a negative margin is shown in red. Products without a vendor pricelist line have no expected margin, and the field is hidden. For a product with several variants, the first vendor pricelist line of the product is used."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:212
-msgid "While a purchase order is a :guilabel:`Draft` or :guilabel:`Sent`, each line compares its quantity against the supplier's :guilabel:`Free` stock for that product, converted into the line's purchase unit of measure, and flags a shortage when the order asks for more than the supplier has. A :guilabel:`Supplier Stock Warning` on the order summarises the shortages."
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:204
+msgid "In the product list, the :guilabel:`Expected Margin` and :guilabel:`Expected Margin (%)` columns can be added from the optional columns menu; grouped lists show the average percentage. The search has two filters: :guilabel:`Negative Expected Margin` and :guilabel:`No Expected Margin`. The fields are visible to sales and purchase users."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:218
-msgid "When the supplier has **no** stock line at all for a product, its stock is treated as *unknown* rather than zero, so no shortage is reported."
+msgid "The values are stored, so products can be sorted, filtered and grouped by them. They are recalculated when the sales price, the taxes or the product change, when a vendor pricelist line or one of its expected cost inputs changes, when the safety margin of the company changes, and after a customs tariff update. Exchange rate changes are not followed automatically: after a large change, select the products in the list and use :menuselection:`Actions --> Recompute Expected Margin`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:221
-msgid "A vendor's contact form can name a :guilabel:`Supplier Stock Manager`. When a draft order for that vendor exceeds the available supplier stock, an activity is scheduled for that user. The activity is not recreated while the same shortage persists, and a new shortage notifies again once the previous one has cleared."
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:225
+msgid "Purchase order warnings"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:228
+msgid "Minimum order amount"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:230
+msgid "On a vendor's contact form, a minimum order value can be agreed:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:232
+msgid ":guilabel:`Minimum Order Amount` with its :guilabel:`Minimum Order Currency`; and"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:233
+msgid ":guilabel:`Minimum Order Policy` — :guilabel:`No Minimum`, :guilabel:`Warn Below Minimum` or :guilabel:`Block Below Minimum`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:236
+msgid "A purchase order whose total falls under the agreed minimum shows a warning naming the missing amount. With :guilabel:`Block Below Minimum` the order cannot be confirmed until the total reaches the minimum; with :guilabel:`Warn Below Minimum` it is only a warning. The order total is converted into the minimum-order currency with the rate of the order date."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:252
+msgid "Supplier stock shortage"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:254
+msgid "While a purchase order is a :guilabel:`Draft` or :guilabel:`Sent`, each line compares its quantity against the supplier's :guilabel:`Free` stock for that product, converted into the line's purchase unit of measure, and flags a shortage when the order asks for more than the supplier has. A :guilabel:`Supplier Stock Warning` on the order summarises the shortages."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:260
+msgid "When the supplier has **no** stock line at all for a product, its stock is treated as *unknown* rather than zero, so no shortage is reported."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:263
+msgid "A vendor's contact form can name a :guilabel:`Supplier Stock Manager`. When a draft order for that vendor exceeds the available supplier stock, an activity is scheduled for that user. The activity is not recreated while the same shortage persists, and a new shortage notifies again once the previous one has cleared."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:278
 msgid "Barcodes and manufacturer part numbers from supplier feeds"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:238
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:280
 msgid "Supplier catalogs mix real barcodes with supplier SKUs and manufacturer codes in the same column. SPM therefore validates every incoming code before it is written to a product:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:241
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:283
 msgid "a value that is a valid **GTIN** — EAN-8, UPC-A (12 digits), EAN-13 or GTIN-14, with a correct check digit — is stored as the product's :guilabel:`Barcode`; and"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:243
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:285
 msgid "anything else is stored as the product's :guilabel:`Manufacturer Part Number` instead."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:245
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:287
 msgid "Only a valid GTIN is used to match a supplier's product to an existing product, so a non-barcode code can neither end up in the barcode field nor merge two unrelated products onto one product record."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:259
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:301
 msgid "The individual supplier connectors that fetch these catalogs are separate modules, each with its own settings and import log; they all feed the same supplier stock and the shared **SPM Statisztika** dashboard under :menuselection:`Purchase --> SPM`."
 msgstr ""
 

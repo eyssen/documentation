@@ -6174,8 +6174,8 @@ msgid "The imports are separated by company."
 msgstr "Importurile sunt separate pe companii."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:5
-msgid "Odoo tracks what *your own* warehouses hold. When a large part of the catalog is drop-shipped or bought to order, the decisive question is a different one: **how much does the supplier have?** The eYssen *Supplier Product Management* module (``supplier_product_management``, usually shortened to *SPM*) records the supplier's own stock next to each vendor line of a product, uses it to warn on purchase and sales orders, and calculates the expected cost of the next purchase."
-msgstr "Odoo urmărește ce dețin depozitele *dumneavoastră*. Când o mare parte din catalog este livrată direct de furnizor (drop-shipping) sau cumpărată la comandă, întrebarea decisivă este alta: **cât are furnizorul?** Modulul eYssen *Supplier Product Management* (``supplier_product_management``, de obicei prescurtat *SPM*) înregistrează stocul propriu al furnizorului lângă fiecare linie de furnizor a unui produs, îl folosește pentru a avertiza pe comenzile de achiziție și de vânzare și calculează costul estimat al următoarei achiziții."
+msgid "Odoo tracks what *your own* warehouses hold. When a large part of the catalog is drop-shipped or bought to order, the decisive question is a different one: **how much does the supplier have?** The eYssen *Supplier Product Management* module (``supplier_product_management``, usually shortened to *SPM*) records the supplier's own stock next to each vendor line of a product, uses it to warn on purchase and sales orders, and calculates the expected cost of the next purchase and the expected margin of the product."
+msgstr "Odoo urmărește ce dețin depozitele *dumneavoastră*. Când o mare parte din catalog este livrată direct de furnizor (drop-shipping) sau cumpărată la comandă, întrebarea decisivă este alta: **cât are furnizorul?** Modulul eYssen *Supplier Product Management* (``supplier_product_management``, de obicei prescurtat *SPM*) înregistrează stocul propriu al furnizorului lângă fiecare linie de furnizor a unui produs, îl folosește pentru a avertiza pe comenzile de achiziție și de vânzare și calculează costul estimat al următoarei achiziții și marja estimată a produsului."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:12
 msgid "An earlier module, ``eyssen_supplier_product_management``, implements the same supplier-location and supplier-stock model without the minimum-order policy, the order warnings, the GTIN validation, the expected cost and the supplier dashboard. ``supplier_product_management`` supersedes it; only one of the two should be installed."
@@ -6284,6 +6284,38 @@ msgstr "Costul de achiziție estimat pe produs"
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:177
 msgid "On the product form, :guilabel:`General Information` tab, :guilabel:`Expected Purchase Cost` under the :guilabel:`Cost` shows the expected cost of one unit from the preferred vendor pricelist line (the one a purchase order would use), in the company currency and in the unit of measure of the product."
 msgstr "Pe formularul produsului, fila :guilabel:`Informații generale`, :guilabel:`Cost de achiziție estimat` sub :guilabel:`Cost` afișează costul estimat al unei unități din linia preferată din lista de prețuri a furnizorului (cea pe care ar folosi-o o comandă de achiziție), în moneda companiei și în unitatea de măsură a produsului."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:186
+msgid "Expected margin"
+msgstr "Marjă estimată"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:188
+msgid "The *Supplier Product Management - Expected Margin* module (``supplier_product_expected_margin``) compares the sales price of a product with its expected purchase cost, before anything is bought or sold:"
+msgstr "Modulul *Supplier Product Management - Expected Margin* (``supplier_product_expected_margin``) compară prețul de vânzare al unui produs cu costul său de achiziție estimat, înainte ca ceva să fie cumpărat sau vândut:"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:192
+msgid "expected margin = sales price without taxes − expected purchase cost"
+msgstr "marjă estimată = preț de vânzare fără taxe − cost de achiziție estimat"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:193
+msgid "expected margin (%) = expected margin ÷ sales price without taxes × 100"
+msgstr "marjă estimată (%) = marjă estimată ÷ preț de vânzare fără taxe × 100"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:195
+msgid "The sales price is the :guilabel:`Sales Price` of the product without the taxes included in it; the cost is the :guilabel:`Expected Purchase Cost` above. Both are per unit of the product and in the company currency. The percentage is a margin on the sales price, not a markup on the cost."
+msgstr "Prețul de vânzare este :guilabel:`Preț de vânzare` al produsului fără taxele incluse în el; costul este :guilabel:`Cost de achiziție estimat` de mai sus. Ambele sunt pe unitatea produsului și în moneda companiei. Procentul este o marjă din prețul de vânzare, nu un adaos la cost."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:199
+msgid "On the product form, :guilabel:`Expected Margin` is shown under the :guilabel:`Expected Purchase Cost`, with the percentage in brackets; a negative margin is shown in red. Products without a vendor pricelist line have no expected margin, and the field is hidden. For a product with several variants, the first vendor pricelist line of the product is used."
+msgstr "Pe formularul produsului, :guilabel:`Marjă estimată` apare sub :guilabel:`Cost de achiziție estimat`, cu procentul în paranteze; o marjă negativă este afișată cu roșu. Produsele fără linie în lista de prețuri a furnizorului nu au marjă estimată, iar câmpul este ascuns. Pentru un produs cu mai multe variante se folosește prima linie din lista de prețuri a furnizorului a produsului."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:204
+msgid "In the product list, the :guilabel:`Expected Margin` and :guilabel:`Expected Margin (%)` columns can be added from the optional columns menu; grouped lists show the average percentage. The search has two filters: :guilabel:`Negative Expected Margin` and :guilabel:`No Expected Margin`. The fields are visible to sales and purchase users."
+msgstr "În lista de produse, coloanele :guilabel:`Marjă estimată` și :guilabel:`Marjă estimată (%)` pot fi adăugate din meniul de coloane opționale; listele grupate afișează procentul mediu. Căutarea are două filtre: :guilabel:`Marjă estimată negativă` și :guilabel:`Fără marjă estimată`. Câmpurile sunt vizibile pentru utilizatorii de vânzări și de achiziții."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/supplier_products.rst:218
+msgid "The values are stored, so products can be sorted, filtered and grouped by them. They are recalculated when the sales price, the taxes or the product change, when a vendor pricelist line or one of its expected cost inputs changes, when the safety margin of the company changes, and after a customs tariff update. Exchange rate changes are not followed automatically: after a large change, select the products in the list and use :menuselection:`Actions --> Recompute Expected Margin`."
+msgstr "Valorile sunt stocate, astfel încât produsele pot fi sortate, filtrate și grupate după ele. Ele se recalculează când se schimbă prețul de vânzare, taxele sau produsul, când se schimbă o linie din lista de prețuri a furnizorului sau una dintre datele sale pentru costul estimat, când se schimbă marja de siguranță a companiei și după o actualizare a tarifului vamal. Modificările cursului de schimb nu sunt urmărite automat: după o modificare mare, selectați produsele în listă și folosiți :menuselection:`Acțiuni --> Recalculează marja estimată`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/customs_tariff.rst:3
 msgid "Customs tariff and import duty"

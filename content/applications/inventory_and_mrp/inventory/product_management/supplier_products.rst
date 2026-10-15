@@ -6,7 +6,8 @@ Odoo tracks what *your own* warehouses hold. When a large part of the catalog is
 bought to order, the decisive question is a different one: **how much does the supplier have?** The
 eYssen *Supplier Product Management* module (``supplier_product_management``, usually shortened to
 *SPM*) records the supplier's own stock next to each vendor line of a product, uses it to warn on
-purchase and sales orders, and calculates the expected cost of the next purchase.
+purchase and sales orders, and calculates the expected cost of the next purchase and the expected
+margin of the product.
 
 .. note::
    An earlier module, ``eyssen_supplier_product_management``, implements the same supplier-location
@@ -178,6 +179,47 @@ On the product form, :guilabel:`General Information` tab, :guilabel:`Expected Pu
 the :guilabel:`Cost` shows the expected cost of one unit from the preferred vendor pricelist line
 (the one a purchase order would use), in the company currency and in the unit of measure of the
 product.
+
+.. _inventory/supplier-products/expected-margin:
+
+Expected margin
+---------------
+
+The *Supplier Product Management - Expected Margin* module (``supplier_product_expected_margin``)
+compares the sales price of a product with its expected purchase cost, before anything is bought or
+sold:
+
+| expected margin = sales price without taxes − expected purchase cost
+| expected margin (%) = expected margin ÷ sales price without taxes × 100
+
+The sales price is the :guilabel:`Sales Price` of the product without the taxes included in it; the
+cost is the :guilabel:`Expected Purchase Cost` above. Both are per unit of the product and in the
+company currency. The percentage is a margin on the sales price, not a markup on the cost.
+
+On the product form, :guilabel:`Expected Margin` is shown under the :guilabel:`Expected Purchase
+Cost`, with the percentage in brackets; a negative margin is shown in red. Products without a vendor
+pricelist line have no expected margin, and the field is hidden. For a product with several
+variants, the first vendor pricelist line of the product is used.
+
+In the product list, the :guilabel:`Expected Margin` and :guilabel:`Expected Margin (%)` columns can
+be added from the optional columns menu; grouped lists show the average percentage. The search has
+two filters: :guilabel:`Negative Expected Margin` and :guilabel:`No Expected Margin`. The fields are
+visible to sales and purchase users.
+
+.. screenshot:: inventory-supplier-products-expected-margin
+   :menu: Inventory ‣ Products ‣ Products (list view)
+   :shows: The product list with the optional Expected Margin and Expected Margin (%) columns, and the
+      Negative Expected Margin filter in the search.
+   :highlight: The two margin columns (red frame).
+   :data: A few products with vendor pricelist lines; one of them with a negative margin in red.
+   :module: supplier_product_expected_margin
+   :notes: English UI, light theme, 1440px width.
+
+The values are stored, so products can be sorted, filtered and grouped by them. They are
+recalculated when the sales price, the taxes or the product change, when a vendor pricelist line or
+one of its expected cost inputs changes, when the safety margin of the company changes, and after a
+customs tariff update. Exchange rate changes are not followed automatically: after a large change,
+select the products in the list and use :menuselection:`Actions --> Recompute Expected Margin`.
 
 Purchase order warnings
 =======================

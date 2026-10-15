@@ -80,6 +80,9 @@ What you can do
   :doc:`ai/accounting_reports`).
 - **CAD imports** — suggested quantities and lengths for the members of a steel
   structure drawing, which you accept or reject (see :doc:`ai/cad_bom_import`).
+- **Competitor prices** — find your products on competitor websites, build and repair the
+  rules that read their prices, with every match confirmed by a person (see
+  :doc:`ai/competitor_prices`).
 - **Providers, models and access** — chat, image, embedding and speech-to-text
   models, and a clear overview of who can use which AI feature (see
   :doc:`ai/models_and_providers`, :doc:`ai/panel` and :doc:`ai/feature_access`).
@@ -131,6 +134,7 @@ Document map
    ai/project_sla
    ai/accounting_reports
    ai/cad_bom_import
+   ai/competitor_prices
 
 Key design principles
 =====================

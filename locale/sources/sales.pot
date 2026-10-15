@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eYssen (Odoo Community Fork) 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-11 07:06+0000\n"
+"POT-Creation-Date: 2026-10-15 19:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11526,6 +11526,1014 @@ msgstr ""
 msgid "Products & Prices"
 msgstr ""
 
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:5
+msgid "Competitor prices"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:7
+msgid "Know what your competitors charge, keep the history, and get a sales price recommendation that never goes below your cost and margin. The **Competitor Prices** app reads the public prices of your products from the websites of your competitors, stores every price change, and compares them with your own sales prices."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:13
+msgid "The app only *recommends* prices. A sales price changes only when a manager presses :guilabel:`Accept` on a recommendation; nothing changes by itself."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:17
+msgid "What you can do"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:19
+msgid "Follow the prices of a product on any number of competitor websites, each with its own refresh interval and request limit (see :doc:`competitor_prices/websites`)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:21
+msgid "Keep an append-only price history, with a suspicious-change check that holds back a price that jumped by too much (see :doc:`competitor_prices/products`)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:23
+msgid "Define pricing rules and receive sales price recommendations that respect the cost, the fees and the minimum margin, optionally on the :ref:`expected purchase cost <inventory/supplier-products/expected-cost>` (see :doc:`competitor_prices/recommendations`)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:26
+msgid "See where you stand on a product or a category, and which competitor prices changed (see :doc:`competitor_prices/reports`)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:28
+msgid "Load the product addresses and the price history from a Priceva export (see :doc:`competitor_prices/priceva_import`)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:30
+msgid "Let the AI find your products on the competitor websites, build the extraction rules and repair them when a website changes (see :doc:`/applications/productivity/ai/competitor_prices`)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:36
+msgid "Modules"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:38
+msgid "The functions are split into four modules; install the ones you need."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:44
+msgid "Module"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:45
+msgid "What it adds"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:46
+msgid "*Competitor Prices*"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:47
+msgid "The app: websites, listings, price history, recommendations, pricing rules, reports."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:48
+msgid "*Competitor Prices - Expected Purchase Cost*"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:49
+msgid "Lets a pricing rule use the expected purchase cost of the vendor pricelist instead of the product cost. Requires *Supplier Product Management*."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:51
+msgid "*AI for Competitor Prices*"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:52
+msgid "Website analysis, product finding, AI-built extraction rules and automatic repair. Requires the *AI* application."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:54
+msgid "*Competitor Prices - Priceva Import*"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:55
+msgid "Import of Priceva Excel reports."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:58
+msgid "Lawful use"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:60
+msgid "The app reads prices from other companies' websites. That can be lawful, but only when it is done with care. The same rules are shown at the top of :menuselection:`Competitor Prices --> Configuration --> Settings`, in the :guilabel:`Lawful Use` section."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:64
+msgid "**Terms of use.** Read the terms of use of a website before you add it. Under EU case law (CJEU C-30/14, *Ryanair v PR Aviation*) a website may forbid the automated reading of its data by contract. If the terms forbid it, do not track that website, or ask the owner for permission."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:67
+msgid "**Public prices only.** Read only pages anyone can see without signing in. Never get around CAPTCHAs, bot protection, IP blocks or paywalls. The app stops by itself when a website blocks it and does not try again until the pause is over."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:70
+msgid "**Be gentle.** Keep *robots.txt* respected, the refresh interval long and the request limit low. Use an honest user agent: it needs no contact address, but it must not pose as a web browser."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:72
+msgid "**Only what you need.** Store prices, availability and product identifiers. Do not copy product descriptions, photos, reviews or large parts of a catalogue (copyright, database rights), and do not collect personal data such as reviewer names (GDPR)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:75
+msgid "**Set your prices independently.** Watching public prices is allowed. Agreeing on prices with competitors, or using price data to coordinate with them, is forbidden by competition law (Article 101 TFEU)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:78
+msgid "**Price reductions.** When you announce a price reduction, show your own lowest price of the previous 30 days as the earlier price (EU Omnibus Directive, Article 6a). Every recommendation shows that price."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:83
+msgid "The app is a tool and not legal advice. The rules differ by country and by website; every company and user that runs it is responsible for using it lawfully. When in doubt, ask a lawyer first."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:87
+msgid "Access rights"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:89
+msgid "Two groups are listed under :guilabel:`Competitor Prices` on the user form:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:91
+msgid ":guilabel:`User` sees the competitor prices, adds and confirms listings and fetches prices."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:92
+msgid ":guilabel:`Manager` also sets up the competitor websites and the pricing rules, and accepts or rejects price recommendations. Only an administrator opens the app settings."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:95
+msgid "The administrator and the root user are managers when the app is installed. The records belong to a company: with several companies, each company sees its own websites, listings and recommendations."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:99
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:13
+#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:10
+#: ../../content/applications/sales/sales/sales_quotations/orders_and_variants.rst:17
+#: ../../content/applications/sales/withdrawal/configuration.rst:9
+msgid "Settings"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:101
+msgid "Go to :menuselection:`Competitor Prices --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:107
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:119
+#: ../../content/applications/sales/withdrawal/configuration.rst:18
+msgid "Setting"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:108
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:53
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:19
+#: ../../content/applications/sales/subscriptions/automatic_payments.rst:41
+#: ../../content/applications/sales/subscriptions/contracts.rst:68
+msgid "Meaning"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:109
+msgid ":guilabel:`Require Terms of Use Review`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:110
+msgid "A website is fetched only after someone confirmed on its form that its terms of use were reviewed. On by default."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:112
+msgid ":guilabel:`User Agent`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:113
+msgid "How the price reader introduces itself. The default is ``PriceCheck/1.0``."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:114
+msgid ":guilabel:`Refresh Prices Every`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:115
+msgid "Default interval, in hours, for new websites (24 by default)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:116
+msgid ":guilabel:`Request Limit`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:117
+msgid "Default number of pages per number of minutes for new websites (120 pages per 60 minutes)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:118
+msgid ":guilabel:`Pause Between Requests`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:119
+msgid "Default minimum time, in seconds, between two pages of one website (10). A longer *Crawl-delay* in *robots.txt* wins."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:121
+msgid ":guilabel:`Suspicious Price Change`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:122
+msgid "A competitor price that moves by more than this percentage (40 by default) is held back; 0 switches the check off."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:124
+msgid ":guilabel:`Broken Listing`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:125
+msgid "A listing is marked broken after this many failed reads in a row (3)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices.rst:127
+msgid "The defaults are copied to a website when it is created; change them per website on its form."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:3
+msgid "Priceva import"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:5
+msgid "If you already follow your competitors with **Priceva**, the *Competitor Prices - Priceva Import* module loads its Excel report: the product addresses on the competitor websites become listings, and the prices go into the price history with the date of the report. Use it to start with the data you have, or to get the prices of websites that block automated reading."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:11
+msgid "The import reads a file you export from Priceva; it does not connect to Priceva. It never changes a sales price: only competitor listings and the price history are written."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:14
+msgid "Export the report from Priceva as a **full export** in Excel format (.xlsx). Keep the file name: Priceva puts the date and time of the export in it (for example ``priceva_report_full_..._2026_10_13_050218_full_export_yes_.xlsx``), and the import uses it as the date of the prices."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:20
+msgid "Import a report"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:22
+msgid "Go to :menuselection:`Competitor Prices --> Configuration --> Priceva Import` and click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:36
+msgid ":guilabel:`File`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:34
+msgid ":guilabel:`Priceva Export (.xlsx)`: the report."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:35
+msgid ":guilabel:`Prices Valid On`: the date of the export, read from the file name; correct it when the name was changed."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:47
+msgid ":guilabel:`Options`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:39
+msgid ":guilabel:`Match Products By`: the product field that holds the value of the report's *Code* column, :guilabel:`Internal reference` (default) or :guilabel:`Barcode`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:41
+msgid ":guilabel:`Own Websites`: the domains of your own shops, separated by commas; their columns are skipped. The domains of your websites and of the company are filled in."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:43
+msgid ":guilabel:`Import Prices`: add the prices to the history. Switch it off to load only the addresses."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:45
+msgid ":guilabel:`Add New Addresses`: add the product addresses found in the report as listings, and create the websites that are not set up yet. Switch it off for an older report that should only fill in the price history."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:49
+msgid "Click :guilabel:`Start Import`. The import runs in batches; a scheduled job (*Competitor Prices: continue Priceva imports*) continues it every 5 minutes, or press :guilabel:`Continue Now`. The form shows the progress and, when it is done, the result: :guilabel:`Products Matched`, :guilabel:`Rows Without Product`, :guilabel:`Listings Created`, :guilabel:`Prices Imported` and :guilabel:`Websites Created`, and the :guilabel:`Codes Not Found` (the first 500)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:56
+msgid "What the import does"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:58
+msgid "Each report row is a product, found by its *Code*. A column whose title is a website domain (``www.example.com``) holds the competitor's price and, as a hyperlink, the address of its product page. A price of 0 means that Priceva has no price. Tracking parameters (such as ``utm_source``) are removed from the addresses."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:62
+msgid "For each website column a **confirmed listing** is created for the product, unless one exists, and the product is switched to :guilabel:`Track Competitor Prices`. A website that is not set up yet is created with :guilabel:`Fetching Active` switched **off**, a note says where it came from, and its terms of use are not reviewed. Review the terms and switch fetching on only for the websites you want to read yourself."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:67
+msgid "The price is recorded with the method :guilabel:`Imported` and the date of the export."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:68
+msgid "The recommendations of the touched products are recomputed."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:71
+msgid "Older reports and history"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:73
+msgid "Import the reports in any order. When a newer report was already imported, or the listing already has a newer price, the prices of the report are inserted into the history **before** the current price: the current price does not change, and a price that equals its neighbour only extends it. To fill in the history, import the older reports with :guilabel:`Add New Addresses` switched off. Importing the same report again changes nothing."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/priceva_import.rst:79
+msgid "Prices of imported listings are as old as the report. A recommendation uses only prices that are not older than :guilabel:`Max. Price Age (days)` of the rule, so import a fresh report, or fetch the website yourself, before relying on the recommendations."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:3
+msgid "Competitor listings and the price history"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:5
+msgid "A **listing** tells where the price of one of your products is on a competitor website: the product and the address of the page. One product can have a listing on every competitor website."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:9
+msgid "Follow a product"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:11
+msgid "Open the product form and tick :guilabel:`Track Competitor Prices` among the product options. A :guilabel:`Competitor Prices` tab appears. Adding a listing ticks the box by itself. Only tracked products are fetched and get recommendations; clear the box to stop following a product, and its open recommendations are closed."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:26
+msgid "The tab shows:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:28
+msgid "The **recommendation** box, when a new sales price is recommended (see :doc:`recommendations`)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:29
+msgid "The **market**, net and per unit: :guilabel:`Lowest Competitor Price`, :guilabel:`Median Competitor Price`, :guilabel:`Highest Competitor Price` and the :guilabel:`Price Index`, which is your net price divided by the median competitor price, times 100. Above 100 you are more expensive than the middle of the market."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:33
+msgid "Three buttons: :guilabel:`Check Now`, :guilabel:`Recompute Recommendation` and :guilabel:`Price History`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:35
+msgid "The **listings** of the product and its latest **recommendations**."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:38
+msgid "Add a listing"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:40
+msgid "In the listing table of the product click :guilabel:`Add a line`, choose the :guilabel:`Competitor`, paste the :guilabel:`URL` of the product page on that website and save. The competitor is filled in when the address belongs to a website that is already set up. The listing is read at once and then according to the website's refresh interval. All listings are also in :menuselection:`Competitor Prices --> Listings --> All Listings`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:46
+msgid "The listing columns are:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:52
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:18
+msgid "Column"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:54
+msgid ":guilabel:`Units per Listing`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:55
+msgid "How many of your units the competitor sells for the listed price (6 for a six-pack). The price is divided by it."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:57
+msgid ":guilabel:`Status`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:58
+msgid ":guilabel:`To Review`, :guilabel:`Confirmed`, :guilabel:`Broken` or :guilabel:`Rejected`; see below."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:60
+msgid ":guilabel:`Price`, :guilabel:`Currency`, :guilabel:`Regular Price`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:61
+msgid "The current price, its currency and the price before a discount, when the page shows it."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:62
+msgid ":guilabel:`Availability`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:63
+msgid ":guilabel:`In Stock`, :guilabel:`Out of Stock`, :guilabel:`Pre-order` or :guilabel:`Unknown`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:64
+msgid ":guilabel:`Unit Price (net)`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:65
+msgid "The price per unit of your product without tax: divided by the units per listing, and, for a website with prices including tax, converted to net."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:67
+msgid ":guilabel:`Last Successful Fetch`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:68
+msgid "When the price was last read."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:70
+msgid "With product variants, a listing can be tied to one :guilabel:`Variant`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:73
+msgid "Status of a listing"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:80
+msgid ":guilabel:`To Review`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:76
+msgid "A listing proposed by the AI (see :doc:`/applications/productivity/ai/competitor_prices`) that nobody checked yet. It is not fetched and not used in recommendations. Use :guilabel:`Confirm Same Product` (check icon) when the page sells the same product, or :guilabel:`Not the Same Product` (ban icon) and choose the reason: different product, bundle or multipack, different variant, used or refurbished, or other. :menuselection:`Competitor Prices --> Listings --> To Review` lists them."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:83
+msgid ":guilabel:`Confirmed`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:83
+msgid "Fetched on schedule and used in recommendations."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:88
+msgid ":guilabel:`Broken`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:86
+msgid "After the number of failed reads in a row set in the settings (:guilabel:`Broken Listing`, 3 by default) the listing is marked broken and the error is shown on the form. It is still tried again. Open the listing, correct the address or the rule, and press :guilabel:`Fetch Now`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:92
+msgid ":guilabel:`Rejected`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:91
+msgid "Not the same product. It is not fetched and not used in recommendations. A rejected listing can be confirmed later."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:94
+msgid "The :guilabel:`Listings` search filters :guilabel:`To Review`, :guilabel:`Confirmed`, :guilabel:`Broken`, :guilabel:`Rejected`, :guilabel:`Competitor Out of Stock` and :guilabel:`With Error` find the listings that need attention."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:99
+msgid "Check now"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:101
+msgid ":guilabel:`Check Now` on the product tab records your current sales price, reads all the listings of the product immediately (whether or not the product is ticked for tracking), within the request limits of their websites, and recomputes the recommendation. A message tells how many prices changed. The :guilabel:`Fetch Now` button on a listing does the same for one listing. :guilabel:`Test Read` on the listing form shows the price, the regular price, the availability and the source the app reads from the page, without saving anything; use it to try an extraction rule."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:108
+msgid "The listing form"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:110
+msgid "Besides the data above, the form of a listing has these tabs:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:115
+msgid ":guilabel:`Identity`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:113
+msgid "How the page was matched to the product (:guilabel:`Manual`, :guilabel:`Same GTIN`, :guilabel:`Same MPN and brand` or :guilabel:`AI judgement`), the confidence, and what the page says: title, brand, GTIN, manufacturer part number and SKU. A note tells why the page is or is not the same product."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:120
+msgid ":guilabel:`Extraction Rule`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:118
+msgid ":guilabel:`Website's rule` uses the rule of the website; :guilabel:`Own rule` shows a rule field for this page only (same format as the website rule, see :doc:`websites`). The rule is checked when you save it."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:123
+msgid ":guilabel:`Price History`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:123
+msgid "The price changes of this listing."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:125
+msgid "The :guilabel:`Price History` button on the form and on the product opens the same history as a list, graph and pivot."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:129
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:58
+msgid "Price history"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:131
+msgid "Every price is stored; nothing is overwritten. A new line is added only when the price, the regular price, the availability or the shipping cost changes; while it stays the same, :guilabel:`Last Seen` moves forward. Open :menuselection:`Competitor Prices --> Prices --> Price History`:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:135
+msgid ":guilabel:`From`, :guilabel:`Last Seen` and :guilabel:`Until` give the period the price was valid; :guilabel:`Current` marks the latest line."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:137
+msgid ":guilabel:`Unit Price (net)` and :guilabel:`Unit Price (gross)` make the prices of different shops comparable; :guilabel:`Change (%)` shows the step from the previous price."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:139
+msgid "The :guilabel:`Method` (optional column) tells how the price was obtained: structured data, meta tags, extraction rule, AI reading, manual entry, import or own price."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:141
+msgid "The filters :guilabel:`Valid Prices`, :guilabel:`Suspicious`, :guilabel:`Current`, :guilabel:`Own Prices`, :guilabel:`Competitor Prices` and :guilabel:`Price Changes` narrow the list; group by product, competitor or day, and switch to the graph or the pivot view."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:154
+msgid "Suspicious price changes"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:156
+msgid "A price that moves by more than :guilabel:`Suspicious Price Change` (40 % by default) is marked :guilabel:`Suspicious` and left out of the recommendations. This protects you from a misread price, for example a price of a different pack size, or 12 instead of 1 200. The mark clears by itself when the next read gives the same value. A manager can also decide on the history line: :guilabel:`Accept` makes the price valid, :guilabel:`Reject` throws it away."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:163
+msgid "Your own price and the Omnibus rule"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/products.rst:165
+msgid "The history also records **your own sales price** of tracked products (:guilabel:`Own Prices` filter): every change of the sales price is stored. This is the source of the lowest price of the last 30 days that every recommendation shows, for the price reduction rule of the EU Omnibus Directive (see :doc:`recommendations`)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:3
+msgid "Pricing rules and recommendations"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:5
+msgid "From the competitor prices, your cost and a **pricing rule**, the app computes a **recommended sales price**. The rule decides which competitor prices count, how to react to them, and how low or high the price may go. A manager looks at the recommendation and accepts or rejects it."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:10
+msgid "A recommendation never changes a price by itself. The sales price (or the pricelist price) is written only when a manager presses :guilabel:`Accept`. Computing, recomputing and fetching only create recommendations."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:17
+msgid "Pricing rules"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:19
+msgid "Go to :menuselection:`Competitor Prices --> Configuration --> Pricing Rules`. A rule named *Match the lowest price, keep 20% margin* is installed. Rules are checked in the order of the list (drag the handle to reorder); the **first rule that matches a product** is used for it. A product that no rule matches gets no recommendation."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:33
+msgid ":guilabel:`Applies To`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:33
+msgid ":guilabel:`Product Categories` (with their subcategories) and :guilabel:`Products`; empty means all."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:46
+msgid ":guilabel:`Competitor Prices Used`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:36
+msgid ":guilabel:`Competitors`: only these websites; empty means all."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:37
+msgid ":guilabel:`Only Competitors in Stock` (on by default): a competitor that is out of stock is not a reference. Prices with unknown availability count."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:39
+msgid ":guilabel:`Max. Price Age (days)` (3): older prices are ignored."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:40
+msgid ":guilabel:`Min. Competitor Prices` (1): with fewer usable prices there is no recommendation (see :guilabel:`Raise When No Competitor` below)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:42
+msgid ":guilabel:`Ignore Outliers`: leaves out prices far from the others; it applies with at least four prices."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:44
+msgid ":guilabel:`Compare Prices`: :guilabel:`Net (without tax)` or :guilabel:`Gross (with tax)`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:45
+msgid ":guilabel:`Add Competitor Shipping Cost`: adds the shipping cost the competitor charges to its price before comparing."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:54
+msgid ":guilabel:`Strategy`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:49
+msgid ":guilabel:`Match the lowest price`, :guilabel:`Beat the lowest price` (by a percentage or an amount, :guilabel:`Beat By`), :guilabel:`Median of the market`, :guilabel:`Average of the market`, or :guilabel:`Lowest of the key competitors` (the websites marked :guilabel:`Key Competitor`)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:53
+msgid ":guilabel:`Raise When No Competitor` and :guilabel:`Raise By (%)`: when no usable competitor price remains (for example all are out of stock), recommend a higher price."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:64
+msgid ":guilabel:`Never Below (Floor)`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:57
+msgid "The lowest price the rule may recommend. It is computed from the **cost** of the product:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:0
+msgid "floor = (cost + :guilabel:`Extra Cost per Unit`) ÷ (1 − :guilabel:`Fees (% of price)` − :guilabel:`Min. Margin (%)`)"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:61
+msgid "and never less than cost + extra cost + :guilabel:`Min. Margin per Unit`. The minimum margin is a gross margin on the net sales price: (price − cost) ÷ price. Margin and fees together must stay below 95 %. The :guilabel:`Cost Basis` is the :guilabel:`Product cost`; with the *Competitor Prices - Expected Purchase Cost* module there are two more choices (see below)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:76
+msgid ":guilabel:`Limits`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:67
+msgid ":guilabel:`Ceiling`: none, a maximum markup on the cost, or a maximum raise on the current price (:guilabel:`Ceiling (%)`)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:69
+msgid ":guilabel:`Max. Change per Step (%)` (15): a recommendation moves the price by at most this much; 0 means no limit. The floor wins over this limit: the app never recommends selling below the floor."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:72
+msgid ":guilabel:`Ignore Changes Below (%)` (1): smaller differences are not recommended."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:73
+msgid ":guilabel:`Rounding`: currency precision, whole number, ending in .99 or .90, or a multiple of 5, 10 or 100."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:75
+msgid ":guilabel:`Do Not Repeat Rejected for (days)` (7): a rejected recommendation is not proposed again with the same price for this long."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:82
+msgid ":guilabel:`When Accepted`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:79
+msgid ":guilabel:`Accepting Writes To`: :guilabel:`Sales price of the product`, or :guilabel:`Fixed price on a pricelist`, with the :guilabel:`Pricelist` to write to. With the pricelist choice, the sales price of the product stays as it is and a fixed-price line for the product is added or updated on that pricelist."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:85
+msgid "Cost from the expected purchase cost"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:87
+msgid "With the *Competitor Prices - Expected Purchase Cost* module (it needs *Supplier Product Management*) the :guilabel:`Cost Basis` of a rule has two more choices:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:90
+msgid ":guilabel:`Expected purchase cost`: the :ref:`expected cost <inventory/supplier-products/expected-cost>` of the preferred vendor pricelist line: price after discount, plus shipping, import duty and EPR fee, minus rebate, plus the safety margin, converted to the company currency and to the unit of the product."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:94
+msgid ":guilabel:`Higher of product cost and expected purchase cost`: the more careful of the two."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:96
+msgid "A product without a vendor pricelist line falls back to the product cost. The recommendation form lists the parts of the cost."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:100
+msgid "Recommendations"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:102
+msgid "A recommendation is created when the competitor prices of a product are fetched, when you press :guilabel:`Recompute Recommendation` or :guilabel:`Check Now` on the product, and by a daily scheduled job (*Competitor Prices: recompute price recommendations*). When the situation changes, the open recommendation of the product is replaced (status :guilabel:`Superseded`); when the product no longer needs a change it becomes :guilabel:`Outdated`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:108
+msgid "Three places show them:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:110
+msgid ":menuselection:`Competitor Prices --> Prices --> Price Recommendations`: the new recommendations, with :guilabel:`Accept` and :guilabel:`Reject` icons on each line. Filters: :guilabel:`New`, :guilabel:`Accepted`, :guilabel:`Rejected`, :guilabel:`Price Decrease`, :guilabel:`Price Increase` and :guilabel:`Cannot Match Profitably`; group by reason, category or status."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:114
+msgid ":menuselection:`Competitor Prices --> Prices --> Products with New Price`: the products that have one. The :guilabel:`New Price Recommendation` filter is also on the product list, with a :guilabel:`New price` badge in the kanban view and an optional :guilabel:`Recommended Price` column in the list."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:118
+msgid "The :guilabel:`Competitor Prices` tab of the product, with the recommendation in a box on top."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:129
+msgid "The form explains the recommendation in words and shows:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:136
+msgid ":guilabel:`Price`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:132
+msgid "The current and the recommended price, the change in percent, the :guilabel:`Reason` (:guilabel:`Competitors are cheaper`, :guilabel:`Room to raise the price`, :guilabel:`Cannot match profitably: minimum margin price`, :guilabel:`Limited by the ceiling`, :guilabel:`Limited by the max. change per step` or :guilabel:`No competitor available`), and :guilabel:`Own Lowest Price, Last 30 Days`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:140
+msgid ":guilabel:`Market`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:139
+msgid "Lowest, median, average and highest competitor price and their number, on the net or gross basis of the rule. The competitor prices used are listed at the bottom."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:143
+msgid ":guilabel:`Cost and Margin`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:143
+msgid "The cost with its breakdown, the floor and the ceiling, and the margin before and after."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:146
+msgid ":guilabel:`Decision`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:146
+msgid "The rule, who decided and when, and a note for a rejection."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:149
+msgid "Accept or reject"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:151
+msgid "Only a **Competitor Prices manager** can :guilabel:`Accept` or :guilabel:`Reject`. Accepting writes the recommended price as set in :guilabel:`When Accepted`, marks the recommendation :guilabel:`Accepted` and posts a note in the chatter of the product with the old and the new price. Rejecting keeps the price and keeps the rejection for the number of days of the rule."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:157
+msgid "Accepting changes a real price. Look at the market, the cost and the margin first, and accept in bulk only when you have checked the rule that created the recommendations."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:161
+msgid "Lowest price of the last 30 days"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/recommendations.rst:163
+msgid "When you announce a price reduction in the EU, the earlier price you show must be the lowest price of the previous 30 days (Omnibus Directive, Article 6a). Every recommendation shows your own lowest price of the last 30 days, taken from the recorded own prices (see :doc:`products`), so you can quote the right reference price."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:3
+msgid "Reports"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:5
+msgid "Three views under :menuselection:`Competitor Prices --> Prices` show where you stand. They are read-only; the prices are those of confirmed listings that are current and valid (suspicious and rejected prices are left out)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:10
+msgid "Price position"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:12
+msgid ":menuselection:`Competitor Prices --> Prices --> Price Position` has one line per tracked product:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:20
+msgid ":guilabel:`Our Sales Price`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:21
+msgid "The sales price of the product."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:22
+msgid ":guilabel:`Lowest (net)`, :guilabel:`Median (net)`, :guilabel:`Highest (net)`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:23
+msgid "The net competitor prices per unit and their number, :guilabel:`Competitor Prices`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:24
+msgid ":guilabel:`Gap to Lowest (%)`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:25
+msgid "(own price − lowest competitor price) ÷ lowest × 100. Positive: you are more expensive than the cheapest competitor."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:27
+msgid ":guilabel:`Price Index`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:28
+msgid "Own price ÷ median competitor price × 100. Above 100 you are above the middle of the market."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:29
+msgid ":guilabel:`We Are Cheapest`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:30
+msgid "Your price is not above the lowest competitor price."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:31
+msgid ":guilabel:`Recommended Price`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:32
+msgid "The open recommendation, if any."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:33
+msgid ":guilabel:`Last Competitor Change`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:34
+msgid "When a competitor price last changed (optional column)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:36
+msgid "Filters: :guilabel:`We Are More Expensive`, :guilabel:`We Are Cheapest` and :guilabel:`New Recommendation`; group by :guilabel:`Category`. The pivot and graph views average the price index and the gap by category."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:50
+msgid "Competitor price changes"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:52
+msgid ":menuselection:`Competitor Prices --> Prices --> Competitor Price Changes` lists the price history lines of competitors where the price changed, with the :guilabel:`Change (%)`: use it to see who moved this week. It opens in the list view; switch to the pivot or the graph. The filters and the grouping are those of the price history (see :doc:`products`)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/reports.rst:60
+msgid ":menuselection:`Competitor Prices --> Prices --> Price History` is the complete history, with the graph (price per day, one line per seller) and the pivot (products by competitor). Your own price is one of the lines (filter :guilabel:`Own Prices`), so you can see your price next to the competitors' over time."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:3
+msgid "Competitor websites and fetch"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:5
+msgid "A **competitor website** is one shop whose prices you follow. It holds the rules of how politely and how often its pages are read. Go to :menuselection:`Competitor Prices --> Configuration --> Competitor Websites` and click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:10
+msgid "The website form"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:17
+msgid ":guilabel:`Website`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:13
+msgid ":guilabel:`Website`: the address of the shop, for example ``https://www.example.com``."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:14
+msgid ":guilabel:`Other Domains`: further domains of the same shop (``example.de, example-shop.com``). A product address on one of them belongs to this website."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:16
+msgid ":guilabel:`Partner`, :guilabel:`Country` and :guilabel:`Platform` (Shopify, WooCommerce, PrestaShop, Magento, Shoprenter, UNAS, Shopware, Odoo or other) describe the shop."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:26
+msgid ":guilabel:`Prices`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:20
+msgid ":guilabel:`Currency`: the currency of the shop, with several currencies."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:21
+msgid ":guilabel:`Number Format`: how the shop writes numbers. :guilabel:`Automatic` works for most shops; set a decimal comma or point when a price such as 1.299 is read wrongly."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:23
+msgid ":guilabel:`Prices Include Tax`: tick it for consumer shops that show gross prices. The prices are converted to net with the taxes of your own product before they are compared."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:25
+msgid ":guilabel:`Key Competitor`: the :guilabel:`Lowest of the key competitors` pricing strategy looks only at these websites."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:28
+msgid "The :guilabel:`Listings` button lists the product addresses of the website."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:39
+msgid "Terms of use review"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:41
+msgid "A new website is fetched only after a manager has read its terms of use and pressed :guilabel:`Terms of Use Reviewed`. The form then shows who confirmed it and when (:guilabel:`Terms of Use` tab), where you can note where the terms are and what they say about automated access. The review is required unless :guilabel:`Require Terms of Use Review` is switched off in the settings. In the website list, websites without a review are highlighted; the :guilabel:`Terms Not Reviewed` filter shows them."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:48
+msgid "How the prices are fetched"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:50
+msgid "The :guilabel:`Fetching` tab sets the pace:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:52
+msgid ":guilabel:`Fetching Active` switches the website on or off. A website with fetching off keeps its history but is not read."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:54
+msgid ":guilabel:`Refresh Prices Every`: how often the price of a product is read again, in hours or days."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:55
+msgid ":guilabel:`At Most … pages per … minutes`: the request limit of the website."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:56
+msgid ":guilabel:`Min. Seconds Between Requests`: the minimum time between two pages. A longer *Crawl-delay* in the website's *robots.txt* wins."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:58
+msgid ":guilabel:`Respect robots.txt`: pages that *robots.txt* disallows are not read."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:59
+msgid ":guilabel:`User Agent`: leave empty to use the one from the settings."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:61
+msgid "A scheduled job (*Competitor Prices: fetch due prices*, every 5 minutes) reads the prices that are due, within these limits. Only public product pages are read, and a website that is being read is never read in parallel."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:66
+msgid "The app never tries to get around a block. When a website answers with a block, a *Too many requests* error or a bot-protection page (a CAPTCHA or a challenge), fetching of that website pauses and the form shows *Fetching is paused until …* with the reason. Click :guilabel:`Resume Fetching` to end the pause early, only when you know the reason is gone. If a website keeps blocking you, switch its fetching off and ask the shop's owner for permission, or get its prices from another source (for example the :doc:`Priceva import <priceva_import>`)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:73
+msgid ":guilabel:`Fetch Prices Now` on the form reads the due prices of the website at once, still within its limits. The :guilabel:`Fetch Log` (:menuselection:`Competitor Prices --> Configuration --> Fetch Log`) lists every run with its start, duration, trigger (scheduled or manual) and the number of changed, unchanged, suspicious, failed and skipped prices."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:79
+msgid "How a price is read"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:81
+msgid "The app reads a product page in this order and stops at the first source that gives a price:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:83
+msgid "The **structured product data** of the page (JSON-LD or microdata) and its meta tags."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:84
+msgid "The **extraction rule** of the listing or of the website, for pages without usable structured data."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:86
+msgid "The :guilabel:`Extraction Rule` tab of the website holds a rule that applies to all its listings. It is a short text in JSON: for each field (``price``, ``regular_price``, ``currency``, ``availability``, ``shipping``, ``gtin``, ``mpn``, ``sku``, ``title``) an ``xpath`` or ``css`` selector, and optionally ``attr`` (read an attribute), ``regex``, ``map`` (translate a text to a value) or ``fixed`` (a constant). For example:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:96
+msgid ":guilabel:`Site Rule State` shows whether the rule is :guilabel:`None`, :guilabel:`Proposed`, :guilabel:`Validated` or :guilabel:`Broken`; :guilabel:`Site Rule Validated On` tells when it last worked."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:101
+msgid ":guilabel:`Use the Rule First`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:100
+msgid "For shops whose structured data holds a coupon, member or other conditional price instead of the shelf price, tick this: the rule is then read *before* the structured data."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:103
+msgid "A single listing can have its own rule (see :doc:`products`)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:106
+msgid "Finding products"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/competitor_prices/websites.rst:108
+msgid "The :guilabel:`Finding Products` tab holds the :guilabel:`Search URL` of the shop, for example ``https://www.example.com/search?q={query}``, and its :guilabel:`Sitemap URL`. They are used when the AI looks for your products on the website (see :doc:`/applications/productivity/ai/competitor_prices`)."
+msgstr ""
+
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:3
 msgid "Use eWallets and gift cards"
 msgstr ""
@@ -11977,13 +12985,6 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:9
 msgid "In order to use multiple currencies in Odoo *Sales*, the *Accounting* application **must** be installed."
-msgstr ""
-
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:13
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:10
-#: ../../content/applications/sales/sales/sales_quotations/orders_and_variants.rst:17
-#: ../../content/applications/sales/withdrawal/configuration.rst:9
-msgid "Settings"
 msgstr ""
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:15
@@ -15362,11 +16363,6 @@ msgstr ""
 msgid "Attempt state"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:41
-#: ../../content/applications/sales/subscriptions/contracts.rst:68
-msgid "Meaning"
-msgstr ""
-
 #: ../../content/applications/sales/subscriptions/automatic_payments.rst:42
 msgid ":guilabel:`Pending`"
 msgstr ""
@@ -15449,11 +16445,6 @@ msgstr ""
 
 #: ../../content/applications/sales/subscriptions/automatic_payments.rst:112
 msgid "Go to :menuselection:`Accounting --> Configuration --> Settings` and scroll to the :guilabel:`SEPA/PAIN` section, :guilabel:`Subscription remittances`:"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/automatic_payments.rst:119
-#: ../../content/applications/sales/withdrawal/configuration.rst:18
-msgid "Setting"
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/automatic_payments.rst:121

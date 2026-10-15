@@ -106,6 +106,10 @@ several currencies, :guilabel:`Expected Cost (Company Currency)` converted at to
 amounts are per unit of the pricelist line. The :guilabel:`Expected Cost` column can also be shown in
 the vendor lists of the product.
 
+The expected cost can also be the cost basis of a pricing rule of the *Competitor Prices* app, so that a
+recommended sales price never goes below the expected purchase cost plus the minimum margin (see
+:ref:`pricing rules <sales/competitor-prices/pricing-rules>`).
+
 .. screenshot:: inventory-supplier-products-expected-cost
    :menu: Purchase ‣ Configuration ‣ Vendor Pricelists ‣ (a line)
    :shows: The Expected Cost section of a vendor pricelist line with the shipping, rebate, EPR fee and
